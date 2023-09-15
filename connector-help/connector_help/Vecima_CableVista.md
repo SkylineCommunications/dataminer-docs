@@ -6,24 +6,24 @@ uid: Connector_help_Vecima_CableVista
 
 The Vecima CableVista driver performs MPEG decoding, modulation and upconversion for up to 24 NTSC or 12 PAL channels.
 
-This driver can be used to display and configure information of the related device.
+This connector can be used to display and configure information of the related device.
 
 ## About
 
-This driver uses **SNMP** to retrieve information from the device, and allows the user to monitor and configure the Vecima CableVista.
+This connector uses **SNMP** to retrieve information from the device, and allows the user to monitor and configure the Vecima CableVista.
 
-The driver also allows access to the **Web Interface** of the device.
+The connector also allows access to the **Web Interface** of the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**    | **Description**                                                 | **DCF Integration** | **Cassandra Compliant** |
+| **Range**    | **Description**                                                 | **DCF Integration** | **Cassandra Compliant** |
 |---------------------|-----------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x             | Initial Version                                                 | No                  | No                      |
 | 1.1.0.x\[SLC Main\] | Based on version 1.0.0.7 Support for RF Dual and Baseband Cards | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 1.1.0.x          | Unknown                     |
@@ -34,7 +34,7 @@ The driver also allows access to the **Web Interface** of the device.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

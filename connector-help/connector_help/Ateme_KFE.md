@@ -4,7 +4,7 @@ uid: Connector_help_Ateme_KFE
 
 # Ateme KFE
 
-With this driver, you can gather and view information from the multi-codec/multi-format file-based video transcoding software **Ateme KFE.** This software supports distributed-network configurations. Different modules run on different hosts and are controlled by the Supervisor Engine.
+With this connector, you can gather and view information from the multi-codec/multi-format file-based video transcoding software **Ateme KFE.** This software supports distributed-network configurations. Different modules run on different hosts and are controlled by the Supervisor Engine.
 
 ## About
 

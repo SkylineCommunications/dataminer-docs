@@ -6,7 +6,7 @@ uid: Connector_help_Kentrox_72771_DataSMART_MAX_T1_Multimedia_Access
 
 The DataSMART T1 MAX Quad-Port handles complicated voice, video, and data integration applications. It allows up to four departmental routers to connect to the network, and multiplexes voice, data and video. Some key features are SNMP Management, optional Ethernet connection for SNMP and Telnet management, front panel LCD, and LEDs for setup and troubleshooting. It is a software-selectable data port for flexibility (V.35 and EIA-530). It supports leased-line, internet, frame relay, and frame-based SMDS/ATM DXI network services.
 
-This driver was designed to work with the Kentrox model 72771 DataSMART MAX T1. It allows users to display and configure all available parameters, by means of serial communication (Telnet).
+This connector was designed to work with the Kentrox model 72771 DataSMART MAX T1. It allows users to display and configure all available parameters, by means of serial communication (Telnet).
 
 ## About
 
@@ -34,7 +34,7 @@ This driver was designed to work with the Kentrox model 72771 DataSMART MAX T1. 
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -53,7 +53,7 @@ SERIAL CONNECTION:
 
 ## How to use
 
-The element created with this driver consists of the data pages detailed below.
+The element created with this connector consists of the data pages detailed below.
 
 ### Login
 
@@ -89,9 +89,9 @@ The page allows you to configure the device password and the access level parame
 
 To configure a new password:
 
-1.  Enter the new password in the **Password** box.
-2.  Select the access level for the password in the **Access** drop-down box.
-3.  Click the **Add New Pwd** button.
+1. Enter the new password in the **Password** box.
+1. Select the access level for the password in the **Access** drop-down box.
+1. Click the **Add New Pwd** button.
 
 The passwords and corresponding access levels are stored in the Password and Access Table. In this table, you can:
 

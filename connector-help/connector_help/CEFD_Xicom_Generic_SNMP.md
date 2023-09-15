@@ -4,11 +4,11 @@ uid: Connector_help_CEFD_Xicom_Generic_SNMP
 
 # CEFD Xicom Generic SNMP
 
-With this driver, information can be gathered and viewed from the amplifier **CEFD Xicom Generic SNMP**. The driver also makes it possible to set values on the device.
+With this connector, information can be gathered and viewed from the amplifier **CEFD Xicom Generic SNMP**. The connector also makes it possible to set values on the device.
 
 ## About
 
-This driver is used to interface with the **CEFD Xicom Generic SNMP** amplifier.
+This connector is used to interface with the **CEFD Xicom Generic SNMP** amplifier.
 
 ## Installation and configuration
 

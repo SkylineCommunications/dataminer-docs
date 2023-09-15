@@ -8,21 +8,21 @@ The Nautel NV5-LT is an analog/digital FM broadcasting transmitter with integrat
 
 ## About
 
-With this driver, the FM transmitter device can be monitored via **SNMP** communication. DVE elements are generated to represent its exciters. A list of exported drivers can be found in the section "Exported Drivers" below.
+With this connector, the FM transmitter device can be monitored via **SNMP** communication. DVE elements are generated to represent its exciters. A list of exported connectors can be found in the section "Exported Connectors" below.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** |
+| **Range**     | **Description** |
 |----------------------|-----------------|
 | 1.0.0.x \[SLC Main\] | Initial version |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
-| 1.0.0.1          | Unknown                     |
+| 1.0.0.x          | Unknown                     |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported protocol**               | **Description**            |
 |-------------------------------------|----------------------------|
@@ -34,7 +34,7 @@ With this driver, the FM transmitter device can be monitored via **SNMP** commun
 
 #### SNMP connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection to receive traps and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection to receive traps and requires the following input during element creation:
 
 SNMP CONNECTION:
 

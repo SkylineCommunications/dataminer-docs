@@ -4,7 +4,7 @@ uid: Connector_help_Utah_Scientific_400_Router_RCPv3
 
 # Utah Scientific 400 Router RCPv3
 
-The **Utah Scientific 400 Router RCPv3** is a driver that control and presents this large **Matrix** router up to 1024x1024 (Maximum for DMA).
+The **Utah Scientific 400 Router RCPv3** is a connector that control and presents this large **Matrix** router up to 1024x1024 (Maximum for DMA).
 
 ## About
 
@@ -12,7 +12,7 @@ The **Utah Scientific 400 Router RCPv3** shows us a **Matrix** with different **
 
 ## Installation and configuration
 
-This driver is **smart-serial**, which will say the device sending information about his changes without asking for them. Therefor you need to configure the driver as follow:
+This connector is **smart-serial**, which will say the device sending information about his changes without asking for them. Therefor you need to configure the connector as follow:
 
 - **Type of port:** TCP/IP
 - **IP Address/host:** the IP Address of the device
@@ -36,4 +36,4 @@ The **Alarms** page shows you all the details of the **device alarms**. If there
 
 ## Notes
 
-This **driver** can presents **huge matrixes**, this is a lot of load for the **GUI**, keep that in mind and **don't** make a **large amount** of **elements** with this driver when it's not needed.
+This **driver** can presents **huge matrixes**, this is a lot of load for the **GUI**, keep that in mind and **don't** make a **large amount** of **elements** with this connector when it's not needed.

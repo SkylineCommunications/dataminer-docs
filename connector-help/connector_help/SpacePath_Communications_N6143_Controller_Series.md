@@ -4,21 +4,21 @@ uid: Connector_help_SpacePath_Communications_N6143_Controller_Series
 
 # SpacePath Communications N6143 Controller Series
 
-The **SpacePath Communications N6143 Controller Series** driver is used to monitor and configure the SpacePath Communications N6143 Controller Series **control unit**. This control unit can be used to control several types of **stellar amplifiers**.
+The **SpacePath Communications N6143 Controller Series** connector is used to monitor and configure the SpacePath Communications N6143 Controller Series **control unit**. This control unit can be used to control several types of **stellar amplifiers**.
 
 ## About
 
-The driver communicates with the control unit through its **serial interface**. The control unit itself controls up to two stellar amplifiers. This driver will control only one amplifier per instance. To send commands to the correct amplifier, the driver has to know the **address** of the amplifier. You can find this address on the physical display of the control unit. It should be entered as a decimal value in the **Bus address** field of the DataMiner **element**.
+The connector communicates with the control unit through its **serial interface**. The control unit itself controls up to two stellar amplifiers. This connector will control only one amplifier per instance. To send commands to the correct amplifier, the connector has to know the **address** of the amplifier. You can find this address on the physical display of the control unit. It should be entered as a decimal value in the **Bus address** field of the DataMiner **element**.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**                       |
+| **Range** | **Device Firmware Version**                       |
 |------------------|---------------------------------------------------|
 | 1.0.0.x          | Complies with N6143 Series Operation Manual; 2015 |
 
@@ -28,7 +28,7 @@ The driver communicates with the control unit through its **serial interface**. 
 
 #### Main Serial Connection
 
-This driver uses a serial connection and requires the following input during element creation.
+This connector uses a serial connection and requires the following input during element creation.
 
 SERIAL CONNECTION:
 

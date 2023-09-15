@@ -8,19 +8,19 @@ The Kratos Monics System is an automatic satellite carrier monitoring system (or
 
 ## About
 
-This is a smart-serial driver that receives carrier, transponder and beacon stream measurements and event fault streams.
+This is a smart-serial connector that receives carrier, transponder and beacon stream measurements and event fault streams.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**                                                                                          | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**                                                                                          | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|----------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x              | Initial version                                                                                          | No                  | Yes                     |
 | 2.0.0.x \[SLC Main\] | Alarm presets. Communication with SES Channel Manager.                                                   | No                  | Yes                     |
 | 2.0.1.x \[Obsolete\] | Removed parameters that control the rows displayed based on the number or age. Added auto clear feature. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 2.0.0.x          | Unknown                     |
@@ -32,7 +32,7 @@ This is a smart-serial driver that receives carrier, transponder and beacon stre
 
 #### Smart-serial connection
 
-This driver uses a smart-serial connection and requires the following input during element creation:
+This connector uses a smart-serial connection and requires the following input during element creation:
 
 Smart-Serial Connection:
 

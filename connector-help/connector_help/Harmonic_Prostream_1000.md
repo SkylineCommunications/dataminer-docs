@@ -8,19 +8,19 @@ The ProStreamr 1000 stream processing platform is the ideal solution for multipl
 
 ## About
 
-This driver is intended to communicate with the device using SNMP and serial commands. Serial port is used to get information using HTTP GET and POST commands.
+This connector is intended to communicate with the device using SNMP and serial commands. Serial port is used to get information using HTTP GET and POST commands.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                              | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                              | **DCF Integration** | **Cassandra Compliant** |
 |------------------|----------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial Version                              | No                  | No                      |
 | 1.0.1.x          | Addition of GbE stream and auto trap removal | No                  | Yes                     |
 | 1.0.2.x          | DCF Support                                  | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**                       |
+| **Range** | **Device Firmware Version**                       |
 |------------------|---------------------------------------------------|
 | 1.0.0.x          | Software Version: 06.07.04.004 Boot Version 3.0.4 |
 | 1.0.1.x          | Software Version: 06.07.04.004 Boot Version 3.0.4 |
@@ -32,7 +32,7 @@ This driver is intended to communicate with the device using SNMP and serial com
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -47,7 +47,7 @@ SNMP Settings:
 
 #### Serial serial Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -115,6 +115,6 @@ Allocated **CAT EMM**, and **CAT** **PIDs** are available in this page.
 
 Table related with alarming are present in this page. With the button to enable and disable polling of SNMP. There is also a page button at the top when clicked it will open a new window to customize the time for the auto removal of traps.
 
-### Webinterface
+### Web Interface
 
 Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.

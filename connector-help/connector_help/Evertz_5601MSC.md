@@ -8,11 +8,11 @@ The **5601MSC Master Sync and Clock Generator** is a master sync pulse generator
 
 ## About
 
-This driver allows the management of the Evertz 5601MSC device using the **SNMP** protocol. The device does not support multipleGetNext.
+This connector allows the management of the Evertz 5601MSC device using the **SNMP** protocol. The device does not support multipleGetNext.
 
 ## Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP Connection:**
 
@@ -75,7 +75,7 @@ The page also contains a page button that leads to the device's **Visibility Con
 
 ### NTP Page
 
-This page contains the **NTP Table**, where you can configure the device's NTP in the columns **NTP **Restriction****, **NTP** **Restrict IP**, and **NTP** **Restrict Mask**.
+This page contains the **NTP Table**, where you can configure the device's NTP in the columns **NTP Restriction**, **NTP Restrict IP**, and **NTP Restrict Mask**.
 
 ### Modem Page
 

@@ -6,7 +6,7 @@ uid: Connector_help_Hiltron_HCS4
 
 The Hiltron HCS4 is a unit controller that can manage different types of modules: DBT modules, power supply modules, etc.
 
-The driver retrieves information about all the modules using the SNMP protocol.
+The connector retrieves information about all the modules using the SNMP protocol.
 
 ## About
 
@@ -62,7 +62,7 @@ The driver retrieves information about all the modules using the SNMP protocol.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -88,6 +88,6 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The list of modules managed by the driver can be found in the **Modules** table on the **General** page.
+The list of modules managed by the connector can be found in the **Modules** table on the **General** page.
 
-This driver will export different drivers and create DVEs based on the retrieved modules. You can find a list of the supported modules in the "System Info" section above.
+This connector will export different connectors and create DVEs based on the retrieved modules. You can find a list of the supported modules in the "System Info" section above.

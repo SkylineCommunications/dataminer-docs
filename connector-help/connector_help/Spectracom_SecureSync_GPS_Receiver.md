@@ -19,13 +19,13 @@ These outputs are driven by their inputs. The standard inputs are:
 
 ## About
 
-This driver monitors only the inputs (GPS and NTP), since monitoring of the outputs is not necessary. The driver was not created to perform major configurations to the device or to log any events, as the device's web interface offers enough possibilities to do all this.
+This connector monitors only the inputs (GPS and NTP), since monitoring of the outputs is not necessary. The connector was not created to perform major configurations to the device or to log any events, as the device's web interface offers enough possibilities to do all this.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION**:
 
@@ -57,11 +57,11 @@ The statuses of the **GPS Input** can be viewed in detail. The **1PPS**/**Time V
 
 ### NTP
 
-This page displays the **Selected Reference Status**, which shows the used NTP status and configuration. A complete list of all the references can be found in the **Reference Status** table. In addition, some general NTP information is shown under the **NTP General** **pagebutton**.
+This page displays the **Selected Reference Status**, which shows the used NTP status and configuration. A complete list of all the references can be found in the **Reference Status** table. In addition, some general NTP information is shown under the **NTP General** page button.
 
 ### Option Cards
 
-This page displays the **Supported Optional Modules** table, where you can see which modules are available that can be monitored with this driver. To see the status of an option card, click the page button with the correct **Module Name.**
+This page displays the **Supported Optional Modules** table, where you can see which modules are available that can be monitored with this connector. To see the status of an option card, click the page button with the correct **Module Name.**
 
 ### Setup
 
@@ -69,4 +69,4 @@ On this page, the **Reference Priority** can be changed, which makes it possible
 
 ## Notes
 
-Extra optional modules can be added to this device, but no MIBs were provided for any except the **PTP** module. The functionality of this driver is therefore limited to the standard inputs.
+Extra optional modules can be added to this device, but no MIBs were provided for any except the **PTP** module. The functionality of this connector is therefore limited to the standard inputs.

@@ -4,17 +4,17 @@ uid: Connector_help_Axon_HLI20
 
 # Axon HLI20
 
-This is an SNMP-based driver used to display and configure information of the **Axon HLI20** card.
+This is an SNMP-based connector used to display and configure information of the **Axon HLI20** card.
 
 ## About
 
-The Axon HLI20 is an **HD/SD logo inserter** and its driver provides information regarding logo parameters.
+The Axon HLI20 is an **HD/SD logo inserter** and its connector provides information regarding logo parameters.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 
@@ -29,7 +29,7 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and requ
 
 ## Usage
 
-This driver has 4 pages: **General**, **Device Settings**, **Logo Generator A** and **Logo Generator B**.
+This connector has 4 pages: **General**, **Device Settings**, **Logo Generator A** and **Logo Generator B**.
 
 ### General
 

@@ -8,19 +8,19 @@ The R&S AVS100 audio/video server is a platform running software applications fo
 
 ## About
 
-This driver was designed to monitor and receive statistics from the **AVS100**.
+This connector was designed to monitor and receive statistics from the **AVS100**.
 
-The driver is generated automatically by the driver [Rohde Schwarz AVHE100](xref:Connector_help_Rohde_Schwarz_AVHE100).
+The connector is generated automatically by the connector [Rohde Schwarz AVHE100](xref:Connector_help_Rohde_Schwarz_AVHE100).
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | DVE creation    | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ The driver is generated automatically by the driver [Rohde Schwarz AVHE100](xref
 
 ### Creation
 
-This driver is used by DVEs that are **automatically generated** when DVE creation is enabled for the corresponding card in the **Device AVS DVE** **Table** of the parent element.
+This connector is used by DVEs that are **automatically generated** when DVE creation is enabled for the corresponding card in the **Device AVS DVE** **Table** of the parent element.
 
 ## Usage
 

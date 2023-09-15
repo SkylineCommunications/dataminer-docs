@@ -8,17 +8,17 @@ The **Grass Valley Acappella** is a matrix that it is used as a mixed format rou
 
 ## About
 
-This driver was designed to work with the **Grass Valley Acappella**. It uses smart-serial to read information from the device, plus it allows to monitor and control the video router, for example connecting an output to an input.
+This connector was designed to work with the **Grass Valley Acappella**. It uses smart-serial to read information from the device, plus it allows to monitor and control the video router, for example connecting an output to an input.
 
-### Range of the driver
+### Range of the connector
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 3.2.4.1                     |
 
@@ -28,7 +28,7 @@ This driver was designed to work with the **Grass Valley Acappella**. It uses sm
 
 #### Serial Main connection
 
-This driver uses a Serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 Serial Connection:
 

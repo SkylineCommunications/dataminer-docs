@@ -4,7 +4,7 @@ uid: Connector_help_Verizon_DSM_SO
 
 # Verizon DSM SO
 
-This driver is used to gather information **via inter-element communication** that will be exported to a location used by the **Generic Sun Outage** driver. The information gathered consists of key parameters used during the calculation of sun outages. This driver is purely a system driver with this sole responsibility.
+This connector is used to gather information **via inter-element communication** that will be exported to a location used by the **Generic Sun Outage** driver. The information gathered consists of key parameters used during the calculation of sun outages. This connector is purely a system driver with this sole responsibility.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver is used to gather information **via inter-element communication** th
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 
@@ -44,7 +44,7 @@ There is no redundancy defined.
 
 ## How to use
 
-As this is mainly a system driver, not much user interaction is needed. Below you can find more information on the different functionalities in the driver.
+As this is mainly a system driver, not much user interaction is needed. Below you can find more information on the different functionalities in the connector.
 
 ### General
 
@@ -60,7 +60,7 @@ Clicking the **update** button will perform a **full update of the system**. It 
 
 The following functionalities are available within this section:
 
-- **File Export**: Allows you to control the driver exporting the information gathered from the subscribers to a CSV file.
+- **File Export**: Allows you to control the connector exporting the information gathered from the subscribers to a CSV file.
 - **File Export Path**: Determines the path used to export the CSV file.
 - **Export Processing Time**: Allows you to control how **frequently** the system will gather new data to be exported.
 - **Apply:** Allows you to do a **manual update** of the export logic.
@@ -136,7 +136,7 @@ The following functionalities are available on this page:
 
 ## Notes
 
-The driver requires the following additional configuration in order to be fully functional:
+The connector requires the following additional configuration in order to be fully functional:
 
 - A **Correlation rule** needs to be set up that captures **information events** and executes a script. The following parameters should be used in this Correlation rule:
 
@@ -147,4 +147,4 @@ The driver requires the following additional configuration in order to be fully 
 
 - An **Automation script** is needed to read the information event and pass the information to the correct element running the **Verizon WM DSM** to be processed.
 
-- A **definition in Profile Manager** needs to be created with the name "**Protocols_SO**". Within this definition, **a parameter with the same name** needs to be created and linked with the **name and version of the driver that your element is currently using**.
+- A **definition in Profile Manager** needs to be created with the name "**Protocols_SO**". Within this definition, **a parameter with the same name** needs to be created and linked with the **name and version of the connector that your element is currently using**.

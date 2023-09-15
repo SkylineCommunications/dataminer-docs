@@ -4,21 +4,21 @@ uid: Connector_help_Screen_Service_Transmitter_SDT_201_ARK6
 
 # Screen Service Transmitter SDT 201 ARK6
 
-This driver is designed to communicate with transmitters using the DVB-T2 and Digital Repeater modes.
+This connector is designed to communicate with transmitters using the DVB-T2 and Digital Repeater modes.
 
 ## About
 
-The driver communicates with the device using **SNMP**, to change its configuration and to monitor its channel, power and modulation parameters.
+The connector communicates with the device using **SNMP**, to change its configuration and to monitor its channel, power and modulation parameters.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**                                            |
+| **Range** | **Device Firmware Version**                                            |
 |------------------|------------------------------------------------------------------------|
 | 1.0.0.x          | UC: *4.34* FPGA: *1.42* AL_BOARD: *1.4* GPS_BOARD: *8.47* SNMP: *2.15* |
 
@@ -28,7 +28,7 @@ The driver communicates with the device using **SNMP**, to change its configurat
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 

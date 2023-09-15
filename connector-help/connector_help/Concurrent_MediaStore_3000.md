@@ -4,7 +4,7 @@ uid: Connector_help_Concurrent_MediaStore_3000
 
 # Concurrent MediaStore 3000
 
-This driver monitors the activity of the Concurrent MediaStore 3000 device.
+This connector monitors the activity of the Concurrent MediaStore 3000 device.
 
 ## About
 
@@ -34,7 +34,7 @@ The MediaStore3000 is a multi-purpose storage device that provides over three ti
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -60,7 +60,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created using this driver consists of the following data pages:
+The element created using this connector consists of the following data pages:
 
 - **General**: Displays general information about the device.
 - **Connectivity Unit**: Displays the Connectivity Unit Table. On a subpage, you can find the Revision Table.

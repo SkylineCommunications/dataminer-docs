@@ -32,7 +32,7 @@ uid: Connector_help_Anevia_Nea-Live
 
 #### SNMP Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -47,7 +47,7 @@ SNMP Settings:
 
 #### HTTP Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -57,7 +57,7 @@ HTTP CONNECTION:
 
 ### Redundancy
 
-Redundancy is not defined in the driver.
+Redundancy is not defined in the connector.
 
 ### Web Interface
 
@@ -65,7 +65,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to Use
 
-The driver allows you to check device information, both at device level and at task level.
+The connector allows you to check device information, both at device level and at task level.
 
 HTTP calls are used to retrieve the device information.
 

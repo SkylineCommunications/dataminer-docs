@@ -4,21 +4,21 @@ uid: Connector_help_Emcore_Medallion_6000
 
 # Emcore Medallion 6000
 
-This driver retrieves information from the Emcore Medallion 6000 via SNMP. The Medallion 6000 series is a family of state-of-the-art high-performance 1550 nm externally-modulated CATV fiber-optic transmitters. Advanced features such as built-in field-adjustable SBS control and electronic dispersion compensation allow these transmitters to be quickly optimized in the field for any link or application without the need to procure specifically tuned transmitters.
+This connector retrieves information from the Emcore Medallion 6000 via SNMP. The Medallion 6000 series is a family of state-of-the-art high-performance 1550 nm externally-modulated CATV fiber-optic transmitters. Advanced features such as built-in field-adjustable SBS control and electronic dispersion compensation allow these transmitters to be quickly optimized in the field for any link or application without the need to procure specifically tuned transmitters.
 
 ## About
 
-The **Emcore Medallion 6000** driver displays the general information, alarm configuration status, network configuration, power supply and fan unit information of the device. All information is retrieved using SNMP.
+The **Emcore Medallion 6000** connector displays the general information, alarm configuration status, network configuration, power supply and fan unit information of the device. All information is retrieved using SNMP.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ The **Emcore Medallion 6000** driver displays the general information, alarm con
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

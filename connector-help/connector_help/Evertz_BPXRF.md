@@ -4,11 +4,11 @@ uid: Connector_help_Evertz_BPXRF
 
 # Evertz BPXRF
 
-The **Evertz BPXRF** protocol driver is used to monitor and control an Evertz chassis containing two Evertz 7703 cards.
+The **Evertz BPXRF** connector is used to monitor and control an Evertz chassis containing two Evertz 7703 cards.
 
 ## About
 
-This driver monitors the input and output of different Evertz cards inside a single chassis.
+This connector monitors the input and output of different Evertz cards inside a single chassis.
 
 Supported Cards:
 
@@ -35,8 +35,8 @@ Data is polled via SNMP protocol.
 
 ## Usage
 
-The Evertz BPXRF driver displays information about the two kinds of supported cards. For each detected card, a child element will be created under the main element.
-The driver contains 6 pages. The first 3 pages monitor the 7703PA card. The remaining 3 pages monitor the 7703BPX driver.
+The Evertz BPXRF connector displays information about the two kinds of supported cards. For each detected card, a child element will be created under the main element.
+The connector contains 6 pages. The first 3 pages monitor the 7703PA card. The remaining 3 pages monitor the 7703BPX driver.
 
 ### General PA
 
@@ -46,7 +46,7 @@ This page displays data about the **Input Power** and miscellaneous data about t
 
 This page lists all the alarms that can be reported by the 7703PA card. For each alarm, the user has the possibility to enable the traps or not.
 
-Note that traps are not currently supported by this driver: nothing will happen if a trap is received.
+Note that traps are not currently supported by this connector: nothing will happen if a trap is received.
 
 ### Control PA
 
@@ -60,7 +60,7 @@ This page displays data about the **Input Power** and miscellaneous data about t
 
 This page lists all the alarms that can be reported by the card 7703BPX. For each alarm, the user has the possibility to enable the traps or not.
 
-Note that traps are not currently supported by this driver: nothing will happen if a trap is received.
+Note that traps are not currently supported by this connector: nothing will happen if a trap is received.
 
 ### Control BPX
 

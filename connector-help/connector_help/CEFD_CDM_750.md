@@ -8,17 +8,17 @@ Advanced High-Speed Trunking Modem for network operators, enterprise users, and 
 
 ## About
 
-This driver uses **SNMP** to retrieve information from the device and configure settings on the device.
+This connector uses **SNMP** to retrieve information from the device and configure settings on the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.6.6                       |
 
@@ -28,7 +28,7 @@ This driver uses **SNMP** to retrieve information from the device and configure 
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

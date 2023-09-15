@@ -8,11 +8,11 @@ The **Teracom Service Overview Manager** provides an overview of the states of t
 
 ## About
 
-This driver provides an overview of all the alarms on services. Services are added by importing an .xls, .xlsx or .csv file.
+This connector provides an overview of all the alarms on services. Services are added by importing an .xls, .xlsx or .csv file.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | No                      |
 
@@ -22,7 +22,7 @@ This driver provides an overview of all the alarms on services. Services are add
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not need any user input during creation.
+This connector uses a virtual connection and does not need any user input during creation.
 
 ### Configuration
 

@@ -4,11 +4,11 @@ uid: Connector_help_Symmetricom_SSU
 
 # Symmetricom SSU
 
-The aim of this driver is the control of a management system.
+The aim of this connector is the control of a management system.
 
 ## About
 
-This is an **SNMP** driver that retrieves simple SNMP parameters and SNMP tables, for which alarms can be generated. It also allows you to set new values for certain parameters.
+This is an **SNMP** connector that retrieves simple SNMP parameters and SNMP tables, for which alarms can be generated. It also allows you to set new values for certain parameters.
 
 ## Installation and configuration
 
@@ -16,7 +16,7 @@ This is an **SNMP** driver that retrieves simple SNMP parameters and SNMP tables
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

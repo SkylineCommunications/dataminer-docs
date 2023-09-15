@@ -4,11 +4,11 @@ uid: Connector_help_Enensys_EdgeProbe_Advanced
 
 # Enensys EdgeProbe Advanced
 
-With this driver, you can configure and monitor an **Enensys EdgeProbe Advanced** DTV Monitoring Probe.
+With this connector, you can configure and monitor an **Enensys EdgeProbe Advanced** DTV Monitoring Probe.
 
 ## About
 
-This driver can be used for multiple purposes, including the configuration of the device. You can configure overall settings like the device name or the location of the device, but also network settings, trap settings and alarm settings. It is also possible to monitor different channels on the device (e.g. DVB-T, DVB-C, ETR, Multiplex).
+This connector can be used for multiple purposes, including the configuration of the device. You can configure overall settings like the device name or the location of the device, but also network settings, trap settings and alarm settings. It is also possible to monitor different channels on the device (e.g. DVB-T, DVB-C, ETR, Multiplex).
 
 ### Version info
 
@@ -38,7 +38,7 @@ This driver can be used for multiple purposes, including the configuration of th
 
 #### SNMP Enensys EdgeProbe Advance connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

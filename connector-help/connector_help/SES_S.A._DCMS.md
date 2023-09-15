@@ -8,17 +8,17 @@ The Dedicated Carrier Monitoring System (**DCMS**) permanently measures the down
 
 ## About
 
-The **SES S.A. DCMS** driver is used by DataMiner to access, process, and display relevant information about some of the DCMS data files, such as **EIRP Data**, **System Gain** and **Housekeeping** (**Outer Temperature**, **Hub Temperature**, **Noise Source 1 Temperature**, **Noise Source 2 Temperature**, **Voltage -15V Supply**, **Voltage 5V Supply**, **Voltage 15V Supply** and **Voltage 28V Supply**). The data, accessed from a Windows share, is treated as one independent file for each of the above parameters. In the case of the satellite database file, multiple pieces of data are retrieved, such as **Original** and **Backup Satellite Name**, **Frequency**, and **Nominal**, **Low**, and **High EIRP.** All files, excluding the satellite database file, also return **Date Time** information about the retrieval of data.
+The **SES S.A. DCMS** connector is used by DataMiner to access, process, and display relevant information about some of the DCMS data files, such as **EIRP Data**, **System Gain** and **Housekeeping** (**Outer Temperature**, **Hub Temperature**, **Noise Source 1 Temperature**, **Noise Source 2 Temperature**, **Voltage -15V Supply**, **Voltage 5V Supply**, **Voltage 15V Supply** and **Voltage 28V Supply**). The data, accessed from a Windows share, is treated as one independent file for each of the above parameters. In the case of the satellite database file, multiple pieces of data are retrieved, such as **Original** and **Backup Satellite Name**, **Frequency**, and **Nominal**, **Low**, and **High EIRP.** All files, excluding the satellite database file, also return **Date Time** information about the retrieval of data.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | N/A                         |
 
@@ -28,13 +28,13 @@ The **SES S.A. DCMS** driver is used by DataMiner to access, process, and displa
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation. All files are retrieved from Windows Local Shares as from version 1.0.0.1.
+This connector uses a virtual connection and does not require any input during element creation. All files are retrieved from Windows Local Shares as from version 1.0.0.1.
 
 ## Usage
 
 ### General
 
-For each type of file, this page indicates the number of files that exist for the current month. This information is displayed for **EIRP**, **System Gain**, **Database** and **Housekeeping Files**. In addition, this page displays the **Directory Path** (Windows path) used by the driver to retrieve all data files, and it also shows the **Status** of this directory.
+For each type of file, this page indicates the number of files that exist for the current month. This information is displayed for **EIRP**, **System Gain**, **Database** and **Housekeeping Files**. In addition, this page displays the **Directory Path** (Windows path) used by the connector to retrieve all data files, and it also shows the **Status** of this directory.
 
 Note: The **Directory Path** must contain the **DCMS ID** (e.g. *C:\Skyline DataMiner\Documents\SES S.A. DCMS\DCMS Files\dcms3-data*).
 

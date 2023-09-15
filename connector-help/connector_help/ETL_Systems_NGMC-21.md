@@ -4,9 +4,9 @@ uid: Connector_help_ETL_Systems_NGMC-21
 
 # ETL Systems NGMC-21
 
-This driver displays information related to the ETL Systems NGMC-21 combining matrix.
+This connector displays information related to the ETL Systems NGMC-21 combining matrix.
 
-The driver uses two interfaces to communicate with the NGMC-21 device. The SNMP interface is used to retrieve information regarding the chassis (temperature, fan status, etc.) and also for the input and output card tables. The serial interface is used to execute the remaining commands related to the matrix.
+The connector uses two interfaces to communicate with the NGMC-21 device. The SNMP interface is used to retrieve information regarding the chassis (temperature, fan status, etc.) and also for the input and output card tables. The serial interface is used to execute the remaining commands related to the matrix.
 
 ## About
 
@@ -34,7 +34,7 @@ The driver uses two interfaces to communicate with the NGMC-21 device. The SNMP 
 
 #### SERIAL main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during the creation of the element:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during the creation of the element:
 
 SERIAL CONNECTION:
 
@@ -45,7 +45,7 @@ SERIAL CONNECTION:
 
 #### SNMP connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during the creation of the element:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during the creation of the element:
 
 SNMP CONNECTION:
 
@@ -60,7 +60,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## Usage
 
-The element created with this driver consists of the data pages detailed below.
+The element created with this connector consists of the data pages detailed below.
 
 ### Main View
 

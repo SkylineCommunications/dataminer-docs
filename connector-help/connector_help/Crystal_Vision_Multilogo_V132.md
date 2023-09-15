@@ -8,13 +8,13 @@ The Crystal Vision MultiLogo V132 is an HD/SD three-layer logo keyer with 8 GB o
 
 ## About
 
-The Crystal Vision MultiLogo V132 driver is used to view and monitor a Crystal Vision MultiLogo V132 card. All the settings of the device can be modified using this driver.
+The Crystal Vision MultiLogo V132 connector is used to view and monitor a Crystal Vision MultiLogo V132 card. All the settings of the device can be modified using this connector.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION**:
 
@@ -116,7 +116,3 @@ This page displays three blocks of data. However, note that the **Partial Preset
 
 - **Preset Control**: Allows the user to set the **Preset** **Select** to a value between *0* and *255,* and also contains two buttons.
 - **Partial Preset**: Allows the user to set the save for multiple parameters to *True* or *False*.
-
-## Notes
-
-N/A

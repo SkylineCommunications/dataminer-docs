@@ -4,7 +4,7 @@ uid: Connector_help_Sky_UK_MagiQ
 
 # Sky UK MagiQ
 
-The Sky UK MagiQ driver is used to monitor and control a list of STB boxes with their IP address and status.
+The Sky UK MagiQ connector is used to monitor and control a list of STB boxes with their IP address and status.
 
 ## About
 
@@ -32,7 +32,7 @@ The Sky UK MagiQ driver is used to monitor and control a list of STB boxes with 
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -50,8 +50,8 @@ There is no redundancy defined.
 
 ## How to use
 
-This driver imports a CSV file that contains the list of IP addresses and status of STB boxes. It then displays this data in a table.
+This connector imports a CSV file that contains the list of IP addresses and status of STB boxes. It then displays this data in a table.
 
 For this to work, you need to make sure that the CSV file is located in the correct location and specify the path.
 
-The driver can also poll the data from an API that provides the necessary information about the STBs.
+The connector can also poll the data from an API that provides the necessary information about the STBs.

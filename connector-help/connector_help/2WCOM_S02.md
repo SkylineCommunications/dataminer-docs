@@ -11,19 +11,19 @@ The 2WCOM S02 contains two independently selectable limiters: a peak deviation l
 
 ## About
 
-This driver provides an overview of the states of the AES inputs, the presets and the event settings.
+This connector provides an overview of the states of the AES inputs, the presets and the event settings.
 
 The information is retrieved from the device using **SNMP**.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | \-                          |
 
@@ -33,7 +33,7 @@ The information is retrieved from the device using **SNMP**.
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

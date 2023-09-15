@@ -8,11 +8,11 @@ The **Arris E6000 Configuration Manager** is an element manager for Arris E6000 
 
 ## About
 
-This driver retrieves all elements using the Arris E6000 driver and allows you to **configure** the selected Arris E6000 elements, **upgrade/commit an image**, and **apply patches** **in** **bulk**. The bulk execution is performed with a maximum number of elements running simultaneously. For example, if **Elements Running Simultaneously** is set to 5 and there are 10 elements in the Selected Devices table, once you start an operation, the execution will be started for 5 elements and put in the queue for the other 5. When the execution finishes for one element, it will start for another element that will be taken from the queue.
+This connector retrieves all elements using the Arris E6000 connector and allows you to **configure** the selected Arris E6000 elements, **upgrade/commit an image**, and **apply patches** **in** **bulk**. The bulk execution is performed with a maximum number of elements running simultaneously. For example, if **Elements Running Simultaneously** is set to 5 and there are 10 elements in the Selected Devices table, once you start an operation, the execution will be started for 5 elements and put in the queue for the other 5. When the execution finishes for one element, it will start for another element that will be taken from the queue.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 
@@ -22,11 +22,11 @@ This driver retrieves all elements using the Arris E6000 driver and allows you t
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## Usage
 
-This driver is meant to be used as a DataMiner app with a custom visual overview. By default, the data pages of the element are not shown. The app consists of four tabs, as detailed below.
+This connector is meant to be used as a DataMiner app with a custom visual overview. By default, the data pages of the element are not shown. The app consists of four tabs, as detailed below.
 
 ### Devices
 
@@ -58,7 +58,7 @@ Each row matches a CMTS, and on each row 3 buttons are available that trigger an
 - **Refresh**: Refreshes the config files.
 - **Refresh**: Refreshes the firmware files.
 
-These operations are explained in detail in the Arris E6000 driver help, in the sections "Backup & Restore Config Page" and "Image Upgrade Page".
+These operations are explained in detail in the Arris E6000 connector help, in the sections "Backup & Restore Config Page" and "Image Upgrade Page".
 
 The following additional buttons also allow actions on this table:
 
@@ -92,7 +92,7 @@ For bulk operations on the elements of this table, several buttons are available
 - **Remove All**: Clears the table of all elements.
 - **Remove All From Queue**: Removes all the elements waiting to have the current operation executed. Note: Doing this only removes the elements from the queue of the bulk execution. Once the execution has started for an element, it cannot be stopped.
 
-These operations are explained in detail in the Arris E6000 driver help, in the sections "Backup & Restore Config Page" and "Upload & Upgrade Page".
+These operations are explained in detail in the Arris E6000 connector help, in the sections "Backup & Restore Config Page" and "Upload & Upgrade Page".
 
 **Current Operation Running** displays the operation that is running at the present moment. This can be Upload Firmware, Update Firmware, Commit, etc. or **None** if no operation is running at the moment.
 

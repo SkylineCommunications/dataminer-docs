@@ -4,15 +4,15 @@ uid: Connector_help_ATT_Correlation_Manager
 
 # ATT Correlation Manager
 
-The ATT Correlation Manager protocol is a custom made driver for AT&T responsible for creating custom correlation alarms when certain conditions are met in the system.
+The ATT Correlation Manager protocol is a custom-made connector for AT&T responsible for creating custom correlation alarms when certain conditions are met in the system.
 
 ## About
 
 When an alarm is raised in one of the monitored parameters, a correlation rule executes an automation script that forward the alarm information to the Correlation Manager element. The Correlation Manager element places the received alarm information from the automation script in one of the five buffers based on the kind of the alarm. The protocol defines five different threads to handle the five different buffers. Depending on the alarm, the protocol check the state of certain parameters in other elements in the system and some custom properties of the impacted services. Based on the value of those parameters and properties a new correlation alarm with a custom value, severity and base alarms is raised.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial Version | No                  | Yes                     |
 
@@ -20,7 +20,7 @@ When an alarm is raised in one of the monitored parameters, a correlation rule e
 
 ### Creation
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## Usage
 
@@ -52,4 +52,4 @@ DATE VERSION AUTHOR COMMENTS25/05/2018 1.0.0.1 AIG , Skyline Initial Version
 
 ## Notes
 
-This driver is used in combination with a correlation rule that receives alarm events and an automation script (ATT Correlation Alarm Notificator) that forward the alarm information to the ATT Correlation Manager protocol.
+This connector is used in combination with a correlation rule that receives alarm events and an automation script (ATT Correlation Alarm Notificator) that forward the alarm information to the ATT Correlation Manager protocol.

@@ -8,17 +8,17 @@ The **F5 BIG-IP Local Traffic Manager** (LTM) is designed to deliver application
 
 ## About
 
-The **F5 BIG-IP LTM** driver uses **SNMP** to retrieve status, configuration and statistics data from the F5 BIG-IP Local Traffic Manager. It is not possible to configure the device via SNMP.
+The **F5 BIG-IP LTM** connector uses **SNMP** to retrieve status, configuration and statistics data from the F5 BIG-IP Local Traffic Manager. It is not possible to configure the device via SNMP.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**   |
+| **Range** | **Device Firmware Version**   |
 |------------------|-------------------------------|
 | 1.0.0.x          | Version 12.1.2 Build 0.93.249 |
 
@@ -28,7 +28,7 @@ The **F5 BIG-IP LTM** driver uses **SNMP** to retrieve status, configuration and
 
 SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

@@ -4,7 +4,7 @@ uid: Connector_help_KuVision_KU-D2000
 
 # KuVision KU-D2000
 
-The KuVision KU-D2000 driver is used to monitor the KU-D2000 AVS+ Satellite Integrated Receiver Decoder.
+The KuVision KU-D2000 connector is used to monitor the KU-D2000 AVS+ Satellite Integrated Receiver Decoder.
 
 ## About
 
@@ -32,7 +32,7 @@ The KuVision KU-D2000 driver is used to monitor the KU-D2000 AVS+ Satellite Inte
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

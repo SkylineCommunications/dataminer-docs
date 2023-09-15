@@ -12,7 +12,7 @@ The DR3402 is a reciever.
 
 ### Creation
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## Usage
 

@@ -4,17 +4,17 @@ uid: Connector_help_Cisco_Panorama_CL
 
 # Cisco Panorama CL
 
-This driver is used to display information related to the **Cisco Panorama CL** device.
+This connector is used to display information related to the **Cisco Panorama CL** device.
 
 ## About
 
-This driver uses SNMP to communicate with the **Cisco Panorama CL** device.
+This connector uses SNMP to communicate with the **Cisco Panorama CL** device.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP Connection:**
 

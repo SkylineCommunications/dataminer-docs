@@ -4,24 +4,24 @@ uid: Connector_help_SA_ROSA_EM
 
 # SA ROSA EM
 
-This driver can be used to display and configure information related to the Rosa EM device and devices connected to it. The displayed information is organized in the same way as in the Rosa EM web application. In addition, this driver also allows the user to perform SNMP sets on the Rosa device and devices connected to it.
+This connector can be used to display and configure information related to the Rosa EM device and devices connected to it. The displayed information is organized in the same way as in the Rosa EM web application. In addition, this connector also allows the user to perform SNMP sets on the Rosa device and devices connected to it.
 
 ## About
 
-The Rosa EM driver is used to monitor and control a Rosa EM device and devices connected to it. An **SNMP** connection is used in order to retrieve and configure the information of the device.
+The Rosa EM connector is used to monitor and control a Rosa EM device and devices connected to it. An **SNMP** connection is used in order to retrieve and configure the information of the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                              | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                              | **DCF Integration** | **Cassandra Compliant** |
 |------------------|--------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                                              | No                  | Yes                     |
 | 2.0.0.x          | SNMP implementation for a number of devices. DVE generation. | No                  | Yes                     |
 | 2.0.1.x          | Driver review                                                | No                  | Yes                     |
 | 3.0.0.x          | Cellnex Version                                              | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 2.0.0.x          | Unknown                     |
@@ -30,7 +30,7 @@ The Rosa EM driver is used to monitor and control a Rosa EM device and devices c
 
 ### Device types
 
-The Rosa EM driver can be used to monitor and control the following devices:
+The Rosa EM connector can be used to monitor and control the following devices:
 
 - [Switch (Switch)](xref:Connector_help_SA_ROSA_EM_-_Switch)
 - [DCM (Digital Content Manager)](xref:Connector_help_SA_ROSA_EM_-_DCM)
@@ -44,7 +44,7 @@ The Rosa EM driver can be used to monitor and control the following devices:
 
 For the Vikinx device, only basic information will be displayed.
 
-For all the devices connected to the SA ROSA EM, except the Vikinx, DVEs will be created. The SA ROSA EM - Vikinx driver is a standalone driver that is not exported by the SA ROSA EM.
+For all the devices connected to the SA ROSA EM, except the Vikinx, DVEs will be created. The SA ROSA EM - Vikinx connector is a standalone connector that is not exported by the SA ROSA EM.
 
 ## Installation and configuration
 
@@ -52,7 +52,7 @@ For all the devices connected to the SA ROSA EM, except the Vikinx, DVEs will be
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP Connection:
 

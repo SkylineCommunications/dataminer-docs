@@ -10,17 +10,17 @@ These devices provide remote access to console ports on distant network elements
 
 ## About
 
-This driver uses an SNMP connection to poll data from a WTI RSM device.
+This connector uses an SNMP connection to poll data from a WTI RSM device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 6.30                        |
 
@@ -30,7 +30,7 @@ This driver uses an SNMP connection to poll data from a WTI RSM device.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

@@ -4,21 +4,21 @@ uid: Connector_help_Globecast_CMS_Database_Service_Plan
 
 # Globecast CMS Database Service Plan
 
-This driver is designed to manage association between CMS Services and DataMiner Services and their associated elements.
+This connector is designed to manage association between CMS Services and DataMiner Services and their associated elements.
 
 ## About
 
-The driver parses XML files in order to apply correct alarm filters and setpoints on the concerned elements divided in 2 categories: QoS probes and QoE probes.
+The connector parses XML files in order to apply correct alarm filters and setpoints on the concerned elements divided in 2 categories: QoS probes and QoE probes.
 
 ## Installation and Configuration
 
 ### Creation
 
-This driver uses a **virtual** connection and does not require any input during element creation.
+This connector uses a **virtual** connection and does not require any input during element creation.
 
 ### Configuration of FTP Connection
 
-For the driver to work correctly, you must fill in the following information on the "Configuration" page: the **FTP Server** **IP address** (e.g. *127.0.0.1*), the **FTP Server Login**, the **FTP Server Password**, the **Client File Name** (e.g. *Client.xml*), the **Service File Name** (e.g. *Service.xml*) and the **Service Line-Up File Name** (e.g. *ServiceLine-up.xml*).
+For the connector to work correctly, you must fill in the following information on the "Configuration" page: the **FTP Server** **IP address** (e.g. *127.0.0.1*), the **FTP Server Login**, the **FTP Server Password**, the **Client File Name** (e.g. *Client.xml*), the **Service File Name** (e.g. *Service.xml*) and the **Service Line-Up File Name** (e.g. *ServiceLine-up.xml*).
 
 ## Usage
 
@@ -52,7 +52,7 @@ This page displays the configuration parameters described in the "Configuration 
 
 The page also contains the **QoS Probes Table** and the **QoE Probes Table**.
 
-The **QoS Probes Table** is filled in by the user with the following information: the **QoS Protocol Name, Read QoS Filter Id, Read Normalize Service Rate Id, Read Normalize Pid Rate Id, Service Rate Coeff Factor** and **Pid Rate Coeff Factor**. This way, the driver knows which particular protocol it has to search for in the included elements in the DataMiner Services associated to the CMS Services, and which are the PIDs of the parameters to set the **QoS Filter, Normalize Service Rate** and the **Normalize Pid Rate.** The **Service Rate Coeff Factor** and **Pid Rate Coeff Factor** are used to apply a correction value to the setpoints before the sets.
+The **QoS Probes Table** is filled in by the user with the following information: the **QoS Protocol Name, Read QoS Filter Id, Read Normalize Service Rate Id, Read Normalize Pid Rate Id, Service Rate Coeff Factor** and **Pid Rate Coeff Factor**. This way, the connector knows which particular protocol it has to search for in the included elements in the DataMiner Services associated to the CMS Services, and which are the PIDs of the parameters to set the **QoS Filter, Normalize Service Rate** and the **Normalize Pid Rate.** The **Service Rate Coeff Factor** and **Pid Rate Coeff Factor** are used to apply a correction value to the setpoints before the sets.
 
 For the **QoE Probes Table**, the only required information is the **QoE Protocol Name** and the **QoE Filter Id.**
 

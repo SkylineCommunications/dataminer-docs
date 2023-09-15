@@ -4,24 +4,24 @@ uid: Connector_help_NTT_Electronics_HC11000E
 
 # NTT Electronics HC11000E
 
-This driver allows the user to monitor and control HC11000E devices.
+This connector allows the user to monitor and control HC11000E devices.
 
 This device uses a single-chip HEVC encoder LSI and supports 4K/60p 4:2:2 10-bit.
 
 ## About
 
-With this driver, it is possible to monitor the hardware and performance status of an HC11000E device and to change the configuration of some of its parameters. The driver uses a **SNMP connection** to retrieve data from the device and to set parameters on it.
+With this connector, it is possible to monitor the hardware and performance status of an HC11000E device and to change the configuration of some of its parameters. The connector uses a **SNMP connection** to retrieve data from the device and to set parameters on it.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                      | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                      | **DCF Integration** | **Cassandra Compliant** |
 |------------------|--------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                      | No                  | Yes                     |
 | 1.1.0.x          | Support for firmware version RC3.B.1 | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Ver.00.24.0002              |
 | 1.1.0.x          | RC3.B.1                     |
@@ -30,7 +30,7 @@ With this driver, it is possible to monitor the hardware and performance status 
 
 SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

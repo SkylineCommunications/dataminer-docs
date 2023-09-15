@@ -4,21 +4,21 @@ uid: Connector_help_Imagine_Communications_VTM_Series
 
 # Imagine Communications VTM Series
 
-This driver can be used to control the Videotekr VTM4150PKG multiformat, modular rasterizer monitor. The Videotekr VTM4150 packages are predefined module groupings designed to quickly deliver onscreen monitoring solutions. The series features 3 Gb/s, HD/SD-SDI, SD-SDI, analog composite and ASI video monitoring, advanced physical layer jitter analysis, Dolby, advanced audio and lip sync monitoring options.
+This connector can be used to control the Videotekr VTM4150PKG multiformat, modular rasterizer monitor. The Videotekr VTM4150 packages are predefined module groupings designed to quickly deliver onscreen monitoring solutions. The series features 3 Gb/s, HD/SD-SDI, SD-SDI, analog composite and ASI video monitoring, advanced physical layer jitter analysis, Dolby, advanced audio and lip sync monitoring options.
 
-This driver is designed to monitor and control the device using an SNMP connection.
+This connector is designed to monitor and control the device using an SNMP connection.
 
 ## About
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 7.35                        |
 

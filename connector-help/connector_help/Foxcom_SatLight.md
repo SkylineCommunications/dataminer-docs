@@ -8,19 +8,19 @@ The Foxcom Satlight is a chassis for Complete RF-2-Fiber Solutions.
 
 ## About
 
-With this driver, it is possible to monitor and configure **transmitters**, **receivers** and **switches** in a **Foxcom SatLight** chassis with SNMP.
+With this connector, it is possible to monitor and configure **transmitters**, **receivers** and **switches** in a **Foxcom SatLight** chassis with SNMP.
 
 Different DVEs are created for each transmitter, receiver or switch in the chassis. Each DVE has appropriate parameters to monitor and manage the modules.
 
 General parameters are displayed on the main element.
 
-The driver implements all traps to update the trap table and the slots tables in order to generate alarms immediately.
+The connector implements all traps to update the trap table and the slots tables in order to generate alarms immediately.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 

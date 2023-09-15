@@ -4,11 +4,11 @@ uid: Connector_help_DEV_Switch_SNMP
 
 # DEV Switch SNMP
 
-The **DEV Switch SNMP** driver is used to display all information for devices supporting the dev-switch MIB. This driver was originally designed for the DEV7113 1:1 (without applied redundancy functionality), but was later extended to a generic version. Depending on the version range, the driver can create a DVE element for every module found in the **Port** table (see "Usage" section below).
+The **DEV Switch SNMP** connector is used to display all information for devices supporting the dev-switch MIB. This connector was originally designed for the DEV7113 1:1 (without applied redundancy functionality), but was later extended to a generic version. Depending on the version range, the connector can create a DVE element for every module found in the **Port** table (see "Usage" section below).
 
 ## About
 
-The information displayed in the driver is divided over seven pages:
+The information displayed in the connector is divided over seven pages:
 
 - The **General** page contains general information about the device.
 - The **Switch Configuration** page contains the basic switch configuration in two tables.
@@ -18,23 +18,23 @@ The information displayed in the driver is divided over seven pages:
 - The **Surveillance** page contains additional information about the device status and the fan(s).
 - The **Web Interface** page contains a link to the interface designed by manufacturer DEV.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                                          | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                                                          | **DCF Integration** | **Cassandra Compliant** |
 |------------------|----------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                                                                                          | No                  | No                      |
 | 2.0.0.x          | Branch version based on 1.0.0.xDVE functionality added                                                   | No                  | No                      |
-| 3.0.0.x          | Branch version based on 2.0.0.xAdded support for two port modulesExtended the driver to a generic driver | No                  | No                      |
+| 3.0.0.x          | Branch version based on 2.0.0.xAdded support for two port modulesExtended the connector to a generic connector | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**                                 |
+| **Range** | **Device Firmware Version**                                 |
 |------------------|-------------------------------------------------------------|
 | 1.0.0.x          | Unknown                                                     |
 | 2.0.0.x          | Unknown                                                     |
 | 3.0.0.x          | A.08 (DEV1951) B.01 (DEV1520) P.01 (DEV7113) Q.03 (DEV2190) |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol** | **Description**                                                                      |
 |-----------------------|--------------------------------------------------------------------------------------|
@@ -46,7 +46,7 @@ The information displayed in the driver is divided over seven pages:
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP Connection**:
 
@@ -81,15 +81,15 @@ This page contains all the raw data of the **Ports table** of the MIB. Exception
 
 ### Modules DEV7113 1:1 Page
 
-This page should only be used if the driver is used with the DEV7113 1:1 device. As the driver was originally intended to be used with this specific device, the table has been kept, in order to avoid conflicts with older versions of the driver. The information in the **DVE Modules** table is the same as that in the Ports table, except that for the DEV7113 1:1, the two ports belonging together in a module are displayed next to each other.
+This page should only be used if the connector is used with the DEV7113 1:1 device. As the connector was originally intended to be used with this specific device, the table has been kept, in order to avoid conflicts with older versions of the connector. The information in the **DVE Modules** table is the same as that in the Ports table, except that for the DEV7113 1:1, the two ports belonging together in a module are displayed next to each other.
 
-These modules are then displayed below in a **Slot Table**. With this Slot Table, you can create a DVE element by toggling the cells in the last column. These DVE elements are then created in the same view in the Surveyor and are processed by the exported driver. Even in case another device is used than the DEV7113 1:1, it is possible to create DVE elements. Users that were able to create DVE elements with this driver in a previous version will not experience any loss of functionality.
+These modules are then displayed below in a **Slot Table**. With this Slot Table, you can create a DVE element by toggling the cells in the last column. These DVE elements are then created in the same view in the Surveyor and are processed by the exported connector. Even in case another device is used than the DEV7113 1:1, it is possible to create DVE elements. Users that were able to create DVE elements with this connector in a previous version will not experience any loss of functionality.
 
 Since version **3.0.0.8**, it is possible to toggle the **visibility** of the DVEs in the Surveyor by using a button in the **DVE Modules** table (at the rightmost side of the table). This **will not** **delete** the DVE, but just **hide** it or **show** it. Also, the **DVEs are not deleted automatically** when a port is removed compared to the last polling cycle, to ensure that **trending data is not lost** when a module is removed from the equipment and installed again. If necessary, DVEs can be deleted manually. To delete the modules marked as removed, use the **Delete** button at the rightmost side of the DVE Modules table or the **Delete All Removed** button at the top of the page. The entries are synchronized with the **Slot Table**.
 
 ### Advanced Switching Page
 
-This page contains all extra parameters of the application folder in the dev-switch MIB that were not displayed on the previous pages. These parameters are related to advanced switching and are only relevant for a specific type of devices of DEV. The parameters and tables of the page are displayed in a box. The polling of these parameters can be enabled/disabled with the toggle button above it. This ensures that the driver does not cause unnecessary network traffic or time-out alarms.
+This page contains all extra parameters of the application folder in the dev-switch MIB that were not displayed on the previous pages. These parameters are related to advanced switching and are only relevant for a specific type of devices of DEV. The parameters and tables of the page are displayed in a box. The polling of these parameters can be enabled/disabled with the toggle button above it. This ensures that the connector does not cause unnecessary network traffic or time-out alarms.
 
 ### Alarms Page
 
@@ -106,7 +106,3 @@ This page contains additional information about the internal/external device and
 This page refers the user to the web interface of the device, which is developed by the manufacturer of the device, in this case DEV.
 
 Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.
-
-## Notes
-
-N/A

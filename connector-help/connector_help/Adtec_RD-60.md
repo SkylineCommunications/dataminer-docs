@@ -8,21 +8,21 @@ The Adtec RD-60 is an Integrated Multi-CODEC Receiver/Decoder. This MPEG 4/MPEG 
 
 ## About
 
-This driver was designed for use with the models **Adtec RD-60** and **Adtec RD-70**. Information is retrieved from the device and sets are done by the driver via the **SNMP** protocol. All the device information is displayed by the driver in a format similar to that of the device web interface. The driver allows one SNMP trap *"Decoder Status Change"* (OID 1.3.6.1.4.1.19587.6006.1.1000), from which it repolls the *"Decoder Status"* parameter's group.
+This connector was designed for use with the models **Adtec RD-60** and **Adtec RD-70**. Information is retrieved from the device and sets are done by the connector via the **SNMP** protocol. All the device information is displayed by the connector in a format similar to that of the device web interface. The connector allows one SNMP trap *"Decoder Status Change"* (OID 1.3.6.1.4.1.19587.6006.1.1000), from which it repolls the *"Decoder Status"* parameter's group.
 
 The range 1.1.0.1 only supports the **Adtec RD-60**.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                              | **DCF Integration** | **Cassandra Compliant** |
+| **connector Range** | **Description**                              | **DCF Integration** | **Cassandra Compliant** |
 |------------------|----------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                              | No                  | Yes                     |
-| 1.0.1.x          | Driver review and expansion to support RD-70 | No                  | Yes                     |
+| 1.0.1.x          | connector review and expansion to support RD-70 | No                  | Yes                     |
 | 1.1.0.x          | New update for the RD-60                     | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.11.03                     |
 | 1.1.0.x          | 1.13.03                     |
@@ -33,7 +33,7 @@ The range 1.1.0.1 only supports the **Adtec RD-60**.
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

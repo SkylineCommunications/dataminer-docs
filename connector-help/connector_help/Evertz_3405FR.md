@@ -6,7 +6,7 @@ uid: Connector_help_Evertz_3405FR
 
 The Evertz 3405FR is a high-capacity bulk optical conversion platform. With the ability to accommodate 16 Evertz 3405 series SFPs, up to 32 optical-to-electrical or electrical-to-optical conversions can be performed in a single frame.
 
-This driver allows you to monitor this device.
+This connector allows you to monitor this device.
 
 ## About
 
@@ -34,7 +34,7 @@ This driver allows you to monitor this device.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -60,6 +60,6 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-This driver displays the frame controller and SFP faults overview. The Faults page displays a summary of faults for each SFP with the detailed description of the faults.
+This connector displays the frame controller and SFP faults overview. The Faults page displays a summary of faults for each SFP with the detailed description of the faults.
 
 You can also configure the TX and RX monitors on the Monitor page.

@@ -32,7 +32,7 @@ The CBR-8 is designed to support distributed-access architectures, remote PHY, D
 
 #### SNMP Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

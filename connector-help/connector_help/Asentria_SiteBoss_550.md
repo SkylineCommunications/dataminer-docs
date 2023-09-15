@@ -4,21 +4,21 @@ uid: Connector_help_Asentria_SiteBoss_550
 
 # Asentria SiteBoss 550
 
-The **Asentria SiteBoss 550** driver is an SNMP driver that is used to monitor server equipment rooms or remote cabinets or enclosures.
+The **Asentria SiteBoss 550** connector is an SNMP connector that is used to monitor server equipment rooms or remote cabinets or enclosures.
 
 ## About
 
-With this driver, it is possible to monitor and configure the SiteBoss 550 device via SNMP to control server equipment rooms or remote cabinets or enclosures.
+With this connector, it is possible to monitor and configure the SiteBoss 550 device via SNMP to control server equipment rooms or remote cabinets or enclosures.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 2.11.220                    |
 
@@ -28,7 +28,7 @@ With this driver, it is possible to monitor and configure the SiteBoss 550 devic
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation
 
 SNMP Connection:
 

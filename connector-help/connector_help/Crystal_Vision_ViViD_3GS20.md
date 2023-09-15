@@ -8,7 +8,7 @@ The **Crystal Vision ViViD 3GS20** is a long 3G/HD/SD variable video delay with 
 
 ## About
 
-The Crystal Vision ViViD 3GS20 driver makes it possible to monitor and control a specific Crystal Vision ViViD 3GS20 card. In addition, this driver is able to control the main features of this device: RGB/YUV gains, full vertical and horizontal timing and cross-locking.
+The Crystal Vision ViViD 3GS20 connector makes it possible to monitor and control a specific Crystal Vision ViViD 3GS20 card. In addition, this connector is able to control the main features of this device: RGB/YUV gains, full vertical and horizontal timing and cross-locking.
 
 All data is retrieved using an SNMP connection. The bus address of an element is used to indicate the card number to poll.
 
@@ -16,7 +16,7 @@ All data is retrieved using an SNMP connection. The bus address of an element is
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 

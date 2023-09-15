@@ -4,27 +4,27 @@ uid: Connector_help_Panasonic_AW-HE40
 
 # Panasonic AW-HE40
 
-This driver is obsolete.
+This connector is obsolete.
 
-The **Panasonic AW-HE40** driver can be used to display and configure Panasonic IP Camera AW-HE40 parameters and settings, as well as to control movements.
+The **Panasonic AW-HE40** connector can be used to display and configure Panasonic IP Camera AW-HE40 parameters and settings, as well as to control movements.
 
 ## About
 
 An **HTTP** connection is used in order to retrieve and configure the information of the device.
 
-In addition, the driver offers several possibilities for **alarm monitoring** and **trending** of the supported Panasonic parameters.
+In addition, the connector offers several possibilities for **alarm monitoring** and **trending** of the supported Panasonic parameters.
 
 ## About
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -34,7 +34,7 @@ In addition, the driver offers several possibilities for **alarm monitoring** an
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

@@ -4,17 +4,17 @@ uid: Connector_help_Siemens_Sentron_PAC3200
 
 # Siemens Sentron PAC3200
 
-With this driver, it is possible to monitor a **Siemens Sentron PAC3200** power meter device.
+With this connector, it is possible to monitor a **Siemens Sentron PAC3200** power meter device.
 
 ## About
 
-This driver uses serial communication to monitor a **Siemens Sentron PAC3200** device. The protocol used for the serial communication is **Modbus TCP**. All commands and resonses are in the standard format of Modbus TCP.
+This connector uses serial communication to monitor a **Siemens Sentron PAC3200** device. The protocol used for the serial communication is **Modbus TCP**. All commands and resonses are in the standard format of Modbus TCP.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 **SERIAL CONNECTION**:
 

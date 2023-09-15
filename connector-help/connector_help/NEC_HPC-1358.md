@@ -6,23 +6,23 @@ uid: Connector_help_NEC_HPC-1358
 
 The NEC HPC-1358 is a transmitter controller that can be used to manage transmitters in an N+1 redundancy setup. Each transmitter (DTU) is responsible for the distribution of TV signals. This device can carry different types of transmitters, displaying their status and managing redundancy among them.
 
-This driver can be used to monitor and control the NEC HPC-1358 transmitter controller via an SNMP connection. This driver is based on the driver NEC N+1 Control HPC-1358D, which is quite similar. This new driver was created to support versions C and D of the device. The main difference is that this driver contains a button to dynamically poll the OIDs of either version C or D.
+This connector can be used to monitor and control the NEC HPC-1358 transmitter controller via an SNMP connection. This connector is based on the connector NEC N+1 Control HPC-1358D, which is quite similar. This new connector was created to support versions C and D of the device. The main difference is that this connector contains a button to dynamically poll the OIDs of either version C or D.
 
 ## About
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 2.1.3                       |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol**                                                                                | **Description**                      |
 |------------------------------------------------------------------------------------------------------|--------------------------------------|
@@ -35,7 +35,7 @@ This driver can be used to monitor and control the NEC HPC-1358 transmitter cont
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -77,4 +77,4 @@ This page displays the web interface of the device. Note that the client machine
 
 ## Notes
 
-For the current version of the driver, the traps for the main transmitter could not be generated on the device, and as such could not be properly tested. For this reason, main transmitter traps are currently not yet included in the driver.
+For the current version of the connector, the traps for the main transmitter could not be generated on the device, and as such could not be properly tested. For this reason, main transmitter traps are currently not yet included in the connector.

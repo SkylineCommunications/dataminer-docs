@@ -8,19 +8,19 @@ The 5160 provides exceptional 10GE density in a small 1RU form factor, with the 
 
 ## About
 
-This driver is used to establish communication between Skyline's DatMminer Software and the Ciena 5160 Service Aggregation Switch.
+This connector is used to establish communication between Skyline's DatMminer Software and the Ciena 5160 Service Aggregation Switch.
 
 The communication with this device is established via SNMPv2.
 
-This driver supports features across all device layers.
+This connector supports features across all device layers.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial Version | No                  | True                    |
 
-### Supported firmware versions
+### Product Info
 
 <table>
 <colgroup>
@@ -46,7 +46,7 @@ This driver supports features across all device layers.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

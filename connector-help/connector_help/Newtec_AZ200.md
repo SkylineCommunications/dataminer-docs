@@ -10,9 +10,9 @@ The AZ200 Universal Switching System is a powerful and modular product designed 
 
 A **serial** connection is used in order to retrieve information from the device and to change settings of the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                                    | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                                                    | **DCF Integration** | **Cassandra Compliant** |
 |------------------|----------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.1.x          | Initial version for software version 1.                                                            | No                  | Yes                     |
 | 1.2.11.x         | Based on Newtec 2185 driver Software version: 2.11 Software ID: 6234 Config ID: U1184 Rx config    | No                  | Yes                     |
@@ -26,9 +26,9 @@ A **serial** connection is used in order to retrieve information from the device
 | 9.2.13.x         | Software version: 2.13 software ID: 6234 Config ID: N0331                                          | No                  | Yes                     |
 | 10.2.13.x        | Software version: 2.13 Software ID: 6234 Config ID: U9987                                          | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 10.2.13.x        | 2.13                        |
 
@@ -38,7 +38,7 @@ A **serial** connection is used in order to retrieve information from the device
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

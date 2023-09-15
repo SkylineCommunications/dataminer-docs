@@ -4,7 +4,7 @@ uid: Connector_help_Fujitsu_IP-920
 
 # Fujitsu IP-920
 
-The **Fujitsu IP-920** driver has been designed to monitor IP-920D HD/SD compact video decoder or IP-920E HD/SD compact video encoder devices. The IP-920 is an audio/video codec that utilizes advanced MPEG-4 AVC (H.264) encoding to perform real-time transmission of SDTV and HDTV at low bit rates over IP network.
+The **Fujitsu IP-920** connector has been designed to monitor IP-920D HD/SD compact video decoder or IP-920E HD/SD compact video encoder devices. The IP-920 is an audio/video codec that utilizes advanced MPEG-4 AVC (H.264) encoding to perform real-time transmission of SDTV and HDTV at low bit rates over IP network.
 
 ## About
 
@@ -14,19 +14,19 @@ The IP-920 has an analog video (NTSC/PAL) interface. The existing CCTV camera ca
 
 An enhanced IP-920 can stream video more smoothly by supporting Ultra low latency of approx. 99ms. These new feature is especially useful for decoding video from remote site. (e.g. Video transmission among different countries, broadcasters and global companies) The new feature enables to decode video seamlessly and simultaneously and the operator in decoding site would not have to feel any stresses for waiting the process.
 
-The information displayed in this driver is delivered in different pages and are described in the **Usage** section of this document.
+The information displayed in this connector is delivered in different pages and are described in the **Usage** section of this document.
 
-The driver manages independent counters, and a reset button is available to clear the content of these values as well as the internal counters of web page device.
+The connector manages independent counters, and a reset button is available to clear the content of these values as well as the internal counters of web page device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial Version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.0                         |
 
@@ -34,7 +34,7 @@ The driver manages independent counters, and a reset button is available to clea
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (**SNMP**) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (**SNMP**) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 
@@ -52,7 +52,7 @@ The data is retrieved using multiple timers having polling intervals of 30 secon
 
 ## Usage
 
-The **Driver** contains different pages divided into different sections using separators.
+The **connector** contains different pages divided into different sections using separators.
 
 ### System Overview
 

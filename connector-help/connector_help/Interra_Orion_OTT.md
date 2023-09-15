@@ -8,17 +8,17 @@ ORION-OTT monitors ABR content, both VOD and Live, using user-defined automated 
 
 ## About
 
-This **HTTP** driver is used to monitor and configure the **Interra Orion OTT** Monitoring Platform.
+This **HTTP** connector is used to monitor and configure the **Interra Orion OTT** Monitoring Platform.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial Version | No                  | True                    |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range**     | **Device Firmware Version** |
+| **Range**     | **Device Firmware Version** |
 |----------------------|-----------------------------|
 | 1.0.0.x \[SLC Main\] | 1.6.2                       |
 
@@ -28,7 +28,7 @@ This **HTTP** driver is used to monitor and configure the **Interra Orion OTT** 
 
 #### HTTP Main Connection
 
-This driver uses a HTTP connection and requires the following input during element creation:
+This connector uses a HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

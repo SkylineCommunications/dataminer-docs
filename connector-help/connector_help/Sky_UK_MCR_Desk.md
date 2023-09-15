@@ -4,7 +4,7 @@ uid: Connector_help_Sky_UK_MCR_Desk
 
 # Sky UK MCR Desk
 
-The **Sky UK MCR Desk** driver is a **virtual** driver that is used in Sky to run a script.
+The **Sky UK MCR Desk** connector is a **virtual** connector that is used in Sky to run a script.
 The data for a particular monitor that is linked to a certain desk is saved in the element data.
 A Visio drawing will contain a button that will launch an **automation script**.
 
@@ -13,15 +13,15 @@ A Visio drawing will contain a button that will launch an **automation script**.
 The script can be either a generic one, or the one that is linked to the MON FOLLOW function.
 It is used in case the MON FOLLOW function is enabled in the Visio that is on the **Atos BNCS** element.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
 ## Installation and configuration
 
-#### This driver uses a virtual connection and does not require any input during element creation.
+#### This connector uses a virtual connection and does not require any input during element creation.
 
 #### ConfigurationOn the General Page, you need to configure the Linked Output Monitor and the SDI Matrix Element. You can also configure a separate Audio Matrix Element, and Audio Monitoring Outputs.
 
@@ -29,10 +29,10 @@ It is used in case the MON FOLLOW function is enabled in the Visio that is on th
 
 ### General
 
-This driver shows 6 parameters: The **Monitor Follows IO**, the **Buffer-Trigger Automation Script**, the **Local SD Matrix Element**, the **SDI Monitoring Outputs**, the **Local Audio Matrix Element** and the **Audio Monitoring Outputs**.
+This connector shows 6 parameters: The **Monitor Follows IO**, the **Buffer-Trigger Automation Script**, the **Local SD Matrix Element**, the **SDI Monitoring Outputs**, the **Local Audio Matrix Element** and the **Audio Monitoring Outputs**.
 
 The name of the Matrix is shown on the **SDI Matrix Element** parameter.
-This driver also shows 2 other parameters: The **Monitor Follows IO** and a **Linked Output Monitor**.
+This connector also shows 2 other parameters: The **Monitor Follows IO** and a **Linked Output Monitor**.
 Also the **Buffer - Trigger Automation Script** parameter shows the command that was sent from the Visio. The syntax of the command that triggers the launching of the script adheres to a certain standard.The line should start with \[Automation\].
 Furthermore there are 2 separators: \[NextAtt\] and \[AttData\].
 If the line that is sent from the Visio to the Sky UK Desk Driver contains the word "MONFOLLOW" (case insensitive), the Monitor Follows IO parameter is checked.

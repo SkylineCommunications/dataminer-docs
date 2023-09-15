@@ -4,20 +4,20 @@ uid: Connector_help_UPC_Nederland_Subscriber_Provisioner
 
 # UPC Nederland Subscriber Provisioner
 
-This driver can be used to import information in **Arris D5 EdgeQAM**, **Arris E6000**, **Cisco CBR-8, Casa Systems C100G** and/or **Cisco RFGW-1-D** elements.
+This connector can be used to import information in **Arris D5 EdgeQAM**, **Arris E6000**, **Cisco CBR-8, Casa Systems C100G** and/or **Cisco RFGW-1-D** elements.
 
 ## About
 
-This driver exports data to **Arris D5**, **Cisco RFGW-1-D**, **Casa Systems C100G, Cisco CBR-8** and **Arris E6000** elements. The data is imported from a CSV file.
+This connector exports data to **Arris D5**, **Cisco RFGW-1-D**, **Casa Systems C100G, Cisco CBR-8** and **Arris E6000** elements. The data is imported from a CSV file.
 
 Current version: **1.0.0.21**
 
 Note:
 
-- **Cisco RFGW-1-D** elements are only supported in this driver from version **1.0.0.6** onwards.
-- **Arris E6000** elements are only supported in this driver from version **1.0.0.7** onwards.
-- **Casa Systems C100G** elements are only supported in this driver from version **1.0.0.8** onwards.
-- **Cisco CBR-8** elements are only supported in this driver from version **1.0.0.16** onwards.
+- **Cisco RFGW-1-D** elements are only supported in this connector from version **1.0.0.6** onwards.
+- **Arris E6000** elements are only supported in this connector from version **1.0.0.7** onwards.
+- **Casa Systems C100G** elements are only supported in this connector from version **1.0.0.8** onwards.
+- **Cisco CBR-8** elements are only supported in this connector from version **1.0.0.16** onwards.
 
 The following information is exported:
 
@@ -78,9 +78,9 @@ Elements using Casa Systems and Cisco CBR-8 drivers:
 
 An external set action is automatically done on the button **Update Service Groups** on the QAM page.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 
@@ -90,17 +90,17 @@ An external set action is automatically done on the button **Update Service Grou
 
 Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Configuration
 
-To use this driver, you must supply the CSV file for import in the **Documents** folder of the element ("**C:\Skyline DataMiner\Documents\UPC Nederland Subscriber Provisioner\\**").
+To use this connector, you must supply the CSV file for import in the **Documents** folder of the element ("**C:\Skyline DataMiner\Documents\UPC Nederland Subscriber Provisioner\\**").
 
 This file must contain semicolon-separated values in the following order:
 
 "NETWORK ID;QAM;Type;Module;Port;Channel;VOD Cluster;HFC Segment;FiberNode;DTV Subscribers\[;Servicegroup\]".
 
-Since this driver works with XLS files, the package "2007 Office System Driver: Data Connectivity Components" needs to be installed.
+Since this connector works with XLS files, the package "2007 Office System Driver: Data Connectivity Components" needs to be installed.
 
 ## Usage
 

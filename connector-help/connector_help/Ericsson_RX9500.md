@@ -8,27 +8,27 @@ Ericsson's RX9500 bulk **descrambler** provides cable and IPTV providers and oth
 
 ## About
 
-This driver monitors basic parameters and alarms related to the device. It also receives traps from the device, so that alarm events can immediately be displayed or cleared.
+This connector monitors basic parameters and alarms related to the device. It also receives traps from the device, so that alarm events can immediately be displayed or cleared.
 
-In addition, the driver is used to monitor satellite services through cards or modules mounted on the device.
+In addition, the connector is used to monitor satellite services through cards or modules mounted on the device.
 
-The initial versions of the driver only support SNMP traps. The latest version of the driver includes a REST API implementation to retrieve all data information from the device by using HTTP protocol.
+The initial versions of the connector only support SNMP traps. The latest version of the connector includes a REST API implementation to retrieve all data information from the device by using HTTP protocol.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                 | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                 | **DCF Integration** | **Cassandra Compliant** |
 |------------------|---------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                 | No                  | Yes                     |
 | 2.0.0.x          | Branch version based on 1.0.0.x | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.0.0                       |
 | 2.0.0.x          | 1.0.0                       |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol**              | **Description** |
 |------------------------------------|-----------------|
@@ -38,11 +38,11 @@ The initial versions of the driver only support SNMP traps. The latest version o
 
 ### Creation
 
-The driver uses SNMP and HTTP connections as follows:
+The connector uses SNMP and HTTP connections as follows:
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -56,7 +56,7 @@ SNMP Settings:
 
 #### HTTP connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

@@ -33,7 +33,7 @@ CISCO Meraki Web API is used by Kordia to monitor their Meraki devices (Cisco Me
 
 ### Cisco Meraki API Key
 
-The driver in version range 1.0.0.x captures alarms through communication with the Meraki API via HTTPS requests.
+The connector in version range 1.0.0.x captures alarms through communication with the Meraki API via HTTPS requests.
 
 After filling in the connection details on the element card, the **Authorization Value** on the General page must be filled in.
 This is the API Key used for authorization to access the API.
@@ -44,13 +44,13 @@ This is the API Key used for authorization to access the API.
 
 ### Webhook Connections
 
-The driver in version range 2.0.0.x captures alarms through webhook notifications.
+The connector in version range 2.0.0.x captures alarms through webhook notifications.
 
-The **Configuration** page needs to be set where the driver catches the webhooks from.
+The **Configuration** page needs to be set where the connector catches the webhooks from.
 
 The user is required to set the following parameters:
 
-- **Webhooks Status**: Toggle to determine if driver is receptive to webhook notifications
+- **Webhooks Status**: Toggle to determine if connector is receptive to webhook notifications
 - **Webhooks URI**: URI webhook notifications will be caught with
 - **Webhooks Port**: Port webhook notifications
 - **Webhooks Protocol**: Select between HTTP and HTTPS protocol

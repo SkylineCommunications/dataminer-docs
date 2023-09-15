@@ -12,7 +12,7 @@ The Generic Data Burst Logger driver collects data from various other LAN switch
 
 This reports are updated at a time interval that can be chosen freely. The fastest possible interval is every 5 minutes.
 
-Every month a report is sent to a number of email addresses that are specified in the driver.
+Every month a report is sent to a number of email addresses that are specified in the connector.
 
 ### Version Info
 
@@ -39,11 +39,11 @@ Every month a report is sent to a number of email addresses that are specified i
 
 ### Connections
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION**:
 
-- **IP address/host**: The polling IP of the devices is defined in each row of the dynamic table, this driver can poll from several different LAN Switches*.*
+- **IP address/host**: The polling IP of the devices is defined in each row of the dynamic table, this connector can poll from several different LAN Switches*.*
 
 **SNMP Settings**:
 
@@ -64,7 +64,7 @@ The **Port** **Status** page only displays one table, where you can add LAN swit
 
 In this page you can also define the **Log Speed Period** that defines the period that the log files are updated (reports).
 
-You can also define a csv import file from where you can import the table from the previous version of the driver. To do this you need do define the **Import File Path**, the **Import File Name** and click **Import**.
+You can also define a csv import file from where you can import the table from the previous version of the connector. To do this you need do define the **Import File Path**, the **Import File Name** and click **Import**.
 
 ### Settings page
 

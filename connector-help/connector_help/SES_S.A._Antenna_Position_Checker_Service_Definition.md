@@ -12,15 +12,15 @@ The **SES S.A. Antenna Position Checker Service Definition** allows the user to 
 
 The real position is obtained from a **SatService sat-nms MNC** or **Intorel Visionic** element that monitors the antenna, whereas the theorical position is retrieved from the **Intelsat IESS-412 Earth Station Pointing Data Calculator** element.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | N/A                         |
 

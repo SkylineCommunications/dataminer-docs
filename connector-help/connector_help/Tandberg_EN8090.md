@@ -4,21 +4,21 @@ uid: Connector_help_Tandberg_EN8090
 
 # Tandberg EN8090
 
-This is an SNMP driver that will show the status of the different parameters of a **Tandberg EN8090 receiver**.
+This is an SNMP connector that will show the status of the different parameters of a **Tandberg EN8090 receiver**.
 
 ## About
 
-The **Tandberg EN8090** is a High Definition MPEG-4 AVC Encoder. This driver uses both an SNMP and an HTTP connection to communicate with the device. Note that there is also DCF functionality integrated in the driver. For more information, refer to the "General Settings" section below.
+The **Tandberg EN8090** is a High Definition MPEG-4 AVC Encoder. This connector uses both an SNMP and an HTTP connection to communicate with the device. Note that there is also DCF functionality integrated in the connector. For more information, refer to the "General Settings" section below.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | Yes                 | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | v4.4                        |
 
@@ -26,7 +26,7 @@ The **Tandberg EN8090** is a High Definition MPEG-4 AVC Encoder. This driver use
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection, as well as an HTTP connection to retrieve the system uptime.
+This connector uses a Simple Network Management Protocol (SNMP) connection, as well as an HTTP connection to retrieve the system uptime.
 
 #### SNMP Connection
 
@@ -45,7 +45,7 @@ SNMP Settings:
 
 #### Serial Connection
 
-The driver also uses a hardcoded **serial** connection on the configured IP address on port *1820* to retrieve the **Unique Serial Number**. This connection requires no additional user information.
+The connector also uses a hardcoded **serial** connection on the configured IP address on port *1820* to retrieve the **Unique Serial Number**. This connection requires no additional user information.
 
 ## Usage
 

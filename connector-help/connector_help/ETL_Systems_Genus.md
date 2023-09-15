@@ -32,7 +32,7 @@ The GENUS series is a set of modular chassis that can be fitted with a variety o
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -50,7 +50,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver consists of the following data pages:
+The element created with this connector consists of the following data pages:
 
 - **General**: Displays the current status of the **System Summary Alarm**, and contains a table listing the device **Modules**.
 - **DVE**: Allows you to enable or disable the **DVE Automatic Removal** feature. The tables of the supported modules are also displayed on this page: **CPU Modules**, **PSU Modules,** **Splitter/Combiner Modules** and the **Hybrid 22544 Modules.**

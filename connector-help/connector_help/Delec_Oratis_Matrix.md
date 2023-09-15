@@ -4,11 +4,11 @@ uid: Connector_help_Delec_Oratis_Matrix
 
 # Delec Oratis Matrix
 
-The **Delec Oratis Matrix** is a driver that allows you to monitor and change settings of a **Delec Oratis Audio Matrix** .
+The **Delec Oratis Matrix** is a connector that allows you to monitor and change settings of a **Delec Oratis Audio Matrix** .
 
 ## About
 
-The **Delec Oratis Matrix** driver allows you to monitor the values of the different sensors (temperature and voltage) for the slots. It also allows for monitoring that cards are available.
+The **Delec Oratis Matrix** connector allows you to monitor the values of the different sensors (temperature and voltage) for the slots. It also allows for monitoring that cards are available.
 
 **Crosspoints** can be monitored and set, there is a Scheduler to set a group of Ports to a particular output gain.
 
@@ -20,7 +20,7 @@ Multiple backup versions of the device settings can be stored, and a restore of 
 
 This is a **multi-connection driver,** it has an **SNMP** part, a **smart-serial** part, and an **SSH** part.
 
-**SNMP polling** can be disabled from within the driver, if the device does not support it.
+**SNMP polling** can be disabled from within the connector, if the device does not support it.
 
 It requires the following input during element creation:
 
@@ -41,13 +41,13 @@ It requires the following input during element creation:
 - **IP port**: The port of the connected device, by default *6550*.
 - **Bus address**: Not needed.
 
-The driver also uses an SSH connection in a QAction. For this you must do the following:
+The connector also uses an SSH connection in a QAction. For this you must do the following:
 
 1. Copy the SLSsh.dll file from `C:\Skyline DataMiner\files`.
 1. Paste this file in the folder `C:\Skyline DataMiner\ProtocolScripts`.
 1. Restart the DMA.
 
-## Configuration within the driver
+## Configuration within the connector
 
 ### Credentials for SSH logon
 
@@ -101,7 +101,7 @@ There is a **Destination Port Offset** setting, which will toggle the interpreta
 
 ### Virtual GPIs
 
-This page contains status parameters for virtual GPIs that can be configured in the device. The **Virtual GPI Configuration** table on the **Configure Virtual GPIs** page can be used to link the channel of the virtual GPI to the desired parameter in the driver. The states for these virtual GPIs are updated via **UpdateEventState** messages that are received from the device.
+This page contains status parameters for virtual GPIs that can be configured in the device. The **Virtual GPI Configuration** table on the **Configure Virtual GPIs** page can be used to link the channel of the virtual GPI to the desired parameter in the connector. The states for these virtual GPIs are updated via **UpdateEventState** messages that are received from the device.
 
 ### Backup
 

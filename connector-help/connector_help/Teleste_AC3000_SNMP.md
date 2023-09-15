@@ -2,52 +2,45 @@
 uid: Connector_help_Teleste_AC3000_SNMP
 ---
 
-Teleste AC3000 SNMP
+# Teleste AC3000 SNMP
 
-This driver is the **SNMP** version of the Teleste AC3000 (serial driver).
+This connector is the **SNMP** version of the Teleste AC3000 (serial connector).
 
 ## About
 
-With this driver it is possible to monitor **Teleste AC3000** devices with **SNMP**.
+With this connector it is possible to monitor **Teleste AC3000** devices with **SNMP**.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
-
-
 
 ## Installation and configuration
 
 ### Creation
 
-The ****Teleste AC3000 SNMP**** is a **SNMP** driver. The **IP** needs to be configured during creation of the **element**.
+The **Teleste AC3000 SNMP** is an **SNMP** connector. The **IP** needs to be configured during creation of the **element**.
 
-#### SNMP CONNECTION:
+#### SNMP CONNECTION
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
 - **IP address/host**: The polling IP of the device.
-- **Device address**: \[Indicate if required or not. If it is, specify default value and range.\]
 
 SNMP Settings:
 
 - **Port number**: The port of the connected device, by default *161*.
-- **Get community string**: \[The community string used when reading values from the device
-  (default value if not overridden in the driver: *public*).
-  Note: If you have specified a default value in the driver, then specify that custom value.\]
-- **Set community string**: \[The community string used when setting values on the device
-  (default value if not overridden in the driver: *private*).
-  Note: If you have specified a default value in the driver, then specify that custom value.\]
+- **Get community string**: The community string used when reading values from the device, by default: *public*.
+- **Set community string**: The community string used when setting values on the device, by default: *private*.
 
 ## Usage
 
@@ -65,15 +58,15 @@ In this page we display the **Event Log table** along with few other details rel
 
 ### Forward Path Page
 
-In this page we display the values referent to the Forward Path. In the **Forward Path Settings** section, the user will be able to make configure parameters such as **Band, Status, Type** etc. Similarly, routing related settings can be configured within the **Forward Path Routing** section. This page also contains **Level Detector** pagebutton. In this page we display the **Level Detector Table**.
+In this page we display the values referent to the Forward Path. In the **Forward Path Settings** section, the user will be able to make configure parameters such as **Band, Status, Type** etc. Similarly, routing related settings can be configured within the **Forward Path Routing** section. This page also contains **Level Detector** page button. In this page we display the **Level Detector Table**.
 
 ### Return Path Page
 
-Similar to the **Forward Path Page**, In this page we display the values referent to the Return Path. In the **Return Path Settings** section, the user will be able to make configure parameters such as **Band, Status, Amplifier Type** etc. Similarly, routing related settings can be configured within the **Return Path Routing** section. This page also contains **Level Control** and **Automatic Ingress Blocking** pagebuttons. In this page we display the **Level Control Table**.
+Similar to the **Forward Path Page**, In this page we display the values referent to the Return Path. In the **Return Path Settings** section, the user will be able to make configure parameters such as **Band, Status, Amplifier Type** etc. Similarly, routing related settings can be configured within the **Return Path Routing** section. This page also contains **Level Control** and **Automatic Ingress Blocking** page buttons. In this page we display the **Level Control Table**.
 
 ### Transponder Page
 
-In this page, we display **Receiver Settings** and **Transmitter Setiings**.
+In this page, we display **Receiver Settings** and **Transmitter Settings**.
 
 ### Web Interface Page
 

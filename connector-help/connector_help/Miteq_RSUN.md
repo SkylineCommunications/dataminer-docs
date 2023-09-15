@@ -13,15 +13,15 @@ Serial driver for the **Miteq RSUN** to totally control and monitor from a syste
 
 All frontpanel controls and indications (except DC Voltage Monitor and Remote bus data format) are available to a controller over the remote bus.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial Version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -31,7 +31,7 @@ All frontpanel controls and indications (except DC Voltage Monitor and Remote bu
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

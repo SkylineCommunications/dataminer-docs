@@ -4,13 +4,13 @@ uid: Connector_help_RGB_Networks_VMG1
 
 # RGB Networks VMG1
 
-This driver is used to monitor an **RGB Networks VMG1**, a dense, hardware-based transcoder. The VMG1 chassis can be configured for the desired application through the use of the appropriate cards.
+This connector is used to monitor an **RGB Networks VMG1**, a dense, hardware-based transcoder. The VMG1 chassis can be configured for the desired application through the use of the appropriate cards.
 
 Two types of cards are supported by the VMG1: the NPM (chassis controller), which controls redundancy within the chassis, and the TCM, which performs the transcoding. Redundancy is a 1+1 hot standby for the NPM, and N+1 for the TCM cards.
 
 ## About
 
-Two external APIs are supported by the VMG1: there is SNMP support for traps and basic configuration information, and a full-featured XML-RPC interface provides detailed configuration information and control. This driver only uses the XML-RPC interface.
+Two external APIs are supported by the VMG1: there is SNMP support for traps and basic configuration information, and a full-featured XML-RPC interface provides detailed configuration information and control. This connector only uses the XML-RPC interface.
 
 The VMG1 API is very similar to the VMG2.
 
@@ -20,7 +20,7 @@ The VMG1 API is very similar to the VMG2.
 
 HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 **HTTP Connection:**
 
@@ -30,7 +30,7 @@ This driver uses an HTTP connection and requires the following input during elem
 
 ### Configuration
 
-The device needs credentials to poll data from the VMG1. Those credentials can be filled in on the "General" page, on the "Credentials" subpage. Note that the default web interface of the device encrypts the credentials before sending them to the device. The driver does not automatically encrypt the credentials, so the user should enter the encrypted values in DataMiner.
+The device needs credentials to poll data from the VMG1. Those credentials can be filled in on the "General" page, on the "Credentials" subpage. Note that the default web interface of the device encrypts the credentials before sending them to the device. The connector does not automatically encrypt the credentials, so the user should enter the encrypted values in DataMiner.
 
 The default credentials are:
 
@@ -43,7 +43,7 @@ The default credentials are:
 
 ### General
 
-This page displays general information about the driver: **Software Version**, **Chassis Type**, .
+This page displays general information about the connector: **Software Version**, **Chassis Type**, .
 
 The page contains controls to manage the device: **Reboot**, **Restart**.
 

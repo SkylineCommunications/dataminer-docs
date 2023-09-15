@@ -4,7 +4,7 @@ uid: Connector_help_UPC_Poland_Environment_Platform
 
 # UPC Poland Environment Platform
 
-This is an SNMP-based driver used to gather and display available data from the UPC Poland Environment Platform.
+This is an SNMP-based connector used to gather and display available data from the UPC Poland Environment Platform.
 
 ## About
 
@@ -32,7 +32,7 @@ This is an SNMP-based driver used to gather and display available data from the 
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

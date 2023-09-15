@@ -6,21 +6,21 @@ uid: Connector_help_Wavestream_PIA-CSA600-IE02
 
 This is a serial protocol for the **Wavestream SSPA**.
 
-The driver is used to **monitor** and **configure** the device.
+The connector is used to **monitor** and **configure** the device.
 
 ## About
 
-A serial connection is needed for the driver so it can retrieve and send information from/to the device.
+A serial connection is needed for the connector so it can retrieve and send information from/to the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | V2.93                       |
 
@@ -30,7 +30,7 @@ A serial connection is needed for the driver so it can retrieve and send informa
 
 #### Serial main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

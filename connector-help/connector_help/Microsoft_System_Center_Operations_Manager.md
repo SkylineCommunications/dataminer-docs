@@ -4,7 +4,7 @@ uid: Connector_help_Microsoft_System_Center_Operations_Manager
 
 # Microsoft System Center Operations Manager
 
-**Microsoft System Center Operations Manager** (**SCOM**) is a cross-platform data center monitoring system for operating systems and hypervisors. With this driver, a connection is made to the server hosting the SCOM application to extract monitoring information to DataMiner.
+**Microsoft System Center Operations Manager** (**SCOM**) is a cross-platform data center monitoring system for operating systems and hypervisors. With this connector, a connection is made to the server hosting the SCOM application to extract monitoring information to DataMiner.
 Polling happens via the SCOM DLLs (SDK binaries).
 
 ## About
@@ -33,7 +33,7 @@ Polling happens via the SCOM DLLs (SDK binaries).
 
 #### SCOM Main Connection
 
-This driver uses the SCOM connection and requires the following input during element creation:
+This connector uses the SCOM connection and requires the following input during element creation:
 
 SCOM CONNECTION:
 

@@ -4,23 +4,23 @@ uid: Connector_help_Peak_Communications_UPC7000_Series
 
 # Peak Communications UPC7000 Series
 
-The **Peak Communications UPC7000 Series** driver can be used to monitor and configure the Peak Communications UPC7000 Series L-band uplink power controller.
+The **Peak Communications UPC7000 Series** connector can be used to monitor and configure the Peak Communications UPC7000 Series L-band uplink power controller.
 
 ## About
 
-This driver uses serial commands to retrieve the data from the **Peak Communications UCP7000 Series** controller every **5 seconds**.
+This connector uses serial commands to retrieve the data from the **Peak Communications UCP7000 Series** controller every **5 seconds**.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**    | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**    | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|--------------------|---------------------|-------------------------|
 | 1.0.0.x              | Initial version    | No                  | Yes                     |
 | 1.0.1.x              | DCF implementation | Yes                 | Yes                     |
 | 1.0.2.x \[SLC Main\] | DCF update         | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.x.x          | 1.\*                        |
 | 1.0.1.x          | 1.\*                        |
@@ -32,7 +32,7 @@ This driver uses serial commands to retrieve the data from the **Peak Communicat
 
 #### Serial Main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -114,7 +114,7 @@ Physical dynamic interfaces:
 
 ## Notes
 
-Some modules/functionalities are not implemented in the driver:
+Some modules/functionalities are not implemented in the connector:
 
 - EXP Expansion Unit
 - Redundancy

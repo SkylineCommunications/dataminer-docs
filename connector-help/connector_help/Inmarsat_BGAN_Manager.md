@@ -4,7 +4,7 @@ uid: Connector_help_Inmarsat_BGAN_Manager
 
 # Inmarsat BGAN Manager
 
-The Inmarsat BGAN Manager driver is used to monitor the BGAN network and execute small operations. The BGAN network is a satellite communications network that allows voice, video and data sessions on remote terminals. This means that the bulk of interesting data focuses on the terminals and their details.
+The Inmarsat BGAN Manager connector is used to monitor the BGAN network and execute small operations. The BGAN network is a satellite communications network that allows voice, video and data sessions on remote terminals. This means that the bulk of interesting data focuses on the terminals and their details.
 
 ## About
 
@@ -32,7 +32,7 @@ The Inmarsat BGAN Manager driver is used to monitor the BGAN network and execute
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

@@ -8,17 +8,17 @@ This amplitude/slope equalizer system offers independent gain and slope adjustme
 
 ## About
 
-This **serial** driver is used to monitor and configure the **GeoSync Microwave E1R-9501450-600114** L-band conditioner.
+This **serial** connector is used to monitor and configure the **GeoSync Microwave E1R-9501450-600114** L-band conditioner.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | REV1.01B 6/18/12            |
 
@@ -28,7 +28,7 @@ This **serial** driver is used to monitor and configure the **GeoSync Microwave 
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

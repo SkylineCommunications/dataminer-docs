@@ -8,18 +8,18 @@ The Transmode TM is a **transponder/muxponder** that is used as a buffer between
 
 ## About
 
-This driver retrieves and sets data via **SNMP**.
+This connector retrieves and sets data via **SNMP**.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                                                                                                        | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                                                                                                                        | **DCF Integration** | **Cassandra Compliant** |
 |------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                                                                                                                                                        | No                  | No                      |
 | 1.0.1.x          | \- Implementation of DCF - Obsolete DisplayColumn technology replaced (for improved efficiency & Cassandra support): No access to previous trend data for some tables. | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | r23b-31                     |
 | 1.0.1.x          | r23b-31                     |
@@ -30,7 +30,7 @@ This driver retrieves and sets data via **SNMP**.
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -104,7 +104,7 @@ This page displays the web interface of the device. Note that the client machine
 
 ## DataMiner Connectivity Framework
 
-The **1.0.1.1** driver range of the Transmode TM protocol supports the usage of DCF and can be used on a DMA with a minimum version of **8.5.7.2**.
+The **1.0.1.1** connector range of the Transmode TM protocol supports the usage of DCF and can be used on a DMA with a minimum version of **8.5.7.2**.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 

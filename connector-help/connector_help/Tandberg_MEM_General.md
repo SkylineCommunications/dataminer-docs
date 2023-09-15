@@ -8,18 +8,18 @@ The **Tandberg MEM General** is a Multiplex Element Manager, which controls **Ev
 
 ## About
 
-The driver polls the device via **SNMPv2** calls. **Traps** are not implemented.
+The connector polls the device via **SNMPv2** calls. **Traps** are not implemented.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**                                                                                   | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**                                                                                   | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|---------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x \[Obsolete\] | Initial version                                                                                   | No                  | Yes                     |
 | 1.1.0.x \[SLC Main\] | Driver was completely redesigned in order to meet the current standards (2005 style tables, etc.) | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 4.32 Rev1                   |
 | 1.1.0.x          | 4.13                        |
@@ -30,7 +30,7 @@ The driver polls the device via **SNMPv2** calls. **Traps** are not implemented.
 
 #### SNMP connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

@@ -8,7 +8,7 @@ Satellite Systems (SSC) Model BR23L is a fully agile satellite tracking receiver
 
 ## About
 
-The SSC BR23L driver uses a serial protocol to communicate with the BR23L device.
+The SSC BR23L connector uses a serial protocol to communicate with the BR23L device.
 
 ### Version Info
 
@@ -34,7 +34,7 @@ The SSC BR23L driver uses a serial protocol to communicate with the BR23L device
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -46,4 +46,4 @@ SERIAL CONNECTION:
 
 ## How to use
 
-This driver consists of only one page, the **General** page. This page contains the monitored system parameters used in the satellite carrier tracking process, the **carrier input frequency,** the **current reference level**, the **current DC reference voltage** and the **carrier tracking status**.
+This connector consists of only one page, the **General** page. This page contains the monitored system parameters used in the satellite carrier tracking process, the **carrier input frequency,** the **current reference level**, the **current DC reference voltage** and the **carrier tracking status**.

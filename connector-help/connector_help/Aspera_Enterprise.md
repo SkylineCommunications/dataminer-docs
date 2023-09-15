@@ -4,28 +4,28 @@ uid: Connector_help_Aspera_Enterprise
 
 # Aspera Enterprise
 
-The **Aspera Enterprise** is a file-monitoring driver that uses **SSH** to retrieve files from a remote platform.
+The **Aspera Enterprise** is a file-monitoring connector that uses **SSH** to retrieve files from a remote platform.
 
 ## About
 
-After the driver has retrieved a file through **SSH**, the contents of the file are checked line by line with a number of configured filters. The files that are polled are specific .log files that have a maximum size of 10 MB.
+After the connector has retrieved a file through **SSH**, the contents of the file are checked line by line with a number of configured filters. The files that are polled are specific .log files that have a maximum size of 10 MB.
 
-In range1.0.0.x of the driver, once the maximum file size has been reached, the file is renamed by another application by appending a *'.0'.*
+In range1.0.0.x of the connector, once the maximum file size has been reached, the file is renamed by another application by appending a *'.0'.*
 
-In range 2.0.0.x of the driver, once the maximum file size has been reached, the oldest lines are progressively replaced, starting from the begining.
+In range 2.0.0.x of the connector, once the maximum file size has been reached, the oldest lines are progressively replaced, starting from the begining.
 
-This driver takes this into account and will make sure that every line (new or old file) is parsed once.
+This connector takes this into account and will make sure that every line (new or old file) is parsed once.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                                                                                                                         |
+| **Range** | **Description**                                                                                                                                                                         |
 |------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1.0.0.x          | Initial version.                                                                                                                                                                        |
 | 2.0.0.x          | New range version based on 1.0.0.x. Instead of creating multiple log files after reaching 10MB, this new version parses just one file, which is overwritten after the limit is reached. |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 2.0.0.x          | Unknown                     |
@@ -36,7 +36,7 @@ This driver takes this into account and will make sure that every line (new or o
 
 #### Serial main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -46,7 +46,7 @@ SERIAL CONNECTION:
 
 ### Configuration of SSH Credentials
 
-Before the driver can start polling, the **SSH Credentials** need to be filled in on the **General Page**.
+Before the connector can start polling, the **SSH Credentials** need to be filled in on the **General Page**.
 
 ## Usage
 
@@ -65,7 +65,7 @@ The files are retrieved and parsed once every 30 seconds (see note below). It is
 
 With the **Add Filter** page button, you can add a new row containing all necessary data. After you have clicked **Add**, a second confirmation window will appear that will only allow you to add a new filter if all necessary data has been filled in.
 
-The **Logs Last Read** page button leads to a table with data indicating the last read character for each file. This is used to keep track of which lines to continue parsing on. If necessary, you can change the last read character so that a file will be re-parsed from a certain position. This functionality is mostly used for debugging and testing purposes. However, note that this page button is **no longer included in** driver range **2.0.0.x**.
+The **Logs Last Read** page button leads to a table with data indicating the last read character for each file. This is used to keep track of which lines to continue parsing on. If necessary, you can change the last read character so that a file will be re-parsed from a certain position. This functionality is mostly used for debugging and testing purposes. However, note that this page button is **no longer included in** connector range **2.0.0.x**.
 
 ## Notes
 

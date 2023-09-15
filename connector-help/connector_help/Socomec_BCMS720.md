@@ -8,7 +8,7 @@ The **Socomec BCMS 720** is a robust and compact device that is used to monitor 
 
 ## About
 
-With this driver, you can monitor and configure **Socomec BCMS720** devices with a **serial** connection. The serial connection uses the Modbus RTU protocol with 9600 bds.
+With this connector, you can monitor and configure **Socomec BCMS720** devices with a **serial** connection. The serial connection uses the Modbus RTU protocol with 9600 bds.
 
 The different parameters of the device are displayed on multiple pages.
 
@@ -16,7 +16,7 @@ The different parameters of the device are displayed on multiple pages.
 
 ### Creation
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 - **IP** **address/host**: The IP address of the serial gateway.
 - **IP port**: The local TCP port of serial gateway.

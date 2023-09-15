@@ -6,7 +6,7 @@ uid: Connector_help_Axon_ACP_HIX100
 
 The **HIx100** is a dual-channel high-performance 3 Gb/s, HD and SD SDI video and embedded audio probe (signal integrity monitor) with a clean video switch-over function.
 
-The **Axon ACP HIX100** driver can be used to display and configure information related to this device.
+The **Axon ACP HIX100** connector can be used to display and configure information related to this device.
 
 ## About
 
@@ -32,13 +32,13 @@ The **Axon ACP HIX100** driver can be used to display and configure information 
 
 ### Creation
 
-The element using this driver can be automatically created by the parent element using the **Axon ACP Frame Manager** driver, but it can also be a standalone element.
+The element using this connector can be automatically created by the parent element using the **Axon ACP Frame Manager** connector, but it can also be a standalone element.
 
 ### Connections
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -49,7 +49,7 @@ SERIAL CONNECTION:
 
 #### Serial IP Connection - Broadcast Connection
 
-This driver uses a smart-serial connection and requires the following input during element creation:
+This connector uses a smart-serial connection and requires the following input during element creation:
 
 SMART-SERIAL CONNECTION:
 
@@ -83,7 +83,7 @@ The element has the following data pages:
 
 ## DataMiner Connectivity Framework
 
-The **1.0.0.x** driver range of the Axon ACP HIX100 protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
+The **1.0.0.x** connector range of the Axon ACP HIX100 protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 

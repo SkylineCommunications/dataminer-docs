@@ -8,13 +8,13 @@ The Snell Wilcox IQOSY30 is a 3G/HD/SD-SDI Frame Synchronizer with Fiber Interfa
 
 ## About
 
-The driver generates DVEs for each Module in the Module table.
+The connector generates DVEs for each Module in the Module table.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION**:
 

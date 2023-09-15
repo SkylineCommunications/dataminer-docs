@@ -4,7 +4,7 @@ uid: Connector_help_British_Telecom_-_21C_Ingest_Probe_Monitoring_Controller
 
 # British Telecom 21C Ingest Probe Monitoring Controller
 
-This is a virtual driver that is used to control/monitor the 21C Ingest Probes. The **IneoQuest Surveyor TS** probe is used as source probe. Manual or automatic actions can take place based on user interaction or based on probes reporting failures. To control the application, use the Visual Overview layer.
+This is a virtual connector that is used to control/monitor the 21C Ingest Probes. The **IneoQuest Surveyor TS** probe is used as source probe. Manual or automatic actions can take place based on user interaction or based on probes reporting failures. To control the application, use the Visual Overview layer.
 
 ## About
 
@@ -32,7 +32,7 @@ This is a virtual driver that is used to control/monitor the 21C Ingest Probes. 
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 

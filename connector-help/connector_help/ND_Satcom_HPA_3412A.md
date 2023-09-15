@@ -4,17 +4,17 @@ uid: Connector_help_ND_Satcom_HPA_3412A
 
 # ND Satcom HPA 3412A
 
-The **ND Satcom HPA 3412A** driver is a serial driver that is used to monitor and configure the **ND Satcom 3412A** **High Power Amplifier**.
+The **ND Satcom HPA 3412A** connector is a serial connector that is used to monitor and configure the **ND Satcom 3412A** **High Power Amplifier**.
 
 ## About
 
-The **ND Satcom HPA 3412A** driver uses serial communication to monitor and configure the connected HPA.
+The **ND Satcom HPA 3412A** connector uses serial communication to monitor and configure the connected HPA.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a serial connection and needs the following user information:
+This connector uses a serial connection and requires the following input during element creation:
 
 **SERIAL CONNECTION**:
 
@@ -26,7 +26,7 @@ This driver uses a serial connection and needs the following user information:
 
 ### Main View
 
-The **Main View** page of the driver displays general status information, such as the **HPA Operating State** and the **Operating Band**.
+The **Main View** page of the connector displays general status information, such as the **HPA Operating State** and the **Operating Band**.
 
 Some measurements are also displayed, such as the **Temperature**, **Helix** **Voltage**, **Helix** **Current**, etc.
 

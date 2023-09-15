@@ -32,7 +32,7 @@ The tm stagetec systems DIO (Dante Input Output) has a wide variety of interface
 
 #### Smart-Serial Main Connection
 
-This driver uses a smart-serial connection and requires the following input during element creation:
+This connector uses a smart-serial connection and requires the following input during element creation:
 
 SMART-SERIAL CONNECTION:
 
@@ -44,7 +44,7 @@ SMART-SERIAL CONNECTION:
 
 #### HTTP connection
 
-This driver also uses an HTTP connection and requires the following input during element creation:
+This connector also uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

@@ -8,7 +8,7 @@ The Redundancy Switches from WORK Microwave are utilized to provide redundant co
 
 ## About
 
-With this driver, it is possible to monitor and configure **Work Microwave Redundancy Switch Controller Converter** devices with a **serial** connection.
+With this connector, it is possible to monitor and configure **Work Microwave Redundancy Switch Controller Converter** devices with a **serial** connection.
 
 The different parameters from the device are displayed on multiple pages. Specific parameters for the converters are displayed by the converter driver.
 
@@ -25,11 +25,11 @@ for the bus address, use the bus address of the **Redundancy Switch Controller**
 
 This page displays **general System Information** of the converter.
 
-With the pagebutton, It is possible to change some general configuration.
+With the page button, It is possible to change some general configuration.
 
 ### Uplink Power Control
 
-This page alows the user to view and change settings about the UPC module such as:
+This page allows the user to view and change settings about the UPC module such as:
 
 - **Current/Minimum Attenuation**
 - **Deep Fade Settings**

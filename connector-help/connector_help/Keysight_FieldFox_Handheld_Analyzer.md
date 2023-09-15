@@ -32,7 +32,7 @@ The Keysight FieldFox Handheld Analyzer can be used for monitoring and supports 
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

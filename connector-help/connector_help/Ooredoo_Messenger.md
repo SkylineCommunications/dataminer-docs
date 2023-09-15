@@ -4,7 +4,7 @@ uid: Connector_help_Ooredoo_Messenger
 
 # Ooredoo Messenger
 
-This driver allows you to send test messages to a recipient using the Ooredoo messaging service. Through an HTTP connection, the driver sends GET requests to the Ooredoo messaging service, which allows the user to send SMS messages to a specific phone.
+This connector allows you to send test messages to a recipient using the Ooredoo messaging service. Through an HTTP connection, the connector sends GET requests to the Ooredoo messaging service, which allows the user to send SMS messages to a specific phone.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver allows you to send test messages to a recipient using the Ooredoo me
 
 #### HTTP Main Connection
 
-This driver uses a HTTP connection and requires the following input during element creation:
+This connector uses a HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

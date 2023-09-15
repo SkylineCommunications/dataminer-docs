@@ -8,20 +8,20 @@ The **Selenio UHD1** is a package containing a main application front module, a 
 
 ## About
 
-This is an SNMP driver that implements the so-called "**dirty count**" mechanism for **polling**. This means that DataMiner does not actively poll the device, but instead only polls a table with all the parameters that have changed and then polls those OIDs. This table is polled every second. It is also important to note that this driver does not retrieve information for the entire shelf, but **only for the single boards** within, so the **board ID** will need to be provided in the field "**bus address**" when the element is created.
+This is an SNMP connector that implements the so-called "**dirty count**" mechanism for **polling**. This means that DataMiner does not actively poll the device, but instead only polls a table with all the parameters that have changed and then polls those OIDs. This table is polled every second. It is also important to note that this connector does not retrieve information for the entire shelf, but **only for the single boards** within, so the **board ID** will need to be provided in the field "**bus address**" when the element is created.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
-| 1.0.0.1          | Initial version | No                  | Yes                     |
-| 1.0.1.1          | Implemented DCF | Yes                 | Yes                     |
+| 1.0.0.x          | Initial version | No                  | Yes                     |
+| 1.0.1.x          | Implemented DCF | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
-| 1.0.0.1          | 2.0                         |
+| 1.0.0.x          | 2.0                         |
 
 ## Installation and configuration
 
@@ -29,7 +29,7 @@ This is an SNMP driver that implements the so-called "**dirty count**" mechanism
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -102,7 +102,7 @@ This device has a management web interface. Note that the client machine has to 
 
 ## DataMiner Connectivity Framework
 
-The **1.0.1.x** driver range of the Imagine Communications Selenio 1UHD1 protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
+The **1.0.1.x** connector range of the Imagine Communications Selenio 1UHD1 protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 

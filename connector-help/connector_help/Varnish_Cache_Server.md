@@ -34,7 +34,7 @@ The Varnish Cache Server driver will communicate via HTTP with the web applicati
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -52,7 +52,7 @@ There is no redundancy defined.
 
 ## How to use
 
-There is only one page in this driver. On this page, several parameters display information about the connection to the cache server:
+There is only one page in this connector. On this page, several parameters display information about the connection to the cache server:
 
 - The **Service** **Status** parameter shows whether the current cache server that was selected as **IP** **address** is up or down. With the **Virtual** **IP** parameter, you can set an **IP** **address** to see which **cache** **server** is currently active.
 - The parameter **Number** **of** **Client** **Connections** **Per** **Time** **Period** displays the number of client connections made in the time period specified with the **Time** **Period** parameter. The same applies to the **Number of Backend Connections Per Time Period**.
@@ -61,16 +61,16 @@ There is only one page in this driver. On this page, several parameters display 
 
 #### Service Status is not initialized
 
-In the 1.0.0.x version of the driver, the **Service Status** is not yet functional. This will require a firmware update by the vendor.
+In the 1.0.0.x version of the connector, the **Service Status** is not yet functional. This will require a firmware update by the vendor.
 
 #### Simulation
 
 After you upload a new version, always verify if new data is coming in (i.e. verify when a parameter changes if the **x Per Time Period** parameter is not 0).
-If this is not the case, it may be because *\#define SIMULATE* is activated in the driver. You can disable this in the driver by prefixing it with two forward slashes (*//#define SIMULATE*).
+If this is not the case, it may be because *\#define SIMULATE* is activated in the connector. You can disable this in the connector by prefixing it with two forward slashes (*//#define SIMULATE*).
 In this case, contact the TAM or System Developer.
 
 #### All parameters are not initialized (after a new element is created)
 
-This driver uses an external DLL: *System.Web.Extensions.dll*. In most systems, this DLL will be pre-installed. If it is not, most parameters will remain empty and the log file will contain compiler errors stating that a file/DLL is missing.
+This connector uses an external DLL: *System.Web.Extensions.dll*. In most systems, this DLL will be pre-installed. If it is not, most parameters will remain empty and the log file will contain compiler errors stating that a file/DLL is missing.
 In this case, contact Skyline Communication to request this DLL. (Note that this DLL is provided by Microsoft, so it is also possible to download it from the internet or from another server.)
 When you have received the DLL, place it in the folder *C:/Skyline DataMiner/ProtocolScripts/* and restart the element.

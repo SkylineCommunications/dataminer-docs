@@ -12,7 +12,7 @@ This protocol can be used to monitor and control a Newtec EL970. A **serial** co
 
 ## Installation and configuration
 
-This driver uses a **serial** connection and needs the following user information:
+This connector uses a **serial** connection and requires the following input during element creation:
 
 **SERIAL CONNECTION**:
 

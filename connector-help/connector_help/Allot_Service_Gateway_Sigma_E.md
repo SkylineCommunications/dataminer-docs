@@ -4,7 +4,7 @@ uid: Connector_help_Allot_Service_Gateway_Sigma_E
 
 # Allot Service Gateway Sigma E
 
-The Allot Service Gateway Sigma E driver is used to retrieve network and status data. It analyzes the application, subscriber, device and network topology traffic, is designed for broadband environments and is able to monitor 4G and IPv6-based networks.
+The Allot Service Gateway Sigma E connector is used to retrieve network and status data. It analyzes the application, subscriber, device and network topology traffic, is designed for broadband environments and is able to monitor 4G and IPv6-based networks.
 
 ## About
 
@@ -14,7 +14,7 @@ The monitoring information is retrieved through SNMP. Polling is based on three 
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 

@@ -4,7 +4,7 @@ uid: Connector_help_Sky_UK_Commercial_Minutes
 
 # Sky UK Commercial Minutes
 
-This driver is mainly intended to display alarms and commercial minutes.
+This connector is mainly intended to display alarms and commercial minutes.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver is mainly intended to display alarms and commercial minutes.
 
 #### HTTP Main connection
 
-This driver uses an HTTP connection and requires the following input during element creation.
+This connector uses an HTTP connection and requires the following input during element creation.
 
 HTTP CONNECTION:
 
@@ -43,6 +43,6 @@ HTTP CONNECTION:
 
 ## How to Use
 
-This driver dynamically creates an HTTP address to obtain information through a JSON configuration. When you configure the element, make sure to specify the node/device in the bus address field as mentioned above, so that the driver creates the address for the specified device.
+This connector dynamically creates an HTTP address to obtain information through a JSON configuration. When you configure the element, make sure to specify the node/device in the bus address field as mentioned above, so that the connector creates the address for the specified device.
 
 On the **Device Status** page, you can view alarms for **VICC File Age**, **Status** and **Commercial Minutes**. The page also shows the total minutes and frames during different time slots.

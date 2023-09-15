@@ -10,11 +10,11 @@ The protocol is designed to retrieve information from the UPS.
 
 ## About
 
-The driver needs a snmp connection to retrieve information from the device.
+The connector needs a snmp connection to retrieve information from the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**  | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**  | **DCF Integration** | **Cassandra Compliant** |
 |------------------|------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version. | No                  | Yes                     |
 
@@ -24,7 +24,7 @@ The driver needs a snmp connection to retrieve information from the device.
 
 #### SNMP \[Main\] connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

@@ -8,11 +8,11 @@ The CHP-SMM-2 card is an SNMP-enabled controller card for the Arris CHP Max5000 
 
 ## About
 
-This is an **SNMP** driver, which uses SNMP polling to communicate with the physical devices.
+This is an **SNMP** connector, which uses SNMP polling to communicate with the physical devices.
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.0.6.0                     |
 
@@ -20,7 +20,7 @@ This is an **SNMP** driver, which uses SNMP polling to communicate with the phys
 
 ### Creation
 
-This driver is used by DVE child elements that are **automatically created** by the driver [Arris CHP Max5000](xref:Connector_help_Arris_CHP_Max5000), from version 1.0.0.1 onwards.
+This connector is used by DVE child elements that are **automatically created** by the connector [Arris CHP Max5000](xref:Connector_help_Arris_CHP_Max5000), from version 1.0.0.1 onwards.
 
 ## Usage
 

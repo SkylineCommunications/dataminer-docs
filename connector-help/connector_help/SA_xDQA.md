@@ -4,7 +4,7 @@ uid: Connector_help_SA_xDQA
 
 # SA xDQA
 
-This driver is a **QAM modulator**, which allows you to monitor alarms and configure QAM settings on the device.
+This connector is a **QAM modulator**, which allows you to monitor alarms and configure QAM settings on the device.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver is a **QAM modulator**, which allows you to monitor alarms and confi
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

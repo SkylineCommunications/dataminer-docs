@@ -49,7 +49,7 @@ The Davis Vantage Pro 2 provides the following information:
 
 #### Serial Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

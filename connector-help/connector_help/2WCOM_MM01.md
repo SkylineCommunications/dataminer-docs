@@ -16,7 +16,7 @@ This connector monitors the 2WCOM MM01, a **Codec** device, using **SNMP**.
 | 1.1.0.x \[Obsolete\]   | Support for CSRF Token.                                         |
 | 1.1.1.x \[Main range\] | Based on 1.1.0.8. Changed default communication type to SNMPv2. |
 
-### Supported firmware versions
+### Product Info
 
 | **Range**              | **Device Firmware Version**                                                            |
 |------------------------|----------------------------------------------------------------------------------------|

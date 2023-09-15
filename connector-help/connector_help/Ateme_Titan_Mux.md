@@ -32,7 +32,7 @@ Ateme Titan Mux is used to interface with the Multiplexer Processing API and Ala
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -47,7 +47,7 @@ HTTP CONNECTION:
 
 ## How to Use
 
-On the **General** page of this driver, you can configure the username and password to access the device.
+On the **General** page of this connector, you can configure the username and password to access the device.
 
 The **Inputs** page contains the basic information about the existing inputs as well as the redundancy and Bitrate information. It also has a toggle button and drop down to automatically/manually remove the obsolete inputs based on the Row Status Column.
 

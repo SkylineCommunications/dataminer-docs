@@ -8,17 +8,17 @@ Zabbix is software that monitors numerous parameters of a network as well as the
 
 ## About
 
-This is an **HTTP** driver that connects to the Zabbix API to retrieve data from the Zabbix platform. The Zabbix API is a web-based API and is shipped as part of the web front end. It uses the JSON-RPC 2.0 protocol. This driver is created by the **Zabbix platform** driver. For more information on the device, refer to <https://www.zabbix.com/documentation/3.0/manual/api>.
+This is an **HTTP** connector that connects to the Zabbix API to retrieve data from the Zabbix platform. The Zabbix API is a web-based API and is shipped as part of the web front end. It uses the JSON-RPC 2.0 protocol. This connector is created by the **Zabbix platform** driver. For more information on the device, refer to <https://www.zabbix.com/documentation/3.0/manual/api>.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | N/A                         |
 
@@ -26,7 +26,7 @@ This is an **HTTP** driver that connects to the Zabbix API to retrieve data from
 
 ### Creation
 
-The element using this protocol is **automatically created** by the parent driver (Zabbix platform). The name of the element consists of the name of the parent driver + host.
+The element using this protocol is **automatically created** by the parent connector (Zabbix platform). The name of the element consists of the name of the parent connector + host.
 
 ### Configuration
 

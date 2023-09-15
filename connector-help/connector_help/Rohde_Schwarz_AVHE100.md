@@ -8,23 +8,23 @@ The fully integrated and highly compact R&S AVHE100 headend solution for encodin
 
 ## About
 
-This driver was designed to monitor the different properties of the R&S AVHE100 system.
+This connector was designed to monitor the different properties of the R&S AVHE100 system.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                   | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                   | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                   | No                  | Yes                     |
 | 2.0.0.x          | Version from Bayerischer Rundfunk | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**                                                 |
+| **Range** | **Device Firmware Version**                                                 |
 |------------------|-----------------------------------------------------------------------------|
 | 1.0.0.x          | Dolbyr Digital / Dolbyr Digital Plus Encoder Version 3.10.2 - Build 2971695 |
 | 2.0.0.x          | Dolby Version 1.1.5 - Build 2012-04-09                                      |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol - Range 1.0.0.x** | **Description**                                      |
 |---------------------------------------|------------------------------------------------------|
@@ -37,7 +37,7 @@ This driver was designed to monitor the different properties of the R&S AVHE100 
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 - SNMP CONNECTION:
 

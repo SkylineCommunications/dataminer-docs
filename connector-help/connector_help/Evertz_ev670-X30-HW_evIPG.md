@@ -40,7 +40,7 @@ The 670 is a virtualized media processing platform that enables users to move a 
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -66,7 +66,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver has several data pages:
+The element created with this connector has several data pages:
 
 - The **General** page displays the uptime, ID, name and location of the system.
 - The **System** page displays information about the Port Configuration and contains several subpages with information about the different system configuration options.

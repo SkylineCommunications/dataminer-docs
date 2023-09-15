@@ -31,7 +31,7 @@ This connector exports different types of DVEs, representing modems, network (fo
 | 1.0.1.x \[Obsolete\] | Connector DVE structure changed.                                       | No                  | Yes                     |
 | 1.0.2.x \[SLC Main\] | Added SNMP connection. New connection has to be configured on startup. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
 | **Range**            | **Supported Firmware** |
 |----------------------|------------------------|

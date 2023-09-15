@@ -4,25 +4,25 @@ uid: Connector_help_Novotronik_GTS191x
 
 # Novotronik GTS191x
 
-This driver monitors the activity of the Novotronik GTS191x device, a redundant switchover unit.
+This connector monitors the activity of the Novotronik GTS191x device, a redundant switchover unit.
 
 The digital video redundancy switch is used in satellite ground stations and TV stations. Depending on different alarm signals, a switchover of the signals can be triggered.
 
 ## About
 
-This driver polls data from the device using a serial connection. It supports the full remote command set of this device range.
+This connector polls data from the device using a serial connection. It supports the full remote command set of this device range.
 
 On old devices, when a command is not supported, the relevant parameter will display a "Not Applicable" exception.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.1 or 2.1                  |
 
@@ -32,7 +32,7 @@ On old devices, when a command is not supported, the relevant parameter will dis
 
 #### Serial Main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -54,7 +54,7 @@ The **Device Firmware** displays the current firmware version of the device. It 
 
 ## DataMiner Connectivity Framework
 
-The **1.0.0.x** driver range of the Novotronik GTS191x protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
+The **1.0.0.x** connector range of the Novotronik GTS191x protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party protocols (for instance a manager).
 

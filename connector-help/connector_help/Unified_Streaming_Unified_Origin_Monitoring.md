@@ -4,7 +4,7 @@ uid: Connector_help_Unified_Streaming_Unified_Origin_Monitoring
 
 # Unified Streaming Unified Origin Monitoring
 
-The purpose of this driver is to monitor the health of the different channels within the Unified Origin software.
+The purpose of this connector is to monitor the health of the different channels within the Unified Origin software.
 
 ## About
 
@@ -35,7 +35,7 @@ The purpose of this driver is to monitor the health of the different channels wi
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -57,7 +57,7 @@ There is no redundancy defined.
 
 ## How to use
 
-This driver has four different tables:
+This connector has four different tables:
 
 - The **Endpoint Configuration** table allows you to define and view the channels from which information is polled.
 - The **Custom Label** table allows you to define the custom label that will identify every row containing the associated **Wildcard Name** in the following tables: **Endpoint Channel Error** and **Endpoint Health**.

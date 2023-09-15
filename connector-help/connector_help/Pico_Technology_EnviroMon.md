@@ -8,13 +8,13 @@ The **Pico EnviroMon** is a data logger that can be used to display environmenta
 
 ## About
 
-This driver uses a serial connection in order to retrieve the readings from the device.
+This connector uses a serial connection in order to retrieve the readings from the device.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 **SERIAL CONNECTION:**
 

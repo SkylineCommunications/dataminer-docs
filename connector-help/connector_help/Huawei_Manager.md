@@ -84,7 +84,7 @@ The page contains the following page buttons:
 
 - **Physical Entities Table**
 
-- **Polling Configurations**: Contains toggle buttons that enable/disable polling for the following data in the driver:
+- **Polling Configurations**: Contains toggle buttons that enable/disable polling for the following data in the connector:
 
 - Address Translation Table
   - ARP Table

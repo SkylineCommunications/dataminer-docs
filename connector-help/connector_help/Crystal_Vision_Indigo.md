@@ -8,19 +8,19 @@ Crystal Vision Indigo is a frame that allows to connect many devices incluindo 3
 
 ## About
 
-This driver is used to retrieve all data information and control the HPAK-2200 amplifier system.
+This connector is used to retrieve all data information and control the HPAK-2200 amplifier system.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 | 1.0.1.x          | No              | No                  |                         |
 | 2.0.0.x          | No              | No                  |                         |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 1.0.1.x          | Unknown                     |
@@ -28,7 +28,7 @@ This driver is used to retrieve all data information and control the HPAK-2200 a
 
 ## About
 
-The Crystal Vision Indigo driver makes it possible to monitor and control many devices connected to the chassis.
+The Crystal Vision Indigo connector makes it possible to monitor and control many devices connected to the chassis.
 
 All data is retrieved using an SNMP connection. The bus address of an element is used to indicate the card number to poll.
 

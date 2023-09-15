@@ -4,11 +4,11 @@ uid: Connector_help_Skyline_CCAP_Platform_EPM
 
 # Skyline CCAP Platform EPM
 
-The Skyline CCAP Platform EPM driver allows the aggregation of KPIs from different collector elements deployed in the DOCSIS infrastructure.
+The Skyline CCAP Platform EPM connector allows the aggregation of KPIs from different collector elements deployed in the DOCSIS infrastructure.
 
 ## About
 
-This is an **EPM** (Experience and Performance Management) driver, and as such it is designed to poll large amounts of data from the deployed infrastructure, using **front-end** and **back-end** EPM Manager elements. Both of these types of elements use the same EPM Manager driver.
+This is an **EPM** (Experience and Performance Management) driver, and as such it is designed to poll large amounts of data from the deployed infrastructure, using **front-end** and **back-end** EPM Manager elements. Both of these types of elements use the same EPM Manager connector.
 
 The DOCSIS system contains one front-end element and several back-end elements. The front-end element is responsible for the top-level data aggregation from different back-end elements. Each back-end element is responsible for the aggregation of a section of the data from the collectors.
 
@@ -82,7 +82,7 @@ Topologies describe the connections in the diagram shown in the visual interface
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 

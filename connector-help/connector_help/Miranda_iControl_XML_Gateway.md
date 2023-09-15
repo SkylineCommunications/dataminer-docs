@@ -22,13 +22,13 @@ For each device, a **DVE** is generated that contains all supported parameters o
 
 The list of supported parameters can be found on the **Device Parameters** page of the main element, under the page button **Reading Info**.
 
-This driver range 1.0.0.x is compatible with the **iControlTM Services Gateway version 1.12**
+This connector range 1.0.0.x is compatible with the **iControlTM Services Gateway version 1.12**
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

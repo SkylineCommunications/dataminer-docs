@@ -10,20 +10,20 @@ The KVM matrix systems of the ControlCenter-Compact series consist of at least o
 
 ## About
 
-With this driver, you can monitor status parameters and retrieve information from the device.
+With this connector, you can monitor status parameters and retrieve information from the device.
 
-The driver polls data from the device using SNMPv2.
+The connector polls data from the device using SNMPv2.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**         | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**         | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|-------------------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version         | No                  | Yes                     |
 | 1.0.1.x              | New connection (serial) | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.0.001 (00214)             |
 | 1.0.1.x          | 1.0.001 (00214)             |
@@ -34,7 +34,7 @@ The driver polls data from the device using SNMPv2.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -49,7 +49,7 @@ SNMP Settings:
 
 #### Serial IP-Control-API connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 Serial connection:
 

@@ -8,19 +8,19 @@ The NovelSat NS1000 Modulator delivers industry-leading data rates. A single uni
 
 ## About
 
-This SNMP driver can be used to monitor and configure the **Novelsat NS1000 Modulator** device.
+This SNMP connector can be used to monitor and configure the **Novelsat NS1000 Modulator** device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**                                                                                                                                                  | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**                                                                                                                                                  | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x              | Initial version.                                                                                                                                                 | No                  | Yes                     |
 | 1.0.1.x              | New range for firmware 1.1.1 (build 2592).                                                                                                                       | No                  | Yes                     |
 | 1.0.2.x \[SLC main\] | New range because of a param Discreet Display change, change in layout for setting Datetime param, and datetime params changed from string to number (datetime). | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 1.0.1.x          | U-Boot 2004.1051            |
@@ -32,7 +32,7 @@ This SNMP driver can be used to monitor and configure the **Novelsat NS1000 Modu
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

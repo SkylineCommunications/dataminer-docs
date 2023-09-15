@@ -8,13 +8,13 @@ The **NX4600** is an H.264/AVC encoder, decoder and media gateway, which can be 
 
 ## About
 
-This driver is used to manage the Nevion NX4600 device using the **HTTP** protocol.
+This connector is used to manage the Nevion NX4600 device using the **HTTP** protocol.
 
-This driver will export different drivers based on the retrieved data. A list can be found in the section "Exported Drivers".
+This connector will export different connectors based on the retrieved data. A list can be found in the section "Exported Connectors".
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                     | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                     | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                     | Yes                 | Yes                     |
 | 1.1.0.x          | New firmware version                | Yes                 | Yes                     |
@@ -24,9 +24,9 @@ This driver will export different drivers based on the retrieved data. A list ca
 
 Note: Upgrading **from range 1.0.0.x to range 1.1.0.x** or higher will cause the **loss of all saved data**, including trending and the alarm history.
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.8.6                       |
 | 1.1.0.x          | 2.0.16                      |
@@ -35,7 +35,7 @@ Note: Upgrading **from range 1.0.0.x to range 1.1.0.x** or higher will cause the
 | 1.1.4.x          | 2.0.16 2.8.3                |
 | 2.0.0.x          | 1.8.6                       |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol**                                                        | **Description** |
 |------------------------------------------------------------------------------|-----------------|
@@ -48,7 +48,7 @@ Note: Upgrading **from range 1.0.0.x to range 1.1.0.x** or higher will cause the
 
 #### HTTP connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP connection:
 
@@ -58,7 +58,7 @@ HTTP connection:
 
 #### SNMP connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection to receive traps and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection to receive traps and requires the following input during element creation:
 
 SNMP connection:
 
@@ -72,7 +72,7 @@ SNMP settings:
 
 ### Configuration
 
-As this driver makes use of System.Web.dll, **.NET Framework 4.0** must be installed on the system for the driver to work.
+As this connector makes use of System.Web.dll, **.NET Framework 4.0** must be installed on the system for the connector to work.
 
 ## Usage
 
@@ -193,7 +193,7 @@ On this page, you can enter the username and password for basic authentication.
 
 The **Login Status** displays if the HTTP call succeeded or if there was an authentication error during the request.
 
-It is advisable to verify whether the TXP settings on the web interface of the device have been enabled. Note that when no credentials are filled in in the driver, auto login has to be enabled on the device.
+It is advisable to verify whether the TXP settings on the web interface of the device have been enabled. Note that when no credentials are filled in in the connector, auto login has to be enabled on the device.
 
 ### Descrambler Page
 
@@ -203,7 +203,7 @@ In the tree control, the following data is displayed for each descrambler: the *
 
 ### Trap Destinations
 
-This page allows you to check where traps will be sent. There is a toggle button which, when enabled at element startup, will make the driver compare the info in the table and check if the IP of the hosting DMA is there. If it is not, this row will be added to the table with the status *Missing*.
+This page allows you to check where traps will be sent. There is a toggle button which, when enabled at element startup, will make the connector compare the info in the table and check if the IP of the hosting DMA is there. If it is not, this row will be added to the table with the status *Missing*.
 
 The **Trap File Size** parameter allows you to control the size of the log file. With the **Log Traps** parameter, you can enable or disable the logging of the traps.
 

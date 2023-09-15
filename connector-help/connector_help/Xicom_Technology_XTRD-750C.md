@@ -4,21 +4,21 @@ uid: Connector_help_Xicom_Technology_XTRD-750C
 
 # Xicom Technology XTRD-750C
 
-The **Xicom Technology XTRD-750C** driver can be used to display and configure information regarding the related controller.
+The **Xicom Technology XTRD-750C** connector can be used to display and configure information regarding the related controller.
 
 ## About
 
 This protocol can be used to monitor and control the Xicom Technology XTRD-750C controller. A serial connection is used in order to successfully retrieve and configure the information of the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ This protocol can be used to monitor and control the Xicom Technology XTRD-750C 
 
 #### Serial connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -48,7 +48,7 @@ SERIAL CONNECTION:
 
 ## Usage
 
-This driver has three pages, **General**, **Amplifier** and **Alarm**, as well as one pop-up page, **Alarm Settings.**
+This connector has three pages, **General**, **Amplifier** and **Alarm**, as well as one pop-up page, **Alarm Settings.**
 
 ### General
 

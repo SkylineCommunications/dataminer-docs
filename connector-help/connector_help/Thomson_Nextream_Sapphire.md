@@ -4,7 +4,7 @@ uid: Connector_help_Thomson_Nextream_Sapphire
 
 # Thomson Nextream Sapphire
 
-This driver is used to configure and monitor a **Thomson Nextream Sapphire** device.
+This connector is used to configure and monitor a **Thomson Nextream Sapphire** device.
 
 ## About
 
@@ -14,7 +14,7 @@ The Thomson Nextream Sapphire is an MPEG video server. Communication to the devi
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and an HTTP connection. It requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and an HTTP connection. It requires the following input during element creation:
 
 **SNMP CONNECTION**:
 

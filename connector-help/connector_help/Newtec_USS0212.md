@@ -4,23 +4,23 @@ uid: Connector_help_Newtec_USS0212
 
 # Newtec USS0212
 
-The **Newtec USS0212** driver is an **SNMP** driver used to monitor and control the Newtec USS0212.
+The **Newtec USS0212** connector is an **SNMP** connector used to monitor and control the Newtec USS0212.
 
 ## About
 
-The driver uses **SNMP** to retrieve data from the **redundancy switch**. It is also possible to configure some of these parameters using this driver.
+The connector uses **SNMP** to retrieve data from the **redundancy switch**. It is also possible to configure some of these parameters using this connector.
 
 **DCF** has also been implemented and will create an internal connection between the active input and the output.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 2.1.8                       |
 
@@ -30,7 +30,7 @@ The driver uses **SNMP** to retrieve data from the **redundancy switch**. It is 
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -66,9 +66,9 @@ This page provides access to the web interface of the device. Note that the clie
 
 ## DataMiner Connectivity Framework
 
-DCF has been implemented since the initial version of this driver. Note that DataMiner version **8.5.4** is the minimum required version to support DCF.
+DCF has been implemented since the initial version of this connector. Note that DataMiner version **8.5.4** is the minimum required version to support DCF.
 
-Below, you can find an overview of the DCF implementation in the driver itself. Note that DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
+Below, you can find an overview of the DCF implementation in the connector itself. Note that DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
 ### Interfaces
 

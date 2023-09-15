@@ -4,7 +4,7 @@ uid: Connector_help_Crystal_Vision_Vision_3_Frame_-_Tandem_10_VF
 
 # Crystal Vision Vision 3 Frame - Tandem 10 VF
 
-This **exported driver** shows data from a TANDEM10-VF module in a Crystal Vision Vision 3 Frame.
+This **exported connector** shows data from a TANDEM10-VF module in a Crystal Vision Vision 3 Frame.
 
 TANDEM10-VF provides a solution for audio embedding and de-embedding for use with Vision rack frames from Crystal Vision.
 It has a single SDI video path with a de-embedder and an embedder, which allow the extraction and insertion of up to 16 channels (four groups) of audio.
@@ -25,7 +25,7 @@ It has a single SDI video path with a de-embedder and an embedder, which allow t
 
 ## Configuration
 
-This SNMP driver is used by DVE child elements that are **automatically created** by the parent driver [Crystal Vision Vision 3 Frame](xref:Connector_help_Crystal_Vision_Vision_3_Frame).
+This SNMP connector is used by DVE child elements that are **automatically created** by the parent connector [Crystal Vision Vision 3 Frame](xref:Connector_help_Crystal_Vision_Vision_3_Frame).
 
 ### Initialization
 

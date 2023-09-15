@@ -40,7 +40,7 @@ HTTP CONNECTION:
 
 - **IP address/host**: The polling IP or URL of the destination.
 - **IP port**: The IP port of the destination.
-- **Device address**: \[The bus address of the device. If the proxy server has to be bypassed, specify *BypassProxy*.\]
+- **Device address**: The bus address of the device. If the proxy server has to be bypassed, specify *BypassProxy*.
 
 ### Initialization
 
@@ -61,13 +61,3 @@ You can specify what resource groups (pools) you are interested in and indicate 
 The **Frame Bookings** table is an overview of the frame bookings that are available on the system. These are the parent bookings.
 
 For each frame booking there will be one or more line bookings available in the **Line Bookings** table.
-
-### Examples
-
-N/A
-
-## Notes
-
-N/A
-
-

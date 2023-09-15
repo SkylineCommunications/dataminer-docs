@@ -4,7 +4,7 @@ uid: Connector_help_Wellav_CMP_Database_Reader
 
 # Wellav CMP Database Reader
 
-This driver retrieves the CMP data from a MySQL database.
+This connector retrieves the CMP data from a MySQL database.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver retrieves the CMP data from a MySQL database.
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 
@@ -48,7 +48,7 @@ On the **General** page, you can find the parameters to connect to the MySQL Dat
 
 With regard to the configuration of the tables (**CMP**, **Status**, **Alarms** and **Alarm History**), it is possible to configure the number of rows of the **Alarm History** table to retrieve from the database. For the **CMP** table, a button is available to repoll the data from the database.
 
-The following columns are retrieved for each table available in the driver:
+The following columns are retrieved for each table available in the connector:
 
 - **CMP:** Name, ID, Register Time and Modify Time.
 - **Status:** Time, Channel ID, Lock Status, Bitrate, Signal, CNR, CMP ID, CMP Name, Board ID, Board Name and CMP Time.

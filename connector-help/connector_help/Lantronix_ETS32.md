@@ -4,7 +4,7 @@ uid: Connector_help_Lantronix_ETS32
 
 # Lantronix ETS32
 
-This is an **SNMP**-based driver that is used to monitor and configure the **Lantronix ETS32**.
+This is an **SNMP**-based connector that is used to monitor and configure the **Lantronix ETS32**.
 
 ## About
 
@@ -16,7 +16,7 @@ The **Lantronix ETS32** is a multi-port device server providing shared network a
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

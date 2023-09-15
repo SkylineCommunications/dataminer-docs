@@ -18,7 +18,7 @@ The **TECSYS TS 9090** is a media encoder solution for audio and video. This con
 
 ### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.09                        |
 | 1.0.1.x          | 1.20                        |

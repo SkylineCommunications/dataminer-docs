@@ -8,18 +8,18 @@ This is an SNMP-based protocol for the FOR-A FA-9520. The FA-9520 is a dual-chan
 
 ## About
 
-This driver was designed to work only with model **FA-9520**. It allows the user to monitor the state of the fans and power supplies. The status of the many inputs and outputs of this equipment can also be monitored. In addition, certain parameters of the video conversion can be configured. SNMPv2 **Get** commands are used to read information from the device. SNMPv2 **Set** commands are used to write information to the device.
+This connector was designed to work only with model **FA-9520**. It allows the user to monitor the state of the fans and power supplies. The status of the many inputs and outputs of this equipment can also be monitored. In addition, certain parameters of the video conversion can be configured. SNMPv2 **Get** commands are used to read information from the device. SNMPv2 **Set** commands are used to write information to the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                                 |
+| **Range** | **Description**                                                                                 |
 |------------------|-------------------------------------------------------------------------------------------------|
 | 1.0.0.x          | Initial version                                                                                 |
 | 1.1.0.x          | Version compatible with firmware 2.10 (parameters added in correspondence with the MIB update). |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 2.03                        |
 | 1.1.0.x          | 2.10                        |
@@ -30,7 +30,7 @@ This driver was designed to work only with model **FA-9520**. It allows the user
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

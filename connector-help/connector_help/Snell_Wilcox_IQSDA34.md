@@ -4,22 +4,22 @@ uid: Connector_help_Snell_Wilcox_IQSDA34
 
 # Snell Wilcox IQSDA34
 
-The **Snell Wilcox IQSDA34** driver monitors and controls changes on the amplifer unit through a Rollcall smart-serial protocol.
+The **Snell Wilcox IQSDA34** connector monitors and controls changes on the amplifer unit through a Rollcall smart-serial protocol.
 
 ## About
 
-The driver periodically polls relevant information from the device for every 15 seconds for Rollcall protocol purposes and every two hours for backchannel purposes.
+The connector periodically polls relevant information from the device for every 15 seconds for Rollcall protocol purposes and every two hours for backchannel purposes.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**                 |
+| **Range**     | **Description**                 |
 |----------------------|---------------------------------|
 | 1.0.0.x              | Initial Version                 |
 | 1.0.1.x \[SLC Main\] | Fixed channel source discreets. |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range**     | **Device Firmware Version**                                         |
+| **Range**     | **Device Firmware Version**                                         |
 |----------------------|---------------------------------------------------------------------|
 | 1.0.0.x              | Not related to firmware, but compatible with software version 5.2.6 |
 | 1.0.1.x \[SLC Main\] | Not related to firmware, but compatible with software version 5.2.6 |
@@ -28,7 +28,7 @@ The driver periodically polls relevant information from the device for every 15 
 
 ### Creation
 
-The driver uses a serial TCP/IP connection and needs the following user information:
+The connector uses a serial TCP/IP connection and requires the following input during element creation:
 
 **Serial TCP/IP CONNECTION:**
 
@@ -41,7 +41,7 @@ The driver uses a serial TCP/IP connection and needs the following user informat
 
 ## Usage
 
-The driver has several display pages mentioned below.
+The connector has several display pages mentioned below.
 
 ### Channels and Monitor Page
 

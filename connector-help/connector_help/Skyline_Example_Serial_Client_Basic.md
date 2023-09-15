@@ -25,7 +25,7 @@ Alternatively, the "Skyline Example Best Practice Server" can be used for testin
 
 #### Serial Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -43,7 +43,7 @@ In addition, the data from the *Data.xml* file also needs to be imported. If you
 
 ### Help Page
 
-This page displays information about the driver and its functionality.
+This page displays information about the connector and its functionality.
 
 ### Basic Serial Page
 

@@ -4,7 +4,7 @@ uid: Connector_help_Incognito_DHCP_Service_Log_Analyzer
 
 # Incognito DHCP Service Log Analyzer
 
-This driver establishes a connection with a **Linux server**. It analyzes **log files** on this server and copies them to the local machine. When the files have been successfully copied, the driver will extract **IP and MAC addresses for cable modems** and place this information in a table.
+This connector establishes a connection with a **Linux server**. It analyzes **log files** on this server and copies them to the local machine. When the files have been successfully copied, the connector will extract **IP and MAC addresses for cable modems** and place this information in a table.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver establishes a connection with a **Linux server**. It analyzes **log 
 
 #### Serial Main Connection
 
-This driver uses a serial connection (SSH) and requires the following input during element creation:
+This connector uses a serial connection (SSH) and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -43,7 +43,7 @@ SERIAL CONNECTION:
 
 ### Initialization
 
-Before you start running an element with this driver, you need to execute an SCP client on the local machine to make sure you can receive information through port 22.
+Before you start running an element with this connector, you need to execute an SCP client on the local machine to make sure you can receive information through port 22.
 
 ### Redundancy
 
@@ -51,7 +51,7 @@ There is no redundancy defined.
 
 ## How to use
 
-Below you can find general information about the pages of this driver.
+Below you can find general information about the pages of this connector.
 
 ### General
 

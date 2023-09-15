@@ -4,7 +4,7 @@ uid: Connector_help_Network_Electronics_VD1616
 
 # Network Electronics VD1616
 
-The **Network Electronics VD1616** driver can be used to monitor and control information of the related device.
+The **Network Electronics VD1616** connector can be used to monitor and control information of the related device.
 
 ## About
 
@@ -16,7 +16,7 @@ In addition, **DCF** support has been implemented for the matrix.
 
 ### Creation
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 **SERIAL CONNECTION**
 
@@ -26,7 +26,7 @@ This driver uses a serial connection and requires the following input during ele
 
 ## Usage
 
-This driver contains the following pages:
+This connector contains the following pages:
 
 - **Main View:** Matrix overview.
 - **General:** Matrix crosspoint settings.

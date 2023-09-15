@@ -6,16 +6,16 @@ uid: Connector_help_Digigram_Iqoya_Link
 
 The Digigram Iqoya Link is a two-channel IP audio codec for STL (Studio to Transmitter Links) or SSL (Studio to Studio) applications.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                                                                                                           | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                                                                                                                           | **DCF Integration** | **Cassandra Compliant** |
 |------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                                                                                                                                                           | No                  | Yes                     |
 | 1.1.0.x \[Main\] | New firmware (v03.08) based on v1.0.0.5; changed display key of the following tables: Receive Source Table, Receive Source Metrics Table and Send Destination URLs Table. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | v02.40                      |
 | 1.1.0.x          | v03.08                      |
@@ -26,7 +26,7 @@ The Digigram Iqoya Link is a two-channel IP audio codec for STL (Studio to Trans
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -62,6 +62,6 @@ This page displays the web interface of the device. However, note that the clien
 
 ## Notes
 
-Traps are implemented in the driver. When a trap enters, the corresponding parameter will be updated immediately (single parameter or table parameter).
+Traps are implemented in the connector. When a trap enters, the corresponding parameter will be updated immediately (single parameter or table parameter).
 
-In order to get the best performance with this driver, we recommend to set the **Timeout of a single command** to 2000 (ms) in the element configuration.
+In order to get the best performance with this connector, we recommend to set the **Timeout of a single command** to 2000 (ms) in the element configuration.

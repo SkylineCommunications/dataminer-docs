@@ -8,18 +8,18 @@ ScheduAll is an application running on Windows OS that manages bookings (a.k.a. 
 
 ## About
 
-This driver allows communication to and from ScheduAll via a web service API and/or via an interop chorus API.
+This connector allows communication to and from ScheduAll via a web service API and/or via an interop chorus API.
 
 The **web service** API is an XML interface over HTTP. DataMiner can send requests and receives responses accordingly. The interop chorus API works in a different way. Via **interop**, ScheduAll sends data in a specific format to DataMiner without getting a request first (i.e. eventing). The structure of this message is defined via message templates in ScheduAll.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                              | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                              | **DCF Integration** | **Cassandra Compliant** |
 |------------------|----------------------------------------------|---------------------|-------------------------|
 | 2.0.0.x          | Initial version                              | No                  | Yes                     |
 | 2.0.1.x          | Support for SRM added                        | No                  | Yes                     |
 | 2.0.3.x          | Support for Unicode added                    | No                  | Yes                     |
-| 3.0.0.x          | POC for Voice of America driver review       | No                  | Yes                     |
+| 3.0.0.x          | POC for Voice of America connector review       | No                  | Yes                     |
 | 3.0.1.x          | Modify Booking Overview table layout         | No                  | Yes                     |
 | 3.0.2.x          | Changes made to interfacing Resource Manager | No                  | Yes                     |
 
@@ -43,7 +43,7 @@ The **web service** API is an XML interface over HTTP. DataMiner can send reques
 <p>HTTP connection:</p>
 <ul>
 <li><strong>IP address/host</strong>: The IP address of the main HTTP connection.</li>
-<li><strong>Port</strong>: The main port the driver will communicate through.</li>
+<li><strong>Port</strong>: The main port the connector will communicate through.</li>
 </ul>
 <p>WEB SERVICE API BACKUP connection:</p>
 <ul>
@@ -64,7 +64,7 @@ The **web service** API is an XML interface over HTTP. DataMiner can send reques
 </tr>
 <tr class="odd">
 <td>3.0.0.x / 3.0.1.x / 3.0.2.x</td>
-<td><p>This driver uses a <strong>smart-serial</strong> connection and requires the following input during element creation:</p>
+<td><p>This connector uses a <strong>smart-serial</strong> connection and requires the following input during element creation:</p>
 <p>SMART-SERIAL CONNECTION:</p>
 <ul>
 <li><strong>IP address/host</strong>: The polling IP or URL of the destination.</li>
@@ -76,7 +76,7 @@ The **web service** API is an XML interface over HTTP. DataMiner can send reques
 
 ## ScheduAll table structure
 
-The driver combines data coming from several tables in ScheduAll. Below, you can find an overview of the different tables in ScheduAll:
+The connector combines data coming from several tables in ScheduAll. Below, you can find an overview of the different tables in ScheduAll:
 
 ![ScheduAll Structure.png](~/connector-help/images/ScheduAll_Manager_ScheduAll_Structure.png)
 

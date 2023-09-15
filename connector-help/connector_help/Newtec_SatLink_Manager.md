@@ -4,17 +4,17 @@ uid: Connector_help_Newtec_SatLink_Manager
 
 # Newtec SatLink Manager
 
-The **Newtec SatLink Manager** driver is used to communicate with the **Northbound Interface API** of the **SLR/SLM** (SatLink Reservator/SatLink Manager).
+The **Newtec SatLink Manager** connector is used to communicate with the **Northbound Interface API** of the **SLR/SLM** (SatLink Reservator/SatLink Manager).
 
 ## About
 
-The Newtec SatLink Manager driver uses **SOAP** calls to retrieve data from the SLR.
+The Newtec SatLink Manager connector uses **SOAP** calls to retrieve data from the SLR.
 
-There are different version ranges of this driver based on implemented features and supported SLM API:
+There are different version ranges of this connector based on implemented features and supported SLM API:
 
-- 3.0.0.\*: supports SLR API 1.1
-- 4.0.0.\*: supports SLR API 1.1 and creates DVE's for each VN
-- 4.1.0.\*: supports SLM API 2.0 and creates DVE's for each VN
+- 3.0.0.*: supports SLR API 1.1
+- 4.0.0.*: supports SLR API 1.1 and creates DVEs for each VN
+- 4.1.0.*: supports SLM API 2.0 and creates DVEs for each VN
 
 Currently, the following calls are implemented:
 
@@ -48,7 +48,7 @@ Currently, the following calls are implemented:
 
 ### Creation
 
-This driver uses an HTTP connection and needs the following user information:
+This connector uses an HTTP connection and requires the following input during element creation:
 **HTTP CONNECTION:**
 
 - **IP address/host:** The polling IP of the device, eg. *10.11.12.13*
@@ -84,7 +84,7 @@ This page can be used to access the **web interface** of the SLR. Note that the 
 
 ## Notes
 
-If a command needs to be triggered from an interactive automation script or another external source, then a string containing all information about the command needs to be set on PID 101 of the SLM driver. Each command expects a certain format to make sure that the driver has all necessary information to create the request that needs to be sent to the SLR.
+If a command needs to be triggered from an interactive automation script or another external source, then a string containing all information about the command needs to be set on PID 101 of the SLM driver. Each command expects a certain format to make sure that the connector has all necessary information to create the request that needs to be sent to the SLR.
 
 An overview of the commands that can be triggered from an external source and the format that needs to be used can be found below:
 

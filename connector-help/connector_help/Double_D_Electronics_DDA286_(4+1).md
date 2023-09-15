@@ -9,11 +9,11 @@ uid: Connector_help_Double_D_Electronics_DDA286_(4+1)
 <tbody>
 <tr class="odd">
 <td><h1 id="double-d-electronics-dda286-41">Double D Electronics DDA286 (4+1)</h1>
-<p>The driver monitors the activity of the <strong>Double D Electronics DDA286 (4+1)</strong> controller.</p>
+<p>The connector monitors the activity of the <strong>Double D Electronics DDA286 (4+1)</strong> controller.</p>
 <h2 id="about">About</h2>
-<p>The driver has a serial communication to the <strong>Double D Electronics <strong><strong>DDA286 (4+1)</strong></strong></strong> and allows the end user to control and monitor the switche configuration.</p>
-<p>In addition to the previous, the driver uses two timers: one polling every 10 seconds that retrieves general information from the device and its switches and one that polls every hour for slowly varying information.</p>
-<h3 id="ranges-of-the-driver">Ranges of the driver</h3>
+<p>The connector has a serial communication to the <strong>Double D Electronics <strong><strong>DDA286 (4+1)</strong></strong></strong> and allows the end user to control and monitor the switche configuration.</p>
+<p>In addition to the previous, the connector uses two timers: one polling every 10 seconds that retrieves general information from the device and its switches and one that polls every hour for slowly varying information.</p>
+<h3 id="ranges-of-the-driver">Ranges of the connector</h3>
 <table>
 <tbody>
 <tr class="odd">
@@ -46,7 +46,7 @@ uid: Connector_help_Double_D_Electronics_DDA286_(4+1)
 <h2 id="installation-and-configuration">Installation and configuration</h2>
 <h3 id="creation">Creation</h3>
 <p>Serial Main connection</p>
-<p>This driver uses a serial connection and requires the following input during element creation:</p>
+<p>This connector uses a serial connection and requires the following input during element creation:</p>
 <p>SERIAL CONNECTION:</p>
 <ul>
 <li>Direct connection:</li>

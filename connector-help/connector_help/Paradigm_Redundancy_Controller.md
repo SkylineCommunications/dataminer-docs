@@ -8,13 +8,13 @@ The **Redundancy Controller Unit** has been designed to control the automatic sw
 
 ## About
 
-With this driver it is possible to monitor the main status variables within the system, as well as to control the switching priorities.
+With this connector it is possible to monitor the main status variables within the system, as well as to control the switching priorities.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a serial interface as described in the document Basic Operation Manual Paradigm Redundancy Controller, dated 10/12/2013:
+This connector uses a serial interface as described in the document Basic Operation Manual Paradigm Redundancy Controller, dated 10/12/2013:
 
 **Serial Connection**
 

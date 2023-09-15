@@ -6,7 +6,7 @@ uid: Connector_help_Axon_ACP_GAW300
 
 The GAW300 is an embedded domain audio watermarking embedder for Audience measurement (NexTrackerT), Second Screen applications (SyncNowr) or SNAP, or a combination of these services.
 
-The Axon ACP GAW300 driver is used to monitor the GAW300 card.
+The Axon ACP GAW300 connector is used to monitor the GAW300 card.
 
 ## About
 
@@ -34,7 +34,7 @@ The Axon ACP GAW300 driver is used to monitor the GAW300 card.
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -46,7 +46,7 @@ SERIAL CONNECTION:
 
 #### Serial IP Connection - Events
 
-This driver uses a smart-serial connection and requires the following input during element creation:
+This connector uses a smart-serial connection and requires the following input during element creation:
 
 SMART-SERIAL CONNECTION:
 
@@ -85,7 +85,7 @@ Note: If the setting of a parameter depends on another parameter, when you try t
 
 ## DataMiner Connectivity Framework
 
-The **1.0.0.x** driver range of the Axon ACP GAW300 protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
+The **1.0.0.x** connector range of the Axon ACP GAW300 protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 

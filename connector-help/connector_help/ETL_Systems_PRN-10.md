@@ -4,7 +4,7 @@ uid: Connector_help_ETL_Systems_PRN-10
 
 # ETL Systems PRN-10
 
-This SNMP driver shows the status of the different parameters of an ETL Systems PRN-10.
+This SNMP connector shows the status of the different parameters of an ETL Systems PRN-10.
 
 The ETL Systems PRN-10 is a 1U, 19" rack-mountable chassis with up to 16 DC injector modules fitted at the rear and hot-swappable dual redundant power supplies.
 
@@ -34,7 +34,7 @@ The ETL Systems PRN-10 is a 1U, 19" rack-mountable chassis with up to 16 DC inje
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

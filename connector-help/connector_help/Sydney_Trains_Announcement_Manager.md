@@ -8,13 +8,13 @@ The **Sydney Trains (SDT) Announcement Manager** is used to make **live announce
 
 ## About
 
-This manager driver is designed to be used in combination with the **Sydney Trains Announcement Manager Visio** file. The **Visio** will be used to select the **station platforms** to which the user wants to announce. The driver is designed to allow multiple announcements by different users at the same time.
+This manager connector is designed to be used in combination with the **Sydney Trains Announcement Manager Visio** file. The **Visio** will be used to select the **station platforms** to which the user wants to announce. The connector is designed to allow multiple announcements by different users at the same time.
 
 The **SDT Announcement Manager** will configure the necessary matrix (*"Delec Oratis Matrix System"*) crosspoints to allow the user to announce to the selected stations/platforms.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
@@ -24,11 +24,11 @@ The **SDT Announcement Manager** will configure the necessary matrix (*"Delec Or
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Configuration of Stations
 
-The **Nodes**, **Stations** and **Platforms** tables must first be populated, before a user can select the destinations for the announcements in the Visio file. These tables can be found on the **Stations** page of the driver and can be populated by importing a **CSV** file.
+The **Nodes**, **Stations** and **Platforms** tables must first be populated, before a user can select the destinations for the announcements in the Visio file. These tables can be found on the **Stations** page of the connector and can be populated by importing a **CSV** file.
 
 To import the CSV file, click the **"Import..."** button at the bottom of the **Stations** page. This will open the **Import** page where the available **CSV** files can be selected and imported. The CSV files need to be stored in *"C:\Skyline DataMiner\Documents\Sydney Trains Announcement Manager"* and have the following headers: *"platform name;platform type;station;station acronym;station type;node;node acronym"*.
 
@@ -44,7 +44,7 @@ This will log all **announcements** (datetime, state, user, stations/zones \[and
 
 ### General configurations
 
-There is an extra Configuration page available with some general configurations that are used by the driver:
+There is an extra Configuration page available with some general configurations that are used by the connector:
 
 - **Debug Logging**: if enabled, all steps will be logged (only use when necessary)
 - **Crosspoint dB Value**: this value is used to open the crosspoints in a matrix (default: -*20 dB*)

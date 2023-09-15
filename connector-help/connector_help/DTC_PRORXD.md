@@ -11,15 +11,15 @@ The PRORXD is a COFDM receiver decoder with dual optional receive and HD decodin
 This protocol can monitor status parameters of a Cobham PRORXD device. It also allows the user to configure global configuration parameters and presets.
 HTTP requests are used to retrieve the device information.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -29,7 +29,7 @@ HTTP requests are used to retrieve the device information.
 
 #### HTTP connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

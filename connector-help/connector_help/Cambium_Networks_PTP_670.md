@@ -4,7 +4,7 @@ uid: Connector_help_Cambium_Networks_PTP_670
 
 # Cambium Networks PTP 670
 
-This SNMP driver can be used to monitor and configure the **Cambium Network Point to Point 670** device.
+This SNMP connector can be used to monitor and configure the **Cambium Network Point to Point 670** device.
 
 ## About
 
@@ -12,15 +12,15 @@ Cambium PTP 670 Series Bridge products are designed for Ethernet bridging over p
 
 The equipment acts as a transparent bridge between two segments of the operator's network. In this sense, it can be treated as a virtual wired connection between two points. It forwards 802.3 Ethernet frames destined for the other part of the network and filters frames it does not need to forward.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 50670-02-50                 |
 
@@ -30,7 +30,7 @@ The equipment acts as a transparent bridge between two segments of the operator'
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

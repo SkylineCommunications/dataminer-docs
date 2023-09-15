@@ -4,17 +4,17 @@ uid: Connector_help_Miranda_KMV-3901
 
 # Miranda KMV-3901
 
-The **Miranda KMV-3901** driver is a serial driver used to display information about the **Miranda KMV-3901** card. This protocol uses the Kaleido Remote Control Protocol (RCP) to get the information and change certain values on the device. This driver also needs an SNMP connection to get information about certain status parameters of the frame where the KMV-3901 card is installed.
+The **Miranda KMV-3901** connector is a serial connector used to display information about the **Miranda KMV-3901** card. This protocol uses the Kaleido Remote Control Protocol (RCP) to get the information and change certain values on the device. This connector also needs an SNMP connection to get information about certain status parameters of the frame where the KMV-3901 card is installed.
 
 ## About
 
-The KMV-3901 device can be configured with the XEdit software that is delivered with the device. You can also change certain settings using the RCP protocol. However, for this driver, the XEdit software will still need to be used, because certain settings cannot be done using the RCP protocol.
+The KMV-3901 device can be configured with the XEdit software that is delivered with the device. You can also change certain settings using the RCP protocol. However, for this connector, the XEdit software will still need to be used, because certain settings cannot be done using the RCP protocol.
 
 ## Configuration and Installation
 
 ### Creation
 
-Because this drivers uses SNMP and TCP (serial) communication, 2 connections need to be configured when you create an element for the driver. The settings for these connections are listed below:
+Because this connectors uses SNMP and TCP (serial) communication, 2 connections need to be configured when you create an element for the connector. The settings for these connections are listed below:
 
 **SERIAL CONNECTION**
 
@@ -47,7 +47,7 @@ When a new monitor entry is added to the table, the monitor will be added to an 
 
 *C:\Skyline DataMiner\Documents\DMA_COMMON_DOCUMENTS\Miranda KMV-3901\\*
 
-After the new monitor has been added to the .xml file, the driver will execute an RCP command to get the currently connected channel. This channel can be changed in DataMiner using the drop-down menu that contains the input names (configured in the **Input Names table**).
+After the new monitor has been added to the .xml file, the connector will execute an RCP command to get the currently connected channel. This channel can be changed in DataMiner using the drop-down menu that contains the input names (configured in the **Input Names table**).
 
 When a monitor is deleted from the layout, it's also possible to delete this monitor from the table. This is done by selecting the monitor entries you want to delete and right-clicking. When one or multiple rows are selected, you will be able to select the **Delete Selected Monitors.** action. This action will delete the selected monitors from the .xml file.
 
@@ -55,7 +55,7 @@ When a monitor is deleted from the layout, it's also possible to delete this mon
 
 The **UMD** page is very similar to the **Monitor** page. It contains the same **Room** and **Current Layout** parameter. This means that when you change one of these parameters on one of the pages, the value will also be changed on the other page. Every time these parameters are changed, the **UMD** and **Monitor table** will be updated with the correct UMDs or monitors.
 
-Adding a UMD to the table is done the same way as adding a monitor in the **Monitor table**. Before you add the UMD to the table, it has to be added in XEdit. After the UMD is added to the table, a command will be executed to get the dynamic text for this UMD. Dynamic text can only be set using the RCP setKDynamicText command. It's possible to set this text in the driver.
+Adding a UMD to the table is done the same way as adding a monitor in the **Monitor table**. Before you add the UMD to the table, it has to be added in XEdit. After the UMD is added to the table, a command will be executed to get the dynamic text for this UMD. Dynamic text can only be set using the RCP setKDynamicText command. It's possible to set this text in the connector.
 
 ### Timer Page
 

@@ -4,7 +4,7 @@ uid: Connector_help_Ereca_Broadcast_NetRacer
 
 # Ereca Broadcast NetRacer
 
-This driver is used to monitor the **Ereca Broadcast NetRacer** chassis and plug-in cards.
+This connector is used to monitor the **Ereca Broadcast NetRacer** chassis and plug-in cards.
 
 ## About
 
@@ -16,21 +16,21 @@ The NetRacer is a chassis with 16 slots for swappable broadcast cards. Although 
 
 The minimum framework required is .NET 4.0, so that System.Web.Extensions.dll is available.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                | **DCF Integration** | **Cassandra Compliant** |
 |------------------|--------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                | No                  | Yes                     |
 | 1.0.1.x          | Changed keys and naming format | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.1.1                       |
 | 1.0.1.x          | 1.1.1                       |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol**                                                                        | **Description**    |
 |----------------------------------------------------------------------------------------------|--------------------|
@@ -42,7 +42,7 @@ The minimum framework required is .NET 4.0, so that System.Web.Extensions.dll is
 
 HTTP primary connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -52,11 +52,11 @@ HTTP CONNECTION:
 
 ## Usage
 
-The Details page from the web interface is recreated in this driver, while the chassis overview is represented by a table on a separate page. The data of active cards is added to one of the card tables depending on the card's type. Finally, it is possible to create a DVE for the cards.
+The Details page from the web interface is recreated in this connector, while the chassis overview is represented by a table on a separate page. The data of active cards is added to one of the card tables depending on the card's type. Finally, it is possible to create a DVE for the cards.
 
 ### Details
 
-This is the default page of this driver. It has the same layout as the corresponding page in the web interface.
+This is the default page of this connector. It has the same layout as the corresponding page in the web interface.
 
 ### Chassis
 

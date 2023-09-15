@@ -34,7 +34,7 @@ The Eaton 9PX is an online UPS featuring ABM technology, which extends battery s
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -60,6 +60,6 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-This driver displays information about the system and battery, but also about the inputs, outputs, bypass, sensors (such as temperature and humidity) and digital inputs.
+This connector displays information about the system and battery, but also about the inputs, outputs, bypass, sensors (such as temperature and humidity) and digital inputs.
 
 You can also monitor alarms and configure specific settings.

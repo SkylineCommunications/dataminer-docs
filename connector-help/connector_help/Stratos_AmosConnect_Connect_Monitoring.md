@@ -4,21 +4,21 @@ uid: Connector_help_Stratos_AmosConnect_Connect_Monitoring
 
 # Stratos AmosConnect Connect Monitoring
 
-This driver connects to an external MySQL database for monitoring purposes.
+This connector connects to an external MySQL database for monitoring purposes.
 
 ## About
 
-This driver uses an **Oracle Connection** to connect with the database.
+This connector uses an **Oracle Connection** to connect with the database.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**                                          |
+| **Range** | **Device Firmware Version**                                          |
 |------------------|----------------------------------------------------------------------|
 | 1.0.0.x          | 11.2.0.2.0 Oracle Database 11g Release 11.2.0.2.0 - 64bit Production |
 
@@ -28,7 +28,7 @@ This driver uses an **Oracle Connection** to connect with the database.
 
 #### Serial Main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

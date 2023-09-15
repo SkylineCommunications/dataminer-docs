@@ -8,13 +8,13 @@ The **NEC-E** module is a controller used to manage, supervise and control other
 
 ## About
 
-The **Funea NEC-E** driver is able to create virtual drivers for different module types. For more information on the supported modules, refer to the Notes section below. These virtual drivers represent the devices inside a chassis. They also make it possible for users to monitor and configure the devices as if they were using the web interface.
+The **Funea NEC-E** connector is able to create virtual connectors for different module types. For more information on the supported modules, refer to the Notes section below. These virtual connectors represent the devices inside a chassis. They also make it possible for users to monitor and configure the devices as if they were using the web interface.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION**:
 
@@ -26,7 +26,7 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and need
 - **Get community string**: The community string in order to read from the device. The default value is *public*.
 - **Set community string**: The community string in order to set to the device. The default value is *private.*
 
-When the element is created, it can take several minutes before everything is initialized. The devices in the chassis are automatically detected and their drivers are also automatically created. If a device's module isn't supported, then no driver is created.
+When the element is created, it can take several minutes before everything is initialized. The devices in the chassis are automatically detected and their drivers are also automatically created. If a device's module isn't supported, then no connector is created.
 
 For more information on which modules are supported, refer to the Notes section.
 

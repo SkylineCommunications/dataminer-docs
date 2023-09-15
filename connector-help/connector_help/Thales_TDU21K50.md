@@ -4,27 +4,27 @@ uid: Connector_help_Thales_TDU21K50
 
 # Thales TDU21K50
 
-With this driver, you can gather and view information from the device **Thales TDU21K50**, as well as configure the device.
+With this connector, you can gather and view information from the device **Thales TDU21K50**, as well as configure the device.
 
 ## About
 
-The driver monitors the **Thales TDU21K50** device. For each exciter present on the device, by default, the driver will export a DVE.
+The connector monitors the **Thales TDU21K50** device. For each exciter present on the device, by default, the connector will export a DVE.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                 | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                 | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version.                                                | No                  | Yes                     |
 | 1.1.0.x          | MIB update and support for different exciter modes implemented. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 1.1.0.x          | Unknown                     |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported protocol**                                                            | **Description**                                          |
 |----------------------------------------------------------------------------------|----------------------------------------------------------|
@@ -37,7 +37,7 @@ The driver monitors the **Thales TDU21K50** device. For each exciter present on 
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP Connection:
 

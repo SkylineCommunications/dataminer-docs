@@ -38,7 +38,7 @@ Some considerations regarding the parameters on this page:
 
 - **IP Address (Resolved)**: This parameter can contain two types of values.
 
-- If the **IP Address** parameter is an FQDN hostname, this parameter will contain the resolved IP address for that hostname.
+  - If the **IP Address** parameter is an FQDN hostname, this parameter will contain the resolved IP address for that hostname.
   - If the **IP Address** is a valid IP, this parameter will contain the same IP.
 
 - **Standby Time**: This is a theoretical value indicating how long the batteries will last before depletion when they are put to use. This depends on the proper configuration of the UPS parameters and on the **Total Output Current** parameter, which is only available when the inverter is off. At that moment, this value will be calculated.
@@ -96,12 +96,19 @@ This page displays a summary of the last result of the tests performed by this c
 About the different kinds of tests:
 
 - **Float State Test**: The float state parameter is an indication for the health of the batteries and is tested when the charger is in float mode. The individual battery voltages cannot be under a certain threshold, which depends on the temperature while the charger is in float mode.
+
   Possible values: *Investigate Battery*, *Replace Battery*, *OK*.
+
   Formula:
+
   IBthreshold = 13.2 + ( 25 - temperature ) \* 0.0168
+
   RBthreshold = 12.8 + ( 25 - temperature ) \* 0.0168
+
 - **Battery Delta Test**: The individual battery voltages cannot exceed 0.5Vdc when the inverter is active because of a test. The individual battery voltages will only be checked when a test is running. Either the value "Not Tested" will be shown if no test has been performed yet, or the last value will be kept. Possible values: *OK*, *Fail*, *Not Tested*.
+
 - **Battery Cable Test**: This test is an indication of the status of the cable connected to the batteries. A problem with this cable might occur, resulting in invalid data retrieved from the device. This has an impact on the individual battery voltage. The value 0 Vdc will be retrieved while there is no problem with the batteries and the parameter that retrieves the number of batteries will show 0, which is invalid. The total battery voltage will still be retrieved correctly. We can conclude that there is a battery cable alarm when the number of batteries is 0, while the total battery voltage is larger than 0 Vdc.
+
 - **Battery Temperature Holding/Variation Test**: The temperature of the batteries is monitored, and the maximum and minimum value are stored in the parameters Batteries Temperature Max Hold and Batteries Temperature Min Hold, respectively. These parameters in turn are also monitored to calculate the Battery Temperature Variation, which is the difference between the Batteries Temperature Max Hold and Batteries Temperature Min Hold.
 
 Via page buttons, you can also access the subpages **Scheduled Tests** and **History**.
@@ -112,22 +119,22 @@ This subpage allows you to schedule tests to be performed on the UPS device.
 
 To do so:
 
-1.  At the bottom of the subpage, click the **Add** button. An entry will be created in the Scheduled Table.
-2.  Define the **Type** of test: *Yearly*, *Monthly* or *One Time*. Default values will now be filled in for **Start Time**, **Duration**, **Minimum Voltage Threshold**, and **Maximum Voltage Difference**.
-3.  Optionally, modify the default values for the other parameters of the entry. You can also define if the test should take the **Minimum Voltage Threshold** or the **Full Drain Minimum Voltage Threshold** into account. Only one of these can be used.
-4.  Unless the test is to be executed *One Time*, define the **End Date**, which indicates until when the test will be valid.
-5.  If you want to execute the scheduled test immediately, click the button **Start Test** in the row.
+1. At the bottom of the subpage, click the **Add** button. An entry will be created in the Scheduled Table.
+1. Define the **Type** of test: *Yearly*, *Monthly* or *One Time*. Default values will now be filled in for **Start Time**, **Duration**, **Minimum Voltage Threshold**, and **Maximum Voltage Difference**.
+1. Optionally, modify the default values for the other parameters of the entry. You can also define if the test should take the **Minimum Voltage Threshold** or the **Full Drain Minimum Voltage Threshold** into account. Only one of these can be used.
+1. Unless the test is to be executed *One Time*, define the **End Date**, which indicates until when the test will be valid.
+1. If you want to execute the scheduled test immediately, click the button **Start Test** in the row.
 
-> ![Schedule Tests.jpg](~/connector-help/images/SCTE_UPS_Schedule_Tests.jpg)
+  ![Schedule Tests.jpg](~/connector-help/images/SCTE_UPS_Schedule_Tests.jpg)
 
 #### Create Test subpage (connector version \>= 1.0.2.21)
 
 From version 1.0.2.21 of the connector onwards, UPS tests are integrated in the DataMiner Scheduler module. To create a test, go to the **Create Test** subpage and follow the procedure below:
 
-1.  Define the **Type** of test: *Yearly*, *Monthly* or *One Time*.
-2.  Define the **Start** and **End Date** of the test. If the test is *Yearly* or *Monthly*, the End Date is mandatory. If the type is *One Time*, set the **End Date** to *Not Configured*.
-3.  Set the **Duration**, **Duration Unit**, and **Maximum Voltage Difference**. You can also define if the test must take into account the **Minimum Voltage Threshold** or the **Full Drain Minimum Voltage Threshold**. These are mutually exclusive, so only one can be selected.
-4.  Click the **Add** button. An entry will be created in the Scheduled Test table.
+1. Define the **Type** of test: *Yearly*, *Monthly* or *One Time*.
+1. Define the **Start** and **End Date** of the test. If the test is *Yearly* or *Monthly*, the End Date is mandatory. If the type is *One Time*, set the **End Date** to *Not Configured*.
+1. Set the **Duration**, **Duration Unit**, and **Maximum Voltage Difference**. You can also define if the test must take into account the **Minimum Voltage Threshold** or the **Full Drain Minimum Voltage Threshold**. These are mutually exclusive, so only one can be selected.
+1. Click the **Add** button. An entry will be created in the Scheduled Test table.
 
 ![New test.jpg](~/connector-help/images/SCTE_UPS_New_test.jpg)
 
@@ -158,26 +165,35 @@ The alarm threshold data can be configured directly in the Property Table, or in
 
 To export the content of the **Property Table**:
 
-1.  In the **Device Export File** box, specify the name of the file to export.
-2.  Click the **Export** button.
-    The connector will proceed to export an Excel file with the following prefix: "UPSElementNameDVE\_"
-    Once the process is finished, the **Device Export Status** will change to *Done*.
-    The file will be placed in the following directory: *C:\Skyline DataMiner\Documents\SCTE UPS Collector\Property*
+1. In the **Device Export File** box, specify the name of the file to export.
 
-> ![Export Property DVE.jpg](~/connector-help/images/SCTE_UPS_Export_Property_DVE.jpg)
+1. Click the **Export** button.
+
+   The connector will proceed to export an Excel file with the following prefix: "UPSElementNameDVE\_"
+
+   Once the process is finished, the **Device Export Status** will change to *Done*.
+
+   The file will be placed in the following directory: *C:\Skyline DataMiner\Documents\SCTE UPS Collector\Property*
+
+   ![Export Property DVE.jpg](~/connector-help/images/SCTE_UPS_Export_Property_DVE.jpg)
 
 #### Import Threshold Parameters
 
 To update the content of the **Property Table** in bulk:
 
-1.  Export the current **Property Table**, as explained in the previous section.
-2.  Go to the directory *C:\Skyline DataMiner\Documents\SCTE UPS Collector\Property* and open the exported file. The exported file will have the name of the collector element as a prefix.
-3.  Modify the Excel file and save it.
-    **DO NOT MODIFY THE DEVICE ID, DEVICE NAME, INSTANCE OR PARAMETER**.
-4.  Select the file in the **Device Import File** dropdown box and click the **Import** button.
-    The **Import Progress** bar will display the progress of the import, until it reaches 100. Once the import is done, you will also be able to see additional information, such as the number of **Errors** generated.
+1. Export the current **Property Table**, as explained in the previous section.
 
-> ![Import Property DVE.jpg](~/connector-help/images/SCTE_UPS_Import_Property_DVE.jpg)
+1. Go to the directory *C:\Skyline DataMiner\Documents\SCTE UPS Collector\Property* and open the exported file. The exported file will have the name of the collector element as a prefix.
+
+1. Modify the Excel file and save it.
+
+   **DO NOT MODIFY THE DEVICE ID, DEVICE NAME, INSTANCE OR PARAMETER**.
+
+1. Select the file in the **Device Import File** dropdown box and click the **Import** button.
+
+   The **Import Progress** bar will display the progress of the import, until it reaches 100. Once the import is done, you will also be able to see additional information, such as the number of **Errors** generated.
+
+  ![Import Property DVE.jpg](~/connector-help/images/SCTE_UPS_Import_Property_DVE.jpg)
 
 ### Web Interface
 

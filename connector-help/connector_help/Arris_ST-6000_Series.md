@@ -4,24 +4,24 @@ uid: Connector_help_Arris_ST-6000_Series
 
 # Arris ST-6000 Series
 
-This is a DataMiner driver for the **Arris ST-6000 Series**, an advanced multi-channel, multi-format video transcoder.
+This is a DataMiner connector for the **Arris ST-6000 Series**, an advanced multi-channel, multi-format video transcoder.
 
 ## About
 
-The **Arris ST-6000 Series** driver is used to catch a failover trap and instruct the device during this procedure.
+The **Arris ST-6000 Series** connector is used to catch a failover trap and instruct the device during this procedure.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**                                     | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**                                     | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|-----------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x              | Initial version.                                    | No                  | Yes                     |
 | 2.0.0.x              | Added buttons for individual failover elements.     | No                  | Yes                     |
-| 2.0.1.x \[SLC Main\] | Full driver review.                                 | No                  | Yes                     |
-| 2.1.0.x              | Adapted driver to work with firmware version 4.4.5. | No                  | Yes                     |
+| 2.0.1.x \[SLC Main\] | Full connector review.                                 | No                  | Yes                     |
+| 2.1.0.x              | Adapted connector to work with firmware version 4.4.5. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 2.0.0.x          | Unknown                     |
@@ -30,11 +30,11 @@ The **Arris ST-6000 Series** driver is used to catch a failover trap and instruc
 
 ## Installation and configuration
 
-The driver has two interfaces. The **SNMP interface** is used for SNMP traps and to monitor the device, and the **HTTP interface** is used for communication with the device during failover.
+The connector has two interfaces. The **SNMP interface** is used for SNMP traps and to monitor the device, and the **HTTP interface** is used for communication with the device during failover.
 
 #### Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -48,7 +48,7 @@ SNMP Settings:
 
 #### HTTP Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

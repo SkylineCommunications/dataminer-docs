@@ -8,16 +8,16 @@ uid: Connector_help_Sky_UK_BSS_Schedule_Data
 
 ## About
 
-When the connection information is entered correctly, the TX_MONITOR_VIEW table will be loaded every hour (adjustable with **Timer base**) from the Oracle database. This driver uses a virtual connection to poll the data from the database and a HTTP connection to poll the system list from VICC API. It will generate child elements (DVEs) for each bus, according the system that is configure - that can be found in 'Exported Drivers' section. The table data is filtered by bus and showed in the correspondent DVE.
+When the connection information is entered correctly, the TX_MONITOR_VIEW table will be loaded every hour (adjustable with **Timer base**) from the Oracle database. This connector uses a virtual connection to poll the data from the database and a HTTP connection to poll the system list from VICC API. It will generate child elements (DVEs) for each bus, according the system that is configure - that can be found in 'Exported Connectors' section. The table data is filtered by bus and showed in the correspondent DVE.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                    | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                                    | **DCF Integration** | **Cassandra Compliant** |
 |------------------|------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version.                                                                   | No                  | Yes                     |
 | 1.0.1.x          | Overview table, less information for SLElement and less data polled from database. | No                  | Yes                     |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol**                                                                            | **Description**                                                             |
 |--------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------|
@@ -29,11 +29,11 @@ When the connection information is entered correctly, the TX_MONITOR_VIEW table 
 
 Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation
+This connector uses a virtual connection and does not require any input during element creation
 
 #### HTTP connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

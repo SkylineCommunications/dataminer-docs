@@ -4,7 +4,7 @@ uid: Connector_help_Evertz_Magnum_SDVN
 
 # Evertz Magnum SDVN
 
-This driver can be used to control the Magnum application. It allows DataMiner to act as any other router panel connected to the Evertz Magnum application.
+This connector can be used to control the Magnum application. It allows DataMiner to act as any other router panel connected to the Evertz Magnum application.
 
 ## About
 
@@ -30,11 +30,11 @@ This driver can be used to control the Magnum application. It allows DataMiner t
 
 ### Connections
 
-In order to use this driver, it is necessary to also **configure the Magnum application** itself, so that an extra router panel can take control over a certain matrix. Inside the Magnum application this will translate into a virtual router (with x inputs and y outputs) that will be made available on a certain IP/port. It is these IP/port settings that need to be configured during creation of the DataMiner element using this driver.
+In order to use this connector, it is necessary to also **configure the Magnum application** itself, so that an extra router panel can take control over a certain matrix. Inside the Magnum application this will translate into a virtual router (with x inputs and y outputs) that will be made available on a certain IP/port. It is these IP/port settings that need to be configured during creation of the DataMiner element using this connector.
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -43,7 +43,7 @@ SERIAL CONNECTION:
 
 #### HTTP "HTTP Connection" Connection
 
-This HTTP connection is only used to obtain namesets and salvos. While the driver can work if this connection is not enabled, the connection does always need to be configured during element creation.
+This HTTP connection is only used to obtain namesets and salvos. While the connector can work if this connection is not enabled, the connection does always need to be configured during element creation.
 
 HTTP CONNECTION:
 
@@ -61,7 +61,7 @@ There is no redundancy defined.
 
 ## How to use
 
-The element created with this driver consists of the following data pages:
+The element created with this connector consists of the following data pages:
 
 - **General**: Displays general parameters such as the **Element Poll Status** and the number of sources and destinations. Also allows you to configure the **credentials** for the Rest API and select the **default nameset** that will be used for crosspoint and destination changes. A refresh button allows you to trigger an update of the displayed data.
 - **Sources**: Contains the Sources table. In this table, only the notes are configurable; all other columns are read-only.

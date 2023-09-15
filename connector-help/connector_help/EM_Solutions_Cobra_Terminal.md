@@ -8,17 +8,17 @@ The **EM Solutions Cobra Terminal** is a maritime Ka-band satcom terminal design
 
 ## About
 
-The driver uses **SNMP** to retrieve data from the **Cobra Terminal**. Certain parameters of the device can also be configured from this driver.
+The connector uses **SNMP** to retrieve data from the **Cobra Terminal**. Certain parameters of the device can also be configured from this connector.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Venom v2.6.2 (980f0fc)      |
 
@@ -28,7 +28,7 @@ The driver uses **SNMP** to retrieve data from the **Cobra Terminal**. Certain p
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

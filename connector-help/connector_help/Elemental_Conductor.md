@@ -8,25 +8,25 @@ The **Elemental Conductor** is a video **encoder** network management system for
 
 ## About
 
-The **Elemental Conductor** driver is an **HTTP** driver that is used to monitor Elemental systems. With this driver, you can monitor conductor elements. These elements can include multiple nodes, such as live nodes in case of a Live Conductor, or file nodes in case of a File Conductor.
+The **Elemental Conductor** connector is an **HTTP** connector that is used to monitor Elemental systems. With this connector, you can monitor conductor elements. These elements can include multiple nodes, such as live nodes in case of a Live Conductor, or file nodes in case of a File Conductor.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                               | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                               | **DCF Integration** | **Cassandra Compliant** |
 |------------------|---------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                                               | No                  | Yes                     |
-| 1.0.1.x          | New driver range based on 1.0.0.13                            | No                  | Yes                     |
-| 1.1.0.x          | Remake of the driver, with similar layout as previous version | No                  | Yes                     |
+| 1.0.1.x          | New connector range based on 1.0.0.13                            | No                  | Yes                     |
+| 1.1.0.x          | Remake of the connector, with similar layout as previous version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | NA                          |
 | 1.0.1.x          | Version 2.6                 |
 | 1.1.0.x          | Version 3                   |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol**    | **Description**                        |
 |--------------------------|----------------------------------------|
@@ -38,7 +38,7 @@ The **Elemental Conductor** driver is an **HTTP** driver that is used to monitor
 
 HTTP connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -119,7 +119,7 @@ This page displays the **Channel Table** and **Channel Outputs Table:**
 - The **Channel Table** displays information for each channel, such as the **Name**, **Node ID**, **Profile ID**, **Status**, **Elapsed**, **Buffer Average** and **Max** and **Dropped Frames**. The table also has a **Start** and **Stop** button, which can be used to start and stop channels.
 - The **Channel Output Table** shows the Channel Outputs of each channel. It lists **Video Bitrate**, **Status**, **Elapsed**, **Width**, **Height**, **Audio Level**, **FPS**, **PCT**, **PCT RT**, **PSNR**, **URI** and **Content Source ID**.
 
-The page also contains the **Channel Parameters** pagebutton, which provides access to the **Channel Parameters Table** with more information regarding the channels, such as **Encoder SDI 1/2 Input**, **ESAM**, **Service ID**, **Service Name**, **Streams URL** and **bond0.400**.
+The page also contains the **Channel Parameters** page button, which provides access to the **Channel Parameters Table** with more information regarding the channels, such as **Encoder SDI 1/2 Input**, **ESAM**, **Service ID**, **Service Name**, **Streams URL** and **bond0.400**.
 
 ### Alerts
 

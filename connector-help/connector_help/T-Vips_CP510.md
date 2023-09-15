@@ -4,17 +4,17 @@ uid: Connector_help_T-Vips_CP510
 
 # T-Vips CP510
 
-This driver is developed for the **T-Vips CP510**. It monitors the **services** and **PIDs** of the two inputs. In addition, alarms are also displayed in this driver.
+This connector is developed for the **T-Vips CP510**. It monitors the **services** and **PIDs** of the two inputs. In addition, alarms are also displayed in this connector.
 
 ## About
 
-In the driver, the input services and PIDs are displayed in **1 table** each, and they can be **normalized**.
+In the connector, the input services and PIDs are displayed in **1 table** each, and they can be **normalized**.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 
@@ -28,7 +28,7 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and need
 
 ## Usage
 
-The driver consists of 5 pages.
+The connector consists of 5 pages.
 
 ### Main View
 

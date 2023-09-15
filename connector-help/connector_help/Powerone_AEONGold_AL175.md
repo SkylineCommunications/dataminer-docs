@@ -8,7 +8,7 @@ The Aeon Gold is the central controller unit in a PRS where the AL175 is a contr
 
 ## About
 
-This driver retrieves status and configuration parameters through SNMP. It can among others be used to configure voltages and currents to provide to a DC application.
+This connector retrieves status and configuration parameters through SNMP. It can among others be used to configure voltages and currents to provide to a DC application.
 
 ### Version Info
 
@@ -34,7 +34,7 @@ This driver retrieves status and configuration parameters through SNMP. It can a
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -68,6 +68,6 @@ The remaining pages are used to monitor the system and the respective alarms.
 
 ## DataMiner Connectivity Framework
 
-The **1.0.0.x** driver range of the Powerone AEONGold AL175 protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
+The **1.0.0.x** connector range of the Powerone AEONGold AL175 protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).

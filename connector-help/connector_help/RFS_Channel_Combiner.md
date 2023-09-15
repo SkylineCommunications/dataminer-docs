@@ -4,7 +4,7 @@ uid: Connector_help_RFS_Channel_Combiner
 
 # RFS Channel Combiner
 
-The **RFS Channel Combiner** driver is an **SNMP** driver that is used to retrieve the monitoring data from the **RFS Monitor System**.
+The **RFS Channel Combiner** connector is an **SNMP** connector that is used to retrieve the monitoring data from the **RFS Monitor System**.
 
 ## About
 
@@ -14,7 +14,7 @@ The **RFS Monitor** is a component used to monitor **forward/reflected transmitt
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 

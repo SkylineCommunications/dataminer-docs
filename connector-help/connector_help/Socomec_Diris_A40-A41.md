@@ -10,13 +10,13 @@ The Socomec Diris A40-A41 is a multi-meter for electric values in single-phase, 
 
 The Socomec Diris A40-A41 protocol is a serial-based protocol. The commands are sent to an Ethernet module that is directly attached to the device.
 
-The driver itself is used to monitor the device.
+The connector itself is used to monitor the device.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION**:
 
@@ -49,7 +49,3 @@ There are three page buttons on this page that each lead to a pop-up page with a
 ### Webpage
 
 This page displays the webpage associated with the device.
-
-## Notes
-
-N/A

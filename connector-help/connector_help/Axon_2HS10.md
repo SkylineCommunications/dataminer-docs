@@ -4,15 +4,15 @@ uid: Connector_help_Axon_2HS10
 
 # Axon 2HS10
 
-The Axon 2HS10 is a dual channel ultra high-quality down-converter. The driver monitors and controls the device via **SNMP**.
+The Axon 2HS10 is a dual channel ultra high-quality down-converter. The connector monitors and controls the device via **SNMP**.
 
 ## About
 
-The driver of this device polls in two distinct periods of time, each lasting thirty seconds, and updates the corresponding user interface.
+The connector of this device polls in two distinct periods of time, each lasting thirty seconds, and updates the corresponding user interface.
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 - **SNMP CONNECTION:**
 
@@ -27,7 +27,7 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and requ
 
 ## Usage
 
-The driver has three pages: **General**, **Global** and **Input Settings.**
+The connector has three pages: **General**, **Global** and **Input Settings.**
 
 ### General Page
 

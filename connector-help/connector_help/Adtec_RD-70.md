@@ -8,17 +8,17 @@ The **Adtec RD-70** is a 1080P multi-CODEC very low latency MPEG 2 and MPEG 4 AV
 
 ## About
 
-This driver retrieves information from the device using **SNMP**. All the device information is displayed by the driver in a format similar to that of the device web interface. The driver allows one SNMP trap *"Decoder Status Change"* (OID 1.3.6.1.4.1.19587.6006.1.1000), from which it repolls the *"Decoder Status"* parameter's group.
+This connector retrieves information from the device using **SNMP**. All the device information is displayed by the connector in a format similar to that of the device web interface. The connector allows one SNMP trap *"Decoder Status Change"* (OID 1.3.6.1.4.1.19587.6006.1.1000), from which it repolls the *"Decoder Status"* parameter's group.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 2.02.11                     |
 
@@ -28,7 +28,7 @@ This driver retrieves information from the device using **SNMP**. All the device
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

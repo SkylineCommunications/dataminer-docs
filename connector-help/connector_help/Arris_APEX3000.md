@@ -10,18 +10,18 @@ The **Arris APEX3000** is an ultra-dense, fully redundant, state-of-the-art chas
 
 The **Arris** **APEX3000** provides up to 32 RF ports in a 4 RU chassis and supports up to 48 Annex B 6-MHz QAM channels per RF port for a maximum of 1536 QAM channels (384 QAM channels per RU). At maximum density, the power draw is sub 1 Watt/QAM. In Annex A mode (8 MHz channels) the APEX3000 supports up to 36 8-MHz QAM channels per RF port, for a maximum of 1152 QAM channels.
 
-This driver requires a **large amount** **of polling** and will therefore use a **large amount of bandwidth**.
+This connector requires a **large amount** **of polling** and will therefore use a **large amount of bandwidth**.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                                                                                                                                                                                                  | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                                                                                                                                                                                                                  | **DCF Integration** | **Cassandra Compliant** |
 |------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                                                                                                                                                                                                                                                  | No                  | No                      |
-| 2.0.0.x          | Full protocol review based on version 1.0.0.7: - PIDs, names and descriptions of parameters are modified to align the driver with the guidelines. - Redundant connection name changed. - Layout revised and modified. - Naming is used instead of displayColumn. | No                  | Yes                     |
+| 2.0.0.x          | Full protocol review based on version 1.0.0.7: - PIDs, names and descriptions of parameters are modified to align the connector with the guidelines. - Redundant connection name changed. - Layout revised and modified. - Naming is used instead of displayColumn. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 2.0.0.x          | Unknown                     |
@@ -30,7 +30,7 @@ This driver requires a **large amount** **of polling** and will therefore use a 
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -44,7 +44,7 @@ SNMP Settings:
 
 #### SNMP redundant connection
 
-This driver supports **redundant polling**, for which the connection also needs to be configured during element creation.
+This connector supports **redundant polling**, for which the connection also needs to be configured during element creation.
 However, if there is no redundant device, you can simply fill in the connection information of the main connection for the redundant connection.
 
 SNMP CONNECTION:

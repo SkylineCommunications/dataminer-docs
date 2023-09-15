@@ -4,23 +4,23 @@ uid: Connector_help_Emerson_Chloride_80-NET
 
 # Emerson Chloride 80-NET
 
-The **Emerson Chloride 80-NET** driver monitors and allows the configuration of critical parameters of the Emerson Chloride 80-NET **UPS** device.
+The **Emerson Chloride 80-NET** connector monitors and allows the configuration of critical parameters of the Emerson Chloride 80-NET **UPS** device.
 
 ## About
 
-This driver polls information from the device via **SNMP**. This includes device information and the status of main parameters and alarms.
+This connector polls information from the device via **SNMP**. This includes device information and the status of main parameters and alarms.
 
-Additionally, the driver also allows you to perform the basic configuration of the UPS (input and output voltage, frequency and startup/shutdown of the UPS).
+Additionally, the connector also allows you to perform the basic configuration of the UPS (input and output voltage, frequency and startup/shutdown of the UPS).
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | V1.04.110606                |
 
@@ -30,7 +30,7 @@ Additionally, the driver also allows you to perform the basic configuration of t
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

@@ -4,11 +4,11 @@ uid: Connector_help_Sandar_SA-1100
 
 # Sandar SA-1100
 
-This driver can be used to gather and view information from the device **Sandar SA-1100**.
+This connector can be used to gather and view information from the device **Sandar SA-1100**.
 
 ## About
 
-This driver uses **SNMP** to monitor the Sandar SA-1100 device.
+This connector uses **SNMP** to monitor the Sandar SA-1100 device.
 
 ## Installation and configuration
 
@@ -16,7 +16,7 @@ This driver uses **SNMP** to monitor the Sandar SA-1100 device.
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

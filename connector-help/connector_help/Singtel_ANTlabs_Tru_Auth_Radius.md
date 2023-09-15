@@ -8,7 +8,7 @@ The ANTlabs Tru Auth Radius keeps track of the usage of the satellite network fo
 
 ## About
 
-The ANTlabs Tru Auth Radius driver makes it possible to monitor the usage of the satellite network. The data is located on an SFTP server, and is parsed by DataMiner. Global statistics such as Auth and ACCT statistics are also available in the driver.
+The ANTlabs Tru Auth Radius connector makes it possible to monitor the usage of the satellite network. The data is located on an SFTP server, and is parsed by DataMiner. Global statistics such as Auth and ACCT statistics are also available in the connector.
 
 ## Installation and configuration
 

@@ -4,7 +4,7 @@ uid: Connector_help_VodafoneZiggo_Witbe_Maestro
 
 # VodafoneZiggo Witbe Maestro
 
-The VodafoneZiggo Witbe Maestro is used to manage and schedule tests on Witbe robots. This driver will create a DVE for each device of each robot that is managed by the Maestro. The driver also provides an overview of all test tasks that are scheduled for devices, collects and forwards results, and keeps a history of the performed tests.
+The VodafoneZiggo Witbe Maestro is used to manage and schedule tests on Witbe robots. This connector will create a DVE for each device of each robot that is managed by the Maestro. The connector also provides an overview of all test tasks that are scheduled for devices, collects and forwards results, and keeps a history of the performed tests.
 
 ## About
 
@@ -60,7 +60,7 @@ The VodafoneZiggo Witbe Maestro is used to manage and schedule tests on Witbe ro
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -70,7 +70,7 @@ HTTP CONNECTION:
 
 #### Serial IP Connection - Robot POST Messages Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -81,9 +81,9 @@ SERIAL CONNECTION:
 
 ### Initialization
 
-To make sure the driver can communicate with the Maestro, you need to specify credentials. To do so, fill in the **Email Address** and **Password** parameters on the **Configuration** page. The **Session Status** parameter will indicate if the credentials have been accepted.
+To make sure the connector can communicate with the Maestro, you need to specify credentials. To do so, fill in the **Email Address** and **Password** parameters on the **Configuration** page. The **Session Status** parameter will indicate if the credentials have been accepted.
 
-In addition, you can configure the driver to convert test result codes to human-readable descriptions of the status. To do so, create a CSV file containing all error codes and descriptions, and store it in the folder *C:\Skyline DataMiner\Documents\VodafoneZiggo Witbe Maestro\Error Translation*. The file can then be ingested from the **Robot Translation** page.
+In addition, you can configure the connector to convert test result codes to human-readable descriptions of the status. To do so, create a CSV file containing all error codes and descriptions, and store it in the folder *C:\Skyline DataMiner\Documents\VodafoneZiggo Witbe Maestro\Error Translation*. The file can then be ingested from the **Robot Translation** page.
 
 ### Redundancy
 
@@ -91,9 +91,9 @@ There is no redundancy defined.
 
 ## How to use
 
-The driver uses the public REST API to poll data from the Witbe Maestro.
+The connector uses the public REST API to poll data from the Witbe Maestro.
 
-The **General** page of the element lists all past, currently running and future tests for all devices. The driver will poll running tests every 30 seconds to retrieve test results (as recommended in the API documentation).
+The **General** page of the element lists all past, currently running and future tests for all devices. The connector will poll running tests every 30 seconds to retrieve test results (as recommended in the API documentation).
 
 You can manually add test jobs to a device on the **Add Test** page of the DVEs.
 

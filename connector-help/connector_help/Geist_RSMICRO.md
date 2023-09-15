@@ -8,13 +8,13 @@ The **Geist RSMICRO** is a monitoring platform that can incorporate various sens
 
 ## About
 
-This driver uses SNMP to poll data from the device and display it accordingly. Traps receivers are also implemented for the purpose of alarm monitoring.
+This connector uses SNMP to poll data from the device and display it accordingly. Traps receivers are also implemented for the purpose of alarm monitoring.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION**:
 

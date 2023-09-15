@@ -4,22 +4,22 @@ uid: Connector_help_Andrew_APC300
 
 # Andrew APC300
 
-This driver is used to monitor and track satellites.
+This connector is used to monitor and track satellites.
 
 ## About
 
-The **Andrew APC300** driver uses a **serial** connection with the device.
+The **Andrew APC300** connector uses a **serial** connection with the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                     | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                                     | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.1.0.16         | Smartrack enabling when using multiple satellites                                   | No                  | Yes                     |
 | 1.1.1.1          | Driver review: added tables, changed logic, ... Impact: Loss of alarm/trending data | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.1.0.16         | Unknown                     |
 | 1.1.1.1          | Unknown                     |
@@ -30,7 +30,7 @@ The **Andrew APC300** driver uses a **serial** connection with the device.
 
 #### Serial main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -81,6 +81,6 @@ The page also contains a page button with the **Resolver Correction Factor Table
 
 ## Notes
 
-There is a **Visio** file available for use with this driver.
+There is a **Visio** file available for use with this connector.
 
-Keep in mind that the **startup** of the driver **may take a few minutes** depending on the connection speed with the device.
+Keep in mind that the **startup** of the connector **may take a few minutes** depending on the connection speed with the device.

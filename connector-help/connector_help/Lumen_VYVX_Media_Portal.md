@@ -32,7 +32,7 @@ This connector communicates with the Lumen Media Portal Rest API. It shows the i
 
 #### HTTP Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

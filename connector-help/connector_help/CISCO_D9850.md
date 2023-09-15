@@ -8,7 +8,7 @@ The **CISCO D9850** is a program receiver for satellite content distribution app
 
 ## About
 
-The CISCO D9850 driver makes it possible to monitor and control the Cisco PowerVU Model D9850 with SNMP.
+The CISCO D9850 connector makes it possible to monitor and control the Cisco PowerVU Model D9850 with SNMP.
 
 HTTP is used to retrieve the system alarm information.
 
@@ -16,7 +16,7 @@ HTTP is used to retrieve the system alarm information.
 
 ### Creation
 
-This driver uses an **SNMP** and **HTTP** connection. The following information is required during element creation:
+This connector uses an **SNMP** and **HTTP** connection. The following information is required during element creation:
 
 **SNMP CONNECTION**:
 
@@ -41,7 +41,7 @@ On the element page **General -\> Login**, you can enter the username and passwo
 
 ### General page
 
-The driver will only retrieve the **system alarms** **info** if a valid username and password are specified on the **Login subpage.**
+The connector will only retrieve the **system alarms** **info** if a valid username and password are specified on the **Login subpage.**
 
 With the **Reboot** button, you can reboot the device.
 

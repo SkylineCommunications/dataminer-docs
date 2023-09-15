@@ -4,7 +4,7 @@ uid: Connector_help_Imagine_Communications_XHD6801+
 
 # Imagine Communications XHD6801+
 
-The Imagine Communications XHD6801+ driver uses both serial and smart-serial communication. It can be used to monitor and configure a converter card in an Imagine Communications frame. It allows alarm monitoring of all important parameters.
+The Imagine Communications XHD6801+ connector uses both serial and smart-serial communication. It can be used to monitor and configure a converter card in an Imagine Communications frame. It allows alarm monitoring of all important parameters.
 
 ### Version Info
 
@@ -30,7 +30,7 @@ The Imagine Communications XHD6801+ driver uses both serial and smart-serial com
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -42,7 +42,7 @@ SERIAL CONNECTION:
 
 #### Serial PortDev Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -77,4 +77,4 @@ Finally, on the **Video** page, three page buttons are available, which allow yo
 
 ## Notes
 
-As this is a serial driver with a smart-serial connection, there has to be a connection to a real device. If there is a change on the device, a response will be pushed to the DMA, without the need to send a poll request.
+As this is a serial connector with a smart-serial connection, there has to be a connection to a real device. If there is a change on the device, a response will be pushed to the DMA, without the need to send a poll request.

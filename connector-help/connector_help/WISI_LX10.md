@@ -4,13 +4,13 @@ uid: Connector_help_WISI_LX10
 
 # WISI LX10
 
-With this driver, information from the device **WISI LX10** can be gathered and viewed, and values can be set on the device.
+With this connector, information from the device **WISI LX10** can be gathered and viewed, and values can be set on the device.
 
 ## About
 
 Driver used to gather information from the **WISI LX10** device.
 
-The driver has several pages with general information, alarms, power supply, transmitter information, etc.
+The connector has several pages with general information, alarms, power supply, transmitter information, etc.
 
 ## Installation and configuration
 

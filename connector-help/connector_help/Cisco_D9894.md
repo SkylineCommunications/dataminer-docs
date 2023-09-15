@@ -4,7 +4,7 @@ uid: Connector_help_Cisco_D9894
 
 # Cisco D9894
 
-This driver can be used to control and monitor the Cisco D9894 HD/SD AVC low-delay contribution decoder via SNMP
+This connector can be used to control and monitor the Cisco D9894 HD/SD AVC low-delay contribution decoder via SNMP
 
 ## About
 
@@ -32,7 +32,7 @@ This driver can be used to control and monitor the Cisco D9894 HD/SD AVC low-del
 
 SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

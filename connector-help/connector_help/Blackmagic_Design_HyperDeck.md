@@ -8,17 +8,17 @@ The **Blackmagic Design HyperDeck** disk recorders let you record the highest qu
 
 ## About
 
-This driver communicates with the device using serial commands as described in the device's manual. For more information please refer to the website <https://www.blackmagicdesign.com/products/hyperdeckstudio>
+This connector communicates with the device using serial commands as described in the device's manual. For more information please refer to the website <https://www.blackmagicdesign.com/products/hyperdeckstudio>
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
-| 1.0.0.x \[SLC Main\] | Inital version  | No                  | Yes                     |
+| 1.0.0.x \[SLC Main\] | Initial version  | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.3                         |
 
@@ -26,14 +26,14 @@ This driver communicates with the device using serial commands as described in t
 
 ### Creation
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 **SERIAL CONNECTION**:
 
 - **Type of Port:** TCP/IP
 - **IP address/host**: The polling IP of the device, e.g. *10.11.12.13.*
 - **IP port**: The IP port of the device, by default 9993*.*
-- **Bus adress**: Not used*.*
+- **Bus address**: Not used*.*
 
 ## Usage
 
@@ -55,4 +55,4 @@ This page can be used to control the clips available in each one of the slot dis
 
 ### Debug
 
-Page available to send manually commands to the deck. a pre-defined list of the availalbe commands is already available.
+Page available to send manually commands to the deck. a pre-defined list of the available commands is already available.

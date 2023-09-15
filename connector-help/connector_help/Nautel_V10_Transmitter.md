@@ -40,7 +40,7 @@ The transmitter contains:
 
 #### SNMP Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -55,7 +55,7 @@ SNMP Settings:
 
 ## How to use
 
-This driver contains the following pages:
+This connector contains the following pages:
 
 - **General**: Displays general parameters such as the **Device Type, Device Description** and **Firmware Version**. Also contains page buttons for **Cutback Level**, **Active Preset** and **Shutback**.
 - **Status**: Displays status parameters.

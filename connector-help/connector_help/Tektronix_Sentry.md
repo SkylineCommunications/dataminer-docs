@@ -8,13 +8,13 @@ The **Tektronix Sentry** driver will display information related to the **Sentry
 
 ## About
 
-The **Tektronix Sentry** driver will display information related to the selected **Sentry** device. This information and details, such as Ports, Transport and Services, are available on different pages, described in the "Usage" section of this document. Alarm monitoring and trending are possible for some of the parameters in the driver, e.g. the **bitrate**.
+The **Tektronix Sentry** driver will display information related to the selected **Sentry** device. This information and details, such as Ports, Transport and Services, are available on different pages, described in the "Usage" section of this document. Alarm monitoring and trending are possible for some of the parameters in the connector, e.g. the **bitrate**.
 
-**Note: This driver requires the .Net Framework 4.0.**
+**Note: This connector requires the .Net Framework 4.0.**
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                                                                                         | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                                                                                                         | **DCF Integration** | **Cassandra Compliant** |
 |------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                                                                                                                                         | No                  | Yes                     |
 | 1.1.0.x          | New firmware based on 1.0.0.x (see below)                                                                                                               | No                  | Yes                     |
@@ -24,14 +24,14 @@ The **Tektronix Sentry** driver will display information related to the selected
 | 1.4.0.x          | New range for firmware 10.6.6 Add ABR parameters for program statistics                                                                                 | No                  | Yes                     |
 | 1.5.0.x          | New range for firmware 10.7.3                                                                                                                           | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**                                        |
+| **Range** | **Device Firmware Version**                                        |
 |------------------|--------------------------------------------------------------------|
 | 1.0.0.x          | Older versions                                                     |
 | 1.1.0.x          | 9.3                                                                |
 | 1.2.0.x          | 9.4                                                                |
-| 1.3.0.x          | 10.3+ (10.4 also works with this driver range; tested with 10.4.3) |
+| 1.3.0.x          | 10.3+ (10.4 also works with this connector range; tested with 10.4.3) |
 | 1.4.0.x          | 10.6.6                                                             |
 | 1.5.0.x          | 10.7.3                                                             |
 
@@ -41,7 +41,7 @@ The **Tektronix Sentry** driver will display information related to the selected
 
 SNMP connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -56,7 +56,7 @@ SNMP Settings:
 
 #### HTTP connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -75,7 +75,7 @@ The first time you start a **Tektronix Sentry** element, enter a username and a 
 1. If necessary, change the **Timespan Value**. This setting defines which time slot is used to visualize the data. Range: *1 minute* to *60 minutes*.
 1. Log on.
 
-Note that the driver uses the JSON API, so the username that the element uses to connect to the device must be granted API access rights. To grant these rights:
+Note that the connector uses the JSON API, so the username that the element uses to connect to the device must be granted API access rights. To grant these rights:
 
 1. Open the web interface.
 1. Select **Configure** \> **Users**
@@ -93,7 +93,7 @@ The first time you start a **Tektronix Sentry** element, enter a username and a 
 1. Enter the **Username** and **Password**.
 1. Log on.
 
-Note that the driver uses the JSON API, so the username that the element uses to connect to the device must be granted API access rights. To grant these rights:
+Note that the connector uses the JSON API, so the username that the element uses to connect to the device must be granted API access rights. To grant these rights:
 
 1. Open the web interface.
 1. Select **Configure** \> **Users**
@@ -242,7 +242,7 @@ The **Program Template Alert Table**, which displays the **Alert details**, allo
 
 The **Load From File** page button opens a subpage where you can **upload or load** an **exported program template alert**.
 
-From version 1.2.0.9 of the driver onwards, the **Use Program Group** option in the **Program Template Alert Table** will be set to *True*.
+From version 1.2.0.9 of the connector onwards, the **Use Program Group** option in the **Program Template Alert Table** will be set to *True*.
 
 - To **create** a program template alert:
 
@@ -318,7 +318,7 @@ The page contains page buttons that provide access to the following subpages:
 
 This page contains one table, the **MPEG Input Ports** table. Right-clicking the table allows you to edit a specific MPEG port. The information in the table is filled in through the JSON interface. You have the option to specify a main and also a backup if necessary.
 
-The **Port Status** column is used by the **Tektronix Configuration Manager**. This driver can configure this table.
+The **Port Status** column is used by the **Tektronix Configuration Manager**. This connector can configure this table.
 
 ### Service Overview
 
@@ -336,7 +336,7 @@ This page displays information and details on the different programs of the devi
 
 ### RF Status Overview
 
-This page contains information related to the **RF** **Status** on the device. However, note that the displayed information may not be correct in the current version of this driver.
+This page contains information related to the **RF** **Status** on the device. However, note that the displayed information may not be correct in the current version of this connector.
 
 ### ETR-290 Dashboard
 
@@ -475,4 +475,4 @@ Below this, the **Communication Buffer Table** and the **State of Communication 
 
 ## Notes
 
-The information and details on the **RF Status Overview** page may not be correct in this version of the driver, as this is currently still under development. It is likely that this page will later be removed, as the *Tektronix Sentry Edge* driver can be used instead.
+The information and details on the **RF Status Overview** page may not be correct in this version of the connector, as this is currently still under development. It is likely that this page will later be removed, as the *Tektronix Sentry Edge* connector can be used instead.

@@ -16,7 +16,7 @@ This data is used to identify the primary and backup systems in the SeaChange Sp
 
 ### Creation
 
-This driver uses a **virtual connection** and does not need any user input during creation.
+This connector uses a **virtual connection** and does not need any user input during creation.
 
 ### Extra Configuration
 
@@ -34,7 +34,3 @@ It is also on this page that the **Primary and Secondary Connection Strings** ha
 ### SeaChange HAdb
 
 This page provides an overview of all the retrieved **Paired Systems** (Main-Backup) and their status.
-
-## Notes
-
-N/A.

@@ -4,7 +4,7 @@ uid: Connector_help_Cavena_STU
 
 # Cavena STU
 
-This driver is used to monitor the **Cavena STU** (Subtitle Transmission Unit).
+This connector is used to monitor the **Cavena STU** (Subtitle Transmission Unit).
 
 ## About
 
@@ -12,15 +12,15 @@ The Cavena STU is a subtitle encoder and renderer. One STU is used per channel. 
 
 The STU is based on a Windows software platform for playout of subtitles in various transmission formats. It is designed for use in an automated playout environment, and can also be controlled by an operator at any time. One STC can control up to 24 STU units, with automatic failover to extra STUs in the network, without any need for configuration or wiring (except for certain serial and ASI interfaces).
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -30,7 +30,7 @@ The STU is based on a Windows software platform for playout of subtitles in vari
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

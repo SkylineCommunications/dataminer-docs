@@ -4,21 +4,21 @@ uid: Connector_help_Systembase_C500_Series
 
 # Systembase C500 Series
 
-The Systembase C500 Series driver is compatible with the following Systembase models: **C510 XR** and **C510 IP**. The Systembase C500 series audio codecs have been designed and manufactured to deliver real-time audio applications over IP, ISDN, ADSL and satellite.
+The Systembase C500 Series connector is compatible with the following Systembase models: **C510 XR** and **C510 IP**. The Systembase C500 series audio codecs have been designed and manufactured to deliver real-time audio applications over IP, ISDN, ADSL and satellite.
 
 ## About
 
-This driver periodically polls the target device using an SNMP connection. It polls informative data every 5 minutes and more sensitive data every 10 seconds. It can also set writable parameters using the SNMP SET command.
+This connector periodically polls the target device using an SNMP connection. It polls informative data every 5 minutes and more sensitive data every 10 seconds. It can also set writable parameters using the SNMP SET command.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                              | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                              | **DCF Integration** | **Cassandra Compliant** |
 |------------------|--------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version. Compatible with C510 XR and C510 IP models. | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | C510 IP: 306                |
 
@@ -28,7 +28,7 @@ This driver periodically polls the target device using an SNMP connection. It po
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -95,7 +95,7 @@ This page provides access to the web interface of the device. Note that the clie
 
 ## DataMiner Connectivity Framework
 
-The **1.0.0.x** driver range of the **Systembase C500 Series** protocol supports the usage of DCF and can only be used on a DMA with **8.5.8.5** as the minimum version.
+The **1.0.0.x** connector range of the **Systembase C500 Series** protocol supports the usage of DCF and can only be used on a DMA with **8.5.8.5** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 

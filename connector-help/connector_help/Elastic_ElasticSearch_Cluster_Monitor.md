@@ -4,23 +4,23 @@ uid: Connector_help_Elastic_ElasticSearch_Cluster_Monitor
 
 # Elastic ElasticSearch Cluster Monitor
 
-This driver can be used to monitor the health of an Elasticsearch cluster. It performs specific HTTP queries directly to one of the Elasticsearch nodes in the cluster.
+This connector can be used to monitor the health of an Elasticsearch cluster. It performs specific HTTP queries directly to one of the Elasticsearch nodes in the cluster.
 
 ## About
 
-The HTTP queries performed by this driver are intended to retrieve metrics that provide information on the current health status of the Elasticsearch cluster.
+The HTTP queries performed by this connector are intended to retrieve metrics that provide information on the current health status of the Elasticsearch cluster.
 
 The scope of these health metrics includes general cluster and node metrics and statistical information related to node indexing and systems (operating system, file system, Java Virtual Machine, etc.).
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -30,7 +30,7 @@ The scope of these health metrics includes general cluster and node metrics and 
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

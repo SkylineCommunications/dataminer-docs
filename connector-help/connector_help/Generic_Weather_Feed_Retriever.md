@@ -8,20 +8,20 @@ The **Generic Weather Feed Retriever** shows an overview of the weather forecast
 
 ## About
 
-This driver retrieves the weather forecast for all entries in the **Weather Track Table**, based on serial communication (range 2.0.0.x and 3.0.0.x) or HTTP communication (range 4.0.0.x).
+This connector retrieves the weather forecast for all entries in the **Weather Track Table**, based on serial communication (range 2.0.0.x and 3.0.0.x) or HTTP communication (range 4.0.0.x).
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                                                                                                                                                                   | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                                                                                                                                                                                   | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 2.0.0.x          | Driver changed in order to work with serial command/response (instead of web client). Only supports free API key, which allows 500 commands to be sent per hour, with max. 3 commands per second.                                 | No                  | Yes                     |
 | 3.0.0.x          | Added support for premium account. The free version is deprecated.                                                                                                                                                                | No                  | Yes                     |
 | 3.0.1.x          | Display columns changed to use naming.                                                                                                                                                                                            | No                  | Yes                     |
 | 4.0.0.x          | Driver has been completely rewritten to make it more scalable (you can now choose the forecast date from today to 14 days in the future and the forecast interval, e.g, hourly). Connection has been changed from serial to HTTP. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 3.0.1.x          | v1                          |
 | 4.0.0.x          | Unknown                     |
@@ -43,7 +43,7 @@ This driver retrieves the weather forecast for all entries in the **Weather Trac
 <tr class="even">
 <td>2.0.0.x and 3.0.0.x</td>
 <td>Serial main connection
-<p>The driver uses a serial connection and requires the following input during element creation:</p>
+<p>The connector uses a serial connection and requires the following input during element creation:</p>
 <p>SERIAL CONNECTION:</p>
 <ul>
 <li><strong>IP address/host</strong>: The polling IP of the device with value <em>api.worldweatheronline.com</em>.</li>
@@ -53,7 +53,7 @@ This driver retrieves the weather forecast for all entries in the **Weather Trac
 <tr class="odd">
 <td>4.0.0.x</td>
 <td>HTTP main connection
-<p>The driver uses an HTTP connection and requires the following input during element creation:</p>
+<p>The connector uses an HTTP connection and requires the following input during element creation:</p>
 <p>HTTP CONNECTION:</p>
 <ul>
 <li><strong>IP address/host</strong>: The polling IP of the device with value <em>api.worldweatheronline.com</em>.</li>
@@ -65,7 +65,7 @@ This driver retrieves the weather forecast for all entries in the **Weather Trac
 
 ### Configuration (range 2.0.0.x and 3.0.0.x)
 
-This driver requires an **API Key** from worldweatheronline.com in order to receive weather forecasts. A **Retrieving Method** (*Manual*/*Push*/*Poll*) must be selected in order to reach the data.
+This connector requires an **API Key** from worldweatheronline.com in order to receive weather forecasts. A **Retrieving Method** (*Manual*/*Push*/*Poll*) must be selected in order to reach the data.
 
 #### Manual
 
@@ -108,7 +108,7 @@ This page contains the configuration settings in order to reach the data.
 
 ### General
 
-This driver requires an **API Key** from worldweatheronline.com in order to receive weather forecasts.
+This connector requires an **API Key** from worldweatheronline.com in order to receive weather forecasts.
 
 You may want to configure the **Forecast Date** (e.g. today) and the **Forecast Interval** (e.g. 1 hourly).
 

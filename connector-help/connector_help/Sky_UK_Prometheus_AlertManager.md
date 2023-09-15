@@ -4,7 +4,7 @@ uid: Connector_help_Sky_UK_Prometheus_AlertManager
 
 # Sky UK Prometheus AlertManager
 
-Prometheus is an open-source systems monitoring and alerting toolkit, which can be adopted according to the need of the users. The Sky UK Prometheus AlertManager driver is based on the Prometheus API adapted by Sky UK. It uses JSON messages to communicate with the API.
+Prometheus is an open-source systems monitoring and alerting toolkit, which can be adopted according to the need of the users. The Sky UK Prometheus AlertManager connector is based on the Prometheus API adapted by Sky UK. It uses JSON messages to communicate with the API.
 
 ## About
 
@@ -56,7 +56,7 @@ Prometheus is an open-source systems monitoring and alerting toolkit, which can 
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -78,6 +78,6 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The driver gets alerts information from the API every 30 seconds and populates the current alerts in the **Alerts Table** on the **Alerts** page.
+The connector gets alerts information from the API every 30 seconds and populates the current alerts in the **Alerts Table** on the **Alerts** page.
 
 The general **status** information of the device is displayed on the **General** page.

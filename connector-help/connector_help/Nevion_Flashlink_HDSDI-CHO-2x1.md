@@ -8,18 +8,18 @@ The Flashlink HDSDI-CHO-2x1 is a serial digital video 2x1 changeover module, whi
 
 ## About
 
-The Nevion Flashlink HDSDI-CHO-2x1 driver is used for monitor these kinds of devices using the SNMP protocol.
+The Nevion Flashlink HDSDI-CHO-2x1 connector is used for monitor these kinds of devices using the SNMP protocol.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                    | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                    | **DCF Integration** | **Cassandra Compliant** |
 |------------------|------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version.                   | No                  | Yes                     |
 | 1.0.1.x          | New range with DCF implementation. | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 1.0.1.x          | Unknown                     |
@@ -30,7 +30,7 @@ The Nevion Flashlink HDSDI-CHO-2x1 driver is used for monitor these kinds of dev
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -63,7 +63,7 @@ This page displays reclocker information, such as the reclocker configuration, b
 
 ## DataMiner Connectivity Framework
 
-The **1.0.1.x** driver range of the Nevion Flashlink HDSDI-CHO-2x1 protocol supports the usage of DCF and can only be used on a DMA with **8.5.8.5** as the minimum version.
+The **1.0.1.x** connector range of the Nevion Flashlink HDSDI-CHO-2x1 protocol supports the usage of DCF and can only be used on a DMA with **8.5.8.5** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 

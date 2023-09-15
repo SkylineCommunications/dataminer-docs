@@ -4,15 +4,15 @@ uid: Connector_help_Sydney_Trains_Timetable_Upload_Monitor
 
 Sydney Trains Timetable Upload Monitor
 
-This driver is used to monitor and register the times of the latest train timetable uploaded to the system.
+This connector is used to monitor and register the times of the latest train timetable uploaded to the system.
 
 ## About
 
-This is a virtual driver. It's filled in by an external protocol.
+This is a virtual connector. It's filled in by an external protocol.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
@@ -22,7 +22,7 @@ This is a virtual driver. It's filled in by an external protocol.
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## Usage
 

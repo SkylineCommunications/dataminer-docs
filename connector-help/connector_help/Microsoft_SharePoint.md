@@ -8,15 +8,13 @@ This protocol receives commands from other protocol elements and stablish a comm
 
 ## About
 
-The driver receives the commands on a parameter. This command will be parsed and placed in a table. The commands in the table will be executed with FIFO order. Once a command has been executed a response will be sent back to the element that sent the command. In the case there is a communication failure with the services the corresponding response will be sent to inform the situation.
+The connector receives the commands on a parameter. This command will be parsed and placed in a table. The commands in the table will be executed with FIFO order. Once a command has been executed a response will be sent back to the element that sent the command. In the case there is a communication failure with the services the corresponding response will be sent to inform the situation.
 
 SOAP is used for the communication.
 
-### Ranges of the driver
+### Version Info
 
-**This subsection can only be omitted in case of an exported driver**
-
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 

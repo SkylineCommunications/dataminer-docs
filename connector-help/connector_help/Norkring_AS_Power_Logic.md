@@ -4,22 +4,22 @@ uid: Connector_help_Norkring_AS_Power_Logic
 
 # Norkring AS Power Logic
 
-This is a virtual driver used to monitor the power station status in the Norkring AS DMA system.
+This is a virtual connector used to monitor the power station status in the Norkring AS DMA system.
 
 ## About
 
 The **Norkring AS Power Logic** driver provides information on each different power station present in the Norkring network.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**              | **DCP Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**              | **DCP Integration** | **Cassandra Compliant** |
 |----------------------|------------------------------|---------------------|-------------------------|
 | 1.0.0.x              | Initial version              | No                  | No                      |
 | 2.0.0.x \[SLC Main\] | Version 2 station monitoring | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.0                         |
 | 2.0.0.x          | 1.0                         |
@@ -30,7 +30,7 @@ The **Norkring AS Power Logic** driver provides information on each different po
 
 #### Virtual connection
 
-This driver uses a virtual connection and requires no input during element creation.
+This connector uses a virtual connection and requires no input during element creation.
 
 ### Configuration for Range 1.0.0.x
 
@@ -111,7 +111,7 @@ This page contains a full-page table displaying the following information regard
 
 ### Statistics Page
 
-This page displays general information regarding the performance of this driver.
+This page displays general information regarding the performance of this connector.
 
 ### Configuration Page
 

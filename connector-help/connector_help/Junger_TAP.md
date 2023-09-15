@@ -8,18 +8,18 @@ The **Junger TAP** is a sophisticated audio processor, powered by Analog Devices
 
 ## About
 
-This driver uses an **SNMP** connection (and a smart-serial connection for [Ember+](https://github.com/Lawo/ember-plus/wiki) in range 1.0.1.x) to communicate with the device.
+This connector uses an **SNMP** connection (and a smart-serial connection for [Ember+](https://github.com/Lawo/ember-plus/wiki) in range 1.0.1.x) to communicate with the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                                                                                                                                                                | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                                                                                                                                                                                | **DCF Integration** | **Cassandra Compliant** |
 |------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                                                                                                                                                                                                                | No                  | Yes                     |
 | 1.0.1.x          | Based on 1.0.0.1 Added hotkeys and network triggers by creating a smart-serial connection for the [Ember+](https://github.com/Lawo/ember-plus/wiki) protocol. Element settings must be adjusted when updating to this version. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 2.0.40                      |
 | 1.0.1.x          | 2.0.40                      |
@@ -37,7 +37,7 @@ This driver uses an **SNMP** connection (and a smart-serial connection for [Embe
 <tr class="odd">
 <td>Version 1.0.0.x</td>
 <td><h4 id="snmp-main-connection">SNMP Main Connection</h4>
-<p>This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:</p>
+<p>This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:</p>
 <p>SNMP CONNECTION:</p>
 <ul>
 <li><strong>IP address/host</strong>: The polling IP of the device.</li>
@@ -53,7 +53,7 @@ This driver uses an **SNMP** connection (and a smart-serial connection for [Embe
 <td>Version 1.0.1.x</td>
 <td><strong>Note</strong>: When you update from version 1.0.0.x to 1.0.1.x, you must adjust the element settings.
 <h4 id="smart-serial-main-connection">Smart-Serial Main Connection</h4>
-<p>This driver uses a smart-serial connection to be able to use the <a href="https://github.com/Lawo/ember-plus/wiki">Ember Plus Protocol</a> for communication with the device.</p>
+<p>This connector uses a smart-serial connection to be able to use the <a href="https://github.com/Lawo/ember-plus/wiki">Ember Plus Protocol</a> for communication with the device.</p>
 <p>SMART-SERIAL CONNECTION:</p>
 <ul>
 <li><strong>IP address/host</strong>: The polling IP of the device.</li>
@@ -63,7 +63,7 @@ This driver uses an **SNMP** connection (and a smart-serial connection for [Embe
 <li><strong>IP Port:</strong> The port of the device. The default port for this serial connection is port <em>9000</em>.</li>
 </ul>
 <h4 id="snmp-second-connection">SNMP Second Connection</h4>
-<p>This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:</p>
+<p>This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:</p>
 <p>SNMP CONNECTION:</p>
 <ul>
 <li><strong>IP address/host</strong>: The polling IP of the device.</li>

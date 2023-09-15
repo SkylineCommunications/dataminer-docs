@@ -34,7 +34,7 @@ It also handles embedded, AES and analog audio. It can do aspect ratio conversio
 
 #### SNMP Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -56,4 +56,4 @@ On the **General** page, you can find general information about the device. Alar
 
 On the **Initial Setup** page, you can set the most important IP settings on the device. This page also contains information on the front panel and the version.
 
-The other pages of the driver contain the settings related to the names of the pages. For example, the Video page contains the settings related to the video source.
+The other pages of the connector contain the settings related to the names of the pages. For example, the Video page contains the settings related to the video source.

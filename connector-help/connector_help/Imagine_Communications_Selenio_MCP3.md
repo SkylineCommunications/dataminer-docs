@@ -4,28 +4,28 @@ uid: Connector_help_Imagine_Communications_Selenio_MCP3
 
 # Imagine Communications Selenio MCP3
 
-The **Imagine Communications Selenio MCP3** driver can be used to monitor a Selenio 3RU Media Convergence Platform card slotted into a Selenio chassis. This driver lists the important parameters from this controller and provides an overview of all the different slots in the chassis.
+The **Imagine Communications Selenio MCP3** connector can be used to monitor a Selenio 3RU Media Convergence Platform card slotted into a Selenio chassis. This connector lists the important parameters from this controller and provides an overview of all the different slots in the chassis.
 
 ## About
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**        | **Description**                                                                                                                                                                                             | **DCF Integration** | **Cassandra Compliant** |
+| **Range**        | **Description**                                                                                                                                                                                             | **DCF Integration** | **Cassandra Compliant** |
 |-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x                 | Initial version.                                                                                                                                                                                            | No                  | Yes                     |
 | 4.0.1.x                 | Updated to firmware 4.0.                                                                                                                                                                                    | No                  | Yes                     |
-| 4.1.0.x                 | Updated to firmware 5.0. Cross Connections, Module Association, Module Function, Module Interface, Module Output, Repository, Slot Upgrade, and VLAN pages are functional from this driver version onwards. | No                  | Yes                     |
-| \<10.0.0.x \[SLC Main\] | The versioning of the driver is specifically engineered to tie in with the firmware version of the card the driver supports.                                                                                | No                  | Yes                     |
+| 4.1.0.x                 | Updated to firmware 5.0. Cross Connections, Module Association, Module Function, Module Interface, Module Output, Repository, Slot Upgrade, and VLAN pages are functional from this connector version onwards. | No                  | Yes                     |
+| \<10.0.0.x \[SLC Main\] | The versioning of the connector is specifically engineered to tie in with the firmware version of the card the connector supports.                                                                                | No                  | Yes                     |
 | 10.0.0.x                | Replaced "dynamic snmp get" with "dynamicSnmpGet="true"" under parameter type tag.                                                                                                                          | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**                                                                                                  |
+| **Range** | **Device Firmware Version**                                                                                                  |
 |------------------|------------------------------------------------------------------------------------------------------------------------------|
 | 1.0.0.x          | 1.0                                                                                                                          |
 | 4.0.1.x          | 1.0                                                                                                                          |
 | 4.1.0.x          | 5.0                                                                                                                          |
-| \<10.0.0.x       | The versioning of the driver is specifically engineered to tie in with the firmware version of the card the driver supports. |
+| \<10.0.0.x       | The versioning of the connector is specifically engineered to tie in with the firmware version of the card the connector supports. |
 | 10.0.0.x         | Requires controller firmware "S/W=7.0-38, H/W= rev 02" or higher and will not work with older firmware.                      |
 
 ## Installation and Timing
@@ -34,7 +34,7 @@ The **Imagine Communications Selenio MCP3** driver can be used to monitor a Sele
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

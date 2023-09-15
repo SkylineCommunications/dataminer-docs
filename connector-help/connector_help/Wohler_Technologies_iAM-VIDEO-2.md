@@ -34,7 +34,7 @@ The product can be configured with **presets**, which are complete monitoring co
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -52,4 +52,4 @@ There is no redundancy defined.
 
 ## How to use
 
-This driver displays the **Groups**, **Sub-Groups** and **Presets**, as well as the **Cluster and Meters** information associated with each **Preset.**
+This connector displays the **Groups**, **Sub-Groups** and **Presets**, as well as the **Cluster and Meters** information associated with each **Preset.**

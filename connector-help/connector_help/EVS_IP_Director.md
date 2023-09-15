@@ -4,7 +4,7 @@ uid: Connector_help_EVS_IP_Director
 
 # EVS IP Director
 
-With this driver it is possible to monitor **EVS IP Director** devices with SNMP.
+With this connector it is possible to monitor **EVS IP Director** devices with SNMP.
 
 ## About
 
@@ -14,7 +14,7 @@ The **EVS IP Director** will monitor the **EVS IP Director** device.
 
 ### Creation
 
-The **EVS IP Director** is an SNMP and serial driver. The SNMP connection is used to monitor the product status, while the serial connection will be used to monitor the Jobs using the SOAP interface.
+The **EVS IP Director** is an SNMP and serial connector. The SNMP connection is used to monitor the product status, while the serial connection will be used to monitor the Jobs using the SOAP interface.
 
 **SNMP CONNECTION:**
 

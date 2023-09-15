@@ -6,7 +6,7 @@ uid: Connector_help_RF_Design_FlexLink_K2
 
 The RF Design FlexLink K2 is a series of switch matrices that handle the switching and routing of inputs and outputs.
 
-This driver supports switches from the RF Design FlexLink K2 family and is capable of managing a matrix of up to 256 x 256 crosspoints with **multiple outputs per input and one input per output**.
+This connector supports switches from the RF Design FlexLink K2 family and is capable of managing a matrix of up to 256 x 256 crosspoints with **multiple outputs per input and one input per output**.
 
 ## About
 
@@ -34,7 +34,7 @@ This driver supports switches from the RF Design FlexLink K2 family and is capab
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

@@ -8,13 +8,13 @@ The **Snell Wilcox IQSDA35** is a dual 3G/HD/SD-SDI distribution amplifier with 
 
 ## About
 
-This driver uses SNMP to monitor and control a **Snell Wilcox IQSDA35** device. The information and settings are displayed on different pages.
+This connector uses SNMP to monitor and control a **Snell Wilcox IQSDA35** device. The information and settings are displayed on different pages.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION**:
 
@@ -51,7 +51,3 @@ The two page buttons underneath open a pop-up page where the settings for each c
 ### Webpage
 
 This page displays the web interface of the device. Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.
-
-## Notes
-
-N/A

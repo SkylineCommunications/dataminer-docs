@@ -4,9 +4,9 @@ uid: Connector_help_Delec_Oratis_NAM
 
 # Delec Oratis NAM
 
-This driver is used to monitor an **Oratis Network Attached Monitor** (referred to as NAM) produced by Delec.
+This connector is used to monitor an **Oratis Network Attached Monitor** (referred to as NAM) produced by Delec.
 
-There are several versions of the driver. The 1.0.0.x range is used for older firmware versions, while the 1.1.0.x range was created for XML protocol definition v3.00.0001. The more recent version uses commands starting with "DLC" instead of "NAM". The drivers in the different ranges use different syntax and provide different, though similar parameters. There is no backwards compatibility between the driver ranges.
+There are several versions of the connector. The 1.0.0.x range is used for older firmware versions, while the 1.1.0.x range was created for XML protocol definition v3.00.0001. The more recent version uses commands starting with "DLC" instead of "NAM". The connectors in the different ranges use different syntax and provide different, though similar parameters. There is no backwards compatibility between the connector ranges.
 
 ## About
 
@@ -41,11 +41,11 @@ From version 1.1.0.2 onwards, a second **HTTP connection** must be configured. U
 
 ## Usage
 
-The main goal of the driver is to monitor the data from the NAM. No special actions are required to achieve this. Simply start the element and polling will be started.
+The main goal of the connector is to monitor the data from the NAM. No special actions are required to achieve this. Simply start the element and polling will be started.
 
-However, the driver also provides a few extra functionalities that do require user input or configuration. These actions are explained in detail below, in the relevant page sections.
+However, the connector also provides a few extra functionalities that do require user input or configuration. These actions are explained in detail below, in the relevant page sections.
 
-The functionalities of the driver include:
+The functionalities of the connector include:
 
 - Polling and monitoring device parameters.
 - Configuring parameters.
@@ -53,7 +53,7 @@ The functionalities of the driver include:
 - Synchronizing the device file system and rebooting the device - see "General page" section below.
 - Taking and restoring a full backup - see "General page - Backup" section below.
 
-For most pages in this driver, the content is self-explanatory. For the **General** page, its subpages, and the **Test** page, however, you can find more information below.
+For most pages in this connector, the content is self-explanatory. For the **General** page, its subpages, and the **Test** page, however, you can find more information below.
 
 ### General page
 
@@ -64,13 +64,13 @@ A first group of parameters provides information about the device:
 - Some parameters provide general information, such as the **Uptime**, **Temperature** and **Model name**.
 - Other parameters provide more detailed information, such as the **Amplifier Mode**, **Supply Enable**, **Single Shot Measurement**, etc.
 
-A second group of parameters is related to the internal functioning of the driver. These parameters are:
+A second group of parameters is related to the internal functioning of the connector. These parameters are:
 
 - **Last Response Received:** Indicates the number of seconds that have passed since a response was received from the device.
-  As the driver frequently polls the device, this value should never be more than *30* seconds. If the value is more, this indicates a communication problem.
+  As the connector frequently polls the device, this value should never be more than *30* seconds. If the value is more, this indicates a communication problem.
 - **Max Time Allowed Before Timeout:** A user-configurable value that indicates how much time should be allowed after the last response before the element is set in timeout. A reasonable value would be *15* seconds.
 - **Force Poll**: Button that can be used to force an update of all parameters. If, for instance, the current values might not be correct or up to date, clicking this button will instantly update all parameters.
-  The button can also be used after a reboot or backup/restore. However, if a restore was executed by the driver, all data should automatically be polled again.
+  The button can also be used after a reboot or backup/restore. However, if a restore was executed by the connector, all data should automatically be polled again.
 
 A last group of parameters, in the lower right corner, is a set of buttons that provide access to functions or settings requiring explicit user interaction:
 
@@ -104,7 +104,7 @@ There are limitations to these tests:
 
 The following configuration parameters are available:
 
-- **T - Name:** A user-configurable name, which always starts with "*AMP \[index\], CHAN \[index\]*". The name must be unique. If you configure a name that is not unique, the driver will automatically add an additional index number to it. If the channel (**T - Target**) changes, the name will automatically be updated to represent the correct channel and amplifier.
+- **T - Name:** A user-configurable name, which always starts with "*AMP \[index\], CHAN \[index\]*". The name must be unique. If you configure a name that is not unique, the connector will automatically add an additional index number to it. If the channel (**T - Target**) changes, the name will automatically be updated to represent the correct channel and amplifier.
 
 - **T - Target:** This field indicates the channel for which the test will be executed.
 
@@ -149,4 +149,4 @@ Regarding the **Test** page:
 
 - If the element is stopped while a test is active, the test will no longer be executed. Instead, when the element is restarted, the test **T - Status** field will be set to *Error.* (Enable the test again to activate it again.)
 - When you change the name of a channel, overwrite the "*AMP X, CHAN Y*" section.
-- Since usually this type of test is executed on all channels, it is important to note that this driver only executes a test on the targeted channel and ignores the results of the other channels.
+- Since usually this type of test is executed on all channels, it is important to note that this connector only executes a test on the targeted channel and ignores the results of the other channels.

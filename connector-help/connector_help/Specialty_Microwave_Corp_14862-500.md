@@ -10,17 +10,17 @@ The protocol allows the user to check the status of the controller switch and se
 
 ## About
 
-The driver polls and displays the current status of the switch. This includes the operation mode of the controller, the local/remote status, the HPAs and the power supplies.
+The connector polls and displays the current status of the switch. This includes the operation mode of the controller, the local/remote status, the HPAs and the power supplies.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 02.30                       |
 
@@ -30,7 +30,7 @@ The driver polls and displays the current status of the switch. This includes th
 
 #### Serial connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

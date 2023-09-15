@@ -4,19 +4,19 @@ uid: Connector_help_Ateme_Kyrion_CM3101
 
 # Ateme Kyrion CM3101
 
-With this driver, you can monitor and configure an **Ateme Kyrion CM3101** encoder via SNMP.
+With this connector, you can monitor and configure an **Ateme Kyrion CM3101** encoder via SNMP.
 
 ## About
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial range   | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 3.3.0.1                     |
 
@@ -26,7 +26,7 @@ With this driver, you can monitor and configure an **Ateme Kyrion CM3101** encod
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

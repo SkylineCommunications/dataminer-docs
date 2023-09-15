@@ -4,7 +4,7 @@ uid: Connector_help_Marlink_iTop_CMDB_Manager
 
 # Marlink iTop CMDB Manager
 
-This driver gives the possibility to subscribe on parameter changes in DataMiner, and forward these changes to the CMDB platform.
+This connector gives the possibility to subscribe on parameter changes in DataMiner, and forward these changes to the CMDB platform.
 
 ## About
 
@@ -12,15 +12,15 @@ This is a manager protocol that allows the user to specify which KPI parameters 
 
 For this set of parameters, the manager element will keep track of the parameter changes and will update CMDB by connecting to a web service via HTTP and providing these KPI values towards the web service.
 
-## Ranges of the driver
+## Ranges of the connector
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | NA                          |
 
@@ -30,7 +30,7 @@ For this set of parameters, the manager element will keep track of the parameter
 
 #### HTTP connection - Main
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -58,7 +58,7 @@ Contains a **Protocols Table**, an **Elements Table** and a **Parameters Table**
 
 ### Subscriptions
 
-This page contains a table with a list of all parameters the driver is currently subscribed to.
+This page contains a table with a list of all parameters the connector is currently subscribed to.
 
 ### CMDB Webservice
 

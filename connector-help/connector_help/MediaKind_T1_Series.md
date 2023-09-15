@@ -8,7 +8,7 @@ The T1 platform is a 2RU chassis that significantly reduces the rack and power c
 
 ## About
 
-This driver displays the available chassis information. It uses an SNMP and HTTP API connection to get information about nodes, servers, power supplies, fans and the general chassis status.
+This connector displays the available chassis information. It uses an SNMP and HTTP API connection to get information about nodes, servers, power supplies, fans and the general chassis status.
 
 ### Version Info
 
@@ -34,7 +34,7 @@ This driver displays the available chassis information. It uses an SNMP and HTTP
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -49,7 +49,7 @@ SNMP Settings:
 
 #### HTTP httpConnection Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -71,7 +71,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created using this driver has the following data pages:
+The element created using this connector has the following data pages:
 
 - **Switch General**: Provides general information about switch parameters, such as System Description, System Name, Location and Contact.
 

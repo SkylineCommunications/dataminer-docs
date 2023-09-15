@@ -4,15 +4,15 @@ uid: Connector_help_Skyline_Generic_Provisioning
 
 # Skyline Generic Provisioning
 
-Skyline Generic Provisioning is a **virtual manager driver** that can provision all **external** **DCF connections** in a DataMiner System.
+Skyline Generic Provisioning is a **virtual manager connector** that can provision all **external** **DCF connections** in a DataMiner System.
 
 ## About
 
-The driver is a **DCF provisioning manager** that allows the **import** and **export** of all external DCF connections of the whole system from/to a **CSV file**.
+The connector is a **DCF provisioning manager** that allows the **import** and **export** of all external DCF connections of the whole system from/to a **CSV file**.
 
-When the CSV file is imported, the driver creates the external DCF connections. While the connections are exported, the driver retrieves the external DCF connection data from the whole system and places this in the CSV file. Before the export, the driver validates the currently configured external connections and logs the ones that are not valid (because of a missing interface on one side of an external connection or because elements are paused or stopped).
+When the CSV file is imported, the connector creates the external DCF connections. While the connections are exported, the connector retrieves the external DCF connection data from the whole system and places this in the CSV file. Before the export, the connector validates the currently configured external connections and logs the ones that are not valid (because of a missing interface on one side of an external connection or because elements are paused or stopped).
 
-When an import occurs, the driver gets the **DCF Type** and **DCF Grouping** based on the CSV file name in the following format: \[csvname\]-\[DCF Type\]-\[DCF Grouping\].csv (e.g.: Connections-Full-GroupingA.csv).
+When an import occurs, the connector gets the **DCF Type** and **DCF Grouping** based on the CSV file name in the following format: \[csvname\]-\[DCF Type\]-\[DCF Grouping\].csv (e.g.: Connections-Full-GroupingA.csv).
 
 - **DCF Type** can either be *Full* or *Partial*:
 
@@ -21,9 +21,9 @@ When an import occurs, the driver gets the **DCF Type** and **DCF Grouping** bas
 
 - **DCF Grouping** is used to "group" connections. It is not recommended to have the same connection(s) in different groupings. When this happens, there is a synchronizing mechanism that ensures that if the connection is removed, it will also be removed from the other groupings that were previously imported. It is the responsibility of the user to not import overlapping connections and keep the synchronization in mind.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**                                                                  | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**                                                                  | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|----------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version.                                                                 | No                  | Yes                     |
 | 2.0.0.x \[Obsolete\] | This range is used by DataMiner Infrastructure Discovery and Provisioning (IDP). | No                  | Yes                     |
@@ -36,13 +36,13 @@ When an import occurs, the driver gets the **DCF Type** and **DCF Grouping** bas
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 In range 2.0.0.x, DataMiner IDP takes care of the element creation.
 
 ## Usage
 
-Below you can find a description of the usage for range 1.0.0.x. The usage from driver range 2.0.0.x onwards is explained in a separate section of the DataMiner Help.
+Below you can find a description of the usage for range 1.0.0.x. The usage from connector range 2.0.0.x onwards is explained in a separate section of the DataMiner Help.
 
 ### General
 
@@ -61,7 +61,7 @@ The page contains two buttons:
 
 A **message information box** will show up after the CSV file import, mentioning how many connections were imported/read from that file.
 
-The import requires that the CSV file contains the header definitions on the first line. The header may contain extra descriptions, and as such the driver will recognize the header as long as it contains the following:
+The import requires that the CSV file contains the header definitions on the first line. The header may contain extra descriptions, and as such the connector will recognize the header as long as it contains the following:
 
 - Connection Name
 - Source Element Name
@@ -85,8 +85,8 @@ The import requires that the CSV file contains the header definitions on the fir
 This page contains a parameter **Validation and Export**, which allows you to select one of the following options:
 
 - **Only Validation**: Only validation will take place. This option will show in the **Status** box if the external connections are **valid or not**. This option does not export the connections to the CSV file.
-- **Export**: The driver will validate and export the external connections **if** the **validation** of all connections was **successful**.
-- **Force Export**: The driver will export the connections even **if invalid** **connections** were detected; however, **only valid connections** are included in the export. Invalid connections will be mentioned in the Status and will not be exported.
+- **Export**: The connector will validate and export the external connections **if** the **validation** of all connections was **successful**.
+- **Force Export**: The connector will export the connections even **if invalid** **connections** were detected; however, **only valid connections** are included in the export. Invalid connections will be mentioned in the Status and will not be exported.
 
 The **CSV File Export Folder**, **CSV File Name**, **DCF Grouping** and **DCF Type** are only used if the **Export** or **Force Export** options are selected. The **Export CSV File Name Preview** parameter will show a preview of the file name, taking into account the configured parameters.
 

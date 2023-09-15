@@ -34,7 +34,7 @@ This connector can be used to monitor the platform via an HTTP connection.
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

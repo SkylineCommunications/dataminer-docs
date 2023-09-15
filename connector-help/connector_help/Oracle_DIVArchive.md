@@ -4,23 +4,23 @@ uid: Connector_help_Oracle_DIVArchive
 
 # Oracle DIVArchive
 
-This driver monitors the tape library of Oracle called DIVArchive. It is part of a Content Management System. With this device, an operator can archive, organize and restore a large number of files on disks and tapes.
+This connector monitors the tape library of Oracle called DIVArchive. It is part of a Content Management System. With this device, an operator can archive, organize and restore a large number of files on disks and tapes.
 
 ## About
 
-The driver polls via HTTP (more specifically SOAP) requests to the API of the device. In addition, it can also catch SNMP traps in order to instantly update statuses of actors, drivers, disks and libraries.
+The connector polls via HTTP (more specifically SOAP) requests to the API of the device. In addition, it can also catch SNMP traps in order to instantly update statuses of actors, drivers, disks and libraries.
 
-The driver only monitors the device. Though the API also allows for requests to manage the device, this is not included in the current driver version.
+The connector only monitors the device. Though the API also allows for requests to manage the device, this is not included in the current connector version.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**                                                       |
+| **Range** | **Device Firmware Version**                                                       |
 |------------------|-----------------------------------------------------------------------------------|
 | 1.0.0.x          | Tested with DIVArchive 7.1 Compatible with the most recent version DIVArchive 7.3 |
 
@@ -30,7 +30,7 @@ The driver only monitors the device. Though the API also allows for requests to 
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection to catch traps and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection to catch traps and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -44,17 +44,17 @@ SNMP Settings:
 
 #### HTTP connection with API
 
-This driver uses an HTTP connection to do SOAP calls to the API and requires the following input during element creation:
+This connector uses an HTTP connection to do SOAP calls to the API and requires the following input during element creation:
 
 HTTP CONNECTION:
 
-- **IP address/host**: The polling IP of the device. The suffix to access the SOAP Endpoint is filled in in the Connection Manager of the driver. This field is required.
+- **IP address/host**: The polling IP of the device. The suffix to access the SOAP Endpoint is filled in in the Connection Manager of the connector. This field is required.
 - **IP port**: The port through which the API can be accessed. This field is required.
 - **Bus address**: This field is optional. If the proxy server has to be bypassed, specify *bypassproxy.* This is also the default value.
 
 ### Configuration of the API Connection
 
-On the **Connection Manager page** of the driver (the last page), the suffix to access the **SOAP Address Endpoint** is filled in by default. However, if this address is different, or if, for example, you want to access the 2.0 version instead of the 2.1, you can change it there.
+On the **Connection Manager page** of the connector (the last page), the suffix to access the **SOAP Address Endpoint** is filled in by default. However, if this address is different, or if, for example, you want to access the 2.0 version instead of the 2.1, you can change it there.
 
 Requesting a token is done via the 'registerClient' request, which is the only available request to the API that does not require a token. A token is only valid for 30 minutes after it has been requested. If you enable **Automatically Refresh Token**, a new token will be requested every 29 minutes to solve this issue. On requesting a token, you must specify an **Application Name** and **Physical Location.** This is then stored in the database of the device to keep track of which systems accessed the API.
 
@@ -86,7 +86,7 @@ Note that in most cases there will be only one library, but as the device is the
 
 ### Finished Requests
 
-This page lists all **Finished Requests**. The information in this table is retrieved via SOAP requests. The driver fetches up to the **Max Number of Requests**. The requests are retrieved for the period of time of the number of seconds specified in **Request List Initial Time** until the current time.
+This page lists all **Finished Requests**. The information in this table is retrieved via SOAP requests. The connector fetches up to the **Max Number of Requests**. The requests are retrieved for the period of time of the number of seconds specified in **Request List Initial Time** until the current time.
 
 ### Connection Manager
 

@@ -4,9 +4,9 @@ uid: Connector_help_Nokia_NetAct_NMS_3GPP_Manager
 
 # Nokia NetAct NMS 3GPP Manager
 
-This driver reads performance data from files provided on an SFTP server.
+This connector reads performance data from files provided on an SFTP server.
 
-Alarm information received through SNMP traps will also be processed and mapped by the driver.
+Alarm information received through SNMP traps will also be processed and mapped by the connector.
 
 ## About
 
@@ -37,7 +37,7 @@ Alarm information received through SNMP traps will also be processed and mapped 
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection to receive SNMP traps and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection to receive SNMP traps and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -51,7 +51,7 @@ SNMP Settings:
 
 #### SFTP Connection
 
-This driver also uses an **SFTP** connection to retrieve performance files from the Nokia NetAct System. This connection needs to be configured in the element.
+This connector also uses an **SFTP** connection to retrieve performance files from the Nokia NetAct System. This connection needs to be configured in the element.
 More details can be found in the Initialization section of this help page.
 
 ### Initialization
@@ -66,10 +66,10 @@ A similar configuration can be done for the SNMP traps.
 The regex and format can be tested on the **Test Regex** page.
 
 The configuration page also allows an administrator to configure how to import the **Provisioned Devices**.
-When **Import Provision Devices** is enabled, the driver will read the latest provisioning file from the **Devices Provisioning Folder**.
+When **Import Provision Devices** is enabled, the connector will read the latest provisioning file from the **Devices Provisioning Folder**.
 
 On the **Devices** page, you can add devices by right-clicking the **Discovered Devices** table.
-For these provisioned devices, the driver will retrieve the **Performance Measurements** from within the performance files.
+For these provisioned devices, the connector will retrieve the **Performance Measurements** from within the performance files.
 
 #### Whitelist page
 

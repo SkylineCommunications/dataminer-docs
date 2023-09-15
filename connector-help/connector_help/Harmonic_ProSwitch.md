@@ -7,7 +7,7 @@ uid: Connector_help_Harmonic_ProSwitch
 **Harmonic ProSwitch** is a compact, stand-alone system for applications requiring fast, dense and reliable 2:1 MPEG-2 transport strem redundancy switching for when downtime is not an option,
 offering up to eight 2:1 IP switches or four 2:1 ASI switches in 1-RU.
 
-This driver uses a SNMP connection to monitor the **Harmonic ProSwitch**.
+This connector uses a SNMP connection to monitor the **Harmonic ProSwitch**.
 
 ## About
 
@@ -44,7 +44,7 @@ This driver uses a SNMP connection to monitor the **Harmonic ProSwitch**.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

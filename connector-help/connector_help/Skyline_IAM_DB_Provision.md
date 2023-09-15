@@ -4,15 +4,15 @@ uid: Connector_help_Skyline_IAM_DB_Provision
 
 # Skyline IAM DB Provision
 
-Within the IAM DB Solution, the **Skyline IAM DB Provision** driver is responsible for creating elements/views in the DMS.
+Within the IAM DB Solution, the **Skyline IAM DB Provision** connector is responsible for creating elements/views in the DMS.
 
 ## About
 
-The **Skyline IAM DB Provision** element will retrieve data from the IAMDB MySQL database. It allows you to select the drivers for which you want elements/views to be created.
+The **Skyline IAM DB Provision** element will retrieve data from the IAMDB MySQL database. It allows you to select the connectors for which you want elements/views to be created.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 
@@ -22,15 +22,15 @@ The **Skyline IAM DB Provision** element will retrieve data from the IAMDB MySQL
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Configuration
 
-On the **Settings** page of the element, you can add timestamps in the **Refresh Table**, which will determine when the driver starts provisioning. The timestamps need to be in the **HH:MM** **24-hour** format.
+On the **Settings** page of the element, you can add timestamps in the **Refresh Table**, which will determine when the connector starts provisioning. The timestamps need to be in the **HH:MM** **24-hour** format.
 
 ## Usage
 
-The element created with this driver consists of the data pages described below.
+The element created with this connector consists of the data pages described below.
 
 ### General
 
@@ -50,4 +50,4 @@ This page contains the database settings. The **Server**, **Database**, **Userna
 
 ## Notes
 
-The driver will offload two files to the folder *C:\Skyline DataMiner\DSL*. These files are used by the Skyline IAM DB element to update the element ID and view ID in the IAM DB.
+The connector will offload two files to the folder *C:\Skyline DataMiner\DSL*. These files are used by the Skyline IAM DB element to update the element ID and view ID in the IAM DB.

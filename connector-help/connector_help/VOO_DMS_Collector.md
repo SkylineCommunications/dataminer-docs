@@ -8,7 +8,7 @@ With the VOO DMS Collector driver it is possible to retrieve active alarms form 
 
 ## About
 
-This driver collects all the active alarms that are provided by a defined cluster and forwards them to all DataMiner Elements that were provided by the DataMiner Element running the **VOO CPE Manager** protocol.
+This connector collects all the active alarms that are provided by a defined cluster and forwards them to all DataMiner Elements that were provided by the DataMiner Element running the **VOO CPE Manager** protocol.
 
 ## Installation and configuration
 
@@ -199,4 +199,4 @@ This page provides a table containing all the DataMiner Elements that were provi
 
 ## Trending
 
-This driver is provided with the trending possibility so that the **Resend State** for the related cluster can be followed.
+This connector is provided with the trending possibility so that the **Resend State** for the related cluster can be followed.

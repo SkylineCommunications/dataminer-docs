@@ -4,7 +4,7 @@ uid: Connector_help_Dell_EMC_Unity
 
 # Dell EMC Unity
 
-**Dell EMC Unity** is a family of unified storage platforms designed to deliver speed, efficiency and multi-cloud support. This driver leverages the **Unisphere Management REST API** to manage Unisphere**-**compliant devices.
+**Dell EMC Unity** is a family of unified storage platforms designed to deliver speed, efficiency and multi-cloud support. This connector leverages the **Unisphere Management REST API** to manage Unisphere**-**compliant devices.
 
 ## About
 
@@ -32,7 +32,7 @@ uid: Connector_help_Dell_EMC_Unity
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -110,4 +110,4 @@ Some pages also contain tables that are incomplete and only show the key and nam
 
 ### Byte Conversions
 
-The Unisphere Management REST API returns all byte-related information with the bytes unit. This means that this connector takes care of the conversions from bytes to kB/MB/GB/TB. According to the International System of Units, 1 kB is 1000 B, 1 MB is 1000 kB and so on. Therefore, conversions are done by multiplying the value with a factor of 1000. All the byte-related conversions in the driver are done using this definition. However, these values do not match the byte-related values displayed in the web UI, because instead of using the factor of 1000, the web UI uses the factor of 1024. This means that the web UI considers 1 kB to be 1024 B and 1MB to be 1024 kB, which does not follow the International System of Units definition. This definition is actually what defines another set of units, KiB/MiB/GiB/TiB, where 1 KiB is 1024 B, 1 MiB is 1024 KiB, and so on.
+The Unisphere Management REST API returns all byte-related information with the bytes unit. This means that this connector takes care of the conversions from bytes to kB/MB/GB/TB. According to the International System of Units, 1 kB is 1000 B, 1 MB is 1000 kB and so on. Therefore, conversions are done by multiplying the value with a factor of 1000. All the byte-related conversions in the connector are done using this definition. However, these values do not match the byte-related values displayed in the web UI, because instead of using the factor of 1000, the web UI uses the factor of 1024. This means that the web UI considers 1 kB to be 1024 B and 1MB to be 1024 kB, which does not follow the International System of Units definition. This definition is actually what defines another set of units, KiB/MiB/GiB/TiB, where 1 KiB is 1024 B, 1 MiB is 1024 KiB, and so on.

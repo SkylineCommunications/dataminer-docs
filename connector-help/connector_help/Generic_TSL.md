@@ -4,26 +4,26 @@ uid: Connector_help_Generic_TSL
 
 # Generic TSL
 
-This is a generic driver for under monitor display devices using the TSL protocol.
+This is a generic connector for under monitor display devices using the TSL protocol.
 
 ## About
 
-This is a **serial** driver using the TSL protocol. Only commands can be sent to the device, as there is no response. In the 3.0.0.x range, where version 5.0 of the TSL is used, it is possible to use Unicode characters in the text field.
+This is a **serial** connector using the TSL protocol. Only commands can be sent to the device, as there is no response. In the 3.0.0.x range, where version 5.0 of the TSL is used, it is possible to use Unicode characters in the text field.
 
 The minimum framework required is .NET 4.0, so that System.Web.Extensions.dll is available.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                            | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                            | **DCF Integration** | **Cassandra Compliant** |
 |------------------|--------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                            | No                  | Yes                     |
 | 2.0.0.x          | Redundant interfaces                       | No                  | Yes                     |
 | 3.0.0.x          | TSL v5.0 implementation                    | No                  | Yes                     |
 | 3.0.1.x          | Smart-serial (no disconnect after command) | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          |                             |
 | 2.0.0.x          |                             |
@@ -36,7 +36,7 @@ The minimum framework required is .NET 4.0, so that System.Web.Extensions.dll is
 
 #### (Smart-)Serial Main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -112,7 +112,7 @@ Here are some examples of possible messages:
 
 ### Update UMD Row
 
-This is a subpage of the UMDs page. The parameters are filled in with the default values when no row has been selected. Refer to the section above ("To edit UMDs ...") in this driver help for more information about the usage of this page.
+This is a subpage of the UMDs page. The parameters are filled in with the default values when no row has been selected. Refer to the section above ("To edit UMDs ...") in this connector help for more information about the usage of this page.
 
 ### UMD Automation
 

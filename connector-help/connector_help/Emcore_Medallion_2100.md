@@ -4,21 +4,21 @@ uid: Connector_help_Emcore_Medallion_2100
 
 # Emcore Medallion 2100
 
-This driver retrieves information from the Emcore Medallion 2100 via SNMP. This device is an optical switch that provides an automatic or manual fiber switching function to protect a network from inadvertent service outages due to upstream optical signal degradation.
+This connector retrieves information from the Emcore Medallion 2100 via SNMP. This device is an optical switch that provides an automatic or manual fiber switching function to protect a network from inadvertent service outages due to upstream optical signal degradation.
 
 ## About
 
-The **Emcore Medallion 2100** driver displays the general information, alarm status, network configuration and power supply information of the device. All information is retrieved using SNMP.
+The **Emcore Medallion 2100** connector displays the general information, alarm status, network configuration and power supply information of the device. All information is retrieved using SNMP.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ The **Emcore Medallion 2100** driver displays the general information, alarm sta
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

@@ -37,7 +37,7 @@ The SAF Tehnika Integra-W SNMPv2/v3 driver controls and monitors this radio syst
 
 #### SNMPv2 main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) v2 connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) v2 connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -51,7 +51,7 @@ SNMPv2 settings:
 
 #### SNMPv3 main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) v3 connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) v3 connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -69,7 +69,7 @@ SNMPv3 Settings:
 
 #### Serial IP Connection
 
-This driver also uses a serial connection and requires the following input during element creation:
+This connector also uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

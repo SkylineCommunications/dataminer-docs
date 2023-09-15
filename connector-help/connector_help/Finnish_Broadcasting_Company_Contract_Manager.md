@@ -4,7 +4,7 @@ uid: Connector_help_Finnish_Broadcasting_Company_Contract_Manager
 
 # Finnish Broadcasting Company Contract Manager
 
-This driver is part of the SRM Solution for the **Finnish Broadcasting Company (YLE)** and is used to define which functions are available for each of their customers and which properties are available in the Media Services app for each DataMiner user group.
+This connector is part of the SRM Solution for the **Finnish Broadcasting Company (YLE)** and is used to define which functions are available for each of their customers and which properties are available in the Media Services app for each DataMiner user group.
 
 ## About
 
@@ -30,7 +30,7 @@ This driver is part of the SRM Solution for the **Finnish Broadcasting Company (
 
 #### Virtual Connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 
@@ -38,11 +38,11 @@ Verify if the default config file is available on the DMA and, if necessary, upd
 
 ### Redundancy
 
-No redundancy is defined in the driver.
+No redundancy is defined in the connector.
 
 ## How to Use
 
-The element created with this driver consists of the data pages detailed below.
+The element created with this connector consists of the data pages detailed below.
 
 ### General Page
 
@@ -72,12 +72,12 @@ The page contains page buttons to the following subpages:
 
 This page contains the External Requests table and a configuration parameter.
 
-The Media Services app will request information from this driver, for example to know which options should be available for the logged-in user when creating a booking. These requests are stored in the **External Requests table**.
+The Media Services app will request information from this connector, for example to know which options should be available for the logged-in user when creating a booking. These requests are stored in the **External Requests table**.
 
 The configuration parameter at the bottom of the page defines for how long an external request is stored.
 
-All changes done in this driver are immediately stored in the config file.
+All changes done in this connector are immediately stored in the config file.
 
 ## Notes
 
-This driver requires SRM to be installed on the DMA.
+This connector requires SRM to be installed on the DMA.

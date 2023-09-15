@@ -4,21 +4,21 @@ uid: Connector_help_HP_A5500_EI_Switch_Serie
 
 # HP A5500 EI Switch Serie
 
-This driver is used to monitor and configure the **HP A5500 EI Switch Serie.** It is based on the **HP ProCurve Manager**.
+This connector is used to monitor and configure the **HP A5500 EI Switch Serie.** It is based on the **HP ProCurve Manager**.
 
 ## About
 
-An **SNMP** connection is needed for the driver so that it can retrieve and send information from/to the device.
+An **SNMP** connection is needed for the connector so that it can retrieve and send information from/to the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 5.20.99 Release 2221P15     |
 
@@ -28,7 +28,7 @@ An **SNMP** connection is needed for the driver so that it can retrieve and send
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

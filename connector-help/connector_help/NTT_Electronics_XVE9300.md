@@ -8,13 +8,13 @@ XVE9300 is a Full-HD-3D transmittable AVC/H.264 Encoder, which inherits its high
 
 ## About
 
-The NTT Electronics XVE9300 driver is able to monitor and control an XVE9300 device. The information is divided over different pages (General, Video, Audio and Alarms). On the Video and Audio page, the settings can be modified.
+The NTT Electronics XVE9300 connector is able to monitor and control an XVE9300 device. The information is divided over different pages (General, Video, Audio and Alarms). On the Video and Audio page, the settings can be modified.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION**:
 
@@ -46,7 +46,3 @@ On this page, the settings for the video can be modified.
 ### Alarms page
 
 The **Alarm** page displays a table with alarm information. Below the table, information is displayed regarding the traps.
-
-## Notes
-
-N/A

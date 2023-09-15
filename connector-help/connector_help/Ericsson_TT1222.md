@@ -4,23 +4,23 @@ uid: Connector_help_Ericsson_TT1222
 
 # Ericsson TT1222
 
-This is an HTTP driver that is used to retrieve status information from the Ericsson TT1222, an integrator receiver decoder (IRD) device.
+This is an HTTP connector that is used to retrieve status information from the Ericsson TT1222, an integrator receiver decoder (IRD) device.
 
 ## About
 
 The information on tables and parameters is retrieved via HTTP polling.
 
-This driver contains an overview of the **active alarms**, **modules**, **Service System**, **Service TV** (which includes TV Service, Video and Audio 1), **Service Audio 2** and **Output Status**.
+This connector contains an overview of the **active alarms**, **modules**, **Service System**, **Service TV** (which includes TV Service, Video and Audio 1), **Service Audio 2** and **Output Status**.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.0                         |
 
@@ -30,7 +30,7 @@ This driver contains an overview of the **active alarms**, **modules**, **Servic
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

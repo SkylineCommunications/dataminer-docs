@@ -38,7 +38,7 @@ The unit can communicate over SCI0 or 1 operating between 300 and 19200 baud, an
 
 ### Creation
 
-This driver uses a **Serial Protocol** connection and needs following user information:
+This connector uses a **Serial Protocol** connection and needs following user information:
 
 ### Serial Connection:
 

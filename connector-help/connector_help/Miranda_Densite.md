@@ -4,21 +4,21 @@ uid: Connector_help_Miranda_Densite
 
 # Miranda Densite
 
-This driver is used to monitor the **Densite** Controller from **Miranda**.
+This connector is used to monitor the **Densite** Controller from **Miranda**.
 
 ## About
 
-The driver displays the information about the different slots and the fame in a table.
+The connector displays the information about the different slots and the fame in a table.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**              | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**              | **DCF Integration** | **Cassandra Compliant** |
 |------------------|------------------------------|---------------------|-------------------------|
 | 2.0.1.x          | Fixed Issues, Changed Layout | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 2.0.1.x          | 2.2.3 BUILD 0003            |
 
@@ -28,7 +28,7 @@ The driver displays the information about the different slots and the fame in a 
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -38,9 +38,9 @@ SNMP Settings:
 
 - **Port number**: The port of the connected device, by default *161*.
 - **Get community string**: The community string used when reading values from the device
-  (default value if not overridden in the driver: *public*).
+  (default value if not overridden in the connector: *public*).
 - **Set community string**: The community string used when setting values on the device
-  (default value if not overridden in the driver: *private*).
+  (default value if not overridden in the connector: *private*).
 
 ## Usage
 

@@ -139,8 +139,9 @@ The **Login page button** can be used to configure the **username** and **passwo
 
 In addition, the page also contains the following parameters:
 
-1.  **Automatic Follow Leader:** By default, this parameter is *Enabled*. This means that as soon as the element receives the response from the API related to the **System Summary**, it will start polling from the node with the **Cluster Role** equal to **Leader**. If this parameter is *Disabled,* it will use the IP address configured during element creation. If there is a **Timeout**, the element will try to find an IP address that replies correctly. As soon as such an IP address is detected, the element will start using it as the Active Node IP Address.
-2.  **Polling Node IP Address:** The current IP address that it is being polled. This parameter displays a dropdown box containing all IP addresses in the System Summary Table.
+1. **Automatic Follow Leader:** By default, this parameter is *Enabled*. This means that as soon as the element receives the response from the API related to the **System Summary**, it will start polling from the node with the **Cluster Role** equal to **Leader**. If this parameter is *Disabled,* it will use the IP address configured during element creation. If there is a **Timeout**, the element will try to find an IP address that replies correctly. As soon as such an IP address is detected, the element will start using it as the Active Node IP Address.
+
+1. **Polling Node IP Address:** The current IP address that it is being polled. This parameter displays a dropdown box containing all IP addresses in the System Summary Table.
 
 ### Polling Node Summary
 
@@ -160,10 +161,10 @@ This page offers a consolidated view of all the traps sent by the vSCG. Each tra
 
 The **Trap IP Sources** are the IP addresses that will be used to process the events. The following formats can be used to set this parameter:
 
-1.  10.1.2.2
-2.  10.1.2.\*
-3.  \*
-4.  10.1.2.2,10.1.2.3,10.1.2.4
+1. 10.1.2.2
+2. 10.1.2.\*
+3. \*
+4. 10.1.2.2,10.1.2.3,10.1.2.4
 
 With the **Auto Clear** page button, you can configure under which circumstances the traps are going to be deleted automatically. You can define the maximum number of traps per table and the maximum duration the traps can stay in the tables.
 

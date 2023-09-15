@@ -4,17 +4,17 @@ uid: Connector_help_Ziggo_VoD_Transaction_Manager
 
 # Ziggo VoD Transaction Manager
 
-This driver generates aggregated tables to give an overview of the Video on Demand transactions.
+This connector generates aggregated tables to give an overview of the Video on Demand transactions.
 
 ## About
 
-This driver uses the log files of multiple TraxIS servers to gather information about succesfull transactions.
+This connector uses the log files of multiple TraxIS servers to gather information about succesfull transactions.
 
-This driver needs to be on the same DMA as the VoD Workflow Application to be able to get asset information.
+This connector needs to be on the same DMA as the VoD Workflow Application to be able to get asset information.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** |
+| **Range** | **Description** |
 |------------------|-----------------|
 | 1.0.0.x          | Initial version |
 
@@ -22,11 +22,11 @@ This driver needs to be on the same DMA as the VoD Workflow Application to be ab
 
 ### Creation
 
-This driver uses a virtual connection and does not need any user information.
+This connector uses a virtual connection and does not need any user information.
 
 ### Configuration
 
-All TraxIS servers need to be configured in the driver.
+All TraxIS servers need to be configured in the connector.
 For each server a Network **file path** and the **name** of the log file should be configured.
 
 To be able to read the log files, **credentials** for the network share need to be configured.

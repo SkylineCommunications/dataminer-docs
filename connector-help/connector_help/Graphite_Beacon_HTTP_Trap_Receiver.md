@@ -4,7 +4,7 @@ uid: Connector_help_Graphite_Beacon_HTTP_Trap_Receiver
 
 # Graphite Beacon HTTP Trap Receiver
 
-This driver processes incoming traps and displays the resulting information in a table.
+This connector processes incoming traps and displays the resulting information in a table.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver processes incoming traps and displays the resulting information in a
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

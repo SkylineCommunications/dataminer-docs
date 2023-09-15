@@ -4,23 +4,23 @@ uid: Connector_help_Sittig_DVA
 
 # Sittig DVA
 
-The **Sittig DVA** driver is used to monitor the status of the Sittig DVA.
+The **Sittig DVA** connector is used to monitor the status of the Sittig DVA.
 
 ## About
 
-The driver uses **SNMP** to retrieve the **monitoring** data from the Sittig DVA.
+The connector uses **SNMP** to retrieve the **monitoring** data from the Sittig DVA.
 
-The Sittig DVA contains status information for each Sittig device per **location**. This driver is thus very simple, because it is only used for monitoring.
+The Sittig DVA contains status information for each Sittig device per **location**. This connector is thus very simple, because it is only used for monitoring.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 2.0                         |
 
@@ -30,7 +30,7 @@ The Sittig DVA contains status information for each Sittig device per **location
 
 #### SNMP connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -56,6 +56,6 @@ The **Devices** table has an overview of each device that is monitored by the Si
 
 The **Locations** table contains an entry for each location with it's **status** and **errors**.
 
-### Webinterface
+### Web Interface
 
 The **webinterface** can be used to login on the Sittig DVA device. Note that the client machine has to be able to access the device, otherwise it will not be possible to open the web interface.

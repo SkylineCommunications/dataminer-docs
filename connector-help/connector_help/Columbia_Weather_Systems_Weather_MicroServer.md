@@ -4,9 +4,9 @@ uid: Connector_help_Columbia_Weather_Systems_Weather_MicroServer
 
 # Columbia Weather Systems Weather MicroServer
 
-The Columbia Weather Systems Weather MicroServer driver allows you to monitor a weather station that can be connected to different sensors.
+The Columbia Weather Systems Weather MicroServer connector allows you to monitor a weather station that can be connected to different sensors.
 
-The driver uses SNMPV2 to communicate with the device and uses history sets.
+The connector uses SNMPV2 to communicate with the device and uses history sets.
 
 ## About
 
@@ -34,7 +34,7 @@ The driver uses SNMPV2 to communicate with the device and uses history sets.
 
 #### SNMPv2 connection
 
-This driver uses a Simple Network Management Protocol version 2 connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol version 2 connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -50,7 +50,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver has the following data pages:
+The element created with this connector has the following data pages:
 
 - **General**: Displays general system information, GPS data such as latitude and longitude, and SNMP information such as packets information.
 - **Temperature**: Displays temperature information received from the different sensors (if connected).

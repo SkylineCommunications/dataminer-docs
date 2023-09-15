@@ -8,18 +8,18 @@ The **DataProbe iPIO** is a network-attached, web-enabled digital input and outp
 
 ## About
 
-This driver uses **SNMP** to retrieve information from the device. The **status** in the **Input** and **Relay** tables is based on **traps and SNMP polling.**
-The driver also allows you to access the **web interface** of the device.
+This connector uses **SNMP** to retrieve information from the device. The **status** in the **Input** and **Relay** tables is based on **traps and SNMP polling.**
+The connector also allows you to access the **web interface** of the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 2.00.82                     |
 
@@ -29,12 +29,12 @@ The driver also allows you to access the **web interface** of the device.
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
 - **IP address/host**: The polling IP of the device, e.g. *10.11.12.13.*
-- **Device address**: This driver has no device address.
+- **Device address**: This connector has no device address.
 
 SNMP Settings:
 

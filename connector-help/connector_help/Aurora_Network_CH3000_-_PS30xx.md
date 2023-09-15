@@ -12,7 +12,7 @@ About the PS30xx power supply module.
 
 ### Creation
 
-This driver is used by DVE child elements that are **automatically created** by the driver <u>[Aurora Network CH3000](xref:Connector_help_Aurora_Network_CH3000)</u>, from version 1.0.0.1 onwards.
+This connector is used by DVE child elements that are **automatically created** by the connector <u>[Aurora Network CH3000](xref:Connector_help_Aurora_Network_CH3000)</u>, from version 1.0.0.1 onwards.
 
 ## Usage
 

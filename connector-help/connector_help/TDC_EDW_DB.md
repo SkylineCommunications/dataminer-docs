@@ -4,11 +4,11 @@ uid: Connector_help_TDC_EDW_DB
 
 # TDC EDW DB
 
-The **TDC EDW DB** driver retrieves data from the **EDW Oracle** database and creates **DSL** (**DataMiner Structured Language**) offload files.
+The **TDC EDW DB** connector retrieves data from the **EDW Oracle** database and creates **DSL** (**DataMiner Structured Language**) offload files.
 
 ## About
 
-This driver will create the following DSL files, which contain data from 1 or multiple database tables:
+This connector will create the following DSL files, which contain data from 1 or multiple database tables:
 
 - **IngestEDWCableModemData**
 - **IngestEDWAmplifierData**
@@ -16,13 +16,13 @@ This driver will create the following DSL files, which contain data from 1 or mu
 - **IngestEDWLocationData**
 - **IngestEDWSubscribersData**
 
-The **Offload Cycle** for these stored procedures, which determines when tables should be polled and offloaded, can be configured in the driver. The same goes for the **location** where these DSL files should be stored. Each of these DSL files can also be disabled.
+The **Offload Cycle** for these stored procedures, which determines when tables should be polled and offloaded, can be configured in the connector. The same goes for the **location** where these DSL files should be stored. Each of these DSL files can also be disabled.
 
-When an offload is started, the data will be stored in a **temporary file** and when all data is available in that file, the temporary file will be renamed to the following format: "*\[StoredProcedureName\]\_\[DataminerID\]\_\[ElementID\]\_\[dd_MM_yyyy_HH_mm_ss\].csv*". After that, the file can be picked up to handle the data.
+When an offload is started, the data will be stored in a **temporary file** and when all data is available in that file, the temporary file will be renamed to the following format: "*\[StoredProcedureName\]\_\[DataMinerID\]\_\[ElementID\]\_\[dd_MM_yyyy_HH_mm_ss\].csv*". After that, the file can be picked up to handle the data.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**                                                    | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**                                                    | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|--------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x              | Initial version                                                    | No                  | Yes                     |
 | 1.0.1.x \[SLC Main\] | Based on v1.0.0.15. Review of the queries: Topology DB connection. | No                  | Yes                     |
@@ -33,7 +33,7 @@ When an offload is started, the data will be stored in a **temporary file** and 
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Configuration of database connection
 
@@ -65,7 +65,7 @@ You can update the table either by individually adding entries via the right-cli
 
 ### Configuration
 
-This driver does not show any actual data from the database, because all data is immediately offloaded to **DSL** files. The **Configuration** page is the only displayed page. It is used to configure the **Offload** and **Database** connection.
+This connector does not show any actual data from the database, because all data is immediately offloaded to **DSL** files. The **Configuration** page is the only displayed page. It is used to configure the **Offload** and **Database** connection.
 
 See the "Installation and configuration" section of this page for more info about the configuration of the element.
 

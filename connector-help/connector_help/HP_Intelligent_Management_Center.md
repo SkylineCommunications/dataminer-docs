@@ -8,11 +8,11 @@ The **HP Intelligent Management Center** (iMC) is a next-generation intelligent 
 
 ## About
 
-This driver can be used to get a list of the devices and alarms.
+This connector can be used to get a list of the devices and alarms.
 
 ## Installation and configuration
 
-This driver uses both an HTTP and a serial connection. The serial connection is used to set up the authentication, and should have the same values as the HTTP connection.
+This connector uses both an HTTP and a serial connection. The serial connection is used to set up the authentication, and should have the same values as the HTTP connection.
 
 The following information must be provided during element creation:
 

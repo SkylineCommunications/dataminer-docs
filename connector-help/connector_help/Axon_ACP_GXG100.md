@@ -6,7 +6,7 @@ uid: Connector_help_Axon_ACP_GXG100
 
 The **GXG100** card is low-latency up-, down-, and cross-converter with 16-channel audio transparency.
 
-The Axon ACP GXG100 driver is used to monitor and configure the GXG100 card.
+The Axon ACP GXG100 connector is used to monitor and configure the GXG100 card.
 
 ## About
 
@@ -34,7 +34,7 @@ The Axon ACP GXG100 driver is used to monitor and configure the GXG100 card.
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -46,7 +46,7 @@ SERIAL CONNECTION:
 
 #### Serial IP Connection - Events Connection
 
-This driver uses a smart-serial connection and requires the following input during element creation:
+This connector uses a smart-serial connection and requires the following input during element creation:
 
 SMART-SERIAL CONNECTION:
 
@@ -70,7 +70,7 @@ The setting of some parameters depends on other parameters' current value. For e
 
 ## DataMiner Connectivity Framework
 
-The **1.0.0.x** driver range of the Axon ACP GXG100 protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
+The **1.0.0.x** connector range of the Axon ACP GXG100 protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 

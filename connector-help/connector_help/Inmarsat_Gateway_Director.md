@@ -4,15 +4,15 @@ uid: Connector_help_Inmarsat_Gateway_Director
 
 # Inmarsat Gateway Director
 
-This driver acts as a **manager** for the **Inmarsat Gateway** driver. The driver will share the terminals over the available gateways.
+This connector acts as a **manager** for the **Inmarsat Gateway** driver. The connector will share the terminals over the available gateways.
 
 ## About
 
-This driver uses the HTTP protocol to create sessions and request data from the server. The data is received in JSON format, parsed and displayed in a table.
+This connector uses the HTTP protocol to create sessions and request data from the server. The data is received in JSON format, parsed and displayed in a table.
 
-The driver acts as a **manager** for the Inmarsat Gateway. It manages the terminals for each Inmarsat Gateway element.
+The connector acts as a **manager** for the Inmarsat Gateway. It manages the terminals for each Inmarsat Gateway element.
 
-### Ranges of the driver
+### Version Info
 
 | **Driver range**     | **Description**                  | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|----------------------------------|---------------------|-------------------------|
@@ -25,7 +25,7 @@ The driver acts as a **manager** for the Inmarsat Gateway. It manages the termin
 
 #### HTTP main connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -35,7 +35,7 @@ HTTP CONNECTION:
 
 ## How to use
 
-The element created with this driver consists of the data pages described below.
+The element created with this connector consists of the data pages described below.
 
 ### General
 
@@ -45,13 +45,13 @@ This page displays the device name and device type. It also allows you to enable
 
 This page allows you to specify the credentials for the **Inmarsat Gateway API**, as well as to view general information. The **Connection Status** parameter indicates the status of the main (HTTP) connection.
 
-In the 1.0.0.x range of the driver, the following information must be filled in to request information from the Inmarsat Gateway API:
+In the 1.0.0.x range of the connector, the following information must be filled in to request information from the Inmarsat Gateway API:
 
 - **API Key**
 - **API Username**
 - **API Password**
 
-In the 1.1.0.x range of the driver, the following information is required instead:
+In the 1.1.0.x range of the connector, the following information is required instead:
 
 - **API Client ID**
 - **API Client Secret**

@@ -4,17 +4,17 @@ uid: Connector_help_CTE_FMTX1
 
 # CTE FMTX1
 
-The **FMTX1** driver displays information related to the **1kW Transmitter** device.
+The **FMTX1** connector displays information related to the **1kW Transmitter** device.
 
 ## About
 
-This driver uses an **SNMP** interface to communicate with the FMTX1 device. It displays the parameters in a manner similar to the web interface of the device.
+This connector uses an **SNMP** interface to communicate with the FMTX1 device. It displays the parameters in a manner similar to the web interface of the device.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses an SNMP connection and needs the following user information:
+This connector uses an SNMP connection and requires the following input during element creation:
 
 **SNMP Connection:**
 

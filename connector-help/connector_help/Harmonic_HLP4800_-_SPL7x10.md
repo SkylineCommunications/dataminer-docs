@@ -8,13 +8,13 @@ The SPL7110C and SPL7210 modules are designed as universal replacement transmitt
 
 ## About
 
-This driver uses **SNMP** polling to communicate with the corresponding device.
+This connector uses **SNMP** polling to communicate with the corresponding device.
 
-The driver is exported by the parent element **Harmonic HLP4800** if DVE creation is enabled. In that case, a child element using this driver will be created for each row in the **Physical Entities** table of the parent element.
+The connector is exported by the parent element **Harmonic HLP4800** if DVE creation is enabled. In that case, a child element using this connector will be created for each row in the **Physical Entities** table of the parent element.
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.08 1.12 2.04              |
 
@@ -22,7 +22,7 @@ The driver is exported by the parent element **Harmonic HLP4800** if DVE creatio
 
 ### Creation
 
-This driver is used by DVE child elements that are **automatically created** by the parent driver [Harmonic HLP4800](xref:Connector_help_Harmonic_HLP4800), from version 1.0.0.1 onwards.
+This connector is used by DVE child elements that are **automatically created** by the parent connector [Harmonic HLP4800](xref:Connector_help_Harmonic_HLP4800), from version 1.0.0.1 onwards.
 
 ## Usage
 
@@ -48,4 +48,4 @@ On this page, you can configure the transmission distances of the transmitter.
 
 ## Notes
 
-This driver applies both to modules SPL7210 and 7110C.
+This connector applies both to modules SPL7210 and 7110C.

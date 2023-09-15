@@ -4,7 +4,7 @@ uid: Connector_help_WISI_Optopus
 
 # WISI Optopus
 
-The **WISI Optopus** is an Optical Platform for FTTx and HFC. With this SNMP driver, you can control and monitor the parameters of the device.
+The **WISI Optopus** is an Optical Platform for FTTx and HFC. With this SNMP connector, you can control and monitor the parameters of the device.
 
 ## About
 
@@ -18,21 +18,21 @@ From version 1.0.0.18 onwards, SSH communication with the device server can be d
 
 For more information about the device, please refer to the website <http://wisi.de/en/business/products/optopus/>.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                          | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                          | **DCF Integration** | **Cassandra Compliant** |
 |------------------|------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version.                         | No                  | No                      |
 | 1.0.1.x          | Tables display column changed to naming. | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**                                                       |
+| **Range** | **Device Firmware Version**                                                       |
 |------------------|-----------------------------------------------------------------------------------|
 | 1.0.0.x          | 1.0.0.0 BOOT_LX51 1.0.0.2 BOOT_LX_Module 1.0.0.4 BOOT_LX_Module 2.1.1.0 APPL_LX51 |
 | 1.0.1.x          | 1.0.0.0 BOOT_LX51 1.0.0.2 BOOT_LX_Module 1.0.0.4 BOOT_LX_Module 2.1.1.0 APPL_LX51 |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol**                                                                  | **Description**                     |
 |----------------------------------------------------------------------------------------|-------------------------------------|
@@ -49,7 +49,7 @@ For more information about the device, please refer to the website <http://wisi.
 
 ### Connections
 
-This driver uses two Simple Network Management Protocol (SNMP) connections and requires the following input during element creation:
+This connector uses two Simple Network Management Protocol (SNMP) connections and requires the following input during element creation:
 
 **SNMP Connection**:
 

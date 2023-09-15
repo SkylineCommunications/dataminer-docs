@@ -10,16 +10,16 @@ The Egatel CCU9000 is a control unit device that is used to manage other Egatel 
 
 The Egatel CCU9000 driver will communicate with the device via SNMP, enabling the remote configuration of control parameters of the managed modules (such as digital transmitters and a GPS module).
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                     | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                     | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-------------------------------------|---------------------|-------------------------|
-| 1.0.0.1          | Initial version                     | No                  | Yes                     |
-| 1.1.0.1          | New version to support Firmware V12 | No                  | Yes                     |
+| 1.0.0.x          | Initial version                     | No                  | Yes                     |
+| 1.1.0.x          | New version to support Firmware V12 | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | NA                          |
 | 1.1.0.x          | V12                         |
@@ -30,7 +30,7 @@ The Egatel CCU9000 driver will communicate with the device via SNMP, enabling th
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

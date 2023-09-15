@@ -4,7 +4,7 @@ uid: Connector_help_EEG_HD-492_CC_Encoder
 
 # EEG HD-492 CC Encoder
 
-The EEG HD-492 driver handles the monitoring of the device by polling general information and CC Encoder information. The driver can also receive traps.
+The EEG HD-492 driver handles the monitoring of the device by polling general information and CC Encoder information. The connector can also receive traps.
 
 ## About
 
@@ -34,7 +34,7 @@ The HD-492 iCap Closed Caption Encoder has iCap and Lexi access as well as moder
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -60,7 +60,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver consists of the data pages described below.
+The element created with this connector consists of the data pages described below.
 
 ### General
 
@@ -76,4 +76,4 @@ This page contains a table listing all the traps received from the source. The t
 
 ## Notes
 
-The OIDs for this driver do not end in ".0", as the device does not recognize them except for the general system OIDs.
+The OIDs for this connector do not end in ".0", as the device does not recognize them except for the general system OIDs.

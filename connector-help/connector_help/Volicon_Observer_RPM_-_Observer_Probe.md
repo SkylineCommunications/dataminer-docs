@@ -4,21 +4,21 @@ uid: Connector_help_Volicon_Observer_RPM_-_Observer_Probe
 
 # Volicon Observer RPM - Observer Probe
 
-This driver is developed for **Volicon Observer RPM** Video Monitor devices. It **receives traps** from the monitored device and displays them in a table. These traps contain information about the state of a specific service as reported by the probe.
+This connector is developed for **Volicon Observer RPM** Video Monitor devices. It **receives traps** from the monitored device and displays them in a table. These traps contain information about the state of a specific service as reported by the probe.
 
 ## About
 
-This is an **SNMP** driver, which processes received traps to update its parameters.
+This is an **SNMP** connector, which processes received traps to update its parameters.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 5.0                         |
 
@@ -26,11 +26,11 @@ This is an **SNMP** driver, which processes received traps to update its paramet
 
 ### Creation
 
-This driver is used by DVE child elements that are **automatically created** by the driver [Volicon Observer RPM](xref:Connector_help_Volicon_Observer_RPM), from version 2.0.0.2 onwards.
+This connector is used by DVE child elements that are **automatically created** by the connector [Volicon Observer RPM](xref:Connector_help_Volicon_Observer_RPM), from version 2.0.0.2 onwards.
 
 ## Usage
 
-The driver consists of two pages.
+The connector consists of two pages.
 
 ### Events
 

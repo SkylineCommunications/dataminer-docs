@@ -6,7 +6,7 @@ uid: Connector_help_Nokia_OMS_1350
 
 The **Nokia Optical Management System** (OMS) **1350** centralizes multiple network management functions in one unified management system for the entire Nokia optics portfolio.
 
-This driver uses the CORBA protocol to communicate with the **Nokia OMS 1350**.
+This connector uses the CORBA protocol to communicate with the **Nokia OMS 1350**.
 
 ## About
 
@@ -34,11 +34,11 @@ This driver uses the CORBA protocol to communicate with the **Nokia OMS 1350**.
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 
-In order to use this driver, you must configure the **IP** **Address**, **Port** **number**, **User** **Name** and **Password**. These parameters can be found on the **General** page.
+In order to use this connector, you must configure the **IP** **Address**, **Port** **number**, **User** **Name** and **Password**. These parameters can be found on the **General** page.
 
 In addition, the DLL files **IIOPChannel.dll** and **OMS_1350.dll** also have to be placed in the folder "C:\Skyline DataMiner\ProtocolScripts" on the DMA.
 

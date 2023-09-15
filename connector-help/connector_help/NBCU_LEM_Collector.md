@@ -44,10 +44,10 @@ On the **General** page of the element, the event table contains the relevant da
 
 The connector selects the **Manifest Type** of an event using the following possible methods, in the indicated order:
 
-1.  YoSpace
-2.  URL Match
-3.  Quality Mapping
-4.  Default
+1. YoSpace
+1. URL Match
+1. Quality Mapping
+1. Default
 
 If **YoSpace** data is filled in for the event, then the **Manifest YoSpace** parameter will be used for the **Manifest Type**.
 

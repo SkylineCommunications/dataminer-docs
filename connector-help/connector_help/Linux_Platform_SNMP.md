@@ -4,13 +4,13 @@ uid: Connector_help_Linux_Platform_SNMP
 
 # Linux Platform SNMP
 
-With this driver, you can monitor Linux platforms with SNMP.
+With this connector, you can monitor Linux platforms with SNMP.
 
 ## About
 
-This driver uses SNMP in order to monitor a Linux platform.
+This connector uses SNMP in order to monitor a Linux platform.
 
-### Ranges of the driver
+### Version Info
 
 <table>
 <colgroup>
@@ -52,7 +52,7 @@ This driver uses SNMP in order to monitor a Linux platform.
 </tr>
 <tr class="even">
 <td>2.0.1.x</td>
-<td>Based on 1.1.0.44 Changed displayColumn to Naming to improve performance and make the driver Cassandra-compliant. Impact: <strong>loss of trend data on tables</strong>:
+<td>Based on 1.1.0.44 Changed displayColumn to Naming to improve performance and make the connector Cassandra-compliant. Impact: <strong>loss of trend data on tables</strong>:
 <ul>
 <li>Software Info</li>
 <li>Storage Table</li>
@@ -75,9 +75,9 @@ This driver uses SNMP in order to monitor a Linux platform.
 </tbody>
 </table>
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Not applicable              |
 | 1.1.0.x          | Not applicable              |
@@ -91,7 +91,7 @@ This driver uses SNMP in order to monitor a Linux platform.
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -176,7 +176,7 @@ This page contains data that is filled in through a dynamic link to elements of 
 
 If the Linux platform is installed on an HP/Dell platform, you can enable **Poll HP Parameters** or **Poll Dell Parameters** to receive specific HP or Dell data.
 
-On the **HP General** page (from version 1.1.1.2 onwards), you can configure an alternative IP (iLo IP) from which the HP parameters have to be polled, with the **HP Polling IP** parameter. The default value for this parameter is the element IP. If you do not want to use the alternative IP, you can disable it using the **HP Polling IP Status** parameter; the driver will then reset the IP to the default element IP. In order to fill in a new IP as the **HP Polling** **IP**, make sure the **HP Polling IP Status** parameter is enabled.
+On the **HP General** page (from version 1.1.1.2 onwards), you can configure an alternative IP (iLo IP) from which the HP parameters have to be polled, with the **HP Polling IP** parameter. The default value for this parameter is the element IP. If you do not want to use the alternative IP, you can disable it using the **HP Polling IP Status** parameter; the connector will then reset the IP to the default element IP. In order to fill in a new IP as the **HP Polling** **IP**, make sure the **HP Polling IP Status** parameter is enabled.
 
 The following page buttons allow access to additional HP or Dell info:
 

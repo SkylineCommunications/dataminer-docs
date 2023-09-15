@@ -14,7 +14,7 @@ The **Double D Electronics DDA276** will update its monitorng parameters every 1
 
 ### Creation
 
-The driver uses a serial connection and needs the following user information:
+The connector uses a serial connection and requires the following input during element creation:
 
 **SERIAL CONNECTION:**
 

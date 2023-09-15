@@ -4,7 +4,7 @@ uid: Connector_help_Double_D_Electronics_DDA219-733
 
 # Double D Electronics DDA219-733
 
-This driver monitors the activity of a **Double D Electronics DDA219-733** switch controller. It uses serial communication and makes use of the "Printable ASCII" communication protocol. You can both check information from the device in the driver and control the switch configuration.
+This connector monitors the activity of a **Double D Electronics DDA219-733** switch controller. It uses serial communication and makes use of the "Printable ASCII" communication protocol. You can both check information from the device in the connector and control the switch configuration.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver monitors the activity of a **Double D Electronics DDA219-733** switc
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

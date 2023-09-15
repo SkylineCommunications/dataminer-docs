@@ -4,13 +4,13 @@ uid: Connector_help_CCTV_Routing_Manager
 
 # CCTV Routing Manager
 
-This driver is used to create connections between two elements, a source and a destination.
+This connector is used to create connections between two elements, a source and a destination.
 
 ## About
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
@@ -20,7 +20,7 @@ This driver is used to create connections between two elements, a source and a d
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## Usage
 

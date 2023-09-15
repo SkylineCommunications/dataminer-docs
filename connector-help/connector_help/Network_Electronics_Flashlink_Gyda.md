@@ -4,21 +4,21 @@ uid: Connector_help_Network_Electronics_Flashlink_Gyda
 
 # Network Electronics Flashlink Gyda
 
-This driver can be used to monitor Network Electronics Flashlink Gyda controller devices via SNMP.
+This connector can be used to monitor Network Electronics Flashlink Gyda controller devices via SNMP.
 
-Based on the retrieved data and on the version of the driver, different drivers can be exported representing specific modules.
+Based on the retrieved data and on the version of the connector, different connectors can be exported representing specific modules.
 
 ## About
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                                                                                                                                                      | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                                                                                                                                                                      | **DCF Integration** | **Cassandra Compliant** |
 |------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                                                                                                                                                                                                      | No                  | Yes                     |
 | 2.0.0.x          | 2 exported protocols: **Network Electronics Flashlink LB-OE** and **Network Electronics Flashlink LB-EO**.                                                                                                           | No                  | Yes                     |
 | 3.0.0.x          | 1 exported protocol (**Network Electronics Flashlink Gyda Cards**) for several modules: *3G HD O/E L (2), HD-OE, DA 3G HD, HD-SDI-CHO 2x1, SDI CHO 2x1, LB-OE, ETH100, DA HD SDI, UPC HD XMUX, DA-SDI, FRS-HD*, etc. | No                  | Yes                     |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol**                                                                                            | **Description**               |
 |------------------------------------------------------------------------------------------------------------------|-------------------------------|
@@ -32,7 +32,7 @@ Based on the retrieved data and on the version of the driver, different drivers 
 
 #### SNMP Main Connection
 
-The **Network Electronics Flashlink Gyda** is an SNMP driver. The IP has to be configured during creation of the element.
+The **Network Electronics Flashlink Gyda** is an SNMP connector. The IP has to be configured during creation of the element.
 
 SNMP CONNECTION:
 

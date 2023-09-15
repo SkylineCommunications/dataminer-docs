@@ -9,20 +9,20 @@ The ETL Dextra series covers 4-way (single & dual), 8-way (single & dual) and 16
 
 ## About
 
-This is an **SNMP** driver that allows two basic functions:
+This is an **SNMP** connector that allows two basic functions:
 
 - Monitoring: Polling the device for its current hardware status, including the temperature, voltage and current configuration.
 - Configuration: Allowing the configuration of some of the splitter's parameters, namely the IP and the way it works (several modes, paths, etc.).
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.5 e351                    |
 
@@ -32,7 +32,7 @@ This is an **SNMP** driver that allows two basic functions:
 
 #### SNMP Device connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -62,8 +62,9 @@ This page contains several configuration options related to the splitter, includ
 
 It is important to note the following regarding the way the IP settings work:
 
-1.  The IP configurations entered by the user will only be assumed by the machine once the DHCP option is off.
-2.  Once the settings have been saved, the machine will reboot.
+1. The IP configurations entered by the user will only be assumed by the machine once the DHCP option is off.
+
+1. Once the settings have been saved, the machine will reboot.
 
 ### Web Interface
 
@@ -71,6 +72,6 @@ This page displays the webpage of the device. Note that the client machine has t
 
 ## DataMiner Connectivity Framework
 
-This driver uses the DataMiner Connectivity Framework, or DCF, to allow this element to connect its inputs and outputs to other elements. This is only available on DMA version 8.5.8.5 or higher.
+This connector uses the DataMiner Connectivity Framework, or DCF, to allow this element to connect its inputs and outputs to other elements. This is only available on DMA version 8.5.8.5 or higher.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance ask a manager).

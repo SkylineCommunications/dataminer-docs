@@ -4,25 +4,25 @@ uid: Connector_help_Socomec_Diris_D-50
 
 # Socomec Diris D-50
 
-The Socomec Diris D-50 is a Control and Power Supply Interface. This driver can be used to monitor and control this device.
+The Socomec Diris D-50 is a Control and Power Supply Interface. This connector can be used to monitor and control this device.
 
 ## About
 
 The DIRIS Digiware D-50 is a master device on the RS485 bus and master on the DIRIS Digiware bus. It can display measurements from other Socomec counters and measuring units such as Countis, Diris A and Diris B. It centralizes data from up to 32 devices with a maximum of 186 outputs.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial Version | No                  | True                    |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol**     | **Description**            |
 |---------------------------|----------------------------|
@@ -36,7 +36,7 @@ The DIRIS Digiware D-50 is a master device on the RS485 bus and master on the DI
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

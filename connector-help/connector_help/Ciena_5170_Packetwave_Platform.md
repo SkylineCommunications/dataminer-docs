@@ -32,7 +32,7 @@ The **Ciena 5170 Packetwave Platform** is a multi-terabit programmable Ethernet-
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -46,7 +46,7 @@ SNMP Settings:
 
 ## How to use
 
-The element created with this driver consists of the following data pages:
+The element created with this connector consists of the following data pages:
 
 - **General**: Displays the system information parameters, such as the **Description**, **Object ID** and **Up Time** of the device. The page also contains the **Availability** parameters, which show the availability of the device based on connectivity monitoring.
 - **Interface**: Contains the **Interfaces Table**, which displays information about the interfaces connected to the device. It also allows you to change the **Admin Status** and to set a new **Alias** for each interface.

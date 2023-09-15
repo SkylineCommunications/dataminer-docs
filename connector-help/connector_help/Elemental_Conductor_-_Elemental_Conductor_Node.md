@@ -4,15 +4,15 @@ uid: Connector_help_Elemental_Conductor_-_Elemental_Conductor_Node
 
 # Elemental Conductor - Elemental Conductor Node
 
-The **Elemental Conductor** is a video **encoder** network management system for live video delivery applications, offering comprehensive monitoring of video encoding. This driver represents one node in this system.
+The **Elemental Conductor** is a video **encoder** network management system for live video delivery applications, offering comprehensive monitoring of video encoding. This connector represents one node in this system.
 
 ## About
 
-This driver is exported by the [Elemental Conductor](xref:Connector_help_Elemental_Conductor) driver.
+This connector is exported by the [Elemental Conductor](xref:Connector_help_Elemental_Conductor) connector.
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | N/A                         |
 | 1.0.1.x          | Version 2.6                 |
@@ -22,7 +22,7 @@ This driver is exported by the [Elemental Conductor](xref:Connector_help_Element
 
 ### Creation
 
-This driver is used by DVE child elements that are **automatically created** by the [Elemental Conductor](xref:Connector_help_Elemental_Conductor) driver.
+This connector is used by DVE child elements that are **automatically created** by the [Elemental Conductor](xref:Connector_help_Elemental_Conductor) connector.
 
 ## Usage
 

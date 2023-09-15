@@ -8,20 +8,20 @@ The **Paradise PD80** is a Digital Video Broadcast (DVB) satellite modem. It is 
 
 ## About
 
-This driver allows you to configure the **modulation and demodulation** of the device. Interface, SNMP and SMTP configuration are also available in the driver.
+This connector allows you to configure the **modulation and demodulation** of the device. Interface, SNMP and SMTP configuration are also available in the connector.
 
-The pages of the driver are divided into three sections: General Information, Status Information and Configuration Values.
+The pages of the connector are divided into three sections: General Information, Status Information and Configuration Values.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                       | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                       | **DCF Integration** | **Cassandra Compliant** |
 |------------------|---------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                       | No                  | Yes                     |
 | 1.1.0.x          | Added parameters for the new firmware | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.5.50                      |
 | 1.1.0.x          | 1.6.59a                     |
@@ -32,7 +32,7 @@ The pages of the driver are divided into three sections: General Information, St
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -52,7 +52,7 @@ This page displays general information about the device: **Manufacturer ID**, **
 
 ### Status Pages
 
-The driver contains the following pages with status information:
+The connector contains the following pages with status information:
 
 - **Status**: Displays Tx and Rx values such as **L-Band Carrier Frequency**, **Terrestrial Bit Rate** and **Symbols Rate**.
 - **SAF**: Provides information on software-activated features of the device.
@@ -60,9 +60,9 @@ The driver contains the following pages with status information:
 
 ### Configuration Pages
 
-The driver contains the following configuration pages:
+The connector contains the following configuration pages:
 
-- **Tx and Rx pages**: Allow you to configure some of the **modulation** and **demodulation** information. In the 2.0.0.x driver range, additional pages available: **Tx AUPC**, **PCMA**, **Tx Multistream** and **Rx Multistream**
+- **Tx and Rx pages**: Allow you to configure some of the **modulation** and **demodulation** information. In the 2.0.0.x connector range, additional pages available: **Tx AUPC**, **PCMA**, **Tx Multistream** and **Rx Multistream**
 - **FEC-Mod and BUC LNB**: Forward Error Correction and BUC configuration, available for Tx and Rx.
 - **Interface**: Displays the interface configuration of the device.
 - **M&C**: Monitor and Control values, including **Remote Connection**, **SNMP** and **SMTP**.

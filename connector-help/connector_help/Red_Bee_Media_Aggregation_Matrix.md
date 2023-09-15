@@ -32,7 +32,7 @@ This protocol works with the Generic Matrix Virtualization connector and the Gra
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 
@@ -51,4 +51,4 @@ There is no redundancy defined.
 
 ## How to use
 
-This driver is intended to be used in the background to support the Red Bee Media Visual Overview pages (See "Linked Components" above).
+This connector is intended to be used in the background to support the Red Bee Media Visual Overview pages (See "Linked Components" above).

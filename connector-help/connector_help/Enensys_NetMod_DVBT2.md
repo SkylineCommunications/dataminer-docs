@@ -4,11 +4,11 @@ uid: Connector_help_Enensys_NetMod_DVBT2
 
 # Enensys NetMod DVBT2
 
-This driver is used to monitor the **Enensys NetMod DVBT2** device.
+This connector is used to monitor the **Enensys NetMod DVBT2** device.
 
 ## About
 
-With this driver, you can retrieve information about the input and output streams of the device (bitrates, frequency, etc.) and configure miscellaneous settings (traps, log file, etc.).
+With this connector, you can retrieve information about the input and output streams of the device (bitrates, frequency, etc.) and configure miscellaneous settings (traps, log file, etc.).
 
 Data is retrieved via the **SNMP** protocol.
 
@@ -22,7 +22,7 @@ Information about the device is divided over multiple pages, which are grouped a
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP Connection:**
 

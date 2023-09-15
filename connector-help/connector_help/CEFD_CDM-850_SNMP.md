@@ -8,7 +8,7 @@ The Comtech CEFD CDM-850 provides high-performance satellite-based communication
 
 ## About
 
-The CEFD CDM-850 driver is used to monitor and control a CEFD CDM-850 device. This driver uses SNMP communication to retrieve and configure the data of the device. The CDM-850 can send out SNMP traps when certain events occur in the modem. A trap is sent both when a fault occurs and when a fault is cleared.
+The CEFD CDM-850 connector is used to monitor and control a CEFD CDM-850 device. This connector uses SNMP communication to retrieve and configure the data of the device. The CDM-850 can send out SNMP traps when certain events occur in the modem. A trap is sent both when a fault occurs and when a fault is cleared.
 
 ### Version Info
 
@@ -30,7 +30,7 @@ The CEFD CDM-850 driver is used to monitor and control a CEFD CDM-850 device. Th
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (**SNMP**) connection and needs following user information:
+This connector uses a Simple Network Management Protocol (**SNMP**) connection and needs following user information:
 
 SNMP CONNECTION:
 
@@ -49,7 +49,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created using this driver consists of the data pages detailed below.
+The element created using this connector consists of the data pages detailed below.
 
 ### General page
 

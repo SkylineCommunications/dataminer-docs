@@ -4,21 +4,21 @@ uid: Connector_help_Avid_ISIS
 
 # Avid ISIS
 
-This driver monitors ISIS-related system events on the associated **Avid ISIS System Director**.
+This connector monitors ISIS-related system events on the associated **Avid ISIS System Director**.
 
 ## About
 
-This driver uses **SNMP** Get calls to extract the relevant information used to monitor and manage Avid ISIS events.
+This connector uses **SNMP** Get calls to extract the relevant information used to monitor and manage Avid ISIS events.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 4.7.3 15400                 |
 
@@ -28,7 +28,7 @@ This driver uses **SNMP** Get calls to extract the relevant information used to 
 
 SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -43,7 +43,7 @@ SNMP Settings:
 
 ## Usage
 
-This driver presents the system events in four different data display pages on the element card.
+This connector presents the system events in four different data display pages on the element card.
 
 ### General
 

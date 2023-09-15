@@ -4,22 +4,22 @@ uid: Connector_help_Trilithic_DSP860_SNMP
 
 # Trilithic DSP860 SNMP
 
-This driver monitors a portable cable analyzer and CATV meter with a built-in DOCSIS 3.0 modem for performing transmission and signal quality tests for analog and digital HSD and VoIP services.
+This connector monitors a portable cable analyzer and CATV meter with a built-in DOCSIS 3.0 modem for performing transmission and signal quality tests for analog and digital HSD and VoIP services.
 
 ## About
 
-This driver displays a table with the different information on input level and on channel level. It also allows you to normalize the currently measured values, in order to base alarm thresholds on these normalized values. Finally, it also provides an overview in a tree structure.
+This connector displays a table with the different information on input level and on channel level. It also allows you to normalize the currently measured values, in order to base alarm thresholds on these normalized values. Finally, it also provides an overview in a tree structure.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Basic range     | No                  | Yes                     |
 | 1.1.0.x          | Release version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 10.7.7.2                    |
 | 1.1.0.x          | 10.7.7.2                    |
@@ -30,7 +30,7 @@ This driver displays a table with the different information on input level and o
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -66,6 +66,6 @@ Via the **Normalize Channels** button, you can set the currently measured values
 
 This page displays a graphical overview of the different inputs, including the channel information per input.
 
-### Webinterface
+### Web Interface
 
 This page displays the native web interface of the device. Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.

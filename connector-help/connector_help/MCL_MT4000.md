@@ -4,17 +4,17 @@ uid: Connector_help_MCL_MT4000
 
 # MCL MT-4000
 
-The **MCL MT-4000** driver is a serial driver used to monitor and configure the **MCL MT-4000 HPA**.
+The **MCL MT-4000** connector is a serial connector used to monitor and configure the **MCL MT-4000 HPA**.
 
 ## About
 
-The **MCL MT-4000** driver is a serial driver that is used to configure and monitor the high power amplifier.
+The **MCL MT-4000** connector is a serial connector that is used to configure and monitor the high power amplifier.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a serial connection and needs the following user information:
+This connector uses a serial connection and requires the following input during element creation:
 
 **SERIAL CONNECTION**:
 

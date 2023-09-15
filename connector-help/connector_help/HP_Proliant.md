@@ -4,15 +4,15 @@ uid: Connector_help_HP_Proliant
 
 # HP Proliant
 
-The HP Proliant driver makes it possible to monitor general and critical parameters of the HP Proliant server.
+The HP Proliant connector makes it possible to monitor general and critical parameters of the HP Proliant server.
 
 ## About
 
-This driver displays information from the server that is retrieved using SNMP polling.
+This connector displays information from the server that is retrieved using SNMP polling.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
@@ -22,7 +22,7 @@ This driver displays information from the server that is retrieved using SNMP po
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

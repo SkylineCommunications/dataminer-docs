@@ -8,7 +8,7 @@ The AMT 2200K is an Advantech Solid State Power Amplifier (SSPAs), from the rang
 
 ## About
 
-This driver is intended to get information from and set information to the device through an element in a DataMiner System, using SNMP commands.
+This connector is intended to get information from and set information to the device through an element in a DataMiner System, using SNMP commands.
 
 To get more detailed information on the device, consult the website [http://www.advantechwireless.com/](http://www.advantechwireless.com/amt-division-rf-products/)
 

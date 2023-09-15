@@ -4,15 +4,15 @@ uid: Connector_help_Al_Jazeera_Media_Network_Comms_Manager
 
 # Al Jazeera Media Network Comms Manager
 
-The Al Jazeera Media Network Comms Manager is a virtual driver used to manage a group of connections for a PCR. The PCR does not return information, and as such, is controlled virtually through the driver. No communication is required.
+The Al Jazeera Media Network Comms Manager is a virtual connector used to manage a group of connections for a PCR. The PCR does not return information, and as such, is controlled virtually through the connector. No communication is required.
 
 ## About
 
-The driver is constituted by a simple table where 3 things controllable: Instances, OS ID's and Tally Colors. These three parameters are used to control the PCR's. It's important to notice that no traffic will be seen in Stream Viewer. CSV functionality is also available.
+The connector is constituted by a simple table where 3 things controllable: Instances, OS ID's and Tally Colors. These three parameters are used to control the PCR's. It's important to notice that no traffic will be seen in Stream Viewer. CSV functionality is also available.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
@@ -22,7 +22,7 @@ Creation
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## Usage
 
@@ -40,4 +40,4 @@ Here, the CSV Management page can be accessed too. The CSV Management page allow
 
 ## Notes
 
-A Visio will be available for this driver.
+A Visio will be available for this connector.

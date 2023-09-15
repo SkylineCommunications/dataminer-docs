@@ -4,7 +4,7 @@ uid: Connector_help_2WCOM_RDS_Encoder
 
 # 2WCOM RDS Encoder
 
-This driver monitors the **2WCOM RDS Encoder**, a professional, fully featured dynamic RDS/RBDS Encoder.
+This connector monitors the **2WCOM RDS Encoder**, a professional, fully featured dynamic RDS/RBDS Encoder.
 
 ## About
 
@@ -17,7 +17,7 @@ The device can be configured and operated via control software ARCOS Config. The
 
 #### Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

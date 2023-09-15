@@ -10,7 +10,7 @@ To further information access the link <http://www.comtechefdata.com/support/doc
 
 About
 
-This driver is intended to get and set information in the device via an Element in a DataMiner System, using Serial commands.
+This connector is intended to get and set information in the device via an Element in a DataMiner System, using Serial commands.
 
 ## Installation and configuration
 

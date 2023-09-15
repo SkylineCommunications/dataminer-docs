@@ -9,17 +9,17 @@ The **Thies Clima Sensor US** is a weather station. It can capture real-time inf
 ## About
 
 The **Thies Clima Sensor US** can operate with the proprietary **Thies** protocol, or with the serial **Modbus RTU** protocol**.
-**This driver implements the **Modbus RTU** protocol.
+**This connector implements the **Modbus RTU** protocol.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 4.11                        |
 
@@ -29,7 +29,7 @@ The **Thies Clima Sensor US** can operate with the proprietary **Thies** protoco
 
 #### Serial Main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -41,7 +41,7 @@ SERIAL CONNECTION:
 
 ### Configuration
 
-The device must be switched to **Modbus RTU** mode in order to work with the driver.
+The device must be switched to **Modbus RTU** mode in order to work with the connector.
 
 If this still needs to be done, press the **Switch to Modbus RTU** button on the **Settings** page.
 
@@ -53,7 +53,7 @@ This page contains general parameters, such as **Serial Number**, **Software Ver
 
 ### Measurements
 
-This is the main page of the driver. It displays the following measurements:
+This is the main page of the connector. It displays the following measurements:
 
 - Wind
 - Humidity

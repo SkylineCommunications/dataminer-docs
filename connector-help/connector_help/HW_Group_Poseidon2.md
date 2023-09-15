@@ -4,9 +4,9 @@ uid: Connector_help_HW_Group_Poseidon2
 
 # HW Group Poseidon2
 
-The **HW Group Poseidon2** driver is used to monitor the HW Group Poseidon2 Event Transceiver integrated devices of type 3266, 3268, 3468, and 4002.
+The **HW Group Poseidon2** connector is used to monitor the HW Group Poseidon2 Event Transceiver integrated devices of type 3266, 3268, 3468, and 4002.
 
-This driver will monitor the overall status of the device. General system information, input/output information and sensor status are retrieved via simple **SNMP** parameter and table polling.
+This connector will monitor the overall status of the device. General system information, input/output information and sensor status are retrieved via simple **SNMP** parameter and table polling.
 
 ## About
 
@@ -37,7 +37,7 @@ This driver will monitor the overall status of the device. General system inform
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

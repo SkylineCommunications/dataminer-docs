@@ -85,12 +85,12 @@ From version 1.0.0.6 onwards, the **Polling Configuration** page allows you to d
 - **Operation**
 - **Input**
 - **Switch Conditions ETR1**
-- ****Switch Conditions ETR2****
-- ****Switch Conditions MIP,****
-- ****Switch Conditions T2-MI****
-- ****Switch Conditions PSIP****
-- ****Switch Conditions Bitrate****
-- ****Switch Conditions Advanced****
+- **Switch Conditions ETR2**
+- **Switch Conditions MIP,**
+- **Switch Conditions T2-MI**
+- **Switch Conditions PSIP**
+- **Switch Conditions Bitrate**
+- **Switch Conditions Advanced**
 
 By default, polling is enabled for these groups and the same polling intervals are used as in previous versions: 10 seconds for fast parameters, 1 minute for medium parameters, and 1 hour for slow parameters.
 

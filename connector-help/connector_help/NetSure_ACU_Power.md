@@ -4,17 +4,17 @@ uid: Connector_help_NetSure_ACU_Power
 
 # NetSure ACU Power
 
-With this driver, the **NetSure ACU Power** can be monitored using SNMP.
+With this connector, the **NetSure ACU Power** can be monitored using SNMP.
 
 ## About
 
-The NetSure ACU Power driver monitors the alarms, temperatures, current and voltages of the **NetSure ACU Power**.
+The NetSure ACU Power connector monitors the alarms, temperatures, current and voltages of the **NetSure ACU Power**.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION**:
 

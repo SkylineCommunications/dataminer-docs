@@ -34,7 +34,7 @@ The connector collects the schedules and data from the API and sets the data acc
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

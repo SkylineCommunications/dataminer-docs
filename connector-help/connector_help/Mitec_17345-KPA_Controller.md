@@ -4,23 +4,23 @@ uid: Connector_help_Mitec_17345-KPA_Controller
 
 # Mitec 17345-KPA Controller
 
-The **Mitec 17345-KPA Controller** driver monitors and controls a redundancy controller through serial communication. The device monitors/controls eight chains, six online and two on standby, each consisting of one High Power Amplifier (HPA).
+The **Mitec 17345-KPA Controller** connector monitors and controls a redundancy controller through serial communication. The device monitors/controls eight chains, six online and two on standby, each consisting of one High Power Amplifier (HPA).
 
 ## About
 
-The driver polls information from the **Mitec 17345-KPA Controller** device every 30 seconds. This can be information regarding general settings, active alarms and ongoing maintenance on the HPAs.
+The connector polls information from the **Mitec 17345-KPA Controller** device every 30 seconds. This can be information regarding general settings, active alarms and ongoing maintenance on the HPAs.
 
 Serial communication is used to poll the information from the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**                                                           |
+| **Range** | **Device Firmware Version**                                                           |
 |------------------|---------------------------------------------------------------------------------------|
 | 1.0.0.x          | Compatible with software version 2.23 of the RSU Model 18687-01 (configuration 1.00). |
 
@@ -28,7 +28,7 @@ Serial communication is used to poll the information from the device.
 
 Serial main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

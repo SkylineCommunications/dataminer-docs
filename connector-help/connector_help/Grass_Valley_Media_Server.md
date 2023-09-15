@@ -4,15 +4,15 @@ uid: Connector_help_Grass_Valley_Media_Server
 
 # Grass Valley Media Server
 
-The **Grass Valley Media Server** driver displays information related to the **Grass Valley Media Server** device.
+The **Grass Valley Media Server** connector displays information related to the **Grass Valley Media Server** device.
 
 ## About
 
-This driver uses an SNMP interface to communicate with the **Grass Valley Media Server** device.
+This connector uses an SNMP interface to communicate with the **Grass Valley Media Server** device.
 
 ## Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP Connection:**
 

@@ -35,7 +35,7 @@ The Spectrum VUE-2 is a next-generation spectrum measurement and analysis unit w
 
 #### Serial IP Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

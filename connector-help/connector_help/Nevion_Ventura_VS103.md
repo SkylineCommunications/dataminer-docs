@@ -4,15 +4,15 @@ uid: Connector_help_Nevion_Ventura_VS103
 
 # Nevion Ventura VS103
 
-With this driver, the **Nevion Ventura VS103 chassis** can be monitored, and new **DVE** elements can be created for the cards in the chassis slots.
+With this connector, the **Nevion Ventura VS103 chassis** can be monitored, and new **DVE** elements can be created for the cards in the chassis slots.
 
 ## About
 
-This driver monitors the Nevion Ventura VS103 chassis and supported cards through **SNMP** communication. Different drivers will be exported for the supported cards. A list can be found in the section "Exported Drivers" below.
+This connector monitors the Nevion Ventura VS103 chassis and supported cards through **SNMP** communication. Different drivers will be exported for the supported cards. A list can be found in the section "Exported Connectors" below.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**                                                                                                                                                                                                                                                               |
+| **Range**     | **Description**                                                                                                                                                                                                                                                               |
 |----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1.0.0.x              | Initial version.                                                                                                                                                                                                                                                              |
 | 1.0.1.x              | Added DVE support for VS906 cards.                                                                                                                                                                                                                                            |
@@ -29,9 +29,9 @@ Notes:
 - In version 2.0.0.7, DCF and VS902 card support has been added
 - From version 2.0.1.1 onwards, changes to card configuration fields are applied in the pending configuration tables and automatically applied to the current configuration.
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Undetermined                |
 | 1.0.1.x          | Undetermined                |
@@ -40,7 +40,7 @@ Notes:
 | 2.0.2.x          | Undetermined                |
 | 2.0.3.x          | Undetermined                |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol**        | **Description**                                                 |
 |------------------------------|-----------------------------------------------------------------|
@@ -58,7 +58,7 @@ Notes:
 
 #### SNMP main connection
 
-The Nevion Ventura VS103 is an SNMP driver. The IP needs to be configured during creation of the element.
+The Nevion Ventura VS103 is an SNMP connector. The IP needs to be configured during creation of the element.
 
 SNMP CONNECTION:
 

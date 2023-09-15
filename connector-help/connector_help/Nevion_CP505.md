@@ -8,19 +8,19 @@ The **Nevion CP505** ATSC processor offers flexible ASI, SMPTE 310 and IP networ
 
 ## About
 
-This driver uses an **HTTP** connection to get and set information on the device. The commands sent are based on its own communication protocol, the **TXP - T-VIPS XML Protocol**.
+This connector uses an **HTTP** connection to get and set information on the device. The commands sent are based on its own communication protocol, the **TXP - T-VIPS XML Protocol**.
 
-The layout of the driver mirrors the device's web interface as much as possible. For more information, refer to: <http://nevion.com/products/processingmultiplexing/cp505>.
+The layout of the connector mirrors the device's web interface as much as possible. For more information, refer to: <http://nevion.com/products/processingmultiplexing/cp505>.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 2.2.14                      |
 
@@ -30,7 +30,7 @@ The layout of the driver mirrors the device's web interface as much as possible.
 
 #### HTTP Main connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

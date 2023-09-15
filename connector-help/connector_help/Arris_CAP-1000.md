@@ -4,26 +4,26 @@ uid: Connector_help_Arris_CAP-1000
 
 # Arris CAP-1000
 
-The **Arris CAP-1000** protocol driver is a **HTTP** driver that will be used to monitor and configure th **Arris CAP-1000**.
+The **Arris CAP-1000** connector is a **HTTP** connector that will be used to monitor and configure th **Arris CAP-1000**.
 
-The version (**1.0.0.1**) of the driver supports software version **v4.1** with **XML protocol 4.0**.
+The version (**1.0.0.1**) of the connector supports software version **v4.1** with **XML protocol 4.0**.
 
 ## About
 
 The **Arris CAP-1000** is an IP-centric MPEG-2/MPEG-4 digital stream processor capable of high-quality rate shaping, splicing, and multiplexing. It features field-replaceable processing modules, dual hot-swappable power supplies, and fan trays, all in a **single 1-RU chassis**.
 
-There are multiple ways to monitor and configure the settings for the Arris CAP-1000. This driver is based on The **CherryPicker Element Manager**. The CherryPicker Element Manager is a browser-based Java interface that enables you to **remotely configure, control, and monitor each Arris CAP-1000** unit in your network.
+There are multiple ways to monitor and configure the settings for the Arris CAP-1000. This connector is based on The **CherryPicker Element Manager**. The CherryPicker Element Manager is a browser-based Java interface that enables you to **remotely configure, control, and monitor each Arris CAP-1000** unit in your network.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**                               | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**                               | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|-----------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x              | Initial Version                               | No                  | Yes                     |
 | 1.0.1.x \[SLC Main\] | Added displaykey to the Alarms Overview Table | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**         |
+| **Range** | **Device Firmware Version**         |
 |------------------|-------------------------------------|
 | 1.0.0.x          | **v4.1** with **XML protocol 4.0**. |
 | 1.0.1.x          | **v4.1** with **XML protocol 4.0**. |
@@ -34,7 +34,7 @@ There are multiple ways to monitor and configure the settings for the Arris CAP-
 
 #### HTTP Main Connection
 
-This driver uses a HTTP connection and requires the following input during element creation:
+This connector uses a HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -50,11 +50,11 @@ When the element is stopped or restarted later, the username and password will b
 
 ### Device
 
-The **Device** page displays some general information of the device (**name**, **version**, **model**.). On this page, it's also possible to **reboot** the device, to **restart the core** or to **restart the controller**. As mentioned before, the "**Security.**" pagebutton is also available on this page.
+The **Device** page displays some general information of the device (**name**, **version**, **model**.). On this page, it's also possible to **reboot** the device, to **restart the core** or to **restart the controller**. As mentioned before, the "**Security.**" page button is also available on this page.
 
 The "**Device Redundancy Slate**" parameter makes it possible to configure redundancy slate for the entire device. This will put all output muxes and programs in the selected redundancy slate configuration. This is also possible on a mux or program level, but this is available on different pages.
 
-This page also has eigth subpages, which you can access through page buttons:
+This page also has eight subpages, which you can access through page buttons:
 
 - **Permissions**: Displays the **Users** table, containing a list of users available to login on the device. It's also possible to add new users to the system.
 - **SimulCrypt**: Displays the **CA Systems** and **ECM Generators** tables, containing the available CA systems and ECM Generators. It's possible also to add new CA System and ECM Generators.

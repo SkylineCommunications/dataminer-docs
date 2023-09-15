@@ -18,7 +18,7 @@ The Skyline Basic SDN Controller is a generic solution to control and configure 
 
 | **Range** | **Supported Firmware**                                                       |
 |-----------|------------------------------------------------------------------------------|
-| 1.0.0.1   | Not applicable. This is a virtual driver that doesn't connect to any device. |
+| 1.0.0.1   | Not applicable. This is a virtual connector that doesn't connect to any device. |
 
 ### System Info
 
@@ -39,7 +39,7 @@ The Skyline Basic SDN Controller is a generic solution to control and configure 
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 

@@ -4,17 +4,17 @@ uid: Connector_help_Cobham_Sea_Tel_6012_VSAT
 
 # Cobham Sea Tel 6012 VSAT
 
-This driver retrieves status information from an ACU.
+This connector retrieves status information from an ACU.
 
 ## About
 
-This is a smart-serial driver. It uses the telnet protocol to retrieve the necessary status information from the device.
+This is a smart-serial connector. It uses the telnet protocol to retrieve the necessary status information from the device.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a serial connection and needs the following user information:
+This connector uses a serial connection and requires the following input during element creation:
 **SERIAL CONNECTION:**
 
 - **IP address/host:** The polling IP of the device, e.g. *10.224.85.37.*

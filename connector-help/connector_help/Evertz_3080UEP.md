@@ -4,7 +4,7 @@ uid: Connector_help_Evertz_3080UEP
 
 # Evertz 3080UEP
 
-This driver is used to monitor the Evertz 3080UEP Universal Encoding Platform.
+This connector is used to monitor the Evertz 3080UEP Universal Encoding Platform.
 
 ## About
 

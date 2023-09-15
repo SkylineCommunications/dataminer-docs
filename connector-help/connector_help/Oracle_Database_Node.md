@@ -4,21 +4,21 @@ uid: Connector_help_Oracle_Database_Node
 
 # Oracle Database Node
 
-This is a **serial** driver that is used to monitor and configure the log files of the **Oracle Database Node**.
+This is a **serial** connector that is used to monitor and configure the log files of the **Oracle Database Node**.
 
 ## About
 
 The information on tables and parameters is retrieved via **Serial SSH** communication.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | N/A                         |
 
@@ -28,7 +28,7 @@ The information on tables and parameters is retrieved via **Serial SSH** communi
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

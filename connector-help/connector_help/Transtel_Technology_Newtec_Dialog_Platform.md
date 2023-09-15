@@ -4,7 +4,7 @@ uid: Connector_help_Transtel_Technology_Newtec_Dialog_Platform
 
 # Transtel Technology Newtec Dialog Platform
 
-This driver is designed to retrieve information from a DMA set up by Newtec and exports drivers made by Newtec.
+This connector is designed to retrieve information from a DMA set up by Newtec and exports drivers made by Newtec.
 
 ## About
 
@@ -61,7 +61,7 @@ This driver is designed to retrieve information from a DMA set up by Newtec and 
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -71,11 +71,11 @@ HTTP CONNECTION:
 
 #### Virtual connection
 
-This driver uses a virtual connection, for which no input is required during element creation.
+This connector uses a virtual connection, for which no input is required during element creation.
 
 ### Initialization
 
-This driver is designed to poll one DMA. In case of a cluster consisting of multiple DMAs, one element will be needed for each DMA in the cluster.
+This connector is designed to poll one DMA. In case of a cluster consisting of multiple DMAs, one element will be needed for each DMA in the cluster.
 
 To set up the element, you need to specify the DMA ID of the Agent you want to poll and the credentials.
 
@@ -87,6 +87,6 @@ There is no redundancy defined.
 
 ## How to use
 
-This driver retrieves all the **elements** and **protocols** on the specified DMA, as well as particular **tables** and **parameters** from elements, and displays these.
+This connector retrieves all the **elements** and **protocols** on the specified DMA, as well as particular **tables** and **parameters** from elements, and displays these.
 
 It is possible to create DVEs for some of these DataMiner elements. These can be enabled in the exported protocol overview table.

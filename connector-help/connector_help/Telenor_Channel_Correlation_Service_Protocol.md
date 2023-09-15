@@ -30,7 +30,7 @@ The Telenor Channel Correlation Service Protocol generates a single correlated a
 
 ### Connections
 
-This driver is a service protocol driver and does not require any input during element creation.
+This connector is a service connector and does not require any input during element creation.
 
 ## How to use
 

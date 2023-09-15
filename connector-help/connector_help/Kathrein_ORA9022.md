@@ -8,11 +8,11 @@ The **Kathrein ORA9022** is an optical receiver.
 
 ## About
 
-With this driver you can manage the Kathrein ORA9022 device using the **SNMP** protocol.
+With this connector you can manage the Kathrein ORA9022 device using the **SNMP** protocol.
 
 ## Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP Connection:**
 
@@ -47,6 +47,6 @@ This page consists of a number of different sections:
 
 ### Configuration Page
 
-This page contains this driver's configurable parameters. In the **Configuration** table, for example, you can configure the **Forward Bandwidth**, **ALSC Mode**, **Lower Pilot Modulation**, **Lower Pilot Level**, etc.
+This page contains this connector's configurable parameters. In the **Configuration** table, for example, you can configure the **Forward Bandwidth**, **ALSC Mode**, **Lower Pilot Modulation**, **Lower Pilot Level**, etc.
 
 The **OSR 900x** page button opens an additional page where you can set OSR 900x-specific parameters in the **OSR 900x Configuration Table**.

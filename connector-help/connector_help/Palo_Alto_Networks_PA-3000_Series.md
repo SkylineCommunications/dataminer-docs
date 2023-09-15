@@ -10,19 +10,19 @@ The Palo Alto Networks PA-3000 series of next-generation firewall appliances com
 
 The controlling element of the PA-3000 series is PAN-OS, a security-specific operating system that natively classifies all traffic, inclusive of applications, threats and content, and then ties that traffic to the user, regardless of location or device type.
 
-This driver uses an SNMPv3 connection.
+This connector uses an SNMPv3 connection.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Old range (\*). | No                  | Yes                     |
 
 **(\*) NOTE:** Drivers for all Palo Alto Networks firewall products will continue to be developed in the **1.0.0.x [Palo Alto Networks Firewall Series](xref:Connector_help_Palo_Alto_Networks_Firewall_Series) range**.
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 7.\*, 8.0.0 & 8.0.7         |
 
@@ -32,7 +32,7 @@ This driver uses an SNMPv3 connection.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

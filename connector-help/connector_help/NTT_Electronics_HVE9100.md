@@ -4,21 +4,21 @@ uid: Connector_help_NTT_Electronics_HVE9100
 
 # NTT Electronics HVE9100
 
-This driver is used to monitor and configure the **HVE9100** encoder from **NTT Electronics**.
+This connector is used to monitor and configure the **HVE9100** encoder from **NTT Electronics**.
 
 ## About
 
-This driver uses the **SNMP** protocol to communicate with the device.
+This connector uses the **SNMP** protocol to communicate with the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 07.00/Rev.F./01.50/Rev.C    |
 
@@ -28,7 +28,7 @@ This driver uses the **SNMP** protocol to communicate with the device.
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

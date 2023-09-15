@@ -4,7 +4,7 @@ uid: Connector_help_Smartgrid_PDU_General
 
 # Smartgrid PDU General
 
-This driver can be used to gather and view information from the device **Smartgrid PDU**.
+This connector can be used to gather and view information from the device **Smartgrid PDU**.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver can be used to gather and view information from the device **Smartgr
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

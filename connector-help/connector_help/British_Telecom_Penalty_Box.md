@@ -10,9 +10,9 @@ The British Telecom Penalty Box groups service-impacting alarms in the DMS and t
 
 The British Telecom Penalty Box retrieves a string of combined alarm information from the Penalty Box Configuration Automation script. The alarm data is extracted from this string and the alarms are individually stored in the Alarm Table. This table is periodically checked and the alarms are grouped per service in the Service Table. If a change occurs to the service with the highest priority in the Service Table, the Penalty Box Configuration Automation script is triggered for this service.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
@@ -22,7 +22,7 @@ The British Telecom Penalty Box retrieves a string of combined alarm information
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## Usage
 
@@ -46,13 +46,13 @@ The **Alarm Table** page button opens the Alarm Table subpage. The Alarm Table c
 
 The **Add Service** page button allows you to manually add a new service to the Service Table. First set the **Service Name**, **Service Priority**, **Service Network Location** and **Service UMD Text** before you press the **Add New Service** button. The new service will then be added to the table.
 
-If the **Cycling Mode** parameter is enabled, the driver runs through the list of monitored services defined in each DataMiner Penalty Box and displays them one by one.
+If the **Cycling Mode** parameter is enabled, the connector runs through the list of monitored services defined in each DataMiner Penalty Box and displays them one by one.
 
 The **Display Duration** defines the amount of time the services will be displayed in cycling mode. The value can be between one and five minutes.
 
 ## Notes
 
-This driver should be used together with the following Automation scripts:
+This connector should be used together with the following Automation scripts:
 
 - Penalty Box Alarms
 - Penalty Box Configuration

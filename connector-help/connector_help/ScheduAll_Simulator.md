@@ -6,13 +6,13 @@ uid: Connector_help_ScheduAll_Simulator
 
 The **ScheduAll Simulator** is a simulation solution for the ScheduAll Manager.
 
-This driver can communicate with the ScheduAll Manager, simulating the usual communication of the ScheduAll web service and Interop service.
+This connector can communicate with the ScheduAll Manager, simulating the usual communication of the ScheduAll web service and Interop service.
 
 ## About
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                     | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                     | **DCF Integration** | **Cassandra Compliant** |
 |------------------|---------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.1          | Initial version                                                     | No                  | Yes                     |
 | 2.1.0.7          | Additional check on number of fields                                | No                  | Yes                     |
@@ -29,7 +29,7 @@ This protocol uses HTTP to communicate with the ScheduAll services. It requires 
 **SERIAL connection:**
 
 - **IP address/host**: The IP address of the main serial connection.
-- **Port**: The main port the driver will communicate through.
+- **Port**: The main port the connector will communicate through.
 
 **CHORUS INTEROP SERVICE connection:**
 

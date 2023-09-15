@@ -4,7 +4,7 @@ uid: Connector_help_Newtec_AZ202
 
 # Newtec AZ202
 
-With this driver, it is possible to monitor Newtec AZ202 devices with SNMP. Traps received from the device are used to update the alarm tables.
+With this connector, it is possible to monitor Newtec AZ202 devices with SNMP. Traps received from the device are used to update the alarm tables.
 
 ## About
 
@@ -41,7 +41,7 @@ With this driver, it is possible to monitor Newtec AZ202 devices with SNMP. Trap
 
 #### SNMP Main Connection
 
-This is an SNMP driver. The IP needs to be configured during creation of the element.
+This is an SNMP connector. The IP needs to be configured during creation of the element.
 
 SNMP CONNECTION:
 

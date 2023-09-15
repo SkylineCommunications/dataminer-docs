@@ -10,7 +10,7 @@ Management System protocol to assist on SRM functionality.
 
 This protocol assists on SRM functionality making possible to monitor **Network Transport** services by subscribing it' s events notifications such as alarm **Severity State** notifications or **Communication State** notifications.
 
-### Ranges of the driver
+### Version Info
 
 | **Range**            | **Key Features**                          | **Based on** | **Min. DMA Version** |
 |----------------------|-------------------------------------------|--------------|----------------------|
@@ -20,7 +20,7 @@ This protocol assists on SRM functionality making possible to monitor **Network 
 
 ### Creation
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## Usage
 

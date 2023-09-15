@@ -9,17 +9,17 @@ The **Ziggo Incident Gateway** driver will generate a SNMP trap to register an e
 ## About
 
 The **Ziggo Incident Gateway** receives info that is collected by the MICA interactive automation script. This script makes it possible to initiate an incident without the existence of alarms.
-The driver will process this information and will generate a SNMP trap to the SAM System.
+The connector will process this information and will generate a SNMP trap to the SAM System.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Undetermined                |
 
@@ -29,7 +29,7 @@ The driver will process this information and will generate a SNMP trap to the SA
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Configuration
 
@@ -39,11 +39,11 @@ The **Trap OID** and **Destination IP** need to be provided on the **Trap Config
 
 ## Usage
 
-This driver consists of the pages below.
+This connector consists of the pages below.
 
 ### General
 
-This page displays the **Send Trap History Table.** In this table you can see the last X send traps by the driver. You can adjust the number of rows in the table with the **Maximum Number of Traps** parameter.
+This page displays the **Send Trap History Table.** In this table you can see the last X send traps by the connector. You can adjust the number of rows in the table with the **Maximum Number of Traps** parameter.
 
 ### CSV Configuration
 

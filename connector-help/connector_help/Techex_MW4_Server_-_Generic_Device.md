@@ -4,15 +4,15 @@ uid: Connector_help_Techex_MW4_Server_-_Generic_Device
 
 # Techex MW4 Server - Generic Device
 
-The **Techex MW4 Server - Generic Device** driver is an HTTP-based driver that is used to monitor and configure a **Techex MW4 Server**. The middleware server will expose set-top boxes connected to the system and allows the user to manage these.
+The **Techex MW4 Server - Generic Device** connector is an HTTP-based connector that is used to monitor and configure a **Techex MW4 Server**. The middleware server will expose set-top boxes connected to the system and allows the user to manage these.
 
 ## About
 
-This driver provides a monitoring interface for a **Techex MW4 Server**.
+This connector provides a monitoring interface for a **Techex MW4 Server**.
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range**     | **Device Firmware Version** |
+| **Range**     | **Device Firmware Version** |
 |----------------------|-----------------------------|
 | 1.0.0.x              | 4.6.4                       |
 | 1.0.1.x \[SLC_Main\] | 4.6.4                       |
@@ -21,7 +21,7 @@ This driver provides a monitoring interface for a **Techex MW4 Server**.
 
 ### Creation
 
-This driver is used by DVE child elements that are **automatically created** by the parent driver **Techex MW4 Server**.
+This connector is used by DVE child elements that are **automatically created** by the parent connector **Techex MW4 Server**.
 
 ## Usage
 
@@ -47,7 +47,7 @@ This page displays the web interface of the device. Note that the client machine
 
 ## DataMiner Connectivity Framework
 
-The **1.0.1.x** driver range of the **Techex MW4 Server - Generic Device** protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
+The **1.0.1.x** connector range of the **Techex MW4 Server - Generic Device** protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 

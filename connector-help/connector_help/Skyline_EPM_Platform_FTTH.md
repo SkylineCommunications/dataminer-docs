@@ -64,9 +64,9 @@ The implemented architecture has a central point of control where the front-end 
 
 A new provisioning process is initiated when you click the provision button in the front-end element. This action triggers a sequence of events spaced at 5-second intervals.
 
-1.  The Workflow Manager elements are notified to generate the structured files with the IDs for each entity. Once these have been generated/exported, the front-end element is notified of this.
-2.  The collector elements are notified to import the files.
-3.  The back-end elements are notified to import the files.
+1. The Workflow Manager elements are notified to generate the structured files with the IDs for each entity. Once these have been generated/exported, the front-end element is notified of this.
+2. The collector elements are notified to import the files.
+3. The back-end elements are notified to import the files.
 
 By default, the destination is expected to respond within 5 seconds, but this polling interval can be customized with the timer base option.
 

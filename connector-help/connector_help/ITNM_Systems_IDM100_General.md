@@ -4,21 +4,21 @@ uid: Connector_help_ITNM_Systems_IDM100_General
 
 # ITNM Systems IDM100 General
 
-This driver is used to retrieve the **transport streams** and the **services** from the transport streams from the **ITNM Systems IDM100** analyzer, and to display information about the services. The driver uses a serial connection to send HTTP commands to the device.
+This connector is used to retrieve the **transport streams** and the **services** from the transport streams from the **ITNM Systems IDM100** analyzer, and to display information about the services. The connector uses a serial connection to send HTTP commands to the device.
 
 ## About
 
-This driver sends HTTP commands to the IDM100 over a serial connection. The driver only polls the **transport streams** of the ITNM Systems IDM100.
+This connector sends HTTP commands to the IDM100 over a serial connection. The connector only polls the **transport streams** of the ITNM Systems IDM100.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                  | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                  | **DCF Integration** | **Cassandra Compliant** |
 |------------------|----------------------------------|---------------------|-------------------------|
 | 2.0.0.x          | Integration of previous version. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 2.0.0.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ This driver sends HTTP commands to the IDM100 over a serial connection. The driv
 
 #### Serial Main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -77,6 +77,6 @@ This page contains extra information about the errors and performance of the ser
 
 It also contains the **General PCR / PTS / DTS Table**, which displays general information about each service.
 
-### Webinterface
+### Web Interface
 
 This page displays the web interface of the device. Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.

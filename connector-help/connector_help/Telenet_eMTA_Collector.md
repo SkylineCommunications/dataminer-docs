@@ -4,11 +4,11 @@ uid: Connector_help_Telenet_eMTA_Collector
 
 # Telenet eMTA Collector
 
-The **Telenet eMTA Collector** is part of the CPE setup, and works together with the **Telenet CPE Manager**, **Telenet STB Collector** and **Telenet CM Collector** driver. This driver is responsible for the polling of the eMTAs.
+The **Telenet eMTA Collector** is part of the CPE setup, and works together with the **Telenet CPE Manager**, **Telenet STB Collector** and **Telenet CM Collector** connector. This connector is responsible for the polling of the eMTAs.
 
 ## About
 
-This driver will poll all the eMTAs in two poll cycles:
+This connector will poll all the eMTAs in two poll cycles:
 
 - one fast poll cycle that will poll all eMTAs over a 15-minute period.
 - one slow poll cycle that will poll all eMTAs over a 24-hour period.
@@ -19,7 +19,7 @@ The polled data will be offloaded into CSV files and will be aggregated by the C
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP Connection:**
 
@@ -30,7 +30,7 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and requ
 
 - **Port Number**: The port of the connected device, by default *161*.
 - **Get community string**: The community string used when reading values from the device, by default *public*.
-- **Set community string**: Not needed, because the driver will not perform sets.
+- **Set community string**: Not needed, because the connector will not perform sets.
 
 Note: All polled eMTAs will use the same settings.
 

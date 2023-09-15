@@ -4,9 +4,9 @@ uid: Connector_help_Solarwinds_Orion
 
 # Solarwinds Orion
 
-The **Solarwinds Orion** is a monitoring tool used by system administrators and network engineers. This driver is intended to collect information about the components available on the network. That information is provided by the Orion modules (APM, NCM, IPAM, NPM, etc.).
+The **Solarwinds Orion** is a monitoring tool used by system administrators and network engineers. This connector is intended to collect information about the components available on the network. That information is provided by the Orion modules (APM, NCM, IPAM, NPM, etc.).
 
-This driver will export a different driver based on retrieved data (see section "Exported Drivers"). The corresponding **Solarwinds Orion Node** element is generated when **DVE Creation** is enabled in the **Orion Nodes** table.
+This connector will export a different driver based on retrieved data (see section "Exported Connectors"). The corresponding **Solarwinds Orion Node** element is generated when **DVE Creation** is enabled in the **Orion Nodes** table.
 
 ## About
 
@@ -37,7 +37,7 @@ This driver will export a different driver based on retrieved data (see section 
 
 HTTP main connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -55,7 +55,7 @@ A REST/JSON API will be used to define queries sent to the tool through HTTP POS
 
 For more information about the API, refer to the website <https://github.com/solarwinds/OrionSDK/wiki>. For more information about the Orion suite, refer to <http://www.solarwinds.com/>.
 
-The element created with this driver has the following data pages:
+The element created with this connector has the following data pages:
 
 - **General**: Displays the address of the tool and the credentials that must be filled in in order to start communicating with it.
 - **Engines**: Contains an overview of the engines with related information.

@@ -8,15 +8,15 @@ This is enhanced services that contains elements with the protocol Sky UK SSR, S
 
 ## About
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial Version | No                  | False                   |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -26,7 +26,7 @@ This is enhanced services that contains elements with the protocol Sky UK SSR, S
 
 #### Service Main Connection
 
-This driver uses a service connection and requires the following input during element creation:
+This connector uses a service connection and requires the following input during element creation:
 
 SERVICE CONNECTION:
 

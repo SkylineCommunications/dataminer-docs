@@ -4,27 +4,27 @@ uid: Connector_help_Specialty_Microwave_Corp_14344-50x
 
 # Specialty Microwave Corp 14344-50X
 
-The Specialty Microwave Corp 14344-50X driver retrieves the power supply and input statuses through a serial connection. The driver allows the user to select an active coaxial input based on two existing ones.
+The Specialty Microwave Corp 14344-50X connector retrieves the power supply and input statuses through a serial connection. The connector allows the user to select an active coaxial input based on two existing ones.
 
 ## About
 
-This driver polls the device every five seconds through a serial connection.
+This connector polls the device every five seconds through a serial connection.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** |
+| **Range** | **Description** |
 |------------------|-----------------|
 | 1.0.0.x          | Initial version |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**                                                                                                            |
+| **Range** | **Device Firmware Version**                                                                                                            |
 |------------------|----------------------------------------------------------------------------------------------------------------------------------------|
 | 1.0.0.x          | Information about the device firmware is unavailable. The current implementation is based on Revision 0 of the device's documentation. |
 
 ## Installation and configuration
 
-This driver uses a **serial** connection and needs the following user information:
+This connector uses a **serial** connection and requires the following input during element creation:
 
 Interface connection:
 
@@ -34,7 +34,7 @@ Interface connection:
 
 ## Usage
 
-This driver has two pages.
+This connector has two pages.
 
 ### General Page
 

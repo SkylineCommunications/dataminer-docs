@@ -4,19 +4,19 @@ uid: Connector_help_T-Vips_TVG450
 
 # T-VIPS TVG450
 
-The **T-VIPS TVG450** driver is an SNMP-based driver used to monitor and configure the **T-VIPS TVG450**.
+The **T-VIPS TVG450** connector is an SNMP-based connector used to monitor and configure the **T-VIPS TVG450**.
 
 ## About
 
 The **TVG450** provides a monitoring interface to the **T-VIPS TVG450** Video Gateway device.
 
-This driver works with firmware versions 3.4.4 and 3.8.24.
+This connector works with firmware versions 3.4.4 and 3.8.24.
 
 ## Installation and configuration
 
 ### Creation
 
-The **T-VIPS TVG450** is an SNMP driver. The IP needs to be configured during creation of the element.
+The **T-VIPS TVG450** is an SNMP connector. The IP needs to be configured during creation of the element.
 
 **SNMP CONNECTION:**
 

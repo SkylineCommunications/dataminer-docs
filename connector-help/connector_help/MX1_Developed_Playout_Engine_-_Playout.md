@@ -4,11 +4,11 @@ uid: Connector_help_MX1_Developed_Playout_Engine_-_Playout
 
 # MX1 Developed Playout Engine - Playout
 
-This exported driver is used to **monitor the operational status of the playout channels**.
+This exported connector is used to **monitor the operational status of the playout channels**.
 
 ## About
 
-This driver is exported from the MX1 Developed Playout Engine driver.
+This connector is exported from the MX1 Developed Playout Engine driver.
 
 ### Version Info
 

@@ -15,9 +15,9 @@ Earth stations can be fixed or steerable, and in the latter case the orientation
 > [!NOTE]
 > The Generic Sun Outage connector is based on requirements and calculations provided by other clients and is designed to provide approximate, best-effort notifications and estimates of when a sun outage may occur.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**                                                                             | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**                                                                             | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|---------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x              | Initial version.                                                                            | No                  | Yes                     |
 | 1.0.1.x              | Implemented logic that allows dynamic adding of earth stations and satellites via CSV file. | No                  | Yes                     |
@@ -84,7 +84,7 @@ Note that the tree control **does not contain any configurable parameters.**
 
 ### Configuration
 
-This page contains all the configuration parameters that are related to the functionality of the driver. The page consists of two main functionality sections: **General Settings** and **Tree Control Config.**
+This page contains all the configuration parameters that are related to the functionality of the connector. The page consists of two main functionality sections: **General Settings** and **Tree Control Config.**
 
 #### General Settings
 

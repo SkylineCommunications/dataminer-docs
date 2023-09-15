@@ -32,7 +32,7 @@ The Check Point 1430 Firewall is a security gateway of high-performance, integra
 
 #### SNMP main connection
 
-This driver uses an SNMPv2 connection and requires the following input during element creation:
+This connector uses an SNMPv2 connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -58,7 +58,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use (1.0.0.x)
 
-The element created with this driver consists of the following data pages:
+The element created with this connector consists of the following data pages:
 
 - **General**: Displays general **system information** as well as the **System OR** table, which lists the capabilities of the local SNMP applications acting as a command responder with respect to various MIB modules.
 - **Secure Virtual Network**: Provides an overview of the **Secure Virtual Network**, **OS information**, **SVN Appliance** and **SVN Routing Modification** details. Also contains three page buttons that provide access to more details about **SVN Performance, SVN Network Interfaces** and **VS Routing.**

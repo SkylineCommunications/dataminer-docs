@@ -4,21 +4,21 @@ uid: Connector_help_SA_ROSA_EM_-_Vikinx
 
 # SA ROSA EM - Vikinx
 
-The Rosa EM - Vikinx driver will display information related to a **Vikinx** device connected to the ROSA EM device. The displayed information is organized according to the Rosa EM web application. In addition, this driver also provides the possibility to perform sets on Vikinx devices.
+The Rosa EM - Vikinx driver will display information related to a **Vikinx** device connected to the ROSA EM device. The displayed information is organized according to the Rosa EM web application. In addition, this connector also provides the possibility to perform sets on Vikinx devices.
 
 ## About
 
-The ROSA EM - Vikinx driver is used to obtain information from Vikinx devices connected to the Rosa EM device. An **SNMP** connection is used in order to successfully retrieve and configure the device's information.
+The ROSA EM - Vikinx connector is used to obtain information from Vikinx devices connected to the Rosa EM device. An **SNMP** connection is used in order to successfully retrieve and configure the device's information.
 
 ### Ranges of the Driver
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -28,12 +28,12 @@ The ROSA EM - Vikinx driver is used to obtain information from Vikinx devices co
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP Connection:
 
 - **IP Address**: The polling IP of the Rosa device, e.g. *10.55.48.31*.
-- **Device address**: The device address can be found on the page **Vikinx Devices** of the driver Rosa EM.
+- **Device address**: The device address can be found on the page **Vikinx Devices** of the connector Rosa EM.
 
 SNMP Settings:
 

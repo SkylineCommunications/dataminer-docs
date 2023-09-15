@@ -4,7 +4,7 @@ uid: Connector_help_T-Vips_TVG425_XML
 
 # T-Vips TVG425 XML
 
-The T-Vips TVG425 driver is an **HTTP** based driver used to monitor and configure the T-Vips TVG425.
+The T-Vips TVG425 connector is an **HTTP** based connector used to monitor and configure the T-Vips TVG425.
 
 ## About
 
@@ -14,7 +14,7 @@ The TVG425 provides gateway functionality to encapsulate MPEG-2 transport stream
 
 ### Creation
 
-This driver uses a **HTTP** connection and needs following user information:
+This connector uses a **HTTP** connection and needs following user information:
 
 **HTTP Connection:**
 
@@ -56,6 +56,6 @@ Information about the ASI Input services.
 
 This page contains a table with the configuration and a table with the status of the interfaces.
 
-### Webinterface Page
+### Web Interface Page
 
 Contains the webinterface of the device.

@@ -4,7 +4,7 @@ uid: Connector_help_Newtec_M6100R2
 
 # Newtec M6100R2
 
-This driver allows you to monitor and configure the Newtec M6100R2 broadcast satellite modulator. Communication with the device happens via SNMP.
+This connector allows you to monitor and configure the Newtec M6100R2 broadcast satellite modulator. Communication with the device happens via SNMP.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver allows you to monitor and configure the Newtec M6100R2 broadcast sat
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

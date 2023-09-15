@@ -12,9 +12,9 @@ This protocol can be used to monitor and control any router that supports the Pr
 
 A matrix is used in order to easily connect a destination with a source.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                     | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                     | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial range. Serial interface.                    | No                  | Yes                     |
 | 2.0.0.x          | Based on 1.0.0.1. Smart-serial interface.           | No                  | Yes                     |
@@ -26,7 +26,7 @@ A matrix is used in order to easily connect a destination with a source.
 
 #### Serial connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL connection:
 
@@ -37,7 +37,7 @@ SERIAL connection:
 
 #### SNMP connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP connection:
 

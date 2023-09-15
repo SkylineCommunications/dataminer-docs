@@ -4,11 +4,11 @@ uid: Connector_help_Nevion_Virtuoso_CP4400
 
 # Nevion Virtuoso CP4400
 
-This is a DataMiner driver for the **Nevion Virtuoso CP4400**, a device for the processing and handling of MPEG transport streams.
+This is a DataMiner connector for the **Nevion Virtuoso CP4400**, a device for the processing and handling of MPEG transport streams.
 
 ## About
 
-This SNMP driver is used to monitor and configure the **Nevion Virtuoso CP4400**.
+This SNMP connector is used to monitor and configure the **Nevion Virtuoso CP4400**.
 
 ### Version Info
 
@@ -37,7 +37,7 @@ This SNMP driver is used to monitor and configure the **Nevion Virtuoso CP4400**
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -51,7 +51,7 @@ SNMP Settings:
 
 #### HTTP Connection (Range 1.0.1.x)
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

@@ -4,22 +4,22 @@ uid: Connector_help_Microsoft_Platform_SNMP
 
 # Microsoft Platform SNMP
 
-With the **Microsoft Platform** driver, it is possible to monitor a Microsoft server.
+With the **Microsoft Platform** connector, it is possible to monitor a Microsoft server.
 
 ## About
 
-The Microsoft Platform driver retrieves basic information from a Microsoft server. Extra information can be enabled or disabled, e.g. Task Manager, Service List, etc.
+The Microsoft Platform connector retrieves basic information from a Microsoft server. Extra information can be enabled or disabled, e.g. Task Manager, Service List, etc.
 On the Task Manager page, a button allows you to normalize alarms in order to set the current values as normal.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.1.0.x \[SLC Main\] | Initial version | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**                                         |
+| **Range** | **Device Firmware Version**                                         |
 |------------------|---------------------------------------------------------------------|
 | 1.1.0.x          | All Windows and Windows Server versions with built-in SNMP service. |
 
@@ -29,7 +29,7 @@ On the Task Manager page, a button allows you to normalize alarms in order to se
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -118,7 +118,7 @@ The following page buttons allow access to additional Huawei info:
 
 ## DataMiner Connectivity Framework
 
-DCF is supported from version 1.1.0.11 of the driver onwards and requires DataMiner version 8.5.3 or higher.
+DCF is supported from version 1.1.0.11 of the connector onwards and requires DataMiner version 8.5.3 or higher.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 

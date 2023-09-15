@@ -4,7 +4,7 @@ uid: Connector_help_Newtec_MCX7000
 
 # Newtec MCX7000
 
-The Newtec MCX7000 is a DVB-S2X multi-carrier satellite gateway. This driver allows you to monitor and configure this device via SNMP.
+The Newtec MCX7000 is a DVB-S2X multi-carrier satellite gateway. This connector allows you to monitor and configure this device via SNMP.
 
 ## About
 
@@ -32,7 +32,7 @@ The Newtec MCX7000 is a DVB-S2X multi-carrier satellite gateway. This driver all
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -46,7 +46,7 @@ SNMP Settings:
 
 ### Configuration
 
-This driver has QActions that use System.Net.WebUtility.htmlDecode(), which requires **.NET framework 4 or higher**. Make sure this is installed before you use the driver.
+This connector has QActions that use System.Net.WebUtility.htmlDecode(), which requires **.NET framework 4 or higher**. Make sure this is installed before you use the connector.
 
 ### Redundancy
 
@@ -58,7 +58,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver consists of the following data pages:
+The element created with this connector consists of the following data pages:
 
 - **Management/Data Interfaces**: These pages contain multiple tables that allow you to monitor and configure parameters related to the management/data interfaces. This includes alarm information.
 - **TS Over IP Input/Output**: These pages contain multiple tables that allow you to configure and monitor TS over IP input/output parameters. There is also a Counter Reset button, which resets the packet counters.
@@ -78,7 +78,7 @@ The element created with this driver consists of the following data pages:
 
 ## DataMiner Connectivity Framework
 
-The **1.0.0.x** driver range of the Newtec MCX7000 protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
+The **1.0.0.x** connector range of the Newtec MCX7000 protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 

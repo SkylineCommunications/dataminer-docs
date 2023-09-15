@@ -4,7 +4,7 @@ uid: Connector_help_SES_S.A._DAKS_SNMP_Client
 
 # SES S.A. DAKS SNMP Client
 
-This driver will receive the SNMP traps from specific IP addresses configured by the user.
+This connector will receive the SNMP traps from specific IP addresses configured by the user.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver will receive the SNMP traps from specific IP addresses configured by
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -54,6 +54,6 @@ There is no redundancy defined.
 
 ## How to use
 
-This driver uses an **SNMP** connection, but does not actively retrieve information. Instead, it receives **traps** from **multiple** **devices**, based on the IP addresses configured on the General page.
+This connector uses an **SNMP** connection, but does not actively retrieve information. Instead, it receives **traps** from **multiple** **devices**, based on the IP addresses configured on the General page.
 
-When the driver receives a trap, it will check the Text Message Negative column to see if the BCID needs to be sent to the Tetronik DAKS driver.
+When the connector receives a trap, it will check the Text Message Negative column to see if the BCID needs to be sent to the Tetronik DAKS driver.

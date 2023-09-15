@@ -4,19 +4,19 @@ uid: Connector_help_IMCI_Open-I_XL
 
 # IMCI Open-I XL
 
-This driver is used to monitor IMCI Open-I XL devices, i.e. **SNMP-based Network Element Managers**.
+This connector is used to monitor IMCI Open-I XL devices, i.e. **SNMP-based Network Element Managers**.
 
 ## About
 
-With this driver, it is possible to monitor IMCI Open-I XL devices, such as the **IMCI Open-I 200XL** and **1000XL series**, with **SNMP**.
+With this connector, it is possible to monitor IMCI Open-I XL devices, such as the **IMCI Open-I 200XL** and **1000XL series**, with **SNMP**.
 
 The different parameters from the device are displayed on multiple pages according to the subject of the parameters.
 
-The driver implements traps to update the corresponding values and to generate alarms immediately.
+The connector implements traps to update the corresponding values and to generate alarms immediately.
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 14.5.0, 15.5.0              |
 
@@ -26,7 +26,7 @@ The driver implements traps to update the corresponding values and to generate a
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

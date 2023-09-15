@@ -4,17 +4,17 @@ uid: Connector_help_Adtec_RD-71_-_LB
 
 # Adtec RD-71 - LB
 
-The **Adtec RD-71 - LB** driver is a DVE created by the **[Adtec RD-71](xref:Connector_help_Adtec_RD-71)** driver.
+The **Adtec RD-71 - LB** connector is a DVE created by the **[Adtec RD-71](xref:Connector_help_Adtec_RD-71)** connector.
 
 ## About
 
-This driver is created when the **RD-71** device is using the **LB** model demodulator board.
+This connector is created when the **RD-71** device is using the **LB** model demodulator board.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver is used by DVE child elements that are **automatically created** by the parent driver [**Adtec RD-71**](xref:Connector_help_Adtec_RD-71), from version 1.0.1.x onwards.
+This connector is used by DVE child elements that are **automatically created** by the parent connector [**Adtec RD-71**](xref:Connector_help_Adtec_RD-71), from version 1.0.1.x onwards.
 
 ## Usage
 
@@ -22,7 +22,7 @@ This driver is used by DVE child elements that are **automatically created** by 
 
 This page contains important information about the device.
 
-Some general parametrs such as the **System Up Time,** **Status**, **Source**, **Source Status** are displayed on this page as well as **Local Oscillator** related parameters and **RF Status** parameters.
+Some general parameters such as the **System Up Time,** **Status**, **Source**, **Source Status** are displayed on this page as well as **Local Oscillator** related parameters and **RF Status** parameters.
 
 ### General
 
@@ -32,11 +32,11 @@ You can also find the IRD specific parameters on this page as well as a section 
 
 ### Network
 
-In this page it is possble to see the **Entity IP Address** table.
+In this page it is possible to see the **Entity IP Address** table.
 
 ### Chassis
 
-In this page are displayed chassis specific infromation such as **Power Supply** and **Fan** information.
+In this page are displayed chassis specific information such as **Power Supply** and **Fan** information.
 
 ### IRD
 
@@ -49,7 +49,7 @@ Displayed on this page are among others:
 
 ### Input
 
-On the left side of this page are presented parameters related t othe configuration of the Active Inputs, such as:
+On the left side of this page are presented parameters related to the configuration of the Active Inputs, such as:
 
 - **Oscillator:** Specifies the frequency of the LNB local oscillator.
 - **Manual Local Oscillator:** Allows you to enter the LNB local oscillator frequency manually, provided that either C: Manual or Ku: Manual is selected.

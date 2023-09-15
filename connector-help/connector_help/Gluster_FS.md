@@ -12,15 +12,15 @@ Gluster runs in a **Linux** environment. There is no API; communication takes pl
 
 The connection to the server is made via **SSH** (username/password).
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -30,7 +30,7 @@ The connection to the server is made via **SSH** (username/password).
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -41,7 +41,7 @@ SERIAL CONNECTION:
 
 ### Configuration
 
-In order for the driver to communicate with the system, the **SSH** username and password must be filled in on the **Settings** page.
+In order for the connector to communicate with the system, the **SSH** username and password must be filled in on the **Settings** page.
 
 ## Usage
 

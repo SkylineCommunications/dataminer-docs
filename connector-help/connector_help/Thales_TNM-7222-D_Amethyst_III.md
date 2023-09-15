@@ -8,18 +8,18 @@ The **Thales TNM-7222-D Amethyst III** is a redundancy switcher.
 
 ## About
 
-The Thales TNM-7222-D Amethyst III driver makes it possible to monitor and control the Amethyst III with SNMP.
+The Thales TNM-7222-D Amethyst III connector makes it possible to monitor and control the Amethyst III with SNMP.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                             | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                             | **DCF Integration** | **Cassandra Compliant** |
 |------------------|---------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                             | No                  | Yes                     |
 | 3.0.0.x          | Reviewed version with updated naming format | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 3.0.0.x          | 02.22.03                    |
@@ -30,7 +30,7 @@ The Thales TNM-7222-D Amethyst III driver makes it possible to monitor and contr
 
 #### SNMP Main Connection
 
-This driver uses an SNMP connection and requires the following input during element creation:
+This connector uses an SNMP connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -62,7 +62,3 @@ This page displays a tree view of the **Inputs** and **Outputs**.
 ### Active Alarms
 
 This page contains the **Alarm Table**. This table has 9 specific alarm types. If a trap on these alarms occurs, the Alarm Table changes its status. The start date and end date are also included. It is possible to reset the table with a button. If the Active Alarms table contains one or more of those specific alarm types, the Alarm Table will be updated with this information. Resetting is necessary if an alarm is active in the Alarm Table but not in the Active Alarms table (a trap was missed).
-
-## Notes
-
-N/A

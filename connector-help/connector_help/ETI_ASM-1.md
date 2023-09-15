@@ -8,7 +8,7 @@ The **ETI ASM-1** device is an automatic air dehydrator that supplies low-pressu
 
 ## About
 
-This driver can be used to monitor the main environmental variables of the location where the device is installed, such as the temperature and pressure. It supports measurements in both the metric and the imperial system.
+This connector can be used to monitor the main environmental variables of the location where the device is installed, such as the temperature and pressure. It supports measurements in both the metric and the imperial system.
 
 ### Version Info
 
@@ -34,7 +34,7 @@ This driver can be used to monitor the main environmental variables of the locat
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP Connection
 

@@ -4,7 +4,7 @@ uid: Connector_help_RGB_Networks_Manager
 
 # RGB Networks Manager
 
-The **RGB Networks Manager** is an application protocol driver that is used to automatically detect RGB Networks devices on the network, and create elements and views.
+The **RGB Networks Manager** is an application connector that is used to automatically detect RGB Networks devices on the network, and create elements and views.
 
 ## About
 
@@ -16,7 +16,7 @@ The RGB Networks Manager uses the **Skyline IP Network Discovery** to detect the
 
 Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## Usage
 
@@ -44,9 +44,9 @@ This page allows you to perform a license update on the devices. This can be don
 
 In 6 steps, the discovery process of RGB Networks is obtained in a wizard interface:
 
-1.  The **Settings** page allows you to configure the discovery settings, like for example on which IP range to scan or the default SNMP community string.
-2.  The **Default credentials** page allows you to configure the default credentials of the devices to guarantee communication of the element and the devices.
-3.  The **Racks** page allows you to configure "Racks" that will be created as views in DataMiner and the elements can be organized in them.
-4.  The **Discover** page allows you to start the discovery.
-5.  The **Synchronize** page allows you to synchronize existing configured elements in the DMS to be synchronized in the results table.
-6.  The **Result** page provides an overview of all discovered devices. You can assign them to racks and create the elements in bulk or one by one.
+1. The **Settings** page allows you to configure the discovery settings, like for example on which IP range to scan or the default SNMP community string.
+2. The **Default credentials** page allows you to configure the default credentials of the devices to guarantee communication of the element and the devices.
+3. The **Racks** page allows you to configure "Racks" that will be created as views in DataMiner and the elements can be organized in them.
+4. The **Discover** page allows you to start the discovery.
+5. The **Synchronize** page allows you to synchronize existing configured elements in the DMS to be synchronized in the results table.
+6. The **Result** page provides an overview of all discovered devices. You can assign them to racks and create the elements in bulk or one by one.

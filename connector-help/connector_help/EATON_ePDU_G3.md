@@ -32,7 +32,7 @@ The Eaton ePDU G3 connector can be used to monitor and configure Eaton ePDU G3 r
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

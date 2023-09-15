@@ -8,19 +8,19 @@ This protocol represents one transmitter of the Tredess CS module.
 
 ## About
 
-This driver is **automatically generated** by the driver Tredess CS, range 1.0.0.1.
+This connector is **automatically generated** by the connector Tredess CS, range 1.0.0.1.
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
-| 1.0.0.1          | 02.M04.2                    |
+| 1.0.0.x          | 02.M04.2                    |
 
 ## Installation and configuration
 
 ### Creation
 
-This protocol is created by the parent driver Tredess CS, range 1.0.0.1.
+This protocol is created by the parent connector Tredess CS, range 1.0.0.1.
 
 ## Usage
 

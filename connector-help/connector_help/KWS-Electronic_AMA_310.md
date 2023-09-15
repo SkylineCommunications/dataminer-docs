@@ -8,19 +8,19 @@ The **KWS-Electronic AMA 310** does measurements of analog or digital signals.
 
 ## About
 
-This driver uses **SNMP** to set up the measurement parameters and get the measurement values.
+This connector uses **SNMP** to set up the measurement parameters and get the measurement values.
 
 The different measurements can be executed according to the round-robin principle.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | V45761.14e                  |
 
@@ -30,7 +30,7 @@ The different measurements can be executed according to the round-robin principl
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -65,7 +65,7 @@ Note that a measurement will **only be executed** when both the **operating stat
 On this page, the round-robin mechanism can be configured together with some SNMP polling settings.
 
 - The **Input Source** can be set to either *COAX* or *FIBRE*.
-- The **Round Robin Polling Interval** is displayed in seconds. This value is the amount of time the driver waits between two measurements. For example, when this value is set to *5 s*, the idle time between two consecutive measurements will equal *5 s*.
+- The **Round Robin Polling Interval** is displayed in seconds. This value is the amount of time the connector waits between two measurements. For example, when this value is set to *5 s*, the idle time between two consecutive measurements will equal *5 s*.
 - The **Round Robin Operating State** indicates whether or not polling should occur. When this parameter is *Disabled*, there will be **no polling**.
 - The **Ama Level Unit** can be set to *dBmV*, *dBm* or *dBuV*.
 - The **Ama Sound Carrier Measurement** can be set to *Relative* or *Absolute*.
@@ -73,11 +73,11 @@ On this page, the round-robin mechanism can be configured together with some SNM
 
 ### Import/Export Data
 
-It is possible to export the current configuration for all the measurements to an .xml file. From version 1.0.0.19 of the driver onwards, it is also possible to export the name, type, frequency and sound type of each measurement to a .csv file.
+It is possible to export the current configuration for all the measurements to an .xml file. From version 1.0.0.19 of the connector onwards, it is also possible to export the name, type, frequency and sound type of each measurement to a .csv file.
 To export, select the appropriate **File Type (Export)**, fill in the export **File Name** and click the **Export** button.
 When the export has succeeded, the value of the **Last Export** field changes to the current time. This parameter will also display any errors that occurred.
 
-A measurement configuration in .xml format can also be imported. In addition, from version 1.0.0.19 of the driver onwards, you can modify existing measurements and add new measurements by importing a .csv file.
+A measurement configuration in .xml format can also be imported. In addition, from version 1.0.0.19 of the connector onwards, you can modify existing measurements and add new measurements by importing a .csv file.
 To import, select the appropriate **File Type (Import)**, select the file name via **Select File** and click the **Import** button.
 When the import has succeeded, the value of the **Last Import** field changes to the current time. This parameter will also display any errors that occurred.
 
@@ -95,15 +95,18 @@ To initialize a measurement, fill in the mandatory values in the **Measurement**
 
 ### Firmware Upgrade
 
-As of version **1.0.0.25**, the driver also allows you to upgrade the **firmware** of the device. All related parameters can be found on the **Firmware Upgrade** page.
+As of version **1.0.0.25**, the connector also allows you to upgrade the **firmware** of the device. All related parameters can be found on the **Firmware Upgrade** page.
 
 Before the firmware can be upgraded, you first need to **load the software via FTP**. To do so:
 
-1.  Start Windows Explorer, and connect to the AMA310 using the following URL: *ftp://\<ipadress\>*
-2.  Copy the upgrade file (.bin2) to the FTP directory of the AMA310.
+1. Start Windows Explorer, and connect to the AMA310 using the following URL: *ftp://\<ipaddress\>*
+
+1. Copy the upgrade file (.bin2) to the FTP directory of the AMA310.
 
 Once this is done, the **upgrade itself** can be performed. To do so:
 
-1.  Configure the **FTP User Name**, **FTP Password** and **Uploaded File Name** correctly. (In case the *anonymous* user is used, the *password* can be blank.)
-2.  Start the upgrade itself by clicking the **Start Upgrade** button.
-    The **Uploaded File Execution State** parameter will indicate the status of the upgrade. When the upgrade is successfully completed, this parameter will transition to *Idle*.
+1. Configure the **FTP User Name**, **FTP Password** and **Uploaded File Name** correctly. (In case the *anonymous* user is used, the *password* can be blank.)
+
+1. Start the upgrade itself by clicking the **Start Upgrade** button.
+
+   The **Uploaded File Execution State** parameter will indicate the status of the upgrade. When the upgrade is successfully completed, this parameter will transition to *Idle*.

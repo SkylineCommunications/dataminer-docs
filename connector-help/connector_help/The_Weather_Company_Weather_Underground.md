@@ -4,21 +4,21 @@ uid: Connector_help_The_Weather_Company_Weather_Underground
 
 # The Weather Company Weather Underground
 
-This driver retrieves information about weather conditions at locations selected by the user, using information provided by "The Weather Company".
+This connector retrieves information about weather conditions at locations selected by the user, using information provided by "The Weather Company".
 
 ## About
 
-The Weather Underground driver implements the "Weather API" (from The Weather Company), which enables the driver to retrieve information about weather conditions from different locations.
+The Weather Underground driver implements the "Weather API" (from The Weather Company), which enables the connector to retrieve information about weather conditions from different locations.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | API version 0.1             |
 
@@ -28,7 +28,7 @@ The Weather Underground driver implements the "Weather API" (from The Weather Co
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -46,9 +46,9 @@ This page displays the protocol overview and includes parameters such as the **A
 
 This page contains the **Forecast Information** table, which contains information related to the weather conditions for the locations configured in the **Locations** table.
 
-The **Locations** subpage, containing the corresponding table, can be accessed via a page button. The **Locations** **table** contains the list of locations for which the driver will obtain the current weather conditions. To make the driver retrieve the weather conditions for a specific location, add a new row to this table.
+The **Locations** subpage, containing the corresponding table, can be accessed via a page button. The **Locations** **table** contains the list of locations for which the connector will obtain the current weather conditions. To make the connector retrieve the weather conditions for a specific location, add a new row to this table.
 
-To add a location, this driver currently supports two methods:
+To add a location, this connector currently supports two methods:
 
 - **Add Location**: The following fields are required:
 
@@ -69,7 +69,7 @@ The Quick Features responses are displayed in the **Quick Forecast Information**
 
 ### Configuration
 
-This page contains parameters related to the configuration of this driver:
+This page contains parameters related to the configuration of this connector:
 
 - In order to retrieve information from the API, the parameter **API Key** needs to be set.
 - With **Max Requests**, you can set the maximum number of queries to be requested at once (in the same timer cycle every 30 minutes), to avoid exceeding the limit of the API plan.

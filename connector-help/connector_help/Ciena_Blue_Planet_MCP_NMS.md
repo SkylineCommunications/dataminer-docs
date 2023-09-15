@@ -6,7 +6,7 @@ uid: Connector_help_Ciena_Blue_Planet_MCP_NMS
 
 Ciena's Blue Planet Manage, Control and Plan (MCP) domain controller brings software-defined programmability to Ciena network and service operations. It eliminates manual steps between separate management tools.
 
-This HTTP driver is used to monitor and configure the Ciena Blue Planet domain controller.
+This HTTP connector is used to monitor and configure the Ciena Blue Planet domain controller.
 
 ## About
 
@@ -34,7 +34,7 @@ This HTTP driver is used to monitor and configure the Ciena Blue Planet domain c
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -44,7 +44,7 @@ HTTP CONNECTION:
 
 ### Initialization
 
-For the driver to work properly, you need to specify the username and password on the General page.
+For the connector to work properly, you need to specify the username and password on the General page.
 
 ### Redundancy
 

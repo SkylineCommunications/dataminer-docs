@@ -10,9 +10,9 @@ The **Telenor Weather Station Logging** driver saves weather statistics and make
 
 The **Telenor Weather Station Logging** driver reads in the log files from a selected directory and processes them. All the data will be stored and the user can then request that data for a selected period of time. While the parameter itself only displays the latest value received, all data is displayed in a graph when you go to the trending of the parameter.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
@@ -22,7 +22,7 @@ The **Telenor Weather Station Logging** driver reads in the log files from a sel
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Configuration
 
@@ -56,8 +56,4 @@ When you click the **Refresh Button**, the files in the **File Table** are refre
 
 On the **Locations** page, you can add a file location by entering a location in the **Add** **New** **Location** parameter.
 
-On this page, you can see the added file locations where the driver will get the log files, as well as set new locations. You can choose to enable or disable all locations, set the polling time, set the Max Healthy Time or remove a location.
-
-## Notes
-
-N/A
+On this page, you can see the added file locations where the connector will get the log files, as well as set new locations. You can choose to enable or disable all locations, set the polling time, set the Max Healthy Time or remove a location.

@@ -6,7 +6,7 @@ uid: Connector_help_Imagine_Communications_Motion
 
 **MotionT HTTP REST API** is a Windows service providing a defined list of Imagine Communications Motion server operations for HTTP client applications.
 
-This driver can be used to monitor Imagine Communications Motion server operations based on the REST API.
+This connector can be used to monitor Imagine Communications Motion server operations based on the REST API.
 
 ## About
 
@@ -64,7 +64,7 @@ This driver can be used to monitor Imagine Communications Motion server operatio
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -81,7 +81,7 @@ There is no redundancy defined.
 
 ## How to use
 
-The element created with this driver consists of the following data pages:
+The element created with this connector consists of the following data pages:
 
 - **General**: Displays general information about the service, such as the name, API version, URLs, ports, etc.
 - **Jobs**: Displays the number and list of jobs. The **Total Number of Jobs** refers to the total number of jobs available in the API, but the number of items displayed in the table is limited by the Query parameters.

@@ -4,23 +4,23 @@ uid: Connector_help_Moxa_NPort_5610
 
 # Moxa NPort 5610
 
-The Moxa NPort 5610 driver is used to monitor the multiple serial inputs of the device and configure the basic device settings. The Moxa NPort 5610 is an 8-port RS-232 Rack Mount Serial Device Server.
+The Moxa NPort 5610 connector is used to monitor the multiple serial inputs of the device and configure the basic device settings. The Moxa NPort 5610 is an 8-port RS-232 Rack Mount Serial Device Server.
 
 ## About
 
-The driver uses an SNMP connection to retrieve the general device info and monitoring of the serial interfaces. The configuration of the interfaces is done using HTTP calls.
+The connector uses an SNMP connection to retrieve the general device info and monitoring of the serial interfaces. The configuration of the interfaces is done using HTTP calls.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**                                                                                                                | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**                                                                                                                | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|--------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.1.x              | Initial version.                                                                                                               | No                  | No                      |
 | 2.0.0.x              | Extended previous range by adding a second connection to configure the serial interfaces over HTTP.                            | No                  | No                      |
 | 2.0.1.x \[SLC Main\] | Cassandra compliant. Added Operating Settings table, Monitor Line table, Monitor Async table and Monitor Async-Settings table. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.1.x          | Unknown                     |
 | 2.0.0.x          | 3.2 Build 07020913          |
@@ -32,7 +32,7 @@ The driver uses an SNMP connection to retrieve the general device info and monit
 
 #### SNMP connection (1.0.1.x and 2.0.x.x range)
 
-This driver uses a Simple Network Management Protocol (SNMP) connection to retrieve the general device info and monitor the interface bitrates. This connection requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection to retrieve the general device info and monitor the interface bitrates. This connection requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -46,7 +46,7 @@ SNMP Settings:
 
 #### Serial connection (2.0.x.x range)
 
-This driver uses a serial connection to configure the serial interfaces and requires the following input during element creation:
+This connector uses a serial connection to configure the serial interfaces and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

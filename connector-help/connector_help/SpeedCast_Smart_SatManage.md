@@ -4,23 +4,23 @@ uid: Connector_help_SpeedCast_Smart_SatManage
 
 # SpeedCast Smart SatManage
 
-The **SpeedCast Smart SatManage** driver can be used to retrieve data from a SatManage portal.
+The **SpeedCast Smart SatManage** connector can be used to retrieve data from a SatManage portal.
 
 ## About
 
-The driver uses the SatManage API to retrieve data over **HTTP**.
+The connector uses the SatManage API to retrieve data over **HTTP**.
 
 A **DVE** is created for each site, though it is possible to enable/disable specific sites.
 
 The GPS coordinates of each site are tracked and logged in a table. This table can be used for location trace capabilities in **DataMiner maps**.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** |
+| **Range** | **Description** |
 |------------------|-----------------|
 | 1.0.0.x          | Initial version |
 
-### Exported Drivers
+### Exported Connectors
 
 | **Exported Protocol**          | **Description**                 |
 |--------------------------------|---------------------------------|
@@ -30,7 +30,7 @@ The GPS coordinates of each site are tracked and logged in a table. This table c
 
 ### Creation
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 **HTTP CONNECTION:**
 
@@ -58,7 +58,7 @@ This page displays the GPS trace table for all sites. This data is used for the 
 
 On this page, an administrator can set the credentials that are used to connect to the API.
 
-With the **Refresh Config** button, the driver can be forced to poll the site configuration. Normally, that information is refreshed every 15 minutes.
+With the **Refresh Config** button, the connector can be forced to poll the site configuration. Normally, that information is refreshed every 15 minutes.
 
 ### Web Interface
 

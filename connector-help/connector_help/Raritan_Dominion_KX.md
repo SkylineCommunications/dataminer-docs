@@ -8,13 +8,13 @@ The **Raritan Dominion KX** is a single port, KVM-over-IP switch that provides s
 
 ## About
 
-This driver uses SNMP in order to monitor and configure the **Raritan Dominion KX**.
+This connector uses SNMP in order to monitor and configure the **Raritan Dominion KX**.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 

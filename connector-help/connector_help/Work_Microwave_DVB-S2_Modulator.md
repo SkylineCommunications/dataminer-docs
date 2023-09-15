@@ -4,7 +4,7 @@ uid: Connector_help_Work_Microwave_DVB-S2_Modulator
 
 # Work Microwave DVB-S2 Modulator
 
-This driver polls status parameters and allows you to edit the configuration of older **Work Microwave Modulator DVB-S2** devices, similar to the driver **Work Microwave Modulator DVBCID/DVB2SX**.
+This connector polls status parameters and allows you to edit the configuration of older **Work Microwave Modulator DVB-S2** devices, similar to the connector **Work Microwave Modulator DVBCID/DVB2SX**.
 
 The device is a DVB satellite modulator and includes a DVB-S/S2/S2X modulator with VHF-band (50 to 180 MHz) and/or L-band (950 to 2150 MHz) output. The unit consists of four main parts, a modulator module (DVB data in input and L-band modulated signal in output), an IF converter module (clock at VHF-band), a power supply and a front panel controller.
 
@@ -12,17 +12,17 @@ The device is a DVB satellite modulator and includes a DVB-S/S2/S2X modulator wi
 
 The device is accessed via **SNMP**. The agent within the device is fully SNMPv1-compatible and responds to GET, GETNEXT and SET commands. If SNMPv2 is used, the device will also respond using SNMPv2. Traps are always v1. Control over the device will depend on the access type of SNMP parameters available in the Management Information Base (MIB).
 
-This driver is compatible with "FMB" software units (front panel firmware starts with FMB).
+This connector is compatible with "FMB" software units (front panel firmware starts with FMB).
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**    |
+| **Range** | **Device Firmware Version**    |
 |------------------|--------------------------------|
 | 1.0.0.x          | Front Panel Firmware: FMB0x.yz |
 
@@ -32,7 +32,7 @@ This driver is compatible with "FMB" software units (front panel firmware starts
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -95,6 +95,6 @@ This page allows you to access to the web UI of the device. Note that the client
 
 ## DataMiner Connectivity Framework
 
-From version **1.0.0.4** onwards, this driver supports the usage of DCF and can only be used on a DMA with **8.5.8.5** as the minimum version.
+From version **1.0.0.4** onwards, this connector supports the usage of DCF and can only be used on a DMA with **8.5.8.5** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).

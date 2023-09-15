@@ -6,7 +6,7 @@ uid: Connector_help_Evertz_7801FC
 
 The 7801FC VistaLINKr Frame Controller handles all SNMP communication between the frame (7801FR) and the network manager (NMS), and serves as a gateway to individual cards in the frame.
 
-This driver can be used to monitor and configure the Evertz 7801FC VistaLINKr Frame Controller card.
+This connector can be used to monitor and configure the Evertz 7801FC VistaLINKr Frame Controller card.
 
 ## About
 
@@ -34,7 +34,7 @@ This driver can be used to monitor and configure the Evertz 7801FC VistaLINKr Fr
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -60,4 +60,4 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-This driver displays product location information in a table on the General page. On the Status page, you can find status parameters, while on the Configuration page, you can configure the device.
+This connector displays product location information in a table on the General page. On the Status page, you can find status parameters, while on the Configuration page, you can configure the device.

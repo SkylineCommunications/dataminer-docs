@@ -6,7 +6,7 @@ uid: Connector_help_Axon_ACP_GEE200
 
 The **Axon GEE200** is an embedded domain Dolby E/D/D+ to Dolby E processor. It is based on the Dolby's Cat. No. 1100 submodule, and capable of decoding Dolby E, Dolby Digital and Dolby Digital Plus, and encoding to Dolby E.
 
-This driver allows you to monitor and configure this card.
+This connector allows you to monitor and configure this card.
 
 ## About
 
@@ -34,7 +34,7 @@ This driver allows you to monitor and configure this card.
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -46,7 +46,7 @@ SERIAL CONNECTION:
 
 #### Serial IP Connection - Events Connection
 
-This driver uses a smart-serial connection and requires the following input during element creation:
+This connector uses a smart-serial connection and requires the following input during element creation:
 
 SMART SERIAL CONNECTION:
 
@@ -66,7 +66,7 @@ There is no redundancy defined.
 
 ## How to use
 
-The element created with this driver consists of the following data pages:
+The element created with this connector consists of the following data pages:
 
 - **General**: Displays information about the identity of the card and other general information: Card Name, Card Description, SW Revision, HW Revision, etc. Via the **Dolby CAT1100** page button, you can access more information about the Dolby CAT1100 submodule.
 - **Video**: Allows you to configure and monitor the input and output parameters.
@@ -84,7 +84,7 @@ The element created with this driver consists of the following data pages:
 
 ## DataMiner Connectivity Framework
 
-The **1.0.0.x** driver range of the Axon ACP GEE200 protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
+The **1.0.0.x** connector range of the Axon ACP GEE200 protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 

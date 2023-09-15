@@ -4,7 +4,7 @@ uid: Connector_help_Lawo_HD_Core_Ravenna
 
 # Lawo HD Core Ravenna
 
-This driver is used to monitor a Lawo HD Core Ravenna module. This module is an I/O card for the HD Core. These modules are placed in a Lawo chassis, e.g. Lawo Nova73, and offer real-time distribution of audio and other media content within IP-based network environments.
+This connector is used to monitor a Lawo HD Core Ravenna module. This module is an I/O card for the HD Core. These modules are placed in a Lawo chassis, e.g. Lawo Nova73, and offer real-time distribution of audio and other media content within IP-based network environments.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver is used to monitor a Lawo HD Core Ravenna module. This module is an 
 
 #### Smart-Serial Main Connection
 
-This driver uses the Ember+ protocol over a smart-serial connection and requires the following input during element creation:
+This connector uses the Ember+ protocol over a smart-serial connection and requires the following input during element creation:
 
 SMART-SERIAL CONNECTION:
 
@@ -45,7 +45,7 @@ No additional configuration is required. When a new element is created/started, 
 
 ### Redundancy
 
-Redundancy is not defined in the driver.
+Redundancy is not defined in the connector.
 
 ### Web Interface
 
@@ -55,4 +55,4 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to Use
 
-This driver uses the Ember+ protocol to communicate with the device. On startup, the driver will poll the entire Ember+ tree to determine the paths to nodes that need to be accessed. This action can take up to 5 minutes and its progress can be followed using the Discovered Nodes and Node Discovery parameters on the General page. Once this action is complete, polling of the parameters will start. This discovery action is repeated every day, in case the Ember+ tree were to change.
+This connector uses the Ember+ protocol to communicate with the device. On startup, the connector will poll the entire Ember+ tree to determine the paths to nodes that need to be accessed. This action can take up to 5 minutes and its progress can be followed using the Discovered Nodes and Node Discovery parameters on the General page. Once this action is complete, polling of the parameters will start. This discovery action is repeated every day, in case the Ember+ tree were to change.

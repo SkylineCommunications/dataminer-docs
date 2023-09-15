@@ -8,11 +8,11 @@ The AC8000 is an optical node with 862 MHz downstream and 2 active outputs.
 
 ## About
 
-The AC8000 driver provides a way to interface with the AC8000 module. It is automatically exported by the driver **Teleste HDM100**.
+The AC8000 driver provides a way to interface with the AC8000 module. It is automatically exported by the connector **Teleste HDM100**.
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Revision** |
+| **Range** | **Device Revision** |
 |------------------|---------------------|
 | 1.0.1.x          | Unknown             |
 
@@ -20,7 +20,7 @@ The AC8000 driver provides a way to interface with the AC8000 module. It is auto
 
 ### Creation
 
-This driver is used by DVE child elements that are **automatically created** by the parent driver [Teleste HDM100](xref:Connector_help_Teleste_HDM100). No user input is required.
+This connector is used by DVE child elements that are **automatically created** by the parent connector [Teleste HDM100](xref:Connector_help_Teleste_HDM100). No user input is required.
 
 ## Usage
 

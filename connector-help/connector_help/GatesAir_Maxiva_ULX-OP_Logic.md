@@ -32,7 +32,7 @@ The **GatesAir Maxiva ULX-OP Logic** is the logic controller part of the **Gates
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -50,7 +50,7 @@ No further initialization necessary.
 
 ### Redundancy
 
-No redundancy is defined for this driver.
+No redundancy is defined for this connector.
 
 ### Web Interface
 
@@ -58,10 +58,10 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to Use
 
-This driver uses **SNMP** to communicate with the device.
+This connector uses **SNMP** to communicate with the device.
 
-The driver displays both general information about the device and more detailed information related to its power and to the single transmitter. It allows you to configure single transmitter events and configure the priority of these events.
+The connector displays both general information about the device and more detailed information related to its power and to the single transmitter. It allows you to configure single transmitter events and configure the priority of these events.
 
 ## Notes
 
-This driver is part of a group of 3 drivers, which together form the GatesAir Maxiva ULX-OP. As each part of this setup has its own IP address, the driver was split up in 3 parts.
+This connector is part of a group of 3 drivers, which together form the GatesAir Maxiva ULX-OP. As each part of this setup has its own IP address, the connector was split up in 3 parts.

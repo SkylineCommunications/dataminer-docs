@@ -4,7 +4,7 @@ uid: Connector_help_Cisco_VDS-TV_Manager
 
 # Cisco VDS-TV Manager
 
-The **Cisco VDS-TV Manager** is used to manage a VDS-TV network. This driver allows the user to **monitor** and **configure** the Cisco VDS-TV Manager.
+The **Cisco VDS-TV Manager** is used to manage a VDS-TV network. This connector allows the user to **monitor** and **configure** the Cisco VDS-TV Manager.
 
 ## About
 
@@ -32,7 +32,7 @@ The **Cisco VDS-TV Manager** is used to manage a VDS-TV network. This driver all
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

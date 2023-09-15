@@ -4,23 +4,23 @@ uid: Connector_help_Walton_Enterprises_DP-9
 
 # Walton Enterprises DP-9
 
-The **DP-9** serial driver has been developed to provide a local point for control and monitoring of the DS-16 de-icing controller and attached de-icing system.
+The **DP-9** serial connector has been developed to provide a local point for control and monitoring of the DS-16 de-icing controller and attached de-icing system.
 
 ## About
 
-This driver contains different pages with information about the device. More detailed information on these can be found in the **Usage** section of this document.
+This connector contains different pages with information about the device. More detailed information on these can be found in the **Usage** section of this document.
 
-The driver uses the **serial** protocol to communicate with the device.
+The connector uses the **serial** protocol to communicate with the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Revision 1.1                |
 
@@ -30,7 +30,7 @@ The driver uses the **serial** protocol to communicate with the device.
 
 #### Serial main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

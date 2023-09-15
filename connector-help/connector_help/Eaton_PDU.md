@@ -4,7 +4,7 @@ uid: Connector_help_Eaton_PDU
 
 # Eaton PDU
 
-The Eaton PDU driver is used to monitor the **Eaton Power Distribution Unit**
+The Eaton PDU connector is used to monitor the **Eaton Power Distribution Unit**
 
 ## About
 
@@ -32,7 +32,7 @@ The Eaton PDU driver is used to monitor the **Eaton Power Distribution Unit**
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

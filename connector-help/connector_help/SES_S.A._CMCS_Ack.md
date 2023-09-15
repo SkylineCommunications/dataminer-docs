@@ -4,7 +4,7 @@ uid: Connector_help_SES_S.A._CMCS_Ack
 
 # SES S.A. CMCS Ack
 
-This virtual driver can be used to control the relay state of an ADAM relay.
+This virtual connector can be used to control the relay state of an ADAM relay.
 
 ## About
 
@@ -32,7 +32,7 @@ This virtual driver can be used to control the relay state of an ADAM relay.
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 
@@ -46,4 +46,4 @@ There is no redundancy defined.
 
 In the DataMiner Cube **Surveyor**, go to the **apps** tab and open **Element Connections**.
 
-On the Element Connections card, you can specify to which ADAM relay parameters the virtual driver parameters can be linked.
+On the Element Connections card, you can specify to which ADAM relay parameters the virtual connector parameters can be linked.

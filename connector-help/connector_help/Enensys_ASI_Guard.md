@@ -4,21 +4,21 @@ uid: Connector_help_Enensys_ASI_Guard
 
 # Enensys ASI Guard
 
-This driver uses SNMP to monitor the **Enensys ASI II Guard** switch. It also enables the configuration of the two muxes of the switch in a way similar to the device's web interface.
+This connector uses SNMP to monitor the **Enensys ASI II Guard** switch. It also enables the configuration of the two muxes of the switch in a way similar to the device's web interface.
 
 ## About
 
-This is an **SNMP** driver that enables the user to configure and monitor the device.
+This is an **SNMP** connector that enables the user to configure and monitor the device.
 
 It contains a table with info about all the current alarms, which can be monitored by DataMiner. It also displays information about the device, which can be monitored and trended.
 
-The driver enables the user to configure the errors for which the device will generate alarms. Other device settings can also be configured, in a way similar to the device's web interface.
+The connector enables the user to configure the errors for which the device will generate alarms. Other device settings can also be configured, in a way similar to the device's web interface.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -55,7 +55,7 @@ The following page buttons are available:
 
 This page displays the **Current Active Alarms** and **Status** of the device, including a list of the active alarms in the **Current Alarms** table. Extra buttons: **Clear Log** and **Refresh Log.**
 
-Since version 1.0.0.7 the **Alarm Current** table as available a functionality that allows you to remove from the table the alarms with severity "No Log". You can do this changing the **No Log Entries Displayed** togglebutton to No.
+Since version 1.0.0.7 the **Alarm Current** table as available a functionality that allows you to remove from the table the alarms with severity "No Log". You can do this changing the **No Log Entries Displayed** toggle button to No.
 
 The following page buttons are available:
 

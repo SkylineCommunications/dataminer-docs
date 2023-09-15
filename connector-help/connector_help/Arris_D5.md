@@ -4,7 +4,7 @@ uid: Connector_help_Arris_D5
 
 # Arris D5
 
-With this driver it is possible to monitor **Arris D5** devices with SNMP.
+With this connector it is possible to monitor **Arris D5** devices with SNMP.
 
 ## About
 
@@ -16,11 +16,11 @@ Current Version: 1.0.0.18
 
 ### Creation
 
-The **Arris D5** is a **SNMP** driver. The **IP** has to be configured during creation of the **element**.
+The **Arris D5** is an **SNMP** connector. The **IP** has to be configured during creation of the **element**.
 
 **SNMP CONNECTION**:
 
-- **IP address/host**: the polling IP of the device eg *10.11.12.13*
+- **IP address/host**: The polling IP of the device, e.g. *10.11.12.13*
 
 **SNMP Settings**:
 
@@ -60,11 +60,11 @@ This page displays a table with the **UDP Streams**
 
 ### QAM Streams Page
 
-This page displays a table of the **QAM Streams**. This page also contains a button to normaliz the values of the table.
+This page displays a table of the **QAM Streams**. This page also contains a button to normalize the values of the table.
 
 ### Service Groups Page
 
-The Service Groups Page contains a Service Groups table that provides the user with cummulated bitrates for the streams in each HFC-Segment. HFC-Segments are filled in using the UPC Nederland Subscriber Provisioner driver or changing the value manualy.
+The Service Groups Page contains a Service Groups table that provides the user with cumulated bit rates for the streams in each HFC-Segment. HFC-Segments are filled in using the UPC Nederland Subscriber Provisioner connector or changing the value manually.
 
 ### Video Stream Programs Page
 
@@ -89,7 +89,7 @@ This page displays a table of the **PIDs Mapping**.
 
 ### Video Control Page
 
-This page displays some controlable parameters for the video such as:
+This page displays some controllable parameters for the video such as:
 
 - **Pass-Through Mode**
 - **Timeout Interval**
@@ -106,7 +106,7 @@ This page displays some tables:
 
 ### Software/File Transfers Page
 
-This page displays some controlable partameters for both software and file transfer:
+This page displays some controllable parameters for both software and file transfer:
 
 - **Server**
 - **Username**

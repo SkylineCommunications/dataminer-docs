@@ -4,11 +4,11 @@ uid: Connector_help_Telenet_STB_Collector
 
 # Telenet STB Collector
 
-The **Telenet STB Collector** is part of the CPE setup, and works together with the **Telenet CPE Manager**, **Telenet eMTA Collector** and **Telenet CM Collector** driver. This driver is responsible for the polling of the STBs.
+The **Telenet STB Collector** is part of the CPE setup, and works together with the **Telenet CPE Manager**, **Telenet eMTA Collector** and **Telenet CM Collector** connector. This connector is responsible for the polling of the STBs.
 
 ## About
 
-This driver will poll all the STBs in two poll cycles:
+This connector will poll all the STBs in two poll cycles:
 
 - one fast poll cycle that will poll all STBs over a 15-minute period.
 - one slow poll cycle that will poll all STBs over a 24-hour period.
@@ -19,7 +19,7 @@ The polled data will be offloaded into CSV files and will be aggregated by the C
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP Connection:**
 
@@ -30,7 +30,7 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and requ
 
 - **Port Number**: The port of the connected device, by default *161*.
 - **Get community string**: The community string used when reading values from the device, by default *public*.
-- **Set community string**: Not needed, because the driver will not perform sets.
+- **Set community string**: Not needed, because the connector will not perform sets.
 
 Note: All polled STBs will use the same settings.
 
@@ -48,7 +48,7 @@ The following parameters can be configured: **STB DS BER High Threshold**, **STB
 
 ### Configuration of the hardware parameters
 
-Different types of STBs will be polled. As such, some parameters need to be polled from another OID. Different groups with parameter OIDs have been defined in the driver, and it is possible to configure which poll group a certain type of STB should use, in the **STB HW Types** table.
+Different types of STBs will be polled. As such, some parameters need to be polled from another OID. Different groups with parameter OIDs have been defined in the connector, and it is possible to configure which poll group a certain type of STB should use, in the **STB HW Types** table.
 
 Rows will be added automatically when the collector detects a new type, but you can also add rows to this table manually, with the **Add STB Entry** parameter. In that case, use the following format: *HWType;FWType;MatchType;GroupID*.
 

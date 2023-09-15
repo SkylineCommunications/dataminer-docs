@@ -4,25 +4,25 @@ uid: Connector_help_TDC_OLT_CM_Collector
 
 # TDC OLT CM Collector
 
-This driver will poll info from cable modems (CMs) and Huawei MA5800-MA5633 (OLT) via SNMP.
+This connector will poll info from cable modems (CMs) and Huawei MA5800-MA5633 (OLT) via SNMP.
 
 ## About
 
-This driver uses SNMP on the standard DOCSIS MIBs to collect info from CMs and OLT.
+This connector uses SNMP on the standard DOCSIS MIBs to collect info from CMs and OLT.
 
 The CM data is polled multithreaded and the OLT data is polled with three threads (multipleGetBulk). This is different from the Generic DOCSIS Cable Modem Collector where all data is polled multithreaded.
 
 This data should be aggregated and displayed by a CPE Manager. The data is not intended to be consulted directly by an operator, so the data pages of the element will not be accessible.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**        |
+| **Range** | **Device Firmware Version**        |
 |------------------|------------------------------------|
 | 1.0.0.x          | DOCSIS 2.0, DOCSIS 3.0, DOCSIS 3.1 |
 
@@ -32,7 +32,7 @@ This data should be aggregated and displayed by a CPE Manager. The data is not i
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection to connect to the CMs and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection to connect to the CMs and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -42,11 +42,11 @@ SNMP Settings:
 
 - **Port number**: The port of the connected device, by default *161*.
 - **Get community string**: The community string used when reading values from the device. Default value: *public*.
-- **Set community string**: The community string used when setting values on the device. Currently no sets are done from the driver. Default value: *private*.
+- **Set community string**: The community string used when setting values on the device. Currently no sets are done from the connector. Default value: *private*.
 
 #### SNMP CMTS connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection to connect to the CMTS and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection to connect to the CMTS and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -56,7 +56,7 @@ SNMP Settings:
 
 - **Port number**: The port of the connected device, by default *161*.
 - **Get community string**: The community string used when reading values from the device. Default value: *public*.
-- **Set community string**: The community string used when setting values on the device. Currently no sets are done from the driver. Default value: **private*.*
+- **Set community string**: The community string used when setting values on the device. Currently no sets are done from the connector. Default value: **private*.*
 
 ### Configuration of Provisioning
 

@@ -4,7 +4,7 @@ uid: Connector_help_Xicom_Technology_XTC-11x
 
 # Xicom Technology XTC-11x
 
-With this driver, you can monitor **Xicom XTC-11x** controllers. It also allows you to poll a number of general fault parameters from each individual HPA connected to the controller.
+With this connector, you can monitor **Xicom XTC-11x** controllers. It also allows you to poll a number of general fault parameters from each individual HPA connected to the controller.
 
 ## About
 
@@ -83,7 +83,7 @@ With this driver, you can monitor **Xicom XTC-11x** controllers. It also allows 
 
 #### Serial main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -97,7 +97,7 @@ SERIAL CONNECTION:
 
 This page displays general information, such as the **Model Number**, **Firmware Versions**, and **Control, Operating and Configuration Mode**
 
-In all driver ranges **except v1.1.1x**, a page button allows you to set up the communication settings and amplifier addresses:
+In all connector ranges **except v1.1.1x**, a page button allows you to set up the communication settings and amplifier addresses:
 
 - **Port Baudrate, Parity, Stop Bits, Data Bits**
 

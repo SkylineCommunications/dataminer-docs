@@ -4,11 +4,11 @@ uid: Connector_help_Crouzet_Automation_XD26
 
 # Crouzet Automation XD26
 
-The **Crouzet Automation XD26** driver is used to configure and display information of the device **Crouzet Automation XD26**.
+The **Crouzet Automation XD26** connector is used to configure and display information of the device **Crouzet Automation XD26**.
 
 ## About
 
-This protocol can be used to monitor and control the **Crouzet Automation XD26** device. The driver supports one serial connection to communicate with the device.
+This protocol can be used to monitor and control the **Crouzet Automation XD26** device. The connector supports one serial connection to communicate with the device.
 
 **Alarming** and **trending** are enabled for parameters in the protocol.
 
@@ -26,7 +26,7 @@ This protocol can be used to monitor and control the **Crouzet Automation XD26**
 
 ### General Page
 
-This is the only page available on the driver. On this page, you can find all parameters available on the device, such as:
+This is the only page available on the connector. On this page, you can find all parameters available on the device, such as:
 
 - Cabinet Temperature
 - Switch Position 1

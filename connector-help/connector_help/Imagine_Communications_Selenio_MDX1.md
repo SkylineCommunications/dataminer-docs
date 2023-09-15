@@ -4,27 +4,27 @@ uid: Connector_help_Imagine_Communications_Selenio_MDX1
 
 # Imagine Communications Selenio MDX1
 
-The **Imagine Communications Selenio MDX1** is a type of card that can be slotted into a Selenio chassis. This driver contains a full overview of all the data available in this card. The Selenio MDX1 encapsulates streams for transport. It can multiplex, de-multiplex and re-multiplex transport streams and also provides a host of options to adjust or add additional content to streams. Compared to the MDX2, the MDX1 provides very similar options, but lacks the DVB-T2 options.
+The **Imagine Communications Selenio MDX1** is a type of card that can be slotted into a Selenio chassis. This connector contains a full overview of all the data available in this card. The Selenio MDX1 encapsulates streams for transport. It can multiplex, de-multiplex and re-multiplex transport streams and also provides a host of options to adjust or add additional content to streams. Compared to the MDX2, the MDX1 provides very similar options, but lacks the DVB-T2 options.
 
 ## About
 
-This driver displays information on different pages, described in the **Usage** section of this document.
+This connector displays information on different pages, described in the **Usage** section of this document.
 
-The **versioning** for the driver is specifically engineered to tie in with the firmware version of the card the driver supports. It uses the following format: X.X.X.Y, with X.X.X being the firmware version of the card and .Y the specific driver iteration for this firmware. For example, *5.0.28.2* means the driver is the second iteration for firmware *5.0.28.*
+The **versioning** for the connector is specifically engineered to tie in with the firmware version of the card the connector supports. It uses the following format: X.X.X.Y, with X.X.X being the firmware version of the card and .Y the specific driver iteration for this firmware. For example, *5.0.28.2* means the connector is the second iteration for firmware *5.0.28.*
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                                                                               | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                                                                                               | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| \<10.0.0.x       | **\[Main\]** The **versioning** of the driver is specifically engineered to tie in with the firmware version of the card the driver supports. | No                  | Yes                     |
+| \<10.0.0.x       | **\[Main\]** The **versioning** of the connector is specifically engineered to tie in with the firmware version of the card the connector supports. | No                  | Yes                     |
 | 10.0.0.x         | Replaced the "dynamic snmp get" with "dynamicSnmpGet="true"" under parameter type tag.                                                        | No                  | Yes                     |
 | 5.5.0.x          | Based on 5.4.9.4 DCF implementation.                                                                                                          | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**                                                                                                                   |
+| **Range** | **Device Firmware Version**                                                                                                                   |
 |------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| \<10.0.0.x       | **\[Main\]** The **versioning** of the driver is specifically engineered to tie in with the firmware version of the card the driver supports. |
+| \<10.0.0.x       | **\[Main\]** The **versioning** of the connector is specifically engineered to tie in with the firmware version of the card the connector supports. |
 | 10.0.0.x         | Requires controller firmware "S/W=7.0-38, H/W= rev 02" or higher and will not work with older firmware.                                       |
 | 5.5.0.x          | Requires controller firmware 5.4.9                                                                                                            |
 
@@ -34,7 +34,7 @@ The **versioning** for the driver is specifically engineered to tie in with the 
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -63,7 +63,7 @@ All data gets retrieved from the device in two ways.
 
 ## Usage
 
-The driver contains different pages divided into several sections using separators.
+The connector contains different pages divided into several sections using separators.
 
 ### General section
 
@@ -104,7 +104,7 @@ They allow you to configure the **External Conditional Access Systems**. Differe
 
 ## DataMiner Connectivity Framework
 
-The **5.5.0.x** driver range of the **Imagine Communications Selenio MDX1** protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
+The **5.5.0.x** connector range of the **Imagine Communications Selenio MDX1** protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
@@ -128,4 +128,4 @@ Physical fixed interfaces:
 
 ## Notes
 
-Because of the large amount of data present in tables for this device, the demands on the network, memory and CPU for this driver will be significantly higher than for the other Imagine Communications Selenio cards. As a consequence, even though sets are executed on the device within 2 to 5 seconds, it may take a few additional seconds for the changes to show in the element. This depends on the size of the table containing the changed value and on the current workload of the DMA.
+Because of the large amount of data present in tables for this device, the demands on the network, memory and CPU for this connector will be significantly higher than for the other Imagine Communications Selenio cards. As a consequence, even though sets are executed on the device within 2 to 5 seconds, it may take a few additional seconds for the changes to show in the element. This depends on the size of the table containing the changed value and on the current workload of the DMA.

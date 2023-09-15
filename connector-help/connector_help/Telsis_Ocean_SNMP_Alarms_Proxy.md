@@ -4,17 +4,17 @@ uid: Connector_help_Telsis_Ocean_SNMP_Alarms_Proxy
 
 # Telsis Ocean SNMP Alarms Proxy
 
-With this driver, traps can be received from **Telsis Ocean** devices.
+With this connector, traps can be received from **Telsis Ocean** devices.
 
 ## About
 
 The **Telsis Ocean SNMP Alarms Proxy** will receive traps from the **Telsis Ocean SNMP Proxy server** and display the received information in a table.
 
-Note that this driver collects the alarm information from multiple Telsis servers. Since version 1.0.0.6, the alarms can be sorted in trunk groups.
+Note that this connector collects the alarm information from multiple Telsis servers. Since version 1.0.0.6, the alarms can be sorted in trunk groups.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                     | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                     | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                     | No                  | Yes                     |
 | 1.0.1.x          | Added naming and Display Key column | No                  | Yes                     |
@@ -25,7 +25,7 @@ Note that this driver collects the alarm information from multiple Telsis server
 
 SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

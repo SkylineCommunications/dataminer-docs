@@ -4,7 +4,7 @@ uid: Connector_help_Miranda_Kaleido_X
 
 # Miranda Kaleido X
 
-The Kaleido X driver displays information related to the Kaleido X device. In addition, this driver also allows you to retrieve and set specific parameters using RCP (Gateway) commands. The driver uses two protocols to communicate with the Kaleido device: SNMP is used to retrieve information concerning the device, and TCP is used to execute RCP commands.
+The Kaleido X connector displays information related to the Kaleido X device. In addition, this connector also allows you to retrieve and set specific parameters using RCP (Gateway) commands. The connector uses two protocols to communicate with the Kaleido device: SNMP is used to retrieve information concerning the device, and TCP is used to execute RCP commands.
 
 ## About
 
@@ -38,7 +38,7 @@ The Kaleido X driver displays information related to the Kaleido X device. In ad
 
 #### SNMP connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -52,7 +52,7 @@ SNMP Settings:
 
 #### Serial connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -71,7 +71,7 @@ The web interface is only accessible when the client machine has network access 
 
 This page contains general information about the device, such as the frame model, layouts defined in the Kaleido X device, software version, number of inputs, slot count, card count and frame, fan and power supply status.
 
-In a drop-down list, the parameter **Layout List** displays all the layouts defined in the Kaleido X device. Each layout displayed in the list has the following format: *RoomName/LayoutName.kg2*. When you have selected the desired layout, the driver will send an RCP command to set the selected layout in the Kaleido X device.
+In a drop-down list, the parameter **Layout List** displays all the layouts defined in the Kaleido X device. Each layout displayed in the list has the following format: *RoomName/LayoutName.kg2*. When you have selected the desired layout, the connector will send an RCP command to set the selected layout in the Kaleido X device.
 
 In addition, the button **Set Channel** can be used to set the channel of the Kaleido X device according to the values set in **Channel Name** and **Monitor name**. The parameter **Channel Name** has a drop-down list with all the available channels obtained from the Video table. Note that the RCP command will not be sent to the device unless at least both parameters (Channel Name and Monitor Name) are filled in.
 
@@ -85,7 +85,7 @@ This page displays a table that contains an entry for every slot in the frame.
 
 This page displays a table with all the video inputs of the frame. This table contains an extra column, **Video Channel Text**, that is used to retrieve and set the UMD channel text for each channel on the Kaleido X device using RCP commands. The button displayed at the top of the page, **Set all UMDs**, will set the UMD channel text according to the values defined in this column.
 
-From version **2.0.1.11** of the driver onwards, the **Video Channel Text** column is filled in with the data from the **Friendly Name** column of the **Virtual Alarm Table**.
+From version **2.0.1.11** of the connector onwards, the **Video Channel Text** column is filled in with the data from the **Friendly Name** column of the **Virtual Alarm Table**.
 
 ### Embedded Audio
 
@@ -95,7 +95,7 @@ The table on this page displays the embedded audio of all frame video.
 
 The table on this page displays all discrete audio available on the device.
 
-From version **2.0.2.1** of the driver onwards, the display key of the table is configurable.
+From version **2.0.2.1** of the connector onwards, the display key of the table is configurable.
 
 ### RCP
 

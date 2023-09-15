@@ -8,21 +8,21 @@ The **Nevion TNS4200** is a monitoring probe for continuous monitoring of broadc
 
 ## About
 
-This driver is used to manage the Nevion TNS4200 device using the **HTTP** protocol.
+This connector is used to manage the Nevion TNS4200 device using the **HTTP** protocol.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                                                                                                                  | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                                                                                                                                  | **DCF Integration** | **Cassandra Compliant** |
 |------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version. (Only supports ASCII labels.)                                                                                                                                   | No                  | No                      |
 | 1.0.1.x          | Added SNMP connection for trap receipt. (Only supports ASCII labels.)                                                                                                            | No                  | No                      |
 | 1.1.0.x          | Updated alarm implementation to firmware 1.6.16/1.7.0. Removed relative alarming in protocol. Added filter column in Transport Streams table. (Only supports ASCII labels.)      | No                  | No                      |
-| 1.1.1.x          | Range with adjustable DisplayKeys. Obsolete option "DisplayColumn" replaced with "Naming" in Alarms table. (Note: not all "DisplayColumn" options were removed from the driver.) | No                  | No                      |
+| 1.1.1.x          | Range with adjustable DisplayKeys. Obsolete option "DisplayColumn" replaced with "Naming" in Alarms table. (Note: not all "DisplayColumn" options were removed from the connector.) | No                  | No                      |
 | 2.0.0.x          | Continues support for 1.1.0.x range                                                                                                                                              | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 1.0.1.x          | Unknown                     |
@@ -35,7 +35,7 @@ This driver is used to manage the Nevion TNS4200 device using the **HTTP** proto
 
 #### HTTP connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 **HTTP Connection:**
 
@@ -45,7 +45,7 @@ This driver uses an HTTP connection and requires the following input during elem
 
 #### SNMP connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection to receive traps and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection to receive traps and requires the following input during element creation:
 
 **SNMP Connection:**
 
@@ -115,7 +115,7 @@ The PCR PIDs table contains information about the PCR PIDs, such as **Clock**, *
 
 ### Alarms Page
 
-This page displays an overview of the alarms that are currently active (and implemented by the driver).
+This page displays an overview of the alarms that are currently active (and implemented by the connector).
 
 Via the **Filtered Alarms** page button, you can get an overview of the alarms that are currently present but filtered in the **Filtered Alarms Table**. To process traps for filtered alarms, set the toggle button **Process Traps for Filtered Alarms** to *Yes*.
 
@@ -133,7 +133,7 @@ On this page, you can enter the username and password used for basic authenticat
 
 The **Login Status** displays if the HTTP call succeeded or if there was an authentication error during the request.
 
-It is advisable to verify whether the TXP settings on the web interface of the device have been enabled. Note that when no credentials are filled in in the driver, auto login has to be enabled on the device.
+It is advisable to verify whether the TXP settings on the web interface of the device have been enabled. Note that when no credentials are filled in in the connector, auto login has to be enabled on the device.
 
 ### Web Interface Page
 

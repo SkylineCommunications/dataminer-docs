@@ -8,13 +8,13 @@ The **HES20** is a Dolby-E aligner and frame synchronizer.
 
 ## About
 
-The Axon HES20 driver makes it possible to monitor and control an Axon HES20 card.
+The Axon HES20 connector makes it possible to monitor and control an Axon HES20 card.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION**:
 
@@ -44,7 +44,3 @@ At the bottom of the page, there is a page button (**Delay.**) that leads to a p
 ### Audio page
 
 This page displays information regarding audio. It allows the user to modify the settings as preferred.
-
-## Notes
-
-N/A

@@ -4,15 +4,15 @@ uid: Connector_help_Andrew_ACS3000
 
 # Andrew ACS3000
 
-The **Andrew ACS3000** driver is a serial driver that is used as an Antenna Control Unit. It allows alarm monitoring and trending of many important parameters.
+The **Andrew ACS3000** connector is a serial connector that is used as an Antenna Control Unit. It allows alarm monitoring and trending of many important parameters.
 
 ## About
 
 The **Andrew ACS3000** device is an Antenna Control Unit. It supports a wide range of configuration properties. All connected satellites are displayed in tables. Positioning of the antenna can be changed in multiple ways (step, position, jog, x degrees). Step Track, Smart Track, Intelsat Track and Norad Track are supported. The alarm log can be retrieved.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**                      | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**                      | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|--------------------------------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version                      | No                  | Yes                     |
 | 2.0.0.x              | Changed port settings: Local IP Port | No                  | Yes                     |
@@ -23,7 +23,7 @@ The **Andrew ACS3000** device is an Antenna Control Unit. It supports a wide ran
 
 #### Serial main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

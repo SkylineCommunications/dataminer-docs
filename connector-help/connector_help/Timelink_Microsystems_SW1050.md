@@ -4,7 +4,7 @@ uid: Connector_help_Timelink_Microsystems_SW1050
 
 # Timelink Microsystems SW1050
 
-With this driver it is possible to gather and view information from the device **Timelink Microsystems SW1050**.
+With this connector it is possible to gather and view information from the device **Timelink Microsystems SW1050**.
 
 ## About
 

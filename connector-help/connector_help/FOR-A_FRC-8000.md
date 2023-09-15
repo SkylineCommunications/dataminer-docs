@@ -4,21 +4,21 @@ uid: Connector_help_FOR-A_FRC-8000
 
 # FOR-A FRC-8000
 
-This driver is used to monitor a FOR-A FRC-8000 frame rate converter.
+This connector is used to monitor a FOR-A FRC-8000 frame rate converter.
 
 ## About
 
-The driver uses an **SNMP connection** to communicate with a FOR-A FRC-8000 device.
+The connector uses an **SNMP connection** to communicate with a FOR-A FRC-8000 device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.42                        |
 
@@ -28,7 +28,7 @@ The driver uses an **SNMP connection** to communicate with a FOR-A FRC-8000 devi
 
 #### SNMPv1 connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

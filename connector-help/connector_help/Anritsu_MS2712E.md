@@ -10,17 +10,17 @@ With this device, you can monitor, locate, identify and analyze a broad range of
 
 ## About
 
-This driver retrieves data via **Serial Communication TCP/IP**. Commands are sent to the device with or without a response in return.
+This connector retrieves data via **Serial Communication TCP/IP**. Commands are sent to the device with or without a response in return.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 2.21                        |
 
@@ -30,7 +30,7 @@ This driver retrieves data via **Serial Communication TCP/IP**. Commands are sen
 
 #### GPIB main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 GPIB CONNECTION:
 

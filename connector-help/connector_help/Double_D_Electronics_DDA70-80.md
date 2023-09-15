@@ -4,7 +4,7 @@ uid: Connector_help_Double_D_Electronics_DDA70-80
 
 # Double D Electronics DDA70-80
 
-This driver can be used to display and configure information of the **Double D Electronics DDA70-80** WG Switch.
+This connector can be used to display and configure information of the **Double D Electronics DDA70-80** WG Switch.
 
 ## About
 
@@ -14,7 +14,7 @@ This protocol uses a serial connection to monitor and control the **Double D Ele
 
 ### Creation
 
-This driver uses a serial connection and needs the following user information:
+This connector uses a serial connection and requires the following input during element creation:
 
 **SERIAL CONNECTION**:
 

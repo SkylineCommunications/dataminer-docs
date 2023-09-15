@@ -4,47 +4,47 @@ uid: Connector_help_Vector_Beta_Pro_60_Manager
 
 # Vector Beta Pro 60 Manager
 
-This is an SNMP driver that polls several **Vector Beta Pro 60** devices and another device (Modem) just in front of them. The driver can be configured using a simple .csv file.
+This is an SNMP connector that polls several **Vector Beta Pro 60** devices and another device (Modem) just in front of them. The connector can be configured using a simple .csv file.
 
 ## About
 
-The driver can be configured to poll several devices. For every device, it will poll some parameters and show them in a separate dynamic virtual element. The parameters for all devices are polled in a sequential manner. This means that if one device goes into timeout, all devices must wait until all parameters have timed out before the parameters of the next device are polled.
+The connector can be configured to poll several devices. For every device, it will poll some parameters and show them in a separate dynamic virtual element. The parameters for all devices are polled in a sequential manner. This means that if one device goes into timeout, all devices must wait until all parameters have timed out before the parameters of the next device are polled.
 
 The parameters are divided into three groups: a fast, a medium and a slow group:
 
-- The fast group is polled every time the timer ticks, i.e. every 10 seconds. This value is hard-coded in the driver, and may change depending on the driver version. However, it is possible to alter the tick speed by overriding the **Timer Base** parameter (on the **General Parameters** page).
-- The medium and slow poll group are polled respectively every 30 seconds and every 12 hours. These values are hard coded in the driver and changing the timer base will have no effect on them, except if you make the timer so slow that it ticks less than the defined time. The reason is that the groups are polled whenever their **Last Poll Time** is more than 30 seconds or 12 hours ago compared to the current time. This check is performed during the fast poll loop, so there is no separate timer for the medium or slow group.
+- The fast group is polled every time the timer ticks, i.e. every 10 seconds. This value is hard-coded in the connector, and may change depending on the connector version. However, it is possible to alter the tick speed by overriding the **Timer Base** parameter (on the **General Parameters** page).
+- The medium and slow poll group are polled respectively every 30 seconds and every 12 hours. These values are hard coded in the connector and changing the timer base will have no effect on them, except if you make the timer so slow that it ticks less than the defined time. The reason is that the groups are polled whenever their **Last Poll Time** is more than 30 seconds or 12 hours ago compared to the current time. This check is performed during the fast poll loop, so there is no separate timer for the medium or slow group.
 
-The driver in fact polls two separate devices, which is why two IP addresses must be provided. However, these are considered to be one and the same device, so all parameters are shown on the same DVE.
+The connector in fact polls two separate devices, which is why two IP addresses must be provided. However, these are considered to be one and the same device, so all parameters are shown on the same DVE.
 
 ## Installation and Configuration
 
 ### Creating an element
 
-To create an element with this driver:
+To create an element with this connector:
 
-1.  Add a new element and select the **Vector Beta Pro 60 Manager** protocol.
-2.  Define a unique name and optionally add a description.
-3.  Optionally enter an IP address and port. The address will in fact be ignored by the driver, since there will be many devices. However, the port can be used to define a default port. Note that you can override the port settings for each device.
-4.  Preferably, set the retries to zero and select a short timeout time, so that the driver does not get stuck for too long if one device fails to respond. ****
+1. Add a new element and select the **Vector Beta Pro 60 Manager** protocol.
+1. Define a unique name and optionally add a description.
+1. Optionally enter an IP address and port. The address will in fact be ignored by the connector, since there will be many devices. However, the port can be used to define a default port. Note that you can override the port settings for each device.
+1. Preferably, set the retries to zero and select a short timeout time, so that the connector does not get stuck for too long if one device fails to respond.
 
 ### Configuring the element
 
-Once the element has been created, it is necessary to configure the devices that need to be polled. This is done by uploading a .csv file to the DMA and telling the driver to parse the content of this file. It is important to know that this .csv file could be the same for all elements of the protocol. This means that there must be a way to filter records from the .csv and only keep a small subset. This is done by assigning a name to the element. Once the name of the manager is defined, a file can be parsed to add, update or remove elements from the manager.
+Once the element has been created, it is necessary to configure the devices that need to be polled. This is done by uploading a .csv file to the DMA and telling the connector to parse the content of this file. It is important to know that this .csv file could be the same for all elements of the protocol. This means that there must be a way to filter records from the .csv and only keep a small subset. This is done by assigning a name to the element. Once the name of the manager is defined, a file can be parsed to add, update or remove elements from the manager.
 
 To configure the element:
 
-1.  Go to the **Setup** page.
-2.  Set the parameter **Manager Name** with a valid name. Valid names are not empty and contain no commas or semicolons (',' or ';'). In the .csv file, there will be a column where the name of the target manager is supplied.
-3.  Go to page **Documents** and upload a new .csv file. This can be added to either the root folder or a sub folder with the name of the element.
-4.  Go back to the **Setup** page and click the **Refresh** button. A list will be shown containing all found .csv files. Select one.
-5.  Finally, click the **Parse** button next to the **Refresh** button. This will read the entire .csv file and create, delete or update the devices polled by the manager.
+1. Go to the **Setup** page.
+1. Set the parameter **Manager Name** with a valid name. Valid names are not empty and contain no commas or semicolons (',' or ';'). In the .csv file, there will be a column where the name of the target manager is supplied.
+1. Go to page **Documents** and upload a new .csv file. This can be added to either the root folder or a sub folder with the name of the element.
+1. Go back to the **Setup** page and click the **Refresh** button. A list will be shown containing all found .csv files. Select one.
+1. Finally, click the **Parse** button next to the **Refresh** button. This will read the entire .csv file and create, delete or update the devices polled by the manager.
 
 Note: Below the **Parse** button, there is an output field where the element shows some information about the last executed action. It is advisable to read this after parsing a file, in order to verify if the action has been performed successfully. In addition, the **Managed Devices** table should also be verified.
 
 ### Selecting a file
 
-On the **Setup** page, there is a parameter **Selected Import File** which can be used to configure the driver. The file can be selected from a drop-down list where all ".csv" files are listed in the protocol's root documentation folder, or in the element's root documentation folder. The files found under the protocol root folder start with "*\[P\]:*", the files found in the element folder start with "*\[E\]:*".
+On the **Setup** page, there is a parameter **Selected Import File** which can be used to configure the connector. The file can be selected from a drop-down list where all ".csv" files are listed in the protocol's root documentation folder, or in the element's root documentation folder. The files found under the protocol root folder start with "*\[P\]:*", the files found in the element folder start with "*\[E\]:*".
 
 Even though only files with the extension ".csv" from the two mentioned folders are shown, other files can also be selected. However, they have to be on the DMA where the element is running. To select such a file, specify the full path instead of selecting a drop-down item, e.g. *C:\Temp\MyFile.txt.*
 
@@ -74,11 +74,11 @@ There are a few rules that the .csv file must comply with and some things that t
 > 2;Lab02;Simulation;10.0.1.10;10.0.1.11;Lab\|Test; Will generate a new element named "Lab02" ...
 > 2;Lab03;Simulation;10.0.1.10;10.0.1.11;Lab\|Test; Will be ignored, because there is already a record for the manager "Simulation" and ID "2".
 >
-> Note: the headers on the first line are ignored by the driver, so you cannot change the order of the data (columns) in the csv file.
+> Note: the headers on the first line are ignored by the connector, so you cannot change the order of the data (columns) in the csv file.
 > Note: you can add comments on the first line if the separator char occurs more than the comma or semi column char.
 > Note: you can add comments on the second line without any restrictions
 > Note: you can add comments on all other lines in unused columns
-> Note: even this line would be considered a comment because there is no data in the thrird column. Which means that no "Manager" is selected.
+> Note: even this line would be considered a comment because there is no data in the third column. Which means that no "Manager" is selected.
 > Note: even this line would be considered a comment if there is no manager named "third col" because that's the value in the third column: ;second column;third column
 
 #### The first Line
@@ -117,7 +117,7 @@ The following table provides more information on the different columns:
 </tr>
 <tr class="even">
 <td><strong>NAME</strong></td>
-<td><p>The name of the element. This name will be used to create the DVE element (prefixed with the manager's name.) The alarms will also contain this name. The name must be unique. If it is not, the driver will make it unique by adding a number to the name.</p></td>
+<td><p>The name of the element. This name will be used to create the DVE element (prefixed with the manager's name.) The alarms will also contain this name. The name must be unique. If it is not, the connector will make it unique by adding a number to the name.</p></td>
 </tr>
 <tr class="odd">
 <td><strong>MANAGER</strong></td>
@@ -171,7 +171,7 @@ A brief description of the available parameters:
 </tr>
 <tr class="even">
 <td><strong>Name</strong></td>
-<td><p>A user defined name for the element. The name must be unique for this manager. If not, the driver will generate a unique name by adding a number to the name.</p>
+<td><p>A user defined name for the element. The name must be unique for this manager. If not, the connector will generate a unique name by adding a number to the name.</p>
 <p>Example: two elements with name "Brugge" would become: "Brugge" and "Brugge (2)".</p></td>
 </tr>
 <tr class="odd">
@@ -214,7 +214,7 @@ A brief description of the available parameters:
 </tr>
 <tr class="even">
 <td><strong>Polling Status</strong></td>
-<td><p>Indicates if the device and modem are polled. Polling can be disabled and enabled by the user or automatically stopped by the driver if the DNS cannot translate the server name to an IP address.</p></td>
+<td><p>Indicates if the device and modem are polled. Polling can be disabled and enabled by the user or automatically stopped by the connector if the DNS cannot translate the server name to an IP address.</p></td>
 </tr>
 </tbody>
 </table>
@@ -229,7 +229,7 @@ There should also always be a file named "\[E\]: CurrentConfig.csv". Parsing thi
 
 These files can be used to create a "master" file containing all info for all managers on the DataMiner. To do so, simply find all "CurrentConfig.csv" files in all subdirectories of the protocol root folder and copy all but the first two lines to a new file (which should start with the first two lines of one of the .csv files.) The protocol's root folder should be: *C:\Skyline DataMiner\Documents\Vector Beta Pro 60 Manager\\*
 
-Note: this can be used to get the actual IDs generated by the driver for each element if they were configured using an empty ID field.
+Note: this can be used to get the actual IDs generated by the connector for each element if they were configured using an empty ID field.
 
 ## Pages & Content
 
@@ -239,10 +239,10 @@ This page contains a list of all the devices polled by the element, along with s
 
 #### Note about DNS errors
 
-It is possible to supply the name of the server instead of an IP address. In that case the driver will try to translate the name to an IP address just before polling. This will be repeated in every poll cycle, so the IPs can be dynamic. However, it is possible that the name cannot be resolved by the DNS server. In that case, the DVE will be set in timeout and the polling for both the Vector Beta Pro device and the modem will be stopped.
+It is possible to supply the name of the server instead of an IP address. In that case the connector will try to translate the name to an IP address just before polling. This will be repeated in every poll cycle, so the IPs can be dynamic. However, it is possible that the name cannot be resolved by the DNS server. In that case, the DVE will be set in timeout and the polling for both the Vector Beta Pro device and the modem will be stopped.
 This is indicated by the *Stopped (Error)* value in the **MD -** **Polling Status** parameter. The source of the problem will also be indicated by the value *DNS Error* in the **Timeout** and/or **Timeout Modem** columns, depending on which name(s) could not be resolved.
 
-Once every hour the driver will re-evaluate, or retry, the names, so that polling can automatically be resumed if the problem is solved. The user can force a retry by manually setting the **Polling Status** to *Enabled*. It is also possible to set a *Stopped (Error)* record to *Disabled,* in which case polling will not be resumed until this is explicitly set to *Enabled* again by the user.
+Once every hour the connector will re-evaluate, or retry, the names, so that polling can automatically be resumed if the problem is solved. The user can force a retry by manually setting the **Polling Status** to *Enabled*. It is also possible to set a *Stopped (Error)* record to *Disabled,* in which case polling will not be resumed until this is explicitly set to *Enabled* again by the user.
 
 ### Setup
 

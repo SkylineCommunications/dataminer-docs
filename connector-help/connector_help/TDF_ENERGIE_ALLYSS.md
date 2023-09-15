@@ -4,7 +4,7 @@ uid: Connector_help_TDF_ENERGIE_ALLYSS
 
 # TDF ENERGIE ALLYSS
 
-The TDF Energie Allyss driver is a virtual driver that maps the parameters of the Energy system via the TDF Jbus PLC driver.
+The TDF Energie Allyss connector is a virtual connector that maps the parameters of the Energy system via the TDF Jbus PLC driver.
 
 ## About
 
@@ -32,7 +32,7 @@ The TDF Energie Allyss driver is a virtual driver that maps the parameters of th
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## How to use
 
@@ -44,4 +44,4 @@ The element has the following data pages:
 
 ## Notes
 
-The names and descriptions of the parameters are in French, since this driver is intended only for TDF.
+The names and descriptions of the parameters are in French, since this connector is intended only for TDF.

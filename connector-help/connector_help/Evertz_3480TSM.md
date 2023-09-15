@@ -4,21 +4,21 @@ uid: Connector_help_Evertz_3480TSM
 
 # Evertz 3480TSM
 
-This driver is used to monitor the Evertz 3480TSM transport stream monitor.
+This connector is used to monitor the Evertz 3480TSM transport stream monitor.
 
 ## About
 
-This driver uses an **SNMP** connection to collect traps from the device. The status information of the monitored parameters is updated based on the collected traps, and the traps information is stored in a local database.
+This connector uses an **SNMP** connection to collect traps from the device. The status information of the monitored parameters is updated based on the collected traps, and the traps information is stored in a local database.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                           | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                           | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version for traps implementation. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ This driver uses an **SNMP** connection to collect traps from the device. The st
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

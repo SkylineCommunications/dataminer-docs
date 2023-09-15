@@ -32,7 +32,7 @@ The Antech LGC0020A is an RF detector that can be used to provide redundancy for
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION (via Serial Gateway):
 
@@ -48,7 +48,7 @@ No extra configuration is needed.
 
 ### Redundancy
 
-No redundancy is defined in the driver.
+No redundancy is defined in the connector.
 
 ## How to Use
 

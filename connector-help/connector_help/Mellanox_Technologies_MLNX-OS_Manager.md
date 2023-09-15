@@ -4,22 +4,22 @@ uid: Connector_help_Mellanox_Technologies_MLNX-OS_Manager
 
 # Mellanox Technologies MLNX-OS Manager
 
-This driver is used to monitor the **Mellanox Equipment** running on **MLNX-OS**.
+This connector is used to monitor the **Mellanox Equipment** running on **MLNX-OS**.
 
 ## About
 
 The information on tables and parameters is retrieved via SNMP polling. Specific range versions provide additional information in accordance with the API device documentation.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**                                  | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**                                  | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|--------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x              | Initial version                                  | No                  | Yes                     |
 | 1.1.0.x \[SLC Main\] | Based on version 1.0.0.1. Added HTTP connection. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | \-                          |
 | 1.1.0.x          | API 3.6.5000                |
@@ -41,7 +41,7 @@ The information on tables and parameters is retrieved via SNMP polling. Specific
 <tr class="even">
 <td>1.0.0.x</td>
 <td><h4 id="snmp-main-connection">SNMP Main Connection</h4>
-<p>This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:</p>
+<p>This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:</p>
 <p>SNMP CONNECTION:</p>
 <ul>
 <li><strong>IP address/host</strong>: The polling IP of the device.</li>
@@ -56,7 +56,7 @@ The information on tables and parameters is retrieved via SNMP polling. Specific
 <tr class="odd">
 <td>1.1.0.x</td>
 <td><h4 id="snmp-main-connection-1">SNMP Main Connection</h4>
-<p>This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:</p>
+<p>This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:</p>
 <p>SNMP CONNECTION:</p>
 <ul>
 <li><strong>IP address/host</strong>: The polling IP of the device.</li>
@@ -68,7 +68,7 @@ The information on tables and parameters is retrieved via SNMP polling. Specific
 <li><strong>Set community string</strong>: The community string used when setting values on the device, by default <em>private</em>.</li>
 </ul>
 <h4 id="http-connection">HTTP Connection</h4>
-<p>This driver uses an HTTP connection and requires the following input during element creation:</p>
+<p>This connector uses an HTTP connection and requires the following input during element creation:</p>
 <p>HTTP CONNECTION:</p>
 <ul>
 <li><strong>IP address/host</strong>: The polling IP of the device.</li>

@@ -8,13 +8,13 @@ The **TeraCue iCue** is used for streaming media with an integrated video archiv
 
 ## About
 
-This is an SNMP driver that displays all the services, broadcastings and recordings. It also uses traps to update the values faster.
+This is an SNMP connector that displays all the services, broadcastings and recordings. It also uses traps to update the values faster.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION**:
 
@@ -44,6 +44,6 @@ This page provides an overview of all the broadcasts that are available and thei
 
 This page provides an overview of all the recordings and their information.
 
-### Webinterface
+### Web Interface
 
 The web interface of the device.

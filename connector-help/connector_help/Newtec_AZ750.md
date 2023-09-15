@@ -12,9 +12,9 @@ Range **1.0.0.x** of the protocol uses **serial** communication to monitor the d
 
 Range **2.0.0.x** of the protocol uses **SNMP** communication to monitor the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**        | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**        | **DCF Integration** | **Cassandra Compliant** |
 |------------------|------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial serial version | No                  | Yes                     |
 | 2.0.0.x          | Initial SNMP version   | No                  | Yes                     |
@@ -25,7 +25,7 @@ Range **2.0.0.x** of the protocol uses **SNMP** communication to monitor the dev
 
 #### Serial connection \[1.0.0.x range\]
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -45,7 +45,7 @@ SERIAL CONNECTION:
 
 #### SNMP connection \[2.0.0.x range\]
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

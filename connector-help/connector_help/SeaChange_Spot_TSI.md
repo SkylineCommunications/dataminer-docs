@@ -14,7 +14,7 @@ The Spot TSI driver periodically polls a TSI server to retrieve status informati
 
 ### Creation
 
-This driver uses multiple connections.
+This connector uses multiple connections.
 
 It uses a Simple Network Management Protocol (SNMP) connection to receive traps, and needs the following user information for this:
 
@@ -28,7 +28,7 @@ It uses a Simple Network Management Protocol (SNMP) connection to receive traps,
 - **Get community string**: N/A
 - **Set community string**: N/A
 
-The driver also uses a serial connection, for which it needs the following user information:
+The connector also uses a serial connection, for which it needs the following user information:
 
 **SERIAL CONNECTION:**
 
@@ -55,7 +55,7 @@ The **Export/Import** page button leads to a page where the current configuratio
 
 ### Task Manager
 
-This page displays the **Task Manager** for this server. It contains **process identifiers, CPU** **and** **memory data.** By default, the driver will not remove deleted processes from the table. However, you can change this by toggling the **Auto Clear button**.
+This page displays the **Task Manager** for this server. It contains **process identifiers, CPU** **and** **memory data.** By default, the connector will not remove deleted processes from the table. However, you can change this by toggling the **Auto Clear button**.
 
 ### Service List
 

@@ -4,7 +4,7 @@ uid: Connector_help_MRV_Communications_Chassis
 
 # MRV Communications Chassis
 
-The MRV Communications Chassis is a driver for an MRV chassis that houses MRV Communications modules.
+The MRV Communications Chassis is a connector for an MRV chassis that houses MRV Communications modules.
 
 ## About
 
@@ -32,7 +32,7 @@ The MRV Communications Chassis is a driver for an MRV chassis that houses MRV Co
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -46,10 +46,10 @@ SNMP Settings:
 
 ### Redundancy
 
-Redundancy is not defined in the driver.
+Redundancy is not defined in the connector.
 
 ## How to Use
 
-The driver uses SNMP calls to poll the chassis. The information on the installed modules is retrieved in the same way.
+The connector uses SNMP calls to poll the chassis. The information on the installed modules is retrieved in the same way.
 
-This driver will export each installed module to a MRV Communications Module element.
+This connector will export each installed module to a MRV Communications Module element.

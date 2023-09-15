@@ -10,15 +10,15 @@ The **IneoQuest Surveyor ABR** is a probe device that can detect streaming media
 
 An HTTPS connection is used to retrieve information from and send information to the device. Data is received and sent in the JSON format.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**    |
+| **Range** | **Device Firmware Version**    |
 |------------------|--------------------------------|
 | 1.0.0.x          | SurveyorABR-3.00.00.083-102417 |
 
@@ -28,7 +28,7 @@ An HTTPS connection is used to retrieve information from and send information to
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

@@ -4,7 +4,7 @@ uid: Connector_help_Snell_Wilcox_IQOTX00+HTX_RollCall
 
 # Snell Wilcox IQOTX00+HTX RollCall
 
-This driver monitors the activity of the Snell Wilcox IQOTX00+HTX RollCall device, an Optical Transmitter.
+This connector monitors the activity of the Snell Wilcox IQOTX00+HTX RollCall device, an Optical Transmitter.
 
 ## About
 
@@ -20,15 +20,11 @@ This driver monitors the activity of the Snell Wilcox IQOTX00+HTX RollCall devic
 |-----------|---------------------------------|
 | 1.0.0.x   | 0003 - 5.0.5 (software version) |
 
-
-
 ### System Info
 
 | **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components** |
 |-----------|---------------------|-------------------------|-----------------------|-------------------------|
 | 1.0.0.x   | No                  | Yes                     | \-                    | \-                      |
-
-
 
 ## Configuration
 
@@ -36,15 +32,15 @@ This driver monitors the activity of the Snell Wilcox IQOTX00+HTX RollCall devic
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
 - Interface connection:
 
   - **IP address/host**: The polling IP or URL of the destination.
-  - **IP port**: \[The IP port of the destination. (default: *2050*)\]
-  - **Bus address**: \[The bus address of the device. (default: *UU.PP (Hex)*)\]
+  - **IP port**: The IP port of the destination (default: *2050*).
+  - **Bus address**: The bus address of the device. (default: *UU.PP (Hex)*).
 
 ### Web Interface
 

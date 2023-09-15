@@ -4,15 +4,15 @@ uid: Connector_help_Tektronix_ECO_8000
 
 # Tektronix ECO 8000
 
-The **Tektronix ECO 8000** driver monitors and controls the changeover unit through SNMP.
+The **Tektronix ECO 8000** connector monitors and controls the changeover unit through SNMP.
 
 ## About
 
-The driver polls relevant information from the device every 15 seconds, 15 minutes or 1 hour. It receives traps from the device and updates the corresponding values.
+The connector polls relevant information from the device every 15 seconds, 15 minutes or 1 hour. It receives traps from the device and updates the corresponding values.
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 
@@ -26,7 +26,7 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and need
 
 ## Usage
 
-This driver has several data display pages:
+This connector has several data display pages:
 
 ### General Page
 
@@ -50,7 +50,7 @@ Several buttons are available with which you can reset the **Factory Defaults** 
 
 ### Power Supplies Page
 
-This page displays information regarding **Power Supply 1** and **2**. Four page buttons also provide acces to information on all **Voltages** for the four different modules that can be installed.
+This page displays information regarding **Power Supply 1** and **2**. Four page buttons also provide access to information on all **Voltages** for the four different modules that can be installed.
 
 ### Event Reporting Page
 

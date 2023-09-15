@@ -4,7 +4,7 @@ uid: Connector_help_Ziggo_IPVPN_Provisioning
 
 # Ziggo IPVPN Provisioning
 
-The **Ziggo IPVPN Provisioning** driver can be used to create, update and delete modem info on the Ziggo IPVPN CPE setup through HTTP POST JSON messages. It can also update the modem info through automatic provisioning via CSV files.
+The **Ziggo IPVPN Provisioning** connector can be used to create, update and delete modem info on the Ziggo IPVPN CPE setup through HTTP POST JSON messages. It can also update the modem info through automatic provisioning via CSV files.
 
 ## About
 
@@ -14,11 +14,11 @@ It will then create IAM DSL files and will call the **Skyline IAM DB** element t
 
 With this element, the configuration for the classifier names will be done, which the **Ziggo IPVPN Collector** elements need. Only one **Ziggo IPVPN Provisioning** element is needed for the entire CPE setup.
 
-This is a virtual driver, so no data traffic will be displayed in the Stream Viewer.
+This is a virtual connector, so no data traffic will be displayed in the Stream Viewer.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
@@ -28,7 +28,7 @@ This is a virtual driver, so no data traffic will be displayed in the Stream Vie
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Configuration of the web service
 
@@ -49,7 +49,7 @@ In the **Feeds** table on the **General** page, the **Delivery Folder** and **Hi
 
 ## Usage
 
-For more information on the usage of the driver, refer to the sections above.
+For more information on the usage of the connector, refer to the sections above.
 
 ## Notes
 
@@ -87,7 +87,7 @@ The **Feeds** table is displayed on the **General** page. It contains 4 entries 
 
 - **Clean**: Whether the files in the **Delivery Folder** will be removed when a feed is enabled.
 
-- **Delivery Folder**: The directory where the driver will periodically search for files to ingest.
+- **Delivery Folder**: The directory where the connector will periodically search for files to ingest.
 
 - **History Folder**: The directory where the files will be moved after they have been processed (successfully or not).
 

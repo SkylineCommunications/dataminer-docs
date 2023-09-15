@@ -7,7 +7,6 @@ uid: Connector_help_Mediaproxy_Player
 The Mediaproxy Player is a compliancy platform that allows the user to manage video streams and metadata. It allows a user to search, extract, stream and review recorded media. It also contains an extract, transcode and burn-in engine, as well as an integrated search engine for closed captions and Meta data.
 This protocol is used to monitor the player's activity and events.
 
-
 ## About
 
 ### Version Info
@@ -54,25 +53,25 @@ This protocol is used to monitor the player's activity and events.
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
-- **IP address/host**: \[The polling IP or URL of the destination. It should start with https:// .\]
-  - **IP port**: \[The IP port of the destination. (default: *443*)\]
-  - **Device address**: \[The bus address of the device. If the proxy server has to be bypassed, specify *BypassProxy*.\]
+- **IP address/host**: The polling IP or URL of the destination. It should start with https:// .
+- **IP port**: The IP port of the destination (default: *443*).
+- **Device address**: The bus address of the device. If the proxy server has to be bypassed, specify *BypassProxy*.
 
 #### Events Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
 - Interface connection:
 
-  - **IP address/host**: \[The polling IP or URL of the destination. Should be the same as the HTTP Connection IP.\]
-  - **IP port**: \[The IP port of the destination. (default: *5000*)\]
-  - **Bus address**: \[The bus address of the device. (possible values: *ByPassProxy*)\]
+  - **IP address/host**: The polling IP or URL of the destination. Should be the same as the HTTP Connection IP.
+  - **IP port**: The IP port of the destination (default: *5000*).
+  - **Bus address**: The bus address of the device (possible values: *ByPassProxy*).
 
 ### Initialization
 
@@ -92,9 +91,7 @@ The **Events page** contains monitoring information. The **Event States** table 
 
 ## Notes
 
-### Upgrade Notes:
+### Upgrade Notes
 
 When updating from version 1.0.0.6 to 1.0.0.7 or higher, you need to check if non of your alarming or trending template use the Event States table (id 1240).
 The table is volatile in version 1.0.0.7 and higher.
-
-

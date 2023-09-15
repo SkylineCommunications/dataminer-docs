@@ -10,13 +10,13 @@ The management functions are supported by a plug-in controller that communicates
 
 The chassis and modules support the functions as follows:
 
-1.  Plug-in module presence.
-2.  Plug-in module identification.
-3.  Plug-in module control and monitoring.
+1. Plug-in module presence.
+1. Plug-in module identification.
+1. Plug-in module control and monitoring.
 
 ## About
 
-This driver retrieves data from the device(s) through a serial interface and displays information on installed modules for each device address.
+This connector retrieves data from the device(s) through a serial interface and displays information on installed modules for each device address.
 
 The data specific for each module is organized on the **Devices** page.
 
@@ -29,7 +29,7 @@ For each module, a **DVE** is created that includes:
 
 ### Creation
 
-This driver uses two serial connections and requires the following input during element creation:
+This connector uses two serial connections and requires the following input during element creation:
 
 **SERIAL CONNECTION 1**:
 

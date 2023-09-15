@@ -8,18 +8,18 @@ The Sencore **AG 5800** receiver supports up to 10 decoder cards. It is suited f
 
 ## About
 
-This driver uses **SNMP** to retrieve and configure parameters of the Sencore AG 5800. In addition, the driver offers several possibilities for **trending** and **alarm monitoring**.
+This connector uses **SNMP** to retrieve and configure parameters of the Sencore AG 5800. In addition, the connector offers several possibilities for **trending** and **alarm monitoring**.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                                                                                                                                                                                                                                                                     | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                                                                                                                                                                                                                                                                                     | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                                                                                                                                                                                                                                                                                                                     | No                  | Yes                     |
 | 1.0.1.x \[Main\] | \- Fixes Input Primary & Secondary Source Output, making it dynamic and mutually exclusive using Labels from Transport Stream Input Source. - Fixes Output Manual Format behavior. - Adds Overlay Image parameters, SCTE35 info, SCTE104 Filter Mode, and ASI parameters. -Fixes SETs for IP Address-like and Port-like parameters. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 2.5.0                       |
 | 1.0.1.x          | 2.5.0                       |
@@ -30,7 +30,7 @@ This driver uses **SNMP** to retrieve and configure parameters of the Sencore AG
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

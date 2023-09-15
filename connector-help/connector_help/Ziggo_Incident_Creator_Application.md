@@ -8,13 +8,13 @@ Ticketing System for USMS tickets and trigger IVR.
 
 ## About
 
-This driver will automatically create tickets based on correlated alarms. It also allows the operator to manually create tickets on existing alarms and even close them. The driver will list all created tickets and update their status from RSS feeds.
+This connector will automatically create tickets based on correlated alarms. It also allows the operator to manually create tickets on existing alarms and even close them. The connector will list all created tickets and update their status from RSS feeds.
 
 USMS tickets are forwarded towards Ziggo USMS Ticket Gateway driver and IVR is sent to Ziggo IVR Gateway driver.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
@@ -24,7 +24,7 @@ USMS tickets are forwarded towards Ziggo USMS Ticket Gateway driver and IVR is s
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Configuration of Remote Elements
 
@@ -70,10 +70,10 @@ Note: for the **Start Time** and **End Time**, only the hour and minute matter b
 
 This tree control follows the next hierarchy (4 tables and relations between them):
 
-1.  Platform (detect from list of values in element property);
-2.  Severity (4 level: warning, minor, major, critical);
-3.  day of the week (7 days: monday, tuesday, wednesday, thursday, friday, saturday, sunday);
-4.  time window: (possibly) multiple time windows during which the time in which auto ticketing is allowed ( in form hh:mm-hh:mm).
+1. Platform (detect from list of values in element property);
+2. Severity (4 level: warning, minor, major, critical);
+3. day of the week (7 days: monday, tuesday, wednesday, thursday, friday, saturday, sunday);
+4. time window: (possibly) multiple time windows during which the time in which auto ticketing is allowed ( in form hh:mm-hh:mm).
 
 ### Close Incident Overview
 
@@ -89,7 +89,7 @@ This tree control follows the next hierarchy (4 tables and relations between the
 
 #### Closing Configuration
 
-There is the possibility to enable **Detailed Logging** in the **Create and Close Config** page**.** If this setting is enabled, the driver is profiding you with all information of the flow of the driver in the logging of the element. If you disable this toggle button, only errors will be logged.
+There is the possibility to enable **Detailed Logging** in the **Create and Close Config** page**.** If this setting is enabled, the connector is profiding you with all information of the flow of the connector in the logging of the element. If you disable this toggle button, only errors will be logged.
 
 ## Notes
 

@@ -4,7 +4,7 @@ uid: Connector_help_Benning_MCU1000
 
 # Benning MCU1000
 
-This driver is used to monitor the MCU1000 device.
+This connector is used to monitor the MCU1000 device.
 
 ## About
 
@@ -14,7 +14,7 @@ All the status information is retrieved via a serial command. Then appropriate p
 
 ### Creation
 
-This driver uses a serial connection and needs the following user information:
+This connector uses a serial connection and requires the following input during element creation:
 
 **SERIAL CONNECTION:**
 

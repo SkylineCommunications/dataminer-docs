@@ -4,7 +4,7 @@ uid: Connector_help_Nagios_Nagios
 
 # Nagios Nagios
 
-The **Nagios Nagios** driver monitors a Nagios system unit through **SNMP**.
+The **Nagios Nagios** connector monitors a Nagios system unit through **SNMP**.
 
 ## About
 
@@ -16,7 +16,7 @@ However, note that only traps with **OIDs 1.3.6.1.4.1.20006.1.6 or 1.3.6.1.4.1.2
 
 #### SNMP connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -32,7 +32,7 @@ SNMP Settings:
 
 ### Status Page
 
-This driver contains only one data display page, the **Status page**.
+This connector contains only one data display page, the **Status page**.
 
 This page displays a **Notify Table** with the **Device Name**, **Alarm Type**, **Status** and **Extra Info.**
 

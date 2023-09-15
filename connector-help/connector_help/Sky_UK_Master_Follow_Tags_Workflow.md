@@ -4,15 +4,15 @@ uid: Connector_help_Sky_UK_Master_Follow_Tags_Workflow
 
 # Sky UK Master Follow Tags Workflow
 
-This driver is used by enhanced services that contain elements of the protocol [Sky UK VICC](xref:Connector_help_Sky_UK_VICC) and Sky UK BSS. With this driver, alarms are generated according to predefined rules.
+This connector is used by enhanced services that contain elements of the protocol [Sky UK VICC](xref:Connector_help_Sky_UK_VICC) and Sky UK BSS. With this connector, alarms are generated according to predefined rules.
 
 ## About
 
-To use this driver, create a service that uses it as the service definition, add the necessary element and select the parameters mentioned below.
+To use this connector, create a service that uses it as the service definition, add the necessary element and select the parameters mentioned below.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial Version | No                  | Yes                     |
 
@@ -22,7 +22,7 @@ To use this driver, create a service that uses it as the service definition, add
 
 #### service Main Connection
 
-This driver uses a service connection and requires the following input during element creation:
+This connector uses a service connection and requires the following input during element creation:
 
 SERVICE CONNECTION:
 
@@ -33,11 +33,13 @@ Elements/Parameters:
 - **Data Update Trigger**
 
 - [Sky UK VICC](xref:Connector_help_Sky_UK_VICC) (Follow element)
-  - ****Data Update Trigger****
+
+  - **Data Update Trigger**
   - **Channel From User**
   - **Expected Follow Bus**
 
 - [Sky UK BSS](xref:Connector_help_Sky_UK_VICC)
+
   - **Data Update Trigger**
 
 From version 1.0.0.11 subscription parameters have changed
@@ -45,11 +47,13 @@ From version 1.0.0.11 subscription parameters have changed
 - **Future Events Table**
 
 - [Sky UK VICC](xref:Connector_help_Sky_UK_VICC) (Follow element)
-  - ****Future Events Table****
+
+  - **Future Events Table**
   - **Channel From User**
   - **Expected Follow Bus**
 
 - [Sky UK BSS](xref:Connector_help_Sky_UK_VICC)
+
   - **BSS Table**
 
 ## Usage

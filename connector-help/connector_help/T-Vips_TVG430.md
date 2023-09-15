@@ -4,23 +4,23 @@ uid: Connector_help_T-Vips_TVG430
 
 # T-VIPS TVG430
 
-The **T-VIPS TVG430** driver is an SNMP-based driver used to monitor and configure the **T-VIPS TVG430**.
+The **T-VIPS TVG430** connector is an SNMP-based connector used to monitor and configure the **T-VIPS TVG430**.
 
 ## About
 
 The **TVG430** provides JPEG2000 compression of HD-SDI signals, allowing transmission of HDTV signals over Gigabit Ethernet links as well as over DVB ASI links. The **TVG430** is part of the T-VIPS Video Gateway Suite and is consequently very similar to other T-VIPS TVGxxx drivers.
 
-There are 2 operational modes available for the **T-VIPS TVG430**: *HD-SDI to IP* and *IP to HD-SDI*. This driver allows you to change the operational mode and to modify settings for both operational modes.
+There are 2 operational modes available for the **T-VIPS TVG430**: *HD-SDI to IP* and *IP to HD-SDI*. This connector allows you to change the operational mode and to modify settings for both operational modes.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.1.x          | Initial version | Yes                 | False                   |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.1.x          | Unknown                     |
 
@@ -30,7 +30,7 @@ There are 2 operational modes available for the **T-VIPS TVG430**: *HD-SDI to IP
 
 SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

@@ -4,21 +4,21 @@ uid: Connector_help_Check_Point_1100_Firewall_-_Virtual_System
 
 # Check Point 1100 Firewall - Virtual System
 
-With this driver, information can be gathered and viewed from the **Check Point 1100 Firewall Virtual System**.
+With this connector, information can be gathered and viewed from the **Check Point 1100 Firewall Virtual System**.
 
 ## About
 
-This driver is used to interface with the **Check Point 1100 Firewall Virtual System**. It uses SNMPv3 to communicate with the device.
+This connector is used to interface with the **Check Point 1100 Firewall Virtual System**. It uses SNMPv3 to communicate with the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**             | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**             | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------------------|---------------------|-------------------------|
 | 1.0.1.x          | Support for SNMPv3 contexts | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.1.x          | 9                           |
 
@@ -26,7 +26,7 @@ This driver is used to interface with the **Check Point 1100 Firewall Virtual Sy
 
 ### Creation
 
-This driver is used by DVE child elements that are **automatically created** by the driver [Check Point 1100 Firewall](xref:Connector_help_Check_Point_1100_Firewall).
+This connector is used by DVE child elements that are **automatically created** by the connector [Check Point 1100 Firewall](xref:Connector_help_Check_Point_1100_Firewall).
 
 ## Usage
 

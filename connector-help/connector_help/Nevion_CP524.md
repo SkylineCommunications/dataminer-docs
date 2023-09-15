@@ -10,18 +10,18 @@ Its multi-stream (any input to any output) filtering/remultiplexing features ena
 
 ## About
 
-This driver displays information that is polled from the device with **SNMP**. The 2.0.0.x range instead uses **HTTP** to retrieve the data, and uses **SNMP** for traps.
+This connector displays information that is polled from the device with **SNMP**. The 2.0.0.x range instead uses **HTTP** to retrieve the data, and uses **SNMP** for traps.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**                                                                                                    | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**                                                                                                    | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|--------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.1.x              | Added soft switches and updated DCF accordingly. Updated all display keys, fixed some issues and cleaned protocol. | Yes                 | Yes                     |
 | \[SLC Main\] 2.0.0.x | Initial version using HTTP communication Added outgoing services and PIDs                                          | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.1.x          | 2.0.16 2.4.6                |
 | 2.0.0.x          | 2.4.6                       |
@@ -32,7 +32,7 @@ This driver displays information that is polled from the device with **SNMP**. T
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -48,7 +48,7 @@ SNMP Settings:
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection to the CP524 device and requires the following input during element creation:
+This connector uses an HTTP connection to the CP524 device and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -58,7 +58,7 @@ HTTP CONNECTION:
 
 #### SNMP Traps Connection
 
-This driver uses an SNMP connection for traps and requires the following input during element creation:
+This connector uses an SNMP connection for traps and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -272,7 +272,7 @@ Note that the client machine has to be able to access the device, as otherwise i
 
 ## DataMiner Connectivity Framework
 
-The **1.0.1.x** driver range of the **Nevion CP524** protocol supports the usage of DCF and can only be used on a DMA with **8.5.14** as the minimum version.
+The **1.0.1.x** connector range of the **Nevion CP524** protocol supports the usage of DCF and can only be used on a DMA with **8.5.14** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 

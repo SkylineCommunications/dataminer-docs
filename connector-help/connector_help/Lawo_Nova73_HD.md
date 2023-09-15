@@ -4,9 +4,9 @@ uid: Connector_help_Lawo_Nova73_HD
 
 # Lawo Nova73 HD
 
-This driver is used to monitor a Lawo Nova73 HD router. This router supports up to 16 slot-in modules (Ravenna, MADI, SDH/STM-1 and AES3 modules).
+This connector is used to monitor a Lawo Nova73 HD router. This router supports up to 16 slot-in modules (Ravenna, MADI, SDH/STM-1 and AES3 modules).
 
-No DVEs are created for these modules as they can be polled individually. Currently, a driver is available for the HD Core Ravenna modules. Each installed module requires a corresponding element in DataMiner.
+No DVEs are created for these modules as they can be polled individually. Currently, a connector is available for the HD Core Ravenna modules. Each installed module requires a corresponding element in DataMiner.
 
 ## About
 
@@ -34,7 +34,7 @@ No DVEs are created for these modules as they can be polled individually. Curren
 
 #### Smart-Serial Main Connection
 
-This driver uses the Ember+ protocol over a smart-serial connection and requires the following input during element creation:
+This connector uses the Ember+ protocol over a smart-serial connection and requires the following input during element creation:
 
 SMART-SERIAL CONNECTION:
 
@@ -43,7 +43,7 @@ SMART-SERIAL CONNECTION:
 
 #### Smart-Serial Redundant Connection
 
-In case the main connection fails (timeout event), the driver will automatically switch to an alternate IP connection.
+In case the main connection fails (timeout event), the connector will automatically switch to an alternate IP connection.
 
 For this connection, the following input is required during element creation:
 
@@ -58,7 +58,7 @@ No additional configuration is required. When a new element is created/started, 
 
 ### Redundancy
 
-Redundancy is not defined in the driver.
+Redundancy is not defined in the connector.
 
 ### Web Interface
 
@@ -66,4 +66,4 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to Use
 
-This driver uses the Ember+ protocol to communicate with the device. On startup, the driver will poll the entire Ember+ tree to determine the paths to nodes that need to be accessed. This action can take up to 30 seconds and its progress can be followed using the Discovered Nodes and Node Discovery parameters on the General page. Once this action is complete, polling of the parameters will start. This discovery action is repeated every day, in case the Ember+ tree were to change.
+This connector uses the Ember+ protocol to communicate with the device. On startup, the connector will poll the entire Ember+ tree to determine the paths to nodes that need to be accessed. This action can take up to 30 seconds and its progress can be followed using the Discovered Nodes and Node Discovery parameters on the General page. Once this action is complete, polling of the parameters will start. This discovery action is repeated every day, in case the Ember+ tree were to change.

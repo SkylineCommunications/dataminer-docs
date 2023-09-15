@@ -4,25 +4,25 @@ uid: Connector_help_LYNX_Technik_AG_Series_5000
 
 # LYNX Technik AG Series 5000
 
-This driver monitors the activity of the Lynx Technik AG Series 5000 device. Series 5000 is a rack-based terminal equipment solution that can be user-configured with any combination of card modules from an extensive range of available solutions. This includes audio distribution, conversion and processing, as well as video distribution, conversion, embedding and de-embedding, frame synchronization, test generators, downconverters and video processors.
+This connector monitors the activity of the Lynx Technik AG Series 5000 device. Series 5000 is a rack-based terminal equipment solution that can be user-configured with any combination of card modules from an extensive range of available solutions. This includes audio distribution, conversion and processing, as well as video distribution, conversion, embedding and de-embedding, frame synchronization, test generators, downconverters and video processors.
 
 ## About
 
-This driver polls data from the device using a **smart-**serial**** connection. For each of the card modules, a DVE is generated.
+This connector polls data from the device using a **smart-serial** connection. For each of the card modules, a DVE is generated.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** | **Serial Protocol Version** |
+| Range | Supported Firmware Version | **Serial Protocol Version** |
 |------------------|-----------------------------|-----------------------------|
 | 1.0.0.x          | 8.8.1                       | 1.9                         |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol**                    | **Description**                                           |
 |------------------------------------------|-----------------------------------------------------------|
@@ -42,23 +42,26 @@ This driver polls data from the device using a **smart-**serial**** connection. 
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
 - Direct connection:
+
   - **Baudrate**: Baudrate specified in the manual of the device.
   - **Databits**: Databits specified in the manual of the device.
   - **Stopbits**: Stopbits specified in the manual of the device.
   - **Parity**: Parity specified in the manual of the device.
   - **FlowControl**: FlowControl specified in the manual of the device.
+
 - Interface connection:
+
   - **IP address/host**: The polling IP of the device.
   - **IP port**: The IP port of the device. The default IP port is *2306.*
 
 ### Configuration
 
-To make sure the driver works correctly, on the **General** page, set the **Child Completion State** parameter to *Enabled.*
+To make sure the connector works correctly, on the **General** page, set the **Child Completion State** parameter to *Enabled.*
 
 ## Usage
 
@@ -82,4 +85,4 @@ You can also enable an **Automatic Removal** option or **Remove All** DVEs of th
 
 ## Note
 
-On the General page, the **Child Completion State** must be *Enabled* in order for the driver to work.
+On the General page, the **Child Completion State** must be *Enabled* in order for the connector to work.

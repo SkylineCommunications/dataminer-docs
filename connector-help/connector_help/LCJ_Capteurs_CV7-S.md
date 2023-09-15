@@ -34,7 +34,7 @@ The CV7-S driver collects absolute parameters and average parameters over a peri
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -57,8 +57,8 @@ There is no redundancy defined.
 
 ## How to use
 
-The driver displays all data on the **Monitoring** page.
+The connector displays all data on the **Monitoring** page.
 
 ## Notes
 
-The average temperature parameters are not polled from the device, but calculated by the driver. If the **timer base** is changed, the period over which the averages are calculated will not match the displayed period (e.g. 10 and 20 min).
+The average temperature parameters are not polled from the device, but calculated by the connector. If the **timer base** is changed, the period over which the averages are calculated will not match the displayed period (e.g. 10 and 20 min).

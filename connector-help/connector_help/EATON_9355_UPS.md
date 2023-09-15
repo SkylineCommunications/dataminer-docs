@@ -4,7 +4,7 @@ uid: Connector_help_EATON_9355_UPS
 
 # EATON 9355 UPS
 
-This driver is used to retrieve status information from a three-phase power protection solution and to configure operating voltages and currents.
+This connector is used to retrieve status information from a three-phase power protection solution and to configure operating voltages and currents.
 
 ## About
 
@@ -14,7 +14,7 @@ The communication is done through **SNMP**.
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 

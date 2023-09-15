@@ -4,15 +4,15 @@ uid: Connector_help_Mankin_Media_Manager
 
 # Mankin Media Manager
 
-This driver provides a management application with ticketing, with the final purpose of supporting the workflows Guardian LifeLine and Guardian Protect.
+This connector provides a management application with ticketing, with the final purpose of supporting the workflows Guardian LifeLine and Guardian Protect.
 
 ## About
 
-This driver is used together with Automation scripts and a Visio overlay, allowing the creation, viewing, checking and editing of tickets, in order to keep track of problems in a system.
+This connector is used together with Automation scripts and a Visio overlay, allowing the creation, viewing, checking and editing of tickets, in order to keep track of problems in a system.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
@@ -20,7 +20,7 @@ This driver is used together with Automation scripts and a Visio overlay, allowi
 
 ### Creation
 
-This driver uses a **virtual connection** and does not require any input during element creation.
+This connector uses a **virtual connection** and does not require any input during element creation.
 
 ## Usage
 

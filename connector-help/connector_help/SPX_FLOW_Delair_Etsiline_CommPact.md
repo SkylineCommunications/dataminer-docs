@@ -4,21 +4,21 @@ uid: Connector_help_SPX_FLOW_Delair_Etsiline_CommPact
 
 # SPX FLOW - Delair Etsiline CommPact
 
-The Etsiline CommPact is an air dryer with compact dimensions. This driver can be used to monitor and configure operational settings of this device.
+The Etsiline CommPact is an air dryer with compact dimensions. This connector can be used to monitor and configure operational settings of this device.
 
 ## About
 
 All parameters are retrieved via SNMP polling or via SNMP traps.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.03.01                     |
 
@@ -28,7 +28,7 @@ All parameters are retrieved via SNMP polling or via SNMP traps.
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

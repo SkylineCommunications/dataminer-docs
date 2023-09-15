@@ -66,11 +66,15 @@ On the **Add Schedule** page, you can add a schedule for a switchover.
 
 To create a schedule:
 
-1.  Select the satellite position(s) you want to change from the Sat Positions page.
-    For instance, if you select **Switch All Main to ASI**, all main IRDs for this satellite position will be switched to Main.
-2.  In the **Services** table below, make additional selections per IRD as necessary. You can combine the two groups of selections.
-    For instance, if you want to make all backup IRDs for GSAT 30 (83.0øE)/H switch to IP, but within that group you have a couple of IRDs you want to switch to ASI, you can first select Switch All Backups to IP in the Satpositions table. All IRDs for this satellite position will then have the Backup IRD option set to IP. Next, you can select the IRDs in the Services table that you want to switch to ASI instead.
-3.  Finally, either select a **Switch Time**, or change the **Schedule Type** to **Immediate,** and click the **Create Schedule** button**.**
+1. Select the satellite position(s) you want to change from the Sat Positions page.
+
+   For instance, if you select **Switch All Main to ASI**, all main IRDs for this satellite position will be switched to Main.
+
+1. In the **Services** table below, make additional selections per IRD as necessary. You can combine the two groups of selections.
+
+   For instance, if you want to make all backup IRDs for GSAT 30 (83.0øE)/H switch to IP, but within that group you have a couple of IRDs you want to switch to ASI, you can first select Switch All Backups to IP in the Satpositions table. All IRDs for this satellite position will then have the Backup IRD option set to IP. Next, you can select the IRDs in the Services table that you want to switch to ASI instead.
+
+1. Finally, either select a **Switch Time**, or change the **Schedule Type** to **Immediate,** and click the **Create Schedule** button**.**
 
 At the bottom of the page is also a **Discovery** button. This will make the connector poll the **MCR DB Provisioning** element again.
 

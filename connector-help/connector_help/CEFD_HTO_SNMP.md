@@ -4,7 +4,7 @@ uid: Connector_help_CEFD_HTO_SNMP
 
 # CEFD HTO SNMP
 
-The CEFD HTO SNMP driver is an SNMP driver intended to communicate with the Traffic Optimization Gateway Router devices named CEFD HTO, from Comtech.
+The CEFD HTO SNMP connector is an SNMP connector intended to communicate with the Traffic Optimization Gateway Router devices named CEFD HTO, from Comtech.
 
 ## About
 
@@ -19,9 +19,9 @@ The most important features of the **Heights Networking Platform** are the follo
 - **Bi-directional ACM** (Adapting Code and Modulation), enabling throughput maximization depending on traffic-affecting conditions and the required SLAs (Service Level Agreements).
 - **QoE** (Quality of Experience) **maximization** by providing different layers of intelligence through network design tools and powerful analytics.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**         | **Description**                                                                                                                  | **DCF Integration** | **Cassandra Compliant** |
+| **Range**         | **Description**                                                                                                                  | **DCF Integration** | **Cassandra Compliant** |
 |--------------------------|----------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x                  | Initial Comtech Netvue-specific branch.                                                                                          | No                  | Yes                     |
 | 1.1.0.x                  | Comtech Netvue: Branched from 1.0.0.16 - supports firmware 2.4.1.                                                                | No                  | Yes                     |
@@ -33,11 +33,11 @@ The most important features of the **Heights Networking Platform** are the follo
 | 1.5.1.x                  | Comtech NetVue: Support for Mobility/PICO.                                                                                       | No                  | Yes                     |
 | 1.5.2.x **\[SLC Main\]** | Comtech NetVue: Branched from 1.5.1.14 - supports MODCOD changes.                                                                | No                  | Yes                     |
 | 1.6.0.x                  | Comtech NetVue: Support for new architecture - not currently released.                                                           | No                  | Yes                     |
-| 2.0.0.x                  | Branched from 1.1.0.15 - removed Netvue-specific functionality in order to let the driver function outside a Netvue environment. | No                  | Yes                     |
+| 2.0.0.x                  | Branched from 1.1.0.15 - removed Netvue-specific functionality in order to let the connector function outside a Netvue environment. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.x.x.x          | Unknown                     |
 | 1.1.0.x          | 2.4.1                       |
@@ -57,7 +57,7 @@ The most important features of the **Heights Networking Platform** are the follo
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

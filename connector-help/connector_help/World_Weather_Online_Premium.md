@@ -8,18 +8,18 @@ The **World Weather Online Premium** driver shows an overview of the current and
 
 ## About
 
-The **World Weather Online Premium** driver retrieves the current and forecast weather information for all entries in the weather tables based on HTTP communication. The driver only supports a **premium API Key**.
+The **World Weather Online Premium** connector retrieves the current and forecast weather information for all entries in the weather tables based on HTTP communication. The connector only supports a **premium API Key**.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**                                                 | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**                                                 | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|-----------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x              | Initial range.                                                  | No                  | Yes                     |
 | 1.0.1.x \[SLC Main\] | Tables associated with the tree control now are partial tables. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 1.0.1.x          | Unknown                     |
@@ -30,7 +30,7 @@ The **World Weather Online Premium** driver retrieves the current and forecast w
 
 #### HTTP Main connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -46,7 +46,7 @@ The **World Weather Online Premium** driver needs a **premium API Key** from wor
 
 ### Local Weather Overview
 
-This is the default page of the driver. It contains a tree view that provides an overview of the current and forecast weather information for the configured locations.
+This is the default page of the connector. It contains a tree view that provides an overview of the current and forecast weather information for the configured locations.
 
 ### Current Local Weather Condition
 

@@ -6,7 +6,7 @@ uid: Connector_help_MCL_MX9000
 
 The MCL MX9000 is a high-power DBS-Band, CW Klystron power amplifier (HPA) that is used for reliable commercial service in satellite communication earth station terminals. It features a 1-, 8- or 12-channel Klystron amplifier tube, solid-state IPA, RF input and output impedance matching, protective circuitry, power monitoring devices, an arc detector with PIN diode switch, and more.
 
-The driver communicates with the device via serial commands. It can be used in an n+1 configuration, where one of the devices is in fallback mode.
+The connector communicates with the device via serial commands. It can be used in an n+1 configuration, where one of the devices is in fallback mode.
 
 ## About
 
@@ -37,7 +37,7 @@ The driver communicates with the device via serial commands. It can be used in a
 
 #### Serial (Main) connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

@@ -26,11 +26,11 @@ The Sky UK Playout Manager provides an overview of the available desks and the c
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## How to use
 
-This is a virtual driver. Its data is retrieved from the Surveyor or from Visual Overview. You can find more information about the different data pages of the driver below.
+This is a virtual connector. Its data is retrieved from the Surveyor or from Visual Overview. You can find more information about the different data pages of the connector below.
 
 ### Desk Table Page
 
@@ -57,7 +57,7 @@ This group lists the service groups in the **Service** **Groups** **Table**. The
 
 ## Notes
 
-This driver requires:
+This connector requires:
 
 - a site view containing Chilworth and Osterley views,
 - a scenarios view containing scenario services

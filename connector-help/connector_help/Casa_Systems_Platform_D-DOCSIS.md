@@ -4,7 +4,7 @@ uid: Connector_help_Casa_Systems_Platform_D-DOCSIS
 
 # Casa Systems Platform D-DOCSIS
 
-The Casa is designed to support distributed-access architectures, remote PHY, DOCSIS 3.0 and 3.1, all video types, and software-defined networking. This driver allows you to collect all the data within the Casa device. This data is then centralized within the driver and used by DataMiner EPM for aggregation actions.
+The Casa is designed to support distributed-access architectures, remote PHY, DOCSIS 3.0 and 3.1, all video types, and software-defined networking. This connector allows you to collect all the data within the Casa device. This data is then centralized within the connector and used by DataMiner EPM for aggregation actions.
 
 ## About
 
@@ -32,7 +32,7 @@ The Casa is designed to support distributed-access architectures, remote PHY, DO
 
 #### SNMP Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -47,7 +47,7 @@ SNMP Settings:
 
 #### Serial Connection - CLI Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -59,7 +59,7 @@ SERIAL CONNECTION:
 
 #### Serial Connection - NetConf Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -83,7 +83,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-When you first start using this element, navigate to the Configuration page and enter the credentials for the CLI Interface in the CLI Credentials section. This will allow data retrieval from the CLI endpoint to begin. A number of configuration options are available that can change the behavior of the driver.
+When you first start using this element, navigate to the Configuration page and enter the credentials for the CLI Interface in the CLI Credentials section. This will allow data retrieval from the CLI endpoint to begin. A number of configuration options are available that can change the behavior of the connector.
 
 - **Interface Settings**: Allows you to enable or disable polling from an interface (SNMP, CLI) via a toggle button. You can also specify how frequently the interface should be polled. This section also contains the following buttons:
 
@@ -101,7 +101,7 @@ When you first start using this element, navigate to the Configuration page and 
 
 ## Notes
 
-This driver requires specific Correlation rules and Automation scripts for communication with EPM drivers such as Skyline CCAP Platform EPM and Skyline CCAP Platform WM. The Correlation rules and Automation scripts must be configured and enabled in order to get the full functionality of this driver.
+This connector requires specific Correlation rules and Automation scripts for communication with EPM connectors such as Skyline CCAP Platform EPM and Skyline CCAP Platform WM. The Correlation rules and Automation scripts must be configured and enabled in order to get the full functionality of this connector.
 
 With larger devices/large data sets the polling performance may vary. You can control the number of rows and cells requested for larger tables by navigating to the Configuration page and enabling debug in the other settings section. This will make the debug page visible, where you can then change SNMP Cell Amount and SNMP Row Amount to a value that works optimally for your system. Increasing these values can cause polling issues such as RTEs and missing data, so be careful and always double-check to make sure the system is stable.
 

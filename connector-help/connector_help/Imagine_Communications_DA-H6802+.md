@@ -4,7 +4,7 @@ uid: Connector_help_Imagine_Communications_DA-H6802+
 
 # Imagine Communications DA-H6802+
 
-This driver allows you to monitor a DA-H6802+ amplifier card in an Imagine Communications frame. Alarm monitoring can be activated on all important parameters.
+This connector allows you to monitor a DA-H6802+ amplifier card in an Imagine Communications frame. Alarm monitoring can be activated on all important parameters.
 
 Serial commands are used to set parameters on the device and information is retrieved through smart-serial responses.
 
@@ -35,7 +35,7 @@ Serial commands are used to set parameters on the device and information is retr
 
 ### Connections
 
-This driver uses both a serial and smart-serial connection. During element creation, the following information must be specified:
+This connector uses both a serial and smart-serial connection. During element creation, the following information must be specified:
 
 SERIAL CONNECTION:
 
@@ -63,4 +63,4 @@ The element consists of the following data pages:
 
 ## Notes
 
-As this is a serial driver with smart-serial connection, there must be a connection with a real device. When there is a change on the device, a response will be pushed to the DMA even though no poll request is sent.
+As this is a serial connector with smart-serial connection, there must be a connection with a real device. When there is a change on the device, a response will be pushed to the DMA even though no poll request is sent.

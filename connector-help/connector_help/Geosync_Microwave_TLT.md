@@ -8,17 +8,17 @@ The **Geosync Microwave TLT** is a test translator.
 
 ## About
 
-This is a **serial** driver for the **Geosync Microwave TLT**.
+This is a **serial** connector for the **Geosync Microwave TLT**.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | R1.01 05/21/15              |
 
@@ -26,7 +26,7 @@ This is a **serial** driver for the **Geosync Microwave TLT**.
 
 ### Creation
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 **SERIAL CONNECTION**:
 

@@ -4,23 +4,23 @@ uid: Connector_help_Quintech_QRM_Matrix_SNMP
 
 # Quintech QRM Matrix SNMP
 
-This driver communicates with the Quintech QRM Matrix via SNMP. It allows the user to view the current state of the device and to configure the device functionality. The Quintech QRM wideband RF routing matrix makes it possible to work with different matrix sizes and matrix expansion. It provides linearity, insolation and gain flatness. It includes the Q-route technology to quickly and automatically restore signal connections in case of a failure of an amplifier or component along the signal path. It has a full fan-out (distributive) non-blocking matrix operation allowing connection of an input signal to any or all outputs.
+This connector communicates with the Quintech QRM Matrix via SNMP. It allows the user to view the current state of the device and to configure the device functionality. The Quintech QRM wideband RF routing matrix makes it possible to work with different matrix sizes and matrix expansion. It provides linearity, insolation and gain flatness. It includes the Q-route technology to quickly and automatically restore signal connections in case of a failure of an amplifier or component along the signal path. It has a full fan-out (distributive) non-blocking matrix operation allowing connection of an input signal to any or all outputs.
 
 ## About
 
-This is an **SNMP** driver with only 22 OIDs. Two of them provide the functionality to obtain the information from the device using a request/response protocol. The requests are implemented sequentially to retrieve the information from the device. It is also possible to send configuration commands and update the device status accordingly. The device provides several information queues. Currently, the driver sequentially reads the message queue where alarms can be found. In case this queue overflows, a trap will be sent with the contents of the queue.
+This is an **SNMP** connector with only 22 OIDs. Two of them provide the functionality to obtain the information from the device using a request/response protocol. The requests are implemented sequentially to retrieve the information from the device. It is also possible to send configuration commands and update the device status accordingly. The device provides several information queues. Currently, the connector sequentially reads the message queue where alarms can be found. In case this queue overflows, a trap will be sent with the contents of the queue.
 
-The communication method is SNMP, but the driver uses a request/response protocol.
+The communication method is SNMP, but the connector uses a request/response protocol.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
 ### Supported firmware version
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Fv 4.55                     |
 
@@ -30,7 +30,7 @@ The communication method is SNMP, but the driver uses a request/response protoco
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -52,12 +52,12 @@ This page includes general information about the device, such as the **Model**, 
 The page also includes page buttons to the following subpages:
 
 - **Power Supply**: Displays the current state of the power supplies, including warning, failure and LED status.
-- **QRM Status**: Displays the current state of the QRM operation. **Retrieving Information** shows the status of the operation. **Time Frame to Reset Polling Status** allows you to set the time the driver will wait before resetting the polling status. **Delay Between Request Response Pair** allows you to adjust the delay in communication with the QRM interface.
+- **QRM Status**: Displays the current state of the QRM operation. **Retrieving Information** shows the status of the operation. **Time Frame to Reset Polling Status** allows you to set the time the connector will wait before resetting the polling status. **Delay Between Request Response Pair** allows you to adjust the delay in communication with the QRM interface.
 - **IP Config**: Contains parameters related to the IP configuration of the device, such as **Manager IP**, **IP Address**, **IP Subnet**, **IP Gateway**, **DHCP** and **Ethernet Port**.
 
 ### Inputs
 
-This page contains the **Inputs Overview** table, which shows the inputs that are currently present in the matrix. For each input, the driver displays the **Index**, **Description**, **Custom Description**, **Warning Threshold Level** and **RF Level**. The **Description** and **Warning Threshold Level** allow you to issue configuration commands to the device.
+This page contains the **Inputs Overview** table, which shows the inputs that are currently present in the matrix. For each input, the connector displays the **Index**, **Description**, **Custom Description**, **Warning Threshold Level** and **RF Level**. The **Description** and **Warning Threshold Level** allow you to issue configuration commands to the device.
 
 ### Outputs
 

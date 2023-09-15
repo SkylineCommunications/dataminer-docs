@@ -8,11 +8,11 @@ The Axon SIM11 is a **Signal Integrity Monitor**.
 
 ## About
 
-This is an **SNMP**-based driver for the Axon SIM11 device.
+This is an **SNMP**-based connector for the Axon SIM11 device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** |
+| **Range** | **Description** |
 |------------------|-----------------|
 | 1.0.0.x          | Initial version |
 
@@ -20,7 +20,7 @@ This is an **SNMP**-based driver for the Axon SIM11 device.
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 
@@ -35,7 +35,7 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and requ
 
 ## Usage
 
-This driver only has one page: **SIM11**.
+This connector only has one page: **SIM11**.
 
 ### SIM11
 

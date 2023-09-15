@@ -4,17 +4,17 @@ uid: Connector_help_Snell_Wilcox_IQHIP00_SNMP
 
 # Snell Wilcox IQHIP00 SNMP
 
-The **Snell Wilcox IQHIP00 SNMP** driver is an SNMP based driver used to monitor and configure the ****Snell Wilcox IQHIP00****.
+The **Snell Wilcox IQHIP00 SNMP** connector is an SNMP based connector used to monitor and configure the **Snell Wilcox IQHIP00**.
 
 ## About
 
-The ****Snell Wilcox IQHIP00 SNMP**** provides a monitoring interface to the ****Snell Wilcox IQHIP00**** Video Server device.
+The **Snell Wilcox IQHIP00 SNMP** provides a monitoring interface to the **Snell Wilcox IQHIP00** Video Server device.
 
 ## Installation and configuration
 
 ### Creation
 
-The ****Snell Wilcox IQHIP00 SNMP**** is an SNMP driver. The IP has to be configured during creation of the element.
+The **Snell Wilcox IQHIP00 SNMP** is an SNMP connector. The IP has to be configured during creation of the element.
 
 **SNMP CONNECTION:**
 
@@ -38,7 +38,7 @@ This page displays configurable information about the **Black** and **Blackish L
 
 ### Freeze Page
 
-This page presents configurable information regarding **Freeze** and **Stilish** **State**.
+This page presents configurable information regarding **Freeze** and **Stilish State**.
 
 ### Video Monitor Page
 
@@ -80,6 +80,6 @@ This page presents information regarding the **Audio State**.
 
 This page presents information regarding **Input**.
 
-### Webinterface
+### Web Interface
 
 This page can be used to access the web interface of the device.

@@ -4,11 +4,11 @@ uid: Connector_help_CEFD_CDM-600_Serial
 
 # CEFD CDM-600 Serial
 
-The **CEFD CDM-600 Serial** is a serial driver intended to communicate with CDM-600/600L Comtech devices. However, because of the differences between the models, certain parameters will only be available depending on the element type.
+The **CEFD CDM-600 Serial** is a serial connector intended to communicate with CDM-600/600L Comtech devices. However, because of the differences between the models, certain parameters will only be available depending on the element type.
 
 ## About
 
-This driver uses serial communication to retrieve information from the device and to set the device configuration.
+This connector uses serial communication to retrieve information from the device and to set the device configuration.
 For more information, refer to the following page: <http://www.comtechefdata.com/support/docs/satellitemodemdocs>.
 
 ### Version Info
@@ -34,7 +34,7 @@ For more information, refer to the following page: <http://www.comtechefdata.com
 
 #### Serial main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

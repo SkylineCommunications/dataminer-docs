@@ -4,21 +4,21 @@ uid: Connector_help_General_Dynamics_BD_Series
 
 # General Dynamics BD Series
 
-With this driver, you can poll status data from and configure settings on **General Dynamics BD downconverters**.
+With this connector, you can poll status data from and configure settings on **General Dynamics BD downconverters**.
 
 ## About
 
-This driver uses **serial** communication. It allows the usage of ACK messages. The integrity of the messages is checked with a checksum.
+This connector uses **serial** communication. It allows the usage of ACK messages. The integrity of the messages is checked with a checksum.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.092                       |
 
@@ -28,7 +28,7 @@ This driver uses **serial** communication. It allows the usage of ACK messages. 
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

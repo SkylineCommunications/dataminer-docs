@@ -32,7 +32,7 @@ The **GatesAir Maxiva XTE MSC** is a frame for transmitters and exciters that po
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -58,5 +58,5 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-With this driver, it is possible to monitor and configure the MSC frame itself. In addition, it is also possible to enable trap notifications and define their priorities.
+With this connector, it is possible to monitor and configure the MSC frame itself. In addition, it is also possible to enable trap notifications and define their priorities.
 The communication protocol that is used to get and set the values is SNMP.

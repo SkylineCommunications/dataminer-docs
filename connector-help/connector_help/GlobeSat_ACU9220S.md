@@ -8,34 +8,35 @@ The 9220S antenna control unit (ACU) is suitable for the automatic control for C
 
 ## About
 
-This driver is intended to communicate with 9220S Antenna Control System devices using serial commands as described in the device manual.
+This connector is intended to communicate with 9220S Antenna Control System devices using serial commands as described in the device manual.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
-| 1.0.0.1          | Initial version | No                  | Yes                     |
+| 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
-| 1.0.0.1          | Not specified.              |
+| 1.0.0.x          | Not specified.              |
 
 ## Installation and configuration
 
 ### Creation
 
-***Serial Main connection***
-This driver uses a Serial connection and needs the following user information:
+#### Serial Main connection
+
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
-Interface connection:
+- Interface connection:
 
-  - IP address/host: The polling IP of the device
-- IP port: \[The IP port of the device. Indicate if required or not. If so, specify default value and range.\]
-- Bus address: \[The bus address of the device. Indicate if required or not. If so, specify default value, range and format.\]
+  - IP address/host: The polling IP of the device.
+  - IP port: The IP port of the device.
+  - Bus address: The bus address of the device.
 
 ## Usage
 

@@ -4,7 +4,7 @@ uid: Connector_help_Technetix_NCC-1222
 
 # Technetix NCC-1222
 
-This driver can be used to monitor and control a Technetix NCC-1222 chassis and installed cards.
+This connector can be used to monitor and control a Technetix NCC-1222 chassis and installed cards.
 
 ## About
 
@@ -14,21 +14,21 @@ An **SNMP** connection is used in order to retrieve and configure the informatio
 
 Only one element can poll a device at a time. Polling one device with multiple elements at the same time could lead to unexpected behavior.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** |
+| **Range**     | **Description** |
 |----------------------|-----------------|
 | 1.0.0.x \[Obsolete\] | Initial version |
 | 1.0.1.x \[SLC Main\] | New DVE names   |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | MIB version 1.6             |
 | 1.0.1.x          | MIB version 1.6             |
 
-### Exported Drivers
+### Exported Connectors
 
 | **Exported Protocol**                                                                  | **Description**     |
 |----------------------------------------------------------------------------------------|---------------------|
@@ -41,7 +41,7 @@ Only one element can poll a device at a time. Polling one device with multiple e
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

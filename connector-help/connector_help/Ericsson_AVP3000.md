@@ -4,21 +4,21 @@ uid: Connector_help_Ericsson_AVP3000
 
 # Ericsson AVP-3000
 
-The **Ericsson AVP-3000** driver is a **HTTP** driver that is used for monitoring **Advanced Video Processor** configuration.
+The **Ericsson AVP-3000** connector is a **HTTP** connector that is used for monitoring **Advanced Video Processor** configuration.
 
 ## About
 
 With this **HTTP** **Advanced Video Processor** driver you can **control** the configuration if nothing goes wrong, **change** the configuration where possible and even **restore** the configuration if needed.
 
-Ranges of the driver
+Ranges of the connector
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.1.x \[SLC Main\] | Initial version | Yes                 | False                   |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.1.x          | Unknown                     |
 
@@ -34,7 +34,7 @@ The **Ericsson AVP-3000** driver has a **HTTP** Connection:
 
 #### HTTP Main Connection
 
-This driver uses a HTTP connection and requires the following input during element creation:
+This connector uses a HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -107,7 +107,7 @@ This page shows us everything about the **Audio Component Encode**, here we can 
 
 ### Alarms
 
-A page for the overview of all **Active Alarms** on the bottom you see page buttons which open a page with an overview of the **Alarms** of that **specific slot**. Standard the driver doesn't poll for these alarms so the bandwidth that the driver use will increase a lot.
+A page for the overview of all **Active Alarms** at the bottom you see page buttons which open a page with an overview of the **Alarms** of that **specific slot**. Standard the connector doesn't poll for these alarms so the bandwidth that the connector use will increase a lot.
 
 ### Slot Configuration
 
@@ -115,4 +115,4 @@ Here we made it possible that you can choose on which slot you would like to pol
 
 ## Notes
 
-When you change the **Last Loaded Configuration** it take some few seconds when the change happens, this is because the driver waits until the **restore** of the configuration is done and after that he refresh all the parameters.
+When you change the **Last Loaded Configuration** it take some few seconds when the change happens, this is because the connector waits until the **restore** of the configuration is done and after that he refresh all the parameters.

@@ -6,23 +6,23 @@ uid: Connector_help_Edgeware_Orbit
 
 The **Edgeware Orbit** is a Video Server Platform that can dramatically increase the profitability of services.
 
-This driver polls an **Edgeware Orbit** device, which is basically a Linux Server. The driver supports most Linux OS versions.
+This connector polls an **Edgeware Orbit** device, which is basically a Linux Server. The connector supports most Linux OS versions.
 
-The driver shows the full status of the server.
+The connector shows the full status of the server.
 
 ## About
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                          | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                          | **DCF Integration** | **Cassandra Compliant** |
 |------------------|------------------------------------------|---------------------|-------------------------|
 | 2.0.0.x          | Initial version                          | No                  |                         |
 | 2.1.0.x          | Adapted to firmware esb2001-2.18 release | No                  | Yes                     |
 | 2.1.1.x          | SNMPV3 version                           | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 2.1.0.x          | esb2001-2.18 release        |
 | 2.1.1.x          | esb2001-2.18 release        |
@@ -33,7 +33,7 @@ The driver shows the full status of the server.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -53,7 +53,7 @@ SNMP Settings:
 
 #### Serial SSH Connection
 
-This driver uses an SSH serial connection and requires the following input during element creation:
+This connector uses an SSH serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -64,7 +64,7 @@ SERIAL CONNECTION:
 
 ### Configuration
 
-To make sure the driver works properly, after creation of the element, go to the **General** page, click the **Security** page button, and fill in the correct credentials.
+To make sure the connector works properly, after creation of the element, go to the **General** page, click the **Security** page button, and fill in the correct credentials.
 
 ## Usage
 
@@ -75,7 +75,7 @@ Among others, this page displays both the **Connection** and the **Logon State**
 It also has two page buttons:
 
 - **Configuration**: Allows you to download the configuration to a location on your computer.
-- **Security**: Allows you to fill in your login credentials. This is necessary for the driver to work properly (cf. 'Configuration' section of this help).
+- **Security**: Allows you to fill in your login credentials. This is necessary for the connector to work properly (cf. 'Configuration' section of this help).
 
 ### System Information
 

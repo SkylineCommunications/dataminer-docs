@@ -90,7 +90,7 @@ Note that your DMA will require an **internet connection** and a correctly confi
 
 #### HTTP Main Connection
 
-This driver uses an HTTP(s) connection and requires the following input during element creation:
+This connector uses an HTTP(s) connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

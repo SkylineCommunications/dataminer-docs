@@ -4,7 +4,7 @@ uid: Connector_help_EVS_XS
 
 # EVS XS
 
-With this driver, you can monitor **EVS XS** devices with SNMP.
+With this connector, you can monitor **EVS XS** devices with SNMP.
 
 ## About
 
@@ -14,7 +14,7 @@ The **EVS XS** will monitor the EVS XS device.
 
 ### Creation
 
-The **EVS XS** is an SNMP driver. The IP needs to be configured during creation of the element.
+The **EVS XS** is an SNMP connector. The IP needs to be configured during creation of the element.
 
 **SNMP CONNECTION:**
 

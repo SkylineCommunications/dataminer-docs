@@ -4,7 +4,7 @@ uid: Connector_help_IRT_DVB-T2_TX
 
 # IRT DVB-T2 TX
 
-This driver is used to monitor and configure an **IRT DVB-T2 TX** device. The **IRT DVB-T2 TX** is a DVB-T2 transmitter.
+This connector is used to monitor and configure an **IRT DVB-T2 TX** device. The **IRT DVB-T2 TX** is a DVB-T2 transmitter.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver is used to monitor and configure an **IRT DVB-T2 TX** device. The **
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -50,9 +50,9 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to Use
 
-The driver displays 9 pages.
+The connector displays 9 pages.
 
-This **General** page displays generic information about the driver (**Name**, **Location**, etc.).
+This **General** page displays generic information about the connector (**Name**, **Location**, etc.).
 
 The exciter settings can be configured on **Exciter A** and **Exciter B.**
 

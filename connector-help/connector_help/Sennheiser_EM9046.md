@@ -8,7 +8,7 @@ The **SennheiserEM9046** is a wireless microphone sound system equipped with bel
 
 The EM9046 consists of an analogue output module with 16 analog output channels, a digital output module that supports 24 AES output channels and 2 audio output modules. The receiver itself integrates up to 8 RF transmitters and 2 antenna boosters.
 
-The driver monitors the different modules configured in the EM9046 device.
+The connector monitors the different modules configured in the EM9046 device.
 
 ## About
 
@@ -36,7 +36,7 @@ The driver monitors the different modules configured in the EM9046 device.
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

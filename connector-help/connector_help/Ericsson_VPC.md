@@ -4,22 +4,22 @@ uid: Connector_help_Ericsson_VPC
 
 # Ericsson VPC
 
-The Ericsson VPC driver is a monitoring solution for the Ericsson Video Processing Chassis.
+The Ericsson VPC connector is a monitoring solution for the Ericsson Video Processing Chassis.
 
 ## About
 
 Ericsson VPC will retrieve the active configuration file from the Video Processing Chassis and then parse this data.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                 | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                 | **DCF Integration** | **Cassandra Compliant** |
 |------------------|---------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                 | No                  | No                      |
 | 2.0.0.x          | New range without DVE creation. | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 2.8.1                       |
 | 2.0.0.x          | 2.8.1                       |
@@ -28,7 +28,7 @@ Ericsson VPC will retrieve the active configuration file from the Video Processi
 
 ### Creation
 
-This driver uses an HTTP connection and needs the following user information:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 **HTTP CONNECTION**:
 
@@ -38,7 +38,7 @@ This driver uses an HTTP connection and needs the following user information:
 
 ### Configuration
 
-This is an HTTP driver. To install the driver simply enter the IP address of the device in the Element Creation wizard. Depending on your configuration, it may be necessary to use or not '*bypassproxy*' in the bus address field.
+This is an HTTP connector. To install the connector simply enter the IP address of the device in the Element Creation wizard. Depending on your configuration, it may be necessary to use or not '*bypassproxy*' in the bus address field.
 
 ### Timing
 
@@ -86,7 +86,7 @@ You can find the raw data used to create this tree in tables on the **Input Tabl
 
 ### Connectivity Tree (Stream Connectivity)
 
-The **Connectivity Tree** provides the user with a graphical tree representation of all output streams in the driver that have a referenced input stream. Their referenced input streams are children of the Output streams in the tree view.
+The **Connectivity Tree** provides the user with a graphical tree representation of all output streams in the connector that have a referenced input stream. Their referenced input streams are children of the Output streams in the tree view.
 
 The raw data used to create this tree is visible as tables on the **Stream Connectivity** page
 
@@ -153,4 +153,4 @@ For each of the cards that can be present in the chassis, different pages are av
 
 ## Notes
 
-- After uploading the driver or changing the version, initial startup can take a few minutes because of the creation of a parameter mapping in the QuickAction DLLs. Please take into consideration that each first run of a QuickAction (after startup, after pushing a button, .) will take about 40 seconds. After that, runtime of QuickActions is reduced to a minimum. Element restarts will not cause the delays to occur again; they only occur after you change the driver version and activate the element for the first time.
+- After uploading the connector or changing the version, initial startup can take a few minutes because of the creation of a parameter mapping in the QuickAction DLLs. Please take into consideration that each first run of a QuickAction (after startup, after pushing a button, .) will take about 40 seconds. After that, runtime of QuickActions is reduced to a minimum. Element restarts will not cause the delays to occur again; they only occur after you change the connector version and activate the element for the first time.

@@ -4,7 +4,7 @@ uid: Connector_help_ETL_Systems_NGM-11
 
 # ETL Systems NGM-11
 
-This driver is intended for use with ETL Systems NGM matrix devices. The ETL Systems NGM devices have different matrix sizes. This driver will adjust its matrix size to that of the relevant module. Alarms and traps are polled via SNMP, while serial communication is used for the configuration, status and labels. Several functionalities have been added to allow bulk sets on the device as well as the import and export of certain settings.
+This connector is intended for use with ETL Systems NGM matrix devices. The ETL Systems NGM devices have different matrix sizes. This connector will adjust its matrix size to that of the relevant module. Alarms and traps are polled via SNMP, while serial communication is used for the configuration, status and labels. Several functionalities have been added to allow bulk sets on the device as well as the import and export of certain settings.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver is intended for use with ETL Systems NGM matrix devices. The ETL Sys
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -46,7 +46,7 @@ SNMP Settings:
 
 #### Serial Serial Connection - 1 Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -74,7 +74,7 @@ There is no redundancy defined.
 
 ## How to use
 
-The **General** page is the default page of this driver. It contains the SNMP parameters of the device. At the top are the alarm statuses, which have traps linked. Below this, you can find the trap settings.
+The **General** page is the default page of this connector. It contains the SNMP parameters of the device. At the top are the alarm statuses, which have traps linked. Below this, you can find the trap settings.
 
 The **Matrix** page displays all the crosspoints in the device. Initially, all the groups will be collapsed. Click once to open a group and see the input or output details.
 

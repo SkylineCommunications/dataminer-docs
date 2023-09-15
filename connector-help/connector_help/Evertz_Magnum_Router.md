@@ -11,19 +11,19 @@ The **Evertz Magnum Router** protocol drives the Evertz Magnum application. It a
 The **Evertz Magnum Router** contains a matrix in which any input and any output for the router can be connected. Serial commands are used to get the data from the device.
 These serial commands use the QUARTZ protocol to successfully communicate with the Evertz Magnum application.
 
-In order to use this driver, it is necessary to also **configure the Magnum application** itself, so that an extra router panel can take control over a certain matrix. Inside the Magnum application this will translate into a virtual router (with x inputs and y outputs) that will be made available on a certain IP/PORT. It is these IP/PORT settings that need to be configured during creation of the DataMiner element using the Evertz Magnum Router protocol.
+In order to use this connector, it is necessary to also **configure the Magnum application** itself, so that an extra router panel can take control over a certain matrix. Inside the Magnum application this will translate into a virtual router (with x inputs and y outputs) that will be made available on a certain IP/PORT. It is these IP/PORT settings that need to be configured during creation of the DataMiner element using the Evertz Magnum Router protocol.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**    | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**    | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|--------------------|---------------------|-------------------------|
 | 1.0.0.x              | Initial version    | No                  | Yes                     |
 | 2.0.0.x              | Customer-specific  | No                  | Yes                     |
 | 2.0.1.x \[SLC Main\] | Added external DCF | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Magnum Server               |
 | 2.0.0.x          | Magnum Server               |
@@ -35,7 +35,7 @@ In order to use this driver, it is necessary to also **configure the Magnum appl
 
 #### Serial main connection
 
-This driver uses a serial connection to request data from the router. This connection requires the following input during element creation:
+This connector uses a serial connection to request data from the router. This connection requires the following input during element creation:
 
 SERIAL CONNECTION:
 

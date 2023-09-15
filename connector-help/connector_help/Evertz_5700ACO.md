@@ -4,7 +4,7 @@ uid: Connector_help_Evertz_5700ACO
 
 # Evertz 5700ACO
 
-This driver is used to monitor and control the **Evertz 5700ACO** device.
+This connector is used to monitor and control the **Evertz 5700ACO** device.
 
 The 5700ACO automatic changeovers are intended for use with two 5700MSC master clock/sync generators. The 5700ACO system uses mechanically latching relays to ensure maximum reliability and minimal disruption in the event of any failure, even power failures.
 
@@ -36,7 +36,7 @@ The changeover uses a voting system based on which source has the best signals a
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -62,7 +62,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The driver has two main pages, the **General** page and the **Control** page.
+The connector has two main pages, the **General** page and the **Control** page.
 
 - The **General** page contains device status parameters, such as **Firmware Version** and **Operation Mode**.
 - The **Control** page is used to change the device configuration. You can for example configure the voting process and change the **Control Status** to manual/automatic.

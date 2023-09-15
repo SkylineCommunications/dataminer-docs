@@ -18,7 +18,7 @@ All device information is retrieved via SNMP. The appropriate parameters are upd
 
 ### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 7.31                        |
 

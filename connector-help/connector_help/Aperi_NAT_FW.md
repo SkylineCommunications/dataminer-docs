@@ -4,7 +4,7 @@ uid: Connector_help_Aperi_NAT_FW
 
 # Aperi NAT FW
 
-This driver is used to monitor Aperi's Network Address Translator (NAT) Firewall (FW) module. Using the **HTTP API**, the driver collects information from the device. Setting the information is not possible in version 1.0.0.1.
+This connector is used to monitor Aperi's Network Address Translator (NAT) Firewall (FW) module. Using the **HTTP API**, the connector collects information from the device. Setting the information is not possible in version 1.0.0.1.
 
 ## About
 
@@ -44,7 +44,7 @@ This driver is used to monitor Aperi's Network Address Translator (NAT) Firewall
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -106,7 +106,7 @@ This page has a subpage called **Payload**, which contains RX payload informatio
 
 This page mainly displays **system information**. This includes information about the **Device Name**, **Vendor**, **Version** and **Image ID**.
 
-On this page, you can also define the **Username** and **Password** to connect to the device. This must be done in order to be able to retrieve any data with the driver.
+On this page, you can also define the **Username** and **Password** to connect to the device. This must be done in order to be able to retrieve any data with the connector.
 
 Pressing the **Login** button will force a refresh of the element's data.
 

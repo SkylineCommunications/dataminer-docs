@@ -4,23 +4,23 @@ uid: Connector_help_Audemat_Aztec_Goldeneagle_FM
 
 # Audemat Aztec Goldeneagle FM
 
-With this driver, information can be gathered and viewed from the device **Audemat Aztec Goldeneagle FM**. The driver also allows you to configure the device to an extent.
+With this connector, information can be gathered and viewed from the device **Audemat Aztec Goldeneagle FM**. The connector also allows you to configure the device to an extent.
 
 ## About
 
-This driver is used to gather information from the **Audemat Aztec Goldeneagle FM** device.
+This connector is used to gather information from the **Audemat Aztec Goldeneagle FM** device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                           | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                           | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                           | No                  | No                      |
 | 2.0.0.x          | New firmware                              | No                  | Yes                     |
 | 2.1.0.x          | Added support for device firmware 10.9.0. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 8.5                         |
 | 2.0.0.x          | 10.8                        |
@@ -32,7 +32,7 @@ This driver is used to gather information from the **Audemat Aztec Goldeneagle F
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -46,7 +46,7 @@ SNMP Settings:
 
 #### HTTP Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

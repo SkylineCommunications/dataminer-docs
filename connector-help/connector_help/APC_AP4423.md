@@ -4,7 +4,7 @@ uid: Connector_help_APC_AP4423
 
 # APC AP4423
 
-The APC AP4423 is a rack-mount automatic transfer switch. This driver allows you to monitor and configure this device.
+The APC AP4423 is a rack-mount automatic transfer switch. This connector allows you to monitor and configure this device.
 
 ## About
 
@@ -32,7 +32,7 @@ The APC AP4423 is a rack-mount automatic transfer switch. This driver allows you
 
 #### SNMP Main Connection
 
-This driver retrieves information from the device via SNMP. When you create an element, specify the following information:
+This connector retrieves information from the device via SNMP. When you create an element, specify the following information:
 
 SNMP Connection:
 

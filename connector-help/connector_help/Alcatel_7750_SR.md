@@ -4,19 +4,19 @@ uid: Connector_help_Alcatel_7750_SR
 
 # Alcatel 7750 SR
 
-The **Alcatel-Lucent 7750 Service Router** is an industry-leading multi-service edge router designed for the concurrent delivery of advanced residential, business and mobile services on a common IP edge platform. The driver uses **SNMPv2** to retrieve the information and configuration settings from the router.
+The **Alcatel-Lucent 7750 Service Router** is an industry-leading multi-service edge router designed for the concurrent delivery of advanced residential, business and mobile services on a common IP edge platform. The connector uses **SNMPv2** to retrieve the information and configuration settings from the router.
 
 ## About
 
 The **Alcatel 7750 SR** protocol is used to control and monitor the services of the Alcatel 7750 SR via **SNMPv2**.
 
-Because the driver is very large, it's possible to **enable or disable polling** on every page. Since version 1.0.0.4 of the driver, you can also enable or disable polling on table level. More information about the different possibilities and the default settings can be found in the "Notes" section at the bottom of this help file.
+Because the connector is very large, it's possible to **enable or disable polling** on every page. Since version 1.0.0.4 of the connector, you can also enable or disable polling on table level. More information about the different possibilities and the default settings can be found in the "Notes" section at the bottom of this help file.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMPv2) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMPv2) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 
@@ -30,7 +30,7 @@ This driver uses a Simple Network Management Protocol (SNMPv2) connection and ne
 
 ## Usage
 
-This section lists the pages of the Alcatel 7750 SR driver and explains what information is displayed on each of them.
+This section lists the pages of the Alcatel 7750 SR connector and explains what information is displayed on each of them.
 
 ### System page
 
@@ -307,13 +307,13 @@ This page is used to import and export files that contain saved values of the mo
 
 ### Polling
 
-As mentioned in the "About" section of this help file, it is possible to enable and disable polling for each individual table (from **version 1.0.0.4** of this driver onwards).
+As mentioned in the "About" section of this help file, it is possible to enable and disable polling for each individual table (from **version 1.0.0.4** of this connector onwards).
 
 For existing elements (**using versions prior to 1.0.0.4**), the table polling will match the page level polling after (initial) startup. This means that if page polling is enabled, polling for all tables on that page will be enabled as well. Similarly, if page polling is disabled, table polling for all tables on that page will be disabled as well. Once the table polling parameters are initialized, their **configuration will be saved** and a restart of the element will not update their state to the state of the page polling parameter.
 
-When page polling is changed, the tables on that page will inherit the new polling setting from the page. Changing the polling for a table, however, will not have any impact on the page polling or on the polling of any other tables on that page. The following example shows how this works for the **SDP** page in the driver:
+When page polling is changed, the tables on that page will inherit the new polling setting from the page. Changing the polling for a table, however, will not have any impact on the page polling or on the polling of any other tables on that page. The following example shows how this works for the **SDP** page in the connector:
 
-The **SDP** page displays two tables: **SDP Info Table** and **SDP Bind Table**. When an element with the Alcatel 7750 SR driver is created, the SDP Polling is disabled on this page and both tables inherit this setting.
+The **SDP** page displays two tables: **SDP Info Table** and **SDP Bind Table**. When an element with the Alcatel 7750 SR connector is created, the SDP Polling is disabled on this page and both tables inherit this setting.
 
 - When **SDP Polling** is enabled for this page, the **SDP Info Polling** table and **SDP Bind Polling** table will be enabled as well, and the data for these tables will be retrieved from the device.
 - When **SDP Info Polling** is disabled again, the **SDP Info Polling** table will no longer be polled, but the **SDP Bind Table** will still be polled, because enabling or disabling polling on a table has no influence on the page or any other tables.

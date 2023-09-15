@@ -4,13 +4,13 @@ uid: Connector_help_Ekinops_360_Platform
 
 # Ekinops 360 Platform
 
-This driver monitors an **Ekinops 360 optical transport platform**. The device has up to 32 slots that modules such as the PM1004V can be plugged into.
+This connector monitors an **Ekinops 360 optical transport platform**. The device has up to 32 slots that modules such as the PM1004V can be plugged into.
 
-This driver collects data from the chassis controller and the available PM1004V modules.
+This connector collects data from the chassis controller and the available PM1004V modules.
 
 ## About
 
-This driver polls the general configuration parameters of an Ekinops 360 Platform, as well as data for all supported cards in the system.
+This connector polls the general configuration parameters of an Ekinops 360 Platform, as well as data for all supported cards in the system.
 For each supported card, a DVE element will be created that contains detailed information about the module.
 
 Currently only the PM1004V module is supported. To have more modules supported, please contact your TAM, or the [Skyline sales team](mailto:sales@skyline.be).
@@ -21,7 +21,7 @@ With a timer, the **chassis-specific parameters** are polled and displayed on se
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 
@@ -97,9 +97,9 @@ On this page, you can configure the two lines.
 
 Currently, DCF is only supported for PM1004V cards.
 
-The DCF feature can be disabled on the **General** page using the **DCF** parameter. In this case, all internal connections (managed by the driver) will be removed. When DCF is disabled, the driver will not create connections between the interfaces, but the interfaces themself will still be maintained.
+The DCF feature can be disabled on the **General** page using the **DCF** parameter. In this case, all internal connections (managed by the connector) will be removed. When DCF is disabled, the connector will not create connections between the interfaces, but the interfaces themself will still be maintained.
 
-Note that DCF can only be used on a DMA with **8.5.4** as the minimum version. When the installed DataMiner version does not support DCF, the **DCF** parameter will be disabled and it will not be possible to enable it. The driver will generate a warning alarm if this is attempted anyway, or if the DataMiner version is downgraded so that DCF is no longer supported.
+Note that DCF can only be used on a DMA with **8.5.4** as the minimum version. When the installed DataMiner version does not support DCF, the **DCF** parameter will be disabled and it will not be possible to enable it. The connector will generate a warning alarm if this is attempted anyway, or if the DataMiner version is downgraded so that DCF is no longer supported.
 
 Note that DCF can also be implemented through the DataMiner DCF User Interface and through DataMiner third-party connectors (for instance a manager).
 

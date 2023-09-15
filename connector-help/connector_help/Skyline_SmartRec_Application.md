@@ -4,7 +4,7 @@ uid: Connector_help_Skyline_SmartRec_Application
 
 # Skyline SmartRec Application
 
-This driver works in combination with the **Ericsson RedBee EPG**, **Witbe Robot** and **WitBe Robot Manager** drivers. The goal is to **monitor** the **replay/startover functionality** of **set-top boxes**. The driver **manages** which **assets/programs** need to be tested and also **aggregates** the **test results**.
+This connector works in combination with the **Ericsson RedBee EPG**, **Witbe Robot** and **WitBe Robot Manager** drivers. The goal is to **monitor** the **replay/startover functionality** of **set-top boxes**. The connector **manages** which **assets/programs** need to be tested and also **aggregates** the **test results**.
 
 ## About
 
@@ -87,7 +87,7 @@ This driver works in combination with the **Ericsson RedBee EPG**, **Witbe Robot
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 
@@ -105,7 +105,7 @@ The **Channel Status** **page** shows the monitored channels for which tests are
 
 The **EPG Bookings table** contains a list of all program broadcasts that are in the resource manager. Programs in this table will be sent to the WitBe Robots for testing. The WitBe Robot Manager will handle the distribution of these program test campaigns. The aggregated result of all performed tests is shown in the **Program Status Column**.
 
-The **Configuration page** is used to configure various aspects of the tests and the driver:
+The **Configuration page** is used to configure various aspects of the tests and the connector:
 
 - Ignoring of startover tests that are performed too close to the end of the program.
 - Configuration of the minimum number of test results required to aggregate the result.
@@ -131,7 +131,7 @@ The **Daily Aggregation page** provides an overview of the kind of issues that h
 
 The **Weekly Aggregation page** provides an overview of the kind of issues that have occurred over a week.
 
-This driver will export the Skyline SmartRec Application - Channel driver. An element will be created automatically for each monitored channel in the resource manager.
+This connector will export the Skyline SmartRec Application - Channel driver. An element will be created automatically for each monitored channel in the resource manager.
 
 ## Notes
 

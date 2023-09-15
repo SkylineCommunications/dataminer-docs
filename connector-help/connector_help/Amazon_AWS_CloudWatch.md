@@ -37,7 +37,7 @@ CloudWatch provides you with data and actionable insights to monitor your applic
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -47,12 +47,12 @@ HTTP CONNECTION:
 
 IP Connection
 
-This driver uses a smart-serial connection and requires the following input during element creation:
+This connector uses a smart-serial connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
 - **IP address/host:** Any.
-- **IP port**: The IP port on which the driver will listen for SNS HTTP notifications.
+- **IP port**: The IP port on which the connector will listen for SNS HTTP notifications.
 - **Bus address**: Specify *bypassproxy* if the proxy server has to be bypassed.
 
 ### Initialization
@@ -61,11 +61,11 @@ Before polling can start, you first need to enter the credentials on the **Gener
 
 ## Usage
 
-HTTP POST messages are used to communicate with the Amazon AWS CloudWatch. This driver will export different drivers based on the retrieved data. A list can be found in the section "Exported Drivers".
+HTTP POST messages are used to communicate with the Amazon AWS CloudWatch. This connector will export different connectors based on the retrieved data. A list can be found in the section "Exported Connectors".
 
 ### General
 
-This page contains **Login** options, as well as information on which services should be polled with this element. To make sure that the driver can work properly, you **must** **first provide login information**.
+This page contains **Login** options, as well as information on which services should be polled with this element. To make sure that the connector can work properly, you **must** **first provide login information**.
 
 First specify the **Default Polling Interval** and **Default Poll All Metrics** column values of the Amazon Services table. These are the values that will be applied when a new service entry has been added. Changing these values will have no impact on existing **Service Entries**. If **Default Polling Interval** has a value other than *Disabled*, a DVE element will be created and the enabled metrics will be polled at the specified polling interval. If **Default Poll All Metrics** is *Enabled*, all available metrics will be polled by the DVE at the configured polling interval.
 
@@ -88,7 +88,7 @@ With the **Name** column of the **Service Entries** table, you can change a DVE 
 
 ### Other Pages
 
-The driver provides a page per supported service type. These pages contain the table that is used to export DVE elements and a table that allows you to configure the polling of each metric. The polling is spread so that not all DVE elements poll at the same interval. To immediately poll the enabled metrics of a DVE, click the **Force Polling** column button. Use the context menus of the tables for a quicker configuration, to set the **Polling Interval** or to **Poll All Metrics** for multiple selected DVE rows.
+The connector provides a page per supported service type. These pages contain the table that is used to export DVE elements and a table that allows you to configure the polling of each metric. The polling is spread so that not all DVE elements poll at the same interval. To immediately poll the enabled metrics of a DVE, click the **Force Polling** column button. Use the context menus of the tables for a quicker configuration, to set the **Polling Interval** or to **Poll All Metrics** for multiple selected DVE rows.
 
 ## Notes
 

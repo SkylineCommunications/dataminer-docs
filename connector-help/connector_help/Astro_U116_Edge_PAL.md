@@ -4,23 +4,23 @@ uid: Connector_help_Astro_U116_Edge_PAL
 
 # Astro U116 Edge PAL
 
-Through this driver is possible to gather and view information from the device **Astro U116 Edge PAL**. It also gives the possibility to configure the device.
+Through this connector is possible to gather and view information from the device **Astro U116 Edge PAL**. It also gives the possibility to configure the device.
 
 ## About
 
-HTTP driver to monitor the **Astro U116 Edge PAL** device.
+HTTP connector to monitor the **Astro U116 Edge PAL** device.
 
-This driver also contains a SNMP interface to receive traps from the device and polls some network information.
+This connector also contains a SNMP interface to receive traps from the device and polls some network information.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 5595                        |
 
@@ -30,7 +30,7 @@ This driver also contains a SNMP interface to receive traps from the device and 
 
 ### HTTP
 
-This driver can communicate directly to the **U116** but it can also be configured to send the requests to the **Astro U100 Controller** which will then serve as a proxy. Depending on the case, the **HTTP** configuration differs :
+This connector can communicate directly to the **U116** but it can also be configured to send the requests to the **Astro U100 Controller** which will then serve as a proxy. Depending on the case, the **HTTP** configuration differs :
 
 A\) Communication with U100C as proxy :
 
@@ -38,7 +38,7 @@ A\) Communication with U100C as proxy :
 
 - **IP address/host**: the IP address of the Astro U100 Controller
 - **IP port**: the port of the destination e.g. 80
-- **Bus address**: The IP address of the U116. Also, we must fill in 'ByPassProxy' to bypass any possible proxy which could block the HTTP communcation. Both fields must be separated by a semi-column. e.g : ByPassProxy;10.11.12.13
+- **Bus address**: The IP address of the U116. Also, we must fill in 'ByPassProxy' to bypass any possible proxy which could block the HTTP communication. Both fields must be separated by a semi-column. e.g : ByPassProxy;10.11.12.13
 
 B\) Direct Communication :
 
@@ -68,20 +68,20 @@ In either case, the **SNMP** interface collects the traps emitted by the device,
 
 This page displays some general information about the device.
 
-The credentials of the device must be filled-in behind the **Login...** pagebutton.
+The credentials of the device must be filled-in behind the **Login** page button.
 
 Some important parameters are available at the end of the first column :
 
-- **Controller Name** : this parameter shows the name of the **Astro Virtual Controller** element which manages this device. If no shuc element is used, the parameter will show the exception value *No Virtual Controller Found*.
+- **Controller Name** : this parameter shows the name of the **Astro Virtual Controller** element which manages this device. If no such element is used, the parameter will show the exception value *No Virtual Controller Found*.
 
 - **Communication Type** :
 
-- *Direct Communication* : The element sends the requests directly to the Astro module device.
+  - *Direct Communication* : The element sends the requests directly to the Astro module device.
   - *U100C Proxy* : The element sends the requests to the Astro U100 Controller which will forward them to the Astro module. The controller acts as a proxy.
 
 - **Communication Method** : this parameter is only available in *Direct Communication* mode.
 
-- *Login* : The element logs in to the device before every requests (read and write requests).
+  - *Login* : The element logs in to the device before every requests (read and write requests).
   - *Anonymous* : The element logs in to the device only for write requests. The device does not login before read requests.
 
 ### Status
@@ -140,7 +140,7 @@ Summary about the links between inputs and outputs.
 
 This page allows the user to upload/download config files to/from the device. The user can also perform a software update.
 
-1.  Configuration Files (Download/Upload)
+1\. Configuration Files (Download/Upload)
 
 The following table allows the user to upload/download configuration files to the device:
 
@@ -170,13 +170,13 @@ The file to be uploaded is located at: C:\Skyline DataMiner\Documents\&lt;protoc
 
 2\. Software Update
 
-The driver allows the user to upload a firmware archive from the local disk of the DMA:
+The connector allows the user to upload a firmware archive from the local disk of the DMA:
 
 ![SoftwareUpdate.PNG](~/connector-help/images/Astro_U116_Edge_PAL_SoftwareUpdate.PNG)
 
 The **Firmware File** parameter is used to select which file to upload. The dropdown lists all the files present in the DMA hard drive at the location: C:\Skyline DataMiner\Documents\\Protocol Name\>.
 
-Once the file is selected, the user can click the button **Update and Reboot** to start the upgrade. The update progress can be observed in the page behind the **Update Progress** pagebutton. Traps must be configured for that.
+Once the file is selected, the user can click the button **Update and Reboot** to start the upgrade. The update progress can be observed in the page behind the **Update Progress** page button. Traps must be configured for that.
 
 ### Licensing
 
@@ -184,7 +184,7 @@ Shows the available licenses for this Astro device.
 
 ### System Log
 
-This page contains a table listing all the log entries. The user can download the log files by clicking on the **Download** buttons. Log Settings are avaialble behing the **System Log Config ...** pagebutton.
+This page contains a table listing all the log entries. The user can download the log files by clicking on the **Download** buttons. Log Settings are available via the **System Log Config** page button.
 
 ### Alarm Severities
 
@@ -196,7 +196,7 @@ This page displays a table with the device's current alarms.
 
 ### Network
 
-This page displays Network parameters. Note that this parameter are retrieved via SNMP. The polling can be enabled/disabled using the **Network Data Polling** togglebutton.
+This page displays Network parameters. Note that this parameter are retrieved via SNMP. The polling can be enabled/disabled using the **Network Data Polling** toggle button.
 
 ### Web Interface
 

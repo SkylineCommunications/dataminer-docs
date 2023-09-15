@@ -4,7 +4,7 @@ uid: Connector_help_Resolve_Systems_Resolve_Platform
 
 # Resolve Systems Resolve Platform
 
-The **Resolve Platform** driver is an interface for the Resolve Systems Resolve Platform web service that keeps track of the commands and replies that are executed.
+The **Resolve Platform** connector is an interface for the Resolve Systems Resolve Platform web service that keeps track of the commands and replies that are executed.
 
 ## About
 
@@ -12,15 +12,15 @@ The **Resolve Platform** driver is an interface for the Resolve Systems Resolve 
 
 The protocol is used together with an Automation script, which receives a string with the following format: **protocol/DMA id/Element id/Param id**. The Automation script is expected to set Parameter ID 200 (with name "Send") with a string that complies with the following format: **RB0x01Name=Value0x01Name=Value0x01Name=Value...** In this string, "(char)1" is the separator. The first name and value must be Id=(ID number), where the value -1 will create an automatically generated ID. The second name and value must be WIKI = runbook (e.g. *LG.Test runbook*). The rest of the name and values are parameters that can be used in the runbook command.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 5.2.1 (20160126)            |
 
@@ -30,7 +30,7 @@ The protocol is used together with an Automation script, which receives a string
 
 #### HTTPS main connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTPS CONNECTION:
 

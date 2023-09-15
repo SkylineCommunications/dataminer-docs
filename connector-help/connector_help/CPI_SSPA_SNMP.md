@@ -4,7 +4,7 @@ uid: Connector_help_CPI_SSPA_SNMP
 
 # CPI SSPA SNMP
 
-This driver can be used to monitor a CPI SSPA SNMP device. The CPI SSPA SNMP is an RF power amplifier.
+This connector can be used to monitor a CPI SSPA SNMP device. The CPI SSPA SNMP is an RF power amplifier.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver can be used to monitor a CPI SSPA SNMP device. The CPI SSPA SNMP is 
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

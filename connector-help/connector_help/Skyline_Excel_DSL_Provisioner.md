@@ -4,15 +4,15 @@ uid: Connector_help_Skyline_Excel_DSL_Provisioner
 
 # Skyline Excel DSL Provisioner
 
-This is a virtual driver that can be used to read Excel files and produce DSL files.
+This is a virtual connector that can be used to read Excel files and produce DSL files.
 
 ## About
 
-With this virtual driver, all the information necessary to create a DSL (DataMiner Structured Files) file can be read from an Excel file, so that it can then be processed by the Skyline IAM DB Provision protocol.
+With this virtual connector, all the information necessary to create a DSL (DataMiner Structured Files) file can be read from an Excel file, so that it can then be processed by the Skyline IAM DB Provision protocol.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
@@ -20,7 +20,7 @@ With this virtual driver, all the information necessary to create a DSL (DataMin
 
 ### Creation
 
-This driver uses a **virtual connection** and does not require any input during element creation.
+This connector uses a **virtual connection** and does not require any input during element creation.
 
 ## Usage
 

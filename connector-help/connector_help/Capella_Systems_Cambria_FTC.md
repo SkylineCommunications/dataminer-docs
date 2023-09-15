@@ -32,7 +32,7 @@ Cambria FTC imports and exports widely used professional digital video formats, 
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -50,7 +50,7 @@ There is no redundancy defined.
 
 ## How to use
 
-With this driver, you can monitor the general and system information for your Capella Systems.
+With this connector, you can monitor the general and system information for your Capella Systems.
 
 You can also look for the latest jobs and check the status, progress, and much more.
 

@@ -4,25 +4,25 @@ uid: Connector_help_NTT_Electronics_HC11000D
 
 # NTT Electronics HC11000D
 
-This driver monitors and controls HC11000D devices, manufactured by NTT Electronics.
+This connector monitors and controls HC11000D devices, manufactured by NTT Electronics.
 
 The HC11000D is a high-performance and reliable 10-bit 4:2:2 HEVC/AVC/MPEG-2 decoder.
 
 ## About
 
-This driver allows you to view and control general and workflow (input, decode, output) settings of the device. These settings are retrieved and set via SNMP. SNMP traps, when enabled in the device, will update the list of alarms.
+This connector allows you to view and control general and workflow (input, decode, output) settings of the device. These settings are retrieved and set via SNMP. SNMP traps, when enabled in the device, will update the list of alarms.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**    | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**    | **DCF Integration** | **Cassandra Compliant** |
 |------------------|--------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version    | No                  | Yes                     |
 | 1.0.1.x          | DCF implementation | Yes                 | Yes                     |
 | 1.0.2.X          | DCF addition       | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 02.00                       |
 | 1.0.2.x          | 02.00                       |
@@ -33,7 +33,7 @@ This driver allows you to view and control general and workflow (input, decode, 
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -110,7 +110,7 @@ On this page, you can consult and manage the device through its web interface. N
 
 ## DataMiner Connectivity Framework
 
-The **1.0.1.x** driver range of the NTT Electronics HC11000D protocol supports the usage of DCF and can only be used on a DMA with **8.5.8.5** as the minimum version. DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
+The **1.0.1.x** connector range of the NTT Electronics HC11000D protocol supports the usage of DCF and can only be used on a DMA with **8.5.8.5** as the minimum version. DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
 ### Interfaces
 

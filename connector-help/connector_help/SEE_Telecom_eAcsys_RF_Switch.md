@@ -4,21 +4,21 @@ uid: Connector_help_SEE_Telecom_eAcsys_RF_Switch
 
 # SEE Telecom eAcsys RF Switch
 
-This is driver is aimed for the control and monitoring of the RF switch modules for the SEE eACSYS device.
+This is connector is aimed for the control and monitoring of the RF switch modules for the SEE eACSYS device.
 
 ## About
 
-The driver uses 2 connections. The main connection (*SNMPv2*) is used for normal polling. Besides this connection, a secondary *HTTP* connection is used to send control commands (through **GET** methods).
+The connector uses 2 connections. The main connection (*SNMPv2*) is used for normal polling. Besides this connection, a secondary *HTTP* connection is used to send control commands (through **GET** methods).
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | E_2.4.3                     |
 
@@ -30,7 +30,7 @@ The driver uses 2 connections. The main connection (*SNMPv2*) is used for normal
 
 SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (**SNMP**) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (**SNMP**) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -46,7 +46,7 @@ SNMP Settings:
 
 #### HTTP Control connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

@@ -8,11 +8,11 @@ uid: Connector_help_OpenStack_Manager_-_Project
 
 ## About
 
-This driver uses HTTP to monitor and configure any OpenStack cloud. It currently supports the main OpenStack modules, such as Keystone, Glance, Nova, Cinder and Neutron. OpenStack OpenStack - Project is an exported element automatically created to cover an existent project.
+This connector uses HTTP to monitor and configure any OpenStack cloud. It currently supports the main OpenStack modules, such as Keystone, Glance, Nova, Cinder and Neutron. OpenStack OpenStack - Project is an exported element automatically created to cover an existent project.
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**                                           |
+| **Range** | **Device Firmware Version**                                           |
 |------------------|-----------------------------------------------------------------------|
 | 1.0.0.x          | Nova: v2.x, Neutron: v2.0, Cinder: v3.0, Keystone: v3.0, Glance: v2.0 |
 | 1.0.1.x          | Nova: v2.x, Neutron: v2.0, Cinder: v3.0, Keystone: v3.0, Glance: v2.0 |
@@ -21,7 +21,7 @@ This driver uses HTTP to monitor and configure any OpenStack cloud. It currently
 
 ### Creation
 
-- This driver is used by DVEs that are automatically created by the parent element.
+- This connector is used by DVEs that are automatically created by the parent element.
 
 ## Usage
 

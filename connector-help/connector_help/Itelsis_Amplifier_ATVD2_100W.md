@@ -4,17 +4,17 @@ uid: Connector_help_Itelsis_Amplifier_ATVD2_100W
 
 # Itelsis Amplifier ATVD2 100W
 
-This driver for the **Itelsis Amplifier ATVD2 100W** polls parameters of the device and captures traps. The parameters are displayed on several pages and the traps update the value of some standalone parameters, not corresponding to existing SNMP parameters.
+This connector for the **Itelsis Amplifier ATVD2 100W** polls parameters of the device and captures traps. The parameters are displayed on several pages and the traps update the value of some standalone parameters, not corresponding to existing SNMP parameters.
 
 ## About
 
-This driver polls SNMP parameters of the **Itelsis Amplifier ATVD2 100W** with several timers (a slow, medium and fast timer). The traps are captured and update parameters on the **Traps** page. When the element restarts, the old values of those parameters are restored.
+This connector polls SNMP parameters of the **Itelsis Amplifier ATVD2 100W** with several timers (a slow, medium and fast timer). The traps are captured and update parameters on the **Traps** page. When the element restarts, the old values of those parameters are restored.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 
@@ -29,7 +29,7 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and need
 
 ## Usage
 
-The driver consists of 5 pages:
+The connector consists of 5 pages:
 
 - **General** page with general information about the device.
 - **Configuration** page.

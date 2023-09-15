@@ -12,21 +12,21 @@ These features make it ideal for use at small, remote transmitter sites that off
 
 This is a transmitter controller. SNMPv1 is used to retrieve information from the device.
 
-This driver allows you to manage both the DAB transmitter devices and the exciter itself.
+This connector allows you to manage both the DAB transmitter devices and the exciter itself.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.47.0                      |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol**                                                                                                        | **Description**    |
 |------------------------------------------------------------------------------------------------------------------------------|--------------------|
@@ -38,7 +38,7 @@ This driver allows you to manage both the DAB transmitter devices and the excite
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

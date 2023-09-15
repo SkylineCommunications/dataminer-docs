@@ -4,17 +4,17 @@ uid: Connector_help_Rohde_Schwarz_DVB-T_N+1_Nx8000
 
 # Rohde Schwarz DVB-T N+1 Nx8000
 
-With this driver, you can gather and view information from the **Rohde Schwarz DVB-T N+1 Nx8000** Switch Over unit, as well as configure the device.
+With this connector, you can gather and view information from the **Rohde Schwarz DVB-T N+1 Nx8000** Switch Over unit, as well as configure the device.
 
 ## About
 
-This driver uses SNMP to monitor the **Rohde Schwarz DVB-T N+1 Nx8000** device.
+This connector uses SNMP to monitor the **Rohde Schwarz DVB-T N+1 Nx8000** device.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP Connection:**
 

@@ -4,7 +4,7 @@ uid: Connector_help_Socomec_Diris_D-50_-_B30
 
 # Socomec Diris D-50 - B-30
 
-The Socomec Diris B-30 is a power monitoring device. This driver can monitor and control this device.
+The Socomec Diris B-30 is a power monitoring device. This connector can monitor and control this device.
 
 ## About
 
@@ -14,7 +14,7 @@ The Diris B-30 in a modular format can communicate wirelessly or via RS485. The 
 
 ### Creation
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## Usage
 

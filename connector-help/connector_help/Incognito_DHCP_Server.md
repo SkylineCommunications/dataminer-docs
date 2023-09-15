@@ -8,13 +8,13 @@ The **Incognito DHCP Server** is used for Network Resource Management.
 
 ## About
 
-The **Incognito DCHP Server** driver uses SNMP to monitor the most important parameters from the device and also displays the incoming traps.
+The **Incognito DCHP Server** connector uses SNMP to monitor the most important parameters from the device and also displays the incoming traps.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION**:
 

@@ -6,7 +6,7 @@ uid: Connector_help_Axon_ACP_U4D100
 
 The **U4D100** is a 4K (3840x2180) to 1080p, 4-wire down-converter. The low-latency unit combines and filters the four quadrants into a 1080p (1920x1080) signal.
 
-The Axon ACP U4D100 driver is used to monitor status information and configure control parameters of the U4D100 card.
+The Axon ACP U4D100 connector is used to monitor status information and configure control parameters of the U4D100 card.
 
 ## About
 
@@ -34,7 +34,7 @@ The Axon ACP U4D100 driver is used to monitor status information and configure c
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -46,7 +46,7 @@ SERIAL CONNECTION:
 
 #### Serial IP Connection - Events Connection
 
-This driver uses a smart-serial connection and requires the following input during element creation:
+This connector uses a smart-serial connection and requires the following input during element creation:
 
 SMART-SERIAL CONNECTION:
 

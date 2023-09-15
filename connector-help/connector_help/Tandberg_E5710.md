@@ -152,7 +152,7 @@ This page allows you to view the original web interface of the device itself. No
 
 ## DataMiner Connectivity Framework
 
-The **1.1.1.x** driver range of the Tandberg E5710 protocol supports the usage of DCF and can only be used on a DMA with **9.0.0 \[CU5\]** as the minimum version.
+The **1.1.1.x** connector range of the Tandberg E5710 protocol supports the usage of DCF and can only be used on a DMA with **9.0.0 \[CU5\]** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 

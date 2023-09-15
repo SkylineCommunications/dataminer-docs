@@ -4,15 +4,15 @@ uid: Connector_help_T-Vips_TVG425
 
 # T-Vips TVG425
 
-The T-Vips TVG425 driver is an **SNMP**-based driver used to monitor and configure the **T-Vips TVG425**.
+The T-Vips TVG425 connector is an **SNMP**-based connector used to monitor and configure the **T-Vips TVG425**.
 
 ## About
 
 The TVG425 provides gateway functionality to encapsulate MPEG-2 transport streams for IP networks, and to extract MPEG-2 streams from IP encapsulation. The device includes Gigabit ports as well as ASI ports, all functioning as input or output connections. Other features include redirecting such streams from an input to multiple outputs, or combined from multiple inputs as individual transport streams on one or more of the ASI ports or IP interfaces.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                       | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                       | **DCF Integration** | **Cassandra Compliant** |
 |------------------|---------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                       | No                  | No                      |
 | 1.0.1.x          | No                                    | No                  |                         |
@@ -20,9 +20,9 @@ The TVG425 provides gateway functionality to encapsulate MPEG-2 transport stream
 | 2.0.1.x          | Major version to support Norway Chars | Yes                 | Yes                     |
 | 2.0.2.x          | Layout changes                        | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range**        | **Device Firmware Version** |
+| **Range**        | **Device Firmware Version** |
 |-------------------------|-----------------------------|
 | 1.0.0.x                 | 1.4.x to 2.6.x              |
 | 1.0.1.x                 |                             |
@@ -34,7 +34,7 @@ The TVG425 provides gateway functionality to encapsulate MPEG-2 transport stream
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -116,7 +116,7 @@ The **Interfaces** and **Unit VLAN** **Table** are displayed on this page. It is
 
 ### Alarms
 
-Displays the **Current Alarms** table. There is also a pagebutton that displays the **Unit Event History Table.**
+Displays the **Current Alarms** table. There is also a page button that displays the **Unit Event History Table.**
 
 ### Transport Stream
 
@@ -149,7 +149,7 @@ At the bottom of the page, there are several page buttons that provide access to
 
 - **IP Outputs:** This page displays the **IP Tx Configuration**, **IP Tx Status, IP Tx FEC, IP Tx Ping** tables to configure the IP Outputs.
 
-- **Note**: using the right-click context menu on the ****IP Tx Configuration****, you can add and delete interfaces on a stream.
+- **Note**: using the right-click context menu on the **IP Tx Configuration**, you can add and delete interfaces on a stream.
 
 - **Stream ASI Outputs**: Using this page, you can select a stream and then add ASI Outputs to the stream, or delete using the **Stream ASI Outputs**
 
@@ -163,20 +163,18 @@ This page shows a **Traps table**. It also has a page button that opens a page w
 
 This page can be used to access the web interface of the device. Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.
 
-
-
 ## DCF Implementation (Range 2.0.0.x, 2.0.1.x, 2.0.2.x)
 
 On the **Output Page**:
 
-- The **Streams Table** allows you to select which inputs (**ASI Ports** or **IP**) should connect to each available **Stream**, by the input ID. **ASI Ports** and **IP** IDs can be found in the **ASI Ports Tabl**e and the **IP Inputs Table**, respectively, on the pages **Output** and **IP Input**.
+- The **Streams Table** allows you to select which inputs (**ASI Ports** or **IP**) should connect to each available **Stream**, by the input ID. **ASI Ports** and **IP** IDs can be found in the **ASI Ports Table** and the **IP Inputs Table**, respectively, on the pages **Output** and **IP Input**.
 - The **ASI Ports Table** allows connections to be created between **Streams** (as Inputs) and **ASI Ports** (as Outputs).
 
 On the **IP Tx Page**:
 
 - The **IP Tx Configuration Table** allows connections to be created from **Streams** to **IP**, more specifically to the associated **Ethernet** **Interface**.
 
-## Notes:
+## Notes
 
 ### DCF Implementation
 
@@ -186,7 +184,7 @@ All the connections with **IP** use the **Ethernet Interface**. The Ethernet Int
 
 ### Traps
 
-The driver can receive traps under the subtree OID **1.3.6.1.4.1.22909.1.1.0 (unitNotifications)** and process 3 different kinds of traps: Alarm Status, Alarm and Event:
+The connector can receive traps under the subtree OID **1.3.6.1.4.1.22909.1.1.0 (unitNotifications)** and process 3 different kinds of traps: Alarm Status, Alarm and Event:
 
 - **Alarm Status**: Updates the **General Alarm Status** parameter value, shown on the General page.
 - **Alarm**: If an alarm with the same Reference Number already exists in the **Current Alarms Table**, its values will be updated. However, if the new alarm does not exist yet, the table will be polled via SNMP.

@@ -4,24 +4,24 @@ uid: Connector_help_Advantech_AMT_ARUD-ARDD_RS485
 
 # Advantech AMT ARUD-ARDD RS485
 
-Using serial communication via the RS485 port, this driver monitors the status of the Advantech AMT ARUD-ARDD frequency converter and performs certain control functions on the device.
+Using serial communication via the RS485 port, this connector monitors the status of the Advantech AMT ARUD-ARDD frequency converter and performs certain control functions on the device.
 
 ## About
 
-As the RS-485 interface of the ARUD-ARDD frequency converter has a completely different command structure compared to the RS-232 version, this specific driver is necessary.
+As the RS-485 interface of the ARUD-ARDD frequency converter has a completely different command structure compared to the RS-232 version, this specific connector is necessary.
 
 The interface uses a packet structure, with each packet consisting of 7 bytes of information. The packets can be either a command or a response message. The device will only accept a command if the first byte contains the appropriate address of the device. If the address of the packet does not match the address of the device, the command is ignored. The last (7th) byte of the packet is a checksum, which is calculated as the sum of byte 1 to 6. If the checksum is incorrect, the command is not executed and no response message is sent. The second byte is the command or data request. The 3rd through 6th byte can be used for command or response data. Unused bytes are set to 0xAA.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**          |
+| **Range** | **Description**          |
 |------------------|--------------------------|
 | 1.0.0.x          | Initial version          |
 | 1.1.0.x          | Support for firmware 0.5 |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Supported Firmware Version** |
+| **Range** | **Supported Firmware Version** |
 |------------------|--------------------------------|
 | 1.0.0.x          | 01                             |
 | 1.1.0.x          | 0.5                            |
@@ -32,7 +32,7 @@ The interface uses a packet structure, with each packet consisting of 7 bytes of
 
 #### Serial main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -61,7 +61,7 @@ You can find the following information on this page:
 - **Device Address:** Shows the current address of the device, and allows you to change it. The valid range for the address is *1 - 15*.
 
   > [!NOTE]
-  > If you change the device address, you also have to change the **Bus Address** of the device in order for the driver to continue communication. You can do this by right-clicking the device in the Surveyor and selecting **Edit**. Then, under **More TCP/IP** **settings**, change the bus address to match the address you entered for the parameter. Communication will then be re-established.
+  > If you change the device address, you also have to change the **Bus Address** of the device in order for the connector to continue communication. You can do this by right-clicking the device in the Surveyor and selecting **Edit**. Then, under **More TCP/IP** **settings**, change the bus address to match the address you entered for the parameter. Communication will then be re-established.
 
 - **Unit Type:** Describes whether the unit is an *Up Converter* or a *Down Converter*.
 

@@ -8,7 +8,7 @@ Visionic is a complete monitoring and control platform solution for a wide range
 
 ## About
 
-This driver allows the user to monitor the parameters, status and alarms of the available instances.
+This connector allows the user to monitor the parameters, status and alarms of the available instances.
 
 ### Version Info
 
@@ -56,7 +56,7 @@ This driver allows the user to monitor the parameters, status and alarms of the 
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -76,7 +76,7 @@ SERIAL CONNECTION:
 
 #### SNMP Type1 Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

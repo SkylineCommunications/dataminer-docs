@@ -8,7 +8,7 @@ The **Dell M1000e** **Collector** Protocol communicates with multiple external *
 
 ## About
 
-This driver communicates using SNMP Protocol version 2. It allows the monitor and trend of all statuses and readings from remote **Dell M1000e** devices. It can optionally export each Dell M1000e device as a virtual element.
+This connector communicates using SNMP Protocol version 2. It allows the monitor and trend of all statuses and readings from remote **Dell M1000e** devices. It can optionally export each Dell M1000e device as a virtual element.
 
 ### Version Info
 

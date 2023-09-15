@@ -34,7 +34,7 @@ This connector communicates with the AVDELAY 3G using an SNMP connection. SNMP t
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

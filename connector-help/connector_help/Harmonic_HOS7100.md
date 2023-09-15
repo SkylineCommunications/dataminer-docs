@@ -4,7 +4,7 @@ uid: Connector_help_Harmonic_HOS7100
 
 # Harmonic HOS7100
 
-This is a driver for an optical switch, also described as a protection switch.
+This is a connector for an optical switch, also described as a protection switch.
 
 ## About
 
@@ -14,7 +14,7 @@ This switch always has 2 inputs and 1 output. The inputs and their thresholds ar
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION**:
 

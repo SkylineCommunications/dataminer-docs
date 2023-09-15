@@ -8,13 +8,13 @@ The Digimetrics Aurora is a high volume automated, no reference, file-based QC w
 
 ## About
 
-This driver makes it possible to interact with the Aurora web service. Users can add jobs to the web service, get the status of these jobs, place a job on hold, or move the priority of a job in the queue. The driver also retrieves information from the templates, machines, processors and the VUCoreMode.
+This connector makes it possible to interact with the Aurora web service. Users can add jobs to the web service, get the status of these jobs, place a job on hold, or move the priority of a job in the queue. The connector also retrieves information from the templates, machines, processors and the VUCoreMode.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses an HTTP connection and needs the following user information:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 **SERIAL CONNECTION**:
 
@@ -73,7 +73,3 @@ This table will be refreshed every 60 minutes.
 ### Webpage
 
 This page will lead to the webpage of the web service.
-
-## Notes
-
-N/A

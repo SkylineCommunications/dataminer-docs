@@ -4,7 +4,7 @@ uid: Connector_help_Ateme_DR8400
 
 # Ateme DR8400
 
-This SNMP driver can be used to monitor and control the Ateme DR8400. Alarm monitoring and trending can be enabled on many important parameters. The driver communicates with the Ateme DR8400 decoder using SNMP.
+This SNMP connector can be used to monitor and control the Ateme DR8400. Alarm monitoring and trending can be enabled on many important parameters. The connector communicates with the Ateme DR8400 decoder using SNMP.
 
 ## About
 
@@ -36,7 +36,7 @@ This SNMP driver can be used to monitor and control the Ateme DR8400. Alarm moni
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -62,7 +62,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver consists of the following data pages:
+The element created with this connector consists of the following data pages:
 
 - **General**: Displays general information about the device, such as the Software Version, Temperature, Power Supply Status, etc.
 - **Input**: Displays the input values for Satellite, IP and ASI. Via page buttons, you can configure parameters related to IP, SMM and Failover.

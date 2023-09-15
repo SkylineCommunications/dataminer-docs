@@ -8,19 +8,19 @@ The Supermicro IPMI (Intelligent Platform Management Interface) standard is used
 
 ## About
 
-This driver integrates the Intel IPMI driver and Supermicro. It is developed to manage and retrieve the data from both types of hard disk with a single driver. The driver can be used to display all available sensor values, to monitor fan speeds, temperatures, power, voltage and current sensors, and to view the event log, the user list, the list of FRUs of Intel and the Supermicro hard disk information.
+This connector integrates the Intel IPMI driver and Supermicro. It is developed to manage and retrieve the data from both types of hard disk with a single driver. The connector can be used to display all available sensor values, to monitor fan speeds, temperatures, power, voltage and current sensors, and to view the event log, the user list, the list of FRUs of Intel and the Supermicro hard disk information.
 
-To do this, the driver uses a third-party tool (i.e. IPMItool, which can be found at <http://sourceforge.net/projects/ipmitool/>). As a consequence, no communication will be visible in Stream Viewer.
+To do this, the connector uses a third-party tool (i.e. IPMItool, which can be found at <http://sourceforge.net/projects/ipmitool/>). As a consequence, no communication will be visible in Stream Viewer.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ To do this, the driver uses a third-party tool (i.e. IPMItool, which can be foun
 
 ### Creation
 
-This driver uses the IPMItool to connect with the device and requires the following input during element creation:
+This connector uses the IPMItool to connect with the device and requires the following input during element creation:
 
 **CUSTOM CONNECTION:**
 
@@ -37,7 +37,7 @@ This driver uses the IPMItool to connect with the device and requires the follow
 
 ### Configuration
 
-For the configuration of this driver, you first need to install the IPMItool and SMCIPMI tool.
+For the configuration of this connector, you first need to install the IPMItool and SMCIPMI tool.
 For this, 6 DLLs have to be made available in your system:
 
 - cygcrypto-1.0.0.dll
@@ -47,33 +47,47 @@ For this, 6 DLLs have to be made available in your system:
 - ipmitool.exe
 - smcipmitool.exe
 
-When you have made sure these are available, the path for both device executables ("ipmitool.exe" and "smcipmitool.exe") has to be configured in the driver:
+When you have made sure these are available, the path for both device executables ("ipmitool.exe" and "smcipmitool.exe") has to be configured in the connector:
 
-1.  Open the element and go to the **General** page.
-2.  In the second column, in the section **Internal Driver Parameters**, below **Configuration**, click the button **More Settings**.
-    The **Settings** window will open.
-3.  In the **General** section of this window, set the full path for both executables, including the file name, in the parameter **Intel File path** and **SMC** **IPMI File Path** respectively.
-    Example: *C:\IPMI\ipmitool.exe,C:\SMCIPMI\SMCIPMITool.exe*
+1. Open the element and go to the **General** page.
+
+1. In the second column, in the section **Internal Driver Parameters**, below **Configuration**, click the button **More Settings**.
+
+   The **Settings** window will open.
+
+1. In the **General** section of this window, set the full path for both executables, including the file name, in the parameter **Intel File path** and **SMC** **IPMI File Path** respectively.
+
+   Example: *C:\IPMI\ipmitool.exe,C:\SMCIPMI\SMCIPMITool.exe*
 
 Finally, also configure the user name and password:
 
-1.  Open the element and go to the **General** page.
-2.  In the second column, in the section **Internal Driver Parameters**, below **Configuration**, click the button **More Settings**.
-    The **Settings** window will open.
-3.  In the **Credentials** section of this window, set the **Intel** **User Name**, **Intel Password**, **SMC Username** and **SMC Password** for both devices.
-    Note: The **Intel** **IPMI Password and SMC IPMI Password** have no associated "read" control, so it is not possible to see if the password has already been configured.
+1. Open the element and go to the **General** page.
 
-At this point, the driver should be able to connect with the target device and start retrieving data.
+1. In the second column, in the section **Internal Driver Parameters**, below **Configuration**, click the button **More Settings**.
 
-For Intel communication only, if the driver is not able to connect yet, continue with the following steps:
+   The **Settings** window will open.
 
-1.  Restart the driver.
-2.  Go to the **General** page, click the **More Settings** button, and go to the section **Connection**.
-3.  Depending on the current interface type, change the interface type either from *Lan* to *Lan+* or from *Lan+* to *Lan for Intel*, and restart the driver.
-4.  In the same section of the **Settings** window, disable **Use Caching** if this is enabled for the Intel device.
-5.  If the problem persists, open the element log file and verify if any errors have been logged.
-    This will typically be at the end of the file, so we advise you to start looking there.
-6.  Contact Skyline Communications (your TAM or <techsupport@skyline.be>).
+1. In the **Credentials** section of this window, set the **Intel** **User Name**, **Intel Password**, **SMC Username** and **SMC Password** for both devices.
+
+   Note: The **Intel** **IPMI Password and SMC IPMI Password** have no associated "read" control, so it is not possible to see if the password has already been configured.
+
+At this point, the connector should be able to connect with the target device and start retrieving data.
+
+For Intel communication only, if the connector is not able to connect yet, continue with the following steps:
+
+1. Restart the connector.
+
+1. Go to the **General** page, click the **More Settings** button, and go to the section **Connection**.
+
+1. Depending on the current interface type, change the interface type either from *Lan* to *Lan+* or from *Lan+* to *Lan for Intel*, and restart the connector.
+
+1. In the same section of the **Settings** window, disable **Use Caching** if this is enabled for the Intel device.
+
+1. If the problem persists, open the element log file and verify if any errors have been logged.
+
+   This will typically be at the end of the file, so we advise you to start looking there.
+
+1. Contact Skyline Communications (your TAM or <techsupport@skyline.be>).
 
 ## Usage
 
@@ -86,14 +100,18 @@ On the left side of the page, there are some general status indicators such as *
 There are also four page buttons: **Users**, **SEL Info**, **BMC Info**, and **SDR Info**. These provide access to pages with a mix of polled data and "static" data.
 Trending and alarm monitoring are not possible on the "static" data. This data will only be retrieved from the device after one of these buttons are clicked, at which point all the data on these pages will be updated. However, note that it could take some time before the update is complete, so do not close the pages too quickly.
 
-This page also contains a section **Internal Driver Parameters**. This contains parameters that do not come from the device but instead display settings, configuration info and status info about the driver and its behavior.
+This page also contains a section **Internal Driver Parameters**. This contains parameters that do not come from the device but instead display settings, configuration info and status info about the connector and its behavior.
 
 The first section, **Statistics**, contains data related to the internal command stacks. This information is updated every 10 seconds.
 
 - **Manager - Waiting Commands**: Indicates how many commands are waiting to be executed (at the time of the update).
+
 - **Manager - Executing Commands**: Indicates how many commands are currently being executed (at the time of the update).
+
   The maximum value of this parameter is defined by **Manager - Max Processes**, but will often be less because of the **Manager - Max Background** **Processes** limitation.
+
 - **Manager - Finished Commands**: Indicates how many commands have finished since the previous update.
+
   Note that this could be more than the number of commands that was shown in the **Executing Commands** parameter. This is because if several commands take only 2 seconds, they will be started and finished without any indication in the **Waiting** and **Executing** parameters.
 
 Below this, you can find parameters that configure how many commands can be executed at the same time. The first parameter, **Sessions - Slot Count**, is retrieved from the device after startup and defines the maximum number of concurrent requests that the device supports. As such, the **Max Processes** may never exceed this value. However, it is recommended to take a smaller number of actual **Max Processes**, because these sessions are also shared with other users (for example on the command line) or other elements (for example when double polling.) It is best to take a **Slot Count** of *4* for a production element*.* This allows for a second (duplicate) element on a staging server using 2 or 3 connections, and for users using the command line or any other tool.

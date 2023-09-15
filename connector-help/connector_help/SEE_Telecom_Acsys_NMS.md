@@ -35,7 +35,7 @@ This protocol uses SNMP to monitor the SEE Telecom Acsys 2Rx Us receiver.
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 
@@ -47,4 +47,4 @@ There is no redundancy defined.
 
 ## How to use
 
-The **General** page of this driver provides a general overview of the device. The **Module Overview** page has a more detailed overview, and allows you to set the number of slots.
+The **General** page of this connector provides a general overview of the device. The **Module Overview** page has a more detailed overview, and allows you to set the number of slots.

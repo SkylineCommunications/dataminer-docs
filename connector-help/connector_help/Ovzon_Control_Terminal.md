@@ -32,7 +32,7 @@ The Ovzon Control Terminal is Ovzon's internal management and testing tool. This
 
 #### Main connection
 
-This driver uses a smart-serial connection and requires the following input during element creation:
+This connector uses a smart-serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

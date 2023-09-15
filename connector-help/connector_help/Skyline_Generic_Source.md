@@ -95,5 +95,5 @@ Right-click a table row to add a new row for the same source, remove the selecte
 
 If you **switch to a more recent version** of this connector:
 
-1.  Recommit all resources.
-2.  Go to the Source Management page and use the **Create/Update Profile** and **Check Generic Source Profile** buttons.
+1. Recommit all resources.
+2. Go to the Source Management page and use the **Create/Update Profile** and **Check Generic Source Profile** buttons.

@@ -8,26 +8,26 @@ The Redundancy Switches from WORK Microwave are utilized to provide redundant co
 
 ## About
 
-With this driver, it is possible to monitor and configure **Work Microwave Redundancy Switch Controller** devices and the connected **converters** with a **serial** connection.
+With this connector, it is possible to monitor and configure **Work Microwave Redundancy Switch Controller** devices and the connected **converters** with a **serial** connection.
 
 The different parameters from the device are displayed on multiple pages. Specific parameters for the converters are displayed by the converter driver.
 
 #### Serial connection:
 
-This driver uses a **Serial** connection and requires the following input during element creation:
+This connector uses a **Serial** connection and requires the following input during element creation:
 
 - **IP address/host**: The IP address of the device, e.g. *192.168.10.2.*
 - **IP port**: The port of the connected device, by default *22*.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          |                             |
 

@@ -8,7 +8,7 @@ The Verizon Workflow Manager protocol is used to handle workflows and data excha
 
 ## About
 
-As this is a virtual driver, **no data traffic** will be shown **in the Stream Viewer**.
+As this is a virtual connector, **no data traffic** will be shown **in the Stream Viewer**.
 
 #### Profile Manager Integration
 
@@ -32,9 +32,9 @@ The Correlation engine will listen for and capture information events coming fro
 - Temperature Interrogation
 - KPI Interrogation
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
@@ -42,7 +42,7 @@ The Correlation engine will listen for and capture information events coming fro
 
 ### Creation
 
-This driver uses a **virtual** connection and does not require any input during element creation.
+This connector uses a **virtual** connection and does not require any input during element creation.
 
 ## Usage
 

@@ -4,7 +4,7 @@ uid: Connector_help_Docker_Platform
 
 # Docker Platform
 
-The **Docker Platform** driver allows you to manage containers. A container is standard unit software that packages up code and all its dependencies, so the application runs quickly and reliably from one computing environment to another.
+The **Docker Platform** connector allows you to manage containers. A container is standard unit software that packages up code and all its dependencies, so the application runs quickly and reliably from one computing environment to another.
 
 A Docker container image is a lightweight, standalone, executable package of software that includes everything needed to run an application: code, runtime, system tools, system libraries and settings.
 
@@ -36,7 +36,7 @@ Docker Engine is available for both Linux and Windows-based applications.
 
 #### HTTP main connection
 
-The driver uses an HTTP connection and requires the following input during element creation:
+The connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -45,7 +45,7 @@ HTTP CONNECTION:
 
 ## Usage
 
-The element created with this driver has the following data pages:
+The element created with this connector has the following data pages:
 
 - **General**: Displays the **status of the server**, information about the Docker API and general information about the containers, such as the number of **Containers Running** and **Stopped**, **Images** and **Memory Available**.
 - **Containers**: Displays a tree view with information about each container. Click a container to view more information about it, such as **Name**, **Status**, **IP Address** and **Memory Swap**. Via a page button, you can also see the **processes** running in a container.

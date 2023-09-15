@@ -8,18 +8,18 @@ The 570ITXE-HW-P60 is built with modern hardware technology. Leveraging experien
 
 ## About
 
-The driver uses **SNMP** and **HTTP** to poll data from the Evertz 570ITXE-HW-P60.
+The connector uses **SNMP** and **HTTP** to poll data from the Evertz 570ITXE-HW-P60.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**       | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**       | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version       | No                  | Yes                     |
 | 1.0.1.x          | HTTP connection added | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**               |
+| **Range** | **Device Firmware Version**               |
 |------------------|-------------------------------------------|
 | 1.0.0.x          | N: V303B20180202-764 S: V303B20180202-764 |
 | 1.0.1.x          | Build number: 1163                        |
@@ -30,7 +30,7 @@ The driver uses **SNMP** and **HTTP** to poll data from the Evertz 570ITXE-HW-P6
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -44,7 +44,7 @@ SNMP Settings:
 
 #### HTTP Web API Connection
 
-This driver uses a HTTP connection and requires the following input during element creation:
+This connector uses a HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

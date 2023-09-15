@@ -34,7 +34,7 @@ The SCORPION-X18 Media Processing Platform is a high-density signal conversion, 
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -48,7 +48,7 @@ SNMP Settings:
 
 #### SNMP Redundant2 Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -70,7 +70,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver has several data pages:
+The element created with this connector has several data pages:
 
 - The **General** page displays the uptime, ID, name, and location of the system.
 - The **System** page displays information about the different system configuration options.

@@ -4,7 +4,7 @@ uid: Connector_help_Imagine_Communications_FR68x2+QXF
 
 # Imagine Communications FR68x2+QXF
 
-The Imagine Communications FR68x2+QXF driver uses both serial and smart-serial communication. It can be used to monitor and configure the converter card in an Imagine Communications frame. It allows alarm monitoring of all important parameters.
+The Imagine Communications FR68x2+QXF connector uses both serial and smart-serial communication. It can be used to monitor and configure the converter card in an Imagine Communications frame. It allows alarm monitoring of all important parameters.
 
 ## About
 
@@ -32,7 +32,7 @@ The Imagine Communications FR68x2+QXF driver uses both serial and smart-serial c
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -40,11 +40,11 @@ SERIAL CONNECTION:
 
   - **IP address/host**: The polling IP or URL of the destination.
   - **IP port**: The IP port of the destination (fixed value: *4050*).
-  - **Bus address**: The bus address of the device, in the format *frameNumber****.****slotID*, e.g. *1.0* (the default value) represents frame 1 and slot 0. Range: *0* - *100* (0 because this is a frame controller card).
+  - **Bus address**: The bus address of the device, in the format *frameNumber.slotID*, e.g. *1.0* (the default value) represents frame 1 and slot 0. Range: *0* - *100* (0 because this is a frame controller card).
 
 #### Serial PortDev Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SMART-SERIAL CONNECTION:
 
@@ -67,4 +67,4 @@ On the **Processing** page, the **Other** page button opens a subpage with the f
 
 ## Notes
 
-As this is a serial driver with a smart-serial connection, there has to be a connection to a real device. If there is a change on the device, a response will be pushed to the DMA, without the need to send a poll request.
+As this is a serial connector with a smart-serial connection, there has to be a connection to a real device. If there is a change on the device, a response will be pushed to the DMA, without the need to send a poll request.

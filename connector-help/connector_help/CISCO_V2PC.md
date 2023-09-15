@@ -4,7 +4,7 @@ uid: Connector_help_CISCO_V2PC
 
 # CISCO V2PC
 
-This driver can be used to monitor the activity of the Cisco V2PC video processor chassis.
+This connector can be used to monitor the activity of the Cisco V2PC video processor chassis.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver can be used to monitor the activity of the Cisco V2PC video processo
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -42,7 +42,7 @@ HTTP CONNECTION:
 
 ### Initialization
 
-An access token is required to access the API in the V2PC system. You can obtain this access token via the login API, for which a valid **username** and **password** must be specified on the Credentials subpage of the General page of this driver.
+An access token is required to access the API in the V2PC system. You can obtain this access token via the login API, for which a valid **username** and **password** must be specified on the Credentials subpage of the General page of this connector.
 
 ### Redundancy
 
@@ -54,7 +54,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver consists of the following data pages:
+The element created with this connector consists of the following data pages:
 
 - **General**: Displays the node statistics, alarms and events. On the **Credentials** subpage, you can set the device credentials (see "Initialization" above).
 - **Infrastructure**: Contains a tree view of the infrastructure objects. Via page buttons, you can access subpages for the Nodes, Regions, Providers and Zones.

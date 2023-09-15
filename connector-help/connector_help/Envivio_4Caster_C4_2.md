@@ -4,24 +4,24 @@ uid: Connector_help_Envivio_4Caster_C4_2
 
 # Envivio 4Caster C4 2
 
-The Envivio 4Caster C4 2 is a driver that utilizes **SOAP over HTTP** in order to exchange information with the device.
+The Envivio 4Caster C4 2 is a connector that utilizes **SOAP over HTTP** in order to exchange information with the device.
 
 ## About
 
-This driver implements the SOAP interface specification for exchanging information with the Envivio 4Caster C4 2. The driver lists the available services and the profiles in different tables. The user can also view the different audio and video streams for the profiles as well as the UDP, HTTP and RTMP outputs. There is also an alarm table listing the active alarms and their status. Aside from monitoring the device, the user can also upload new configuration files to the device and configure certain redundancy services.
+This connector implements the SOAP interface specification for exchanging information with the Envivio 4Caster C4 2. The connector lists the available services and the profiles in different tables. The user can also view the different audio and video streams for the profiles as well as the UDP, HTTP and RTMP outputs. There is also an alarm table listing the active alarms and their status. Aside from monitoring the device, the user can also upload new configuration files to the device and configure certain redundancy services.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 | 2.0.0.x          | Updated range   | No                  | Yes                     |
 | 2.1.0.x          | New firmware    | No                  | Yes                     |
 | 2.2.0.x          | New firmware    | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 2.0.0.x          | Unknown                     |
@@ -34,15 +34,15 @@ This driver implements the SOAP interface specification for exchanging informati
 
 #### Serial Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
 - **IP address/host**: The polling IP of the device.
-- **IP port**: *80* (automatically filled in by the driver).
-- **Bus address**: Not required for this driver.
+- **IP port**: *80* (automatically filled in by the connector).
+- **Bus address**: Not required for this connector.
 
-No other configuration is required for this driver to work.
+No other configuration is required for this connector to work.
 
 ## Usage
 
@@ -82,7 +82,7 @@ It also contains subpages where you can **configure** the **audio** and **video*
 
 To push the updates to the device, on the **Upload User Configurations** page, press the **Encoding** button next to **Set User Configurations**.
 
-From version 2.1.0.6 of the driver onwards, there are delete columns in the output tables: **Delete UDP Output**, **Delete HTTP Output**, **Delete Smooth Streaming Output** and **Delete RTMP Output**. When these are set to *Yes*, the output will be removed after the updates are pushed via the **Encoding** button.
+From version 2.1.0.6 of the connector onwards, there are delete columns in the output tables: **Delete UDP Output**, **Delete HTTP Output**, **Delete Smooth Streaming Output** and **Delete RTMP Output**. When these are set to *Yes*, the output will be removed after the updates are pushed via the **Encoding** button.
 
 ### Alarms
 

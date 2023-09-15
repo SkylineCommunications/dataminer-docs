@@ -4,33 +4,33 @@ uid: Connector_help_Romantis_NMS
 
 # Romantis NMS (Deprecated)
 
-**This driver is deprecated as the vendor name has changed. It is now available under the name [UHP Networks NMS](xref:Connector_help_UHP_Networks_NMS).**
+**This connector is deprecated as the vendor name has changed. It is now available under the name [UHP Networks NMS](xref:Connector_help_UHP_Networks_NMS).**
 
-The **Romantis NMS** DataMiner driver can be used to retrieve information from a Romantis Network Monitoring System.
+The **Romantis NMS** DataMiner connector can be used to retrieve information from a Romantis Network Monitoring System.
 
 ## About
 
-This driver makes it possible to monitor the Romantis NMS, hubs and remote modems. This driver uses the **HTTP** protocol as a primary connection to retrieve data from the remote platform API.
+This connector makes it possible to monitor the Romantis NMS, hubs and remote modems. This connector uses the **HTTP** protocol as a primary connection to retrieve data from the remote platform API.
 
 All data in the element is read-only. It is not posible to configure the Romantis NMS via DataMiner.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                                                                                                                                                                       | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                                                                                                                                                                                       | **DCF Integration** | **Cassandra Compliant** |
 |------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                                                                                                                                                                                                                       | No                  | Yes                     |
 | 1.0.1.x          | Added secondary HTTP connection to allow polling of a redundant system. There is no way to determine which NMS is online, so switching must be done manually.                                                                         | No                  | Yes                     |
 | 1.0.2.x          | Removed secondary HTTP connection. Creation of DVEs for each controller and station. Added a hidden SNMP connection to populate the DVEs with additional parameters from controllers and stations when the Management IP is selected. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 3.2.0                       |
 | 1.0.1.x          | 3.2.0                       |
 | 1.0.2.x          | 3.2.0                       |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol**                                                            | **Description**                                                 |
 |----------------------------------------------------------------------------------|-----------------------------------------------------------------|
@@ -43,7 +43,7 @@ All data in the element is read-only. It is not posible to configure the Romanti
 
 #### HTTP Primary
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -53,7 +53,7 @@ HTTP CONNECTION:
 
 #### HTTP NMS2 connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -63,7 +63,7 @@ HTTP CONNECTION:
 
 #### SNMP
 
-This driver only uses this SNMP connection when the Management IP is selected for controllers and stations. This connection does not require any input during element creation.
+This connector only uses this SNMP connection when the Management IP is selected for controllers and stations. This connection does not require any input during element creation.
 
 ### Configuration
 
@@ -101,7 +101,7 @@ This page contains four tables with all the data that is exported to the DVEs.
 
 On this page, the **API token** can be configured. By default, the API accepts an empty string.
 
-In the 1.0.1.x range of the driver only, there is also the possibility to switch between the main and backup NMS. As it is not possible to automatically determine which NMS is online, switching must be done manually.
+In the 1.0.1.x range of the connector only, there is also the possibility to switch between the main and backup NMS. As it is not possible to automatically determine which NMS is online, switching must be done manually.
 
 ### Web Interface
 

@@ -4,26 +4,26 @@ uid: Connector_help_Imagine_Communications_Selenio_ENC2
 
 # Imagine Communications Selenio ENC2
 
-The **Imagine Communications Selenio ENC2** is a type of card that can be slotted into a Selenio chassis. This driver contains a full overview of all the data available in such a card. Specifically, it contains information regarding audio, video and data encoding.
+The **Imagine Communications Selenio ENC2** is a type of card that can be slotted into a Selenio chassis. This connector contains a full overview of all the data available in such a card. Specifically, it contains information regarding audio, video and data encoding.
 
 ## About
 
-This driver displays information on different pages, described in the **Usage** section of this document.
+This connector displays information on different pages, described in the **Usage** section of this document.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                                                                               | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                                                                                               | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 5.0.43.x         | DCF support                                                                                                                                   | Yes                 | Yes                     |
-| \<10.0.0.x       | **\[Main\]** The **versioning** of the driver is specifically engineered to tie in with the firmware version of the card the driver supports. | No                  | Yes                     |
+| \<10.0.0.x       | **\[Main\]** The **versioning** of the connector is specifically engineered to tie in with the firmware version of the card the connector supports. | No                  | Yes                     |
 | 10.0.0.x         | Replaced the "dynamic snmp get" with "dynamicSnmpGet="true"" under parameter type tag.                                                        | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**                                                                                                                                                                                                                                                                                                                                                            |
+| **Range** | **Device Firmware Version**                                                                                                                                                                                                                                                                                                                                                            |
 |------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 5.0.43.x         | 5.0.42                                                                                                                                                                                                                                                                                                                                                                                 |
-| \<10.0.0.x       | **\[Main\]** The **versioning** of the driver is specifically engineered to tie in with the firmware version of the card the driver supports. It uses the following format: X.X.X.Y, with X.X.X being the firmware version of the card and .Y the specific driver iteration for this firmware. For example, *5.0.28.2* means the driver is the second iteration for firmware *5.0.28.* |
+| \<10.0.0.x       | **\[Main\]** The **versioning** of the connector is specifically engineered to tie in with the firmware version of the card the connector supports. It uses the following format: X.X.X.Y, with X.X.X being the firmware version of the card and .Y the specific driver iteration for this firmware. For example, *5.0.28.2* means the connector is the second iteration for firmware *5.0.28.* |
 | 10.0.0.x         | Requires controller firmware "S/W=7.0-38, H/W= rev 02" or higher and will not work with older firmware.                                                                                                                                                                                                                                                                                |
 
 ## Installation and configuration
@@ -32,7 +32,7 @@ This driver displays information on different pages, described in the **Usage** 
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -61,7 +61,7 @@ All data gets retrieved from the device in two ways.
 
 ## Usage
 
-The driver contains different pages divided into several sections using separators:
+The connector contains different pages divided into several sections using separators:
 
 ### General section
 

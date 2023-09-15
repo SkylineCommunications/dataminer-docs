@@ -4,11 +4,11 @@ uid: Connector_help_Miteq_RSU-S_S-TR
 
 # Miteq RSU-S_S-TR
 
-The **Miteq RSU-S_S-TR** driver monitors and controls a changeover unit through SNMP.
+The **Miteq RSU-S_S-TR** connector monitors and controls a changeover unit through SNMP.
 
 ## About
 
-The driver polls relevant information from the device every 10 seconds, 15 seconds, 30 seconds or 1 minute, depending on the information, and updates the user interface with the values received from the device.
+The connector polls relevant information from the device every 10 seconds, 15 seconds, 30 seconds or 1 minute, depending on the information, and updates the user interface with the values received from the device.
 
 ### Version Info
 
@@ -34,7 +34,7 @@ The driver polls relevant information from the device every 10 seconds, 15 secon
 
 #### SNMP Main Connection
 
-The driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+The connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION**:**
 
@@ -52,7 +52,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## Usage
 
-The driver has several data display pages. More information about these pages can be found below.
+The connector has several data display pages. More information about these pages can be found below.
 
 ### General Page
 

@@ -4,7 +4,7 @@ uid: Connector_help_Arris_DSR-4470
 
 # Arris DSR-4470
 
-The Arris DSR-4470 is an integrated receiver and decoder that incorporates the latest HEVC decoder technology with additional support for MPEG-4 and MPEG-2 video decoding. This driver displays relevant information about this device.
+The Arris DSR-4470 is an integrated receiver and decoder that incorporates the latest HEVC decoder technology with additional support for MPEG-4 and MPEG-2 video decoding. This connector displays relevant information about this device.
 
 ## About
 
@@ -32,7 +32,7 @@ The Arris DSR-4470 is an integrated receiver and decoder that incorporates the l
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -50,7 +50,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element made using this driver has the following data pages:
+The element made using this connector has the following data pages:
 
 - **General**: Displays information about the status of the device, including the Signal Status, Authorized Status and IRD Status.
 - **Interfaces**: Displays the **Network Interface Table**, where you can configure the IP Address, Subnet Mask and Gateway of the available network interfaces.

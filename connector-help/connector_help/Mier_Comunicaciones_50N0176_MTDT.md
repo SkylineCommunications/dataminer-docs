@@ -4,22 +4,22 @@ uid: Connector_help_Mier_Comunicaciones_50N0176_MTDT
 
 # Mier Comunicaciones 50N0176 MTDT
 
-This driver can be used in combination with a Mier Comunicaciones 50N0176 MTDT transmitter.
+This connector can be used in combination with a Mier Comunicaciones 50N0176 MTDT transmitter.
 
 ## About
 
-With this driver, it is possible to monitor and configure the transmitter itself, as well as to enable the trap notifications and their priorities.
+With this connector, it is possible to monitor and configure the transmitter itself, as well as to enable the trap notifications and their priorities.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                 | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                 | **DCF Integration** | **Cassandra Compliant** |
 |------------------|---------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                 | No                  | No                      |
 | 2.0.0.x          | Branch version based on 1.0.0.x | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 2.0.0.x          | Unknown                     |
@@ -30,7 +30,7 @@ With this driver, it is possible to monitor and configure the transmitter itself
 
 SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP Connection:
 
@@ -44,9 +44,9 @@ SNMP Settings:
 
 ### Configuration
 
-Once the element has been created, go to the **System** page and update the **Poll** parameter to make the driver poll the device.
+Once the element has been created, go to the **System** page and update the **Poll** parameter to make the connector poll the device.
 
-To enable the **LITE functionality** of the driver, go to the **Network Settings** page, and enable the parameter **Lite Protocol**.
+To enable the **LITE functionality** of the connector, go to the **Network Settings** page, and enable the parameter **Lite Protocol**.
 
 ## Usage
 

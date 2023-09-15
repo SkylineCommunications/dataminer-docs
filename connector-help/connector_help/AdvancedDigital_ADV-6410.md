@@ -4,22 +4,22 @@ uid: Connector_help_AdvancedDigital_ADV-6410
 
 # AdvancedDigital ADV-6410
 
-This driver monitors the activity of the AdvanceDigital ADV-6410 device.
+This connector monitors the activity of the AdvanceDigital ADV-6410 device.
 
 ## About
 
 AdvanceDigital ADV-6410 is an integrated receiver/decoder (IRD). It provides operators with ideal solution for multi receiving, descrambling, remultiplexing and decoding operations.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                | **DCF Integration** | **Cassandra Compliant** |
 |------------------|------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial Version                                | No                  | Yes                     |
 | 1.1.0.x          | New SNMP Tables and Layout due to new firmware | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 34PA2046                    |
 | 1.1.0.x          | 34PA600A                    |
@@ -30,7 +30,7 @@ AdvanceDigital ADV-6410 is an integrated receiver/decoder (IRD). It provides ope
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

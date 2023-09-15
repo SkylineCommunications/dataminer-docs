@@ -4,15 +4,15 @@ uid: Connector_help_Molden_Media_vizSecure_DVE
 
 # Molden Media vizSecure DVE
 
-The **Molden Media vizSecure DVE** driver is used for Dynamic Virtual Elements (DVE) representing devices monitored by the Molden Media vizSecure driver.
+The **Molden Media vizSecure DVE** connector is used for Dynamic Virtual Elements (DVE) representing devices monitored by the Molden Media vizSecure driver.
 
 ## About
 
-This driver can be used to manage a device monitored by the **Molden Media vizSecure** monitoring platform.
+This connector can be used to manage a device monitored by the **Molden Media vizSecure** monitoring platform.
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -20,7 +20,7 @@ This driver can be used to manage a device monitored by the **Molden Media vizSe
 
 ### Creation
 
-This driver is used by DVE child elements that are **automatically created** by the parent driver [Molden Media vizSecure](xref:Connector_help_Molden_Media_vizSecure).
+This connector is used by DVE child elements that are **automatically created** by the parent connector [Molden Media vizSecure](xref:Connector_help_Molden_Media_vizSecure).
 
 ## Usage
 

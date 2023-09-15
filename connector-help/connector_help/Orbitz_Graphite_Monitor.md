@@ -6,7 +6,7 @@ uid: Connector_help_Orbitz_Graphite_Monitor
 
 The Orbitz Graphite Monitor is a device that stores numeric time-series data and renders graphs of this data on demand.
 
-This driver allows you to read the time-series data from the device via an HTTP connection.
+This connector allows you to read the time-series data from the device via an HTTP connection.
 
 ## About
 
@@ -34,7 +34,7 @@ This driver allows you to read the time-series data from the device via an HTTP 
 
 #### HTTP Main Connection
 
-This driver uses a HTTP connection and requires the following input during element creation:
+This connector uses a HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

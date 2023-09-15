@@ -4,7 +4,7 @@ uid: Connector_help_Leader_LV5600
 
 # Leader LV5600
 
-On this driver, the customer checks the information provided from the Leader LV5600 device, which is describe on different pages. Each one provides device real-time data. This device is use to monitor the waveform of each input signal in it.
+On this connector, the customer checks the information provided from the Leader LV5600 device, which is describe on different pages. Each one provides device real-time data. This device is use to monitor the waveform of each input signal in it.
 
 ## About
 
@@ -35,7 +35,7 @@ On this driver, the customer checks the information provided from the Leader LV5
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -47,9 +47,9 @@ SNMP Settings:
 
 - **Port number**: The port of the connected device, by default *161*.
 - **Get community string**: The community string used when reading values from the device
-  (default value if not overridden in the driver: *public*).
+  (default value if not overridden in the connector: *public*).
 - **Set community string**: The community string used when setting values on the device
-  (default value if not overridden in the driver: *private*).
+  (default value if not overridden in the connector: *private*).
 
 *
 *

@@ -16,7 +16,7 @@ Further information is available here: <http://www.roverinstruments.com/prodotti
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 
@@ -71,6 +71,6 @@ All information related to the **Terrestrial T2** can be found here.
 
 All information related to the **Dual** **Commom** **Interface** can be found here.
 
-### Webinterface
+### Web Interface
 
 The client machine has to be able to access the device. If not, it will not be possible to open the web interface.

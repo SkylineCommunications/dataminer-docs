@@ -8,13 +8,13 @@ The **ETI ADH NETCOM** is an Automatic Air Dehydrator that uses Ethernet communi
 
 ## About
 
-This driver is used in order to gather information from the device, such as alarms and measurements.
+This connector is used in order to gather information from the device, such as alarms and measurements.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 **SERIAL CONNECTION:**
 

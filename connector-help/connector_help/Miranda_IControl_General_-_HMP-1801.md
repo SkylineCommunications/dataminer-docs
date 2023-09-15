@@ -4,15 +4,15 @@ uid: Connector_help_Miranda_IControl_General_-_HMP-1801
 
 # Miranda IControl General - HMP-1801
 
-The **Miranda IControl General - HMP-1801** driver is used to monitor an HD/SD solid-state media server.
+The **Miranda IControl General - HMP-1801** connector is used to monitor an HD/SD solid-state media server.
 
 ## About
 
-This driver provides a monitoring interface for the **Miranda IControl General** module. From version 2.0.0.16 onwards, the driver also allows you to **set** certain parameters.
+This connector provides a monitoring interface for the **Miranda IControl General** module. From version 2.0.0.16 onwards, the connector also allows you to **set** certain parameters.
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 2.0.0.x          | Unknown                     |
 
@@ -20,7 +20,7 @@ This driver provides a monitoring interface for the **Miranda IControl General**
 
 ### Creation
 
-This driver is used by DVE child elements that are **automatically created** by the parent driver [Miranda IControl General](xref:Connector_help_Miranda_IControl_General), from version 2.0.0.x onwards.
+This connector is used by DVE child elements that are **automatically created** by the parent connector [Miranda IControl General](xref:Connector_help_Miranda_IControl_General), from version 2.0.0.x onwards.
 
 ## Usage
 

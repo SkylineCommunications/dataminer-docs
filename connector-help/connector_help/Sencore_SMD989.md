@@ -8,17 +8,17 @@ The **SMD-989** is a versatile DVB-S/S2/S2X/TurboPSK modulator platform capable 
 
 ## About
 
-This **SNMP** driver is used to monitor and configure the **Sencore SMD-989** modulator.
+This **SNMP** connector is used to monitor and configure the **Sencore SMD-989** modulator.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 3.2.1                       |
 
@@ -28,7 +28,7 @@ This **SNMP** driver is used to monitor and configure the **Sencore SMD-989** mo
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -48,7 +48,7 @@ This page contains system info parameters, including:
 
 - **Unit 10 MHz Reference Clock**: Indicates whether the system is using an **external** or **internal** 10 Mhz reference clock.
 - **Unit 10 MHz External Reference Clock Error**: Signals whether an error was encountered with the reference clock (possible values: *OK* or *Fail*).
-- **Unit Mute on Settings Change**: If this is *Enabled*, the driver automatically mutes the output(s) on a modulation or output setting change. Output(s) are muted only on the bay where the change occurred. If this is *Disabled*, each output mute setting retains its configured value on a modulation or output setting change.
+- **Unit Mute on Settings Change**: If this is *Enabled*, the connector automatically mutes the output(s) on a modulation or output setting change. Output(s) are muted only on the bay where the change occurred. If this is *Disabled*, each output mute setting retains its configured value on a modulation or output setting change.
 
 The page also contains page buttons to the **Network Settings**, **Clone Settings** and **License Settings** subpages.
 

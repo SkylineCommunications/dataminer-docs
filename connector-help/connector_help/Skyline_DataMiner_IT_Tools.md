@@ -26,11 +26,11 @@ DataMiner IT Tools (DITT) is a solution that addresses some of the basic industr
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 
-When you first start using this element, navigate to the **Configuration** page. A number of configuration options are available that can change the behavior of the driver.
+When you first start using this element, navigate to the **Configuration** page. A number of configuration options are available that can change the behavior of the connector.
 
 **Settings -** **Request Processing:**
 
@@ -50,7 +50,7 @@ There is no redundancy defined.
 
 ## How to use
 
-As this is a virtual driver, **no data traffic** will be shown **in the Stream Viewer**.
+As this is a virtual connector, **no data traffic** will be shown **in the Stream Viewer**.
 
 There are two workflows to process incoming requests:
 
@@ -63,4 +63,4 @@ There are two workflows to process incoming requests:
 
 ## Notes
 
-This driver requires specific Correlation rules and Automation scripts for communication with auxiliary drivers such as **Generic Powershell**. The Correlation rules and Automation scripts must be configured and enabled in order to get the full functionality of this driver.
+This connector requires specific Correlation rules and Automation scripts for communication with auxiliary connectors such as **Generic Powershell**. The Correlation rules and Automation scripts must be configured and enabled in order to get the full functionality of this connector.

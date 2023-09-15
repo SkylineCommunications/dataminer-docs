@@ -4,7 +4,7 @@ uid: Connector_help_Carel_PCO5_Free_Air
 
 # Carel PCO5 Free Air
 
-This driver allows you to monitor and configure the Carel PCO5 Free Air air conditioning system.
+This connector allows you to monitor and configure the Carel PCO5 Free Air air conditioning system.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver allows you to monitor and configure the Carel PCO5 Free Air air cond
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -52,7 +52,7 @@ There is no redundancy defined.
 
 ## How to use
 
-This driver allows you to monitor and trend the temperature and machine status parameters. In addition, you also have access to the alarm parameters that will indicate if something is wrong with certain components of the product.
+This connector allows you to monitor and trend the temperature and machine status parameters. In addition, you also have access to the alarm parameters that will indicate if something is wrong with certain components of the product.
 
 On the Settings page, you can control the temperature- and fan-related settings.
 

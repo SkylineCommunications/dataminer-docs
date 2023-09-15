@@ -4,7 +4,7 @@ uid: Connector_help_Evertz_Magnum
 
 # Evertz Magnum
 
-This driver can be used to monitor faults in the Evertz Magnum controller. The information is retrieved via an SNMP connection.
+This connector can be used to monitor faults in the Evertz Magnum controller. The information is retrieved via an SNMP connection.
 
 ## About
 
@@ -35,7 +35,7 @@ This driver can be used to monitor faults in the Evertz Magnum controller. The i
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP Connection:
 

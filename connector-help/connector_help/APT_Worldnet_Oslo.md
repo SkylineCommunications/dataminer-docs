@@ -4,17 +4,17 @@ uid: Connector_help_APT_Worldnet_Oslo
 
 # APT Worldnet Oslo
 
-The **APT Worldnet Oslo** driver is used to monitor and control the APT Worldnet Oslo codec.
+The **APT Worldnet Oslo** connector is used to monitor and control the APT Worldnet Oslo codec.
 
 ## About
 
-The driver uses **SNMP** to retrieve data from the device. When traps are forwarded to the DMA, parameters can be updated faster than through the regular polling.
+The connector uses **SNMP** to retrieve data from the device. When traps are forwarded to the DMA, parameters can be updated faster than through the regular polling.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 

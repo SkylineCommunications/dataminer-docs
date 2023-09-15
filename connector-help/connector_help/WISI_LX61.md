@@ -8,7 +8,7 @@ The Model EOS-6000 Optical A/B Switch is a high performance solution for network
 
 ## About
 
-The **WISI LX61** driver is an SNMP based driver used to monitor and configure the EOS-6000 Optical A/B Switch.
+The **WISI LX61** connector is an SNMP based connector used to monitor and configure the EOS-6000 Optical A/B Switch.
 
 ## Installation and configuration
 
@@ -16,7 +16,7 @@ The **WISI LX61** driver is an SNMP based driver used to monitor and configure t
 
 \- **IP address/host**: the polling IP of the device e.g. *172.27.64.56*
 
-\- **Device address**: is used by the driver e.g. *0*
+\- **Device address**: is used by the connector e.g. *0*
 
 **SNMP Settings**:
 
@@ -34,8 +34,8 @@ The general page gives you an overview of all the parameters.
 On the left side you can see all the reading parameters, on the right side, you've got the parameters that can be set.
 Alarming and trending is possible on the parameters.
 
-The device also uses traps. When the driver receives a trap, the mentioned parameter will be updated.
+The device also uses traps. When the connector receives a trap, the mentioned parameter will be updated.
 
-### Webinterface
+### Web Interface
 
 Use this page to have access to the Web Interface of the device. According to the IP address

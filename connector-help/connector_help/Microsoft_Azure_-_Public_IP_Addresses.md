@@ -32,11 +32,11 @@ Azure public IP addresses allow internet resources to communicate with Azure res
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection. However, it requires no input from the user, as this driver is automatically created by the **Microsoft Azure Cloud Platform**.
+This connector uses an HTTP connection. However, it requires no input from the user, as this connector is automatically created by the **Microsoft Azure Cloud Platform**.
 
 ## How to use
 
-The driver requires no user input. The metrics that are polled for this resource type element are displayed on the **Metrics** page. The following metrics are monitored:
+The connector requires no user input. The metrics that are polled for this resource type element are displayed on the **Metrics** page. The following metrics are monitored:
 
 - Under DDoS attack or not
 - Inbound bytes dropped DDoS
@@ -46,4 +46,4 @@ On the **General** page, you can configure the **Polling Interval** for the metr
 
 ## Notes
 
-This driver is intended to be used together with the **Microsoft Azure Cloud Platform** driver. Without this manager driver, the driver will not work, as the authentication to the Azure Cloud Platform is done via the manager driver.
+This connector is intended to be used together with the **Microsoft Azure Cloud Platform** connector. Without this manager connector, the connector will not work, as the authentication to the Azure Cloud Platform is done via the manager connector.

@@ -4,7 +4,7 @@ uid: Connector_help_Sky_UK_Jenkins
 
 # Sky UK Jenkins
 
-This driver integrates with Jenkins. It will generate an overview of all channels, streams and jobs available on servers that have been manually specified, and it can execute jobs on the servers.
+This connector integrates with Jenkins. It will generate an overview of all channels, streams and jobs available on servers that have been manually specified, and it can execute jobs on the servers.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver integrates with Jenkins. It will generate an overview of all channel
 
 #### HTTP main connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -52,4 +52,4 @@ The element consists of the following data pages:
 - **Channels**: Contains a table listing the channels. A channel is related to a certain type of sport and each channel has several **streams** in it.
 - **Streams**: Contains a table listing the streams. A stream has a specific set of **jobs** that can be executed.
 - **Jobs**: Contains a table listing the jobs. A job has a **pipeline** with several stages. After each execution, a status indicates if the execution was successful.
-- **Servers**: Contains a table where you can manually add servers in order to communicate with them using the driver. Each job that is run will be executed on each server in the table.
+- **Servers**: Contains a table where you can manually add servers in order to communicate with them using the connector. Each job that is run will be executed on each server in the table.

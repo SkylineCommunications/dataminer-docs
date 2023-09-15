@@ -4,25 +4,25 @@ uid: Connector_help_Double_D_Electronics_DDA282
 
 # Double D Electronics DDA282
 
-This driver monitors the activity of a **Double D Electronics DDA282** redundancy controller.
+This connector monitors the activity of a **Double D Electronics DDA282** redundancy controller.
 
 The DDA282 is a general purpose controller, primarily intended for 2+1 switching systems using coaxial or waveguide switches, and includes automatic redundancy facilities.
 
 ## About
 
-This driver uses serial communication with the device. It makes use of the "Printable ASCII" communication protocol.
+This connector uses serial communication with the device. It makes use of the "Printable ASCII" communication protocol.
 
 It displays information from the device and allows the user to control the switch configuration.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | DDA282 V1.16                |
 
@@ -32,7 +32,7 @@ It displays information from the device and allows the user to control the switc
 
 #### Serial Main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

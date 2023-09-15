@@ -4,21 +4,21 @@ uid: Connector_help_Ziggo_CPE_WiFi_Collector
 
 # Ziggo CPE WiFi Collector
 
-The Ziggo CPE WiFi Collector is part of the Ziggo CPE setup, and works together with the IAMDB database. This driver is responsible for polling the CMs and offloading the results to a .CSV file.
+The Ziggo CPE WiFi Collector is part of the Ziggo CPE setup, and works together with the IAMDB database. This connector is responsible for polling the CMs and offloading the results to a .CSV file.
 
 ## About
 
-This driver will poll all the CMs in one fast poll cycle that will poll all CMs over a 15-minute period. The polled data will be offloaded into CSV files.
+This connector will poll all the CMs in one fast poll cycle that will poll all CMs over a 15-minute period. The polled data will be offloaded into CSV files.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ This driver will poll all the CMs in one fast poll cycle that will poll all CMs 
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -39,7 +39,7 @@ SNMP Settings:
 
 - **Port Number**: The port of the connected device, by default *161*.
 - **Get community string**: The community string used when reading values from the device, by default *public*.
-- **Set community string**: Not needed, because the driver will not perform sets.
+- **Set community string**: Not needed, because the connector will not perform sets.
 
 Note: All polled CMs will share the same settings, and all polled CMTSs will share the same settings.
 
@@ -51,7 +51,7 @@ This page contains the **CM Table** and some information parameters about the pr
 
 ### Provisioning
 
-This page shows all provisioning information. The **Last Provisioning Date**, **Last Provisioning Request** and **Last Provisioning Response** show information about the last provisioning. The **Net Provisioning Result** is the result of **Modems Provisioned** - (Previous number of provisioned modems + **New Modems** -**Deleted Modems**). For the **Provisioning Type** you can choose for **Full** or **Incremental** provisioning. If you enable **Automatic Provision**, the driver will provision on the specified **Provision Time** (24H:mm). You can always force the driver to start provisioning with the **Provision** button.
+This page shows all provisioning information. The **Last Provisioning Date**, **Last Provisioning Request** and **Last Provisioning Response** show information about the last provisioning. The **Net Provisioning Result** is the result of **Modems Provisioned** - (Previous number of provisioned modems + **New Modems** -**Deleted Modems**). For the **Provisioning Type** you can choose for **Full** or **Incremental** provisioning. If you enable **Automatic Provision**, the connector will provision on the specified **Provision Time** (24H:mm). You can always force the connector to start provisioning with the **Provision** button.
 
 ### Thread Pool Info
 

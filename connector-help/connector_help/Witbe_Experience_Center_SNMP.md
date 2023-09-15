@@ -4,7 +4,7 @@ uid: Connector_help_Witbe_Experience_Center_SNMP
 
 # Witbe Experience Center SNMP
 
-This driver is intended to catch traps from the Witbe Experience Center and list them in a history table.
+This connector is intended to catch traps from the Witbe Experience Center and list them in a history table.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver is intended to catch traps from the Witbe Experience Center and list
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -62,6 +62,6 @@ Traps will be automatically captured from any OID and placed in the Alarms table
 
 ## Notes
 
-Important: The driver is designed to have a fixed number of bindings. If a trap doesn't have the correct number of bindings, the trap will be discarded.
+Important: The connector is designed to have a fixed number of bindings. If a trap doesn't have the correct number of bindings, the trap will be discarded.
 
-The driver will only take traps from the IP configured in the element configuration.
+The connector will only take traps from the IP configured in the element configuration.

@@ -6,7 +6,7 @@ uid: Connector_help_Axon_ACP_HLI100
 
 The HLI100 is a dual logo inserter with a preset-based logo recall function through a flexible user interface and local storage. The HLI100 is capable of inserting two logos and can be used for channel branding with the option to alter the main channel logo on the fly, preset-based, and simultaneously add a "theme logo" that is triggered as a one-shot with predefined fade-in and fade-out times.
 
-The **Axon ACP HLI100** driver can be used to display and configure information related to this device.
+The **Axon ACP HLI100** connector can be used to display and configure information related to this device.
 
 ## About
 
@@ -35,13 +35,13 @@ The **Axon ACP HLI100** driver can be used to display and configure information 
 
 ### Creation
 
-The element using this driver can be automatically created by the parent element using the **Axon ACP Frame Manager** driver, but it can also be a standalone element.
+The element using this connector can be automatically created by the parent element using the **Axon ACP Frame Manager** connector, but it can also be a standalone element.
 
 ### Connections
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -52,7 +52,7 @@ SERIAL CONNECTION:
 
 #### Serial IP Connection - Broadcast Connection
 
-This driver uses a smart-serial connection and requires the following input during element creation:
+This connector uses a smart-serial connection and requires the following input during element creation:
 
 SMART-SERIAL CONNECTION:
 

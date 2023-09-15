@@ -4,23 +4,23 @@ uid: Connector_help_Grass_Valley_sQ_1000_Server
 
 # Grass Valley sQ 1000 Server
 
-The **Grass Valley sQ 1000 Server** driver is used to monitor the Grass Valley sQ 1000 series media servers.
+The **Grass Valley sQ 1000 Server** connector is used to monitor the Grass Valley sQ 1000 series media servers.
 
 The Grass Valley sQ 1000 series media servers are SD/HD/4K UHD media servers for news and sports editing, replay and playout. These servers are intelligent, scalable and media-optimized storage systems, delivering sustained multi-year 24x7 operation for high-pressure fast-turnaround workflows for news and sports.
 
 ## About
 
-This driver uses an **SNMPv1** interface to communicate with a **Grass Valley sQ 1000 Server** device.
+This connector uses an **SNMPv1** interface to communicate with a **Grass Valley sQ 1000 Server** device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -30,7 +30,7 @@ This driver uses an **SNMPv1** interface to communicate with a **Grass Valley sQ
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element configuration:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element configuration:
 
 SNMP Connection:
 
@@ -60,7 +60,7 @@ This page displays a table with (status) information on each of the system slot 
 
 This page contains the following two tables:
 
-- The **Video Channel** table, which contains **statistical** ****p**erformance information** related to the video channels available in the system.
+- The **Video Channel** table, which contains **statistical performance information** related to the video channels available in the system.
 - The **Video Disk Enclosure** table, which contains **status information** on the system video disk enclosures.
 
 ### Clipnet Page

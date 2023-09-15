@@ -4,21 +4,21 @@ uid: Connector_help_Dantherm_Flexibox_900
 
 # Dantherm Flexibox 900
 
-This driver controls the functions of the Dantherm Flexibox 900 device. It can be used to configure cooling, humidity, damper and fan set points and controls, and also allows you to check the status of the device.
+This connector controls the functions of the Dantherm Flexibox 900 device. It can be used to configure cooling, humidity, damper and fan set points and controls, and also allows you to check the status of the device.
 
 ## About
 
-This driver displays information that is polled from the device with **SNMP**. Each parameter will be written to the SNMP configuration and must be saved before it is applied to the device.
+This connector displays information that is polled from the device with **SNMP**. Each parameter will be written to the SNMP configuration and must be saved before it is applied to the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.1 \[SLC Main\] | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.54a                       |
 
@@ -28,7 +28,7 @@ This driver displays information that is polled from the device with **SNMP**. E
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

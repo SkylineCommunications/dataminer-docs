@@ -4,7 +4,7 @@ uid: Connector_help_Evertz_3505FC
 
 # Evertz 3505FC
 
-This driver is used to monitor and control the Evertz 3505FC.
+This connector is used to monitor and control the Evertz 3505FC.
 
 ## About
 
@@ -14,7 +14,7 @@ All the monitoring and control information is retrieved via SNMP and displayed i
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 

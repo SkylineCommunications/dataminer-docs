@@ -4,11 +4,11 @@ uid: Connector_help_Wellav_Media_Platform
 
 # Wellav Media Platform
 
-The **Wellav Media Platform** protocol driver is used to monitor a Wellav Media Platform IRD device.
+The **Wellav Media Platform** connector is used to monitor a Wellav Media Platform IRD device.
 
 ## About
 
-This driver supports 2 types of Media Platform:
+This connector supports 2 types of Media Platform:
 
 -An SMP100 chassis: 1 main board and 3 modules
 
@@ -20,7 +20,7 @@ Each module can be exported as a Dynamic Virtual Element (DVE).
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP Connection:**
 

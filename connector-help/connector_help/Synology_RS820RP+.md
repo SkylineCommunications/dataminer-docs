@@ -6,7 +6,7 @@ uid: Connector_help_Synology_RS820RP+
 
 Synology RS820RP+ is a 1U rackmount 4-bay network-attached storage solution designed for effective and centralized data management. It is equipped with a 4-core processor and 2 GB DDR4 memory, expandable up to 18 GB. The PCIe 3.0 slot supports an optional 10 GbE add-in network interface card, or an M2D18 M.2 SSD adapter card4, where the M.2 NVMe/SATA SSD cache can be used to boost system random IOPS.
 
-This driver uses SNMP to poll data from Synology RS820RP+ based on its web interface layout.
+This connector uses SNMP to poll data from Synology RS820RP+ based on its web interface layout.
 
 ## About
 
@@ -34,7 +34,7 @@ This driver uses SNMP to poll data from Synology RS820RP+ based on its web inter
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -61,4 +61,4 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The layout of the driver is similar to that of the web interface of the Synology RS820RP+. It also provides the same monitoring and configuration features.
+The layout of the connector is similar to that of the web interface of the Synology RS820RP+. It also provides the same monitoring and configuration features.

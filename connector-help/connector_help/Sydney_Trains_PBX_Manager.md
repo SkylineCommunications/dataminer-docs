@@ -15,15 +15,15 @@ Other elements in **DataMiner** can use the PBX Manager to start calls by settin
 - **START**: \[ID\]\|\[DMA ID/Element ID\]\|\[PID\]\|START\|\[STATION NAME\] (this will trigger the PBX Manager to start a phone call to the configured station)
 - **STOP**: \[ID\]\|\[DMA ID/Element ID\]\|\[PID\]\|STOP (this will stop the call that was previously started - ID needs to match)
 
-There is also a second interface on this driver, which is used by the **Sittig DVA**, who can also request scheduled PSTN calls via this driver.
+There is also a second interface on this connector, which is used by the **Sittig DVA**, who can also request scheduled PSTN calls via this connector.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
 <table>
 <colgroup>
@@ -49,7 +49,7 @@ There is also a second interface on this driver, which is used by the **Sittig D
 
 #### Smart-Serial Main connection
 
-This driver uses a smart-serial connection and requires the following input during element creation:
+This connector uses a smart-serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -60,7 +60,7 @@ SERIAL CONNECTION:
 
 #### Smart-Serial SITTIG Interface connection
 
-This driver uses a smart-serial connection and requires the following input during element creation:
+This connector uses a smart-serial connection and requires the following input during element creation:
 
 SITTIG INTERFACE:
 
@@ -71,7 +71,7 @@ SITTIG INTERFACE:
 
 ### Configuration of Asterisk PBX credentials
 
-Before communication with the **Asterisk PBX** is established, the **Username** and **Password** need to be provided. These can be configured on the **Connection** page of the PBX Manager driver.
+Before communication with the **Asterisk PBX** is established, the **Username** and **Password** need to be provided. These can be configured on the **Connection** page of the PBX Manager connector.
 
 ## Usage
 

@@ -4,7 +4,7 @@ uid: Connector_help_CEFD_HRX_SNMP
 
 # CEFD HRX SNMP
 
-The CEFD HRX SNMP driver is an SNMP driver intended to communicate with the Multi-Receiver Router devices named CEFD HRX, from Comtech.
+The CEFD HRX SNMP connector is an SNMP connector intended to communicate with the Multi-Receiver Router devices named CEFD HRX, from Comtech.
 
 ## About
 
@@ -19,21 +19,21 @@ The most important features of the **Heights Networking Platform** are the follo
 - **Bi-directional ACM** (Adapting Code and Modulation), enabling throughput maximization depending on traffic-affecting conditions and the required SLAs (Service Level Agreements).
 - **QoE** (Quality of Experience) **maximization** by providing different layers of intelligence through network design tools and powerful analytics.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**         | **Description**                                                                                                                             | **DCF Integration** | **Cassandra Compliant** |
+| **Range**         | **Description**                                                                                                                             | **DCF Integration** | **Cassandra Compliant** |
 |--------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x                  | Initial Comtech Netvue-specific branch.                                                                                                     | No                  | Yes                     |
 | 1.1.0.x                  | Comtech Netvue: Branched from 1.0.0.14 - supports firmware 3.1.x.                                                                           | No                  | Yes                     |
 | 1.1.1.x                  | Comtech Netvue: Branched from 1.1.0.6 - updated parameter descriptions.                                                                     | No                  | Yes                     |
 | 1.2.0.x                  | Comtech Netvue: Branched from 1.1.1.3 - supports firmware 3.2.x.                                                                            | No                  | Yes                     |
 | 1.3.0.x                  | Comtech NetVue: Branched from 1.2.0.7 - updated mechanism to sync element data over multiple VMSs when element is in timeout after startup. | No                  | Yes                     |
-| 2.0.0.x                  | Branched from 1.0.0.16 - removed Netvue-specific functionality in order to let the driver function outside a Netvue environment.            | No                  | Yes                     |
+| 2.0.0.x                  | Branched from 1.0.0.16 - removed Netvue-specific functionality in order to let the connector function outside a Netvue environment.            | No                  | Yes                     |
 | 2.0.1.x **\[SLC Main\]** | Initial generic customer branch.                                                                                                            | No                  | Yes                     |
 
 Supported firmware versions
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 1.1.0.x          | 3.1.x                       |
@@ -48,7 +48,7 @@ Supported firmware versions
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

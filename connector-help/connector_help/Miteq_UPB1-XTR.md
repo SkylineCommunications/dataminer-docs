@@ -8,18 +8,18 @@ The **Miteq UPB1-XTR** device is an up-convertor switch unit.
 
 ## About
 
-This driver uses SNMP to monitor and configure the Miteq UPB1-XTR.
+This connector uses SNMP to monitor and configure the Miteq UPB1-XTR.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**                                                                                                                   | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**                                                                                                                   | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|-----------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x              | Initial version                                                                                                                   | No                  | Yes                     |
 | 2.0.0.x \[SLC Main\] | **Impacting changes** when moving from another range to this one. Recreated version to match the UX of the Miteq DNB1-XTR 1.0.0.X | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | D163995V1.182.25            |
 | 2.0.0.x          | D163995V1.182.25            |
@@ -30,7 +30,7 @@ This driver uses SNMP to monitor and configure the Miteq UPB1-XTR.
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -44,7 +44,7 @@ SNMP Settings:
 
 ## Usage
 
-The driver contains 5 pages.
+The connector contains 5 pages.
 
 ### General
 

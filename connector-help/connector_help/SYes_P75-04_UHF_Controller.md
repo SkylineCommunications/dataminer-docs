@@ -8,17 +8,17 @@ The SYes P75-04 UHF Controller operates several multi-standard TV transmitters.
 
 ## About
 
-The **SYes P75-04 UHF Controller SNMP** driver controls and monitors the transceiver rack.
+The **SYes P75-04 UHF Controller SNMP** connector controls and monitors the transceiver rack.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 469180143-25                |
 
@@ -28,7 +28,7 @@ The **SYes P75-04 UHF Controller SNMP** driver controls and monitors the transce
 
 #### SNMPv2 main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

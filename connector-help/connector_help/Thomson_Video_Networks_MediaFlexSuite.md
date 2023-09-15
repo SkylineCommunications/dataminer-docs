@@ -4,7 +4,7 @@ uid: Connector_help_Thomson_Video_Networks_MediaFlexSuite
 
 # Thomson Video Networks MediaFlexSuite
 
-This is an SNMP driver that allows you to monitor the parameters and tables in the MediaFlexSuite management system.
+This is an SNMP connector that allows you to monitor the parameters and tables in the MediaFlexSuite management system.
 
 For each device in the system, a DVE can be created, which provides an overview of all information related to this device.
 
@@ -27,7 +27,7 @@ For each device in the system, a DVE can be created, which provides an overview 
 ### Connections
 
 SNMP Main connection
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -49,7 +49,7 @@ There is no redundancy defined.
 
 ## How to use
 
-The element created with this driver consists of the data pages detailed below.
+The element created with this connector consists of the data pages detailed below.
 
 ### General
 
@@ -70,4 +70,4 @@ This page displays the General Event Table. At the top of this page, there is a 
 
 ## Notes
 
-Each DVE child element of this driver has a General page and Alarm page. Only the information that is relevant to the DVE will be shown on these pages.
+Each DVE child element of this connector has a General page and Alarm page. Only the information that is relevant to the DVE will be shown on these pages.

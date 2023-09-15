@@ -8,19 +8,19 @@ The HD201x PassPort is a 1RU Multi-Path Video Converter and Frame Synchronizer. 
 
 ## About
 
-With this driver, you can directly manage the device. The driver displays information on several pages, described in the "Usage" section below.
+With this connector, you can directly manage the device. The connector displays information on several pages, described in the "Usage" section below.
 
-This driver was intended to work with the HD2014 model. The driver uses **SNMP** to establish communication with the device.
+This connector was intended to work with the HD2014 model. The connector uses **SNMP** to establish communication with the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.0                         |
 
@@ -30,7 +30,7 @@ This driver was intended to work with the HD2014 model. The driver uses **SNMP**
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -52,25 +52,25 @@ There are 6 pages buttons that open corresponding subpages: **RGB Input**, **But
 
 ### Analog & Dvi
 
-This page displays video settings. It allows you to view and configure the settings for **Analog Video and** **DVI**.
+This page displays video settings. It allows you to view and configure the settings for **Analog Video and DVI**.
 
 ### Composite
 
 This page displays video settings. It allows you to configure the **Composite Input 1** and **Composite Output** settings.
 
-Two page buttons on this page provide acces to the **Flex ADCHD** and **Composite Input 2** settings.
+Two page buttons on this page provide access to the **Flex ADCHD** and **Composite Input 2** settings.
 
 ### Component
 
-This page displays video settings. It contains configurable parameters for **Component Input 1** and **Component Output 1**, as well as tables for **Component Output 2**, **Component Input 2** and **Component** **ADCHD**.
+This page displays video settings. It contains configurable parameters for **Component Input 1** and **Component Output 1**, as well as tables for **Component Output 2**, **Component Input 2** and **Component ADCHD**.
 
 ### Audio
 
-This page displays audio settings. It contains the **Audio Demux Table**, the **Audio AES In** **Table** and the **AES Out** parameters. In addition, page buttons allow you to configure parameters for **Audio Mux**, **Audio Mixer**, **Audio Delay**, **Audio ADC** and **Audio Output**.
+This page displays audio settings. It contains the **Audio Demux Table**, the **Audio AES In Table** and the **AES Out** parameters. In addition, page buttons allow you to configure parameters for **Audio Mux**, **Audio Mixer**, **Audio Delay**, **Audio ADC** and **Audio Output**.
 
 ### DAC
 
-This page displays audio settings. It contains two tables related to the **Audio** **DAC**.
+This page displays audio settings. It contains two tables related to the **Audio DAC**.
 
 ### Equalizer
 

@@ -4,21 +4,21 @@ uid: Connector_help_Envivio_Muse_G6
 
 # Envivio Muse G6
 
-This driver can be used in combination with an **Envivio Muse G6** encoder.
+This connector can be used in combination with an **Envivio Muse G6** encoder.
 
 ## About
 
-This driver uses an HTTP connection to get and set the configuration file of the Envivio Muse G6.
+This connector uses an HTTP connection to get and set the configuration file of the Envivio Muse G6.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                             | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                             | **DCF Integration** | **Cassandra Compliant** |
 |------------------|---------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial Version (Config Import/Export only) | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 5.00.06 (041)               |
 
@@ -28,7 +28,7 @@ This driver uses an HTTP connection to get and set the configuration file of the
 
 #### HTTP Main connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

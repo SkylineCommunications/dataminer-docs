@@ -4,11 +4,11 @@ uid: Connector_help_Eutelsat_TAOS_Calculation
 
 # Eutelsat TAOS Calculation
 
-This driver allows to make calculation from the other elements that use the Eutelsat TAOS Manager protocol.
+This connector allows to make calculation from the other elements that use the Eutelsat TAOS Manager protocol.
 
 ## About
 
-The driver calculates the average, minimum and maximum values from a selected *Table* of an *Element* created with the Eutelsat TAOS Manager.
+The connector calculates the average, minimum and maximum values from a selected *Table* of an *Element* created with the Eutelsat TAOS Manager.
 
 The user can select the following Tables from the related Element:
 
@@ -18,11 +18,11 @@ The user can select the following Tables from the related Element:
 - **Helix Current**
 - **Bus Current**
 
-Also, the driver calculates the average, minimum and maximum **OBO** *(Output Back-Off)* values. These calculations are done using the average, minimum and maximum values from the **TAOS Manager** Table mentioned previously. The formula for these **OBO** value calculations is given by the user.
+Also, the connector calculates the average, minimum and maximum **OBO** *(Output Back-Off)* values. These calculations are done using the average, minimum and maximum values from the **TAOS Manager** Table mentioned previously. The formula for these **OBO** value calculations is given by the user.
 
-Ranges of the driver
+Ranges of the connector
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
@@ -32,12 +32,12 @@ Ranges of the driver
 
 Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## Usage
 
 General
-In this page the driver displays the following parameters:
+In this page the connector displays the following parameters:
 
 - **Element:** Allows the user to select the element where is going to take the values.
 - **Parameter:** Allows the user to select the table from the element.

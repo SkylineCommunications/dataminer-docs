@@ -8,7 +8,7 @@ The **Snell Wilcox KudosPro MC500** is a Single-channel entry level motion compe
 
 ## About
 
-This driver is intended to gather information from the device making it available through several pages. A serial connection is used for that purpose.
+This connector is intended to gather information from the device making it available through several pages. A serial connection is used for that purpose.
 
 Important: Each device provides a *Menu Set*. It contains the commands ids used to get the value from each parameter. Each device provides a different *Menu Set*. For each device the commands that are sent need to be adapted.
 
@@ -18,7 +18,7 @@ More information related to the device can be found here: [http://handbooks.snel
 
 ### Creation
 
-This driver uses a Serial connection and needs the following user information:
+This connector uses a serial connection and requires the following input during element creation:
 
 **SERIAL CONNECTION**:
 
@@ -72,6 +72,6 @@ This device has attached a board that relates to the **Channel 1**. This page fo
 
 - **Ch1 Logging** - Logging defines what parameter information is made available to a logging device attached to the RollCall network.
 
-### Webinterface
+### Web Interface
 
 The client machine has to be able to access the device. If not, it won't be possible to open the webinterface.

@@ -8,17 +8,17 @@ The **Arris AGB240** is an ASI to Gigabit Ethernet bridge.
 
 ## About
 
-This driver allows you to access various information on the device and configure device settings.
+This connector allows you to access various information on the device and configure device settings.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
 ### Supported Firmware Versions
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.2.6                       |
 
@@ -28,7 +28,7 @@ This driver allows you to access various information on the device and configure
 
 #### HTTP Request/Response connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

@@ -8,18 +8,18 @@ The Courtyard CY460 is a **Universal SPG (Sync Pulse Generator)** designed accor
 
 ## About
 
-The **Courtyard CY460** driver is used to monitor the device of the same name.
-This driver uses an SNMPv1 interface to communicate with a **Courtyard CY460** device.
+The **Courtyard CY460** connector is used to monitor the device of the same name.
+This connector uses an SNMPv1 interface to communicate with a **Courtyard CY460** device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -29,7 +29,7 @@ This driver uses an SNMPv1 interface to communicate with a **Courtyard CY460** d
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP connection:
 

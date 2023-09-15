@@ -4,7 +4,7 @@ uid: Connector_help_VPG_TIMS_SDI
 
 # VPG TIMS SDI
 
-The main purpose of the **VPG TIMS SDI** driver is to monitor an SDI monitor and configure its channels.
+The main purpose of the **VPG TIMS SDI** connector is to monitor an SDI monitor and configure its channels.
 
 ## About
 
@@ -16,7 +16,7 @@ This is an SNMP and serial protocol. Channel-specific information and general al
 
 #### SNMP connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 
@@ -31,7 +31,7 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and requ
 
 #### Serial connection
 
-This driver also uses a serial connection and requires the following input during element creation:
+This connector also uses a serial connection and requires the following input during element creation:
 
 **SERIAL CONNECTION:**
 

@@ -26,7 +26,7 @@ This service protocol can be used to perform advanced alarm monitoring on servic
 
 #### Virtual Connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 

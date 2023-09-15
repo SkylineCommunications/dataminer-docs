@@ -4,35 +4,33 @@ uid: Connector_help_Advantech_ADAM6251
 
 # Advantech ADAM6251
 
-This driver is a serial driver that controls the Digital Input device.
+This connector is a serial connector that controls the Digital Input device.
 
 You can configure the inputs and the streams from the device.
 
 ## About
 
-The driver communicates through a serial connection with the device to change its configuration and to monitor its inputs and streams.
+The connector communicates through a serial connection with the device to change its configuration and to monitor its inputs and streams.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial Version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | A1.05.B00                   |
 
+## Configuration
 
-
-## Installation and configuration
-
-### Creation
+### Connections
 
 #### Serial Main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -50,7 +48,7 @@ Here you can find the **device** **name** and the **firmware** **version**.
 
 ### DI Status
 
-On this page you can find the statusses of the *16* **inputs**.
+On this page you can find the statuses of the *16* **inputs**.
 
 ### DI Configuration
 
@@ -69,5 +67,3 @@ you can configure the **GCL** **flags** on this page, at the bottom are *2* **bu
 ### Web Interface
 
 The client machine has to be able to access the device. If not, it won't be possible to open the web interface.
-
-

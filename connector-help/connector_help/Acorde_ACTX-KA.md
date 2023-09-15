@@ -4,35 +4,15 @@ uid: Connector_help_Acorde_ACTX-KA
 
 # Acorde ACTX-KA
 
-This driver allows the monitoring and control of the Block Up Converter via serial (RS232/RS485) or TCP telnet.
+This connector allows the monitoring and control of the Block Up Converter via serial (RS232/RS485) or TCP telnet.
 
 ## About
 
 ### Version Info
 
-<table>
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><strong>Range</strong></td>
-<td><strong>Key Features</strong></td>
-<td><strong>Based on</strong></td>
-<td><strong>System Impact</strong></td>
-</tr>
-<tr class="even">
-<td>1.0.0.x [SLC Main]</td>
-<td><p>User configurable connection mode (serial / tcp)</p>
-<p>Monitor &amp; Control</p></td>
-<td>-</td>
-<td>-</td>
-</tr>
-</tbody>
-</table>
+| Range            | Key Features | Based on | System Impact |
+|----------------------|------------------|--------------|-------------------|
+| 1.0.0.x [SLC Main] | User configurable connection mode (serial / tcp)<br>Monitor &amp; Control | | |
 
 ### Product Info
 
@@ -52,15 +32,15 @@ This driver allows the monitoring and control of the Block Up Converter via seri
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
 Interface connection:
 
-  - **IP address/host**: The polling IP or URL of the destination.
-- **IP port**: \[The IP port of the destination. (default: *50*)\]
-- **Bus address**: \[The bus address of the device. (default: *0000*) (range: *0000* - *9999*)\]
+- **IP address/host**: The polling IP or URL of the destination.
+- **IP port**: The IP port of the destination (default: *50*).
+- **Bus address**: The bus address of the device (default: *0000*, range: *0000* - *9999*).
 
 ### Initialization
 
@@ -90,8 +70,8 @@ These settings are dong in the communication interface that links the data sourc
 
 - Serial settings:
 
-- **Baudrate**: \[Baudrate specified in the manual of the device, e.g. *9600*.\]
-  - **Databits**: \[Databits specified in the manual of the device, e.g. *7*.\]
-  - **Stopbits**: \[Stopbits specified in the manual of the device, e.g. *1*.\]
-  - **Parity**: \[Parity specified in the manual of the device, e.g. *No*.\]
-  - **FlowControl**: \[FlowControl specified in the manual of the device, e.g. *No*.\]
+  - **Baudrate**: Baudrate specified in the manual of the device, e.g. *9600*.
+  - **Databits**: Databits specified in the manual of the device, e.g. *7*.
+  - **Stopbits**: Stopbits specified in the manual of the device, e.g. *1*.
+  - **Parity**: Parity specified in the manual of the device, e.g. *No*.
+  - **FlowControl**: FlowControl specified in the manual of the device, e.g. *No*.

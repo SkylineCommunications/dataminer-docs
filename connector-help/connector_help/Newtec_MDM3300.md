@@ -8,11 +8,11 @@ The MDM3300 is a satellite modem.
 
 ## About
 
-The driver integrates two calls from the device to monitor the alarms and the statistics.
+The connector integrates two calls from the device to monitor the alarms and the statistics.
 
 ## Installation and configuration
 
-This driver uses a **HTTP** connection and needs following user information:
+This connector uses a **HTTP** connection and needs following user information:
 
 **SERIAL CONNECTION**:
 
@@ -33,6 +33,6 @@ The right side shows the numbers of all the transmitted or dropped packages, byt
 
 This table shows the different alarms with their state, how many times they have occured and the last time they were activated and cleared.
 
-### Webinterface
+### Web Interface
 
 This is the webinterface of the device.

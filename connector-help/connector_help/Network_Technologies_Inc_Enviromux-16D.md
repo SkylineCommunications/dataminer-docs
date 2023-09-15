@@ -4,25 +4,25 @@ uid: Connector_help_Network_Technologies_Inc_Enviromux-16D
 
 # Network Technologies Inc Enviromux-16D
 
-The **Network Technologies Inc Enviromux-16D** driver can be used to monitor critical environmental conditions, such as temperature, humidity, liquid water presence, power, intrusion and smoke. The driver can also be used to configure the network settings.
+The **Network Technologies Inc Enviromux-16D** connector can be used to monitor critical environmental conditions, such as temperature, humidity, liquid water presence, power, intrusion and smoke. The connector can also be used to configure the network settings.
 
 The system includes three internal sensors: temperature, humidity and power. It also supports 16 external configurable sensors, 8 digital input sensors, and 4 output relays for the control of external devices.
 
 ## About
 
-This driver provides an overview of the internal, external and auxiliary sensors, the digital inputs and the statuses of the output relays, power supplies, etc.
+This connector provides an overview of the internal, external and auxiliary sensors, the digital inputs and the statuses of the output relays, power supplies, etc.
 
 An **SNMP** connection is used in order to successfully retrieve and configure the information of the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 2.56                        |
 
@@ -32,7 +32,7 @@ An **SNMP** connection is used in order to successfully retrieve and configure t
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

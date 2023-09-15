@@ -4,23 +4,23 @@ uid: Connector_help_Ericsson_EN8040
 
 # Ericsson EN8040
 
-This driver is used to monitor and configure the **EN8040** Encoder from **Ericsson**.
+This connector is used to monitor and configure the **EN8040** Encoder from **Ericsson**.
 
 ## About
 
-This driver contains different pages with information and settings. More detailed information on these can be found in the **Usage** section of this document.
+This connector contains different pages with information and settings. More detailed information on these can be found in the **Usage** section of this document.
 
-The driver uses the **SNMP** protocol to communicate with the device.
+The connector uses the **SNMP** protocol to communicate with the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**         | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**         | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-------------------------|---------------------|-------------------------|
 | 1.0.1.x          | Added output selection. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.1.x          | v5.1                        |
 | 1.0.2.x          | v5.1                        |
@@ -31,7 +31,7 @@ The driver uses the **SNMP** protocol to communicate with the device.
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -95,7 +95,7 @@ This page displays the web interface of the device. Note that the client machine
 
 ## DataMiner Connectivity Framework
 
-The **1.0.2.x** driver range of the **Ericsson EN8040** protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
+The **1.0.2.x** connector range of the **Ericsson EN8040** protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
@@ -123,4 +123,4 @@ The **L-Band Input** is **always** connected to the **selected output**.
 
 ## Notes
 
-After a value is set in the **Modulator Table**, the driver waits for 2 seconds before it polls the table again. This ensures that the Ericsson EN8040 returns the correct value and not the old one.
+After a value is set in the **Modulator Table**, the connector waits for 2 seconds before it polls the table again. This ensures that the Ericsson EN8040 returns the correct value and not the old one.

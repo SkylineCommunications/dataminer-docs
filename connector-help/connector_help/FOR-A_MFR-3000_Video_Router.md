@@ -4,7 +4,7 @@ uid: Connector_help_FOR-A_MFR-3000_Video_Router
 
 # FOR-A MFR-3000 Video Router
 
-This driver allows you to monitor the FOR-A MFR-3000 Video Router via an SNMP connection. An additional serial connection is used to retrieve matrix information.
+This connector allows you to monitor the FOR-A MFR-3000 Video Router via an SNMP connection. An additional serial connection is used to retrieve matrix information.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver allows you to monitor the FOR-A MFR-3000 Video Router via an SNMP co
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -46,7 +46,7 @@ SNMP Settings:
 
 #### Serial IP Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -58,7 +58,7 @@ SERIAL CONNECTION:
 
 ### Initialization
 
-The driver retrieves matrix information via serial communication. This requires that the command protocol on the **Port Settings** page of the **device** is set to **Crosspoint Remote Control 2**.
+The connector retrieves matrix information via serial communication. This requires that the command protocol on the **Port Settings** page of the **device** is set to **Crosspoint Remote Control 2**.
 
 ### Redundancy
 
@@ -70,9 +70,9 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-This driver will poll the **Power Status**, **Fan Status**, **CPU Status**, **Remote Units Status** and **GPI Units Status**.
+This connector will poll the **Power Status**, **Fan Status**, **CPU Status**, **Remote Units Status** and **GPI Units Status**.
 
-You can find the received traps in the Traps table on the Traps page. When a specific trap is received, the driver will poll the corresponding parameter(s) again to have the latest data.
+You can find the received traps in the Traps table on the Traps page. When a specific trap is received, the connector will poll the corresponding parameter(s) again to have the latest data.
 
 A **matrix** is available, representing the **sources** (**inputs**) and **destinations** (**outputs**).
 

@@ -10,9 +10,9 @@ The IneoQuest iVMS Probe is a probe that is monitored by the iVMS.
 
 The **IneoQuest iVMS** will send **SOAP** commands to receive a list of available probes and their statuses in the iVMS system. For each new probe in that list, a **Dynamic Virtual Element (DVE)** will automatically be created for separate monitoring. The user can decide afterwards whether they want to keep the DVE or remove it.
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 4.0.0.x          | 5.08                        |
 
@@ -20,7 +20,7 @@ The **IneoQuest iVMS** will send **SOAP** commands to receive a list of availabl
 
 ### Creation
 
-This driver is used by DVE child elements that are **automatically created** by the parent driver [IneoQuest iVMS](xref:Connector_help_IneoQuest_iVMS).
+This connector is used by DVE child elements that are **automatically created** by the parent connector [IneoQuest iVMS](xref:Connector_help_IneoQuest_iVMS).
 
 ## Usage
 

@@ -9,13 +9,13 @@ Moreover, there is a pass-through allowing communication with a connected serial
 
 ## About
 
-This driver retrieves status information from the Omnitronix SL10 device and is also able to configure the SNMP connection and alarm management through SNMP.
+This connector retrieves status information from the Omnitronix SL10 device and is also able to configure the SNMP connection and alarm management through SNMP.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation::
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation::
 
 **SNMP CONNECTION:**
 

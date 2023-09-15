@@ -4,11 +4,11 @@ uid: Connector_help_GeoSync_Microwave_1+1_Redundant_Ku-band_Line_Driver
 
 # GeoSync Microwave 1+1 Redundant Ku-band Line Driver
 
-This driver is used to monitor and control a GeoSync Microwave Redundant Ku-band Amplifier.
+This connector is used to monitor and control a GeoSync Microwave Redundant Ku-band Amplifier.
 
 ## About
 
-This driver monitors the inputs and outputs of a GeoSync Microwave Redundant Ku-band amplifier.
+This connector monitors the inputs and outputs of a GeoSync Microwave Redundant Ku-band amplifier.
 
 It retrieves various kinds of information from the device: Output Level, Alarm Status, etc.
 
@@ -18,7 +18,7 @@ Data is polled from the device via a serial protocol.
 
 ### Creation
 
-This driver uses a serial connection and needs the following user information:
+This connector uses a serial connection and requires the following input during element creation:
 
 **SERIAL CONNECTION**:
 
@@ -28,11 +28,11 @@ This driver uses a serial connection and needs the following user information:
 
 ## Usage
 
-This driver contains 5 pages.
+This connector contains 5 pages.
 
 ### General
 
-This page displays general information about the driver (**Firmware**, **Model** **Number**, etc.). It also allows the operator to switch between manual and automatic control.
+This page displays general information about the connector (**Firmware**, **Model** **Number**, etc.). It also allows the operator to switch between manual and automatic control.
 
 ### Primary Unit
 

@@ -8,20 +8,20 @@ Comtech EF Data's LBC-4000 L-band up-/down-converter system is designed to inter
 
 ## About
 
-With this driver, it is possible to monitor and configure **CEFD MBT-5000** devices with a **serial** connection.
+With this connector, it is possible to monitor and configure **CEFD MBT-5000** devices with a **serial** connection.
 
 The different parameters of the device are displayed on multiple pages, similar to the web interface of the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**      | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**      | **DCF Integration** | **Cassandra Compliant** |
 |------------------|----------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version      | Yes                 | Yes                     |
 | 2.0.0.x          | Protocol name change | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | N/A                         |
 | 2.2.0.x          | N/A                         |
@@ -32,7 +32,7 @@ The different parameters of the device are displayed on multiple pages, similar 
 
 #### Serial main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

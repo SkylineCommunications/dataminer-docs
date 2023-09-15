@@ -4,7 +4,7 @@ uid: Connector_help_Leitch_Matrix_Serial
 
 # Leitch Matrix Serial
 
-The Leitch Matrix Serial driver is used to control and monitor a Leitch Matrix router. A matrix is used to display the connections between the inputs and the outputs of the router.
+The Leitch Matrix Serial connector is used to control and monitor a Leitch Matrix router. A matrix is used to display the connections between the inputs and the outputs of the router.
 
 ## About
 
@@ -35,7 +35,7 @@ The Leitch Matrix Serial driver is used to control and monitor a Leitch Matrix r
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

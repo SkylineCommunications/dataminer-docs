@@ -4,21 +4,21 @@ uid: Connector_help_Comet_H3531
 
 # Comet H3531
 
-This driver is used to communicate with the **Comet H3531** device, which measures temperature and relative humidity. The device has two relay outputs to control other devices and three binary inputs to detect two-state signals.
+This connector is used to communicate with the **Comet H3531** device, which measures temperature and relative humidity. The device has two relay outputs to control other devices and three binary inputs to detect two-state signals.
 
 ## About
 
 The device is able to measure temperature values between -30 øC and 105 øC. It also measures the relative humidity, which varies between 0 and 100%. Based on these values, it calculates the dew point value, which varies between 0 and 100%.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** |
+| **Range** | **Description** |
 |------------------|-----------------|
 | 1.0.0.x          | Initial version |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Description** |
+| **Range** | **Description** |
 |------------------|-----------------|
 | 1.0.0.x          | 04.1904.21      |
 
@@ -26,7 +26,7 @@ The device is able to measure temperature values between -30 øC and 105 øC. It
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 

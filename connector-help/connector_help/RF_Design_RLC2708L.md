@@ -12,17 +12,17 @@ The RLC2708L features a flexible and compact RF-distribution solution which is p
 
 ## About
 
-This driver retrieves and sets data via SNMP.
+This connector retrieves and sets data via SNMP.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range**  | **Device** **Firmware Version** |
+| **Range**  | **Device** **Firmware Version** |
 |-------------------|---------------------------------|
 | 1.0.0.x           | 2.3.23.D11.S23.H18.18.9.4       |
 
@@ -32,7 +32,7 @@ This driver retrieves and sets data via SNMP.
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

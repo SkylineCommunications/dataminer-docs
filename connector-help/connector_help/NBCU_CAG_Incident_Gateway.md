@@ -4,7 +4,7 @@ uid: Connector_help_NBCU_CAG_Incident_Gateway
 
 # NBCU CAG Incident Gateway
 
-The driver receives incident information to be submitted to the CAG Incident Gateway, which is a system proprietary to NBCU.
+The connector receives incident information to be submitted to the CAG Incident Gateway, which is a system proprietary to NBCU.
 
 ## About
 
@@ -32,7 +32,7 @@ The driver receives incident information to be submitted to the CAG Incident Gat
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

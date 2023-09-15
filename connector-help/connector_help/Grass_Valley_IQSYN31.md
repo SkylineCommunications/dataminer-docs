@@ -34,7 +34,7 @@ The Grass Valley IQSYN31 protocol is able to retrieve, set, and monitor informat
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -58,7 +58,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver has the following data pages:
+The element created with this connector has the following data pages:
 
 - **General**: This page shows the basic information about the device and licenses, and the information on default settings.
 - **Video and Audio pages:** Allows you to enable/disable input standards, and check and change the audio pairs, the video input resolutions, and the audio and video configuration.

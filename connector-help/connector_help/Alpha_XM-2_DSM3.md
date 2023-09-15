@@ -8,18 +8,18 @@ The **AlphaNet DSM3** embedded DOCSIS communications module allows the monitorin
 
 ## About
 
-The **Alpha XM-2-DSM3** driver uses **SNMP** to retrieve data from the device. Scheduled tests can be executed to determine the health of the UPS and its batteries.
+The **Alpha XM-2-DSM3** connector uses **SNMP** to retrieve data from the device. Scheduled tests can be executed to determine the health of the UPS and its batteries.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                      | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                      | **DCF Integration** | **Cassandra Compliant** |
 |------------------|--------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                      | No                  | Yes                     |
 | 2.0.0.x          | Backwards compatibility with 8.0.6.3 | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 4.4.9.0_03.13_EU            |
 | 2.0.0.x          | 4.4.9.0_03.13_EU            |
@@ -30,7 +30,7 @@ The **Alpha XM-2-DSM3** driver uses **SNMP** to retrieve data from the device. S
 
 #### SNMP \[Main\] connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -93,7 +93,7 @@ This page contains the alarms that are available on the SNMP agent.
 
 ### Battery Test page
 
-This page displays a summary of the latest test result of the tests performed by this driver or device. The UPS can run a local test and a remote test that causes the batteries to unload. Both the local and remote test are monitored.
+This page displays a summary of the latest test result of the tests performed by this connector or device. The UPS can run a local test and a remote test that causes the batteries to unload. Both the local and remote test are monitored.
 
 To start a new test on the device, click the **Start test** button.
 
@@ -127,7 +127,7 @@ This page displays the web interface of the modem. Note that the client machine 
 
 ## Notes
 
-The driver executes some tests on the retrieved data. The results are visible in the element.
+The connector executes some tests on the retrieved data. The results are visible in the element.
 
 ### Float State test
 

@@ -10,17 +10,17 @@ uid: Connector_help_Nera_Evo_XPAND_IP+
 
 Evo XPAND IP+ features a powerful, integrated Ethernet switch for advanced networking functionality and an optional TDM cross-connect for nodal site applications. With advanced service management and Operation Administration & Maintenance (OA&M) tools, the solution simplifies network design, reduces CAPEX and OPEX and improves overall network availability and reliability to support services with stringent SLAs.
 
-This driver communicates with the device using an **SNMP** connection, allowing the user to monitor and control features of the device.
+This connector communicates with the device using an **SNMP** connection, allowing the user to monitor and control features of the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 7.2.0.0.08-1                |
 
@@ -30,7 +30,7 @@ This driver communicates with the device using an **SNMP** connection, allowing 
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

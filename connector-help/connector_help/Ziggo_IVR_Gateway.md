@@ -8,13 +8,13 @@ The Ziggo IVR Gateway creates entries in the IVR (Interactive Voice Recording) v
 
 ## About
 
-The Ziggo IVR Gateway will receive commands from elements or Automation scripts that need to be sent to IVR via the Oracle MiddleWare (using SOAP calls). Currently this driver creates, updates and closes tickets and receives the **Row ID** when a call succeeded.
+The Ziggo IVR Gateway will receive commands from elements or Automation scripts that need to be sent to IVR via the Oracle MiddleWare (using SOAP calls). Currently this connector creates, updates and closes tickets and receives the **Row ID** when a call succeeded.
 
 The **log file** will contain additional logging (e.g. required data is missing, wrong SOAP response format, etc.). There is an **offload mechanism** available to store the created tickets on the local system as a CSV file.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
@@ -24,7 +24,7 @@ The **log file** will contain additional logging (e.g. required data is missing,
 
 #### HTTP main connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

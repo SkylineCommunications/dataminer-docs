@@ -4,15 +4,15 @@ uid: Connector_help_Skyline_IAM_DB
 
 # Skyline IAM DB
 
-This is a virtual driver, which is used to provision the system with new objects and provide updates to existing objects.
+This is a virtual connector, which is used to provision the system with new objects and provide updates to existing objects.
 
 ## About
 
-This virtual driver is responsible for collecting **DSL (DataMiner Structured Language) files** and processing them sequentially. Based on the configuration of the IAM DB, the element will take the initiative to provision the system with new objects or provide updates to existing ones.
+This virtual connector is responsible for collecting **DSL (DataMiner Structured Language) files** and processing them sequentially. Based on the configuration of the IAM DB, the element will take the initiative to provision the system with new objects or provide updates to existing ones.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
@@ -20,11 +20,11 @@ This virtual driver is responsible for collecting **DSL (DataMiner Structured La
 
 ### Creation
 
-This driver uses a **virtual connection** and does not require any input during element creation.
+This connector uses a **virtual connection** and does not require any input during element creation.
 
 ### Configuration
 
-For this driver to work, the **DSL Files Configuration**, **Network Credentials Configuration** and the **DB Configuration** on the **General** page must be filled in as follows:
+For this connector to work, the **DSL Files Configuration**, **Network Credentials Configuration** and the **DB Configuration** on the **General** page must be filled in as follows:
 
 #### DSL Files Configuration
 

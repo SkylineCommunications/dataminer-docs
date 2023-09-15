@@ -10,17 +10,17 @@ STAR G2 is a DVB-S/S2 audio receiver with integrated advertisement and content p
 
 ## About
 
-The **IDC STAR Pro Audio Receiver G2** driver is used to monitor and control a Star G2 device. It provides an overview of the different parameters of the device along with its statuses and generated alarms. The driver uses **SNMP** to retrieve the data from the device.
+The **IDC STAR Pro Audio Receiver G2** connector is used to monitor and control a Star G2 device. It provides an overview of the different parameters of the device along with its statuses and generated alarms. The connector uses **SNMP** to retrieve the data from the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | N7A                         |
 
@@ -30,7 +30,7 @@ The **IDC STAR Pro Audio Receiver G2** driver is used to monitor and control a S
 
 #### SNMP \[Main\] connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

@@ -4,21 +4,21 @@ uid: Connector_help_CISCO_Unified_Communications_Manager
 
 # CISCO Unified Communications Manager
 
-This driver can be used to monitor the **CISCO Unified Communications Manager**. The CUCM is responsible for the management and configuration of SIP and VoIP lines and extensions.
+This connector can be used to monitor the **CISCO Unified Communications Manager**. The CUCM is responsible for the management and configuration of SIP and VoIP lines and extensions.
 
 ## About
 
 This is a read-only SNMP monitoring driver, which polls information about registered devices and the local CUCM cluster connection status.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 11.5.1.12900-21             |
 
@@ -28,7 +28,7 @@ This is a read-only SNMP monitoring driver, which polls information about regist
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

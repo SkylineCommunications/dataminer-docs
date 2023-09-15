@@ -6,19 +6,19 @@ uid: Connector_help_ADVA_Optical_Networking_FSP150ME
 
 ## About
 
-The **FSP150ME (Fiber Service Platform)** is an aggregation device, essentially a packet multiplexer, capable of aggregating multiple Ethernet streams into a single transport link. This driver monitors this device to check if everything goes well.
+The **FSP150ME (Fiber Service Platform)** is an aggregation device, essentially a packet multiplexer, capable of aggregating multiple Ethernet streams into a single transport link. This connector monitors this device to check if everything goes well.
 
-This driver uses a **SNMP** connection with the device.
+This connector uses an **SNMP** connection with the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | False                   |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | v2.3.0                      |
 
@@ -28,7 +28,7 @@ This driver uses a **SNMP** connection with the device.
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

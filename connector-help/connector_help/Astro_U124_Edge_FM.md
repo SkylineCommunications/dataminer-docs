@@ -4,21 +4,21 @@ uid: Connector_help_Astro_U124_Edge_FM
 
 # Astro U124 Edge FM
 
-With this driver, you can gather and view information from the device **Astro U124 Edge FM**, as well as configure the device.
+With this connector, you can gather and view information from the device **Astro U124 Edge FM**, as well as configure the device.
 
 ## About
 
-This driver uses HTTP to monitor the **Astro U124 Edge FM** device. The driver also has an SNMP interface to receive traps from the device and poll certain network information.
+This connector uses HTTP to monitor the **Astro U124 Edge FM** device. The connector also has an SNMP interface to receive traps from the device and poll certain network information.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 4668, 6000, 6200, 6400      |
 
@@ -26,9 +26,9 @@ This driver uses HTTP to monitor the **Astro U124 Edge FM** device. The driver a
 
 ### Creation
 
-This driver uses two interfaces: an HTTP interface to retrieve the data and an SNMP interface to collect the traps.
+This connector uses two interfaces: an HTTP interface to retrieve the data and an SNMP interface to collect the traps.
 
-Depending on the setup, the **HTTP** configuration differs: this driver can communicate directly with the **U124**, but it can also be configured to send the requests to the **Astro U100 Controller**, which will then serve as a proxy.
+Depending on the setup, the **HTTP** configuration differs: this connector can communicate directly with the **U124**, but it can also be configured to send the requests to the **Astro U100 Controller**, which will then serve as a proxy.
 
 In either case, the **SNMP** interface collects the traps emitted by the device, so the SNMP IP address must be the IP address of the **U124** (not the controller).
 
@@ -144,7 +144,7 @@ The following table provides more information on how to upload/download configur
 
 #### Software Update
 
-The driver allows you to upload a firmware archive from the local disk of the DMA:
+The connector allows you to upload a firmware archive from the local disk of the DMA:
 
 ![SoftwareUpdate.PNG](~/connector-help/images/Astro_U124_Edge_FM_SoftwareUpdate.PNG)
 

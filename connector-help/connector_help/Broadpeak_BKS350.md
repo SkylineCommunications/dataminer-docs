@@ -6,7 +6,7 @@ uid: Connector_help_Broadpeak_BKS350
 
 Broadpeak BKS350 is a packager streamer that improves multi-screen video delivery on managed or open internet networks.
 
-This driver allows the real-time monitoring of BKS350 general information, server status, live streaming status and alarm information.
+This connector allows the real-time monitoring of BKS350 general information, server status, live streaming status and alarm information.
 
 ## About
 
@@ -37,7 +37,7 @@ This driver allows the real-time monitoring of BKS350 general information, serve
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -51,7 +51,7 @@ SNMP Settings:
 
 #### HTTP Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -65,7 +65,7 @@ Note that the client machine has to be able to access the device, as otherwise i
 
 ## How to use
 
-The element created with this driver consists of the following data pages:
+The element created with this connector consists of the following data pages:
 
 - **General**: Contains general information, such as the current date and time, and the up time. Also shows the overall status of the equipment.
 - **Live**: Contains a table with all live status parameters.

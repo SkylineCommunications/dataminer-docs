@@ -8,9 +8,9 @@ uid: Connector_help_Standard_Switch_Management
 
 This is the base driver for "**CISCO Manager**" (7.0.0.1), "**Cisco Nexus**" (2.0.0.1) and "**Juniper Networks Manager**" (1.0.3.7).
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial Version | No                  | Yes                     |
 
@@ -18,7 +18,7 @@ This is the base driver for "**CISCO Manager**" (7.0.0.1), "**Cisco Nexus**" (2.
 
 ### Creation
 
-This driver uses a virtual connection and does not require any input during element creation. You don't have to create any element because the mediation layer options will be added to the children protocols menu.
+This connector uses a virtual connection and does not require any input during element creation. You don't have to create any element because the mediation layer options will be added to the children protocols menu.
 
 ## Usage
 

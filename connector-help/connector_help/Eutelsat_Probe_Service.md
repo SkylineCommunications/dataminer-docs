@@ -26,7 +26,7 @@ This is an enhanced service protocol that allows more efficient alarm monitoring
 
 #### Virtual Connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 
@@ -66,4 +66,4 @@ When the **Compare Alarms** option is used, you will receive alarms based on the
 
 ## Notes
 
-This driver was created specifically for Eutelsat.
+This connector was created specifically for Eutelsat.

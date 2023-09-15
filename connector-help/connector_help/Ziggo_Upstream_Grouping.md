@@ -4,19 +4,19 @@ uid: Connector_help_Ziggo_Upstream_Grouping
 
 # Ziggo Upstream Grouping
 
-This driver is used to receive **Arris Alarm Central** notifications and group their **issues** on the **USSegment** level, displaying the highest severity among them.
+This connector is used to receive **Arris Alarm Central** notifications and group their **issues** on the **USSegment** level, displaying the highest severity among them.
 
 ## About
 
 The **Ziggo Upstream Grouping** driver embeds a **web service** that listens to requests on a configurable port.
 
-The driver identifies if any *critical* or *major* **issue** of the received **notification** corresponds to an **upstream type** and stores them.
+The connector identifies if any *critical* or *major* **issue** of the received **notification** corresponds to an **upstream type** and stores them.
 
 The issues are grouped by the USSegment field and the highest severity among them is displayed.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial Version | No                  | Yes                     |
 
@@ -24,7 +24,7 @@ The issues are grouped by the USSegment field and the highest severity among the
 
 ### Creation
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## Usage
 
@@ -36,11 +36,11 @@ The **Configuration** page allows the user to configure multiple settings and it
 
 - **Elements**:
 
-- The user can configure the **Orchestrator element** (using the Arris Alarm Central Orchestrator driver, minimum version: 1.0.0.2);
-  - The user can enable or disable the alarm enrichment functionality that will add extra information to the **USSegment** alarms via the **Brain Communication** togglebutton. This additional information is requested to the Ziggo Brain driver which communicates with the database. If **Brain Communication** is *enabled*, the **Brain Element** needs to be selected.
-  - The **Refresh** button can be used to immediatly refresh all available elements that can be chosen. Otherwise, the lists of elements are refreshed every 60 seconds.
+  - The user can configure the **Orchestrator element** (using the Arris Alarm Central Orchestrator driver, minimum version: 1.0.0.2);
+  - The user can enable or disable the alarm enrichment functionality that will add extra information to the **USSegment** alarms via the **Brain Communication** toggle button. This additional information is requested to the Ziggo Brain driver which communicates with the database. If **Brain Communication** is *enabled*, the **Brain Element** needs to be selected.
+  - The **Refresh** button can be used to immediately refresh all available elements that can be chosen. Otherwise, the lists of elements are refreshed every 60 seconds.
 
-- **Parameters**: The user can edit the **URL** parameter that will be set on the **em_url** field of the **Parameters** property;
+- **Parameters**: The user can edit the **URL** parameter that will be set on the **em_url** field of the **Parameters** property.
 
 - The **URL** parameter allows the use of placeholders. The available placeholders are enumerated in the tooltip of the parameter.
 

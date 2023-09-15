@@ -4,7 +4,7 @@ uid: Connector_help_Grass_Valley_SAM_IQHCO50
 
 # Grass Valley SAM IQHCO50
 
-This driver is used to monitor and configure the Grass Valley SAM IQHCO50. This device provides backup protection for SDI signal paths. Inputs are monitored for signal errors; when an error state is recognized, a backup feed is automatically switched to. A rules engine is available to provide logical conditions for auto-switching, while GPIO or RollTrack inputs can force the unit to switch independently of signal state.
+This connector is used to monitor and configure the Grass Valley SAM IQHCO50. This device provides backup protection for SDI signal paths. Inputs are monitored for signal errors; when an error state is recognized, a backup feed is automatically switched to. A rules engine is available to provide logical conditions for auto-switching, while GPIO or RollTrack inputs can force the unit to switch independently of signal state.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver is used to monitor and configure the Grass Valley SAM IQHCO50. This 
 
 #### Serial main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

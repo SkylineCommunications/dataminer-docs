@@ -4,19 +4,19 @@ uid: Connector_help_Rohde_Schwarz_DVB_NV7000
 
 # Rohde Schwarz DVB NV7000
 
-Liquid-cooled transmitters for analog and digital TV consisting of exciters, power amplifiers and a transmitter rack. The driver monitors a controller controlling two exciters (A and B or main and backup). For each exciter a DVE is created.
+Liquid-cooled transmitters for analog and digital TV consisting of exciters, power amplifiers and a transmitter rack. The connector monitors a controller controlling two exciters (A and B or main and backup). For each exciter a DVE is created.
 
 ## About
 
-This driver uses **SNMPv2** to poll data from the device and display it accordingly. Traps are not implemented. This driver will export one driver (see "Exported Drivers" below).
+This connector uses **SNMPv2** to poll data from the device and display it accordingly. Traps are not implemented. This connector will export one driver (see "Exported Connectors" below).
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol**              | **Description**                                |
 |------------------------------------|------------------------------------------------|
@@ -26,7 +26,7 @@ This driver uses **SNMPv2** to poll data from the device and display it accordin
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -45,16 +45,16 @@ To correctly compute this parameter, the **Nominal Power** parameter must be set
 
 ### Configuration of the SNMP Interface parameter
 
-This driver supports two different MIBs to interface with this device. These contain the same parameters, but have slightly different OIDs. The driver should automatically detect the installed SNMP protocol for the device and select the correct interface, but in some situations it is possible that this will not work. This can for example be if the IP address is wrong, if the read community string is wrong or if a firewall blocks the traffic to the device. In those cases, the communication problem should be fixed first. Once it is fixed, restart the element and it will try to auto detect the required network interface again.
+This connector supports two different MIBs to interface with this device. These contain the same parameters, but have slightly different OIDs. The connector should automatically detect the installed SNMP protocol for the device and select the correct interface, but in some situations it is possible that this will not work. This can for example be if the IP address is wrong, if the read community string is wrong or if a firewall blocks the traffic to the device. In those cases, the communication problem should be fixed first. Once it is fixed, restart the element and it will try to auto detect the required network interface again.
 
-However, once an interface has been selected (either automatically or manually) the driver will not change this setting anymore. So if the interface changes, for example because the device was replaced by another using the other SNMP interface, then a manual action will be required to change the SNMP interface. For this, you must use the parameter **SNMP Interface** on the **General** page to select the correct OIDs for the parameters for SNMP communication.
+However, once an interface has been selected (either automatically or manually) the connector will not change this setting anymore. So if the interface changes, for example because the device was replaced by another using the other SNMP interface, then a manual action will be required to change the SNMP interface. For this, you must use the parameter **SNMP Interface** on the **General** page to select the correct OIDs for the parameters for SNMP communication.
 
 Devices using MIB "rs_xx7000_dtv_dd.mib" use OIDs in range 1.3.6.1.4.2566.10.7.x and should select "*NETCCU700 SNMP-Interface*".
 Devices using MIB "rs_nv7000_dd.mib" use OIDs in range 1.3.6.1.4.2566.10.2.x and should select "*Netlink ZR700-N SNMP-Interface*".
 
 ## Usage
 
-The driver contains three pages and an additional page with the device's web interface. It also generates 2 DVE elements.
+The connector contains three pages and an additional page with the device's web interface. It also generates 2 DVE elements.
 
 The DVE elements each only contain one parameter, **Summary Fault**, which has the same value as found in the **ET - Summary Fault** column in the **Exciters Table** on the **Exciter** page. The DVEs can be used to build redundancy groups and associated logic.
 

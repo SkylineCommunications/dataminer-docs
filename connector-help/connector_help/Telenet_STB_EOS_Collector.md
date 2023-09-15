@@ -4,23 +4,23 @@ uid: Connector_help_Telenet_STB_EOS_Collector
 
 # Telenet STB EOS Collector
 
-The **Telenet STB EOS Collector** is part of the CPE setup, and works together with the **Telenet CPE Manager**, **Telenet eMTA Collector** and **Telenet CM Collector** driver. This driver is responsible for the polling of the STB data through an Apache Kafka Queue. The version of the **Telenet CPE Manager** needs to be at least in the 6.0.2.x version range.
+The **Telenet STB EOS Collector** is part of the CPE setup, and works together with the **Telenet CPE Manager**, **Telenet eMTA Collector** and **Telenet CM Collector** connector. This connector is responsible for the polling of the STB data through an Apache Kafka Queue. The version of the **Telenet CPE Manager** needs to be at least in the 6.0.2.x version range.
 
 ## About
 
-This driver does constant multi-threaded polling of the Apache Kafka Queue Brokers through a serial connection to retrieve the data of the STBs for a particular CMTS.
+This connector does constant multi-threaded polling of the Apache Kafka Queue Brokers through a serial connection to retrieve the data of the STBs for a particular CMTS.
 
 The data will be offloaded into CSV files and will be aggregated by the CPE Manager element. The CPE Manager element will provision the STB EOS Collector with the STBs for which data needs to be retrieved.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**                               |
+| **Range** | **Device Firmware Version**                               |
 |------------------|-----------------------------------------------------------|
 | 1.0.0.x          | Apache Kafka API v1, which is supported since Kafka 0.9.0 |
 
@@ -30,7 +30,7 @@ The data will be offloaded into CSV files and will be aggregated by the CPE Mana
 
 #### Serial Main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -73,23 +73,23 @@ The STB EOS Collector will generate tab-separated CSV files. For more informatio
 
 ### Fast tuner offload structure
 
-1.  Device ID
-2.  SAP ID
-3.  Another Operator
-4.  Node
-5.  Timestamp
-6.  Tuner Number
-7.  Lock Status
-8.  Frequency
-9.  Level
-10. SNR
-11. BER
-12. Error Packets
+1. Device ID
+1. SAP ID
+1. Another Operator
+1. Node
+1. Timestamp
+1. Tuner Number
+1. Lock Status
+1. Frequency
+1. Level
+1. SNR
+1. BER
+1. Error Packets
 
 ### IVR offload structure
 
-1.  Device ID
-2.  State
-3.  Timestamp
-4.  SAP ID
-5.  Another Operator
+1. Device ID
+1. State
+1. Timestamp
+1. SAP ID
+1. Another Operator

@@ -4,17 +4,17 @@ uid: Connector_help_CEFD_SLM-5650A_SNMP
 
 # CEFD SLM-5650A SNMP
 
-The CEFD SLM-5650A SNMP driver controls the and monitors the **CEFD SLM-5650A** **satellite router** through SNMP.
+The CEFD SLM-5650A SNMP connector controls the and monitors the **CEFD SLM-5650A** **satellite router** through SNMP.
 
 ## About
 
-The **Comtech EF Data (CEFD) SLM-5650A satellite router** satisfies the requirements for government and military communications system applications that require state-of-the-art modulation and coding techniques to optimize satellite transponder bandwidth usage, while retaining backward compatibility. This driver provides an optimized user interface for the device.
+The **Comtech EF Data (CEFD) SLM-5650A satellite router** satisfies the requirements for government and military communications system applications that require state-of-the-art modulation and coding techniques to optimize satellite transponder bandwidth usage, while retaining backward compatibility. This connector provides an optimized user interface for the device.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION**:
 
@@ -26,15 +26,15 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and need
 - **Get community string**: The community string in order to read from the device. The default value is *public*.
 - **Set community string**: The community string in order to set to the device. The default value is *private.*
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.4.8p                      |
 
@@ -48,13 +48,13 @@ On the access page several network related parameters can be configured. For ins
 
 The Remote page displays and configures settings for remote operation of the device through SNMP.
 
-Remark: use this page cautiously. Changing the SNMP settings may sever the connection to the driver.
+Remark: use this page cautiously. Changing the SNMP settings may sever the connection to the connector.
 
 ### Config - Modem Operating Mode
 
-The Modem Operating Mode is a key page within this driver. It displays and configures settings as the **Modem Operating Mode**, the **Transmit** settings, the **Receive** settings.
+The Modem Operating Mode is a key page within this connector. It displays and configures settings as the **Modem Operating Mode**, the **Transmit** settings, the **Receive** settings.
 
-The Parameters in the **Transmit** settings as well as those in the **Receive** settings may depend on either the **Modem Operating Mode** or eachother. In either case, the driver will automatically select a correct configuration.
+The Parameters in the **Transmit** settings as well as those in the **Receive** settings may depend on either the **Modem Operating Mode** or eachother. In either case, the connector will automatically select a correct configuration.
 Dependencies for these parameters are as follows: (for both Rx as Tx)
 
 - Overhead Type

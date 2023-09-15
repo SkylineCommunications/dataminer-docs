@@ -6,17 +6,17 @@ uid: Connector_help_Mikrotik_Wise_wireless_router
 
 ## About
 
-This driver can be used to display and monitor information about the Mikrotik WISE wireless router
+This connector can be used to display and monitor information about the Mikrotik WISE wireless router
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial Version | No                  | False                   |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 4.17                        |
 
@@ -26,7 +26,7 @@ This driver can be used to display and monitor information about the Mikrotik WI
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol version 2 (SNMPv2) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol version 2 (SNMPv2) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

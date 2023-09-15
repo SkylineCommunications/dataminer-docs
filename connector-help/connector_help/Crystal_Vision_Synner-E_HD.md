@@ -8,13 +8,13 @@ This device is a video synchronization tool designed to simplify system design i
 
 ## About
 
-The Crystal Vision Synner-E HD driver makes it possible to monitor and control a specific Crystal Vision Synner-E HD card.
+The Crystal Vision Synner-E HD connector makes it possible to monitor and control a specific Crystal Vision Synner-E HD card.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION**:
 

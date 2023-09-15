@@ -12,15 +12,15 @@ The **Verizon Vsat Database Platform** has an associated API that will be querie
 
 All the received information will be stored in the **provisioning file** and duly organized in the tables of the element.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -30,7 +30,7 @@ All the received information will be stored in the **provisioning file** and dul
 
 #### HTTPS Main Connection
 
-This driver uses an HTTPS connection and requires the following input during element creation:
+This connector uses an HTTPS connection and requires the following input during element creation:
 
 HTTPS CONNECTION TO HTTP:
 

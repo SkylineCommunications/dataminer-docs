@@ -32,7 +32,7 @@ This connector allows you to check information provided by a SSIMWAVE device.
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -54,4 +54,4 @@ Once the authentication is done (see "Initialization" section above), this conne
 
 Trending and alarm monitoring can be configured on the numeric information in the Video and Audio tables. For the Alerts table, alarm monitoring can be configured on the severity and type columns.
 
-To receive the table data, the driver uses a 30-second timer.
+To receive the table data, the connector uses a 30-second timer.

@@ -4,18 +4,18 @@ uid: Connector_help_Cisco_D9036
 
 # Cisco D9036
 
-This driver can be used to monitor devices in the CISCO D9036 device.
+This connector can be used to monitor devices in the CISCO D9036 device.
 
 ## About
 
-This driver polls basic information such as available boards, ports and transport streams. If this is enabled by the user, some other parameters can also be polled.
+This connector polls basic information such as available boards, ports and transport streams. If this is enabled by the user, some other parameters can also be polled.
 
 Before using this protocol, make sure you have read and understand the section "Installation and configuration".
 
 Please note the following:
 
-- This driver was developed for DataMiner Cube, so if you use Element Display instead, not everything may function properly.
-- The last major update of the driver was tested using firmware version V01.08.90.
+- This connector was developed for DataMiner Cube, so if you use Element Display instead, not everything may function properly.
+- The last major update of the connector was tested using firmware version V01.08.90.
   However, using older firmware versions should not cause any major issues. If data is missing, verify if the problem is solved by upgrading to this version (or newer).
 - Consecutive firmware upgrades have always been backward compatible, so upgrading to a more recent version should be no problem.
 
@@ -23,12 +23,12 @@ Please note the following:
 
 ### Prerequisites
 
-The driver requires that Visual C++ 2008 (or 2010) Redistributional is installed. To verify this, go to: Control Panel \> Programs and Features.
+The connector requires that Visual C++ 2008 (or 2010) Redistributional is installed. To verify this, go to: Control Panel \> Programs and Features.
 If this program has not been installed yet, you can download and install it from the following website: <http://www.microsoft.com/en-us/download/details.aspx?id=29>.
 
 ### Installing the protocol
 
-Fom version 1.0.0.10 onwards, you can install the driver along with the necessary DLLs by using a "**.dmprotocol**" package, which can be downloaded from the Update Center.
+Fom version 1.0.0.10 onwards, you can install the connector along with the necessary DLLs by using a "**.dmprotocol**" package, which can be downloaded from the Update Center.
 
 For older versions, however, the installation requires two steps:
 
@@ -39,12 +39,12 @@ For older versions, however, the installation requires two steps:
 
 ### Element Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION**
 
 - **IP Address/host:** The polling IP address of the device you wish to poll.
-- The other settings, such as Get/Set community string, retries and port number, are ignored by the driver.
+- The other settings, such as Get/Set community string, retries and port number, are ignored by the connector.
 
 ### Troubleshooting New Elements
 
@@ -100,7 +100,7 @@ Notes:
 
 #### Verify DLLs
 
-The driver requires several DLLs in order to function properly. Check if all files mentioned below are in the correct location in the system.
+The connector requires several DLLs in order to function properly. Check if all files mentioned below are in the correct location in the system.
 
 In the folder "*C:\Skyline DataMiner\Files*":
 
@@ -129,7 +129,7 @@ The log file can be found in "*C:\Skyline DataMiner\Logging\\ElementName\].txt*"
 
 ### Advanced Setup
 
-Once an element has been created, it is possible to fine-tune the behavior of the driver. Below, you can find a list of settings that have an impact on your system. Each setting is explained in more detail further in the document. It is important to have at least an idea of what each feature does and what the potential impact is.
+Once an element has been created, it is possible to fine-tune the behavior of the connector. Below, you can find a list of settings that have an impact on your system. Each setting is explained in more detail further in the document. It is important to have at least an idea of what each feature does and what the potential impact is.
 
 *Poll Manager*
 
@@ -138,9 +138,9 @@ By default, most commands are disabled, so you will almost certainly need to ena
 
 #### Network Error Handling
 
-When the driver fails to communicate with the device, it will flag a network error. This error can be monitored, but, more importantly, it can also be used to stop polling via the IIOP interface until the connection is restored.
+When the connector fails to communicate with the device, it will flag a network error. This error can be monitored, but, more importantly, it can also be used to stop polling via the IIOP interface until the connection is restored.
 
-By default, the driver will just continue to poll the device. However, this could lead to a high CPU load and network errors are typically not resolved quickly. Therefore it is advisable to change this default behavior and instead start the "Ping Procedure". This means that instead of 'heavy' IIOP calls, only ping messages will be sent. As soon as a ping message returns successful, the normal polling will be resumed.
+By default, the connector will just continue to poll the device. However, this could lead to a high CPU load and network errors are typically not resolved quickly. Therefore it is advisable to change this default behavior and instead start the "Ping Procedure". This means that instead of 'heavy' IIOP calls, only ping messages will be sent. As soon as a ping message returns successful, the normal polling will be resumed.
 
 Note that ping messages are only sent to **Management IP Address 1** and the system will not recover if ping messages are blocked. This is why the default behavior is to continue the normal polling. As a consequence, before you activate the ping procedure, it is important that you verify whether it is possible to ping the device from the DataMiner Agent.
 
@@ -148,13 +148,13 @@ Note that ping messages are only sent to **Management IP Address 1** and the sys
 
 In the past, there have been problems when DCM elements were restarted. In these cases, DataMiner already started the element before it had been fully stopped. This was done to achieve a higher responsiveness, but could potentially cause RTEs.
 
-To counter this, on startup the driver will check if there are indications that another thread is still active, and if so, block the element for a while. The maximum time to wait and the time to wait between two checks can be configured on the Driver Startup page. By default, the driver will wait at most 14 minutes. This setting provides a safe margin, but in many configurations it may be considered excessive. Much depends on the general load of the DMA. If this is not considered 'high', a more reasonable setting may be *1* or *2* minutes*.*
+To counter this, on startup the connector will check if there are indications that another thread is still active, and if so, block the element for a while. The maximum time to wait and the time to wait between two checks can be configured on the Driver Startup page. By default, the connector will wait at most 14 minutes. This setting provides a safe margin, but in many configurations it may be considered excessive. Much depends on the general load of the DMA. If this is not considered 'high', a more reasonable setting may be *1* or *2* minutes*.*
 
 Important: Remember that it could take a while before polling starts after an element restart.
 
 ## Usage
 
-The functionality of the various pages of the driver is explained below.
+The functionality of the various pages of the connector is explained below.
 
 ### Overview
 
@@ -254,7 +254,7 @@ To restore a backup:
 Note:
 
 - You should always set **BS Backup Scope** and **BS Restore Scope** to *ALL*.
-- The maximum backup size is limited to 20MB, and the maximum duration before the backup should be received is 5 minutes. This is hard-coded in the driver. (The typical size of a backup is approx. 3MB.)
+- The maximum backup size is limited to 20MB, and the maximum duration before the backup should be received is 5 minutes. This is hard-coded in the connector. (The typical size of a backup is approx. 3MB.)
 
 ### Manager \[From version 1.0.0.12 onwards\]
 
@@ -367,7 +367,7 @@ This is why these features are by default disabled. If a customer requested a pa
 Notes:
 
 - Because these features are usually tightly integrated with other components (Visio, alarm filters, Automation scripts) changes to these features can only be requested by the customer who requested them. Other customers should not use them or rely on them. The requesting customer may at any point request additional changes that may not be backwards compatible, and no effort will be done to keep changes backwards compatible or to consider other customers using the feature even though they did not request it.
-- These features are not always fully documented in the driver help file. Customers who specifically requested a feature are expected to know what it does.
+- These features are not always fully documented in the connector help file. Customers who specifically requested a feature are expected to know what it does.
 
 #### TV2 Norway
 

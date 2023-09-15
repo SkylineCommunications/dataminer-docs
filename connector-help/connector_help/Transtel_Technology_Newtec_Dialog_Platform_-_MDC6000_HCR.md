@@ -4,7 +4,7 @@ uid: Connector_help_Transtel_Technology_Newtec_Dialog_Platform_-_MDC6000_HCR
 
 # Transtel Technology Newtec Dialog Platform - MDC6000 HCR
 
-This driver is designed to retrieve information from a DMA that is set up by Newtec and contains protocols made by Newtec.
+This connector is designed to retrieve information from a DMA that is set up by Newtec and contains protocols made by Newtec.
 
 ## About
 
@@ -26,7 +26,7 @@ This driver is designed to retrieve information from a DMA that is set up by New
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 

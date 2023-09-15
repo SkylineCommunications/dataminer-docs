@@ -4,24 +4,24 @@ uid: Connector_help_Snell_Wilcox_Alchemist_Ph.C_-_HD3G
 
 # Snell Wilcox Alchemist Ph.C - HD3G
 
-This driver can be used to monitor and configure the Snell Wilcox Alchemist Ph.C - HD3G device.
+This connector can be used to monitor and configure the Snell Wilcox Alchemist Ph.C - HD3G device.
 
 This device converts high-definition video signals with a PH.C motion measurement technology.
 
 ## About
 
-This driver uses the SNMP protocol to request data from the device.
+This connector uses the SNMP protocol to request data from the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                                                                                   | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                                                                                                   | **DCF Integration** | **Cassandra Compliant** |
 |------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                                                                                                                                   | No                  | Yes                     |
-| 1.0.1.x          | Review of 1.0.0.x driver range. Note: It may be necessary to **update Visio drawings and Automation scripts** to match the changes in this range. | Yes                 | Yes                     |
+| 1.0.1.x          | Review of 1.0.0.x connector range. Note: It may be necessary to **update Visio drawings and Automation scripts** to match the changes in this range. | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 1.1.0.x          | Unknown                     |
@@ -32,7 +32,7 @@ This driver uses the SNMP protocol to request data from the device.
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -191,7 +191,7 @@ This page allows you to configure horizontal and vertical references.
 
 ## DataMiner Connectivity Framework
 
-The 1.0.1.x driver range of the **Snell Wilcox Alchemist Ph.C - HD3G** protocol supports the usage of DCF and can only be used on a DMA with **8.5.14** as the minimum version.
+The 1.0.1.x connector range of the **Snell Wilcox Alchemist Ph.C - HD3G** protocol supports the usage of DCF and can only be used on a DMA with **8.5.14** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
@@ -215,4 +215,4 @@ Physical fixed interfaces:
 
 ## Notes
 
-When upgrading from driver version 1.0.0.5 to 1.0.1.1, check if all Visio drawings and Automation scripts still function correctly, as the changes to the driver may cause errors to appear. Some descriptions and values have been changed (from a numeric value to a string value).
+When upgrading from connector version 1.0.0.5 to 1.0.1.1, check if all Visio drawings and Automation scripts still function correctly, as the changes to the connector may cause errors to appear. Some descriptions and values have been changed (from a numeric value to a string value).

@@ -4,7 +4,7 @@ uid: Connector_help_Sky_UK_MagiQ_STB_Automation
 
 # Sky UK MagiQ STB Automation
 
-The Sky UK MagiQ STB Automation driver is used to monitor different set-top boxes.
+The Sky UK MagiQ STB Automation connector is used to monitor different set-top boxes.
 
 ## About
 
@@ -32,7 +32,7 @@ The Sky UK MagiQ STB Automation driver is used to monitor different set-top boxe
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -42,7 +42,7 @@ HTTP CONNECTION:
 
 #### WebSocket Connection
 
-This driver uses a WebSocket connection and requires the following input during element creation:
+This connector uses a WebSocket connection and requires the following input during element creation:
 
 WEBSOCKET CONNECTION:
 

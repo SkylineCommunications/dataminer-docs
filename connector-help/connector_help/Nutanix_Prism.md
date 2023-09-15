@@ -4,7 +4,7 @@ uid: Connector_help_Nutanix_Prism
 
 # Nutanix Prism
 
-This driver is an HTTPS driver that communicates with the Nutanix Prism through its rest API. This allows you to manage your global Nutanix hyperconverged infrastructure (HCI) from one console.
+This connector is an HTTPS driver that communicates with the Nutanix Prism through its rest API. This allows you to manage your global Nutanix hyperconverged infrastructure (HCI) from one console.
 This HCI combines servers and storage into a distributed infrastructure platform with intelligent software to create flexible building blocks that replace legacy infrastructure consisting of separate servers, storage networks, and storage arrays. More specifically, it combines commodity data center server hardware with locally attached storage devices (spinning disk or flash) and is powered by a distributed software layer to eliminate common pain points associated with legacy infrastructure.
 
 ## About
@@ -33,7 +33,7 @@ This HCI combines servers and storage into a distributed infrastructure platform
 
 #### HTTPS Main Connection
 
-This driver uses an HTTPS connection and requires the following input during element creation:
+This connector uses an HTTPS connection and requires the following input during element creation:
 
 HTTPS CONNECTION:
 
@@ -55,9 +55,9 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver consists of the following data pages:
+The element created with this connector consists of the following data pages:
 
-- **General**: Allows you to configure the credentials to retrieve information with this driver. Also contains summary information related to storage, VM, hardware and cluster.
+- **General**: Allows you to configure the credentials to retrieve information with this connector. Also contains summary information related to storage, VM, hardware and cluster.
 - **Health Checks**: Contains a table with health information.
 - **VM**: Contains all VM-related information such as VM(s), VM(s) on and off, the Provisioned VCPUs and Total Provisioned Memory. On the **VM Table** subpage, you can find tables with information related to each specific VM and virtual disk.
 - **Storage**: Contains storage-related information such as Storage Free and Capacity, as well as cluster-related information such as Cluster-Wide Controller IOPS, Bandwidth and Latency. On the **Storage Tables** subpage, you can find more detailed information about each storage container and cluster.

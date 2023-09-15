@@ -6,20 +6,20 @@ uid: Connector_help_Agilent_N1996A
 
 The **Agilent N1996A** is a spectrum analyzer device.
 
+This connector interfaces with the spectrum analyzer of the same name, and allows the user to monitor the spectrum of any signal connected to the spectrum analyzer. In addition, the connector allows basic configuration of the device.
+
 ## About
 
-The ****Agilent N1996A**** driver interfaces with the spectrum analyzer of the same name, and allows the user to monitor the spectrum of any signal connected to the spectrum analyzer. In addition, the driver allows for basic configuration of the device.
+### Version Info
 
-### Ranges of the driver
-
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
-| 1.1.0.x          | Refactor driver | No                  | Yes                     |
+| 1.1.0.x          | Refactor connector | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 1.1.0.x          | Unknown                     |
@@ -30,7 +30,7 @@ The ****Agilent N1996A**** driver interfaces with the spectrum analyzer of the s
 
 #### Serial main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -45,4 +45,4 @@ This page contains DataMiner's default **Spectrum Analysis** component.
 
 ### General
 
-This page contains basic device information such as the **Manufacturer**, **Model**, **Serial Number** and **Firmware Version** of the device.
+This page contains basic device information such as the **Manufacturer**, **Model**, **Serial Number**, and **Firmware Version** of the device.

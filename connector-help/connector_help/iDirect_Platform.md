@@ -4,13 +4,13 @@ uid: Connector_help_iDirect_Platform
 
 # iDirect Platform
 
-The **iDirect Platform** driver is a DataMiner driver that can be used to monitor terminal, network, chassis, linecard, etc. components in iDirect satellite networks.
+The **iDirect Platform** connector is a DataMiner connector that can be used to monitor terminal, network, chassis, linecard, etc. components in iDirect satellite networks.
 
 ## About
 
-In elements using this driver, all information about an iDirect NMS is retrieved and displayed. All the information is gathered from the MySQL databases.
+In elements using this connector, all information about an iDirect NMS is retrieved and displayed. All the information is gathered from the MySQL databases.
 
-This driver will export different drivers based on the retrieved data. Three kinds of DVEs can be generated, representing net modems, networks and line cards. No DVEs are created for the chassis; that information is available in the main element.
+This connector will export different connectors based on the retrieved data. Three kinds of DVEs can be generated, representing net modems, networks and line cards. No DVEs are created for the chassis; that information is available in the main element.
 
 The creation of DVEs can be enabled or disabled in the main element. Different possibilities for **alarm monitoring** and **trending** are available.
 
@@ -92,7 +92,7 @@ The creation of DVEs can be enabled or disabled in the main element. Different p
 </tr>
 <tr class="even">
 <td>10.0.5.x [SLC Main]</td>
-<td><p>Reverted changes made in 10.0.3.x. This driver requires the display column to maintain the trend/alarm history when a replacement is done in the tables. Refer to the Notes section below for more information.</p>
+<td><p>Reverted changes made in 10.0.3.x. This connector requires the display column to maintain the trend/alarm history when a replacement is done in the tables. Refer to the Notes section below for more information.</p>
 <p><strong>This range should be handled in parallel with range 10.0.6.x [SLC Main], when applicable (no DCF integration).</strong></p></td>
 <td>10.0.3.1</td>
 <td>From 10.0.3.x/10.0.4.x only - old trend data will be lost for the following tables:
@@ -112,7 +112,7 @@ The creation of DVEs can be enabled or disabled in the main element. Different p
 <tr class="odd">
 <td>10.0.6.x [SLC Main]</td>
 <td>Reverted changes made in 10.0.4.x.
-<p>This driver requires the display column to maintain the trend/alarm history when a replacement is done in the tables. Refer to the Notes section below for more information.</p>
+<p>This connector requires the display column to maintain the trend/alarm history when a replacement is done in the tables. Refer to the Notes section below for more information.</p>
 <p><strong>This range should be handled in parallel with range 10.0.5.x [SLC Main], when applicable (DCF Integration).</strong></p></td>
 <td>10.0.4.1</td>
 <td>From 10.0.3.x/10.0.4.x only - old trend data will be lost for the following tables:
@@ -140,7 +140,7 @@ The creation of DVEs can be enabled or disabled in the main element. Different p
 
 ### Product Info
 
-| **Driver Range**      | **Device Firmware Version**           |
+| **Range**      | **Device Firmware Version**           |
 |-----------------------|---------------------------------------|
 | 10.0.0.x              | Compatible with all iDirect versions. |
 | 10.0.1.x \[SLC Main\] | Compatible with all iDirect versions. |
@@ -237,13 +237,13 @@ The creation of DVEs can be enabled or disabled in the main element. Different p
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Configuration
 
 Additional settings need to be filled in on the **Configuration** page of the element. On that page, the polling can be *enabled*/d*isabled* for each database, and the polling interval can be configured.
 
-All iDirect installations consist of two databases (schemas): "**nms**", with all the configuration data, and "**nrd_archive**", with all events and statistics. In small systems, these databases are typically placed on one single MySQL server. In larger systems, the config and statistics databases can be on multiple servers, each with another IP address. In very large systems, it is also possible that the archive database is spread over two separate machines: one with stats and one with events. In the driver, three individual IP addresses can be defined.
+All iDirect installations consist of two databases (schemas): "**nms**", with all the configuration data, and "**nrd_archive**", with all events and statistics. In small systems, these databases are typically placed on one single MySQL server. In larger systems, the config and statistics databases can be on multiple servers, each with another IP address. In very large systems, it is also possible that the archive database is spread over two separate machines: one with stats and one with events. In the connector, three individual IP addresses can be defined.
 
 #### Range 10.0.1.x and 11.0.0.x
 
@@ -275,7 +275,7 @@ This page allows you to control the creation of the remote DVEs. Each row in the
 
 Three main settings are available:
 
-- **Auto Enable Remotes**: The default state for newly configured remotes. When this is enabled, if the driver detects a new remote, a new DVE element will automatically be created.
+- **Auto Enable Remotes**: The default state for newly configured remotes. When this is enabled, if the connector detects a new remote, a new DVE element will automatically be created.
 - **Auto Delete Remote DVEs**: When this is enabled, if the remote is deactivated or removed in the iDirect NMS, the DVE element will automatically be deleted in DataMiner. When this is disabled, you can delete the DVE manually by clicking the **Delete Element** button in the DVE.
 - **Create DVE for Deactivated Remotes**: When this is disabled, deactivated remotes are treated the same way as removed remotes: no DVE element will be created. Enable this setting if you also want an element for deactivated remotes.
 
@@ -289,7 +289,7 @@ This page allows you to control the creation of the network DVEs. Each row in th
 
 Two main settings are available:
 
-- **Auto Enable Networks**: The default state for newly configured networks. When this is enabled, if the driver detects a new network, a new DVE element will automatically be created.
+- **Auto Enable Networks**: The default state for newly configured networks. When this is enabled, if the connector detects a new network, a new DVE element will automatically be created.
 - **Auto Delete Network DVEs**: When this is enabled, if the network is removed in the iDirect NMS, the DVE element will automatically be deleted in DataMiner.
 
 ### Chassis page
@@ -308,7 +308,7 @@ This page allows you to control the creation of the linecard DVEs. Each row in t
 
 Two main settings are available:
 
-- **Auto Enable Linecards**: The default state for newly configured linecards. When this is enabled, if the driver detects a new linecard, a new DVE element will automatically be created.
+- **Auto Enable Linecards**: The default state for newly configured linecards. When this is enabled, if the connector detects a new linecard, a new DVE element will automatically be created.
 - **Auto Delete Linecard DVEs**: When this is enabled, if the linecard is removed in the iDirect NMS, the DVE element will automatically be deleted in DataMiner.
 
 ### Polling Status page
@@ -327,10 +327,10 @@ The IDirect Time Offset parameter can be used to correct a time difference (nega
 
 #### MySql.Data.dll
 
-This driver uses functionality from the MySql.Data.dll file that is only available in relatively recent versions. By default, an older version of this file exists in the folder *C:\Skyline DataMiner\ProtocolScripts\\*, and as such the driver will not work correctly initially. To solve this issue, copy the file *MySql.Data.dll* from the folder *C:\Skyline DataMiner\Files\\* to *C:\Skyline DataMiner\ProtocolScripts\\* and restart the element.
+This connector uses functionality from the MySql.Data.dll file that is only available in relatively recent versions. By default, an older version of this file exists in the folder *C:\Skyline DataMiner\ProtocolScripts\\*, and as such the connector will not work correctly initially. To solve this issue, copy the file *MySql.Data.dll* from the folder *C:\Skyline DataMiner\Files\\* to *C:\Skyline DataMiner\ProtocolScripts\\* and restart the element.
 
 #### \[10.0.x ranges\] DisplayColumn and Cassandra compliance
 
-The purpose of the display column in this driver is to maintain the trend/alarm history when entries of the tables are replaced (different primary keys), by linking the history data with the display key. This is a specific use case that allows the use of DisplayColumn in both MySQL and Cassandra.
+The purpose of the display column in this connector is to maintain the trend/alarm history when entries of the tables are replaced (different primary keys), by linking the history data with the display key. This is a specific use case that allows the use of DisplayColumn in both MySQL and Cassandra.
 
 For example, when a modem is physically replaced, the trend/alarm history can be maintained. The ID of the modem will change (primary key), but the user can set the display key to be the same as the previous one, thus maintaining the trend and alarm history.

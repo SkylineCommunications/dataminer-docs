@@ -4,7 +4,7 @@ uid: Connector_help_Arista_Routing_Manager
 
 # Arista Routing Manager
 
-This driver is used to aggregate routing data from Arista Manager elements. This aggregation is done using the Arista Routing Manager script. This script can be launched from Visual Overview or independently.
+This connector is used to aggregate routing data from Arista Manager elements. This aggregation is done using the Arista Routing Manager script. This script can be launched from Visual Overview or independently.
 
 ## About
 
@@ -19,7 +19,7 @@ This driver is used to aggregate routing data from Arista Manager elements. This
 
 | **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                                                                                                                                          | **Exported Components** |
 |-----------|---------------------|-------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|
-| 1.0.0.x   | No                  | Yes                     | \- AristaRoutingManagerScript: Automation script used to retrieve information from Arista Manager elements. - Arista Manager protocol (2.0.7.x): Contains routing information for this driver. | \-                      |
+| 1.0.0.x   | No                  | Yes                     | \- AristaRoutingManagerScript: Automation script used to retrieve information from Arista Manager elements. - Arista Manager protocol (2.0.7.x): Contains routing information for this connector. | \-                      |
 | 1.0.1.x   | No                  | Yes                     | Same as the previous range.                                                                                                                                                                    | \-                      |
 
 ## Configuration
@@ -28,7 +28,7 @@ This driver is used to aggregate routing data from Arista Manager elements. This
 
 #### Virtual Connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 
@@ -36,7 +36,7 @@ In order to aggregate routing information through the linked Automation script, 
 
 ### Redundancy
 
-Redundancy is not defined in the driver.
+Redundancy is not defined in the connector.
 
 ## How to Use
 

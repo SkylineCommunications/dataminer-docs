@@ -8,21 +8,21 @@ The **Marlink Blind Sector Platform** is a monitoring platform for iDirect Platf
 
 ## About
 
-This driver retrieves all elements using the iDirect Platform Virtual protocol and monitors a set of coordinate parameters present on these elements.
+This connector retrieves all elements using the iDirect Platform Virtual protocol and monitors a set of coordinate parameters present on these elements.
 
 Via element connections, the GPS coordinates of all remotes are shared between the "iDirect Platform" elements and the "Marlink Blind Sector Platform" element.
 
 Each time a parameter changes, the element will query a web service to check whether it is currently in a blind sector.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | N/A                         |
 
@@ -32,7 +32,7 @@ Each time a parameter changes, the element will query a web service to check whe
 
 #### HTTP main connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

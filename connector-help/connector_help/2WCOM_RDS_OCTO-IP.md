@@ -10,17 +10,17 @@ For more detailed information about the device, consult the following website: <
 
 ## About
 
-This device is capable of sending SNMP traps. Those traps are sent in case of system failures and are also sent as a heartbeat. The driver interprets these traps in order to determine the status of the device.
+This device is capable of sending SNMP traps. Those traps are sent in case of system failures and are also sent as a heartbeat. The connector interprets these traps in order to determine the status of the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -30,7 +30,7 @@ This device is capable of sending SNMP traps. Those traps are sent in case of sy
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

@@ -8,23 +8,23 @@ The Telestream Vantage software can be installed and run on a Windows server mac
 
 ## About
 
-This driver queries a SOAP interface available on the target machine.
+This connector queries a SOAP interface available on the target machine.
 
 Multiple different SOAP requests are daisy-chained to query for the list of configured workflows and jobs. Additional details are also retrieved for each **workflow** and **job** (including completion percentage and other metrics, such as the total execution time).
 
-The driver also queries the Vantage SOAP interface for the various **servers** available in the cluster and retrieves information for each of these machines, including their **service** **list**, state and metrics.
+The connector also queries the Vantage SOAP interface for the various **servers** available in the cluster and retrieves information for each of these machines, including their **service** **list**, state and metrics.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**               | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**               | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|-------------------------------|---------------------|-------------------------|
 | 1.0.0.x              | Initial version               | No                  | Yes                     |
 | 1.0.1.x              | Implemented redundant pooling | No                  | Yes                     |
 | 1.0.2.x \[SLC Main\] | Added unicode option.         | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Vantage 6.3                 |
 | 1.0.1.x          | Vantage 6.3                 |
@@ -36,7 +36,7 @@ The driver also queries the Vantage SOAP interface for the various **servers** a
 
 #### HTTP main connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -46,7 +46,7 @@ HTTP CONNECTION:
 
 #### HTTP secondary connection:
 
-This driver has a secondary connection and requires the following input during element creation.
+This connector has a secondary connection and requires the following input during element creation.
 
 HTTP CONNECTION:
 
@@ -56,11 +56,11 @@ HTTP CONNECTION:
 
 ### Configuration of Redundant Polling
 
-This driver supports redundant polling. If an HTTP request times out, a secondary connection will be used for a retry. In order to use this feature, you must configure the secondary HTTP connection.
+This connector supports redundant polling. If an HTTP request times out, a secondary connection will be used for a retry. In order to use this feature, you must configure the secondary HTTP connection.
 
 ## Usage
 
-Two main sets of pages are available in the driver. One set displays the **cluster information** (**servers** and **services**) and the other displays the **workflows** and **jobs** information.
+Two main sets of pages are available in the connector. One set displays the **cluster information** (**servers** and **services**) and the other displays the **workflows** and **jobs** information.
 
 Each set consists of two pages, one displaying the information in a **tree view** and the other displaying the **source tables** that contain all the data retrieved from the server. Users can monitor either page according to preference.
 

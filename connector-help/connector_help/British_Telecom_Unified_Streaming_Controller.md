@@ -4,7 +4,7 @@ uid: Connector_help_British_Telecom_Unified_Streaming_Controller
 
 # British Telecom Unified Streaming Controller
 
-This driver can be used to get an overview of the configured channels on origin servers, as well as to control the blackout state on a specific channel.
+This connector can be used to get an overview of the configured channels on origin servers, as well as to control the blackout state on a specific channel.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver can be used to get an overview of the configured channels on origin 
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -42,7 +42,7 @@ HTTP CONNECTION:
 
 ### Initialization
 
-To be able to start using this driver, you must specify the following AWS credentials on the **Configuration** page of the element:
+To be able to start using this connector, you must specify the following AWS credentials on the **Configuration** page of the element:
 
 - **Access Key**
 - **Secret Key**

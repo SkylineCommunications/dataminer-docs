@@ -4,15 +4,15 @@ uid: Connector_help_Spectracom_Epsilon_Clock_EC31M
 
 # Spectracom Epsilon Clock EC31M
 
-The **Spectracom Epsilon Clock EC31M** driver displays information related to the **Spectracom Epsilon Clock EC31M** clock distribution device.
+The **Spectracom Epsilon Clock EC31M** connector displays information related to the **Spectracom Epsilon Clock EC31M** clock distribution device.
 
 ## About
 
-This driver uses an **SNMP** interface to communicate with the Spectracom Epsilon Clock EC31M device.
+This connector uses an **SNMP** interface to communicate with the Spectracom Epsilon Clock EC31M device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**                                                                                          | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**                                                                                          | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|----------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x              | Initial version                                                                                          | Yes                 | Yes                     |
 | 1.0.1.x \[SLC Main\] | Based on 1.0.0.6. HTTP connection support implemented to support polling of data not available via SNMP. | Yes                 | Yes                     |
@@ -23,7 +23,7 @@ This driver uses an **SNMP** interface to communicate with the Spectracom Epsilo
 
 #### SNMP connection
 
-This driver uses an SNMP connection and requires the following input during element creation:
+This connector uses an SNMP connection and requires the following input during element creation:
 
 SNMP Connection:
 
@@ -37,7 +37,7 @@ SNMP Settings:
 
 #### HTTP connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

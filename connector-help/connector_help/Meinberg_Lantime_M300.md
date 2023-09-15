@@ -4,22 +4,22 @@ uid: Connector_help_Meinberg_Lantime_M300
 
 # Meinberg Lantime M300
 
-With this driver, you can gather and view information of the device **Meinberg Lantime M300**, as well as configure the device.
+With this connector, you can gather and view information of the device **Meinberg Lantime M300**, as well as configure the device.
 
 ## About
 
-This SNMP driver is used to monitor and configure the **Meinberg Lantime M300** device.
+This SNMP connector is used to monitor and configure the **Meinberg Lantime M300** device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.1.x              | Initial version | No                  | Yes                     |
 | 1.0.1.x \[SLC Main\] | DCF integration | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**          |
+| **Range** | **Device Firmware Version**          |
 |------------------|--------------------------------------|
 | 1.0.1.x          | 6.20.012 (see "Notes" section below) |
 
@@ -29,7 +29,7 @@ This SNMP driver is used to monitor and configure the **Meinberg Lantime M300** 
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -43,7 +43,7 @@ SNMP Settings:
 
 #### SCP connection
 
-This driver uses an SCP connection, which is maintained internally by the driver:
+This connector uses an SCP connection, which is maintained internally by the connector:
 
 SCP CONNECTION:
 
@@ -108,7 +108,7 @@ This page displays the web interface of the device. Note that the client machine
 
 ## DataMiner Connectivity Framework
 
-The **1.0.1.x** driver range of the **Meinberg Lantime M300** protocol supports the usage of DCF and can only be used on a DMA with **8.5.8.5** as the minimum version.
+The **1.0.1.x** connector range of the **Meinberg Lantime M300** protocol supports the usage of DCF and can only be used on a DMA with **8.5.8.5** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 

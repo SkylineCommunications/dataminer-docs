@@ -4,15 +4,15 @@ uid: Connector_help_National_TeleConsultants_DINGO_Media_Status
 
 # National TeleConsultants DINGO Media Status
 
-With the **NTC DINGO Media Status** driver, you can monitor information about **SeaChange Spot** **media** problems, including conflicts and similar issues. The driver also allows alarm monitoring and trending of those problems.
+With the **NTC DINGO Media Status** connector, you can monitor information about **SeaChange Spot** **media** problems, including conflicts and similar issues. The connector also allows alarm monitoring and trending of those problems.
 
 ## About
 
 The Media Status driver will periodically poll the database to retrieve the media status information. By default, this happens every 30 seconds.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 
@@ -20,11 +20,11 @@ The Media Status driver will periodically poll the database to retrieve the medi
 
 ### Creation
 
-This driver uses a virtual connection and does not need any user input during element creation.
+This connector uses a virtual connection and does not need any user input during element creation.
 
 ### Installation
 
-For the installation of this driver, make sure the following DLLs are available on the system: *SLDatabase.dll*, *System.Data.dll* and *System.Xml.dll*.
+For the installation of this connector, make sure the following DLLs are available on the system: *SLDatabase.dll*, *System.Data.dll* and *System.Xml.dll*.
 
 ## Usage
 

@@ -6,7 +6,7 @@ uid: Connector_help_Aspera_Orchestrator
 
 This protocol is used to interface with the Aspera Orchestrator platform. The Orchestrator platform uses containers as workflows, which consist of a series of connected steps, to automate the content collection, processing, and distribution. A workflow defines the series of actions to take. A workflow is started when a work order is created and launched. A work order is a runtime instance of a workflow, whereas a work step represents the smaller container in the system configuration.
 
-The driver monitors all workflows, work orders and work steps. It also allows you to create new work orders and to monitor work orders from certain workflows.
+The connector monitors all workflows, work orders and work steps. It also allows you to create new work orders and to monitor work orders from certain workflows.
 
 ## About
 
@@ -34,7 +34,7 @@ The driver monitors all workflows, work orders and work steps. It also allows yo
 
 #### HTTP Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

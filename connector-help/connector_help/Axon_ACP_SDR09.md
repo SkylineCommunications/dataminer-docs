@@ -6,7 +6,7 @@ uid: Connector_help_Axon_ACP_SDR09
 
 The **SDR09** is a dual-channel distribution amplifier, with channel A having 3 outputs and channel B having 4 outputs. The SDR09 re-clocks the input signal to ensure stability of the outputs.
 
-The **Axon ACP SDR09** driver is used to monitor and display status information of the SDR09 card.
+The **Axon ACP SDR09** connector is used to monitor and display status information of the SDR09 card.
 
 ## About
 
@@ -34,7 +34,7 @@ The **Axon ACP SDR09** driver is used to monitor and display status information 
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -46,7 +46,7 @@ SERIAL CONNECTION:
 
 #### Serial IP Connection - Events Connection
 
-This driver uses a smart-serial connection and requires the following input during element creation:
+This connector uses a smart-serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -74,7 +74,7 @@ The element has the following pages:
 
 ## DataMiner Connectivity Framework
 
-The **1.0.0.x** driver range of the Axon ACP 2IX08 protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
+The **1.0.0.x** connector range of the Axon ACP 2IX08 protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 

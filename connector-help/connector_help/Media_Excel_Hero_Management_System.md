@@ -4,23 +4,23 @@ uid: Connector_help_Media_Excel_Hero_Management_System
 
 # Media Excel Hero Management System
 
-With this driver, you can monitor the Hero Management System and view events on and information about the available devices and channels. It is also possible to start and stop any channel.
+With this connector, you can monitor the Hero Management System and view events on and information about the available devices and channels. It is also possible to start and stop any channel.
 
 ## About
 
-This driver uses HTTP (through a SOAP web service) and SNMP in order to monitor a Hero Management System. SOAP calls are used to retrieve the groups, devices, channels and events from the system, and SNMP is used to retrieve other system-specific information.
+This connector uses HTTP (through a SOAP web service) and SNMP in order to monitor a Hero Management System. SOAP calls are used to retrieve the groups, devices, channels and events from the system, and SNMP is used to retrieve other system-specific information.
 
 The Hero Management System is a centralized network management solution, designed to cooperate with all Media Excel HERO products. It allows remote management of transcoding devices.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 3.26.139.58                 |
 
@@ -30,7 +30,7 @@ The Hero Management System is a centralized network management solution, designe
 
 #### HTTP connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -39,7 +39,7 @@ HTTP CONNECTION:
 
 #### SNMP connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

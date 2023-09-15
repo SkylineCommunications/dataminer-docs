@@ -34,7 +34,7 @@ The Imagine Communications demux card automatically senses HD/SD-SDI serial vide
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -46,7 +46,7 @@ SERIAL CONNECTION:
 
 #### Serial PortDev Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -69,7 +69,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver consists of the following data pages:
+The element created with this connector consists of the following data pages:
 
 - **Alarms**: Contains all alarm parameters. The state of the alarms can be *Alarm Inactive* or *Alarm Active*. Alarm monitoring is available for these parameters. With the buttons **Enable** and **Disable** you can change the monitoring state of the device card.
 - **Input**: Contains page buttons to the **AudioProc**, **Multiplex**, **EDH** and **Other** subpages, where you can view input status information and configure related settings.
@@ -79,4 +79,4 @@ The element created with this driver consists of the following data pages:
 
 ## Notes
 
-As this is a serial driver with smart-serial connection, there has to be a connection to a real device. If there is a change on the device, a response will be pushed to the DMA even if no poll request is sent.
+As this is a serial connector with smart-serial connection, there has to be a connection to a real device. If there is a change on the device, a response will be pushed to the DMA even if no poll request is sent.

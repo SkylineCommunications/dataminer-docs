@@ -32,7 +32,7 @@ The Telefonica por Cable S.A de C.V. Geomarketing DB protocol can be used to ret
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 

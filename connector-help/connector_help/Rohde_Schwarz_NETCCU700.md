@@ -4,21 +4,21 @@ uid: Connector_help_Rohde_Schwarz_NETCCU700
 
 # Rohde Schwarz NETCCU700
 
-This driver is developed for devices such as the **Rohde Schwarz NETCCU 700 Controller Console**. The driver polls parameters from the device to enable monitoring of the transmitters.
+This connector is developed for devices such as the **Rohde Schwarz NETCCU 700 Controller Console**. The connector polls parameters from the device to enable monitoring of the transmitters.
 
 ## About
 
 With three timers, all parameters of the device are polled. The parameters are displayed on several different pages. Some parameters allow you to configure settings.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                             | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                             | **DCF Integration** | **Cassandra Compliant** |
 |------------------|---------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                             | Yes                 | No                      |
 | 1.0.1.x          | Added DVEs                                  | Yes                 | No                      |
 | 1.0.2.x          | Added a new button "Switch Over with Reset" | Yes                 | No                      |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol**                  | **Description**    |
 |----------------------------------------|--------------------|
@@ -33,7 +33,7 @@ With three timers, all parameters of the device are polled. The parameters are d
 
 #### SNMP connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

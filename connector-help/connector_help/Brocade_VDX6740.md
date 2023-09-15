@@ -8,19 +8,19 @@ The Brocade VDX6740 and the Brocade VDX family of switches deliver the performan
 
 ## About
 
-This driver uses SNMP to communicate with the device.
+This connector uses SNMP to communicate with the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
-| 1.0.0.1          | Initial version | No                  | Yes                     |
+| 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
-| 1.0.0.1          | 6.0.1a.                     |
+| 1.0.0.x          | 6.0.1a.                     |
 
 ## Installation and configuration
 
@@ -28,7 +28,7 @@ This driver uses SNMP to communicate with the device.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

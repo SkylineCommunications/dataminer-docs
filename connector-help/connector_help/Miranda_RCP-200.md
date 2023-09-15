@@ -4,7 +4,7 @@ uid: Connector_help_Miranda_RCP-200
 
 # Miranda RCP-200
 
-This driver can be used as a remote controller for Miranda RCP-200 devices.
+This connector can be used as a remote controller for Miranda RCP-200 devices.
 
 ## About
 
@@ -45,7 +45,7 @@ Response:
 ### Creation
 
 ***Virtual connection***
-This driver uses a virtual connection and does not need any user information.
+This connector uses a virtual connection and does not need any user information.
 
 ### Configuration
 
@@ -65,7 +65,7 @@ Contains controls to easily simulate the generation of a keyboard page and inter
 
 Table containing the list of elements for which DMA needs to act as a gateway for RCP-200.
 
-Some controls are present to select a protocol driver from a dropdown list. And then, from a second dropdown list, to select one of the elements using that protocol driver and add it to the table.
+Some controls are present to select a connector from a dropdown list. And then, from a second dropdown list, to select one of the elements using that connector and add it to the table.
 
 ### Pages
 

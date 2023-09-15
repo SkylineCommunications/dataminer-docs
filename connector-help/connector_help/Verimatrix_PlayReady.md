@@ -4,23 +4,23 @@ uid: Connector_help_Verimatrix_PlayReady
 
 # Verimatrix PlayReady
 
-This driver displays and monitors the configuration and general information of the **Verimatrix PlayReady** **playout server.**
+This connector displays and monitors the configuration and general information of the **Verimatrix PlayReady** **playout server.**
 
 ## About
 
-The Verimatrix PlayReady driver retrieves general and configuration information from the device through **SNMP**. It captures traps and displays alarms on important parameters if these occur.
+The Verimatrix PlayReady connector retrieves general and configuration information from the device through **SNMP**. It captures traps and displays alarms on important parameters if these occur.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
-| 1.0.0.1          | Initial version | No                  | Yes                     |
+| 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
-| 1.0.0.1          | v3.6                        |
+| 1.0.0.x          | v3.6                        |
 
 ## Installation and configuration
 
@@ -28,7 +28,7 @@ The Verimatrix PlayReady driver retrieves general and configuration information 
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

@@ -6,7 +6,7 @@ uid: Connector_help_Axon_ACP_HLD120
 
 The **HLD120** card is a long-time HD-SDI JPEG2000 compressed video delay. It can store and delay HD material, including all blanking, as RAW data. It adds a bug inserter for channel ident applications but also as an emergency overlay with its full frame capability.
 
-The Axon ACP HLD120 driver is used to monitor and configure **HLD120** cards.
+The Axon ACP HLD120 connector is used to monitor and configure **HLD120** cards.
 
 ## About
 
@@ -34,7 +34,7 @@ The Axon ACP HLD120 driver is used to monitor and configure **HLD120** cards.
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -46,7 +46,7 @@ SERIAL CONNECTION:
 
 #### Serial Broadcast Connection
 
-This driver uses a smart serial connection and requires the following input during element creation:
+This connector uses a smart serial connection and requires the following input during element creation:
 
 SMART SERIAL CONNECTION:
 
@@ -80,7 +80,7 @@ This element has the following data pages:
 
 ## DataMiner Connectivity Framework
 
-The **1.0.0.x** driver range of the Axon ACP HLD120 protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
+The **1.0.0.x** connector range of the Axon ACP HLD120 protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 

@@ -4,7 +4,7 @@ uid: Connector_help_Infinera_TNMS_-_NE
 
 # Infinera TNMS - NE
 
-The Infinera TNMS is a Transcend Network Management System (NMS) that can provide full end-to-end network and service management. This driver allows you to monitor all the ports and corresponding alarms for a specific network element.
+The Infinera TNMS is a Transcend Network Management System (NMS) that can provide full end-to-end network and service management. This connector allows you to monitor all the ports and corresponding alarms for a specific network element.
 
 ## About
 
@@ -18,7 +18,7 @@ The Infinera TNMS is a Transcend Network Management System (NMS) that can provid
 
 ### Connections
 
-The elements using this driver are automatically created by the parent element [Infinera TNMS](xref:Connector_help_Infinera_TNMS).
+The elements using this connector are automatically created by the parent element [Infinera TNMS](xref:Connector_help_Infinera_TNMS).
 
 ## How to use
 
@@ -28,4 +28,4 @@ The element has several data pages:
 - The **Ports** page contains the Ports table.
 - The **Alarms** page shows an overview of the active alarms.
 
-**SNMP traps** are implemented in the driver to update the **Alarms table**.
+**SNMP traps** are implemented in the connector to update the **Alarms table**.

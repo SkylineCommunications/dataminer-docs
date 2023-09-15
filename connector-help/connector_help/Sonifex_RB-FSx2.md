@@ -4,7 +4,7 @@ uid: Connector_help_Sonifex_RB-FSx2
 
 # Sonifex RB-FSx2
 
-The Sonifex RB-FSx2 driver can be used to monitor and configure 2 different **Sonifex** audio failover switch devices:
+The Sonifex RB-FSx2 connector can be used to monitor and configure 2 different **Sonifex** audio failover switch devices:
 
 - The **RB-FS42** audio switch: 4 IO channels and 2 standby channels.
 - The **RB-FS82** audio switch: 8 IO channels and 2 standby channels.
@@ -35,7 +35,7 @@ The Sonifex RB-FSx2 driver can be used to monitor and configure 2 different **So
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -61,7 +61,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-This element created with this driver consists of the following data pages:
+This element created with this connector consists of the following data pages:
 
 - **General**: Displays the **Device Version** and the **PSUs** status.
 - **Channels**: Displays the status of the input, output and standby channels.

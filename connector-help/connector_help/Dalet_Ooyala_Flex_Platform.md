@@ -4,7 +4,7 @@ uid: Connector_help_Dalet_Ooyala_Flex_Platform
 
 # Dalet Ooyala Flex Platform
 
-This driver integrates with the Ooyala Flex platform. It uses the REST API to retrieve information from the platform. It is capable of acting as a simple server listening for messages and sending basic replies.
+This connector integrates with the Ooyala Flex platform. It uses the REST API to retrieve information from the platform. It is capable of acting as a simple server listening for messages and sending basic replies.
 
 ## About
 
@@ -35,7 +35,7 @@ This driver integrates with the Ooyala Flex platform. It uses the REST API to re
 
 #### Smart Serial IP Connection
 
-This driver uses a smart serial connection and requires the following input during element creation:
+This connector uses a smart serial connection and requires the following input during element creation:
 
 SMART SERIAL CONNECTION:
 
@@ -46,7 +46,7 @@ SMART SERIAL CONNECTION:
 
 #### HTTP Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -64,7 +64,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## Usage
 
-The element created with this driver consists of the following data pages:
+The element created with this connector consists of the following data pages:
 
 - **General**: Allows you to configure the **Username** and **Password** credentials to authenticate with the API.
 - **Resources/Actions/Profiles**: These pages each contain a table with information on resources, actions and profiles, respectively.

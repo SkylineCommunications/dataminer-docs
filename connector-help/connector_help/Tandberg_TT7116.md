@@ -14,7 +14,7 @@ The Tandberg TT7116 is an **IPStreamer** device.
 
 ### Creation
 
-This driver uses both a serial connection (HTTP) and an SNMP connection and needs the following user information:
+This connector uses both a serial connection (HTTP) and an SNMP connection and requires the following input during element creation:
 
 **SERIAL CONNECTION**:
 

@@ -2,20 +2,21 @@
 uid: Connector_help_CEFD_CDD-890_SNMP
 ---
 
-CEFD CDD-890 SNMP
+# CEFD CDD-890 SNMP
 
 The CDM-890 multi-receiver router serves as the hub expansion utility component of Comtech EF Data's Advanced VSAT Series group of products.
 
 ## About
 
-The CEFD CDD-890 driver is used to monitor and control a CEFD CDD-890 device. This driver is intended to get/set information from/to the device via an Element in a DataMiner System, using SNMP commands.
+The CEFD CDD-890 connector is used to monitor and control a CEFD CDD-890 device. This connector is intended to get/set information from/to the device via an Element in a DataMiner System, using SNMP commands.
 
 ## Installation and configuration
 
 ### Creation
 
-***SNMP connection***
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+#### SNMP connection - Main
+
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -25,8 +26,8 @@ SNMP CONNECTION:
 SNMP Settings:
 
 - Port number: the port of the connected device (default: 161)
-- Get community string: The community string used when reading values from the device. The default value in the driver is *public*.
-- Set community string: The community string used when setting values on the device. The default value in the driver is *private*.
+- Get community string: The community string used when reading values from the device. The default value in the connector is *public*.
+- Set community string: The community string used when setting values on the device. The default value in the connector is *private*.
 
 ## Usage
 

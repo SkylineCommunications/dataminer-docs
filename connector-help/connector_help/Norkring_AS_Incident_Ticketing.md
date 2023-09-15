@@ -4,11 +4,11 @@ uid: Connector_help_Norkring_AS_Incident_Ticketing
 
 # Norkring AS Incident Ticketing
 
-This driver provides an interface between DataMiner and the Norkring AS Service Desk. It polls, creates and/or updates **Incidents**, **PAINs** and **Rodlampelogger** (red light logs).
+This connector provides an interface between DataMiner and the Norkring AS Service Desk. It polls, creates and/or updates **Incidents**, **PAINs** and **Rodlampelogger** (red light logs).
 
 ## About
 
-This driver connects DataMiner with the Norkring AS Service Desk Ticketing system. An element connected to SD will contain all the active tickets. Creating tickets in DataMiner should ideally be done by using the hyperlinks in the Alarm Console.
+This connector connects DataMiner with the Norkring AS Service Desk Ticketing system. An element connected to SD will contain all the active tickets. Creating tickets in DataMiner should ideally be done by using the hyperlinks in the Alarm Console.
 
 ## Installation and configuration
 
@@ -114,12 +114,12 @@ The **Service Name** and **Service Outage Stop** value is displayed for each **i
 
 The cache tables store the write requests that have been made until they are processed by ServiceDesk or have failed to be sent too many times. Each operation has its own cache table (CT), and their order of processing is as follows:
 
-1.  **Rodlampelogg CT**
-2.  **Rodlampelogg Close CT**
-3.  **Incident Creation CT**
-4.  **Incident Update CT**
-5.  **Incident End CT**
-6.  **Incident Close CT**
+1. **Rodlampelogg CT**
+2. **Rodlampelogg Close CT**
+3. **Incident Creation CT**
+4. **Incident Update CT**
+5. **Incident End CT**
+6. **Incident Close CT**
 
 This is the order in which each cache table will be emptied before the next one is processed. Tickets that have failed but still have retries left and have not reached their retry delay will be skipped. Which means that if no valid requests are found in the first table, the second one will be checked and so on.
 

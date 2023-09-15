@@ -8,17 +8,17 @@ The Quintech Xtreme 32 is a dual band matrix switching system featuring 32 ports
 
 ## About
 
-This is an SNMPv2 driver that can be used to monitor and configure the Quintech Xtreme 32 matrix switching systems.
+This is an SNMPv2 connector that can be used to monitor and configure the Quintech Xtreme 32 matrix switching systems.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 2.15.15                     |
 
@@ -28,7 +28,7 @@ This is an SNMPv2 driver that can be used to monitor and configure the Quintech 
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

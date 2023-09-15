@@ -4,7 +4,7 @@ uid: Connector_help_Aurora_Network_AT3554
 
 # Aurora Network AT3554
 
-The Aurora Network AT3554 is a DVE created by the Aurora Network CX3001 driver. It is created by each AT3554 analog transmitter available.
+The Aurora Network AT3554 is a DVE created by the Aurora Network CX3001 connector. It is created by each AT3554 analog transmitter available.
 
 ## About
 
@@ -15,9 +15,9 @@ The information displayed in the main element is delivered in four pages:
 - The **Configuration** page contains configuration settings specific to the AT3554 slot.
 - The **Alarms** **Configuration** page contains configuration settings specific to the AT3554 slot.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 2.0.0.x          | Initial Version | No                  | Yes                     |
 
@@ -25,7 +25,7 @@ The information displayed in the main element is delivered in four pages:
 
 ### Creation
 
-This driver is automatically created by the Aurora CX3001 driver. For each AT3554 transmitter found in the system, a virtual element will be created.
+This connector is automatically created by the Aurora CX3001 connector. For each AT3554 transmitter found in the system, a virtual element will be created.
 
 ### General
 

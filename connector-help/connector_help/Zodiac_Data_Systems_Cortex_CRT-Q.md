@@ -4,9 +4,9 @@ uid: Connector_help_Zodiac_Data_Systems_Cortex_CRT-Q
 
 # Zodiac Data Systems Cortex CRT-Q
 
-This driver can be used to retrieve information from the **Cortex Command Ranging and Telemetry Unit** of the vendor **Zodiac Data Systems**. This device is an integrated command ranging and telemetry baseband system for satellite ground control stations. It performs telemetry processing (payload data processing up to 20 Mbps, LEOP and housekeeping operations), satellite telecommanding and ranging for GEO, MEO and LEO spacecraft.
+This connector can be used to retrieve information from the **Cortex Command Ranging and Telemetry Unit** of the vendor **Zodiac Data Systems**. This device is an integrated command ranging and telemetry baseband system for satellite ground control stations. It performs telemetry processing (payload data processing up to 20 Mbps, LEOP and housekeeping operations), satellite telecommanding and ranging for GEO, MEO and LEO spacecraft.
 
-This driver uses serial communication over TCP/IP. It follows the structure of the commands and responses described in the documentation of the Cortex STI 100013_CRT. The protocol will sequentially send serial commands over TCP/IP and retrieve the responses that will be mapped onto displayed parameters to show the device status.
+This connector uses serial communication over TCP/IP. It follows the structure of the commands and responses described in the documentation of the Cortex STI 100013_CRT. The protocol will sequentially send serial commands over TCP/IP and retrieve the responses that will be mapped onto displayed parameters to show the device status.
 
 ## About
 
@@ -36,26 +36,26 @@ This driver uses serial communication over TCP/IP. It follows the structure of t
 
 #### Serial (Cortex Monitoring Data) Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
 - Interface connection:
 
   - **IP address/host**: The polling IP of the device.
-  - **IP port**: Required. By default, the driver will use the port 3000, CORTEX Monitoring data (MON).
+  - **IP port**: Required. By default, the connector will use the port 3000, CORTEX Monitoring data (MON).
   - **Bus address**: Not required. By default, the bus address of the device is disabled.
 
 #### Serial (IP Connection - Cortex Control Data) Connection 1
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
 - Interface connection:
 
   - **IP address/host**: The polling IP of the device.
-  - **IP port**: Required. By default, the driver will use the port 3001, CORTEX Control data (CRTL).
+  - **IP port**: Required. By default, the connector will use the port 3001, CORTEX Control data (CRTL).
   - **Bus address**: Not required. By default, the bus address of the device is disabled.
 
 ### Web Interface
@@ -64,6 +64,6 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to Use
 
-This driver shows the general parameters and alarms for this device. It also shows the different parameters for the modules in tables. It allows you see which modules were detected in the device, and how the TMUs are associated.
+This connector shows the general parameters and alarms for this device. It also shows the different parameters for the modules in tables. It allows you see which modules were detected in the device, and how the TMUs are associated.
 
-A page exists per supported module (TMU, IFR, IFM, RAU, DCU). The driver will export different drivers based on the availability of those modules. A list of the supported modules can be found in the "System Info" table above.
+A page exists per supported module (TMU, IFR, IFM, RAU, DCU). The connector will export different connectors based on the availability of those modules. A list of the supported modules can be found in the "System Info" table above.

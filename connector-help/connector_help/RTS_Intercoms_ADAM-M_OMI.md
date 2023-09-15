@@ -4,7 +4,7 @@ uid: Connector_help_RTS_Intercoms_ADAM-M_OMI
 
 # RTS Intercoms ADAM-M OMI
 
-This driver is designed to monitor and configure the ADAM-M OMI card. This card is available in configurations up to 64 bidirectional ports in increments of 16 ports on a single card. The OMI card can be expanded from the base configuration of 16 ports through software upgrades. In addition to the standard RJ45 Ethernet connection, fiber connectivity is also supported with the addition of optimal single mode or multimode modules. A single ADAM-M frame can support up to 512 OMNEO ports, providing a highly compact single-frame solution for many system installs.
+This connector is designed to monitor and configure the ADAM-M OMI card. This card is available in configurations up to 64 bidirectional ports in increments of 16 ports on a single card. The OMI card can be expanded from the base configuration of 16 ports through software upgrades. In addition to the standard RJ45 Ethernet connection, fiber connectivity is also supported with the addition of optimal single mode or multimode modules. A single ADAM-M frame can support up to 512 OMNEO ports, providing a highly compact single-frame solution for many system installs.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver is designed to monitor and configure the ADAM-M OMI card. This card 
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

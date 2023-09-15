@@ -4,19 +4,19 @@ uid: Connector_help_Vertex_1230
 
 # Vertex 1230
 
-The Vertex 1230 driver is a **virtual** driver that can interact with **Ethernet remote I/O control** devices.
+The Vertex 1230 connector is a **virtual** connector that can interact with **Ethernet remote I/O control** devices.
 
-Note: Version 2.0.0.1 of the driver is designed to work with **Moxa ioLogic E1214**.
+Note: Version 2.0.0.1 of the connector is designed to work with **Moxa ioLogic E1214**.
 
 The Moxa ioLogic E1214 manages 6 digital input channels and 6 relay output channels supporting a 3k VDC isolation, supports Modbus/TCP protocol, and handles 2 Ethernet ports to be able to switch for daisy chain topologies.
 
 ## About
 
-The driver has been designed to display information on and allow management of Ethernet remote I/O control devices.
+The connector has been designed to display information on and allow management of Ethernet remote I/O control devices.
 
 Note: To be able to manage the configuration, you must make sure **Ambient temperature status** is set to *On*, and **Mode** is set to *Remote*.
 
-### Ranges of the driver
+### Version Info
 
 <table>
 <colgroup>
@@ -61,7 +61,7 @@ Note: To be able to manage the configuration, you must make sure **Ambient tempe
 
 ## Installation and configuration
 
-This driver uses a virtual connection.
+This connector uses a virtual connection.
 
 Element connections between Ethernet remote I/O devices must be configured when the element is created in order to establish the input/output relationship between channels.
 

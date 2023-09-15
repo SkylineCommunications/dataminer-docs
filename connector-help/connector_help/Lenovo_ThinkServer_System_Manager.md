@@ -8,13 +8,13 @@ The ThinkSystem System Manager is the management controller for Lenovo ThinkSyst
 
 ## About
 
-This driver is used to retrieve the required data from the Lenovo ThinkServer System Manager device.
+This connector is used to retrieve the required data from the Lenovo ThinkServer System Manager device.
 
 It uses the Redfish REST API to get all the associated parameters for this type of device.
 
 ### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial Version | No                  | Yes                     |
 
@@ -22,7 +22,7 @@ It uses the Redfish REST API to get all the associated parameters for this type 
 
 ### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 8.82                        |
 
@@ -32,7 +32,7 @@ It uses the Redfish REST API to get all the associated parameters for this type 
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

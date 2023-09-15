@@ -4,7 +4,7 @@ uid: Connector_help_Telenor_EPM_Collector
 
 # Telenor EPM Collector
 
-This driver is used to gather STB data coming from MAM events and Agama firehose export files. The MAM events are forwarded to the collector by elements using the **Telenor EPM MAM Consumer** driver. The Agama files are forwarded to the collector by elements using the **Telenor EPM Agama Consumer** driver. This data is then aggregated to higher topology levels in the **Telenor EPM Manager** driver. Because of the large amount of data they contain, the collector elements are not intended to be opened. The manager UI gives better access to the data.
+This connector is used to gather STB data coming from MAM events and Agama firehose export files. The MAM events are forwarded to the collector by elements using the **Telenor EPM MAM Consumer** driver. The Agama files are forwarded to the collector by elements using the **Telenor EPM Agama Consumer** driver. This data is then aggregated to higher topology levels in the **Telenor EPM Manager** driver. Because of the large amount of data they contain, the collector elements are not intended to be opened. The manager UI gives better access to the data.
 
 ## About
 
@@ -18,7 +18,7 @@ This driver is used to gather STB data coming from MAM events and Agama firehose
 
 | **Range** | **Supported Firmware**                                           |
 |-----------|------------------------------------------------------------------|
-| 1.0.0.x   | There are no known firmware versions that the driver depends on. |
+| 1.0.0.x   | There are no known firmware versions that the connector depends on. |
 
 ### System Info
 
@@ -32,20 +32,20 @@ This driver is used to gather STB data coming from MAM events and Agama firehose
 
 #### IP Connection - Agama Data
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
-- **IP address/host**: The driver will be listening for incoming data from the Agama consumer, so this field must be set to *any*.
+- **IP address/host**: The connector will be listening for incoming data from the Agama consumer, so this field must be set to *any*.
 - **IP port**: The IP port of the server where data from the Agama consumer will enter. You can freely choose the value, but remember to open the TCP port in the firewall if the data comes from a different server.
 
 #### IP Connection - MAM Data
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
-- **IP address/host**: The driver will be listening for incoming data from the MAM consumer, so this field must be set to *any*.
+- **IP address/host**: The connector will be listening for incoming data from the MAM consumer, so this field must be set to *any*.
 - **IP port**: The IP port of the server where data from the MAM consumer will enter. You can freely choose the value, but remember to open the TCP port in the firewall if the data comes from a different server.
 
 ### Initialization
@@ -54,7 +54,7 @@ On the **General** page, configure the **County ID** for which this collector wi
 
 In the **Provisioning Share Location** parameters, fill in the location of the LPI and SDP folders along with the credentials to access these.
 
-With the **Starting Period Minute**, indicate when the first new period with Agama data after the hour starts (e.g. if a new period starts every xx:01, set the parameter to 1). Indicate in **Period Length** how long a period takes (e.g. 4 minutes). After a period window is closed, it will take some time before the Agama files are created and transferred to the collector. With **Period Margin**, you can configure how long the driver should wait for these files before filling in default N/A values. After the period margin has passed, data will be written into the parameter tables within 10 seconds.
+With the **Starting Period Minute**, indicate when the first new period with Agama data after the hour starts (e.g. if a new period starts every xx:01, set the parameter to 1). Indicate in **Period Length** how long a period takes (e.g. 4 minutes). After a period window is closed, it will take some time before the Agama files are created and transferred to the collector. With **Period Margin**, you can configure how long the connector should wait for these files before filling in default N/A values. After the period margin has passed, data will be written into the parameter tables within 10 seconds.
 
 The consumer elements could be located on a different server and the collector element has the *any* IP configured on the connection settings. As a server could have different network cards, it is not easy to automatically detect which IP the consumers should use to reach the collector. This can be configured in the appropriate **Listening Socket** parameters. Fill in the socket that the consumers need to use to reach the collector in the format *IP:Port*. The port needs to be exactly the same as defined in the connections configured during element creation.
 

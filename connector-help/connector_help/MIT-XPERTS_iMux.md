@@ -30,9 +30,9 @@ For monitoring and alarming, an SNMP connection is used. The device supports som
 
 After you create the element, you still have to set the user credentials to access the device. To do so:
 
-1.  Go to the **Overview** page, and click **Connection Options.**
-2.  Enter the username, password and device IP address.
-3.  Click the **Connect** button.
+1. Go to the **Overview** page, and click **Connection Options.**
+1. Enter the username, password and device IP address.
+1. Click the **Connect** button.
 
 Note that this is only necessary immediately after the element is created or when these values change.
 

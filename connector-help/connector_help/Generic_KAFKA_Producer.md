@@ -34,11 +34,11 @@ The **Generic KAFKA Producer** is a generic solution to send alarms and paramete
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 #### SNMP Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -56,7 +56,7 @@ On the **General** page of the element, you must authenticate to a Kafka broker 
 - **Broker:** The server's address.
 - **SASL User:** The username for use with PLAIN.
 - **SASL Password:** The password for use with PLAIN.
-- **Connect:** This button allows you to force the connection to a broker. By default, the driver tries to establish the connection by polling metadata from the broker in order to check the connectivity.
+- **Connect:** This button allows you to force the connection to a broker. By default, the connector tries to establish the connection by polling metadata from the broker in order to check the connectivity.
 
 ### Redundancy
 

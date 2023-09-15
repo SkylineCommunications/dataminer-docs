@@ -24,7 +24,7 @@ This manager connector will install the **DataMiner Object Model** application u
 
 | **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                             | **Exported Components** |
 |-----------|---------------------|-------------------------|---------------------------------------------------|-------------------------|
-| 1.0.0.x   | No                  | Yes                     | This driver is part of the Standard PLM solution. | \-                      |
+| 1.0.0.x   | No                  | Yes                     | This connector is part of the Standard PLM solution. | \-                      |
 
 ## Configuration
 
@@ -32,7 +32,7 @@ This manager connector will install the **DataMiner Object Model** application u
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 
@@ -84,7 +84,7 @@ It is also possible to create a default PLM instance using the **Create PLM** wi
 
 ## Notes
 
-This driver is installed along with the Standard PLM Solution and should only be used with this solution.
+This connector is installed along with the Standard PLM Solution and should only be used with this solution.
 
 ### PLM Processes
 

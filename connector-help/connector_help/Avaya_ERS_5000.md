@@ -4,7 +4,7 @@ uid: Connector_help_Avaya_ERS_5000
 
 # Avaya ERS 5000
 
-The Avaya ERS 5000 is a high-performance stackable Ethernet routing switch. This driver is designed to monitor this device via SNMP.
+The Avaya ERS 5000 is a high-performance stackable Ethernet routing switch. This connector is designed to monitor this device via SNMP.
 
 ## About
 
@@ -32,7 +32,7 @@ The Avaya ERS 5000 is a high-performance stackable Ethernet routing switch. This
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP Connection:
 
@@ -63,4 +63,4 @@ The element consists of the following data pages:
 - **CSU**: Allows you to manage CSU mode.
 - **Chassis**: Allows you to manage the device configuration. More detailed information is available via page buttons.
 - **Chassis S5**: Allows you to manage the ERS 5000 chassis configuration. Several page buttons are available that show specific tables.
-- **SNMP Polling Control**: Allows you to manage the SNMP polling of the driver, in order to reduce the load of SNMP requests on the device.
+- **SNMP Polling Control**: Allows you to manage the SNMP polling of the connector, in order to reduce the load of SNMP requests on the device.

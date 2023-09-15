@@ -22,41 +22,9 @@ The ADVA Optical Networking FSP Network Manager is designed to ease the surveill
 
 ### System Info
 
-<table>
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><strong>Range</strong></td>
-<td><strong>DCF Integration</strong></td>
-<td><strong>Cassandra Compliant</strong></td>
-<td><strong>Linked Components</strong></td>
-<td><strong>Exported Components</strong></td>
-</tr>
-<tr class="even">
-<td>1.0.0.x</td>
-<td>No</td>
-<td>Yes</td>
-<td>-</td>
-<td><ul>
-<li><a href="/Driver%20Help/ADVA%20Optical%20Networking%20FSP%20Network%20Manager%20-%20NODE.aspx">ADVA Optical Networking FSP Network Manager - NODE</a></li>
-<li><a href="/Driver%20Help/ADVA%20Optical%20Networking%20FSP%20Network%20Manager%20-%20C-N.aspx">ADVA Optical Networking FSP Network Manager - C-N</a></li>
-<li><a href="/Driver%20Help/ADVA%20Optical%20Networking%20FSP%20Network%20Manager%20-%20C-NEW.aspx">ADVA Optical Networking FSP Network Manager - C-NEW</a></li>
-<li><a href="/Driver%20Help/ADVA%20Optical%20Networking%20FSP%20Network%20Manager%20-%20C2-NEW.aspx">ADVA Optical Networking FSP Network Manager - C2-NEW</a></li>
-<li><a href="/Driver%20Help/ADVA%20Optical%20Networking%20FSP%20Network%20Manager%20-%20C4-N4.aspx">ADVA Optical Networking FSP Network Manager - C4-N4</a></li>
-<li><a href="/Driver%20Help/ADVA%20Optical%20Networking%20FSP%20Network%20Manager%20-%20C10-N.aspx">ADVA Optical Networking FSP Network Manager - C10-N</a></li>
-<li><a href="/Driver%20Help/ADVA%20Optical%20Networking%20FSP%20Network%20Manager%20-%20EDFA-SGCB.aspx">ADVA Optical Networking FSP Network Manager - EDFA-SGCB</a></li>
-<li><a href="/Driver%20Help/ADVA%20Optical%20Networking%20FSP%20Network%20Manager%20-%20EDFA-DGCV.aspx">ADVA Optical Networking FSP Network Manager - EDFA-DGCV</a></li>
-<li><a href="/Driver%20Help/ADVA%20Optical%20Networking%20FSP%20Network%20Manager%20-%204ROADM-C96.aspx">ADVA Optical Networking FSP Network Manager - 4ROADM-C96</a></li>
-</ul></td>
-</tr>
-</tbody>
-</table>
+| Range | DCF Integration | Cassandra Compliant | Linked Components | Exported Components |
+|-----------|---------------------|-------------------------|-----------------------|-------------------------|
+| 1.0.0.x   | No                  | Yes                     | -                    | <a href="/Driver%20Help/ADVA%20Optical%20Networking%20FSP%20Network%20Manager%20-%20NODE.aspx">ADVA Optical Networking FSP Network Manager - NODE</a><br><a href="/Driver%20Help/ADVA%20Optical%20Networking%20FSP%20Network%20Manager%20-%20C-N.aspx">ADVA Optical Networking FSP Network Manager - C-N</a><br><a href="/Driver%20Help/ADVA%20Optical%20Networking%20FSP%20Network%20Manager%20-%20C-NEW.aspx">ADVA Optical Networking FSP Network Manager - C-NEW</a><br><a href="/Driver%20Help/ADVA%20Optical%20Networking%20FSP%20Network%20Manager%20-%20C2-NEW.aspx">ADVA Optical Networking FSP Network Manager - C2-NEW</a><br><a href="/Driver%20Help/ADVA%20Optical%20Networking%20FSP%20Network%20Manager%20-%20C4-N4.aspx">ADVA Optical Networking FSP Network Manager - C4-N4</a><br><a href="/Driver%20Help/ADVA%20Optical%20Networking%20FSP%20Network%20Manager%20-%20C10-N.aspx">ADVA Optical Networking FSP Network Manager - C10-N</a><br><a href="/Driver%20Help/ADVA%20Optical%20Networking%20FSP%20Network%20Manager%20-%20EDFA-SGCB.aspx">ADVA Optical Networking FSP Network Manager - EDFA-SGCB</a><br><a href="/Driver%20Help/ADVA%20Optical%20Networking%20FSP%20Network%20Manager%20-%20EDFA-DGCV.aspx">ADVA Optical Networking FSP Network Manager - EDFA-DGCV</a><br><a href="/Driver%20Help/ADVA%20Optical%20Networking%20FSP%20Network%20Manager%20-%204ROADM-C96.aspx">ADVA Optical Networking FSP Network Manager - 4ROADM-C96</a> |
 
 ## Configuration
 
@@ -64,7 +32,7 @@ The ADVA Optical Networking FSP Network Manager is designed to ease the surveill
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -90,7 +58,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver consists of the data pages detailed below.
+The element created with this connector consists of the data pages detailed below.
 
 ### General
 

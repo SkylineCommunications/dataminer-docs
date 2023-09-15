@@ -4,23 +4,23 @@ uid: Connector_help_Stagetec_Montone
 
 # Stagetec Montone
 
-The **Stagetec Montone** driver can be used to **display**, **configure** and **monitor** the in- and output streams.
+The **Stagetec Montone** connector can be used to **display**, **configure** and **monitor** the in- and output streams.
 
 ## About
 
 There are two **serial** connections that are used to retrieve the necessary information from the device.
 
-The driver features **DCF** integration but does not use any internal DCF logic.
+The connector features **DCF** integration but does not use any internal DCF logic.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -30,7 +30,7 @@ The driver features **DCF** integration but does not use any internal DCF logic.
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -46,7 +46,7 @@ SERIAL CONNECTION:
 
 #### Serial IP Port 2 Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

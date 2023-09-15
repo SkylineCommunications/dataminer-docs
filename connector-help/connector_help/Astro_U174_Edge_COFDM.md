@@ -4,7 +4,7 @@ uid: Connector_help_Astro_U174_Edge_COFDM
 
 # Astro U174 Edge COFDM
 
-With this driver, you can gather and view information from the device Astro U174, as well as configure the device. The Astro U174 is an IP-to-COFDM converter. This driver uses HTTP to monitor the device. The driver also has an SNMP interface to receive traps from the device.
+With this connector, you can gather and view information from the device Astro U174, as well as configure the device. The Astro U174 is an IP-to-COFDM converter. This connector uses HTTP to monitor the device. The connector also has an SNMP interface to receive traps from the device.
 
 ## About
 
@@ -32,7 +32,7 @@ With this driver, you can gather and view information from the device Astro U174
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -42,7 +42,7 @@ HTTP CONNECTION:
 
 #### SNMP SNMP Trap Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -60,7 +60,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver has the following data pages:
+The element created with this connector has the following data pages:
 
 - **General**: Displays general information about the device, such as the Device Manufacturer, Uptime and Physical Location.
 - **Status**: Displays the status of the device, with parameters such as Temperature, Power Supply and CPU Load.

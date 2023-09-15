@@ -4,17 +4,17 @@ uid: Connector_help_Foxcom_Platinum_PL72202T
 
 # Foxcom Platinum PL72202T
 
-This driver makes it possible to monitor and configure the **Foxcom Platinum PL72202T**. This device is similar to the **Foxcom Platinum PL7220T.** The Foxcom Platinum PL72202T has an extra transmitter output.
+This connector makes it possible to monitor and configure the **Foxcom Platinum PL72202T**. This device is similar to the **Foxcom Platinum PL7220T.** The Foxcom Platinum PL72202T has an extra transmitter output.
 
 ## About
 
-This driver polls both general parameters and more specific parameters related to the transmitter. In order to configure the device, some parameters in the driver can be set.
+This connector polls both general parameters and more specific parameters related to the transmitter. In order to configure the device, some parameters in the connector can be set.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 
@@ -29,7 +29,7 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and need
 
 ## Usage
 
-The driver consists of 3 pages (similar to the Foxcom Platinum PL7220T but with extra parameters for the extra transmitter):
+The connector consists of 3 pages (similar to the Foxcom Platinum PL7220T but with extra parameters for the extra transmitter):
 
 - **General:** General parameters regarding the device.
 - **Transmitter:** Parameters related to the transmitter.

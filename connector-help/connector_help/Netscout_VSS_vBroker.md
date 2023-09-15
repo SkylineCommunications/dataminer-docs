@@ -8,20 +8,20 @@ The Netscout VSS vBroker protocol can monitor a vBroker device. The vBroker prov
 
 ## About
 
-This driver can be used to monitor the **Ports status** and the **Module status**. Statistics are available for the **Network Activity**.
+This connector can be used to monitor the **Ports status** and the **Module status**. Statistics are available for the **Network Activity**.
 
 - **SNMP** is used to retrieve some **General Info** parameters, **Power Supplies** data and **Network Activity** statistics.
 - **HTTP** is used to retrieve information that is available in the **VSS API**.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 3.10.29                     |
 
@@ -31,7 +31,7 @@ This driver can be used to monitor the **Ports status** and the **Module status*
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -46,7 +46,7 @@ SNMP Settings:
 
 #### HTTP CommandAPI connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

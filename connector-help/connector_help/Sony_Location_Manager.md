@@ -4,7 +4,7 @@ uid: Connector_help_Sony_Location_Manager
 
 # Sony Location Manager
 
-This driver manages the possible Sony locations.
+This connector manages the possible Sony locations.
 
 ## About
 
@@ -18,7 +18,7 @@ This driver manages the possible Sony locations.
 
 | **Range** | **Supported Firmware** |
 |-----------|------------------------|
-| 1.0.0.x   | Any (virtual driver)   |
+| 1.0.0.x   | Any (virtual connector)   |
 
 ### System Info
 
@@ -32,7 +32,7 @@ This driver manages the possible Sony locations.
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 
@@ -44,7 +44,7 @@ There is no redundancy defined.
 
 ## How to use
 
-The element created with this driver has the following data pages:
+The element created with this connector has the following data pages:
 
 - **General**: This page displays **Studio Locations**, **OBTruck Locations**, **Control Room Locations** and **Server Room Locations.** Via the right-click menu, locations can be added or deleted.
 - **Configuration**: This page displays the **File Name.** This parameter contains a reference to the SRM provisioning file. This file is updated every time a new location is added. It allows operators to know in which location a resource can be placed at the time of its creation.

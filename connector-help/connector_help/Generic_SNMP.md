@@ -4,21 +4,21 @@ uid: Connector_help_Generic_SNMP
 
 # Generic SNMP
 
-With the Generic SNMP driver, it is possible to **measure parameters on SNMP-compliant devices.**
+With the Generic SNMP connector, it is possible to **measure parameters on SNMP-compliant devices.**
 
 ## About
 
-Every 5 seconds, the driver performs GET requests on OIDs specified by the user. It displays those parameters either as a **numeric value, a string or a rate value**. The user can add, edit and delete multiple SNMP parameters in the **Parameter Table**.
+Every 5 seconds, the connector performs GET requests on OIDs specified by the user. It displays those parameters either as a **numeric value, a string or a rate value**. The user can add, edit and delete multiple SNMP parameters in the **Parameter Table**.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Any                         |
 
@@ -28,7 +28,7 @@ Every 5 seconds, the driver performs GET requests on OIDs specified by the user.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -42,7 +42,7 @@ SNMP Settings:
 
 ## Usage
 
-This driver has one **General** page, where you can **Add**, **Delete** or **Edit SNMP parameters**. All added parameters are listed in the **Parameter Table**.
+This connector has one **General** page, where you can **Add**, **Delete** or **Edit SNMP parameters**. All added parameters are listed in the **Parameter Table**.
 
 For each parameter, an OID has to be specified so that an SNMP parameter can be measured.
 

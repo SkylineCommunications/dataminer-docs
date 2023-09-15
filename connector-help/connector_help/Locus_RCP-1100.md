@@ -4,18 +4,18 @@ uid: Connector_help_Locus_RCP-1100
 
 # Locus RCP-1100
 
-This is an **Serial** driver that will show the status of the different parameters of an **Locus RCP-1100** device.
+This is a **serial** connector that will show the status of the different parameters of a **Locus RCP-1100** device.
 
-# About
+## About
 
-The ****Locus RCP-1100**** consists of a **SWO** control panel,
+The **Locus RCP-1100** consists of a **SWO** control panel,
 There is no web interface to control the device.
 
-# Configuration and Installation
+## Configuration
 
-## Creation
+### Connections
 
-The ******Locus RCP-1100****** is a **Serial** driver. The **IP** and **Port** need to be configured during creation of the **element**.
+The **Locus RCP-1100** is a **serial** connector and requires the following input during element creation:
 
 **Serial CONNECTION**:
 
@@ -23,31 +23,29 @@ The ******Locus RCP-1100****** is a **Serial** driver. The **IP** and **Port** n
 - **IP address**: The IP of the device (e.g. 10.11.12.13)
 - **IP Port**: The IP Port of the device (8080)
 
+## Usage
 
-
-# Usage
-
-## General Page
+### General Page
 
 This contains some general configuration information about the the device such as:
 
-- Power suply status
+- Power supply status
 - Amplifiers Status
 - Amplifiers Power
 
-## Switch Configuration Page
+### Switch Configuration Page
 
 This contains information about the **pins** of the 3 switches.
 
-## Fault Status Page
+### Fault Status Page
 
 This contains information about the Fault Status of the device such as:
 
-- Aplifiers faults
-- Power suply Faults
+- Amplifiers faults
+- Power supply Faults
 - RF Switch Faults
 - ...
 
-## Configuration Page
+### Configuration Page
 
 This page contains **parameters** to configure the **Remote Input Switch** and the **Auto Broadcast State**

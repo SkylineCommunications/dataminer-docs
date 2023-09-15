@@ -4,21 +4,21 @@ uid: Connector_help_Snell_Wilcox_KudosPro
 
 # Snell Wilcox KudosPro
 
-The **Snell Wilcox KudosPro** is a driver for the channel cards controlled by the **Snell Wilcox MC2000 Controller**. As such, both protocols need to be used in conjunction in order to get full integration of all parameters and features.
+The **Snell Wilcox KudosPro** is a connector for the channel cards controlled by the **Snell Wilcox MC2000 Controller**. As such, both protocols need to be used in conjunction in order to get full integration of all parameters and features.
 
 ## About
 
-This driver allows the management of the **Snell Wilcox KudosPro** using a serial connection. (Snell RollCall is used as the underlying communication protocol.)
+This connector allows the management of the **Snell Wilcox KudosPro** using a serial connection. (Snell RollCall is used as the underlying communication protocol.)
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** |
+| **Range** | **Description** | **DCF Integration** |
 |------------------|-----------------|---------------------|
 | 1.0.0.x          | Initial version | Yes                 |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 2.2A.10                     |
 
@@ -28,7 +28,7 @@ This driver allows the management of the **Snell Wilcox KudosPro** using a seria
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -110,7 +110,7 @@ This page allows you to access the original web interface of the device. However
 
 ## DataMiner Connectivity Framework
 
-The **1.0.0.x** driver range of the **Snell Wilcox KudosPro** protocol supports the usage of DCF and can only be used on a DMA with **8.5.8.5** as the minimum version.
+The **1.0.0.x** connector range of the **Snell Wilcox KudosPro** protocol supports the usage of DCF and can only be used on a DMA with **8.5.8.5** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 

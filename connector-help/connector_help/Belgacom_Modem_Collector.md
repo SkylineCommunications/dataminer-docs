@@ -8,11 +8,11 @@ The **Belgacom Modem Collector** is part of a CPE setup, where it works together
 
 ## About
 
-This driver is responsible for the provisioning of modem data. The data itself will be displayed in the CPE Manager interface of the **Belgacom CPE Manager** element.
+This connector is responsible for the provisioning of modem data. The data itself will be displayed in the CPE Manager interface of the **Belgacom CPE Manager** element.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
@@ -22,7 +22,7 @@ This driver is responsible for the provisioning of modem data. The data itself w
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Configuration of the settings
 

@@ -8,11 +8,11 @@ The CHP-EDFA provides operators with a reliable and rapid response to changing n
 
 ## About
 
-This driver uses **SNMP** polling to communicate with the device.
+This connector uses **SNMP** polling to communicate with the device.
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.0.6.0                     |
 
@@ -20,7 +20,7 @@ This driver uses **SNMP** polling to communicate with the device.
 
 ### Creation
 
-This driver is used by DVE child elements that are **automatically created** by the driver [Arris CHP Max5000](xref:Connector_help_Arris_CHP_Max5000), from version 1.0.0.8 onwards.
+This connector is used by DVE child elements that are **automatically created** by the connector [Arris CHP Max5000](xref:Connector_help_Arris_CHP_Max5000), from version 1.0.0.8 onwards.
 
 ## Usage
 

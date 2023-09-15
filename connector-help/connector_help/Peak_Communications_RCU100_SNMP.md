@@ -4,23 +4,23 @@ uid: Connector_help_Peak_Communications_RCU100_SNMP
 
 # Peak Communications RCU100 SNMP
 
-The **Peak Communications RCU100 SNMP** driver can be used to display and configure information of the Peak Communications RCU100 SNMP switches.
+The **Peak Communications RCU100 SNMP** connector can be used to display and configure information of the Peak Communications RCU100 SNMP switches.
 
 ## About
 
 An **SNMP** connection is used in order to retrieve and configure the information of the device.
 
-In addition, the driver offers several possibilities for **alarm monitoring** and **trending** of the supported Peak switches.
+In addition, the connector offers several possibilities for **alarm monitoring** and **trending** of the supported Peak switches.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 4.99                        |
 
@@ -30,7 +30,7 @@ In addition, the driver offers several possibilities for **alarm monitoring** an
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

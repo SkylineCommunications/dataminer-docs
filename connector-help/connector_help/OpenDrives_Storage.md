@@ -32,7 +32,7 @@ The **OpenDrives Storage** driver shows the relevant information of an OpenDrive
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -50,7 +50,7 @@ There is no redundancy defined.
 
 ## How to use
 
-This driver uses **HTTP** communication and only retrieves device data. The unique POST is to authenticate with the credentials.
+This connector uses **HTTP** communication and only retrieves device data. The unique POST is to authenticate with the credentials.
 
 It has the following data pages:
 

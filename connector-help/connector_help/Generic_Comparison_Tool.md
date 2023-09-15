@@ -38,11 +38,15 @@ There is no redundancy defined.
 
 Before the tool can start comparing parameters, at least one **configuration** needs to be created:
 
-1.  Right-click the **Comparison Groups** table and select **Add** to open a wizard that will guide you through the process.
-2.  In the wizard, specify a protocol and select the elements you are interested in. It is possible to select elements running different protocol versions.
-3.  Select the parameters you want to create. If in the previous step elements running different protocol versions were selected, some parameters might not be listed, as they need to be available on all of the selected elements.
-4.  Select whether the parameters need to match exactly or if some tolerance is allowed. In case the parameter is a column of a table, you can specify a filter (wildcards are supported) to select the rows.
-5.  Click **Finish** to store the configuration in the tool. An initial comparison will be executed immediately.
+1. Right-click the **Comparison Groups** table and select **Add** to open a wizard that will guide you through the process.
+
+1. In the wizard, specify a protocol and select the elements you are interested in. It is possible to select elements running different protocol versions.
+
+1. Select the parameters you want to create. If in the previous step elements running different protocol versions were selected, some parameters might not be listed, as they need to be available on all of the selected elements.
+
+1. Select whether the parameters need to match exactly or if some tolerance is allowed. In case the parameter is a column of a table, you can specify a filter (wildcards are supported) to select the rows.
+
+1. Click **Finish** to store the configuration in the tool. An initial comparison will be executed immediately.
 
 By default, comparison groups will run every hour, but you can change and even disable this with the interval parameter.
 

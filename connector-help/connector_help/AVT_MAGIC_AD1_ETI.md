@@ -4,17 +4,17 @@ uid: Connector_help_AVT_MAGIC_AD1_ETI
 
 # AVT MAGIC AD1 ETI
 
-With this driver, you can gather and view information from the device **AVT MAGIC AD1 ETI**.
+With this connector, you can gather and view information from the device **AVT MAGIC AD1 ETI**.
 
 ## About
 
-This driver uses SNMP to monitor the **AVT MAGIC AD1 ETI** device.
+This connector uses SNMP to monitor the **AVT MAGIC AD1 ETI** device.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP Connection:**
 

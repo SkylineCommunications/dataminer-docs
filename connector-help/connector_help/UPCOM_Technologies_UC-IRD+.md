@@ -4,27 +4,27 @@ uid: Connector_help_UPCOM_Technologies_UC-IRD+
 
 # UPCOM Technologies UC-IRD+
 
-This driver uses SNMP to communicate with the UC-IRD+ Integrated Receiver Decoder (IRD). The driver provides all of the SNMP information that is available through the device's web interface.
+This connector uses SNMP to communicate with the UC-IRD+ Integrated Receiver Decoder (IRD). The connector provides all of the SNMP information that is available through the device's web interface.
 
 ## About
 
-The driver uses the **SNMP** protocol to poll the IRD for information and to configure the IRD. The layout of the driver mirrors that of the IRD's web interface. Each page of the web interface has a corresponding page in DataMiner's data display. However, there is one additional page in the driver, the **Trap** page, which contains a table with all the received traps.
+The connector uses the **SNMP** protocol to poll the IRD for information and to configure the IRD. The layout of the connector mirrors that of the IRD's web interface. Each page of the web interface has a corresponding page in DataMiner's data display. However, there is one additional page in the connector, the **Trap** page, which contains a table with all the received traps.
 
 By default, any trap received from OID \*.19 (signal off) creates an alarm. This alarm is cleared again when a trap is received from OID \*.20 (signal on) on the same channel (ASI-1, ASI-2, CI, IP or Tuner).
 Note: The IRD must be configured to send traps to the DataMiner Agent.
 
 There is also a web interface page. However, to use this page, the client must have access to the IP address of the IRD.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                                                                                                  | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                                                                                                                  | **DCF Integration** | **Cassandra Compliant** |
 |------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                                                                                                                                                  | No                  | Yes                     |
 | 1.0.1.x          | Renamed "BISS Program Table" to "Program Table". Possible impact on external items using this table (alarm templates, trending, Visio files, Automation scripts) | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 51PR00A2                    |
 | 1.0.1.x          | 51PR00A2                    |
@@ -35,7 +35,7 @@ There is also a web interface page. However, to use this page, the client must h
 
 #### Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

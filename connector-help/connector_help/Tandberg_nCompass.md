@@ -10,7 +10,7 @@ The top-level network monitoring function allows early visibility and identifica
 
 The 4.0.1.x version is compatible with nCompass versions 5.x, 6.x and 8.x
 
-The Tandberg nCompass uses SNMP and serial communication to get information about devices and alarms. It uses SOAP to display the profiles and streams. The schedule of these transport streams and system streams is displayed in a table. The driver allows the user to clear the schedule starting from a desired time, or to activate profiles. Events are retrieved from the device and an action is automatically executed if an event has occurred.
+The Tandberg nCompass uses SNMP and serial communication to get information about devices and alarms. It uses SOAP to display the profiles and streams. The schedule of these transport streams and system streams is displayed in a table. The connector allows the user to clear the schedule starting from a desired time, or to activate profiles. Events are retrieved from the device and an action is automatically executed if an event has occurred.
 
 ## About
 
@@ -57,7 +57,7 @@ The Tandberg nCompass uses SNMP and serial communication to get information abou
 
 #### SNMP Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -72,7 +72,7 @@ SNMP Settings:
 
 #### Serial Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -87,7 +87,7 @@ From version **3.1.0.6** onwards, the **serial connection** is not polled from t
 - The values on **Active Device IP** and **Active Server** are based on the results of polling 2 SNMP parameters (**Server 1 State** and **Server 2 State**).
 - **Server 1 State** is polled from the IP address defined for the SNMP connection during element creation.
 - **Server 2 State** is polled from the IP defined in the **IP Second Device** field. In case that field is not filled in with a valid IP address, Server 1 will automatically be the **active server**.
-- After both IPs are polled, logic is implemented to define which is the active server. To check this logic in detail, refer to QAction 10000 in the driver.
+- After both IPs are polled, logic is implemented to define which is the active server. To check this logic in detail, refer to QAction 10000 in the connector.
 
 ### Web Interface
 
@@ -95,7 +95,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to Use
 
-The element created with this driver consists of the data pages detailed below.
+The element created with this connector consists of the data pages detailed below.
 
 ### Main View page
 
@@ -105,7 +105,7 @@ Above the Device Table, two parameters are available. The first, **Enable** **De
 
 You can also manually enable or disable the **DVE** **State** of each entry in the **Device Table**.
 
-Finally, from **version 4.0.1.24** of the driver onwards, the **Take Over From** column in the Device Table allows you to perform a manual failover operation for a particular device.
+Finally, from **version 4.0.1.24** of the connector onwards, the **Take Over From** column in the Device Table allows you to perform a manual failover operation for a particular device.
 
 ### Stream Overview page
 

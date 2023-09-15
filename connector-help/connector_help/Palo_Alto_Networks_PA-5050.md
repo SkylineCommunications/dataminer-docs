@@ -8,13 +8,13 @@ The **Palo Alto Networks PA-5050** is a firewall platform.
 
 ## About
 
-With the **Palo Alto Networks PA-5050** driver, you can monitor and control the device with SNMP.
+With the **Palo Alto Networks PA-5050** connector, you can monitor and control the device with SNMP.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION**:
 

@@ -10,9 +10,9 @@ The AC8810 is an intelligent dual active output node for deep fiber solutions. I
 
 The AC8810 driver provides a way to interface with the AC8810 ONU module. It is used to display and configure general module and transponder information, forward and return path parameters and alarms.
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Revision** |
+| **Range** | **Device Revision** |
 |------------------|---------------------|
 | 1.0.1.x          | 4.4.5               |
 
@@ -20,7 +20,7 @@ The AC8810 driver provides a way to interface with the AC8810 ONU module. It is 
 
 ### Creation
 
-This driver is used by DVE child elements that are **automatically created** by the parent driver [Teleste HDM100](xref:Connector_help_Teleste_HDM100), version **1.0.1.x**. No user input is required.
+This connector is used by DVE child elements that are **automatically created** by the parent connector [Teleste HDM100](xref:Connector_help_Teleste_HDM100), version **1.0.1.x**. No user input is required.
 
 ## Usage
 

@@ -6,7 +6,7 @@ uid: Connector_help_MCL_MT3200_SABus
 
 The **MT3200** is a medium power satellite amplifier designed for both mobile and earth station based applications.
 
-The **MCL MT3200 SABus** driver is used to monitor MT3200 devices that use the SABus protocol.
+The **MCL MT3200 SABus** connector is used to monitor MT3200 devices that use the SABus protocol.
 
 ## About
 
@@ -34,7 +34,7 @@ The **MCL MT3200 SABus** driver is used to monitor MT3200 devices that use the S
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

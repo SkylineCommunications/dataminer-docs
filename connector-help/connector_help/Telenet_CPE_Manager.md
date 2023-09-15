@@ -4,7 +4,7 @@ uid: Connector_help_Telenet_CPE_Manager
 
 # Telenet CPE Manager
 
-The **Telenet CPE Manager** is part of the CPE setup, and works together with the **Telenet CM Collector**, **Telenet STB Collector** and **Telenet eMTA Collector** driver. This driver is responsible for aggregating the data and providing the user interface.
+The **Telenet CPE Manager** is part of the CPE setup, and works together with the **Telenet CM Collector**, **Telenet STB Collector** and **Telenet eMTA Collector** connector. This connector is responsible for aggregating the data and providing the user interface.
 
 ## About
 
@@ -13,9 +13,9 @@ Different elements will be needed:
 - One front-end element, responsible for provisioning and distribution of the syslog messages The CPE interface of this element allows the operator to see the data of all the headends.
 - Multiple back-end elements, each responsible for one headend. This element will perform the aggregation of the data coming from the collector elements and the distribution of the online/offline traps from the CMTS. The CPE interface of this element allows the operator to only see the data of the headend that this element is responsible for.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**                                                                                                                                                                                                                                                                                                                                                                                              | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**                                                                                                                                                                                                                                                                                                                                                                                              | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 2.1.0.x \[Obsolete\] | Initial version after POC.                                                                                                                                                                                                                                                                                                                                                                                   | No                  | No                      |
 | 2.2.0.x \[Obsolete\] | Based on 2.1.0.30. Relabel for next version.                                                                                                                                                                                                                                                                                                                                                                 | No                  | No                      |
@@ -24,15 +24,15 @@ Different elements will be needed:
 | 3.0.0.x \[Obsolete\] | Based on 2.2.2.0. Feature 58 forward node name to CPE collectors.                                                                                                                                                                                                                                                                                                                                            | No                  | No                      |
 | 4.0.0.x \[Obsolete\] | Based on 3.0.0.1. Baseline changed.                                                                                                                                                                                                                                                                                                                                                                          | No                  | No                      |
 | 5.0.0.x \[Obsolete\] | Based on 4.0.0.0 Added ratings and VoD check in provisioning                                                                                                                                                                                                                                                                                                                                                 | No                  | No                      |
-| 6.0.0.x              | Complete redesign of the driver. In previous versions, the front end contained all topology information, including all CPE MAC addresses. This was too much for one element to handle. All tables and their provisioning needed to be changed so it was possible to shift the topology from front-end to back-end elements. Because of this redesign, this version is not compatible with previous versions. | No                  | No                      |
-| 6.0.1.x              | Based on 6.0.0.18. The SFR cluster only contains cable modems. The driver had to be adapted so the STB and eMTA were removed from the tables, the provisioning, and the collector elements. Only parameters were removed, so switching to this version with an existing element using the 6.0.0.x range is possible if necessary.                                                                            | No                  | No                      |
+| 6.0.0.x              | Complete redesign of the connector. In previous versions, the front end contained all topology information, including all CPE MAC addresses. This was too much for one element to handle. All tables and their provisioning needed to be changed so it was possible to shift the topology from front-end to back-end elements. Because of this redesign, this version is not compatible with previous versions. | No                  | No                      |
+| 6.0.1.x              | Based on 6.0.0.18. The SFR cluster only contains cable modems. The connector had to be adapted so the STB and eMTA were removed from the tables, the provisioning, and the collector elements. Only parameters were removed, so switching to this version with an existing element using the 6.0.0.x range is possible if necessary.                                                                            | No                  | No                      |
 | 6.0.2.x \[SLC Main\] | Based on 6.0.0.19. Removed VoD, BCQ and BO chains. Street level has been changed to Amplifier level and some KPIs have been removed from different levels.                                                                                                                                                                                                                                                   | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**                                                                                                                                                    |
+| **Range** | **Device Firmware Version**                                                                                                                                                    |
 |------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| x.x.x.x          | This driver listens to incoming syslog messages. These do not have a firmware version. The incoming traps are from the generic MIB and also do not rely on a firmware version. |
+| x.x.x.x          | This connector listens to incoming syslog messages. These do not have a firmware version. The incoming traps are from the generic MIB and also do not rely on a firmware version. |
 
 ## Installation and configuration
 
@@ -40,17 +40,17 @@ Different elements will be needed:
 
 #### Serial connection
 
-This driver uses a serial connection to receive the syslog messages, and requires the following input during element creation:
+This connector uses a serial connection to receive the syslog messages, and requires the following input during element creation:
 
 **Serial Connection:**
 
 - **IP address/host**: The IP of the DMA where the syslog messages are received.
-- **IP Port**: The port that the driver will be listening to, by default *514*.
+- **IP Port**: The port that the connector will be listening to, by default *514*.
 - **Bus address**: Not needed.
 
 #### SNMP connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection to receive the traps coming from the CMTSs, and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection to receive the traps coming from the CMTSs, and requires the following input during element creation:
 
 **SNMP Connection:**
 
@@ -61,7 +61,7 @@ This driver uses a Simple Network Management Protocol (SNMP) connection to recei
 
 - **Port Number**: The port of the connected device, by default *161*.
 - **Get community string**: The community string used when reading values from the device, by default *public*.
-- **Set community string**: Not needed, because the driver will not perform sets.
+- **Set community string**: Not needed, because the connector will not perform sets.
 
 ### Configuration of the front-end offload parameters
 

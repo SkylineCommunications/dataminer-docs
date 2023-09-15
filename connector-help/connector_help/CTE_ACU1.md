@@ -4,17 +4,17 @@ uid: Connector_help_CTE_ACU1
 
 # CTE ACU1
 
-The **ACU1** driver displays information related to the **CTE ACU1** Change Over device.
+The **ACU1** connector displays information related to the **CTE ACU1** Change Over device.
 
 ## About
 
-This driver uses an **SNMP** interface to communicate with the ACU1 device. It displays the parameters in a manner similar to the web interface of the device.
+This connector uses an **SNMP** interface to communicate with the ACU1 device. It displays the parameters in a manner similar to the web interface of the device.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses an SNMP connection and needs the following user information:
+This connector uses an SNMP connection and requires the following input during element creation:
 
 **SNMP Connection:**
 

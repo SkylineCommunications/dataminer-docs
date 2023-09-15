@@ -22,7 +22,7 @@ The connector uses regular timers that trigger every 60 and 120 seconds, as well
 | 1.0.4.x              | DCF feature added.                                                                      | Yes                 | Yes                     |
 | 2.0.0.x \[SLC Main\] | Connector review. Added CCAP parameters.                                                | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
 | **Range** | **Supported Firmware** |
 |-----------|------------------------|

@@ -4,7 +4,7 @@ uid: Connector_help_TR_Electronic_GmbH_AV_Switch
 
 # TR Electronic GmbH AV Switch
 
-This driver implements the TR Electronic GmbH Remote Control Protocol, which allows you to monitor and control Audio/Video Switch cards.
+This connector implements the TR Electronic GmbH Remote Control Protocol, which allows you to monitor and control Audio/Video Switch cards.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver implements the TR Electronic GmbH Remote Control Protocol, which all
 
 #### Serial Main Connection - Infrastructure Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -43,7 +43,7 @@ SERIAL CONNECTION:
 
 #### Serial Serial Connection - Remote Control Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -62,9 +62,9 @@ There is no redundancy defined.
 
 ## How to use
 
-The driver can have multiple slots associated with it. You can find the slot overview information on the **Slots** page.
+The connector can have multiple slots associated with it. You can find the slot overview information on the **Slots** page.
 
-Depending on the slot availability, the driver loads the associated polling calls to the **Polling Configuration** table on the **Configuration** page. There you can define a period for each call or even disable the call.
+Depending on the slot availability, the connector loads the associated polling calls to the **Polling Configuration** table on the **Configuration** page. There you can define a period for each call or even disable the call.
 
 If a slot is no longer available, the information about the slot is automatically removed from all the other tables that contain the information related to that specific slot.
 
@@ -72,7 +72,7 @@ If a slot is no longer available, the information about the slot is automaticall
 
 When you configure a parameter, the **Lock Status** in the **Embedder Controls** table must be set to *Remote Access Locked*.
 
-If the Lock Status is set to something else, the driver will automatically set it to *Remote Access Locked* when a set needs to be performed. After a change is made to a parameter, the Lock Status will be set to *Disabled.* This forces the change to be saved on device's SD card.
+If the Lock Status is set to something else, the connector will automatically set it to *Remote Access Locked* when a set needs to be performed. After a change is made to a parameter, the Lock Status will be set to *Disabled.* This forces the change to be saved on device's SD card.
 
 Note that when a change is applied, a **transition time** may be required for the change to take place on the device.
 If a change is applied and **nothing changes** after the configured polling period time, this means that the device did not accept the change because of an **invalid configuration**.

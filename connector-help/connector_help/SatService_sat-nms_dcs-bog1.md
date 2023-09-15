@@ -8,17 +8,17 @@ uid: Connector_help_SatService_sat-nms_dcs-bog1
 
 ## About
 
-This driver allows the management of the **SatService sat-nms dcs-bog1** using an SNMPv2 connection.
+This connector allows the management of the **SatService sat-nms dcs-bog1** using an SNMPv2 connection.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ This driver allows the management of the **SatService sat-nms dcs-bog1** using a
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -42,7 +42,7 @@ SNMP Settings:
 
 ## Usage
 
-This driver is able to poll up to 24 modulator cards. Information for each card is displayed on a different page.
+This connector is able to poll up to 24 modulator cards. Information for each card is displayed on a different page.
 
 ### General
 

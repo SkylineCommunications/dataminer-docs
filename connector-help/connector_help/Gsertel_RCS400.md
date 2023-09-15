@@ -6,22 +6,22 @@ uid: Connector_help_Gsertel_RCS400
 
 Gsertel's RCS400 DVB-T/T2 is a professional network monitoring platform that allows remote, proactive, simultaneous and real-time monitoring of up to 4 DVB-T/T2 digital television multiplex streams, both at RF and transport levels.
 
-This driver can be used to monitor and control the device, as well as gather trend information.
+This connector can be used to monitor and control the device, as well as gather trend information.
 
 ## About
 
-The driver uses an **SNMP** connection to communicate with the device.
+The connector uses an **SNMP** connection to communicate with the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**                   | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**                   | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|-----------------------------------|---------------------|-------------------------|
 | 1.0.0.x              | Initial version.                  | No                  | Yes                     |
 | 1.0.1.x \[SLC Main\] | Column IDX in table 8200 changed. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 6.05                        |
 | 1.0.1.x          | 6.05                        |
@@ -32,7 +32,7 @@ The driver uses an **SNMP** connection to communicate with the device.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

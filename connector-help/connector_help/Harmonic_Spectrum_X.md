@@ -6,7 +6,7 @@ uid: Connector_help_Harmonic_Spectrum_X
 
 The Spectrum X combines file, baseband and transport stream ingest with comprehensive integrated channel playout capabilities including graphics, branding and DVE.
 
-The Harmonic Spectrum X driver is used to configure and monitor Harmonic products that support the **Oxtel** protocol.
+The Harmonic Spectrum X connector is used to configure and monitor Harmonic products that support the **Oxtel** protocol.
 
 ## About
 
@@ -37,7 +37,7 @@ The Harmonic Spectrum X driver is used to configure and monitor Harmonic product
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

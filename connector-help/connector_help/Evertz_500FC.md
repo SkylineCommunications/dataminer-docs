@@ -8,7 +8,7 @@ The purpose of this protocol is to monitor the status of the **Evertz 500FC** de
 
 ## About
 
-This is an **SNMP** driver. General system information and alarm status are retrieved via simple parameters and tables. **DVEs** are created for the following different types of modules: the **DA2Q** modules, **DA2Q-HD** modules, **DA-3G** modules, **DA2Q-3G** modules and **ACO2-HD** modules.
+This is an **SNMP** connector. General system information and alarm status are retrieved via simple parameters and tables. **DVEs** are created for the following different types of modules: the **DA2Q** modules, **DA2Q-HD** modules, **DA-3G** modules, **DA2Q-3G** modules and **ACO2-HD** modules.
 
 ## Installation and configuration
 
@@ -16,7 +16,7 @@ This is an **SNMP** driver. General system information and alarm status are retr
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

@@ -4,7 +4,7 @@ uid: Connector_help_Verizon_DSM_RDS
 
 # Verizon DSM RDS
 
-This driver imports information of different subscribers from the **Verizon Reports and Dashboards Solutions** driver, which will be used in the **inter-element communication** to gather important data that will be exported to a location used by the Verizon Reports and Dashboards Solutions driver to process reports and dashboards.
+This connector imports information of different subscribers from the **Verizon Reports and Dashboards Solutions** connector, which will be used in the **inter-element communication** to gather important data that will be exported to a location used by the Verizon Reports and Dashboards Solutions driver to process reports and dashboards.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver imports information of different subscribers from the **Verizon Repo
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 
@@ -44,7 +44,7 @@ There is no redundancy defined.
 
 ## How to use
 
-As this driver is mainly a system driver, not much user interaction is required. Below you can find more information on the different functionalities within the driver.
+As this connector is mainly a system driver, not much user interaction is required. Below you can find more information on the different functionalities within the connector.
 
 ### General
 

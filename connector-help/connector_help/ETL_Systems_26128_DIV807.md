@@ -14,7 +14,7 @@ This protocol can be used to monitor and control any ETL Systems 26128 DIV807 mo
 
 ### Creation
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 **SERIAL Connection:**
 

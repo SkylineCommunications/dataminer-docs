@@ -4,7 +4,7 @@ uid: Connector_help_RTS_Intercoms_ADAM-M_AIO
 
 # RTS Intercoms ADAM-M AIO
 
-This driver is designed to monitor and configure a mid-size modular matrix intercom, with 128+ ports in a compact 3RU (rack unit) package and full redundancy of the master controllers and power supplies. The matrix frame supports all current ADAM cards, including AIO-16, RVON-16, MADI-16 Plus, Tribus and MCII-e controllers. It also supports existing ADAM wiring schemes and options. The chassis plugs-and-plays anywhere, running on 90 to 264 Vac at 50/60 Hz.
+This connector is designed to monitor and configure a mid-size modular matrix intercom, with 128+ ports in a compact 3RU (rack unit) package and full redundancy of the master controllers and power supplies. The matrix frame supports all current ADAM cards, including AIO-16, RVON-16, MADI-16 Plus, Tribus and MCII-e controllers. It also supports existing ADAM wiring schemes and options. The chassis plugs-and-plays anywhere, running on 90 to 264 Vac at 50/60 Hz.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver is designed to monitor and configure a mid-size modular matrix inter
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

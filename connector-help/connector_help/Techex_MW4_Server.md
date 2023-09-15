@@ -4,29 +4,29 @@ uid: Connector_help_Techex_MW4_Server
 
 # Techex MW4 Server
 
-The **Techex MW4 Server** driver is an HTTP-based driver that is used to monitor and configure the **MW4 IPTV Management Platform**.
+The **Techex MW4 Server** connector is an HTTP-based connector that is used to monitor and configure the **MW4 IPTV Management Platform**.
 
 ## About
 
-This driver provides a monitoring and configuration interface for the **Techex MW4 Server**. It allows the user to perform basic operations on monitored devices and channels.
+This connector provides a monitoring and configuration interface for the **Techex MW4 Server**. It allows the user to perform basic operations on monitored devices and channels.
 
-REST API calls are used to retrieve/send information from/to the server. The driver can optionally export each device as a DVE.
+REST API calls are used to retrieve/send information from/to the server. The connector can optionally export each device as a DVE.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x              | Initial version | No                  | No                      |
 | 1.0.1.x \[SLC_Main\] | DCF integration | Yes                 | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 4.6.4                       |
 | 1.0.1.x          | 5.0.1                       |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol**              | **Description**           |
 |------------------------------------|---------------------------|
@@ -38,7 +38,7 @@ REST API calls are used to retrieve/send information from/to the server. The dri
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -72,7 +72,7 @@ This page displays the web interface of the device. Note that the client machine
 
 ## DataMiner Connectivity Framework
 
-The **1.0.1.x** driver range of the Techex MW4 Server protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
+The **1.0.1.x** connector range of the Techex MW4 Server protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 

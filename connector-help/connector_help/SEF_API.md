@@ -4,23 +4,23 @@ uid: Connector_help_SEF_API
 
 # SEF API
 
-This driver makes it possible to monitor the **service health** of the SEF (Swedish Football) API.
+This connector makes it possible to monitor the **service health** of the SEF (Swedish Football) API.
 
 ## About
 
-The driver communicates via **HTTP** traffic, more specifically via JSON calls.
+The connector communicates via **HTTP** traffic, more specifically via JSON calls.
 
 In this version, only the HealthResponse has been implemented.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -30,7 +30,7 @@ In this version, only the HealthResponse has been implemented.
 
 #### HTTP connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

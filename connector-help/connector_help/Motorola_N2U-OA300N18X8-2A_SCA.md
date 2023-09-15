@@ -4,7 +4,7 @@ uid: Connector_help_Motorola_N2U-OA300N18X8-2A_SCA
 
 # Motorola N2U-OA300N18X8-2A_SCA
 
-This is an **SNMP** driver that is used to monitor and configure the **Motorola N2U-OA300N18X8-2A/SCA** equipment.
+This is an **SNMP** connector that is used to monitor and configure the **Motorola N2U-OA300N18X8-2A/SCA** equipment.
 
 ## About
 
@@ -12,15 +12,15 @@ The information on tables and parameters is retrieved via SNMP polling.
 
 SNMP traps are used to update the Interfaces table and the Amplifier History table.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.140                       |
 
@@ -30,7 +30,7 @@ SNMP traps are used to update the Interfaces table and the Amplifier History tab
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

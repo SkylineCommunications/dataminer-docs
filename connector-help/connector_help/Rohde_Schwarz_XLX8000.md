@@ -4,22 +4,22 @@ uid: Connector_help_Rohde_Schwarz_XLX8000
 
 # Rohde Schwarz XLX8000
 
-This driver has been developed for devices such as the **Rohde Schwarz XLX8000**. It polls several SNMP parameters and displays them on different pages. It also allows the user to configure certain settings. Traps are intercepted for status information.
+This connector has been developed for devices such as the **Rohde Schwarz XLX8000**. It polls several SNMP parameters and displays them on different pages. It also allows the user to configure certain settings. Traps are intercepted for status information.
 
 ## About
 
 With three timers, all the **SNMP** parameters are polled and displayed on several pages. **Traps** are used to update the parameters on the **Status** page.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                            | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                            | **DCF Integration** | **Cassandra Compliant** |
 |------------------|----------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                                                            | Yes                 | Yes                     |
 | 1.0.1.x          | Renamed single parameters and table column parameters to meet QA standards | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 2100.4280                   |
 | 1.0.1.x          | 2100.4280                   |
@@ -30,7 +30,7 @@ With three timers, all the **SNMP** parameters are polled and displayed on sever
 
 #### SNMP connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

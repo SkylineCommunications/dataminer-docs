@@ -4,27 +4,27 @@ uid: Connector_help_Volicon_Observer_RPM
 
 # Volicon Observer RPM
 
-This driver is a **DVE manager** for the **Volicon Observer RPM**, which consists of probes called **Observers** that proactively monitor video services, helping operators to identify outages before customers complain, improving the quality of service and reducing help desk load. Based on the Alert Management module, these Observer RPM probes can also send fault notifications via SNMP, using traps.
+This connector is a **DVE manager** for the **Volicon Observer RPM**, which consists of probes called **Observers** that proactively monitor video services, helping operators to identify outages before customers complain, improving the quality of service and reducing help desk load. Based on the Alert Management module, these Observer RPM probes can also send fault notifications via SNMP, using traps.
 
 ## About
 
-This driver does not poll any parameters from the device. Instead it receives traps and displays them in one table. Every column in this table represents a possible error that can be set with the correct severity. Every instance in this table represents a **video channel**. It is also possible to load channels from a **CSV file** into the **trap table**.
+This connector does not poll any parameters from the device. Instead it receives traps and displays them in one table. Every column in this table represents a possible error that can be set with the correct severity. Every instance in this table represents a **video channel**. It is also possible to load channels from a **CSV file** into the **trap table**.
 
-This driver exports other drivers, each of them representing an Observer RPM probe. The list of exported drivers can be found in the "Exported Drivers" section below.
+This connector exports other drivers, each of them representing an Observer RPM probe. The list of exported connectors can be found in the "Exported Connectors" section below.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 5.0                         |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol**                                                                                        | **Description** |
 |--------------------------------------------------------------------------------------------------------------|-----------------|
@@ -36,7 +36,7 @@ This driver exports other drivers, each of them representing an Observer RPM pro
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

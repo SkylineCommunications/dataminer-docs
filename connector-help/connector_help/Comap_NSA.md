@@ -4,21 +4,21 @@ uid: Connector_help_Comap_NSA
 
 # Comap NSA
 
-This serial driver is able to communicate with the **Comap NSA**. This device is a so-called **Uninterruptible Power Supply (UPS).** A wide range of parameters can be monitored. Internal alarm parameters are polled to enable the creation of alarms in DataMiner.
+This serial connector is able to communicate with the **Comap NSA**. This device is a so-called **Uninterruptible Power Supply (UPS).** A wide range of parameters can be monitored. Internal alarm parameters are polled to enable the creation of alarms in DataMiner.
 
 ## About
 
-This driver communicates with the device via the modbus serial communication protocol. The content of 129 registers is read by the driver once per minute.
+This connector communicates with the device via the modbus serial communication protocol. The content of 129 registers is read by the connector once per minute.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 2.6                         |
 
@@ -28,7 +28,7 @@ This driver communicates with the device via the modbus serial communication pro
 
 #### Serial modbus connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -48,7 +48,7 @@ SERIAL CONNECTION:
 
 ## Usage
 
-The usage of this driver is not complex, as you can only use it to monitor parameters and not to change or delete anything on the device. The high number of parameters is divided over different pages.
+The usage of this connector is not complex, as you can only use it to monitor parameters and not to change or delete anything on the device. The high number of parameters is divided over different pages.
 
 ### General Page
 

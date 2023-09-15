@@ -12,7 +12,7 @@ In each service element, there is an overview available for the GPS coordinates 
 
 Every 30minutes, the GPS Table will be updated with current Longitude and Latitude values and also when the "Service Severity" has changed.
 
-The **iDirect Platform Virtual** elements, are DVE elements created by the **iDirect Platform** driver.
+The **iDirect Platform Virtual** elements, are DVE elements created by the **iDirect Platform** connector.
 
 ## Installation and configuration
 

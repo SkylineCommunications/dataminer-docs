@@ -12,15 +12,15 @@ This device uses an SNMP connection to set information on and get information fr
 
 More information about the device can be found on the following website: <http://www.talari.com/products/appliances/t5200>.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**                               |
+| **Range** | **Device Firmware Version**                               |
 |------------------|-----------------------------------------------------------|
 | 1.0.0.x          | Software version: R6_1_GA_P2_H1_03012017; OS Version: 4.4 |
 
@@ -30,7 +30,7 @@ More information about the device can be found on the following website: <http:/
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -77,7 +77,7 @@ The **Appliances Info/Statistics** section shows general information on the appl
 - **Software Version**: The version of the software running on the appliance.
 - **Config Created On**: The day and time when the Talari configuration was created.
 
-The **Polling** page button displays a list of toggle buttons that can be used to enable or disable the polling for each SNMP table in the driver. At the top of the list, buttons are available that immediately enable or disable polling for all tables.
+The **Polling** page button displays a list of toggle buttons that can be used to enable or disable the polling for each SNMP table in the connector. At the top of the list, buttons are available that immediately enable or disable polling for all tables.
 
 ### Network
 

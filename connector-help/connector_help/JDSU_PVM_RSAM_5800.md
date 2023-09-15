@@ -4,7 +4,7 @@ uid: Connector_help_JDSU_PVM_RSAM_5800
 
 # JDSU PVM RSAM 5800
 
-With this driver, it is possible to monitor **JDSU PVM RSAM 5800** devices with SNMP.
+With this connector, it is possible to monitor **JDSU PVM RSAM 5800** devices with SNMP.
 
 ## About
 
@@ -12,17 +12,17 @@ The **JDSU PVM RSAM 5800** will monitor the JDSU PVM RSAM 5800 Video Monitor usi
 
 When **SNMP** **traps** are received, the element will update the corresponding tables.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                             | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                             | **DCF Integration** | **Cassandra Compliant** |
 |------------------|---------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                             | No                  | Yes                     |
 | 2.0.0.x          | Branch version based on 1.0.0.x (see below) | No                  | Yes                     |
 | 2.1.0.x          | New firmware based on 2.0.0.x (see below)   | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | VSA Monitor API version 2.6 |
 | 2.0.0.x          | VSA Monitor API version 2.6 |
@@ -32,11 +32,11 @@ When **SNMP** **traps** are received, the element will update the corresponding 
 
 ### Creation
 
-This is an HTTP driver. The IP and port need to be configured during creation of the element. An SNMP connection is needed to receive traps.
+This is an HTTP connector. The IP and port need to be configured during creation of the element. An SNMP connection is needed to receive traps.
 
 HTTP Main connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -46,7 +46,7 @@ HTTP CONNECTION:
 
 SNMP Traps connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -80,6 +80,6 @@ This page displays a table with information about the monitored programs.
 
 This page displays a tree view with the test points as the root.
 
-### Webinterface Page
+### Web Interface Page
 
 This page displays the web interface of the device. Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.

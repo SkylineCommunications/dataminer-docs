@@ -4,19 +4,19 @@ uid: Connector_help_Rohde_Schwarz_NRPxxS(N)
 
 # Rohde Schwarz NRPxxS(N)
 
-This sensor measures the power of a given frequency. It is possible to configure the frequency, resolution, aperture time, average count, averaging filter mode and the terminal control mode to obtain the measured power, using this driver.
+This sensor measures the power of a given frequency. It is possible to configure the frequency, resolution, aperture time, average count, averaging filter mode and the terminal control mode to obtain the measured power, using this connector.
 
 ## About
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial Version | No                  | True                    |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -26,7 +26,7 @@ This sensor measures the power of a given frequency. It is possible to configure
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

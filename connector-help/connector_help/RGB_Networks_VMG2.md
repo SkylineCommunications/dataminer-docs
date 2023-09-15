@@ -4,15 +4,15 @@ uid: Connector_help_RGB_Networks_VMG2
 
 # RGB Networks VMG2
 
-This driver is used to monitor an RGB Networks VMG2.
+This connector is used to monitor an RGB Networks VMG2.
 
 ## About
 
 The VMG2 is a dense, hardware-based transcoder. The VMG2 chassis can be configured for the desired application by using the appropriate cards. Two types of cards are supported by the VMG2: the NPM (chassis controller), which controls redundancy within the chassis, and the TCM2(+), which performs the transcoding. Redundancy is a 1+1 hot standby for the NPM, and N+1 for the TCM cards.
 
-Two external APIs are supported by the VMG2: there is SNMP support for traps and basic configuration information, and a full-featured XML-RPC interface for detailed configuration status and control. This driver only uses the XML-RPC interface.
+Two external APIs are supported by the VMG2: there is SNMP support for traps and basic configuration information, and a full-featured XML-RPC interface for detailed configuration status and control. This connector only uses the XML-RPC interface.
 
-Though several VMG2 chassis models exist, only the VMG-8 and the VMG-14 chassis are supported by this driver. The chassis are identical in terms of external API, and no configuration needs to be done within the driver.
+Though several VMG2 chassis models exist, only the VMG-8 and the VMG-14 chassis are supported by this connector. The chassis are identical in terms of external API, and no configuration needs to be done within the connector.
 
 The VMG2 API is very similar to the VMG1.
 
@@ -20,7 +20,7 @@ The VMG2 API is very similar to the VMG1.
 
 ### Creation
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 **HTTP Connection:**
 
@@ -30,7 +30,7 @@ This driver uses an HTTP connection and requires the following input during elem
 
 ### Configuration
 
-Credentials are required for the device to poll data from the VMG2. Those credentials can be filled in via the **Credentials** page button on the **General** page. Note that the default web interface of the VMG encrypts the credentials before sending them to the device. However, the driver does not automatically encrypt the credentials, so the user must then enter the encrypted values in DataMiner.
+Credentials are required for the device to poll data from the VMG2. Those credentials can be filled in via the **Credentials** page button on the **General** page. Note that the default web interface of the VMG encrypts the credentials before sending them to the device. However, the connector does not automatically encrypt the credentials, so the user must then enter the encrypted values in DataMiner.
 
 The default credentials are:
 
@@ -41,11 +41,11 @@ The default credentials are:
 
 ## Usage
 
-This driver contains 17 pages.
+This connector contains 17 pages.
 
 ### General
 
-This page displays general information about the driver: **Software Version**, **Chassis Type**, .
+This page displays general information about the connector: **Software Version**, **Chassis Type**, .
 
 There are several controls on the page that allow you to manage the device: **Reboot**, **Restart,** .
 
@@ -67,7 +67,7 @@ This page displays two tables that provide information about the 8 ports of the 
 
 This page displays the Input Transport Streams, Input Programs and Input Elementary Streams.
 
-You can add input using the three page buttons **Add Input TS...**, **Add Input Prog...**, and **Add Input ES**...****
+You can add input using the three page buttons **Add Input TS...**, **Add Input Prog...**, and **Add Input ES**.
 
 ### Outputs
 
@@ -91,7 +91,7 @@ This page displays the SNMP and NTP configuration.
 
 ### Inventory
 
-This page displays miscellaneous parameters: **Controller**, **Backplane**, .
+This page displays miscellaneous parameters: **Controller**, **Backplane**.
 
 ### Power
 
@@ -103,7 +103,7 @@ This page displays the Dolby Audio parameters.
 
 ### Transcoder
 
-This page displays the Transcoder Parameters: **Bitrate**, **PMT frequency**, .
+This page displays the Transcoder Parameters: **Bitrate**, **PMT frequency**.
 
 ### Software Update
 

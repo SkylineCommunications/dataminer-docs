@@ -4,7 +4,7 @@ uid: Connector_help_Specialty_Microwave_Corp_13966-505
 
 # Specialty Microwave Corp 13966-505
 
-This driver uses serial communication to communicate with a switching module. It allows you to switch from high to low and check the power supply status.
+This connector uses serial communication to communicate with a switching module. It allows you to switch from high to low and check the power supply status.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver uses serial communication to communicate with a switching module. It
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

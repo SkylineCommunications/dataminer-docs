@@ -8,7 +8,7 @@ The **Nagra Contego** is a conditional access system.
 
 ## About
 
-This driver uses HTTPs to monitor the Nagra Contego equipment.
+This connector uses HTTPs to monitor the Nagra Contego equipment.
 
 ### Version Info
 

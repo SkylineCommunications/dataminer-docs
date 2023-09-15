@@ -8,7 +8,7 @@ The Memotec CXU-810 RAN Optimizer is a modular mobile backhaul platform that del
 
 ## About
 
-This driver is intended to get/set information from/to the device via an Element in a DataMiner System, using SNMP commands.
+This connector is intended to get/set information from/to the device via an Element in a DataMiner System, using SNMP commands.
 
 To get more detailed information consult the website http://www.comtechefdata.com/products/advanced-vsat-solutions.
 
@@ -18,7 +18,7 @@ To get more detailed information consult the website http://www.comtechefdata.co
 
 **SNMP CONNECTION**:
 
-\- **IP address/host**: the polling IP of the device eg *10.11.12.13*
+\- **IP address/host**: The polling IP of the device, e.g. *10.11.12.13*
 
 \- **Device address**: not used
 
@@ -48,6 +48,6 @@ On the top is the information about the latest alarm. The **Active Alarms** tabl
 
 To manage the alarm settings use the **Alarm Management** page button.
 
-### Webinterface
+### Web Interface
 
 Use this page to have access to the Web Interface provided by the device's web server (Only accessible in LAN environment).

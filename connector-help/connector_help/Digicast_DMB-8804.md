@@ -34,7 +34,7 @@ This device supports audio and video collection by 4-Ch HD HDMI input. For HDMI 
 
 #### HTTP Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

@@ -8,17 +8,17 @@ The Comtech EF Data's MCDD-100 MetaCarrier Detection Device is a carrier identif
 
 ## About
 
-The CEFD MCDD-100 SNMP driver is used to monitor and control a CEFD MCDD-100 device. The information is displayed in different pages regarding a certain category and there is the possibility to modify some settings. This driver uses SNMP communication to retrieve and configure the device's data.
+The CEFD MCDD-100 SNMP connector is used to monitor and control a CEFD MCDD-100 device. The information is displayed in different pages regarding a certain category and there is the possibility to modify some settings. This connector uses SNMP communication to retrieve and configure the device's data.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial Version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ The CEFD MCDD-100 SNMP driver is used to monitor and control a CEFD MCDD-100 dev
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -70,6 +70,6 @@ This page contains **Alarm/Faults** and **Events** tables, where detailed alarm 
 
 This page contains the **Serial** **Number** of the unit along with editable information regarding the system, including **Contact** and **Location**, **Date** and **Time**. A **Monitor** of **BER** and **PER** is also displayed, containing information about **Total** **Bits** and **Packets** **errors**.
 
-### Webinterface
+### Web Interface
 
 To access the embedded device's web interface, the client machine has to be able to access the device.

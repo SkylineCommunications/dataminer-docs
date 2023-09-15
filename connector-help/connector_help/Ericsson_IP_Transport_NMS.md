@@ -8,23 +8,23 @@ The Ericsson IP Transport NMS/Ericsson ServiceOn Element Management System (SO-E
 
 ## About
 
-The driver polls information from the **Ericsson SO-EM** (EMS) through the **PF-SNMP** northbound interface via SNMP. Control over the device will depend on the access type of the SNMP parameters available in the Management Information Base (MIB). The driver handles parameters such as network element information, alarm event details, and all system reference catalogs.
+The connector polls information from the **Ericsson SO-EM** (EMS) through the **PF-SNMP** northbound interface via SNMP. Control over the device will depend on the access type of the SNMP parameters available in the Management Information Base (MIB). The connector handles parameters such as network element information, alarm event details, and all system reference catalogs.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                    | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                    | **DCF Integration** | **Cassandra Compliant** |
 |------------------|------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                    | No                  | Yes                     |
 | 1.0.1.x          | Adaptation based on change request | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**                       |
+| **Range** | **Device Firmware Version**                       |
 |------------------|---------------------------------------------------|
 | 1.0.0.x          | Performance Management System (PFM) version 18.3. |
 | 1.0.1.x          | Performance Management System (PFM) version 18.3. |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol**              | **Description**                                                         |
 |------------------------------------|-------------------------------------------------------------------------|
@@ -36,7 +36,7 @@ The driver polls information from the **Ericsson SO-EM** (EMS) through the **PF-
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -64,7 +64,7 @@ This page displays the main parameters related to the creation and deletion of D
 This page displays information about all Network Elements that are currently being managed by the NMS.
 
 - **Poll Network Element Table**: This button will poll the Network Element Table.
-- **Network Element Table**: This table contains information about all Network Elements that are currently being managed by the NMS. It can also contain data about Network Elements that are not currently managed, but that were part of the network at some point and have not been removed from the driver data. The information in this table includes the **Network Element Name**, **Type Description** and **Alarm Level**. This table can also be updated via SNMP traps that are received by DataMiner in real time. These traps allow the information to be updated without the need of continuous polling. In that case, the **Trap Counter**, **Trap Type** and **Last Trap Time** will also be displayed in the table.
+- **Network Element Table**: This table contains information about all Network Elements that are currently being managed by the NMS. It can also contain data about Network Elements that are not currently managed, but that were part of the network at some point and have not been removed from the connector data. The information in this table includes the **Network Element Name**, **Type Description** and **Alarm Level**. This table can also be updated via SNMP traps that are received by DataMiner in real time. These traps allow the information to be updated without the need of continuous polling. In that case, the **Trap Counter**, **Trap Type** and **Last Trap Time** will also be displayed in the table.
 
 ### Alarms
 
@@ -100,8 +100,8 @@ This page acts as the provisioning control center for the **Service ID** and **E
 
 - **Element Properties** page button: Opens a subpage with the control center for provisioning data to/from the Element Properties table.
 
-- **Element Property Provisioning File Format**: The format that each row in the table must have in order to be successfully processed by the driver. If this format is not correct, errors will be thrown.
-  - **Element Property Profile File**: The name of the profile file that will be used by the driver to import/export data to/from the Element Properties table. This parameter displays a drop-down list, listing all .csv files in the following directory: **C:\Skyline DataMiner\Documents\Ericsson IP Transport NMS**.
+- **Element Property Provisioning File Format**: The format that each row in the table must have in order to be successfully processed by the connector. If this format is not correct, errors will be thrown.
+  - **Element Property Profile File**: The name of the profile file that will be used by the connector to import/export data to/from the Element Properties table. This parameter displays a drop-down list, listing all .csv files in the following directory: **C:\Skyline DataMiner\Documents\Ericsson IP Transport NMS**.
   - **Export File/Import File** buttons: Use these buttons to import/export data to/from the profile file and the Element Properties Table.
   - **Element Property File Status**: This parameter shows the current status of the profile file. If "busy", either import or export operations are being processed.
   - **Refresh Directory** button: When the element is started, all files that are included in the above-mentioned directory are loaded and accessible. However, if any changes are made after startup, it could be that these changes, such as the creation or deletion of files, are not updated in the element. As such, if you do not see an expected profile file in the drop-down list, you should use this button to refresh the directory.
@@ -122,7 +122,7 @@ This page contains reference information on the different cards that can be enco
 
 - **Poll Catalog Card Table** button: Performs the polling of the Catalog Card Table when clicked.
 - **Catalog Card Table**: Contains information about the different cards, including the **Card ID**, **Card Type** and **NE Type**.
-  **Note**: Because of the size of this table, it can take several minutes before the driver has polled all data from the NMS. Therefore, SNMP polling can only be triggered manually, using the Poll Catalog Card Table button, and it is entirely your choice when it is most convenient for the information in this table to be updated.
+  **Note**: Because of the size of this table, it can take several minutes before the connector has polled all data from the NMS. Therefore, SNMP polling can only be triggered manually, using the Poll Catalog Card Table button, and it is entirely your choice when it is most convenient for the information in this table to be updated.
 
 ### Catalog Source
 
@@ -144,7 +144,7 @@ This page contains reference information on the different alarm events that can 
 
 - **Poll Catalog Alarm Table** button: Performs the polling of the Catalog Shelf Table when clicked.
 - **Catalog Alarm Table**: Alarm Type, NE Basic Type, and Alarm Description are some of the parameters that can be found in this table.
-  **Note**: As this is a very large table, containing details about every type of alarm that could possibly be triggered within the system, it can take the driver a long time to poll all the information to fully populate this table (up to 30 minutes). As such, SNMP polling is only done when the **Poll Catalog Alarm Table** button is clicked, and it is entirely your choice when it is most convenient for the information in this table to be updated.
+  **Note**: As this is a very large table, containing details about every type of alarm that could possibly be triggered within the system, it can take the connector a long time to poll all the information to fully populate this table (up to 30 minutes). As such, SNMP polling is only done when the **Poll Catalog Alarm Table** button is clicked, and it is entirely your choice when it is most convenient for the information in this table to be updated.
 
 ### Catalog Signal
 

@@ -4,21 +4,21 @@ uid: Connector_help_Emerson_Liebert_PDX-PCW
 
 # Emerson Liebert PDX-PCW
 
-With this driver, you can gather and view information from the device **Emerson Liebert PDX-PCW**, as well as configure the device.
+With this connector, you can gather and view information from the device **Emerson Liebert PDX-PCW**, as well as configure the device.
 
 ## About
 
-This driver uses SNMP to monitor the **Emerson Liebert PDX-PCW** device.
+This connector uses SNMP to monitor the **Emerson Liebert PDX-PCW** device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 5.280.2                     |
 
@@ -28,7 +28,7 @@ This driver uses SNMP to monitor the **Emerson Liebert PDX-PCW** device.
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

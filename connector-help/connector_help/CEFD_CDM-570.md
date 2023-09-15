@@ -10,15 +10,15 @@ The CDM-570 Satellite Modem is the 70/140 MHz IF version, intended for closed ne
 
 The Driver polls data from the device using SNMP protocol.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 2.0.0.x          | Initial Version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 2.0.0.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ The Driver polls data from the device using SNMP protocol.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -72,6 +72,6 @@ This Page displays data about the BUC (Block upconverter), like the **BUC Power*
 
 In this Page it is possible to check information about the Events in the **Stored Events Table**.
 
-### Webinterface
+### Web Interface
 
 Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.

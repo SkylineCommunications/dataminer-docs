@@ -4,22 +4,22 @@ uid: Connector_help_RF_Design_FlexLink_S2
 
 # RF Design FlexLink S2
 
-This driver is used to manage RF Design FlexLink S2 family switches.
+This connector is used to manage RF Design FlexLink S2 family switches.
 
 ## About
 
-This driver supports switches from the RF Design FlexLink S2 family and is capable of managing a matrix of up to 256x256 crosspoints with **multiple outputs per input and one input per output**.
+This connector supports switches from the RF Design FlexLink S2 family and is capable of managing a matrix of up to 256x256 crosspoints with **multiple outputs per input and one input per output**.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 | 2.0.0.x          | Initial version | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 2.0.0.x          | Unknown                     |
@@ -30,7 +30,7 @@ This driver supports switches from the RF Design FlexLink S2 family and is capab
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

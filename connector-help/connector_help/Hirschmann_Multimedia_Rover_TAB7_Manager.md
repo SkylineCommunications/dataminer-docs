@@ -4,17 +4,17 @@ uid: Connector_help_Hirschmann_Multimedia_Rover_TAB7_Manager
 
 # Hirschmann Multimedia Rover TAB7 Manager
 
-This manager driver is intended for the retrieval of service information from Astro Devices in a DataMiner system, in order to use this information to populate Round Robin Tables in **Hirschmann Multimedia Rover TAB7** elements controlling **TAB7 probes**.
+This manager connector is intended for the retrieval of service information from Astro Devices in a DataMiner system, in order to use this information to populate Round Robin Tables in **Hirschmann Multimedia Rover TAB7** elements controlling **TAB7 probes**.
 
 ## About
 
-This is a virtual driver. All operations are done via inter-elements calls.
+This is a virtual connector. All operations are done via inter-elements calls.
 
-NOTE: This manager driver is only compatible with versions *1.0.0.5* and higher of the **Hirschmann Multimedia Rover TAB7** protocol.
+NOTE: This manager connector is only compatible with versions *1.0.0.5* and higher of the **Hirschmann Multimedia Rover TAB7** protocol.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
@@ -24,7 +24,7 @@ NOTE: This manager driver is only compatible with versions *1.0.0.5* and higher 
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## Usage
 

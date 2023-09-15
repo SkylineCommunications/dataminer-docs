@@ -8,19 +8,19 @@ The **GatesAir Flexiva M2FM-TX StandAlone** is a standalone FM transmission syst
 
 ## About
 
-This driver is used to monitor the GatesAir Flexiva M2FM-TX StandAlone. The driver has a page with general information, a system page with two pop-up pages for the configuration of the traps, a drive chain page, a power page and an output page. The driver uses **SNMP** to retrieve and configure the data.
+This connector is used to monitor the GatesAir Flexiva M2FM-TX StandAlone. The connector has a page with general information, a system page with two pop-up pages for the configuration of the traps, a drive chain page, a power page and an output page. The connector uses **SNMP** to retrieve and configure the data.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
-| 1.0.0.1          | Initial version | No                  | Yes                     |
+| 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
-| 1.0.0.1          | 0299                        |
+| 1.0.0.x          | 0299                        |
 
 ## Installation and configuration
 
@@ -28,7 +28,7 @@ This driver is used to monitor the GatesAir Flexiva M2FM-TX StandAlone. The driv
 
 #### Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 
@@ -74,7 +74,3 @@ This page displays alarms and measurements for the transmitter output. It also i
 ### Web Interface Page
 
 On this page, you can view the web interface of the device. However, the client machine has to be able to access the device. Otherwise, it will not be possible to open the web interface.
-
-## Notes
-
-N/A

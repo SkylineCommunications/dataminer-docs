@@ -4,21 +4,21 @@ uid: Connector_help_Honeywell_Notifier_NF3000
 
 # Honeywell Notifier NF3000
 
-This driver monitors the **Honeywell Notifier NF3000** and reports any alarms that happen. It also displays information about the panels, zones and devices.
+This connector monitors the **Honeywell Notifier NF3000** and reports any alarms that happen. It also displays information about the panels, zones and devices.
 
 ## About
 
-The driver collects data via a **smart-serial** connection. This way, in addition to the normal polling, events sent by the device can also be processed in the driver.
+The connector collects data via a **smart-serial** connection. This way, in addition to the normal polling, events sent by the device can also be processed in the connector.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**                                                   |
+| **Range** | **Device Firmware Version**                                                   |
 |------------------|-------------------------------------------------------------------------------|
 | 1.0.0.x          | 7.5+ (4.3+ is likely to also be compatible, but this has not been tested yet) |
 
@@ -28,7 +28,7 @@ The driver collects data via a **smart-serial** connection. This way, in additio
 
 #### Smart Serial connection
 
-This driver uses a smart-serial connection and requires the following input during element creation:
+This connector uses a smart-serial connection and requires the following input during element creation:
 
 SMART-SERIAL CONNECTION:
 
@@ -61,12 +61,12 @@ On this page, you can find the **Device Table** with the alarm states, the **Dev
 
 ### Events
 
-This page displays the **Event Table.** If a problem occurs on the device, an event will be sent. This event is processed by the driver and displayed in this table.
+This page displays the **Event Table.** If a problem occurs on the device, an event will be sent. This event is processed by the connector and displayed in this table.
 
 To make sure the table does not grow endlessly, cleanup settings can be configured via the **Cleanup Settings** page button below the table.
 
 ### Communication
 
-This page displays the communication state of device. If the driver cannot reach the device, the **Timeout Status** will be set to *Timeout*.
+This page displays the communication state of device. If the connector cannot reach the device, the **Timeout Status** will be set to *Timeout*.
 
 Below this, you can configure how much **Timeout Time** is needed between the **Number of Retries**.

@@ -8,13 +8,13 @@ The Nortel iEMS is an Integrated Element Management System that offers configura
 
 ## About
 
-The **Nortel iEMS Log** driver allows a user to receive and process logging from a Nortel iEMS. Logging can be saved on the local disk and the log files can be attached to and sent with scheduled e-mails.
+The **Nortel iEMS Log** connector allows a user to receive and process logging from a Nortel iEMS. Logging can be saved on the local disk and the log files can be attached to and sent with scheduled e-mails.
 
 ## Installation and Configuration
 
 ### Creation
 
-This driver uses a serial (UDP) connection and needs the following user information:
+This connector uses a serial (UDP) connection and requires the following input during element creation:
 
 **SERIAL CONNECTION:**
 

@@ -4,22 +4,22 @@ uid: Connector_help_Generic_Manager_Channel_Distribution
 
 # Generic Manager Channel Distribution
 
-This driver comes with a WFM app that should be used as the main user interface.
+This connector comes with a WFM app that should be used as the main user interface.
 
 ## About
 
-The driver implements the logic used by the Channel Substitution WFM. It allows the user to perform sets on other elements, and provides a central location to do so.
+The connector implements the logic used by the Channel Substitution WFM. It allows the user to perform sets on other elements, and provides a central location to do so.
 
-There are currently two main parts in this driver:
+There are currently two main parts in this connector:
 
 - One to manage Matrix drivers from multiple vendors. This part is not used, and as such also not documented.
 - One to manage services managed by Cisco DCM devices.
 
-### Purpose of the driver
+### Purpose of the connector
 
-The driver detects all redundancy groups based on Cisco DCM elements. These redundancy groups can be added to the element and will then be used by the WFM. In the WFM, it is possible to view a list of services managed by the active DCM element in the redundancy group. However, not all services will be available. Some settings and hard-coded filters limit what services can be displayed.
+The connector detects all redundancy groups based on Cisco DCM elements. These redundancy groups can be added to the element and will then be used by the WFM. In the WFM, it is possible to view a list of services managed by the active DCM element in the redundancy group. However, not all services will be available. Some settings and hard-coded filters limit what services can be displayed.
 
-For each service you will be able to see the backup services and alternate sources. The driver allows you to activate a backup service (or the main service) and will search for the same service on all DCMs in the redundancy group and execute the same set, so that all elements of the redundancy group will end up having the same configuration.
+For each service you will be able to see the backup services and alternate sources. The connector allows you to activate a backup service (or the main service) and will search for the same service on all DCMs in the redundancy group and execute the same set, so that all elements of the redundancy group will end up having the same configuration.
 
 Note: At this time, only redundancy groups with 2 DCMs are supported: one active and one main.
 
@@ -29,7 +29,7 @@ Create a new element with a unique name. Technically, only one element in the en
 
 Optionally, on the element's **General** page, set the email addresses and the pagers (separated by a semicolon).
 
-When using the driver with DCM redundancy groups, also add the desired redundancy groups on the **DCM** page by setting the name in the parameter **Add Redundancy Group**.
+When using the connector with DCM redundancy groups, also add the desired redundancy groups on the **DCM** page by setting the name in the parameter **Add Redundancy Group**.
 
 Note that the available drop-down lists will only be populated after you click the **Refresh** button in the bottom right corner. Also make sure to set the **Group Filter** in the **DCM Redundancy Groups** table. Group filters can be used to define which ports and boards on the DCM can be used to retrieve and show services.
 
@@ -37,7 +37,7 @@ Note: You can optionally override the group filter by specifying a filter in the
 
 ### Installing the WFM
 
-The WFM comes as a separate DLL (SLChannelSubstitutionWfm.dll) and should be provided together with the driver. It must be installed in the same folder as where the protocol is stored (which typically will be the Production version folder), e.g. *C:\Skyline DataMiner\Protocols\Generic Manager Channel Distribution\1.0.0.7\\*
+The WFM comes as a separate DLL (SLChannelSubstitutionWfm.dll) and should be provided together with the connector. It must be installed in the same folder as where the protocol is stored (which typically will be the Production version folder), e.g. *C:\Skyline DataMiner\Protocols\Generic Manager Channel Distribution\1.0.0.7\\*
 
 There should be an upgrade package available that will automatically install the DLL on all DMAs. If this is not the case, it may be necessary to do this manually.
 
@@ -72,7 +72,7 @@ Supported since version 1.0.0.7.
 To add or remove redundancy groups in the system, use the **Add Redundancy Group** and **Remove Redundancy Group** parameters. A drop-down list containing all valid options will be available after you click the **Refresh** button at the bottom of the page. The **Remove All** button will remove all entries from the table.
 
 There is a table, **DCM Redundancy Groups**, listing all selected redundancy groups.
-For each redundancy group, it shows the name, the description, the group filter and the type of redundancy used. (However, currently only one type of redundancy is supported, i.e. "one on one". With this type of redundancy, the driver assumes that each service on the main has exactly one equivalent service on the backup.) The default value for the group filter used to be *Not implemented,* excluding all ports until otherwise defined, but this has changed to *\*.\** in version 1.0.0.12, including all ports on the targeted devices.
+For each redundancy group, it shows the name, the description, the group filter and the type of redundancy used. (However, currently only one type of redundancy is supported, i.e. "one on one". With this type of redundancy, the connector assumes that each service on the main has exactly one equivalent service on the backup.) The default value for the group filter used to be *Not implemented,* excluding all ports until otherwise defined, but this has changed to *\*.\** in version 1.0.0.12, including all ports on the targeted devices.
 
 There is also a second table, **DCM Elements**, listing all DCM elements found in the imported redundancy groups.
 For each element, the name and the element active status are shown, as well as their role in the redundancy group (primary or backup) and the ID of the redundancy group they belong to. The most important column in this table is the **DCM Filter**, which by default is set to *Inherited.* In most cases, this is fine, but it is possible to have another filter depending on the element in the redundancy group.
@@ -82,9 +82,9 @@ Note:
 - The columns in the **DCM Elements** table are not updated in real time. To get the current active status, click the **Refresh** button.
 - More information about how to write or interpret a filter can be found in the section "Notes".
 
-The **Check Consistency** button provides an important functionality: it will check and if necessary update all the relations between items in the "DCM Elements" table and the "DCM Redundancy Groups" table. When the redundancy groups are edited, these tables could become outdated. This is because for performance reasons the driver does not automatically sync/poll the configuration of the redundancy groups. It is very important that you use this button whenever necessary:
+The **Check Consistency** button provides an important functionality: it will check and if necessary update all the relations between items in the "DCM Elements" table and the "DCM Redundancy Groups" table. When the redundancy groups are edited, these tables could become outdated. This is because for performance reasons the connector does not automatically sync/poll the configuration of the redundancy groups. It is very important that you use this button whenever necessary:
 
-- Whenever you have edited a redundancy group used by this driver, you must click the **Check Consistency** button.
+- Whenever you have edited a redundancy group used by this connector, you must click the **Check Consistency** button.
 - After you delete a redundancy group, you must also click the **Check Consistency** button. Otherwise, the WFM will no longer function properly!
 - If you cannot find an element that you are sure belongs to a registered group, this is the button you should use to fix the issue.
 
@@ -177,7 +177,7 @@ Note: Each set should also result in an update of the **WFM Status** parameter. 
 Contains a table displaying all current alarm suppression requests.
 This table is filled when a WFM command is received to activate a backup service containing a "MASKFOR" argument. In that case, a line is added containing the backup service identifier and the UTC time when the masking should stop.
 
-To actually make this work, an automation script is required that is triggered by the alarm(s) to mask and then checks whether the alarm actually should be masked or not (based on this table). The automation script is not included with this driver and should be added manually. (For more information, contact Skyline, CVH.)
+To actually make this work, an automation script is required that is triggered by the alarm(s) to mask and then checks whether the alarm actually should be masked or not (based on this table). The automation script is not included with this connector and should be added manually. (For more information, contact Skyline, CVH.)
 
 ## Notes
 
@@ -185,9 +185,9 @@ To actually make this work, an automation script is required that is triggered b
 
 #### One on One
 
-In this configuration, the driver expects that each output service on any of the two elements in the redundancy group will also exist on the other DCM. It also assumes that this identical output service will be found on the same board and port as the original output service.
+In this configuration, the connector expects that each output service on any of the two elements in the redundancy group will also exist on the other DCM. It also assumes that this identical output service will be found on the same board and port as the original output service.
 
-When a backup service is activated on one element, the driver will search for the same transport stream (based on the IP address) on the backup DCM and for the same output service on that transport stream. If there is only one service on the transport stream, then this service is assumed to be the same as the original service. If there are multiple services on the transport stream, the service with the same name will be selected, or, if this service doesn't exist, an exception will be thrown.
+When a backup service is activated on one element, the connector will search for the same transport stream (based on the IP address) on the backup DCM and for the same output service on that transport stream. If there is only one service on the transport stream, then this service is assumed to be the same as the original service. If there are multiple services on the transport stream, the service with the same name will be selected, or, if this service doesn't exist, an exception will be thrown.
 
 When the services are found, the set will be executed on both DCM elements. Otherwise, an exception is thrown.
 

@@ -4,17 +4,17 @@ uid: Connector_help_TDC_KPI_and_KQI_Editor
 
 # TDC KPI and KQI Editor
 
-The **TDC KPI and KQI Editor** is a virtual driver intended to provide an updated value of the **trending** of parameters from elements in the cluster. Those parameters can be a single parameter or indexes from a table column (all the indexes as one, all the indexes individually or just one of the indexes).
+The **TDC KPI and KQI Editor** is a virtual connector intended to provide an updated value of the **trending** of parameters from elements in the cluster. Those parameters can be a single parameter or indexes from a table column (all the indexes as one, all the indexes individually or just one of the indexes).
 
 Ultimately the goal is to have an updated value of the **average, minimum or maximum** of the trending during a pre-defined period. The calculation can be made **daily, weekly or monthly** and it can be based on **real-time or average** (5-min or 1-hour) trending values. Note that when it is based on real-time trending values, the calculation can only be done daily. You can also set the calculation to be done continually or only over a fixed period of time.
 
 ## About
 
-This driver is a virtual driver. Other than the configuration on the **General** page (see "General" section below), it does not require any additional settings.
+This connector is a virtual connector. Other than the configuration on the **General** page (see "General" section below), it does not require any additional settings.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.X          | Initial version | No                  | Yes                     |
 
@@ -24,7 +24,7 @@ This driver is a virtual driver. Other than the configuration on the **General**
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## Usage
 

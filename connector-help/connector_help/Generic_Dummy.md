@@ -6,11 +6,11 @@ uid: Connector_help_Generic_Dummy
 
 ## About
 
-This driver is a virtual driver developed to store parameter information. From range 1.0.2.x onwards, connections are made between all externally added interfaces (E.g. added by VC4 IMS).
+This connector is a virtual connector developed to store parameter information. From range 1.0.2.x onwards, connections are made between all externally added interfaces (E.g. added by VC4 IMS).
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.2.x          | DCF Integration | Yes                 | Yes                     |
 
@@ -20,7 +20,7 @@ This driver is a virtual driver developed to store parameter information. From r
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## Usage
 
@@ -30,7 +30,7 @@ Dummy parameters are shown and editable from this page. In range 1.0.2.x, the du
 
 ## DataMiner Connectivity Framework
 
-The 1.0.2.x driver range of the **Generic Dummy** protocol supports the usage of DCF and can only be used on a DMA with **8.5.8.5** as the minimum version.
+The 1.0.2.x connector range of the **Generic Dummy** protocol supports the usage of DCF and can only be used on a DMA with **8.5.8.5** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 

@@ -4,29 +4,29 @@ uid: Connector_help_Emcore_Optiva_NMS
 
 # Emcore Optiva NMS
 
-The Emcore Optiva NMS driver is a DVE manager for the **Emcore Optiva NMS (Monitoring & Control) solution**, designed to retrieve information from Optiva enclosures and modules and to control these.
+The Emcore Optiva NMS connector is a DVE manager for the **Emcore Optiva NMS (Monitoring & Control) solution**, designed to retrieve information from Optiva enclosures and modules and to control these.
 
 ## About
 
-This driver uses **SNMP** polling to retrieve data from the device and set data on the device.
+This connector uses **SNMP** polling to retrieve data from the device and set data on the device.
 
-This driver also exports several other drivers based on the information retrieved from the hardware. The list of exported drivers can be found in the "Exported Drivers" section of this page.
+This connector also exports several other drivers based on the information retrieved from the hardware. The list of exported connectors can be found in the "Exported Connectors" section of this page.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                                    | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                                                    | **DCF Integration** | **Cassandra Compliant** |
 |------------------|----------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version.                                                                                   | No                  | Yes                     |
 | 1.0.1.x          | Support added for new card type (EDFA). DVE protocol names adjusted and logic and layout improved. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.1                         |
 | 1.0.1.x          | 1.1                         |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol**                                                                          | **Description**   |
 |------------------------------------------------------------------------------------------------|-------------------|
@@ -40,7 +40,7 @@ This driver also exports several other drivers based on the information retrieve
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

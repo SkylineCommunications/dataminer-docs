@@ -30,7 +30,7 @@ This connector is intended to be used to communicate with an API responsible for
 
 #### HTTP Main Connection
 
-This driver uses an HTTPS connection to communicate with the Telenor adaptation engine API.
+This connector uses an HTTPS connection to communicate with the Telenor adaptation engine API.
 
 HTTP CONNECTION:
 
@@ -39,7 +39,7 @@ HTTP CONNECTION:
 
 ### Initialization
 
-The driver requires an **API Key** and an **Instance URL** in order to start the polling. This information must be specified on the **General** page.
+The connector requires an **API Key** and an **Instance URL** in order to start the polling. This information must be specified on the **General** page.
 
 ## How to Use
 

@@ -8,17 +8,17 @@ The JDSU MVP-200 combines a a digital video monitoring probe with a full laborat
 
 ## About
 
-This driver uses a serial connection to manage and monitor the JDSU MVP-200.
+This connector uses a serial connection to manage and monitor the JDSU MVP-200.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                 | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                 | **DCF Integration** | **Cassandra Compliant** |
 |------------------|---------------------------------|---------------------|-------------------------|
 | 1.1.3.x          | New Alarm Preset feature added. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.1.3.x          | 4.0.0.0                     |
 
@@ -28,7 +28,7 @@ This driver uses a serial connection to manage and monitor the JDSU MVP-200.
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -45,7 +45,7 @@ SERIAL CONNECTION:
 
 #### Serial Traps Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

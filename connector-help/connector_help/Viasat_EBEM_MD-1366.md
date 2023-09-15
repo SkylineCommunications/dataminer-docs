@@ -4,24 +4,24 @@ uid: Connector_help_Viasat_EBEM_MD-1366
 
 # Viasat EBEM MD-1366
 
-The **Viasat EBEM MD-1366** driver is used to monitor and control a **local modem and distant modem** at remote locations (for example on the shore and on a ship).
+The **Viasat EBEM MD-1366** connector is used to monitor and control a **local modem and distant modem** at remote locations (for example on the shore and on a ship).
 
 ## About
 
-In the initial version **1.0.0.1**, the driver can be used to monitor and control (to a limited extent) the functionality of the modem.
+In the initial version **1.0.0.1**, the connector can be used to monitor and control (to a limited extent) the functionality of the modem.
 
-Version **1.1.0.1** introduces a major update, supporting both **local and distant** monitoring, as well as **active (local) editing and control**. The driver allows the monitoring of **modem status** information, monitoring and control of **active (local) parameters** - with a limited number of configurable parameters (without dependencies on other parameter values), monitoring of **distant parameters**, and editing of parameters related to the local and Flash configuration. It also handles **event traps** for alarms, faults, configuration changes, power transmission changes and AUPC power transmission changes.
+Version **1.1.0.1** introduces a major update, supporting both **local and distant** monitoring, as well as **active (local) editing and control**. The connector allows the monitoring of **modem status** information, monitoring and control of **active (local) parameters** - with a limited number of configurable parameters (without dependencies on other parameter values), monitoring of **distant parameters**, and editing of parameters related to the local and Flash configuration. It also handles **event traps** for alarms, faults, configuration changes, power transmission changes and AUPC power transmission changes.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                                                                    | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                                                                                    | **DCF Integration** | **Cassandra Compliant** |
 |------------------|------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial range                                                                                                                      | No                  | No                      |
 | 1.1.0.x          | Capability to monitor both a local and distant modem with a single driver, as well set the active (local) and flash configuration. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | NA                          |
 | 1.1.0.x          | 02.01.05                    |
@@ -32,7 +32,7 @@ Version **1.1.0.1** introduces a major update, supporting both **local and dista
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (**SNMPv1**) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (**SNMPv1**) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -46,7 +46,7 @@ SNMP Settings:
 
 ## Usage
 
-The driver contains different pages divided into several sections.
+The connector contains different pages divided into several sections.
 
 ### General
 

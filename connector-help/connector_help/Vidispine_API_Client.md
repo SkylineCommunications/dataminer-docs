@@ -4,7 +4,7 @@ uid: Connector_help_Vidispine_API_Client
 
 # Vidispine API Client
 
-The **Vidispine API Client** driver is an API-based media asset management platform. Vidispine API integrates with another workflow application by using a RESTful API.
+The **Vidispine API Client** connector is an API-based media asset management platform. Vidispine API integrates with another workflow application by using a RESTful API.
 
 ## About
 
@@ -32,7 +32,7 @@ The **Vidispine API Client** driver is an API-based media asset management platf
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -50,6 +50,6 @@ There is no redundancy defined.
 
 ## How to use
 
-At the moment, it is only possible to monitor information with the driver. The **Overview** pages show information in a tree view where appropriate.
+At the moment, it is only possible to monitor information with the connector. The **Overview** pages show information in a tree view where appropriate.
 
 All the content is available in tables on the remaining pages.

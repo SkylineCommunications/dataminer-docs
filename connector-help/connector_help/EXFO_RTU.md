@@ -8,17 +8,17 @@ The **EXFO RTU** is an IP services test head that enables carriers to ensure the
 
 ## About
 
-This driver uses **HTTP communication** and **traps** in order to monitor the fiber ports on an EXFO RTU (Remote Testing Unit).
+This connector uses **HTTP communication** and **traps** in order to monitor the fiber ports on an EXFO RTU (Remote Testing Unit).
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**       | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range**       | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x *\[SLC Main\]* | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ This driver uses **HTTP communication** and **traps** in order to monitor the fi
 
 #### HTTP Main Connection
 
-This driver uses a HTTP connection and requires the following input during element creation:
+This connector uses a HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -38,7 +38,7 @@ HTTP CONNECTION:
 
 #### SNMP Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection (for receiving traps only) and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection (for receiving traps only) and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -71,7 +71,7 @@ This page contains **trap-based** information coming from the fiber guardian. It
 
 It also allows you to set how many fiber ports are currently attached to the device.
 
-The **Automatically Remove Routes** parameter is *disabled* by default. When it is disabled, all the **routes** that were deleted in the device will be available for **manual deletion** via a button in the **Fiber Fault Table**. If the parameter is set to *Enabled*, the driver will look for all the keys (routes) that are not present in the device and those routes will be deleted, via an update of the fiber table during the polling cycle.
+The **Automatically Remove Routes** parameter is *disabled* by default. When it is disabled, all the **routes** that were deleted in the device will be available for **manual deletion** via a button in the **Fiber Fault Table**. If the parameter is set to *Enabled*, the connector will look for all the keys (routes) that are not present in the device and those routes will be deleted, via an update of the fiber table during the polling cycle.
 
 ### Traps
 

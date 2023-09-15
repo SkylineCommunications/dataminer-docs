@@ -4,21 +4,21 @@ uid: Connector_help_Beenius_IPTV_Delivery_Platform
 
 # Beenius IPTV Delivery Platform
 
-Beenius Beesmart IPTV Delivery Platform is an integrated platform for heterogeneous operator environments. Beenius IPTV drivers are used to display and configure parameters of the Beenius IPTV delivery platform device.
+Beenius Beesmart IPTV Delivery Platform is an integrated platform for heterogeneous operator environments. Beenius IPTV connectors are used to display and configure parameters of the Beenius IPTV delivery platform device.
 
 ## About
 
-The **Beenius Beesmart IPTV Delivery Platform** driver provides an overview of useful information about Channels, Regions and Events, using different connection protocols (HTTP-SNMP) to keep the information updated. The driver also allows the user to set some of its parameters.
+The **Beenius Beesmart IPTV Delivery Platform** connector provides an overview of useful information about Channels, Regions and Events, using different connection protocols (HTTP-SNMP) to keep the information updated. The connector also allows the user to set some of its parameters.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 4.2.2.6                     |
 
@@ -28,7 +28,7 @@ The **Beenius Beesmart IPTV Delivery Platform** driver provides an overview of u
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -42,7 +42,7 @@ SNMP Settings:
 
 #### HTTP Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP Settings:
 

@@ -4,7 +4,7 @@ uid: Connector_help_Imagine_Communications_EPIC_MV
 
 # Imagine Communications EPIC MV
 
-This driver allows you to check and adjust the configuration of an Imagine Communications EPIC multi-viewer. You can switch layout on displays and set up picture-in-picture (PiP).
+This connector allows you to check and adjust the configuration of an Imagine Communications EPIC multi-viewer. You can switch layout on displays and set up picture-in-picture (PiP).
 
 ## About
 
@@ -32,7 +32,7 @@ This driver allows you to check and adjust the configuration of an Imagine Commu
 
 #### Serial Main connection
 
-This driver uses a smart-serial connection and requires the following input during element creation:
+This connector uses a smart-serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -43,7 +43,7 @@ SERIAL CONNECTION:
 
 ### Initialization
 
-Make sure .NET 4.0 or higher is installed, as this driver requires that System.Web.Extensions.dll is available.
+Make sure .NET 4.0 or higher is installed, as this connector requires that System.Web.Extensions.dll is available.
 
 ### Web Interface
 
@@ -51,9 +51,9 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to Use
 
-This is a **smart-serial** driver that uses the EPIC-MV Remote API (**EMVRA**) to communicate. The driver will load the entire configuration after startup and at regular intervals. Change the layout using the **Displays** table or adjust PiP configuration in the **Picture in Picture Elements** table.
+This is a **smart-serial** connector that uses the EPIC-MV Remote API (**EMVRA**) to communicate. The connector will load the entire configuration after startup and at regular intervals. Change the layout using the **Displays** table or adjust PiP configuration in the **Picture in Picture Elements** table.
 
-The element created with this driver consists of the data pages detailed below.
+The element created with this connector consists of the data pages detailed below.
 
 ### General
 

@@ -8,17 +8,17 @@ The **Harmonic Ellipse 3100** encoders leverage Harmonic's industry-leading comp
 
 ## About
 
-With this driver you can monitor and configure the Harmonic Ellipse 3100 Encoder via **SNMP**.
+With this connector you can monitor and configure the Harmonic Ellipse 3100 Encoder via **SNMP**.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | V3.3.5.0.76                 |
 
@@ -26,7 +26,7 @@ With this driver you can monitor and configure the Harmonic Ellipse 3100 Encoder
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -66,10 +66,6 @@ Rows can be added to the **Services Table** using the Add Row button.
 
 The **IF Modulator** and **L-Band Modulator** are default not polling. With the buttons polling for these can be enabled.
 
-### Webinterface
+### Web Interface
 
 Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.
-
-## Notes
-
-N/A

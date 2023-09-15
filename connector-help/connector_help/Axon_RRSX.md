@@ -4,7 +4,7 @@ uid: Connector_help_Axon_RRSX
 
 # Axon RRSX
 
-The **Axon RRSX** driver can be used to display and configure information of the Axon RRS central controller and the attached card types located in its different slots.
+The **Axon RRSX** connector can be used to display and configure information of the Axon RRS central controller and the attached card types located in its different slots.
 
 ## About
 
@@ -53,7 +53,7 @@ The Axon RRSX protocol delivers two types of DataMiner Elements: a main element 
 
 ### Main Element
 
-The driver's main element contains the following pages:
+The connector's main element contains the following pages:
 
 - **RRSX**: The RRSX page provides an overview of the Axon main rack controller. Aside from this, you can also specify a view in which the created virtual element for the main rack controller will be added.
 - **Cards**: For every supported card type of the Axon frame, a page button is provided on the Cards page. When you open a page for a card type, an overview is given of all slots for this particular card type. You can also specify a view in which all created virtual elements for this type of card will be added.

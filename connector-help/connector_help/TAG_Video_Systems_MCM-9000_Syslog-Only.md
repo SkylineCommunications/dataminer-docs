@@ -4,13 +4,13 @@ uid: Connector_help_TAG_Video_Systems_MCM-9000_Syslog-Only
 
 # TAG Video Systems MCM-9000 Syslog-Only
 
-The MCM-9000 family of products enables real-time live monitoring of MPEG-2 and H.264 video sources, both in SD quality and HD quality. The purpose of this driver is to receive and display Syslog messages sent from the device.
+The MCM-9000 family of products enables real-time live monitoring of MPEG-2 and H.264 video sources, both in SD quality and HD quality. The purpose of this connector is to receive and display Syslog messages sent from the device.
 
 ## About
 
-This driver uses a smart-serial connection to poll data from the MCM-9000 device. If the system is a "stacked" system, all data will be polled through the main MCM-9000 device.
+This connector uses a smart-serial connection to poll data from the MCM-9000 device. If the system is a "stacked" system, all data will be polled through the main MCM-9000 device.
 
-The driver can receive traps to update the channel and system events in real time.
+The connector can receive traps to update the channel and system events in real time.
 
 ### Version Info
 
@@ -36,7 +36,7 @@ The driver can receive traps to update the channel and system events in real tim
 
 #### Smart-Serial Main Connection
 
-This driver uses a smart-serial connection to receive syslog messages:
+This connector uses a smart-serial connection to receive syslog messages:
 
 SMART-SERIAL CONNECTION:
 
@@ -46,7 +46,7 @@ SMART-SERIAL CONNECTION:
 
 ## How to use
 
-The element created with this driver consists of the data pages detailed below.
+The element created with this connector consists of the data pages detailed below.
 
 ### Channel Status
 

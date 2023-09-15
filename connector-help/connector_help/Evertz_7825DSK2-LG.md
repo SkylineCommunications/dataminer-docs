@@ -4,21 +4,21 @@ uid: Connector_help_Evertz_7825DSK2-LG
 
 # Evertz 7825DSK2-LG
 
-With this driver, it is possible to monitor and configure the Evertz 7825DSK2 Logo Inserter
+With this connector, it is possible to monitor and configure the Evertz 7825DSK2 Logo Inserter
 
 ## About
 
-The Evertz 7825DSK2-LG driver retrieves basic information about the system.
+The Evertz 7825DSK2-LG connector retrieves basic information about the system.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial Version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ The Evertz 7825DSK2-LG driver retrieves basic information about the system.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

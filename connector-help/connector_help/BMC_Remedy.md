@@ -8,15 +8,15 @@ uid: Connector_help_BMC_Remedy
 
 ## About (1.0.0.x and 2.0.0.x)
 
-This driver communicates with the BMC Remedy server via SOAP messages. The driver will create/update fault records on the server. In addition, the driver can mask views in DataMiner. This driver works together with four Automation scripts and with two executables.
+This connector communicates with the BMC Remedy server via SOAP messages. The connector will create/update fault records on the server. In addition, the connector can mask views in DataMiner. This connector works together with four Automation scripts and with two executables.
 
 ## About (3.0.0.x)
 
-This driver is used in conjunction with an Automation script to create and update incidents in the Remedy system, through HTTP communication.
+This connector is used in conjunction with an Automation script to create and update incidents in the Remedy system, through HTTP communication.
 
-Ranges of the driver
+Ranges of the connector
 
-| **Driver Range** | **Description**                          | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                          | **DCF Integration** | **Cassandra Compliant** |
 |------------------|------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                          | No                  | Yes                     |
 | 2.0.0.x          | Branch version based on 1.0.0.x          | No                  | Yes                     |
@@ -28,7 +28,7 @@ Ranges of the driver
 
 #### HTTP main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -48,7 +48,7 @@ It is possible to synchronize with Remedy by pressing the **Synch Alarms** butto
 
 On this page, the following settings can be adjusted:
 
-- **TTL FRID**: The maximum amount of time the driver will look for the FRID of the ticket.
+- **TTL FRID**: The maximum amount of time the connector will look for the FRID of the ticket.
 - **HTTP URL**: The URL that the SOAP messages will be sent to.
 - **Form Name**: The name of the form that the SOAP messages will be sent to.
 - **Mid Tier Server**: The name of the mid-tier server.
@@ -78,7 +78,7 @@ On this page, the **Branch Manager Overview** table provides an overview of the 
 
 ### Settings page
 
-This page contains configuration options for the driver:
+This page contains configuration options for the connector:
 
 - **Webservice URL**: The URL of the web service.
 - **Username**: The username that must be provided to use the web service.

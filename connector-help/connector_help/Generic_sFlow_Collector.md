@@ -4,9 +4,9 @@ uid: Connector_help_Generic_sFlow_Collector
 
 # Generic sFlow Collector
 
-The purpose of this driver is to analyze the information received via **sFlow** packets to give network operators a better understanding of the flows of **data crossing the network**.
+The purpose of this connector is to analyze the information received via **sFlow** packets to give network operators a better understanding of the flows of **data crossing the network**.
 
-Depending on the range of this driver, incoming data might be **filtered** and **handled** in a different way.
+Depending on the range of this connector, incoming data might be **filtered** and **handled** in a different way.
 
 ## About
 
@@ -43,7 +43,7 @@ Depending on the range of this driver, incoming data might be **filtered** and *
 
 #### Smart-Serial Main Connection
 
-This driver uses a smart-serial connection and requires the following input during element creation:
+This connector uses a smart-serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -63,7 +63,7 @@ All Agents sending sFlow data to this collector will be listed in the **Agents**
 
 **Only one** sFlow Collector element is supported per DataMiner Agent. These elements will listen to port **6343** of the Agent for incoming sFlow packets and process them (depending on filtering).
 
-There are multiple branches of this driver, which all work differently.
+There are multiple branches of this connector, which all work differently.
 
 ### 1.1.0.x
 

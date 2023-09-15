@@ -32,7 +32,7 @@ The PCAN-Ethernet Gateway DR allows the connection of different CAN buses over I
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -53,7 +53,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver consists of the following data pages:
+The element created with this connector consists of the following data pages:
 
 - **General:** Contains general parameters such as the Product Name, Serial Number, Name and Description. Also contains **Interface Count** information, and displays the available Hardware, Software, Website and JSON Interface Versions.
 

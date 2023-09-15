@@ -4,7 +4,7 @@ uid: Connector_help_Miteq_1+1_Redundant_Line_Amplifier
 
 # Miteq 1:1 Redundant Line Amplifier
 
-The **Miteq 1:1 Redundant Line Amplifier** driver is used to ensure a continuous operation without disruption of signal transmission.
+The **Miteq 1:1 Redundant Line Amplifier** connector is used to ensure a continuous operation without disruption of signal transmission.
 
 ## About
 
@@ -12,7 +12,7 @@ The protocol can be used to monitor the device and configure basic parameters.
 
 ## Installation and configuration
 
-This driver uses a serial connection and needs the following user information:
+This connector uses a serial connection and requires the following input during element creation:
 
 **SERIAL CONNECTION**:
 
@@ -58,7 +58,7 @@ For more information on the correct settings, refer to the manual of the device.
 
 ### Logging
 
-The device can only store up to 32 entries of logging, but the driver can store up to 400 entries. The current number of entries in the device is shown as the **Number of Expected Entries.** The user can **Refresh the Log** or **Clear the Log**.
+The device can only store up to 32 entries of logging, but the connector can store up to 400 entries. The current number of entries in the device is shown as the **Number of Expected Entries.** The user can **Refresh the Log** or **Clear the Log**.
 
 All entries are shown in the **Event Log Table**, with the latest entries on top. Some logging entries are specific for each **System Configuration.**
 

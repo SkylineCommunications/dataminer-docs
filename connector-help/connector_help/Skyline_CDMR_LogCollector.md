@@ -17,7 +17,7 @@ It can be used in any of the following situations:
 - If a DMS does not send reports to CDMR, this protocol allows you to partly replace the live data CDMR gets from these reports with contents from these packages.
 - ...
 
-The CDMR LogCollector is a virtual driver that connects to a remote location to transfer log items. Once the preferred selection has been configured, the retrieving process can start. This implies the extraction of the archive and copying the notifications and reports to a local path based on a mail domain found by communicating with the CDMR Manager element.
+The CDMR LogCollector is a virtual connector that connects to a remote location to transfer log items. Once the preferred selection has been configured, the retrieving process can start. This implies the extraction of the archive and copying the notifications and reports to a local path based on a mail domain found by communicating with the CDMR Manager element.
 
 ## About
 
@@ -37,13 +37,13 @@ The CDMR LogCollector is a virtual driver that connects to a remote location to 
 
 ### Connections
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## How to use
 
 ### General
 
-This is the most important page of the driver. It allows you to upload an SLLogCollector package to a customer element on the CDMR cluster, and achieve the following goals with the data from the package:
+This is the most important page of the connector. It allows you to upload an SLLogCollector package to a customer element on the CDMR cluster, and achieve the following goals with the data from the package:
 
 - Updating a *Skyline Communications CDMR Agent* element corresponding to a customer DMA with new data.
 - Creating a new *Skyline Communications CDMR Agent* element for an existing customer (and adding new data).
@@ -51,20 +51,33 @@ This is the most important page of the driver. It allows you to upload an SLLogC
 
 Here is how you can upload and process a Log Collector package:
 
-1.  **Run** ***SL_LogCollector.exe*** on the target (customer) DMA. For more information, see <https://community.dataminer.services/documentation/sllogcollector-tool/>.
-2.  **Copy the resulting package** to a location with a short path, e.g. a personal root directory.
-    Note that the SLC CDMR LogCollector suffers from the Windows limitation that a path may only have 255 characters. If the path is longer than that, it may not work correctly and log an error.
-3.  Navigate to ***cdmr.skyline.be/**,* open the *Apps* in the side panel, and **click** ***SLC CDMR LogCollector**.*
-4.  Fill in your **domain credentials and password**.
-    Note that there is a 12-hour timer that clears your credentials automatically in case you forget to do so. Also, if you log in many times in a short period of time, your account may be locked.
-5.  Fill in the **path** of the package and select its **customer acronym**.
-    As mentioned above, it is important that you keep the path short (e.g. *\\SLC-NAS-01.skyline.local\Users\LaurensVC*). It is also important that the customer acronym is selected at this point
-6.  Click **Retrieve Packages**. This will retrieve all Log Collector zip files from the specified location.
-7.  Optionally, to create a new element for a customer that does not yet exist on CDMR, fill in a **New Customer Mail Domain**, and click **Add Customer Element***.*
-    If the customer already exists, the customer view with the corresponding element will have the format *\[CustomerAcronym\] \[CustomerName\]*, e.g. *SLC Skyline Communications*.
-8.  Select the **DMA Name**, then select the **Filename** for that DMA. If you have several different packages for one DMA, make sure to select the correct one.
-9.  Click **Upload File** to automatically create a new Skyline Communications CDMR Agent and upload package data to it, or to upload the data to an existing CDMR Agent element*.*
-    You will be able to follow the unzipping process in the log box on the right-hand side of the page.
+1. **Run** ***SL_LogCollector.exe*** on the target (customer) DMA. For more information, see <https://community.dataminer.services/documentation/sllogcollector-tool/>.
+
+1. **Copy the resulting package** to a location with a short path, e.g. a personal root directory.
+
+   Note that the SLC CDMR LogCollector suffers from the Windows limitation that a path may only have 255 characters. If the path is longer than that, it may not work correctly and log an error.
+
+1. Navigate to ***cdmr.skyline.be/**,* open the *Apps* in the side panel, and **click** ***SLC CDMR LogCollector**.*
+
+1. Fill in your **domain credentials and password**.
+
+   Note that there is a 12-hour timer that clears your credentials automatically in case you forget to do so. Also, if you log in many times in a short period of time, your account may be locked.
+
+1. Fill in the **path** of the package and select its **customer acronym**.
+
+   As mentioned above, it is important that you keep the path short (e.g. *\\SLC-NAS-01.skyline.local\Users\LaurensVC*). It is also important that the customer acronym is selected at this point
+
+1. Click **Retrieve Packages**. This will retrieve all Log Collector zip files from the specified location.
+
+1. Optionally, to create a new element for a customer that does not yet exist on CDMR, fill in a **New Customer Mail Domain**, and click **Add Customer Element***.*
+
+   If the customer already exists, the customer view with the corresponding element will have the format *\[CustomerAcronym\] \[CustomerName\]*, e.g. *SLC Skyline Communications*.
+
+1. Select the **DMA Name**, then select the **Filename** for that DMA. If you have several different packages for one DMA, make sure to select the correct one.
+
+1. Click **Upload File** to automatically create a new Skyline Communications CDMR Agent and upload package data to it, or to upload the data to an existing CDMR Agent element*.*
+
+   You will be able to follow the unzipping process in the log box on the right-hand side of the page.
 
 ### Clean Up
 

@@ -8,17 +8,17 @@ The HOA74XX **optical amplifiers** are optimized for single wavelength operation
 
 ## About
 
-This driver is used to monitor the major parameters of the device (inputs and outputs) and makes it possible to configure these.
+This connector is used to monitor the major parameters of the device (inputs and outputs) and makes it possible to configure these.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 2.50                        |
 
@@ -28,7 +28,7 @@ This driver is used to monitor the major parameters of the device (inputs and ou
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

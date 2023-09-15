@@ -4,11 +4,11 @@ uid: Connector_help_IDirect_Pulse_Terminal_Manager
 
 # IDirect Pulse Terminal Manager
 
-With the **iDirect Pulse Terminal Manager** driver, you can monitor terminal components of an iDirect Pulse NMS.
+With the **iDirect Pulse Terminal Manager** connector, you can monitor terminal components of an iDirect Pulse NMS.
 
 ## About
 
-With this driver, iDirect terminals can be monitored. Other components should be monitored using the **iDirect Pulse Manager** driver. Multiple terminal manager elements can be created, to spread the load and trend data over multiple DataMiner Agents.
+With this connector, iDirect terminals can be monitored. Other components should be monitored using the **iDirect Pulse Manager** driver. Multiple terminal manager elements can be created, to spread the load and trend data over multiple DataMiner Agents.
 
 The iDirect Pulse manager is responsible for the distribution of the terminals that should be polled by this element.
 
@@ -16,20 +16,20 @@ After an outage, all missing data will be polled and set to the element using hi
 
 All data is retrieved over HTTP using the web service API.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**                                               |
+| **Range** | **Device Firmware Version**                                               |
 |------------------|---------------------------------------------------------------------------|
 | 1.0.0.x          | API version 1.0                                                           |
 | 1.1.0.x          | API version 1.1 No other major changes when going from 1.0.0.x to 1.1.0.x |
 
-### Exported Drivers
+### Exported Connectors
 
 | **Exported Protocol**  | **Description**                            |
 |------------------------|--------------------------------------------|
@@ -41,7 +41,7 @@ All data is retrieved over HTTP using the web service API.
 
 #### HTTP connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

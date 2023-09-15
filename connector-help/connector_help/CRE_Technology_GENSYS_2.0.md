@@ -32,7 +32,7 @@ The **CRE Technology GENSYS 2.0** is a control unit designed for generator elect
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -52,7 +52,7 @@ There is no redundancy defined.
 
 ## How to use
 
-The element created with this driver consists of the data pages detailed below.
+The element created with this connector consists of the data pages detailed below.
 
 ## General
 

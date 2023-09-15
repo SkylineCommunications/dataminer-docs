@@ -4,22 +4,22 @@ uid: Connector_help_Acterna_RPS_Matrix
 
 # Acterna RPS Matrix
 
-This driver monitors the port connection of the switch. It is possible to configure the switching mode (automatic/manual), the number of RPS devices to use and the input (MUX A/MUX B).
+This connector monitors the port connection of the switch. It is possible to configure the switching mode (automatic/manual), the number of RPS devices to use and the input (MUX A/MUX B).
 
 ## About
 
-The driver will start communicating with the device through a serial connection, once the number of ports to be used is defined. It is possible to set a port to start with for automatic and manual mode.
+The connector will start communicating with the device through a serial connection, once the number of ports to be used is defined. It is possible to set a port to start with for automatic and manual mode.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 | 1.1.0.x          | No              | Yes                 |                         |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.1.0.x          | Unknown                     |
 
@@ -29,7 +29,7 @@ The driver will start communicating with the device through a serial connection,
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

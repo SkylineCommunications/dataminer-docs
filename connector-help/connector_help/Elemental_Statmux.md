@@ -8,19 +8,19 @@ The **Elemental Statmux** is a software-based statistical multiplexer that optim
 
 ## About
 
-The **Elemental** **Statmux** driver is an **HTTP** driver that is used to monitor Elemental systems. It also contains an **SNMP Connection** to set some important settings.
+The **Elemental** **Statmux** connector is an **HTTP** connector that is used to monitor Elemental systems. It also contains an **SNMP Connection** to set some important settings.
 
 The content retrieved via the HTTP connection comes in XML format. Information sent to the device also uses the same format.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 2.10.1bt.301246             |
 
@@ -30,7 +30,7 @@ The content retrieved via the HTTP connection comes in XML format. Information s
 
 HTTP connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -40,7 +40,7 @@ HTTP CONNECTION:
 
 #### SNMP connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

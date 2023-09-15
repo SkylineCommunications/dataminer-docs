@@ -4,17 +4,17 @@ uid: Connector_help_Crystal_Vision_Synner-E_3G
 
 # Crystal Vision Synner-E 3G
 
-The **Crystal Vision Synner-E 3G** driver monitors the Synner-E 3G Video Synchroniser. This driver can also be used to control the features available in the **Crystal Vision Statesman** application.
+The **Crystal Vision Synner-E 3G** connector monitors the Synner-E 3G Video Synchroniser. This connector can also be used to control the features available in the **Crystal Vision Statesman** application.
 
 ## About
 
-The information and controls available in the driver are separated in multiple pages. Most of the pages and naming are similar to the interface of the **Crystal Vision Statesman PC control software**. All of the information and settings available via the CV Statesman software are also available in the driver.
+The information and controls available in the connector are separated in multiple pages. Most of the pages and naming are similar to the interface of the **Crystal Vision Statesman PC control software**. All of the information and settings available via the CV Statesman software are also available in the connector.
 
 ## Configuration and installation
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION**:
 

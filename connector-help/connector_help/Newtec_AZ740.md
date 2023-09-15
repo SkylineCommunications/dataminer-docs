@@ -8,17 +8,17 @@ The AZ740 is a high-performance frequency upconverter designed for a wide range 
 
 ## About
 
-This is an SNMP driver to monitor and configure the **Newtec AZ740** device.
+This is an SNMP connector to monitor and configure the **Newtec AZ740** device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | v1.65                       |
 
@@ -28,7 +28,7 @@ This is an SNMP driver to monitor and configure the **Newtec AZ740** device.
 
 SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP connection:
 

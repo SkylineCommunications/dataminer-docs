@@ -8,17 +8,17 @@ The Model D0124S3ULA-22320 is designed to take an incoming 950-2150 MHz signal a
 
 ## About
 
-This driver displays the status of the power supplies for the **ETL Systems 22320** device, retrieved from an element.
+This connector displays the status of the power supplies for the **ETL Systems 22320** device, retrieved from an element.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -28,11 +28,11 @@ This driver displays the status of the power supplies for the **ETL Systems 2232
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Configuration of Element Connections
 
-This driver requires connection to another element for the status of the pins connected to the device. See the table below:
+This connector requires connection to another element for the status of the pins connected to the device. See the table below:
 
 | **Power Supply** | **Designation** | **Pin No.** |
 |------------------|-----------------|-------------|

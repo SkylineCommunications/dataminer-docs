@@ -4,15 +4,15 @@ uid: Connector_help_Generic_Ping
 
 # Generic Ping
 
-This driver can be used to send ping commands to a number of IP addresses in the network. It serves as a utility to test connectivity and also calculates multiple metrics and statistics based on the results of the ping, e.g. round-trip time (RTT), ping success rate, jitter, etc.
+This connector can be used to send ping commands to a number of IP addresses in the network. It serves as a utility to test connectivity and also calculates multiple metrics and statistics based on the results of the ping, e.g. round-trip time (RTT), ping success rate, jitter, etc.
 
-The driver can perform multiple ping requests at once. The IP addresses/hostnames can be added manually or imported with a .csv file. For each IP address/hostname that has been added, ping requests will be performed if the status is *enabled*. The result of the ping commands and some other statistical data will be shown for each IP address/hostname.
+The connector can perform multiple ping requests at once. The IP addresses/hostnames can be added manually or imported with a .csv file. For each IP address/hostname that has been added, ping requests will be performed if the status is *enabled*. The result of the ping commands and some other statistical data will be shown for each IP address/hostname.
 
 ## About
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**                                                                                                                                                                                  | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**                                                                                                                                                                                  | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 3.1.2.x \[SLC Main\] | Based on 3.1.1.12. Jitter features of the Ping Table have been reworked to provide more accurate and detailed information and allow for a more intuitive user experience.                        | Yes                 | Yes                     |
 | 3.1.1.x \[Obsolete\] | Based on 3.1.0.19. Ping Table now uses naming instead of displayColumn to make the database for this table Cassandra-compliant. **Old trend data will be lost for this table.**                  | Yes                 | Yes                     |
@@ -28,7 +28,7 @@ The driver can perform multiple ping requests at once. The IP addresses/hostname
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Configuration
 
@@ -38,9 +38,9 @@ To perform ping requests, you must add IP addresses/hostnames to the **Ping Tabl
 
 ### Ping
 
-This page contains a table with a list of all the IP addresses/hostnames configured to be pinged. These are configured using the column **Destination Address**. To enable the ping, set the **Admin Status** to *Enabled*. Based on the responses received, the driver will display several metrics.
+This page contains a table with a list of all the IP addresses/hostnames configured to be pinged. These are configured using the column **Destination Address**. To enable the ping, set the **Admin Status** to *Enabled*. Based on the responses received, the connector will display several metrics.
 
-In version 3.1.1.10 of the driver, you can also select the type of **Protocol** to perform the ping: **ICMP** (default) or **TCP**. If you select the TCP protocol, you also need to specify the **Port**. For the ICMP protocol, the Port field is disabled. Also, when the TCP protocol is selected, the **Buffer Size** and **TTL** options are disabled.
+In version 3.1.1.10 of the connector, you can also select the type of **Protocol** to perform the ping: **ICMP** (default) or **TCP**. If you select the TCP protocol, you also need to specify the **Port**. For the ICMP protocol, the Port field is disabled. Also, when the TCP protocol is selected, the **Buffer Size** and **TTL** options are disabled.
 
 The number of ping requests per poll cycle can be specified in the **Pings per Cycle** column. With **Set All Nr of Pings per Cycle**, you can set all the **Pings per Cycle** to the specified value.
 
@@ -77,7 +77,7 @@ The **Ping Statistics** are:
 
 The **AVG Window Size** displays the number of poll cycles used to calculate the average ping statistics.
 
-From version 3.1.1.4 of the driver onwards, this page also displays the **Ping Availability**:
+From version 3.1.1.4 of the connector onwards, this page also displays the **Ping Availability**:
 
 - **Daily/Weekly/Monthly Availability Average**: The average availability per time range of the enabled ping processes in the Ping Table.
 
@@ -85,7 +85,7 @@ From version 2.1.0.11 onwards, a toggle button **Element Timeout** specifies whe
 
 ## Notes
 
-You can make this driver perform multiple actions by setting the hidden parameter **Incoming JSON Message** (PID = 10) with a JSON string.
+You can make this connector perform multiple actions by setting the hidden parameter **Incoming JSON Message** (PID = 10) with a JSON string.
 
 There are currently 2 APIs for this. The old API, which is still supported, is detailed below. The new API is available as a package (Skyline.Protocol.GenericPing). This new API is extended to add, edit and remove pings. It also has additional functionality to specify whether you want to have duplicate rows in the Ping Table. This is only applicable on the rows that are added. You start with the PingBuilder, which will create a ping that represents the row. The next step is to use the MessageBuilder to create the message to add, edit or remove pings. You add the ping(s) to the message and create a JSON message based on this.
 

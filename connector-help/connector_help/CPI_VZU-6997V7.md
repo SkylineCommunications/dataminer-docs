@@ -8,17 +8,17 @@ The CPI VZU-6997V7 is a 750W outdoor TWT High Power Amplifier (HPA).
 
 ## About
 
-The CPI VZU-6997V7 driver uses **serial** communication to communicate with the corresponding HPA.
+The CPI VZU-6997V7 connector uses **serial** communication to communicate with the corresponding HPA.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC MAIN\] | Initial version | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ The CPI VZU-6997V7 driver uses **serial** communication to communicate with the 
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 MAIN CONNECTION:
 

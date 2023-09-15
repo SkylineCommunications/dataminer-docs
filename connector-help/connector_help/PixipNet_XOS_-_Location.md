@@ -4,7 +4,7 @@ uid: Connector_help_PixipNet_XOS_-_Location
 
 # PixipNet XOS - Location
 
-This driver is used by DVEs (Dynamic Virtual Elements) created by the parent driver [PixipNet XOS](xref:Connector_help_PixipNet_XOS).
+This connector is used by DVEs (Dynamic Virtual Elements) created by the parent connector [PixipNet XOS](xref:Connector_help_PixipNet_XOS).
 
 ## About
 
@@ -32,4 +32,4 @@ There is no redundancy defined.
 
 ## How to Use
 
-The parent driver [PixipNet XOS](xref:Connector_help_PixipNet_XOS) creates a DVE using this driver for each location that is defined in it. The element using this driver displays all the monitors information for the relevant location.
+The parent connector [PixipNet XOS](xref:Connector_help_PixipNet_XOS) creates a DVE using this connector for each location that is defined in it. The element using this connector displays all the monitors information for the relevant location.

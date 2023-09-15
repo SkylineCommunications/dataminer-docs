@@ -4,17 +4,17 @@ uid: Connector_help_Ateme_Kyrion_2
 
 # Ateme Kyrion 2
 
-This **SNMP** driver can be used to monitor all kinds of Ateme Kyrion 2 devices.
+This **SNMP** connector can be used to monitor all kinds of Ateme Kyrion 2 devices.
 
 ## About
 
-This driver retrieves all data using SNMP. The full ATEME-KYRION-2 MIB is implemented, which allows full monitoring of the device.
+This connector retrieves all data using SNMP. The full ATEME-KYRION-2 MIB is implemented, which allows full monitoring of the device.
 
 Alarms are also generated for each received trap.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                                                                                           | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                                                                                                           | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version.                                                                                                                                          | No                  | Yes                     |
 | 1.0.1.x          | New firmware based on 1.0.0.13.                                                                                                                           | Yes                 | Yes                     |
@@ -28,9 +28,9 @@ Alarms are also generated for each received trap.
 | 2.1.0.x          | New firmware based on 2.0.3.5. New trap mechanism.                                                                                                        | Yes                 | Yes                     |
 | 3.0.0.x          | New firmware based on 2.0.2.16. New trap mechanism. Compatible with DataMiner 7.5.                                                                        | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range**    | **Device Firmware Version**            |
+| **Range**    | **Device Firmware Version**            |
 |---------------------|----------------------------------------|
 | 1.0.0.x             | MIB revision 201304081515Z             |
 | 1.0.1.x             | v.2.0.1.0 (build 25.0.1-rc)            |
@@ -51,7 +51,7 @@ Alarms are also generated for each received trap.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -309,11 +309,11 @@ This page contains all the tables from the Ateme Kyrion 2 device and allows you 
 
 This page displays a table with the events that have happened in the system.
 
-In the **2.1.0.x** range of the driver, **HEVC** tables and a **License** table are also available.
+In the **2.1.0.x** range of the connector, **HEVC** tables and a **License** table are also available.
 
 ## DataMiner Connectivity Framework
 
-The **1.0.1.x** and **1.1.0.x** driver range of the Ateme Kyrion 2 protocol support the usage of DCF and can only be used on a DMA with **8.5.8.5** as the minimum version.
+The **1.0.1.x** and **1.1.0.x** connector range of the Ateme Kyrion 2 protocol support the usage of DCF and can only be used on a DMA with **8.5.8.5** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 

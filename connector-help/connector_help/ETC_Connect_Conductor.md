@@ -4,21 +4,21 @@ uid: Connector_help_ETC_Connect_Conductor
 
 # ETC Connect Conductor
 
-The **ETC Connect Conductor** is a **virtual** driver that is used to get data from a PostgreSQL database.
+The **ETC Connect Conductor** is a **virtual** connector that is used to get data from a PostgreSQL database.
 
 ## About
 
-The driver receives data from the database and creates DVEs based on the information received.
+The connector receives data from the database and creates DVEs based on the information received.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a **virtual** connection and does not need any user information.
+This connector uses a **virtual** connection and does not need any user information.
 
 ### Configuration
 
-There are some extra configurations that need to be done before the driver can work correctly. To set these, go to the driver's **Configuration** page. For more information, refer to the **Usage \> Configuration** section of this document.
+There are some extra configurations that need to be done before the connector can work correctly. To set these, go to the connector's **Configuration** page. For more information, refer to the **Usage \> Configuration** section of this document.
 
 ## Usage
 

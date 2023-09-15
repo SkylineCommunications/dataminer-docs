@@ -4,23 +4,23 @@ uid: Connector_help_Astro_U100C
 
 # Astro U100C
 
-This driver monitors the **Astro U100 Controller**, which collects data from the different Astro devices in its frame.
+This connector monitors the **Astro U100 Controller**, which collects data from the different Astro devices in its frame.
 
 ## About
 
-This driver polls the controller and displays summary info about all the devices.
+This connector polls the controller and displays summary info about all the devices.
 
-The driver also allows you to schedule module upgrades for all the modules in the frame.
+The connector also allows you to schedule module upgrades for all the modules in the frame.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 5667, 6010                  |
 
@@ -28,11 +28,11 @@ The driver also allows you to schedule module upgrades for all the modules in th
 
 ### Creation
 
-This driver uses two interfaces: an HTTP interface to retrieve the data and an SNMP interface to collect the traps.
+This connector uses two interfaces: an HTTP interface to retrieve the data and an SNMP interface to collect the traps.
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -42,7 +42,7 @@ HTTP CONNECTION:
 
 #### SNMP Trap Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -104,17 +104,17 @@ This page allows you to update one or multiple modules.
 
 To execute an update immediately:
 
-1.  In the **Module Update** table, for each module, select the new firmware version in the **Module Update Option** column. Either select *'Do not Update'* or leave the cell empty if you do not want to update a module.
-2.  Click the **Update** button. The update will start.
-3.  You can follow the progress in the **Update Log Table** on the **More Log Files** page.
+1. In the **Module Update** table, for each module, select the new firmware version in the **Module Update Option** column. Either select *'Do not Update'* or leave the cell empty if you do not want to update a module.
+1. Click the **Update** button. The update will start.
+1. You can follow the progress in the **Update Log Table** on the **More Log Files** page.
 
 To schedule an update:
 
-1.  In the **Module Update** table, for each module, select the new firmware version in the **Module Update Option** column. Either select '*Do not Update'* or leave the cell empty if you do not want to update a module.
-2.  Click the **Schedule Update** page button to open a new window.
-3.  In the new window, fill in the parameters as needed (double-click a parameter for more information).
-4.  Click **Confirm Update**.
-5.  Feedback is displayed in the **Update Feedback** text box. If all goes well, the schedule is registered and displayed on the **Schedule** page.
+1. In the **Module Update** table, for each module, select the new firmware version in the **Module Update Option** column. Either select '*Do not Update'* or leave the cell empty if you do not want to update a module.
+1. Click the **Schedule Update** page button to open a new window.
+1. In the new window, fill in the parameters as needed (double-click a parameter for more information).
+1. Click **Confirm Update**.
+1. Feedback is displayed in the **Update Feedback** text box. If all goes well, the schedule is registered and displayed on the **Schedule** page.
 
 ### System Config
 

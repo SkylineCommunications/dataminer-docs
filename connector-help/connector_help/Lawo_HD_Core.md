@@ -4,22 +4,22 @@ uid: Connector_help_Lawo_HD_Core
 
 # Lawo HD Core
 
-With this driver you can retrieve information and modify settings from the Lawo HD Core.
+With this connector you can retrieve information and modify settings from the Lawo HD Core.
 
 ## About
 
 The Lawo HD Core is the core component of the products **Nova73 HD** and **mc2 series HD**.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                | **DCF Integration** | **Cassandra Compliant** |
 |------------------|--------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                | No                  | Yes                     |
 | 1.0.1.x          | Changed primary keys of table. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 1.0.1.x          | Unknown                     |
@@ -30,7 +30,7 @@ The Lawo HD Core is the core component of the products **Nova73 HD** and **mc2 s
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

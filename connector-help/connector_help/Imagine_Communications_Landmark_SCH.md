@@ -8,21 +8,21 @@ The Imagine Communications Landmark SCH can be used to efficiently ingest playli
 
 ## About
 
-This driver can be used to parse the information present in the SCH files (XML data in SCH wrapper). This information consists of the events that are to be played out. Each playout event has a corresponding subtitle file (CHK file). The driver will also check if the corresponding subtitle file is available in the file system and then subsequently check for the defined languages present within the subtitle file.
+This connector can be used to parse the information present in the SCH files (XML data in SCH wrapper). This information consists of the events that are to be played out. Each playout event has a corresponding subtitle file (CHK file). The connector will also check if the corresponding subtitle file is available in the file system and then subsequently check for the defined languages present within the subtitle file.
 
-There are promo events in the SCH files that the driver will ignore.
+There are promo events in the SCH files that the connector will ignore.
 
 It can take in up to four days of SCH files and will provide a summary of missing languages and files for the corresponding events on the "General" page .
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -32,7 +32,7 @@ It can take in up to four days of SCH files and will provide a summary of missin
 
 #### Virtual Main Connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## Usage
 

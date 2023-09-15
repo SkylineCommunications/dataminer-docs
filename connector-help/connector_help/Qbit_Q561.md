@@ -8,20 +8,20 @@ The **Qbit Q561** is an IP audio encoder that can handle up to 8 digital (or 4 a
 
 ## About
 
-This driver allows not only the complete monitoring of the QBit Q561 device, but also the configuration and control of every single parameter, including input and output flows. The current range, 1.1.0.x, is built using the latest firmware, which introduced several new functions and optimizations.
+This connector allows not only the complete monitoring of the QBit Q561 device, but also the configuration and control of every single parameter, including input and output flows. The current range, 1.1.0.x, is built using the latest firmware, which introduced several new functions and optimizations.
 
 Note that any upgrade to the current range 1.1.0.x will cause the loss of all history built by previous versions.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**      | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**      | **DCF Integration** | **Cassandra Compliant** |
 |------------------|----------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version      | No                  | Yes                     |
 | 1.1.0.x          | New firmware version | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 1.1.0.x          | v2.245                      |
@@ -32,7 +32,7 @@ Note that any upgrade to the current range 1.1.0.x will cause the loss of all hi
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

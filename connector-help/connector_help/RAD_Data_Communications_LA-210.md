@@ -4,7 +4,7 @@ uid: Connector_help_RAD_Data_Communications_LA-210
 
 # RAD Data Communications LA-210
 
-This driver can be used to monitor RAD LA-210 switches via SNMP.
+This connector can be used to monitor RAD LA-210 switches via SNMP.
 
 ## About
 
@@ -38,7 +38,7 @@ This driver can be used to monitor RAD LA-210 switches via SNMP.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -64,7 +64,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver consists of the data pages detailed below.
+The element created with this connector consists of the data pages detailed below.
 
 ### General
 

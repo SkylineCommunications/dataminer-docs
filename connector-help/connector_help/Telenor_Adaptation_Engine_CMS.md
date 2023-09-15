@@ -4,7 +4,7 @@ uid: Connector_help_Telenor_Adaptation_Engine_CMS
 
 # Telenor Adaptation Engine CMS
 
-The **Telenor Adaptation Engine CMS** driver is used to retrieve the list of assets and assets providers available on the Telenor system and export those as CSV files.
+The **Telenor Adaptation Engine CMS** connector is used to retrieve the list of assets and assets providers available on the Telenor system and export those as CSV files.
 
 The list of assets and assets providers is retrieved from an HTTP server.
 
@@ -34,7 +34,7 @@ The list of assets and assets providers is retrieved from an HTTP server.
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

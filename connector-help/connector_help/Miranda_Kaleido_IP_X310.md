@@ -223,10 +223,16 @@ In case the element immediately enters a timeout state when trying to load an Ex
 
 You can add the GSM SNMP support to the device by enabling the global action edition menu, using Miranda's XEdit software:
 
-1.  Download XEdit.
-2.  Modify the *.medit.ini* file, present under the Windows user folder (usually "*C:\Users\\user name\>*").
-3.  Add the following line to *.medit.ini* while XEdit is closed:
-    *enableGlobalActionsEdition=true*.
-4.  Open *XEdit* and connect to the device.
-5.  In the *Tools* menu, select *Edit global actions*.
-6.  Click *Add global*, enter the name, the community string, and port *2161,* and click *OK*.
+1. Download XEdit.
+
+1. Modify the *.medit.ini* file, present under the Windows user folder (usually "*C:\Users\\user name\>*").
+
+1. Add the following line to *.medit.ini* while XEdit is closed:
+
+   *enableGlobalActionsEdition=true*.
+
+1. Open *XEdit* and connect to the device.
+
+1. In the *Tools* menu, select *Edit global actions*.
+
+1. Click *Add global*, enter the name, the community string, and port *2161,* and click *OK*.

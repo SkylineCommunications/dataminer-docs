@@ -8,17 +8,17 @@ The **Dell iDRAC** controller protocol communicates with an external card on any
 
 ## About
 
-This driver communicates using SNMP v3. It can be used to monitor and trend all status information and readings from the **Dell iDRAC**.
+This connector communicates using SNMP v3. It can be used to monitor and trend all status information and readings from the **Dell iDRAC**.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 2.30.30.30                  |
 
@@ -28,7 +28,7 @@ This driver communicates using SNMP v3. It can be used to monitor and trend all 
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

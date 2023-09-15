@@ -8,27 +8,27 @@ The **Scientific Atlanta Pulsar MKII** is a TV modulator that is used to convert
 
 ## About
 
-This driver retrieves the information of several devices using serial communication, with the help of a serial-to-ethernet converter device.
+This connector retrieves the information of several devices using serial communication, with the help of a serial-to-ethernet converter device.
 
-With the config button, you can add the required IDs, each one of which will export the information to an **SA Pulsar MKII - Device** driver, from where the device can be managed. The Device Overview page displays the status and behavior of the device communication and allows DVE management.
+With the config button, you can add the required IDs, each one of which will export the information to an **SA Pulsar MKII - Device** connector, from where the device can be managed. The Device Overview page displays the status and behavior of the device communication and allows DVE management.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                                     | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                                                     | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                                                                                     | No                  | Yes                     |
 | 1.0.1.x          | No                                                                                                  | Yes                 |                         |
 | 1.0.2.x          | Allows the creation of virtual elements from a list of addresses added on the Device Overview page. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 1.0.1.x          | Unknown                     |
 | 1.0.2.x          | V02.08                      |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol**   | **Description**                                                 |
 |-------------------------|-----------------------------------------------------------------|
@@ -40,7 +40,7 @@ With the config button, you can add the required IDs, each one of which will exp
 
 #### Serial main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

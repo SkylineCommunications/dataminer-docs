@@ -4,7 +4,7 @@ uid: Connector_help_Vertex_7134
 
 # Vertex 7134
 
-The **Vertex 7134** driver is a serial driver that is used for antenna control. It allows alarm monitoring and trending of many important parameters.
+The **Vertex 7134** connector is a serial connector that is used for antenna control. It allows alarm monitoring and trending of many important parameters.
 
 ## About
 
@@ -14,7 +14,7 @@ This is an antenna control unit, with support for step tracking and memory track
 
 ### Creation
 
-The **Vertex 7134** is a serial driver. The IP address and port need to be configured during creation of the element. These communication settings will be used to send and receive commands and responses to and from the device.
+The **Vertex 7134** is a serial connector. The IP address and port need to be configured during creation of the element. These communication settings will be used to send and receive commands and responses to and from the device.
 
 ## Usage
 
@@ -44,7 +44,7 @@ On this page, all alarms that can be present on the unit are displayed. Monitori
 
 ## Notes
 
-As this is a serial driver, this means that there has to be a connection to a real device.
+As this is a serial connector, this means that there has to be a connection to a real device.
 
 Step track and enhanced memory track are only supported on the 7134 EMT device. Before the memory track can be started, the correct track parameters have to be set. The targets (A, B, C) used when setting the track parameters have to be present in the target table.
 

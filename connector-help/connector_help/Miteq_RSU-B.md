@@ -4,7 +4,7 @@ uid: Connector_help_Miteq_RSU-B
 
 # Miteq RSU-B
 
-This driver uses serial communication to allow monitoring of the Miteq RSU-B.
+This connector uses serial communication to allow monitoring of the Miteq RSU-B.
 
 ## About
 
@@ -35,7 +35,7 @@ This driver uses serial communication to allow monitoring of the Miteq RSU-B.
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -60,6 +60,6 @@ On the **General** page of the element, you can find the following information:
 
 ## DataMiner Connectivity Framework
 
-The **1.0.0.x** driver range of the protocol supports the usage of DCF and can only be used on a DMA with **8.5.8.5** as the minimum version.
+The **1.0.0.x** connector range of the protocol supports the usage of DCF and can only be used on a DMA with **8.5.8.5** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).

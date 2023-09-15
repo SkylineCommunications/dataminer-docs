@@ -4,19 +4,19 @@ uid: Connector_help_Ericsson_EN81X0
 
 # Ericsson EN81X0
 
-This is a **serial** driver that displays the status of the different parameters of an **Ericsson EN81X0 Encoder**.
+This is a **serial** connector that displays the status of the different parameters of an **Ericsson EN81X0 Encoder**.
 
 ## About
 
 The **Ericsson EN81X0 Encoder** driver supports various encoder/re-encoder modules: the **EN7100** and the **EN8190**.
 
-The driver has 2 driver ranges: v.1.0.0.x and v.3.0.0.x. Driver range 3.0.0.x differs from range 1.0.0.x in that it supports firmware version 7.
+The connector has 2 connector ranges: v.1.0.0.x and v.3.0.0.x. Driver range 3.0.0.x differs from range 1.0.0.x in that it supports firmware version 7.
 
 ## Installation and Configuration
 
 ### Creation
 
-This driver uses a serial connection (HTTP) and needs the following user information:
+This connector uses a serial connection (HTTP) and requires the following input during element creation:
 
 **SERIAL CONNECTION**:
 

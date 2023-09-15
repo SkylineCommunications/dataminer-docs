@@ -4,17 +4,17 @@ uid: Connector_help_SES_S.A._CMCS
 
 # SES S.A. CMCS
 
-The SES S.A. CMCS driver can be used to monitor the inputs of the CMCS system.
+The SES S.A. CMCS connector can be used to monitor the inputs of the CMCS system.
 
 ## About
 
 The CMCS system is based on a PLC system from Rockwell. The system has several inputs and outputs. Its own software monitors these inputs and controls the outputs that generate alarm notifications.
 
-The SES S.A. CMCS driver monitors the inputs on this PLC through the Factorytalk Gateway software, which is a gateway between Ethernet/IP on the PLC side and the driver on the DataMiner side.
+The SES S.A. CMCS connector monitors the inputs on this PLC through the Factorytalk Gateway software, which is a gateway between Ethernet/IP on the PLC side and the connector on the DataMiner side.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**                                | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**                                | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x              | Initial version.                               | No                  | Yes                     |
 | 1.0.1.x \[SLC Main\] | Filters signals for specific listening groups. | No                  | Yes                     |
@@ -25,7 +25,7 @@ The SES S.A. CMCS driver monitors the inputs on this PLC through the Factorytalk
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## Usage
 
@@ -35,9 +35,9 @@ This page allows you to configure the connection to the server.
 
 To create the connection
 
-1.  Click the **User** page button and enter the user credentials: **Username**, **Password**, **Domain** and **Logon** **Type**.
-2.  On the main Configuration page, enter the **Host IP Address**, select the **Server** name and select the **Listening Group** to be displayed on the element.
-3.  Click the **Connect to Server** button.
+1. Click the **User** page button and enter the user credentials: **Username**, **Password**, **Domain** and **Logon** **Type**.
+2. On the main Configuration page, enter the **Host IP Address**, select the **Server** name and select the **Listening Group** to be displayed on the element.
+3. Click the **Connect to Server** button.
 
 It is possible to configure the server's **Update Period** via the **Server** page button.
 

@@ -8,19 +8,19 @@ The ADVA Optical Networking FSP3000 is an optical data transport solution.
 
 ## About
 
-The purpose of this driver is to retrieve the entity table, using the SNMP protocol. The entity table contains a list of all instances of all cards in the chassis.
+The purpose of this connector is to retrieve the entity table, using the SNMP protocol. The entity table contains a list of all instances of all cards in the chassis.
 
-This is the main driver needed to retrieve information of the different cards in the chassis. Specific elements that are created separatly for the different cards, use the information in this table to know the instance IDs of all entities.
+This is the main connector needed to retrieve information of the different cards in the chassis. Specific elements that are created separately for the different cards, use the information in this table to know the instance IDs of all entities.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | All firmware versions       |
 
@@ -30,7 +30,7 @@ This is the main driver needed to retrieve information of the different cards in
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -57,7 +57,3 @@ Also, the entity table can be found on this page, with information of the differ
 ### Embedded Web Server
 
 Displays the web interface of the device. Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.
-
-## Notes
-
-N/A

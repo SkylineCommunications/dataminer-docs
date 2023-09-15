@@ -10,18 +10,18 @@ APC NetBotz is an active monitoring solution designed to protect against physica
 
 **SNMP polling** is used to retrieve sensor information. **SNMP traps** for enclosures and all sensors will be processed when this is enabled on the device.
 
-This is a read-only driver, so it is not possible to configure the device with it.
+This is a read-only connector, so it is not possible to configure the device with it.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**                   | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**                   | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|-----------------------------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version.                  | No                  | Yes                     |
 | 1.0.1.x              | Display keys added to the tables. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 4.5.0                       |
 | 1.0.1.x          | 4.5.0                       |
@@ -32,7 +32,7 @@ This is a read-only driver, so it is not possible to configure the device with i
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

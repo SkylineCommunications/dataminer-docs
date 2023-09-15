@@ -15,19 +15,19 @@ The Optimod 8685 is a surround loudness controller from Orban. Its main goal is 
 
 ## About
 
-This driver for the Orban Optimod 8685 supports monitoring only, with only basic configuration for the device identification and SNMP.
+This connector for the Orban Optimod 8685 supports monitoring only, with only basic configuration for the device identification and SNMP.
 
-This driver uses the SNMP protocol to obtain and configure the data for the device.
+This connector uses the SNMP protocol to obtain and configure the data for the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -37,7 +37,7 @@ This driver uses the SNMP protocol to obtain and configure the data for the devi
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

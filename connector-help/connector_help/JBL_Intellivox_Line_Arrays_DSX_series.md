@@ -10,19 +10,19 @@ The protocol is used to monitor the status of the device. It reads the status in
 
 ## About
 
-The driver reads the device properties in bytes. The properties of the device are organized in pages. Each page contains 32 properties. Each property contains 1 byte of information. Each byte of information is mapped into the corresponding properties according to the mapping available in the WinControl Software help file.
+The connector reads the device properties in bytes. The properties of the device are organized in pages. Each page contains 32 properties. Each property contains 1 byte of information. Each byte of information is mapped into the corresponding properties according to the mapping available in the WinControl Software help file.
 
 The device is accessible through Moxa Terminal server by configuring the Moxa as TCP Server.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 4.40                        |
 
@@ -32,7 +32,7 @@ The device is accessible through Moxa Terminal server by configuring the Moxa as
 
 #### Serial connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

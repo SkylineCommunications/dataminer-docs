@@ -41,10 +41,10 @@ The connector in fact polls two separate devices, which is why two IP addresses 
 
 To create an element with this connector:
 
-1.  Add a new element and select the **Vector Boostral 7920 Manager** protocol.
-2.  Define a unique name and optionally add a description.
-3.  Optionally enter an IP address and port. The address will in fact be ignored by the connector, since there will be many devices. However, the port can be used to define a default port. Note that you can override the port settings for each device.
-4.  Preferably, set the retries to zero and select a short timeout time, so that the connector does not get stuck for too long if one device fails to respond.
+1. Add a new element and select the **Vector Boostral 7920 Manager** protocol.
+2. Define a unique name and optionally add a description.
+3. Optionally enter an IP address and port. The address will in fact be ignored by the connector, since there will be many devices. However, the port can be used to define a default port. Note that you can override the port settings for each device.
+4. Preferably, set the retries to zero and select a short timeout time, so that the connector does not get stuck for too long if one device fails to respond.
 
 ### Configuring the element
 
@@ -54,11 +54,11 @@ It is important to know that this CSV file can be the same for all elements usin
 
 To configure the element:
 
-1.  Go to the **Setup** page.
-2.  Set the parameter **Manager Name** to a valid name. Valid names are not empty and contain no commas or semicolons ("," or ";"). In the CSV file, there will be a column where the name of the target manager is supplied.
-3.  Go to the **Documents** page and upload a new CSV file. This can be added to either the root folder or a subfolder with the name of the element.
-4.  Go back to the **Setup** page and click the **Refresh** button. A list will be shown containing all the CSV files that were found. Select one.
-5.  Finally, click the **Parse** button next to the **Refresh** button. This will read the entire CSV file and create, delete, or update the devices polled by the manager.
+1. Go to the **Setup** page.
+2. Set the parameter **Manager Name** to a valid name. Valid names are not empty and contain no commas or semicolons ("," or ";"). In the CSV file, there will be a column where the name of the target manager is supplied.
+3. Go to the **Documents** page and upload a new CSV file. This can be added to either the root folder or a subfolder with the name of the element.
+4. Go back to the **Setup** page and click the **Refresh** button. A list will be shown containing all the CSV files that were found. Select one.
+5. Finally, click the **Parse** button next to the **Refresh** button. This will read the entire CSV file and create, delete, or update the devices polled by the manager.
 
 Note: Below the **Parse** button, there is an output field where the element displays information about the last executed action. We recommend that you read this after parsing a file, in order to verify if the action was performed successfully. In addition, the **Managed Devices** table should also be verified.
 

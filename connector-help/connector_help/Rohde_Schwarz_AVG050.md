@@ -8,17 +8,17 @@ The R&S AVG050 is a dual DVB-S/S2 demodulator equipped with diverse inputs and o
 
 ## About
 
-This driver can be used to configure and monitor R&S AVG050 devices. It features real-time monitoring, and allows you to fully control the device, from the general configuration to specific operation procedures.
+This connector can be used to configure and monitor R&S AVG050 devices. It features real-time monitoring, and allows you to fully control the device, from the general configuration to specific operation procedures.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ This driver can be used to configure and monitor R&S AVG050 devices. It features
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

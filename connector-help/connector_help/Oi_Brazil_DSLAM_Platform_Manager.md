@@ -8,7 +8,7 @@ The **Oi Brazil DSLAM Platform Manager** allows the aggregation of KPIs and dyna
 
 ## About
 
-CPE (Customer Premises Equipment) drivers are designed to poll large amounts of data from the deployed infrastructure. This is done using a front-end CPE Manager element and several back-end CPE Manager elements at the same time. Both of these types of elements use the same CPE Manager driver.
+CPE (Customer Premises Equipment) drivers are designed to poll large amounts of data from the deployed infrastructure. This is done using a front-end CPE Manager element and several back-end CPE Manager elements at the same time. Both of these types of elements use the same CPE Manager connector.
 
 The **Oi Brazil** system has one front-end element (FE) and several back-end elements (BEs). The FE is responsible for the top-level data aggregation from the different BEs. Each BE is responsible for the aggregation of a section of the data from the collectors
 
@@ -40,15 +40,15 @@ Topologies describe the connections in the CPE diagram and chains display topolo
 
    - Allows you to set up the different configuration options.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | N/A                         |
 
@@ -58,7 +58,7 @@ Topologies describe the connections in the CPE diagram and chains display topolo
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Configuration
 

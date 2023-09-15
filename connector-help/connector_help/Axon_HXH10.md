@@ -4,17 +4,17 @@ uid: Connector_help_Axon_HXH10
 
 # Axon HXH10
 
-This is an SNMP-based driver used to display and configure information of the **Axon HXH10** card.
+This is an SNMP-based connector used to display and configure information of the **Axon HXH10** card.
 
 ## About
 
-The Axon HXH10 is an **HD-SDI** or **SD-SDI** to two **SDI output cross-converter**. The driver displays information and allows the user to change settings regarding the converter.
+The Axon HXH10 is an **HD-SDI** or **SD-SDI** to two **SDI output cross-converter**. The connector displays information and allows the user to change settings regarding the converter.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 
@@ -29,7 +29,7 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and requ
 
 ## Usage
 
-This driver has 2 pages: **General** and **Settings**.
+This connector has 2 pages: **General** and **Settings**.
 
 ### General
 

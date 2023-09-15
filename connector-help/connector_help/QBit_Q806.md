@@ -4,7 +4,7 @@ uid: Connector_help_QBit_Q806
 
 # Qbit Q806
 
-This is an SNMP driver for the **Qbit Q806 redundancy switch**. It can be used to display and configure information of this device.
+This is an SNMP connector for the **Qbit Q806 redundancy switch**. It can be used to display and configure information of this device.
 
 ## About
 
@@ -32,7 +32,7 @@ This is an SNMP driver for the **Qbit Q806 redundancy switch**. It can be used t
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -58,7 +58,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to Use
 
-The element created with this driver consists of the following data pages:
+The element created with this connector consists of the following data pages:
 
 - **General**: Contains general information about the hardware and software of the device. Via the **Firmware Update** page button, you can access a subpage where you can update the device firmware.
 - **Digital Inputs** and **Analog Inputs**: These pages contain information about the signals at the inputs of the device. The layout of these pages and tables is based on the web interface of the device. All tables have a fixed number of rows and fixed primary and display keys.

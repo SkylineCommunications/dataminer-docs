@@ -32,7 +32,7 @@ This connector is used to run an application. However, all logic for the applica
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 

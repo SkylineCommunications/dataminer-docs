@@ -4,7 +4,7 @@ uid: Connector_help_Sony_NXLK-IP50Y_51Y_HDR-CCR
 
 # Sony NXLK-IP50Y_51Y HDR-CCR
 
-The **Sony NXLK-IP50Y_51Y HDR-CCR** driver is used to monitor and control **Sony NXLK IP50Y and 51Y** **Drivers**. The driver also uses an HTTP connection and a WebSocket connection to handle the data.
+The **Sony NXLK-IP50Y_51Y HDR-CCR** connector is used to monitor and control **Sony NXLK IP50Y and 51Y** **Drivers**. The connector also uses an HTTP connection and a WebSocket connection to handle the data.
 
 ## About
 
@@ -32,7 +32,7 @@ The **Sony NXLK-IP50Y_51Y HDR-CCR** driver is used to monitor and control **Sony
 
 #### SNMP Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP connection:
 
@@ -47,7 +47,7 @@ SNMP settings:
 
 #### HTTP Connection
 
-This driver uses a Hypertext Transfer Protocol (HTTP) connection and requires the following input during element creation:
+This connector uses a Hypertext Transfer Protocol (HTTP) connection and requires the following input during element creation:
 
 HTTP connection:
 
@@ -57,7 +57,7 @@ HTTP connection:
 
 #### WebSocket Connection
 
-This driver uses a Websocket connection and requires the following input during element creation:
+This connector uses a Websocket connection and requires the following input during element creation:
 
 WebSocket connection:
 

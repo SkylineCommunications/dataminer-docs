@@ -4,7 +4,7 @@ uid: Connector_help_Leitch_Panacea_SNMP
 
 # Leitch Panacea SNMP
 
-This driver monitors the activity of the Leitch Panacea SNMP.
+This connector monitors the activity of the Leitch Panacea SNMP.
 
 ## About
 
@@ -59,7 +59,7 @@ The Panacea family of routers is available in 1RU and 2 RU frame sizes. They sha
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

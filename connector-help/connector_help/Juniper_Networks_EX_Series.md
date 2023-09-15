@@ -4,7 +4,7 @@ uid: Connector_help_Juniper_Networks_EX_Series
 
 # Juniper Networks EX Series
 
-The Juniper Networks EX Series driver is an SNMP-based driver used to monitor and configure the Juniper Networks with EX series.
+The Juniper Networks EX Series connector is an SNMP-based connector used to monitor and configure the Juniper Networks with EX series.
 
 ### Version Info
 
@@ -33,7 +33,7 @@ The Juniper Networks EX Series driver is an SNMP-based driver used to monitor an
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -47,7 +47,7 @@ SNMP Settings:
 
 #### SSH Connection
 
-This driver uses SSH and requires the following input during element creation:
+This connector uses SSH and requires the following input during element creation:
 
 SSH CONNECTION:
 

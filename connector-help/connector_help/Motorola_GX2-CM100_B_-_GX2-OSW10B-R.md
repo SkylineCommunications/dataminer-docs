@@ -4,21 +4,21 @@ uid: Connector_help_Motorola_GX2-CM100_B_-_GX2-OSW10B-R
 
 # Motorola GX2-CM100 B - GX2-OSW10B-R
 
-The **Motorola GX2-CM100 B - GX2-OSW10B-R** driver is an SNMP-based driver used to monitor and configure the **Motorola GX2-OSW10B-R**.
+The **Motorola GX2-CM100 B - GX2-OSW10B-R** connector is an SNMP-based connector used to monitor and configure the **Motorola GX2-OSW10B-R**.
 
 ## About
 
-This driver provides a monitoring interface for the **Motorola GX2-OSW10B-R** module.
+This connector provides a monitoring interface for the **Motorola GX2-OSW10B-R** module.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 2.0.1.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 2.0.1.x          | D                           |
 
@@ -26,7 +26,7 @@ This driver provides a monitoring interface for the **Motorola GX2-OSW10B-R** mo
 
 ### Creation
 
-This driver is used by DVE child elements that are **automatically created** by the parent driver [Motorola GX2-CM100 B](xref:Connector_help_Motorola_GX2-CM100_B), from version 2.0.1.1 onwards.
+This connector is used by DVE child elements that are **automatically created** by the parent connector [Motorola GX2-CM100 B](xref:Connector_help_Motorola_GX2-CM100_B), from version 2.0.1.1 onwards.
 
 ## Usage
 

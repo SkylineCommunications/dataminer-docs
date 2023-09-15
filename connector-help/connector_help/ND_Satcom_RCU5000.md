@@ -8,9 +8,9 @@ The **ND SatCom RCU5000** redundancy controller manages 1:1 redundant transmit c
 
 ## About
 
-The **ND Satcom RCU5000** is an SNMP driver designed to communicate with RCU 5000 ND Satcom devices. The Redundancy Control Unit (RCU) is used for Monitoring and Control (M&C) of satellite ground station equipment.
+The **ND Satcom RCU5000** is an SNMP connector designed to communicate with RCU 5000 ND Satcom devices. The Redundancy Control Unit (RCU) is used for Monitoring and Control (M&C) of satellite ground station equipment.
 
-### Ranges of the driver
+### Version Info
 
 <table>
 <colgroup>
@@ -53,13 +53,13 @@ The **ND Satcom RCU5000** is an SNMP driver designed to communicate with RCU 500
 </tbody>
 </table>
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 3.3.11.x         | 1.8.9 (application version) |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol** | **Description** |
 |-----------------------|-----------------|
@@ -70,7 +70,7 @@ The **ND Satcom RCU5000** is an SNMP driver designed to communicate with RCU 500
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION**:
 
@@ -106,7 +106,3 @@ This page displays the **RCU Notification Table**, which contains all the notifi
 ### Web Interface
 
 This page allows access to the web interface provided by the device's web server. This is only available if the LAN where it is accessed has access to the IP of the device.
-
-## Notes
-
-N/A

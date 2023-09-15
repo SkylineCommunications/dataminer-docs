@@ -8,17 +8,17 @@ The **Arqiva Radio Trap Receiver** is used to capture and display the Arqiva Rad
 
 ## About
 
-The **Arqiva Radio Trap Receiver** driver captures the **SNMP** alarm traps from the Arqiva Radio device and displays them in the Alarm Trap Table, in order to visualize the current active alarms.
+The **Arqiva Radio Trap Receiver** connector captures the **SNMP** alarm traps from the Arqiva Radio device and displays them in the Alarm Trap Table, in order to visualize the current active alarms.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ The **Arqiva Radio Trap Receiver** driver captures the **SNMP** alarm traps from
 
 #### SNMP connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -47,7 +47,3 @@ SNMP Settings:
 This page contains the **Alarm Traps** table, which displays all alarms that came in through traps. The **ID**, **Timestamp**, **Source** **IP**, **OID**, **Radio** **link**, **Alarm** **condition**, **Alarm** **state** and **ECAM** **cct** **number** of the trap are displayed in the different columns.
 
 With the **Clear Table** button above the table, you can delete all rows from the table.
-
-## Notes
-
-N/A

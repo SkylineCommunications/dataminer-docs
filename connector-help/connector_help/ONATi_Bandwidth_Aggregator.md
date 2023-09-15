@@ -32,7 +32,7 @@ The ONATi Bandwidth Aggregator connector was developed with the goal of identify
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 

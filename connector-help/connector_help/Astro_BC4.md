@@ -8,11 +8,11 @@ The **Astro BC4** is a controller capable of monitoring the components of a head
 
 ## About
 
-The Astro BC4 driver is an SNMP driver for the **Astro BC4**.
+The Astro BC4 connector is an SNMP connector for the **Astro BC4**.
 
 ## Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP Connection:**
 

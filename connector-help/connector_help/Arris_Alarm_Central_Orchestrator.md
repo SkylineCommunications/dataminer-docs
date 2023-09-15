@@ -4,15 +4,15 @@ uid: Connector_help_Arris_Alarm_Central_Orchestrator
 
 # Arris Alarm Central Orchestrator
 
-The Arris Alarm Central Orchestrator driver is used to **receive Arris Alarm Central notifications**. The orchestrator will **forward** the received notifications via an **HTTP Post** to different AAC elements based on **patterns matching** the alarm IDs of the notifications.
+The Arris Alarm Central Orchestrator connector is used to **receive Arris Alarm Central notifications**. The orchestrator will **forward** the received notifications via an **HTTP Post** to different AAC elements based on **patterns matching** the alarm IDs of the notifications.
 
 ## About
 
-The Arris Alarm Central Orchestrator is an abstract driver that communicates with the Arris Alarm Central driver. The orchestrator driver is a **CPE manager** which provides **load balancing capabilities** for the AAC driver.
+The Arris Alarm Central Orchestrator is an abstract connector that communicates with the Arris Alarm Central connector. The orchestrator connector is a **CPE manager** which provides **load balancing capabilities** for the AAC connector.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
@@ -20,14 +20,14 @@ The Arris Alarm Central Orchestrator is an abstract driver that communicates wit
 
 ### Creation
 
-HTTP \[Main\] connection
+#### HTTP connection - Main
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
-- **IP address/host**: \[The polling IP or URL of the destination, default: localhost\]
-- **IP port**: \[The IP port of the destination, default: port 80\]
+- **IP address/host**: The polling IP or URL of the destination, default: *localhost*.
+- **IP port**: The IP port of the destination, default: *80*.
 - **Bus address**: If the proxy server has to be bypassed, specify *bypassproxy.*
 
 ## Usage
@@ -47,9 +47,9 @@ The "Issue Type" page contains the **Configuration Table**. This table displays 
 
 This table has to be imported from a .csv file:
 
-1.  Add the file path of the desired file in **CSV File Path**
-2.  Chose the file to be imported on **CSV File Name**
-3.  Click **Import CSV**
+1. Add the file path of the desired file in **CSV File Path**
+1. Chose the file to be imported on **CSV File Name**
+1. Click **Import CSV**
 
 The **Service Impact** and **Issue Type** columns are editable.
 
@@ -60,5 +60,3 @@ From version 1.0.0.3 onwards, a new list called **AC Upstream Issue Types with O
 ### Webservice
 
 On the Webservice page, the Webservice **port** needs to be configured. When the port is configured the **state** will indicate **Ok** if the service is running or **Error** when the service fails, e.g. because of the port is already in use. If an error occurs, the **Webservice feedback** parameter shows the **information about this error.**
-
-7

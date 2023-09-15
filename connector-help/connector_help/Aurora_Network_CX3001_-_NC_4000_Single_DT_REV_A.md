@@ -4,7 +4,7 @@ uid: Connector_help_Aurora_Network_CX3001_-_NC_4000_Single_DT_REV_A
 
 # Aurora Network CX3001 - NC 4000 Single DT REV A
 
-The Aurora Network Node NC4000 Single DT REV A driver is used by DVEs created by the Aurora Network CX3001 driver.
+The Aurora Network Node NC4000 Single DT REV A connector is used by DVEs created by the Aurora Network CX3001 connector.
 
 A DVE is created for every Digital Transceiver Module Revision A Type that is part of the NC 4000 chassis.
 
@@ -25,9 +25,9 @@ The Dynamic Virtual Element has five pages:
 - The **Converters** page contains information related to the **Slot D Converters** and **Slot E Converters**.
 - The **Modules** page contains a table with information related to the module nodes.
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 2.0.1.x          | Unknown                     |
 
@@ -35,7 +35,7 @@ The Dynamic Virtual Element has five pages:
 
 ### Creation
 
-This driver is used by DVE child elements that are **automatically created** by the parent driver [Aurora Network CX3001](xref:Connector_help_Aurora_Network_CX3001), from version 2.0.1.x onwards. For each digital transceiver found in the system, a virtual element will be created.
+This connector is used by DVE child elements that are **automatically created** by the parent connector [Aurora Network CX3001](xref:Connector_help_Aurora_Network_CX3001), from version 2.0.1.x onwards. For each digital transceiver found in the system, a virtual element will be created.
 
 ## Usage
 

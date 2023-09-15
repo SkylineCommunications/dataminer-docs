@@ -4,7 +4,7 @@ uid: Connector_help_TDC_Humax_STB_Collector
 
 # TDC Humax STB Collector
 
-This driver can be used to retrieve information from managed set-top boxes (STBs). For this purpose, it will query the Humax database.
+This connector can be used to retrieve information from managed set-top boxes (STBs). For this purpose, it will query the Humax database.
 
 ## About
 
@@ -36,7 +36,7 @@ One collector will first need to collect the STB MACs that will be inserted into
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 

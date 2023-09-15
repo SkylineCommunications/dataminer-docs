@@ -8,18 +8,18 @@ The **Arris ME-7000** is a compression platform that provides multi-codec suppor
 
 ## About
 
-This driver (SNMP-based in range 1.0.0.x and HTTP-based in range 1.1.0.x) monitors the Arris ME-7000 device.
+This connector (SNMP-based in range 1.0.0.x and HTTP-based in range 1.1.0.x) monitors the Arris ME-7000 device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                | **DCF Integration** | **Cassandra Compliant** |
 |------------------|--------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version.               | No                  | No                      |
 | 1.1.0.x          | HTTP connection. Tree control. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**    |
+| **Range** | **Device Firmware Version**    |
 |------------------|--------------------------------|
 | 1.0.0.x          | me7k.1.0.0.42.150313 (CCBuild) |
 | 1.1.0.x          | me7k.2.2.0                     |
@@ -30,7 +30,7 @@ This driver (SNMP-based in range 1.0.0.x and HTTP-based in range 1.1.0.x) monito
 
 #### SNMP Main Connection
 
-Range **1.0.0.x** of this driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+Range **1.0.0.x** of this connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -44,7 +44,7 @@ SNMP Settings:
 
 HTTP Main Connection
 
-Range **1.1.0.x** of this driver uses an HTTP connection and requires the following input during element creation:
+Range **1.1.0.x** of this connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

@@ -8,7 +8,7 @@ The CDD-56xL series are integrated IP demodulators that receive two or four inde
 
 ## About
 
-This driver is intended to get/set information from/to the device via an Element in a DataMiner System, using SNMP commands.
+This connector is intended to get/set information from/to the device via an Element in a DataMiner System, using SNMP commands.
 To get more detailed information consult this website <http://www.comtechefdata.com/support/docs/satellitemodemdocs>
 
 ### Version Info

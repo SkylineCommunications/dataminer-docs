@@ -4,7 +4,7 @@ uid: Connector_help_Amazon_AWS_Kinesis_Data_Streams_Producer
 
 # Amazon AWS Kinesis Data Streams Producer
 
-The purpose of this driver is to be able to offload data (trending, alarms, information events, etc.) towards AWS Kinesis through a DataMiner element. The driver will process DataMiner offload files and push the contents of these offload files in a JSON format towards the AWS Kinesis Data Streams service.
+The purpose of this connector is to be able to offload data (trending, alarms, information events, etc.) towards AWS Kinesis through a DataMiner element. The connector will process DataMiner offload files and push the contents of these offload files in a JSON format towards the AWS Kinesis Data Streams service.
 
 ## About
 
@@ -32,7 +32,7 @@ The purpose of this driver is to be able to offload data (trending, alarms, info
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -54,9 +54,9 @@ There is no redundancy defined.
 
 ## How to use
 
-The purpose of this driver is to be able to offload data (trending, alarms, information events, etc.) towards AWS Kinesis through a DataMiner element. The driver will process DataMiner offload files and push the contents of these offload files in a JSON format towards the AWS Kinesis Data Streams service.
+The purpose of this connector is to be able to offload data (trending, alarms, information events, etc.) towards AWS Kinesis through a DataMiner element. The connector will process DataMiner offload files and push the contents of these offload files in a JSON format towards the AWS Kinesis Data Streams service.
 
-Two types of input data are supported by the driver:
+Two types of input data are supported by the connector:
 
 - DataMiner central DB offload files
 
@@ -76,7 +76,7 @@ Two types of input data are supported by the driver:
 
 The element also displays various statistics for the key metrics, which allow you to monitor the offload process.
 
-Whenever an impacting event takes place, an information event is generated (long-term storage on the DMA) and a new row will be added to the events table. This table only contains a limited number of events. Older events are removed according to the configuration of the driver.
+Whenever an impacting event takes place, an information event is generated (long-term storage on the DMA) and a new row will be added to the events table. This table only contains a limited number of events. Older events are removed according to the configuration of the connector.
 
 ## Notes
 

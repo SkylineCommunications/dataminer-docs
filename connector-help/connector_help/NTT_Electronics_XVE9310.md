@@ -8,17 +8,17 @@ The **NTT ELECTRONICS XVE9310** can transmit full HD dual channel videos with bu
 
 ## About
 
-Using this driver, is possible to monitor the hardware and performance status of XVE9310. It is also possible to change configuration on writable parameters. This driver uses a **SNMP connection** to retrieve data from this device and to set parameters on it.
+Using this connector, is possible to monitor the hardware and performance status of XVE9310. It is also possible to change configuration on writable parameters. This connector uses a **SNMP connection** to retrieve data from this device and to set parameters on it.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 06.00                       |
 
@@ -26,7 +26,7 @@ Using this driver, is possible to monitor the hardware and performance status of
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

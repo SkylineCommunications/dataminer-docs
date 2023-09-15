@@ -4,7 +4,7 @@ uid: Connector_help_Ministere_des_Armees_Carrier_Monitoring_Manager
 
 # Ministere des Armees Carrier Monitoring Manager
 
-This driver is used for an application that allows you to create new carriers for the Rohde Schwarz FSL3 spectrum analyzer driver. With this application, you can also easily maintain the presets and monitors for multiple carriers in the system.
+This connector is used for an application that allows you to create new carriers for the Rohde Schwarz FSL3 spectrum analyzer driver. With this application, you can also easily maintain the presets and monitors for multiple carriers in the system.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver is used for an application that allows you to create new carriers fo
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## How to use
 
@@ -42,4 +42,4 @@ On the **Configuration** page, you can define the default parameter values used 
 
 ## Notes
 
-This driver runs in conjunction with an Automation script (*Carrier Configurations.xml*).
+This connector runs in conjunction with an Automation script (*Carrier Configurations.xml*).

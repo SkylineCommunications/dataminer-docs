@@ -10,15 +10,15 @@ The **Mitec 12125 Transmit Switching Controller** makes it possible to configure
 
 The **Mitec 12125 Transmit Switching Controller** driver will update its monitoring and configuration parameters by sending serial commands to the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** |
+| **Range** | **Description** |
 |------------------|-----------------|
 | 1.0.0.x          | Initial version |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 2.15.1.4                    |
 
@@ -26,13 +26,13 @@ The **Mitec 12125 Transmit Switching Controller** driver will update its monitor
 
 ### Creation
 
-This driver uses a serial connection and needs the following user information:
+This connector uses a serial connection and requires the following input during element creation:
 
 **SERIAL CONNECTION:**
 
 - Direct connection:
 
-- **Baudrate:** Baudrate specified in the manual of the device. E.g. 9600
+  - **Baudrate:** Baudrate specified in the manual of the device. E.g. 9600
   - **Databits:** Databits specified in the manual of the device. E.g. 7
   - **Stopbits:** Stopbits specified in the manual of the device. E.g. 1
   - **Parity:** Parity specified in the manual of the device. E.g. No
@@ -53,8 +53,8 @@ At the right of the page, the user can observe the device's mode (**Operating Mo
 
 ### Switches
 
-In the switches page, the user can configure the position of the switches and see the lock status of some switches. On the bottom there are two pagebuttons available that allows the user to configure the maintenance and priority settings.
+In the switches page, the user can configure the position of the switches and see the lock status of some switches. On the bottom there are two page buttons available that allows the user to configure the maintenance and priority settings.
 
 ### Alarms
 
-In the alarms page, the user can observe if there's any existing faults regarding: **PSU Summary Alarm**; **Switch** **Summary Alarm**; HPA alarms. There is a button avaialble on the bottom to acknowledge the alarms.
+In the alarms page, the user can observe if there is any existing faults regarding: **PSU Summary Alarm**; **Switch** **Summary Alarm**; HPA alarms. There is a button available at the bottom to acknowledge the alarms.

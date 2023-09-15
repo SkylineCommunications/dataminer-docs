@@ -4,17 +4,17 @@ uid: Connector_help_Sky_UK_Service_Alarm_Workflow
 
 # Sky UK Service Alarm Workflow
 
-This driver can be used to create an enhanced service that monitors specific elements. All the alarms of the elements will be displayed in a single table, the ALPB Table. The end result of this monitoring and the triggered alarm are determined based on the conditions in the Workflow Logic Table, which can use any parameter from any element.
+This connector can be used to create an enhanced service that monitors specific elements. All the alarms of the elements will be displayed in a single table, the ALPB Table. The end result of this monitoring and the triggered alarm are determined based on the conditions in the Workflow Logic Table, which can use any parameter from any element.
 
 ## About
 
-This driver uses a subscription mechanism that will update the Parameter Value column in the Subscription Table every time a parameter changes in an element included in the enhanced service.
+This connector uses a subscription mechanism that will update the Parameter Value column in the Subscription Table every time a parameter changes in an element included in the enhanced service.
 
-The parameters must be selected when the service is created. First you will need to select the target elements and then the target parameters from each element. After this, the driver will automatically assign a subscription name to specific parameters. The subscription name works as an alias that can be used in the Condition column of the Workflow Logic Table and Input Faults Table. Note that every subscription name that is used in the Workflow Logic Table should be also present in the Subscriptions Table. Otherwise, the condition will be considered invalid and it will not be taken into account in the workflow.
+The parameters must be selected when the service is created. First you will need to select the target elements and then the target parameters from each element. After this, the connector will automatically assign a subscription name to specific parameters. The subscription name works as an alias that can be used in the Condition column of the Workflow Logic Table and Input Faults Table. Note that every subscription name that is used in the Workflow Logic Table should be also present in the Subscriptions Table. Otherwise, the condition will be considered invalid and it will not be taken into account in the workflow.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**  | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**  | **DCF Integration** | **Cassandra Compliant** |
 |------------------|------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version. | No                  | Yes                     |
 
@@ -59,7 +59,7 @@ The following table shows the default configuration:
 | Sky UK SSR                                   | Sound Type (Current Events)             | CurrentEventScheduledSoundType  |
 | Axon ACP - GDR26                             | Active A (GDR26)                        | MainReserveSwitchActiveA        |
 
-Note that when a different parameter is included, the driver will set a generic subscription name (e.g. S1).
+Note that when a different parameter is included, the connector will set a generic subscription name (e.g. S1).
 
 If the Service Status parameter from BSS Schedule Data - Bus is included, this workflow will not trigger any alarms when this is *Off-Air*. If the parameter has a different value (*NA* or *On-Air*), or if this parameter is not included, the workflow will run as expected.
 

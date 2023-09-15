@@ -4,17 +4,17 @@ uid: Connector_help_Double_D_Electronics_DDA89-02
 
 # Double D Electronics DDA89-02
 
-The driver monitors the activity of the Double D Electronics DDA89-02 Controller.
+The connector monitors the activity of the Double D Electronics DDA89-02 Controller.
 
 ## About
 
-The driver has a serial communication to the Double D Electronics DDA89-02 and allows the end user to control and monitor the switches/best route configuration, plus observe the status of the device's converters.
+The connector has a serial communication to the Double D Electronics DDA89-02 and allows the end user to control and monitor the switches/best route configuration, plus observe the status of the device's converters.
 
-In addition to the previous, the driver uses three timers: 1) one polling every half second for fast varying information from the controllers; 2) one polling every five seconds that retrieves general information from the device and its switches as well; and 3) one that polls every hour for slowly varying information.
+In addition to the previous, the connector uses three timers: 1) one polling every half second for fast varying information from the controllers; 2) one polling every five seconds that retrieves general information from the device and its switches as well; and 3) one that polls every hour for slowly varying information.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** |
+| **Range** | **Description** |
 |------------------|-----------------|
 | 1.0.0.x          | Initial Version |
 
@@ -22,23 +22,23 @@ In addition to the previous, the driver uses three timers: 1) one polling every 
 
 ### Creation
 
-This driver uses a Serial connection and needs the following user information:
+This connector uses a serial connection and requires the following input during element creation:
 
 - IP address/host: The polling IP of the device
-- IP port: \[The IP port of the device. Indicate if required or not. If so, specify default value and range.\]
-- Bus address: \[The bus address of the device. Indicate if required or not. If so, specify default value, range and format.\]
+- IP port: The IP port of the device.
+- Bus address: The bus address of the device.
 
 ## Usage
 
-The protocol driver has three pages: 1) General; 2) Switches; and 3) Converters.
+The connector has three pages: 1) General, 2) Switches, and 3) Converters.
 
 ### General Page
 
-In the general page, the user can observe some general information from the device on the left such as the **Unit Type;** the **Software Version;** the **Number of Supported Paths**; the **Number of Switch Banks Fitted.**
+In the general page, the user can observe some general information from the device on the left such as the **Unit Type**, the **Software Version**, the **Number of Supported Paths**, the **Number of Switch Banks Fitted.**
 
 In addition to the previous, the user can define the device's mode (**Global Device Mode**) and its respective **Control Mode**.
 
-At the right of the pagem the user can observe if there's any existing faults regarding: **Active Alarms; Secondary Alarms;** and faults in the PSUs (**PSU 1 Fault** and **PSU 2 Fault).**
+On the right side of the page, you can see if there are any faults regarding **Active Alarms**, **Secondary Alarms,** and faults in the PSUs (**PSU 1 Fault** and **PSU 2 Fault**).
 
 ### Switches Page
 

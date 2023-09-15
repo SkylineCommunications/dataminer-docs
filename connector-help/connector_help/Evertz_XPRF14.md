@@ -8,19 +8,19 @@ The **Evertz XPRF14** is a wideband, non-blocking, full fan-out RF router system
 
 ## About
 
-This driver allows communication to and from the ScheduAll Manager, simulating the usual communication of the ScheduAll Web Service and Interop Service.
+This connector allows communication to and from the ScheduAll Manager, simulating the usual communication of the ScheduAll Web Service and Interop Service.
 
-The driver can be used to configure, control and view the XPRF14-FR router system. It contains a matrix interface to view, add or remove connections.
+The connector can be used to configure, control and view the XPRF14-FR router system. It contains a matrix interface to view, add or remove connections.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.1 \[SLC Main\] | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 2.2 Build 289-A             |
 
@@ -30,7 +30,7 @@ The driver can be used to configure, control and view the XPRF14-FR router syste
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

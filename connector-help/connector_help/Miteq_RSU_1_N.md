@@ -4,23 +4,23 @@ uid: Connector_help_Miteq_RSU_1_N
 
 # Miteq RSU 1_N
 
-This driver is designed to monitor and configure a Redundancy Switch Unit (RSU) that monitors the status of up to eight online frequency converters and a standby converter. When a fault is detected, the defective converter is automatically taken offline and replaced by the standby synthesized frequency converter. The RSU is capable of prioritizing converters so that critical communication channels have access to the standby converter on a priority basis. Switchover from a defective online converter to the standby converter is achieved by connecting the converters to a switch matrix located on the rear panel of the RSU.
+This connector is designed to monitor and configure a Redundancy Switch Unit (RSU) that monitors the status of up to eight online frequency converters and a standby converter. When a fault is detected, the defective converter is automatically taken offline and replaced by the standby synthesized frequency converter. The RSU is capable of prioritizing converters so that critical communication channels have access to the standby converter on a priority basis. Switchover from a defective online converter to the standby converter is achieved by connecting the converters to a switch matrix located on the rear panel of the RSU.
 
 ## About
 
-With this driver, you can configure how the RSU should operate. For instance, you can configure which converters should be prioritized by the priority level. On the **General page**, the status of the RSU in its totality, the status of the standby converter and that of the converters are monitored. In addition, the parameters of the standby converter can be set. On the **Settings 1-4 page**, the redundancy settings of the four first converters can be configured. On the **Settings 5-8 page**, the redundancy settings of the four last converters can be configured.
+With this connector, you can configure how the RSU should operate. For instance, you can configure which converters should be prioritized by the priority level. On the **General page**, the status of the RSU in its totality, the status of the standby converter and that of the converters are monitored. In addition, the parameters of the standby converter can be set. On the **Settings 1-4 page**, the redundancy settings of the four first converters can be configured. On the **Settings 5-8 page**, the redundancy settings of the four last converters can be configured.
 
-Note: Settings on the RSU are only possible with this driver if the device is in Remote Mode.
+Note: Settings on the RSU are only possible with this connector if the device is in Remote Mode.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -30,7 +30,7 @@ Note: Settings on the RSU are only possible with this driver if the device is in
 
 #### Serial main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -54,7 +54,7 @@ SERIAL CONNECTION:
 
 This page displays the **Mode and Status of the Redundancy Switch** and **the Status of the standby converter and 8 normal converters**. If a converter is in alarm Mode, a Fail will be mentioned here.
 
-On the right-hand side of the page, the **Frequency**, **Intermediate Frequency (IF),** **Attenuation** and **Mute/UnMute** status of the standby converter can be configured. The range to which the standby converter frequency can be set depends on the type of the standby converter. This is also the case for the attenuation. The IF has possible values of 70 MHz and 140 MHz, but some standby converters only support 70 MHz and do not have this dual IF option. If a setting command is not accepted by the device, the value in the driver will not change. If it is accepted, the new value will be displayed by the driver. The value displayed by the driver therefore always corresponds with the actual value in the standby converter.
+On the right-hand side of the page, the **Frequency**, **Intermediate Frequency (IF),** **Attenuation** and **Mute/UnMute** status of the standby converter can be configured. The range to which the standby converter frequency can be set depends on the type of the standby converter. This is also the case for the attenuation. The IF has possible values of 70 MHz and 140 MHz, but some standby converters only support 70 MHz and do not have this dual IF option. If a setting command is not accepted by the device, the value in the connector will not change. If it is accepted, the new value will be displayed by the connector. The value displayed by the connector therefore always corresponds with the actual value in the standby converter.
 
 Note that these values can also be changed automatically when a converter is in an alarm condition and in need of the standby converter. If possible (see below), the device will accept this switchover and then the settings of that converter are copied to the settings of the standby converter. If the converter then continues to be in standby mode, you can further configure the settings of the standby converter on this page, until another converter with a higher priority goes into standby mode. If this happens, the converter with the higher priority will use the standby converter for bypassing (i.e. a switchover of the standby converter from the signal with the lower priority to the signal with the higher priority) and copy its new settings to the standby converter. The old converter with the lower priority will be switched back online and will not use the standby converter anymore. As a consequence of this behavior, it makes no sense to configure the settings if all converters are online (i.e. no converter is in standby mode) and no signal is switched to the standby converter.
 

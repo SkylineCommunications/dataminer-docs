@@ -8,17 +8,17 @@ The **General Dynamics ModuMAX** is a High Power Amplifier that combines the RF 
 
 ## About
 
-The driver enables a user to monitor all important parameters available in the device, it also allows the enabling or disabling of amplifier modules.
+The connector enables a user to monitor all important parameters available in the device, it also allows the enabling or disabling of amplifier modules.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.21                        |
 
@@ -28,7 +28,7 @@ The driver enables a user to monitor all important parameters available in the d
 
 #### Serial main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -42,7 +42,7 @@ SERIAL CONNECTION:
 
 ### General
 
-Provides general status information including the **Power Up State, Mute State, General Alarm States** and if the device is in **Local or Remote Mode.** The general Page also contains data concerning the **Firmware and IP Address** of the device. A pagebutton **Commands** leads to a page where a user can **Reset the Unit**, **Reset the Faults** or start a **Self Test**. When clicking the **Hardware Options** pagebutton you will find an overview of all available **Modules** and **Add-Ons** for the ModuMAX.
+Provides general status information including the **Power Up State, Mute State, General Alarm States** and if the device is in **Local or Remote Mode.** The general Page also contains data concerning the **Firmware and IP Address** of the device. A page button **Commands** leads to a page where a user can **Reset the Unit**, **Reset the Faults** or start a **Self Test**. When clicking the **Hardware Options** page button you will find an overview of all available **Modules** and **Add-Ons** for the ModuMAX.
 
 ### Alarms
 

@@ -6,7 +6,7 @@ uid: Connector_help_GatesAir_Flexiva_M3FM-TX_1P1_Transmitter
 
 The GatesAir Flexiva M3M-TX 1P1 is a solid-state transmitter that provides a single transmission platform capable of analog and digital operation.
 
-This driver can be used to monitor the **main transmitter** of the device via SNMP.
+This connector can be used to monitor the **main transmitter** of the device via SNMP.
 
 ## About
 
@@ -18,7 +18,7 @@ This driver can be used to monitor the **main transmitter** of the device via SN
 
 ## Configuration
 
-The element using this driver is automatically created by the parent element using the [GatesAir Flexiva M3FM-TX 1P1](xref:Connector_help_GatesAir_Flexia_M3FM-TX_1P1) driver.
+The element using this connector is automatically created by the parent element using the [GatesAir Flexiva M3FM-TX 1P1](xref:Connector_help_GatesAir_Flexia_M3FM-TX_1P1) driver.
 
 ## How to use
 

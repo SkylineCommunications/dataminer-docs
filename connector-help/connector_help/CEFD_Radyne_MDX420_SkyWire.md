@@ -4,13 +4,13 @@ uid: Connector_help_CEFD_Radyne_MDX420_SkyWire
 
 # CEFD Radyne MDX420 SkyWire
 
-The **CEFD Radyne MDX420 SkyWire** driver can be used to display information and configure settings for the **CEFD Radyne MDX420 SkyWire** satellite network gateway.
+The **CEFD Radyne MDX420 SkyWire** connector can be used to display information and configure settings for the **CEFD Radyne MDX420 SkyWire** satellite network gateway.
 
 ## About
 
 This protocol can be used to monitor and control the **CEFD Radyne MDX420 SkyWire** modem. An SNMP connection is used to retrieve and set the modem's information and configuration data.
 
-### Ranges of the driver
+### Version Info
 
 <table>
 <colgroup>
@@ -49,9 +49,9 @@ This protocol can be used to monitor and control the **CEFD Radyne MDX420 SkyWir
 </tbody>
 </table>
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | F05804-L                    |
 | 1.0.0.x          | Unknown                     |
@@ -61,7 +61,7 @@ This protocol can be used to monitor and control the **CEFD Radyne MDX420 SkyWir
 
 ### Creation
 
-For protocol version range 1.0.0.x, this driver uses a Simple Network Management Protocol (SNMP) connection. For protocol version range 2.0.0.x, this driver uses a Simple Network Management Protocol version 3 (SNMPv3) connection. The following user information is required for either version:
+For protocol version range 1.0.0.x, this connector uses a Simple Network Management Protocol (SNMP) connection. For protocol version range 2.0.0.x, this connector uses a Simple Network Management Protocol version 3 (SNMPv3) connection. The following user information is required for either version:
 
 **SNMP CONNECTION**:
 
@@ -117,7 +117,7 @@ The **Terrestrial Interfaces** page displays extra information and configuration
 
 ### Common Alarms
 
-The **Com**mon Alarms**** is another alarms page that displays the common alarms. These are system alarms rather than alarms linked to the modulator or demodulator.
+The **Common Alarms** is another alarms page that displays the common alarms. These are system alarms rather than alarms linked to the modulator or demodulator.
 
 There is also a **Clear Latched Alarms** button, which will clear all the latched alarms. However, note that this button will clear all latched alarms, and not just the common latched alarms.
 
@@ -135,12 +135,12 @@ This page displays information about the **Ping Queries**, such as **Ping Status
 
 ## Notes
 
-The following parameters are not longer available in driver range 1.0.1.x:
+The following parameters are not longer available in connector range 1.0.1.x:
 
-\- Events Log Status (PID 684). That parameter now is hidden and its information is showed in a new table.
+- Events Log Status (PID 684). That parameter now is hidden and its information is showed in a new table.
 
-\- Rx Mesh Membership Key (PID 303), Rx Test Pattern Ber Status(PID 402), Rx Test Pattern Error Count(PID 403), Rx Test Pattern Bit Count(PID 404), Rx Composite Alarms(PID 409), NV Inband(PID 714). These parameters were hidden.
+- Rx Mesh Membership Key (PID 303), Rx Test Pattern Ber Status(PID 402), Rx Test Pattern Error Count(PID 403), Rx Test Pattern Bit Count(PID 404), Rx Composite Alarms(PID 409), NV Inband(PID 714). These parameters were hidden.
 
-\- Boot Mode(PID 1000/1001). Parameter was removed
+- Boot Mode(PID 1000/1001). Parameter was removed
 
-\- The following parameters are read-only, so the drop-down menu was removed: Local Host Name, Modem IP Mask, Modem IP Address, Server IP Address, Router IP Address, Modem Ethernet Address.
+- The following parameters are read-only, so the drop-down menu was removed: Local Host Name, Modem IP Mask, Modem IP Address, Server IP Address, Router IP Address, Modem Ethernet Address.

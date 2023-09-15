@@ -4,7 +4,7 @@ uid: Connector_help_PagerDuty_Platform
 
 # PagerDuty Platform
 
-This driver implements a communication link between DataMiner and the PagerDuty cloud service. It allows you to construct an HTTP post message for three possible event actions (trigger, acknowledge and resolve) and then send it to PagerDuty.
+This connector implements a communication link between DataMiner and the PagerDuty cloud service. It allows you to construct an HTTP post message for three possible event actions (trigger, acknowledge and resolve) and then send it to PagerDuty.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver implements a communication link between DataMiner and the PagerDuty 
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -50,6 +50,6 @@ There is no redundancy defined.
 
 ## How to use
 
-This driver has only one page (General), which is used to construct the HTTP message. The parameter fields **Event Action**, **Routing Key** and **Dedup Key** are mandatory for each type of event action. The payload parameters only have to be filled in when the event action trigger is selected.
+This connector has only one page (General), which is used to construct the HTTP message. The parameter fields **Event Action**, **Routing Key** and **Dedup Key** are mandatory for each type of event action. The payload parameters only have to be filled in when the event action trigger is selected.
 
 The payload parameters Component, Group and Class are optional.

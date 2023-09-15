@@ -8,17 +8,17 @@ The Cisco RTT Mon is used for measuring delay, jitter, and packet loss on the da
 
 ## About
 
-This driver uses **SNMP** polling to communicate with the device.
+This connector uses **SNMP** polling to communicate with the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**    | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range**    | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |---------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x\[SLC Main\] | Initial Version | No                  | False                   |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -26,7 +26,7 @@ This driver uses **SNMP** polling to communicate with the device.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

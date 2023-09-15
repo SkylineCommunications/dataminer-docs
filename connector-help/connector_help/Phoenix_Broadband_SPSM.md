@@ -32,7 +32,7 @@ Smart Power Switch Multifunction (SPSM) contains an internal microcontroller tha
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

@@ -4,19 +4,19 @@ uid: Connector_help_Ziggo_Modem_Outage_Check
 
 # Ziggo Modem Outage Check
 
-The main purpose of the **Ziggo Modem Outage Check** driver is to revalidate the outage state (outage check) of CPEs in **Ziggo IPVPN Collector** elements.
+The main purpose of the **Ziggo Modem Outage Check** connector is to revalidate the outage state (outage check) of CPEs in **Ziggo IPVPN Collector** elements.
 
 ## About
 
-This driver is part of a larger setup and works together with the **Ziggo IPVPN Collector** and **Generic Ping** drivers.
+This connector is part of a larger setup and works together with the **Ziggo IPVPN Collector** and **Generic Ping** drivers.
 
 The **modem outage check** consists of the following steps:
 
-1.  The **collectors** evaluate on **which CPEs** an outage check should be performed. This is triggered when a CPE is no longer available. The **hostname** and **MAC** address of the CPE are sent to the **Modem Outage Check** element.
-2.  The **Modem Outage Check** element identifies the **IP** address of the modem, given the **MAC** address of the modem, using mapping files, and sends the request to the **Generic Ping** elements via HTTP.
-3.  The **Generic Ping** elements perform the **pings**.
-4.  The **Modem Outage Check** element **polls the results** from the Generic Ping elements and removes the ping request if polling was successful.
-5.  The **results** are processed and sent to the **collectors**.
+1. The **collectors** evaluate on **which CPEs** an outage check should be performed. This is triggered when a CPE is no longer available. The **hostname** and **MAC** address of the CPE are sent to the **Modem Outage Check** element.
+2. The **Modem Outage Check** element identifies the **IP** address of the modem, given the **MAC** address of the modem, using mapping files, and sends the request to the **Generic Ping** elements via HTTP.
+3. The **Generic Ping** elements perform the **pings**.
+4. The **Modem Outage Check** element **polls the results** from the Generic Ping elements and removes the ping request if polling was successful.
+5. The **results** are processed and sent to the **collectors**.
 
 ### Version Info
 
@@ -42,7 +42,7 @@ The **modem outage check** consists of the following steps:
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

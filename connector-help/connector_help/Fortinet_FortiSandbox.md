@@ -32,7 +32,7 @@ This protocol is used to monitor the FortiSandbox server. A FortiSandbox server 
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -46,7 +46,7 @@ SNMP Settings:
 
 ### Web Interface
 
-The FortiSandbox web interface is available from the driver. However, the web interface is only accessible when the client machine has network access to the product.
+The FortiSandbox web interface is available from the connector. However, the web interface is only accessible when the client machine has network access to the product.
 
 ## How to Use
 

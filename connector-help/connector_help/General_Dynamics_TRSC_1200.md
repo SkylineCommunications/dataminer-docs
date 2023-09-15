@@ -4,7 +4,7 @@ uid: Connector_help_General_Dynamics_TRSC_1200
 
 # General Dynamics TRSC 1200
 
-With this driver, you can gather and view information from the General Dynamics TRSC 1200, as well as set values on this device.
+With this connector, you can gather and view information from the General Dynamics TRSC 1200, as well as set values on this device.
 
 ## About
 
@@ -32,7 +32,7 @@ With this driver, you can gather and view information from the General Dynamics 
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP Connection:
 

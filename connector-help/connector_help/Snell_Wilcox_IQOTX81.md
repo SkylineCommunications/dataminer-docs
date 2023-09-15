@@ -8,17 +8,17 @@ The **Snell Wilcox IQOTX81** is an optical transmitter.
 
 ## About
 
-This driver allows the management of the **Snell Wilcox IQOTX81** using a serial connection.
+This connector allows the management of the **Snell Wilcox IQOTX81** using a serial connection.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 5.0.7                       |
 
@@ -28,7 +28,7 @@ This driver allows the management of the **Snell Wilcox IQOTX81** using a serial
 
 #### Serial main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

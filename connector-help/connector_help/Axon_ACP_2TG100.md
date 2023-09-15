@@ -6,7 +6,7 @@ uid: Connector_help_Axon_ACP_2TG100
 
 The **2TG100** is a dual channel test pattern generator. Locked to a black & burst or tri-level sync, it can generate two fully independent test patterns in either 3Gb/s, HD or SD.
 
-The **Axon ACP** **2TG100** driver can be used to display and configure information related to this device.
+The **Axon ACP** **2TG100** connector can be used to display and configure information related to this device.
 
 ## About
 
@@ -34,7 +34,7 @@ The **Axon ACP** **2TG100** driver can be used to display and configure informat
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -45,7 +45,7 @@ SERIAL CONNECTION:
 
 #### Serial IP Connection - Broadcast Connection
 
-This driver uses a smart-serial connection and requires the following input during element creation:
+This connector uses a smart-serial connection and requires the following input during element creation:
 
 SMART-SERIAL CONNECTION:
 

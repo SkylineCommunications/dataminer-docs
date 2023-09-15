@@ -10,9 +10,9 @@ The **Sony NXL-FR316** and **Sony NXL-FR318** are processing units (chassis) to 
 
 ## About
 
-This driver is designed to monitor the state of the IP converter board that can be connected to a **Sony NXL-FR316** and **Sony NXL-FR318**, using **SNMP** communication.
+This connector is designed to monitor the state of the IP converter board that can be connected to a **Sony NXL-FR316** and **Sony NXL-FR318**, using **SNMP** communication.
 
-This driver is exported by the parent driver **Sony Signal Processing Unit**, from version 1.0.0.x onwards.
+This connector is exported by the parent connector **Sony Signal Processing Unit**, from version 1.0.0.x onwards.
 
 ### Version Info
 
@@ -30,7 +30,7 @@ This driver is exported by the parent driver **Sony Signal Processing Unit**, fr
 
 ## Configuration
 
-This driver is used by DVEs that are **automatically created** by the parent element. No user input is required.
+This connector is used by DVEs that are **automatically created** by the parent element. No user input is required.
 
 ### Redundancy
 

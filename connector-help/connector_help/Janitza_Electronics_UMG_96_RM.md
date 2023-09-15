@@ -4,7 +4,7 @@ uid: Connector_help_Janitza_Electronics_UMG_96_RM
 
 # Janitza Electronics UMG 96 RM
 
-The **Janitza Electronics UMG 96 RM** driver can be used to display and configure information of the related device.
+The **Janitza Electronics UMG 96 RM** connector can be used to display and configure information of the related device.
 
 ## About
 

@@ -6,7 +6,7 @@ uid: Connector_help_2WCOM_F01
 
 The 2wcom FlexMon FM01 FM monitoring receiver combines demodulation, source-switching and FM/RDS parameter measurement/monitoring functionality. Its dual inputs can receive FM signals for rebroadcasting, monitoring, backup and alarming scenarios. An internal switch matrix changes between the inputs triggered by several states.
 
-This driver retrieves information from the device via SNMP.
+This connector retrieves information from the device via SNMP.
 
 ## About
 
@@ -34,7 +34,7 @@ This driver retrieves information from the device via SNMP.
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

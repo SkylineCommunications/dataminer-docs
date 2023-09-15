@@ -2,23 +2,23 @@
 uid: Connector_help_Telestream_OptiQ
 ---
 
-Telestream OptiQ
+# Telestream OptiQ
 
-This driver uses the Optiq Monitor API to monitor live streams.
+This connector uses the Optiq Monitor API to monitor live streams.
 
 ## About
 
-This driver uses **HTTP** to communicate with the API.
+This connector uses **HTTP** to communicate with the API.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **API version** |
+| **Range** | **API version** |
 |------------------|-----------------|
 | 1.0.0.x          | v1.0            |
 
@@ -26,11 +26,11 @@ This driver uses **HTTP** to communicate with the API.
 
 ### Creation
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 #### HTTP Connection
 
-- **IP address/host**: The IP address e.g https://api.cloud.telestream.net.
+- **IP address/host**: The IP address e.g `https://api.cloud.telestream.net`.
 - **IP port**: The port of the destination e.g. *443*.
 
 ### Configuration
@@ -57,7 +57,7 @@ This page shows the information about the streams, such as **CDN Name, Resolutio
 
 ### Monitoring Points
 
-On this page it is possible to see the list of monitoring points by asset. It is possible to check for example its **Location,** **Number of Alarms and **Number of Streams****.
+On this page it is possible to see the list of monitoring points by asset. It is possible to check for example its **Location,** **Number of Alarms and Number of Streams**.
 It is also possible to add or remove locations to a desired asset (if it is not being monitored).
 
 ### Monitoring Streams
@@ -74,7 +74,7 @@ This page shows the metrics parameters related to Quality of Service, such as **
 
 ### QoE
 
-This page shows the metrics parameters related to Quality of Experience, such as **Media Audio Loudness, Average Audio MOS, Average GOP MOS, etc.**
+This page shows the metrics parameters related to Quality of Experience, such as **Media Audio Loudness, Average Audio MOS, Average GOP MOS**, etc.
 
 ### Monitoring
 
@@ -82,8 +82,7 @@ This page shows the metrics parameters related to Monitoring, such as **Minimum 
 
 ### Alarms
 
-This page shows a list of all active alarms. It is possible to see for example the **Name, Description and Severity**.**
-**
+This page shows a list of all active alarms. It is possible to see for example the **Name, Description and Severity**.
 
 ### Locations
 

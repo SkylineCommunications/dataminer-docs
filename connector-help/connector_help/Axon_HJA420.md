@@ -8,18 +8,18 @@ The device Axon HJA420 is a **Loudness Controller**.
 
 ## About
 
-This driver uses **SNMP** to monitor and control the Axon HJA420 Loudness Controller device.
+This connector uses **SNMP** to monitor and control the Axon HJA420 Loudness Controller device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**      | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**      | **DCF Integration** | **Cassandra Compliant** |
 |------------------|----------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version      | No                  | Yes                     |
 | 1.1.0.x          | New firmware version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 1.1.0.x          | V0706                       |
@@ -30,7 +30,7 @@ This driver uses **SNMP** to monitor and control the Axon HJA420 Loudness Contro
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 
@@ -45,7 +45,7 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and requ
 
 ## Usage
 
-This driver consists of 11 pages.
+This connector consists of 11 pages.
 
 ### General
 

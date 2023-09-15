@@ -4,7 +4,7 @@ uid: Connector_help_Globalcomm_iDirect_Aggregation
 
 # Globecomm iDirect Aggregation
 
-This virtual driver can be used for aggregation of data from iDirect Platform elements. It can perform sum, average, percentage, minimum and maximum calculations, as well as MODCOD date rate and distribution aggregation.
+This virtual connector can be used for aggregation of data from iDirect Platform elements. It can perform sum, average, percentage, minimum and maximum calculations, as well as MODCOD date rate and distribution aggregation.
 
 ## About
 
@@ -32,11 +32,11 @@ This virtual driver can be used for aggregation of data from iDirect Platform el
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 
-This driver requires that the type of the iDirect Platform elements is manually added to the platform table, so that it can process the calculations.
+This connector requires that the type of the iDirect Platform elements is manually added to the platform table, so that it can process the calculations.
 
 ### Redundancy
 

@@ -10,23 +10,23 @@ Multicon GYDA is used to configure the latest range of advanced Flashlink signal
 
 **SNMP** polling is used to retrieve the device information.
 
-This driver will export different drivers based on the retrieved data. A list can be found in the section "Exported Drivers" below.
+This connector will export different connectors based on the retrieved data. A list can be found in the section "Exported Connectors" below.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                        | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                        | **DCF Integration** | **Cassandra Compliant** |
 |------------------|------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x          | Initial version of SNMP driver                                         | No                  | Yes                     |
+| 1.0.0.x          | Initial version of SNMP connector                                         | No                  | Yes                     |
 | 1.0.1.x          | Changed Alarm Table display key.                                       | No                  | Yes                     |
 | 1.0.2.x          | Added support for locking and status parameter in the interface table. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 5.0.4                       |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol**                  | **Description**         |
 |----------------------------------------|-------------------------|
@@ -41,7 +41,7 @@ This driver will export different drivers based on the retrieved data. A list ca
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

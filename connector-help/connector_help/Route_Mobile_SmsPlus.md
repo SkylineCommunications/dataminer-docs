@@ -4,25 +4,25 @@ uid: Connector_help_Route_Mobile_SmsPlus
 
 # Route Mobile SmsPlus
 
-The **Route Mobile SmsPlus** is used to send text messages using an HTTP request. The driver is mainly used with an Automation script to send certain messages to customer mobile phones.
+The **Route Mobile SmsPlus** is used to send text messages using an HTTP request. The connector is mainly used with an Automation script to send certain messages to customer mobile phones.
 
 ## About
 
-The driver needs to be configured with the right username and password so that it can be authorized to deliver text messages. To be able to send a message, you also need to configure the sender ID and message type in the driver options. The receiver mobile number and message need to be combined with a pipe character ("\|") in the Automation text box. The driver will process all this information (username, password, sender ID, message type, recipient number and message) and make a HTTP request to deliver the message.
+The connector needs to be configured with the right username and password so that it can be authorized to deliver text messages. To be able to send a message, you also need to configure the sender ID and message type in the connector options. The receiver mobile number and message need to be combined with a pipe character ("\|") in the Automation text box. The connector will process all this information (username, password, sender ID, message type, recipient number and message) and make a HTTP request to deliver the message.
 
 On the General page, all the message information, such as the recipient mobile number, the message and the time stamp of the message are displayed. This page also includes basic statistics such as the logging status, HTTP status code, total SMS messages, number of succeeded SMS messages and number of failed SMS messages.
 
 The History page displays the history table, which includes messages that were sent from the device. It is possible to configure how many messages are displayed in this table.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.0.0                       |
 
@@ -32,7 +32,7 @@ The History page displays the history table, which includes messages that were s
 
 #### HTTP Main connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

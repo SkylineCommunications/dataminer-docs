@@ -35,7 +35,7 @@ The Grass Valley Biometrics AP is part of GV's Media Assurance platform, using M
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

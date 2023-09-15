@@ -8,7 +8,7 @@ The Touch Power remote control panel design can be used either as a remote contr
 
 ## About
 
-The CPI Touch Power 3RU-0 Controller driver is used to control and monitor the parameters via SNMPv2.
+The CPI Touch Power 3RU-0 Controller connector is used to control and monitor the parameters via SNMPv2.
 
 ### Version Info
 
@@ -34,7 +34,7 @@ The CPI Touch Power 3RU-0 Controller driver is used to control and monitor the p
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

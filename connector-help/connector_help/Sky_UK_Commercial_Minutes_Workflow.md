@@ -4,15 +4,15 @@ uid: Connector_help_Sky_UK_Commercial_Minutes_Workflow
 
 # Sky UK Commercial Minutes Workflow
 
-This driver is used by enhanced services that contain elements of the protocol [Sky UK Commercial Minutes](xref:Connector_help_Sky_UK_Commercial_Minutes). With this driver, all the alarms are gathered in a single table.
+This connector is used by enhanced services that contain elements of the protocol [Sky UK Commercial Minutes](xref:Connector_help_Sky_UK_Commercial_Minutes). With this connector, all the alarms are gathered in a single table.
 
 ## About
 
-To use this driver, create a service that uses it as its service definition, add the necessary elements and select the parameters to add to the service. In this case, these are alarm parameters.
+To use this connector, create a service that uses it as its service definition, add the necessary elements and select the parameters to add to the service. In this case, these are alarm parameters.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 

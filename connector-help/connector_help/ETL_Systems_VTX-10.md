@@ -4,11 +4,11 @@ uid: Connector_help_ETL_Systems_VTX-10
 
 # ETL Systems VTX-10
 
-This driver is made for devices such as **ETL Systems VTX-10**. ETL Systems VTX-10 is a device that makes it possible to connect outputs to inputs in a **matrix** format. In addition to that, this driver also allows you to monitor **status** info.
+This connector is made for devices such as **ETL Systems VTX-10**. ETL Systems VTX-10 is a device that makes it possible to connect outputs to inputs in a **matrix** format. In addition to that, this connector also allows you to monitor **status** info.
 
 ## About
 
-This driver makes it possible to connect the inputs of a device to certain outputs in a matrix. Labels and locks can also be assigned to each input or output. Aside from the input and output information, status information can also be monitored, such as fan speeds or temperature.
+This connector makes it possible to connect the inputs of a device to certain outputs in a matrix. Labels and locks can also be assigned to each input or output. Aside from the input and output information, status information can also be monitored, such as fan speeds or temperature.
 
 ## Installation and configuration
 
@@ -16,7 +16,7 @@ This driver makes it possible to connect the inputs of a device to certain outpu
 
 #### SNMP connection (1.x.x.x version)
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -30,7 +30,7 @@ SNMP Settings:
 
 #### Serial connection (2.x.x.x version)
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -39,7 +39,7 @@ SERIAL CONNECTION:
 
 ### Configuration
 
-This driver supports redundant polling. If an SNMP request times out, a redundant connection will be used for a retry.
+This connector supports redundant polling. If an SNMP request times out, a redundant connection will be used for a retry.
 
 ## Usage
 

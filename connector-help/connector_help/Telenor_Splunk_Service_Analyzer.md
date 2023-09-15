@@ -4,9 +4,9 @@ uid: Connector_help_Telenor_Splunk_Service_Analyzer
 
 # Telenor Splunk Service Analyzer
 
-The **Telenor Splunk Service Analyzer** is a driver that communicates with a Splunk Enterprise server to retrieve information about services and channels in the Telenor EPM system.
+The **Telenor Splunk Service Analyzer** is a connector that communicates with a Splunk Enterprise server to retrieve information about services and channels in the Telenor EPM system.
 
-The driver communicates with the Splunk server using an HTTP connection.
+The connector communicates with the Splunk server using an HTTP connection.
 
 ## About
 
@@ -34,7 +34,7 @@ The driver communicates with the Splunk server using an HTTP connection.
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -48,7 +48,7 @@ To be able to poll data from the server, fill in the username and password of th
 
 ## How to use
 
-The driver polls multiple KPIs from the server. You can configure these KPIs in the **KPI Configuration** table on the **General** page. For each KPI, you can specify the search string, the timer period and the timeout.
+The connector polls multiple KPIs from the server. You can configure these KPIs in the **KPI Configuration** table on the **General** page. For each KPI, you can specify the search string, the timer period and the timeout.
 
 The **Services** page displays the list of all the retrieved services and the links between them. The **Live Channels** and **Catch-Up Channels** pages display the list of retrieved channels.
 

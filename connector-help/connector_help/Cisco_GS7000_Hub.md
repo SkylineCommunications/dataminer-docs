@@ -4,21 +4,21 @@ uid: Connector_help_Cisco_GS7000_Hub
 
 # Cisco GS7000 Hub
 
-The **Cisco GS7000 Hub** provides multiple options for optical amplification, filtering, splitting, and combining, in a field-proven model GS7000 station. This driver can be used to monitor this device.
+The **Cisco GS7000 Hub** provides multiple options for optical amplification, filtering, splitting, and combining, in a field-proven model GS7000 station. This connector can be used to monitor this device.
 
 ## About
 
-The driver uses an SNMP connection to monitor a **Cisco GS7000 Hub** device. It allows you to view information about the cable modem, DC power, switch, amplifier, etc.
+The connector uses an SNMP connection to monitor a **Cisco GS7000 Hub** device. It allows you to view information about the cable modem, DC power, switch, amplifier, etc.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ The driver uses an SNMP connection to monitor a **Cisco GS7000 Hub** device. It 
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -117,5 +117,5 @@ This page displays the web interface of the device. Note that the client machine
 
 ## Notes
 
-- For each of the tables in the driver, a **Polling** parameter allows you to enable or disable the polling of the table.
+- For each of the tables in the connector, a **Polling** parameter allows you to enable or disable the polling of the table.
 - In all tables, there is a **Description** column, where you can specify a description, and a **Custom Description** column, which concatenates the **Index** of the table and the **Description** column.

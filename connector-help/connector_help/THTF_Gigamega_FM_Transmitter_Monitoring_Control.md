@@ -4,7 +4,7 @@ uid: Connector_help_THTF_Gigamega_FM_Transmitter_Monitoring_Control
 
 # THTF Gigamega FM Transmitter Monitoring Control
 
-This driver can be used to monitor the use of FM transmitters via traps. It receives SNMP traps and notifications and shows the status results in a table. It does not poll any data.
+This connector can be used to monitor the use of FM transmitters via traps. It receives SNMP traps and notifications and shows the status results in a table. It does not poll any data.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver can be used to monitor the use of FM transmitters via traps. It rece
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -48,7 +48,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The **Main** page of the driver contains the **Statuses Table**, which displays information about the traps that are received from the machines in several sites.
+The **Main** page of the connector contains the **Statuses Table**, which displays information about the traps that are received from the machines in several sites.
 
 In the table, the **Unique Name** column shows the name of the device for which status information is displayed. This name is a concatenation of **Site Name / Machine Name / (EXC/PS/PA + Machine Index)**.
 

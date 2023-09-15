@@ -32,7 +32,7 @@ The source of event information for the NBCS Peacock SLE (Single Live Events, a.
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection to retrieve the spreadsheet information and requires the following input during element creation:
+This connector uses an HTTP connection to retrieve the spreadsheet information and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -42,7 +42,7 @@ HTTP CONNECTION:
 
 #### HTTP Refresh Token Connection
 
-This driver uses an HTTP connection for request authorization and requires the following input during element creation:
+This connector uses an HTTP connection for request authorization and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -52,7 +52,7 @@ HTTP CONNECTION:
 
 ### Initialization
 
-To make sure the driver can retrieve information from the spreadsheet, get the **access token** from Google OAuth.
+To make sure the connector can retrieve information from the spreadsheet, get the **access token** from Google OAuth.
 
 ### Redundancy
 

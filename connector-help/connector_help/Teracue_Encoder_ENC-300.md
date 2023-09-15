@@ -8,7 +8,7 @@ The ENC-300 encoder is designed for IPTV and live streaming.
 
 ## About
 
-The Teracue ENC-300 driver is used to monitor and control a Teracue ENC-300 device. The information is spread over different pages to resemble the web interface of the device as much as possible.
+The Teracue ENC-300 connector is used to monitor and control a Teracue ENC-300 device. The information is spread over different pages to resemble the web interface of the device as much as possible.
 
 ## Installation and configuration
 
@@ -54,7 +54,3 @@ On this page, the **GPO** **Value** can be viewed and set, and the **GPI** **Val
 ### Webpage
 
 This page displays the webpage of the device.
-
-## Notes
-
-N/A

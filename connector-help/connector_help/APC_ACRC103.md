@@ -4,25 +4,25 @@ uid: Connector_help_APC_ACRC103
 
 # APC ACRC103
 
-This driver is used to monitor the APC ACRC103, a water-chilled rack air conditioning (AC) unit released by APC. It is part of APC's half-rack (ACRC100) series for data centers.
+This connector is used to monitor the APC ACRC103, a water-chilled rack air conditioning (AC) unit released by APC. It is part of APC's half-rack (ACRC100) series for data centers.
 
 Each unit can be integrated in a group of up to 12 AC units, in order to create a cooling group. It is then possible to configure some of the settings once and apply this to all the units contained in the group.
 
 ## About
 
-This driver can be used to poll unit information, as well as group information in case the unit is integrated in a group of air conditioning units. It also allows the user to configure both the unit and the group.
+This connector can be used to poll unit information, as well as group information in case the unit is integrated in a group of air conditioning units. It also allows the user to configure both the unit and the group.
 
 SNMP polling is used to retrieve the device information.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 6.24.0                      |
 
@@ -32,7 +32,7 @@ SNMP polling is used to retrieve the device information.
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

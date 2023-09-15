@@ -4,7 +4,7 @@ uid: Connector_help_General_Dynamics_500_Tracking_Receiver
 
 # General Dynamics 500 Tracking Receiver
 
-This is a **serial** driver that shows the status of the different parameters of a **General Dynamics 500 Series Analog Tracking Receiver**.
+This is a **serial** connector that shows the status of the different parameters of a **General Dynamics 500 Series Analog Tracking Receiver**.
 
 ## About
 
@@ -13,17 +13,17 @@ The **General Dynamics 500 Series Analog Tracking Receiver** has 2 models:
 - The **Model 520** is a high-performance pseudo-monopulse tracking receiver using an analog signal.
 - The **Model 550** is a general-purpose pseudo-monopulse tracking receiver employing digital signal detection and offering beacon power spectrum displays and internal BDC options.
 
-The driver communicates via **serial communication**.
+The connector communicates via **serial communication**.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | D.3.1.2                     |
 
@@ -33,7 +33,7 @@ The driver communicates via **serial communication**.
 
 #### Serial main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 Serial Connection:
 

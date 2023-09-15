@@ -32,7 +32,7 @@ The Fortinet FortiManager protocol can be used to monitor the different devices 
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMPv2) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMPv2) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

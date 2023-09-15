@@ -4,27 +4,27 @@ uid: Connector_help_Tektronix_TG700
 
 # Tektronix TG700
 
-This driver monitors the nodes in the system and polls all the supported modules.
+This connector monitors the nodes in the system and polls all the supported modules.
 
 ## About
 
-The driver schedules all polling so that no polling happens at the same time. Users can delete any removed module manually or select to have it removed automatically. If a response times out, the card will go in timeout. By changing the View Name indicated in the element, you can have the created DVEs added in a different parent view. Finally, there is a Control Center page, which can be used to send a query or set a parameter.
+The connector schedules all polling so that no polling happens at the same time. Users can delete any removed module manually or select to have it removed automatically. If a response times out, the card will go in timeout. By changing the View Name indicated in the element, you can have the created DVEs added in a different parent view. Finally, there is a Control Center page, which can be used to send a query or set a parameter.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**         | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**         | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Virtual version         | No                  | No                      |
 | 1.0.1.x          | Serial connection added | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 5.6                         |
 | 1.0.1.x          | 5.6                         |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol**                                                      | **Description**        |
 |----------------------------------------------------------------------------|------------------------|
@@ -37,7 +37,7 @@ The driver schedules all polling so that no polling happens at the same time. Us
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -75,9 +75,12 @@ This page displays the **Value Tables** of all the supported DVEs. These tables 
 
 On the left side of this page, you can send a query or set a value. To do so:
 
-1.  Select the **Current Module** where the query or set should be applied.
-2.  To send a query, add the **Command** (without a colon at the beginning; optionally concatenating multiple queries).
-    To set a value, fill in the **Set Value** parameter.
-3.  Click the **Send Command** button. The response will be displayed below.
+1. Select the **Current Module** where the query or set should be applied.
+
+1. To send a query, add the **Command** (without a colon at the beginning; optionally concatenating multiple queries).
+
+   To set a value, fill in the **Set Value** parameter.
+
+1. Click the **Send Command** button. The response will be displayed below.
 
 The right side of the page contains buttons with **common commands** for general control of the system. However, be careful when you use these commands, as these can cause a complete timeout of the system.

@@ -8,13 +8,13 @@ The Q552 UECP processor addresses cable network providers who have to generate v
 
 ## About
 
-The driver uses SNMP to poll the Qbit Q552.
+The connector uses SNMP to poll the Qbit Q552.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 

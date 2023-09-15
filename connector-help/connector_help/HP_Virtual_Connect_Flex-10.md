@@ -4,20 +4,20 @@ uid: Connector_help_HP_Virtual_Connect_Flex-10
 
 # HP Virtual Connect Flex-10
 
-The **HP Virtual Connect Flex-10** driver is an SNMP based driver used to monitor and configure the ****HP Virtual Connect Flex-10****.
+The **HP Virtual Connect Flex-10** connector is an SNMP based connector used to monitor and configure the **HP Virtual Connect Flex-10**.
 
 ## About
 
-The **HP Virtual Connect Flex-10** provides a monitoring interface for the ****HP Virtual Connect Flex-10**** Switch.
+The **HP Virtual Connect Flex-10** provides a monitoring interface for the **HP Virtual Connect Flex-10** Switch.
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 | 1.0.1.x          | DCF integration | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 1.0.1.x          | Unknown                     |
@@ -26,7 +26,7 @@ The **HP Virtual Connect Flex-10** provides a monitoring interface for the ****H
 
 ### Creation
 
-The ****HP Virtual Connect Flex-10**** is an SNMP driver. The IP has to be configured during creation of the element.
+The **HP Virtual Connect Flex-10** is an SNMP connector. The IP has to be configured during creation of the element.
 
 **SNMP CONNECTION:**
 

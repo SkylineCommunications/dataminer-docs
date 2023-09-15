@@ -8,17 +8,17 @@ This protocol will interface with the **Wonderware** device, receiving informati
 
 ## About
 
-This driver allows the user to add and remove stations from a configuration table.
+This connector allows the user to add and remove stations from a configuration table.
 
-It will export different drivers based on the information present in the Station Table. A list of possible exported drivers can be found in the section 'Exported Drivers'.
+It will export different connectors based on the information present in the Station Table. A list of possible exported connectors can be found in the section 'Exported Connectors'.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** |
+| **Range** | **Description** |
 |------------------|-----------------|
 | 1.0.0.x          | Initial version |
 
-### Exported Drivers
+### Exported Connectors
 
 | **Exported Protocol**            | **Description**            |
 |----------------------------------|----------------------------|
@@ -31,7 +31,7 @@ It will export different drivers based on the information present in the Station
 
 #### SNMP connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

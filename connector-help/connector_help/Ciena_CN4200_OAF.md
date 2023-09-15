@@ -8,7 +8,7 @@ This is an Optical Amplifier Module for the Ciena CN4200 Chassis.
 
 ## About
 
-There are two driver ranges for this driver. The 1.0.0.x range has a fixed number of ports (2), and the port settings are represented as individual parameters.
+There are two connector ranges for this connector. The 1.0.0.x range has a fixed number of ports (2), and the port settings are represented as individual parameters.
 In the 2.0.0.x range, the ports are shown as tables, which allows for all ports to be shown.
 
 ## Installation and configuration
@@ -16,7 +16,7 @@ In the 2.0.0.x range, the ports are shown as tables, which allows for all ports 
 ### Creation
 
 ***SNMP connection***
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -43,7 +43,7 @@ Ports
 This shows information about the Ports either in individual parameters (only port 1 and port 2, protocol version 1.0.0.x) or in a table format (all ports on the device, protocol version 2.0.0.x).
 Information is shown, such as **Port Primary State,** **Port Direction**, **Port Wavelength**, etc.
 
-### Webinterface
+### Web Interface
 
 This shows the native web interface of the device.
 This page is only available if the client has access to the device.

@@ -4,23 +4,23 @@ uid: Connector_help_iXsystems_FreeNAS
 
 # iXsystems FreeNAS
 
-With this driver, you can monitor FreeNAS platforms with SNMP.
+With this connector, you can monitor FreeNAS platforms with SNMP.
 
 ## About
 
-This driver uses **SNMP** in order to monitor a FreeNAS platform. FreeNAS is a network-attached storage (NAS) software based on FreeBSD and the OpenZFS file system.
+This connector uses **SNMP** in order to monitor a FreeNAS platform. FreeNAS is a network-attached storage (NAS) software based on FreeBSD and the OpenZFS file system.
 
 FreeNAS provides a way to create a centralized and easily accessible place for your data, and can be used by both private individuals and small and large companies.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | FreeNAS-9.10.1              |
 
@@ -30,7 +30,7 @@ FreeNAS provides a way to create a centralized and easily accessible place for y
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

@@ -4,21 +4,21 @@ uid: Connector_help_CISCO_ASA_Software
 
 # CISCO ASA Software
 
-This DataMiner driver is used to interact with CISCO ASA Software devices.
+This DataMiner connector is used to interact with CISCO ASA Software devices.
 
 ## About
 
 Cisco Adaptive Security Appliance (ASA) Software is the core operating system for the Cisco ASA family. It delivers enterprise-class firewall capabilities for ASA devices in an array of form factors - standalone appliances, blades, and virtual appliances - for any distributed network environment. The CISCO ASA Software DataMiner protocol can be used to retrieve information and configure CISCO ASA Software devices using the SNMP interface.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 9.6(2)22                    |
 
@@ -28,7 +28,7 @@ Cisco Adaptive Security Appliance (ASA) Software is the core operating system fo
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

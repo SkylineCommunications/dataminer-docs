@@ -4,7 +4,7 @@ uid: Connector_help_SES_S.A._Skala
 
 # SES S.A. Skala
 
-This is an **HTTP** driver that communicates with **iDirect Pulse** via the **Restful API** provided by the system. It displays the data in such a way that users can easily monitor the different terminals controlled by the iDirect Pulse.
+This is an **HTTP** connector that communicates with **iDirect Pulse** via the **Restful API** provided by the system. It displays the data in such a way that users can easily monitor the different terminals controlled by the iDirect Pulse.
 
 ## About
 
@@ -35,7 +35,7 @@ This is an **HTTP** driver that communicates with **iDirect Pulse** via the **Re
 
 #### HTTP WebService Interface Connection
 
-This driver uses a Hypertext Transfer Protocol (HTTP) connection and requires the following input during element creation:
+This connector uses a Hypertext Transfer Protocol (HTTP) connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -47,7 +47,7 @@ HTTP Settings:
 
 #### HTTP WebSocket Interface Connection
 
-This driver uses a Hypertext Transfer Protocol (HTTP) connection and requires the following input during element creation:
+This connector uses a Hypertext Transfer Protocol (HTTP) connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

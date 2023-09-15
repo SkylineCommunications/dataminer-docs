@@ -30,12 +30,14 @@ The following properties are available in the **Equipment** table: **Unit Name**
 
 If you want to import a CSV file, it must have the following structure:
 
-> ***Display Key;Unit Name****;****Unit Rack Position****;****Unit Height****;****Rack View Name****;****Front/Rear***
->
-> Note: Instead of a semicolon, it is also possible to use a comma (,) as the separator.
+`Display Key;Unit Name;Unit Rack Position;Unit Height;Rack View Name;Front/Rear`
+
+> [!NOTE]
+> Instead of a semicolon, it is also possible to use a comma (,) as the separator.
 >
 > Examples:
-> *Device Name 1;0;1;My View Name;Front
-> Device Name 2;1;2;My View Name;Rear*
+>
+> - `Device Name 1;0;1;My View Name;Front`
+> - `Device Name 2;1;2;My View Name;Rear`
 
 An export to a CSV file will have the same structure as described above.

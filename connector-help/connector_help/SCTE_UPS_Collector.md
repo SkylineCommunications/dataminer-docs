@@ -65,7 +65,7 @@ This page also contains the parameter **Number of Devices**, which indicates how
 
 On the Provisioning page, you can manage the list of UPS devices monitored by the collector. The page consists of several different sections, for which you can find more information below.
 
-![Provioning Update.jpg](~/connector-help/images/SCTE_UPS_Collector_Provioning_Update.jpg)
+![Provisioning Update.jpg](~/connector-help/images/SCTE_UPS_Collector_Provioning_Update.jpg)
 
 #### Add/Update Devices
 
@@ -75,74 +75,82 @@ To **add new devices**, follow the steps below.
 
 - **Step 1**: Create a CSV file containing the general information of the devices. This file must contain the following columns in the same order as specified below:
 
-> 1.  **ID**: Leave empty.
-> 2.  **Name**: The name of the device; this will also be the name of the exported DVE element. Mandatory.
-> 3.  **IP Address**: The IP address of the device. Mandatory.
-> 4.  **Read Community String**: Optional.
-> 5.  **Write Community String**: Optional.
-> 6.  **Latitude**: Optional.
-> 7.  **Longitude**: Optional.
-> 8.  **Address**: Optional.
-> 9.  **Number of subscribers**: Optional.
-> 10. **Battery Type**: The type of the battery must be supported by the SCTE UPS Collector. Mandatory.
-> 11. **Battery Age**: Optional.
-> 12. **Network Domain**: Optional.
-> 13. **Region**: Optional.
-> 14. **City**: Optional.
-> 15. **Headend**: Optional.
-> 16. **Hub**: Optional.
-> 17. **Optical Node**: Optional.
-> 18. **Field 1**: Optional.
-> 19. **Field 2**: Optional.
-> 20. **Comments**: Optional.
-> 21. **View**: Optional.
+  1. **ID**: Leave empty.
+  1. **Name**: The name of the device; this will also be the name of the exported DVE element. Mandatory.
+  1. **IP Address**: The IP address of the device. Mandatory.
+  1. **Read Community String**: Optional.
+  1. **Write Community String**: Optional.
+  1. **Latitude**: Optional.
+  1. **Longitude**: Optional.
+  1. **Address**: Optional.
+  1. **Number of subscribers**: Optional.
+  1. **Battery Type**: The type of the battery must be supported by the SCTE UPS Collector. Mandatory.
+  1. **Battery Age**: Optional.
+  1. **Network Domain**: Optional.
+  1. **Region**: Optional.
+  1. **City**: Optional.
+  1. **Headend**: Optional.
+  1. **Hub**: Optional.
+  1. **Optical Node**: Optional.
+  1. **Field 1**: Optional.
+  1. **Field 2**: Optional.
+  1. **Comments**: Optional.
+  1. **View**: Optional.
 
 - **Step 2**: Locate the provisioning file in the following directory: *C:\Skyline DataMiner\Documents\SCTE UPS Collector\\*
+
 - **Step 3**: Select the provisioning file in the **Add Import File** drop-down list and click the **Add/Update** button.
 
-> After this, the provisioning of the new devices will begin. You can view the progress and potential errors in the **Provisioning Log**.
->
-> When the process is finished, the number of **Added Devices** and **Failed Lines** will be displayed.
+  After this, the provisioning of the new devices will begin. You can view the progress and potential errors in the **Provisioning Log**.
+
+  When the process is finished, the number of **Added Devices** and **Failed Lines** will be displayed.
 
 To **update devices**, follow the steps below.
 
 - **Step 1**: Export the currently available devices. See "Export Devices" below.
+
 - **Step 2**: Go to the directory *C:\Skyline DataMiner\Documents\SCTE UPS Collector\\* and open the exported file.
+
   After this, you can modify the general information of the devices, such as the **Name** and the **Battery Type**. Save the changes.
 
-> Note: **DO NOT MODIFY THE ID COLUMN.**
+  > [!NOTE]
+  > **DO NOT MODIFY THE ID COLUMN.**
 
 - **Step 3**: Select the new provisioning file in the **Add Import File** drop-down list and click the **Add/Update** button.
 
-> After this, the provisioning of the devices will begin. You can view the progress and potential errors in the **Provisioning Log**.
->
-> When the process is finished, the number of **Updated Devices** and **Failed** **Lines** will be displayed.
->
-> ![Add-Update Device.jpg](~/connector-help/images/SCTE_UPS_Collector_Add-Update_Device.jpg)
+  After this, the provisioning of the devices will begin. You can view the progress and potential errors in the **Provisioning Log**.
+
+  When the process is finished, the number of **Updated Devices** and **Failed** **Lines** will be displayed.
+
+  ![Add-Update Device.jpg](~/connector-help/images/SCTE_UPS_Collector_Add-Update_Device.jpg)
 
 #### Delete Devices
 
 To **delete devices** in bulk from the SCTE UPS Collector element, follow the steps below:
 
 - **Step 1**: Create a CSV file with the required provisioning format (See "Export Devices" below). Then put the names of the devices that are to be deleted in the **Name** column of the CSV file and save the changes.
+
 - **Step 2**: Place the CSV file in the following directory: C:\Skyline DataMiner\Documents\SCTE UPS Collector\\
+
 - **Step 3**: Select the file in the **Delete Import File** drop-down list and click the **Delete** button.
 
-> After this, the deletion of the devices will begin. You can view the progress and potential errors in the **Provisioning Log**.
->
-> When the process is finished, the number of **Deleted Devices** will be displayed.
->
-> ![Delete Devices.jpg](~/connector-help/images/SCTE_UPS_Collector_Delete_Devices.jpg)
+  After this, the deletion of the devices will begin. You can view the progress and potential errors in the **Provisioning Log**.
+
+  When the process is finished, the number of **Deleted Devices** will be displayed.
+
+  ![Delete Devices.jpg](~/connector-help/images/SCTE_UPS_Collector_Delete_Devices.jpg)
 
 #### Export Devices
 
 To **export the UPS device information** available in the Device Table to a CSV file, follow the steps below.
 
 - **Step 1**: In the **Export File** text box, write the name the export file should have.
+
 - **Step 2**: Click the **Export** button.
+
   After this, the exporting of the devices will begin. When the process is finished, the **Export Status** will change to *Done*.
 
-> ![Export Devices.jpg](~/connector-help/images/SCTE_UPS_Collector_Export_Devices.jpg)
+  ![Export Devices.jpg](~/connector-help/images/SCTE_UPS_Collector_Export_Devices.jpg)
 
 #### DVE Properties
 
@@ -150,22 +158,22 @@ To update the element properties of the DVEs created per UPS device, follow the 
 
 - **Step 1**: Create the following element properties:
 
-- Headend
+  - Headend
   - IP Address
   - MAC
   - Network Domain
   - Place
   - Region
 
-> ![Properties.jpg](~/connector-help/images/SCTE_UPS_Collector_Properties.jpg)
+  ![Properties.jpg](~/connector-help/images/SCTE_UPS_Collector_Properties.jpg)
 
 - **Step 2**: Click the **Update** button.
 
-> After this, the element properties of each DVE will be updated with the information of the corresponding UPS device.
->
-> When the process is finished, the **Update Properties Status** will change to *Done*.
->
-> ![DVE Properties.jpg](~/connector-help/images/SCTE_UPS_Collector_DVE_Properties.jpg)
+  After this, the element properties of each DVE will be updated with the information of the corresponding UPS device.
+
+  When the process is finished, the **Update Properties Status** will change to *Done*.
+
+  ![DVE Properties.jpg](~/connector-help/images/SCTE_UPS_Collector_DVE_Properties.jpg)
 
 #### Geocoding
 
@@ -263,26 +271,30 @@ The alarm data can be configured directly in the **Property Table** or in bulk u
 To export the content of the Property Table, follow the steps below.
 
 - **Step 1**: In the **Device Export File** box, specify the name the export file should have.
+
 - **Step 2**: Click the **Export** button. An Excel file will be exported with the following prefix: "*UPSElementName\_*"
 
-> Once the process is finished, the **Device Export Status** will change to *Done*. The file will be placed in the following directory: *C:\Skyline DataMiner\Documents\SCTE UPS Collector\Property*
->
-> ![Export Properties.jpg](~/connector-help/images/SCTE_UPS_Collector_Export_Properties.jpg)
+  Once the process is finished, the **Device Export Status** will change to *Done*. The file will be placed in the following directory: *C:\Skyline DataMiner\Documents\SCTE UPS Collector\Property*
+
+  ![Export Properties.jpg](~/connector-help/images/SCTE_UPS_Collector_Export_Properties.jpg)
 
 #### Import Threshold Parameters
 
 To update the content of the **Property Table** in bulk, follow the steps below.
 
 - **Step 1**: Export the current **Property Table** (see "Export Threshold Parameters").
+
 - **Step 2**: Go to the following directory: *C:\Skyline DataMiner\Documents\SCTE UPS Collector\Property.*
+
   In the directory, open the exported file (which will have the name of the collector element as a prefix), modify the file and save it.
 
-  **DO NOT MODIFY THE DEVICE ID, DEVICE NAME, INSTANCE OR PARAMETER.
-  **
+  **DO NOT MODIFY THE DEVICE ID, DEVICE NAME, INSTANCE OR PARAMETER.**
+
 - **Step 3**: Select the name of the file in the **Device Import File** drop-down list and click the **Import** button.
+
   The **Import Progress** bar will display the progress of the import until it reaches 100. The number of **Updated Devices** and generated **Errors** will then also be displayed.
 
-> ![Import Properties.jpg](~/connector-help/images/SCTE_UPS_Collector_Import_Properties.jpg)
+  ![Import Properties.jpg](~/connector-help/images/SCTE_UPS_Collector_Import_Properties.jpg)
 
 ### History
 

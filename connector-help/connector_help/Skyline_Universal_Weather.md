@@ -52,7 +52,7 @@ HTTP CONNECTION:
 
 - **IP address/host**: The polling IP of the API.
 
-- For Dark Sky: [https://api.darksky.net](https://api.darksky.net/)
+  - For Dark Sky: [https://api.darksky.net](https://api.darksky.net/)
   - For OpenWeather OneCall: [https://api.openweathermap.org](https://api.openweathermap.org/)
 
 - **IP port**: The IP port of the device. By default: *443*.
@@ -75,7 +75,7 @@ This page contains parameters such as:
 
 - **Number of Requests**: The number of requests made to the weather API. **This may be important as some source APIs charge based on the number of calls**.
 
-- **Dark Sky**: The number of calls is retrieved directly from the server.
+  - **Dark Sky**: The number of calls is retrieved directly from the server.
   - **OpenWeather**: This API does not reply with the number of calls made like Dark Sky does, so the number of calls is counted for this specific element only.
 
 - **Number of Locations**: The number of locations for which weather conditions will be requested.
@@ -157,9 +157,9 @@ This subpage contains configuration parameters specific to the **Ad-Hoc function
 
 - **Inter Element Service**: If this parameter is set to *Enabled*, this allows **other elements** within the DMS to make calls to the element running this connector to **retrieve weather information**. This parameter is **enabled by default**.
 
-- 1.  **Prior to range 1.0.2.x**, this feature uses a **listener parameter** that will retrieve the required information, such as **Request Type**, **Request Parameters (Query Parameters)**, **Location Name**, and **Location Description**, in JSON format. **From range 1.0.2.x onwards, the listener parameter is no longer used**, because the element communication uses InterApp calls instead.
-  2.  The call will then be made to the API.
-  3.  The Ad-Hoc table will be updated and the response from the API will be sent back to the element that requested the weather information.
+  1. **Prior to range 1.0.2.x**, this feature uses a **listener parameter** that will retrieve the required information, such as **Request Type**, **Request Parameters (Query Parameters)**, **Location Name**, and **Location Description**, in JSON format. **From range 1.0.2.x onwards, the listener parameter is no longer used**, because the element communication uses InterApp calls instead.
+  1. The call will then be made to the API.
+  1. The Ad-Hoc table will be updated and the response from the API will be sent back to the element that requested the weather information.
 
 - **Auto Delete**: If this parameter is set to *Enabled*, the **Ad-Hoc Current Conditions** table is automatically **cleaned up every hour**. This parameter is **enabled by default.**
 
@@ -173,6 +173,7 @@ This subpage contains parameters that allow you to configure the communication w
 
 - **API Key**: The API key that will allow the connector to communicate with the API.
 - **Max Number of Request (24 Hours)**: The maximum number of calls that can be made to the API.
+
   Note: **1000 calls daily are free**, but there will be charges after the initial 1000.
 
 #### Windy (Range 1.0.4.x)
@@ -187,7 +188,7 @@ This subpage contains parameters to configure the communication with the **Windy
 
 - **Windy Forecast Model**: The forecast model that will be used to obtain information. The following models are currently supported:
 
-- *arome*: Covers France and surrounding areas.
+  - *arome*: Covers France and surrounding areas.
   - *iconEu*: Covers Europe and surrounding areas.
   - *gfs*: Global model.
   - *namConus*: Covers the USA and surrounding areas (Canada, Mexico).
@@ -203,6 +204,9 @@ More details of the Windy API can be found [here](https://api.windy.com/point-fo
 ## Notes
 
 - **Listener PID**: 283
+
   Note: **From range 1.0.2.x onwards, the listener parameter is no longer used**, because the element communication uses InterApp calls instead.
+
 - **APIs Integrated**: Dark Sky, OpenWeather OneCall, and Windy Point-Forecast.
+
 - The Windy API URL is built-in and uses the same proxy server as the Dark Sky/OpenWeather OneCall APIs.

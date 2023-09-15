@@ -8,7 +8,7 @@ The **Grass Valley IQLAM00** provides a fast and efficient way to monitor channe
 
 Multiple logo files can be stored on the module and loaded via triggers from the automation system as required, to provide confidence that the channel branding is correct.
 
-This driver can be used to control and monitor the Grass Valley IQLAM00 via **SNMP**.
+This connector can be used to control and monitor the Grass Valley IQLAM00 via **SNMP**.
 
 ## About
 
@@ -36,7 +36,7 @@ This driver can be used to control and monitor the Grass Valley IQLAM00 via **SN
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -59,7 +59,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver consists of the following data pages:
+The element created with this connector consists of the following data pages:
 
 - **General**: Displays the system information parameters, such as the **Description**, **Location** and **Up Time** of the device.
 - **Logo Match**: Displays information about the logo match parameters, such as **Match Level**, **Signature File** and **Match Status**.

@@ -4,31 +4,31 @@ uid: Connector_help_Concurrent_Mediahawk_4500
 
 # Concurrent Mediahawk 4500
 
-This driver can be used to monitor **Concurrent Mediahawk 4500** devices via SNMPv2.
+This connector can be used to monitor **Concurrent Mediahawk 4500** devices via SNMPv2.
 
 ## About
 
-This driver is used to monitor **Concurrent Mediahawk 4500** video server devices.
+This connector is used to monitor **Concurrent Mediahawk 4500** video server devices.
 
-This driver will export different drivers based on the retrieved data. A list can be found in the section 'Exported Drivers'.
+This connector will export different connectors based on the retrieved data. A list can be found in the section 'Exported Connectors'.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                 | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                 | **DCF Integration** | **Cassandra Compliant** |
 |------------------|---------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                 | No                  | No                      |
 | 1.1.0.x          | Initial version                 | No                  | No                      |
-| 1.1.1.x          | Initial version (driver review) | No                  | Yes                     |
+| 1.1.1.x          | Initial version (connector review) | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**     |
+| **Range** | **Device Firmware Version**     |
 |------------------|---------------------------------|
 | 1.0.0.x          | Unknown                         |
 | 1.1.0.x          | Unknown                         |
 | 1.1.1.x          | CCUR Video Server Version 3.2.5 |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol**            | **Description**                    |
 |----------------------------------|------------------------------------|
@@ -40,7 +40,7 @@ This driver will export different drivers based on the retrieved data. A list ca
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMPv2) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMPv2) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

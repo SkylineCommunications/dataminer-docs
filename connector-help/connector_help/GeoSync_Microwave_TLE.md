@@ -2,7 +2,7 @@
 uid: Connector_help_GeoSync_Microwave_TLE
 ---
 
-GeoSync Microwave TLE
+# GeoSync Microwave TLE
 
 This series of Outdoor Block Upconverters provides one RF composite output covering 2 satellite transponder frequencies and accepts 2 separate & independent Lband IF inputs in an integral, self-contained weather proof package designed for outdoor antenna mounting.
 
@@ -10,15 +10,15 @@ This series of Outdoor Block Upconverters provides one RF composite output cover
 
 The **GeoSync Microwave TLE** driver controls and monitors the slope and attenuation of the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial Version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.01                        |
 
@@ -28,7 +28,7 @@ The **GeoSync Microwave TLE** driver controls and monitors the slope and attenua
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -52,7 +52,7 @@ The **Output State, IF and RF Attenuation, Slope, Reference Frequency Adjustment
 
 Generic system information such as the **System Name, Temperature, 12V Power Supply,** and **Elapsed Time** are on this page.
 
-The ****User Generated Test,** Logged Fault,** **Local Oscillator, External, Auxiliary External, Power Supply,** and **Temperature** **Alarms** are displayed on this page. The user can test alarms using the **User Test Alarm** buttons.
+The **User Generated Test**, **Logged Fault**, **Local Oscillator, External, Auxiliary External, Power Supply**, and **Temperature Alarms** are displayed on this page. The user can test alarms using the **User Test Alarm** buttons.
 
 ### Log
 
@@ -64,12 +64,10 @@ The entries can be cleared using the **Clear** button.
 
 The **IP Address, Subnet Mask** and **Gateway** can be configured and applied on this page.
 
-The SNMP **Read** and **Write Communities** are configurablable, as well as the **Trap Interval** and **Destination**.
+The SNMP **Read** and **Write Communities** are configurable, as well as the **Trap Interval** and **Destination**.
 
 ### Web Interface Page
 
 This page displays the web interface of the device.
 
 Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.
-
-

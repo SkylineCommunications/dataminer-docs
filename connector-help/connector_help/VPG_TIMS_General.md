@@ -10,20 +10,20 @@ A passive analyzer of ASI and SDI video signals.
 
 This analyzer uses a combination of SNMP and HTML to pass the information related to the video streams and all services running on them.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**                           | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**                           | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|-------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x              | Initial version                           | No                  | No                      |
 | 1.1.0.x              | Release version                           | No                  | No                      |
 | 2.1.0.x              | New OID 13130.6                           | No                  | No                      |
-| 3.1.0.x              | Changed the driver with a tree controller | No                  | No                      |
+| 3.1.0.x              | Changed the connector with a tree controller | No                  | No                      |
 | 3.1.1.x              | Changes for GlobeCast France              | no                  | Yes                     |
 | 3.2.1.x \[SLC Main\] | Old OID 13130.5                           | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 1.1.0.x          | Unknown                     |
@@ -34,12 +34,12 @@ This analyzer uses a combination of SNMP and HTML to pass the information relate
 
 ## Installation and configuration
 
-This driver uses an SNMP connection and an HTTP connection and requires the following input during element creation:
+This connector uses an SNMP connection and an HTTP connection and requires the following input during element creation:
 
 **SNMP CONNECTION**:
 
 - **IP address/host**: The polling IP of the device, e.g. *10.11.12.13.*
-- **Device address**: Required in the 3.1.x.x range of this driver, not in the 3.2.x.x range.
+- **Device address**: Required in the 3.1.x.x range of this connector, not in the 3.2.x.x range.
 
 **SNMP Settings**:
 

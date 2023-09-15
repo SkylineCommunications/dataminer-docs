@@ -4,30 +4,30 @@ uid: Connector_help_IDirect_Pulse_Manager
 
 # IDirect Pulse Manager
 
-With the **iDirect Pulse Manager** driver, you can monitor components of an iDirect Pulse NMS.
+With the **iDirect Pulse Manager** connector, you can monitor components of an iDirect Pulse NMS.
 
 ## About
 
-With this driver, the components of an iDirect Pulse NMS can be monitored. The driver must be used in combination with one or more **iDirect Pulse Terminal Manager** elements. This setup is implemented in order to spread the load and trend data over multiple elements and DataMiner Agents.
+With this connector, the components of an iDirect Pulse NMS can be monitored. The connector must be used in combination with one or more **iDirect Pulse Terminal Manager** elements. This setup is implemented in order to spread the load and trend data over multiple elements and DataMiner Agents.
 
 After an outage, all missing data will be polled and set to the element using history sets.
 
 All data is retrieved over HTTP using the web service API.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**                                               |
+| **Range** | **Device Firmware Version**                                               |
 |------------------|---------------------------------------------------------------------------|
 | 1.0.0.x          | API version 1.0                                                           |
 | 1.1.0.x          | API version 1.1 No other major changes when going from 1.0.0.x to 1.1.0.x |
 
-### Exported Drivers
+### Exported Connectors
 
 | **Exported Protocol**  | **Description**  |
 |------------------------|------------------|
@@ -40,7 +40,7 @@ All data is retrieved over HTTP using the web service API.
 
 #### HTTP connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

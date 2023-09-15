@@ -8,7 +8,7 @@ The Enensys GigaCaster DMB is a DAB/DAB+/DMB multiplexer with audio and data enc
 
 ## About
 
-This driver monitors and configures Enensys GigaCaster DMB devices over **SNMP**, with the possibility of receiving traps on alarm updates.
+This connector monitors and configures Enensys GigaCaster DMB devices over **SNMP**, with the possibility of receiving traps on alarm updates.
 
 ### Version Info
 
@@ -35,7 +35,7 @@ This driver monitors and configures Enensys GigaCaster DMB devices over **SNMP**
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -61,7 +61,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver consists of the data pages described below.
+The element created with this connector consists of the data pages described below.
 
 ### General
 

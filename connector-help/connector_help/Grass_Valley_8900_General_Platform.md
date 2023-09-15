@@ -8,23 +8,23 @@ The Grass Valley GeckoFlexT 8900 Signal Processing System is a family of con-ver
 
 ## About
 
-This is an **SNMP** driver that exports the protocol **Grass Valley 8900 Slot**. It connects to the frame controller, retrieves information about the 8947 and 8949 boards, and filters out the empty slots
+This is an **SNMP** connector that exports the protocol **Grass Valley 8900 Slot**. It connects to the frame controller, retrieves information about the 8947 and 8949 boards, and filters out the empty slots
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**  | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**  | **DCF Integration** | **Cassandra Compliant** |
 |------------------|------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version  | No                  | Yes                     |
 | 1.0.1.x          | DVE custom names | No                  | Yes                     |
 | 1.0.2.x          | Added DCF        | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range**        | **Device Firmware Version**                    |
+| **Range**        | **Device Firmware Version**                    |
 |-------------------------|------------------------------------------------|
 | 1.0.0.x 1.0.1.x 1.0.2.x | Software version: 4.0.0 Hardware revision: 01A |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol**  | **Description**       |
 |------------------------|-----------------------|
@@ -36,7 +36,7 @@ This is an **SNMP** driver that exports the protocol **Grass Valley 8900 Slot**.
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -68,7 +68,7 @@ This page provides access to the equipment's web interface. Note that the client
 
 ## DataMiner Connectivity Framework
 
-The **1.0.2.x** driver range of the **Grass Valley 8900 General Platform** protocol supports the usage of DCF and can only be used on a DMA with **8.5.8.5** as the minimum version.
+The **1.0.2.x** connector range of the **Grass Valley 8900 General Platform** protocol supports the usage of DCF and can only be used on a DMA with **8.5.8.5** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 

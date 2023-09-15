@@ -4,11 +4,11 @@ uid: Connector_help_TelcoBridges_Media_Gateway_3200
 
 # TelcoBridges Media Gateway 3200
 
-The **TelcoBridges Media Gateway 3200** driver can be used to display information of the related devices.
+The **TelcoBridges Media Gateway 3200** connector can be used to display information of the related devices.
 
 ## About
 
-The **TelcoBridges Media Gateway 3200** device is a **VoIP** gateway with uncompromising reliability, high capacity and high performance. This driver uses an SNMP connection in order to successfully retrieve and configure the device's information.
+The **TelcoBridges Media Gateway 3200** device is a **VoIP** gateway with uncompromising reliability, high capacity and high performance. This connector uses an SNMP connection in order to successfully retrieve and configure the device's information.
 
 ## Installation and configuration
 

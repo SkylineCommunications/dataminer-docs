@@ -6,15 +6,15 @@ uid: Connector_help_Generic_Docsis_CPE_Manager
 
 
 
-This driver aggregates and displays information from CM and CMTS. This driver can be used as a BE or FE CPE Manager.
+This connector aggregates and displays information from CM and CMTS. This connector can be used as a BE or FE CPE Manager.
 
 
 
 ## About
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial Version | No                  | Yes                     |
 
@@ -22,7 +22,7 @@ This driver aggregates and displays information from CM and CMTS. This driver ca
 
 ### Creation
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## Usage
 

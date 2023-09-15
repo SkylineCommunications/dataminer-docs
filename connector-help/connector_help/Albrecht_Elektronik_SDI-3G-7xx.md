@@ -8,13 +8,13 @@ The SDI Inserter / Databridge SDI-3G-7xx decodes, generates, formats and inserts
 
 ## About
 
-The Albrecht Elektronik SDI-3G-7xx driver is used to monitor and control an Albrecht Elektronik SDI-3G-7xx device. The information is displayed on one page, and settings can be modified.
+The Albrecht Elektronik SDI-3G-7xx connector is used to monitor and control an Albrecht Elektronik SDI-3G-7xx device. The information is displayed on one page, and settings can be modified.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION**:
 
@@ -27,7 +27,7 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and need
 - **Get community string**: The community string in order to read from the device. The default value is *public*.
 - **Set community string**: The community string in order to set to the device. The default value is *private.*
 
-This driver uses an HTTP connection and needs the following user information:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 **SERIAL CONNECTION**:
 
@@ -58,7 +58,3 @@ On this page, the user can fill in the credentials to log on to the device. If t
 ### Webpage
 
 The **Webpage** displays the web interface of the device.
-
-## Notes
-
-N/A

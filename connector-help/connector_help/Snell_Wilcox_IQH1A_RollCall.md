@@ -10,7 +10,7 @@ The **Snell Wilcox IQH1A RollCall** is a 1U rack unit accepting up to 4 modules.
 
 The Snell Wilcox IQH1A IQ 1U modular enclosures are used for high-density delivery of HD and SD modular solutions. The 1U rack unit accepts up to four "A" style modules, and is available in single and dual redundant PSU versions. RollCall control and monitoring is included as standard using a gateway control card.
 
-This driver is an application-specific protocol for control and operation of units. The **Snell Wilcox IQH3A RollCall** driver uses a smart-serial connection.
+This connector is an application-specific protocol for control and operation of units. The **Snell Wilcox IQH3A RollCall** connector uses a smart-serial connection.
 
 ### Version Info
 
@@ -36,7 +36,7 @@ This driver is an application-specific protocol for control and operation of uni
 
 #### Serial main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

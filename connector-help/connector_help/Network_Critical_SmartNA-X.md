@@ -10,15 +10,15 @@ The **Smart Network Access Modular System X (SmartNA-X)** is the most flexible a
 
 The **Network Critical SmartNA-X** uses SNMP to provides a modular, scalable and customizable 1/10G packet broker and TAP solution for monitoring and security tools.
 
-### Range of the driver
+### Range of the connector
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 6.106                       |
 
@@ -28,7 +28,7 @@ The **Network Critical SmartNA-X** uses SNMP to provides a modular, scalable and
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

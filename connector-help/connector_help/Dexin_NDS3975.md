@@ -10,9 +10,9 @@ Driver SNMP for Satellite Receiver Dexin NDS3975, Allows the user tomonitoring a
 
 The SNMP device, allows the user to monitoring and set up parameters. Also contains different pages that do easier the undestanding of Parameters Displayed
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
@@ -22,7 +22,7 @@ The SNMP device, allows the user to monitoring and set up parameters. Also conta
 
 #### SNMPconnection
 
-This driver uses a SNMP connection and does not require any input during element creation.
+This connector uses a SNMP connection and does not require any input during element creation.
 
 All Pages and Subpages were done and grouped to do it easier to undertand for the user.
 

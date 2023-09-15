@@ -6,7 +6,7 @@ uid: Connector_help_Generic_Syslog_Receiver
 
 The Generic Syslog Receiver is used to capture and analyze information received via Syslog messages.
 
-Elements using this protocol are **constantly listening** to incoming Syslog messages that are sent from **one or more network devices**. The driver processes these messages and displays the messages in an overview along with the severity. Filtering the incoming messages is possible based on severity or based on specific data in the message. The driver can also be used to trigger specific alarms and to write the messages to log files.
+Elements using this protocol are **constantly listening** to incoming Syslog messages that are sent from **one or more network devices**. The connector processes these messages and displays the messages in an overview along with the severity. Filtering the incoming messages is possible based on severity or based on specific data in the message. The connector can also be used to trigger specific alarms and to write the messages to log files.
 
 The communication method used is **smart-serial**.
 
@@ -45,7 +45,7 @@ The communication method used is **smart-serial**.
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -58,7 +58,7 @@ SERIAL CONNECTION:
 
 ### General
 
-This is the default page of the driver. It contains the **Message Table**, which displays all the information of the incoming syslog messages. There are also page buttons to specific subpages for **Priority**, **Layout** and **Raw** **Messages**.
+This is the default page of the connector. It contains the **Message Table**, which displays all the information of the incoming syslog messages. There are also page buttons to specific subpages for **Priority**, **Layout** and **Raw** **Messages**.
 
 ### Alarms
 

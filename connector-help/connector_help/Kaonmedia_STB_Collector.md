@@ -4,11 +4,11 @@ uid: Connector_help_Kaonmedia_STB_Collector
 
 # Kaonmedia STB Collector
 
-The **Kaonmedia STB Collector** driver is used to monitor Kaonmedia set-top boxes (STBs).
+The **Kaonmedia STB Collector** connector is used to monitor Kaonmedia set-top boxes (STBs).
 
 ## About
 
-This driver uses the **HTTP** interface in order to collect data from a web service.
+This connector uses the **HTTP** interface in order to collect data from a web service.
 
 ## Installation and configuration
 
@@ -16,7 +16,7 @@ This driver uses the **HTTP** interface in order to collect data from a web serv
 
 #### HTTP main connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -27,12 +27,13 @@ HTTP CONNECTION:
 
 ### Configuration
 
-- **Web service:** Install the web service on the DataMiner server. The Web.config XML file contains credentials to communicate with DataMiner. If necessary, create a new user with these credentials (and with sufficient rights). Here you can also configure the buffer size of the web service. Extra logging can be found in C:\Webservice.
+- **Web service:** Install the web service on the DataMiner server. The Web.config XML file contains credentials to communicate with DataMiner. If necessary, create a new user with these credentials (and with sufficient rights). Here you can also configure the buffer size of the web service. Extra logging can be found in `C:\Webservice`.
 
 - **STB Collector**:
 
-- 1.  Create a number of elements and configure a unique **STB Collector Number** (1..254) for each element, as well as the **Total Number of Collectors**. Restart all elements afterwards.
-  2.  Webservice Manager: Select *Yes* for one STB Collector element running on the server hosting the web service. This element will request data from the web service.
+  1. Create a number of elements and configure a unique **STB Collector Number** (1..254) for each element, as well as the **Total Number of Collectors**. Restart all elements afterwards.
+
+  2. Webservice Manager: Select *Yes* for one STB Collector element running on the server hosting the web service. This element will request data from the web service.
 
 ## Usage
 
@@ -66,7 +67,7 @@ To add new firmware versions, right-click the firmware table and select **Add Fi
 The **HW Version/FW Device Type** should contain the hardware version or the device type:
 
 - **Hardware Version**: If you click \`Force Update' for a single CM, the first URL related to its hardware version that can be found in the firmware table will be used in order to start the update.
-- **Device Type**: For the stbVer API, if the firmware table has the device type in the first column, and the same device type is found, the driver checks if current_ver is lower than what is configured in the firmware table. If it is, the new URL is sent.
+- **Device Type**: For the stbVer API, if the firmware table has the device type in the first column, and the same device type is found, the connector checks if current_ver is lower than what is configured in the firmware table. If it is, the new URL is sent.
 
 ### Notification
 

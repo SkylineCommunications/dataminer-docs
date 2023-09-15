@@ -8,20 +8,20 @@ The **Redus source selector** is an intelligent ASI switch used in applications 
 
 ## About
 
-The Redus Switch can be used as a standalone redundancy switch for third-party equipment or for the Cisco ROSA Network Management System (NMS). The driver for this device uses a **serial** connection to configure and monitor the switch.
+The Redus Switch can be used as a standalone redundancy switch for third-party equipment or for the Cisco ROSA Network Management System (NMS). The connector for this device uses a **serial** connection to configure and monitor the switch.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                          | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                                          | **DCF Integration** | **Cassandra Compliant** |
 |------------------|------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version.                                                                         | No                  | Yes                     |
 | 1.0.1.x          | Improvement of logic and UI - No support for multiple elements polling the same IP:Port. | No                  | Yes                     |
 | 2.0.0.x          | Removed redundant polling - Now supports multiple elements polling the same IP:Port.     | No                  | Yes                     |
 | 2.0.1.x          | Added DCF.                                                                               | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.1.x          | Unknown                     |
 | 2.0.0.x          | Unknown                     |
@@ -33,7 +33,7 @@ The Redus Switch can be used as a standalone redundancy switch for third-party e
 
 #### Serial Main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -50,7 +50,7 @@ SERIAL CONNECTION:
 
 #### Serial Secondary Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -94,6 +94,6 @@ This page displays the critical **Device Messages** of the device, i.e. the **AS
 
 ## DataMiner Connectivity Framework
 
-The **2.0.1.x** driver range of the **SA Redus Switch** protocol supports the usage of DCF and can only be used on a DMA with **8.5.8.5** as the minimum version.
+The **2.0.1.x** connector range of the **SA Redus Switch** protocol supports the usage of DCF and can only be used on a DMA with **8.5.8.5** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).

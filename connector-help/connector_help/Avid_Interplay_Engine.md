@@ -4,25 +4,25 @@ uid: Connector_help_Avid_Interplay_Engine
 
 # Avid Interplay Engine
 
-This SNMP driver allows you to monitor and set up the **Avid Interplay Engine**.
+This SNMP connector allows you to monitor and set up the **Avid Interplay Engine**.
 
 ## About
 
-This is an SNMP driver of the Avid Interplay Engine, which also contains additional parameters of the **Avid Monitoring System**.
+This is an SNMP connector of the Avid Interplay Engine, which also contains additional parameters of the **Avid Monitoring System**.
 
-The driver uses SNMP Get calls to extract the relevant information used to monitor and manage Avid ISIS events.
+The connector uses SNMP Get calls to extract the relevant information used to monitor and manage Avid ISIS events.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
-| 1.0.0.1          | Initial version | No                  | No                      |
+| 1.0.0.x          | Initial version | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
-| 1.0.0.1          | 3.0.5.38325                 |
+| 1.0.0.x          | 3.0.5.38325                 |
 
 ## Installation and configuration
 
@@ -30,7 +30,7 @@ The driver uses SNMP Get calls to extract the relevant information used to monit
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

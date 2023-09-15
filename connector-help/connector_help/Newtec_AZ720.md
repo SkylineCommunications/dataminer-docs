@@ -6,7 +6,7 @@ uid: Connector_help_Newtec_AZ720
 
 The AZ720 is a high-performance L-band to IF frequency downconverter designed for a wide range of broadcast, telco, and IP satellite applications. Its main features are high gain, spectrum inversion, very high-frequency stability, and LNB power supply to guarantee the best signal quality.
 
-This driver is designed to work with the model AZ720. It allows you to monitor and control the downconverter.
+This connector is designed to work with the model AZ720. It allows you to monitor and control the downconverter.
 
 ## About
 
@@ -34,7 +34,7 @@ This driver is designed to work with the model AZ720. It allows you to monitor a
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -60,7 +60,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver has the following data pages:
+The element created with this connector has the following data pages:
 
 - **Architecture**: Contains general information about the unit. Several page buttons are available that provide access to specific settings: SNMP, Serial Port, Ethernet, Display Settings, and Configuration.
 - **Setup**: Allows you to monitor and control the unit, and to add web users as well. In the Monitor section, you can find parameters related to the Power Supply and the Device Internal Temperature. The Control section contains the Device Reset, Sleep Mode, 10 MHz Reference and Reference Clock parameters.

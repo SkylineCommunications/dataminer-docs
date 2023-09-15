@@ -4,7 +4,7 @@ uid: Connector_help_General_Dynamics_LRK-1200
 
 # General Dynamics LRK-1200
 
-This is a **virtual driver** used to monitor and configure the General Dynamics LRK-1200.
+This is a **virtual connector** used to monitor and configure the General Dynamics LRK-1200.
 
 ## About
 
@@ -14,7 +14,7 @@ The General Dynamics LRK-1200 is a redundant LNA system.
 
 ### Creation
 
-This is a virtual driver. When you create an element, you need to define for each of the **input parameters** from which **DataMiner element** and from which **parameter** the Status information will be received, and also for the **output parameters**, to which **DataMiner Element** and to which **parameter** the data will be sent.
+This is a virtual connector. When you create an element, you need to define for each of the **input parameters** from which **DataMiner element** and from which **parameter** the Status information will be received, and also for the **output parameters**, to which **DataMiner Element** and to which **parameter** the data will be sent.
 
 These parameters are linked to :
 

@@ -4,7 +4,7 @@ uid: Connector_help_Newtec_2280
 
 # Newtec 2280
 
-The Newtec 2280 driver uses a serial connection to monitor and configure the corresponding device. Alarm monitoring and trending can be configured for most parameters.
+The Newtec 2280 connector uses a serial connection to monitor and configure the corresponding device. Alarm monitoring and trending can be configured for most parameters.
 
 ## About
 
@@ -42,11 +42,11 @@ The Newtec 2280 driver uses a serial connection to monitor and configure the cor
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 #### Serial original Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -70,7 +70,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver has the following data pages:
+The element created with this connector has the following data pages:
 
 - **General**: Contains general parameters, as well as page buttons to the following subpages: Device Info, Display, Power Supply, Security, Ethernet, Serial, Outdoor, Internal, External, Config and Test.
 - **Modulator**: Displays information about the modulator, such as frequency, bit rates and output level. Also contains page buttons to the following subpages: NCR, BBFraming, PHLA, Additional, BER, BISS, Rate Adapter, Frames and Packets.

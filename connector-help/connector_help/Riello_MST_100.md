@@ -6,22 +6,22 @@ uid: Connector_help_Riello_MST_100
 
 The Riello MST 100 protects data centers and telecommunications systems by, among others, filtering harmonics and applying a power factor correction on power sources.
 
-The aim of this driver is to monitor battery, input, output and bypass currents, voltages and frequencies. It also allows the user to configure input/output/battery voltages and input/output frequencies.
+The aim of this connector is to monitor battery, input, output and bypass currents, voltages and frequencies. It also allows the user to configure input/output/battery voltages and input/output frequencies.
 
 ## About
 
-The driver communicates with the device via **SNMP** to retrieve parameter values and adjust settings.
+The connector communicates with the device via **SNMP** to retrieve parameter values and adjust settings.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**  | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**  | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|------------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version  | Yes                 | Yes                     |
 | 1.1.0.x              | Firmware upgrade | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**                                                                           |
+| **Range** | **Device Firmware Version**                                                                           |
 |------------------|-------------------------------------------------------------------------------------------------------|
 | 1.0.0.x          | UPS software version: SWM022-02-21/ Agent software version: AppVer. 01.04.000 Firmware version: S14-1 |
 | 1.1.0.x          | Firmware version: S16-1                                                                               |
@@ -32,7 +32,7 @@ The driver communicates with the device via **SNMP** to retrieve parameter value
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -93,7 +93,7 @@ Note that the client machine has to be able to access the device, as otherwise i
 
 ## DataMiner Connectivity Framework
 
-The **1.0.0.x** and **1.1.0.x** driver ranges of the **Riello MST 100** protocol support the usage of DCF and can only be used on a DMA with **9.0.0** as the minimum version.
+The **1.0.0.x** and **1.1.0.x** connector ranges of the **Riello MST 100** protocol support the usage of DCF and can only be used on a DMA with **9.0.0** as the minimum version.
 
 ### Interfaces
 

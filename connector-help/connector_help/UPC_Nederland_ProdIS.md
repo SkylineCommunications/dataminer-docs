@@ -4,16 +4,16 @@ uid: Connector_help_UPC_Nederland_ProdIS
 
 # UPC Nederland ProdIS
 
-This driver will communicate to the UPC Nederland ADI Importer.
+This connector will communicate to the UPC Nederland ADI Importer.
 
 ## About
 
-The driver will read the different messages placed in the providers folder by the Spider device and move them to another folder.
+The connector will read the different messages placed in the providers folder by the Spider device and move them to another folder.
 These messages will be placed in a table and can be requested by the UPC Nederland ADI Importer.
 
 ## Installation and configuration
 
-This a virtual driver so there aren't any settings when you create an element.
+This a virtual connector so there aren't any settings when you create an element.
 
 ## Usage
 

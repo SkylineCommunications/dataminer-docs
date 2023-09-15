@@ -8,19 +8,19 @@ This is an SNMP-based protocol for the **Evertz XRF-6L**. The XRF-6L is a modula
 
 ## About
 
-This driver was designed to work with the **Evertz XRF-6L**. With it, you can monitor and control the video router, for example connecting an output to an input. **SNMP** **Get** commands are used to read information from the device. **SNMP** **Set** commands are used to write information to the device.
+This connector was designed to work with the **Evertz XRF-6L**. With it, you can monitor and control the video router, for example connecting an output to an input. **SNMP** **Get** commands are used to read information from the device. **SNMP** **Set** commands are used to write information to the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                   | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                   | **DCF Integration** | **Cassandra Compliant** |
 |------------------|---------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version.                                  | No                  | Yes                     |
 | 2.0.0.x          | Incremental improvements to driver.               | No                  | Yes                     |
 | 2.0.1.x          | Implemented DCF. Changed displayColumn to naming. | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.02 Build 41               |
 | 2.0.0.x          | 1.02 Build 41               |
@@ -30,11 +30,11 @@ This driver was designed to work with the **Evertz XRF-6L**. With it, you can mo
 
 ### Creation
 
-This driver uses two Simple Network Management Protocol (SNMP) connections, a Main and a Secondary:
+This connector uses two Simple Network Management Protocol (SNMP) connections, a Main and a Secondary:
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -48,7 +48,7 @@ SNMP Settings:
 
 #### SNMP Secondary connection
 
-This connection will be used for redundant polling, i.e. if the Main connection is not responding (timeout), the driver will automatically switch to the Secondary connection. The following input is required during element creation:
+This connection will be used for redundant polling, i.e. if the Main connection is not responding (timeout), the connector will automatically switch to the Secondary connection. The following input is required during element creation:
 
 SECONDARY SNMP CONNECTION:
 
@@ -62,7 +62,7 @@ SNMP Settings:
 
 ## Usage
 
-Once created, the element can be used immediately. There are 6 pages available in the driver, showing the different parameters from the device grouped by function.
+Once created, the element can be used immediately. There are 6 pages available in the connector, showing the different parameters from the device grouped by function.
 
 ### Main View
 
@@ -96,7 +96,7 @@ On this page, you can save up to eight programmable commands to be executed on d
 
 ## DataMiner Connectivity Framework
 
-The **2.0.1.x** driver range of the Evertz XRF-6L protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
+The **2.0.1.x** connector range of the Evertz XRF-6L protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third-Party protocols (for instance a manager).
 
@@ -114,7 +114,3 @@ Physical dynamic interfaces:
 #### Internal Connections
 
 - Between each **Input** and the connected **Output**, as determined by the parameter **Input (Output) (ID:204)**, an internal connection is created.
-
-## Notes
-
-N/A

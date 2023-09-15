@@ -8,19 +8,19 @@ The **CPI VZU-6994AD** is a 400W compact medium power amplifier (CMPA) designed 
 
 ## About
 
-The driver uses the serial interface to retrieve information from the device and sends configuration commands every time a user changes a setting through DataMiner's interface. More information: <http://www.cpii.com/product.cfm/4/10/23>
+The connector uses the serial interface to retrieve information from the device and sends configuration commands every time a user changes a setting through DataMiner's interface. More information: <http://www.cpii.com/product.cfm/4/10/23>
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                    | **DCF Integration** | **C**as**sandra Compliant** |
+| **Range** | **Description**                    | **DCF Integration** | **C**as**sandra Compliant** |
 |------------------|------------------------------------|---------------------|-----------------------------|
 | 1.0.0.x          | Initial version (**obsolete**)     | No                  | Yes                         |
 | 1.1.0.x          | New release version (**obsolete**) | Yes                 | Yes                         |
 | 1.1.1.x          | Driver review                      | Yes                 | Yes                         |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | CPI 01019345 Rev. 19        |
 | 1.1.0.x          | CPI 01019345 Rev. 19        |
@@ -32,7 +32,7 @@ The driver uses the serial interface to retrieve information from the device and
 
 Serial Main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -66,7 +66,7 @@ On this page are shown the **Fault**, **Information** and **Error** status.
 
 ## DataMiner Connectivity Framework
 
-The 1.1.1.x driver range of the CPI VZU-6994AD protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
+The 1.1.1.x connector range of the CPI VZU-6994AD protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 

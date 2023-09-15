@@ -4,7 +4,7 @@ uid: Connector_help_2WCOM_NC06
 
 # 2WCOM NC06
 
-This driver allows you to monitor and configure the device 2WCOM NC06 via SNMP.
+This connector allows you to monitor and configure the device 2WCOM NC06 via SNMP.
 
 ## About
 
@@ -35,7 +35,7 @@ This driver allows you to monitor and configure the device 2WCOM NC06 via SNMP.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

@@ -4,7 +4,7 @@ uid: Connector_help_NBCU_LEAP_Collector
 
 # NBCU LEAP Collector
 
-LEAP is a proprietary system at NBCS that provides information on event streams. The **NBCU LEAP Collector** driver can be configured to collect and report relevant data to the NBCU Event Manager using the PID for a given stream.
+LEAP is a proprietary system at NBCS that provides information on event streams. The **NBCU LEAP Collector** connector can be configured to collect and report relevant data to the NBCU Event Manager using the PID for a given stream.
 
 ## About
 
@@ -34,7 +34,7 @@ LEAP is a proprietary system at NBCS that provides information on event streams.
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

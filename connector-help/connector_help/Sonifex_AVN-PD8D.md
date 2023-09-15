@@ -4,7 +4,7 @@ uid: Connector_help_Sonifex_AVN-PD8D
 
 # Sonifex AVN-PD8D
 
-Every 5 seconds, this driver polls the information from 9 tables as well as status information. It also polls some general information.
+Every 5 seconds, this connector polls the information from 9 tables as well as status information. It also polls some general information.
 
 ## About
 
@@ -32,7 +32,7 @@ Every 5 seconds, this driver polls the information from 9 tables as well as stat
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -58,4 +58,4 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The driver retrieves the information via SNMP, you only need to fill in the IP address of the device.
+The connector retrieves the information via SNMP, you only need to fill in the IP address of the device.

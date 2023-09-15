@@ -4,29 +4,33 @@ uid: Connector_help_Moxa_CN2600_Series
 
 # Moxa CN2600 Series
 
-This device has the ability to enable redundancy in your network
-AboutThis driver allows us to retrieve information from the Moxa CN2600 series. It allows to monitor, alarms, statistical information, and configure/activate the entire device.
-The driver retrieves and sets information on the device through SNMP.
+This device has the ability to enable redundancy in your network.
 
-### Ranges of the driver
+This connector allows you to retrieve information from the Moxa CN2600 series. It allows you to monitor alarms and statistical information, and configure/activate the entire device.
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+The connector retrieves and sets information on the device through SNMP.
+
+## About
+
+### Version Info
+
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          |                             |
 
-Installation and configuration
+## Configuration
 
-Creation
+### Connections
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -43,15 +47,15 @@ SNMP Settings:
 
 ### General
 
-The general page contains generic machine information/configuration. Moxa Overview: This gives you an overvieuw of the moxa general condition and settings such as Model name, firmware, serial number, power connection,....
+The general page contains generic machine information/configuration. Moxa Overview: This gives you an overview of the moxa general condition and settings such as Model name, firmware, serial number, power connection, etc.
 
 ### Interface Info
 
-Alaws you to monitor the interface values aswel as bitrates on the different ports of the moxa device.
+Allows you to monitor the interface values as well as bit rates on the different ports of the moxa device.
 
 ### Monitor Remote IP
 
-Allows to monitor the conneted IP adresses.
+Allows to monitor the connected IP addresses.
 
 ### Monitor Serial Port
 
@@ -61,41 +65,37 @@ This page includes:
 - Serial Port Error Count
 - Serial Port Buffering
 
-And a Settings Page, this is only fore monitoring puposes.
+There is also a Settings Page, which is only for monitoring purposes.
 
 ### System Management
 
 This page includes the following settings:
 
-> - SNMP Settings
-> - Server Settings
-> - Time Settings
-> - Host table
-> - Route table
-> - User Settings
-> - Authentication Server
-> - System Log Settings
-> - Console Settings
-> - Accessible IP List
-> - DDNS Agent
-> - Save And Restart Settings
-> - Reset to Factory default
-> - Auto warning Settings
-
-
+- SNMP Settings
+- Server Settings
+- Time Settings
+- Host table
+- Route table
+- User Settings
+- Authentication Server
+- System Log Settings
+- Console Settings
+- Accessible IP List
+- DDNS Agent
+- Save And Restart Settings
+- Reset to Factory default
+- Auto warning Settings
 
 ### Network settings
 
 Configuration of:
 
-> > > - LAN 1
-> > > - LAN2
-> > > - LAN PPPoE Account
-> > > - DNS Settings
-> > > - Wins Settings
-> > > - ARP Settings
-
-
+- LAN 1
+- LAN2
+- LAN PPPoE Account
+- DNS Settings
+- Wins Settings
+- ARP Settings
 
 ### Serial Port Settings
 
@@ -103,7 +103,7 @@ All port settings:
 
 - Application:
 
-- Sockets
+  - Sockets
   - Data Packing
   - Device Control
   - Reverse Terminal
@@ -123,8 +123,6 @@ All port settings:
 
 - Port Mode
 
-
-
 ### Web interface
 
-Allows you to acces the web interface of the device.
+Allows you to access the web interface of the device.

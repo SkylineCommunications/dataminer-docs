@@ -6,7 +6,7 @@ uid: Connector_help_Aten_PE6324
 
 The ATEN NRGence PE6324 PDU is a green energy power distribution unit (PDU) that effectively increases the efficiency of data center power usage. The ATEN PE6324 connector is a solution designed to monitor this device.
 
-This driver uses **SNMP** to retrieve and update data on the device. With this communication it is possible to fully monitor and remotely control the PDU.
+This connector uses **SNMP** to retrieve and update data on the device. With this communication it is possible to fully monitor and remotely control the PDU.
 
 ## About
 
@@ -15,7 +15,7 @@ This driver uses **SNMP** to retrieve and update data on the device. With this c
 | **Range**            | **Key Features**                                                                                                                                                                                                   | **Based on** | **System Impact** |
 |----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|-------------------|
 | 1.0.0.x \[Obsolete\] | Initial version.                                                                                                                                                                                                   | \-           | \-                |
-| 1.0.1.x \[SLC Main\] | \- Changed the column descriptions to match the current guidelines and use parentheses instead of square brackets. - Changed discretes to be consistent in the driver. - Updated measurements to the correct type. | \-           | \-                |
+| 1.0.1.x \[SLC Main\] | \- Changed the column descriptions to match the current guidelines and use parentheses instead of square brackets. - Changed discretes to be consistent in the connector. - Updated measurements to the correct type. | \-           | \-                |
 
 ### Product Info
 
@@ -37,7 +37,7 @@ This driver uses **SNMP** to retrieve and update data on the device. With this c
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

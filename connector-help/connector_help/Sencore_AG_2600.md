@@ -6,7 +6,7 @@ uid: Connector_help_Sencore_AG_2600
 
 The AG 2600 is an Integrated Receiver/Decoder (IRD) card used as a turnaround product capable of receiving a transport stream from ASI, IP and DVB-S/S2 interfaces and converting it to ASI and/or IP output. It can also descramble BISS and DVB-CI scrambling.
 
-This driver allows you to monitor the status and configuration of the AG 2600 module. It retrieves device status information and sets configuration data using SNMP.
+This connector allows you to monitor the status and configuration of the AG 2600 module. It retrieves device status information and sets configuration data using SNMP.
 
 ## About
 
@@ -37,7 +37,7 @@ This driver allows you to monitor the status and configuration of the AG 2600 mo
 
 #### SNMP connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

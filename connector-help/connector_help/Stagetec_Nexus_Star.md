@@ -9,11 +9,11 @@ Stagetec Nexus Star can accommodate up to 16 boards each with 256 inputs and 256
 
 ## About
 
-This driver retrieves data via **Smart-Serial** **Communication** over **UDP**.
+This connector retrieves data via **Smart-Serial Communication** over **UDP**.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**      | **Description**                                                                                       | **DCF Integration** | **Cassandra Compliant** |
+| **Range**      | **Description**                                                                                       | **DCF Integration** | **Cassandra Compliant** |
 |-----------------------|-------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x               | Initial version                                                                                       | No                  | Yes                     |
 | 1.0.1.x               | RedundantPolling IP Address (warning, needs a new element)                                            | No                  | Yes                     |
@@ -21,9 +21,9 @@ This driver retrieves data via **Smart-Serial** **Communication** over **UDP**.
 | 2.0.0.x               | Driver Review - Customer Mecca                                                                        | No                  | Yes                     |
 | 2.0.1.x (Main Branch) | Complete Driver Review                                                                                | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Version 5, Revision 2       |
 | 1.0.1.x          | Version 5, Revision 2       |
@@ -37,14 +37,14 @@ This driver retrieves data via **Smart-Serial** **Communication** over **UDP**.
 
 #### Serial Connection - Main
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
 - Interface connection:
 
   - **IP address/host**: The polling IP of the device.
-  - **IP port**: The IP port of the device. Indicate if required or not. If so, specify default value and range.
+  - **IP port**: The IP port of the device.
   - **Bus address**: Not required.
 
 ## Usage
@@ -53,9 +53,9 @@ The Stagetec Nexus Star driver has **5 pages**.
 
 ### General
 
-The General page displays the **Project Information** (**Project Name**, **Version**, **Revision**, **Date** and **Time**), **Central Status** **(Sampling Frequency**, **Full Scale**, **Waveform Internal Generator**, **Gain Internal Generator** and **Frequency Internal Generator**), a pagebutton with the **Board Overview Table**, and buttons to **Refresh All Data**, **Clear Blocked Writes** and **Reset Alarm**.
+The General page displays the **Project Information** (**Project Name**, **Version**, **Revision**, **Date** and **Time**), **Central Status (Sampling Frequency**, **Full Scale**, **Waveform Internal Generator**, **Gain Internal Generator** and **Frequency Internal Generator**), a page button with the **Board Overview Table**, and buttons to **Refresh All Data**, **Clear Blocked Writes** and **Reset Alarm**.
 
-This page also displays information related with the driver itself, such as: **Driver Initialization**, **Get-Set Time-Out**, **Get-set Time-Out Count** and a **Driver Monitor** page button, which contains: **Counter MaxRetries**, **FLAG Reading Allowed** and a button in order to **Process the Buffer**.
+This page also displays information related with the connector itself, such as: **Driver Initialization**, **Get-Set Time-Out**, **Get-set Time-Out Count** and a **Driver Monitor** page button, which contains: **Counter MaxRetries**, **FLAG Reading Allowed** and a button in order to **Process the Buffer**.
 
 ### Switchpoints
 

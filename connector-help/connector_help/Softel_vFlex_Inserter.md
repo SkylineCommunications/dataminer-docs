@@ -4,23 +4,23 @@ uid: Connector_help_Softel_vFlex_Inserter
 
 # Softel vFlex Inserter
 
-This driver is used to monitor the Softel vFlex Inserter server, a tool for the processing and injection of data into the broadcast stream.
+This connector is used to monitor the Softel vFlex Inserter server, a tool for the processing and injection of data into the broadcast stream.
 
 VFlex is a multi-purpose, rack-mounted ancillary data processor and inserter. It can receive, process and insert ancillary data, and is able to generate and insert clocks, bugs and other graphics into the transport stream. It also supports remote management for both configuration updates and error monitoring and correction.
 
 ## About
 
-This driver uses HTTP sessions to obtain the configuration XML and the HTTP page of the vFlex, which contain the information shown in the element.
+This connector uses HTTP sessions to obtain the configuration XML and the HTTP page of the vFlex, which contain the information shown in the element.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 4.6.16-1                    |
 
@@ -30,7 +30,7 @@ This driver uses HTTP sessions to obtain the configuration XML and the HTTP page
 
 #### HTTP Main connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -40,7 +40,7 @@ HTTP CONNECTION:
 
 ### Configuration of Authentication
 
-In order for the driver to work and poll information, the **User Name** and **Password** must be configured on the **General** page. Otherwise, no information can be obtained.
+In order for the connector to work and poll information, the **User Name** and **Password** must be configured on the **General** page. Otherwise, no information can be obtained.
 
 ## Usage
 
@@ -96,4 +96,4 @@ This page displays the web page provided by the device. Note that the client mac
 
 ## Notes
 
-This driver **requires an external dll file (HtmlAgilityPack.dll)**. This file needs to be present in the DMA's ProtocolScripts folder.
+This connector **requires an external dll file (HtmlAgilityPack.dll)**. This file needs to be present in the DMA's ProtocolScripts folder.

@@ -4,21 +4,21 @@ uid: Connector_help_Snell_Wilcox_MC2000_Controller
 
 # Snell Wilcox MC2000 Controller
 
-The **Snell Wilcox MC2000 Controller** is a 1U motion-compensated frame rate and format converter. The Snell Wilcox KudosPro driver should be used along with this driver (for the controller) to provide full parameter and feature monitoring and control.
+The **Snell Wilcox MC2000 Controller** is a 1U motion-compensated frame rate and format converter. The Snell Wilcox KudosPro driver should be used along with this connector (for the controller) to provide full parameter and feature monitoring and control.
 
 ## About
 
-This driver allows you to manage a Snell Wilcox MC2000 Controller using a **serial** connection (Snell RollCall is used as the underlying communication protocol).
+This connector allows you to manage a Snell Wilcox MC2000 Controller using a **serial** connection (Snell RollCall is used as the underlying communication protocol).
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** |
+| **Range** | **Description** |
 |------------------|-----------------|
 | 1.0.0.x          | Initial version |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 2.2A.10                     |
 
@@ -28,7 +28,7 @@ This driver allows you to manage a Snell Wilcox MC2000 Controller using a **seri
 
 #### Serial main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

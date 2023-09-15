@@ -4,7 +4,7 @@ uid: Connector_help_GatesAir_Maxiva_XTE_DVBT2_Transmitter
 
 # GatesAir Maxiva XTE DVBT2 Transmitter
 
-This driver monitors the activity of the GatesAir Maxiva XTE DVBT2 Transmitter.
+This connector monitors the activity of the GatesAir Maxiva XTE DVBT2 Transmitter.
 
 ## About
 
@@ -57,7 +57,7 @@ This driver monitors the activity of the GatesAir Maxiva XTE DVBT2 Transmitter.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

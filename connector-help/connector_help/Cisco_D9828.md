@@ -4,7 +4,7 @@ uid: Connector_help_Cisco_D9828
 
 # Cisco D9828
 
-The Cisco 2.0.0.1 version is an SNMP driver intended to communicate with Cisco D9828 devices.
+The Cisco 2.0.0.1 version is an SNMP connector intended to communicate with Cisco D9828 devices.
 
 ## About
 
@@ -14,7 +14,7 @@ This Cisco device is a multiple decryption receiver. Parameters are polled with 
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) and an HTTP connection, which need the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) and an HTTP connection, which need the following user information:
 
 **SNMP CONNECTION**:
 

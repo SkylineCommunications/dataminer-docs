@@ -4,17 +4,17 @@ uid: Connector_help_ITNM_Systems_IDM100_Service
 
 # ITNM Systems IDM100 Service
 
-The **ITNM Systems IDM100 Service** driver is used to display information about one particular service from the **ITNM Systems IDM100** analyzer. The driver uses a serial connection to send HTTP commands to the device.
+The **ITNM Systems IDM100 Service** connector is used to display information about one particular service from the **ITNM Systems IDM100** analyzer. The connector uses a serial connection to send HTTP commands to the device.
 
 ## About
 
-The **ITNM Systems IDM100 Service** driver sends HTTP commands to the IDM100 over a serial connection. The driver only polls the service information from one of the services of the **ITNM Systems IDM100**.
+The **ITNM Systems IDM100 Service** driver sends HTTP commands to the IDM100 over a serial connection. The connector only polls the service information from one of the services of the **ITNM Systems IDM100**.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a serial connection and needs the following user information:
+This connector uses a serial connection and requires the following input during element creation:
 
 **SERIAL CONNECTION**:
 
@@ -23,7 +23,7 @@ This driver uses a serial connection and needs the following user information:
 
 ## Usage
 
-This driver has 5 pages: **General**, **PIDs**, **Audio / Video**, **PCR / PTS/ DTS** and **Web Interface**.
+This connector has 5 pages: **General**, **PIDs**, **Audio / Video**, **PCR / PTS/ DTS** and **Web Interface**.
 
 ### General Page
 

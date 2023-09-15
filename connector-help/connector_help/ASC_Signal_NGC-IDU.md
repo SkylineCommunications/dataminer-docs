@@ -4,21 +4,21 @@ uid: Connector_help_ASC_Signal_NGC-IDU
 
 # ASC Signal NGC-IDU
 
-This driver is used to control and monitor an NGC antenna control system. This is an advanced-level antenna control system intended for applications with high tracking requirements, complex geometries, and dynamic conditions.
+This connector is used to control and monitor an NGC antenna control system. This is an advanced-level antenna control system intended for applications with high tracking requirements, complex geometries, and dynamic conditions.
 
 An **SNMPv1** connection is used in order to retrieve information and configure the device. There are also different possibilities for **alarm monitoring** and **trending**.
 
 ## About
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ An **SNMPv1** connection is used in order to retrieve information and configure 
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

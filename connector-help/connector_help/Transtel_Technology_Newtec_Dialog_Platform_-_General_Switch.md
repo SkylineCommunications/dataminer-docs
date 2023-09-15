@@ -4,7 +4,7 @@ uid: Connector_help_Transtel_Technology_Newtec_Dialog_Platform_-_General_Switch
 
 # Transtel Technology Newtec Dialog Platform - General Switch
 
-This driver is exported by the parent driver Transtel Technology Newtec Dialog Platform and represents a general switch in the Newtec setup.
+This connector is exported by the parent connector Transtel Technology Newtec Dialog Platform and represents a general switch in the Newtec setup.
 
 ## About
 
@@ -26,7 +26,7 @@ This driver is exported by the parent driver Transtel Technology Newtec Dialog P
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 

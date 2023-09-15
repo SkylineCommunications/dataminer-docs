@@ -6,7 +6,7 @@ uid: Connector_help_MCL_MT3200
 
 The **MT3200** is a medium power satellite amplifier designed for both mobile and earth station based applications.
 
-The **MCL MT3200** driver is used to monitor MT3200 devices that use the CSP protocol.
+The **MCL MT3200** connector is used to monitor MT3200 devices that use the CSP protocol.
 
 ## About
 
@@ -34,7 +34,7 @@ The **MCL MT3200** driver is used to monitor MT3200 devices that use the CSP pro
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -54,4 +54,4 @@ There is no redundancy defined.
 
 ## How to use
 
-This driver consists of just one data page, where you can find information on the device and adjust several settings. Page buttons on this page open subpages with additional information and settings.
+This connector consists of just one data page, where you can find information on the device and adjust several settings. Page buttons on this page open subpages with additional information and settings.

@@ -4,19 +4,19 @@ uid: Connector_help_ATNS_Billing_Collector
 
 # ATNS Billing Collector
 
-With this virtual **ATNS Billing Collector** driver, it is possible to centralize voice, ATN and AFTN (serial) data statistics from all the DMPs. These statistics will be processed per day and will be pushed into the local sldmsDma DB.
+With this virtual **ATNS Billing Collector** connector, it is possible to centralize voice, ATN and AFTN (serial) data statistics from all the DMPs. These statistics will be processed per day and will be pushed into the local sldmsDma DB.
 
 ## About
 
-The **ATNS Billing Collector** driver must be installed on a DMA that has access to all the data ZIP files created by the **ATNS Billing Statistics** elements on the DMPs.
+The **ATNS Billing Collector** connector must be installed on a DMA that has access to all the data ZIP files created by the **ATNS Billing Statistics** elements on the DMPs.
 
 The voice, data and serial data statistics will be processed and put in a database. These database entries will be used in a standalone application to create custom reports.
 
-### Ranges of the driver
+### Version Info
 
-This protocol does database queries to the local DataMiner database and is not compatible with Cassandra.
+This connector does database queries to the local DataMiner database and is not compatible with Cassandra.
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 
@@ -26,11 +26,11 @@ This protocol does database queries to the local DataMiner database and is not c
 
 #### Virtual connection
 
-This is a virtual driver. No user input is required during the creation of the element.
+This is a virtual connector. No user input is required during the creation of the element.
 
 ### Configuration
 
-To make sure this driver works correctly, fill in the **configuration** parameters on the **Configurations** **page**.
+To make sure this connector works correctly, fill in the **configuration** parameters on the **Configurations** **page**.
 
 ## Usage
 
@@ -44,6 +44,6 @@ The parameter **Last Get Midnight Files Date** is a debug value that indicates t
 
 ## Notes
 
-This driver is designed to work together with the ATNS Billing Statistics driver. The remote central folder must be accessible for both the DMPs and the central DMA. When the zipped files have been processed, they are moved to a folder named "DELETED".
+This connector is designed to work together with the ATNS Billing Statistics connector. The remote central folder must be accessible for both the DMPs and the central DMA. When the zipped files have been processed, they are moved to a folder named "DELETED".
 
 All data stored in the database will be processed by an external application to create custom reports of the voice and data traffic.

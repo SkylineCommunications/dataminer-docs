@@ -4,18 +4,18 @@ uid: Connector_help_Belgacom_TVRO_De-icing
 
 # Belgacom TVRO De-icing
 
-This driver provides an overview of the de-icing status of antennas and compares it with the expected status based on outside temperature and rain intensity.
+This connector provides an overview of the de-icing status of antennas and compares it with the expected status based on outside temperature and rain intensity.
 
 ## About
 
-This virtual driver needs to be linked to multiple elements to get its data.
+This virtual connector needs to be linked to multiple elements to get its data.
 
 ## Installation and configuration
 
 ### Creation
 
 ***Virtual connection***
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Configuration of the weather station
 

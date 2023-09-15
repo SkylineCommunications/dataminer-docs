@@ -4,9 +4,9 @@ uid: Connector_help_Sky_UK_Playout_Launchpad
 
 # Sky UK Playout Launchpad
 
-This driver can be used to communicate with a DAL station and a Helm to activate a scenario.
+This connector can be used to communicate with a DAL station and a Helm to activate a scenario.
 
-The driver uses WCF communication, with SOAP requests to a maximum of two IPs at the same time.
+The connector uses WCF communication, with SOAP requests to a maximum of two IPs at the same time.
 
 ## About
 
@@ -34,7 +34,7 @@ The driver uses WCF communication, with SOAP requests to a maximum of two IPs at
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -44,7 +44,7 @@ HTTP CONNECTION:
 
 #### HTTP SecondIP Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

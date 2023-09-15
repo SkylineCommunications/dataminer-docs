@@ -4,15 +4,15 @@ uid: Connector_help_Norkring_AS_Bricknet
 
 # Norkring AS Bricknet
 
-This is a virtual driver that reads data from a VC4 IMS Protocol element, filtering according to the defined filters.
+This is a virtual connector that reads data from a VC4 IMS Protocol element, filtering according to the defined filters.
 
 ## About
 
-This driver supports the Bricknet View Visio drawings
+This connector supports the Bricknet View Visio drawings
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
@@ -26,7 +26,7 @@ This driver supports the Bricknet View Visio drawings
 
 ### Creation
 
-This driver uses a **virtual** connection and does not require any input during element creation.
+This connector uses a **virtual** connection and does not require any input during element creation.
 
 ## Usage
 

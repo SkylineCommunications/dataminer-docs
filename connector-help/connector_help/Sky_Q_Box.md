@@ -10,17 +10,17 @@ This is an API with web services exposed by the set-top box middleware.
 
 The application service provides access to all features of the middleware used not only by external client set-top boxes, but also by the application running on the gateway set-top box itself.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**               | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**               | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version               | No                  | No                      |
 | 1.0.1.x          | Added serial and new features | No                  | No                      |
 | 1.0.2.x          | DCF integration               | Yes                 | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 1.0.1.x          | Unknown                     |
@@ -32,7 +32,7 @@ The application service provides access to all features of the middleware used n
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -60,7 +60,7 @@ This page has a table in each row, representing a button from the remote control
 
 ## DataMiner Connectivity Framework
 
-The **1.0.1.x** driver range of the **Sky Q Box** protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
+The **1.0.1.x** connector range of the **Sky Q Box** protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 

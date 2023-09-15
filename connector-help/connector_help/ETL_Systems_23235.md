@@ -11,8 +11,8 @@ uid: Connector_help_ETL_Systems_23235
 <td>ETL Systems 23235
 <p>The Model 23235 L band switch operates with signals in the L band range of frequencies from 50-2150MHz and is designed to provide automatic MAIN/STANDBY switching functions typically for 2:1 redundancy switching.</p>
 <h2 id="about">About</h2>
-<p>The ETL Systems 23235 driver allows for configuration of the switching functionality and monitoring of the power supply status and temperature.</p>
-<h3 id="ranges-of-the-driver">Ranges of the driver</h3>
+<p>The ETL Systems 23235 connector allows for configuration of the switching functionality and monitoring of the power supply status and temperature.</p>
+<h3 id="ranges-of-the-driver">Ranges of the connector</h3>
 <table>
 <tbody>
 <tr class="odd">
@@ -45,7 +45,7 @@ uid: Connector_help_ETL_Systems_23235
 <h2 id="installation-and-configuration">Installation and configuration</h2>
 <h3 id="creation">Creation</h3>
 <h4 id="snmp-main-connection">SNMP main connection</h4>
-<p>This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:</p>
+<p>This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:</p>
 <p>SNMP CONNECTION:</p>
 <ul>
 <li><strong>IP address/host</strong>: The polling IP of the device.</li>

@@ -8,17 +8,17 @@ The Ramiaudio Watchdog CSS510-2 is designed to continuously monitor five stereo 
 
 ## About
 
-This driver displays information that is polled from the device with **SNMP**. Each parameter will be written to the SNMP configuration, and must be saved before being applied to the device.
+This connector displays information that is polled from the device with **SNMP**. Each parameter will be written to the SNMP configuration, and must be saved before being applied to the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
-| 1.0.0.1          | Initial version | No                  | Yes                     |
+| 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range**     | **Device Firmware Version** |
+| **Range**     | **Device Firmware Version** |
 |----------------------|-----------------------------|
 | 1.0.0.x \[SLC Main\] | 1.3                         |
 
@@ -28,7 +28,7 @@ This driver displays information that is polled from the device with **SNMP**. E
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -53,7 +53,7 @@ Below the parameters, you can find the following buttons:
 - **Set Switch Mode**: Changes the **Switch Mode** of the device to either *Manual* or *Auto*.
 - **Monitor** buttons: These set the current monitoring channel to any of the 5 different channels.
 - **Force Input**: Changes the **Switch Mode** to *Manual*, and then sets the current input channel to any of the 5 different channels.
-- **Refresh All**: Polls every parameter in the driver again.
+- **Refresh All**: Polls every parameter in the connector again.
 
 ### Inputs Page
 

@@ -117,7 +117,7 @@ For maintenance purposes, files older than 7 days are deleted.
 
 The entire CPE setup is provisioned via a MySQL database called IAM.
 
-There is also a fully automatic system to create new elements, assign properties and place the elements in the correct views based on the info from the IAM DB. The driver responsible for this is **Skyline IAM DB Provision**.
+There is also a fully automatic system to create new elements, assign properties and place the elements in the correct views based on the info from the IAM DB. The connector responsible for this is **Skyline IAM DB Provision**.
 
 ### Configuration of IAM Database
 

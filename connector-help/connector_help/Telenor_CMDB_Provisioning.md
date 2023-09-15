@@ -4,11 +4,11 @@ uid: Connector_help_Telenor_CMDB_Provisioning
 
 # Telenor CMDB Provisioning
 
-Through this driver is possible to automatically provision Elements and Services based on the information from CMDB.
+Through this connector is possible to automatically provision Elements and Services based on the information from CMDB.
 
 ## About
 
-This is an HTTP driver that will be connected to the CMDB. Through queries to the database will be possible to create Element and Services on DataMiner.
+This is an HTTP connector that will be connected to the CMDB. Through queries to the database will be possible to create Element and Services on DataMiner.
 
 ## Installation and configuration
 
@@ -48,7 +48,7 @@ This page displays a table with the current and the future change orders. As soo
 
 This page contains to tables, the **AppearTV** **Table** and the **Failed AppearTV Table**.
 
-When a new AppearTV card is detected, this driver will pass that information to the **TWA** database.
+When a new AppearTV card is detected, this connector will pass that information to the **TWA** database.
 
 If this process succeeds an entry will be added on the **AppearTV Table**, if for some reason this fails an entry will be added on the **Failed AppearTV Table**. Then every 10 minutes we will retry the failed one until they are successfully inserted.
 
@@ -58,8 +58,8 @@ On this page the user has to configure the protocol rules to be used. Each proto
 
 There are two ways to insert protocol rules:
 
-1.  Right click on the **Protocol Rule Table** and select the option **Add Protocol Rule.** A pop-up window will appear with the fields to add the Manufacturer, Model and a dropdown button to choose the desired protocol.
-2.  Right click on the **Protocol Rule Table** and select the option **Import Protocol Rules From File.** On the pop-up window the user should specify the complete path to a .csv file contains the desired rules. The file should have the following format: Manufacturer,Model,Dataminer Protocol.
+1. Right-click the **Protocol Rule Table** and select the option **Add Protocol Rule.** A pop-up window will appear with the fields to add the Manufacturer, Model and a dropdown button to choose the desired protocol.
+1. Right-click the **Protocol Rule Table** and select the option **Import Protocol Rules From File.** On the pop-up window the user should specify the complete path to a .csv file contains the desired rules. The file should have the following format: Manufacturer,Model,DataMiner Protocol.
 
 Additionally for each Operating System class detected on CMDB an entry will be added on the **Operating System Protocol Rules**, the user should then choose a protocol from the dropdown list for each Operating System.
 

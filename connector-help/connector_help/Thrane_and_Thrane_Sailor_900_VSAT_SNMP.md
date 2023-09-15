@@ -8,9 +8,9 @@ The Thrane and Thrane Sailor 900 VSAT is an advanced maritime stabilized Ku-band
 
 ## About
 
-This driver uses **SNMP** to retrieve information from the device, and allows the user to monitor and configure the Thrane and Thrane Sailor 900 VSAT.
+This connector uses **SNMP** to retrieve information from the device, and allows the user to monitor and configure the Thrane and Thrane Sailor 900 VSAT.
 
-The driver also allows access to the **web interface** of the device.
+The connector also allows access to the **web interface** of the device.
 
 ### Version Info
 
@@ -36,7 +36,7 @@ The driver also allows access to the **web interface** of the device.
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -51,7 +51,7 @@ SNMP Settings:
 
 ## How to use
 
-The element created with this driver consists of the data pages detailed below.
+The element created with this connector consists of the data pages detailed below.
 
 ### General
 
@@ -59,7 +59,7 @@ This page displays general information about the device, such as the **System De
 
 The page also displays the following parameters:
 
-- **Active Polling IP**: The IP that the driver is currently polling.
+- **Active Polling IP**: The IP that the connector is currently polling.
 - **IP Address (Primary)**: The IP address defined for the SNMP connection.
 - **IP Address (Backup)**: Allows you to define a backup IP address.
 - **Daily Availability**: Relates to both the main and the backup IP.
@@ -120,7 +120,7 @@ This page contains an overview of the **History of all Blind Sector Activity**. 
 
 The button **Full History Check** carries out a complete check of all the records in the **History Table** and all **Currently Active or Inactive Blind Sectors**. It will not delete existing records.
 
-Click this button to check the validity of each record. If a record is found to be invalid, the driver will attempt to fix this. For example, if a record exists in the history table that does not have a "Stop DateTime", but the settings table was cleared using a database query, this could lead to a record that never gets a "Stop DateTime", as the setting was not removed using "in-driver" means. In that case, this button can be used to clear up this discrepancy.
+Click this button to check the validity of each record. If a record is found to be invalid, the connector will attempt to fix this. For example, if a record exists in the history table that does not have a "Stop DateTime", but the settings table was cleared using a database query, this could lead to a record that never gets a "Stop DateTime", as the setting was not removed using "in-driver" means. In that case, this button can be used to clear up this discrepancy.
 
 ### Ping Function
 

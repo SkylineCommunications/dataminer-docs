@@ -8,20 +8,21 @@ The **Oi Brazil DSLAM Collector** allows the collection of KPIs and dynamic ping
 
 ## About
 
-The **Oi Brazil DSLAM Collector** driver performs two main operations:
+The **Oi Brazil DSLAM Collector** connector performs two main operations:
 
-1.  Regular dynamic PING requests to the deployed DSLAM devices in order to check for reachability.
-2.  Collecting specific information from the DSLAM devices using SNMP requests. Information to be collected will come from the interfaces table of the devices. The interfaces to be targeted are: Eth1 GigE and Eth2 GigE.
+1. Regular dynamic PING requests to the deployed DSLAM devices in order to check for reachability.
 
-### Ranges of the driver
+1. Collecting specific information from the DSLAM devices using SNMP requests. Information to be collected will come from the interfaces table of the devices. The interfaces to be targeted are: Eth1 GigE and Eth2 GigE.
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+### Version Info
+
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | N/A                         |
 
@@ -31,7 +32,7 @@ The **Oi Brazil DSLAM Collector** driver performs two main operations:
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

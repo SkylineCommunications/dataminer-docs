@@ -4,24 +4,24 @@ uid: Connector_help_Wellav_UMH_160
 
 # Wellav UMH 160
 
-The **Wellav UMH 160** driver is used to monitor and control a **Wellav UMH 160** IRD device.
+The **Wellav UMH 160** connector is used to monitor and control a **Wellav UMH 160** IRD device.
 
 ## About
 
-This driver allows the user to retrieve information about the input and output streams of the device (bit rates, frequency, etc.).
+This connector allows the user to retrieve information about the input and output streams of the device (bit rates, frequency, etc.).
 
 Data is retrieved via the SNMP protocol.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                                                   | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                                                                   | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                                                                                                   | No                  | Yes                     |
 | 1.1.0.x          | Skyline implementation of new range for device with older firmware which was not supported by the previous range. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**                                                   |
+| **Range** | **Device Firmware Version**                                                   |
 |------------------|-------------------------------------------------------------------------------|
 | 1.0.0.x          | Unknown                                                                       |
 | 1.1.0.x          | Hardware version: \[V123\]2010.08.04 Software version: \[150.0110\]2012.11.12 |
@@ -43,7 +43,7 @@ Data is retrieved via the SNMP protocol.
 <tr class="even">
 <td>1.0.0.x</td>
 <td><h4 id="snmp-main-connection">SNMP Main connection</h4>
-<p>This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:</p>
+<p>This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:</p>
 <p>SNMP Connection:</p>
 <ul>
 <li><strong>IP address/host</strong>: The polling IP of the device, e.g. <em>10.11.12.13</em>.</li>
@@ -58,7 +58,7 @@ Data is retrieved via the SNMP protocol.
 <tr class="odd">
 <td>1.1.0.x</td>
 <td><h4 id="snmp-main-connection-1">SNMP Main Connection</h4>
-<p>This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:</p>
+<p>This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:</p>
 <p>SNMP CONNECTION:</p>
 <ul>
 <li><strong>IP address/host</strong>: The polling IP of the device.</li>
@@ -70,7 +70,7 @@ Data is retrieved via the SNMP protocol.
 <li><strong>Set community string</strong>: The community string used when setting values on the device. The default value is <em>private</em>.</li>
 </ul>
 <h4 id="serial-connection">SERIAL Connection</h4>
-<p>This version of the driver also uses a serial connection to retrieve some data from the HTML pages of the device's web UI (for which SNMP is not available). As such, the following information also has to be specified during element creation:</p>
+<p>This version of the connector also uses a serial connection to retrieve some data from the HTML pages of the device's web UI (for which SNMP is not available). As such, the following information also has to be specified during element creation:</p>
 <p>SERIAL CONNECTION:</p>
 <ul>
 <li>Interface connection:
@@ -86,7 +86,7 @@ Data is retrieved via the SNMP protocol.
 
 ## Usage (Range 1.0.0.x)
 
-This driver contains 6 pages.
+This connector contains 6 pages.
 
 ### General Page
 
@@ -104,7 +104,7 @@ Information about ASI and IP output are also available here.
 
 ### Status
 
-This page contains various parameters with input and output information (lock, bit rates, etc.). These parameters are the most frequently polled by the driver (every 10 seconds by default).
+This page contains various parameters with input and output information (lock, bit rates, etc.). These parameters are the most frequently polled by the connector (every 10 seconds by default).
 
 ### Alarms
 

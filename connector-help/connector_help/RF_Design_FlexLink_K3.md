@@ -8,17 +8,17 @@ The FlexLink K3 features a professional and flexible L-Band switch matrix system
 
 ## About
 
-This driver is used to manage RF Design FlexLink K3 family switches.
+This connector is used to manage RF Design FlexLink K3 family switches.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range**     | **Device Firmware Version** |
+| **Range**     | **Device Firmware Version** |
 |----------------------|-----------------------------|
 | 1.0.0.x \[SLC Main\] | Unknown                     |
 
@@ -28,7 +28,7 @@ This driver is used to manage RF Design FlexLink K3 family switches.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

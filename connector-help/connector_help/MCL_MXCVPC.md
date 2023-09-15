@@ -4,7 +4,7 @@ uid: Connector_help_MCL_MXCVPC
 
 # MCL MXCVPC
 
-This a serial driver that can be used to monitor and configure the MCL MXCVPC.
+This a serial connector that can be used to monitor and configure the MCL MXCVPC.
 
 ## About
 
@@ -28,7 +28,7 @@ This a serial driver that can be used to monitor and configure the MCL MXCVPC.
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following information during element configuration:
+This connector uses a serial connection and requires the following information during element configuration:
 
 SERIAL CONNECTION:
 
@@ -37,6 +37,6 @@ SERIAL CONNECTION:
 
 ## How to use
 
-This is a serial driver that provides information about available **High Power Amplifiers (HPA)**, **Variable Phase Combiners (VPC)** and **Waveguide Switches** devices. Information about the different kinds of devices is displayed on different, corresponding pages: **HPA**, **VPC** and **WGSW**.
+This is a serial connector that provides information about available **High Power Amplifiers (HPA)**, **Variable Phase Combiners (VPC)** and **Waveguide Switches** devices. Information about the different kinds of devices is displayed on different, corresponding pages: **HPA**, **VPC** and **WGSW**.
 
-When a negative acknowledge (NAK) response is received in the communication, the driver displays the reason for the NAK response and the date and time when the NAK response is received. You can find this information on the General page, along with report-related parameters.
+When a negative acknowledge (NAK) response is received in the communication, the connector displays the reason for the NAK response and the date and time when the NAK response is received. You can find this information on the General page, along with report-related parameters.

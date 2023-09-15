@@ -4,11 +4,11 @@ uid: Connector_help_International_Datacasting_IPE-4000
 
 # International Datacasting IPE-4000
 
-The **International Datacasting IPE-4000** driver is used as a link between IP networks and broadband DVB or ATSC networks.
+The **International Datacasting IPE-4000** connector is used as a link between IP networks and broadband DVB or ATSC networks.
 
 ## About
 
-This driver can be used to monitor the network and control the IP Encapsulation.
+This connector can be used to monitor the network and control the IP Encapsulation.
 
 ## Installation and configuration
 
@@ -16,7 +16,7 @@ This driver can be used to monitor the network and control the IP Encapsulation.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

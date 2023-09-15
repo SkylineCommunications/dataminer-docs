@@ -8,11 +8,11 @@ The Content Delivery System Manager is a device type in the **Cisco VDS-IS Manag
 
 ## About
 
-This is an **HTTP** driver. It is automatically exported by the parent driver **CISCO VDS-IS**.
+This is an **HTTP** connector. It is automatically exported by the parent connector **CISCO VDS-IS**.
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.1.x          | 4.2.1                       |
 
@@ -20,7 +20,7 @@ This is an **HTTP** driver. It is automatically exported by the parent driver **
 
 ### Creation
 
-This driver is used by DVE child elements that are **automatically created** by the driver [CISCO VDS-IS](xref:Connector_help_CISCO_VDS-IS), from version 1.0.1.1 onwards.
+This connector is used by DVE child elements that are **automatically created** by the connector [CISCO VDS-IS](xref:Connector_help_CISCO_VDS-IS), from version 1.0.1.1 onwards.
 
 ## Usage
 

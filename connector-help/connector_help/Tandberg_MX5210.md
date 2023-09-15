@@ -8,17 +8,17 @@ The Tandberg MX5210 protocol is a compact and cost-effective DVB remultiplexer.
 
 ## About
 
-This is an **SNMP** driver that is used to display the status of the different parameters of a **Tandberg MX5210**.
+This is an **SNMP** connector that is used to display the status of the different parameters of a **Tandberg MX5210**.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 2.0.0.x          | Initial version | Yes                 | true                    |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 2.0.0.x          | Mib Version 1               |
 
@@ -28,7 +28,7 @@ This is an **SNMP** driver that is used to display the status of the different p
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -82,6 +82,6 @@ There are also twelve page buttons that allow you to retrieve and configure cert
 - **Outgoing Service**: Allows you to configure the **Outgoing Service Inputslot**, **Inputport**, **Incoming ID**, **Service ID** and **PMT PID**. There is also a table on the left side showing the current state for each output service.
 - **Outgoing Transport**: Allows you to configure the **BPTS ID**, **Transport ID** and **Original Network ID**. A table on the left side shows all current states for each Outgoing Transport ID.
 
-### Webinterface
+### Web Interface
 
 This page displays the web interface of the device. Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.

@@ -8,11 +8,11 @@ Management system for automatic swap of uplink sites
 
 ## About
 
-The driver will monitor the uplink and downlink sites. Based on detected issues, the driver will decide if a swap of the uplink should be executed.
+The connector will monitor the uplink and downlink sites. Based on detected issues, the connector will decide if a swap of the uplink should be executed.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** |
+| **Range** | **Description** |
 |------------------|-----------------|
 | 1.0.0.x          | Initial version |
 
@@ -22,7 +22,7 @@ The driver will monitor the uplink and downlink sites. Based on detected issues,
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not need any user information.
+This connector uses a virtual connection and does not need any user information.
 
 ### Configuration of Sites and Carriers
 
@@ -30,7 +30,7 @@ User can add/delete manually sites and carriers by right clicking on the **Sites
 
 ### Configuration of Measurements
 
-For each configured Site there are different parameters measured. In the Measurements table you will have an overview of all measured parameters. For each parameter you need to select the correct **Meas. Element** for the dropdown list. If the data is retrieved from a table, you also need to add the index into the **Meas. Index** column. Afterwards you need to click the subscribe button the activate the subscribtion on all configured elements. If the **Meas. Status** displays *Not Subscribed*, there's probably no element configured or we expect a **Meas. Index** but it's not configured (or vice versa).
+For each configured Site there are different parameters measured. In the Measurements table you will have an overview of all measured parameters. For each parameter you need to select the correct **Meas. Element** for the dropdown list. If the data is retrieved from a table, you also need to add the index into the **Meas. Index** column. Afterwards you need to click the subscribe button the activate the subscription on all configured elements. If the **Meas. Status** displays *Not Subscribed*, there's probably no element configured or we expect a **Meas. Index** but it's not configured (or vice versa).
 
 Supported Protocols:
 
@@ -60,7 +60,7 @@ Swap Info:
 
 - **Swap Status**: extra info during swap
 - **Swap Blocked**: to avoid toggling, the carrier will be blocked. Unblocking only possible by manual change.
-- **Nominal**: transmission site configured as nominal (yes, no or unkown)
+- **Nominal**: transmission site configured as nominal (yes, no or unknown)
 
 ### Logging
 
@@ -68,9 +68,9 @@ Overview of all swap actions, the number of history rows can be configured in **
 
 ### Configuration page
 
-This page contains all configurable data. More info about configuring the **Sites**, **Carries** and **Measurements** can be found below 'Installation and Configuration' of this driver help.
+This page contains all configurable data. More info about configuring the **Sites**, **Carries** and **Measurements** can be found below 'Installation and Configuration' of this connector help.
 
-The **Enable Subscription** button defines if subscription shoud be enabled or not.
+The **Enable Subscription** button defines if subscription should be enabled or not.
 
 **Load Configuration** will initialize different sites and carriers based on a predefined setup. Setting this value to *Clear* will remove all sites and carriers.
 
@@ -80,12 +80,12 @@ The **Enable Subscription** button defines if subscription shoud be enabled or n
 
 - Activating the **Maintenance (Config)** mode will prevent the automatic swapping of the uplink sites.
 
-- If the **Back to Nominal (Config)** is set to Window or Duration, the carrier will try to return towards it's nominal site. The nominal siteis configured in the **Nominal Site (Config).**
+- If the **Back to Nominal (Config)** is set to Window or Duration, the carrier will try to return towards it's nominal site. The nominal site is configured in the **Nominal Site (Config).**
 
 - Window: **Start Hour (Config)** and **Duration (Config)** defines the window size for returning to nominal site.
   - Duration: **Duration (Config)** defines the time to wait after the last swap was executed before returning to nominal site.
 
-Behing the **Elements** pagebutton you can find all the supported elements from the DMS. This list is refreshed every hour, if necessary you can update the list manually by clicking the **Refresh** button.
+Behind the **Elements** page button you can find all the supported elements from the DMS. This list is refreshed every hour, if necessary you can update the list manually by clicking the **Refresh** button.
 
 ## Notes
 

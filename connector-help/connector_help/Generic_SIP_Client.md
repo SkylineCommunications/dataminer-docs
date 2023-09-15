@@ -8,11 +8,11 @@ The Generic SIP (Session Initiation Protocol) Client is a softphone application 
 
 ## About
 
-The Generic SIP Client driver is capable of establishing RTC (Real-Time Communication) sessions through the parameter negotiation and media setup performed with the SDP (Session Description Protocol) that is carried as payload in SIP messages. This driver can also perform **calls** and **transfers** using the implemented signaling.
+The Generic SIP Client connector is capable of establishing RTC (Real-Time Communication) sessions through the parameter negotiation and media setup performed with the SDP (Session Description Protocol) that is carried as payload in SIP messages. This connector can also perform **calls** and **transfers** using the implemented signaling.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
@@ -20,13 +20,13 @@ The Generic SIP Client driver is capable of establishing RTC (Real-Time Communic
 
 ### Creation
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## Usage
 
 ### General
 
-The General page contains the main functionalities of the driver, such as **Register** **Call**, **Hang Up** and **Transfer**. Note that the User-Agent registration is done automatically.
+The General page contains the main functionalities of the connector, such as **Register** **Call**, **Hang Up** and **Transfer**. Note that the User-Agent registration is done automatically.
 
 This page also displays the inherent **Registration and Call Status** as well as the **Last Call Duration** for the last dialed phone number.
 

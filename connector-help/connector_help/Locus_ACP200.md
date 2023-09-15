@@ -10,11 +10,11 @@ The Locus ACP-200 is a virtual which connects to other element(s).
 
 ## About
 
-This virtual driver gets and monitors parameters from the desired elements.
+This virtual connector gets and monitors parameters from the desired elements.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
@@ -24,7 +24,7 @@ This virtual driver gets and monitors parameters from the desired elements.
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## Usage
 

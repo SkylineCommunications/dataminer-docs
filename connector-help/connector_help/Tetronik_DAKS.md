@@ -32,7 +32,7 @@ The Tetronik DAKS is a **fire alarm system** that sends messages and calls to a 
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -43,7 +43,7 @@ SERIAL CONNECTION:
 
 #### Serial IP Connection - Backup DAKS Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

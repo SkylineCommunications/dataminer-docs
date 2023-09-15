@@ -70,9 +70,9 @@ HTTP CONNECTION:
 
 To make sure the connector can poll data from the device:
 
-1.  On the **General** page of the element, fill in the **Username** and **Password.**
-2.  Click the **Log in** button.
-3.  Restart the DataMiner element.
+1. On the **General** page of the element, fill in the **Username** and **Password.**
+2. Click the **Log in** button.
+3. Restart the DataMiner element.
 
 Data will only be polled from the device when these steps have been done. If you change the credentials, also restart the DataMiner element.
 

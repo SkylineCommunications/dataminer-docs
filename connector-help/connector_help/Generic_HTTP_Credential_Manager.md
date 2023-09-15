@@ -4,13 +4,13 @@ uid: Connector_help_Generic_HTTP_Credential_Manager
 
 # Generic HTTP Credential Manager
 
-This driver can be used to manage sets of credentials for HTTP drivers.
+This connector can be used to manage sets of credentials for HTTP connectors.
 
 ## About
 
-With this driver, you can store and use credentials for other HTTP drivers that have been equipped to use the Generic HTTP Credential Manager.
+With this connector, you can store and use credentials for other HTTP connectors that have been equipped to use the Generic HTTP Credential Manager.
 
-### Ranges of the driver
+### Version Info
 
 | **Range** | **Key Features** | **Based on** | **System Impact** |
 |-----------|------------------|--------------|-------------------|
@@ -28,10 +28,10 @@ With this driver, you can store and use credentials for other HTTP drivers that 
 
 #### Virtual Connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## How to use
 
-The driver displays only one page, the General page, which contains the **Credentials** table. In this table, you can view and edit the **Friendly Name**, **Username**, and **Password** for each set of credentials.
+The connector displays only one page, the General page, which contains the **Credentials** table. In this table, you can view and edit the **Friendly Name**, **Username**, and **Password** for each set of credentials.
 
 The page also contains a page button, **Add Credential**, which opens up a pop-up page that allows you to add a new set of credentials. To do so, fill in the **Friendly Name**, **Username** and **Password**, and click the **Add New Credential** button to add it to the table.

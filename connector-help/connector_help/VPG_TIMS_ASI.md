@@ -4,21 +4,21 @@ uid: Connector_help_VPG_TIMS_ASI
 
 # VPG TIMS ASI
 
-The main purpose of the VPG TIMS ASI driver is to monitor an ASI monitor and configure its video channels.
+The main purpose of the VPG TIMS ASI connector is to monitor an ASI monitor and configure its video channels.
 
 ## About
 
 This analyser uses a combination of SNMP and HTML to pass the information related to the video streams and all services running on them.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                   | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                   | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------------------------|---------------------|-------------------------|
 | 1.2.0.x          | New MIB implemented on the device | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.1.0.X          | Software Version: 2.5.1     |
 | 1.2.0.x          | Software Version: 3.1.0     |
@@ -29,7 +29,7 @@ This analyser uses a combination of SNMP and HTML to pass the information relate
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -44,7 +44,7 @@ SNMP Settings:
 
 #### HTTP Connection
 
-This driver uses a HTTP connection and requires the following input during element creation:
+This connector uses a HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

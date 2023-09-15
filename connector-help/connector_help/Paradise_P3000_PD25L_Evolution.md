@@ -4,21 +4,21 @@ uid: Connector_help_Paradise_P3000_PD25L_Evolution
 
 # Paradise P3000 PD25L Evolution
 
-This driver can be used to control and monitor the Paradise P3000 PD25L Evolution device.
+This connector can be used to control and monitor the Paradise P3000 PD25L Evolution device.
 
 ## About
 
-This driver uses SNMP to poll and control all values of the device.
+This connector uses SNMP to poll and control all values of the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.1.0.x          | 1.5.28                      |
 
@@ -28,12 +28,11 @@ This driver uses SNMP to poll and control all values of the device.
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
 - **IP address/host**: The polling IP of the device.
-- **Device address**: Indicate if required or not. If it is, specify default value and range.
 
 SNMP Settings:
 

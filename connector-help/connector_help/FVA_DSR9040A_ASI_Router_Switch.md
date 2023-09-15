@@ -6,7 +6,7 @@ uid: Connector_help_FVA_DSR9040A_ASI_Router_Switch
 
 The **FVA DSR9040A** is an ASI router that can handle up to 128 inputs and outputs.
 
-This driver monitors the router using IP communication and displays the input/output connections in a matrix.
+This connector monitors the router using IP communication and displays the input/output connections in a matrix.
 
 ## About
 
@@ -34,7 +34,7 @@ This driver monitors the router using IP communication and displays the input/ou
 
 #### IP Main Connection
 
-This driver uses an IP connection and requires the following input during element creation:
+This connector uses an IP connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -47,7 +47,7 @@ SERIAL CONNECTION:
 
 ## How to use
 
-The **General** page displays the number of inputs and outputs of the device. The number of outputs can be retrieved from the device, but the number of inputs cannot be retrieved. When the element is created, the driver assumes the number of inputs is equal to the number of outputs. However, you can change these numbers manually.
+The **General** page displays the number of inputs and outputs of the device. The number of outputs can be retrieved from the device, but the number of inputs cannot be retrieved. When the element is created, the connector assumes the number of inputs is equal to the number of outputs. However, you can change these numbers manually.
 
 The matrix data is retrieved every minute. The **Refresh Matrix** button can be used to force the polling of the matrix.
 
@@ -55,4 +55,4 @@ The **Matrix View** page displays the matrix.
 
 The **Table View** page displays the same information as the **Matrix View** page, but in the form of a table.
 
-The **Alarms** page contains some parameters that need to be linked with an external driver (Gateway) in order to retrieve the needed values via the **Element Connections** module. To configure this, in DataMiner Cube, go to Apps \> Modules \> Element Connections, then select the name of the element running this driver, and select the linked element, parameter and instance corresponding to the alarm values.
+The **Alarms** page contains some parameters that need to be linked with an external driver (Gateway) in order to retrieve the needed values via the **Element Connections** module. To configure this, in DataMiner Cube, go to Apps \> Modules \> Element Connections, then select the name of the element running this connector, and select the linked element, parameter and instance corresponding to the alarm values.

@@ -4,24 +4,24 @@ uid: Connector_help_CEFD_Memotec_CXU-1240
 
 CEFD MEMOTEC CXU-1240
 
-This is a SNMP driver for the configuration and monitoring of the following types of devices:
+This is a SNMP connector for the configuration and monitoring of the following types of devices:
 
 - CXU-1240
 - CXU-1010
 
 ## About
 
-The driver is used to configure a CXU-1240/CXU-1010.
+The connector is used to configure a CXU-1240/CXU-1010.
 
 ## Configuration and Installation
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (**SNMP**) connection and needs following user information:
+This connector uses a Simple Network Management Protocol (**SNMP**) connection and needs following user information:
 
 **SNMP CONNECTION**:
 
-\- **IP address/host**: the polling IP of the device eg *10.11.12.13*
+\- **IP address/host**: The polling IP of the device, e.g. *10.11.12.13*
 
 **SNMP Settings**:
 
@@ -33,7 +33,7 @@ This driver uses a Simple Network Management Protocol (**SNMP**) connection and 
 
 ## Usage
 
-Once all configurations are done, this driver will work stand alone.
+Once all configurations are done, this connector will work stand alone.
 
 ## General
 
@@ -72,7 +72,7 @@ On this page you will find the configuration of the Wan Interfaces
 Here you can configure the Traffic channels.
 It is possible to delete an entry from the table by clicking the **Delete** button of the corresponding row.
 
-For creating a new entry in the Traffic channel Table click on the **Create New Entry.** button located on the bottom of the page. Fill in the Different Parameters.
+For creating a new entry in the Traffic channel Table click on the **Create New Entry.** button located at the bottom of the page. Fill in the Different Parameters.
 Press **Apply** to add the new entry to the table.
 
 **Note**: when the maximum number of entries is reached. It is not possible to add a new entry and therefore a row should first be deleted.
@@ -136,7 +136,7 @@ With the **Clear** button it is possible to clear the corresponding row.
 When clicking on **Select E1 Port** and then clicking on the button **Mapping.** this will open a window with the Timeslots of the selected E1 Port.
 It is also possible to select the E1 port by changing the E1 Port Selected parameter located on the top of the page.
 
-You can refresh the Timeslots by clicking on the **Refresh** button located on the bottom of the page.
+You can refresh the Timeslots by clicking on the **Refresh** button located at the bottom of the page.
 
 ## Statistics - Clocking
 

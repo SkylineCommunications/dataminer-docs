@@ -31,7 +31,7 @@ The Sony PWS-110SC1 is a Vision Mixer Controller to which different cards can be
 
 ### Initialization
 
-This driver is used by DVEs that are **automatically created** by the parent element. No user input is required.
+This connector is used by DVEs that are **automatically created** by the parent element. No user input is required.
 
 ### Redundancy
 
@@ -45,7 +45,7 @@ The web interface is only accessible when the client machine has network access 
 
 ### Range 1.0.0.x
 
-The element created using this range of the driver has the following data pages:
+The element created using this range of the connector has the following data pages:
 
 - **Status**: This page displays detailed status information on the module, including the **Device ID**, **Manufacturer**, **Model**, **Destination**, **Serial Number**, **Category, Version**, **Model Suffix** and **Version Suffix**.
 - **Alarms**: This page displays the **Error Statuses** connected to this module.
@@ -55,7 +55,7 @@ The element created using this range of the driver has the following data pages:
 
 ### Range 1.0.1.x
 
-The element created using this range of the driver has the following data pages:
+The element created using this range of the connector has the following data pages:
 
 - **Status**: This page displays detailed status information on the module, including the **Device ID**, **Manufacturer**, **Model**, **Destination**, **Serial Number**, **Category**, **Version**, **Model Suffix** and **Version Suffix**.
 - **Alarms**: This page displays the **Error Statuses** connected to this module.

@@ -8,19 +8,19 @@ The **Zixi Broadcaster** processes video stream from Zixi Feeder, enabling trans
 
 ## About
 
-The Zixi Broadcaster driver uses HTTP communication to allow users to monitor and manage the device.
+The Zixi Broadcaster connector uses HTTP communication to allow users to monitor and manage the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                           | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                                           | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version.                                                                          | No                  | Yes                     |
 | 1.0.1.x          | Added an SNMP connection for interface information.                                       | No                  | Yes                     |
 | 1.0.2.x          | Reviewed Outputs and Outputs Statistics index so pull streams will reuse an existing row. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range**        | **Device Firmware Version** |
+| **Range**        | **Device Firmware Version** |
 |-------------------------|-----------------------------|
 | 1.0.0.x 1.0.1.x 1.0.2.x | API 1.10                    |
 
@@ -30,7 +30,7 @@ The Zixi Broadcaster driver uses HTTP communication to allow users to monitor an
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -39,7 +39,7 @@ HTTP CONNECTION:
 
 #### SNMP Secondary Connection
 
-This driver uses an SNMP connection to gather interface information and requires the following input during creation:
+This connector uses an SNMP connection to gather interface information and requires the following input during creation:
 
 SNMP CONNECTION
 

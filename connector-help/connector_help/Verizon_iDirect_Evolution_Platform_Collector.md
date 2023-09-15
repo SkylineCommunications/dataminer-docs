@@ -4,23 +4,23 @@ uid: Connector_help_Verizon_iDirect_Evolution_Platform_Collector
 
 # Verizon iDirect Evolution Platform Collector
 
-The **Verizon iDirect Evolution Platform Collector** driver can be used to collect data from the iDirect Evolution Platform. This platform is an IP-based satellite communication system, with a product line consisting of a universal hub and network management system, comprising a series of line cards, operating software and a portfolio of both dedicated and dual-mode remotes.
+The **Verizon iDirect Evolution Platform Collector** connector can be used to collect data from the iDirect Evolution Platform. This platform is an IP-based satellite communication system, with a product line consisting of a universal hub and network management system, comprising a series of line cards, operating software and a portfolio of both dedicated and dual-mode remotes.
 
 ## About
 
-In elements using this driver, all information about an iDirect NMS is retrieved from MySQL databases and displayed accordingly. All iDirect installations consist of two databases (schemas): "nms" with all the configuration data, and "nrd_archive" with all the events and statistics. Depending on the size of the system, these databases can be placed on one or multiple MySQL servers, each one with a different IP address. **IP addresses and credentials for access to the databases** should be provided in the **Database Configuration table** on the Configuration page of the element. For more information, refer to the **"Configuration" section**.
+In elements using this connector, all information about an iDirect NMS is retrieved from MySQL databases and displayed accordingly. All iDirect installations consist of two databases (schemas): "nms" with all the configuration data, and "nrd_archive" with all the events and statistics. Depending on the size of the system, these databases can be placed on one or multiple MySQL servers, each one with a different IP address. **IP addresses and credentials for access to the databases** should be provided in the **Database Configuration table** on the Configuration page of the element. For more information, refer to the **"Configuration" section**.
 
-The driver also uses data from the Verizon VSat Database, which contains proprietary information about the circuits deployed through the Verizon Satellite Network, with commissioning details and monitoring acceptance metrics. This database is queried and provisioned by elements running the **Verizon VSat Database Platform protocol** (1 per DMA), which will generate **provisioning files** with the necessary circuit information from the VSat database. Elements running the **iDirect Evolution Platform Collector** will retrieve the necessary information from the corresponding provisioning file and handle it accordingly. The driver also exports the configuration data of remotes in XML files to be used by the VSat elements. For more information, refer to the **"Collector Setup" section**.
+The connector also uses data from the Verizon VSat Database, which contains proprietary information about the circuits deployed through the Verizon Satellite Network, with commissioning details and monitoring acceptance metrics. This database is queried and provisioned by elements running the **Verizon VSat Database Platform protocol** (1 per DMA), which will generate **provisioning files** with the necessary circuit information from the VSat database. Elements running the **iDirect Evolution Platform Collector** will retrieve the necessary information from the corresponding provisioning file and handle it accordingly. The connector also exports the configuration data of remotes in XML files to be used by the VSat elements. For more information, refer to the **"Collector Setup" section**.
 
-The driver supports the triggering and clearing of tickets from the Verizon system by generating DataMiner information events. This mechanism follows Verizon's proprietary SLA (Service Level Agreement) settings, and such settings stay synchronized with other elements in the DMS through the use of information stored in the DataMiner **Profile Manager** app. In addition to being able to perform bulk updates from the Profile Manager app, the solution includes the possibility of adding/editing/removing entries of the different SLA protocol parameters.
+The connector supports the triggering and clearing of tickets from the Verizon system by generating DataMiner information events. This mechanism follows Verizon's proprietary SLA (Service Level Agreement) settings, and such settings stay synchronized with other elements in the DMS through the use of information stored in the DataMiner **Profile Manager** app. In addition to being able to perform bulk updates from the Profile Manager app, the solution includes the possibility of adding/editing/removing entries of the different SLA protocol parameters.
 
 The protocol contains a mechanism to obtain unique numeric IDs for entities used in the CPE aggregation solution. In order to do so, it exports CSV files for each type of entity that needs to have IDs assigned, and imports the corresponding CSV files with the responses from the back-end manager elements.
 
-As this is a virtual driver, **no data traffic** will be shown in the Stream Viewer.
+As this is a virtual connector, **no data traffic** will be shown in the Stream Viewer.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**                                                          | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**                                                          | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|--------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x \[Obsolete\] | Initial version.                                                         | No                  | Yes                     |
 | 1.0.1.x \[Obsolete\] | Display keys in alarm tables updated to show a more user-friendly value. | No                  | Yes                     |
@@ -32,7 +32,7 @@ As this is a virtual driver, **no data traffic** will be shown in the Stream Vie
 
 ### Creation
 
-This driver uses a **virtual** connection and does not require any input during element creation.
+This connector uses a **virtual** connection and does not require any input during element creation.
 
 ### Configuration
 
@@ -42,7 +42,7 @@ Additional settings need to be specified in the **Database Configuration** table
 - For each iDirect hub, exactly one config database and one or more statistics databases must be specified. Even when the config and statistics database have the same IP address, two entries need to be added to the table.
 - For each database, the **Server** IP address, **Username** and **Password** must be specified. In addition, you have to indicate whether the database contains configuration or statistics (archive) data. Database polling can be enabled or disabled for each entry, and the polling interval can be configured as well.
 - The **DB Hub ID** column indicates which iDirect NMS the database belongs to. You can enter the Hub ID yourself, but keep in mind that each hub must have a unique ID, and all databases that belong to the same iDirect hub must have the same ID.
-- The **NMS Name** has to be entered in order for the driver to do any subsequent logic related to the NMS (such as aggregation at that level).
+- The **NMS Name** has to be entered in order for the connector to do any subsequent logic related to the NMS (such as aggregation at that level).
 
 In order to obtain unique numeric IDs for entities used in the CPE aggregation process, the following settings need to be specified:
 
@@ -117,7 +117,7 @@ The table stores different kinds of data:
 - Statistics information like **SLA Latency**, **SLA Packets Delivery**, **Uptime**, as well as data related to the Hub Return and Hub Forward each circuit belongs to, such as **Traffic**, **Errors** and **C/N** (Signal-to-Noise ratio).
 - Fault information for each specific fault type.
 
-You can dynamically verify the **ping status** of a specific circuit by right-clicking the table and selecting **PING Circuit** in the context menu. Note that the driver also automatically implements this functionality for all the circuits every 12 hours.
+You can dynamically verify the **ping status** of a specific circuit by right-clicking the table and selecting **PING Circuit** in the context menu. Note that the connector also automatically implements this functionality for all the circuits every 12 hours.
 
 ### Configuration
 
@@ -132,7 +132,7 @@ The page also includes page buttons to the following subpages:
 
 ### Collector Setup
 
-This page contains the settings to manage the provisioning files mechanism. The driver periodically exports configuration data for remotes, by updating an XML provisioning file on the DMA server, and retrieves information from the Verizon VSat Database contained in another provisioning file in JSON format. These mechanisms can be configured using the controls on this page.
+This page contains the settings to manage the provisioning files mechanism. The connector periodically exports configuration data for remotes, by updating an XML provisioning file on the DMA server, and retrieves information from the Verizon VSat Database contained in another provisioning file in JSON format. These mechanisms can be configured using the controls on this page.
 
 The **File Handling** parameter can be used to enable or disable both provisioning mechanisms, whereas the **File Import** and **File Export** parameters can be used to enable or disable a specific mechanism.
 

@@ -8,13 +8,13 @@ The RCI RC2000 is a Satellite Antenna Controller that allows a dish to find and 
 
 ## About
 
-With this driver you can monitor and manipulate the antenna using Azimuth, Elevation, Polarisation, and Rotating Feed.
+With this connector you can monitor and manipulate the antenna using Azimuth, Elevation, Polarisation, and Rotating Feed.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 **SERIAL CONNECTION**:
 
@@ -40,7 +40,7 @@ This page is very similar to the Main View page but includes an **Alarm Status**
 
 On this page, you can move the antenna to different satellites or reset the antenna. This can be done in various ways, which are available through different page buttons:
 
-- **Satellite Name:** Point the antenna to a preset satellite using the defined **Satellite Name**. A **Preset table** with preconfigured satellites can also be created in the driver, which will perform a manual set of the Polarisation after automatic movement of the antenna through a satellite name.
+- **Satellite Name:** Point the antenna to a preset satellite using the defined **Satellite Name**. A **Preset table** with preconfigured satellites can also be created in the connector, which will perform a manual set of the Polarisation after automatic movement of the antenna through a satellite name.
 
   Please note that only the **Polarisation** is used as an extra set if **Preset Table Usage** is enabled, other data in the Preset table (position, azimuth, elevation) are currently only supplied by way of information, not as configuration settings.
 

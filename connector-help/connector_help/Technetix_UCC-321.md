@@ -34,7 +34,7 @@ The unit monitors the alarm from the Technetix RPS-UNI power supply and **contro
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -60,11 +60,11 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-This driver provides an overview of the Upstream Splitter Combiner modules connected to this controller and monitors the power supply.
+This connector provides an overview of the Upstream Splitter Combiner modules connected to this controller and monitors the power supply.
 
 It also shows the last trap message and allows configuration of the trap destination.
 
-This driver will export different drivers based on the retrieved data. A list can be found in the section "System Info". The driver will check every hour for newly connected modules. You can speed up this process by clicking the **Refresh** button on the **Module Overview** page.
+This connector will export different connectors based on the retrieved data. A list can be found in the section "System Info". The connector will check every hour for newly connected modules. You can speed up this process by clicking the **Refresh** button on the **Module Overview** page.
 
 ## Notes
 

@@ -4,23 +4,23 @@ uid: Connector_help_Grass_Valley_sQ_1000_ISA_Manager
 
 # Grass Valley sQ 1000 ISA Manager
 
-The **Grass Valley sQ 1000 ISA Manager** driver is used to monitor the ISA System Component of a Grass Valley sQ 1000 Series Media Server.
+The **Grass Valley sQ 1000 ISA Manager** connector is used to monitor the ISA System Component of a Grass Valley sQ 1000 Series Media Server.
 
 ## About
 
 The Grass Valley sQ 1000 Series Media Servers are SD/HD/4K UHD media servers for news and sports editing, replay and playout. They provide an intelligent, scalable and media-optimized storage system, delivering sustained multi-year 24x7 operation for high-pressure, fast-turnaround workflows for news and sports.
 
-This driver uses an SNMPv1 interface to communicate with a **Grass Valley sQ 1000 ISA Manager** device.
+This connector uses an SNMPv1 interface to communicate with a **Grass Valley sQ 1000 ISA Manager** device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -30,7 +30,7 @@ This driver uses an SNMPv1 interface to communicate with a **Grass Valley sQ 100
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP Connection:
 

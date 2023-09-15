@@ -8,17 +8,17 @@ The Videotekr VSG-4TSG is part of the Imagine Communications Reference Sync and 
 
 ## About
 
-The following driver will be used in order to properly configure and monitor the Imagine Communications Videotek VSG-4TSG. This driver uses SNMPv2 protocol in order to poll from and configure data on the device.
+The following driver will be used in order to properly configure and monitor the Imagine Communications Videotek VSG-4TSG. This connector uses SNMPv2 protocol in order to poll from and configure data on the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial Version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | (Software Rev) 2.2          |
 
@@ -28,7 +28,7 @@ The following driver will be used in order to properly configure and monitor the
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

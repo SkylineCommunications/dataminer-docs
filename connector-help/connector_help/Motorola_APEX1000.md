@@ -4,22 +4,22 @@ uid: Connector_help_Motorola_APEX1000
 
 # Motorola APEX1000
 
-This driver uses **SNMP** to monitor and control the **Motorola APEX1000** **edge QAM**.
+This connector uses **SNMP** to monitor and control the **Motorola APEX1000** **edge QAM**.
 
 ## About
 
-The **1.0.1.x** version of the **Motorola APEX1000** driver implements the latest MIB available in early 2014 for the **APEX1000 edge QAM** and can therefore be used with the latest firmware of the device. Only the most important information is currently implemented in this driver.
+The **1.0.1.x** version of the **Motorola APEX1000** driver implements the latest MIB available in early 2014 for the **APEX1000 edge QAM** and can therefore be used with the latest firmware of the device. Only the most important information is currently implemented in this connector.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**            | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**            | **DCF Integration** | **Cassandra Compliant** |
 |------------------|----------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version            | No                  | Yes                     |
 | 1.0.1.x          | New range based on 1.0.0.x | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | N/A                         |
 | 1.0.1.x          | N/A                         |
@@ -30,7 +30,7 @@ The **1.0.1.x** version of the **Motorola APEX1000** driver implements the lates
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -66,7 +66,7 @@ This section contains all **measurements and monitoring data** for the **APEX100
 - **QAM Status**: Contains the QAM Channel Status Table.
 - **Output Program**: Contains the Output Program Table.
 
-Starting from version **1.0.1.2** of the **APEX1000** driver, it is possible to **import** an excel file on the **Output Program** page of the driver. This will populate the **description** column in the Output Program Table with the descriptions from the Excel file. These descriptions are linked to the **Output Program Source ID**. The **Data Connectivity Components** need to be installed in the system before the Excel import will work. These can be downloaded from the following Microsoft website: <http://www.microsoft.com/en-us/download/details.aspx?id=23734>.
+Starting from version **1.0.1.2** of the **APEX1000** connector, it is possible to **import** an excel file on the **Output Program** page of the connector. This will populate the **description** column in the Output Program Table with the descriptions from the Excel file. These descriptions are linked to the **Output Program Source ID**. The **Data Connectivity Components** need to be installed in the system before the Excel import will work. These can be downloaded from the following Microsoft website: <http://www.microsoft.com/en-us/download/details.aspx?id=23734>.
 
 ### Input & Output Stream Section
 

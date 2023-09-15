@@ -4,11 +4,11 @@ uid: Connector_help_Nec_PNMS_Generic_Link
 
 # Nec PNMS Generic Link
 
-This driver will receive traps sent from the Nec PNMS system.
+This connector will receive traps sent from the Nec PNMS system.
 
 ## About
 
-With this driver, you can receive and process traps sent from the Nec PNMS system. The driver has some default settings to process these traps, but it is also possible to configure existing and additional settings and thus extend the protocol support.
+With this connector, you can receive and process traps sent from the Nec PNMS system. The connector has some default settings to process these traps, but it is also possible to configure existing and additional settings and thus extend the protocol support.
 
 ## Installation and configuration
 
@@ -16,7 +16,7 @@ With this driver, you can receive and process traps sent from the Nec PNMS syste
 
 #### Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -39,7 +39,7 @@ Depending on the parameter, alarm monitoring is possible on the values in this t
 
 ### Configuration
 
-On this page, you can add/edit/remove settings in the driver configuration.
+On this page, you can add/edit/remove settings in the connector configuration.
 
 In the **Mapping Table**, you can configure the corresponding parameter definitions for each OID (optionally using wildcards):
 

@@ -6,7 +6,7 @@ uid: Connector_help_Control_By_Web_X400
 
 The **Control By Web X400** is a web-enabled programmable logic controller. The modules in the X-4xx series have various combinations of relays, digital inputs, analog inputs, 1-wire bus (for temperature/humidity monitoring), etc. Most of the modules have a fixed number of I/O; however, the X-400 has a ribbon-cable expansion bus, which allows expansion I/O modules to be directly connected to the X-400, making its I/O customizable.
 
-This driver can only be used to monitor information. Traps received will be used to poll the most recent values.
+This connector can only be used to monitor information. Traps received will be used to poll the most recent values.
 
 ## About
 
@@ -34,7 +34,7 @@ This driver can only be used to monitor information. Traps received will be used
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -44,7 +44,7 @@ HTTP CONNECTION:
 
 #### SNMP SNMP Connection Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

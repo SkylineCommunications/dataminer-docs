@@ -4,21 +4,21 @@ uid: Connector_help_Xicom_Technology_XTD-750C_K
 
 # Xicom Technology XTD-750C K
 
-The **Xicom Technology XTD-750C K** driver can be used to display and configure information regarding the related controller.
+The **Xicom Technology XTD-750C K** connector can be used to display and configure information regarding the related controller.
 
 ## About
 
 This protocol can be used to monitor and control the Xicom Technology XTD-750C K controller. A serial connection is used in order to successfully retrieve and configure the device's information.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ This protocol can be used to monitor and control the Xicom Technology XTD-750C K
 
 #### Serial connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

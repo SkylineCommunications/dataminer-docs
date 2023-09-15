@@ -4,23 +4,23 @@ uid: Connector_help_Astro_U168_Edge_DVB-T
 
 # Astro U168 Edge DVB-T
 
-With this driver, it is possible to gather and view information from the device **Astro U168 Edge DVB-T**, as well as to configure the device.
+With this connector, it is possible to gather and view information from the device **Astro U168 Edge DVB-T**, as well as to configure the device.
 
 ## About
 
-This driver uses an **HTTP** connection to monitor the Astro U168 Edge DVB-T device.
+This connector uses an **HTTP** connection to monitor the Astro U168 Edge DVB-T device.
 
-This driver also contains an **SNMP** interface to receive traps from the device.
+This connector also contains an **SNMP** interface to receive traps from the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 5595                        |
 
@@ -28,11 +28,11 @@ This driver also contains an **SNMP** interface to receive traps from the device
 
 ### Creation
 
-This driver uses two interfaces: an HTTP interface to retrieve the data and an SNMP interface to collect the traps.
+This connector uses two interfaces: an HTTP interface to retrieve the data and an SNMP interface to collect the traps.
 
 #### HTTP connection
 
-This driver can communicate directly with the **U168** but it can also be configured to send the requests to the **Astro U100 Controller**, which will then serve as a proxy. Depending on the communication mode, the HTTP connection must be configured differently:
+This connector can communicate directly with the **U168** but it can also be configured to send the requests to the **Astro U100 Controller**, which will then serve as a proxy. Depending on the communication mode, the HTTP connection must be configured differently:
 
 #### A) Communication with U100C as proxy:
 
@@ -124,21 +124,27 @@ This page allows you to upload and download config files to the device. You can 
 
 To download a file:
 
-1.  Click **Download**. The following pop-up message will be displayed:
-    ![Download.PNG](~/connector-help/images/Astro_U168_Edge_DVB-T_Download.PNG)
-2.  Enter the name of the file and click OK. The file will be saved in the following location:
+1. Click **Download**. The following pop-up message will be displayed:
+
+   ![Download.PNG](~/connector-help/images/Astro_U168_Edge_DVB-T_Download.PNG)
+
+1. Enter the name of the file and click OK. The file will be saved in the following location:
+
     C:\Skyline DataMiner\Documents\\protocol name\>\\element name\>\\file name\>
 
 To upload a file:
 
-1.  Click **Upload**. The following pop-up window will be displayed:
-    ![Upload.PNG](~/connector-help/images/Astro_U168_Edge_DVB-T_Upload.PNG)
-2.  In this window, **Module Name** lists all the Astro elements of the same type in the system. **Upload File Name** lists all the files available in the Documents folder of the selected module.
-    The file to be uploaded must be located in the following folder: C:\Skyline DataMiner\Documents\\protocol name\>\\element name\>\\file name\>
+1. Click **Upload**. The following pop-up window will be displayed:
+
+   ![Upload.PNG](~/connector-help/images/Astro_U168_Edge_DVB-T_Upload.PNG)
+
+1. In this window, **Module Name** lists all the Astro elements of the same type in the system. **Upload File Name** lists all the files available in the Documents folder of the selected module.
+
+   The file to be uploaded must be located in the following folder: C:\Skyline DataMiner\Documents\\protocol name\>\\element name\>\\file name\>
 
 #### Software update
 
-The driver allows you to upload a firmware archive from the local disk of the DMA:
+The connector allows you to upload a firmware archive from the local disk of the DMA:
 
 ![SoftwareUpdate.PNG](~/connector-help/images/Astro_U168_Edge_DVB-T_SoftwareUpdate.PNG)
 

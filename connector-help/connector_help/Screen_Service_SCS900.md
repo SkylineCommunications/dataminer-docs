@@ -8,7 +8,7 @@ The SCS 900 model is an automatic change-over unit that controls and operates te
 
 ## About
 
-With this driver, it is possible to monitor and configure the state of the switches, switch priorities and handle notifications via traps. The different parameters from the device are displayed on multiple pages similar to the web interface layout.
+With this connector, it is possible to monitor and configure the state of the switches, switch priorities and handle notifications via traps. The different parameters from the device are displayed on multiple pages similar to the web interface layout.
 
 ## Installation and configuration
 

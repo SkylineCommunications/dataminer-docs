@@ -6,23 +6,23 @@ uid: Connector_help_BBright_Multi-TS
 
 **Multi-TS** is an easy-to-use and cost-effective compressed video playout server for professional broadcast or streaming applications such as for satellite, terrestrial, cable networks, telco IPTV operators and playout facilities. **Multi-TS** supports H.265/H.264/MPEG-2 TS files, for PIP, SD, HD, full-HD or UHD channels. Video and audio PIDs can be selected and remapped for multiple SPTS over UDP or RTP multicast streaming.
 
-The driver polls data from the device by using its **REST API**. The driver can only be used to view information on the device, not to configure the device.
+The connector polls data from the device by using its **REST API**. The connector can only be used to view information on the device, not to configure the device.
 
 ## About
 
-The driver monitors the alarms, channels and playlists of the device, by polling the data using an **HTTP** connection.
+The connector monitors the alarms, channels and playlists of the device, by polling the data using an **HTTP** connection.
 
 A list of all the alarms, channels or playlists can be retrieved with a single device query. In order to get the details for each of these properties, they need to be queried one at a time.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.0.2.0                     |
 
@@ -32,7 +32,7 @@ A list of all the alarms, channels or playlists can be retrieved with a single d
 
 #### HTTP Main connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

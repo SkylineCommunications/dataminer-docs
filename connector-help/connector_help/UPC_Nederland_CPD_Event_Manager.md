@@ -4,7 +4,7 @@ uid: Connector_help_UPC_Nederland_CPD_Event_Manager
 
 # UPC Nederland CPD Event Manager
 
-The **UPC Nederland CPD Event Manager** is a driver that receives information when a ticket is created or closed by CPD.
+The **UPC Nederland CPD Event Manager** is a connector that receives information when a ticket is created or closed by CPD.
 
 ## About
 
@@ -16,7 +16,7 @@ Whenever CPD creates or closes a ticket, this information will be forwarded to t
 
 ### Creation
 
-This driver uses a **virtual** connection and does not require any input during element creation..
+This connector uses a **virtual** connection and does not require any input during element creation..
 
 ### Configuration
 
@@ -28,6 +28,6 @@ On the **General** page, the **Max Duration Events** parameter can be configured
 
 This page contains the **Max Duration Events** parameter (see "Configuration" section above).
 
-The **Event Table** contains all the tickets, and the **Event Tag Table**, **Services Table** and **Interface Table** contain items linked to the **Event Table**. To easily select a ticket and see all the linked items, it is advisable to use a visio drawing. In data display, the quick filter can be used to filter on Event IDs.
+The **Event Table** contains all the tickets, and the **Event Tag Table**, **Services Table** and **Interface Table** contain items linked to the **Event Table**. To easily select a ticket and see all the linked items, it is advisable to use a Visio drawing. In Data Display, the quick filter can be used to filter on Event IDs.
 
-The page button **Messages...** displays the parameters **CPD Create Event** and **CPD Close Event**. These parameters display the incoming data and can be used for debugging.
+The **Messages** page button displays the parameters **CPD Create Event** and **CPD Close Event**. These parameters display the incoming data and can be used for debugging.

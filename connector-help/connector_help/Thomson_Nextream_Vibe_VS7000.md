@@ -8,19 +8,19 @@ The **Thomson ViBE VS7000** is a **video system** supporting all-IP environments
 
 ## About
 
-This is an SNMP and HTTP driver that is used to configure and monitor the **Thomson Video Networks ViBE VS7000** device.
+This is an SNMP and HTTP connector that is used to configure and monitor the **Thomson Video Networks ViBE VS7000** device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                               | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                               | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version.                              | No                  | \-                      |
 | 1.1.0.x          | Supports device firmware version 4.0.0.0.     | No                  | \-                      |
 | 1.1.1.x          | Supports a variable number of job parameters. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | \-                          |
 | 1.1.0.x          | 4.0.0.0                     |
@@ -30,7 +30,7 @@ This is an SNMP and HTTP driver that is used to configure and monitor the **Thom
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and an HTTP connection. It requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and an HTTP connection. It requires the following input during element creation:
 
 **SNMP CONNECTION**:
 
@@ -76,7 +76,7 @@ This page contains the **Node Table**.
 ### Jobs
 
 This page displays the **Jobs List Table**.
-From device firmware version 4.0.0.0 and driver version 1.1.0.1 onwards, this table has new parameters.
+From device firmware version 4.0.0.0 and connector version 1.1.0.1 onwards, this table has new parameters.
 
 Via the **Job Information** page button, you can find more detailed information about each job on the device.
 

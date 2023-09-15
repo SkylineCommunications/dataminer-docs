@@ -4,15 +4,15 @@ uid: Connector_help_Witbe_Management_System
 
 # Witbe Management System
 
-This driver displays the traps of the Witbe Management System.
+This connector displays the traps of the Witbe Management System.
 
 ## About
 
-This driver is able to receive all traps of the Witbe Management System and display them in a table.
+This connector is able to receive all traps of the Witbe Management System and display them in a table.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 
@@ -22,7 +22,7 @@ This driver is able to receive all traps of the Witbe Management System and disp
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection to receive traps and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection to receive traps and requires the following input during element creation:
 
 SNMP CONNECTION:
 

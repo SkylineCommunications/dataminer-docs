@@ -4,9 +4,9 @@ uid: Connector_help_Snell_Wilcox_IQAES00
 
 # Snell Wilcox IQAES00
 
-The Snell Wilcox IQAES00 driver monitors and controls changes on the amplifier unit through a **RollCall** **smart-serial** protocol. The card is used on the **IQ Modular Chassis**.
+The Snell Wilcox IQAES00 connector monitors and controls changes on the amplifier unit through a **RollCall** **smart-serial** protocol. The card is used on the **IQ Modular Chassis**.
 
-The driver periodically polls relevant information from the device. This happens every 15 seconds for RollCall-protocol purposes and every two hours for back-channel purposes.
+The connector periodically polls relevant information from the device. This happens every 15 seconds for RollCall-protocol purposes and every two hours for back-channel purposes.
 
 ## About
 
@@ -34,7 +34,7 @@ The driver periodically polls relevant information from the device. This happens
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

@@ -32,7 +32,7 @@ This protocol allows you to monitor the AEG Power Solutions ACMi1000HD, which is
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -50,7 +50,7 @@ No additional configuration is necessary.
 
 ### Redundancy
 
-The driver does not include any redundancy options.
+The connector does not include any redundancy options.
 
 ### Web Interface
 
@@ -58,7 +58,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to Use
 
-The driver uses **SNMP** calls to communicate with the device.
+The connector uses **SNMP** calls to communicate with the device.
 
 On the **Configuration** page, thresholds and limits can be defined.
 

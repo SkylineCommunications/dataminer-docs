@@ -32,7 +32,7 @@ The APC Netbotz Rack Monitor 750 is a rack-mountable central hardware appliance 
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

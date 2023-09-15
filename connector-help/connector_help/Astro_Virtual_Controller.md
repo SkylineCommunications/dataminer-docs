@@ -4,15 +4,15 @@ uid: Connector_help_Astro_Virtual_Controller
 
 # Astro Virtual Controller
 
-With this driver, it is possible to manage the following Astro drivers: **Astro U116 Edge PAL**, **Astro U125 Edge FM**, **Astro U158 Edge QAM** and **Astro U168 Edge DVB-T**.
+With this connector, it is possible to manage the following Astro connectors: **Astro U116 Edge PAL**, **Astro U125 Edge FM**, **Astro U158 Edge QAM** and **Astro U168 Edge DVB-T**.
 
 ## About
 
-This is a virtual driver that can be used to manage the Astro Edge modules.
+This is a virtual connector that can be used to manage the Astro Edge modules.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
@@ -22,13 +22,13 @@ This is a virtual driver that can be used to manage the Astro Edge modules.
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Configuration
 
-The driver will determine which modules must be controlled based on the **element** **names**.
+The connector will determine which modules must be controlled based on the **element** **names**.
 
-For a module to be recognized as to be controlled by this driver, its name must start with the controller name.
+For a module to be recognized as to be controlled by this connector, its name must start with the controller name.
 
 ## Usage
 

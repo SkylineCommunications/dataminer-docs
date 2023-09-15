@@ -4,7 +4,7 @@ uid: Connector_help_DAC_System_Data_Logger
 
 # DAC System Data Logger
 
-This driver is used to monitor a DAC System Data Logger using SNMP. This is a physical device that collects data from connected junction boxes and sensors, which monitor antenna systems. The driver can retrieve the collected data, allowing the monitoring of the connected junction boxes and sensors.
+This connector is used to monitor a DAC System Data Logger using SNMP. This is a physical device that collects data from connected junction boxes and sensors, which monitor antenna systems. The connector can retrieve the collected data, allowing the monitoring of the connected junction boxes and sensors.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver is used to monitor a DAC System Data Logger using SNMP. This is a ph
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

@@ -6,7 +6,7 @@ uid: Connector_help_LTN_Crystal_GUI_Server
 
 The LTN Crystal GUI Server is a monitoring and control system that provides an SNMP interface to monitor and control parameters on devices managed by this system.
 
-This driver allows you to monitor and control parameters of the devices in the Crystal system.
+This connector allows you to monitor and control parameters of the devices in the Crystal system.
 
 ## About
 
@@ -37,7 +37,7 @@ This driver allows you to monitor and control parameters of the devices in the C
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

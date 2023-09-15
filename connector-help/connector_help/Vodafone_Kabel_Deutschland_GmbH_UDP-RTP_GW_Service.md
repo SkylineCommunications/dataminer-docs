@@ -32,10 +32,10 @@ The Vodafone Deutschland GmbH UDP-RTP Gateway service protocol monitors the stre
 
 This connector is a service protocol and only requires the following input during service creation:
 
-1.  In DataMiner Cube, right-click a view in the Surveyor and select *Create service*.
-2.  Specify the name for the service.
-3.  Open the advanced options and select the service protocol, *Vodafone Kabel Deutschland GmbH *IP GW Service*,* with the latest version or production version.
-4.  Go to the *parameters* tab and include the service you want to monitor.
+1. In DataMiner Cube, right-click a view in the Surveyor and select *Create service*.
+2. Specify the name for the service.
+3. Open the advanced options and select the service protocol, *Vodafone Kabel Deutschland GmbH *IP GW Service*,* with the latest version or production version.
+4. Go to the *parameters* tab and include the service you want to monitor.
 
 ### Initialization
 

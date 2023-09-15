@@ -8,11 +8,11 @@ The Switched Cabinet Distribution Units (CDU) family combines networked configur
 
 About
 
-This driver is intended to get and set information in the device via an Element in a DataMiner System, using SNMP commands.
+This connector is intended to get and set information in the device via an Element in a DataMiner System, using SNMP commands.
 
 To get more detailed information <http://www.servertech.com/products/switched-pdus/>
 
-### Ranges of the driver
+### Version Info
 
 <table>
 <colgroup>
@@ -55,9 +55,9 @@ To get more detailed information <http://www.servertech.com/products/switched-pd
 </tbody>
 </table>
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**          |
+| **Range** | **Device Firmware Version**          |
 |------------------|--------------------------------------|
 | 1.0.0.x          | Sentry Switched -48 VDC Version 7.0j |
 | 1.1.0.x          | Sentry Switched -48 VDC Version 7.0j |
@@ -70,7 +70,7 @@ To get more detailed information <http://www.servertech.com/products/switched-pd
 
 SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -80,8 +80,8 @@ SNMP CONNECTION:
 SNMP Settings:
 
 - **Port number**: The port of the connected device, by default *161*.
-- **Get community string**: The community string used when reading values from the device (default value if not overridden in the driver: *public*).
-- **Set community string**: The community string used when setting values on the device (default value if not overridden in the driver: *private*).
+- **Get community string**: The community string used when reading values from the device (default value if not overridden in the connector: *public*).
+- **Set community string**: The community string used when setting values on the device (default value if not overridden in the connector: *private*).
 
 ## Usage
 
@@ -119,6 +119,6 @@ Use this page to get the temperature/humidity sensor's descriptive names and sen
 
 - **Temperature / Humidity** - The table of temperature/humidity sensors.
 
-### Webinterface
+### Web Interface
 
 Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.

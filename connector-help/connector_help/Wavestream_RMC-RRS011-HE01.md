@@ -8,21 +8,21 @@ This is a serial protocol for the **Wavestream Redundancy Controller**. It can b
 
 ## About
 
-The driver uses a **serial** connection to retrieve information from and send information to the device.
+The connector uses a **serial** connection to retrieve information from and send information to the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | V1.5                        |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol**             | **Description** |
 |-----------------------------------|-----------------|
@@ -34,7 +34,7 @@ The driver uses a **serial** connection to retrieve information from and send in
 
 #### Serial main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

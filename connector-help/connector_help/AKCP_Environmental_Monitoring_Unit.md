@@ -8,16 +8,16 @@ This device is an **SNMP** probe that can have several sensors attached to it. T
 
 ## About
 
-This driver can be used to poll an **AKCP Environmental Monitoring Unit**. Multiple sensors of different types can be attached to this unit.
+This connector can be used to poll an **AKCP Environmental Monitoring Unit**. Multiple sensors of different types can be attached to this unit.
 The value of the sensors will by default be retrieved every 30 seconds. However, note that this can be adapted using the **Timer Base** parameter.
 
-This driver will export different drivers based on the retrieved data. A list can be found in the section 'Exported drivers' below.
+This connector will export different connectors based on the retrieved data. A list can be found in the section 'Exported connectors' below.
 
-### Ranges of the driver
+### Version Info
 
-The driver has 2 major ranges, which are not backwards compatible.
+The connector has 2 major ranges, which are not backwards compatible.
 
-| **Driver Range** | **Description**                                     | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                     | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version with separate DVEs for sensor types | No                  | No (DisplayColumns)     |
 | 2.0.0.x          | Single DVE Type                                     | No                  | No                      |
@@ -41,16 +41,16 @@ Both ranges allow the (optional) creation of DVE elements for each sensor.
 
 The suggested range for new installations is 2.0.0.x.
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | SP8463                      |
 | 2.0.0.x          | SP8463                      |
 
-### Exported drivers
+### Exported connectors
 
-| **Exported Protocol**                            | **Description**                                    |
+| **Exported Connector**                            | **Description**                                    |
 |--------------------------------------------------|----------------------------------------------------|
 | AKCP Environmental Monitoring Unit - Temperature | Temperature probes Only supported in range 1.0.0.x |
 | AKCP Environmental Monitoring Unit - Voltage     | Voltage probes Only supported in range 1.0.0.x     |
@@ -63,7 +63,7 @@ The suggested range for new installations is 2.0.0.x.
 
 #### Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION**:
 

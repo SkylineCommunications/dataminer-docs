@@ -32,7 +32,7 @@ With the **Skyline Protocol Overview** driver you can parse multiple protocol fi
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 
@@ -57,8 +57,8 @@ Notes:
 
 1. Some of the files found in the directory may have parsing errors. These files are indicated in the Files Table.
 1. The Files page contains the Export functionality for the hidden full table of Protocols (Raw)
-1. The driver does not force an SVN Update, it only parses the file system.
-1. The driver does executes automatically parses all directories & files every 15 minutes.
+1. The connector does not force an SVN Update, it only parses the file system.
+1. The connector does executes automatically parses all directories & files every 15 minutes.
 1. Files that were not modified after the last parse are not parsed again.
 
 Features:
@@ -108,7 +108,7 @@ Features:
 
         - Connection Types (SNMP, Serial, http, ...)
 
-        - If the driver is a Spectrum Analyzer
+        - If the connector is a Spectrum Analyzer
 
         - Parameter, QuickAction Line, Triggers, Actions, Sessions, Pairs Count
 
@@ -142,9 +142,9 @@ Features:
           - Base Packages
           - Custom Packages
 
-    - Not Index: The values of the not indexed filters are generated while applying the filter, so the driver files are read again then.
+    - Not Index: The values of the not indexed filters are generated while applying the filter, so the connector files are read again then.
 
-      - The results will show the rule numbers and the context where the filter found its matches in the driver files.
+      - The results will show the rule numbers and the context where the filter found its matches in the connector files.
       - You can use the cancel button for the not indexed searches.
 
   - Usage of Search Type:

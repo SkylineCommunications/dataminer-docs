@@ -8,11 +8,11 @@ Red Had Enterprise OpenShift Manager allows a full monitoring and SRM support of
 
 ## About
 
-Red Hat Enterprise OpenShift allows the full management of enterprise Kubernetes deployments. This driver monitors the entire north-south infrastructure. from containers to PODs and Nodes. It also includes real-time statistics of the main elements.
+Red Hat Enterprise OpenShift allows the full management of enterprise Kubernetes deployments. This connector monitors the entire north-south infrastructure. from containers to PODs and Nodes. It also includes real-time statistics of the main elements.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**               | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**               | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial Version - Version 3.6 | No                  | True                    |
 | 1.1.0.1          | Initial Version - Version 3.7 | No                  | True                    |
@@ -21,9 +21,9 @@ Red Hat Enterprise OpenShift allows the full management of enterprise Kubernetes
 
 ### Creation
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
-Note however, that the driver uses HTTPS connectivity that must be configured in the General page.
+Note however, that the connector uses HTTPS connectivity that must be configured in the General page.
 
 ## Usage
 

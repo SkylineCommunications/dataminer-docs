@@ -4,7 +4,7 @@ uid: Connector_help_Microsoft_Hyper-V
 
 # Microsoft Hyper-V
 
-This driver is an administrative tool to manage a local Hyper-V host and a limited number of remote hosts.
+This connector is an administrative tool to manage a local Hyper-V host and a limited number of remote hosts.
 
 Hyper-V is a hypervisor-based virtualization technology for certain x64 versions of Windows. The hypervisor is core to virtualization. It is the processor-specific virtualization platform that allows multiple isolated operating systems to share a single hardware platform. Hyper-V supports isolation in terms of a partition. A partition is a logical unit of isolation, supported by the hypervisor, in which operating systems are executed. The Microsoft hypervisor must have at least one parent or root partition running Windows.
 The virtualization management stack runs in the parent partition and has direct access to hardware devices. The root partition then creates the child partitions that host the guest operating systems. A root partition creates child partitions using the hypercall application programming interface (API).
@@ -29,7 +29,7 @@ The virtualization management stack runs in the parent partition and has direct 
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## How to use
 

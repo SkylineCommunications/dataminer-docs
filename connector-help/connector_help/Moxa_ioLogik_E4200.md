@@ -8,18 +8,19 @@ The Moxa ioLogik E4200 protocol sets and configures the modules the Moxa ioLogik
 
 ## About
 
-The driver displays each individual module of the device in a list. Its inputs are visible, as well as its outputs, should there be any. There is also an overview table for all inputs and outputs.
-The driver uses SNMP to get this data.
+The connector displays each individual module of the device in a list. Its inputs are visible, as well as its outputs, should there be any. There is also an overview table for all inputs and outputs.
 
-### Ranges of the driver
+The connector uses SNMP to get this data.
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+### Version Info
+
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | V1.5 Build 14011615         |
 
@@ -29,7 +30,7 @@ The driver uses SNMP to get this data.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -58,7 +59,7 @@ The Modules pages contains the **Input Table** and **Output Table** of a single 
 
 ### Module Overview
 
-This page contains an overview of all the Input and Output values. These tables can be enabled by enabling a togglebutton.
+This page contains an overview of all the Input and Output values. These tables can be enabled by enabling a toggle button.
 
 ### Web Interface
 

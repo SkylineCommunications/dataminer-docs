@@ -4,31 +4,31 @@ uid: Connector_help_ETL_Systems_26128_SNMP
 
 # ETL Systems 26128 SNMP
 
-This SNMP driver for the ETL Systems 26128 chassis will create elements for all the supported (inserted) modules.
+This SNMP connector for the ETL Systems 26128 chassis will create elements for all the supported (inserted) modules.
 
 ## About
 
 The ETL Systems 26128 chassis has 18 card slots. Slot 1 and 18 contain the power supplies of the chassis. Information about these two modules is displayed by the main element. For the other modules that are supported and present in the chassis, monitoring is possible via separate elements.
 
-This SNMP driver for the ETL Systems 26128 chassis will create elements for all the supported (inserted) modules. In version range **1.0.1.x**, this is done via automatic creation of DVEs. The DVEs use the **ETL Systems 26128 Module SNMP** driver. Please refer to the "Exported Drivers" table below for more information. In version range **1.0.0.x**, the creation of the elements representing modules must be triggered manually via the **Create Elements** button. The latest driver version in this range only creates elements for **AMP112** modules.
+This SNMP connector for the ETL Systems 26128 chassis will create elements for all the supported (inserted) modules. In version range **1.0.1.x**, this is done via automatic creation of DVEs. The DVEs use the **ETL Systems 26128 Module SNMP** connector. Please refer to the "Exported Connectors" table below for more information. In version range **1.0.0.x**, the creation of the elements representing modules must be triggered manually via the **Create Elements** button. The latest connector version in this range only creates elements for **AMP112** modules.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                          | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                          | **DCF Integration** | **Cassandra Compliant** |
 |------------------|--------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                                                          | No                  | Yes                     |
 | 1.0.1.x          | Based on 1.0.0.1 Added creation of DVEs (different layout of main page). | No                  | Yes                     |
 | 1.0.2.x          | Based on 1.0.1.9 Number of attenuators and amplifiers is now dynamic.    | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          |                             |
 | 1.0.1.x          |                             |
 | 1.0.2.x          | v4.0                        |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol**                                                                      | **Description**                                                                                     |
 |--------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
@@ -40,11 +40,11 @@ This SNMP driver for the ETL Systems 26128 chassis will create elements for all 
 
 During creation of the element, the **IP Address/Host** for the SNMP connection must be provided. The default community strings are "public" and "private", respectively. These have to match the community string set on the device.
 
-When using a driver from the 1.0.0.x range, please also upload the latest version of the protocol **AMP 112 SNMP** and set it as **Production**. Otherwise DataMiner will not be able to create the elements representing the modules.
+When using a connector from the 1.0.0.x range, please also upload the latest version of the protocol **AMP 112 SNMP** and set it as **Production**. Otherwise DataMiner will not be able to create the elements representing the modules.
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

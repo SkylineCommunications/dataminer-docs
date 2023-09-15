@@ -4,7 +4,7 @@ uid: Connector_help_Telos_Alliance_VX
 
 # Telos Alliance VX
 
-The driver is capable of getting information from the **Telos VX Control Center**. It implements part of the communication API available on the **LiveWire Control Protocol for Phone Systems**. It is also capable of receiving Syslog messages from the device.
+The connector is capable of getting information from the **Telos VX Control Center**. It implements part of the communication API available on the **LiveWire Control Protocol for Phone Systems**. It is also capable of receiving Syslog messages from the device.
 
 ## About
 
@@ -32,7 +32,7 @@ The driver is capable of getting information from the **Telos VX Control Center*
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -42,7 +42,7 @@ SERIAL CONNECTION:
 
 #### Serial SyslogMessages connection
 
-This driver uses a smart serial connection and requires the following input during element creation:
+This connector uses a smart serial connection and requires the following input during element creation:
 
 SMART-SERIAL CONNECTION:
 
@@ -55,9 +55,9 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to Use
 
-The driver uses the **VX LWCP: LiveWire Control Protocol for Phone Systems** to communicate with the **Telos VX Control Center** device. It is a serial protocol based on text commands/responses.
+The connector uses the **VX LWCP: LiveWire Control Protocol for Phone Systems** to communicate with the **Telos VX Control Center** device. It is a serial protocol based on text commands/responses.
 
-The driver also receives **Syslog** information from the device through a smart-serial connection.
+The connector also receives **Syslog** information from the device through a smart-serial connection.
 
 ### General page
 

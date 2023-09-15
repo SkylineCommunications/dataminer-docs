@@ -4,19 +4,19 @@ uid: Connector_help_ThinkAnalytics_Recommendation_Engine
 
 # ThinkAnalytics Recommendation Engine
 
-With this driver, it is possible to monitor logging files.
+With this connector, it is possible to monitor logging files.
 
 ## About
 
-This driver retrieves logging files, parses them, and gathers the extracted information into several tables for monitoring purposes via an SFTP connection. Recommendation information is also retrieved via an HTTP connection and stored in a table.
+This connector retrieves logging files, parses them, and gathers the extracted information into several tables for monitoring purposes via an SFTP connection. Recommendation information is also retrieved via an HTTP connection and stored in a table.
 
-The driver can work in 2 modes: *Application* and *Reporting.* The information retrieved in each of these modes and the way to configure these modes are discussed below.
+The connector can work in 2 modes: *Application* and *Reporting.* The information retrieved in each of these modes and the way to configure these modes are discussed below.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 **HTTP CONNECTION:**
 

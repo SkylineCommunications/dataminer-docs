@@ -4,25 +4,25 @@ uid: Connector_help_Viavi_Solutions_VSA_Streamer
 
 # Viavi Solutions VSA Streamer
 
-This driver monitors the activity of the Viavi Solutions VSA Streamer, a transport stream monitor.
+This connector monitors the activity of the Viavi Solutions VSA Streamer, a transport stream monitor.
 
 The Video Service Assurance (VSA) Streaming probe was developed by modifying the existing JDSU MVP and DTS video analytics to operate on a commercially available off-the-shelf server using a commercially available off-the-shelf network interface card.
 
 ## About
 
-This driver polls data from the device using an HTTP connection and allows the user to retrieve WMI data from the server.
+This connector polls data from the device using an HTTP connection and allows the user to retrieve WMI data from the server.
 
-The driver supports one board per element and receives SNMP traps from the device in order to update the Alarms status.
+The connector supports one board per element and receives SNMP traps from the device in order to update the Alarms status.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**       | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**       | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------------|---------------------|-------------------------|
 | 1.0.0.x          | One element per board | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 2.2.0.14                    |
 
@@ -32,7 +32,7 @@ The driver supports one board per element and receives SNMP traps from the devic
 
 #### HTTP connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -42,7 +42,7 @@ HTTP CONNECTION:
 
 #### SNMP Traps connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

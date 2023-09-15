@@ -8,7 +8,7 @@ The FS726T is a Netgear PROSAFET 24 PORT 10/100 Smart Switch with 2 Gigabit Port
 
 About
 
-This driver is intended to communicate with the device using SNMP commands.
+This connector is intended to communicate with the device using SNMP commands.
 
 ## Installation and configuration
 
@@ -16,7 +16,7 @@ This driver is intended to communicate with the device using SNMP commands.
 
 **SNMP CONNECTION**:
 
-\- **IP address/host**: the polling IP of the device eg *10.11.12.13*
+\- **IP address/host**: The polling IP of the device, e.g. *10.11.12.13*
 
 \- **Device address**: not used
 
@@ -38,6 +38,6 @@ Use this page to have access to general system information.
 
 Here it's available the **Interface Details** table where is possible to have information about the 24 10/100 Mbps and the 2 Gigabit Ports. The only parameter available to set is the **Admin State**.
 
-### Webinterface
+### Web Interface
 
 To have access to the device's configuration web page.

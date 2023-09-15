@@ -4,25 +4,25 @@ uid: Connector_help_Imagine_Communications_Landmark_PXF
 
 # Imagine Communications Landmark PXF
 
-The Imagine Communications Landmark PXF driver can be used to efficiently ingest playlists and check subtitle availability.
+The Imagine Communications Landmark PXF connector can be used to efficiently ingest playlists and check subtitle availability.
 
 ## About
 
-This driver can be used to parse the information present in the PXF files (XML data in PXF wrapper). This information consists of the events that are to be played out. Each playout event has a corresponding subtitle file (CHK file). The driver will also check if the corresponding subtitle file is available in the file system and then subsequently check for the defined languages present within the subtitle file.
+This connector can be used to parse the information present in the PXF files (XML data in PXF wrapper). This information consists of the events that are to be played out. Each playout event has a corresponding subtitle file (CHK file). The connector will also check if the corresponding subtitle file is available in the file system and then subsequently check for the defined languages present within the subtitle file.
 
-There are promo events in the PXF files that the driver will ignore in the program tables. It can take in up to four days of PXF files and will provide a summary of missing languages and files for the corresponding events on the "General" page.
+There are promo events in the PXF files that the connector will ignore in the program tables. It can take in up to four days of PXF files and will provide a summary of missing languages and files for the corresponding events on the "General" page.
 
-The driver provides a **Live DPI (Digital Program Insertion) Triggers** page, which contains the **SCTE35 Promo Live Table**. This table lists all the promos of the current day (Day 1).
+The connector provides a **Live DPI (Digital Program Insertion) Triggers** page, which contains the **SCTE35 Promo Live Table**. This table lists all the promos of the current day (Day 1).
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -32,7 +32,7 @@ The driver provides a **Live DPI (Digital Program Insertion) Triggers** page, wh
 
 #### Virtual Main Connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## Usage
 

@@ -9,7 +9,7 @@ The **ARTE Satellite Nodal Manager** makes it possible for multiple users to:
 - Control the antenna setup and monitor the real time signal.
 - Control mobile antennas.
 
-All of this is done through a Visio visual overview, which is essential for this driver.
+All of this is done through a Visio visual overview, which is essential for this connector.
 
 ## About
 
@@ -23,7 +23,7 @@ You can also monitor an already existing connection. This way you can quickly ch
 
 ### Creation
 
-This is a virtual driver, so no settings need to set during creation of the element.
+This is a virtual connector, so no settings need to set during creation of the element.
 
 ### Low Band Matrix
 
@@ -125,11 +125,11 @@ In order to create the spectrum files to monitor the signal, some items need to 
 
 ### L-Band Matrix Element Page
 
-On this page, you can select the L-Band DataMiner element that represents the matrix where settings will be applied. This matrix is the main item of the functionality of this driver. Its inputs and outputs are set according to the configurations made by the user via the Visio visual overview.
+On this page, you can select the L-Band DataMiner element that represents the matrix where settings will be applied. This matrix is the main item of the functionality of this connector. Its inputs and outputs are set according to the configurations made by the user via the Visio visual overview.
 
 Once the L-Band DataMiner element is selected, the referenced DataMiner ID and element ID are displayed, as is the number of inputs and outputs.
 
-You can only select L-Band Matrix elements using the **Novotronik MAS1000** driver with the **Production** version. This is already limited via the **Get L-Band Element** button.
+You can only select L-Band Matrix elements using the **Novotronik MAS1000** connector with the **Production** version. This is already limited via the **Get L-Band Element** button.
 
 ### L-Band Matrix Antennas Page
 
@@ -137,7 +137,7 @@ This page gives an overview of the configured antennas. These will be available 
 
 The configuration of this table is explained in the section *Installation and configuration*.
 
-The values in the table will result in the correct setting of the actions requested via the Visio visual overview. E.g. when the Vertical Low Backup needs to be used, the driver will select the setting in the **Antenna VLB Input ID** in order to know the **L-Band Matrix** **Input**.
+The values in the table will result in the correct setting of the actions requested via the Visio visual overview. E.g. when the Vertical Low Backup needs to be used, the connector will select the setting in the **Antenna VLB Input ID** in order to know the **L-Band Matrix** **Input**.
 
 ### L-Band Matrix Antenna Alerts Page
 
@@ -153,7 +153,7 @@ In addition, you can also create a DataMiner view using the name set in the **Po
 
 This page displays a list of all the inputs found on the L-Band element and the fixed antenna. When settings are configured in the **Antenna Table**, the link to the **Antenna Polarization**, **Input Band** and **Input Redundancy** is automatically set.
 
-The configuration of the LO Frequency with its minimum and maximum, as explained in *Installation and Configuration*, needs to be done manually. These values are needed in order for the driver to select the correct input when for example a Spectrum Analyzer has to monitor a specific signal requested by the '*Aligner'* request in the Visio visual overview.
+The configuration of the LO Frequency with its minimum and maximum, as explained in *Installation and Configuration*, needs to be done manually. These values are needed in order for the connector to select the correct input when for example a Spectrum Analyzer has to monitor a specific signal requested by the '*Aligner'* request in the Visio visual overview.
 
 ### L-Band Matrix Destinations Page
 
@@ -191,11 +191,11 @@ This page displays an overview of the equipment used by an antenna.
 
 ## Notes
 
-The Low Band Matrix must use the **Novotronik MAS1000** driver with the **Production** version.
+The Low Band Matrix must use the **Novotronik MAS1000** connector with the **Production** version.
 
-The ACUs must use the **Andrew** **APC100** driver with the **Production** version.
+The ACUs must use the **Andrew** **APC100** connector with the **Production** version.
 
-The driver supports following commands in the Visio visual overview:
+The connector supports following commands in the Visio visual overview:
 
 - *AFFECTER*
 - *LIBERER*

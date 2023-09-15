@@ -8,13 +8,13 @@ The **HDR07** is an HD/SD-SDI reclocking distribution amplifier.
 
 ## About
 
-The Axon HDR07 driver makes it possible to monitor and control an Axon HDR07 card.
+The Axon HDR07 connector makes it possible to monitor and control an Axon HDR07 card.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION**:
 
@@ -31,8 +31,4 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and requ
 
 ### General page
 
-This is the driver's only page. It provides an overview of the different information related to the card, and allows sets of certain parameters.
-
-## Notes
-
-N/A
+This is the connector's only page. It provides an overview of the different information related to the card, and allows sets of certain parameters.

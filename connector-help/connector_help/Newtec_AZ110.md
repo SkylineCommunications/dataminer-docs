@@ -4,7 +4,7 @@ uid: Connector_help_Newtec_AZ110
 
 # Newtec AZ110
 
-The AZ110 is a satellite modulator used for broadcast contribution, DSNG and distribution applications over satellite in compliance with the DVB standards. This driver allows you to monitor this device via SNMP.
+The AZ110 is a satellite modulator used for broadcast contribution, DSNG and distribution applications over satellite in compliance with the DVB standards. This connector allows you to monitor this device via SNMP.
 
 ## About
 
@@ -47,7 +47,7 @@ The AZ110 is a satellite modulator used for broadcast contribution, DSNG and dis
 
 #### Serial main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -62,7 +62,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver consists of the data pages detailed below.
+The element created with this connector consists of the data pages detailed below.
 
 ### General
 
@@ -99,7 +99,7 @@ Page buttons provide access to additional information and settings:
 
 ### Alarms
 
-This page contains the alarm status of the various functions of the driver. You can also clear the **Memorized Alarm Status**.
+This page contains the alarm status of the various functions of the connector. You can also clear the **Memorized Alarm Status**.
 
 ### Web Interface
 

@@ -4,21 +4,21 @@ uid: Connector_help_Work_Satcom_Redundancy_Switch_1+1
 
 # Work Satcom Redundancy Switch 1+1
 
-This driver is used to monitor and configure the redundancy switch by Work Satcom.
+This connector is used to monitor and configure the redundancy switch by Work Satcom.
 
 ## About
 
-This driver uses a serial connection to monitor the Work Satcom redundancy switch.
+This connector uses a serial connection to monitor the Work Satcom redundancy switch.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | SW Version RWA01.31         |
 
@@ -28,7 +28,7 @@ This driver uses a serial connection to monitor the Work Satcom redundancy switc
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -47,7 +47,7 @@ SERIAL CONNECTION:
 
 ### General
 
-Up to version 1.0.0.3 of the driver, this page contains three sections.
+Up to version 1.0.0.3 of the connector, this page contains three sections.
 
 - The first section displays the status and configuration of the device:
 

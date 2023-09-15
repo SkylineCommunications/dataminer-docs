@@ -4,21 +4,21 @@ uid: Connector_help_Blankom_HCB-200
 
 # Blankom HCB-200
 
-This is an SNMP-based driver used to monitor and configure the Blankcom HCB-200 controller.
+This is an SNMP-based connector used to monitor and configure the Blankcom HCB-200 controller.
 
 ## About
 
 The Blankom HCB-200 is a headend controller, which contains a redundant power supply and a TCP/IP server. It can send SNMP traps to an SNMP server.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ The Blankom HCB-200 is a headend controller, which contains a redundant power su
 
 #### Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION**:
 

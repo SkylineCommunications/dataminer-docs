@@ -34,7 +34,7 @@ This DataMiner connector was designed for active monitoring of Iggy's Ethernet I
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

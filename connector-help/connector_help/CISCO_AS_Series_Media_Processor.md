@@ -8,7 +8,7 @@ This protocol is used in order to monitor the Cisco AS Series platform (formerly
 
 ## About
 
-This driver can be used to monitor the **Cisco AS Series platform**.
+This connector can be used to monitor the **Cisco AS Series platform**.
 
 Via **SNMP**, a number of monitoring parameters are polled. A **serial** connection is used to send commands to the device over HTTP using the Spinnaker Message Service XML API.
 
@@ -16,15 +16,15 @@ As the device can also send messages (e.g. heartbeat messages and messages indic
 
 As the media processor is typically deployed on a Windows server machine, **WMI** is used to poll server information such as processor usage, memory usage, process info, etc.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -34,7 +34,7 @@ As the media processor is typically deployed on a Windows server machine, **WMI*
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -48,7 +48,7 @@ SNMP Settings:
 
 #### Serial connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -59,7 +59,7 @@ SERIAL CONNECTION:
 
 #### Smart Serial connection
 
-This driver uses a smart serial connection and requires the following input during element creation:
+This connector uses a smart serial connection and requires the following input during element creation:
 
 SMART SERIAL CONNECTION:
 

@@ -4,7 +4,7 @@ uid: Connector_help_CISCO_4G_LTE_NIM
 
 # CISCO 4G LTE NIM
 
-The CISCO 4G LTE NIM is a driver used to monitor and configure the CISCO 4G LTE Network Modules via SNMP.
+The CISCO 4G LTE NIM is a connector used to monitor and configure the CISCO 4G LTE Network Modules via SNMP.
 
 ## About
 
@@ -12,15 +12,15 @@ The CISCO 4G LTE NIM devices are 4G multimode LTE WWAN (Wireless Wide Area Netwo
 
 The main features offered by this solutions are network resiliency with greater speeds (up to 50 times higher than 3G links), while guaranteeing Quality of Service functions.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial Version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range**     | **Device Firmware Version** |
+| **Range**     | **Device Firmware Version** |
 |----------------------|-----------------------------|
 | 1.0.0.x \[SLC Main\] | Unknown                     |
 
@@ -30,7 +30,7 @@ The main features offered by this solutions are network resiliency with greater 
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

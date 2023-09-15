@@ -4,7 +4,7 @@ uid: Connector_help_Dell_VNX_Series
 
 # Dell VNX Series
 
-The **Dell VNX Series** driver is used to retrieve information from the Dell VNX disk management system. The driver communicates with the Dell VNX using the Navisphere command line interface.
+The **Dell VNX Series** connector is used to retrieve information from the Dell VNX disk management system. The connector communicates with the Dell VNX using the Navisphere command line interface.
 
 ## About
 
@@ -32,17 +32,17 @@ The **Dell VNX Series** driver is used to retrieve information from the Dell VNX
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 
-The driver communicates with the server using the Navisphere command line interface. For this purpose, the Navisphere executable must be present on the DMA running the driver.
+The connector communicates with the server using the Navisphere command line interface. For this purpose, the Navisphere executable must be present on the DMA running the connector.
 
 On the **General** page, the absolute path to the executable must be specified in the **NaviSECCli Executable** parameter. On this same page, the **IP Address**, **User** and **Password** for the device must also be filled in.
 
 ## How to use
 
-The element created with this driver consists of the data pages detailed below.
+The element created with this connector consists of the data pages detailed below.
 
 ### General
 

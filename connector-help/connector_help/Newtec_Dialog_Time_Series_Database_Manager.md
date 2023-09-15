@@ -36,10 +36,10 @@ After a new element has been created using this connector, the Dialog hub elemen
 
 To do so:
 
-1.  Go to the **General** page.
-2.  Click the **Refresh Elements** button to refresh the list of Dialog elements.
-3.  Use the drop-down list to select the element. All elements using the connector "Newtec Dialog Time Series Database" will be shown.
-4.  Apply your selection to add the element to the table.
+1. Go to the **General** page.
+1. Click the **Refresh Elements** button to refresh the list of Dialog elements.
+1. Use the drop-down list to select the element. All elements using the connector "Newtec Dialog Time Series Database" will be shown.
+1. Apply your selection to add the element to the table.
 
 ## Usage
 

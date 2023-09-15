@@ -12,17 +12,17 @@ This optimization is achieved by embedding and detecting a small message and a u
 
 The product reference of this CID Receiver is **CID0-1510**. The CID0-1510 is used to detect the Carrier Identification of a host carrier that has embedded the DVB-CID ETSI TS 103 129 standards-based Carrier ID technology.
 
-This driver retrieves and sets data via **SNMP**.
+This connector retrieves and sets data via **SNMP**.
 
-Ranges of the driver
+Ranges of the connector
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
 Supported firmware versions
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | S1100-B008                  |
 
@@ -30,7 +30,7 @@ Supported firmware versions
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -75,8 +75,4 @@ Following the alarm tables the page shows the **status LEDs** and the **relay st
 
 ### WebInterface
 
-The webinterface is meant to embed the **device webUI**. The **address** **of the host/webUI** has to be configured on the **General** page (**SNMP Configuration**), otherwise the webinterface defaults to localhost (127.0.0.1).
-
-## Notes
-
-N/A
+The web interface is meant to embed the **device webUI**. The **address** **of the host/webUI** has to be configured on the **General** page (**SNMP Configuration**), otherwise the web interface defaults to localhost (127.0.0.1).

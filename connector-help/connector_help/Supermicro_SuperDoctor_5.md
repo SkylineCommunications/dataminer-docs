@@ -4,23 +4,23 @@ uid: Connector_help_Supermicro_SuperDoctor_5
 
 # Supermicro SuperDoctor 5
 
-The **Supermicro SuperDoctor 5** driver is an SNMP-based driver that can be used to monitor and configure the **Supermicro SuperDoctor 5 Monitoring Platform**.
+The **Supermicro SuperDoctor 5** connector is an SNMP-based connector that can be used to monitor and configure the **Supermicro SuperDoctor 5 Monitoring Platform**.
 
 ## About
 
-This driver provides a monitoring and configuration interface for the **Supermicro SuperDoctor 5 Monitoring Platform**.
+This connector provides a monitoring and configuration interface for the **Supermicro SuperDoctor 5 Monitoring Platform**.
 
 The Supermicro SuperDoctor 5 Monitoring Platform can be used to monitor the system health and availability of hardware of target nodes in data centers in real time and provide alerts to administrators.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.1c                        |
 
@@ -30,7 +30,7 @@ The Supermicro SuperDoctor 5 Monitoring Platform can be used to monitor the syst
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

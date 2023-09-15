@@ -4,13 +4,13 @@ uid: Connector_help_Skyline_Flow_Collector
 
 # Skyline Flow Collector
 
-The **Skyline Flow Collector** driver can be used to capture and aggregate Netflow data.
+The **Skyline Flow Collector** connector can be used to capture and aggregate Netflow data.
 
 ## About
 
 Cisco Netflow services provide network administrators with access to IP flow information from their network. Network elements such as routers and switches gather flow data and export it to the Netflow collector. The flow data includes details such as IP addresses, packet and byte counts, timestamps, types of services (ToS), applications ports, and input and output interfaces.
 
-The driver uses a smart-serial connection to receive Netflow data packets from the devices.
+The connector uses a smart-serial connection to receive Netflow data packets from the devices.
 
 Flows that fall within the same time frame and have the same key properties (i.e. the same source IP, source port, destination IP, destination port, etc.) are combined in one single summarized flow. The flows are then aggregated and stored in the database with three levels of detail:
 
@@ -22,15 +22,15 @@ Before the detail 1 flows are written into the database, a top talkers optimizat
 
 All (aggregated) flows are stored in the Elasticsearch database. The data can be visualized in DataMiner dashboards.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Netflow v5, v9 and IPFIX    |
 
@@ -40,7 +40,7 @@ All (aggregated) flows are stored in the Elasticsearch database. The data can be
 
 #### Smart-Serial Main connection
 
-This driver uses a smart-serial connection and requires the following input during element creation:
+This connector uses a smart-serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -134,7 +134,7 @@ This page allows you to configure the mapping between an IP protocol/port and an
 
 This page provides an overview of the mapping between the Autonomous System Number (ASN) and its name.
 
-The driver also keeps track of the conversations between source and destinations. These conversations are stored in the AS Conversation Mapping Table.
+The connector also keeps track of the conversations between source and destinations. These conversations are stored in the AS Conversation Mapping Table.
 
 The direction is not taken into account: traffic from AS1 to AS2 is considered the same conversation as traffic from AS2 to AS1.
 
@@ -147,4 +147,4 @@ On this page, you can configure the default initial settings that will be used f
 
 ## Notes
 
-Netflow packets (raw bytes) are immediately added to the incoming data queue. This queue has a limited size of 200,000 *packets*. When this queue is full, it means that the driver was not able to process previous packets in time and new incoming data is dropped.
+Netflow packets (raw bytes) are immediately added to the incoming data queue. This queue has a limited size of 200,000 *packets*. When this queue is full, it means that the connector was not able to process previous packets in time and new incoming data is dropped.

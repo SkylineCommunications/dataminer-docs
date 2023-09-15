@@ -4,7 +4,7 @@ uid: Connector_help_Gamatronic_UPS_GMaCi
 
 # Gamatronic UPS GMaCi
 
-The **UPS GMaCi** is a UPS monitoring card from Gamatronic. This driver provides an interface for the card in DataMiner.
+The **UPS GMaCi** is a UPS monitoring card from Gamatronic. This connector provides an interface for the card in DataMiner.
 
 ## About
 
@@ -12,7 +12,7 @@ The **GMaCi** card for UPS systems allows continuous monitoring and control of t
 
 ## Installation and configuration
 
-This driver primarily uses an SNMP connection and needs the following information:
+This connector primarily uses an SNMP connection and needs the following information:
 
 **SNMP CONNECTION**:
 
@@ -26,9 +26,9 @@ This driver primarily uses an SNMP connection and needs the following informatio
 
 ## Usage
 
-The layout of the driver is similar to that the web interface, but there is an additional page named **General**, which contains the **Identification** parameters from the **UPS** page, in order to reduce the number of parameters on the latter.
+The layout of the connector is similar to that the web interface, but there is an additional page named **General**, which contains the **Identification** parameters from the **UPS** page, in order to reduce the number of parameters on the latter.
 
-Since the SNMP interface does not allow for reading or editing of values found on the **Configuration** page and subpages from the **web interface**, these values are not included in the driver.
+Since the SNMP interface does not allow for reading or editing of values found on the **Configuration** page and subpages from the **web interface**, these values are not included in the connector.
 
 ### UPS
 

@@ -16,16 +16,16 @@ The **1.1.0.x range** is backwards compatible with the initial range, but was ex
 
 There is an **offload mechanism** available to store the created tickets on the local system as a CSV file.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                           | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                           | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                           | No                  | Yes                     |
 | 1.1.0.x          | New firmware based on 1.0.0.x (see below) | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | v1                          |
 | 1.1.0.x          | v2                          |
@@ -36,7 +36,7 @@ There is an **offload mechanism** available to store the created tickets on the 
 
 #### HTTP main connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

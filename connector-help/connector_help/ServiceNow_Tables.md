@@ -4,21 +4,21 @@ uid: Connector_help_ServiceNow_Tables
 
 # ServiceNow Tables
 
-The ServiceNow Tables protocol is a DataMiner driver used to connect to ServiceNow Web API and retrieve the information stored in ServiceNow Tables.
+The ServiceNow Tables protocol is a DataMiner connector used to connect to ServiceNow Web API and retrieve the information stored in ServiceNow Tables.
 
 ## About
 
-The ServiceNow Tables protocol is an HTTP driver. This protocol keeps a record of different ServiceNow Tables and polls them automatically every certain number of seconds or manually by customer request. For each ServiceNow Table this protocol allows to register different susbcribers. A subscriber is another DataMiner element that will be notified each time its associated ServiceNow Table is polled.
+The ServiceNow Tables protocol is an HTTP connector. This protocol keeps a record of different ServiceNow Tables and polls them automatically every certain number of seconds or manually by customer request. For each ServiceNow Table this protocol allows to register different susbcribers. A subscriber is another DataMiner element that will be notified each time its associated ServiceNow Table is polled.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial Version | No                  | True                    |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ The ServiceNow Tables protocol is an HTTP driver. This protocol keeps a record o
 
 #### HTTP Main Connection
 
-This driver uses a HTTP connection and requires the following input during element creation:
+This connector uses a HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

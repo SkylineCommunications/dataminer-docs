@@ -4,25 +4,25 @@ uid: Connector_help_Rohde_Schwarz_NetCCU800_1+1
 
 # Rohde Schwarz NetCCU800 1+1
 
-This driver is developed for devices such as the **Rohde Schwarz NetCCU800 1+1**. It polls general and transmitter-specific parameters.
+This connector is developed for devices such as the **Rohde Schwarz NetCCU800 1+1**. It polls general and transmitter-specific parameters.
 
 ## About
 
-This driver polls information about the **Rohde Schwarz NetCCU800 1+1** in general and about its transmitters. For each transmitter, a DVE is created.
+This connector polls information about the **Rohde Schwarz NetCCU800 1+1** in general and about its transmitters. For each transmitter, a DVE is created.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 2.0.0.x \[SLC Main\] | Driver review   | Yes                 | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 2.0.0.x          | Unknown                     |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol**                                                                          | **Description**                                     |
 |------------------------------------------------------------------------------------------------|-----------------------------------------------------|
@@ -35,7 +35,7 @@ This driver polls information about the **Rohde Schwarz NetCCU800 1+1** in gener
 
 #### SNMP connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -97,7 +97,7 @@ This page displays more detailed transmitter status information.
 
 The **2.0.0.15** range of the Rohde Schwarz NetCCU800 1+1 driver supports the usage of DCF and can only be used on a DMA with **9.0.3** as the minimum version.
 
-Connectivity for all exported drivers is managed by this driver.
+Connectivity for all exported connectors is managed by this connector.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 

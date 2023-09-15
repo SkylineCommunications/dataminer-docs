@@ -4,11 +4,11 @@ uid: Connector_help_Delta_Power_Solutions_Orion_controller
 
 # Delta Power Solutions Orion controller
 
-This driver can be used to monitor and configure the Orion Controller from Delta Power Solutions.
+This connector can be used to monitor and configure the Orion Controller from Delta Power Solutions.
 
 It uses SNMP to communicate with the device. In version 1.0.1.x, HTTP is used to retrieve the log file from the system.
 
-Note: This driver **requires .Net Framework 4.0** or higher.
+Note: This connector **requires .Net Framework 4.0** or higher.
 
 ## About
 
@@ -39,7 +39,7 @@ Note: This driver **requires .Net Framework 4.0** or higher.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -53,7 +53,7 @@ SNMP Settings:
 
 HTTP secondary connection \[only available on version 1.0.1.x\]
 
-This driver also uses, as a secondary connection, an HTTP connection and requires the following input during element creation:
+This connector also uses, as a secondary connection, an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -63,7 +63,7 @@ HTTP CONNECTION:
 
 ### Access configuration
 
-In range **1.0.1.x** of the driver, you need to specify the necessary information in the **Access Configuration** section on the **General** page, so that the driver can connect with the device and retrieve data stored in a log file. You need to specify the credentials (username and password), the exact name of the log file (e.g. LOG_Data20Log\_ ) and the number of the log file (e.g. 15).
+In range **1.0.1.x** of the connector, you need to specify the necessary information in the **Access Configuration** section on the **General** page, so that the connector can connect with the device and retrieve data stored in a log file. You need to specify the credentials (username and password), the exact name of the log file (e.g. LOG_Data20Log\_ ) and the number of the log file (e.g. 15).
 
 ### Web Interface
 
@@ -109,6 +109,6 @@ This page shows the Control Event Table.
 
 ## Notes
 
-In version 1.0.1.x, when the element goes into timeout, it will wait until the log file has been retrieved from the device and all the available data in the file has been added in the element. However, for this to work, the necessary settings need to be configured on the General page. See "Access configuration" above. After that, the driver will search for the next 5 files, trying to fetch all the values available. If it has tried to fetch the next 5 files but could not find any value, the normal flow will resume.
+In version 1.0.1.x, when the element goes into timeout, it will wait until the log file has been retrieved from the device and all the available data in the file has been added in the element. However, for this to work, the necessary settings need to be configured on the General page. See "Access configuration" above. After that, the connector will search for the next 5 files, trying to fetch all the values available. If it has tried to fetch the next 5 files but could not find any value, the normal flow will resume.
 
-**Note**: The driver will only insert the values in the log file if these are available in the Measurement table (on the Measurement subpage of the General page).
+**Note**: The connector will only insert the values in the log file if these are available in the Measurement table (on the Measurement subpage of the General page).

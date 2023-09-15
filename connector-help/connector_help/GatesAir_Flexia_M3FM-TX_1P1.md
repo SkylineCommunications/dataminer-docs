@@ -8,23 +8,23 @@ The GatesAir Flexiva M3M-TX 1P1 is a **solid-state transmitter** that provides a
 
 ## About
 
-This is an **SNMP**-based driver for the GatesAir Flexiva M3M-TX 1P1.
+This is an **SNMP**-based connector for the GatesAir Flexiva M3M-TX 1P1.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**        |
+| **Range** | **Description**        |
 |------------------|------------------------|
 | 1.0.0.x          | Initial version        |
 | 1.0.1.x          | Added support for DVEs |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**                    |
+| **Range** | **Device Firmware Version**                    |
 |------------------|------------------------------------------------|
 | 1.0.0.x          | 02.03.0139 / 861-1151-162 S (software version) |
 | 1.0.1.x          | 02.03.0139 / 861-1151-162 S (software version) |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol**                           | **Description**    |
 |-------------------------------------------------|--------------------|
@@ -37,7 +37,7 @@ This is an **SNMP**-based driver for the GatesAir Flexiva M3M-TX 1P1.
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -51,9 +51,9 @@ SNMP Settings:
 
 ## Usage
 
-This driver monitors basic parameters. It can also receive traps from the device, so that values can be displayed immediately.
+This connector monitors basic parameters. It can also receive traps from the device, so that values can be displayed immediately.
 
-The driver contains 4 pages and a page with the device web interface.
+The connector contains 4 pages and a page with the device web interface.
 
 ### General Page
 

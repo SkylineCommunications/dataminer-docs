@@ -4,17 +4,17 @@ uid: Connector_help_Belgacom_Ethane_Distribution_Monitoring
 
 # Belgacom Ethane Distribution Monitoring
 
-The **Belgacom Ethane Distribution Monitoring** driver handles information sent by the current monitoring tool that monitors the Belgacom distribution network for Broadcast TV.
+The **Belgacom Ethane Distribution Monitoring** connector handles information sent by the current monitoring tool that monitors the Belgacom distribution network for Broadcast TV.
 
 ## About
 
-This driver uses an **SNMP** interface in order to receive traps sent from the monitoring tool.
+This connector uses an **SNMP** interface in order to receive traps sent from the monitoring tool.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP Connection:**
 

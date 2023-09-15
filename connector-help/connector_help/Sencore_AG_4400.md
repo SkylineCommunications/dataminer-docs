@@ -8,17 +8,17 @@ The **Sencore AG 4400 driver** can be used to view real-time parameters from the
 
 ## About
 
-The driver needs an SNMP connection to retrieve data from the device and to perform sets on it.
+The connector needs an SNMP connection to retrieve data from the device and to perform sets on it.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 2.3.3.BR443.r12615          |
 
@@ -28,7 +28,7 @@ The driver needs an SNMP connection to retrieve data from the device and to perf
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

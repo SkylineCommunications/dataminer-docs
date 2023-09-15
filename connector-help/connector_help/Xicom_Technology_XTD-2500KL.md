@@ -8,17 +8,17 @@ The XTD-2500KL is a compact antenna-mounted high-power amplifier designed for ap
 
 ## About
 
-The Xicom Technology XTD-2500KL driver is based on the driver XTD-400K from the same vendor. The main difference between these drivers is that the Xicom Technology XTD-2500KL driver uses a single command to retrieve and display the Helix voltage and current for both amplifier tubes. It was also modified to have cleaner code and updated code for readability and usability.
+The Xicom Technology XTD-2500KL connector is based on the connector XTD-400K from the same vendor. The main difference between these drivers is that the Xicom Technology XTD-2500KL connector uses a single command to retrieve and display the Helix voltage and current for both amplifier tubes. It was also modified to have cleaner code and updated code for readability and usability.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ The Xicom Technology XTD-2500KL driver is based on the driver XTD-400K from the 
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

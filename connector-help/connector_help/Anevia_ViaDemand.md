@@ -9,30 +9,29 @@ You can also edit the settings of the tasks.
 
 ## About
 
-The driver is the same as the scheduled play of the webpage, it gives an overview of all the tasks that are scheduled to play and the possibility to create a new task or edit them.
+The connector is the same as the scheduled play of the webpage, it gives an overview of all the tasks that are scheduled to play and the possibility to create a new task or edit them.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a **HTTP** connection and needs following user information:
+This connector uses a **HTTP** connection and needs following user information:
 
 **SERIAL CONNECTION**:
 
-\- **IP address/host**: the polling IP or URL of the destination eg *10.24.5.10*
+- **IP address/host**: the polling IP or URL of the destination eg *10.24.5.10*
+- **IP port**: the port of the destination eg *80*
 
-\- **IP port**: the port of the destination eg *80*
-
-The credentials for authorization are set on the **General page** by clicking the pagebutton **Credentials**.
+The credentials for authorization are set on the **General page** by clicking the page button **Credentials**.
 There you can set the **username** and **password** wich are default *admin* and *paris*.
 
 ## Usage
 
 ### General
 
-This is the same as the Anevia Soap System driver.
+This is the same as the Anevia Soap System connector.
 
-On this page you get an overview of some general server paramaters.
+On this page you get an overview of some general server parameters.
 You can view the **RAM memory** parameters, **API version** and CPU usage.
 When you press the **Credentials** button, you can set your username en password to communicate with the server.
 On this page, you also have the ability to reboot your server.
@@ -41,7 +40,7 @@ On this page, you also have the ability to reboot your server.
 
 On this page you can export and import configuration from/to the device. The status of the export/import can be seen in the **Import/Export Status** parameter.
 
-The exported configurations are stored under the folder "C:\Skyline DataMiner\Documents\Anevia ViaDemand".
+The exported configurations are stored under the folder `C:\Skyline DataMiner\Documents\Anevia ViaDemand`.
 
 ### Tasks
 
@@ -53,13 +52,13 @@ On the **Edit** page you can fill in all the settings for the task and then choo
 
 ### Disk Overview
 
-This page is also in the Anevia Soap System driver.
+This page is also in the Anevia Soap System connector.
 
 On this page you can find information about the used memory of the hard discs.
 
-### Intefaces
+### Interfaces
 
-This page is also in the Anevia Soap System driver.
+This page is also in the Anevia Soap System connector.
 
 On this page you can find information about the different interfaces that you can use to play a scheduled task.
 

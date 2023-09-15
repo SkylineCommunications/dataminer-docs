@@ -4,17 +4,17 @@ uid: Connector_help_Arris_GT-3
 
 # Arris GT-3
 
-With this driver, it is possible to monitor **Arris GT-3** devices with HTTP.
+With this connector, it is possible to monitor **Arris GT-3** devices with HTTP.
 
 ## About
 
-This driver is used to monitor the **Arris GT-3** Trancoder.
+This connector is used to monitor the **Arris GT-3** Transcoder.
 
 ## Installation and configuration
 
 ### Creation
 
-This is an HTTP driver. The IP and port need to be configured during creation of the element.
+This is an HTTP connector. The IP and port need to be configured during creation of the element.
 
 **HTTP CONNECTION**:
 

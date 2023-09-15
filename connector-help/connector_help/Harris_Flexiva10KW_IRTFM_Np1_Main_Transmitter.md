@@ -4,19 +4,19 @@ uid: Connector_help_Harris_Flexiva10KW_IRTFM_Np1_Main_Transmitter
 
 # Harris Flexiva10KW IRTFM Np1 Main Transmitter
 
-This driver can be used to gather information from the Harris Flexiva10KW IRTFM Np1 main transmitters. It is exported by the [Harris Flexiva10KW IRTFM Np1](xref:Connector_help_Harris_Flexiva10KW_IRTFM_Np1) parent driver.
+This connector can be used to gather information from the Harris Flexiva10KW IRTFM Np1 main transmitters. It is exported by the [Harris Flexiva10KW IRTFM Np1](xref:Connector_help_Harris_Flexiva10KW_IRTFM_Np1) parent connector.
 
 ## About
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.1.x          | N/A                         |
 
 ## Configuration
 
-This driver is used by DVEs that are **automatically created** by the parent element using the [Harris Flexiva10KW IRTFM Np1](xref:Connector_help_Harris_Flexiva10KW_IRTFM_Np1) driver.
+This connector is used by DVEs that are **automatically created** by the parent element using the [Harris Flexiva10KW IRTFM Np1](xref:Connector_help_Harris_Flexiva10KW_IRTFM_Np1) driver.
 
 ## Usage
 

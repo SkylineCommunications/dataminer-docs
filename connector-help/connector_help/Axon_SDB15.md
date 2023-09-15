@@ -4,17 +4,17 @@ uid: Connector_help_Axon_SDB15
 
 # Axon SDB15
 
-This driver is used to monitor the **Axon SDB15** Audio Embedder.
+This connector is used to monitor the **Axon SDB15** Audio Embedder.
 
 ## About
 
-This driver uses **SNMP** in order to display information and configure settings of the device.
+This connector uses **SNMP** in order to display information and configure settings of the device.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 
@@ -29,7 +29,7 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and requ
 
 ## Usage
 
-The Axon SDB15 driver has the following pages: **Main View**, **General Info**, **Settings** and **Events**.
+The Axon SDB15 connector has the following pages: **Main View**, **General Info**, **Settings** and **Events**.
 
 ### Main View / General Info
 

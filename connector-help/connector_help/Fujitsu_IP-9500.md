@@ -4,7 +4,7 @@ uid: Connector_help_Fujitsu_IP-9500
 
 # Fujitsu IP-9500
 
-The Fujitsu IP-9500 driver has been designed to monitor IP-9500 high-performance encoder/decoder devices. The Fujitsu IP-9500 is an audio/video codec that utilizes advanced MPEG-4 AVC (H.264) encoding to perform real-time transmission of HDTV at low bit rates over DVB and broadband IP networks.
+The Fujitsu IP-9500 connector has been designed to monitor IP-9500 high-performance encoder/decoder devices. The Fujitsu IP-9500 is an audio/video codec that utilizes advanced MPEG-4 AVC (H.264) encoding to perform real-time transmission of HDTV at low bit rates over DVB and broadband IP networks.
 
 ## About
 
@@ -12,22 +12,22 @@ Applying the latest MPEG-4 AVC (H.264) video processing algorithms, IP-9500D can
 
 IP-9500D utilizes auto-sensing 10T/100T/1G Ethernet for IP connectivity as well as ASI I/O ports for connecting to DVB networks. IP-9500D also provides industry standard HD-SDI (SD-SDI) and HDMI I/Os for connecting to HDTV (SDTV). Operating with an IP-9500 encoder, IP-9500D is mainly utilized for delay-sensitive ENG applications. A bidirectional voice intercom's capability is provided across broadband networks for interactive communication among remote HQ and local branches.
 
-This driver displays information on different pages, as described in the **Usage** section of this document.
+This connector displays information on different pages, as described in the **Usage** section of this document.
 
-The driver manages independent counters, and a reset button is available to clear the content of these values as well as the internal counters of the web page of the device.
+The connector manages independent counters, and a reset button is available to clear the content of these values as well as the internal counters of the web page of the device.
 
-From version 1.0.0.2, the **DataMiner Connectivity Framework** has been implemented in the driver.
+From version 1.0.0.2, the **DataMiner Connectivity Framework** has been implemented in the connector.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**  | **DCF Implementation** | **Cassandra Complaint** |
+| **Range**     | **Description**  | **DCF Implementation** | **Cassandra Complaint** |
 |----------------------|------------------|------------------------|-------------------------|
 | 1.0.0.x              | Initial version  | Yes                    | Yes                     |
 | 1.0.1.x \[SLC Main\] | Based on 1.0.0.3 | Yes                    | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.0                         |
 | 1.0.1.x          | 1.0                         |
@@ -42,7 +42,7 @@ The data is retrieved using multiple timers with polling intervals of 30 seconds
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

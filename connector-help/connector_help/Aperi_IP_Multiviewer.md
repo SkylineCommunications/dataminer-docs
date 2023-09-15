@@ -8,18 +8,18 @@ The Aperi IP Multiviewer is an FPGA-based application designed to run on an Aper
 
 ## About
 
-This driver collects information from the device using an HTTP connection. It uses the **REST API** to get and set all parameters associated with this type of card.
+This connector collects information from the device using an HTTP connection. It uses the **REST API** to get and set all parameters associated with this type of card.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**         | **Description**                | **DCF Integration** | **Cassandra Compliant** |
+| **Range**         | **Description**                | **DCF Integration** | **Cassandra Compliant** |
 |--------------------------|--------------------------------|---------------------|-------------------------|
 | 1.0.0.x                  | Initial version.               | No                  | Yes                     |
-| 1.0.1.x **\[SLC Main\]** | Streamlined all Aperi drivers. | No                  | Yes                     |
+| 1.0.1.x **\[SLC Main\]** | Streamlined all Aperi connectors. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.0.8                       |
 | 1.0.1.x          | 1.0.8                       |
@@ -30,7 +30,7 @@ This driver collects information from the device using an HTTP connection. It us
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

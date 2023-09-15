@@ -4,24 +4,24 @@ uid: Connector_help_Anacom_AnaSat_C_Serial
 
 # AnaCom AnaSat C Serial
 
-The AnaCom AnaSat C Serial driver has been designed to monitor and manage an AnaCom transceiver using serial RS-485 connection via packet mode.
+The AnaCom AnaSat C Serial connector has been designed to monitor and manage an AnaCom transceiver using serial RS-485 connection via packet mode.
 
 ## About
 
 The AnaSat -C VSAT series C-Band transceivers are suited for SCPC, MCPC and DAMA applications, transmitting in the 6 Ghz frequency range and receive in the 4 Ghz range.
 
-This driver uses a serial communication and it has been designed to work using packet mode transmision, through it, its possible to manage and visualize the internal values of the device and stablish an alarming monitor system.
+This connector uses a serial communication and it has been designed to work using packet mode transmission, through it, its possible to manage and visualize the internal values of the device and stablish an alarming monitor system.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                 | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                 | **DCF Integration** | **Cassandra Compliant** |
 |------------------|---------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial Version - Serial RS-232 | No                  | No                      |
 | 2.0.0.x          | Initial Version - Serial RS-485 | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.0                         |
 | 2.0.0.x          | 1.0                         |
@@ -30,7 +30,7 @@ This driver uses a serial communication and it has been designed to work using p
 
 ### Creation
 
-This driver uses a serial connection and requieres the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION
 

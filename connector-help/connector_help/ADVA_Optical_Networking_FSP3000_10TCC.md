@@ -4,17 +4,17 @@ uid: Connector_help_ADVA_Optical_Networking_FSP3000_10TCC
 
 # ADVA Optical Networking FSP3000 10TCC
 
-The **ADVA Optical Networking FSP3000** is an optical data transport solution. This driver can be used to monitor and control a **10TCC** card.
+The **ADVA Optical Networking FSP3000** is an optical data transport solution. This connector can be used to monitor and control a **10TCC** card.
 
 ## About
 
-The **ADVA Optical Networking FSP3000** is an extensable chassis with multiple slots. Each slot can contain a different type of extension card. This driver is especially meant for the **10TCC** card.
+The **ADVA Optical Networking FSP3000** is an extensible chassis with multiple slots. Each slot can contain a different type of extension card. This connector is especially meant for the **10TCC** card.
 
-This driver requires an element of protocol "**ADVA Optical Networking FSP3000**" with the same polling IP to function. The purpose of that element is to retrieve the entity IDs of the different components on this card, i.e. channels. The entity ID is used in the SNMP OID in order to succesfully retrieve data from this card.
+This connector requires an element of protocol "**ADVA Optical Networking FSP3000**" with the same polling IP to function. The purpose of that element is to retrieve the entity IDs of the different components on this card, i.e. channels. The entity ID is used in the SNMP OID in order to successfully retrieve data from this card.
 
 All information is retrieved using the SNMP protocol.
 
-### Ranges of the driver
+### Version Info
 
 <table>
 <colgroup>
@@ -47,9 +47,9 @@ All information is retrieved using the SNMP protocol.
 </tbody>
 </table>
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | N/A                         |
 | 2.0.0.x          | All firmware versions       |
@@ -60,12 +60,12 @@ All information is retrieved using the SNMP protocol.
 
 SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
 - **IP address/host**: The polling IP of the device.
-- **Device address**: \[Required. Format: "\<chassis id\>.\<slot id\>", e.g. "1.19".\]
+- **Device address**: Required. Format: "\<chassis id\>.\<slot id\>", e.g. "1.19".
 
 SNMP Settings:
 
@@ -97,7 +97,3 @@ Some of the channels also display configuration parameters.
 ### Embedded Web Server
 
 Displays the web interface of the device. Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.
-
-## Notes
-
-N/A

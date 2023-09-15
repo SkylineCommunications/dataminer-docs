@@ -4,7 +4,7 @@ uid: Connector_help_Belgacom_RTES_Farm
 
 # Belgacom RTES Farm
 
-With this driver it is possible to monitor multiple **Verimatrix RTES Pairs**.
+With this connector it is possible to monitor multiple **Verimatrix RTES Pairs**.
 
 ## About
 
@@ -14,24 +14,24 @@ The **Belgacom RTES Farm** monitors multiple redundant pairs of **Verimatrix RTE
 
 ### Creation
 
-The Belgacom RTES Farm is a **virtual** driver, so no user information is required during element creation.
+The Belgacom RTES Farm is a **virtual** connector, so no user information is required during element creation.
 
 ### Configuration
 
 To select all the **Verimatrix RTES Pairs** that are to be monitored:
 
-1.  Go to the **General** page.
-2.  Click the **Refresh RTES** button.
-3.  Select the desired **RTES Pair** in the drop-down list.
-4.  Click the **Add RTES** button.
-5.  Repeat steps 3 and 4 for all the **RTES Pairs** you want to add.
+1. Go to the **General** page.
+1. Click the **Refresh RTES** button.
+1. Select the desired **RTES Pair** in the drop-down list.
+1. Click the **Add RTES** button.
+1. Repeat steps 3 and 4 for all the **RTES Pairs** you want to add.
 
 To configure the **CISCO Manager:**
 
 1.  Go to the **Switch** page.
-2.  Click the **Refresh Discreets** button.
-3.  Select Primary and Backup Switches from the drop-down list.
-4.  Select the primary and secundary ports from the Switches to access the main and backup router.
+1.  Click the **Refresh Discreets** button.
+1.  Select Primary and Backup Switches from the drop-down list.
+1.  Select the primary and secondary ports from the Switches to access the main and backup router.
 
 After configuring the Primary and Backup Switches on the **RTES Status** page, you can configure the switch ports for which each RTE Pair is to monitor the transmission and receiving bit rate.
 

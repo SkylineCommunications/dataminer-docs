@@ -4,26 +4,26 @@ uid: Connector_help_Miteq_UPC-A
 
 # Miteq UPC-A
 
-The **Miteq UPC-A** driver allows monitoring and configuration of this uplink power control system through its serial interface.
+The **Miteq UPC-A** connector allows monitoring and configuration of this uplink power control system through its serial interface.
 
 ## About
 
-This serial driver sends commands to the device in order to receive data. It is an implementation of the **IEEE-488 Message protocol** supported by this device.
+This serial connector sends commands to the device in order to receive data. It is an implementation of the **IEEE-488 Message protocol** supported by this device.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a serial connection and needs the following user information:
+This connector uses a serial connection and requires the following input during element creation:
 
 **SERIAL CONNECTION:**
 
-- **Type of port**: TCP/IP (Automatically filled in by the driver).
+- **Type of port**: TCP/IP (Automatically filled in by the connector).
 - **IP address/host**: The polling IP of the device.
 - **IP port**: Port used for the device.
 - **Bus address**: Bus address for the device.
 
-No further configuration is necessary in order for this driver to work.
+No further configuration is necessary in order for this connector to work.
 
 ## Usage
 

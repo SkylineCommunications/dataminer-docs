@@ -4,21 +4,21 @@ uid: Connector_help_Middle_Atlantic_UPS-S1500R
 
 # Middle Atlantic UPS-S1500R
 
-The Middle Atlantic UPS-S1500R driver can be used to monitor and configure private UPS parameters and general parameters of the device. This driver is used to monitor and configure the UPS-S1500R rack-mounted uninterruptible power supply (UPS) from Middle Atlantic Products, which can provide backup power for any device.
+The Middle Atlantic UPS-S1500R connector can be used to monitor and configure private UPS parameters and general parameters of the device. This connector is used to monitor and configure the UPS-S1500R rack-mounted uninterruptible power supply (UPS) from Middle Atlantic Products, which can provide backup power for any device.
 
 ## About
 
 The UPS-S1500R driver was created to poll general and also internal information, such as information on the **Input** and **Output**, **Configuration** and **Control**, and the **Battery**.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.0.9                       |
 
@@ -28,7 +28,7 @@ The UPS-S1500R driver was created to poll general and also internal information,
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

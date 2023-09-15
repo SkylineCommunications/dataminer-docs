@@ -4,7 +4,7 @@ uid: Connector_help_Orban_Optimod_9300_AM
 
 # Orban Optimod 9300 AM
 
-**Optimod 9300 AM** is an audio processing device that can be used in monophonic AM shortwave, medium wave and long wave broadcasts. This driver allows you to monitor this device.
+**Optimod 9300 AM** is an audio processing device that can be used in monophonic AM shortwave, medium wave and long wave broadcasts. This connector allows you to monitor this device.
 
 ## About
 
@@ -32,7 +32,7 @@ uid: Connector_help_Orban_Optimod_9300_AM
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -58,7 +58,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver consists of the following data pages:
+The element created with this connector consists of the following data pages:
 
 - **General**: Displays general device information such as Device Name, Software Version, Boot Date, etc.
 - **SNMP Manager**: Displays the primary and secondary SNMP manager IPs and ports.

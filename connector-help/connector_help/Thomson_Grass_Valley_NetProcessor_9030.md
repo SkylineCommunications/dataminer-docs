@@ -8,18 +8,18 @@ The **Thomson Grass Valley NetProcessor 9030** is a solution that offers multipl
 
 ## About
 
-The driver is intended to be compatible with the NetProcessor 9030 and NetProcessor 9010. It uses SNMP to monitor and supervise all the relevant parameters.
+The connector is intended to be compatible with the NetProcessor 9030 and NetProcessor 9010. It uses SNMP to monitor and supervise all the relevant parameters.
 
-### Ranges of the driver
+### Version Info
 
 | **Driver range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 | 2.0.0.x          | New firmware    | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 2.0.0.x          | 04.21.009 CG                |
 
@@ -29,7 +29,7 @@ The driver is intended to be compatible with the NetProcessor 9030 and NetProces
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION
 

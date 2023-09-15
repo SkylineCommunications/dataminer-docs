@@ -8,7 +8,7 @@ Comtech EF Data's MBT-5000 L-Band Up/Down Converter System provides frequency co
 
 ## About
 
-With this driver, it is possible to monitor and configure **CEFD MBT-5000** devices with a **serial** connection.
+With this connector, it is possible to monitor and configure **CEFD MBT-5000** devices with a **serial** connection.
 
 The different parameters from the device are displayed on multiple pages following the web interface.
 

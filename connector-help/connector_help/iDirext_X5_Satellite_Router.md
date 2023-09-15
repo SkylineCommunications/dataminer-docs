@@ -4,7 +4,7 @@ uid: Connector_help_iDirext_X5_Satellite_Router
 
 # iDirect X5 Satellite Router
 
-This is a serial driver that uses Telnet to retrieve certain parameters of the router.
+This is a serial connector that uses Telnet to retrieve certain parameters of the router.
 
 ## About
 
@@ -12,7 +12,7 @@ Several parameters have been pointed out to be retrieved using a Telnet connecti
 
 ## Installation and configuration
 
-This driver uses a serial connection and needs the following user information:
+This connector uses a serial connection and requires the following input during element creation:
 
 **SERIAL Connection**:
 

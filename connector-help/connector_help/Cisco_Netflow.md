@@ -4,23 +4,23 @@ uid: Connector_help_Cisco_Netflow
 
 # Cisco Netflow
 
-The **Cisco Netflow** driver can be used to capture and aggregate netflow data.
+The **Cisco Netflow** connector can be used to capture and aggregate netflow data.
 
 ## About
 
 Cisco Netflow services provide network administrator with access to IP flow information from their network. Network elements such as routers and switches gather flow data and export it to Netflow collector. The flow data include details such as IP addresses, packet, and byte counts, timestamps, Type of Services (ToS), applications ports, input and output interfaces.
 
-The driver uses a smart-serial connection to receive netflow datapackets from the devices.
+The connector uses a smart-serial connection to receive netflow datapackets from the devices.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Netflow v5, v9 and IPFIX    |
 
@@ -30,7 +30,7 @@ The driver uses a smart-serial connection to receive netflow datapackets from th
 
 #### Smart-Serial Main connection
 
-This driver uses a smart-serial connection and requires the following input during element creation:
+This connector uses a smart-serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -42,7 +42,7 @@ SERIAL CONNECTION:
 
 ## Usage
 
-The driver contains 4 pages. Note that since Qactions are importing the System.WebExtensions.dll it is required the 4.0 .Net framework.
+The connector contains 4 pages. Note that since Qactions are importing the System.WebExtensions.dll it is required the 4.0 .Net framework.
 
 ### General
 

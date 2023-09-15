@@ -4,11 +4,11 @@ uid: Connector_help_Jampro_Combiner
 
 # Jampro Combiner
 
-With this driver, you can monitor the Jampro Combiner device.
+With this connector, you can monitor the Jampro Combiner device.
 
 ## About
 
-This driver uses serial communication to monitor the Jampro Combiner, displaying the **Power Levels**, **Alarm List**, and **Link Status**.
+This connector uses serial communication to monitor the Jampro Combiner, displaying the **Power Levels**, **Alarm List**, and **Link Status**.
 
 ## Installation and configuration
 

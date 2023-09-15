@@ -4,21 +4,21 @@ uid: Connector_help_Axon_Tracs2_Compliance_Recorder
 
 # Axon Tracs2 Compliance Recorder
 
-This driver is used for the basic monitoring of the Axon Tracs2 Compliance Recorder.
+This connector is used for the basic monitoring of the Axon Tracs2 Compliance Recorder.
 
 ## About
 
-With this driver, it is possible to monitor the **hard disks**, **channel information** and **connectivity status** of the **Axon Tracs2 Compliance Recorder**. This information is polled via SNMP.
+With this connector, it is possible to monitor the **hard disks**, **channel information** and **connectivity status** of the **Axon Tracs2 Compliance Recorder**. This information is polled via SNMP.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 2.9.2.r1.588                |
 
@@ -28,7 +28,7 @@ With this driver, it is possible to monitor the **hard disks**, **channel inform
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -61,4 +61,4 @@ This page contains the **Channel Table**. This table displays all the media chan
 
 ## Notes
 
-Only basic monitoring can be done with this driver. Advanced features of the device are currently only available via the Axon Tracs2 Compliance Recorder client software.
+Only basic monitoring can be done with this connector. Advanced features of the device are currently only available via the Axon Tracs2 Compliance Recorder client software.

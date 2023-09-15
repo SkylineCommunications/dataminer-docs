@@ -4,7 +4,7 @@ uid: Connector_help_Skyline_DMP_Replication
 
 # Skyline DMP Replication
 
-With the **Skyline DMP Replication** driver, you can monitor the DMP (DataMiner Probe) information and define a set of parameters on the system that you want to follow (using subscriptions). All statuses, retrieved values and counters can be monitored and trended.
+With the **Skyline DMP Replication** connector, you can monitor the DMP (DataMiner Probe) information and define a set of parameters on the system that you want to follow (using subscriptions). All statuses, retrieved values and counters can be monitored and trended.
 
 This element is intended to hold a summary of all important data and info from a probe. Replicating all the probe elements on a remote agent will create one central point to view all data over multiple probes.
 
@@ -12,22 +12,22 @@ This element is intended to hold a summary of all important data and info from a
 
 The Skyline DMP Replication driver will periodically poll the DMP information and alarms. Other values are retrieved using subscriptions. This means that these updates come in very quickly.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                                                                                                                                                                                                                                                                                                                                      | **DCF Integration** | **Cassandra Compliant** |
-|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x          | Initial version                                                                                                                                                                                                                                                                                                                                                                                      | No                  | No                      |
-| 1.0.1.x          |  Updated protocol to Unicode.  Added Views & Services Table with 5 dynamic columns per table (Elements, Alarms, Services & Views). A filter functionality is also available.  Added Message Overview Table. This table will be used to transfer sets between HQ & DMP.  Correlation & Automation will handle the sets on the HQ via an alarm trigger on the message table on the replicated element. | No                  | No                      |
+| Range | Description | DCF Integration | Cassandra Compliant |
+|--|--|--|--|
+| 1.0.0.x | Initial version | No | No |
+| 1.0.1.x | - Updated protocol to Unicode.<br>- Added Views & Services Table with 5 dynamic columns per table (Elements, Alarms, Services & Views). A filter functionality is also available.<br>- Added Message Overview Table. This table will be used to transfer sets between HQ & DMP.<br>- Correlation and Automation will handle the sets on the HQ via an alarm trigger on the message table on the replicated element. | No | No |
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a **virtual connection** and does not require any input during element creation.
+This connector uses a **virtual connection** and does not require any input during element creation.
 
 ### Installation
 
-For the installation of this driver, just create an element using this protocol. As the element retrieves data from the Microsoft Platform element, make sure the latter is running and has trending enabled on **Total Processor Load** and **Total Commit Charge**.
+For the installation of this connector, just create an element using this protocol. As the element retrieves data from the Microsoft Platform element, make sure the latter is running and has trending enabled on **Total Processor Load** and **Total Commit Charge**.
 
 ## Usage
 
@@ -95,7 +95,8 @@ Note: The first three dynamic columns of each type (Elements, Services, Alarms, 
 
 This page contains two tables that log and transfer all messages between the DMP and the replicated element at the HQ. These are intended to make it possible to perform sets over multiple DMS systems or to perform a set from a DMP towards an HQ DMS. When messages are finished, they are automatically transferred to the **Finished Table**.
 
-The format of the new command needs to be as follows: "***setParameter****\$delimiter1\$****\<DestinationElementName Or Element DMA/EId\>****\$delimiter2\$****\<ParameterID\>****\$delimiter2\$****\<ParameterIndex\>****\$delimiter2\$****\<Value\>***".
+The format of the new command needs to be as follows: "**setParameter**\$delimiter1\$**\<DestinationElementName Or Element DMA/EId\>**\$delimiter2\$**\<ParameterID\>**\$delimiter2\$**\<ParameterIndex\>**\$delimiter2\$***\<Value\>**".
+
 If it is a single parameter set, the index part ("\$delimiter2\$**\<ParameterIndex\>**") can be removed.
 
 When a command is set on either "**Command DMP to HQ**" or "**Command HQ to DMP**", the command will appear in the table.

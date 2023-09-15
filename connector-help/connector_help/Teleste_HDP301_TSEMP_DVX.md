@@ -4,17 +4,17 @@ uid: Connector_help_Teleste_HDP301_TSEMP_DVX
 
 # Teleste HDP301 TSEMP DVX
 
-This driver monitors a Power Supply for HDO devices with load sharing.
+This connector monitors a Power Supply for HDO devices with load sharing.
 
 ## About
 
-This driver is used to control and monitor the HDP301 module using the DVX bus.
+This connector is used to control and monitor the HDP301 module using the DVX bus.
 
 ## Installation and creation
 
 ### Creation
 
-This driver uses a serial connection and needs the following user information:
+This connector uses a serial connection and requires the following input during element creation:
 
 **SERIAL CONNECTION**:
 
@@ -33,7 +33,3 @@ Click the **Alarm Limits** page button to view or configure the analog and discr
 ### Power Supply
 
 This page displays the state of the **Input Voltage**, the **Total Output Power** and **6.3V/25V Output Parameters**.
-
-## Notes
-
-N/A

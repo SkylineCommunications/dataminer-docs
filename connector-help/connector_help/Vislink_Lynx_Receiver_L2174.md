@@ -4,11 +4,11 @@ uid: Connector_help_Vislink_Lynx_Receiver_L2174
 
 # Vislink Lynx Receiver L2174
 
-This driver is made for devices such as the **Vislink Lynx Receiver**. With this driver, several parameters can be monitored and set.
+This connector is made for devices such as the **Vislink Lynx Receiver**. With this connector, several parameters can be monitored and set.
 
 ## About
 
-With two timers, all parameters are polled. Some values in the driver can also be set.
+With two timers, all parameters are polled. Some values in the connector can also be set.
 
 ## Installation and configuration
 
@@ -16,7 +16,7 @@ With two timers, all parameters are polled. Some values in the driver can also b
 
 #### SNMP connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

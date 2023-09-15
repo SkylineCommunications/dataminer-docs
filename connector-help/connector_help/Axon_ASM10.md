@@ -4,15 +4,15 @@ uid: Connector_help_Axon_ASM10
 
 # Axon ASM10
 
-The **Axon ASM10** is an Analog-to-Digital A/V Bridge with SDI plus embedded audio processing mode. This driver monitors and controls the device via **SNMP**.
+The **Axon ASM10** is an Analog-to-Digital A/V Bridge with SDI plus embedded audio processing mode. This connector monitors and controls the device via **SNMP**.
 
 ## About
 
-The driver polls the device every 30 seconds for fast-varying information and every 6 minutes for slower-varying information. The collected information is then used to update the user interface.
+The connector polls the device every 30 seconds for fast-varying information and every 6 minutes for slower-varying information. The collected information is then used to update the user interface.
 
 ### Creation
 
-The driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+The connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 
@@ -27,7 +27,7 @@ The driver uses a Simple Network Management Protocol (SNMP) connection and requi
 
 ## Usage
 
-This driver has five pages: **Main View,** **General Info, Settings_1, Settings_2** and **Events.**
+This connector has five pages: **Main View,** **General Info, Settings_1, Settings_2** and **Events.**
 
 ### Main View Page
 

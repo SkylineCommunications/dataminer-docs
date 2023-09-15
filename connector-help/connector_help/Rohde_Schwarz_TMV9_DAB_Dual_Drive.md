@@ -8,21 +8,21 @@ The R&S TMV9 transmitter is used for multiplexed Digital Audio Broadcasting in a
 
 ## About
 
-This **SNMP** driver is used to monitor and configure the **Rohde Schwarz TMV9 Dual Drive** transmitter.
+This **SNMP** connector is used to monitor and configure the **Rohde Schwarz TMV9 Dual Drive** transmitter.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 22.0.1                      |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol**         | **Description**                                                                                      |
 |-------------------------------|------------------------------------------------------------------------------------------------------|
@@ -34,7 +34,7 @@ This **SNMP** driver is used to monitor and configure the **Rohde Schwarz TMV9 D
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

@@ -4,17 +4,17 @@ uid: Connector_help_Itelsis_Exciter_ATVD2_AGILE
 
 # Itelsis Exciter ATVD2 AGILE
 
-This driver for the **Itelsis Exciter ATVD2 AGILE** polls parameters of the device and captures traps. The parameters are displayed on several pages. The traps are used to update the value of some standalone parameters.
+This connector for the **Itelsis Exciter ATVD2 AGILE** polls parameters of the device and captures traps. The parameters are displayed on several pages. The traps are used to update the value of some standalone parameters.
 
 ## About
 
-This driver polls SNMP parameters of the **Itelsis Exciter ATVD2 AGILE** with several timers. The traps are captured and used to update parameters on the **Traps** page. When the element restarts, the old values of those parameters are restored.
+This connector polls SNMP parameters of the **Itelsis Exciter ATVD2 AGILE** with several timers. The traps are captured and used to update parameters on the **Traps** page. When the element restarts, the old values of those parameters are restored.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 
@@ -29,7 +29,7 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and need
 
 ## Usage
 
-The driver consists of the following pages:
+The connector consists of the following pages:
 
 - **Home** page: Displays general information about the device and allows you to reset the exciter and turn it on or off.
 - **Traps** page: Displays the received traps.

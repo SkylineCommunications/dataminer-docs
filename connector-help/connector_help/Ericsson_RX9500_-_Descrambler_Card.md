@@ -8,11 +8,11 @@ The Descrambler Card is a component of the Ericsson RX9500 base unit. This card 
 
 ## About
 
-This **HTTP** driver implements the REST API to communicate with the Ericsson RX9500 device.
+This **HTTP** connector implements the REST API to communicate with the Ericsson RX9500 device.
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.0.0                       |
 | 2.0.0.x          | 1.0.0                       |
@@ -21,11 +21,11 @@ This **HTTP** driver implements the REST API to communicate with the Ericsson RX
 
 ### Creation
 
-This driver is used by DVE child elements that are **automatically created** by the driver Ericsson RX9500, from version 2.0.0.1 onwards.
+This connector is used by DVE child elements that are **automatically created** by the connector Ericsson RX9500, from version 2.0.0.1 onwards.
 
 ## Usage
 
-The driver contains 4 pages: **Active Alarms**, **Card Properties**, **Input Services** and **Transport** **Stream**.
+The connector contains 4 pages: **Active Alarms**, **Card Properties**, **Input Services** and **Transport** **Stream**.
 
 ### Active Alarms Page
 

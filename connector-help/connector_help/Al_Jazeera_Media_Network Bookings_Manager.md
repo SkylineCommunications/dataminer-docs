@@ -8,11 +8,11 @@ This protocol provides a management application with booking, scheduling and res
 
 ## About
 
-This driver is used together with automation scripts and a visio overlay, allowing the Creation, viewing, checking and amendment of bookings.
+This connector is used together with Automation scripts and a Visual Overview, allowing the creation, viewing, checking, and editing of bookings.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial Version | No                  | Yes                     |
 
@@ -20,7 +20,7 @@ This driver is used together with automation scripts and a visio overlay, allowi
 
 ### Creation
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## Usage
 
@@ -28,7 +28,7 @@ This driver uses a virtual connection and does not require any input during elem
 
 This page shows a table with all the created bookings and their main information.
 
-A pagebutton is available to show extra details of the booking as well as to be able to configure the available booking areas and technical areas.
+A page button is available to show extra details of the booking as well as to be able to configure the available booking areas and technical areas.
 
 ### Reservations
 
@@ -47,7 +47,7 @@ This page provides a list of all available contacts that can be associated as we
 - Number
 - Email
 - Company
-- Type (possible to add/remove types from a pagebutton on this page)
+- Type (possible to add/remove types from a page button on this page)
 
 ### Events
 

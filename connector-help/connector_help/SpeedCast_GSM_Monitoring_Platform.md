@@ -4,11 +4,11 @@ uid: Connector_help_SpeedCast_GSM_Monitoring_Platform
 
 # SpeedCast GSM Monitoring Platform
 
-This driver is a SpeedCast-specific development used to poll an internal GSM database.
+This connector is a SpeedCast-specific development used to poll an internal GSM database.
 
 ## About
 
-This driver is used to poll a SpeedCast internal GSM database and use this information to create and populate a dedicated DVE for each ship using these GSM services.
+This connector is used to poll a SpeedCast internal GSM database and use this information to create and populate a dedicated DVE for each ship using these GSM services.
 
 ### Version Info
 
@@ -28,15 +28,15 @@ This driver is used to poll a SpeedCast internal GSM database and use this infor
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 
-To make sure the driver functions properly, fill in the configuration parameters on the **Configuration** **page**.
+To make sure the connector functions properly, fill in the configuration parameters on the **Configuration** **page**.
 
 ## How to use
 
-Aside from the Configuration page, the element created with this driver consists of the following data pages:
+Aside from the Configuration page, the element created with this connector consists of the following data pages:
 
 - **General**: This page lists all ships using GSM services according to the DB records. The page can also be used to enable/disable the DVE for specific ships.
 - **Ships**: This page lists all created ship DVEs.

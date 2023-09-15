@@ -4,21 +4,21 @@ uid: Connector_help_Teracom_Service_Performance_Export_Manager
 
 # Teracom Service Performance Export Manager
 
-This is a virtual driver that exports information from cleared alarms to .csv files.
+This is a virtual connector that exports information from cleared alarms to .csv files.
 
 ## About
 
-This driver collects information from cleared alarms of the desired elements, and exports this information to .csv files.
+This connector collects information from cleared alarms of the desired elements, and exports this information to .csv files.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-Not applicable. This is a virtual driver, which does not interact with an actual device.
+Not applicable. This is a virtual connector, which does not interact with an actual device.
 
 ### Linked drivers
 
@@ -33,7 +33,7 @@ Not applicable. This is a virtual driver, which does not interact with an actual
 
 ### Creation
 
-This driver uses a **virtual** connection and does not require any input during element creation.
+This connector uses a **virtual** connection and does not require any input during element creation.
 
 ### Configuration of Service Overview Manager Element
 
@@ -43,7 +43,7 @@ After you have created the element, select the **Service Overview Manager elemen
 
 ### General
 
-This page contains most of the settings and information of the driver.
+This page contains most of the settings and information of the connector.
 
 This first parameter, **Last Sync Time**, contains the date when the alarms were last gathered.
 

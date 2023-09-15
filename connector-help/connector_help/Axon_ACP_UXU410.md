@@ -6,7 +6,7 @@ uid: Connector_help_Axon_ACP_UXU410
 
 The **UXU410** is a high-end up-/down-/cross-converter. The card allows you to simulcast any output standard in any format from any source standard. The embedded audio is carried over to the SD, HD or 3 Gb/s domain.
 
-The Axon ACP UXU410 driver is used to manage UXU410 Axon cards.
+The Axon ACP UXU410 connector is used to manage UXU410 Axon cards.
 
 ## About
 
@@ -34,7 +34,7 @@ The Axon ACP UXU410 driver is used to manage UXU410 Axon cards.
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -46,7 +46,7 @@ SERIAL CONNECTION:
 
 #### Serial IP Connection - Events Connection
 
-This driver uses a smart-serial connection and requires the following input during element creation:
+This connector uses a smart-serial connection and requires the following input during element creation:
 
 SMART-SERIAL CONNECTION:
 
@@ -70,7 +70,7 @@ The setting of some parameters depends on other parameters' current value. For e
 
 ## DataMiner Connectivity Framework
 
-The **1.0.0.x** driver range of the Axon ACP UXU410 protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
+The **1.0.0.x** connector range of the Axon ACP UXU410 protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
@@ -112,4 +112,4 @@ Physical fixed interfaces:
 
 ## Notes
 
-This driver is best combined with the Axon ACP Frame Manager driver, but it can be used as a standalone driver as well.
+This connector is best combined with the Axon ACP Frame Manager connector, but it can be used as a standalone connector as well.

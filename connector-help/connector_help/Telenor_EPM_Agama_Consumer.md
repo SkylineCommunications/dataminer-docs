@@ -4,7 +4,7 @@ uid: Connector_help_Telenor_EPM_Agama_Consumer
 
 # Telenor EPM Agama Consumer
 
-This virtual driver is used to process CSV files exported by the Agama FireHouse software. Each row in the CSV files contains information about an STB in the Telenor EPM system. The driver will read the files from a shared folder and process each row. Each row is then forwarded to the [Telenor EPM Collector](/Driver%20Help/Telenor%20EPM%20Collector.aspx) element that manages the corresponding STB. To know which STB belongs to which collector, the driver reads a CSV file created by the [Telenor EPM Manager](xref:Connector_help_Telenor_EPM_Manager).
+This virtual connector is used to process CSV files exported by the Agama FireHouse software. Each row in the CSV files contains information about an STB in the Telenor EPM system. The connector will read the files from a shared folder and process each row. Each row is then forwarded to the [Telenor EPM Collector](/Driver%20Help/Telenor%20EPM%20Collector.aspx) element that manages the corresponding STB. To know which STB belongs to which collector, the connector reads a CSV file created by the [Telenor EPM Manager](xref:Connector_help_Telenor_EPM_Manager).
 
 ## About
 
@@ -32,7 +32,7 @@ This virtual driver is used to process CSV files exported by the Agama FireHouse
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## How to use
 

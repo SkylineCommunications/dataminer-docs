@@ -10,9 +10,9 @@ This protocol allows correlation for root cause alarms on services, based on ala
 
 The **Root Cause Alarm** will be set based on different rules configured in the **Alarm Matrix** table. Each **Root Cause Alarm** can store a specific Resolve Platform and Service Highway query.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 

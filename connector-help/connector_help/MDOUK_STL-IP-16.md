@@ -4,17 +4,17 @@ uid: Connector_help_MDOUK_STL-IP-16
 
 # MDOUK STL-IP-16
 
-With this driver, information can be gathered and viewed from the device **MDOUK SLT-IP-16.** The driver also allows the user to perform sets on the device.
+With this connector, information can be gathered and viewed from the device **MDOUK SLT-IP-16.** The connector also allows the user to perform sets on the device.
 
 ## About
 
-This driver is used to gather information from the **MDOUK SLT-IP-16** device.
+This connector is used to gather information from the **MDOUK SLT-IP-16** device.
 
-The driver has several pages with general information, network status, audio, etc.
+The connector has several pages with general information, network status, audio, etc.
 
 ## Installation and configuration
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP Connection:**
 

@@ -4,7 +4,7 @@ uid: Connector_help_ETL_Systems_23116
 
 # ETL Systems 23116
 
-This driver is used to monitor an ETL Systems 23116 device using the **SNMP** interface.
+This connector is used to monitor an ETL Systems 23116 device using the **SNMP** interface.
 
 The ETL Systems 23116 is a device operating with signals in the L-band range of frequencies of 850-2150 MHz and is designed to provide automatic main/standby switching functions, typically for 2:1 redundancy switching
 
@@ -34,7 +34,7 @@ The ETL Systems 23116 is a device operating with signals in the L-band range of 
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

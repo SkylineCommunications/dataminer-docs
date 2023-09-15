@@ -8,13 +8,13 @@ The **VOO Scheduler** creates and monitors **scheduler tasks**.
 
 ## About
 
-This driver creates **scheduler tasks** based on a CSV file and keeps track of them by using a default **Automation script**.
+This connector creates **scheduler tasks** based on a CSV file and keeps track of them by using a default **Automation script**.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a **virtual** connection and does not require any input during element creation.
+This connector uses a **virtual** connection and does not require any input during element creation.
 
 ## Usage
 
@@ -38,7 +38,7 @@ This page shows an overview of all tasks that have been finished or removed.
 
 ### Automation Script
 
-This driver uses **automation script VOO Task Scheduler**.
+This connector uses **automation script VOO Task Scheduler**.
 
 ### CSV File
 

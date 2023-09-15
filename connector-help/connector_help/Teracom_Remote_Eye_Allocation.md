@@ -10,16 +10,16 @@ The **Teracom Remote Eye Allocation** driver manages the different remote eye se
 
 The system will filter elements based on the protocol name. Currently, elements using the **Sencore MRD 4400** protocol are supported.
 
-The driver is used together with the following 4 scripts:
+The connector is used together with the following 4 scripts:
 
-1.  Remote Eye Tx In
-2.  Remote Eye Tx Out
-3.  Remote Eye He In
-4.  Remote Eye He Out
+1. Remote Eye Tx In
+2. Remote Eye Tx Out
+3. Remote Eye He In
+4. Remote Eye He Out
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 
@@ -29,7 +29,7 @@ The driver is used together with the following 4 scripts:
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## Usage
 
@@ -44,7 +44,7 @@ This page contains the **IRD Allocation Table**. This table lists the IRDs avail
 
 Aside from this table, the page contains the **Add IRD** page button, which allows you to configure a **New IRD Name**, **EdgeVision** **IP** and **EdgeVision Port**.
 
-When the scripts Remote Eye Tx In, Remote Eye Tx Out and Remote Eye He Out are run, the driver will automatically handle the initialization of the parameters mentioned above.
+When the scripts Remote Eye Tx In, Remote Eye Tx Out and Remote Eye He Out are run, the connector will automatically handle the initialization of the parameters mentioned above.
 
 ### Kaleido Allocation
 

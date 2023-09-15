@@ -8,7 +8,7 @@ The Comtech EF Data CDD-S2 provides high-performance satellite-based communicati
 
 ## About
 
-The CEFD CDD-S2 driver is used to monitor and control a CEFD CDD-S2 device. The information is displayed in different pages regarding a certain category and there is the possibility to modify the settings. This driver uses SNMP to retrieve and configure the device's data.
+The CEFD CDD-S2 connector is used to monitor and control a CEFD CDD-S2 device. The information is displayed in different pages regarding a certain category and there is the possibility to modify the settings. This connector uses SNMP to retrieve and configure the device's data.
 
 ### Version Info
 
@@ -17,16 +17,12 @@ The CEFD CDD-S2 driver is used to monitor and control a CEFD CDD-S2 device. The 
 | 1.0.0.x              | Initial version                                                                                                     | \-           | \-                                                |
 | 1.0.1.x \[SLC Main\] | Multiple tables now uses naming instead of displayColumn to make the database for these tables Cassandra-compliant. | 1.0.0.9      | **Old trend data will be lost for these tables.** |
 
-
-
 ### Product Info
 
 | **Range** | **Supported Firmware** |
 |-----------|------------------------|
 | 1.0.0.x   | Unknown                |
 | 1.0.1.x   | Unknown                |
-
-
 
 ### System Info
 
@@ -35,14 +31,13 @@ The CEFD CDD-S2 driver is used to monitor and control a CEFD CDD-S2 device. The 
 | 1.0.0.x   | No                  | No                      | \-                    | \-                      |
 | 1.0.1.x   | No                  | Yes                     | \-                    | \-                      |
 
-
-
 ## Installation and configuration
 
 ### Creation
 
-***SNMP connection***
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+### SNMP connection
+
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -59,13 +54,13 @@ SNMP Settings:
 
 ### General page
 
-The **General** page displays the **System** **Information**, **Service** **Contact** information and the **Overall** **Status** of the device.
+The **General** page displays the **System Information**, **Service Contact** information and the **Overall Status** of the device.
 
 ### Admin page
 
 The **Admin** page displays the selected configuration and options. There is the possibility to set the **SNMP Trap Destination IP Address** and the **Auto Logout Time**.
 
-Also there is a pagebutton available that will open a pop-up page which displays additional information regarding the subject stated on the pagebutton.
+Also there is a page button available that will open a pop-up page which displays additional information regarding the subject stated on the page button.
 
 ### Configuration - Interface Page
 
@@ -88,15 +83,15 @@ The user can set each Receive WAN label on this page, to a value between 1 and 2
 
 ### Configuration - Network Page
 
-The Configuration - Network page displays the **Routing** and **ARP** **table**. The user can create new entries by clicking on the **Create New Entry** pagebutton and fill in the required field on the pop-up page. The IGMP can be viewed and set when the user clickes the **IGMP** pagebutton.
+The Configuration - Network page displays the **Routing** and **ARP table**. The user can create new entries by clicking on the **Create New Entry** page button and fill in the required field on the pop-up page. The IGMP can be viewed and set when the user clicks the **IGMP** page button.
 
 ### Status - Status pages
 
-Each of these **Status** **- Status - x** pages will display the status for the subject in the page name.
+Each of these **Status - Status - x** pages will display the status for the subject in the page name.
 
 ### Status-Monitor pages
 
-The **Status** **-** **Monitor** pages are used to monitor the system, Alarms and the Events.
+The **Status - Monitor** pages are used to monitor the system, Alarms and the Events.
 
 On the **Status - Monitor - Alarms** page there is the possibility to mask the alarms by going to the pop-up pages of this page and setting the **Mask** parameters for each one to *Enabled*.
 
@@ -104,7 +99,7 @@ On the **Status - Monitor - Alarms** page there is the possibility to mask the a
 
 On the **Utility** page the settings for the **Modem** and **Save/Load Configuration** can be set/viewed.
 
-The status of the Memory Usage can be viewed by clicking on the **Diagnostic** pagebutton.
+The status of the Memory Usage can be viewed by clicking on the **Diagnostic** page button.
 
 ### Utility - BERT/Redundancy Page
 
@@ -114,21 +109,17 @@ The status of the **Redundancy** and the Monitoring of the **BERT** can also be 
 
 ### FKS page
 
-In this page it is possible to set the FSK functionality. This functionality will generate a vitrual element that contains all LNB parameters. A unique FSK Element Name can be set for the virtual element.
+In this page it is possible to set the FSK functionality. This functionality will generate a virtual element that contains all LNB parameters. A unique FSK Element Name can be set for the virtual element.
 
 ### Traps page
 
-On the **Traps** page the incoming traps can be viewed in the **Traps** **table**.
+On the **Traps** page the incoming traps can be viewed in the **Traps table**.
 
 ### FTP page
 
-On the **FTP** page the **FTP** **table** can be viewed.
+On the **FTP** page the **FTP table** can be viewed.
 
-### Webinterface page
+### Web Interface page
 
-Here the webinterface of the device can be viewed. The client machine has to be able to access the device. If not, it won't be possible to open the web
+Here the web interface of the device can be viewed. The client machine has to be able to access the device. If not, it won't be possible to open the web
 interface.
-
-## Notes
-
-N/A

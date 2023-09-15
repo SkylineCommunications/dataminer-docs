@@ -4,29 +4,29 @@ uid: Connector_help_Crucible_Technologies_Meter_Driver
 
 # Crucible Technologies Meter Driver
 
-This driver collects the logging information of a *Meter Logger 100*, manufactured by *Crucible Technologies*.
+This connector collects the logging information of a *Meter Logger 100*, manufactured by *Crucible Technologies*.
 
 The Meter Logger 100 is a simple-to-use interface device which converts the pulse outputs from up to 3 utility meters into both a graphical display on a webpage and formatted downloadable data.
 
 ## About
 
-The driver allows the user to view the logged consumption of the utility meter(s) attached to the *Meter Logger 100*. Using alarming and trending abnormal consumption can then be detected. The information is retrieved using the XML download page provided by the device.
+The connector allows the user to view the logged consumption of the utility meter(s) attached to the *Meter Logger 100*. Using alarming and trending abnormal consumption can then be detected. The information is retrieved using the XML download page provided by the device.
 
-This driver will export different drivers based on the retrieved data. A list can be found in the section 'Exported Drivers'.
+This connector will export different connectors based on the retrieved data. A list can be found in the section 'Exported Connectors'.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.6a                        |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol**                      | **Description**                                                            |
 |--------------------------------------------|----------------------------------------------------------------------------|

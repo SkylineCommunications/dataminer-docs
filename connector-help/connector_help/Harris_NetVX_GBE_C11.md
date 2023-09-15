@@ -4,7 +4,7 @@ uid: Connector_help_Harris_NetVX_GBE_C11
 
 # Harris NetVX GBE C11
 
-The **Harris NetVX GBE C11** driver is a **SNMP** driver that is **IP Streamer**.
+The **Harris NetVX GBE C11** connector is an **SNMP** connector that is **IP Streamer**.
 
 ## About
 
@@ -12,7 +12,7 @@ The **Harris NetVX GBE C11** is an overview of.
 
 ## Installation and configuration
 
-The **Harris NetVX GBE C11** driver has a **SNMP** Connection:
+The **Harris NetVX GBE C11** driver has an **SNMP** Connection:
 
 - **Port:** 161
 - **Bus Address:** The slot number of the **IP Streamer.**
@@ -24,7 +24,7 @@ The **Harris NetVX GBE C11** driver has a **SNMP** Connection:
 
 ### General
 
-Here you see some **General Slot Configuration** parameters, where you can make some basic changes to the **IP Streamer** and you also have the **General Slot Status** parameters that shows you some basic information about the **IP Streamer.** So you have some **small overview** already about the driver on this page.
+Here you see some **General Slot Configuration** parameters, where you can make some basic changes to the **IP Streamer** and you also have the **General Slot Status** parameters that shows you some basic information about the **IP Streamer.** So you have some **small overview** already about the connector on this page.
 
 ### IP Interface Configuration
 

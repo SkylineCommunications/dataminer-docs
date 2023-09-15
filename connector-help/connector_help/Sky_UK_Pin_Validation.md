@@ -4,7 +4,7 @@ uid: Connector_help_Sky_UK_Pin_Validation
 
 # Sky UK Pin Validation
 
-This driver can be used in order to check if there is **PIN protection** for a service and to know the status of the encryption.
+This connector can be used in order to check if there is **PIN protection** for a service and to know the status of the encryption.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver can be used in order to check if there is **PIN protection** for a s
 
 #### HTTP Main connection
 
-This driver uses an HTTP connection and requires the following input during element creation.
+This connector uses an HTTP connection and requires the following input during element creation.
 
 HTTP CONNECTION:
 
@@ -43,6 +43,6 @@ HTTP CONNECTION:
 
 ## How to Use
 
-This driver dynamically creates an HTTP address to obtain information through a JSON configuration. When you configure the element, make sure to specify the node/device in the bus address field as mentioned above, so that the driver creates the address for the specified device.
+This connector dynamically creates an HTTP address to obtain information through a JSON configuration. When you configure the element, make sure to specify the node/device in the bus address field as mentioned above, so that the connector creates the address for the specified device.
 
 On the **Pin Status** page, you can find the following information: Last Checked Time, PIN Protection, PIN Unexpectedly Present and Service Encryption Status.

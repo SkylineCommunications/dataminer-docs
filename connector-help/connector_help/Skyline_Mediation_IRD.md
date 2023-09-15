@@ -8,7 +8,7 @@ This is a mediation driver for IRDs.
 
 ## About
 
-This driver links to parameters in IRD elements, so that the parameters can be displayed in a uniform way.
+This connector links to parameters in IRD elements, so that the parameters can be displayed in a uniform way.
 
 ### Version Info
 
@@ -75,7 +75,7 @@ Supported drivers are:
 
 ## How to Use
 
-To view the information from this driver, click to the hamburger button of the element card for one of the supported drivers and select **Mediation layer** \> **Skyline Mediation IRD**.
+To view the information from this connector, click to the hamburger button of the element card for one of the supported drivers and select **Mediation layer** \> **Skyline Mediation IRD**.
 
 The card will then display the information from the mediation layer on the **General** page. This information consists of the following parameters:
 

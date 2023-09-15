@@ -4,25 +4,25 @@ uid: Connector_help_Double_D_Electronics_DDA290
 
 # Double D Electronics DDA290
 
-This driver monitors the activity of a **Double D Electronics DDA290** redundancy controller.
+This connector monitors the activity of a **Double D Electronics DDA290** redundancy controller.
 
 The DDA290 is a general purpose switching and redundancy controller (including LNA/LNB controllers) providing a graphical user interface. The controller can support up to 7 waveguide/coaxial switches and three HPAs, optionally configured in a 1+1 or 1+2 redundant configuration.
 
 ## About
 
-This driver uses serial communication with the device. It makes use of the "Printable ASCII" communication protocol.
+This connector uses serial communication with the device. It makes use of the "Printable ASCII" communication protocol.
 
 It displays information from the device and allows the user to control the switch configuration.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | DDA290 V1.24 dev 6          |
 
@@ -32,7 +32,7 @@ It displays information from the device and allows the user to control the switc
 
 #### Serial Main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

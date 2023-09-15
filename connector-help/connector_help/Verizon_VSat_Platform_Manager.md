@@ -8,7 +8,7 @@ The **Verizon VSat Platform Manager** allows the aggregation of KPIs from differ
 
 ## About
 
-This is a **CPE** (Customer Premises Equipment) driver, and as such it is designed to poll large amounts of data from the deployed infrastructure, using **front-end** CPE Manager elements and **back-end** CPE Manager elements. Both of these types of elements use the same CPE Manager driver. The Verizon system contains one front-end and several back-end elements. The front-end element is responsible for the top-level data aggregation from different back-end elements. Each back-end element is responsible for the aggregation of a section of the data from the collectors.
+This is a **CPE** (Customer Premises Equipment) driver, and as such it is designed to poll large amounts of data from the deployed infrastructure, using **front-end** CPE Manager elements and **back-end** CPE Manager elements. Both of these types of elements use the same CPE Manager connector. The Verizon system contains one front-end and several back-end elements. The front-end element is responsible for the top-level data aggregation from different back-end elements. Each back-end element is responsible for the aggregation of a section of the data from the collectors.
 
 Topologies describe the connections in the diagram shown in the visual interface. The current implementation integrates 5 different topologies: **Network**, **Service**, **NMS**, **Map** and **Quick**. Each topology represents a connected entity from top to bottom. Chains are mainly used to display topology views. In this case, the following chains are present:
 
@@ -48,15 +48,15 @@ Topologies describe the connections in the diagram shown in the visual interface
 
 - Allows you to place Visio layouts on a separate chain.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | N/A                         |
 
@@ -66,7 +66,7 @@ Topologies describe the connections in the diagram shown in the visual interface
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Configuration
 
@@ -93,8 +93,8 @@ After the collector has exported the necessary files containing the resources th
 
 The front-end element will import a series of CSV files in order to perform the necessary steps of the provisioning. The ID assignment will be done through the DataMiner SRM module. For each resource within the files, the following will happen:
 
-1.  The SRM module will determine if the resource already exists and check if its "RESOURCE TYPE" property matches the requested resource type.
-2.  If no matching resource exists, the driver will notify the assigned SRM subscriber (Verizon Data Subscription Manager element) in order to create the required resources.
+1. The SRM module will determine if the resource already exists and check if its "RESOURCE TYPE" property matches the requested resource type.
+2. If no matching resource exists, the connector will notify the assigned SRM subscriber (Verizon Data Subscription Manager element) in order to create the required resources.
 
 Once the ID assignment is completed, the front-end element will export a series of CSV files for the back-end(s) and collector(s) to import. It will then notify the respective back-end element(s) to process these files.
 
@@ -102,15 +102,15 @@ Back-end elements import info on the resources with their assigned IDs, and noti
 
 **Provisioning Workflow Overview:**
 
-1.  Collector elements export info on resources without IDs.
-2.  Collector elements interrogate the assigned front-end manager for ID assignment.
-3.  Front-end element imports info on resources without IDs.
-4.  Front-end element interrogates the DataMiner SRM module for resource IDs.
-5.  Front-end element exports info on resources with assigned IDs.
-6.  Front-end element notifies handling back-end element.
-7.  Handling back-end element imports info on resources with IDs.
-8.  Handling back-end element notifies the assigned collector elements that the ID request has been fulfilled.
-9.  Collector element imports info on resources with the assigned IDs.
+1. Collector elements export info on resources without IDs.
+2. Collector elements interrogate the assigned front-end manager for ID assignment.
+3. Front-end element imports info on resources without IDs.
+4. Front-end element interrogates the DataMiner SRM module for resource IDs.
+5. Front-end element exports info on resources with assigned IDs.
+6. Front-end element notifies handling back-end element.
+7. Handling back-end element imports info on resources with IDs.
+8. Handling back-end element notifies the assigned collector elements that the ID request has been fulfilled.
+9. Collector element imports info on resources with the assigned IDs.
 
 ## Usage
 

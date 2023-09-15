@@ -4,7 +4,7 @@ uid: Connector_help_Dolby_DP580
 
 # Dolby DP580
 
-The **Dolby Professional Reference Decoder DP580** is a real-time audio decoder and monitoring tool that supports Dolby codecs. This driver allows you to monitor this device.
+The **Dolby Professional Reference Decoder DP580** is a real-time audio decoder and monitoring tool that supports Dolby codecs. This connector allows you to monitor this device.
 
 ## About
 
@@ -32,7 +32,7 @@ The **Dolby Professional Reference Decoder DP580** is a real-time audio decoder 
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

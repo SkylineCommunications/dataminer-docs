@@ -6,7 +6,7 @@ uid: Connector_help_Cisco_D9094
 
 This device has the ability to stream and decode HD/SD AVC video streams for TV. It does so at lower bit rates, while being able to maintain a 4:2:2 chroma, over DVB and broadband IP networks. It also has support for DVB-S/S2 satellite communication.
 
-This driver allows you to retrieve information from Cisco's D9094 platform. You can monitor alarms and statistical information, and configure/activate the encoding, decoding and recording of video streams. The driver retrieves and sets information on the device via SNMP.
+This connector allows you to retrieve information from Cisco's D9094 platform. You can monitor alarms and statistical information, and configure/activate the encoding, decoding and recording of video streams. The connector retrieves and sets information on the device via SNMP.
 
 ## About
 
@@ -34,7 +34,7 @@ This driver allows you to retrieve information from Cisco's D9094 platform. You 
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

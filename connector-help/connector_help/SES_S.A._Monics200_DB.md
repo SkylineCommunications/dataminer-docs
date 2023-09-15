@@ -4,7 +4,7 @@ uid: Connector_help_SES_S.A._Monics200_DB
 
 # SES S.A. Monics200 DB
 
-This driver requests carrier data from a database and displays this data in a table.
+This connector requests carrier data from a database and displays this data in a table.
 
 ## About
 
@@ -26,7 +26,7 @@ This driver requests carrier data from a database and displays this data in a ta
 
 #### Virtual Connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## How to Use
 

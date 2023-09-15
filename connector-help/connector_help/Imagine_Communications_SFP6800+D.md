@@ -10,7 +10,7 @@ It allows manual creation of DVEs for **Rx1**, **Rx2**, **Tx1** and **Tx2** card
 
 ## About
 
-With this driver, you can monitor and configure the Imagine Communications processor card. This simple flexible processing card has six SFP cages that can be populated with SDI coax, SDI optical, HDMI, analog-to-SD-SDI decoders, or SD-SDI-to-analog encoders.
+With this connector, you can monitor and configure the Imagine Communications processor card. This simple flexible processing card has six SFP cages that can be populated with SDI coax, SDI optical, HDMI, analog-to-SD-SDI decoders, or SD-SDI-to-analog encoders.
 
 The module is composed of a 12x12 routing crosspoint and six cages to accommodate the SFP modules. Each cage can contain up to two SFP units. The module uses a credit model to enable the cages.
 
@@ -18,23 +18,23 @@ The credits can be assigned automatically (at boot time) or manually (configurab
 
 The write parameter ranges and discreet values are retrieved from the device and dynamically updated in the element card.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                 | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                 | **DCF Integration** | **Cassandra Compliant** |
 |------------------|---------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                 | No                  | No                      |
 | 1.1.0.x          | Includes new parameters         | No                  | No                      |
 | 1.2.0.x          | Includes tables to support DVEs | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 0.1.16                      |
 | 1.1.0.x          | 2.0                         |
 | 1.2.0.x          | 2.1                         |
 
-### Exported drivers (only available in range 1.2.0.x)
+### Exported connectors (only available in range 1.2.0.x)
 
 | **Exported Protocol**                   | **Description**                                                                                              |
 |-----------------------------------------|--------------------------------------------------------------------------------------------------------------|
@@ -47,15 +47,15 @@ The write parameter ranges and discreet values are retrieved from the device and
 
 ### Creation
 
-This is a serial driver combined with smart-serial communication. During the creation of the element, the port settings need to be filled in correctly. These communication settings will be used to send and receive commands and responses to and from the device.
+This is a serial connector combined with smart-serial communication. During the creation of the element, the port settings need to be filled in correctly. These communication settings will be used to send and receive commands and responses to and from the device.
 
-#### SERIAL MAIN CONNECTION:
+#### SERIAL MAIN CONNECTION
 
 - **IP address/host**: The polling IP of the device, e.g. *172.32.65.38.*
 - **IP port**: The IP port of the device, set to the fixed value *4050.*
 - **Bus address**: This is a combination of the frame number and slot number/ID: "\<frameNumber\>**.\<**slotID\>" (e.g. frame 1, slot 12 = bus address *1.12).*
 
-#### SMART-SERIAL PORTDEV CONNECTION:
+#### SMART-SERIAL PORTDEV CONNECTION
 
 - **IP address/host**: The local DataMiner IP to receive responses, e.g. *172.0.0.50*.
 - **IP port**: The IP port of the DMA, set to the fixed value *4000.*
@@ -64,7 +64,7 @@ This is a serial driver combined with smart-serial communication. During the cre
 
 ### General
 
-On this page, all general parameters are available. Some parameters can be configured, such as **License Key**, **Software Reset** **Mode** and **Factory Recall**. Other parameters are not configurable, such as **Serial Number** and all **SFP Type Status** parameters (**A** to **F**).
+On this page, all general parameters are available. Some parameters can be configured, such as **License Key**, **Software Reset Mode** and **Factory Recall**. Other parameters are not configurable, such as **Serial Number** and all **SFP Type Status** parameters (**A** to **F**).
 
 There is also a pop-up page, **DVE**, which displays the four main DVE tables (**SFP RX1**, **RX2**, **TX1** and **TX2**).
 
@@ -92,4 +92,4 @@ On this page, you can access the web interface of the Imagine Communications fra
 
 ## Notes
 
-A **serial** driver with **smart-serial** connection means that there has to be a connection to a real device. If there is a change on the device, a response will be pushed to the DMA even if no poll request is sent.
+A **serial** connector with **smart-serial** connection means that there has to be a connection to a real device. If there is a change on the device, a response will be pushed to the DMA even if no poll request is sent.

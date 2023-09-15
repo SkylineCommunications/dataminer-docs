@@ -4,15 +4,15 @@ uid: Connector_help_Miravid_Telesight
 
 # Miravid Telesight
 
-This is an SNMP driver that is used to monitor the Miravid Telesight.
+This is an SNMP connector that is used to monitor the Miravid Telesight.
 
 ## About
 
-The driver is used to monitor a Miravid Telesight.
+The connector is used to monitor a Miravid Telesight.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                   |
+| **Range** | **Description**                                   |
 |------------------|---------------------------------------------------|
 | 1.0.0.x          | Initial version                                   |
 | 2.0.0.x          | Review based on 1.0.0.x (table PIDs are the same) |
@@ -21,7 +21,7 @@ The driver is used to monitor a Miravid Telesight.
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION**:
 

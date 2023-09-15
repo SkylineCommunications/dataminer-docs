@@ -4,7 +4,7 @@ uid: Connector_help_WISI_Tangram
 
 # WISI Tangram
 
-The **WISI Tangram** driver is used to display and configure information of the attached modules as well as the main board. The WISI TANGRAM video platform is a high-density digital TV headend for contribution of digital TV via IP networks and end-to-end IPTV solutions such as video on demand, connected TV and OTT (Over The Top) or Web TV.
+The **WISI Tangram** connector is used to display and configure information of the attached modules as well as the main board. The WISI TANGRAM video platform is a high-density digital TV headend for contribution of digital TV via IP networks and end-to-end IPTV solutions such as video on demand, connected TV and OTT (Over The Top) or Web TV.
 
 ## About
 
@@ -12,24 +12,24 @@ The WISI Tangram driver works using SNMP commands and is also configured to rece
 
 More information is provided on the following website: <http://wisi.de/en/business/products/tangram/>
 
-This driver will export different drivers based on the retrieved data. A list can be found in the section "Exported Drivers".
+This connector will export different connectors based on the retrieved data. A list can be found in the section "Exported Connectors".
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**                                                | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**                                                | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|----------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x              | Initial version.                                               | No                  | No                      |
 | 1.0.1.x              | Added support for software version 2.3 (Module GT11).          | No                  | No                      |
 | 1.1.0.x \[SLC Main\] | Added HTTP connection for retrieving QAM outputs and services. | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.4.1                       |
 | 1.0.1.x          | 2.3 3.0.1                   |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol** | **Description** |
 |-----------------------|-----------------|
@@ -41,7 +41,7 @@ This driver will export different drivers based on the retrieved data. A list ca
 
 ### Module Types
 
-The driver supports the following types:
+The connector supports the following types:
 
 - **GT21**
 - **GT22**
@@ -56,7 +56,7 @@ The driver supports the following types:
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -70,7 +70,7 @@ SNMP Settings:
 
 #### UDP/IP Syslog connection
 
-This driver uses a Syslog connection and requires the following input during element creation:
+This connector uses a Syslog connection and requires the following input during element creation:
 
 UDP/IP CONNECTION:
 
@@ -80,7 +80,7 @@ UDP/IP CONNECTION:
 
 #### HTTP HTTP Connection Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

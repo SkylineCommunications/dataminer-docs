@@ -8,18 +8,18 @@ CISCO Visual Quality Experience (VQE) offers service providers a set of technolo
 
 ## About
 
-SSH is used to retrieve an overview of all channels. The driver also monitors various counters with SNMP.
+SSH is used to retrieve an overview of all channels. The connector also monitors various counters with SNMP.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**  | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**  | **DCF Integration** | **Cassandra Compliant** |
 |------------------|------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version  | No                  | Yes                     |
 | 1.0.1.x          | Range for SNMPv3 | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 1.0.1.x          | Unknown                     |
@@ -30,7 +30,7 @@ SSH is used to retrieve an overview of all channels. The driver also monitors va
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -44,7 +44,7 @@ SNMP Settings:
 
 #### Serial SSH connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

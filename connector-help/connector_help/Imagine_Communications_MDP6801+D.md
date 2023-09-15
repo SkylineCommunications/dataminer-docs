@@ -8,21 +8,21 @@ The **Imagine Communications MDP6801+D** driver combines a **serial** and **smar
 
 ## About
 
-With this driver, you can monitor and configure the Imagine Communications converter card.
+With this connector, you can monitor and configure the Imagine Communications converter card.
 
 This converter card can be used in two ways. it can be used as an **Inserter module** or as an **Extractor module**. Based on the module configuration, certain parameters will become available and others will get the exception state "*N/A*".
 
 The write parameter ranges and discreet values are retrieved from the device and dynamically updated in the element card.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -30,15 +30,15 @@ The write parameter ranges and discreet values are retrieved from the device and
 
 ### Creation
 
-This is a serial driver combined with smart-serial communication. During the creation of the element, the port settings need to be filled in correctly. These communication settings will be used to send and receive commands and responses to and from the device.
+This is a serial connector combined with smart-serial communication. During the creation of the element, the port settings need to be filled in correctly. These communication settings will be used to send and receive commands and responses to and from the device.
 
-#### SERIAL MAIN CONNECTION:
+#### SERIAL MAIN CONNECTION
 
 - **IP address/host**: The polling IP of the device, e.g. *172.32.65.38.*
 - **IP port**: The IP port of the device, set to the fixed value *4050.*
 - **Bus address**: This is a combination of the frame number and slot number/ID: "\<frameNumber\>**.\<**slotID\>" (e.g. frame 1, slot 12 = bus address *1.12).*
 
-#### SMART-SERIAL PORTDEV CONNECTION:
+#### SMART-SERIAL PORTDEV CONNECTION
 
 - **IP address/host**: The local DataMiner IP to receive responses, e.g. *172.0.0.50*.
 - **IP port**: The IP port of the DMA, set to the fixed value *4000.*
@@ -51,7 +51,7 @@ On this page, all alarm parameters are displayed. The state of the alarms can be
 
 ### General Page
 
-On this page, all general parameters are available. Some parameters can be configured, such as **License Key**, **Working** **Mode** and **Factory Recall**. Other parameters are not configurable, such as **Serial Number** and **Installed** **Options**.
+On this page, all general parameters are available. Some parameters can be configured, such as **License Key**, **Working Mode** and **Factory Recall**. Other parameters are not configurable, such as **Serial Number** and **Installed Options**.
 
 Based on the configuration of the **Working Mode**, the card will work in a different way. It can be set to *Inserter* or *Extractor*. Based on the selection, certain parameters will be available and others will get the state "*N/A*".
 
@@ -79,8 +79,8 @@ This page contains two page buttons that can be used to navigate to the **SQM St
 
 ### Web Interface Page
 
-On this page, you can access the web interface of the Imagine Communications frame. Note that the client machine has to be able to acces the device, as otherwise it will not be possible to open the web interface.
+On this page, you can access the web interface of the Imagine Communications frame. Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.
 
 ## Notes
 
-A **serial** driver with **smart-serial** connection means that there has to be a connection to a real device. If there is a change on the device, a response will be pushed to the DMA even if no poll request is sent.
+A **serial** connector with **smart-serial** connection means that there has to be a connection to a real device. If there is a change on the device, a response will be pushed to the DMA even if no poll request is sent.

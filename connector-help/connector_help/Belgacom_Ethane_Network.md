@@ -4,15 +4,15 @@ uid: Connector_help_Belgacom_Ethane_Network
 
 # Belgacom Ethane Network
 
-This is a **virtual driver** that can be used to manage connections between **Cisco Managers** and **Alcatel SR Managers**.
+This is a **virtual connector** that can be used to manage connections between **Cisco Managers** and **Alcatel SR Managers**.
 
 ## About
 
-This driver allows the user to **create and manage input, in/out and output interfaces**. The input interfaces connect to the Cisco Managers, while the output interfaces connect to the Alcatel SR Managers. The in/out interfaces can be used to configure a "mesh" in the driver itself.
+This connector allows the user to **create and manage input, in/out and output interfaces**. The input interfaces connect to the Cisco Managers, while the output interfaces connect to the Alcatel SR Managers. The in/out interfaces can be used to configure a "mesh" in the connector itself.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | Yes                 | Yes                     |
 
@@ -22,7 +22,7 @@ This driver allows the user to **create and manage input, in/out and output inte
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## Usage
 
@@ -49,8 +49,8 @@ The page also allows you to **add** or **delete** a **Node**, **Node Port**, **N
 Virtual dynamic interfaces:
 
 - **Input** - **NodePort:** Connects to the Cisco Managers.
-- **In/Out** - **NodeService:** Allows you to configure and manage a mesh inside the driver.
-- **In/Out** - **Node:** These interfaces are not controllable. They allow you to configure and manage connections inside the driver.
+- **In/Out** - **NodeService:** Allows you to configure and manage a mesh inside the connector.
+- **In/Out** - **Node:** These interfaces are not controllable. They allow you to configure and manage connections inside the connector.
 - **Output** - **ENA:** Connects to Alcatel SR Managers.
 
 ### Connections
@@ -78,4 +78,4 @@ Virtual dynamic interfaces:
 
 ## Notes
 
-The **external interfaces** (NodePort and ENA) must be **created first** and connected to the Cisco Manager and Alcatel SR Manager, as the driver gets data on the fly from them. This **information is added as a connection property** when NodePort-NodeService and NodeService-Node/Node-ENA connections are made.
+The **external interfaces** (NodePort and ENA) must be **created first** and connected to the Cisco Manager and Alcatel SR Manager, as the connector gets data on the fly from them. This **information is added as a connection property** when NodePort-NodeService and NodeService-Node/Node-ENA connections are made.

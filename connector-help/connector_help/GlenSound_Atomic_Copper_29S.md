@@ -10,17 +10,17 @@ The Glensound Copper 29 is a high-performance Telephone Balance Unit designed to
 
 ## About
 
-This driver uses **smart-serial** communication in order to communicate with the device.
+This connector uses **smart-serial** communication in order to communicate with the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | N/A                         |
 
@@ -30,7 +30,7 @@ This driver uses **smart-serial** communication in order to communicate with the
 
 #### Serial main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -42,7 +42,7 @@ SERIAL CONNECTION:
 
 ## Usage
 
-This driver contains **5 pages**.
+This connector contains **5 pages**.
 
 ### General
 

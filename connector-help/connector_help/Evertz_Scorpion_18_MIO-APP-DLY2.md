@@ -4,7 +4,7 @@ uid: Connector_help_Evertz_Scorpion_18_MIO-APP-DLY2
 
 # Evertz Scorpion 18 MIO-APP-DLY2
 
-This driver is used to monitor the Evertz Scorpion 18 MIO-APP-DLY2 module.
+This connector is used to monitor the Evertz Scorpion 18 MIO-APP-DLY2 module.
 
 ## About
 

@@ -8,13 +8,13 @@ HDO611 is a wideband amplifier. It is installed into an HDX installation frame a
 
 ## About
 
-This driver is used to control and monitor the HDO611 module using the DVX bus.
+This connector is used to control and monitor the HDO611 module using the DVX bus.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a serial connection and needs the following user information:
+This connector uses a serial connection and requires the following input during element creation:
 
 **SERIAL CONNECTION**:
 

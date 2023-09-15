@@ -4,15 +4,15 @@ uid: Connector_help_RTBF_Nodal_Database_Connector
 
 # RTBF Nodal Database Connector
 
-The **RTBF Nodal Database Connector** driver is used as an interface between the **WFM** and the offload data in the database.
+The **RTBF Nodal Database Connector** connector is used as an interface between the **WFM** and the offload data in the database.
 
 ## About
 
-The WFM can send commands to request sessions/activities between a start and stop time. The driver connects to the database and retrieves the appropriate information from the activity table.
+The WFM can send commands to request sessions/activities between a start and stop time. The connector connects to the database and retrieves the appropriate information from the activity table.
 
 The WFM can also send a second command to ask all the details of a specific activity. The information is passed to the WFM in XML format using a set on a parameter.
 
-The driver also makes it possible to clean up the database, so that any data older than a given time will be deleted.
+The connector also makes it possible to clean up the database, so that any data older than a given time will be deleted.
 
 ## Installation and configuration
 
@@ -20,7 +20,7 @@ The driver also makes it possible to clean up the database, so that any data old
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Configuration of the database
 

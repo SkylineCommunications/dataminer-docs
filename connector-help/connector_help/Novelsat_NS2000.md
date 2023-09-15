@@ -8,11 +8,11 @@ The NovelSat NS2000 is a demodulator designed for high-demand satellite receptio
 
 ## About
 
-This driver uses **SNMP and HTTP** communication to monitor and change parameters on the device, to guarantee the efficiency of the equipment.
+This connector uses **SNMP and HTTP** communication to monitor and change parameters on the device, to guarantee the efficiency of the equipment.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**                      | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**                      | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|--------------------------------------|---------------------|-------------------------|
 | 1.0.0.x              | Initial version.                     | No                  | Yes                     |
 | 1.0.1.x              | Added DCF integration.               | Yes                 | Yes                     |
@@ -21,9 +21,9 @@ This driver uses **SNMP and HTTP** communication to monitor and change parameter
 | 2.1.0.x \[Obsolete\] | New firmware based on 2.0.0.x.       | Yes                 | Yes                     |
 | 2.1.1.x \[SLC Main\] | Changes implemented to display keys. | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 2.1.1.x          | 1.1.1 \[Build 4761\]        |
 
@@ -44,7 +44,7 @@ This driver uses **SNMP and HTTP** communication to monitor and change parameter
 <tr class="even">
 <td>1.0.0.x 1.0.1.x 1.0.2.x</td>
 <td><h4 id="snmp-main-connection.">SNMP Main Connection.</h4>
-<p>This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:</p>
+<p>This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:</p>
 <p>SNMP CONNECTION:</p>
 <ul>
 <li><strong>IP address/host</strong>: The polling IP of the device.</li>
@@ -59,7 +59,7 @@ This driver uses **SNMP and HTTP** communication to monitor and change parameter
 <tr class="odd">
 <td>2.0.0.x 2.0.1.x 2.1.1.x</td>
 <td>SNMP Main Connection.
-<p>This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:</p>
+<p>This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:</p>
 <p>SNMP CONNECTION:</p>
 <ul>
 <li><strong>IP address/host</strong>: The polling IP of the device.</li>
@@ -71,7 +71,7 @@ This driver uses **SNMP and HTTP** communication to monitor and change parameter
 <li><strong>Set community string</strong>: The community string used when setting values on the device (default: <em>private</em>).</li>
 </ul>
 <h4 id="http-secondary-connection">HTTP Secondary Connection</h4>
-<p>This driver uses an HTTP connection and requires the following input during element creation:</p>
+<p>This connector uses an HTTP connection and requires the following input during element creation:</p>
 <p>HTTP CONNECTION:</p>
 <ul>
 <li><strong>IP address/host</strong>: The polling IP of the device.</li>
@@ -92,7 +92,7 @@ When the element has been created, specify the correct device firmware on the Sy
 
 This page contains general information related to the device, such as the **Firmware Version**, **OS Version** and **HW Product Type.**
 
-In the **Firmware Device** box, you can select the firmware version of the device. The correct firmware version must be selected in order to ensure that the driver functions correctly.
+In the **Firmware Device** box, you can select the firmware version of the device. The correct firmware version must be selected in order to ensure that the connector functions correctly.
 
 ### System Config
 
@@ -144,7 +144,7 @@ This page provides access to the web interface of the device (http:// Port 80). 
 
 ## DataMiner Connectivity Framework
 
-The 2.1.1.x driver range of the protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
+The 2.1.1.x connector range of the protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
 ### Interfaces
 

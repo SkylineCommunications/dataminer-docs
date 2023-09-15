@@ -4,7 +4,7 @@ uid: Connector_help_Aurora_Network_CX3001_-_AT3554
 
 # Aurora Network CX3001 - AT3554
 
-The Aurora Network AT3554 is used by DVEs created by the Aurora Network CX3001 driver. A DVE is created for each available AT3554 analog transmitter.
+The Aurora Network AT3554 is used by DVEs created by the Aurora Network CX3001 connector. A DVE is created for each available AT3554 analog transmitter.
 
 ## About
 
@@ -15,9 +15,9 @@ The Dynamic Virtual Element has four pages:
 - The **Alarms Configuration** page contains an alarm configuration table.
 - The **Configuration** page contains a configuration table specific to the AT3554 slot.
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 2.0.1.x          | Unknown                     |
 
@@ -25,7 +25,7 @@ The Dynamic Virtual Element has four pages:
 
 ### Creation
 
-This driver is used by DVE child elements that are **automatically created** by the parent driver [Aurora Network CX3001](xref:Connector_help_Aurora_Network_CX3001), from version 2.0.1.x onwards. For each AT3554 transmitter found in the system, a virtual element will be created.
+This connector is used by DVE child elements that are **automatically created** by the parent connector [Aurora Network CX3001](xref:Connector_help_Aurora_Network_CX3001), from version 2.0.1.x onwards. For each AT3554 transmitter found in the system, a virtual element will be created.
 
 ## Usage
 

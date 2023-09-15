@@ -8,17 +8,17 @@ The ACO6800+ICQST is an intelligent Clean/Quiet Automatic Changeover for HD/SD/A
 
 ## About
 
-This driver uses **SNMP** to retrieve and configure data on the device.
+This connector uses **SNMP** to retrieve and configure data on the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial Version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.1                         |
 
@@ -28,7 +28,7 @@ This driver uses **SNMP** to retrieve and configure data on the device.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

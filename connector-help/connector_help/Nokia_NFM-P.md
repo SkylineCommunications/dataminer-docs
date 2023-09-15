@@ -56,7 +56,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to Use
 
-The driver uses SOAP calls to retrieve the device information and JMS connection to receive alarm events.
+The connector uses SOAP calls to retrieve the device information and JMS connection to receive alarm events.
 
 - You can find the system relation information on the **General** paga of this connector. JMS Connection parameter shows the status of the connection, if it is Active or Inactive.
 - The **JMS Configuration** page contains the mandatory input arguments that must be provided to establish a JMS connection.

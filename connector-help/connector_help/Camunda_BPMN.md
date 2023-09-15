@@ -5,7 +5,7 @@ uid: Connector_help_Camunda_BPMN
 # Camunda BPMN
 
 Camunda Platform is a complete process automation tech stack with powerful execution engines for BPMN workflows and DMN decisions paired with essential applications for modeling, operations and analytics.
-The driver fetches and locks external tasks that can either be completed manually or with a script.
+The connector fetches and locks external tasks that can either be completed manually or with a script.
 
 ## About
 
@@ -33,7 +33,7 @@ The driver fetches and locks external tasks that can either be completed manuall
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

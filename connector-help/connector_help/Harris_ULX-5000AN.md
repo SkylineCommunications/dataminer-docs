@@ -8,17 +8,17 @@ The Harris ULX-5000AN is an analog television transmitter. It uses a simplified 
 
 ## About
 
-This driver can be used to monitor and configure the Harris ULX-5000AN system.
+This connector can be used to monitor and configure the Harris ULX-5000AN system.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ This driver can be used to monitor and configure the Harris ULX-5000AN system.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -50,7 +50,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created using this driver consists of the data pages detailed below.
+The element created using this connector consists of the data pages detailed below.
 
 ### General
 

@@ -30,7 +30,7 @@ The **MCR-6000** Internet Radio Gateway enables live transcoding of internet aud
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -63,6 +63,6 @@ The web interface is only accessible when the client machine has network access 
 
 ## Notes
 
-The driver contains a hidden debug page that you can enable by doing a **multiple set** on the parameter **DEBUG Page Visibility**, setting it to the value ***Shown***.
+The connector contains a hidden debug page that you can enable by doing a **multiple set** on the parameter **DEBUG Page Visibility**, setting it to the value ***Shown***.
 
 On the debug page, you can enable or disable debug logging.

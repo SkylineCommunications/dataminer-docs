@@ -4,21 +4,21 @@ uid: Connector_help_RF_Design_FlexLink_C2
 
 # RF Design FlexLink C2
 
-This driver is used to manage the RF Design "FlexLink C2" series for non-redundant operations. The "FlexLink C2" series is available with 2:1, 4:1, 8:1, 16:1, 32:1 and 64:1 switching configurations.
+This connector is used to manage the RF Design "FlexLink C2" series for non-redundant operations. The "FlexLink C2" series is available with 2:1, 4:1, 8:1, 16:1, 32:1 and 64:1 switching configurations.
 
 ## About
 
-This driver supports switches from the RF Design "FlexLink C2" series and is capable of managing a matrix of up to 64x1 crosspoints with **multiple outputs per input and one input per output**.
+This connector supports switches from the RF Design "FlexLink C2" series and is capable of managing a matrix of up to 64x1 crosspoints with **multiple outputs per input and one input per output**.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 2.3.25.D15.S26.H19.21.11.4  |
 
@@ -28,7 +28,7 @@ This driver supports switches from the RF Design "FlexLink C2" series and is cap
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

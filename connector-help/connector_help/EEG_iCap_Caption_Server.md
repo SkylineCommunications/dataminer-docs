@@ -32,7 +32,7 @@ This protocol is used to monitor the EEG iCap Caption Server. From SDI to IP vid
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -54,7 +54,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver has several data pages:
+The element created with this connector has several data pages:
 
 - The **General** page contains the web interface credentials.
 - The **Users**, **Access Codes** and **Caption Cast** pages display information about those subjects. You can add and edit information via their subpages.

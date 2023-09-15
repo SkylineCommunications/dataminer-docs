@@ -10,9 +10,9 @@ The **HDO773** is a downstream transmitter that supports frequencies up to 1006 
 
 A **serial** connection is used in order to successfully retrieve and configure the information of the device. There are also different possibilities available for **alarm monitoring** and **trending**.
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | BIOS Version: 1.2           |
 
@@ -20,7 +20,7 @@ A **serial** connection is used in order to successfully retrieve and configure 
 
 ### Creation
 
-A DVE using this driver is **automatically created** by an element using the parent driver.
+A DVE using this connector is **automatically created** by an element using the parent connector.
 
 ## Usage
 

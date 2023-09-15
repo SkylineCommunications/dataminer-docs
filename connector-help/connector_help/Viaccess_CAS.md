@@ -4,21 +4,21 @@ uid: Connector_help_Viaccess_CAS
 
 # Viaccess CAS
 
-This driver can be used to monitor the Viaccess CAS, a conditional access system that can be used in digital video broadcasting.
+This connector can be used to monitor the Viaccess CAS, a conditional access system that can be used in digital video broadcasting.
 
 ## About
 
-This driver can only be used for monitoring purposes. It only performs SNMP Gets and receives and processes traps.
+This connector can only be used for monitoring purposes. It only performs SNMP Gets and receives and processes traps.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ This driver can only be used for monitoring purposes. It only performs SNMP Gets
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

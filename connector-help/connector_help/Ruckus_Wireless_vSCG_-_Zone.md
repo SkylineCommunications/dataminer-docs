@@ -8,19 +8,19 @@ The **Ruckus Wireless Virtualized SmartCell Gateway** (vSCG) is an NFV-based and
 
 ## About
 
-This driver was designed to monitor and receive numerous statistics for the vSCG, the access points (APs) connected to it and the client stations (STAs) connected to these APs. In other words, the entire WLAN controlled by the vSCG can be monitored using this protocol, plus the different zones and the access points connected to these zones.
+This connector was designed to monitor and receive numerous statistics for the vSCG, the access points (APs) connected to it and the client stations (STAs) connected to these APs. In other words, the entire WLAN controlled by the vSCG can be monitored using this protocol, plus the different zones and the access points connected to these zones.
 
-This driver is generated automatically by the driver **Ruckus Wireless vSCG**.
+This connector is generated automatically by the connector **Ruckus Wireless vSCG**.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                                                | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                                                                | **DCF Integration** | **Cassandra Compliant** |
 |------------------|----------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.1.x          | New range that adds new HTTP connection and creation of DVEs. Supports node redundancy. Supports new firmware. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**        |
+| **Range** | **Device Firmware Version**        |
 |------------------|------------------------------------|
 | 1.0.1.x          | 3.4.1.0.329 (backwards compatible) |
 
@@ -28,7 +28,7 @@ This driver is generated automatically by the driver **Ruckus Wireless vSCG**.
 
 ### Creation
 
-This driver is used by DVEs that are **automatically generated** when a user enables an instance of a zone in the **Zones Details Table** of the parent element.
+This connector is used by DVEs that are **automatically generated** when a user enables an instance of a zone in the **Zones Details Table** of the parent element.
 
 ## Usage
 

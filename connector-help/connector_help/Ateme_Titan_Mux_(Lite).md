@@ -4,7 +4,7 @@ uid: Connector_help_Ateme_Titan_Mux_(Lite)
 
 # Ateme Titan Mux (Lite)
 
-This driver allows you to check output information and also to configure some parameters of the programs, such as BISS Mode and Session Word.
+This connector allows you to check output information and also to configure some parameters of the programs, such as BISS Mode and Session Word.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver allows you to check output information and also to configure some pa
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

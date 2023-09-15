@@ -5,7 +5,6 @@ uid: Connector_help_Grass_Valley_Morpheus_Panoplay_On_Air
 # Grass Valley Morpheus Panoplay On Air
 
 This device manages channel redundancy, and whether said channels are on air, or offline. The redundancy is provided through configurable channel synchronization across multiple redundant systems.
-.
 
 ## About
 
@@ -43,15 +42,11 @@ This device manages channel redundancy, and whether said channels are on air, or
 |-----------|------------------------|
 | 1.0.0.x   | 2.9.2.r1.588           |
 
-
-
 ### System Info
 
 | **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components** |
 |-----------|---------------------|-------------------------|-----------------------|-------------------------|
 | 1.0.0.x   | No                  | Yes                     | \-                    | \-                      |
-
-
 
 ## Configuration
 
@@ -59,13 +54,13 @@ This device manages channel redundancy, and whether said channels are on air, or
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
 - **IP address/host**: The polling IP or URL of the destination.
-- **IP port**: \[The IP port of the destination. (default: *443*)\]
-- **Device address**: \[The bus address of the device. If the proxy server has to be bypassed, specify *BypassProxy*.\]
+- **IP port**: The IP port of the destination (default: *443*).
+- **Device address**: The bus address of the device. If the proxy server has to be bypassed, specify *BypassProxy*.
 
 ### Initialization
 
@@ -89,6 +84,4 @@ In there, fill in the two required parameters, and press the **Add New Row** but
 
 ## Notes
 
-A custom visio file will be available for this protocol.
-
-
+A custom Visio file will be available for this protocol.

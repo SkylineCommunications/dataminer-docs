@@ -4,17 +4,17 @@ uid: Connector_help_Factum_EPC100
 
 # Factum EPC100
 
-The **Factum EPC100** driver displays information related to the **Factum EPC100 Controller** device.
+The **Factum EPC100** connector displays information related to the **Factum EPC100 Controller** device.
 
 ## About
 
-This driver uses an SNMP connection to communicate with the **Factum EPC100** device.
+This connector uses an SNMP connection to communicate with the **Factum EPC100** device.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP Connection:**
 

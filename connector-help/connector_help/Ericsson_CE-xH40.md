@@ -8,19 +8,19 @@ The **Ericsson CE-xH40** driver has a **serial** connection to monitor and confi
 
 ## About
 
-With this driver, you can monitor and configure the Ericsson encoder. This module's MPEG-4 AVC Fidelity Range Extensions (FRExt) enable the operator to capture, archive and distribute content in the best possible quality HDTV. The encoder supports multi-channel and multi-codec.
+With this connector, you can monitor and configure the Ericsson encoder. This module's MPEG-4 AVC Fidelity Range Extensions (FRExt) enable the operator to capture, archive and distribute content in the best possible quality HDTV. The encoder supports multi-channel and multi-codec.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                   | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                   | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                   | No                  | No                      |
 | 2.0.0.x          | Support for firmware version 9.0  | No                  | No                      |
 | 3.0.0.x          | Support for firmware version 9.15 | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Before 9.0                  |
 | 2.0.0.x          | 9.0                         |
@@ -32,7 +32,7 @@ With this driver, you can monitor and configure the Ericsson encoder. This modul
 
 #### Serial main connection
 
-This is a serial driver that will send HTTP commands (default HTTP on port 80). During the creation of the element, the port settings need to be filled in correctly. These communication settings will be used to send and receive commands and responses to and from the device.
+This is a serial connector that will send HTTP commands (default HTTP on port 80). During the creation of the element, the port settings need to be filled in correctly. These communication settings will be used to send and receive commands and responses to and from the device.
 
 SERIAL CONNECTION:
 

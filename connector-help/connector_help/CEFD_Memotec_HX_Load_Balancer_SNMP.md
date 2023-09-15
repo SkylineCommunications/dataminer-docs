@@ -4,21 +4,21 @@ uid: Connector_help_CEFD_Memotec_HX_Load_Balancer_SNMP
 
 # CEFD Memotec HX Load Balancer SNMP
 
-The **CEFD Memotec HX Load Balancer SNMP** driver can be used to monitor and control the CEFD Memotec HX Load Balancer.
+The **CEFD Memotec HX Load Balancer SNMP** connector can be used to monitor and control the CEFD Memotec HX Load Balancer.
 
 ## About
 
 The protocol uses **SNMP** to retrieve data from the **load balancer** and configure parameters of the device, and can also receive traps notifications.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**                               |
+| **Range** | **Device Firmware Version**                               |
 |------------------|-----------------------------------------------------------|
 | 1.0.0.x          | 1.2.28-201805012049E4.x86_64 1.2.59a-201806191849N4x86_64 |
 
@@ -28,7 +28,7 @@ The protocol uses **SNMP** to retrieve data from the **load balancer** and confi
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

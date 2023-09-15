@@ -8,15 +8,15 @@ uid: Connector_help_NEC_Polarization_Controller
 
 A polarization controller comprises many devices connected in series to each other. Each device includes an optical channel waveguide which is common to the all the devices, and an electrode positioned on the optical channel waveguide and two electrodes positioned on both sides of the optical channel waveguide. These elements control the polarization of the light being sent through the optical media.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial Version | No                  | True                    |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -26,7 +26,7 @@ A polarization controller comprises many devices connected in series to each oth
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

@@ -4,7 +4,7 @@ uid: Connector_help_Skyline_Infrastructure_Discovery_And_Provisioning
 
 # Skyline Infrastructure Discovery And Provisioning
 
-This driver is part of DataMiner Infrastructure Discovery and Provisioning (IDP). It is the central point for user interaction and logic in DataMiner IDP.
+This connector is part of DataMiner Infrastructure Discovery and Provisioning (IDP). It is the central point for user interaction and logic in DataMiner IDP.
 
 ## About
 
@@ -20,7 +20,7 @@ This driver is part of DataMiner Infrastructure Discovery and Provisioning (IDP)
 
 | **Range**       | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                    | **Exported Components** |
 |-----------------|---------------------|-------------------------|--------------------------------------------------------------------------|-------------------------|
-| 1.0.0.x 1.0.1.x | No                  | Yes                     | This driver will only work when it is deployed as part of DataMiner IDP. | \-                      |
+| 1.0.0.x 1.0.1.x | No                  | Yes                     | This connector will only work when it is deployed as part of DataMiner IDP. | \-                      |
 
 ## Configuration
 
@@ -34,10 +34,10 @@ Element creation is done automatically during the setup of DataMiner IDP.
 
 ### Redundancy
 
-Redundancy is not defined in the driver.
+Redundancy is not defined in the connector.
 
 ## How to Use
 
-This driver is only intended to be used as part of DataMiner IDP.
+This connector is only intended to be used as part of DataMiner IDP.
 
 For more information on how to use DataMiner IDP, refer to the DataMiner Help.

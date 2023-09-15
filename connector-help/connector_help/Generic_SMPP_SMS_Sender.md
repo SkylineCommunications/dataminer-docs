@@ -4,9 +4,9 @@ uid: Connector_help_Generic_SMPP_SMS_Sender
 
 # Generic SMPP SMS Sender
 
-This driver can be used to set up a (TCP/IP) connection with an SMS Center using the open, industry-standard Short Message Peer to Peer Protocol (**SMPP v3.4**). In this setup, DataMiner acts as the **ESME** (External Short Message Entity). It initiates an application layer connection with an SMSC over a TCP/IP and may then **send short messages (SMS)** to the SMSC, which will then forward the SMS to the final destination.
+This connector can be used to set up a (TCP/IP) connection with an SMS Center using the open, industry-standard Short Message Peer to Peer Protocol (**SMPP v3.4**). In this setup, DataMiner acts as the **ESME** (External Short Message Entity). It initiates an application layer connection with an SMSC over a TCP/IP and may then **send short messages (SMS)** to the SMSC, which will then forward the SMS to the final destination.
 
-As such, this driver can be used to interface with any SMS Center that supports and is based on the standard SMPP specification v3.4.
+As such, this connector can be used to interface with any SMS Center that supports and is based on the standard SMPP specification v3.4.
 
 ## About
 
@@ -34,7 +34,7 @@ As such, this driver can be used to interface with any SMS Center that supports 
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -62,4 +62,4 @@ Once all parameters are configured and applied, it should be possible to send an
 
 ## Notes
 
-This driver can be used in combination with an Automation script that fills in the message and phone number to initiate SMS notifications.
+This connector can be used in combination with an Automation script that fills in the message and phone number to initiate SMS notifications.

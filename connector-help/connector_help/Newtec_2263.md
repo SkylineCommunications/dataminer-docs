@@ -8,18 +8,18 @@ The DVB-S2 satellite demodulator NTC/2263/xF is a member of the Azimuth series a
 
 ## About
 
-This driver uses a **serial** connection to retrieve information from the device and set parameters on the device.
+This connector uses a **serial** connection to retrieve information from the device and set parameters on the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**                                       | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**                                       | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|-------------------------------------------------------|---------------------|-------------------------|
 | 2.2.4.x              | Range for software ID 6242 and software version 2.04. | No                  | Yes                     |
 | 2.3.0.x \[SLC Main\] | New range for SW ID 6242 and SW version 2.0.1.        | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**      |
+| **Range** | **Device Firmware Version**      |
 |------------------|----------------------------------|
 | 2.3.0.x          | SW ID 6242 and SW version 2.0.1. |
 
@@ -29,7 +29,7 @@ This driver uses a **serial** connection to retrieve information from the device
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

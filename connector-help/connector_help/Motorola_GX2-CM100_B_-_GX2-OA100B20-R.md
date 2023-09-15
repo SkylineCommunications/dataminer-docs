@@ -4,15 +4,15 @@ uid: Connector_help_Motorola_GX2-CM100_B_-_GX2-OA100B20-R
 
 Motorola GX2-CM100 B - GX2-OA100B20-R
 
-The **Motorola GX2-CM100 B - GX2-OA100B20-R** driver is an SNMP-based driver used to monitor and configure the **Motorola GX2-OA100B20-R.**
+The **Motorola GX2-CM100 B - GX2-OA100B20-R** connector is an SNMP-based connector used to monitor and configure the **Motorola GX2-OA100B20-R.**
 
 About
 
-This driver provides a monitoring interface for the **Motorola GX2-OA100B20-R** module.
+This connector provides a monitoring interface for the **Motorola GX2-OA100B20-R** module.
 
-Ranges of the driver
+Ranges of the connector
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 2.0.1.x          | Initial version | No                  | Yes                     |
 
@@ -26,7 +26,7 @@ Installation and configuration
 
 Creation
 
-This driver is used by DVE child elements that are **automatically created** by the parent driver [Motorola GX2-CM100 B](xref:Connector_help_Motorola_GX2-CM100_B), from version 2.0.1.2 onwards.
+This connector is used by DVE child elements that are **automatically created** by the parent connector [Motorola GX2-CM100 B](xref:Connector_help_Motorola_GX2-CM100_B), from version 2.0.1.2 onwards.
 
 Usage
 

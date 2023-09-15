@@ -4,21 +4,21 @@ uid: Connector_help_Sky_UK_Info_On_EWL_-_Live_Event_Workflow
 
 # Sky UK Info On EWL - Live Event Workflow
 
-This driver is used by enhanced services that contain elements of the protocol [Sky UK VICC](xref:Connector_help_Sky_UK_VICC). With this driver, alarms are generated according to predefined rules.
+This connector is used by enhanced services that contain elements of the protocol [Sky UK VICC](xref:Connector_help_Sky_UK_VICC). With this connector, alarms are generated according to predefined rules.
 
 ## About
 
-To use this driver, create a service that uses it as the service definition, add the necessary element and select the parameters mentioned below.
+To use this connector, create a service that uses it as the service definition, add the necessary element and select the parameters mentioned below.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial Version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Initial version.            |
 
@@ -28,7 +28,7 @@ To use this driver, create a service that uses it as the service definition, add
 
 #### service Main Connection
 
-This driver uses a service connection and requires the following input during element creation:
+This connector uses a service connection and requires the following input during element creation:
 
 SERVICE CONNECTION:
 

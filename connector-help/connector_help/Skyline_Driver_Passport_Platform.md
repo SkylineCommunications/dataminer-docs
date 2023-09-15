@@ -105,9 +105,9 @@ The Configuration-Network page credential parameters that need to be configured 
 
 To configure a test:
 
-1.  Upload the .dmt package to the **Packages** documents folder.
-2.  Go to the **Controller** page and select the package via **New Test Package**.
-3.  Click the **Schedule** button.
+1. Upload the .dmt package to the **Packages** documents folder.
+2. Go to the **Controller** page and select the package via **New Test Package**.
+3. Click the **Schedule** button.
 
 The test will then be added to the **Queue** table to be executed.
 

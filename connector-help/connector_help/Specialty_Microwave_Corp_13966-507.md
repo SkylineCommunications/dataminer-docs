@@ -2,22 +2,23 @@
 uid: Connector_help_Specialty_Microwave_Corp_13966-507
 ---
 
-Specialty Microwave Corp 13966-507
+# Specialty Microwave Corp 13966-507
+
 The TLT RF Switching Panel, Part No. 13966-507 consists of a logic panel used in satellite communications earth stations. The TLT RF Switching Panel provides localindication and commands and using a serial interface provides remote indication and commands of four RF switches.
 
 ## About
 
-The Speciality Microwave Corp driver allows for quick monitoring of front panel information and configuration of switch position.
+The Specialty Microwave Corp connector allows for quick monitoring of front panel information and configuration of switch position.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
-| 1.0.0.1          | Initial Version | No                  | Yes                     |
+| 1.0.0.x          | Initial Version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range**     | **Device Firmware Version** |
+| **Range**     | **Device Firmware Version** |
 |----------------------|-----------------------------|
 | 1.0.0.x \[SLC Main\] | 2.30                        |
 
@@ -27,7 +28,7 @@ The Speciality Microwave Corp driver allows for quick monitoring of front panel 
 
 #### Serial main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

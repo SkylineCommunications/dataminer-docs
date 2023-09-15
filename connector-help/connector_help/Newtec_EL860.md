@@ -8,17 +8,17 @@ The **Newtec EL860** shaper and encapsulator combines multilevel IP/VLAN traffic
 
 ## About
 
-This driver communicates with the device using a serial connection. It retrieves data from the equipment to enable monitoring of rates, statistics over rules, terminals and ACM.
+This connector communicates with the device using a serial connection. It retrieves data from the equipment to enable monitoring of rates, statistics over rules, terminals and ACM.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**                                         |
+| **Range** | **Device Firmware Version**                                         |
 |------------------|---------------------------------------------------------------------|
 | 1.0.0.x          | TelliShape version 3.0.1 201010191428391 Decapsulator version 1.1.7 |
 
@@ -28,7 +28,7 @@ This driver communicates with the device using a serial connection. It retrieves
 
 #### Serial main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

@@ -8,18 +8,18 @@ The Imagine Communications VAX is a DAB digital radio and VHF TV solid-state tra
 
 ## About
 
-With this driver, it is possible to monitor and configure the transmitter itself, as well as to enable the trap notifications and their priorities.
+With this connector, it is possible to monitor and configure the transmitter itself, as well as to enable the trap notifications and their priorities.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                  | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                  | **DCF Integration** | **Cassandra Compliant** |
 |------------------|------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                                                  | No                  | Yes                     |
 | 1.0.0.10         | Support for the Extended SD Transmitter MIB (VAXEXTENDED-DD-MIB) | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 861-1150-012 F/01.01.0150   |
 | 1.0.0.10         | 861-1150-012 F/01.01.0150   |
@@ -30,7 +30,7 @@ With this driver, it is possible to monitor and configure the transmitter itself
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -44,7 +44,7 @@ SNMP Settings:
 
 ### Configuration of the LITE functionality
 
-To configure the LITE functionality of the driver, on the **Network Settings** page, enable the parameter **LITE PROTOCOL**.
+To configure the LITE functionality of the connector, on the **Network Settings** page, enable the parameter **LITE PROTOCOL**.
 
 ## Usage
 
@@ -82,4 +82,4 @@ This page displays the web interface of the device. Note that the client machine
 
 ## Notes
 
-Note that there are 8 possible notifications that this driver can receive via **traps** (if enabled). When these **traps** are received, the corresponding parameters are **repolled** to update their state.
+Note that there are 8 possible notifications that this connector can receive via **traps** (if enabled). When these **traps** are received, the corresponding parameters are **repolled** to update their state.

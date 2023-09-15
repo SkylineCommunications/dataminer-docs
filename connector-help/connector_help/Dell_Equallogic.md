@@ -4,7 +4,7 @@ uid: Connector_help_Dell_Equallogic
 
 # Dell Equallogic
 
-This driver allows you to monitor the **Dell Equallogic** disk array. Information from the disk array is retrieved via **SNMP**. Traps can be retrieved if this is enabled on the device.
+This connector allows you to monitor the **Dell Equallogic** disk array. Information from the disk array is retrieved via **SNMP**. Traps can be retrieved if this is enabled on the device.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver allows you to monitor the **Dell Equallogic** disk array. Informatio
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

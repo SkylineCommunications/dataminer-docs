@@ -8,20 +8,20 @@ uid: Connector_help_Aperi_Uncompressed_Transport_SDI
 
 ## About
 
-This driver is used to retrieve all the data regarding the Uncompressed Transport SDI card inside an Aperi chassis.
+This connector is used to retrieve all the data regarding the Uncompressed Transport SDI card inside an Aperi chassis.
 
 It uses the REST API to get and set all parameters associated with this type of card.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**         | **Description**               | **DCF Integration** | **Cassandra Compliant** |
+| **Range**         | **Description**               | **DCF Integration** | **Cassandra Compliant** |
 |--------------------------|-------------------------------|---------------------|-------------------------|
 | 1.0.0.x                  | Initial version               | No                  | Yes                     |
-| 1.0.1.x **\[SLC Main\]** | Streamlined all Aperi drivers | No                  | Yes                     |
+| 1.0.1.x **\[SLC Main\]** | Streamlined all Aperi connectors | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.2.0                       |
 | 1.0.1.x          | 1.2.0                       |
@@ -32,7 +32,7 @@ It uses the REST API to get and set all parameters associated with this type of 
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

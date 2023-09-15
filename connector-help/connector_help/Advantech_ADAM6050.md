@@ -4,11 +4,11 @@ uid: Connector_help_Advantech_ADAM6050
 
 # Advantech ADAM6050
 
-The **Advantech ADAM6050** driver is a serial driver used to monitor and configure the inputs and outputs of the device.
+The **Advantech ADAM6050** connector is a serial connector used to monitor and configure the inputs and outputs of the device.
 
 ## About
 
-The **Advantech ADAM6050** is an 18-ch Isolated Digital I/O Modbus TCP Module, which supports High-to-Low Delay Output. With this driver, the outputs can be set for the device. The inputs are only monitored. It's also possible to set the user value, which is the value the user associates with the real value on the device. With the inversion setting, the user value will be the inverted value of the real value on the device.
+The **Advantech ADAM6050** is an 18-ch Isolated Digital I/O Modbus TCP Module, which supports High-to-Low Delay Output. With this connector, the outputs can be set for the device. The inputs are only monitored. It's also possible to set the user value, which is the value the user associates with the real value on the device. With the inversion setting, the user value will be the inverted value of the real value on the device.
 
 ## Installation and configuration
 
@@ -18,7 +18,7 @@ When you create this element, only the IP address of the host and the port need 
 
 ### Installation
 
-Before the driver can be used, the following .dll files have to be added in the directory *C:\Skyline DataMiner\ProtocolScripts*:
+Before the connector can be used, the following .dll files have to be added in the directory *C:\Skyline DataMiner\ProtocolScripts*:
 
 - Advantech.Adam.dll,
 - Advantech.Common.dll,
@@ -48,8 +48,4 @@ The **Backup** page contains all the functionality for creating and restoring ba
 
 All backups will have a similar name. The name is formatted as follows: *\[Name of the element\]\_\[date\]\_\[time\].xml*.
 
-It's also possible to restore the settings for the device to a backup that was taken for this type of device. There are two ways to do this: either the selected backup from the drop-down list can be restored, or the user can choose to restore the most recent backup for this type. The status of the restore will also be displayed.
-
-## Notes
-
-N/A
+It is also possible to restore the settings for the device to a backup that was taken for this type of device. There are two ways to do this: either the selected backup from the drop-down list can be restored, or the user can choose to restore the most recent backup for this type. The status of the restore will also be displayed.

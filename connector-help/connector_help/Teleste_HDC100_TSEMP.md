@@ -10,11 +10,11 @@ uid: Connector_help_Teleste_HDC100_TSEMP
 
 A **serial** connection is used to retrieve and configure the information of the device. A **second** **serial** connection is used to retrieve and configure the **modules of the device**.
 
-The driver also provides different possibilities for **alarm monitoring** and **trending**.
+The connector also provides different possibilities for **alarm monitoring** and **trending**.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**                            | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**                            | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|--------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x              | Initial version                            | No                  | No                      |
 | 2.0.0.x              | DVEs are created for the supported modules | No                  | No                      |
@@ -23,9 +23,9 @@ The driver also provides different possibilities for **alarm monitoring** and **
 | 3.1.1.x              | Removed normalization                      | No                  | No                      |
 | 4.0.0.x \[SLC Main\] | Branched version                           | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 2.0.0.x          | Unknown                     |
@@ -34,7 +34,7 @@ The driver also provides different possibilities for **alarm monitoring** and **
 | 3.1.1.x          | 1.\*                        |
 | 4.0.0.x          | C1.2, C1.5                  |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol**                   | **Description**                                                                                                           |
 |-----------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
@@ -67,24 +67,24 @@ The driver also provides different possibilities for **alarm monitoring** and **
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
 - Interface Connection:
 
-- **IP address/host**: The polling IP or URL of the destination.
+  - **IP address/host**: The polling IP or URL of the destination.
   - **IP port**: The IP port of the device, by default *2500*.
 
 #### Serial Modules Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
 - Interface Connection:
 
-- **IP address/host**: The polling IP or URL of the destination.
+  - **IP address/host**: The polling IP or URL of the destination.
   - **IP port**: The IP port of the device, by default *65535*.
 
 ## Usage (versions prior to 3.1.0.x)
@@ -109,15 +109,18 @@ For every card type, an entry is created in the **Modules** table. Different con
 
 - **Configuration Import**: When **Automatic DVE Name** is set to *Configuration File*, the selected configuration file will be used with the DVE name and view that need to be used.
 
-- Every line in the **CSV** file represents a module of which the data should be in the following format: ***Main Element IP Address;Rack Number;Slot Number;DVE Name;DVE View***
+  - Every line in the **CSV** file represents a module of which the data should be in the following format: ***Main Element IP Address;Rack Number;Slot Number;DVE Name;DVE View***
   - Example:
+
     10.3.3.9;0;4;DVE Name 1;DVE View 1
+
     10.3.3.9;0;7;DVE Name 2;DVE View 2
+
     10.3.3.9;1;9;DVE Name 3;DVE View 2
 
 ### Module Type pages
 
-For every supported module type (exported driver), a page is available with an overview of the **Details**, **Analog Alarm Limits** and **Discrete Alarm Limits** of that module type.
+For every supported module type (exported connector), a page is available with an overview of the **Details**, **Analog Alarm Limits** and **Discrete Alarm Limits** of that module type.
 
 ## Usage (3.1.0.x)
 
@@ -200,7 +203,7 @@ It contains three page buttons:
 
 - **Monitoring***:* Contains both the **Analog** and **Discrete Alarm Limits** **Tables**, as well as the parameters **Alarm Control Detection**, **ACD** **on** **Delay** and **ACD off Delay**.
 
-- In the **Analog Alarm Limits Table**, the **HiHi**, **Hi**, **LoLo**, **Lo**, **Deadband**, **HiHi State**, **Hi State**, **Lo State** and **LoLo State** can be configured.
+  - In the **Analog Alarm Limits Table**, the **HiHi**, **Hi**, **LoLo**, **Lo**, **Deadband**, **HiHi State**, **Hi State**, **Lo State** and **LoLo State** can be configured.
   - For the **Discrete Alarm Limits**, the **settings** can be configured, and the **alarm** status can be monitored.
 
 ### Overview page
@@ -211,9 +214,9 @@ The page also allows you to enable or disable the **Automatic Removal** of missi
 
 The **Configuration** page button provides access to a subpage with the following settings:
 
-1.  **Timer Configuration**: Allows you to configure the polling time, using the following parameters: **Fast Timer Interval**, **Medium Timer Interval** and **Slow Timer Interval**.
-2.  **DVE Settings**: Allows you to enable or disable **Element Prefix**, **Automatic DVE Name** and **Automatic DVE Vi*e*w**. There is also an option to **Delete Hanging DVEs**, which can be of use when a module is swapped with a module of a different type in the same position.
-3.  **Configuration Import**: Allows you to specify a custom **Configuration Directory** (the default is: C:\Skyline DataMiner\Documents\Teleste HDC100 TSEMP). Via the **Configuration File** drop-down menu, you can select one of the configuration files present in the directory. With the **Import** button you can then import the file. The **Refresh** button allows you to refresh the drop-down menu.
+1. **Timer Configuration**: Allows you to configure the polling time, using the following parameters: **Fast Timer Interval**, **Medium Timer Interval** and **Slow Timer Interval**.
+2. **DVE Settings**: Allows you to enable or disable **Element Prefix**, **Automatic DVE Name** and **Automatic DVE Vi*e*w**. There is also an option to **Delete Hanging DVEs**, which can be of use when a module is swapped with a module of a different type in the same position.
+3. **Configuration Import**: Allows you to specify a custom **Configuration Directory** (the default is: C:\Skyline DataMiner\Documents\Teleste HDC100 TSEMP). Via the **Configuration File** drop-down menu, you can select one of the configuration files present in the directory. With the **Import** button you can then import the file. The **Refresh** button allows you to refresh the drop-down menu.
 
 ### HDO101 / HDO202 / HDO204 / HDO302 / HDO371 / HDO421 / HDO610 / HDO611 / HDO613 / HDO773/ HDO775 / HDO802 / HDO902 / HDO904 / HDO905 / HDO906 / HDP230 / HDO231 / HDO908 pages
 

@@ -10,16 +10,16 @@ The **MViP** is an IP-based multi-image display and monitoring solution used as 
 
 All data is retrieved using a single **SNMP** connection. SNMP traps can also be retrieved when this is enabled on the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                                                                   | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                                                                                   | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                                                                                                                   | No                  | Yes                     |
 | 1.0.1.x          | Changed table ID 500 naming and descriptions from "Alerts" to "Faults" for compatibility with Evertz MVIPII. Added trap receiver. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 1.0.1.x          | Unknown                     |
@@ -30,7 +30,7 @@ All data is retrieved using a single **SNMP** connection. SNMP traps can also be
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

@@ -4,7 +4,7 @@ uid: Connector_help_FOR-A_MFR-6100_Video_Router
 
 # FOR-A MFR-6100 Video Router
 
-This driver allows you to monitor the FOR-A MFR-6100 Video Router via an SNMP connection. From range 1.0.1.x onwards, an additional serial connection is used to retrieve matrix information.
+This connector allows you to monitor the FOR-A MFR-6100 Video Router via an SNMP connection. From range 1.0.1.x onwards, an additional serial connection is used to retrieve matrix information.
 
 ## About
 
@@ -35,7 +35,7 @@ This driver allows you to monitor the FOR-A MFR-6100 Video Router via an SNMP co
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -49,7 +49,7 @@ SNMP Settings:
 
 #### Serial IP Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -63,7 +63,7 @@ SERIAL CONNECTION:
 
 No extra configuration is needed in range 1.0.0.x.
 
-From range 1.0.1.x onwards, the driver retrieves matrix information via serial communication. This requires that the command protocol on the **Port Settings** page of the **device** is set to **Crosspoint Remote Control 2**.
+From range 1.0.1.x onwards, the connector retrieves matrix information via serial communication. This requires that the command protocol on the **Port Settings** page of the **device** is set to **Crosspoint Remote Control 2**.
 
 ### Redundancy
 
@@ -75,9 +75,9 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-This driver will poll the **Power Status**, **Fan Status**, **CPU Status**, **Card Status**, **Slot Status**, **SDI Status**, **Remote Units Status** and **GPI Units Status**.
+This connector will poll the **Power Status**, **Fan Status**, **CPU Status**, **Card Status**, **Slot Status**, **SDI Status**, **Remote Units Status** and **GPI Units Status**.
 
-You can find the received traps in the Traps table on the Traps page. When a specific trap is received, the driver will poll the corresponding parameter(s) again to have the latest data.
+You can find the received traps in the Traps table on the Traps page. When a specific trap is received, the connector will poll the corresponding parameter(s) again to have the latest data.
 
 From range 1.0.1.x onwards, a **matrix** is available, representing the **Sources** (**inputs**) and **Destinations** (**outputs**).
 

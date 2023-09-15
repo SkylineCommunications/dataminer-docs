@@ -4,23 +4,23 @@ uid: Connector_help_Cybersense_CYQ504
 
 # Cybersense CYQ504
 
-The **cybersense CYQ504** is a serial driver that retrieves 7 parameters from the device.
+The **cybersense CYQ504** is a serial connector that retrieves 7 parameters from the device.
 
 ## about
 
-The driver retrieves the voltages of the 4 ports and 3 general parameters.
+The connector retrieves the voltages of the 4 ports and 3 general parameters.
 
 the voltages must have a binary value between 0 and 4096.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | VERSION                     |
 
@@ -44,7 +44,7 @@ SERIAL CONNECTION:
 
 ## Usage
 
-In this section of the driver help, some general info is available about the usage of the Cybersense CYQ504 driver.
+In this section of the connector help, some general info is available about the usage of the Cybersense CYQ504 connector.
 
 ### General
 

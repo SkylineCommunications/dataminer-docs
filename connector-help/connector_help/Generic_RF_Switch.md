@@ -4,7 +4,7 @@ uid: Connector_help_Generic_RF_Switch
 
 # Generic RF Switch
 
-The Generic RF Switch virtual driver can be linked to an IO gateway element.
+The Generic RF Switch virtual connector can be linked to an IO gateway element.
 
 ## About
 
@@ -28,7 +28,7 @@ The Generic RF Switch virtual driver can be linked to an IO gateway element.
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 
@@ -36,4 +36,4 @@ Configure the element connections in DataMiner Cube in the Element Connections m
 
 ## How to use
 
-On the General page of this driver, you can find the Switch Status. The Switch Position A and the Switch Position B are displayed on the Switch Details page.
+On the General page of this connector, you can find the Switch Status. The Switch Position A and the Switch Position B are displayed on the Switch Details page.

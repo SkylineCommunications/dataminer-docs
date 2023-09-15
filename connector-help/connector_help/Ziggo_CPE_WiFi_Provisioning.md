@@ -8,22 +8,22 @@ The **Ziggo CPE WiFi Provisioning** driver converts CSV files containing a list 
 
 ## About
 
-Every day, at a configurable time, the driver retrieves CSV files from a specific folder. There are two types of CSV files, one type per footprint (**fZiggo** or **fUPC)**. The CSV file names must have the following format:
+Every day, at a configurable time, the connector retrieves CSV files from a specific folder. There are two types of CSV files, one type per footprint (**fZiggo** or **fUPC)**. The CSV file names must have the following format:
 
 - **fUPC**: *YYYYMMDD*-fUPC.csv
   E.g*. '20170418-fUPC.csv'*
 - **fZiggo**: *YYYY*-*MM*-*DD*-*HH*-*MM*-fZiggo.csv\[.gz\]\>
   E.g. *'2017-06-05-01-08-fZiggo.csv'*
 
-The driver will parse the CSV files and convert them to **DSL** files.
+The connector will parse the CSV files and convert them to **DSL** files.
 
-When all the files are processed, the driver checks if there is an element using the **Skyline IAM DB** protocol in the DMS. If such an element exists, the driver triggers a set to that element to start the processing of the **DSL** file. The **Skyline IAM DB** element then calls the appropriate MySQL procedures to insert the modems in the IAM Database.
+When all the files are processed, the connector checks if there is an element using the **Skyline IAM DB** protocol in the DMS. If such an element exists, the connector triggers a set to that element to start the processing of the **DSL** file. The **Skyline IAM DB** element then calls the appropriate MySQL procedures to insert the modems in the IAM Database.
 
-The driver also allows the configuration of the community string for both footprints.
+The connector also allows the configuration of the community string for both footprints.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
@@ -33,7 +33,7 @@ The driver also allows the configuration of the community string for both footpr
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## Usage
 
@@ -48,7 +48,7 @@ This page displays the main configuration parameters:
 - **Provisioning mode** :
 
 - *Full*: All the cable modems will be saved in the output **DSL** file.
-  - *Differential*: The driver will compare the current list of modems with the previous list. Only the new, updated or deleted modems will be included in the **DSL** file.
+  - *Differential*: The connector will compare the current list of modems with the previous list. Only the new, updated or deleted modems will be included in the **DSL** file.
 
 - **Maximum Number of Files in History Folder**: When a CSV file has been processed, it is saved in a *History* folder (a subfolder of the **Provisioning Folder**). The parameter **Maximum Number of Files in History Folder** specifies how many files to keep in this *History* folder.
 
@@ -70,7 +70,7 @@ This page displays statistics for the provisioning.
 
 **Last Provisioning** indicates the last time the provisioning was executed (either via daily provisioning or when **Start Provisioning** was clicked).
 
-The **Provisioning Statistics** table displays statistics for each footprint: **Number of modems**, **Status**, **Provisioning Date**, etc. The table also contains the parameter **File Size Threshold**. When a new CSV file is retrieved, the driver compares the size of the file to this threshold. If the file is too small, the file is discarded and the **Status** cell shows '*File Too Small*'.
+The **Provisioning Statistics** table displays statistics for each footprint: **Number of modems**, **Status**, **Provisioning Date**, etc. The table also contains the parameter **File Size Threshold**. When a new CSV file is retrieved, the connector compares the size of the file to this threshold. If the file is too small, the file is discarded and the **Status** cell shows '*File Too Small*'.
 
 ### Collectors
 

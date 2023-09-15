@@ -4,26 +4,26 @@ uid: Connector_help_Screen_Systems_Polistream_Black_U4000
 
 # Screen System Polistream Black U4000
 
-The Screen System Polistream Black U4000 driver is used to monitor data from the corresponding device.
+The Screen System Polistream Black U4000 connector is used to monitor data from the corresponding device.
 
 Every table contains a list of parameters that indicate if all communication is working properly.
 
 ## About
 
-This driver uses the SNMP protocol to request data from the device. The data is shown in multiple tables depending on the specification region of the data.
+This connector uses the SNMP protocol to request data from the device. The data is shown in multiple tables depending on the specification region of the data.
 
 SNMP traps can be retrieved when this is enabled on the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                     | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                     | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                                     | No                  | Yes                     |
 | 1.0.1.x          | Major change: refactored the way data is retrieved. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 1.0.1.x          | Unknown                     |
@@ -34,7 +34,7 @@ SNMP traps can be retrieved when this is enabled on the device.
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

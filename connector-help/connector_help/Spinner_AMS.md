@@ -32,7 +32,7 @@ The Spinner AMS is an Antenna Monitoring System, designed to detect arcing and w
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -46,6 +46,6 @@ SNMP Settings:
 
 ## How to Use
 
-The driver uses SNMP to poll certain status parameters from the AMS.
+The connector uses SNMP to poll certain status parameters from the AMS.
 
 Traps can be retrieved when this function is enabled on the device.

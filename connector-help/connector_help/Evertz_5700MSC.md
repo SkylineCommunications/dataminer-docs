@@ -40,7 +40,7 @@ This connector displays the status and controls of the generators and system inf
 
 #### SNMP Connection - Main
 
-This driver uses a Simple Network Management Protocol (SNMP) connection to communicate with the device, and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection to communicate with the device, and requires the following input during element creation:
 
 SNMP CONNECTION:
 

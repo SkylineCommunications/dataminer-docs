@@ -32,7 +32,7 @@ This is strictly a system driver. Its function is to perform different actions i
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 
@@ -44,8 +44,8 @@ There is no redundancy defined.
 
 ## How to use
 
-**As this driver is strictly a system driver, it requires no user interaction.**
+**As this connector is strictly a system driver, it requires no user interaction.**
 
 ## Notes
 
-An **Automation script** is needed to trigger this driver. The driver will process information events, perform the correct actions in the workflow with the **Profile Manager** and update the **Verizon DSM SO**.
+An **Automation script** is needed to trigger this connector. The connector will process information events, perform the correct actions in the workflow with the **Profile Manager** and update the **Verizon DSM SO**.

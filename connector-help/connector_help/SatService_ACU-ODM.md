@@ -4,7 +4,7 @@ uid: Connector_help_SatService_ACU-ODM
 
 # SatService ACU-ODM
 
-The SatService ACU-ODM driver is used to monitor and configure the ACU-ODM Antenna Controller.
+The SatService ACU-ODM connector is used to monitor and configure the ACU-ODM Antenna Controller.
 
 ## About
 
@@ -32,7 +32,7 @@ The SatService ACU-ODM driver is used to monitor and configure the ACU-ODM Anten
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -46,7 +46,7 @@ No additional configuration of parameters is necessary in a newly created elemen
 
 ### Redundancy
 
-No redundancy is defined in the driver.
+No redundancy is defined in the connector.
 
 ### Web Interface
 
@@ -54,6 +54,6 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to Use
 
-The driver will use HTTP GET calls to retrieve and set the parameters from the device.
+The connector will use HTTP GET calls to retrieve and set the parameters from the device.
 
 The **Targets** table is polled incrementally, meaning that the target with ID 0 is polled first, up to 199. Should one of the calls fail (status code is not 200) during the polling, then the polling of the Targets table will fail.

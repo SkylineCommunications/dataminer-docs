@@ -8,20 +8,20 @@ The Aperi H264 Decoder supports up to three channels of SD, HD and 3G. The app d
 
 ## About
 
-Using the **HTTP API**, this driver both collects information from the device and sets parameters on the device.
+Using the **HTTP API**, this connector both collects information from the device and sets parameters on the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**         | **Description**                                      | **DCF Integration** | **Cassandra Compliant** |
+| **Range**         | **Description**                                      | **DCF Integration** | **Cassandra Compliant** |
 |--------------------------|------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x                  | Initial version.                                     | No                  | Yes                     |
-| 1.0.1.x                  | Streamlined all Aperi drivers.                       | No                  | Yes                     |
+| 1.0.1.x                  | Streamlined all Aperi connectors.                       | No                  | Yes                     |
 | 1.0.2.x                  | Transport table overhauled to show correct bitrates. | No                  | Yes                     |
 | 1.0.3.x **\[SLC Main\]** | Extra parameters added to the IP flow table.         | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 2.0.27                      |
 | 1.0.1.x          | 2.0.27                      |

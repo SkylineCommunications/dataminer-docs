@@ -20,7 +20,7 @@ Refer to the additional document "Serial Protocol Description" for more informat
 
 #### Serial Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -38,7 +38,7 @@ In addition, the data from the *Data.xml* file also needs to be imported. If you
 
 ### Help Page
 
-This page displays information about the driver and its functionality.
+This page displays information about the connector and its functionality.
 
 ### Advanced - Fixed Length and CRC Page
 

@@ -32,7 +32,7 @@ The **Johnson Controls NCE25** is a Network Control Engine that controls IOs. A 
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -69,7 +69,7 @@ Via the context menu of the **IO Readings** table, you can perform the following
 
 ## DataMiner Connectivity Framework
 
-The **1.0.0.x** driver range of the Johnson Controls NCE25 protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
+The **1.0.0.x** connector range of the Johnson Controls NCE25 protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 

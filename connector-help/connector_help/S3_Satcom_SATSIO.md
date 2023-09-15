@@ -34,7 +34,7 @@ The S3 Satcom SATSIO is an antenna controller unit capable of both NORAD trackin
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

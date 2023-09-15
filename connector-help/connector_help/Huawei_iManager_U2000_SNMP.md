@@ -4,21 +4,21 @@ uid: Connector_help_Huawei_iManager_U2000_SNMP
 
 # Huawei iManager U2000 SNMP
 
-This driver uses an **SNMP** connection to monitor the Huawei iManager U2000.
+This connector uses an **SNMP** connection to monitor the Huawei iManager U2000.
 
 ## About
 
 The **iManager U2000 Unified Network Management System** is designed to efficiently and uniformly manage transport, access, and IP equipment in both the network element (NE) layer and the network layer. The U2000 provides unified management and visual operation and maintenance (O&M) to help operators reduce O&M costs and transform networks to all-IP networks.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ The **iManager U2000 Unified Network Management System** is designed to efficien
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -60,4 +60,4 @@ This page displays the web interface of the device. Note that the client machine
 
 ## Notes
 
-Although the U2000 system from Huawei can implement several different interfaces, this driver only implements the SNMP Interface used to send notifications and alarms (SNMP traps) to third-party systems.
+Although the U2000 system from Huawei can implement several different interfaces, this connector only implements the SNMP Interface used to send notifications and alarms (SNMP traps) to third-party systems.

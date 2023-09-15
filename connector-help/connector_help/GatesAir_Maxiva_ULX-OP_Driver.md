@@ -41,7 +41,7 @@ The equipment can be remotely controlled through SNMP protocol and a web GUI int
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -67,7 +67,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to Use
 
-The driver provides the following pages:
+The connector provides the following pages:
 
 - **General:** Displays the device's identification (name, serial number, kernel release, etc.), as well as its location and the point of contact.
 

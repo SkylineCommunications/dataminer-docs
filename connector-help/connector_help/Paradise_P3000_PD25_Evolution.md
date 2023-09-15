@@ -6,23 +6,22 @@ uid: Connector_help_Paradise_P3000_PD25_Evolution
 
 The **Paradise P3000 PD25 Evolution** is a **Satellite Modem**.
 
-The Evolution Series PD25 has been designed for cost-critical modem applications and discern-ing users who demand quality and reliability at an affordable price. This 25Mbpscapable mo-dem offers full compliance with IESS-308, 309, 310, 314 & 315, plus a range of data interfaces including Ethernet
-
+The Evolution Series PD25 has been designed for cost-critical modem applications and discern-ing users who demand quality and reliability at an affordable price. This 25 Mbps capable modem offers full compliance with IESS-308, 309, 310, 314 & 315, plus a range of data interfaces including Ethernet
 
 ## About
 
-The Paradise P3000 PD25 Evolution driver retrieves data via **SNMP**.
+The Paradise P3000 PD25 Evolution connector retrieves data via **SNMP**.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**                                                                                                                                 | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**                                                                                                                                 | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x \[Obsolete\] | Initial version                                                                                                                                 | No                  | Yes                     |
 | 1.0.1.x \[SLC Main\] | Added Firmware Version Controller to support different versions Added new Firmware ParametersReorganized pages without moving parameters across | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range**     | **Device Firmware Version** |
+| **Range**     | **Device Firmware Version** |
 |----------------------|-----------------------------|
 | 1.0.0.x              | 1.6.57b                     |
 | 1.0.1.x \[SLC Main\] | 1.6.57b, 1.6.74             |
@@ -33,7 +32,7 @@ The Paradise P3000 PD25 Evolution driver retrieves data via **SNMP**.
 
 #### SNMP connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -42,8 +41,8 @@ SNMP CONNECTION:
 SNMP Settings:
 
 - **Port number**: The port of the connected device, by default *161*.
-- **Get community string**: The community string used when reading values from the device (default value if not overridden in the driver: *public*).
-- **Set community string**: The community string used when setting values on the device (default value if not overridden in the driver: *private*).
+- **Get community string**: The community string used when reading values from the device (default value if not overridden in the connector: *public*).
+- **Set community string**: The community string used when setting values on the device (default value if not overridden in the connector: *private*).
 
 ## Usage
 
@@ -51,12 +50,13 @@ SNMP Settings:
 
 This page displays the data regarding the unit itself: **Modem ID**, **Manufacturer ID**, **Serial Number**, **Software and Firmware Versions**, **Board Configuration**, **RX/Tx OneForOne Changeover**. It also shows the cards that are "Fitted" or "Not Fitted" .
 
-There is a pagebutton that leads to the following subpages: **Unit Alarms**, **M&C**, **Station Clock**, **Special Modes**, **Operation** and **SAF**.
+There is a page button that leads to the following subpages: **Unit Alarms**, **M&C**, **Station Clock**, **Special Modes**, **Operation** and **SAF**.
 
 ### Monitor
 
 The Monitor page displays **Tx and RX Data Rates**, **Loopback Status** and the **Modem Temperature**.
-Contains **Voltages pagesbutton**, which shows the **Voltages of the modem**.
+
+Contains the **Voltages** page button, which shows the **Voltages of the modem**.
 
 ### Status
 
@@ -70,11 +70,11 @@ The Alarms page displays the **Tx and Rx Alarms**.
 
 This two pages allow the user to view and modify configurations, such as: **Service**, **BaseBand Mode**, **Path Clock Source**, **Modulation**, **FEC**, **Scrambler Mode**, **Carrier Mode** and **Spectral Inversion**.
 
-Both have the **following pagebuttons** with the correspondent configurations: **Clocks**, **Demodulation**, **FEC**, **Descrambler**, **Carrier**, **Framing**, **Timeslots**, **Closed+ESC**, **IBS/SMS**, **IDR** and **BUC/LNB**.
+Both have the following page buttons with the corresponding configuration: **Clocks**, **Demodulation**, **FEC**, **Descrambler**, **Carrier**, **Framing**, **Timeslots**, **Closed+ESC**, **IBS/SMS**, **IDR** and **BUC/LNB**.
 
 ### Paired Carrier
 
-This page shows all Paired Carrrier configuration parameters, related to the **Satellite Coordinates** and **Round Trip Delay.**
+This page shows all Paired Carrier configuration parameters, related to the **Satellite Coordinates** and **Round Trip Delay.**
 
 ### Interface
 
@@ -102,7 +102,7 @@ To perform the save, recall and delete commands the DMA must be logged on the PU
 
 The page contains a **Save Configuration File Name** which needs to be set in order to be able to save the configuration.
 
-Additionally there is a togglebutton that can be used to enable/disable the use of a recall delay when pressing the recall button of a specific configuration. This makes the recall to only be taken after the time defined on **Recall Delay.**
+Additionally there is a toggle button that can be used to enable/disable the use of a recall delay when pressing the recall button of a specific configuration. This makes the recall to only be taken after the time defined on **Recall Delay.**
 
 ### 1-for-N
 
@@ -120,22 +120,20 @@ This action is required to allow interactions with the configuration memory mana
 
 Additionally, one can see the incoming response from a **PUP command request.**
 
-### Webinterface
+### Web Interface
 
 This page displays the web interface of the device.
 
 Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.
 
-Notes
+## Notes
 
-Firmware Management
+### Firmware Management
 
-The driver is built to allow multiple firmware versions. If a firmware is not described in the supported firmwares, the device will try to fit the most adequate version.
+The connector is built to allow multiple firmware versions. If a firmware version is not described in the supported firmware, the device will try to fit the most adequate version.
 
 The most adequate version is the closest and lowest version compared to the current firmware version.
 
 E.g. Current Firmware Version 1.6.58 - the most adequate version will be 1.6.57b.
 
 E.g. Current Firmware Version 1.6.79 - the most adequate version will be 1.6.74.
-
-

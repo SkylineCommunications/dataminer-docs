@@ -8,7 +8,7 @@ The **APC AP7724** is a rack-mount automatic transfer switch.
 
 ## About
 
-With this driver, it is possible to monitor and configure APC AP7724 devices.
+With this connector, it is possible to monitor and configure APC AP7724 devices.
 
 The different parameters of the device are logically distributed over multiple pages.
 
@@ -16,7 +16,7 @@ The different parameters of the device are logically distributed over multiple p
 
 ### Creation
 
-This driver retrieves information from the device via SNMP. When you create an element, the following information must be provided:
+This connector retrieves information from the device via SNMP. When you create an element, the following information must be provided:
 
 **SNMP Connection:**
 
