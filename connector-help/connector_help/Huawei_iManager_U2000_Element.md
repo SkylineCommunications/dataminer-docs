@@ -4,7 +4,7 @@ uid: Connector_help_Huawei_iManager_U2000_Element
 
 # Huawei iManager U2000 Element
 
-This connector is **exported** by the **Huawei iManager U2000** driver. It represents a **managed element** in the Huawei network.
+This connector is **exported** by the **Huawei iManager U2000** connector. It represents a **managed element** in the Huawei network.
 
 ## About
 

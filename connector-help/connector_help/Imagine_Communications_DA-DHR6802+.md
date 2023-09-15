@@ -4,7 +4,7 @@ uid: Connector_help_Imagine_Communications_DA-DHR6802+
 
 # Imagine Communications DA-DHR6802+
 
-The **Imagine Communications DA-DHR6802+** driver combines a **serial** and **smart-serial** connection to monitor and configure the Amplifier card in an Imagine Communications frame. Alarm monitoring can be activated on all important parameters.
+The **Imagine Communications DA-DHR6802+** connector combines a **serial** and **smart-serial** connection to monitor and configure the Amplifier card in an Imagine Communications frame. Alarm monitoring can be activated on all important parameters.
 
 ## About
 

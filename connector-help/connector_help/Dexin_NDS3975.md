@@ -4,11 +4,9 @@ uid: Connector_help_Dexin_NDS3975
 
 # Dexin NDS3975
 
-Driver SNMP for Satellite Receiver Dexin NDS3975, Allows the user tomonitoring and set up parameters.
+SNMP connector for Satellite Receiver Dexin NDS3975. Allows the user to monitor and set up parameters.
 
 ## About
-
-The SNMP device, allows the user to monitoring and set up parameters. Also contains different pages that do easier the undestanding of Parameters Displayed
 
 ### Version Info
 
@@ -16,7 +14,7 @@ The SNMP device, allows the user to monitoring and set up parameters. Also conta
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-## Installation and configuration
+## Configuration
 
 ### Creation
 
@@ -24,47 +22,46 @@ The SNMP device, allows the user to monitoring and set up parameters. Also conta
 
 This connector uses a SNMP connection and does not require any input during element creation.
 
-All Pages and Subpages were done and grouped to do it easier to undertand for the user.
-
 ## Usage
 
-General
+### General
 
-System Mib (system info and snmp config + GpResetCI + alarm parameters + Rate info)
+System MIB (system info and snmp config + GpResetCI + alarm parameters + Rate info)
 
-SubPage
+Subpages:
+
 - Decoder (General Param: from ES Mode .... to Program Select ; Gpdescram,from gpaudiospdif to gp destination mac + Ac3 Pass subtree)
-- Receiver ( the rest of param of Generalparam tree)
+- Receiver (the rest of the parameters of the General parameters tree)
 
-## Modules
+### Modules
 
-\- Card program info table
+- Card program info table
 - Program info control
 
-## Input Page
+### Input Page
 
-\- Input program table
+- Input program table
 - Input AV pid
 - BissData info
 
-## Output Page
+### Output Page
 
-\- Output Program table
+- Output Program table
 - Output AV PId table
 - SPTS settings
 
-## Dvb Page
+### Dvb Page
 
--Dvb
+- Dvb
 
-## PID Page
+### PID Page
 
--Table Pid transmit
+- Table Pid transmit
 
-## Import/Export
+### Import/Export
 
--Address, Name, Operate, Completed
+- Address, Name, Operate, Completed
 
-## WebSite Page
+### WebSite Page
 
 Link with the device

@@ -8,7 +8,7 @@ The **Schneider Electric StruxureWare DCIM** (Data Center Infrastructure Managem
 
 ## About
 
-This connector was designed to interact with a SOAP interface. An **HTTP** connection is used to successfully retrieve the API information. This connector is also a **DVE manager**, containing a DVE table that is used to export other drivers, each of them representing a device. The list of exported connectors can be found in the "Exported Connectors" section of this page.
+This connector was designed to interact with a SOAP interface. An **HTTP** connection is used to successfully retrieve the API information. This connector is also a **DVE manager**, containing a DVE table that is used to export other connectors, each of them representing a device. The list of exported connectors can be found in the "Exported Connectors" section of this page.
 
 ### Version Info
 
@@ -24,7 +24,7 @@ This connector was designed to interact with a SOAP interface. An **HTTP** conne
 
 ### Exported connectors
 
-| **Exported Protocol**                                                                                            | **Description** |
+| **Exported Connector**                                                                                            | **Description** |
 |------------------------------------------------------------------------------------------------------------------|-----------------|
 | [Schneider Electric StruxureWare - Device](xref:Connector_help_Schneider_Electric_StruxureWare_-_Device) | Device          |
 

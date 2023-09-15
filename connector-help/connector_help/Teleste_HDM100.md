@@ -28,8 +28,8 @@ This connector allows you to interface with various modules. For an overview of 
 
 | **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components** |
 |--|--|--|--|--|
-| 1.0.0.x | No | No | \- | \- [Teleste HDM100 - AC8000](/Driver%20Help/Teleste%20HDM100%20-%20AC8000.aspx) <br/>- [Teleste HDM100 - AC3200](/Driver%20Help/Teleste%20HDM100%20-%20AC3200.aspx) <br/>- [Teleste HDM100 - AC3000](/Driver%20Help/Teleste%20HDM100%20-%20AC3000.aspx) <br/>- [Teleste HDM100 - AC8810](/Driver%20Help/Teleste%20HDM100%20-%20AC8810.aspx) <br/>- [Teleste HDM100 - AC8800](xref:Connector_help_Teleste_HDM100_-_AC8800) |
-| 2.0.0.x | No | Yes | \- [Teleste AC8810](/Driver%20Help/Teleste%20AC8810.aspx) <br/>- [Teleste AC8000](/Driver%20Help/Teleste%20AC8000.aspx) <br/>- Teleste AC8710 | \- |
+| 1.0.0.x | No | No | \- | \- [Teleste HDM100 - AC8000](xref:Connector_help_Teleste_HDM100_-_AC8000) <br/>- [Teleste HDM100 - AC3200](xref:Connector_help_Teleste_HDM100_-_AC3200) <br/>- [Teleste HDM100 - AC3000](xref:Connector_help_Teleste_HDM100_-_AC3000) <br/>- [Teleste HDM100 - AC8810](xref:Connector_help_Teleste_HDM100_-_AC8810) <br/>- Teleste HDM100 - AC8800 |
+| 2.0.0.x | No | Yes | \- [Teleste AC8810](xref:Connector_help_Teleste_AC8810) <br/>- Teleste AC8000 <br/>- Teleste AC8710 | \- |
 
 ## Configuration
 

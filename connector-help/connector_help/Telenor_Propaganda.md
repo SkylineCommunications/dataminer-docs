@@ -24,7 +24,7 @@ This connector is used to aggregate and summarize information from the **Telenor
 
 | **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                                                                                                                                                                                                                                                                  | **Exported Components** |
 |-----------|---------------------|-------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|
-| 1.0.0.x   | No                  | Yes                     | [Telenor EPM Manager](/Driver%20Help/Telenor%20EPM%20Manager.aspx) [Telenor Channel Correlation Service Protocol](/Driver%20Help/Telenor%20Channel%20Correlation%20Service%20Protocol.aspx) (version 1.0.0.3 or higher) [Telenor Service Overview Manager](xref:Connector_help_Telenor_Service_Overview_Manager) | \-                      |
+| 1.0.0.x   | No                  | Yes                     | [Telenor EPM Manager](xref:Connector_help_Telenor_EPM_Manager)<br>[Telenor Channel Correlation Service Protocol](xref:Connector_help_Telenor_Channel_Correlation_Service_Protocol) (version 1.0.0.3 or higher)<br>[Telenor Service Overview Manager](xref:Connector_help_Telenor_Service_Overview_Manager) | \-                      |
 
 ## Configuration
 

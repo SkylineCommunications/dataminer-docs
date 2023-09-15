@@ -18,7 +18,7 @@ This connector can be used to monitor the **main transmitter** of the device via
 
 ## Configuration
 
-The element using this connector is automatically created by the parent element using the [GatesAir Flexiva M3FM-TX 1P1](xref:Connector_help_GatesAir_Flexia_M3FM-TX_1P1) driver.
+The element using this connector is automatically created by the parent element using the [GatesAir Flexiva M3FM-TX 1P1](xref:Connector_help_GatesAir_Flexia_M3FM-TX_1P1) connector.
 
 ## How to use
 

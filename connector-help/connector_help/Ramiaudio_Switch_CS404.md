@@ -8,7 +8,7 @@ The Ramiaudio Watchdog CSS404 is designed for continuous monitoring of mono or s
 
 ## About
 
-The Ramiaudio Watchdog CS404 driver controls the inputs, listens for traps from the device, and reads the status and errors of the device.
+The Ramiaudio Watchdog CS404 connector controls the inputs, listens for traps from the device, and reads the status and errors of the device.
 
 ### Version Info
 

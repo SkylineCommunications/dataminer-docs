@@ -4,7 +4,7 @@ uid: Connector_help_Raritan_Dominion_PXG2
 
 # Raritan Dominion PXG2
 
-The Raritan Dominion PXG2 driver facilitates the monitoring of this line of Power Distribituion Units (PDU).
+The Raritan Dominion PXG2 connector facilitates the monitoring of this line of Power Distribituion Units (PDU).
 
 ## About
 

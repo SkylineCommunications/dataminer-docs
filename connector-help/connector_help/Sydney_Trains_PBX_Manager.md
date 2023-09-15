@@ -8,7 +8,7 @@ The **Sydney Trains PBX Manager** is used to setup **PSTN** phone calls by using
 
 ## About
 
-The **PBX** driver does not start **PSTN** calls on its own, instead it can be used by different sources to request a call to be set up.
+The **PBX** connector does not start **PSTN** calls on its own, instead it can be used by different sources to request a call to be set up.
 
 Other elements in **DataMiner** can use the PBX Manager to start calls by setting a request on parameter 10/11 (read/write). The request needs to have the following format:
 
@@ -32,7 +32,7 @@ There is also a second interface on this connector, which is used by the **Sitti
 </colgroup>
 <tbody>
 <tr class="odd">
-<td><strong>Driver Range</strong></td>
+<td><strong>Range</strong></td>
 <td><strong>Device Firmware Version</strong></td>
 </tr>
 <tr class="even">

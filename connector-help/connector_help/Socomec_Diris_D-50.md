@@ -24,7 +24,7 @@ The DIRIS Digiware D-50 is a master device on the RS485 bus and master on the DI
 
 ### Exported connectors
 
-| **Exported Protocol**     | **Description**            |
+| **Exported Connector**     | **Description**            |
 |---------------------------|----------------------------|
 | Socomec Diris D-50 - B-30 | Power Monitoring Device    |
 | Socomec Diris D-50 - I-60 | Current Measurement Module |

@@ -11,11 +11,11 @@ The **Telenet Ticket Client** is part of the **SAM Ticketing Project**. It works
 In order to minimize the load on the Ticket Gateway, any ticket **search requests** are made via the **Ticket Client**. Based on these results, the automatic flow will stop or continue to forward a request that will create, update or close tickets.
 The communication of these search requests is stored in an overview table. This makes it possible to check if a search was successful or what caused the failure if it was not.
 
-The information needed to make these request comes either from a search as mentioned above or from a topology database generated with the **Telenet Topology Database** driver.
+The information needed to make these request comes either from a search as mentioned above or from a topology database generated with the **Telenet Topology Database** connector.
 
 As this connector is used as an interface between the automatic flow and the sending of commands to the ticketing service, more than one element can be generated in the DataMiner System. The number of **Ticket Clients** represents the number of automatic flows that can run at the same time. For example, if two tickets need to be created, and there are two or more Ticket Clients, the flow to create a ticket will run at the same time for both tickets. The actual request to the ticketing system, however, is buffered in the **Telenet Ticket Gateway** and thus handled in a sequential order.
 
-As an extra check to monitor the correct operation of the entire ticketing flow, a heartbeat is sent to the **Generic Dynamic Heartbeat Receiver** driver.
+As an extra check to monitor the correct operation of the entire ticketing flow, a heartbeat is sent to the **Generic Dynamic Heartbeat Receiver** connector.
 
 ### Version Info
 

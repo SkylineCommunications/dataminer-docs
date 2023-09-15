@@ -8,7 +8,7 @@ The **Vertex 7200** is an antenna pointing system that positions the antenna to 
 
 ## About
 
-The **Vertex 7200** driver will update its monitoring and configuration parameters by sending serial commands to the device.
+The **Vertex 7200** connector will update its monitoring and configuration parameters by sending serial commands to the device.
 
 ### Version Info
 
@@ -30,7 +30,7 @@ The **Vertex 7200** driver will update its monitoring and configuration paramete
 
 ### Exported connectors
 
-| **Exported Protocol** | **Description** |
+| **Exported Connector** | **Description** |
 |-----------------------|-----------------|
 | ACU Vertex 7200 DTR   | DTR Info        |
 

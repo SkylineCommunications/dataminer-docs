@@ -8,7 +8,7 @@ The **Teleste EMS** connector monitors a Teleste EMS system unit through **SNMP*
 
 ## About
 
-The **Teleste EMS** driver receives traps from the device and displays them in three tables.
+The **Teleste EMS** connector receives traps from the device and displays them in three tables.
 
 ## Installation and configuration
 

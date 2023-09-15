@@ -8,7 +8,7 @@ The Skyline CCAP Platform EPM connector allows the aggregation of KPIs from diff
 
 ## About
 
-This is an **EPM** (Experience and Performance Management) driver, and as such it is designed to poll large amounts of data from the deployed infrastructure, using **front-end** and **back-end** EPM Manager elements. Both of these types of elements use the same EPM Manager connector.
+This is an **EPM** (Experience and Performance Management) connector, and as such it is designed to poll large amounts of data from the deployed infrastructure, using **front-end** and **back-end** EPM Manager elements. Both of these types of elements use the same EPM Manager connector.
 
 The DOCSIS system contains one front-end element and several back-end elements. The front-end element is responsible for the top-level data aggregation from different back-end elements. Each back-end element is responsible for the aggregation of a section of the data from the collectors.
 

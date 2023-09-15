@@ -2,7 +2,7 @@
 uid: Connector_help_GatesAir_Fax_FM_Dual_Drive_IRT
 ---
 
-# GatesAir Fax FM Dual Driver IRT
+# GatesAir Fax FM Dual Drive IRT
 
 The GatesAir Fax FM Dual Drive IRT is a redundant FM transmission system. This connector can be used to monitor this system. The connector has a page with general information and two pop-up pages for the configuration of traps. The connector uses SNMP to retrieve and configure data.
 

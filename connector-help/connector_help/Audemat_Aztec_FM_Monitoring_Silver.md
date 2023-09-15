@@ -16,7 +16,7 @@ This protocol can be used to monitor and control the Audemat Aztec FM Monitoring
 |------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                                                                                                                                                                     | No                  | Yes                     |
 | 2.0.0.x          | New firmware based on 1.0.0.x                                                                                                                                                       | No                  | Yes                     |
-| 3.0.0.x          | Driver rebuilt based on Audemat Aztec GoldenEagle FM v2.1.0.4. UI totally rebuilt. Support for all previous firmware versions. Added HTTP connection in order to create Tuner page. | No                  | Yes                     |
+| 3.0.0.x          | Connector rebuilt based on Audemat Aztec GoldenEagle FM v2.1.0.4. UI totally rebuilt. Support for all previous firmware versions. Added HTTP connection in order to create Tuner page. | No                  | Yes                     |
 
 ### Product Info
 

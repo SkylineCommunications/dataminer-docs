@@ -4,7 +4,7 @@ uid: Connector_help_Rohde_Schwarz_FSV
 
 # Rohde Schwarz FSV
 
-The **Rohde Schwarz FSV** is a spectrum analyzer driver.
+The **Rohde Schwarz FSV** is a spectrum analyzer connector.
 
 ## About
 

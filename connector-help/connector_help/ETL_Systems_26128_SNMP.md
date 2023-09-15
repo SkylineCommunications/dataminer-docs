@@ -30,7 +30,7 @@ This SNMP connector for the ETL Systems 26128 chassis will create elements for a
 
 ### Exported connectors
 
-| **Exported Protocol**                                                                      | **Description**                                                                                     |
+| **Exported Connector**                                                                      | **Description**                                                                                     |
 |--------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
 | [ETL Systems 26128 Module SNMP](xref:Connector_help_ETL_Systems_26128_Module_SNMP) | From version 1.0.1.1 onwards, for each module inserted in the ETL Systems 26128, a DVE is exported. |
 

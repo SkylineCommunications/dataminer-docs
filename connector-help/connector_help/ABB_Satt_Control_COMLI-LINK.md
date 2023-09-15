@@ -32,7 +32,7 @@ Two types of **messages** are supported:
 
 ### Exported Connectors
 
-| **Exported Protocol** | **Description**           |
+| **Exported Connector** | **Description**           |
 |-----------------------|---------------------------|
 | FM Transmitter        | FM Transmitter module     |
 | Audio Mux             | Audio Mux module          |

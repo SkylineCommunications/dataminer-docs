@@ -8,7 +8,7 @@ The **Oi Brazil DSLAM Platform Manager** allows the aggregation of KPIs and dyna
 
 ## About
 
-CPE (Customer Premises Equipment) drivers are designed to poll large amounts of data from the deployed infrastructure. This is done using a front-end CPE Manager element and several back-end CPE Manager elements at the same time. Both of these types of elements use the same CPE Manager connector.
+CPE (Customer Premises Equipment) connectors are designed to poll large amounts of data from the deployed infrastructure. This is done using a front-end CPE Manager element and several back-end CPE Manager elements at the same time. Both of these types of elements use the same CPE Manager connector.
 
 The **Oi Brazil** system has one front-end element (FE) and several back-end elements (BEs). The FE is responsible for the top-level data aggregation from the different BEs. Each BE is responsible for the aggregation of a section of the data from the collectors
 

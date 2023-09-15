@@ -8,7 +8,7 @@ The **SeaChange Spot MDB** makes it possible to monitor a Microsoft server, proc
 
 ## About
 
-The Spot MDB driver periodically polls an MDB server to retrieve status information about the health of the SeaChange services, using WMI, SQL and parsing of SeaChange log files over a Windows administrative share. By default, this happens every 30 seconds. This data is used to monitor the operation of the MDB server within a SeaChange Spot system.
+The Spot MDB connector periodically polls an MDB server to retrieve status information about the health of the SeaChange services, using WMI, SQL and parsing of SeaChange log files over a Windows administrative share. By default, this happens every 30 seconds. This data is used to monitor the operation of the MDB server within a SeaChange Spot system.
 
 ## Installation and configuration
 

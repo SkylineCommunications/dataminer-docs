@@ -128,7 +128,7 @@ To download a file, click **Download**. The following pop-up window will be disp
 
 Enter the name of the file and click OK.
 
-The file will be saved in the following location: *C:\Skyline DataMiner\Documents\\protocol name\>\\element name\>\\file name\>*
+The file will be saved in the following location: `C:\Skyline DataMiner\Documents\<protocol name>\<element name>\<file name>`
 
 #### Uploading configuration files
 
@@ -140,7 +140,7 @@ To download a file, click **Upload**. The following pop-up window will be displa
 
 **Upload File Name** lists all the files available in the Documents folder of the selected module.
 
-The file to be uploaded is in the following location: *C:\Skyline DataMiner\Documents\\protocol name\>\\element name\>\\file name\>*
+The file to be uploaded is in the following location: `C:\Skyline DataMiner\Documents\<protocol name>\<element name>\<file name>`
 
 #### Performing a software update
 

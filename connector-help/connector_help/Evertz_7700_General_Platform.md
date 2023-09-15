@@ -28,7 +28,7 @@ The connector should be compatible with all firmware versions. It has been teste
 
 Details about the supported cards can be found at the end of this document.
 
-| **Exported Protocol**                 | **Description**                                                                                                                                                               |
+| **Exported Connector**                 | **Description**                                                                                                                                                               |
 |---------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Evertz General Platform 7700R2X2-HD   | Used for the 7700R2X2-HD module.                                                                                                                                              |
 | Evertz 7700DA7                        | Used for the 7700DA7-HD and 7700DA7 types.                                                                                                                                    |

@@ -4,7 +4,7 @@ uid: Connector_help_TDF_GE_TBOX
 
 # TDF GE TBOX
 
-This is a virtual connector. It retrieves parameters from elements using the **Semaphore TBox** driver. Via the Configuration Virtual Element toolbox, it is possible to link the connector parameters with parameters present in elements using the Semaphore TBox driver.
+This is a virtual connector. It retrieves parameters from elements using the **Semaphore TBox** connector. Via the Configuration Virtual Element toolbox, it is possible to link the connector parameters with parameters present in elements using the Semaphore TBox connector.
 
 ## About
 

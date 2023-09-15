@@ -8,7 +8,7 @@ Through this connector is possible to gather and view information from the devic
 
 # About
 
-Driver used to gather information from the **Comstream DMD20SNMP** device.
+Connector used to gather information from the **Comstream DMD20SNMP** device.
 
 The connector has several pages with general information, alarms, information regarding the modulator and the demodulator, etc.
 

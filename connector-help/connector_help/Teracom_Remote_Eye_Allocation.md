@@ -4,7 +4,7 @@ uid: Connector_help_Teracom_Remote_Eye_Allocation
 
 # Teracom Remote Eye Allocation
 
-The **Teracom Remote Eye Allocation** driver manages the different remote eye sessions and the resource allocation of the devices used for the remote eye.
+The **Teracom Remote Eye Allocation** connector manages the different remote eye sessions and the resource allocation of the devices used for the remote eye.
 
 ## About
 

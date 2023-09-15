@@ -36,7 +36,7 @@ The connector also provides different possibilities for **alarm monitoring** and
 
 ### Exported connectors
 
-| **Exported Protocol**                   | **Description**                                                                                                           |
+| **Exported Connector**                   | **Description**                                                                                                           |
 |-----------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
 | Teleste HDC100 TSEMP - HDO101           | RF switch module used for signal backup purposes.                                                                         |
 | Teleste HDC100 TSEMP - HDO202           | Dual receiver with frequency range 5-300 MHz and output switches for return path fiber-optic links in CATV networks.      |

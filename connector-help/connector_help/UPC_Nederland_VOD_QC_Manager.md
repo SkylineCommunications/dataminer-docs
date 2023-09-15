@@ -4,7 +4,7 @@ uid: Connector_help_UPC_Nederland_VOD_QC_Manager
 
 # UPC Nederland VOD QC Manager
 
-The **UPCN VOD QC Manager** is a **virtual** driver. It's used to manage the dataflow between the **UPCN VOD Workflow Manager** and the **Digimetrics Aurora.**
+The **UPCN VOD QC Manager** is a **virtual** connector. It's used to manage the dataflow between the **UPCN VOD Workflow Manager** and the **Digimetrics Aurora.**
 
 ## About
 

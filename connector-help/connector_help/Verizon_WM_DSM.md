@@ -4,7 +4,7 @@ uid: Connector_help_Verizon_WM_DSM
 
 # Verizon WM DSM
 
-This is strictly a system driver. Its function is to perform different actions in the workflow that allows the **Verizon DSM SO** driver to communicate with the **Profile Manager**.
+This is strictly a system driver. Its function is to perform different actions in the workflow that allows the **Verizon DSM SO** connector to communicate with the **Profile Manager**.
 
 ## About
 

@@ -36,4 +36,4 @@ This **Alarm** **page** displays the state of the alarm parameters.
 
 ### Sturingen (Settings)
 
-This page contains the settings that can be altered using the **Webeasy Lite** driver.
+This page contains the settings that can be altered using the **Webeasy Lite** connector.

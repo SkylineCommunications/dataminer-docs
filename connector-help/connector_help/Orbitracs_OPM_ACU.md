@@ -4,7 +4,7 @@ uid: Connector_help_Orbitracs_OPM_ACU
 
 # Orbitracs OPM ACU
 
-The Orbitracs OPM ACU driver facilitates the operation and monitoring of tracking systems.
+The Orbitracs OPM ACU connector facilitates the operation and monitoring of tracking systems.
 
 ## About
 
@@ -26,7 +26,7 @@ This connector uses **SNMP** to extract the relevant information used to monitor
 
 ### Creation
 
-SNMP Main connection
+#### SNMP Main connection
 
 This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 

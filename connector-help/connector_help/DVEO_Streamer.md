@@ -20,19 +20,21 @@ The connector displays information on 5 main pages :
 - **Input** **Tree View**: Contains the same data as the **Input details** page, but displayed in a tree view, making it easier to read.
 - **Output**: Displays all the output streams.
 
-## Installation and Configuration
+## Configuration
 
-### Creation
+### Connections
 
-This Driver uses an HTTP connection and requires the following input during element creation:
+#### HTTP Connection - Main
 
-**HTTP Connection**
+This connector uses an HTTP connection and requires the following input during element creation:
+
+HTTP Connection:
 
 - **IP address/host:** The polling IP or URL of the destination.
 - **IP port**: The IP port of the destination*.*
 - **Bus address**: If the proxy server has to be bypassed, specify: *bypassproxy.*
 
-### Configuration
+### Initialization
 
 To start polling, enter your **User Name** and **Password** on the page **Connection**, and then click the **Connect** button.
 

@@ -16,7 +16,7 @@ The data for monitoring and controlling the device can be found on different pag
 
 | **Range** | **Description**                                                                                     | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.1.2.1          | Driver Review: Update from 'displaycolumn' to 'naming'. Changed Name/Description/Displaying values. | No                  | No                      |
+| 1.1.2.1          | Review: Update from 'displaycolumn' to 'naming'. Changed Name/Description/Displaying values. | No                  | No                      |
 | 1.1.2.2          | Sets Reviewed. Added SNMP type tags.                                                                | No                  | No                      |
 
 ### Product Info

@@ -27,7 +27,7 @@ This connector will export different connectors based on the retrieved data. A l
 </colgroup>
 <tbody>
 <tr class="odd">
-<td><strong>Driver Range</strong></td>
+<td><strong>Range</strong></td>
 <td><strong>Description</strong></td>
 <td><strong>DCF Integration</strong></td>
 <td><strong>Cassandra Compliant</strong></td>
@@ -59,7 +59,7 @@ This connector will export different connectors based on the retrieved data. A l
 
 ### Exported connectors
 
-| **Exported Protocol**                        | **Description**                       |
+| **Exported Connector**                        | **Description**                       |
 |----------------------------------------------|---------------------------------------|
 | Globecomm iDirect Shore Side Server - Remote | Represents a remote with its devices. |
 

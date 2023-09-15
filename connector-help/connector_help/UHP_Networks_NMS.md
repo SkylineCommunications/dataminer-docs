@@ -28,7 +28,7 @@ All data in the element is read-only. It is not possible to configure the UHP Ne
 
 | **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components**                                                                                                                                                                                                                                              |
 |-----------|---------------------|-------------------------|-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.0.0.x   | No                  | Yes                     | \-                    | [UHP Networks NMS - Controller](/Driver%20Help/UHP%20Networks%20NMS%20-%20Controller.aspx) [UHP Networks NMS - Station](/Driver%20Help/UHP%20Networks%20NMS%20-%20Station.aspx) [UHP Networks NMS - Network](xref:Connector_help_UHP_Networks_NMS_-_Network) |
+| 1.0.0.x   | No                  | Yes                     | \-                    | [UHP Networks NMS - Controller](xref:Connector_help_UHP_Networks_NMS_-_Controller)<br>[UHP Networks NMS - Station](xref:Connector_help_UHP_Networks_NMS_-_Station)<br>[UHP Networks NMS - Network](xref:Connector_help_UHP_Networks_NMS_-_Network) |
 
 ## Configuration
 

@@ -26,7 +26,7 @@ For each card inserted into one of the available slots, a corresponding **Dynami
 
 ### Exported connectors
 
-| **Exported Protocol**         | **Description**    |
+| **Exported Connector**         | **Description**    |
 |-------------------------------|--------------------|
 | WISI General Platform - CD80T | Transceiver Module |
 | WISI General Platform - CD80A | Transceiver Module |

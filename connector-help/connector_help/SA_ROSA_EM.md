@@ -16,7 +16,7 @@ The Rosa EM connector is used to monitor and control a Rosa EM device and device
 |------------------|--------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                                              | No                  | Yes                     |
 | 2.0.0.x          | SNMP implementation for a number of devices. DVE generation. | No                  | Yes                     |
-| 2.0.1.x          | Driver review                                                | No                  | Yes                     |
+| 2.0.1.x          | Connector review                                                | No                  | Yes                     |
 | 3.0.0.x          | Cellnex Version                                              | No                  | Yes                     |
 
 ### Product Info
@@ -67,7 +67,7 @@ SNMP Settings:
 
 ## Usage
 
-The Rosa EM driver implements two types of elements: a main element that represents the Rosa EM device and one virtual element for each device connected to the Rosa EM. The name of each created virtual element has the following format: "*Main Element Name.Virtual Element Name*".
+The Rosa EM connector implements two types of elements: a main element that represents the Rosa EM device and one virtual element for each device connected to the Rosa EM. The name of each created virtual element has the following format: "*Main Element Name.Virtual Element Name*".
 
 ### Main Element
 

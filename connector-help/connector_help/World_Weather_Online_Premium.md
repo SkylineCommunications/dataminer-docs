@@ -4,7 +4,7 @@ uid: Connector_help_World_Weather_Online_Premium
 
 # World Weather Online Premium
 
-The **World Weather Online Premium** driver shows an overview of the current and forecast weather based on latitude and longitude.
+The **World Weather Online Premium** connector shows an overview of the current and forecast weather based on latitude and longitude.
 
 ## About
 
@@ -40,7 +40,7 @@ HTTP CONNECTION:
 
 ### Configuration
 
-The **World Weather Online Premium** driver needs a **premium API Key** from worldweatheronline.com in order to receive weather forecasts.
+The **World Weather Online Premium** connector needs a **premium API Key** from worldweatheronline.com in order to receive weather forecasts.
 
 ## Usage
 

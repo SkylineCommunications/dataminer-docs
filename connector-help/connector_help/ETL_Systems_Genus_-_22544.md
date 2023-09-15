@@ -24,7 +24,7 @@ This connector is exported by the parent connector [ETL Systems Genus](xref:Conn
 
 ## Configuration
 
-The element using this connector is automatically created by the parent element using the [ETL Systems Genus](xref:Connector_help_ETL_Systems_Genus) driver. No user input is required.
+The element using this connector is automatically created by the parent element using the [ETL Systems Genus](xref:Connector_help_ETL_Systems_Genus) connector. No user input is required.
 
 ## How to use
 

@@ -8,7 +8,7 @@ This series of Outdoor Block Upconverters provides one RF composite output cover
 
 ## About
 
-The **GeoSync Microwave TLE** driver controls and monitors the slope and attenuation of the device.
+The **GeoSync Microwave TLE** connector controls and monitors the slope and attenuation of the device.
 
 ### Version Info
 

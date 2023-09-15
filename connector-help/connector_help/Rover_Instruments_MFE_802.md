@@ -8,7 +8,7 @@ The **Rover Instruments MFE 802** is a digital multi-front end DVB device, speci
 
 ## About
 
-The **Rover Instruments MFE 802** driver provides a monitoring interface to get/set information from/to the device.
+The **Rover Instruments MFE 802** connector provides a monitoring interface to get/set information from/to the device.
 
 Further information is available here: <http://www.roverinstruments.com/prodotti.php?idp=4&camblingua=2&changelan=yes&idprod=13>
 

@@ -20,7 +20,7 @@ After a file being processed it will be moved to a subfolder named "Succeeded" o
 
 ## Creation
 
-The **UPC Nederland VOD Schedule Importer** is a **Virtual** driver.
+The **UPC Nederland VOD Schedule Importer** is a **Virtual** connector.
 
 First the **XML** and **CSV** mapping have to be defined.
 

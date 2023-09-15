@@ -46,9 +46,9 @@ The Ateme Titan Edge device is an advanced media platform that can have multiple
 <td>Yes</td>
 <td>-</td>
 <td><ul>
-<li><a href="/Driver%20Help/Ateme%20Titan%20Edge%20-%20Encoder.aspx">Ateme Titan Edge - Encoder</a></li>
-<li><a href="/Driver%20Help/Ateme%20Titan%20Edge%20-%20Decoder.aspx">Ateme Titan Edge - Decoder</a></li>
-<li><a href="/Driver%20Help/Ateme%20Titan%20Edge%20-%20Gateway.aspx">Ateme Titan Edge - Gateway</a></li>
+<li>Ateme Titan Edge - Encoder</li>
+<li>Ateme Titan Edge - Decoder</li>
+<li>Ateme Titan Edge - Gateway</li>
 </ul></td>
 </tr>
 <tr class="odd">
@@ -57,9 +57,9 @@ The Ateme Titan Edge device is an advanced media platform that can have multiple
 <td>Yes</td>
 <td>-</td>
 <td><ul>
-<li><a href="/Driver%20Help/Ateme%20Titan%20Edge%20-%20Encoder.aspx">Ateme Titan Edge - Encoder</a></li>
-<li><a href="/Driver%20Help/Ateme%20Titan%20Edge%20-%20Decoder.aspx">Ateme Titan Edge - Decoder</a></li>
-<li><a href="/Driver%20Help/Ateme%20Titan%20Edge%20-%20Gateway.aspx">Ateme Titan Edge - Gateway</a></li>
+<li>Ateme Titan Edge - Encoder</li>
+<li>Ateme Titan Edge - Decoder</li>
+<li>Ateme Titan Edge - Gateway</li>
 </ul></td>
 </tr>
 </tbody>

@@ -4,7 +4,7 @@ uid: Connector_help_Molden_Media_vizSecure_DVE
 
 # Molden Media vizSecure DVE
 
-The **Molden Media vizSecure DVE** connector is used for Dynamic Virtual Elements (DVE) representing devices monitored by the Molden Media vizSecure driver.
+The **Molden Media vizSecure DVE** connector is used for Dynamic Virtual Elements (DVE) representing devices monitored by the Molden Media vizSecure connector.
 
 ## About
 

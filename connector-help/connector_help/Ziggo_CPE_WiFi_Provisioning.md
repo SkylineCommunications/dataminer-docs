@@ -4,7 +4,7 @@ uid: Connector_help_Ziggo_CPE_WiFi_Provisioning
 
 # Ziggo CPE WiFi Provisioning
 
-The **Ziggo CPE WiFi Provisioning** driver converts CSV files containing a list of cable modems to **DSL** (**DataMiner Structured Language**) files ready to be processed by a **Skyline IAM DB** element.
+The **Ziggo CPE WiFi Provisioning** connector converts CSV files containing a list of cable modems to **DSL** (**DataMiner Structured Language**) files ready to be processed by a **Skyline IAM DB** element.
 
 ## About
 

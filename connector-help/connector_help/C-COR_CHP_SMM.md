@@ -25,7 +25,7 @@ All the data is polled by **SNMP**. For each module, a **DVE** will be created, 
 </colgroup>
 <tbody>
 <tr class="odd">
-<td><strong>Driver Range</strong></td>
+<td><strong>Range</strong></td>
 <td><strong>Description</strong></td>
 <td><strong>DCF Integration</strong></td>
 <td><p><strong>Cassandra Compliant</strong></p></td>
@@ -38,13 +38,13 @@ All the data is polled by **SNMP**. For each module, a **DVE** will be created, 
 </tr>
 <tr class="odd">
 <td>2.0.0.39</td>
-<td>Driver reviewing: - Params 30958/30959 and 30965/30966 discreets reviewed; - Removing of normalize page buttons and parameters from pages Normalize; - Added a button 'Load Names' to load nodes page for setting the Alias parameters from the modules table to the Modules property of the DVEs; - Introduction of disable conditions to parameters 30960-30963 and 30967-30970; - Qaction 301 reviewed.</td>
+<td>Connector reviewing: - Params 30958/30959 and 30965/30966 discreets reviewed; - Removing of normalize page buttons and parameters from pages Normalize; - Added a button 'Load Names' to load nodes page for setting the Alias parameters from the modules table to the Modules property of the DVEs; - Introduction of disable conditions to parameters 30960-30963 and 30967-30970; - Qaction 301 reviewed.</td>
 <td>No</td>
 <td>Yes</td>
 </tr>
 <tr class="even">
 <td>2.0.0.40</td>
-<td>Driver reviewing: - QA100 reviewed for DVE filtering based on Bus Address; - Implementation of Modules Table filtering (Param 100); - New QA3500 and tables 3500-3577 (polling instances) for implementation of subtables logic for restricted polling.</td>
+<td>Connector reviewing: - QA100 reviewed for DVE filtering based on Bus Address; - Implementation of Modules Table filtering (Param 100); - New QA3500 and tables 3500-3577 (polling instances) for implementation of subtables logic for restricted polling.</td>
 <td>No</td>
 <td>Yes</td>
 </tr>
@@ -79,7 +79,7 @@ All the data is polled by **SNMP**. For each module, a **DVE** will be created, 
 
 ### Exported Connectors
 
-| **Exported Protocol** | **Description**                      |
+| **Exported Connector** | **Description**                      |
 |-----------------------|--------------------------------------|
 | C-COR CHP FTX         | Forward path transmitter             |
 | C-COR CHP PS MM       | Power supply                         |

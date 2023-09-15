@@ -6,7 +6,7 @@ uid: Connector_help_Ross_Video_Newt-IPR-3G-4S
 
 This connector can be used to manage and control the Ross Video Newt IPR-3G-4S.
 
-The connector only supports the Newt IPR-3G-4S IP to 4 SDI output configuration mode. Other Newt configuration modes require a separate driver.
+The connector only supports the Newt IPR-3G-4S IP to 4 SDI output configuration mode. Other Newt configuration modes require a separate connector.
 
 ## About
 

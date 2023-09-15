@@ -28,7 +28,7 @@ To be aware of the collector elements available in the system, the connector wil
 
 | **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                                                                                     | **Exported Components** |
 |-----------|---------------------|-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|
-| 1.0.0.x   | No                  | Yes                     | [Telenor EPM Collector](/Driver%20Help/Telenor%20EPM%20Collector.aspx) [Telenor EPM Manager](xref:Connector_help_Telenor_EPM_Manager) | \-                      |
+| 1.0.0.x   | No                  | Yes                     | [Telenor EPM Collector](xref:Connector_help_Telenor_EPM_Collector) [Telenor EPM Manager](xref:Connector_help_Telenor_EPM_Manager) | \-                      |
 
 ## Configuration
 

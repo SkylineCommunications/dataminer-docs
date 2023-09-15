@@ -8,7 +8,7 @@ The **SeaChange Spot SDB** makes it possible to monitor a Microsoft server, proc
 
 ## About
 
-The Spot SDB driver periodically polls an SDB server to retrieve status information about the health of the SeaChange services, using WMI, SQL, and parsing of SeaChange log files over a Windows administrative share. By default, this is done every 30 seconds. This data is used to verify the operation of the SDB server within a SeaChange Spot system.
+The Spot SDB connector periodically polls an SDB server to retrieve status information about the health of the SeaChange services, using WMI, SQL, and parsing of SeaChange log files over a Windows administrative share. By default, this is done every 30 seconds. This data is used to verify the operation of the SDB server within a SeaChange Spot system.
 
 ## Installation and configuration
 

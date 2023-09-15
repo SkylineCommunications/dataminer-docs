@@ -8,7 +8,7 @@ The **SeaChange Spot+** makes it possible to monitor the state of the HAdb Syste
 
 ## About
 
-The Spot+ driver periodically polls both the primary and backup HAdb database servers to retrieve status information about the health of the SeaChange Failover Services. By default, this happens every 30 seconds.
+The Spot+ connector periodically polls both the primary and backup HAdb database servers to retrieve status information about the health of the SeaChange Failover Services. By default, this happens every 30 seconds.
 
 This data is used to identify the primary and backup systems in the SeaChange Spot system and their status.
 

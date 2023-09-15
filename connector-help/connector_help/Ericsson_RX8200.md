@@ -61,7 +61,7 @@ SNMP Settings:
 
 #### Serial connection
 
-Driver ranges 2.0.1.x and 3.0.0.x require a second, TCP/IP connection.
+Ranges 2.0.1.x and 3.0.0.x require a second, TCP/IP connection.
 
 SERIAL CONNECTION:
 

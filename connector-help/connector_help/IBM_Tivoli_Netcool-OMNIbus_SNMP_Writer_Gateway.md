@@ -4,7 +4,7 @@ uid: Connector_help_IBM_Tivoli_Netcool-OMNIbus_SNMP_Writer_Gateway
 
 # IBM Tivoli Netcool-OMNIbus SNMP Writer Gateway
 
-The IBM Tivoli Netcool-OMNIbus SNMP Writer Gateway driver acts as a **trap receiver** and **orchestrator**. With this connector it is possible to retrieve traps via **SNMP or TCP (Smart-Serial).** Furthermore the connector is able to create **DVE**'s based on location or subdomain, which in terms show the events for the selected location/subdomain. It is also possible to forward the incoming events to other DMAs that use this connector via TCP based on the event domain configurations.
+The IBM Tivoli Netcool-OMNIbus SNMP Writer Gateway connector acts as a **trap receiver** and **orchestrator**. With this connector it is possible to retrieve traps via **SNMP or TCP (Smart-Serial).** Furthermore the connector is able to create **DVE**'s based on location or subdomain, which in terms show the events for the selected location/subdomain. It is also possible to forward the incoming events to other DMAs that use this connector via TCP based on the event domain configurations.
 
 ## About
 
@@ -24,7 +24,7 @@ The IBM Tivoli Netcool-OMNIbus SNMP Writer Gateway device is a **monitoring plat
 
 ### Exported connectors
 
-| **Exported Protocol**                                    | **Description**                                                   |
+| **Exported Connector**                                    | **Description**                                                   |
 |----------------------------------------------------------|-------------------------------------------------------------------|
 | IBM Tivoli Netcool-OMNIbus SNMP Writer Gateway Subdomain | This protocol is used to show the events based on their subdomain |
 | IBM Tivoli Netcool-OMNIbus SNMP Writer Gateway Location  | This protocol is used to show the events based on their location  |

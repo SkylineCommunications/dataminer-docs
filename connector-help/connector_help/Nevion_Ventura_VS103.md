@@ -8,7 +8,7 @@ With this connector, the **Nevion Ventura VS103 chassis** can be monitored, and 
 
 ## About
 
-This connector monitors the Nevion Ventura VS103 chassis and supported cards through **SNMP** communication. Different drivers will be exported for the supported cards. A list can be found in the section "Exported Connectors" below.
+This connector monitors the Nevion Ventura VS103 chassis and supported cards through **SNMP** communication. Different connectors will be exported for the supported cards. A list can be found in the section "Exported Connectors" below.
 
 ### Version Info
 
@@ -25,7 +25,7 @@ Notes:
 
 - In version 1.0.1.2, support was added to create DVEs for VS906 cards.
 - In version 2.0.0.1, DVE creation was separated to support different kinds of cards. At this point, DVE creation is supported for VS906 and VS909. The tables for each card type are adjusted to hide unused columns. The width of such columns is zero, so that they can still be opened from the header bar of the table.
-- From version 2.0.0.4 onwards, driver help pages are created for each DVE. Usage information for each DVE has been moved to those separate pages. The input and output configuration flow tables have been added.
+- From version 2.0.0.4 onwards, connector help pages are created for each DVE. Usage information for each DVE has been moved to those separate pages. The input and output configuration flow tables have been added.
 - In version 2.0.0.7, DCF and VS902 card support has been added
 - From version 2.0.1.1 onwards, changes to card configuration fields are applied in the pending configuration tables and automatically applied to the current configuration.
 
@@ -42,7 +42,7 @@ Notes:
 
 ### Exported connectors
 
-| **Exported Protocol**        | **Description**                                                 |
+| **Exported Connector**        | **Description**                                                 |
 |------------------------------|-----------------------------------------------------------------|
 | Nevion Ventura VS901         | *In range 1.0.0.x* HD-SDI JPEG 2000 compression over GbE        |
 | Nevion Ventura VS902         | *Before range 2.0.1.x* Video router module                      |

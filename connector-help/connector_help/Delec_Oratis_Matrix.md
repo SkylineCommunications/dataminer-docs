@@ -18,7 +18,7 @@ Multiple backup versions of the device settings can be stored, and a restore of 
 
 ### Creation
 
-This is a **multi-connection driver,** it has an **SNMP** part, a **smart-serial** part, and an **SSH** part.
+This is a **multi-connection connector,** it has an **SNMP** part, a **smart-serial** part, and an **SSH** part.
 
 **SNMP polling** can be disabled from within the connector, if the device does not support it.
 

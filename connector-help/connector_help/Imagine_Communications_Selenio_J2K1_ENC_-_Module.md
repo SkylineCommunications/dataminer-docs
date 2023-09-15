@@ -4,7 +4,7 @@ uid: Connector_help_Imagine_Communications_Selenio_J2K1_ENC_-_Module
 
 # Imagine Communications Selenio J2K1 ENC - Module
 
-The **Imagine Communications Selenio J2K1 ENC - Module** connector is a **DVE** that is generated from the **Imagine Communications Selenio J2K1 ENC** driver and contains the data for 1 encoder channel.
+The **Imagine Communications Selenio J2K1 ENC - Module** connector is a **DVE** that is generated from the **Imagine Communications Selenio J2K1 ENC** connector and contains the data for 1 encoder channel.
 
 ## About
 
@@ -28,7 +28,7 @@ Ranges of the connector
 
 ### Creation
 
-This connector is generated from the **Imagine Communications Selenio J2K1 ENC** driver.
+This connector is generated from the **Imagine Communications Selenio J2K1 ENC** connector.
 
 ## Usage
 

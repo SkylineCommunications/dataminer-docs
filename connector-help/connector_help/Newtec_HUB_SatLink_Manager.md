@@ -4,7 +4,7 @@ uid: Connector_help_Newtec_HUB_SatLink_Manager
 
 # Newtec HUB SatLink Manager
 
-The **Newtec HUB SatLink Manager** driver implements a small subset of requests from the **Newtec** **SLM HUB Controller API**.
+The **Newtec HUB SatLink Manager** connector implements a small subset of requests from the **Newtec** **SLM HUB Controller API**.
 
 ## About
 
@@ -62,6 +62,6 @@ The **Service Classes** table on this page is used to map a more user-friendly n
 
 ## Notes
 
-The **Newtec HUB SatLink Manager** connector is created to be used in combination with the **EBU FNRMN HUB Manager** driver.
+The **Newtec HUB SatLink Manager** connector is created to be used in combination with the **EBU FNRMN HUB Manager** connector.
 
 The EBU FNRMN HUB Manager element will perform sets on the Newtec HUB SatLink Manager element to book and start reservations/links and the result will be passed back.

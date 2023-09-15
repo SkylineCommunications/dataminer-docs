@@ -19,7 +19,7 @@ If you want to use the export function, you need to provide an empty Excel file 
 | **Range** | **Description**                        | **DCF Integration** | **Cassandra Compliant** |
 |------------------|----------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version.                       | No                  | Yes                     |
-| 1.0.1.x          | Major change by DriverQA (DisplayKey). | No                  | Yes                     |
+| 1.0.1.x          | Major change by QA (DisplayKey).       | No                  | Yes                     |
 | 1.0.2.x          | Major change: changed naming.          | No                  | Yes                     |
 
 ### Product Info

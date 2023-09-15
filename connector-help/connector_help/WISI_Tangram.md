@@ -31,7 +31,7 @@ This connector will export different connectors based on the retrieved data. A l
 
 ### Exported connectors
 
-| **Exported Protocol** | **Description** |
+| **Exported Connector** | **Description** |
 |-----------------------|-----------------|
 | WISI Tangram GT21     | GT21 table      |
 | WISI Tangram GT22     | GT22 table      |

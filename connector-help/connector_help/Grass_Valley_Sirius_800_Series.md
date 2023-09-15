@@ -58,7 +58,7 @@ There is no redundancy defined.
 The element created with this connector consists of the following data pages:
 
 - **General**: Contains general status parameters and a table with all available matrix levels.
-  Via the **Configurations** page button, you can configure driver polling settings such as the matrix level and the active polling IP.
+  Via the **Configurations** page button, you can configure connector polling settings such as the matrix level and the active polling IP.
 - **Matrix**: Displays the matrix.
 - **Router Control**: Displays the tables used by the connector to communicate with the Router Control application.
 - **Routing**: Displays the **Inputs** and **Outputs** tables of the matrix.

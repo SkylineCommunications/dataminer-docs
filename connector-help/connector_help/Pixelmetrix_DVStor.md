@@ -10,7 +10,7 @@ The aim of this connector is to retrieve recording, playback and buffer informat
 
 The polling information is retrieved through HTTP requests over serial commands. SNMP traps are also managed.
 
-This topic concerns version 2.7.2.2 of the **Pixelmetrix DVStor** driver.
+This topic concerns version 2.7.2.2 of the **Pixelmetrix DVStor** connector.
 
 ## Installation and configuration
 

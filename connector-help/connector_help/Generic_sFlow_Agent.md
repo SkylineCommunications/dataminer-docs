@@ -8,7 +8,7 @@ The purpose of this connector is to analyze the information received via **sFlow
 
 ## About
 
-**Every minute**, the connector reads the files from the **Collector driver**. It then processes these packets and writes the information to a table.
+**Every minute**, the connector reads the files from the **Collector connector**. It then processes these packets and writes the information to a table.
 
 ### Version Info
 

@@ -59,6 +59,6 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-This is a basic driver displaying general information about the device as well as several tables with more specific information.
+This is a basic connector displaying general information about the device as well as several tables with more specific information.
 
 There are no specific restrictions to the use of this connector.

@@ -24,7 +24,7 @@ This connector communicates using SNMP Protocol version 3. It allows the monitor
 
 ## Exported connectors
 
-| **Exported Protocol** | **Description**          |
+| **Exported Connector** | **Description**          |
 |-----------------------|--------------------------|
 | Dell IDRAC Remote     | Dell IDRAC remote device |
 

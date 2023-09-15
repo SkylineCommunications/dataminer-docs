@@ -10,7 +10,7 @@ The **Sencore MRD 5800** connector is used to monitor and control the Sencore 58
 
 This connector uses **SNMP** to retrieve data about the inputs and outputs of the device.
 
-The connector is very similar to the **Sencore MRD 4400**. In fact, the layout of both drivers is almost identical.
+The connector is very similar to the **Sencore MRD 4400**. In fact, the layout of both connectors is almost identical.
 
 It is also possible to **download** a profile to a local file and to **upload** a profile.
 

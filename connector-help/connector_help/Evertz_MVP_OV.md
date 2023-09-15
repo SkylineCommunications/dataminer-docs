@@ -10,7 +10,7 @@ The MVP is a multi-image display and monitoring system. It provides a highly fle
 
 This connector is intended to work with the **Evertz MVP OV** card. It was designed to provide status monitoring and fault trigger parameters.
 
-### Ranges of the Driver
+### Version Info
 
 | **Range**     | **Description**                                                                                  | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|--------------------------------------------------------------------------------------------------|---------------------|-------------------------|

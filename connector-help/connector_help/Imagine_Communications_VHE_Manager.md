@@ -48,7 +48,7 @@ For each device in the **Device** table, the connector will automatically create
 
 However, it is possible to create or delete a complete frame using the buttons **Create** and **Delete** in the **Device** table.
 
-**WARNING:** Due to the discovery and automatic synchronization process, the connector will **remove** any manually created module not recognized by the VHE Manager connector. As such, any new Selenio model driver will also be included in the VHE Manager protocol.
+**WARNING:** Due to the discovery and automatic synchronization process, the connector will **remove** any manually created module not recognized by the VHE Manager connector. As such, any new Selenio model connector will also be included in the VHE Manager protocol.
 
 ### Connections
 

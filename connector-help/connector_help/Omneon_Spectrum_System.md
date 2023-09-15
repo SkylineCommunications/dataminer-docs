@@ -30,7 +30,7 @@ This connector retrieves data using the SNMP protocol every 30 seconds. It will 
 
 ### Exported connectors
 
-| **Exported Protocol**                                                                                | **Description**                                                                                                                |
+| **Exported Connector**                                                                                | **Description**                                                                                                                |
 |------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|
 | [Omneon Spectrum System - Device](xref:Connector_help_Omneon_Spectrum_System_-_Device)       | Only supported from range 2.0.0.x onwards. Device modules (MediaDirectors and MediaPorts) registered with the Network Manager. |
 | [Omneon Spectrum System - Player](xref:Connector_help_Omneon_Spectrum_System_-_Player)       | Only supported from range 2.0.1.x onwards. Player module.                                                                      |

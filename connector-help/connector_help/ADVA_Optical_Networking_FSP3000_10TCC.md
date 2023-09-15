@@ -25,7 +25,7 @@ All information is retrieved using the SNMP protocol.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td><strong>Driver Range</strong></td>
+<td><strong>Range</strong></td>
 <td><strong>Description</strong></td>
 <td><strong>DCF Integration</strong></td>
 <td><strong>Cassandra Compliant</strong></td>
@@ -33,7 +33,7 @@ All information is retrieved using the SNMP protocol.
 <tr class="even">
 <td>1.0.0.x</td>
 <td><p>Initial version</p>
-<p>Depricated</p></td>
+<p>Deprecated</p></td>
 <td>No</td>
 <td>Yes</td>
 </tr>
@@ -58,7 +58,7 @@ All information is retrieved using the SNMP protocol.
 
 ### Creation
 
-SNMP Main connection
+#### SNMP Main connection
 
 This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
@@ -81,7 +81,7 @@ No additional configuration is necessary in the element.
 
 ### General
 
-This page contains general information of the device, such as the **name** and **temperature**. Additionaly, the most important statuses of the different channels that are managed by this card are available on this page.
+This page contains general information of the device, such as the **name** and **temperature**. Additionally, the most important statuses of the different channels that are managed by this card are available on this page.
 
 ### Channel x page
 

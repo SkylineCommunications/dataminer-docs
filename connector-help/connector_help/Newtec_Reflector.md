@@ -36,7 +36,7 @@ When a channel is added to a destination, then the connector will start polling 
 
 The **Debug** page contains the **External Command** parameter and the **External Command Status** parameter.
 
-The Newtec Reflector driver will primarily be used to **add** and **remove destinations** from an external source (Automation script, manager connector, ...). To add or remove a destination, an external command needs to be set on the External Command parameter with the following format:
+The Newtec Reflector connector will primarily be used to **add** and **remove destinations** from an external source (Automation script, manager connector, ...). To add or remove a destination, an external command needs to be set on the External Command parameter with the following format:
 
 - Add destination: 'addDestination\|inPort=xxx;inAddr=xxx;destPort=xxx;destHost:xxx'
 - Remove destination: 'removeDestination\|inPort=xxx;inAddr=xxx;destPort=xxx;destHost=xxx'

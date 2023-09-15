@@ -62,6 +62,6 @@ As of range 1.1.1.x, the connector supports more than 2 modems.
 
 ## Notes
 
-This connector is intended to be used in combination with the **EBU FNRMN MNT Manager** driver.
+This connector is intended to be used in combination with the **EBU FNRMN MNT Manager** connector.
 
 The EBU FNRMN MNT Manager element will perform sets on the Newtec MNT SatLink Manager element to configure the transmissions and reception. The Newtec MNT SatLink Manager passes information to the EBU FNRMN MNT Manager element via **data distribution**.

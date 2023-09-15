@@ -46,11 +46,11 @@ The connector retrieves information about all the modules using the SNMP protoco
 <td>Yes</td>
 <td>-</td>
 <td><ul>
-<li><a href="/Driver%20Help/Hiltron%20HCS4%20-%20Double%20Bias%20Tee.aspx">Hiltron HCS4 - Double Bias Tee</a></li>
-<li><a href="/Driver%20Help/Hiltron%20HCS4%20-%20PSA%20Power%20Supply.aspx">Hiltron HCS4 - PSA Power Supply</a></li>
-<li><a href="/Driver%20Help/Hiltron%20HCS4%20-%20SWI%20Waveguide%20Switch.aspx">Hiltron HCS4 - SWI Waveguide Switch</a></li>
-<li><a href="/Driver%20Help/Hiltron%20HCS4%20-%20L-Band%202+1%20Redundancy%20Switch.aspx">Hiltron HCS4 - L-Band 2+1 Redundancy Switch</a></li>
-<li><a href="/Driver%20Help/Hiltron%20HCS4%20-%20LNB.aspx">Hiltron HCS4 - LNB</a></li>
+<li>Hiltron HCS4 - Double Bias Tee</li>
+<li>Hiltron HCS4 - PSA Power Supply</li>
+<li>Hiltron HCS4 - SWI Waveguide Switch</li>
+<li>Hiltron HCS4 - L-Band 2+1 Redundancy Switch</li>
+<li>Hiltron HCS4 - LNB</li>
 </ul></td>
 </tr>
 </tbody>

@@ -13,7 +13,7 @@ The Grass Valley Biometrics AP is part of GV's Media Assurance platform, using M
 | **Range**            | **Key Features**                    | **Based on** | **System Impact**                                                                                                                                                                                                                                  |
 |----------------------|-------------------------------------|--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1.0.0.x \[Obsolete\] | Initial version                     | \-           | \-                                                                                                                                                                                                                                                 |
-| 1.0.1.x \[SLC Main\] | Long string commands are supported. | 1.0.0.2      | The parameters are polled via one single command definition, which is initialized by a QAction. The other redundant command definitions and their building blocks (parameters) are removed. The data parameters of each driver page are untouched. |
+| 1.0.1.x \[SLC Main\] | Long string commands are supported. | 1.0.0.2      | The parameters are polled via one single command definition, which is initialized by a QAction. The other redundant command definitions and their building blocks (parameters) are removed. The data parameters of each connector page are untouched. |
 
 ### Product Info
 

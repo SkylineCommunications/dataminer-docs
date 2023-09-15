@@ -43,12 +43,12 @@ The VodafoneZiggo Witbe Maestro is used to manage and schedule tests on Witbe ro
 <td>No</td>
 <td>Yes</td>
 <td><ul>
-<li><em>WitBe Robot Manager</em> protocol</li>
+<li><em>WitBe Robot Manager</em> connector</li>
 <li><em>Schedule WitBe Maintenance</em> Automation script</li>
-<li><em>Skyline SmartRec Application</em> protocol</li>
+<li><em>Skyline SmartRec Application</em> connector</li>
 </ul></td>
 <td><ul>
-<li><a href="/Driver%20Help/VodafoneZiggo%20Witbe%20Maestro%20-%20Device.aspx">VodafoneZiggo Witbe Maestro - Device</a></li>
+<li>VodafoneZiggo Witbe Maestro - Device</li>
 </ul></td>
 </tr>
 </tbody>

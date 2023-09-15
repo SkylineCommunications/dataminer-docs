@@ -10,7 +10,7 @@ This connector is designed to monitor an HDCU (Hiltron De-icing Control Unit) de
 
 This connector retrieves the temperatures and the currents on the device to give an overview of the device state, particularly in critical cases (*sensor fails*, *critical temperatures* or *currents*).
 
-It allows the user to modify some parameters such as the heating fallback time when the heating request is no longer active. The device can send traps to announce a state change, which is immediately echoed to the relevant driver parameters. It is also possible to change the names of the different control entities directly in the device, and to change general system information, which will be used in sent traps.
+It allows the user to modify some parameters such as the heating fallback time when the heating request is no longer active. The device can send traps to announce a state change, which is immediately echoed to the relevant parameters. It is also possible to change the names of the different control entities directly in the device, and to change general system information, which will be used in sent traps.
 
 ## Installation and configuration
 

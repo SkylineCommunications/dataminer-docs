@@ -8,7 +8,7 @@ With the **iDirect Pulse Terminal Manager** connector, you can monitor terminal 
 
 ## About
 
-With this connector, iDirect terminals can be monitored. Other components should be monitored using the **iDirect Pulse Manager** driver. Multiple terminal manager elements can be created, to spread the load and trend data over multiple DataMiner Agents.
+With this connector, iDirect terminals can be monitored. Other components should be monitored using the **iDirect Pulse Manager** connector. Multiple terminal manager elements can be created, to spread the load and trend data over multiple DataMiner Agents.
 
 The iDirect Pulse manager is responsible for the distribution of the terminals that should be polled by this element.
 
@@ -31,7 +31,7 @@ All data is retrieved over HTTP using the web service API.
 
 ### Exported Connectors
 
-| **Exported Protocol**  | **Description**                            |
+| **Exported Connector**  | **Description**                            |
 |------------------------|--------------------------------------------|
 | iDirect Pulse Terminal | iDirect Terminals (installation on vessel) |
 

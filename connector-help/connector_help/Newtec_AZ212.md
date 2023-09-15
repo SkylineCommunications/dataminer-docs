@@ -20,12 +20,11 @@ With this connector, you can configure the main networking options and receive t
 | 1.3.0.x          | Standardized range, continuation of 1.2.0.2.2. Added DCF.                         | Yes                 | No                      |
 | 1.3.1.x          | New range for Cassandra compliancy. Changed displayColumn to naming.              | Yes                 | Yes                     |
 
-
-Note:
-
-- "Software version" refers to the value found in the **USS Bucket Version** parameter. We suspect there are 2 version numbers that need to be taken into account, but further information on this is still pending.
-- Driver ranges with additional numbers for firmware versions existed at some point in time, but the current rule requires 4 numbers.
-- Not Cassandra-compliant prior to range 1.3.1.x, because table PID 400 has the option **displayColumn**.
+> [!NOTE]
+>
+> - "Software version" refers to the value found in the **USS Bucket Version** parameter. We suspect there are 2 version numbers that need to be taken into account, but further information on this is still pending.
+> - Ranges with additional numbers for firmware versions existed at some point in time, but the current rule requires 4 numbers.
+> - Not Cassandra-compliant prior to range 1.3.1.x, because table PID 400 has the option **displayColumn**.
 
 ### Product Info
 

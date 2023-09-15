@@ -65,7 +65,7 @@ There is no redundancy defined.
 
 ## How to use
 
-The Witbe Maestro driver will receive notifications from the VOD Manager in the parameter with ID = 3. These notifications must contain the information of the assets that need to be tested.
+The Witbe Maestro connector will receive notifications from the VOD Manager in the parameter with ID = 3. These notifications must contain the information of the assets that need to be tested.
 
 The connector will send a single test for each available device, and once a result is received, it is sent to the VOD Manager.
 

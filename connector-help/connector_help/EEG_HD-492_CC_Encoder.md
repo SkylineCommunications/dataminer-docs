@@ -4,7 +4,7 @@ uid: Connector_help_EEG_HD-492_CC_Encoder
 
 # EEG HD-492 CC Encoder
 
-The EEG HD-492 driver handles the monitoring of the device by polling general information and CC Encoder information. The connector can also receive traps.
+The EEG HD-492 connector handles the monitoring of the device by polling general information and CC Encoder information. The connector can also receive traps.
 
 ## About
 

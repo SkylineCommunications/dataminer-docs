@@ -8,7 +8,7 @@ These Test Translators are designed for applications where frequency translation
 
 ## About
 
-The **GeoSync Microwave TRR-Ku2** driver controls and monitors the bands and attenuation of the device.
+The **GeoSync Microwave TRR-Ku2** connector controls and monitors the bands and attenuation of the device.
 
 ### Version Info
 

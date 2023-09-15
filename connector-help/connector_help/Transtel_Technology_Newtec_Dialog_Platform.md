@@ -22,38 +22,9 @@ This connector is designed to retrieve information from a DMA set up by Newtec a
 
 ### System Info
 
-<table>
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><strong>Range</strong></td>
-<td><strong>DCF Integration</strong></td>
-<td><strong>Cassandra Compliant</strong></td>
-<td><strong>Linked Components</strong></td>
-<td><strong>Exported Components</strong></td>
-</tr>
-<tr class="even">
-<td>1.0.0.x</td>
-<td>No</td>
-<td>Yes</td>
-<td>-</td>
-<td><ul>
-<li><a href="/Driver%20Help/Transtel%20Technology%20Newtec%20Dialog%20Platform%20-%20Modulator.aspx">Transtel Technology Newtec Dialog Platform - Modulator</a></li>
-<li><a href="/Driver%20Help/Transtel%20Technology%20Newtec%20Dialog%20Platform%20-%20MDC6000.aspx">Transtel Technology Newtec Dialog Platform - MDC6000</a></li>
-<li><a href="/Driver%20Help/Transtel%20Technology%20Newtec%20Dialog%20Platform%20-%20MDC6000%20HCR.aspx">Transtel Technology Newtec Dialog Platform - MDC6000 HCR</a></li>
-<li><a href="/Driver%20Help/Transtel%20Technology%20Newtec%20Dialog%20Platform%20-%20MDC7000%204CPM.aspx">Transtel Technology Newtec Dialog Platform - MDC7000 4CPM</a></li>
-<li><a href="/Driver%20Help/Transtel%20Technology%20Newtec%20Dialog%20Platform%20-%20General%20Switch.aspx">Transtel Technology Newtec Dialog Platform - General Switch</a></li>
-<li><a href="/Driver%20Help/Transtel%20Technology%20Newtec%20Dialog%20Platform%20-%20AZ212%20and%20AZ202%20Redundancy%20Switch.aspx">Transtel Technology Newtec Dialog Platform - AZ212 and AZ202 Redundancy Switch</a></li>
-</ul></td>
-</tr>
-</tbody>
-</table>
+| Range     | DCF Integration | Cassandra Compliant | Linked Components | Exported Components |
+|-----------|---------------------|-------------------------|-----------------------|-------------------------|
+| 1.0.0.x   | No                  | Yes                     | -                     | - Transtel Technology Newtec Dialog Platform - Modulator<br>- Transtel Technology Newtec Dialog Platform - MDC6000<br>- Transtel Technology Newtec Dialog Platform - MDC6000 HCR<br>- Transtel Technology Newtec Dialog Platform - MDC7000 4CPM<br>- Transtel Technology Newtec Dialog Platform - General Switch<br>- Transtel Technology Newtec Dialog Platform - AZ212 and AZ202 Redundancy Switch |
 
 ## Configuration
 

@@ -30,7 +30,7 @@ This connector will export different connectors based on the retrieved data. A l
 
 ### Exported connectors
 
-| **Exported Protocol**            | **Description**                    |
+| **Exported Connector**            | **Description**                    |
 |----------------------------------|------------------------------------|
 | Concurrent Mediahawk 4500 - Host | A Concurrent Mediahawk 4500 device |
 

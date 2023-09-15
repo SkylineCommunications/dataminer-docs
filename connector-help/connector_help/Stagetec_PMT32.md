@@ -28,7 +28,7 @@ This connector retrieves data via **Serial Communication TCP/IP**. Commands are 
 
 ### Exported connectors
 
-| **Exported Protocol** | **Description** |
+| **Exported Connector** | **Description** |
 |-----------------------|-----------------|
 | Stagetec PMT32 Slot   | Slot modules    |
 

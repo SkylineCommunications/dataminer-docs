@@ -10,12 +10,12 @@ With this connector, you can monitor information on the **TSL MDU12-PM** device,
 
 The TSL MDU12-PM connector is used to monitor and control a TSL MDU12-PM device. It displays both general information and specific information on inputs and outputs. In addition, it allows you to configure certain settings on the device.
 
-### Ranges of the Driver
+### Version Info
 
 | **Range** | **Description**                                     | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version, based on "SA DCM 2.0.0.36" driver. | No                  | Yes                     |
-| 1.0.1.x          | Driver review.                                      | No                  | Yes                     |
+| 1.0.1.x          | Connector review.                                      | No                  | Yes                     |
 
 ### Supported Firmware Versions
 

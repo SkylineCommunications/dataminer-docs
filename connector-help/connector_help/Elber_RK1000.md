@@ -24,7 +24,7 @@ This connector exports connectors of type CO02 and creates elements for each car
 
 ### Exported connectors
 
-| **Exported Protocol** | **Description**           |
+| **Exported Connector** | **Description**           |
 |-----------------------|---------------------------|
 | Elber RK1000 - CO02   | Used for the CO02 module. |
 

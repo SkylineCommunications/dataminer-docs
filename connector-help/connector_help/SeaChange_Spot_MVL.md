@@ -8,7 +8,7 @@ The **SeaChange Spot MVL** makes it possible to monitor a Microsoft server, proc
 
 ## About
 
-The Spot MVL driver periodically polls an MVL server to retrieve status information about the health of the SeaChange services, using parsing of SeaChange log files over a Windows administrative share. By default, this is done every 30 seconds. This data is used to verify the operation of the MVL server within a SeaChange Spot system.
+The Spot MVL connector periodically polls an MVL server to retrieve status information about the health of the SeaChange services, using parsing of SeaChange log files over a Windows administrative share. By default, this is done every 30 seconds. This data is used to verify the operation of the MVL server within a SeaChange Spot system.
 
 ## Installation and configuration
 

@@ -8,7 +8,7 @@ This exported connector is used to **monitor the operational status of the playo
 
 ## About
 
-This connector is exported from the MX1 Developed Playout Engine driver.
+This connector is exported from the MX1 Developed Playout Engine connector.
 
 ### Version Info
 

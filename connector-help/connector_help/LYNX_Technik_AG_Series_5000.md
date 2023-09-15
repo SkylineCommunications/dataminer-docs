@@ -24,7 +24,7 @@ This connector polls data from the device using a **smart-serial** connection. F
 
 ### Exported connectors
 
-| **Exported Protocol**                    | **Description**                                           |
+| **Exported Connector**                    | **Description**                                           |
 |------------------------------------------|-----------------------------------------------------------|
 | LYNX Technik AG Series 5000 - RCT 5023-G | Rack Controller                                           |
 | LYNX Technik AG Series 5000 - DVD 5820   | Switching and Distribution Unit                           |

@@ -10,7 +10,7 @@ This element is intended to hold a summary of all important data and info from a
 
 ## About
 
-The Skyline DMP Replication driver will periodically poll the DMP information and alarms. Other values are retrieved using subscriptions. This means that these updates come in very quickly.
+The Skyline DMP Replication connector will periodically poll the DMP information and alarms. Other values are retrieved using subscriptions. This means that these updates come in very quickly.
 
 ### Version Info
 

@@ -16,7 +16,7 @@ This connector is intended to get and set information in the device via an eleme
 
 | **Range**            | **Key Features**                                                     | **Based on** | **System Impact** |
 |----------------------|----------------------------------------------------------------------|--------------|-------------------|
-| 1.0.0.x \[obsolete\] | Driver range supporting only SNMPv1.                                 | \-           | \-                |
+| 1.0.0.x \[obsolete\] | SNMPv1 support only.                                                 | \-           | \-                |
 | 1.0.1.x \[SLC Main\] | Removed time synchronization functionality.                          | \-           | \-                |
 | 2.0.0.x              | Branched from 1.0.0.x: customer-specific branch for NetVue Solution. | 1.0.0.x      | \-                |
 

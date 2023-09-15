@@ -34,7 +34,7 @@ For more information about the device, please refer to the website <http://wisi.
 
 ### Exported connectors
 
-| **Exported Protocol**                                                                  | **Description**                     |
+| **Exported Connector**                                                                  | **Description**                     |
 |----------------------------------------------------------------------------------------|-------------------------------------|
 | [WISI Optopus RF Amplifier](xref:Connector_help_WISI_Optopus_RF_Amplifier)       | LX70 Wideband Amplifier             |
 | [WISI Optopus Ext Transmitter](xref:Connector_help_WISI_Optopus_Ext_Transmitter) | LX10 Longhaul Broadcast Transmitter |

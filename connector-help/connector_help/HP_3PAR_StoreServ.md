@@ -8,7 +8,7 @@ The **HP 3PAR StoreServ** connector monitors a unit using SNMP and an HTTP conne
 
 ## About
 
-The **HP 3PAR StoreServ** driver updates an alarm table every 5 seconds, receives traps from the device and displays them in three tables.
+The **HP 3PAR StoreServ** connector updates an alarm table every 5 seconds, receives traps from the device and displays them in three tables.
 It also monitors several parameters and tables using an HTTP connection.
 
 ### Version Info

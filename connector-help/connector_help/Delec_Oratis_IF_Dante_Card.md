@@ -4,10 +4,6 @@ uid: Connector_help_Delec_Oratis_IF_Dante_Card
 
 # Delec Oratis IF Dante Card
 
-Driver help for range 1.0.0.x
-
-## About
-
 This connector is used to monitor an **Oratis IF Dante card** (Audio Processor) produced by Delec.
 
 The functionalities of the connector include:
@@ -17,6 +13,8 @@ The functionalities of the connector include:
 - Synchronizing the device file system and rebooting the device - see "General page" section below
 - Taking and restoring a full backup - see "General page - Backup" section below
 - Polling Rx Flows and Tx Flows using the Dante API
+
+## About
 
 ### Version Info
 
@@ -50,8 +48,11 @@ The page also contains several buttons in the second column that can be used to 
 The page also contains parameters related to the internal functioning of the connector. These parameters are:
 
 - **Last Response Received:** Indicates the number of seconds that have passed since a response was received from the device.
+
   As the connector frequently polls the device, the value should never be more then 30 seconds. If the value is more, this indicates a communication problem. If the value is 200 seconds or more, the connector will poll all parameters again once the connection is restored.
+
 - **Force Poll**: Button that can be used to force an update of all parameters. If, for instance, the current values might not be correct or up to date, clicking this button will instantly update all parameters.
+
   The button can also be used after a reboot or backup/restore. However, if a restore was executed by the connector, all data should automatically be polled again.
 
 ### General page - FTP Credentials

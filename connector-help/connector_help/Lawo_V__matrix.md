@@ -34,7 +34,7 @@ From range 2.0.1.x onwards, the information is retrieved via **WebSocket** subsc
 
 ### Exported Components
 
-| **Exported Protocol**                                                                                  | **Description**    |
+| **Exported Connector**                                                                                  | **Description**    |
 |--------------------------------------------------------------------------------------------------------|--------------------|
 | [Lawo V\_\_matrix - IP Streaming](xref:Connector_help_Lawo_V__matrix_-_IP_Streaming)           | IP streaming.      |
 | [Lawo V\_\_matrix - Multiviewer Slave](xref:Connector_help_Lawo_V__matrix_-_Multiviewer_Slave) | Multiviewer slave. |

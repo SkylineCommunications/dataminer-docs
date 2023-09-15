@@ -4,7 +4,7 @@ uid: Connector_help_Sydney_Trains_GPS_Tracking
 
 # Sydney Trains GPS Tracking
 
-The **Sydney Trains GPS Tracking** driver reads out one of the **XML** files with **GPS** information about the trains and sends the announcements that should be made to the **Sittig DVA** interface.
+The **Sydney Trains GPS Tracking** connector reads out one of the **XML** files with **GPS** information about the trains and sends the announcements that should be made to the **Sittig DVA** interface.
 
 ## About
 
@@ -14,7 +14,7 @@ There are 2 XML files that are used by this connector to check when an announcem
 - **Station time table file**: is used when the real time running file was not update in the last 10 minutes
 
 Both files are the same format, but the real time running file can contain extra information about delays etc.
-The **Sydney Trains GPS Tracking** driver will read these files and will send an announcement request to the Sittig DVA interface when:
+The **Sydney Trains GPS Tracking** connector will read these files and will send an announcement request to the Sittig DVA interface when:
 
 - A train arrives to a station in the **next 20 minutes**
 - A train arrives to a station in the **next 10 minutes**

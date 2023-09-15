@@ -26,7 +26,7 @@ An NTP software service (NTPD) can also be started on the HPS board. This servic
 
 | **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                                                                 | **Exported Components**                                                                                                                                       |
 |-----------|---------------------|-------------------------|-----------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.0.0.x   | Yes                 | Yes                     | DataMiner connector: [Meinberg LANTIME Modular API V10](/Driver%20Help/Meinberg%20LANTIME%20Modular%20API%20V10.aspx) | DataMiner connector: [Meinberg LANTIME IMS-HPS API V10 - PTPv2 Instance](xref:Connector_help_Meinberg_LANTIME_IMS-HPS_API_V10_-_PTPv2_Instance) |
+| 1.0.0.x   | Yes                 | Yes                     | DataMiner connector:<br>- [Meinberg LANTIME Modular API V10](xref:Connector_help_Meinberg_LANTIME_Modular_API_V10) | DataMiner connector:<br>- [Meinberg LANTIME IMS-HPS API V10 - PTPv2 Instance](xref:Connector_help_Meinberg_LANTIME_IMS-HPS_API_V10_-_PTPv2_Instance) |
 
 ## Configuration
 

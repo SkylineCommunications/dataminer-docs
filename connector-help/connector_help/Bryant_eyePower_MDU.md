@@ -14,11 +14,11 @@ This connector allows the user to read all the given measurements of this unit. 
 
 This firmware made several changes to the command and response structure, which causes some commands to fail in the 1.0.0.1 connector version. Please use connector version 1.0.0.2 from this point onwards.
 
-### Driver version 1.0.0.2
+### Connector version 1.0.0.2
 
 This version supports the changes of relay version 1.2.5, and is still compatible with previous relay versions.
 
-### Driver version 1.0.0.3
+### Connector version 1.0.0.3
 
 The environmental readings are now available as well. See Usage-General-Environmental Measurements.
 

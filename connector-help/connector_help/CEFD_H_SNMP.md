@@ -52,7 +52,7 @@ The most important features of the **Heights Networking Platform** are:
 
 ### Exported connectors
 
-| **Exported Protocol**                                              | **Description**           |
+| **Exported Connector**                                              | **Description**           |
 |--------------------------------------------------------------------|---------------------------|
 | [CEFD H SNMP - FSK](xref:Connector_help_CEFD_H_SNMP_-_FSK) | FSK Functionality Module. |
 

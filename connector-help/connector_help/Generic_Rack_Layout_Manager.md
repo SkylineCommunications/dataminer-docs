@@ -36,9 +36,9 @@ In range 2.0.0.x, DataMiner IDP takes care of the element creation.
 
 ### General
 
-The **Protocols Table** collects all installed drivers on the system. For each driver, it is possible to indicate whether or not elements using this connector should be taken into account during provisioning of the **DataMiner Devices Table**.
+The **Protocols Table** collects all installed connectors on the system. For each connector, it is possible to indicate whether or not elements using this connector should be taken into account during provisioning of the **DataMiner Devices Table**.
 
-For each driver that has the **Present in Rack** parameter set to *Yes*, all elements using the connector will be displayed in the **DataMiner Devices Table**. By default, the element name is used as display name, but this value can be overwritten through the **Device Custom Name** parameter.
+For each connector that has the **Present in Rack** parameter set to *Yes*, all elements using the connector will be displayed in the **DataMiner Devices Table**. By default, the element name is used as display name, but this value can be overwritten through the **Device Custom Name** parameter.
 
 You can select the rack that hosts the unit, the size of the unit (in RU) and its position within the rack. To disable visualization while maintaining the element table entry, you can set the **Rack Visibility** parameter to *Hidden.*
 

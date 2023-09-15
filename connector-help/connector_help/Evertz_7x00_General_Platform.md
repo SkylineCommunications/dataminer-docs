@@ -34,7 +34,7 @@ The chassis must include an **Evertz 7700-FC, Evertz 7800-FC, or Evertz 7801-FC*
 
 Details about the supported cards can be found at the end of this document.
 
-| **Exported Protocol**                                                                                                     | **Description**                                                                                                                                                               |
+| **Exported Connector**                                                                                                     | **Description**                                                                                                                                                               |
 |---------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Evertz 7x00 General Platform - 7700R2X2-HD                                                                                | Used for the 7700R2X2-HD module.                                                                                                                                              |
 | Evertz 7x00 General Platform - 7700DA7                                                                                    | Used for the 7700DA7-HD and 7700DA7 types.                                                                                                                                    |

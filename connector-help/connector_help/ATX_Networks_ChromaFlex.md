@@ -28,7 +28,7 @@ The application modules include the high-performance Chromadigm DWDM transmitter
 
 | **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components**                                                                                                                                                                        |
 |-----------|---------------------|-------------------------|-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.0.0.x   | No                  | Yes                     | \-                    | \- [ATX Networks ChromaFlex - DMTx](/Driver%20Help/ATX%20Networks%20ChromaFlex%20-%20DMTx.aspx) - [ATX Networks ChromaFlex - QRRX](xref:Connector_help_ATX_Networks_ChromaFlex_-_QRRX) |
+| 1.0.0.x   | No                  | Yes                     | \-                    | \- ATX Networks ChromaFlex - DMTx <br>- ATX Networks ChromaFlex - QRRX |
 
 ## Configuration
 

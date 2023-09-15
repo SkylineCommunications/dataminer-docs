@@ -24,7 +24,7 @@ This **SNMP** connector is used to monitor and configure the **Rohde Schwarz TMV
 
 ### Exported connectors
 
-| **Exported Protocol**         | **Description**                                                                                      |
+| **Exported Connector**         | **Description**                                                                                      |
 |-------------------------------|------------------------------------------------------------------------------------------------------|
 | TMV9 DAB Dual Drive - Exciter | In range **1.0.0.x**, the transmitter has two exciters. For each exciter, a DVE element is exported. |
 

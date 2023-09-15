@@ -14,10 +14,10 @@ This connector retrieves the weather forecast for all entries in the **Weather T
 
 | **Range** | **Description**                                                                                                                                                                                                                   | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 2.0.0.x          | Driver changed in order to work with serial command/response (instead of web client). Only supports free API key, which allows 500 commands to be sent per hour, with max. 3 commands per second.                                 | No                  | Yes                     |
+| 2.0.0.x          | Changes in order to work with serial command/response (instead of web client). Only supports free API key, which allows 500 commands to be sent per hour, with max. 3 commands per second.                                 | No                  | Yes                     |
 | 3.0.0.x          | Added support for premium account. The free version is deprecated.                                                                                                                                                                | No                  | Yes                     |
 | 3.0.1.x          | Display columns changed to use naming.                                                                                                                                                                                            | No                  | Yes                     |
-| 4.0.0.x          | Driver has been completely rewritten to make it more scalable (you can now choose the forecast date from today to 14 days in the future and the forecast interval, e.g, hourly). Connection has been changed from serial to HTTP. | No                  | Yes                     |
+| 4.0.0.x          | Complete overhaul to increase scalability (you can now choose the forecast date from today to 14 days in the future and the forecast interval, e.g, hourly). Connection has been changed from serial to HTTP. | No                  | Yes                     |
 
 ### Product Info
 
@@ -37,7 +37,7 @@ This connector retrieves the weather forecast for all entries in the **Weather T
 </colgroup>
 <tbody>
 <tr class="odd">
-<td><strong>Driver Range</strong></td>
+<td><strong>Range</strong></td>
 <td><strong>Connections</strong></td>
 </tr>
 <tr class="even">

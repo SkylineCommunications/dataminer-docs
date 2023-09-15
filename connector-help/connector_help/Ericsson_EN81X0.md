@@ -8,9 +8,11 @@ This is a **serial** connector that displays the status of the different paramet
 
 ## About
 
-The **Ericsson EN81X0 Encoder** driver supports various encoder/re-encoder modules: the **EN7100** and the **EN8190**.
+The **Ericsson EN81X0 Encoder** connector supports various encoder/re-encoder modules: the **EN7100** and the **EN8190**.
 
-The connector has 2 connector ranges: v.1.0.0.x and v.3.0.0.x. Driver range 3.0.0.x differs from range 1.0.0.x in that it supports firmware version 7.
+The connector has 2 connector ranges: the v.1.0.0.x and v.3.0.0.x.
+
+Range 3.0.0.x differs from range 1.0.0.x in that it supports firmware version 7.
 
 ## Installation and Configuration
 

@@ -4,28 +4,27 @@ uid: Connector_help_Eutelsat_Data_Collector
 
 # Eutelsat Data Collector
 
-The **Eutelsat Data Collector** is a custom made driver for Eutelsat that allows to monitor the Eutelsat DMA cluster.
+The **Eutelsat Data Collector** is a custom-made connector for Eutelsat that allows to monitor the Eutelsat DMA cluster.
 
-About
+## About
 
-The **E**utelsat Data Collector is a connector that was tailor-made for monitoring Eutelsat DMA cluster. This connector collects data from the external cluster through the DataMiner Web API and displays the alarm state of the DataMiner Views and Services.
+The **Eutelsat** Data Collector is a connector that was tailor-made for monitoring Eutelsat DMA cluster. This connector collects data from the external cluster through the DataMiner Web API and displays the alarm state of the DataMiner Views and Services.
 
-Ranges of the connector
+### Version Info
 
 | Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
-Supported firmware versions
+### Product Info
 
 | Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | DataMiner Web API V1        |
 
+## Configuration
 
-Installation and configuration
-
-Creation
+### Connections
 
 #### HTTP Main connection
 
@@ -37,11 +36,13 @@ HTTP CONNECTION:
 - **IP port**: 80
 - **Bus address**: If the proxy server has to be bypassed, specify *bypassproxy.*
 
-*Configuration of AgentsThe user can add/delete DataMiner agents by right clicking on the **DataMiner Agents Table** and choose the add/delete option in the context menu. For each new DataMiner agent the user will need to enter the IP address of the agent and a textual description.*
+### Configuration of Agents
 
-Usage
+You can add/delete DataMiner Agents by right-clicking the **DataMiner Agents Table** and selecting the add/delete option in the context menu. For each new DataMiner Agent, you will need to enter the IP address of the Agent and a textual description.
 
-General
+## Usage
+
+### General
 
 The **General** page contains the **DataMiner Agents** table. This table displays the current status of each agent, including the following parameters: **IP Address**, **Administration State**, **Login State**, **Last Login Timestamp**, **Retrieve State**, **Last Retrieve Timestamp** and **Last Error Message**.
 
@@ -49,10 +50,10 @@ The protocol will try to reach the first DMA in the table with **Administration 
 
 The **General** page also contains the **Configuration** page button. When clicked the configuration options are displayed in a popup window. Using the the configuration popup window the user can enter the **Login** credentials for the DataMiner Cluster, the name of the **Parent View**, the **Profondeur** of the views tree polling and the **Synchronization Time** interval.
 
-Views
+### Views
 
 The **Views** page contains the **Views** table. This table displays the current status of each polled view, including the following parameters: **ID**, **Name**, **Alarm State**, **Last Update Timestamp** and **Level**. The **Refresh All** button forces the re-polling of all the views.
 
-Services
+### Services
 
 The **Services** page contains the **Services** table. This table displays the current status of each polled service, including the following parameters: **ID**, **Name**, **Service State** and **Last Update Timestamp**. The **Refresh All** button forces the re-polling of all the services.

@@ -55,4 +55,4 @@ The **Matrix View** page displays the matrix.
 
 The **Table View** page displays the same information as the **Matrix View** page, but in the form of a table.
 
-The **Alarms** page contains some parameters that need to be linked with an external driver (Gateway) in order to retrieve the needed values via the **Element Connections** module. To configure this, in DataMiner Cube, go to Apps \> Modules \> Element Connections, then select the name of the element running this connector, and select the linked element, parameter and instance corresponding to the alarm values.
+The **Alarms** page contains some parameters that need to be linked with an external connector (Gateway) in order to retrieve the needed values via the **Element Connections** module. To configure this, in DataMiner Cube, go to Apps \> Modules \> Element Connections, then select the name of the element running this connector, and select the linked element, parameter and instance corresponding to the alarm values.

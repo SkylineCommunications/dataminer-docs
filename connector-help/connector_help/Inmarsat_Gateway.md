@@ -36,7 +36,7 @@ This connector will export different connectors based on the retrieved data. A l
 
 ### Exported connectors
 
-| **Exported Protocol**       | **Description** |
+| **Exported Connector**       | **Description** |
 |-----------------------------|-----------------|
 | Inmarsat Gateway - Terminal | Terminal        |
 
@@ -51,7 +51,7 @@ This connector will export different connectors based on the retrieved data. A l
 </colgroup>
 <tbody>
 <tr class="odd">
-<td><strong>Driver version</strong></td>
+<td><strong>Range</strong></td>
 <td><strong>Connections</strong></td>
 </tr>
 <tr class="even">

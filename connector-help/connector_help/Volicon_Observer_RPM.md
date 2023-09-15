@@ -26,7 +26,7 @@ This connector exports other drivers, each of them representing an Observer RPM 
 
 ### Exported connectors
 
-| **Exported Protocol**                                                                                        | **Description** |
+| **Exported Connector**                                                                                        | **Description** |
 |--------------------------------------------------------------------------------------------------------------|-----------------|
 | [Volicon Observer RPM - Observer Probe](xref:Connector_help_Volicon_Observer_RPM_-_Observer_Probe) | Observer Probe  |
 

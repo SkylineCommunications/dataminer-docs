@@ -61,7 +61,7 @@ The element created with this connector consists of the data pages described bel
 
 On this page, you can find information related to all the CCUs. The **maximum** and **minimum** values for **CCU** **numbers** are displayed at the top of the page.
 
-**CCU Select Retries** shows the number of retries the CNA driver will attempt in order to select a CCU or to send the command to the CCU. When the retries are done, the connector will wait for an interval determined by the **Back Off Wait Time CCU Buffers** parameter and the next CCU will be selected in the meantime. When the CCU is selected again, the connector checks if the back-off time has passed. If it has, the connector will try to send the command one last time.
+**CCU Select Retries** shows the number of retries the CNA connector will attempt in order to select a CCU or to send the command to the CCU. When the retries are done, the connector will wait for an interval determined by the **Back Off Wait Time CCU Buffers** parameter and the next CCU will be selected in the meantime. When the CCU is selected again, the connector checks if the back-off time has passed. If it has, the connector will try to send the command one last time.
 
 A **CCU Status** **table** is also available, listing the detected CCUs are listed.
 

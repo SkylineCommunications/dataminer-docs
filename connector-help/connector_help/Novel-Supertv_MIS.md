@@ -4,7 +4,7 @@ uid: Connector_help_Novel-Supertv_MIS
 
 # Novel-Supertv MIS
 
-With the **Novel-Supertv MIS** (Media Information System) driver, it is possible to monitor and manage Novel-SuperTV's Media Information System software.
+With the **Novel-Supertv MIS** (Media Information System) connector, it is possible to monitor and manage Novel-SuperTV's Media Information System software.
 
 ## About
 

@@ -20,7 +20,7 @@ Based on the retrieved data and on the version of the connector, different conne
 
 ### Exported connectors
 
-| **Exported Protocol**                                                                                            | **Description**               |
+| **Exported Connector**                                                                                            | **Description**               |
 |------------------------------------------------------------------------------------------------------------------|-------------------------------|
 | [Network Electronics Flashlink LB-OE](xref:Connector_help_Network_Electronics_Flashlink_LB-OE)             | Only supported in range 2.0.0 |
 | [Network Electronics Flashlink LB-EO](xref:Connector_help_Network_Electronics_Flashlink_LB-EO)             | Only supported in range 2.0.0 |

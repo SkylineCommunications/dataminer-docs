@@ -16,9 +16,9 @@ The parameters that indicate the values of the IP addresses are used both for co
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | Yes                 | Yes                     |
 
-### Linked drivers
+### Linked connectors
 
-| **Driver Name** | **Range** |
+| **Name** | **Range** |
 |-----------------|-----------|
 | SKY UK IP Cloud | 1.0.1.x   |
 

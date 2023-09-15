@@ -26,7 +26,7 @@ It monitors a **SatService sat-nms MNC** system, but only as far as the **fiber-
 
 ### Exported connectors
 
-| **Exported Protocol**         | **Description**                                                               |
+| **Exported Connector**         | **Description**                                                               |
 |-------------------------------|-------------------------------------------------------------------------------|
 | SatService sat-nms FO - Frame | Detailed frame data of linked modules (RX card, TX card, power supply units). |
 

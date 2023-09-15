@@ -30,7 +30,7 @@ The connector has several pages with general information, HMTS info, the HMTS de
 
 ### Exported connectors
 
-| **Exported Protocol**                              | **Description**    |
+| **Exported Connector**                              | **Description**    |
 |----------------------------------------------------|--------------------|
 | AM Networks BridgePort General Platform - VGP-9240 | VGP-9240 amplifier |
 | AM Networks BridgePort General Platform - VGP-9022 | VGP-9022 amplifier |

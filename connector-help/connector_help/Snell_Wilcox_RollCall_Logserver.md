@@ -26,7 +26,7 @@ This connector will export different connectors based on the retrieved data. Ref
 
 ### Exported connectors
 
-| **Exported Protocol**                                                                                                | **Description**                               |
+| **Exported Connector**                                                                                                | **Description**                               |
 |----------------------------------------------------------------------------------------------------------------------|-----------------------------------------------|
 | [Snell Wilcox RollCall Logserver - Element](xref:Connector_help_Snell_Wilcox_RollCall_Logserver_-_Element) | Represents a device monitored by this connector. |
 

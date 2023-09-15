@@ -8,7 +8,7 @@ This is a virtual connector used to monitor the power station status in the Nork
 
 ## About
 
-The **Norkring AS Power Logic** driver provides information on each different power station present in the Norkring network.
+The **Norkring AS Power Logic** connector provides information on each different power station present in the Norkring network.
 
 ### Version Info
 

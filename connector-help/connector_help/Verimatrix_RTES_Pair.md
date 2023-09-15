@@ -30,7 +30,7 @@ The Verimatrix RTES Pair connector monitors a redundant pair of Verimatrix RTES 
 
 ### Exported connectors
 
-| **Exported Protocol**                                                                | **Description**                       |
+| **Exported Connector**                                                                | **Description**                       |
 |--------------------------------------------------------------------------------------|---------------------------------------|
 | [Verimatrix RTES Pair - DVE](xref:Connector_help_Verimatrix_RTES_Pair_-_DVE) | 2 DVE elements, primary and secondary |
 

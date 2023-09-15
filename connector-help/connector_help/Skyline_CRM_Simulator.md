@@ -6,7 +6,7 @@ uid: Connector_help_Skyline_CRM_Simulator
 
 ## About
 
-SQM-DemoSubscriberData Driver to offload data in DSL format. Latitude, longitude & offset parameters are configurable as well as the names and service package types.
+SQM-DemoSubscriberData connector to offload data in DSL format. Latitude, longitude & offset parameters are configurable as well as the names and service package types.
 
 This protocol is pure for CRM simulation.
 
@@ -26,7 +26,7 @@ This connector uses a virtual connection and does not require any input during e
 
 ### Data
 
-Contains of 4 tables, CM Data Table, Node Data Table, CMTS Data Table and Subscriber Data Table. All values found in these 4 tables are randomly generated. The generate the data, you must go to the Configurations page and click "Refresh Data". There is also the posibility to clear all data from the tables, this is done by the "Clear tables" button, can be found on top of the page.
+Contains of 4 tables, CM Data Table, Node Data Table, CMTS Data Table and Subscriber Data Table. All values found in these 4 tables are randomly generated. The generate the data, you must go to the Configurations page and click "Refresh Data". There is also the possibility to clear all data from the tables, this is done by the "Clear tables" button, can be found on top of the page.
 
 ### Simulated Data
 

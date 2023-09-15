@@ -8,9 +8,9 @@ The MVP is a multi-image display and monitoring system. It provides a highly fle
 
 ## About
 
-This protocol is created by the **Evertz MVP OV** driver. For each bus address (1-8), the **Evertz MVP OV** creates a DVE.
+This protocol is created by the **Evertz MVP OV** connector. For each bus address (1-8), the **Evertz MVP OV** creates a DVE.
 
-### Ranges of the Driver
+### Version Info
 
 | **Range** | **Description**                                                                            | **DCF Integration** | **Cassandra Compliant** |
 |------------------|--------------------------------------------------------------------------------------------|---------------------|-------------------------|

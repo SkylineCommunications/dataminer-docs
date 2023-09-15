@@ -6,7 +6,7 @@ uid: Connector_help_LCJ_Capteurs_CV7-S
 
 The CV7-S is an anemometer, used for measuring wind speed and direction.
 
-The CV7-S driver collects absolute parameters and average parameters over a period of 1, 10 and 20 minutes.
+The CV7-S connector collects absolute parameters and average parameters over a period of 1, 10 and 20 minutes.
 
 ## About
 

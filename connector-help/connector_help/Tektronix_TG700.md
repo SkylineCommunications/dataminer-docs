@@ -26,7 +26,7 @@ The connector schedules all polling so that no polling happens at the same time.
 
 ### Exported connectors
 
-| **Exported Protocol**                                                      | **Description**        |
+| **Exported Connector**                                                      | **Description**        |
 |----------------------------------------------------------------------------|------------------------|
 | [Tektronix TG700 - GPS7](xref:Connector_help_Tektronix_TG700_-_GPS7) | GPS module             |
 | [Tektronix TG700 - SDI7](xref:Connector_help_Tektronix_TG700_-_SDI7) | Video generator module |

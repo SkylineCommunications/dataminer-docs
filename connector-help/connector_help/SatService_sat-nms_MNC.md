@@ -28,7 +28,7 @@ The connector displays several tables with general information for each device t
 
 ### Exported connectors (only for range 1.0.0.x)
 
-| **Exported Protocol**                           | **Description**               |
+| **Exported Connector**                           | **Description**               |
 |-------------------------------------------------|-------------------------------|
 | SatService sat-nms MNC - Antenna Controllers    | Antenna controller devices    |
 | SatService sat-nms MNC - Tracking Receiver      | Tracking receiver devices     |

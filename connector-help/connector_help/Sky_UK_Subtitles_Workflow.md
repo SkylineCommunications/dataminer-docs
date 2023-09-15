@@ -30,7 +30,7 @@ To use this connector, create a service that uses it as its service definition. 
 
 This is the default service configuration:
 
-| **Driver**                             | **Description**                                                    | **Subscription Name**          |
+| **Connector**                             | **Description**                                                    | **Subscription Name**          |
 |----------------------------------------|--------------------------------------------------------------------|--------------------------------|
 | Axon ACP - HSI10                       | Slot Status 0                                                      | InserterSlot0Status            |
 | Axon ACP - HSI10                       | Protocol Status                                                    | InserterProtocolStatus         |

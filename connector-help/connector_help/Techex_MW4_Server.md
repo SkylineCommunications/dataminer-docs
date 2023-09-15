@@ -28,7 +28,7 @@ REST API calls are used to retrieve/send information from/to the server. The con
 
 ### Exported connectors
 
-| **Exported Protocol**              | **Description**           |
+| **Exported Connector**              | **Description**           |
 |------------------------------------|---------------------------|
 | Techex MW4 Server - Generic Device | Techex MW4 Server Device. |
 

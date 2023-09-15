@@ -34,7 +34,7 @@ Note: This connector will export different connectors based on the retrieved dat
 
 ### Exported connectors
 
-| **Exported Protocol**                                                                                                                            | **Description**     |
+| **Exported Connector**                                                                                                                            | **Description**     |
 |--------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|
 | [Aurora Network CH3000 - CC300x](xref:Connector_help_Aurora_Network_CH3000_-_CC300x)                                                     | AT controller       |
 | [Aurora Network CH3000 - OS32MxM](xref:Connector_help_Aurora_Network_CH3000_-_OS32MxM)                                                   | Optical switch      |

@@ -26,7 +26,7 @@ This connector uses a Simple Network Management Protocol (SNMP) connection and r
 - **Get community string**: The community string in order to read from the device. The default value is *public*.
 - **Set community string**: The community string in order to set to the device. The default value is *private.*
 
-When the element is created, it can take several minutes before everything is initialized. The devices in the chassis are automatically detected and their drivers are also automatically created. If a device's module isn't supported, then no connector is created.
+When the element is created, it can take several minutes before everything is initialized. The devices in the chassis are automatically detected and their connectors are also automatically created. If a device's module is not supported, then no connector is created.
 
 For more information on which modules are supported, refer to the Notes section.
 
@@ -77,7 +77,7 @@ It is possible that not all devices are supported. Devices are grouped in certai
 - Direct Modulated Optical Transmitters (OTXD)
 - Optical Amplifiers (OVA)
 
-If a device is shown in the **Device Overview**, but no element is created, this could be a sign that the limit of available elements in the DMA has been reached. Try to stop another element and create the Funea driver again. If no extra DVE element is created, this isn't the problem.
+If a device is shown in the **Device Overview**, but no element is created, this could be a sign that the limit of available elements in the DMA has been reached. Try to stop another element and create the Funea connector again. If no extra DVE element is created, this isn't the problem.
 
 Not all alarm activation parameters (**Event Mask** page) are supported. It is not possible to program these parameters so that writable and non-writable parameters are separated.
 
@@ -193,7 +193,9 @@ The following pages are available:
 - **Limits - Common**: Allows the configuration of the alarming limits of the **Device Temperature** and **Input Voltage**.
 - **Limits - Transmit 1&2**: Allows the configuration of the alarming limits of **RF Input, OMI, RF Gain and Output Power**. Hysteresis of the output power is not available.
 - **Event Mask**: Handles the (de-)activation of alarms, warnings and notifications for both analog and discrete values. Changing these values might take some time, because some rather large table transformations are involved.
+
   Note that not all alarm activation parameters are supported, as it is not possible to program these parameters so that writable and non-writable parameters are separated.
+
 - **Properties**: The **General Information** contains the device's **Hardware Model, Alias Name** and **Software Release.** It's possible that no **Alias Name** is available. There's a button to **Reset** the module and a toggle button to make the LED of the device blink for 10 seconds.
 
 ### OTXD module
@@ -213,7 +215,9 @@ The following pages are available:
 - **Limits 1**: Allows the configuration of alarming limits of the parameters on the **Parameters** page.
 - **Limits 2**: Allows the configuration of the alarming of all parameters from the **Voltages** page.
 - **Event Mask**: Handles the (de-)activation of alarms, warnings and notifications for both analog and discrete values. Changing these values might take some time, because some rather large table transformations are involved.
+
   Note that not all alarm activation parameters are supported, as it is not possible to program these parameters so that writable and non-writable parameters are separated.
+
 - **Properties**: The **General Information** contains the device's **Hardware Model, Alias Name** and **Software Release.** It's possible that no **Alias Name** is available. There's a button to **Reset** the module and a toggle button to make the LED of the device blink for 10 seconds.
 
 #### Notes
@@ -233,9 +237,9 @@ The following pages are available:
 - **Status**: Displays whether or not there are alarms, warnings or notifications. Some of these are not available through SNMP, so there might be some differences with the statuses visible in the web interface.
 - **Parameters**: Visualizes the **Input Power, Output Power** or the **Gain,** the supply voltages and the **Device Temperature.**
 - **Laser(s)**: Displays the major laser parameters (e.g. **Pump Power, Current, Temperature,** ...).
-- **Settings**: Allows the user to toggle the **Optical Power** (the laser(s)) on or off. The **Regulation Mode** can be used to switch the device mode to *Gain* or *Output Power.*
+- **Settings**: Allows the user to toggle the **Optical Power** (the laser(s)) on or off. The **Regulation Mode** can be used to switch the device mode to *Gain* or *Output Power*.
 - **Limits 1**: Allows the configuration of the alarming of all parameters from the **Parameters** page.
 - **Limits 2**: Allows the configuration of alarming limits of the supply voltages.
 - **Event Mask**: Handles the (de-)activation of alarms, warnings and notifications for both analog and discrete values. Changing these values might take some time, because some rather large table transformations are involved.
   Note that not all alarm activation parameters are supported, as it is not possible to program these parameters so that writable and non-writable parameters are separated.
-- **Properties**: The **General Information** contains the device's **Hardware Model, Alias Name** and **Software Release.** It's possible that no **Alias Name** is available. There's a button to **Reset** the module, a toggle button to make the LED of the device blink for 10 seconds and a button to start a **SBS Evaluation.**
+- **Properties**: The **General Information** contains the device's **Hardware Model, Alias Name** and **Software Release.** It is possible that no **Alias Name** is available. There is a button to **Reset** the module, a toggle button to make the LED of the device blink for 10 seconds and a button to start a **SBS Evaluation.**

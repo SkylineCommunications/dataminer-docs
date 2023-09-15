@@ -10,9 +10,9 @@ This connector monitors and controls the state of the **opVision OPV9000** rack 
 
 The protocol uses serial communication to retrieve information and to control the device.
 
-The connector will export other drivers depending on the installed racks at the device. The exported connectors are described in the exported connectors section.
+The connector will export other connectors depending on the installed racks at the device. The exported connectors are described in the exported connectors section.
 
-### Ranges of the Driver
+### Version Info
 
 | **Range** | **Description**  |
 |------------------|------------------|
@@ -26,9 +26,9 @@ The connector will export other drivers depending on the installed racks at the 
 
 ### Exported Connectors
 
-| **Exported Protocol** | **Description**                                                       |
+| **Exported Connector** | **Description**                                                       |
 |-----------------------|-----------------------------------------------------------------------|
-| opVision OPV9000 Card | Exported driver based on the information from a single opVision card. |
+| opVision OPV9000 Card | Exported connector based on the information from a single opVision card. |
 
 ## Installation and Configuration
 

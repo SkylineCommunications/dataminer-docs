@@ -49,4 +49,4 @@ The element consists of the following pages, similar to the web interface:
 
 ## Notes
 
-This card integration was originally developed as a DVE of the [Evertz 7x00 General Platform Group 2](/Driver%20Help/Evertz%207x00%20General%20Platform%20Group%202.aspx). To improve performance, it has now been implemented as a standalone connector. To integrate this card, the connector [Evertz 7800IDA8-3G](xref:Connector_help_Evertz_7800IDA8-3G) should be used.
+This card integration was originally developed as a DVE of the [Evertz 7x00 General Platform Group 2](xref:Connector_help_Evertz_7x00_General_Platform_Group_2). To improve performance, it has now been implemented as a standalone connector. To integrate this card, the connector [Evertz 7800IDA8-3G](xref:Connector_help_Evertz_7800IDA8-3G) should be used.

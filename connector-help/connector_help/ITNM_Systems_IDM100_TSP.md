@@ -6,7 +6,7 @@ uid: Connector_help_ITNM_Systems_IDM100_TSP
 
 This connector is used to retrieve the services from one particular transport stream of the ITNM Systems IDM100 analyzer. The connector uses a serial connection to send HTTP commands to the device.
 
-The connector only polls the services from one of the transport streams of the ITNM Systems IDM100. It is then possible to create a new element for every service retrieved from the device. These elements will in turn use the [ITNM Systems IDM100 Service](xref:Connector_help_ITNM_Systems_IDM100_Service) driver.
+The connector only polls the services from one of the transport streams of the ITNM Systems IDM100. It is then possible to create a new element for every service retrieved from the device. These elements will in turn use the [ITNM Systems IDM100 Service](xref:Connector_help_ITNM_Systems_IDM100_Service) connector.
 
 ## About
 

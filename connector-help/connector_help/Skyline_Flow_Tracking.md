@@ -16,13 +16,13 @@ The main goal of the application is to support IP troubleshooting investigations
 
 | **Range**            | **Key Features**                                                                                                                                                                                                                                                                               | **Based on** | **System Impact** |
 |----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|-------------------|
-| 1.0.0.x \[SLC Main\] | Initial version. - Supported SDNC: Nevion Video iPath. - Supported switch fabric: CISCO Manager. - Supported edge devices: Any connectors that have the "**MC**" property on the physical DCF interfaces populated with a semi-colon-separated list of multicast addresses for that interface. | \-           | \-                |
+| 1.0.0.x \[SLC Main\] | Initial version.<br>- Supported SDNC: Nevion Video iPath.<br>- Supported switch fabric: CISCO Manager.<br>- Supported edge devices: Any connectors that have the "**MC**" property on the physical DCF interfaces populated with a semi-colon-separated list of multicast addresses for that interface. | \-           | \-                |
 
 ### System Info
 
 | **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                                                                 | **Exported Components** |
 |-----------|---------------------|-------------------------|-----------------------------------------------------------------------------------------------------------------------|-------------------------|
-| 1.0.0.x   | Yes                 | Yes                     | [Nevion Video iPath](/Driver%20Help/Nevion%20Video%20iPath.aspx) [CISCO Manager](xref:Connector_help_CISCO_Manager) | \-                      |
+| 1.0.0.x   | Yes                 | Yes                     | [Nevion Video iPath](xref:Connector_help_Nevion_Video_iPath)<br>[CISCO Manager](xref:Connector_help_CISCO_Manager) | \-                      |
 
 ## Configuration
 

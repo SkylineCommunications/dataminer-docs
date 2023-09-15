@@ -19,7 +19,7 @@ The current range of the connector is 4.4.1.x. Other ranges are not updated.
 | Range | Description | DCF Integration | Cassandra Compliant |
 |--|--|--|--|
 | 1.0.0.x | Initial version. | No | No |
-| 2.0.0.x | Driver displays the info for all cards in the chassis (and not the info of the MMI only). | No | No |
+| 2.0.0.x | Connector displays the info for all cards in the chassis (and not the info of the MMI only). | No | No |
 | 3.0.0.x | This connector version only supports IP Input and IP Output cards. | No | No |
 | 4.0.0.x | A DVE is created for each detected module. | No | No |
 | 4.1.0.x | SNMP connection added to collect SNMP traps. | No | No |

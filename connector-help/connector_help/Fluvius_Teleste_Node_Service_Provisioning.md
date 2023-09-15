@@ -4,7 +4,7 @@ uid: Connector_help_Fluvius_Teleste_Node_Service_Provisioning
 
 # Fluvius Teleste Node Service Provisioning
 
-This connector allows you to check for changes in the manager elements that previously used the Kathrein VGP drivers and now use the Teleste AC3210 and AC8810 devices. The connector lists the changes that were detected, and then allows the services to be recreated with the new service template, thereby replacing the Kathrein VGP with the Teleste AC3210 and AC8810. For a new service to be created, it is only necessary that the Teleste AC8810 exists; the Teleste AC3210 is optional.
+This connector allows you to check for changes in the manager elements that previously used the Kathrein VGP connectors and now use the Teleste AC3210 and AC8810 devices. The connector lists the changes that were detected, and then allows the services to be recreated with the new service template, thereby replacing the Kathrein VGP with the Teleste AC3210 and AC8810. For a new service to be created, it is only necessary that the Teleste AC8810 exists; the Teleste AC3210 is optional.
 
 This is a virtual connector.
 

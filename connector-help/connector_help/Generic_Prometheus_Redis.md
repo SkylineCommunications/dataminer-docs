@@ -6,7 +6,7 @@ uid: Connector_help_Generic_Prometheus_Redis
 
 Prometheus is an open-source systems monitoring and alerting toolkit. It scrapes metrics from instrumented jobs, either directly or via an intermediary push gateway for short-lived jobs. It stores all scraped samples locally and runs rules over this data to either aggregate and record new time series from existing data, or generate alerts.
 
-The **Generic Prometheus Collector** connector executes queries via HTTP to retrieve the data. This data will then be forwarded to an element created with a connector derived from this **Generic Prometheus Redis** driver where the data regarding the Redis application will be displayed.
+The **Generic Prometheus Collector** connector executes queries via HTTP to retrieve the data. This data will then be forwarded to an element created with a connector derived from this **Generic Prometheus Redis** connector where the data regarding the Redis application will be displayed.
 
 Redis is an open-source (BSD licensed), in-memory data structure store, used as a database, cache and message broker.
 

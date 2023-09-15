@@ -4,7 +4,7 @@ uid: Connector_help_Pixelmetrix_DVStation_IP3
 
 # Pixelmetrix DVStation IP3
 
-This is an SNMP-based connector used to monitor and configure the **Pixelmetrix DVStation IP3**. The device settings can be monitored and changed using the **Pixelmetrix DVStation IP3** driver.
+This is an SNMP-based connector used to monitor and configure the **Pixelmetrix DVStation IP3**. The device settings can be monitored and changed using the **Pixelmetrix DVStation IP3** connector.
 
 ## About
 

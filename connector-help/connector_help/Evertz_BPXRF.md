@@ -36,7 +36,7 @@ Data is polled via SNMP protocol.
 ## Usage
 
 The Evertz BPXRF connector displays information about the two kinds of supported cards. For each detected card, a child element will be created under the main element.
-The connector contains 6 pages. The first 3 pages monitor the 7703PA card. The remaining 3 pages monitor the 7703BPX driver.
+The connector contains 6 pages. The first 3 pages monitor the 7703PA card. The remaining 3 pages monitor the 7703BPX connector.
 
 ### General PA
 

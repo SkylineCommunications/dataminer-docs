@@ -4,7 +4,7 @@ uid: Connector_help_Palo_Alto_Networks_Firewall_Series
 
 # Palo Alto Networks Firewall Series
 
-The Palo Alto Networksr Firewall Series driver targets all Palo Alto Networksr firewall devices, which are used for high-speed internet gateway deployments.
+The Palo Alto Networks Firewall Series connector targets all Palo Alto Networks firewall devices, which are used for high-speed internet gateway deployments.
 
 ## About
 
@@ -16,7 +16,7 @@ This connector uses an SNMPv3 connection.
 
 | **Range** | **Description**                                                               | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-------------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x          | Initial range, based on the Palo Alto Networksr PA-3000 series range 1.0.0.x. | No                  | Yes                     |
+| 1.0.0.x          | Initial range, based on the Palo Alto Networks PA-3000 series range 1.0.0.x. | No                  | Yes                     |
 
 ### Product Info
 

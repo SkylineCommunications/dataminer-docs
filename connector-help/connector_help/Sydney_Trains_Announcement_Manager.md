@@ -34,7 +34,7 @@ To import the CSV file, click the **"Import..."** button at the bottom of the **
 
 ### Configuration of Matrices
 
-All *"Delec Oratis Matrix System"* elements will be retrieved by the **SDT Announcement Manager** driver and added ot the **Matrices** table on the **Matrices** page. Each matrix needs to be linked to the correct **node** or **NMS** so the SDT Announcement Manager can configure the crosspoints on the correct matrix.
+All *"Delec Oratis Matrix System"* elements will be retrieved by the **SDT Announcement Manager** connector and added ot the **Matrices** table on the **Matrices** page. Each matrix needs to be linked to the correct **node** or **NMS** so the SDT Announcement Manager can configure the crosspoints on the correct matrix.
 
 ### Configuration of Enhanced System Log
 

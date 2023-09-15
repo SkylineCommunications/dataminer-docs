@@ -8,7 +8,7 @@ The **IMP Telekom PAP-D** connector monitors and configures the **IMP DVB_T PAP-
 
 ## About
 
-The **IMP Telekom PAP-D** driver gets and sets the changeover configuration between several transmitterss. The connector uses SNMP (including traps) to retrieve data.
+The **IMP Telekom PAP-D** connector gets and sets the changeover configuration between several transmitterss. The connector uses SNMP (including traps) to retrieve data.
 
 ### Version Info
 

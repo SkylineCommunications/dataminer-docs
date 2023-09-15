@@ -8,7 +8,7 @@ The Quintech Xtreme 256 is an L-band matrix switching system featuring 256 ports
 
 ## About
 
-This is an SNMPv3 driver that can be used to monitor and configure Quintech Xtreme 256 matrix switching systems.
+This is an SNMPv3 connector that can be used to monitor and configure Quintech Xtreme 256 matrix switching systems.
 
 ### Version Info
 

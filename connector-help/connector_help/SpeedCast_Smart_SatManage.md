@@ -22,7 +22,7 @@ The GPS coordinates of each site are tracked and logged in a table. This table c
 
 ### Exported Connectors
 
-| **Exported Protocol**          | **Description**                 |
+| **Exported Connector**          | **Description**                 |
 |--------------------------------|---------------------------------|
 | SpeedCast Smart SatManage Site | A DVE is created for each site. |
 

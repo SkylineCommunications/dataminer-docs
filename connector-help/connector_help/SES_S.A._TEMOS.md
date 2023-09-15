@@ -38,7 +38,7 @@ Depending on the version, this connector functions in a very different way:
 </colgroup>
 <tbody>
 <tr class="odd">
-<td><strong>Driver range</strong></td>
+<td><strong>Range</strong></td>
 <td><strong>Connections</strong></td>
 </tr>
 <tr class="even">

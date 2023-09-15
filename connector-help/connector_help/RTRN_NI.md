@@ -10,7 +10,7 @@ This protocol is a virtual DMS configuration setup application, which reads out 
 
 ## About
 
-The RTRN NI driver will periodically poll the DB for changes. A button can also be used to manually trigger a full reprovisioning.
+The RTRN NI connector will periodically poll the DB for changes. A button can also be used to manually trigger a full reprovisioning.
 
 ### Version Info
 

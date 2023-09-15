@@ -4,7 +4,7 @@ uid: Connector_help_Juniper_Networks_EX4200
 
 # Juniper Networks EX4200
 
-This SNMP-based connector allows you to monitor and configure the Juniper Networks EX4200. The device settings can be monitored and changed using the TVG450 driver.
+This SNMP-based connector allows you to monitor and configure the Juniper Networks EX4200. The device settings can be monitored and changed using the TVG450 connector.
 
 ## About
 

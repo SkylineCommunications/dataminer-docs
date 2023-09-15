@@ -14,7 +14,7 @@ This connector polls information about the **Rohde Schwarz NetCCU800 1+1** in ge
 
 | Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
-| 2.0.0.x \[SLC Main\] | Driver review   | Yes                 | No                      |
+| 2.0.0.x \[SLC Main\] | Connector review   | Yes                 | No                      |
 
 ### Product Info
 
@@ -24,10 +24,10 @@ This connector polls information about the **Rohde Schwarz NetCCU800 1+1** in ge
 
 ### Exported connectors
 
-| **Exported Protocol**                                                                          | **Description**                                     |
+| **Exported Connector**                                                                          | **Description**                                     |
 |------------------------------------------------------------------------------------------------|-----------------------------------------------------|
-| [Rohde Schwarz NetCCU800 1+1 TxA](xref:Connector_help_Rohde_Schwarz_NetCCU800_1%2B1_TxA) | Exported driver containing info about transmitter A |
-| [Rohde Schwarz NetCCU800 1+1 TxB](xref:Connector_help_Rohde_Schwarz_NetCCU800_1%2B1_TxB) | Exported driver containing info about transmitter B |
+| [Rohde Schwarz NetCCU800 1+1 TxA](xref:Connector_help_Rohde_Schwarz_NetCCU800_1%2B1_TxA) | Exported connector containing info about transmitter A |
+| [Rohde Schwarz NetCCU800 1+1 TxB](xref:Connector_help_Rohde_Schwarz_NetCCU800_1%2B1_TxB) | Exported connector containing info about transmitter B |
 
 ## Installation and configuration
 
@@ -95,7 +95,7 @@ This page displays more detailed transmitter status information.
 
 ## DataMiner Connectivity Framework
 
-The **2.0.0.15** range of the Rohde Schwarz NetCCU800 1+1 driver supports the usage of DCF and can only be used on a DMA with **9.0.3** as the minimum version.
+The **2.0.0.15** range of the Rohde Schwarz NetCCU800 1+1 connector supports the usage of DCF and can only be used on a DMA with **9.0.3** as the minimum version.
 
 Connectivity for all exported connectors is managed by this connector.
 

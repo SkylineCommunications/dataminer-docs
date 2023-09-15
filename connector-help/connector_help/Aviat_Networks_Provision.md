@@ -35,7 +35,7 @@ In addition, the connector offers several possibilities for **alarm monitoring**
 
 ### Exported connectors
 
-| **Exported Protocol**             | **Description**                                                                                                                                                   |
+| **Exported Connector**             | **Description**                                                                                                                                                   |
 |-----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Aviat Networks Provision - Device | Alarms of each device connected to the Aviat Networks Provision. A table with information related to the alarm (event ID, severity, location, etc.) is displayed. |
 

@@ -15,16 +15,16 @@ A **serial** connection is used in order to retrieve information from the device
 | **Range** | **Description**                                                                                    | **DCF Integration** | **Cassandra Compliant** |
 |------------------|----------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.1.x          | Initial version for software version 1.                                                            | No                  | Yes                     |
-| 1.2.11.x         | Based on Newtec 2185 driver Software version: 2.11 Software ID: 6234 Config ID: U1184 Rx config    | No                  | Yes                     |
-| 2.2.11.x         | Based on Newtec 2185 driver Software version: 2.11 Software ID: 6234 Config ID: U9901 Tx config    | No                  | Yes                     |
-| 3.2.11.3         | Based on Newtec 2185 driver Software version: 2.11 Software ID: 6234 Config ID: M9111 DVB-T config | No                  | Yes                     |
-| 4.2.11.x         | Based on Newtec 2185 driver Software version: 2.11 Software ID: 6234 Config ID: U1148              | No                  | Yes                     |
-| 5.2.15.x         | Based on Newtec 2185 driver Software version: 2.13 Software ID: 6234 Config ID: M1164              | No                  | Yes                     |
-| 6.2.6.1x         | Based on Newtec 2185 driver Software version: 2.06 Software ID: 6234 Config ID: M1165              | No                  | Yes                     |
-| 7.2.13.x         | Based on Newtec 2185 driver Software version: 2.13 Software ID: 6234 Config ID: D7116              | No                  | Yes                     |
+| 1.2.11.x         | Based on Newtec 2185 connector<br>Software version: 2.11<br>Software ID: 6234 <br>Config ID: U1184 Rx config    | No                  | Yes                     |
+| 2.2.11.x         | Based on Newtec 2185 connector<br>Software version: 2.11<br>Software ID: 6234 <br>Config ID: U9901 Tx config    | No                  | Yes                     |
+| 3.2.11.3         | Based on Newtec 2185 connector<br>Software version: 2.11<br>Software ID: 6234 <br>Config ID: M9111 DVB-T config | No                  | Yes                     |
+| 4.2.11.x         | Based on Newtec 2185 connector<br>Software version: 2.11<br>Software ID: 6234 <br>Config ID: U1148              | No                  | Yes                     |
+| 5.2.15.x         | Based on Newtec 2185 connector<br>Software version: 2.13<br>Software ID: 6234 <br>Config ID: M1164              | No                  | Yes                     |
+| 6.2.6.1x         | Based on Newtec 2185 connector<br>Software version: 2.06<br>Software ID: 6234 <br>Config ID: M1165              | No                  | Yes                     |
+| 7.2.13.x         | Based on Newtec 2185 connector<br>Software version: 2.13<br>Software ID: 6234 <br>Config ID: D7116              | No                  | Yes                     |
 | 8.2.14.x         | Configuration ID: U6199                                                                            | No                  | Yes                     |
-| 9.2.13.x         | Software version: 2.13 software ID: 6234 Config ID: N0331                                          | No                  | Yes                     |
-| 10.2.13.x        | Software version: 2.13 Software ID: 6234 Config ID: U9987                                          | No                  | Yes                     |
+| 9.2.13.x         | Software version: 2.13<br>software ID: 6234 <br>Config ID: N0331                                          | No                  | Yes                     |
+| 10.2.13.x        | Software version: 2.13<br>Software ID: 6234 <br>Config ID: U9987                                          | No                  | Yes                     |
 
 ### Product Info
 
@@ -43,6 +43,7 @@ This connector uses a serial connection and requires the following input during 
 SERIAL CONNECTION:
 
 - Interface connection:
+
   - **IP address/host**: The polling IP of the device.
   - **IP port**: The IP port of the device. Default value: *5933*.
   - **Bus address**: The bus address of the device. Default value: *100*.

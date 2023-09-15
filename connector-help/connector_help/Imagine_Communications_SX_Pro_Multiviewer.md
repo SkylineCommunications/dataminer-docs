@@ -72,7 +72,7 @@ This page displays the **Dolby E Status Table**, which shows several alarms and 
 
 ### Traps
 
-This page displays traps received from the multiviewer. Enabling and using traps can capture short duration alarms that occur outside of the normal driver polling cycles.
+This page displays traps received from the multiviewer. Enabling and using traps can capture short duration alarms that occur outside of the normal connector polling cycles.
 
 On the **Auto Clear** subpage, the auto-clear method can be configured, either by configuring **Max. Number** of traps, **Max. Duration** of traps or **Both (Max. Number and Max. Duration)**, or by clearing **Upon Alarm Polling**. The table size will remain constant, but when the max. number has been reached, the oldest table entries will be purged to make room for new entries. You can also clear all current traps by clicking the **Clear All Traps Now** button on this subpage.
 

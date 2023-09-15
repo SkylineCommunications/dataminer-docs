@@ -26,7 +26,7 @@ The connector polls information from the **Ericsson SO-EM** (EMS) through the **
 
 ### Exported connectors
 
-| **Exported Protocol**              | **Description**                                                         |
+| **Exported Connector**              | **Description**                                                         |
 |------------------------------------|-------------------------------------------------------------------------|
 | Ericsson IP Transport NMS - Device | DVEs will be created only under the name of the Network Element device. |
 

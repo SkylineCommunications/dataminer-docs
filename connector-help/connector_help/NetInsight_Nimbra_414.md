@@ -4,7 +4,7 @@ uid: Connector_help_NetInsight_Nimbra_414
 
 # NetInsight Nimbra 414
 
-The **NetInsight Nimbra 414 driver** allows you to monitor the main information retrieved from the corresponding device, which is media transport equipment that supports different input formats, resolutions, frame rates, etc.
+The **NetInsight Nimbra 414 connector** allows you to monitor the main information retrieved from the corresponding device, which is media transport equipment that supports different input formats, resolutions, frame rates, etc.
 
 ## About
 

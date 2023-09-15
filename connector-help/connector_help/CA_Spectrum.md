@@ -31,7 +31,7 @@ The devices and alarms are retrieved using the **RESTful HTTP Web Service API** 
 
 ### Exported connectors
 
-| **Exported Protocol** | **Description**       |
+| **Exported Connector** | **Description**       |
 |-----------------------|-----------------------|
 | CA Spectrum Device    | Device in CA Spectrum |
 

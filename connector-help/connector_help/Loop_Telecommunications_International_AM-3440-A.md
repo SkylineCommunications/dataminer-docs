@@ -28,7 +28,7 @@ Note: This connector will export different connectors based on the retrieved dat
 
 ### Exported connectors
 
-| **Exported Protocol**                                                                                                                              | **Description**               |
+| **Exported Connector**                                                                                                                              | **Description**               |
 |----------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------|
 | [Loop Telecommunications International AM-3440-A - FXO](xref:Connector_help_Loop_Telecommunications_International_AM-3440-A_-_FXO)       | Voice interface. 12 channels. |
 | [Loop Telecommunications International AM-3440-A - 4EM](xref:Connector_help_Loop_Telecommunications_International_AM-3440-A_-_4EM)       | Four E&M voice interfaces.    |

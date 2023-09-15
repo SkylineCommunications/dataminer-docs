@@ -8,7 +8,7 @@ This connector can be used to monitor Network Electronics Flashlink LB-OE device
 
 ## Configuration
 
-The element using this connector is automatically created by the parent element using the [Network Electronics Flashlink Gyda](xref:Connector_help_Network_Electronics_Flashlink_Gyda) driver.
+The element using this connector is automatically created by the parent element using the [Network Electronics Flashlink Gyda](xref:Connector_help_Network_Electronics_Flashlink_Gyda) connector.
 
 ## How to use
 

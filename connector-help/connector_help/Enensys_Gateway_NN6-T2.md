@@ -15,7 +15,7 @@ This connector is mainly used to monitor the device, but also allows the configu
 | **Range**            | **Key Features** | **Based on** | **System Impact**                                                                                                                                                   |
 |----------------------|------------------|--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1.0.0.x              | Initial version  | \-           | \-                                                                                                                                                                  |
-| 1.0.1.x \[SLC Main\] | Driver review    | 1.0.0.1      | The entire driver was updated considering the newest DMA features. Furthermore, the vendor discontinued the main MIB and the connector suffered a considerable change. |
+| 1.0.1.x \[SLC Main\] | Connector review    | 1.0.0.1      | The entire connector was updated considering the newest DMA features. Furthermore, the vendor discontinued the main MIB and the connector suffered a considerable change. |
 
 ### Product Info
 

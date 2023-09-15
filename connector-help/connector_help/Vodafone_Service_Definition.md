@@ -4,7 +4,7 @@ uid: Connector_help_Vodafone_Service_Definition
 
 # Vodafone Service Definition
 
-The basic driver for enhanced services specific for Vodafone.
+The basic connector for enhanced services specific for Vodafone.
 
 ## About
 

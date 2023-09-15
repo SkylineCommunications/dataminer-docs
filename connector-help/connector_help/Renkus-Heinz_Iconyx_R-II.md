@@ -59,7 +59,9 @@ The element generated with this connector consists of the following data pages:
 
 - **General**: Displays the main system information, including the **System Description**, with the full name and version identification of the system's hardware type, software operating-system, and networking software. It also displays the **System Up Time**, **System Contact**, **System Name** and **System Location**.
 - **Summary Data**: Displays the status for Fault Relay, Alarm Pin, Remote Power, RS485 Mode, Mute and Slave 1, 2 and 3 Communications State.
+
   This page also contains the **Unit Table** page button, which displays a table with four rows, detailing status information for the Open Coil Speaker Driver, Amplifier Over Temperature, PSU Over Temperature State, D2 Amplifier State and PSU Voltages.
+
 - **Status**: Displays status information for Remote Dial, 7-Segment Display State, connection and dots, AES/EBU Input, Ethernet Carrier Loss, Relay Default State, Signal Clipping, Polarity Inverted, AES and AES Locked, Analog One Input Pad and Alarm Pin Current State and Default State.
 - **Delays**: Displays the time (in ms) of the Delay Right High, Delay Left Low, Delay Right Low, Delay Left High.
 - **Individual**: Contains the Speakers and Individual tables. This first table shows the Speaker OpenCoil status for the master and 3 slaves.

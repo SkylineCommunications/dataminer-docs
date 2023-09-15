@@ -4,7 +4,7 @@ uid: Connector_help_Vertex_TLR-1S
 
 # Vertex TRL-S1
 
-The Vertex TRL-S1 driver will display information concerning the Vertex TRL-S1 device.
+The Vertex TRL-S1 connector will display information concerning the Vertex TRL-S1 device.
 
 ## About
 

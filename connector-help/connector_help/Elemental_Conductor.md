@@ -28,7 +28,7 @@ The **Elemental Conductor** connector is an **HTTP** connector that is used to m
 
 ### Exported connectors
 
-| **Exported Protocol**    | **Description**                        |
+| **Exported Connector**    | **Description**                        |
 |--------------------------|----------------------------------------|
 | Elemental Conductor Node | Represents an Elemental Conductor node |
 

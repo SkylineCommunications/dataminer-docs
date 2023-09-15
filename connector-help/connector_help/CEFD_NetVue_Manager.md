@@ -20,7 +20,7 @@ With this connector, the user can manually create one or multiple service areas.
 
 | **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                                                                                                                                                                  | **Exported Components** |
 |-----------|---------------------|-------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|
-| 1.0.0.x   | No                  | Yes                     | [CEFD NetVue HUB Gateway](/Driver%20Help/CEFD%20NetVue%20HUB%20Gateway.aspx) [CEFD NetVue Remote Gateway](/Driver%20Help/CEFD%20NetVue%20Remote%20Gateway.aspx) [CEFD HTO SNMP](xref:Connector_help_CEFD_HTO_SNMP) | \-                      |
+| 1.0.0.x   | No                  | Yes                     | CEFD NetVue HUB Gateway<br>CEFD NetVue Remote Gateway<br>[CEFD HTO SNMP](xref:Connector_help_CEFD_HTO_SNMP) | \-                      |
 
 ## Configuration
 

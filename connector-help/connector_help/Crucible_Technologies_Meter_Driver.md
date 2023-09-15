@@ -28,7 +28,7 @@ This connector will export different connectors based on the retrieved data. A l
 
 ### Exported connectors
 
-| **Exported Protocol**                      | **Description**                                                            |
+| **Exported Connector**                      | **Description**                                                            |
 |--------------------------------------------|----------------------------------------------------------------------------|
 | Crucible Technologies Meter Driver - Meter | Retrieved consumption information for every activated meter of the device. |
 
@@ -55,9 +55,9 @@ For every activated meter a line is added to the *Meters* table. A unique meter 
 The table contains the following consumption counters:
 
 - **Current Consumption**: Consumption during the day, updated every half hour. The consumption is reset at the start of the day.
-- **Daily Consumption**: Consumption of the last day, updated every day with last day's consumption total. This total can be reset using the *Reset Daily* button, to mask abnormal behaviour.
-- **Weekly Consumption**: Consumption of the last week, updated at the start of each week with last week's consumption total. This total can be reset using the *Reset Weekly* button, to mask abnormal behaviour.
-- **Monthly Consumption**: Consumption of the last month, updated at the start of a month with last month's consumption total. This total can be reset using the *Reset Monthly* button, to mask abnormal behaviour.
+- **Daily Consumption**: Consumption of the last day, updated every day with last day's consumption total. This total can be reset using the *Reset Daily* button, to mask abnormal behavior.
+- **Weekly Consumption**: Consumption of the last week, updated at the start of each week with last week's consumption total. This total can be reset using the *Reset Weekly* button, to mask abnormal behavior.
+- **Monthly Consumption**: Consumption of the last month, updated at the start of a month with last month's consumption total. This total can be reset using the *Reset Monthly* button, to mask abnormal behavior.
 - **Daily History**: Consumption history of today as logged by the device. Reset at the start of the day.
 - **Weekly History**: Consumption history of this week as logged by the device. Reset at the start of the week.
 - **Monthly History**: Consumption history of this month day as logged by the device. Reset at the start of the month.

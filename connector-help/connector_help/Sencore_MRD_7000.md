@@ -18,7 +18,7 @@ Output options include 4x3G-SDI (two sample interleave & four quadrant), 12G-SDI
 |----------------------|------------------------------------------------------------------------------------------------|--------------|-------------------|
 | 1.0.0.x              | Initial version                                                                                | \-           | \-                |
 | 1.0.1.x              | Redundant polling Traps Table SMPTE-2110 Modules Table                                         | 1.0.0.1      |                   |
-| 1.0.2.x              | Input table relations Driver fixes                                                             | 1.0.1.1      | \-                |
+| 1.0.2.x              | Input table relations fixes                                                             | 1.0.1.1      | \-                |
 | 1.0.3.x              | SMPTE Audio Display Key Changes SMPTE Output table                                             | 1.0.2.3      | \-                |
 | 1.0.4.x \[SLC Main\] | Multiple display keys changed to retrieved Decoder alias column added/appended to display keys | 1.0.3.1      |                   |
 

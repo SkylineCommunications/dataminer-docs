@@ -4,7 +4,7 @@ uid: Connector_help_Vertex_RSC-1200
 
 # Vertex RSC-1200
 
-The **Vertex RSC-1200** driver will display information related to the **Vertex RSC-1200** device.
+The **Vertex RSC-1200** connector will display information related to the **Vertex RSC-1200** device.
 
 ## About
 

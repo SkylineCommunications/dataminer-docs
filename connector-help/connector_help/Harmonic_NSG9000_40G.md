@@ -17,7 +17,7 @@ This EdgeQAM device supports up to 9 modules, which house 2 RFs with 8 QAMs each
 | 1.0.0.1          | Initial version                                                               | No                  | Yes                     |
 | 1.0.0.2          | Added MPTS Grooming; fixed issue with treeview                                | No                  | Yes                     |
 | 1.0.0.3          | Changed naming on QAM Overview Table and MPTS Grooming Table                  | No                  | Yes                     |
-| 1.0.0.4          | 3rd Line Driver: Changed Start-Stop timers, debug logging, exception handling | No                  | Yes                     |
+| 1.0.0.4          | Third-line connector: Changed Start-Stop timers, debug logging, exception handling | No                  | Yes                     |
 | 1.0.0.5          | Alarm overview table: implemented alarm storm feature                         | No                  | Yes                     |
 
 ### Product Info

@@ -26,7 +26,7 @@ The physical devices of the system are called CPE (Customer Peripheral Equipment
 
 | **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                                                                                            | **Exported Components**                                                                                          |
 |-----------|---------------------|-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
-| 1.0.0.x   | No                  | Yes                     | [Generic Ping](/Driver%20Help/Generic%20Ping.aspx) connector version 3.1.2.5 or higher (supported from version 1.0.0.2 of this connector onward) | [Gilat Satellite Networks TotalNMS - CPE](xref:Connector_help_Gilat_Satellite_Networks_TotalNMS_-_CPE) |
+| 1.0.0.x   | No                  | Yes                     | - [Generic Ping](xref:Connector_help_Generic_Ping) connector version 3.1.2.5 or higher (supported from version 1.0.0.2 of this connector onward) | [Gilat Satellite Networks TotalNMS - CPE](xref:Connector_help_Gilat_Satellite_Networks_TotalNMS_-_CPE) |
 
 ## Configuration
 

@@ -107,7 +107,8 @@ In the folder "*C:\Skyline DataMiner\Files*":
 - omniORB416_vc10_rt.dll
 - omnithread34_vc10_rt.dll
 - D9036_1.1.0.X.dll
-  (Where X can be found on DCP\Drivers)
+
+  (Where X can be found in the [DataMiner Catalog](https://catalog.dataminer.services/)
 
 If a file is missing, run the upgrade package again and check the DLLs. If the problem persists, contact Skyline in order to obtain the required DLLs.
 
@@ -301,7 +302,7 @@ For more information related to
 - **IIOP Login**: See section "Verify IIOP Credentials" above.
 - **Driver Startup**: See section "Advanced Setup" above.
 
-This page has a page button **SNMP...**, which displays a list of trap servers to which the device should send SNMP traps. It is possible to add or delete targets using the two fields and buttons below the table.
+This page has a page button **SNMP**, which displays a list of trap servers to which the device should send SNMP traps. It is possible to add or delete targets using the two fields and buttons below the table.
 
 In version **1.0.0.12**, the **Poll Manager** was introduced, replacing the toggle buttons found on this page.
 

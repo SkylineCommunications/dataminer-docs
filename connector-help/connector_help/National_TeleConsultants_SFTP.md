@@ -8,7 +8,7 @@ With the **NTC SFTP** connector, you can monitor the state of the **SFTP Mounts*
 
 ## About
 
-The SFTP driver periodically polls one or more SFTP mounts to retrieve status information about the share. By default, this happens every 30 seconds.
+The SFTP connector periodically polls one or more SFTP mounts to retrieve status information about the share. By default, this happens every 30 seconds.
 
 ## Installation and configuration
 

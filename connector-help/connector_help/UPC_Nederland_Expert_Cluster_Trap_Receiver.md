@@ -112,7 +112,7 @@ The connector also allows the user to remove rows from the Alarm Traps table by 
 - The maximum number of active alarms is **increased**: In this case, alarms from the queue will be transferred to the Alarm Traps table, until either this table holds the maximum allowed number of active alarms or the queue is empty.
 - The maximum number of active alarms is **reduced**: In this case, it is possible that the Alarm Traps table contained more alarms than is now allowed. If this is the case, alarms are queued back to the queue in such a way that these alarm will be processed first when there is room in the Alarm Traps table again.
 
-***\[**version 1.0.0.12\]***From version 1.0.0.12 onwards, this connector works along with the **Ziggo SAM Event Combiner** driver.A new parameter called **Trigger IVR Type** was added to specify which table of the **Combiner** element the alarms' information will be sent to (HFC or B2B).Two new columns were added to the **Alarm Traps** table that display the results of the correlation process returned by the **Combiner** element:
+***\[**version 1.0.0.12\]***From version 1.0.0.12 onwards, this connector works along with the **Ziggo SAM Event Combiner** connector.A new parameter called **Trigger IVR Type** was added to specify which table of the **Combiner** element the alarms' information will be sent to (HFC or B2B).Two new columns were added to the **Alarm Traps** table that display the results of the correlation process returned by the **Combiner** element:
 
 - **Correlated Trigger IVR -** The most technical path that will group the alarms and generate one correlated alarm.
 - **Impact -** This column will only be set on "HFC" trap receivers and displays the number of B2B alarms under a correlated alarm.

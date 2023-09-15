@@ -24,7 +24,7 @@ This protocol can be used to monitor and perform basic configuring on the parent
 
 ### Exported connectors
 
-| **Exported Protocol**                                                                                              | **Description**    |
+| **Exported Connector**                                                                                              | **Description**    |
 |--------------------------------------------------------------------------------------------------------------------|--------------------|
 | [Rohde Schwarz THR9 FM N+1 - Transmitter](xref:Connector_help_Rohde_Schwarz_THR9_FM_N%2B1_-_Transmitter) | Transmitter Module |
 

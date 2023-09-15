@@ -46,7 +46,7 @@ Note: For security reasons, the password value is not displayed.
 
 Once the database information has been entered as described in the "Configuration" section above, the database is polled every 2 minutes by default. The **Transponder**, **Carrier** and **Beacon** values will be updated in their respective tables.
 
-Note: Some of the columns are filled in by a different driver/element.
+Note: Some of the columns are filled in by a different connector/element.
 
 ### General
 

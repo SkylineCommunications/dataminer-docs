@@ -8,19 +8,19 @@ The MaxTech SSPA is a Solid State Power Amplifier that offers a 14 stage amplifi
 
 ## About
 
-The MaxTech SSPA Driver allows for monitoring and basic configuration of the SSPA Device.
+The MaxTech SSPA connector allows for monitoring and basic configuration of the SSPA device.
 
 ## Installation and configuration
 
-Style: Heading 2
+### Creation
 
-### CreationThis connector uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
 - **IP address/host:** The polling IP of the device
-- **IP port:** \[The IP port of the device..\]
-- **Bus address:** \[The bus address of the device.\]
+- **IP port:** The IP port of the device.
+- **Bus address:** The bus address of the device.
 
 ## Usage
 

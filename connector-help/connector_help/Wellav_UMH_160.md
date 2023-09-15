@@ -37,7 +37,7 @@ Data is retrieved via the SNMP protocol.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td><strong>Driver Range</strong></td>
+<td><strong>Range</strong></td>
 <td><strong>Connections</strong></td>
 </tr>
 <tr class="even">

@@ -4,7 +4,7 @@ uid: Connector_help_Ziggo_Incident_Gateway
 
 # Ziggo Incident Gateway
 
-The **Ziggo Incident Gateway** driver will generate a SNMP trap to register an event to the SAM system.
+The **Ziggo Incident Gateway** connector will generate a SNMP trap to register an event to the SAM system.
 
 ## About
 

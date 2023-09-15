@@ -8,7 +8,7 @@ The CDM-570 Satellite Modem is the 70/140 MHz IF version, intended for closed ne
 
 ## About
 
-The Driver polls data from the device using SNMP protocol.
+The connector polls data from the device using SNMP protocol.
 
 ### Version Info
 

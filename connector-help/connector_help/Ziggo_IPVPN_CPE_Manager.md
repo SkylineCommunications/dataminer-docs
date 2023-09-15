@@ -4,7 +4,7 @@ uid: Connector_help_Ziggo_IPVPN_CPE_Manager
 
 # Ziggo IPVPN CPE Manager
 
-The **Ziggo IPVPN CPE Manager** driver provides a CPE manager interface that shows where a cable modem is located in the topology diagram.
+The **Ziggo IPVPN CPE Manager** connector provides a CPE manager interface that shows where a cable modem is located in the topology diagram.
 
 ## About
 

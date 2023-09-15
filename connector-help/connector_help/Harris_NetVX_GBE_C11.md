@@ -12,7 +12,7 @@ The **Harris NetVX GBE C11** is an overview of.
 
 ## Installation and configuration
 
-The **Harris NetVX GBE C11** driver has an **SNMP** Connection:
+The **Harris NetVX GBE C11** connector has an **SNMP** Connection:
 
 - **Port:** 161
 - **Bus Address:** The slot number of the **IP Streamer.**

@@ -8,8 +8,6 @@ Through this connector is possible to gather and view information from the devic
 
 ## About
 
-Driver used to gather information from the **Ateme Titan Live** device.
-
 ### Version Info
 
 | Range | Description | DCF Integration | Cassandra Compliant |

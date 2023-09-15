@@ -16,7 +16,7 @@ The connector uses the serial interface to retrieve information from the device 
 |------------------|------------------------------------|---------------------|-----------------------------|
 | 1.0.0.x          | Initial version (**obsolete**)     | No                  | Yes                         |
 | 1.1.0.x          | New release version (**obsolete**) | Yes                 | Yes                         |
-| 1.1.1.x          | Driver review                      | Yes                 | Yes                         |
+| 1.1.1.x          | Connector review                      | Yes                 | Yes                         |
 
 ### Product Info
 

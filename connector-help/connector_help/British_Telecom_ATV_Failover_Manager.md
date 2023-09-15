@@ -24,7 +24,7 @@ This is a virtual connector that is used to control/switch sources on **AppearTV
 
 | **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                                                                                                                                                                      | **Exported Components** |
 |-----------|---------------------|-------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|
-| 1.0.0.x   | No                  | Yes                     | [AppearTV X20 Platform](/Driver%20Help/AppearTV%20X20%20Platform.aspx) [IneoQuest Surveyor TS](/Driver%20Help/IneoQuest%20Surveyor%20TS.aspx) [IneoQuest Inspector Live](xref:Connector_help_IneoQuest_Inspector_Live) | \-                      |
+| 1.0.0.x   | No                  | Yes                     | AppearTV X20 Platform<br>IneoQuest Surveyor TS<br>[IneoQuest Inspector Live](xref:Connector_help_IneoQuest_Inspector_Live) | \-                      |
 
 ## Configuration
 

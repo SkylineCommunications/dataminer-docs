@@ -4,7 +4,7 @@ uid: Connector_help_Moxa_ioLogik_E2242
 
 # Moxa ioLogic E2242
 
-This is an **SNMP** connector for the **Moxa E2242 IO Contact Interface**. It is a basic driver that allows you to monitor the DI/DO channels and AI channels. You can also change a number of settings for each I/O port.
+This is an **SNMP** connector for the **Moxa E2242 IO Contact Interface**. It is a basic connector that allows you to monitor the DI/DO channels and AI channels. You can also change a number of settings for each I/O port.
 
 ## About
 

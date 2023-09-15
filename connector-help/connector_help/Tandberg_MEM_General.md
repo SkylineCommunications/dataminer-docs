@@ -15,7 +15,7 @@ The connector polls the device via **SNMPv2** calls. **Traps** are not implement
 | **Range**     | **Description**                                                                                   | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|---------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x \[Obsolete\] | Initial version                                                                                   | No                  | Yes                     |
-| 1.1.0.x \[SLC Main\] | Driver was completely redesigned in order to meet the current standards (2005 style tables, etc.) | Yes                 | Yes                     |
+| 1.1.0.x \[SLC Main\] | Complete redesign to meet the current standards (2005 style tables, etc.) | Yes                 | Yes                     |
 
 ### Product Info
 

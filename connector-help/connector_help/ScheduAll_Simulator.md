@@ -57,7 +57,7 @@ This page contains the **Booking Status Definition Table**. Here you can see the
 
 ### Security
 
-You can find two parameters on this page, **Username** and **Password**. This username and password combination will be used to simulate the **ScheduAll Credentials** usually required to communicate with the web and Interop services. These are the credentials that you must enter in the ScheduAll Manager when using this simulation driver.
+You can find two parameters on this page, **Username** and **Password**. This username and password combination will be used to simulate the **ScheduAll Credentials** usually required to communicate with the web and Interop services. These are the credentials that you must enter in the ScheduAll Manager when using this simulation connector.
 
 ### Session Overview
 

@@ -20,9 +20,9 @@ This connector collects information from cleared alarms of the desired elements,
 
 Not applicable. This is a virtual connector, which does not interact with an actual device.
 
-### Linked drivers
+### Linked connectors
 
-| **Driver Name**                  | **Range** |
+| **Name**                  | **Range** |
 |----------------------------------|-----------|
 | Teracom Service Overview Manager | 1.0.0.x   |
 | Bridge Technologies VB220        | 3.2.0.x   |

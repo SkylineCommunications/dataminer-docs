@@ -4,11 +4,11 @@ uid: Connector_help_Tektronix_Sentry
 
 # Tektronix Sentry
 
-The **Tektronix Sentry** driver will display information related to the **Sentry** device.
+The **Tektronix Sentry** connector will display information related to the **Sentry** device.
 
 ## About
 
-The **Tektronix Sentry** driver will display information related to the selected **Sentry** device. This information and details, such as Ports, Transport and Services, are available on different pages, described in the "Usage" section of this document. Alarm monitoring and trending are possible for some of the parameters in the connector, e.g. the **bitrate**.
+The **Tektronix Sentry** connector will display information related to the selected **Sentry** device. This information and details, such as Ports, Transport and Services, are available on different pages, described in the "Usage" section of this document. Alarm monitoring and trending are possible for some of the parameters in the connector, e.g. the **bitrate**.
 
 **Note: This connector requires the .Net Framework 4.0.**
 

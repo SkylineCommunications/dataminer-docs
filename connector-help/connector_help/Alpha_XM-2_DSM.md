@@ -12,7 +12,7 @@ Through SNMP, this protocol retrieves parameters such as the voltage and current
 
 In version 2.1.2.29, an extra feature is introduced that allows the use of a POST call to the Alpha Web Services (HTTP) from which IPs are retrieved within the body or the HTTP response. These IPs are used to perform other SNMP calls to fetch additional parameters such as the cable modem (CM) Receive Level and Transmit Level.
 
-### Ranges of the Driver
+### Version Info
 
 | **Range**     | **Description**              | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|------------------------------|---------------------|-------------------------|

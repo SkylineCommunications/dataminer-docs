@@ -4,7 +4,7 @@ uid: Connector_help_T-Vips_TVG420
 
 # T-Vips TVG420
 
-The **T-Vips TVG420** connector is an SNMP-based connector used to monitor and configure the **T-Vips TVG420**. The device settings can be monitored and changed using the **TVG420** driver.
+The **T-Vips TVG420** connector is an SNMP-based connector used to monitor and configure the **T-Vips TVG420**. The device settings can be monitored and changed using the **TVG420** connector.
 
 ## About
 

@@ -8,7 +8,7 @@ The **Ericsson AVP-3000** connector is a **HTTP** connector that is used for mon
 
 ## About
 
-With this **HTTP** **Advanced Video Processor** driver you can **control** the configuration if nothing goes wrong, **change** the configuration where possible and even **restore** the configuration if needed.
+With this **HTTP** **Advanced Video Processor** connector you can **control** the configuration if nothing goes wrong, **change** the configuration where possible and even **restore** the configuration if needed.
 
 Ranges of the connector
 
@@ -24,7 +24,7 @@ Ranges of the connector
 
 ## Installation and configuration
 
-The **Ericsson AVP-3000** driver has a **HTTP** Connection:
+The **Ericsson AVP-3000** connector has a **HTTP** Connection:
 
 - **Port:** 80
 - **Bus Address:** ByPassProxy (if it need to pass a proxy server)

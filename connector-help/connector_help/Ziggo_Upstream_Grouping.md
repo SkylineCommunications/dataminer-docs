@@ -8,7 +8,7 @@ This connector is used to receive **Arris Alarm Central** notifications and grou
 
 ## About
 
-The **Ziggo Upstream Grouping** driver embeds a **web service** that listens to requests on a configurable port.
+The **Ziggo Upstream Grouping** connector embeds a **web service** that listens to requests on a configurable port.
 
 The connector identifies if any *critical* or *major* **issue** of the received **notification** corresponds to an **upstream type** and stores them.
 

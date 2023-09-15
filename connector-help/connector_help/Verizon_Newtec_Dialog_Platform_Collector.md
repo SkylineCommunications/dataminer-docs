@@ -16,8 +16,8 @@ This is an **HTTP** connector that communicates with the **Newtec Dialog System*
 |----------------------|-----------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x              | Initial version The initial version in this range is deprecated. Use version **1.0.0.2** of this range instead. | No                  | Yes                     |
 | 1.0.1.x              | Improvements to the faults functionality                                                                        | No                  | Yes                     |
-| 1.1.1.x              | Driver has been adapted to new firmware version 2.1.2.                                                          | No                  | Yes                     |
-| 1.1.2.x \[SLC Main\] | Driver has been adapted to work with DMS.                                                                       | No                  | Yes                     |
+| 1.1.1.x              | Adapted to new firmware version 2.1.2.                                                          | No                  | Yes                     |
+| 1.1.2.x \[SLC Main\] | Adapted to work with DMS.                                                                       | No                  | Yes                     |
 
 ### Product Info
 

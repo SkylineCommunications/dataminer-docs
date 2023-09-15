@@ -9,9 +9,9 @@ converters and the standby converter.
 
 ## About
 
-Serial driver for the **Miteq RSUN** to totally control and monitor from a system controller over a remote communications bus.
+Serial connector for the **Miteq RSUN** to totally control and monitor from a system controller over a remote communications bus.
 
-All frontpanel controls and indications (except DC Voltage Monitor and Remote bus data format) are available to a controller over the remote bus.
+All front panel controls and indications (except DC Voltage Monitor and Remote bus data format) are available to a controller over the remote bus.
 
 ### Version Info
 

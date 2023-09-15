@@ -156,7 +156,7 @@ This page displays the web interface of the device. Note that the client machine
 
 ## DataMiner Connectivity Framework
 
-Starting from connector range **2.0.0.x**, the Ericsson SPR1100 driver supports the usage of DCF and can only be used on a DMA with **9.0.0.0** as the minimum version.
+Starting from connector range **2.0.0.x**, the Ericsson SPR1100 connector supports the usage of DCF and can only be used on a DMA with **9.0.0.0** as the minimum version.
 
 ### Connections
 

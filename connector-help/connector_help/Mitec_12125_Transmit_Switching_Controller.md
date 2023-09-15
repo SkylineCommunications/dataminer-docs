@@ -8,7 +8,7 @@ The **Mitec 12125 Transmit Switching Controller** makes it possible to configure
 
 ## About
 
-The **Mitec 12125 Transmit Switching Controller** driver will update its monitoring and configuration parameters by sending serial commands to the device.
+The **Mitec 12125 Transmit Switching Controller** connector will update its monitoring and configuration parameters by sending serial commands to the device.
 
 ### Version Info
 

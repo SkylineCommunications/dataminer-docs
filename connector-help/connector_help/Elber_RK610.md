@@ -4,11 +4,11 @@ uid: Connector_help_Elber_RK610
 
 # Elber RK610
 
-The Elber Cleber (RK610) driver offers a powerful, flexible and modular hardware and software platform for broadcasting and contribution networks where customers can install up to six boards with no limitation in terms of position or number.
+The Elber Cleber (RK610) connector offers a powerful, flexible and modular hardware and software platform for broadcasting and contribution networks where customers can install up to six boards with no limitation in terms of position or number.
 
 ## About
 
-This connector exports driver of type RFSW04A and creates elements for each card in it's chassis. Data is polled via **SNMP** and traps are used.
+This connector exports connectors of type RFSW04A and creates elements for each card in it's chassis. Data is polled via **SNMP** and traps are used.
 
 ### Version Info
 
@@ -26,7 +26,7 @@ This connector exports driver of type RFSW04A and creates elements for each card
 
 ### Exported connectors
 
-| **Exported Protocol**  | **Description**              |
+| **Exported Connector**  | **Description**              |
 |------------------------|------------------------------|
 | Elber RK1000 - RFSW04A | Used for the RFSW04A module. |
 

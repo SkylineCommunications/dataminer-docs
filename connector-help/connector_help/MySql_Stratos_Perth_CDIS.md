@@ -4,7 +4,7 @@ uid: Connector_help_MySql_Stratos_Perth_CDIS
 
 # MySql Stratos Perth CDIS
 
-This drivers polls a MySQL database.
+This connectors polls a MySQL database.
 
 ## About
 

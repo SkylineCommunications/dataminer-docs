@@ -30,7 +30,7 @@ The initial versions of the connector only support SNMP traps. The latest versio
 
 ### Exported connectors
 
-| **Exported Protocol**              | **Description** |
+| **Exported Connector**              | **Description** |
 |------------------------------------|-----------------|
 | Ericsson RX9500 - Descrambler Card | Device cards    |
 

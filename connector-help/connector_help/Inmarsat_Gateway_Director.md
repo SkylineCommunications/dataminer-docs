@@ -4,7 +4,7 @@ uid: Connector_help_Inmarsat_Gateway_Director
 
 # Inmarsat Gateway Director
 
-This connector acts as a **manager** for the **Inmarsat Gateway** driver. The connector will share the terminals over the available gateways.
+This connector acts as a **manager** for the **Inmarsat Gateway** connector. The connector will share the terminals over the available gateways.
 
 ## About
 
@@ -14,7 +14,7 @@ The connector acts as a **manager** for the Inmarsat Gateway. It manages the ter
 
 ### Version Info
 
-| **Driver range**     | **Description**                  | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**                  | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|----------------------------------|---------------------|-------------------------|
 | 1.0.0.x              | Initial version                  | No                  | Yes                     |
 | 1.1.0.x \[SLC MAIN\] | Made compatible with the new API | No                  | Yes                     |

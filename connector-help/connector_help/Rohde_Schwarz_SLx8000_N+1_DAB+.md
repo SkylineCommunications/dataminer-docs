@@ -28,7 +28,7 @@ This connector allows you to manage both the DAB transmitter devices and the exc
 
 ### Exported connectors
 
-| **Exported Protocol**                                                                                                        | **Description**    |
+| **Exported Connector**                                                                                                        | **Description**    |
 |------------------------------------------------------------------------------------------------------------------------------|--------------------|
 | [Rohde Schwarz SLx8000 N+1 DAB+ - Transmitter](xref:Connector_help_Rohde_Schwarz_SLx8000_N%2B1_DAB%2B_-_Transmitter) | Transmitter module |
 

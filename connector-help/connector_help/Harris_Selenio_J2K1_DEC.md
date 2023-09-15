@@ -10,7 +10,7 @@ The **Harris Selenio J2K1 DEC** is one of the types of cards that can be slotted
 
 The information in this connector is displayed on different pages, described in the "Usage" section of this document.
 
-The different **versions** of the connector tie in with the firmware version of the card the connector supports. The format "X.X.X.Y" is used, where "X.X.X" corresponds to the firmware version of the card and "Y" corresponds to the specific driver iteration for this firmware. For example, *5.0.28.2* means the connector is the second iteration for firmware *5.0.28.*
+The different **versions** of the connector tie in with the firmware version of the card the connector supports. The format "X.X.X.Y" is used, where "X.X.X" corresponds to the firmware version of the card and "Y" corresponds to the specific connector iteration for this firmware. For example, *5.0.28.2* means the connector is the second iteration for firmware *5.0.28.*
 
 The current version is *1.0.90.1*
 

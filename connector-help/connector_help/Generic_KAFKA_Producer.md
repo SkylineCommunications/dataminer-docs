@@ -174,7 +174,8 @@ When you right-click the Parameters Configuration table, the following options a
 
 - **Add New Row**: Adds a default row with each cell value set to N/A except the Forwarding Time (with default value 30s), On Change (with default value *If Value Changes*) and Send Data (with default value *Disabled*). To properly set up a row, make sure to define the fields starting from the left-hand side: DataMiner ID first, then Protocol Name, and so on. This is because when you select the DataMiner ID, the discrete options for the Protocol Name are updated with the existing protocols on that DMA. The same occurs when you select a new Protocol Name: the discrete options for the Element Name are also updated.
 
-  ![1.svg](/SiteAssets/Driver%20Help/Generic%20KAFKA%20Producer/1.svg)![2.svg](~/connector-help/images/Generic_KAFKA_Producer_2.svg)
+  ![1.svg](~/connector-help/images/Generic_KAFKA_Producer_svg1.png)
+  ![2.svg](~/connector-help/images/Generic_KAFKA_Producer_2.svg)
 
 - **Enable Selected Row(s)**: The Send Data value will be set to *Enabled*, meaning that the parameter value will be sent to the parameter's topic in a Kafka message.
 - **Disable Selected Row(s)**: The Send Data value will be set to *Disabled*, meaning that the selected parameter values will not be sent to the parameter's topic in a Kafka message.

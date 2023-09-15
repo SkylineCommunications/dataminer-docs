@@ -8,7 +8,7 @@ The **Verizon VSat Platform Manager** allows the aggregation of KPIs from differ
 
 ## About
 
-This is a **CPE** (Customer Premises Equipment) driver, and as such it is designed to poll large amounts of data from the deployed infrastructure, using **front-end** CPE Manager elements and **back-end** CPE Manager elements. Both of these types of elements use the same CPE Manager connector. The Verizon system contains one front-end and several back-end elements. The front-end element is responsible for the top-level data aggregation from different back-end elements. Each back-end element is responsible for the aggregation of a section of the data from the collectors.
+This is a **CPE** (Customer Premises Equipment) connector, and as such it is designed to poll large amounts of data from the deployed infrastructure, using **front-end** CPE Manager elements and **back-end** CPE Manager elements. Both of these types of elements use the same CPE Manager connector. The Verizon system contains one front-end and several back-end elements. The front-end element is responsible for the top-level data aggregation from different back-end elements. Each back-end element is responsible for the aggregation of a section of the data from the collectors.
 
 Topologies describe the connections in the diagram shown in the visual interface. The current implementation integrates 5 different topologies: **Network**, **Service**, **NMS**, **Map** and **Quick**. Each topology represents a connected entity from top to bottom. Chains are mainly used to display topology views. In this case, the following chains are present:
 

@@ -4,7 +4,7 @@ uid: Connector_help_Williams_Sound_LoopGuardian_-_Amplifier
 
 # Williams Sound LoopGuardian - Amplifier
 
-The **Williams Sound LoopGuardian - Amplifier** driver enables the user to control and monitor individual device (DVE) settings.
+The **Williams Sound LoopGuardian - Amplifier** connector enables the user to control and monitor individual device (DVE) settings.
 
 ## About
 

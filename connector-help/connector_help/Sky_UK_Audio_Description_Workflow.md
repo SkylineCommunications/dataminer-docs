@@ -4,7 +4,7 @@ uid: Connector_help_Sky_UK_Audio_Description_Workflow
 
 # Sky UK Audio Description Workflow
 
-This connector can be used to create an enhanced service containing elements using the connector Imagine Communications EPIC MV, Axon ACP - GDR26, [Sky UK SSR](/Driver%20Help/Sky%20UK%20SSR.aspx) and [Sky UK VICC](xref:Connector_help_Sky_UK_VICC).
+This connector can be used to create an enhanced service containing elements using the connector Imagine Communications EPIC MV, Axon ACP - GDR26, [Sky UK SSR](xref:Connector_help_Sky_UK_SSR) and [Sky UK VICC](xref:Connector_help_Sky_UK_VICC).
 
 With this connector, alarms can be generated according to predefined rules.
 
@@ -30,20 +30,20 @@ When you create a service using this connector, configure the following child el
 
 - Imagine Communications EPIC MV
 
-- **Audio Silence Description (PiP)**: This parameter is needed to indicate which PiP entry should be monitored.
+  - **Audio Silence Description (PiP)**: This parameter is needed to indicate which PiP entry should be monitored.
   - **Audio Silence State (PiP)**: This parameter is needed to indicate which PiP entry should be monitored.
 
 - Axon ACP - GDR26
 
-- **Active-A**
+  - **Active-A**
 
 - Sky UK SSR
 
-- **Audio Description (Current Events)**: This parameter is needed to indicate which Service Key should be monitored.
+  - **Audio Description (Current Events)**: This parameter is needed to indicate which Service Key should be monitored.
 
 - [Sky UK VICC](xref:Connector_help_Sky_UK_VICC)
 
-- **Type Of Material**
+  - **Type Of Material**
 
 ## How to Use
 

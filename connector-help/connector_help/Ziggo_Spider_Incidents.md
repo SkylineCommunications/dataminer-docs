@@ -78,7 +78,7 @@ This table has the following columns:
 
 ### Profiles
 
-Incidents will be automatically created by means of profiles. When the VoD Workflow Application sends information on an asset, the Incident driver will decide to put it in the Incident Table if the matched profile confirms that an incident should be created for this issue. A profile contains all detectable issues and determines whether the occurrence of an issue will trigger a ticket. A toggle button for each type of issue is implemented. For example, when the profile has "ADI Issue = yes" and "Movie issue = yes", the incident will be created in the Incident Table when an asset has an ADI issue or when it has a Movie issue.
+Incidents will be automatically created by means of profiles. When the VoD Workflow Application sends information on an asset, the Incident connector will decide to put it in the Incident Table if the matched profile confirms that an incident should be created for this issue. A profile contains all detectable issues and determines whether the occurrence of an issue will trigger a ticket. A toggle button for each type of issue is implemented. For example, when the profile has "ADI Issue = yes" and "Movie issue = yes", the incident will be created in the Incident Table when an asset has an ADI issue or when it has a Movie issue.
 
 There are three levels of profiles:
 

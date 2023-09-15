@@ -24,7 +24,7 @@ The chassis must include an **Evertz 7800-FC** card in order to be functional. D
 
 ### Exported connectors
 
-| **Exported Protocol**                | **Description**                   |
+| **Exported Connector**                | **Description**                   |
 |--------------------------------------|-----------------------------------|
 | Evertz 7880DM4-LB-IP - 7880DM4-LB-IP | Used for the 7880DM4-LB-IP module |
 

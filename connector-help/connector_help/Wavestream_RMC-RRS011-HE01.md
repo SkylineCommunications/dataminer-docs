@@ -24,7 +24,7 @@ The connector uses a **serial** connection to retrieve information from and send
 
 ### Exported connectors
 
-| **Exported Protocol**             | **Description** |
+| **Exported Connector**             | **Description** |
 |-----------------------------------|-----------------|
 | Wavestream RMC-RRS011-HE01 - SSPA | SSPA            |
 

@@ -23,7 +23,7 @@ To get more detailed information <http://www.servertech.com/products/switched-pd
 </colgroup>
 <tbody>
 <tr class="odd">
-<td><h3 id="driver-range">Driver Range</h3></td>
+<td><strong>Range</strong></td>
 <td><strong>Description</strong></td>
 <td><strong>DCF Integration</strong></td>
 <td><strong>Cassandra Compliant</strong></td>

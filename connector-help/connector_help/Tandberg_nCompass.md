@@ -24,7 +24,7 @@ The Tandberg nCompass uses SNMP and serial communication to get information abou
 | 2.1.0.x              | Creates DVEs                                | 1.1.0.2      | \-                |
 | 3.1.0.x              | nCompass SNMP and SOAP API                  | 2.1.0.8      | \-                |
 | 4.0.0.x              | Fixed problems with SOAP requests/responses | 3.1.0.6      | \-                |
-| 4.0.1.x \[SLC Main\] | Driver review                               | 4.0.0.14     | \-                |
+| 4.0.1.x \[SLC Main\] | Connector review                               | 4.0.0.14     | \-                |
 | **4.0.2.x**          | **Do not use this range!**                  | 4.0.1.20     | \-                |
 
 ### Product Info

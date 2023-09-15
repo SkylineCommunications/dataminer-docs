@@ -8,7 +8,7 @@ This a virtual connector that will load **protocol.xml files** and change them a
 
 ## About
 
-The **Generic Timer Changer** driver can change any non-fixed timer and add a button to restart timers in any given driver.
+The **Generic Timer Changer** connector can change any non-fixed timer and add a button to restart timers in any given connector.
 
 ## Installation and configuration
 

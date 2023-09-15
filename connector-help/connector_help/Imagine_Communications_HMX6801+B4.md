@@ -4,7 +4,7 @@ uid: Connector_help_Imagine_Communications_HMX6801+B4
 
 # Imagine Communications HMX6801+B4
 
-The Imagine Communications HMX6801+B4 driver combines a serial and smart-serial connection to monitor and configure the audio embedder card in an Imagine Communications frame. Alarm monitoring can be activated on all important parameters, including configuration parameters.
+The Imagine Communications HMX6801+B4 connector combines a serial and smart-serial connection to monitor and configure the audio embedder card in an Imagine Communications frame. Alarm monitoring can be activated on all important parameters, including configuration parameters.
 
 The Imagine Communications audio embedder card allows flexible audio group configurations, with all four groups being accessible and any mix of input audio and/or test tones being supported.
 

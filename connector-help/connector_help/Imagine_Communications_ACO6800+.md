@@ -4,7 +4,7 @@ uid: Connector_help_Imagine_Communications_ACO6800+
 
 # Imagine Communications ACO6800+
 
-The **Imagine Communications ACO6800+** driver combines a **serial** and **smart-serial** connection to monitor and configure the Automatic Change Over card in an Imagine Communications frame. Alarm monitoring can be activated on all important parameters.
+The **Imagine Communications ACO6800+** connector combines a **serial** and **smart-serial** connection to monitor and configure the Automatic Change Over card in an Imagine Communications frame. Alarm monitoring can be activated on all important parameters.
 
 ## About
 

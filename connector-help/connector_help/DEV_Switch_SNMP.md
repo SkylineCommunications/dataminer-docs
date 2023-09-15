@@ -36,7 +36,7 @@ The information displayed in the connector is divided over seven pages:
 
 ### Exported connectors
 
-| **Exported Protocol** | **Description**                                                                      |
+| **Exported Connector** | **Description**                                                                      |
 |-----------------------|--------------------------------------------------------------------------------------|
 | DEV Switch Module     | 2 port modules are only supported in range 3.0.0.x and only accurate for DEV7113 1:1 |
 

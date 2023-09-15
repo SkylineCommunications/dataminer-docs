@@ -21,7 +21,7 @@ The **ND Satcom RCU5000** is an SNMP connector designed to communicate with RCU 
 </colgroup>
 <tbody>
 <tr class="odd">
-<td><strong>Driver Range</strong></td>
+<td><strong>Range</strong></td>
 <td><strong>Description</strong></td>
 <td><strong>DCF Integration</strong></td>
 <td><strong>Cassandra Compliant</strong></td>
@@ -61,7 +61,7 @@ The **ND Satcom RCU5000** is an SNMP connector designed to communicate with RCU 
 
 ### Exported connectors
 
-| **Exported Protocol** | **Description** |
+| **Exported Connector** | **Description** |
 |-----------------------|-----------------|
 | ND Satcom RCU5000 HPA | HPA modules     |
 | ND Satcom RCU5000 RFT | RFT modules     |

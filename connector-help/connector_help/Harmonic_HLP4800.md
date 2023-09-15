@@ -37,7 +37,7 @@ For each module, a **DVE** is created that includes the following pages:
 
 ### Exported connectors
 
-| **Exported Protocol**                                                                | **Description**                          |
+| **Exported Connector**                                                                | **Description**                          |
 |--------------------------------------------------------------------------------------|------------------------------------------|
 | [Harmonic HLP4800 - HOA70xx](xref:Connector_help_Harmonic_HLP4800_-_HOA70xx)   | Transmitter and optical amplifier        |
 | [Harmonic HLP4800 - RDT4049](xref:Connector_help_Harmonic_HLP4800_-_RDT4049)   | DWDM digital return path transmitter     |

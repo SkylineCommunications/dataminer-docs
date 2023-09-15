@@ -4,7 +4,7 @@ uid: Connector_help_Inmarsat_Gateway_-_Terminal
 
 # Inmarsat Gateway - Terminal
 
-This connector represents one terminal of the Inmarsat Gateway driver.
+This connector represents one terminal of the Inmarsat Gateway connector.
 
 ## About
 

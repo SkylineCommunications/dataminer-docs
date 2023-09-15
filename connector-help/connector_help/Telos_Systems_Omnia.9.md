@@ -70,14 +70,14 @@ This page contains **input status** parameters.
 
 This page contains **preset** parameters (**Input**, **FM**, **HD**, **Stream**, **Studio**).
 
-### RDS \[Driver Range 1.0.1.1\]
+### RDS \[Range 1.0.1.1\]
 
 This page contains **Radio Data System (RDS)** parameters (e.g. UECP, Radiotext).
 
-### FM Options \[Driver Range 1.0.1.1\]
+### FM Options \[Range 1.0.1.1\]
 
 This page contains parameters for **FM Options**.
 
-### Web Interface \[Driver Range 1.0.1.1\]
+### Web Interface \[Range 1.0.1.1\]
 
 This page provides access to the web interface of the device. The web interface is only accessible when the client machine has network access to the product.

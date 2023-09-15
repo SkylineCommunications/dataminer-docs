@@ -12,7 +12,7 @@ The connector is intended to be compatible with the NetProcessor 9030 and NetPro
 
 ### Version Info
 
-| **Driver range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 | 2.0.0.x          | New firmware    | No                  | Yes                     |

@@ -8,7 +8,7 @@ An exported connector from **Ereca Broadcast NetRacer**, representing one 2Rx ca
 
 ## About
 
-An automatically generated driver by the **Ereca Broadcast NetRacer**, range 1.0.0.x representing a single card. Unlike the web interface, only the receiver parameters are displayed.
+An automatically generated connector by the **Ereca Broadcast NetRacer**, range 1.0.0.x representing a single card. Unlike the web interface, only the receiver parameters are displayed.
 
 ### Product Info
 

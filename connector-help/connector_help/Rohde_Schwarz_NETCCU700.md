@@ -20,7 +20,7 @@ With three timers, all parameters of the device are polled. The parameters are d
 
 ### Exported connectors
 
-| **Exported Protocol**                  | **Description**    |
+| **Exported Connector**                  | **Description**    |
 |----------------------------------------|--------------------|
 | Rohde Schwarz NETCCU 700 Transmitter 1 | Transmitter 1      |
 | Rohde Schwarz NETCCU 700 Transmitter 2 | Transmitter 2      |

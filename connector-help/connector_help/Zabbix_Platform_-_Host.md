@@ -8,7 +8,7 @@ Zabbix is software that monitors numerous parameters of a network as well as the
 
 ## About
 
-This is an **HTTP** connector that connects to the Zabbix API to retrieve data from the Zabbix platform. The Zabbix API is a web-based API and is shipped as part of the web front end. It uses the JSON-RPC 2.0 protocol. This connector is created by the **Zabbix platform** driver. For more information on the device, refer to <https://www.zabbix.com/documentation/3.0/manual/api>.
+This is an **HTTP** connector that connects to the Zabbix API to retrieve data from the Zabbix platform. The Zabbix API is a web-based API and is shipped as part of the web front end. It uses the JSON-RPC 2.0 protocol. This connector is created by the **Zabbix platform** connector. For more information on the device, refer to <https://www.zabbix.com/documentation/3.0/manual/api>.
 
 ### Version Info
 

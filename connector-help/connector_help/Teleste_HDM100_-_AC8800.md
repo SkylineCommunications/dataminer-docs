@@ -6,7 +6,7 @@ uid: Connector_help_Teleste_HDM100_-_AC8800
 
 The AC8800 is an intelligent dual active output node for deep fiber solutions. It has two fixed optical receivers with redundancy for the forward path. The return path can also be fully redundant with double optical transmitter modules.
 
-This connector is exported from the [Teleste HDM100](xref:Connector_help_Teleste_HDM100) driver, from version **1.0.1.57** onwards.
+This connector is exported from the [Teleste HDM100](xref:Connector_help_Teleste_HDM100) connector, from version **1.0.1.57** onwards.
 
 ## About
 

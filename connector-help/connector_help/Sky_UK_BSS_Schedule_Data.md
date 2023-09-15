@@ -19,7 +19,7 @@ When the connection information is entered correctly, the TX_MONITOR_VIEW table 
 
 ### Exported connectors
 
-| **Exported Protocol**                                                                            | **Description**                                                             |
+| **Exported Connector**                                                                            | **Description**                                                             |
 |--------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------|
 | [Sky UK BSS Schedule Data - Bus](xref:Connector_help_Sky_UK_BSS_Schedule_Data_-_Bus) | It shows the current event data from TX_MONITOR_VIEW for that specific bus. |
 

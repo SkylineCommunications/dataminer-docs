@@ -12,7 +12,7 @@ The current version of the connector uses **SNMPv2** to communicate with the dev
 
 There are two versions of this device. The classic SEL-UCIP1 has eight HD/SD-SDI interfaces, configurable to a maximum of six inputs and/or four outputs, not totaling more than eight I/Os. The AES67 version has four inputs and four outputs.
 
-The **versioning** for the connector is specifically engineered to tie in with the firmware version of the card the connector supports. It uses the following format: *X.X.X.Y*, with X.X.X being the firmware version of the card, and Y the specific driver iteration for this firmware. For example, 5.0.28.2 means that the connector is the second iteration for firmware 5.0.28*.*
+The **versioning** for the connector is specifically engineered to tie in with the firmware version of the card the connector supports. It uses the following format: *X.X.X.Y*, with X.X.X being the firmware version of the card, and Y the specific connector iteration for this firmware. For example, 5.0.28.2 means that the connector is the second iteration for firmware 5.0.28*.*
 
 ### Version Info
 

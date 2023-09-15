@@ -4,7 +4,7 @@ uid: Connector_help_Skyline_Protocol_Overview
 
 # Skyline Protocol Overview
 
-With the **Skyline Protocol Overview** driver you can parse multiple protocol files and then apply different **filters** on them so you find the protocols with the wanted specifications.
+With the **Skyline Protocol Overview** connector you can parse multiple protocol files and then apply different **filters** on them so you find the protocols with the wanted specifications.
 
 ## About
 

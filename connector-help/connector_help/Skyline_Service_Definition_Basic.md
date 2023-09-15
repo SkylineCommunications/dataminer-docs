@@ -4,7 +4,7 @@ uid: Connector_help_Skyline_Service_Definition_Basic
 
 # Skyline Service Definition Basic
 
-The basic driver for enhanced services.
+The basic connector for enhanced services.
 
 ## About
 

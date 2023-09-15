@@ -26,7 +26,7 @@ This connector will export different connectors based on the retrieved data. A l
 
 ### Exported Connectors
 
-| **Exported Protocol**                                                                                             | **Description**       |
+| **Exported Connector**                                                                                             | **Description**       |
 |-------------------------------------------------------------------------------------------------------------------|-----------------------|
 | [Cobalt Digital 9004](xref:Connector_help_Ross_Video_General_Frame_-_Cobalt_Digital_9004)           | Card 9004 Module      |
 | [Cobalt Digital 9006](xref:Connector_help_Ross_Video_General_Frame_-_Cobalt_Digital_9006)           | Card 9006 Module      |

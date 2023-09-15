@@ -14,7 +14,7 @@ The Rohde Schwarz FSH3 is a remote spectrum analyzer. The frequency ranges from1
 |----------------------|---------------------------------------------------------|--------------|-------------------|
 | 1.0.0.x \[Obsolete\] | Initial version.                                        | \-           | \-                |
 | 2.0.0.x \[Obsolete\] | \-                                                      | \-           |                   |
-| 2.1.0.x \[SLC Main\] | Driver logic review. No major changes were implemented. | 2.0.0.2      | Logic review.     |
+| 2.1.0.x \[SLC Main\] | Logic review. No major changes were implemented. | 2.0.0.2      | Logic review.     |
 
 ### Product Info
 

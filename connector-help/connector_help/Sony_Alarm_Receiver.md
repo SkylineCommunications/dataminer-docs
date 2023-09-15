@@ -12,7 +12,7 @@ The purpose of this connector is to aggregate alarms from Sony devices.
 
 | **Range**            | **Key Features** | **Based on**                         | **System Impact** |
 |----------------------|------------------|--------------------------------------|-------------------|
-| 1.0.1.x \[SLC Main\] | Driver review    | \- Version 1.0.0.2 developed by Sony | \-                |
+| 1.0.1.x \[SLC Main\] | Connector review    | \- Version 1.0.0.2 developed by Sony | \-                |
 
 ### Product Info
 

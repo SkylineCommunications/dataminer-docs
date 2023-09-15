@@ -18,7 +18,7 @@ This connector reads TXT files in CSV format from an FTP drive with geographic c
 
 ### Exported connectors
 
-| **Exported Protocol**                                                                          | **Description**                                                                                                               |
+| **Exported Connector**                                                                          | **Description**                                                                                                               |
 |------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
 | [CLS Tracking Platform - Tracker](xref:Connector_help_CLS_Tracking_Platform_-_Tracker) | Exported protocol for each tracker, showing the last known position coordinates, the timestamp and other general information. |
 

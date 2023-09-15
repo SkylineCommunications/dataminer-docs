@@ -10,7 +10,7 @@ The Imagine Communications Selenio JPEG2000 is a multichannel encoder/decoder so
 
 ## About
 
-There are 2 drivers that can be used to monitor and control the **Imagine Communications Selenio JPEG2000** card.
+There are 2 connectors that can be used to monitor and control the **Imagine Communications Selenio JPEG2000** card.
 
 This connector only supports the **decoder** functionality. The [Imagine Communications Selenio J2K1 ENC](xref:Connector_help_Imagine_Communications_Selenio_J2K1_ENC) connector can be used to monitor and control the encoder functionality of the card.
 
@@ -41,7 +41,7 @@ The connector has two different versions to support 2-channel and 4-channel deco
 
 ### Exported connectors
 
-| **Exported Protocol**                            | **Description** |
+| **Exported Connector**                            | **Description** |
 |--------------------------------------------------|-----------------|
 | Imagine Communications Selenio J2K1 DEC - Module | Decoder modules |
 

@@ -26,7 +26,7 @@ The connector layout is designed to look similar to the web interface of the dev
 
 ### Exported connectors
 
-| **Exported Protocol**    | **Description**          |
+| **Exported Connector**    | **Description**          |
 |--------------------------|--------------------------|
 | CEFD CDM-625A SNMP (FSK) | FSK Functionality Module |
 

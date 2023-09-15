@@ -18,7 +18,7 @@ This connector uses an SNMPv3 connection.
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Old range (\*). | No                  | Yes                     |
 
-**(\*) NOTE:** Drivers for all Palo Alto Networks firewall products will continue to be developed in the **1.0.0.x [Palo Alto Networks Firewall Series](xref:Connector_help_Palo_Alto_Networks_Firewall_Series) range**.
+**(\*) NOTE:** Connectors for all Palo Alto Networks firewall products will continue to be developed in the **1.0.0.x [Palo Alto Networks Firewall Series](xref:Connector_help_Palo_Alto_Networks_Firewall_Series) range**.
 
 ### Product Info
 

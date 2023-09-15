@@ -21,7 +21,7 @@ The module provides a single point of access to communicate with the entire 3000
 </colgroup>
 <tbody>
 <tr class="odd">
-<td><strong>Driver Range</strong></td>
+<td><strong>Range</strong></td>
 <td><strong>Description</strong></td>
 <td><strong>DCF Integration</strong></td>
 <td><strong>Cassandra Compliant</strong></td>

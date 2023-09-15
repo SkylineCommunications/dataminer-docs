@@ -6,7 +6,7 @@ uid: Connector_help_SAF_Tehnika_Integra-W
 
 The Integra-W is a radio system designed specifically for wideband applications. Integra-W enables high Tx power, wide bandwidth and high modulation radio links.
 
-The SAF Tehnika Integra-W SNMPv2/v3 driver controls and monitors this radio system.
+The SAF Tehnika Integra-W SNMPv2/v3 connector controls and monitors this radio system.
 
 ## About
 

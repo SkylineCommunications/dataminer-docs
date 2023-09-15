@@ -24,7 +24,7 @@ The GENUS series is a set of modular chassis that can be fitted with a variety o
 
 | **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components**                                                                                                                                                                                                                                                                                                                                              |
 |-----------|---------------------|-------------------------|-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.0.0.x   | Yes                 | Yes                     | \-                    | \- [ETL Systems Genus - CPU](/Driver%20Help/ETL%20Systems%20Genus%20-%20CPU.aspx) - [ETL Systems Genus - PSU](/Driver%20Help/ETL%20Systems%20Genus%20-%20PSU.aspx) - [ETL Systems Genus - Splitter-Combiner](/Driver%20Help/ETL%20Systems%20Genus%20-%20Splitter-Combiner.aspx) - [ETL Systems Genus - 22544](xref:Connector_help_ETL_Systems_Genus_-_22544) |
+| 1.0.0.x   | Yes                 | Yes                     | \-                    | - ETL Systems Genus - CPU<br>- ETL Systems Genus - PSU<br>- ETL Systems Genus - Splitter-Combiner<br>- [ETL Systems Genus - 22544](xref:Connector_help_ETL_Systems_Genus_-_22544) |
 
 ## Configuration
 

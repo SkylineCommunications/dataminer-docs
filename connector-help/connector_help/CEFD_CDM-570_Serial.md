@@ -34,7 +34,7 @@ Note: This connector will export a different connector based on button **FSK Ena
 
 ### Exported Connectors
 
-| **Exported Protocol**     | **Description**                 |
+| **Exported Connector**     | **Description**                 |
 |---------------------------|---------------------------------|
 | CEFD CDM-570 Serial (FSK) | BUC and LNB parameters exported |
 

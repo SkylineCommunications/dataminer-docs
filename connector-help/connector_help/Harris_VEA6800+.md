@@ -4,7 +4,7 @@ uid: Connector_help_Harris_VEA6800+
 
 # Harris VEA6800+
 
-The **Harris VEA6800+** driver has an **SNMP** connection towards the 6800+ frame to monitor a device slot in the frame. Alarm monitoring and trending can be activated on all important parameters.
+The **Harris VEA6800+** connector has an **SNMP** connection towards the 6800+ frame to monitor a device slot in the frame. Alarm monitoring and trending can be activated on all important parameters.
 
 ## About
 

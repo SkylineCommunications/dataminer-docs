@@ -123,7 +123,7 @@ These are 3 pages that each represent the main faults and alarms for their respe
 
 Polling for these 3 pages is disabled by default. Polling will only occur if you toggle the **Poll HPA X Alarms** parameter to *Enabled* AND you have provided the amplifier addresses (see "General Page").
 
-If you need more detailed status information or settings for the individual HPAs, use the **XTU-400K Driver** for individual HPA elements.
+If you need more detailed status information or settings for the individual HPAs, use the **XTU-400K** connector for individual HPA elements.
 
 ### Display (only in v1.1.1.x)
 

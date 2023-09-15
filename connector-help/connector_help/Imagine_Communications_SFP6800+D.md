@@ -4,7 +4,7 @@ uid: Connector_help_Imagine_Communications_SFP6800+D
 
 # Imagine Communications SFP6800+D
 
-The **Imagine Communications SFP6800+D** driver combines a **serial** and **smart-serial** connection to monitor and configure the simple flexible processing card in an Imagine Communications frame. Alarm monitoring can be activated on all important parameters.
+The **Imagine Communications SFP6800+D** connector combines a **serial** and **smart-serial** connection to monitor and configure the simple flexible processing card in an Imagine Communications frame. Alarm monitoring can be activated on all important parameters.
 
 It allows manual creation of DVEs for **Rx1**, **Rx2**, **Tx1** and **Tx2** cards connected to the slots of the device (only available in range 1.2.0.x).
 
@@ -36,7 +36,7 @@ The write parameter ranges and discreet values are retrieved from the device and
 
 ### Exported connectors (only available in range 1.2.0.x)
 
-| **Exported Protocol**                   | **Description**                                                                                              |
+| **Exported Connector**                   | **Description**                                                                                              |
 |-----------------------------------------|--------------------------------------------------------------------------------------------------------------|
 | Imagine Communications SFP6800+D - Rx1. | Displays HDMI, CMPST, electrical, optical and alarm (signal loss of SFP) information regarding the Rx1 cage. |
 | Imagine Communications SFP6800+D - Rx2. | Displays HDMI, CMPST, electrical, optical and Alarm (signal loss of SFP) information regarding the Rx2 cage. |

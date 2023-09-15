@@ -163,4 +163,4 @@ The following functionalities are available in this section:
 
 ## Notes
 
-The element that is running this connector should be linked to the **Verizon VSat Platform Manager** driver. For this purpose, enter the DMAID/ElementID in the **SRM Subscriber** parameter on the **Configuration** page in the **General tab.**
+The element that is running this connector should be linked to the **Verizon VSat Platform Manager** connector. For this purpose, enter the DMAID/ElementID in the **SRM Subscriber** parameter on the **Configuration** page in the **General tab.**

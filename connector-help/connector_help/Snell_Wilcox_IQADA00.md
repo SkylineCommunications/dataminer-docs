@@ -35,7 +35,7 @@ This connector provides status data for input 1 and input 2. It is also possible
 </colgroup>
 <tbody>
 <tr class="odd">
-<td><strong>Driver Range</strong></td>
+<td><strong>Range</strong></td>
 <td><strong>Connections</strong></td>
 </tr>
 <tr class="even">

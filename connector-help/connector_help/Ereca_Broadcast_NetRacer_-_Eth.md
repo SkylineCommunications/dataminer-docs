@@ -8,7 +8,7 @@ An exported connector from **Ereca Broadcast NetRacer**, representing one ethern
 
 ## About
 
-An automatically generated driver by the **Ereca Broadcast NetRacer**, range 1.0.0.x representing a single card.
+An automatically generated connector by the **Ereca Broadcast NetRacer**, range 1.0.0.x representing a single card.
 
 ### Product Info
 

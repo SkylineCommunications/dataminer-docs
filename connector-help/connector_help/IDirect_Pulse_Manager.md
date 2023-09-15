@@ -29,7 +29,7 @@ All data is retrieved over HTTP using the web service API.
 
 ### Exported Connectors
 
-| **Exported Protocol**  | **Description**  |
+| **Exported Connector**  | **Description**  |
 |------------------------|------------------|
 | IDirect Pulse Beam     | iDirect Beam     |
 | IDirect Pulse Linecard | iDirect Linecard |

@@ -4,7 +4,7 @@ uid: Connector_help_Thomson_Video_Networks_RD4000
 
 # Thomson Video Networks RD4000
 
-The **Thomson Video Networks RD4000** driver has been designed to monitor and manage a single Distribution Receiver Decoder RD4000 device. This device is used for terrestrial, cable, satellite and IPTV headends to receive and decode feeds for local re-encoding, analog delivery or confidence monitoring.
+The **Thomson Video Networks RD4000** connector has been designed to monitor and manage a single Distribution Receiver Decoder RD4000 device. This device is used for terrestrial, cable, satellite and IPTV headends to receive and decode feeds for local re-encoding, analog delivery or confidence monitoring.
 
 ## About
 

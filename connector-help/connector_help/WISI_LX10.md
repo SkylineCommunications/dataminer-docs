@@ -8,7 +8,7 @@ With this connector, information from the device **WISI LX10** can be gathered a
 
 ## About
 
-Driver used to gather information from the **WISI LX10** device.
+Connector used to gather information from the **WISI LX10** device.
 
 The connector has several pages with general information, alarms, power supply, transmitter information, etc.
 

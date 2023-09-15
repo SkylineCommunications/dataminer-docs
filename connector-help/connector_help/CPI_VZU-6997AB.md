@@ -16,7 +16,7 @@ This connector is intended to communicate with the device using serial commands 
 |------------------|------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version (**obsolete**)     | Yes                 | Yes                     |
 | 1.1.0.x          | New release version (**obsolete**) | No                  | Yes                     |
-| 1.1.1.x          | Driver review                      | Yes                 | Yes                     |
+| 1.1.1.x          | Connector review                      | Yes                 | Yes                     |
 
 ### Product Info
 

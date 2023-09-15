@@ -27,7 +27,7 @@ Serial commands are used to retrieve the device information.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td><strong>Driver Range</strong></td>
+<td><strong>Range</strong></td>
 <td><strong>Device Firmware Version</strong></td>
 </tr>
 <tr class="even">

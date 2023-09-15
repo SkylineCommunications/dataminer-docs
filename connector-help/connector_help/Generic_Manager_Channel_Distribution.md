@@ -12,7 +12,7 @@ The connector implements the logic used by the Channel Substitution WFM. It allo
 
 There are currently two main parts in this connector:
 
-- One to manage Matrix drivers from multiple vendors. This part is not used, and as such also not documented.
+- One to manage Matrix connectors from multiple vendors. This part is not used, and as such also not documented.
 - One to manage services managed by Cisco DCM devices.
 
 ### Purpose of the connector
@@ -57,7 +57,7 @@ Note: When you open the WFM, a warning message should appear. If it does, check 
 
 ### General
 
-This page contains the original logic that is used to manage matrix drivers.
+This page contains the original logic that is used to manage matrix connectors.
 
 The most important parameters are:
 
@@ -193,7 +193,7 @@ When the services are found, the set will be executed on both DCM elements. Othe
 
 #### N + x
 
-In the (currently not yet used) N + x configuration, the system does not assume anything. For each output service there could be 0 or more backup services which will have to be set. To find these services, the system will query another (yet to be developed) driver to get the backup information.
+In the (currently not yet used) N + x configuration, the system does not assume anything. For each output service there could be 0 or more backup services which will have to be set. To find these services, the system will query another (yet to be developed) connector to get the backup information.
 
 ### How filters work
 

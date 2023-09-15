@@ -35,7 +35,7 @@ To import the CSV file, click the **"Import..."** button at the bottom of the **
 
 ### Configuration of Matrices
 
-All *"Delec Oratis Matrix System"* elements will be retrieved by the **Announcement Manager** driver and added ot the **Matrices** table on the **Matrices** page. The **NMS** matrix needs to be configured so the Announcement Manager knows in which element the crosspoint(s) need to be set.
+All *"Delec Oratis Matrix System"* elements will be retrieved by the **Announcement Manager** connector and added ot the **Matrices** table on the **Matrices** page. The **NMS** matrix needs to be configured so the Announcement Manager knows in which element the crosspoint(s) need to be set.
 
 ### Configuration of Enhanced System Log
 

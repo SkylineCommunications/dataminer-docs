@@ -53,7 +53,7 @@ When the element has been created, extra configuration is required on the **Conf
 #### General configuration
 
 - **Stabilization Period**: It will take some time before all parameters are filled in when test elements are created. This parameter defines after how long the test setup will be considered stable.
-- **Leak Detector Element**: link to the element of the **Skyline Driver Passport Health Check** driver.
+- **Leak Detector Element**: link to the element of the **Skyline Driver Passport Health Check** connector.
 
 #### Test DMA
 

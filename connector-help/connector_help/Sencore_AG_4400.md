@@ -4,7 +4,7 @@ uid: Connector_help_Sencore_AG_4400
 
 # Sencore AG 4400
 
-The **Sencore AG 4400 driver** can be used to view real-time parameters from the device and to configure parameters of the device.
+The Sencore AG 4400 connector can be used to view real-time parameters from the device and to configure parameters of the device.
 
 ## About
 

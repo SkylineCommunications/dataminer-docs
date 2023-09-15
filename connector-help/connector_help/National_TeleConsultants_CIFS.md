@@ -8,7 +8,7 @@ With the **NTC CIFS** connector, you can monitor the state of the **SMB/CIFS mou
 
 ## About
 
-The CIFS driver periodically polls one or more SMB/CIFS mounts to retrieve status information about the share. By default, this happens every 30 seconds.
+The CIFS connector periodically polls one or more SMB/CIFS mounts to retrieve status information about the share. By default, this happens every 30 seconds.
 
 ## Installation and configuration
 

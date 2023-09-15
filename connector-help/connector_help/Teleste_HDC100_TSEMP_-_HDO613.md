@@ -25,7 +25,7 @@ The **Teleste HDC100 TSEMP - HDO613** connector can be used to display and confi
 </colgroup>
 <tbody>
 <tr class="odd">
-<td><strong>Driver Range</strong></td>
+<td><strong>Range</strong></td>
 <td><strong>Device Firmware Version</strong></td>
 </tr>
 <tr class="even">

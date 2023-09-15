@@ -4,13 +4,13 @@ uid: Connector_help_SA_ROSA_EM_-_Vikinx
 
 # SA ROSA EM - Vikinx
 
-The Rosa EM - Vikinx driver will display information related to a **Vikinx** device connected to the ROSA EM device. The displayed information is organized according to the Rosa EM web application. In addition, this connector also provides the possibility to perform sets on Vikinx devices.
+The Rosa EM - Vikinx connector will display information related to a **Vikinx** device connected to the ROSA EM device. The displayed information is organized according to the Rosa EM web application. In addition, this connector also provides the possibility to perform sets on Vikinx devices.
 
 ## About
 
 The ROSA EM - Vikinx connector is used to obtain information from Vikinx devices connected to the Rosa EM device. An **SNMP** connection is used in order to successfully retrieve and configure the device's information.
 
-### Ranges of the Driver
+### Version Info
 
 | **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|

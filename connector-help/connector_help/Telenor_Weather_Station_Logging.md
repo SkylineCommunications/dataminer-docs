@@ -4,11 +4,11 @@ uid: Connector_help_Telenor_Weather_Station_Logging
 
 # Telenor Weather Station Logging
 
-The **Telenor Weather Station Logging** driver saves weather statistics and makes it possible to view them for a requested period of time.
+The **Telenor Weather Station Logging** connector saves weather statistics and makes it possible to view them for a requested period of time.
 
 ## About
 
-The **Telenor Weather Station Logging** driver reads in the log files from a selected directory and processes them. All the data will be stored and the user can then request that data for a selected period of time. While the parameter itself only displays the latest value received, all data is displayed in a graph when you go to the trending of the parameter.
+The **Telenor Weather Station Logging** connector reads in the log files from a selected directory and processes them. All the data will be stored and the user can then request that data for a selected period of time. While the parameter itself only displays the latest value received, all data is displayed in a graph when you go to the trending of the parameter.
 
 ### Version Info
 

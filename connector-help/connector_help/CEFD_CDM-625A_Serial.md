@@ -28,7 +28,7 @@ This connector will export different connectors based on the retrieved data. A l
 
 ### Exported Connectors
 
-| **Exported Protocol** | **Description**               |
+| **Exported Connector** | **Description**               |
 |-----------------------|-------------------------------|
 | CEFD 625A Serial.FSK  | BUC/LNB-specific information. |
 

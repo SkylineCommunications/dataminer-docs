@@ -4,7 +4,7 @@ uid: Connector_help_Norkring_AS_Bricknet
 
 # Norkring AS Bricknet
 
-This is a virtual connector that reads data from a VC4 IMS Protocol element, filtering according to the defined filters.
+This is a virtual connector that reads data from a VC4 IMS element, filtering according to the defined filters.
 
 ## About
 
@@ -16,9 +16,9 @@ This connector supports the Bricknet View Visio drawings
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Linked drivers
+### Linked connectors
 
-| **Driver Name** | **Range** |
+| **Name** | **Range** |
 |-----------------|-----------|
 | VC4 IMS         | 1.0.0.x   |
 

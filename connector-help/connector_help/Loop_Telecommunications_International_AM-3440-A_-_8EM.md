@@ -20,7 +20,7 @@ uid: Connector_help_Loop_Telecommunications_International_AM-3440-A_-_8EM
 <table>
 <tbody>
 <tr class="odd">
-<td><strong>Driver Range</strong></td>
+<td><strong>Range</strong></td>
 <td><strong>Device Firmware Version</strong></td>
 </tr>
 <tr class="even">

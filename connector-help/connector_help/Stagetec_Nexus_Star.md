@@ -18,8 +18,8 @@ This connector retrieves data via **Smart-Serial Communication** over **UDP**.
 | 1.0.0.x               | Initial version                                                                                       | No                  | Yes                     |
 | 1.0.1.x               | RedundantPolling IP Address (warning, needs a new element)                                            | No                  | Yes                     |
 | 1.0.2.x (RTBF)        | Permanent Connection using Keep Alive - ACK (Can be directly upgraded from elements of range 1.0.0.x) | No                  | Yes                     |
-| 2.0.0.x               | Driver Review - Customer Mecca                                                                        | No                  | Yes                     |
-| 2.0.1.x (Main Branch) | Complete Driver Review                                                                                | No                  | No                      |
+| 2.0.0.x               | Review - Customer Mecca                                                                        | No                  | Yes                     |
+| 2.0.1.x (Main Branch) | Complete Review                                                                                | No                  | No                      |
 
 ### Product Info
 

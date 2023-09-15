@@ -4,7 +4,7 @@ uid: Connector_help_Rohde__Schwarz_THU9_DVE
 
 # Rohde & Schwarz THU9 DVE
 
-The Rohde & Schwarz THU9 driver consists of two parts, the controller and the transmitters. The controller contains the DVE Table, which can be used to create the transmitters.
+The Rohde & Schwarz THU9 connector consists of two parts, the controller and the transmitters. The controller contains the DVE Table, which can be used to create the transmitters.
 
 ## About
 
@@ -50,7 +50,7 @@ The information displayed in this connector is divided over seven pages:
 
 ### Exported connectors
 
-| **Exported Protocol** | **Description**                                                                                                                                  |
+| **Exported Connector** | **Description**                                                                                                                                  |
 |-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
 | Transmitter           | The controller can have multiple transmitters. The necessary transmitters will be exported according to the information the controller receives. |
 

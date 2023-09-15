@@ -84,7 +84,7 @@ This page can be used to access the **web interface** of the SLR. Note that the 
 
 ## Notes
 
-If a command needs to be triggered from an interactive automation script or another external source, then a string containing all information about the command needs to be set on PID 101 of the SLM driver. Each command expects a certain format to make sure that the connector has all necessary information to create the request that needs to be sent to the SLR.
+If a command needs to be triggered from an interactive automation script or another external source, then a string containing all information about the command needs to be set on PID 101 of the SLM connector. Each command expects a certain format to make sure that the connector has all necessary information to create the request that needs to be sent to the SLR.
 
 An overview of the commands that can be triggered from an external source and the format that needs to be used can be found below:
 

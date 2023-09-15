@@ -8,7 +8,7 @@ The Middle Atlantic UPS-S1500R connector can be used to monitor and configure pr
 
 ## About
 
-The UPS-S1500R driver was created to poll general and also internal information, such as information on the **Input** and **Output**, **Configuration** and **Control**, and the **Battery**.
+The UPS-S1500R connector was created to poll general and also internal information, such as information on the **Input** and **Output**, **Configuration** and **Control**, and the **Battery**.
 
 ### Version Info
 

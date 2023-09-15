@@ -44,11 +44,11 @@ The Skyline CCAP Platform WM is configured to handle requests for three drivers:
 
 There are five workflows to exchange data between these drivers and auxiliary data:
 
-- **HPNA:** Communicates with the **Cox HP Network Automation** driver to retrieve relevant data based on the requestor's hostname. Used by all configured drivers.
-- **DCF:** Collates all DCF information from configured drivers once exported to send to the **DCF Connectivity Discovery** script, which creates the report that allows the **Cox IDP EPM Connectivity** driver to create DCF connections for the entire system. Used by all configured drivers.
+- **HPNA:** Communicates with the **Cox HP Network Automation** connector to retrieve relevant data based on the requestor's hostname. Used by all configured drivers.
+- **DCF:** Collates all DCF information from configured drivers once exported to send to the **DCF Connectivity Discovery** script, which creates the report that allows the **Cox IDP EPM Connectivity** connector to create DCF connections for the entire system. Used by all configured drivers.
 - **OUI:** Internally processes requests using the Master.csv file from OUI on matching manufacturer information with MAC addresses. Only used by **CISCO CBR-8 CCAP Platform Collector**.
-- **Vecima RPM:** Communicates with the **Cox Vecima R-PHY Monitor** driver to get relevant data based on requested MAC addresses. Only used by **CISCO CBR-8 CCAP Platform Collector**.
-- **Smart PHY**: Communicates with the **Cox Smart PHY** driver to get relevant data based on requested MAC addresses. Only used by **CISCO CBR-8 CCAP Platform Collector**.
+- **Vecima RPM:** Communicates with the **Cox Vecima R-PHY Monitor** connector to get relevant data based on requested MAC addresses. Only used by **CISCO CBR-8 CCAP Platform Collector**.
+- **Smart PHY**: Communicates with the **Cox Smart PHY** connector to get relevant data based on requested MAC addresses. Only used by **CISCO CBR-8 CCAP Platform Collector**.
 
 On the **Configuration** page, the following settings are available:
 
@@ -70,4 +70,4 @@ On the **Configuration** page, the following settings are available:
 
 This connector requires specific Correlation rules and Automation scripts for communication with auxiliary connectors such as **Cisco Smart PHY**, **HP Network Automation**, and **Vecima RPM** and EPM connectors such as **CISCO CBR-8 CCAP Platform Collector**, **CISCO Manager CIN Platform**, and **Juniper Networks Manager CIN Platform**. The Correlation rules and Automation scripts must be configured and enabled in order to get the full functionality of this connector.
 
-For the DCF workflow to have its full use with the DCF framework, the **DCF Connectivity Discovery** script and **Cox IDP EPM Connectivity** driver are needed.
+For the DCF workflow to have its full use with the DCF framework, the **DCF Connectivity Discovery** script and **Cox IDP EPM Connectivity** connector are needed.

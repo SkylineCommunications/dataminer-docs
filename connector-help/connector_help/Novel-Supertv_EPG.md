@@ -4,7 +4,7 @@ uid: Connector_help_Novel-Supertv_EPG
 
 # Novel-Supertv EPG
 
-With the **Novel-Supertv EPG** (Electronic Program Guide) driver, it is possible to monitor and manage Novel-SuperTV's Electronic Program Guide software.
+With the **Novel-Supertv EPG** (Electronic Program Guide) connector, it is possible to monitor and manage Novel-SuperTV's Electronic Program Guide software.
 
 ## About
 

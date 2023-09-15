@@ -14,8 +14,8 @@ This connector uses a serial connection to communicate with the device.
 
 | **Range** | **Description**             | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------------------|---------------------|-------------------------|
-| 1.0.0.x          | Initial Version             | No                  | Yes                     |
-| 1.1.0.X          | Driver Review; New Features | No                  | Yes                     |
+| 1.0.0.x          | Initial version             | No                  | Yes                     |
+| 1.1.0.X          | Connector review; New features | No                  | Yes                     |
 
 ### Product Info
 
@@ -35,10 +35,9 @@ This connector uses a serial-over-IP connection connection and requires the foll
 SERIAL CONNECTION:
 
 - Interface connection:
+
   - **IP address/host**: The polling IP of the device.
   - **IP port**: The IP port of the device.
-
-
 
 ## Usage (1.0.0.x)
 
@@ -58,8 +57,6 @@ This page contains a 512x512 **matrix** that displays the current **crosspoints*
 
 On this page, you can configure the necessary information to send notifications to the manager element. The most important parameters are **DMA Id**, **Element Id**, **Other Parameter** **Id** and a toggle button to enable or disable notifications.
 
-
-
 ## Usage (1.1.0.x)
 
 ### General
@@ -76,7 +73,7 @@ This page displays the **crosspoints**, **inputs** and **outputs** levels.
 
 ### Conferences
 
-A tree controll displays all the **Conferences** and the associated **Ports**. It is possible to add a new port to a conference and to set the type of the connection. Also possible to add or remove conferences.
+A tree control displays all the **Conferences** and the associated **Ports**. It is possible to add a new port to a conference and to set the type of the connection. Also possible to add or remove conferences.
 
 ### GPIO/SFO
 
@@ -97,5 +94,3 @@ Displays the device **Alarms**
 ### Matrix
 
 In this page is possible to check the current Matrix configurations.
-
-

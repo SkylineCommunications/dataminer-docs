@@ -28,8 +28,8 @@ This connector receives traps sent by the PixipNet solution and displays the inf
 
 | **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components**                                                                                                                                            |
 |-----------|---------------------|-------------------------|-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.0.0.x   | No                  | Yes                     | \-                    | \- [PixipNet XOS - Location](/Driver%20Help/PixipNet%20XOS%20-%20Location.aspx) - [PixipNet XOS - Test Type](xref:Connector_help_PixipNet_XOS_-_Test_Type) |
-| 1.0.1.x   | No                  | Yes                     | \-                    | \- [PixipNet XOS - Location](/Driver%20Help/PixipNet%20XOS%20-%20Location.aspx) - [PixipNet XOS - Test Type](xref:Connector_help_PixipNet_XOS_-_Test_Type) |
+| 1.0.0.x   | No                  | Yes                     | \-                    | \- [PixipNet XOS - Location](xref:Connector_help_PixipNet_XOS_-_Location) - [PixipNet XOS - Test Type](xref:Connector_help_PixipNet_XOS_-_Test_Type) |
+| 1.0.1.x   | No                  | Yes                     | \-                    | \- [PixipNet XOS - Location](xref:Connector_help_PixipNet_XOS_-_Location) - [PixipNet XOS - Test Type](xref:Connector_help_PixipNet_XOS_-_Test_Type) |
 
 ## Configuration
 

@@ -4,7 +4,7 @@ uid: Connector_help_Ross_Video_NEWT-HDMI-RX
 
 # Ross Video HDMI-RX
 
-This connector manages and controls the Ross Video Newt HDMI-RX. The connector only supports the Newt UHD-over-IP to HDMI 2.0 Gateway configuration mode. Other Newt configuration modes require a separate driver.
+This connector manages and controls the Ross Video Newt HDMI-RX. The connector only supports the Newt UHD-over-IP to HDMI 2.0 Gateway configuration mode. Other Newt configuration modes require a separate connector.
 
 The user interface of this connector is similar to that of the Ross Video dashboard.
 

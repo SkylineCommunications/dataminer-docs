@@ -28,7 +28,7 @@ Range 1.0.0.x of the connector uses SNMPv1 to communicate with the device. From 
 
 ### Exported connectors
 
-| **Exported Protocol**                      | **Description**                                |
+| **Exported Connector**                      | **Description**                                |
 |--------------------------------------------|------------------------------------------------|
 | Check Point 1100 Firewall - Virtual Switch | Virtual Switch Only supported in range 1.0.1.x |
 | Check Point 1100 Firewall - Virtual Router | Virtual Router Only supported in range 1.0.1.x |

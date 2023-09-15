@@ -8,7 +8,7 @@ The **ITNM Systems IDM100 Service** connector is used to display information abo
 
 ## About
 
-The **ITNM Systems IDM100 Service** driver sends HTTP commands to the IDM100 over a serial connection. The connector only polls the service information from one of the services of the **ITNM Systems IDM100**.
+The **ITNM Systems IDM100 Service** connector sends HTTP commands to the IDM100 over a serial connection. The connector only polls the service information from one of the services of the **ITNM Systems IDM100**.
 
 ## Installation and configuration
 

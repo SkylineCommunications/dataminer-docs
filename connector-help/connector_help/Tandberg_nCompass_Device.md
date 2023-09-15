@@ -29,4 +29,4 @@ The Tandberg nCompass uses SNMP and serial communication to get information abou
 
 ## How to Use
 
-Please refer to the [Tandberg nCompass](xref:Connector_help_Tandberg_nCompass) driver help for more information.
+Please refer to the [Tandberg nCompass](xref:Connector_help_Tandberg_nCompass) connector help for more information.

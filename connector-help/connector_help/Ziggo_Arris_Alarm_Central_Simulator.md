@@ -8,7 +8,7 @@ This connector is used to simulate specific use case scenarios, on Ziggo systems
 
 ## About
 
-The **Ziggo Arris Alarm Central Simulator** driver sends custom events, as HTTP posts, to a predefined destination.
+The **Ziggo Arris Alarm Central Simulator** connector sends custom events, as HTTP posts, to a predefined destination.
 
 A list of **events** can be orderly saved as a **Scenario**, so, multiple **events** can be sent automatically in one go.
 

@@ -8,7 +8,7 @@ This connector can be used to monitor the **CISCO Unified Communications Manager
 
 ## About
 
-This is a read-only SNMP monitoring driver, which polls information about registered devices and the local CUCM cluster connection status.
+This is a read-only SNMP monitoring connector, which polls information about registered devices and the local CUCM cluster connection status.
 
 ### Version Info
 

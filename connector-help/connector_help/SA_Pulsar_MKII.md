@@ -30,7 +30,7 @@ With the config button, you can add the required IDs, each one of which will exp
 
 ### Exported connectors
 
-| **Exported Protocol**   | **Description**                                                 |
+| **Exported Connector**   | **Description**                                                 |
 |-------------------------|-----------------------------------------------------------------|
 | SA Pulsar MKII - Device | Device monitoring and management Only supported in range: 1.0.2 |
 

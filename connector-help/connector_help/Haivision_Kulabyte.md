@@ -74,7 +74,7 @@ Each of the DVEs contains the following pages:
 
 ## Usage (1.1.0.x range)
 
-The driver's element contains the following pages.
+The element contains the following pages.
 
 ### Log In Page
 

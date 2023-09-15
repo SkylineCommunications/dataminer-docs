@@ -4,7 +4,7 @@ uid: Connector_help_Vertex_LRx-1201-xx
 
 # Vertex LRx-1201-xx
 
-The **Vertex LRx-1201-xx** driver will display information related to the **Vertex LRx-1201-xx** device.
+The **Vertex LRx-1201-xx** connector will display information related to the **Vertex LRx-1201-xx** device.
 
 ## About
 

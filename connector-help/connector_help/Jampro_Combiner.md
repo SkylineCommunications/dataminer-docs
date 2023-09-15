@@ -14,7 +14,7 @@ This connector uses serial communication to monitor the Jampro Combiner, display
 
 ### Creation
 
-This is a **modbus** driver. The following input is required during element creation:
+This is a **modbus** connector. The following input is required during element creation:
 
 **Serial CONNECTION**:
 

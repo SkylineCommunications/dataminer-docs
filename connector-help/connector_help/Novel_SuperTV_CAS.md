@@ -4,7 +4,7 @@ uid: Connector_help_Novel_SuperTV_CAS
 
 # Novel-Supertv CAS
 
-With the **Novel-Supertv CAS** (Conditional Access System) driver, it is possible to monitor and manage Novel-SuperTV's Conditional Access System software.
+With the **Novel-Supertv CAS** (Conditional Access System) connector, it is possible to monitor and manage Novel-SuperTV's Conditional Access System software.
 
 ## About
 

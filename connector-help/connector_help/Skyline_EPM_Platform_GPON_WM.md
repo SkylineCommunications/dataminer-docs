@@ -57,7 +57,7 @@ Finally, if considered necessary it is possible to configure the handling of the
 
 ## How to use
 
-The **Skyline EPM Platform GPON WM** is configured to handle requests from the OLT elements [ZTE ZXA10 C600 GPON Platform](/Driver%20Help/ZTE%20ZXA10%20C600%20GPON%20Platform.aspx), [Huawei 5600-5800 GPON Platform](/Driver%20Help/Huawei%205600-5800%20GPON%20Platform.aspx) and [Nokia ISAM 7300 FX GPON Platform](xref:Connector_help_Nokia_ISAM_7300_FX_GPON_Platform). These workflow requests and their respective result status are visible in the **Workflow Overview** table.
+The **Skyline EPM Platform GPON WM** is configured to handle requests from the OLT elements [ZTE ZXA10 C600 GPON Platform](xref:Connector_help_ZTE_ZXA10_C600_GPON_Platform), [Huawei 5600-5800 GPON Platform](xref:Connector_help_Huawei_5600-5800_GPON_Platform) and [Nokia ISAM 7300 FX GPON Platform](xref:Connector_help_Nokia_ISAM_7300_FX_GPON_Platform). These workflow requests and their respective result status are visible in the **Workflow Overview** table.
 The supported workflows are the following:
 
 ### ONT KPI Requests

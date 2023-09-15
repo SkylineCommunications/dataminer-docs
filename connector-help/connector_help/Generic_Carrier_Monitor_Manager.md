@@ -23,7 +23,7 @@ Current supported demodulator connectors are: Tandberg RX1290, Ericsson RX8330 a
 
 ### Exported connectors
 
-| **Exported Protocol**                  | **Description**                 |
+| **Exported Connector**                  | **Description**                 |
 |----------------------------------------|---------------------------------|
 | Generic Carrier Monitor Manager Device | Only supported in range 2.0.0.x |
 

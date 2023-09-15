@@ -8,7 +8,7 @@ Liquid-cooled transmitters for analog and digital TV consisting of exciters, pow
 
 ## About
 
-This connector uses **SNMPv2** to poll data from the device and display it accordingly. Traps are not implemented. This connector will export one driver (see "Exported Connectors" below).
+This connector uses **SNMPv2** to poll data from the device and display it accordingly. Traps are not implemented. This connector will export one connector (see "Exported Connectors" below).
 
 ### Version Info
 
@@ -18,7 +18,7 @@ This connector uses **SNMPv2** to poll data from the device and display it accor
 
 ### Exported connectors
 
-| **Exported Protocol**              | **Description**                                |
+| **Exported Connector**              | **Description**                                |
 |------------------------------------|------------------------------------------------|
 | Rohde Schwarz DVB NV7000 - Exciter | Exciter A and B containing their summary fault |
 

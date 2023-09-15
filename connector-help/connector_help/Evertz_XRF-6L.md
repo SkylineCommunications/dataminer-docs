@@ -15,7 +15,7 @@ This connector was designed to work with the **Evertz XRF-6L**. With it, you can
 | **Range** | **Description**                                   | **DCF Integration** | **Cassandra Compliant** |
 |------------------|---------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version.                                  | No                  | Yes                     |
-| 2.0.0.x          | Incremental improvements to driver.               | No                  | Yes                     |
+| 2.0.0.x          | Incremental improvements to connector.            | No                  | Yes                     |
 | 2.0.1.x          | Implemented DCF. Changed displayColumn to naming. | Yes                 | Yes                     |
 
 ### Product Info

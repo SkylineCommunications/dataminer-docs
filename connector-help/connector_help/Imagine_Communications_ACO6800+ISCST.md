@@ -16,7 +16,7 @@ Switches signals between redundant signals at the point of ingest and ingest tim
 
 | **Range** | **Description**                                                                                                     | **DCF Integration** | **Cassandra Compliant** |
 |------------------|---------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x          | Initial Version. Full driver support for all feature of this specific card. Support for both ASI mode and SDI mode. | No                  | Yes                     |
+| 1.0.0.x          | Initial version. Full support for all feature of this specific card. Support for both ASI mode and SDI mode. | No                  | Yes                     |
 
 ### Product Info
 

@@ -4,7 +4,7 @@ uid: Connector_help_OpenDrives_Storage
 
 # OpenDrives Storage
 
-The **OpenDrives Storage** driver shows the relevant information of an OpenDrives device, such as system information, sensor status information, pools and interfaces. It also contains monitoring data related to the device fan speed, voltage and temperature. The **OpenDrives Atlas Platform** provides features related to the device performance and data integrity and has centralized data without modulation.
+The **OpenDrives Storage** connector shows the relevant information of an OpenDrives device, such as system information, sensor status information, pools and interfaces. It also contains monitoring data related to the device fan speed, voltage and temperature. The **OpenDrives Atlas Platform** provides features related to the device performance and data integrity and has centralized data without modulation.
 
 ## About
 

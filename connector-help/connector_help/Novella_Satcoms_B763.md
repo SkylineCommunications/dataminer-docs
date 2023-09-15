@@ -8,7 +8,7 @@ The **Novella Satcoms B763** is an L-band tracking receiver with frequency reado
 
 About
 
-Serial driver for the **Novella Satcoms B763** beacon receiver.
+Serial connector for the **Novella Satcoms B763** beacon receiver.
 
 Creation
 

@@ -142,31 +142,25 @@ This page allows the user to upload/download config files to/from the device. Th
 
 1\. Configuration Files (Download/Upload)
 
-The following table allows the user to upload/download configuration files to the device:
+This is how you can upload/download configuration files to the device:
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><strong>Download</strong></td>
-<td><strong>Upload</strong></td>
-</tr>
-<tr class="even">
-<td><p>To download a file, click on `Download'. This pop-up will be shown:</p>
-<p><img src="/SiteAssets/Driver%20Help/Astro%20U116%20Edge%20PAL/Download.PNG" alt="Download.PNG" /></p>
-<p>Enter the name of the file then click on `OK'. The file will be saved at this location:</p>
-<p>C:\Skyline DataMiner\Documents\&lt;protocol name&gt;\&lt;element name&gt;\&lt;file name&gt;</p></td>
-<td><p>To upload a file, click on `Upload. This pop-up will be shown:</p>
-<p><img src="/SiteAssets/Driver%20Help/Astro%20U116%20Edge%20PAL/Upload.PNG" alt="Upload.PNG" /><img src="" /></p>
-<p><strong>Module Name</strong> lists all the Astro elements of the same type in the system.</p>
-<p><strong>Upload File Name</strong> lists all the files available in Documents folder of the selected module.</p>
-The file to be uploaded is located at: C:\Skyline DataMiner\Documents\&lt;protocol name&gt;\&lt;element name&gt;\&lt;file name&gt;</td>
-</tr>
-</tbody>
-</table>
+- To **download** a file, click *Download*. The following pop-up window will be displayed:
+
+  ![Download.PNG](~/connector-help/images/Download.PNG)
+
+  Enter the name of the file then click on `OK'. The file will be saved at this location:
+
+  `C:\Skyline DataMiner\Documents\<protocol name>\<element name>\<file name>`
+
+- To **upload** a file, click *Upload*. The following pop-up window will be displayed:
+
+  ![Upload.PNG](~/connector-help/images/Upload.PNG)
+
+  **Module Name** lists all the Astro elements of the same type in the system.
+
+  **Upload File Name** lists all the files available in Documents folder of the selected module.
+
+  The file to be uploaded is located at: `C:\Skyline DataMiner\Documents\<protocol name>\<element name>\<file name>`
 
 2\. Software Update
 

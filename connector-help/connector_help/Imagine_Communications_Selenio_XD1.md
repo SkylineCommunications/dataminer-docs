@@ -23,12 +23,12 @@ This connector displays information on different pages, described in the **Usage
 
 | **Range** | **Device Firmware Version**                                                                                                                                                                                                                                                                                                                                                                 |
 |------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| \<10.0.0.x       | **\[obsolete\]** The **versioning** of the connector is specifically engineered to tie in with the firmware version of the card the connector supports. It uses the following format: X.X.X.Y, with X.X.X being the firmware version of the card, and .Y the specific driver iteration for this firmware. For example, *5.0.28.2* means the connector is the second iteration for firmware *5.0.28*. |
+| \<10.0.0.x       | **\[obsolete\]** The **versioning** of the connector is specifically engineered to tie in with the firmware version of the card the connector supports. It uses the following format: X.X.X.Y, with X.X.X being the firmware version of the card, and .Y the specific connector iteration for this firmware. For example, *5.0.28.2* means the connector is the second iteration for firmware *5.0.28*. |
 | 10.0.0.x         | Requires controller firmware "S/W=7.0-38, H/W= rev 02" or higher and will not work with older firmware.                                                                                                                                                                                                                                                                                     |
 
 ### Exported connectors
 
-| **Exported Protocol**                       | **Description** |
+| **Exported Connector**                       | **Description** |
 |---------------------------------------------|-----------------|
 | Imagine Communications Selenio XD1 - Device | Synchronizer    |
 

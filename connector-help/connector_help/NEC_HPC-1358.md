@@ -24,7 +24,7 @@ This connector can be used to monitor and control the NEC HPC-1358 transmitter c
 
 ### Exported connectors
 
-| **Exported Protocol**                                                                                | **Description**                      |
+| **Exported Connector**                                                                                | **Description**                      |
 |------------------------------------------------------------------------------------------------------|--------------------------------------|
 | [NEC HPC-1358 - Main Transmitter](xref:Connector_help_NEC_HPC-1358_-_Main_Transmitter)       | Represents the mux transmitters.     |
 | [NEC HPC-1358 - Reserve Transmitter](xref:Connector_help_NEC_HPC-1358_-_Reserve_Transmitter) | Represents the reserve transmitters. |

@@ -18,7 +18,7 @@ In order to be able to do all of that, an xml file describing the possible NetIn
 
 ### Creation
 
-The **Skyline Network Capacity Manager** is a **virtual** driver so no communication settings are needed while creating the element. Once the element is created, the **VM - Import Folder** and the **VM - File to Import** parameters needs to be configure to mention where the xml file describing the different NetInsight Nimbra types and modules can be found. Those parameters can be found under the **Configuration.** page button located on the **General** page.
+The **Skyline Network Capacity Manager** is a **virtual** connector so no communication settings are needed while creating the element. Once the element is created, the **VM - Import Folder** and the **VM - File to Import** parameters needs to be configure to mention where the xml file describing the different NetInsight Nimbra types and modules can be found. Those parameters can be found under the **Configuration.** page button located on the **General** page.
 
 On the **NetInsight Nimbra elements** that need to be taken into account by the **Skyline Network Capacity Manager**, the **Virtual Modules Feature** parameter needs to be enabled. This parameter can be found under the **Configuration.** page button located on the **Virtual Modules** page.
 

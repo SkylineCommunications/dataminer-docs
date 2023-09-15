@@ -4,7 +4,7 @@ uid: Connector_help_Nevion_Aggregator
 
 # Nevion Aggregator
 
-This connector will display the TSoIP SIPS and Buffer Summary rows from all Nevion NX4600 drivers in the DMS.
+This connector will display the TSoIP SIPS and Buffer Summary rows from all Nevion NX4600 connectors in the DMS.
 
 ## About
 

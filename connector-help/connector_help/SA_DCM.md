@@ -146,7 +146,7 @@ Check if all files mentioned below are in the correct location in the system.
 
     SLDCM L 1.0.0.X .dll
 
-  In the above, "X" can be found on [catalog.dataminer.services](https://catalog.dataminer.services/result/driver/2048).
+  In the above, "X" can be found on [catalog.dataminer.services](https://catalog.dataminer.services/).
 
   Not all records specify all required DLLs; usually they contain only the DLLs that have a version number. If even these are not mentioned, there were no changes to the DLLs. If so, you should look for the previous version of the connector until you find a record mentioning the DLL names. However, you should only look for versions in the same range.
 

@@ -28,7 +28,7 @@ The main element displays various information on several pages:
 
 ### Exported connectors
 
-| **Exported Protocol**                                                                                                                    | **Description**                                                                    |
+| **Exported Connector**                                                                                                                    | **Description**                                                                    |
 |------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
 | [Aurora Network Node NC 4000 Single DT REV A](xref:Connector_help_Aurora_Networks_Node_NC4000_Single_DT_REV_A)             | DVE for Aurora Network Node NC 4000 Single DT Rev A (Prior to version 2.0.1.x)     |
 | [Aurora Network Node NC 4000 Single DT REV B](xref:Connector_help_Aurora_Networks_Node_NC_4000_Single_DT_REV_B)          | DVE for Aurora Network Node NC 4000 Single DT Rev B (Prior to version 2.0.1.x)     |

@@ -4,7 +4,7 @@ uid: Connector_help_LGI_Spectrum_Trap_Receiver
 
 # LGI Spectrum Trap Receiver
 
-This connector can be used to store and monitor traps from a specific port. It is a custom-made connector based on the **Generic Trap Receiver** driver.
+This connector can be used to store and monitor traps from a specific port. It is a custom-made connector based on the **Generic Trap Receiver** connector.
 
 ## About
 

@@ -38,7 +38,7 @@ The connector also retrieves information from the templates, machines, processor
 
 - IP address/host: The polling IP or URL of the destination, e.g. 10.11.12.13.
   - IP port: The port of the destination, by default 1001.
-  - Bus address: This field can be used to bypass the proxy. To do so, fill in the value bypassproxy.
+  - Bus address: This field can be used to bypass the proxy. To do so, fill in the value *bypassproxy*.
 
 ## Configuration for Aurora web service
 
@@ -50,13 +50,11 @@ It is important that this is done before sending jobs to the web service, otherw
 
 On the Windows Login pop-up page, you must fill in the User Name and Password to make sure the information of the server can be retrieved.
 
-
-
 ## Usage
 
 ### General
 
-On the General page, the User Name and Password for the Aurora web service can be filled in, as described in the Configuration for Aurora web service section above. The **Job Time to Live** and **Maximum Job Entries Allowed** refer to the **Job Contract Completed Table** so that the user can limite the presence of jobs inside the Job Contract Completed Table.
+On the General page, the User Name and Password for the Aurora web service can be filled in, as described in the Configuration for Aurora web service section above. The **Job Time to Live** and **Maximum Job Entries Allowed** refer to the **Job Contract Completed Table** so that the user can limit the presence of jobs inside the Job Contract Completed Table.
 
 On the right-hand side, buttons are available that allow the user to manually refresh the **Default Container Path**, **Job Contracts,** Machines, Templates and Processors.
 
@@ -70,11 +68,11 @@ When you click the Windows Login. page button, a pop-up page, the Configuration 
 
 On the Job Contracts page, a table is displayed containing 2 tables, the **Job Contract In Process Table** and the **Job Contracts Completed Table**.
 
-The connector looks for new entries for the **Job Contract In Process Table** every 2 seconds and refreshs it's content every 30 seconds.
+The connector looks for new entries for the **Job Contract In Process Table** every 2 seconds and refreshes its content every 30 seconds.
 
-The **Job Contract Completed Table** gets updated whenever a Job Contract present in the In Process table reachs 100% Percentage Complete.
+The **Job Contract Completed Table** gets updated whenever a Job Contract present in the In Process table reaches 100% Percentage Complete.
 
-A **remove all Jobs** button is also present to make it possible to delete all job entries from both tables at driver level. Job entries will still be available in the device WEB Interface.
+A **remove all Jobs** button is also present to make it possible to delete all job entries from both tables at connector level. Job entries will still be available in the device WEB Interface.
 
 ### Machines
 

@@ -30,7 +30,7 @@ Only one element can poll a device at a time. Polling one device with multiple e
 
 ### Exported Connectors
 
-| **Exported Protocol**                                                                  | **Description**     |
+| **Exported Connector**                                                                  | **Description**     |
 |----------------------------------------------------------------------------------------|---------------------|
 | [Technetix NCC-1222 - NCI-521](xref:Connector_help_Technetix_NCC-1222_-_NCI-521) | NarrowCast Inserter |
 | [Technetix NCC-1222 - NCI-321](xref:Connector_help_Technetix_NCC-1222_-_NCI-321) | NarrowCast Inserter |

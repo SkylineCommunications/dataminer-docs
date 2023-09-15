@@ -24,7 +24,7 @@ This connector can be used to monitor and control the NEC N+1 Control HPC-1358D 
 
 ### Exported connectors
 
-| **Exported Protocol** | **Description**                      |
+| **Exported Connector** | **Description**                      |
 |-----------------------|--------------------------------------|
 | Main Transmitter      | Represents the mux transmitters.     |
 | Reserve Transmitter   | Represents the reserve transmitters. |

@@ -15,7 +15,7 @@ The **Andrew APC300** connector uses a **serial** connection with the device.
 | **Range** | **Description**                                                                     | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.1.0.16         | Smartrack enabling when using multiple satellites                                   | No                  | Yes                     |
-| 1.1.1.1          | Driver review: added tables, changed logic, ... Impact: Loss of alarm/trending data | No                  | Yes                     |
+| 1.1.1.1          | Connector review: added tables, changed logic, ... Impact: Loss of alarm/trending data | No                  | Yes                     |
 
 ### Product Info
 

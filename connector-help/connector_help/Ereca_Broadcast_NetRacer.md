@@ -32,7 +32,7 @@ The minimum framework required is .NET 4.0, so that System.Web.Extensions.dll is
 
 ### Exported connectors
 
-| **Exported Protocol**                                                                        | **Description**    |
+| **Exported Connector**                                                                        | **Description**    |
 |----------------------------------------------------------------------------------------------|--------------------|
 | [Ereca Broadcast NetRacer - 2Rx](xref:Connector_help_Ereca_Broadcast_NetRacer_-_2Rx) | Receiver module    |
 | [Ereca Broadcast NetRacer - 2Tx](xref:Connector_help_Ereca_Broadcast_NetRacer_-_2Tx) | Transmitter module |

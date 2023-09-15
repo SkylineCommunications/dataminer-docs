@@ -26,7 +26,7 @@ This is an **SNMP**-based connector for the GatesAir Flexiva M3M-TX 1P1.
 
 ### Exported connectors
 
-| **Exported Protocol**                           | **Description**    |
+| **Exported Connector**                           | **Description**    |
 |-------------------------------------------------|--------------------|
 | GatesAir Flexiva M3FM-TX 1P1 Main Transmitter   | Main transmitter   |
 | GatesAir Flexiva M3FM-TX 1P1 Backup Transmitter | Backup transmitter |

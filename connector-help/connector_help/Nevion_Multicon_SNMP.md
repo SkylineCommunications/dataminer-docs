@@ -28,7 +28,7 @@ This connector will export different connectors based on the retrieved data. A l
 
 ### Exported connectors
 
-| **Exported Protocol**                  | **Description**         |
+| **Exported Connector**                  | **Description**         |
 |----------------------------------------|-------------------------|
 | Nevion Multicon SNMP - Multicon        | Multicon module         |
 | Nevion Multicon SNMP - RZ3 Transmitter | RZ3 Transmitter modules |

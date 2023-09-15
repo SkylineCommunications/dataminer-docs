@@ -21,7 +21,7 @@ The Cisco RFGW-1-D connector allows to monitor and control a Cisco RF Gateway 1 
 </colgroup>
 <tbody>
 <tr class="odd">
-<td><strong>Driver Range</strong></td>
+<td><strong>Range</strong></td>
 <td><strong>Description</strong></td>
 <td><strong>DCF Integration</strong></td>
 <td><strong>Cassandra Compliant</strong></td>
@@ -47,7 +47,7 @@ The Cisco RFGW-1-D connector allows to monitor and control a Cisco RF Gateway 1 
 <tr class="odd">
 <td>2.0.0.x</td>
 <td><p>Customer specific branch with extra columns/table populated from external source</p>
-<p>Driver review</p></td>
+<p>Connector review</p></td>
 <td>No</td>
 <td>No</td>
 </tr>

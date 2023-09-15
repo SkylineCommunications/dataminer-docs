@@ -8,7 +8,7 @@ The **Ziggo IPVPN Provisioning** connector can be used to create, update and del
 
 ## About
 
-The Ziggo IPVPN Provisioning driver will launch a self-hosted web service and will listen for incoming HTTP POST JSON messages. It will also periodically check for files to ingest.
+The Ziggo IPVPN Provisioning connector will launch a self-hosted web service and will listen for incoming HTTP POST JSON messages. It will also periodically check for files to ingest.
 
 It will then create IAM DSL files and will call the **Skyline IAM DB** element to load the DSL file into the IAM DB. After this, it will call the provisioning on the CPE setup.
 

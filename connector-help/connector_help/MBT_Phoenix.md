@@ -4,7 +4,7 @@ uid: Connector_help_MBT_Phoenix
 
 # MBT Phoenix
 
-The **MBT Phoenix** connector is a smart-serial and **http** driver. The connector has 2 **smart-serial** connections to communicate with 2 different **MBT clients**. The connector also uses a **http** connection to check if a file has been created on the **ftp** server.
+The **MBT Phoenix** connector is a smart-serial and **http** connector. The connector has 2 **smart-serial** connections to communicate with 2 different **MBT clients**. The connector also uses a **http** connection to check if a file has been created on the **ftp** server.
 
 ## About
 
@@ -42,7 +42,7 @@ HTTP CONNECTION (Connection for FTP server):
 
 ### Extra configurations
 
-There are some extra **configurations** that need to be done before the **driver** can work correctly. These configurations need to be set on the **Configuration** page. The settings that need to be done, are explained in more detail on the **Usage \> Configuration** section of this document.
+There is some extra configuration that needs to be done before the connector can work correctly. This needs to be done on the **Configuration** page. The settings that need to be done, are explained in more detail on the **Usage \> Configuration** section of this document.
 
 ## Usage
 

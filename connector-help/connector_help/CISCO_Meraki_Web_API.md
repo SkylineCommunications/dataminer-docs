@@ -13,7 +13,7 @@ CISCO Meraki Web API is used by Kordia to monitor their Meraki devices (Cisco Me
 | **Range** | **Key Features**                                                                                         | **Based on** | **System Impact** |
 |-----------|----------------------------------------------------------------------------------------------------------|--------------|-------------------|
 | 1.0.0.x   | Initial version Polling and Monitoring via Meraki API over HTTPS                                         | \-           | \-                |
-| 2.0.0.x   | Virtual Driver Captures and Processes Webhook Notifications Automatic clearing of cleared/expired alarms | \-           | \-                |
+| 2.0.0.x   | Virtual connector captures and processes webhook notifications automatic clearing of cleared/expired alarms | \-           | \-                |
 
 ### Product Info
 
@@ -38,8 +38,6 @@ The connector in version range 1.0.0.x captures alarms through communication wit
 After filling in the connection details on the element card, the **Authorization Value** on the General page must be filled in.
 This is the API Key used for authorization to access the API.
 
-
-
 ## Configuration 2.0.0.X
 
 ### Webhook Connections
@@ -54,10 +52,9 @@ The user is required to set the following parameters:
 - **Webhooks URI**: URI webhook notifications will be caught with
 - **Webhooks Port**: Port webhook notifications
 - **Webhooks Protocol**: Select between HTTP and HTTPS protocol
-- **Webhooks Certificate**: Select certificate to be used by driver (Applicable only for HTTPS protocol)
+- **Webhooks Certificate**: Select the certificate to be used by the connector (Applicable only for HTTPS protocol)
 
 The status of the webhooks service is reflected below under the parameter **Webhooks Web Service Status**. If all parameters are configured correctly, it should display "Opened".
-
 
 ## How To Use
 

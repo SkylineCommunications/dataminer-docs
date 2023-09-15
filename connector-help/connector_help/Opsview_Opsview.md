@@ -133,7 +133,7 @@ In that case, by using the **Reflect** or **Reflect All** buttons, you can run t
 
 ## DataMiner Connectivity Framework
 
-The **1.0.0.x** connector range of the Opsview Opsview driver supports the usage of DCF and can only be used on a DMA with **9.0 CU9** as the minimum version.
+The **1.0.0.x** connector range of the Opsview Opsview connector supports the usage of DCF and can only be used on a DMA with **9.0 CU9** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 

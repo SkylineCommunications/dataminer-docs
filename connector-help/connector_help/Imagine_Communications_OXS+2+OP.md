@@ -4,7 +4,7 @@ uid: Connector_help_Imagine_Communications_OXS+2+OP
 
 # Imagine Communications OXS+2+OP
 
-The **Imagine Communications OXS+2+OP** driver combines a **serial** and **smart-serial** connection to monitor and configure the Receiver card in an Imagine Communications frame. Alarm monitoring can be activated on all important parameters.
+The **Imagine Communications OXS+2+OP** connector combines a **serial** and **smart-serial** connection to monitor and configure the Receiver card in an Imagine Communications frame. Alarm monitoring can be activated on all important parameters.
 
 ## About
 

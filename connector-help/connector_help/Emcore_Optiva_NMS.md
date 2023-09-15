@@ -10,7 +10,7 @@ The Emcore Optiva NMS connector is a DVE manager for the **Emcore Optiva NMS (Mo
 
 This connector uses **SNMP** polling to retrieve data from the device and set data on the device.
 
-This connector also exports several other drivers based on the information retrieved from the hardware. The list of exported connectors can be found in the "Exported Connectors" section of this page.
+This connector also exports several other connectors based on the information retrieved from the hardware. The list of exported connectors can be found in the "Exported Connectors" section of this page.
 
 ### Version Info
 
@@ -28,7 +28,7 @@ This connector also exports several other drivers based on the information retri
 
 ### Exported connectors
 
-| **Exported Protocol**                                                                          | **Description**   |
+| **Exported Connector**                                                                          | **Description**   |
 |------------------------------------------------------------------------------------------------|-------------------|
 | [Emcore Optiva NMS - Transmitter](xref:Connector_help_Emcore_Optiva_NMS_-_Transmitter) | Transmission card |
 | [Emcore Optiva NMS - Receiver](xref:Connector_help_Emcore_Optiva_NMS_-_Receiver)       | Receiver card     |

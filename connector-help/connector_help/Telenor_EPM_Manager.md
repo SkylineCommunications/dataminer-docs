@@ -4,7 +4,7 @@ uid: Connector_help_Telenor_EPM_Manager
 
 # Telenor EPM Manager
 
-This connector is used to aggregate information coming from one or more collectors (see [Telenor EPM Collector](/Driver%20Help/Telenor%20EPM%20Collector.aspx)). These in turn aggregate their data through MAM events and Agama FireHouse export files (see [Telenor EPM Agama Consumer](xref:Connector_help_Telenor_EPM_Agama_Consumer) and Telenor EPM MAM Consumer). The connector then presents this information to the end user.
+This connector is used to aggregate information coming from one or more collectors (see [Telenor EPM Collector](xref:Connector_help_Telenor_EPM_Collector)). These in turn aggregate their data through MAM events and Agama FireHouse export files (see [Telenor EPM Agama Consumer](xref:Connector_help_Telenor_EPM_Agama_Consumer) and Telenor EPM MAM Consumer). The connector then presents this information to the end user.
 
 The connector has two levels of complexity:
 
@@ -29,7 +29,7 @@ The connector has two levels of complexity:
 
 | **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                                                                                                                                                                                                                                          | **Exported Components** |
 |-----------|---------------------|-------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|
-| 1.0.0.x   | No                  | Yes                     | [Telenor EPM Agama Consumer](/Driver%20Help/Telenor%20EPM%20Agama%20Consumer.aspx) Telenor EPM MAM Consumer [Telenor EPM Collector](/Driver%20Help/Telenor%20EPM%20Collector.aspx) [Telenor Propaganda](xref:Connector_help_Telenor_Propaganda) (not required - see "General" section below) | \-                      |
+| 1.0.0.x   | No                  | Yes                     | [Telenor EPM Agama Consumer](xref:Connector_help_Telenor_EPM_Agama_Consumer) Telenor EPM MAM Consumer [Telenor EPM Collector](xref:Connector_help_Telenor_EPM_Collector) [Telenor Propaganda](xref:Connector_help_Telenor_Propaganda) (not required - see "General" section below) | \-                      |
 
 ## Configuration
 

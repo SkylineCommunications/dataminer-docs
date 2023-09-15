@@ -4,7 +4,7 @@ uid: Connector_help_Eyeheight_FB-9E
 
 # Eyeheight FB-9E
 
-With the **Eyeheight FB-9E** driver you can monitor and control the settings of multiple processing cards that fit into the six slots of the eyeheight etherbox (FB-9E).
+With the **Eyeheight FB-9E** connector you can monitor and control the settings of multiple processing cards that fit into the six slots of the eyeheight etherbox (FB-9E).
 
 ## About
 

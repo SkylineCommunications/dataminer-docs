@@ -37,7 +37,7 @@ Note: Upgrading **from range 1.0.0.x to range 1.1.0.x** or higher will cause the
 
 ### Exported connectors
 
-| **Exported Protocol**                                                        | **Description** |
+| **Exported Connector**                                                        | **Description** |
 |------------------------------------------------------------------------------|-----------------|
 | [Nevion NX4600 - Encoder](xref:Connector_help_Nevion_NX4600_-_Encoder) | Encoders        |
 | [Nevion NX4600 - Decoder](xref:Connector_help_Nevion_NX4600_-_Decoder) | Decoders        |

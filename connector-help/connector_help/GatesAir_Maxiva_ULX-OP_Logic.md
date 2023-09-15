@@ -64,4 +64,4 @@ The connector displays both general information about the device and more detail
 
 ## Notes
 
-This connector is part of a group of 3 drivers, which together form the GatesAir Maxiva ULX-OP. As each part of this setup has its own IP address, the connector was split up in 3 parts.
+This connector is part of a group of 3 connectors, which together form the GatesAir Maxiva ULX-OP. As each part of this setup has its own IP address, the connector was split up in 3 parts.

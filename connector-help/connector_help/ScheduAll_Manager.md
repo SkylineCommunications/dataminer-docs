@@ -34,7 +34,7 @@ The **web service** API is an XML interface over HTTP. DataMiner can send reques
 </colgroup>
 <tbody>
 <tr class="odd">
-<td><strong>Driver Range</strong></td>
+<td><strong>Range</strong></td>
 <td><strong>Connections</strong></td>
 </tr>
 <tr class="even">

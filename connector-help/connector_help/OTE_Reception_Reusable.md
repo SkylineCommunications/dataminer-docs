@@ -4,7 +4,7 @@ uid: Connector_help_OTE_Reception_Reusable
 
 # OTE Reception Reusable
 
-The basic driver for enhanced services.
+The basic connector for enhanced services.
 
 ## About
 

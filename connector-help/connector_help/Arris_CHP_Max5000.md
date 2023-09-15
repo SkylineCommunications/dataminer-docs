@@ -38,7 +38,7 @@ This connector also exports several other connectors based on the information re
 
 ### Exported Connectors
 
-| **Exported Protocol**                                                                                      | **Description**                                   |
+| **Exported Connector**                                                                                      | **Description**                                   |
 |------------------------------------------------------------------------------------------------------------|---------------------------------------------------|
 | [Arris CHP Max5000 - CHP-SMM-2](xref:Connector_help_Arris_CHP_Max5000_-_CHP-SMM-2)                 | SNMP-enabled controller card                      |
 | [Arris CHP Max5000 - CHP-CMM-1](xref:Connector_help_Arris_CHP_Max5000_-_CHP-CMM-1)                 | Basic controller card, no SNMP                    |

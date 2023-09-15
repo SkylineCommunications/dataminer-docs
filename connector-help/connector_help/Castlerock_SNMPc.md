@@ -40,7 +40,7 @@ This connector can export different connectors based on the retrieved data. A li
 
 ### Exported connectors
 
-| **Exported Protocol**                                                                  | **Description**                                                                                                                                      |
+| **Exported Connector**                                                                  | **Description**                                                                                                                                      |
 |----------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Castlerock SNMPc Node (in 1.0.0.x and 2.0.0.x) Castlerock SNMPc - Node (since 1.0.1.x) | A separate connector showing only the database or traps information for that specific node, connected to the Castlerock SNMPc. Supported in all ranges. |
 

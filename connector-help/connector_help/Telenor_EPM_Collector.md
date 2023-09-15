@@ -4,7 +4,7 @@ uid: Connector_help_Telenor_EPM_Collector
 
 # Telenor EPM Collector
 
-This connector is used to gather STB data coming from MAM events and Agama firehose export files. The MAM events are forwarded to the collector by elements using the **Telenor EPM MAM Consumer** driver. The Agama files are forwarded to the collector by elements using the **Telenor EPM Agama Consumer** driver. This data is then aggregated to higher topology levels in the **Telenor EPM Manager** driver. Because of the large amount of data they contain, the collector elements are not intended to be opened. The manager UI gives better access to the data.
+This connector is used to gather STB data coming from MAM events and Agama firehose export files. The MAM events are forwarded to the collector by elements using the **Telenor EPM MAM Consumer** connector. The Agama files are forwarded to the collector by elements using the **Telenor EPM Agama Consumer** connector. This data is then aggregated to higher topology levels in the **Telenor EPM Manager** connector. Because of the large amount of data they contain, the collector elements are not intended to be opened. The manager UI gives better access to the data.
 
 ## About
 

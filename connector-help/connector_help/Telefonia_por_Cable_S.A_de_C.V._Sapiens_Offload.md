@@ -4,7 +4,7 @@ uid: Connector_help_Telefonia_por_Cable_S.A_de_C.V._Sapiens_Offload
 
 # Telefonia por Cable S.A de C.V. Sapiens Offload
 
-Loads data from CSV files on button presses and loads information to Logger Tables to be retrieved via GQI Custom Operators. This connector works in hand with the Telefonia por Cable S.A de C.V Topology Aggregator Driver to map out and aggregate the data points.
+Loads data from CSV files on button presses and loads information to Logger Tables to be retrieved via GQI Custom Operators. This connector works in hand with the Telefonia por Cable S.A de C.V Topology Aggregator connector to map out and aggregate the data points.
 
 ## About
 

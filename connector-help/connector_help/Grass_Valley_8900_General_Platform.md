@@ -26,7 +26,7 @@ This is an **SNMP** connector that exports the protocol **Grass Valley 8900 Slot
 
 ### Exported connectors
 
-| **Exported Protocol**  | **Description**       |
+| **Exported Connector**  | **Description**       |
 |------------------------|-----------------------|
 | Grass Valley 8900 Slot | 8947 and 8949 modules |
 

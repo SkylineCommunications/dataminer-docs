@@ -8,7 +8,7 @@ This connector uses **SNMP** to monitor and control the **Motorola APEX1000** **
 
 ## About
 
-The **1.0.1.x** version of the **Motorola APEX1000** driver implements the latest MIB available in early 2014 for the **APEX1000 edge QAM** and can therefore be used with the latest firmware of the device. Only the most important information is currently implemented in this connector.
+The **1.0.1.x** version of the **Motorola APEX1000** connector implements the latest MIB available in early 2014 for the **APEX1000 edge QAM** and can therefore be used with the latest firmware of the device. Only the most important information is currently implemented in this connector.
 
 ### Version Info
 

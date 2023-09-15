@@ -35,7 +35,7 @@ The information on tables and parameters is retrieved via SNMP polling. Specific
 </colgroup>
 <tbody>
 <tr class="odd">
-<td><strong>Driver Range</strong></td>
+<td><strong>Range</strong></td>
 <td><strong>Connections</strong></td>
 </tr>
 <tr class="even">

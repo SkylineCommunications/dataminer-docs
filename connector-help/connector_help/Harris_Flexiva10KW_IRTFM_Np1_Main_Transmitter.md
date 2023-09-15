@@ -16,7 +16,7 @@ This connector can be used to gather information from the Harris Flexiva10KW IRT
 
 ## Configuration
 
-This connector is used by DVEs that are **automatically created** by the parent element using the [Harris Flexiva10KW IRTFM Np1](xref:Connector_help_Harris_Flexiva10KW_IRTFM_Np1) driver.
+This connector is used by DVEs that are **automatically created** by the parent element using the [Harris Flexiva10KW IRTFM Np1](xref:Connector_help_Harris_Flexiva10KW_IRTFM_Np1) connector.
 
 ## Usage
 

@@ -4,7 +4,7 @@ uid: Connector_help_NBCU_Peacock_Popup_Event_Collector
 
 # NBCU Peacock Popup Event Collector
 
-The source of event information for the NBCS Peacock SLE (Single Live Events, a.k.a. popups) is a shared Google spreadsheet used by many different entities within NBCS. The Event Collector driver collects and validates data from the sheet. It works in conjunction with the NBCU Popup Event Manager to store the event information.
+The source of event information for the NBCS Peacock SLE (Single Live Events, a.k.a. popups) is a shared Google spreadsheet used by many different entities within NBCS. The Event Collector connector collects and validates data from the sheet. It works in conjunction with the NBCU Popup Event Manager to store the event information.
 
 ## About
 

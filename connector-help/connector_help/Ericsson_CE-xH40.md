@@ -4,7 +4,7 @@ uid: Connector_help_Ericsson_CE-xH40
 
 # Ericsson CE-xH40
 
-The **Ericsson CE-xH40** driver has a **serial** connection to monitor and configure the Ericsson encoder device over HTTP. Alarm monitoring and trending can be activated on all important parameters.
+The **Ericsson CE-xH40** connector has a **serial** connection to monitor and configure the Ericsson encoder device over HTTP. Alarm monitoring and trending can be activated on all important parameters.
 
 ## About
 

@@ -32,7 +32,7 @@ All data in the element is read-only. It is not posible to configure the Romanti
 
 ### Exported connectors
 
-| **Exported Protocol**                                                            | **Description**                                                 |
+| **Exported Connector**                                                            | **Description**                                                 |
 |----------------------------------------------------------------------------------|-----------------------------------------------------------------|
 | [Romantis NMS - Controller](xref:Connector_help_Romantis_NMS_-_Controller) | Retrieves information on a controller connected to the NMS.     |
 | [Romantis NMS - Station](xref:Connector_help_Romantis_NMS_-_Station)       | Retrieves information on a remote station connected to the NMS. |

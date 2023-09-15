@@ -28,8 +28,8 @@ An NTP software service (NTPD) can also be started on the HPS board. This servic
 
 | **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                                             | **Exported Components**                                                                                                                   |
 |-----------|---------------------|-------------------------|---------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.0.0.x   | No                  | Yes                     | DataMiner connector: [Meinberg LANTIME Modular](/Driver%20Help/Meinberg%20LANTIME%20Modular.aspx) | DataMiner connector: [Meinberg LANTIME IMS-HPS - PTPv2 Instance](xref:Connector_help_Meinberg_LANTIME_IMS-HPS_-_PTPv2_Instance) |
-| 1.0.1.x   | Yes                 | Yes                     | DataMiner connector: [Meinberg LANTIME Modular](/Driver%20Help/Meinberg%20LANTIME%20Modular.aspx) | DataMiner connector: [Meinberg LANTIME IMS-HPS - PTPv2 Instance](xref:Connector_help_Meinberg_LANTIME_IMS-HPS_-_PTPv2_Instance) |
+| 1.0.0.x   | No                  | Yes                     | DataMiner connector:<br>- [Meinberg LANTIME Modular](xref:Connector_help_Meinberg_LANTIME_Modular) | DataMiner connector: [Meinberg LANTIME IMS-HPS - PTPv2 Instance](xref:Connector_help_Meinberg_LANTIME_IMS-HPS_-_PTPv2_Instance) |
+| 1.0.1.x   | Yes                 | Yes                     | DataMiner connector:<br>- [Meinberg LANTIME Modular](xref:Connector_help_Meinberg_LANTIME_Modular) | DataMiner connector: [Meinberg LANTIME IMS-HPS - PTPv2 Instance](xref:Connector_help_Meinberg_LANTIME_IMS-HPS_-_PTPv2_Instance) |
 
 ## Configuration
 

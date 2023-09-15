@@ -4,7 +4,7 @@ uid: Connector_help_Imagine_Communications_VSI6800+
 
 # Imagine Communications VSI6800+
 
-The **Imagine Communications VSI6800+** driver combines a **serial** and **smart-serial** connection. This connector is used to monitor and configure the VSI6800+ amplifier card in an Imagine Communications frame. It is possible to activate alarm monitoring and trending on all important parameters.
+The **Imagine Communications VSI6800+** connector combines a **serial** and **smart-serial** connection. This connector is used to monitor and configure the VSI6800+ amplifier card in an Imagine Communications frame. It is possible to activate alarm monitoring and trending on all important parameters.
 
 ## About
 
@@ -26,7 +26,7 @@ Serial commands are used to set parameters on the device and information is retr
 
 ### Creation
 
-The **Imagine Communications VSI6800+** driver combines **serial** and **smart-serial** communication. During the creation of the element, the port settings need to be filled in correctly. These communication settings will be used to send and receive commands and responses to and from the device.
+The **Imagine Communications VSI6800+** connector combines **serial** and **smart-serial** communication. During the creation of the element, the port settings need to be filled in correctly. These communication settings will be used to send and receive commands and responses to and from the device.
 
 SERIAL CONNECTION:
 

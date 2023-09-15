@@ -6,7 +6,7 @@ uid: Connector_help_Varnish_Cache_Server
 
 Varnish Cache is a web application accelerator, also known as a caching HTTP reverse proxy. It can be installed in front of any server that communicates using HTTP, and configured to cache the contents.
 
-The Varnish Cache Server driver will communicate via HTTP with the web application and get certain information from the cache server. The retrieved information will be displayed in the element in DataMiner.
+The Varnish Cache Server connector will communicate via HTTP with the web application and get certain information from the cache server. The retrieved information will be displayed in the element in DataMiner.
 
 ## About
 

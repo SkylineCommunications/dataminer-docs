@@ -8,7 +8,7 @@ The **RFS Channel Combiner** connector is an **SNMP** connector that is used to 
 
 ## About
 
-The **RFS Monitor** is a component used to monitor **forward/reflected transmitter power** and provide multi-channel combiner configurations. The **RFS Channel Combiner driver** retrieves this monitoring information from the RFS Monitor component, so that this information can be accessed via DataMiner.
+The **RFS Monitor** is a component used to monitor **forward/reflected transmitter power** and provide multi-channel combiner configurations. The **RFS Channel Combiner** connector retrieves this monitoring information from the RFS Monitor component, so that this information can be accessed via DataMiner.
 
 ## Installation and configuration
 

@@ -4,7 +4,7 @@ uid: Connector_help_Sky_UK_Info_On_EWL_-_Pin_Due_Workflow
 
 # Sky UK Info On EWL - Pin Due Workflow
 
-This connector can be used to create an enhanced service containing elements using the connectors [Sky UK SSR](/Driver%20Help/Sky%20UK%20SSR.aspx) and [Sky UK VICC](xref:Connector_help_Sky_UK_VICC).
+This connector can be used to create an enhanced service containing elements using the connectors [Sky UK SSR](xref:Connector_help_Sky_UK_SSR) and [Sky UK VICC](xref:Connector_help_Sky_UK_VICC).
 
 With this connector, alarms can be generated according to predefined rules.
 
@@ -28,12 +28,12 @@ To use this connector, create a service that uses it as its service definition. 
 
 - [Sky UK VICC](xref:Connector_help_Sky_UK_VICC)
 
-- **Channel From User**
+  - **Channel From User**
   - **Data Update Trigger**
 
 - [Sky UK SSR](xref:Connector_help_Sky_UK_SSR)
 
-- **Start Date Time (Current Events)**
+  - **Start Date Time (Current Events)**
   - **Duration (Current Events)**
   - **Parental Rating (Current Events)**
 

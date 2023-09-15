@@ -24,7 +24,7 @@ The ViaLiteHD system comprises up to 13 rack-mounted cards and an SNMP card, all
 
 ### Exported connectors
 
-| **Exported Protocol**                                                                                        | **Description**      |
+| **Exported Connector**                                                                                        | **Description**      |
 |--------------------------------------------------------------------------------------------------------------|----------------------|
 | [ViaLite ViaLiteHD Dual Transmitter](xref:Connector_help_ViaLite_ViaLiteHD_Dual_Transmitter)           | Dual Transmitter     |
 | [ViaLite ViaLiteHD Dual Receiver](xref:Connector_help_ViaLite_ViaLiteHD_Dual_Receiver)                 | Dual Receiver        |

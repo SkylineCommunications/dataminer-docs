@@ -4,7 +4,7 @@ uid: Connector_help_Imagine_Communications_MDP6801+D
 
 # Imagine Communications MDP6801+D
 
-The **Imagine Communications MDP6801+D** driver combines a **serial** and **smart-serial** connection to monitor and configure the Automatic Changeover card in an Imagine Communications frame. Alarm monitoring can be activated on all important parameters.
+The **Imagine Communications MDP6801+D** connector combines a **serial** and **smart-serial** connection to monitor and configure the Automatic Changeover card in an Imagine Communications frame. Alarm monitoring can be activated on all important parameters.
 
 ## About
 

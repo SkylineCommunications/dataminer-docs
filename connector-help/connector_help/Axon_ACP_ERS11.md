@@ -29,7 +29,7 @@ The implemented firmware versions for each supported card type are described in 
 
 ### Exported connectors
 
-| **Exported Protocol**  | **Description**                                                                                                                |
+| **Exported Connector**  | **Description**                                                                                                                |
 |------------------------|--------------------------------------------------------------------------------------------------------------------------------|
 | Axon ACP ERS11 - 2IX08 | Dual-channel basic signal integrity monitor with switch-over function.                                                         |
 | Axon ACP ERS11 - 2IX11 | Dual-channel high performance SDI video and embedded audio probe with clean switch-over function.                              |

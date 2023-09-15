@@ -4,11 +4,11 @@ uid: Connector_help_Generic_Data_Burst_Logger
 
 # Generic Data Burst Logger
 
-The Generic Data Burst Logger will retrieve information from different LAN switch drivers. The data will be displayed in one table, then for each LAN Switch driver a report will be built and saved in the documents page. These reports are then monthly sended via e-mail to a number of selected email addresses.
+The Generic Data Burst Logger will retrieve information from different LAN switch connectors. The data will be displayed in one table, then for each LAN Switch connector a report will be built and saved in the documents page. These reports are then monthly sended via e-mail to a number of selected email addresses.
 
 ## About
 
-The Generic Data Burst Logger driver collects data from various other LAN switch drivers. The following data is retrieved: Transmit Rate, Maximum Transmit Rate, Minimum Transmit Rate, Receive Rate, Maximum Receive Rate, Minimum Receive Rate.
+The Generic Data Burst Logger connector collects data from various other LAN switch connectors. The following data is retrieved: Transmit Rate, Maximum Transmit Rate, Minimum Transmit Rate, Receive Rate, Maximum Receive Rate, Minimum Receive Rate.
 
 This reports are updated at a time interval that can be chosen freely. The fastest possible interval is every 5 minutes.
 
@@ -19,7 +19,7 @@ Every month a report is sent to a number of email addresses that are specified i
 | **Range**            | **Key Features**                                                                                                           | **Based on** | **System Impact**                |
 |----------------------|----------------------------------------------------------------------------------------------------------------------------|--------------|----------------------------------|
 | 1.0.0.x \[obsolete\] | Initial version                                                                                                            | \-           | \-                               |
-| 2.0.0.x \[SLC Main\] | Complete driver refactoring and implement Dynamic Table replacing the standalone parameters displayed in Port status page. | 1.0.0.18     | **Old trend data will be lost.** |
+| 2.0.0.x \[SLC Main\] | Complete connector refactoring and implement Dynamic Table replacing the standalone parameters displayed in Port status page. | 1.0.0.18     | **Old trend data will be lost.** |
 
 ### Product Info
 

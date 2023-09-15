@@ -4,7 +4,7 @@ uid: Connector_help_Imagine_Communications_HDX6801+B4
 
 # Imagine Communications HDX6801+B4
 
-The Imagine Communications HDX6801+B4 driver combines a serial and smart-serial connection to monitor and configure the demux card in an Imagine Communications frame. Alarm monitoring can be activated on all important parameters, including configuration parameters.
+The Imagine Communications HDX6801+B4 connector combines a serial and smart-serial connection to monitor and configure the demux card in an Imagine Communications frame. Alarm monitoring can be activated on all important parameters, including configuration parameters.
 
 The Imagine Communications demux card automatically senses HD/SD-SDI serial video input with embedded audio, and de-embeds it to provide up to four balanced or unbalanced AES/EBU outputs.
 

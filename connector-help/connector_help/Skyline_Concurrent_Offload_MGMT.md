@@ -48,7 +48,7 @@ There is no redundancy defined.
 
 ## How to use
 
-In order to support central database data offloading to multiple destinations (e.g. MySQL, AWS Kinesis, etc.) at the same time, a separate driver will be used, which processes the offload files available in the default system cache offload folder and copies these offload files to multiple separate destination folders. The main purpose of this connector is to create separate cache folders per offload destination. This will simplify the management of the offload files for each offload destination in cases where the destination becomes unavailable for a period of time.
+In order to support central database data offloading to multiple destinations (e.g. MySQL, AWS Kinesis, etc.) at the same time, a separate connector will be used, which processes the offload files available in the default system cache offload folder and copies these offload files to multiple separate destination folders. The main purpose of this connector is to create separate cache folders per offload destination. This will simplify the management of the offload files for each offload destination in cases where the destination becomes unavailable for a period of time.
 
 Statistics are available regarding the files that currently exist in the source offload folder.
 

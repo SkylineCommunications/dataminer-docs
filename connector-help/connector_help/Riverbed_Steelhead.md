@@ -15,7 +15,7 @@ The connector uses the **SNMP** protocol to communicate with the device.
 | **Range** | **Description**                                                  | **DCF Integration** | **Cassandra Compliant** |
 |------------------|------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version.                                                 | No                  | No                      |
-| 1.1.0.x          | Driver changed to use new MIBs.                                  | No                  | No                      |
+| 1.1.0.x          | New MIBs used.                                                   | No                  | No                      |
 | 2.0.0.x          | New range for SNMP version 3, based on previous version 1.1.0.1. | No                  | Yes                     |
 
 ### Product Info

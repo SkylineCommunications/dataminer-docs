@@ -8,7 +8,7 @@ With this connector, files can be moved from local folders to remote folders.
 
 ## About
 
-The **Generic Move File** driver gives the user the possibility to move files from local folders to remote folders.
+The **Generic Move File** connector gives the user the possibility to move files from local folders to remote folders.
 
 ## Installation and configuration
 

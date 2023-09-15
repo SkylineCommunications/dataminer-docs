@@ -51,14 +51,14 @@ This connector exports different types of DVEs, representing modems, network (fo
 
 #### Range 1.0.1.x
 
-| **Exported Protocol**                                                                                                        | **Description**                       |
+| **Exported Connector**                                                                                                        | **Description**                       |
 |------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|
 | [Newtec Dialog Time Series Database - Remotes](xref:Connector_help_Newtec_Dialog_Time_Series_Database_-_Remotes) | Represents modem/terminal components. |
 | [Newtec Dialog Time Series Database - Network](xref:Connector_help_Newtec_Dialog_Time_Series_Database_-_Network) | Represents network components.        |
 
 #### Range 1.0.2.x
 
-| **Exported Protocol**                                                                                                        | **Description**                       |
+| **Exported Connector**                                                                                                        | **Description**                       |
 |------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|
 | [Newtec Dialog Time Series Database - Remotes](xref:Connector_help_Newtec_Dialog_Time_Series_Database_-_Remotes) | Represents modem/terminal components. |
 | [Newtec Dialog Time Series Database - Network](xref:Connector_help_Newtec_Dialog_Time_Series_Database_-_Network) | Represents network components.        |

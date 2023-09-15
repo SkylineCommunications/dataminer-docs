@@ -4,7 +4,7 @@ uid: Connector_help_Eutelsat_Uplink_Manager
 
 # Eutelsat Uplink Manager
 
-The **Eutelsat Uplink Manager** is a custom made driver for Eutelsat that allows you to monitor and swap Uplink Stations.
+The **Eutelsat Uplink Manager** is a custom-made connector for Eutelsat that allows you to monitor and swap Uplink Stations.
 
 ## About
 

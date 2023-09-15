@@ -36,8 +36,8 @@ Something
 <td>1.0.0.x</td>
 <td>No</td>
 <td>Yes</td>
-<td><p>Visio</p>
-<p>Drivers</p>
+<td><p>Visio file</p>
+<p>Connectors</p>
 <ul>
 <li>CEFD NetVue: Inner Element Communications</li>
 <li>CEFD NetVue Service Group: Inner Element Communication</li>

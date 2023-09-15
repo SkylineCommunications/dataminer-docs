@@ -8,7 +8,7 @@ The **SeaChange Spot TSI** makes it possible to monitor a Microsoft server, proc
 
 ## About
 
-The Spot TSI driver periodically polls a TSI server to retrieve status information about the health of the SeaChange services. This happens every 30 seconds by default, and is done using WMI, parsing of SeaChange log files over a Windows administrative share, and receiving SNMPv2c traps from Transport Stream Insertion Logfile Monitor (ref:9 Transport Stream Insertion Logfile Monitor). This data is used to verify the operation of the TSI server within a SeaChange Spot system.
+The Spot TSI connector periodically polls a TSI server to retrieve status information about the health of the SeaChange services. This happens every 30 seconds by default, and is done using WMI, parsing of SeaChange log files over a Windows administrative share, and receiving SNMPv2c traps from Transport Stream Insertion Logfile Monitor (ref:9 Transport Stream Insertion Logfile Monitor). This data is used to verify the operation of the TSI server within a SeaChange Spot system.
 
 ## Installation and configuration
 

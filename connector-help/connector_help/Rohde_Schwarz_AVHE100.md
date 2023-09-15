@@ -28,8 +28,8 @@ This connector was designed to monitor the different properties of the R&S AVHE1
 
 | **Exported Protocol - Range 1.0.0.x** | **Description**                                      |
 |---------------------------------------|------------------------------------------------------|
-| Rohde Schwarz AVHE100 - AVS100        | A separate driver that represents the AVS100 device. |
-| Rohde Schwarz AVHE100 - AVG100        | A separate driver that represents the AVG100 device. |
+| Rohde Schwarz AVHE100 - AVS100        | A separate connector that represents the AVS100 device. |
+| Rohde Schwarz AVHE100 - AVG100        | A separate connector that represents the AVG100 device. |
 
 ## Installation and configuration
 

@@ -32,7 +32,7 @@ From version 1.0.1.5 onwards, the **DataMiner Connectivity Framework** has been 
 
 ### Exported Connectors
 
-| **Exported Protocol**                                                                                                  | **Description** |
+| **Exported Connector**                                                                                                  | **Description** |
 |------------------------------------------------------------------------------------------------------------------------|-----------------|
 | [Thomson Video Networks Vibe CP6000 Decoder](xref:Connector_help_Thomson_Video_Networks_Vibe_CP6000_Decoder) | Decoder modules |
 | [Thomson Video Networks Vibe CP6000 Encoder](xref:Connector_help_Thomson_Video_Networks_Vibe_CP6000_Encoder) | Encoder modules |

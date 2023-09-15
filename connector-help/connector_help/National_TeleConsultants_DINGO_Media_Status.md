@@ -8,7 +8,7 @@ With the **NTC DINGO Media Status** connector, you can monitor information about
 
 ## About
 
-The Media Status driver will periodically poll the database to retrieve the media status information. By default, this happens every 30 seconds.
+The Media Status connector will periodically poll the database to retrieve the media status information. By default, this happens every 30 seconds.
 
 ### Version Info
 

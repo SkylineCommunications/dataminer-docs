@@ -8,7 +8,7 @@ The **SYes SYSTEM LOGIC N+1** connector monitors a Syes SYSTEM LOGIC N+1 system 
 
 ## About
 
-The **SYes SYSTEM LOGIC N+1** driver polls relevant information from the device and allows the user to change its configuration.
+The **SYes SYSTEM LOGIC N+1** connector polls relevant information from the device and allows the user to change its configuration.
 
 ## Installation and configuration
 
