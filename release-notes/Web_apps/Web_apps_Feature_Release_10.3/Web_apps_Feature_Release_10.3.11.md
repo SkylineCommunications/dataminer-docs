@@ -88,6 +88,15 @@ The initial selection of a table, state or timeline component would incorrectly 
 
 Up to now, when you had configured a custom time zone, date/time values displayed in the query builder (fed through a time range component) would be incorrect.
 
+#### Dashboards app/Low-Code Apps - Stepper component: Long stepper state names would be cut off [ID_37242]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+<!-- Not added to MR 10.4.0 -->
+
+Up to now, long stepper state names would be cut off. From now on, stepper state names will be able to wrap.
+
+The text will take up as much horizontal and vertical space as possible, and any overflow will be ellipsed.
+
 #### GQI: Problem when retrieving logger table data from an Elasticsearch database [ID_37251]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
