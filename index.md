@@ -27,6 +27,6 @@ Can't find what you need here? Go to our [DataMiner Community website](https://c
     <a href="/release-notes/DataMiner_General_RNs_index.html" title="DataMiner Release Notes" target="_self"><img src="images/Docs_DataminerReleaseNotes.svg" style="width:100%"></a>
   </div>
   <div class="column">
-    <a href="/connector-help/Connector-Help-Index.html" title="Connector Help" target="_self"><img src="images/Docs_UserGuide.svg" style="width:100%"></a>
+    <a href="/connector-help/Connector-Help-Index.html" title="Connector Help" target="_self"><img src="images/Docs_ConnectorHelp.svg" style="width:100%"></a>
   </div>
 </div>
