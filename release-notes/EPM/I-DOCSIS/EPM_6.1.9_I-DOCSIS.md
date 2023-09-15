@@ -46,6 +46,13 @@ The deployment script that creates the CCAP-CM pair (*EPM_I_DOCSIS_AddNewCcapCmP
 
 To improve performance of the EPM Solution, ID assignment requests are now handled in batches.
 
+#### KPIs in the topology and in the documentation aligned [ID_37301]
+
+As the KPI values in the EPM I-DOCSIS documentation did not fully align with the KPIs accessible in the topology levels, the following changes have now been made:
+
+- Ping Unreachable KPIs have been integrated in Visual Overview
+- The EPM I-DOCSIS documentation has been updated.
+
 ### Fixes
 
 #### Incorrect modulation value in DS QAM Channel dashboard [ID_37135]
