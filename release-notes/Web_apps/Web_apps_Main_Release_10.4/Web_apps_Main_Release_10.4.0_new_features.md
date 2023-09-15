@@ -700,3 +700,27 @@ As to the *Table* component, when you applied a column filter that resulted in 0
 A new *Stepper* component is now available. This component is used to guide the user through a workflow by splitting it up into different numbered or labeled steps. It indicates the progress through the workflow by showing the past steps, current step, and future steps. The component uses a stateful DOM instance or DOM definition (i.e. a DOM instance or DOM definition that contains states) as data input.
 
 For more information on how to configure this component, see [Stepper](xref:DashboardStepper).
+
+#### Low-Code Apps: Dynamic feed values in URL actions [ID_37229]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When configuring an event to navigate to a URL, you can now insert dynamic references to feed values into the URL using the following syntax:
+
+`{FEED.Source name.Feed name.Category name.Data type.Property name}`
+
+- **FEED**: A fixed keyword to indicate that the variable represents a feed link.
+- **Source name**: The name of the page or panel of the low-code app. Example: "Page 1"
+- **Feed name**: The name of the feed. Example: "Table 3"
+- **Category name**: The part of the feed that will contain the data. Example: "Selected rows"
+- **Data type**: The type of data. Example: "Elements"
+- **Property name**: The property of the fed data that should be used. Example: "Protocol Name"
+
+The following example would result in something like "*My element Localhost is from protocol Microsoft Platform*".
+
+*My element `{FEED."Page 1"."Dropdown 3"."Selected item".Elements.Name}` is from protocol `{FEED."Page 1"."Dropdown 3"."Selected item".Elements."Protocol Name"}`.*
+
+> [!NOTE]
+>
+> - Any part that contain spaces should be enclosed by double quotes.
+> - The name of each part can be found in the *FEEDS* data source of the edit panel's *DATA* tab.

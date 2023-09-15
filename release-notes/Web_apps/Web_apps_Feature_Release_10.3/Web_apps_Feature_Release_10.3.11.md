@@ -37,6 +37,30 @@ Also, the error/warning/info visual will now only appear when the component's si
 
 As to the *Table* component, when you applied a column filter that resulted in 0 rows, up to now, an empty window replacing the component would allow you to adjust the filter. From now on, even when a column filter yields 0 rows, the column headers will stay visible and a message will appear (i.e. either the above-mentioned *Empty result message* or a message saying that the column/search filter resulted in no rows).
 
+#### Low-Code Apps: Dynamic feed values in URL actions [ID_37229]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When configuring an event to navigate to a URL, you can now insert dynamic references to feed values into the URL using the following syntax:
+
+`{FEED.Source name.Feed name.Category name.Data type.Property name}`
+
+- **FEED**: A fixed keyword to indicate that the variable represents a feed link.
+- **Source name**: The name of the page or panel of the low-code app. Example: "Page 1"
+- **Feed name**: The name of the feed. Example: "Table 3"
+- **Category name**: The part of the feed that will contain the data. Example: "Selected rows"
+- **Data type**: The type of data. Example: "Elements"
+- **Property name**: The property of the fed data that should be used. Example: "Protocol Name"
+
+The following example would result in something like "*My element Localhost is from protocol Microsoft Platform*".
+
+*My element `{FEED."Page 1"."Dropdown 3"."Selected item".Elements.Name}` is from protocol `{FEED."Page 1"."Dropdown 3"."Selected item".Elements."Protocol Name"}`.*
+
+> [!NOTE]
+>
+> - Any part that contain spaces should be enclosed by double quotes.
+> - The name of each part can be found in the *FEEDS* data source of the edit panel's *DATA* tab.
+
 ## Changes
 
 ### Enhancements
