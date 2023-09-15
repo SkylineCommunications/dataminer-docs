@@ -37,7 +37,7 @@ To access the GitHub NuGet registry, you need a personal access token (PAT). Fol
 
 #### Editing the GitHub Workflow
 
-Instead of using the regular GitHub workflow for NuGet solutions, use the one designed for internal NuGet solutions.
+Instead of using the regular GitHub workflow for NuGet solutions, use the following starter workflow: **Internal DataMiner CICD NuGet Solution**.
 
 Follow the instructions in [the official GitHub Docs](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions) to add a new secret:
 
