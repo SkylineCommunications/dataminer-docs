@@ -683,6 +683,16 @@ The list of presets will also include three new presets (each with a correspondi
 
 In addition, other settings found on the *Layout* tab have been rearranged. The alignment and visibility settings have now been moved to a new *Layout* section, and the order of the quick pick options has been changed.
 
+#### Dashboards app & Low-Code Apps - GQI components: New setting 'Empty result message' [ID_37173]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+All GQI components now have a new *Empty result message* setting that allows you to personalize the message that will be displayed when the GQI query returns an empty result set. Default message: "Nothing to show." Note that this setting cannot be left empty.
+
+Also, the error/warning/info visual will now only appear when the component's size exceeds about half the screen dimensions, both in width and in height.
+
+As to the *Table* component, when you applied a column filter that resulted in 0 rows, up to now, an empty window replacing the component would allow you to adjust the filter. From now on, even when a column filter yields 0 rows, the column headers will stay visible and a message will appear (i.e. either the above-mentioned *Empty result message* or a message saying that the column/search filter resulted in no rows).
+
 #### Dashboards app & Low-Code Apps: New Stepper component [ID_37200]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
