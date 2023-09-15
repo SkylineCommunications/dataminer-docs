@@ -94,6 +94,12 @@ Up to now, when you had configured a custom time zone, date/time values displaye
 
 When a GQI query retrieved logger table data from an Elasticsearch database, the row keys would be filled in incorrectly. As a result, not all rows would have a unique key.
 
+#### Dashboards app/Low-Code Apps: Stepper component would apply an incorrect theme color [ID_37263]
+
+<!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
+
+In some cases, the *Stepper* component would not apply the correct theme color.
+
 #### Dashboards app/Low-Code Apps: Problem with custom time zones [ID_37278]
 
 <!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
