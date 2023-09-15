@@ -10,7 +10,7 @@ Through this connector is possible to gather and view information from the devic
 
 HTTP connector to monitor the **Astro U116 Edge PAL** device.
 
-This connector also contains a SNMP interface to receive traps from the device and polls some network information.
+This connector also contains an SNMP interface to receive traps from the device and polls some network information.
 
 ### Version Info
 

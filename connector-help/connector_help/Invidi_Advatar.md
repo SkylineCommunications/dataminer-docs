@@ -4,7 +4,7 @@ uid: Connector_help_Invidi_Advatar
 
 # Invidi Advatar
 
-The Advatarr technology is widely deployed by cable, satellite and telco operators. It allows television advertisers to accurately execute advertising campaigns. Operators can use it to address every subscriber on an individual, privacy-protected basis.
+The Advatar technology is widely deployed by cable, satellite and telco operators. It allows television advertisers to accurately execute advertising campaigns. Operators can use it to address every subscriber on an individual, privacy-protected basis.
 
 ## About
 

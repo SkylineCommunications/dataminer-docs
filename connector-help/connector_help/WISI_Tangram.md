@@ -8,7 +8,7 @@ The **WISI Tangram** connector is used to display and configure information of t
 
 ## About
 
-The WISI Tangram driver works using SNMP commands and is also configured to receive traps. In addition, a UDP connection needs to be set up in order to receive syslog messages.
+The WISI Tangram connector works using SNMP commands and is also configured to receive traps. In addition, a UDP connection needs to be set up in order to receive syslog messages.
 
 More information is provided on the following website: <http://wisi.de/en/business/products/tangram/>
 
@@ -96,7 +96,7 @@ The IPs can also be configured manually, but then the value will be overwritten 
 
 ## Usage
 
-The WISI Tangram driver creates a main element, which provides information on the chassis status and a module overview, and dynamic virtual elements for each supported module. The name of these DVEs consists of the **Main Element Name** followed by the relevant **Module Number** and **Type**, for instance *TG01 M3 (GT22)*.
+The WISI Tangram connector creates a main element, which provides information on the chassis status and a module overview, and dynamic virtual elements for each supported module. The name of these DVEs consists of the **Main Element Name** followed by the relevant **Module Number** and **Type**, for instance *TG01 M3 (GT22)*.
 
 ### General
 

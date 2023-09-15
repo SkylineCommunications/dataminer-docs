@@ -4,7 +4,7 @@ uid: Connector_help_TDF_ALLISS_Transmitter
 
 # TDF ALLISS Transmitter
 
-The TDF ALLISS Transmitter connector is a virtual connector that maps the parameters of the transmitter system via the TDF Jbus PLC driver.
+The TDF ALLISS Transmitter connector is a virtual connector that maps the parameters of the transmitter system via the TDF Jbus PLC connector.
 
 ## About
 

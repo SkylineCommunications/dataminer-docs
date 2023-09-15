@@ -4,7 +4,7 @@ uid: Connector_help_VOO_Ad_Hoc_Polling
 
 # VOO Ad Hoc Polling
 
-This **driver** allows VOO to poll a list of MTA's independantly from the **CPE** (Seram) system.
+This connector allows VOO to poll a list of MTA's independently from the **CPE** (Seram) system.
 
 ## About
 

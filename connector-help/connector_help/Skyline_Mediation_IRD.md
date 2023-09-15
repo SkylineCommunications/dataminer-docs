@@ -4,7 +4,7 @@ uid: Connector_help_Skyline_Mediation_IRD
 
 # Skyline Mediation IRD
 
-This is a mediation driver for IRDs.
+This is a mediation connector for IRDs.
 
 ## About
 
@@ -22,47 +22,17 @@ This connector links to parameters in IRD elements, so that the parameters can b
 |-----------|------------------------|
 | 1.0.0.x   | N/A                    |
 
-### Version Info
+### System Info
 
-<table>
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><strong>Range</strong></td>
-<td><strong>DCF Integration</strong></td>
-<td><strong>Cassandra Compliant</strong></td>
-<td><strong>Linked Components</strong></td>
-<td><strong>Exported Components</strong></td>
-</tr>
-<tr class="even">
-<td>1.0.0.x</td>
-<td>No</td>
-<td>Yes</td>
-<td><ul>
-<li>Ericsson RX8200</li>
-<li>Harmonic Proview PVR8130</li>
-<li>Ericsson RX8330</li>
-<li>Ateme Kyrion DR5000</li>
-<li>Scopus Network Technologies IRD-2900</li>
-<li>Cisco D9800</li>
-<li>Cisco D9854</li>
-</ul></td>
-<td>-</td>
-</tr>
-</tbody>
-</table>
+| Range | DCF Integration | Cassandra Compliant | Linked Components | Exported Components |
+|--|--|--|--|--|
+| 1.0.0.x | No | Yes | - Ericsson RX8200<br>- Harmonic Proview PVR8130<br>- Ericsson RX8330<br>- Ateme Kyrion DR5000<br>- Scopus Network Technologies IRD-2900<br>- Cisco D9800<br>- Cisco D9854 | - |
 
 ## Creation
 
-It is not possible to create elements with a mediation driver. Instead, elements of supported drivers will have an extra menu item in the element card menu that allows you to see the mediation parameters instead of the default parameters.
+It is not possible to create elements with a mediation connector. Instead, elements of supported connectors will have an extra menu item in the element card menu that allows you to see the mediation parameters instead of the default parameters.
 
-Supported drivers are:
+Supported connectors are:
 
 - Ericsson RX8200
 - Tandberg RX1290
@@ -75,7 +45,7 @@ Supported drivers are:
 
 ## How to Use
 
-To view the information from this connector, click to the hamburger button of the element card for one of the supported drivers and select **Mediation layer** \> **Skyline Mediation IRD**.
+To view the information from this connector, click to the hamburger button of the element card for one of the supported connectors and select **Mediation layer** \> **Skyline Mediation IRD**.
 
 The card will then display the information from the mediation layer on the **General** page. This information consists of the following parameters:
 

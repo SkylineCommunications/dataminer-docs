@@ -20,7 +20,7 @@ SNMP connector for Satellite Receiver Dexin NDS3975. Allows the user to monitor 
 
 #### SNMPconnection
 
-This connector uses a SNMP connection and does not require any input during element creation.
+This connector uses an SNMP connection and does not require any input during element creation.
 
 ## Usage
 

@@ -4,11 +4,11 @@ uid: Connector_help_Cisco_Compression_System
 
 # Cisco Compression System
 
-The **Cisco Compression System** connector is a SNMP connector displaying some generic parameters of the Copernicus Server and also capturing specific traps that are being sent out by the device.
+The **Cisco Compression System** connector is an SNMP connector displaying some generic parameters of the Copernicus Server and also capturing specific traps that are being sent out by the device.
 
 ## About
 
-The SNMP Agent Task Driver for Copernicus NMS (Network Management System) allows integrating the Copernicus NMS server and the devices managed and controlled by these servers in a SNMP management system. The SNMP Agent task sends traps referring to events on the Copernicus NMS server to managing clients on the network and allows full or partial control of particular devices connected to the Copernicus NMS server.
+The SNMP Agent Task Driver for Copernicus NMS (Network Management System) allows integrating the Copernicus NMS server and the devices managed and controlled by these servers in an SNMP management system. The SNMP Agent task sends traps referring to events on the Copernicus NMS server to managing clients on the network and allows full or partial control of particular devices connected to the Copernicus NMS server.
 
 Ranges of the connector
 
@@ -56,4 +56,4 @@ The **copStatusAlive** trap is repeatedly generated to signal that the Copernicu
 
 ### Resource Info
 
-This page displays a SNMP table containing ID, name, location and type of the resources present on the Copernicus. The table is updated with the bindings of the following traps: **copResourceAdded**, **copResourceRemoved**, **copResourceRespondingStatusChanged** and **copResourceAlarmStatusChanged**.
+This page displays an SNMP table containing ID, name, location and type of the resources present on the Copernicus. The table is updated with the bindings of the following traps: **copResourceAdded**, **copResourceRemoved**, **copResourceRespondingStatusChanged** and **copResourceAlarmStatusChanged**.

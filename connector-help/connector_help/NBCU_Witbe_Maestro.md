@@ -14,7 +14,7 @@ The Witbe Maestro protocol works with the Witbe Maestro API to send/retrieve tes
 |----------------------|------------------------------------------------------------------------------------------------------------|--------------|------------------------------------------------------------------------------------------|
 | 1.0.0.x              | \- Sends assets for testing. - Proprietary to NBCU and requires the use of the NBCU VOD Manager.           | \-           | \-                                                                                       |
 | 1.0.1.x \[SLC Main\] | Monitoring of tests on the device added.                                                                   | 1.0.0.x      | The Test table has changed and will not process previous data retrieved from the device. |
-| 2.0.0.x              | (PENDING) Changes are being implemented to allow the Witbe driver to work with or without the VOD Manager. | \-           | \-                                                                                       |
+| 2.0.0.x              | (PENDING) Changes are being implemented to allow the Witbe connector to work with or without the VOD Manager. | \-           | \-                                                                                       |
 
 ### Product Info
 

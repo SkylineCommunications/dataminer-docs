@@ -4,8 +4,6 @@ uid: Connector_help_CEFD_ViperSat_Manager
 
 # CEFD ViperSat Manager
 
-Something
-
 ## About
 
 ### Version Info
@@ -58,5 +56,3 @@ Something
 #### Virtual Connection
 
 This connector uses a virtual connection and does not require any input during element creation.
-
-## How to Use

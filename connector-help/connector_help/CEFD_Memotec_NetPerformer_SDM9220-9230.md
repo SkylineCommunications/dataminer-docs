@@ -4,7 +4,7 @@ uid: Connector_help_CEFD_Memotec_NetPerformer_SDM9220-9230
 
 # Memotec NetPerformer SDM9220-9230
 
-The Memotec Netperformer SDM9220-9230 version is a SNMP connector intended to communicate with SDM9220-9230 Netperformer devices.
+The Memotec Netperformer SDM9220-9230 version is an SNMP connector intended to communicate with SDM9220-9230 Netperformer devices.
 
 ## About
 

@@ -2,7 +2,7 @@
 uid: Connector_help_Sydney_Trains_Timetable_Upload_Monitor
 ---
 
-Sydney Trains Timetable Upload Monitor
+# Sydney Trains Timetable Upload Monitor
 
 This connector is used to monitor and register the times of the latest train timetable uploaded to the system.
 

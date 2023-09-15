@@ -4,12 +4,12 @@ uid: Connector_help_Ziggo_Incident_Gateway
 
 # Ziggo Incident Gateway
 
-The **Ziggo Incident Gateway** connector will generate a SNMP trap to register an event to the SAM system.
+The **Ziggo Incident Gateway** connector will generate an SNMP trap to register an event to the SAM system.
 
 ## About
 
 The **Ziggo Incident Gateway** receives info that is collected by the MICA interactive automation script. This script makes it possible to initiate an incident without the existence of alarms.
-The connector will process this information and will generate a SNMP trap to the SAM System.
+The connector will process this information and will generate an SNMP trap to the SAM System.
 
 ### Version Info
 

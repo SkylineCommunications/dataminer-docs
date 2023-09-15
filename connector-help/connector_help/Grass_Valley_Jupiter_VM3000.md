@@ -4,7 +4,7 @@ uid: Connector_help_Grass_Valley_Jupiter_VM3000
 
 # Grass Valley Jupiter VM3000
 
-The Jupiter VM 3000 system controller is a (matrix) control system from GrassValley that supports a range of distribution switching systems, machine control and remote control panels.
+The Jupiter VM 3000 system controller is a (matrix) control system from Grass Valley that supports a range of distribution switching systems, machine control and remote control panels.
 
 ## About
 

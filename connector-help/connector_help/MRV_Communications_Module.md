@@ -4,7 +4,7 @@ uid: Connector_help_MRV_Communications_Module
 
 # MRV Communications Module
 
-This connector is exported by the MRV Communications Chassis driver and represents a module installed in a slot of the chassis.
+This connector is exported by the MRV Communications Chassis connector and represents a module installed in a slot of the chassis.
 
 ## About
 

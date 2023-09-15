@@ -4,7 +4,7 @@ uid: Connector_help_Verizon_WM_Collectors
 
 # Verizon WM Collectors
 
-This is strictly a system driver. Its function is to perform different actions in the workflow that allows the different **Verizon Collector** connectors to communicate with the **Profile Manager** app.
+This is strictly a system connector. Its function is to perform different actions in the workflow that allows the different **Verizon Collector** connectors to communicate with the **Profile Manager** app.
 
 ## About
 
@@ -47,4 +47,4 @@ There is no redundancy defined.
 
 ## How to use
 
-**As this connector is strictly a system driver, it requires no user interaction.**
+**As this connector is strictly a system connector, it requires no user interaction.**

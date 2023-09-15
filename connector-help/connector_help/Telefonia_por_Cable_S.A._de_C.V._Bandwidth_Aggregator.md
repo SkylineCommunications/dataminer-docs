@@ -1,14 +1,14 @@
 ---
-uid: Connector_help_Telefonía_por_Cable_S.A._de_C.V._Bandwidth_Aggregator
+uid: Connector_help_Telefonia_por_Cable_S.A._de_C.V._Bandwidth_Aggregator
 ---
 
-# Telefon¡a por Cable S.A. de C.V. Bandwidth Aggregator
+# Telefonia por Cable S.A. de C.V. Bandwidth Aggregator
 
 This virtual connector aggregates the sum of the Tx and Rx bandwidth of interfaces from Cisco Management elements.
 
 ## About
 
-This connector retrieves the Tx and Rx bitrate from a list of interfaces of Ciscio Management elements, and calculates the sum for all the interfaces.
+This connector retrieves the Tx and Rx bitrate from a list of interfaces of Cisco Management elements, and calculates the sum for all the interfaces.
 
 On the configuration page, new interfaces can be added to the list of interfaces from which the Tx and Rx bitrate is obtained.
 

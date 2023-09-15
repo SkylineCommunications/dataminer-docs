@@ -40,12 +40,12 @@ There is no redundancy defined.
 
 As this is a virtual connector, **no data traffic** will be shown in **the Stream Viewer**.
 
-The Skyline CCAP Platform WM is configured to handle requests for three drivers: **CISCO CBR-8 CCAP Platform Collector**, **CISCO Manager CIN Platform**, and **Juniper Networks Manager CIN Platform**.
+The Skyline CCAP Platform WM is configured to handle requests for three connectors: **CISCO CBR-8 CCAP Platform Collector**, **CISCO Manager CIN Platform**, and **Juniper Networks Manager CIN Platform**.
 
-There are five workflows to exchange data between these drivers and auxiliary data:
+There are five workflows to exchange data between these connectors and auxiliary data:
 
-- **HPNA:** Communicates with the **Cox HP Network Automation** connector to retrieve relevant data based on the requestor's hostname. Used by all configured drivers.
-- **DCF:** Collates all DCF information from configured drivers once exported to send to the **DCF Connectivity Discovery** script, which creates the report that allows the **Cox IDP EPM Connectivity** connector to create DCF connections for the entire system. Used by all configured drivers.
+- **HPNA:** Communicates with the **Cox HP Network Automation** connector to retrieve relevant data based on the requestor's hostname. Used by all configured connectors.
+- **DCF:** Collates all DCF information from configured connectors once exported to send to the **DCF Connectivity Discovery** script, which creates the report that allows the **Cox IDP EPM Connectivity** connector to create DCF connections for the entire system. Used by all configured connectors.
 - **OUI:** Internally processes requests using the Master.csv file from OUI on matching manufacturer information with MAC addresses. Only used by **CISCO CBR-8 CCAP Platform Collector**.
 - **Vecima RPM:** Communicates with the **Cox Vecima R-PHY Monitor** connector to get relevant data based on requested MAC addresses. Only used by **CISCO CBR-8 CCAP Platform Collector**.
 - **Smart PHY**: Communicates with the **Cox Smart PHY** connector to get relevant data based on requested MAC addresses. Only used by **CISCO CBR-8 CCAP Platform Collector**.

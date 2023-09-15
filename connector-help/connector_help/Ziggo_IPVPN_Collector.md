@@ -8,7 +8,7 @@ The **Ziggo IPVPN Collector** connector collects data from different types of ca
 
 ## About
 
-This connector is part of a larger setup and works together with the **Ziggo IPVPN CPE Manager**, **Ziggo IPVPN Provisioning**, **Ziggo Modem Outage Check**, **Skyline IAM DB** and **Skyline IAM DB Provision** drivers. As part of this setup, an extra database (IAM DB) is required. This extra database contains tables and storage procedures that, together with the aforementioned drivers, form the complete Ziggo CPE solution.
+This connector is part of a larger setup and works together with the **Ziggo IPVPN CPE Manager**, **Ziggo IPVPN Provisioning**, **Ziggo Modem Outage Check**, **Skyline IAM DB** and **Skyline IAM DB Provision** connectors. As part of this setup, an extra database (IAM DB) is required. This extra database contains tables and storage procedures that, together with the aforementioned connectors, form the complete Ziggo CPE solution.
 
 An element will poll multiple modems at the same time through SNMP. Every modem gets polled once every 5 minutes to retrieve rapidly changing data and once every 24 hours to retrieve slowly changing data.
 
@@ -61,7 +61,7 @@ SNMP Settings:
 
 To reduce the number of generated alarms, there can only be one alarm per modem.
 
-This alarm can be configured through a CSV file, which must be placed in the documents folder for the Ziggo IPVPN Collector driver.
+This alarm can be configured through a CSV file, which must be placed in the documents folder for the Ziggo IPVPN Collector connector.
 
 The fields in the CSV file are separated with a semicolon (";"). The order of a line indicates its priority. In case it is a field that represents a numeric value, either a range can be added, e.g. *\[10-14\],* or a comparison, e.g. *\>15*. In other cases, such as for a discreet value, the exact value must be specified. Fields that should not be validated for alarming should be left empty.
 

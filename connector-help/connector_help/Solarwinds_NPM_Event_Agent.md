@@ -14,7 +14,7 @@ This connector is used to retrieve events from a SolarWinds database system.
 |--------------------------|----------------------------------------------------------|--------------|------------------------------|
 | 1.0.0.x                  | Initial version.                                         | \-           | \-                           |
 | 2.0.0.x \[**Obsolete**\] | Changed protocol name to include vendor name.            | 1.0.0.4      | \-                           |
-| 2.0.1.x \[SLC Main\]     | Reworked driver as most of the features stopped working. | 2.0.0.1      | Old trend data will be lost. |
+| 2.0.1.x \[SLC Main\]     | Reworked connector as most of the features stopped working. | 2.0.0.1      | Old trend data will be lost. |
 
 ### Product Info
 

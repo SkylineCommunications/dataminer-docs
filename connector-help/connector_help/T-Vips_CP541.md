@@ -10,9 +10,9 @@ Note that the T-Vips CP541 device is also known as **Nevion TNS541**. This is th
 
 ## About
 
-The **CP541** is part of the T-VIPS cProcessor product family, a line of products designed for processing and handling MPEG transport streams. This connector is consequently very similar to other drivers for the T-VIPS cProcessor product family, such as the **CP540** or **CP546** drivers.
+The **CP541** is part of the T-VIPS cProcessor product family, a line of products designed for processing and handling MPEG transport streams. This connector is consequently very similar to other connectors for the T-VIPS cProcessor product family, such as the **CP540** or **CP546** connectors.
 
-The connector uses SNMP to poll information from the device, but it also handles alarm traps. The **CP541 driver** can also be used to configure the relay controller(s).
+The connector uses SNMP to poll information from the device, but it also handles alarm traps. The **CP541 connector** can also be used to configure the relay controller(s).
 
 ### Version Info
 
@@ -103,7 +103,7 @@ This page displays information about all the alarms in the system. There are 2 t
 
 ### Overview
 
-This page is the **default page** of the CP541 driver. This means that when the element is opened, by default, this will be the first page it displays. The page contains a tree view with the inputs in the system.
+This page is the **default page** of the CP541 connector. This means that when the element is opened, by default, this will be the first page it displays. The page contains a tree view with the inputs in the system.
 
 ### Configurations
 
@@ -127,7 +127,7 @@ This page contains the **Switch Table**. This is the main configuration table fo
 
 ### Overview
 
-This page is the **default page** of the CP541 driver. This means that when the element is opened, by default, this will be the first page it displays. The page contains a tree view with the inputs in the system.
+This page is the **default page** of the CP541 connector. This means that when the element is opened, by default, this will be the first page it displays. The page contains a tree view with the inputs in the system.
 
 ### Inputs
 

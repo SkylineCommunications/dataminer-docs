@@ -8,7 +8,7 @@ This connector provides an overview of the information from the Siemens Netviewe
 
 ## About
 
-The Siemens Netview driver provides an overview of the different network elements connected to the management system. The connector has several pages with general information about the management system and information regarding the status and alarms of the network element.
+The Siemens Netview connector provides an overview of the different network elements connected to the management system. The connector has several pages with general information about the management system and information regarding the status and alarms of the network element.
 
 The connector uses **SNMP** to retrieve data from the device. All data is polled every 30 seconds, except for the alarm table, which is polled every 30 minutes.
 

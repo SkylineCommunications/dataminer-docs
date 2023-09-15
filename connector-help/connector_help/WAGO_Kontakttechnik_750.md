@@ -67,7 +67,7 @@ This range no longer requires a configuration file. The modules are now **retrie
 - For **analog** modules, only the type of the module is returned, so the connector contains a mapping of the different types and how many inputs/outputs this module has.
 - For **digital** modules, the type is not returned. Instead the number of inputs/outputs for this module is returned. For these modules, the type can be linked to the module entry manually (but this is not required to correctly poll the data).
 
-The connector contains a table with all the known modules, how many inputs/outputs they have and which unit should be used for their values. This is all configurable and in case a module is not yet known by the protocol, no driver update is initially required, as new entries can be added to this **mapping** table manually.
+The connector contains a table with all the known modules, how many inputs/outputs they have and which unit should be used for their values. This is all configurable and in case a module is not yet known by the connector, no connector update is initially required, as new entries can be added to this **mapping** table manually.
 
 ### Web Interface
 

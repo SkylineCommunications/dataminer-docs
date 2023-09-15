@@ -10,7 +10,7 @@ The Memotec CXU-810 RAN Optimizer is a modular mobile backhaul platform that del
 
 This connector is intended to get/set information from/to the device via an Element in a DataMiner System, using SNMP commands.
 
-To get more detailed information consult the website http://www.comtechefdata.com/products/advanced-vsat-solutions.
+To get more detailed information consult the website <http://www.comtechefdata.com/products/advanced-vsat-solutions>.
 
 ## Installation and configuration
 
@@ -18,17 +18,14 @@ To get more detailed information consult the website http://www.comtechefdata.co
 
 **SNMP CONNECTION**:
 
-\- **IP address/host**: The polling IP of the device, e.g. *10.11.12.13*
-
-\- **Device address**: not used
+- **IP address/host**: The polling IP of the device, e.g. *10.11.12.13*
+- **Device address**: not used
 
 **SNMP Settings**:
 
-\- **Port number**: the port of the connected device, default *161*
-
-\- **Get community string**: the community string in order to read from the device. The default value is *public*.
-
-\- **Set community string**: the community string in order to set to the device. The default value is *private.*
+- **Port number**: the port of the connected device, default *161*
+- **Get community string**: the community string in order to read from the device. The default value is *public*.
+- **Set community string**: the community string in order to set to the device. The default value is *private.*
 
 ## Usage
 

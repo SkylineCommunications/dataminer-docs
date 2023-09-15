@@ -4,8 +4,6 @@ uid: Connector_help_Moxa_ioLogik_E1240
 
 # Moxa ioLogik E1240
 
-...
-
 ## About
 
 ### Version Info

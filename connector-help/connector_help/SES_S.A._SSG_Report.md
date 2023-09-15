@@ -4,7 +4,7 @@ uid: Connector_help_SES_S.A._SSG_Report
 
 # SES S.A. SSG Report
 
-The SES S.A. SSG Report driver gathers data from selected elements in a DMS and displays the values in a table.
+The SES S.A. SSG Report connector gathers data from selected elements in a DMS and displays the values in a table.
 
 ## About
 

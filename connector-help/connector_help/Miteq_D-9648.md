@@ -17,8 +17,8 @@ The connector for the Miteq D-9648 allows for the monitoring and configuration o
 SERIAL CONNECTION:
 
 - IP address/host: The polling IP of the device
-- IP port: \[Default:4001.\]
-- Bus address: \[64-95\]
+- IP port: Default:4001.
+- Bus address: 64-95
 
 ## Usage
 

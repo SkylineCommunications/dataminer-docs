@@ -6,7 +6,7 @@ uid: Connector_help_Standard_Information_Platform
 
 ## About
 
-This is a base driver for "**Microsoft Platform**" (2.1.0.68), "**Microsoft Platform SNMP**" (1.1.0.15), "**Linux Platform SNMP**" (1.1.0.46) and "**Linux Platform SSH**" (1.0.0.33). Note that the versions are relevant as mediation components refer to particular parameter ids.
+This is a base connector for "**Microsoft Platform**" (2.1.0.68), "**Microsoft Platform SNMP**" (1.1.0.15), "**Linux Platform SNMP**" (1.1.0.46) and "**Linux Platform SSH**" (1.0.0.33). Note that the versions are relevant as mediation components refer to particular parameter ids.
 
 ### Version Info
 

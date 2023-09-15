@@ -59,7 +59,7 @@ The connector retrieves the available SRM pools:
 
 ### Subscribers
 
-Subscribers are drivers that allow for the automatic provisioning of SRM resources. Subscribers are retrieved from, added to, and updated in the SRM module in the form of resources. A context menu allows you to add, update and delete subscribers in the table on this page.
+Subscribers are connectors that allow for the automatic provisioning of SRM resources. Subscribers are retrieved from, added to, and updated in the SRM module in the form of resources. A context menu allows you to add, update and delete subscribers in the table on this page.
 
 The connector retrieves the available SRM subscribers:
 

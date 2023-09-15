@@ -35,7 +35,7 @@ This connector is solely used to switch and monitor the Qligent Vision Linux ser
 
 #### SNMP Main Connection
 
-This connector uses a SNMP connection and requires the following input during element creation:
+This connector uses an SNMP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

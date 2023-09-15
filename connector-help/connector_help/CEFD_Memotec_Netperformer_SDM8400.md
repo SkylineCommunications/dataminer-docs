@@ -4,11 +4,11 @@ uid: Connector_help_CEFD_Memotec_Netperformer_SDM8400
 
 # CEFD Memotec Netperformer SDM8400
 
-The Memotec Netperformer SDM8400 version is a SNMP connector intended to communicate with SDM8400 Netperformer devices.
+The Memotec Netperformer SDM8400 version is an SNMP connector intended to communicate with SDM8400 Netperformer devices.
 
 ## About
 
-A SNMP connection is used in order to succesfully retrieve and configure the device's information.
+A SNMP connection is used in order to successfully retrieve and configure the device's information.
 
 ## Installation and configuration
 
@@ -95,7 +95,7 @@ The **Counters** menu provides access to a selection of counters for the current
 
 ### Errors
 
-The **Errors** page lets you have access to various types of erros.
+The **Errors** page lets you have access to various types of errors.
 
 ### States
 
@@ -109,11 +109,8 @@ This page provides an overview of all various types of states:
 
 ### Routing Table
 
-### The Netperformer Routing provides access to various Routing Table selections.
-
-
+The Netperformer Routing provides access to various Routing Table selections.
 
 ### Web Interface
 
-Use this page to have access to the **Web Interface** provided by the device's web server. Only in a LAN environment it's possible to have access to this page.
-
+Use this page to have access to the **Web Interface** provided by the device's web server. Only in a LAN environment it is possible to have access to this page.

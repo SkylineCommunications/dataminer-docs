@@ -10,7 +10,7 @@ This device is a rack-sized expandable matrix. The **Platinum IP3** provides mat
 
 ## About
 
-This is a dual SNMP/smart-serial connector. For the smart-serial connection, a proprietary Imagine Communications protocol is used, called LRC. This connector uses the same serial logic base as the Imagine Communications Platinum Router driver.
+This is a dual SNMP/smart-serial connector. For the smart-serial connection, a proprietary Imagine Communications protocol is used, called LRC. This connector uses the same serial logic base as the Imagine Communications Platinum Router connector.
 
 ### Version Info
 

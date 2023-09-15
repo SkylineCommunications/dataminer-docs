@@ -10,7 +10,7 @@ The aim of this connector is to monitor and control the **IQHCO3193-1A** device 
 
 This connector implements the RollCall protocol (serial protocol) for all communication with the device.
 
-It is a smart-serial single driver, so all the updates are sent by the device asynchronously, which reduces the network load and improves performance.
+It is a smart-serial single connector, so all the updates are sent by the device asynchronously, which reduces the network load and improves performance.
 
 The version 1.0.0.1 was built for the firmware *4668*.
 

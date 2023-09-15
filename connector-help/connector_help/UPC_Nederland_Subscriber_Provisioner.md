@@ -74,7 +74,7 @@ The following information is exported:
     - DTV subscribers
     - HFC segment group ID
 
-Elements using Casa Systems and Cisco CBR-8 drivers:
+Elements using Casa Systems and Cisco CBR-8 connectors:
 
 An external set action is automatically done on the button **Update Service Groups** on the QAM page.
 

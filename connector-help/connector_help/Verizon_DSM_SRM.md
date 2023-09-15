@@ -44,7 +44,7 @@ There is no redundancy defined.
 
 ## How to use
 
-As this is mainly a system driver, not much user interaction is needed. Below you can find the steps for the different functionalities in the connector.
+As this is mainly a system connector, not much user interaction is needed. Below you can find the steps for the different functionalities in the connector.
 
 ### General
 

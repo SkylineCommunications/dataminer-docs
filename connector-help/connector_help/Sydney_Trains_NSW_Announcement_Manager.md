@@ -4,14 +4,14 @@ uid: Connector_help_Sydney_Trains_NSW_Announcement_Manager
 
 # Sydney Trains NSW Announcement Manager
 
-The **Sydney Trains NSW Announcement Manager** is used to make **live announcements** to the NSW train stations. This connector is similar to the Sydney Trains Announcement Manager, but is used to announce to the NSW disctrict of Sydney Trains.
+The **Sydney Trains NSW Announcement Manager** is used to make **live announcements** to the NSW train stations. This connector is similar to the Sydney Trains Announcement Manager, but is used to announce to the NSW district of Sydney Trains.
 
 ## About
 
 This manager connector is designed to be used in combination with the **Sydney Trains NSW Announcement Manager Visio** file. The **Visio** will be used to select the **station** to which the user wants to announce. The connector is designed to allow multiple announcements by different users at the same time.
 
 This manager connector is similar to the **Sydney Trains Announcement Manager**, but the biggest difference is, that the stations that will be announced to by this connector are **no longer available via IP**.
-This means that instead of configuring the node crosspoint to the specific station, a **PBX call** needs to be set up to the selected station's **phone number**. For that the *Sydney Trains PBX Manager* is used. This connector still interfaces with the *Delec Oratis Matrix System* driver to configure the crosspoint of the NMS matrix, that is used to enable the sound of the microphone.
+This means that instead of configuring the node crosspoint to the specific station, a **PBX call** needs to be set up to the selected station's **phone number**. For that the *Sydney Trains PBX Manager* is used. This connector still interfaces with the *Delec Oratis Matrix System* connector to configure the crosspoint of the NMS matrix, that is used to enable the sound of the microphone.
 
 ### Version Info
 
@@ -50,11 +50,11 @@ There is an extra Configuration page available with some general configurations 
 - **Debug Logging**: if enabled, all steps will be logged (only use when necessary)
 - **Crosspoint dB Value**: this value is used to open the crosspoints in a matrix (default: -*20 dB*)
 - **Crosspoint Configuration Timeout**: the max amount of time that the Announcement Manager will check if the crosspoint was correctly set (after that the set is assumed to have failed) (default: *5s*)
-- **Release Crosspiont Delay**: the time that Announcement Manager will wait to close the crosspoints after the user stops announcing or configures the announcement (default *30s*)
+- **Release Crosspoint Delay**: the time that Announcement Manager will wait to close the crosspoints after the user stops announcing or configures the announcement (default *30s*)
 - **Max Announcement Duration**: max time an announcement can take (after that, crosspoints will be closed) (default: *5min*)
 - **Remove Announcement Delay**: the time between the end of the announcement and when it's removed from the Visio (default: *10s*)
 - **Max PBX Call Initialization Time**: the maximum it's allowed to take to initialize the PBX call (after that the initialization is assumed to have failed) (default: *40s*)
-- **Max PBX Call Retries**: if the initialization time is reached without a successful answer from the PBX Manager, then the intialization will be retried x times, depending on how this parameter is configured (default: 3)
+- **Max PBX Call Retries**: if the initialization time is reached without a successful answer from the PBX Manager, then the initialization will be retried x times, depending on how this parameter is configured (default: 3)
 
 ## Usage
 

@@ -4,7 +4,7 @@ uid: Connector_help_Transtel_Technology_Newtec_Dialog_Platform
 
 # Transtel Technology Newtec Dialog Platform
 
-This connector is designed to retrieve information from a DMA set up by Newtec and exports drivers made by Newtec.
+This connector is designed to retrieve information from a DMA set up by Newtec and exports connectors made by Newtec.
 
 ## About
 

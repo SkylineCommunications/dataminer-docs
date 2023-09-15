@@ -51,4 +51,4 @@ There is no redundancy defined.
 
 ## How to use
 
-The connector retrieves all the serial communication and places the responses in a table on the General page. It will also send the responses to the Tetronik DAKS driver.
+The connector retrieves all the serial communication and places the responses in a table on the General page. It will also send the responses to the Tetronik DAKS connector.

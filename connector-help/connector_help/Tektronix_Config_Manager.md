@@ -8,7 +8,7 @@ The **Tektronix Config Manager** is an application that can configure Tektronix 
 
 ## About
 
-This application can be used to configure probe elements. The following drivers are supported: **Tektronix Sentry, Tektronix Sentry Edge** and **Tektronix Sentry PVQ**.
+This application can be used to configure probe elements. The following connectors are supported: **Tektronix Sentry, Tektronix Sentry Edge** and **Tektronix Sentry PVQ**.
 
 Configuration input must be specified manually or by importing a file from previous configurations.
 

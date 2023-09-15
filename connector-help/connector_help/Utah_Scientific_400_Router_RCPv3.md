@@ -17,8 +17,8 @@ This connector is **smart-serial**, which will say the device sending informatio
 - **Type of port:** TCP/IP
 - **IP Address/host:** the IP Address of the device
 - **IP Port:** This is the **IP Port** of the device on which you want to communicate. **5001 par example.**
-- **Bus Address:** This has **two parts** separated by the **separator** **-**. The first part is the **level** of the router that the element want to represent. The second part is the **Panel ID** of the router.
-- **Local IP Port:** For **each** element on the same PC/Server you use a **different** TCP/IP Port (for example 50000). This is because the device need to know to which element he need to respond, if you don't set the **IP Port**, the elements driver would be **confused**.
+- **Bus Address:** This has **two parts** separated by the **separator** `-`. The first part is the **level** of the router that the element want to represent. The second part is the **Panel ID** of the router.
+- **Local IP Port:** For each element on the same PC/Server you use a **different TCP/IP port** (for example 50000). This is because the device needs to know to which element it has to respond. If you do not set the IP port, the connector would be confused.
 
 ## Usage
 
@@ -36,4 +36,4 @@ The **Alarms** page shows you all the details of the **device alarms**. If there
 
 ## Notes
 
-This **driver** can presents **huge matrixes**, this is a lot of load for the **GUI**, keep that in mind and **don't** make a **large amount** of **elements** with this connector when it's not needed.
+This connector can presents **huge matrixes**. This is a lot of load for the **GUI**. As such, we recommend that you **avoid having a large number of elements using this connector** if possible.

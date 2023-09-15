@@ -8,7 +8,6 @@ The **Grass Valley Morpheus UX** is a completely configurable user interface, th
 
 This protocol allows you to obtain the base data that is used to generate the user interfaces, and manage basic channel information.
 
-
 ## About
 
 ### Version Info
@@ -72,11 +71,3 @@ This page displays all the **channels**, for each of the **systems** associated 
 ### Alarms
 
 This page displays both **unacknowledged** and **acknowledged alarms** on all the systems.
-
-
-
-## Notes
-
-
-
-

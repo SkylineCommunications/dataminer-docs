@@ -2,7 +2,7 @@
 uid: Connector_help_CEFD_CDM-625_Serial
 ---
 
-CEFD CDM-625 Serial
+# CEFD CDM-625 Serial
 
 The **CDM-625 Serial** Advanced Satellite Modem is intended for both closed network and legacy Intelsat applications. The CDM-625 is a replacement for the CDM-600 and CDM-600L Open Network Satellite Modems.
 
@@ -22,21 +22,16 @@ This connector is intended to get and set information in the device via an Eleme
 | 3.0.1.x   | Multiple tables now uses naming instead of displayColumn to make the database for these tables Cassandra-compliant. | 3.0.0.16     | **Old trend data will be lost for these tables.** |
 | 4.0.0.x   | \-                                                                                                                  | \-           | \-                                                |
 
-
-
 ## Installation and configuration
 
 ### Creation
 
-### SERIAL CONNECTION:
+### SERIAL CONNECTION
 
-\- **Type of Port:** the type of port used to connect to the device, default *TCP/IP*
-
-\- **IP address/host**: the polling IP of the Ethernet To Serial Converter eg *10.11.12.13*
-
-\- **IP Port**: the port addressed to connect the device, set in the Ethernet To Serial Converter, eg *4001*
-
-\- **BUS Address**: the BUS address set in the device, eg *1*
+- **Type of Port:** the type of port used to connect to the device, default *TCP/IP*
+- **IP address/host**: the polling IP of the Ethernet To Serial Converter eg *10.11.12.13*
+- **IP Port**: the port addressed to connect the device, set in the Ethernet To Serial Converter, eg *4001*
+- **BUS Address**: the BUS address set in the device, eg *1*
 
 ## Usage
 
@@ -62,7 +57,7 @@ Under this page, Modem's **Transmit** and **Receive** parameters can be set. The
 
 ### Config - Overhead
 
-Access this page to configure **ESC**, **AUPC** and **EDMAC**. Also **CnC-APC** and **IDR Backward Alarms** can be set uder the page buttons.
+Access this page to configure **ESC**, **AUPC** and **EDMAC**. Also **CnC-APC** and **IDR Backward Alarms** can be set under the page buttons.
 
 ### Config - Utilities
 
@@ -82,11 +77,11 @@ Under this page the **PTP** **Feature** is set.
 
 ### Status - Modem Status
 
-To get the status of the modem's funcionalities. Those can be the **Alarms**, **Rx Parameters**, **CnC**, **General Status**, **AUPC**, **WAN Statistics**, **ACM Status** and **Fractional CnC** **Counters**.
+To get the status of the modem's functionalities. Those can be the **Alarms**, **Rx Parameters**, **CnC**, **General Status**, **AUPC**, **WAN Statistics**, **ACM Status** and **Fractional CnC** **Counters**.
 
 ### Status - Modem Logs
 
-To get information about latest **Events** and device **Statistics** use this page. This can be *enabled* or *disabled* throught the buttons. Initialize Pointer is used to load again the entries that are on the device's memory when polling is *disabled*. To mask alarms use the **Alarm Masking** page button.
+To get information about latest **Events** and device **Statistics** use this page. This can be *enabled* or *disabled* through the buttons. Initialize Pointer is used to load again the entries that are on the device's memory when polling is *disabled*. To mask alarms use the **Alarm Masking** page button.
 
 ### ODU / Redundancy
 
@@ -94,11 +89,11 @@ To get information about latest **Events** and device **Statistics** use this pa
 
 ### FSK
 
-In this page is possible to set the FSK fcunionality. This funcionality will generate a virtual element that contains all BUC/LNB parameters. A unique FSK Element Name can be set for the virtual element.
+In this page is possible to set the FSK functionality. This functionality will generate a virtual element that contains all BUC/LNB parameters. A unique FSK Element Name can be set for the virtual element.
 
 ### Save / Load Configuration
 
-In this page is possible to **Save** to a csv file all parameters values. After, is also possible to **Load** that same file. It will set the parameters qith the values that were saved.
+In this page is possible to **Save** to a csv file all parameters values. After, is also possible to **Load** that same file. It will set the parameters with the values that were saved.
 
 - The file will be stored by default on this folder: *C:\Skyline DataMiner\Documents\DMA_COMMON_DOCUMENTS\\PROTOCOLNAME\]*
 

@@ -6,7 +6,7 @@ uid: Connector_help_Standard_Switch_Management
 
 ## About
 
-This is the base driver for "**CISCO Manager**" (7.0.0.1), "**Cisco Nexus**" (2.0.0.1) and "**Juniper Networks Manager**" (1.0.3.7).
+This is the base connector for "**CISCO Manager**" (7.0.0.1), "**Cisco Nexus**" (2.0.0.1) and "**Juniper Networks Manager**" (1.0.3.7).
 
 ### Version Info
 

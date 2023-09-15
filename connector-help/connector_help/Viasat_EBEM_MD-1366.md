@@ -17,7 +17,7 @@ Version **1.1.0.1** introduces a major update, supporting both **local and dista
 | **Range** | **Description**                                                                                                                    | **DCF Integration** | **Cassandra Compliant** |
 |------------------|------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial range                                                                                                                      | No                  | No                      |
-| 1.1.0.x          | Capability to monitor both a local and distant modem with a single driver, as well set the active (local) and flash configuration. | No                  | Yes                     |
+| 1.1.0.x          | Capability to monitor both a local and distant modem with a single connector, as well set the active (local) and flash configuration. | No                  | Yes                     |
 
 ### Product Info
 

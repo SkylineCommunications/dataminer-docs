@@ -24,14 +24,14 @@ The R&S THV9 transmitter is used for multiplexed Digital Audio Broadcasting in a
 
 ### Connections
 
-#### This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
-#### SNMP CONNECTION:
+#### SNMP CONNECTION
 
 - **IP address/host**: The polling IP of the device.
 
 SNMP Settings:
 
 - **IP port**: The IP port of the device.
-  - **Get community string**: The community string used when reading values from the device, by default *public*.
-  - **Set community string**: The community string used when setting values on the device, by default *private*.
+- **Get community string**: The community string used when reading values from the device, by default *public*.
+- **Set community string**: The community string used when setting values on the device, by default *private*.

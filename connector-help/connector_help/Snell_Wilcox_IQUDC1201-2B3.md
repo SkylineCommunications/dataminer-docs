@@ -10,17 +10,19 @@ The aim of this connector is to monitor and control amongst others the Video and
 
 This connector implements the RollCall protocol (serial protocol) for all communication with the device.
 
-It is a smart-serial single driver, so all the updates are sent by the device asynchronously, which reduces the network load and improves performance.
+It is a smart-serial single connector, so all the updates are sent by the device asynchronously, which reduces the network load and improves performance.
 
 The version 1.0.0.1 was built for the firmware *0713007125.*
 
-## Installation and configuration
+## Configuration
 
-### Creation
+### Connections
+
+#### Serial Connection - Main
 
 This connector uses a serial connection and requires the following input during element creation:
 
-**SERIAL CONNECTION**
+SERIAL CONNECTION:
 
 - **IP address/host**: The polling IP of the device, e.g. *172.16.61.26*.
 - **IP Port:** The IP port of the device, e.g. *2050*.

@@ -10,7 +10,7 @@ Ticketing System for USMS tickets and trigger IVR.
 
 This connector will automatically create tickets based on correlated alarms. It also allows the operator to manually create tickets on existing alarms and even close them. The connector will list all created tickets and update their status from RSS feeds.
 
-USMS tickets are forwarded towards Ziggo USMS Ticket Gateway driver and IVR is sent to Ziggo IVR Gateway driver.
+USMS tickets are forwarded towards Ziggo USMS Ticket Gateway connector and IVR is sent to Ziggo IVR Gateway connector.
 
 ### Version Info
 
@@ -54,7 +54,7 @@ A template can have multiple linked tasks. These are available in the **Template
 
 ### Remote Element Config
 
-This page allows the configuration of the remote Gateway drivers (see "Installation and Configuration" section above).
+This page allows the configuration of the remote Gateway connectors (see "Installation and Configuration" section above).
 
 ### Source Tables
 

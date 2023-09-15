@@ -8,7 +8,7 @@ The **T-VIPS TVG430** connector is an SNMP-based connector used to monitor and c
 
 ## About
 
-The **TVG430** provides JPEG2000 compression of HD-SDI signals, allowing transmission of HDTV signals over Gigabit Ethernet links as well as over DVB ASI links. The **TVG430** is part of the T-VIPS Video Gateway Suite and is consequently very similar to other T-VIPS TVGxxx drivers.
+The **TVG430** provides JPEG2000 compression of HD-SDI signals, allowing transmission of HDTV signals over Gigabit Ethernet links as well as over DVB ASI links. The **TVG430** is part of the T-VIPS Video Gateway Suite and is consequently very similar to other T-VIPS TVGxxx connectors.
 
 There are 2 operational modes available for the **T-VIPS TVG430**: *HD-SDI to IP* and *IP to HD-SDI*. This connector allows you to change the operational mode and to modify settings for both operational modes.
 

@@ -4,7 +4,7 @@ uid: Connector_help_Harmonic_Prostream_1000
 
 # Harmonic ProStream 1000
 
-The ProStreamr 1000 stream processing platform is the ideal solution for multiplexing and scrambling of SD or HD video and audio services.
+The ProStream 1000 stream processing platform is the ideal solution for multiplexing and scrambling of SD or HD video and audio services.
 
 ## About
 

@@ -4,7 +4,7 @@ uid: Connector_help_Snell_Wilcox_MC2000_Controller
 
 # Snell Wilcox MC2000 Controller
 
-The **Snell Wilcox MC2000 Controller** is a 1U motion-compensated frame rate and format converter. The Snell Wilcox KudosPro driver should be used along with this connector (for the controller) to provide full parameter and feature monitoring and control.
+The **Snell Wilcox MC2000 Controller** is a 1U motion-compensated frame rate and format converter. The Snell Wilcox KudosPro connector should be used along with this connector (for the controller) to provide full parameter and feature monitoring and control.
 
 ## About
 

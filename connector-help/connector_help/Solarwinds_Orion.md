@@ -6,7 +6,7 @@ uid: Connector_help_Solarwinds_Orion
 
 The **Solarwinds Orion** is a monitoring tool used by system administrators and network engineers. This connector is intended to collect information about the components available on the network. That information is provided by the Orion modules (APM, NCM, IPAM, NPM, etc.).
 
-This connector will export a different driver based on retrieved data (see section "Exported Connectors"). The corresponding **Solarwinds Orion Node** element is generated when **DVE Creation** is enabled in the **Orion Nodes** table.
+This connector will export a different connector based on retrieved data (see section "Exported Connectors"). The corresponding **Solarwinds Orion Node** element is generated when **DVE Creation** is enabled in the **Orion Nodes** table.
 
 ## About
 

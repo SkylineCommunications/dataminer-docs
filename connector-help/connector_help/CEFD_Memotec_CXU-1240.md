@@ -2,9 +2,9 @@
 uid: Connector_help_CEFD_Memotec_CXU-1240
 ---
 
-CEFD MEMOTEC CXU-1240
+# CEFD MEMOTEC CXU-1240
 
-This is a SNMP connector for the configuration and monitoring of the following types of devices:
+This is an SNMP connector for the configuration and monitoring of the following types of devices:
 
 - CXU-1240
 - CXU-1010
@@ -21,15 +21,13 @@ This connector uses a Simple Network Management Protocol (**SNMP**) connection a
 
 **SNMP CONNECTION**:
 
-\- **IP address/host**: The polling IP of the device, e.g. *10.11.12.13*
+- **IP address/host**: The polling IP of the device, e.g. *10.11.12.13*
 
 **SNMP Settings**:
 
-\- **Port number**: the port of the connected device, default *161*
-
-\- **Get community string**: the community string in order to read from the device. The default value is *public*.
-
-\- **Set community string**: the community string in order to set to the device. The default value is *private.*
+- **Port number**: the port of the connected device, default *161*
+- **Get community string**: the community string in order to read from the device. The default value is *public*.
+- **Set community string**: the community string in order to set to the device. The default value is *private.*
 
 ## Usage
 

@@ -8,7 +8,7 @@ The **IBM Storage** protocol is used to monitor and control the associated devic
 
 ## About
 
-This protocol can be used to monitor and control any IBM Storage device. A TCP/IP connection is used in order to succesfully retrieve and configure the device's settings.
+This protocol can be used to monitor and control any IBM Storage device. A TCP/IP connection is used in order to successfully retrieve and configure the device's settings.
 
 ## Installation and configuration
 

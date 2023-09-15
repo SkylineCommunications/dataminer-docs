@@ -1,5 +1,5 @@
 ---
-uid: Connector_help_CEDF_CDM_Qx_SNMP
+uid: Connector_help_CEFD_CDM_Qx_SNMP
 ---
 
 # CEFD CDM Qx SNMP

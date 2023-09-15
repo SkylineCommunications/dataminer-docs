@@ -4,7 +4,7 @@ uid: Connector_help_TeamCast_CID_Receiver
 
 # TeamCast CID Receiver
 
-With the TeamCast CID Receiver driver it is possible to configure and monitor the Carrier ID extractor DVB-S/DVB-S demodulator. This device is a **satellite receiver** and is used to optimize the quality of satellite links.
+With the TeamCast CID Receiver connector it is possible to configure and monitor the Carrier ID extractor DVB-S/DVB-S demodulator. This device is a **satellite receiver** and is used to optimize the quality of satellite links.
 
 This optimization is achieved by embedding and detecting a small message and a unique ID within the video or data satellite carrier.
 

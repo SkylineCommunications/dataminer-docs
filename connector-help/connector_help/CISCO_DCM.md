@@ -758,7 +758,7 @@ A line can be set as *Always On Air* or *Never On Air*, in which case all time f
 
 Services that are not configured in this table are considered "Always On Air". If there is a record for a service with "Never On Air" and another one with a valid start and end time or the value "Always On Air", then the service will be considered on air during that period.
 
-#### The context menu on the On-Air Services Scheduler:
+#### The context menu on the On-Air Services Scheduler
 
 - **Add New Row:** To add a row: right-click the table and select the "Add Row" item in the context menu. You will be asked for the name of the service you want to add.
 - **Add Missing Services:** Looks for any service name that is configured on the device and does not have a config record. A row will be added for those records and set to *Always On Air*.

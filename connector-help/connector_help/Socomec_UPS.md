@@ -4,11 +4,11 @@ uid: Connector_help_Socomec_UPS
 
 # Socomec UPS
 
-The Socomec UPS version is a snmp driver that communicate with Socomec UPS to get information from the device.
+The Socomec UPS version is an SNMP connector that communicate with Socomec UPS to get information from the device.
 
-## about
+## About
 
-A SNMP connection is used in order to succesfully retrieve and configure the device's information.
+A SNMP connection is used in order to successfully retrieve and configure the device's information.
 
 ### Version Info
 

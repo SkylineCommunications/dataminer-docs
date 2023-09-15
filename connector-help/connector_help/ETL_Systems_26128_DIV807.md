@@ -8,7 +8,7 @@ The **ETL Systems 26128 DIV807** protocol is used to monitor and control 8-way a
 
 ## About
 
-This protocol can be used to monitor and control any ETL Systems 26128 DIV807 module. A **TCP/IP** connection is used in order to succesfully retrieve and configure the settings of the device.
+This protocol can be used to monitor and control any ETL Systems 26128 DIV807 module. A **TCP/IP** connection is used in order to successfully retrieve and configure the settings of the device.
 
 ## Installation and configuration
 

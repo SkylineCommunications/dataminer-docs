@@ -8,7 +8,7 @@ The **UMH160** IRD is broadcast-quality MPEG-4 AVC video/audio decoder that perf
 
 ## About
 
-The UMH160R-IP driver was designed to monitor all the inputs and outputs of the device. It can also read all the channels running in the device and there is a special configuration page where you can configure the channels. The connector is based on the Wellav UMH 160 IP driver, but supports DCF and uses better, updated code.
+The UMH160R-IP connector was designed to monitor all the inputs and outputs of the device. It can also read all the channels running in the device and there is a special configuration page where you can configure the channels. The connector is based on the Wellav UMH 160 IP connector, but supports DCF and uses better, updated code.
 
 ### Version Info
 

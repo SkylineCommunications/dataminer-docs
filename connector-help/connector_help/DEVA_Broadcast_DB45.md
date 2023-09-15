@@ -4,7 +4,7 @@ uid: Connector_help_DEVA_Broadcast_DB45
 
 # DEVA Broadcast DB45
 
-The DEVA Broadcast DB45 protocol can be used to monitor the FM signals analyzed and monitored by the DEVA Broadcast DB45.
+The DEVA Broadcast DB45 connector can be used to monitor the FM signals analyzed and monitored by the DEVA Broadcast DB45.
 
 ## About
 

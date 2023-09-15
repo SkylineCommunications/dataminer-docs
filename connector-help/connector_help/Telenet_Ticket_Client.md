@@ -58,7 +58,7 @@ As this info needs to be the same as defined in the **Telenet Ticket Gateway**, 
 
 #### Configuration of related elements
 
-This connector communicates with different connectors. The names of the elements using these drivers need to be filled in via the **Configuration** page button of the **Connection Details** page.
+This connector communicates with different connectors. The names of the elements using these connectors need to be filled in via the **Configuration** page button of the **Connection Details** page.
 
 It is also possible to set the maximum number of rows in the **Communication - Response Table**.
 

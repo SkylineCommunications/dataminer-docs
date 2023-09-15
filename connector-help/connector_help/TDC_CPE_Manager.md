@@ -4,7 +4,7 @@ uid: Connector_help_TDC_CPE_Manager
 
 # TDC CPE Manager
 
-The **TDC CPE Manager** is part of a CPE setup and is responsible for aggregating the data and providing the user interface. It works together with the following drivers:
+The **TDC CPE Manager** is part of a CPE setup and is responsible for aggregating the data and providing the user interface. It works together with the following connectors:
 
 - **CISCO CMTS**
 - **Generic DOCSIS Cable Modem Collector**
@@ -33,7 +33,7 @@ The **TDC CPE Manager** is part of a CPE setup and is responsible for aggregatin
 |-----------|---------------------|-------------------------|-------------------------------------------|-------------------------|
 | 1.0.0.x   | No                  | Yes                     | \-                                        | \-                      |
 | 3.0.1.x   | No                  | Yes                     | \-                                        | \-                      |
-| 3.0.2.x   | No                  | Yes                     | TDC OLT CM Collector driver (view tables) | \-                      |
+| 3.0.2.x   | No                  | Yes                     | TDC OLT CM Collector connector (view tables) | \-                      |
 
 ## Installation and configuration
 

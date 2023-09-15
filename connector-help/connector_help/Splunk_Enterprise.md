@@ -10,7 +10,7 @@ Splunk is an application that captures, indexes, and correlates high volumes of 
 
 ## About
 
-The Splunk Enterprise driver focuses on monitoring jobs created based on saved searches configured in the Splunk platform.
+The Splunk Enterprise connector focuses on monitoring jobs created based on saved searches configured in the Splunk platform.
 
 ### Version Info
 
@@ -116,6 +116,6 @@ This page contains the following parameters, which will be used by the connector
 - **User Node**: The user node required for HTTP requests
 - **App Node**: The app node required for HTTP requests
 
-The Splunk Enterprise driver renews the authentication session key every 10 minutes. After a session key renewal, the connector will poll the saved searches configured in the Saved Search Table.
+The Splunk Enterprise connector renews the authentication session key every 10 minutes. After a session key renewal, the connector will poll the saved searches configured in the Saved Search Table.
 
 This page also contains a **Login** button, which can be used to force an authentication request.

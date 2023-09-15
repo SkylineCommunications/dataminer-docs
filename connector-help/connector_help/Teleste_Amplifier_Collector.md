@@ -4,7 +4,7 @@ uid: Connector_help_Teleste_Amplifier_Collector
 
 # Teleste Amplifier Collector
 
-With this connector, you can poll a set of Teleste amplifiers (that all support the same MIBs) and collect all the data in one driver.
+With this connector, you can poll a set of Teleste amplifiers (that all support the same MIBs) and collect all the data in one connector.
 
 ## About
 
@@ -145,7 +145,7 @@ The **Amplified Reductions** table makes use of the information specified in the
 
 ### SNMP Table Pages
 
-The connector can poll 12 different SNMP tables. For every amplifier, the SNMP table can contain multiple rows. As a real collector driver, this connector collects all rows of a certain SNMP table in one table, regardless of which amplifier it refers to.
+The connector can poll 12 different SNMP tables. For every amplifier, the SNMP table can contain multiple rows. As a real collector connector, this connector collects all rows of a certain SNMP table in one table, regardless of which amplifier it refers to.
 
 Before the columns of the SNMP table itself, you will find four columns that are always the same:
 

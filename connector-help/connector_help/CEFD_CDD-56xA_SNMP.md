@@ -4,7 +4,7 @@ uid: Connector_help_CEFD_CDD-56xA_SNMP
 
 # CEFD CDD-56xA SNMP
 
-This connector uses a SNMP connection to manage the CEFD CDD-56xA demodulator.
+This connector uses an SNMP connection to manage the CEFD CDD-56xA demodulator.
 
 ## About
 

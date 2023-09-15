@@ -2,7 +2,7 @@
 uid: Connector_help_GeoSync_Microwave_TRR-Ku2
 ---
 
-GeoSync Microwave TRR-Ku2
+# GeoSync Microwave TRR-Ku2
 
 These Test Translators are designed for applications where frequency translation is needed with a minimum of amplitude and group delay distortion. A level control of 30 dB is provided at the front panel in "local mode" or on the remote bus in "remote mode".
 
@@ -66,12 +66,10 @@ The entries can be cleared using the **Clear** button.
 
 The **IP Address, Subnet Mask** and **Gateway** can be configured and applied on this page.
 
-The SNMP **Read** and **Write Communities** are configurablable, as well as the **Trap Interval** and **Destination**.
+The SNMP **Read** and **Write Communities** are configurable, as well as the **Trap Interval** and **Destination**.
 
 ### Web Interface Page
 
 This page displays the web interface of the device.
 
 Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.
-
-

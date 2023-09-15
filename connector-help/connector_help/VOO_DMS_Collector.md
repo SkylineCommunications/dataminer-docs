@@ -4,7 +4,7 @@ uid: Connector_help_VOO_DMS_Collector
 
 # VOO DMS Collector
 
-With the VOO DMS Collector driver it is possible to retrieve active alarms form other DMS clusters and forward these to defined DataMiner Elements.
+With the VOO DMS Collector connector it is possible to retrieve active alarms form other DMS clusters and forward these to defined DataMiner Elements.
 
 ## About
 

@@ -6,7 +6,7 @@ uid: Connector_help_Generic_Ticketing_Gateway
 
 This is a DataMiner connector that allows for the polling of tickets created in the **DataMiner Ticketing App** for a given ticketing domain. This connector is generic so that any custom column is able to be retrieved from the configured domain.
 
-About
+## About
 
 ### Version Info
 
@@ -66,5 +66,3 @@ It contains the **Add Ticket Parameters** table that contains all the parameters
 When filling the **Value** Column in the **Add Ticket Parameters** table, the format of the data will be checked.
 
 After filling all mandatory rows, you can press the **Add Ticket** button to create a ticket. If **not** all of the mandatory parameters are filled, it will not be possible to add another ticket and the missing mandatory fields will be logged in the **Add Ticket Status**. This parameter will also show any errors if there's any issue with the format of the inserted data.
-
-

@@ -4,11 +4,7 @@ uid: Connector_help_Generic_Docsis_CPE_Manager
 
 # Generic Docsis CPE Manager
 
-
-
 This connector aggregates and displays information from CM and CMTS. This connector can be used as a BE or FE CPE Manager.
-
-
 
 ## About
 
@@ -25,8 +21,6 @@ This connector aggregates and displays information from CM and CMTS. This connec
 This connector uses a virtual connection and does not require any input during element creation.
 
 ## Usage
-
-
 
 ### network topology
 

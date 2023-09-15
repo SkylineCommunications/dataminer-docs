@@ -1,10 +1,10 @@
 ---
-uid: Connector_help_GrassValley_Jupiter_CM4000
+uid: Connector_help_Grass_Valley_Jupiter_CM4000
 ---
 
-# GrassValley Jupiter CM4000
+# Grass Valley Jupiter CM4000
 
-The **GrassValley Jupiter CM4000** is a matrix device that contains both **ASI** and **SDI** outputs/inputs.
+The **Grass Valley Jupiter CM4000** is a matrix device that contains both **ASI** and **SDI** outputs/inputs.
 
 ## About
 

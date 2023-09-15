@@ -44,6 +44,6 @@ SERIAL CONNECTION:
 
 ### General
 
-This page contains all the information. Here you can find information abou the current **state** of the **driver**, the **polarization angle**, if there are **alarms** and also information about the **control mode**.
+This page contains all the information. Here you can find information about the current **state** of the connector, the **polarization angle**, if there are **alarms**, and also information about the **control mode**.
 
 This device does not have a web interface.

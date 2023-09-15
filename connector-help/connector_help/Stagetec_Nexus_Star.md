@@ -49,7 +49,7 @@ SERIAL CONNECTION:
 
 ## Usage
 
-The Stagetec Nexus Star driver has **5 pages**.
+The Stagetec Nexus Star connector has **5 pages**.
 
 ### General
 

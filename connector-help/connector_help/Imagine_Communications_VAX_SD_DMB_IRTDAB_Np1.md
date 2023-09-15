@@ -1,8 +1,8 @@
 ---
-uid: Connector_help_Imagine_Communication_VAX_SD_DMB_IRTDAB_Np1
+uid: Connector_help_Imagine_Communications_VAX_SD_DMB_IRTDAB_Np1
 ---
 
-# Imagine Communication VAX SD DMB IRTDAB Np1
+# Imagine Communications VAX SD DMB IRTDAB Np1
 
 This connector is used to monitor an Imagine Communications VAX SD DMB IRTDAB Np1 transmitter device.
 

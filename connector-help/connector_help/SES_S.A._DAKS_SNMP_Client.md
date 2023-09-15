@@ -56,4 +56,4 @@ There is no redundancy defined.
 
 This connector uses an **SNMP** connection, but does not actively retrieve information. Instead, it receives **traps** from **multiple** **devices**, based on the IP addresses configured on the General page.
 
-When the connector receives a trap, it will check the Text Message Negative column to see if the BCID needs to be sent to the Tetronik DAKS driver.
+When the connector receives a trap, it will check the Text Message Negative column to see if the BCID needs to be sent to the Tetronik DAKS connector.

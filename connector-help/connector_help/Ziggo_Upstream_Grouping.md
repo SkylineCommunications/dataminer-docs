@@ -36,8 +36,8 @@ The **Configuration** page allows the user to configure multiple settings and it
 
 - **Elements**:
 
-  - The user can configure the **Orchestrator element** (using the Arris Alarm Central Orchestrator driver, minimum version: 1.0.0.2);
-  - The user can enable or disable the alarm enrichment functionality that will add extra information to the **USSegment** alarms via the **Brain Communication** toggle button. This additional information is requested to the Ziggo Brain driver which communicates with the database. If **Brain Communication** is *enabled*, the **Brain Element** needs to be selected.
+  - The user can configure the **Orchestrator element** (using the Arris Alarm Central Orchestrator connector, minimum version: 1.0.0.2);
+  - The user can enable or disable the alarm enrichment functionality that will add extra information to the **USSegment** alarms via the **Brain Communication** toggle button. This additional information is requested to the Ziggo Brain connector which communicates with the database. If **Brain Communication** is *enabled*, the **Brain Element** needs to be selected.
   - The **Refresh** button can be used to immediately refresh all available elements that can be chosen. Otherwise, the lists of elements are refreshed every 60 seconds.
 
 - **Parameters**: The user can edit the **URL** parameter that will be set on the **em_url** field of the **Parameters** property.

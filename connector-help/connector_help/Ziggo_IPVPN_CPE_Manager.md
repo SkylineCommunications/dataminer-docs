@@ -8,7 +8,7 @@ The **Ziggo IPVPN CPE Manager** connector provides a CPE manager interface that 
 
 ## About
 
-This connector is part of a larger setup and works together with the **Ziggo IPVPN Collector**, **Ziggo IPVPN Provisioning**, **Skyline IAM DB** and **Skyline IAM DB Provision** drivers. There is also a MySQL setup needed with stored procedures.
+This connector is part of a larger setup and works together with the **Ziggo IPVPN Collector**, **Ziggo IPVPN Provisioning**, **Skyline IAM DB** and **Skyline IAM DB Provision** connectors. There is also a MySQL setup needed with stored procedures.
 
 The connector can be used to view cable modem data from the **Ziggo IPVPN Collector** element, to check where the modem resides in one of the physical topologies (HFC, Fiber or DSL), and also to see the modem in the logical topology of the customer of the host.
 

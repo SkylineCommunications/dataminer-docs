@@ -22,9 +22,9 @@ This connector uses a Simple Network Management Protocol (SNMP) connection and r
 
 **SNMP Settings**:
 
-- \- **Port number**: The port of the connected device, by default *161.*
-- \- **Get community string**: The community string in order to read from the device. The default value is *public*.
-- \- **Set community string**: The community string in order to set to the device. The default value is *private.*
+- **Port number**: The port of the connected device, by default *161.*
+- **Get community string**: The community string in order to read from the device. The default value is *public*.
+- **Set community string**: The community string in order to set to the device. The default value is *private.*
 
 ## Usage
 

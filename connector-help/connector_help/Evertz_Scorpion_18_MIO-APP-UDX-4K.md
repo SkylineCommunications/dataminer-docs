@@ -4,8 +4,6 @@ uid: Connector_help_Evertz_Scorpion_18_MIO-APP-UDX-4K
 
 # Evertz Scorpion 18 MIO-APP-UDX-4K
 
-...
-
 ## About
 
 ### Version Info

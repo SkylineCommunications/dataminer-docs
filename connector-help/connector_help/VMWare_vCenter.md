@@ -8,14 +8,14 @@ VMware vCenter Server provides a centralized platform for managing your VMware v
 
 ## About
 
-The VMWare vCenter driver enables DataMiner to communicate with a VMWare vCenter Server allowing a user to remotly monitor and operate a vCenter server.
+The VMWare vCenter connector enables DataMiner to communicate with a VMWare vCenter Server allowing a user to remotely monitor and operate a vCenter server.
 
 ### Version Info
 
 | **Range** | **Description**                                                              | **DCF Integration** | **Cassandra Compliant** |
 |------------------|------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial Version                                                              | No                  | True                    |
-| 1.0.1.x          | Improve perfomance when polling big amounts of data (multi-threaded timers). | No                  | True                    |
+| 1.0.1.x          | Improve performance when polling big amounts of data (multi-threaded timers). | No                  | True                    |
 
 ### Product Info
 
@@ -43,7 +43,7 @@ At first run the user must access the Login Setup page and edit the Username Fie
 
 ### General
 
-In this page a variaty of general data is displayed. The available data features mostly system and product related data and a variaty of subpages such as:
+In this page a variety of general data is displayed. The available data features mostly system and product related data and a variety of subpages such as:
 
 - **Advanced Networking**
 - **Health**
@@ -61,17 +61,17 @@ In this page it is possible to setup the login credentials so that the connector
 
 At first run it is advised to setup **Username** and **Password** and then press the Authenticate button.
 
-If the login is successfull the REST vCenter API Status, REST Appliance API Status and the Web Service API Status will eventually be sucessfull.
+If the login is successful the REST vCenter API Status, REST Appliance API Status and the Web Service API Status will eventually be successful.
 
-**An adequate toogle button is provided for enabling each API.**
+**An adequate toggle button is provided for enabling each API.**
 
-The user must enable the APIs that he would like to enable polling. Currently the connector supports the **vCenter API** (Datacenters, Clusters, Hosts, Virtual Machines, Datastores and Networks), **Appliance API** (General Data) and the **Web Services API** (Performances Data).
+The user must enable the APIs that he would like to enable polling. Currently the connector supports the **vCenter API** (Data centers, Clusters, Hosts, Virtual Machines, Datastores and Networks), **Appliance API** (General Data) and the **Web Services API** (Performances Data).
 
-Refer to the connector log if the login is unsuccessfull.
+Refer to the connector log if the login is unsuccessful.
 
 ### Datacenter Topology
 
-In this page contains the datacenter topology as well as its assigned clusters, hosts and virtual machines.
+In this page contains the data center topology as well as its assigned clusters, hosts and virtual machines.
 
 A variety of data is provided in this topology.
 

@@ -6,7 +6,7 @@ uid: Connector_help_Suitelife_Systems_Axess
 
 Axess is a flexible network-based management application used by broadcasters, content originators, Telco networks, building management teams and infrastructure facilities operators.
 
-The Suitelife Systems Axess driver polls status and analog tables from the Axess application.
+The Suitelife Systems Axess connector polls status and analog tables from the Axess application.
 
 ## About
 
@@ -14,7 +14,7 @@ The Suitelife Systems Axess driver polls status and analog tables from the Axess
 
 | **Range** | **Key Features** | **Based on** | **System Impact** |
 |-----------|------------------|--------------|-------------------|
-| 1.0.0.x   | Initial driver   | \-           | \-                |
+| 1.0.0.x   | Initial connector   | \-           | \-                |
 
 ### Product Info
 

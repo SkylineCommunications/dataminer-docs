@@ -18,8 +18,6 @@ This connector is intended to communicate with the device using HTTP as describe
 
 ### Product Info
 
-Style: Heading 3 Accent 1
-
 | Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 0.10.3                      |

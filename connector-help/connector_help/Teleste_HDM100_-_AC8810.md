@@ -8,7 +8,7 @@ The AC8810 is an intelligent dual active output node for deep fiber solutions. I
 
 ## About
 
-The AC8810 driver provides a way to interface with the AC8810 ONU module. It is used to display and configure general module and transponder information, forward and return path parameters and alarms.
+The AC8810 connector provides a way to interface with the AC8810 ONU module. It is used to display and configure general module and transponder information, forward and return path parameters and alarms.
 
 ### Product Info
 

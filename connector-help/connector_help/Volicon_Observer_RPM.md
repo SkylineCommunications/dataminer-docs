@@ -10,7 +10,7 @@ This connector is a **DVE manager** for the **Volicon Observer RPM**, which cons
 
 This connector does not poll any parameters from the device. Instead it receives traps and displays them in one table. Every column in this table represents a possible error that can be set with the correct severity. Every instance in this table represents a **video channel**. It is also possible to load channels from a **CSV file** into the **trap table**.
 
-This connector exports other drivers, each of them representing an Observer RPM probe. The list of exported connectors can be found in the "Exported Connectors" section below.
+This connector exports other connectors, each of them representing an Observer RPM probe. The list of exported connectors can be found in the "Exported Connectors" section below.
 
 ### Version Info
 

@@ -4,11 +4,11 @@ uid: Connector_help_Ziggo_xDQA_Parameter_Consolidator
 
 # Ziggo xDQA Parameter Consolidator
 
-This virtual connector gathers information from elements using the **SA xDQA24** and the **CISCO RFGW-1-D** drivers.
+This virtual connector gathers information from elements using the **SA xDQA24** and the **CISCO RFGW-1-D** connectors.
 
 ## About
 
-This connector calculates statistics based on values gathered from elements using the **SA xDQA24** and the **CISCO RFGW-1-D** drivers.
+This connector calculates statistics based on values gathered from elements using the **SA xDQA24** and the **CISCO RFGW-1-D** connectors.
 
 ## Installation and configuration
 

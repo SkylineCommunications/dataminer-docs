@@ -8,7 +8,7 @@ The UPC Nederland Witbe Management System is a **virtual** element that does not
 
 ## About
 
-This connector was designed to work closely together with the **SmartRec App** and **Witbe Robot** drivers. Its main function is to queue tests on different **Witbe Robots** depending on **Assets** that were added from different connectors in one of five **Carousels** (tables holding assets). The results of the tests, which are run simultaneously on separate Robots, are correlated and sent to the **SmartRec App**.
+This connector was designed to work closely together with the **SmartRec App** and **Witbe Robot** connectors. Its main function is to queue tests on different **Witbe Robots** depending on **Assets** that were added from different connectors in one of five **Carousels** (tables holding assets). The results of the tests, which are run simultaneously on separate Robots, are correlated and sent to the **SmartRec App**.
 
 ## Installation and configuration
 
@@ -65,7 +65,7 @@ This page displays every **Test Cycle**, with information related to it. It also
 
 This page contains every **Detected Robot in** the system. It displays whether the element is in *Time-Out* or *Not Responding* to Keep Alives (**Element Stopped, Paused** or **Crashed**). It also contains information about the **SmartRec App** and shows if it is present in the system.
 
-If **Remote ElementPolling** is *Disabled*, the **Robots** will no longer get polled with **Keep Alive Messages** and the DataMiner System will not get polled for the **SmartRec App** and **all Robot drivers**.
+If **Remote ElementPolling** is *Disabled*, the **Robots** will no longer get polled with **Keep Alive Messages** and the DataMiner System will not get polled for the **SmartRec App** and **all Robot connectors**.
 
 ### Tests
 

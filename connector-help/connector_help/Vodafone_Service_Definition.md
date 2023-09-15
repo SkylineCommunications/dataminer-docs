@@ -8,9 +8,9 @@ The basic connector for enhanced services specific for Vodafone.
 
 ## About
 
-This connector is based on the "Skyline Service Definition Basic" driver, but adds some specific functionallity for customer Vodafone.
+This connector is based on the "Skyline Service Definition Basic" connector, but adds some specific functionality for customer Vodafone.
 
-The "Skyline Service Definition Basic" driver already contains a **Service Severity** parameter, but if alarming would be enabled on that parameter the service would always get "stuck" in an alarmed state. This is because the alarm state of all parameters in the service itself are also taken into account to calculate the summary state (loop). To solve that problem, this connector adds a new **Service Elements Summary Status** that only uses the severity states of the includes services and alarms to calculate the summary state. The parameters in this service itself are then ignored.
+The "Skyline Service Definition Basic" connector already contains a **Service Severity** parameter, but if alarming would be enabled on that parameter the service would always get "stuck" in an alarmed state. This is because the alarm state of all parameters in the service itself are also taken into account to calculate the summary state (loop). To solve that problem, this connector adds a new **Service Elements Summary Status** that only uses the severity states of the includes services and alarms to calculate the summary state. The parameters in this service itself are then ignored.
 
 Enhanced services require a DataMiner version of **9.0.3.0** or higher.
 

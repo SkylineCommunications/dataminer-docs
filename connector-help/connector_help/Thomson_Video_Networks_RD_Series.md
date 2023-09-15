@@ -1,5 +1,5 @@
 ---
-uid: Connector_help_Thomson_Video_Networks RD_Series
+uid: Connector_help_Thomson_Video_Networks_RD_Series
 ---
 
 # Thomson Video Networks RD Series

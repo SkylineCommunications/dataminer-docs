@@ -8,7 +8,7 @@ The SeaChange VoD Platform is used by broadband and broadcast television operato
 
 ## About
 
-The SeaChange TraxIS Log Reader driver **processes log files** from the video-on-demand (VoD) platform in order to mitigate platform issues.
+The SeaChange TraxIS Log Reader connector **processes log files** from the video-on-demand (VoD) platform in order to mitigate platform issues.
 
 ### Version Info
 
@@ -36,7 +36,7 @@ This page consists of three sections:
 
 - **Traxis Settings**:
 
-- **Keep Records For**: Determines for how many days locations are kept in the database.
+  - **Keep Records For**: Determines for how many days locations are kept in the database.
   - **Traxis Backward Limit**: The log files before this parameter limit will not be displayed in the Monitoring Table.
 
 ### Traxis Monitoring

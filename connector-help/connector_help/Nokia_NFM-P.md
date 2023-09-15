@@ -10,8 +10,6 @@ Nokia NFM-P connector is used by Kordia to track the alarm events in the NFM-P n
 
 ### Version Info
 
-
-
 | **Range**            | **Key Features** | **Based on** | **System Impact** |
 |----------------------|------------------|--------------|-------------------|
 | 1.0.0.x \[SLC Main\] | Initial version  | \-           | \-                |
@@ -24,8 +22,6 @@ Nokia NFM-P connector is used by Kordia to track the alarm events in the NFM-P n
 
 ### System Info
 
-Style: Heading 3 Accent 1
-
 | **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components** |
 |-----------|---------------------|-------------------------|-----------------------|-------------------------|
 | 1.0.0.x   | No                  | Yes                     | \-                    | \-                      |
@@ -33,8 +29,6 @@ Style: Heading 3 Accent 1
 ## Configuration
 
 ### Connections
-
-
 
 #### HTTP Connection - Main
 
@@ -58,9 +52,7 @@ The web interface is only accessible when the client machine has network access 
 
 The connector uses SOAP calls to retrieve the device information and JMS connection to receive alarm events.
 
-- You can find the system relation information on the **General** paga of this connector. JMS Connection parameter shows the status of the connection, if it is Active or Inactive.
+- You can find the system relation information on the **General** page of this connector. JMS Connection parameter shows the status of the connection, if it is Active or Inactive.
 - The **JMS Configuration** page contains the mandatory input arguments that must be provided to establish a JMS connection.
 - On the **Alarms** page, you can find the list of alarms in the Alarm Events table. There is a Refresh button on the same page that can be used to get all alarms on the NFM-P main server and refresh the Alarm Events table. Note: Since the volume of the alarms might be high, this can have a performance impact on the system, if triggered frequently.
 - The **Events Received** page displays a table which temporarily stores the event messages before processing them. Note: It is a volatile table and hence trending and alarming cannot be enabled.
-
-

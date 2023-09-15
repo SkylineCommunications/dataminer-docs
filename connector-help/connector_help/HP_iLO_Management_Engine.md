@@ -12,8 +12,6 @@ This connector is used to retrieve the required data from the HP iLO Management 
 
 It uses the REST API to get and set all the associated parameters for this type of device.
 
-
-
 ### Version Info
 
 | **Range**                                                                | **Description**                                 | **DCF Integration** | **Cassandra Compliant** |
@@ -48,7 +46,7 @@ HTTP CONNECTION:
 
 #### SNMP Connection
 
-Note: This connection is only availbe on 1.1.1.x onwards.
+Note: This connection is only available on 1.1.1.x onwards.
 
 This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
@@ -77,8 +75,10 @@ By default, **SNMP polling** is disabled, but can be enabled by toggling the **S
 
 This page displays contains 9 subpages pages which can be accessed by clicking the following buttons:
 
-- **Software**: Displays the **Software Inventory** which contains the following columns: **ID**, **Name**, **Description,** and **Version**. This Table is only pollable if the device has License type "**Advanced**". A Polling Configuration toogle button is created so that a user can enable or disable polling of this table.
+- **Software**: Displays the **Software Inventory** which contains the following columns: **ID**, **Name**, **Description,** and **Version**. This Table is only pollable if the device has License type "**Advanced**". A Polling Configuration toggle button is created so that a user can enable or disable polling of this table.
+
   Note that the **Software Inventory** function will only work if the **Agentless Management Service** is in state **Running** (available on the **General** page in the 1.1.0.1 range.)
+
 - **Firmware:** Displays the **Firmware Version Info Table** which contains the following columns: **Index**, **Firmware Name**, **Firmware Version**, and where it is located (**Location**).
 - **Processors:** Displays the **Processors Table** which contains the following columns: **Index**, **Name**, **Status**, **Speed**, **Execution Technology**, **Memory Technology**, **Internal L1 Cache**, **Internal L2 Cache** and **Internal L3 Cache**.
 - **Storage:** Displays in a Tree structure the **Controllers**, **Enclosures**, **Physical Drives** and **Logical Drives**.
@@ -99,7 +99,7 @@ This table provides some configuration options to manage the table:
 - **Clear Log -** Clear the Table (this page is only available in the 1.0.0.x and 1.0.1.x range)
 - **Refresh -** Forces a refresh on the Table.
 - **Polling Configuration** - To configure the polling rate of this table for each hour or 5 min.
-- **Maximum Number of Entries** - To Limit in size the ammount of available rows in the table
+- **Maximum Number of Entries** - To Limit in size the amount of available rows in the table
 
 ### iLO Event Log
 
@@ -110,7 +110,7 @@ This table provides some configuration options to manage the table:
 - **Clear Log -** Clear the Table
 - **Refresh -** Forces a refresh on the Table.
 - **Polling Configuration** - To configure the polling rate of this table for each hour or 5 min.
-- **Maximum Number of Entries** - To Limit in size the ammount of available rows in the table
+- **Maximum Number of Entries** - To Limit in size the amount of available rows in the table
 
 ### Alarms
 

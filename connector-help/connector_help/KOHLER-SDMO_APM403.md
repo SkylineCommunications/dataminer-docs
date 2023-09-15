@@ -12,30 +12,9 @@ This control panel is designed for low voltage industrial diesel generator sets 
 
 ### Version Info
 
-<table>
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><strong>Range</strong></td>
-<td><strong>Key Features</strong></td>
-<td><strong>Based on</strong></td>
-<td><strong>System Impact</strong></td>
-</tr>
-<tr class="even">
-<td>1.0.0.x [SLC Main]</td>
-<td><ul>
-<li>Initial Version</li>
-</ul></td>
-<td>-</td>
-<td>-</td>
-</tr>
-</tbody>
-</table>
+| Range            | Key Features | Based on | System Impact |
+|----------------------|------------------|--------------|-------------------|
+| 1.0.0.x [SLC Main] | Initial version. | -           | -                |
 
 ### Product Info
 
@@ -43,15 +22,11 @@ This control panel is designed for low voltage industrial diesel generator sets 
 |-----------|------------------------|
 | 1.0.0.x   | 1.2.0.1                |
 
-
-
 ### System Info
 
 | **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components** |
 |-----------|---------------------|-------------------------|-----------------------|-------------------------|
 | 1.0.0.x   | No                  | Yes                     | \-                    | \-                      |
-
-
 
 ## Configuration
 
@@ -65,12 +40,12 @@ SNMP CONNECTION:
 
 - **IP address/host**: The polling IP or URL of the destination.
 - **IP port**: The IP port of the destination.
-- **Bus address**: \[The bus address of the device.\]
+- **Bus address**: The bus address of the device.
 
 SNMP Settings:
 
-- **Get community string**: \[The community string used when reading values from the device. (default: *public*)\]
-- **Set community string**: \[The community string used when setting values on the device. (default: *private*)\]
+- **Get community string**: The community string used when reading values from the device. (default: *public*)
+- **Set community string**: The community string used when setting values on the device (default: *private*).
 
 ### Initialization
 

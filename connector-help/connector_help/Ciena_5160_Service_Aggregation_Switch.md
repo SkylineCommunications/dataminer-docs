@@ -8,7 +8,7 @@ The 5160 provides exceptional 10GE density in a small 1RU form factor, with the 
 
 ## About
 
-This connector is used to establish communication between Skyline's DatMminer Software and the Ciena 5160 Service Aggregation Switch.
+This connector is used to establish communication between Skyline's DataMiner Software and the Ciena 5160 Service Aggregation Switch.
 
 The communication with this device is established via SNMPv2.
 

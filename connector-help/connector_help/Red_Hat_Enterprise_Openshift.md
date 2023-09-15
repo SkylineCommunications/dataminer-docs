@@ -53,9 +53,10 @@ Also in a tree control fashion, this page displays all services organized per na
 
 ### Replica Controllers
 
-Replica Controllers are also listed and organized per namepsace in a tree control structure.
+Replica Controllers are also listed and organized per namespace in a tree control structure.
 
-### The pages listed below are exported to SRM DVEs and not visible in the main element
+> [!NOTE]
+> The pages listed below are exported to SRM DVEs and not visible in the main element
 
 ### Node Info
 

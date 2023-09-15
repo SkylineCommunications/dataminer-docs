@@ -8,7 +8,7 @@ The **Paradise RCP-1200** protocol is used to monitor and control amplifiers con
 
 ## About
 
-This protocol can be used to monitor and control any Paradise RCP-1200 device. A **TCP/IP** connection is used in order to succesfully retrieve and configure the settings of the device.
+This protocol can be used to monitor and control any Paradise RCP-1200 device. A **TCP/IP** connection is used in order to successfully retrieve and configure the settings of the device.
 
 ## Installation and configuration
 
@@ -29,7 +29,7 @@ This protocol can be used to monitor and control any Paradise RCP-1200 device. A
 
 - Extra Pages:
 
-- **Communication**: **Unit Address**, **Serial Baud Rate**, **Communication Protocol**, **Unit Hierarchy**, **System Redundancy.**
+  - **Communication**: **Unit Address**, **Serial Baud Rate**, **Communication Protocol**, **Unit Hierarchy**, **System Redundancy.**
   - **External UID**: The **External User Defined Inputs**.
 
 ### Fault Status

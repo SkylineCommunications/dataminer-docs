@@ -8,7 +8,7 @@ The **CEFD Memotec HX Load Balancer SNMP** connector can be used to monitor and 
 
 ## About
 
-The protocol uses **SNMP** to retrieve data from the **load balancer** and configure parameters of the device, and can also receive traps notifications.
+The connector uses **SNMP** to retrieve data from the **load balancer** and configure parameters of the device, and can also receive traps notifications.
 
 ### Version Info
 

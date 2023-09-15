@@ -14,7 +14,7 @@ This connector is used to monitor and control the spectrum analyzer using the pr
 
 | **Range** | **Description**                                                 | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x          | Initial Version, based on version 1.0.0.11 of the 8 port driver | No                  | Yes                     |
+| 1.0.0.x          | Initial version, based on version 1.0.0.11 of the 8 port connector | No                  | Yes                     |
 
 ### Supported firmware version
 
@@ -22,9 +22,9 @@ This connector is used to monitor and control the spectrum analyzer using the pr
 |----------------------|-----------------------------|
 | 1.0.0.x \[SLC Main\] | 3.0.12-3                    |
 
-## Installation and configuration
+## Configuration
 
-### Creation
+### Connections
 
 #### Serial connection
 

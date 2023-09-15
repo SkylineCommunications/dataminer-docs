@@ -12,10 +12,6 @@ This connector allows to monitor and configure the Pro-Bel Cygnus routing system
 
 ### Version Info
 
-In this subsection, insert a table with four columns, listing the different ranges of the connector. In the second column, add a short description for each range that explains why it was changed. The two narrower columns on the right must indicate whether the range features DCF integration and whether it is Cassandra compliant.
-
-In the following example, the initial version had the range 1.0.0.x. A new firmware version was no longer compatible with the initial connector version, so a new range was created: 1.1.0.x. Based on this firmware, a branch (custom version) was made: 2.1.0.x. That version also got new firmware that was no longer compatible with previous versions: 2.2.0.x.
-
 | **Range** | **Description**      | **DCF Integration** | **Cassandra Compliant** |
 |------------------|----------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version      | No                  | Yes                     |
@@ -23,14 +19,10 @@ In the following example, the initial version had the range 1.0.0.x. A new firmw
 
 ### Product Info
 
-Style: Heading 3 Accent 1
-
-In this subsection, insert a table with two columns, and set the column widths to 50 percent. In the table, list the firmware versions that are fully compatible with the connector, together with the connector ranges. If multiple firmware versions are compatible with one connector range, add them in the same row, but on different lines. See the following example:
-
 | Range | Supported Firmware Version |
 |------------------|-----------------------------|
-| 1.0.0.x          | ?                           |
-| 2.0.0.x          | ?                           |
+| 1.0.0.x          | -                           |
+| 2.0.0.x          | -                           |
 
 ## Installation and configuration
 

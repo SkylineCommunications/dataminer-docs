@@ -10,7 +10,7 @@ The Redundancy Switches from WORK Microwave are utilized to provide redundant co
 
 With this connector, it is possible to monitor and configure **Work Microwave Redundancy Switch Controller** devices and the connected **converters** with a **serial** connection.
 
-The different parameters from the device are displayed on multiple pages. Specific parameters for the converters are displayed by the converter driver.
+The different parameters from the device are displayed on multiple pages. Specific parameters for the converters are displayed by the converter connector.
 
 #### Serial connection:
 

@@ -8,7 +8,7 @@ This connector retrieves information about weather conditions at locations selec
 
 ## About
 
-The Weather Underground driver implements the "Weather API" (from The Weather Company), which enables the connector to retrieve information about weather conditions from different locations.
+The Weather Underground connector implements the "Weather API" (from The Weather Company), which enables the connector to retrieve information about weather conditions from different locations.
 
 ### Version Info
 

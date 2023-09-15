@@ -14,7 +14,7 @@ The TSL MDU12-PM connector is used to monitor and control a TSL MDU12-PM device.
 
 | **Range** | **Description**                                     | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x          | Initial version, based on "SA DCM 2.0.0.36" driver. | No                  | Yes                     |
+| 1.0.0.x          | Initial version, based on "SA DCM 2.0.0.36" connector. | No                  | Yes                     |
 | 1.0.1.x          | Connector review.                                      | No                  | Yes                     |
 
 ### Supported Firmware Versions

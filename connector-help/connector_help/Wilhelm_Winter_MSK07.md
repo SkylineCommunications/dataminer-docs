@@ -4,7 +4,7 @@ uid: Connector_help_Wilhelm_Winter_MSK07
 
 # Wilhelm Winter MSK07
 
-The **Wilhelm Winter MSK07** is a basic antenna controller without tracking functionality. The corresponding driver implements control and monitoring of **azimuth** and **elevation**.
+The **Wilhelm Winter MSK07** is a basic antenna controller without tracking functionality. The corresponding connector implements control and monitoring of **azimuth** and **elevation**.
 
 ## About
 
@@ -64,7 +64,7 @@ In the top-right corner of this page, you can find the **jogging/creeping** func
 
 To ensure monitoring during operations, in the lower right corner, you can find **calculated movement status parameters**. In addition, there is also a button that allows you to interrupt the movement.
 
-There can be a small discrepancy between the **device** reporting **In Position** (on the General page) and the **driver calculation** of when the antenna is **stationary**.
+There can be a small discrepancy between the **device** reporting **In Position** (on the General page) and the **connector calculation** of when the antenna is **stationary**.
 
 ### Configuration
 

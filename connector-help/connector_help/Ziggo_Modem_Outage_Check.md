@@ -8,7 +8,7 @@ The main purpose of the **Ziggo Modem Outage Check** connector is to revalidate 
 
 ## About
 
-This connector is part of a larger setup and works together with the **Ziggo IPVPN Collector** and **Generic Ping** drivers.
+This connector is part of a larger setup and works together with the **Ziggo IPVPN Collector** and **Generic Ping** connectors.
 
 The **modem outage check** consists of the following steps:
 
@@ -81,7 +81,7 @@ The **Ping Elements Config** table contains two entries, referring to the ping e
 
 ### IAM subpage
 
-This subpage contains read-only information regarding the connection to the IAM database: **Element Name**, **Server**, **Database**, **User Name** and **Password**. This information is filled in automatically the first time it is required by the element. The information is obtained from the **IAM DB** element (using the **Skyline IAM DB** driver), which needs to be in the same DMS as the **Ziggo Modem Outage Check** element.
+This subpage contains read-only information regarding the connection to the IAM database: **Element Name**, **Server**, **Database**, **User Name** and **Password**. This information is filled in automatically the first time it is required by the element. The information is obtained from the **IAM DB** element (using the **Skyline IAM DB** connector), which needs to be in the same DMS as the **Ziggo Modem Outage Check** element.
 
 ### Ping subpage
 

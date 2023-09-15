@@ -8,7 +8,7 @@ The Supermicro IPMI (Intelligent Platform Management Interface) standard is used
 
 ## About
 
-This connector integrates the Intel IPMI driver and Supermicro. It is developed to manage and retrieve the data from both types of hard disk with a single driver. The connector can be used to display all available sensor values, to monitor fan speeds, temperatures, power, voltage and current sensors, and to view the event log, the user list, the list of FRUs of Intel and the Supermicro hard disk information.
+This connector integrates the Intel IPMI connector and Supermicro. It is developed to manage and retrieve the data from both types of hard disk with a single connector. The connector can be used to display all available sensor values, to monitor fan speeds, temperatures, power, voltage and current sensors, and to view the event log, the user list, the list of FRUs of Intel and the Supermicro hard disk information.
 
 To do this, the connector uses a third-party tool (i.e. IPMItool, which can be found at <http://sourceforge.net/projects/ipmitool/>). As a consequence, no communication will be visible in Stream Viewer.
 

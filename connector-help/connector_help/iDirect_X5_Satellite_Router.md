@@ -1,5 +1,5 @@
 ---
-uid: Connector_help_iDirext_X5_Satellite_Router
+uid: Connector_help_iDirect_X5_Satellite_Router
 ---
 
 # iDirect X5 Satellite Router

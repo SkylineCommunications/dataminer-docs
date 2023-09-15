@@ -86,11 +86,11 @@ As this is an EPM Manager, most users should only ever use the **visual pages**.
 This page shows as which kind of manager the element is used: FE or BE. If the element type is set to BE, the page also shows for which county the element is responsible.
 
 The **Telenor Propaganda** connector is used to monitor EPM Manager information, such as alarms, active devices, etc. at the end of an aggregation cycle (FE Manager). If you want to use this connector with the EPM Manager, fill in the parameter **Propaganda Element ID** in the **FE Manager** element.
-There is also a button to force the synchronization between the two drivers (**Propaganda Synchronization**).
+There is also a button to force the synchronization between the two connectors (**Propaganda Synchronization**).
 
 **Note:** Some parameters on the General page are read-only, but these can be changed on the **Configurations** page.
 
-This same page also shows the **Aggregation Status** and allows you to configure the **Aggregation Downtime.** This is the number of minutes that the aggregation must wait during reprovisioning, driver update or DMA restart. The goal of this setting is to prevent aggregation being done based on an incomplete set of data, resulting in unwanted alarms and unwanted effects on trend graphs.
+This same page also shows the **Aggregation Status** and allows you to configure the **Aggregation Downtime.** This is the number of minutes that the aggregation must wait during reprovisioning, connector update or DMA restart. The goal of this setting is to prevent aggregation being done based on an incomplete set of data, resulting in unwanted alarms and unwanted effects on trend graphs.
 
 The **Aggregation Control** button allows you to "Resume" or "Halt" the aggregation. The **Time to Resume Aggregation** shows a countdown until the next aggregation is resumed. This happens automatically to prevent situations where a user interrupts aggregation and forgets to activate it again. You can also force aggregation to start (**Force Start Aggregations**) at any time. The total time will be displayed by the **Last Aggregation Total Time** parameter.
 

@@ -4,7 +4,7 @@ uid: Connector_help_Tandberg_TT7116
 
 # Tandberg TT7116
 
-This is a multiport driver that uses both a **serial** and an **SNMP** connection. It show the status of the different parameters of a **Tandberg** **TT7116**.
+This is a multiport connector that uses both a **serial** and an **SNMP** connection. It show the status of the different parameters of a **Tandberg** **TT7116**.
 
 ## About
 
@@ -67,7 +67,7 @@ There are also two page buttons:
 
 ### Streams Page
 
-This page displays the **Streams** table, which contains information about the different streams in the system. It shows amongst others the **Stream Id**, the **Output DVB Transportstream**, and the **Bitrate.**
+This page displays the **Streams** table, which contains information about the different streams in the system. It shows amongst others the **Stream Id**, the **Output DVB Transport Stream**, and the **Bitrate.**
 
 ### Outputs Page
 

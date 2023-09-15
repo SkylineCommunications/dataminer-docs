@@ -4,7 +4,7 @@ uid: Connector_help_Vecima_CableVista
 
 # Vecima CableVista
 
-The Vecima CableVista driver performs MPEG decoding, modulation and upconversion for up to 24 NTSC or 12 PAL channels.
+The Vecima CableVista connector performs MPEG decoding, modulation and upconversion for up to 24 NTSC or 12 PAL channels.
 
 This connector can be used to display and configure information of the related device.
 

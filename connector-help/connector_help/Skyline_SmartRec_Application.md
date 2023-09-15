@@ -4,7 +4,7 @@ uid: Connector_help_Skyline_SmartRec_Application
 
 # Skyline SmartRec Application
 
-This connector works in combination with the **Ericsson RedBee EPG**, **Witbe Robot** and **WitBe Robot Manager** drivers. The goal is to **monitor** the **replay/startover functionality** of **set-top boxes**. The connector **manages** which **assets/programs** need to be tested and also **aggregates** the **test results**.
+This connector works in combination with the **Ericsson RedBee EPG**, **Witbe Robot** and **WitBe Robot Manager** connectors. The goal is to **monitor** the **replay/startover functionality** of **set-top boxes**. The connector **manages** which **assets/programs** need to be tested and also **aggregates** the **test results**.
 
 ## About
 
@@ -131,7 +131,7 @@ The **Daily Aggregation page** provides an overview of the kind of issues that h
 
 The **Weekly Aggregation page** provides an overview of the kind of issues that have occurred over a week.
 
-This connector will export the Skyline SmartRec Application - Channel driver. An element will be created automatically for each monitored channel in the resource manager.
+This connector will export the Skyline SmartRec Application - Channel connector. An element will be created automatically for each monitored channel in the resource manager.
 
 ## Notes
 

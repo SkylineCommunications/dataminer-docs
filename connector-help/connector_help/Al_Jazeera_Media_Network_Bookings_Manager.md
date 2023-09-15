@@ -1,5 +1,5 @@
 ---
-uid: Connector_help_Al_Jazeera_Media_Network Bookings_Manager
+uid: Connector_help_Al_Jazeera_Media_Network_Bookings_Manager
 ---
 
 # Al Jazeera Media Network Bookings Manager

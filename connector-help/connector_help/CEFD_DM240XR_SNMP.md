@@ -4,7 +4,6 @@ uid: Connector_help_CEFD_DM240XR_SNMP
 
 # CEFD DM240XR SNMP
 
-
 Radyne's DM240XR family is a High-Speed Modulator which meets the exacting standards of High Data-Rate Video, Internet and Fiber Restoral Satellite Applications.
 
 ## About
@@ -47,23 +46,23 @@ This page displays the general information about the device: **System informatio
 
 This page displays all the parameters which are related to the modulator. The **network specification** can change the other values like **Frequency, Power, Spectrum, Carrier Control, Data rate, Symbol Rate, FEC, ...**
 
-Ranges, discreets and the possibility to set will be automaticly adjusted when the network specification changes (introduced in version 1.0.0.2)
+Ranges, discreets and the possibility to set will be automatically adjusted when the network specification changes (introduced in version 1.0.0.2)
 
 There are 2 subpages: **Phase Noise** and **Local Oscillator** with their properties.
 
 ### Interface
 
-This page displays all the parameters regarding the Interface: **Interface Mode, Redundency Mode, Interface Type, Clock Sources, PIIC Slots, Terrestrial Framing, and Polarity settings.**
+This page displays all the parameters regarding the Interface: **Interface Mode, Redundancy Mode, Interface Type, Clock Sources, PIIC Slots, Terrestrial Framing, and Polarity settings.**
 
 There is a subpage called **Switch**. Properties and settings regarding the RF Switch are displayed here (**Redundancy Mode, Fault settings, Active Sides**)
 
 ### Ethernet
 
-This page is devided in 4 groups (since version 1.0.0.2): **Settings** (**Mode and Jitter settings**); **Statistics** (**link status and packet counters**), **Primary** (Primary **IP Address**, **Data** and **FEC**) and **Backup** (same parameters as Primary)
+This page is divided in 4 groups (since version 1.0.0.2): **Settings** (**Mode and Jitter settings**); **Statistics** (**link status and packet counters**), **Primary** (Primary **IP Address**, **Data** and **FEC**) and **Backup** (same parameters as Primary)
 
 ### Test
 
-This page displays Test parameter settings. **Carrier Type** and **Pattern** can be choosen. The **interleaver**, **FEC** and the **Scrambler** can be activated.
+This page displays Test parameter settings. **Carrier Type** and **Pattern** can be chosen. The **interleaver**, **FEC** and the **Scrambler** can be activated.
 
 ### Carrier
 

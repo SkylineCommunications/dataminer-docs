@@ -293,6 +293,8 @@
     topicUid: Connector_help_Al_Jazeera_Media_Network_Alarm_Statistics_Service
   - name: Al Jazeera Media Network Arvato VPMS Doha
     topicUid: Connector_help_Al_Jazeera_Media_Network_Arvato_VPMS_Doha
+  - name: Al Jazeera Media Network Bookings Manager
+    topicUid: Connector_help_Al_Jazeera_Media_Network_Bookings_Manager
   - name: Al Jazeera Media Network Comms Manager
     topicUid: Connector_help_Al_Jazeera_Media_Network_Comms_Manager
   - name: Al Jazeera Media Network Rack Passive Device Generator
@@ -997,6 +999,10 @@
     topicUid: Connector_help_Aurora_Network_CX3001_-_NC_4000_Single_DT_REV_B
   - name: Aurora Network Node FA3527
     topicUid: Connector_help_Aurora_Network_Node_FA3527
+  - name: Aurora Network Node NC4000 Single DT REV A
+    topicUid: Connector_help_Aurora_Networks_Node_NC4000_Single_DT_REV_A
+  - name: Aurora Network Node NC 4000 Single DT REV B
+    topicUid: Connector_help_Aurora_Networks_Node_NC_4000_Single_DT_REV_B
 - name: Autronica
   topicUid: Connector_help_Autronica_AutroPrime
   items:
@@ -1689,6 +1695,11 @@
   items:
   - name: Blankom HCB-200
     topicUid: Connector_help_Blankom_HCB-200
+- name: Blue Coat
+  topicUid: Connector_help_Blue_Coat_Packet_Shaper
+  items:
+  - name: Blue Coat Packet Shaper
+    topicUid: Connector_help_Blue_Coat_Packet_Shaper
 - name: BMC
   topicUid: Connector_help_BMC_Remedy
   items:
@@ -1952,6 +1963,8 @@
     topicUid: Connector_help_CEFD_CDM_750
   - name: CEFD CDM Qx
     topicUid: Connector_help_CEFD_CDM_Qx
+  - name: CEFD CDM Qx SNMP
+    topicUid: Connector_help_CEFD_CDM_Qx_SNMP
   - name: CEFD CRS-500 SNMP
     topicUid: Connector_help_CEFD_CRS-500_SNMP
   - name: CEFD DM240XR SNMP
@@ -2637,6 +2650,10 @@
     topicUid: Connector_help_DEV_Switch_Module
   - name: DEV Switch SNMP
     topicUid: Connector_help_DEV_Switch_SNMP
+  - name: DEV1951
+    topicUid: Connector_help_DEV1951
+  - name: DEV2190
+    topicUid: Connector_help_DEV2190
 - name: DEVA Broadcast
   topicUid: Connector_help_DEVA_Broadcast_DB44
   items:
@@ -3787,6 +3804,11 @@
   items:
   - name: France Television Simulcast Manager
     topicUid: Connector_help_France_Television_Simulcast_Manager
+- name: France Televisions
+  topicUid: Connector_help_France_Televisions_InHouse
+  items:
+  - name: France Televisions InHouse
+    topicUid: Connector_help_France_Televisions_InHouse
 - name: Fraunhofer
   topicUid: Connector_help_Fraunhofer_DRM_Content_Server
   items:
@@ -4238,6 +4260,8 @@
     topicUid: Connector_help_Grass_Valley_IQUCP
   - name: Grass Valley IQUCP25
     topicUid: Connector_help_Grass_Valley_IQUCP25
+  - name: Grass Valley Jupiter CM4000
+    topicUid: Connector_help_Grass_Valley_Jupiter_CM4000
   - name: Grass Valley Jupiter VM3000
     topicUid: Connector_help_Grass_Valley_Jupiter_VM3000
   - name: Grass Valley Karrera
@@ -4592,6 +4616,8 @@
     topicUid: Connector_help_IDirect_Pulse_Terminal
   - name: IDirect Pulse Terminal Manager
     topicUid: Connector_help_IDirect_Pulse_Terminal_Manager
+  - name: iDirect X5 Satellite Router
+    topicUid: Connector_help_iDirect_X5_Satellite_Router
   - name: iDirect X7 Satellite Router
     topicUid: Connector_help_iDirect_X7_Satellite_Router
 - name: IEC 60870
@@ -4735,6 +4761,8 @@
     topicUid: Connector_help_Imagine_Communications_SFP6800+D_-_Tx2
   - name: Imagine Communications SX Pro Multiviewer
     topicUid: Connector_help_Imagine_Communications_SX_Pro_Multiviewer
+  - name: Imagine Communications VAX SD DMB IRTDAB Np1
+    topicUid: Connector_help_Imagine_Communications_VAX_SD_DMB_IRTDAB_Np1
   - name: Imagine Communications VDA6800+
     topicUid: Connector_help_Imagine_Communications_VDA6800+
   - name: Imagine Communications Versio
@@ -5230,6 +5258,11 @@
   items:
   - name: Liberty Global International Root Cause Alarm
     topicUid: Connector_help_Liberty_Global_International_Root_Cause_Alarm
+- name: Liebert
+  topicUid: Connector_help_Liebert_UPStation_GXT2-700RT230
+  items:
+  - name: Liebert UPStation GXT2-700RT230
+    topicUid: Connector_help_Liebert_UPStation_GXT2-700RT230
 - name: Linear Acoustic
   topicUid: Connector_help_Linear_Acoustic_Aero_2000
   items:
@@ -5256,6 +5289,19 @@
     topicUid: Connector_help_Locus_ACP200
   - name: Locus RCP-1100
     topicUid: Connector_help_Locus_RCP-1100
+- name: Loop Telecommunications International
+  topicUid: Connector_help_Loop_Telecommunications_International_AM-3440-A
+  items:
+  - name: Loop Telecommunications International AM-3440-A
+    topicUid: Connector_help_Loop_Telecommunications_International_AM-3440-A
+  - name: Loop Telecommunications International AM-3440-A - 4EM
+    topicUid: Connector_help_Loop_Telecommunications_International_AM-3440-A_-_4EM
+  - name: Loop Telecommunications International AM-3440-A - 8EM
+    topicUid: Connector_help_Loop_Telecommunications_International_AM-3440-A_-_8EM
+  - name: Loop Telecommunications International AM-3440-A - FXO
+    topicUid: Connector_help_Loop_Telecommunications_International_AM-3440-A_-_FXO
+  - name: Loop Telecommunications International AM-3440-A - QuadE1
+    topicUid: Connector_help_Loop_Telecommunications_International_AM-3440-A_-_QuadE1
 - name: LPT
   topicUid: Connector_help_LPT_3000R
   items:
@@ -6584,8 +6630,12 @@
   - name: Norwia miniHUB
     topicUid: Connector_help_Norwia_miniHUB
 - name: Novel SuperTV
-  topicUid: Connector_help_Novel_SuperTV_CAS
+  topicUid: Connector_help_Novel_Supertv_EPG
   items:
+  - name: Novel Supertv EPG
+    topicUid: Connector_help_Novel_Supertv_EPG
+  - name: Novel Supertv MIS
+    topicUid: Connector_help_Novel_Supertv_MIS
   - name: Novel SuperTV CAS
     topicUid: Connector_help_Novel_SuperTV_CAS
 - name: Novella Satcoms
@@ -7398,6 +7448,8 @@
     topicUid: Connector_help_Rohde_Schwarz_THR9_FM_Single_Drive
   - name: Rohde Schwarz THU9
     topicUid: Connector_help_Rohde_Schwarz_THU9
+  - name: Rohde Schwarz THU9 DVE
+    topicUid: Connector_help_Rohde_Schwarz_THU9_DVE
   - name: Rohde Schwarz THU9 - Exciter
     topicUid: Connector_help_Rohde_Schwarz_THU9_-_Exciter
   - name: Rohde Schwarz THU9 - Transmitter
@@ -7893,6 +7945,11 @@
     topicUid: Connector_help_SES_S.A._TEMOS
   - name: SES S.A. TEMOS Probe
     topicUid: Connector_help_SES_S.A._TEMOS_Probe
+- name: SIAE
+  topicUid: Connector_help_SIAE_Microwave_Trunklink
+  items:
+  - name: SIAE Microwave Trunklink
+    topicUid: Connector_help_SIAE_Microwave_Trunklink
 - name: Siemens
   topicUid: Connector_help_Siemens_Netviewer
   items:
@@ -8188,6 +8245,8 @@
     topicUid: Connector_help_Skyline_Universal_Weather
   - name: Skyline VOD Workflow Application
     topicUid: Connector_help_Skyline_VOD_Workflow_Application
+  - name: SLC SDF DCF
+    topicUid: Connector_help_SLC_SDF_DCF
 - name: Skyview
   topicUid: Connector_help_Skyview_Windsonic_Ultrasonic_Anemometer
   items:
@@ -8938,8 +8997,10 @@
   - name: TelcoBridges Media Gateway 3200
     topicUid: Connector_help_TelcoBridges_Media_Gateway_3200
 - name: Telefonia por Cable S.A de C.V.
-  topicUid: Connector_help_Telefonia_por_Cable_S.A_de_C.V._Geomarketing_DB
+  topicUid: Connector_help_Telefonia_por_Cable_S.A._de_C.V._Bandwidth_Aggregator
   items:
+  - name: Telefonia por Cable S.A. de C.V. Bandwidth Aggregator
+    topicUid: Connector_help_Telefonia_por_Cable_S.A._de_C.V._Bandwidth_Aggregator
   - name: Telefonia por Cable S.A de C.V. Geomarketing DB
     topicUid: Connector_help_Telefonia_por_Cable_S.A_de_C.V._Geomarketing_DB
   - name: Telefonia por Cable S.A de C.V. Geomarketing DB GPON
@@ -9289,6 +9350,20 @@
   items:
   - name: ThinkAnalytics Recommendation Engine
     topicUid: Connector_help_ThinkAnalytics_Recommendation_Engine
+- name: Thomson Grass Valley
+  topicUid: Connector_help_Thomson_Grass_Valley_NetProcessor_9030
+  items:
+  - name: Thomson Grass Valley NetProcessor 9030
+    topicUid: Connector_help_Thomson_Grass_Valley_NetProcessor_9030
+  - name: Thomson Grass Valley XMS
+    topicUid: Connector_help_Thomson_Grass_Valley_XMS
+- name: Thomson Nextream
+  topicUid: Connector_help_Thomson_Nextream_Sapphire
+  items:
+  - name: Thomson Nextream Sapphire
+    topicUid: Connector_help_Thomson_Nextream_Sapphire
+  - name: Thomson Nextream Vibe VS7000
+    topicUid: Connector_help_Thomson_Nextream_Vibe_VS7000
 - name: Thomson Video Networks
   topicUid: Connector_help_Thomson_Video_Networks_Fuze-1_Playout_System
   items:
@@ -9300,6 +9375,8 @@
     topicUid: Connector_help_Thomson_Video_Networks_MD6000
   - name: Thomson Video Networks MediaFlexSuite
     topicUid: Connector_help_Thomson_Video_Networks_MediaFlexSuite
+  - name: Thomson Video Networks RD Series
+    topicUid: Connector_help_Thomson_Video_Networks_RD_Series
   - name: Thomson Video Networks RD4000
     topicUid: Connector_help_Thomson_Video_Networks_RD4000
   - name: Thomson Video Networks Vibe CP6000
@@ -10169,83 +10246,27 @@
     topicUid: Connector_help_ZTE_ZXA10_C600_GPON_Platform
   - name: ZTE ZXR10 8900
     topicUid: Connector_help_ZTE_ZXR10_8900
-- name: _unknown_vendor
+- name: Unknown vendor
   topicUid: Connector_help_ACU_Vertex_7200_DTR
   items:
   - name: ACU Vertex 7200 DTR
     topicUid: Connector_help_ACU_Vertex_7200_DTR
-  - name: Al Jazeera Media Network Bookings Manager
-    topicUid: Connector_help_Al_Jazeera_Media_Network Bookings_Manager
-  - name: Aurora Networks Node NC4000 Single DT REV A
-    topicUid: Connector_help_Aurora_Networks_Node_NC4000_Single_DT_REV_A
-  - name: Aurora Networks Node NC 4000 Single DT REV B
-    topicUid: Connector_help_Aurora_Networks_Node_NC_4000_Single_DT_REV_B
-  - name: Blue Coat Packet Shaper
-    topicUid: Connector_help_Blue_Coat_Packet_Shaper
-  - name: CEDF CDM Qx SNMP
-    topicUid: Connector_help_CEDF_CDM_Qx_SNMP
   - name: Damocles2 1208
     topicUid: Connector_help_Damocles2_1208
-  - name: DEV1951
-    topicUid: Connector_help_DEV1951
-  - name: DEV2190
-    topicUid: Connector_help_DEV2190
   - name: EF Data Comtech LBC-4000
     topicUid: Connector_help_EF_Data_Comtech_LBC-4000
-  - name: France Televisions InHouse
-    topicUid: Connector_help_France_Televisions_InHouse
   - name: Globalcomm iDirect Aggregation
     topicUid: Connector_help_Globalcomm_iDirect_Aggregation
-  - name: GrassValley Jupiter CM4000
-    topicUid: Connector_help_GrassValley_Jupiter_CM4000
-  - name: iDirext X5 Satellite Router
-    topicUid: Connector_help_iDirext_X5_Satellite_Router
-  - name: Imagine Communication VAX SD DMB IRTDAB Np1
-    topicUid: Connector_help_Imagine_Communication_VAX_SD_DMB_IRTDAB_Np1
-  - name: Liebert UPStation GXT2-700RT230
-    topicUid: Connector_help_Liebert_UPStation_GXT2-700RT230
-  - name: Loop Telecommunications International AM-3440-A
-    topicUid: Connector_help_Loop_Telecommunications_International_AM-3440-A
-  - name: Loop Telecommunications International AM-3440-A - 4EM
-    topicUid: Connector_help_Loop_Telecommunications_International_AM-3440-A_-_4EM
-  - name: Loop Telecommunications International AM-3440-A - 8EM
-    topicUid: Connector_help_Loop_Telecommunications_International_AM-3440-A_-_8EM
-  - name: Loop Telecommunications International AM-3440-A - FXO
-    topicUid: Connector_help_Loop_Telecommunications_International_AM-3440-A_-_FXO
-  - name: Loop Telecommunications International AM-3440-A - QuadE1
-    topicUid: Connector_help_Loop_Telecommunications_International_AM-3440-A_-_QuadE1
   - name: Meridian II Precision TimeBase
     topicUid: Connector_help_Meridian_II_Precision_TimeBase
-  - name: Novel-Supertv EPG
-    topicUid: Connector_help_Novel-Supertv_EPG
-  - name: Novel-Supertv MIS
-    topicUid: Connector_help_Novel-Supertv_MIS
   - name: Powerone AEONGold AL175
     topicUid: Connector_help_Powerone_AEONGold_AL175
-  - name: Rohde  Schwarz THU9 DVE
-    topicUid: Connector_help_Rohde__Schwarz_THU9_DVE
   - name: Sandar SA-1100
     topicUid: Connector_help_Sandar_SA-1100
   - name: SFN Nim Data Reader
     topicUid: Connector_help_SFN_Nim_Data_Reader
-  - name: SIAE Microwave Trunklink
-    topicUid: Connector_help_SIAE_Microwave_Trunklink
-  - name: SLC SDF DCF
-    topicUid: Connector_help_SLC_SDF_DCF
   - name: Tata Booking Manager
     topicUid: Connector_help_Tata_Booking_Manager
-  - name: Telefonía por Cable S.A. de C.V. Bandwidth Aggregator
-    topicUid: Connector_help_Telefonía_por_Cable_S.A._de_C.V._Bandwidth_Aggregator
-  - name: Thomson Grass Valley NetProcessor 9030
-    topicUid: Connector_help_Thomson_Grass_Valley_NetProcessor_9030
-  - name: Thomson Grass Valley XMS
-    topicUid: Connector_help_Thomson_Grass_Valley_XMS
-  - name: Thomson Nextream Sapphire
-    topicUid: Connector_help_Thomson_Nextream_Sapphire
-  - name: Thomson Nextream Vibe VS7000
-    topicUid: Connector_help_Thomson_Nextream_Vibe_VS7000
-  - name: Thomson Video Networks RD Series
-    topicUid: Connector_help_Thomson_Video_Networks RD_Series
   - name: VideoShip
     topicUid: Connector_help_VideoShip
   - name: Weather Prediction Norway

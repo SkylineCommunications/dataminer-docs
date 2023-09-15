@@ -34,7 +34,7 @@ For this connector to work, the **DSL Files Configuration**, **Network Credentia
 
 Note:
 
-- The DSL files are generated through the processing of different sources by **DSL-compatible drivers** (e.g. Huawei iManager U2000 D-CCAP) **or via a manual input file**.
+- The DSL files are generated through the processing of different sources by **DSL-compatible connectors** (e.g. Huawei iManager U2000 D-CCAP) **or via a manual input file**.
 - To use a **manual input file** (e.g. *IngestLocationDataOnDeviceManualIngest_xx_yy_zz*), the file has to be placed at the configured DSL path, as specified with the parameter **DSL Directory** on the **General** Page of the IAM DB element. It has to be placed on any server that is not excluded (cf. "Exclude DMA" parameter on the General page).
 - Only manual files based on a **template** provided by Skyline can be used. Custom-made files will fail to be ingested.
 - A DSL file is a **semicolon-separated CSV file**. It is important to check whether the file is formatted correctly, as some programs (e.g. Microsoft Excel) can add double quotes between the fields.

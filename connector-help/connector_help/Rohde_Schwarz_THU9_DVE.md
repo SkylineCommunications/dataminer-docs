@@ -1,5 +1,5 @@
 ---
-uid: Connector_help_Rohde__Schwarz_THU9_DVE
+uid: Connector_help_Rohde_Schwarz_THU9_DVE
 ---
 
 # Rohde & Schwarz THU9 DVE
