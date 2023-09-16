@@ -17,23 +17,25 @@ To define a button:
 
 ```xml
 <Param id="180">
-   <Name>ApplyButton</Name>
-   <Description></Description>
-   <Type>write</Type>
-   <Interprete>
-      <RawType>numeric text</RawType>
-      <LengthType>next param</LengthType>
-      <Type>double</Type>
-   </Interprete>
+  <Name>ApplyButton</Name>
+  <Type>write</Type>
+  <Interprete>
+    <RawType>numeric text</RawType>
+    <Type>double</Type>
+    <LengthType>next param</LengthType>
+  </Interprete>
+  <Display>
+    <RTDisplay>true</RTDisplay>
+  </Display>
   <Measurement>
-     <Type width="110">button</Type>
-     <Discreets>
-        <Discreet>
-           <Display>Apply</Display>
-            <Value>1</Value>
-         </Discreet>
-      </Discreets>
-   </Measurement>
+    <Type width="110">button</Type>
+    <Discreets>
+      <Discreet>
+        <Display>Apply</Display>
+        <Value>1</Value>
+      </Discreet>
+    </Discreets>
+  </Measurement>
 </Param>
 ```
 

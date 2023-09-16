@@ -17,33 +17,26 @@ To define a page button:
 
 ```xml
 <Param id="220">
-   <Name>DetailsPageButton</Name>
-   <Description></Description>
-   <Type>write</Type>
-   <Interprete>
-      <RawType>other</RawType>
-      <LengthType>next param</LengthType>
-      <Type>string</Type>
-   </Interprete>
-   <Display>
-      <RTDisplay>true</RTDisplay>
-     <Positions>
-        <Position>
-           <Page>General</Page>
-           <Row>8</Row>
-           <Column>1</Column>
-        </Position>
-     </Positions>
-   </Display>
+  <Name>DetailsPageButton</Name>
+  <Description></Description>
+  <Type>write</Type>
+  <Interprete>
+    <RawType>other</RawType>
+    <Type>string</Type>
+    <LengthType>next param</LengthType>
+  </Interprete>
+  <Display>
+    <RTDisplay>true</RTDisplay>
+  </Display>
   <Measurement>
-     <Type width="110">pagebutton</Type>
-     <Discreets>
-        <Discreet>
-           <Display>Details...</Display>
-            <Value>Details</Value>
-         </Discreet>
-      </Discreets>
-   </Measurement>
+    <Type width="110">pagebutton</Type>
+    <Discreets>
+      <Discreet>
+        <Display>Details...</Display>
+        <Value>Details</Value>
+      </Discreet>
+    </Discreets>
+  </Measurement>
 </Param>
 ```
 

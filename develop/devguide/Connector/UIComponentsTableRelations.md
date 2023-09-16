@@ -4,7 +4,7 @@ uid: UIComponentsTableRelations
 
 # Relations
 
-A foreign key needs to be described in a relation. In the following example, the relation path can be read as "table 4000 has a foreign key to table 3000, table 3000 to table 2000."
+A foreign key needs to be described in a path attribute of Relations/Relation tag. In the following example, the relation path can be read as "table 4000 has a foreign key to table 3000, table 3000 to table 2000."
 
 ```xml
 <Relation path="2000;3000;4000" />
