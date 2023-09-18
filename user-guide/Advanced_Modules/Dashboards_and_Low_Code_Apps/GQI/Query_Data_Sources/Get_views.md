@@ -8,10 +8,9 @@ Available from DataMiner 10.2.0/10.1.4 onwards. The *Get views* data source retr
 
 ## Updates
 
-From DataMiner 10.3.10 onwards, this data source supports [real-time updates](xref:Query_updates).
+From DataMiner 10.3.10/10.4.0 onwards<!-- RN 36789 -->, this data source supports [real-time updates](xref:Query_updates).
 
-> [!WARNING]
-> There are no updates yet for views that are deleted. That means rows for deleted views will not be removed automatically until you re-execute the query.
-
-> [!WARNING]
-> There is no metadata yet for views added through real-time updates, so you won't be able to use those as a view feed.
+> [!NOTE]
+>
+> - Real-time updates are not yet supported for views that are deleted. This means that rows for deleted views will not be removed automatically until the query is executed again.
+> - There is no metadata yet for views added through real-time updates, so you will not be able to use those as a view feed.

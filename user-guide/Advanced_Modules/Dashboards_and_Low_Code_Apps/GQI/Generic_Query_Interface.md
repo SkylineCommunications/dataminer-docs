@@ -12,7 +12,7 @@ This query configuration process involves selecting your desired data source, wh
 
 From DataMiner 10.2.7 onwards, a [custom operator](xref:GQI_Custom_Operator) is available in soft launch.
 
-From DataMiner 10.3.10 onwards, some queries also support [real-time updates](xref:Query_updates).
+From DataMiner 10.3.10/10.4.0 onwards<!-- RN 36789 -->, some queries also support [real-time updates](xref:Query_updates).
 
 > [!TIP]
 > You can also schedule GQI queries to run periodically at fixed times, dates, or intervals using the [Data Aggregator module](xref:Data_Aggregator_DxM).
