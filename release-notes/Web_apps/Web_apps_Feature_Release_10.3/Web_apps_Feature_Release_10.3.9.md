@@ -2,10 +2,10 @@
 uid: Web_apps_Feature_Release_10.3.9
 ---
 
-# DataMiner web apps Feature Release 10.3.9 – Preview
+# DataMiner web apps Feature Release 10.3.9
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to the web applications, see [General Feature Release 10.3.9](xref:General_Feature_Release_10.3.9).
@@ -436,3 +436,19 @@ In some cases, it could occur that parameter controls in Visual Overview did not
 <!-- MR 10.4.0 - FR 10.3.9 [CU0] -->
 
 If a shared dashboard contained a query that built on another query (using the "Start from" data source), in some cases it could occur that the dashboard could not be loaded and the loading screen continued to be displayed.
+
+#### Dashboards app: Shared dashboards would not be allowed to perform a GetParameterTable API call [ID_37122]
+
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 [CU0] -->
+
+In some cases, a shared dashboard was incorrectly not allowed to perform a *GetParameterTable* API call.
+
+#### Dashboards app/Low-Code Apps: Problem when migrating GQI components [ID_37156]
+
+<!-- MR 10.4.0 - FR 10.3.9 [CU0] -->
+
+In some cases, an error could occur when migrating a GQI component:
+
+- When the query used DOM data and contained nodes that were linked to feeds, the links to those feeds could get broken and, in some cases, exceptions could be thrown due to missing feed links.
+
+- When the query used ad hoc data with multiple arguments, and one argument linked to query rows came after an argument linked to something other than query rows, the migration would not succeed and would cause the app to no longer be editable.

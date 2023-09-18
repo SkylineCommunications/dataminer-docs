@@ -12,7 +12,9 @@ Supported versions:
 - OpenSearch 2.X
 
 > [!NOTE]
-> OpenSearch is supported on Windows from OpenSearch 2.4 onwards.
+>
+> - We recommend using the latest version of Ubuntu LTS. However, OpenSearch also supports other Linux distributions. See [Operating system compatibility](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/index/#operating-system-compatibility).
+> - OpenSearch is supported on Windows from OpenSearch 2.4 onwards.
 
 ## Setting up the OpenSearch cluster
 
@@ -53,7 +55,12 @@ These are the main steps of the setup:
   # Use a descriptive name for your cluster:
   #
   cluster.name: NameOfYourCluster
-  cluster.initial_master_nodes: ["opensearchnode1"]
+  #
+  # Identify initial cluster manager node:
+    # If you are using OpenSearch 2, use cluster.initial_manager_nodes.
+    # If you are using OpenSearch 1, use cluster.initial_master_nodes.
+  #
+  cluster.initial_manager_nodes: ["opensearchnode1"] 
   #
   # ------------------------------------ Node ------------------------------------
   #
@@ -99,16 +106,22 @@ These are the main steps of the setup:
 
   ```
 
-- If you want a node to be a **data node**, add the following configuration in *OpenSearch.yml*:
+- If you want a node to be only a **data node**, add the following configuration in *OpenSearch.yml*:
 
   ```yml
   node.roles: [ data, ingest ]
   ```
 
-- If you want a node to be the **cluster manager node** (a.k.a. the master node), add the following configuration in *OpenSearch.yml*:
+- If you want a node to be only the **cluster manager node** (a.k.a. the master node), add the following configuration in *OpenSearch.yml*:
 
   ```yml
   node.roles: [ cluster_manager ]
+  ```
+
+- If you want a data node to take the role of cluster manager in case the current cluster manager node goes down, add the following configuration in *OpenSearch.yml*:
+
+  ```yml
+  node.roles: [ cluster_manager, data, ingest ]
   ```
 
 #### User configuration

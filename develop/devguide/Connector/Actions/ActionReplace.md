@@ -43,6 +43,8 @@ The 0-based position of the parameter in the command/response.
 
 ## Examples
 
+In the following example, the fifth parameter (as Type@nr is 0-based) mentioned in the definition of response 324 will be replaced with the parameter of which the ID is set in parameter 10396. So, for example, if parameter 10396 contains 100, the fifth parameter in the response will be replaced with parameter 100:
+
 ```xml
 <Action id="1999">
   <On id="324">response</On>

@@ -463,25 +463,27 @@ Once the creation is finished, you will see your newly created cluster on the *A
 
 1. Restart DataMiner.
 
-#### DataMiner installation/upgrade: Automatic installation of DataMiner Extension Modules [ID_36085] [ID_36513] [ID_36514] [ID_36799]
+#### DataMiner installation/upgrade: Automatic installation of DataMiner Extension Modules [ID_36085] [ID_36513] [ID_36514] [ID_36799] [ID_37137]
 
 <!-- MR 10.4.0 - FR 10.3.7 -->
-<!-- RN 36799: MR 10.4.0 - FR 10.3.9 -->
+<!-- RNs 36799/37137: MR 10.4.0 - FR 10.3.9 -->
 
 When you install or upgrade a DataMiner Agent, the following DataMiner Extension Modules (DxMs) will now automatically be installed (if not present yet):
 
-- DataMiner ArtifactDeployer (version 1.4.6)
-- DataMiner CoreGateway (version 2.13.0)
-- DataMiner FieldControl (version 2.8.3)
-- DataMiner Orchestrator (version 1.3.3)
-- DataMiner SupportAssistant (version 1.4.0)
+- DataMiner ArtifactDeployer (version 1.5.0)
+- DataMiner CoreGateway (version 2.12.0)
+- DataMiner FieldControl (version 2.9.0)
+- DataMiner Orchestrator (version 1.4.0)
+- DataMiner SupportAssistant (version 1.5.0)
 
 The BPA test *Firewall Configuration* has been altered to also check if TCP port 5100 is properly configured in the firewall. This port is required for communication with the cloud via the endpoint hosted in DataMiner CloudGateway.
 
 In addition, the DataMiner installer will now also add a firewall rule allowing inbound TCP port 5100 communication.
 
 > [!NOTE]
-> For detailed information on the changes included in the different versions of these DxMs, refer to the [dataminer.services change log](xref:DCP_change_log).
+>
+> - For detailed information on the changes included in the different versions of these DxMs, refer to the [dataminer.services change log](xref:DCP_change_log).
+> - The above-mentioned DxMs all use .NET 6.
 
 #### DataMiner Object Models: Caching of DOM configuration data [ID_36412]
 
@@ -516,15 +518,18 @@ In the log files, you will be able to find out which caches are enabled and when
 
 When the caches are enabled, it is no longer possible to get paged results when retrieving DomDefinitions, DomBehaviorDefinitions or SectionDefinitions. Instead, the complete list of objects matching the given query will be returned, even if that list is larger than the configured page size.
 
-#### DataMiner Object Models: Soft-deletable objects [ID_36721]
+#### DataMiner Object Models: Soft-deletable objects [ID_36721] [ID_37121]
 
-<!-- MR 10.4.0 - FR 10.3.9 -->
+<!-- RN 36721: MR 10.4.0 - FR 10.3.9 -->
+<!-- RN 37121: MR 10.4.0 - FR 10.3.10 -->
+<!-- Additional fix of 37121 added under WebApps/Fixes -->
 
 The following DOM objects can now be soft-deleted:
 
-- [FieldDescriptor](xref:DOM_SectionDefinition#fielddescriptor)
-- [SectionDefinitionLink](xref:DomDefinition#sectiondefinitionlink)
 - [DomStatusSectionDefinitionLink](xref:DOM_status_system#configuring-fields)
+- [FieldDescriptor](xref:DOM_SectionDefinition#fielddescriptor)
+- GenericEnumEntry
+- [SectionDefinitionLink](xref:DomDefinition#sectiondefinitionlink)
 
 When the fields linked to a soft-deleted `FieldDescriptor` or part of a soft-deleted `SectionDefinitionLink` or `DomStatusSectionDefinitionLink` are marked as *IsSoftDeleted*, the following applies:
 
@@ -533,6 +538,22 @@ When the fields linked to a soft-deleted `FieldDescriptor` or part of a soft-del
 - The fields are never be required.
 - Values are allowed to exist in the fields on a `DomInstance` for a soft-deleted `FieldDescriptor`, `SectionDefinitionLink`, or `DomStatusSectionDefinitionLink`.
 - Updating a `DomInstance` with new/updated values will be blocked for a field that has a soft-deleted `FieldDescriptor`, or is part of a soft-deleted `SectionDefinitionLink` or `DomStatusSectionDefinitionLink` (for that status). A [ValueForSoftDeletedFieldNotAllowed error](xref:DomInstance#errors) will be returned.
+
+Soft-deleting a *GenericEnumEntry* object will have the following consequences:
+
+- The *GenericEnumEntry* will not be displayed on UI forms used to create an instance.
+- The *GenericEnumEntry* will be displayed on a UI form used to update an instance of which the value is set to the soft-deleted *GenericEnumEntry* in question.
+- It will not be possible to create an instance of which the value is set to the soft-deleted *GenericEnumEntry*.
+- It will not be possible to update the value of an instance to the soft-deleted *GenericEnumEntry*.
+- It is allowed to have instances of which the value is set to the soft-deleted *GenericEnumEntry*.
+
+#### DataMiner Object Models: 'Full CRUD meta' scripts [ID_37004]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+Apart from **ID only** scripts, which use the `OnDomInstanceCrud` entry point method and give you access to the CRUD type and the ID of the `DomInstance` in the script, it is now also possible to configure **Full CRUD meta** scripts. These use the `OnDomInstanceCrudWithFullMeta` entry point method and give you access to the CRUD type and the full `DomInstance` object(s).
+
+For more detailed information, see [ExecuteScriptOnDomInstanceActionSettings](xref:ExecuteScriptOnDomInstanceActionSettings).
 
 ### Protocols
 
@@ -553,19 +574,6 @@ In this next example, all *Column* elements of parameters that have a `level` at
 ```xml
 <ExportRule table="*" tag="Protocol/Params/Param/Display/Positions/Position/Column" value="2" whereTag="Protocol/Params/Param" whereAttribute="level" whereValue="5"/>
 ```
-
-### Correlation
-
-#### Correlation alarms will now by default contain the value of the alarm property by which they are grouped [ID_35583]
-
-<!-- MR 10.4.0 - FR 10.3.4 -->
-
-When a correlation rule is configured to use alarm grouping via an alarm property, from now on, the value of the alarm property by which the alarms are grouped will now by default be added to the correlated alarm.
-
-If you do not want the alarm property value to be added to the correlation alarm, then you can disable this behavior by adding the `NewAlarmOptions.DisableGroupedProperty` flag to the `NewAlarmActionDefinition.Properties` using the *SLNetClientTest* tool.
-
-> [!WARNING]
-> Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
 ### Maps
 

@@ -18,8 +18,6 @@ Recommended DataMiner client configuration:
 
 ### Operating system
 
-- Microsoft Windows 8
-
 - Microsoft Windows 10
 
 - Microsoft Windows 11
@@ -55,7 +53,7 @@ To install the Skyline certificates:
 1. Under *DataMiner Tools*, click *Register Skyline Certificates*, and then click *Run*.
 
 > [!IMPORTANT]
-> As a security precaution, **running *SLRegCerts.exe* is optional** unless you specifically require offline functionality on Windows Server 2012 R2 servers or Windows 8 clients without internet connectivity.
+> As a security precaution, **running *SLRegCerts.exe* is optional** unless you specifically require offline functionality on Windows Server 2012 R2 servers without internet connectivity.
 
 > [!NOTE]
 >

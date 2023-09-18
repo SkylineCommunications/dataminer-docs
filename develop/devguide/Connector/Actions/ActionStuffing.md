@@ -68,7 +68,7 @@ In the following example, an extra 0x10 character will be added in front of ever
 
 ```xml
 <Action id="1">
-  <On id="1">command</On>
+   <On id="1">command</On>
    <Type value="0x10" allowed="0x030x02">stuffing</Type>
 </Action>
 ```
@@ -78,7 +78,7 @@ On response example:
 ```xml
 <Action id="5">
    <Name>Remove Stuffing</Name>
-  <On>response</On>
+   <On>response</On>
    <Type value="0x10" startoffset="2" endoffset="2">stuffing</Type>
 </Action>
 ```
