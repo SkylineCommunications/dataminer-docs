@@ -29,7 +29,7 @@ Example:
 The ArrayOptions tag contains all the columns (through ColumnOption child tags) that refer to other parameters (via the pid attribute).
 
 > [!NOTE]
-> Column that holds primary keys must be of Interprete/Type "string". Refer to [Primary keys](xref:UIComponentsTablePrimaryKeys).
+> The column containing the primary keys must be of Interprete/Type "string". Refer to [Primary keys](xref:UIComponentsTablePrimaryKeys).
 
 For each table column, an additional parameter is defined.
 
