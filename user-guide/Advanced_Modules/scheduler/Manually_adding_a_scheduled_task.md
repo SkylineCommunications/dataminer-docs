@@ -35,8 +35,8 @@ To add a new scheduled task without a Scheduler template:
     | Information                    | Specify a message that will appear as an information event at the scheduled time.                                                                                                                           |
     | SMS                            | Specify a text message that will be sent to the cellphone of a contact person.                                                                                                                              |
     | Email                          | Compose an email message, optionally including a report or dashboard.                                                                                                                                       |
-    | Upload report to FTP           | Specify an FTP server, and a report or dashboard to upload to it.                                                                                                                                           |
-    | Upload report to shared folder | Specify a shared folder, and a report or dashboard to upload to it.                                                                                                                                         |
+    | Upload report to FTP           | Specify an FTP server, and a report or dashboard to upload to it. For more detailed information, see [Upload report to FTP](xref:Upload_report_to_FTP).                                   |
+    | Upload report to shared folder | Specify a shared folder, and a report or dashboard to upload to it. For more detailed information, see [Upload report to shared folder](xref:Upload_report_to_shared_folder).             |
     | Script                         | Select an existing Automation script to be executed at the scheduled time. For more information on the script execution options, see [Script execution options](xref:Script_execution_options). |
 
     > [!NOTE]

@@ -14,12 +14,6 @@ A label displays the current value of a standalone parameter. The text provided 
   <Description>Software Version</Description>
   <Information>
      <Subtext>Running software version.</Subtext>
-     <Includes>
-        <Include>time</Include>
-        <Include>range</Include>
-        <Include>steps</Include>
-        <Include>units</Include>
-     </Includes>
   </Information>
   <Type>read</Type>
   <Interprete>
@@ -41,16 +35,10 @@ The following example displays a numeric parameter:
 
 ```xml
 <Param id="1806" trending="false">
-  <Name>CPU Load</Name>
+  <Name>CPULoad</Name>
   <Description>CPU Load</Description>
   <Information>
      <Subtext>Indicates the current CPU utilization.</Subtext>
-     <Includes>
-        <Include>time</Include>
-        <Include>range</Include>
-        <Include>steps</Include>
-        <Include>units</Include>
-     </Includes>
   </Information>
   <Type>read</Type>
   <Interprete>
@@ -101,12 +89,6 @@ In order to make a label editable, create a parameter of type "write" that has t
   <Description>Document Folder</Description>
   <Information>
      <Subtext>Document folder.</Subtext>
-     <Includes>
-        <Include>time</Include>
-        <Include>range</Include>
-        <Include>steps</Include>
-        <Include>units</Include>
-     </Includes>
   </Information>
   <Type>read</Type>
   <Interprete>
@@ -124,12 +106,6 @@ In order to make a label editable, create a parameter of type "write" that has t
   <Description>Document Folder</Description>
   <Information>
      <Subtext>Document folder.</Subtext>
-     <Includes>
-        <Include>time</Include>
-        <Include>range</Include>
-        <Include>steps</Include>
-        <Include>units</Include>
-     </Includes>
   </Information>
   <Type>write</Type>
   <Interprete>
@@ -154,20 +130,14 @@ There are multiple ways to copy a value set in the write parameter to its read c
 
 ## Creating an editable label with check box
 
-It is possible to visualize a check box by providing a discrete entry with state disabled on the write parameter:
+It is possible to visualize a check box by providing a discrete entry on the write parameter:
 
 ```xml
 <Param id="420">
-  <Name>Configuration File</Name>
+  <Name>ConfigurationFile</Name>
   <Description>Configuration File</Description>
   <Information>
-     <Subtext></Subtext>
-     <Includes>
-        <Include>time</Include>
-        <Include>range</Include>
-        <Include>steps</Include>
-        <Include>units</Include>
-     </Includes>
+     <Subtext>Configuration file.</Subtext>
   </Information>
   <Type>read</Type>
   <Interprete>
@@ -196,17 +166,8 @@ It is possible to visualize a check box by providing a discrete entry with state
   </Measurement>
 </Param>
 <Param id="421">
-  <Name>Configuration File</Name>
+  <Name>ConfigurationFile</Name>
   <Description>Configuration File</Description>
-  <Information>
-     <Subtext></Subtext>
-     <Includes>
-        <Include>time</Include>
-        <Include>range</Include>
-        <Include>steps</Include>
-        <Include>units</Include>
-     </Includes>
-  </Information>
   <Type>write</Type>
   <Interprete>
      <RawType>other</RawType>
