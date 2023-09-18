@@ -142,7 +142,7 @@ namespace HelloWorldAPI_1
 
 ### Publish the script
 
-The API script is complete and needs to be published to the DataMiner System. You can do so using the built-in publish feature of DIS. Make sure that DIS can connect to the DataMiner System you want to upload your script to. You will need to [edit the DIS settings](xref:DIS_settings#dma) so the DMA is selectable.
+When the API script is complete, it needs to be published to the DataMiner System. You can do so using the built-in publish feature of DIS. Make sure that DIS can connect to the DataMiner System you want to upload your script to. You will need to [edit the DIS settings](xref:DIS_settings#dma) so the DMA is selectable.
 
 1. In the *Solution Explorer*, double-click *HelloWorldAPI.xml* .
 
@@ -162,7 +162,7 @@ To access the API, you will need an [API token](xref:UD_APIs_Objects_ApiToken).
 
 1. Under *Tokens*, click *Create*
 
-1. For the *Name*, enter "HelloWorldToken" and click *Generate token*.
+1. For the *Name*, enter "HelloWorldToken", and click *Generate token*.
 
    ![Create API Token](~/user-guide/images/UDAPIS_Tutorials_HelloWorld_Create_Token_Name.jpg)
 
@@ -210,7 +210,7 @@ The API has now been fully configured. To ensure that it functions correctly, yo
 > [!NOTE]
 > If this is the first time you use Postman, the app will ask you to create an account or sign in. You can create an account, but you can also continue using the *try our lightweight API client* button at the bottom of the screen.
 
-1. Open Postman, and click the *+* icon to create a new request.
+1. Open Postman and click the *+* icon to create a new request.
 
    !['+' icon in Postman](~/user-guide/images/UDAPIS_Tutorials_HelloWorld_Postman_Create_New.jpg)
 
@@ -222,7 +222,7 @@ The API has now been fully configured. To ensure that it functions correctly, yo
 
    ![Add bearer token in Postman](~/user-guide/images/UDAPIS_Tutorials_HelloWorld_Postman_Authorization.jpg)
 
-1. In the *Token* field, enter the API token secret that was copied in [step 3](#step-3-create-an-api-token).
+1. In the *Token* field, enter the API token secret that you copied in [step 3](#step-3-create-an-api-token).
 
    ![Postman UI with token filled in](~/user-guide/images/UDAPIS_Tutorials_HelloWorld_Postman_Bearer_Token.jpg)
 
