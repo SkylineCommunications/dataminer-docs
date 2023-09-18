@@ -29,12 +29,18 @@ Use this action to upload a report to a shared network folder:
 
 ## Examples
 
-- **Example 1:** User *JohnDoe*, belonging to the *BROADCAST* domain, wants their scheduled task to upload a report or dashboard named *Versions* to a folder on the server *DMAServer01* (`C:/Users/JohnDoe/Reports`).
+### Example 1
 
-  The folder path must be converted to a UNC path, `C$\Users\JohnDoe\Reports`, as shown in the image below.
+User *JohnDoe*, belonging to the *BROADCAST* domain, wants a scheduled task to upload a report or dashboard named *Versions* to a folder on the server *DMAServer01* (`C:/Users/JohnDoe/Reports`).
 
-  ![image](https://github.com/SkylineCommunications/dataminer-docs/assets/121097704/19414799-d3b4-4e2b-a346-f323173343d6)
+The folder path must be converted to a UNC path, `C$\Users\JohnDoe\Reports`, as shown in the image below.
 
-- **Example 2:** A user wants to upload a report or dashboard to a folder on the *F:* disk of a server with IP *10.200.10.20* (`F:/Reports`), using an *Administrator* account.
+![example 1 configuration](~/user-guide/images/Upload_to_shared_folder1.png)<br>
+*Configuration in DataMiner Cube (version 10.3.9)*
 
-  ![image](https://github.com/SkylineCommunications/dataminer-docs/assets/121097704/7936a6bd-4899-48b8-8498-468ac56d9934)
+### Example 2
+
+A user wants to upload a report or dashboard to a folder on the *F:* disk of a server with IP *10.200.10.20* (`F:/Reports`), using an *Administrator* account.
+
+![example 2 configuration](~/user-guide/images/Upload_to_shared_folder2.png)<br>
+*Configuration in DataMiner Cube (version 10.3.9)*
