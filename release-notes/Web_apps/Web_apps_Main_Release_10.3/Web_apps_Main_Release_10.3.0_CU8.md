@@ -16,9 +16,27 @@ uid: Web_apps_Main_Release_10.3.0_CU8
 
 ### Fixes
 
+#### Low-Code Apps: Problem when two State components were fed the same query row data with a column filter applied [ID_37206]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.10 -->
+
+When two *State* components were fed the same query row data and had a column filter applied, the app would become unresponsive.
+
+#### Dashboards app/Low-Code Apps: Problem when migrating a query containing only a 'start from' node linking to another query with only a 'start from' node [ID_37224]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.10 -->
+
+Up to now, it would not be possible to migrate a query with only a *start from* node linking to another query with only a *start from* node linking to another query.
+
+#### Dashboards app/Low-Code Apps: Stepper component would apply an incorrect theme color [ID_37263]
+
+<!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
+
+In some cases, the *Stepper* component would not apply the correct theme color.
+
 #### Dashboards app/Low-Code Apps: Problem with custom time zones [ID_37278]
 
-<!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
+<!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
 
 When a custom time zone was used, in some cases, that time zone would not be processed correctly.
 

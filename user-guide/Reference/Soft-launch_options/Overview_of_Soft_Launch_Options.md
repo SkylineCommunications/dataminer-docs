@@ -366,6 +366,12 @@ Enables contributing service protocol generation.
 - **Minimum version**: 9.6.1
 - **Release version**: 9.6.11/10.0.0 ([RN 23201](xref:General_Main_Release_10.0.0_new_features_5#service--resource-management-possibility-to-generate-protocols-and-function-definitions-based-on-service-definitions-and-enhanced-services-based-on-reservations-id_19330id_19359id_19385id_19386id_19415id_19431id_19450-id_19491id_19498id_19556id_19632id_19789id_23201))
 
+### Swarming
+
+Enables [Swarming](xref:Swarming) support for eligible systems.
+
+- **Minimum version**: 10.3.11
+
 ### VisualDataManager
 
 Enables the new VisualDataHelper.
