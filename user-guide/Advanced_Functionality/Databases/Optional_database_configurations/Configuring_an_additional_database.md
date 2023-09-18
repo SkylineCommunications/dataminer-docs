@@ -22,3 +22,17 @@ To do so:
 
 > [!NOTE]
 > The other databases can be located on a different hardware platform and linked to the DMA over IP.
+
+# Deleting an additional database
+
+You can also delete the additional database again. 
+
+To do so:
+
+1. In Cube, go to *System Center \>* *Database* > *Other*.
+
+1. Select the database you want to delete.
+
+1. Click *Delete*. A pop-up will be shown to say that changes will only happen when you press the Save button.
+
+1. Click *Save*.
