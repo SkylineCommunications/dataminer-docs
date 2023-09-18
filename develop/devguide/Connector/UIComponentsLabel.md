@@ -102,7 +102,7 @@ In order to make a label editable, create a parameter of type "write" that has t
 </Param>
 ```
 
-![alt text](../../images/uieditablelabel.png "DataMiner Cube editable label")
+![DataMiner Cube editable label](../../images/uieditablelabel.png "DataMiner Cube editable label")
 
 There are multiple ways to copy a value set in the write parameter to its read counterpart:
 
