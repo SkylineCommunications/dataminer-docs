@@ -15,7 +15,10 @@ In short, these are the different objects used by this DataMiner module:
 | [API token](xref:UD_APIs_Objects_ApiToken) | Defines a secret string and metadata that can be used to access an API. |
 | [API definition](xref:UD_APIs_Objects_ApiDefinition) | Defines the API. Including what tokens have access, the URL route and what action should be triggered. |
 
-To use this functionality, you need the [DataMiner UserDefinableApiEndpoint](xref:UD_APIs_UserDefinableApiEndpoint) DxM. This module is automatically installed on each DMA on the DMS via the general DataMiner upgrade packages.
+To use this functionality, you need the [DataMiner UserDefinableApiEndpoint](xref:UD_APIs_UserDefinableApiEndpoint) DxM. This module is automatically installed on each DMA in the DMS via the general DataMiner upgrade packages.
+
+> [!TIP]
+> Check out our [tutorials](xref:UD_APIs_Tutorials) to get started with creating user-defined APIs.
 
 > [!NOTE]
 > Since API tokens and API definition objects are **stored in the indexing database**, these are NOT included in DataMiner backup packages. For information on how to back up and restore this data, see [Configuring Elasticsearch backups](xref:Configuring_Elasticsearch_backups).

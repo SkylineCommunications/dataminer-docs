@@ -5339,6 +5339,11 @@
               topicUid: Run_Time_Assembly_Binding
         - name: Producing NuGet packages
           topicUid: Producing_NuGet
+          items:
+            - name: Producing NuGet packages via SLC SE Repository Manager
+              topicUid: Producing_NuGet_RepoManager
+            - name: Producing NuGet packages via GitHub
+              topicUid: Producing_NuGet_GitHub
     - name: Application packages
       topicUid: ApplicationPackages
       items:
