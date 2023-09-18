@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.3.10
 ---
 
-# General Feature Release 10.3.10 – Preview
+# General Feature Release 10.3.10
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!IMPORTANT]
 > When downgrading from DataMiner Feature Release version 10.3.8 (or higher) to DataMiner Feature Release version 10.3.4, 10.3.5, 10.3.6 or 10.3.7, an extra manual step has to be performed. For more information, see [Downgrading a DMS](xref:MOP_Downgrading_a_DMS).
@@ -18,9 +18,9 @@ uid: General_Feature_Release_10.3.10
 
 ## Highlights
 
-*No highlights have been added to this release yet.*
+- [DataMiner Object Models: 'Full CRUD meta' scripts [ID_37004]](#dataminer-object-models-full-crud-meta-scripts-id_37004)
 
-## Other features
+## New features
 
 #### DataMiner Object Models: 'Full CRUD meta' scripts [ID_37004]
 
@@ -259,3 +259,9 @@ When you imported an element that already existed in the system, in some cases, 
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
 When you deleted a trend pattern when connected to a DataMiner Agent running an old DataMiner version (e.g. 10.3.0), the pattern itself was deleted but the occurrences/matches would remain visible until you closed the trend graph and opened it again.
+
+#### Problem when updating the NATS server [ID_37305]
+
+<!-- 10.2.0 [CU19]/MR 10.3.0 [CU7] - FR 10.3.10 [CU0] -->
+
+In some cases, when updating the NATS server, an error could occur while replacing the *nats-streaming-server.exe* file.

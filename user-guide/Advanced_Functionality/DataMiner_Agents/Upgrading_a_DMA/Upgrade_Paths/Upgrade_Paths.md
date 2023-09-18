@@ -9,7 +9,7 @@ uid: Upgrade_Paths
 
 In case you are not upgrading to the DataMiner version that immediately follows your current version, you should follow the upgrade paths listed below, depending on the DataMiner version you are currently on.
 
-If there is no information available for your DataMiner upgrade path, and you are using a currently supported DataMiner version, upgrade straight to your preferred version using a [DataMiner .dmupgrade package](xref:Upgrading_a_DataMiner_Agent_using_DataMiner_Taskbar_Utility).
+If there is no information available for your specific DataMiner upgrade path and you are using a currently supported DataMiner version, follow this general guideline: Upgrade to the next major DataMiner version(s) before [upgrading to your preferred version](xref:Upgrading_a_DataMiner_Agent_using_DataMiner_Taskbar_Utility). For example, go from DataMiner 10.1 to 10.2 before proceeding to 10.3 (preferred version).
 
 ## Available upgrade paths
 

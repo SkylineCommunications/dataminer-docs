@@ -456,6 +456,27 @@ In order to reduce the package size for the Dashboards app and Low-Code Apps, a 
 
 The legacy Monitoring & Control app (obsolete since DataMiner 10.0.0/10.0.2) is no longer available. If you browse to `http(s)://[DMA]/m`, you will now be redirected to the regular Monitoring app.
 
+#### DataMiner Object Models: Auto-increment fields will no longer be visualized using input boxes [ID_37181]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+An `AutoIncrementField` contains a unique value that is automatically incremented each time a DOM instance is created.
+
+Up to now, on web forms used to create or edit a DOM instance, auto-increment fields were incorrectly visualized using an input box. From now on, on web forms used to create a DOM instance, these fields will no longer be visualized, and on web form used to edit a DOM instance, these fields will be visualized as read-only fields.
+
+#### DataMiner Object Models: Enhanced performance when processing GQI count aggregation queries [ID_37187]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+In GQI, up to now, when you applied an aggregation node of type *count* to a query starting from *Object manager instances* (DOM instances), all objects would be retrieved from the database. From now on, count operations will be sent to the database. This will significantly improve the performance of this kind of GQI queries.
+
+The optimization applies when the following conditions are met:
+
+- The GQI query starts with *Object manager instances*.
+- Only one aggregation node is applied to column *ID* with method *COUNT*.
+
+In all other cases (e.g. multiple aggregation nodes, grouping, different columns), all objects will still be retrieved from the database.
+
 #### Dashboards app/Low-Code Apps - Table component: Height of a column resizer has been reduced to that of the column header [ID_37226]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
@@ -463,6 +484,12 @@ The legacy Monitoring & Control app (obsolete since DataMiner 10.0.0/10.0.2) is 
 Up to now, a column resizer would span across the entire height of the column. From now on, the height of a column resizer will be equal to the height of the column header.
 
 Note that, while you dragging a resizer, its height will be equal to that of the entire column you are resizing.
+
+#### Dashboards app/Low-Code Apps - Visual Overview component: Initial visual overview data will now be retrieved asynchronously [ID_37341]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+Up to now, a dashboard containing Visual Overview components would retrieve the initial visual overview data synchronously. From now on, the initial visual overview data will be retrieved asynchronously.
 
 ### Fixes
 
@@ -761,26 +788,50 @@ In some cases, an error could occur when migrating a GQI component:
 
 - When the query used ad hoc data with multiple arguments, and one argument linked to query rows came after an argument linked to something other than query rows, the migration would not succeed and would cause the app to no longer be editable.
 
-#### Dashboards app/Low-Code Apps: Seconds of multiple clock components would not be in sync [ID_37193]
-
-<!-- MR 10.4.0 - FR 10.3.10 -->
-
-When you enabled the *Show seconds* option of multiple clock components on the same dashboard or app panel, the seconds would incorrectly not all be in sync.
-
 #### Dashboards app/Low-Code Apps: Label of 'Icon' setting of 'Icon' component would incorrectly be in lower case [ID_37199]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
 The label of the *Icon* setting of an *Icon* component would incorrectly be in lower case. It is now in upper case.
 
-#### Low-Code Apps: Problem when two State components were fed the same query row data with a column filter applied [ID_37206]
+#### Dashboards app - Web component: Embedded website would not function correctly [ID_37207]
 
-<!-- MR 10.4.0 - FR 10.3.10 -->
+<!-- MR 10.4.0 - FR 10.3.11 -->
 
-When two *State* components were fed the same query row data and had a column filter applied, the app would become unresponsive.
+When, on a dashboard, a website was embedded using a Web component, in some cases, the embedded website would not function correctly.
 
-#### Dashboards app/Low-Code Apps: Problem when migrating a query containing only a 'start from' node linking to another query with only a 'start from' node [ID_37224]
+#### Dashboards app/Low-Code Apps: Initial selection of a component would not be applied when the query was replaced [ID_37230]
 
-<!-- MR 10.4.0 - FR 10.3.10 -->
+<!-- MR 10.4.0 - FR 10.3.11 -->
 
-Up to now, it would not be possible to migrate a query with only a *start from* node linking to another query with only a *start from* node linking to another query.
+The initial selection of a table, state or timeline component would incorrectly not be applied when the query of the component was replaced by another one.
+
+#### Dashboards app/Low-Code Apps: Query builder would display incorrect date/time values when a custom time zone had been configured [ID_37234]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+Up to now, when you had configured a custom time zone, date/time values displayed in the query builder (fed through a time range component) would be incorrect.
+
+#### GQI: Problem when retrieving logger table data from an Elasticsearch database [ID_37251]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When a GQI query retrieved logger table data from an Elasticsearch database, the row keys would be filled in incorrectly. As a result, not all rows would have a unique key.
+
+#### Monitoring app: Casing problem when using NavigatePage [ID_37279]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When, in the *Monitoring* app, a visual overview page was opened using a shape data field of type *NavigatePage*, the value of this field was case sensitive. When the casing of the value was different from the casing of the page name, the page would not open. From now on, the casing of the value and that of the page name will be disregarded.
+
+#### Problem with the IIS web server when redirecting the user to the login page [ID_37288]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+In some cases, an error could occur in the IIS web server when redirecting the user to the login page.
+
+#### Low-Code Apps - Form component: DOM button shadows would be cut off [ID_37348]
+
+<!-- MR 10.4.0 - FR 10.3.10 [CU0] -->
+
+In a Form component, the DOM button shadows would incorrectly be cut off.

@@ -5270,6 +5270,9 @@
               topicUid: DisVisualStudioSolutionsIntroduction
             - name: Developing connectors
               topicUid: Developing_connectors_as_Visual_Studio_solutions
+              items:
+                - name: Using the DIS MIB Browser
+                  topicUid: DIS_MIB_Browser
             - name: Developing Automation scripts
               topicUid: Developing_Automation_scripts_as_Visual_Studio_solutions
         - name: Debugging connectors and Automation scripts
@@ -5285,6 +5288,11 @@
               topicUid: Debugging_a_connector
             - name: Debugging an Automation script
               topicUid: Debugging_an_Automation_script
+        - name: Tutorials
+          topicUid: DisTutorials_MibBrowser
+          items:
+            - name: Exploring the DIS MIB Browser
+              topicUid: DisTutorials_MibBrowser
         - name: Troubleshooting
           topicUid: Troubleshooting
           items:
@@ -5331,6 +5339,11 @@
               topicUid: Run_Time_Assembly_Binding
         - name: Producing NuGet packages
           topicUid: Producing_NuGet
+          items:
+            - name: Producing NuGet packages via SLC SE Repository Manager
+              topicUid: Producing_NuGet_RepoManager
+            - name: Producing NuGet packages via GitHub
+              topicUid: Producing_NuGet_GitHub
     - name: Application packages
       topicUid: ApplicationPackages
       items:
