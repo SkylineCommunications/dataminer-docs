@@ -4,7 +4,7 @@ uid: UIComponentsTableDefinition
 
 # Defining a table
 
-![alt text](../../images/uiX_-_table.png "DataMiner Cube table")
+![DataMiner Cube table](../../images/uiX_-_table.png "DataMiner Cube table")
 
 To define a table, create a parameter of type "array" that represents the table.
 
@@ -104,9 +104,8 @@ The table parameter has an ArrayOptions tag that refers to the column parameters
   </Measurement>
 ```
 
-See also:
-
-- [Protocol.Params.Param.Measurement.Type@options: Options for measurement type “table”](xref:Protocol.Params.Param.Measurement.Type-options#options-for-measurement-type-table)
+> [!TIP]
+> See also: [Protocol.Params.Param.Measurement.Type@options: Options for measurement type “table”](xref:Protocol.Params.Param.Measurement.Type-options#options-for-measurement-type-table)
 
 In order to create a writable column, create an additional parameter of type "write".
 

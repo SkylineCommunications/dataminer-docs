@@ -6,7 +6,7 @@ uid: UIComponentsTreeControlTag
 
 The initial step to compose a tree control is to create tables that will represent the data and configure the linking on them (For more information on how to link tables, see Foreign keys and Relations).
 
-The tree control itself is configured using the TreeControls/TreeControl tag.
+The tree control itself is configured using the TreeControls.TreeControl tag.
 
 Example:
 
