@@ -1,0 +1,45 @@
+---
+uid: DM_and_storage_selfhosted
+---
+
+# Self-hosting the DataMiner nodes and storage nodes
+
+DataMiner can be self-hosted, which can be on-premise, in a private cloud or hybrid, or you could also decide to run it in a public cloud.
+
+The DataMiner System Center provides a complete overview for setup and (self-)maintenance of a DataMiner system, with an intuitive UI to manage the users, user groups, access rights and size of the database, to read and flush log files, etc.
+System Center is also the place where the administrator can configure the DataMiner redundancy settings (high availability or fail-over nodes as we call them), and it includes an upgrade center to easily trigger a software update, regardless of the number of DataMiner nodes.
+
+In terms of **redundancy**, each DMA (DataMiner node) in a DataMiner system can be teamed up with a dedicated backup DMA. Within a DMA redundancy team, the backup DMA will continuously be synchronized so that, at all times, it is ready to take over from its team member the moment that one fails. When you team up a particular DataMiner node with a backup DMA, a virtual DMA team will be created.  Within a DMA team, the two team members will act as peers. In other words, they will not act as master DMA versus slave DMA, but as active DMA versus passive DMA.
+
+By default, all synchronization traffic between the active and the passive team member will pass via the corporate network. If necessary, both team members can also be equipped with an additional network card to be used for synchronization traffic only.
+
+The decision when to failover from the active to the passive DMA can be taken either by a person (i.e. manual failover) or by the DMAs themselves (i.e. automatic failover). In the latter case, the two DMAs in the team will check each other’s status by exchanging heartbeats.
+
+> [!TIP]
+> See also:
+>
+> - [Failover User Guide](xref:failover)
+
+In terms of **backup and restore**, DataMiner nodes require a one-time configuration by the administrator in order to fully automatically take care of backups. The administrator can choose:
+
+- When the DMAs need to take a backup (e.g. each 24 hours at 01.00 AM)
+- What kind of information needs to be included in those backups (configuration, core software, drivers, historical alarms, etc.)
+- How many backups to maintain (e.g. 7 backups, such that one can always go back one week, assuming a backup is taken every 24 hours)
+- Where to store the backup file. The backup file can be stored locally on the DMA (e.g. on a second hard drive), but can also be stored on a secured network drive on a file server.
+
+Moreover, a default DataMiner system comes with a set of features and capabilities which increase the availability, and which enable proactive maintenance & support. This includes for example:
+
+- Automatic & user-definable reboot procedure
+- Generic watchdog strategy
+- Automatic collection and email forward of fault & logging information
+- Automated backup (see details below)
+- Scheduled email health reporting
+- Self-maintaining database with user-definable settings
+- Etc.
+
+From a storage point of view DataMiner is equipped with Cassandra & Elastic storage solutions where you can equally run the databases on-premise, in a private cloud, hybrid or in a public cloud – we do support Cassandra & Elastic clustering capabilities.
+
+> [!TIP]
+> See also:
+>
+> - [Dedicated clustered storage](xref:Dedicated_clustered_storage)
