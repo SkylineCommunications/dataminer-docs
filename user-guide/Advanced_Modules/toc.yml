@@ -344,6 +344,8 @@ items:
                 topicUid: Tutorial_Apps_Edit_Existing_App
               - name: Managing the pages in an app
                 topicUid: Tutorial_Apps_Managing_Pages
+              - name: Using the stepper component in a low-code app
+                topicUid: TutorialStepper
       - name: Available visualizations
         topicUid: Available_visualizations
         items:
