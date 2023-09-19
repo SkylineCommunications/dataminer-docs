@@ -169,7 +169,7 @@ Provides access to additional data sources and operators for GQI in the Dashboar
 > - The object manager instances data source (available from DataMiner 10.3.6 onwards).<!-- RN 36124 -->
 
 - **Minimum version**: 10.0.13
-- **Estimated release version for the custom operator**: 10.3.11
+- **Estimated release version for the custom operator**: 10.3.12
 - **Estimated release version for other data sources and operators**: To be determined
 
 ### GenericOwnership
@@ -282,7 +282,7 @@ Enables the button panel component in the Dashboards app.
 Enables the grid component in the Dashboards app.
 
 - **Minimum version**: 10.2.12
-- **Estimated release version**: 10.3.11
+- **Estimated release version**: 10.3.12
 
 ### ReportsAndDashboardsExport
 
@@ -296,7 +296,7 @@ Enables the export to PDF button within the Dashboards app itself. Creating PDFs
 Enables a new Maps component in the Dashboards app and the Low-Code Apps.
 
 - **Minimum version**: 10.3.2
-- **Estimated release version**: 10.3.11
+- **Estimated release version**: 10.3.12
 
 ### ReportsAndDashboardsGuides
 
@@ -322,7 +322,7 @@ Enables the Query Filter component in the Dashboards app.
 Enables the Timeline component in the Dashboards app.
 
 - **Minimum version**: 10.1.10
-- **Estimated release version**: 10.3.11
+- **Estimated release version**: 10.3.12
 
 ### ResourceList
 
