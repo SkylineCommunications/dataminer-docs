@@ -2,10 +2,10 @@
 uid: Web_apps_Feature_Release_10.3.10
 ---
 
-# DataMiner web apps Feature Release 10.3.10 – Preview
+# DataMiner web apps Feature Release 10.3.10
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to the web applications, see [General Feature Release 10.3.10](xref:General_Feature_Release_10.3.10).
@@ -201,7 +201,7 @@ After you had published an app, the *View published app* option would still be p
 
 #### Dashboards app/Low-Code Apps: Seconds of multiple clock components would not be in sync [ID_37193]
 
-<!-- MR 10.4.0 - FR 10.3.10 -->
+<!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.10 -->
 
 When you enabled the *Show seconds* option of multiple clock components on the same dashboard or app panel, the seconds would incorrectly not all be in sync.
 
@@ -219,12 +219,18 @@ The label of the *Icon* setting of an *Icon* component would incorrectly be in l
 
 #### Low-Code Apps: Problem when two State components were fed the same query row data with a column filter applied [ID_37206]
 
-<!-- MR 10.4.0 - FR 10.3.10 -->
+<!-- MR 10.3.0 [CU8] - FR 10.3.10 -->
 
 When two *State* components were fed the same query row data and had a column filter applied, the app would become unresponsive.
 
 #### Dashboards app/Low-Code Apps: Problem when migrating a query containing only a 'start from' node linking to another query with only a 'start from' node [ID_37224]
 
-<!-- MR 10.4.0 - FR 10.3.10 -->
+<!-- MR 10.3.0 [CU8] - FR 10.3.10 -->
 
 Up to now, it would not be possible to migrate a query with only a *start from* node linking to another query with only a *start from* node linking to another query.
+
+#### Low-Code Apps - Form component: DOM button shadows would be cut off [ID_37348]
+
+<!-- MR 10.4.0 - FR 10.3.10 [CU0] -->
+
+In a Form component, the DOM button shadows would incorrectly be cut off.

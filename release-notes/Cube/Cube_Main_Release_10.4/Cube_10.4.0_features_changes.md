@@ -223,23 +223,6 @@ To do so, right-click a resource in the list, and select *Duplicate*.
 
 - If you make a duplicate of a function resource, the instance dropdown will be left empty and the name of the function instance will be the name of the original function instance with the suffix `- copy`.
 
-#### Having data offloaded to multiple Elasticsearch clusters & enabling TLS when configuring a Cassandra database [ID_36399]
-
-<!-- MR 10.4.0 - FR 10.3.10 -->
-
-In the *Database* section of *System Center*, you can now do the following:
-
-- Have data offloaded to multiple Elasticsearch clusters.
-
-  For detailed instructions, see [Configuring multiple Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters)
-
-- Enable TLS when configuring a Cassandra database.
-
-  See [Configuring the general database settings](xref:Configuring_the_database_settings_in_Cube)
-
-> [!IMPORTANT]
-> From now on, configuring multiple Elasticsearch clusters should only be done via DataMiner Cube.
-
 #### DataMiner Cube - Alarm Console: Special Elasticsearch search box always visible on systems with a Cassandra Cluster database [ID_36735]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
@@ -341,6 +324,25 @@ From now on, when you select the *Include alarms* option, the masked alarms will
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
 DataMiner Cube now supports pattern occurrence events. This means that occurrences of patterns that are already displayed on a trend graph will be added in real time.
+
+#### Spectrum analysis: Panning inside a spectrum window [ID_37284]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+It is now possible to pan inside a spectrum window by clicking and dragging.
+
+When, after clicking the left mouse button, you start dragging, the following will happen:
+
+- The spectrum trace will move to the left or the right while being refreshed at a rate equal to the original rate.
+- The start, stop and center frequency labels on the X axis will continuously update to reflect the ongoing change.
+- The unknown part of the trace (i.e. the frequency range located outside of the original span) will be visualized as a grey area with a grid in the background.
+
+When you stop dragging and release the left mouse button, the panning dimensions will be set on the spectrum analyzer device and the screen will be updated with the new data.
+
+Only upon releasing the left mouse button will the unknown part of the trace be requested from the spectrum analyzer. The newly received trace points will then replace the grey area and a new, uniform spectrum trace will be displayed based on the new center frequency.
+
+> [!IMPORTANT]
+> This feature is only available if the spectrum protocol includes the *Start Frequency*, *Center Frequency* and *Stop Frequency* parameters.
 
 ## Changes
 
@@ -625,3 +627,9 @@ Symptoms:
 When, in a trend graph, you hovered over a pattern of which the instance of the curve was not equal to the instance of the pattern (which had its instancePartOfIdentity property set to false), the curve would incorrectly not be highlighted.
 
 Also, incorrect curves would be added when you clicked to load the linked patterns, and incorrect curves were highlighted when you hovered over a pattern that consisted of two subpatterns from different elements.
+
+#### Trending: Problem when editing a trend pattern on a graph other than the one on which the pattern was created [ID_37191]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When you edited a trend pattern on a trend graph, up to now, the trend data on the graph on which the pattern was created would incorrectly be used instead. From now on, the trend data in the selected part of the graph will be used.

@@ -2,10 +2,10 @@
 uid: Cube_Feature_Release_10.3.10
 ---
 
-# DataMiner Cube Feature Release 10.3.10 – Preview
+# DataMiner Cube Feature Release 10.3.10
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to DataMiner Cube, see [General Feature Release 10.3.10](xref:General_Feature_Release_10.3.10).
@@ -17,23 +17,6 @@ uid: Cube_Feature_Release_10.3.10
 - [Protocols & Templates app: Editing, deleting and duplicating elements [ID_36971]](#protocols--templates-app-editing-deleting-and-duplicating-elements-id_36971)
 
 ## New features
-
-#### Having data offloaded to multiple Elasticsearch clusters & enabling TLS when configuring a Cassandra database [ID_36399]
-
-<!-- MR 10.4.0 - FR 10.3.10 -->
-
-In the *Database* section of *System Center*, you can now do the following:
-
-- Have data offloaded to multiple Elasticsearch clusters.
-
-  For detailed instructions, see [Configuring multiple Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters)
-
-- Enable TLS when configuring a Cassandra database.
-
-  See [Configuring the general database settings](xref:Configuring_the_database_settings_in_Cube)
-
-> [!IMPORTANT]
-> From now on, configuring multiple Elasticsearch clusters should only be done via DataMiner Cube.
 
 #### Alarm Console: Light bulb [ID_36777] [ID_36871] [ID_36918] [ID_37057] [ID_37136] [ID_37145] [ID_37167] [ID_37184]
 
