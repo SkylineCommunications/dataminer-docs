@@ -113,6 +113,12 @@ When a page was duplicated, up to now, the page configuration would not be copie
 
 When, on a dashboard, a website was embedded using a Web component, in some cases, the embedded website would not function correctly.
 
+#### Low-Code Apps: Size of sidebar icon was different when editing an app [ID_37223]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When an app was edited, the size of the sidebar icon was different than when that same app was viewed in either preview mode or published mode.
+
 #### Dashboards app/Low-Code Apps: Initial selection of a component would not be applied when the query was replaced [ID_37230]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
