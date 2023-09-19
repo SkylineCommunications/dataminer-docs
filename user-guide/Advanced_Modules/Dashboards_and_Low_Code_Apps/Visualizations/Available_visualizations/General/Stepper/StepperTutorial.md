@@ -49,12 +49,15 @@ Add data to components by [applying a data feed](xref:Configuring_dashboard_comp
 Each of the components on the page has to receive some data:
 
 - Add the DOM definition to the stepper component and the form component.
+
   ![Definition data](~/user-guide/images/StepperDefinitionData.png)
 
-- Create a query to fetch all object manager instances of the DOM definition. See [Creating a GQI query](xref:Creating_GQI_query).
+- Create a query to fetch all object manager instances of the DOM definition and add it to the table component. See [Creating a GQI query](xref:Creating_GQI_query).
+
   ![Incidents query](~/user-guide/images/StepperQuery.png)
 
 - Link the *Object manager instances* feed from the table component to both the stepper and the form component. Make sure to select a row in the table to expose this feed.
+
   ![Instance data](~/user-guide/images/StepperInstanceData.png)
 
 ## Step 4: Add a save action
@@ -85,6 +88,8 @@ To do so, use the *Appearance* setting in the component layout tab on the right.
 
 Now that everything is configured, you can publish and use your app.
 
-You can create new incidents using the form component and the save button in the header bar. You can inspect and update existing incidents by selecting them in the table component at the bottom. The stepper component visualizes the past states and the possible future states of an incident. This visualization clearly shows the user what steps were taken to resolve the incident and what steps still need to happen before it is fully resolved.
+You can create new incidents using the form component and the save button in the header bar. You can inspect and update existing incidents by selecting them in the table component at the bottom.
+
+The stepper component will visualize the past states and the possible future states of an incident. This visualization will clearly show what steps were taken to resolve the incident and what steps still need to happen before it is fully resolved.
 
 ![Application usage](~/user-guide/images/StepperApp.gif)
