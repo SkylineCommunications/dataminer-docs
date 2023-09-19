@@ -491,6 +491,12 @@ Note that, while you dragging a resizer, its height will be equal to that of the
 
 Up to now, a dashboard containing Visual Overview components would retrieve the initial visual overview data synchronously. From now on, the initial visual overview data will be retrieved asynchronously.
 
+#### Web Services API: ConvertQueryToProtoJson web method now supports node keys [ID_37360]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+Before you can add a GQI query to the Data Aggregator configuration file, you have to convert it first by means of the *ConvertQueryToProtoJson* web method. This method now supports node keys.
+
 ### Fixes
 
 #### Web apps: Problem with external authentication [ID_33405]
