@@ -16,7 +16,24 @@ uid: Cube_Feature_Release_10.3.11
 
 ## New features
 
-*No new features have been added to this release yet.*
+#### Spectrum analysis: Panning inside a spectrum window [ID_37284]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+It is now possible to pan inside a spectrum window by clicking and dragging.
+
+When, after clicking the left mouse button, you start dragging, the following will happen:
+
+- The spectrum trace will move to the left or the right while being refreshed at a rate equal to the original rate.
+- The start, stop and center frequency labels on the X axis will continuously update to reflect the ongoing change.
+- The unknown part of the trace (i.e. the frequency range located outside of the original span) will be visualized as a grey area with a grid in the background.
+
+When you stop dragging and release the left mouse button, the panning dimensions will be set on the spectrum analyzer device and the screen will be updated with the new data.
+
+Only upon releasing the left mouse button will the unknown part of the trace be requested from the spectrum analyzer. The newly received trace points will then replace the grey area and a new, uniform spectrum trace will be displayed based on the new center frequency.
+
+> [!IMPORTANT]
+> This feature is only available if the spectrum protocol includes the *Start Frequency*, *Center Frequency* and *Stop Frequency* parameters.
 
 ## Changes
 
