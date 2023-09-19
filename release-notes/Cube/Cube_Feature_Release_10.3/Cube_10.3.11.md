@@ -39,7 +39,11 @@ Only upon releasing the left mouse button will the unknown part of the trace be 
 
 ### Enhancements
 
-*No enhancements have been added to this release yet.*
+#### CefSharp package download enhancements [ID_37319]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+From now on, when DataMiner Cube has to download the CefSharp package from a DataMiner Agent, it will first try to download it via HTTPS, and if HTTPS is not configured, it will try again via HTTP.
 
 ### Fixes
 

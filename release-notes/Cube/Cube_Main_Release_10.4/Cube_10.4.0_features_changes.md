@@ -520,6 +520,12 @@ On the Users/Groups page in System Center, a tooltip has been added to the *Edit
 
 The style of the toggle buttons in the *Included* and *Anomalies* columns of the alarm template editor as well as in the *Templates* tab of parameter drill-down pages was not consistent with the styles used in the Cube themes. This has now been rectified.
 
+#### CefSharp package download enhancements [ID_37319]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+From now on, when DataMiner Cube has to download the CefSharp package from a DataMiner Agent, it will first try to download it via HTTPS, and if HTTPS is not configured, it will try again via HTTP.
+
 ### Fixes
 
 #### Profiles app: A profile instance would incorrectly list parameters that had been removed from the profile definition [ID_34679] [ID_34771]
