@@ -854,6 +854,12 @@ When, in the *Monitoring* app, another visual overview page was opened using a s
 
 In a Form component, the DOM button shadows would incorrectly be cut off.
 
+#### Dashboards app/Low-Code Apps - Parameter table: Problem with Copy command in right-click menu [ID_37357]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When, in a *Parameter table* component, it would not be possible to copy a cell, a row, a column or the entire table using the *Copy* command in the right-click menu.
+
 #### Low-Code Apps: Problem with 'Execute component' action [ID_37364]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
