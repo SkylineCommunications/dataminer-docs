@@ -633,3 +633,9 @@ Also, incorrect curves would be added when you clicked to load the linked patter
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
 When you edited a trend pattern on a trend graph, up to now, the trend data on the graph on which the pattern was created would incorrectly be used instead. From now on, the trend data in the selected part of the graph will be used.
+
+#### System Center - Database: No longer possible to create and delete database configurations in the Offload and Other tabs when Type was set to 'Database per cluster' [ID_37254]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+In the *Database* section of *System Center*, when *Type* was set to "Database per cluster" in the *General* tab, creating and deleting database configurations in the *Offload* and *Other* tabs would no longer work.

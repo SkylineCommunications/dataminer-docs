@@ -55,6 +55,12 @@ When you edited a trend pattern on a trend graph, up to now, the trend data on t
 
 On a system with a large number of correlation/incident alarms, in some cases, an error could occur when one of those alarms was cleared. That alarm would then incorrectly remain visible in the Alarm Console.
 
+#### System Center - Database: No longer possible to create and delete database configurations in the Offload and Other tabs when Type was set to 'Database per cluster' [ID_37254]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+In the *Database* section of *System Center*, when *Type* was set to "Database per cluster" in the *General* tab, creating and deleting database configurations in the *Offload* and *Other* tabs would no longer work.
+
 #### Trend templates: Offload settings would be lost when you disabled to 'Allow Offload Database Configuration' option [ID_37268]
 
 <!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
