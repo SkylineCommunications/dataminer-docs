@@ -860,6 +860,12 @@ In a Form component, the DOM button shadows would incorrectly be cut off.
 
 When, in a *Parameter table* component, it would not be possible to copy a cell, a row, a column or the entire table using the *Copy* command in the right-click menu.
 
+#### Low-Code Apps: First column of table with multiple queries could be empty [ID_37363]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When actions had been configured on a table visualization with multiple queries, in some cases, the first column would be empty.
+
 #### Low-Code Apps: Problem with 'Execute component' action [ID_37364]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
