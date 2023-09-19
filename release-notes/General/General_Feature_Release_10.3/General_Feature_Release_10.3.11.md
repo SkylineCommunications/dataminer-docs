@@ -82,6 +82,12 @@ A number of security enhancements have been made.
 
 A number of enhancements have been made to the trend prediction models, especially with regard to detecting daily trend recurrences.
 
+#### SLAnalytics: Enhanced processing of trended parameters of which the value remains constant [ID_37303]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+A number of enhancements have been made to the memory resources used for trended parameters of which the value remains constant.
+
 ### Fixes
 
 #### Failover: Data can get lost when the backup agent is the online agent during a Cassandra Cluster migration [ID_34018]
@@ -97,6 +103,14 @@ From now on, when you start a Cassandra Cluster migration, a warning message wil
 <!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
 
 Not all [Protocol.Params.Param.Interprete.Others](xref:Protocol.Params.Param.Interprete.Others) tags would be read out, which could lead to unexpected behavior.
+
+#### Problem with .NET Framework DLL files used by QActions or Automation scripts [ID_36984]
+
+<!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+When a QAction or Automation script used a NuGet package containing a .NET Framework DLL file on a DataMiner Agent that used a more recent .NET Framework, a compilation error would occur.
+
+Also, certain DLL files located in a subfolder of the .NET Framework would not be resolved correctly.
 
 #### DataMiner backup: Number of backups to be kept would be interpreted incorrectly [ID_37143]
 
