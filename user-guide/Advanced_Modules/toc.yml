@@ -301,6 +301,11 @@ items:
             topicUid: Customizing_the_Dashboards_app
           - name: Dashboard Gateway installation
             topicUid: Dashboard_Gateway_installation
+          - name: Tutorials
+            topicUid: Tutorial_Dashboards
+            items:
+              - name: Displaying a custom empty component message
+                topicUid: Tutorial_Dashboards_Displaying_a_custom_empty_component_message
       - name: Low-Code Apps
         topicUid: Application_framework
         items:
