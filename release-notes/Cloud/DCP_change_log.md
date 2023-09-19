@@ -8,9 +8,10 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 #### 19 September 2023 - Enhancement - CloudGateway 2.12.1 - Added more checks in the ConnectionTester [ID_37219]
 
-The ConnectionTester included with DataMiner CloudGateway has been upgraded validate the next items:
-- Validate if NATS is working between DxMs, by discovering the DataMiner CloudGateway DxMs in the DMS
-- Validate if it can reach those discovered DataMiner CloudGateways using their Cloud Endpoint, which by default requires TCP port 5100 to be open between the servers (firewall/internal network). This is a common misconfiguration causing issues with several cloud features like Catalog Deployments, DxM updates, Remote Log Collection etc.
+The ConnectionTester included with DataMiner CloudGateway has been upgraded with the following checks:
+
+- Validation if NATS is working between DxMs, by discovering the DataMiner CloudGateway DxMs in the DMS.
+- Validation if those discovered DataMiner Cloud Gateway nodes can be reached using their cloud endpoint, which by default requires TCP port 5100 to be open between the servers (firewall/internal network). This is a common misconfiguration causing issues with several cloud features like Catalog deployments, DxM updates, remote log collection, etc.
 
 #### 22 August 2023 - Enhancement - Admin App - Audit Record Export (CSV) [ID_37164]
 
