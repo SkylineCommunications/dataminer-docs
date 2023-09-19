@@ -181,3 +181,9 @@ When, in the *Monitoring* app, a visual overview page was opened using a shape d
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
 In some cases, an error could occur in the IIS web server when redirecting the user to the login page.
+
+#### Low-Code Apps: Problem with 'Execute component' action [ID_37364]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When you edited an existing action, in some cases, the *Execute component* action would not be able to properly restore the form.

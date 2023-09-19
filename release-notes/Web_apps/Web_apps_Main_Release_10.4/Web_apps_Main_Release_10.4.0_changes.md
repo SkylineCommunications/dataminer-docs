@@ -847,3 +847,9 @@ In some cases, an error could occur in the IIS web server when redirecting the u
 <!-- MR 10.4.0 - FR 10.3.10 [CU0] -->
 
 In a Form component, the DOM button shadows would incorrectly be cut off.
+
+#### Low-Code Apps: Problem with 'Execute component' action [ID_37364]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When you edited an existing action, in some cases, the *Execute component* action would not be able to properly restore the form.
