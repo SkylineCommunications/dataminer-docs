@@ -2,13 +2,13 @@
 uid: Web_apps_Main_Release_10.3.0_CU7
 ---
 
-# DataMiner web apps Main Release 10.3.0 CU7 – Preview
+# DataMiner web apps Main Release 10.3.0 CU7
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
-> For release notes for this release that are not related to the web applications, see [General Main Release 10.3.0 CU6](xref:General_Main_Release_10.3.0_CU6).
+> For release notes for this release that are not related to the web applications, see [General Main Release 10.3.0 CU7](xref:General_Main_Release_10.3.0_CU7).
 
 ### Enhancements
 
@@ -49,11 +49,25 @@ Up to now, if a column of a query was edited while the query was loading in a ta
 
 When, while in edit mode, you deleted multiple components at once, the *Data used in Dashboard* section of the edit pane would not be updated correctly. The data would be removed, but the height of the section would incorrectly not be reduced.
 
+#### Dashboards app: 'Loading...' indicator would appear when trying to save a folder of which the name consists of spaces [ID_37046]
+
+<!-- 10.2.0 [CU20]/MR 10.3.0 [CU7] - FR 10.3.10 -->
+
+When, in the *Create folder* or *Create dashboard* window, you clicked inside the *Location* box, clicked "+" to add a new folder, entered a series of spaces, and then clicked the checkmark button, a "Loading..." indicator would appear at the top of the window but nothing would happen.
+
+Also, from now on, it is no longer allowed to save a folder with a name containing leading spaces.
+
 #### Dashboards app/Low-Code Apps: Visual glitch when closing component menu [ID_37058]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
 
 When the menu of a component in a dashboard or low-code app was closed by moving the mouse pointer out of it at the bottom center, a visual glitch could occur where the menu appeared to rapidly open and close.
+
+#### Dashboards app/Low-Code Apps - Line chart component: Viewport would change upon receiving data [ID_37065]
+
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
+
+When a *Line chart* component received new data, it would incorrectly recalculate its viewport.
 
 #### Dashboards app: 'Copy embed URL' right-click option continued to be displayed [ID_37090]
 
@@ -72,3 +86,21 @@ In the Monitoring app, it could occur that Visual Overview parameter control sha
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
 
 When you click a time range component in a low-code app, an overlay is displayed where you can select a time range. In some cases, it could occur that part of this overlay could not be displayed.
+
+#### Low-Code Apps: No longer possible to deny specific users access to low-code apps when using SAML authentication [ID_37125]
+
+<!-- MR 10.3.0 [CU7] - FR 10.3.10 -->
+
+When using external user authentication via SAML, it was no longer possible to deny specific users access to low-code apps.
+
+#### Low-Code Apps: 'View published app' option still present in user menu after publishing an app [ID_37129]
+
+<!-- MR 10.3.0 [CU7] - FR 10.3.10 -->
+
+After you had published an app, the *View published app* option would still be present in the app's user menu. From now on, this option will no longer be present in the user menu of published apps.
+
+#### Low-Code Apps: Editing a published app with an existing draft would incorrectly create a new draft [ID_37194]
+
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
+
+Up to now, when you edited a published app that had a draft, a new draft would incorrectly be created. From now on, when you edit an app that has a draft, that existing draft will be opened.

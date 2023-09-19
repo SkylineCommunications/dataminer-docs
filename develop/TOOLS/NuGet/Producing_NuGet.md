@@ -7,12 +7,11 @@ uid: Producing_NuGet
 > [!IMPORTANT]
 > This section might include some information that is only applicable to Skyline employees and/or links that are only accessible to Skyline employees.
 
-Automatic creation and publishing of NuGets from the community class library or from [custom solutions](xref:Pipeline_stages_for_custom_solutions) is supported through the Skyline CI/CD pipelines.
+Automatic creation and publishing of NuGet packages is supported via the Skyline CI/CD pipelines on Jenkins and GitHub:
 
-On the [custom solutions tab](xref:Repository_types#custom-solutions) of the SLC SE RepoManager tool, you can enable the NuGet-related stages by clicking the NuGet button. This will add a *JenkinsNuGetConfiguration.xml* file that allows configuration of these stages (enable/disable creation, signing, publishing of NuGet packages). For more information on the expected content of this file, refer to the [NuGet stages XML schema](xref:SchemaNuGetStagesConfig) documentation.
+- [Producing NuGet packages via SLC SE Repository Manager](xref:Producing_NuGet_RepoManager)
 
-The pipeline will automatically create pre-release packages, which can be used during development. Every build will have its own pre-release package.
-Every release build will have a signed released package.
+- [Producing NuGet packages via GitHub](xref:Producing_NuGet_GitHub)
 
 > [!TIP]
 > To create a new solution or project that produces a NuGet package, make use of the Visual Studio templates available at [https://github.com/SkylineCommunications/Skyline.DataMiner.VisualStudioTemplates](https://github.com/SkylineCommunications/Skyline.DataMiner.VisualStudioTemplates).

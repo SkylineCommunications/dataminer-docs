@@ -232,6 +232,28 @@ When you add a new alarm tab to the Alarm Console, that alarm tab will now alway
 > [!NOTE]
 > Currently, when you start typing in this search box, no suggestions are displayed yet.
 
+#### Alarm Console: Light bulb [ID_36777] [ID_36871] [ID_36918] [ID_37057] [ID_37136] [ID_37145] [ID_37167] [ID_37184]
+
+<!-- RNs 36777/36871/36918: MR 10.4.0 - FR 10.3.9 -->
+<!-- RNs 37057/37136/37145/37167/37184: MR 10.4.0 - FR 10.3.10 -->
+
+In the top-right corner of the Alarm Console, you can now find a light bulb icon that will light up when there are alarms or suggestion events related to an SLAnalytics feature. When you click this light bulb, a menu will open, possibly showing you the following notifications:
+
+| Notification | Action when clicked |
+|--------------|---------------------|
+| X alarms require your focus in the current tab | Applies a filter that makes the current tab only list the focused alarms. |
+| Also show alarms not requiring focus      | Clears the above-mentioned filter and makes the current tab list all alarms. |
+| X incidents are present on the system     | Opens a new tab listing all active incidents. |
+| X anomalies were found in your trend data | Opens a new tab listing all anomaly suggestions/alarms. |
+| X alarms are predicted in the near future | Opens a new tab listing all prediction suggestions. |
+| X recent pattern occurrence detected      | Opens a new tab listing all trend pattern suggestions. |
+
+> [!NOTE]
+>
+> - Each of the above-mentioned notifications will only appear in the menu when there is at least one alarm, incident, anomaly or pattern occurrence.
+> - When at least one SLAnalytics feature (alarm focus, automatic incident tracking, behavioral anomaly detection, proactive cap detection or pattern matching) is disabled or not available, a link to [Advanced analytics features in the Alarm Console](xref:Advanced_analytics_features_in_the_Alarm_Console) will appear below the light bulb icon.
+> - If the DataMiner System does not include a Cassandra database, the menu will only show a notification saying the Cassandra is required.
+
 #### Visual Overview: New custom color 'bg.pressededitor' for parameter controls of type 'Lite' [ID_36779]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
@@ -296,6 +318,31 @@ From now on, when you select the *Include alarms* option, the masked alarms will
 
 > [!NOTE]
 > When you add a new tab of type "sliding window", you will still be able to select the *Include masked alarms* option.
+
+#### Trending - Pattern matching: Pattern occurrences will now be added to a trend graph in real time [ID_37153]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+DataMiner Cube now supports pattern occurrence events. This means that occurrences of patterns that are already displayed on a trend graph will be added in real time.
+
+#### Spectrum analysis: Panning inside a spectrum window [ID_37284]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+It is now possible to pan inside a spectrum window by clicking and dragging.
+
+When, after clicking the left mouse button, you start dragging, the following will happen:
+
+- The spectrum trace will move to the left or the right while being refreshed at a rate equal to the original rate.
+- The start, stop and center frequency labels on the X axis will continuously update to reflect the ongoing change.
+- The unknown part of the trace (i.e. the frequency range located outside of the original span) will be visualized as a grey area with a grid in the background.
+
+When you stop dragging and release the left mouse button, the panning dimensions will be set on the spectrum analyzer device and the screen will be updated with the new data.
+
+Only upon releasing the left mouse button will the unknown part of the trace be requested from the spectrum analyzer. The newly received trace points will then replace the grey area and a new, uniform spectrum trace will be displayed based on the new center frequency.
+
+> [!IMPORTANT]
+> This feature is only available if the spectrum protocol includes the *Start Frequency*, *Center Frequency* and *Stop Frequency* parameters.
 
 ## Changes
 
@@ -572,3 +619,17 @@ Symptoms:
 
 - The login screen would display the following error message: `Start the DataMiner software manually or contact your system administrator.`
 - The Cube logging would contain a `Login failed.` entry mentioning `Cannot accept SOAP messages (text/xml)`.
+
+#### Trending - Pattern matching: Problem when adding and highlighting curves [ID_37174]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When, in a trend graph, you hovered over a pattern of which the instance of the curve was not equal to the instance of the pattern (which had its instancePartOfIdentity property set to false), the curve would incorrectly not be highlighted.
+
+Also, incorrect curves would be added when you clicked to load the linked patterns, and incorrect curves were highlighted when you hovered over a pattern that consisted of two subpatterns from different elements.
+
+#### Trending: Problem when editing a trend pattern on a graph other than the one on which the pattern was created [ID_37191]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When you edited a trend pattern on a trend graph, up to now, the trend data on the graph on which the pattern was created would incorrectly be used instead. From now on, the trend data in the selected part of the graph will be used.

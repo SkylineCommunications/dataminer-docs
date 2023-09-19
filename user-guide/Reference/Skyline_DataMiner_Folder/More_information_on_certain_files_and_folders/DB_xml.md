@@ -170,30 +170,34 @@ If Cassandra still cannot be reached after SLDataGateway has tried to connect fo
 
 ### Enabling TLS on the Cassandra database connection
 
-From DataMiner 10.2.0/10.1.3 onwards, it is possible to enable TLS on a Cassandra database connection.
+<!--From DataMiner 10.2.0/10.1.3 onwards, it is possible to enable TLS on a Cassandra database connection.
 
-To do so
+- From DataMiner 10.3.10/10.4.0 onwards(RN 36399 - reverted in RN 37322), you can configure this setting in Cube. See [Cassandra cluster database](xref:Configuring_the_database_settings_in_Cube#cassandra-cluster-database).
 
-1. Enable TLS in the settings of the Cassandra database itself.
+- Prior to DataMiner 10.3.10/10.4.0:-->
 
-1. Enable TLS in the settings of the relevant database in DB.xml. For example:
+To do so:
 
-    ```xml
-    <DataBase active="true" local="true" type="Cassandra">
-     <DBServer>10.10.10.10</DBServer>
-     <UID>myUserId</UID>
-     <PWD>myPassword</PWD>
-     <DB>SLDMADB</DB>
-     <TLSEnabled>true</TLSEnabled>
-    </DataBase>
-    ```
+  1. Enable TLS in the settings of the Cassandra database itself.
 
-> [!NOTE]
->
-> - This procedure only enables TLS on the database connection. It does not enable client authentication.
-> - From DataMiner 10.1.3 onwards TLS 1.0 is supported. From DataMiner 10.2.4/10.2.0-CU1 onwards, TLS 1.0, 1.1 and 1.2 are supported.
-> - When Cassandra is hosted on the local DataMiner server, and DataMiner Failover is active, Cassandra will use TCP port 7001 for TLS encrypted inter-node communication (instead of port 7000). Make sure this port is allowed through the firewall of both Failover agents.
-> - This setting is also needed to use an [Azure Managed Instance for Apache Cassandra](xref:Azure_Managed_Instance_for_Apache_Cassandra).
+  1. Enable TLS in the settings of the relevant database in DB.xml. For example:
+
+     ```xml
+     <DataBase active="true" local="true" type="Cassandra">
+      <DBServer>10.10.10.10</DBServer>
+      <UID>myUserId</UID>
+      <PWD>myPassword</PWD>
+      <DB>SLDMADB</DB>
+      <TLSEnabled>true</TLSEnabled>
+     </DataBase>
+     ```
+
+  > [!NOTE]
+  >
+  > - This procedure only enables TLS on the database connection. It does not enable client authentication.
+  > - From DataMiner 10.1.3 onwards, TLS 1.0 is supported. From DataMiner 10.2.4/10.2.0-CU1 onwards, TLS 1.0, 1.1 and 1.2 are supported.
+  > - When Cassandra is hosted on the local DataMiner server, and DataMiner Failover is active, Cassandra will use TCP port 7001 for TLS encrypted inter-node communication (instead of port 7000). Make sure this port is allowed through the firewall of both Failover agents.
+  > - This setting is also needed to use an [Azure Managed Instance for Apache Cassandra](xref:Azure_Managed_Instance_for_Apache_Cassandra).
 
 ### Configuring the consistency level of Cassandra in a Cassandra Cluster database
 
