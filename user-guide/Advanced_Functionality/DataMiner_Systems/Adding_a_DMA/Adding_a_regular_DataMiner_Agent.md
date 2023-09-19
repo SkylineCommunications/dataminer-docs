@@ -8,6 +8,9 @@ uid: Adding_a_regular_DataMiner_Agent
 > See also:
 > [Agents – Adding a DMA to a cluster](https://community.dataminer.services/video/agents-adding-a-dma-to-a-cluster/) ![Video](~/user-guide/images/video_Duo.png)
 
+> [!IMPORTANT]
+> Before adding a DataMiner Agent, see [Configuring the IP network ports](xref:Configuring_the_IP_network_ports). 
+
 1. On the DMA you intend to add to the cluster, go to the *System Center* module and select the *Agents* page.
 
 2. On the *Manage* tab, select the DataMiner Agent to which you are connected.
