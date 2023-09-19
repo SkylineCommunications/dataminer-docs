@@ -182,6 +182,12 @@ When, in the *Monitoring* app, a visual overview page was opened using a shape d
 
 In some cases, an error could occur in the IIS web server when redirecting the user to the login page.
 
+#### Monitoring app: Problem when opening another visual overview page using 'NavigatePage' [ID_37338]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When, in the *Monitoring* app, another visual overview page was opened using a shape data field of type *NavigatePage*, the rest of the application would incorrectly not reflect this.
+
 #### Low-Code Apps: Problem with 'Execute component' action [ID_37364]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
