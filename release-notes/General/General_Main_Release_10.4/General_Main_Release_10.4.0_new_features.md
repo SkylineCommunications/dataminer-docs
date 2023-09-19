@@ -518,15 +518,18 @@ In the log files, you will be able to find out which caches are enabled and when
 
 When the caches are enabled, it is no longer possible to get paged results when retrieving DomDefinitions, DomBehaviorDefinitions or SectionDefinitions. Instead, the complete list of objects matching the given query will be returned, even if that list is larger than the configured page size.
 
-#### DataMiner Object Models: Soft-deletable objects [ID_36721]
+#### DataMiner Object Models: Soft-deletable objects [ID_36721] [ID_37121]
 
-<!-- MR 10.4.0 - FR 10.3.9 -->
+<!-- RN 36721: MR 10.4.0 - FR 10.3.9 -->
+<!-- RN 37121: MR 10.4.0 - FR 10.3.10 -->
+<!-- Additional fix of 37121 added under WebApps/Fixes -->
 
 The following DOM objects can now be soft-deleted:
 
-- [FieldDescriptor](xref:DOM_SectionDefinition#fielddescriptor)
-- [SectionDefinitionLink](xref:DomDefinition#sectiondefinitionlink)
 - [DomStatusSectionDefinitionLink](xref:DOM_status_system#configuring-fields)
+- [FieldDescriptor](xref:DOM_SectionDefinition#fielddescriptor)
+- GenericEnumEntry
+- [SectionDefinitionLink](xref:DomDefinition#sectiondefinitionlink)
 
 When the fields linked to a soft-deleted `FieldDescriptor` or part of a soft-deleted `SectionDefinitionLink` or `DomStatusSectionDefinitionLink` are marked as *IsSoftDeleted*, the following applies:
 
@@ -535,6 +538,22 @@ When the fields linked to a soft-deleted `FieldDescriptor` or part of a soft-del
 - The fields are never be required.
 - Values are allowed to exist in the fields on a `DomInstance` for a soft-deleted `FieldDescriptor`, `SectionDefinitionLink`, or `DomStatusSectionDefinitionLink`.
 - Updating a `DomInstance` with new/updated values will be blocked for a field that has a soft-deleted `FieldDescriptor`, or is part of a soft-deleted `SectionDefinitionLink` or `DomStatusSectionDefinitionLink` (for that status). A [ValueForSoftDeletedFieldNotAllowed error](xref:DomInstance#errors) will be returned.
+
+Soft-deleting a *GenericEnumEntry* object will have the following consequences:
+
+- The *GenericEnumEntry* will not be displayed on UI forms used to create an instance.
+- The *GenericEnumEntry* will be displayed on a UI form used to update an instance of which the value is set to the soft-deleted *GenericEnumEntry* in question.
+- It will not be possible to create an instance of which the value is set to the soft-deleted *GenericEnumEntry*.
+- It will not be possible to update the value of an instance to the soft-deleted *GenericEnumEntry*.
+- It is allowed to have instances of which the value is set to the soft-deleted *GenericEnumEntry*.
+
+#### DataMiner Object Models: 'Full CRUD meta' scripts [ID_37004]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+Apart from **ID only** scripts, which use the `OnDomInstanceCrud` entry point method and give you access to the CRUD type and the ID of the `DomInstance` in the script, it is now also possible to configure **Full CRUD meta** scripts. These use the `OnDomInstanceCrudWithFullMeta` entry point method and give you access to the CRUD type and the full `DomInstance` object(s).
+
+For more detailed information, see [ExecuteScriptOnDomInstanceActionSettings](xref:ExecuteScriptOnDomInstanceActionSettings).
 
 ### Protocols
 

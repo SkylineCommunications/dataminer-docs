@@ -2,17 +2,17 @@
 uid: General_Main_Release_10.2.0_CU19
 ---
 
-# General Main Release 10.2.0 CU19 – Preview
+# General Main Release 10.2.0 CU19
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
 ### Enhancements
 
-#### Service & Resource Management: Changing the 'IsValueCopy' property of a ProfileInstance will no longer be allowed [ID_31189]
+#### Service & Resource Management: ProfileInstances with 'IsValueCopy' set to true will be assigned a TTL of 1 year [ID_31189]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
 
@@ -53,7 +53,29 @@ From now on, after each DataMiner upgrade or DataMiner start-up, this folder wil
 
 A number of security enhancements have been made.
 
+#### SLReset: Generation of NATS credentials will now also be logged in SLFactoryReset.txt [ID_37071]
+
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
+
+When the factory reset tool *SLReset.exe* was run, up to now, the generation of the NATS credentials would only be logged to the console. From now on, an entry will also be added to the *SLFactoryReset.txt* log file.
+
+#### 'No Notifications might be sent' notice will now be logged in the SLSNMPAgent.txt log file [ID_37188]
+
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
+
+When you connected to a DataMiner Agent, up to now, the Alarm Console would often show the following notice:
+
+`No Notifications might be sent (Email or Sms). Init Notifications: No e-mail address found to use as sender. Defaulting to notifications@example.com`
+
+This notice will now be logged in the *SLSNMPAgent.txt* log file instead.
+
 ### Fixes
+
+#### Dashboards app: Problem with trend components in PDF reports [ID_36331]
+
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU4] - FR 10.3.7 -->
+
+In a PDF report of a dashboard, in some cases, trend components would collide with other components.
 
 #### DataMiner upgrade failed because prerequisites check incorrectly marked Agent as failed [ID_36776]
 
@@ -97,7 +119,7 @@ Normally, when you open a spectrum monitor element, you should be able to view a
 
 #### NATS configuration inconsistent in Failover setup after reconfiguring NATS [ID_37023]
 
-<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.9 [CU1] -->
 
 Up to now, the offline DMA in a Failover pair built its NATS configuration by fetching the nodes from the online DMA. In case the online DMA could not communicate with the rest of the cluster, this caused the offline DMA to also mark all other DMAs as unreachable. This meant that when NATS was reconfigured, even when the offline DMA was actually able to reach them, these "unreachable" DMAs were excluded from its routes. Moreover, as the offline DMA cannot generate alarms, there would be no notification of this until it was switched to online.
 
@@ -121,6 +143,28 @@ If no preset was available for a particular spectrum element, it could occur tha
 
 When the menu of a component in a dashboard or low-code app was closed by moving the mouse pointer out of it at the bottom center, a visual glitch could occur where the menu appeared to rapidly open and close.
 
+#### Dashboards app/Low-Code Apps - Line chart component: Viewport would change upon receiving data [ID_37065]
+
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
+
+When a *Line chart* component received new data, it would incorrectly recalculate its viewport.
+
+#### SLReset: Problem due to NATS being re-installed before cleaning up the 'C:\\Skyline DataMiner' folder [ID_37072]
+
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
+
+When you perform a factory reset by running *SLReset.exe*, NATS will automatically be re-installed.
+
+Up to now, SLReset would re-install NATS **before** it cleaned up the `C:\Skyline DataMiner` folder. As, in some cases, this could cause unexpected behavior, SLReset will now re-install NATS **after** the file clean-up.
+
+#### Failover: NATS servers would incorrectly use the virtual IP address of a Failover setup to establish the route to the online agent [ID_37073]
+
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.9 [CU2] -->
+
+When the NATS server builds the route connections to the agents in a Failover setup, in some cases, when establishing the route to the online agent, it used the virtual IP address of the Failover setup instead of the primary address of the online agent.
+
+From now on, *NATS Custodian* will check whether the routes list contains any virtual IP addresses. If so, it will replace each virtual IP address with the correct primary address of the online agent when performing the NATS configuration checks. However, it will not restart NATS.
+
 #### Cassandra Cluster Migrator tool would incorrectly not migrate any logger tables [ID_37083]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
@@ -138,3 +182,35 @@ In the Monitoring app, it could occur that Visual Overview parameter control sha
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
 
 When you click a time range component in a low-code app, an overlay is displayed where you can select a time range. In some cases, it could occur that part of this overlay could not be displayed.
+
+#### Problem when running queries against Elasticsearch [ID_37138]
+
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
+
+In some rare cases, queries run against an Elasticsearch database would get stuck, causing SLDataGateway to throw exceptions and Elasticsearch to not return any results.
+
+#### Protocols: Length parameter in a response would not be set to the correct value [ID_37172]
+
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
+
+In some cases, the length parameter in a response would not be set to the the correct value.
+
+#### Service & Resource Management: Booking status would be set to 'Ended' too soon [ID_37176]
+
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
+
+In some cases, events scheduled to run at the end of a booking would not be run because the status of the booking was set to "Ended" too soon.
+
+From now on, the status of a booking will only be set to "Ended" once all events have been run.
+
+#### Low-Code Apps: Editing a published app with an existing draft would incorrectly create a new draft [ID_37194]
+
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
+
+Up to now, when you edited a published app that had a draft, a new draft would incorrectly be created. From now on, when you edit an app that has a draft, that existing draft will be opened.
+
+#### Problem when updating the NATS server [ID_37305]
+
+<!-- 10.2.0 [CU19]/MR 10.3.0 [CU7] - FR 10.3.10 [CU0] -->
+
+In some cases, when updating the NATS server, an error could occur while replacing the *nats-streaming-server.exe* file.

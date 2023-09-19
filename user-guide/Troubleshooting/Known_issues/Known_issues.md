@@ -7,6 +7,7 @@ uid: Known_issues
 
 | Issue | DataMiner version | Date added |
 |--|--|--|
+| [Cassandra backups no longer working](xref:KI_Cassandra_backups_not_working)| DataMiner 10.3.9 [CU0] | August 29, 2023 |
 | [Default NATS port is already in use](xref:KI_NATS_port_9090) | From DataMiner 10.1.0/10.1.1 onwards | August 3, 2023 |
 | [Unable to connect to DMS when using .NET Remoting](xref:KI_Unable_to_Connect_Net_Remoting) | DataMiner Cube 10.3.7 and 10.3.8 <br>Any versions from DataMiner 10.2.0 onwards using automatic client updates | August 1, 2023 |
 | [Various issues with a geo-redundant Cassandra setup with multiple data centers](xref:KI_Multiple_Datacenters) | Cassandra Cluster setups | June 1, 2023 |
@@ -14,7 +15,7 @@ uid: Known_issues
 | [Corrupted low-code app after concurrent editing actions](xref:KI_app_corruption_after_editing) | From DataMiner 10.2.5/10.3.0 onwards | May 26, 2023 |
 | [Cassandra cluster data not offloaded while database is unavailable](xref:KI_Cassandra_cluster_data_not_offloaded) | Cassandra Cluster setups | May 22, 2023 |
 | [Inaccessible logger table data in Elasticsearch because of incorrect casing](xref:KI_Inaccessible_data_Elasticsearch_casing) | From DataMiner 10.3.0 to 10.3.0 [CU2]<br>From DataMiner 10.3.3 to 10.3.5.| May 8, 2023 |
-| [RTEs caused by problem during automatic NATS reconfiguration](xref:KI_RTEs_NATS_reconfiguration) | From DataMiner 10.3.4 onward | May 5, 2023 |
+| [RTEs caused by problem during automatic NATS reconfiguration](xref:KI_RTEs_NATS_reconfiguration) | DataMiner 10.3.4 up to 10.3.8 | May 5, 2023 |
 | [Activities and scripts delayed because of CheckVIPs thread](xref:KI_CheckVIPs_delays_activities) | DataMiner 10.2.0 up to 10.2.0 [CU15]/10.3.0 [CU4]<br>DataMiner 10.1.12 up to 10.3.6 | April 28, 2023 |
 | [Elasticsearch not initialized when DataMiner starts up](xref:KI_Elasticsearch_not_initialized_on_DMA_startup) | Any version using Elasticsearch | April 20, 2023 |
 | [DataMiner keeps trying to restart when Elasticsearch is unavailable](xref:KI_Restart_loop_when_Elasticsearch_unavailable) | DataMiner 10.3 main and feature releases | April 11, 2023 |

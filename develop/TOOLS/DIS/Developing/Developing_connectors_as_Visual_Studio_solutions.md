@@ -89,3 +89,7 @@ A connector Visual Studio solution is organized into various folders, each servi
 
 > [!NOTE]
 > Test projects should only be integrated into protocol solutions for the purpose of testing protocol functionality. They should not be used for system tests that include certain Automation scripts, among other things.
+
+## See also
+
+[Getting Started with the DIS MIB Browser](xref:DIS_MIB_Browser)
