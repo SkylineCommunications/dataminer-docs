@@ -101,6 +101,12 @@ Up to now, a dashboard containing Visual Overview components would retrieve the 
 
 ### Fixes
 
+#### Low-Code Apps: Page configuration would not be copied along when duplicating a page [ID_37120]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When a page was duplicated, up to now, the page configuration would not be copied along. As a result, certain page settings would be missing.
+
 #### Dashboards app - Web component: Embedded website would not function correctly [ID_37207]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->

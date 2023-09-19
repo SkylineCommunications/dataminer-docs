@@ -34,7 +34,7 @@ Not all [Protocol.Params.Param.Interprete.Others](xref:Protocol.Params.Param.Int
 
 <!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
 
-When a QAction or Automation script used a NuGet package containing a .NET Framework DLL file on a DataMiner Agent that used a more recent .NET Framework, a compilation error would occur.
+When a QAction or Automation script used a NuGet package containing a .NET Framework DLL file on a DataMiner Agent that used a more recent .NET Framework that included that same DLL file by default, a compilation error would occur.
 
 Also, certain DLL files located in a subfolder of the .NET Framework would not be resolved correctly.
 

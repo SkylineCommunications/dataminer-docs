@@ -771,6 +771,12 @@ When the web API fetched information for columns of a GQI query, it could occur 
 
 If a shared dashboard contained a query that built on another query (using the "Start from" data source), in some cases it could occur that the dashboard could not be loaded and the loading screen continued to be displayed.
 
+#### Low-Code Apps: Page configuration would not be copied along when duplicating a page [ID_37120]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When a page was duplicated, up to now, the page configuration would not be copied along. As a result, certain page settings would be missing.
+
 #### Web apps: DOM GenericEnumEntry objects marked as hidden would incorrectly still be visible [ID_37121]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
