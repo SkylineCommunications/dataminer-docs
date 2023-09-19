@@ -61,7 +61,10 @@ In the *Settings* tab for this component, you can customize its behavior to suit
 
 - If you want the first row to be selected by default, in the *Settings* tab, under *Initial Selection*, set the toggle button to *On* (available from DataMiner 10.3.6/10.4.0 onwards<!-- RN 35984 -->). This way, the first row will be automatically selected whenever the component is loaded or when the data in the table is refreshed.
 
-- If you want to configure the message shown when a query returns no results, in the *layout* tab, under *Advanced*, change the *Empty result message* setting to your custom message. By default, this message is set to *Nothing to show* (available from 10.3.9/10.4.0 onwards<!-- RN 37173 -->).
+- If you want to configure the message shown when a query returns no results, in the *layout* tab, under *Advanced*, change the *Empty result message* setting to your custom message (available from 10.3.11/10.4.0 onwards<!-- RN 37173 -->). By default, this message is set to *Nothing to show*.
+
+  > [!TIP]
+  > See also: [Displaying a custom empty component message](xref:Tutorial_Dashboards_Displaying_a_custom_empty_component_message).
 
 ## Exporting the table
 
