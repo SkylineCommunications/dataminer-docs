@@ -113,6 +113,7 @@ uid: glossary_a_to_l
 | Term | Description |
 |------|-------------|
 | DAA | Distributed Access Architecture. Cable network architecture where headend and network functions are decentralized and virtualized. |
+| DaaS | DataMiner as a Service. A cloud-native, fully operational DataMiner System that you can deploy with a single click. DaaS comes with its own [Storage as a Service (STaaS)](xref:STaaS) solution. |
 | DAB | Digital Audio Broadcasting. Type of audio broadcasting where analog audio is converted to a digital signal. |
 | Dashboard | A custom page displaying information about specific components of the DataMiner System. Two apps are available for the creation of dashboards, a legacy app that is also embedded in DataMiner Cube and a cross-platform app, available from DataMiner 9.6.9 onwards.<br>See [DMS Dashboards](xref:dashboards) or [Dashboards app](xref:newR_D), respectively. |
 | Dashboard container | Special type of dashboard in the legacy Reports & Dashboards module, which displays several other dashboards in different tabs. See[Creating a dashboard container](xref:Creating_a_dashboard_container). |
@@ -248,6 +249,7 @@ uid: glossary_a_to_l
 | Term | Description |
 |------|-------------|
 | IaaS | Infrastructure as a Service. Cloud-based service that provides a basic computing infrastructure. |
+| IaC  | Infrastructure as Code |
 | IAM | Inventory & Asset Management. DataMiner module that establishes a link between a DMS and a CMDB.<br>See [Inventory & Asset Management](xref:AssetManagement). |
 | IAS | Interactive Automation script. A DataMiner Automation script that is designed to require user interaction.<br>See [Building interactive Automation scripts with C#](xref:Building_interactive_Automation_scripts_with_CSharp). |
 | IDE | Integrated Development Environment. Software application that provides comprehensive facilities for software development. |

@@ -4,7 +4,7 @@ uid: DashboardQueryFilterFeed
 
 # Query filter feed
 
-> [!WARNING]
+> [!NOTE]
 > This feature is in preview until DataMiner 10.3.9/10.4.0. If you use the preview version of the feature, its functionality may be different from what is described below. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
 
 Available from DataMiner 10.3.9/10.4.0 onwards. Prior to this, the component is available in soft launch from DataMiner 10.0.4 onwards, if the soft-launch option ReportsAndDashboardsPTP is enabled.

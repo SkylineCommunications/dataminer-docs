@@ -99,7 +99,10 @@ To configure the component:
 
    - *Styling and Information* > *Expand legend initially*: Select this option to immediately show the trend legend in the component. Otherwise, the legend section is initially collapsed, and you can display it using the arrow icon next to the graph.
 
-   - *Styling and Information* > *Hide non-trended parameters*: Available from DataMiner 10.0.9 onwards. Determines whether parameters are shown in the legend of the graph if they have no trend data available. By default, this option is selected, so that these parameters are hidden. Prior to DataMiner 10.3.0/10.2.12, this option is named *Hide parameters without trend data in the legend*.
+   - *Styling and Information* > *Hide non-trended parameters*: Available from DataMiner 10.0.9 onwards. Determines whether parameters are shown in the legend of the graph if they have no trend data available. If the option is selected, these parameters are hidden. By default, it is not selected in the most recent DataMiner versions, but it is selected by default prior to DataMiner 10.3.9/10.4.0<!-- RN 36869 -->. Prior to DataMiner 10.3.0/10.2.12, this option is named *Hide parameters without trend data in the legend*.
+
+     > [!NOTE]
+     > Prior to DataMiner 10.3.9/10.4.0, when a line chart component used element table column parameters as data and indices as filter, it would cross-match indices across the unique elements associated with the table column parameters. This behavior is prevented by disabling the *Hide non-trended parameters* option, enhancing the performance of these visualizations.
 
    - *Fill graph*: Available from DataMiner 10.2.0/10.1.6 onwards. Select this option to have the space underneath the line filled with the line color.
 
@@ -117,6 +120,11 @@ To configure the component:
      > From DataMiner 10.2.0/10.1.1 onwards, the percentile calculation takes into account how long the parameter had a specific value. This means that if a particular value is present for a longer time than other values, it will get more weight in the calculation. For discrete parameters or graphs showing multiple parameters, no percentile is calculated.
 
    - *Additional lines* > *Show boundary lines*: Allows you to display one or more boundary lines. You can configure where a line should be displayed by adding a Y-axis value in the *Boundary value* box. The color of a boundary line can be customized in the *Boundary line color* box. The *Add boundary line* option below this allows you to add additional boundary lines. To remove a boundary line, click the x to the right of the line name.
+
+   - *Advanced* \> *Empty Result message*: Available from 10.3.11/10.4.0 onwards<!-- RN 37173 -->. Allows you to specify a custom message that is displayed when a query returns no results.
+
+     > [!TIP]
+     > See also: [Displaying a custom empty component message](xref:Tutorial_Dashboards_Displaying_a_custom_empty_component_message).
 
 ## Configuration with query data feed
 

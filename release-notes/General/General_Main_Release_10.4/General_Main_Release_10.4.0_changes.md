@@ -124,12 +124,13 @@ The zoom range of a map can now be set by means of a slider.
 
 Because of a number of enhancements, overall performance has increased when fetching relation information for the automatic incident tracking feature.
 
-#### Security enhancements [ID_35434] [ID_35997] [ID_36319] [ID_36624] [ID_36928]
+#### Security enhancements [ID_35434] [ID_35997] [ID_36319] [ID_36624] [ID_36928] [ID_37267]
 
 <!-- 35434: MR 10.4.0 - FR 10.3.4 -->
 <!-- 35997: MR 10.4.0 - FR 10.3.5 -->
 <!-- 36319/36928: MR 10.4.0 - FR 10.3.9 -->
 <!-- 36624: MR 10.4.0 - FR 10.3.8 -->
+<!-- 37267: MR 10.4.0 - FR 10.3.11 -->
 
 A number of security enhancements have been made.
 
@@ -158,7 +159,6 @@ In the *SLNetClientTest* tool, the following new DOM-related features have been 
   > [!NOTE]
   >
   > - When you instruct the *SLNetClientTest* tool to delete a DOM Manager, it will count the number of DOM instances. If the DOM Manager in question contains more than 10,000 DOM instances, an error message will appear, saying that deleting the DOM Manager would take too long.
-
   > - When you instruct the *SLNetClientTest* tool to delete a DOM Manager, it will not remove the indices from the Elasticsearch database. These indices have to be deleted manually. If you do not delete them manually, we recommend to not re-use the module ID as this could cause configuration conflicts.
 
 > [!CAUTION]
@@ -311,6 +311,20 @@ SLProtocol is now a 64-bit process by default.
 
 However, if necessary, it can still be run as a 32-bit process. For more information, see [Activating SLProtocol as a 32-bit process](xref:Activating_SLProtocol_as_a_32_Bit_Process).
 
+#### Service & Resource Management: A series of checks will now be performed when you add or upload a functions file [ID_36732]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When a functions file is added or uploaded, the following checks will now be performed:
+
+1. Can the content of the file (in XML format) be parsed?
+1. Does the file contain the name of the protocol?
+1. Does the protocol name in the file correspond to the protocol name in the request?
+1. Does the file contain a version number?
+1. Does the DataMiner System not contain a functions file with the same version for the protocol in question?
+
+When you try to upload a functions file using DataMiner Cube, the log entry (in Cube logging) and the information event (in the Alarm Console) created when the upload fails will indicate the checks that did not return true.
+
 #### DataMiner Object Models: DomInstanceHistory will now be saved asynchronously [ID_36785]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
@@ -438,6 +452,37 @@ A number of enhancements have been made to the *DataMiner Object Model* window.
 > [!CAUTION]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
+#### Service & Resource Management: Improved ResourceManager logging [ID_36989]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+The ResourceManager logging (*SLResourceManager.txt*) has been improved to make debugging easier.
+
+Some log entries have been rewritten to make them clearer, have been assigned another log level or have been removed entirely.
+
+#### DataMiner Object Models: Bulk deletion of history records when deleting a DOM instance [ID_37012]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+Up to now, when a DOM instance was deleted, the associated HistoryChange records were removed one by one. From now on, when a DOM instance is deleted, its HistoryChange records will be deleted in bulk. This will greatly improve overall performance when deleting DOM instances, especially when they are deleted synchronously.
+
+#### DataMiner.xml: objectId attribute of AzureAD element will now be considered optional [ID_37162]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+Up to now, a run-time error would be thrown when the `<AzureAD>` element in the *DataMiner.xml* file did not contain an `objectId` attribute.
+
+This `objectId` attribute will now be considered optional. Hence, no run-time error will be thrown anymore when it has not been specified.
+
+#### SLAnalytics: Enhanced performance when using automatic incident tracking based on properties [ID_37198]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+Because of a number of enhancements, overall performance has increased when using automatic incident tracking based on service, view or element properties.
+
+> [!IMPORTANT]
+> For the properties that should be taken into account, the option *Update alarms on value changed* must be selected. For more information, see [Configuration of incident tracking based on properties](xref:Automatic_incident_tracking#configuration-of-incident-tracking-based-on-properties).
+
 ### Fixes
 
 #### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID_34981]
@@ -523,12 +568,6 @@ When NATS tried to automatically reconnect at a moment when none of the servers 
 
 When, in element settings, community credentials from the credential library were used, those credentials would be ignored for SNMPv1 and SNMPv2. The get-community and set-community configured on the element would incorrectly be used instead.
 
-#### NATS connection could fail due to payloads being too large [ID_36427]
-
-<!-- MR 10.4.0 - FR 10.3.8 -->
-
-In some cases, the NATS connection could fail due to payloads being too large. As a result, parameter updates and alarms would no longer be saved to the database.
-
 #### SLNet would incorrectly return certain port information fields of type string as null values [ID_36524]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
@@ -565,3 +604,39 @@ In some rare cases, an error could be thrown when an element was renamed.
 #### Deprecated DMS_GET_INFO call could return unexpected DVE child data [ID_36964]
 
 The deprecated DMS_GET_INFO call would return unexpected data when it returned data of elements that contained remotely hosted DVE child elements.
+
+#### Problem when restarting DataMiner [ID_37112]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When DataMiner was restarted, in some rare cases, it would not start up again.
+
+#### SLAnalytics: Problem when creating or editing a multivariate pattern [ID_37212]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When you created or edited a linked pattern with subpatterns from elements on different agents, and the first subpattern was from an element on an agent other than the one from which the CreateLinkedPatternMessage or EditLinkedPatternMessage was originally sent, SLNet would throw an exception.
+
+#### Problem when importing an existing element [ID_37214]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When you imported an element that already existed in the system, in some cases, an error could occur in SLDataMiner.
+
+#### SLAnalytics: Problem when deleting trend pattern while connected to a DMA running an old DataMiner version [ID_37225]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When you deleted a trend pattern when connected to a DataMiner Agent running an old DataMiner version (e.g. 10.3.0), the pattern itself was deleted but the occurrences/matches would remain visible until you closed the trend graph and opened it again.
+
+#### DataMiner.xml: Entire LDAP section could get removed when settings were updated with values containing illegal XML characters [ID_37235]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When settings inside the `<LDAP>` element of the *DataMiner.xml* file were updated with values that contained illegal XML characters, the entire `<LDAP>` element would be removed from the file.
+
+#### MessageHandler method in SLHelperTypes.SLHelper would incorrectly try to serialize exceptions that could not be serialize [ID_37238]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+Up to now, the MessageHandler method in SLHelperTypes.SLHelper would incorrectly try to serialize exceptions that could not be serialized, causing other exceptions to be thrown.

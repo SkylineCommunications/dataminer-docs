@@ -2,10 +2,10 @@
 uid: Web_apps_Main_Release_10.3.0_CU6
 ---
 
-# DataMiner web apps Main Release 10.3.0 CU6 – Preview
+# DataMiner web apps Main Release 10.3.0 CU6
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to the web applications, see [General Main Release 10.3.0 CU6](xref:General_Main_Release_10.3.0_CU6).
@@ -189,3 +189,9 @@ When you opened the *Monitoring* app, an error could occur when no view properti
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
 When you opened the Alarm Console in the *Monitoring* app or an alarm list in the *Dashboards* app, alarm groups that had already been cleared would incorrectly still appear in the list.
+
+#### Dashboards app: Shared dashboards would not be allowed to perform a GetParameterTable API call [ID_37122]
+
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 [CU0] -->
+
+In some cases, a shared dashboard was incorrectly not allowed to perform a *GetParameterTable* API call.

@@ -15,7 +15,7 @@ To configure the component:
 
 1. In the *Component* > *Settings* tab, click the configuration icon next to *On click* and select the action(s) you want the button to execute. See [Configuring low-code app events](xref:LowCodeApps_event_config).
 
-1. Fine-tune the component layout. In the *Component* > *Layout*, tab the following options are available:
+1. Fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
 
    - The default options available for all components. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
 
@@ -31,7 +31,7 @@ In the Dashboards app, the soft-launch button component can be used to execute t
 
    You will only be able to select button parameters for the data feed. Several parameters can be added in the same component.
 
-1. Fine-tune the component layout. In the *Component* > *Layout*, tab the following options are available:
+1. Fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
 
    - The default options available for all components. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
 

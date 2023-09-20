@@ -1,0 +1,13 @@
+items:
+  - name: dataminer.services change log
+    topicUid: DCP_change_log
+  - name: DataMiner Cloud Pack 2.5
+    topicUid: DCP_2.5
+  - name: DataMiner Cloud Pack 2.4
+    topicUid: DCP_2.4
+  - name: DataMiner Cloud Pack 2.3
+    topicUid: DCP_2.3
+  - name: DataMiner Cloud Pack 2.2
+    topicUid: DCP_2.2
+  - name: DataMiner Cloud Pack 2.0
+    topicUid: DCP_2.0

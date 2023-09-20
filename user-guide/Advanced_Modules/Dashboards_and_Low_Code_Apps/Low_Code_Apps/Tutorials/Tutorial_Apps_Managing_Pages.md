@@ -10,11 +10,11 @@ This tutorial shows how to add, change, and remove pages in a low-code app.
 
 ## Overview
 
-- [Step 1: Adding pages to your app](#step-1-adding-pages-to-an-app)
+- [Step 1: Add pages to your app](#step-1-add-pages-to-an-app)
 - [Step 2: Configure how pages are shown](#step-2-configure-how-pages-are-shown)
-- [Step 3: Duplicating and deleting a page](#step-3-duplicating-and-deleting-a-page)
+- [Step 3: Duplicate and delete a page](#step-3-duplicate-and-delete-a-page)
 
-## Step 1: Adding pages to an app
+## Step 1: Add pages to an app
 
 1. Make sure you are viewing the app in [edit mode](xref:Tutorial_Apps_Edit_Existing_App#step-1-edit-the-latest-version-of-your-app).
 
@@ -44,7 +44,7 @@ This tutorial shows how to add, change, and remove pages in a low-code app.
 
   ![Reordering pages](~/tutorials/images/PageReorder.png)
 
-## Step 3: Duplicating and deleting a page
+## Step 3: Duplicate and delete a page
 
 You can quickly create a duplicate of an existing page, resulting in a new page that is identical to the original. The entire configuration, including feed references, will be preserved in this duplicated page.
 

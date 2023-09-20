@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.3.9
 ---
 
-# General Feature Release 10.3.9 – Preview
+# General Feature Release 10.3.9
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!IMPORTANT]
 > When downgrading from DataMiner Feature Release version 10.3.8 (or higher) to DataMiner Feature Release version 10.3.4, 10.3.5, 10.3.6 or 10.3.7, an extra manual step has to be performed. For more information, see [Downgrading a DMS](xref:MOP_Downgrading_a_DMS).
@@ -234,17 +234,22 @@ The `DomInstanceHistoryStorageBehavior` can be set to one of three values:
 
 Because of a number of enhancements, overall performance has increased when adding or updating ReservationInstances, especially on systems with a large number of overlapping bookings and a large number of bookings using the same resources.
 
-#### DataMiner installation/upgrade: Updated DataMiner Extension Modules [ID_36799]
+#### DataMiner installation/upgrade: Updated DataMiner Extension Modules [ID_36799] [ID_37137]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
-When you install or upgrade a DataMiner Agent, a number of DataMiner Extension Modules (DxMs) will automatically be installed (if not present yet). The following modules have now been updated:
+When you install or upgrade a DataMiner Agent, the following DataMiner Extension Modules (DxMs) will now automatically be installed (if not present yet):
 
-- DataMiner CoreGateway (version 2.13.0)
-- DataMiner SupportAssistant (version 1.4.0)
+- DataMiner ArtifactDeployer (version 1.5.0)
+- DataMiner CoreGateway (version 2.12.0)
+- DataMiner FieldControl (version 2.9.0)
+- DataMiner Orchestrator (version 1.4.0)
+- DataMiner SupportAssistant (version 1.5.0)
 
 > [!NOTE]
-> For detailed information on the changes included in the different versions of these DxMs, refer to the [dataminer.services change log](xref:DCP_change_log).
+>
+> - For detailed information on the changes included in the different versions of these DxMs, refer to the [dataminer.services change log](xref:DCP_change_log).
+> - The above-mentioned DxMs all use .NET 6.
 
 #### SLAnalytics - Automatic incident tracking: Root time of an alarm group will be set to the most recent of the base alarm root times [ID_36809]
 
