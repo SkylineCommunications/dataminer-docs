@@ -37,7 +37,11 @@ Moreover, a default DataMiner system comes with a set of features and capabiliti
 - Self-maintaining database with user-definable settings
 - Etc.
 
-From a storage point of view DataMiner is equipped with Cassandra & Elastic storage solutions where you can equally run the databases on-premise, in a private cloud, hybrid or in a public cloud – we do support Cassandra & Elastic clustering capabilities.
+From a storage point of view, each DataMiner System requires its own system data storage. This data storage serves as a repository for configuration data, historical parameter information, and alarm data. It is possible to configure a dedicated clustered storage setup, using a Cassandra-compatible database service and an indexing database (i.e. a Search Cluster).
+
+DataMiner supports a Cassandra and Elasticsearch or OpenSearch database for system data storage. Other data storage solutions can be added optionally, for example to offload data from the DataMiner System and to make it available for third-party systems.
+
+ These databases can be run on-premise, in a private cloud, hybrid or in a public cloud – we do support Cassandra & Elasticsearch/OpenSearch clustering capabilities.
 
 > [!TIP]
 > See also:
