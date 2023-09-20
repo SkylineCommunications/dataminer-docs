@@ -12,7 +12,11 @@ uid: General_Main_Release_10.2.0_CU20
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Security enhancements [ID_37335]
+
+<!-- RN 37335: 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+A number of security enhancements have been made.
 
 ### Fixes
 
