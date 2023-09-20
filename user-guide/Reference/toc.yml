@@ -114,6 +114,13 @@ items:
         topicUid: Copy_Element_Data
       - name: DataMiner Comparison tool
         topicUid: DataMinerComparisonTool
+      - name: DataMiner Ping Monitoring tool
+        topicUid: PingMonitoring
+        items:
+          - name: Installing the Ping Monitoring tool
+            topicUid: Installing_Ping_Monitoring
+          - name: Working with the Ping Monitoring tool
+            topicUid: Working_with_Ping_Monitoring
       - name: DataMiner Size tool
         topicUid: DataMinerSizeTool
       - name: DataMiner Taskbar Utility
