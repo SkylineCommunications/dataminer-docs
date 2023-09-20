@@ -114,14 +114,14 @@ Clicking the *Slowest Destinations in Group* button will display any outliers in
 
 #### The 'Alarms' tab
 
-The *Alarms* tab offers an overview of all active alarms in the groups. A filter panel on the left allows you to filter by group.
+The *Alarms* tab offers an overview of all active alarms in the groups. A filter pane on the left allows you to filter by group.
 
-#### The filter panel
+#### The filter pane
 
-In the *Destinations* and *Grid View* tabs, a filter panel on the left enables you to narrow down destinations based on their properties.
+In the *Destinations* and *Grid View* tabs, a filter pane on the left enables you to narrow down destinations based on their properties.
 
-![Filter panel](~/user-guide/images/Filter_PM.png)
+![Filter pane](~/user-guide/images/Filter_PM.png)
 
-To limit the filter panel to an overview of the currently active filters, enable the toggle button in the top-right corner. Disable the toggle button to return to the full view.
+To limit the filter pane to an overview of the currently active filters, enable the toggle button in the top-right corner. Disable the toggle button to return to the full view.
 
 In the lower-left corner, you can see the total destinations as well as the destinations that are currently active in your DataMiner System.
