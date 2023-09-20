@@ -42,9 +42,6 @@ uid: Installing_Ping_Monitoring
 
 1. Click the *Deploy* button.
 
-   > [!NOTE]
-   > The *Deploy* button is only available if your organization has a license for the displayed package. Otherwise, it is grayed out and displays the text "No License". In that case, to be able to deploy the package, contact <licensing@skyline.be>.
-
 1. Select the target DataMiner System and confirm the deployment. The package will then be pushed to the DataMiner System.
 
 1. Go to `http(s)://[DMA name]/root` and select *PING Monitor* to start using the application.
