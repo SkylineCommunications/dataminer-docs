@@ -39,7 +39,7 @@ Real-time row updates are now supported for GQI session results for specific dat
 
 At present, this is supported for the following GQI data sources:
 
-- Parameter table (except partial tables)
+- Parameter table (except partial and view tables)
 - Views
 - Ad-hoc data
 
