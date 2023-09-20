@@ -60,4 +60,4 @@ The overview below indicates the support levels for all operators.
 | All other operators| [Notification events](#query-update-support) |
 
 > [!NOTE]
-> Some operators that usually only support notification events may in fact support real-time updates in combination with other data sources. You can check this for each data source individually.
+> Some operators that usually only support notification events may in fact support real-time updates in combination with other data sources. You can consult the data source specific documentation for this.
