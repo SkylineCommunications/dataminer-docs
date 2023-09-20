@@ -110,8 +110,7 @@ Real-time row updates are now supported for GQI session results for specific dat
 
 At present, this is supported for the following GQI data sources:
 
-- Parameter table (except partial tables)
+- Parameter table (except partial and view tables)
 - Views
-- Ad-hoc data
 
 It is supported for the *Select* operator, but it can also be supported for other operators if they are combined with specific data sources, for instance for a filter on a parameter table.
