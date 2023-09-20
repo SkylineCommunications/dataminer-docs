@@ -14,4 +14,3 @@ To do so, when you are configuring the dashboard:
 
 > [!NOTE]
 > When the dashboard has a feed that contains the same data as the URL, that feed will overwrite the data from the URL.
->

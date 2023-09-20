@@ -2,13 +2,15 @@
 uid: Using_dashboard_feeds
 ---
 
-# Using dashboard feeds
+# Feeds
 
-Many dashboard components can be configured to be linked to a feed, so that their content can be dynamically adjusted by the users.
+Many components in dashboards and low-code apps can be configured to be linked to a feed, so that their content can be dynamically adjusted by the users.
 
-To have dashboard components updated based on a feed, feed components need to be added in the dashboard. The data input can then either be selected by the user or specified in the dashboard URL.
+To have components updated based on a feed, you can add feed components to the dashboard or low-code app. Data input for such a component can then be selected by the user. Alternatively, you can also specify data input for a feed in a dashboard URL.
 
 - [Configuring feed components](xref:Configuring_feed_components)
+
+- [Dynamically referencing feed values in text](xref:Feed_Link)
 
 - [Specifying data input in a dashboard URL](xref:Specifying_data_input_in_a_dashboard_URL)
 
