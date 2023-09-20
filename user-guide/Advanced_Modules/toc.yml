@@ -564,6 +564,8 @@ items:
                     topicUid: IGQIOnInit
                   - name: IGQIOnPrepareFetch
                     topicUid: IGQIOnPrepareFetch
+          - name: Query updates
+            topicUid: Query_updates
           - name: Importing a query
             topicUid: Importing_a_query
       - name: Frequently asked questions
