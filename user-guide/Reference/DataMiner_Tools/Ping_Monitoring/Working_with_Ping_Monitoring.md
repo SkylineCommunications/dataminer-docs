@@ -90,7 +90,7 @@ Click any tile in the grid to display additional information about the destinati
 
 The *Groups* tab offers an overview of all active groups, with each group corresponding to a Generic Ping element in your DataMiner System.
 
-The following information is available for each group:
+This is the main information that is available for each group:
 
 - **# Dst enabled**: The number of enabled destinations in the group.
 
@@ -99,12 +99,6 @@ The following information is available for each group:
 - **Current responding ping**: The percentage of destinations responding to ping commands, e.g. *100.00 %*.
 
 - **Average ping time**: The average time it takes for destinations within the group to receive and respond to a ping command, e.g. *11.46 ms*.
-
-- **Region**: The group's provided region, e.g. *US East*.
-
-- **Class**: The class information for the group, e.g. *Bronze*.
-
-- **Customer**: The customer associated with the group, e.g. *Skyline Communications*.
 
 Selecting a group in the overview will display all destinations configured within that group in the *Destinations in Selected Group* pane.
 

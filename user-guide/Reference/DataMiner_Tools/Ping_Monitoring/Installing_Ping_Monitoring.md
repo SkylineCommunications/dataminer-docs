@@ -25,13 +25,16 @@ uid: Installing_Ping_Monitoring
   > - For more information about configuring destinations, consult the [Generic Ping connector help](https://catalog.dataminer.services/result/driver/530).
   > - See also: [Working with elements in DataMiner](xref:Element_cards)
 
-- Make sure the following soft-launch options are enabled:
+- Depending on your DataMiner version, you may need to enable the following soft-launch options are enabled:
 
   - [GenericInterface](xref:Overview_of_Soft_Launch_Options#genericinterface)
 
   - [ReportsAndDashboardsDynamicVisuals](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsdynamicvisuals)
 
   - [ReportsAndDashboardsButton](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsbutton)
+
+  > [!NOTE]
+  > Future DataMiner versions may already include these features. To check the estimated release version of a soft-launch option, see [Overview of soft-launch options](xref:Overview_of_Soft_Launch_Options)
 
   > [!TIP]
   > See [Activating soft-launch options](xref:Activating_Soft_Launch_Options).
