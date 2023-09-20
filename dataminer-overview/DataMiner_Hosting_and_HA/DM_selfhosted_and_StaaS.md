@@ -2,19 +2,19 @@
 uid: DM_selfhosted_and_StaaS
 ---
 
-# DataMiner nodes self-hosted 
+# DataMiner nodes self-hosted
 
-Looking for hassle free database storage instead? We can offer Storage as a Service (StaaS) – a powerful option where we manage the storage for you and have you save on infrastructure & IT maintenance costs. This means your DataMiner System will immediately benefit from being connected to a scalable and user-friendly cloud-native storage platform. Gone are the days of estimating your storage requirements in advance, placing specific VM orders, or configuring complex Cassandra and Elasticsearch clusters with the necessary replication and backup.
+If you are looking for hassle-free database storage, the best solution for you is our Storage as a Service (StaaS). This is a powerful option where we manage the storage for you, so you can save on infrastructure & IT maintenance costs. This means your DataMiner System will immediately benefit from being connected to a scalable and user-friendly cloud-native storage platform. You will no longer need to estimate your storage requirements in advance, place specific VM orders, or configure complex Cassandra and Elasticsearch clusters with the necessary replication and backup.
 
-StaaS enables to connect your DataMiner System to a scalable and easy-to-use storage platform, without the effort of setting up and managing your own Cassandra and Elasticsearch cluster. You keep your DataMiner nodes self-hosted, and can use the above mentioned redundancy/high availability capabilities on these nodes, but we take care of the database nodes and redundancy implementations.
+With StaaS, you can connect your DataMiner System to a scalable and easy-to-use storage platform, without the effort of setting up and managing your own Cassandra and Elasticsearch cluster. You keep your DataMiner nodes self-hosted, and you can use our redundancy/high-availability capabilities on these nodes, but we take care of the database nodes and redundancy implementation.
 
-With DataMiner Storage as a Service (STaaS), you can simply connect your DataMiner System to dataminer.services in a few clicks, and start enjoying fast, secure, and reliable storage:
+With DataMiner Storage as a Service (STaaS), you can connect your DataMiner System to dataminer.services in a few clicks, and start enjoying fast, secure, and reliable storage:
 
-- Effortless storage management: no need to mess around with storage clusters or VMs
-- Easy installation: installed in just a few clicks
-- High scalability: start small and grow as you go
-- Cost-effective: only pay for what you use
-- Fast, secure & reliable: learn more about how we keep dataminer.services safe and secure
+- Effortless storage management: No need to mess around with storage clusters or VMs.
+- Easy installation: Installed in just a few clicks.
+- High scalability: Start small and grow as you go.
+- Cost-effective: Only pay for what you use.
+- Fast, secure & reliable: Learn more about how we keep dataminer.services safe and secure.
 
 *Grow as you go*
 
