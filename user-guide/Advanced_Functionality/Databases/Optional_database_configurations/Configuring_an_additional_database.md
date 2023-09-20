@@ -6,7 +6,7 @@ uid: Configuring_an_additional_database
 
 Aside from the general and offload database, you can also specify the settings for any other database found on a particular DMA.
 
-To do so:
+## Adding an additional database
 
 1. In Cube, go to *System Center \>* *Database* > *Other*.
 
@@ -23,16 +23,14 @@ To do so:
 > [!NOTE]
 > The other databases can be located on a different hardware platform and linked to the DMA over IP.
 
-# Deleting an additional database
-
-You can also delete the additional database again. 
-
-To do so:
+## Removing an additional database
 
 1. In Cube, go to *System Center \>* *Database* > *Other*.
 
-1. Select the database you want to delete.
+1. Select the database you want to remove.
 
-1. Click *Delete*. A pop-up will be shown to say that changes will only happen when you press the Save button.
+1. Click *Delete*.
+
+   You will see a notification that changes will only happen when you click the *Save* button.
 
 1. Click *Save*.
