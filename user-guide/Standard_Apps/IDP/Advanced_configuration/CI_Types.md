@@ -187,6 +187,11 @@ The discovery configuration window of the CI Type Management wizard allows you t
 
 - **Conditions**: If only one identifier is configured, the *Conditions* box should simply contain "1". If there are more identifiers, there must be a number for each of them, and they must be combined with logical operators (*not*, *and*, or *or*). For example: "1 and 2".
 
+  > [!NOTE]
+  >
+  > - If different logical operators are combined in the *Conditions* expression, the order of boolean algebra is followed. This means the order of operations is, from highest priority to lowest, NOT then AND and finally OR.
+  > - Parentheses are currently not supported in conditions. For more information, see [ConditionsOptions](xref:CI_Types1#conditionsoptions).
+
 - **Add New Discovery Identifiers**: To add a new discovery identifier, first select the type, then click the triangle button to expand the configuration section for the identifier. Alternatively, you can immediately click the triangle button to see all possible types. Click "+" next to the type you want to add. Then select a *Match* operator and specify the value that should be used to detect if the CI Type should be used.
 
 ### Provisioning configuration

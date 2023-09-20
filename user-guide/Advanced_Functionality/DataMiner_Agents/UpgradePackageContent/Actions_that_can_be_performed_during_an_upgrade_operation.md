@@ -60,8 +60,9 @@ In addition, there can also be a file named *StartUpActions.txt* contained in t
     ```
 
     > [!NOTE]
+    >
     > -  Application packages can only be installed on a DMA that is not stopped.
-    > -  For more information, see [Application packages](xref:TOOApplicationPackages#application-packages).
+    > -  For more information, see [Application packages](xref:ApplicationPackages).
 
 - **Delete**: Try to delete all files listed in *FilesToDelete.txt*.
 
