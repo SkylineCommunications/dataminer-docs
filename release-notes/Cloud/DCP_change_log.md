@@ -6,7 +6,7 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
-#### 20 September 2023 - Enhancement - Admin App - Nodes overwiew page has been made more performant [ID 37403]
+#### 20 September 2023 - Enhancement - Admin App - Nodes page responsiveness has been improved [ID 37403]
 
 The retrieval of node and DXM information on the Nodes page of a DataMiner System in the Admin App has been made more performant.
 
