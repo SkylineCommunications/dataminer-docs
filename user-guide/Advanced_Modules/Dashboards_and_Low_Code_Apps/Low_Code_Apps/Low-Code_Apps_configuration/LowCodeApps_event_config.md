@@ -33,7 +33,7 @@ To configure an event to navigate to a URL:
 1. Select *Navigate to a URL* and specify the URL.
 
    > [!TIP]
-   > The URL can be linked to feeds by making use of the [feed link syntax](xref:Feed_Link#the-syntax).
+   > You can link the URL to a feed using the [feed link syntax](xref:Feed_Link#syntax).
 
 1. Optionally, to open the webpage in a new tab, enable the option *Open in new tab*.
 

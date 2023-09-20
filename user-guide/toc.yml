@@ -1785,15 +1785,6 @@
                   topicUid: Configuring_dashboard_components
                 - name: Embedding a dashboard component in a webpage or Visio drawing
                   topicUid: Embedding_a_dashboard_component_in_a_webpage_or_Visio_drawing
-            - name: Using dashboard feeds
-              topicUid: Using_dashboard_feeds
-              items:
-                - name: Configuring feed components
-                  topicUid: Configuring_feed_components
-                - name: Specifying data input in a dashboard URL
-                  topicUid: Specifying_data_input_in_a_dashboard_URL
-                - name: Configuring a dashboard to use a URL feed without a feed component
-                  topicUid: Configuring_a_dashboard_to_use_a_URL_feed_without_a_feed_component
             - name: Sharing a dashboard
               topicUid: Sharing_a_dashboard
             - name: Generating a report based on a dashboard
@@ -1960,6 +1951,17 @@
                 topicUid: DashboardNumericInputFeed
               - name: Text input
                 topicUid: DashboardTextInputFeed
+        - name: Feeds
+          topicUid: Using_dashboard_feeds
+          items:
+            - name: Configuring feed components
+              topicUid: Configuring_feed_components
+            - name: Dynamically referencing feed values in text
+              topicUid: Feed_Link
+            - name: Specifying data input in a dashboard URL
+              topicUid: Specifying_data_input_in_a_dashboard_URL
+            - name: Configuring a dashboard to use a URL feed without a feed component
+              topicUid: Configuring_a_dashboard_to_use_a_URL_feed_without_a_feed_component
         - name: Generic Query Interface (GQI)
           topicUid: Generic_Query_Interface
           items:

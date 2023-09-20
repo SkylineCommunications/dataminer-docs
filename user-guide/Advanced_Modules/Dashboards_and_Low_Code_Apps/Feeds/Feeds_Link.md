@@ -2,36 +2,46 @@
 uid: Feed_Link
 ---
 
-# Feed linking
+# Dynamically referencing feed values in text
 
-From DataMiner 10.3.11 onwards, [Dashboards](xref:newR_D) and [Low-Code Apps](xref:Application_framework) supports the usage of linking feeds through a textual syntax in some of the features. It allows dynamically referencing feed values from a Low-Code App or dashboard in text. Check the documentation of a feature to know wether or not it supports this new syntax.
-
-## The syntax
-
-Creating feed references inside textual settings requires the following format:
-
-`{FEED.Source name.Feed name.Category name.Data type.Property name}`
-
-1. **FEED**: a fixed keyword to indicate the variable represents a feed link.
-
-1. **Source name**: the name of the Low-Code app page or panel, e.g. "Page 1".
-
-1. **Feed name**: the name of the feed, e.g. "Table 3".
-
-1. **Category name**: the part of the feed that will contain the data, e.g. "Selected rows".
-
-1. **Data type**: the type of data, e.g. "Elements".
-
-1. **Property name**: the property of the fed data that should be used, e.g. "Protocol Name".
+From DataMiner 10.3.11/10.4.0 onwards<!-- RN 37229 -->, some Dashboards and Low-Code Apps features allow you to link to feeds by dynamically referencing feed values from the dashboard or low-code app in specific text fields.
 
 > [!TIP]
-> The name of each part can be found in the *FEEDS* data source of the edit panel's *DATA* tab.
+> You can for example use this to [navigate to a URL](xref:LowCodeApps_event_config#navigating-to-a-url) that is dynamically adjusted based on a feed.
 
 > [!NOTE]
-> Any part of this syntax that contain spaces should be typed between quotes.
+> To know whether a specific Dashboards or Low-Code Apps feature supports this syntax, refer to the documentation for this feature.
+
+## Syntax
+
+To create feed references inside textual settings, use the following syntax:
+
+```txt
+{FEED.Source name.Feed name.Category name.Data type.Property name}
+```
+
+- **FEED**: A fixed keyword to indicate that the variable represents a feed link.
+
+- **Source name**: The name of the low-code app page or panel, e.g. "Page 1".
+
+- **Feed name**: The name of the feed, e.g. "Table 3".
+
+- **Category name**: The part of the feed that will contain the data, e.g. "Selected rows".
+
+- **Data type**: The type of data, e.g. "Elements".
+
+- **Property name**: The property of the fed data that should be used, e.g. "Protocol Name".
+
+> [!TIP]
+> You can find the name of each part in the *FEEDS* data source of the edit panel's *DATA* tab.
+
+> [!NOTE]
+> Any part of this syntax that contain spaces should be enclosed in double quotation marks.
 
 ## Example
 
-My element `{FEED."Page 1"."Dropdown 3"."Selected item".Elements.Name}` is from protocol `{FEED."Page 1"."Dropdown 3"."Selected item".Elements."Protocol Name"}`.
+If the linked feed provided the element name "Localhost" and the protocol name "Microsoft Platform", the following example would result in the text "*The element Localhost uses the protocol Microsoft Platform*":
 
-Above example would result in something like "*My element Localhost is from protocol Microsoft Platform*".
+```txt
+The element `{FEED."Page 1"."Dropdown 3"."Selected item".Elements.Name}` uses the protocol `{FEED."Page 1"."Dropdown 3"."Selected item".Elements."Protocol Name"}`.
+```
