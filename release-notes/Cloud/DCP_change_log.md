@@ -8,7 +8,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 #### 20 September 2023 - Enhancement - Admin App - Nodes page responsiveness has been improved [ID 37403]
 
-The retrieval of node and DXM information on the Nodes page of a DataMiner System in the Admin App has been made more performant.
+The retrieval of nodes and DxM information on the Nodes page of a DataMiner System in the Admin App has been made more performant.
 
 #### 19 September 2023 - Enhancement - CloudGateway 2.12.1 - Added more checks in the ConnectionTester [ID_37219]
 
