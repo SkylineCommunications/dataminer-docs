@@ -147,3 +147,9 @@ When you took a DataMiner backup either via Cube or via the Taskbar Utility, the
 <!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
 
 An error could occur in the SLAnalytics process due to some features not starting up correctly.
+
+#### DataMiner Cube: No breadcrumbs would be displayed when you opened a service card [ID_37384]
+
+<!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
+
+When you opened a service card, in some rare cases, no breadcrumbs would be displayed.

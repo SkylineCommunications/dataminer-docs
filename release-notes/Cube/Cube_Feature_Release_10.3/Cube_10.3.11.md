@@ -92,3 +92,9 @@ When you opened a trend graph showing trend data of a parameter of type string, 
 <!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
 
 When, in the Alarm Console, you created a linked alarm tab while connected to a system with a large number of correlated/incident alarms, in some cases, Cube could become unresponsive for a while until the tab was loaded.
+
+#### No breadcrumbs would be displayed when you opened a service card [ID_37384]
+
+<!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
+
+When you opened a service card, in some rare cases, no breadcrumbs would be displayed.
