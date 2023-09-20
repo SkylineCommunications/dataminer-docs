@@ -64,12 +64,6 @@ The following information is available for each destination:
 
 - **Group**: The group the destination belongs to, corresponding to a Generic Ping element, e.g. *Websites*.
 
-- **Customer**: The customer associated with the destination, e.g. *Skyline Communications*.
-
-- **Class**: The destination's provided class, e.g. *Bronze*.
-
-- **Region**: The destination's provided region, e.g. *US East*.
-
 - **Admin status**: The status (enabled or disabled) of the destination.
 
 - **Ping result**: The time required for destinations to receive and respond to a ping command, e.g. *4 ms*.
