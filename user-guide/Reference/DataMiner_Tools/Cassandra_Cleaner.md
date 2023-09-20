@@ -67,7 +67,7 @@ Depending on the table specified in the *db.yaml* configuration, the following a
 
   To execute both steps sequentially in one run, specify both options: `clean -l -s`
 
-- **Infotrace table**
+- **Infotrace table**<!-- RN 36592 -->
 
   - `clean -l` or `clean --large-partition` to clean the "-1_-1_-1_-1" partition.
 

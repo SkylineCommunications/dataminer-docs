@@ -21,6 +21,53 @@ Configuring multiple Elasticsearch clusters becomes crucial when on-premises set
 
 To configure this setup:
 
+<!--## [From DataMiner 10.3.10/10.4.0 onwards](#tab/tabid-1)
+
+> [!IMPORTANT]
+> From DataMiner 10.3.10/10.4.0 onwards, configuring multiple Elasticsearch clusters should only be done via DataMiner Cube (RN 36399 - reverted in RN 37322).
+
+1. Go to *Apps > System Center > Database*.
+
+1. Make sure the **Type** is set to *Database per cluster*. See [Configuring the general database settings](xref:Configuring_the_database_settings_in_Cube).
+
+1. Select the checkbox next to *Multi cluster offload*.
+
+1. Specify the **File offload identifier**, which is the string used to identify this connection. Each connection should have a different identifier, which will be used for file offloads.
+
+1. Select *Add* in the lower right corner to add an empty Elasticsearch offload cluster to the list.
+
+   > [!NOTE]
+   > You can add an unlimited number of Elasticsearch offload clusters. The order in which the multiple clusters are listed determines their priority within the configuration. You can move offload clusters up or down with the upwards and downwards arrows next to the name of the cluster. However, the main Elasticsearch configuration always retains the highest level of priority as it is the read database.
+
+1. Specify the following database settings for each of the Elasticsearch nodes:
+
+   - **Database prefix**: The prefix that the DataMiner System will use to create the keyspaces.
+
+     > [!NOTE]
+     > The prefix has a maximum length of 20 characters.
+
+   - **DB server**: The IP addresses or hostnames of the nodes, separated by commas. You can specify an IP address with a custom port, e.g `10.5.100.1:5555`. If no port is provided, the default port is used instead (see [Configuring the IP network ports](xref:Configuring_the_IP_network_ports)).
+
+   - **User**: Username with which the DMA has to log on to Elasticsearch.
+
+   - **Password**: Password with which the DMA has to log on to Elasticsearch.
+
+   - **File offload identifier**: String used to identify this connection. Each connection should have a different identifier, which will be used for file offloads.
+
+   ![Configuration](~/user-guide/images/DBOffload_CubeConfig.png)<br/>*DataMiner 10.3.10 example configuration*
+
+1. Click *Save*.
+
+   > [!NOTE]
+   >
+   > - Database configuration changes will not take effect until the Agent is restarted.
+   > - To remove an Elasticsearch cluster, select it in the list below the main Elasticsearch configuration and click *Remove*.
+
+> [!CAUTION]
+> While it was possible to configure multiple Elasticsearch clusters in the *DBConfiguration.xml* file prior to DataMiner 10.3.10/10.4.0, this should not be done in recent DataMiner versions. Specifically, refrain from editing the *ID* tag in this file, as this could lead to a need for complete reconfiguration.
+
+## [Prior to DataMiner 10.3.10/10.4.0](#tab/tabid-2) -->
+
 1. Create and configure a file *DBConfiguration.xml* as illustrated below. For each Elasticsearch cluster, an *ElasticCluster* tag must be added with the following configuration:
 
    - *priorityOrder* attribute: Indicates the priority of the different clusters. The lower the value, the greater the priority. The cluster with the lowest value is the main cluster, from which data will be read.
@@ -77,3 +124,5 @@ To configure this setup:
 
 > [!NOTE]
 > If an exception occurs for one of the replicated clusters, an alarm will be generated in the Alarm Console, indicating that not all data might be replicated. If further errors occur, no new alarms are created until the DMA is restarted.
+
+<!--***-->

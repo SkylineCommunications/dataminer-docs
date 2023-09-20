@@ -426,13 +426,14 @@ Note that, from now on, every *Sort by* node will nullify any preceding *Sort by
 > The behavior of existing queries (using e.g. *Sort by B* followed by *Sort by A*) will not be altered in any way. Their syntax will automatically be adapted when they are migrated to the most recent GQI version.
 > For example, an existing query using *Sort by B* followed by *Sort by A* will use *Sort by A* followed by *Then sort by B* after being migrated.
 
-#### Dashboards app & Low-Code Apps: New 'Text input' feed [ID_35902]
+#### Dashboards app & Low-Code Apps: New 'Text input' feed [ID_35902] [ID_36983]
 
-<!-- MR 10.4.0 - FR 10.3.5 -->
+<!-- RN 35902: MR 10.4.0 - FR 10.3.5 -->
+<!-- RN 36983: MR 10.4.0 - FR 10.3.9 -->
 
 The new *Text input* feed is a text box that exposes the entered text as a string feed that can currently be consumed by GQI queries and script parameters in low-code app actions.
 
-When configuring this new *Text input* feed, you can optionally specify a label, an icon and a placeholder. You can also indicate whether the text box should allow multiple lines of texts and whether it should feed its value when triggered by the following events:
+When configuring this new *Text input* feed, you can optionally specify a label (and its position), an icon and a placeholder. You can also indicate whether the text box should allow multiple lines of texts and whether it should feed its value when triggered by the following events:
 
 - On Enter
 - On Focus lost
@@ -453,13 +454,14 @@ A default value can be set by means of a URL option:
 
 For more information on how to pass data using a JSON object, see [Specifying data input in an app URL](xref:Specifying_data_input_in_URL).
 
-#### Dashboards app & Low-Code Apps: New 'Numeric input' feed [ID_35911]
+#### Dashboards app & Low-Code Apps: New 'Numeric input' feed [ID_35911] [ID_36983]
 
-<!-- MR 10.4.0 - FR 10.3.5 -->
+<!-- RN 35902: MR 10.4.0 - FR 10.3.5 -->
+<!-- RN 36983: MR 10.4.0 - FR 10.3.9 -->
 
 The new *Numeric input* feed is a text box that exposes the entered numbers as a number feed that can currently be consumed by GQI queries and script parameters in low-code app actions.
 
-When configuring this new *Numeric input* feed, you can optionally specify a label, an icon, a placeholder, a unit, a step size, a number of decimals, a minimum value and a maximum value. You can also indicate whether the text box should feed its value when triggered by the following events:
+When configuring this new *Numeric input* feed, you can optionally specify a label (and its position), an icon, a placeholder, a unit, a step size, a number of decimals, a minimum value and a maximum value. You can also indicate whether the text box should feed its value when triggered by the following events:
 
 - On Enter
 - On Focus lost
@@ -636,3 +638,89 @@ If no rows are selected in the table, the entire table will be exported; otherwi
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
 Ad hoc data sources can now include columns of type `GQITimeSpanColumn`. These columns can contain a time span and can have operators applied to them.
+
+#### Dashboards app & Low-Code Apps - Parameters dataset: Selecting an index/cell of a column parameter [ID_36724]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+In the *Parameters* section of the edit panel's *DATA* tab, column parameters will now by default list their first 100 indices (i.e. cells). When you drag one of those cells onto a component, element ID, parameter ID as well as index will be passed along.
+
+If the index (i.e. cell) you need is not among the first 100 indices that are listed, you can use the search box above the parameter list to narrow down the list of indices.
+
+#### Dashboards app & Low-Code Apps - GQI: Table visualizations now support real-time query updates [ID_36789]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+Table visualizations now support real-time GQI query updates.
+
+A table visualization will now immediately show the updated values if the *Update data* option is enabled in the table component settings.
+
+> [!NOTE]
+> Real-time updates only work when supported by the data source used in the query.
+
+#### GQI: Resources data source now allows filtering by resource pool ID or booking ID [ID_36970]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+The *Resources* data source now allows you to filter resources by resource pool ID or booking ID.
+
+> [!NOTE]
+>
+> - The *Resources* data source is only available on systems with a *ResourceManager* license and/or an *IDP* license.
+> - Currently, the *Resources* data source still requires the *GenericInterface* [soft-launch option](xref:SoftLaunchOptions).
+
+#### Dashboards app & Low-Code Apps - Time range component: Presets [ID_37050]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When configuring a *Time range* component, you can now find a new *Presets* section in the *Layout* tab. This section allows you to define the presets that will be available to users who open a *Time range* feed.
+
+The list of presets will also include three new presets (each with a corresponding quick pick option):
+
+- *Starting from now*
+- *Near future*
+- *Distant future*
+
+In addition, other settings found on the *Layout* tab have been rearranged. The alignment and visibility settings have now been moved to a new *Layout* section, and the order of the quick pick options has been changed.
+
+#### Dashboards app & Low-Code Apps - GQI components: New setting 'Empty result message' [ID_37173]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+All GQI components now have a new *Empty result message* setting that allows you to personalize the message that will be displayed when the GQI query returns an empty result set. Default message: "Nothing to show." Note that this setting cannot be left empty.
+
+Also, the error/warning/info visual will now only appear when the component's size exceeds about half the screen dimensions, both in width and in height.
+
+As to the *Table* component, when you applied a column filter that resulted in 0 rows, up to now, an empty window replacing the component would allow you to adjust the filter. From now on, even when a column filter yields 0 rows, the column headers will stay visible and a message will appear (i.e. either the above-mentioned *Empty result message* or a message saying that the column/search filter resulted in no rows).
+
+#### Dashboards app & Low-Code Apps: New Stepper component [ID_37200]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+A new *Stepper* component is now available. This component is used to guide the user through a workflow by splitting it up into different numbered or labeled steps. It indicates the progress through the workflow by showing the past steps, current step, and future steps. The component uses a stateful DOM instance or DOM definition (i.e. a DOM instance or DOM definition that contains states) as data input.
+
+For more information on how to configure this component, see [Stepper](xref:DashboardStepper).
+
+#### Low-Code Apps: Dynamic feed values in URL actions [ID_37229]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When configuring an event to navigate to a URL, you can now insert dynamic references to feed values into the URL using the following syntax:
+
+`{FEED.Source name.Feed name.Category name.Data type.Property name}`
+
+- **FEED**: A fixed keyword to indicate that the variable represents a feed link.
+- **Source name**: The name of the page or panel of the low-code app. Example: "Page 1"
+- **Feed name**: The name of the feed. Example: "Table 3"
+- **Category name**: The part of the feed that will contain the data. Example: "Selected rows"
+- **Data type**: The type of data. Example: "Elements"
+- **Property name**: The property of the fed data that should be used. Example: "Protocol Name"
+
+The following example would result in something like "*My element Localhost is from protocol Microsoft Platform*".
+
+*My element `{FEED."Page 1"."Dropdown 3"."Selected item".Elements.Name}` is from protocol `{FEED."Page 1"."Dropdown 3"."Selected item".Elements."Protocol Name"}`.*
+
+> [!NOTE]
+>
+> - Any part that contain spaces should be enclosed by double quotes.
+> - The name of each part can be found in the *FEEDS* data source of the edit panel's *DATA* tab.

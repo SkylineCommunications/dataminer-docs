@@ -89,7 +89,7 @@ If you want to know which storage type a DataMiner Agent is currently using, ope
 
 ### Allowed property names
 
-Since the properties of resources and resource pools are indexed in Elasticsearch after the migration, the following restrictions apply:
+Since the properties of SRM objects are indexed in Elasticsearch after the migration, the following restrictions apply:
 
 - Property names must not start with character ``_``.
 - Property names must not contain characters ``.`` (period), ``#`` (hashtag), ``*`` (star), ``,`` (comma), ``"`` (double quote) or ``'`` (single quote).

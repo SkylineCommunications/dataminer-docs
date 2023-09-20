@@ -6,6 +6,49 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 19 September 2023 - Enhancement - CloudGateway 2.12.1 - Added more checks in the ConnectionTester [ID_37219]
+
+The ConnectionTester included with DataMiner CloudGateway has been upgraded with the following checks:
+
+- Validation if NATS is working between DxMs, by discovering the DataMiner CloudGateway DxMs in the DMS.
+- Validation if those discovered DataMiner Cloud Gateway nodes can be reached using their cloud endpoint, which by default requires TCP port 5100 to be open between the servers (firewall/internal network). This is a common misconfiguration causing issues with several cloud features like Catalog deployments, DxM updates, remote log collection, etc.
+
+#### 22 August 2023 - Enhancement - Admin App - Audit Record Export (CSV) [ID_37164]
+
+In the [Admin App](https://admin.dataminer.services), a new feature has been introduced on the *Audit* page, allowing users to export audit records in a CSV file. Clicking *Export* in the top-left corner will initiate the export process. A pop-up window will appear, where you can choose the separator to be used in the CSV file, as well as whether to include column titles at the top of the exported CSV file. Once the file has been generated, you will receive an email containing a link to download the CSV file. The download link included in the email will be valid for a period of 7 days.
+
+#### 22 August 2023 - Enhancement - CloudFeed 1.2.0 - Compatibility with newer DataMiner versions [ID_36482]
+
+When you upgrade DataMiner to version 10.3.8/10.4.0 or later, CloudFeed should be upgraded to version 1.2.0 or later to ensure that alarm and change points events are processed correctly.
+
+Also, a number of issues that could occur at CloudFeed startup have been fixed.
+
+#### 22 August 2023 - Enhancement - CloudGateway 2.12.0 - Upgrade to .NET 6 [ID_37151]
+
+DataMiner CloudGateway has been upgraded to .NET 6, so that it no longer depends on .NET 5. **Make sure .NET 6 is installed** before you upgrade to this version.
+
+#### 11 August 2023 - Enhancement - ArtifactDeployer 1.5.0 - Upgrade to .NET 6 [ID_37103]
+
+DataMiner ArtifactDeployer has been upgraded to .NET 6, so that it no longer depends on .NET 5. **Make sure .NET 6 is installed** before you upgrade to this version.
+
+#### 11 August 2023 - Enhancement - FieldControl 2.9.0 - Upgrade to .NET 6 [ID_37109]
+
+DataMiner FieldControl has been upgraded to .NET 6, so that it no longer depends on .NET 5. **Make sure .NET 6 is installed** before you upgrade to this version.
+
+#### 11 August 2023 - Enhancement - SupportAssistant 1.5.0 - Upgrade to .NET 6 [ID_37099]
+
+DataMiner SupportAssistant has been upgraded to .NET 6, so that it no longer depends on .NET 5. **Make sure .NET 6 is installed** before you upgrade to this version.
+
+#### 11 August 2023 - Enhancement - Orchestrator 1.4.0 - Upgrade to .NET 6 and more server and DMA data offloaded to improve user experience [ID_37105] [ID_36819]
+
+DataMiner Orchestrator has been upgraded to .NET 6, so that it no longer depends on .NET 5. **Make sure .NET 6 is installed** before you upgrade to this version.
+
+From now on, the DxM will also offload more data about the DMA and the server to dataminer.services to improve the user experience:
+
+- DataMiner version and version history
+- Installed dotnet runtimes
+- System info such as the Windows version
+
 #### 3 July 2023 - Fix - Admin App - Organization user overview will display all DMSs of each user correctly [ID_36795]
 
 In the Admin App, when an organization user had more than one DMS, only the last DMS would be shown in the organization user overview and its details overlay. This issue has now been resolved.
@@ -27,6 +70,10 @@ This is now no longer the case. All email input for all Chat Integration feature
 #### 7 June 2023 - Fix - CloudGateway 2.11.0 / CoreGateway 2.13.0 - Resolved connection issue [ID_36439] [ID_36453]
 
 In case the DMA name no longer corresponded to the server name after a rename, when using cloud features like Remote Access or Sharing, you could encounter the error message "The DataMiner System has no active connections to the DataMiner Cloud Platform". This issue has now been resolved by using the DMA name instead of the server name.
+
+#### 30 May 2023 - Enhancement - Catalog - Notification when deploying from the catalog [ID_36543]
+
+When you deploy something (e.g. a connector) from the catalog to a DMA, a notification will now indicate if the deployment has started properly. The notification also contains a link to the Admin page, where you can view the status of the deployment.
 
 #### 19 May 2023 - Fix - CloudGateway 2.10.12 - Resolved concurrency issue [ID_36432]
 

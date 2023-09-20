@@ -6,6 +6,8 @@ uid: Function_editor
 
 If you click *Function Editor* in the file tab header when editing a function XML file, the XML editor you are working in will be turned into a graphical function interface editor. This editor allows you to manage the functions defined in a function XML file and design function pages using simple drag-and-drop operations.
 
+![Function editor](~/develop/images/DIS_FunctionEditor.png)
+
 > [!NOTE]
 > If you open a function XML file and click *Function Editor* in the file tab header, DIS will ask you to open the associated protocol XML file as well if you have not yet done so already.
 

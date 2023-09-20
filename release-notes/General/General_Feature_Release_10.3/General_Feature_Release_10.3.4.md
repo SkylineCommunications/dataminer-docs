@@ -17,7 +17,7 @@ uid: General_Feature_Release_10.3.4
 
 #### Correlation alarms will now by default contain the value of the alarm property by which they are grouped [ID_35583]
 
-<!-- MR 10.4.0 - FR 10.3.4 -->
+<!-- MR 10.3.0 [CU7] - FR 10.3.4 -->
 
 When a correlation rule is configured to use alarm grouping via an alarm property, from now on, the value of the alarm property by which the alarms are grouped will now by default be added to the correlated alarm.
 

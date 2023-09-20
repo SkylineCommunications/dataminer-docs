@@ -36,7 +36,7 @@ subgraph "Extension"
     b -- HTTP request --> c("UserDefinableApiEndpoint\nDxM")
 end
 subgraph "Core DataMiner"
-    c -- NATS --> d("UserDefinableApiEndpointManager\n(SLNet.exe)") 
+    c -- NATS --> d("UserDefinableApiManager\n(SLNet.exe)") 
     d -- IPC --> e("SLAutomation.exe")
 end
 ```
@@ -47,11 +47,11 @@ The errors in this section can be generated when the UserDefinableApiEndpoint Dx
 
 - **Could not find AspNetCore installed on this system**
 
-  DataMiner should install ASP.NET Core 5 automatically, but in case this failed or in case it has been removed, the installer can generate this error.
+  DataMiner should install ASP.NET Core 6 automatically, but in case this failed or in case it has been removed, the installer can generate this error.
 
   To fix this:
 
-  1. Go to the [.NET 5 download page](https://dotnet.microsoft.com/en-us/download/dotnet/5.0) and download the latest ASP.NET Core Runtime 5.
+  1. Go to the [.NET 6 download page](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) and download the latest ASP.NET Core Runtime 6.
 
   1. On the DMA, got to the folder `C:\Skyline DataMiner\Tools\ModuleInstallers\` and run the installer `DataMiner UserDefinableApiEndpoint 1.X.X.X.msi`.
 

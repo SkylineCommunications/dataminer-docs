@@ -12,7 +12,7 @@ This tool window allows you to make the necessary preparations before debugging 
 
 For step-by-step instructions on how to debug connector QActions and Automation script C# Exe blocks, see [Debugging connectors and Automation scripts](xref:Debugging_connectors_and_Automation_scripts).
 
-![DIS Inject tool window](~/develop/images/DisMacrosToolWindow.png)
+![DIS Inject tool window](~/develop/images/DisInjectToolWindow.png)
 
 ## Connecting to one of the Agents specified in the DIS settings
 
@@ -58,16 +58,16 @@ When, for example, you open a QAction with ID 12, then the temporary project wil
 |-----------------|---------|
 | the green plus, | you will replace (i.e. inject) the element's *QAction.dll* file (compiled in Release mode) with its counterpart found in the temporary QAction project (compiled in Debug mode). |
 | the red X, | you will sever the temporary link between the element and the *QAction.dll* compiled in Debug mode.<br> This will restore the link between the element and its original *QAction.dll* (compiled in Release mode). |
-| the yellow lightning bolt, | you will manually trigger the QAction by simulating a change of the parameter selected in the *Trigger ID* box (in case of a dynamic table parameter, use the *Trigger Key* box to specify the table row).<br> Only do this after you have attached the SLScripting process to the Debugger. |
+| the yellow lightning bolt, | you will manually trigger the QAction by simulating a change of the parameter selected in the *Trigger ID* box (in case of a dynamic table parameter, use the *Trigger Key* box to specify the table row).<br>Only do this after you have attached the SLScripting process(es) to the Debugger. |
 
-### Attaching the Microsoft Visual Studio Debugger to the DataMiner SLScripting process
+### Attaching the Microsoft Visual Studio Debugger to the DataMiner SLScripting process(es)
 
-After injecting the necessary *QAction.dll* files, you have to attach the Debugger to the SLScripting process.
+After injecting the necessary *QAction.dll* files, you have to attach the Debugger to the SLScripting process(es).
 
 | If you click... | then... |
 |-----------------|---------|
-| Attach | all temporary QAction projects will be built, and the Microsoft Visual Studio Debugger will be attached to the DataMiner SLScripting process.<br> Note: The design of the Microsoft Visual Studio screen will change and you will notice the word "Running" in the title bar. |
-| Detach | the Microsoft Visual Studio Debugger will be detached from the DataMiner SLScripting process. |
+| Attach | all temporary QAction projects will be built, and the Microsoft Visual Studio Debugger will be attached to the DataMiner SLScripting process(es).<br>Note: The design of the Microsoft Visual Studio screen will change and you will notice the word "Running" in the title bar. |
+| Detach | the Microsoft Visual Studio Debugger will be detached from the DataMiner SLScripting process(es). |
 
 ## Debugging an Automation script
 

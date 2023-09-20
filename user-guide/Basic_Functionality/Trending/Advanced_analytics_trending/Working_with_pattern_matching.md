@@ -15,6 +15,9 @@ If you are viewing a trend graph for a single parameter, and it contains pattern
   - Matches are highlighted in **lighter orange** if the non-streaming method was used. These matches are detected only when trend data is fetched from the database after you opened a trend graph.
   - Matches are highlighted in **bright orange** if the streaming method was used. These matches are detected while tracking for trend patterns whenever a trended parameter is updated. When such a match is detected, a suggestion event is generated. Matches obtained through the streaming method will be stored in the database.
 
+    > [!NOTE]
+    > Prior to DataMiner 10.3.10/10.4.0, Cube will not display new matches that are detected while a trend graph is open. You need to close and reopen the trend graph to see this. In more recent DataMiner versions<!-- RN 37153-->, pattern matches are shown in real time.
+
 - In earlier DataMiner versions, matches found for the same element/parameter as the one for which a tag was defined will be shown in bright orange, while matches associated with tags created for another element/parameter will be shown in lighter orange.
 
 > [!NOTE]

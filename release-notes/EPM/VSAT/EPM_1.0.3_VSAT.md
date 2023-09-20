@@ -2,10 +2,7 @@
 uid: EPM_1.0.3_VSAT
 ---
 
-# EPM 1.0.3 VSAT - Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+# EPM 1.0.3 VSAT
 
 ## New features
 
@@ -31,6 +28,29 @@ In addition, the following parameters have been updated:
 #### New Circuit Availability KPI [ID_36900]
 
 A new Circuit Availability KPI is now available in the Verizon iDirect Evolution Platform and Verizon VSAT Platform Manager connectors. This KPI, which can be found in the Circuit Overview table, shows a percentage indicating how close circuit performance tracks against the theoretical link budget expectations. The KPI is aggregated by average in the Circuit level, Hub Forward level, Hub Return level, Customer level, and NMS level of the EPM topology.
+
+#### Verizon WM Ticketing: 'Element ID' column added to 'KPI Callback Overview' table [ID_36979]
+
+In the Verizon WM Ticketing Collector connector, a new *Element ID* column was added to the *KPI Callback Overview* table.
+
+This column will contain the ID of the element to which the KPI threshold applies. If set to "All", then the KPI threshold in question will apply to all elements.
+
+> [!NOTE]
+> Thresholds that only apply to a single element have priority over thresholds that apply to all elements.
+
+#### Verizon iDirect Evolution Platform Collector: New 'Event Counters' page [ID_36992]
+
+A new *Event Counters* page has been added to the Verizon iDirect Evolution Platform Collector connector.
+
+On this page, you can find a number of parameters that each hold the number of rows in a particular table:
+
+| Table | Parameter |
+|-------|-----------|
+| Chassis Events Overview   | Chassis Events Count   |
+| Linecards Events Overview | Linecards Events Count |
+| PP Events Overview        | PP Events Count        |
+| Remote Events Overview    | Remote Events Count    |
+| VLAN Status Overview      | VLAN Events Count      |
 
 ## Changes
 
@@ -64,9 +84,17 @@ The logic for weather rechecks in the Verizon ETMS Platform connector has been a
 
 In the Verizon ETMS Platform connector, the description when there are failed KPIs but no power issues has been updated to "Further Investigation Required".
 
-#### Verizon WM Ticketing: Improved description in case there are failed KPIs but no power issues [ID_36937]
+#### Verizon WM Ticketing: Improved description in case there are failed KPIs but no power issues [ID_36938]
 
 In the Verizon WM Ticketing connector, the description when there are failed KPIs but no power issues has been updated to "Further Investigation Required".
+
+#### Newtec Dialog Platform: Improved 'Hub Forward' and 'Hub Return' KPI formulas [ID_36942]
+
+The *Hub Forward* and *Hub Return* KPI formulas have been updated. They now use new TSDB data to reflect more accurate values.
+
+#### Verizon VSAT Platform Manager: Time interval between each EPM reset is now user-configurable [ID_36944]
+
+In the Verizon VSAT Platform Manager connector and visual overview, the time interval between each EPM reset is now user-configurable.
 
 #### Carrier performance scripts improvements [ID_36957] [ID_36958] [ID_36959] [ID_36960] [ID_36961]
 
@@ -74,6 +102,10 @@ The *GQIO_Percentage_Double*, *GQIO_Percentage_Int*, *GQIO_MultiplyByPercentage*
 
 - The *Folder* XML tag has been added to each script, so that it is placed in the *CARRIER PERFORMANCE* Automation folder by default.
 - The *preCompile* and *libraryName* XML tags have also been added to each script, so that it is compiled as a library and given a library name by default, making it visible in the Dashboards app.
+
+#### Verizon iDirect Evolution Platform Collector: Improved performance [ID_36991]
+
+Because of a number of improvements, overall performance of the Verizon iDirect Evolution Platform Collector connector has increased.
 
 ### Fixes
 
@@ -84,3 +116,7 @@ Elements using the Verizon iDirect Evolution Platform Collector connector did no
 #### Verizon iDirect Evolution Platform Collector: Current state not indicated in Remotes Overview tables [ID_36673]
 
 In the Remotes Overview tables of Verizon iDirect Evolution Platform Collector elements, the *Current State* column could incorrectly show "Not initialized".
+
+#### Verizon VSAT Platform Manager: Set buttons on the landing page of the visual overview would not render [ID_36945]
+
+In the visual overview of the Verizon VSAT Platform Manager, buttons that set a value would not render when they were located on the landing page.
