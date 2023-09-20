@@ -12,7 +12,11 @@ uid: Cube_Main_Release_10.3.0_CU8
 
 ### Enhancements
 
-*No enhancements have been added to this release yet.*
+#### System Center: Length of Cassandra database name restricted to max. 20 characters [ID_37340]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+When you configure a Cassandra database in the *Database* section of *System Center*, from now on, the database name will no longer be allowed to be longer than 20 characters.
 
 ### Fixes
 

@@ -45,6 +45,12 @@ Only upon releasing the left mouse button will the unknown part of the trace be 
 
 From now on, when DataMiner Cube has to download the CefSharp package from a DataMiner Agent, it will first try to download it via HTTPS, and if HTTPS is not configured, it will try again via HTTP.
 
+#### System Center: Length of Cassandra database name restricted to max. 20 characters [ID_37340]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+When you configure a Cassandra database in the *Database* section of *System Center*, from now on, the database name will no longer be allowed to be longer than 20 characters.
+
 ### Fixes
 
 #### Trending: Problem when editing a trend pattern on a graph other than the one on which the pattern was created [ID_37191]
