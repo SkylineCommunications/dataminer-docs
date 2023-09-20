@@ -19,6 +19,7 @@ uid: General_Feature_Release_10.3.10
 ## Highlights
 
 - [DataMiner Object Models: 'Full CRUD meta' scripts [ID_37004]](#dataminer-object-models-full-crud-meta-scripts-id_37004)
+- [Support for real-time GQI row updates](#support-for-real-time-gqi-row-updates-id_37060)
 
 ## New features
 
@@ -29,6 +30,20 @@ uid: General_Feature_Release_10.3.10
 Apart from **ID only** scripts, which use the `OnDomInstanceCrud` entry point method and give you access to the CRUD type and the ID of the `DomInstance` in the script, it is now also possible to configure **Full CRUD meta** scripts. These use the `OnDomInstanceCrudWithFullMeta` entry point method and give you access to the CRUD type and the full `DomInstance` object(s).
 
 For more detailed information, see [ExecuteScriptOnDomInstanceActionSettings](xref:ExecuteScriptOnDomInstanceActionSettings).
+
+#### Support for real-time GQI row updates [ID_37060]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+Real-time row updates are now supported for GQI session results for specific data sources and operators. This means that, when this is supported in the client, real-time updates can be displayed for row additions, modification, or deletions.
+
+At present, this is supported for the following GQI data sources:
+
+- Parameter table (except partial tables)
+- Views
+- Ad-hoc data
+
+It is supported for the *Select* operator, but it can also be supported for other operators if they are combined with specific data sources, for instance for a filter on a parameter table.
 
 #### DataMiner Object Models: GenericEnumEntry objects can now be soft-deleted [ID_37121]
 
