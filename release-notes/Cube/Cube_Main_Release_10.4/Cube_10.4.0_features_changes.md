@@ -325,6 +325,25 @@ From now on, when you select the *Include alarms* option, the masked alarms will
 
 DataMiner Cube now supports pattern occurrence events. This means that occurrences of patterns that are already displayed on a trend graph will be added in real time.
 
+#### Spectrum analysis: Panning inside a spectrum window [ID_37284]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+It is now possible to pan inside a spectrum window by clicking and dragging.
+
+When, after clicking the left mouse button, you start dragging, the following will happen:
+
+- The spectrum trace will move to the left or the right while being refreshed at a rate equal to the original rate.
+- The start, stop and center frequency labels on the X axis will continuously update to reflect the ongoing change.
+- The unknown part of the trace (i.e. the frequency range located outside of the original span) will be visualized as a grey area with a grid in the background.
+
+When you stop dragging and release the left mouse button, the panning dimensions will be set on the spectrum analyzer device and the screen will be updated with the new data.
+
+Only upon releasing the left mouse button will the unknown part of the trace be requested from the spectrum analyzer. The newly received trace points will then replace the grey area and a new, uniform spectrum trace will be displayed based on the new center frequency.
+
+> [!IMPORTANT]
+> This feature is only available if the spectrum protocol includes the *Start Frequency*, *Center Frequency* and *Stop Frequency* parameters.
+
 ## Changes
 
 ### Enhancements
@@ -501,6 +520,12 @@ On the Users/Groups page in System Center, a tooltip has been added to the *Edit
 
 The style of the toggle buttons in the *Included* and *Anomalies* columns of the alarm template editor as well as in the *Templates* tab of parameter drill-down pages was not consistent with the styles used in the Cube themes. This has now been rectified.
 
+#### CefSharp package download enhancements [ID_37319]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+From now on, when DataMiner Cube has to download the CefSharp package from a DataMiner Agent, it will first try to download it via HTTPS, and if HTTPS is not configured, it will try again via HTTP.
+
 ### Fixes
 
 #### Profiles app: A profile instance would incorrectly list parameters that had been removed from the profile definition [ID_34679] [ID_34771]
@@ -608,3 +633,15 @@ Symptoms:
 When, in a trend graph, you hovered over a pattern of which the instance of the curve was not equal to the instance of the pattern (which had its instancePartOfIdentity property set to false), the curve would incorrectly not be highlighted.
 
 Also, incorrect curves would be added when you clicked to load the linked patterns, and incorrect curves were highlighted when you hovered over a pattern that consisted of two subpatterns from different elements.
+
+#### Trending: Problem when editing a trend pattern on a graph other than the one on which the pattern was created [ID_37191]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When you edited a trend pattern on a trend graph, up to now, the trend data on the graph on which the pattern was created would incorrectly be used instead. From now on, the trend data in the selected part of the graph will be used.
+
+#### System Center - Database: No longer possible to create and delete database configurations in the Offload and Other tabs when Type was set to 'Database per cluster' [ID_37254]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+In the *Database* section of *System Center*, when *Type* was set to "Database per cluster" in the *General* tab, creating and deleting database configurations in the *Offload* and *Other* tabs would no longer work.

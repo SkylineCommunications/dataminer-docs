@@ -2,10 +2,10 @@
 uid: Cube_Feature_Release_10.3.10
 ---
 
-# DataMiner Cube Feature Release 10.3.10 – Preview
+# DataMiner Cube Feature Release 10.3.10
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to DataMiner Cube, see [General Feature Release 10.3.10](xref:General_Feature_Release_10.3.10).
@@ -146,3 +146,10 @@ If no preset was available for a particular spectrum element, it could occur tha
 When, in a trend graph, you hovered over a pattern of which the instance of the curve was not equal to the instance of the pattern (which had its instancePartOfIdentity property set to false), the curve would incorrectly not be highlighted.
 
 Also, incorrect curves would be added when you clicked to load the linked patterns, and incorrect curves were highlighted when you hovered over a pattern that consisted of two subpatterns from different elements.
+
+#### DataMiner Cube v10.3.9 would receive incorrect EPM data when connected to a DataMiner Agent v10.3.8 or older [ID_37391]
+
+<!-- MR 10.4.0 - FR 10.3.10 [CU0] -->
+<!-- Not added to MR 10.4.0 -->
+
+A DataMiner Cube version 10.3.9 would receive incorrect EPM data when connected to a DataMiner Agent version 10.3.8 or older.

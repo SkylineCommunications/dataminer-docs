@@ -138,3 +138,8 @@ You can fine-tune the layout of the component with the following settings in the
 - *Zooming*: Select whether users should be able to zoom in on the component or not. When this option is enabled, you can use the scroll wheel of the mouse to zoom in or out. Alternatively, you can right-click and drag across an area of the graph to zoom in on that area. Enabling this option also makes it possible to pan the graph by dragging it while keeping the left mouse button pressed.
 
 - *Edge style*: Select whether the connections should be displayed as curly or straight lines.
+
+- *Advanced* \> *Empty Result message*: Available from 10.3.11/10.4.0 onwards<!-- RN 37173 -->. Allows you to specify a custom message that is displayed when a query returns no results.
+
+  > [!TIP]
+  > See also: [Displaying a custom empty component message](xref:Tutorial_Dashboards_Displaying_a_custom_empty_component_message).

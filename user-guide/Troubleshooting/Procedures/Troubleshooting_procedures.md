@@ -8,6 +8,8 @@ uid: Troubleshooting_procedures
 
 - [Collecting DataMiner Cube memory dumps](xref:Collecting_DataMiner_Cube_memory_dumps)
 
+- [Collecting data to report an issue to Technical Support](xref:Collecting_data_to_report_an_issue_to_TechSupport)
+
 - [Investigating NATS issues](xref:Investigating_NATS_Issues)
 
 - [Keeping a DMA from running out of disk space](xref:Keeping_a_DMA_from_running_out_of_disk_space)

@@ -30,7 +30,7 @@ uid: General_Feature_Release_10.3.11
 
 #### Cassandra Cluster Migrator is now able to resume a migration that was in progress when a DMA was stopped [ID_35199]
 
-<!-- MR 10.4.0 - FR 10.3.11 -->
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
 
 When a DataMiner Agent is deliberately stopped or stops working due to an error while a Cassandra Cluster migration is in progress, it will now be possible to resume that migration for certain storages instead of having to start it from scratch again.
 
@@ -47,6 +47,12 @@ To resume a migration after restarting all DMAs in your DataMiner System, do the
 > - When a migration is resumed, the UI does not know how many rows were already migrated. Therefore, when a migration is resumed, it will erroneously display that 0 rows have been migrated so far.
 > - When a DMA is initialized, a file named *SavedState.xml* will be created in the `C:\Skyline DataMiner\Database` folder. *SLCCMigrator.exe* will use this file to determine the point from which a migration has to be resumed.
 
+#### Service & Resource Management: Enhanced performance when enabling and disabling function DVEs [ID_37030]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+Because of a number of enhancements, overall performance has increased when enabling and disabling function DVEs.
+
 #### Cassandra Cluster: IP addresses will no longer be added and synchronized automatically [ID_37154]
 
 <!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
@@ -55,19 +61,57 @@ Up to now, for the *CassandraCluster* database type, the IP addresses of the Cas
 
 Also, in case of a Failover setup, the above-mentioned list of IP addresses will no longer be automatically synchronized to prevent re-ordering.
 
-#### Security enhancements [ID_37267]
+#### DataMiner.xml: objectId attribute of AzureAD element will now be considered optional [ID_37162]
 
-<!-- 37267: MR 10.4.0 - FR 10.3.11 -->
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+Up to now, a run-time error would be thrown when the `<AzureAD>` element in the *DataMiner.xml* file did not contain an `objectId` attribute.
+
+This `objectId` attribute will now be considered optional. Hence, no run-time error will be thrown anymore when it has not been specified.
+
+#### Security enhancements [ID_37267] [ID_37291] [ID_37335] [ID_37345]
+
+<!-- RN 37267/37345: MR 10.4.0 - FR 10.3.11 -->
+<!-- RN 37291: MR 10.3.0 [CU8] - FR 10.3.11 -->
+<!-- RN 37335: 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
 
 A number of security enhancements have been made.
 
+#### SLAnalytics - Trend predictions: Enhanced trend prediction models [ID_37280]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+A number of enhancements have been made to the trend prediction models, especially with regard to detecting daily trend recurrences.
+
+#### SLAnalytics: Enhanced processing of trended parameters of which the value remains constant [ID_37303]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+A number of enhancements have been made to the memory resources used for trended parameters of which the value remains constant.
+
 ### Fixes
+
+#### Failover: Data can get lost when the backup agent is the online agent during a Cassandra Cluster migration [ID_34018]
+
+<!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+When the backup agent is the online agent while a Failover pair is being migrated to Cassandra Cluster, data generated during the migration can get lost.
+
+From now on, when you start a Cassandra Cluster migration, a warning message will appear if, for any of the Failover pairs in the cluster, the backup agent is the online agent. This warning message will advise you to make sure that, for all Failover pairs in the cluster, the main agent is the online agent.
 
 #### Not all Protocol.Params.Param.Interprete.Others tags would be read out [ID_36797]
 
 <!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
 
 Not all [Protocol.Params.Param.Interprete.Others](xref:Protocol.Params.Param.Interprete.Others) tags would be read out, which could lead to unexpected behavior.
+
+#### Problem with .NET Framework DLL files used by QActions or Automation scripts [ID_36984]
+
+<!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+When a QAction or Automation script used a NuGet package containing a .NET Framework DLL file on a DataMiner Agent that used a more recent .NET Framework that included that same DLL file by default, a compilation error would occur.
+
+Also, certain DLL files located in a subfolder of the .NET Framework would not be resolved correctly.
 
 #### DataMiner backup: Number of backups to be kept would be interpreted incorrectly [ID_37143]
 
@@ -110,11 +154,23 @@ When a view or an element was deleted on the DMA before a synchronization was pe
 
 In some cases, SLElement could read and write to the same memory blocks on different threads, causing a serialized parameter update to get into a corrupt state.
 
+#### DataMiner.xml: Entire LDAP section could get removed when settings were updated with values containing illegal XML characters [ID_37235]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When settings inside the `<LDAP>` element of the *DataMiner.xml* file were updated with values that contained illegal XML characters, the entire `<LDAP>` element would be removed from the file.
+
 #### MessageHandler method in SLHelperTypes.SLHelper would incorrectly try to serialize exceptions that could not be serialize [ID_37238]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
 Up to now, the MessageHandler method in SLHelperTypes.SLHelper would incorrectly try to serialize exceptions that could not be serialized, causing other exceptions to be thrown.
+
+#### Problem when masking a DVE child element or a virtual function [ID_37240]
+
+<!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
+
+When you masked a DVE child element or a virtual function, not all alarms of all parameters would be masked.
 
 #### Service & Resource Management: Resources that were still in use could be deactivated [ID_37244]
 
@@ -130,8 +186,38 @@ In some cases, when function DVEs were being cleaned up while a resource swap oc
 
 When SLLogCollector takes memory dumps, it stores them in a temporary folder before copying them to the correct location. In some cases, a parsing problem would cause some dumps to not get copied over to the correct location.
 
+#### Problem with SLNet due to unhandled MessageBroker exceptions in SLHelper [ID_37258]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+An error could occur in SLNet due to unhandled MessageBroker exceptions in SLHelper.
+
+#### Elements with multiple SSH connections would go into timeout after being restarted [ID_37294]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When an element with multiple SSH connections was restarted, in some cases, it would immediately go into timeout.
+
 #### DataMiner backup: DBConfiguration.xml file would not be included in backups [ID_37296]
 
 <!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
 
 When you took a DataMiner backup either via Cube or via the Taskbar Utility, the *DBConfiguration.xml* file would incorrectly not be included in the backup.
+
+#### SLAnalytics: Problem due to some features not starting up correctly [ID_37321]
+
+<!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
+
+An error could occur in the SLAnalytics process due to some features not starting up correctly.
+
+#### Problem with SLAnalytics when fetching protocol information while creating a multivariate pattern [ID_37366]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+In some cases, SLAnalytics could throw an exception when fetching protocol information while creating a multivariate pattern.
+
+#### SLAnalytics: Problem when the SLNet connection got lost while resetting data sources [ID_37402]
+
+<!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
+
+During initialization, in some cases, an error could occur in SLAnalytics when the SLNet connection got lost while resetting data sources.

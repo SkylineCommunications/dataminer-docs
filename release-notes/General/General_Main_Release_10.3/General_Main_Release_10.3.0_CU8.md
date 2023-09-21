@@ -12,6 +12,31 @@ uid: General_Main_Release_10.3.0_CU8
 
 ### Enhancements
 
+#### Cassandra Cluster Migrator is now able to resume a migration that was in progress when a DMA was stopped [ID_35199]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+When a DataMiner Agent is deliberately stopped or stops working due to an error while a Cassandra Cluster migration is in progress, it will now be possible to resume that migration for certain storages instead of having to start it from scratch again.
+
+For all types that are read in a partitioned way (currently alarms and trending), the migration progress will now be stored in *TokenRange.txt* files located in the `C:\Skyline DataMiner\Database` folder.
+
+To resume a migration after restarting all DMAs in your DataMiner System, do the following:
+
+1. Start *SLCCMigrator.exe* (which is located in the `C:\Skyline DataMiner\Tools\` folder).
+1. Initialize all the DMAs in the list.
+1. Click *Start Migration*.
+
+> [!NOTE]
+>
+> - When a migration is resumed, the UI does not know how many rows were already migrated. Therefore, when a migration is resumed, it will erroneously display that 0 rows have been migrated so far.
+> - When a DMA is initialized, a file named *SavedState.xml* will be created in the `C:\Skyline DataMiner\Database` folder. *SLCCMigrator.exe* will use this file to determine the point from which a migration has to be resumed.
+
+#### Service & Resource Management: Enhanced performance when enabling and disabling function DVEs [ID_37030]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+Because of a number of enhancements, overall performance has increased when enabling and disabling function DVEs.
+
 #### Cassandra Cluster: IP addresses will no longer be added and synchronized automatically [ID_37154]
 
 <!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
@@ -20,7 +45,34 @@ Up to now, for the *CassandraCluster* database type, the IP addresses of the Cas
 
 Also, in case of a Failover setup, the above-mentioned list of IP addresses will no longer be automatically synchronized to prevent re-ordering.
 
+#### SLAnalytics - Trend predictions: Enhanced trend prediction models [ID_37280]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+A number of enhancements have been made to the trend prediction models, especially with regard to detecting daily trend recurrences.
+
+#### Security enhancements [ID_37291] [ID_37335]
+
+<!-- RN 37291: MR 10.3.0 [CU8] - FR 10.3.11 -->
+<!-- RN 37335: 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+A number of security enhancements have been made.
+
+#### SLAnalytics: Enhanced processing of trended parameters of which the value remains constant [ID_37303]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+A number of enhancements have been made to the memory resources used for trended parameters of which the value remains constant.
+
 ### Fixes
+
+#### Failover: Data can get lost when the backup agent is the online agent during a Cassandra Cluster migration [ID_34018]
+
+<!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+When the backup agent is the online agent while a Failover pair is being migrated to Cassandra Cluster, data generated during the migration can get lost.
+
+From now on, when you start a Cassandra Cluster migration, a warning message will appear if, for any of the Failover pairs in the cluster, the backup agent is the online agent. This warning message will advise you to make sure that, for all Failover pairs in the cluster, the main agent is the online agent.
 
 #### NATS connection could fail due to payloads being too large [ID_36427]
 
@@ -33,6 +85,14 @@ In some cases, the NATS connection could fail due to payloads being too large. A
 <!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
 
 Not all [Protocol.Params.Param.Interprete.Others](xref:Protocol.Params.Param.Interprete.Others) tags would be read out, which could lead to unexpected behavior.
+
+#### Problem with .NET Framework DLL files used by QActions or Automation scripts [ID_36984]
+
+<!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+When a QAction or Automation script used a NuGet package containing a .NET Framework DLL file on a DataMiner Agent that used a more recent .NET Framework that included that same DLL file by default, a compilation error would occur.
+
+Also, certain DLL files located in a subfolder of the .NET Framework would not be resolved correctly.
 
 #### DataMiner backup: Number of backups to be kept would be interpreted incorrectly [ID_37143]
 
@@ -61,6 +121,12 @@ When a view or an element was deleted on the DMA before a synchronization was pe
 
 In some cases, SLElement could read and write to the same memory blocks on different threads, causing a serialized parameter update to get into a corrupt state.
 
+#### Problem when masking a DVE child element or a virtual function [ID_37240]
+
+<!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
+
+When you masked a DVE child element or a virtual function, not all alarms of all parameters would be masked.
+
 #### Service & Resource Management: Resources that were still in use could be deactivated [ID_37244]
 
 <!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
@@ -75,8 +141,26 @@ In some cases, when function DVEs were being cleaned up while a resource swap oc
 
 When SLLogCollector takes memory dumps, it stores them in a temporary folder before copying them to the correct location. In some cases, a parsing problem would cause some dumps to not get copied over to the correct location.
 
+#### Problem with SLNet due to unhandled MessageBroker exceptions in SLHelper [ID_37258]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+An error could occur in SLNet due to unhandled MessageBroker exceptions in SLHelper.
+
 #### DataMiner backup: DBConfiguration.xml file would not be included in backups [ID_37296]
 
-<!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
+<!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
 
 When you took a DataMiner backup either via Cube or via the Taskbar Utility, the *DBConfiguration.xml* file would incorrectly not be included in the backup.
+
+#### SLAnalytics: Problem due to some features not starting up correctly [ID_37321]
+
+<!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
+
+An error could occur in the SLAnalytics process due to some features not starting up correctly.
+
+#### SLAnalytics: Problem when the SLNet connection got lost while resetting data sources [ID_37402]
+
+<!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
+
+During initialization, in some cases, an error could occur in SLAnalytics when the SLNet connection got lost while resetting data sources.
