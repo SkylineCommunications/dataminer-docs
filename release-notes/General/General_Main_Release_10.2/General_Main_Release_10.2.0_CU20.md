@@ -148,6 +148,12 @@ For example, when you set a custom time zone in a *Clock* component, the current
 
 When you opened a trend graph showing trend data of a parameter of type string, and you added another, non-string parameter to that same graph, the Y axis of the newly added parameter would not be rendered correctly. The labels would be placed too close to each other, making them unreadable.
 
+#### Elements with multiple SSH connections would go into timeout after being restarted [ID_37294]
+
+<!-- MR 10.2.0 [CU20] - FR 10.3.11 -->
+
+When an element with multiple SSH connections was restarted, in some cases, it would no longer be able to communicate with the SSH server. As a result, it would immediately go into timeout.
+
 #### DataMiner backup: DBConfiguration.xml file would not be included in backups [ID_37296]
 
 <!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
