@@ -150,7 +150,7 @@ When you opened a trend graph showing trend data of a parameter of type string, 
 
 #### Elements with multiple SSH connections would go into timeout after being restarted [ID_37294]
 
-<!-- MR 10.2.0 [CU20] - FR 10.3.11 -->
+<!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
 
 When an element with multiple SSH connections was restarted, in some cases, it would no longer be able to communicate with the SSH server. As a result, it would immediately go into timeout.
 
