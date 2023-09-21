@@ -483,6 +483,18 @@ Because of a number of enhancements, overall performance has increased when usin
 > [!IMPORTANT]
 > For the properties that should be taken into account, the option *Update alarms on value changed* must be selected. For more information, see [Configuration of incident tracking based on properties](xref:Automatic_incident_tracking#configuration-of-incident-tracking-based-on-properties).
 
+#### NATSCustodian: Enhanced behavior when detecting unreachable NATS nodes [ID_37271]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+From now on, when *NATSCustodian* detects unreachable NATS nodes in the cluster, it will no longer generate any alarms, nor will it reset the NATS configuration. It will only add an entry to the *NATSCustodian.txt* log file for diagnostic purposes.
+
+NATSCustodian will only reset the NATS configuration when it detects
+
+- that NATS nodes have been added,
+- that NATS nodes have been deleted, or
+- when NATS is in an incorrect state.
+
 ### Fixes
 
 #### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID_34981]
@@ -645,7 +657,7 @@ Up to now, the MessageHandler method in SLHelperTypes.SLHelper would incorrectly
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
-When an element with multiple SSH connections was restarted, in some cases, it would immediately go into timeout.
+When an element with multiple SSH connections was restarted, in some cases, it would no longer be able to communicate with the SSH server. As a result, it would immediately go into timeout.
 
 #### Problem with SLAnalytics when fetching protocol information while creating a multivariate pattern [ID_37366]
 

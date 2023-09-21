@@ -77,6 +77,18 @@ This `objectId` attribute will now be considered optional. Hence, no run-time er
 
 A number of security enhancements have been made.
 
+#### NATSCustodian: Enhanced behavior when detecting unreachable NATS nodes [ID_37271]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+From now on, when *NATSCustodian* detects unreachable NATS nodes in the cluster, it will no longer generate any alarms, nor will it reset the NATS configuration. It will only add an entry to the *NATSCustodian.txt* log file for diagnostic purposes.
+
+NATSCustodian will only reset the NATS configuration when it detects
+
+- that NATS nodes have been added,
+- that NATS nodes have been deleted, or
+- when NATS is in an incorrect state.
+
 #### SLAnalytics - Trend predictions: Enhanced trend prediction models [ID_37280]
 
 <!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
@@ -196,7 +208,7 @@ An error could occur in SLNet due to unhandled MessageBroker exceptions in SLHel
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
-When an element with multiple SSH connections was restarted, in some cases, it would immediately go into timeout.
+When an element with multiple SSH connections was restarted, in some cases, it would no longer be able to communicate with the SSH server. As a result, it would immediately go into timeout.
 
 #### DataMiner backup: DBConfiguration.xml file would not be included in backups [ID_37296]
 
