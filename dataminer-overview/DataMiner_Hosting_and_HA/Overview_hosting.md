@@ -4,10 +4,10 @@ uid: Overview_hosting
 
 # DataMiner Hosting and High Availability
 
-Due to its architecture, DataMiner is extremely resilient to all types of failures, also because this architecture has no single point of failure.
+DataMiner's architecture makes it extremely resilient to all types of failures, also because this architecture has no single point of failure.
 
-Skyline Communications offers 3 different hosting possibilities, each having their own strengths in term of redundancy and high availability options:
+Skyline Communications offers three different hosting possibilities, each with its own strengths in term of redundancy and high-availability options:
 
-1. Self-hosting the DataMiner nodes and storage nodes
-2. DataMiner nodes self-hosted / Storage nodes as a Service
-3. DataMiner nodes and Storage nodes as a Service
+1. Self-hosted DataMiner nodes and storage nodes
+1. Self-hosted DataMiner nodes with Storage as a Service
+1. DataMiner as a Service: both the DataMiner nodes and the storage nodes as a service

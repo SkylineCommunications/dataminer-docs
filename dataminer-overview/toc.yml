@@ -25,14 +25,14 @@
           topicUid: Overview_Platform_DTS_Suite
         - name: Open software platform
           topicUid: Overview_Platform_Open_Platform
-    - name: DataMiner Hosting and High Availability
+    - name: DataMiner hosting and high availability
       topicUid: Overview_hosting
       items:
-        - name: Self-hosting the DataMiner nodes and storage nodes
+        - name: Self-hosted DataMiner nodes and storage nodes
           topicUid: DM_and_storage_selfhosted
-        - name: DataMiner nodes self-hosted - Storage nodes as a Service
+        - name: Self-hosted DataMiner nodes with Storage as a Service
           topicUid: DM_selfhosted_and_StaaS
-        - name: DataMiner nodes and Storage nodes as a Service
+        - name: DataMiner as a Service
           topicUid: DaaS_hosting
     - name: dataminer.services
       topicUid: Overview_DCP

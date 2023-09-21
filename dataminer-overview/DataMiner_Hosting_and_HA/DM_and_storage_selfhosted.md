@@ -2,7 +2,7 @@
 uid: DM_and_storage_selfhosted
 ---
 
-# Self-hosting the DataMiner nodes and storage nodes
+# Self-hosted DataMiner nodes and storage nodes
 
 It is possible to host DataMiner yourself. This can be on premises, in a private cloud, or hybrid, or you could also decide to run it in a public cloud.
 
