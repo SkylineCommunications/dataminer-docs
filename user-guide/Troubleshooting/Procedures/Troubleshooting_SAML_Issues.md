@@ -41,6 +41,14 @@ Partial setups are not compatible with SAML. Ensure that all settings are correc
 
 You may encounter an issue where the expected redirection to the identity provider's login page does not occur when trying to log into your DMA via the web using external authentication through SAML. This issue can also manifest in Cube, where the SAML login window fails to appear.
 
+If you are accessing your DMA via the web, check if the user credential boxes are visible during the login process. If they are visible, this suggests the external authentication is not in use.
+
+<!--screenshot will be added here-->
+
+If the external authentication is working properly, you will get the option to log in via identity provider.
+
+<!--screenshot will be added here-->
+
 #### The password field is filled in
 
 If the password field is already filled in, leave it empty. Local logon attempts take precedence over external authentication.
