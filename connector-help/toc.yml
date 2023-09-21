@@ -8101,6 +8101,8 @@
     topicUid: Connector_help_Skyline_Configuration_Manager_DMA
   - name: Skyline CRM Simulator
     topicUid: Connector_help_Skyline_CRM_Simulator
+  - name: Skyline Data Aggregator Monitor
+    topicUid: Connector_help_Skyline_Data_Aggregator_Monitor
   - name: Skyline DataMiner IT Tools
     topicUid: Connector_help_Skyline_DataMiner_IT_Tools
   - name: Skyline DataMiner System
@@ -9845,6 +9847,8 @@
     topicUid: Connector_help_Vodafone_Kabel_Deutschland_GmbH_IP_PEER_DS_Service
   - name: Vodafone Kabel Deutschland GmbH IP PEER OS Service
     topicUid: Connector_help_Vodafone_Kabel_Deutschland_GmbH_IP_PEER_OS_Service
+  - name: Vodafone Kabel Deutschland GmbH KEVAG Service
+    topicUid: Connector_help_Vodafone_Kabel_Deutschland_GmbH_KEVAG_Service
   - name: Vodafone Kabel Deutschland GmbH Pre-Encoding Service
     topicUid: Connector_help_Vodafone_Kabel_Deutschland_GmbH_Pre-Encoding_Service
   - name: Vodafone Kabel Deutschland GmbH Qbit Radio Service
