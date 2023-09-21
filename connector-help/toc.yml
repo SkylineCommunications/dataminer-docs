@@ -8101,6 +8101,8 @@
     topicUid: Connector_help_Skyline_Configuration_Manager_DMA
   - name: Skyline CRM Simulator
     topicUid: Connector_help_Skyline_CRM_Simulator
+  - name: Skyline Data Aggregator Monitor
+    topicUid: Connector_help_Skyline_Data_Aggregator_Monitor
   - name: Skyline DataMiner IT Tools
     topicUid: Connector_help_Skyline_DataMiner_IT_Tools
   - name: Skyline DataMiner System
