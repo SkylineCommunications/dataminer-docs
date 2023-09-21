@@ -33,7 +33,7 @@ In the *Layout* tab for this component, the *Column filters* option is available
 
 - You can remove a column filter again by selecting *No color* instead of a specific color.
 
-You can **resize the columns** of the table by dragging the column edges. From DataMiner 10.2.0/10.1.8 onwards, you can also change the order of the columns by dragging the column headers to a different position.
+You can **resize the columns** of the table by dragging the edges of the column headers. From DataMiner 10.2.0/10.1.8 onwards, you can also change the order of the columns by dragging the column headers to a different position.
 
 ## Adding actions to a table
 
