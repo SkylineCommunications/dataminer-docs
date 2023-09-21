@@ -10,7 +10,7 @@ When dealing with SAML-related issues, follow the steps listed on this page and 
 
 When you encounter SAML issues, investigate the logs detailed below, in the specified order:
 
-1. SLSAML.txt
+1. SLSAML.txt: *C:\Skyline DataMiner\logging\SLSAML.txt*
 
 1. [SLNet.txt](xref:DataMiner_processes#slnet): *C:\Skyline DataMiner\logging\SLNet.txt*
 
@@ -43,11 +43,11 @@ You may encounter an issue where the expected redirection to the identity provid
 
 If you are accessing your DMA via the web, check if the user credential boxes are visible during the login process. If they are visible, this suggests the external authentication is not in use.
 
-<!--screenshot will be added here-->
+![Credentials](~/user-guide/images/Credentials_Login.png)
 
 If the external authentication is working properly, you will get the option to log in via identity provider.
 
-<!--screenshot will be added here-->
+![Identity Provider](~/user-guide/images/Identity_Provider_Login.png)
 
 #### The password field is filled in
 
@@ -99,7 +99,7 @@ The SAML attribute names must always match those in the IDP and the *DataMiner.x
 
    1. In the Chrome web browser, add the [SAML-tracer extension](https://chrome.google.com/webstore/detail/saml-tracer/mpdajninpobndbfcldcmbpnnbhibjmch).
 
-   1. Go to `http(s)://[DMA name]/monitoring/`.
+   1. Go to `http(s)://[DMA name]/`.
 
    1. Click any received SAML response marked with an orange bubble labeled "SAML". Select this from the list and click *SAML* in the bottom window. Compare attribute names in the response to those in the IDP and the *Dataminer.xml* file.
 
