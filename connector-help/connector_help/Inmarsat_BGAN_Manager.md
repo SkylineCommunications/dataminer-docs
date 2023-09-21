@@ -13,7 +13,7 @@ The Inmarsat BGAN Manager connector is used to monitor the BGAN network and exec
 | **Range**            | **Key Features**                          | **Based on** | **System Impact** |
 |----------------------|-------------------------------------------|--------------|-------------------|
 | 1.0.0.x | Poll Customers Poll Terminals and details | \-           | \-                |
-| 1.0.1.x \[SLC Main\] | Changed protocol implementation to API v3 | \-           | \-                |
+| 1.0.1.x \[SLC Main\] | Changed connector implementation to API v3 | \-           | \-                |
 
 ### Product Info
 
@@ -50,7 +50,7 @@ The credentials must be filled in on the General page in order for any informati
 - Client ID
 - Client Secret
 
-The default scope, client ID and secret can be found in the Rest API documentation. However, they will be configurable in the network.
+The default scope, client ID, and secret can be found in the Rest API documentation. However, they will be configurable in the network.
 
 ### Redundancy
 
@@ -72,62 +72,39 @@ This page displays generic information for all customers currently accessible fr
 
 ### Terminal
 
-This page contains a Terminals table as well as buttons to popup pages: Data Sessions, Operator Network Status, Geo Fence and Status Report.
+This page contains a Terminals table as well as buttons to subpages: Data Sessions, Operator Network Status, Geo Fence, and Status Report.
 
-## Data Sessions
-
-The Data Sessions subpage contains the Running, Completed and Failed Data Sessions of the Terminals
-
-## Operator Network Status
-
-The Operator Network Status subpage contains the Operator Network Status of the Terminals
-
-## Geo Fence
-
-The Geo Fence subpage contains the Geo Fence of the Terminals
-
-## Status Report
-
-The Status Report contains the Geo Fence of the Terminals
+- The **Data Sessions** subpage displays the running, completed, and failed data sessions of the terminals.
+- The Operator **Network Status** subpage displays the operator network status of the terminals.
+- The **Geo Fence** subpage displays geo fence information for the terminals.
+- The **Status Report** subpage contains the status report for the terminals.
 
 ### Terminal Tree Control
 
-The Terminal Tree Control page contains a tree control with the Terminal Data linked together
+This page contains a tree control that links the terminal data together.
 
 ### Hybrid Terminal
 
-This page contains a Hybrid Pairs table, Hybrid Prism Table, Hybrid terminals table as well as buttons to popup pages: Hybrid Data Sessions, Hybrid Operator Network Status, Hybrid Geo Fence and Hybrid Status Report.
+This page contains the Hybrid Pairs table, Hybrid Prism table, and Hybrid Terminals table, as well as buttons to subpages: Hybrid Data Sessions, Hybrid Operator Network Status, Hybrid Geo Fence, and Hybrid Status Report.
 
-## Hybrid Data Sessions
-
-The Hybrid Data Sessions subpage contains the Running, Completed and Failed Data Sessions of the Hybrid Terminals
-
-## Hybrid Operator Network Status
-
-The Hybrid Operator Network Status subpage contains the Operator Network Status of the Hybrid Terminals
-
-## Hybrid Geo Fence
-
-The Hybrid Geo Fence subpage contains the Geo Fence of the Hybrid Terminals
-
-## Hybrid Status Report
-
-The Hybrid Status Report contains the Status Report of the Hybrid Terminals
-
+- The **Hybrid Data Sessions** subpage contains the running, completed, and failed data sessions of the hybrid terminals.
+- The **Hybrid Operator Network Status** subpage displays the operator network status of the hybrid terminals.
+- The **Hybrid Geo Fence** subpage displays geo fence information for the hybrid terminals.
+- The **Hybrid Status Report** subpage contains the status report for the hybrid terminals.
 
 ### Hybrid Terminal Tree Control
 
-The Hybrid Terminal Tree Control page contains a tree control with the Hybrid Terminal Data linked together
+This page contains a tree control that links the hybrid terminal data together.
 
 ### Events
 
-This page contains the Events of all Non Hybrid and Hybrid Terminals.
+This page displays the events for all non-hybrid and hybrid terminals.
 
 ### Poll Manager
 
-The Poll Manager page contains a Polling Manager table which manages the polling of the API calls with individual timers. It also shows the time that the API call was last polled.
+This page contains the Polling Manager table, which manages the polling of the API calls with individual timers. It also shows the time when the API call was last polled.
 
 ## Notes
 
-**1.0.0.x**: **Terminal detail data is obtained per terminal**. This means that in **larger networks** this set of operations will become **slower**. The larger the network, the longer it will take to obtain all the terminal data.
-**1.0.1.x**: **Terminal data is retried through a single API call**.
+- **1.0.0.x**: **Terminal detail data** is obtained **per terminal**. This means that in **larger networks** this set of operations will become **slower**. The larger the network, the longer it will take to obtain all the terminal data.
+- **1.0.1.x**: **Terminal data** is retrieved through a **single API call**.
