@@ -4,7 +4,7 @@ uid: Connector_help_Inmarsat_BGAN_Manager
 
 # Inmarsat BGAN Manager
 
-The Inmarsat BGAN Manager connector is used to monitor the BGAN network and execute small operations. The BGAN network is a satellite communications network that allows voice, video and data sessions on remote terminals. This means that the bulk of interesting data focuses on the terminals and their details.
+The Inmarsat BGAN Manager connector is used to monitor the BGAN network and execute small operations. The BGAN network is a satellite communications network that allows voice, video and data sessions on remote terminals.
 
 ## About
 
@@ -12,7 +12,8 @@ The Inmarsat BGAN Manager connector is used to monitor the BGAN network and exec
 
 | **Range**            | **Key Features**                          | **Based on** | **System Impact** |
 |----------------------|-------------------------------------------|--------------|-------------------|
-| 1.0.0.x \[SLC Main\] | Poll Customers Poll Terminals and details | \-           | \-                |
+| 1.0.0.x | Poll Customers Poll Terminals and details | \-           | \-                |
+| 1.0.1.x \[SLC Main\] | Changed connector implementation to API v3 | \-           | \-                |
 
 ### Product Info
 
@@ -25,6 +26,7 @@ The Inmarsat BGAN Manager connector is used to monitor the BGAN network and exec
 | **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components** |
 |-----------|---------------------|-------------------------|-----------------------|-------------------------|
 | 1.0.0.x   | No                  | Yes                     | \-                    | \-                      |
+| 1.0.1.x   | No                  | Yes                     | \-                    | \-                      |
 
 ## Configuration
 
@@ -44,13 +46,11 @@ HTTP CONNECTION:
 
 The credentials must be filled in on the General page in order for any information to be polled. As long as this is not done, the element will not work. The credentials list is as follows:
 
-- User Name
-- Password
 - Scope
 - Client ID
 - Client Secret
 
-The user name and password can be configured in the network. The default scope, client ID and secret can be found in the Rest API documentation. However, they will be configurable in the network.
+The default scope, client ID, and secret can be found in the Rest API documentation. However, they will be configurable in the network.
 
 ### Redundancy
 
@@ -60,7 +60,7 @@ There is no redundancy defined.
 
 The web interface is only accessible when the client machine has network access to the product.
 
-## How to use (1.0.0.x)
+## How to use (1.0.1.x)
 
 ### General
 
@@ -70,14 +70,41 @@ Credentials can be configured on this page, and a login can be enforced. There i
 
 This page displays generic information for all customers currently accessible from the configured user.
 
-### Terminals
+### Terminal
 
-The bulk of the data can be found here. The page contains a generic terminals table as well as the terminal details and terminal location information. These last tables will only be refreshed automatically every hour, but a refresh button can be used to force a manual refresh, if necessary.
+This page contains a Terminals table as well as buttons to subpages: Data Sessions, Operator Network Status, Geo Fence, and Status Report.
 
-This design takes the potential scaling of the system into account. The terminal details are obtained per terminal, which means that, in a larger network, this operation may take significantly longer than might be expected, and some strain may be added on the network. As such, the current values were chosen to allow for a more relaxed information update.
+- The **Data Sessions** subpage displays the running, completed, and failed data sessions of the terminals.
+- The Operator **Network Status** subpage displays the operator network status of the terminals.
+- The **Geo Fence** subpage displays geo fence information for the terminals.
+- The **Status Report** subpage contains the status report for the terminals.
 
-The progress bar can be useful to check the status of the terminal details refresh. The larger the network, the smaller each increment will be per terminal. In case the progress bar is not advancing at all for some time, this could indicate that there is an issue. In that case, contact Skyline Communications.
+### Terminal Tree Control
+
+This page contains a tree control that links the terminal data together.
+
+### Hybrid Terminal
+
+This page contains the Hybrid Pairs table, Hybrid Prism table, and Hybrid Terminals table, as well as buttons to subpages: Hybrid Data Sessions, Hybrid Operator Network Status, Hybrid Geo Fence, and Hybrid Status Report.
+
+- The **Hybrid Data Sessions** subpage contains the running, completed, and failed data sessions of the hybrid terminals.
+- The **Hybrid Operator Network Status** subpage displays the operator network status of the hybrid terminals.
+- The **Hybrid Geo Fence** subpage displays geo fence information for the hybrid terminals.
+- The **Hybrid Status Report** subpage contains the status report for the hybrid terminals.
+
+### Hybrid Terminal Tree Control
+
+This page contains a tree control that links the hybrid terminal data together.
+
+### Events
+
+This page displays the events for all non-hybrid and hybrid terminals.
+
+### Poll Manager
+
+This page contains the Polling Manager table, which manages the polling of the API calls with individual timers. It also shows the time when the API call was last polled.
 
 ## Notes
 
-**1.0.0.x**: **Terminal detail data is obtained per terminal**. This means that in **larger networks** this set of operations will become **slower**. The larger the network, the longer it will take to obtain all the terminal data.
+- **1.0.0.x**: **Terminal detail data** is obtained **per terminal**. This means that in **larger networks** this set of operations will become **slower**. The larger the network, the longer it will take to obtain all the terminal data.
+- **1.0.1.x**: **Terminal data** is retrieved through a **single API call**.
