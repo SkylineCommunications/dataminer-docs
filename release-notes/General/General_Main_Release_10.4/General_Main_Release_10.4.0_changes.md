@@ -646,9 +646,3 @@ Up to now, the MessageHandler method in SLHelperTypes.SLHelper would incorrectly
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
 When an element with multiple SSH connections was restarted, in some cases, it would no longer be able to communicate with the SSH server. As a result, it would immediately go into timeout.
-
-#### Problem with SLAnalytics when fetching protocol information while creating a multivariate pattern [ID_37366]
-
-<!-- MR 10.4.0 - FR 10.3.11 -->
-
-In some cases, SLAnalytics could throw an exception when fetching protocol information while creating a multivariate pattern.

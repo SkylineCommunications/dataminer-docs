@@ -171,6 +171,12 @@ When you took a DataMiner backup either via Cube or via the Taskbar Utility, the
 
 An error could occur in the SLAnalytics process due to some features not starting up correctly.
 
+#### Problem with SLAnalytics when fetching protocol information while creating a multivariate pattern [ID_37366]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+In some cases, SLAnalytics could throw an exception when fetching protocol information while creating a multivariate pattern.
+
 #### SLAnalytics: Problem when the SLNet connection got lost while resetting data sources [ID_37402]
 
 <!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->

@@ -224,7 +224,7 @@ An error could occur in the SLAnalytics process due to some features not startin
 
 #### Problem with SLAnalytics when fetching protocol information while creating a multivariate pattern [ID_37366]
 
-<!-- MR 10.4.0 - FR 10.3.11 -->
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
 
 In some cases, SLAnalytics could throw an exception when fetching protocol information while creating a multivariate pattern.
 
