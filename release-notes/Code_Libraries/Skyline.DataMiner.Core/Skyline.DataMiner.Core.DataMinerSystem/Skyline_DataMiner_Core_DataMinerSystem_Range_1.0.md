@@ -5,20 +5,17 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.0
 # Skyline DataMiner Core DataMinerSystem Range 1.0
 
 > [!NOTE]
-> Range 1.0.x.x is supported as from DataMiner version 10.1.0
-> This is a continuation from the now obsolete [Class Library](xref:ClassLibrary_Range_1.2)
+> Range 1.0.x.x is supported as from **DataMiner 10.1.0**. This is a continuation from the now obsolete [Class Library](xref:ClassLibrary_Range_1.2).
 
 ### 1.0.1.1
 
-#### Breaking Change - AddSubscriptions in ICommunication
+#### Breaking change - AddSubscriptions in ICommunication
 
-The breaking change indicated by the version was introduced in the ICommunication interface. This will only impact users that directly access and use RemotingCommunication.
+A breaking change was introduced in the ICommunication interface. This will only affect users that directly access and use RemotingCommunication.
 
 #### New Feature - .NET DataFlow applied to Monitors
 
-Scalability and performance of the Monitors has been improved through the use of .NET DataFlow technology and parallel processing in the background.
-This version moves the largest bottleneck away from the software and places it mostly with the user hardware.
-Also, where before you would have impacted other elements by using Monitors this is now much more isolated between elements.
+Scalability and performance of the Monitors has been improved through the use of .NET DataFlow technology and parallel processing in the background. This version moves the largest bottleneck away from the software and places it mostly with the user hardware. Also, where before you would have affected other elements by using Monitors, this is now much more isolated between elements.
 
 The latest benchmark tests, at the time of release, demonstrate that the system's capacity to handle large workloads has increased by a factor ranging from 4 to 150 times depending on the hardware.
 
@@ -47,11 +44,11 @@ This code was extracted from a popular internal community library "Utility Libra
 
 ### 1.0.0.5
 
-#### Fix - Views.Elements now returns stopped and paused elements \[ID_36325\]
+#### Fix - Views.Elements now returns stopped and paused elements [ID_36325]
 
 Asking for all elements under a view will now return all stopped and paused elements.
 
-#### Fix - RemotingConnection replaced \[ID_36324\]
+#### Fix - RemotingConnection replaced [ID_36324]
 
 ​RemoteConnection was replaced with a more secure Connection type. As preparation for the deprecation and removal of RemoteConnection.
 
@@ -71,8 +68,7 @@ Added calls:
 
 #### Fixes to Element Creation
 
-Element Creation through this library produced corrupt elements since DataMiner version 10.3.4 \[ID_33515\]
-This version fixes that element creation.
+Element Creation through this library produced corrupt elements since DataMiner version 10.3.4 [ID_33515]. This version fixes that element creation.
 
 ### 1.0.0.2
 
@@ -84,5 +80,4 @@ Added minimum required DataMiner version to the description of NuGets for user c
 
 #### New Feature - Migrated from Class Library
 
-Extracted IDms classes and functionality alongside Class Library Monitors into a public available NuGet library.
-This was extracted from Class Library range 1.2.0.X
+Extracted IDms classes and functionality alongside Class Library Monitors into a public available NuGet library. This was extracted from Class Library range 1.2.0.x.

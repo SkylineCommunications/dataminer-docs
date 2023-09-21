@@ -5,9 +5,7 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.1
 # Skyline DataMiner Core DataMinerSystem Range 1.1
 
 > [!NOTE]
-> Range 1.1.x.x is supported as from DataMiner version 10.1.11
-> Minimum DataMiner Version due to:
-> - Methods to obtain table cell data assumed the use of DisplayKey. It's now possible to ask for this data using the Primary Key
+> Range 1.1.x.x is supported as from **DataMiner 10.1.11**. It makes use of a change introduced in DataMiner 10.1.11 that makes it possible to obtain table cell data using the primary key. In earlier DataMiner versions, the display key was need to obtain this data.
 
 ### 1.1.1.1
 
