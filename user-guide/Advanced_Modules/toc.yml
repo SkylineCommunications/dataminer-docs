@@ -1171,7 +1171,7 @@ items:
       - name: Tutorials
         topicUid: UD_APIs_Tutorials
         items:
-          - name: 1. Hello world tutorial
+          - name: Hello world
             topicUid: UD_APIs_Hello_world_tutorial
-          - name: 2. Elements in alarm tutorial
+          - name: Retrieving elements in alarm
             topicUid: UD_APIs_Elements_in_alarm_tutorial
