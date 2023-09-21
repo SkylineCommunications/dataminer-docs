@@ -4,13 +4,26 @@ uid: SchemaPackageManifest
 
 # Package manifest schema
 
-XML schema for defining the contents of an application package. For more information, refer to [Application packages](xref:TOOApplicationPackages) and [Pipeline stages for install packages](xref:Pipeline_stages_for_install_packages).
+The package manifest schema is an XML schema for defining the contents of an application package. For more information, refer to [Application packages](xref:ApplicationPackages) and [Pipeline stages for install packages](xref:Pipeline_stages_for_install_packages).
 
 ## Root element
 
 [Manifest](xref:Manifest)
 
 ## Example
+
+The following example defines an application package with name "ExamplePackage" and version "1.0.1-CU0" that contains two connectors:
+
+- The latest release of range 1.1.2.x of the Microsoft Platform connector
+- The latest development build in range 1.0.0.x of the Cassandra Cluster Monitor connector
+
+The manifest also states that:
+
+- The protocol.xml file of latest development version of the Cassandra Cluster Monitor connector should be signed before it gets included in the application package.
+- This version of the Cassandra Cluster Monitor should be set as the production version and the templates should also be copied as production version templates.
+- The alarm and trend templates should also be included in the application package.
+
+The version history of the manifest is available in the [VersionHistory](xref:Manifest.VersionHistory) tag.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -23,17 +36,16 @@ XML schema for defining the contents of an application package. For more informa
 				<RepoPath>Protocols\Microsoft\Platform</RepoPath>
 				<Version>
 					<Selection>
-						<Range triggerPackagePipelineOnChange="false" rangeSelection="latestRelease">1.1.2.X</Range>
+						<Range rangeSelection="latestRelease">1.1.2.X</Range>
 					</Selection>
 					<SetAsProduction>false</SetAsProduction>
 				</Version>
-				<SignDevelopmentVersion>true</SignDevelopmentVersion>
 			</Protocol>
 			<Protocol>
 				<RepoPath>Protocols\Apache\Cassandra Cluster Monitor</RepoPath>
 				<Version>
 					<Selection>
-						<Range triggerPackagePipelineOnChange="false" rangeSelection="latestRelease">1.0.0.X</Range>
+						<Range rangeSelection="latestBuild">1.0.0.X</Range>
 					</Selection>
 					<SetAsProduction copyTemplates="true">true</SetAsProduction>
 				</Version>
@@ -45,16 +57,6 @@ XML schema for defining the contents of an application package. For more informa
 						<Template replaceExisting="true">Trending_Default</Template>
 					</TrendTemplates>
 				</Templates>
-				<SignDevelopmentVersion>true</SignDevelopmentVersion>
-			</Protocol>
-			<Protocol>
-				<RepoPath>Protocols\Elastic\ElasticSearch Cluster Monitor</RepoPath>
-				<Version>
-					<Selection>
-						<Range triggerPackagePipelineOnChange="false" rangeSelection="latestRelease">1.0.0.X</Range>
-					</Selection>
-					<SetAsProduction>true</SetAsProduction>
-				</Version>
 				<SignDevelopmentVersion>true</SignDevelopmentVersion>
 			</Protocol>
 		</Protocols>

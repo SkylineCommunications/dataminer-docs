@@ -243,9 +243,11 @@ On the *Cube* page, the following settings are available:
 
 - **Show the DataMiner TV section**: Obsolete. Determines whether the optional DataMiner TV section is displayed on the DataMiner Pulse welcome page in Cube. Available from DataMiner 9.5.14 up to DataMiner 10.1.0 [CU22]/10.2.0 [CU10]/10.3.1.
 
-- **Display the workspace buttons in the header**: Available from DataMiner 10.0.0/10.0.2 onwards. Determines whether the four blue squares indicating the Cube workspaces are displayed in the header. This setting can also be enabled or disabled via the header quick menu.
+- **Display the workspace buttons in the header**: Available from DataMiner 10.0.0/10.0.2 onwards. Determines whether the four squares indicating the Cube workspaces are displayed in the header. This setting can also be enabled or disabled via the header quick menu.
 
 - **Display the server time in the header**: Available from DataMiner 10.0.0/10.0.2 onwards. Determines whether server time is displayed in the header. This setting can also be enabled or disabled via the header quick menu.
+
+- **Display the search box in the header**: Available from DataMiner 10.3.5/10.4.0 onwards. Determines whether the search box is displayed in the header. This setting can also be enabled or disabled via the header quick menu.
 
 ### Cube sides settings
 
@@ -334,7 +336,7 @@ These settings allow you to specify which alarm levels and icons are shown next 
 
 On the *Regional* page, the following settings are available:
 
-- **Language of the user interface**: Choose the language for the user interface. You must restart DataMiner Cube for this setting to take effect. Currently, the officially supported languages are Dutch, French, German, Portuguese (Portugal), Russian and Spanish. Other languages are available for demo purposes only.
+- **Language of the user interface**: Choose the language for the user interface. You must restart DataMiner Cube for this setting to take effect. Currently, the officially supported languages are Dutch, French, German, Portuguese (Portugal), Russian (up to DataMiner 10.2.6), and Spanish. Other languages are available for demo purposes only.
 
     > [!NOTE]
     > From DataMiner 9.5.2 onwards, by default, only the officially supported languages can be selected in the user settings.

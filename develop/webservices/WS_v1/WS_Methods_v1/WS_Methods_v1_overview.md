@@ -4,6 +4,9 @@ uid: WS_Methods_v1_overview
 
 # Methods (v1)
 
+> [!TIP]
+> See also: [Using the Web Services (v1)](xref:Using_the_Web_Services_v1)
+
 ## Overview of the methods (v1)
 
 | Method | Description |

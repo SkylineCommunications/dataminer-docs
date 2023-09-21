@@ -4,22 +4,11 @@ uid: DIS_settings
 
 # DIS settings
 
-In the *DIS Settings* dialog box, you can find all program settings of the DataMiner Integration Studio:
-
-- [DMA](#dma)
-- [DLLs](#dlls)
-- [Solutions](#solutions)
-- [Class Library](#class-library)
-- [Interface](#interface)
-- [MIB](#mib)
-- [Account](#account)
-- [Updates](#updates)
-- [Other](#other)
-- [Info](#info)
+Select *DIS > Settings* in the menu to open the *DIS Settings* dialog box. In this dialog box, you can configure all the DIS-related settings.
 
 ## DMA
 
-In the *DMA* tab, add a list of DMAs to which you want DataMiner Integration Studio to be able to connect when it has to import or publish protocols or Automation scripts, or debug QActions.
+In the *DMA* tab, add a list of DMAs to which you want DataMiner Integration Studio to be able to connect when it has to e.g. import or publish connectors or Automation scripts, or debug connector QActions.
 
 To add a DMA to the list:
 
@@ -45,7 +34,7 @@ To add a DMA to the list:
 
     > [!TIP]
     > See also:
-    > [Debugging QActions and Automation scripts](xref:Debugging_QActions_and_Automation_scripts)
+    > [Debugging connectors and Automation scripts](xref:Debugging_connectors_and_Automation_scripts)
 
 1. Click *OK* to close the *Edit DMA Connection* window.
 
@@ -55,6 +44,7 @@ To update a DMA in the list:
 1. In the *Edit DMA Connection* window, make the necessary changes, and click *OK*.
 
     > [!NOTE]
+    >
     > - When you change the hostname, the user name and/or the password, the current connection will be closed.
     > - After having changed the hostname, the user name and/or the password, we recommend you click the *Test connection* button to check whether DIS is able to connect to the DMA.
 
@@ -71,7 +61,7 @@ To set a DMA as the default DMA:
 If you add a DMA on which DataMiner configuration switching is enabled, you may have to change the port number in the IP address you entered in the *Host* box.
 
 1. On the DMA in question, open C:\\Skyline DataMiner\\logging\\SLNet.txt.
-1. Locate the line that contains “EndPointsManager.InternalEnableRemoting”, and write down the port number specified on this line.
+1. Locate the line that contains "EndPointsManager.InternalEnableRemoting", and write down the port number specified on this line.
 
     ```txt
     07-14 08:42:04.374|4|EndPointsManager.InternalEnableRemoting|port 8004 is available!
@@ -88,9 +78,9 @@ In the *DLLs* tab, you can specify the DLL import locations.
 
 ### DLL Import locations
 
-These are the folders that should contain files like *Interop.SLDms.dll*, *SLDatabase.dll*, *SLProtocolTools.dll* or *SLNetTypes.dll*.
+These are the folders that should contain files like *SLDatabase.dll*, *SLProtocolTools.dll* or *SLNetTypes.dll*.
 
-- To add a folder, click *Add* and specify the folder in the newly added text box. Enter it manually or click the ellipsis (“…”) button to the right of the text box and browse to the right folder.
+- To add a folder, click *Add* and specify the folder in the newly added text box. Enter it manually or click the ellipsis ("…") button to the right of the text box and browse to the right folder.
 - To delete a folder, click the red X to the right of the folder.
 
 If you are working on a local DMA, you can keep the following default folders:
@@ -107,6 +97,9 @@ In the *Solutions* tab, you can specify the following default solution folders:
 
 ## Class Library
 
+> [!IMPORTANT]
+> The class library generation feature has been removed from DIS v2.41 onwards in favor of NuGet packages. If you have a connector or Automation script that makes use of the official class library, replace it with the corresponding NuGet package(s). For more information, refer to [Class library introduction](xref:ClassLibraryIntroduction). If you have a connector or Automation script that makes use of a community package, we recommend turning this into a NuGet package (For more information on how to create a NuGet package, refer to [Producing NuGet packages](xref:Producing_NuGet)). Alternatively, you can put all the code from the community library zip file in a QAction/Exe block.
+
 In the *Class Library* tab, you can select a base package (shipped with DIS) and specify the location of one or more custom/community packages, which will typically contain code written specifically for a particular vendor or project and maintained by a dedicated team of developers.
 
 Apart from a number of C# files, class library packages include a manifest.xml file that contains the name and the version of the package as well as any dependencies to other packages. When a Class Library QAction 63000 or a Class Library EXE block is generated, all information about the packages that were used to build the class library packages used by that QAction or EXE block will be added to it. This will allow DIS to check the included packages each time it generates the QAction or EXE block, alert the user whenever it notices package inconsistencies (different base package, updated community packages, etc.), and offer the user the opportunity to either allow or block the QAction or EXE block update.
@@ -117,9 +110,15 @@ For more information on Class Library packages, see [Class Library packages](xre
 
 ### Enable Class Library feature
 
+> [!IMPORTANT]
+> The class library generation feature has been removed from DIS v2.41 onwards in favor of NuGet packages. If you have a connector or Automation script that makes use of the official class library, replace it with the corresponding NuGet package(s). For more information, refer to [Class library introduction](xref:ClassLibraryIntroduction). If you have a connector or Automation script that makes use of a community package, we recommend turning this into a NuGet package (For more information on how to create a NuGet package, refer to [Producing NuGet packages](xref:Producing_NuGet)). Alternatively, you can put all the code from the community library zip file in a QAction/Exe block.
+
 Clear the *Enable Class Library feature* option if you want to disable the Class Library feature.
 
 ### Automatically generate Class Library code
+
+> [!IMPORTANT]
+> The class library generation feature has been removed from DIS v2.41 onwards in favor of NuGet packages. If you have a connector or Automation script that makes use of the official class library, replace it with the corresponding NuGet package(s). For more information, refer to [Class library introduction](xref:ClassLibraryIntroduction). If you have a connector or Automation script that makes use of a community package, we recommend turning this into a NuGet package (For more information on how to create a NuGet package, refer to [Producing NuGet packages](xref:Producing_NuGet)). Alternatively, you can put all the code from the community library zip file in a QAction/Exe block.
 
 If you select the *Automatically generate Class Library code* option, DIS will automatically regenerate the Class Library QAction 63000 and the Class Library EXE blocks whenever references to class library items have been added, changed or removed.
 
@@ -139,7 +138,7 @@ This means that you will be able to scroll in one section while keeping the keyb
 
 ### Smart highlighting: case sensitivity
 
-This setting controls whether or not the “smart highlighting” feature is case sensitive.
+This setting controls whether or not the "smart highlighting" feature is case sensitive.
 
 | If you select... | then... |
 |------------------|---------|
@@ -164,7 +163,7 @@ This setting controls whether or not the full-text search feature will interpret
 
 | If you select... | then, when you open a new file tab,... |
 |------------------|----------------------------------------|
-| Treat as literal string | the full-text search feature will interpret \* and ? characters in the search box as characters instead of wildcards.<br> Tip: Use this option if you want to search for strings like “\*\*\*”. |
+| Treat as literal string | the full-text search feature will interpret \* and ? characters in the search box as characters instead of wildcards.<br> Tip: Use this option if you want to search for strings like "\*\*\*". |
 | Interpret as wildcards | the full-text search feature will interpret \* and ? characters in the search box as wildcards instead of characters. |
 | Remember last used | The full-text search feature will inherit the current wildcard interpretation setting.<br> Example: If, just before opening a new file tab, you chose *Interpret as wild-cards* in an open file tab, then the full-text search feature of the newly opened file tab will be set to *Interpret as wildcards* as well. |
 
@@ -178,7 +177,7 @@ If you select the *Disable C# syntax highlighting in XML documents* option, the 
 
 Select this option if you want the *DIS Tree* window to display parameter descriptions instead of parameter names.
 
-See the following example. If you select the *DIS tree view: Show description instead of name* option, the *DIS Tree* window will display the parameter in question as “System Name” instead of “sysName”.
+See the following example. If you select the *DIS tree view: Show description instead of name* option, the *DIS Tree* window will display the parameter in question as "System Name" instead of "sysName".
 
 ```xml
 <Param>
@@ -212,7 +211,7 @@ Select the *Only show unresolved links* option if you only want to see the virtu
 
 In this box, you can configure the format of the task references, which, in the Version editor, you can link to protocol versions.
 
-In the format string, you can use the “{ref}” placeholder. When, in the Version editor, you click the link button of a particular reference, that placeholder will then be replaced by the contents of the *Reference* column.
+In the format string, you can use the "{ref}" placeholder. When, in the Version editor, you click the link button of a particular reference, that placeholder will then be replaced by the contents of the *Reference* column.
 
 > [!TIP]
 > See also:
@@ -222,7 +221,7 @@ In the format string, you can use the “{ref}” placeholder. When, in the Vers
 
 In this box, you can configure the format of the generic references, which, in the Version editor, you can link to protocol versions.
 
-In the format string, you can use the “{ref}” placeholder. When, in the Version editor, you click the link button of a particular reference, that placeholder will then be replaced by the contents of the *Reference* column.
+In the format string, you can use the "{ref}" placeholder. When, in the Version editor, you click the link button of a particular reference, that placeholder will then be replaced by the contents of the *Reference* column.
 
 > [!TIP]
 > See also:
@@ -260,6 +259,17 @@ In the *Updates* tab, you can indicate whether you want DataMiner Integration St
     > [!NOTE]
     > It is advised to always install official release versions.
 
+## Templates
+
+In the *Templates* tab, you can indicate whether you want DataMiner Integration Studio to automatically check for template updates when Visual Studio starts and install these when updates are available.
+
+In the *Templates Nuget package ID* text box, you can specify the ID of the NuGet package you want to use in Visual Studio. This NuGet package contains the solution and project templates you can use to create new solutions and projects.
+
+The update button allows you to manually trigger an update.
+
+> [!NOTE]
+> This tab is only available in Visual Studio 2022.
+
 ## Other
 
 ### Hide warnings about UTF-8 encoding
@@ -268,11 +278,12 @@ If you select the *Hide warnings about UTF-8 encoding* option, no UTF-8 encoding
 
 ### Fix default XML encoding
 
-Click *Fix default XML encoding* if you want DataMiner Integration Studio to change the encoding of Visual Studio’s “New XML file” template, which, by default, contains the UTF-8 signature header.
+Click *Fix default XML encoding* if you want DataMiner Integration Studio to change the encoding of Visual Studio’s "New XML file" template, which, by default, contains the UTF-8 signature header.
 
 > [!NOTE]
+>
 > - DIS automatically saves XML files using the following encoding:
->     - Unicode (UTF-8 with signature) - Codepage 65001
+>   - Unicode (UTF-8 with signature) - Codepage 65001
 > - XML files with an UTF-8 signature header can only be uploaded to DataMiner using DataMiner Cube.
 
 ## Info

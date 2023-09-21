@@ -61,12 +61,31 @@ To enable gRPC for the client-server connection, edit the *ConnectionSettings.tx
 
 ## Secure server-server communication
 
+### gRPC
+
 Like for the communication with DataMiner Cube, for the inter-DMA communication, you can also use gRPC instead of .NET Remoting from DataMiner 10.3.2/10.3.0 onwards.
 
 > [!IMPORTANT]
 > The gRPC connection feature is still a beta feature in DataMiner 10.3.2/10.3.0 CU0, which means you may still encounter issues and the connection might still be less stable than with .NET Remoting.
 
 To enable gRPC for the communication between DataMiner Agents in a cluster, add [redirects in DMS.xml](xref:DMS_xml#redirects-subtag).
+
+### NATS
+
+From version 10.1.0/10.1.1 onwards, DataMiner relies on NATS for some inter-process communication. By default, this NATS traffic is not yet encrypted. For more information, refer to the [official NATS documentation on enabling TLS encryption](https://docs.nats.io/running-a-nats-service/configuration/securing_nats/tls).
+
+## Disable legacy components
+
+DataMiner has some components that are considered legacy. They are still around to support existing setups that depend on them, but if you have a new setup or you want to secure your existing setup, we recommend disabling them. Currently we recommend disabling the *Annotations* component and the legacy *Reports and Dashboards* component. You can do so by adding the following code in the `C:\Skyline DataMiner\SoftLaunchOptions.xml` file:
+
+```xml
+<SLNet>
+   <LegacyAnnotations>false</LegacyAnnotations>
+   <LegacyReportsAndDashboards>false</LegacyReportsAndDashboards>
+</SLNet>
+```
+
+To make the changes take effect, you then need to run the *ConfigureIIS.bat* script located in the `C:\Skyline DataMiner\Tools` folder.
 
 ## Configure the firewall
 
@@ -118,6 +137,9 @@ If you use the **DataMiner 10.1 installer or a more recent installer**, the port
 
 - UDP ports **161 and 362** can be closed if the DataMiner SNMP Agent feature is disabled, which is the case by default from DataMiner 9.6.11 onwards. However, if a DMA was installed prior to DataMiner 9.6.11 and is upgraded to DataMiner 9.6.11 or higher, this functionality will remain enabled until it is manually disabled. For more information, see [Enabling DataMiner SNMP agent functionality](xref:Enabling_DataMiner_SNMP_agent_functionality).
 
+> [!NOTE]
+> From DataMiner 10.3.6/10.4.0 onwards (or in earlier versions used with DataMiner CloudGateway 2.10.0 or higher), inbound **TCP port 5100** communication should also be enabled, because this is required for communication to the cloud via the endpoint hosted in DataMiner CloudGateway. When you upgrade, the [Firewall Configuration](xref:BPA_Firewall_Configuration) BPA will run to check wether this port is correctly configured.
+
 The **Remote Administration** rule must be enabled when the DataMiner server is monitored by a remote element using the Microsoft Platform protocol. This is for example the case when two DataMiner Agents are used in a Failover setup, and both servers are monitored through the Microsoft Platform protocol.
 
 **ICMP** is only required when Failover heartbeats are active or the *pingCount* attribute in the *DMS* tag in *DMS.xml* is set to a value greater than 0. For more information, see [Attributes of the DMS tag](xref:DMS_xml#attributes-of-the-dms-tag). Allowing ICMP is also useful to debug connectivity issues.
@@ -127,4 +149,4 @@ The **Remote Administration** rule must be enabled when the DataMiner server is 
 
 ## Secure the databases
 
-Cassandra and Elasticsearch form a crucial part of recent DataMiner Systems. For this reason, it is important that you spend some time making sure their configuration is as secure as possible. For detailed information, refer to [Securing the DataMiner databases](xref:Database_security).
+Cassandra and Elasticsearch/OpenSearch form a crucial part of recent DataMiner Systems. For this reason, it is important that you spend some time making sure their configuration is as secure as possible. For detailed information, refer to [Securing the DataMiner databases](xref:Database_security).

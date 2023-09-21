@@ -167,3 +167,9 @@ Because DataMiner Cube would use the incorrect culture when parsing exception va
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
 When, in the *Asset Manager* app, you tried to update an enum field, the value would not immediately be updated in the UI after clicking *Apply*.
+
+#### No longer possible to configure a PDF report generated based on a dashboard [ID_35874]
+
+<!-- MR 10.4.0 - FR 10.3.4 [CU0] -->
+
+When, in the *Automation*, *Correlation* and *Scheduler* modules, you generated a PDF report based on a dashboard, it would incorrectly no longer be possible to click the *Configure* button to configure that report.

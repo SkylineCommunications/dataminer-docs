@@ -34,7 +34,7 @@ To do so:
     > - If your system is not using a default DataMiner release, for example because a hotfix is installed, no updates will be available.
     > - Whether you follow the Main Release track or the Feature Release track is determined in the advanced options of the Update Center.
     >     - To switch tracks, click *Advanced Options* and select the release track you wish to follow. As soon as an upgrade or update is available for this track, you will then be able to install it as usual.
-    >     - Switching tracks will never cause a downgrade, e.g. if you are using DataMiner 9.5.4 and switch to the Main Release track, an update to a 9.5.0 version will never be proposed.
+    >     - Switching tracks will never cause a downgrade, e.g. if you are using DataMiner 10.2.12 and switch to the Main Release track, an update to a 10.2.0 version will never be proposed.
     >     - The release path selection is saved as one setting across all users.
 
 1. Start downloading the upgrade or update:
@@ -61,6 +61,9 @@ To do so:
      - *Upgrade backup Agent first, switch over and upgrade main* (legacy)
 
      - *Upgrade backup Agent first, switch over, upgrade main, then switch back again* (legacy)
+
+     > [!NOTE]
+     > To specify the default Failover policy, in DataMiner Cube, go to *System Center* > *System Settings* > *upgrade* > *Failover options*. We highly recommend that you set this to *Upgrade main and backup Agent simultaneously*.
 
 1. Click *Upgrade* to start the upgrade or update procedure.
 

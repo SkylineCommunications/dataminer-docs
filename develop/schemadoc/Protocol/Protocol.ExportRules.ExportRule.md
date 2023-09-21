@@ -4,7 +4,7 @@ uid: Protocol.ExportRules.ExportRule
 
 # ExportRule element
 
-Defines a rule that are used for changing the displayed items in a Dynamic Virtual Element (DVE), for example changing the location of a parameter.
+Defines a rule that is used for changing the displayed items in a Dynamic Virtual Element (DVE), for example changing the location of a parameter.
 
 ## Parent
 
@@ -20,8 +20,9 @@ Defines a rule that are used for changing the displayed items in a Dynamic Virtu
 |[table](xref:Protocol.ExportRules.ExportRule-table)|[TypeWildcardOrNumber](xref:Protocol-TypeWildcardOrNumber)|Yes|Specifies the ID of table parameter that will generate the DVEs.|
 |[tag](xref:Protocol.ExportRules.ExportRule-tag)|[TypeNonEmptyString](xref:Protocol-TypeNonEmptyString)|Yes|Specifies the XML element on which to apply this rule.|
 |[value](xref:Protocol.ExportRules.ExportRule-value)|string|Yes|Specifies the value that needs to be set.|
-|[whereTag](xref:Protocol.ExportRules.ExportRule-whereTag)|string||Specifies, together with the whereValue attribute, a condition so the export rule will only be applied if the condition is met.|
-|[whereValue](xref:Protocol.ExportRules.ExportRule-whereValue)|string||Specifies, together with the whereTag attribute, a condition so the export rule will only be applied if the condition is met.|
+|[whereAttribute](xref:Protocol.ExportRules.ExportRule-whereAttribute)|string||Allows the validation of the value of an attribute when an export rule is applied.|
+|[whereTag](xref:Protocol.ExportRules.ExportRule-whereTag)|string||Specifies, together with the *whereValue* attribute, a condition so the export rule will only be applied if the condition is met.|
+|[whereValue](xref:Protocol.ExportRules.ExportRule-whereValue)|string||Specifies, together with the *whereTag* attribute, a condition so the export rule will only be applied if the condition is met.|
 
 ## Remarks
 

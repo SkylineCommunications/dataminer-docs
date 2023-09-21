@@ -59,6 +59,7 @@ The repository name should look like this (using "-" as separator): **{customerA
   - T (Tests)
   - GQIDS (GQI data source)
   - GQIO (GQI operator)
+  - UDAPI (User-Defined APIs)
 
   > [!NOTE]
   > If you think an item type should be added, please contact us so we can add it before you create the repository.
@@ -68,6 +69,10 @@ The repository name should look like this (using "-" as separator): **{customerA
 ## Adding a README file
 
 It is important to add a *README.md* file to the root folder. The contents of this file should provide users with the necessary information to understand the purpose of the code and learn how to use it.
+
+## Adding a .gitignore
+
+It is important to add a *.gitignore* file to the root folder. The contents of this file will ensure that you do not commit things like assemblies from the bin folders or other user-specific configuration. Using the default suggested .gitignore should be sufficient.
 
 ## Adding topics to a repository
 
@@ -87,8 +92,15 @@ Here is a list of topics you should use (this list is to be extended):
 - dataminer-life-service-orchestration
 - dataminer-gqi-data-source
 - dataminer-gqi-operator
+- dataminer-regression-test
+- dataminer-UI-test
+- dataminer-bot
+- dataminer-user-defined-api
 
 If you have code for a specific project/customer, you should add a topic with the customer's name as well, e.g. `Skyline-Communications`. Always use a hyphen ("-") as a separator.
+
+> [!NOTE]
+> For regression tests, use *T* as the item type in the repository name, and use topics to identify the type of test, e.g. *dataminer-regression-test*.
 
 > [!TIP]
 > Refer to the [guidelines about adding topics](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics) and [Searching for repositories](https://docs.github.com/en/search-github/searching-on-github/searching-for-repositories) on docs.github.com.

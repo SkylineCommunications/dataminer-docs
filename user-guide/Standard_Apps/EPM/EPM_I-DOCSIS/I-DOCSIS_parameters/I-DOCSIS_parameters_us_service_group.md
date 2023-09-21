@@ -18,9 +18,13 @@ This page contains an overview of the US Service Group parameters available in t
 
 - **Number CM DOCSIS 3.0**
 
-- **Number CM DOCSIS Other**
-
 - **Number CM DOCSIS 3.1**
+
+- **Number CM DOCSIS 1.x**: Calculated. The number of cable modems associated with the node segment that report their DOCSIS version as a version within the 1.x range.
+
+- **Number CM DOCSIS Other**: Calculated. The number of CMs associated with the given level that have an unknown DOCSIS version.
+
+  Calculated by adding up the number of CMs with an unknown DOCSIS version that are part of the US service group.
 
 - **Number CM Ping Unreachable**
 

@@ -2,7 +2,7 @@
 uid: Service_Orchestration_service_profiles
 ---
 
-# Service Orchestration service profiles configuration
+# Service Orchestration: service profiles configuration
 
 With the Service Profile Wizard, users can create bookings based on service profiles. A service profile groups a service definition together with profile instances for each of its nodes. This allows users to create bookings more easily, as they will only need to select the service profile, and everything else will be configured in the background.
 

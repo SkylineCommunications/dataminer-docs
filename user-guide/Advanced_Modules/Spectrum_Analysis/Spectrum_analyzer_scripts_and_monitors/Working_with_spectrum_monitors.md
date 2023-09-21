@@ -21,7 +21,7 @@ The following topics provide more information on working with spectrum monitor:
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/spectrum-analyzer-setting-up-continuous-background-rf-measurements/>
+> [Spectrum Analyzer – Setting up continuous background RF measurements](https://community.dataminer.services/video/spectrum-analyzer-setting-up-continuous-background-rf-measurements/) ![Video](~/user-guide/images/video_Duo.png)
 
 ## Managing spectrum monitors
 
@@ -122,7 +122,7 @@ Below are the basic steps you can follow to configure a spectrum monitor. Depend
 
       > [!NOTE]
       >
-      > - For more information on the types of alarm templates, see [Configuring an alarm template with dynamic alarm thresholds](xref:Configuring_alarm_templates#configuring-an-alarm-template-with-dynamic-alarm-thresholds).
+      > - For more information on the types of alarm templates, see [Configuring dynamic alarm thresholds](xref:Configuring_dynamic_alarm_thresholds).
       > - Unlike normal parameters, parameters created by a spectrum monitor can only have alarm monitoring configured in the monitor editor. It is not possible to define alarm templates for them in the Protocols & Templates module.
 
    1. To enable trending for the parameter, select *Trended*.

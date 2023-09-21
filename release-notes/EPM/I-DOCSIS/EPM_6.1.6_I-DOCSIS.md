@@ -124,3 +124,7 @@ When a user clicked the dashboard icon, this opened a dashboard without applying
 #### ArgumentNullException when CCAP tried to read information from files [ID_35294]
 
 When the CCAP tried to read information from files, an "ArgumentNullException" could be thrown when it encountered a dictionary with null values. This has now been corrected.
+
+#### Incorrect -1 values in Nodes, Amplifier Overview, and Subscribers Overview tables [ID_36197]
+
+In the Nodes, Amplifier Overview, and Subscribers Overview tables, it could occur that the Node ID, Amplifiers ID, and Subscribers ID columns displayed the value "-1" where they were supposed to show "N/A".

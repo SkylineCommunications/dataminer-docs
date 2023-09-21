@@ -155,4 +155,4 @@ Depending on the configuration of your DataMiner System, the list can contain up
 
 - **WFM**: Custom DataMiner WorkFlow Manager components.
 
-Click any app in the list to open it. If you wish to open the app in a new card, use the middle mouse button.
+Click any app in the list to open it. If you wish to open the app in a new card, click the app while pressing the *Ctrl* key.

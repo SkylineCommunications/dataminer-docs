@@ -6,7 +6,7 @@ uid: Manually_removing_old_alarms_from_ES
 
 In some cases, it may be necessary to manually remove old alarms from an Elasticsearch cluster, for example because exceptional alarm storms have flooded the cluster with alarm data, and the cluster is likely to run out of disk space in the near future as a consequence.
 
-To do so, you can use queries similar to the examples below, which you can execute through Postman on the Elasticsearch cluster.
+To do so, you can use queries similar to the examples below, which you can execute through [Postman](xref:Postman) on the Elasticsearch cluster.
 
 - Search query for all alarms older than April 15th, 2022:
 

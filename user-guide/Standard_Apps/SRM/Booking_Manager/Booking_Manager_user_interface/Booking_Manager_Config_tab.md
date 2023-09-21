@@ -14,7 +14,7 @@ This tab of the Booking Manager app provides an overview of all configuration pa
 
 - **Resource Pool**: Deprecated. Defines the Source Resource Pool name, so that Source resources can be identified and displayed on the first page of the Booking Wizard. This setting is no longer available from SRM 1.2.12 onwards. <!-- RN 29276 -->
 
-- **Contributing Booking Type**: Determines whether standard or "lite" contributing resources are used. <!-- RN 31488 -->
+- **Contributing Booking Type**: Determines whether standard or "lite" contributing resources are used. <!-- RN 31488 --> See [Enabling lite contributing bookings](xref:Service_Orchestration_contrib_bookings#enabling-lite-contributing-bookings).
 
 - **Custom Events**: Determines whether event customization is enabled, which allows the user to add extra events to a booking.
 
@@ -26,7 +26,7 @@ This tab of the Booking Manager app provides an overview of all configuration pa
 
 - **Column Configuration**: The column configuration to be used in the list of bookings on the *Bookings* tab. See [Customizing the columns of the Bookings list](xref:SRM_custom_bookings_list).
 
-- **Booking Start Failure Script**: Determines which script will be triggered in case the start actions for a booking instance fail. An example script, *SRM_BookingStartFailureTemplate*, is included for this in the SRM package.
+- **Booking Start Failure Script**: See [Configuring a custom script in case orchestration fails](xref:Service_Orchestration_service_states#configuring-a-custom-script-in-case-orchestration-fails).
 
 - **Create Booking Script**: See [Configuring the Booking Manager app to use custom scripts](xref:SRM_custom_scripts).
 
@@ -108,6 +108,9 @@ See [Adding custom scripts for additional controls](xref:SRM_custom_scripts#addi
   - A main booking ends and the contributing booking for which the contributing resource was generated has also ended.
   - A contributing booking is canceled and the resource has been removed from the main booking that made use of it.
 
+  > [!TIP]
+  > See also: [Contributing booking behavior](xref:Service_Orchestration_contrib_bookings#contributing-booking-behavior)
+
 ### Default booking configurations settings
 
 - **Hosting DMA IDs to Orchestrate Reservation**: Contains the DMA ID(s) of the DMA(s) where bookings will be stored. The SRM framework will store all bookings evenly over the DMAs specified with this setting.
@@ -139,25 +142,25 @@ See [Adding custom scripts for additional controls](xref:SRM_custom_scripts#addi
 
 ### Lifecycle colors settings
 
-- **Partial**: The color used in the Booking Manager for bookings in the “Partial” state.
+- **Partial**: The color used in the Booking Manager for bookings in the "Partial" state.
 
-- **Confirmed**: The color used in the Booking Manager for bookings in the “Confirmed” state.
+- **Confirmed**: The color used in the Booking Manager for bookings in the "Confirmed" state.
 
-- **On-Hold**: The color used in the Booking Manager for bookings in the “On hold” state.
+- **On-Hold**: The color used in the Booking Manager for bookings in the "On hold" state.
 
-- **Pre-roll**: The color used in the Booking Manager for bookings in the “Pre-roll” state.
+- **Pre-roll**: The color used in the Booking Manager for bookings in the "Pre-roll" state.
 
-- **Service Active**: The color used in the Booking Manager for bookings in the “Service active” state.
+- **Service Active**: The color used in the Booking Manager for bookings in the "Service active" state.
 
-- **Post-roll**: The color used in the Booking Manager for bookings in the “Post-roll” state.
+- **Post-roll**: The color used in the Booking Manager for bookings in the "Post-roll" state.
 
-- **Completed**: The color used in the Booking Manager for bookings in the “Completed” state.
+- **Completed**: The color used in the Booking Manager for bookings in the "Completed" state.
 
-- **Canceled**: The color used in the Booking Manager for bookings in the “Canceled” state.
+- **Canceled**: The color used in the Booking Manager for bookings in the "Canceled" state.
 
-- **Quarantined**: The color used in the Booking Manager for bookings in the “Quarantined” state.
+- **Quarantined**: The color used in the Booking Manager for bookings in the "Quarantined" state.
 
-- **Failed**: The color used in the Booking Manager for bookings in the “Failed” state.
+- **Failed**: The color used in the Booking Manager for bookings in the "Failed" state.
 
 > [!TIP]
 > See also: [Defining custom state colors](xref:Service_Orchestration_life_cycle_states#defining-custom-state-colors)
@@ -166,17 +169,7 @@ See [Adding custom scripts for additional controls](xref:SRM_custom_scripts#addi
 
 ### Service states settings
 
-- **Initial Service State**: Predefines the initial state of the service associated with a booking.
-
-- **Service State (Pre-roll)**: Predefines the state of the service during the pre-roll phase of a booking.
-
-- **Service State (Service Active)**: Predefines the state of the service associated with a booking immediately after the pre-roll phase ends.
-
-- **Service State (Post-roll)**: Predefines the state of the service during the post-roll phase of a booking.
-
-- **Service State (Ended)**: Predefines the state of the service associated with a booking immediately after the post-roll phase ends.
-
-- **Service State Transitions**: In this table, you can configure which transitions between service states are allowed.
+These settings can be used to customize which service state corresponds with which booking life cycle stage. In the Service State Transitions table, you can also configure which transitions between service states are allowed. For more information, see [Service Orchestration service states configuration](xref:Service_Orchestration_service_states).
 
 ### SLA settings
 

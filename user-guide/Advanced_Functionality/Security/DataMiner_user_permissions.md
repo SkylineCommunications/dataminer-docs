@@ -338,7 +338,7 @@ Permission to delete workspaces.
 ### General \> Annotations
 
 > [!NOTE]
-> From DataMiner 10.1.12 onwards, annotations are no longer available by default in new DataMiner installations. To enable them, set the soft-launch option *LegacyAnnotations* to true. See [Soft-launch options](xref:SoftLaunchOptions).
+> From DataMiner 10.1.12 onwards, annotations can be disabled using the soft-launch option *LegacyAnnotations*. See [Soft-launch options](xref:SoftLaunchOptions).
 
 #### General \> Annotations \> View
 
@@ -369,6 +369,9 @@ Permission to download a Visio file from the DataMiner System to the client comp
 #### General \> Visual Overview \> Edit Visio drawings
 
 Permission to change Visio files using the embedded Visio file editor.
+
+> [!NOTE]
+> To edit the visual overview of an element, service, or view, you also need to have the *Config* privilege for the relevant item. Access to specific items can only be edited on group level.
 
 ### General \> Collaboration
 
@@ -412,7 +415,10 @@ Available from DataMiner 10.2.0/10.1.10 onwards. Permission to send emails via t
 
 ### Modules \> API
 
-These user permissions are used for the API deployment feature, which is currently still in [soft launch](xref:SoftLaunchOptions).
+These user permissions are used for the API deployment feature. This is a deprecated [soft launch feature](xref:SoftLaunchOptions).
+
+>[!NOTE]
+> This feature has been marked obsolete from DataMiner version 10.3.6 onwards. It has been replaced by the [User-Defined APIs](xref:UD_APIs) feature and will be removed in the future.
 
 #### Modules \> API \> Deploy script API
 
@@ -1581,7 +1587,7 @@ Permission to access the *Tools* page in System Center. From DataMiner 10.1.0/10
 
 #### Modules \> System configuration \> Tools \> Admin tools
 
-Available from DataMiner 10.1.0/10.1.1 onwards. Permission to use administrator tools such as synchronization, clean up unused and NATS management.
+Available from DataMiner 10.1.0/10.1.1 onwards. Permission to use administrator tools such as synchronization, cleaning up unused protocols, alarm filters, or Visio files, NATS management, and (de)initializing Resource Manager.
 
 #### Modules \> System configuration \> Tools \> Control background tasks of all users
 
@@ -1646,6 +1652,35 @@ Permission to view trend graphs of parameters that are being trended.
 #### Modules \> Trending \> View Histogram
 
 Permission to view histograms of parameters that are being trended.
+
+### Modules \> User-Defined APIs
+
+> [!NOTE]
+> This feature is available from DataMiner 10.3.6/10.4.0 onwards. In DataMiner 10.3.5, it is available in preview if the soft-launch option *UserDefinableAPI* is enabled. See [soft-launch options](xref:SoftLaunchOptions).
+
+#### Modules \> User-Defined APIs \> Tokens \> UI available
+
+Permission to view tokens for [user-defined APIs](xref:UD_APIs).
+
+#### Modules \> User-Defined APIs \> Tokens \> Add/Edit
+
+Permission to create and edit tokens for [user-defined APIs](xref:UD_APIs).
+
+#### Modules \> User-Defined APIs \> Tokens \> Delete
+
+Permission to delete tokens for [user-defined APIs](xref:UD_APIs).
+
+#### Modules \> User-Defined APIs \> APIs \> UI available
+
+Permission to view API definitions for [user-defined APIs](xref:UD_APIs).
+
+#### Modules \> User-Defined APIs \> APIs \> Add/Edit
+
+Permission to create and edit API definitions for [user-defined APIs](xref:UD_APIs). In order to create or edit API definitions, you also need the [Automation > execute](#modules--automation--execute) permission.
+
+#### Modules \> User-Defined APIs \> APIs \> Delete
+
+Permission to delete API definitions for [user-defined APIs](xref:UD_APIs).
 
 ### Modules \> User-definable apps
 

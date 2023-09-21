@@ -68,6 +68,6 @@ To define a date time picker, create a write parameter of type "double" and set 
 
 DataMiner Protocol Markup Language:
 
-- [Protocol.Params.Param.Measurement.Type@options: datetime](xref:MeasurementTypeOptionsOverview#options-for-measurement-type-number)
+- [Protocol.Params.Param.Measurement.Type@options: datetime](xref:Protocol.Params.Param.Measurement.Type-options#options-for-measurement-type-number)
 - [Protocol.Params.Param.Interprete.Decimals](xref:Protocol.Params.Param.Interprete.Decimals)
 - [Protocol.Params.Param.Display.Decimals](xref:Protocol.Params.Param.Display.Decimals)
