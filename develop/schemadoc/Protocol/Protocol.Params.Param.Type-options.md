@@ -206,10 +206,8 @@ The SSH connection is established by DataMiner itself, if the parameters are fil
 
 Only applicable for parameters of type read.
 
-> [!WARNING]
-> Use the [password](xref:Protocol.Params.Param.Measurement.Type-options#options-for-measurement-type-string) option
-> when this parameter is displayed.
-> Using this option ensures greater security.
+> [!IMPORTANT]
+> Use the [password](xref:Protocol.Params.Param.Measurement.Type-options#options-for-measurement-type-string) option when this parameter is displayed. Using this option ensures greater security.
 
 ### ssh username
 
@@ -233,7 +231,7 @@ Only applicable for parameters of type read.
 > Instead, link this via the [Identity](xref:Protocol.PortSettings.SSH.Identity) element.
 
 This option specifies that this parameter holds the path to the private key 
-for setting up SSH communication based on public-key authentication. 
+for setting up SSH communication based on public key authentication. 
 This is an alternative way to set up an SSH connection (instead of user credentials). 
 The content of the "ssh options" parameter is as follows:
 ```key=C:\Users\User\.ssh\my_key_rsa;pass=passphrase```

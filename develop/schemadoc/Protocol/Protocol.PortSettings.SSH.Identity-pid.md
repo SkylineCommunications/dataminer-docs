@@ -4,7 +4,7 @@ uid: Protocol.PortSettings.SSH.Identity-pid
 
 # pid attribute
 
-Specifies the ID of the parameter that holds the private key used for public-key authentication.
+Specifies the ID of the parameter that holds the private key used for public key authentication.
 
 ## Content Type
 

@@ -14,4 +14,4 @@ Specifies the username.
 
 | Name                                                           | Type        | Required | Description                                                 |
 |----------------------------------------------------------------|-------------|----------|-------------------------------------------------------------|
-| [pid](xref:Protocol.PortSettings.SSH.Credentials.Username-pid) | unsignedInt | Yes      | Specifies the ID of the parameter that holds the user name. |
+| [pid](xref:Protocol.PortSettings.SSH.Credentials.Username-pid) | unsignedInt | Yes      | Specifies the ID of the parameter that holds the username.  |

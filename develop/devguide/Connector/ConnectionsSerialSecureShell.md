@@ -138,10 +138,9 @@ Accompanying write parameters can be added so the credentials can be entered fro
     </Measurement>
 </Param>
 ```
-> [!WARNING]
-> Use the [password](xref:Protocol.Params.Param.Measurement.Type-options#options-for-measurement-type-string) option
-> on the parameter holding the password.
-> Using this option ensures greater security.
+
+> [!IMPORTANT]
+> Use the [password](xref:Protocol.Params.Param.Measurement.Type-options#options-for-measurement-type-string) option on the parameter holding the password. Using this option ensures greater security.
 
 The two parameters also need to be defined in the port settings.
 

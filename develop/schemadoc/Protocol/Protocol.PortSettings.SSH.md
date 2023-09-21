@@ -16,7 +16,7 @@ Specifies the SSH settings.
 |-----------------------------------------------------------------------|-------------|-------------------------------------------------------------------|
 | ***All***                                                             |             |                                                                   |
 | &nbsp;&nbsp;[Credentials](xref:Protocol.PortSettings.SSH.Credentials) | [0, 1]      | Specifies the credentials used for password-based authentication. |
-| &nbsp;&nbsp;[Identity](xref:Protocol.PortSettings.SSH.Identity)       | [0, 1]      | Specifies the private key used for public-key authentication.     |
+| &nbsp;&nbsp;[Identity](xref:Protocol.PortSettings.SSH.Identity)       | [0, 1]      | Specifies the private key used for public key authentication.     |
 
 ## Remarks
 
