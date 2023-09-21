@@ -483,12 +483,6 @@ Because of a number of enhancements, overall performance has increased when usin
 > [!IMPORTANT]
 > For the properties that should be taken into account, the option *Update alarms on value changed* must be selected. For more information, see [Configuration of incident tracking based on properties](xref:Automatic_incident_tracking#configuration-of-incident-tracking-based-on-properties).
 
-#### SLDataMiner will now use the MessageBroker.Native NuGet package for all communication with the NATS bus [ID_37298]
-
-<!-- MR 10.4.0 - FR 10.3.11 -->
-
-Up to now, SLDataMiner used SLCloudBridge for all communication with the NATS bus. From now on, it will use the *MessageBroker.Native* NuGet package instead.
-
 ### Fixes
 
 #### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID_34981]

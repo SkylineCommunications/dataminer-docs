@@ -83,12 +83,6 @@ A number of security enhancements have been made.
 
 A number of enhancements have been made to the trend prediction models, especially with regard to detecting daily trend recurrences.
 
-#### SLDataMiner will now use the MessageBroker.Native NuGet package for all communication with the NATS bus [ID_37298]
-
-<!-- MR 10.4.0 - FR 10.3.11 -->
-
-Up to now, SLDataMiner used SLCloudBridge for all communication with the NATS bus. From now on, it will use the *MessageBroker.Native* NuGet package instead.
-
 #### SLAnalytics: Enhanced processing of trended parameters of which the value remains constant [ID_37303]
 
 <!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
