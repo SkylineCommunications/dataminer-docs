@@ -194,10 +194,10 @@ For more information, refer to [Multi-threaded timers SNMP](xref:AdvancedMultiTh
 
 ### ssh pwd
 
-> [!IMPORTANT]
-> Link this parameter via the [Password](xref:Protocol.PortSettings.SSH.Credentials.Password) element 
-> instead of using this **ssh pwd** option.
-> This option only supports a single ssh connection and only supports port 22.
+> [!CAUTION]
+> The usage of this option is not recommended. 
+> It only supports connectors with a single SSH connection using the fixed port 22.
+> Instead, link this parameter via the [Password](xref:Protocol.PortSettings.SSH.Credentials.Password) element.
 
 This option specifies that this parameter holds the password 
 for setting up SSH communication based on user credentials. 
@@ -213,10 +213,10 @@ Only applicable for parameters of type read.
 
 ### ssh username
 
-> [!IMPORTANT]
-> Link this parameter via the [Username](xref:Protocol.PortSettings.SSH.Credentials.Username) element 
-> instead of using this **ssh username** option.
-> This option only supports a single ssh connection and only supports port 22.
+> [!CAUTION]
+> The usage of this option is not recommended. 
+> It only supports connectors with a single SSH connection using the fixed port 22.
+> Instead, link this via the [Username](xref:Protocol.PortSettings.SSH.Credentials.Username) element.
 
 This option specifies that this parameter holds the username 
 for setting up SSH communication based on user credentials. 
@@ -227,10 +227,10 @@ Only applicable for parameters of type read.
 
 ### ssh options
 
-> [!IMPORTANT]
-> Link this parameter via the [Identity](xref:Protocol.PortSettings.SSH.Identity) element 
-> instead of using this **ssh options** option.
-> This option only supports a single ssh connection and only supports port 22.
+> [!CAUTION]
+> The usage of this option is not recommended.
+> It only supports connectors with a single SSH connection using the fixed port 22.
+> Instead, link this via the [Identity](xref:Protocol.PortSettings.SSH.Identity) element.
 
 This option specifies that this parameter holds the path to the private key 
 for setting up SSH communication based on public-key authentication. 
