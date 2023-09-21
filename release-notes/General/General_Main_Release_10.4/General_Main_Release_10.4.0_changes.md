@@ -641,6 +641,12 @@ When settings inside the `<LDAP>` element of the *DataMiner.xml* file were updat
 
 Up to now, the MessageHandler method in SLHelperTypes.SLHelper would incorrectly try to serialize exceptions that could not be serialized, causing other exceptions to be thrown.
 
+#### Elements with multiple SSH connections would go into timeout after being restarted [ID_37294]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When an element with multiple SSH connections was restarted, in some cases, it would immediately go into timeout.
+
 #### Problem with SLAnalytics when fetching protocol information while creating a multivariate pattern [ID_37366]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
