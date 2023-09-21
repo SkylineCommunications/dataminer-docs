@@ -124,11 +124,13 @@ The zoom range of a map can now be set by means of a slider.
 
 Because of a number of enhancements, overall performance has increased when fetching relation information for the automatic incident tracking feature.
 
-#### Security enhancements [ID_35434] [ID_35997] [ID_36624]
+#### Security enhancements [ID_35434] [ID_35997] [ID_36319] [ID_36624] [ID_36928] [ID_37267] [ID_37345]
 
 <!-- 35434: MR 10.4.0 - FR 10.3.4 -->
 <!-- 35997: MR 10.4.0 - FR 10.3.5 -->
+<!-- 36319/36928: MR 10.4.0 - FR 10.3.9 -->
 <!-- 36624: MR 10.4.0 - FR 10.3.8 -->
+<!-- 37267/37345: MR 10.4.0 - FR 10.3.11 -->
 
 A number of security enhancements have been made.
 
@@ -157,7 +159,6 @@ In the *SLNetClientTest* tool, the following new DOM-related features have been 
   > [!NOTE]
   >
   > - When you instruct the *SLNetClientTest* tool to delete a DOM Manager, it will count the number of DOM instances. If the DOM Manager in question contains more than 10,000 DOM instances, an error message will appear, saying that deleting the DOM Manager would take too long.
-
   > - When you instruct the *SLNetClientTest* tool to delete a DOM Manager, it will not remove the indices from the Elasticsearch database. These indices have to be deleted manually. If you do not delete them manually, we recommend to not re-use the module ID as this could cause configuration conflicts.
 
 > [!CAUTION]
@@ -260,6 +261,28 @@ Because of a number of enhancements, overall accuracy of the proactive cap detec
 
 A number of enhancements have been made in order to deal with situations where proxy servers, gateways, routers or firewalls modify HTTP traffic.
 
+#### Cassandra Cleaner can now also be used to clean the 'infotrace' table [ID_36592]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+Up to now, the *Cassandra Cleaner* tool could only be used to remove data from the *timetrace* table. From now on, it can also be used to remove data from the *infotrace* table.
+
+1. In the *db.yaml* file, set `table.name` to "infotrace".
+
+   By default, `table.name` is set to "timetrace".
+
+1. Specify a time range by setting the `delete.start.time` and `delete.end.time` fields.
+
+  > [!CAUTION]
+  > All infotrace data between the `delete.start.time` and `delete.end.time` timestamps will be deleted, so be careful.
+
+1. Run the following command: `clean -l`
+
+   > [!NOTE]
+   > The *infotrace* table can only be cleaned using the `clean -l` command.
+
+For more information, see [Cassandra Cleaner](xref:Cassandra_Cleaner).
+
 #### SLAnalytics - Automatic incident tracking: Alarms will no longer be regrouped after a manual operation [ID_36595]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
@@ -273,6 +296,192 @@ From now on, alarms will no longer be regrouped after a manual operation.
 <!-- MR 10.4.0 - FR 10.3.8 -->
 
 From now on, users will be allowed to manually clear automatic incidents.
+
+#### SLAnalytics - Behavioral anomaly detection & Proactive cap detection: Enhanced caching mechanism [ID_36639]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+A number of enhancements have been made to the caching mechanism used by the *Behavioral anomaly detection* and *Proactive cap detection* features.
+
+#### SLProtocol is now a 64-bit process by default [ID_36725]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+SLProtocol is now a 64-bit process by default.
+
+However, if necessary, it can still be run as a 32-bit process. For more information, see [Activating SLProtocol as a 32-bit process](xref:Activating_SLProtocol_as_a_32_Bit_Process).
+
+#### Service & Resource Management: A series of checks will now be performed when you add or upload a functions file [ID_36732]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When a functions file is added or uploaded, the following checks will now be performed:
+
+1. Can the content of the file (in XML format) be parsed?
+1. Does the file contain the name of the protocol?
+1. Does the protocol name in the file correspond to the protocol name in the request?
+1. Does the file contain a version number?
+1. Does the DataMiner System not contain a functions file with the same version for the protocol in question?
+
+When you try to upload a functions file using DataMiner Cube, the log entry (in Cube logging) and the information event (in the Alarm Console) created when the upload fails will indicate the checks that did not return true.
+
+#### DataMiner Object Models: DomInstanceHistory will now be saved asynchronously [ID_36785]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When a DomInstance is created or updated, a HistoryChange record is stored in the database, and when a DomInstance is deleted, all HistoryChange objects associated with that DomInstance are deleted from the database. Up to now, those HistoryChange records were always created, updated and deleted synchronously.
+
+From now on, all DOM managers will create, update and delete their HistoryChange records asynchronously, which will considerably enhance overall performance when creating, updating or deleting DomInstances.
+
+Using the new `DomInstanceHistoryStorageBehavior` enum on the new `DomInstanceHistorySettings` class, you can configure whether HistoryChange records will be stored and how they will be stored. See the following example:
+
+```csharp
+​ModuleSettings.DomManagerSettings.DomInstanceHistorySettings.StorageBehavior = DomInstanceHistoryStorageBehavior.Disabled;
+```
+
+The `DomInstanceHistoryStorageBehavior` can be set to one of three values:
+
+- **EnabledAsync** (default value): The HistoryChange records will be created, updated and deleted asynchronously.
+
+- **EnabledSync**: The HistoryChange records will be created and deleted synchronously.
+
+- **Disabled**: No HistoryChange records will be created, updated or deleted.
+
+  > [!NOTE]
+  > If you set the value to "Disabled" after it had been set to one of the other options, the existing HistoryChange records in the database will be left untouched, even if the corresponding DomInstance is deleted.
+
+> [!NOTE]
+> When you delete a DomInstance with a large number of associated HistoryChange records, deleting all those HistoryChange records can take a long time, even when this is done asynchronously. Therefore, we recommend disabling the creation of HistoryChange records if you do not need them.
+
+#### Service & Resource Management: Enhanced performance when adding or updating ReservationInstances [ID_36788]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+Because of a number of enhancements, overall performance has increased when adding or updating ReservationInstances, especially on systems with a large number of overlapping bookings and a large number of bookings using the same resources.
+
+#### SLAnalytics - Automatic incident tracking: Root time of an alarm group will be set to the most recent of the base alarm root times [ID_36809]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+From now on, the root time of an alarm group (i.e. the time of arrival of the first alarm in the alarm group tree) will be set to the most recent of the base alarm root times.
+
+Up to now, when alarm groups were recreated after a DataMiner upgrade, their time of arrival and root time was set to the time of the upgrade.
+
+#### DataMiner upgrade: Microsoft .NET 5 will no longer be installed by default [ID_36815]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+Up to now, Microsoft .NET 5 would always be installed during a DataMiner upgrade. As all DataMiner components using .NET 5 have been upgraded to use .NET 6 instead, .NET 5 will no longer be installed by default.
+
+> [!NOTE]
+> If Microsoft .NET 5 is present, it will not be automatically uninstalled during a DataMiner upgrade.  
+
+#### Elasticsearch/OpenSearch: Unused suggest indices have been disabled [ID_36875]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+Up to now, each time a new DOM manager was initialized, SLDataGateway would create a main data index and a suggest index in the Elasticsearch database for each DOM type. As these suggest indices are not used, they have now been disabled. As a result, overall performance will increase when initializing new DOM managers.
+
+Other unused suggest indices have been disabled as well. This will have a positive impact on the hardware resources required for Elasticsearch or OpenSearch.
+
+The following suggest indices have been disabled:
+
+- ApiDefinition
+- ApiToken
+- AutoIncrementer
+- DomBehaviorDefinition
+- DomDefinition
+- DomInstance
+- DomTemplate
+- HistoryChange
+- JobDomain
+- JobTemplate
+- MediationSnippet
+- ModuleSettings
+- PaProcess
+- Parameter
+- PaToken
+- ProfileDefinition
+- ProfileInstance
+- Record
+- RecordDefinition
+- ReservationDefinition
+- ReservationInstance
+- Resource
+- ResourcePool
+- SectionDefinition
+- ServiceDefinition
+- ServiceDeletionHistory
+- ServiceProfileDefinition
+- ServiceProfileInstance
+- SRMServiceInfo
+- SRMSettableServiceState
+- Ticket
+- TicketFieldResolver
+- TicketHistory
+- VirtualFunctionDefinition
+- VirtualFunctionProtocolMeta
+
+> [!NOTE]
+> Existing suggest indices will not automatically be removed from the database. You can remove them manually if necessary.
+
+#### SLNetClientTest: Enhancements made to 'DataMiner Object Model' window [ID_36891]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+A number of enhancements have been made to the *DataMiner Object Model* window.
+
+- The *DataMiner Object Model* window will now only subscribe to the events of the DOM manager you selected in the *ModuleSettings* window. Up to now, it would subscribe to all events of all DOM managers.
+
+- The *DomInstances* and *History* pages will initially only load up to 500 objects. A warning message at the top of the window will indicate that only a limited list was loaded, and that you will need to click *Refresh* to load all items.
+
+- The objects listed on the *DomInstances* and *History* pages will now be sorted by the data that was last modified (descending), allowing you to quickly see the recently updated objects.
+
+- On the *History* page, the GUID of the DomInstance will no longer have a "DomInstanceId" prefix.
+
+- The *Attachments* page will no longer load all DomInstances at startup. If you want all DomInstances to be loaded, you will need to click *Load all DOM instances*.
+
+- On the *SectionDefinitions* page, the IDs of the section definitions will now be shown in the first column.
+
+- When you click *View* after selecting a section definition, the text will no longer include a *Validators* line if no validators could be found.
+
+- When no name is assigned to a *DomBehaviorDefinition* or a *DomDefinition*, the text "(no name)" will appear to indicate that no name was assigned.
+
+- If, on any of the pages, you want to select an item in a table, you can now click the item anywhere. Up to now, you had to click the cell in the first column.
+
+> [!CAUTION]
+> Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
+#### Service & Resource Management: Improved ResourceManager logging [ID_36989]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+The ResourceManager logging (*SLResourceManager.txt*) has been improved to make debugging easier.
+
+Some log entries have been rewritten to make them clearer, have been assigned another log level or have been removed entirely.
+
+#### DataMiner Object Models: Bulk deletion of history records when deleting a DOM instance [ID_37012]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+Up to now, when a DOM instance was deleted, the associated HistoryChange records were removed one by one. From now on, when a DOM instance is deleted, its HistoryChange records will be deleted in bulk. This will greatly improve overall performance when deleting DOM instances, especially when they are deleted synchronously.
+
+#### DataMiner.xml: objectId attribute of AzureAD element will now be considered optional [ID_37162]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+Up to now, a run-time error would be thrown when the `<AzureAD>` element in the *DataMiner.xml* file did not contain an `objectId` attribute.
+
+This `objectId` attribute will now be considered optional. Hence, no run-time error will be thrown anymore when it has not been specified.
+
+#### SLAnalytics: Enhanced performance when using automatic incident tracking based on properties [ID_37198]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+Because of a number of enhancements, overall performance has increased when using automatic incident tracking based on service, view or element properties.
+
+> [!IMPORTANT]
+> For the properties that should be taken into account, the option *Update alarms on value changed* must be selected. For more information, see [Configuration of incident tracking based on properties](xref:Automatic_incident_tracking#configuration-of-incident-tracking-based-on-properties).
 
 ### Fixes
 
@@ -323,16 +532,6 @@ When an ElementProtocol object was being created, due to a caching issue in SLNe
 
 The native message broker code could leak memory when using the request/response workflow in combination with chunking. The message handlers would not be cleaned up after the response had been received.
 
-#### NATS-related error: 'Failed to copy credentials from [IP address] - corrupt zip file' [ID_35935]
-
-<!-- MR 10.4.0 - FR 10.3.6 -->
-
-In some rare cases, the following NATS-related error would be thrown:
-
-```txt
-Failed to copy credentials from [IP address] - corrupt zip file
-```
-
 #### Business Intelligence: Outage correction would incorrectly be increased when a history alarm affected the outage [ID_35942]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
@@ -357,6 +556,12 @@ When a DomInstance was created with an empty status, in some cases, a `MultipleS
 
 In some cases, whitespace characters would incorrectly be removed from signatures, causing validation to fail.
 
+#### NATS auto-reconnect mechanism could lead to a situation in which a large number of TCP ports were left open [ID_36339]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When NATS tried to automatically reconnect at a moment when none of the servers were available, it would incorrectly not wait for a while until the cluster was online again. In some cases, this could lead to a situation in which a large number of TCP ports were left open.
+
 #### Community credentials from the credential library would be ignored for SNMPv1 and SNMPv2 [ID_36353]
 
 <!-- MR 10.4.0 - FR 10.3.7 -->
@@ -375,3 +580,75 @@ Affected port information fields:
 - Number
 - PollingIPAddress
 - PollingIPPort
+
+#### Cassandra Cluster Migrator would fail to start up [ID_36804]
+
+<!-- MR 10.4.0 - FR 10.3.8 [CU0] -->
+
+When the *Cassandra Cluster Migrator* tool (*SLCCMigrator.exe*) was started, in some cases, it would get stuck in the initialization phase due to a connection issue.
+
+#### Certain alarms would have their 'root creation time' set incorrectly [ID_36812]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+In some cases, the *root creation time* of an alarm would not be equal to the *creation time* of the root alarm.
+
+For example, when an alarm group was created with an old time of arrival, the *root creation time* would be set to the root time (i.e. the time of arrival of the root alarm), while the *creation time* would be set to the time at which the alarm was created.
+
+#### Problem when renaming an element [ID_36855]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+In some rare cases, an error could be thrown when an element was renamed.
+
+#### Deprecated DMS_GET_INFO call could return unexpected DVE child data [ID_36964]
+
+The deprecated DMS_GET_INFO call would return unexpected data when it returned data of elements that contained remotely hosted DVE child elements.
+
+#### Problem when restarting DataMiner [ID_37112]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When DataMiner was restarted, in some rare cases, it would not start up again.
+
+#### SLAnalytics: Problem when creating or editing a multivariate pattern [ID_37212]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When you created or edited a linked pattern with subpatterns from elements on different agents, and the first subpattern was from an element on an agent other than the one from which the CreateLinkedPatternMessage or EditLinkedPatternMessage was originally sent, SLNet would throw an exception.
+
+#### Problem when importing an existing element [ID_37214]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When you imported an element that already existed in the system, in some cases, an error could occur in SLDataMiner.
+
+#### SLAnalytics: Problem when deleting trend pattern while connected to a DMA running an old DataMiner version [ID_37225]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When you deleted a trend pattern when connected to a DataMiner Agent running an old DataMiner version (e.g. 10.3.0), the pattern itself was deleted but the occurrences/matches would remain visible until you closed the trend graph and opened it again.
+
+#### DataMiner.xml: Entire LDAP section could get removed when settings were updated with values containing illegal XML characters [ID_37235]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When settings inside the `<LDAP>` element of the *DataMiner.xml* file were updated with values that contained illegal XML characters, the entire `<LDAP>` element would be removed from the file.
+
+#### MessageHandler method in SLHelperTypes.SLHelper would incorrectly try to serialize exceptions that could not be serialize [ID_37238]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+Up to now, the MessageHandler method in SLHelperTypes.SLHelper would incorrectly try to serialize exceptions that could not be serialized, causing other exceptions to be thrown.
+
+#### Elements with multiple SSH connections would go into timeout after being restarted [ID_37294]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When an element with multiple SSH connections was restarted, in some cases, it would immediately go into timeout.
+
+#### Problem with SLAnalytics when fetching protocol information while creating a multivariate pattern [ID_37366]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+In some cases, SLAnalytics could throw an exception when fetching protocol information while creating a multivariate pattern.

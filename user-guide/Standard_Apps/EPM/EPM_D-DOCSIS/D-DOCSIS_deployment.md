@@ -32,7 +32,7 @@ To deploy the D-DOCSIS branch of the EPM Solution:
 
 1. Set the latest version of the installed connectors to the **Production version**. See [Promoting a protocol version to production version](xref:Promoting_a_protocol_version_to_production_version).
 
-1. If the EPM package contains any **alarm and/or trend templates**, upload these. See [Uploading an alarm template](xref:Managing_alarm_templates#uploading-an-alarm-template) and [Uploading a trend template](xref:Adding_and_deleting_trend_templates#uploading-a-trend-template).
+1. If the EPM package contains any **alarm and/or trend templates**, upload these. See [Uploading an alarm template](xref:Uploading_an_alarm_template) and [Uploading a trend template](xref:Adding_and_deleting_trend_templates#uploading-a-trend-template).
 
 1. If this is the initial deployment of the EPM Solution, **create the necessary views**. See [Creating a view](xref:Managing_views#creating-a-view).
 

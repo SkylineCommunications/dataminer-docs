@@ -194,7 +194,7 @@ A graphic representation of the alarm distribution, alarm events and alarm state
 This page links to the legacy DMS Dashboards app
 
 > [!NOTE]
-> From DataMiner 10.2.0/10.1.12 onwards, the legacy Dashboards app is no longer available by default in new DataMiner installations. To enable it, set the soft-launch option *LegacyReportsAndDashboards* to true. See [Soft-launch options](xref:SoftLaunchOptions).
+> From DataMiner 10.2.0/10.1.12 onwards, the legacy Dashboards app can be disabled using the soft-launch option *LegacyReportsAndDashboards*. See [Soft-launch options](xref:SoftLaunchOptions).
 
 ### AGGREGATION
 
@@ -250,4 +250,4 @@ On this page, you can add short notes to the view. For more information, see [Ca
 On this page, you can add, view and edit extensive annotations to the view. With the pencil icon on this page, you can open an HTML editor that allows you to add text, hyperlinks, pictures, etc. to the annotations. There is also an icon that can be used to print the annotations, and an icon to refresh the annotations page.
 
 > [!NOTE]
-> From DataMiner 10.2.0/10.1.12 onwards, annotations are no longer available by default in new DataMiner installations. To enable them, set the soft-launch option *LegacyAnnotations* to true. See [Soft-launch options](xref:SoftLaunchOptions).
+> From DataMiner 10.2.0/10.1.12 onwards, annotations can be disabled using the soft-launch option *LegacyAnnotations*. See [Soft-launch options](xref:SoftLaunchOptions).

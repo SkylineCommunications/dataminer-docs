@@ -65,7 +65,7 @@ Enables the [Low-Code Apps module](xref:Application_framework).
 
 ### BookingData
 
-Enables the *BookingData* Visual Overview component.
+Enables the [BookingData](xref:Linking_a_shape_to_a_booking#making-the-booking-shape-display-booking-information) Visual Overview component.
 
 - **Minimum version**: 10.2.7
 - **Release version**: 10.3.8/10.4.0 ([RN 36489](xref:Cube_Feature_Release_10.3.8#visual-overview-new-bookingdata-component-id_33215-id_36489))
@@ -169,7 +169,7 @@ Provides access to additional data sources and operators for GQI in the Dashboar
 > - The object manager instances data source (available from DataMiner 10.3.6 onwards).<!-- RN 36124 -->
 
 - **Minimum version**: 10.0.13
-- **Estimated release version for the custom operator**: 10.3.11
+- **Estimated release version for the custom operator**: 10.3.12
 - **Estimated release version for other data sources and operators**: To be determined
 
 ### GenericOwnership
@@ -195,13 +195,13 @@ Enables the [Jobs app](xref:jobs).
 
 ### LegacyAnnotations
 
-Shows the legacy Annotations module in Cube. By default set to false for new installations, but set to true when updating existing setups.
+Shows the legacy Annotations module in Cube.
 
 - **Minimum version**: 10.1.12/10.2.0 ([RN 31329](xref:General_Feature_Release_10.1.12#legacy-reports-dashboards-and-annotations-modules-will-by-default-be-hidden-in-new-installations-id_31329))
 
 ### LegacyReportsAndDashboards
 
-Shows the legacy Reports & Dashboards module in Cube. By default set to false for new installations, but set to true when updating existing setups.
+Shows the legacy Reports & Dashboards module in Cube.
 
 - **Minimum version**: 10.1.12/10.2.0 ([RN 31329](xref:General_Feature_Release_10.1.12#legacy-reports-dashboards-and-annotations-modules-will-by-default-be-hidden-in-new-installations-id_31329))
 
@@ -254,7 +254,7 @@ Enables the alarm list component in the Dashboards app.
 Enables alpha components in the Dashboards app.
 
 - **Minimum version**: 9.6.6
-- **Estimated release version**: Will not be released
+- **Estimated release version**: Will not be released (deprecated from [DataMiner 10.3.9](xref:Web_apps_Feature_Release_10.3.9#dashboards-app--low-code-apps-reportsanddashboardsalpha-soft-launch-option-is-now-deprecated-id_36894) onwards)
 
 ### ReportsAndDashboardsAutomationScript
 
@@ -275,14 +275,14 @@ Enables the button component in the Dashboards app.
 Enables the button panel component in the Dashboards app.
 
 - **Minimum version**: 10.0.3
-- **Estimated release version**: 10.3.8
+- **Release version**: 10.3.9/10.4.0 ([RN 36775](xref:Web_apps_Feature_Release_10.3.9#dashboards-app--low-code-apps-button-panel-visualization-now-officially-released-id_36775))
 
 ### ReportsAndDashboardsDynamicVisuals
 
 Enables the grid component in the Dashboards app.
 
 - **Minimum version**: 10.2.12
-- **Estimated release version**: 10.3.11
+- **Estimated release version**: 10.3.12
 
 ### ReportsAndDashboardsExport
 
@@ -296,7 +296,7 @@ Enables the export to PDF button within the Dashboards app itself. Creating PDFs
 Enables a new Maps component in the Dashboards app and the Low-Code Apps.
 
 - **Minimum version**: 10.3.2
-- **Estimated release version**: 10.3.11
+- **Estimated release version**: 10.3.12
 
 ### ReportsAndDashboardsGuides
 
@@ -315,14 +315,14 @@ Enables the Query Filter component in the Dashboards app.
 > - Prior to DataMiner 10.1.5, this option also enables the Node Edge component, which becomes available by default from DataMiner 10.1.5 onwards.
 
 - **Minimum version**: 10.0.4
-- **Estimated release version**: 10.3.8
+- **Release version**: 10.3.9/10.4.0 ([RN 36822](xref:Web_apps_Feature_Release_10.3.9#dashboards-app--low-code-apps-query-filter-component-now-officially-released-id_33530-id_33547-id_34037-id_36822-id_36832))
 
 ### ReportsAndDashboardsScheduler
 
 Enables the Timeline component in the Dashboards app.
 
 - **Minimum version**: 10.1.10
-- **Estimated release version**: 10.3.11
+- **Estimated release version**: 10.3.12
 
 ### ResourceList
 
@@ -343,7 +343,14 @@ Enables the service profiles export and import in the DataMiner Cube Services ap
 Enables SLProtocol as a 64-bit process. This option is not configured in *SoftLaunchOptions.xml*. For more information on how to activate this, refer to [Activating SLProtocol as a 64-bit process](xref:Activating_SLProtocol_as_a_64_Bit_Process).
 
 - **Minimum version**: 10.1.8
-- **Estimated release version**: 10.3.9
+- **Release version**: 10.3.9
+
+### SLProtocolAsX86
+
+Enables SLProtocol as a 32-bit process. This option is not configured in *SoftLaunchOptions.xml*. For more information on how to activate this, refer to [Activating SLProtocol as a 32-bit process](xref:Activating_SLProtocol_as_a_32_Bit_Process).
+
+- **Minimum version**: 10.3.9
+- **Release version**: N/A
 
 ### SrmOwnServices
 
@@ -358,6 +365,12 @@ Enables contributing service protocol generation.
 
 - **Minimum version**: 9.6.1
 - **Release version**: 9.6.11/10.0.0 ([RN 23201](xref:General_Main_Release_10.0.0_new_features_5#service--resource-management-possibility-to-generate-protocols-and-function-definitions-based-on-service-definitions-and-enhanced-services-based-on-reservations-id_19330id_19359id_19385id_19386id_19415id_19431id_19450-id_19491id_19498id_19556id_19632id_19789id_23201))
+
+### Swarming
+
+Enables [Swarming](xref:Swarming) support for eligible systems.
+
+- **Minimum version**: 10.3.11
 
 ### VisualDataManager
 

@@ -17,7 +17,7 @@ uid: Accessing_Alerter
 ## Starting Alerter for the first time
 
 > [!TIP]
-> See also: [Setting your startup preferences for Alerter](xref:Configuring_Alerter#setting-your-startup-preferences-for-alerter)
+> See also: [Setting your startup preferences for Alerter](xref:Setting_Alerter_startup_preferences)
 
 1. Open the *Skyline Alerter* application.
 

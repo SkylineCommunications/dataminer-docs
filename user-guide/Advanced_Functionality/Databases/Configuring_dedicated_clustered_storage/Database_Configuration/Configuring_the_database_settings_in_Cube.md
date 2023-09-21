@@ -54,7 +54,11 @@ For a Cassandra cluster database (i.e. one Cassandra cluster that is used as the
 
    - **Password**: The password with which the DMA has to log on to Elasticsearch (if applicable).
 
-   ![Cube Cassandra Cluster Configuration](~/user-guide/images/CassandraCluster_CubeConfig.png)
+     ![Cube Cassandra Cluster Configuration](~/user-guide/images/CassandraCluster_CubeConfiguration.png)
+
+<!--1. From DataMiner 10.3.10/10.4.0 onwards (RN 36399 - reverted in RN 37322), you can enable TLS by selecting the checkbox next to *TLS enabled*.
+
+   ![Cube Cassandra Cluster Configuration](~/user-guide/images/CassandraCluster_CubeConfig.png)<br>*DataMiner 10.3.10 example configuration*-->
 
 1. Click *Save*.
 
@@ -66,7 +70,7 @@ For a Cassandra cluster database (i.e. one Cassandra cluster that is used as the
 > [!IMPORTANT]
 >
 > - An Amazon Keyspaces database requires a separate indexing database.
-> - For information on how to configure an indexing database, see [Elasticsearch database](xref:Elasticsearch_database) or [OpenSearch database](xref:OpenSearch_database).
+> - For information on how to configure an indexing database, see [Configuring an indexing database](xref:Indexing_Database).
 
 > [!NOTE]
 > If you do not see the `Amazon Keyspaces` option, it means that your server is not compatible because it is not running DataMiner version 10.3.0/10.3.3 or higher.
@@ -122,6 +126,9 @@ To configure the connection to an [Amazon Keyspaces database](xref:Amazon_Keyspa
    - **Database prefix**: The name all indices will be prefixed with. This will be identical for all DMAs in the same cluster.
 
    - **DB Server**: The full URL of your Amazon OpenSearch Service endpoint, e.g. `https://search-mydomain-123456798.eu-north-1.es.amazonaws.com/`
+
+     > [!IMPORTANT]
+     > From DataMiner 10.3.0 [CU4]/10.3.7 onwards, you must append the port `:443` to the Amazon OpenSearch Service endpoint URL. For example: `https://search-mydomain-123456798.eu-north-1.es.amazonaws.com:443`. In earlier DataMiner versions, this is not needed.
 
    - **User**: The username of the master user of your domain.
 

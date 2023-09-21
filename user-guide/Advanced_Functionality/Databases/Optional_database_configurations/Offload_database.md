@@ -11,7 +11,9 @@ This offline database will then allow you, for instance, to produce all kinds of
 The following database types are supported for the offload database:
 
 - MySQL
+
 - MSSQL
+
 - Oracle
 
 > [!NOTE]

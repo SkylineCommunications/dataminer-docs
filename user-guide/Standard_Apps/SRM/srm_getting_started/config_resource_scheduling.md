@@ -13,7 +13,7 @@ Before you can start using Resource Scheduling, you need to configure the Bookin
 1. In the card side panel, click *DATA*. This will open the *General* data page.
 1. In the *Application Setup* section of the *General* data page, set the parameter *Booking Application Context* parameter to *Resource Scheduling*.
 
-## Default wizard included in the SRM framework
+## Default wizard to schedule a resource
 
 When you install the SRM framework, an Automation script is included that can be used as the default wizard to schedule a resource.
 
@@ -21,11 +21,11 @@ When you install the SRM framework, an Automation script is included that can be
 
 The wizard is an interactive Automation script called *SRM_BookResourcesQuickly*. As of SRM version 1.2.27, the input parameters accept the following fields in JSON format:
 
-- *ResourceIds*: The GUID of the resources, separated by commas.
-- *StartDate*: The start time of the booking.
-- *EndDate*: The end time of the booking.
 - *BookingManagerElement*: The name of a Booking Manager element. This is used to generate log files in the directory specified in that element.
-- *AssignCapacityType*: Indicates if booking capacity should be available on the wizard.
+- *ResourceIds*: The GUIDs of the resources that need to be added to the booking, separated by commas.
+- *ChangeTimeInputData*: Optional. The proposed time of the booking. Consists of the *StartDate* and *EndDate* datetime fields.
+- *AssignCapacityType*: Optional. Can be set to *None* or *Request*. If this is set to *Request*, more options will be available to book concurrency/capacity in the wizard.<!-- RN 33445 -->
+- *TimeRange*: Optional. The proposed time of the booking to be created. This is a semicolon-separated list of start and stop time in binary format, as provided by Cube when a time range is selected on the timeline component.
 
 For example: `{"AssignCapacityType":"Request","BookingManagerElement":"Resource Scheduling","EndDate":"2022-09-07T14:08:28.0052229Z","ResourceIds":"e489a83d-182b-45c7-a981-615c253525b2","StartDate":"2022-09-07T12:38:25.6772229Z"}`
 
@@ -44,7 +44,7 @@ In the next step of the wizard, they can optionally provide capacity values. Alt
 
 After they click *Confirm*, the booking will be created.
 
-## Creating a custom front end for the wizard
+## Creating a custom front end for the resource scheduling wizard
 
 The wizard can be launched from Visual Overview or from a low-code app.
 
@@ -81,3 +81,26 @@ A typical use case is to make use of the Resource Manager component in Visual Ov
    >   | Shape data field | Value |
    >   |--|--|
    >   | Execute | `script:SRM_BookResourcesQuickly||Input Data={"BookingManagerElement":"Resource Scheduling","TimeRange":"[RegexReplace:;,[cardvar:SelectedTimeRange],$]","ResourceIds":"[cardvar:SelectedResource]","AssignCapacityType":"Request"}|||NoConfirmation,CloseWhenFinished` |
+
+## Other front-end scripts
+
+The SRM framework also includes other front-end scripts that can be used to execute certain actions.
+
+### Default wizard to extend an existing booking with a resource
+
+<!-- RN 31474 -->
+
+The *SRM_AddResourceFromPoolToBooking* Automation script can be used as the default wizard to extend an existing booking with a resource from a predefined pool. The input argument of the script is a JSON string containing the following attributes:
+
+- *ReservationId*: The GUID of the booking to which the resource should be added.
+- *PoolId*: The ID of the resource pool to be selected. This has priority over *PoolName*, so if both are specified, only *PoolId* is read.
+- *PoolName*: The name of the resource pool to be selected. This is only read if *PoolId* is equal to Guid.Empty.
+
+### Default wizard to remove a resource from a booking
+
+<!-- RN 32229 -->
+
+The *SRM_UnassignResourceFromBooking* Automation script can be used as the default wizard to remove a resource from a booking. The input argument of the script is a JSON string containing the following attributes:
+
+- *ReservationId*: The GUID of the booking from which the resource will be removed.
+- *ResourceId*: The GUID of the resource that should be removed.

@@ -2,7 +2,7 @@
 uid: Troubleshooting_Trending
 ---
 
-# Troubleshooting - Trending
+# Troubleshooting - trending
 
 > [!NOTE]
 >
@@ -42,7 +42,7 @@ TrendDataInspector --- DataPresent
 DataPresent --- |Yes|ReadIssue
 DataPresent --- |No|WriteIssue
 %% Define hyperlinks %%
-click TrendDataInspector "https://docs.dataminer.services/user-guide/Reference/DataMiner_Tools/SLNetClientTest_tool/SLNetClientTest_tool_diagnostic_procedures/SLNetClientTest_trend_data_inspector.html"
+click TrendDataInspector "/user-guide/Reference/DataMiner_Tools/SLNetClientTest_tool/SLNetClientTest_tool_diagnostic_procedures/SLNetClientTest_trend_data_inspector.html"
 click ReadIssue "#read-issue" "Trending"
 click WriteIssue "#write-issue" "Trending"
 %% Apply styles to blocks %%

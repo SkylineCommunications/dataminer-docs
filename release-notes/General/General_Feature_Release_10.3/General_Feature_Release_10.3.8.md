@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.3.8
 ---
 
-# General Feature Release 10.3.8 – Preview
+# General Feature Release 10.3.8
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!IMPORTANT]
 > When downgrading from DataMiner Feature Release version 10.3.8 (or higher) to DataMiner Feature Release version 10.3.4, 10.3.5, 10.3.6 or 10.3.7, an extra manual step has to be performed. For more information, see [Downgrading a DMS](xref:MOP_Downgrading_a_DMS).
@@ -16,11 +16,39 @@ uid: General_Feature_Release_10.3.8
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.3.8](xref:Web_apps_Feature_Release_10.3.8).
 > - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
-## Highlights
+## New features
 
-*No highlights have been selected for this release yet*
+#### Process Automation: Support for PaToken bulk operations [ID_35685]
 
-## Other features
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+From now on, `PaToken` objects can be created, updated and deleted in bulk using the following methods provided by the `PaTokens` helper:
+
+- **CreateOrUpdate**
+
+  ```csharp
+  /// <summary>
+  /// Returns the created or updated <paramref name="objects"/>.
+  /// </summary>
+  /// <param name="objects"><see cref="List{PaToken}"/> of <typeparamref name="PaToken"/> to be created or updated.</param>
+  /// <returns>The result containing a list of <paramref name="objects"/> that were successfully updated or created. And a list of <see cref="TraceData"/> per item.</returns>
+  public BulkCreateOrUpdateResult<PaToken, Guid> CreateOrUpdate(List<PaToken> objects)
+  ```
+
+  The result will contain a list of tokens that were successfully created or updated. The trace data is available per token ID. If an issue occurs when an item gets created or updated, no exception will be thrown (even when `ThrowExceptionsOnErrorData` is true). The trace data of the last call is available and will contain the data for all items. If the list contains tokens with identical keys, only the first will be considered.
+
+- **Delete**
+
+  ```csharp
+  /// <summary>
+  /// Deletes the given <paramref name="objects"/>.
+  /// </summary>
+  /// <param name="objects"><see cref="List{PaToken}"/> of <typeparamref name="PaToken"/> to be deleted.</param>
+  /// <returns>The result containing a list of IDs of <paramref name="objects"/> that were successfully deleted. And a list of <see cref="TraceData"/> per item.</returns>
+  public BulkDeleteResult<Guid> Delete(List<PaToken> objects)
+  ```
+
+  The result will contain a list of tokens that were successfully deleted. The trace data is available per token ID. If an issue occurs when an item gets deleted, no exception will be thrown (even when `ThrowExceptionsOnErrorData` is true). The trace data of the last call is available and will contain the data for all items.
 
 #### SLNetClientTest tool: New menu to manage the cloud connection of a DMA while it is offline [ID_36611]
 
@@ -163,7 +191,31 @@ From now on, alarms will no longer be regrouped after a manual operation.
 
 From now on, users will be allowed to manually clear automatic incidents.
 
+#### SLAnalytics - Behavioral anomaly detection & Proactive cap detection: Enhanced caching mechanism [ID_36639]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+A number of enhancements have been made to the caching mechanism used by the *Behavioral anomaly detection* and *Proactive cap detection* features.
+
+#### SLAnalytics - Behavioral anomaly detection: Enhanced anomaly labelling for periodically returning behavioral changes [ID_36664]
+
+<!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
+
+A behavioral change in the trend data of a parameter is considered an anomaly if there have not been similar behavioral changes that occurred regularly or frequently in the historical behavior of the parameter. This anomaly labelling has now been enhanced for periodically returning behavioral changes.
+
+#### Smart baselines: Information event generation at 5-minute intervals has been disabled [ID_36691]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU5] - FR 10.3.8 -->
+
+When smart baselines were configured, by default information events would be generated every 5 minutes. This information event generation has now been disabled to avoid information event floods in e.g. EPM environments.
+
 ### Fixes
+
+#### NATS connection could fail due to payloads being too large [ID_36427]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.8 -->
+
+In some cases, the NATS connection could fail due to payloads being too large. As a result, parameter updates and alarms would no longer be saved to the database.
 
 #### SLAnalytics: Incorrect trend predictions in case of incorrect data ranges set in the protocol [ID_36521]
 
@@ -229,3 +281,15 @@ In some rare cases, the system would incorrectly try to clear an alarm group tha
 <!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
 
 When a client requested large amounts of data, in some cases, a `NATSMaxPayloadException` could be thrown.
+
+#### Cassandra Cluster: DVE properties would be cleared when an update was sent to the database [ID_36658]
+
+<!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
+
+DVE properties would be cleared each time an update was sent to a database of type Cassandra Cluster.
+
+#### Cassandra Cluster Migrator would fail to start up [ID_36804]
+
+<!-- MR 10.4.0 - FR 10.3.8 [CU0] -->
+
+When the *Cassandra Cluster Migrator* tool (*SLCCMigrator.exe*) was started, in some cases, it would get stuck in the initialization phase due to a connection issue.

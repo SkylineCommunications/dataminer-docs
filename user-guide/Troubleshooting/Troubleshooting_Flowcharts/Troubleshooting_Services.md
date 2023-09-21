@@ -2,7 +2,7 @@
 uid: Troubleshooting_Services
 ---
 
-# Troubleshooting - Services
+# Troubleshooting - services
 
 > [!NOTE]
 >

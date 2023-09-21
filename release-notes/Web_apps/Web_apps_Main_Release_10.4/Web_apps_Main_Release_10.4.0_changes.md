@@ -208,9 +208,10 @@ The way in which components are linked to feeds has been improved. Instead of us
 
 When an inter-element query failed to retrieve a parameter value of a specific element, up to now, a generic `Unknown element` error would be thrown. From now on, a clearer error mentioning the element that caused the issue will be thrown instead.
 
-#### DataMiner web apps: Angular and other dependencies have been upgraded [ID_36100]
+#### DataMiner web apps: Angular and other dependencies have been upgraded [ID_36100] [ID_36977]
 
-<!-- MR 10.4.0 - FR 10.3.6 -->
+<!-- RN 36100: MR 10.4.0 - FR 10.3.6 -->
+<!-- RN 36977: MR 10.4.0 - FR 10.3.10 -->
 
 In all web apps (e.g. Low-Code Apps, Dashboards, Monitoring, Jobs, Ticketing, etc.), Angular and other dependencies have been upgraded.
 
@@ -285,24 +286,11 @@ When a dashboard or a low-code app page is being migrated, a message will appear
 
 From now on, when the user has edit permission, the message will only appear when the migration takes longer than 15 seconds. When the user does not have edit permission, the message will appear immediately at the start of the migration, notifying the user that the migration will not be saved and that it will be repeated every time the dashboard or low-code app page is loaded.
 
-#### GQI: Enhanced behavior of aggregations applied on empty Elasticsearch tables [ID_36490]
+#### Dashboards app: Enhanced PDF generation [ID_36461]
 
-<!-- MR 10.4.0 - FR 10.3.8 -->
+<!-- MR 10.4.0 - FR 10.3.9 -->
 
-Up to now, when an aggregation (min, max, average) was applied on an empty Elasticsearch table, the following exception would be thrown:
-
-`Error trapped: Elastic returned unexpected value ''.`
-
-From now on, when an aggregation (min, max, average) is applied on an empty Elasticsearch table, an empty cell will be returned instead.
-
-Because of this change, the behavior of aggregations applied on all types of empty tables becomes more consistent:
-
-| ​Type | ​RawValue | ​DisplayValue |
-|------|----------|--------------|
-| ​Avg/Min/Max/Median | ​null | ​"Not applicable" |
-| ​(Distinct) Count   | 0    | 0                |
-| ​Std dev/Percentile | ​null | ​​"Not applicable" |
-| ​Sum                | 0    | 0                |
+A number of enhancements have been made to the way in which PDF files are generated from dashboards. For example, up to now, items selected on a dashboard would no longer be selected after a PDF file had been generated.
 
 #### Dashboards app & Low-Code Apps - Clock components: Custom time zone [ID_36534]
 
@@ -311,6 +299,33 @@ Because of this change, the behavior of aggregations applied on all types of emp
 When configuring an analog or digital *Clock* component, you can now make the clock display the date and time in a specific time zone.
 
 To do so, select the *Custom time zone* option, and select a time zone from the *Time zone* selection box.
+
+#### DataMiner Comparison tool: Enhancements [ID_36570]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+A number of enhancements have been made to the DataMiner Comparison tool. This web application allows you to compare the values of two string parameters on a character-by-character basis and to immediately spot the differences (additions, modifications, and deletions).
+
+#### Monitoring app, Dashboards app & Low-Code Apps: Asynchronous operations now also supported when using WebSockets [ID_36583] [ID_36884] [ID_36885] [ID_36886] [ID_36887] [ID_36896] [ID_36904] [ID_37029] [ID_37031]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+Up to now, the following asynchronous operations were only supported over HTTP(s). From now on, these asynchronous operations will also be supported when using WebSockets.
+
+- Retrieving trend data
+- Retrieving alarm details
+- Retrieving alarm history
+- Retrieving visual overviews of elements, services and views
+- Retrieving parameter status information (serving as input for pivot table components)
+- Generating PDF reports
+- Sending emails containing PDF reports
+- Sharing a dashboard
+
+#### Dashboards app: Enhanced mechanism to update the list of dashboards in the navigation pane [ID_36604]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+Up to now, the list of dashboards displayed in the navigation pane on the left would be updated every 5 seconds via a polling mechanism. From now on, whenever that list is changed, all connected clients will receive an event that will update the list.
 
 #### Monitoring app: A new type of datetime boxes will now be used on parameter pages [ID_36606]
 
@@ -346,6 +361,141 @@ In the *Monitoring* app, a new type of datetime boxes will now be used on parame
 - GetParametersSorted
 - GetParameterWithDynamicUnits
 - ObserveParameter
+
+#### BREAKING CHANGE: GQI - 'Get alarms' data source: Format of alarm IDs has changed [ID_36621]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+The format of the alarm IDs listed in the *AlarmID* column of the *Get alarms* data source has been changed:
+
+- Old format: *DmaId/RootId/AlarmId*
+- New format: *HostingDmaId/AlarmId*
+
+#### Dashboards app - GQI: Change detection in 'Start from' queries [ID_36690]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+Up to now, queries that were built upon another query that was linked to feeds would not get updated when one of those feeds changed its value. Neither would queries built upon a base query be updated when the base query was changed.
+
+From now on, when a base query is changed in any way, all queries that use that base query will automatically be updated as well.
+
+#### Monitoring app: A new type of text area boxes will now be used on parameter pages [ID_36693]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+In the *Monitoring* app, a new type of text area boxes will now be used on parameter pages.
+
+#### Security enhancements [ID_36695] [ID_37047] [ID_37051] [ID_37068]
+
+<!-- RN 36695: MR 10.4.0 - FR 10.3.9 -->
+<!-- RN 37047/37051/37068: MR 10.4.0 - FR 10.3.10 -->
+
+A number of security enhancements have been made.
+
+#### Monitoring app: A new type of duration boxes will now be used on parameter pages [ID_36713]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+In the *Monitoring* app, a new type of duration boxes will now be used on parameter pages.
+
+#### Dashboards app: Tooltips will be displayed when hovering over a visualization in a component menu [ID_36737] [ID_36778]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When you want to change the visualization of a component, you can hover over the component, click the *Visualizations* icon, and then select a visualization from the overview.
+
+From now on, when you hover over each of the possible visualizations in the overview, a tooltip will appear, giving more information about that visualization.
+
+Also, the component will no longer change instantly when you hover over a visualization in the overview. A visualization preview will be shown when the mouse pointer has been hovering over a particular visualization icon for more than 400ms and will disappear when the mouse pointer leaves the visualizations overview. The component will change its visualization only when you click a certain visualization in the overview.
+
+#### DataMiner Comparison tool: Redesigned header and sidebar [ID_36747]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+The header and sidebar of the DataMiner Comparison tool have been redesigned.
+
+#### Monitoring app: A new type of buttons and toggle buttons will now be used on parameter pages [ID_36773]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+In the *Monitoring* app, a new type of buttons and toggle buttons will now be used on parameter pages.
+
+#### Dashboards app - Line chart component: Enhanced performance [ID_36869]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When a line chart component used element table column parameters as data and indices as filter, up to now, it would cross-match indices across the unique elements associated with the table column parameters. This will now be prevented when the *Hide non-trended parameters* option is disabled.
+
+> [!NOTE]
+> The *Hide non-trended parameters* setting is now disabled by default.
+
+> [!IMPORTANT]
+> Because of the enhancements that have been made, in some cases, a line chart will no longer show any data when the indices are not available in the specified table. If so, you can opt to work with cell parameters instead (see [release note 36724](xref:Web_apps_Main_Release_10.4.0_new_features#dashboards-app--low-code-apps---parameters-dataset-selecting-an-indexcell-of-a-column-parameter-id_36724)) or to enable the *Hide non-trended parameters* option.
+
+#### Monitoring app: Parameter control now supports dynamic units [ID_36892]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+The parameter control used in the *Monitoring* app now supports dynamic units.
+
+#### Dashboards app & Low-Code Apps: 'ReportsAndDashboardsAlpha' soft-launch option is now deprecated [ID_36894]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+The *ReportsAndDashboardsAlpha* soft-launch option is now deprecated.
+
+#### Dashboards app/Low-Code Apps: Removed unused legacy components [ID_36907]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+In order to reduce the package size for the Dashboards app and Low-Code Apps, a number of legacy components, which were not used and were unavailable in the UI, have now been removed.
+
+#### Legacy Monitoring & Control app no longer available [ID_36953]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+The legacy Monitoring & Control app (obsolete since DataMiner 10.0.0/10.0.2) is no longer available. If you browse to `http(s)://[DMA]/m`, you will now be redirected to the regular Monitoring app.
+
+#### DataMiner Object Models: Auto-increment fields will no longer be visualized using input boxes [ID_37181]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+An `AutoIncrementField` contains a unique value that is automatically incremented each time a DOM instance is created.
+
+Up to now, on web forms used to create or edit a DOM instance, auto-increment fields were incorrectly visualized using an input box. From now on, on web forms used to create a DOM instance, these fields will no longer be visualized, and on web form used to edit a DOM instance, these fields will be visualized as read-only fields.
+
+#### DataMiner Object Models: Enhanced performance when processing GQI count aggregation queries [ID_37187]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+In GQI, up to now, when you applied an aggregation node of type *count* to a query starting from *Object manager instances* (DOM instances), all objects would be retrieved from the database. From now on, count operations will be sent to the database. This will significantly improve the performance of this kind of GQI queries.
+
+The optimization applies when the following conditions are met:
+
+- The GQI query starts with *Object manager instances*.
+- Only one aggregation node is applied to column *ID* with method *COUNT*.
+
+In all other cases (e.g. multiple aggregation nodes, grouping, different columns), all objects will still be retrieved from the database.
+
+#### Dashboards app/Low-Code Apps - Table component: Height of a column resizer has been reduced to that of the column header [ID_37226]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+Up to now, a column resizer would span across the entire height of the column. From now on, the height of a column resizer will be equal to the height of the column header.
+
+Note that, while you dragging a resizer, its height will be equal to that of the entire column you are resizing.
+
+#### Dashboards app/Low-Code Apps - Visual Overview component: Initial visual overview data will now be retrieved asynchronously [ID_37341]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+Up to now, a dashboard containing Visual Overview components would retrieve the initial visual overview data synchronously. From now on, the initial visual overview data will be retrieved asynchronously.
+
+#### Web Services API: ConvertQueryToProtoJson web method now supports node keys [ID_37360]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+Before you can add a GQI query to the Data Aggregator configuration file, you have to convert it first by means of the *ConvertQueryToProtoJson* web method. This method now supports node keys.
 
 ### Fixes
 
@@ -527,14 +677,203 @@ Cannot read properties of null ('reading delete')
 
 When you installed a DataMiner web upgrade for version 10.3.5 or newer on a server running a DataMiner version older than 10.3.5, the value of the `IsChecked` property would not be filled in for list and drop-down options in *SLAnalyticsTypes.dll*. As a result, list and drop-down options that should be selected by default, would not be selected by default.
 
-#### Monitoring app: Problem when receiving parameter table updates via polling [ID_36660]
-
-<!-- MR 10.4.0 - FR 10.3.8 -->
-
-When, in the *Monitoring* app, a parameter table received updates via polling, the table would display `There is no data to display`.
-
 #### Dashboards app & Low-Code Apps - Table component: Problem when trying to display null values returned by the query [ID_36669]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
 
 When a query linked to a table component returned null values, errors would be thrown when the table component tried to display those null values.
+
+#### Dashboards app: An empty menu would open when users with only 'View dashboards' permission clicked the '...' button [ID_36671]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When users who only had permission to view dashboards clicked the *...* button in the top-right corner of the navigation pane, an empty menu would open.
+
+From now on, users who only have permission to view dashboards will not see any *...* button in the top-right corner of the navigation pane.
+
+#### Dashboards app: Problem when making changes to a dashboard when having that same dashboard open in two separate windows [ID_36718]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When you had opened the same dashboard in edit mode in two separate windows, the moment you made a change in one of the windows, a number of popup windows displaying "New version is available" would appear on top of the other window.
+
+#### GQI: Not all DCF interface properties would be returned [ID_36840]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+Up to now, when DCF interface properties were fetched, only the properties found on the DataMiner Agent to which you were connected would be returned. From now on, all DCF interface properties in the entire DataMiner System will be returned instead.
+
+#### Dashboards app & Low-Code Apps: Query row feed would send a selected row twice when the table used two identical queries [ID_36952]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+Up to now, when you selected a row of a table that used two identical queries, the query row feed would send the row twice. From now on, it will only send the row once.
+
+#### Dashboards app & Low-Code Apps - GQI: Link to feed not saved when the feed value is identical [ID_36990]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+In some cases, query nodes that were linked to a feed would incorrectly not save their link when a new feed was linked with the exact same value.
+
+From now on, queries will always be updated when the source (dashboard/page), selector (component), type (datatype) or property of the link changes.
+
+#### Low-Code Apps: Non-linked sections would incorrectly be displayed when creating a new DOM instance [ID_36994]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+In a low-code app, the form to create a new DOM instance would incorrectly display the sections that were not linked to the initial state.
+
+When a value was set for one of the fields in those sections, saving the new DOM instance would result in a error stating `Instance contains unknown fields for the current state`.
+
+From now on, sections that are not linked to the initial state will no longer be displayed.
+
+#### Low-Code Apps: Problem after removing a query used by a component [ID_36998]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When you removed a query that was used by a component on the page you were viewing, the *UpdateDashboard* call and all subsequent calls would fail.
+
+#### Low-Code Apps: DOM GenericEnumFieldDescriptors would not be sorted as specified in the DomDefinition [ID_37007]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+Up to now, in *Form* components, DOM GenericEnumFieldDescriptors would be sorted alphabetically. The order that was specified in the DomDefinition would be disregarded.
+
+From now on, DOM GenericEnumFieldDescriptors will always be sorted as specified in the DomDefinition.
+
+#### Dashboards app: Problem when adding or configuring a node edge graph component [ID_37039]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+In some cases, it would no longer be possible to add a new node edge graph component to a dashboard. Also, an error could occur when trying to configure a node edge graph that had already been added.
+
+#### DataMiner web apps: Date/time picker issues [ID_37041]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+A number of date/time picker issues have been fixed.
+
+#### Dashboards app/Low-Code Apps: Invalid value when configuring query because of incorrectly parsed capabilities [ID_37074]
+
+<!-- MR 10.4.0 - FR 10.3.9 [CU0] -->
+
+When you configured a query in a dashboard or low-code app, it could occur that an error in the format 'Invalid value for [node]' was displayed because capability values were parsed incorrectly.
+
+#### Monitoring app: Parameter controls in Visual Overview not working correctly [ID_37079]
+
+<!-- MR 10.4.0 - FR 10.3.9 [CU0] -->
+
+In some cases, it could occur that parameter controls in Visual Overview did not work correctly in the Monitoring app.
+
+#### GQI: Missing column statistics for discrete options of numeric columns [ID_37111]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When the web API fetched information for columns of a GQI query, it could occur that not all statistics were included. In the Dashboards app/Low-Code Apps, this could lead to incorrect "(0)" counters next to the discrete options of numeric columns in the query filter when the filter assistance option was enabled.
+
+#### Dashboards app: Shared dashboard containing query with 'Start from' data source not loading [ID_37115]
+
+<!-- MR 10.4.0 - FR 10.3.9 [CU0] -->
+
+If a shared dashboard contained a query that built on another query (using the "Start from" data source), in some cases it could occur that the dashboard could not be loaded and the loading screen continued to be displayed.
+
+#### Low-Code Apps: Page configuration would not be copied along when duplicating a page [ID_37120]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When a page was duplicated, up to now, the page configuration would not be copied along. As a result, certain page settings would be missing.
+
+#### Web apps: DOM GenericEnumEntry objects marked as hidden would incorrectly still be visible [ID_37121]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+<!-- For new feature part of RN, see General/Features -->
+
+In web apps, *GenericEnumEntry* objects marked as hidden would incorrectly still be visible in the UI.
+
+#### Dashboards app/Low-Code Apps: Problem when migrating GQI components [ID_37156]
+
+<!-- MR 10.4.0 - FR 10.3.9 [CU0] -->
+
+In some cases, an error could occur when migrating a GQI component:
+
+- When the query used DOM data and contained nodes that were linked to feeds, the links to those feeds could get broken and, in some cases, exceptions could be thrown due to missing feed links.
+
+- When the query used ad hoc data with multiple arguments, and one argument linked to query rows came after an argument linked to something other than query rows, the migration would not succeed and would cause the app to no longer be editable.
+
+#### Dashboards app/Low-Code Apps: Label of 'Icon' setting of 'Icon' component would incorrectly be in lower case [ID_37199]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+The label of the *Icon* setting of an *Icon* component would incorrectly be in lower case. It is now in upper case.
+
+#### Dashboards app - Web component: Embedded website would not function correctly [ID_37207]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When, on a dashboard, a website was embedded using a Web component, in some cases, the embedded website would not function correctly.
+
+#### Low-Code Apps: Size of sidebar icon was different when editing an app [ID_37223]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When an app was edited, the size of the sidebar icon was different than when that same app was viewed in either preview mode or published mode.
+
+#### Dashboards app/Low-Code Apps: Initial selection of a component would not be applied when the query was replaced [ID_37230]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+The initial selection of a table, state or timeline component would incorrectly not be applied when the query of the component was replaced by another one.
+
+#### Dashboards app/Low-Code Apps: Query builder would display incorrect date/time values when a custom time zone had been configured [ID_37234]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+Up to now, when you had configured a custom time zone, date/time values displayed in the query builder (fed through a time range component) would be incorrect.
+
+#### GQI: Problem when retrieving logger table data from an Elasticsearch database [ID_37251]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When a GQI query retrieved logger table data from an Elasticsearch database, the row keys would be filled in incorrectly. As a result, not all rows would have a unique key.
+
+#### Monitoring app: Casing problem when using NavigatePage [ID_37279]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When, in the *Monitoring* app, a visual overview page was opened using a shape data field of type *NavigatePage*, the value of this field was case sensitive. When the casing of the value was different from the casing of the page name, the page would not open. From now on, the casing of the value and that of the page name will be disregarded.
+
+#### Problem with the IIS web server when redirecting the user to the login page [ID_37288]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+In some cases, an error could occur in the IIS web server when redirecting the user to the login page.
+
+#### Monitoring app: Problem when opening another visual overview page using 'NavigatePage' [ID_37338]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When, in the *Monitoring* app, another visual overview page was opened using a shape data field of type *NavigatePage*, the rest of the application would incorrectly not reflect this.
+
+#### Low-Code Apps - Form component: DOM button shadows would be cut off [ID_37348]
+
+<!-- MR 10.4.0 - FR 10.3.10 [CU0] -->
+
+In a Form component, the DOM button shadows would incorrectly be cut off.
+
+#### Dashboards app/Low-Code Apps - Parameter table: Problem with Copy command in right-click menu [ID_37357]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When, in a *Parameter table* component, it would not be possible to copy a cell, a row, a column or the entire table using the *Copy* command in the right-click menu.
+
+#### Low-Code Apps: First column of table with multiple queries could be empty [ID_37363]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When actions had been configured on a table visualization with multiple queries, in some cases, the first column would be empty.
+
+#### Low-Code Apps: Problem with 'Execute component' action [ID_37364]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When you edited an existing action, in some cases, the *Execute component* action would not be able to properly restore the form.

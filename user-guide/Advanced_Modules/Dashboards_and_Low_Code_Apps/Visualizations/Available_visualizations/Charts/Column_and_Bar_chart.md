@@ -13,7 +13,7 @@ To configure the component:
 
 1. Apply a view data feed. See [Applying a data feed](xref:Configuring_dashboard_components#applying-a-data-feed).
 
-   From DataMiner 10.0.13 onwards, this component also supports queries as data input. See [Configuring query (GQI) data feeds](xref:Configuring_GQI_feeds).
+   From DataMiner 10.0.13 onwards, this component also supports queries as data input. See [Creating a GQI query](xref:Creating_GQI_query).
 
 1. Optionally, you can add a parameter filter, so that the displayed data are limited to that parameter only. to do so, hover the mouse over the component, click the filter icon, and then add a filter feed from the *parameters* section of the data pane.
 
@@ -87,3 +87,8 @@ To configure the component:
    - *Tooltips* > *Include dimension*: Available from DataMiner 10.0.13 onwards. Determines whether the dimensions are indicated in tooltips.
 
    - *Tooltips* > *Include value*: Available from DataMiner 10.0.13 onwards. Determines whether values are indicated in tooltips.
+
+   - *Advanced* \> *Empty Result message*: Available from 10.3.11/10.4.0 onwards<!-- RN 37173 -->. Allows you to specify a custom message that is displayed when a query returns no results.
+
+     > [!TIP]
+     > See also: [Displaying a custom empty component message](xref:Tutorial_Dashboards_Displaying_a_custom_empty_component_message).

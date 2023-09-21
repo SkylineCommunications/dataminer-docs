@@ -42,7 +42,7 @@ uid: Adding_elements
 
      - The option to add a new alarm template with *\<Add alarm template>*.
 
-       If you select this option, you will be able to create an alarm template in the same way as in the Protocols & Templates module, but embedded within the element editor. For more information, see [Creating an alarm template](xref:Managing_alarm_templates#creating-an-alarm-template).
+       If you select this option, you will be able to create an alarm template in the same way as in the Protocols & Templates module, but embedded within the element editor. For more information, see [Creating an alarm template](xref:Creating_an_alarm_template).
 
      - The default alarm template called *\<No Monitoring>*.
 

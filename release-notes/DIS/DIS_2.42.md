@@ -14,6 +14,10 @@ DIS now supports SDK-style projects in addition to the legacy-style projects.
 
 At startup, DIS will install new protocol solution and Automation script solution templates that will be used when creating a new protocol or Automation script solution in Visual Studio 2022.
 
+#### Automation script solutions: 'DataMiner DLL Path' property no longer supported [ID_36774]
+
+Due to the introduction of SDK-style projects, the *DataMiner DLL Path* property introduced in [release note 29031](xref:DIS_2.32#automation-script-solutions-dataminer-dll-path-property-id_29031) is no longer supported.
+
 ### Validator
 
 #### Validator check 'UnsupportedIDisposable' has become a feature check [ID_36455]
@@ -37,6 +41,10 @@ The protocol schema now supports the `whereAttribute` attribute on `ExportRule` 
 This will allow you to validate the value of an attribute when applying an export rule.
 
 See also [release note 36622](xref:General_Main_Release_10.4.0_new_features#exportrule-elements-can-now-have-a-whereattribute-attribute-id_36622)
+
+#### Protocol Schema: Commas are not allowed in default alarm values [ID_36807]
+
+The protocol schema will now give a warning when commas are used in the default alarm value tags (`CH`, `MaH`, `MiH`, ...).
 
 ## Changes
 

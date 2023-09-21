@@ -8,7 +8,7 @@ This component displays the results of queries in a chart shaped like a pie or d
 
 To configure the component:
 
-1. Apply a query data feed. See [Configuring query (GQI) data feeds](xref:Configuring_GQI_feeds).
+1. Apply a query data feed. See [Creating a GQI query](xref:Creating_GQI_query).
 
 1. Optionally, customize the following component options in the *Component* > *Settings* tab:
 
@@ -36,3 +36,8 @@ To configure the component:
    - *Tooltips* > *Include value*: Available from DataMiner 10.0.13 onwards. Determines whether values are indicated in tooltips.
 
    - *Tooltips* > *Include percentages*: Available from DataMiner 10.0.13 onwards. Determines whether percentages are indicated in tooltips.
+
+   - *Advanced* \> *Empty Result message*: Available from 10.3.11/10.4.0 onwards<!-- RN 37173 -->. Allows you to specify a custom message that is displayed when a query returns no results.
+
+     > [!TIP]
+     > See also: [Displaying a custom empty component message](xref:Tutorial_Dashboards_Displaying_a_custom_empty_component_message).

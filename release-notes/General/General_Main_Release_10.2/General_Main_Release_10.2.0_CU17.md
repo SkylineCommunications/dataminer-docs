@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.2.0_CU17
 ---
 
-# General Main Release 10.2.0 CU17 – Preview
+# General Main Release 10.2.0 CU17
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
@@ -72,6 +72,16 @@ A number of enhancements have been made with regard to error handling while expo
 Up to now, when you requested the alarms of a certain time span, Cube would always send two requests to the server: one for the alarms and one for the information/suggestion events. However, in many cases, this was not necessary. From now on, Cube will only send the requests that are necessary.
 
 ### Fixes
+
+#### NATS-related error: 'Failed to copy credentials from [IP address] - corrupt zip file' [ID_35935]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.6 -->
+
+In some rare cases, the following NATS-related error would be thrown:
+
+```txt
+Failed to copy credentials from [IP address] - corrupt zip file
+```
 
 #### DataMiner Cube - Visual Overview: Problem with element or view scope of Children shapes [ID_36354]
 

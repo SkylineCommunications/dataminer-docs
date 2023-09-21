@@ -20,3 +20,6 @@ uid: DMAParameter
 | IsTrending | Boolean | Whether the value of the parameter is being trended. |
 | Filters | String | Column and row filters, only filled in when using the method *GetParametersByPageForServiceElement*, in case only part of a table is included in the service. |
 | LastChangeUTC | Long integer | The time when the parameter last changed, in UTC format (milliseconds since midnight January 1, 1970 GMT). |
+
+> [!NOTE]
+> From DataMiner 10.3.8/10.4.0 onwards, the value of a date or datetime parameter is passed as a Unix timestamp in milliseconds. In earlier DataMiner versions, the value is passed as an OLE Automation date.

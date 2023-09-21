@@ -23,4 +23,13 @@ Use this action to upload a report to an FTP server:
    > [!NOTE]
    >
    > - If you want to specify multiple indices for one table parameter, use a semicolon “;” as separator.
-   > - From DataMiner 9.6.13 onwards, you can select to include a dashboard from the new Dashboards app. The dashboards are listed in the drop-down list along with the reports. The icon in front of each item in the list shows whether the item is a dashboard or a report. From DataMiner 10.0.13 onwards, a *Configure* button is available that allows you to further configure a report based on a dashboard. See [Generating a PDF report based on a dashboard using DataMiner Cube](xref:Generating_a_report_based_on_a_dashboard_Cube).
+   > - If you want to specify multiple parameters for one element, service, or protocol version, assign them all within a single line.
+   > - Dashboards are listed in the dropdown list along with the reports. The icon in front of each item in the list shows whether the item is a dashboard or a report. From DataMiner 10.0.13 onwards, a *Configure* button is available that allows you to further configure a report based on a dashboard. See [Generating a PDF report based on a dashboard using DataMiner Cube](xref:Generating_a_report_based_on_a_dashboard_Cube).
+   > - Private dashboards will not appear in the dropdown list, as they cannot be shared. You can edit access to dashboards in the [dashboard settings](xref:Changing_dashboard_settings).
+
+## Example
+
+A user wants to upload a report or dashboard named *Versions* to the root folder of an FTP server with IP *10.200.10.20* (port 21), using the credentials of the user *JohnDoe*. This is configured as follows:
+
+![Upload report to FTP](~/user-guide/images/Upload_to_FTP.png)<br>
+*Configuration in DataMiner Cube (version 10.3.9)*

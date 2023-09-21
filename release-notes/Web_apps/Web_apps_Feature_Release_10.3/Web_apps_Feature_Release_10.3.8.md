@@ -2,19 +2,15 @@
 uid: Web_apps_Feature_Release_10.3.8
 ---
 
-# DataMiner web apps Feature Release 10.3.8 – Preview
+# DataMiner web apps Feature Release 10.3.8
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to the web applications, see [General Feature Release 10.3.8](xref:General_Feature_Release_10.3.8).
 
-## Highlights
-
-*No highlights have been selected for this release yet*
-
-## Other features
+## Features
 
 #### Dashboards app & Low-Code Apps - Table component: Selecting whether to export raw values or display values to CSV [ID_36467]
 
@@ -44,7 +40,7 @@ From now on, when a parameter value is a URL starting with one of the following 
 
 #### GQI: Enhanced behavior of aggregations applied on empty Elasticsearch tables [ID_36490]
 
-<!-- MR 10.4.0 - FR 10.3.8 -->
+<!-- MR 10.3.0 [CU6] - FR 10.3.8 -->
 
 Up to now, when an aggregation (min, max, average) was applied on an empty Elasticsearch table, the following exception would be thrown:
 
@@ -54,12 +50,12 @@ From now on, when an aggregation (min, max, average) is applied on an empty Elas
 
 Because of this change, the behavior of aggregations applied on all types of empty tables becomes more consistent:
 
-| ​Type | ​RawValue | ​DisplayValue |
+| Type | RawValue | DisplayValue |
 |------|----------|--------------|
-| ​Avg/Min/Max/Median | ​null | ​"Not applicable" |
-| ​(Distinct) Count   | 0    | 0                |
-| ​Std dev/Percentile | ​null | ​​"Not applicable" |
-| ​Sum                | 0    | 0                |
+| Avg/Min/Max/Median | null | "Not applicable" |
+| (Distinct) Count   | 0    | 0                |
+| Std dev/Percentile | null | "Not applicable" |
+| Sum                | 0    | 0                |
 
 #### Low-Code Apps - Action editor: 'Which scheduler?' button has now been renamed to 'Which timeline?' [ID_36530]
 
@@ -74,6 +70,12 @@ In the action editor, the *Which scheduler?* button has now been renamed to *Whi
 When configuring an analog or digital *Clock* component, you can now make the clock display the date and time in a specific time zone.
 
 To do so, select the *Custom time zone* option, and select a time zone from the *Time zone* selection box.
+
+#### DataMiner Comparison tool: Enhancements [ID_36570]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+A number of enhancements have been made to the DataMiner Comparison tool. This web application allows you to compare the values of two string parameters on a character-by-character basis and to immediately spot the differences (additions, modifications, and deletions).
 
 #### Monitoring app: A new type of datetime boxes will now be used on parameter pages [ID_36606]
 
@@ -145,6 +147,20 @@ As a precaution against these recordings taking too much disk space, the followi
 > - These enhancements will now prevent the following known issue from occurring: [GenIf folder takes up too much disk space](xref:KI_GenIf_Folder_Growing_In_Size).
 > - See also [Keeping a DMA from running out of disk space](xref:Keeping_a_DMA_from_running_out_of_disk_space)
 
+#### Dashboards app - GQI: Change detection in 'Start from' queries [ID_36690]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+Up to now, queries that were built upon another query that was linked to feeds would not get updated when one of those feeds changed its value. Neither would queries built upon a base query be updated when the base query was changed.
+
+From now on, when a base query is changed in any way, all queries that use that base query will automatically be updated as well.
+
+#### GQI - 'Get parameters for elements where' data source: columnInfo object of columns of type 'discrete' will now contain the possible values [ID_36702]
+
+<!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
+
+For each of the columns of type "discrete" in the *Get parameters for elements where* data source (InterElementAdapter), the possible values will now be available in their columnInfo object.
+
 ### Fixes
 
 #### Dashboards app & Low-Code Apps: Only one of the tables sharing an empty query would show a visual replacement [ID_36233]
@@ -211,7 +227,7 @@ When you logged in to a web app with the *Keep me logged in* option enabled, the
 
 #### Monitoring app: Problem when receiving parameter table updates via polling [ID_36660]
 
-<!-- MR 10.4.0 - FR 10.3.8 -->
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.8 -->
 
 When, in the *Monitoring* app, a parameter table received updates via polling, the table would display `There is no data to display`.
 
@@ -221,8 +237,22 @@ When, in the *Monitoring* app, a parameter table received updates via polling, t
 
 When a query linked to a table component returned null values, errors would be thrown when the table component tried to display those null values.
 
+#### Dashboards app: An empty menu would open when users with only 'View dashboards' permission clicked the '...' button [ID_36671]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When users who only had permission to view dashboards clicked the *...* button in the top-right corner of the navigation pane, an empty menu would open.
+
+From now on, users who only have permission to view dashboards will not see any *...* button in the top-right corner of the navigation pane.
+
 #### Dashboards app & Low-Code Apps - Numeric input component: Input field would incorrectly be set to the minimum value after a refresh [ID_36677]
 
 <!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
 
 Up to now, when a numeric input component had a non-zero minimum value set, the input field would automatically be set to that minimum value after a refresh. From now on, the input field will remain empty after a refresh, even when a minimum value is configured.
+
+#### Dashboards app: Problem when making changes to a dashboard when having that same dashboard open in two separate windows [ID_36718]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When you had opened the same dashboard in edit mode in two separate windows, the moment you made a change in one of the windows, a number of popup windows displaying "New version is available" would appear on top of the other window.

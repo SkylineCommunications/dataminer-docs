@@ -9,55 +9,6 @@ uid: Cube_Main_Release_10.4.0_other_features_changes
 
 ## Other new features
 
-#### Visual Overview: New BookingData component [ID_33215] [ID_36489]
-
-<!-- MR 10.4.0 - FR 10.3.8 -->
-
-You can now create a special *BookingData* shape and make it display all data associated with a particular booking.
-
-To do so, create a shape with the following shape data fields:
-
-|Shape data field | Value |
-|-------------|---------------|
-| Component   | `BookingData` |
-| Reservation | The ID of the booking<br>Example: `[pagevar:SRMRESERVATIONS_IDOfSelection]` |
-
-A *BookingData* shape will show the following information:
-
-- On the left-hand side, you will find a list of resources used by the booking.
-
-  For every resource, this list shows the following information:
-  
-  - the resource name
-  - an icon indicating the function of the resource
-  - an icon indicating whether the resource is linked to a service definition node
-  - the node label or, if no node label is defined, the name of the function definition
-
-- On the right-hand side, you see the profile data of the node or node interface you selected in the list on the left:
-
-  - the profile instance (if applicable), and
-  - the profile parameter values that will be used (note that these values can be overridden on several levels).
-  
-  > [!NOTE]
-  > Priority of profile parameter value overrides:
-  >
-  > 1. Values defined in the parameter overrides (stored in the booking)
-  > 1. Values defined in the profile instance
-  > 1. Values defined in the profile definition
-
-To be able to use the *BookingData* component, you will need
-
-- a system with an Elasticsearch database
-- a service manager license
-- a resource manager license
-- the following user permissions:
-
-  - Modules > Bookings > UI Available
-  - Modules > Functions > UI Available
-  - Modules > Profiles > UI Available
-  - Modules > Resources > UI Available
-  - Modules > Services > UI Available
-
 #### System Center - Analytics config: New Pattern Matching setting 'Maximum memory usage' [ID_34803]
 
 <!-- MR 10.4.0 - FR 10.3.1 -->
@@ -272,6 +223,127 @@ To do so, right-click a resource in the list, and select *Duplicate*.
 
 - If you make a duplicate of a function resource, the instance dropdown will be left empty and the name of the function instance will be the name of the original function instance with the suffix `- copy`.
 
+#### DataMiner Cube - Alarm Console: Special Elasticsearch search box always visible on systems with a Cassandra Cluster database [ID_36735]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When you add a new alarm tab to the Alarm Console, that alarm tab will now always show the Elasticsearch search box when you are connected to a DataMiner System with a Cassandra Cluster database.
+
+> [!NOTE]
+> Currently, when you start typing in this search box, no suggestions are displayed yet.
+
+#### Alarm Console: Light bulb [ID_36777] [ID_36871] [ID_36918] [ID_37057] [ID_37136] [ID_37145] [ID_37167] [ID_37184]
+
+<!-- RNs 36777/36871/36918: MR 10.4.0 - FR 10.3.9 -->
+<!-- RNs 37057/37136/37145/37167/37184: MR 10.4.0 - FR 10.3.10 -->
+
+In the top-right corner of the Alarm Console, you can now find a light bulb icon that will light up when there are alarms or suggestion events related to an SLAnalytics feature. When you click this light bulb, a menu will open, possibly showing you the following notifications:
+
+| Notification | Action when clicked |
+|--------------|---------------------|
+| X alarms require your focus in the current tab | Applies a filter that makes the current tab only list the focused alarms. |
+| Also show alarms not requiring focus      | Clears the above-mentioned filter and makes the current tab list all alarms. |
+| X incidents are present on the system     | Opens a new tab listing all active incidents. |
+| X anomalies were found in your trend data | Opens a new tab listing all anomaly suggestions/alarms. |
+| X alarms are predicted in the near future | Opens a new tab listing all prediction suggestions. |
+| X recent pattern occurrence detected      | Opens a new tab listing all trend pattern suggestions. |
+
+> [!NOTE]
+>
+> - Each of the above-mentioned notifications will only appear in the menu when there is at least one alarm, incident, anomaly or pattern occurrence.
+> - When at least one SLAnalytics feature (alarm focus, automatic incident tracking, behavioral anomaly detection, proactive cap detection or pattern matching) is disabled or not available, a link to [Advanced analytics features in the Alarm Console](xref:Advanced_analytics_features_in_the_Alarm_Console) will appear below the light bulb icon.
+> - If the DataMiner System does not include a Cassandra database, the menu will only show a notification saying the Cassandra is required.
+
+#### Visual Overview: New custom color 'bg.pressededitor' for parameter controls of type 'Lite' [ID_36779]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When you turn a shape into a parameter control of type "Lite", you can use the *CustomColors* option to customize the colors of that parameter control.
+
+You can now define a new color called *bg.pressededitor*. This color will be used as background when the left mouse button is pressed within the editor part of the control.
+
+For more information, see [CustomColors](xref:Adding_options_to_a_parameter_control#customcolors).
+
+#### Trending - Pattern matching: Pattern highlighted when mouse pointer hovers over label [ID_36863]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+<!-- For fix included in same RN, see Fixes. -->
+
+When you hover the mouse pointer over the pattern labels for a trend graph, now the corresponding pattern occurrences (both univariate and multivariate) are highlighted in the graph.
+
+#### Proportional card layout: Selecting a master card [ID_36912]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When the card layout is set to "Proportional", you can now promote one card to master card. To do so, click the card's hamburger menu, and select the *Master card* option.
+
+Once you have turned a card into the master card, each time you open a new card it will replace the master card.
+
+> [!NOTE]
+>
+> - At any given time, there can be only one master card.
+> - This feature cannot be used in conjunction with pinning. When, in a card's hamburger menu, you select the *Master card* option, the *Pin this card* option will be disabled (and vice versa).
+
+#### Proportional card layout: Marking cards as non-closable [ID_36956]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When the card layout is set to "Proportional", you can now mark cards to non-closable. To do so, click the card's hamburger menu, and select the *Hide close button* option.
+
+> [!NOTE]
+> This feature cannot be used in conjunction with pinning. When, in a card's hamburger menu, you select the *Hide close button* option, the *Pin this card* option will be disabled (and vice versa).
+
+#### Protocols & Templates app: Editing, deleting and duplicating elements [ID_36971]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When, in the *Protocols & Templates* tab of the *Protocols & Templates* app, you right-click an element in the *Elements* column, the shortcut menu will now contain the following additional commands if you have been granted the necessary user permissions:
+
+- *Edit*: Opens a card that allows you to edit the selected element.
+- *Delete*: Deletes the selected element after you have clicked *Yes* in the confirmation box.
+- *Duplicate*: Opens a card that allows you to create a new element based on the configuration of the selected element.
+
+> [!NOTE]
+>
+> - DVE elements cannot be deleted or duplicated in the way described above. The parent element is responsible for creating or deleting such elements.
+> - It is no longer possible to create elements using a *Mediation Layer* protocol from within the *Protocols & Templates* app. Also, it is no longer possible to create new alarm templates or trend templates for *Mediation Layer* protocols.
+
+#### Alarm Console: No 'Include masked alarms' option anymore when creating a history tab [ID_37020]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When you added a new history tab in the *Alarm Console*, up to now, you could select the *Include masked alarms* option. This option has now been removed.
+
+From now on, when you select the *Include alarms* option, the masked alarms will automatically be included as well. When you select the *Include information events* option or the *Include suggestion events* option, the masked alarms will not be included.
+
+> [!NOTE]
+> When you add a new tab of type "sliding window", you will still be able to select the *Include masked alarms* option.
+
+#### Trending - Pattern matching: Pattern occurrences will now be added to a trend graph in real time [ID_37153]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+DataMiner Cube now supports pattern occurrence events. This means that occurrences of patterns that are already displayed on a trend graph will be added in real time.
+
+#### Spectrum analysis: Panning inside a spectrum window [ID_37284]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+It is now possible to pan inside a spectrum window by clicking and dragging.
+
+When, after clicking the left mouse button, you start dragging, the following will happen:
+
+- The spectrum trace will move to the left or the right while being refreshed at a rate equal to the original rate.
+- The start, stop and center frequency labels on the X axis will continuously update to reflect the ongoing change.
+- The unknown part of the trace (i.e. the frequency range located outside of the original span) will be visualized as a grey area with a grid in the background.
+
+When you stop dragging and release the left mouse button, the panning dimensions will be set on the spectrum analyzer device and the screen will be updated with the new data.
+
+Only upon releasing the left mouse button will the unknown part of the trace be requested from the spectrum analyzer. The newly received trace points will then replace the grey area and a new, uniform spectrum trace will be displayed based on the new center frequency.
+
+> [!IMPORTANT]
+> This feature is only available if the spectrum protocol includes the *Start Frequency*, *Center Frequency* and *Stop Frequency* parameters.
+
 ## Changes
 
 ### Enhancements
@@ -392,6 +464,14 @@ The proactive cap detection feature generates suggestion events for predicted da
 
 The value of the suggestion events generated for predicted (critical) alarm threshold breaches has not been changed.
 
+#### Errors or alarms will no longer be generated at startup when the DMS does not include an indexing engine [ID_36590]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+From now on, when the DataMiner System does not include an indexing engine, no run-time errors or alarms of type "Notice" will be generated for ServiceManager, TicketingManager, ResourceManager and ProfilesManager at startup.
+
+Also, when you open the *Profiles*, *Resources* or *Bookings* app in Cube, a message will now appear, saying that the DataMiner System does not include an indexing engine.
+
 #### Visual Overview: Subtract placeholder now also supports numerics [ID_36636]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
@@ -403,6 +483,48 @@ Examples:
 - Subtracting one number from another: `[Subtract:10,3]`
 
 - Subtracting multiple numbers from the first number: `[Subtract:10.1,3.3,2.6]`
+
+#### Trending - Pattern matching: Enhanced error handling and performance [ID_36772]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+A number of enhancements have been made to the pattern matching functionality, especially with regard to error handling and overall performance.
+
+#### Trending - Behavioral anomaly detection: Alarms and suggestion events will now be displayed in the language set as UI language [ID_36828] [ID_36836]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+All alarms and suggestion events generated following the detection of behavioral anomalies will now appear in the language set as UI language.
+
+#### Trending - Pattern matching: Loading indication around light bulb icon while loading time-scoped related parameters [ID_36831]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When time-scoped related parameters are being loaded in a trend graph, now the light bulb icon will be shown with rotating ring dots to indicate the ongoing loading process. Previously, the light bulb was only shown when a response had been received from the server.
+
+#### Trending - Pattern matching: Pattern occurrence values and suggestion events will now be displayed in the language set as UI language [ID_36844]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+All pattern occurrence values and pattern occurrence suggestion events displayed in the Alarm Console will now appear in the language set as UI language.
+
+#### Tooltip added for 'Edit Visio drawing' user permission [ID_37095]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+On the Users/Groups page in System Center, a tooltip has been added to the *Edit Visio drawing* user permission with the information that the *Config* right also has to be enabled for views, elements, or services for the user to be able to edit the respective assigned Visio drawing.
+
+#### Alarm templates: Style of toggle buttons has been made consistent with the styles used in the Cube themes [ID_37158]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+The style of the toggle buttons in the *Included* and *Anomalies* columns of the alarm template editor as well as in the *Templates* tab of parameter drill-down pages was not consistent with the styles used in the Cube themes. This has now been rectified.
+
+#### CefSharp package download enhancements [ID_37319]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+From now on, when DataMiner Cube has to download the CefSharp package from a DataMiner Agent, it will first try to download it via HTTPS, and if HTTPS is not configured, it will try again via HTTP.
 
 ### Fixes
 
@@ -460,6 +582,12 @@ When, in an alarm template, a suggestion event was promoted to an alarm event, i
 
 In some cases, DataMiner Cube would fail to connect to a DataMiner Agent using gRPC, especially when a large number of clients were connecting to that same agent.
 
+#### ListView column configuration data could incorrectly get replaced by default values on the Cube client [ID_36420]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When you opened a Cube session and connected to a DataMiner System running a version from 9.6.3 onwards that had an SRM license, in some cases, the ListView column configuration data fetched from the server could incorrectly get replaced by default values on the Cube client.
+
 #### DataMiner Cube desktop app: False positive warnings involving a number of DLL files [ID_36424]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
@@ -479,3 +607,41 @@ When you opened a trend graph containing related parameters, in some cases, the 
 Up to now, when a property was updated, `[property:]` placeholders in shape data fields of type *Element* or *View* would not always get resolved correctly. The only way to ensure a `[property:]` placeholder was resolved correctly after a property update was to close the card and open it again.
 
 Processing of property updates has now been improved. `[property:]` placeholders will now be resolved correctly without having to close the card and open it again.
+
+#### Trending - Pattern matching: Problem when loading multivariate pattern [ID_36863]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+<!-- For new feature included in same RN, refer to Other new features -->
+
+When you opened a trend graph for a parameter on which a specific multivariate pattern had not been created, and the subpatterns of the pattern were all for the same protocol, a problem could occur when loading all parameters for the multivariate pattern.
+
+#### DataMiner Cube: Failing to connect to a DataMiner Agent at startup when using .NET Remoting [37022]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When starting up, in some rare cases, Cube could fail to connect to a DataMiner Agent when using .NET Remoting. Moreover, any further connection attempts made within that same Cube session would also fail. Users were required to close Cube and restart it.
+
+Symptoms:
+
+- The login screen would display the following error message: `Start the DataMiner software manually or contact your system administrator.`
+- The Cube logging would contain a `Login failed.` entry mentioning `Cannot accept SOAP messages (text/xml)`.
+
+#### Trending - Pattern matching: Problem when adding and highlighting curves [ID_37174]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When, in a trend graph, you hovered over a pattern of which the instance of the curve was not equal to the instance of the pattern (which had its instancePartOfIdentity property set to false), the curve would incorrectly not be highlighted.
+
+Also, incorrect curves would be added when you clicked to load the linked patterns, and incorrect curves were highlighted when you hovered over a pattern that consisted of two subpatterns from different elements.
+
+#### Trending: Problem when editing a trend pattern on a graph other than the one on which the pattern was created [ID_37191]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When you edited a trend pattern on a trend graph, up to now, the trend data on the graph on which the pattern was created would incorrectly be used instead. From now on, the trend data in the selected part of the graph will be used.
+
+#### System Center - Database: No longer possible to create and delete database configurations in the Offload and Other tabs when Type was set to 'Database per cluster' [ID_37254]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+In the *Database* section of *System Center*, when *Type* was set to "Database per cluster" in the *General* tab, creating and deleting database configurations in the *Offload* and *Other* tabs would no longer work.

@@ -2,10 +2,10 @@
 uid: Web_apps_Main_Release_10.3.0_CU5
 ---
 
-# DataMiner web apps Main Release 10.3.0 CU5 – Preview
+# DataMiner web apps Main Release 10.3.0 CU5
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to the web applications, see [General Main Release 10.3.0 CU5](xref:General_Main_Release_10.3.0_CU5).
@@ -52,6 +52,12 @@ As a precaution against these recordings taking too much disk space, the followi
 > - Currently, the above-mentioned limits are hard-coded. However, in one of the following releases, they will become configurable.
 > - These enhancements will now prevent the following known issue from occurring: [GenIf folder takes up too much disk space](xref:KI_GenIf_Folder_Growing_In_Size).
 > - See also [Keeping a DMA from running out of disk space](xref:Keeping_a_DMA_from_running_out_of_disk_space)
+
+#### GQI - 'Get parameters for elements where' data source: columnInfo object of columns of type 'discrete' will now contain the possible values [ID_36702]
+
+<!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
+
+For each of the columns of type "discrete" in the *Get parameters for elements where* data source (InterElementAdapter), the possible values will now be available in their columnInfo object.
 
 ### Fixes
 

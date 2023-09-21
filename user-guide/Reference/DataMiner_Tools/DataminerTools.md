@@ -13,8 +13,11 @@ This section provides information on the following tools:
 - [Cassandra Clone](xref:Cassandra_Clone)
 - [Cassandra Cluster Migrator](xref:Cassandra_Cluster_Migrator)
 - [Cassandra Cluster Validator](xref:Cassandra_Cluster_Validator)
+- [Change Element States Offline](xref:Change_Element_States_Offline)
 - [Connection Check](xref:Connection_Check)
+- [Copy Element Data](xref:Copy_Element_Data)
 - [DataMiner Comparison tool](xref:DataMinerComparisonTool)
+- [DataMiner Ping Monitoring tool](xref:PingMonitoring)
 - [DataMiner Size tool](xref:DataMinerSizeTool)
 - [DataMiner Taskbar Utility](xref:DataMiner_Taskbar_Utility)
 - [Dump Spectrum Preset Content](xref:Dump_Spectrum_Preset_Content)
@@ -23,6 +26,7 @@ This section provides information on the following tools:
 - [Legacy trend data exporter](xref:Legacy_Trend_Data_Exporter)
 - [Multi-threaded timer polling rate calculator](xref:Multi_Threaded_Timer_Polling_Rate_Calculator)
 - [Protocol debug tools](xref:Protocol_Debug_Tools)
+- [Skyline Device Simulator](xref:TOOQASNMPSimulator)
 - [SLLogCollector](xref:SLLogCollector)
 - [SLNetClientTest tool](xref:SLNetClientTest_tool)
 - [SLOffload tool](xref:SLOffload_tool)
@@ -44,4 +48,3 @@ This section provides information on the following tools:
 >
 > - [DataMiner Development Tools](xref:TOOLS)
 > - [DataMiner maintenance tools](xref:DMS_maintenance_tools)
-> - <https://community.dataminer.services/documentation/category/resources/tools/>
