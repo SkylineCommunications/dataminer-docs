@@ -6,6 +6,10 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 21 September 2023 - Fix - CoreGateway 2.13.1 - Resolved memory leak [ID_37393]
+
+A memory leak introduced in CoreGateway 2.13.0 has been resolved.
+
 #### 20 September 2023 - Enhancement - Admin app - Nodes page responsiveness improved [ID_37403]
 
 Performance has improved when node and DxM information is retrieved on the *Nodes* page of a DataMiner System in the Admin app.
