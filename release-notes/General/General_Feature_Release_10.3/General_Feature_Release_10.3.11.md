@@ -203,3 +203,9 @@ When you took a DataMiner backup either via Cube or via the Taskbar Utility, the
 <!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
 
 An error could occur in the SLAnalytics process due to some features not starting up correctly.
+
+#### Problem with SLAnalytics when fetching protocol information while creating a multivariate pattern [ID_37366]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+In some cases, SLAnalytics could throw an exception when fetching protocol information while creating a multivariate pattern.

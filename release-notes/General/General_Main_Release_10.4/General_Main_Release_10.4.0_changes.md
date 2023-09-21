@@ -640,3 +640,9 @@ When settings inside the `<LDAP>` element of the *DataMiner.xml* file were updat
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
 Up to now, the MessageHandler method in SLHelperTypes.SLHelper would incorrectly try to serialize exceptions that could not be serialized, causing other exceptions to be thrown.
+
+#### Problem with SLAnalytics when fetching protocol information while creating a multivariate pattern [ID_37366]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+In some cases, SLAnalytics could throw an exception when fetching protocol information while creating a multivariate pattern.
