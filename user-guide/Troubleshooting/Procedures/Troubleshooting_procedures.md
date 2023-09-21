@@ -16,4 +16,6 @@ uid: Troubleshooting_procedures
 
 - ['Sharing dashboard' window does not disappear](xref:Sharing_dashboard_window_does_not_disappear)
 
+- [Troubleshooting SAML issues](xref:Troubleshooting_SAML_Issues)
+
 - [Manually removing old alarms from an Elasticsearch cluster](xref:Manually_removing_old_alarms_from_ES)
