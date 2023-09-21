@@ -79,7 +79,7 @@ A number of security enhancements have been made.
 
 #### NATSCustodian: Enhanced behavior when detecting unreachable NATS nodes [ID_37271]
 
-<!-- MR 10.4.0 - FR 10.3.11 -->
+<!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
 
 From now on, when *NATSCustodian* detects unreachable NATS nodes in the cluster, it will no longer generate any alarms, nor will it reset the NATS configuration. It will only add an entry to the *NATSCustodian.txt* log file for diagnostic purposes.
 
