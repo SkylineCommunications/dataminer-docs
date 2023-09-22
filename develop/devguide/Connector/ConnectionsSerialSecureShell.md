@@ -25,22 +25,21 @@ The specification of the SSH protocol (version 2) can be found in the following 
 There are two methods of authentication when establishing an SSH connection:
 
 1. **Password Authentication**:
-   The protocol provides a username and password to the remote SSH server for verification.
-1. **Public Key Authentication**:
-   The protocol provides a digital signature created with a private key,
-   and the server verifies it using the matching public key.
 
-Apart from the specification of the connection credentials, the protocol is the same as any other serial driver
-that does not use SSH (e.g. the use of headers, trailers and timeout time for responses are supported).
+   The protocol provides a username and password to the remote SSH server for verification.
+
+1. **Public Key Authentication**:
+
+   The protocol provides a digital signature created with a private key, and the server verifies it using the matching public key.
+
+Apart from the specification of the connection credentials, the protocol is the same as any other serial protocol that does not use SSH (e.g. the use of headers, trailers, and timeout time for responses are supported).
 
 > [!TIP]
-> Typically, both methods of authentication are implemented in a protocol to give the user the choice how to connect.
-> When both methods are configured, public key authentication has precedence over password authentication, 
-> as this is considered more secure.
+> Typically, both methods of authentication are implemented in a protocol to give the user the choice how to connect. When both methods are configured, public key authentication has precedence over password authentication, as this is considered more secure.
 
-### Password Authentication
+### Password authentication
 
-This method requires two parameters to be created, one to hold the username and the other to hold the password.
+For this method, two parameters need to be created: one to hold the username and the other to hold the password.
 
 Accompanying write parameters can be added so the credentials can be entered from the element.
 
@@ -166,13 +165,14 @@ The two parameters also need to be defined in the port settings.
     </SSH>
 </PortSettings>
 ```
+
 The connection is then established by DataMiner, provided the correct username and password are filled in.
 
 ### Public key authentication
 
-This method requires a parameter to be created to hold the path to the private key file.
-The content of this parameter should be formatted like this:
-```key=C:\Users\User\.ssh\my_key_rsa```
+For this method, a parameter needs to be created to hold the path to the private key file.
+
+The content of this parameter should be formatted like this: ```key=C:\Users\User\.ssh\my_key_rsa```
 
 > [!NOTE]
 > If the private key is protected by a passphrase, it must be appended to the file path, separated by a semicolon.
@@ -190,7 +190,9 @@ The content of this parameter should be formatted like this:
     </Interprete>
 </Param>
 ```
+
 This parameter also needs to be defined in the port settings.
+
 ```xml
 <PortSettings name="SSH Connection">
     <IPport>
@@ -210,13 +212,12 @@ This parameter also needs to be defined in the port settings.
     </SSH>
 </PortSettings>
 ```
-The connection is then established by DataMiner, 
-provided the parameter holds the private key and passphrase.
+
+The connection is then established by DataMiner, provided the parameter holds the private key and passphrase.
 
 #### Remarks
-- Once authentication is successful, 
-  the socket timeout is set to zero (no timeout) 
-  to prevent the connection being closed when no activity occurred on the SSH connection for *timeoutTime* ms (RN 3303).
+
+Once authentication is successful, the socket timeout is set to zero (no timeout) to keep the connection from being closed when no activity occurs on the SSH connection for *timeoutTime* ms (RN 3303).
 
 ## Differences with serial communication
 
@@ -229,12 +230,9 @@ There are a number of differences between implementing serial communication and 
 
 ## Selecting a local port
 
-Up to DataMiner 7.0.3, 
-DataMiner uses the same SSH connection if the polling IP is the same (RN 3859), which can cause problems. 
-A workaround is to specify a different local IP port in the element wizard.
+Up to DataMiner 7.0.3, DataMiner uses the same SSH connection if the polling IP is the same (RN 3859), which can cause problems. A workaround is to specify a different local IP port in the element wizard.
 
-By default, it is not possible to change the local IP port in the element wizard. 
-Therefore you need to define the following in the protocol:
+By default, it is not possible to change the local IP port in the element wizard. You therefore need to define the following in the protocol:
 
 ```xml
 <PortSettings>
@@ -270,9 +268,7 @@ A dedicated log file is used for the SSH connections: "SLSSH.txt". Standard logg
 - Write Exception
 - WriteLine Exception
 
-More logging can be obtained by creating a file with the name "SLSSHExt.txt". 
-This will activate extended logging and DataMiner will then write additional information regarding the beginning and end of reads/writes
-and what data is written/read to this log file.
+More logging can be obtained by creating a file with the name "SLSSHExt.txt". This will activate extended logging and DataMiner will then write additional information regarding the beginning and end of reads/writes and what data is written/read to this log file.
 
 > [!CAUTION]
 > Extended logging uses a lot of memory, so do not keep this running if it is not needed.
@@ -354,8 +350,7 @@ DataMiner will propose the following hash-based message authentication algorithm
 
 ## Selecting the key exchange algorithm
 
-From DataMiner 9.5.1 (RN 13897) onwards,
-it is possible to specify the key exchange algorithm to be used when connecting to an SSH server.
+From DataMiner 9.5.1 (RN 13897) onwards, it is possible to specify the key exchange algorithm to be used when connecting to an SSH server.
 
 You can do so by defining a serial connection that specifies the key exchange algorithm in the KexAlgorithms tag.
 
@@ -373,8 +368,7 @@ You can do so by defining a serial connection that specifies the key exchange al
 
 ## SCP/SFTP
 
-When SCP or SFTP needs to be implemented in a protocol, it is advisable to reference the SSH.NET library in a QAction. 
-See https://github.com/sshnet/SSH.NET.
+When you need to implement SCP or SFTP in a protocol, we recommend referencing the SSH.NET library in a QAction. See <https://github.com/sshnet/SSH.NET>.
 
 ### See also
 
