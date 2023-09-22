@@ -53,6 +53,10 @@ As the KPI values in the EPM I-DOCSIS documentation did not fully align with the
 - Ping Unreachable KPIs have been integrated in Visual Overview
 - The EPM I-DOCSIS documentation has been updated.
 
+#### Skyline EPM Platform data pages adjusted [ID_37418]
+
+To address differences between the data pages of the Skyline EPM Platform and the topology overview, these data pages have now been adjusted. Under *DATA*, you can now find the Network Overview page, while under *BELOW THIS NETWORK*, you will find the Market Overview.
+
 ### Fixes
 
 #### Incorrect modulation value in DS QAM Channel dashboard [ID_37135]
