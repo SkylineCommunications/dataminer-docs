@@ -47,11 +47,11 @@ The impacted changes listed here are grouped based on the change that is impleme
 - [Change parameter description](xref:ChangeParameterDescription)
 - [Change parameter ID](xref:ChangeParameterID)
 - [Change parameter discreet and/or exception](xref:ChangeParameterDiscreetException)
-- Change Parameter Interprete
-- Change Parameter Range
-- Change Matrix Parameter Size
-- Changing Alarming and/or Trending
-- Remove Parameter
+- [Change parameter Interprete](xref:ChangeParameterInterprete)
+- [Change parameter range](xref:ChangeParameterRange)
+- [Change matrix parameter size](xref:ChangeMatrixParameterSize)
+- [Change alarm monitoring and/or trending](xref:ChangeAlarmMonitoringTrending)
+- [Remove parameter](xref:RemoveParameter)
 
 ### Table parameter changes
 

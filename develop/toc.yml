@@ -46,6 +46,16 @@ items:
                         topicUid: ChangeParameterID
                       - name: Change parameter discreet and/or exception
                         topicUid: ChangeParameterDiscreetException
+                      - name: Change parameter Interprete
+                        topicUid: ChangeParameterInterprete
+                      - name: Change parameter range
+                        topicUid: ChangeParameterRange
+                      - name: Change matrix parameter size
+                        topicUid: ChangeMatrixParameterSize
+                      - name: Change alarm monitoring and/or trending
+                        topicUid: ChangeAlarmMonitoringTrending
+                      - name: Remove parameter
+                        topicUid: RemoveParameter
               - name: Logic
                 topicUid: Logic
                 items:
