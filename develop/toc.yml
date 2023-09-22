@@ -17,6 +17,18 @@ items:
                     topicUid: ProtocolVersionSemantics
                   - name: Impact of protocol version changes
                     topicUid: ImpactOfProtocolVersionChanges
+                    items:
+                    - name: Protocol changes
+                      topicUid: ChangeDCF
+                      items:
+                      - name: Change DCF
+                        topicUid: ChangeDCF
+                      - name: Change Unicode
+                        topicUid: ChangeUnicode
+                      - name: Change connection(s)
+                        topicUid: ChangeConnections
+                      - name: Change layout
+                        topicUid: ChangeLayout
               - name: Logic
                 topicUid: Logic
                 items:

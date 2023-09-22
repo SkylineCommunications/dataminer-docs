@@ -33,10 +33,10 @@ The impacted changes listed here are grouped based on the change that is impleme
 
 ### Protocol changes
 
-- Change DCF
-- Change Unicode
-- Change Connection(s)
-- Change Layout
+- [Change DCF](xref:ChangeDCF)
+- [Change Unicode](xref:ChangeUnicode)
+- [Change connection(s)](xref:ChangeConnections)
+- [Change layout](xref:ChangeLayout)
 - Change Exported Protocol Name (DVE)
 - Change Page Name
 - Change Minimum Required DMA Version
