@@ -34,7 +34,7 @@ There are two methods of authentication when establishing an SSH connection:
 
 Apart from the specification of the connection credentials, the protocol is the same as any other serial protocol that does not use SSH (e.g. the use of headers, trailers, and timeout time for responses are supported).
 
-> [!TIP]
+> [!NOTE]
 > Typically, both methods of authentication are implemented in a protocol to give the user the choice how to connect. When both methods are configured, public key authentication has precedence over password authentication, as this is considered more secure.
 
 ### Password authentication
@@ -175,8 +175,7 @@ For this method, a parameter needs to be created to hold the path to the private
 The content of this parameter should be formatted like this: ```key=C:\Users\User\.ssh\my_key_rsa```
 
 > [!NOTE]
-> If the private key is protected by a passphrase, it must be appended to the file path, separated by a semicolon.
-> It should be formatted like this: ```key=C:\Users\User\.ssh\my_key_rsa;pass=passphrase```
+> If the private key is protected by a passphrase, it must be appended to the file path, separated by a semicolon. It should be formatted like this: ```key=C:\Users\User\.ssh\my_key_rsa;pass=passphrase```
 
 ```xml
 <Param id="1200" trending="false" save="true">
