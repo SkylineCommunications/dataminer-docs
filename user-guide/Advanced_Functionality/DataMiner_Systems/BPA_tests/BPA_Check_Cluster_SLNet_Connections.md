@@ -49,7 +49,7 @@ The detailed JSON output of the BPA may contain the following possible messages,
 
 - Could not determine which connection is used to these agents: X (where X is the summary of the regarding agents).
 
-- Did not check the ports of other agents because it did not knew other agents..
+- Did not check the ports of other agents because it did not knew other agents.
 
 - Did not ICMP ping other agents because it did not knew others.
 
