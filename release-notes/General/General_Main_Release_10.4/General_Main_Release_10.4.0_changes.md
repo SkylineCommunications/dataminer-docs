@@ -483,6 +483,18 @@ Because of a number of enhancements, overall performance has increased when usin
 > [!IMPORTANT]
 > For the properties that should be taken into account, the option *Update alarms on value changed* must be selected. For more information, see [Configuration of incident tracking based on properties](xref:Automatic_incident_tracking#configuration-of-incident-tracking-based-on-properties).
 
+#### SLLogCollector now collects information regarding the IIS configuration [ID_37273]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+SLLogCollector packages now include information regarding the IIS configuration:
+
+| Folder              | Information                                           |
+|---------------------|-------------------------------------------------------|
+| IIS                 | The IIS configuration                                 |
+| Network Information | Information regarding the SSL certificate on port 443 |
+| SSL Cert            | The SSL certificate for port 443                      |
+
 ### Fixes
 
 #### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID_34981]
