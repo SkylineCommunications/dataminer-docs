@@ -4,7 +4,7 @@ uid: Protocol.PortSettings.SSH.Credentials.Username
 
 # Username element
 
-Specifies the user name.
+Specifies the username.
 
 ## Parent
 
@@ -12,6 +12,6 @@ Specifies the user name.
 
 ## Attributes
 
-|Name|Type|Required|Description|
-|--- |--- |--- |--- |
-|[pid](xref:Protocol.PortSettings.SSH.Credentials.Username-pid)|unsignedInt|Yes|Specifies the ID of the parameter that holds the user name.|
+| Name                                                           | Type        | Required | Description                                                 |
+|----------------------------------------------------------------|-------------|----------|-------------------------------------------------------------|
+| [pid](xref:Protocol.PortSettings.SSH.Credentials.Username-pid) | unsignedInt | Yes      | Specifies the ID of the parameter that holds the username.  |
