@@ -56,6 +56,11 @@ items:
                         topicUid: ChangeAlarmMonitoringTrending
                       - name: Remove parameter
                         topicUid: RemoveParameter
+                    - name: Table parameter changes
+                      topicUid: ChangePrimaryKey
+                      items:
+                      - name: Change primary key
+                        topicUid: ChangePrimaryKey
               - name: Logic
                 topicUid: Logic
                 items:

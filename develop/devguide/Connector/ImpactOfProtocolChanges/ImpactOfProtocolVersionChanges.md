@@ -55,7 +55,7 @@ The impacted changes listed here are grouped based on the change that is impleme
 
 ### Table parameter changes
 
-- Change Primary Key
+- [Change Primary Key](xref:ChangePrimaryKey)
 - Change Display Key [PENDING]
 - Replace displayColumn by naming [PENDING]
 - Change to Partial Table [PENDING]
