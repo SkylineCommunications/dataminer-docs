@@ -19,9 +19,10 @@ uid: Installing_Ping_Monitoring
   > We recommend using Generic Ping version 3.1.2.11 or higher. See [Deploying a DataMiner connector to your system](xref:Deploying_A_DataMiner_Connector_to_your_system).
 
 - At least one Generic Ping element within your DMS that is configured with one or multiple destinations
+
   > [!IMPORTANT]
-  > The DataMiner Ping Monitoring will only recognize Generic Ping elements using the 'Production version'. See [Promoting a protocol to production version](xref:Promoting_a_protocol_version_to_production_version)
-  
+  > The DataMiner Ping Monitoring tool will only recognize Generic Ping elements using the production version of the connector. See [Promoting a protocol to production version](xref:Promoting_a_protocol_version_to_production_version)
+
   > [!TIP]
   >
   > - For more information about configuring destinations, consult the [Generic Ping connector help](https://catalog.dataminer.services/result/driver/530).
