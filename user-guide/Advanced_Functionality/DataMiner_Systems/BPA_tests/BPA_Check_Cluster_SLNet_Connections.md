@@ -49,6 +49,8 @@ The detailed JSON output of the BPA may contain the following possible messages,
 
 - Could not determine which connection is used to these agents: X (where X is the summary of the regarding agents).
 
+- The ports are closed on these agents (but could not resolve connection type): X (where X is the summary of the regarding agents and the port)
+
 - Did not check the ports of other agents because it did not knew other agents.
 
 - Did not ICMP ping other agents because it did not knew others.
