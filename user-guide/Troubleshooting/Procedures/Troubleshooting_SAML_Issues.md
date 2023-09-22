@@ -10,13 +10,13 @@ When dealing with SAML-related issues, follow the steps listed on this page and 
 
 When you encounter SAML issues, investigate the logs detailed below, in the specified order:
 
-1. SLSAML.txt: *C:\Skyline DataMiner\logging\SLSAML.txt*
+1. SLSAML.txt: `C:\Skyline DataMiner\logging\SLSAML.txt`
 
-1. [SLNet.txt](xref:DataMiner_processes#slnet): *C:\Skyline DataMiner\logging\SLNet.txt*
+1. [SLNet.txt](xref:DataMiner_processes#slnet): `C:\Skyline DataMiner\logging\SLNet.txt`
 
 1. [Cube logging](xref:Cube_logging): *DataMiner Cube > Apps > System Center > Logging > cube*
 
-1. [SLDataMiner.txt](xref:DataMiner_processes#sldataminer): *C:\Skyline DataMiner\logging\SLDataMiner.txt*
+1. [SLDataMiner.txt](xref:DataMiner_processes#sldataminer): `C:\Skyline DataMiner\logging\SLDataMiner.txt`
 
 ## Troubleshooting
 
@@ -43,11 +43,9 @@ You may encounter an issue where the expected redirection to the identity provid
 
 If you are accessing your DMA via the web, check if the user credential boxes are visible during the login process. If they are visible, this suggests the external authentication is not in use.
 
-![Credentials](~/user-guide/images/Credentials_Login.png)
-
 If the external authentication is working properly, you will get the option to log in via identity provider.
 
-![Identity Provider](~/user-guide/images/Identity_Provider_Login.png)
+![Logging in via identity provider](~/user-guide/images/Logging_In_SAML.png)<br/>*DataMiner version 10.3.10*
 
 #### The password field is filled in
 
@@ -97,11 +95,19 @@ The SAML attribute names must always match those in the IDP and the *DataMiner.x
 
 1. If issues persist, use the *SAML-tracer* tool, a browser extension that captures SAML traffic.
 
-   1. In the Chrome web browser, add the [SAML-tracer extension](https://chrome.google.com/webstore/detail/saml-tracer/mpdajninpobndbfcldcmbpnnbhibjmch).
+   1. In your browser, add the SAML-tracer extension ([Chrome](https://chrome.google.com/webstore/detail/saml-tracer/mpdajninpobndbfcldcmbpnnbhibjmch), [Firefox](https://addons.mozilla.org/nl/firefox/addon/saml-tracer/)).
 
    1. Go to `http(s)://[DMA name]/`.
 
-   1. Click any received SAML response marked with an orange bubble labeled "SAML". Select this from the list and click *SAML* in the bottom window. Compare attribute names in the response to those in the IDP and the *Dataminer.xml* file.
+   1. Click the puzzle icon in the top-right corner of your browser and select *SAML-tracer* from the list of available extensions.
+
+   1. Click any received SAML response marked with an orange bubble labeled "SAML".
+
+      ![SAML-tracer](~/user-guide/images/SAML_Tracer.png)
+
+   1. In the pane on the bottom, select *SAML*. Now compare the attribute names in the response to those in the IDP and the *Dataminer.xml* file.
+
+      ![SAML-tracer tabs](~/user-guide/images/SAML_Tracer_Tabs.png)
 
 ### Other frequent issues
 
