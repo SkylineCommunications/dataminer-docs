@@ -89,6 +89,18 @@ NATSCustodian will only reset the NATS configuration when it detects
 - that NATS nodes have been deleted, or
 - when NATS is in an incorrect state.
 
+#### SLLogCollector now collects information regarding the IIS configuration [ID_37273]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+SLLogCollector packages now include information regarding the IIS configuration:
+
+| Folder              | Information                                           |
+|---------------------|-------------------------------------------------------|
+| IIS                 | The IIS configuration                                 |
+| Network Information | Information regarding the SSL certificate on port 443 |
+| SSL Cert            | The SSL certificate for port 443                      |
+
 #### SLAnalytics - Trend predictions: Enhanced trend prediction models [ID_37280]
 
 <!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
