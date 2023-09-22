@@ -44,9 +44,9 @@ The impacted changes listed here are grouped based on the change that is impleme
 
 ### Parameter changes
 
-- Change Parameter Description
-- Change Parameter ID
-- Change Parameter Discreet/Exception
+- [Change parameter description](xref:ChangeParameterDescription)
+- [Change parameter ID](xref:ChangeParameterID)
+- [Change parameter discreet and/or exception](xref:ChangeParameterDiscreetException)
 - Change Parameter Interprete
 - Change Parameter Range
 - Change Matrix Parameter Size

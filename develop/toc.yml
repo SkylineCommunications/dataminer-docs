@@ -37,6 +37,15 @@ items:
                         topicUid: ChangeMinimumRequiredDMAVersion
                       - name: Change protocol name
                         topicUid: ChangeProtocolName
+                    - name: Parameter changes
+                      topicUid: ChangeParameterDescription
+                      items:
+                      - name: Change parameter description
+                        topicUid: ChangeParameterDescription
+                      - name: Change parameter ID
+                        topicUid: ChangeParameterID
+                      - name: Change parameter discreet and/or exception
+                        topicUid: ChangeParameterDiscreetException
               - name: Logic
                 topicUid: Logic
                 items:
@@ -5393,7 +5402,7 @@ items:
           - name: Viewing test results
             topicUid: Viewing_test_results
       - name: Third-party Tools
-        uid: ThirdPartyTools
+        topicUid: ThirdPartyTools
         items:
           - name: DataStax DevCenter
             topicUid: DataStax_DevCenter
