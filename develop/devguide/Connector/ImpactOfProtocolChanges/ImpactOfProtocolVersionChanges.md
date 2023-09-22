@@ -37,10 +37,10 @@ The impacted changes listed here are grouped based on the change that is impleme
 - [Change Unicode](xref:ChangeUnicode)
 - [Change connection(s)](xref:ChangeConnections)
 - [Change layout](xref:ChangeLayout)
-- Change Exported Protocol Name (DVE)
-- Change Page Name
-- Change Minimum Required DMA Version
-- Change Protocol Name
+- [Change Exported Protocol Name (DVE)](xref:ChangeExportedProtocolName)
+- [Change Page Name](xref:ChangePageName)
+- [Change Minimum Required DMA Version](xref:ChangeMinimumRequiredDMAVersion)
+- [Change Protocol Name](xref:ChangeProtocolName)
 
 ### Parameter changes
 

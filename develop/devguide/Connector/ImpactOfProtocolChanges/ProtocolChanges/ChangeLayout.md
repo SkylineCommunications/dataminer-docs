@@ -13,8 +13,10 @@ This includes changing the page ordering and/or parameter positioning.
 A user that was used to work with a certain layout may no longer be able to work with the new layout.
 
 DIS MCC
-Full ID	Error message	Description
-2.22.1	RemovedFromPage	Param '{paramPid}' was removed from page '{pageName}'.
+
+| Full ID | Error message | Description |
+|---------|---------------|-------------|
+| 2.22.1  | RemovedFromPage | Param '{paramPid}' was removed from page '{pageName}'. |
 
 ## Workarounds
 

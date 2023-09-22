@@ -29,6 +29,14 @@ items:
                         topicUid: ChangeConnections
                       - name: Change layout
                         topicUid: ChangeLayout
+                      - name: Change exported protocol name (DVE)
+                        topicUid: ChangeExportedProtocolName
+                      - name: Change page name
+                        topicUid: ChangePageName
+                      - name: Change minimum required DMA version
+                        topicUid: ChangeMinimumRequiredDMAVersion
+                      - name: Change protocol name
+                        topicUid: ChangeProtocolName
               - name: Logic
                 topicUid: Logic
                 items:
