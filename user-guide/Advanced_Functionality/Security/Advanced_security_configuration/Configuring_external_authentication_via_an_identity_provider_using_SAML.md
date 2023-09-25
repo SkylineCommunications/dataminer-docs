@@ -6,7 +6,22 @@ uid: Configuring_external_authentication_via_an_identity_provider_using_SAML
 
 From DataMiner 9.6.11 onwards, it is possible to configure external authentication via an identity provider service using SAML (Security Assertion Markup Language).
 
-For this to be possible, a trust relationship must be established between the service provider (i.e. DataMiner) and the identity provider. This is done by exchanging SAML metadata files. The following metadata must be shared between the service provider (i.e. DataMiner) and the Identity Provider service: Entity ID, Cryptographic Keys, Protocol Endpoints (bindings, locations).
+## Requirements
+
+- DataMiner integrates with **identity providers using version 2.0 of the SAML protocol**. Compatibility with older SAML versions is not supported.
+
+- The identity provider must support **Redirect binding** for communication between the service provider and the identity provider. Most SAML identity providers support Redirect binding by default.
+
+- DataMiner uses service provider-initiated **Single Sign-On (SSO)** through Redirect binding. It does not support the use of POST or SOAP binding for requests. However, standard POST binding is used for responses.
+
+  > [!TIP]
+  > For a comprehensive understanding of the SAML process, including the encoding and encryption guidelines that DataMiner follows, refer to the official SAML Documentation: [SAML Technical Overview](http://docs.oasis-open.org/security/saml/Post2.0/sstc-saml-tech-overview-2.0-cd-02.html#5.1.2.SP-Initiated%20SSO:%20%20Redirect/POST%20Bindings|outline).
+
+## Establishing a trust relationship between the service provider and identity provider
+
+To configure external authentication via an identity provider service using SAML, a trust relationship must be established between the service provider (i.e. DataMiner) and the identity provider. This is done by exchanging SAML metadata files.
+
+The following metadata must be shared between the service provider (i.e. DataMiner) and the Identity Provider service: Entity ID, Cryptographic Keys, Protocol Endpoints (bindings, locations).
 
 > [!TIP]
 > See also: [Troubleshooting SAML issues](xref:Troubleshooting_SAML_Issues)
@@ -55,7 +70,7 @@ Once this has been configured, if users try to log in to the DMA using external 
 > [!TIP]
 > See also: [Authenticating Azure AD Users on DataMiner with SAML](https://community.dataminer.services/video/authenticating-azure-ad-users-on-dataminer-with-saml/) in the Dojo video library ![Video](~/user-guide/images/video_Duo.png)
 
-## Creating a DataMiner metadata file
+### Creating a DataMiner metadata file
 
 To create a DataMiner metadata file (also referred to as *Service Provider Metadata*), proceed as follows:
 
@@ -106,7 +121,7 @@ To create a DataMiner metadata file (also referred to as *Service Provider Metad
 > [!IMPORTANT]
 > From DataMiner 10.3.4/10.4.0 onwards, ``WantAssertionsSigned`` **must** be set to *true*.
 
-## Additional configuration for systems connected to dataminer.services
+### Additional configuration for systems connected to dataminer.services
 
 When your DataMiner System is connected to dataminer.services, the following additional configuration is required for both the *spMetadata.xml* file and the identity provider:
 
