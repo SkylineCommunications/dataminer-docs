@@ -43,18 +43,19 @@ Another way to define a display key using naming is by using the NamingFormat ta
 
 ```xml
 <Param id="2000" trending="false">
-  <Name>Transport Streams</Name>
+  <Name>TransportStreams</Name>
   <Description>Transport Streams</Description>
   <Type>array</Type>
   <ArrayOptions index="0">
-     <NamingFormat><![CDATA[;Input;1005;TS;2004]]></NamingFormat>
-     <ColumnOption idx="0" pid="2001" type="retrieved" options="" />
-        <ColumnOption idx="1" pid="2002" type="retrieved" options=";save;foreignKey=1000" />
-        <ColumnOption idx="2" pid="2003" type="retrieved" options=";save" />
-        <ColumnOption idx="3" pid="2004" type="retrieved" options=";save" />
-        ...
-        <ColumnOption idx="71" pid="2899" type="displaykey" options="" />
+    <NamingFormat><![CDATA[;Input;1005;TS;2004]]></NamingFormat>
+    <ColumnOption idx="0" pid="2001" type="retrieved" options="" />
+    <ColumnOption idx="1" pid="2002" type="retrieved" options=";save;foreignKey=1000" />
+    <ColumnOption idx="2" pid="2003" type="retrieved" options=";save" />
+    <ColumnOption idx="3" pid="2004" type="retrieved" options=";save" />
+    ...
+    <ColumnOption idx="71" pid="2899" type="displaykey" options="" />
   </ArrayOptions>
+</Param>
 ```
 
 The first character defines the separator and can be freely chosen. It will be replaced by an empty string when the display key is formed. The use of the CDATA block allows the use of characters like “<”, “>” and “&” that are otherwise encoded in XML.
@@ -70,10 +71,11 @@ Naming can be used to define a display key for a table. The example below define
   <Name>PIDs</Name>
   <Description>PIDs</Description>
   <Type>array</Type>
-  <ArrayOptions index="0">
-     <ArrayOptions index="0" options=";naming=/1002,2004,3002" >
-        <ColumnOption idx="0" pid="3001" type="retrieved" options="" />
-        <ColumnOption idx="1" pid="3002" type="retrieved" options="" />
+  <ArrayOptions index="0" options=";naming=/1002,2004,3002" >
+    <ColumnOption idx="0" pid="3001" type="retrieved" options="" />
+    <ColumnOption idx="1" pid="3002" type="retrieved" options="" />
+  </ArrayOptions>
+</Param>
 ```
 
 The naming option defines the separator ("/"), followed by a comma-separated list of column parameter IDs, which together make up a unique label for a row.
