@@ -14,7 +14,7 @@ This tutorial shows you how to soft-delete and permanently delete an enum entry 
 - [Step 4: Remove the enum entry from the DOM definition](#step-4-remove-the-enum-entry-from-the-dom-definition)
 
 The soft-delete option on an enum entry hides that entry to users. That way users are unable to create more DOM instances using that entry. Later on the entry can be completely removed.
-If the entry is used by a DOM instance, that value needs to be removed from those instances before removing the entry from the definition. If that enum entry is not used, it can immediately removed (see [Step 4: Remove the enum entry from the DOM definition](#step-4-remove-the-enum-entry-from-the-dom-definition)).
+If the entry is used by a DOM instance, that value needs to be removed from those instances before removing the entry from the definition. If that enum entry is not used, it can immediately be removed (see [Step 4: Remove the enum entry from the DOM definition](#step-4-remove-the-enum-entry-from-the-dom-definition)).
 
 ## Step 1: Setup DOM
 
