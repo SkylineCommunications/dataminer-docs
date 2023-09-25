@@ -33,6 +33,8 @@ This troubleshooting section addresses the following common SAML issues:
 
 - [Other frequent issues](#other-frequent-issues)
 
+- [Error messages](#error-messages)
+
 ### Partial setup
 
 Partial setups are not compatible with SAML. Ensure that all settings are correctly configured for both DataMiner and the identity provider before attempting to log in. See [Configuring external authentication via an identity provider using SAML](xref:Configuring_external_authentication_via_an_identity_provider_using_SAML).
@@ -126,3 +128,57 @@ Here are some other common SAML-related issues:
   - Ensure that the username is always an email address.
 
   - In [Azure setups](xref:Configuring_external_authentication_via_an_identity_provider_using_SAML#identity-providers), missing email field values can cause problems, even though the default username is an email.
+
+### Error messages
+
+#### General errors
+
+Object reference not set to an instance of an object.
+
+- Application: Cube
+- Cause: Incorrect or unexpected data in *spMetadata.xml*.
+
+Failed to build External Authentication for SAML. System.ArgumentException: An entry with the same key already exists.
+
+- Application: Cube/Alarm Console
+- Cause: In *spMetadata.xml*, the index attribute per AssertionConsumerService endpoint must be unique. Make sure all index values are unique.
+
+Cannot connect to the DMA; exception trapped: Failed getting the user info (empty response).
+
+- Application: Web apps
+- Cause: Incorrect or unexpected data in *spMetadata.xml*.
+
+Expected one and only one default assertion consumer service endpoint.
+
+- Application: Web apps
+- Cause: In *spMetadata.xml*, none of the Assertion Consumer Service URLs are marked as the default URL. Typically, the /root URL is marked as the default URL.
+
+Assertion consumer service \<URL> was not found.
+
+- Application: Web apps
+- Cause: The Assertion Consumer Service URL is spelled incorrectly or cannot be found in *spMetadata.xml*.
+
+### Azure AD errors
+
+AADSTS50011: The reply URL specified in the request does not match the reply URLs configured for the application: '\<ID>'.
+
+- Application: Cube
+- Cause: The URL marked as default URL is either missing or spelled differently in the app registration form.
+
+AADSTS50011: The reply URL specified in the request does not match the reply URLs configured for the application: '\<ID>'.
+
+- Application: Web apps
+- Cause: The reply URL of a specific web app is either missing or spelled differently in the app registration form.
+
+AADSTS500113: No reply address is registered for the application.
+
+- Application: Web apps
+- Cause: No reply URL is specified in the app registration form.
+
+AADSTS650056: Misconfigured application. This could be due to one of the following: the client has not listed any permissions for 'AAD Graph' in the requested permissions in the client's application registration. Or, the admin has not consented in the tenant. Or, check the application identifier in the request to ensure it matches the configured client application identifier. Or, check the certificate in the request to ensure it's valid. Please contact your admin to fix the configuration or consent on behalf of the tenant. Client app ID: \<ID>.
+
+- Cause: The required API permissions are missing in the app registration form.
+
+AADSTS700016: Application with identifier '\<ID>' was not found in the directory '\<ID>'. This can happen if the application has not been installed by the administrator of the tenant or consented to by any user in the tenant. You may have sent your authentication request to the wrong tenant.
+
+- Cause: Entity ID incorrect or not found.
