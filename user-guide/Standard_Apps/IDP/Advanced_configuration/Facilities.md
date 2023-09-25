@@ -18,8 +18,8 @@ If one or more devices in the overview table are selected, additional options be
 
 - **Auto Assign**: Launches a script to automatically assign the selected devices to a rack.
 
-    > [!NOTE]
-    > If one of the selected devices has a CI Type for which auto rack assignment is not enabled, the wizard will indicate that automatic assignment is not possible for this element. In that case, the wizard will not be able to perform the automatic assignment for any of the selected elements. As such, you will need to close the wizard and either make a selection that does not include the element in question, or make sure automatic rack assignment is possible for the element before running the wizard again.
+  > [!NOTE]
+  > If one of the selected devices has a CI Type for which auto rack assignment is not enabled, the wizard will indicate that automatic assignment is not possible for this element. In that case, the wizard will not be able to perform the automatic assignment for any of the selected elements. As such, you will need to close the wizard and either make a selection that does not include the element in question, or make sure automatic rack assignment is possible for the element before running the wizard again.
 
 **Remove**: Removes the selected devices from the rack they are currently assigned to.
 
@@ -53,7 +53,7 @@ This page displays an overview of all levels of facility management and all loca
 
   - Change the parent structure of any item below the highest level. To do so, click the *Edit* button in the editor to enter edit mode, and then specify the location, building, etc. where the item belongs. After you have clicked the *Edit* button, you can also click the *View* button to switch back to the previous mode and only modify the details related to the item.
 
-      > [!NOTE]
-      > If you select a different parent level for an item, the wizard will check if that level already contains an item with the same name as the current item. If this is the case, an error message will be displayed, as there cannot be two items with the same name under the same parent item.
+    > [!NOTE]
+    > If you select a different parent level for an item, the wizard will check if that level already contains an item with the same name as the current item. If this is the case, an error message will be displayed, as there cannot be two items with the same name under the same parent item.
 
 - **Filter**: Filters all underlying levels based on the item selected in the table. This button is not available for the *Racks* table, as this is the lowest level.
