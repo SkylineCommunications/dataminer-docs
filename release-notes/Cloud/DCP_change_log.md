@@ -6,7 +6,7 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
-#### 26 September 2023 - Fix - Remote Access automatic login works when you have special characters in your DataMiner account configuration [ID_]
+#### 26 September 2023 - Fix - Remote Access automatic login works when you have special characters in your DataMiner account configuration [ID_37438]
 
 When using remote access (eg. Monitoring app via dataminer.services) you wouldn't be logged in autmomatically with your linked DataMiner account when you have one or more special characters configured in your in your DataMiner account (eg. in the full name field).
 
