@@ -106,6 +106,12 @@ When a QAction or Automation script used a NuGet package containing a .NET Frame
 
 Also, certain DLL files located in a subfolder of the .NET Framework would not be resolved correctly.
 
+#### Problem when restarting DataMiner [ID_37112]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.10 -->
+
+When DataMiner was restarted, in some rare cases, it would not start up again.
+
 #### DataMiner backup: Number of backups to be kept would be interpreted incorrectly [ID_37143]
 
 <!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->

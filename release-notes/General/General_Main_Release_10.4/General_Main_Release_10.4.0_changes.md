@@ -617,12 +617,6 @@ In some rare cases, an error could be thrown when an element was renamed.
 
 The deprecated DMS_GET_INFO call would return unexpected data when it returned data of elements that contained remotely hosted DVE child elements.
 
-#### Problem when restarting DataMiner [ID_37112]
-
-<!-- MR 10.4.0 - FR 10.3.10 -->
-
-When DataMiner was restarted, in some rare cases, it would not start up again.
-
 #### SLAnalytics: Problem when creating or editing a multivariate pattern [ID_37212]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
