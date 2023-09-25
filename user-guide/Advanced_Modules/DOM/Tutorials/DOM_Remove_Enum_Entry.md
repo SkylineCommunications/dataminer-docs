@@ -13,17 +13,17 @@ This tutorial shows you how to soft-delete and permanently delete an enum entry 
 - [Step 3: Remove the value from existing instances](#step-3-remove-the-value-from-existing-instances)
 - [Step 4: Remove the enum entry from the DOM definition](#step-4-remove-the-enum-entry-from-the-dom-definition)
 
-The soft-delete option on an enum entry hides that entry to users. That way users are unable to create more DOM instances using that entry. Later on the entry can be completely removed.
-If the entry is used by a DOM instance, that value needs to be removed from those instances before removing the entry from the definition. If that enum entry is not used, it can immediately be removed (see [Step 4: Remove the enum entry from the DOM definition](#step-4-remove-the-enum-entry-from-the-dom-definition)).
+The soft-delete option on an enum entry hides that entry to users. That way users are unable to create more DOM instances using that entry. Later on it can be completely removed.
+If the entry is used by a DOM instance, that value needs to be removed from those instances before removing it from the definition. If that enum entry is not used, it can immediately be removed (see [Step 4: Remove the enum entry from the DOM definition](#step-4-remove-the-enum-entry-from-the-dom-definition)).
 
 ## Step 1: Setup DOM
 
 This setup is purely for the tutorial, you can use your own setup and apply the other steps to your setup (see [Step 2: Soft-delete the enum entry](#step-2-soft-delete-the-enum-entry)).
 
 The given code does the following:
-1. Creates a DOM module
-1. Creates a DOM definition containing a GenericEnumFieldDescriptor
-1. Creates a DOM instance using that enum entry of that DOM definition
+1. Creates a DOM module.
+1. Creates a DOM definition containing a GenericEnumFieldDescriptor.
+1. Creates a DOM instance using that enum entry of that DOM definition.
 
 ```C#
 using System;
@@ -184,9 +184,9 @@ To visualize the setup, create a low code app. On that low code app:
 ## Step 2: Soft-delete the enum entry
 
 The given code does the following:
-1. Gets the enum entry from the DOM definition
-1. Sets the property "IsSoftDeleted" of the enum entry to true
-1. Updates the DOM definition
+1. Gets the enum entry from the DOM definition.
+1. Sets the property "IsSoftDeleted" of the enum entry to true.
+1. Updates the DOM definition.
 
 ```C#
 using System;
@@ -230,7 +230,7 @@ namespace Tutorial
 }
 ```
 
-This example uses the names of the section definition and fielddescriptor. Another option is to use the IDs, that way less calls and null checks are needed, but those IDs still need to be looked up. Note: these IDs will not work, you need the IDs of your setup.
+This example uses the names of the section definition and field descriptor. Another option is to use the IDs, that way less calls and null checks are needed, but those IDs still need to be looked up. Note: these IDs will not work, you need the IDs of your setup.
 
 ```C#
 using System;
@@ -283,9 +283,9 @@ After soft-deletion, you should not see that enum entry in the dropdown of the f
 ## Step 3: Remove the value from existing instances
 
 The given code does the following:
-1. Gets all instances that use the enum entry
-1. Removes the enum value
-1. Updates the instances
+1. Gets all instances that use the enum entry.
+1. Removes the enum value.
+1. Updates the instances.
 
 ```C#
 using System;
@@ -347,9 +347,9 @@ After the removal, you should see that the enum value is removed from the instan
 ## Step 4: Remove the enum entry from the DOM definition
 
 The given code does the following:
-1. Gets the enum from the DOM definition
-1. Removes the enum entry by copying the original enum, but leaving out the one to remove
-1. Updates the DOM definition
+1. Gets the enum from the DOM definition.
+1. Removes the enum entry by copying the original enum, but leaving out the one to remove.
+1. Updates the DOM definition.
 
 ```C#
 using System;
