@@ -6,22 +6,22 @@ uid: UIComponentsTreeControlTag
 
 The initial step to compose a tree control is to create tables that will represent the data and configure the linking on them (For more information on how to link tables, see Foreign keys and Relations).
 
-The tree control itself is configured using the TreeControl tag.
+The tree control itself is configured using the TreeControls.TreeControl tag.
 
 Example:
 
 ```xml
 <TreeControl parameterId="20000" readOnly="true">
   <Hierarchy>
-     <Table id="10000"/>
-     <Table id="11000" parent="10000" />
-     <Table id="12000" parent="11000" />
+    <Table id="10000"/>
+    <Table id="11000" parent="10000" />
+    <Table id="12000" parent="11000" />
   </Hierarchy>
   <OverrideDisplayColumns>10003,11005,12005</OverrideDisplayColumns>
   <OverrideIconColumns>12006</OverrideIconColumns>
   <HiddenColumns>10002</HiddenColumns>
   <ExtraTabs>
-     <Tab tableId="10000" title="Items" type="default"/>
+    <Tab tableId="10000" title="Items" type="default"/>
   </ExtraTabs>
 </TreeControl>
 ```
@@ -30,19 +30,17 @@ The parameterId attribute refers to a regular parameter of type "read" as illust
 
 ```xml
 <Param id="20000">
-   <Name>Overview</Name>
-   <Description>Overview</Description>
-   <Type>dummy</Type>
-   <Display>
-      <RTDisplay>true</RTDisplay>
-      <Positions>
-         <Position>
-            <Page>Overview</Page>
-            <Row>0</Row>
-            <Column>0</Column>
-         </Position>
-      </Positions>
-   </Display>
+  <Name>Overview</Name>
+  <Description>Overview</Description>
+  <Type>read</Type>
+  <Interprete>
+    <RawType>other</RawType>
+    <Type>string</Type>
+    <LengthType>next param</LengthType>
+  </Interprete>
+  <Display>
+    <RTDisplay>true</RTDisplay>
+  </Display>
 </Param>
 ```
 
