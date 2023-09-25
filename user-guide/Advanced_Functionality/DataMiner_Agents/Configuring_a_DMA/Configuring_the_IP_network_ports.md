@@ -61,3 +61,6 @@ Using .NET Remoting:
 >
 > - [Configuring DMA communication settings in SLNet.exe.config](xref:Configuration_of_DataMiner_processes#configuring-the-ports-for-net-remoting-andor-xml-web-services)
 > - [Configuring client communication settings](xref:DMA_configuration_related_to_client_applications#configuring-client-communication-settings)
+
+> [!TIP]
+> To verify the cluster is still working correctly, run this BPA: [Check Cluster SLNet Connections BPA](xref:BPA_Check_Cluster_SLNet_Connections)

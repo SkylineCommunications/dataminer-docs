@@ -43,3 +43,6 @@ To do so:
 
 > [!WARNING]
 > Always be extremely careful when using the SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
+> [!TIP]
+> To verify the cluster is still working correctly, run this BPA: [Check Cluster SLNet Connections BPA](xref:BPA_Check_Cluster_SLNet_Connections)

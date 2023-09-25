@@ -4,9 +4,9 @@ uid: BPA_Check_Cluster_SLNet_Connections
 
 # Check Cluster SLNet Connections BPA
 
-This BPA test checks if the SLNet connections between the agents are healthy.
+The Check Cluster SLNet Connections BPA is a cluster BPA that will triggger a local BPA on each agent that is reachable from the one initiating the cluster BPA, to check the connections between agents. It is important to know if there are issues with these connections as they are used for inter DMS communication. Running this BPA might indicate if there are potential problems.
 
-This BPA test is available on demand. You can [run it in System Center](xref:Running_BPA_tests) (on the *Agents > BPA* tab, available from DataMiner XXX), this BPA test is available by default.
+This BPA test is available on demand. You can [run it in System Center](xref:Running_BPA_tests) (on the *Agents > BPA* tab, available from DataMiner 10.3.11), this BPA test is available by default.
 
 ## Metadata
 
@@ -31,15 +31,15 @@ The detailed JSON output of the BPA may contain the following possible messages,
 
 - Does not know these DataMiner Agents: X (specified DMA does not have a SLNet connection to X agents, where X is a summary of the regarding agents).
 
-- Does not have other SLNet connections. (specified DMA does not have SLNet connections to other agents).
+- Does not have other SLNet connections. (specified DMA does not have SLNet connections to other agents)
 
 - SLNet connections to these DataMiner Agents are not healthy: X (where X is a summary of the regarding agents).
 
-- Did not receive a HeartBeatMessage from the failover buddy. (agent is part of a failover setup but something went wrong when sending the HeartBeatMessage to the failover buddy).
+- Did not receive a HeartBeatMessage from the failover buddy. (agent is part of a failover setup but something went wrong when sending the HeartBeatMessage to the failover buddy)
 
-- Could not determine which type of connection is used with the failover buddy. (agent is part of a failover but cannot determine which connection is used between the failover buddies).
+- Could not determine which type of connection is used with the failover buddy. (agent is part of a failover but cannot determine which connection is used between the failover buddies)
 
-- Connection port [Y] of failover buddy is not open. (agent is part of a failover setup but the connection port of the buddy looks closed. Y will represent the port).
+- Connection port [Y] of failover buddy is not open. (agent is part of a failover setup but the connection port of the buddy looks closed. Y represents the port)
 
 - Failover buddy detected syncing problems.
 
@@ -49,7 +49,7 @@ The detailed JSON output of the BPA may contain the following possible messages,
 
 - Could not determine which connection is used to these agents: X (where X is the summary of the regarding agents).
 
-- The ports are closed on these agents (but could not resolve connection type): X (where X is the summary of the regarding agents and the port)
+- The ports are closed on these agents (but could not resolve connection type): X (where X is the summary of the regarding agents and the port).
 
 - Did not check the ports of other agents because it did not knew other agents.
 
@@ -71,10 +71,31 @@ These are the messages that can appear when the test fails to execute for unexpe
 
 - The BPA did not receive results from other agents and thus cannot analyze them.
 
+## Possible solution
+
+If potential issues are detected, do these checks:
+
+- Verify that the correct ports are opened. For gRPC this is typically 443, for LegacyRemotingConnection 8004 by default but this could be configured to another port.
+
+- Verify that the connection strings are correct.
+  
+- Verify that all DataMiner Agents are running.
+
+
+### Useful links
+
+- [Configuring the IP network ports](xref:Configuring_the_IP_network_ports)
+  
+- [Editing the connection string between two DataMiner Agents](xref:SLNetClientTest_editing_connection_string)
+  
+- [Adding a regular DataMiner Agent](xref:Adding_a_regular_DataMiner_Agent)
+
 ## Limitations
 
-- Results may varie from the agent you start the BPA from. It might be interesting to also start the BPA from another agent.
+- Results may vary from the agent you start the BPA from. It might be interesting to also start the BPA from another agent.
 
 - This BPA could detect possible issues. There is no guarantee nothing can be improved when the BPA succeeds.
 
 - Needs to run on an agent that is part of a cluster.
+
+- This BPA must be run as admin.
