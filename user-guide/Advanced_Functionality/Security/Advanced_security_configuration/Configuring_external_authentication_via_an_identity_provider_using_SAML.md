@@ -17,8 +17,6 @@ From DataMiner 9.6.11 onwards, it is possible to configure external authenticati
   > [!TIP]
   > For a comprehensive understanding of the SAML process, including encoding and encryption guidelines that Dataminer follows, refer to the official SAML Documentation: [SAML Technical Overview](http://docs.oasis-open.org/security/saml/Post2.0/sstc-saml-tech-overview-2.0-cd-02.html#5.1.2.SP-Initiated%20SSO:%20%20Redirect/POST%20Bindings|outline).
 
-- From DataMiner 10.3.4/10.4.0 onwards, SAML assertions must be signed for proper integration. Non-signed SAML assertions will not be supported.
-
 ## Establishing a trust relationship between the service provider and identity provider
 
 To configure external authentication via an identity provider service using SAML, a trust relationship must be established between the service provider (i.e. DataMiner) and the identity provider. This is done by exchanging SAML metadata files.
