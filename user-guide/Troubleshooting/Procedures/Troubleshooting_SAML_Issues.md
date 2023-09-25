@@ -93,9 +93,13 @@ The SAML attribute names must always match those in the identity provider and th
 
    For example, if the claim name is "email," your *DataMiner.xml* emailClaim tag should be `<EmailClaim>email</EmailClaim>`.
 
-1. If issues persist, use the *SAML-tracer* tool, a browser extension that captures SAML traffic.
+1. If issues persist, use the *SAML-tracer* tool, a browser extension available for Google Chrome and Firefox, designed to capture SAML traffic.
 
-   1. In your browser, add the SAML-tracer extension ([Chrome](https://chrome.google.com/webstore/detail/saml-tracer/mpdajninpobndbfcldcmbpnnbhibjmch), [Firefox](https://addons.mozilla.org/nl/firefox/addon/saml-tracer/)).
+   1. Add the SAML-tracer extension to your chosen web browser:
+
+      - For Google Chrome, visit the [Chrome Web Store](https://chrome.google.com/webstore/detail/saml-tracer/mpdajninpobndbfcldcmbpnnbhibjmch).
+
+      - For Firefox, visit the [Firefox Add-ons page](https://addons.mozilla.org/nl/firefox/addon/saml-tracer/).
 
    1. Go to `http(s)://[DMA name]/`.
 
