@@ -10,7 +10,7 @@ From DataMiner 9.6.11 onwards, it is possible to configure external authenticati
 
 - DataMiner integrates with **identity providers using version 2.0 of the SAML protocol**. Compatibility with older SAML versions is not supported.
 
-- The identity provider (IDP) must support **Redirect binding** for communication between the service provider and the identity provider. Most SAML IDPs support Redirect binding by default.
+- The identity provider must support **Redirect binding** for communication between the service provider and the identity provider. Most SAML identity providers support Redirect binding by default.
 
 - Dataminer uses service provider initiated **Single Sign-On (SSO)** through Redirect binding. It does not support the use of POST or SOAP binding for requests. However, standard POST binding is used for responses.
 
