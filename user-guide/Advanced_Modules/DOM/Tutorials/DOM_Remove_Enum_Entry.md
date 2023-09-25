@@ -401,6 +401,6 @@ namespace Tutorial
 }
 ```
 
-If you look into the DOM definition the enum entry is now completely removed.
+If you look into the DOM definition, the enum entry is now completely removed.
 
    ![Step4](~/user-guide/images/DOM_Remove_Enum_Entry_Step4.png)
