@@ -33,13 +33,15 @@ This troubleshooting section addresses the following common SAML issues:
 
 - [Other frequent issues](#other-frequent-issues)
 
+- [Error messages](#error-messages)
+
 ### Partial setup
 
-Partial setups are not compatible with SAML. Ensure that all settings are correctly configured for both DataMiner and the identity provider (IDP) before attempting to log in. See [Configuring external authentication via an identity provider using SAML](xref:Configuring_external_authentication_via_an_identity_provider_using_SAML).
+Partial setups are not compatible with SAML. Ensure that all settings are correctly configured for both DataMiner and the identity provider before attempting to log in. See [Configuring external authentication via an identity provider using SAML](xref:Configuring_external_authentication_via_an_identity_provider_using_SAML).
 
 ### SAML authentication issues in Cube/online
 
-You may encounter an issue where the expected redirection to the identity provider's login page does not occur when trying to log into your DMA via the web using external authentication through SAML. This issue can also manifest in Cube, where the SAML login window fails to appear.
+You may encounter an issue where the expected redirection to the identity provider's login page does not occur when you try to log into your DMA via the web using external authentication through SAML. This issue can also manifest in Cube, where the SAML login window fails to appear.
 
 If you are accessing your DMA via the web, check if the user credential boxes are visible during the login process. If they are visible, this suggests the external authentication is not in use.
 
@@ -51,13 +53,13 @@ If the external authentication is working properly, you will get the option to l
 
 If the password field is already filled in, leave it empty. Local logon attempts take precedence over external authentication.
 
-#### DataMiner fails to connect to the IDP
+#### DataMiner fails to connect to the identity provider
 
-DataMiner may face difficulties connecting to the identity provider due to various reasons:
+DataMiner may face difficulties connecting to the identity provider because of various reasons:
 
-- An incorrect ipMetadata URL in the *Dataminer.xml* file (when connecting through a URL)
+- An incorrect ipMetadata URL in the *DataMiner.xml* file (when connecting through a URL)
 
-- Improperly formatted *ipMetadata.xml* file (when using a local file)
+- Improperly formatted *ipMetadata.xml* file (when a local file is used)
 
   Resolution:
 
@@ -67,7 +69,7 @@ DataMiner may face difficulties connecting to the identity provider due to vario
 
 #### Using SAML together with a proxy
 
-When using SAML with a proxy, make these configurations to avoid authentication issues:
+When using SAML with a proxy, use the following configuration to avoid authentication issues:
 
 - For 32-bit processes, execute the following command: `netsh winhttp set proxy proxy-server="<ip>:<port>" bypass-list="localhost"`
 
@@ -85,17 +87,21 @@ When using SAML with a proxy, make these configurations to avoid authentication 
 
 ### Missing or incorrect attribute statements
 
-The SAML attribute names must always match those in the IDP and the *DataMiner.xml* file.
+The SAML attribute names must always match those in the identity provider and the *DataMiner.xml* file.
 
 1. Go to the *C:\Skyline DataMiner* folder and open the *DataMiner.xml* file.
 
-1. Verify that the `<ExternalAuthentication>` tag is configured correctly, and the tag name for your attribute matches the definition.
+1. Verify that the `<ExternalAuthentication>` tag is configured correctly and the tag name for your attribute matches the definition.
 
-   For example, if the claim name is "email," your *Dataminer.xml* emailClaim tag should be `<EmailClaim>email</EmailClaim>`.
+   For example, if the claim name is "email," your *DataMiner.xml* emailClaim tag should be `<EmailClaim>email</EmailClaim>`.
 
-1. If issues persist, use the *SAML-tracer* tool, a browser extension that captures SAML traffic.
+1. If issues persist, use the *SAML-tracer* tool, a browser extension available for Google Chrome and Firefox, designed to capture SAML traffic.
 
-   1. In your browser, add the SAML-tracer extension ([Chrome](https://chrome.google.com/webstore/detail/saml-tracer/mpdajninpobndbfcldcmbpnnbhibjmch), [Firefox](https://addons.mozilla.org/nl/firefox/addon/saml-tracer/)).
+   1. Add the SAML-tracer extension to your chosen web browser:
+
+      - For Google Chrome, visit the [Chrome Web Store](https://chrome.google.com/webstore/detail/saml-tracer/mpdajninpobndbfcldcmbpnnbhibjmch).
+
+      - For Firefox, visit the [Firefox Add-ons page](https://addons.mozilla.org/nl/firefox/addon/saml-tracer/).
 
    1. Go to `http(s)://[DMA name]/`.
 
@@ -105,7 +111,7 @@ The SAML attribute names must always match those in the IDP and the *DataMiner.x
 
       ![SAML-tracer](~/user-guide/images/SAML_Tracer.png)
 
-   1. In the pane on the bottom, select *SAML*. Now compare the attribute names in the response to those in the IDP and the *Dataminer.xml* file.
+   1. In the pane on the bottom, select *SAML*. Now compare the attribute names in the response to those in the identity provider and the *DataMiner.xml* file.
 
       ![SAML-tracer tabs](~/user-guide/images/SAML_Tracer_Tabs.png)
 
@@ -113,7 +119,7 @@ The SAML attribute names must always match those in the IDP and the *DataMiner.x
 
 Here are some other common SAML-related issues:
 
-- **Duplicate users**: Ensure there are no duplicate users, and each email address in the *security.xml* file is unique.
+- **Duplicate users**: Ensure there are no duplicate users and each email address in the *security.xml* file is unique.
 
 - **Groups in DataMiner**: Verify that groups exist in DataMiner before attempting to add users to them. This is necessary for setups using a separate claim for groups or a default group.
 
@@ -122,3 +128,57 @@ Here are some other common SAML-related issues:
   - Ensure that the username is always an email address.
 
   - In [Azure setups](xref:Configuring_external_authentication_via_an_identity_provider_using_SAML#identity-providers), missing email field values can cause problems, even though the default username is an email.
+
+### Error messages
+
+#### General errors
+
+Object reference not set to an instance of an object.
+
+- Application: Cube
+- Cause: Incorrect or unexpected data in *spMetadata.xml*.
+
+Failed to build External Authentication for SAML. System.ArgumentException: An entry with the same key already exists.
+
+- Application: Cube/Alarm Console
+- Cause: In *spMetadata.xml*, the index attribute per AssertionConsumerService endpoint must be unique. Make sure all index values are unique.
+
+Cannot connect to the DMA; exception trapped: Failed getting the user info (empty response).
+
+- Application: Web apps
+- Cause: Incorrect or unexpected data in *spMetadata.xml*.
+
+Expected one and only one default assertion consumer service endpoint.
+
+- Application: Web apps
+- Cause: In *spMetadata.xml*, none of the Assertion Consumer Service URLs are marked as the default URL. Typically, the /root URL is marked as the default URL.
+
+Assertion consumer service \<URL> was not found.
+
+- Application: Web apps
+- Cause: The Assertion Consumer Service URL is spelled incorrectly or cannot be found in *spMetadata.xml*.
+
+### Azure AD errors
+
+AADSTS50011: The reply URL specified in the request does not match the reply URLs configured for the application: '\<ID>'.
+
+- Application: Cube
+- Cause: The URL marked as default URL is either missing or spelled differently in the app registration form.
+
+AADSTS50011: The reply URL specified in the request does not match the reply URLs configured for the application: '\<ID>'.
+
+- Application: Web apps
+- Cause: The reply URL of a specific web app is either missing or spelled differently in the app registration form.
+
+AADSTS500113: No reply address is registered for the application.
+
+- Application: Web apps
+- Cause: No reply URL is specified in the app registration form.
+
+AADSTS650056: Misconfigured application. This could be due to one of the following: the client has not listed any permissions for 'AAD Graph' in the requested permissions in the client's application registration. Or, the admin has not consented in the tenant. Or, check the application identifier in the request to ensure it matches the configured client application identifier. Or, check the certificate in the request to ensure it's valid. Please contact your admin to fix the configuration or consent on behalf of the tenant. Client app ID: \<ID>.
+
+- Cause: The required API permissions are missing in the app registration form.
+
+AADSTS700016: Application with identifier '\<ID>' was not found in the directory '\<ID>'. This can happen if the application has not been installed by the administrator of the tenant or consented to by any user in the tenant. You may have sent your authentication request to the wrong tenant.
+
+- Cause: Entity ID incorrect or not found.
