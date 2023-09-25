@@ -327,7 +327,7 @@ From DataMiner 10.2.0/10.1.12 onwards, users authenticated by Azure AD using SAM
 1. Restart the DataMiner Agent.
 
 > [!NOTE]
-> If your default username is not in email format or if DataMiner is unable to locate it, please configure the *\<PreferredEmailClaim>* tag to ensure it points to the correct email address.
+> If your default username is not in email format or if DataMiner is unable to locate it, configure the *\<PreferredEmailClaim>* tag to ensure it points to the correct email address.
 
 ### Azure B2C
 

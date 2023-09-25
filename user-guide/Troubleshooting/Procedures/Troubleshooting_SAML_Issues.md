@@ -35,11 +35,11 @@ This troubleshooting section addresses the following common SAML issues:
 
 ### Partial setup
 
-Partial setups are not compatible with SAML. Ensure that all settings are correctly configured for both DataMiner and the identity provider (IDP) before attempting to log in. See [Configuring external authentication via an identity provider using SAML](xref:Configuring_external_authentication_via_an_identity_provider_using_SAML).
+Partial setups are not compatible with SAML. Ensure that all settings are correctly configured for both DataMiner and the identity provider before attempting to log in. See [Configuring external authentication via an identity provider using SAML](xref:Configuring_external_authentication_via_an_identity_provider_using_SAML).
 
 ### SAML authentication issues in Cube/online
 
-You may encounter an issue where the expected redirection to the identity provider's login page does not occur when trying to log into your DMA via the web using external authentication through SAML. This issue can also manifest in Cube, where the SAML login window fails to appear.
+You may encounter an issue where the expected redirection to the identity provider's login page does not occur when you try to log into your DMA via the web using external authentication through SAML. This issue can also manifest in Cube, where the SAML login window fails to appear.
 
 If you are accessing your DMA via the web, check if the user credential boxes are visible during the login process. If they are visible, this suggests the external authentication is not in use.
 
@@ -51,13 +51,13 @@ If the external authentication is working properly, you will get the option to l
 
 If the password field is already filled in, leave it empty. Local logon attempts take precedence over external authentication.
 
-#### DataMiner fails to connect to the IDP
+#### DataMiner fails to connect to the identity provider
 
-DataMiner may face difficulties connecting to the identity provider due to various reasons:
+DataMiner may face difficulties connecting to the identity provider because of various reasons:
 
-- An incorrect ipMetadata URL in the *Dataminer.xml* file (when connecting through a URL)
+- An incorrect ipMetadata URL in the *DataMiner.xml* file (when connecting through a URL)
 
-- Improperly formatted *ipMetadata.xml* file (when using a local file)
+- Improperly formatted *ipMetadata.xml* file (when a local file is used)
 
   Resolution:
 
@@ -67,7 +67,7 @@ DataMiner may face difficulties connecting to the identity provider due to vario
 
 #### Using SAML together with a proxy
 
-When using SAML with a proxy, make these configurations to avoid authentication issues:
+When using SAML with a proxy, use the following configuration to avoid authentication issues:
 
 - For 32-bit processes, execute the following command: `netsh winhttp set proxy proxy-server="<ip>:<port>" bypass-list="localhost"`
 
@@ -85,13 +85,13 @@ When using SAML with a proxy, make these configurations to avoid authentication 
 
 ### Missing or incorrect attribute statements
 
-The SAML attribute names must always match those in the IDP and the *DataMiner.xml* file.
+The SAML attribute names must always match those in the identity provider and the *DataMiner.xml* file.
 
 1. Go to the *C:\Skyline DataMiner* folder and open the *DataMiner.xml* file.
 
-1. Verify that the `<ExternalAuthentication>` tag is configured correctly, and the tag name for your attribute matches the definition.
+1. Verify that the `<ExternalAuthentication>` tag is configured correctly and the tag name for your attribute matches the definition.
 
-   For example, if the claim name is "email," your *Dataminer.xml* emailClaim tag should be `<EmailClaim>email</EmailClaim>`.
+   For example, if the claim name is "email," your *DataMiner.xml* emailClaim tag should be `<EmailClaim>email</EmailClaim>`.
 
 1. If issues persist, use the *SAML-tracer* tool, a browser extension that captures SAML traffic.
 
@@ -105,7 +105,7 @@ The SAML attribute names must always match those in the IDP and the *DataMiner.x
 
       ![SAML-tracer](~/user-guide/images/SAML_Tracer.png)
 
-   1. In the pane on the bottom, select *SAML*. Now compare the attribute names in the response to those in the IDP and the *Dataminer.xml* file.
+   1. In the pane on the bottom, select *SAML*. Now compare the attribute names in the response to those in the identity provider and the *DataMiner.xml* file.
 
       ![SAML-tracer tabs](~/user-guide/images/SAML_Tracer_Tabs.png)
 
@@ -113,7 +113,7 @@ The SAML attribute names must always match those in the IDP and the *DataMiner.x
 
 Here are some other common SAML-related issues:
 
-- **Duplicate users**: Ensure there are no duplicate users, and each email address in the *security.xml* file is unique.
+- **Duplicate users**: Ensure there are no duplicate users and each email address in the *security.xml* file is unique.
 
 - **Groups in DataMiner**: Verify that groups exist in DataMiner before attempting to add users to them. This is necessary for setups using a separate claim for groups or a default group.
 
