@@ -121,6 +121,4 @@ Here are some other common SAML-related issues:
 
   - Ensure that the username is always an email address.
 
-  - In Azure setups, missing email field values can cause problems, even though the default username is an email.
-
-  - For other IDPs, configure DataMiner to use the correct claim, as outlined in the PreferredEmailClaim documentation.
+  - In [Azure setups](xref:Configuring_external_authentication_via_an_identity_provider_using_SAML#identity-providers), missing email field values can cause problems, even though the default username is an email.
