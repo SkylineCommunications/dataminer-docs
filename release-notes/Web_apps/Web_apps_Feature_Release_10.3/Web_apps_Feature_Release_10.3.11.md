@@ -184,7 +184,7 @@ When, in the *Monitoring* app, a visual overview page was opened using a shape d
 
 #### Problem with the IIS web server when redirecting the user to the login page [ID_37288]
 
-<!-- MR 10.4.0 - FR 10.3.11 -->
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
 
 In some cases, an error could occur in the IIS web server when redirecting the user to the login page.
 
