@@ -35,6 +35,12 @@ In this element, `https://dataminer.example.com` has to be replaced with the IP 
 
 ### Fixes
 
+#### Dashboards app: Problem when opening a dashboard of which the URL was longer than 2048 characters [ID_36382] [ID_36510]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.7 -->
+
+When you opened a dashboard of which the URL was longer than 2048 characters, the authentication app would fail to open, causing IIS to either stop operating or throw a 404 or 414 error.
+
 #### Dashboards app/Low-Code Apps: Seconds of multiple clock components would not be in sync [ID_37193]
 
 <!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.10 -->
