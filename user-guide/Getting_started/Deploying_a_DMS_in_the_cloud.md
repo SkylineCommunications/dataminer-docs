@@ -72,4 +72,4 @@ With **DataMiner as a Service (DaaS)**, you can deploy a complete DataMiner Syst
 Now that you are logged in, you can configure your DataMiner System to your specific preferences.
 
 > [!IMPORTANT]
-> We strongly recommend that you start by configuring security. See [User management](xref:User_management).
+> We strongly recommend that you **start by configuring security**. You should in the very least change the password for the *DataMinerAdmin* account, but it would be even better configure your own admin account and then remove the *DataMinerAdmin* account. Next, configure the necessary rights and privileges for the other users of your DataMiner System. See [User management](xref:User_management).
