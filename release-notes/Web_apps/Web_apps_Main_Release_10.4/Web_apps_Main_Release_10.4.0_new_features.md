@@ -703,3 +703,13 @@ The following example would result in something like "*My element Localhost is f
 >
 > - Any part that contain spaces should be enclosed by double quotes.
 > - The name of each part can be found in the *FEEDS* data source of the edit panel's *DATA* tab.
+
+#### Dashboards app & Low-Code Apps: A backup of all existing dashboards and low-code apps will now be made when performing a DataMiner upgrade  [ID_37413]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When you install a DataMiner upgrade (either a full upgrade or a web-only upgrade), a backup of all existing dashboards and low-code apps on the system will now be made.
+
+After a DataMiner upgrade, all dashboards and low-code apps will, if necessary, be migrated in order to make them compatible with the newer software versions. If an error occurs during this migration, or if you need to perform a DataMiner downgrade, you will now be able to restore the dashboards and low-code apps stored in the backup. However, note that restoring these items will have to be done manually.
+
+All backups of dashboards and low-code apps will be stored in `C:\Skyline DataMiner\System Cache\Web\Backups`.
