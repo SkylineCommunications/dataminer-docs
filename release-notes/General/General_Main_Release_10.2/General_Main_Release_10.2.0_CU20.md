@@ -46,14 +46,6 @@ From now on, when you start a Cassandra Cluster migration, a warning message wil
 
 Not all [Protocol.Params.Param.Interprete.Others](xref:Protocol.Params.Param.Interprete.Others) tags would be read out, which could lead to unexpected behavior.
 
-#### Problem with .NET Framework DLL files used by QActions or Automation scripts [ID_36984]
-
-<!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
-
-When a QAction or Automation script used a NuGet package containing a .NET Framework DLL file on a DataMiner Agent that used a more recent .NET Framework that included that same DLL file by default, a compilation error would occur.
-
-Also, certain DLL files located in a subfolder of the .NET Framework would not be resolved correctly.
-
 #### Dashboards app: 'Loading...' indicator would appear when trying to save a folder of which the name consists of spaces [ID_37046]
 
 <!-- 10.2.0 [CU20]/MR 10.3.0 [CU7] - FR 10.3.10 -->
