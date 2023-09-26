@@ -61,7 +61,7 @@ The detailed JSON output of the BPA may contain the following messages, dependin
 
 - ICMP Ping to these agents failed: X (where is is the summary of regarding agents).
 
-- ICMP Ping to these agents returned response but RoundtripTime was bigger than X ms: Y (where X is the maximum round trip time and Y the sumarry of regarding agents).
+- ICMP Ping to these agents returned response but RoundtripTime was bigger than X ms: Y (where X is the maximum round trip time and Y the summary of regarding agents).
 
 ### Not Executed
 
@@ -78,9 +78,8 @@ If potential issues are detected, do these checks:
 - Verify that the correct ports are opened. For gRPC this is typically 443, for LegacyRemotingConnection 8004 by default but this could be configured to another port.
 
 - Verify that the connection strings are correct.
-  
-- Verify that all DataMiner Agents are running.
 
+- Verify that DMS.xml is correct on each agent. 
 
 ### Useful links
 
@@ -97,5 +96,3 @@ If potential issues are detected, do these checks:
 - This BPA could detect possible issues. There is no guarantee nothing can be improved when the BPA succeeds.
 
 - Needs to run on an agent that is part of a cluster.
-
-- This BPA must be run as admin.
