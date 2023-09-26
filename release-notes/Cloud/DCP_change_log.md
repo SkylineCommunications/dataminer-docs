@@ -6,12 +6,12 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
-#### 26 September 2023 - Fix - Remote Access automatic login works when you have special characters in your DataMiner account configuration [ID_37438]
+#### 26 September 2023 - Fix - Remote Access automatic login now works with special characters in DataMiner account configuration [ID_37438]
 
-When using remote access (eg. Monitoring app via dataminer.services) you wouldn't be logged in autmomatically with your linked DataMiner account when you have one or more special characters configured in your in your DataMiner account (eg. in the full name field).
+If your DataMiner account contained one or more special characters, for example in the full name field, and you used Remote Access (e.g. the Monitoring app via dataminer.services), it was not possible to log in automatically with your linked DataMiner account.
 
 > [!NOTE]
-> Manually loging still has this issue and won't work when you have one or more special characters configured in your DataMiner account. The work around for this issue is linking your accounts and the automatic login should allow you to use remote access without further actions required. See [DataMiner Docs - Linking your DataMiner account to your dataminer.services account](https://aka.dataminer.services/account-linking).
+> If you log in manually, you will still encounter this issue: This will not work when you have one or more special characters configured in your DataMiner account. To resolve this, [link your DataMiner account to your dataminer.services account](https://aka.dataminer.services/account-linking). The automatic login will allow you to use Remote Access without requiring any further actions.
 
 #### 21 September 2023 - New feature - CoreGateway 2.13.1 - Support new GQI queries [ID_37302]
 
