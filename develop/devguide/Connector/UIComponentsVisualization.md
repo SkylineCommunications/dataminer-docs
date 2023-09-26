@@ -27,7 +27,7 @@ In addition, a position for the component must be specified. This is done via th
 
 > [!NOTE]
 >
-> - In most of the examples in the UI components sections of this help, the Display and Information tags have been omitted for the sake of brevity.
+> - For the sake of brevity, in most of the examples within the UI components sections of this help, only tags required for the visualization of the element are shown. However, keep in mind that all elements should be validated in actual use cases.
 > - There are other use cases for which RTDisplay of a parameter must be set to true, even when it is not visualized on a specific page. For more information, see RTDisplay.
 
 ## See also

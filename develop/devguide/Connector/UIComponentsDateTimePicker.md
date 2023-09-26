@@ -10,50 +10,40 @@ To define a date time picker, create a write parameter of type "double" and set 
 
 ```xml
 <Param id="240" trending="false">
-   <Name>EventStartConfiguration</Name>
-   <Description>Event Start Configuration</Description>
-   <Type>read</Type>
-   <Interprete>
-      <RawType>numeric text</RawType>
-      <LengthType>next param</LengthType>
-      <Type>double</Type>
-      <Decimals>8</Decimals>
-   </Interprete>
-   <Display>
-      <RTDisplay>true</RTDisplay>
-      <Positions>
-         <Position>
-           ...
-         </Position>
-      </Positions>
-      <Decimals>8</Decimals>
-   </Display>
-   <Measurement>
-      <Type options="datetime">number</Type>
-   </Measurement>
+  <Name>EventStartConfiguration</Name>
+  <Description>Event Start Configuration</Description>
+  <Type>read</Type>
+  <Interprete>
+    <RawType>numeric text</RawType>
+    <Type>double</Type>
+    <LengthType>next param</LengthType>
+    <Decimals>8</Decimals>
+  </Interprete>
+  <Display>
+    <RTDisplay>true</RTDisplay>
+    <Decimals>8</Decimals>
+  </Display>
+  <Measurement>
+    <Type options="datetime">number</Type>
+  </Measurement>
 </Param>
 <Param id="241" setter="true">
-   <Name>EventStartConfiguration</Name>
-   <Description>Event Start Configuration</Description>
-   <Type>write</Type>
-   <Interprete>
-      <RawType>numeric text</RawType>
-      <LengthType>next param</LengthType>
-      <Type>double</Type>
-      <Decimals>8</Decimals>
-   </Interprete>
-   <Display>
-      <RTDisplay>true</RTDisplay>
-      <Positions>
-         <Position>
-           ...
-         </Position>
-      </Positions>
-      <Decimals>8</Decimals>
-   </Display>
-   <Measurement>
-      <Type options="datetime">number</Type>
-   </Measurement>
+  <Name>EventStartConfiguration</Name>
+  <Description>Event Start Configuration</Description>
+  <Type>write</Type>
+  <Interprete>
+    <RawType>numeric text</RawType>
+    <Type>double</Type>
+    <LengthType>next param</LengthType>
+    <Decimals>8</Decimals>
+  </Interprete>
+  <Display>
+    <RTDisplay>true</RTDisplay>
+    <Decimals>8</Decimals>
+  </Display>
+  <Measurement>
+    <Type options="datetime">number</Type>
+  </Measurement>
 </Param>
 ```
 
