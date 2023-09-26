@@ -6,7 +6,7 @@ uid: KI_DataMinerMessageBroker_Chunking_MaxPayload
 
 ## Affected versions
 
-From DataMiner 10.3.5 [CU0]/10.3.8 onwards.
+From DataMiner 10.3.0 [CU5]/10.3.8 onwards.
 
 ## Cause
 
