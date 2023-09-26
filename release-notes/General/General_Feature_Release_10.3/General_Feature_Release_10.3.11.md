@@ -113,6 +113,18 @@ A number of enhancements have been made to the trend prediction models, especial
 
 A number of enhancements have been made to the memory resources used for trended parameters of which the value remains constant.
 
+#### Old versions of NATS configuration files will now be kept when changes are made to those files [ID_37401]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+When changes are made to one of the following NATS configuration files, from now on, the old version of that file will be saved in the `C:\Skyline DataMiner\Recycle Bin` folder.
+
+- `C:\Skyline DataMiner\SLCloud.xml`
+- `C:\Skyline DataMiner\NATS\nats-streaming-server\nats-server.config`
+- `C:\Skyline DataMiner\NATS\nats-account-server\nas.config`
+
+This will allow you to trace changes made to these configuration files when issues arise.
+
 ### Fixes
 
 #### Failover: Data can get lost when the backup agent is the online agent during a Cassandra Cluster migration [ID_34018]
@@ -219,6 +231,12 @@ When an element with multiple SSH connections was restarted, in some cases, it w
 <!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
 
 When you took a DataMiner backup either via Cube or via the Taskbar Utility, the *DBConfiguration.xml* file would incorrectly not be included in the backup.
+
+#### Service & Resource Management: Bookings could get stuck in the 'Confirmed' state [ID_37306]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+In some rare cases, a booking created with a start time in the past or equal to "Now" could incorrectly get stuck in the *Confirmed* state.
 
 #### SLAnalytics: Problem due to some features not starting up correctly [ID_37321]
 

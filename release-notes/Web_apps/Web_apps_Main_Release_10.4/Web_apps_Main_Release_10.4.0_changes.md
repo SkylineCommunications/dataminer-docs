@@ -385,10 +385,11 @@ From now on, when a base query is changed in any way, all queries that use that 
 
 In the *Monitoring* app, a new type of text area boxes will now be used on parameter pages.
 
-#### Security enhancements [ID_36695] [ID_37047] [ID_37051] [ID_37068]
+#### Security enhancements [ID_36695] [ID_37047] [ID_37051] [ID_37068] [ID_37421]
 
 <!-- RN 36695: MR 10.4.0 - FR 10.3.9 -->
 <!-- RN 37047/37051/37068: MR 10.4.0 - FR 10.3.10 -->
+<!-- RN 37421: MR 10.4.0 - FR 10.3.11 -->
 
 A number of security enhancements have been made.
 
