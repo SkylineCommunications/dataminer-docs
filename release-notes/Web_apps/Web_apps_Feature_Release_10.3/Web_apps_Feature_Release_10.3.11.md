@@ -233,3 +233,9 @@ When you edited an existing action, in some cases, the *Execute component* actio
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
 The feed linker would no longer automatically select the feed type when there was only a single option. Moreover, as it was not possible to open the drop-down box, no feed could be selected manually either.
+
+#### Monitoring app: Problem when navigating to another visual overview page [ID_37415]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When, in the *Monitoring* app, you selected an element or a service, and navigated to another visual overview page, a `Cannot convert null to a value type` error would be thrown.
