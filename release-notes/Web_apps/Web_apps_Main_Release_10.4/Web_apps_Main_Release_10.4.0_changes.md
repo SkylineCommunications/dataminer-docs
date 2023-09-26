@@ -872,3 +872,9 @@ When actions had been configured on a table visualization with multiple queries,
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
 When you edited an existing action, in some cases, the *Execute component* action would not be able to properly restore the form.
+
+#### Dashboards app/Low-Code Apps: Feed linker would no longer select the feed type when there was only a single option [ID_37396]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+The feed linker would no longer automatically select the feed type when there was only a single option. Moreover, as it was not possible to open the drop-down box, no feed could be selected manually either.
