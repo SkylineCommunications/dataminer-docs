@@ -71,7 +71,7 @@ These are the messages that can appear when the test fails to execute for unexpe
 
 - The BPA did not receive results from other agents and thus cannot analyze them.
 
-## Possible solution
+## Possible solutions
 
 If potential issues are detected, do these checks:
 
