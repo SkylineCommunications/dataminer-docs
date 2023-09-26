@@ -59,9 +59,9 @@ The detailed JSON output of the BPA may contain the following possible messages,
 
 The detailed JSON output of the BPA may contain the following messages, depending on which potential issues are detected:
 
-- ICMP Ping to these agents failed: X (where is is the summary of regarding agents).
+- ICMP Ping to these agents failed: X (where X is is the summary of regarding agents).
 
-- ICMP Ping to these agents returned response but RoundtripTime was bigger than X ms: Y (where X is the maximum round trip time and Y the summary of regarding agents).
+- ICMP Ping to these agents returned response but the round-trip time was bigger than 50ms: X (where X is the summary of regarding agents and the round-trip time).
 
 ### Not Executed
 
@@ -73,7 +73,7 @@ These are the messages that can appear when the test fails to execute for unexpe
 
 ## Possible solutions
 
-If potential issues are detected, do these checks:
+If potential issues are detected, these checks might save you some time:
 
 - Verify that the correct ports are opened. For gRPC this is typically 443, for LegacyRemotingConnection 8004 by default but this could be configured to another port.
 
@@ -88,6 +88,8 @@ If potential issues are detected, do these checks:
 - [Editing the connection string between two DataMiner Agents](xref:SLNetClientTest_editing_connection_string)
   
 - [Adding a regular DataMiner Agent](xref:Adding_a_regular_DataMiner_Agent)
+
+If you are unable to resolve the issues, please contact Skyline Technical Support.
 
 ## Limitations
 
