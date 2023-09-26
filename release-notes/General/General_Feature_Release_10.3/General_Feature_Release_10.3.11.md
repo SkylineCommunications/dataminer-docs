@@ -154,6 +154,12 @@ From now on, the number of backups you specify will be the number of backups tha
 > [!NOTE]
 > A DataMiner Agent will now store its backups in a subfolder of the folder set as backup location. The name of that subfolder will be identical to the DMA ID of the DataMiner Agent in question.
 
+#### Problem in different native processes when interacting with message broker calls [ID_37150]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+In some cases, an error could occur in different native processes when interacting with message broker calls.
+
 #### SLNet would incorrectly return certain port information fields of type string as null values [ID_37165]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
