@@ -115,7 +115,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-In this section, provide a more detailed description of how the connector functions. For more information, refer to [Writing connector help](xref:Connector_help_pages#writing-connector-help).
+[In this section, provide a more detailed description of how the connector functions. For more information, refer to [Writing connector help](xref:Connector_help_pages#writing-connector-help).]
 
 ## DataMiner Connectivity Framework
 
@@ -173,4 +173,4 @@ Physical dynamic interfaces:
 
 ## Notes
 
-In this section, you can provide additional information about the connector that does not fit in the other sections. Remove this section if it does not contain any info.
+[In this section, you can provide additional information about the connector that does not fit in the other sections. Remove this section if it does not contain any info.]

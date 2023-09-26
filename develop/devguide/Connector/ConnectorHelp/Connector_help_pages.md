@@ -4,11 +4,9 @@ uid: Connector_help_pages
 
 # Connector help pages
 
-For every connector that is developed for DataMiner, a corresponding help page should be created. This help page details how the connections should be set up when you create an element with the connector, how the element should be used, etc. If a connector exports child connectors, a help page should also be created for each of these.
+For every connector that is developed for DataMiner, a corresponding help page should be available. This help page details among others how the connections should be set up when you create an element with the connector, how the element should be used, etc. If a connector exports child connectors, a help page should also be created for each of these child connectors.
 
-When you develop a connector using DIS, you can generate the connector help with the *Plugins* > *Generate driver help* option in the [DIS menu](xref:DIS_menu).
-
-You can also create the connector help directly in MarkDown, starting from our [template](xref:Connector_help_template).
+When you develop a connector using DIS, you can generate the connector help with the *Plugins* > *Generate driver help* option in the [DIS menu](xref:DIS_menu). You can also create the connector help directly in Markdown, starting from our [template](xref:Connector_help_template). When you have created the help page, add it in the [dataminer-docs-connectors](https://github.com/SkylineCommunications/dataminer-docs-connectors) repository.
 
 ## Writing connector help
 
@@ -40,7 +38,10 @@ In the **About** section, you will need to add a number of tables, depending on 
 
 ### 'Configuration' section
 
-In the **Configuration** section, you will need to add the information users will need to create a DataMiner element with the connector. This section will need to have one or more subsections, depending on the connector.
+In the **Configuration** section, add the information needed to create a DataMiner element with the connector. This section will need to have one or more subsections, depending on the connector. You can find more information about these below.
+
+> [!NOTE]
+> For an exported child connector, it is usually sufficient to mention that it is automatically exported by the parent connector (with a link to the parent connector and mention of the version exporting the child connector, if relevant).
 
 #### 'Connections' subsection
 
@@ -92,15 +93,15 @@ If, once the element has been created, the connector requires more actions from 
 
 #### 'Web Interface' subsection
 
-If there is a Web Interface page, always add this section, with the remark: "The web interface is only accessible when the client machine has network access to the product."
+If there is a Web Interface page, always add a **Web Interface** subsection, containing the remark: "The web interface is only accessible when the client machine has network access to the product."
 
 #### 'Redundancy' subsection
 
-If redundancy is defined in the connector, add a **Redundancy** section that explains how this should be configured.
+If redundancy is defined in the connector, add a **Redundancy** subsection that explains how this should be configured.
 
 #### Other configuration subsections
 
-Depending on the connector, other subsections may be needed, e.g. in case Automation scripts, Correlation rules, Visio files, etc. need to be configured.
+Depending on the connector, other subsections may be needed, e.g. in case Automation scripts, Correlation rules, Visio files, etc. need to be configured. You can find a number of possible subsections listed in the template. However, this list is not exclusive; you can add different configuration subsections if this makes sense for your connector.
 
 ### 'How to Use' section
 
@@ -108,7 +109,7 @@ The **How to Use** section of the connector help is where you explain what users
 
 Also specify the **communication method** if relevant. For example: "SOAP calls are used to retrieve the device information. SNMP traps can be retrieved when this is enabled on the device." In case no data traffic will be seen in the Stream Viewer, you should clearly mention this.
 
-Make sure you **always specify something in this section**, keeping in mind what users may be looking for when they consult the help page. Ask yourself the question, "If a starter who knows nothing at all about this connector goes looking for help about it, what would they need to see?"
+Make sure you **always specify something in this section**, keeping in mind what users may be looking for when they consult the help page. Ask yourself the question, "If someone who knows nothing at all about this connector goes looking for help about it, what would they need to see?"
 
 For example:
 
@@ -122,7 +123,7 @@ If you mention different pages and parameters, this should be for the purpose of
 
 For a very simple one-page connector, it can be sufficient to specify something like "You can find all the information you need to monitor the device on the General data page." This way, users will be reassured that they are not missing something.
 
-If you need to add more than just a couple of lines of text, because the connector is quite complicated or you need to go into a lot of detail for some of the features, use subheaders to keep the page easy to scan for the reader. These subheaders can either reflect the different pages you want to discuss, or the different topics, e.g. General Settings, Import and Export, Logging.
+If you need to add more than just a couple of lines of text because the connector is quite complicated or you need to go into a lot of detail for some of the features, use subheaders to keep the page easy to scan for the reader. These subheaders can either reflect the different pages you want to discuss, or the different topics, e.g. General Settings, Import and Export, Logging.
 
 ### 'DataMiner Connectivity Framework' section
 
@@ -138,6 +139,6 @@ If applicable, add the **Interfaces** and/or **DCF Connections** sections as det
 
 ### 'Notes' section
 
-If you want to add notes about the connector that do not fit under any of the other sections, add a **Notes** section for this. This section can also have subsections if it contains a lot of information.
+If you want to add information about the connector that does not fit under any of the other sections, add a **Notes** section for this. This section can also have subsections if it contains a lot of information.
 
 If you do not need a Notes section, leave it out.
