@@ -495,6 +495,15 @@ SLLogCollector packages now include information regarding the IIS configuration:
 | Network Information | Information regarding the SSL certificate on port 443 |
 | SSL Cert            | The SSL certificate for port 443                      |
 
+#### SLNetClientTest: New 'Debug SAML' checkbox [ID_37370]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When, in the SLNetClientTest tool, you select the new *Debug SAML* checkbox before connecting to a DataMiner Agent that used external authentication via SAML, two additional pop-up windows will now appear, displaying the SAML requests and SAML responses respectively.
+
+> [!CAUTION]
+> Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
 ### Fixes
 
 #### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID_34981]

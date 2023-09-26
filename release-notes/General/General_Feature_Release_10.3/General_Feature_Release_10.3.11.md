@@ -113,6 +113,15 @@ A number of enhancements have been made to the trend prediction models, especial
 
 A number of enhancements have been made to the memory resources used for trended parameters of which the value remains constant.
 
+#### SLNetClientTest: New 'Debug SAML' checkbox [ID_37370]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When, in the SLNetClientTest tool, you select the new *Debug SAML* checkbox before connecting to a DataMiner Agent that used external authentication via SAML, two additional pop-up windows will now appear, displaying the SAML requests and SAML responses respectively.
+
+> [!CAUTION]
+> Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
 #### Old versions of NATS configuration files will now be kept when changes are made to those files [ID_37401]
 
 <!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
