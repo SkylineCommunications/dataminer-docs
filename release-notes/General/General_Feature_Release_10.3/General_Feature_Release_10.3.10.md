@@ -59,6 +59,10 @@ Soft-deleting a *GenericEnumEntry* object will have the following consequences:
 - It will not be possible to update the value of an instance to the soft-deleted *GenericEnumEntry*.
 - It is allowed to have instances of which the value is set to the soft-deleted *GenericEnumEntry*.
 
+#### Storage as a service
+
+Storage as a service is now supported as the general database for a DataMiner System. STaaS is now a fully fletched alternative to the on-premise databases already supported by DataMiner. More information can be found [here](xref:STaaS) 
+
 ## Changes
 
 ### Enhancements
