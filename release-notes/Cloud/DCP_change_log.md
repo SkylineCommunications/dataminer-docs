@@ -8,7 +8,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 #### 26 September 2023 - Fix - Remote Access automatic login now works with special characters in DataMiner account configuration [ID_37438]
 
-If your DataMiner account contained one or more special characters, for example in the full name field, and you used Remote Access (e.g. the Monitoring app via dataminer.services), it was not possible to log in automatically with your linked DataMiner account.
+If your DataMiner account contained one or more special characters, for example in the full name field, and you used Remote Access (e.g. the Monitoring app via dataminer.services), it was not possible to log in. Now you can log in automatically with your linked DataMiner account.
 
 > [!NOTE]
 > If you log in manually, you will still encounter this issue: This will not work when you have one or more special characters configured in your DataMiner account. To resolve this, [link your DataMiner account to your dataminer.services account](https://aka.dataminer.services/account-linking). The automatic login will allow you to use Remote Access without requiring any further actions.
