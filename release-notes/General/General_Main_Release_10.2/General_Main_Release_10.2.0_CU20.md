@@ -158,6 +158,12 @@ When you took a DataMiner backup either via Cube or via the Taskbar Utility, the
 
 An error could occur in the SLAnalytics process due to some features not starting up correctly.
 
+#### Protocols: Problem when using 'MultipleGetBulk' in combination with 'PartialSNMP' [ID_37336]
+
+<!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
+
+When a protocol was configured to use `MultipleGetBulk` in combination with `PartialSNMP` (e.g. `<OID options="partialSNMP:10;multipleGetBulk:10">`), and the device would send less items than the configured `MultipleGetBulk` value, certain fields would not get filled in.
+
 #### DataMiner Cube: No breadcrumbs would be displayed when you opened a service card [ID_37384]
 
 <!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
