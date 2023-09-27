@@ -6,7 +6,7 @@ uid: DataMiner_Credits
 
 DataMiner Credits are a flexible form of currency you can use to subscribe to DataMiner software and [hosting services](https://aka.dataminer.services/usage-based-pricing). See more about [usage-based services](https://aka.dataminer.services/usage-based-services-docs).
 
-Credits will be deducted autmatically when you consume usage-based services. As an example deploying a new DataMiner as a Service (DaaS) system will deduct 1 credit for a period of 2 weeks. <!-- link to DaaS docs -->
+Credits will be deducted automatically when you consume usage-based services. For example, if you deploy a DataMiner as a Service (DaaS) system for a period of 2 weeks, one credit will be deducted. <!-- link to DaaS docs -->>
 
 ## Organization credit balance
 
