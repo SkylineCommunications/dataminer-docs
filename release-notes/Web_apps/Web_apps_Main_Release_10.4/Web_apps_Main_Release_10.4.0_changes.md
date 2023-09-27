@@ -890,3 +890,9 @@ The feed linker would no longer automatically select the feed type when there wa
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
 When, in the *Monitoring* app, you selected an element or a service, and navigated to another visual overview page, a `Cannot convert null to a value type` error would be thrown.
+
+#### Low-Code Apps: No longer possible to edit a newly created app after refreshing one of its pages [ID_37425]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When you had created and published an app with at least one component, it would no longer be possible to edit it after refreshing one of its pages.
