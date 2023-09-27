@@ -26,11 +26,11 @@ items:
             topicUid: ModelHost_1.1.0
             href: ModelHost/toc.yml
       - name: Other release notes
-        topicUid: ClassLibrary_Range_1.4
+        topicUid: Code_Libraries_Release_Notes
         items:
-          - name: Class Library release notes
-            topicUid: ClassLibrary_Range_1.4
-            href: Class_Library/toc.yml
+          - name: Code library release notes
+            topicUid: Code_Libraries_Release_Notes
+            href: Code_Libraries/toc.yml
           - name: DIS release notes
             topicUid: DIS_RNs_index
             href: DIS/toc.yml
