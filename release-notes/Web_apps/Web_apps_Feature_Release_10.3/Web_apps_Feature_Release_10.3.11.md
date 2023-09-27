@@ -63,7 +63,7 @@ The following example would result in something like "*My element Localhost is f
 
 #### Dashboards app & Low-Code Apps: A backup of all existing dashboards and low-code apps will now be made when performing a DataMiner upgrade  [ID_37413]
 
-<!-- MR 10.4.0 - FR 10.3.11 -->
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
 
 When you install a DataMiner upgrade (either a full upgrade or a web-only upgrade), a backup of all existing dashboards and low-code apps on the system will now be made.
 
