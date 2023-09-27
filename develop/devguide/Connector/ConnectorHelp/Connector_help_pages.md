@@ -16,11 +16,17 @@ When you write connector help, keep the instructions below in mind.
 
 Use DocFX Flavored Markdown (DFM). See [Markdown syntax](xref:contributing#markdown-syntax).
 
+### File name and folder
+
+To make sure your help page can be automatically included in the [DataMiner Catalog](https://catalog.dataminer.services/), it is important that you use the correct file name and place the file in the correct folder:
+
+- Make sure the **file name** is the **exact name of the connector in the Catalog**, but with **underscores instead of spaces**. For example, the file name of the *Microsoft Platform* connector help has to be *Microsoft_Platform.md*.
+
+- Add your help file in the following folder of the [dataminer-docs-connectors](https://github.com/SkylineCommunications/dataminer-docs-connectors) repository: */dataminer-docs-connectors/connector_help/connector-help*
+
 ### Title
 
-The **title** of the help page must be the **exact name of the connector**.
-
-It is important that this is the same name as in the [DataMiner Catalog](https://catalog.dataminer.services/), so that the help page can automatically be displayed there.
+The title of the help page should be the name of the connector in the [DataMiner Catalog](https://catalog.dataminer.services/).
 
 ### Introduction paragraph
 
