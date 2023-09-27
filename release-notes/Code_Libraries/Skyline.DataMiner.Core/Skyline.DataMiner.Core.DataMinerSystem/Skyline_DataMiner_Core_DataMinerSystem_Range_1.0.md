@@ -13,7 +13,7 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.0
 
 A breaking change was introduced in the ICommunication interface. This will only affect users that directly access and use RemotingCommunication.
 
-#### New Feature - .NET DataFlow applied to Monitors
+#### New feature - .NET DataFlow applied to Monitors
 
 Scalability and performance of the Monitors has been improved through the use of .NET DataFlow technology and parallel processing in the background. This version moves the largest bottleneck away from the software and places it mostly with the user hardware. Also, where before you would have affected other elements by using Monitors, this is now much more isolated between elements.
 
@@ -22,42 +22,43 @@ The latest benchmark tests, at the time of release, demonstrate that the system'
 >[!Note]
 > Scalability and performance depend on your system's ability to execute monitor handlers in parallel.
 
-#### Fix - Automation Scripts failed to parse with EXE blocks other than C#
+#### Fix - Automation scripts failed to parse with EXE blocks other than C\#
 
-IDms can now retrieve Automation Scripts that have EXE blocks that do not contains C# code.
+IDms can now retrieve Automation scripts that have EXE blocks that do not contain C# code.
 
-#### New Feature - Create Service Properties
+#### New feature - Creation of service properties
 
-IDms can now create Service Properties.
+IDms can now create service properties.
 
-#### New Feature - Monitors on tables now allow filtering on columns
+#### New feature - Monitors on tables now allow filtering on columns
 
 Starting a value monitor on tables can now be done on only a few columns. This allows more efficiency by only subscribing to the changes you need.
 
 ### 1.0.0.6
 
-#### New Feature - LocalElement and GetColumns support
+#### New feature - LocalElement and GetColumns support
 
-It is now possible to ask IDms for your local element. On that element you can perform additional code such as GetColumns on a retrieved table.
-A call often missed in the Protocol interface provided in QActions.
-This code was extracted from a popular internal community library "Utility Library" as can serve as an example for future extraction.
+It is now possible to ask IDms for your local element. On that element you can perform additional code, such as GetColumns on a retrieved table, a call often missed in the Protocol interface provided in QActions.
+
+This code was extracted from a popular internal community library "Utility Library", which can serve as an example for future extraction.
 
 ### 1.0.0.5
+
+#### Fix - RemotingConnection replaced [ID_36324]
+
+To prepare for the deprecation and removal of RemoteConnection, RemoteConnection has been replaced with a more secure connection type.
 
 #### Fix - Views.Elements now returns stopped and paused elements [ID_36325]
 
 Asking for all elements under a view will now return all stopped and paused elements.
 
-#### Fix - RemotingConnection replaced [ID_36324]
-
-​RemoteConnection was replaced with a more secure Connection type. As preparation for the deprecation and removal of RemoteConnection.
-
 ### 1.0.0.4
 
-#### New Feature - Automation script retrieval support
+#### New feature - Automation script retrieval support
 
-Support was added to retrieve and create automation scripts.
-Added calls:
+Support has been added to retrieve and create Automation scripts.
+
+The following calls have been added:
 
 - GetScripts
 - GetScript
@@ -66,18 +67,18 @@ Added calls:
 
 ### 1.0.0.3
 
-#### Fixes to Element Creation
+#### Fixes to element creation
 
-Element Creation through this library produced corrupt elements since DataMiner version 10.3.4 [ID_33515]. This version fixes that element creation.
+Element creation through this library produced corrupt elements since DataMiner version 10.3.4 [ID_33515]. This version fixes that issue.
 
 ### 1.0.0.2
 
-#### Fixes to NuGet Descriptions
+#### Fixes to NuGet descriptions
 
-Added minimum required DataMiner version to the description of NuGets for user clarity.
+For the sake of clarity, the minimum required DataMiner version has been added to the description of NuGet packages.
 
 ### 1.0.0.1
 
-#### New Feature - Migrated from Class Library
+#### New feature - Migration from Class Library
 
-Extracted IDms classes and functionality alongside Class Library Monitors into a public available NuGet library. This was extracted from Class Library range 1.2.0.x.
+IDms classes and functionality have been extracted alongside Class Library Monitors into a publicly available NuGet library. This was extracted from Class Library range 1.2.0.x.

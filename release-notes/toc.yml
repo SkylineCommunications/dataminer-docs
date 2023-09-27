@@ -28,7 +28,7 @@ items:
       - name: Other release notes
         topicUid: Code_Libraries_Release_Notes
         items:
-          - name: Code Libraries release notes
+          - name: Code library release notes
             topicUid: Code_Libraries_Release_Notes
             href: Code_Libraries/toc.yml
           - name: DIS release notes
