@@ -103,11 +103,11 @@ In all other cases (e.g. multiple aggregation nodes, grouping, different columns
 
 A DOM instance without history will now default to the happy path, i.e. the path that illustrates the states an instance would undergo following the standard workflow.
 
-#### Dashboards app: Components will now only show skeleton loading as long as the data has not been initialized [ID_37274]
+#### Dashboards app: Components will now only show skeleton loading during the initial load [ID_37274]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
-Up to now, components would show skeleton loading until after the data had been retrieved. From now on, components will only show skeleton loading as long as the data has not been initialized.
+Up to now, some components would show skeleton loading until after the data had been loaded. From now on, those components will only show skeleton loading during the initial load.
 
 #### Dashboards app/Low-Code Apps - Visual Overview component: Initial visual overview data will now be retrieved asynchronously [ID_37341]
 

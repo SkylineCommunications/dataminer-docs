@@ -98,3 +98,9 @@ When, in the Alarm Console, you created a linked alarm tab while connected to a 
 <!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
 
 When you opened a service card, in some rare cases, no breadcrumbs would be displayed.
+
+#### Visual Overview: No longer possible to return to the initially selected page when the VdxPage property was linked to a session variable [ID_37419]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+In a visual overview containing multiple pages, it would no longer be possible to return to the initially selected page when the shape used to switch pages had its `VdxPage` property updated using a session variable.
