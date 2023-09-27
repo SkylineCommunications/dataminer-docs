@@ -13,6 +13,9 @@ A `DomBehaviorDefinition` object is a standalone object that extends a normal DO
 
 The table below lists the properties of the `DomBehaviorDefinition` object. It also indicates whether a property can be used for filtering using the `DomBehaviorDefinitionExposers`.
 
+> [!NOTE]
+> From DataMiner 10.3.2/10.4.0 onwards, the `DomBehaviorDefinition` object also has [the *ITrackBase* properties](xref:DOM_objects#itrackbase-properties).
+
 | Property | Type | Filterable | Description |
 |--|--|--|--|
 | ID | DomBehaviorDefinitionId | Yes | The unique ID of the object. |
@@ -31,7 +34,15 @@ One `DomBehaviorDefinition` can inherit from another. However, there are importa
 
 - It can only inherit from the `ModuleDomBehaviorDefinition` (the ID is defined in the *ModuleBehaviorDefinition* property of the `ModuleSettings`).
 
-- The inheriting definition can only contain an ID, parent ID, and extra `DomStatusSectionDefinitionLinks` for `SectionDefinitions` that are not already defined on the module definition. Adding extra statuses or transitions is not allowed.
+- The inheriting definition can only contain an ID, parent ID, and extra:
+
+  - `DomStatusSectionDefinitionLinks` for `SectionDefinitions` that are not already defined on the module definition.
+
+  - `ButtonDefinitions` (with other IDs than those defined on the parent).
+
+  - `ActionDefinitions` (with other IDs than those defined on the parent).
+
+Adding extra statuses or transitions on the child definition is not allowed.
 
 This logic makes it possible to define a complete status system that should be used by all `DomDefinitions`. With an inheriting `DomBehaviorDefinition`, you can then define the visibility, requirements etc. for fields of extra `SectionDefinitions`.
 
@@ -70,7 +81,7 @@ When something goes wrong during the CRUD actions, the `TraceData` can contain o
 | Reason | Description |
 |--|--|
 | InvalidParentId | The `DomBehaviorDefinition.ParentId` property contains an unexpected ID. If a module `DomBehaviorDefinition` is defined, it must contain the ID of that definition. If that is not the case, it should be empty. |
-| InheritingDefinitionContainsInvalidData | This `DomBehaviorDefinition` is inheriting from another `DomBehaviorDefinition`, but it contains data that is not allowed. Only the `DomBehaviorDefinition.StatusSectionDefinitionLinks` can contain extra objects. |
+| InheritingDefinitionContainsInvalidData | This `DomBehaviorDefinition` is inheriting from another `DomBehaviorDefinition`, but it contains data that is not allowed. Only the `StatusSectionDefinitionLinks`, `ButtonDefinitions`, and `ActionDefinitions` can contain extra objects. |
 | StatusTransitionsReferenceNonExistingStatuses | There was at least one `DomStatusTransition` that references a status that does not exist. *StatusTransitionsIds* contains the ID(s) of the invalid transition(s). |
 | StatusSectionDefinitionLinksReferenceNonExistingStatuses | There was at least one `DomStatusSectionDefinitionLink` that referenced a status that does not exist. *DomStatusSectionDefinitionLinkIds* contains the ID(s) of the invalid `DomStatusSectionDefinitionLink(s)`. |
 | InvalidStatusIds | There was at least one status defined with an invalid ID (should only contain lowercase characters). *StatusIds* contains the ID(s) of the invalid status(es). |
@@ -85,4 +96,7 @@ When something goes wrong during the CRUD actions, the `TraceData` can contain o
 | DuplicateActionDefinitionIds | There are `IDomActionDefinition` defined with duplicate IDs. *ActionDefinitionIds* contains the ID(s) of the duplicate definition(s). |
 | InvalidButtonDefinitionIds | There was at least one `IDomButtonDefinition` defined with an invalid ID (should only contain lowercase characters). *ButtonDefinitionIds* contains the ID(s) of the invalid definition(s). |
 | DuplicateButtonDefinitionIds | There are `IDomButtonDefinition` defined with duplicate IDs. *ButtonDefinitionIds* contains the ID(s) of the duplicate definition(s). |
+|InvalidButtonActionCombination | An `IDomButtonDefinition` contains a combination of actions, which is not supported. At this time, only a single action is allowed. This error is returned from DataMiner 10.3.2/10.4.0 onwards when more than one action ID is added to an `IDomButtonDefinition`. *ButtonDefinitionIds* contains the ID(s) of the invalid definition(s). |
 
+> [!NOTE]
+> When a `DomBehaviorDefinition` inherits from another definition, make sure that the IDs of the `StatusSectionDefinitionLinks`, `ButtonDefinitions` and `ActionDefinitions` are unique accross both parent & child definition.

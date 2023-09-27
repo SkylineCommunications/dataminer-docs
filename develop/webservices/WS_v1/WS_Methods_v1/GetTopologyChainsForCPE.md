@@ -18,4 +18,4 @@ Use this method to retrieve the topology chains for a particular CPE element.
 
 | Item                           | Format                    | Description                                                  |
 |--------------------------------|---------------------------|--------------------------------------------------------------|
-| GetTopologyChains­ForCPEResult | Array of DMATopologyChain | The names of the topology chains for the specified element. |
+| GetTopologyChainsForCPEResult | Array of DMATopologyChain | The names of the topology chains for the specified element. |

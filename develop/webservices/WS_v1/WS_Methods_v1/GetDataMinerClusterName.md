@@ -14,4 +14,4 @@ None.
 
 | Item                           | Format | Description                       |
 |--------------------------------|--------|-----------------------------------|
-| GetDataMinerCluster­NameResult | String | The name of the DataMiner System. |
+| GetDataMinerClusterNameResult | String | The name of the DataMiner System. |

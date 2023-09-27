@@ -26,4 +26,4 @@ Available from DataMiner version 9.5.1 onwards.
 
 | Item | Format | Description |
 |--|--|--|
-| GetHistoryAlarmsFor­ViewResult | Array of [DMAAlarm](xref:DMAAlarm) | The alarms for the specified view and period, limited by the specified filters. |
+| GetHistoryAlarmsForViewResult | Array of [DMAAlarm](xref:DMAAlarm) | The alarms for the specified view and period, limited by the specified filters. |

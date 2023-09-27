@@ -17,6 +17,6 @@ Available from DataMiner 10.0.7 onwards.
 
 ## Output
 
-| Item                             | Format                           | Description                                                                                  |
-|----------------------------------|----------------------------------|----------------------------------------------------------------------------------------------|
-| GetActiveAlarmCountForViewResult | DMAAlarmCountData­AndCacheStatus | An array listing the alarm count for each severity level, along with the alarm cache status. |
+| Item | Format | Description |
+|--|--|--|
+| GetActiveAlarmCountForViewResult | DMAAlarmCountDataAndCacheStatus | An array listing the alarm count for each severity level, along with the alarm cache status. |

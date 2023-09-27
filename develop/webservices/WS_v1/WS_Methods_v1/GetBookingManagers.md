@@ -16,4 +16,4 @@ Use this method to retrieve a list of all booking manager elements in the DataMi
 
 | Item | Format | Description |
 |--|--|--|
-| GetBookingManagers­Result | Array of [DMABookingManager](xref:DMABookingManager) | The booking manager elements in the DataMiner System. |
+| GetBookingManagersResult | Array of [DMABookingManager](xref:DMABookingManager) | The booking manager elements in the DataMiner System. |

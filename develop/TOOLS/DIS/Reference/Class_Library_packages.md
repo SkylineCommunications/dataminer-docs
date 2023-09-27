@@ -4,6 +4,28 @@ uid: Class_Library_packages
 
 # Class Library packages
 
+## [From DIS 2.41 onwards](#tab/CLP-1)
+
+> [!IMPORTANT]
+> The class library generation feature has been removed from DIS v2.41 onwards in favor of NuGet packages. If you have a connector or Automation script that makes use of the official class library, replace it with the corresponding NuGet package(s). For more information, refer to [Class library introduction](xref:ClassLibraryIntroduction). If you have a connector or Automation script that makes use of a community package, we recommend turning this into a NuGet package (For more information on how to create a NuGet package, refer to [Producing NuGet packages](xref:Producing_NuGet)). Alternatively, you can put all the code from the community library zip file in a QAction/Exe block.
+>
+> Note also that the class library has been split up into multiple NuGet packages and that the namespaces have been updated:
+>
+> - [Skyline.DataMiner.Core.DataMinerSystem.Common](https://www.nuget.org/packages/Skyline.DataMiner.Core.DataMinerSystem.Common): This NuGet package allows interaction with a DataMiner System.
+> - [Skyline.DataMiner.Core.DataMinerSystem.Automation](https://www.nuget.org/packages/Skyline.DataMiner.Core.DataMinerSystem.Automation): This NuGet package contains extension methods for accessing an IDms instance via the Engine class or IEngine interface.
+> - [Skyline.DataMiner.Core.DataMinerSystem.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Core.DataMinerSystem.Protocol): This NuGet package contains extension methods for retrieving an IDms instance via the SLProtocol interface.
+> - [Skyline.DataMiner.Core.InterAppCalls.Common](https://www.nuget.org/packages/Skyline.DataMiner.Core.InterAppCalls.Common): This NuGet package contains the InterApp functionality.
+> - [Skyline.DataMiner.Core.Matrix.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Core.Matrix.Protocol): This NuGet package allows you to define a matrix component in a connector.
+> - [Skyline.DataMiner.Utils.SNMP](https://www.nuget.org/packages/Skyline.DataMiner.Utils.SNMP): This NuGet package defines types related to SNMP.
+> - [Skyline.DataMiner.Utils.Rates.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Rates.Protocol): This NuGet package defines types for calculation rates in a connector.
+> - [Skyline.DataMiner.Utils.Rates.Common](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Rates.Common): This NuGet package defines types related to calculating rates.
+> - [Skyline.DataMiner.Utils.SafeConverters](https://www.nuget.org/packages/Skyline.DataMiner.Utils.SafeConverters): This NuGet package defines types that allow safe conversion from double to integers.
+> - [Skyline.DataMiner.Utils.Interfaces](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Interfaces): This NuGet package defines types for calculation rates of interfaces.
+> - [Skyline.DataMiner.Utils.SNMP.Traps.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Utils.SNMP.Traps.Protocol): This NuGet package provides functionality to easily parse traps in a connector.
+> - [Skyline.DataMiner.Utils.Table.ContextMenu](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Table.ContextMenu): This NuGet package provides functionality to easily create a custom context menu.
+
+## [Prior to DIS 2.41](#tab/CLP-2)
+
 A Class Library package (CLP) contains generic code that can be shared by multiple QActions and Automation scripts.
 
 In a Class Library package, you can add extension methods, vendor-specific code (which, for example, processes data from proprietary communication protocols), project-specific code that needs to be used by different protocols, etc.
@@ -52,7 +74,7 @@ Package.zip
 
 The Manifest.xml file, which must be placed in the zip file’s root folder, describes the content of the package and lists the dependencies between the package in question and other packages.
 
-When DIS generates a Class Library QAction (with ID 63000) or a Class Library EXE block, it will copy the contents of the Manifest.xml file to the QActions section of the Protocol.xml file or the top of the EXE block respectively. That way, when the Protocol file or Automation script file is opened later on, DIS will be able to determine from which Class Library packages code was copied.
+When DIS generates a Class Library QAction (with ID 63000) or a Class Library EXE block, it will copy the contents of the Manifest.xml file to the QActions section of the *protocol.xml* file or the top of the EXE block respectively. That way, when the Protocol file or Automation script file is opened later on, DIS will be able to determine from which Class Library packages code was copied.
 
 A Manifest.xml file could, for example, contain the following information:
 
@@ -80,7 +102,7 @@ For more information about the tags used in a Manifest.xml file, see below:
 
 > [!NOTE]
 > If you want IntelliSense support when creating a Manifest.xml file, make sure to add the correct XML namespace to the \<CodePackage> tag:
-> *\<CodePackage xmlns=”http://www.skyline.be/ClassLibrary”>*
+> *\<CodePackage xmlns="http://www.skyline.be/ClassLibrary">*
 
 ## Version numbering
 
@@ -90,7 +112,7 @@ Base packages, i.e. default packages shipped with DIS, have a version number mad
 
 | Component | Description |
 |-----------|-------------|
-| Major release | Start with “1” for the first release, and increment each time you make a new major release. |
+| Major release | Start with "1" for the first release, and increment each time you make a new major release. |
 | Minimum DataMiner version | This number indicates the minimum DataMiner version required for the package to work (e.g. 1=DM 8.5, 2=DM 9.6, etc.). |
 | Major change | Increment this number when the package contains changes that break functionality present in the previous version (e.g. API changes). |
 | Iteration | Increment this number when the package contains changes that do not break functionality present in the previous version (e.g. API additions). |
@@ -101,9 +123,9 @@ If you create a custom community package, you are free to use your own versionin
 
 ## DLL references
 
-When an external DLL file is needed to be able to execute a piece of code, a “DllImport” line has to be added above that piece of code.
+When an external DLL file is needed to be able to execute a piece of code, a "DllImport" line has to be added above that piece of code.
 
-Whenever DIS detects at least one such line above a piece of code that is being used in a QAction, it will automatically add a DLL import statement when it generates the Class Library QAction. This means, that you do not have to add a “DllImport” line above every possible piece of code. Instead, you can just add one above a piece of code of which you know it will be included in the code that DIS will generate.
+Whenever DIS detects at least one such line above a piece of code that is being used in a QAction, it will automatically add a DLL import statement when it generates the Class Library QAction. This means, that you do not have to add a "DllImport" line above every possible piece of code. Instead, you can just add one above a piece of code of which you know it will be included in the code that DIS will generate.
 
 In the following example, a "DllImport" line was added above a piece of code:
 
@@ -118,230 +140,10 @@ When DIS loads a package, it will combine C# code from different sources into a 
 
 The following C#/.NET features are currently not supported:
 
-- With regard to LINQ queries, “query syntax” is not supported. Only “method syntax” is supported.
+- With regard to LINQ queries, "query syntax" is not supported. Only "method syntax" is supported.
 
     > [!NOTE]
     > For more information about the difference between these two types of syntax, see<br>https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq
 
 - #region tags are only allowed within members of a class (properties, methods, etc.).
 - DllImport tags need to be fully qualified. Use e.g. *\[Skyline.DataMiner.Library.Common.Attributes.DllImport("Newtonsoft.Json.dll")\]* instead of *\[DllImport("Newtonsoft.Json.dll")\]*. If a DllImport tag is not fully qualified, DIS will not be able to detect the DLL file before compiling the code.
-
-## Class Library versions
-
-### Ranges
-
-| Range   | Supported as from DataMiner version... |
-|---------|----------------------------------------|
-| 1.0.x.x | 9.0.0                                  |
-| 1.1.x.x | 9.6.3                                  |
-| 1.2.x.x | 10.0.3                                 |
-
-### Released versions
-
-[DIS 2.18](xref:DIS_2.18)
-
-- 1.0.0.1
-
-  - RN 22296: SetParameterMessage messages will no longer generate information events
-  - RN 22297: GetAgents (IDms) would fail if the response contained a DataMiner Agent ID equal to 0
-  - RN 22299: Property type is now passed along when updating element properties
-  - RN 22301: ‘Name’ and ‘HostName’ properties added to IDma interface
-  - RN 22302: New classes to easily parse trap information
-
-[DIS 2.19](xref:DIS_2.19)
-
-- No changes to the Class Library base packages
-
-[DIS 2.20](xref:DIS_2.20)
-
-- No changes to the Class Library base packages
-
-[DIS 2.21](xref:DIS_2.21)
-
-- 1.0.0.2
-
-  - RN 23075: New matrix classes added to facilitate matrix and router control implementations
-
-- 1.1.0.1
-
-  - RN 23075: New matrix classes added to facilitate matrix and router control implementations
-  - RN 23298: New InterApp classes now provide a C# message/response architecture
-
-[DIS 2.22](xref:DIS_2.22)
-
-- No changes to the Class Library base packages
-
-[DIS 2.23](xref:DIS_2.23)
-
-- 1.0.0.3
-
-  - RN 22303: View name would be retrieved when it was already known
-  - RN 23514: Element properties will only be retrieved when needed
-  - RN 23515: Exception thrown after detecting an element with duplicate properties will now also contain the name of the ID of the element
-
-- 1.1.0.2
-
-  - RN 22303: View name would be retrieved when it was already known
-  - RN 23514: Element properties will only be retrieved when needed
-  - RN 23515: Exception thrown after detecting an element with duplicate properties will now also contain the name of the ID of the element
-
-[DIS 2.24](xref:DIS_2.24)
-
-- 1.0.1.1
-
-  - RN 24283: New Rates namespace
-  - RN 24290: element.IsStartupComplete method would throw an exception when executed on an element that had been stopped
-  - RN 24291: Problem when updating properties
-  - RN 24293: Problem when requesting an element with duplicate properties
-  - RN 24357: GetAlarmTemplates() and GetTrendTemplates() would not work when the protocol was a production protocol
-
-- 1.1.2.1
-
-  - RN 24066: DMS Monitors
-  - RN 24283: New Rates namespace
-  - RN 24290: element.IsStartupComplete method would throw an exception when executed on an element that had been stopped
-  - RN 24291: Problem when updating properties
-  - RN 24293: Problem when requesting an element with duplicate properties
-  - RN 24357: GetAlarmTemplates() and GetTrendTemplates() would not work when the protocol was a production protocol
-  - RN 24456: Table cell subscriptions will now be established using the primary key
-
-[DIS 2.25](xref:DIS_2.25)
-
-- 1.0.1.2
-
-  - RN 24756: Problem recreating the monitor after an element restart
-  - RN 24934: Enhanced handling of errors occurring while parsing element information returned by a GetElements method
-
-- 1.1.2.2
-
-  - RN 24756: Problem recreating the monitor after an element restart
-  - RN 24934: Enhanced handling of errors occurring while parsing element information returned by a GetElements method
-
-[DIS 2.26](xref:DIS_2.26)
-
-- 1.0.1.3
-
-  - RN 25127: Matrix Helper: Serialized matrix status information
-
-- 1.1.2.3
-
-  - RN 24951: Retrieving data from partial tables
-  - RN 25127: Matrix Helper: Serialized matrix status information
-  - RN 25442: Class Library - InterApp calls: Problem when checking the mapping dictionary
-  - RN 25585: Retrieving SNMP connection information & creating elements with SNMP connections
-
-- 1.2.0.1
-
-  - RN 24951: Retrieving data from partial tables
-  - RN 25127: Matrix Helper: Serialized matrix status information
-  - RN 25442: Class Library - InterApp calls: Problem when checking the mapping dictionary
-  - RN 25585: Retrieving SNMP connection information & creating elements with SNMP connections
-  - RN 25632: IEngine interface now supports the extension of the GetDms method
-
-[DIS 2.27](xref:DIS_2.27)
-
-- 1.1.2.4
-
-  - RN 25933: Deserialization now supports classes located in both System.Core.dll and System.dll.
-
-- 1.2.0.2
-
-  - RN 25933: Deserialization now supports classes located in both System.Core.dll and System.dll.
-
-[DIS 2.28](xref:DIS_2.28)
-
-- 1.1.2.5
-
-  - RN 26422: DataMiner System interface would thrown an exception when parsing elements in a view
-  - RN 26423: Incorrectly formatted input string would cause the GetElement method to throw an exception
-
-- 1.2.0.3
-
-  - RN 26422: DataMiner System interface would thrown an exception when parsing elements in a view
-  - RN 26423: Incorrectly formatted input string would cause the GetElement method to throw an exception
-
-[DIS 2.29](xref:DIS_2.29)
-
-- No changes to the Class Library base packages
-
-[DIS 2.30](xref:DIS_2.30)
-
-- 1.1.2.7
-
-  - RN 27783: Name of an element with a RealConnection could no longer be updated
-  - RN 27784: A matrix output could not be disconnected when it was connected to the first input
-
-- 1.2.0.4
-
-  - RN 27783: Name of an element with a RealConnection could no longer be updated
-  - RN 27784: A matrix output could not be disconnected when it was connected to the first input
-
-[DIS 2.31](xref:DIS_2.31)
-
-- No changes to the Class Library base packages
-
-[DIS 2.32](xref:DIS_2.32)
-
-- 1.1.2.8
-
-  - RN 29070: IDms classes now support creating, updating and retrieving HTTP connections of elements
-  - RN 29071: In IDP environments, extension methods now allow you to retrieve CI Type information from connections
-  - RN 29072: IDms classes now support creating and deleting properties in a DataMiner System
-  - RN 29074: SLNet wrapper methods now allow you to safely communicate with the SLScheduler and SLSpectrum modules
-
-- 1.2.0.5
-
-  - RN 29070: IDms classes now support creating, updating and retrieving HTTP connections of elements
-  - RN 29071: In IDP environments, extension methods now allow you to retrieve CI Type information from connections
-  - RN 29072: IDms classes now support creating and deleting properties in a DataMiner System
-  - RN 29074: SLNet wrapper methods now allow you to safely communicate with the SLScheduler and SLSpectrum modules
-
-[DIS 2.33](xref:DIS_2.33)
-
-- 1.1.2.9
-
-  - RN 29440: IsSslTlsEnabled property of all ports of an element would incorrectly be reset to false when an element port had been updated
-  - RN 29442: IElementCollection now implements IEnumerable
-  - RN 29513: DmsService class can now be used to manage DataMiner services
-  - RN 29515: Monitors added to subscribe to service alarm level and service state
-
-- 1.1.2.10
-
-  - RN 29777: Additional check to prevent elements to restart after being updated
-
-- 1.1.2.11
-
-  - RN 30053: RemotePort would throw “null reference” exceptions when trying to retrieve a replicated element
-  - RN 30055: Monitors that subscribe to a table can now execute code whenever data in that table is updated
-  - RN 30056: SLSpectrum wrappers were missing a GetMonitor call with the correct return format
-
-- 1.2.0.6
-
-  - RN 29440: IsSslTlsEnabled property of all ports of an element would incorrectly be reset to false when an element port had been updated
-  - RN 29442: IElementCollection now implements IEnumerable
-  - RN 29513: DmsService class can now be used to manage DataMiner services
-  - RN 29515: Monitors added to subscribe to service alarm level and service state
-
-- 1.2.0.7
-
-  - RN 30053: RemotePort would throw “null reference” exceptions when trying to retrieve a replicated element
-  - RN 30055: Monitors that subscribe to a table can now execute code whenever data in that table is updated
-  - RN 30056: SLSpectrum wrappers were missing a GetMonitor call with the correct return format
-
-[DIS 2.34](xref:DIS_2.34)
-
-- 1.1.2.12
-
-  - RN 30232: Extended authentication algorithm support
-
-- 1.2.0.8
-
-  - RN 30232: Extended authentication algorithm support
-
-[DIS 2.35](xref:DIS_2.35)
-
-- No changes to the Class Library base packages
-
-[DIS 2.36](xref:DIS_2.36)
-
-- No changes to the Class Library base packages

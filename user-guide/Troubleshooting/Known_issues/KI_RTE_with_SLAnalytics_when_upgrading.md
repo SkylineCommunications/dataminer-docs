@@ -14,7 +14,7 @@ The upgrade action "AnalyticsParameterInfoRecordAddChangeRate" is not triggered 
 
 ## Fix
 
-Upgrade to DataMiner 10.2.8 CU2.
+Either downgrade to 10.2.7 and then upgrade to DataMiner 10.2.8 (CU2), or run the command mentioned under "Workaround" below and then upgrade to DataMiner 10.2.8 (CU2).
 
 ## Workaround
 

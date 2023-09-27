@@ -18,4 +18,4 @@ Use this method to remove a specific note from a particular view.
 
 | Item                      | Format  | Description         |
 |---------------------------|---------|---------------------|
-| RemoveNoteFrom­ViewResult | Integer | The ID of the note. |
+| RemoveNoteFromViewResult | Integer | The ID of the note. |

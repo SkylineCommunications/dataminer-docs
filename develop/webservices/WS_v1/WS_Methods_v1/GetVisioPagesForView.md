@@ -17,4 +17,4 @@ Use this method to retrieve a list of the pages of the Visio file linked to a pa
 
 | Item | Format | Description |
 |--|--|--|
-| GetVisioPagesForView­Result | Array of [DMAVisioPage](xref:DMAVisioPage) | A list of the pages of the Visio file linked to the view. |
+| GetVisioPagesForViewResult | Array of [DMAVisioPage](xref:DMAVisioPage) | A list of the pages of the Visio file linked to the view. |

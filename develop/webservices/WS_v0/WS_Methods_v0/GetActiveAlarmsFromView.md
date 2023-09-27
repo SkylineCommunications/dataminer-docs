@@ -17,4 +17,4 @@ Use this method to request a list of all the alarms of a specific view (referenc
 
 | Item | Format | Description |
 |--|--|--|
-| GetActiveAlarmsFrom­ViewResult | Array of [AlarmEventMessage](xref:AlarmEventMessage) | All the alarms of the specified view. |
+| GetActiveAlarmsFromViewResult | Array of [AlarmEventMessage](xref:AlarmEventMessage) | All the alarms of the specified view. |

@@ -16,4 +16,4 @@ Use this method to retrieve co-branding version information from the OEM.xml fil
 
 | Item                       | Format          | Description                          |
 |----------------------------|-----------------|--------------------------------------|
-| GetDataMinerOEMInfo­Result | Array of string | The co-branding version information. |
+| GetDataMinerOEMInfoResult | Array of string | The co-branding version information. |

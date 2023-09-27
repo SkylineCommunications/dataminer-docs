@@ -4,7 +4,7 @@ uid: Protocol.TreeControls.TreeControl.ExtraDetails.LinkedDetails
 
 # LinkedDetails element
 
-Defines additional tree item information to be displayed in the details section of the tree control lay­out.
+Defines additional tree item information to be displayed in the details section of the tree control layout.
 
 ## Parent
 

@@ -18,10 +18,12 @@ The method is used to display web apps inside DataMiner Cube, so that it is not 
 | clientComputerName | String | The name of the client computer. Optional. Used in logging and information events.       |
 
 > [!NOTE]
-> Prior to DataMiner 9.6.0 CU19/10.0.0 CU7/10.0.12, for the *ClientAppName*, a registered app name must be specified. If this is not done, the connection will be removed after 10 minutes. To request a valid *ClientAppName*, contact your Skyline Technical Account Manager. From DataMiner 9.6.0 CU19/10.0.0 CU7/10.0.12 onwards, this registration is no longer required. The client app name is then merely used in the audit trail.
+>
+> - By default, the ticket remains valid for 30 seconds. This is determined by the [AuthenticationTicketExpirationTime](xref:Configuration_of_DataMiner_processes#customizing-how-long-a-connection-ticket-remains-valid) setting in *MaintenanceSettings.xml*.
+> - Prior to DataMiner 9.6.0 CU19/10.0.0 CU7/10.0.12, for the *ClientAppName*, a registered app name must be specified. If this is not done, the connection will be removed after 10 minutes. To request a valid *ClientAppName*, contact your Skyline Technical Account Manager. From DataMiner 9.6.0 CU19/10.0.0 CU7/10.0.12 onwards, this registration is no longer required. The client app name is then merely used in the audit trail.
 
 ## Output
 
 | Item | Format | Description |
 |--|--|--|
-| ConnectAppAndInfo­UsingTicketResult | [DMAConnectAndInfo](xref:DMAConnectAndInfo) | The connection string, information about the DataMiner Agent, and the user permissions granted. |
+| ConnectAppAndInfoUsingTicketResult | [DMAConnectAndInfo](xref:DMAConnectAndInfo) | The connection string, information about the DataMiner Agent, and the user permissions granted. |

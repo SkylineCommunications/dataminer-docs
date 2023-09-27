@@ -43,9 +43,9 @@ Element cards can look quite different depending on the element protocol. Howeve
   - **DASHBOARDS**: Links to the legacy DMS Dashboards app.
 
     > [!NOTE]
-    > From DataMiner 10.2.0/10.1.12 onwards, the legacy Dashboards app is no longer available by default in new DataMiner installations. To enable it, set the soft-launch option *LegacyReportsAndDashboards* to true. See [soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/).
+    > From DataMiner 10.2.0/10.1.12 onwards, the legacy Dashboards app can be disabled using the soft-launch option *LegacyReportsAndDashboards*. See [Soft-launch options](xref:SoftLaunchOptions).
 
-  - **DOCUMENTS**: Displays documents that have been made available either on the DMS in general or for this particular element protocol. See [Documents](xref:documents).
+  - **DOCUMENTS**: Displays documents that have been made available either on the DMS in general or for this particular element protocol. See [Documents](xref:About_the_Documents_module).
 
   - **NOTES**: Page where short notes can be added to elements. For more information, see [Card navigation pane](xref:Working_with_cards_in_DataMiner_Cube#card-navigation-pane).
 
@@ -57,7 +57,7 @@ Element cards can look quite different depending on the element protocol. Howeve
   - **ANNOTATIONS**: Page where more extensive annotations can be added and viewed. With the pencil icon on this page, you can open an HTML editor that allows you to add text, hyperlinks, pictures, etc. to the annotations. There is also an icon that can be used to print the annotations, and an icon to refresh the annotations page.
 
     > [!NOTE]
-    > From DataMiner 10.2.0/10.1.12 onwards, annotations are no longer available by default in new DataMiner installations. To enable them, set the soft-launch option *LegacyAnnotations* to true. See [soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/).
+    > From DataMiner 10.2.0/10.1.12 onwards, annotations can be disabled using the soft-launch option *LegacyAnnotations*. See [Soft-launch options](xref:SoftLaunchOptions).
 
   - **HELP**: Help page for the protocol of the element. This page is only displayed if such a help page is available for the protocol (from DataMiner 9.5.7 onwards).
 

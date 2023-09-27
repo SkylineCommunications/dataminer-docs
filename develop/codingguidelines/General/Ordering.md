@@ -103,7 +103,7 @@ uid: Ordering
 - Using alias directives must be ordered alphabetically by alias name ([SA1211](https://github.com/Visual-Stylecop/Visual-StyleCop/wiki/SA1211)).
 
     > [!NOTE]
-    > -  In Visual Studio, you can easily sort the using directives by positioning the cursor on a using directive in the code editor and selecting *Organize Usings* > *Sort Usings* from the context menu. In case you want to also remove unnecessary using directives, select *Organize Usings* > *Remove and Sort Usings* from the context menu.
-    > -  In order to let Visual Studio put System directives first when sorting namespaces, go to *Tools* > *Options*. In the list on the left, go to *Text Editor* > *C#* > *Advanced* and select the check box *Place 'System' directives first when sorting usings*.
-    > -  If "#define" preprocessor directives are used, make sure they are present and not commented out when using the above. Failing to do so can cause quick action build failures.
     >
+    > -  In Visual Studio, you can easily sort the using directives by positioning the cursor on a using directive in the code editor and selecting *Organize Usings* > *Sort Usings* from the context menu. In case you want to also remove unnecessary using directives, select *Organize Usings* > *Remove and Sort Usings* from the context menu.
+    > -  In order to let Visual Studio put System directives first when sorting namespaces, go to *Tools* > *Options*. In the list on the left, go to *Text Editor* > *C#* > *Advanced* and select the checkbox *Place 'System' directives first when sorting usings*.
+    > -  If "#define" preprocessor directives are used, make sure they are present and not commented out when using the above. Failing to do so can cause quick action build failures.

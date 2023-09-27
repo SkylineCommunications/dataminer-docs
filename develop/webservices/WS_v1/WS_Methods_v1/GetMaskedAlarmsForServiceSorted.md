@@ -24,4 +24,4 @@ Use this method to retrieve a specific number of masked service alarms.
 
 | Item | Format | Description |
 |--|--|--|
-| GetMaskedAlarmsFor­ServiceSortedResult | Array of [DMAAlarm](xref:DMAAlarm) | The requested number of masked service alarms, sorted as specified. |
+| GetMaskedAlarmsForServiceSortedResult | Array of [DMAAlarm](xref:DMAAlarm) | The requested number of masked service alarms, sorted as specified. |

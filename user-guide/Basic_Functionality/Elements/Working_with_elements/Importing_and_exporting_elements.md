@@ -10,7 +10,7 @@ uid: Importing_and_exporting_elements
 ## Importing elements from a CSV file
 
 > [!TIP]
-> See also: [Rui’s Rapid Recap – Bulk editing via CSV import](https://community.dataminer.services/video/ruis-rapid-recap-bulk-editing-via-csv-import/) on DataMiner Dojo.
+> See also: [Rui’s Rapid Recap – Bulk editing via CSV import](https://community.dataminer.services/video/ruis-rapid-recap-bulk-editing-via-csv-import/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 1. Either open the card of the view where you want to import the elements and click the hamburger button in the top-left corner, or right-click the view in the Surveyor.
 
@@ -19,9 +19,9 @@ uid: Importing_and_exporting_elements
    > [!NOTE]
    > If you do not have the *Config* permission for a particular view, export and import actions will not be available for this view.
 
-1. In the lower left corner of the *Import* window, click *Import elements from CSV* (up to DataMiner 9.6.3).
+1. In the lower left corner of the *Import* window, select *Import comma-separated file*.
 
-   From DataMiner 9.6.3 onwards, select the option *Import comma-separated file*.
+   Prior to DataMiner 9.6.3, select the option *Import elements from CSV*.
 
 1. In the *Import file* dialog box, select the CSV file you want to import, and click *Open*.
 
@@ -66,13 +66,13 @@ Name checks are case-insensitive. This means that for instance “element1” is
 
 1. In the menu, select *Actions \> Export*.
 
-1. In the lower left corner of the *Export* window, click *Export all elements to CSV* (up to DataMiner 9.6.3).
+1. In the lower left corner of the *Export* window, select *Export to comma-separated file (\*.csv), clipboard or print*.
 
-   From DataMiner 9.6.3 onwards, select the option *Export to comma-separated file (\*.csv), clipboard or print*.
+   Prior to DataMiner 9.6.3, select the option *Export all elements to CSV*.
 
 1. In the *WHAT* section of the *Export* window, select what is to be included in the export:
 
-   - All data,
+   - All data (i.e. the full list, with all columns included),
 
    - The data displayed in the element list of a view card,
 

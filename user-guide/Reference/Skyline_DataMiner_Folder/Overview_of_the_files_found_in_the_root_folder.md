@@ -4,6 +4,9 @@ uid: Overview_of_the_files_found_in_the_root_folder
 
 # Overview of the files found in the root folder
 
+> [!NOTE]
+> All DataMiner system files can be found in the *C:\\Skyline DataMiner* folder of a DataMiner Agent.
+
 | Name | Description | Synchronized? |
 |--|--|--|
 | BaseSubscriptions.xml | Base subscriptions, i.e. element subscriptions that remain open, so that the element info is cached in SLNet. | No |
@@ -30,7 +33,7 @@ uid: Overview_of_the_files_found_in_the_root_folder
 | Security.xml | Security configuration (groups and users). | Yes |
 | SLCloud.xml | See [SLCloud.xml](xref:SLCloud_xml) | No |
 | SNMP Managers.xml | See [SNMP Managers.xml](xref:SNMP_Managers_xml). | Partially |
-| SoftlaunchOptions.xml | This file is not present by default, but can be added manually to activate specific soft-launch options.<br> See [Soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/). | No |
+| SoftlaunchOptions.xml | This file is not present by default, but can be added manually to activate specific soft-launch options.<br> See [Soft-launch options](xref:SoftLaunchOptions). | No |
 | SpectrumMonitors.xml | Monitors for a specific DataMiner/element. | No |
 | Spectrum.xml | Scripts, Globals. | Yes |
 | StartupDataMiner.bat | Batch file executed at startup. | No |

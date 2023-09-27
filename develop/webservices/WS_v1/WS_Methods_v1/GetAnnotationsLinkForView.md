@@ -17,4 +17,4 @@ Use this method to retrieve a link to open the annotations page of the specified
 
 | Item                             | Format | Description                                   |
 |----------------------------------|--------|-----------------------------------------------|
-| GetAnnotationsLinkFor­ViewResult | String | The link to the annotations page of the view. |
+| GetAnnotationsLinkForViewResult | String | The link to the annotations page of the view. |

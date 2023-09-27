@@ -23,4 +23,4 @@ Use this method to retrieve the parameters of a particular protocol that match a
 
 | Item | Format | Description |
 |--|--|--|
-| GetParametersFor­ProtocolFilteredResult | Array of [DMAParameter](xref:DMAParameter) | The parameters of the specified protocol that match the specified filter. |
+| GetParametersForProtocolFilteredResult | Array of [DMAParameter](xref:DMAParameter) | The parameters of the specified protocol that match the specified filter. |

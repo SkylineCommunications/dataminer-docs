@@ -15,6 +15,6 @@ Use this method to retrieve the available aggregation rules.
 
 ## Output
 
-| Item                       | Format                                                                                                  | Description                      |
-|----------------------------|---------------------------------------------------------------------------------------------------------|----------------------------------|
-| GetAggregationRules­Result | Array of [DMAAggregationRule](xref:DMAAggregationRule) | The available aggregation rules. |
+| Item | Format | Description |
+|--|--|--|
+| GetAggregationRulesResult | Array of [DMAAggregationRule](xref:DMAAggregationRule) | The available aggregation rules. |

@@ -22,4 +22,4 @@ Available from DataMiner 10.0.2 onwards.
 
 | Item | Format | Description |
 |--|--|--|
-| GetResourceCapacity­TrendResult | DMAResourceCapacity­Trend | The trend data points for the specified capacity and resource, along with booking information and information on the maximum capacity. |
+| GetResourceCapacityTrendResult | DMAResourceCapacityTrend | The trend data points for the specified capacity and resource, along with booking information and information on the maximum capacity. |

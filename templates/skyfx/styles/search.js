@@ -79,13 +79,6 @@ $(function () {
 
   }
 
-  function createSearchQuery(searchTerm) {
-    const apikey = '5630827C003AFD513AA4D8D21A0A79B7';
-    const encodedQueryString = encodeURIComponent(searchTerm);
-    const limit = 200;
-    return `https://docs-srch.search.windows.net/indexes/docs-blob-index/docs?api-version=2021-04-30-Preview&$top=${limit}&search=${encodedQueryString}&api-key=${apikey}`;
-  }
-
   function search(searchTerm) {
     if (searchTerm.length) {
       doGetHttpRequest(searchTerm);
@@ -95,13 +88,25 @@ $(function () {
   }
 
   function doGetHttpRequest(searchTerm) {
-    const url = createSearchQuery(searchTerm);
+    var url = `https://docs-srch.search.windows.net/indexes/docs-blob-index2/docs/search?api-version=2021-04-30-Preview&api-key=5630827C003AFD513AA4D8D21A0A79B7`;
+    var searchTermEnhanced = searchTerm;
+    var pattern = /[a-zA-Z]$/;
+    if (pattern.test(searchTermEnhanced)) {
+      searchTermEnhanced += "*";
+    }
+    var body= '{"search": \'' + searchTermEnhanced + '\',"searchMode": "all","queryType": "full","top": 200}';
     $.ajax({
-      type: "GET",
+      type: 'POST',
       url: url,
-      dataType: "json",
+      contentType: 'application/json',
+      dataType: 'json',
+      data: body,
       success: function (data) {
         processSearchResults(data, searchTerm);
+      },
+      error: function(XMLHttpRequest, textStatus, errorThrown) {
+        clearResults();
+        addHtmlToResultElement('<p>Unsupported search query.</p>');
       }
     });
   }
@@ -124,7 +129,7 @@ $(function () {
     clearResults();
 
     if (!data.value || data.value.length < 1) {
-      addHtmlToResultElement('<p>No results found</p>')
+      addHtmlToResultElement('<p>No results found.</p>')
     } else {
       const html = [];
 
@@ -133,7 +138,7 @@ $(function () {
           // results with toc.html files (table of contents) + without title are skipped
           const title = getTitle(result.metadata_title);
           const url = getUrl(result.storage_path);
-          const htmlString = `<div class="result"><a href="${url}?q=${searchTerm}"><div class="url">${url}</div><div class="title">${title}</div></a></div>`;
+          const htmlString = `<div class="result"><a href="${url}?q=${encodeURIComponent(searchTerm)}"><div class="url">${url}</div><div class="title">${title}</div></a></div>`;
           html.push(htmlString)
         }
 

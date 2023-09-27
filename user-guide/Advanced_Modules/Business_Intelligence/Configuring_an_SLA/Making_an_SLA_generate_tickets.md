@@ -24,14 +24,17 @@ To automatically generate tickets, this parameter must be used in conjunction wi
 
 1. The SLA element detects an outage.
 
-2. The *Generate Ticket* parameter is set to *Create Ticket* by an Automation rule that has been configured to do so when a particular outage occurs.
+1. The *Generate Ticket* parameter is set to *Create Ticket*.
 
-3. A Correlation rule, which has been configured to be triggered when the *Generate Ticket* parameter gets this value, activates a second Automation script.
+1. A Correlation rule, which has been configured to be triggered when the *Generate Ticket* parameter has this value, activates an Automation script.
 
-4. The second Automation script requests a ticket number, posts the new ticket number value in the last column of the outage table, and sets the *Generate Ticket* parameter back to *Clear*.
+1. The Automation script requests a ticket number, posts the new ticket number value in the last column of the outage table, and sets the *Generate Ticket* parameter back to *Clear*.
 
 > [!TIP]
 > See also:
-> - [DMS Automation](xref:automation#dms-automation)
-> - [DMS Correlation](xref:correlation#dms-correlation)
 >
+> - [Automation](xref:automation)
+> - [Correlation](xref:correlation)
+
+> [!NOTE]
+> You can also have a ticket generated using the "Create ticket" Correlation rule action, but this feature is currently still in preview. See [Creating a ticket](xref:Creating_a_ticket).

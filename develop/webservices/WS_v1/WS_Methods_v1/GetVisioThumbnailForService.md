@@ -25,4 +25,4 @@ All images are in PNG format, and are base64 encoded.
 
 | Item | Format | Description |
 |--|--|--|
-| GetVisioThumbnailFor­ServiceResult | [DMAVisio](xref:DMAVisio) | The Visio file linked to the specified service, returned as a static image. |
+| GetVisioThumbnailForServiceResult | [DMAVisio](xref:DMAVisio) | The Visio file linked to the specified service, returned as a static image. |

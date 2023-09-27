@@ -29,4 +29,4 @@ Use this method to update a job section definition.
 
 | Item                               | Format | Description                                   |
 |------------------------------------|--------|-----------------------------------------------|
-| UpdateJobsSection­DefinitionResult | String | The ID of the updated job section definition. |
+| UpdateJobsSectionDefinitionResult | String | The ID of the updated job section definition. |

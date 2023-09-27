@@ -24,4 +24,4 @@ With this method, real-time data is only retrieved in case no average trending i
 
 | Item | Format | Description |
 |--|--|--|
-| GetTrendDataForTable­ParameterResult | [DMATrendData](xref:DMATrendData) | The trend data for the specified primary key within the specified timespan. |
+| GetTrendDataForTableParameterResult | [DMATrendData](xref:DMATrendData) | The trend data for the specified primary key within the specified timespan. |

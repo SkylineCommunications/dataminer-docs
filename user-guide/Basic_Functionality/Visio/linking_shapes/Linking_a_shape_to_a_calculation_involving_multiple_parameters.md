@@ -83,7 +83,9 @@ Element:Parameter:Index
   - Up to DataMiner 9.6.0, if you specify a table parameter, only one row is allowed to match the filter.
 
 > [!NOTE]
-> By default, a colon (":") is used as the separator within a parameter section. However, it is possible to specify an alternative separator in a \[sep:XY\] tag. See [About using separator characters](xref:Linking_a_shape_to_a_SET_command#about-using-separator-characters).
+>
+> - By default, a colon (":") is used as the separator within a Parameter section. However, it is possible to specify an alternative separator in a \[sep:XY\] tag. See [About using separator characters](xref:Linking_a_shape_to_a_SET_command#about-using-separator-characters).
+> - From DataMiner 10.2.11/10.3.0 onwards, session variables are supported in a Parameter section.
 
 ### Syntax of the Actions section
 

@@ -18,4 +18,4 @@ Use this method to retrieve a link to open the annotations page of the specified
 
 | Item                                | Format | Description                                      |
 |-------------------------------------|--------|--------------------------------------------------|
-| GetAnnotationsLinkFor­ServiceResult | String | The link to the annotations page of the service. |
+| GetAnnotationsLinkForServiceResult | String | The link to the annotations page of the service. |

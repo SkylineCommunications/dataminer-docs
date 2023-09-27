@@ -10,29 +10,25 @@ Set the Type of the Measurement tag to "analog".
 
 ```xml
 <Param id="266" trending="false">
-  <Name>CPU Usage</Name>
-  <Description/>
-  ...
+  <Name>CPUUsage</Name>
+  <Description>CPU Usage</Description>
   <Type>read</Type>
   <Interprete>
-     <RawType>numeric text</RawType>
-     <LengthType>next param</LengthType>
-     <Type>double</Type>
+    <RawType>numeric text</RawType>
+    <Type>double</Type>
+    <LengthType>next param</LengthType>
   </Interprete>
   <Display>
-     <RTDisplay>true</RTDisplay>
-     <Range>
-        <Low>0</Low>
-        <High>100</High>
-     </Range>
-     <Units>%</Units>
-     <Positions>
-     ...
-     </Positions>
+    <RTDisplay>true</RTDisplay>
+    <Units>%</Units>
+    <Range>
+      <Low>0</Low>
+      <High>100</High>
+    </Range>
   </Display>
-   <Measurement>
-      <Type>analog</Type>
-   </Measurement>
+  <Measurement>
+    <Type>analog</Type>
+  </Measurement>
 </Param>
 ```
 
@@ -42,4 +38,4 @@ Set the Type of the Measurement tag to "analog".
 
 DataMiner Protocol Markup Language:
 
-- [Protocol.Params.Param.Measurement.Type@options: analog](xref:MeasurementTypeOptionsOverview#options-for-measurement-type-analog)
+- [Protocol.Params.Param.Measurement.Type@options: analog](xref:Protocol.Params.Param.Measurement.Type-options#options-for-measurement-type-analog)

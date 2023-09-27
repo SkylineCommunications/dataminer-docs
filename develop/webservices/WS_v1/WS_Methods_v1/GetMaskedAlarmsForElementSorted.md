@@ -24,4 +24,4 @@ Use this method to retrieve a specific number of masked element alarms.
 
 | Item | Format | Description |
 |--|--|--|
-| GetMaskedAlarmsFor­ElementSortedResult | Array of [DMAAlarm](xref:DMAAlarm) | The requested number of masked element alarms, sorted as specified. |
+| GetMaskedAlarmsForElementSortedResult | Array of [DMAAlarm](xref:DMAAlarm) | The requested number of masked element alarms, sorted as specified. |

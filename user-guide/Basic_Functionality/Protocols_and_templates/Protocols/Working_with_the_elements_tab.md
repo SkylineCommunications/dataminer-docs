@@ -14,8 +14,10 @@ This tab displays an overview of all elements in the system, with their associat
 
 - If you select one or more elements with the same protocol and version (using the Ctrl key), you can quickly assign an alarm or trend template to these with the *Assign* buttons in the panel on the right.
 
+- From DataMiner 10.3.10/10.4.0 onwards<!-- RN 36971 -->, you can right-click an element in the list and select to edit, delete, or duplicate the element. The delete and duplicate options are not available for DVE child elements.
+
 > [!TIP]
 > See also:
-> - [Assigning an alarm template](xref:Managing_alarm_templates#assigning-an-alarm-template)
-> - [Assigning trend templates](xref:Assigning_trend_templates)
 >
+> - [Assigning an alarm template](xref:Assigning_an_alarm_template)
+> - [Assigning trend templates](xref:Assigning_trend_templates)

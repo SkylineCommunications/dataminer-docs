@@ -28,4 +28,4 @@ Use this method to create a job section definition.
 
 | Item                               | Format | Description                           |
 |------------------------------------|--------|---------------------------------------|
-| CreateJobsSectionDefi­nitionResult | String | The ID of the job section definition. |
+| CreateJobsSectionDefinitionResult | String | The ID of the job section definition. |

@@ -11,10 +11,11 @@ The metrics provided below are provided as a guide to help dimension DataMiner p
 - The benchmarks show tested performance and load specifications as a guide. They are in no way guaranteed.
 
 > [!NOTE]
+>
 > - Take care when combining metrics. For example, it is impossible to run 1000 regular elements next to 100,000 EPM (formerly CPE) devices on a single DMA.
 > - The metrics are specified by DMA and DMS. DMA being a single DataMiner node and DMS referring to the whole clustered system.
 
-All specifications are provided based on the assumption that DMAs are running on servers that comply with the [DataMiner compute requirements](https://community.dataminer.services/dataminer-compute-requirements/).
+All specifications are provided based on the assumption that DMAs are running on servers that comply with the [DataMiner compute requirements](xref:DataMiner_Compute_Requirements).
 
 ## Limits
 
@@ -50,9 +51,9 @@ All specifications are provided based on the assumption that DMAs are running on
 - [Behavioral anomaly detection benchmarks](xref:behavioral_anomaly_detection_benchmarks)
 - [Cassandra write performance benchmarks](xref:cassandra_write_performance_benchmarks)
 - [Change history metrics](xref:change_history_benchmarks)
-- [Cloud benchmarks](xref:cloud_benchmarks)
 - [Dashboards benchmarks](xref:dashboards_benchmarks)
 - [DataMiner Object Model benchmarks](xref:dataminer_object_model_benchmarks)
+- [dataminer.services benchmarks](xref:cloud_benchmarks)
 - [Direct view benchmarks](xref:direct_view_benchmarks)
 - [Dynamic virtual element benchmarks](xref:dynamic_virtual_element_benchmarks)
 - [Element benchmarks](xref:element_benchmarks)
@@ -63,8 +64,10 @@ All specifications are provided based on the assumption that DMAs are running on
 - [Parameter set benchmarks](xref:parameter_set_benchmarks)
 - [Pattern matching benchmarks](xref:pattern_matching_benchmarks)
 - [Profile Manager benchmarks](xref:profile_manager_benchmarks)
+- [Resources benchmarks](xref:resources_benchmarks)
 - [Service benchmarks](xref:service_benchmarks)
 - [Service profile benchmarks](xref:service_profile_benchmarks)
 - [Service & Resource Management benchmarks](xref:service_resource_management_benchmarks)
+- [User-Defined APIs benchmarks](xref:user-defined_API_benchmarks)
 - [View benchmarks](xref:view_benchmarks)
 - [Visual Overview benchmarks](xref:visual_overview_benchmarks)

@@ -26,4 +26,4 @@ Available from DataMiner 10.0.7 onwards.
 
 | Item | Format | Description |
 |--|--|--|
-| GetMaskedAlarmsFor­ElementSortedV2Result | Array of [DMAAlarm](xref:DMAAlarm) | The requested number of masked element alarms, sorted as specified, as well as the alarm cache status. |
+| GetMaskedAlarmsForElementSortedV2Result | Array of [DMAAlarm](xref:DMAAlarm) | The requested number of masked element alarms, sorted as specified, as well as the alarm cache status. |

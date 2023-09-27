@@ -20,4 +20,4 @@ Use this method to retrieve a particular parameter for a service, with dynamic u
 
 | Item | Format | Description |
 |--|--|--|
-| GetParameterForServiceWithDynamic­UnitsResult | [DMAParameter](xref:DMAParameter) | The data of the specified parameter of the specified service, with dynamic units. |
+| GetParameterForServiceWithDynamicUnitsResult | [DMAParameter](xref:DMAParameter) | The data of the specified parameter of the specified service, with dynamic units. |

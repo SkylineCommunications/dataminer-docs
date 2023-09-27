@@ -4,23 +4,29 @@ uid: Concepts1
 
 # Concepts
 
-The following concepts are of importance for the Service & Resource Management (SRM) framework:
+> [!NOTE]
+> The concepts explained in this section are the main concepts used within the core SRM functionality. If you intend to work with the SRM framework, which builds on the core DataMiner SRM functionality to provide a versatile toolset to manage services and resources, see [SRM framework concepts](xref:srm_concepts).
+
+To understand the core DataMiner SRM functionality, the following concepts are important:
 
 - **Resource**: A resource is any thing that can be used and planned. Resources can have a limited “concurrency”, determining how many bookings are possible for the resource at the same time, and a limited capacity. They can also be collected in so-called **resource pools**.
 
     > [!TIP]
-    > See also:
-    > [Configuring pools of resources](xref:Configuring_pools_of_resources)
+    > See also: [Configuring pools of resources](xref:Configuring_pools_of_resources)
 
 - **Virtual platform**: A logical collection of resource pools.
 
-- **Virtual function resource**: A resource that is part of an element with a specific function. Virtual function resources are represented in DataMiner as a specific type of virtual elements, i.e. virtual function elements.
+- **Virtual function definition**: The definition of a function that a specific data source can expose. This includes the definition of the parameters, interfaces, etc. of the corresponding virtual function resource. This is contained in a functions XML file, which is linked to a particular protocol.
 
     > [!TIP]
-    > See also:
-    > [Adding a virtual function as a resource](xref:Configuring_pools_of_resources#adding-a-virtual-function-as-a-resource)
+    > See also: [Functions XML files](xref:Functions_XML_files)
 
-- **Booking instance** or **reservation** **instance**: A definition of which resources are used, how much of them is used, and when they are used. With booking instances, you can indicate which resources are in use at any point in time. Booking instances are indicated on the occupancy timeline in the *Resources* module.
+- **Virtual function resource** or **virtual function instance**: The instantiation of a virtual function definition. A protocol could for instance have several functions or several elements that conform to the same virtual function definition, in which case several corresponding virtual function resources/instances can be generated. Virtual function resources are represented in DataMiner as a specific type of virtual elements, i.e. virtual function elements.
+
+    > [!TIP]
+    > See also: [Adding a virtual function as a resource](xref:Configuring_pools_of_resources#adding-a-virtual-function-as-a-resource)
+
+- **Booking instance** or **reservation instance**: A definition of which resources are used, how much of them is used, and when they are used. With booking instances, you can indicate which resources are in use at any point in time. Booking instances are indicated on the occupancy timeline in the *Resources* module.
 
     Booking instances can have “sub-bookings”, which in turn are also booking instances, making it possible to create more complex bookings. While the time slot for booking instances is defined in UTC format, the timing of sub-bookings is determined relative to that of the parent booking instance.
 
@@ -37,25 +43,14 @@ The following concepts are of importance for the Service & Resource Management (
 - **Profile definition**: A definition of a profile, containing parameters and scripts.
 
     > [!TIP]
-    > See also:
-    > - [Configuring profile definitions](xref:Configuring_profile_definitions)
+    > See also: [Configuring profile definitions](xref:Configuring_profile_definitions)
 
 - **Profile instance**: An instance of a profile, with particular values assigned to each of the parameters in the profile definition.
 
     > [!TIP]
-    > See also:
-    > - [Configuring profile instances](xref:Configuring_profile_instances)
-
-- **Virtual function definition**: The definition of the parameters, interfaces, etc. of a virtual function resource, which is contained in a functions XML file, and linked to a particular protocol.
-
-    > [!TIP]
-    > See also:
-    > [Functions XML files](xref:Functions_XML_files)
-
-- **Virtual function instance**: The instantiation of a virtual function definition. A protocol could for instance have several functions or several elements that conform to the same virtual function definition, in which case several corresponding virtual function instances can be generated.
+    > See also: [Configuring profile instances](xref:Configuring_profile_instances)
 
 - **Service definition**: The definition of how various function definitions are linked to one another, and what a service using these functions should look like. A service definition can for example link a satellite receiver to a transcoder function and back to a satellite transmission station to make a video downcast channel for a particular feed. Service definitions can be defined in the *Services* module.
 
     > [!TIP]
-    > See also:
-    > [The Services module](xref:The_Services_module)
+    > See also: [The Services module](xref:The_Services_module)

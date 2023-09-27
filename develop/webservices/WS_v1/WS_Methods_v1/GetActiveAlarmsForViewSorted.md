@@ -27,4 +27,4 @@ Use this method to retrieve a specific number of active view alarms.
 
 | Item | Format | Description |
 |--|--|--|
-| GetActiveAlarmsFor­ViewSortedResult | Array of [DMAAlarm](xref:DMAAlarm) | The requested number of active view alarms, sorted as specified. |
+| GetActiveAlarmsForViewSortedResult | Array of [DMAAlarm](xref:DMAAlarm) | The requested number of active view alarms, sorted as specified. |

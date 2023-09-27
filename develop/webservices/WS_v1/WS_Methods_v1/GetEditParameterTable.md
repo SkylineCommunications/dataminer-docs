@@ -20,4 +20,4 @@ Use this method to retrieve all the information necessary to be able to present 
 
 | Item | Format | Description |
 |--|--|--|
-| GetEditParameterTable­Result | [DMAParameterEdit](xref:DMAParameterEdit) | The properties of the specified parameter. |
+| GetEditParameterTableResult | [DMAParameterEdit](xref:DMAParameterEdit) | The properties of the specified parameter. |

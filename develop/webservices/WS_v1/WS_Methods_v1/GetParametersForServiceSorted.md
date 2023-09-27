@@ -24,4 +24,4 @@ Use this method to retrieve a specific number of service parameters.
 
 | Item | Format | Description |
 |--|--|--|
-| GetParametersForSer­viceSortedResult | Array of [DMAParameter](xref:DMAParameter) | The parameters for the specified service, sorted as requested. |
+| GetParametersForServiceSortedResult | Array of [DMAParameter](xref:DMAParameter) | The parameters for the specified service, sorted as requested. |

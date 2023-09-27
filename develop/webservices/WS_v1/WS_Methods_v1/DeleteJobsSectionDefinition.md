@@ -20,4 +20,4 @@ Use this method to delete a job section definition. No longer supported from Dat
 
 | Item | Format | Description |
 |--|--|--|
-| DeleteJobsSection­DefinitionResult | Boolean | Returns “true” if the job section definition has been fully deleted, or “false” if the job section definition has been hidden instead, because it has already been used previously. |
+| DeleteJobsSectionDefinitionResult | Boolean | Returns “true” if the job section definition has been fully deleted, or “false” if the job section definition has been hidden instead, because it has already been used previously. |

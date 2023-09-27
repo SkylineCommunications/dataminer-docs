@@ -147,7 +147,7 @@ To do so:
    > Regardless of whether the property is set to true or false, header names may not contain non-ASCII characters.
 
 > [!TIP]
-> See also: <https://msdn.microsoft.com/en-us/library/system.net.configuration.httpwebrequest­element.useunsafeheaderparsing.aspx>
+> See also: <https://msdn.microsoft.com/en-us/library/system.net.configuration.httpwebrequestelement.useunsafeheaderparsing.aspx>
 
 ## Configuring a thumbnail for HTTP Live Streaming
 

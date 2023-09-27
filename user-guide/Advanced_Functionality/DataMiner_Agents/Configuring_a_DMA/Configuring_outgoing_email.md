@@ -8,6 +8,7 @@ A DMS can be configured to send out email notifications and reports via an SMTP 
 
 > [!NOTE]
 > For this feature, this product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit (<http://www.openssl.org/>).
+>
 > - From DataMiner 8.5.5 up to DataMiner 9.5.12, OpenSSL library version v1.0.2a is used.
 > - From DataMiner 9.5.13 onwards, OpenSSL library version v1.0.2m is used.
 > - From DataMiner 9.6.1 onwards, OpenSSL library version v1.1.0h is used.
@@ -15,11 +16,11 @@ A DMS can be configured to send out email notifications and reports via an SMTP 
 > - From DataMiner 9.6.11 onwards, OpenSSL library version v1.1.1c is used.
 
 > [!TIP]
-> See also: [Agents – configuring an email server](https://community.dataminer.services/video/agents-configuring-an-email-server/) on DataMiner Dojo.
+> See also: [Agents – configuring an email server](https://community.dataminer.services/video/agents-configuring-an-email-server/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 ## Prerequisites
 
-In order to send out email notifications or email reports, a DataMiner Agent has to be able to connect to an outgoing email server (SMTP Server).
+In order to send out email notifications or email reports, a DataMiner Agent has to be able to connect to an outgoing email server (SMTP server).
 
 ## Default “From” address
 
@@ -39,20 +40,28 @@ To specify the default “From” address to be used in outgoing email messages,
 
 If a DataMiner Agent has to be able to send out email messages, then the *DataMiner.xml* file located in the *C:\\Skyline DataMiner* directory of that DataMiner Agent has to have an *\<SMTP>* section containing the necessary email settings.
 
-1. Log on to the DataMiner Agent, either locally or through a remote desktop session.
+You can either configure this directly in *DataMiner.xml* or use the SLNetClientTest tool. To configure it directly in *DataMiner.xml*, a DataMiner restart is required.
 
-2. Stop the DataMiner software.
+- For information on how to configure this using the **SLNetClientTest tool**, see [Configuring SMTP](xref:SLNetClientTest_configuring_SMTP).
 
-3. Open the file *C:\\Skyline DataMiner\\DataMiner.xml*.
+- To configure this **directly in *DataMiner.xml*** instead:
 
-4. Go to the *\<SMTP>* section. If this section does not yet exist, add it.
+  1. Log on to the DataMiner Agent, either locally or through a remote desktop session.
 
-5. In this section, enter the correct SMTP server settings. See below for more information.
+  1. Stop the DataMiner software.
 
-6. Restart the DataMiner Agent in order to apply the new settings.
+  1. Open the file *C:\\Skyline DataMiner\\DataMiner.xml*.
 
-> [!NOTE]
-> If there are several DataMiner Agents in your DataMiner System, execute the above-mentioned procedure on every DataMiner Agent that has to be able to send email messages.
+  1. Go to the *\<SMTP>* section. If this section does not exist yet, add it.
+
+  1. In this section, enter the correct SMTP server settings. See [SMTP server settings](#smtp-server-settings).
+
+  1. **Restart** the DataMiner Agent in order to apply the new settings.
+
+  > [!NOTE]
+  > If there are several DataMiner Agents in your DataMiner System, execute the above-mentioned procedure on every DataMiner Agent that has to be able to send email messages.
+
+## SMTP server settings
 
 ### Basic SMTP server settings
 
@@ -73,22 +82,22 @@ If a DataMiner Agent has to be able to send out email messages, then the *DataMi
   - **NoLoginMethod**: The user will not be authenticated by the server.
 
   - **LoginPlainMethod**: Username and password will be sent to the server unencrypted.
-  
+
   - **CramMD5Method**: The user will be authenticated using CRAM MD5 (Challenge-Response Authentication Mechanism, see RFC 2195). The server generates a challenge, to which the user has to respond with a username and the MD5 HMAC (Hash-based Message Authentication Code) of the challenge (with the user password as the key).
 
   - **AuthLoginMethod**: Username and password will be sent to the server using simple base64 encoding.
 
-  - **NTLM**: The user will be authenticated using the MS NTLM (NT LAN Manager) protocol (as from DataMiner v4.2).
+  - **NTLM**: The user will be authenticated using the MS NTLM (NT LAN Manager) protocol.
 
-  - **Auto**: The authentication protocol to be used will be auto-negotiated (as from DataMiner 5.0).
+  - **Auto**: The authentication protocol to be used will be auto-negotiated.
 
 - **User**: The username with which the DataMiner Agent will log on to the SMTP server.
 
-    If LoginMethod is set to “NoLoginMethod”, then no username has to be specified.
+  If LoginMethod is set to “NoLoginMethod”, no username has to be specified.
 
 - **Password**: The password with which the DataMiner Agent will log on to the SMTP server.
 
-    If LoginMethod is set to “NoLoginMethod”, then no password has to be specified.
+  If LoginMethod is set to “NoLoginMethod”, no password has to be specified.
 
 ### Advanced SMTP server settings
 
@@ -96,24 +105,26 @@ You can specify the following advanced settings. However, these are not mandator
 
 - **Helo**: The fully qualified domain name of the client, which will be sent to the SMTP server in the HELO command.
 
-    Example: *\<Helo>pc.company.local\</Helo>*
+  Example: *\<Helo>pc.company.local\</Helo>*
 
 - **MaxSubjectLength**: The maximum length of the message subject.
 
-    Example: *\<MaxSubjectLength>78\</MaxSubjectLength>*
+  Example: *\<MaxSubjectLength>78\</MaxSubjectLength>*
 
 - **From**: A custom “From” address that will override the default “From” address specified in the DataMiner Agent interface.
 
-    Example: *\<From>address@example.com\</From>*
+  Example: *\<From>address@example.com\</From>*
+  
+## Example of SMTP server configuration
 
-### Example of how to use GMail as SMTP server
+The example below shows how the SMTP element in DataMiner.xml should be configured.
 
 ```xml
 <SMTP>
-  <Host>smtp.gmail.com</Host>
+  <Host>smtp.mail.com</Host>
   <HostPort>587-starttls</HostPort>
   <LoginMethod>AuthLoginMethod</LoginMethod>
-  <User>MyGmailName@gmail.com</User>
-  <Password>MyGmailPassword</Password>
+  <User>MyMailName@mail.com</User>
+  <Password>MyMailPassword</Password>
 </SMTP>
 ```

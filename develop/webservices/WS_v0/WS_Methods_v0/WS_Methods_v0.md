@@ -13,7 +13,7 @@ uid: WS_Methods_v0
 |--|--|
 | [CleanupConnections](xref:CleanupConnections) | Closes all connections that have been idle for a specific period of time. |
 | [Connect](xref:Connect) | Logs on to the DataMiner System and requests authentication. |
-| [CreateAutomationScript](xref:CreateAutomationScript) | Creates DMS Automation scripts consisting of statements that each contain a C# code block. |
+| [CreateAutomationScript](xref:CreateAutomationScript) | Creates DataMiner Automation scripts consisting of statements that each contain a C# code block. |
 | [GetActiveAlarmsFromElement](xref:GetActiveAlarmsFromElement) | Retrieves a list of all the alarms of a specific element (referenced by name). |
 | [GetActiveAlarmsFromView](xref:GetActiveAlarmsFromView) | Retrieves a list of all the alarms of a specific view (referenced by name). |
 | [GetElementByPollingIp](xref:GetElementByPollingIp) | Retrieves a list of all the elements that poll a specific IP address. |

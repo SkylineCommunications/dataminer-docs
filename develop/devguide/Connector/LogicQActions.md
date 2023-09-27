@@ -6,13 +6,13 @@ uid: LogicQActions
 
 ## Introduction
 
-Quick Actions (often referred to as "QActions") are used to implement more advanced functionality that cannot be implemented by other protocol constructs (e.g. parsing a JSON response received from the device, etc.).
+Quick Actions (often referred to as "QActions") are used to implement custom functionality that cannot be implemented by other protocol constructs (e.g. parsing a JSON response received from the device, etc.).
 
 In the past, QActions were written in C#, JScript or VBScript. However, recent protocols are written exclusively in C#, so this chapter only considers C# QActions.
 
-A QAction is executed by the SLScripting process (see <xref:InnerWorkingsSLScripting>).
+A QAction is executed by the SLScripting process (see <xref:InnerWorkingsSLScripting>) and is defined in a connector using the [QAction](xref:Protocol.QActions.QAction) tag.
 
-Let's have a look at a basic C# QAction that runs when a button (with parameter ID 100) is clicked and counts the number of times the button was clicked via a QAction.
+The following QAction runs when a button (with parameter ID 100) is clicked and counts the number of times the button was pressed:
 
 ```xml
 <QAction id="100" name="Count Executions" encoding="csharp" triggers="100">
@@ -20,7 +20,7 @@ Let's have a look at a basic C# QAction that runs when a button (with parameter 
     using System;
     using Skyline.DataMiner.Scripting;
 
-    public class Qaction
+    public static class QAction
     {
         public static void Run(SLProtocol protocol)
         {
@@ -35,35 +35,37 @@ Let's have a look at a basic C# QAction that runs when a button (with parameter 
 </QAction>
 ```
 
-Optionally, a descriptive name can be provided using the name attribute. This only serves to improve readability and has no influence on the functionality of the QAction.
+A descriptive name can be provided using the [name](xref:Protocol.QActions.QAction-name) attribute. This only serves to improve readability and has no influence on the functionality of the QAction.
 
-The encoding attribute defines the language in which the QAction is written (this value is set to "csharp" for QActions written in C#).
+The [encoding](xref:Protocol.QActions.QAction-encoding) attribute defines the language in which the QAction is written (this value is set to "csharp" for QActions written in C#).
 
 The triggers attribute indicates the ID(s) of the parameter(s) that trigger the QAction. A QAction is executed on a change event of one of these parameters. (For more information about change events, see [Executing a QAction](xref:LogicQActions#executing-a-qaction).)
 
-The default entry point of the QAction is the static Run method of the QAction class. The entry point method has a parameter of type SLProtocol, which serves as the link with the SLProtocol process (the QAction is executed by the SLScripting process).
+The default entry point of the QAction is the static Run method of the QAction class. The entry point method has a parameter of type [SLProtocol](xref:Skyline.DataMiner.Scripting.SLProtocol), which serves as the link with the SLProtocol process (the QAction is executed by the SLScripting process).
 
 The Run method in the example above increments the execution count and writes the execution count to the log file of the element running this protocol using the Log method of the SLProtocol interface (see SLProtocol.Log method).
 
 > [!NOTE]
 >
 > - To access the log files of an element in DataMiner Cube, right-click the element in the Surveyor and select View > Log or click the apps button in the Cube navigation pane and select System Center > Logging > Elements and select the element.
-> - For a complete overview of the SLProtocol interface, see SLProtocol interface. It is also possible to use the SLProtocolExt interface (see SLProtocolExt interface). This is an extension of the SLProtocol interface, which makes it possible to write more readable code.
+> - For a complete overview of the SLProtocol interface, see [SLProtocol](xref:Skyline.DataMiner.Scripting.SLProtocol) interface. It is also possible to use the SLProtocolExt interface (see [SLProtocolExt](xref:Skyline.DataMiner.Scripting.SLProtocolExt) interface). This is an extension of the SLProtocol interface, which makes it possible to write more readable code.
 > - The following example protocols are available in the Protocol Development Guide Companion Files:
 >   - SLC SDF QActions - Column Manipulation
 >   - SLC SDF QActions - Triggering
 
 ## QAction Compilation
 
-A C# QAction is compiled and loaded when it needs to run for the first time (unless the precompile option is used).
+A C# QAction is compiled and loaded when it needs to run for the first time (unless the [precompile](xref:Protocol.QActions.QAction-options#precompile) option is used).
 
-By default, the result is a DLL with the following name: [protocolName].[protocolVersion].QAction.[QActionID].dll, e.g. "Newtec CD6000.1.0.0.1.QAction.1.dll".
-For more information on how a custom name can be used, see dllName=name.
+By default, the result is a DLL with the following name: `[protocolName].[protocolVersion].QAction.[QActionID].dll`, e.g. `Newtec CD6000.1.0.0.1.QAction.1.dll`.
+For more information on how a custom name can be used, see [dllName=name.dll](xref:Protocol.QActions.QAction-options#dllnamenamedll).
 
-The QAction DLLs are stored in the directory C:\Skyline DataMiner\ProtocolScripts.
+The QAction DLLs are stored in the directory `C:\Skyline DataMiner\ProtocolScripts`.
 
 > [!NOTE]
-> From DataMiner 9.6.11 (RN 23095) onwards, DataMiner uses the .NET Compiler Platform (version 2.9) to compile QActions, allowing the use of C# syntax up to and including version 7.3.
+>
+> - From DataMiner 9.6.11 (RN 23095) onwards, DataMiner uses the .NET Compiler Platform (version 2.9) to compile QActions, allowing the use of C# syntax up to and including version 7.3.
+> - DataMiner detects the most recent version of the .NET Framework that is installed and uses this version in the SLScripting process. The compiled QActions will then target this version of the .NET Framework.
 
 ### Preprocessor directives
 
@@ -117,6 +119,9 @@ In the example above, the Run method of the QAction class is defined as a static
 
 It is also possible to define static fields in the QAction class. As only one copy of a static member exists, regardless of how many instances of the class are created, static fields are also shared between all the elements executing this protocol and persist as long as the SLScripting process is running.
 
+> [!NOTE]
+> Static fields are only shared between elements with the same protocol version.
+
 Consider the following example of a protocol that defines a button (with parameter ID 100) triggering a QAction. The QAction defines a static field executionCount and a static method Run:
 
 ```xml
@@ -124,7 +129,7 @@ Consider the following example of a protocol that defines a button (with paramet
 <![CDATA[
     using Skyline.DataMiner.Scripting;
 
-    public class QAction
+    public static class QAction
     {
         private static int executionCount;
         private static object thisLock = new object();
@@ -149,7 +154,7 @@ In case you only want to keep track of the execution count on a per element basi
 
 ### Instance entry methods
 
-From DataMiner 7.5.6.2 (RN 5481) onwards, it is possible to use instance entry methods in QActions. To obtain this behavior, define the entry method as an instance method (by removing the keyword "static" of the Run method).
+From DataMiner 7.5.6.2 (RN 5481) onwards, it is possible to use instance entry methods in QActions. To obtain this behavior, define the entry method as an instance method (by removing the keyword "static" of the Run method and on the QAction class).
 
 In the QAction class, you can now define instance fields, which are available in the instance entry method.
 
@@ -187,6 +192,8 @@ For example, in the following QAction two parameters can trigger a QAction. Howe
 <QAction id="200" name="Subscriptions" encoding="csharp" triggers="200;201" entryPoint="Initialize;ProcessMessages" dllImport="[ProtocolName].[ProtocolVersion].QAction.0.dll">
 ```
 
+By default, the entry method is expected to be defined in the QAction class. However, it is possible to refer to a method of another class as an entry point method. Refer to [entryPoint](xref:Protocol.QActions.QAction-entryPoint) for more information.
+
 ## Executing a QAction
 
 A QAction is executed by a change event of a parameter referred to in the triggers attribute.
@@ -219,13 +226,12 @@ In the example above, the triggers attribute is set to the parameter ID of the w
 
 In a QAction, the following methods are available to retrieve information about the row that triggered the execution of the QAction:
 
-
 |Method  |Description  |
 |---------|---------|
-|RowIndex     |Gets the 1-based row position of the row that triggered the execution of the QAction.         |
-|RowKey     |Gets the primary key of the row that triggered the execution of the QAction.         |
-|OldRow     |Gets information about the previous cell values before the row was updated.         |
-|NewRow     |Gets information about the updated cells in a row.         |
+|[RowIndex](xref:Skyline.DataMiner.Scripting.SLProtocol.RowIndex)     |Gets the 1-based row position of the row that triggered the execution of the QAction.         |
+|[RowKey](xref:Skyline.DataMiner.Scripting.SLProtocol.RowKey)     |Gets the primary key of the row that triggered the execution of the QAction.         |
+|[OldRow](xref:Skyline.DataMiner.Scripting.SLProtocol.OldRow)     |Gets information about the previous cell values before the row was updated.         |
+|[NewRow](xref:Skyline.DataMiner.Scripting.SLProtocol.NewRow)     |Gets information about the updated cells in a row.         |
 
 > [!NOTE]
 > For more information about how to implement SNMP tables, see [Retrieving tables](xref:ConnectionsSnmpRetrievingTables).
@@ -234,7 +240,7 @@ In a QAction, the following methods are available to retrieve information about 
 
 Often, a QAction needs to retrieve parameter values from the SLProtocol process. There are two different ways to retrieve parameter values in a Quick Action:
 
-- By including the parameter IDs in the inputParameters attribute.
+- By including the parameter IDs in the [inputParameters](xref:Protocol.QActions.QAction-inputParameters) attribute.
 - By retrieving the values via an instance of the SLProtocol or SLProtocolExt interface (e.g. by using the GetParameter method).
 
 Which approach should be used to retrieve data from the SLProtocol process depends on the situation:
@@ -251,7 +257,8 @@ Which approach should be used to retrieve data from the SLProtocol process depen
 
 When the inputParameters attribute is used, the parameter values are cast to an object in the Run method of the QAction. This is done by the SLScripting process.
 
-It is important to note that objects referred to via inputParameters will contain the value of the parameters at the time the QAction started.
+> [!NOTE]
+> It is important to note that objects referred to via inputParameters will contain the value of the parameters at the time the QAction started.
 
 Also keep in mind that DataMiner needs to convert the parameter to an object that can be used in the QAction. This will increase the load of the SLScripting process. The object itself is stored in memory.
 
@@ -264,7 +271,7 @@ In the example below, the values of parameters with ID 200 and 201 are passed to
 <![CDATA[
 using Skyline.DataMiner.Scripting;
 
-public class QAction
+public static class QAction
 {
     /// <summary>
     /// Quick Action entry point.
@@ -288,7 +295,7 @@ Alternatively, the GetInputParameter method can be used:
 <![CDATA[
 using Skyline.DataMiner.Scripting;
 
-public class QAction
+public static class QAction
 {
     /// <summary>
     /// Quick Action entry point.
@@ -314,7 +321,7 @@ In the example below, the values of two standalone parameters are retrieved by p
 using System;
 using Skyline.DataMiner.Scripting;
 
-public class QAction
+public static class QAction
 {
     /// <summary>
     /// Quick Action example.
@@ -412,7 +419,7 @@ namespace Skyline.Protocol.Model
 using Skyline.DataMiner.Scripting;
 using Skyline.Protocol.Model;
 
-public class QAction
+public static class QAction
 {
   public static void Run(SLProtocol protocol)
   {
@@ -473,6 +480,17 @@ For more information, refer to Skyline.DataMiner.Net.Messages.
 
 > [!NOTE]
 > To start an Automation script from a QAction, the use of the Interop.SLAutomation DLL is now deprecated. The ExecuteScriptMessage should be used instead.
+
+## Implementing the IDisposable interface
+
+From DataMiner 10.2.9 onwards (RN 33965), DataMiner will call the [Dispose](https://learn.microsoft.com/en-us/dotnet/api/system.idisposable.dispose) method of the [IDisposable](https://docs.microsoft.com/en-us/dotnet/api/system.idisposable) interface when a QAction instance is released (i.e. when the element is stopped, removed, or restarted) if this interface is implemented on the QAction class.
+
+> [!NOTE]
+>
+> - DataMiner will only create an instance of a class containing an entry point method if this method is not a static method (see [Instance entry methods](xref:LogicQActions#instance-entry-methods)). Therefore, if you want to make use of the IDisposable functionality, make sure you use a non-static entry point method so that an instance gets created.
+> - This also applies to any other class the entry point may be in (see [Multiple entry methods](xref:LogicQActions#multiple-entry-methods)).
+> - This coincides with the IsActive property of the SLProtocol interface being set to false, which prevents further function calls to the object from being executed.
+> - The Dispose method is called by a separate thread than the one stopping the element. Its purpose is to release lingering resources and connections when the element is stopped.
 
 ## Examples
 
@@ -546,7 +564,7 @@ using DWORD = System.UInt32;
 using LPWSTR = System.String;
 using NET_API_STATUS = System.UInt32;
 
-public class QAction
+public static class QAction
 {
 	/// <summary>
 	/// Quick Action example.
@@ -650,7 +668,7 @@ public class QAction
 
 While in the past the Json class (System.Web.Helpers) was used to process JSON (JavaScript Object Notation) data, now the JavaScriptSerializer class (System.Web.Script.Serialization) is preferred (Available since .NET Framework v3.5).
 
-It is not necessary to load additional DDLs into DataMiner when using this approach. However, the QAction does need a reference to "System.Web.Extensions.dll" (using the dllimport attribute).
+It is not necessary to load additional DLLs into DataMiner when using this approach. However, the QAction does need a reference to "System.Web.Extensions.dll" (using the dllimport attribute).
 
 The following code will create a dictionary of all the items in the JSON data:
 
@@ -662,7 +680,7 @@ using System.Web.Script.Serialization;
 
 using Skyline.DataMiner.Scripting;
 
-public class QAction
+public static class QAction
 {
 	public static void Run(SLProtocol protocol)
 	{
@@ -687,7 +705,7 @@ public class QAction
 
 > [!NOTE]
 > - When an instance of the JavaScriptSerializer is created, it has a maximum length of JSON strings that are accepted. In case a device can return large JSON responses, this default size can be too small. If this is the case, be sure to set the maximum length property of the JavaScriptSerializer instance before using the instance to deserialize the response.
-> - A useful JSON editor can be found at http://jsoneditor.appspot.com/.
+> - A useful JSON editor can be found at https://jsoneditoronline.org.
 > - The online generator available at http://json2csharp.com/ can be used to convert JSON to C# classes.
 
 
@@ -726,7 +744,7 @@ try
 }
 catch (Exception e)
 {
-	protocol.Log(protocol.QActionID + "|ProcessMime|"Load configuration XML-file failed (Check the correct format of the XML-file):" + Environment.NewLine + filePath + Environment.NewLine + e.ToString(),LogType.Error, LogLevel.NoLogging);
+	protocol.Log(protocol.QActionID + "|ProcessMime|Load configuration XML-file failed (Check the correct format of the XML-file):" + Environment.NewLine + filePath + Environment.NewLine + e.ToString(),LogType.Error, LogLevel.NoLogging);
 }
 ```
 
@@ -747,7 +765,7 @@ using Skyline.DataMiner.Scripting;
 /// <summary>
 /// Processing gzip compressed data.
 /// </summary>
-public class QAction
+public static class QAction
 {
 	/// <summary>
 	/// QAction entry point.

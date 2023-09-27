@@ -20,6 +20,8 @@ From DataMiner 10.0.0/10.0.2 onwards, you can find the following items in the he
 
   - *Show cluster name*: Determines whether the name of the cluster is displayed. (Available from DataMiner 10.0.12 onwards.)
 
+  - *Show search box*: Determines whether the search box is displayed. (Available from DataMiner 10.3.5/10.4.0 onwards).
+
 - **User icon**: Click this icon to open a menu containing information on the user and the DMA, as well as the following options:
 
   - *Account details*: Opens your user card.
@@ -33,6 +35,7 @@ From DataMiner 10.0.0/10.0.2 onwards, you can find the following items in the he
 
     > [!TIP]
     > See also:
+    >
     > - [User settings](xref:User_settings)
     > - [Computer settings](xref:Computer_settings)
 
@@ -41,7 +44,7 @@ From DataMiner 10.0.0/10.0.2 onwards, you can find the following items in the he
     > [!TIP]
     > See also: [Changing the card layout](xref:Working_with_cards_in_DataMiner_Cube#changing-the-card-layout)
 
-  - *System Center*: Opens the System Center, where you can among others configure the DMS setup, backups, the database and DMS security, if you have the necessary permissions to do so. The System Center also provides access to all DataMiner log files.
+  - *System Center*: Opens the System Center, where you can among others configure the DMS setup, backups, the database and DataMiner security, if you have the necessary permissions to do so. The System Center also provides access to all DataMiner log files.
 
     > [!TIP]
     > See also: [Logging](xref:logging)

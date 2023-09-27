@@ -16,11 +16,18 @@ The *CI Types* subtab of the *Admin* tab consists of several pages with overview
 
 - **Export all**: Only available on the *Overview* page. Allows you to export the configuration of all CI Types.
 
+  > [!NOTE]
+  > By default, CI Types are exported to the folder `C:\Skyline DataMiner\Documents\Skyline IDP CMDB\CI Types`.
+
 - **Generate**: Only available on the *Overview* page. Starts a wizard that allows you to generate CI Types for the production protocols in the system. You can select to generate CI Types for all protocols, for all protocols that do not have a CI Type yet, or for a custom selection of protocols.
 
   > [!NOTE]
+  >
   > - The wizard also allows you to select "None", so that you can easily clear the selection of all listed protocols in order to make a custom selection afterwards.
   > - By default, CI Types generated based on a protocol with an SNMPv3 connection have SNMPv2 port settings configured on that connection, as there is no way to automatically find out the security levels, algorithms and passwords.
+
+  > [!TIP]
+  > You can for instance use the *Generate* option to have existing DataMiner elements managed by IDP. You will then need to [correctly configure the CI Type](xref:CI_Types#using-the-ci-type-management-wizard), [enable the necessary activities](xref:Admin_activities) for the CI Type, and [add the element to the managed elements](xref:IDP_Inventory_tab#unmanaged).
 
 On each of the pages, different settings are available. These are explained in the sections below.
 
@@ -140,7 +147,7 @@ This page contains an overview of software management details for CI Types, with
 
 - **Version Parameter**: Displays the parameter name of the element where the software version is checked. This can be configured via the *Advanced* button.
 
-- **Set Baseline in Alarm Template**: This option allows you to have an alarm generated if a managed element runs a different software version than expected. For this purpose, both this option and *Software Compliancy* must be enabled and the *Version Baseline* and *Version Parameter Name* must be specified (via the *Advanced* page button). In the alarm template for the managed element, dynamic alarm thresholds should be assigned. You can do so by adding an asterisk ("\*") at the alarm threshold level for the desired alarm severity. See [Configuring an alarm template with dynamic alarm thresholds](xref:Configuring_alarm_templates#configuring-an-alarm-template-with-dynamic-alarm-thresholds).
+- **Set Baseline in Alarm Template**: This option allows you to have an alarm generated if a managed element runs a different software version than expected. For this purpose, both this option and *Software Compliancy* must be enabled and the *Version Baseline* and *Version Parameter Name* must be specified (via the *Advanced* page button). In the alarm template for the managed element, dynamic alarm thresholds should be assigned. You can do so by adding an asterisk ("\*") at the alarm threshold level for the desired alarm severity. See [Configuring dynamic alarm thresholds](xref:Configuring_dynamic_alarm_thresholds).
 
 - **Advanced**: Contains a button that launches a wizard where you can specify the software update script and image file location, as well as the compliancy version and the compliancy version parameter. See [Software image management configuration](#software-image-management-configuration).
 
@@ -180,6 +187,11 @@ The discovery configuration window of the CI Type Management wizard allows you t
 
 - **Conditions**: If only one identifier is configured, the *Conditions* box should simply contain "1". If there are more identifiers, there must be a number for each of them, and they must be combined with logical operators (*not*, *and*, or *or*). For example: "1 and 2".
 
+  > [!NOTE]
+  >
+  > - If different logical operators are combined in the *Conditions* expression, the order of boolean algebra is followed. This means the order of operations is, from highest priority to lowest, NOT then AND and finally OR.
+  > - Parentheses are currently not supported in conditions. For more information, see [ConditionsOptions](xref:CI_Types1#conditionsoptions).
+
 - **Add New Discovery Identifiers**: To add a new discovery identifier, first select the type, then click the triangle button to expand the configuration section for the identifier. Alternatively, you can immediately click the triangle button to see all possible types. Click "+" next to the type you want to add. Then select a *Match* operator and specify the value that should be used to detect if the CI Type should be used.
 
 ### Provisioning configuration
@@ -192,7 +204,7 @@ The provisioning configuration window of the CI Type Management wizard contains 
 
 - **DMA**: The DMA where the element should be created. You can select any of the DMAs in the DMS, or select *Based on device address* to have a DMA assigned based on the discovered IP address (see [Provisioning](xref:Provisioning)).
 
-- **Element Details**: Click the *Details* button to specify the protocol that should be used for the provisioned element, the protocol version, the alarm and trend template, connection settings, and other details that would otherwise be available during element creation. See [Adding an element](xref:Adding_and_deleting_elements#adding-an-element).
+- **Element Details**: Click the *Details* button to specify the protocol that should be used for the provisioned element, the protocol version, the alarm and trend template, connection settings, and other details that would otherwise be available during element creation. See [Adding elements](xref:Adding_elements).
 
 - **Password Setup**: Click the *Setup* button to specify any parameters required for authentication along with their values.
 
@@ -246,7 +258,7 @@ The software image configuration window of the CI Type Management wizard contain
 
 - **Version parameter**: The parameter name of the element where the software version is checked.
 
-- **Set Baseline in Alarm Template**: This option allows you to have an alarm generated if a managed element runs a different software version than expected. For this purpose, both this option and *Software Compliancy* must be enabled and the *Version Baseline* and *Version Parameter Name* must be specified. In the alarm template for the managed element, dynamic alarm thresholds should be assigned. You can do so by adding an asterisk ("\*") at the alarm threshold level for the desired alarm severity. See [Configuring an alarm template with dynamic alarm thresholds](xref:Configuring_alarm_templates#configuring-an-alarm-template-with-dynamic-alarm-thresholds).
+- **Set Baseline in Alarm Template**: This option allows you to have an alarm generated if a managed element runs a different software version than expected. For this purpose, both this option and *Software Compliancy* must be enabled and the *Version Baseline* and *Version Parameter Name* must be specified. In the alarm template for the managed element, dynamic alarm thresholds should be assigned. You can do so by adding an asterisk ("\*") at the alarm threshold level for the desired alarm severity. See [Configuring dynamic alarm thresholds](xref:Configuring_dynamic_alarm_thresholds).
 
 ### Facilities configuration
 

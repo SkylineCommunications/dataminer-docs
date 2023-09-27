@@ -22,12 +22,14 @@ Since DataMiner version 8, it is possible to implement recursive linking. The ta
   <Description>Recursive List</Description>
   <Type>array</Type>
   <ArrayOptions index="0" options="">
-     <ColumnOption idx="0" pid="301" type="retrieved" value="" options=""/>
-     <ColumnOption idx="1" pid="303" type="retrieved" value="" options=";foreignKey=300"/>
-     <ColumnOption idx="2" pid="304" type="retrieved" value=""/>
+    <ColumnOption idx="0" pid="301" type="retrieved" value="" options=""/>
+    <ColumnOption idx="1" pid="303" type="retrieved" value="" options=";foreignKey=300"/>
+    <ColumnOption idx="2" pid="304" type="retrieved" value=""/>
+  </ArrayOptions>
+</Param>
 ```
 
-Please keep the following guidelines in mind for display keys:
+Please keep the following guidelines in mind for foreign keys:
 
 - Do not add multiple foreign keys on one column. A column needs to be created for each link. Also, do not put a foreign key on the index of a table, or use foreign keys in a table that contains a column of type "index", because the foreign key will not work then.
 - A foreign key must not have leading or trailing whitespace.

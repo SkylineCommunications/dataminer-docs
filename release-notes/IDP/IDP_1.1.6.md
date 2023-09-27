@@ -108,11 +108,3 @@ In some cases, it could occur that the discovery operation timed out. The discov
 #### Problem with DataMiner IDP Rack Layout Manager element \[ID_25470\]
 
 In some cases, it could occur that the *DataMiner IDP Rack Layout Manager* element kept toggling between normal and timeout state, and that as a consequence no elements were filled in in the *Devices* table and properties were not created.
-
-## Changes in version 1.1.6 CU1
-
-### CU1 enhancements
-
-#### Skyline IDP Connectivity: Unicode support \[ID_25649\]
-
-The *Skyline IDP Connectivity* driver now features Unicode support.

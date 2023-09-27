@@ -14,4 +14,4 @@ Specifies the length of the command/response.
 
 |Name|Occurrences|Description|
 |--- |--- |--- |
-|&nbsp;&nbsp;[Content](xref:Protocol.Params.Param.Length.Content)||Specifies the parameters of the command/response that define the length of the com­mand/response.|
+|&nbsp;&nbsp;[Content](xref:Protocol.Params.Param.Length.Content)||Specifies the parameters of the command/response that define the length of the command/response.|

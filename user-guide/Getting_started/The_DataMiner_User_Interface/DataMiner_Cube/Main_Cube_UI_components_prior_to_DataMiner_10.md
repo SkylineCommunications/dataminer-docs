@@ -173,8 +173,9 @@ The following options are available:
 
 > [!TIP]
 > See also:
+>
 > - [Icons settings](xref:User_settings#icons-settings)
-> - <https://community.dataminer.services/video/surveyor-using-latched-and-special-icons/>
+> - [Surveyor – Using latched and special icons](https://community.dataminer.services/video/surveyor-using-latched-and-special-icons/) ![Video](~/user-guide/images/video_Duo.png)
 
 > [!NOTE]
 > From DataMiner 10.0.0/10.0.2 onwards, these icon settings can only be used if the *Use modern icons* setting is not enabled.
@@ -190,7 +191,7 @@ In the Surveyor right-click menu, the following options are available, depending
 | Open                      | Any                                              | Opens the item in a card.                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | Open in new card          | Any                                              | Opens the item in a new card.                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | Open in new undocked card | Any                                              | Opens the item in a new, undocked card.                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| Ticket                    | Element, service, view                           | Allows you to create a new ticket related to the right-clicked item. Only available on DMAs with a Ticketing license.<br> See [DMS Ticketing](xref:ticketing#dms-ticketing).                                                                                                                                                                                                                                                           |
+| Ticket                    | Element, service, view                           | Allows you to create a new ticket related to the right-clicked item. Only available on DMAs with a Ticketing license.<br> See [Ticketing](xref:ticketing).                                                                                                                                                                                                                                                           |
 | State                     | Element only                                     | Opens a shortcut that allows you to change the element state. See [Changing the state of an element](xref:Changing_the_state_of_an_element).                                                                                                                                                                                                                                                                                            |
 | Mask                      | Element only                                     | Masks the element. See [Masking or unmasking an element](xref:Masking_or_unmasking_an_element)                                                                                                                                                                                                                                                      |
 | Unmask                    | Element only                                     | Unmasks the element. This option is only available for masked elements.                                                                                                                                                                                                                                                                                                                                                                                     |
@@ -231,7 +232,7 @@ The following actions are possible with this list:
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/ruis-rapid-recap-recent-pinned-items/>
+> [Rui’s Rapid Recap – Recent & pinned items](https://community.dataminer.services/video/ruis-rapid-recap-recent-pinned-items/) ![Video](~/user-guide/images/video_Duo.png)
 
 ### Apps
 

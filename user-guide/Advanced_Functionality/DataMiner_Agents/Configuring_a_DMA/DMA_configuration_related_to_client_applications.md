@@ -35,41 +35,39 @@ To customize how Cube connects to a DMA for a specific computer:
 
 1. Go to the *computer* tab of the *Settings* window.
 
-1. On the *Connection* page, in the drop-down list next to *Connection type*, and select one of the following options: *Auto* (default), *Remoting* or *Web services.*
+1. On the *Connection* page, next to *Connection type*, select one of the following options:
 
-   > [!NOTE]
-   >
-   > - Connecting via web services is not possible if WSE is not installed on the DMA.
-   > - As WSE is deprecated, the Web Services option is no longer available from DataMiner 10.0.0 \[CU6\]/10.0.11 onwards.
+   - *Auto*: DataMiner will automatically select the connection settings.
 
-1. Modify the different settings for the selected connection type as necessary:
+   <!-- - *gRPC*: Available from DataMiner 10.3.0/10.3.x onwards. DataMiner will communicate using HTTPS via the API Gateway, using gRPC GZIP compression. By default, this requires the use of the standard HTTPS port 443. -->
+
+   - *Remoting*: DataMiner will communicate using .NET Remoting.
+
+     - This option is used by default.
+
+     - The default port used for Remoting is port 8004.
+
+     - By default, [eventing](xref:Eventing_or_polling) is used, but the client will automatically fall back to polling if the callback port cannot be reached (e.g. if a firewall blocks the requests).
+
+   - *Web Services*: Legacy option available prior to DataMiner 10.0.0 \[CU6\]/10.0.11. As WSE is deprecated, this option is no longer available in recent DataMiner versions. Connecting via web services is not possible if WSE is not installed on the DMA.
+
+<!--    > [!NOTE]
+   > The selected connection type will be **used to connect to any DMA from the current computer**. Keep this in mind, for example in case you have selected *gRPC* and you want to connect to DataMiner versions prior to 10.3.0/10.3.2, which do not support gRPC yet. -->
+
+1. If necessary, adjust the settings for the selected connection type:
 
    - **Destination port**: Select this option to specify a custom destination port number. If you specify “-1”, the port will be detected automatically.
 
-   - **Polling interval**: The frequency at which the client application should poll the DMA, in milliseconds. If you want to use remoting and there are firewalls in your network or NAT is used, make sure this option is selected, to ensure that polling is used instead of eventing. For Web Services, the option is enabled by default.
+   - **Polling interval**: The frequency at which the client application should poll the DMA, in milliseconds. If you want to use remoting and there are firewalls in your network or NAT is used, make sure this option is selected, to ensure that polling is used instead of eventing. For Web Services, this option is enabled by default.
 
    - **Use data compression** (Remoting only): Determines whether data are compressed or not. By default, this option is selected, in order to reduce network traffic.
 
    - **Custom binding IP address** (Remoting only): Only needed in case the server cannot automatically resolve the IP address that it needs to send callback events to the client, which can be the case when a VPN connection is used. The option only applies when eventing has been configured.
 
 > [!NOTE]
-> You can also configure this in the DataMiner Cube logon screen, before you actually log on. See [Overriding the default connection type](xref:Logging_on_to_DataMiner_Cube#overriding-the-default-connection-type).
-
-The procedure above only applies to the one computer where it is done. If you want to change the default client communication settings for a DMA, you can do so in the file *ConnectionSettings.txt*.
-
-For example, this is what the default setting to use eventing looks like in this file:
-
-```txt
-* type=RemotingConnection;polling=0;zip=true
-```
-
-To use polling (1000 ms) by default, change this as follows:
-
-```txt
-* type=RemotingConnection;polling=1000;zip=true
-```
-
-For more detailed information on where you can find this file and on the different settings it contains, see [ConnectionSettings.txt](xref:ConnectionSettings_txt#connectionsettingstxt).
+>
+> - You can also configure this in the DataMiner Cube logon screen, before you actually log on. See [Overriding the default connection type](xref:Logging_on_to_DataMiner_Cube#overriding-the-default-connection-type).
+> - The procedure above only applies to the one computer where it is done. If you want to change the default client communication settings for a DMA, you can do so in the file *ConnectionSettings.txt*. See [ConnectionSettings.txt](xref:ConnectionSettings_txt#connectionsettingstxt).
 
 ## Managing client versions
 
@@ -87,6 +85,9 @@ From DataMiner 10.2.0 \[CU3]/10.2.6 onwards, Cube can automatically update to a 
    - **Force the matching release version**: This will force users to always use the Cube version that was shipped with the current DataMiner upgrade package.
 
    - **Force a specific version**: This will force users to always use a particular Cube version. When you select this option, a dialog will be displayed where you will need to select a *Cube.zip* and *versions.txt* file. You can obtain these files from the folder `/Webpages/DataMinerCubeStandAlone/` in an upgrade package or on another DataMiner Agent (e.g. a staging platform).
+
+     > [!TIP]
+     > Use this option if you are using a hotfix package with a Cube fix. Otherwise, users connecting to the DMA may use a more recent Cube version, obtained through dataminer.services, that does not yet contain the fix.
 
 > [!NOTE]
 >

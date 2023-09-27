@@ -19,4 +19,4 @@ Use this method to remove a specific note from a particular element.
 
 | Item                         | Format  | Description         |
 |------------------------------|---------|---------------------|
-| RemoveNoteFrom­ElementResult | Integer | The ID of the note. |
+| RemoveNoteFromElementResult | Integer | The ID of the note. |

@@ -26,7 +26,7 @@ Example:
 <Param id="101" trending="false">
   ...
   <Type>array</Type>
-  <ArrayOptions index="0" options="autoAdd">
+  <ArrayOptions index="0" options=";autoAdd">
   ...
 </Param>
 ```
@@ -40,7 +40,7 @@ By default, the name of the logger table in the database will be `elementdata_[A
 Example:
 
 ```xml
-<ArrayOptions ... options="database;customDatabaseName=myName">
+<ArrayOptions ... options=";database;customDatabaseName=myName">
 ```
 
 See also: [Logger tables](xref:AdvancedLoggerTables).
@@ -76,7 +76,7 @@ By default, the name of the logger table in the database will be `elementdata_[A
 Example:
 
 ```xml
-<ArrayOptions ... options="database;databaseName">
+<ArrayOptions ... options=";database;databaseName">
 ```
 
 See also: [Logger tables](xref:AdvancedLoggerTables).
@@ -90,7 +90,7 @@ By default, the name of the logger table in the database will be `elementdata_[A
 Example:
 
 ```xml
-<ArrayOptions ... options="database;databaseNameProtocol">
+<ArrayOptions ... options=";database;databaseNameProtocol">
 ```
 
 See also: [Logger tables](xref:AdvancedLoggerTables).
@@ -104,7 +104,7 @@ Set *directView* to the parameter ID of the column containing the element ID.
 Example:
 
 ```xml
-options="view=1000;directView=2802"
+options=";view=1000;directView=2802"
 ```
 
 See also: [view](xref:Protocol.Params.Param.ArrayOptions-options#view)
@@ -151,7 +151,7 @@ When this option is used, data from this direct view can only be retrieved throu
 Example:
 
 ```xml
-options="view=1000;directView=2802;onlyFilteredDirectView"
+options=";view=1000;directView=2802;onlyFilteredDirectView"
 ```
 
 ### preserve state
@@ -208,7 +208,7 @@ For large volatile tables, the sizeHint option (available from DataMiner version
 Example:
 
 ```xml
-<ArrayOptions index="0" partial="true:2000" options="volatile;autoAdd;sizeHint=200000">
+<ArrayOptions index="0" partial="true:2000" options=";volatile;autoAdd;sizeHint=200000">
 ```
 
 ### view
@@ -220,7 +220,7 @@ It is possible to add values from tables linked to this root table.
 Example:
 
 ```xml
-options="view=1000"
+options=";view=1000"
 ```
 
 From Dataminer 8.0.7 (RN 6914) onwards, direct view tables can have a different element or protocol as their source.
@@ -261,3 +261,6 @@ directView=3301;onlyFilteredDirectView;filterChange=11601-9001,11602-9002,11603-
 ### volatile
 
 If you use this option, the primary keys will not be saved.
+
+> [!CAUTION]
+> Be careful about where you use this option, as it cannot be used on every table. For information on the limitations, see [Volatile tables](xref:AdvancedDataMinerDataPersistencePersistingTables#volatile-tables).

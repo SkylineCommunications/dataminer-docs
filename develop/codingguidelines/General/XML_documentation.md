@@ -6,9 +6,10 @@ uid: XML_documentation
 
 > [!NOTE]
 > For more information about XML documentation, refer to:
-> -  [Document your code with XML comments](https://docs.microsoft.com/en-us/dotnet/csharp/codedoc)
-> -  [How to: Insert XML comments for documentation generation](https://docs.microsoft.com/en-us/visualstudio/ide/reference/generate-xml-documentation-comments?view=vs-2019)
-> -  [XML documentation comments (C# Programming Guide)](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments)
+>
+> - [Document your code with XML comments](https://docs.microsoft.com/en-us/dotnet/csharp/codedoc)
+> - [How to: Insert XML comments for documentation generation](https://docs.microsoft.com/en-us/visualstudio/ide/reference/generate-xml-documentation-comments?view=vs-2019)
+> - [XML documentation comments (C# Programming Guide)](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments)
 
 - When useful, (partial) elements should be documented ([SA1600](https://github.com/Visual-Stylecop/Visual-StyleCop/wiki/SA1600), [SA1601](https://github.com/Visual-Stylecop/Visual-StyleCop/wiki/SA1601)).
 

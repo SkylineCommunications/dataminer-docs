@@ -50,7 +50,7 @@ int outputCount = 8;
 string updateValue = inputCount + ";" + outputCount;
 
 protocol.NotifyDataMinerQueued(128, updateConfig, updateValue);
-protocol.SendToDisplay(parameterID);
+protocol.SendToDisplay(parameterId);
 ```
 
 In that case, the XML file will state "8;8" as the value for the physicalSize attritube:

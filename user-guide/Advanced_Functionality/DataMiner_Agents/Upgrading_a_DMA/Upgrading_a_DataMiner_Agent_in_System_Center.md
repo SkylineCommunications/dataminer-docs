@@ -25,6 +25,7 @@ Proceed as follows to upgrade your DataMiner Agent(s) in System Center:
 
    > [!NOTE]
    >
+   > - From DataMiner 10.3.0/10.3.3 onwards, you can upgrade the DataMiner web apps separately from the core software, by means of a package available on the [DataMiner Software](https://community.dataminer.services/downloads/) page. However, note that when you install a full upgrade package, this will replace any previous web apps upgrade.
    > - It is also possible to only upload a new package to the DMA, without installing it yet. To do so, when you have selected the package, click the *Upload only* button.
    > - After you have used a specific package to execute an upgrade, it is marked as completed, and you will not be able to execute another upgrade with this package. However, it does remain displayed in the list of packages to make sure you have an overview of the upgrade history.
     > - From DataMiner 10.0.0 CU20, 10.1.0 CU9, and 10.1.12 onwards, if your system does not meet the prerequisites for a specific upgrade version, the upgrade package will not be accepted as a valid package.
@@ -41,11 +42,11 @@ Proceed as follows to upgrade your DataMiner Agent(s) in System Center:
 
     - *Default policy* (selected by default)
 
-    - *Upgrade main and backup Agent simultaneously* (highly recommended; always use this option in case of a major upgrade, unless it is already the default policy).
+    - *Upgrade main and backup Agent simultaneously* (highly recommended; always use this option in case of a major upgrade, unless it is already the default policy)
 
-    - *Upgrade backup Agent first, switch over and upgrade main*
+    - *Upgrade backup Agent first, switch over and upgrade main* (legacy)
 
-    - *Upgrade backup Agent first, switch over, upgrade main, then switch back again*.
+    - *Upgrade backup Agent first, switch over, upgrade main, then switch back again* (legacy)
 
 1. Click *Upgrade* to start the upgrade procedure.
 

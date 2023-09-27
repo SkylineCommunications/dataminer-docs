@@ -19,4 +19,4 @@ Use this method to count the number of child items (elements and/or services) in
 
 | Item                           | Format  | Description                                      |
 |--------------------------------|---------|--------------------------------------------------|
-| GetElementsForView­CountResult | Integer | The number of child items in the specified view. |
+| GetElementsForViewCountResult | Integer | The number of child items in the specified view. |

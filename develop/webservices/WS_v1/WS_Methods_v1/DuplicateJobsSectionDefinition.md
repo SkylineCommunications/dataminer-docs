@@ -19,4 +19,4 @@ Use this method to duplicate a section definition from one jobs domain to anothe
 
 | Item                                  | Format | Description                                   |
 |---------------------------------------|--------|-----------------------------------------------|
-| DuplicateJobsSection­DefinitionResult | String | The ID of the created job section definition. |
+| DuplicateJobsSectionDefinitionResult | String | The ID of the created job section definition. |

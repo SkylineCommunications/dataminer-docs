@@ -40,6 +40,24 @@ For a standalone DMA, i.e. a DMA that is not combined with other DMAs in a clust
 
    1. Replace any references to the old IP address with the new IP address, and save the file.
 
+   1. Uninstall NAS and NATS:
+
+      1. Go to *C:\\Skyline DataMiner\\Files* and double-click *SLEndpointTool_Console.exe*.
+
+      1. Press U to confirm that you want to uninstall NAS and NATS.
+
+      1. Press Enter twice, enter NAS, and press Y.
+
+   1. Install NAS and NATS again:
+
+      1. Go to *C:\\Skyline DataMiner\\Files* and double-click *SLEndpointTool_Console.exe*.
+
+      1. Press I to confirm that you want to install NAS and NATS
+
+      1. Press Enter twice, enter NATS, and press Y.
+
+1. If your DataMiner Agent is connected to dataminer.services, restart all [DataMiner Extension Modules](xref:DataMinerExtensionModules).
+
 1. Restart DataMiner.
 
 ## Single DMA in a DMS
@@ -80,6 +98,26 @@ For a single DMA within a cluster that does not use the Cassandra cluster featur
 
    1. Replace any references to the old IP address with the new IP address, and save the file.
 
+   1. Uninstall NAS and NATS:
+
+      1. Go to *C:\\Skyline DataMiner\\Files* and double-click *SLEndpointTool_Console.exe*.
+
+      1. Press U to confirm that you want to uninstall NAS and NATS.
+
+      1. Press Enter twice, enter NAS, and press Y. (This will uninstall both NATS and NAS)
+
+   1. Install NAS and NATS again:
+
+      1. Go to *C:\\Skyline DataMiner\\Files* and double-click *SLEndpointTool_Console.exe*.
+
+      1. Press I to confirm that you want to install NAS and NATS.
+
+      1. Press Enter twice, enter NATS, and press Y.
+
+         This will install both NAS and NATS.
+
+1. If your DataMiner Agent is connected to dataminer.services, restart all [DataMiner Extension Modules](xref:DataMinerExtensionModules).
+
 1. Restart DataMiner.
 
 1. In System Center, go to the Agents page and remove the old IP address from the list of DMAs in the cluster.
@@ -119,7 +157,7 @@ For a Failover DMA within a cluster that does not use the Cassandra cluster feat
 
 1. Locate the old IP address in this file, replace it with the newly configured one wherever necessary, and save the file.
 
-1. If the DMAs hosts a Cassandra database, do the following on both DMAs:
+1. If the DMAs host a Cassandra database, do the following **on both DMAs**:
 
    1. Open the cassandra.yaml file (typically located in the folder *C:\\Program Files\\Cassandra\\conf\\*).
 
@@ -127,13 +165,18 @@ For a Failover DMA within a cluster that does not use the Cassandra cluster feat
 
    1. Restart the cassandra service.
 
-1. If the DMAs hosts an Elasticsearch database, do the following on both DMAs:
+   > [!NOTE]
+   > If the IP of both DMAs in the Failover pair is changed, replace both IP addresses in both cassandra.yaml files.
+
+1. If the DMAs hosts an Elasticsearch database, do the following **on both DMAs**:
 
    1. Open the elasticsearch.yml file (typically located in the folder *C:\\Program Files\\Elasticsearch\\config\\*).
 
    1. Replace any references to the old IP address with the new IP address, and save the file.
 
    1. Restart the elasticsearch-service-x64 service.
+
+1. If your DataMiner Agent is connected to dataminer.services, restart all [DataMiner Extension Modules](xref:DataMinerExtensionModules).
 
 1. Restart DataMiner on the DMA with the changed IP address.
 
@@ -209,6 +252,8 @@ If your DataMiner System uses the Cassandra cluster feature for its general data
    > See also: [DB.xml](xref:DB_xml#dbxml)
 
 1. Open the file DB.xml for all other DMAs in the DMS, and replace the old IP address with the new IP address for both Cassandra and Elasticsearch.
+
+1. If your DataMiner Agent is connected to dataminer.services, restart all [DataMiner Extension Modules](xref:DataMinerExtensionModules).
 
 1. Restart DataMiner.
 

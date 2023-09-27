@@ -26,4 +26,4 @@ Use this method to retrieve a specific number of services attached to a specifie
 
 | Item | Format | Description |
 |--|--|--|
-| GetServicesForService­TemplateSortedResult | Array of [DMAElement](xref:DMAElement) | The services attached to the specified service template, sorted as requested. |
+| GetServicesForServiceTemplateSortedResult | Array of [DMAElement](xref:DMAElement) | The services attached to the specified service template, sorted as requested. |

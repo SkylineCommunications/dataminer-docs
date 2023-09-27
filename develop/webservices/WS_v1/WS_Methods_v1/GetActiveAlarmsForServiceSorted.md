@@ -28,4 +28,4 @@ Use this method to retrieve a specific number of active service alarms.
 
 | Item | Format | Description |
 |--|--|--|
-| GetActiveAlarmsFor­ServiceSortedResult | Array of [DMAAlarm](xref:DMAAlarm) | The requested number of active service alarms, sorted as specified. |
+| GetActiveAlarmsForServiceSortedResult | Array of [DMAAlarm](xref:DMAAlarm) | The requested number of active service alarms, sorted as specified. |

@@ -14,6 +14,6 @@ When communicating with a serial device, a DataMiner Agent will send commands to
 The communication will occur over TCP/IP, UDP, or, less commonly, over a serial cable.
 
 > [!NOTE]
-> It is possible to create a serial simulation using an element stream or DataMiner simulation file as input for the serial simulator protocol “Best Practice - Generic Serial”.
+> It is possible to create a serial simulation using an element stream or DataMiner simulation file as input for our [*Skyline Serial Simulator* protocol](https://catalog.dataminer.services/result/driver/3588).
 
-DataMiner supports serial communication, allowing protocols to define one or more connections of type "serial". DataMiner runs a process called "SLPort" which takes care of all communication to and from devices connected to either a serial port or an IP port.
+DataMiner supports serial communication, allowing protocols to define one or more connections of type "serial". DataMiner runs a process called "SLPort", which takes care of all communication to and from devices connected to either a serial port or an IP port.

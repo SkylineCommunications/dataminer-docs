@@ -17,4 +17,4 @@ Use this method to retrieve the current alarm states of a number of views.
 
 | Item                         | Format          | Description                                      |
 |------------------------------|-----------------|--------------------------------------------------|
-| GetAlarmStateForViews­Result | Array of string | The current alarm states of the specified views. |
+| GetAlarmStateForViewsResult | Array of string | The current alarm states of the specified views. |

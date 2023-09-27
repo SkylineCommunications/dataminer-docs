@@ -14,5 +14,5 @@ DataMiner Maps can be displayed in a web browser, in an MS Visio file, and in a 
 
 > [!NOTE]
 > - When you open DataMiner Maps for the first time, you will have to log on. Your session will stay active until you close your internet browser. If you open DataMiner Maps from within DataMiner Cube or in a dashboard, you are logged on automatically.
-> - It is possible to make a debug console window open when a Map is opened. To do so, add “console=true” to the Map URL. For example: <br>*http://\[DMA\]/maps/map.aspx?config=\[configuration file\]&console=true*.
+> - It is possible to make a debug console window open when a Map is opened. To do so, add “console=true” to the Map URL. For example: <br>*https://\[DMA\]/maps/map.aspx?config=\[configuration file\]&console=true*.
 >

@@ -22,4 +22,4 @@ Available from DataMiner version 9.5.1 onwards.
 
 | Item | Format | Description |
 |--|--|--|
-| GetMatrixInputsFor­OutputResult | Array of [DMAMatrixConnection](xref:DMAMatrixConnection) | An array containing the connections for the specified output. |
+| GetMatrixInputsForOutputResult | Array of [DMAMatrixConnection](xref:DMAMatrixConnection) | An array containing the connections for the specified output. |

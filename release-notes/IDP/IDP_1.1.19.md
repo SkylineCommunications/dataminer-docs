@@ -112,9 +112,3 @@ Invalid Service Definition IDP IS-04 Provision New Nodes because there's no Prof
 #### Problem with communication between IDP components because of failed InterApp calls \[ID_32485\]
 
 In some cases, it could occur that InterApp calls from the Class Library Project (CLP) failed, which made it impossible for the different IDP components to communicate properly with each other.
-
-## Addendum CU1
-
-#### Last Provisioning Time column displays local time again \[ID_33760\]
-
-After the switch to InterApp calls for inter-element communication, the *Last Provisioning Time* column in the *Discovered Elements* table (on the *Inventory* > *Discovered* page of the IDP app) showed UTC time instead of the local time of the server.

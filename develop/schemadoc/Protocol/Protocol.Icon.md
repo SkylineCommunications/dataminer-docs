@@ -4,7 +4,7 @@ uid: Protocol.Icon
 
 # Icon element
 
-Defines the icon that is to be used in the Applications list in the Data­Miner Cube surveyor.
+Defines the icon that is to be used in the Applications list in the DataMiner Cube Surveyor.
 
 ## Type
 

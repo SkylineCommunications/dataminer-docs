@@ -21,4 +21,4 @@ Use this method to retrieve the relative duration (in percent) of each alarm sev
 
 | Item | Format | Description |
 |--|--|--|
-| GetServiceAlarmStates­ForViewResult | Array of [DMATopAlarmStateData](xref:DMATopAlarmStateData) | The relative duration (double) of each alarm severity for the services within the specified limitations. |
+| GetServiceAlarmStatesForViewResult | Array of [DMATopAlarmStateData](xref:DMATopAlarmStateData) | The relative duration (double) of each alarm severity for the services within the specified limitations. |

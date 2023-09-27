@@ -23,4 +23,4 @@ Use this method to request the value of a specific parameter (referenced by Data
 
 | Item | Format | Description |
 |--|--|--|
-| GetParameterValue­ByIdsResult | [ParamValue](xref:ParamValue) | The properties of the requested parameter. |
+| GetParameterValueByIdsResult | [ParamValue](xref:ParamValue) | The properties of the requested parameter. |

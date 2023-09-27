@@ -16,4 +16,4 @@ Use this method to retrieve all available Visio files that can be assigned to vi
 
 | Item                          | Format          | Description                                                      |
 |-------------------------------|-----------------|------------------------------------------------------------------|
-| GetAvailableVisioFiles­Result | Array of string | The names of the available Visio files (for views and services). |
+| GetAvailableVisioFilesResult | Array of string | The names of the available Visio files (for views and services). |

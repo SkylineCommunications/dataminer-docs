@@ -22,7 +22,7 @@ Defines a tree control.
 |Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Occurrences|Description|
 |--- |--- |--- |
 |***All***|||
-|&nbsp;&nbsp;[ExtraDetails](xref:Protocol.TreeControls.TreeControl.ExtraDetails)|[0, 1]|Defines additional tree item information to be displayed in the details section of the tree control lay­out.|
+|&nbsp;&nbsp;[ExtraDetails](xref:Protocol.TreeControls.TreeControl.ExtraDetails)|[0, 1]|Defines additional tree item information to be displayed in the details section of the tree control layout.|
 |&nbsp;&nbsp;[ExtraTabs](xref:Protocol.TreeControls.TreeControl.ExtraTabs)|[0, 1]|Contains additional tab definitions in the tree control.|
 |&nbsp;&nbsp;[HiddenColumns](xref:Protocol.TreeControls.TreeControl.HiddenColumns)|[0, 1]|Specifies the columns to be hidden.|
 |&nbsp;&nbsp;[Hierarchy](xref:Protocol.TreeControls.TreeControl.Hierarchy)|[0, 1]|Defines the relationship between the (visible) tables.|

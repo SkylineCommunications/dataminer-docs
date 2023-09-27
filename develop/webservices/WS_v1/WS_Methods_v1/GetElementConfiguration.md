@@ -18,4 +18,4 @@ Use this method to retrieve the configuration of a specified element.
 
 | Item | Format | Description |
 |--|--|--|
-| GetElementConfigura­tionResult | [DMAElementConfiguration](xref:DMAElementConfiguration) | The configuration of the specified element. |
+| GetElementConfigurationResult | [DMAElementConfiguration](xref:DMAElementConfiguration) | The configuration of the specified element. |

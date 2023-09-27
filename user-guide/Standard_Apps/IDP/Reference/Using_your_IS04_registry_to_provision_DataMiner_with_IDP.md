@@ -132,7 +132,7 @@ It is advised to make sure both processes are always active. You can do so by se
 
 To create an active process:
 
-1. Launch the Process Automation Wizard, as explained in [Processes](xref:Overview_of_the_IDP_app_UI#processes).
+1. Launch the Process Automation Wizard, as explained in [Processes](xref:IDP_Processes_tab).
 
 1. In the first step of the wizard, fill in the name, activation window type and activation window time (see figure 6).
 
@@ -159,7 +159,7 @@ To create an active process:
 
 To create an active process:
 
-1. Launch the Process Automation Wizard, as explained in [Processes](xref:Overview_of_the_IDP_app_UI#processes).
+1. Launch the Process Automation Wizard, as explained in [Processes](xref:IDP_Processes_tab).
 
 1. In the first step of the wizard, fill in the name, activation window type and activation window time details (see figure 6).
 

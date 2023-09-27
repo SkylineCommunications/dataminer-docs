@@ -20,4 +20,4 @@ This method is a faster alternative to the method *GetRedundancyGroupsForView*, 
 
 | Item | Format | Description |
 |--|--|--|
-| GetRedundancyGroups­LiteForViewResult | Array of [DMAElementLite](xref:DMAElementLite) | The redundancy groups in the specified view. |
+| GetRedundancyGroupsLiteForViewResult | Array of [DMAElementLite](xref:DMAElementLite) | The redundancy groups in the specified view. |

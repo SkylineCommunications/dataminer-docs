@@ -19,4 +19,4 @@ Use this method to retrieve the data of all the parameters of a particular proto
 
 | Item | Format | Description |
 |--|--|--|
-| GetParametersFor­ProtocolResult | Array of [DMAParameter](xref:DMAParameter) | The data of all the parameters of the specified protocol. |
+| GetParametersForProtocolResult | Array of [DMAParameter](xref:DMAParameter) | The data of all the parameters of the specified protocol. |

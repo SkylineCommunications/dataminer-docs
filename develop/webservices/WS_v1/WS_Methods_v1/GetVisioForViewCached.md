@@ -25,4 +25,4 @@ All images are in PNG format, and are base64 encoded.
 
 | Item | Format | Description |
 |--|--|--|
-| GetVisioForView­CachedResult | [DMACache](xref:DMACache) | The Visio file linked to the specified view, returned as an image. |
+| GetVisioForViewCachedResult | [DMACache](xref:DMACache) | The Visio file linked to the specified view, returned as an image. |

@@ -36,14 +36,8 @@ The following example illustrates the definition of a view table that refers to 
      <ColumnOption idx="5" pid="506" type="custom" options=";view=203:105" /><!-- Str By Index Stream Type -->
   </ArrayOptions>
   <Information>
-     <Text>Table Stream</Text>
-     <Subtext />
+     <Subtext>The list of services</Subtext>
   </Information>
-  <Interprete>
-     <RawType>other</RawType>
-     <LengthType>next param</LengthType>
-     <Type>double</Type>
-   </Interprete>
 </Param>
 ```
 
@@ -66,14 +60,8 @@ Below is an example of a base table. Note that as the view table will show data 
      <ColumnOption idx="8" pid="209" type="retrieved" options="" /><!-- Service By Index Max Bandwidth -->
   </ArrayOptions>
   <Information>
-     <Text>Table Service By Index</Text>
      <Subtext>Table Service By Index</Subtext>
   </Information>
-  <Interprete>
-     <RawType>other</RawType>
-     <LengthType>next param</LengthType>
-     <Type>double</Type>
-   </Interprete>
   ...
 </Param>
 ```
@@ -88,20 +76,13 @@ For example, the column parameter with ID 201 of the base table will be included
   <Name>tableData_Service_index_Id</Name>
   <Description>Service Id</Description>
   <Information>
-     <Text>Service Id</Text>
-     <Subtext />
-     <Includes>
-        <Include>time</Include>
-        <Include>range</Include>
-        <Include>steps</Include>
-        <Include>units</Include>
-     </Includes>
+     <Subtext>The ID of the service.</Subtext>
   </Information>
   <Type>read</Type>
   <Interprete>
      <RawType>other</RawType>
-     <LengthType>next param</LengthType>
      <Type>string</Type>
+     <LengthType>next param</LengthType>
    </Interprete>
   <Display>
      <RTDisplay>true</RTDisplay>
@@ -119,20 +100,13 @@ Note that a parameter can be duplicated multiple times using a comma as separato
   <Name>tableData_Service_index_Name</Name>
   <Description>Service Name</Description>
   <Information>
-     <Text>Service Name</Text>
-     <Subtext />
-     <Includes>
-        <Include>time</Include>
-        <Include>range</Include>
-        <Include>steps</Include>
-        <Include>units</Include>
-     </Includes>
+     <Subtext>The name of the service.</Subtext>
   </Information>
   <Type>read</Type>
   <Interprete>
      <RawType>other</RawType>
-     <LengthType>next param</LengthType>
      <Type>string</Type>
+     <LengthType>next param</LengthType>
    </Interprete>
   <Display>
      <RTDisplay>true</RTDisplay>
@@ -154,8 +128,8 @@ In case the write parameter should also be present for the view table, you only 
   <Type>write</Type>
   <Interprete>
      <RawType>other</RawType>
-     <LengthType>next param</LengthType>
      <Type>string</Type>
+     <LengthType>next param</LengthType>
    </Interprete>
   <Display>
      <RTDisplay>true</RTDisplay>

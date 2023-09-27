@@ -7,8 +7,7 @@ uid: Viewing_aggregation_information
 To view aggregation rules for a particular view, open the view card in DataMiner Cube, and go to the *Aggregation* page.
 
 > [!TIP]
-> See also:
-> [View cards](xref:View_cards).
+> See also: [View cards](xref:View_cards).
 
 The page consists of a header banner and two panes:
 
@@ -49,6 +48,6 @@ To view aggregation data:
 
 > [!NOTE]
 > Aggregation information can also be viewed in the Reports & Dashboards module:
+>
 > - For more information on reports, see [DMS Reporter](xref:reporter).
 > - For more information on dashboards, see [DMS Dashboards](xref:dashboards).
->

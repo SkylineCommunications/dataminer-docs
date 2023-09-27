@@ -4,8 +4,6 @@ uid: Applying_service_templates
 
 # Applying service templates
 
-## Applying a service template
-
 1. Right-click the service template in the Surveyor, and select *Apply*.
 
    Alternatively, you can also right-click a view, select *Actions* > *Apply service template*, and then select the template you wish to apply.
@@ -15,6 +13,7 @@ uid: Applying_service_templates
    - If you wish to import a CSV file to generate the services, click *Import configuration from CSV*. Then browse to the CSV file in question.
 
      > [!NOTE]
+     >
      > - If you are trying to update an existing service by means of an import, you must add a “serviceName” column with the name of the service in the CSV file. Note that this column name is case-sensitive.
      > - If the template contains an optional child element, specify "N/A" in the "element:x" column to skip that element even if a candidate element is available.
 
@@ -32,11 +31,11 @@ uid: Applying_service_templates
 
   If you specify the views by name, placeholders are supported, e.g. to refer to a parameter or to input data. For example:
 
-    - *byname:Channel \[data:channelname\]\|Location \[data:locationname\]*
+  - *byname:Channel \[data:channelname\]\|Location \[data:locationname\]*
 
   In case you specify a wildcard in a view name, the service will be added to all matching views.
 
-- When over 50 services are about to be created, or generated services contain over 20 elements, a warning appears. You will need to click the *Continue* button before the task continues. If the warning is ignored for 5 minutes, the task will be aborted. These configuration settings can be changed via the SLNetClientTest tool. See [Changing the service template child element and child service limitations](xref:SLNetClientTest_tool_advanced_procedures#changing-the-service-template-child-element-and-child-service-limitations).
+- When over 50 services are about to be created, or generated services contain over 20 elements, a warning appears. You will need to click the *Continue* button before the task continues. If the warning is ignored for 5 minutes, the task will be aborted. These configuration settings can be changed via the SLNetClientTest tool. See [Changing the service template child element and child service limitations](xref:SLNetClientTest_changing_service_template_child_limitations).
 
   > [!WARNING]
   > Always be extremely careful when using SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.

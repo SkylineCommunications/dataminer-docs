@@ -16,6 +16,9 @@ In DataMiner Cube, you can configure the following settings on the *SLA Configur
 
 In addition, more recent versions of the *Skyline SLA Definition Basic* protocol also allow certain advanced settings on the *Advanced Configuration* page. See [Advanced SLA alarm configuration](#advanced-sla-alarm-configuration).
 
+> [!NOTE]
+> The weight of alarms that occurred prior to a change to these settings will not be recalculated retroactively. We therefore recommend resetting the SLA after changing these settings.
+
 ## Setting the violation level
 
 To define the service alarm level from which the SLA must indicate it has been violated, choose a violation level in the drop-down list under *Violation Level* and confirm your choice.
@@ -39,6 +42,7 @@ Not all alarms in a service are equally important. Set a violation filter to giv
 
 > [!NOTE]
 > From version 2.0.0.25 of the *Skyline SLA Definition Basic* protocol onwards, it is possible to hide alarms that have 0% impact because of violation filters. To do so:
+>
 > - Using version 2.0.0.25, on the *SLA Configuration* page, set *Hide Filtered Alarms* to *Hide*.
 > - Using version 3.0.0 or higher, on the *Advanced Configuration* page, set *Violation Filtered Alarms* to *Hide*. Note that you need at least security level 3 in order to change any of the settings on the *Advanced Configuration* page.
 >
@@ -50,39 +54,46 @@ To add a violation filter, follow the procedure below:
 
 1. Go to the *Violation Configuration* page of the SLA element.
 
-2. Click *Add Entry* at the bottom of the *Violation Settings* table.
+1. Click *Add Entry* at the bottom of the *Violation Settings* table.
 
-3. In the first column, choose the *Violation Filter Type* in the drop-down list and confirm. This is the alarm field on which you wish to filter, e.g. Severity.
+1. In the first column, choose the *Violation Filter Type* in the drop-down list and confirm. This is the alarm field on which you wish to filter, e.g. Severity.
 
-    > [!NOTE]
-    > The violation filter types *Key point*, and *Component info* refer to parameter data that can be set in the protocol information template. For more information, see [Creating an information template](xref:Creating_an_information_template).
+   > [!NOTE]
+   > The violation filter types *Key point*, and *Component info* refer to parameter data that can be set in the protocol information template. For more information, see [Creating an information template](xref:Creating_an_information_template).
 
-4. Enter a *Violation Filter Property Name* in the next column, if the filter type is a custom property.
+1. Enter a *Violation Filter Property Name* in the next column, if the filter type is a custom property.
 
-5. Enter the *Violation Filter Value* in the next column, e.g. if the violation filter type is “Severity”, this could be “Minor”. It is possible to use an asterisk or question mark as wildcards here.
+1. Enter the *Violation Filter Value* in the next column, e.g. if the violation filter type is “Severity”, this could be “Minor”. It is possible to use an asterisk or question mark as wildcards here.
 
-6. Enter the impact you want the violation to have as a percentage under *Violation Filter Impact*.
+1. Enter the impact you want the violation to have as a percentage under *Violation Filter Impact*.
 
-7. In the column *Violation Filter Exclusive*, toggle whether the filter should be exclusive or not.
+1. In the column *Violation Filter Exclusive*, toggle whether the filter should be exclusive or not.
 
-    > [!NOTE]
-    > - If set to *Filter*, an alarm that does not match the filter will not be evaluated further, and the weight specified in the last matching rule is taken. If it did not match a previous rule, then the weight for that alarm is set to 0%.
-    > - If set to *Continue*, the following filters are also processed, and if in the end none of the filters matched, the weight for that alarm is set to 100%. If several alarms match several of the violation filters set to Continue, the weightings will be added together. If one alarm matches several of the violation filters, the last matching filter is applied.
+   > [!NOTE]
+   >
+   > - If set to *Filter*, an alarm that does not match the filter will not be evaluated further, and the weight specified in the last matching rule is taken. If it did not match a previous rule, then the weight for that alarm is set to 0%.
+   > - If set to *Continue*, the following filters are also processed, and if in the end none of the filters matched, the weight for that alarm is set to 100%. If several alarms match several of the violation filters set to Continue, the weightings will be added together. If one alarm matches several of the violation filters, the last matching filter is applied.
 
-8. Enter a value under *Violation Filter Sequence* to indicate the sequence in which you wish different filters to be used. The lowest number will be sequenced first.
+1. Enter a value under *Violation Filter Sequence* to indicate the sequence in which you wish different filters to be used. The lowest number will be sequenced first.
 
-9. Enable or Disable the filter in the column *Violation Filter State*.
+1. Enable or disable the filter in the column *Violation Filter State*.
 
-    > [!NOTE]
-    > The table is interpreted by DataMiner from top to bottom. It is sorted first on *Violation filter state* and then on ascending *Violation filter sequence*.
+   > [!NOTE]
+   > The table is interpreted by DataMiner from top to bottom. It is sorted first on *Violation filter state* and then on ascending *Violation filter sequence*.
 
-### Violation filter example
+### Violation filter examples
 
-Consider the following example:
+#### Example 1
 
-For your SLA, you want Warnings to count for only 10%, and Minor alarms for 30%. Also, if an element is in maintenance, you want the alarms not to count at all. Any other alarms should count for the full 100%.
+With the configuration below, masked alarms will not affect the SLA.
 
-To get this result, set the following filters:
+| Type                    | Property name | Value       | Impact | Exclusive | Sequence | State   |
+|-------------------------|---------------|-------------|--------|-----------|----------|---------|
+| Alarm state             | ...           | Masked      | 0%     | Continue  | 100      | Enabled |
+
+#### Example 2
+
+With the configuration below, warnings count for only 10 %, and minor alarms for 30 %. If an element is in maintenance, alarms will not count at all. Any other alarms will count for the full 100 %.
 
 | Type                    | Property name | Value       | Impact | Exclusive | Sequence | State   |
 |-------------------------|---------------|-------------|--------|-----------|----------|---------|

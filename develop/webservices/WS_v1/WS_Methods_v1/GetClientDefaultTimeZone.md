@@ -14,4 +14,4 @@ None.
 
 | Item | Format | Description |
 |--|--|--|
-| GetClientDefaultTime­ZoneResult | [DMATimeZoneInfo](xref:DMATimeZoneInfo) | The time zone information for the client. |
+| GetClientDefaultTimeZoneResult | [DMATimeZoneInfo](xref:DMATimeZoneInfo) | The time zone information for the client. |

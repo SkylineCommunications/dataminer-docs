@@ -24,4 +24,4 @@ Use this method to retrieve a specific number of Data Display pages of a particu
 
 | Item | Format | Description |
 |--|--|--|
-| GetPagesForElement­SortedResult | Array of [DMAElementPage](xref:DMAElementPage) | The requested number of Data Display pages, sorted as specified. |
+| GetPagesForElementSortedResult | Array of [DMAElementPage](xref:DMAElementPage) | The requested number of Data Display pages, sorted as specified. |

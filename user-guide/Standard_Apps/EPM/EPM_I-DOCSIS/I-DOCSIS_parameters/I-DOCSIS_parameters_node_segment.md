@@ -4,9 +4,7 @@ uid: I-DOCSIS_parameters_node_segment
 
 # I-DOCSIS parameters – Node Segment
 
-These parameters are currently still under development.
-
-<!-- This page contains an overview of the Node Segment parameters available in the I-DOCSIS branch of the EPM Solution.
+This page contains an overview of the Node Segment parameters available in the I-DOCSIS branch of the EPM Solution from version 6.1.5 onwards.
 
 ## KPIs & KQIs
 
@@ -23,6 +21,10 @@ These parameters are currently still under development.
 - **Number CM DOCSIS 3.0**: Calculated. The number of cable modems associated with the node segment that report their DOCSIS version as 3.0.
 
 - **Number CM DOCSIS 3.1**: Calculated. The number of cable modems associated with the node segment that report their DOCSIS version as 3.1.
+
+- **Number CM DOCSIS Other**: Calculated. The number of CMs associated with the given level that have an unknown DOCSIS version.
+
+  Calculated by adding up the number of CMs with an unknown DOCSIS version that are part of the network.
 
 - **Number CM Ping Unreachable**: Calculated. The number of cable modems associated with the node segment that are not reachable via ping from the hosting DataMiner Agent.
 
@@ -72,9 +74,41 @@ These parameters are currently still under development.
 
 - **Percentage CM Reflection OOS**: Calculated. The percentage of cable modems associated with the given service group that are affected by reflection.
 
-- **Number CM Group Delay or Reflection OOS**: Calculated. The number of cable modems associated with the given service group that are affected by NMTER being out of spec (OOS).
+- **Number CM Group Delay or Reflection OOS**: Calculated. The number of cable modems associated with the given service group that are affected by Pre-MTTER being out of spec (OOS) or Post-MTTER being out of spec (OOS).
 
-- **Percentage CM Group Delay or Reflection OOS**: Calculated. The percentage of cable modems associated with the given service group that are affected by NMTER being out of spec (OOS).
+- **Percentage CM Group Delay or Reflection OOS**: Calculated. The percentage of cable modems associated with the given service group that are affected by Pre-MTTER being out of spec (OOS) or Post-MTTER being out of spec (OOS).
+
+  > [!NOTE]
+  > Note that prior to EPM I-DOCSIS 6.1.7<!-- RN 36344 -->, **Percentage CM Group Delay OOS** and **Percentage CM Reflection OOS** parameters were affected by NMTTER being out of spec. This was because the parameter **Percentage CM Group Delay or Reflection OOS** did not have a relation with **Percentage CM Group Delay OOS** and **Percentage CM Reflection OOS**.
+
+  The following table provides information about the group delay and reflection status for different cable modems in a given service group. The table consists of three rows: *Group Delay Status*, *Reflection Status*, and *Group Delay or Reflection Status*. Each row represents a specific aspect of the cable modem performance.
+
+  | Cable Modem Number | Group Delay Status | Reflection Status | Group Delay or Reflection Status |
+  |--------------------|:------------------:|:-----------------:|:--------------------------------:|
+  | CM 1               |         OOS        |        OK         |               OOS                |
+  | CM 2               |         OK         |        OOS        |               OOS                |
+  | CM 3               |         OK         |        OK         |               OK                 |
+  | CM 4               |         OOS        |        OOS        |               OOS                |
+
+  - **Group Delay Status**: This column indicates whether a cable modem has a group delay outside the specified limits ("OOS") or within the acceptable range ("OK").
+
+  - **Reflection Status**: This column represents the reflection status for each cable modem. If reflection is outside the specified limits for a modem, it is indicated as "OOS"; if it falls within the acceptable range, it is indicated as "OK".
+
+  - **Group Delay or Reflection Status**: This column combines the information from the previous columns. If either the Group Delay Status or the Reflection Status indicates an "OOS" condition for a specific cable modem, this column will indicate "OOS". If both the Group Delay Status and the Reflection Status are "OK", the cable modem is marked as "OK" in this column.
+
+  This table is an example of how cable modems affected by group delay or reflection issues can be identified by referencing their respective status values. It provides a clear overview of the performance status for each cable modem in the service group.
+
+- **Reflection Distance**: The average reflection distance for all associated CMs.
+
+- **Average Latency**: The average latency for all CMs associated with the given level.
+
+- **Average jitter**: The average jitter for all CMs associated with the given level.
+
+- **Average Packet Loss Rate**: The average packet loss rate for all CMs associated with the given level.
+
+- **US Utilization**: The percentage US utilization of the channels associated with the port.
+
+- **DS Utilization**: The percentage DS utilization of the channels associated with the port.
 
 ## System parameters
 
@@ -84,4 +118,4 @@ These parameters are currently still under development.
 
 - **DS Port**: Direct value. The DS port associated with the node segment.
 
-- **US Port**: Direct value. The US port associated with the node segment. -->
+- **US Port**: Direct value. The US port associated with the node segment.

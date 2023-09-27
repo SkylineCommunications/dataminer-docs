@@ -20,4 +20,4 @@ Use this method to retrieve the Data Display pages of a specified element that i
 
 | Item | Format | Description |
 |--|--|--|
-| GetPagesForService­ElementResult | Array of [DMAElementPage](xref:DMAElementPage) | All the Data Display pages of the specified element. |
+| GetPagesForServiceElementResult | Array of [DMAElementPage](xref:DMAElementPage) | All the Data Display pages of the specified element. |

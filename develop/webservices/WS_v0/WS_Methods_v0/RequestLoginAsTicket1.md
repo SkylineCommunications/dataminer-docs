@@ -16,4 +16,4 @@ Use this method to request a logon ticket that can then be added to e.g. a DataM
 
 | Item                        | Format | Description       |
 |-----------------------------|--------|-------------------|
-| RequestLoginAsTicket­Result | String | The logon ticket. |
+| RequestLoginAsTicketResult | String | The logon ticket. |

@@ -11,6 +11,9 @@ From DataMiner 10.0.12 onwards, this tool is available on each DMA server in the
 > [!CAUTION]
 > There is no automatic backup of the DMA before the factory reset is performed. Make sure you have taken any backups you need before you run this tool.
 
+> [!NOTE]
+> The factory reset will also remove all known users of the DataMiner System, so you will only be able to log in with the built-in Administrator account afterwards.
+
 Optionally, you can run the tool with the `–y` input argument in order to skip prompts that ask you for permission to run specific actions.
 
 From DataMiner 10.2.0/10.2.2 onwards, you can also run it with the `-ho [hostname]` argument to specify the hostname. This is especially useful when resetting a DataMiner Agent that only allows you to connect via HTTPS.
@@ -54,6 +57,9 @@ It will always perform the following actions, regardless of whether the DMA is r
 - IISConfig
 - StartSLTaskbarUtility
 - StartDataMiner
+- Cleanclustereddatabases
+
+  Available from DataMiner 10.1.0 \[CU6\]/10.1.9 onwards. Prior to DataMiner 10.2.0 \[CU9\]/10.2.12, this action will remove all keyspaces and indices from the Cassandra cluster and Elasticsearch databases. From DataMiner 10.2.0 \[CU9\]/10.2.12 onwards, this action will remove the tables, keyspaces, and indices defined in the *DB.xml* file from the databases (clusters as well as single-node Cassandra databases on remote machines).
 
 ## SLDataGateway.Tools.Database.exe
 
@@ -67,7 +73,7 @@ This tool can be run with the following arguments:
 
   - *SQL* (i.e. MySQL)
   - *Cassandra*
-  - *Elastic* (i.e. ElasticSearch)
+  - *Elastic* (i.e. Elasticsearch)
 
 - `-i <ip>` or `–ip <ip>`: Mandatory argument. The IP address of the database host.
 
@@ -75,13 +81,13 @@ This tool can be run with the following arguments:
 
   - MySQL: *root* (empty password)
   - Cassandra: *root/root*
-  - ElasticSearch: no security
+  - Elasticsearch: no security
 
 - `-p <password>` or `–password <password>`: Password used for authentication. If no user credentials are specified, the following default credentials will be used:
 
   - MySQL: *root* (empty password)
   - Cassandra: *root/root*
-  - ElasticSearch: no security
+  - Elasticsearch: no security
 
 - `-f` or `–forced`: Skip all prompts. If this argument is not used, the user will be asked for a final confirmation.
 

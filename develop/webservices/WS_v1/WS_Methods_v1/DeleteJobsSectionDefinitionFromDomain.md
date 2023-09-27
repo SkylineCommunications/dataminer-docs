@@ -20,4 +20,4 @@ Available from DataMiner 10.0.9 onwards.
 
 | Item | Format | Description |
 |--|--|--|
-| DeleteJobsSection­DefinitionFromDomain­Result | Boolean | Returns “true” if the job section definition has been fully deleted, or “false” if the job section definition has been hidden instead, because it has already been used previously. |
+| DeleteJobsSectionDefinitionFromDomainResult | Boolean | Returns “true” if the job section definition has been fully deleted, or “false” if the job section definition has been hidden instead, because it has already been used previously. |

@@ -23,4 +23,4 @@ Use this method to retrieve the trend statistics for a specified service. Availa
 
 | Item | Format | Description |
 |--|--|--|
-| GetTrendStatisticsFor­ServiceResponse | Array of DMATrendData­StatisticsService | A list of the parameters that have trending enabled within the specified service, with their trend statistics. |
+| GetTrendStatisticsForServiceResponse | Array of DMATrendDataStatisticsService | A list of the parameters that have trending enabled within the specified service, with their trend statistics. |

@@ -27,8 +27,10 @@ Please take the following information into account:
 
   If the backup settings for DataMiner Indexing (i.e. Elasticsearch) have been changed, all Elasticsearch nodes need to be restarted, which may take some time. During this time, no backups can be taken.
 
+- For systems using **OpenSearch**, see [Configuring OpenSearch backups](xref:Configuring_OpenSearch_Backups).
+
 > [!NOTE]
 > The binaries and settings of NAS and NATS are not included in a DataMiner backup. On startup, DataMiner automatically detects whether the NATS folders exist and creates them if necessary. However, this means that if for some reason a problem occurs with your NATS setup, you cannot fix this by means of a backup and restore.
 
 > [!TIP]
-> See also: [Backup – Configuring backups](https://community.dataminer.services/video/backup-configuring-backups/) on DataMiner Dojo
+> See also: [Backup – Configuring backups](https://community.dataminer.services/video/backup-configuring-backups/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)

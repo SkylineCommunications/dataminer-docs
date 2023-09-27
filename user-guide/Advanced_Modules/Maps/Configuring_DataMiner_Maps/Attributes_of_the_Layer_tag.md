@@ -73,7 +73,7 @@ Minimum zoom level at which the layer is visible. When you zoom out more, the la
 By default, a layer is always visible. Zoom levels go from 0 (entire world) up to around 19-23 (depending on the zoom location).
 
 > [!NOTE]
-> Combining multiple layers that have a minZoom and maxZoom level can provide a drill-down experience, which can for instance be useful when using DMS Maps to display EPM element data.
+> Combining multiple layers that have a minZoom and maxZoom level can provide a drill-down experience, which can for instance be useful when using DataMiner Maps to display EPM element data.
 
 ## name
 

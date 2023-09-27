@@ -58,8 +58,9 @@ To add a child element:
         - For a matrix or table parameter, optionally specify particular inputs/outputs or rows in the box underneath *Included rows/inputs/outputs*, with wildcards if necessary.
 
         > [!NOTE]
+        >
         > - If you include a table parameter using placeholders, you can use wildcards to dynamically include only the table rows with a matching display key. If you do not want the set of rows to change dynamically, but only want to include the first match found when the service is generated, use the prefix “!1st!” before the wildcard. For example: *!1st!\*\_BBC\_\**
-        > - From DataMiner 10.2.4/10.3.0 onwards, it is possible reference a table row by primary key, using the prefix `^pk^` in the placeholder. For example: `[element:1:param:1002:^pk^myPrimaryKey]`.
+        > - From DataMiner 10.2.4/10.3.0 onwards, it is possible to reference a table row by primary key, using the prefix `^pk^` in the placeholder. For example: `[element:1:param:1002:^pk^myPrimaryKey]`.
 
    1. In the *Conditions* section, two options can be selected:
 
@@ -68,6 +69,7 @@ To add a child element:
       - To limit the influence of the child element on the service alarm severity, select *While included, influence overall service alarm severity when*, and add a trigger with the *Add trigger* button.
 
       > [!NOTE]
+      >
       > - Like in a service, inclusion and exclusion can be triggered based on a parameter state, alarm state or element state, or on whether the element is part of the active connectivity chain. However, for the latter, connectivity must be configured on the DMA. See [Conditionally including an element in a service](xref:Conditionally_including_an_element_in_a_service).
       > - For a matrix parameter, to create a condition where a matrix crosspoint is connected or disconnected, create a trigger on parameter value for the matrix parameter, in the trigger condition use *==* or *\<\>* respectively, and specify the input/output names in the text value, separated by a comma (e.g. “input A, output B”).
 

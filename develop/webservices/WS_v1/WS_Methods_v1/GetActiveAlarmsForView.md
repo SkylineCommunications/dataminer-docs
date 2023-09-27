@@ -17,4 +17,4 @@ Use this method to retrieve all the active alarms of a particular view.
 
 | Item | Format | Description |
 |--|--|--|
-| GetActiveAlarmsFor­ViewResult | Array of [DMAAlarm](xref:DMAAlarm) | The active alarms of the specified view. |
+| GetActiveAlarmsForViewResult | Array of [DMAAlarm](xref:DMAAlarm) | The active alarms of the specified view. |

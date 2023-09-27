@@ -16,15 +16,20 @@ To enable authentication in Elasticsearch 6.8.X:
 
 1. Add the following lines to the *elasticsearch.yml* file (typically located in *C:\Program Files\Elasticsearch\config*):
 
-    `xpack.security.enabled: true`
+   `xpack.security.enabled: true`
 
-    `discovery.type: single-node`
+   `discovery.type: single-node`
+
+   > [!NOTE]
+   > For a multi-node cluster, "discovery.type" is not required.
 
 1. Start the *elasticsearch-service-x64* service.
 
-1. Execute the **elasticsearch-setup-passwords.bat** script (as Administrator) with the *interactive* argument.
+1. Execute the **elasticsearch-setup-passwords.bat** script (as superuser) with the *interactive* argument.
 
-   `C:\Program Files\Elasticsearch\bin\elasticsearch-setup-passwords.bat interactive`
+   - On a **Windows** server, this is located in `C:\Program Files\Elasticsearch\bin\elasticsearch-setup-passwords.bat interactive`
+
+   - On a **Linux** server, this is located in `/usr/share/elasticsearch/bin/elasticsearch-setup-passwords interactive`
 
 1. When the script prompts you to do so, enter the new credentials for several users. Ideally these are random-generated, strong passwords.
 
@@ -68,15 +73,29 @@ To configure TLS encryption for client-server communication:
 
 1. Request or generate a TLS certificate (the certificates should be in the PKCS#12 format). Make sure the IP address of the node is included in the *Subject Alternative Names* of the certificate.
 
+   Elasticsearch comes with the `elasticsearch-certutil` tool installed, which can be used to generate certificates. However, we recommend that you **use our [scripts for generating TLS certificates](https://github.com/SkylineCommunications/generate-tls-certificates)**, available on GitHub. There is a version of the script for Linux and Windows machines. The script requires two tools: *openssl* and the *Java keytool*. Both of these can run on Linux and Windows.
+
 1. Add the following lines to the *elasticsearch.yml* file:
 
    ```
    xpack.security.http.ssl.enabled: true
-   xpack.security.http.ssl.keystore.path: path/to/your/certificate
-   xpack.security.http.ssl.truststore.path: path/to/your/certificate
+   xpack.security.http.ssl.keystore.path: path/to/your/<NODE CERT STORE>
+   xpack.security.http.ssl.truststore.path: path/to/your/<NODE CERT STORE>
    ```
 
-1. Optionally, **for password-protected certificates**, execute the following commands **as Administrator** and enter the password when prompted:
+   If you are using a `.PEM` certificate generated using `openssl` utility, add the following lines to the *elasticsearch.yml* file instead:
+
+   ```
+    xpack.security.http.ssl.enabled: true
+    xpack.security.http.ssl.verification_mode: full
+    xpack.security.http.ssl.key: path/to/your/PrivateKey/used/to/generatet/the/certificate
+    xpack.security.http.ssl.certificate: path/to/your/certificate
+    xpack.security.http.ssl.certificate_authorities: path/to/certificate/authority
+    #In case of a self-signed certificates replace `path/to/certificate/authority` with path to certificate
+    of each node in cluster.
+    ```
+
+1. **For cert stores generated with the script or password-protected certificates**, execute the following commands **as Administrator** and enter the password when prompted:
 
    ```
    bin\elasticsearch-keystore add xpack.security.http.ssl.keystore.secure_password
@@ -90,10 +109,40 @@ To configure TLS encryption for client-server communication:
 1. Add the full *https://* URL (including the port) in the \<DBServer> element in the *DB.xml* file. For example:
    `<DBServer>https://elastic.dataminer:9200</DBServer>`
 
+1. Import the certificate in the *Trusted Root Certification Authorities* store of the Windows Certificate Store.
+
 1. Save the changes and start the DataMiner Agent.
 
 > [!TIP]
 > To troubleshoot problems after enabling TLS encryption, consult the *SLSearch.txt* log file.
+
+### Troubleshooting: executing the generate-certificates.sh script
+
+#### Syntax error
+
+**Situation**: You have cloned the "Generate-TLS-Certificates" GitHub repository on a Windows machine, and have transferred the *generate-certificates.sh* file to a Linux machine using SCP. You have executed the following command:
+
+```bash
+sudo generate-certificates.sh
+```
+
+**Symptom**: Bash indicates that there are syntax errors in the script.
+
+**Resolution**: Convert the .sh file to Unix format.
+
+1. Begin by installing *dos2unix* with the following command:
+
+   ```bash
+   sudo apt install dos2unix
+   ```
+
+1. Next, run the following command:
+
+   ```bash
+   dos2unix generate-certificates.sh
+   ```
+
+   Once the conversion is complete, you can execute the script again.
 
 ## Inter-node TLS encryption
 
@@ -103,7 +152,7 @@ To configure TLS encryption for inter-node communication:
 
 1. Request or generate a TLS certificate (the certificates should be in the PKCS#12 format). Make sure the IP address of the node is included in the *Subject Alternative Names* of the certificate.
 
-1. Add the following to the *elasticsearch.yml* on each node:
+1. Add the following to the *elasticsearch.yml* file on each node:
 
    ```
    xpack.security.transport.ssl.enabled: true
@@ -112,7 +161,19 @@ To configure TLS encryption for inter-node communication:
    xpack.security.transport.ssl.truststore.path: elastic-certificates.p12
    ```
 
-1. If you secured the node's certificate with a password, add the password to your Elasticsearch keystore by executing the following commands:
+   If you are using a `.PEM` certificate generated using `openssl` utility, add the following lines to *elasticsearch.yml* file instead.
+
+   ```
+    xpack.security.transport.ssl.enabled: true
+    xpack.security.transport.ssl.verification_mode: full 
+    xpack.security.transport.ssl.key: path/to/your/PrivateKey/used/to/generatet/the/certificate
+    xpack.security.transport.ssl.certificate: path/to/your/certificate
+    xpack.security.transport.ssl.certificate_authorities: path/to/certificate/authority
+    #In case of a self-signed certificates replace `path/to/certificate/authority` with path to certificate
+    of each node in cluster.
+    ```
+
+1. For cert stores generated with the script or if you secured the node's certificate with a password, add the password to your Elasticsearch keystore by executing the following commands:
 
    ```
    bin/elasticsearch-keystore add xpack.security.transport.ssl.keystore.secure_password

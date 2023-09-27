@@ -8,7 +8,7 @@ This section lists tips and tricks on how to use DataMiner Cube, including the t
 
 ## About alarms
 
-- Too many alarms in your Alarm Console? Adding conditions in the alarm template can help you reduce unnecessary alarms. See [Using conditions in an alarm template](xref:Configuring_alarm_templates#using-conditions-in-an-alarm-template).
+- Too many alarms in your Alarm Console? Adding conditions in the alarm template can help you reduce unnecessary alarms. See [Using conditions in an alarm template](xref:Using_conditions_in_an_alarm_template).
 
 - You can drag and drop an element, service or view to the Alarm Console to instantly create an alarm tab linked to it. See [Applying an alarm filter by dragging an item onto the Alarm Console](xref:ApplyingAlarmFiltersInTheAlarmConsole#applying-an-alarm-filter-by-dragging-an-item-onto-the-alarm-console).
 
@@ -65,7 +65,7 @@ This section lists tips and tricks on how to use DataMiner Cube, including the t
 
 - Would you like to have certain elements, views, services or apps easily available? Pin them in the recent activity list (also available in the Monitoring app). [Recent items](xref:Main_Cube_UI_components_prior_to_DataMiner_10#recent-items).
 
-- Do you want to move several elements from one view to another? Select them on the source view card and drag them to the target view in the Surveyor in drag-and-drop editing mode.
+- Do you want to copy several elements from one view to another? Select them on the source view card and drag them to the target view in the Surveyor in drag-and-drop editing mode.
 
 ## About trending
 
@@ -77,7 +77,7 @@ This section lists tips and tricks on how to use DataMiner Cube, including the t
 
 ## Miscellaneous
 
-- If you specify startup options in the DataMiner Cube URL, you can make Cube display a particular view or app on startup – and you can do even much more than that! See [Options for opening DataMiner Cube](xref:Options_for_opening_DataMiner_Cube).
+- With the advanced options to open a DMS from the Cube start window, you can customize which view or app is initially shown – and you can do even much more than that! See [Arguments for DataMiner Cube](xref:Options_for_opening_DataMiner_Cube).
 
 - Want to get alerts for a particular element, service or view? Right-click it in the Surveyor and select *Actions* > *Alert me*. See [Configuring notifications directly from the Alarm Console or Surveyor](xref:Configuring_notifications_directly_from_the_Alarm_Console_or_Surveyor).
 

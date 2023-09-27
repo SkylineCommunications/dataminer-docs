@@ -18,4 +18,4 @@ Use this method to retrieve a specific job template from a domain. Available fro
 
 | Item                    | Format                                                       | Description                 |
 |-------------------------|--------------------------------------------------------------|-----------------------------|
-| GetJobTemplateV2­Result | [DMAJobTemplate](xref:DMAJobTemplate) | The requested job template. |
+| GetJobTemplateV2Result | [DMAJobTemplate](xref:DMAJobTemplate) | The requested job template. |

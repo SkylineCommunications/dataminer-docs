@@ -12,23 +12,20 @@ A label displays the current value of a standalone parameter. The text provided 
 <Param id="102">
   <Name>SoftwareVersion</Name>
   <Description>Software Version</Description>
-  <Information>
-     <Subtext>Running software version.</Subtext>
-     <Includes>
-        <Include>time</Include>
-        <Include>range</Include>
-        <Include>steps</Include>
-        <Include>units</Include>
-     </Includes>
-  </Information>
   <Type>read</Type>
+  <Information>
+    <Subtext>Running software version.</Subtext>
+  </Information>
   <Interprete>
-     <RawType>other</RawType>
-     <LengthType>next param</LengthType>
-     <Type>string</Type>
+    <RawType>other</RawType>
+    <Type>string</Type>
+    <LengthType>next param</LengthType>
   </Interprete>
+  <Display>
+    <RTDisplay>true</RTDisplay>
+  </Display>
   <Measurement>
-     <Type>string</Type>
+    <Type>string</Type>
   </Measurement>
 </Param>
 ```
@@ -41,43 +38,19 @@ The following example displays a numeric parameter:
 
 ```xml
 <Param id="1806" trending="false">
-  <Name>CPU Load</Name>
+  <Name>CPULoad</Name>
   <Description>CPU Load</Description>
-  <Information>
-     <Subtext>Indicates the current CPU utilization.</Subtext>
-     <Includes>
-        <Include>time</Include>
-        <Include>range</Include>
-        <Include>steps</Include>
-        <Include>units</Include>
-     </Includes>
-  </Information>
   <Type>read</Type>
   <Interprete>
-     <RawType>numeric text</RawType>
-     <LengthType>next param</LengthType>
-     <Type>double</Type>
+    <RawType>numeric text</RawType>
+    <Type>double</Type>
+    <LengthType>next param</LengthType>
   </Interprete>
-  <Alarm>
-     <Monitored>true</Monitored>
-  </Alarm>
   <Display>
-     <RTDisplay>true</RTDisplay>
-     <Units>%</Units>
-     <Positions>
-        <Position>
-           <Page>General</Page>
-           <Row>4</Row>
-           <Column>1</Column>
-        </Position>
-     </Positions>
-     <Range>
-        <Low>0</Low>
-        <High>100</High>
-     </Range>
+    <RTDisplay>true</RTDisplay>
   </Display>
   <Measurement>
-     <Type>number</Type>
+    <Type>number</Type>
   </Measurement>
 </Param>
 ```
@@ -93,55 +66,43 @@ By default, 6 decimals are stored. In case more decimals are required to avoid r
 
 In order to make a label editable, create a parameter of type "write" that has the same name and description as the parameter of type "read" and specify the same position for both parameters.
 
-![alt text](../../images/uieditablelabel.png "DataMiner Cube editable label")
-
 ```xml
 <Param id="103" trending="false">
   <Name>FolderTextBox</Name>
   <Description>Document Folder</Description>
-  <Information>
-     <Subtext>Document folder.</Subtext>
-     <Includes>
-        <Include>time</Include>
-        <Include>range</Include>
-        <Include>steps</Include>
-        <Include>units</Include>
-     </Includes>
-  </Information>
   <Type>read</Type>
   <Interprete>
-     <RawType>other</RawType>
-     <LengthType>next param</LengthType>
-     <Type>string</Type>
-      <DefaultValue>C:\Skyline DataMiner\Documents</DefaultValue>
+    <RawType>other</RawType>
+    <Type>string</Type>
+    <LengthType>next param</LengthType>
+    <DefaultValue>C:\Skyline DataMiner\Documents</DefaultValue>
   </Interprete>
+  <Display>
+    <RTDisplay>true</RTDisplay>
+  </Display>
   <Measurement>
-     <Type>string</Type>
+    <Type>string</Type>
   </Measurement>
 </Param>
-<Param id="104" trending="false">
+<Param id="104" setter="true">
   <Name>FolderTextBox</Name>
   <Description>Document Folder</Description>
-  <Information>
-     <Subtext>Document folder.</Subtext>
-     <Includes>
-        <Include>time</Include>
-        <Include>range</Include>
-        <Include>steps</Include>
-        <Include>units</Include>
-     </Includes>
-  </Information>
   <Type>write</Type>
   <Interprete>
-     <RawType>other</RawType>
-     <LengthType>next param</LengthType>
-     <Type>string</Type>
+    <RawType>other</RawType>
+    <Type>string</Type>
+    <LengthType>next param</LengthType>
   </Interprete>
+  <Display>
+    <RTDisplay>true</RTDisplay>
+  </Display>
   <Measurement>
-     <Type>string</Type>
+    <Type>string</Type>
   </Measurement>
 </Param>
 ```
+
+![DataMiner Cube editable label](../../images/uieditablelabel.png "DataMiner Cube editable label")
 
 There are multiple ways to copy a value set in the write parameter to its read counterpart:
 
@@ -154,83 +115,51 @@ There are multiple ways to copy a value set in the write parameter to its read c
 
 ## Creating an editable label with check box
 
-It is possible to visualize a check box by providing a discrete entry with state disabled on the write parameter:
+It is possible to visualize a check box by providing a discrete entry on the write parameter:
 
 ```xml
 <Param id="420">
-  <Name>Configuration File</Name>
+  <Name>ConfigurationFile</Name>
   <Description>Configuration File</Description>
-  <Information>
-     <Subtext></Subtext>
-     <Includes>
-        <Include>time</Include>
-        <Include>range</Include>
-        <Include>steps</Include>
-        <Include>units</Include>
-     </Includes>
-  </Information>
   <Type>read</Type>
   <Interprete>
-     <RawType>other</RawType>
-     <LengthType>next param</LengthType>
-     <Type>string</Type>
-     <Exceptions>
-        <Exception id="1" value="-1">
-           <Display state="disabled">N/A</Display>
-           <Value>-1</Value>
-        </Exception>
-     </Exceptions>
+    <RawType>other</RawType>
+    <Type>string</Type>
+    <LengthType>next param</LengthType>
+    <Exceptions>
+      <Exception id="1" value="-1">
+        <Display state="disabled">N/A</Display>
+        <Value>-1</Value>
+      </Exception>
+    </Exceptions>
   </Interprete>
   <Display>
-     <RTDisplay>true</RTDisplay>
-     <Positions>
-        <Position>
-           <Page>General</Page>
-           <Row>7</Row>
-           <Column>0</Column>
-        </Position>
-     </Positions>
+    <RTDisplay>true</RTDisplay>
   </Display>
   <Measurement>
-     <Type>string</Type>
+    <Type>string</Type>
   </Measurement>
 </Param>
-<Param id="421">
-  <Name>Configuration File</Name>
+<Param id="421" setter="true">
+  <Name>ConfigurationFile</Name>
   <Description>Configuration File</Description>
-  <Information>
-     <Subtext></Subtext>
-     <Includes>
-        <Include>time</Include>
-        <Include>range</Include>
-        <Include>steps</Include>
-        <Include>units</Include>
-     </Includes>
-  </Information>
   <Type>write</Type>
   <Interprete>
-     <RawType>other</RawType>
-     <LengthType>next param</LengthType>
-     <Type>string</Type>
+    <RawType>other</RawType>
+    <Type>string</Type>
+    <LengthType>next param</LengthType>
   </Interprete>
   <Display>
-     <RTDisplay>true</RTDisplay>
-     <Positions>
-        <Position>
-           <Page>General</Page>
-           <Row>7</Row>
-           <Column>0</Column>
-        </Position>
-     </Positions>
+    <RTDisplay>true</RTDisplay>
   </Display>
   <Measurement>
-     <Type>string</Type>
-     <Discreets>
-        <Discreet>
-           <Display state="disabled">N/A</Display>
-           <Value>-1</Value>
-        </Discreet>
-     </Discreets>
+    <Type>string</Type>
+    <Discreets>
+      <Discreet>
+        <Display state="disabled">N/A</Display>
+        <Value>-1</Value>
+      </Discreet>
+    </Discreets>
   </Measurement>
 </Param>
 ```

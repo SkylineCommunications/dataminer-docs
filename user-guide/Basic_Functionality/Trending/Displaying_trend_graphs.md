@@ -12,10 +12,11 @@ There are several ways to access trend information:
 
 - In a DataMiner dashboard. See [Line & area chart](xref:LineAndAreaChart).
 
-- In the Monitoring app. See [Element cards](xref:Monitoring_app_card_pane#element-cards).
+- In the Monitoring app. See [Element cards](xref:Element_Cards).
 
 - In Visual Overview. For information on how to configure this, see [Linking a shape to a trend component](xref:Linking_a_shape_to_a_trend_component).
 
 > [!NOTE]
-> - For more information on how to make sure a parameter is being trended, see [Trend templates](xref:Trend_templates).
+>
+> - For more information on how to make sure a parameter is being trended, see [Trend templates](xref:About_trend_templates).
 > - To ensure optimal performance, we advise you not to open more than 10 trend graphs simultaneously.

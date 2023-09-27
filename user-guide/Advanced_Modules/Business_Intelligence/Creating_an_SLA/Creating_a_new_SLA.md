@@ -30,9 +30,9 @@ If a Service Level Agreement (SLA) exists for a particular service, you can crea
     - *Trend template*: The template used for trending of SLA parameters.
 
     > [!NOTE]
-    > To a large extent, the SLA creation card is similar to a regular element creation card. Therefore, for more detailed information, refer to [Adding an element](xref:Adding_and_deleting_elements#adding-an-element).
+    > To a large extent, the SLA creation card is similar to a regular element creation card. Therefore, for more detailed information, refer to [Adding elements](xref:Adding_elements).
 
-3. Click *Next* and select where you wish to create the SLA.
+3. Click *Next* and select the view where you wish to create the SLA.
 
 4. Optionally, click *Next* and add properties to the SLA.
 

@@ -18,4 +18,4 @@ Use this method to retrieve the data of a particular redundancy group.
 
 | Item | Format | Description |
 |--|--|--|
-| GetRedundancyGroup­Result | [DMARedundancyGroup](xref:DMARedundancyGroup) | The data of the specified redundancy group. |
+| GetRedundancyGroupResult | [DMARedundancyGroup](xref:DMARedundancyGroup) | The data of the specified redundancy group. |

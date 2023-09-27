@@ -17,4 +17,4 @@ Use this method to request a list of all the elements that poll a specific IP ad
 
 | Item                             | Format          | Description                                              |
 |----------------------------------|-----------------|----------------------------------------------------------|
-| GetElementNameByPolling­IpResult | Array of String | The list of elements that poll the specified IP address. |
+| GetElementNameByPollingIpResult | Array of String | The list of elements that poll the specified IP address. |

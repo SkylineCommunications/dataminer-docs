@@ -4,6 +4,9 @@ uid: Placeholders_for_variables_in_shape_data_values
 
 # Placeholders for variables in shape data values
 
+> [!TIP]
+> For examples, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *Placeholders* page.
+
 ## Info keywords
 
 A number of keywords can be used in **Info** shape data fields to display information about a shape. These keywords, wrapped in square brackets, can also be used as placeholders in the value of shape data fields. For example:
@@ -140,6 +143,17 @@ Reference to a session variable (scope: current DataMiner Cube card).
 
 As parameters of which the value is an empty string are considered initialized, you can use a \[var:...\] placeholders to refer to a parameter containing an empty string.
 
+### [color:severity=...]
+
+Available from DataMiner 10.1.11/10.2.0 onwards.
+
+The alarm color for a specific severity level.
+
+For example: `[color:severity=minor]`
+
+> [!TIP]
+> See also: [Setting the background color of a static shape](xref:Setting_the_background_color_of_a_static_shape)
+
 ### \[ConnectionLineDisplayIdx\]
 
 Display key of the connection that was clicked.
@@ -173,15 +187,20 @@ End point of the connection that was clicked.
 
 Available from DataMiner 9.6.7 onwards.
 
-The current DataMiner time.
+The current DataMiner time, refreshed every second.
 
 By default, the regional date/time format will be used. To use a different format, specify the format in the placeholder. For example:
 
-```txt
-[DataMinerTime:Format=HH:mm:ss]
-```
+| Format | Description |
+|--|--|
+| `[DataMinerTime:Format=HH:mm:ss]` | Custom format. |
+| `[DataMinerTime:Format=f]` | Full date/time pattern (short time). |
+| `[DataMinerTime:Format=g]` | General date/time pattern (short time). |
+| `[DataMinerTime:Format=F]` | Full date/time pattern (long time). |
+| `[DataMinerTime:Format=G]` | General date/time pattern (long time). |
 
-The time in the placeholder is refreshed every second.
+> [!NOTE]
+> For more information on possible formats, refer to <https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings>.
 
 ### \[DestinationInterfaceElementID\]
 
@@ -460,22 +479,34 @@ In this placeholder, specify three items, separated by commas:
 | y    | The input (e.g. a session variable).              |
 | z    | The string that will replace each of the matches. |
 
-Example:
-
-In case the *sessionvar* variable contains the value “*alpha\|beta\|gamma\|delta*”, you can place the following placeholder in the value of a shape data field:
-
-```txt
-[RegexReplace:(?<token>[^|]+)((?<separator>[|])|$),[var:sessionvar],value=1005 == ${token};]
-```
-
-The placeholder will then be replaced by the following string of text:
-
-```txt
-value=1005 == alpha;value=1005 == beta;value=1005 == gamma; value=1005 == delta;
-```
-
 > [!NOTE]
-> \[RegexReplace:x,y,z\] placeholders can be nested.
+>
+> - \[RegexReplace:x,y,z\] placeholders can be nested.
+> - If any of the three input items contains a comma, the separator needs to be replaced (see [About using separator characters](xref:Linking_a_shape_to_a_SET_command#about-using-separator-characters)):
+>
+>   ```txt
+>   [RegexReplace:[Sep:,#]x#y#z]
+>   ```
+
+Examples:
+
+- In case the *sessionvar* variable contains the value “*alpha\|beta\|gamma\|delta*”, you can place the following placeholder in the value of a shape data field:
+
+  ```txt
+  [RegexReplace:(?<token>[^|]+)((?<separator>[|])|$),[var:sessionvar],value=1005 == ${token};]
+  ```
+
+  The placeholder will then be replaced by the following string of text:
+
+  ```txt
+  value=1005 == alpha;value=1005 == beta;value=1005 == gamma; value=1005 == delta;
+  ```
+
+- You can use this placeholder to remove the unit suffix of a parameter, so that it can be used within the [Sum](#sumxyz) placeholder. This is necessary if the sum uses a [param](#paramdmaidelementidparameterid) placeholder and the value of the parameter includes a unit, to make sure that value can be parsed into an integer. For example, to remove the unit "Frames" and calculate the sum of the parameter with ID 5 and a fixed value of 17, you can use this placeholder:
+
+  ```txt
+  [sum:[RegexReplace:\sFrames$,[param:*,5],],17]
+  ```
 
 ### \[Reservation:...\]
 
@@ -592,6 +623,8 @@ This syntax consists of the following components:
     > - Prior to DataMiner 10.2.6/10.3.0, the *InUse* check is only performed when the visual overview is opened or when the resource itself is changed.
     > - Using the *InUse* placeholder may affect performance in case the system contains a large number of bookings.
 
+  - **ContributingBooking**: From DataMiner 10.3.0/10.2.11 onwards, you can specify *ContributingBooking* to retrieve the contributing booking ID of a resource.
+
 ### \[ServiceDefinition:\]
 
 Full syntax: *\[ServiceDefinition:*\<ServiceDefinitionID>*,*\<Property>*\]*
@@ -683,7 +716,7 @@ Use this placeholder in a shape data item of type **Tooltip** or in shape text. 
 
 Available from DataMiner 9.5.3 onwards.
 
-Use this placeholder in a shape data item of type **Tooltip** or in shape text. The tooltip or shape text will then display one particular service definition property, in the format “\<Property name>: \<Property value>”.
+Use this placeholder in a shape data item of type **Tooltip** or in shape text. The tooltip or shape text will then display the property value of the specified service definition property.
 
 - For a top-level element shape (i.e. not an interface shape), the property has to be one of the properties of the node specified in the service definition.
 
@@ -771,7 +804,20 @@ From DataMiner 9.6.8 onwards, this placeholder can be used to calculate datetime
 
     \[Subtract:23:33:15,00:03:15\]
 
-By default, datetime and time span values will be displayed in the regional date/time format. If you want such a value to be displayed in another format, then specify the format inside the placeholder, for example: *\[Subtract:23:33:15,00:03:15\|Format=HH:mm\]*
+By default, datetime and time span values will be displayed in the regional date/time format. If you want such a value to be displayed in another format, then specify the format inside the placeholder, for example: *\[Subtract:23:33:15,00:03:15\|Format=hh\:mm\]*.
+
+> [!NOTE]
+> For more info on possible formats, refer to <https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-timespan-format-strings>.
+
+From DataMiner 10.3.8/10.4.0 onwards, the subtract placeholder also supports numerics. Just like with time spans, you can subtract consecutive numbers from the first number.
+
+- Subtracting one number from another:
+
+    \[Subtract:10,3\]
+
+- Subtracting multiple numbers from the first number:
+
+    \[Subtract:10.1,3.3, 2.6\]
 
 ### \[Sum:X,Y,Z\]
 

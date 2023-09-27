@@ -19,4 +19,4 @@ Use this method to retrieve the result of multiple tasks that were sent to the s
 
 | Item | Format | Description |
 |--|--|--|
-| GetGenericAsyncMulti­ResponseResult | Depending on the task | The result of the task that was sent to the server using the [ExecuteGenericAsyncRequest](xref:ExecuteGenericAsyncRequest) method. |
+| GetGenericAsyncMultiResponseResult | Depending on the task | The result of the task that was sent to the server using the [ExecuteGenericAsyncRequest](xref:ExecuteGenericAsyncRequest) method. |

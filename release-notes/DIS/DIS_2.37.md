@@ -22,7 +22,7 @@ DIS now partially supports the use of NuGet packages in protocols and Automation
 
 Currently, the “Publish” command will only publish the XML file, not the NuGet DLL files.
 
-#### DIS Comparer tool window: Comparison will now start automatically after selecting both proto­cols \[ID_33045\]
+#### DIS Comparer tool window: Comparison will now start automatically after selecting both protocols \[ID_33045\]
 
 Up to now, in the *DIS Comparer* tool window, you had to click the *Compare* button after selecting the two protocols you wanted to compare. From now on, the comparison will start automatically after you selected the two protocols to be compared.
 

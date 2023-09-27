@@ -6,7 +6,25 @@ uid: Configuring_external_authentication_via_an_identity_provider_using_SAML
 
 From DataMiner 9.6.11 onwards, it is possible to configure external authentication via an identity provider service using SAML (Security Assertion Markup Language).
 
-For this to be possible, a trust relationship must be established between the service provider (i.e. DataMiner) and the identity provider. This is done by exchanging SAML metadata files. The following metadata must be shared between the service provider (i.e. DataMiner) and the Identity Provider service: Entity ID, Cryptographic Keys, Protocol Endpoints (bindings, locations).
+## Requirements
+
+- DataMiner integrates with **identity providers using version 2.0 of the SAML protocol**. Compatibility with older SAML versions is not supported.
+
+- The identity provider must support **Redirect binding** for communication between the service provider and the identity provider. Most SAML identity providers support Redirect binding by default.
+
+- DataMiner uses service provider-initiated **Single Sign-On (SSO)** through Redirect binding. It does not support the use of POST or SOAP binding for requests. However, standard POST binding is used for responses.
+
+  > [!TIP]
+  > For a comprehensive understanding of the SAML process, including the encoding and encryption guidelines that DataMiner follows, refer to the official SAML Documentation: [SAML Technical Overview](http://docs.oasis-open.org/security/saml/Post2.0/sstc-saml-tech-overview-2.0-cd-02.html#5.1.2.SP-Initiated%20SSO:%20%20Redirect/POST%20Bindings|outline).
+
+## Establishing a trust relationship between the service provider and identity provider
+
+To configure external authentication via an identity provider service using SAML, a trust relationship must be established between the service provider (i.e. DataMiner) and the identity provider. This is done by exchanging SAML metadata files.
+
+The following metadata must be shared between the service provider (i.e. DataMiner) and the Identity Provider service: Entity ID, Cryptographic Keys, Protocol Endpoints (bindings, locations).
+
+> [!TIP]
+> See also: [Troubleshooting SAML issues](xref:Troubleshooting_SAML_Issues)
 
 To configure this, follow the steps below:
 
@@ -39,36 +57,55 @@ Once this has been configured, if users try to log in to the DMA using external 
 
 > [!NOTE]
 >
-> - From DataMiner 10.2.0/10.1.4 onwards, Cube uses the Chromium web browser engine to handle SAML external authentication. That engine supports a wider range of identity providers than the Internet Explorer engine that was used previously.
-> - When external authentication is enabled, it is no longer possible to log in with local accounts, except the local Administrator account.
-> - DataMiner will expect one of the claims provided by the identity provider to be the "name" claim: ``http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name``. This field must contain either the username or the email address.
-> - Prior to DataMiner 10.1.11/10.2.0, only the Administrator user can bypass the external authentication provider by entering an explicit username/password combination. In later DataMiner versions, this is also allowed for any local DataMiner user account.
-> - If there are two DataMiner users who share the same email address, both users will not be able to log in. To prevent this from happening, it is recommended to avoid using more than one method to add users. For example, do not add Windows domain users if the Azure AD users use the same email address.
+> - From DataMiner 10.2.0/10.1.4 onwards, Cube uses the **Chromium** web browser engine to handle SAML external authentication. That engine supports a wider range of identity providers than the Internet Explorer engine that was used previously.
+> - DataMiner **10.3.5** or higher is required to use external authentication for DataMiner **Low-Code Apps**.
+> - DataMiner will expect one of the claims provided by the identity provider to be the **"name" claim**: ``http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name``. This field must contain either the username or the email address.
+> - Any DataMiner Agent configured for SAML external authentication should be accessible via [**HTTPS**](xref:Setting_up_HTTPS_on_a_DMA).
+> - For **DataMiner Cube**, prior to DataMiner 10.1.11/10.2.0, only the Administrator user can bypass the external authentication provider by entering an explicit username/password combination. In later DataMiner versions, this is also allowed for any local DataMiner user account.
+> - For the **Web apps**, when external authentication is enabled, it is no longer possible to log in with local accounts. As a workaround, since you do not need to configure external authentication on every DMA of the cluster, you can log in to the web apps using external authentication on one DMA and log in using a local account on another DMA.
+
+> [!CAUTION]
+> If there are two DataMiner users who share the same email address, both users will not be able to log in. To prevent this from happening, we recommended not using more than one method to add users. For example, do not add Windows domain users if the Azure AD users use the same email address.
 
 > [!TIP]
-> See also: [Authenticating Azure AD Users on DataMiner with SAML](https://community.dataminer.services/video/authenticating-azure-ad-users-on-dataminer-with-saml/) in the Dojo video library
+> See also: [Authenticating Azure AD Users on DataMiner with SAML](https://community.dataminer.services/video/authenticating-azure-ad-users-on-dataminer-with-saml/) in the Dojo video library ![Video](~/user-guide/images/video_Duo.png)
 
-## Creating a DataMiner metadata file
+### Creating a DataMiner metadata file
 
 To create a DataMiner metadata file (also referred to as *Service Provider Metadata*), proceed as follows:
 
 1. Copy the following template into a new XML file named e.g. *spMetadata.xml*:
+
+   From DataMiner 10.3.5 onwards:
+
+   ```xml
+   <?xml version="1.0" encoding="UTF-8"?>
+   <md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" entityID="[ENTITYID]" validUntil="2050-01-04T10:00:00.000Z">
+     <md:SPSSODescriptor AuthnRequestsSigned="false" WantAssertionsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/API/" index="0" isDefault="true"/>
+     </md:SPSSODescriptor>
+   </md:EntityDescriptor>
+   ```
+
+   Older DataMiner versions:
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
    <md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" entityID="[ENTITYID]" validUntil="2050-01-04T10:00:00.000Z">
      <md:SPSSODescriptor AuthnRequestsSigned="false" WantAssertionsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/" index="0" isDefault="true"/>
-       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/login/" index="1" isDefault="false"/>
+       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/API/" index="1" isDefault="false"/>
        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/root/" index="2" isDefault="false"/>
        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/dashboard/" index="3" isDefault="false"/>
        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/monitoring/" index="4" isDefault="false"/>
        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/jobs/" index="5" isDefault="false"/>
        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/ticketing/" index="6" isDefault="false"/>
-       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="[FOR EVERY CUSTOM APP URL, ADD AN ASSERTION LIKE THE ONES ABOVE WITH AN INCREMENTED INDEX. IF YOU DO NOT HAVE CUSTOM APPS, REMOVE THIS EXAMPLE.]" index="7" isDefault="false"/>
      </md:SPSSODescriptor>
    </md:EntityDescriptor>
    ```
+
+   > [!NOTE]
+   > You can place the *spMetadata.xml* anywhere, as long as the *spMetadata* attribute for the *ExternalAuthentication* tag in *DataMiner.xml* points to the correct file. However, we recommend placing it in the `C:\Skyline DataMiner` folder.
 
 1. Replace \[ENTITYID\] with the unique service provider ID that is assigned to DataMiner when you register it with the identity provider.
 
@@ -79,8 +116,43 @@ To create a DataMiner metadata file (also referred to as *Service Provider Metad
    The way you configure this will depend on the identity provider you are using. See [Identity providers](#identity-providers).
 
 > [!NOTE]
-> The ``WantAssertionsSigned`` flag is supported as from DataMiner version 10.2.1/10.2.0. If you are using an older version, then set this to false.
-> SAML responses without signatures can be freely edited to tamper with permissions on the application, leading to severe vulnerabilites. We **highly recommend** setting ``WantAssertionsSigned`` to *true* to mitigate this.
+> The ``WantAssertionsSigned`` flag is supported as from DataMiner version 10.2.1/10.2.0. If you are using an older version, then set this to false. SAML responses without signatures can be freely edited to tamper with permissions on the application, leading to severe vulnerabilities. We **highly recommend** setting ``WantAssertionsSigned`` to *true* to mitigate this.
+
+> [!IMPORTANT]
+> From DataMiner 10.3.4/10.4.0 onwards, ``WantAssertionsSigned`` **must** be set to *true*.
+
+### Additional configuration for systems connected to dataminer.services
+
+When your DataMiner System is connected to dataminer.services, the following additional configuration is required for both the *spMetadata.xml* file and the identity provider:
+
+1. Specify the following URLs, replacing `<dms-dns-name>` with the DNS name in the *spMetadata.xml* file and `<organization-name>` with the name of the organization:
+
+   - `https://<dms-dns-name>-<organization-name>.on.dataminer.services/API/`
+   - `https://<dms-dns-name>-<organization-name>.on.dataminer.services/account-linking`
+   - `https://<dms-dns-name>-<organization-name>.on.dataminer.services/account-linking/`
+
+   > [!NOTE]
+   > Note the trailing "/".
+
+   Example of remote access URL: <https://dataminer-skyline.on.dataminer.services>
+
+   In this example, the DMS DNS name is "dataminer" and the organization name is "skyline".
+
+1. Extend the *spMetadata.xml* file with the following code:
+
+   ```xml
+   <?xml version="1.0" encoding="UTF-8"?>
+   <md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" entityID="[ENTITYID]" validUntil="2050-01-04T10:00:00.000Z">
+    <md:SPSSODescriptor AuthnRequestsSigned="false" WantAssertionsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+      ...
+      <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer-skyline.on.dataminer.services/API/" index="1" isDefault="true"/>
+      <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer-skyline.on.dataminer.services/account-linking" index="2" isDefault="false"/>
+      <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer-skyline.on.dataminer.services/account-linking/" index="3" isDefault="false"/>
+    </md:SPSSODescriptor>
+   </md:EntityDescriptor>
+    ```
+
+1. Update your provider settings. See [Identity providers](#identity-providers).
 
 ## Identity providers
 
@@ -96,7 +168,10 @@ DataMiner supports Azure AD as identity provider as from version 10.1.5. Azure A
 
 #### Setting up an Azure AD Enterprise application
 
-As from DataMiner 10.2.0/10.2.1, it is recommended to create Enterprise Applications in Azure AD when setting up external authentication. When you create regular App registrations, certain features will not be available.
+From DataMiner 10.3.4/10.4.0 onwards, you must create an Enterprise Application in Azure AD when setting up external authentication. In earlier DataMiner versions from DataMiner 10.2.0/10.2.1 onwards, creating an Enterprise Application is highly recommended, as otherwise not all features will be available.
+
+> [!NOTE]
+> Only a Global Administrator, Application Administrator, Cloud Application Administrator, and Application Developer have the necessary permissions to create Enterprise applications.
 
 1. In Azure AD, register DataMiner as an Enterprise Application:
 
@@ -118,20 +193,27 @@ As from DataMiner 10.2.0/10.2.1, it is recommended to create Enterprise Applicat
 
    - Set *Entity ID* to the IP address or DNS name specified in the *spMetadata.xml* file, for example ``https://dataminer.example.com/``.
 
-   - Under *Reply URL*, specify the following URLs, replacing ``dataminer.example.com`` with the IP address or DNS name in the *spMetadata.xml* file (note the trailing "/"):
+   - Under *Reply URL*, specify the following URL(s), replacing ``dataminer.example.com`` with the IP address or DNS name in the *spMetadata.xml* file (note the trailing "/"):
+
+     From DataMiner 10.3.5 onwards:
+
+     - ``https://dataminer.example.com/API/``
+
+     Older DataMiner versions:
 
      - ``https://dataminer.example.com/root/``
      - ``https://dataminer.example.com/ticketing/``
      - ``https://dataminer.example.com/jobs/``
      - ``https://dataminer.example.com/monitoring/``
      - ``https://dataminer.example.com/dashboard/``
-     - ``https://dataminer.example.com/login/``
+     - ``https://dataminer.example.com/API/``
      - ``https://dataminer.example.com/``
 
    - Set *Sign on URL* to the IP address or DNS name specified in the *spMetadata.xml* file, for example ``https://dataminer.example.com/``.
 
    > [!TIP]
-   > See also: [Creating a DataMiner metadata file](#creating-a-dataminer-metadata-file)
+   > - See also: [Creating a DataMiner metadata file](#creating-a-dataminer-metadata-file)  
+   > - See also: [Additional configuration for systems connected to dataminerservices](#additional-configuration-for-systems-connected-to-dataminerservices) 
 
 #### Retrieving the identity provider's metadata file on Azure AD
 
@@ -147,10 +229,20 @@ Once you have established a trust relationship between DataMiner (i.e. the servi
 
      Creating an Enterprise Application will also create an app registration with the same name, but you will not find it under *owned application*.
 
+     > [!IMPORTANT]
+     > Do not use the *Object ID* under *Azure Active Directory > Enterprise applications > [your application name]*. This is a different Object ID, which will not work.
+
+     > [!NOTE]
+     > From DataMiner 10.3.11/10.4.0 onwards<!-- RN 37162 -->, the **Object ID** is optional.
+
    - **Client Secret**: In the pane on the left, click *Certificates & secrets*.
 
      1. In the *Client secrets* section, click *New client secret*.
      1. Enter a description and an expiration date for the application secret.
+     1. Copy the secret value for later on.
+
+        > [!IMPORTANT]
+        > Once you leave this page, you will no longer be able to access the secret value.
 
    - **Username** and **Password**: The Azure AD user account that DataMiner will use to request data from Azure AD. Technically this can be any account, but we recommend that you create an account that will be use exclusively for this purpose. Note that, depending on the method of querying, specifying this account can be optional from DataMiner 10.1.11/10.2.0 onwards (see note below).
 
@@ -176,6 +268,9 @@ Once you have established a trust relationship between DataMiner (i.e. the servi
       > From DataMiner 10.1.11/10.2.0 onwards, DataMiner supports Azure AD application querying. If this is used instead of delegated querying, an authentication secret will suffice and no username and password will need to be specified here.
 
    1. Save the file and restart DataMiner.
+
+   > [!NOTE]
+   > As the client secret and password are sensitive data, after DataMiner has been restarted, this information is encrypted and replaced with a GUID in the *clientSecret* and *password* attributes of the *DataMiner.xml* file.
 
 1. On the application (DataMiner) root page, click *API Permissions* in the pane on the left and make sure the necessary permissions are enabled:
 
@@ -210,7 +305,7 @@ From DataMiner 10.2.0/10.1.12 onwards, users authenticated by Azure AD using SAM
    > [!NOTE]
    > If you add a group claim, the account name of the group will only be sent via SAML when the groups are synchronized. Otherwise, the ID of the group will be sent instead.
 
-1. In DataMiner Cube, add the groups corresponding with the groups you added in Azure AD.
+1. In DataMiner Cube, add the groups corresponding with the groups you added in Azure AD. See [Adding a user group](xref:Adding_a_user_group).
 
 1. Stop DataMiner.
 
@@ -238,15 +333,19 @@ From DataMiner 10.2.0/10.1.12 onwards, users authenticated by Azure AD using SAM
    ```
 
    > [!NOTE]
-   > If you set the *claims* attribute of the *Groups* element to "false", no claims will be used to add users to groups. In this case:
    >
-   > - The name of the group as specified in Cube will be used instead.
-   > - It will only be possible to add a user to a single group.
-   > - The user information that is created will not be updated.
+   > - User groups have to exist in DataMiner both for *Groups* claims set to true and to false. Make sure all the necessary groups have been added earlier, so that it will be possible to add users to them.
+   > - If you set the *claims* attribute of the *Groups* element to "false", no claims will be used to add users to groups. In this case:
+   >   - Instead of a claim for user groups, replace `[group claim name]` with a security group that exists in DataMiner as described above.
+   >   - It will only be possible to add a user to a single group.
+   >   - The user information that is created will not be updated.
 
 1. Save the *DataMiner.xml* file.
 
 1. Restart the DataMiner Agent.
+
+> [!NOTE]
+> If your default username is not in email format or if DataMiner is unable to locate it, configure the *\<PreferredEmailClaim>* tag to ensure it points to the correct email address.
 
 ### Azure B2C
 
@@ -264,11 +363,16 @@ DataMiner supports Azure B2C as identity provider from version 10.2.6/10.3.0 onw
 1. Configure DataMiner to automatically create users from Azure B2C. You can do this in the same way as for [Azure AD](#configuring-automatic-creation-of-users-authenticated-by-azure-ad-using-saml). For the ipMetadata link, use the link created in the previous step.
 
    > [!NOTE]
-   > To create SAML users in DataMiner using Azure B2C, a domain is required in the usernames. For this reason, email addresses must be used as the usernames. If the default username of the identity provider is not a valid email address, add a \<PreferredLoginClaim> element in *DataMiner.xml* that refers to a claim containing a valid email address.
+   > To create SAML users in DataMiner using Azure B2C, a domain is required in the usernames. For this reason, email addresses must be used as the usernames. If the default username of the identity provider is not a valid email address, add a \<PreferredLoginClaim> element to the \<AutomaticUserCreation> element in *DataMiner.xml* that refers to a claim containing a valid email address.
 
 ### Okta
 
 DataMiner supports Okta as identity provider as from version 10.1.11. Use Okta's App Integration Wizard to create a new app integration and connect Okta with DataMiner.
+
+> [!IMPORTANT]
+>
+> - Prior to DataMiner 10.3.0/10.3.2, it may not be possible to log in using Okta because of a software issue. We strongly recommend that you upgrade to DataMiner 10.3.0 or 10.3.2 to use this feature.
+> - When Okta is used, automatic user creation must be enabled. It is currently not possible to import users and groups from Okta. Alternatively, you can add local or domain users. See [User directories](xref:User_management#user-directories) and [Local users](xref:User_management#local-users). After that, you can have Okta authenticate these users by following the guide below, except that you omit the *AutomaticUserCreation* tag in *DataMiner.xml*.
 
 1. Launch the App Integration Wizard
 
@@ -300,13 +404,24 @@ DataMiner supports Okta as identity provider as from version 10.1.11. Use Okta's
        - *Use this for Recipient URL and Destination URL*
        - *Allow this app to request other SSO URLs*
 
-     - Enter the following additional URLs:
+     - Open *Show Advanced Settings* and enter the following additional URLs to *Other Requestable SSO URLs*:
 
-       - ``https://dataminer.example.com/login/``
+       From DataMiner 10.3.5 onwards:
+       - ``https://dataminer.example.com/API/``
+
+       Older DataMiner versions:
+       - ``https://dataminer.example.com/root/``
+       - ``https://dataminer.example.com/API/``
        - ``https://dataminer.example.com/dashboard/``
        - ``https://dataminer.example.com/monitoring/``
        - ``https://dataminer.example.com/jobs/``
        - ``https://dataminer.example.com/ticketing/``
+
+       > [!NOTE]
+       > The indexes here should be the same as the indexes in `C:\Skyline DataMiner\okta-sp-metadata.xml`, which we will create in a further step.
+
+       > [!TIP]
+       > See also: [Additional configuration for systems connected to dataminer.services](#additional-configuration-for-systems-connected-to-dataminerservices)
 
    - **Audience URI (SP Entity ID)**: The intended audience of the SAML assertion.
 
@@ -319,62 +434,94 @@ DataMiner supports Okta as identity provider as from version 10.1.11. Use Okta's
    - **Application username**: The default value to use for the username with the application.
 
      Select "Email".
-     
-   - **Attribute Statements**: Add a new attribute statement with name *Email* (case-sensitive), format *Basic*, and value *user.email*.
+
+   - **Attribute Statements**: Add the following attribute statements, all with "Basic" format:
+
+      - name "Email", value "user.email"
+      - name "Firstname", value "user.firstName"
+      - name "Lastname", value "user.lastName"
+
+   - **When using group claims:**
+
+      - Create groups in DataMiner with the exact same names as in Okta (this is case-sensitive). See [Adding a user group](xref:Adding_a_user_group).
+      - Add a group attribute statement.
+      - Use the name "userGroups", and "Basic" format.
+      - Under *Filter*, select the type of filter you want, and then add a statement that will match the groups you want to send for that user.
+
+      > [!Note]
+      >
+      > - The name fields can be anything you want, but we recommend giving them a name that clearly reflects the claim they refer to. All of these are case-sensitive.
+      > - Make sure that what you put under "name" for each claim matches exactly with the claim names in *DataMiner.xml*.
+
+1. Stop DataMiner.
+
+1. Go to the *C:\\Skyline DataMiner* folder and open the *DataMiner.xml* file.
+
+1. In the *DataMiner.xml* file, configure the *\<ExternalAuthentication>* tag as illustrated in the example below:
+
+   ```xml
+   <DataMiner ...>
+     ...
+     <ExternalAuthentication
+       type="SAML"
+       ipMetadata="[Path/URL of the identity provider’s metadata file]"
+       spMetadata="[Path/URL of the service provider’s metadata file]"
+       timeout="300">
+       <AutomaticUserCreation enabled="true">
+         <EmailClaim>[email claim name]</EmailClaim>
+         <Givenname>[firstname claim name]</Givenname>
+         <Surname>[lastname claim name]</Surname>
+         <Groups claims="true">[group claim name]</Groups>
+       </AutomaticUserCreation>
+     </ExternalAuthentication>
+     ...
+   </DataMiner>
+   ```
+
+   > [!NOTE]
+   >
+   > - The claim name refers to the attribute statement names that were added in Okta.
+   > - User groups have to exist in DataMiner both for *Groups* claims set to true and to false. Make sure all the necessary groups have been added earlier, so that it will be possible to add users to them.
+   > - If you set the *claims* attribute of the *Groups* element to "false", no claims will be used to add users to groups. In this case:
+   >   - Instead of a claim for user groups, replace `[group claim name]` with a security group that exists in DataMiner as described above.
+   >   - It will only be possible to add a user to a single group.
+   >   - The user information that is created will not be updated.
+
+1. Save the *DataMiner.xml* file.
 
 1. Open the *Sign On* tab of your Okta application and scroll down to *SAML Signing Certificates*.
 
 1. In the *Actions* column of the *Active* certificate, click *View IdP metadata*.
 
-1. Save this IdP metadata XML file to the DataMiner Agent, e.g. `C:\Skyline DataMiner\okta-ip-metadata.xml`.
+1. Save this identity provider’s metadata XML file to the DataMiner Agent, e.g. `C:\Skyline DataMiner\okta-ip-metadata.xml`.
 
-1. Open the *DataMiner.xml* file and fill in the path to the IdP metadata file in the *ipMetadata* attribute of the *&lt;ExternalAuthentication&gt;* node.
+1. Copy the following template to a new XML file named e.g. `C:\Skyline DataMiner\okta-sp-metadata.xml` to create the service provider’s metadata file. You can find the EntityID in the previously created file `C:\Skyline DataMiner\okta-ip-metadata.xml`.
 
-## Error messages
+   From DataMiner 10.3.5 onwards:
 
-### General errors
+   ```xml
+   <?xml version="1.0" encoding="UTF-8"?>
+   <md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" entityID="[ENTITYID]" validUntil="2050-01-04T10:00:00.000Z">
+     <md:SPSSODescriptor AuthnRequestsSigned="false" WantAssertionsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/API/" index="0" isDefault="false"/>
+     </md:SPSSODescriptor>
+   </md:EntityDescriptor>
+   ```
 
-Object reference not set to an instance of an object.
+   Older DataMiner versions:
 
-- Application: Cube
-- Cause: Incorrect or unexpected data in *spMetadata.xml*.
+   ```xml
+   <?xml version="1.0" encoding="UTF-8"?>
+   <md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" entityID="[ENTITYID]" validUntil="2050-01-04T10:00:00.000Z">
+     <md:SPSSODescriptor AuthnRequestsSigned="false" WantAssertionsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/API/" index="0" isDefault="false"/>
+       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/root/" index="1" isDefault="false"/>
+       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/dashboard/" index="2" isDefault="false"/>
+       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/monitoring/" index="3" isDefault="false"/>
+       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/jobs/" index="4" isDefault="false"/>
+       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/ticketing/" index="5" isDefault="false"/>
+     </md:SPSSODescriptor>
+   </md:EntityDescriptor>
+   ```
 
-Cannot connect to the DMA; exception trapped: Failed getting the user info (empty response).
-
-- Application: Web apps
-- Cause: Incorrect or unexpected data in *spMetadata.xml*.
-
-Expected one and only one default assertion consumer service endpoint.
-
-- Application: Web apps
-- Cause: In *spMetadata.xml*, none of the Assertion Consumer Service URLs are marked as the default URL. Typically, the /root URL is marked as the default URL.
-
-Assertion consumer service \<URL> was not found.
-
-- Application: Web apps
-- Cause: The Assertion Consumer Service URL is spelled incorrectly or cannot be found in *spMetadata.xml*.
-
-### Azure AD errors
-
-AADSTS50011: The reply URL specified in the request does not match the reply URLs configured for the application: '\<ID>'.
-
-- Application: Cube
-- Cause: The URL marked as default URL is either missing or spelled differently in the app registration form.
-
-AADSTS50011: The reply URL specified in the request does not match the reply URLs configured for the application: '\<ID>'.
-
-- Application: Web apps
-- Cause: The reply URL of a specific web app is either missing or spelled differently in the app registration form.
-
-AADSTS500113: No reply address is registered for the application.
-
-- Application: Web apps
-- Cause: No reply URL is specified in the app registration form.
-
-AADSTS650056: Misconfigured application. This could be due to one of the following: the client has not listed any permissions for 'AAD Graph' in the requested permissions in the client's application registration. Or, the admin has not consented in the tenant. Or, check the application identifier in the request to ensure it matches the configured client application identifier. Or, check the certificate in the request to ensure it's valid. Please contact your admin to fix the configuration or consent on behalf of the tenant. Client app ID: \<ID>.
-
-- Cause: The required API permissions are missing in the app registration form.
-
-AADSTS700016: Application with identifier '\<ID>' was not found in the directory '\<ID>'. This can happen if the application has not been installed by the administrator of the tenant or consented to by any user in the tenant. You may have sent your authentication request to the wrong tenant.
-
-- Cause: Entity ID incorrect or not found.
+1. Restart DataMiner.

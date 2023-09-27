@@ -18,4 +18,4 @@ Use this method to retrieve all the pages for a specified protocol.
 
 | Item | Format | Description |
 |--|--|--|
-| GetPagesForProtocol­Result | Array of [DMAProtocolPage](xref:DMAProtocolPage) | The pages of the specified protocol. |
+| GetPagesForProtocolResult | Array of [DMAProtocolPage](xref:DMAProtocolPage) | The pages of the specified protocol. |

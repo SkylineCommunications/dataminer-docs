@@ -21,4 +21,4 @@ Use this method to retrieve a specific number of pages for a specified protocol.
 
 | Item | Format | Description |
 |--|--|--|
-| GetPagesForProtocol­SortedResult | Array of [DMAProtocolPage](xref:DMAProtocolPage) | The pages of the specified protocol, sorted as requested. |
+| GetPagesForProtocolSortedResult | Array of [DMAProtocolPage](xref:DMAProtocolPage) | The pages of the specified protocol, sorted as requested. |

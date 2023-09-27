@@ -20,4 +20,4 @@ Use this method to retrieve all bookings that make use of the specified service.
 
 | Item | Format | Description |
 |--|--|--|
-| GetBookingsForService­Result | Array of [DMABooking](xref:DMABooking) | The bookings using the specified service. |
+| GetBookingsForServiceResult | Array of [DMABooking](xref:DMABooking) | The bookings using the specified service. |

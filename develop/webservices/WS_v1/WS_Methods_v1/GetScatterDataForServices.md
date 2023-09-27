@@ -26,4 +26,4 @@ Use this method to retrieve the data to create a scatter chart for an array of s
 
 | Item | Format | Description |
 |--|--|--|
-| GetScatterDataForSer­vicesResult | Array of XValues, YValues and Labels | The values for the X- and Y-axis of the scatter chart and the corresponding labels |
+| GetScatterDataForServicesResult | Array of XValues, YValues and Labels | The values for the X- and Y-axis of the scatter chart and the corresponding labels |

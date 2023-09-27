@@ -17,4 +17,4 @@ Use this method to retrieve alarm page details, including limited alarms. This m
 
 | Item | Format | Description |
 |--|--|--|
-| GetAlarmPageWith­AlarmsResult | Array of [DMAAlarm](xref:DMAAlarm) | The alarms matching the filter on the page |
+| GetAlarmPageWithAlarmsResult | Array of [DMAAlarm](xref:DMAAlarm) | The alarms matching the filter on the page |

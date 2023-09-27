@@ -18,4 +18,4 @@ Use this method to retrieve all available parameters for a particular spectrum e
 
 | Item | Format | Description |
 |--|--|--|
-| GetSpectrumPara­metersResult | Array of [DMAParameterEdit](xref:DMAParameterEdit) | The properties of the parameters for the specified spectrum element. |
+| GetSpectrumParametersResult | Array of [DMAParameterEdit](xref:DMAParameterEdit) | The properties of the parameters for the specified spectrum element. |

@@ -19,4 +19,4 @@ Use this method to retrieve information about measurement points (available from
 
 | Item | Format | Description |
 |--|--|--|
-| GetMeasurement­PointsResult | Array of [DMASpectrumMeasptModel](xref:DMASpectrumMeasptModel) | An array containing information on each measurement point. |
+| GetMeasurementPointsResult | Array of [DMASpectrumMeasptModel](xref:DMASpectrumMeasptModel) | An array containing information on each measurement point. |

@@ -8,7 +8,7 @@ To view the existing dashboards and dashboard containers in a DMS:
 
 1. In DataMiner Cube, go to *Apps* > *Reports & Dashboards*.
 
-2. In the column on the left, click *Dashboards*.
+1. In the column on the left, click *Dashboards*.
 
 A list of the existing dashboards and dashboard containers will be displayed, in which several actions are possible:
 

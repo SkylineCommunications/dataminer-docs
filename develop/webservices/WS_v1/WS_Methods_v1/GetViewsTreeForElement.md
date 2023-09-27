@@ -16,6 +16,6 @@ Use this method to retrieve the view hierarchy of a particular element.
 
 ## Output
 
-| Item                          | Format                                                                | Description                                  |
-|-------------------------------|-----------------------------------------------------------------------|----------------------------------------------|
-| GetViewsTreeFor­ElementResult | Array of [DMAView](xref:DMAView) | The view hierarchy of the specified element. |
+| Item | Format | Description |
+|--|--|--|
+| GetViewsTreeForElementResult | Array of [DMAView](xref:DMAView) | The view hierarchy of the specified element. |

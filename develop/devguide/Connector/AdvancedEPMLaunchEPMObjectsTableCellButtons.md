@@ -48,3 +48,19 @@ Starting from DataMiner 10.2.6 (RN 33295), if the SystemName contains colons (e.
 ```xml
 <Value type="open">{EPM=[sep::|]CPE/'00:01:08:01:08:01|DATA|CPE Frequencies}</Value>
 ```
+
+From DataMiner 10.2.9 onwards (RN 33857), you can specify a second custom separator to also replace the existing separator inside the SystemType and/or SystemName. Since the default separator between the SystemType and the SystemName is "/", this would mean that neither the systemType nor the SystemName would be allowed to contain that character ("/").
+
+In the following example, a second [sep:XY] is used to replace the "/" inside the SystemType ("CPE/CPE") with another character ("$").
+
+```xml
+<Value type="open">{EPM=[sep::|][sep:/$]CPE/CPE$00:01:08:01:08:01|DATA|CPE Frequencies}</Value>
+```
+
+In short,
+
+- the first `[sep:XY]` will replace the separator between the arguments, and
+- the second `[sep:XY]` will replace the separator inside the SystemType and/or SystemName.
+
+> [!NOTE]
+> If you want to replace the separator inside the name, you must specify both the first `[sep:XY]` and the second `[sep:XY]`, even if there are no arguments.

@@ -77,6 +77,27 @@ For example, suppose you need to connect to ws://10.4.2.8:4601/x-nmos/events, th
 
 When the WebSocket server closes the connection for some reason, the element goes into timeout. Sent commands will still appear in the Stream Viewer, but no outgoing communication will be displayed. To have communication again, the element needs to be restarted or you need to use a "dynamic ip" parameter and fill in the value again.
 
+## Timeout
+
+When the WebSocket connection is terminated, the element will enter into timeout according to the timeout time configured in the element editor.
+
+These are possible reasons why the connection might be terminated:
+
+- Normal closure: The WebSocket connection is closed gracefully and as expected by both the client and server.
+
+- Abnormal closure: The WebSocket connection is closed unexpectedly, because of an error or exception. This can be caused by issues such as network connectivity problems, server crashes, or protocol violations.
+
+- Endpoint shutdown: The endpoint (client or server) that initiated the WebSocket connection has shut down, which may be due to a process termination or system reboot.
+
+- Ping timeout: The WebSocket connection has timed out because of a lack of activity. This can occur if the client or server does not receive a ping or pong message within a specified time frame.
+
+- Policy violation: The WebSocket connection is closed by the server because of a violation of security policies, such as a cross-site scripting attack or unauthorized access attempt.
+
+- Network error: The WebSocket connection is closed because of a network error, such as a dropped packet or a network partition. Note that if the TCP retransmission time exceeds the WebSocket timeout time, depending on the implementation, the WebSocket might be closed, since there is no activity for a period greater than the configured WebSocket timeout time.
+
+> [!NOTE]
+> The timeout behavior of the element may vary depending on other connections configured on protocol level.
+
 ## Binary vs. Text Data Frames
 
 By default, DataMiner sends the WebSocket messages as binary data (i.e. a frame with Opcode 0x2, [RFC 6455](https://datatracker.ietf.org/doc/html/rfc6455#section-11.8)). Some WebSocket servers will reply with an \[ACK\] packet but ignore the message as the server does not support binary formatted messages.
@@ -106,4 +127,3 @@ for (int i = 0; i < response.Length; i++)
 string data = System.Text.Encoding.UTF8.GetString(response);
 processData(data);
 ```
-

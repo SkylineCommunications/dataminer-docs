@@ -17,4 +17,4 @@ Use this method to duplicate a jobs domain. Available from DataMiner 10.0.10 onw
 
 | Item                       | Format | Description                   |
 |----------------------------|--------|-------------------------------|
-| DuplicateJobsDomain­Result | String | The ID of the new job domain. |
+| DuplicateJobsDomainResult | String | The ID of the new job domain. |

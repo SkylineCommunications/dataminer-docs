@@ -14,11 +14,11 @@ If you do not use the Taskbar Utility to restore a DMA, there are two ways you c
 
 1. If it is not running yet, start the MySQL service.
 
-2. In the *C:\\Skyline DataMiner\\Backup\\* directory, double-click the following two files:
+1. Navigate to the *C:\\Skyline DataMiner\\Backup\\* directory:
 
-    - {5B8F34AF-1656-4c02-94EE-CF028054602D}.bat
+   - To perform a full database restore, double-click `{5B8F34AF-1656-4c02-94EE-CF028054602D}.bat`.
 
-    - {ELEMENTDATA-1656-4c02-94EE-CF028054602D}.bat
+   - To restore only the element configuration data (if the backup was saved with the *Configuration backup* setting), double-click `{ELEMENTDATA-1656-4c02-94EE-CF028054602D}.bat`.
 
 The restore operation, displayed in a command window, can take up to several hours depending on the size of the database dump and depending on the performance of the hard disks. Unfortunately, there is no progress indication, but it is possible to watch the growth rate of the *SLDMADB* directory. The ultimate size of that directory will be about the same as the size of the dump file located next to the batch file you double-clicked.
 

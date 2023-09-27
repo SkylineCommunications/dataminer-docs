@@ -23,7 +23,7 @@ Use this method to retrieve only active alarms added or changed since a particul
 
 | Item | Format | Description |
 |--|--|--|
-| GetActiveAlarms­CachedResult | [DMACache](xref:DMACache) | The active alarms added or changed since the specified point in time. |
+| GetActiveAlarmsCachedResult | [DMACache](xref:DMACache) | The active alarms added or changed since the specified point in time. |
 
 > [!NOTE]
 > In this case, the [DMACache](xref:DMACache) object will contain an array of [DMAAlarm](xref:DMAAlarm) objects.

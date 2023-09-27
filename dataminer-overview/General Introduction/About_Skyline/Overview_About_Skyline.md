@@ -4,7 +4,7 @@ uid: Overview_About_Skyline
 
 # About Skyline Communications
 
-Skyline Communications is the global leading supplier of end-to-end multi-vendor NMS, OSS and orchestration software solutions for the broadband and media industry. Its flagship DataMiner network management platform enables end-to-end integration of the most complex technical ecosystems and has been deployed by leading operators around the world. The platform heralds a new generation of sophisticated artificial-intelligence-powered solutions and comprises highly innovative features, such as the brand-new DataMiner Augmented Operation concept. The company has offices in Belgium, Portugal, Singapore and the US, a permanent presence in Brazil, Colombia, France, Germany, India, Indonesia, Malaysia, Mexico, Philippines, Russia, and the UK, and a vast network of local partners around the world.
+Skyline Communications is the global leading supplier of end-to-end multi-vendor NMS, OSS and orchestration software solutions for the broadband and media industry. Its flagship DataMiner network management platform enables end-to-end integration of the most complex technical ecosystems and has been deployed by leading operators around the world. The platform heralds a new generation of sophisticated artificial-intelligence-powered solutions and comprises highly innovative features, such as the brand-new DataMiner Augmented Operation concept. The company has offices in Belgium, Portugal, Singapore, the US, and Bosnia and Herzegovina, a permanent presence in Australia, Brazil, China, Colombia, France, Germany, Indonesia, Malaysia, Mexico, the UAE, and the UK, and a vast network of local partners around the world.
 
 > **Mission statement**
 >

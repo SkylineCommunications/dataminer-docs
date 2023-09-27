@@ -17,4 +17,4 @@ Use this method to retrieve all domains that a specific section definition is li
 
 | Item                         | Format          | Description                                                                      |
 |------------------------------|-----------------|----------------------------------------------------------------------------------|
-| GetAffectedJobDo­mainsResult | Array of string | The names of the job domains that the specified section definition is linked to. |
+| GetAffectedJobDomainsResult | Array of string | The names of the job domains that the specified section definition is linked to. |

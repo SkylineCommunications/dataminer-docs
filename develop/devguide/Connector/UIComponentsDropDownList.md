@@ -14,80 +14,77 @@ To define a drop-down list, create a parameter of type "write", set type to "dis
 <Param id="3105">
   <Name>ethernetLinkMgmtSpeed</Name>
   <Description>Link Speed</Description>
-  <Information>
-     <Subtext>Configure the speed during auto-negotiation.</Subtext>
-     <Includes>
-        <Include>time</Include>
-        <Include>range</Include>
-        <Include>steps</Include>
-        <Include>units</Include>
-     </Includes>
-  </Information>
   <Type>read</Type>
   <Interprete>
-     <RawType>numeric text</RawType>
-     <LengthType>next param</LengthType>
-     <Type>double</Type>
+    <RawType>numeric text</RawType>
+    <Type>double</Type>
+    <LengthType>next param</LengthType>
   </Interprete>
+  <Display>
+    <RTDisplay>true</RTDisplay>
+  </Display>
   <Measurement>
-     <Type>discreet</Type>
-     <Discreets>
-        <Discreet>
-           <Display>All</Display>
-           <Value>0</Value>
-        </Discreet>
-        <Discreet>
-           <Display>10 Bt Half Duplex</Display>
-           <Value>1</Value>
-        </Discreet>
-        <Discreet>
-           <Display>10 Bt Full Duplex</Display>
-           <Value>2</Value>
-        </Discreet>
-        <Discreet>
-           <Display>100 Bt Half Duplex</Display>
-           <Value>3</Value>
-        </Discreet>
-        <Discreet>
-           <Display>100 Bt Full Duplex</Display>
-           <Value>4</Value>
-        </Discreet>
-     </Discreets>
+    <Type>discreet</Type>
+    <Discreets>
+      <Discreet>
+        <Display>All</Display>
+        <Value>0</Value>
+      </Discreet>
+      <Discreet>
+        <Display>10 Bt Half Duplex</Display>
+        <Value>1</Value>
+      </Discreet>
+      <Discreet>
+        <Display>10 Bt Full Duplex</Display>
+        <Value>2</Value>
+      </Discreet>
+      <Discreet>
+        <Display>100 Bt Half Duplex</Display>
+        <Value>3</Value>
+      </Discreet>
+      <Discreet>
+        <Display>100 Bt Full Duplex</Display>
+        <Value>4</Value>
+      </Discreet>
+    </Discreets>
   </Measurement>
 </Param>
-<Param id="3135">
+<Param id="3135" setter="true">
   <Name>ethernetLinkMgmtSpeed</Name>
   <Description>Link Speed</Description>
   <Type>write</Type>
   <Interprete>
-     <RawType>numeric text</RawType>
-     <LengthType>next param</LengthType>
-     <Type>double</Type>
+    <RawType>numeric text</RawType>
+    <Type>double</Type>
+    <LengthType>next param</LengthType>
   </Interprete>
+  <Display>
+    <RTDisplay>true</RTDisplay>
+  </Display>
   <Measurement>
-     <Type>discreet</Type>
-     <Discreets>
-        <Discreet>
-           <Display>All</Display>
-           <Value>0</Value>
-        </Discreet>
-        <Discreet>
-           <Display>10 Bt Half Duplex</Display>
-           <Value>1</Value>
-        </Discreet>
-        <Discreet>
-           <Display>10 Bt Full Duplex</Display>
-           <Value>2</Value>
-        </Discreet>
-        <Discreet>
-           <Display>100 Bt Half Duplex</Display>
-           <Value>3</Value>
-        </Discreet>
-        <Discreet>
-           <Display>100 Bt Full Duplex</Display>
-           <Value>4</Value>
-        </Discreet>
-     </Discreets>
+    <Type>discreet</Type>
+    <Discreets>
+      <Discreet>
+        <Display>All</Display>
+        <Value>0</Value>
+      </Discreet>
+      <Discreet>
+        <Display>10 Bt Half Duplex</Display>
+        <Value>1</Value>
+      </Discreet>
+      <Discreet>
+        <Display>10 Bt Full Duplex</Display>
+        <Value>2</Value>
+      </Discreet>
+      <Discreet>
+        <Display>100 Bt Half Duplex</Display>
+        <Value>3</Value>
+      </Discreet>
+      <Discreet>
+        <Display>100 Bt Full Duplex</Display>
+        <Value>4</Value>
+      </Discreet>
+    </Discreets>
   </Measurement>
 </Param>
 ```
@@ -96,99 +93,73 @@ To define a drop-down list, create a parameter of type "write", set type to "dis
 
 ## Creating a drop-down list with a check box
 
-When you add a drop-down list, it is possible to show a check box for one entry by using the state attribute and setting its value to false. Note that the corresponding read parameter should interpret this as an exceptional value.
+When you add a drop-down list, it is possible to show a check box for one entry by using the state attribute and setting its value to disabled. Note that the corresponding read parameter should interpret this as an exceptional value.
 
 ```xml
 <Param id="1032">
   <Name>OutputFormat</Name>
   <Description>Output Format</Description>
   <Type>read</Type>
-  <Information>
-     <Subtext>Output Format</Subtext>
-     <Includes>
-        <Include>time</Include>
-        <Include>range</Include>
-        <Include>steps</Include>
-        <Include>units</Include>
-     </Includes>
-  </Information>
   <Interprete>
-     <RawType>signed number</RawType>
-     <LengthType>next param</LengthType>
-     <Type>double</Type>
-     <Exceptions>
-        <Exception id="1" value="0">
-           <Display state="disabled">Disabled</Display>
-           <Value>0</Value>
-        </Exception>
-     </Exceptions>
+    <RawType>signed number</RawType>
+    <Type>double</Type>
+    <LengthType>next param</LengthType>
+    <Exceptions>
+      <Exception id="1" value="0">
+        <Display state="disabled">Disabled</Display>
+        <Value>0</Value>
+      </Exception>
+    </Exceptions>
   </Interprete>
   <Display>
-     <RTDisplay>true</RTDisplay>
-     <Positions>
-        <Position>
-           <Page>General</Page>
-           <Row>16</Row>
-           <Column>1</Column>
-        </Position>
-     </Positions>
+    <RTDisplay>true</RTDisplay>
   </Display>
-  <Alarm>
-     <Monitored>true</Monitored>
-  </Alarm>
   <Measurement>
-     <Type>discreet</Type>
-     <Discreets>
-        <Discreet>
-           <Display state="disabled">None</Display>
-           <Value>0</Value>
-        </Discreet>
-        <Discreet>
-           <Display>720p</Display>
-           <Value>1</Value>
-        </Discreet>
-        <Discreet>
-           <Display>1080p</Display>
-           <Value>2</Value>
-        </Discreet>
-     </Discreets>
+    <Type>discreet</Type>
+    <Discreets>
+      <Discreet>
+        <Display state="disabled">None</Display>
+        <Value>0</Value>
+      </Discreet>
+      <Discreet>
+        <Display>720p</Display>
+        <Value>1</Value>
+      </Discreet>
+      <Discreet>
+        <Display>1080p</Display>
+        <Value>2</Value>
+      </Discreet>
+    </Discreets>
   </Measurement>
 </Param>
-<Param id="1033">
+<Param id="1033" setter="true">
   <Name>OutputFormat</Name>
   <Description>Output Format</Description>
   <Type>write</Type>
   <Interprete>
-     <RawType>numeric text</RawType>
-     <LengthType>next param</LengthType>
-     <Type>double</Type>
+    <RawType>numeric text</RawType>
+    <Type>double</Type>
+    <LengthType>next param</LengthType>
   </Interprete>
   <Display>
-     <RTDisplay>true</RTDisplay>
-     <Positions>
-        <Position>
-           <Page>General</Page>
-           <Row>16</Row>
-           <Column>1</Column>
-        </Position>
-     </Positions>
+    <RTDisplay>true</RTDisplay>
   </Display>
   <Measurement>
-     <Type>discreet</Type>
-     <Discreets>
-        <Discreet>
-           <Display state="disabled">Disabled</Display>
-           <Value>0</Value>
-        </Discreet>
-        <Discreet>
-           <Display>720p</Display>
-           <Value>1</Value>
-        </Discreet>
-        <Discreet>
-           <Display>1080p</Display>
-           <Value>2</Value>
-        </Discreet>
-     </Discreets>
+    <Type>discreet</Type>
+    <Discreets>
+      <Discreet>
+        <Display state="disabled">Disabled</Display>
+        <Value>0</Value>
+      </Discreet>
+      <Discreet>
+        <Display>720p</Display>
+        <Value>1</Value>
+      </Discreet>
+      <Discreet>
+        <Display>1080p</Display>
+        <Value>2</Value>
+      </Discreet>
+    </Discreets>
   </Measurement>
 </Param>
 ```
@@ -200,38 +171,20 @@ When you add a drop-down list, it is possible to show a check box for one entry 
 When a standard drop-down list is configured, the items to choose from are statically defined in the protocol. Alternatively, you can also create a dynamic drop-down list. To do so, create a parameter that holds the dynamic entries in a parameter (by providing a semicolon-separated list of entries) and refer to this parameter using the dependencyId attribute.
 
 ```xml
-<Param id="400">
+<Param id="400" trending="false">
   <Name>DynamicDependencyLinkSpeed</Name>
   <Description>Link Speed</Description>
-  <Information>
-     <Subtext>Configure the speed during auto-negotiation.</Subtext>
-     <Includes>
-        <Include>time</Include>
-        <Include>range</Include>
-        <Include>steps</Include>
-        <Include>units</Include>
-     </Includes>
-  </Information>
   <Type>read</Type>
   <Interprete>
-     <RawType>other</RawType>
-     <LengthType>next param</LengthType>
-     <Type>string</Type>
+    <RawType>other</RawType>
+    <Type>string</Type>
+    <LengthType>next param</LengthType>
   </Interprete>
   <Display>
-     <RTDisplay>true</RTDisplay>
-     <Positions>
-        <Position>
-           <Page>General</Page>
-           <Row>21</Row>
-           <Column>0</Column>
-        </Position>
-     </Positions>
+    <RTDisplay>true</RTDisplay>
   </Display>
   <Measurement>
-     <Type>discreet</Type>
-     <Discreets dependencyId="402">
-     </Discreets>
+    <Type>string</Type>
   </Measurement>
 </Param>
 <Param id="401" setter="true">
@@ -239,53 +192,38 @@ When a standard drop-down list is configured, the items to choose from are stati
   <Description>Link Speed</Description>
   <Type>write</Type>
   <Interprete>
-     <RawType>other</RawType>
-     <LengthType>next param</LengthType>
-     <Type>string</Type>
+    <RawType>other</RawType>
+    <Type>string</Type>
+    <LengthType>next param</LengthType>
   </Interprete>
   <Display>
-     <RTDisplay>true</RTDisplay>
-     <Positions>
-        <Position>
-           <Page>General</Page>
-           <Row>21</Row>
-           <Column>0</Column>
-        </Position>
-     </Positions>
+    <RTDisplay>true</RTDisplay>
   </Display>
   <Measurement>
-     <Type>discreet</Type>
-     <Discreets dependencyId="402">
-     </Discreets>
+    <Type>discreet</Type>
+    <Discreets dependencyId="402" />
   </Measurement>
 </Param>
 <Param id="402" trending="false">
   <Name>DynamicDependencyValuesLinkSpeed</Name>
   <Description>Dynamic Dependency Values Link Speed</Description>
-  <Information>
-     <Subtext></Subtext>
-     <Includes>
-        <Include>time</Include>
-        <Include>range</Include>
-        <Include>steps</Include>
-        <Include>units</Include>
-     </Includes>
-  </Information>
   <Type>read</Type>
   <Interprete>
-     <RawType>other</RawType>
-     <LengthType>next param</LengthType>
-     <Type>string</Type>
-     <DefaultValue>10 Bt Half Duplex;10 Bt Full Duplex;100 Bt Half Duplex;100 Bt Full Duplex</DefaultValue>
+    <RawType>other</RawType>
+    <Type>string</Type>
+    <LengthType>next param</LengthType>
+    <DefaultValue>10 Bt Half Duplex;10 Bt Full Duplex;100 Bt Half Duplex;100 Bt Full Duplex</DefaultValue>
   </Interprete>
   <Display>
-     <RTDisplay>true</RTDisplay>
+    <RTDisplay>true</RTDisplay>
   </Display>
   <Measurement>
-     <Type>string</Type>
+    <Type>string</Type>
   </Measurement>
 </Param>
 ```
+
+![alt text](../../images/uidropdownlistdynamic.png "DataMiner Cube dynamic drop-down list")
 
 This also works for tables (from DataMiner 8 onwards (RN 5817)). It is not only possible to refer to a standalone parameter, another column of the same table can also be specified. This makes it possible to have a list of different items for every row.
 

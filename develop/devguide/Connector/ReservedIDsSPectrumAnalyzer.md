@@ -91,12 +91,12 @@ uid: ReservedIDsSpectrumAnalyzer
 |64211|SPA_SPARAM_CLIENTCOUNT|Real-time info on the number of connected clients|
 |64212|SPA_SPARAM_MONITOR|Monitor info (id:estimated time). Reset to empty after monitor has run. Can also contain a full message instead of id:estimatedtime|
 |64213|SPA_SPARAM_WATCH_INFO|Info about which data is currently being displayed (watch mode)|
-|64214|SPA_SPARAM_INVALID_PID|Notifies ED of a PID for which the current value is invalid|
-|64215|SPA_SPARAM_UNAVAILABLE|Notifies ED that the device is currently unavailable for measurements (string)|
-|64216|SPA_SPARAM_PRESET_UPDATE|Notifies ED that a preset got updated. Contains the name of the preset (string). Feature introduced in DataMiner 9.0.5 (RN 13968).|
-|64217|SPA_SPARAM_WARN_SWEEP|Notifies ED that it needs to display a warning to allow a sweep time > 20 sec (value = sweep time value)|
-|64218|SPA_SPARAM_GENERIC_MSG|Notifies ED with a generic message to display in the top-right corner (string "[message type id]:[message]")|
-|64219|SPA_SPARAM_PROGRESS|Notifies ED of some kind of progress (double; see SPA_PROGRESS_*)|
+|64214|SPA_SPARAM_INVALID_PID|Notifies Cube of a PID for which the current value is invalid|
+|64215|SPA_SPARAM_UNAVAILABLE|Notifies Cube that the device is currently unavailable for measurements (string)|
+|64216|SPA_SPARAM_PRESET_UPDATE|Notifies Cube that a preset got updated. Contains the name of the preset (string). Feature introduced in DataMiner 9.0.5 (RN 13968).|
+|64217|SPA_SPARAM_WARN_SWEEP|Notifies Cube that it needs to display a warning to allow a sweep time > 20 sec (value = sweep time value)|
+|64218|SPA_SPARAM_GENERIC_MSG|Notifies Cube with a generic message to display in the top-right corner (string "[message type id]:[message]")|
+|64219|SPA_SPARAM_PROGRESS|Notifies Cube of some kind of progress (double; see SPA_PROGRESS_*)|
 |64220|SPA_SPARAM_TRACEPRESET|Preset with which trace was taken (on playback). string. preset ID.|
 |64221|SPA_SPARAM_HAS_RT_SLOT|0 = no more RT slots available, client will not get new traces. 1 = has slot|
 |64222|SPA_SPARAM_HEARTBEAT|Heartbeat to indicate that the client is still known by SLSpectrum (sent every xs)|

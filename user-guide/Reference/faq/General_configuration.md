@@ -2,9 +2,7 @@
 uid: General_configuration
 ---
 
-# General configuration
-
-This section contains the following topics:
+# Frequently asked questions about general configuration
 
 - [Which limitations should I keep in mind for the specifications of a DMA?](#which-limitations-should-i-keep-in-mind-for-the-specifications-of-a-dma)
 
@@ -20,17 +18,17 @@ This section contains the following topics:
 
 - [What do I do if there is an SLNet process disappearance?](#what-do-i-do-if-there-is-an-slnet-process-disappearance)
 
-### Which limitations should I keep in mind for the specifications of a DMA?
+## Which limitations should I keep in mind for the specifications of a DMA?
 
-You can find these on the [DataMiner Metrics](https://community.dataminer.services/dataminer-metrics/) ​page on DataMiner Dojo.
+You can find these on the [DataMiner Metrics](xref:dataminer_metrics) page.
 
-### When must a DataMiner Agent be restarted?
+## When must a DataMiner Agent be restarted?
 
 A DataMiner Agent must be restarted in the following cases:
 
 - After a manual change has been made to a DataMiner XML file.
 
-    E.g. when you have added a custom command to the Alarm Console shortcut menu in *Hyperlinks.xml*.
+  E.g. when you have added a custom command to the Alarm Console shortcut menu in *Hyperlinks.xml*.
 
 - After the IP address of the server hosting the DataMiner Agent has been changed.
 
@@ -40,14 +38,13 @@ A DataMiner Agent must be restarted in the following cases:
 > After an upgrade, the DMA will automatically be restarted.
 
 > [!TIP]
-> See also:
-> [Starting or stopping DataMiner Agents in your DataMiner System](xref:Starting_or_stopping_DataMiner_Agents_in_your_DataMiner_System)
+> See also: [Starting or stopping DataMiner Agents in your DataMiner System](xref:Starting_or_stopping_a_DMA_in_DataMiner_Cube)
 
-### How do I synchronize time settings within a DMS?
+## How do I synchronize time settings within a DMS?
 
 Within a DMS, it is essential that the time settings on the different DMAs are synchronized. Without proper time synchronization among the different DMAs, it is impossible to correlate events or even to have a correct overview of what is happening on the DMS.
 
-#### Time synchronization options
+### Time synchronization options
 
 The most common way to make sure that time is synchronized among all DMAs is to make them all members of the same domain.
 
@@ -57,25 +54,34 @@ More information about SNTP can be found in RFC 4330:
 
 - [Simple Network Time Protocol (SNTP) Version 4 for IPv4, IPv6 and OSI](http://www.ietf.org/rfc/rfc4330.txt)
 
-#### Time server
+### Time server
 
 The time server will provide the correct time settings for all DMAs.
 
-To turn any computer into a time server, whether it serves as a DMA or not, do the following.
+To turn any computer using Windows Server 2008 R2, Windows 7 or later into a time server, whether it serves as a DMA or not, do the following:
 
 1. Log on locally to the machine that will act as time server, or establish a remote desktop session with it.
 
-2. Open Registry Editor (*Start \> Run... \> regedit*).
+1. Stop the Windows Time service via *Start \> Control Panel \> System and Security \> Administrative Tools \> Services*.
 
-3. Go to the following key:
+1. Open the registry editor via *Start \> Run... \> regedit*.
 
-    - HKEY_LOCAL_MACHINE/SYSTEM/CurrentControlSet/Services/W32Time/Parameters
+1. Search for the *HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\W32Time\TimeProviders\NtpServer*.
 
-4. Change the value of LocalNTP from “0” to “1”
+1. Set the *Enabled* value to 1.
 
-    (0 = No time server except when a domain controller, 1 = Always a time server).
+1. Search for *HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\W32Time\Config*.
 
-#### Time client
+1. Set the *AnnounceFlags* value to 5.
+
+1. Start the Windows Time service again and set the start type to *Automatic*.
+
+> [!NOTE]
+>
+> - If you are using Windows Server 2012 R2 (64-bit), set the start type to "Automatic (Delayed Start)" for the service to start automatically.
+> - If you are using Windows 7 or Windows Server 2008 R2, and the Windows Time service always stops, follow the instructions from this [Microsoft support page](https://support.microsoft.com/en-us/help/2385818).
+
+### Time client
 
 All DMAs in the DMS have to be turned into time clients that will synchronize their time settings with those of the time server.
 
@@ -83,23 +89,23 @@ To turn a DMA into a time client, do the following.
 
 1. Log on locally to the DMA, or establish a remote desktop session with it.
 
-2. Open the *Services* dialog box (*Start \> Settings \> Control Panel \> Administrative Tools \> Services*), and select the *Windows Time* service.
+1. Open the *Services* dialog box via *Start \> Settings \> Control Panel \> Administrative Tools \> Services*, and select the *Windows Time* service.
 
-3. Right-click the service, and select *Properties*.
+1. Right-click the service, and select *Properties*.
 
-4. Change *Startup type* to *Automatic*, and click OK.
+1. Change *Startup type* to *Automatic*, and click OK.
 
-    This will make Windows Time service start automatically when the DMA is started.
+   This will make Windows Time service start automatically when the DMA is started.
 
-5. Right-click the *Windows Time* service, and select *Start*.
+1. Right-click the *Windows Time* service, and select *Start*.
 
-6. Check whether the service is actually running, and then close the *Properties* dialog box.
+1. Check whether the service is actually running, and then close the *Properties* dialog box.
 
-7. Open a command prompt window (*Start \> Run... \> cmd*).
+1. Open a command prompt window via *Start \> Run... \> cmd*.
 
-8. Enter *net time /set*, followed by the IP address of the time server, and press *Enter*.
+1. Enter *net time /set*, followed by the IP address of the time server, and press *Enter*.
 
-#### Other time-related commands
+### Other time-related commands
 
 The following table contains a few other commands that may be useful when synchronizing time settings among DMAs.
 
@@ -121,7 +127,7 @@ To get the current time from the time server, together with a detailed report, e
 w32tm -once -v
 ```
 
-### How do I keep DataMiner Cube from disconnecting automatically?
+## How do I keep DataMiner Cube from disconnecting automatically?
 
 By default, a DataMiner Cube session will disconnect after a certain period without user activity. This way, users cannot leave sessions open on unattended workstations.
 
@@ -129,56 +135,56 @@ However, under certain circumstances, it may be necessary to keep a session open
 
 1. Go to the DataMiner Cube user settings. See [User settings](xref:User_settings).
 
-2. Go to the *Connection* tab.
+1. Go to the *Connection* tab.
 
-3. Clear the option *Time before automatic disconnect*.
+1. Clear the option *Time before automatic disconnect*.
 
-### How do I delete all alarms on a DMA?
+## How do I delete all alarms on a DMA?
 
 To delete all alarms on a DMA from the history database, you have to drop a number of tables in the MySQL database.
 
 > [!WARNING]
 > Performing the following procedure has a severe impact on a DataMiner system.
 
-All historic alarms will be deleted indiscriminately, and the Alarm Console, Reports and Dashboards will no longer contain any historic alarm data.
+All history alarms will be deleted indiscriminately, and the Alarm Console, reports, and dashboards will no longer contain any history alarm data.
 
 1. Connect to the DMA using Remote Desktop.
 
-2. Stop the DataMiner software. See [Starting or stopping DataMiner Agents in your DataMiner System](xref:Starting_or_stopping_DataMiner_Agents_in_your_DataMiner_System).
+1. Stop the DataMiner software. See [Starting or stopping DataMiner Agents in your DataMiner System](xref:Starting_or_stopping_a_DMA_in_DataMiner_Cube).
 
-3. Open MySQL Query Browser. On the logon window, click *OK* to connect to the database using the default settings.
+1. Open [MySQL Workbench](xref:MySQL_Workbench). In the logon window, click *OK* to connect to the database using the default settings.
 
-4. Open the SLDMADB tree.
+1. Open the SLDMADB tree.
 
-5. Right-click and select *Drop Table* for the following tables:
+1. Right-click and select *Drop Table* for the following tables:
 
-    - Alarm
+   - Alarm
 
-    - Alarm_property
+   - Alarm_property
 
-    - Brainlink
+   - Brainlink
 
-    - Latch_state
+   - Latch_state
 
-    - Rep_pd_info
+   - Rep_pd_info
 
-    - Rep_pd_newalarms
+   - Rep_pd_newalarms
 
-    - Rep_pd_states
+   - Rep_pd_states
 
-    - Service_alarm
+   - Service_alarm
 
-    If you also want to clear all information events, then also select *Drop Table* for the following table:
+   If you also want to clear all information events, then also select *Drop Table* for the following table:
 
-    - Info
+   - Info
 
-6. Close MySQL Query Browser.
+1. Close MySQL Workbench.
 
-7. Restart the DataMiner. See [Starting or stopping DataMiner Agents in your DataMiner System](xref:Starting_or_stopping_DataMiner_Agents_in_your_DataMiner_System).
+1. Restart the DataMiner. See [Starting or stopping DataMiner Agents in your DataMiner System](xref:Starting_or_stopping_a_DMA_in_DataMiner_Cube).
 
     On startup, DataMiner will recreate the tables you have dropped, and the new tables will all be empty.
 
-### What do I do if two DMAs cannot communicate?
+## What do I do if two DMAs cannot communicate?
 
 In some cases, a DMA may not be able to communicate with another DMA because of a change in setup. This could for instance be because one Agent is a domain member, while the other Agent is not in a domain but in a workgroup.
 
@@ -188,11 +194,11 @@ To configure a custom user account:
 
 1. Open the SLNetClient test tool. See [Opening the SLNetClientTest tool](xref:Opening_the_SLNetClientTest_tool).
 
-2. Connect to the DMA. See [Connecting to a DMA with the SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool).
+1. Connect to the DMA. See [Connecting to a DMA with the SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool).
 
-3. Edit the connection strings between the DMAs. See [Editing the connection string between two DataMiner Agents](xref:SLNetClientTest_tool_advanced_procedures#editing-the-connection-string-between-two-dataminer-agents).
+1. Edit the connection strings between the DMAs. See [Editing the connection string between two DataMiner Agents](xref:SLNetClientTest_editing_connection_string).
 
-### What do I do if there is an SLNet process disappearance?
+## What do I do if there is an SLNet process disappearance?
 
 A process disappearance of SLNet can be caused by an issue in the Microsoft .NET Framework 4.6.
 

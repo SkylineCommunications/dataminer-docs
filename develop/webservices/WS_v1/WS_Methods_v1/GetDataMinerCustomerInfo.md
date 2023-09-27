@@ -16,4 +16,4 @@ Use this method to retrieve the system info for DataMiner. This is the informati
 
 | Item | Format | Description |
 |--|--|--|
-| GetDataMinerCustomer­InfoResult | Array of string | The name, logo, address, telephone number, fax number, email and website configured for the DataMiner System. |
+| GetDataMinerCustomerInfoResult | Array of string | The name, logo, address, telephone number, fax number, email and website configured for the DataMiner System. |

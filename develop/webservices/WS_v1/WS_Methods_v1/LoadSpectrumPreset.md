@@ -6,6 +6,8 @@ uid: LoadSpectrumPreset
 
 Use this method to load a spectrum preset for a particular spectrum analyzer. Available from DataMiner 9.5.5 onwards.
 
+This method is obsolete from DataMiner 10.3.5/10.4.0 onwards. <!-- RN 36364 -->
+
 ## Input
 
 | Item       | Format           | Description                                                                                            |
@@ -20,4 +22,4 @@ Use this method to load a spectrum preset for a particular spectrum analyzer. Av
 
 | Item | Format | Description |
 |--|--|--|
-| LoadSpectrumPreset­Result | [DMASpectrumPreset](xref:DMASpectrumPreset) | Array containing the name of the preset, a boolean indicating whether the preset is shared, and the settings of the preset. |
+| LoadSpectrumPresetResult | [DMASpectrumPreset](xref:DMASpectrumPreset) | Array containing the name of the preset, a boolean indicating whether the preset is shared, and the settings of the preset. |

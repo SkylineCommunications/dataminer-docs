@@ -18,13 +18,15 @@ The SLC SE Repository Manager is the main tool to interact with the Gerrit serve
 The SLC SE Repository Manager installer can be downloaded from [http://tools/Installers.html](http://tools/Installers.html).
 
 > [!NOTE]
-> -  The SLC SE Repository Manager requires the use of VPN.
-> -  At startup, the SLC SE Repository Manager verifies whether a new version of the tool is available and downloads the new version if this is the case.
+>
+> - The SLC SE Repository Manager requires the use of VPN.
+> - The SLC SE Repository Manager makes use of the SharpSvn library, which has a dependency on the Microsoft Visual C++ 2010 x86 Redistributable. This can be downloaded from <https://www.microsoft.com/en-us/download/details.aspx?id=26999>.
+> - At startup, the SLC SE Repository Manager verifies whether a new version of the tool is available and downloads the new version if this is the case.
 
 The main window of the SLC SE Repository Manager is shown below.
 
 ![](~/develop/images/SLC_SE_Repo_Manager_tool.png)
-<br>Figure 97: SLC SE Repository Manager main window
+<br>SLC SE Repository Manager main window
 
 On startup, the tool will load all known protocol repositories hosted on Gerrit, grouped by vendor, and display these in a tree control on the left-hand side. On the right-hand side, you can find the main buttons to perform different operations. A button will only be enabled in case the item selected in the tree supports the operation.
 

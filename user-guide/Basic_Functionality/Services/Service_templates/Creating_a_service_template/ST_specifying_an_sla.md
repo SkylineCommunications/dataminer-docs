@@ -18,4 +18,4 @@ To do so:
 > If an existing service template is updated to include an SLA element, while it did not include one before, an SLA element will be created. Similarly, if an existing service template is updated to no longer include an SLA element, the SLA element will be removed when the service template is applied.
 
 > [!TIP]
-> See also: [DMS Business Intelligence](xref:sla#dms-business-intelligence)
+> See also: [Business Intelligence](xref:sla)

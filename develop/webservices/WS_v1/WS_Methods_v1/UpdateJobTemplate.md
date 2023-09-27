@@ -17,4 +17,4 @@ Use this method to update an existing job template.
 
 | Item                     | Format | Description                         |
 |--------------------------|--------|-------------------------------------|
-| UpdateJobTemplate­Result | String | The ID of the updated job template. |
+| UpdateJobTemplateResult | String | The ID of the updated job template. |

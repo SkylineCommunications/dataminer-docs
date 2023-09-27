@@ -22,6 +22,6 @@ Represents an input data object, which can be:
 
   - *TableRowParameter* (*DMAInputDataTableRowParameter*): The element containing the table row, which can be:
 
-    - *DMAInputDataTableRowParameterFrom­ChildElement*: A child element of the generated service, specified by *ChildID* (int).
+    - *DMAInputDataTableRowParameterFromChildElement*: A child element of the generated service, specified by *ChildID* (int).
 
-    - *DMAInputDataTableRowParameterFrom­OtherElement*: A different DataMiner element, specified by *DataMinerID* (int) and *elementID* (int).
+    - *DMAInputDataTableRowParameterFromOtherElement*: A different DataMiner element, specified by *DataMinerID* (int) and *elementID* (int).

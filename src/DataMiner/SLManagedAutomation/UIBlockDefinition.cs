@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+
 using Skyline.DataMiner.Net.AutomationUI.Objects;
 
 namespace Skyline.DataMiner.Automation
@@ -163,7 +165,7 @@ namespace Skyline.DataMiner.Automation
 		/// </summary>
 		/// <value>The alias that will be used to retrieve the value entered or selected by the user from the <see cref="UIResults"/> object.</value>
 		/// <remarks>
-		/// <para>Applicable only when <see cref="Type"/> is set to either Button, Calender, CheckBox, CheckBoxList, DropDown, TextBox, Time or TreeView.</para>
+		/// <para>Applicable only when <see cref="Type"/> is set to either Button, Calendar, CheckBox, CheckBoxList, DropDown, TextBox, Time or TreeView.</para>
 		/// <para>Note: Unlike a variable, a DestVar alias does not have to be declared.</para>
 		/// </remarks>
 		/// <example>
@@ -592,23 +594,20 @@ namespace Skyline.DataMiner.Automation
 		public int RowSpan { get; set; }
 
 		/// <summary>
-		/// Gets or sets the style of the dialog box.
+		/// Gets or sets the style of the dialog box item.
 		/// </summary>
-		/// <value>The style of the dialog box.</value>
+		/// <value>The style of the dialog box item.</value>
 		/// <remarks>
-		/// <para>It is possible to add one of three title styles to a text block:</para>
-		/// <list type="bullet">
-		/// <item><description>“Title1” (highest level, all lower case)</description></item>
-		/// <item><description>“Title2” (medium level, all upper case)</description></item>
-		/// <item><description>“Title3” (lowest level, all upper case)</description></item>
-		/// </list>
-		/// <para>If you want to set the style of a text block to regular text, leave the style property empty.</para>
+		/// <para>It is possible to set a style on some dialog box items.</para>
+		/// <para>The supported styles can be accessed through const strings on the Style class, subdivided per control type (Button, Text, etc.).<br/>
+		/// All Button styles can also be applied to a DownloadButton.<br/>
+		/// The Style class is available from DataMiner 10.3.1/10.4.0 onwards. For older DataMiner versions, you can use the StaticText styles 'Title1', 'Title2', and 'Title3'.</para>
 		/// </remarks>
 		/// <example>
 		/// <code>
 		/// UIBlockDefinition propertiesTitle = new UIBlockDefinition();
 		/// propertiesTitle.Type = UIBlockType.StaticText;
-		/// propertiesTitle.Style = "Title2";
+		/// propertiesTitle.Style = Style.Text.Title2;
 		/// </code>
 		/// </example>
 		public string Style { get; set; }
@@ -695,6 +694,8 @@ namespace Skyline.DataMiner.Automation
 		/// Gets or sets the title.
 		/// </summary>
 		/// <value>The title.</value>
+		/// <remarks><para>This property is obsolete. Use the <see cref="UIBuilder.Title"/> property instead.</para></remarks>
+		[Obsolete("Use UIBuilder.Title instead.")]
 		public string Title { get; set; }
 
 		/// <summary>

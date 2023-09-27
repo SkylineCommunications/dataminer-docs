@@ -225,7 +225,7 @@ Use this option if you do not want users to be able to zoom in or out.
 > [!NOTE]
 > From DataMiner 9.0 onwards, zooming is disabled by default on any Visual Overview pages that contain an embedded web browser control. However, it can be enabled again with the EnableZoom option. See [EnableZoom](xref:Linking_a_shape_to_a_webpage#enablezoom).
 
-## DisposeWebBrowserWhenNot­SelectedPage=\[true/false\]
+## DisposeWebBrowserWhenNotSelectedPage=\[true/false\]
 
 Shape-level option.
 
@@ -247,7 +247,7 @@ Shape-level option.
 
 Available from DataMiner 10.0.9 onwards. Can be added to shapes displaying parameter values. Set this option to true to convert large values to more legible values with a different unit (e.g. to convert 1000 Mb to 1 Gb). The following units are converted out of the box: bytes (B), bits (b), bits per second (bps), bytes per second (Bps) and Kibibytes (kiB). For other units, the dynamic conversion must be defined in the element’s protocol.
 
-From DataMiner 10.3.0/10.2.3 onwards, this feature can instead be enabled by the *DynamicUnits* [soft-launch option](https://community.dataminer.services/documentation/soft-launch-options/), and you can use the *DynamicUnits=\[true/false\]* option on a shape to override the default behavior determined by the soft-launch option.
+From DataMiner 10.3.0/10.2.3 onwards, this feature can instead be enabled by the *DynamicUnits* [soft-launch option](xref:SoftLaunchOptions), and you can use the *DynamicUnits=\[true/false\]* option on a shape to override the default behavior determined by the soft-launch option.
 
 ## DynamicZoom
 
@@ -327,6 +327,7 @@ FixedWidth=<px>|MinWidth=<px>|MaxWidth=<px>|FixedHeight=<px>|MinHeight=<px>|MaxH
 ```
 
 > [!NOTE]
+>
 > - When the maximum size is reached, the content is centered on the card.
 > - When the minimum size is reached, the content is shown in a scroll viewer.
 > - When page scrollbars are visible, you can use the mouse wheel to scroll the page. Use CTRL+Scroll to zoom.
@@ -395,7 +396,7 @@ Used to make all \[property:...\] placeholders refer to properties of the object
 
 See [Placeholders for variables in shape data values](xref:Placeholders_for_variables_in_shape_data_values).
 
-## ForcePropertyFromVisioLinked­Object
+## ForcePropertyFromVisioLinkedObject
 
 Shape-level option.
 
@@ -423,7 +424,7 @@ Used in order to show or hide a Visio page depending on conditions.
 
 See [Conditionally showing or hiding a page of a Visio drawing](xref:Conditionally_showing_or_hiding_a_page_of_a_Visio_drawing).
 
-## HideAlarmsThatAre­CurrentlyCorrelated
+## HideAlarmsThatAreCurrentlyCorrelated
 
 Shape-level option.
 
@@ -539,7 +540,7 @@ Use this option to turn a shape into a tab control that displays all pages of a 
 
 See [Turning a shape into a tab control that displays pages of a Visio file](xref:Turning_a_shape_into_a_tab_control_that_displays_pages_of_a_Visio_file).
 
-## InterfaceConnection­LinesOnBackground
+## InterfaceConnectionLinesOnBackground
 
 Page-level option.
 
@@ -725,6 +726,7 @@ When you are configuring a large number of shapes linked to different elements, 
 This option can be used in shapes linked to elements, parameters, matrices, session variables, parameter summaries, and parameter controls. From DataMiner 9.0.1 onwards, this option can also be used on a page, so that it is applied to all shapes on that page.
 
 > [!NOTE]
+>
 > - In case of grouped shapes, this property should only be specified on the main shape, except if you use dynamic placeholders in the subshapes (e.g. \[param:...\], \[property:...\], etc.).
 > - From DataMiner 9.0.2 onwards, this option can also be applied system-wide. See [Activating the NonElementProtocol option system-wide](xref:Configuration_of_DataMiner_processes#activating-the-nonelementprotocol-option-system-wide).
 > - From DataMiner 9.0.3 onwards, this option can be used with a “*=True*” or “*=False*” suffix, so that it can be easily enabled or disabled.
@@ -745,6 +747,19 @@ Shape-level option.
 If a shape is linked to an element, a service, a view or a redundancy group, then you can use the “*OpenInNewCard*” option to make that element, service, view or redundancy group open in a new card.
 
 See [Having the Visio drawing opened in a new card](xref:Linking_a_shape_to_an_element_a_service_or_a_redundancy_group#having-the-visio-drawing-opened-in-a-new-card).
+
+## OverridePageName=
+
+Page-level option.
+
+Available from DataMiner 10.2.11/10.3.0 onwards. Allows you to override the name of a Visio page.
+
+You can for example use this to have multiple pages with the same name in DataMiner, as Microsoft Visio itself does not allow the creation of multiple pages with the same name. However, note that components that display Visio page names may then also display these duplicate page names.
+
+> [!NOTE]
+>
+> - Always use the actual page name when referring to a particular page in options like e.g. VdxPage, NavigatePage, InlineVdx, etc. Referring to the override name will not work in such cases.
+> - This option is not supported for Visio drawings displayed in DataMiner web apps.
 
 ## PageScale
 
@@ -903,7 +918,7 @@ Available from DataMiner 9.5.8 onwards. See [Dynamically selecting shape templat
 
 Shape-level option.
 
-Available from DataMiner 10.0.10 onwards. Allows you to embed an Internet Explorer web browser control. However, not that this browser is **deprecated** and using this option is therefore not recommended.
+Available from DataMiner 10.0.10 onwards. Allows you to embed an Internet Explorer web browser control. However, note that this browser is **deprecated** and using this option is therefore not recommended.
 
 See [UseIE](xref:Linking_a_shape_to_a_webpage#useie).
 

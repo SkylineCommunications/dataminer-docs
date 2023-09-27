@@ -4,21 +4,9 @@ uid: Configuring_pools_of_resources
 
 # Configuring pools of resources
 
-This section contains the following topics:
-
-- [Adding a pool](#adding-a-pool)
-
-- [Configuring pool properties](#configuring-pool-properties)
-
-- [Adding resource property definitions](#adding-resource-property-definitions)
-
-- [Adding resources to a pool](#adding-resources-to-a-pool)
-
-- [Adding a virtual function as a resource](#adding-a-virtual-function-as-a-resource)
-
 ## Adding a pool
 
-To add a resource pool using DataMiner 10.2.0/10.1.5 or higher:
+### [DataMiner 10.2.0/10.1.5 or higher](#tab/tabid-1)
 
 1. Make sure no existing resource pool is selected.
 
@@ -28,13 +16,15 @@ To add a resource pool using DataMiner 10.2.0/10.1.5 or higher:
 
 1. To further configure the pool, select it in the resource pool pane, then proceed with the procedures outlined below.
 
-To add a resource pool prior to DataMiner 10.1.5:
+### [Prior to DataMiner 10.1.5](#tab/tabid-2)
 
 1. At the bottom of the leftmost column in the *resources* tab, click the *Add* button.
 
 1. Enter the pool name in the dialog box and click *OK*.
 
 1. To further configure the pool, select it in the column on the left, then proceed with the procedures outlined below.
+
+***
 
 ## Configuring pool properties
 
@@ -54,17 +44,20 @@ In order to define properties for all resources in a pool, and optionally limit 
 
 1. In the dialog box, fill in the name of the resource property you wish to define.
 
-1. If you wish to restrict the possible values for the property, there are two possibilities:
+1. To restrict the possible values for the property, there are two possibilities:
 
    - Select *Regex pattern* and specify a regular expression that the property in question must match.
 
    - Select *Value list*, and, for each possible value for the property, click the *Add value* button and specify the value.
 
+   > [!NOTE]
+   > From DataMiner 10.3.7/10.3.0[CU4] onwards, you can save a resource property without specifying a value for that property. <!-- RN 36345 -->
+
 ## Adding resources to a pool
 
-To add a resource to a pool using DataMiner 10.2.0/10.1.5 or higher:
+### [DataMiner 10.2.0/10.1.5 or higher](#tab/tabid-1)
 
-1. While the pool is selected, in the *resources* tab, click the *Add* *resource* button.
+1. While the pool is selected, in the *resources* tab, click the *Add resource* button.
 
 1. In the *general* subtab, configure the following fields as necessary:
 
@@ -97,13 +90,16 @@ To add a resource to a pool using DataMiner 10.2.0/10.1.5 or higher:
    > - We highly recommend that updating the name of a function instance is done via the resource. Strictly speaking, this is also possible via the DVE parent, but if you change the name there, the resource will not be updated.
 
    > [!WARNING]
-   > Virtual functions with generated protocol are currently still in soft launch, with the *Function* soft-launch option. For more information, see [Soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/).
+   > Virtual functions with generated protocol are currently still in soft launch, with the *Function* soft-launch option. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
 
 1. In the *properties* subtab, configure any properties if necessary. With the buttons in the lower right corner, you can add, edit and delete resource properties.
 
 1. Click *Save* in the lower right corner.
 
-To add a resource to a pool prior to DataMiner 10.1.5:
+> [!NOTE]
+> You can also add a resource to a pool by moving or copying it from another pool. To move a resource, drag it from one pool to the other. To copy it, keep Ctrl pressed while you drag. Note that this is only supported for existing, valid resources, and you need to have permission to edit resources to do this. It is also not possible to copy a resource to or from the "(uncategorized)" pool, as this pool is reserved for resources that are not in any other pool.
+
+### [Prior to DataMiner 10.1.5](#tab/tabid-2)
 
 1. While the pool is selected, in the *resources* tab, click the *Add* button.
 
@@ -133,6 +129,8 @@ To add a resource to a pool prior to DataMiner 10.1.5:
 
 1. Click *OK*.
 
+***
+
 ## Adding a virtual function as a resource
 
 To make it possible to schedule a virtual function as a resource, prior to DataMiner 10.2.0/10.1.5 you must add it as a resource in the *Resources* module using the procedure below. From DataMiner 10.2.0/10.1.5 onwards, you can do so as detailed in [Adding resources to a pool](#adding-resources-to-a-pool).
@@ -160,3 +158,31 @@ To make it possible to schedule a virtual function as a resource, prior to DataM
    1. In the *Edit Resource* window, fill a new name in the *Name* box.
 
    1. Click *OK* to close the window.
+
+### Removing a resource from a pool
+
+From DataMiner 10.2.10/10.3.0 onwards, you can remove a resource from a pool as follows:
+
+1. Select the resource pool.
+
+1. In the *Resources* tab, right-click the resource you want to remove and select *Remove from pool*.
+
+> [!NOTE]
+>
+> - Removing a resource from a pool does not delete the resource from the system. It only removes it from the selected pool. If the resource is not present in any other resource pool, it will be moved to the "(uncategorized)" pool.
+> - You can only remove valid, unmodified existing resources that are not in the "(uncategorized)" pool. You also need permission to edit resources to be able to do this.
+
+### Duplicating a resource from a pool
+
+From DataMiner 10.3.7/10.3.4 onwards, you can duplicate a resource from a pool as follows: <!-- RN 36308 -->
+
+1. Select the resource pool.
+
+1. In the *Resources* tab, right-click the resource you want to duplicate and select *Duplicate*.
+
+> [!NOTE]
+>
+> - The duplicate resource will have the same name as the original resource, with the suffix `- copy` added to it.
+> - All general information, properties, and device data will be copied from the original resource to the duplicate resource.
+> - The duplicate resource will be added to all resource pools that contain the original resource.
+> - For function resources, the instance dropdown list will be left empty, and the function instance will have the same name as the original function instance, with the suffix `- copy` added to it.

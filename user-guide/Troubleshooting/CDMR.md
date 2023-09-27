@@ -39,42 +39,38 @@ For a daily report, an additional archive `<timestamp>_All_Reports.zip` is gener
 To activate CDMR, you must configure SMTP so that emails can be sent and configure *MaintenanceSettings.xml* so that emails are sent to the correct address. Once the configuration is complete, Skyline Communications must also be notified.
 
 > [!NOTE]
-> In DataMiner Systems with multiple DMAs, it can be time-consuming to do the manual configuration detailed below. In that case, it can be useful to use the [Activate CDMR](https://community.dataminer.services/documentation/activate-cdmr/) tool instead. Note that the final step below ([Notify Skyline Communications](#notify-skyline-communications)), is still necessary when you use this tool.
+>
+> - When you connect a DataMiner Agent to **dataminer.services**, the connection to CDMR (Customer DataMiner Reporting) is **automatically enabled**. See [Connecting your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
+> - In DataMiner Systems with multiple DMAs, it can be time-consuming to do the manual configuration detailed below. In that case, it can be useful to use the [Activate CDMR](xref:Activate_CDMR) tool instead. Note that the final step below ([Notify Skyline Communications](#notify-skyline-communications)), is still necessary when you use this tool.
 
 ### SMTP configuration
 
-To activate CDMR, first you must make sure emails can be sent. For this purpose, SMTP must be configured in `C:\Skyline DataMiner\DataMiner.xml`. In the `<SMTP>` tag, the host, port, and login method must be specified. For example:
+To activate CDMR, first you must make sure emails can be sent. For this purpose, SMTP must be configured in `C:\Skyline DataMiner\DataMiner.xml`.
 
-```xml
-<SMTP> 
-    <Host>mail.skyline.be</Host> 
-    <HostPort>25</HostPort> 
-    <LoginMethod>NoLoginMethod</LoginMethod> 
-    <User/> 
-    <Password/> 
-</SMTP>
-```
+You can configure this directly in *DataMiner.xml* file or via the SLNetClientTest tool. To configure it directly in *DataMiner.xml*, a **DataMiner restart** is required.
 
-After changes have been made to the *DataMiner.xml* file, a **DataMiner restart** is required. For more detailed information, see [Configuring outgoing email](xref:Configuring_outgoing_email).
+- If you configure SMTP directly in DataMiner.xml, specify the host, port, and login method in the `<SMTP>` tag. For example:
 
-Alternatively, to avoid having to restart DataMiner, you can configure this using the [SLNetClientTest](xref:SLNetClientTest_tool) tool.
+  ```xml
+  <SMTP> 
+      <Host>mail.skyline.be</Host>
+      <HostPort>25</HostPort>
+      <LoginMethod>NoLoginMethod</LoginMethod>
+      <User/>
+      <Password/>
+  </SMTP>
+  ```
 
-> [!CAUTION]
-> Extreme care is always required when the SLNetClientTest tool is used. Incorrect use of this tool can have far-reaching consequences on the functionality of a DataMiner System.
+  For detailed information, see [Configuring outgoing email](xref:Configuring_outgoing_email).
 
-Proceed as follows to configure SMTP via the SLNetClientTest tool:
+- If you configure SMTP via the SLNetClientTest tool, use the following settings:
 
-1. Open the SLNetClientTest tool. See [Opening the SLNetClientTest tool](xref:Opening_the_SLNetClientTest_tool).
-1. Connect to the DMA for which you want to configure SMTP. See [Connecting to a DMA with the SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool).
-1. Go to the *Build Message* tab and select *UpdateSMTPConfigMessage* in the drop-down box at the top.
-1. Specify the following settings:
+  - *DataMinerID*: -1 for a local DMA or the actual DMA ID for a remote DMA.
+  - *Host*: The SMTP host, e.g. `mail.skyline.be`.
+  - *LoginMethod*: The login method, e.g. *NoLogin*.
+  - *Port*: The SMTP port, e.g. 25.
 
-    - *DataMinerID*: -1 for a local DMA or the actual DMA ID for a remote DMA.
-    - *Host*: The SMTP host, e.g. `mail.skyline.be`.
-    - *LoginMethod*: The login method, e.g. *NoLogin*.
-    - *Port*: The SMTP port, e.g. 25.
-
-1. Click the *Send Message* button.
+  For detailed information, see [Configuring SMTP](xref:SLNetClientTest_configuring_SMTP).
 
 ### MaintenanceSettings.xml configuration
 
@@ -96,9 +92,6 @@ After changes have been made to the *MaintenanceSettings.xml* file, a **DataMine
 
 If the `<Email>` tag is already correctly configured and you just need to set the active attribute to true, you can avoid having to restart DataMiner by setting this to true using the SLNetClientTest tool.
 
-> [!CAUTION]
-> Extreme care is always required when the SLNetClientTest tool is used. Incorrect use of this tool can have far-reaching consequences on the functionality of a DataMiner System.
-
 Proceed as follows to activate the email settings via the SLNetClientTest tool:
 
 1. Open the SLNetClientTest tool. See [Opening the SLNetClientTest tool](xref:Opening_the_SLNetClientTest_tool).
@@ -111,6 +104,9 @@ Proceed as follows to activate the email settings via the SLNetClientTest tool:
     - *What*: 315
 
 1. Click the *Send Message* button.
+
+> [!CAUTION]
+> Extreme care is always required when the SLNetClientTest tool is used. Incorrect use of this tool can have far-reaching consequences on the functionality of a DataMiner System.
 
 ### Notify Skyline Communications
 

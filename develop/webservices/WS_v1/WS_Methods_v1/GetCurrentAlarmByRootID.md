@@ -18,4 +18,4 @@ Use this method to retrieve the current alarm associated with a particular root 
 
 | Item | Format | Description |
 |--|--|--|
-| GetCurrentAlarmBy­RootIDResult | [DMAAlarm](xref:DMAAlarm) | The current alarm associated with the specified root alarm ID. |
+| GetCurrentAlarmByRootIDResult | [DMAAlarm](xref:DMAAlarm) | The current alarm associated with the specified root alarm ID. |

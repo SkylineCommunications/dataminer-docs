@@ -4,7 +4,7 @@ uid: ConnectionsHttpElementConfiguration
 
 # Element configuration
 
-n the IP address field, you can enter the IP address or host name of the server.
+In the IP address field, you can enter the IP address or host name of the server.
 
 Specify "bypassProxy" in the Bus address field if you need to bypass the proxy server in the network.
 
@@ -27,3 +27,4 @@ Suppose the proxyServer attribute references parameter 1. The following behavior
 ### See also
 
 - [Protocol.HTTP.Session@proxyServer](xref:Protocol.HTTP.Session-proxyServer)
+- [HTTP(S) connections](xref:HTTPS_Connection)

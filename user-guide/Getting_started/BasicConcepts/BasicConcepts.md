@@ -10,13 +10,13 @@ This section introduces some concepts that you need to understand when you are n
 
 To be able to work with DataMiner, you must have at least one DataMiner Agent and a DataMiner client.
 
-| Concept                | Description                                                                                                                                            |
-|------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-| DataMiner Agent or DMA | A physical or virtual compute instance running the DataMiner software.                                                                                                    |
-| DataMiner client       | An entity communicating with the Agent. The term is mostly used to denote a client application that allows users to interact with the DataMiner Agent. |
+| Concept | Description |
+|--|--|
+| DataMiner Agent or DMA | A physical or virtual compute instance running the DataMiner software. |
+| DataMiner client | An entity communicating with the Agent. The term is mostly used to denote a client application that allows users to interact with the DataMiner Agent. |
 
 > [!TIP]
-> See also: [DataMiner System layout](xref:GeneralLayout#dataminer-system-layout)
+> See also: [DataMiner System layout](xref:GeneralLayout)
 
 ## System components
 
@@ -50,17 +50,17 @@ A DataMiner System can have several additional modules or apps. Depending on the
 
 | Concept | Description |
 |--|--|
-| DMS Automation | A module used to create scripts that can execute certain tasks automatically. Scripts can for instance set parameters, change element states, send notifications, etc. |
-| DMS Business Intelligence | A module used to track the parameters of a Service Level Agreement or SLA. It allows the creation of a special type of element, an SLA element, that monitors the SLA information related to a particular DataMiner service. |
-| DMS Correlation | A module that can gather information about parameter values and alarms, and trigger specific actions, such as generating a new, correlated alarm, based on triggers defined by the user. |
-| DMS Scheduler | A module that can schedule certain actions in the DataMiner System. It works in close relation with the Automation module. |
-| DMS Spectrum Analysis | A module that allows the integration of spectrum analyzers in a DataMiner System. |
+| Automation | A module used to create scripts that can execute certain tasks automatically. Scripts can for instance set parameters, change element states, send notifications, etc. |
+| Business Intelligence | A module used to track the parameters of a Service Level Agreement or SLA. It allows the creation of a special type of element, an SLA element, that monitors the SLA information related to a particular DataMiner service. |
+| Correlation | A module that can gather information about parameter values and alarms, and trigger specific actions, such as generating a new, correlated alarm, based on triggers defined by the user. |
+| Scheduler | A module that can schedule certain actions in the DataMiner System. It works in close relation with the Automation module. |
+| Spectrum Analysis | A module that allows the integration of spectrum analyzers in a DataMiner System. |
 | System Center | A module that contains most of the administrator functionalities in DataMiner, such as management of databases and DMAs. |
 | Dashboards | A module that allows you to view, create and manage dashboards, i.e. pages displaying information about components of the DataMiner System. These dashboards can be viewed in a separate app or embedded in a visual overview. |
-| DMS Apps | DataMiner can have countless custom-made apps, designed specifically for a particular vendor or technology. The possibilities for these apps are endless, so they are not all included in this documentation. |
+| Apps | DataMiner can have countless custom-made apps, designed specifically for a particular vendor or technology. The possibilities for these apps are endless, so they are not all included in this documentation. |
 
 > [!NOTE]
-> For information on the other modules, refer to the module in question in the section [Advanced DataMiner modules](xref:Part4AdvancedModules#advanced-dataminer-modules).
+> For information on the other modules, refer to the module in question in the section [DataMiner modules](xref:Part4AdvancedModules).
 
 ## DataMiner Standard Apps
 

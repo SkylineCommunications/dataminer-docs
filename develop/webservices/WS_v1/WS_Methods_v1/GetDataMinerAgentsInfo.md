@@ -16,4 +16,4 @@ Use this method to retrieve the list of DataMiner Agents in the DataMiner System
 
 | Item | Format | Description |
 |--|--|--|
-| GetDataMinerAgents­InfoResult | Array of [DMAInfo](xref:DMAInfo) | The list of all the DMAs in the DMS. |
+| GetDataMinerAgentsInfoResult | Array of [DMAInfo](xref:DMAInfo) | The list of all the DMAs in the DMS. |

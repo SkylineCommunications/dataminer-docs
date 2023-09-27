@@ -4,18 +4,8 @@ uid: About_elements
 
 # About elements
 
-This section consists of the following topics:
+An element is a DataMiner object that represents a data source monitored by the DataMiner System. Elements serve as the digital twin of devices or products within your network.
 
-- [Element states](xref:Element_states)
+In addition to regular DataMiner elements, different special types of elements exist, such as [hidden elements](xref:Hidden_elements), [virtual elements](xref:Virtual_elements), [dynamic virtual elements](xref:Dynamic_virtual_elements), [replicated elements](xref:Replicated_elements), and [Simulated elements](xref:Simulated_elements). These can all be grouped in views or services.
 
-- [Hidden elements](xref:Hidden_elements)
-
-- [Virtual elements](xref:Virtual_elements)
-
-- [Dynamic virtual elements](xref:Dynamic_virtual_elements)
-
-- [Replicated elements](xref:Replicated_elements)
-
-- [Simulated elements](xref:Simulated_elements)
-
-- [Element properties](xref:Element_properties)
+Elements can have different [states](xref:Element_states) and [element properties](xref:Element_properties) can be configured for them.

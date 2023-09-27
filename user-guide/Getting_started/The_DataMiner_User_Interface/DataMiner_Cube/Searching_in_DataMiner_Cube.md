@@ -4,18 +4,6 @@ uid: Searching_in_DataMiner_Cube
 
 # Searching in DataMiner Cube
 
-This section contains the following topics:
-
-- [Using the Cube Search box](#using-the-cube-search-box)
-
-- [Search type filter](#search-type-filter)
-
-- [Searching for specific DataMiner items](#searching-for-specific-dataminer-items)
-
-- [Special search options](#special-search-options)
-
-- [Searching with wildcard characters](#searching-with-wildcard-characters)
-
 ## Using the Cube Search box
 
 ### From DataMiner 10.0.0/10.0.2 onwards
@@ -34,6 +22,8 @@ Please note the following
 
 - If the text you enter in the box consists of less than three characters, an advanced search will only return exact matches.
 
+- Starting from DataMiner 10.2.12/10.3.0, you can search for a number (e.g "12345") in strings. In previous versions, if you search for a number only, this is always interpreted as a view ID, so that only the view with matching ID is returned.
+
 - In an advanced search, you can use specific keywords to only search for certain DataMiner items. See [Special search options](#special-search-options).
 
     > [!NOTE]
@@ -43,6 +33,7 @@ Please note the following
 
     > [!NOTE]
     > In the Cube system settings, it is possible to disable the client-side search. To do so:
+    >
     > - In a system with a MySQL database, go to *System Center* > *System Settings* > *Search*, clear the checkbox next to *Enable search indexing on the client* and click the *Apply* button.
     > - In a system with a Cassandra database, go to *System Center* > *Search & Indexing*, clear the checkbox next to *Enable search indexing on the client* and click the *Apply* button.
     >
@@ -88,6 +79,7 @@ To search for an item in the DataMiner System using a DataMiner version prior to
     > In the Cube system settings, it is possible to disable the client-side search. To do so, in a system with a MySQL database, go to *System Center* > *System Settings* > *Search*. In a system with at least DataMiner 9.6.4 and a Cassandra database, go to *System Center* > *Search & Indexing*. Clear the checkbox next to *Enable search indexing on the client* and click the *Apply* button. The setting will take effect as soon as you log off in Cube and then log on again.
     >
     > However, note the following:
+    >
     > - This is a system-wide setting, so it will be applied for all users.
     > - If this setting is disabled, up to DataMiner 9.5.0 CU7/9.5.10, no settings will be included in the search results.
 
@@ -107,24 +99,24 @@ If an advanced search returns several kinds of items, it is possible to filter w
 > [!NOTE]
 > When server-side results are loaded, the list will be updated when you select a search type from the search type selection box.
 
-| Search type      | Description                                                                                                                                                                                        |
-|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Application      | DataMiner applications, including custom applications and DataMiner tools, such as the Query Executer.                                                                                             |
-| Document         | DataMiner documents. See [Documents](xref:documents).                                                                                                                         |
-| Element          | All elements. An additional filter allows you to limit the search to elements that are monitored, in alarm, masked, or in a particular alarm state.                                                |
-| Matrix           | Matrix elements. An additional filter allows you to limit the search to elements that are monitored, in alarm, masked, or in a particular alarm state.                                             |
-| Parameter        | All parameters. An additional filter allows you to limit the search to parameters that are or are not trended, or to monitored parameters.                                                         |
-| Protocol         | DataMiner protocols. See [Protocols](xref:Protocols1#protocols).                                                                                                              |
-| Redundancy group | DataMiner redundancy groups and redundancy group templates. See [About redundancy groups](xref:About_redundancy_groups).                                               |
-| Script           | Automation scripts. See [DMS Automation](xref:automation#dms-automation).                                                                                                    |
+| Search type | Description |
+|--|--|
+| Application      | DataMiner applications, including custom applications and DataMiner tools, such as the Query Executer. |
+| Document         | DataMiner documents. See [Documents](xref:About_the_Documents_module). |
+| Element          | All elements. An additional filter allows you to limit the search to elements that are monitored, in alarm, masked, or in a particular alarm state. |
+| Matrix           | Matrix elements. An additional filter allows you to limit the search to elements that are monitored, in alarm, masked, or in a particular alarm state. |
+| Parameter        | All parameters. An additional filter allows you to limit the search to parameters that are or are not trended, or to monitored parameters. |
+| Protocol         | DataMiner protocols. See [Protocols](xref:Protocols1). |
+| Redundancy group | DataMiner redundancy groups and redundancy group templates. See [About redundancy groups](xref:About_redundancy_groups). |
+| Script           | Automation scripts. See [Automation](xref:automation). |
 | Service          | DataMiner Services and Spectrum Analysis measurement points. An additional filter allows you to limit the search to services that are monitored, in alarm, masked, or in a particular alarm state. |
-| Service template | DataMiner service templates. See [Service templates](xref:Service_templates).                                                                                                  |
-| Settings         | Cube settings. See [User settings](xref:User_settings)                                                                                                                                               |
-| SLA              | SLA elements. See [DMS Business Intelligence](xref:sla#dms-business-intelligence).                                                                                                  |
-| User             | User accounts of the DMS. See [About DMS Security](xref:About_DMS_Security).                                                                                                   |
-| User group       | User groups configured in the DMS. See[User groups](xref:User_groups).                                                                                                         |
-| View             | DataMiner views.                                                                                                                                                                                   |
-| Workspaces       | DataMiner workspaces. See[Working with workspaces](xref:Working_with_workspaces).                                                                                                                    |
+| Service template | DataMiner service templates. See [Service templates](xref:Service_templates). |
+| Settings         | Cube settings. See [User settings](xref:User_settings) |
+| SLA              | SLA elements. See [Business Intelligence](xref:sla). |
+| User             | User accounts of the DMS. See [About DataMiner Security](xref:About_DMS_Security). |
+| User group       | User groups configured in the DMS. See[User groups](xref:User_groups). |
+| View             | DataMiner views. |
+| Workspaces       | DataMiner workspaces. See[Working with workspaces](xref:Working_with_workspaces). |
 
 ## Searching for specific DataMiner items
 
@@ -289,6 +281,7 @@ You can use the following two wildcard characters:
 - ?, which represents a single character.
 
 > [!NOTE]
+>
 > - The expression must always match the entire string (e.g. “a\*” will not match “bar”).
 > - The checks are executed using the invariant culture and ignoring case.
 > - These characters are not supported for the quick search from the Cube search box, only for the advanced search.
@@ -301,15 +294,15 @@ London*
 
 - Matches ...
 
-    - London-Amplifier-1
+  - London-Amplifier-1
 
-    - London-Amplifier-2
+  - London-Amplifier-2
 
 - Does not match ...
 
-    - NewYork-Amplifier-1
+  - NewYork-Amplifier-1
 
-    - East-London-Amplifier
+  - East-London-Amplifier
 
 ```txt
 London-Amplifier-?
@@ -317,11 +310,11 @@ London-Amplifier-?
 
 - Matches ...
 
-    - London-Amplifier-1
+  - London-Amplifier-1
 
 - Does not match ...
 
-    - London-Amplifier-22
+  - London-Amplifier-22
 
 ```txt
 *-Amplifier-?
@@ -329,6 +322,6 @@ London-Amplifier-?
 
 - Matches ...
 
-    - London-Amplifier-1
+  - London-Amplifier-1
 
-    - NewYork-Amplifier-1
+  - NewYork-Amplifier-1

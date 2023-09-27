@@ -18,4 +18,4 @@ Use this method to retrieve a list of the available shared and private presets f
 
 | Item | Format | Description |
 |--|--|--|
-| GetSpectrumPresets­Result | Array of DMASpectrum­Preset objects | An array of DMASpectrumPreset objects, each containing the name of the preset and a boolean indicating whether the preset is shared. |
+| GetSpectrumPresetsResult | Array of DMASpectrumPreset objects | An array of DMASpectrumPreset objects, each containing the name of the preset and a boolean indicating whether the preset is shared. |

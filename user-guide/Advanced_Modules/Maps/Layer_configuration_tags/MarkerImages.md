@@ -54,7 +54,8 @@ With this optional attribute, you can specify whether or not the marker image is
 
 These optional attributes were used to respectively specify the path to a shadow image file, specify its width, specify its height, and specify the point of the shadow image that has to be on top of the map location it has to mark.
 
-However, marker shadows are no longer supported since version 3.14 of the Google Maps JavaScript API. Existing shadow marker definitions are now ignored.
+> [!NOTE]
+> Marker shadows are no longer supported since version 3.14 of the Google Maps JavaScript API. Existing shadow marker definitions are now ignored.
 
 ### shapeType
 

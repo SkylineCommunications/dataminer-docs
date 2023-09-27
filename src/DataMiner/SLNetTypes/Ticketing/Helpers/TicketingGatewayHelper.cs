@@ -30,7 +30,7 @@ namespace Skyline.DataMiner.Net.Ticketing
 	///		Script()
 	///		{
 	///			// Connect to SLNet. Protocols and automation scripts do not need this.
-	///			connection = new RemotingConnection("localhost");
+	///			connection = ConnectionSettings.GetConnection("localhost");
 	///			connection.Authenticate();
 	///
 	///			helper = new TicketingGatewayHelper();

@@ -17,4 +17,4 @@ Use this method to retrieve the list of all the masked alarms of a particular vi
 
 | Item | Format | Description |
 |--|--|--|
-| GetMaskedAlarmsFor­ViewResult | Array of [DMAAlarm](xref:DMAAlarm) | The list of all the masked alarms of the specified view. |
+| GetMaskedAlarmsForViewResult | Array of [DMAAlarm](xref:DMAAlarm) | The list of all the masked alarms of the specified view. |

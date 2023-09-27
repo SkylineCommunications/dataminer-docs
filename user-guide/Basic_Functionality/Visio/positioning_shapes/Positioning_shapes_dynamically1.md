@@ -416,7 +416,10 @@ By default, when you click a connection, a KPI window appears. However, you can 
 | open a new window  | VdxPage                            | Pagename\|Window |
 | open a pop-up      | VdxPage                            | Pagename\|Popup  |
 
-Also, by adding an extra shape data field of type **SetVar**, you can specify that a session variable is set the moment a connection is clicked.
+> [!NOTE]
+> From DataMiner 10.2.11/10.3.0, [dynamic placeholders](xref:Placeholders_for_variables_in_shape_data_values) are supported in the *NavigatePage* shape data value.
+
+By adding an extra shape data field of type **SetVar**, you can specify that a session variable is set the moment a connection is clicked.
 
 In the **SetVar** statement, you can use the following placeholders:
 

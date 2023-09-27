@@ -20,6 +20,9 @@ In case of multiple connections, you can use this attribute to specify the conne
 
 Default port: 0
 
+> [!NOTE]
+> In case extra [threads](xref:Protocol.Threads.Thread) are defined in the protocol, make sure every poll group has this connection attribute defined to indicate which thread to use. 
+
 Example:
 
 ```xml

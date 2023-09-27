@@ -25,7 +25,7 @@ Use this method to retrieve only masked service alarms added or changed since a 
 
 | Item | Format | Description |
 |--|--|--|
-| GetMaskedAlarmsFor­ServiceCachedResult | [DMACache](xref:DMACache) | The masked service alarms added or changed since the specified point in time. |
+| GetMaskedAlarmsForServiceCachedResult | [DMACache](xref:DMACache) | The masked service alarms added or changed since the specified point in time. |
 
 > [!NOTE]
 > In this case, the [DMACache](xref:DMACache) object will contain an array of [DMAAlarm](xref:DMAAlarm) objects.

@@ -20,4 +20,4 @@ Available from DataMiner 10.0.7 onwards.
 
 | Item | Format | Description |
 |--|--|--|
-| GetActiveAlarmsFor­ServiceV2Result | Array of [DMAAlarm](xref:DMAAlarm) | The active alarms of the specified service, as well as the alarm cache status. |
+| GetActiveAlarmsForServiceV2Result | Array of [DMAAlarm](xref:DMAAlarm) | The active alarms of the specified service, as well as the alarm cache status. |

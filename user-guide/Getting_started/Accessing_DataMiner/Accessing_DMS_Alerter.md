@@ -1,8 +1,8 @@
 ---
-uid: Accessing_DMS_Alerter
+uid: Accessing_Alerter
 ---
 
-# Accessing DMS Alerter
+# Accessing Alerter
 
 ## Installing the software
 
@@ -14,10 +14,10 @@ uid: Accessing_DMS_Alerter
 
 1. Follow the instructions in the *Skyline Alerter Setup Wizard* to complete the installation.
 
-## Starting DMS Alerter for the first time
+## Starting Alerter for the first time
 
 > [!TIP]
-> See also: [Setting your startup preferences for DMS Alerter](xref:Configuring_DMS_Alerter#setting-your-startup-preferences-for-dms-alerter)
+> See also: [Setting your startup preferences for Alerter](xref:Setting_Alerter_startup_preferences)
 
 1. Open the *Skyline Alerter* application.
 
@@ -31,7 +31,7 @@ uid: Accessing_DMS_Alerter
 
 1. Click *Add Account*.
 
-DMS Alerter will connect to the DataMiner Agent you specified. Two tabs will appear in the user interface:
+Alerter will connect to the DataMiner Agent you specified. Two tabs will appear in the user interface:
 
 - Alarms
 

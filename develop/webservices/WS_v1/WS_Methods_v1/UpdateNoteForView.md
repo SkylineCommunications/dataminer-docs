@@ -18,4 +18,4 @@ Use this method to update a specific note for a particular view.
 
 | Item                     | Format  | Description         |
 |--------------------------|---------|---------------------|
-| UpdateNoteForView­Result | Integer | The ID of the note. |
+| UpdateNoteForViewResult | Integer | The ID of the note. |

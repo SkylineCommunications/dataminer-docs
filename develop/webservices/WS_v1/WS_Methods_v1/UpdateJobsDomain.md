@@ -17,4 +17,4 @@ Use this method to update a jobs domain. Available from DataMiner 10.0.9 onwards
 
 | Item                    | Format | Description                       |
 |-------------------------|--------|-----------------------------------|
-| UpdateJobsDomain­Result | String | The ID of the updated job domain. |
+| UpdateJobsDomainResult | String | The ID of the updated job domain. |

@@ -6,6 +6,8 @@ uid: I-DOCSIS_parameters_cable_modem
 
 This page contains an overview of the Cable Modem parameters available in the I-DOCSIS branch of the EPM Solution.
 
+These parameters are displayed for the Cable Modem level in the I-DOCSIS dashboards.
+
 ## CM Info
 
 - **MAC \[IDX]**: Direct value. The MAC address of the cable modem.
@@ -28,9 +30,11 @@ This page contains an overview of the Cable Modem parameters available in the I-
 
   OID: 1.3.6.1.2.1.1.5.0.
 
-- **DOCSIS Version**: Direct value. The DOCSIS capability of the device. Possible Values: *DOCSIS 1.x*, *DOCSIS 2.0*, *DOCSIS 3.0*, and *DOCSIS 3.1*.
+- **DOCSIS Version**: Direct value. The DOCSIS capability of the device. Possible Values: *Unknown*, *DOCSIS 1.0*, *DOCSIS 1.1*, *DOCSIS 2.0*, *DOCSIS 3.0*, and *DOCSIS 3.1*.
 
   OID: 1.3.6.1.2.1.10.127.1.1.5.
+
+  The *Unknown* value indicates that the DOCSIS version could not be retrieved from the device (e.g. the device is not reachable).
 
 - **Hardware Version**: Direct value. The hardware version of the cable modem.
 
@@ -46,7 +50,7 @@ This page contains an overview of the Cable Modem parameters available in the I-
 
 - **Memory Size**: Calculated. The memory size of the cable modem.
 
-  Calculated as follows: Total Memory Size = (MemorySize * MemoryUnits) / 1648576. 
+  Calculated as follows: Total Memory Size = (MemorySize * MemoryUnits) / 1648576.
 
   - Memory Size: OID 1.3.6.1.2.1.25.2.3.1.5
   - MemoryUnits: OID 1.3.6.1.2.1.25.2.3.1.4
@@ -71,10 +75,6 @@ This page contains an overview of the Cable Modem parameters available in the I-
 
 - **Last Successful CMTS Poll**: Calculated. The date and time of the last successful polling cycle based on Status, Last Registration Time, and System ID returning valid data.
 
-- **Status**: Direct value. OID: 1.3.6.1.4.1.4491.2.1.20.1.3.1.6. Operational.
-
-- **Last Registration Time**: Direct value. OID: 1.3.6.1.4.1.4491.2.1.20.1.3.1.14.
-
 ## Subscriber
 
 - **IPv4 Address**: Direct value. The IPV4 address of the cable modem.
@@ -96,6 +96,18 @@ This page contains an overview of the Cable Modem parameters available in the I-
   The EPM engine makes this association via import operation.
 
 - **Service Group \[Fiber Node] Name**: Direct value.
+
+  The EPM engine makes this association via import operation.
+
+- **Node Name**: Direct value. The node device associated with the cable modem.
+
+  The EPM engine makes this association via import operation.
+
+- **Amplifier Name**: Direct value. The amplifier device associated with the cable modem.
+
+  The EPM engine makes this association via import operation.
+
+- **TAP Name**: Direct value. The TAP device associated with the cable modem.
 
   The EPM engine makes this association via import operation.
 

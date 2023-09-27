@@ -19,4 +19,4 @@ Use this method to retrieve the parameter IDs of the parameters containing infor
 
 | Item | Format | Description |
 |--|--|--|
-| GetButtonPanelInfo­Result | [DMAButtonPanelInfo](xref:DMAButtonPanelInfo) | The parameter IDs of the parameters containing the button panel information. |
+| GetButtonPanelInfoResult | [DMAButtonPanelInfo](xref:DMAButtonPanelInfo) | The parameter IDs of the parameters containing the button panel information. |

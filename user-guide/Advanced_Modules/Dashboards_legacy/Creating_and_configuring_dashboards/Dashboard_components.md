@@ -222,7 +222,7 @@ Overview of active alarms or alarms in a recent fixed or sliding window.
 
 Component-specific options:
 
-- *Mode*: Select the mode for the alarm list in the drop-down list. You can choose to display active alarms, or historic alarms in different time ranges.
+- *Mode*: Select the mode for the alarm list in the drop-down list. You can choose to display active alarms, or history alarms in different time ranges.
 
 - *Highlight time*: Enter the number of seconds you want new alarms to be highlighted.
 

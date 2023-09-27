@@ -58,18 +58,13 @@ The information in this tab is displayed in several separate blocks.
 
         - The time of the DMA or the grandmaster clock. A toggle button allows you to switch between these. The DMA time is the local time of the DataMiner Agent, which is not equal to the PTP time, unless the DataMiner Agent is synchronized with the PTP domain.
 
-    - Next to this, two tabs are available:
+    - Next to this, the *Settings GM* block is displayed. This shows the *Settings*, *BMCA* (Best Master Clock Algorithm), and *Message Rates* information related to the grandmaster. To the right of each column header, a list icon is available that opens a filtered alarm tab when clicked. On the right side of each column, aggregated alarm information is displayed if available. This information is aggregated either for all nodes in the configured PTP domain, or for the entire system if no domain is configured.
 
-        - In the *Settings GM* tab, the *Settings*, *BMCA* (Best Master Clock Algorithm) and *Message Rates* columns show the information related to the grandmaster.
-
-        - In the *Nodes Summary* tab, these same columns show the aggregated alarm information for all nodes in the configured PTP domain, or in the entire system if no domain is configured. Next to each parameter, a list icon is available that opens a filtered alarm tab when clicked.
-
-        - A number of parameters in these tabs are of specific note. For more information on these parameters, see [Special PTP parameters in the Summary tab](#special-ptp-parameters-in-the-summary-tab)
-
-        - Next to the tab names, an icon is available that can be clicked to switch between “play” and “stop” mode. In “play” mode, the app will automatically switch between the two tabs at regular intervals. In “stop” mode, only the last selected tab remains displayed.
-
-        > [!NOTE]
-        > The *Delay Response* parameter is retrieved from the PTP probe instead of the grandmaster. Clicking the probe icon will open a tool tip with this information.
+      > [!NOTE]
+      >
+      > - A number of parameters in this block are of specific note. For more information on these parameters, see [Special PTP parameters in the Summary tab](#special-ptp-parameters-in-the-summary-tab).
+      > - The *Delay Response* parameter is retrieved from the PTP probe instead of the grandmaster. Clicking the probe icon will open a tool tip with this information.
+      > - Prior to PTP 1.1.3 CU1, the aggregated alarm information is displayed in a separate *Nodes Summary* tab, which also contains the list icons to open filtered alarm tabs. Next to the tab names, an icon is available that can be clicked to switch between “play” and “stop” mode. In “play” mode, the app will automatically switch between the two tabs at regular intervals. In “stop” mode, only the last selected tab remains displayed.
 
     - In the top-right corner, the name of the current grandmaster interface is displayed. Click the cogwheel button next to this name to select a different interface.
 
@@ -173,13 +168,9 @@ Log-scaled statistic that represents the jitter and wander of the clock’s osci
 
 This tab consists of the following subtabs:
 
-- **Summary**: Lists all PTP nodes in the system, grouped by PTP role, with two icons for each node:
+- **Summary**: Lists all PTP nodes in the system, grouped by PTP role, with icons showing the element alarm state for each node. Clicking such an icon will open the element card for this device.
 
-    - An icon showing the element alarm state. Clicking this icon will open the element card for this device.
-
-    - An icon showing the overall alarm state of the PTP-related parameters. Clicking this icon will open an alarm tab with the relevant alarms.
-
-    For each device type, the nodes are sorted by severity.
+  For each device type, the nodes are sorted by severity.
 
 - **Grandmasters**: Allows you to compare a number of parameters as well as the PTP interfaces of two grandmaster clocks.
 
@@ -201,7 +192,7 @@ This tab consists of the following subtabs:
 
 - **Transparent clocks**: Lists all transparent clocks in the PTP topology.
 
-- **Slaves**: Lists all slaves in the PTP topology, each with a number of PTP-related parameters.
+- **Slave clocks**: Lists all slave clocks in the PTP topology, each with a number of PTP-related parameters.
 
 - **Analyzers**: Allows you to compare a number of parameters of two PTP analyzers, i.e. slave devices that have been specially assigned to monitor and analyze the PTP signal they retrieve from a clock.
 

@@ -11,27 +11,22 @@ It is possible to modify a DataMiner package by changing the packet extension to
 The following types of DataMiner packages are available:
 
 - [Upgrade package (.dmupgrade)](#upgrade-package-dmupgrade)
-
 - [Update package (.dmupdate)](#update-package-dmupdate)
-
 - [Backup package (.dmbackup)](#backup-package-dmbackup)
-
 - [Application package (.dmapp)](#application-package-dmapp)
-
 - [Protocol package (.dmprotocol)](#protocol-package-dmprotocol)
-
 - [Import package (.dmimport)](#import-package-dmimport)
 
 ## Upgrade package (.dmupgrade)
 
 Package containing all files necessary to upgrade a DataMiner Agent to a newer version.
 
-- This type of file is published on DCP by Skyline’s Quality Assurance Department.
+- This type of file is published on dataminer.services by Skyline’s Quality Assurance Department.
 
 - File extension: *.dmupgrade*
 
 > [!NOTE]
-> The maximum upload size of upgrade packages is limited depending on the DataMiner version, but it is possible to increase this limit. See [Increasing the maximum upload size for upgrade packages in a DMS](xref:SLNetClientTest_tool_advanced_procedures#increasing-the-maximum-upload-size-for-upgrade-packages-in-a-dms).
+> The maximum upload size of upgrade packages is limited depending on the DataMiner version, but it is possible to increase this limit. See [Increasing the maximum upload size for upgrade packages in a DMS](xref:SLNetClientTest_increasing_max_upload).
 
 > [!TIP]
 > See also: [Upgrade packages](xref:TOOUpgradePackageContent)
@@ -40,7 +35,7 @@ Package containing all files necessary to upgrade a DataMiner Agent to a newer v
 
 Package containing minor updates for an existing release. Update packages contain mostly bug fixes, but can also contain new features. The packages are very similar to upgrade packages, but they only contain the files that have changed compared to the base version for which they are an update.
 
-- This type of file is published on DCP by Skyline’s Quality Assurance Department.
+- This type of file is published on dataminer.services by Skyline’s Quality Assurance Department.
 
 - File extension: *.dmupdate*
 
@@ -66,7 +61,7 @@ Package containing all files necessary to install a particular DataMiner app on 
 > - .dmapp packages can also contain report templates, dashboards and aggregation rules.
 
 > [!TIP]
-> See also: [Application packages](xref:TOOApplicationPackages)
+> See also: [Application packages](xref:ApplicationPackages)
 
 ## Protocol package (.dmprotocol)
 

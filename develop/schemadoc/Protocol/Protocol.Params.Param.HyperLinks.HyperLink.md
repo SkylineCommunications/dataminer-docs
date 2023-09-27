@@ -54,7 +54,7 @@ If you specify the following, in the right-click menu of every alarm of the para
 <HyperLink valueParsing="">http://dma_id/DataDisplay.htm?id=[DMAID]/[EID]</HyperLink>
 ```
 
-If you specify the following, the name of the Automation script, indicated by the placeholder “[1]” in the val­ueParsing attribute, will appear at the end of the command name displayed on the shortcut menu. So, if you right-click an alarm or an information event of which the value starts with, for example, “Set by Automation-script MyScript to”, then the shortcut menu will contain a custom command named “ExecuteScript.exe -n MyScript”:
+If you specify the following, the name of the Automation script, indicated by the placeholder “[1]” in the valueParsing attribute, will appear at the end of the command name displayed on the shortcut menu. So, if you right-click an alarm or an information event of which the value starts with, for example, “Set by Automation-script MyScript to”, then the shortcut menu will contain a custom command named “ExecuteScript.exe -n MyScript”:
 
 ```xml
 <HyperLink valueParsing="Set by Automation Script [1] to *">ExecuteScript.exe -n [1]</HyperLink>

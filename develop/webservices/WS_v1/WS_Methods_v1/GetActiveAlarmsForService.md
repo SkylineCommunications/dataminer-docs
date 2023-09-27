@@ -16,6 +16,6 @@ Use this method to retrieve all the active alarms of a particular service.
 
 ## Output
 
-| Item                             | Format                                                                   | Description                                 |
-|----------------------------------|--------------------------------------------------------------------------|---------------------------------------------|
-| GetActiveAlarmsFor­ServiceResult | Array of [DMAAlarm](xref:DMAAlarm) | The active alarms of the specified service. |
+| Item | Format | Description |
+|--|--|--|
+| GetActiveAlarmsForServiceResult | Array of [DMAAlarm](xref:DMAAlarm) | The active alarms of the specified service. |

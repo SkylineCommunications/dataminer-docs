@@ -18,4 +18,4 @@ Use this method to retrieve all the properties for a particular service.
 
 | Item | Format | Description |
 |--|--|--|
-| GetPropertiesFor­ServiceResult | Array of [DMAProperty](xref:DMAProperty) | All the properties for the specified service. |
+| GetPropertiesForServiceResult | Array of [DMAProperty](xref:DMAProperty) | All the properties for the specified service. |

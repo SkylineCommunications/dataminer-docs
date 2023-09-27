@@ -19,4 +19,4 @@ Use this method to update a specific note for a particular service.
 
 | Item                        | Format  | Description         |
 |-----------------------------|---------|---------------------|
-| UpdateNoteFor­ServiceResult | Integer | The ID of the note. |
+| UpdateNoteForServiceResult | Integer | The ID of the note. |

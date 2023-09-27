@@ -18,4 +18,4 @@ Use this method to retrieve the first letters of all the elements in a view.
 
 | Item                              | Format          | Description                                                  |
 |-----------------------------------|-----------------|--------------------------------------------------------------|
-| GetElementIndexPage­ForViewResult  | Array of string | The first letters of all the elements in the specified view. |
+| GetElementIndexPageForViewResult  | Array of string | The first letters of all the elements in the specified view. |

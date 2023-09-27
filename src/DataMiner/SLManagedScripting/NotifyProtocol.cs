@@ -99,7 +99,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="protocol">Instance that implements <see cref="SLProtocol"/>.</param>
 		/// <param name="tableId">The ID of the table parameter.</param>
 		/// <returns>The number of rows left. In case the ClearAllKeys method has been invoked specifying an empty table, -1 is returned.</returns>
-		/// <remarks>This method first retrieves all primary keys from the table using a NotifyProtocol type 168 [NT_GET_INDEXES](xref:NT_GET_INDEXES) call. If there is at least on primary key present, the method performs a NofityProtoocl type 156 call [NT_DELETE_ROW](xref:NT_DELETE_ROW), removing all rows.</remarks>
+		/// <remarks>This method first retrieves all primary keys from the table using a NotifyProtocol type 168 [NT_GET_INDEXES](xref:NT_GET_INDEXES) call. If there is at least one primary key present, the method performs a NofityProtoocl type 156 call [NT_DELETE_ROW](xref:NT_DELETE_ROW), removing all rows.</remarks>
 		[Obsolete("Use protocol.ClearAllKeys instead", false)]
 		public static object ClearAllKeys(SLProtocol protocol, int tableId)
 		{
@@ -246,6 +246,9 @@ namespace Skyline.DataMiner.Scripting
 		/// <item>
 		/// <description>This call is to be used with columns of type <c>retrieved</c>. In case other column types are present between the specified columns (e.g. columns of type "custom"), these other columns will be skipped.</description>
 		/// </item>
+		///			<item>
+		///				<description>From DataMiner 10.2.9 onwards (RN 33849), if the DateTime.Kind property of <paramref name="timeInfo"/> is unspecified, the timestamp will be handled as local time.</description>
+		///			</item>
 		/// </list>
 		/// </remarks>
 		[Obsolete("Use protocol.FillArray instead", false)]
@@ -279,6 +282,9 @@ namespace Skyline.DataMiner.Scripting
 		/// <item>
 		/// <description>This call is to be used with columns of type <c>retrieved</c>. In case other column types are present between the specified columns (e.g. columns of type "custom"), these other columns will be skipped.</description>
 		/// </item>
+		///			<item>
+		///				<description>From DataMiner 10.2.9 onwards (RN 33849), if the DateTime.Kind property of <paramref name="timeInfo"/> is unspecified, the timestamp will be handled as local time.</description>
+		///			</item>
 		/// </list>
 		/// </remarks>
 		[Obsolete("Use protocol.FillArray instead", false)]
@@ -346,6 +352,9 @@ namespace Skyline.DataMiner.Scripting
 		///			<item>
 		///				<description>In case the data contains null references, the corresponding cells will be cleared.</description>
 		///			</item>
+		///			<item>
+		///				<description>From DataMiner 10.2.9 onwards (RN 33849), if the DateTime.Kind property of <paramref name="timeInfo"/> is unspecified, the timestamp will be handled as local time.</description>
+		///			</item>
 		///		</list>
 		/// </remarks>
 		[Obsolete("Use protocol.FillArray instead", false)]
@@ -411,6 +420,9 @@ namespace Skyline.DataMiner.Scripting
 		///			<item>
 		///				<description>This call is to be used with columns of type "retrieved". In case other column types are present between the specified columns (e.g. columns of type "custom"), these other columns will be skipped.</description>
 		///			</item>
+		///			<item>
+		///				<description>From DataMiner 10.2.9 onwards (RN 33849), if the DateTime.Kind property of <paramref name="timeInfo"/> is unspecified, the timestamp will be handled as local time.</description>
+		///			</item>
 		///		</list>
 		/// </remarks>
 		[Obsolete("Use protocol.FillArray instead", false)]
@@ -470,6 +482,9 @@ namespace Skyline.DataMiner.Scripting
 		///			<item>
 		///				<description>This call is to be used with columns of type "retrieved". In case other column types are present between the specified columns (e.g. columns of type "custom"), these other columns will be skipped.</description>
 		///			</item>
+		///			<item>
+		///				<description>From DataMiner 10.2.9 onwards (RN 33849), if the DateTime.Kind property of <paramref name="timeInfo"/> is unspecified, the timestamp will be handled as local time.</description>
+		///			</item>
 		///		</list>
 		/// </remarks>
 		[Obsolete("Use protocol.FillArray instead", false)]
@@ -493,6 +508,9 @@ namespace Skyline.DataMiner.Scripting
 		///		<list type="bullet">
 		///			<item><description>This method acts as a wrapper for a NotifyProtocol type 220 call ("NT_FILL_ARRAY_WITH_COLUMN").</description></item>
 		///			<item><description>In case the values array only contains one value, this value will be used for all specified primary keys.</description></item>
+		///			<item>
+		///				<description>From DataMiner 10.2.9 onwards (RN 33849), if the DateTime.Kind property of <paramref name="timeInfo"/> is unspecified, the timestamp will be handled as local time.</description>
+		///			</item>
 		///		</list>
 		/// </remarks>
 		public static object FillArrayWithColumn(SLProtocol protocol, int tableId, int columnPid, object[] keys, object[] values, DateTime? timeInfo)

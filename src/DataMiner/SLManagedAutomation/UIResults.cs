@@ -66,10 +66,10 @@ namespace Skyline.DataMiner.Automation
 		public bool GetChecked(string key, string value) { return false; }
 
 		/// <summary>
-		/// Gets the date/time that was selected in the specified destination variable that is linked to a Calender item.
+		/// Gets the date/time that was selected in the specified destination variable that is linked to a Calendar item.
 		/// </summary>
 		/// <param name="key">The name of the destination variable.</param>
-		/// <returns>The date/time that was selected in the specified destination variable that is linked to a Calender item.</returns>
+		/// <returns>The date/time that was selected in the specified destination variable that is linked to a Calendar item.</returns>
 		/// <example>
 		/// <code>
 		/// UIResults uir = null;
@@ -246,7 +246,7 @@ namespace Skyline.DataMiner.Automation
 		/// <summary>
 		/// Returns a value indicating whether the user changed the value of a specific dialog box item.
 		/// </summary>
-		/// <param name="key">The destination var that is linked to the specific dialog box item.</param>
+		/// <param name="key">The destination variable that is linked to the specific dialog box item.</param>
 		/// <returns><c>true</c> if the user changed the value; otherwise, <c>false</c>.</returns>
 		/// <example>
 		/// <code>
@@ -293,5 +293,33 @@ namespace Skyline.DataMiner.Automation
 		/// </note>
 		/// </remarks>
 		public bool WasOnChange(string key) { return false; }
+		
+		/// <summary>
+		/// Returns true if a dialog box item with the given destination variable and with the property WantsOnFocusLoss set to true has lost focus.
+		/// </summary>
+		/// <param name="key">The destination variable that is linked to the specific dialog box item.</param>
+		/// <returns><c>true</c> if the dialog box item has lost focus; otherwise, <c>false</c>.</returns>
+		/// <remarks>
+		/// <note type="note">
+		/// For this method ever to return true, you have to set .WantsOnFocusLoss to true.
+		/// </note>
+		/// </remarks>
+		public bool WasOnFocusLost(string key) { return false; }
+		
+		
+		/// <summary>
+		/// Returns true if a download button with the given destination variable and with the property ReturnWhenDownloadIsStarted on the AutomationDownloadButtonOptions set to true has started the file download.
+		/// </summary>
+		/// <param name="key">The destination variable that is linked to the specific download button.</param>
+		/// <returns><c>true</c> if the download button has started the download; otherwise, <c>false</c>.</returns>
+		/// <remarks>
+		/// <note type="note">
+		/// For this method ever to return true, you have to set .ReturnWhenDownloadIsStarted to true on the AutomationDownloadButtonOptions, in the ConfigOptions of the UIBlockDefinition.
+		/// </note>
+		/// <note type="note">
+		/// Once the download is started, the control is given to the browser, so there is no way to know when the download is finished.
+		/// </note>
+		/// </remarks>
+		public bool WasOnDownloadStarted(string key) { return false; }
 	}
 }

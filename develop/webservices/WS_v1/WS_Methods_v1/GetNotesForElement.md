@@ -18,4 +18,4 @@ Use this method to retrieve the notes for a particular element.
 
 | Item | Format | Description |
 |--|--|--|
-| GetNotesForElement­Result | Array of [DMANote](xref:DMANote) | The notes for the specified element. |
+| GetNotesForElementResult | Array of [DMANote](xref:DMANote) | The notes for the specified element. |

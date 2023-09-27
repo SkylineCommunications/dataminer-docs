@@ -18,4 +18,4 @@ Use this method to retrieve all the Data Display pages of a particular element.
 
 | Item | Format | Description |
 |--|--|--|
-| GetPagesForElement­Result | Array of [DMAElementPage](xref:DMAElementPage) | All the Data Display pages of the specified element. |
+| GetPagesForElementResult | Array of [DMAElementPage](xref:DMAElementPage) | All the Data Display pages of the specified element. |

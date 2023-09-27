@@ -8,7 +8,7 @@ When you right-click the DataMiner Taskbar Utility system tray icon, a menu appe
 
 - **Launch \> DataMiner Cube**
 
-    Starts DataMiner Cube.
+    Starts DataMiner Cube as a web application.
 
 - **Launch \> Tools \> Client Test**
 
@@ -37,7 +37,9 @@ When you right-click the DataMiner Taskbar Utility system tray icon, a menu appe
     Allows you to upgrade the DataMiner Agents in your DataMiner System.
 
     > [!NOTE]
-    > If an upgrade is started using the DataMiner Taskbar Utility, from DataMiner 9.6.5 onwards, a button is available that allows you to abort the upgrade in progress. However, be very careful with this functionality, as aborting an upgrade can potentially cause a DMA to no longer start up.
+    >
+    > - If an upgrade is started using the DataMiner Taskbar Utility, from DataMiner 9.6.5 onwards, a button is available that allows you to abort the upgrade in progress. However, be very careful with this functionality, as aborting an upgrade can potentially cause a DMA to no longer start up.
+    > - From DataMiner 10.1.0 [CU19]/10.2.0 [CU7]/10.2.10 onwards, this option also allows you to install .dmapp packages. In earlier DataMiner versions, only .dmupgrade packages are supported.
 
     > [!TIP]
     > See also:
@@ -58,17 +60,6 @@ When you right-click the DataMiner Taskbar Utility system tray icon, a menu appe
     > [!TIP]
     > See also:
     > [Restoring a DMA using the DataMiner Taskbar Utility](xref:Restoring_a_DMA_using_the_DataMiner_Taskbar_Utility)
-
-- **Maintenance \> Rollback**
-
-    Allows you to roll back the software version of a DataMiner Agent to a previously installed version.
-
-    > [!NOTE]
-    > This option is no longer available from DataMiner 10.0.0/10.0.3 onwards. To downgrade, install the upgrade package of the version you want to downgrade to. See [Upgrading a DataMiner Agent using DataMiner Taskbar Utility](xref:Upgrading_a_DataMiner_Agent_using_DataMiner_Taskbar_Utility).
-
-    > [!TIP]
-    > See also:
-    > [Rolling back an upgrade using the DataMiner Taskbar Utility](xref:Rolling_back_a_DataMiner_upgrade#rolling-back-an-upgrade-using-the-dataminer-taskbar-utility)
 
 - **Maintenance \> Upload dmprotocol**
 

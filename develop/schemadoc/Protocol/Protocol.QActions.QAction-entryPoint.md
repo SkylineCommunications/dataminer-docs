@@ -18,8 +18,9 @@ string
 
 This attribute contains the name(s) of the entry point methods. In case multiple entry points are defined, these are separated by a semicolon (“;”). The number and order of the entry point methods must correspond with the parameter IDs defined in the triggers attribute.
 
-## Examples
+Prior to DataMiner 10.2.9, only one instance was retained per QAction. The entry point methods therefore all had to be part of the same class. From DataMiner 10.2.9 onwards (RN 33965), this is no longer a requirement: entry point methods are allowed to be part of different classes.
 
+## Examples
 
 ```xml
 <QAction id="2" triggers="21;22" entryPoint="Method1;Method2" encoding="csharp">

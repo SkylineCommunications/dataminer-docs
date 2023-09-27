@@ -18,4 +18,4 @@ This method allows you to test a connection to a device, without actually creati
 
 | Item | Format | Description |
 |--|--|--|
-| TestElementDevice­ConnectivityResult | Array of string | The result of the connection test, containing the connection state as well as any errors that were returned. |
+| TestElementDeviceConnectivityResult | Array of string | The result of the connection test, containing the connection state as well as any errors that were returned. |

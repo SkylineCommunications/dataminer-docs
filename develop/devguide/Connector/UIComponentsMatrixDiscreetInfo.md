@@ -24,4 +24,4 @@ It is possible to capture these changes in a protocol by defining a parameter of
 </Param>
 ```
 
-A QAction triggering on this parameter can then be implemented to process the change. The parameter value will be updated on each change made on the matrix. For more information on how to process the parameter value, see discreet info.
+A QAction triggering on this parameter can then be implemented to process the change. The parameter value will be updated on each change made on the matrix. For more information on how to process the parameter value, see [discreet info](xref:Protocol.Params.Param.Type#discreet-info).

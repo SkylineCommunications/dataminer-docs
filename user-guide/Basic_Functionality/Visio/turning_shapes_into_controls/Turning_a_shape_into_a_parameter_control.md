@@ -36,7 +36,7 @@ Add a shape data field of type **ParameterControl** to the shape.
   ```
 
   > [!NOTE]
-  > If you plan to show an entire table or a partial table in Visio, make sure that table is not a hidden table. Hidden tables are tables that are not shown on the Cube card of the element or service they belong to.
+  > If you plan to show an entire table or a [partial table](xref:Table_parameters#partial-tables) in Visio, make sure that table is not a hidden table. Hidden tables are tables that are not shown on the Cube card of the element or service they belong to.
 
   See below for more information on table row key syntax.
 

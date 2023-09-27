@@ -17,4 +17,4 @@ Use this method to count the number of views in a particular parent view.
 
 | Item                          | Format  | Description                                        |
 |-------------------------------|---------|----------------------------------------------------|
-| GetViewsForParent­CountResult | Integer | The number of views for the specified parent view. |
+| GetViewsForParentCountResult | Integer | The number of views for the specified parent view. |

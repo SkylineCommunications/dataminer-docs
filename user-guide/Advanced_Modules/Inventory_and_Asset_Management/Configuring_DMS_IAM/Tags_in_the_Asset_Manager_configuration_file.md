@@ -47,8 +47,9 @@ This tag is optional. However, keep in mind that if it is left empty or if it is
 For an example, refer to the *\<Security>* section in the example (see [Example of an Asset Manager configuration file](xref:Example_of_an_Asset_Manager_configuration_file)). In this example, Administrators have Read access to all tables (*\<Read base="allowAll">*) except TableX (*\<Deny>TableX\</Deny>*) and Write access to TableY (*\<Write base="denyAll">\<Allow>TableY\</Allow>\</Write>*). Operators have Read access to all tables (*\<Read base="allowAll" />*) and Write access to none of the tables (*\<Write base="denyAll" />*).
 
 > [!NOTE]
+>
 > - It is also possible to configure security for the columns in each table with a \<Security> tag within the \<Table> tag.
-> - Security is configured per group, not per user.
+> - Security is configured per group, not per user. When you add a security group of the domain, use the down-level logon name, i.e. the domain name followed by a backslash and the group name. For example: `DomainName\GroupName`. Local DataMiner groups can be referenced by their group name.
 > - If you grant Write access to a specific table, then users will be able to add and delete rows in that table (using dedicated buttons) and edit data in existing rows (by clicking inside cells).
 > - If you specify multiple table names within an Allow or a Deny tag, separate them by commas.
 > - Multiple Allow tags or multiple Deny tags are not allowed within the same Read or Write tag.

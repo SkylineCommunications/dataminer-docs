@@ -24,7 +24,7 @@ Use this method to retrieve only masked view alarms added or changed since a par
 
 | Item | Format | Description |
 |--|--|--|
-| GetMaskedAlarmsFor­ViewCachedResult | [DMACache](xref:DMACache) | The masked alarms added or changed since the specified point in time. | |
+| GetMaskedAlarmsForViewCachedResult | [DMACache](xref:DMACache) | The masked alarms added or changed since the specified point in time. | |
 
 > [!NOTE]
 > In this case, the [DMACache](xref:DMACache) object will contain an array of [DMAAlarm](xref:DMAAlarm) objects.

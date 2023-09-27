@@ -13,8 +13,7 @@ There are two types of groups:
 - **Domain groups**: User groups available in the Windows domain, managed by the domain administrator.
 
 > [!NOTE]
-> - Optionally, a user who is a member of a group can be granted a personal access level. That level will then override the access level granted to the group.
+> Optionally, a user who is a member of a group can be granted a personal access level. That level will then override the access level granted to the group.
 
 > [!TIP]
-> See also:
-> [Managing user groups](xref:Managing_user_groups)
+> See also: [Managing user groups](xref:Managing_user_groups)

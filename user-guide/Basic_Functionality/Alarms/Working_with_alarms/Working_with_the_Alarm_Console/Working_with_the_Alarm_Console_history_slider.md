@@ -7,7 +7,7 @@ uid: WorkingWithTheAlarmConsoleHistorySlider
 In the Alarm Console, you can display a timeline at the bottom of the *Active alarms* tab. To do so, click the *History slider* button in the alarm bar: ![history slider button](~/user-guide/images/History_Slider_button.png)
 
 > [!TIP]
-> See also: [Alarm Console – Alarm history](https://community.dataminer.services/video/alarm-console-alarm-history/) on DataMiner Dojo.
+> See also: [Alarm Console – Alarm history](https://community.dataminer.services/video/alarm-console-alarm-history/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 ## Active alarms tab timeline
 
@@ -21,7 +21,7 @@ There are two ways to move the slider to a specific time in the past on the time
 
 ## Advanced timeline settings
 
-- With the SLNetClientTest tool, you can configure some advanced settings for the timeline configuration. See [Configuring how long alarm statistics are kept in memory](xref:SLNetClientTest_tool_advanced_procedures#configuring-how-long-alarm-statistics-are-kept-in-memory).
+- With the SLNetClientTest tool, you can configure some advanced settings for the timeline configuration. See [Configuring how long alarm statistics are kept in memory](xref:SLNetClientTest_configuring_how_long_alarm_statistics).
 
   > [!WARNING]
   > The DataMiner SLNetClientTest program is an advanced system administration tool that should be used with extreme care (C:\\Skyline DataMiner\\Files\\SLNetClientTest.exe).

@@ -2,7 +2,6 @@
 using System.ComponentModel;
 #if NETFRAMEWORK
 using System.Drawing.Design;
-using Skyline.DataMiner.Net.Editors;
 #endif
 
 namespace Skyline.DataMiner.Net.Ticketing.Objects
@@ -12,9 +11,9 @@ namespace Skyline.DataMiner.Net.Ticketing.Objects
 	/// </summary>
 	/// <remarks>Used by a ticket to define what exactly the field contains.</remarks>
 	[Serializable]
-#if NETFRAMEWORK
-    [Editor(typeof(ObjectEditor<TicketField>), typeof(UITypeEditor))]
-#endif
+//#if NETFRAMEWORK
+//    [Editor(typeof(ObjectEditor<TicketField>), typeof(UITypeEditor))]
+//#endif
     public class TicketField : IEquatable<TicketField>
     {
 		#region Properties & Fields

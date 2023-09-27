@@ -23,7 +23,7 @@ Available from DataMiner 9.5.5 onwards. Use this method to use a cookie (receive
 
 | Item | Format | Description |
 |--|--|--|
-| ReconnectAppAndInfo­Result | [DMAConnectAndInfo](xref:DMAConnectAndInfo) | The connection string, information about the DataMiner Agent, and the user permissions granted. |
+| ReconnectAppAndInfoResult | [DMAConnectAndInfo](xref:DMAConnectAndInfo) | The connection string, information about the DataMiner Agent, and the user permissions granted. |
 
 > [!NOTE]
 > This method reuses the existing cookie, which means that the cookie included in the output is the same as the cookie used in the input.

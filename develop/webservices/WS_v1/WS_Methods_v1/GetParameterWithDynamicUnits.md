@@ -20,4 +20,4 @@ Use this method to retrieve the data for a particular parameter, with dynamic un
 
 | Item | Format | Description |
 |--|--|--|
-| GetParameterWith­DynamicUnitsResult | [DMAParameter](xref:DMAParameter) | The data of the specified parameter, with dynamic units. |
+| GetParameterWithDynamicUnitsResult | [DMAParameter](xref:DMAParameter) | The data of the specified parameter, with dynamic units. |

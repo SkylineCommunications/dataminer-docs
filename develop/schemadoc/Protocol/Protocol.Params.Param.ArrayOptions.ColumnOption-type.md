@@ -50,6 +50,9 @@ In the following example, columns 1, 2, 3 and 4 are joined using a dot ('.') as 
 
 Indicates that the content of the column will be managed in the protocol.
 
+> [!NOTE]
+> The usage of retrieved is preferred over custom, since this allows, among other things, to set a column at once.
+
 ### displaykey
 
 If you specify this option, the SLElement process will automatically fill this column with the display keys of the rows.
@@ -57,6 +60,7 @@ If you specify this option, the SLElement process will automatically fill this c
 The display key is composed either via displayColumn or via the naming option. If neither is defined, the index will be used. Note that trending/alarming on this column is not possible.
 
 > [!NOTE]
+>
 > - The displaykey column should be the last column defined in the table.
 > - Trending/alarming on this column is not possible.
 > - Columns of type "displayKey" cannot be saved.
@@ -86,6 +90,9 @@ This type is used in the following situations:
 ### snmp
 
 Represents an SNMP column
+
+> [!IMPORTANT]
+> From DataMiner 10.3.8, 10.3.0 [CU5], and 10.2.0 [CU17] onwards (RN 36559), in an SNMP table, columns of type "retrieved" can be placed in between columns of type "snmp" (provided the primary key column is a column of type "snmp" and not a column of type "retrieved"). In earlier versions of DataMiner, all columns of type "snmp" have to be placed before any group of type "retrieved".
 
 ### state
 
@@ -137,7 +144,6 @@ If a direct view column containing primary keys is of type viewTableKey, a DataM
 This allows the retrieval of the correct data from a direct view table if the tables in the source elements do not have unique primary keys.
 
 Example:
-
 
 ```xml
 <ArrayOptions index="1" displayColumn="1" partial="true" options=";volatile;view=1500,remoteId;

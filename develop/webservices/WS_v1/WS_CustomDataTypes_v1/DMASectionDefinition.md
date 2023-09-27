@@ -11,8 +11,8 @@ uid: DMASectionDefinition
 | ReadOnly | Boolean | Indicates whether the job section can be modified. |
 | IsHidden | Boolean | Indicates whether the job section is hidden. |
 | Fields | Array of DMASectionDefinitionField | See [DMASectionDefinitionField](xref:DMASectionDefinitionField). |
-| BookingLinkInfo.Booking­Manager | Array of int | The DataMiner ID, element ID and name of the Booking Manager element that is used, in case the section is linked to a booking. |
-| BookingLinkInfo.Book­ingScript | String | The script that should be executed when a user clicks an action in the job section, in case the section is linked to a booking. |
+| BookingLinkInfo.BookingManager | Array of int | The DataMiner ID, element ID and name of the Booking Manager element that is used, in case the section is linked to a booking. |
+| BookingLinkInfo.BookingScript | String | The script that should be executed when a user clicks an action in the job section, in case the section is linked to a booking. |
 | Info.Icon | String | The name of the icon associated with this section. |
 | Info.Color | Array of int | The background color of the section, in RGB format. |
 | Info.Column | Integer | The column of the Jobs app containing this job section. |

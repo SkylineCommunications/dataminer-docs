@@ -1,19 +1,12 @@
 ---
-uid: DMS_Alerter
+uid: Alerter
 ---
 
-# DMS Alerter
+# Alerter
 
-DMS Alerter is a small system tray application. It will notify you by means of a pop-up balloon whenever an alarm occurs in the DataMiner System to which you are connected.
+Alerter is a small system tray application. It will notify you by means of a pop-up balloon whenever an alarm occurs in the DataMiner System to which you are connected.
 
-The following topics contain more information on DMS Alerter:
-
-- [Accessing DMS Alerter](xref:Accessing_DMS_Alerter)
-
-- [Working with the Alerter alarm list](xref:Working_with_the_Alerter_alarm_list)
-
-- [Communicating with other DataMiner users via Alerter](xref:Communicating_with_other_DataMiner_users_via_Alerter)
-
-- [Working with Alerter pop-up balloons](xref:Working_with_Alerter_pop-up_balloons#working-with-alerter-pop-up-balloons)
-
-- [Configuring DMS Alerter](xref:Configuring_DMS_Alerter)
+> [!TIP]
+>
+> - For a use case illustrating how Alerter can provide 24/7 facility-wide alerts, see [Using Alerter as a Facility-Wide “Heads Down” Audible Notification](https://community.dataminer.services/use-case/using-alerter-as-a-facility-wide-heads-down-audible-notification/).
+> - For a detailed training video, refer to [DataMiner Dojo](https://community.dataminer.services/courses/dataminer-operator/lessons/dms-alerter-3/) ![Video](~/user-guide/images/video_Duo.png)

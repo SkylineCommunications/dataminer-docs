@@ -17,4 +17,4 @@ Use this method to request a list of all the elements that poll a specific IP ad
 
 | Item | Format | Description |
 |--|--|--|
-| GetElementByPolling­IpResult | Array of [DMAElement](xref:DMAElement1) | The list of elements that poll the specified IP address. |
+| GetElementByPollingIpResult | Array of [DMAElement](xref:DMAElement1) | The list of elements that poll the specified IP address. |

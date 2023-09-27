@@ -31,7 +31,7 @@ These connectors do not ship out with the solution packages. They need to be ins
 
 The following system connectors are supported (but not required):
 
-- [Cox Vexima R-PHY Monitor](https://catalog.dataminer.services/result/driver/7039)
+- [Cox Vecima R-PHY Monitor](https://catalog.dataminer.services/result/driver/7039)
 - [Cox Ceeview Platform](https://catalog.dataminer.services/result/driver/7396)
 - [Cox Smart PHY](https://catalog.dataminer.services/result/driver/6972)
 - [Cox IDP EPM Connectivity](https://catalog.dataminer.services/result/driver/6929)
@@ -41,20 +41,12 @@ The following system connectors are supported (but not required):
 
 The D-DOCSIS EPM Solution uses the following Automation scripts:
 
-- Cbr8CcapToEPM
-- Cbr8CcapToWM
-- EPMBEToCin
-- EPMBEToCINJuni
-- EPMBEToCiscoCCAP
-- EPMBEToCoxCCAP
 - EpmConfig
-- EPMFEToBE
-- IDP_CIN_Custom_ConnectivityDiscovery
-- IDP_CIN_Custom_SyncProperties
-- IDP_CIN_Custom_UpdateProperties
-- KAFKA CCAP Request to WM
-- WM Request to KAFKA CCAP
-- WMResponseToCbr8CCAP
+- FeToBe
+- MessageToCollector
+- MessageToFe
+- MessageToWm
+- WmMessageToCollector
 
 ## Dashboards
 

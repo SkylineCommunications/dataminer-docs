@@ -30,7 +30,7 @@ Graph showing the distribution of alarms over a selected time span, with several
 
 ## Alarm List
 
-Overview of an element’s active alarms or historic alarms for a selected time span. The following options are available:
+Overview of an element’s active alarms or history alarms for a selected time span. The following options are available:
 
 - You can choose between different time spans: *Active*, to show only active alarms, *Last Hour*, *Last 24 Hours*, *Yesterday*, *Week to Date*, *Month to Date*, *Previous Month*, or *Year to Date*.
 
@@ -72,7 +72,7 @@ A list of DMAs, elements, documents, or elements with their state and active ala
 
 ## SLA Historic Service Alarm List
 
-Only applicable for SLA elements. Shows a table with an overview of historic service alarms for several SLA elements, with above this a summary of the total affected time and total violation time, the minimum and the measured availability, etc.
+Only applicable for SLA elements. Shows a table with an overview of history service alarms for several SLA elements, with above this a summary of the total affected time and total violation time, the minimum and the measured availability, etc.
 
 The following options are available:
 

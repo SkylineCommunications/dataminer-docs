@@ -9,7 +9,7 @@ Using a shape data field of type **Info**, you can add custom tooltips to shapes
 > [!TIP]
 >
 > - For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[data > OTHER]* page.
-> - See also: <https://community.dataminer.services/video/visio-adding-a-tooltip-on-a-view-object/>
+> - See also: [Visio – Adding a tooltip on a view object](https://community.dataminer.services/video/visio-adding-a-tooltip-on-a-view-object/) ![Video](~/user-guide/images/video_Duo.png)
 
 ## Configuring the shape data field
 

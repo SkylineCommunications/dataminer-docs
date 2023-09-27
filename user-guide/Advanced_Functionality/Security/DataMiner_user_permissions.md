@@ -7,6 +7,7 @@ uid: DataMiner_user_permissions
 In the System Center module, the user permissions have been divided into two main groups: *General* and *Modules*. Below is an overview of the different permissions.
 
 > [!NOTE]
+>
 > - To quickly find a particular user permission in System Center, use the filter box in the top-right corner of the list of permissions.
 > - Some of these user permissions are only available if the DMA has the correct licenses and configuration, so that the user permissions are relevant.
 > - For many permissions, it makes no sense to grant them unless you grant the corresponding *UI Available* permission as well.
@@ -337,7 +338,7 @@ Permission to delete workspaces.
 ### General \> Annotations
 
 > [!NOTE]
-> From DataMiner 10.1.12 onwards, annotations are no longer available by default in new DataMiner installations. To enable them, set the soft-launch option *LegacyAnnotations* to true. See [soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/).
+> From DataMiner 10.1.12 onwards, annotations can be disabled using the soft-launch option *LegacyAnnotations*. See [Soft-launch options](xref:SoftLaunchOptions).
 
 #### General \> Annotations \> View
 
@@ -369,6 +370,9 @@ Permission to download a Visio file from the DataMiner System to the client comp
 
 Permission to change Visio files using the embedded Visio file editor.
 
+> [!NOTE]
+> To edit the visual overview of an element, service, or view, you also need to have the *Config* privilege for the relevant item. Access to specific items can only be edited on group level.
+
 ### General \> Collaboration
 
 #### General \> Collaboration \> UI available
@@ -383,25 +387,25 @@ Permission to end chat sessions of other users.
 
 ### General \> Software updates \> Download software updates from DCP
 
-Permission to download software from the DataMiner Cloud Platform.
+Permission to download software from dataminer.services.
 
 ### General \> Live sharing
 
 #### General \> Live sharing \> UI available
 
-Available from DataMiner 10.2.0/10.1.4 onwards. Permission to view the sharing UI and to view items that have been shared in the cloud. (Available as *Modules* > *System configuration* > *Cloud gateway* > *View shared items* in earlier DataMiner versions.)
+Available from DataMiner 10.2.0/10.1.4 onwards. Permission to view the sharing UI and to view items that have been shared via dataminer.services. (Available as *Modules* > *System configuration* > *Cloud gateway* > *View shared items* in earlier DataMiner versions.)
 
 #### General \> Live sharing \> Share
 
-Available from DataMiner 10.2.0/10.1.4 onwards. Permission to share items in the cloud. (Available as *Modules* > *System configuration* > *Cloud gateway* > *Share item* in earlier DataMiner versions.)
+Available from DataMiner 10.2.0/10.1.4 onwards. Permission to share items via dataminer.services. (Available as *Modules* > *System configuration* > *Cloud gateway* > *Share item* in earlier DataMiner versions.)
 
 #### General \> Live sharing \> Edit
 
-Available from DataMiner 10.2.0/10.1.4 onwards. Permission to make changes to items shared in the cloud. (Available as *Modules* > *System configuration* > *Cloud gateway* > *Update shared items* in earlier DataMiner versions.)
+Available from DataMiner 10.2.0/10.1.4 onwards. Permission to make changes to items shared via dataminer.services. (Available as *Modules* > *System configuration* > *Cloud gateway* > *Update shared items* in earlier DataMiner versions.)
 
 #### General \> Live sharing \> Unshare
 
-Available from DataMiner 10.2.0/10.1.4 onwards. Permission to stop sharing items in the cloud. (Available as *Modules* > *System configuration* > *Cloud gateway* > *Unshare item* in earlier DataMiner versions.)
+Available from DataMiner 10.2.0/10.1.4 onwards. Permission to stop sharing items via dataminer.services. (Available as *Modules* > *System configuration* > *Cloud gateway* > *Unshare item* in earlier DataMiner versions.)
 
 ### General \> Email \> Send via DataMiner System
 
@@ -411,7 +415,10 @@ Available from DataMiner 10.2.0/10.1.10 onwards. Permission to send emails via t
 
 ### Modules \> API
 
-These user permissions are used for the API deployment feature, which is currently still in [soft launch](https://community.dataminer.services/documentation/soft-launch-options/).
+These user permissions are used for the API deployment feature. This is a deprecated [soft launch feature](xref:SoftLaunchOptions).
+
+>[!NOTE]
+> This feature has been marked obsolete from DataMiner version 10.3.6 onwards. It has been replaced by the [User-Defined APIs](xref:UD_APIs) feature and will be removed in the future.
 
 #### Modules \> API \> Deploy script API
 
@@ -441,7 +448,7 @@ Permission to use the Asset Manager module.
 
 #### Modules \> Automation \> UI available
 
-Permission to access the DMS Automation module.
+Permission to access the Automation module.
 
 #### Modules \> Automation \> Add
 
@@ -488,7 +495,7 @@ Available from DataMiner 9.6.7 onwards. Permission to execute Automation scripts
 
 #### Modules \> Correlation \> UI available
 
-Permission to access the DMS Correlation module.
+Permission to access the Correlation module.
 
 #### Modules \> Correlation \> Add
 
@@ -527,7 +534,8 @@ Permission to use view and configure element connections.
 ### Modules \> Functions
 
 > [!NOTE]
-> - At present, these permissions are used for the uploading and deleting of functions in the Protocols & Templates app, and for the use of the Functions app. However, the latter is currently still in soft launch. For more information, see [Soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/).
+>
+> - At present, these permissions are used for the uploading and deleting of functions in the Protocols & Templates app, and for the use of the Functions app. However, the latter is currently still in soft launch. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
 > - When you upgrade to DataMiner version 10.1.7, these six permissions are automatically granted to all user groups that have been granted the *Modules* > *Resources* > *Configure functions* permission.
 > - These user permissions are only displayed if the DMA uses an Elasticsearch database.
 
@@ -869,7 +877,7 @@ Permission to use the Router Control module.
 
 #### Modules \> Scheduler \> UI available
 
-Permission to access the DMS Scheduler module.
+Permission to access the Scheduler module.
 
 #### Modules \> Scheduler \> Add
 
@@ -1345,16 +1353,13 @@ Permission to configure the backup settings.
 
 ### Modules \> System configuration \> Cloud sharing/gateway
 
-> [!NOTE]
-> These permissions support the cloud connected Agents feature, which is currently still in soft launch. See [Connecting your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud).
-
 #### Modules \> System configuration \> Cloud sharing/gateway \> Connect to cloud/DCP
 
-Available from DataMiner 10.1.0/10.0.9 onwards. Permission to connect a DMA to the DataMiner Cloud Platform.
+Available from DataMiner 10.1.0/10.0.9 onwards. Permission to connect a DMA to dataminer.services.
 
 #### Modules \> System configuration \> Cloud sharing/gateway \> Disconnect from cloud/DCP
 
-Available from DataMiner 10.1.0/10.0.9 onwards. Permission to disconnect a DMA from the DataMiner Cloud Platform.
+Available from DataMiner 10.1.0/10.0.9 onwards. Permission to disconnect a DMA from dataminer.services.
 
 #### Modules \> System configuration \> Cloud sharing/gateway \> Configure gateway service
 
@@ -1362,31 +1367,31 @@ Available from DataMiner 10.2.0/10.1.4 onwards. Allows you to configure the gate
 
 #### Modules \> System configuration \> Cloud sharing/gateway \> View shared items
 
-Available from DataMiner 10.1.0/10.0.9 onwards. Permission to view items that have been shared in the cloud.
+Available from DataMiner 10.1.0/10.0.9 onwards. Permission to view items that have been shared via dataminer.services.
 
 From DataMiner 10.2.0/10.1.4 onwards, this permission is instead available under *General* > *Live sharing*.
 
 #### Modules \> System configuration \> Cloud sharing/gateway \> Update shared items
 
-Available from DataMiner 10.1.0/10.0.9 onwards. Permission to make changes to items that have been shared in the cloud.
+Available from DataMiner 10.1.0/10.0.9 onwards. Permission to make changes to items that have been shared via dataminer.services.
 
 From DataMiner 10.2.0/10.1.4 onwards, this permission is instead available under *General* > *Live sharing*. |
 
 #### Modules \> System configuration \> Cloud sharing/gateway \> Share item
 
-Available from DataMiner 10.1.0/10.0.9 onwards. Permission to share items in the cloud.
+Available from DataMiner 10.1.0/10.0.9 onwards. Permission to share items via dataminer.services.
 
 From DataMiner 10.2.0/10.1.4 onwards, this permission is instead available under *General* > *Live sharing*.
 
 #### Modules \> System configuration \> Cloud sharing/gateway \> Unshare item
 
-Available from DataMiner 10.1.0/10.0.9 onwards. Permission to stop sharing items in the cloud.
+Available from DataMiner 10.1.0/10.0.9 onwards. Permission to stop sharing items via dataminer.services.
 
 From DataMiner 10.2.0/10.1.4 onwards, this permission is instead available under *General* > *Live sharing*.
 
 #### Modules \> System configuration \> Cloud sharing/gateway \> Account linking
 
-Only available in DataMiner 10.1.3. Permission to link a DataMiner account to a cloud account, which is necessary to be able to share items in the cloud or stop sharing items in the cloud.
+Only available in DataMiner 10.1.3. Permission to link a DataMiner account to a dataminer.services account, which is necessary to be able to share items via dataminer.services or stop sharing items via dataminer.services.
 
 ### Modules \> System configuration \> Database
 
@@ -1474,7 +1479,7 @@ Permission to access the DataMiner web apps. Obsolete from DataMiner 10.1.0/10.1
 
 ### Modules \> System configuration \> Object Manager \> Module Settings
 
-Available from DataMiner 10.1.5 onwards. Permission to change settings of the DataMiner Object Manager. Requires the DOMManager [soft-launch option](https://community.dataminer.services/documentation/soft-launch-options/).
+Available from DataMiner 10.1.5 onwards. Permission to change settings of the DataMiner Object Manager. Requires the DOMManager [soft-launch option](xref:SoftLaunchOptions).
 
 ### Modules \> System configuration \> Security
 
@@ -1582,7 +1587,7 @@ Permission to access the *Tools* page in System Center. From DataMiner 10.1.0/10
 
 #### Modules \> System configuration \> Tools \> Admin tools
 
-Available from DataMiner 10.1.0/10.1.1 onwards. Permission to use administrator tools such as synchronization, clean up unused and NATS management.
+Available from DataMiner 10.1.0/10.1.1 onwards. Permission to use administrator tools such as synchronization, cleaning up unused protocols, alarm filters, or Visio files, NATS management, and (de)initializing Resource Manager.
 
 #### Modules \> System configuration \> Tools \> Control background tasks of all users
 
@@ -1647,6 +1652,35 @@ Permission to view trend graphs of parameters that are being trended.
 #### Modules \> Trending \> View Histogram
 
 Permission to view histograms of parameters that are being trended.
+
+### Modules \> User-Defined APIs
+
+> [!NOTE]
+> This feature is available from DataMiner 10.3.6/10.4.0 onwards. In DataMiner 10.3.5, it is available in preview if the soft-launch option *UserDefinableAPI* is enabled. See [soft-launch options](xref:SoftLaunchOptions).
+
+#### Modules \> User-Defined APIs \> Tokens \> UI available
+
+Permission to view tokens for [user-defined APIs](xref:UD_APIs).
+
+#### Modules \> User-Defined APIs \> Tokens \> Add/Edit
+
+Permission to create and edit tokens for [user-defined APIs](xref:UD_APIs).
+
+#### Modules \> User-Defined APIs \> Tokens \> Delete
+
+Permission to delete tokens for [user-defined APIs](xref:UD_APIs).
+
+#### Modules \> User-Defined APIs \> APIs \> UI available
+
+Permission to view API definitions for [user-defined APIs](xref:UD_APIs).
+
+#### Modules \> User-Defined APIs \> APIs \> Add/Edit
+
+Permission to create and edit API definitions for [user-defined APIs](xref:UD_APIs). In order to create or edit API definitions, you also need the [Automation > execute](#modules--automation--execute) permission.
+
+#### Modules \> User-Defined APIs \> APIs \> Delete
+
+Permission to delete API definitions for [user-defined APIs](xref:UD_APIs).
 
 ### Modules \> User-definable apps
 

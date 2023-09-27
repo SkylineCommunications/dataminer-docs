@@ -14,7 +14,7 @@ In design mode, there are three panes:
 
 - On the right, there is a hierarchical list of building blocks used in the current configuration.
 
-    Any item that is clicked in the design area is automatically also selected in the list on the right.
+  Any item that is clicked in the design area is automatically also selected in the list on the right.
 
 - In the lower right corner, the properties of a selected item can be configured.
 
@@ -22,10 +22,10 @@ In design mode, there are three panes:
 
 In the top-right corner of the card, you can find the following buttons:
 
-| Icon                                                                               | Name    | Description                                                                                                                                                                               |
-|------------------------------------------------------------------------------------|---------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ![](~/user-guide/images/router_control_backup.png)   | Backup  | Save the current configuration to a compressed XML file on the client machine.                                                                                                            |
-| ![](~/user-guide/images/router_control_restore.png) | Restore | Load a configuration that is stored in a compressed XML file on the client machine.<br> Click the downward triangle next to the button to select the configuration from a drop-down list. |
-| ![](~/user-guide/images/router_control_revert.png)   | Revert  | Undo all changes and reload the configuration from the DMS.                                                                                                                               |
-| ![](~/user-guide/images/router_control_save.png)     | Save    | Upload the current configuration to the DMS.                                                                                                                                              |
-| ![](~/user-guide/images/router_control_apply.png)     | Apply   | Preview the changes you have made.                                                                                                                                                        |
+| Icon | Name | Description |
+|--|--|--|
+| ![Backup icon](~/user-guide/images/router_control_backup.png) | Backup | Save the current configuration to a compressed XML file on the client machine. |
+| ![Restore icon](~/user-guide/images/router_control_restore.png) | Restore | Load a configuration that is stored in a compressed XML file on the client machine. <br>To select the configuration, hover over this button and click the downward triangle next to it. |
+| ![Revert icon](~/user-guide/images/router_control_revert.png) | Revert | Undo all changes and reload the configuration from the DMS. |
+| ![Save icon](~/user-guide/images/router_control_save.png) | Save | Upload the current configuration to the DMS. |
+| ![Apply icon](~/user-guide/images/router_control_apply.png) | Apply | Preview the changes you have made. |

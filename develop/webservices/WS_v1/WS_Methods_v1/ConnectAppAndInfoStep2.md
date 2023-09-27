@@ -23,4 +23,4 @@ Use this method for the second step in a two-step authentication process, in ord
 
 | Item | Format | Description |
 |--|--|--|
-| ConnectAppAndInfo­Step2Result | [DMAConnectAndInfo](xref:DMAConnectAndInfo) | The connection string, information about the DataMiner Agent, and the user permissions granted. |
+| ConnectAppAndInfoStep2Result | [DMAConnectAndInfo](xref:DMAConnectAndInfo) | The connection string, information about the DataMiner Agent, and the user permissions granted. |

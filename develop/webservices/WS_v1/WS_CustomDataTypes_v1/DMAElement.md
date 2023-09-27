@@ -11,11 +11,11 @@ uid: DMAElement
 | Name | String | The name of the element. |
 | Description | String | The description of the element. |
 | AlarmState | String | The current alarm state of the element. |
-| AlarmStateCapped­Included | String | The maximum alarm severity when the element is included (only for elements that are part of a service). |
-| AlarmStateCapped­NotUsed | String | The maximum alarm severity when the element is not used (only for elements that are part of a service). |
+| AlarmStateCappedIncluded | String | The maximum alarm severity when the element is included (only for elements that are part of a service). |
+| AlarmStateCappedNotUsed | String | The maximum alarm severity when the element is not used (only for elements that are part of a service). |
 | IsTimeout | Boolean | Whether the element is in timeout. |
-| Views | Array of [DMAView](xref:DMAView) | The list of views in which the element can be found. |
-| Services | Array of DMAElement | The list of services of which the element is a part. |
+| Views | Array of [DMAObject](xref:DMAObject) | The list of views in which the element can be found. |
+| Services | Array of [DMAObject](xref:DMAObject) | The list of services of which the element is a part. |
 | ProtocolName | String | The name of the protocol. |
 | ProtocolVersion | String | The version of the protocol. |
 | State | String | The current state of the element. |

@@ -18,9 +18,9 @@ For example:
 
 - **NoWrap**: The text will not wrap onto a new line, unless one was explicitly configured with a line break. Text that exceeds the bounds of the shape width or height will not be shown.
 
-- **Wrap**: The text will automatically wrap onto a new line when the width of the shape is exceeded. The text past the boundaries of the shape height will not be shown.
+- **Wrap**: The text will automatically wrap onto a new line when the width of the shape is exceeded. The text past the boundaries of the shape height will not be shown. (Default behavior from 10.3.0 [CU5]/10.3.8 onwards<!-- RN 36363 -->.)
 
-- **WrapWithOverflow**: The text will automatically wrap onto a new line when the width of the shape is exceeded. The text can be shown past the boundaries of the shape height. (Default behavior.)
+- **WrapWithOverflow**: The text will automatically wrap onto a new line when the width of the shape is exceeded. The text can be shown past the boundaries of the shape height. (Default behavior prior to 10.3.0 [CU5]/10.3.8.)
 
 **TextTrimming** determines what happens when the text does not fit in the shape and has to be cut off. It can be set to the following values:
 
@@ -31,5 +31,6 @@ For example:
 - **None**: The text will be cut off when it does not fit, but no “...” will be displayed. (Default behavior.)
 
 > [!NOTE]
+>
 > - When TextWrapping is set to its default value (i.e. “WrapWithOverflow”), the text will always be fully displayed, so setting TextTrimming to “CharacterEllipsis” or “WordEllipsis” will have no effect.
 > - From DataMiner 10.2.4/10.3.0, in case text is trimmed, users can hover over the shape to see the full text in a tooltip. However, this is not the case if the shape can be clicked to execute an action, as in that case the tooltip will show information about that action.

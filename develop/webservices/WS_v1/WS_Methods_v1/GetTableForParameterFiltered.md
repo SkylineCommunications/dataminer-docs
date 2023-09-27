@@ -190,4 +190,4 @@ The following filters can be specified in the input for this method:
 
 | Item | Format | Description |
 |--|--|--|
-| GetTableForParameter­FilteredResult | Array of [DMAParameterTableRow](xref:DMAParameterTableRow) | The rows of the specified table parameter that match the specified table row filters. |
+| GetTableForParameterFilteredResult | Array of [DMAParameterTableRow](xref:DMAParameterTableRow) | The rows of the specified table parameter that match the specified table row filters. |

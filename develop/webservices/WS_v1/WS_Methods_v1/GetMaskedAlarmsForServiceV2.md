@@ -20,4 +20,4 @@ Available from DataMiner 10.0.7 onwards.
 
 | Item | Format | Description |
 |--|--|--|
-| GetMaskedAlarms­ForServiceV2Result | Array of [DMAAlarm](xref:DMAAlarm) | The list of all the masked alarms of the specified service, as well as the alarm cache status. |
+| GetMaskedAlarmsForServiceV2Result | Array of [DMAAlarm](xref:DMAAlarm) | The list of all the masked alarms of the specified service, as well as the alarm cache status. |

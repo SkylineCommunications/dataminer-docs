@@ -24,4 +24,4 @@ Use this method to retrieve the trend statistics for a specified parameter. Avai
 
 | Item | Format | Description |
 |--|--|--|
-| GetTrendStatisticsFor­ParameterResponse | Array | The parameter name and element name, the unit used for the parameter, and the minimum, average and maximum trend values. |
+| GetTrendStatisticsForParameterResponse | Array | The parameter name and element name, the unit used for the parameter, and the minimum, average and maximum trend values. |

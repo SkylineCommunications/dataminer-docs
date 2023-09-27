@@ -1,9 +1,10 @@
-﻿using Skyline.DataMiner.Net;
-using Skyline.DataMiner.Net.Messages;
-using Skyline.DataMiner.Net.Automation;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
+
+using Skyline.DataMiner.Net;
+using Skyline.DataMiner.Net.Automation;
+using Skyline.DataMiner.Net.Messages;
 
 namespace Skyline.DataMiner.Scripting
 {
@@ -14,6 +15,7 @@ namespace Skyline.DataMiner.Scripting
 	/// <note type="note">SLProtocol is an interface from DMA 10.0.1 onwards (RN 23787). In earlier DataMiner versions, it is a concrete class.</note>
 	/// <para>All methods are blocking, except for the <see cref="SLProtocol.NotifyDataMinerQueued"/> method.</para>
 	/// <para>Many methods defined in this class also act as a wrapper for a specific <see cref="SLProtocol.NotifyProtocol"/>, <see cref="SLProtocol.NotifyDataMiner"/> or <see cref="SLProtocol.NotifyDataMinerQueued"/> method call. Using these methods is generally preferred over using the specific notify calls as this improves readability and type safety.</para>
+	/// <para>From DataMiner 10.2.9 onwards (RN 33965), the SLProtocol(Ext) object in QActions will retain all of its data members outside of the Run scope. This means that, while Notifies were already available out of scope earlier, members such as the QActionID will now also remain available when a QAction run ends. In addition, the SLNet connection can now be set up at any time.</para>
 	/// </remarks>
 	public interface SLProtocol
 	{
@@ -325,6 +327,9 @@ namespace Skyline.DataMiner.Scripting
 		///			<item>
 		///				<description>This call is to be used with columns of type "retrieved". In case other column types are present between the specified columns (e.g. columns of type "custom"), these other columns will be skipped.</description>
 		///			</item>
+		///			<item>
+		///				<description>From DataMiner 10.2.9 onwards (RN 33849), if the DateTime.Kind property of <paramref name="timeInfo"/> is unspecified, the timestamp will be handled as local time.</description>
+		///			</item>
 		///		</list>
 		/// </remarks>
 		object FillArray(int tableID, List<object[]> rows, NotifyProtocol.SaveOption option, DateTime? timeInfo);
@@ -356,6 +361,9 @@ namespace Skyline.DataMiner.Scripting
 		///			<item>
 		///				<description>This call is to be used with columns of type "retrieved". In case other column types are present between the specified columns (e.g. columns of type "custom"), these other columns will be skipped.</description>
 		///			</item>
+		///			<item>
+		///				<description>From DataMiner 10.2.9 onwards (RN 33849), if the DateTime.Kind property of <paramref name="timeInfo"/> is unspecified, the timestamp will be handled as local time.</description>
+		///			</item>
 		///		</list>
 		/// </remarks>
 		object FillArray(int tableID, List<object[]> columns, DateTime? timeInfo);
@@ -383,6 +391,9 @@ namespace Skyline.DataMiner.Scripting
 		///			</item>
 		///			<item>
 		///				<description>This call is to be used with columns of type "retrieved". In case other column types are present between the specified columns (e.g. columns of type "custom"), these other columns will be skipped.</description>
+		///			</item>
+		///			<item>
+		///				<description>From DataMiner 10.2.9 onwards (RN 33849), if the DateTime.Kind property of <paramref name="timeInfo"/> is unspecified, the timestamp will be handled as local time.</description>
 		///			</item>
 		///		</list>
 		/// </remarks>
@@ -529,6 +540,9 @@ namespace Skyline.DataMiner.Scripting
 		///			<item>
 		///				<description>This call is to be used with columns of type "retrieved". In case other column types are present between the specified columns (e.g. columns of type "custom"), these other columns will be skipped.</description>
 		///			</item>
+		///			<item>
+		///				<description>From DataMiner 10.2.9 onwards (RN 33849), if the DateTime.Kind property of <paramref name="timeInfo"/> is unspecified, the timestamp will be handled as local time.</description>
+		///			</item>
 		///		</list>
 		/// </remarks>
 		object FillArrayNoDelete(int tableID, List<object[]> columns, DateTime? timeInfo);
@@ -557,6 +571,9 @@ namespace Skyline.DataMiner.Scripting
 		///			<item>
 		///				<description>This call is to be used with columns of type "retrieved". In case other column types are present between the specified columns (e.g. columns of type "custom"), these other columns will be skipped.</description>
 		///			</item>
+		///			<item>
+		///				<description>From DataMiner 10.2.9 onwards (RN 33849), if the DateTime.Kind property of <paramref name="timeInfo"/> is unspecified, the timestamp will be handled as local time.</description>
+		///			</item>
 		///		</list>
 		/// </remarks>
 		object FillArrayNoDelete(int tableID, object[] columns, DateTime? timeInfo);
@@ -581,6 +598,9 @@ namespace Skyline.DataMiner.Scripting
 		///			</item>
 		///			<item>
 		///				<description>In case the values array only contains one value, this value will be used for all specified primary keys.</description>
+		///			</item>
+		///			<item>
+		///				<description>From DataMiner 10.2.9 onwards (RN 33849), if the DateTime.Kind property of <paramref name="timeInfo"/> is unspecified, the timestamp will be handled as local time.</description>
 		///			</item>
 		///		</list>
 		/// </remarks>
@@ -702,6 +722,12 @@ namespace Skyline.DataMiner.Scripting
 		///			<item>
 		///				<description>The method SetParameter(int parameterID, object value, DateTime timestamp) acts a wrapper method for a NotifyProtocol type 256 <see href="xref:NT_SET_PARAMETER_WITH_HISTORY">NT_SET_PARAMETER_WITH_HISTORY</see> call.</description>
 		///			</item>
+		///			<item>
+		///				<description>From DataMiner 10.2.9 onwards (RN 33849), if the DateTime.Kind property of <paramref name="timeInfo"/> is unspecified, the timestamp will be handled as local time.</description>
+		///			</item>
+		///			<item>
+		///				<description>A <see langword="null"/> value will not clear the parameter but keep its current value. To clear a parameter, see <see href="xref:LogicActionClear" />.</description>
+		///			</item>
 		///		</list>
 		///	</remarks>
 		///	<example>
@@ -745,6 +771,9 @@ namespace Skyline.DataMiner.Scripting
 		///			<item>
 		///				<description>In case multiple parameters need to be set, it is preferred to use a single SetParameters method call in order to reduce the inter-process communication between the SLScripting and SLProtocol processes.</description>
 		///			</item>
+		///			<item>
+		///				<description>A <see langword="null"/> value will not clear the parameter but keep its current value. To clear a parameter, see <see href="xref:LogicActionClear" />.</description>
+		///			</item>
 		///		</list>
 		///	</remarks>
 		///	<example>
@@ -765,6 +794,12 @@ namespace Skyline.DataMiner.Scripting
 		///		<list type = "bullet" >
 		///			<item>
 		///				<description>Feature introduced in DataMiner version 8.0.3.</description>
+		///			</item>
+		///			<item>
+		///				<description>From DataMiner 10.2.9 onwards (RN 33849), if the DateTime.Kind property of an entry in <paramref name="timeInfos"/> is unspecified, the timestamp entry will be handled as local time.</description>
+		///			</item>
+		///			<item>
+		///				<description>A <see langword="null"/> value will not clear the parameter but keep its current value. To clear a parameter, see <see href="xref:LogicActionClear" />.</description>
 		///			</item>
 		///		</list>
 		///	</remarks>
@@ -787,6 +822,9 @@ namespace Skyline.DataMiner.Scripting
 		///			<item>
 		///				<description>Introduced in DataMiner version 8.0.3.</description>
 		///			</item>
+		///			<item>
+		///				<description>A <see langword="null"/> value will not clear the parameter but keep its current value. To clear a parameter, see <see href="xref:LogicActionClear" />.</description>
+		///			</item>		
 		///		</list>
 		///	</remarks>
 		///	<example>
@@ -1285,7 +1323,8 @@ namespace Skyline.DataMiner.Scripting
 		int SetParameterDescription(int iID, object value);
 
 		/// <summary>
-		/// Retrieves the value of a cell in the table specified by the 1-based row and column position.
+		/// Retrieves the value of a cell in the table specified by the 1-based row and column position.<br/>
+		/// Note that this method should not be used. Using <see cref="GetParameterIndexByKey(int, string, int)"/> instead is highly recommended.
 		/// </summary>
 		/// <param name="iID">The ID of the table parameter.</param>
 		/// <param name="iX">The 1-based position of the row.</param>
@@ -1312,7 +1351,8 @@ namespace Skyline.DataMiner.Scripting
 		object GetParameterIndex(int iID, int iX, int iY);
 
 		/// <summary>
-		/// Sets the value of a cell in a table, identified by its 1-based row and column position, with the specified value.
+		/// Sets the value of a cell in a table, identified by its 1-based row and column position, with the specified value.<br/>
+		/// Note that this method should not be used. Using <see cref="SetParameterIndexByKey(int, string, int, object, ValueType)"/> instead is highly recommended.
 		/// </summary>
 		/// <param name="iID">The ID of the table parameter.</param>
 		/// <param name="iX">The 1-based row position.</param>
@@ -1331,6 +1371,9 @@ namespace Skyline.DataMiner.Scripting
 		///			<item>
 		///				<description>This method acts as a wrapper for a NotifyProtocol type 121 call ("NT_PUT_PARAMETER_INDEX"). See [NT_PUT_PARAMETER_INDEX (121)](xref:NT_PUT_PARAMETER_INDEX).</description>
 		///			</item>
+		///			<item>
+		///				<description>From DataMiner 10.2.9 onwards (RN 33849), if the DateTime.Kind property of <paramref name="timeInfo"/> is unspecified, the timestamp will be handled as local time.</description>
+		///			</item>
 		///		</list>
 		///	</remarks>
 		///	<example>
@@ -1342,7 +1385,8 @@ namespace Skyline.DataMiner.Scripting
 		bool SetParameterIndex(int iID, int iX, int iY, object value, ValueType timeInfo);
 
 		/// <summary>
-		/// Sets the value of a cell in a table, identified by its 1-based row and column position, with the specified value.
+		/// Sets the value of a cell in a table, identified by its 1-based row and column position, with the specified value.<br/>
+		/// Note that this method should not be used. Using <see cref="SetParameterIndexByKey(int, string, int, object)"/> instead is highly recommended.
 		/// </summary>
 		/// <param name="iID">The ID of the table parameter.</param>
 		/// <param name="iX">The 1-based row position.</param>
@@ -1371,7 +1415,8 @@ namespace Skyline.DataMiner.Scripting
 		bool SetParameterIndex(int iID, int iX, int iY, object value);
 
 		/// <summary>
-		/// Sets the value of cells in tables, identified by their 1-based row and column position, with the specified values.
+		/// Sets the value of cells in tables, identified by their 1-based row and column position, with the specified values.<br/>
+		/// Note that this method should not be used. Using <see cref="SetParametersIndexByKey(int[], string[], int[], object[], DateTime[])"/> instead is highly recommended.
 		/// </summary>
 		/// <param name="ids">The IDs of the table parameters.</param>
 		/// <param name="iXs">The 1-based positions of the rows.</param>
@@ -1393,12 +1438,16 @@ namespace Skyline.DataMiner.Scripting
 		///			<item>
 		///				<description>Feature introduced in DataMiner version 8.0.3.</description>
 		///			</item>
+		///			<item>
+		///				<description>From DataMiner 10.2.9 onwards (RN 33849), if the DateTime.Kind property of an entry of <paramref name="timeInfos"/> is unspecified, the timestamp of that entry will be handled as local time.</description>
+		///			</item>
 		///		</list>
 		///	</remarks>
 		object SetParametersIndex(int[] ids, int[] iXs, int[] iYs, object[] values, DateTime[] timeInfos);
 
 		/// <summary>
-		/// Sets the value of cells in tables, identified by their 1-based row and column position, with the specified values.
+		/// Sets the value of cells in tables, identified by their 1-based row and column position, with the specified values.<br/>
+		/// Note that this method should not be used. Using <see cref="SetParametersIndexByKey(int[], string[], int[], object[])"/> instead is highly recommended.
 		/// </summary>
 		/// <param name="ids">The IDs of the table parameters.</param>
 		/// <param name="iXs">The 1-based positions of the rows.</param>
@@ -1509,6 +1558,9 @@ namespace Skyline.DataMiner.Scripting
 		///			<item>
 		///				<description>This method acts as a wrapper for a NotifyProtocol type 121 call ("NT_PUT_PARAMETER_INDEX"). See [NT_PUT_PARAMETER_INDEX (121)](xref:NT_PUT_PARAMETER_INDEX).</description>
 		///			</item>
+		///			<item>
+		///				<description>From DataMiner 10.2.9 onwards (RN 33849), if the DateTime.Kind property of <paramref name="timeInfo"/> is unspecified, the timestamp will be handled as local time.</description>
+		///			</item>
 		///		</list>
 		///	</remarks>
 		///	<example>
@@ -1568,6 +1620,9 @@ namespace Skyline.DataMiner.Scripting
 		///			<item>
 		///				<description>This method acts as a wrapper for a NotifyProtocol type 121 <see href="xref:NT_PUT_PARAMETER_INDEX">NT_PUT_PARAMETER_INDEX</see> call.</description>
 		///			</item>
+		///			<item>
+		///				<description>From DataMiner 10.2.9 onwards (RN 33849), if the DateTime.Kind property of an entry in <paramref name="timeInfos"/> is unspecified, the timestamp of that entry will be handled as local time.</description>
+		///			</item>
 		///		</list>
 		///	</remarks>
 		object SetParametersIndexByKey(int[] ids, string[] keys, int[] iYs, object[] values, DateTime[] timeInfos);
@@ -1599,7 +1654,8 @@ namespace Skyline.DataMiner.Scripting
 		object SetParametersIndexByKey(int[] ids, string[] keys, int[] iYs, object[] values);
 
 		/// <summary>
-		/// Gets the row data of the specified row in the specified table.
+		/// Gets the row data of the specified row in the specified table.<br/>
+		/// Note that this method should not be used. Using <see cref="GetRow(int, string)"/> instead is highly recommended.
 		/// </summary>
 		/// <param name="iPID">The ID of the table parameter.</param>
 		/// <param name="iRow">The 0-based index of the row.</param>
@@ -1651,7 +1707,8 @@ namespace Skyline.DataMiner.Scripting
 		object GetRow(int iPID, string key);
 
 		/// <summary>
-		/// Sets the data of the specified row to the specified values.
+		/// Sets the data of the specified row to the specified values.<br/>
+		/// Note that this method should not be used. Using <see cref="SetRow(int, string, object, ValueType, bool)"/> instead is highly recommended.
 		/// </summary>
 		/// <param name="iPID">The ID of the table parameter.</param>
 		/// <param name="iRow">The 0-based index of the row.</param>
@@ -1673,12 +1730,16 @@ namespace Skyline.DataMiner.Scripting
 		///			<item>
 		///				<description>A null reference as cell value will preserve the value of the cell.</description>
 		///			</item>
+		///			<item>
+		///				<description>From DataMiner 10.2.9 onwards (RN 33849), if the DateTime.Kind property of <paramref name="timeInfo"/> is unspecified, the timestamp will be handled as local time.</description>
+		///			</item>
 		///		</list>
 		///	</remarks>
 		object SetRow(int iPID, int iRow, object row, ValueType timeInfo, [MarshalAs(UnmanagedType.U1)] bool bOverrideBehaviour);
 
 		/// <summary>
-		/// Sets the data of the specified row to the specified values.
+		/// Sets the data of the specified row to the specified values.<br/>
+		/// Note that this method should not be used. Using <see cref="SetRow(int, string, object, ValueType)"/> instead is highly recommended.
 		/// </summary>
 		/// <param name="iPID">The ID of the table parameter.</param>
 		/// <param name="iRow">The 0-based index of the row.</param>
@@ -1699,12 +1760,16 @@ namespace Skyline.DataMiner.Scripting
 		///			<item>
 		///				<description>A null reference as cell value will preserve the value of the cell.</description>
 		///			</item>
+		///			<item>
+		///				<description>From DataMiner 10.2.9 onwards (RN 33849), if the DateTime.Kind property of <paramref name="timeInfo"/> is unspecified, the timestamp will be handled as local time.</description>
+		///			</item>
 		///		</list>
 		///	</remarks>
 		object SetRow(int iPID, int iRow, object row, ValueType timeInfo);
 
 		/// <summary>
-		/// Sets the data of the specified row to the specified values.
+		/// Sets the data of the specified row to the specified values.<br/>
+		/// Note that this method should not be used. Using <see cref="SetRow(int, string, object, bool)"/> instead is highly recommended.
 		/// </summary>
 		/// <param name="iPID">The ID of the table parameter.</param>
 		/// <param name="iRow">The 0-based index of the row.</param>
@@ -1730,7 +1795,8 @@ namespace Skyline.DataMiner.Scripting
 		object SetRow(int iPID, int iRow, object row, [MarshalAs(UnmanagedType.U1)] bool bOverrideBehaviour);
 
 		/// <summary>
-		/// Sets the data of the specified row to the specified values.
+		/// Sets the data of the specified row to the specified values.<br/>
+		/// Note that this method should not be used. Using <see cref="SetRow(int, string, object)"/> instead is highly recommended.
 		/// </summary>
 		/// <param name="iPID">The ID of the table parameter.</param>
 		/// <param name="iRow">The 0-based index of the row.</param>
@@ -1777,6 +1843,9 @@ namespace Skyline.DataMiner.Scripting
 		///			<item>
 		///				<description>A null reference as cell value will preserve the value of the cell.</description>
 		///			</item>
+		///			<item>
+		///				<description>From DataMiner 10.2.9 onwards (RN 33849), if the DateTime.Kind property of <paramref name="timeInfo"/> is unspecified, the timestamp will be handled as local time.</description>
+		///			</item>
 		///		</list>
 		///	</remarks>
 		object SetRow(int iPID, string key, object row, ValueType timeInfo, [MarshalAs(UnmanagedType.U1)] bool bOverrideBehaviour);
@@ -1802,6 +1871,9 @@ namespace Skyline.DataMiner.Scripting
 		///			</item>
 		///			<item>
 		///				<description>A null reference as cell value will preserve the value of the cell.</description>
+		///			</item>
+		///			<item>
+		///				<description>If the DateTime.Kind property of <paramref name="timeInfo"/> is unspecified, the timestamp will be handled as local time.</description>
 		///			</item>
 		///		</list>
 		///	</remarks>
@@ -2070,7 +2142,8 @@ namespace Skyline.DataMiner.Scripting
 		object Row(object theArray, int iRow);
 
 		/// <summary>
-		/// Gets the 1-based row position of the row that triggered the execution of the QAction.
+		/// Gets the 1-based row position of the row that triggered the execution of the QAction.<br/>
+		/// Note that this method should not be used. Using <see cref="RowKey()"/> instead is highly recommended.
 		/// </summary>
 		/// <returns>The position of the row.</returns>
 		/// <remarks>
@@ -2246,7 +2319,7 @@ namespace Skyline.DataMiner.Scripting
 		/// Determines whether the parameter with the specified ID has been initialized.
 		/// </summary>
 		/// <param name="iID">The ID of the parameter.</param>
-		/// <returns><c>true</c> if the value has been initialized; otherwise, <c>false</c>.</returns>
+		/// <returns><c>true</c> if the value has not been initialized; otherwise, <c>false</c>.</returns>
 		/// <remarks>
 		///		<list type = "bullet" >
 		///			<item>
@@ -2260,6 +2333,9 @@ namespace Skyline.DataMiner.Scripting
 		///			</item>
 		///			<item>
 		///				<description>In case a table ID or a column ID is provided, the following message is logged: NT_GET_DATA for [tableID] failed. 0x80040239.</description>
+		///			</item>
+		///			<item>
+		///				<description>In case the parameter has a fixed length, IsEmpty will always return false.</description>
 		///			</item>
 		///		</list>
 		///	</remarks>
@@ -2382,7 +2458,8 @@ namespace Skyline.DataMiner.Scripting
 		int CheckTrigger(int iID);
 
 		/// <summary>
-		/// Logs a message to the element log file.
+		/// Logs a message to the element log file.<br/>
+		/// Note that this method should not be used. Using <see cref="Log(string, LogType, LogLevel)"/> instead is recommended.
 		/// </summary>
 		/// <param name="iType">The logging type. Supported values: 1=Information, 2=Error, 4=DebugInfo, 8=Always.</param>
 		/// <param name="iLevel">The logging level. Supported values: -1=Development Logging, 0=No Logging, 1=Level 1 Logging, 2=Level 2 Logging, 3=Level 3 logging, 4=Level 4 Logging, 5=Log everything.</param>

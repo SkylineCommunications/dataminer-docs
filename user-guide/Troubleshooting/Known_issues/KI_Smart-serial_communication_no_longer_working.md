@@ -15,7 +15,7 @@ Windows 2019 upgrade/installation
 
 ## Fix
 
-SLPort automatically resizes the socket buffer before receiving data from a socket [[ID_27891](xref:General_Main_Release_10.1.0#slport-now-automatically-resizes-the-socket-buffer-before-receiving-data-from-a-socket-id_27891)]
+SLPort automatically resizes the socket buffer before receiving data from a socket [[ID_27891](xref:General_Main_Release_10.1.0_enhancements#slport-now-automatically-resizes-the-socket-buffer-before-receiving-data-from-a-socket-id_27891)]
 
 ## Issue description
 

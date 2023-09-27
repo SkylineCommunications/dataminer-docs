@@ -32,4 +32,4 @@ To execute a method asynchronously, do the following:
 
 | Item | Format | Description |
 |--|--|--|
-| ExecuteGeneric­AsyncRequestResult | String | The ticket that has to be passed along when executing the [IsGenericAsyncResponseAvailable](xref:IsGenericAsyncResponseAvailable) method or the [GetGenericAsyncResponse](xref:GetGenericAsyncResponse) method. |
+| ExecuteGenericAsyncRequestResult | String | The ticket that has to be passed along when executing the [IsGenericAsyncResponseAvailable](xref:IsGenericAsyncResponseAvailable) method or the [GetGenericAsyncResponse](xref:GetGenericAsyncResponse) method. |

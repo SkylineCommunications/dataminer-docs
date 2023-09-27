@@ -177,7 +177,7 @@ Configure the shape data as follows:
    | TimeStamp | The date and time for which the parameter value should be displayed. You can use a placeholder to change this value dynamically. |
    | NoDataValue= | This option allows you to specify the text that should be displayed in case no trending is available. If this option is not specified, the default value “N/A” is displayed. |
    | TrendDataType | This option allows you to determine which kind of trend data should be used, if available: *Realtime* (default), *Average* or *RealtimeAndAverage*. |
-   | AverageTrendData­Indication | This option allows you to specify a prefix to the parameter value in case it represents an average value. By default, no prefix is shown. |
+   | AverageTrendDataIndication | This option allows you to specify a prefix to the parameter value in case it represents an average value. By default, no prefix is shown. |
 
    For example:
 
@@ -198,7 +198,9 @@ Configure the shape data as follows:
     > See also: [Turning a shape into a control to update a session variable](xref:Turning_a_shape_into_a_control_to_update_a_session_variable)
 
 > [!NOTE]
-> To make element shapes display the average value, minimum value, or maximum value of a parameter they are linked to, you can use the placeholders `[average value]`, `[minimum value]`, and `[maximum value]` in the shape text. These placeholders will only show values for history parameter values based on average trend data.
+>
+> - To make element shapes display the average value, minimum value, or maximum value of a parameter they are linked to, you can use the placeholders `[average value]`, `[minimum value]`, and `[maximum value]` in the shape text. These placeholders will only show values for history parameter values based on average trend data.
+> - For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[Linking > Objects]* page > *History mode* toggle button.
 
 ## Options for shapes linked to parameters
 

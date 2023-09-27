@@ -20,4 +20,4 @@ This method is a faster alternative to the method *GetServicesForView*, as it re
 
 | Item | Format | Description |
 |--|--|--|
-| GetServicesLiteFor­ViewResult | Array of [DMAElementLite](xref:DMAElementLite) | A list with basic info about all the services in the specified view. |
+| GetServicesLiteForViewResult | Array of [DMAElementLite](xref:DMAElementLite) | A list with basic info about all the services in the specified view. |

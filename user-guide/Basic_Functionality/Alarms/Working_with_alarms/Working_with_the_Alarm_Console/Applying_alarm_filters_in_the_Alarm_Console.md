@@ -54,8 +54,8 @@ In the Alarm Console, you can add extra tab pages where you can specify a custom
 > [!TIP]
 > See also:
 >
-> - [Alarm Console – Advanced filtering](https://community.dataminer.services/video/alarm-console-advanced-filtering/) on DataMiner Dojo
-> - [Alarm Console – Alarm history](https://community.dataminer.services/video/alarm-console-alarm-history/) on DataMiner Dojo
+> - [Alarm Console – Advanced filtering](https://community.dataminer.services/video/alarm-console-advanced-filtering/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> - [Alarm Console – Alarm history](https://community.dataminer.services/video/alarm-console-alarm-history/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 To add such a filtered tab page:
 
@@ -184,14 +184,14 @@ Please note the following regarding the alarm focus feature:
 - In case of an alarm storm, the update of focus scores of persistent alarms is postponed until after the alarm storm ends.
 
 > [!NOTE]
-> You can enable or disable the alarm focus feature via *System Center* > *System settings* > *analytics config*. However, note that if you want to use [automatic incident tracking](xref:Advanced_analytics_features_in_the_Alarm_Console#automatic-incident-tracking), alarm focus must be enabled.
+> You can enable or disable the alarm focus feature via *System Center* > *System settings* > *analytics config*. However, note that if you disable alarm focus, [automatic incident tracking](xref:Automatic_incident_tracking) is automatically also disabled, and only [manual incident tracking](xref:Automatic_incident_tracking#manually-updating-an-alarm-group) can still be used. <!-- RN 33348 -->
 
 ## Applying an alarm filter by dragging an item onto the Alarm Console
 
 Instead of manually applying a filter in a tab, you can also drag an item from the Cube UI onto the Alarm Console to create a tab filtered specifically for that item.
 
 > [!TIP]
-> See also: [Alarm Console – Alarm history](https://community.dataminer.services/video/alarm-console-alarm-history/) on DataMiner Dojo.
+> See also: [Alarm Console – Alarm history](https://community.dataminer.services/video/alarm-console-alarm-history/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 To do so:
 

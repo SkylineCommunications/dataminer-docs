@@ -2,7 +2,13 @@
 uid: DataMiner_client_applications
 ---
 
-# DataMiner client applications
+# Frequently asked questions about DataMiner client applications
+
+- [How do I send info about my DataMiner client to Technical Support?](#how-do-i-send-info-about-my-dataminer-client-to-technical-support)
+
+- [How do I reinstall the DataMiner Cube browser app?](#how-do-i-reinstall-the-dataminer-cube-browser-app)
+
+- [What should I do if I cannot connect to a DMA using the DataMiner Cube browser app?](#what-should-i-do-if-i-cannot-connect-to-a-dma-using-the-dataminer-cube-browser-app)
 
 ## How do I send info about my DataMiner client to Technical Support?
 
@@ -20,7 +26,7 @@ In case of problems, Skyline Technical Support may ask you to provide version in
 
 ### Sending debug information to Technical Support
 
-1. In DataMiner Cube, go to *Apps* > *About*.
+1. In DataMiner Cube, go to *Apps* > *About* (in the *General* section).
 
 1. At the bottom of the *About* box, click *Email Debug Information*.
 
@@ -57,6 +63,9 @@ To reinstall the browser app, you need to clean the XBAP cache:
 > In the above-mentioned addresses, replace “\[DMA\]” by the IP address or the hostname of the DataMiner Agent you want to connect to.
 
 ## What should I do if I cannot connect to a DMA using the DataMiner Cube browser app?
+
+> [!NOTE]
+> While using the DataMiner Cube browser application is still supported, we highly recommend using the desktop application instead. See [Installing the DataMiner Cube desktop application](xref:Installing_the_DataMiner_Cube_desktop_application).
 
 1. Check if Microsoft Edge has been correctly configured to run Cube for this DMA.
 

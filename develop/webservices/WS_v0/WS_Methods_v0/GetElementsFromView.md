@@ -18,4 +18,4 @@ Use this method to request a list of all the elements in a specific view.
 
 | Item | Format | Description |
 |--|--|--|
-| GetElementsFrom­ViewResult | Array of [DMAElement](xref:DMAElement1) | All the elements in the specified view. |
+| GetElementsFromViewResult | Array of [DMAElement](xref:DMAElement1) | All the elements in the specified view. |

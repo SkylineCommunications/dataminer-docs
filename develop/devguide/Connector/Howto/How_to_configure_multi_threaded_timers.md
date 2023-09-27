@@ -95,7 +95,7 @@ For example, take the following configuration:
 
 This configuration ensures that whenever the timer goes off, the 20 threads that were initially released at the start of the second are now spread over 200-millisecond intervals, meaning that every 200 milliseconds, "c" threads are released (in this case 4, as 1 second has five 200-millisecond intervals, and 5 * 4 = 20). This results in a better spread of load and less spikes in memory and CPU usage.
 
-As defining the polling rate correctly can be tricky, you can use the *PollingRate Calculator Tool* to make things easier. For more information on how to download and use this tool, see [Multi-threaded timer polling rate calculator](https://community.dataminer.services/documentation/multi-threaded-timer-polling-rate-calculator/).
+As defining the polling rate correctly can be tricky, you can use the *PollingRate Calculator Tool* to make things easier. For more information on how to download and use this tool, see [Multi-threaded timer polling rate calculator](xref:Multi_Threaded_Timer_Polling_Rate_Calculator).
 
 ## Using multiple multi-threaded timers
 

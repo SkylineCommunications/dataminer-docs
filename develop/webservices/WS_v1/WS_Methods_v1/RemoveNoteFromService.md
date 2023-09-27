@@ -19,4 +19,4 @@ Use this method to remove a specific note from a particular service.
 
 | Item                         | Format  | Description         |
 |------------------------------|---------|---------------------|
-| RemoveNoteFrom­ServiceResult | Integer | The ID of the note. |
+| RemoveNoteFromServiceResult | Integer | The ID of the note. |

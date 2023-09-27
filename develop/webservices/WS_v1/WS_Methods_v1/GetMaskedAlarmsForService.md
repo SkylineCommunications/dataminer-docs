@@ -18,4 +18,4 @@ Use this method to retrieve the list of all the masked alarms of a particular se
 
 | Item | Format | Description |
 |--|--|--|
-| GetMaskedAlarms­ForServiceResult | Array of [DMAAlarm](xref:DMAAlarm) | The list of all the masked alarms of the specified service. |
+| GetMaskedAlarmsForServiceResult | Array of [DMAAlarm](xref:DMAAlarm) | The list of all the masked alarms of the specified service. |

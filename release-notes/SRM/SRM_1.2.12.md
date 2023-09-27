@@ -122,6 +122,6 @@ When a script was run in silent mode and a value was provided to a profile insta
 
 If a booking was edited and a pre-roll or post-roll stage was added to a booking that did not previously have this stage, it could occur that the corresponding events were not added to the booking.
 
-#### Logging of SRM Manager displayed for other bookings \[ID_29545\]
+#### BREAKING CHANGE: Logging of SRM Manager displayed for other bookings \[ID_29545\]
 
 In some cases, logging of a specific SRM Manager could be displayed for bookings it was not relevant for. To prevent this, when creating SRM scripts, instead of initializing a new Logger instance, you should now use *SrmLogHandler.Create* (from *Skyline.DataMiner.Library.Solutions.SRM.Logging*) and dispose it when it is no longer used.

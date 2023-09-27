@@ -6,6 +6,8 @@ uid: I-DOCSIS_parameters_us_qam_ch
 
 This page contains an overview of the US QAM CH parameters available in the I-DOCSIS branch of the EPM Solution.
 
+These parameters are displayed for the Node Segment and Service Group level in the I-DOCSIS dashboards.
+
 - **Name \[IDX]**: Direct value. The display name of the upstream channel.
 
   Concatenation of the CMTS Name and the US Ch Name, using "/" as a separator.
@@ -43,6 +45,12 @@ This page contains an overview of the US QAM CH parameters available in the I-DO
   - OID D3.0: 1.3.6.1.4.1.4491.2.1.20.1.4.1.3
 
   - OID D2.0: 1.3.6.1.2.1.10.127.1.3.3.1.6
+
+- **US QAM Ch Tx Power**: Direct value. The average value of the US QAM Ch Tx power related to the cable modems served by the given channel.
+
+  - OID D3.0: 1.3.6.1.2.1.10.127.1.2.2.1.3.2.
+
+  - OID D2.0: 1.3.6.1.4.1.4491.2.1.20.1.2.1.1.
 
 - **US QAM Ch Power Fluctuation**: Calculated. Only available for DOCSIS 3.x. Average value of the US QAM Ch Power Fluctuation related to the cable modems served by the given channel.
 
@@ -106,13 +114,8 @@ This page contains an overview of the US QAM CH parameters available in the I-DO
 
   - Nº octets received: OID 1.3.6.1.2.1.2.2.1.10
   - Interface's current bandwidth: OID 1.3.6.1.2.1.2.2.1.5
-
-- **US QAM Ch Utilization**: Calculated. Average value of the US QAM Ch Utilization as it relates to the CMs served by the given channel.
-
-  Calculated as follows: US QAM Ch Utilization = (Current Nº octets received- Nº octets received previously) * 8 * 100 / (Delta * Interface's current bandwidth)
-
-  - Nº octets transmitted: OID 1.3.6.1.2.1.2.2.1.10
-  - Interface's current bandwidth: OID 1.3.6.1.2.1.2.2.1.5
+ 
+- **Reflected Power Ratio**: Direct value. The average value of the Reflected Power Ratio related to the cable modems served by the given channel.
 
 - **US QAM Ch NMTER**: Calculated. Only available for DOCSIS 3.x. Average value of the US QAM Ch NMTER as it relates to the CMs served by the given channel.
 
@@ -127,3 +130,9 @@ This page contains an overview of the US QAM CH parameters available in the I-DO
 - **US QAM Ch PreMTTER Alarm Status**: Calculated. Only available for DOCSIS 3.x. The operational status of the average US QAM Ch PreMTTER according to the Non-Pre-Main-Tap to Total Energy Ratio (Pre-MTTER) Threshold.
 
 - **US QAM Ch PostMTTER Alarm Status**: Calculated. Only available for DOCSIS 3.x. The operational status of the average US QAM Ch PostMTTER according to the Post-Main-Tap to Total Energy Ratio (Post-MTTER) Threshold.
+
+- **US QAM Ch Input Bitrate**: Calculated. The average value of the DS QAM Ch Input Bitrate related to the cable modems served by the given channel.
+
+  Calculated as follows: US QAM Ch Input Bitrate = (Current Nº octets received - Nº octets received previously) / (Delta \* 1000.0).
+
+  - Nº octets received: OID 1.3.6.1.2.1.2.2.1.10

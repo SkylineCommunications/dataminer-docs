@@ -30,4 +30,4 @@ Available from DataMiner 10.0.7 onwards.
 
 | Item | Format | Description |
 |--|--|--|
-| GetActiveAlarmsFor­ElementSortedV2Result | Array of [DMAAlarm](xref:DMAAlarm) | The requested number of active element alarms, sorted as specified, as well as the alarm cache status. |
+| GetActiveAlarmsForElementSortedV2Result | Array of [DMAAlarm](xref:DMAAlarm) | The requested number of active element alarms, sorted as specified, as well as the alarm cache status. |

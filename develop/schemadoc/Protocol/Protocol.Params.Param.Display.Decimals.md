@@ -4,7 +4,7 @@ uid: Protocol.Params.Param.Display.Decimals
 
 # Decimals element
 
-Defines the number of decimals to be used to display the parameter value on the user inter­face.
+Defines the number of decimals to be used to display the parameter value on the user interface.
 
 ## Type
 

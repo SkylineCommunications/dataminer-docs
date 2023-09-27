@@ -18,4 +18,4 @@ Available from DataMiner 10.0.7 onwards.
 
 | Item                          | Format                       | Description                                                           |
 |-------------------------------|------------------------------|-----------------------------------------------------------------------|
-| GetActiveAlarms­CountV2Result | DMAAlarmCountAnd­CacheStatus | The total number of active alarms, as well as the alarm cache status. |
+| GetActiveAlarmsCountV2Result | DMAAlarmCountAndCacheStatus | The total number of active alarms, as well as the alarm cache status. |

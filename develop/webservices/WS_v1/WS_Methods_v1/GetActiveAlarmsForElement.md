@@ -16,6 +16,6 @@ Use this method to retrieve all the active alarms of a particular element.
 
 ## Output
 
-| Item                             | Format                                                                   | Description                                 |
-|----------------------------------|--------------------------------------------------------------------------|---------------------------------------------|
-| GetActiveAlarmsFor­ElementResult | Array of [DMAAlarm](xref:DMAAlarm) | The active alarms of the specified element. |
+| Item | Format | Description |
+|--|--|--|
+| GetActiveAlarmsForElementResult | Array of [DMAAlarm](xref:DMAAlarm) | The active alarms of the specified element. |
