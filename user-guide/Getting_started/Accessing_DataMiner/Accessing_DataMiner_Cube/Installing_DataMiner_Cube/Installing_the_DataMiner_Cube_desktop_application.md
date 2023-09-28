@@ -17,8 +17,6 @@ There are several ways to install the DataMiner Cube desktop application, depend
 
 1. Install DataMiner Cube in one of the following ways:
 
-   - **Prior to DataMiner 10.0.9**: To install DataMiner Cube using the ClickOnce web installer, on the landing page, click the button *Install DataMiner Cube* and select *Click-once installation*.
-
    - **From DataMiner 10.0.9 onwards**:
 
      1. On the DataMiner landing page, select *Desktop installation* and run the downloaded file.
@@ -31,8 +29,11 @@ There are several ways to install the DataMiner Cube desktop application, depend
      >
      > - Once the desktop app has been installed, it will be updated automatically when you connect to other DataMiner versions.
      > - Once the desktop app has been installed, a desktop and start menu shortcut will be added to your machine.
+     > - Administrators can [enforce the use of a specific Cube version](xref:DMA_configuration_related_to_client_applications#managing-client-versions) when you connect to a DMA.
 
-   - From DataMiner 10.2.0/10.2.2 onwards, it is also possible to install DataMiner Cube using an **MSI installer**, but this is **not recommended as this requires manual updating** when a new version is available. Typically, this is only used by a system administrator to deploy DataMiner Cube in bulk on many client machines at the same time using some form of automation. The MSI installer can be found in the folder `C:\Skyline DataMiner\Webpages\Tools\Installs` on each DMA.
+   - **Prior to DataMiner 10.0.9**: To install DataMiner Cube using the ClickOnce web installer, on the landing page, click the button *Install DataMiner Cube* and select *Click-once installation*.
+
+   - From DataMiner 10.2.0/10.2.2 onwards, it is also possible to install DataMiner Cube using an **MSI installer**, but this is **not recommended as this requires manual updating** when a new version is available. Typically, this is used by a system administrator to deploy DataMiner Cube in bulk on many client machines at the same time using some form of automation. The MSI installer can be found in the folder `C:\Skyline DataMiner\Webpages\Tools\Installs` on each DMA.
 
      > [!NOTE]
      >
