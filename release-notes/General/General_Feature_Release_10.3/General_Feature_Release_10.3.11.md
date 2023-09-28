@@ -269,7 +269,7 @@ In some cases, an error could occur in SLAnalytics when a feature (e.g. automati
 
 <!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
 
-When a protocol was configured to use `MultipleGetBulk` in combination with `PartialSNMP` (e.g. `<OID options="partialSNMP:10;multipleGetBulk:10">`), and the device would send less items than the configured `MultipleGetBulk` value, certain fields would not get filled in.
+When a protocol was configured to use `MultipleGetBulk` in combination with `PartialSNMP` (e.g. `<OID options="partialSNMP:10;multipleGetBulk:10">`), and the device would return less table cells than the configured `MultipleGetBulk` value, certain fields would not get filled in.
 
 #### Problem with SLAnalytics when fetching protocol information while creating a multivariate pattern [ID_37366]
 
