@@ -14,7 +14,7 @@ In the element protocol, in/out interfaces can be defined, which allow two types
 
 Connections can be set in different ways:
 
-- In Cube, in the element’s *Properties* window or the DCF configuration window. See [Configuring element connectivity in Cube](xref:Configuring_element_connectivity_in_Cube).
+- In Cube, in the element’s *Properties* window or the DCF configuration window. See [Configuring element connectivity in Cube](xref:Editing_element_connections_in_the_Properties_window).
 
 - In the matrix interface of a matrix element. See [Configuring matrix parameters](xref:Configuring_matrix_parameters).
 
