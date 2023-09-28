@@ -651,3 +651,9 @@ In the *Database* section of *System Center*, when *Type* was set to "Database p
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
 In a visual overview containing multiple pages, it would no longer be possible to return to the initially selected page when the shape used to switch pages had its `VdxPage` property updated using a session variable.
+
+#### DataMiner Cube could become unresponsive during startup when the Alarm Console did not contain any alarm tabs [ID_37436]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When starting up, DataMiner Cube could become unresponsive during the *Connected!* step When the Alarm Console did not contain any alarm tabs.
