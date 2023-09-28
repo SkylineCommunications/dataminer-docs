@@ -60,7 +60,7 @@ Advantages of DataMiner Storage as a Service (STaaS) include:
 
 > [!NOTE]
 >
-> If you experience any issues during setup or while using Storage as a Service do not hesitate to contact Cloud Ecosystem.
+> If you experience any issues during setup or while using Storage as a Service do not hesitate to contact the Cloud Ecosystem, by sending an email to: staas@skyline.be.
 
 ## Migration
 Migration to STaaS is supported for all datatypes with the exception of Logger Tables. Migration of Logger Tables will be supported in future versions. 
