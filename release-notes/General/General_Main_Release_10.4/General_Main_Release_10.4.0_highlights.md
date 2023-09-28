@@ -9,9 +9,10 @@ uid: General_Main_Release_10.4.0_highlights
 
 ## Highlights
 
-#### Storage as a Service (STaaS) [ID_34616] [ID_37256] [ID_37257] [ID_37283]
+#### Storage as a Service (STaaS) [ID_34616] [ID_37141] [ID_37256] [ID_37257] [ID_37283]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
+<!-- RN 37141: MR 10.4.0 - FR 10.3.10 [CU1] -->
 
 DataMiner now supports Storage as a Service (STaaS), a scalable and user-friendly cloud-native storage platform that provides a fully fletched alternative to on-premises databases.
 
