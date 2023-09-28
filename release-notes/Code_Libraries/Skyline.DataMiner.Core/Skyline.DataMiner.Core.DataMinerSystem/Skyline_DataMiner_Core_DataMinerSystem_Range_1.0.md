@@ -7,6 +7,12 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.0
 > [!NOTE]
 > Range 1.0.x.x is supported as from **DataMiner 10.1.0**. This is a continuation from the now obsolete [Class Library](xref:ClassLibrary_Range_1.2).
 
+### 1.1.1.2
+
+#### Fix - Monitors could stop working for long duration user actions
+When starting many monitors and the actions you provided take several seconds to execute there was a race condition and a chance the Monitor for that element went into a faulted state due to incoming initial events. The element would then ignore all new events coming in until you manually Stopped the Monitors and then Started them again.
+This has been fixed by adding additional low-level locking. Benchmark tests show no negative impact on efficiency from this change.
+
 ### 1.0.1.1
 
 #### Breaking change - AddSubscriptions in ICommunication
