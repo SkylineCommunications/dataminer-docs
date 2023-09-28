@@ -36,7 +36,8 @@ Advantages of DataMiner Storage as a Service (STaaS) include:
 
 > [!IMPORTANT]
 >
-> Storage as a Service can be used from DataMiner version 10.3.10 (CU1) onwards.
+> The minimum DataMiner version to use Storage as a Service is 10.3.10 (CU1).
+> We recommend the use of the latest available version to get the latest features and performance updates.
 
   1. Make your system **Cloud Connected** and note down the organization and coordination ids. These can be found here: ClientTestTool>Advanced>CcaGateway>Get Global State. More information about getting cloud connected can be found [here](https://docs.dataminer.services/user-guide/Cloud_Platform/Connecting_to_cloud/Connecting_your_DataMiner_System_to_the_cloud.html).
   1. Make sure you have at least **DataMiner CloudGateway 2.8.0** installed on the system. You can check this in the [Admin App](https://admin.dataminer.services) in the *nodes* section of your DMS. If this isn't the case, you can immediately update it from that page. You can find more information about this [here](https://docs.dataminer.services/user-guide/Cloud_Platform/CloudAdminApp/Managing_cloud-connected_nodes.html)
@@ -70,12 +71,11 @@ Migration to STaaS is supported for all datatypes with the exception of Logger T
 
 ## Limitations
 
-- Jobs and Ticketing datatypes are not supported
-- No indexing engine functionality such as search and suggestions
+- Jobs, Ticketing, and API Deployment datatypes are not supported
+- No indexing engine functionality such as search, suggestions, aliases, and aggregation
 - Cube direct queries to the database are not supported
 - SLReset tool is not supported
 - DELT export for trend data is not supported
-- API Deployment is not supported
 
 ## Known issues
 
