@@ -30,4 +30,4 @@ Advantages of DataMiner Storage as a Service (STaaS) include:
 > [!TIP]
 >
 > - To read more about Storage as a Service and its advantages, see [DataMiner STaaS: a game-changer for your storage needs](https://community.dataminer.services/dataminer-staas-a-game-changer-for-your-storage-needs/).
-> - As Storage as a Service is fully available as of DataMiner 10.3.10. This page will be updated with more information soon. Check back for updates frequently!
+> - As Storage as a Service is fully available as of DataMiner 10.3.10, this page will be updated with more information soon. Check back for updates frequently!
