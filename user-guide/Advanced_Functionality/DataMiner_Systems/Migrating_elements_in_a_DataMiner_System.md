@@ -27,6 +27,12 @@ To do so:
    | Polling | Represents the "change" value multiplied by 2. |
    | Agent | The DMA currently hosting the element. |
 
+   > [!NOTE]
+   > Not all elements are included in the migration window:
+   >
+   > - If you do not have permission to access and edit certain elements, these elements will not be included.
+   > - Spectrum elements, SLAs, DVE elements, and virtual elements in redundancy groups are never included.
+
 1. In the *Element migration* window, in the list on the left, select the elements you want to migrate from one DMA to another.
 
 1. In the pane on the right, select the DMA to which you want to migrate these elements.
