@@ -4,7 +4,7 @@ uid: Benefits_Business_and_Tech_Partners
 
 # Benefits for DataMiner business and technology partners
 
-By creating DataMiner business value and market presence, you earn DevOps Points. Not only do these points determine your [DevOps Professional level](xref:Benefits_DevOps_Professionals_Program#accumulating-devops-points), they also allow you to enjoy the plentiful benefits attached to the DevOps Professional Program.
+By creating DataMiner business value and market presence, you earn DevOps Points. Not only do these points determine your [DevOps Professional level](xref:DevOps_Points), they also allow you to enjoy the plentiful benefits attached to the DevOps Professional Program.
 
 > [!NOTE]
 > We are continuously working on further evolving this key program, so new benefits or ways of collecting DevOps Points can be expected.
