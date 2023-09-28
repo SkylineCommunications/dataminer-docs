@@ -13,9 +13,9 @@ uid: General_Main_Release_10.4.0_highlights
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
-A DataMiner System now supports *Storage as a Service* as general database. *Storage as a Service* (or *STaaS*) is now a fully fletched alternative to on-premises databases.
+DataMiner now supports Storage as a Service (STaaS), a scalable and user-friendly cloud-native storage platform that provides a fully fletched alternative to on-premises databases.
 
-For detailed information, see [Storage as a Service (STaaS)](xref:STaaS)
+For detailed information, see [Storage as a Service (STaaS)](xref:STaaS).
 
 #### User-Defined APIs [ID_34910] [ID_35134] [ID_35169] [ID_35417] [ID_35743] [ID_35810] [ID_35880] [ID_35885] [ID_36118] [ID_36250] [ID_36273] [ID_36366]
 
