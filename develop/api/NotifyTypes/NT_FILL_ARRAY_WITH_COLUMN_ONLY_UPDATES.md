@@ -6,9 +6,7 @@ uid: NT_FILL_ARRAY_WITH_COLUMN_ONLY_UPDATES
 
 ## Parameters
 
-To set a column on the **local element**:
-
-Performing a NT_FILL_ARRAY_WITH_COLUMN_ONLY_UPDATES via NotifyProtocol behaves in the exact same way as [NT_FILL_ARRAY_WITH_COLUMN (220)](xref:NT_FILL_ARRAY_WITH_COLUMN).
+To set a column on the **local element**, performing an NT_FILL_ARRAY_WITH_COLUMN_ONLY_UPDATES via NotifyProtocol behaves in the exact same way as [NT_FILL_ARRAY_WITH_COLUMN (220)](xref:NT_FILL_ARRAY_WITH_COLUMN).
 
 To set a column on a **remote element**:
 
@@ -36,7 +34,7 @@ protocol.NotifyDataMiner(336 /*NT_FILL_ARRAY_WITH_COLUMN_ONLY_UPDATES*/, ids, va
 
 ## Remarks
 
-- From DataMiner 10.3.10 onwards (RN 36973), the NotifyDataMiner call supports setting multiple columns at once. For example:
+From DataMiner 10.3.10 onwards (RN 36973), the NotifyDataMiner call supports setting multiple columns at once. For example:
 
 ```csharp
 uint elementAgentId = 200;
