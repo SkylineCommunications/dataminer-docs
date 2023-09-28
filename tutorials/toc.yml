@@ -1,10 +1,11 @@
-- name: DataMiner tutorials
-  topicUid: Tutorials
-  items:
-    - name: User-defined APIs
-      topicUid: UD_APIs_Tutorials
-      items:
-        - name: Hello world
-          topicUid: UD_APIs_Hello_world_tutorial
-        - name: Creating an API to retrieve elements in alarm
-          topicUid: UD_APIs_Elements_in_alarm_tutorial
+items:
+  - name: DataMiner tutorials
+    topicUid: Tutorials
+    items:
+      - name: User-defined APIs
+        topicUid: UD_APIs_Tutorials
+        items:
+          - name: Hello world
+            topicUid: UD_APIs_Hello_world_tutorial
+          - name: Creating an API to retrieve elements in alarm
+            topicUid: UD_APIs_Elements_in_alarm_tutorial
