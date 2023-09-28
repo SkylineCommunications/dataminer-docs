@@ -2,7 +2,7 @@
 uid: UD_APIs_Hello_world_tutorial
 ---
 
-# Hello world tutorial
+# Hello world
 
 This tutorial shows you how to create your first user-defined API. You will create a simple API that, upon execution, will return "Hello world!". The content and screenshots for this tutorial have been created in DataMiner version 10.3.9.
 

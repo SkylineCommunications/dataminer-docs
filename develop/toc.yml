@@ -540,6 +540,11 @@
         items:
         - name: Launching EPM objects by clicking buttons in Data Display table cells
           topicUid: AdvancedEPMLaunchEPMObjectsTableCellButtons
+    - name: Connector help pages
+      topicUid: Connector_help_pages
+      items:
+      - name: Connector help template
+        topicUid: Connector_help_template
     - name: Questions & Answers
       topicUid: QuestionsAndAnswers
     - name: How-tos
@@ -563,8 +568,6 @@
         topicUid: How_to_integrate_the_HTTP_sessions_table_in_a_connector
       - name: How to retrieve protocol pending calls
         topicUid: How_to_retrieve_protocol_pending_calls
-      - name: How to set up an SSH connection within a protocol
-        topicUid: How_to_set_up_an_SSH_connection_within_a_protocol
       - name: How to use history sets on a protocol parameter
         topicUid: How_to_use_history_sets_on_a_protocol_parameter
       - name: How to use multiple protocol threads to split communication and parsing

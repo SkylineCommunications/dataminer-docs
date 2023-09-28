@@ -12,6 +12,18 @@ uid: General_Main_Release_10.2.0_CU20
 
 ### Enhancements
 
+#### NATSCustodian: Enhanced behavior when detecting unreachable NATS nodes [ID_37271]
+
+<!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
+
+From now on, when *NATSCustodian* detects unreachable NATS nodes in the cluster, it will no longer generate any alarms, nor will it reset the NATS configuration. It will only add an entry to the *NATSCustodian.txt* log file for diagnostic purposes.
+
+NATSCustodian will only reset the NATS configuration when it detects
+
+- that NATS nodes have been added,
+- that NATS nodes have been deleted, or
+- when NATS is in an incorrect state.
+
 #### Security enhancements [ID_37335]
 
 <!-- RN 37335: 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
@@ -33,14 +45,6 @@ From now on, when you start a Cassandra Cluster migration, a warning message wil
 <!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
 
 Not all [Protocol.Params.Param.Interprete.Others](xref:Protocol.Params.Param.Interprete.Others) tags would be read out, which could lead to unexpected behavior.
-
-#### Problem with .NET Framework DLL files used by QActions or Automation scripts [ID_36984]
-
-<!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
-
-When a QAction or Automation script used a NuGet package containing a .NET Framework DLL file on a DataMiner Agent that used a more recent .NET Framework that included that same DLL file by default, a compilation error would occur.
-
-Also, certain DLL files located in a subfolder of the .NET Framework would not be resolved correctly.
 
 #### Dashboards app: 'Loading...' indicator would appear when trying to save a folder of which the name consists of spaces [ID_37046]
 
@@ -136,6 +140,12 @@ For example, when you set a custom time zone in a *Clock* component, the current
 
 When you opened a trend graph showing trend data of a parameter of type string, and you added another, non-string parameter to that same graph, the Y axis of the newly added parameter would not be rendered correctly. The labels would be placed too close to each other, making them unreadable.
 
+#### Elements with multiple SSH connections would go into timeout after being restarted [ID_37294]
+
+<!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
+
+When an element with multiple SSH connections was restarted, in some cases, it would no longer be able to communicate with the SSH server. As a result, it would immediately go into timeout.
+
 #### DataMiner backup: DBConfiguration.xml file would not be included in backups [ID_37296]
 
 <!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
@@ -147,6 +157,12 @@ When you took a DataMiner backup either via Cube or via the Taskbar Utility, the
 <!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
 
 An error could occur in the SLAnalytics process due to some features not starting up correctly.
+
+#### Protocols: Problem when using 'MultipleGetBulk' in combination with 'PartialSNMP' [ID_37336]
+
+<!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
+
+When a protocol was configured to use `MultipleGetBulk` in combination with `PartialSNMP` (e.g. `<OID options="partialSNMP:10;multipleGetBulk:10">`), and the device would return less table cells than the configured `MultipleGetBulk` value, certain fields would not get filled in.
 
 #### DataMiner Cube: No breadcrumbs would be displayed when you opened a service card [ID_37384]
 

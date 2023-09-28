@@ -1,17 +1,16 @@
 ---
-uid: ClassLibrary_Range_1.2
+uid: ClassLibrary_Range_1.1
 ---
 
-# Class Library Range 1.2
+# Class Library Range 1.1
+
+>[!IMPORTANT]
+> DEPRECATED: This library is no longer maintained. The code has been moved to separate public NuGets. See [Skyline.DataMiner.Core.DataMinerSystem](xref:Skyline_DataMiner_Core_DataMinerSystem_Range_1.0).
 
 > [!NOTE]
-> Range 1.2.x.x is supported as from DataMiner version 10.0.3
+> Range 1.1.x.x is supported as from DataMiner version 9.6.3
 
-### 1.2.2.8
-
-An Interface containing logic with regard to 'interface utilization calculations' and 'interface counters discontinuity' has been added.
-
-### 1.2.2.7
+### 1.1.4.7
 
 #### Add support for Services in IDmsView [ID_34999]
 
@@ -19,19 +18,13 @@ IDmsView now has an extra property *Services*, which will contain the services u
 
 When looping over the *Elements* and requesting the protocol name, it will no longer throw an exception as it will now only contain the elements instead of the elements and the services.
 
-#### Overloads have been added for specifying primary/display key [ID_35048]
-
-Several IDmsColumn methods have been updated. By default, the software will check by Display Key. If no such key is found, it will then check by Primary Key.
-
-An overload method for SetValue has been added to IDmsColumn to specify which KeyType is being used.
-
-### 1.2.2.6
+### 1.1.4.6
 
 Methods for Rate calculations based on DateTime now require UTC DateTime values.
 
 The example protocol *SLC SDF Rates - Custom* has also been adapted accordingly.
 
-### 1.2.2.5
+### 1.1.4.5
 
 #### 'LogType does not exist in current context' error [ID_34469]
 
@@ -49,7 +42,7 @@ The Rate classes now include device reboot detection to avoid invalid rate calcu
 
 The example protocol *SLC SDF Rates - SNMP* has also been adapted accordingly.
 
-### 1.2.2.4
+### 1.1.4.4
 
 #### Class Library is now able to process elements of which the RemoteElement property of the ElementInfoEventMessage is set to the maximum value \[ID_33751\]
 
@@ -63,7 +56,7 @@ The folder structure of the Class Library has been updated. "DataMiner\\Library"
 
 The RateHelper class lacked a DllImport statement. This has now been added.
 
-### 1.2.2.3
+### 1.1.4.3
 
 #### InterAppCalls deserialize fails with KnownTypes having multiple Collections \[ID_33720\]
 
@@ -107,11 +100,11 @@ Using the Class Library, it is now possible to request a standalone parameter or
 
 The Class Library now contains new bit rate calculation classes.
 
-### 1.2.2.2
+### 1.1.4.2
 
 *Internal release*
 
-### 1.2.2.1
+### 1.1.4.1
 
 #### Simplified version of the MessageExecutor \[ID_33223\]
 
@@ -135,7 +128,7 @@ The "Skyline.DataMiner." prefix for Class Library exceeded to 260-character path
 > [!WARNING]
 > For code using NuGets, this is a breaking change.
 
-### 1.2.1.2
+### 1.1.3.2
 
 #### Class Library monitors now allow triggering an action when their own element is stopped \[ID_33097\]
 
@@ -149,7 +142,7 @@ Up to now, in some cases, SLNet calls would be sent while it was unnecessary to 
 
 Up to now, the Class Library NuGet package would contain an incorrect DLL file.
 
-### 1.2.1.1
+### 1.1.3.1
 
 #### Class Library can now be installed and used as a NuGet package \[ID_33102\]
 
@@ -158,7 +151,7 @@ From now on, the Class Library can be installed and used as a NuGet package.
 > [!WARNING]
 > BREAKING CHANGE: From now on, InterAppCalls will no longer use reflection. This means that, when using InterApp calls, you will now always need to provide a list with all Known Class Types when deserializing or serializing messages. Also when linking a message to an executor, you will now need to provide a mapping.
 
-### 1.2.0.8
+### 1.1.2.12
 
 #### Extended authentication algorithm support \[ID_30232\]
 
@@ -169,7 +162,7 @@ The class library now supports the following authentication algorithms:
 - SHA1
 - HMAC-SHA1
 
-### 1.2.0.7
+### 1.1.2.11
 
 #### RemotePort would throw 'null reference' exceptions when trying to retrieve a replicated element \[ID_30053\]
 
@@ -183,7 +176,13 @@ Monitors that subscribe to a table can now execute code whenever data in that ta
 
 The SLSpectrum wrappers were missing a GetMonitor call with the correct return format.
 
-### 1.2.0.6
+### 1.1.2.10
+
+#### Additional check to prevent elements to restart after being updated \[ID_29777\]
+
+When an element is updated, it will be restarted whenever its port settings have been changed. Now, an additional check has been added to make sure an element is not restarted when, during an update, its port settings have not been changed.
+
+### 1.1.2.9
 
 #### IsSslTlsEnabled property of all ports of an element would incorrectly be reset to false when an element port had been updated \[ID_29440\]
 
@@ -201,11 +200,11 @@ The class library now includes a DmsService class that can be used to manage Dat
 
 Monitors have been added to subscribe to service alarm level and service state.
 
-### 1.2.0.5
+### 1.1.2.8
 
 #### Creating, updating and retrieving HTTP connections of elements \[ID_29070\]
 
-IDms classes now support creating, updating and retrieving HTTP connections of elements.
+Dms classes now support creating, updating and retrieving HTTP connections of elements.
 
 #### Retrieving CI type information from connections \[ID_29071\]
 
@@ -219,7 +218,7 @@ IDms classes now support creating and deleting properties in a DataMiner System.
 
 SLNet wrapper methods now allow you to safely communicate with the SLScheduler and SLSpectrum modules. Up to now, Scheduler and Spectrum Interop classes had to be used to communicate with those modules.
 
-### 1.2.0.4
+### 1.1.2.7
 
 #### Name of an element with a RealConnection could no longer be updated \[ID_27783\]
 
@@ -229,7 +228,7 @@ In some cases, the name of an element with a RealConnection (SNMP, HTTP, SERIAL,
 
 Due to an error in the Matrix Helper class, in some cases, an output could not be disconnected when it was connected to the first input.
 
-### 1.2.0.3
+### 1.1.2.5
 
 #### DataMiner System interface would thrown an exception when parsing elements in a view \[ID_26422\]
 
@@ -239,15 +238,15 @@ In some cases, the DataMiner System interface would throw an IndexOutOfRange exc
 
 In some cases, an incorrectly formatted input string would cause the GetElement method to throw an exception.
 
-### 1.2.0.2
+### 1.1.2.4
 
 #### Deserialization would fail when 'System.' classes were used \[ID_25933\]
 
-In some cases, collection interface deserialization could fail if some of the classes were "System." classes located in System.dll.
+In some cases, collection interface deserialization could fail if some of the classes were 'System.' classes located in System.dll.
 
 Deserialization now supports classes located in both System.Core.dll and System.dll.
 
-### 1.2.0.1
+### 1.1.2.3
 
 #### Retrieving data from partial tables \[ID_24951\]
 
@@ -299,6 +298,96 @@ The Class Library now supports the retrieval of information from the following S
 - SNMPv3 connections
 - Virtual connections
 
-#### IEngine interface now supports the extension of the GetDms method \[ID_25632\]
+### 1.1.2.2
 
-The IEngine interface now supports the extension of the GetDms method.
+#### Problem recreating the monitor after an element restart \[ID_24756\]
+
+When an element was restart, in some rare cases, an error could occur when recreating the Class Library monitor.
+
+#### Enhanced handling of errors occurring while parsing element information returned by a GetElements method \[ID_24934\]
+
+From now on, the Class Library will no longer throw an exception when an error occurs while parsing element information returned by a GetElements method.
+
+- When element replication is not enabled for a particular element, then the replication properties of that element will no longer be parsed.
+
+- When element replication is enabled for a particular element, and an error occurs while parsing the replicated remote element, then the incorrect ID will be logged, and the default remote element ID "-1/-1" will be used instead. This will make sure the element is included in the list of elements returned by the GetElements method.
+
+- When a general error occurs while parsing the information of an element, then an entry will be added to the log, and the GetElements method will return all elements of which the information was parsed successfully.
+
+### 1.1.2.1
+
+#### DMS Monitors \[ID_24066\]
+
+The new Monitor Extension methods provide stable logic to handle eventing. They encapsulate DataMiner subscriptions and handle all correct cleanup and stability guidelines, leaving a developer free to focus on what must happen when an event is triggered.
+
+Currently, the supported methods provide the ability to monitor changes in the full DMS and trigger a C# method to run for:
+
+- Standalone parameter value changes
+- Table cell value changes
+- Parameter alarm level changes
+- Table cell alarm level changes
+- Single element alarm changes
+- Single element name changes
+- All elements (DMS-level) alarm changes
+- All elements (DMS-level) name changes
+
+> [!NOTE]
+> Class Library Monitors will only work in conjunction with DataMiner version 9.6.3 or higher.
+
+#### New Rates namespace \[ID_24283\]
+
+A new Rates namespace has been added. This namespace contains classes and methods that can be used to calculate all kind of rates, including bit rates for SNMP interface tables.
+
+#### element.IsStartupComplete method would throw an exception when executed on an element that had been stopped \[ID_24290\]
+
+In some cases, the IDmsElement IsStartupComplete method would throw an exception when it was executed on an element that had been stopped.
+
+#### Problem when updating properties \[ID_24291\]
+
+In some cases, it would not be possible to update properties that had a value equal to NULL.
+
+#### Problem when requesting an element with duplicate properties \[ID_24293\]
+
+When an element was requested via IDms, in some cases, an exception could be thrown when the element had duplicate properties.
+
+From now on, when an element has duplicate properties, no exception will be thrown, but an entry will be added to the `C:\Skyline DataMiner\Logging\ClassLibrary.txt` log file.
+
+#### Table cell subscriptions will now be established using the primary key \[ID_24456\]
+
+Up to now, table cell subscriptions were established using the display key. From now on, they will be established using the primary key.
+
+#### GetAlarmTemplates() and GetTrendTemplates() would not work when the protocol was a production protocol \[ID_24357\]
+
+In some cases, it would not be possible to retrieve the alarm template or the trend template of a protocol via IDms when that protocol was a production protocol.
+
+Also, the IDmsProtocol interface now has a new "ReferencedVersion" property.
+
+### 1.1.0.2
+
+#### View name would be retrieved when it was already known \[ID_22303\]
+
+Up to now, in some cases, the name of a view would be retrieved when it was already known. From now on, when the name of a view is already known, it will no longer be retrieved a second time.
+
+#### Element properties will only be retrieved when needed \[ID_23514\]
+
+From now on, element properties will only be retrieved when needed.
+
+#### Exception thrown after detecting an element with duplicate properties will now also contain the name of the ID of the element \[ID_23515\]
+
+The exception that is thrown when an element with duplicate properties is detected will now also contain the name and the ID of the element in question.
+
+### 1.1.0.1
+
+#### New matrix classes added to facilitate matrix and router control implementations \[ID_23075\]
+
+Under Skyline.DataMiner.Library.Protocol.Matrix, the Class Library now contains a collection of classes that will help you develop matrix and router control implementations.
+
+Also, in the DIS Macros tool window, a new CreateMatrix macro was added. This macro will help you initiate a new matrix and/or router control.
+
+#### New InterApp classes now provide a C# message/response architecture \[ID_23298\]
+
+A collection of InterApp classes now provides a C# message/response architecture that will allow for easier communication
+
+- among elements,
+- between elements and Automation scripts, and
+- between elements and external applications.

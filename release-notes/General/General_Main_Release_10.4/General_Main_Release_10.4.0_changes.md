@@ -483,6 +483,27 @@ Because of a number of enhancements, overall performance has increased when usin
 > [!IMPORTANT]
 > For the properties that should be taken into account, the option *Update alarms on value changed* must be selected. For more information, see [Configuration of incident tracking based on properties](xref:Automatic_incident_tracking#configuration-of-incident-tracking-based-on-properties).
 
+#### SLLogCollector now collects information regarding the IIS configuration [ID_37273]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+SLLogCollector packages now include information regarding the IIS configuration:
+
+| Folder              | Information                                           |
+|---------------------|-------------------------------------------------------|
+| IIS                 | The IIS configuration                                 |
+| Network Information | Information regarding the SSL certificate on port 443 |
+| SSL Cert            | The SSL certificate for port 443                      |
+
+#### SLNetClientTest: New 'Debug SAML' checkbox [ID_37370]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When, in the SLNetClientTest tool, you select the new *Debug SAML* checkbox before connecting to a DataMiner Agent that used external authentication via SAML, two additional pop-up windows will now appear, displaying the SAML requests and SAML responses respectively.
+
+> [!CAUTION]
+> Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
 ### Fixes
 
 #### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID_34981]
@@ -605,11 +626,11 @@ In some rare cases, an error could be thrown when an element was renamed.
 
 The deprecated DMS_GET_INFO call would return unexpected data when it returned data of elements that contained remotely hosted DVE child elements.
 
-#### Problem when restarting DataMiner [ID_37112]
+#### Problem in different native processes when interacting with message broker calls [ID_37150]
 
-<!-- MR 10.4.0 - FR 10.3.10 -->
+<!-- MR 10.4.0 - FR 10.3.11 -->
 
-When DataMiner was restarted, in some rare cases, it would not start up again.
+In some cases, an error could occur in different native processes when interacting with message broker calls.
 
 #### SLAnalytics: Problem when creating or editing a multivariate pattern [ID_37212]
 
@@ -641,14 +662,8 @@ When settings inside the `<LDAP>` element of the *DataMiner.xml* file were updat
 
 Up to now, the MessageHandler method in SLHelperTypes.SLHelper would incorrectly try to serialize exceptions that could not be serialized, causing other exceptions to be thrown.
 
-#### Elements with multiple SSH connections would go into timeout after being restarted [ID_37294]
+#### SLAnalytics: Problem when stopping a feature [ID_37329]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
-When an element with multiple SSH connections was restarted, in some cases, it would immediately go into timeout.
-
-#### Problem with SLAnalytics when fetching protocol information while creating a multivariate pattern [ID_37366]
-
-<!-- MR 10.4.0 - FR 10.3.11 -->
-
-In some cases, SLAnalytics could throw an exception when fetching protocol information while creating a multivariate pattern.
+In some cases, an error could occur in SLAnalytics when a feature (e.g. automatic incident tracking) was stopped.

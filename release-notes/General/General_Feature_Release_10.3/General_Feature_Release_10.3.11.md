@@ -77,6 +77,30 @@ This `objectId` attribute will now be considered optional. Hence, no run-time er
 
 A number of security enhancements have been made.
 
+#### NATSCustodian: Enhanced behavior when detecting unreachable NATS nodes [ID_37271]
+
+<!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
+
+From now on, when *NATSCustodian* detects unreachable NATS nodes in the cluster, it will no longer generate any alarms, nor will it reset the NATS configuration. It will only add an entry to the *NATSCustodian.txt* log file for diagnostic purposes.
+
+NATSCustodian will only reset the NATS configuration when it detects
+
+- that NATS nodes have been added,
+- that NATS nodes have been deleted, or
+- when NATS is in an incorrect state.
+
+#### SLLogCollector now collects information regarding the IIS configuration [ID_37273]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+SLLogCollector packages now include information regarding the IIS configuration:
+
+| Folder              | Information                                           |
+|---------------------|-------------------------------------------------------|
+| IIS                 | The IIS configuration                                 |
+| Network Information | Information regarding the SSL certificate on port 443 |
+| SSL Cert            | The SSL certificate for port 443                      |
+
 #### SLAnalytics - Trend predictions: Enhanced trend prediction models [ID_37280]
 
 <!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
@@ -88,6 +112,27 @@ A number of enhancements have been made to the trend prediction models, especial
 <!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
 
 A number of enhancements have been made to the memory resources used for trended parameters of which the value remains constant.
+
+#### SLNetClientTest: New 'Debug SAML' checkbox [ID_37370]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When, in the SLNetClientTest tool, you select the new *Debug SAML* checkbox before connecting to a DataMiner Agent that used external authentication via SAML, two additional pop-up windows will now appear, displaying the SAML requests and SAML responses respectively.
+
+> [!CAUTION]
+> Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
+#### Old versions of NATS configuration files will now be kept when changes are made to those files [ID_37401]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+When changes are made to one of the following NATS configuration files, from now on, the old version of that file will be saved in the `C:\Skyline DataMiner\Recycle Bin` folder.
+
+- `C:\Skyline DataMiner\SLCloud.xml`
+- `C:\Skyline DataMiner\NATS\nats-streaming-server\nats-server.config`
+- `C:\Skyline DataMiner\NATS\nats-account-server\nas.config`
+
+This will allow you to trace changes made to these configuration files when issues arise.
 
 ### Fixes
 
@@ -105,14 +150,6 @@ From now on, when you start a Cassandra Cluster migration, a warning message wil
 
 Not all [Protocol.Params.Param.Interprete.Others](xref:Protocol.Params.Param.Interprete.Others) tags would be read out, which could lead to unexpected behavior.
 
-#### Problem with .NET Framework DLL files used by QActions or Automation scripts [ID_36984]
-
-<!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
-
-When a QAction or Automation script used a NuGet package containing a .NET Framework DLL file on a DataMiner Agent that used a more recent .NET Framework that included that same DLL file by default, a compilation error would occur.
-
-Also, certain DLL files located in a subfolder of the .NET Framework would not be resolved correctly.
-
 #### DataMiner backup: Number of backups to be kept would be interpreted incorrectly [ID_37143]
 
 <!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
@@ -125,6 +162,12 @@ From now on, the number of backups you specify will be the number of backups tha
 
 > [!NOTE]
 > A DataMiner Agent will now store its backups in a subfolder of the folder set as backup location. The name of that subfolder will be identical to the DMA ID of the DataMiner Agent in question.
+
+#### Problem in different native processes when interacting with message broker calls [ID_37150]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+In some cases, an error could occur in different native processes when interacting with message broker calls.
 
 #### SLNet would incorrectly return certain port information fields of type string as null values [ID_37165]
 
@@ -194,9 +237,9 @@ An error could occur in SLNet due to unhandled MessageBroker exceptions in SLHel
 
 #### Elements with multiple SSH connections would go into timeout after being restarted [ID_37294]
 
-<!-- MR 10.4.0 - FR 10.3.11 -->
+<!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
 
-When an element with multiple SSH connections was restarted, in some cases, it would immediately go into timeout.
+When an element with multiple SSH connections was restarted, in some cases, it would no longer be able to communicate with the SSH server. As a result, it would immediately go into timeout.
 
 #### DataMiner backup: DBConfiguration.xml file would not be included in backups [ID_37296]
 
@@ -204,15 +247,33 @@ When an element with multiple SSH connections was restarted, in some cases, it w
 
 When you took a DataMiner backup either via Cube or via the Taskbar Utility, the *DBConfiguration.xml* file would incorrectly not be included in the backup.
 
+#### Service & Resource Management: Bookings could get stuck in the 'Confirmed' state [ID_37306]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+In some rare cases, a booking created with a start time in the past or equal to "Now" could incorrectly get stuck in the *Confirmed* state.
+
 #### SLAnalytics: Problem due to some features not starting up correctly [ID_37321]
 
 <!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
 
 An error could occur in the SLAnalytics process due to some features not starting up correctly.
 
-#### Problem with SLAnalytics when fetching protocol information while creating a multivariate pattern [ID_37366]
+#### SLAnalytics: Problem when stopping a feature [ID_37329]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
+
+In some cases, an error could occur in SLAnalytics when a feature (e.g. automatic incident tracking) was stopped.
+
+#### Protocols: Problem when using 'MultipleGetBulk' in combination with 'PartialSNMP' [ID_37336]
+
+<!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
+
+When a protocol was configured to use `MultipleGetBulk` in combination with `PartialSNMP` (e.g. `<OID options="partialSNMP:10;multipleGetBulk:10">`), and the device would return less table cells than the configured `MultipleGetBulk` value, certain fields would not get filled in.
+
+#### Problem with SLAnalytics when fetching protocol information while creating a multivariate pattern [ID_37366]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
 
 In some cases, SLAnalytics could throw an exception when fetching protocol information while creating a multivariate pattern.
 

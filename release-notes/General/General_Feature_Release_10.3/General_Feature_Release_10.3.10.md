@@ -20,6 +20,7 @@ uid: General_Feature_Release_10.3.10
 
 - [DataMiner Object Models: 'Full CRUD meta' scripts [ID_37004]](#dataminer-object-models-full-crud-meta-scripts-id_37004)
 - [Support for real-time GQI row updates](#support-for-real-time-gqi-row-updates-id_37060)
+- [Storage as a Service](#storage-as-a-service-staas-id_34616-id_37256-id_37257-id_37283)
 
 ## New features
 
@@ -58,6 +59,14 @@ Soft-deleting a *GenericEnumEntry* object will have the following consequences:
 - It will not be possible to create an instance of which the value is set to the soft-deleted *GenericEnumEntry*.
 - It will not be possible to update the value of an instance to the soft-deleted *GenericEnumEntry*.
 - It is allowed to have instances of which the value is set to the soft-deleted *GenericEnumEntry*.
+
+#### Storage as a Service (STaaS) [ID_34616] [ID_37256] [ID_37257] [ID_37283]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+DataMiner now supports Storage as a Service (STaaS), a scalable and user-friendly cloud-native storage platform that provides a fully fletched alternative to on-premises databases.
+
+For detailed information, see [Storage as a Service (STaaS)](xref:STaaS).
 
 ## Changes
 
@@ -216,7 +225,7 @@ The Cassandra Cluster Migrator tool would incorrectly not migrate any logger tab
 
 #### Problem when restarting DataMiner [ID_37112]
 
-<!-- MR 10.4.0 - FR 10.3.10 -->
+<!-- MR 10.3.0 [CU8] - FR 10.3.10 -->
 
 When DataMiner was restarted, in some rare cases, it would not start up again.
 

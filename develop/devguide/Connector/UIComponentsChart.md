@@ -18,31 +18,24 @@ In order to render a column chart, set the type attribute of the ParametersView 
 
 ```xml
 <Param id="40">
-  <Name>DataMiner VM (Pie)</Name>
+  <Name>DataMinerVMPie</Name>
   <Description>DataMiner VM (Pie)</Description>
   <Type>read</Type>
   <Display>
-     <RTDisplay>true</RTDisplay>
-     <Positions>
-        <Position>
-           <Page>Charts</Page>
-           <Row>0</Row>
-           <Column>0</Column>
-        </Position>
-     </Positions>
-     <ParametersView type="pie" options="Height=300">
-        <Parameters>
-           <Parameter id="99" tableIndex="SLProtocol*"/>
-           <Parameter id="99" tableIndex="SLScripting*"/>
-        </Parameters>
-     </ParametersView>
+    <RTDisplay>true</RTDisplay>
+    <ParametersView type="pie" options="Height=300">
+      <Parameters>
+        <Parameter id="99" tableIndex="SLProtocol*"/>
+        <Parameter id="99" tableIndex="SLScripting*"/>
+      </Parameters>
+    </ParametersView>
   </Display>
   <Interprete>
-     <Type>double</Type>
-     <DefaultValue>0</DefaultValue>
+    <Type>double</Type>
+    <DefaultValue>0</DefaultValue>
   </Interprete>
   <Measurement>
-     <Type>chart</Type>
+    <Type>chart</Type>
   </Measurement>
 </Param>
 ```
@@ -60,31 +53,24 @@ In order to render a column chart, set the type attribute of the ParametersView 
 
 ```xml
 <Param id="41">
-  <Name>DataMiner VM (Column)</Name>
+  <Name>DataMinerVMColumn</Name>
   <Description>DataMiner VM (Column)</Description>
   <Type>read</Type>
   <Display>
-     <RTDisplay>true</RTDisplay>
-     <Positions>
-        <Position>
-           <Page>Charts</Page>
-           <Row>0</Row>
-           <Column>1</Column>
-        </Position>
-     </Positions>
-     <ParametersView type="column" options="Height=300">
-        <Parameters>
-           <Parameter id="99" tableIndex="SLProtocol*"/>
-           <Parameter id="99" tableIndex="SLScripting*"/>
-        </Parameters>
-     </ParametersView>
+    <RTDisplay>true</RTDisplay>
+    <ParametersView type="column" options="Height=300">
+      <Parameters>
+        <Parameter id="99" tableIndex="SLProtocol*"/>
+        <Parameter id="99" tableIndex="SLScripting*"/>
+      </Parameters>
+    </ParametersView>
   </Display>
   <Interprete>
-     <Type>double</Type>
-     <DefaultValue>0</DefaultValue>
+    <Type>double</Type>
+    <DefaultValue>0</DefaultValue>
   </Interprete>
   <Measurement>
-     <Type>chart</Type>
+    <Type>chart</Type>
   </Measurement>
 </Param>
 ```
@@ -97,31 +83,24 @@ In order to render a row chart, set the type attribute of the ParametersView tag
 
 ```xml
 <Param id="42">
-  <Name>DataMiner VM (Row)</Name>
+  <Name>DataMinerVMRow</Name>
   <Description>DataMiner VM (Row)</Description>
   <Type>read</Type>
   <Display>
-     <RTDisplay>true</RTDisplay>
-     <Positions>
-        <Position>
-           <Page>Charts</Page>
-           <Row>2</Row>
-           <Column>0</Column>
-        </Position>
-     </Positions>
-     <ParametersView type="row" options="Height=300">
-        <Parameters>
-           <Parameter id="99" tableIndex="SLProtocol*"/>
-           <Parameter id="99" tableIndex="SLScripting*"/>
-        </Parameters>
-     </ParametersView>
+    <RTDisplay>true</RTDisplay>
+    <ParametersView type="row" options="Height=300">
+      <Parameters>
+        <Parameter id="99" tableIndex="SLProtocol*"/>
+        <Parameter id="99" tableIndex="SLScripting*"/>
+      </Parameters>
+    </ParametersView>
   </Display>
   <Interprete>
-     <Type>double</Type>
-     <DefaultValue>0</DefaultValue>
+    <Type>double</Type>
+    <DefaultValue>0</DefaultValue>
   </Interprete>
   <Measurement>
-     <Type>chart</Type>
+    <Type>chart</Type>
   </Measurement>
 </Param>
 ```

@@ -645,3 +645,9 @@ When you edited a trend pattern on a trend graph, up to now, the trend data on t
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
 In the *Database* section of *System Center*, when *Type* was set to "Database per cluster" in the *General* tab, creating and deleting database configurations in the *Offload* and *Other* tabs would no longer work.
+
+#### Visual Overview: No longer possible to return to the initially selected page when the VdxPage property was linked to a session variable [ID_37419]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+In a visual overview containing multiple pages, it would no longer be possible to return to the initially selected page when the shape used to switch pages had its `VdxPage` property updated using a session variable.

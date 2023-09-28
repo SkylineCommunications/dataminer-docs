@@ -385,10 +385,11 @@ From now on, when a base query is changed in any way, all queries that use that 
 
 In the *Monitoring* app, a new type of text area boxes will now be used on parameter pages.
 
-#### Security enhancements [ID_36695] [ID_37047] [ID_37051] [ID_37068]
+#### Security enhancements [ID_36695] [ID_37047] [ID_37051] [ID_37068] [ID_37421] [ID_37426]
 
 <!-- RN 36695: MR 10.4.0 - FR 10.3.9 -->
 <!-- RN 37047/37051/37068: MR 10.4.0 - FR 10.3.10 -->
+<!-- RN 37421/37426: MR 10.4.0 - FR 10.3.11 -->
 
 A number of security enhancements have been made.
 
@@ -484,6 +485,12 @@ In all other cases (e.g. multiple aggregation nodes, grouping, different columns
 Up to now, a column resizer would span across the entire height of the column. From now on, the height of a column resizer will be equal to the height of the column header.
 
 Note that, while you dragging a resizer, its height will be equal to that of the entire column you are resizing.
+
+#### Dashboards app: Components will now only show skeleton loading during the initial load [ID_37274]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+Up to now, some components would show skeleton loading until after the data had been loaded. From now on, those components will only show skeleton loading during the initial load.
 
 #### Dashboards app/Low-Code Apps - Visual Overview component: Initial visual overview data will now be retrieved asynchronously [ID_37341]
 
@@ -842,12 +849,6 @@ When a GQI query retrieved logger table data from an Elasticsearch database, the
 
 When, in the *Monitoring* app, a visual overview page was opened using a shape data field of type *NavigatePage*, the value of this field was case sensitive. When the casing of the value was different from the casing of the page name, the page would not open. From now on, the casing of the value and that of the page name will be disregarded.
 
-#### Problem with the IIS web server when redirecting the user to the login page [ID_37288]
-
-<!-- MR 10.4.0 - FR 10.3.11 -->
-
-In some cases, an error could occur in the IIS web server when redirecting the user to the login page.
-
 #### Monitoring app: Problem when opening another visual overview page using 'NavigatePage' [ID_37338]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
@@ -877,3 +878,21 @@ When actions had been configured on a table visualization with multiple queries,
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
 When you edited an existing action, in some cases, the *Execute component* action would not be able to properly restore the form.
+
+#### Dashboards app/Low-Code Apps: Feed linker would no longer select the feed type when there was only a single option [ID_37396]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+The feed linker would no longer automatically select the feed type when there was only a single option. Moreover, as it was not possible to open the drop-down box, no feed could be selected manually either.
+
+#### Monitoring app: Problem when navigating to another visual overview page [ID_37415]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When, in the *Monitoring* app, you selected an element or a service, and navigated to another visual overview page, a `Cannot convert null to a value type` error would be thrown.
+
+#### Low-Code Apps: No longer possible to edit a newly created app after refreshing one of its pages [ID_37425]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When you had created and published an app with at least one component, it would no longer be possible to edit it after refreshing one of its pages.
