@@ -22,7 +22,20 @@ uid: General_Feature_Release_10.3.11
 
 ## New features
 
-*No new features have been added to this release yet.*
+#### Smart-serial communication now supports dynamic polling [ID_37404]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+Smart-serial connection will now support dynamic polling, i.e. the ability to change the IP address and IP port while the element is active.
+
+To enable dynamic polling for a smart-serial connection, add a parameter that contains the following:
+
+`<Type options="dynamic ip">read</Type>`
+
+> [!IMPORTANT]
+>
+> - Dynamic polling is only supported when the connection acts as a client. When you create the element, do not assign an IP address like "127.0.0.1", "any", etc. to it. If you do, the element will act as a server, and there is no way to make the element act as a client without stopping it. Also, trying to assign a value like "127.0.0.1" to the dynamic IP parameter at runtime will cause an error to occur.
+> - We strongly advise you to always set the connection type to "smart-serial single" so the connection is assigned a dedicated socket in SLPort. If two or more smart-serial elements hosted on the same DMA are assigned the same IP address and port via the element wizard, they will share the same connection in SLPort. This means that, if one of these elements changes the IP address dynamically, the other ones will also start using the new IP address.
 
 ## Changes
 
