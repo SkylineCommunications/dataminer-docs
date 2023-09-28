@@ -38,7 +38,7 @@ This file contains default connection settings to be used by DataMiner client ap
 
   Possible values:
 
-  - *GRPCConnection*: Supported from DataMiner 10.3.0/10.3.2 onwards. DataMiner will communicate using HTTPS via the API Gateway, using gRPC. By default, this requires the use of the standard HTTPS port 443. <!-- RN 34983 -->
+  - *GRPCConnection*: Supported from DataMiner 10.3.0/10.3.2 onwards. DataMiner will communicate using HTTPS via the API Gateway, using gRPC. By default, this requires the use of the standard HTTPS port 443. <!-- RN 34983 --> When this type is used, the only two other options you can configure are *serverport* and *endpoint*. For example: `type=GRPCConnection;serverport=443;endpoint=/APIGateway`.
 
   - *RemotingConnection*: .NET Remoting. Obsolete starting from 10.4.0/10.3.6. While DataMiner will currently not yet automatically switch to *GRPCConnection*, this is planned to be implemented with a DataMiner upgrade soon. If you do not want to use *GRPCConnection*, use *LegacyRemotingConnection* to avoid getting automatically switched. However, note that we strongly recommend using *GRPCConnection*.<!-- RN 36196 -->
   
