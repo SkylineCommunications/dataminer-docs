@@ -4,6 +4,9 @@ uid: DBConfiguration_xml
 
 # DBConfiguration.xml
 
+> [!IMPORTANT]
+> Starting from DataMiner 10.3.12/10.4.0 onwards the below functionality has been moved to [DB.xml](xref:DB_xml).
+
 The *DBConfiguration.xml* file is not present by default on a DMA. It can be added to configure certain database settings, as detailed below.
 
 > [!NOTE]

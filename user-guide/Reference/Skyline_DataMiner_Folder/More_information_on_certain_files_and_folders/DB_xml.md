@@ -573,3 +573,39 @@ Example 2:
 ```xml
 <DataBases xmlns="http://www.skyline.be/config/db"> ... <DataBase active="true" name="MySqlSvrCmdb" type="mssql"> <ConnectString></ConnectString> <Server>10.10.51.1</Server> <DBServer>10.10.51.1</DBServer> <DSN></DSN> <DB>DMSConfiguration</DB> <UID>MyUserName</UID> <PWD>MyPassword</PWD> </DataBase> ... </DataBases>
 ```
+
+## Configuring a size limit for file offloads
+
+> [!NOTE]
+> From DataMiner version 10.3.12/10.4.0 this functionality has been moved to this file from [DBConfiguration.xml](xref:DBConfiguration_xml)
+
+When the main database is offline, file offloads are used to store write/delete operations. From DataMiner 10.1.0 \[CU5\]/10.1.8 onwards, you can configure a limit for the file size of these offloads in the file *DB.xml*. When the limit is reached, new data will be dropped.
+
+You can configure this size limit as follows:
+
+1. Open the file *DB.xml* in the folder *C:\\Skyline DataMiner\\*.
+
+1. Configure the file with a *FileOffloadConfiguration* element with the desired maximum size (in MB), as illustrated below:
+
+    ```xml
+    <DataBases>
+      ...
+      <FileOffloadConfiguration>
+        <MaxSizeMB>20</MaxSizeMB>
+      </FileOffloadConfiguration>
+    </DataBases>
+    ```
+
+1. Restart DataMiner.
+
+> [!NOTE]
+>
+> - If no limit is set in DB.xml or if the file offload configuration is invalid, the size of the database offload files will by default be limited to 10 GB.
+> - When the specified limit has been reached, the following alarm will be generated: "Max file offload disk usage for certain storages has been reached, new data for these storages will be dropped."
+
+## Configuring multiple Elasticsearch clusters
+
+> [!NOTE]
+> From DataMiner version 10.3.12/10.4.0-CU0 this functionality has been moved to this file from [DBConfiguration.xml](xref:DBConfiguration_xml)
+
+It is possible to have data offloaded to multiple Elasticsearch clusters, i.e. one main cluster and several replicated clusters. This <!--Prior to DataMiner 10.3.10/10.4.0 (RN 36399 - reverted in RN 37322), this -->is configured in *DB.xml*. For detailed information, see [Configuring multiple Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters).

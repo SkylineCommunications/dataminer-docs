@@ -2,6 +2,8 @@
 uid: Configuring_multiple_Elasticsearch_clusters
 ---
 
+<!-- Note for documentation, keep in sync with Configuring_multiple_OpenSearch_clusters.md where applicable.-->
+
 # Configuring multiple Elasticsearch clusters
 
 > [!NOTE]
@@ -67,6 +69,69 @@ To configure this setup:
 > While it was possible to configure multiple Elasticsearch clusters in the *DBConfiguration.xml* file prior to DataMiner 10.3.10/10.4.0, this should not be done in recent DataMiner versions. Specifically, refrain from editing the *ID* tag in this file, as this could lead to a need for complete reconfiguration.
 
 ## [Prior to DataMiner 10.3.10/10.4.0](#tab/tabid-2) -->
+
+## [From DataMiner 10.3.12/10.4.0 onwards]
+
+> [!IMPORTANT]
+> From DataMiner 10.3.12/10.4.0 onwards, the configuration for multiple Elasticsearch clusters is saved in [DB.xml](xref:DB_xml)
+
+1. For each Elasticsearch cluster a *DataBase* tag must be added with the following configuration:
+
+    - *active* attribute: Set this to "true" if you wish your elastic cluster to be added to the list of clusters to offload data to.
+    
+    - *search* attribute: Always set this to "true".     
+
+    - *ID* attribute: This should be a unique number, preferably starting at 0 and increasing by 1 for each additional cluster.
+    
+    - *priorityOrder* attribute: Indicates the priority of the different clusters. The lower the value, the greater the priority. The cluster with the lowest value is the main cluster, from which data will be read.
+    
+    - *type* attribute: Always set this to "ElasticSearch".
+    
+    - *DBServer*: The hosts of the cluster, separated by commas (see [Indexing database settings](xref:DB_xml#indexing-database-settings))
+    
+    - *UID*: The username to connect to Elasticsearch (see [Specifying custom credentials for Elasticsearch](xref:DB_xml#specifying-custom-credentials-for-elasticsearch)).
+    
+    - *PWD*: The password to connect to Elasticsearch (see [Specifying custom credentials for Elasticsearch](xref:DB_xml#specifying-custom-credentials-for-elasticsearch)).
+    
+    - *DB*: The prefix for the Elasticsearch indexes (see [Specifying a custom prefix for the Elasticsearch indexes](xref:DB_xml#specifying-a-custom-prefix-for-the-elasticsearch-indexes)). 
+    
+    - *FileOffloadIdentifier*: String used to identify this connection. Each connection should have a different identifier, which will be used for file offloads.
+     
+     Example:
+
+   ```xml
+   <DataBases>
+        <!-- Reads will be handled by the ElasticCluster with the lowest priorityOrder -->
+        <DataBase active="true" search="true" ID="0" priorityOrder="0" type="ElasticSearch">
+            <DBServer>localhost</DBServer>
+            <UID />
+            <PWD>root</PWD>
+            <DB>dms</DB>
+            <!--
+            Used by file offload (i.e. when the connection with the Elastic cluster is not
+            available) for tagging the offloaded data with.
+           Should be different for each defined Elastic cluster connection.
+            -->
+            <FileOffloadIdentifier>cluster1</FileOffloadIdentifier>
+        </DataBase>
+        <DataBase active="true" search="true" ID="0" priorityOrder="1" type="ElasticSearch">
+            <DBServer>10.11.1.44,10.11.2.44,10.11.3.44</DBServer>
+            <UID />
+            <PWD>root</PWD>
+            <DB>dms</DB>
+            <FileOffloadIdentifier>cluster2</FileOffloadIdentifier>        
+        </DataBase>
+   </DataBases>
+   ```
+
+1. Remove or disable any previous Elasticsearch configuration from the DB.xml.
+
+1. Restart DataMiner.
+
+> [!NOTE]
+> If an exception occurs for one of the replicated clusters, an alarm will be generated in the Alarm Console, indicating that not all data might be replicated. If further errors occur, no new alarms are created until the DMA is restarted.
+
+## [Prior to DataMiner 10.3.12/10.4.0]
 
 1. Create and configure a file *DBConfiguration.xml* as illustrated below. For each Elasticsearch cluster, an *ElasticCluster* tag must be added with the following configuration:
 
