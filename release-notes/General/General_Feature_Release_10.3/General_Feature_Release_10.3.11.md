@@ -235,6 +235,12 @@ When SLLogCollector takes memory dumps, it stores them in a temporary folder bef
 
 An error could occur in SLNet due to unhandled MessageBroker exceptions in SLHelper.
 
+#### SLAnalytics: Problem when trying to edit a multivariate pattern [ID_37270]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+Due to a cache synchronization issue, problems could occur when trying to edit a multivariate pattern of which one of the elements is located on another DataMiner Agent.
+
 #### Elements with multiple SSH connections would go into timeout after being restarted [ID_37294]
 
 <!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
