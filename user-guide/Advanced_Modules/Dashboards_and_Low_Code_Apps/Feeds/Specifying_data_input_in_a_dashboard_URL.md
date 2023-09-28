@@ -179,7 +179,7 @@ Within the dashboard URL, the following data objects can be specified:
 
 - *object manager modules*: Supported from DataMiner 10.3.6/10.4.0 onwards<!-- RN 36124 -->. Requires the [DOM module ID](xref:DOM_ModuleId).
 
-- *query columns*: Supported from DataMiner 10.3.9/10.4.0 onwards. A GQI query filter, structured as follows: `query columns=[query ID]%1e[Query column ID]%1e[filter]`.
+- *query columns*: Supported from DataMiner 10.3.9/10.4.0 onwards. A GQI query filter, structured as follows: `query columns=[query ID]%1e[column ID]%1e[filter type]%1e[filter values]`. The following filter types are supported: *list*, *range*, *boolean*, *number*, and *string*.
 
   For example:
 
