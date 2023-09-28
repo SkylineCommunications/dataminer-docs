@@ -13,17 +13,20 @@ Can't find what you need here? Go to our [DataMiner Community website](https://c
 > [!TIP]
 > Want to contribute? Go to [Contributing to the DataMiner docs](xref:contributing) for more info.
 
-<div class="row"> 
-  <div class="column">
+<div class="row" style="display: flex; flex-wrap: nowrap;">
+  <div class="column" style="flex: 0 0 auto; width: 20%;">
     <a href="/dataminer-overview/Overview_index.html" title="DataMiner Overview" target="_self"><img src="images/Docs_DataminerOverview.svg" style="width:100%"></a>
   </div>
-  <div class="column">
+  <div class="column" style="flex: 0 0 auto; width: 20%;">
     <a href="/user-guide/Getting_started/Getting_Started.html" title="User Guide" target="_self"><img src="images/Docs_UserGuide.svg" style="width:100%"></a>
   </div>  
-  <div class="column">
+  <div class="column" style="flex: 0 0 auto; width: 20%;">
     <a href="/develop/index.html" title="Developer Documentation" target="_self"><img src="images/Docs_DeveloperDocumentation.svg" style="width:100%"></a>
   </div>
-  <div class="column">
+  <div class="column" style="flex: 0 0 auto; width: 20%;">
     <a href="/release-notes/DataMiner_General_RNs_index.html" title="DataMiner Release Notes" target="_self"><img src="images/Docs_DataminerReleaseNotes.svg" style="width:100%"></a>
+  </div>
+  <div class="column" style="flex: 0 0 auto; width: 20%;">
+    <a href="/tutorials/Tutorials.html" title="DataMiner Tutorials" target="_self"><img src="images/Docs_DataMinerTutorials.svg" style="width:100%"></a>
   </div>
 </div>

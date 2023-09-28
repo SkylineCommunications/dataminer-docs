@@ -1168,10 +1168,3 @@ items:
         topicUid: UD_APIs_UserDefinableApiEndpoint
       - name: Troubleshooting
         topicUid: UD_APIs_Troubleshooting
-      - name: Tutorials
-        topicUid: UD_APIs_Tutorials
-        items:
-          - name: Hello world
-            topicUid: UD_APIs_Hello_world_tutorial
-          - name: Retrieving elements in alarm
-            topicUid: UD_APIs_Elements_in_alarm_tutorial
