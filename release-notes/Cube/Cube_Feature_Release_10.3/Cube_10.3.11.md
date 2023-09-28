@@ -129,3 +129,10 @@ In a visual overview containing multiple pages, it would no longer be possible t
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
 When starting up, DataMiner Cube could become unresponsive during the *Connected!* step When the Alarm Console did not contain any alarm tabs.
+
+#### Alarm Console: Light bulb would not show suggestions related to the current tab when Cube was started with only one alarm tab [ID_37458]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+<!-- Not added to MR 10.4.0 -->
+
+When DataMiner Cube was started with only one alarm tab, the Alarm Console lightbulb would incorrectly not show any suggestions related to the current alarm tab.
