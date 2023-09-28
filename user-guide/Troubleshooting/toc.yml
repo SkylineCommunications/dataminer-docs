@@ -207,8 +207,10 @@ items:
     topicUid: Known_issues
     items:
       - name: Current issues
-        topicUid: KI_DataMinerMessageBroker_Chunking_MaxPayload
+        topicUid: KI_SLNet_Deadlock_EPM_Setups
         items:
+          - name: SLNet deadlock in EPM setups
+            topicUid: KI_SLNet_Deadlock_EPM_Setups
           - name: Max Payload exceptions occur when using MessageBroker with chunking
             topicUid: KI_DataMinerMessageBroker_Chunking_MaxPayload
           - name: Unable to connect to DMS when using .NET Remoting
