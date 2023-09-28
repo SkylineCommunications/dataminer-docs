@@ -47,7 +47,7 @@ To configure this component:
 
    - *Auto-expand parameters*: Select this option to expand all tables and groups in the component by default.
 
-   - *Default grouping*: See [Customizing the default way content of components based on the parameter feed is grouped](#customizing-the-default-way-content-of-components-based-on-the-parameter-feed-is-grouped)
+   - *Default grouping*: See [Customizing the default grouping](#customizing-the-default-grouping).
 
    - If a filtered list of indices is retrieved, you can specify the separator to use for this. For this you must make sure advanced dashboard settings are displayed. To do so, add the parameter *showAdvancedSettings=true* to the URL. You can then specify the separator in the *Index filter separator* box (available from DataMiner 10.0.9 onwards). For example, if only the indices with a primary key equal to "X" have to be retrieved, and you set the index filter separator to “Y”, the indices will be retrieved using the filter PK == X OR PK == \*YXY\*.
 
@@ -73,9 +73,9 @@ To configure this component:
 >
 > 1. In the *Data* pane, select *Feeds* under *All available data*. Expand *Parameter feed* and drag *Indices* to the component of your choice.
 
-## Customizing the default way content of components based on the parameter feed is grouped
+## Customizing the default grouping
 
-When other components are linked to the parameter feed, so that their content changes dynamically based on what is selected in the feed, the default way the content of those components is grouped depends on the parameter feed configuration. However, note that it is possible to override this default grouping with the *Group by* setting of the other components.
+When other components are linked to the parameter feed, so that their content changes dynamically based on what is selected in the feed, the default way the content of those components is grouped can be configured in the parameter feed.
 
 To configure the default grouping:
 
@@ -104,4 +104,6 @@ To configure the default grouping:
     ![No grouping](~/user-guide/images/ParameterFeed_NoGrouping.png)
 
 > [!NOTE]
-> This default grouping is supported for the following visualizations: [State](xref:DashboardState), [Progress bar](xref:DashboardProgressBar), [Gauge](xref:DashboardGauge), [Ring](xref:DashboardRing), and [Line & area chart](xref:LineAndAreaChart).
+>
+> - This default grouping is supported for the following visualizations: [State](xref:DashboardState), [Progress bar](xref:DashboardProgressBar), [Gauge](xref:DashboardGauge), [Ring](xref:DashboardRing), and [Line & area chart](xref:LineAndAreaChart).
+> - It is possible to override this default grouping with the *Group by* setting of the other components.
