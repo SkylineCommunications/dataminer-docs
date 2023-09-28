@@ -19,3 +19,6 @@ In order to run this app, your DataMiner System must use a setup with a Cassandr
 
 > [!CAUTION]
 > The Ticketing app is being retired. See [DataMiner functionality evolution and retirement](xref:Software_support_life_cycles) for more details. ![EOL](~/user-guide/images/EOL_Duo.png)
+
+> [!CAUTION]
+> The Ticketing app is not supported on systems using [Storage as a Service (STaaS)](xref:STaaS).
