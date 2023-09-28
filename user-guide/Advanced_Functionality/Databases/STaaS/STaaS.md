@@ -6,7 +6,7 @@ uid: STaaS
 
 With our upcoming **cloud-native storage platform**, you will be able to connect your DataMiner System to a scalable and easy-to-use storage platform, without the effort of setting up and managing your own Cassandra and Elasticsearch cluster.
 
-Currently, you can only use STaaS by contacting a Skyline representative or sending an email to <hi@skyline.be>.
+Currently, you can only use STaaS by contacting a Skyline representative or sending an email to <staas@skyline.be>.
 
 > [!TIP]
 > See also: [DataMiner Storage as a Service (STaaS) is live](https://community.dataminer.services/dataminer-storage-as-a-service-staas-is-live/).
@@ -30,4 +30,4 @@ Advantages of DataMiner Storage as a Service (STaaS) include:
 > [!TIP]
 >
 > - To read more about Storage as a Service and its advantages, see [DataMiner STaaS: a game-changer for your storage needs](https://community.dataminer.services/dataminer-staas-a-game-changer-for-your-storage-needs/).
-> - As Storage as a Service is **scheduled for production in Q3 of 2023**, we are working on adding more information to this section. Check back for updates frequently!
+> - As Storage as a Service is fully available as of DataMiner 10.3.10. This page will be updated with more information soon. Check back for updates frequently!
