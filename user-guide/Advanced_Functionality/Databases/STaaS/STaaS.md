@@ -39,10 +39,10 @@ Advantages of DataMiner Storage as a Service (STaaS) include:
 > The minimum DataMiner version to use Storage as a Service is 10.3.10 (CU1).
 > We recommend the use of the latest available version to get the latest features and performance updates.
 
-  1. Make your system **Cloud Connected** and note down the organization and coordination ids. These can be found here: ClientTestTool>Advanced>CcaGateway>Get Global State. More information about getting cloud connected can be found [here](https://docs.dataminer.services/user-guide/Cloud_Platform/Connecting_to_cloud/Connecting_your_DataMiner_System_to_the_cloud.html).
-  1. Make sure you have at least **DataMiner CloudGateway 2.8.0** installed on the system. You can check this in the [Admin App](https://admin.dataminer.services) in the *nodes* section of your DMS. If this isn't the case, you can immediately update it from that page. You can find more information about this [here](https://docs.dataminer.services/user-guide/Cloud_Platform/CloudAdminApp/Managing_cloud-connected_nodes.html)
+  1. Make your system **Cloud Connected** and note down the organization and coordination IDs. These can be found here: ClientTestTool>Advanced>CcaGateway>Get Global State. More information about getting cloud connected can be found [here](https://docs.dataminer.services/user-guide/Cloud_Platform/Connecting_to_cloud/Connecting_your_DataMiner_System_to_the_cloud.html).
+  1. Make sure you have at least **DataMiner CloudGateway 2.8.0** installed on the system. You can check this in the [Admin App](https://admin.dataminer.services) in the *nodes* section of your DataMiner Systems. If this isn't the case, you can immediately update it from that page. You can find more information about this [here](https://docs.dataminer.services/user-guide/Cloud_Platform/CloudAdminApp/Managing_cloud-connected_nodes.html)
   1. Contact a Skyline representative to register you system to STaaS 
-  1. **Optional**: Migrate data to Cloud Storage. To migrate your current data to STaaS please contact your Skyline representative to do so.
+  1. **Optional**: Migrate data to STaaS. To migrate your current data to STaaS please contact your Skyline representative to do so.
   1. Edit the DB.xml, present in the Skyline DataMiner root folder, to look like this:
 
       ```xml
@@ -60,14 +60,14 @@ Advantages of DataMiner Storage as a Service (STaaS) include:
 
 > [!NOTE]
 >
-> If you experience any issues during setup or while using Storage as a Service do not hesitate to contact the Cloud Ecosystem, by sending an email to: staas@skyline.be.
+> If you experience any issues during setup or while using Storage as a Service do not hesitate to contact the Cloud Ecosystem by sending an email to: staas@skyline.be.
 
 ## Migration
-Migration to STaaS is supported for all datatypes with the exception of Logger Tables. Migration of Logger Tables will be supported in future versions. 
+Migration to STaaS is supported for all datatypes with the exception of logger tables. Migration of logger tables will be supported in future versions. 
 
 > [!NOTE]
 >
-> Data stored in Cassandra and Elastic can only be migrated to STaaS if the databases are defined in the `DB.xml` configuration file.
+> Data stored in Cassandra and Elastic databases can only be migrated to STaaS if the databases are defined in the `DB.xml` configuration file.
 
 ## Limitations
 
@@ -76,6 +76,8 @@ Migration to STaaS is supported for all datatypes with the exception of Logger T
 - Cube direct queries to the database are not supported
 - SLReset tool is not supported
 - DELT export for trend data is not supported
+- Proxy and DMZ setups are currently not supported
+- The autoincrement tag on logger tables is not supported
 
 ## Known issues
 
