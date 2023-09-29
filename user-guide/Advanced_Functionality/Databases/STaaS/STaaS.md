@@ -63,7 +63,9 @@ Advantages of DataMiner Storage as a Service (STaaS) include:
 > If you experience any issues during setup or while using Storage as a Service do not hesitate to contact the Cloud Ecosystem by sending an email to: staas@dataminer.services.
 
 ## Migration
-Migration to STaaS is supported for all datatypes with the exception of logger tables. Migration of logger tables will be supported in future versions. 
+Migration to STaaS from Cassandra Cluster or Cassandra Single Node (w/o Elastic) setups is supported for all datatypes with the exception of logger tables. 
+Migration of logger tables will be supported in future versions. 
+Migration from MySQL setups is not yet supported.
 
 > [!NOTE]
 >
@@ -71,6 +73,8 @@ Migration to STaaS is supported for all datatypes with the exception of logger t
 
 ## Limitations
 
+- Currently, DOM queries can be slower depending on the amount of DOM records and the complexity of the query. A fix is expected in the near future
+- 
 - Jobs, Ticketing, and API Deployment datatypes are not supported
 - No indexing engine functionality such as search, suggestions, aliases, and aggregation
 - Cube direct queries to the database are not supported
