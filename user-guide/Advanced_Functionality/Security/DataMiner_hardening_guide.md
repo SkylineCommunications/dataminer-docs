@@ -149,4 +149,6 @@ The **Remote Administration** rule must be enabled when the DataMiner server is 
 
 ## Secure the databases
 
-Cassandra and Elasticsearch/OpenSearch form a crucial part of recent DataMiner Systems. For this reason, it is important that you spend some time making sure their configuration is as secure as possible. For detailed information, refer to [Securing the DataMiner databases](xref:Cassandra_authentication).
+If you do not make use of [Storage as a Service (STaaS)](xref:STaaS) but manage DataMiner storage yourself, you need to make sure that the databases used for DataMiner storage are fully secure.
+
+In recent DataMiner Systems, Cassandra and Elasticsearch/OpenSearch are used for this. It is important that you spend some time making sure their configuration is as secure as possible. For detailed information, refer to [Securing the DataMiner databases](xref:Cassandra_authentication).

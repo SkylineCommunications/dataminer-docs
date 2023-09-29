@@ -77,8 +77,8 @@ The DataMiner installer allows you to run a default DataMiner installation, whic
 At this point, the basic installation is complete. However, to be able to make full use of all available DataMiner features, you will also need to:
 
 - [Upgrade to the latest feature or main release version](xref:Upgrading_a_DataMiner_Agent)
-- [Install Elasticsearch](xref:Installing_Elasticsearch_via_DataMiner)
 - [Connect your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud)
+- Either deploy [Storage as a Service](xref:STaaS) to make use of cloud-native storage hosted by Skyline or, if you wish to host the DataMiner storage yourself, [configure the databases](xref:Configuring_dedicated_clustered_storage).
 
 > [!IMPORTANT]
 > During the DataMiner installation, you are automatically added to the Administrator group by the installation wizard, giving you all Administrator rights. To grant others access to your DMA, log in to Cube using the same username and password as during the installation process, and configure user permissions as described in [Basic security configuration](xref:Managing_users).
@@ -147,8 +147,8 @@ At this point, the basic installation is complete. However, to be able to make f
 At this point, the basic installation is complete. However, to be able to make full use of all available DataMiner features, you will also need to:
 
 - [Upgrade to the latest feature or main release version](xref:Upgrading_a_DataMiner_Agent)
-- [Install Elasticsearch](xref:Installing_Elasticsearch_via_DataMiner)
 - [Connect your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud)
+- Either deploy [Storage as a Service](xref:STaaS) to make use of storage nodes that are fully hosted by Skyline or, if you wish to host the storage nodes yourself, [configure the databases](xref:Configuring_dedicated_clustered_storage).
 
 > [!IMPORTANT]
 > During the DataMiner installation, you are automatically added to the Administrator group by the installation wizard, giving you all Administrator rights. To grant others access to your DMA, log in to Cube using the same username and password as during the installation process, and configure user permissions as described in [Basic security configuration](xref:Managing_users).
