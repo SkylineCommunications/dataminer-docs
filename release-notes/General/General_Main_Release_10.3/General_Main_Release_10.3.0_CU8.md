@@ -31,6 +31,12 @@ To resume a migration after restarting all DMAs in your DataMiner System, do the
 > - When a migration is resumed, the UI does not know how many rows were already migrated. Therefore, when a migration is resumed, it will erroneously display that 0 rows have been migrated so far.
 > - When a DMA is initialized, a file named *SavedState.xml* will be created in the `C:\Skyline DataMiner\Database` folder. *SLCCMigrator.exe* will use this file to determine the point from which a migration has to be resumed.
 
+#### SLAnalytics will now send regular notifications instead of client notifications [ID_35591]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.4 -->
+
+Up to now, when SLAnalytics sent a notification, it would generate an event of type *client notification* with parameter ID 64574. From now on, it will instead generate an event of type *notification* with parameter ID 64570.
+
 #### Service & Resource Management: Enhanced performance when enabling and disabling function DVEs [ID_37030]
 
 <!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
