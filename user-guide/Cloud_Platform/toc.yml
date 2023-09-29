@@ -6,6 +6,8 @@ items:
         topicUid: Logging_on_to_the_DataMiner_Cloud_Platform
       - name: Linking your DataMiner account to your dataminer.services account
         topicUid: Linking_your_DataMiner_and_DCP_account
+      - name: DataMiner Credits
+        topicUid: DataMiner_Credits
       - name: Cloud data storage policies
         topicUid: Cloud_data_storage_policies
       - name: DataMiner Cloud Packs
@@ -65,8 +67,6 @@ items:
         topicUid: Looking_up_a_DataMiner_connector
       - name: Deploying a DataMiner connector to your system
         topicUid: Deploying_A_DataMiner_Connector_to_your_system
-  - name: DataMiner Credits
-    topicUid: DataMiner_Credits
   - name: DataMiner Sharing
     topicUid: Sharing
     items:
