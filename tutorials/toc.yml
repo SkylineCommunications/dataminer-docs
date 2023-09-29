@@ -3,7 +3,7 @@ items:
     topicUid: Tutorials
     items:
       - name: Dashboards and Low-Code Apps tutorials
-        topicUid: Tutorial_Dashboards
+        topicUid: Dashboards_Low-Code_Apps_Tutorials
         items:
           - name: Dashboards tutorials
             topicUid: Tutorial_Dashboards

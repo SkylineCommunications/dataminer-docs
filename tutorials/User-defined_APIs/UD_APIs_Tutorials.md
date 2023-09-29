@@ -2,7 +2,7 @@
 uid: UD_APIs_Tutorials
 ---
 
-# Tutorials
+# User-defined APIs tutorials
 
 With the DataMiner User-Defined APIs module, you can create custom APIs to interact with DataMiner. The tutorials in this section will show you how to set up a custom API and how to use it.
 
