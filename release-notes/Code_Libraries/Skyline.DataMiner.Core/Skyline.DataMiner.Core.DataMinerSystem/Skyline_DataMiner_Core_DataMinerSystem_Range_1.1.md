@@ -10,7 +10,9 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.1
 ### 1.1.1.2
 
 #### Fix - Monitors could stop working for long duration user actions
-When starting many monitors and the actions you provided take several seconds to execute there was a race condition and a chance the Monitor for that element went into a faulted state due to incoming initial events. The element would then ignore all new events coming in until you manually Stopped the Monitors and then Started them again.
+
+When many monitors were started, and the actions you provided took several seconds to execute, there could be a race condition, and the monitor for an element could go into a faulted state because of the incoming initial events. The element would then ignore all new events coming in until the monitors were manually stopped and then started again.
+
 This has been fixed by adding additional low-level locking. Benchmark tests show no negative impact on efficiency from this change.
 
 ### 1.1.1.1
