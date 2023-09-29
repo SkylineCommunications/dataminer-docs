@@ -164,12 +164,6 @@ In the *SLNetClientTest* tool, the following new DOM-related features have been 
 > [!CAUTION]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
-#### SLAnalytics will now send regular notifications instead of client notifications [ID_35591]
-
-<!-- MR 10.4.0 - FR 10.3.4 -->
-
-Up to now, when SLAnalytics sent a notification, it would generate an event of type *client notification* with parameter ID 64574. From now on, it will instead generate an event of type *notification* with parameter ID 64570.
-
 #### SLAnalytics - Proactive cap detection: Enhanced accuracy [ID_35695]
 
 <!-- MR 10.4.0 - FR 10.3.4 -->
