@@ -38,3 +38,8 @@ items:
             topicUid: UD_APIs_Hello_world_tutorial
           - name: Creating an API to retrieve elements in alarm
             topicUid: UD_APIs_Elements_in_alarm_tutorial
+      - name: Dataminer Object Manager (DOM) tutorials
+        topicUid: DOM_tutorials
+        items:
+          - name: How to remove an enum entry from a GenericEnumFieldDescriptor
+            topicUid: DOM_Remove_Enum_Entry
