@@ -31,6 +31,12 @@ To resume a migration after restarting all DMAs in your DataMiner System, do the
 > - When a migration is resumed, the UI does not know how many rows were already migrated. Therefore, when a migration is resumed, it will erroneously display that 0 rows have been migrated so far.
 > - When a DMA is initialized, a file named *SavedState.xml* will be created in the `C:\Skyline DataMiner\Database` folder. *SLCCMigrator.exe* will use this file to determine the point from which a migration has to be resumed.
 
+#### SLAnalytics will now send regular notifications instead of client notifications [ID_35591]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.4 -->
+
+Up to now, when SLAnalytics sent a notification, it would generate an event of type *client notification* with parameter ID 64574. From now on, it will instead generate an event of type *notification* with parameter ID 64570.
+
 #### Service & Resource Management: Enhanced performance when enabling and disabling function DVEs [ID_37030]
 
 <!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
@@ -75,6 +81,18 @@ A number of security enhancements have been made.
 <!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
 
 A number of enhancements have been made to the memory resources used for trended parameters of which the value remains constant.
+
+#### Old versions of NATS configuration files will now be kept when changes are made to those files [ID_37401]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+When changes are made to one of the following NATS configuration files, from now on, the old version of that file will be saved in the `C:\Skyline DataMiner\Recycle Bin` folder.
+
+- `C:\Skyline DataMiner\SLCloud.xml`
+- `C:\Skyline DataMiner\NATS\nats-streaming-server\nats-server.config`
+- `C:\Skyline DataMiner\NATS\nats-account-server\nas.config`
+
+This will allow you to trace changes made to these configuration files when issues arise.
 
 ### Fixes
 
@@ -169,11 +187,23 @@ When an element with multiple SSH connections was restarted, in some cases, it w
 
 When you took a DataMiner backup either via Cube or via the Taskbar Utility, the *DBConfiguration.xml* file would incorrectly not be included in the backup.
 
+#### Service & Resource Management: Bookings could get stuck in the 'Confirmed' state [ID_37306]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+In some rare cases, a booking created with a start time in the past or equal to "Now" could incorrectly get stuck in the *Confirmed* state.
+
 #### SLAnalytics: Problem due to some features not starting up correctly [ID_37321]
 
 <!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
 
 An error could occur in the SLAnalytics process due to some features not starting up correctly.
+
+#### Protocols: Problem when using 'MultipleGetBulk' in combination with 'PartialSNMP' [ID_37336]
+
+<!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
+
+When a protocol was configured to use `MultipleGetBulk` in combination with `PartialSNMP` (e.g. `<OID options="partialSNMP:10;multipleGetBulk:10">`), and the device would return less table cells than the configured `MultipleGetBulk` value, certain fields would not get filled in.
 
 #### Problem with SLAnalytics when fetching protocol information while creating a multivariate pattern [ID_37366]
 

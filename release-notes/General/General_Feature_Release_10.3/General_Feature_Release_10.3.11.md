@@ -22,7 +22,20 @@ uid: General_Feature_Release_10.3.11
 
 ## New features
 
-*No new features have been added to this release yet.*
+#### Smart-serial communication now supports dynamic polling [ID_37404]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+Smart-serial connection will now support dynamic polling, i.e. the ability to change the IP address and IP port while the element is active.
+
+To enable dynamic polling for a smart-serial connection, add a parameter that contains the following:
+
+`<Type options="dynamic ip">read</Type>`
+
+> [!IMPORTANT]
+>
+> - Dynamic polling is only supported when the connection acts as a client. When you create the element, do not assign an IP address like "127.0.0.1", "any", etc. to it. If you do, the element will act as a server, and there is no way to make the element act as a client without stopping it. Also, trying to assign a value like "127.0.0.1" to the dynamic IP parameter at runtime will cause an error to occur.
+> - We strongly advise you to always set the connection type to "smart-serial single" so the connection is assigned a dedicated socket in SLPort. If two or more smart-serial elements hosted on the same DMA are assigned the same IP address and port via the element wizard, they will share the same connection in SLPort. This means that, if one of these elements changes the IP address dynamically, the other ones will also start using the new IP address.
 
 ## Changes
 
@@ -113,6 +126,27 @@ A number of enhancements have been made to the trend prediction models, especial
 
 A number of enhancements have been made to the memory resources used for trended parameters of which the value remains constant.
 
+#### SLNetClientTest: New 'Debug SAML' checkbox [ID_37370]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When, in the SLNetClientTest tool, you select the new *Debug SAML* checkbox before connecting to a DataMiner Agent that used external authentication via SAML, two additional pop-up windows will now appear, displaying the SAML requests and SAML responses respectively.
+
+> [!CAUTION]
+> Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
+#### Old versions of NATS configuration files will now be kept when changes are made to those files [ID_37401]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+When changes are made to one of the following NATS configuration files, from now on, the old version of that file will be saved in the `C:\Skyline DataMiner\Recycle Bin` folder.
+
+- `C:\Skyline DataMiner\SLCloud.xml`
+- `C:\Skyline DataMiner\NATS\nats-streaming-server\nats-server.config`
+- `C:\Skyline DataMiner\NATS\nats-account-server\nas.config`
+
+This will allow you to trace changes made to these configuration files when issues arise.
+
 ### Fixes
 
 #### Failover: Data can get lost when the backup agent is the online agent during a Cassandra Cluster migration [ID_34018]
@@ -141,6 +175,12 @@ From now on, the number of backups you specify will be the number of backups tha
 
 > [!NOTE]
 > A DataMiner Agent will now store its backups in a subfolder of the folder set as backup location. The name of that subfolder will be identical to the DMA ID of the DataMiner Agent in question.
+
+#### Problem in different native processes when interacting with message broker calls [ID_37150]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+In some cases, an error could occur in different native processes when interacting with message broker calls.
 
 #### SLNet would incorrectly return certain port information fields of type string as null values [ID_37165]
 
@@ -208,6 +248,12 @@ When SLLogCollector takes memory dumps, it stores them in a temporary folder bef
 
 An error could occur in SLNet due to unhandled MessageBroker exceptions in SLHelper.
 
+#### SLAnalytics: Problem when trying to edit a multivariate pattern [ID_37270]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+Due to a cache synchronization issue, problems could occur when trying to edit a multivariate pattern of which one of the elements is located on another DataMiner Agent.
+
 #### Elements with multiple SSH connections would go into timeout after being restarted [ID_37294]
 
 <!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
@@ -220,6 +266,12 @@ When an element with multiple SSH connections was restarted, in some cases, it w
 
 When you took a DataMiner backup either via Cube or via the Taskbar Utility, the *DBConfiguration.xml* file would incorrectly not be included in the backup.
 
+#### Service & Resource Management: Bookings could get stuck in the 'Confirmed' state [ID_37306]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+In some rare cases, a booking created with a start time in the past or equal to "Now" could incorrectly get stuck in the *Confirmed* state.
+
 #### SLAnalytics: Problem due to some features not starting up correctly [ID_37321]
 
 <!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
@@ -231,6 +283,12 @@ An error could occur in the SLAnalytics process due to some features not startin
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
 In some cases, an error could occur in SLAnalytics when a feature (e.g. automatic incident tracking) was stopped.
+
+#### Protocols: Problem when using 'MultipleGetBulk' in combination with 'PartialSNMP' [ID_37336]
+
+<!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
+
+When a protocol was configured to use `MultipleGetBulk` in combination with `PartialSNMP` (e.g. `<OID options="partialSNMP:10;multipleGetBulk:10">`), and the device would return less table cells than the configured `MultipleGetBulk` value, certain fields would not get filled in.
 
 #### Problem with SLAnalytics when fetching protocol information while creating a multivariate pattern [ID_37366]
 

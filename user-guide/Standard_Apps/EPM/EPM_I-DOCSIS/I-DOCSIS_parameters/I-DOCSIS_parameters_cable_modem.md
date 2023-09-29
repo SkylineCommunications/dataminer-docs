@@ -179,9 +179,9 @@ These parameters are displayed for the Cable Modem level in the I-DOCSIS dashboa
 
 - **Average Reflection Distance**: Calculated. The average reflection distance of the associated US channels.
 
-- **Group Delay or Reflection Status**: Calculated. The presence of group delay or reflection, based on the reported NMTER values of US channels associated with the cable modem.
+- **Group Delay or Reflection Status**: Calculated. The presence of group delay or reflection, based on the reported group delay or reflection status values of the cable modem.
 
-  Possible values: *OK* if all associated US channels are operating within acceptable NMTER thresholds, and *OOS* (Out of Spec) if at least one US channel is operating outside acceptable NMTER thresholds.
+  Possible values: *OK* if all associated group delay and reflection status reports are OK, and *OOS* (Out of Spec) if group delay or reflection status is reporting OOS.
 
 ## Ping Stats
 

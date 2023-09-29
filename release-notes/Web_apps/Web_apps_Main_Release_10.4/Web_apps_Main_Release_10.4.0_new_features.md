@@ -132,27 +132,6 @@ Alternatively, you can also pass a button style directly to the `AppendButton` m
 > - Up to now, `StaticText` blocks already supported a number of styles. Those styles are now also available via `Style.Text`: *Title1*, *Title2* and *Title3*.
 > - The *CallToAction* style will only be applied in interactive Automation scripts launched from a web app. It will not be applied in interactive Automation scripts launched from Cube.
 
-#### BREAKING CHANGE: One single authentication app for all web apps [ID_35772] [ID_35896]
-
-<!-- MR 10.4.0 - FR 10.3.5 -->
-
-Up to now, every web app had its own login screen and its own way of authenticating users. When using external authentication via SAML, this meant that, for every web app, a separate `AssertionConsumerService` element had to be added to the `spMetadata.xml` file.
-
-A new dedicated authentication app has now been created. This app will be used by all current and future DataMiner web apps.
-
-When using external authentication via SAML, this means that all existing `AssertionConsumerService` elements specified in the `spMetadata.xml` file can now be replaced by one single element. See the example below.
-
-```xml
-<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/API/" index="1" isDefault="true"/>
-```
-
-In this element, `https://dataminer.example.com` has to be replaced with the IP address or the DNS name of your DataMiner System. Make sure the endpoint address in the `Location` attribute matches the address you specified when you registered DataMiner with the identity provider. The way you configure this will depend on the identity provider you are using (for example, in the case of Azure AD, this address has to be entered in the *Entity ID* field).
-
-> [!NOTE]
->
-> - When using external authentication via SAML, DataMiner should be configured to use HTTPS.
-> - This new authentication app will also be used by DataMiner Cube, but only to authenticate users who want to access a web page stored on a DataMiner Agent, not to authenticate users who log in to Cube itself.
-
 #### Interactive Automation scripts: New DownloadButton component [ID_35869]
 
 <!-- MR 10.4.0 - FR 10.3.7 -->
