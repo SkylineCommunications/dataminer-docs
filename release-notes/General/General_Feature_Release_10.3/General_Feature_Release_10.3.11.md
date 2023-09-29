@@ -280,7 +280,7 @@ An error could occur in the SLAnalytics process due to some features not startin
 
 #### SLAnalytics: Problem when stopping a feature [ID_37329]
 
-<!-- MR 10.4.0 - FR 10.3.11 -->
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
 
 In some cases, an error could occur in SLAnalytics when a feature (e.g. automatic incident tracking) was stopped.
 
