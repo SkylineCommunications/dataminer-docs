@@ -62,6 +62,5 @@ Status overview:
 - **End of Support**: Feature will no longer be updated and no longer be supported.
 - **End of Life**: Feature or compatibility will be removed.
 
-### Operating System support
-
-Skyline provides support for all supported DataMiner versions that run on an operating system that is supported by Microsoft.
+> [!NOTE]
+> For all supported DataMiner versions, we support all Windows versions that Microsoft currently supports.
