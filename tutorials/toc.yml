@@ -22,7 +22,7 @@ items:
               - name: Using the stepper component in a low-code app
                 topicUid: TutorialStepper
           - name: GQI tutorials
-            topicUid: Custom_Operator_Tutorial
+            topicUid: Creating_Minus_Operator
             items:
               - name: Creating a minus operator
                 topicUid: Creating_Minus_Operator
