@@ -58,15 +58,100 @@ The result will look like this:
 
 ## Title of the first main step
 
-1. First step
+This is the implementation:
 
-1. Second step
+```csharp
+using Skyline.DataMiner.Analytics.GenericInterface;
 
-   Result of a step, e.g. "This will open a wizard."<!--  Make sure to use the correct indentation. If you don't use enough spaces, you'll interrupt the list and it will start numbering from 1 again. -->
+[GQIMetaData(Name = "Balance & obfuscate")]
+public class MyOperator : IGQIColumnOperator, IGQIRowOperator, IGQIInputArguments
+{
+    // 3 column input arguments: income, expenses, and name 
+    private readonly GQIColumnDropdownArgument _incomeColumnArgument;
+    private readonly GQIColumnDropdownArgument _expensesColumnArgument;
+    private readonly GQIColumnDropdownArgument _nameColumnArgument;
 
-1. ...
+    // 3 variables to store the given argument values
+    private GQIColumn _incomeColumn;
+    private GQIColumn _expensesColumn;
+    private GQIColumn _nameColumn;
 
-<!-- For information on how to add tables, code blocks, and so on, refer to <https://docs.dataminer.services/CONTRIBUTING.html#markdown-syntax>. -->
+    // new balance output column
+    private readonly GQIIntColumn _balanceColumn;
+
+    public MyOperator()
+    {
+        // initialize input column arguments
+        _incomeColumnArgument = new GQIColumnDropdownArgument("Income")
+        {
+            IsRequired = true,
+            Types = new GQIColumnType[] { GQIColumnType.Int }
+        };
+        _expensesColumnArgument = new GQIColumnDropdownArgument("Expenses")
+        {
+            IsRequired = true,
+            Types = new GQIColumnType[] { GQIColumnType.Int }
+        };
+        _nameColumnArgument = new GQIColumnDropdownArgument("Name")
+        {
+            IsRequired = true,
+            Types = new GQIColumnType[] { GQIColumnType.String }
+        };
+
+        // new balance output column
+        _balanceColumn = new GQIIntColumn("Balance");
+    }
+
+    public GQIArgument[] GetInputArguments()
+    {
+        // define input arguments
+        return new[] {
+            _incomeColumnArgument,
+            _expensesColumnArgument,
+            _nameColumnArgument
+        };
+    }
+
+    public OnArgumentsProcessedOutputArgs OnArgumentsProcessed(OnArgumentsProcessedInputArgs args)
+    {
+        // store given argument values
+        _incomeColumn = args.GetArgumentValue(_incomeColumnArgument);
+        _expensesColumn = args.GetArgumentValue(_expensesColumnArgument);
+        _nameColumn = args.GetArgumentValue(_nameColumnArgument);
+
+        return default;
+    }
+
+    public void HandleColumns(GQIEditableHeader header)
+    {
+        // new balance output column
+        header.AddColumns(_balanceColumn);
+    }
+
+    public void HandleRow(GQIEditableRow row)
+    {
+        // calculate and set balance
+        var income = row.GetValue<int>(_incomeColumn);
+        var expenses = row.GetValue<int>(_expensesColumn);
+        var balance = income - expenses;
+        row.SetValue(_balanceColumn, balance);
+
+        // obfuscate name
+        var name = row.GetValue<string>(_nameColumn);
+        var obfuscatedName = ObfuscateName(name);
+        row.SetValue(_nameColumn, obfuscatedName);
+    }
+
+    private string ObfuscateName(string name)
+    {
+        var obfuscatedName = "";
+        // apply an obfuscation transformation
+        foreach (var part in name.Split())
+            obfuscatedName += $"{part[0]}.";
+        return obfuscatedName;
+    }
+}
+```
 
 ## Title of the next main step
 
