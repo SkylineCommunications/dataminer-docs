@@ -22,8 +22,12 @@ items:
               - name: Using the stepper component in a low-code app
                 topicUid: TutorialStepper
           - name: GQI tutorials
-            topicUid: Ad_hoc_Tutorials
+            topicUid: Custom_Operator_Tutorial
             items:
+              - name: Creating a minus operator
+                topicUid: Creating_Minus_Operator
+              - name: Optimizing your custom operator
+                topicUid: Custom_Operator_Tutorial
               - name: Forwarding dummy data to the GQI
                 topicUid: Ad_hoc_Tutorials
       - name: DataMiner Integration Studio (DIS) tutorials
