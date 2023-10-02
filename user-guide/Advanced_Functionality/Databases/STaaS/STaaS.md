@@ -32,25 +32,15 @@ Advantages of DataMiner Storage as a Service (STaaS) include:
 
 1. Make sure your DataMiner System is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
-1. Retrieve your organization and coordination IDs:
-
-   1. [Open SLNetClientTest tool](xref:Opening_the_SLNetClientTest_tool).
-
-   1. [Connect to your DMS with SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool).
-
-   1. Select *Advanced* > *CcaGateway* > *Get Global State*.
-
-   1. Note down your organization and coordination IDs.
-
 1. Make sure you have at least **DataMiner CloudGateway 2.8.0** installed on the system. See [Upgrading nodes to the latest DxM versions](xref:Managing_cloud-connected_nodes#upgrading-nodes-to-the-latest-dxm-versions).
 
 1. Contact your Skyline representative or <staas@dataminer.services> to register you system to use STaaS.
 
-1. Wait until the registration is completed.
+1. Wait until you receive confirmation that the registration is completed.
 
 1. **Optionally**, contact your Skyline representative or <staas@dataminer.services> to migrate your existing data to STaaS.
 
-1. In the `C:\Skyline DataMiner` folder, open *DB.xml* and edit it to look like this:
+1. On each DataMiner Agent in the cluster, in the `C:\Skyline DataMiner` folder, open *DB.xml* and edit it to look like this:
 
    ```xml
    <?xml version="1.0"?>
@@ -59,7 +49,7 @@ Advantages of DataMiner Storage as a Service (STaaS) include:
    </DataBases>
    ```
 
-1. Restart your DMA and STaaS will be used.
+1. Restart DataMiner to begin using STaaS.
 
 ## Limitations
 
@@ -97,10 +87,13 @@ To resolve this issue, use the following workaround:
 
 1. Select *Offline Tools* > *CcaGateway (offline)* > *Renew cloud session* and complete the renew process.
 
-1. Wait a few minutes and then restart the DMA. The issue should be resolved now.
+   > [!NOTE]
+   > As the renewal of the Service Principal (SP) token is managed by a cloud service, it can take a few minutes before the renewal is fully synced.
+
+1. Wait a few minutes and then restart the DMA.The issue should be resolved now.
 
 > [!NOTE]
-> As the renewal of the Service Principal (SP) token is managed by a cloud service, it can take a few minutes before the renewal is fully synced.
+> If you have a DataMiner System consisting of multiple DMAs, it is sufficient to do this on one of the DMAs.
 
 ### Connector-specific issues
 
