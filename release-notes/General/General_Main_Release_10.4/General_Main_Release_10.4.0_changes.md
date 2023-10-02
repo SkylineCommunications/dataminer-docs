@@ -661,9 +661,3 @@ Up to now, the MessageHandler method in SLHelperTypes.SLHelper would incorrectly
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
 Due to a cache synchronization issue, problems could occur when trying to edit a multivariate pattern of which one of the elements is located on another DataMiner Agent.
-
-#### SLAnalytics: Problem when stopping a feature [ID_37329]
-
-<!-- MR 10.4.0 - FR 10.3.11 -->
-
-In some cases, an error could occur in SLAnalytics when a feature (e.g. automatic incident tracking) was stopped.

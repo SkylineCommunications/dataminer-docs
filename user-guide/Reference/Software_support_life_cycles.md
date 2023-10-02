@@ -61,3 +61,6 @@ Status overview:
 - **End of Engineering**: Feature will no longer be updated, but will still be supported.
 - **End of Support**: Feature will no longer be updated and no longer be supported.
 - **End of Life**: Feature or compatibility will be removed.
+
+> [!NOTE]
+> For all supported DataMiner versions, we support all Windows versions that Microsoft currently supports.

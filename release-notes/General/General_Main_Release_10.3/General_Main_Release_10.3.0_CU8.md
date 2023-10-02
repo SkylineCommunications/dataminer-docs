@@ -199,6 +199,12 @@ In some rare cases, a booking created with a start time in the past or equal to 
 
 An error could occur in the SLAnalytics process due to some features not starting up correctly.
 
+#### SLAnalytics: Problem when stopping a feature [ID_37329]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+In some cases, an error could occur in SLAnalytics when a feature (e.g. automatic incident tracking) was stopped.
+
 #### Protocols: Problem when using 'MultipleGetBulk' in combination with 'PartialSNMP' [ID_37336]
 
 <!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->

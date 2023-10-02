@@ -12,8 +12,8 @@ uid: General_Feature_Release_10.3.11
 
 > [!TIP]
 >
-> - For release notes related to DataMiner Cube, see [DataMiner Cube Feature Release 10.3.10](xref:Cube_Feature_Release_10.3.10).
-> - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.3.10](xref:Web_apps_Feature_Release_10.3.10).
+> - For release notes related to DataMiner Cube, see [DataMiner Cube Feature Release 10.3.11](xref:Cube_Feature_Release_10.3.11).
+> - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.3.11](xref:Web_apps_Feature_Release_10.3.11).
 > - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
 ## Highlights
@@ -280,7 +280,7 @@ An error could occur in the SLAnalytics process due to some features not startin
 
 #### SLAnalytics: Problem when stopping a feature [ID_37329]
 
-<!-- MR 10.4.0 - FR 10.3.11 -->
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
 
 In some cases, an error could occur in SLAnalytics when a feature (e.g. automatic incident tracking) was stopped.
 
