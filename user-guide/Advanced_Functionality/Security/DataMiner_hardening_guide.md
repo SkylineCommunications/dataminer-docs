@@ -52,17 +52,17 @@ In addition, we also recommend that you configure your operating system to **blo
 
 For more information about disabling legacy SSL/TLS versions, refer to [TLS, DTLS, and SSL protocol version settings](https://learn.microsoft.com/en-us/windows-server/security/tls/tls-registry-settings?tabs=diffie-hellman#tls-dtls-and-ssl-protocol-version-settings) in the Microsoft documentation. We have also made tools and scripts available for this [on GitHub](https://github.com/SkylineCommunications/windows-hardening), or you can use third-party tools such as [IIS Crypto](https://www.nartac.com/Products/IISCrypto).
 
-#### HTTP Headers
+#### HTTP headers
 
-When configuring HTTPS in IIS on your DataMiner agent, we also recommend to set the following HTTP headers:
+When configuring HTTPS in IIS on your DataMiner Agent, we also recommend setting the following HTTP headers:
 
-- [HTTP Strict Transport Security header](xref:Setting_up_HTTPS_on_a_DMA#configuring-the-https-binding-in-iis)
+- [HTTP Strict Transport Security](xref:Setting_up_HTTPS_on_a_DMA#configuring-the-https-binding-in-iis)
 
-- [X-Frame-Options](https://support.microsoft.com/en-us/office/mitigating-framesniffing-with-the-x-frame-options-header-1911411b-b51e-49fd-9441-e8301dcdcd79): We recommend setting this to 'DENY' or 'SAMEORIGIN'
+- [X-Frame-Options](https://support.microsoft.com/en-us/office/mitigating-framesniffing-with-the-x-frame-options-header-1911411b-b51e-49fd-9441-e8301dcdcd79): We recommend setting this to *DENY* or *SAMEORIGIN*.
 
-- [X-Content-Type-Options](https://docs.oracle.com/en/industries/health-sciences/argus-safety/8.2.1/asmsc/configuring-x-content-type-options-iis.html#GUID-954EE526-1220-4DD7-A946-0FEAA1A39679): We recommend setting this to 'NOSNIFF'
+- [X-Content-Type-Options](https://docs.oracle.com/en/industries/health-sciences/argus-safety/8.2.1/asmsc/configuring-x-content-type-options-iis.html#GUID-954EE526-1220-4DD7-A946-0FEAA1A39679): We recommend setting this to *NOSNIFF*.
 
-There are some other HTTP headers that can improve security but where their value depends on your specific DataMiner setup (for example: resources used in Dashboards/Low-Code Apps):
+There are some other HTTP headers that can improve security; however, their value depends on your specific DataMiner setup (e.g. resources used in Dashboards/Low-Code Apps):
 
 - [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP)
 
