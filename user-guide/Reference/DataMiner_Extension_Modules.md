@@ -8,7 +8,7 @@ A DataMiner Extension Module (DxM) is a service that can be installed, upgraded,
 
 ## Evolution
 
-Some DxMs are considered core modules created using the DxM technology. These are known as "DMs". DMs are treated differently from other DxMs during upgrades. While other DxMs are only updated if they have already been installed, a DM will always be installed or updated with an upgrade.
+Some DxMs are considered core modules created using the DxM technology. These are known as "DcMs" (DataMiner Core Modules). DcMs are treated differently from DxMs during upgrades. While DxMs are only updated if they have already been installed, a DcMs will always be installed or updated with an upgrade.
 
 DxMs depend on a minimum version of the core software. This is indicated in the Admin app. When you install updates, the latest compatible update will be automatically selected.
 
@@ -16,17 +16,15 @@ DxMs depend on a minimum version of the core software. This is indicated in the 
 
 For ease of installation, DxMs may be packaged together in a pack, such as the [Cloud Pack](xref:CloudPackages). These packs allow users to install several DxMs at once.
 
-## Available DMs
+## Available DcMs
 
-## Available DxMs
+### APIGateway
 
-### CloudGateway
+The APIGateway module is the endpoint for the gRPC communication to a DataMiner Agent.
 
-The CloudGateway module is responsible for connecting a DataMiner System to dataminer.services. It manages the identity towards dataminer.services and ensures a secure connection.
+### ArtifactDeployer
 
-### FieldControl
-
-The FieldControl module is responsible for handling incoming requests from dataminer.services. For example, such a request could come from the [DataMiner Teams Bot](xref:DataMiner_Teams_bot) when a user asks it to retrieve the alarms from the system.
+The ArtifactDeployer module is responsible for allowing users to deploy different DataMiner artifacts towards their system. An example of a feature that uses this module is the [deployment of connectors from within the Catalog](xref:Deploying_A_DataMiner_Connector_to_your_system).
 
 This DxM is included in DataMiner upgrade packages from DataMiner 10.3.7/10.4.0 onwards.<!-- RN 36085 -->
 
@@ -36,6 +34,39 @@ The CoreGateway module is responsible for translating requests from other module
 
 This DxM is included in DataMiner upgrade packages from DataMiner 10.3.7/10.4.0 onwards.<!-- RN 36085 -->
 
+### FieldControl
+
+The FieldControl module is responsible for handling incoming requests from dataminer.services. For example, such a request could come from the [DataMiner Teams Bot](xref:DataMiner_Teams_bot) when a user asks it to retrieve the alarms from the system.
+
+This DxM is included in DataMiner upgrade packages from DataMiner 10.3.7/10.4.0 onwards.<!-- RN 36085 -->
+
+### Orchestrator
+
+The Orchestrator module is responsible for management and upgrades of DxMs through the [Admin app](xref:Managing_cloud-connected_nodes).
+
+This DxM is included in DataMiner upgrade packages from DataMiner 10.3.7/10.4.0 onwards.<!-- RN 36085 -->
+
+### StorageModule
+
+The StorageModule is responsible for the storage of element configuration data.
+
+### SupportAssistant
+
+The SupportAssistant module is responsible for features allowing Skyline Communications to provide better and faster support.
+
+This DxM is included in DataMiner upgrade packages from DataMiner 10.3.7/10.4.0 onwards.<!-- RN 36085 -->
+
+### UserDefinableApiEndpoint
+
+The UserDefinableApiEndpoint module is responsible for handling API triggers for DataMiner User-Defined APIs. See [DataMiner UserDefinableApiEndpoint DxM](xref:UD_APIs_UserDefinableApiEndpoint).
+
+
+## Available DxMs
+
+### CloudGateway
+
+The CloudGateway module is responsible for connecting a DataMiner System to dataminer.services. It manages the identity towards dataminer.services and ensures a secure connection.
+
 ### CloudFeed
 
 The CloudFeed module is responsible for offloading data towards dataminer.services. This setting can be controlled in the [Admin app](xref:Controlling_cloudfeed_data_offloads). Among the data that is offloaded are SPI events and alarm events.
@@ -44,33 +75,11 @@ The CloudFeed module is responsible for offloading data towards dataminer.servic
 
 See [Data Aggregator](xref:Data_Aggregator_DxM).
 
-### Orchestrator
-
-The Orchestrator module is responsible for management and upgrades of DxMs through the [Admin app](xref:Managing_cloud-connected_nodes).
-
-This DxM is included in DataMiner upgrade packages from DataMiner 10.3.7/10.4.0 onwards.<!-- RN 36085 -->
-
-### ArtifactDeployer
-
-The ArtifactDeployer module is responsible for allowing users to deploy different DataMiner artifacts towards their system. An example of a feature that uses this module is the [deployment of connectors from within the Catalog](xref:Deploying_A_DataMiner_Connector_to_your_system).
-
-This DxM is included in DataMiner upgrade packages from DataMiner 10.3.7/10.4.0 onwards.<!-- RN 36085 -->
-
-### SupportAssistant
-
-The SupportAssistant module is responsible for features allowing Skyline Communications to provide better and faster support.
-
-This DxM is included in DataMiner upgrade packages from DataMiner 10.3.7/10.4.0 onwards.<!-- RN 36085 -->
-
 ### ModelHost
 
 The ModelHost module is responsible for allowing users to retrieve parameter relationship data on DataMiner Agents that are connected to dataminer.services and have been configured to [offload alarm and change point events to the cloud](xref:Controlling_cloudfeed_data_offloads).
 
 The ModelHost DxM is not included in the Cloud Pack and [must be deployed separately](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-node).
-
-### UserDefinableApiEndpoint
-
-The UserDefinableApiEndpoint module is responsible for handling API triggers for DataMiner User-Defined APIs. See [DataMiner UserDefinableApiEndpoint DxM](xref:UD_APIs_UserDefinableApiEndpoint).
 
 ### CommunicationGateway
 
