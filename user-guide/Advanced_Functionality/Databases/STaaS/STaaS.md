@@ -62,7 +62,7 @@ To **migrate existing data** to STaaS, the following limitations apply:
 In addition, the following **other limitations** currently apply:
 
 - [Jobs](xref:jobs), [Ticketing](xref:ticketing), and [API Deployment](xref:Overview_of_Soft_Launch_Options#apideployment) data are not supported.
-- Indexing engine functionality such as search, suggestions, aliases, and aggregation are not supported.
+- The following indexing engine functionality is not supported: search, suggestions, aliases, and aggregation.
 - Direct queries from DataMiner Cube to the database are not supported.
 - The [SLReset tool](xref:Factory_reset_tool) is not supported.
 - [Exporting trend data](xref:Exporting_elements_services_etc_to_a_dmimport_file) to a .dmimport file is not supported.
@@ -77,7 +77,13 @@ In addition, the following **other limitations** currently apply:
 
 ### Cloud connection lost
 
-Under normal circumstances, CloudGateway refreshes the cloud session automatically. However, if CloudGateway is down for longer than three days, for example because the server is down, the cloud session will become invalid. This will cause DataMiner startup to fail.
+Under normal circumstances, CloudGateway refreshes the cloud session automatically. However, if **CloudGateway is down for longer than three days**, for example because the server is down, the cloud session will become invalid. This will cause DataMiner startup to fail.
+
+When you encounter this issue, you will find entries similar to the examples below in the SLDBConnection.txt log file:
+
+`2023/10/02 14:04:23.458|SLDBConnection|SLCloudStorage|INF|0|6|2023-10-02T14:04:23.442|FATAL|DataGateway.CloudStorage.CloudStorage|CloudSettings could not be retrieved from the cloud. Retrying in 00:00:05. Exception: SLCloudStorage.Repositories.Exceptions.CloudSettingsRepositoryException: Failed to do GetCloudAccessTokenRequest. Received the following error messages: { "message": "The Service Principal of this DMS is expired (3/14/2023 8:09:51 AM +00:00) but should soon be refreshed automatically." }`
+
+`2023/10/02 14:05:33.981|SLDBConnection|SLCloudStorage|INF|0|6|2023-10-02T14:05:33.980|FATAL|DataGateway.CloudStorage.CloudStorage|CloudSettings could not be retrieved from the cloud. Retrying in 00:00:05. Exception: SLCloudStorage.Repositories.Exceptions.CloudSettingsRepositoryException: Exception while doing GetCcaGatewayConfigRequest. ---> System.AggregateException: One or more errors occurred. ---> DataMinerMessageBroker.API.Exceptions.SubscriptionException: No responders are available for the request. ---> NATS.Client.NATSNoRespondersException: No responders are available for the request.`
 
 To resolve this issue, use the following workaround:
 
