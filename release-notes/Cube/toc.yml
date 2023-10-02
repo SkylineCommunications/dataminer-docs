@@ -48,6 +48,11 @@ items:
             topicUid: Cube_Feature_Release_10.3.11
           - name: DataMiner Cube Feature Release 10.3.10
             topicUid: Cube_Feature_Release_10.3.10
+            items:
+              - name: New features and changes
+                topicUid: Cube_Feature_Release_10.3.10
+              - name: DataMiner Cube Feature Release 10.3.10 CU1
+                topicUid: Cube_Feature_Release_10.3.10_CU1
           - name: DataMiner Cube Feature Release 10.3.9
             topicUid: Cube_Feature_Release_10.3.9
           - name: DataMiner Cube Feature Release 10.3.8

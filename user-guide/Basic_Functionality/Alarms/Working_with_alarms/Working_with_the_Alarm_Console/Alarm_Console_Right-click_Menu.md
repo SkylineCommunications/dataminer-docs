@@ -37,7 +37,9 @@ When you right-click an alarm in the Alarm Console, depending on the configurati
 - **Copy \> All columns**: Copies all column names along with the values of the selected rows.
 
   > [!NOTE]
-  > The columns *Trend*, *Element heatline* and *Parameter heatline* cannot be copied. If you select to copy visible columns or all columns, these columns will never be included.
+  >
+  > - The columns *Trend*, *Element heatline* and *Parameter heatline* cannot be copied. If you select to copy visible columns or all columns, these columns will never be included.
+  > - When you copy a column, the [Alarm Console time format configured in the user settings](xref:User_settings#alarm-console-settings) will be used. This means that it can be useful to configure this setting to display the full date, so that the copied data does not contain time fields with values like "Yesterday" and "Today".
 
 - **Copy \> Custom**: Opens a pop-up window where you can first select which alarm fields should be copied and in which order, and then copy them.
 

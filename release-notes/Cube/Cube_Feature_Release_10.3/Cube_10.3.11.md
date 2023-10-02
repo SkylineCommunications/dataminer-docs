@@ -16,11 +16,11 @@ uid: Cube_Feature_Release_10.3.11
 
 ## New features
 
-#### Spectrum analysis: Panning inside a spectrum window [ID_37284]
+#### Spectrum analysis: Panning horizontally inside a spectrum window [ID_37284]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
-It is now possible to pan inside a spectrum window by clicking and dragging.
+It is now possible to pan horizontally inside a spectrum window by clicking and dragging.
 
 When, after clicking the left mouse button, you start dragging, the following will happen:
 
@@ -34,6 +34,25 @@ Only upon releasing the left mouse button will the unknown part of the trace be 
 
 > [!IMPORTANT]
 > This feature is only available if the spectrum protocol includes the *Start Frequency*, *Center Frequency* and *Stop Frequency* parameters.
+
+#### Spectrum analysis: Panning vertically inside a spectrum window [ID_37461]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+It is now possible to pan vertically inside a spectrum window by CTRL+clicking and dragging.
+
+When, after pressing the CTRL key and clicking the left mouse button, you start dragging, the following will happen:
+
+- The spectrum trace will move up or down while being refreshed at a rate equal to the original rate.
+- The amplitude labels on the Y axis will continuously update to reflect the ongoing change.
+- The unknown part of the trace (i.e. the amplitude range located outside of the original span) will be visualized as a grey area with a grid in the background.
+
+When you stop dragging and release the left mouse button, the panning dimensions will be set on the spectrum analyzer device and the screen will be updated with the new data.
+
+Only upon releasing the left mouse button will the unknown part of the trace be requested from the spectrum analyzer. The newly received trace points will then replace the grey area and a new, uniform spectrum trace will be displayed based on the new reference level.
+
+> [!IMPORTANT]
+> This feature is only available if the spectrum protocol includes the *Reference level* parameter.
 
 ## Changes
 
@@ -98,3 +117,22 @@ When, in the Alarm Console, you created a linked alarm tab while connected to a 
 <!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
 
 When you opened a service card, in some rare cases, no breadcrumbs would be displayed.
+
+#### Visual Overview: No longer possible to return to the initially selected page when the VdxPage property was linked to a session variable [ID_37419]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+In a visual overview containing multiple pages, it would no longer be possible to return to the initially selected page when the shape used to switch pages had its `VdxPage` property updated using a session variable.
+
+#### DataMiner Cube could become unresponsive during startup when the Alarm Console did not contain any alarm tabs [ID_37436]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When starting up, DataMiner Cube could become unresponsive during the *Connected!* step When the Alarm Console did not contain any alarm tabs.
+
+#### Alarm Console: Light bulb would not show suggestions related to the current tab when Cube was started with only one alarm tab [ID_37458]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+<!-- Not added to MR 10.4.0 -->
+
+When DataMiner Cube was started with only one alarm tab, the Alarm Console lightbulb would incorrectly not show any suggestions related to the current alarm tab.

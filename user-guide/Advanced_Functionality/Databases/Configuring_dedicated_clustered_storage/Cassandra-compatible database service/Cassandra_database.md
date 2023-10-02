@@ -20,6 +20,6 @@ For information on how to **configure the settings** for your Cassandra Cluster 
 > See also:
 >
 > - [Supported data storage architectures](xref:Supported_system_data_storage_architectures)
-> - [Securing the Cassandra general database](xref:Security_Cassandra_general)
+> - [Securing the Cassandra general database](xref:Cassandra_authentication)
 > - [Apache Cassandra documentation](https://cassandra.apache.org/doc/latest/)
 > - [Cassandra – tips & tricks](https://community.dataminer.services/video/cassandra-tips-tricks/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
