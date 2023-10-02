@@ -4,7 +4,7 @@ uid: Creating_Minus_Operator
 
 # Creating a minus operator
 
-In this tutorial, you learn to create a custom operator that subtracts two values and adds the result to the table. We could, for example, use this operator to calculate the profit for each project in this table:
+In this tutorial, you will learn how to create a custom operator that subtracts two values and adds the result to a table. You could, for example, use this operator to calculate the profit for each project in this table:
 
 | Project (String) | Customer (Int) | Sales (Double) | Cost (Double) |
 | ---------------- | -------------- | -------------- | ------------- |
@@ -12,7 +12,7 @@ In this tutorial, you learn to create a custom operator that subtracts two value
 | Project 2        | Customer B     | €2000          | €250.0        |
 | Project 3        | Customer A     | €1500          | €500.0        |
 
-The result will look as follows:
+The result will look like this:
 
 | Project (String) | Customer (Int) | Sales (Double) | Cost (Double) | Profit (Double) |
 | ---------------- | -------------- | -------------- | ------------- | --------------- |
@@ -33,7 +33,7 @@ The result will look as follows:
 - Depending on your DataMiner version, you may need to enable the [*GenericInterface* soft-launch option](xref:Overview_of_Soft_Launch_Options#genericinterface).
 
   > [!NOTE]
-  > Future DataMiner versions may already include this feature. To check the estimated release version of a soft-launch option, see [Overview of soft-launch options](xref:Overview_of_Soft_Launch_Options).
+  > Future DataMiner versions may already include this feature. To check the release version of a soft-launch option, see [Overview of soft-launch options](xref:Overview_of_Soft_Launch_Options).
 
   > [!TIP]
   > See [Activating soft-launch options](xref:Activating_Soft_Launch_Options).
