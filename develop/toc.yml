@@ -5291,6 +5291,11 @@
               topicUid: Debugging_a_connector
             - name: Debugging an Automation script
               topicUid: Debugging_an_Automation_script
+        - name: Tutorials
+          topicUid: DisTutorials_MibBrowser
+          items:
+            - name: Exploring the DIS MIB Browser
+              topicUid: DisTutorials_MibBrowser
         - name: Troubleshooting
           topicUid: Troubleshooting
           items:
