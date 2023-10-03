@@ -344,6 +344,12 @@ Only upon releasing the left mouse button will the unknown part of the trace be 
 > [!IMPORTANT]
 > This feature is only available if the spectrum protocol includes the *Start Frequency*, *Center Frequency* and *Stop Frequency* parameters.
 
+#### Credentials Library now supports username and password credentials [ID_37416]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+In the Credentials Library in DataMiner Cube (available via *System Center* > *System Settings* > *Credentials Library*), you can now configure a new type of credentials, i.e. username and password credentials. To do so, in the *Type* dropdown, select *Username and password credentials*, and then specify the username and password.
+
 #### Spectrum analysis: Panning vertically inside a spectrum window [ID_37461]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
