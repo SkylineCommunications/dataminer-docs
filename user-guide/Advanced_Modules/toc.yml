@@ -292,6 +292,11 @@ items:
             topicUid: Customizing_the_Dashboards_app
           - name: Dashboard Gateway installation
             topicUid: Dashboard_Gateway_installation
+          - name: Tutorials
+            topicUid: Tutorial_Dashboards
+            items:
+              - name: Displaying a custom empty component message
+                topicUid: Tutorial_Dashboards_Displaying_a_custom_empty_component_message
       - name: Low-Code Apps
         topicUid: Application_framework
         items:
@@ -326,6 +331,17 @@ items:
             topicUid: Specifying_data_input_in_URL
           - name: Executing actions via the app URL
             topicUid: Executing_actions_via_URL
+          - name: Tutorials
+            topicUid: Tutorial_Apps
+            items:
+              - name: Creating and publishing an app
+                topicUid: Tutorial_Apps_Creating_And_Publishing
+              - name: Editing an existing app
+                topicUid: Tutorial_Apps_Edit_Existing_App
+              - name: Managing the pages in an app
+                topicUid: Tutorial_Apps_Managing_Pages
+              - name: Using the stepper component in a low-code app
+                topicUid: TutorialStepper
       - name: Available visualizations
         topicUid: Available_visualizations
         items:
@@ -514,6 +530,8 @@ items:
                     topicUid: Ad_hoc_Building_blocks
                   - name: Life cycle of queries with ad hoc data
                     topicUid: Ad_hoc_Life_cycle
+                  - name: Tutorials
+                    topicUid: Ad_hoc_Tutorials
               - name: Configuring a custom operator
                 topicUid: GQI_Custom_Operator
                 items:
@@ -1150,3 +1168,10 @@ items:
         topicUid: UD_APIs_UserDefinableApiEndpoint
       - name: Troubleshooting
         topicUid: UD_APIs_Troubleshooting
+      - name: Tutorials
+        topicUid: UD_APIs_Tutorials
+        items:
+          - name: Hello world
+            topicUid: UD_APIs_Hello_world_tutorial
+          - name: Retrieving elements in alarm
+            topicUid: UD_APIs_Elements_in_alarm_tutorial
