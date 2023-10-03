@@ -6,9 +6,7 @@ uid: DataMinerExtensionModules
 
 A DataMiner Extension Module (DxM) is a service that can be installed, upgraded, and uninstalled without the need to reboot the DataMiner Agent. These modules will expand the core DataMiner software with additional features and capabilities. In most cases, DxMs will be backwards-compatible with all supported core DataMiner versions. However, this may not be possible in some cases, and then a minimum core DataMiner version will be indicated.
 
-## Evolution
-
-Some DxMs are considered core modules created using the DxM technology. These are known as "DcMs" (DataMiner Core Modules). DcMs are treated differently from DxMs during upgrades. While DxMs are only updated if they have already been installed, a DcMs will always be installed or updated with an upgrade.
+Some DxMs are considered core modules created using the DxM technology. These are known as "DcMs" (DataMiner Core Modules). DcMs are treated differently from DxMs during upgrades. While DxMs are only updated if they have already been installed, DcMs will always be installed or updated with an upgrade.
 
 DxMs depend on a minimum version of the core software. This is indicated in the Admin app. When you install updates, the latest compatible update will be automatically selected.
 
@@ -20,7 +18,7 @@ For ease of installation, DxMs may be packaged together in a pack, such as the [
 
 ### APIGateway
 
-The APIGateway module is the endpoint for the gRPC communication to a DataMiner Agent.
+The APIGateway module is the endpoint for the gRPC communication with a DataMiner Agent.
 
 ### ArtifactDeployer
 
@@ -48,7 +46,7 @@ This DxM is included in DataMiner upgrade packages from DataMiner 10.3.7/10.4.0 
 
 ### StorageModule
 
-The StorageModule is responsible for the storage of element configuration data.
+The StorageModule DcM is responsible for the storage of element configuration data.
 
 ### SupportAssistant
 
@@ -59,7 +57,6 @@ This DxM is included in DataMiner upgrade packages from DataMiner 10.3.7/10.4.0 
 ### UserDefinableApiEndpoint
 
 The UserDefinableApiEndpoint module is responsible for handling API triggers for DataMiner User-Defined APIs. See [DataMiner UserDefinableApiEndpoint DxM](xref:UD_APIs_UserDefinableApiEndpoint).
-
 
 ## Available DxMs
 
