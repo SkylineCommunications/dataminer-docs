@@ -6,7 +6,10 @@ uid: How_DataMiner_offloads_data
 
 As soon as the offload database is activated, data from the DataMiner System will be offloaded to it. Data from before the time of activation will not be offloaded. If the offload database is deactivated for some time and then activated again, there will be a gap in the data stored in the offload database.
 
-If the offload database cannot be reached for some time while it is activated, the offload files will be stored for as long as the database cannot be reached. As soon as the connection has been established again, the offload files will be processed.
+If the offload database cannot be reached for some time while it is activated, the offload files will be stored (in the folder `C:\Skyline DataMiner\System Cache\Offload\`) for as long as the database cannot be reached. As soon as the connection has been established again, the offload files will be processed.
+
+> [!NOTE]
+> For logging related to offload database connection issues, check the *SLDBConnection.txt* log file.
 
 ## Offload database of type MySQL
 
