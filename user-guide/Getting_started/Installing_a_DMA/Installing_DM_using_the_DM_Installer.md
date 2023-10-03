@@ -77,11 +77,11 @@ The DataMiner installer allows you to run a default DataMiner installation, whic
 At this point, the basic installation is complete. However, to be able to make full use of all available DataMiner features, you will also need to:
 
 - [Upgrade to the latest feature or main release version](xref:Upgrading_a_DataMiner_Agent)
-- [Install Elasticsearch](xref:Installing_Elasticsearch_via_DataMiner)
 - [Connect your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud)
+- Either deploy [Storage as a Service](xref:STaaS) to make use of cloud-native storage hosted by Skyline or, if you wish to host the DataMiner storage yourself, [configure the databases](xref:Configuring_dedicated_clustered_storage).
 
 > [!IMPORTANT]
-> During the DataMiner installation, you are automatically added to the Administrator group by the installation wizard, giving you all Administrator rights. To grant others access to your DMA, log in to Cube using the same username and password as during the installation process, and configure user permissions as described in [Basic security configuration](xref:Basic_security_configuration).
+> During the DataMiner installation, you are automatically added to the Administrator group by the installation wizard, giving you all Administrator rights. To grant others access to your DMA, log in to Cube using the same username and password as during the installation process, and configure user permissions as described in [Basic security configuration](xref:Managing_users).
 
 > [!NOTE]
 >
@@ -116,7 +116,7 @@ At this point, the basic installation is complete. However, to be able to make f
 
    - If you are using the DataMiner 10.0 installer, on systems intended for DataMiner Failover, install WinPcap by clicking *Install WinPcap*. The Setup Wizard of WinPcap will be launched. Follow the wizard, select *Automatically start the WinPcap driver at boot time*, and click *Next* when necessary.
 
-     On Windows 8 and Windows Server 2012, click *Run without getting online help*. Follow the WinPcap setup. When an error occurs, click *OK*.
+     On Windows Server 2012, click *Run without getting online help*. Follow the WinPcap setup. When an error occurs, click *OK*.
 
      > [!NOTE]
      > The DataMiner 10.2 installer no longer supports WinPCap. If you intend to configure a [Failover setup based on hostname](xref:Failover_configuration_in_Cube), this software will not be needed. However, if you intend to configure a [Failover setup based on virtual IP](xref:Failover_configuration_in_Cube), you will need to install [NPCap](https://nmap.org/npcap/) instead.
@@ -147,11 +147,11 @@ At this point, the basic installation is complete. However, to be able to make f
 At this point, the basic installation is complete. However, to be able to make full use of all available DataMiner features, you will also need to:
 
 - [Upgrade to the latest feature or main release version](xref:Upgrading_a_DataMiner_Agent)
-- [Install Elasticsearch](xref:Installing_Elasticsearch_via_DataMiner)
 - [Connect your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud)
+- Either deploy [Storage as a Service](xref:STaaS) to make use of storage nodes that are fully hosted by Skyline or, if you wish to host the storage nodes yourself, [configure the databases](xref:Configuring_dedicated_clustered_storage).
 
 > [!IMPORTANT]
-> During the DataMiner installation, you are automatically added to the Administrator group by the installation wizard, giving you all Administrator rights. To grant others access to your DMA, log in to Cube using the same username and password as during the installation process, and configure user permissions as described in [Basic security configuration](xref:Basic_security_configuration).
+> During the DataMiner installation, you are automatically added to the Administrator group by the installation wizard, giving you all Administrator rights. To grant others access to your DMA, log in to Cube using the same username and password as during the installation process, and configure user permissions as described in [Basic security configuration](xref:Managing_users).
 
 > [!NOTE]
 > To view detailed log information on the installation process, in the last step of the installer, click the *open log files* button.

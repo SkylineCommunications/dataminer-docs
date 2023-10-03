@@ -41,7 +41,7 @@ To customize how Cube connects to a DMA for a specific computer:
 
    <!-- - *gRPC*: Available from DataMiner 10.3.0/10.3.x onwards. DataMiner will communicate using HTTPS via the API Gateway, using gRPC GZIP compression. By default, this requires the use of the standard HTTPS port 443. -->
 
-   - *Remoting*: DataMiner will communicate using .Net Remoting.
+   - *Remoting*: DataMiner will communicate using .NET Remoting.
 
      - This option is used by default.
 
@@ -71,7 +71,7 @@ To customize how Cube connects to a DMA for a specific computer:
 
 ## Managing client versions
 
-From DataMiner 10.2.0 \[CU3]/10.2.6 onwards, Cube can automatically update to a more recent version than the DataMiner version installed on the server. This way, users can use the latest Cube features as soon as these are released without having to wait for a server upgrade. However, in the Cube system settings, you can configure limitations on which client version should be used:
+From DataMiner 10.2.0 [CU3]/10.2.6 onwards, Cube can automatically update to a more recent version than the DataMiner version installed on the server. This way, users can use the latest Cube features as soon as these are released without having to wait for a server upgrade. However, in the Cube system settings, you can configure limitations on which client version should be used:
 
 1. In DataMiner Cube, go to System Center > *System settings* > *Manage client versions*.
 
@@ -86,10 +86,12 @@ From DataMiner 10.2.0 \[CU3]/10.2.6 onwards, Cube can automatically update to a 
 
    - **Force a specific version**: This will force users to always use a particular Cube version. When you select this option, a dialog will be displayed where you will need to select a *Cube.zip* and *versions.txt* file. You can obtain these files from the folder `/Webpages/DataMinerCubeStandAlone/` in an upgrade package or on another DataMiner Agent (e.g. a staging platform).
 
-     > [!TIP]
-     > Use this option if you are using a hotfix package with a Cube fix. Otherwise, users connecting to the DMA may use a more recent Cube version, obtained through dataminer.services, that does not yet contain the fix.
+     > [!NOTE]
+     >
+     > - If you are using a hotfix package with a Cube fix, use the option *Force a specific version*. Otherwise, users connecting to the DMA may use a more recent Cube version, obtained through dataminer.services, that does not yet contain the fix.
+     > - If the machines where the Cube clients are deployed do not have any internet connectivity, and as an Administrator you want them to update to a higher DataMiner Cube version than is deployed on the server, there are two options. You can use the [MSI installer](xref:Installing_the_DataMiner_Cube_desktop_application), or you can extract the *Cube.zip* and *versions.txt* files from the *Update.zip\Webpages\DataMinerCubeStandalone* folder in the DataMiner upgrade package containing the Cube version you want, and enforce the use of this version.
 
 > [!NOTE]
 >
-> - To access this configuration, you need the user permissions [Modules > Documents > Add](xref:DataMiner_user_permissions#modules--documents--add), [Modules > System settings > System settings available](xref:DataMiner_user_permissions#modules--system-configuration--system-settings--system-settings-available), and [Modules > System settings > Manage client versions](xref:DataMiner_user_permissions#modules--system-configuration--system-settings--manage-client-versions).
+> - To access this configuration, you need the user permissions [Modules > Documents > Add](xref:DataMiner_user_permissions#modules--documents--add), [Modules > System configuration > System settings > System settings available](xref:DataMiner_user_permissions#modules--system-configuration--system-settings--system-settings-available), and [Modules > System configuration > System settings > Manage client versions](xref:DataMiner_user_permissions#modules--system-configuration--system-settings--manage-client-versions).
 > - By default, this is configured for the entire DMS. If you select the checkbox *Allow individual agent configuration*, you can configure different client version settings per DMA instead. However, this is not recommended as users will end up using a different version of Cube depending on which DMA they connect to.

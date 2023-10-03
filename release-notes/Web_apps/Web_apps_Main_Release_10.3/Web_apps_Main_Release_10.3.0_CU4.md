@@ -88,7 +88,7 @@ In the Surveyor of the Monitoring app, items of which the name contained a numbe
 
 #### Dashboards app: Problem with trend components in PDF reports [ID_36331]
 
-<!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU4] - FR 10.3.7 -->
 
 In a PDF report of a dashboard, in some cases, trend components would collide with other components.
 

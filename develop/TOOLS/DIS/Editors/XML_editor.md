@@ -6,6 +6,8 @@ uid: XML_editor
 
 If you open a protocol XML file or an Automation script XML file in Microsoft Visual Studio, or if you create a new file from scratch, that file will appear in a customized file tab.
 
+![XML Editor](~/develop/images/DIS_XmlEditor.png)
+
 > [!NOTE]
 >
 > - To create a new protocol XML file, go to File \> New \> File \> General \> DataMiner, select DataMiner Protocol Template, and click Open.

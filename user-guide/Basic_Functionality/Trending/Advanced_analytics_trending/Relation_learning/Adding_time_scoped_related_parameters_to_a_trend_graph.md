@@ -10,7 +10,7 @@ You can for instance use this in case a parameter (e.g. the total available memo
 
 ## Prerequisites
 
-- The DataMiner System must use an indexing database (i.e. Elasticsearch or OpenSearch). See [Supported system data storage architectures](xref:Supported_system_data_storage_architectures).
+- The DataMiner System must use an [indexing database](xref:Indexing_Database). See [Supported system data storage architectures](xref:Supported_system_data_storage_architectures).
 
 - Behavioral anomaly detection must be enabled. You can enable this feature in System Center, via *System settings* > *analytics config*.
 

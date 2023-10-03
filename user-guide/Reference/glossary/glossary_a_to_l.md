@@ -113,6 +113,7 @@ uid: glossary_a_to_l
 | Term | Description |
 |------|-------------|
 | DAA | Distributed Access Architecture. Cable network architecture where headend and network functions are decentralized and virtualized. |
+| DaaS | DataMiner as a Service. A cloud-native, fully operational DataMiner System that you can deploy with a single click. DaaS comes with its own [Storage as a Service (STaaS)](xref:STaaS) solution. |
 | DAB | Digital Audio Broadcasting. Type of audio broadcasting where analog audio is converted to a digital signal. |
 | Dashboard | A custom page displaying information about specific components of the DataMiner System. Two apps are available for the creation of dashboards, a legacy app that is also embedded in DataMiner Cube and a cross-platform app, available from DataMiner 9.6.9 onwards.<br>See [DMS Dashboards](xref:dashboards) or [Dashboards app](xref:newR_D), respectively. |
 | Dashboard container | Special type of dashboard in the legacy Reports & Dashboards module, which displays several other dashboards in different tabs. See[Creating a dashboard container](xref:Creating_a_dashboard_container). |
@@ -248,14 +249,15 @@ uid: glossary_a_to_l
 | Term | Description |
 |------|-------------|
 | IaaS | Infrastructure as a Service. Cloud-based service that provides a basic computing infrastructure. |
+| IaC  | Infrastructure as Code |
 | IAM | Inventory & Asset Management. DataMiner module that establishes a link between a DMS and a CMDB.<br>See [Inventory & Asset Management](xref:AssetManagement). |
 | IAS | Interactive Automation script. A DataMiner Automation script that is designed to require user interaction.<br>See [Building interactive Automation scripts with C#](xref:Building_interactive_Automation_scripts_with_CSharp). |
 | IDE | Integrated Development Environment. Software application that provides comprehensive facilities for software development. |
 | IDP | Infrastructure Discovery Provisioning. DataMiner Standard Application that allows you to automatically discover, provision and manage the devices in your network.<br>See [DataMiner IDP app](xref:SolIDP). |
 | IETF | Internet Engineering Task Force. Organization developing and promoting open internet standards. |
 | Import package | Package based on an export from DataMiner, which can contain, elements, services, views, properties, protocols, Automation scripts, etc.<br>See [Exporting and importing packages on a DMA](xref:Exporting_and_importing_packages_on_a_DMA). |
-| Indexing Engine | Dedicated indexing database, by default Elasticsearch, used to index information from the DataMiner System to allow rapid information retrieval. Required for certain DataMiner features, e.g. for DataMiner Job Manager.<br>See [Configuring an indexing database per DMS](xref:Configuring_indexing_database_per_DMS). |
-| Inform message | An SNMP notification sent by an SNMP agent to an SNMP manager informing the latter that an alarm event occurred on a particular element. Unlike for an SNMP trap, for an inform message the SNMP manager needs to acknowledge receipt.<br>See [SNMP managers](xref:SNMP). |
+| Indexing Engine | Dedicated indexing database, by default Elasticsearch, used to index information from the DataMiner System to allow rapid information retrieval. Required for certain DataMiner features, e.g. for DataMiner Job Manager.<br>See [Configuring an indexing database](xref:Indexing_Database). |
+| Inform message | An SNMP notification sent by an SNMP agent to an SNMP manager informing the latter that an alarm event occurred on a particular element. Unlike for an SNMP trap, for an inform message the SNMP manager needs to acknowledge receipt.<br>See [SNMP managers](xref:About_SNMP_managers). |
 | Information event | A message in the Alarm Console intended to inform DataMiner users without raising an alarm.<br>See [Information event](xref:Alarm_types#information-events). |
 | Information template | A template that is used to override specific parameter data defined in a protocol without making any changes to the protocol itself.<br>See [Information templates](xref:Information_templates). |
 | Input attenuation | Adjusting of the signal strength at the input of a spectrum analyzer to improve measuring accuracy.<br>See [Changing the spectrum analyzer settings](xref:Changing_the_spectrum_analyzer_settings). |

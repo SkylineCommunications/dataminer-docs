@@ -10,6 +10,8 @@ The following options are available to fine-tune the component layout:
 
 - *Label*: Text that will be displayed next to the text input box.
 
+- *Inline*: Available from DataMiner 10.3.9/10.4.0 onwards<!-- RN 36983 -->. Determines whether the label is displayed above the text input box or next to it. If this option is selected, it is displayed next to the box.
+
 - *Placeholder*: Placeholder that will be displayed inside the text input box.
 
 - *Icon*: Icon that will be displayed in the text input box.

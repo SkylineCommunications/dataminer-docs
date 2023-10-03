@@ -54,7 +54,11 @@ For a Cassandra cluster database (i.e. one Cassandra cluster that is used as the
 
    - **Password**: The password with which the DMA has to log on to Elasticsearch (if applicable).
 
-   ![Cube Cassandra Cluster Configuration](~/user-guide/images/CassandraCluster_CubeConfig.png)
+     ![Cube Cassandra Cluster Configuration](~/user-guide/images/CassandraCluster_CubeConfiguration.png)
+
+<!--1. From DataMiner 10.3.10/10.4.0 onwards (RN 36399 - reverted in RN 37322), you can enable TLS by selecting the checkbox next to *TLS enabled*.
+
+   ![Cube Cassandra Cluster Configuration](~/user-guide/images/CassandraCluster_CubeConfig.png)<br>*DataMiner 10.3.10 example configuration*-->
 
 1. Click *Save*.
 
@@ -66,7 +70,7 @@ For a Cassandra cluster database (i.e. one Cassandra cluster that is used as the
 > [!IMPORTANT]
 >
 > - An Amazon Keyspaces database requires a separate indexing database.
-> - For information on how to configure an indexing database, see [Elasticsearch database](xref:Elasticsearch_database) or [OpenSearch database](xref:OpenSearch_database).
+> - For information on how to configure an indexing database, see [Configuring an indexing database](xref:Indexing_Database).
 
 > [!NOTE]
 > If you do not see the `Amazon Keyspaces` option, it means that your server is not compatible because it is not running DataMiner version 10.3.0/10.3.3 or higher.

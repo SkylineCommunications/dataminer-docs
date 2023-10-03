@@ -17,7 +17,7 @@ uid: General_Feature_Release_10.3.4
 
 #### Correlation alarms will now by default contain the value of the alarm property by which they are grouped [ID_35583]
 
-<!-- MR 10.4.0 - FR 10.3.4 -->
+<!-- MR 10.3.0 [CU7] - FR 10.3.4 -->
 
 When a correlation rule is configured to use alarm grouping via an alarm property, from now on, the value of the alarm property by which the alarms are grouped will now by default be added to the correlated alarm.
 
@@ -94,7 +94,7 @@ From now on, focus value updates will no longer be taken into account when deter
 
 #### SLAnalytics will now send regular notifications instead of client notifications [ID_35591]
 
-<!-- MR 10.4.0 - FR 10.3.4 -->
+<!-- MR 10.3.0 [CU8] - FR 10.3.4 -->
 
 Up to now, when SLAnalytics sent a notification, it would generate an event of type *client notification* with parameter ID 64574. From now on, it will instead generate an event of type *notification* with parameter ID 64570.
 

@@ -4,7 +4,7 @@ uid: Benefits_Business_and_Tech_Partners
 
 # Benefits for DataMiner business and technology partners
 
-By creating DataMiner business value and market presence, you earn DevOps Points. Not only do these points determine your [DevOps Professional level](xref:Benefits_DevOps_Professionals_Program#accumulating-devops-points), they also allow you to enjoy the plentiful benefits attached to the DevOps Professional Program.
+By creating DataMiner business value and market presence, you earn DevOps Points. Not only do these points determine your [DevOps Professional level](xref:DevOps_Points), they also allow you to enjoy the plentiful benefits attached to the DevOps Professional Program.
 
 > [!NOTE]
 > We are continuously working on further evolving this key program, so new benefits or ways of collecting DevOps Points can be expected.
@@ -25,4 +25,4 @@ As a business or technology partner you can accumulate DataMiner DevOps Points b
 
 - **Submitting a use case**: If you choose to [submit a use case](https://community.dataminer.services/download/use-case-template/) for the community, upon acceptance this will result in 250 up to 1000 points. Use cases could focus on a new product integration that you have completed for DataMiner, or on any other type of solution that you have implemented with DataMiner.
 
-- **Enrolling in and completing online DataMiner sales- and business-related training courses**: The DataMiner Community offers a selection of free online training around Digital Transformation, Agile Deployment of projects, DataMiner business models, etc. Enrolling in and completing any of those courses will again generate points (between 10 to 50 points). Note that the community also offers a variety of free self-tests to evaluate your knowledge. The successful completion of those quizzes will also result in points.
+- **Enrolling in and completing online DataMiner Sales & Business Insights**: The DataMiner Community offers complimentary Corporate Business Value Proposition training. Watch the video presentation and successfully complete the quiz to be rewarded with 400 DevOps Points.

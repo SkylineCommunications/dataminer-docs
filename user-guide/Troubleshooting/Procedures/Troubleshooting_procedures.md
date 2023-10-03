@@ -8,10 +8,14 @@ uid: Troubleshooting_procedures
 
 - [Collecting DataMiner Cube memory dumps](xref:Collecting_DataMiner_Cube_memory_dumps)
 
+- [Collecting data to report an issue to Technical Support](xref:Collecting_data_to_report_an_issue_to_TechSupport)
+
 - [Investigating NATS issues](xref:Investigating_NATS_Issues)
 
 - [Keeping a DMA from running out of disk space](xref:Keeping_a_DMA_from_running_out_of_disk_space)
 
 - ['Sharing dashboard' window does not disappear](xref:Sharing_dashboard_window_does_not_disappear)
+
+- [Troubleshooting SAML issues](xref:Troubleshooting_SAML_Issues)
 
 - [Manually removing old alarms from an Elasticsearch cluster](xref:Manually_removing_old_alarms_from_ES)

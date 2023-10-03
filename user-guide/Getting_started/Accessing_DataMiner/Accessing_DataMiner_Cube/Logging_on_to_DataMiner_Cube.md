@@ -88,7 +88,7 @@ To do so, before you log on, do the following:
 
    <!-- - *gRPC*: Available from DataMiner 10.3.0/10.3.x onwards. DataMiner will communicate using HTTPS via the API Gateway, using gRPC GZIP compression. By default, this requires the use of the standard HTTPS port 443. -->
 
-   - *Remoting*: DataMiner will communicate using .Net Remoting.
+   - *Remoting*: DataMiner will communicate using .NET Remoting.
 
      - This option is used by default.
 

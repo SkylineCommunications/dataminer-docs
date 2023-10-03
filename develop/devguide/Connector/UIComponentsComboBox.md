@@ -14,23 +14,16 @@ To define a combo box, set Type to "string" and also provide a list of discrete 
   <Description>Preset</Description>
   <Type>read</Type>
   <Interprete>
-     <RawType>other</RawType>
-     <LengthType>next param</LengthType>
-     <Type>string</Type>
+    <RawType>other</RawType>
+    <Type>string</Type>
+    <LengthType>next param</LengthType>
   </Interprete>
   <Display>
-     <RTDisplay>true</RTDisplay>
-     <Positions>
-        <Position>
-           <Page>General</Page>
-           <Row>17</Row>
-           <Column>0</Column>
-        </Position>
-     </Positions>
+    <RTDisplay>true</RTDisplay>
   </Display>
   <Measurement>
-     <Type>string</Type>
-     <Discreets dependencyId="382" />
+    <Type>string</Type>
+    <Discreets dependencyId="382" />
   </Measurement>
 </Param>
 <Param id="381" setter="true">
@@ -38,49 +31,33 @@ To define a combo box, set Type to "string" and also provide a list of discrete 
   <Description>Preset</Description>
   <Type>write</Type>
   <Interprete>
-     <RawType>other</RawType>
-     <LengthType>next param</LengthType>
-     <Type>string</Type>
+    <RawType>other</RawType>
+    <Type>string</Type>
+    <LengthType>next param</LengthType>
   </Interprete>
   <Display>
-     <RTDisplay>true</RTDisplay>
-     <Positions>
-        <Position>
-           <Page>General</Page>
-           <Row>17</Row>
-           <Column>0</Column>
-        </Position>
-     </Positions>
+    <RTDisplay>true</RTDisplay>
   </Display>
   <Measurement>
-     <Type>string</Type>
-     <Discreets dependencyId="382" />
+    <Type>string</Type>
+    <Discreets dependencyId="382" />
   </Measurement>
 </Param>
 <Param id="382" trending="false">
   <Name>PresetComboboxValues</Name>
   <Description>Preset Combobox Values</Description>
-  <Information>
-     <Subtext></Subtext>
-     <Includes>
-        <Include>time</Include>
-        <Include>range</Include>
-        <Include>steps</Include>
-        <Include>units</Include>
-     </Includes>
-  </Information>
   <Type>read</Type>
   <Interprete>
-     <RawType>other</RawType>
-     <LengthType>next param</LengthType>
-     <Type>string</Type>
-     <DefaultValue>Default.xml;Baseline.xml</DefaultValue>
+    <RawType>other</RawType>
+    <Type>string</Type>
+    <LengthType>next param</LengthType>
+    <DefaultValue>Default.xml;Baseline.xml</DefaultValue>
   </Interprete>
   <Display>
-     <RTDisplay>true</RTDisplay>
+    <RTDisplay>true</RTDisplay>
   </Display>
   <Measurement>
-     <Type>string</Type>
+    <Type>string</Type>
   </Measurement>
 </Param>
 ```

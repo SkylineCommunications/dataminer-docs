@@ -22,6 +22,10 @@ This page contains an overview of the Node Segment parameters available in the I
 
 - **Number CM DOCSIS 3.1**: Calculated. The number of cable modems associated with the node segment that report their DOCSIS version as 3.1.
 
+- **Number CM DOCSIS Other**: Calculated. The number of CMs associated with the given level that have an unknown DOCSIS version.
+
+  Calculated by adding up the number of CMs with an unknown DOCSIS version that are part of the network.
+
 - **Number CM Ping Unreachable**: Calculated. The number of cable modems associated with the node segment that are not reachable via ping from the hosting DataMiner Agent.
 
   Calculated based on the number of cable modems associated with the node segment that report an RTT equal to "Timeout" or "Wrong IP Format".

@@ -52,7 +52,7 @@ Do not use the default superuser, e.g. 'root' or 'cassandra'.
 
 Use a Password Manager to generate a strong, secure password (preferably longer than 14 characters). Change the database passwords and update them in DataMiner.
 
-For more information, see [Securing the DataMiner databases](https://docs.dataminer.services/user-guide/Advanced_Functionality/Security/Advanced_security_configuration/Database_security.html).
+For more information, see [Securing the DataMiner databases](xref:Cassandra_authentication).
 
 ## Limitations
 

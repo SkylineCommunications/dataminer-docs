@@ -227,7 +227,7 @@ When you logged in to a web app with the *Keep me logged in* option enabled, the
 
 #### Monitoring app: Problem when receiving parameter table updates via polling [ID_36660]
 
-<!-- MR 10.4.0 - FR 10.3.8 -->
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.8 -->
 
 When, in the *Monitoring* app, a parameter table received updates via polling, the table would display `There is no data to display`.
 
