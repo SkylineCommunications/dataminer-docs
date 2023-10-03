@@ -56,12 +56,12 @@ The impacted changes listed here are grouped based on the change that is impleme
 ### Table parameter changes
 
 - [Change Primary Key](xref:ChangePrimaryKey)
-- Change Display Key [PENDING]
-- Replace displayColumn by naming [PENDING]
-- Change to Partial Table [PENDING]
-- Change Logger Table [TBD]
-- Change Column Order (Idx) [TBD]
-- Change Displayed Column Order (Layout) [TBD]
+- [Change Display Key [PENDING]](xref:ChangeDisplayKey)
+- [Replace displayColumn by naming [PENDING]](xref:ReplaceDisplayColumnByNaming)
+- [Change to Partial Table [PENDING]](xref:ChangeToPartialTable)
+- [Change Logger Table [TBD]](xref:ChangeLoggerTable)
+- [Change Column Order (Idx) [TBD]](xref:ChangeColumnOrder)
+- [Change Displayed Column Order (Layout) [TBD]](xref:ChangeDisplayedColumnOrder)
 
 ## Improving context awareness procedure
 
@@ -112,6 +112,4 @@ Please have a look the [System Development/DMS Protocol Impacting Changes](https
 
 ### Workaround
 
-- [Change display key](https://wiki.skyline.be/wiki/System_Development/Driver/Change_display_key)
 - [Change normalization](https://wiki.skyline.be/wiki/System_Development/Driver/Change_normalization)
-- [Add DCF](https://wiki.skyline.be/wiki/System_Development/Driver/Add_DCF)
