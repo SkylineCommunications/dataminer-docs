@@ -4,7 +4,7 @@ uid: Managing_predefined_sets_of_credentials_for_SNMP_authentication
 
 # Managing predefined sets of credentials for SNMP authentication
 
-In the DataMiner Cube Credentials Library, you can add and manage sets of predefined credentials. These credentials can then be selected when SNMP elements are created or edited, so that credentials do not need to be specified manually.
+In the DataMiner Cube Credentials Library, you can add and manage sets of predefined credentials. These credentials can then for example be selected when SNMP elements are created or edited, so that credentials do not need to be specified manually.
 
 In System Center, go to *System settings* > *Credentials library*. You can then:
 
@@ -21,6 +21,8 @@ In System Center, go to *System settings* > *Credentials library*. You can then:
     - Community credentials
 
     - SNMPv3 credentials
+
+    - Username and password credentials (available from DataMiner 10.3.11 onwards<!-- RN 37416 -->)
 
     - For each set of credentials, the user groups that can use them must be specified. To do so, add or remove the relevant groups in the *Included in groups* box using the *ADD \>\>* and *\<\< REMOVE* buttons.
 
