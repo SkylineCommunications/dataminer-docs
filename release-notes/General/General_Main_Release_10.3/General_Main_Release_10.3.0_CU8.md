@@ -211,11 +211,11 @@ In some cases, an error could occur in SLAnalytics when a feature (e.g. automati
 
 When a protocol was configured to use `MultipleGetBulk` in combination with `PartialSNMP` (e.g. `<OID options="partialSNMP:10;multipleGetBulk:10">`), and the device would return less table cells than the configured `MultipleGetBulk` value, certain fields would not get filled in.
 
-#### Problem with SLAnalytics when fetching protocol information while creating a multivariate pattern [ID_37366]
+#### SLAnalytics: Problem when fetching protocol information while creating a multivariate pattern [ID_37366]
 
 <!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
 
-In some cases, SLAnalytics could throw an exception when fetching protocol information while creating a multivariate pattern.
+In some cases, an error could occur in SLAnalytics when fetching protocol information while creating a multivariate pattern.
 
 #### SLAnalytics: Problem when the SLNet connection got lost while resetting the data sources [ID_37402] [ID_37459]
 
