@@ -54,9 +54,9 @@ The result will look like this:
   > [!TIP]
   > See [Activating soft-launch options](xref:Activating_Soft_Launch_Options).
 
-- A [minus operator](xref:Creating_Minus_Operator)
+- A [minus operator](xref:Creating_Minus_Operator).
 
-- Basic knowledge of GQI extension development
+- Basic knowledge of GQI extension development.
 
 ## Title of the first main step
 
