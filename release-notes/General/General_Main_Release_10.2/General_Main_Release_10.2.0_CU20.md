@@ -170,11 +170,11 @@ When a protocol was configured to use `MultipleGetBulk` in combination with `Par
 
 When you opened a service card, in some rare cases, no breadcrumbs would be displayed.
 
-#### SLAnalytics: Problem when the SLNet connection got lost while resetting data sources [ID_37402]
+#### SLAnalytics: Problem when the SLNet connection got lost while resetting the data sources [ID_37402]
 
 <!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
 
-During initialization, in some cases, an error could occur in SLAnalytics when the SLNet connection got lost while resetting data sources.
+An error could occur in SLAnalytics when the SLNet connection got lost while resetting the data sources.
 
 #### DataMiner Cube: Numbers with decimals would not be displayed in context menus [ID_37420]
 
