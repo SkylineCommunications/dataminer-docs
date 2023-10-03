@@ -34,25 +34,23 @@ DataMiner Pay-per-Use is the most flexible model, very similar to the Subscripti
 
 ## DataMiner Express Edition
 
-With DataMiner Express Edition you can deploy one free standalone, fully featured DataMiner System per [organization](xref:Pricing_Usage_based_service#organization). You can either deploy a self-hosted/on-premises DataMiner System, or deploy your DataMiner System in the cloud.
+With DataMiner Express Edition you can deploy one free standalone, fully featured DataMiner System per [organization](xref:Pricing_Usage_based_service#organization). It can be deployed on private infrastructure (on-premises or in a public or private cloud), or as a service.
 
-This is the perfect way to get started, allowing anyone to use the platform and build up knowledge on the many possibilities it has to offer.
+This is the perfect way to get started, allowing anyone to use the platform and build up knowledge on the many possibilities it has to offer. When ready to scale up, you can set up a yearly subscription or start with a number of credits in the Pay-per-Use model.
 
-### Self-hosted/on-premises
+### Private instance
 
 Self-hosted/on-premises free DataMiner Systems are not time-limited. An organization can use the system as long as it remains connected to dataminer.services.
 
-### Cloud-hosted (DaaS)
+### DataMiner as a Service (DaaS)
 
 Free DataMiner Systems that are [deployed in the cloud](xref:Deploying_a_DMS_in_the_cloud) are limited depending on your available DataMiner Credits.
 
-**DataMiner Credits** are a flexible form of currency you can use to subscribe to DataMiner software and [hosting services](https://aka.dataminer.services/usage-based-pricing). Credits will be deducted automatically when you consume usage-based services. For example, if you [deploy a DataMiner as a Service (DaaS) system](xref:Deploying_a_DMS_in_the_cloud) for a period of 1 week, 3 credits will be deducted.
+**DataMiner Credits** are a flexible form of currency you can use to subscribe to DataMiner software and [hosting services](https://aka.dataminer.services/usage-based-pricing). Credits will be deducted automatically when you consume usage-based services.
 
 Credits are owned by an [organization](xref:Pricing_Usage_based_service#organization), and can be consumed among the DataMiner Systems of that organization.
 
 The credit balance of an organization is displayed in the [Admin app](https://admin.dataminer.services).
-
-Every organization automatically receives 3 DataMiner Credits, which can be used to try out a DaaS system for 1 week for free.
 
 ## DataMiner Perpetual-Use Licenses vs Usage-based services
 
