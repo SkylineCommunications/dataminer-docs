@@ -4,13 +4,6 @@ items:
     items:
       - name: Dashboards and Low-Code Apps tutorials
         topicUid: Dashboards_Low-Code_Apps_Tutorials
-        items:
-          - name: Dashboards tutorials
-            topicUid: Dashboards_Tutorials
-          - name: Low-Code Apps tutorials
-            topicUid: Low-Code_Apps_Tutorials
-          - name: GQI tutorials
-            topicUid: GQI_Tutorials
       - name: DataMiner Integration Studio (DIS) tutorials
         topicUid: DIS_Tutorials
       - name: User-defined APIs tutorials
