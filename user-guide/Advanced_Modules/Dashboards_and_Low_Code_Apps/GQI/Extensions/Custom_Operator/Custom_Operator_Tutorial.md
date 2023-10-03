@@ -56,6 +56,8 @@ The result will look like this:
 
 - A [minus operator](xref:Creating_Minus_Operator)
 
+- Basic knowledge of GQI extension development
+
 ## Title of the first main step
 
 This is the implementation:

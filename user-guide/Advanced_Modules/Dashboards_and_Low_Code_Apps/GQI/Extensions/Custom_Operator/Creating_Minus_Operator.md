@@ -38,6 +38,8 @@ The result will look like this:
   > [!TIP]
   > See [Activating soft-launch options](xref:Activating_Soft_Launch_Options).
 
+- Basic knowledge of GQI extension development
+
 ## Create a basic implementation
 
 Create a new class that implements the `IGQIColumnOperator` and the `IGQIRowOperator` interfaces.
