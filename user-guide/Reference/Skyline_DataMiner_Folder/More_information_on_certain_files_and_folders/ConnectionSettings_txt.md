@@ -126,7 +126,7 @@ This file contains default connection settings to be used by DataMiner client ap
 - To use gRPC with port 443 and the APIGateway endpoint:
 
   ```txt
-  *type=GRPCConnection;serverport=443;endpoint=/APIGateway
+  * type=GRPCConnection;serverport=443;endpoint=/APIGateway
   ```
 
   > [!NOTE]
