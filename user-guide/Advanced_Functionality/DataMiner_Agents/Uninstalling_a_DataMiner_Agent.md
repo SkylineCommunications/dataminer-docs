@@ -49,10 +49,9 @@ There are two possibilities to uninstall a DataMiner Agent:
    - *UnRegister DLLs of DataMiner.bat*
 
    - *RemoveEventLog.exe*
-  
-     > [!NOTE]
-     > After running these scripts, check the *Details* and *Services* tabs of Windows Task Manager for remaining DataMiner processes or services. Neither tab should contain any entries starting with "SL...".
-     > If some processes are still shown in the Task Manager, try re-running the scripts above or stop the processes manually.
+
+   > [!NOTE]
+   > After you run these scripts, check the *Details* and *Services* tabs of Windows Task Manager for remaining DataMiner processes or services. Neither tab should contain any entries starting with "SL". If any such processes are still shown in the Task Manager, try re-running the scripts above or stop the processes manually.
 
 1. From DataMiner 10.1.0/10.1.1 onwards, use SLEndpointTool_console to remove **NATS**:
 
@@ -61,16 +60,17 @@ There are two possibilities to uninstall a DataMiner Agent:
    1. Select *Uninstall*.
 
    1. Select *NAS* as the endpoint to uninstall.
-  
-      > [!NOTE]
-      > In some DataMiner releases, the file *SLendpointTool_Console.exe* is not available. In this case, uninstall NATS by running the following command as Administrator:
-      > ```txt
-      > sc stop NATS && sc stop NAS && sc delete NATS && sc delete NAS
-      > ```
+
+   > [!NOTE]
+   > In some DataMiner releases, the file *SLendpointTool_Console.exe* is not available. In this case, uninstall NATS by running the following command as Administrator:
+   >
+   > ```txt
+   > sc stop NATS && sc stop NAS && sc delete NATS && sc delete NAS
+   > ```
 
 1. Delete the folder *C:\\Skyline DataMiner*.
 
-1. In case **Cassandra** database was installed on the server:
+1. In case a **Cassandra** database was installed on the server:
 
    1. Stop the Cassandra service.
 
@@ -89,7 +89,7 @@ There are two possibilities to uninstall a DataMiner Agent:
 
    1. Run *regedit* as Administrator and delete the registry key “cassandra” in *HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Apache Software Foundation\\Procrun 2.0*.
 
-1. In case **Elasticsearch** database was installed on the server:
+1. In case an **Elasticsearch** database was installed on the server:
 
    1. Stop the Elasticsearch service. If the process does not stop properly, end the process.
 
