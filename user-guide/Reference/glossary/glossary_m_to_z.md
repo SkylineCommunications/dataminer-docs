@@ -216,7 +216,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | SNMP agent | A software component that reports information to an SNMP manager via SNMP. In the context of DataMiner, this term is used for the part of an element that provides information about the element in the format described in the SNMP protocol.<br>See [About SNMP managers](xref:About_SNMP_managers). |
 | SNMP Get | An SNMP message sent by an SNMP manager to an SNMP agent requesting the latter to return the current value of a particular element parameter |
 | SNMP manager | A software application that manages SNMP agents.<br>See [About SNMP managers](xref:About_SNMP_managers). |
-| SNMP notification | An SNMP notification sent by an SNMP agent to an SNMP manager informing the latter that an alarm event occurred on a particular element. This can be an SNMP trap, or, in case the SNMP manager should acknowledge receipt, an inform message.<br>See [SNMP managers](xref:SNMP#snmp-managers). |
+| SNMP notification | An SNMP notification sent by an SNMP agent to an SNMP manager informing the latter that an alarm event occurred on a particular element. This can be an SNMP trap, or, in case the SNMP manager should acknowledge receipt, an inform message.<br>See [SNMP managers](xref:About_SNMP_managers). |
 | SNMP Set | An SNMP message sent by an SNMP manager to an SNMP agent ordering the latter to update the value of a particular element parameter. |
 | SNMP trap | An SNMP notification sent by an SNMP agent to an SNMP manager informing the latter that an alarm event occurred on a particular element. |
 | SOA | Service-Oriented Architecture. Software architecture where services are provided to the other components by application components, through a communication protocol over a network. |

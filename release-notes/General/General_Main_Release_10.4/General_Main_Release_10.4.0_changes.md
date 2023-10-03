@@ -164,12 +164,6 @@ In the *SLNetClientTest* tool, the following new DOM-related features have been 
 > [!CAUTION]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
-#### SLAnalytics will now send regular notifications instead of client notifications [ID_35591]
-
-<!-- MR 10.4.0 - FR 10.3.4 -->
-
-Up to now, when SLAnalytics sent a notification, it would generate an event of type *client notification* with parameter ID 64574. From now on, it will instead generate an event of type *notification* with parameter ID 64570.
-
 #### SLAnalytics - Proactive cap detection: Enhanced accuracy [ID_35695]
 
 <!-- MR 10.4.0 - FR 10.3.4 -->
@@ -662,8 +656,8 @@ When settings inside the `<LDAP>` element of the *DataMiner.xml* file were updat
 
 Up to now, the MessageHandler method in SLHelperTypes.SLHelper would incorrectly try to serialize exceptions that could not be serialized, causing other exceptions to be thrown.
 
-#### SLAnalytics: Problem when stopping a feature [ID_37329]
+#### SLAnalytics: Problem when trying to edit a multivariate pattern [ID_37270]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
-In some cases, an error could occur in SLAnalytics when a feature (e.g. automatic incident tracking) was stopped.
+Due to a cache synchronization issue, problems could occur when trying to edit a multivariate pattern of which one of the elements is located on another DataMiner Agent.
