@@ -124,13 +124,13 @@ The zoom range of a map can now be set by means of a slider.
 
 Because of a number of enhancements, overall performance has increased when fetching relation information for the automatic incident tracking feature.
 
-#### Security enhancements [ID_35434] [ID_35997] [ID_36319] [ID_36624] [ID_36928] [ID_37267] [ID_37345]
+#### Security enhancements [ID_35434] [ID_35997] [ID_36319] [ID_36624] [ID_36928] [ID_37345]
 
 <!-- 35434: MR 10.4.0 - FR 10.3.4 -->
 <!-- 35997: MR 10.4.0 - FR 10.3.5 -->
 <!-- 36319/36928: MR 10.4.0 - FR 10.3.9 -->
 <!-- 36624: MR 10.4.0 - FR 10.3.8 -->
-<!-- 37267/37345: MR 10.4.0 - FR 10.3.11 -->
+<!-- 37345: MR 10.4.0 - FR 10.3.11 -->
 
 A number of security enhancements have been made.
 
@@ -669,3 +669,9 @@ Up to now, the MessageHandler method in SLHelperTypes.SLHelper would incorrectly
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
 Due to a cache synchronization issue, problems could occur when trying to edit a multivariate pattern of which one of the elements is located on another DataMiner Agent.
+
+#### EPM: Problem when SLNet requested information from other DataMiner Agents in the DMS [ID_37462]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+In EPM environments, an error could occur when SLNet requested information from other DataMiner Agents in the DMS.  
