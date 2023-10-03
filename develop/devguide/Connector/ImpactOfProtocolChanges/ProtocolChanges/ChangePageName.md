@@ -20,4 +20,4 @@ Changes to page name will be approved in case:
 
 All other page name changes will generally be rejected.
 
-A software task was created to decouple the layout configurations from the protocol.xml, please see [DCP83409](https://collaboration.dataminer.services/task/83409).
+A software task was created to decouple the layout configurations from the protocol.xml, please see [task 83409](https://collaboration.dataminer.services/task/83409).

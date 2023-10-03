@@ -10,9 +10,9 @@ Note that this is only the case if the previous range defined on the parameter i
 
 ## Impact
 
-Alarm Templates need to be reconfigured, because they will throw errors and fail to be applied if they have an alarm value configured outside the range.
+Alarm templates need to be reconfigured because they will throw errors and fail to be applied if they have an alarm value configured outside the range.
 
-DIS MCC
+*DIS MCC*
 
 | Full ID | Error Message | Description |
 |---------|---------------|-------------|

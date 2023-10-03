@@ -34,10 +34,9 @@ In case it was undesired to change the name:
 You can just manually remove the "bad" main protocol which will remove the corresponding "bad" virtual protocols.
 
 > [!NOTE]
-> (9.5 CU6)
-> The above actions only work if the incorrect protocol did NOT create new DVE's but only worked with DVE's previously created.
-> If you have a 'mixed' setup where some DVE's are running version A and some are running the previous version B.
-> Then it won't be possible to just upload a new protocol that resets the version to B. The DVE's running version A will stick.
+> The above actions only work if the incorrect protocol did NOT create new DVEs, but only worked with DVEs previously created.
+> If you have a 'mixed' setup where some DVEs are running version A and some are running the previous version B.
+> Then it will not be possible to just upload a new protocol that resets the version to B. The DVEs running version A will stick.
 
 ## Note
 

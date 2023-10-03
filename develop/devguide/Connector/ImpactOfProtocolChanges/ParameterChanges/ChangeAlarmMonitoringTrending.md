@@ -18,7 +18,7 @@ Removing the normalization in a protocol will cause loss of configuration data.
 
 ## Alarm monitoring
 
-DIS MCC
+*DIS MCC*
 
 | Full ID | Error Message | Description  |
 |---------|---------------|--------------|
@@ -32,7 +32,7 @@ DIS MCC
 
 ## Trending
 
-DIS MCC
+*DIS MCC*
 
 | Full ID | Error Message | Description |
 |---------|---------------|-------------|
@@ -48,7 +48,7 @@ DIS MCC
   - First, to copy the current values to the parameter holding the Base values
   - Second, to perform the Normalize (action type normalize)
 
-To prevent the loss of the old base-values stored using the `absolute:<pid>`, use a trigger after startup and run every normalize action if there is a value filled in the parameter holding the base value. It is important to note only the action normalize should be run after startup, and not the copy (so don't just trigger the button normalize). This should only run the very first time the element is restarted after a version change. So you might also want to include a save parameter holding a flag that indicates this was already performed.
+To prevent the loss of the old base-values stored using the `absolute:<pid>`, use a trigger after startup and run every normalize action if there is a value filled in the parameter holding the base value. It is important to note only the action normalize should be run after startup, and not the copy (so do not just trigger the button normalize). This should only run the very first time the element is restarted after a version change. So you might also want to include a save parameter holding a flag that indicates this was already performed.
 
 > [!NOTE]
 > In case of a (DVE) table the values need to be copied using a QAction.

@@ -6,14 +6,14 @@ uid: ChangeParameterDiscreetException
 
 Changing the discreet(s) or changing exception(s) is considered a major change.
 
-Note, a change in dependancyValue will not cause any impact.
+Note, a change in *dependancyValue* will not cause any impact.
 
 ## Impact
 
 - Adapt Automation scripts, because the displayed value can be used in Automation scripts to perform sets.
 - DMS Filters can be used with wildcards on the display value.
 
-DIS MCC
+*DIS MCC*
 
 | Full ID | Error Message | Description |
 |---------|---------------|-------------|
@@ -23,4 +23,4 @@ DIS MCC
 
 ## Workarounds
 
-Please see task [DCP83409](https://dcp.skyline.be/Lists/Tasks/DispForm.aspx?ID=83409)
+Please see [task 83409](https://dcp.skyline.be/Lists/Tasks/DispForm.aspx?ID=83409)

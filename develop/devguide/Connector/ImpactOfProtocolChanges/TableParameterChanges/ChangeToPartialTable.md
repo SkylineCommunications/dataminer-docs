@@ -10,9 +10,9 @@ Changing a table to a partial table is considered a major change.
 
 Existing custom reports may no longer work.
 
-GetTable via AutomationScripts will only be able to retrieve the displayed content.
+*GetTable* via Automation scripts will only be able to retrieve the displayed content.
 
-DIS MCC
+*DIS MCC*
 
 | Full ID | Error message | Description |
 |---------|---------------|-------------|

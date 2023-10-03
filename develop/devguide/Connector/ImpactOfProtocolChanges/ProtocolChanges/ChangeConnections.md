@@ -8,7 +8,7 @@ Adding or removing one or multiple connections to a protocol is considered a maj
 
 Changing the type of a connection is also considered a major change, e.g. from SNMP to SNMPv3.
 
-DIS MCC
+*DIS MCC*
 
 | Full ID | Error message | Description |
 |---------|---------------|-------------|

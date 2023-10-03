@@ -14,11 +14,11 @@ The *displaycolumn* value is used for storing the trend (and alarming keys), whe
 
 Existing trend data is no longer accessible.
 
-DIS MCC
+*DIS MCC*
 
 | Full ID | Error message | Description |
 |---------|---------------|-------------|
 | 2.15.1  | DisplayColumnChangedToNaming | DisplayColumn attribute with column idx '{columnIdx}' on table '{tableId}' was changed into naming options: '{namingValue}'. |
 | 2.15.2  | DisplayColumnChangeToNamingFormat | DisplayColumn attribute with column idx '{columnIdx}' on table '{tableId}' was changed into NamingFormat: '{namingFormatValue}'. |
 
-A request to replace the displayColumn by naming to make the driver 'Cassandra Compliant' is usually approved.
+A request to replace the *displayColumn* by naming to make the driver 'Cassandra Compliant' is usually approved.

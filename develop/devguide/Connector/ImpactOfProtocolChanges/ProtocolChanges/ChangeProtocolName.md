@@ -15,5 +15,5 @@ DIS MCC
 ## Impact
 
 - Live Update will be broken.
-- Elements will need to use the new protocol and possible existing configurations may be broken (monitoring, reports, filters, automation scripts).
+- Elements will need to use the new protocol and possible existing configurations may be broken (monitoring, reports, filters, Automation scripts).
 - Customers with an *allowed protocols* license may need a license adaption.

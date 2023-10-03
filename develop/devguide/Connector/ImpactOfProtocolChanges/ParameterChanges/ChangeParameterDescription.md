@@ -12,16 +12,16 @@ Changing the parameter description can impact the following (when used):
 
 - DMS Filters
 - DMS Automation Scripts
-- DMS Visios
+- DMS Visio files
 - DMS Reports
 - DMS WebAPI
 
 Note that in the following cases, there is no actual impact and these type of changes can be done in the same range:
 
 - Changes to capitalization of parameter descriptions
-- Changes to descriptions of internal parameters (RTDisplay false)
+- Changes to descriptions of internal parameters (*RTDisplay* false)
 
-DIS MCC
+*DIS MCC*
 
 | Full ID | Error Message | Description |
 |---------|---------------|-------------|
@@ -33,8 +33,8 @@ DIS MCC
 Changes to parameter descriptions will be approved in case one of the following conditions is met:
 
 - The current parameter description is wrong
-- The current parameter description is not user friendly (for example an abbreviation is used instead of writing the description in full)
+- The current parameter description is not user friendly (e.g. an abbreviation is used instead of writing the description in full)
 
 All other parameter description changes will generally be rejected.
 
-In case a customer really insists that the description should be changed, an Information Template can be created to change the description on the DMS of the customer.
+In case a customer really insists that the description should be changed, an information template can be created to change the description on the DMS of the customer.

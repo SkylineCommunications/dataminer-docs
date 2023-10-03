@@ -8,10 +8,10 @@ Changing the Interprete of a parameter is considered a major change.
 
 ## Impact
 
-- Possible changes is database trending
+- Possible changes in database trending
 - Custom Reports might require adaption
 
-DIS MCC
+*DIS MCC*
 
 | Full ID | Error Message | Description |
 |---------|---------------|-------------|

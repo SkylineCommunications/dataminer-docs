@@ -14,7 +14,7 @@ This includes adding DCF in a protocol where previously no DCF was available or 
 
 DCF can add a lot of additional load to a system and it may introduce new issues and bugs for a technology (DCF) the customer may not actually be using.
 
-DIS MCC
+*DIS MCC*
 
 | Full ID | Error message | Description   |
 |---------|---------------|---------------|
@@ -38,27 +38,27 @@ DIS MCC
 
 ## Workarounds
 
-### Adding DCF to an existing Protocol
+### Adding DCF to an existing protocol
 
 Actions to be taken:
 
 - QAction logic for DCF should be disabled by default.
 
-Advised Method:
+Advised method:
 
-- Add a toggle-button to the protocol. (default "Disabled")
+- Add a toggle button to the protocol. (default "Disabled")
 - For QAction logic:
 
-  - Add a Condition tag to either QAction/Trigger/Action or group running the DCF code (if it only runs DCF code)
-  - Add if-conditions inside C# code that disable the DCF Logic
+  - Add a *Condition* tag to either QAction/Trigger/Action or group running the DCF code (if it only runs DCF code)
+  - Add if conditions inside C# code that disable the DCF logic
 
-- A work around to disable Interfaces **should not** be done unless absolutely necessary.
+- A workaround to disable Interfaces **should not** be made unless absolutely necessary.
 
-  - A software Task was created to disable DCF interfaces, please see [DCP83048](https://collaboration.dataminer.services/task/83048)
+  - A software task was created to disable DCF interfaces, please see [task 62899](https://collaboration.dataminer.services/task/62899)
 
-### DCF Interface Changes
+### DCF interface changes
 
 Actions to be taken:
 
-- DCF data needs to be cleared: DCF Mapping parameters, etc.
-- The use case of the DCF needs to be checked -> Which is in general the correct DCF implementation that can be used as the standard for the customers.
+- DCF data needs to be cleared: DCF mapping parameters, etc.
+- The use case of the DCF needs to be checked - Which is in general the correct DCF implementation that can be used as the standard for the customers.

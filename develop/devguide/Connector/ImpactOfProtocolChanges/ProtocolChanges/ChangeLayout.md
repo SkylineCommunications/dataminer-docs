@@ -12,7 +12,7 @@ This includes changing the page ordering and/or parameter positioning.
 
 A user that was used to work with a certain layout may no longer be able to work with the new layout.
 
-DIS MCC
+*DIS MCC*
 
 | Full ID | Error message | Description |
 |---------|---------------|-------------|
@@ -22,8 +22,8 @@ DIS MCC
 
 Changes to page ordering and/or parameter positioning will be approved in case:
 
-- The current layout is wrong (for example a parameter should have been placed in the general page instead, or the page that contains overall status KPIs is not the first one)
+- The current layout is wrong (for example a parameter should have been placed in the general page instead, or the page that contains overall status KPIs is not the first one).
 
 All other positioning layout changes will generally be rejected.
 
-A software task was created to decouple the layout configurations from the protocol.xml, please see [DCP83409](https://collaboration.dataminer.services/task/83409).
+A software task was created to decouple the layout configurations from the protocol.xml, please see [task 83409](https://collaboration.dataminer.services/task/83409).

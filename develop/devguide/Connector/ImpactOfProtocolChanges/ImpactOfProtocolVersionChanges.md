@@ -19,9 +19,9 @@ To create such a request, go to the [Protocol Version Request](https://intranet.
 
 A team of System Developers is responsible to follow up on these requests and guide the developer to make the correct decision and assess if the impacting change can be implemented or if a workaround is possible.
 
-Depending if the request is valid or not, the request will either be approved or rejected.
+Depending on whether the request is valid or not, the request will either be approved or rejected.
 
-It's important to assess if a major change will be needed as soon as possible to avoid any delays that could impact the delivery of a task.
+It is important to assess if a major change will be needed as soon as possible to avoid any delays that could impact the delivery of a task.
 
 ## Impacting changes
 
@@ -87,7 +87,7 @@ This is something we would like to change to be able to also improve the quality
 
 ### Procedure
 
-Whenever you receive feedback from a user (could be a customer or from Sales, Product Marketing, etc.) that some improvements (changing parameter descriptions, change layout, etc.) could be done in a protocol, a major change can be requested to allow these changes.
+Whenever you receive feedback from a user (i.e. a customer, a colleague from Sales or Product Marketing, etc.) that some improvements (changing parameter descriptions, change layout, etc.) could be done in a protocol, a major change can be requested to allow these changes.
 
 The requests should be created on the [Protocol Version Request](https://intranet.skyline.be/Lists/Protocol%20Version%20Request/Overview.aspx) intranet page (similar to any other protocol version request), but no specific task is needed (unless you already have a task in your customer project).
 
