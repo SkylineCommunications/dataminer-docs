@@ -42,6 +42,12 @@ Also, when you open a trend template in which offload settings have been specifi
 
 When you opened a trend graph showing trend data of a parameter of type string, and you added another, non-string parameter to that same graph, the Y axis of the newly added parameter would not be rendered correctly. The labels would be placed too close to each other, making them unreadable.
 
+#### Opening element card for DVE alarm from Alarm Console did not work correctly [ID_37297]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+When you opened the element card for an alarm on a parameter of a DVE element from the Alarm Console, this did not have the same behavior as for regular alarms. Now this action will open the trend graph of the parameter if the parameter is trended, or otherwise it will show the parameter details.
+
 #### Alarm Console: Problem when creating a linked alarm tab while connected to a system with a large number of correlated/incident alarms [ID_37332]
 
 <!-- MR 10.3.0 [CU8] - FR 10.3.11 -->

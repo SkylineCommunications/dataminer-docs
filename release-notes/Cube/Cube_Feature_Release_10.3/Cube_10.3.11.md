@@ -58,6 +58,12 @@ Only upon releasing the left mouse button will the unknown part of the trace be 
 
 ### Enhancements
 
+#### Opening element card for DVE alarm from Alarm Console did not work correctly [ID_37297]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+When you opened the element card for an alarm on a parameter of a DVE element from the Alarm Console, this did not have the same behavior as for regular alarms. Now this action will open the trend graph of the parameter if the parameter is trended, or otherwise it will show the parameter details.
+
 #### CefSharp package download enhancements [ID_37319]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
