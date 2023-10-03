@@ -2,16 +2,25 @@
 uid: Dashboards_Low-Code_Apps_Tutorials
 ---
 
-## Dashboards and Low-Code Apps tutorials
+# Dashboards and Low-Code Apps tutorials
 
-<div class="row"> 
-  <div class="column">
-    <a href="/tutorials/Dashboards_and_Low-Code_Apps/Dashboards/DashboardsOverview.html" title="Dashboards tutorials" target="_self"><img src="~/tutorials/images/Tutorials_Dashboards.svg" style="width:100%"></a>
-  </div>
-  <div class="column">
-    <a href="/tutorials/Dashboards_and_Low-Code_Apps/Low-Code_Apps/LowCodeAppsOverview.html" title="Low-Code Apps tutorials" target="_self"><img src="~/tutorials/images/Tutorials_Low_Code_Apps.svg" style="width:100%"></a>
-  </div>
-  <div class="column">
-    <a href="/tutorials/Dashboards_and_Low-Code_Apps/GQI/Ad_hoc_Tutorials.html" title="GQI tutorials" target="_self"><img src="~/tutorials/images/Tutorials_GQI.svg" style="width:100%"></a>
-  </div>  
-</div>
+### Dashboards tutorials
+
+| Name | Description |
+|--|--|
+| [Displaying a custom empty component message](xref:Tutorial_Dashboards_Displaying_a_custom_empty_component_message) | Add a custom message when a query returns no results for any of the following components of a dashboard: table, grid, pie & donut chart, line & area chart, timeline, and node edge graph. |
+
+### Low-Code Apps tutorials
+
+| Name | Description |
+|--|--|
+| [Creating and publishing an app](xref:Tutorial_Apps_Creating_And_Publishing) | Create and publish your first low-code app. |
+| [Editing an existing app](xref:Tutorial_Apps_Edit_Existing_App) | Edit an existing low-code app. |
+| [Managing the pages in an app](xref:Tutorial_Apps_Managing_Pages) | Add, change, and remove pages in a low-code app. |
+| [Using the stepper component in a low-code app](xref:TutorialStepper) | Add and configure a stepper component in a low-code app to help with managing incidents and their different states. |
+
+### GQI tutorials
+
+| Name | Description |
+|--|--|
+| [Forwarding dummy data to the GQI](xref:Ad_hoc_Tutorials) | Go through an example script that forwards dummy data to the GQI. |
