@@ -114,6 +114,14 @@ SLLogCollector packages now include information regarding the IIS configuration:
 | Network Information | Information regarding the SSL certificate on port 443 |
 | SSL Cert            | The SSL certificate for port 443                      |
 
+#### Improved alarm grouping for DVE child elements [ID_37275]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+Alarm grouping for DVE child elements has been improved. As change points are generated on DVE parent elements, previously these were not taken into account for the grouping of alarms for the DVE child elements. Now the change points of the DVE parent element will be taken into account for the DVE child elements as well.
+
+However, note that cases where a main DVE element exports the same parameter to multiple DVE child elements are not supported for this.
+
 #### SLAnalytics - Trend predictions: Enhanced trend prediction models [ID_37280]
 
 <!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
