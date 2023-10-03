@@ -98,7 +98,7 @@ When you right-click the DataMiner Taskbar Utility system tray icon, a menu appe
     In the *About* tab, the options window also displays the version number of the Taskbar Utility application.
 
     > [!NOTE]
-    > To avoid issues in a DMS that is configured to only use HTTPS/SSL communication, go to *Options* > *slnet* and select the checkbox *HTTPS Support*. (Available from DataMiner 9.5.0 CU12/9.6.3 onwards.)
+    > If you are using a DataMiner version prior to DataMiner 10.3.0 [CU3]/10.3.6, to avoid issues in a DMS that is configured to only use HTTPS/SSL communication, go to *Options* > *slnet* and select the checkbox *HTTPS Support*.
 
 - **Exit**
 
