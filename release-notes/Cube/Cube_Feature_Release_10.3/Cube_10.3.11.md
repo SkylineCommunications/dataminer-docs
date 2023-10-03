@@ -142,6 +142,12 @@ In a visual overview containing multiple pages, it would no longer be possible t
 
 Up to now, when you opened a context menu with a text box containing a number with decimals, that number would incorrectly be replaced by "0.0".
 
+#### Trending: Problem when trying to edit a multivariate pattern [ID_37433]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+Due to a cache synchronization issue, problems could occur when trying to edit a multivariate pattern of which one of the elements is located on another DataMiner Agent.
+
 #### DataMiner Cube could become unresponsive during startup when the Alarm Console did not contain any alarm tabs [ID_37436]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->

@@ -677,6 +677,12 @@ In the *Database* section of *System Center*, when *Type* was set to "Database p
 
 In a visual overview containing multiple pages, it would no longer be possible to return to the initially selected page when the shape used to switch pages had its `VdxPage` property updated using a session variable.
 
+#### Trending: Problem when trying to edit a multivariate pattern [ID_37433]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+Due to a cache synchronization issue, problems could occur when trying to edit a multivariate pattern of which one of the elements is located on another DataMiner Agent.
+
 #### DataMiner Cube could become unresponsive during startup when the Alarm Console did not contain any alarm tabs [ID_37436]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
