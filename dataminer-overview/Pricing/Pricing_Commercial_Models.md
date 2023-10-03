@@ -44,7 +44,7 @@ Self-hosted/on-premises free DataMiner Systems are not time-limited. An organiza
 
 ### DataMiner as a Service (DaaS)
 
-Free DataMiner Systems that are [deployed in the cloud](xref:Deploying_a_DMS_in_the_cloud) are limited depending on your available DataMiner Credits.
+DataMiner Express Edition systems that are [deployed as a service](xref:Deploying_a_DMS_in_the_cloud) are limited depending on your available DataMiner Credits.
 
 **DataMiner Credits** are a flexible form of currency you can use to subscribe to DataMiner software and [hosting services](https://aka.dataminer.services/usage-based-pricing). Credits will be deducted automatically when you consume usage-based services.
 
