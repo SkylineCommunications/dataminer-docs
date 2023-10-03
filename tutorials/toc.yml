@@ -27,10 +27,12 @@ items:
               - name: Forwarding dummy data to the GQI
                 topicUid: Ad_hoc_Tutorials
       - name: DataMiner Integration Studio (DIS) tutorials
-        topicUid: DisTutorials_MibBrowser
+        topicUid: DISTutorials
         items:
           - name: Exploring the DIS MIB browser
             topicUid: DisTutorials_MibBrowser
+          - name: DIS Validator and GitHub DevOps
+            topicUid: DisTutorials_DevOpsGitHubValidator        
       - name: User-defined APIs tutorials
         topicUid: UD_APIs_Tutorials
         items:
