@@ -140,7 +140,7 @@ In a visual overview containing multiple pages, it would no longer be possible t
 
 <!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
 
-Up to now, when you opened a context menu with a text box containing a number with decimals, that number would incorrectly be replaced by "0.0".
+Up to now, when you opened a context menu with a text box containing a number with decimals, that number would incorrectly be replaced by "0.0". This would only happen when there are decimals in the default value of the parameter because Cube was trying to parse the default value with the current culture in the Windows machine. 
 
 #### Trending: Problem when trying to edit a multivariate pattern [ID_37433]
 
