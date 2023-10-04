@@ -628,12 +628,6 @@ In some rare cases, an error could be thrown when an element was renamed.
 
 The deprecated DMS_GET_INFO call would return unexpected data when it returned data of elements that contained remotely hosted DVE child elements.
 
-#### Problem in different native processes when interacting with message broker calls [ID_37150]
-
-<!-- MR 10.4.0 - FR 10.3.11 -->
-
-In some cases, an error could occur in different native processes when interacting with message broker calls.
-
 #### SLAnalytics: Problem when creating or editing a multivariate pattern [ID_37212]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->

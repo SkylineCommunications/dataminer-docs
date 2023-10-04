@@ -20,4 +20,8 @@ A number of security enhancements have been made.
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Problem in different native processes when interacting with message broker calls [ID_37150]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.11 -->
+
+In some cases, an error could occur in different native processes when interacting with message broker calls.
