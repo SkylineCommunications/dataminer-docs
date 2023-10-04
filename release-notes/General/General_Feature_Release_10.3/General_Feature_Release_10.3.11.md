@@ -97,7 +97,8 @@ This `objectId` attribute will now be considered optional. Hence, no run-time er
 
 #### Security enhancements [ID_37267] [ID_37291] [ID_37335] [ID_37345]
 
-<!-- RN 37267/37345: MR 10.4.0 - FR 10.3.11 -->
+<!-- RN 37267: MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.11 -->
+<!-- RN 37345: MR 10.4.0 - FR 10.3.11 -->
 <!-- RN 37291: MR 10.3.0 [CU8] - FR 10.3.11 -->
 <!-- RN 37335: 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
 
@@ -168,6 +169,12 @@ When changes are made to one of the following NATS configuration files, from now
 
 This will allow you to trace changes made to these configuration files when issues arise.
 
+#### Storage as a Service: DataMiner Agent will now communicate with the database via port 443 only [ID_37480]
+
+<!-- MR 10.4.0 - FR 10.3.11 [CU0] -->
+
+Up to now, a DataMiner using STaaS communicated with the database via TCP/IP ports 443, 5671 and 5672. From now on, it will communicate with the database via port 443 only.
+
 ### Fixes
 
 #### Failover: Data can get lost when the backup agent is the online agent during a Cassandra Cluster migration [ID_34018]
@@ -199,7 +206,7 @@ From now on, the number of backups you specify will be the number of backups tha
 
 #### Problem in different native processes when interacting with message broker calls [ID_37150]
 
-<!-- MR 10.4.0 - FR 10.3.11 -->
+<!-- MR 10.3.0 [CU9] - FR 10.3.11 -->
 
 In some cases, an error could occur in different native processes when interacting with message broker calls.
 
@@ -311,14 +318,28 @@ In some cases, an error could occur in SLAnalytics when a feature (e.g. automati
 
 When a protocol was configured to use `MultipleGetBulk` in combination with `PartialSNMP` (e.g. `<OID options="partialSNMP:10;multipleGetBulk:10">`), and the device would return less table cells than the configured `MultipleGetBulk` value, certain fields would not get filled in.
 
-#### Problem with SLAnalytics when fetching protocol information while creating a multivariate pattern [ID_37366]
+#### SLAnalytics: Problem when fetching protocol information while creating a multivariate pattern [ID_37366]
 
 <!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
 
-In some cases, SLAnalytics could throw an exception when fetching protocol information while creating a multivariate pattern.
+In some cases, an error could occur in SLAnalytics when fetching protocol information while creating a multivariate pattern.
 
-#### SLAnalytics: Problem when the SLNet connection got lost while resetting data sources [ID_37402]
+#### SLAnalytics: Problem when the SLNet connection got lost while resetting the data sources [ID_37402] [ID_37459]
 
-<!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
+<!-- RN 37402: MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
+<!-- RN 37459: MR 10.3.0 [CU8] - FR 10.3.11 -->
 
-During initialization, in some cases, an error could occur in SLAnalytics when the SLNet connection got lost while resetting data sources.
+An error could occur in SLAnalytics when the SLNet connection got lost while resetting the data sources.
+
+#### EPM: Problem when SLNet requested information from other DataMiner Agents in the DMS [ID_37462]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+In EPM environments, an error could occur when SLNet requested information from other DataMiner Agents in the DMS.  
+
+#### GQI: Problem when aggregating Elasticsearch table columns [ID_37472]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+<!-- Not added to MR 10.4.0 -->
+
+When Elasticsearch table columns were aggregated via GQI, the aggregation columns would all share the same incorrect column ID.
