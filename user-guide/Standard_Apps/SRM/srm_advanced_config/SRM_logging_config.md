@@ -78,7 +78,7 @@ helper.Log("Report a warning", LogEntryType.Warning);
 
 <!-- RN 31988 -->
 
-From within an LSO script, you can add custom records to the action logs or debug logs, together with a severity indication.
+From within an LSO script, you can add custom records to the action logs or debug logs. For action logs, these come with a custom severity indication. For the debug logs, custom records are always of severity Info.
 
 Example:
 

@@ -21,12 +21,12 @@ By specifying a column in OverrideIconColumns (under the TreeControl tag), you c
 ```xml
 <Discreets>
   <Discreet iconRef="audio">
-     <Value>0</Value>
-     <Display>Off</Display>
+    <Value>0</Value>
+    <Display>Off</Display>
   </Discreet>
   <Discreet iconRef="video">
-     <Value>1</Value>
-     <Display>Right</Display>
+    <Value>1</Value>
+    <Display>Right</Display>
   </Discreet>
 </Discreets>
 ```
@@ -112,56 +112,33 @@ By specifying a column in OverrideIconColumns (under the TreeControl tag), you c
 
 ```xml
 <Param id="1000" trending="false">
-  <Name>PID Table</Name>
+  <Name>PIDTable</Name>
   <Description>PID Table</Description>
   <Type>array</Type>
   <ArrayOptions index="0">
-     <ColumnOption idx="0" pid="1001" type="custom" options=";"/>
-     <ColumnOption idx="1" pid="1002" type="custom" options=";"/>
+    <ColumnOption idx="0" pid="1001" type="custom" options=";"/>
+    <ColumnOption idx="1" pid="1002" type="custom" options=";"/>
   </ArrayOptions>
-  <Interprete>
-     ...
-  </Interprete>
   <Display>
-     ...
+    <RTDisplay>true</RTDisplay>
   </Display>
   <Icon ref="GeneralPID" />
   <Measurement>
-     ...
-  </Measurement>
-</Param>
-<Param id="1000" trending="false">
-  <Name>PID Table</Name>
-  <Description>PID Table</Description>
-  <Type>array</Type>
-  <ArrayOptions index="0">
-     <ColumnOption idx="0" pid="1001" type="custom" options=";"/>
-     <ColumnOption idx="1" pid="1002" type="custom" options=";"/>
-  </ArrayOptions>
-  <Interprete>
-     ...
-  </Interprete>
-  <Display>
-     ...
-  </Display>
-  <Icon ref="GeneralPID" />
-  <Measurement>
-           <Type>discreet</Type>
-     <Discreets>
-        <Discreet iconRef="CAT">
-           <Display>CAT</Display>
-           <Value>1</Value>
-        </Discreet>
-        <Discreet iconRef="DATA">
-           <Display>DATA</Display>
-           <Value>2</Value>
-        </Discreet>
-        <Discreet iconRef="ECM">
-           <Display>ECM</Display>
-           <Value>3</Value>
-        </Discreet>
-        ...
-     </Discreets>
+    <Type>discreet</Type>
+    <Discreets>
+      <Discreet iconRef="CAT">
+        <Display>CAT</Display>
+        <Value>1</Value>
+      </Discreet>
+      <Discreet iconRef="DATA">
+        <Display>DATA</Display>
+        <Value>2</Value>
+      </Discreet>
+      <Discreet iconRef="ECM">
+        <Display>ECM</Display>
+        <Value>3</Value>
+      </Discreet>
+    </Discreets>
   </Measurement>
 </Param>
 ```
@@ -172,7 +149,7 @@ Now, in the tree control, we need to define the parameter ID of the column conta
 <TreeControls>
   <TreeControl parameterId="5000" readOnly="true">
      ...
-     <OverrideIconColumns>1002</OverrideIconColumns>
+    <OverrideIconColumns>1002</OverrideIconColumns>
   </TreeControl>
 </TreeControls>
 ```

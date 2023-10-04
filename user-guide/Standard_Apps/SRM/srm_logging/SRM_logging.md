@@ -17,5 +17,5 @@ To view the logging for a booking, select the booking in the list or on the time
 
 This can for instance be useful in case a booking cannot be confirmed because not all mandatory items have been configured for it (resources, profile parameters, and profile instances). In that case, a line is added to the Debug log file. <!-- RN 31183 -->
 
-> [!TIP]
-> See also: [Configuring SRM logging](xref:SRM_logging_config)
+> [!NOTE]
+> To be able to view the logging via the *Debug Log* or *Action Log* buttons, clients need to have read access to the shared folder configured as the *Booking Logging Location*. See [Configuring SRM logging](xref:SRM_logging_config).

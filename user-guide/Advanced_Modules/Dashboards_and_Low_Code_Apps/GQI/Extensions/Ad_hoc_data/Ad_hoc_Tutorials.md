@@ -2,9 +2,7 @@
 uid: Ad_hoc_Tutorials
 ---
 
-# Tutorials
-
-## Example of forwarding dummy data to the GQI
+# Example of forwarding dummy data to the GQI
 
 Below you can find an example script that forwards dummy data to the GQI. The name of the data source, as defined in the *GQIMetaData* attribute, will be “People”.
 

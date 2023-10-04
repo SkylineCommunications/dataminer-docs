@@ -33,7 +33,7 @@ In the *Layout* tab for this component, the *Column filters* option is available
 
 - You can remove a column filter again by selecting *No color* instead of a specific color.
 
-You can **resize the columns** of the table by dragging the column edges. From DataMiner 10.2.0/10.1.8 onwards, you can also change the order of the columns by dragging the column headers to a different position.
+You can **resize the columns** of the table by dragging the edges of the column headers. From DataMiner 10.2.0/10.1.8 onwards, you can also change the order of the columns by dragging the column headers to a different position.
 
 ## Adding actions to a table
 
@@ -57,9 +57,14 @@ To configure actions:
 
 In the *Settings* tab for this component, you can customize its behavior to suit your requirements.
 
-- If you want the data in the table to be refreshed automatically, Set *Update data* to *On* (available from DataMiner 10.2.0/10.2.1 onwards<!-- RN 31450 -->).
+- If you want the data in the table to be refreshed automatically (provided this is supported by the data source), Set *Update data* to *On*. Note that while this setting is available from DataMiner 10.2.0/10.2.1 onwards<!-- RN 31450 -->, in older DataMiner versions it can only be used with the *Get parameter table by ID* query data source. From DataMiner 10.3.10/10.4.0 onwards<!-- RN 36789 -->, other data sources are also supported.
 
 - If you want the first row to be selected by default, in the *Settings* tab, under *Initial Selection*, set the toggle button to *On* (available from DataMiner 10.3.6/10.4.0 onwards<!-- RN 35984 -->). This way, the first row will be automatically selected whenever the component is loaded or when the data in the table is refreshed.
+
+- If you want to configure the message shown when a query returns no results, in the *layout* tab, under *Advanced*, change the *Empty result message* setting to your custom message (available from 10.3.11/10.4.0 onwards<!-- RN 37173 -->). By default, this message is set to *Nothing to show*.
+
+  > [!TIP]
+  > See also: [Displaying a custom empty component message](xref:Tutorial_Dashboards_Displaying_a_custom_empty_component_message).
 
 ## Exporting the table
 

@@ -2,13 +2,13 @@
 uid: Web_apps_Main_Release_10.3.0_CU7
 ---
 
-# DataMiner web apps Main Release 10.3.0 CU7 – Preview
+# DataMiner web apps Main Release 10.3.0 CU7
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
-> For release notes for this release that are not related to the web applications, see [General Main Release 10.3.0 CU6](xref:General_Main_Release_10.3.0_CU6).
+> For release notes for this release that are not related to the web applications, see [General Main Release 10.3.0 CU7](xref:General_Main_Release_10.3.0_CU7).
 
 ### Enhancements
 
@@ -49,6 +49,14 @@ Up to now, if a column of a query was edited while the query was loading in a ta
 
 When, while in edit mode, you deleted multiple components at once, the *Data used in Dashboard* section of the edit pane would not be updated correctly. The data would be removed, but the height of the section would incorrectly not be reduced.
 
+#### Dashboards app: 'Loading...' indicator would appear when trying to save a folder of which the name consists of spaces [ID_37046]
+
+<!-- 10.2.0 [CU20]/MR 10.3.0 [CU7] - FR 10.3.10 -->
+
+When, in the *Create folder* or *Create dashboard* window, you clicked inside the *Location* box, clicked "+" to add a new folder, entered a series of spaces, and then clicked the checkmark button, a "Loading..." indicator would appear at the top of the window but nothing would happen.
+
+Also, from now on, it is no longer allowed to save a folder with a name containing leading spaces.
+
 #### Dashboards app/Low-Code Apps: Visual glitch when closing component menu [ID_37058]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
@@ -57,7 +65,7 @@ When the menu of a component in a dashboard or low-code app was closed by moving
 
 #### Dashboards app/Low-Code Apps - Line chart component: Viewport would change upon receiving data [ID_37065]
 
-<!-- MR 10.3.0 [CU7] - FR 10.3.10 -->
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
 
 When a *Line chart* component received new data, it would incorrectly recalculate its viewport.
 

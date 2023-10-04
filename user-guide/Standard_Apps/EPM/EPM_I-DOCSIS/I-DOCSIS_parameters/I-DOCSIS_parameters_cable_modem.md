@@ -75,10 +75,6 @@ These parameters are displayed for the Cable Modem level in the I-DOCSIS dashboa
 
 - **Last Successful CMTS Poll**: Calculated. The date and time of the last successful polling cycle based on Status, Last Registration Time, and System ID returning valid data.
 
-- **Status**: Direct value. OID: 1.3.6.1.4.1.4491.2.1.20.1.3.1.6. Operational.
-
-- **Last Registration Time**: Direct value. OID: 1.3.6.1.4.1.4491.2.1.20.1.3.1.14.
-
 ## Subscriber
 
 - **IPv4 Address**: Direct value. The IPV4 address of the cable modem.
@@ -100,6 +96,18 @@ These parameters are displayed for the Cable Modem level in the I-DOCSIS dashboa
   The EPM engine makes this association via import operation.
 
 - **Service Group \[Fiber Node] Name**: Direct value.
+
+  The EPM engine makes this association via import operation.
+
+- **Node Name**: Direct value. The node device associated with the cable modem.
+
+  The EPM engine makes this association via import operation.
+
+- **Amplifier Name**: Direct value. The amplifier device associated with the cable modem.
+
+  The EPM engine makes this association via import operation.
+
+- **TAP Name**: Direct value. The TAP device associated with the cable modem.
 
   The EPM engine makes this association via import operation.
 
@@ -171,9 +179,9 @@ These parameters are displayed for the Cable Modem level in the I-DOCSIS dashboa
 
 - **Average Reflection Distance**: Calculated. The average reflection distance of the associated US channels.
 
-- **Group Delay or Reflection Status**: Calculated. The presence of group delay or reflection, based on the reported NMTER values of US channels associated with the cable modem.
+- **Group Delay or Reflection Status**: Calculated. The presence of group delay or reflection, based on the reported group delay or reflection status values of the cable modem.
 
-  Possible values: *OK* if all associated US channels are operating within acceptable NMTER thresholds, and *OOS* (Out of Spec) if at least one US channel is operating outside acceptable NMTER thresholds.
+  Possible values: *OK* if all associated group delay and reflection status reports are OK, and *OOS* (Out of Spec) if group delay or reflection status is reporting OOS.
 
 ## Ping Stats
 

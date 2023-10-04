@@ -22,9 +22,11 @@ Since DataMiner version 8, it is possible to implement recursive linking. The ta
   <Description>Recursive List</Description>
   <Type>array</Type>
   <ArrayOptions index="0" options="">
-     <ColumnOption idx="0" pid="301" type="retrieved" value="" options=""/>
-     <ColumnOption idx="1" pid="303" type="retrieved" value="" options=";foreignKey=300"/>
-     <ColumnOption idx="2" pid="304" type="retrieved" value=""/>
+    <ColumnOption idx="0" pid="301" type="retrieved" value="" options=""/>
+    <ColumnOption idx="1" pid="303" type="retrieved" value="" options=";foreignKey=300"/>
+    <ColumnOption idx="2" pid="304" type="retrieved" value=""/>
+  </ArrayOptions>
+</Param>
 ```
 
 Please keep the following guidelines in mind for foreign keys:
