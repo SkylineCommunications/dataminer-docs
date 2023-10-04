@@ -330,3 +330,10 @@ An error could occur in SLAnalytics when the SLNet connection got lost while res
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
 In EPM environments, an error could occur when SLNet requested information from other DataMiner Agents in the DMS.  
+
+#### GQI: Problem when aggregating Elasticsearch table columns [ID_37472]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+<!-- Not added to MR 10.4.0 -->
+
+When Elasticsearch table columns were aggregated via GQI, the aggregation columns would all share the same incorrect column ID.
