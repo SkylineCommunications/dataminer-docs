@@ -2,6 +2,8 @@ items:
   - name: DataMiner tutorials
     topicUid: Tutorials
     items:
+      - name: ChatOps Custom Command tutorials
+        topicUid: ChatOps_Tutorials
       - name: Dashboards and Low-Code Apps tutorials
         topicUid: Dashboards_Low-Code_Apps_Tutorials
       - name: DataMiner Integration Studio (DIS) tutorials

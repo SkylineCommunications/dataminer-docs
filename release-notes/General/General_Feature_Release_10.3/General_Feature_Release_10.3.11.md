@@ -169,6 +169,12 @@ When changes are made to one of the following NATS configuration files, from now
 
 This will allow you to trace changes made to these configuration files when issues arise.
 
+#### Storage as a Service: DataMiner Agent will now communicate with the database via port 443 only [ID_37480]
+
+<!-- MR 10.4.0 - FR 10.3.11 [CU0] -->
+
+Up to now, a DataMiner using STaaS communicated with the database via TCP/IP ports 443, 5671 and 5672. From now on, it will communicate with the database via port 443 only.
+
 ### Fixes
 
 #### Failover: Data can get lost when the backup agent is the online agent during a Cassandra Cluster migration [ID_34018]
@@ -330,3 +336,10 @@ An error could occur in SLAnalytics when the SLNet connection got lost while res
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
 In EPM environments, an error could occur when SLNet requested information from other DataMiner Agents in the DMS.  
+
+#### GQI: Problem when aggregating Elasticsearch table columns [ID_37472]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+<!-- Not added to MR 10.4.0 -->
+
+When Elasticsearch table columns were aggregated via GQI, the aggregation columns would all share the same incorrect column ID.
