@@ -91,3 +91,9 @@ For example, when you set a custom time zone in a *Clock* component, the current
 <!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
 
 In some cases, an error could occur in the IIS web server when redirecting the user to the login page.
+
+#### Low-Code Apps: Problem when accessing apps of which page and/or panel names contained special characters [ID_37474]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 [CU0] -->
+
+After an upgrade to version 10.3.10, it would no longer be possible to access existing apps of which page and/or panel names contained special characters. Also, when adding a page or a panel, it would no longer be possible to enter a page or panel name that contained special characters.

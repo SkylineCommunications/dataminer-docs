@@ -89,26 +89,32 @@ To import an existing Automation script stored on the DMA you are connected to i
 > - This new *Import DataMiner Automation Script* option will only be available if DIS is connected to a DataMiner Agent.
 > - When you add existing scripts to an Automation script solution, they are automatically converted to the correct format. For each C# Exe block, a C# project is created, and the code in that Exe block is transferred to the newly created C# project.
 
-## Saving a compiled script to a file
+## Saving a compiled script as a .dmapp package
 
-A compiled Automation script can be saved either as an XML file or as a *.dmapp* package.
+A compiled Automation script can be saved as a *.dmapp* package.
 
 To save a compiled Automation script
 
 1. Open the XML file containing the Automation script that you want to compile.
 1. Select *File \> Save Compiled Script As...*
-1. In the *Save As* window, select a folder, enter a file name, set *Save as type* to either "Automation script package (\*.dmapp)" or "Automation script file (\*.xml)", and click *Save*.
+1. In the *Save As* window, select a folder, enter a file name, and click *Save*.
 
-If you choose to save an Automation script as a package, the package will contain the Automation script as well as all required DLL files (e.g. DLL files of NuGet packages that are used in the Automation script).
+The package will contain the Automation script as well as all required DLL files (e.g. DLL files of NuGet packages that are used in the Automation script).
 
-## Saving all compiled scripts in a solution to a zip file
+> [!NOTE]
+> Prior to DIS 2.41, you can also save a compiled Automation script as an .xml file, by setting the type in the *Save As* window to \*.xml.
 
-To save a compiled version of all Automation scripts in a solution to a zip file (with all C# code in their Exe blocks), do the following:
+## Saving all compiled scripts in a solution in a .dmapp package
+
+To save a compiled version of all Automation scripts in a solution in a .dmapp package (with all C# code in their Exe blocks and required DLL files), do the following:
 
 1. Open the XML files containing the Automation scripts that you want to compile.
 1. Select *File \> Save All Compiled Scripts As...*
 1. Enter a file name and a folder.
 1. Click *Save*.
+
+> [!NOTE]
+> Prior to DIS 2.41, the scripts are saved in a .zip file instead.
 
 ## Uploading a script to a DataMiner Agent
 

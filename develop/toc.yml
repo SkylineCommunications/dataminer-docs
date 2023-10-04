@@ -5291,7 +5291,7 @@
               topicUid: Debugging_a_connector
             - name: Debugging an Automation script
               topicUid: Debugging_an_Automation_script
-        - name: DataMiner Integration Studio (DIS) tutorials
+        - name: Tutorials
           topicUid: DisTutorials_MibBrowser
           items:
           - name: Exploring the DIS MIB browser
