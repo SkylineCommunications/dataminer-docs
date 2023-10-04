@@ -136,11 +136,11 @@ When you opened a service card, in some rare cases, no breadcrumbs would be disp
 
 In a visual overview containing multiple pages, it would no longer be possible to return to the initially selected page when the shape used to switch pages had its `VdxPage` property updated using a session variable.
 
-#### DataMiner Cube: Numbers with decimals would not be displayed in context menus [ID_37420]
+#### DataMiner Cube: Parameter value with decimals would be displayed incorrectly in context menus [ID_37420]
 
 <!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
 
-Up to now, when you opened a context menu with a text box containing a parameter value with decimals, that value would incorrectly be replaced by "0.0" when the default value of the parameter also contained decimals.
+Up to now, when you opened a context menu with a text box that contained a parameter value with decimals, and the default value of the parameter also contained decimals, the decimal point in the value in the text box would be displayed incorrectly. For example, 44.2 would incorrectly be displayed as 442.0.
 
 The issue was due to Cube trying to parse the default value with the current culture in the Windows machine.
 
