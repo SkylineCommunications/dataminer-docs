@@ -5294,8 +5294,10 @@
         - name: Tutorials
           topicUid: DisTutorials_MibBrowser
           items:
-            - name: Exploring the DIS MIB Browser
-              topicUid: DisTutorials_MibBrowser
+          - name: Exploring the DIS MIB browser
+            topicUid: DisTutorials_MibBrowser
+          - name: DIS Validator and GitHub DevOps
+            topicUid: DisTutorials_DevOpsGitHubValidator
         - name: Troubleshooting
           topicUid: Troubleshooting
           items:
