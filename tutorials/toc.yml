@@ -6,37 +6,8 @@ items:
         topicUid: ChatOps_Tutorials
       - name: Dashboards and Low-Code Apps tutorials
         topicUid: Dashboards_Low-Code_Apps_Tutorials
-        items:
-          - name: Dashboards tutorials
-            topicUid: Tutorial_Dashboards
-            items:
-              - name: Displaying a custom empty component message
-                topicUid: Tutorial_Dashboards_Displaying_a_custom_empty_component_message
-          - name: Low-Code Apps tutorials
-            topicUid: Tutorial_Apps
-            items:
-              - name: Creating and publishing an app
-                topicUid: Tutorial_Apps_Creating_And_Publishing
-              - name: Editing an existing app
-                topicUid: Tutorial_Apps_Edit_Existing_App
-              - name: Managing the pages in an app
-                topicUid: Tutorial_Apps_Managing_Pages
-              - name: Using the stepper component in a low-code app
-                topicUid: TutorialStepper
-          - name: GQI tutorials
-            topicUid: Ad_hoc_Tutorials
-            items:
-              - name: Forwarding dummy data to the GQI
-                topicUid: Ad_hoc_Tutorials
       - name: DataMiner Integration Studio (DIS) tutorials
-        topicUid: DisTutorials_MibBrowser
-        items:
-          - name: Exploring the DIS MIB browser
-            topicUid: DisTutorials_MibBrowser
+        topicUid: DIS_Tutorials
       - name: User-defined APIs tutorials
-        topicUid: UD_APIs_Tutorials
-        items:
-          - name: Hello world
-            topicUid: UD_APIs_Hello_world_tutorial
-          - name: Creating an API to retrieve elements in alarm
-            topicUid: UD_APIs_Elements_in_alarm_tutorial
+        topicUid: User-defined_APIs_Tutorials
+

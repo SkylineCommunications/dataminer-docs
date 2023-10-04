@@ -42,6 +42,12 @@ Also, when you open a trend template in which offload settings have been specifi
 
 When you opened a trend graph showing trend data of a parameter of type string, and you added another, non-string parameter to that same graph, the Y axis of the newly added parameter would not be rendered correctly. The labels would be placed too close to each other, making them unreadable.
 
+#### Opening element card for DVE alarm from Alarm Console did not work correctly [ID_37297]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+When you opened the element card for an alarm on a parameter of a DVE element from the Alarm Console, this did not have the same behavior as for regular alarms. Now this action will open the trend graph of the parameter if the parameter is trended, or otherwise it will show the parameter details.
+
 #### Alarm Console: Problem when creating a linked alarm tab while connected to a system with a large number of correlated/incident alarms [ID_37332]
 
 <!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
@@ -53,3 +59,17 @@ When, in the Alarm Console, you created a linked alarm tab while connected to a 
 <!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
 
 When you opened a service card, in some rare cases, no breadcrumbs would be displayed.
+
+#### DataMiner Cube: Numbers with decimals would not be displayed in context menus [ID_37420]
+
+<!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
+
+Up to now, when you opened a context menu with a text box containing a number with decimals, that number would incorrectly be replaced by "0.0".
+
+#### DataMiner Cube - Alarm Console: Tooltip of suggestion counter would incorrectly show 'suggestion' in capitals [ID_37454]
+
+<!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
+
+In the Alarm Console footer, you can find counters that display the number of alarms in the current tab per severity. When you hover over one of those counters, a tooltip appears with the text "[nr of alarms] [severity]" (e.g. 31 Major).
+
+Up to now, when you hovered over the suggestions counter, the tooltip would incorrectly show the word "SUGGESTION" in capitals. From now on, it will be shown as "Suggestion" (with capital S).

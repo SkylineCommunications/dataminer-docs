@@ -22,6 +22,19 @@ uid: General_Feature_Release_10.3.11
 
 ## New features
 
+#### Proactive cap detection extended to absolute and relative alarm types [ID_37373]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+The proactive cap detection feature has been extended to dynamic alarm thresholds.
+
+As a result, proactive detection will now predict when a parameter will cross one of the following bounds:
+
+- A high and/or low data range value specified in the protocol.
+- A (by default) critical alarm limit of type normal specified in the alarm template.
+- A (by default) critical alarm limit of type "absolute" or "relative" specified in the alarm template if either a fixed baseline value is set or a dynamically updated baseline value is configured in the alarm template to detect a continuos degradation.
+- A data range indirectly derived from the protocol info. Currently this is limited to the values 0 and 100 for percentage data for which no historical values were encountered outside the [0,100] interval.
+
 #### Smart-serial communication now supports dynamic polling [ID_37404]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
@@ -84,7 +97,8 @@ This `objectId` attribute will now be considered optional. Hence, no run-time er
 
 #### Security enhancements [ID_37267] [ID_37291] [ID_37335] [ID_37345]
 
-<!-- RN 37267/37345: MR 10.4.0 - FR 10.3.11 -->
+<!-- RN 37267: MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.11 -->
+<!-- RN 37345: MR 10.4.0 - FR 10.3.11 -->
 <!-- RN 37291: MR 10.3.0 [CU8] - FR 10.3.11 -->
 <!-- RN 37335: 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
 
@@ -113,6 +127,14 @@ SLLogCollector packages now include information regarding the IIS configuration:
 | IIS                 | The IIS configuration                                 |
 | Network Information | Information regarding the SSL certificate on port 443 |
 | SSL Cert            | The SSL certificate for port 443                      |
+
+#### Improved alarm grouping for DVE child elements [ID_37275]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+Alarm grouping for DVE child elements has been improved. As change points are generated on DVE parent elements, previously these were not taken into account for the grouping of alarms for the DVE child elements. Now the change points of the DVE parent element will be taken into account for the DVE child elements as well.
+
+However, note that cases where a main DVE element exports the same parameter to multiple DVE child elements are not supported for this.
 
 #### SLAnalytics - Trend predictions: Enhanced trend prediction models [ID_37280]
 
@@ -147,6 +169,12 @@ When changes are made to one of the following NATS configuration files, from now
 
 This will allow you to trace changes made to these configuration files when issues arise.
 
+#### Storage as a Service: DataMiner Agent will now communicate with the database via port 443 only [ID_37480]
+
+<!-- MR 10.4.0 - FR 10.3.11 [CU0] -->
+
+Up to now, a DataMiner using STaaS communicated with the database via TCP/IP ports 443, 5671 and 5672. From now on, it will communicate with the database via port 443 only.
+
 ### Fixes
 
 #### Failover: Data can get lost when the backup agent is the online agent during a Cassandra Cluster migration [ID_34018]
@@ -178,7 +206,7 @@ From now on, the number of backups you specify will be the number of backups tha
 
 #### Problem in different native processes when interacting with message broker calls [ID_37150]
 
-<!-- MR 10.4.0 - FR 10.3.11 -->
+<!-- MR 10.3.0 [CU9] - FR 10.3.11 -->
 
 In some cases, an error could occur in different native processes when interacting with message broker calls.
 
@@ -290,14 +318,28 @@ In some cases, an error could occur in SLAnalytics when a feature (e.g. automati
 
 When a protocol was configured to use `MultipleGetBulk` in combination with `PartialSNMP` (e.g. `<OID options="partialSNMP:10;multipleGetBulk:10">`), and the device would return less table cells than the configured `MultipleGetBulk` value, certain fields would not get filled in.
 
-#### Problem with SLAnalytics when fetching protocol information while creating a multivariate pattern [ID_37366]
+#### SLAnalytics: Problem when fetching protocol information while creating a multivariate pattern [ID_37366]
 
 <!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
 
-In some cases, SLAnalytics could throw an exception when fetching protocol information while creating a multivariate pattern.
+In some cases, an error could occur in SLAnalytics when fetching protocol information while creating a multivariate pattern.
 
-#### SLAnalytics: Problem when the SLNet connection got lost while resetting data sources [ID_37402]
+#### SLAnalytics: Problem when the SLNet connection got lost while resetting the data sources [ID_37402] [ID_37459]
 
-<!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
+<!-- RN 37402: MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
+<!-- RN 37459: MR 10.3.0 [CU8] - FR 10.3.11 -->
 
-During initialization, in some cases, an error could occur in SLAnalytics when the SLNet connection got lost while resetting data sources.
+An error could occur in SLAnalytics when the SLNet connection got lost while resetting the data sources.
+
+#### EPM: Problem when SLNet requested information from other DataMiner Agents in the DMS [ID_37462]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+In EPM environments, an error could occur when SLNet requested information from other DataMiner Agents in the DMS.  
+
+#### GQI: Problem when aggregating Elasticsearch table columns [ID_37472]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+<!-- Not added to MR 10.4.0 -->
+
+When Elasticsearch table columns were aggregated via GQI, the aggregation columns would all share the same incorrect column ID.

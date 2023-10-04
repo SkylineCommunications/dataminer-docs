@@ -5291,6 +5291,13 @@
               topicUid: Debugging_a_connector
             - name: Debugging an Automation script
               topicUid: Debugging_an_Automation_script
+        - name: Tutorials
+          topicUid: DisTutorials_MibBrowser
+          items:
+          - name: Exploring the DIS MIB browser
+            topicUid: DisTutorials_MibBrowser
+          - name: DIS Validator and GitHub DevOps
+            topicUid: DisTutorials_DevOpsGitHubValidator
         - name: Troubleshooting
           topicUid: Troubleshooting
           items:
