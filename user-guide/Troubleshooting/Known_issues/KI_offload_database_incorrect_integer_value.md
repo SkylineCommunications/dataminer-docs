@@ -2,7 +2,7 @@
 uid: KI_offload_database_incorrect_integer_value
 ---
 
-# Offload Database Incorrect Integer Value
+# Offload to MySQL offload database fails
 
 ## Affected versions
 
@@ -10,7 +10,7 @@ Any version of DataMiner
 
 ## Cause
 
-The option *STRICT_TRANS_TABLES* is enabled in MySQL (**sql_mode**). This is by design.
+If a MySQL offload database is used, the default configuration is incorrect: The option *STRICT_TRANS_TABLES* is enabled (**sql_mode**).
 
 ## Fix
 
@@ -18,9 +18,9 @@ Remove *STRICT_TRANS_TABLES* from **sql_mode** in the MySQL configuration.
 
 ## Description
 
-Offload to the central database fails due to a configuration in the offload database (MySQL)
+Offloads to a MySQL offload database fail.
 
-SLDatabase[SLDataMiner].txt shows error like:
+`SLDatabase[SLDataMiner].txt` shows errors similar to the example below:
 
 ```text
 02-10 11:45:04.034|30|Start forwarding alarm records

@@ -260,8 +260,10 @@ items:
           - name: Setting a protocol to production takes a long time
             topicUid: KI_Setting_a_protocol_to_production_takes_a_long_time
       - name: Resolved issues
-        topicUid: KI_Cassandra_backups_not_working
+        topicUid: KI_offload_database_incorrect_integer_value
         items:
+          - name: Offload to MySQL offload database fails
+            topicUid: KI_offload_database_incorrect_integer_value
           - name: Cassandra backups no longer working
             topicUid: KI_Cassandra_backups_not_working
           - name: RTEs caused by problem during automatic NATS reconfiguration
