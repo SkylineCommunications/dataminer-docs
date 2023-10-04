@@ -169,11 +169,11 @@ When changes are made to one of the following NATS configuration files, from now
 
 This will allow you to trace changes made to these configuration files when issues arise.
 
-#### Storage as a Service: DataMiner Agent will now communicate with the database via WebSockets [ID_37480]
+#### Storage as a Service: DataMiner Agent will now communicate with the database via port 443 only [ID_37480]
 
 <!-- MR 10.4.0 - FR 10.3.11 [CU0] -->
 
-Up to now, a DataMiner using STaaS communicated with the database via port 5671 or 5672. From now on, it will communicate with the database via WebSockets (port 443).
+Up to now, a DataMiner using STaaS communicated with the database via TCP/IP ports 443, 5671 and 5672. From now on, it will communicate with the database via port 443 only.
 
 ### Fixes
 
