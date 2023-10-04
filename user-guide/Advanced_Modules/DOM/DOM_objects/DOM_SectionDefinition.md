@@ -78,7 +78,8 @@ There are also special types of `FieldDescriptors` that are purpose-made to stor
 > The ID of a field descriptor should be unique within a DOM module.
 >
 > Currently the uniqueness of the ID does not get enforced when adding or updating a `SectionDefinition`.
-> Using `FieldDescriptors` that have the same ID on multiple `SectionDefinitions` might result in inconsistent behavior. When a `FieldDescriptor` with the same ID is used in a name definition, the name of the DOM instance might differ depending on which `SectionDefinition` is returned by the database. During the validation of changes to `FieldDescriptor` this might result in incorrectly detecting that a `FieldDescriptor` is no longer in use, resulting in the removal of a descriptor that is actually still in use.
+>
+> Using `FieldDescriptors` that have the same ID on multiple `SectionDefinitions` might result in inconsistent behavior. When a `FieldDescriptor` with the same ID is used in a name definition, the name of the `DomInstance` might differ depending on the first section available in the `DomInstance` that has a value assigned for the `FieldDescriptor` with that ID. During the validation of changes to `FieldDescriptor` this might result in incorrectly detecting that a `FieldDescriptor` is no longer in use, resulting in the removal of a descriptor that is actually still in use.
 
 > [!NOTE]
 > From DataMiner 10.2.3/10.3.0 onwards, the following `FieldDescriptors` can have **multiple values**:
