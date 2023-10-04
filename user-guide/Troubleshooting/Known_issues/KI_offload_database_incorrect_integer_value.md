@@ -12,6 +12,8 @@ Any version of DataMiner
 
 If a MySQL offload database is used, the default configuration is incorrect: The option *STRICT_TRANS_TABLES* is enabled (**sql_mode**).
 
+When this option is enabled, an error is returned when there are missing values in data change statements such as INSERT or UPDATE. Any remaining rows from the statement are then ignored. If data offloads contain missing data (e.g. a data point that was not stored because of an error in the element), this will cause this error to be triggered.
+
 ## Fix
 
 Remove *STRICT_TRANS_TABLES* from **sql_mode** in the MySQL configuration.
