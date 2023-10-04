@@ -180,7 +180,9 @@ An error could occur in SLAnalytics when the SLNet connection got lost while res
 
 <!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
 
-Up to now, when you opened a context menu with a text box containing a number with decimals, that number would incorrectly be replaced by "0.0".
+Up to now, when you opened a context menu with a text box containing a parameter value with decimals, that value would incorrectly be replaced by "0.0" when the default value of the parameter also contained decimals.
+
+The issue was due to Cube trying to parse the default value with the current culture in the Windows machine.
 
 #### DataMiner Cube - Alarm Console: Tooltip of suggestion counter would incorrectly show 'suggestion' in capitals [ID_37454]
 
