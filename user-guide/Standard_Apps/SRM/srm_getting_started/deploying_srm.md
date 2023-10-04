@@ -58,4 +58,4 @@ uid: deploying_srm
 > [!NOTE]
 >
 > - To upgrade your SRM installation later, first check the SRM release notes of the version you want to install and make sure you are running the correct DataMiner version. The compatible DataMiner version is mentioned at the top of the release notes page for each SRM version. Once have done this, install the SRM package to upgrade.
-> - To downgrade SRM to a previous version, install the earlier package. However, keep in mind that some versions contain [breaking changes](xref:Breaking_changes).
+> - To downgrade SRM to a previous version, install the earlier package.
