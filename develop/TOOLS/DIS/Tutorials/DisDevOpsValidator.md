@@ -6,6 +6,8 @@ uid: DisTutorials_DevOpsGitHubValidator
 
 In this tutorial, you will explore collaborative software development and DevOps with a focus on DIS (DataMiner Integration Studio). You will learn how to integrate DIS into your GitHub-based development in Visual Studio. With a hands-on exercise using a dummy connector, you will get to utilize GitHub to create a fork, a clone, and a pull request with your changes, while leveraging DIS for effective contribution validation.
 
+Expected duration: 15 minutes.
+
 > [!NOTE]
 > This tutorial uses DataMiner Integration Studio version 2.44.
 
