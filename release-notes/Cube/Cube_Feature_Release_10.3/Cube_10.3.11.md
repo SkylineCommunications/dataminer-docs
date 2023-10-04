@@ -35,6 +35,12 @@ Only upon releasing the left mouse button will the unknown part of the trace be 
 > [!IMPORTANT]
 > This feature is only available if the spectrum protocol includes the *Start Frequency*, *Center Frequency* and *Stop Frequency* parameters.
 
+#### Credentials Library now supports username and password credentials [ID_37416]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+In the Credentials Library in DataMiner Cube (available via *System Center* > *System Settings* > *Credentials Library*), you can now configure a new type of credentials, i.e. username and password credentials. To do so, in the *Type* dropdown, select *Username and password credentials*, and then specify the username and password.
+
 #### Spectrum analysis: Panning vertically inside a spectrum window [ID_37461]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
@@ -57,6 +63,12 @@ Only upon releasing the left mouse button will the unknown part of the trace be 
 ## Changes
 
 ### Enhancements
+
+#### Opening element card for DVE alarm from Alarm Console did not work correctly [ID_37297]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+When you opened the element card for an alarm on a parameter of a DVE element from the Alarm Console, this did not have the same behavior as for regular alarms. Now this action will open the trend graph of the parameter if the parameter is trended, or otherwise it will show the parameter details.
 
 #### CefSharp package download enhancements [ID_37319]
 
@@ -124,11 +136,39 @@ When you opened a service card, in some rare cases, no breadcrumbs would be disp
 
 In a visual overview containing multiple pages, it would no longer be possible to return to the initially selected page when the shape used to switch pages had its `VdxPage` property updated using a session variable.
 
+#### DataMiner Cube: Numbers with decimals would not be displayed in context menus [ID_37420]
+
+<!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
+
+Up to now, when you opened a context menu with a text box containing a number with decimals, that number would incorrectly be replaced by "0.0".
+
+#### Trending: Problem when trying to edit a multivariate pattern [ID_37433]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+Due to a cache synchronization issue, problems could occur when trying to edit a multivariate pattern of which one of the elements is located on another DataMiner Agent.
+
 #### DataMiner Cube could become unresponsive during startup when the Alarm Console did not contain any alarm tabs [ID_37436]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
 When starting up, DataMiner Cube could become unresponsive during the *Connected!* step When the Alarm Console did not contain any alarm tabs.
+
+#### Automation app: Problems with scripts using user-defined APIs [ID_37442]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When you opened the Automation app, an exception could be thrown in the background when verifying if scripts used user-defined APIs.
+
+Also, when you clicked *Configure API...* for a particular Automation script, the *New token...* button would incorrectly be disabled.
+
+#### DataMiner Cube - Alarm Console: Tooltip of suggestion counter would incorrectly show 'suggestion' in capitals [ID_37454]
+
+<!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
+
+In the Alarm Console footer, you can find counters that display the number of alarms in the current tab per severity. When you hover over one of those counters, a tooltip appears with the text "[nr of alarms] [severity]" (e.g. 31 Major).
+
+Up to now, when you hovered over the suggestions counter, the tooltip would incorrectly show the word "SUGGESTION" in capitals. From now on, it will be shown as "Suggestion" (with capital S).
 
 #### Alarm Console: Light bulb would not show suggestions related to the current tab when Cube was started with only one alarm tab [ID_37458]
 
