@@ -60,32 +60,9 @@ The result will look like this:
 
 ## Create the implementation
 
-The custom operator you created while following the [*minus operator* tutorial](xref:Creating_Minus_Operator) already implements the `IGQIColumnOperator`, the `IGQIRowOperator`, and the `IGQIInputArguments` interfaces you also need for this operator.
-
-- To create a new column called "Balance" to store your results, you need the `IGQIColumnOperator` interface.
-
-  This interface features a single function, `HandleColumns`, which provides the implementation with information about the available columns and makes it possible to create, rename, and add columns.
-
-- To calculate the balance based on the *Income* and *Expenses* values and update the *Balance* column cells with the calculated result, and to obfuscate the entries in the *Name* column by replacing it with initials, you need the `IGQIRowOperator` interface.
-
-  This interface features a single function, `HandleRow`, which allows the implementation to read and update cells within a row.
-
-- To allow users to interact with the custom operator, implement the `IGQIInputArguments` interface.
-
-  The `IGQIInputArguments` interface features two functions, `GetInputArguments` and `OnArgumentsProcessed`.
-
-  - The `GetInputArguments` function allows the GQI to know the input required by the user. In this case, the user needs to choose an income column, an expenses column, and a name column.
-
-    The `GQIColumnDropdownArgument` argument allows users to select columns by displaying a dropdown list with all applicable columns. The `Types` property ensures only columns of type `Int` are available for selection for the *Income* and *Expenses* columns and only columns of type `String` are available for selection for the *Name* column.
-
-  - The `OnArgumentsProcessed` function, with the `OnArgumentsProcessedInputArgs` argument, allows the value to be processed.
-
-> [!TIP]
-> For an overview of all predefined interfaces that can be implemented by a custom operator, see [Building blocks](xref:CO_Building_blocks)
-
 Change the *GQIMetaData* attribute above the class to configure a new name for your custom operator, e.g. "Balance & obfuscate".
 
-In the end, the code of your operator should look like this:
+The code of your operator should look like this:
 
 ```csharp
 using Skyline.DataMiner.Analytics.GenericInterface;
@@ -93,18 +70,22 @@ using Skyline.DataMiner.Analytics.GenericInterface;
 [GQIMetaData(Name = "Balance & obfuscate")]
 public class MyOperator : IGQIColumnOperator, IGQIRowOperator, IGQIInputArguments
 {
+    // You need 3 column input arguments: income, expenses, and name 
     private readonly GQIColumnDropdownArgument _incomeColumnArgument;
     private readonly GQIColumnDropdownArgument _expensesColumnArgument;
     private readonly GQIColumnDropdownArgument _nameColumnArgument;
 
+    // You need 3 variables to store the given argument values
     private GQIColumn _incomeColumn;
     private GQIColumn _expensesColumn;
     private GQIColumn _nameColumn;
 
+    // Define your new balance output column
     private readonly GQIIntColumn _balanceColumn;
 
     public MyOperator()
     {
+        // Initialize your input column arguments
         _incomeColumnArgument = new GQIColumnDropdownArgument("Income")
         {
             IsRequired = true,
@@ -121,11 +102,13 @@ public class MyOperator : IGQIColumnOperator, IGQIRowOperator, IGQIInputArgument
             Types = new GQIColumnType[] { GQIColumnType.String }
         };
 
+        // Initialize your new balance output column
         _balanceColumn = new GQIIntColumn("Balance");
     }
 
     public GQIArgument[] GetInputArguments()
     {
+        // Tell the framework what your input arguments are
         return new[] {
             _incomeColumnArgument,
             _expensesColumnArgument,
@@ -135,6 +118,7 @@ public class MyOperator : IGQIColumnOperator, IGQIRowOperator, IGQIInputArgument
 
     public OnArgumentsProcessedOutputArgs OnArgumentsProcessed(OnArgumentsProcessedInputArgs args)
     {
+        // Store the given argument values
         _incomeColumn = args.GetArgumentValue(_incomeColumnArgument);
         _expensesColumn = args.GetArgumentValue(_expensesColumnArgument);
         _nameColumn = args.GetArgumentValue(_nameColumnArgument);
@@ -144,16 +128,19 @@ public class MyOperator : IGQIColumnOperator, IGQIRowOperator, IGQIInputArgument
 
     public void HandleColumns(GQIEditableHeader header)
     {
+        // Add your new balance output column
         header.AddColumns(_balanceColumn);
     }
 
     public void HandleRow(GQIEditableRow row)
     {
+        // Calculate and set balance
         var income = row.GetValue<int>(_incomeColumn);
         var expenses = row.GetValue<int>(_expensesColumn);
         var balance = income - expenses;
         row.SetValue(_balanceColumn, balance);
 
+        // Obfuscate name
         var name = row.GetValue<string>(_nameColumn);
         var obfuscatedName = ObfuscateName(name);
         row.SetValue(_nameColumn, obfuscatedName);
@@ -162,6 +149,7 @@ public class MyOperator : IGQIColumnOperator, IGQIRowOperator, IGQIInputArgument
     private string ObfuscateName(string name)
     {
         var obfuscatedName = "";
+        // Apply an obfuscation transformation
         foreach (var part in name.Split())
             obfuscatedName += $"{part[0]}.";
         return obfuscatedName;
@@ -248,13 +236,13 @@ Two issues arise:
 
 - Our custom operator currently forwards all operators, and not just filters.
 
-- We use the `Forward` method to execute a filter that uses data that is yet to be introduced by our custom operator in the subsequent step.
+- You use the `Forward` method to execute a filter that uses data that is yet to be introduced by our custom operator in the subsequent step.
 
   The optimized query now looks like this:
 
   ![filter by balance](~/user-guide/images/tutorial_2_query_5.png)
 
-  We cannot filter on the *Balance* column until calculations are performed and results are generated.
+  You cannot filter on the *Balance* column until calculations are performed and results are generated.
 
 To resolve these issues:
 
