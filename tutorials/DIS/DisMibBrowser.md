@@ -2,7 +2,7 @@
 uid: DisTutorials_MibBrowser
 ---
 
-# Tutorial: Exploring the DIS MIB Browser
+# Exploring the DIS MIB Browser
 
 In this tutorial, you familiarize yourself with the DIS MIB Browser's functionalities by loading a MIB file, generating parameters, and comparing them in a connector.
 
@@ -22,11 +22,11 @@ In this tutorial, you familiarize yourself with the DIS MIB Browser's functional
 
 - Download the tutorial files [from GitHub](https://github.com/SkylineCommunications/Tutorials-DIS-MIB_Browser)
 
-## Step 1: Opening the connector solution
+## Step 1: Open the connector solution
 
 Once you have downloaded the tutorial files, double-click the *Tutorials-DIS-MIB_Browser.sln* file to open Visual Studio with the connector solution.
 
-## Step 2: Exploring the DIS MIB Browser functionalities
+## Step 2: Explore the DIS MIB Browser functionalities
 
 1. Load a MIB file:
 
@@ -63,9 +63,9 @@ Once you have downloaded the tutorial files, double-click the *Tutorials-DIS-MIB
    > [!NOTE]
    > Because of how we define tables, the comparison will always show the first column of a table, even if it is already included in the connector.
 
-## Step 3: Submitting your protocol.xml file
+## Step 3: Submit your protocol.xml file
 
-Once you have successfully navigated the steps under [Exploring the DIS MIB Browser](#step-2-exploring-the-dis-mib-browser-functionalities), forward your updated *protocol.xml* file to [Team Data Acquisition](mailto:domain.create.data-acquisition@skyline.be).
+Once you have successfully navigated the steps under [Explore the DIS MIB Browser functionalities](#step-2-explore-the-dis-mib-browser-functionalities), forward your updated *protocol.xml* file to [Team Data Acquisition](mailto:domain.create.data-acquisition@skyline.be).
 
 Adhere to the following email format:
 
@@ -82,4 +82,5 @@ Adhere to the following email format:
 
   - Feedback (optionally): We value your feedback! Please share any thoughts or suggestions regarding the tutorial.
 
-Skyline will review your submission. Upon successful validation, you are awarded the appropriate DevOps Points as a token of your accomplishment!
+> [!NOTE]
+> Skyline will review your submission. Upon successful validation, you will be awarded the appropriate DevOps Points as a token of your accomplishment.
