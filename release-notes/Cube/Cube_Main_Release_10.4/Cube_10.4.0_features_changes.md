@@ -688,3 +688,11 @@ Due to a cache synchronization issue, problems could occur when trying to edit a
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
 When starting up, DataMiner Cube could become unresponsive during the *Connected!* step When the Alarm Console did not contain any alarm tabs.
+
+#### Automation app: Problems with scripts using user-defined APIs [ID_37442]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When you opened the Automation app, an exception could be thrown in the background when verifying if scripts used user-defined APIs.
+
+Also, when you clicked *Configure API...* for a particular Automation script, the *New token...* button would incorrectly be disabled.
