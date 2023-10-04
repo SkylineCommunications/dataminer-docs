@@ -203,7 +203,7 @@ In the following example, the severity is user-definable. The severity attribute
 
 > [!IMPORTANT]
 > 
-> - RTDisplay must be set to `true` to generate alarms.
+> - [RTDisplay](xref:Protocol.Params.Param.Display.RTDisplay) must be set to `true` to generate alarms.
 > - RTDisplay can be set to `false` if you only want to receive the trap.
 
 ## Processing traps in a QAction
