@@ -207,8 +207,10 @@ items:
     topicUid: Known_issues
     items:
       - name: Current issues
-        topicUid: KI_SLNet_Deadlock_EPM_Setups
+        topicUid: KI_elements_not_loading_in_DMS_with_multiple_ES
         items:
+          - name: Elements not loading after upgrade of DMS with multiple Elasticsearch clusters
+            topicUid: KI_elements_not_loading_in_DMS_with_multiple_ES
           - name: SLNet deadlock in EPM setups
             topicUid: KI_SLNet_Deadlock_EPM_Setups
           - name: Max Payload exceptions occur when using MessageBroker with chunking

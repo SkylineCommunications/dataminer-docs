@@ -11,7 +11,7 @@ Below, all columns available in the Alarm Console are listed. By default, not al
 
 For more information on changing the column layout, see [Changing the column layout in an alarm tab](xref:ChangingTheAlarmConsoleLayout#changing-the-column-layout-in-an-alarm-tab).
 
-- **Icon**: Alarm icon colored according to the alarm severity.
+- **Icon**: Shown by default. Alarm icon colored according to the alarm severity.
 
   - For new alarms, the icon is a single vertical line.
 
@@ -19,9 +19,9 @@ For more information on changing the column layout, see [Changing the column lay
 
   - For updated alarm records, a second, thinner vertical line is added next to the first.
 
-- **Focus**: Available from DataMiner 10.0.0/10.0.2 onwards on systems with a Cassandra database. This column displays a focus icon if an alarm is unexpected. See [Filtering alarms on alarm focus](xref:ApplyingAlarmFiltersInTheAlarmConsole#filtering-alarms-on-alarm-focus).
+- **Focus**: Available from DataMiner 10.0.0/10.0.2 onwards on systems with a Cassandra database. Shown by default. This column displays a focus icon if an alarm is unexpected. See [Filtering alarms on alarm focus](xref:ApplyingAlarmFiltersInTheAlarmConsole#filtering-alarms-on-alarm-focus).
 
-- **Element \> Element name**: The name of the element.
+- **Element \> Element name**: Shown by default. The name of the element.
 
 - **Element \> Element description**: The description of the element.
 
@@ -31,27 +31,27 @@ For more information on changing the column layout, see [Changing the column lay
 
 - **Element \> Protocol**: The name of the protocol that the DMA uses to communicate with the element.
 
-- **Parameter description**: User-friendly name of the parameter that triggered the alarm.
+- **Parameter description**: Shown by default. User-friendly name of the parameter that triggered the alarm.
 
 - **Parameter**: Name of the parameter that triggered the alarm.
 
-- **Value**: The value of the parameter that triggered the alarm.
+- **Value**: Shown by default. The value of the parameter that triggered the alarm.
 
-- **Time**: The date and time when the alarm event occurred on the device. This can also be the time when the alarm was escalated from a different alarm level.
+- **Time**: Shown by default. The date and time when the alarm event occurred on the device. This can also be the time when the alarm was escalated from a different alarm level.
 
-- **Root time**: The date and time when the first of a series of related alarms occurred on the device.
+- **Root time**: Shown by default. The date and time when the first of a series of related alarms occurred on the device.
 
-- **Severity**: The severity level of the alarm, e.g. Warning, Major, Critical, etc.
+- **Severity**: Shown by default. The severity level of the alarm, e.g. Warning, Major, Critical, etc.
 
 - **Parameter key**: The display key of the parameter that triggered the alarm, in case of a table parameter.
 
-- **Service impact**: The number of services the alarm has an impact on.
+- **Service impact**: Shown by default. The number of services the alarm has an impact on.
 
-- **Services**: The services the alarm has an impact on.
+- **Services**: Shown by default. The services the alarm has an impact on.
 
-- **RCA level**: Three values representing the distance to the most probable cause of the alarm for services, elements, and parameters respectively.
+- **RCA level**: Shown by default. Three values representing the distance to the most probable cause of the alarm for services, elements, and parameters respectively.
 
-- **Alarm type**: One of the following alarm types:
+- **Alarm type**: Shown by default. One of the following alarm types:
 
   - **New alarm**: A new alarm event. This means that before this alarm event, the parameter was in normal state.
   
@@ -82,7 +82,7 @@ For more information on changing the column layout, see [Changing the column lay
   > [!NOTE]
   > If history tracking is disabled, prior to DataMiner 10.0.5, no severity duration is displayed. This column is only available in history tabs from DataMiner 10.0.5 onwards, and only in case no filter is applied, or the filter is related to the element ID, DMA ID, element type, parameter ID, protocol ID or source ID. If the duration cannot be calculated, for example because the next alarm is not within the time span of the history tab, "N/A" will be displayed.
 
-- **Owner**: The name of the DataMiner user who has taken ownership of the alarm. If no one has taken ownership of the alarm yet, the field remains empty.
+- **Owner**: Shown by default. The name of the DataMiner user who has taken ownership of the alarm. If no one has taken ownership of the alarm yet, the field remains empty.
 
 - **Status**: The current status of the alarm:
 

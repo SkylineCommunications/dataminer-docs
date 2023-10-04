@@ -555,6 +555,19 @@ Apart from **ID only** scripts, which use the `OnDomInstanceCrud` entry point me
 
 For more detailed information, see [ExecuteScriptOnDomInstanceActionSettings](xref:ExecuteScriptOnDomInstanceActionSettings).
 
+#### Proactive cap detection extended to absolute and relative alarm types [ID_37373]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+The proactive cap detection feature has been extended to dynamic alarm thresholds.
+
+As a result, proactive detection will now predict when a parameter will cross one of the following bounds:
+
+- A high and/or low data range value specified in the protocol.
+- A (by default) critical alarm limit of type normal specified in the alarm template.
+- A (by default) critical alarm limit of type "absolute" or "relative" specified in the alarm template if either a fixed baseline value is set or a dynamically updated baseline value is configured in the alarm template to detect a continuos degradation.
+- A data range indirectly derived from the protocol info. Currently this is limited to the values 0 and 100 for percentage data for which no historical values were encountered outside the [0,100] interval.
+
 ### Protocols
 
 #### 'ExportRule' elements can now have a 'whereAttribute' attribute [ID_36622]
