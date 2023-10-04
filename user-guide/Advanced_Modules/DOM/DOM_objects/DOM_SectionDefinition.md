@@ -72,7 +72,13 @@ There are also special types of `FieldDescriptors` that are purpose-made to stor
 
 - **GroupFieldDescriptor**: Available from DataMiner 10.3.3/10.4.0 onwards. Can be used to define that a field should contain the name of a DataMiner user group.
 
-- **UserFieldDescriptor**: Available from DataMiner 10.3.3/10.4.0 onwards. Can be used to define that a field should contain the name of a DataMiner user. There is a *GroupNames* property that can be used to define which groups the user can be a part of. 
+- **UserFieldDescriptor**: Available from DataMiner 10.3.3/10.4.0 onwards. Can be used to define that a field should contain the name of a DataMiner user. There is a *GroupNames* property that can be used to define which groups the user can be a part of.
+
+> [!IMPORTANT]
+> The ID of a field descriptor should be unique within a DOM module.
+>
+> Currently the uniqueness of the ID does not get enforced when adding or updating an section definition.
+> When using a field descriptor has the same ID on multiple sections it might result in inconsistent behavior. When a field descriptor with the same ID is used in a name definition, the name of the DOM instance might defer depending on first section that has a value assigned for the field descriptor with that ID. During the validation of changes to field descriptor it might result (added in RN 37395) incorrectly detecting that a field descriptor is no longer in use. If that's the case the field descriptor will allowed to be removed.
 
 > [!NOTE]
 > From DataMiner 10.2.3/10.3.0 onwards, the following `FieldDescriptors` can have **multiple values**:
