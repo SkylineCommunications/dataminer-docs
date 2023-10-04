@@ -47,7 +47,7 @@ To configure this component:
 
    - *Auto-expand parameters*: Select this option to expand all tables and groups in the component by default.
 
-   - To customize the default way the content of components based on the selector is grouped, in the *Default grouping* drop-down list, select if grouping should be done by element, parameter, parameter group, etc.
+   - *Default grouping*: See [Customizing the default grouping](#customizing-the-default-grouping).
 
    - If a filtered list of indices is retrieved, you can specify the separator to use for this. For this you must make sure advanced dashboard settings are displayed. To do so, add the parameter *showAdvancedSettings=true* to the URL. You can then specify the separator in the *Index filter separator* box (available from DataMiner 10.0.9 onwards). For example, if only the indices with a primary key equal to "X" have to be retrieved, and you set the index filter separator to “Y”, the indices will be retrieved using the filter PK == X OR PK == \*YXY\*.
 
@@ -72,3 +72,38 @@ To configure this component:
 >    ![EPM Feed Indices](~/user-guide/images/EPM_Feed_Indices.png)
 >
 > 1. In the *Data* pane, select *Feeds* under *All available data*. Expand *Parameter feed* and drag *Indices* to the component of your choice.
+
+## Customizing the default grouping
+
+When other components are linked to the parameter feed, so that their content changes dynamically based on what is selected in the feed, the default way the content of those components is grouped can be configured in the parameter feed.
+
+To configure the default grouping:
+
+- Once a data feed has been added to the component, go to the *Component* > *Settings* tab, and set *Default grouping* setting to the option of your choice.
+
+  For example (in DataMiner 10.3.8):
+
+  - Default grouping: *All together*
+
+    ![Grouped all together](~/user-guide/images/ParameterFeed_GroupAllTogether.png)
+
+  - Default grouping: *Parameter*
+
+    ![Grouped by parameter](~/user-guide/images/ParameterFeed_GroupParameter.png)
+
+  - Default grouping: *Table index*
+
+    ![Grouped by index](~/user-guide/images/ParameterFeed_GroupIndex.png)
+
+  - Default grouping: *Element*
+
+    ![Grouped by element](~/user-guide/images/ParameterFeed_GroupElement.png)
+
+  - Default grouping: *No grouping*
+
+    ![No grouping](~/user-guide/images/ParameterFeed_NoGrouping.png)
+
+> [!NOTE]
+>
+> - This default grouping is supported for the following visualizations: [State](xref:DashboardState), [Progress bar](xref:DashboardProgressBar), [Gauge](xref:DashboardGauge), [Ring](xref:DashboardRing), and [Line & area chart](xref:LineAndAreaChart).
+> - It is possible to override this default grouping with the *Group by* setting of the other components.

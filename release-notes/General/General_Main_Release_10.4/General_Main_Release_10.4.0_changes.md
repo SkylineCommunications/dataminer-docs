@@ -124,13 +124,13 @@ The zoom range of a map can now be set by means of a slider.
 
 Because of a number of enhancements, overall performance has increased when fetching relation information for the automatic incident tracking feature.
 
-#### Security enhancements [ID_35434] [ID_35997] [ID_36319] [ID_36624] [ID_36928] [ID_37267] [ID_37345]
+#### Security enhancements [ID_35434] [ID_35997] [ID_36319] [ID_36624] [ID_36928] [ID_37345]
 
 <!-- 35434: MR 10.4.0 - FR 10.3.4 -->
 <!-- 35997: MR 10.4.0 - FR 10.3.5 -->
 <!-- 36319/36928: MR 10.4.0 - FR 10.3.9 -->
 <!-- 36624: MR 10.4.0 - FR 10.3.8 -->
-<!-- 37267/37345: MR 10.4.0 - FR 10.3.11 -->
+<!-- 37345: MR 10.4.0 - FR 10.3.11 -->
 
 A number of security enhancements have been made.
 
@@ -163,12 +163,6 @@ In the *SLNetClientTest* tool, the following new DOM-related features have been 
 
 > [!CAUTION]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
-
-#### SLAnalytics will now send regular notifications instead of client notifications [ID_35591]
-
-<!-- MR 10.4.0 - FR 10.3.4 -->
-
-Up to now, when SLAnalytics sent a notification, it would generate an event of type *client notification* with parameter ID 64574. From now on, it will instead generate an event of type *notification* with parameter ID 64570.
 
 #### SLAnalytics - Proactive cap detection: Enhanced accuracy [ID_35695]
 
@@ -495,6 +489,23 @@ SLLogCollector packages now include information regarding the IIS configuration:
 | Network Information | Information regarding the SSL certificate on port 443 |
 | SSL Cert            | The SSL certificate for port 443                      |
 
+#### Improved alarm grouping for DVE child elements [ID_37275]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+Alarm grouping for DVE child elements has been improved. As change points are generated on DVE parent elements, previously these were not taken into account for the grouping of alarms for the DVE child elements. Now the change points of the DVE parent element will be taken into account for the DVE child elements as well.
+
+However, note that cases where a main DVE element exports the same parameter to multiple DVE child elements are not supported for this.
+
+#### SLNetClientTest: New 'Debug SAML' checkbox [ID_37370]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When, in the SLNetClientTest tool, you select the new *Debug SAML* checkbox before connecting to a DataMiner Agent that used external authentication via SAML, two additional pop-up windows will now appear, displaying the SAML requests and SAML responses respectively.
+
+> [!CAUTION]
+> Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
 ### Fixes
 
 #### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID_34981]
@@ -617,12 +628,6 @@ In some rare cases, an error could be thrown when an element was renamed.
 
 The deprecated DMS_GET_INFO call would return unexpected data when it returned data of elements that contained remotely hosted DVE child elements.
 
-#### Problem when restarting DataMiner [ID_37112]
-
-<!-- MR 10.4.0 - FR 10.3.10 -->
-
-When DataMiner was restarted, in some rare cases, it would not start up again.
-
 #### SLAnalytics: Problem when creating or editing a multivariate pattern [ID_37212]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
@@ -653,8 +658,14 @@ When settings inside the `<LDAP>` element of the *DataMiner.xml* file were updat
 
 Up to now, the MessageHandler method in SLHelperTypes.SLHelper would incorrectly try to serialize exceptions that could not be serialized, causing other exceptions to be thrown.
 
-#### SLAnalytics: Problem when stopping a feature [ID_37329]
+#### SLAnalytics: Problem when trying to edit a multivariate pattern [ID_37270]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
-In some cases, an error could occur in SLAnalytics when a feature (e.g. automatic incident tracking) was stopped.
+Due to a cache synchronization issue, problems could occur when trying to edit a multivariate pattern of which one of the elements is located on another DataMiner Agent.
+
+#### EPM: Problem when SLNet requested information from other DataMiner Agents in the DMS [ID_37462]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+In EPM environments, an error could occur when SLNet requested information from other DataMiner Agents in the DMS.  

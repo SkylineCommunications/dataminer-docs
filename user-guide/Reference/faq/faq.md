@@ -10,7 +10,7 @@ uid: faq
 
 - [Frequently asked questions about DataMiner client applications](xref:DataMiner_client_applications)
 
-- [Frequently asked questions about Failover](xref:Frequently_asked_questions_about_DMA_Failover)
+- [Frequently asked questions about Failover](xref:Failover_FAQ_what_if_DMA_stopped)
 
 - [Frequently asked questions about user group settings](xref:Frequently_asked_questions_about_user_group_settings)
 

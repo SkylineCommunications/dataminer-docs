@@ -38,7 +38,7 @@ This file contains default connection settings to be used by DataMiner client ap
 
   Possible values:
 
-  - *GRPCConnection*: Supported from DataMiner 10.3.0/10.3.2 onwards. DataMiner will communicate using HTTPS via the API Gateway, using gRPC. By default, this requires the use of the standard HTTPS port 443. <!-- RN 34983 -->
+  - *GRPCConnection*: Supported from DataMiner 10.3.0/10.3.2 onwards. DataMiner will communicate using HTTPS via the API Gateway, using gRPC. By default, this requires the use of the standard HTTPS port 443. <!-- RN 34983 --> When this type is used, the only two other options you can configure are *serverport* and *endpoint* (see [Examples](#examples)).
 
   - *RemotingConnection*: .NET Remoting. Obsolete starting from 10.4.0/10.3.6. While DataMiner will currently not yet automatically switch to *GRPCConnection*, this is planned to be implemented with a DataMiner upgrade soon. If you do not want to use *GRPCConnection*, use *LegacyRemotingConnection* to avoid getting automatically switched. However, note that we strongly recommend using *GRPCConnection*.<!-- RN 36196 -->
   
@@ -95,6 +95,10 @@ This file contains default connection settings to be used by DataMiner client ap
 
   - events
 
+- **endpoint=**
+
+  Override for the endpoint. See [Examples](#examples).
+
 - **resolve=**
 
   Whether or not hostnames have to be resolved to IP addresses before the connection is set up.
@@ -118,6 +122,15 @@ This file contains default connection settings to be used by DataMiner client ap
   ```txt
   * type=GRPCConnection
   ```
+
+- To use gRPC with port 443 and the APIGateway endpoint:
+
+  ```txt
+  * type=GRPCConnection;serverport=443;endpoint=/APIGateway
+  ```
+
+  > [!NOTE]
+  > This setup is not recommended and should only be used for debugging or for test setups. This will only work if the APIGateway settings (`C:\Program Files\Skyline Communications\DataMiner APIGateway\appsettings.json`), the certificate bindings, and the firewall are adjusted accordingly.
 
 - To use eventing by default:
 

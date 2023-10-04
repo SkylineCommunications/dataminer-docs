@@ -30,7 +30,7 @@ Each DataMiner System requires its own system data storage. This data storage se
 In addition to the system databases, you can also configure an [offload database](xref:Offload_database), for example to produce reports without interfering with the live DataMiner System. [Additional databases](xref:Configuring_an_additional_database) can also be configured, for example for DataMiner Inventory & Asset Management.
 
 > [!TIP]
-> See also: [Securing the DataMiner databases](xref:Database_security)
+> See also: [Securing the DataMiner databases](xref:Cassandra_authentication)
 
 > [!NOTE]
 > When the main database is offline, file offloads are used to store write/delete operations. You can configure a limit for the file size of these offloads in the file [DBConfiguration.xml](xref:DBConfiguration_xml).
