@@ -1,5 +1,5 @@
 ---
-uid: DISTutorials
+uid: DIS_Tutorials
 ---
 
 # DataMiner Integration Studio Tutorials
@@ -10,5 +10,7 @@ With this extension, you can import, create, and deploy connectors to establish 
 
 ## Tutorials
 
-- [Exploring the DIS MIB Browser](xref:DisTutorials_MibBrowser)
-- [DIS Validator and basic GitHub DevOps](xref:DisTutorials_DevOpsGitHubValidator)
+| Name | Description |
+|--|--|
+| [Exploring the DIS MIB Browser](xref:DisTutorials_MibBrowser) | Familiarize yourself with the DIS MIB Browser functionalities by loading a MIB file, generating parameters, and comparing them with a connector. |
+| [DIS Validator and basic GitHub DevOps](xref:DisTutorials_DevOpsGitHubValidator) | Learn how to work with the DIS Validator and basic GitHub DevOps. |
