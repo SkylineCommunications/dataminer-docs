@@ -4,30 +4,30 @@ uid: ChatOps_Tutorials_Custom_Command_Hello_World
 
 # Hello World
 
-This tutorial shows you how to create your first custom command for the Teams bot. You will create a simple command that, upon execution, will return "Hello world!".
+This tutorial shows you how to create your first custom command for the DataMiner Teams bot. You will create a simple command that, upon execution, will return "Hello world!".
 
 > [!TIP]
 > See also [Adding custom commands for the Teams bot to a DMS](xref:DataMiner_Teams_bot#adding-custom-commands-for-the-teams-bot-to-a-dms).
 
 ## Prerequisites
 
-- [A cloud connected DataMiner System](xref:Connecting_your_DataMiner_System_to_the_cloud)
+- [A DataMiner System connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud)
 - [The latest version of the DataMiner Cloud Pack](xref:Managing_cloud-connected_nodes#upgrading-nodes-to-the-latest-dxm-versions)
-- [DataMiner Teams bot](xref:DataMiner_Teams_bot)
+- [The DataMiner Teams bot](xref:DataMiner_Teams_bot)
 - [Visual Studio with DataMiner Integration Studio](xref:Installing_and_configuring_the_software)
 
 ## Overview
 
-- [Step 1: Create an Automation Script solution](#create-an-automation-script-solution)
-- [Step 2: Create the Automation Script](#create-the-automation-script)
-- [Step 3: Publish the Automation Script](#publish-the-automation-script)
-- [Step 4: Run the Custom Command](#run-the-custom-command)
+- [Step 1: Create an Automation script solution](#create-an-automation-script-solution)
+- [Step 2: Create the Automation script](#create-the-automation-script)
+- [Step 3: Publish the Automation script](#publish-the-automation-script)
+- [Step 4: Run the custom command](#run-the-custom-command)
 
-## Create an Automation Script solution
+## Create an Automation script solution
 
 1. In Visual Studio, select *Create a new project*.
 
-1. Search for *DataMiner Automation Script Solution (Skyline Communications)* in the template search box and click *Next*.
+1. In the template search box, search for *DataMiner Automation Script Solution (Skyline Communications)* and click *Next*.
 
    ![DataMiner Automation Script Solution in Visual Studio](~/user-guide/images/chatops_01_001.png)
 
@@ -43,13 +43,15 @@ This tutorial shows you how to create your first custom command for the Teams bo
 
 ## Create the Automation script
 
-1. For the bot to find your script, you need to place it in the *bot* folder. Locate the *HelloWorld.xml* file in the Solution Explorer and open it.
+1. For the bot to find your script, you need to place it in the *bot* folder:
 
-   ![HelloWorld.xml file in Solution Explorer](~/user-guide/images/chatops_02_001.png)
+   1. Locate the *HelloWorld.xml* file in the Solution Explorer and open it.
 
-1. In the *Folder* tag, specify *bot* and save the file.
+      ![HelloWorld.xml file in Solution Explorer](~/user-guide/images/chatops_02_001.png)
 
-   ![HelloWorld.xml file in editor](~/user-guide/images/chatops_02_002.png)
+   1. In the *Folder* tag, specify *bot* and save the file.
+
+      ![HelloWorld.xml file in editor](~/user-guide/images/chatops_02_002.png)
 
 1. Locate the *HelloWorld_1.cs* file in the *HelloWorld_1* C# project and open it.
 
@@ -83,9 +85,9 @@ This tutorial shows you how to create your first custom command for the Teams bo
    }
    ```
 
-## Publish the Automation Script
+## Publish the Automation script
 
-When the Custom Command script is complete, it needs to be published to the DataMiner System. You can do so using the built-in publish feature of DIS. Make sure that DIS can connect to the DataMiner System you want to upload your script to. You will need to [edit the DIS settings](xref:DIS_settings#dma) so the DMA is selectable.
+When the custom command script is complete, you will need to publish it to the DataMiner System. You can do so using the built-in publish feature of DIS. Make sure that DIS can connect to the DataMiner System you want to upload your script to. You will need to [edit the DIS settings](xref:DIS_settings#dma) so the DMA is selectable.
 
 1. Locate the *HelloWorld.xml* file in the Solution Explorer and open it.
 
@@ -95,10 +97,10 @@ When the Custom Command script is complete, it needs to be published to the Data
 
    ![Publish to DMA](~/user-guide/images/chatops_02_004.png)
 
-## Run The Custom Command
+## Run the custom command
 
 1. [Start a conversation with the Teams bot](xref:DataMiner_Teams_bot#starting-a-conversation-with-the-teams-bot).
 
-1. Run the *Hello World* Custom Command.
+1. Run the *Hello World* custom command.
 
-   ![Run the Hello World Custom Command](~/user-guide/images/chatops_04_001.png)
+   ![Run the Hello World custom command](~/user-guide/images/chatops_04_001.png)

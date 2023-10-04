@@ -4,13 +4,7 @@ uid: ChatOps_Tutorials
 
 # ChatOps tutorials
 
-With DataMiner ChatOps, you can integrate your DataMiner System with Microsoft Teams.
-
-> [!TIP]
-> See also:
->
-> - [DataMiner ChatOps](xref:ChatOps)
-> - [dataminer.services](xref:AboutCloudPlatform)
+With [DataMiner ChatOps](xref:ChatOps), you can integrate your DataMiner System with Microsoft Teams.
 
 ## Tutorials
 
