@@ -252,6 +252,12 @@ When, in the *Monitoring* app, you selected an element or a service, and navigat
 
 When you had created and published an app with at least one component, it would no longer be possible to edit it after refreshing one of its pages.
 
+#### Dashboards app - Query builder: Problem with 'Row by row' option [ID_37463]
+
+<!-- MR TBD - FR 10.3.11 -->
+
+Due to a compatibility issue, a `Cannot read properties of undefined (reading IsHidden)` error could be thrown when, in the query builder, you joined queries on a DataMiner Agent that did not (yet) supported the *Row by row* option.
+
 #### Low-Code Apps: Problem when accessing apps of which page and/or panel names contained special characters [ID_37474]
 
 <!-- MR 10.3.0 [CU8] - FR 10.3.11 [CU0] -->
