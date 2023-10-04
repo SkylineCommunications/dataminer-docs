@@ -85,7 +85,8 @@
     "fileMetadataFiles": [],
     "template": [
       "default",
-      "templates/skyfx"
+	  "modern",
+      "templates/skyline"
     ],
     "markdownEngineName": "markdig",
     "noLangKeyword": false,
