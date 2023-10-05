@@ -78,6 +78,12 @@ From now on, when the query migration fails, the original query will be left unt
 
 When the order of the table columns was changed by the query, the table headers would incorrectly not get updated.
 
+#### Web apps - Interactive Automation scripts: Dropdown component would not show all available options [ID_37510]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+In some cases, a Dropdown component in an interactive Automation script would not resize itself correctly, causing some options to remain invisible.
+
 #### Dashboards app & Low-Code Apps - Table component: Order of the cells in exported rows in CSV file would not match the order of the table headers [ID_37517]
 
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
