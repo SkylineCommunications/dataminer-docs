@@ -107,4 +107,4 @@ Some connector versions may contain a bug that causes a lot of parameter sets to
 
 This issue is known to occur with the following connector versions:
 
-- [Microsoft Platform](https://catalog.dataminer.services/result/driver/251): 1.1.2.x, 1.2.0.x
+- [Microsoft Platform](https://catalog.dataminer.services/result/driver/251): 1.1.2.x, 1.2.0.x, 1.2.1.1
