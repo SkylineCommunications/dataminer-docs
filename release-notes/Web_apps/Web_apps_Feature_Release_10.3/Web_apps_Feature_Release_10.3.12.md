@@ -26,4 +26,8 @@ uid: Web_apps_Feature_Release_10.3.12
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Dashboards app: URL option 'showAdvancedSettings' was case sensitive [ID_37493]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+Up to now, the *showAdvancedSettings* URL option would incorrectly be case sensitive. This option is now case insensitive.
