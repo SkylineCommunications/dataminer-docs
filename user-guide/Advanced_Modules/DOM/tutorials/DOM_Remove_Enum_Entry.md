@@ -6,14 +6,18 @@ uid: DOM_Remove_Enum_Entry
 
 In this tutorial, you will learn to soft-delete and permanently delete an enum entry from a GenericEnumFieldDescriptor.
 
+Estimated duration: 10 minutes.
+
 > [!NOTE]
-> This tutorial uses DataMiner version 10.3.x.
+> This tutorial uses DataMiner version 10.3.10
 
 ## Prerequisites
 
 - DataMiner version 10.3.10 or higher
 
 - A DataMiner System with an [indexing database](xref:Indexing_Database)
+
+- Basic knowledge of DataMiner Object Models (DOM)
 
 ## Overview
 
