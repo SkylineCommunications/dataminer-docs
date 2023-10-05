@@ -37,11 +37,15 @@ The detailed JSON output of the BPA may contain the following possible messages,
 
 - Did not receive a HeartBeatMessage from the failover buddy. (agent is part of a failover setup but something went wrong when sending the HeartBeatMessage to the failover buddy)
 
+- Failover buddy has not a failover configuration.
+
+- Failover configuration on buddy is invalid.
+
+- Failover buddy detected syncing problems.
+
 - Could not determine which type of connection is used with the failover buddy. (agent is part of a failover but cannot determine which connection is used between the failover buddies)
 
 - Connection port [Y] of failover buddy is not open. (agent is part of a failover setup but the connection port of the buddy looks closed. Y represents the port)
-
-- Failover buddy detected syncing problems.
 
 - The gRPC ports are closed on these agents: X (where X is the summary of the regarding agents and the port).
 
