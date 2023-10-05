@@ -20,7 +20,7 @@ You will use a data source that contains people with their age, income, and expe
 | ... | ... | ... | ... |
 
 > [!NOTE]
-> These are only the first three rows of the actual data source that contains billions more entries.
+> These are only the first three rows of the actual data source that contains billions of entries.
 
 The custom operator you create will have two functions:
 
