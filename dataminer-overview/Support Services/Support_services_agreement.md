@@ -39,7 +39,7 @@ Skyline offers two levels of Support Services: Continuity and Evolve. An overvie
 
 ## Supported products
 
-Skyline provides Support Services for its Software only, which consists of its core software, connectors, and cloud components. Skyline does not provide Support Services for third-party components, except for maintenance on database content for supported databases. An overview of supported databases can be found on [docs.dataminer.services](xref:Software_support_life_cycles#third-party-software-support-life-cycle).
+Skyline provides Support Services for its Software only, which consists of its core software, connectors, and cloud components. Skyline does not provide Support Services for third-party components, except for maintenance on database content for supported databases. An overview of supported system data storage architectures can be found on [docs.dataminer.services](xref:Supported_system_data_storage_architectures).
 
 ## Supported versions
 

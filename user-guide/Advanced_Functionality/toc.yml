@@ -303,8 +303,6 @@ items:
               - name: MySQL database
                 topicUid: MySQL_database
                 items:
-                  - name: Activating one file per table for an existing MySQL database
-                    topicUid: Activating_one_file_per_table_for_an_existing_MySQL_database
                   - name: Deleting element data from a MySQL database
                     topicUid: Deleting_element_data_from_a_MySQL_database
                   - name: Moving MySQL data to another location
@@ -314,6 +312,17 @@ items:
           - name: Configuring an indexing database
             topicUid: Indexing_Database
             items:
+              - name: OpenSearch database
+                topicUid: OpenSearch_database
+                items:
+                  - name: Installing an OpenSearch database
+                    topicUid: Installing_OpenSearch_database
+                  - name: Configuring multiple OpenSearch clusters
+                    topicUid: Configuring_multiple_OpenSearch_clusters
+                  - name: Configuring OpenSearch backups
+                    topicUid: Configuring_OpenSearch_Backups
+              - name: Amazon OpenSearch Service
+                topicUid: Amazon_OpenSearch_Service
               - name: Elasticsearch
                 topicUid: Elasticsearch_database
                 items:
@@ -358,17 +367,6 @@ items:
                         topicUid: Configuring_Elasticsearch_backups_Windows
                   - name: Removing an Elasticsearch cluster node
                     topicUid: Configuring_Elasticsearch_node_remove
-              - name: OpenSearch database
-                topicUid: OpenSearch_database
-                items:
-                  - name: Installing an OpenSearch database
-                    topicUid: Installing_OpenSearch_database
-                  - name: Configuring multiple OpenSearch clusters
-                    topicUid: Configuring_multiple_OpenSearch_clusters
-                  - name: Configuring OpenSearch backups
-                    topicUid: Configuring_OpenSearch_Backups
-              - name: Amazon Opensearch Service
-                topicUid: Amazon_OpenSearch_Service
           - name: Common database settings
             topicUid: Specifying_TTL_overrides
             items:
@@ -478,7 +476,7 @@ items:
       - name: Advanced security configuration
         topicUid: Cassandra_authentication
         items:
-          - name: Securing the DataMiner Databases
+          - name: Securing self-hosted DataMiner storage
             topicUid: Cassandra_authentication
             items:
               - name: Securing the Cassandra general database

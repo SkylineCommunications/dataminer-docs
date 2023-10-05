@@ -21,13 +21,13 @@ Please take the following information into account:
   > [!NOTE]
   > To take a backup of the Cassandra database only, from DataMiner 10.2.0/10.1.8 onwards, you can use the [Standalone Cassandra Backup tool](xref:Standalone_Cassandra_Backup_Tool).
 
+- For systems using **OpenSearch**, see [Configuring OpenSearch backups](xref:Configuring_OpenSearch_Backups).
+
 - For systems using **Elasticsearch**:
 
   Taking a backup of a system using Elasticsearch is not possible if no backup path has been specified. See [Configuring Elasticsearch backups](xref:Configuring_Elasticsearch_backups).
 
   If the backup settings for DataMiner Indexing (i.e. Elasticsearch) have been changed, all Elasticsearch nodes need to be restarted, which may take some time. During this time, no backups can be taken.
-
-- For systems using **OpenSearch**, see [Configuring OpenSearch backups](xref:Configuring_OpenSearch_Backups).
 
 > [!NOTE]
 > The binaries and settings of NAS and NATS are not included in a DataMiner backup. On startup, DataMiner automatically detects whether the NATS folders exist and creates them if necessary. However, this means that if for some reason a problem occurs with your NATS setup, you cannot fix this by means of a backup and restore.

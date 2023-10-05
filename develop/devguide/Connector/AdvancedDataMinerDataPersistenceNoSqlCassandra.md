@@ -4,7 +4,10 @@ uid: AdvancedDataMinerDataPersistenceNoSqlCassandra
 
 # DataMiner general database - NoSQL Database - Cassandra
 
-DataMiner uses Cassandra as its NoSQL ("Not only SQL") database (supported since DataMiner version 9.0.0). The Apache Cassandra database is a distributed NoSQL database, designed to provide high availability, scalability and performance, allowing it to handle large amounts of data.
+In setups with self-hosted storage, DataMiner uses Cassandra as its NoSQL ("Not only SQL") database. The Apache Cassandra database is a distributed NoSQL database, designed to provide high availability, scalability and performance, allowing it to handle large amounts of data.
+
+> [!NOTE]
+> The recommended setup for DataMiner storage is [Storage as a Service](xref:STaaS).
 
 ## Cassandra architecture
 

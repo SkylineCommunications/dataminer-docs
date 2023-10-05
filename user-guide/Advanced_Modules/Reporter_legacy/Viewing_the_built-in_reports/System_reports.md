@@ -37,4 +37,4 @@ To go directly to the report types above, use the following URLs, replacing \[My
 | Bookings / Reservations | http://\[MyDataMiner\]/Reports/SRM.asp                 |
 
 > [!NOTE]
-> On systems using a Cassandra database, the number of alarms that can be displayed in a report is limited to 100,000.
+> On systems using a Cassandra database or equivalent, the number of alarms that can be displayed in a report is limited to 100,000.

@@ -7,7 +7,9 @@ uid: Cassandra_Java_updating
 By default, DataMiner installs Cassandra with its own Java 8 installation. This is typically located in *C:\Program Files\Cassandra\Java\bin*. DataMiner deploys Cassandra with **Java 1.8.0_91**. Cassandra depends on **Java 8**. We **do not recommend** deploying Java 11.
 
 > [!TIP]
-> A PowerShell script to update the Java version is available at [Cassandra Hardening](https://github.com/SkylineCommunications/cassandra-hardening).
+>
+> - A PowerShell script to update the Java version is available at [Cassandra Hardening](https://github.com/SkylineCommunications/cassandra-hardening).
+> - If you do not want the hassle of maintaining the DataMiner storage databases yourself, we recommend using [DataMiner Storage as a Service](xref:STaaS) instead.
 
 To update the Java version:
 

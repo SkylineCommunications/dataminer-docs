@@ -5,6 +5,8 @@ uid: Configuring_multiple_Elasticsearch_clusters
 # Configuring multiple Elasticsearch clusters
 
 > [!NOTE]
+>
+> - Instead of hosting the DataMiner storage yourself, we highly recommend switching to [DataMiner Storage as a Service](xref:STaaS). With this cloud-native storage platform, you will no longer need to set up and manage your own storage databases.
 > This procedure can be followed both on Linux and Windows setups. However, we highly recommend configuring this setup on Linux.
 
 From DataMiner 10.2.0/10.1.3 onwards, you can have data offloaded to multiple Elasticsearch clusters, i.e. one main cluster and several replicated clusters. Data is always read from the main cluster, but data updates are sent to all clusters.
