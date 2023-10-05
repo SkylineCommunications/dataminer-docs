@@ -22,7 +22,11 @@ uid: Web_apps_Feature_Release_10.3.12
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Security enhancements [ID_37488]
+
+<!-- RN 37488: MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+A number of security enhancements have been made.
 
 ### Fixes
 
@@ -49,3 +53,11 @@ When GQI threw an exception when a session was opened, both an empty result mess
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
 
 Up to now, the *showAdvancedSettings* URL option would incorrectly be case sensitive. This option is now case insensitive.
+
+#### Low-Code Apps: No longer possible to edit a low-code app of which the query migration had failed [ID_37501]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+Up to now, it would no longer be possible to edit a low-code app of which the query migration had failed.
+
+From now on, when the query migration fails, the original query will be left untouched, allowing you to edit the app and fix any errors.
