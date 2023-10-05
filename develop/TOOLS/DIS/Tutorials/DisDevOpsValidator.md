@@ -8,6 +8,9 @@ In this tutorial, you will explore collaborative software development and DevOps
 
 Expected duration: 15 minutes.
 
+> [!TIP]
+> See also: [Kata #1: DIS validator](https://community.dataminer.services/courses/kata-1) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+
 > [!NOTE]
 > This tutorial uses DataMiner Integration Studio version 2.44.
 
