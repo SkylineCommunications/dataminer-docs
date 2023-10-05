@@ -8,6 +8,12 @@ items:
         topicUid: Dashboards_Low-Code_Apps_Tutorials
       - name: DataMiner Integration Studio (DIS) tutorials
         topicUid: DIS_Tutorials
+      - name: DataMiner Object Manager (DOM) tutorials
+        topicUid: DOM_tutorials
       - name: User-defined APIs tutorials
         topicUid: User-defined_APIs_Tutorials
-
+        items:
+          - name: Hello world
+            topicUid: UD_APIs_Hello_world_tutorial
+          - name: Creating an API to retrieve elements in alarm
+            topicUid: UD_APIs_Elements_in_alarm_tutorial
