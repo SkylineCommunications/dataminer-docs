@@ -61,3 +61,15 @@ Up to now, the *showAdvancedSettings* URL option would incorrectly be case sensi
 Up to now, it would no longer be possible to edit a low-code app of which the query migration had failed.
 
 From now on, when the query migration fails, the original query will be left untouched, allowing you to edit the app and fix any errors.
+
+#### Dashboards app & Low-Code Apps - Table component: Table headers would not get updated when the column order was changed by the query [ID_37504]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When the order of the table columns was changed by the query, the table headers would incorrectly not get updated.
+
+#### Dashboards app & Low-Code Apps - Table component: Order of the cells in exported rows in CSV file would not match the order of the table headers [ID_37517]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When, in a table component, you changed the order of the columns, and then exported table data to a CSV file, the order of the cells in the exported rows would incorrectly not match the order of the table headers at the top of the CSV file.
