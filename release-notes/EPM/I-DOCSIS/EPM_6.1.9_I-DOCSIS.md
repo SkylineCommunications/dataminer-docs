@@ -2,7 +2,7 @@
 uid: EPM_6.1.9_I-DOCSIS
 ---
 
-# EPM 6.1.9 I-DOCSIS - Preview
+# EPM 6.1.9 I-DOCSIS
 
 > [!IMPORTANT]
 > We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
@@ -33,6 +33,10 @@ On all levels of the topology, a new DOCSIS 1.X counter parameter has been added
 It is now possible to create CCAP/CM pairs based on a CSV file.
 
 The existing script *EPM_I_DOCSIS_AddNewCcapCmPair* has been expanded with the possibility to specify the path to a CSV file and then create the CCAP/CM pairs based on that file. The CSV file must have the following structure: *ElementName, Be_DMA, Collector_DMA, Protocol , IpAddress, CommunityString, Network, Market, Hub, SystemUser, SystemPass*.
+
+#### Topology chains can now be hidden [ID_37516]
+
+The Skyline EPM Platform connector has been updated so that you can now hide entire topology chains or specific fields such as DOCSIS Market, CM, CCAP Core, etc. To access this feature, navigate to the Chain and Fields selection page of the EPM front-end element. There you can toggle the visibility of fields reflected in the topology chain in the sidebar on the left.
 
 ## Changes
 

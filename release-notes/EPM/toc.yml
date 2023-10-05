@@ -34,7 +34,7 @@ items:
   - name: I-DOCSIS
     topicUid: EPM_6.1.9_I-DOCSIS
     items:
-      - name: EPM 6.1.9 I-DOCSIS - Preview
+      - name: EPM 6.1.9 I-DOCSIS
         topicUid: EPM_6.1.9_I-DOCSIS
       - name: EPM 6.1.8 I-DOCSIS
         topicUid: EPM_6.1.8_I-DOCSIS
