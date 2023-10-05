@@ -6,6 +6,8 @@ uid: ChatOps_Tutorials_Custom_Command_Hello_World
 
 This tutorial shows you how to create your first custom command for the DataMiner Teams bot. You will create a simple command that, upon execution, will return "Hello world!".
 
+Estimated duration: 10 minutes.
+
 > [!TIP]
 > See also [Adding custom commands for the Teams bot to a DMS](xref:DataMiner_Teams_bot#adding-custom-commands-for-the-teams-bot-to-a-dms).
 

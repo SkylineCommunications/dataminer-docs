@@ -56,8 +56,10 @@ items:
           - name: General Main Release 10.3.0 CU9 - Preview
             topicUid: General_Main_Release_10.3.0_CU9
       - name: Feature Release
-        topicUid: General_Feature_Release_10.3.11
+        topicUid: General_Feature_Release_10.3.12
         items:
+          - name: General Feature Release 10.3.12 - Preview
+            topicUid: General_Feature_Release_10.3.12
           - name: General Feature Release 10.3.11 - Preview
             topicUid: General_Feature_Release_10.3.11
           - name: General Feature Release 10.3.10

@@ -539,6 +539,13 @@ items:
                     topicUid: CO_Building_blocks
                   - name: Life cycle of a custom operator
                     topicUid: CO_Life_cycle
+                  - name: Tutorials
+                    topicUid: Creating_Minus_Operator
+                    items:
+                      - name: Creating a minus operator
+                        topicUid: Creating_Minus_Operator
+                      - name: Optimizing your custom operator
+                        topicUid: Custom_Operator_Tutorial
               - name: API reference
                 topicUid: GQIArgument
                 items:
