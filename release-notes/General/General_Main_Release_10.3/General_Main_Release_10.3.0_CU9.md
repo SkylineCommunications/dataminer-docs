@@ -37,3 +37,9 @@ Because of a number of enhancements, overall performance has increased when offl
 <!-- MR 10.3.0 [CU9] - FR 10.3.11 -->
 
 In some cases, an error could occur in different native processes when interacting with message broker calls.
+
+#### Problem when requesting alarm monitoring information for an exported parameter [ID_37424]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+In some cases, incorrect data would be returned when requesting alarm monitoring information for a parameter exported as a standalone parameter to a DVE child element, especially when dynamic thresholds had been configured in the alarm template.
