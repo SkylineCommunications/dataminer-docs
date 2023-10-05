@@ -26,6 +26,18 @@ uid: Web_apps_Feature_Release_10.3.12
 
 ### Fixes
 
+#### Dashboards app: Problem with 'Clear all' button [ID_37232]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+Clicking the *Clear all* button would incorrectly not clear the selection in certain components. Also, the parameters would not be removed from the dashboard's URL.
+
+#### Dashboards app: All table rows would incorrectly be exported when a filter was applied [ID_37473]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+Up to now, when you applied a filter to a table and then exported the data to a CSV file, all rows would incorrectly be exported. From now on, only the visible rows (i.e. the rows that match the filter) will be exported.
+
 #### Dashboards app: URL option 'showAdvancedSettings' was case sensitive [ID_37493]
 
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
