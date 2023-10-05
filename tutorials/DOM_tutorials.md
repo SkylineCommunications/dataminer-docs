@@ -6,4 +6,4 @@ uid: DOM_tutorials
 
 | Name | Description |
 |--|--|
-|[Removing an enum entry from a GenericEnumFieldDescriptor](xref:DOM_Remove_Enum_Entry) | The tutorials in this section will show you how to set up and use the DOM functionality. |
+|[Removing an enum entry from a GenericEnumFieldDescriptor](xref:DOM_Remove_Enum_Entry) | Soft-delete and permanently delete an enum entry from a *GenericEnumFieldDescriptor*. |

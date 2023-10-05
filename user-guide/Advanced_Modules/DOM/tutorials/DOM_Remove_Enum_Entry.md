@@ -2,32 +2,44 @@
 uid: DOM_Remove_Enum_Entry
 ---
 
-# How to remove an enum entry from a GenericEnumFieldDescriptor
+# Removing an enum entry from a GenericEnumFieldDescriptor
 
-This tutorial shows you how to soft-delete and permanently delete an enum entry from a GenericEnumFieldDescriptor.
+In this tutorial, you will learn to soft-delete and permanently delete an enum entry from a GenericEnumFieldDescriptor.
 
-> [!Note]
-> - To use DOM, your Dataminer system needs to use an [indexing database](xref:Indexing_Database).
-> - To soft-delete enum entries, your Dataminer system needs to be using DataMiner 10.3.10 or higher.
+> [!NOTE]
+> This tutorial uses DataMiner version 10.3.x.
 
-The soft-delete option on an enum entry hides that entry to users. That way users are unable to create more DOM instances using that entry. Later on it can be completely removed.
-If the entry is used by a DOM instance, that value needs to be removed from those instances before removing it from the descriptor. If that enum entry is not used, it can immediately be removed (see [Step 4: Remove the enum entry from the DOM definition](#step-4-remove-the-enum-entry-from-the-dom-definition)).
+## Prerequisites
+
+- DataMiner version 10.3.10 or higher
+
+- A DataMiner System with an [indexing database](xref:Indexing_Database)
 
 ## Overview
 
-- [Step 1: Setup DOM](#step-1-setup-dom)
+The soft-delete option on an enum entry hides that entry from users, preventing the creation of more DOM instances using that entry. Later, it can be completely removed.
+
+If the entry is used by a DOM instance, that value needs to be removed from those instances before removing it from the descriptor. If that enum entry is not used, it can be immediately removed (see [Step 4: Remove the enum entry from the DOM definition](#step-4-remove-the-enum-entry-from-the-dom-definition)).
+
+- [Step 1: DOM setup](#step-1-dom-setup)
+
 - [Step 2: Soft-delete the enum entry](#step-2-soft-delete-the-enum-entry)
+
 - [Step 3: Remove the value from existing instances](#step-3-remove-the-value-from-existing-instances)
+
 - [Step 4: Remove the enum entry from the DOM definition](#step-4-remove-the-enum-entry-from-the-dom-definition)
 
-## Step 1: Setup DOM
+## Step 1: DOM setup
 
-This setup is purely for the tutorial, you can use your own setup and apply the other steps to your setup (see [Step 2: Soft-delete the enum entry](#step-2-soft-delete-the-enum-entry)).
+The provided setup is intended for this tutorial. You can also use your own setup and move on to [step 2](#step-2-soft-delete-the-enum-entry), following all subsequent steps accordingly.
 
-The given code does the following:
-1. Creates a DOM module.
-1. Creates a DOM definition that links to a SectionDefinition containing a GenericEnumFieldDescriptor.
-1. Creates a DOM instance with a value for the enum descriptor.
+The provided code below accomplishes the following:
+
+- A DOM module is created.
+
+- A DOM definition is created that links to a *SectionDefinition* containing a *GenericEnumFieldDescriptor*.
+
+- A DOM instance is created with a value for the enum descriptor.
 
 ```C#
 using System;
@@ -141,7 +153,7 @@ namespace Tutorial
                 generalSection.AddOrReplaceFieldValue(fieldValue);
             }
 
-            // Create of the actual DomInstance
+            // Create the actual DomInstance
             var domInstance = new DomInstance()
             {
                 DomDefinitionId = personDomDefinition.ID,
@@ -153,22 +165,34 @@ namespace Tutorial
 }
 ```
 
-To visualize the setup, create a low-code app. On that low-code app:
+To visualize the setup, create a low-code app.
+
+> [!TIP]
+> See [Creating low-code applications](xref:Creating_custom_apps).
+
+In that low-code app:
+
 1. Drag the DOM definition onto the canvas: *"Object Manager Definitions" > "people_app" > "PersonDomDefinition"*.
-1. Choose the "Form" visualization.
+
+1. Apply the [form visualization](xref:DashboardForm).
+
 1. Create a GQI query that shows all instances: *"Queries" > "Get object manager instances" > "people_app" > "PersonDomDefinition"*.
-1. Drag the GQI query onto the canvas and choose "Table" visualization.
 
-   ![Step1](~/user-guide/images/DOM_Remove_Enum_Entry_Step1_1.png)
+1. Drag the GQI query onto the canvas and apply the [table visualization](xref:DashboardTable).
 
-   ![Step1_2](~/user-guide/images/DOM_Remove_Enum_Entry_Step1_2.png)
+![Step1](~/user-guide/images/DOM_Remove_Enum_Entry_Step1_1.png)
+
+![Step1_2](~/user-guide/images/DOM_Remove_Enum_Entry_Step1_2.png)
 
 ## Step 2: Soft-delete the enum entry
 
-The given code does the following:
-1. Gets the enum entry from the SectionDefinition.
-1. Sets the property "IsSoftDeleted" of the enum entry to true.
-1. Updates the SectionDefinition.
+The provided code below accomplishes the following:
+
+- The enum entry (in this example: "Director") is retrieved from the *SectionDefinition*.
+
+- The *IsSoftDeleted* property of the enum entry is set to *true*.
+
+- The *SectionDefinition* is updated.
 
 ```C#
 using System;
@@ -181,7 +205,7 @@ using Skyline.DataMiner.Net.Sections;
 namespace Tutorial
 {
     ///<summary>
-    /// This script will set the "IsSoftDeleted" property of the enum entry "Director" of the SectionDefinition.
+    /// This script will set the "IsSoftDeleted" property of the enum entry "Director" of the SectionDefinition to "true".
     ///</summary>
     public class Script
     {
@@ -216,16 +240,19 @@ namespace Tutorial
 }
 ```
 
-After soft-deletion, you should not see that enum entry in the dropdown of the form on your low-code app anymore.
+After you have soft-deleted the enum entry, you should no longer see it listed in the *JobTitle* dropdown list in your low-code app.
 
-   ![Step2](~/user-guide/images/DOM_Remove_Enum_Entry_Step2.png)
+![Step2](~/user-guide/images/DOM_Remove_Enum_Entry_Step2.png)
 
 ## Step 3: Remove the value from existing instances
 
-The given code does the following:
-1. Gets all instances that use the enum entry.
-1. Removes the enum value.
-1. Updates the instances.
+The provided code below accomplishes the following:
+
+1. All instances that use the enum entry are retrieved.
+
+1. The enum value is removed.
+
+1. The instances are updated.
 
 ```C#
 using System;
@@ -289,16 +316,19 @@ namespace Tutorial
 }
 ```
 
-After the removal, you should see that the enum value is removed from the instance.
+After the enum value has been removed, it should no longer be visible in your low-code app.
 
-   ![Step3](~/user-guide/images/DOM_Remove_Enum_Entry_Step3.png)
+![Step3](~/user-guide/images/DOM_Remove_Enum_Entry_Step3.png)
 
 ## Step 4: Remove the enum entry from the DOM definition
 
-The given code does the following:
-1. Gets the enum from the DOM definition.
-1. Removes the enum entry by copying the original enum, but leaving out the one to remove.
-1. Updates the DOM definition.
+The provided code below accomplishes the following:
+
+1. The enum is retrieved from the DOM definition.
+
+1. The enum entry is removed by copying the original enum, but leaving out the one to remove.
+
+1. The DOM definition is updated.
 
 ```C#
 using System;
@@ -349,6 +379,6 @@ namespace Tutorial
 }
 ```
 
-If you look into the DOM definition (this can be done using the [SLNet Client Test Tool](xref:Opening_the_SLNetClientTest_tool)), the enum entry is now completely removed.
+Inspect the DOM definition with the [SLNetClientTest tool](xref:Opening_the_SLNetClientTest_tool). The enum entry is now completely removed.
 
-   ![Step4](~/user-guide/images/DOM_Remove_Enum_Entry_Step4.png)
+![Step4](~/user-guide/images/DOM_Remove_Enum_Entry_Step4.png)
