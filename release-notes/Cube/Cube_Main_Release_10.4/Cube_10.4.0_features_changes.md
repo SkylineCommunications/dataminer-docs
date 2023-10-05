@@ -696,3 +696,12 @@ When starting up, DataMiner Cube could become unresponsive during the *Connected
 When you opened the Automation app, an exception could be thrown in the background when verifying if scripts used user-defined APIs.
 
 Also, when you clicked *Configure API...* for a particular Automation script, the *New token...* button would incorrectly be disabled.
+
+#### Trending: Trend graph would disappear when panning [ID_37453]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+When you panned a trend graph, in some cases, the graph would suddenly disappear.
+
+> [!NOTE]
+> From now on, trending errors will be logged in the trending log file as well as the main Cube log file.

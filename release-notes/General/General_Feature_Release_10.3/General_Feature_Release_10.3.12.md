@@ -56,6 +56,6 @@ In some cases, incorrect data would be returned when requesting alarm monitoring
 
 #### SLAnalytics: Problem when simultaneously stopping the 'Alarm Focus' and 'Automatic Incident Tracking' features [ID_37496]
 
-<!-- MR 10.4.0 - FR 10.3.12 -->
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
 
 Up to now, when you stopped both *Alarm Focus* and *Automatic Incident Tracking* at the same time (e.g. via *System Center > System settings > analytics config* in DataMiner Cube), only *Alarm Focus* would actually be stopped. *Automatic Incident Tracking* would still be active, but in an incorrect state.

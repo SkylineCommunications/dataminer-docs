@@ -22,8 +22,23 @@ uid: Cube_Feature_Release_10.3.12
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Interactive Automation scripts: FileSelector now allows to keep the files that were already uploaded after the UI was shown [ID_37260]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+Unlike other UI block types, *FileSelector* does not allow setting an [InitialValue](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIBlockDefinition_InitialValue). However, from now on, during an interactive Automation script session, it is possible to keep the files that were already uploaded after the UI was shown.
+
+When an interactive Automation script is executed **in Cube**, the UI block needs to keep the same [DestVar](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIBlockDefinition_DestVar) within the session. If there is no file selector block with the same [DestVar](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIBlockDefinition_DestVar) when the UI is shown again, the information about the uploaded files is lost.
+
+See also [DataMiner web apps Feature Release 10.3.12](xref:Web_apps_Feature_Release_10.3.12#interactive-automation-scripts-fileselector-now-allows-to-keep-the-files-that-were-already-uploaded-after-the-ui-was-shown-id_37260)
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Trending: Trend graph would disappear when panning [ID_37453]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+When you panned a trend graph, in some cases, the graph would suddenly disappear.
+
+> [!NOTE]
+> From now on, trending errors will be logged in the trending log file as well as the main Cube log file.
