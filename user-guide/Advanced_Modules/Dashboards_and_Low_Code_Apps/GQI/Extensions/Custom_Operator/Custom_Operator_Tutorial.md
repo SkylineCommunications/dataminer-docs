@@ -10,6 +10,8 @@ In this tutorial, you will learn how to:
 
 - avoid common pitfalls when optimizing custom operators.
 
+Estimated duration: 20 minutes.
+
 You will use a data source that contains people with their age, income, and expenses.
 
 | Name (string) | Age (int) | Income (int) | Expenses (int) |

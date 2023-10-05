@@ -20,6 +20,8 @@ The result will look like this:
 | Project 2        | Customer B     | €2000          | €250.0        | €1750.0         |
 | Project 3        | Customer A     | €1500          | €500.0        | €1000.0         |
 
+Estimated duration: 20 minutes.
+
 > [!TIP]
 > See also: [Configuring a custom operator for a query](xref:GQI_Custom_Operator)
 
