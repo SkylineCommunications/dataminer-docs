@@ -36,7 +36,7 @@ The existing script *EPM_I_DOCSIS_AddNewCcapCmPair* has been expanded with the p
 
 #### Topology chains can now be hidden [ID_37516]
 
-The Skyline EPM Platform connector has been updated so that you can now hide entire topology chains or specific fields such as DOCSIS Market, CM, CCAP Core, etc. To access this feature, navigate to the Chain and Fields selection page of the EPM front-end element. There you can toggle the visibility of fields reflected in the topology chain in the sidebar on the left.
+The Skyline EPM Platform connector has been updated so that administrators can now hide entire topology chains or specific fields such as DOCSIS Market, CM, CCAP Core, etc. To access this feature, as a DataMiner administrator, navigate to the Chain and Fields selection page of the EPM front-end element. There you can toggle the visibility of fields reflected in the topology chain in the sidebar on the left.
 
 ## Changes
 
