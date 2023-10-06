@@ -21,7 +21,7 @@ The **Health package** is an insurance policy for your system that includes feat
 
 ## Storage as a Service (STaaS)
 
-Platform services prioritize convenience. Imagine not having to manage your Cassandra and Elasticsearch or OpenSearch database clusters anymore. With the scaling and complexity taken care of, you and your team can focus on the core business of your company. Our Storage as a Service (STaaS) solution streamlines your core operations by utilizing Skyline’s hosting service for your storage cluster, resulting in a significant reduction of on-premises resources, configuration, and maintenance.
+Platform services prioritize convenience. The hassle of managing your own Cassandra and Elasticsearch database clusters is a thing of the past. With the scaling and complexity taken care of, you and your team can focus on the core business of your company. Our Storage as a Service (STaaS) solution streamlines your core operations by utilizing Skyline’s hosting service for your storage cluster, resulting in a significant reduction of on-premises resources, configuration, and maintenance.
 
 This is a powerful option where we manage the storage for you, so you can save on infrastructure and IT maintenance costs.
 
@@ -36,7 +36,7 @@ This is a powerful option where we manage the storage for you, so you can save o
 
 In other words, you gain access to the full power of a DataMiner System, free from any concerns about hardware, infrastructure, or maintenance. It is a hassle-free experience that allows you to focus solely on the task at hand.
 
-And DataMiner as a Service comes with our Storage as a Service (STaaS) solution. This means your DataMiner System will immediately benefit from being connected to a scalable and user-friendly cloud-native storage platform.
+And DataMiner as a Service comes with our Storage as a Service (STaaS) solution, which means your DataMiner System will immediately benefit from being connected to a scalable and user-friendly cloud-native storage platform.
 
 In a nutshell: **You operate the platform, we build and maintain the platform for you.**
 

@@ -4,18 +4,16 @@ uid: Supported_system_data_storage_architectures
 
 # Supported system data storage architectures
 
-Usually, DataMiner uses a Cassandra and Elasticsearch database for system data storage. Other data storage solutions can be added optionally, for example to offload data from the DataMiner System and to make it available for third-party systems.
+The most straightforward of data storage architectures is [Storage as a Service (STaaS)](xref:STaaS). With this setup, you do not need to maintain the databases yourself, and all the scaling and complexity is taken care of for you. If you instead choose self-hosted storage, the most usual setup involves a Cassandra main database and OpenSearch indexing database for system data storage.
 
-For the system data storage, different setups are supported, as described below. In these setups, a "machine" or "compute node" can be a virtual machine or a physical server. Every machine must meet the minimum requirements detailed in [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements).
-
-In the images illustrating the setups, the dark-blue line indicates a cluster of nodes, the gray line indicates a compute node, and the light-blue line indicates a regional boundary (high latency).
+Other data storage solutions can be added optionally, for example to offload data from the DataMiner System and to make it available for third-party systems.
 
 |Architecture | Status |
 |-------------|--------|
 | [Storage as a Service (STaaS)](xref:STaaS) | Recommended |
 | [Dedicated clustered storage](xref:Dedicated_clustered_storage) | Supported |
 | [Separate Cassandra setup with Elasticsearch](xref:Separate_Cassandra_setup_with_Elasticsearch) | Still supported, but not recommended |
-| [Separate Cassandra setup without Elasticsearch](xref:Separate_Cassandra_setup_without_Elasticsearch) | Still supported, but not recommended |
+| [Separate Cassandra setup without indexing](xref:Separate_Cassandra_setup_without_Elasticsearch) | Still supported, but not recommended |
 | [Legacy setup with MySQL or MSSQL database](xref:Legacy_setup_with_MySQL_or_MSSQL_database) | Legacy |
 
 > [!NOTE]

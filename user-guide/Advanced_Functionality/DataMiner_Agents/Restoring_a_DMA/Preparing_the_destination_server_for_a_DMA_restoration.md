@@ -60,23 +60,7 @@ To prepare the destination server, there are several possibilities:
 
      - Skyline DataMiner\\Webpages\\Dashboards\\db
 
-  1. For a DMA using a MySQL database:
-
-     1. Open the MySQL command prompt, and enter the following SQL statement:
-
-        ```txt
-        drop schema SLDMADB;
-        ```
-
-     1. Stop the MySQL service.
-
-     1. Delete all content from the SLDMADB directory. Depending on the MySQL version, this will be:
-
-        - *C:\\MySQL\\Data\\SLDMADB*, or
-
-        - *C:\\Program Files\\MySQL\\MySQL Server 5.0\\data\\SLDMADB*
-
-     Alternatively, for a DMA using a Cassandra database:
+  1. For a DMA using a Cassandra database:
 
      1. Open DevCenter, by going to *C:\\Program Files\\Cassandra\\DevCenter\\Run DevCenter.lnk*.
 
@@ -93,6 +77,22 @@ To prepare the destination server, there are several possibilities:
      1. Open Windows Task Manager and stop the Cassandra service.
 
      1. Delete the content of the folder *D:\\ProgramData\\Cassandra\\SLDMADB*.
+
+     Alternatively, for a DMA using a legacy MySQL database:
+
+     1. Open the MySQL command prompt, and enter the following SQL statement:
+
+        ```txt
+        drop schema SLDMADB;
+        ```
+
+     1. Stop the MySQL service.
+
+     1. Delete all content from the SLDMADB directory. Depending on the MySQL version, this will be:
+
+        - *C:\\MySQL\\Data\\SLDMADB*, or
+
+        - *C:\\Program Files\\MySQL\\MySQL Server 5.0\\data\\SLDMADB*
 
   1. Delete the Windows user accounts on the server that have a corresponding DataMiner account.
 

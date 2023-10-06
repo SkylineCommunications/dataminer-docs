@@ -26,3 +26,6 @@ If the database server on the **offline** DMA stops working:
 
 > [!TIP]
 > See also: [Viewing Failover information](xref:Viewing_the_Failover_setup)
+
+> [!NOTE]
+> We recommend switching to [Storage as a Service](xref:STaaS) instead.

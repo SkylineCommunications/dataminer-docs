@@ -167,8 +167,8 @@ The **Remote Administration** rule must be enabled when the DataMiner server is 
 > [!TIP]
 > See also: [Configuring the IP network ports](xref:Configuring_the_IP_network_ports)
 
-## Secure the databases
+## Secure self-hosted DataMiner storage
 
 If you do not make use of [Storage as a Service (STaaS)](xref:STaaS) but manage DataMiner storage yourself, you need to make sure that the databases used for DataMiner storage are fully secure.
 
-In recent DataMiner Systems, Cassandra and Elasticsearch/OpenSearch are used for this. It is important that you spend some time making sure their configuration is as secure as possible. For detailed information, refer to [Securing the DataMiner databases](xref:Cassandra_authentication).
+In recent DataMiner Systems, Cassandra and OpenSearch/Elasticsearch are used for this. It is important that you spend some time making sure their configuration is as secure as possible. For detailed information, refer to [Securing self-hosted DataMiner storage](xref:Cassandra_authentication).
