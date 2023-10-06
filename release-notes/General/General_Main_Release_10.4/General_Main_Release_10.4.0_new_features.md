@@ -547,6 +547,12 @@ Soft-deleting a *GenericEnumEntry* object will have the following consequences:
 - It will not be possible to update the value of an instance to the soft-deleted *GenericEnumEntry*.
 - It is allowed to have instances of which the value is set to the soft-deleted *GenericEnumEntry*.
 
+<!-- #### Configuration of behavioral anomaly alarms [ID_36857] [37434] -->
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+<!-- The DataMiner software now supports   -->
+
 #### DataMiner Object Models: 'Full CRUD meta' scripts [ID_37004]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
