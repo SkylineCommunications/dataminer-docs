@@ -6,7 +6,7 @@ uid: Overview_Platform_services
 
 *Less overhead and higher availability, thanks to “as-a-service” options.*
 
-![dataminer.services.categories](~/dataminer-overview/images/DMS_Platform_services.png)
+![dataminer.services.categories](~/dataminer-overview/images/DMS_Platform_services.jpg)
 
 ## Health
 
