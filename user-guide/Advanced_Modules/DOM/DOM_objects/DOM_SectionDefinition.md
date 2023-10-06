@@ -75,7 +75,7 @@ There are also special types of `FieldDescriptors` that are purpose-made to stor
 - **UserFieldDescriptor**: Available from DataMiner 10.3.3/10.4.0 onwards. Can be used to define that a field should contain the name of a DataMiner user. There is a *GroupNames* property that can be used to define which groups the user can be a part of.
 
 > [!IMPORTANT]
-> The ID of a field descriptor should be unique within a DOM module.
+> The ID of a `FieldDescriptor` should be unique within a DOM module.
 >
 > Currently the uniqueness of the ID does not get enforced when adding or updating a `SectionDefinition`.
 >
