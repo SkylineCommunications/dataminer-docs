@@ -704,4 +704,4 @@ Also, when you clicked *Configure API...* for a particular Automation script, th
 When you panned a trend graph, in some cases, the graph would suddenly disappear.
 
 > [!NOTE]
-> From now on, trending errors will be logged in the trending log file as well as the main Cube log file.
+> From now on, trending errors will also be logged in the main Cube logging (*System Center > Logging*).

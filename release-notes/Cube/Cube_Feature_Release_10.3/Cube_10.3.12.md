@@ -41,4 +41,12 @@ See also [DataMiner web apps Feature Release 10.3.12](xref:Web_apps_Feature_Rele
 When you panned a trend graph, in some cases, the graph would suddenly disappear.
 
 > [!NOTE]
-> From now on, trending errors will be logged in the trending log file as well as the main Cube log file.
+> From now on, trending errors will also be logged in the main Cube logging (*System Center > Logging*).
+
+#### DataMiner Cube - Alarm Console: Display issues when a correlation alarm was based on another correlation alarm [ID_37497]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+
+When a correlation rule was based on another correlation rule, display issues could occur in the Alarm Console.
+
+When the main correlation alarm got cleared, the base alarm would no longer be shown in the alarm tab, and when the base alarm got updated, it would be shown twice: once as the source of the other correlation alarm and once as a regular alarm.
