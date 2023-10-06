@@ -24,9 +24,9 @@ In the CISCO CBR-8 CCAP Platform connector, a new *OFDM/OFDMA* page has been add
 
 When you navigate to the node segment or service group entities in the topology visual overview, and you click the *# CM* KPI, a link is now displayed to a dashboard that shows all cable modems associated with the entity.
 
-#### New DOCSIS 1.X counter parameter on all levels [ID_37204]
+#### New DOCSIS 1.x counter parameter on all levels [ID_37204]
 
-On all levels of the topology, a new DOCSIS 1.X counter parameter has been added, similar to the existing DOCSIS 2.X, DOCSIS 3.0, and DOCSIS 3.1 counter parameters.
+On all levels of the topology, a new DOCSIS 1.x counter parameter has been added, similar to the existing DOCSIS 3.0 and DOCSIS 3.1 counter parameters.
 
 #### Creating new CCAP/CM pairs from a CSV file [ID_37262]
 
