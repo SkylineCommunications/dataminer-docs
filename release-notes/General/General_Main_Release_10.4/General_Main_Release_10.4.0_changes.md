@@ -512,6 +512,12 @@ When, in the SLNetClientTest tool, you select the new *Debug SAML* checkbox befo
 > [!CAUTION]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
+#### SLAnalytics - Trend predictions: Flatline periods will no longer be included in the prediction model training data [ID_37432]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+When a parameter has anomalous flatline periods in its trend data history that are breaking the normal trend data patterns, from now on, those flatline periods will no longer be included into the training data of the prediction model. As a result, a more accurate prediction can be expected on this kind of behavior.
+
 #### Storage as a Service: DataMiner Agent will now communicate with the database via port 443 only [ID_37480]
 
 <!-- MR 10.4.0 - FR 10.3.11 [CU0] -->
