@@ -6,9 +6,24 @@ export default {
       title: 'GitHub'
     },
     {
-      icon: 'twitter',
+      icon: 'linkedin',
+      href: 'https://be.linkedin.com/company/skyline-communications',
+      title: 'LinkedIn'
+    },
+    {
+      icon: 'twitter-x',
       href: 'https://twitter.com/skydataminer',
-      title: 'Twitter'
-    }
+      title: 'X'
+    },
+    {
+      icon: 'facebook',
+      href: 'https://www.facebook.com/SkylineCommunications',
+      title: 'Facebook'
+    },
+    {
+      icon: 'instagram',
+      href: 'https://www.instagram.com/skyline.dataminer/',
+      title: 'Instagram'
+    }    
   ]
 }
