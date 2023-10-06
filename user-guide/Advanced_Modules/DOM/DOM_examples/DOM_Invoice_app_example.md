@@ -141,7 +141,7 @@ generalInfoSectionDefinition = domHelper.SectionDefinitions.Create(generalInfoSe
 Since this is your first call with the `DomHelper`, it will trigger the initialization of the `DomManager` object. Once the DOM manager is initialized and running, the create request will be handled.
 
 > [!NOTE]
-> At this point, the DOM manager is only running and initialized on the connected DMA. The other DMAs in the DMS do not have it running. It will only be initialized on another DMA when a request is handled for this module ID by that DMA. All this is done transparently and on the fly. It does not matter where your messages are handled as everything is kept in sync by the Elasticsearch database.
+> At this point, the DOM manager is only running and initialized on the connected DMA. The other DMAs in the DMS do not have it running. It will only be initialized on another DMA when a request is handled for this module ID by that DMA. All this is done transparently and on the fly. It does not matter where your messages are handled as everything is kept in sync by the indexing database.
 
 Next, you need to create the second `SectionDefinition`, which will contain the `FieldDescriptors` for an ordered product.
 

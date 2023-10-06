@@ -4,7 +4,7 @@ uid: Cassandra_updating
 
 # Updating Cassandra
 
-It's common practice with Cassandra to do rolling upgrades. If your settings allows it, an upgrade can be done without downtime.
+It is common practice with Cassandra to do rolling upgrades. If your settings allows it, an upgrade can be done without downtime.
 
 Doing a rolling upgrade basically means:
 
@@ -14,6 +14,9 @@ Doing a rolling upgrade basically means:
 
 > [!IMPORTANT]
 > When going from one major range to another (e.g. from 3.x to 4.x), it is best practice to first upgrade to the latest version in the current range before going to the new range.
+
+> [!TIP]
+> If you do not want the hassle of maintaining the DataMiner storage databases yourself, we recommend using [DataMiner Storage as a Service](xref:STaaS) instead.
 
 ## Checking the Cassandra version
 

@@ -218,7 +218,7 @@ uid: glossary_a_to_l
 | Term | Description |
 |------|-------------|
 | G.fast | DSL (Digital Subscriber Line) protocol standard for local loops shorter than 500 m, with performance targets between 150 Mbit/s and 1 Gbit/s. |
-| General database | Dedicated database for a DataMiner Agent, which contains among others alarm and trend information. By default, a Cassandra database is used. A MySQL database is also supported. MSSQL is only supported prior to DataMiner 10.3.0.. |
+| General database | Dedicated database for a DataMiner Agent, which contains among others alarm and trend information. If you do not use [Storage as a Service](xref:STaaS) but host the DataMiner storage databases yourself, typically this will be a Cassandra cluster. |
 | Global constant | Fixed variable used in spectrum scripts.<br>See [Using global constants](xref:Working_with_spectrum_scripts#using-global-constants). |
 | GOTS | Government Off-The-Shelf. Term used for off-the shelf products that are created and owned by a government agency. |
 | GPIB | General Purpose Interface Bus. IEEE-488 interface used to connect sensors and programmable instruments to a computer or to other instruments. |
@@ -256,7 +256,7 @@ uid: glossary_a_to_l
 | IDP | Infrastructure Discovery Provisioning. DataMiner Standard Application that allows you to automatically discover, provision and manage the devices in your network.<br>See [DataMiner IDP app](xref:SolIDP). |
 | IETF | Internet Engineering Task Force. Organization developing and promoting open internet standards. |
 | Import package | Package based on an export from DataMiner, which can contain, elements, services, views, properties, protocols, Automation scripts, etc.<br>See [Exporting and importing packages on a DMA](xref:Exporting_and_importing_packages_on_a_DMA). |
-| Indexing Engine | Dedicated indexing database, by default Elasticsearch, used to index information from the DataMiner System to allow rapid information retrieval. Required for certain DataMiner features, e.g. for DataMiner Job Manager.<br>See [Configuring an indexing database](xref:Indexing_Database). |
+| Indexing Engine | Dedicated indexing database used to index information from the DataMiner System to allow rapid information retrieval. Required for certain DataMiner features, e.g. GQI. See [About databases](xref:Databases_about) |
 | Inform message | An SNMP notification sent by an SNMP agent to an SNMP manager informing the latter that an alarm event occurred on a particular element. Unlike for an SNMP trap, for an inform message the SNMP manager needs to acknowledge receipt.<br>See [SNMP managers](xref:About_SNMP_managers). |
 | Information event | A message in the Alarm Console intended to inform DataMiner users without raising an alarm.<br>See [Information event](xref:Alarm_types#information-events). |
 | Information template | A template that is used to override specific parameter data defined in a protocol without making any changes to the protocol itself.<br>See [Information templates](xref:Information_templates). |

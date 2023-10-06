@@ -4,6 +4,8 @@ uid: Maintain_Cassandra_Cluster
 
 # Maintaining a Cassandra cluster
 
+If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STaaS) setup but instead choose self-hosted storage, you are responsible for maintaining and monitoring the database used for DataMiner system storage. With a Cassandra cluster setup, this involves monitoring the database, keeping the nodes repaired, and keeping the software up to date.
+
 ## Monitoring your database
 
 To ensure that your Cassandra database is running fine, we highly recommend that you create an element using the [Apache Cassandra Cluster Monitor](https://catalog.dataminer.services/result/driver/7500) connector.

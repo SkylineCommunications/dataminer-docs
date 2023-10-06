@@ -12,8 +12,11 @@ Please note the following:
 
 - As far as memory is concerned, we recommend the same minimum as indicated in the above requirements.
 
-- For the disk, the disk throughput is of vital importance. As there will be a very active database on the disk, you need to ensure there is not only sufficient size on the disk, but also sufficient IO. The following minimum requirements apply at all times for each server:
+- For the disk, the disk throughput is of vital importance if you are hosting DataMiner databases on it. As these database are very active, you need to ensure there is not only sufficient size on the disk, but also sufficient IO. The following minimum requirements apply at all times for each server:
 
-    - 4 KiB blocks should be 10 MB/s or higher.
-    - 512 KiB blocks should be 300 MB/s or higher.
-    - The average latency should be lower than 10 ms.
+  - 4 KiB blocks should be 10 MB/s or higher.
+  - 512 KiB blocks should be 300 MB/s or higher.
+  - The average latency should be lower than 10 ms.
+
+  > [!NOTE]
+  > We recommend using [DataMiner Storage as a Service](xref:STaaS) instead of hosting the DataMiner storage yourself.

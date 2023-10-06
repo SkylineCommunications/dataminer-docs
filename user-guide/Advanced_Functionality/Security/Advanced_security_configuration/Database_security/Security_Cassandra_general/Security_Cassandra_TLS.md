@@ -4,6 +4,9 @@ uid: Security_Cassandra_TLS
 
 # Encryption in Cassandra
 
+> [!TIP]
+> If you do not want the hassle of maintaining the DataMiner storage databases yourself, we recommend using [DataMiner Storage as a Service](xref:STaaS) instead.
+
 ## Client-Server Encryption
 
 By default, Cassandra communicates with clients over an insecure channel, which means attackers can set up Man-In-The-Middle (MITM) attacks to steal data or credentials that are sent over the wire. To mitigate this, encryption should be enabled. Cassandra provides this option through its **client_encryption_options**.

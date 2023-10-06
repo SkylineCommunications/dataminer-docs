@@ -4,7 +4,10 @@ uid: Cassandra_authorization
 
 # Cassandra authorization
 
-## Enabling the *CassandraAuthorizer*
+> [!TIP]
+> If you do not want the hassle of maintaining the DataMiner storage databases yourself, we recommend using [DataMiner Storage as a Service](xref:STaaS) instead.
+
+## Enabling the CassandraAuthorizer
 
 Implementing a Zero Trust architecture requires applying the principle of least privilege across your infrastructure. This is especially true for your databases. By default, DataMiner installs Cassandra with authorizer **AllowAllAuthorizer**, effectively granting all permissions to all roles. However, Cassandra also supports the **CassandraAuthorizer**, which allows more granular permission management.
 
