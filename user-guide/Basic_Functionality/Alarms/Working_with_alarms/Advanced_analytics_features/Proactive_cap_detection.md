@@ -21,6 +21,8 @@ In addition, proactive cap detection is currently only supported for parameters 
 
 - A (by default) critical alarm limit of type normal (i.e. not rate or baseline) specified in the alarm template, or,
 
+- From DataMiner 10.3.11/10.4.0 onwards<!--RN 37373-->: A (by default) critical alarm limit of type "absolute" or "relative" specified in the alarm template if either a fixed baseline value is set or a dynamically updated baseline value is configured in the alarm template to detect a continuos degradation, or,
+
 - A data range indirectly derived from the protocol info. Currently this is limited to the values 0 and 100 for percentage data for which no historical values were encountered outside the \[0,100\] interval.
 
 However, note that in case there is both a data range in the protocol and an alarm threshold in an alarm template, the alarm template will get precedence.
