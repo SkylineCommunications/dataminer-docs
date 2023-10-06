@@ -12,7 +12,9 @@ NatsCustodian acquires the IP addresses of DataMiner Agents in the DataMiner Sys
 
 The system incorporates several checks, including identification of new nodes, detection of deleted nodes, tracking of unreachable nodes, validation of configuration correctness, and ensuring the running status of the NATS process.
 
-Should NatsCustodian identify any inconsistency other than unreachable nodes, an automatic NATS reconfiguration is initiated.
+From DataMiner 10.2.0 [CU20]/10.3.0 [CU8]/10.3.11 onwards<!--RN 37271-->, when NatsCustodian detects that a NATS node has been added or deleted, or that NATS is in an incorrect state, an automatic NATS reconfiguration is initiated. Unreachable nodes do not generate any alarms or trigger a NATS reconfiguration. Instead, an entry is added to the *NATSCustodian.txt* log file for diagnostic purposes.
+
+Prior to DataMiner 10.2.0 [CU20]/10.3.0 [CU8]/10.3.11, should NatsCustodian identify any inconsistency other than unreachable nodes, an automatic NATS reconfiguration is initiated.
 
 <div class="mermaid">
 flowchart TD
