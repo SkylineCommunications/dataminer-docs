@@ -21,8 +21,9 @@ Supported versions:
 See the [official documentation](https://opensearch.org/docs/latest/) on how to set up your OpenSearch cluster. The configuration is almost identical to that of an Elasticsearch cluster.
 
 > [!IMPORTANT]
-> 
+>
 > - On production systems, the *JVM Heap Space* must be set to a value larger than the default. To configure this setting, see [Important settings](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/index/#important-settings).
+> - The `indices.query.bool.max_clause_count` setting should be set to "2147483647" (i.e. the maximum integer value). Refer to the example below for more information.
 
 > [!NOTE]
 > It is also possible to [set up OpenSearch Dashboards](#setting-up-opensearch-dashboards), which is the equivalent of Kibana for Elasticsearch. However, this is optional and not required for DataMiner to function.
@@ -105,8 +106,8 @@ These are the main steps of the setup:
 
   ```
 
-> [!IMPORTANT]
-> The `indices.query.bool.max_clause_count` setting should be set to "2147483647" (i.e. the maximum integer value). See the last line in the example above.
+  > [!NOTE]
+  > As shown above, the `indices.query.bool.max_clause_count` setting should be set to "2147483647" (i.e. the maximum integer value).
 
 - If you want a node to be only a **data node**, add the following configuration in *OpenSearch.yml*:
 
