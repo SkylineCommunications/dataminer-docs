@@ -6,7 +6,7 @@ uid: Overview_Platform_services
 
 *Less overhead and higher availability, thanks to “as-a-service” options.*
 
-![dataminer.services.categories](~/dataminer-overview/images/DMS_Platform_services.png)
+![dataminer.services.categories](~/dataminer-overview/images/DMS_Platform_services.jpg)
 
 ## Health
 
@@ -37,6 +37,8 @@ This is a powerful option where we manage the storage for you, so you can save o
 In other words, you gain access to the full power of a DataMiner System, free from any concerns about hardware, infrastructure, or maintenance. It is a hassle-free experience that allows you to focus solely on the task at hand.
 
 And DataMiner as a Service comes with our Storage as a Service (STaaS) solution, which means your DataMiner System will immediately benefit from being connected to a scalable and user-friendly cloud-native storage platform.
+
+In a nutshell: **You operate the platform, we build and maintain the platform for you.**
 
 > [!TIP]
 > See also:
