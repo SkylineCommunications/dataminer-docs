@@ -38,9 +38,9 @@ With DataMiner Express Edition you can deploy one free standalone, fully feature
 
 This is the perfect way to get started, allowing anyone to use the platform and build up knowledge on the many possibilities it has to offer. When ready to scale up, you can set up a yearly subscription or start with a number of credits in the Pay-per-Use model.
 
-### Private instance
+### Self-hosted
 
-Self-hosted/on-premises free DataMiner Systems are not time-limited. An organization can use the system as long as it remains connected to dataminer.services.
+Self-hosted, on-premises or private-cloud free DataMiner Systems are not time-limited. An organization can use the system as long as it remains connected to dataminer.services.
 
 ### DataMiner as a Service (DaaS)
 
