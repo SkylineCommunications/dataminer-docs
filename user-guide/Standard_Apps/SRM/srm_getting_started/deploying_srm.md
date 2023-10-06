@@ -54,3 +54,8 @@ uid: deploying_srm
    - Set *Services* > *App. Services View* to the name of the view you created to contain services (e.g. "3 - Services").
 
    - Set *History and Logs* > *Booking Logging Location* to a shared folder accessible from both the client machine and the DataMiner servers, so that users will be able to view the log files. See [Configuring SRM logging](xref:SRM_logging_config).
+
+> [!NOTE]
+>
+> - To upgrade your SRM installation later, first check the SRM release notes of the version you want to install and make sure you are running the correct DataMiner version. The compatible DataMiner version is mentioned at the top of the release notes page for each SRM version. Once have done this, install the SRM package to upgrade.
+> - To downgrade SRM to a previous version, install the earlier package.
