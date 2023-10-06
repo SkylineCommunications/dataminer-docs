@@ -32,8 +32,10 @@ items:
       - name: EPM 1.0.1 GPON - Preview
         topicUid: EPM_1.0.1_GPON
   - name: I-DOCSIS
-    topicUid: EPM_6.1.8_I-DOCSIS
+    topicUid: EPM_6.1.9_I-DOCSIS
     items:
+      - name: EPM 6.1.9 I-DOCSIS
+        topicUid: EPM_6.1.9_I-DOCSIS
       - name: EPM 6.1.8 I-DOCSIS
         topicUid: EPM_6.1.8_I-DOCSIS
       - name: EPM 6.1.7 I-DOCSIS
