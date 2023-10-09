@@ -1,5 +1,5 @@
 ---
-uid: BPA_SRM_Function_Resources_Consistency
+uid: BPA_SRM_Framework_Configuration
 ---
 
 # SRM Framework Configuration
