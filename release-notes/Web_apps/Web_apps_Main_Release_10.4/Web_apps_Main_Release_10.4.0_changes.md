@@ -385,10 +385,11 @@ From now on, when a base query is changed in any way, all queries that use that 
 
 In the *Monitoring* app, a new type of text area boxes will now be used on parameter pages.
 
-#### Security enhancements [ID_36695] [ID_37047] [ID_37051] [ID_37068]
+#### Security enhancements [ID_36695] [ID_37047] [ID_37051] [ID_37068] [ID_37421] [ID_37426]
 
 <!-- RN 36695: MR 10.4.0 - FR 10.3.9 -->
 <!-- RN 37047/37051/37068: MR 10.4.0 - FR 10.3.10 -->
+<!-- RN 37421/37426: MR 10.4.0 - FR 10.3.11 -->
 
 A number of security enhancements have been made.
 
@@ -456,6 +457,27 @@ In order to reduce the package size for the Dashboards app and Low-Code Apps, a 
 
 The legacy Monitoring & Control app (obsolete since DataMiner 10.0.0/10.0.2) is no longer available. If you browse to `http(s)://[DMA]/m`, you will now be redirected to the regular Monitoring app.
 
+#### DataMiner Object Models: Auto-increment fields will no longer be visualized using input boxes [ID_37181]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+An `AutoIncrementField` contains a unique value that is automatically incremented each time a DOM instance is created.
+
+Up to now, on web forms used to create or edit a DOM instance, auto-increment fields were incorrectly visualized using an input box. From now on, on web forms used to create a DOM instance, these fields will no longer be visualized, and on web form used to edit a DOM instance, these fields will be visualized as read-only fields.
+
+#### DataMiner Object Models: Enhanced performance when processing GQI count aggregation queries [ID_37187]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+In GQI, up to now, when you applied an aggregation node of type *count* to a query starting from *Object manager instances* (DOM instances), all objects would be retrieved from the database. From now on, count operations will be sent to the database. This will significantly improve the performance of this kind of GQI queries.
+
+The optimization applies when the following conditions are met:
+
+- The GQI query starts with *Object manager instances*.
+- Only one aggregation node is applied to column *ID* with method *COUNT*.
+
+In all other cases (e.g. multiple aggregation nodes, grouping, different columns), all objects will still be retrieved from the database.
+
 #### Dashboards app/Low-Code Apps - Table component: Height of a column resizer has been reduced to that of the column header [ID_37226]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
@@ -463,6 +485,24 @@ The legacy Monitoring & Control app (obsolete since DataMiner 10.0.0/10.0.2) is 
 Up to now, a column resizer would span across the entire height of the column. From now on, the height of a column resizer will be equal to the height of the column header.
 
 Note that, while you dragging a resizer, its height will be equal to that of the entire column you are resizing.
+
+#### Dashboards app: Components will now only show skeleton loading during the initial load [ID_37274]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+Up to now, some components would show skeleton loading until after the data had been loaded. From now on, those components will only show skeleton loading during the initial load.
+
+#### Dashboards app/Low-Code Apps - Visual Overview component: Initial visual overview data will now be retrieved asynchronously [ID_37341]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+Up to now, a dashboard containing Visual Overview components would retrieve the initial visual overview data synchronously. From now on, the initial visual overview data will be retrieved asynchronously.
+
+#### Web Services API: ConvertQueryToProtoJson web method now supports node keys [ID_37360]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+Before you can add a GQI query to the Data Aggregator configuration file, you have to convert it first by means of the *ConvertQueryToProtoJson* web method. This method now supports node keys.
 
 ### Fixes
 
@@ -744,6 +784,12 @@ When the web API fetched information for columns of a GQI query, it could occur 
 
 If a shared dashboard contained a query that built on another query (using the "Start from" data source), in some cases it could occur that the dashboard could not be loaded and the loading screen continued to be displayed.
 
+#### Low-Code Apps: Page configuration would not be copied along when duplicating a page [ID_37120]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When a page was duplicated, up to now, the page configuration would not be copied along. As a result, certain page settings would be missing.
+
 #### Web apps: DOM GenericEnumEntry objects marked as hidden would incorrectly still be visible [ID_37121]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
@@ -761,26 +807,92 @@ In some cases, an error could occur when migrating a GQI component:
 
 - When the query used ad hoc data with multiple arguments, and one argument linked to query rows came after an argument linked to something other than query rows, the migration would not succeed and would cause the app to no longer be editable.
 
-#### Dashboards app/Low-Code Apps: Seconds of multiple clock components would not be in sync [ID_37193]
-
-<!-- MR 10.4.0 - FR 10.3.10 -->
-
-When you enabled the *Show seconds* option of multiple clock components on the same dashboard or app panel, the seconds would incorrectly not all be in sync.
-
 #### Dashboards app/Low-Code Apps: Label of 'Icon' setting of 'Icon' component would incorrectly be in lower case [ID_37199]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
 The label of the *Icon* setting of an *Icon* component would incorrectly be in lower case. It is now in upper case.
 
-#### Low-Code Apps: Problem when two State components were fed the same query row data with a column filter applied [ID_37206]
+#### Dashboards app - Web component: Embedded website would not function correctly [ID_37207]
 
-<!-- MR 10.4.0 - FR 10.3.10 -->
+<!-- MR 10.4.0 - FR 10.3.11 -->
 
-When two *State* components were fed the same query row data and had a column filter applied, the app would become unresponsive.
+When, on a dashboard, a website was embedded using a Web component, in some cases, the embedded website would not function correctly.
 
-#### Dashboards app/Low-Code Apps: Problem when migrating a query containing only a 'start from' node linking to another query with only a 'start from' node [ID_37224]
+#### Low-Code Apps: Size of sidebar icon was different when editing an app [ID_37223]
 
-<!-- MR 10.4.0 - FR 10.3.10 -->
+<!-- MR 10.4.0 - FR 10.3.11 -->
 
-Up to now, it would not be possible to migrate a query with only a *start from* node linking to another query with only a *start from* node linking to another query.
+When an app was edited, the size of the sidebar icon was different than when that same app was viewed in either preview mode or published mode.
+
+#### Dashboards app/Low-Code Apps: Initial selection of a component would not be applied when the query was replaced [ID_37230]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+The initial selection of a table, state or timeline component would incorrectly not be applied when the query of the component was replaced by another one.
+
+#### Dashboards app/Low-Code Apps: Query builder would display incorrect date/time values when a custom time zone had been configured [ID_37234]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+Up to now, when you had configured a custom time zone, date/time values displayed in the query builder (fed through a time range component) would be incorrect.
+
+#### GQI: Problem when retrieving logger table data from an Elasticsearch database [ID_37251]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When a GQI query retrieved logger table data from an Elasticsearch database, the row keys would be filled in incorrectly. As a result, not all rows would have a unique key.
+
+#### Monitoring app: Casing problem when using NavigatePage [ID_37279]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When, in the *Monitoring* app, a visual overview page was opened using a shape data field of type *NavigatePage*, the value of this field was case sensitive. When the casing of the value was different from the casing of the page name, the page would not open. From now on, the casing of the value and that of the page name will be disregarded.
+
+#### Monitoring app: Problem when opening another visual overview page using 'NavigatePage' [ID_37338]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When, in the *Monitoring* app, another visual overview page was opened using a shape data field of type *NavigatePage*, the rest of the application would incorrectly not reflect this.
+
+#### Low-Code Apps - Form component: DOM button shadows would be cut off [ID_37348]
+
+<!-- MR 10.4.0 - FR 10.3.10 [CU0] -->
+
+In a Form component, the DOM button shadows would incorrectly be cut off.
+
+#### Dashboards app/Low-Code Apps - Parameter table: Problem with Copy command in right-click menu [ID_37357]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When, in a *Parameter table* component, it would not be possible to copy a cell, a row, a column or the entire table using the *Copy* command in the right-click menu.
+
+#### Low-Code Apps: First column of table with multiple queries could be empty [ID_37363]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When actions had been configured on a table visualization with multiple queries, in some cases, the first column would be empty.
+
+#### Low-Code Apps: Problem with 'Execute component' action [ID_37364]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When you edited an existing action, in some cases, the *Execute component* action would not be able to properly restore the form.
+
+#### Dashboards app/Low-Code Apps: Feed linker would no longer select the feed type when there was only a single option [ID_37396]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+The feed linker would no longer automatically select the feed type when there was only a single option. Moreover, as it was not possible to open the drop-down box, no feed could be selected manually either.
+
+#### Monitoring app: Problem when navigating to another visual overview page [ID_37415]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When, in the *Monitoring* app, you selected an element or a service, and navigated to another visual overview page, a `Cannot convert null to a value type` error would be thrown.
+
+#### Low-Code Apps: No longer possible to edit a newly created app after refreshing one of its pages [ID_37425]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When you had created and published an app with at least one component, it would no longer be possible to edit it after refreshing one of its pages.

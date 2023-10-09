@@ -31,7 +31,7 @@ From DataMiner **9.6.4** up to DataMiner 10.0.7, the module consists of two tabs
 ***
 
 > [!NOTE]
-> From DataMiner 10.0.0 onwards, if [Elasticsearch](xref:Elasticsearch_database) is not installed, only the *services* or *overview* tab of this module is available.
+> This module requires [STaaS](xref:STaaS) or a [self-hosted DataMiner storage setup](xref:Supported_system_data_storage_architectures) with Cassandra-compatible database and indexing database. If a self-hosted setup without indexing database is used, only the *services* or *overview* tab of this module is available.
 
 > [!TIP]
 > See also: [Embedding a Service Manager component](xref:Embedding_a_Service_Manager_component)

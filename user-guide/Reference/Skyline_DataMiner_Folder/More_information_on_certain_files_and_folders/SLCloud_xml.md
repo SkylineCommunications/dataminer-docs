@@ -19,7 +19,7 @@ From DataMiner 10.2.0/10.1.5 onwards, you can configure the timeout of the conne
     ```xml
     <SLCLoud>
      <...>
-     <ConnectTimeout>3000</ConnectTimeout>.
+     <ConnectTimeout>3000</ConnectTimeout>
      <...>
     </SLCloud>
     ```

@@ -23,7 +23,7 @@ DataMiner Protocol Markup Language:
 
 - [Protocol.TreeControls](xref:Protocol.TreeControls)
 - [Protocol.Params.Param.Measurement.Discreets.Discreet@iconRef](xref:Protocol.Params.Param.Measurement.Discreets.Discreet-iconRef)
-- [Protocol.Relations.Relation](xref:Protocol.Relations.Relation: Protocol.Relations.Relation)
+- [Protocol.Relations.Relation](xref:Protocol.Relations.Relation)
 
 Coding guidelines
 

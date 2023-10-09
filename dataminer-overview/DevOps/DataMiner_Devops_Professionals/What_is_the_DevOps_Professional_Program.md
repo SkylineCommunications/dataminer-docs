@@ -22,7 +22,7 @@ Upon registration, you will be part of the DataMiner DevOps Professional Program
 
 As a DataMiner DevOps Professional, you are expected to align with important key values and the DataMiner culture, as well as master certain skills related both to DataMiner and to affiliated key technologies and a broader set of related topics.
 
-Your level of compliance and alignment with those expectations is measured in [DevOps Points](xref:Benefits_DevOps_Professionals_Program#accumulating-devops-points), which you can accumulate continuously and almost effortlessly by working and learning as a DataMiner DevOps Professional on a day-to-day basis.
+Your level of compliance and alignment with those expectations is measured in [DevOps Points](xref:DevOps_Points), which you can accumulate continuously and almost effortlessly by working and learning as a DataMiner DevOps Professional on a day-to-day basis.
 
 Hence, your accreditation really does not require any substantial program-specific efforts or time investment. After all, we want you to be focused as much as possible on what we deem the heart of being a DataMiner DevOps Professional. As we all are individuals, everybody can achieve accreditation by following their own path.
 

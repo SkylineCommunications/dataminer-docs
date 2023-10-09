@@ -170,11 +170,13 @@ If Cassandra still cannot be reached after SLDataGateway has tried to connect fo
 
 ### Enabling TLS on the Cassandra database connection
 
-From DataMiner 10.2.0/10.1.3 onwards, it is possible to enable TLS on a Cassandra database connection.
+<!--From DataMiner 10.2.0/10.1.3 onwards, it is possible to enable TLS on a Cassandra database connection.
 
-- From DataMiner 10.3.10/10.4.0 onwards<!-- RN 36399 -->, you can configure this setting in Cube. See [Cassandra cluster database](xref:Configuring_the_database_settings_in_Cube#cassandra-cluster-database).
+- From DataMiner 10.3.10/10.4.0 onwards(RN 36399 - reverted in RN 37322), you can configure this setting in Cube. See [Cassandra cluster database](xref:Configuring_the_database_settings_in_Cube#cassandra-cluster-database).
 
-- Prior to DataMiner 10.3.10/10.4.0:
+- Prior to DataMiner 10.3.10/10.4.0:-->
+
+To do so:
 
   1. Enable TLS in the settings of the Cassandra database itself.
 

@@ -1,0 +1,73 @@
+items:
+  - name: v10.4
+    topicUid: Web_apps_Main_Release_10.4.0
+    items:
+      - name: Main Release
+        topicUid: Web_apps_Main_Release_10.4.0
+        items:
+          - name: DataMiner web apps Main Release 10.4.0 - Preview
+            topicUid: Web_apps_Main_Release_10.4.0
+            items:
+              - name: Highlights & other new features
+                topicUid: Web_apps_Main_Release_10.4.0_new_features
+              - name: Changes
+                topicUid: Web_apps_Main_Release_10.4.0_changes
+  - name: v10.3
+    topicUid: Web_apps_Main_Release_10.3.0
+    items:
+      - name: Main Release
+        topicUid: Web_apps_Main_Release_10.3.0
+        items:
+          - name: DataMiner web apps Main Release 10.3.0
+            topicUid: Web_apps_Main_Release_10.3.0
+            items:
+              - name: Highlights & other new features
+                topicUid: Web_apps_Main_Release_10.3.0_new_features
+              - name: Changes
+                topicUid: Web_apps_Main_Release_10.3.0_changes
+          - name: DataMiner web apps Main Release 10.3.0 CU1
+            topicUid: Web_apps_Main_Release_10.3.0_CU1
+          - name: DataMiner web apps Main Release 10.3.0 CU2
+            topicUid: Web_apps_Main_Release_10.3.0_CU2
+          - name: DataMiner web apps Main Release 10.3.0 CU3
+            topicUid: Web_apps_Main_Release_10.3.0_CU3
+          - name: DataMiner web apps Main Release 10.3.0 CU4
+            topicUid: Web_apps_Main_Release_10.3.0_CU4
+          - name: DataMiner web apps Main Release 10.3.0 CU5
+            topicUid: Web_apps_Main_Release_10.3.0_CU5
+          - name: DataMiner web apps Main Release 10.3.0 CU6
+            topicUid: Web_apps_Main_Release_10.3.0_CU6
+          - name: DataMiner web apps Main Release 10.3.0 CU7
+            topicUid: Web_apps_Main_Release_10.3.0_CU7
+          - name: DataMiner web apps Main Release 10.3.0 CU8 - Preview
+            topicUid: Web_apps_Main_Release_10.3.0_CU8
+          - name: DataMiner web apps Main Release 10.3.0 CU9 - Preview
+            topicUid: Web_apps_Main_Release_10.3.0_CU9
+      - name: Feature Release
+        topicUid: Web_apps_Feature_Release_10.3.12
+        items:
+          - name: DataMiner web apps Feature Release 10.3.12 - Preview
+            topicUid: Web_apps_Feature_Release_10.3.12
+          - name: DataMiner web apps Feature Release 10.3.11 - Preview
+            topicUid: Web_apps_Feature_Release_10.3.11
+          - name: DataMiner web apps Feature Release 10.3.10
+            topicUid: Web_apps_Feature_Release_10.3.10
+          - name: DataMiner web apps Feature Release 10.3.9
+            topicUid: Web_apps_Feature_Release_10.3.9
+            items:
+              - name: New features and changes
+                topicUid: Web_apps_Feature_Release_10.3.9
+              - name: DataMiner web apps Feature Release 10.3.9 CU1
+                topicUid: Web_apps_Feature_Release_10.3.9_CU1
+          - name: DataMiner web apps Feature Release 10.3.8
+            topicUid: Web_apps_Feature_Release_10.3.8
+          - name: DataMiner web apps Feature Release 10.3.7
+            topicUid: Web_apps_Feature_Release_10.3.7
+          - name: DataMiner web apps Feature Release 10.3.6
+            topicUid: Web_apps_Feature_Release_10.3.6
+          - name: DataMiner web apps Feature Release 10.3.5
+            topicUid: Web_apps_Feature_Release_10.3.5
+          - name: DataMiner web apps Feature Release 10.3.4
+            topicUid: Web_apps_Feature_Release_10.3.4
+          - name: DataMiner web apps Feature Release 10.3.3
+            topicUid: Web_apps_Feature_Release_10.3.3

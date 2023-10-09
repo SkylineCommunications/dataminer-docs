@@ -4,7 +4,7 @@ uid: Configuring_the_database_settings_in_Cube
 
 # Configuring the general database settings
 
-You can configure the database settings for your DataMiner System's dedicated clustered storage in DataMiner Cube.
+If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STaaS) setup but instead choose to host a dedicated clustered storage setup yourself, you can configure the database settings for your DataMiner System's dedicated clustered storage in DataMiner Cube.
 
 > [!NOTE]
 > If you want an external program to execute queries against a DataMiner database, you will need to use an offload database. For information on offload database settings, see [Offload database](xref:Offload_database).
@@ -54,9 +54,11 @@ For a Cassandra cluster database (i.e. one Cassandra cluster that is used as the
 
    - **Password**: The password with which the DMA has to log on to Elasticsearch (if applicable).
 
-1. From DataMiner 10.3.10/10.4.0 onwards<!-- RN 36399 -->, you can enable TLS by selecting the checkbox next to *TLS Enabled*.
+     ![Cube Cassandra Cluster Configuration](~/user-guide/images/CassandraCluster_CubeConfiguration.png)
 
-   ![Cube Cassandra Cluster Configuration](~/user-guide/images/CassandraCluster_CubeConfig.png)<br>*DataMiner 10.3.10 example configuration*
+<!--1. From DataMiner 10.3.10/10.4.0 onwards (RN 36399 - reverted in RN 37322), you can enable TLS by selecting the checkbox next to *TLS enabled*.
+
+   ![Cube Cassandra Cluster Configuration](~/user-guide/images/CassandraCluster_CubeConfig.png)<br>*DataMiner 10.3.10 example configuration*-->
 
 1. Click *Save*.
 

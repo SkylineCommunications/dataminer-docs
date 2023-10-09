@@ -6,7 +6,25 @@ uid: Configuring_external_authentication_via_an_identity_provider_using_SAML
 
 From DataMiner 9.6.11 onwards, it is possible to configure external authentication via an identity provider service using SAML (Security Assertion Markup Language).
 
-For this to be possible, a trust relationship must be established between the service provider (i.e. DataMiner) and the identity provider. This is done by exchanging SAML metadata files. The following metadata must be shared between the service provider (i.e. DataMiner) and the Identity Provider service: Entity ID, Cryptographic Keys, Protocol Endpoints (bindings, locations).
+## Requirements
+
+- DataMiner integrates with **identity providers using version 2.0 of the SAML protocol**. Compatibility with older SAML versions is not supported.
+
+- The identity provider must support **Redirect binding** for communication between the service provider and the identity provider. Most SAML identity providers support Redirect binding by default.
+
+- DataMiner uses service provider-initiated **Single Sign-On (SSO)** through Redirect binding. It does not support the use of POST or SOAP binding for requests. However, standard POST binding is used for responses.
+
+  > [!TIP]
+  > For a comprehensive understanding of the SAML process, including the encoding and encryption guidelines that DataMiner follows, refer to the official SAML Documentation: [SAML Technical Overview](http://docs.oasis-open.org/security/saml/Post2.0/sstc-saml-tech-overview-2.0-cd-02.html#5.1.2.SP-Initiated%20SSO:%20%20Redirect/POST%20Bindings|outline).
+
+## Establishing a trust relationship between the service provider and identity provider
+
+To configure external authentication via an identity provider service using SAML, a trust relationship must be established between the service provider (i.e. DataMiner) and the identity provider. This is done by exchanging SAML metadata files.
+
+The following metadata must be shared between the service provider (i.e. DataMiner) and the Identity Provider service: Entity ID, Cryptographic Keys, Protocol Endpoints (bindings, locations).
+
+> [!TIP]
+> See also: [Troubleshooting SAML issues](xref:Troubleshooting_SAML_Issues)
 
 To configure this, follow the steps below:
 
@@ -52,7 +70,7 @@ Once this has been configured, if users try to log in to the DMA using external 
 > [!TIP]
 > See also: [Authenticating Azure AD Users on DataMiner with SAML](https://community.dataminer.services/video/authenticating-azure-ad-users-on-dataminer-with-saml/) in the Dojo video library ![Video](~/user-guide/images/video_Duo.png)
 
-## Creating a DataMiner metadata file
+### Creating a DataMiner metadata file
 
 To create a DataMiner metadata file (also referred to as *Service Provider Metadata*), proceed as follows:
 
@@ -103,7 +121,7 @@ To create a DataMiner metadata file (also referred to as *Service Provider Metad
 > [!IMPORTANT]
 > From DataMiner 10.3.4/10.4.0 onwards, ``WantAssertionsSigned`` **must** be set to *true*.
 
-## Additional configuration for systems connected to dataminer.services
+### Additional configuration for systems connected to dataminer.services
 
 When your DataMiner System is connected to dataminer.services, the following additional configuration is required for both the *spMetadata.xml* file and the identity provider:
 
@@ -214,6 +232,9 @@ Once you have established a trust relationship between DataMiner (i.e. the servi
      > [!IMPORTANT]
      > Do not use the *Object ID* under *Azure Active Directory > Enterprise applications > [your application name]*. This is a different Object ID, which will not work.
 
+     > [!NOTE]
+     > From DataMiner 10.3.11/10.4.0 onwards<!-- RN 37162 -->, the **Object ID** is optional.
+
    - **Client Secret**: In the pane on the left, click *Certificates & secrets*.
 
      1. In the *Client secrets* section, click *New client secret*.
@@ -322,6 +343,9 @@ From DataMiner 10.2.0/10.1.12 onwards, users authenticated by Azure AD using SAM
 1. Save the *DataMiner.xml* file.
 
 1. Restart the DataMiner Agent.
+
+> [!NOTE]
+> If your default username is not in email format or if DataMiner is unable to locate it, configure the *\<PreferredEmailClaim>* tag to ensure it points to the correct email address.
 
 ### Azure B2C
 
@@ -501,57 +525,3 @@ DataMiner supports Okta as identity provider as from version 10.1.11. Use Okta's
    ```
 
 1. Restart DataMiner.
-
-## Error messages
-
-### General errors
-
-Object reference not set to an instance of an object.
-
-- Application: Cube
-- Cause: Incorrect or unexpected data in *spMetadata.xml*.
-
-Failed to build External Authentication for SAML. System.ArgumentException: An entry with the same key already exists.
-
-- Application: Cube/Alarm Console
-- Cause: In *spMetadata.xml*, the index attribute per AssertionConsumerService endpoint must be unique. Make sure all index values are unique.
-
-Cannot connect to the DMA; exception trapped: Failed getting the user info (empty response).
-
-- Application: Web apps
-- Cause: Incorrect or unexpected data in *spMetadata.xml*.
-
-Expected one and only one default assertion consumer service endpoint.
-
-- Application: Web apps
-- Cause: In *spMetadata.xml*, none of the Assertion Consumer Service URLs are marked as the default URL. Typically, the /root URL is marked as the default URL.
-
-Assertion consumer service \<URL> was not found.
-
-- Application: Web apps
-- Cause: The Assertion Consumer Service URL is spelled incorrectly or cannot be found in *spMetadata.xml*.
-
-### Azure AD errors
-
-AADSTS50011: The reply URL specified in the request does not match the reply URLs configured for the application: '\<ID>'.
-
-- Application: Cube
-- Cause: The URL marked as default URL is either missing or spelled differently in the app registration form.
-
-AADSTS50011: The reply URL specified in the request does not match the reply URLs configured for the application: '\<ID>'.
-
-- Application: Web apps
-- Cause: The reply URL of a specific web app is either missing or spelled differently in the app registration form.
-
-AADSTS500113: No reply address is registered for the application.
-
-- Application: Web apps
-- Cause: No reply URL is specified in the app registration form.
-
-AADSTS650056: Misconfigured application. This could be due to one of the following: the client has not listed any permissions for 'AAD Graph' in the requested permissions in the client's application registration. Or, the admin has not consented in the tenant. Or, check the application identifier in the request to ensure it matches the configured client application identifier. Or, check the certificate in the request to ensure it's valid. Please contact your admin to fix the configuration or consent on behalf of the tenant. Client app ID: \<ID>.
-
-- Cause: The required API permissions are missing in the app registration form.
-
-AADSTS700016: Application with identifier '\<ID>' was not found in the directory '\<ID>'. This can happen if the application has not been installed by the administrator of the tenant or consented to by any user in the tenant. You may have sent your authentication request to the wrong tenant.
-
-- Cause: Entity ID incorrect or not found.

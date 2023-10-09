@@ -4,6 +4,9 @@ uid: Cassandra_firewall
 
 # Firewall ports used with Cassandra
 
+> [!TIP]
+> If you do not want the hassle of maintaining the DataMiner storage databases yourself, we recommend using [DataMiner Storage as a Service](xref:STaaS) instead.
+
 The following ports should be opened in the firewall, depending on your setup:
 
 - **7000 or 7001**: Inter-node communication will go over port 7000 (or 7001 if TLS/SSL is enabled). This port should therefore be opened on the servers hosting Cassandra.

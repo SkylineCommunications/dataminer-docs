@@ -24,4 +24,4 @@ If the **offline** DMA is stopped:
 > This is also what happens when a DMA shuts down unexpectedly, for instance because of a power failure.
 
 > [!TIP]
-> See also: [Viewing Failover information](xref:Viewing_Failover_information)
+> See also: [Viewing Failover information](xref:Viewing_the_Failover_setup)

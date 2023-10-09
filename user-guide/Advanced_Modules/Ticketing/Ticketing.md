@@ -10,7 +10,7 @@ You can [access this app](xref:Accessing_the_Ticketing_app) using Google Chrome,
 
 The Ticketing app can also be [made available via a gateway server](xref:Dashboard_Gateway_installation).
 
-In order to run this app, your DataMiner System must use a setup with a Cassandra and Elasticsearch database or an equivalent. For more information, see [Supported system data storage architectures](xref:Supported_system_data_storage_architectures).
+In order to run this app, your DataMiner System must use a setup with a Cassandra and indexing database or an equivalent. For more information, see [Supported system data storage architectures](xref:Supported_system_data_storage_architectures).
 
 > [!NOTE]
 >
@@ -18,4 +18,6 @@ In order to run this app, your DataMiner System must use a setup with a Cassandr
 > - The Ticketing app requires a separate license. For more information on acquiring a Ticketing license, contact the Skyline Sales department.
 
 > [!CAUTION]
-> The Ticketing app is being retired. See [DataMiner functionality evolution and retirement](xref:Software_support_life_cycles) for more details. ![EOL](~/user-guide/images/EOL_Duo.png)
+>
+> - The Ticketing app is being retired. See [DataMiner functionality evolution and retirement](xref:Software_support_life_cycles) for more details. ![EOL](~/user-guide/images/EOL_Duo.png)
+> - The Ticketing app is not supported on systems using [Storage as a Service (STaaS)](xref:STaaS).

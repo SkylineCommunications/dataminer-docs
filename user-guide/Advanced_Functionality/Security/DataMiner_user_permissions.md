@@ -370,6 +370,9 @@ Permission to download a Visio file from the DataMiner System to the client comp
 
 Permission to change Visio files using the embedded Visio file editor.
 
+> [!NOTE]
+> To edit the visual overview of an element, service, or view, you also need to have the *Config* privilege for the relevant item. Access to specific items can only be edited on group level.
+
 ### General \> Collaboration
 
 #### General \> Collaboration \> UI available
@@ -534,7 +537,7 @@ Permission to use view and configure element connections.
 >
 > - At present, these permissions are used for the uploading and deleting of functions in the Protocols & Templates app, and for the use of the Functions app. However, the latter is currently still in soft launch. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
 > - When you upgrade to DataMiner version 10.1.7, these six permissions are automatically granted to all user groups that have been granted the *Modules* > *Resources* > *Configure functions* permission.
-> - These user permissions are only displayed if the DMA uses an Elasticsearch database.
+> - These user permissions are only displayed if the DMA uses STaaS or a self-hosted indexing database.
 
 #### Modules \> Functions \> Read
 
@@ -563,7 +566,7 @@ Permission to edit virtual functions. Available from DataMiner 10.2.0/10.1.7 onw
 ### Modules \> Jobs
 
 > [!NOTE]
-> These user permissions are only displayed if the DMA uses an Elasticsearch database.
+> These user permissions are only displayed if the DMA uses STaaS or a self-hosted indexing database.
 
 #### Modules \> Jobs \> UI available
 
@@ -588,7 +591,7 @@ Permission to use the Monitoring app. Available from DataMiner 10.2.0/10.2.2 onw
 ### Modules \> Planned Maintenance
 
 > [!NOTE]
-> These user permissions are only displayed if the DMA uses an Elasticsearch database.
+> These user permissions are only displayed if the DMA uses STaaS or a self-hosted indexing database.
 
 #### Modules \> Planned Maintenance \> UI available
 

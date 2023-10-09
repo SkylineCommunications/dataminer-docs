@@ -17,6 +17,11 @@ uid: Manipulating_the_Alarm_Console
 
 - To undock the Alarm Console into a separate window, click the undock button: ![Undock button](~/user-guide/images/Undock_button.png)
 
+- To open a menu that displays any notifications related to alarms or suggested events, click the light bulb button: ![Light bulb button](~/user-guide/images/LightBulb_button.png) <!--RN 36777-->
+
+  > [!TIP]
+  > See also: [Working with the Alarm Console light bulb feature](xref:Light_Bulb_Feature)
+
 - If the Alarm Console is undocked in a separate window, close that window to dock the Alarm Console to its original position at the bottom of the main DataMiner Cube window.
 
 - To undock one tab of the Alarm Console, drag the tab header out of the Alarm Console.

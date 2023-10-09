@@ -1,0 +1,84 @@
+items:
+  - name: D-DOCSIS
+    topicUid: EPM_6.1.6_D-DOCSIS
+    items:
+      - name: EPM 6.1.6 D-DOCSIS - Preview
+        topicUid: EPM_6.1.6_D-DOCSIS
+      - name: EPM 6.1.5 D-DOCSIS - Preview
+        topicUid: EPM_6.1.5_D-DOCSIS
+      - name: EPM 6.1.4 D-DOCSIS - Preview
+        topicUid: EPM_6.1.4_D-DOCSIS
+      - name: EPM 6.1.3 D-DOCSIS
+        topicUid: EPM_6.1.3_D-DOCSIS
+      - name: EPM 6.1.2 D-DOCSIS
+        topicUid: EPM_6.1.2_D-DOCSIS
+      - name: EPM 6.1.1 D-DOCSIS
+        topicUid: EPM_6.1.1_D-DOCSIS
+      - name: EPM 6.1.0 D-DOCSIS
+        topicUid: EPM_6.1.0_D-DOCSIS
+      - name: EPM 6.0.3 D-DOCSIS
+        topicUid: EPM_6.0.3_D-DOCSIS
+      - name: EPM 6.0.2 D-DOCSIS
+        topicUid: EPM_6.0.2_D-DOCSIS
+      - name: EPM 6.0.1 D-DOCSIS
+        topicUid: EPM_6.0.1_D-DOCSIS
+      - name: EPM 6.0.0 D-DOCSIS
+        topicUid: EPM_6.0.0_D-DOCSIS
+      - name: EPM 5.0.0 D-DOCSIS
+        topicUid: EPM_5.0.0_D-DOCSIS
+  - name: GPON
+    topicUid: EPM_1.0.1_GPON
+    items:
+      - name: EPM 1.0.1 GPON - Preview
+        topicUid: EPM_1.0.1_GPON
+  - name: I-DOCSIS
+    topicUid: EPM_6.1.9_I-DOCSIS
+    items:
+      - name: EPM 6.1.9 I-DOCSIS
+        topicUid: EPM_6.1.9_I-DOCSIS
+      - name: EPM 6.1.8 I-DOCSIS
+        topicUid: EPM_6.1.8_I-DOCSIS
+      - name: EPM 6.1.7 I-DOCSIS
+        topicUid: EPM_6.1.7_I-DOCSIS
+      - name: EPM 6.1.6 I-DOCSIS
+        topicUid: EPM_6.1.6_I-DOCSIS
+        items:
+          - name: New features and changes
+            topicUid: EPM_6.1.6_I-DOCSIS
+          - name: Addendum CU1
+            topicUid: EPM_6.1.6_I-DOCSIS_CU1
+      - name: EPM 6.1.5 I-DOCSIS
+        topicUid: EPM_6.1.5_I-DOCSIS
+      - name: EPM 6.1.4 I-DOCSIS
+        topicUid: EPM_6.1.4_I-DOCSIS
+      - name: EPM 6.1.3 I-DOCSIS
+        topicUid: EPM_6.1.3_I-DOCSIS
+      - name: EPM 6.1.2 I-DOCSIS
+        topicUid: EPM_6.1.2_I-DOCSIS
+      - name: EPM 6.1.1 I-DOCSIS
+        topicUid: EPM_6.1.1_I-DOCSIS
+      - name: EPM 6.1.0 I-DOCSIS
+        topicUid: EPM_6.1.0_I-DOCSIS
+      - name: EPM 6.0.3 I-DOCSIS
+        topicUid: EPM_6.0.3_I-DOCSIS
+      - name: EPM 6.0.2 I-DOCSIS
+        topicUid: EPM_6.0.2_I-DOCSIS
+      - name: EPM 6.0.1 I-DOCSIS
+        topicUid: EPM_6.0.1_I-DOCSIS
+      - name: EPM 6.0.0 I-DOCSIS
+        topicUid: EPM_6.0.0_I-DOCSIS
+      - name: EPM 5.0.0 I-DOCSIS
+        topicUid: EPM_5.0.0_I-DOCSIS
+  - name: VSAT
+    topicUid: EPM_1.0.6_VSAT
+    items:
+      - name: EPM 1.0.6 VSAT - preview
+        topicUid: EPM_1.0.6_VSAT
+      - name: EPM 1.0.5 VSAT - preview
+        topicUid: EPM_1.0.5_VSAT
+      - name: EPM 1.0.4 VSAT
+        topicUid: EPM_1.0.4_VSAT
+      - name: EPM 1.0.3 VSAT
+        topicUid: EPM_1.0.3_VSAT
+      - name: EPM 1.0.2 VSAT
+        topicUid: EPM_1.0.2_VSAT

@@ -21,6 +21,11 @@ To configure the component:
 
    - When a DOM instance is applied, this will be used to display the current state, preceded by the states the instance has traversed until its current state, and followed by the future states it will go through if it follows the normal flow.
 
+     > [!NOTE]
+     >
+     > - If the DOM history saving behavior of a module has been set to *Disabled* in [the `DomInstanceHistorySettings` object](xref:DOM_DomInstanceHistorySettings), the stepper component will not show a history of traversed states for any DOM instances. Instances without a history calculate the path from the initial state to the current state as if they followed the standard flow, similar to a happy path.
+     > - The DOM instance history objects are by default stored asynchronously, which enhances performance but may result in an outdated history when retrieved. In such cases, the path between the incomplete history and the current state is also completed according to the standard flow.
+
 1. Fine-tune the component layout. In the *Component > Layout* tab, the following options are available:
 
    - The default options available for all components. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).

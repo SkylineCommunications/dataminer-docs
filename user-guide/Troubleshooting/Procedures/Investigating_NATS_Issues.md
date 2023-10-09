@@ -418,7 +418,13 @@ To resolve this issue, manually configure a custom port for NATS that is not yet
 
 1. Open *C:\Skyline DataMiner\NATS\nats-account-server\nas.config* and change the port from 9090 to your chosen custom port, e.g. 9091.
 
-1. Run the following command in a command prompt window: `nssm edit NAS`.
+1. Open a command prompt as Administrator and navigate to the location of the NATS account server:
+
+   ```txt
+   cd C:\Skyline DataMiner\NATS\nats-account-server
+   ```
+
+1. Run the following command in the command prompt window: `nssm edit NAS`.
 
 1. Change any mentions of 9090 to 9091.
 

@@ -4,26 +4,6 @@ uid: Viewing_spectrum_analyzer_traces
 
 # Viewing spectrum analyzer traces
 
-This section consists of the following topics:
-
-- [Spectrum trace acquisition](#spectrum-trace-acquisition)
-
-- [Copying spectrum information from the real-time display](#copying-spectrum-information-from-the-real-time-display)
-
-- [Toggling the Automatic standby mode](#toggling-the-automatic-standby-mode)
-
-- [Freezing/unfreezing the trace](#freezingunfreezing-the-trace)
-
-- [Displaying the minimum and maximum hold of the trace](#displaying-the-minimum-and-maximum-hold-of-the-trace)
-
-- [Displaying the average trace](#displaying-the-average-trace)
-
-- [Customizing the real-time display](#customizing-the-real-time-display)
-
-- [Viewing along with another client](#viewing-along-with-another-client)
-
-- [Sharing spectrum sessions](#sharing-spectrum-sessions)
-
 ## Spectrum trace acquisition
 
 As soon as you open the spectrum analyzer card, trace acquisition begins, using the last used settings. The trace is then displayed in the real-time display section.

@@ -36,7 +36,7 @@ subgraph "Extension"
     b -- HTTP request --> c("UserDefinableApiEndpoint\nDxM")
 end
 subgraph "Core DataMiner"
-    c -- NATS --> d("UserDefinableApiEndpointManager\n(SLNet.exe)") 
+    c -- NATS --> d("UserDefinableApiManager\n(SLNet.exe)") 
     d -- IPC --> e("SLAutomation.exe")
 end
 ```

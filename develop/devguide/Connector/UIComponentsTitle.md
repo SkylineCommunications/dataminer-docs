@@ -13,9 +13,12 @@ To define a title, create a parameter of type "fixed". In the Measurement tag, s
   <Name>TitleSoftwareManagement</Name>
   <Description>TitleSoftwareManagement</Description>
   <Type>fixed</Type>
-   <Measurement>
-      <Type options="begin">title</Type>
-   </Measurement>
+  <Display>
+    <RTDisplay>true</RTDisplay>
+  </Display>
+  <Measurement>
+    <Type options="begin">title</Type>
+  </Measurement>
 </Param>
 ```
 

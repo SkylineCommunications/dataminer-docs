@@ -12,8 +12,9 @@ To be able to work with DataMiner, you must have at least one DataMiner Agent an
 
 | Concept | Description |
 |--|--|
-| DataMiner Agent or DMA | A physical or virtual compute instance running the DataMiner software. |
-| DataMiner client | An entity communicating with the Agent. The term is mostly used to denote a client application that allows users to interact with the DataMiner Agent. |
+| DataMiner Agent or DMA | A physical or virtual compute instance or "node" running the DataMiner software. |
+| DataMiner System or DMS | A group of one or more DataMiner Agents, seamlessly working together as one system. |
+| DataMiner client | An entity communicating with a DataMiner Agent. The term is mostly used to denote a client application that allows users to interact with a DataMiner System. |
 
 > [!TIP]
 > See also: [DataMiner System layout](xref:GeneralLayout)

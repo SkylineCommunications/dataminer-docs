@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.3.10
 ---
 
-# General Feature Release 10.3.10 – Preview
+# General Feature Release 10.3.10
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!IMPORTANT]
 > When downgrading from DataMiner Feature Release version 10.3.8 (or higher) to DataMiner Feature Release version 10.3.4, 10.3.5, 10.3.6 or 10.3.7, an extra manual step has to be performed. For more information, see [Downgrading a DMS](xref:MOP_Downgrading_a_DMS).
@@ -19,6 +19,8 @@ uid: General_Feature_Release_10.3.10
 ## Highlights
 
 - [DataMiner Object Models: 'Full CRUD meta' scripts [ID_37004]](#dataminer-object-models-full-crud-meta-scripts-id_37004)
+- [Support for real-time GQI row updates](#support-for-real-time-gqi-row-updates-id_37060)
+- [Storage as a Service](#storage-as-a-service-staas-id_34616-id_37256-id_37257-id_37283)
 
 ## New features
 
@@ -29,6 +31,19 @@ uid: General_Feature_Release_10.3.10
 Apart from **ID only** scripts, which use the `OnDomInstanceCrud` entry point method and give you access to the CRUD type and the ID of the `DomInstance` in the script, it is now also possible to configure **Full CRUD meta** scripts. These use the `OnDomInstanceCrudWithFullMeta` entry point method and give you access to the CRUD type and the full `DomInstance` object(s).
 
 For more detailed information, see [ExecuteScriptOnDomInstanceActionSettings](xref:ExecuteScriptOnDomInstanceActionSettings).
+
+#### Support for real-time GQI row updates [ID_37060]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+Real-time row updates are now supported for GQI session results for specific data sources and operators. This means that, when this is supported in the client, real-time updates can be displayed for row additions, modification, or deletions.
+
+At present, this is supported for the following GQI data sources:
+
+- Parameter table (except partial and view tables)
+- Views
+
+It is supported for the *Select* operator, but it can also be supported for other operators if they are combined with specific data sources, for instance for a filter on a parameter table.
 
 #### DataMiner Object Models: GenericEnumEntry objects can now be soft-deleted [ID_37121]
 
@@ -44,6 +59,14 @@ Soft-deleting a *GenericEnumEntry* object will have the following consequences:
 - It will not be possible to create an instance of which the value is set to the soft-deleted *GenericEnumEntry*.
 - It will not be possible to update the value of an instance to the soft-deleted *GenericEnumEntry*.
 - It is allowed to have instances of which the value is set to the soft-deleted *GenericEnumEntry*.
+
+#### Storage as a Service (STaaS) [ID_34616] [ID_37256] [ID_37257] [ID_37283]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+DataMiner now supports Storage as a Service (STaaS), a scalable and user-friendly cloud-native storage platform that provides a fully fletched alternative to on-premises databases.
+
+For detailed information, see [Storage as a Service (STaaS)](xref:STaaS).
 
 ## Changes
 
@@ -202,7 +225,7 @@ The Cassandra Cluster Migrator tool would incorrectly not migrate any logger tab
 
 #### Problem when restarting DataMiner [ID_37112]
 
-<!-- MR 10.4.0 - FR 10.3.10 -->
+<!-- MR 10.3.0 [CU8] - FR 10.3.10 -->
 
 When DataMiner was restarted, in some rare cases, it would not start up again.
 
@@ -259,3 +282,9 @@ When you imported an element that already existed in the system, in some cases, 
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
 When you deleted a trend pattern when connected to a DataMiner Agent running an old DataMiner version (e.g. 10.3.0), the pattern itself was deleted but the occurrences/matches would remain visible until you closed the trend graph and opened it again.
+
+#### Problem when updating the NATS server [ID_37305]
+
+<!-- 10.2.0 [CU19]/MR 10.3.0 [CU7] - FR 10.3.10 [CU0] -->
+
+In some cases, when updating the NATS server, an error could occur while replacing the *nats-streaming-server.exe* file.

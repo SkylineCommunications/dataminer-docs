@@ -6,9 +6,43 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
-#### 22 August 2023 - Enhancement - Admin App - Audit Record Export (CSV) [ID_37164]
+#### 9 October 2023 - Fix - CoreGateway 2.13.2 - Resolved an issue that could occur after a DataMiner up- or downgrade [ID_37441]
 
-In the [Admin App](https://admin.dataminer.services), a new feature has been introduced on the *Audit* page, allowing users to export audit records in a CSV file. Clicking *Export* in the top-left corner will initiate the export process. A pop-up window will appear, where you can choose the separator to be used in the CSV file, as well as whether to include column titles at the top of the exported CSV file. Once the file has been generated, you will receive an email containing a link to download the CSV file. The download link included in the email will be valid for a period of 7 days.
+When a local DataMiner Agent was up- or downgraded, it could occur that the CoreGateway DxM did not reinitialize its DataMiner dependencies. In that case, serialization issues could occur at runtime, for example when the DataMiner Teams bot was used. This issue has been resolved.
+
+#### 2 October 2023 - Enhancement - CloudFeed 1.3.0 - Upgrade to .NET 6 [ID_36940]
+
+DataMiner CloudFeed has been upgraded to .NET 6, so that it no longer depends on .NET 5. **Make sure .NET 6 is installed** before you upgrade to this version.
+
+#### 26 September 2023 - Fix - Remote Access automatic login now works with special characters in DataMiner account configuration [ID_37438]
+
+If your DataMiner account contained one or more special characters, for example in the full name field, and you used Remote Access (e.g. the Monitoring app via dataminer.services), it was not possible to log in. Now you can log in automatically with your linked DataMiner account.
+
+> [!NOTE]
+> If you log in manually, you will still encounter this issue: This will not work when you have one or more special characters configured in your DataMiner account. To resolve this, [link your DataMiner account to your dataminer.services account](https://aka.dataminer.services/account-linking). The automatic login will allow you to use Remote Access without requiring any further actions.
+
+#### 21 September 2023 - New feature - CoreGateway 2.13.1 - Support new GQI queries [ID_37302]
+
+Support has been added for the latest GQI queries introduced with DataAggregator 2.1.0 and DataMiner 10.3.9.
+
+#### 21 September 2023 - Fix - CoreGateway 2.13.1 - Resolved memory leak [ID_37393]
+
+A memory leak introduced in CoreGateway 2.13.0 has been resolved.
+
+#### 20 September 2023 - Enhancement - Admin app - Nodes page responsiveness improved [ID_37403]
+
+Performance has improved when node and DxM information is retrieved on the *Nodes* page of a DataMiner System in the Admin app.
+
+#### 19 September 2023 - Enhancement - CloudGateway 2.12.1 - Added more checks in the ConnectionTester [ID_37219]
+
+The ConnectionTester included with DataMiner CloudGateway has been upgraded with the following checks:
+
+- Validation if NATS is working between DxMs, by discovering the DataMiner CloudGateway DxMs in the DMS.
+- Validation if those discovered DataMiner Cloud Gateway nodes can be reached using their cloud endpoint, which by default requires TCP port 5100 to be open between the servers (firewall/internal network). This is a common misconfiguration causing issues with several cloud features like Catalog deployments, DxM updates, remote log collection, etc.
+
+#### 22 August 2023 - Enhancement - Admin app - Audit Record Export (CSV) [ID_37164]
+
+In the [Admin app](https://admin.dataminer.services), a new feature has been introduced on the *Audit* page, allowing users to export audit records in a CSV file. Clicking *Export* in the top-left corner will initiate the export process. A pop-up window will appear, where you can choose the separator to be used in the CSV file, as well as whether to include column titles at the top of the exported CSV file. Once the file has been generated, you will receive an email containing a link to download the CSV file. The download link included in the email will be valid for a period of 7 days.
 
 #### 22 August 2023 - Enhancement - CloudFeed 1.2.0 - Compatibility with newer DataMiner versions [ID_36482]
 
@@ -42,13 +76,13 @@ From now on, the DxM will also offload more data about the DMA and the server to
 - Installed dotnet runtimes
 - System info such as the Windows version
 
-#### 3 July 2023 - Fix - Admin App - Organization user overview will display all DMSs of each user correctly [ID_36795]
+#### 3 July 2023 - Fix - Admin app - Organization user overview will display all DMSs of each user correctly [ID_36795]
 
-In the Admin App, when an organization user had more than one DMS, only the last DMS would be shown in the organization user overview and its details overlay. This issue has now been resolved.
+In the Admin app, when an organization user had more than one DMS, only the last DMS would be shown in the organization user overview and its details overlay. This issue has now been resolved.
 
 #### 28 June 2023 - Enhancement - SupportAssistant 1.4.0 - Improved offloading of reports and notifications [ID_36726]
 
-To improve the maintenance and support experience, offloading of reports and notifications generated by SLWatchDog to dataminer.services is now implemented in a different manner. 
+To improve the maintenance and support experience, offloading of reports and notifications generated by SLWatchDog to dataminer.services is now implemented in a different manner.
 
 Because of this, you will need to upgrade to SupportAssistant 1.4.0 in order to keep this feature available, as the previous implementation (available since SupportAssistant 1.3.1) is now obsolete.
 
@@ -63,6 +97,10 @@ This is now no longer the case. All email input for all Chat Integration feature
 #### 7 June 2023 - Fix - CloudGateway 2.11.0 / CoreGateway 2.13.0 - Resolved connection issue [ID_36439] [ID_36453]
 
 In case the DMA name no longer corresponded to the server name after a rename, when using cloud features like Remote Access or Sharing, you could encounter the error message "The DataMiner System has no active connections to the DataMiner Cloud Platform". This issue has now been resolved by using the DMA name instead of the server name.
+
+#### 30 May 2023 - Enhancement - Catalog - Notification when deploying from the catalog [ID_36543]
+
+When you deploy something (e.g. a connector) from the catalog to a DMA, a notification will now indicate if the deployment has started properly. The notification also contains a link to the Admin page, where you can view the status of the deployment.
 
 #### 19 May 2023 - Fix - CloudGateway 2.10.12 - Resolved concurrency issue [ID_36432]
 
@@ -106,7 +144,7 @@ System.NullReferenceException: Object reference not set to an instance of an obj
 
 #### 5 May 2023 - Enhancement -  CloudGateway 2.10.9 - ConnectionTester tool output improved [ID_36260]
 
-The ConnectionTester tool, which is included in the CloudGateway installation, has been improved and will have clearer logging output that is easier to understand. 
+The ConnectionTester tool, which is included in the CloudGateway installation, has been improved and will have clearer logging output that is easier to understand.
 
 #### 3 May 2023 - Fix - SupportAssistant 1.3.2 - Fixed incorrect timeout for Remote Log Collection uploads [ID_36311]
 

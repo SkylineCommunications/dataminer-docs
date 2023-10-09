@@ -223,23 +223,6 @@ To do so, right-click a resource in the list, and select *Duplicate*.
 
 - If you make a duplicate of a function resource, the instance dropdown will be left empty and the name of the function instance will be the name of the original function instance with the suffix `- copy`.
 
-#### Having data offloaded to multiple Elasticsearch clusters & enabling TLS when configuring a Cassandra database [ID_36399]
-
-<!-- MR 10.4.0 - FR 10.3.10 -->
-
-In the *Database* section of *System Center*, you can now do the following:
-
-- Have data offloaded to multiple Elasticsearch clusters.
-
-  For detailed instructions, see [Configuring multiple Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters)
-
-- Enable TLS when configuring a Cassandra database.
-
-  See [Configuring the general database settings](xref:Configuring_the_database_settings_in_Cube)
-
-> [!IMPORTANT]
-> From now on, configuring multiple Elasticsearch clusters should only be done via DataMiner Cube.
-
 #### DataMiner Cube - Alarm Console: Special Elasticsearch search box always visible on systems with a Cassandra Cluster database [ID_36735]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
@@ -341,6 +324,50 @@ From now on, when you select the *Include alarms* option, the masked alarms will
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
 DataMiner Cube now supports pattern occurrence events. This means that occurrences of patterns that are already displayed on a trend graph will be added in real time.
+
+#### Spectrum analysis: Panning horizontally inside a spectrum window [ID_37284]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+It is now possible to pan horizontally inside a spectrum window by clicking and dragging.
+
+When, after clicking the left mouse button, you start dragging, the following will happen:
+
+- The spectrum trace will move to the left or the right while being refreshed at a rate equal to the original rate.
+- The start, stop and center frequency labels on the X axis will continuously update to reflect the ongoing change.
+- The unknown part of the trace (i.e. the frequency range located outside of the original span) will be visualized as a grey area with a grid in the background.
+
+When you stop dragging and release the left mouse button, the panning dimensions will be set on the spectrum analyzer device and the screen will be updated with the new data.
+
+Only upon releasing the left mouse button will the unknown part of the trace be requested from the spectrum analyzer. The newly received trace points will then replace the grey area and a new, uniform spectrum trace will be displayed based on the new center frequency.
+
+> [!IMPORTANT]
+> This feature is only available if the spectrum protocol includes the *Start Frequency*, *Center Frequency* and *Stop Frequency* parameters.
+
+#### Credentials Library now supports username and password credentials [ID_37416]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+In the Credentials Library in DataMiner Cube (available via *System Center* > *System Settings* > *Credentials Library*), you can now configure a new type of credentials, i.e. username and password credentials. To do so, in the *Type* dropdown, select *Username and password credentials*, and then specify the username and password.
+
+#### Spectrum analysis: Panning vertically inside a spectrum window [ID_37461]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+It is now possible to pan vertically inside a spectrum window by CTRL+clicking and dragging.
+
+When, after pressing the CTRL key and clicking the left mouse button, you start dragging, the following will happen:
+
+- The spectrum trace will move up or down while being refreshed at a rate equal to the original rate.
+- The amplitude labels on the Y axis will continuously update to reflect the ongoing change.
+- The unknown part of the trace (i.e. the amplitude range located outside of the original span) will be visualized as a grey area with a grid in the background.
+
+When you stop dragging and release the left mouse button, the panning dimensions will be set on the spectrum analyzer device and the screen will be updated with the new data.
+
+Only upon releasing the left mouse button will the unknown part of the trace be requested from the spectrum analyzer. The newly received trace points will then replace the grey area and a new, uniform spectrum trace will be displayed based on the new reference level.
+
+> [!IMPORTANT]
+> This feature is only available if the spectrum protocol includes the *Reference level* parameter.
 
 ## Changes
 
@@ -518,6 +545,12 @@ On the Users/Groups page in System Center, a tooltip has been added to the *Edit
 
 The style of the toggle buttons in the *Included* and *Anomalies* columns of the alarm template editor as well as in the *Templates* tab of parameter drill-down pages was not consistent with the styles used in the Cube themes. This has now been rectified.
 
+#### CefSharp package download enhancements [ID_37319]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+From now on, when DataMiner Cube has to download the CefSharp package from a DataMiner Agent, it will first try to download it via HTTPS, and if HTTPS is not configured, it will try again via HTTP.
+
 ### Fixes
 
 #### Profiles app: A profile instance would incorrectly list parameters that had been removed from the profile definition [ID_34679] [ID_34771]
@@ -625,3 +658,50 @@ Symptoms:
 When, in a trend graph, you hovered over a pattern of which the instance of the curve was not equal to the instance of the pattern (which had its instancePartOfIdentity property set to false), the curve would incorrectly not be highlighted.
 
 Also, incorrect curves would be added when you clicked to load the linked patterns, and incorrect curves were highlighted when you hovered over a pattern that consisted of two subpatterns from different elements.
+
+#### Trending: Problem when editing a trend pattern on a graph other than the one on which the pattern was created [ID_37191]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When you edited a trend pattern on a trend graph, up to now, the trend data on the graph on which the pattern was created would incorrectly be used instead. From now on, the trend data in the selected part of the graph will be used.
+
+#### System Center - Database: No longer possible to create and delete database configurations in the Offload and Other tabs when Type was set to 'Database per cluster' [ID_37254]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+In the *Database* section of *System Center*, when *Type* was set to "Database per cluster" in the *General* tab, creating and deleting database configurations in the *Offload* and *Other* tabs would no longer work.
+
+#### Visual Overview: No longer possible to return to the initially selected page when the VdxPage property was linked to a session variable [ID_37419]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+In a visual overview containing multiple pages, it would no longer be possible to return to the initially selected page when the shape used to switch pages had its `VdxPage` property updated using a session variable.
+
+#### Trending: Problem when trying to edit a multivariate pattern [ID_37433]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+Due to a cache synchronization issue, problems could occur when trying to edit a multivariate pattern of which one of the elements is located on another DataMiner Agent.
+
+#### DataMiner Cube could become unresponsive during startup when the Alarm Console did not contain any alarm tabs [ID_37436]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When starting up, DataMiner Cube could become unresponsive during the *Connected!* step When the Alarm Console did not contain any alarm tabs.
+
+#### Automation app: Problems with scripts using user-defined APIs [ID_37442]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When you opened the Automation app, an exception could be thrown in the background when verifying if scripts used user-defined APIs.
+
+Also, when you clicked *Configure API...* for a particular Automation script, the *New token...* button would incorrectly be disabled.
+
+#### Trending: Trend graph would disappear when panning [ID_37453]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+When you panned a trend graph, in some cases, the graph would suddenly disappear.
+
+> [!NOTE]
+> From now on, trending errors will also be logged in the main Cube logging (*System Center > Logging*).

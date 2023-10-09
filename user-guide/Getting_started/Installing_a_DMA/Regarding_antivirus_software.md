@@ -10,13 +10,13 @@ It is possible to install antivirus software on a DMA. However, you need to keep
 
   - `C:\Skyline DataMiner`
   - `C:\Program Files\Skyline Communications`
-  - The data directories of the database (e.g. `C:\ProgramData\Cassandra` or `C:\ProgramData\MySQL`)
+  - In case you are using self-hosted data storage instead of [Storage as a Service](xref:STaaS), the data directories of the databases (e.g. `C:\ProgramData\Cassandra`)
 
 - Exclude the following processes:
 
   - All DataMiner processes (process names starting with "SL" or "DataMiner").
   - The NATS processes *nats-account-server.exe* and *nats-streaming-server.exe*.
-  - The process(es) of the database application(s) you are using with DataMiner (Cassandra, MySQL, MSSQL, Elasticsearch).
+  - In case you are using self-hosted data storage instead of [Storage as a Service](xref:STaaS), the process(es) of the database application(s) you are using with DataMiner (e.g. Cassandra).
 
 - Avoid scheduled virus scans affecting the available resources for the DataMiner software at certain moments in time.
 

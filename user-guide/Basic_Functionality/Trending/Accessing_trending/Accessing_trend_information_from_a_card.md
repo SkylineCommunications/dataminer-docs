@@ -6,14 +6,14 @@ uid: Accessing_trend_information_from_a_card
 
 On the data side of element cards, service cards and (for aggregation) view cards, trended parameters are indicated with a trending icon.
 
-On a DMA using a Cassandra database, these trending icons can be displayed differently depending on the predicted trend:
+On a DMA using [Storage as a Service](xref:STaaS) or a [self-hosted Cassandra-compatible database](xref:Supported_system_data_storage_architectures), these trending icons can be displayed differently depending on the predicted trend:
 
 | Trend icon  | Description |
 |-------------|-------------|
 | ![Upward trend icon](~/user-guide/images/Trend_icon_increase.png) | The predicted trend value is increasing. Hover over the icon to view the rate of increase. |
 | ![Downward trend icon](~/user-guide/images/trend_icon_decrease.png) | The predicted trend value is decreasing. Hover over the icon to view the rate of decrease. |
 | ![Stable trend icon](~/user-guide/images/trend_icon_stable.png)   | The predicted trend remains stable. |
-| ![Trend icon without prediction](~/user-guide/images/trend_icon_unknown.png) | The trend behavior cannot be predicted, either because there is insufficient data, or because there is too much uncertainty in the direction of the trend during the past hour. On a DMA that does not use a Cassandra database, only this icon is displayed. |
+| ![Trend icon without prediction](~/user-guide/images/trend_icon_unknown.png) | The trend behavior cannot be predicted, either because there is insufficient data, or because there is too much uncertainty in the direction of the trend during the past hour. On a DMA that uses a legacy MySQL database, only this icon is displayed. |
 
 > [!NOTE]
 >

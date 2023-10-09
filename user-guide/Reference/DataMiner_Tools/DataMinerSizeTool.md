@@ -62,6 +62,9 @@ To run this tool, follow the procedure below. The letters in parentheses refer t
 
 1. Click the *Connect* button (d).
 
+   > [!NOTE]
+   > If you encounter a `Skyline.DataMiner.Net.Exceptions.DataMinerCommunicationException:Possible version conflict` exception, copy the *SLNetTypes.dll* and *ICSharpCode.SharpZipLib.dll* files from *C:\Skyline DataMiner\Files* to the directory where the *WhatsTheSize.exe* file is located.
+
 1. Optionally, specify (part of) a protocol or element name in the *Filter* box (c) in case you only want to count specific protocols or elements. Only protocols or elements that contain the text specified in the box (case-insensitive) will be taken into account.
 
    For example, if your filter is “ird”, only elements with “ird” in the element name or protocol name will be included.

@@ -47,6 +47,9 @@ Enables behavioral anomaly detection and suggestion events. See [Behavioral anom
 > [!NOTE]
 > Deprecated from DataMiner 10.3.6 onwards. No longer supported from DataMiner 10.4.1 onwards. This feature is replaced by the [UserDefinableAPI](#userdefinableapi) feature.
 
+> [!CAUTION]
+> APIDeployment is not supported on systems using [Storage as a Service (STaaS)](xref:STaaS).
+
 Enables dynamic API deployment on the SLAPIEndpoint application.
 
 Requires the .NET 5.0 hosting bundle.
@@ -169,7 +172,7 @@ Provides access to additional data sources and operators for GQI in the Dashboar
 > - The object manager instances data source (available from DataMiner 10.3.6 onwards).<!-- RN 36124 -->
 
 - **Minimum version**: 10.0.13
-- **Estimated release version for the custom operator**: 10.3.11
+- **Estimated release version for the custom operator**: 10.3.12
 - **Estimated release version for other data sources and operators**: To be determined
 
 ### GenericOwnership
@@ -282,7 +285,7 @@ Enables the button panel component in the Dashboards app.
 Enables the grid component in the Dashboards app.
 
 - **Minimum version**: 10.2.12
-- **Estimated release version**: 10.3.11
+- **Estimated release version**: 10.3.12
 
 ### ReportsAndDashboardsExport
 
@@ -296,7 +299,7 @@ Enables the export to PDF button within the Dashboards app itself. Creating PDFs
 Enables a new Maps component in the Dashboards app and the Low-Code Apps.
 
 - **Minimum version**: 10.3.2
-- **Estimated release version**: 10.3.11
+- **Estimated release version**: 10.3.12
 
 ### ReportsAndDashboardsGuides
 
@@ -322,7 +325,7 @@ Enables the Query Filter component in the Dashboards app.
 Enables the Timeline component in the Dashboards app.
 
 - **Minimum version**: 10.1.10
-- **Estimated release version**: 10.3.11
+- **Estimated release version**: 10.3.12
 
 ### ResourceList
 
@@ -365,6 +368,12 @@ Enables contributing service protocol generation.
 
 - **Minimum version**: 9.6.1
 - **Release version**: 9.6.11/10.0.0 ([RN 23201](xref:General_Main_Release_10.0.0_new_features_5#service--resource-management-possibility-to-generate-protocols-and-function-definitions-based-on-service-definitions-and-enhanced-services-based-on-reservations-id_19330id_19359id_19385id_19386id_19415id_19431id_19450-id_19491id_19498id_19556id_19632id_19789id_23201))
+
+### Swarming
+
+Enables [Swarming](xref:Swarming) support for eligible systems.
+
+- **Minimum version**: 10.3.11
 
 ### VisualDataManager
 

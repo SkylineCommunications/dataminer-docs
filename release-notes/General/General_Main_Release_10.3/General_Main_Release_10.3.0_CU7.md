@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.3.0_CU7
 ---
 
-# General Main Release 10.3.0 CU7 – Preview
+# General Main Release 10.3.0 CU7
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
@@ -141,7 +141,7 @@ Up to now, SLReset would re-install NATS **before** it cleaned up the `C:\Skylin
 
 #### Failover: NATS servers would incorrectly use the virtual IP address of a Failover setup to establish the route to the online agent [ID_37073]
 
-<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.9 [CU1] -->
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.9 [CU2] -->
 
 When the NATS server builds the route connections to the agents in a Failover setup, in some cases, when establishing the route to the online agent, it used the virtual IP address of the Failover setup instead of the primary address of the online agent.
 
@@ -188,3 +188,9 @@ In some cases, the length parameter in a response would not be set to the the co
 In some cases, events scheduled to run at the end of a booking would not be run because the status of the booking was set to "Ended" too soon.
 
 From now on, the status of a booking will only be set to "Ended" once all events have been run.
+
+#### Problem when updating the NATS server [ID_37305]
+
+<!-- 10.2.0 [CU19]/MR 10.3.0 [CU7] - FR 10.3.10 [CU0] -->
+
+In some cases, when updating the NATS server, an error could occur while replacing the *nats-streaming-server.exe* file.
