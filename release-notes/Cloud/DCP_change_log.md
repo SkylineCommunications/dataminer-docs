@@ -6,6 +6,10 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 9 October 2023 - Fix - CoreGateway 2.13.2 - Resolved an issue that could occur after a DataMiner up or downgrade [ID_37441]
+
+Resolved an issue were the CoreGateway DxM did not reinitialize its DataMiner dependencies when the local DataMiner was up or downgraded. In that case serialization issues could occur at runtime, for example when using the DataMiner Teams bot. 
+
 #### 2 October 2023 - Enhancement - CloudFeed 1.3.0 - Upgrade to .NET 6 [ID_36940]
 
 DataMiner CloudFeed has been upgraded to .NET 6, so that it no longer depends on .NET 5. **Make sure .NET 6 is installed** before you upgrade to this version.
