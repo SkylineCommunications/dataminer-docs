@@ -58,7 +58,7 @@ For **Cassandra**, any number of nodes can be used, ideally running on **Linux**
 ![Setup with Elasticsearch and DataMiner sharing resources](~/user-guide/images/Elasticsearch-DataMiner-sharing-resources.png)<br>
 *Setup with Elasticsearch and DataMiner sharing resources*
 
-![Two DMAs using a single Cassandra and OpenSearch node running on dedicated machines](~/user-guide/images/Single-Cassandra-and-Elasticsearch-node.png)<br>
+![Two DMAs using a single Cassandra and OpenSearch node running on dedicated machines](~/user-guide/images/Single-Cassandra-and-OpenSearch-node.png)<br>
 *Two DMAs using a single Cassandra and OpenSearch node running on dedicated machines*
 
 ## Failover setups (without geo-redundancy)
@@ -69,7 +69,7 @@ An on-premises setup should at the very least consist of two DataMiner machines,
 
 While hosting Elasticsearch and DataMiner nodes on the same machine is already not recommended in general, this should definitely not be done in a Failover setup, as it will not allow you to get the desired resilience.
 
-![DataMiner Failover pair using a Cassandra and OpenSearch database running on dedicated machines](~/user-guide/images/Failover-pair-Cassandra-and-Elasticsearch.png)<br>
+![DataMiner Failover pair using a Cassandra and OpenSearch database running on dedicated machines](~/user-guide/images/Failover-pair-Cassandra-and-OpenSearch.png)<br>
 *DataMiner Failover pair using a Cassandra and OpenSearch database running on dedicated machines*
 
 ![Minimum recommended setup for a fully redundant system](~/user-guide/images/Min-recom-setup-fully-redundant.png)<br>
@@ -78,7 +78,7 @@ While hosting Elasticsearch and DataMiner nodes on the same machine is already n
 ![Recommended setup with managed services in the cloud](~/user-guide/images/Failover_recommended_setup.png)<br>
 *Recommended setup with managed services in the cloud*
 
-![DataMiner System consisting of three Failover pairs with Cassandra and OpenSearch nodes running on dedicated machines](~/user-guide/images/3-Failover-pairs-Cassandra-and-Elasticsearch.png)<br>
+![DataMiner System consisting of three Failover pairs with Cassandra and OpenSearch nodes running on dedicated machines](~/user-guide/images/3-Failover-pairs-Cassandra-and-OpenSearch.png)<br>
 *DataMiner System consisting of three Failover pairs with Cassandra and OpenSearch nodes running on dedicated machines*
 
 ## Failover setups (with geo-redundancy)
