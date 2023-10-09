@@ -52,7 +52,7 @@ Status overview:
 | Item | Current status | Detail | Future status |
 |---------|---------|---------|---------|
 | Support for MSSQL as local database | End of Life as of DataMiner 10.3 (Q4 2022) | Feature will no longer be supported. We recommend moving to Cassandra. | End of Life as of DataMiner version 10.3.x (Q4 2022) |
-| Support for MySQL as local database | End of Support as of DataMiner 10.3 (Q4 2022) | Existing features will work, but some new features will require Cassandra or Elasticsearch as necessary. | End of Life as of DataMiner version 10.4.x (Q4 2023) |
+| Support for MySQL as local database | End of Support as of DataMiner 10.3 (Q4 2022) | Existing features will work, but some new features will require Cassandra or OpenSearch/Elasticsearch as necessary. | End of Life as of DataMiner version 10.4.x (Q4 2023) |
 | Support for DataMiner Cube running in Internet Explorer/Edge in IE compatibility mode (XBAP) | End of Engineering | Existing features will work, but some new features will only be supported in the DataMiner Cube desktop app. | End of Life as of DataMiner version 10.3.x (Q4 2022) |
 | Support for Visual Studio 2015 | End of Life as of DIS 2.35 | DIS will no longer be compatible with this Visual Studio version. |   |
 

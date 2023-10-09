@@ -4,6 +4,9 @@ uid: Resources_migration_to_elastic
 
 # Migrating SRM resources to Elasticsearch
 
+> [!IMPORTANT]
+> Elasticsearch is **only supported up to version 6.8**. We therefore recommend using [Storage as a Service](xref:STaaS) instead, or if you do want to continue using self-hosted storage, using [dedicated clustered storage](xref:Dedicated_clustered_storage) with OpenSearch or the Amazon OpenSearch Service on AWS.
+
 Starting from DataMiner version 10.3.0/10.3.2, you can migrate the resources and resource pools from the *Resources.xml* file to Elasticsearch. This improves the scalability and performance on systems that have a large number of resources.
 
 Resources are not automatically migrated when you [install Elasticsearch](xref:Installing_Elasticsearch_via_DataMiner) and [migrate booking data](xref:Configuring_DataMiner_Indexing). Based on your specific setup, and keeping in mind the [limitations and differences between XML and Elasticsearch storage](#limitations-and-differences-with-xml-storage), you can decide independently whether or not you want to start this migration.

@@ -3,11 +3,14 @@ uid: Manually_Connecting_DMA_to_Elasticsearch_Cluster
 ---
 # Manually connecting a DMA to an Elasticsearch cluster
 
-If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STaaS) setup but instead want to use a self-hosted storage setup with Elasticsearch, you can connect a DataMiner Agent to an existing Elasticsearch cluster by manually adding a *DataBase* tag to the *DB.xml* file, as detailed below.
+If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STaaS) setup but instead want to use a self-hosted storage setup with Elasticsearch, you can connect a DataMiner Agent to an existing Elasticsearch cluster.
+
+If you are using a [dedicated clustered storage](xref:Dedicated_clustered_storage) setup, from 10.3.0/10.3.3 onwards, you should do so in DataMiner Cube, as detailed under [Configuring the general database settings in Cube](xref:Configuring_the_database_settings_in_Cube#cassandra-cluster-database).
+
+If you are using an older DataMiner version or a setup with storage per DMA, follow the steps below.
 
 > [!IMPORTANT]
-> From DataMiner 10.3.0/10.3.3 onwards, for a Cassandra cluster database, we recommend connecting your DMA to an Elasticsearch cluster in DataMiner Cube instead of in the *DB.xml* file. For more information, see [Configuring the general database settings in Cube](xref:Configuring_the_database_settings_in_Cube#cassandra-cluster-database).
-> For a Cassandra database per DMA, follow the steps below.
+> Elasticsearch is **only supported up to version 6.8**. As a consequence, if you want to use self-hosted storage instead of the recommended [Storage as a Service](xref:STaaS), we recommend using [dedicated clustered storage](xref:Dedicated_clustered_storage) with OpenSearch or the Amazon OpenSearch Service on AWS.
 
 > [!CAUTION]
 > Make sure the DataMiner Agent has an available connection to each node of the Elasticsearch cluster. To verify this, enter `http://elasticnodeip:9200/` in your browser's address bar to access the general server information.
