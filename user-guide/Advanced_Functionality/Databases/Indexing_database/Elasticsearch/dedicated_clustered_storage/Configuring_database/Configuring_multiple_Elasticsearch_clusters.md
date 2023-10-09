@@ -81,7 +81,7 @@ To configure this setup:
 
    - *Password*: The password to connect to Elasticsearch. This is the equivalent of the *PWD* tag in *DB.xml* (see [Specifying custom credentials for Elasticsearch](xref:DB_xml#specifying-custom-credentials-for-elasticsearch)).
 
-   - *Prefix*: The prefix for the Elasticsearch indexes. This is the equivalent of the *DB* tag in *DB.xml* (see [Specifying a custom prefix for the Elasticsearch indexes](xref:DB_xml#specifying-a-custom-prefix-for-the-elasticsearch-indexes)).
+   - *Prefix*: The prefix for the Elasticsearch indexes. This is the equivalent of the *DB* tag in *DB.xml* (see [Specifying a custom prefix for the Elasticsearch indexes](xref:DB_xml#specifying-a-custom-prefix-for-the-indexes)).
 
    - *FileOffloadIdentifier*: String used to identify this connection. Each connection should have a different identifier, which will be used for file offloads.
 
