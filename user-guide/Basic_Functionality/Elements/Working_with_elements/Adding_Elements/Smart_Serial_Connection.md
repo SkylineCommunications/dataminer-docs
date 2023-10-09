@@ -13,7 +13,7 @@ For smart-serial connections, you can specify the following connection settings 
   - If you specify “any” as the host address, DataMiner listens on all IP addresses on the specified port.
 
   > [!NOTE]
-  > [Dynamic polling](#dynamic-polling) (available from DataMiner 10.3.11/10.4.0 onwards<!--RN 37404-->) is only supported when the smart-serial connection acts as a client. Assigning an IP addresses like "127.0.0.1" or "any" makes the element acts as a server, and it cannot switch to a client mode without stopping it. Also, trying to assign a value like "127.0.0.1" to the dynamic IP parameter at runtime will cause an error.
+  > [Dynamic polling](#dynamic-polling) (available from DataMiner 10.3.11/10.4.0 onwards<!--RN 37404-->) is only supported when the smart-serial connection acts as a client. Assigning IP addresses like "127.0.0.1" or "any" makes the element act as a server, and it cannot switch to a client mode without stopping it. Also, trying to assign a value like "127.0.0.1" to the dynamic IP parameter at runtime will cause an error.
 
 - **IP port**: The IP port of the destination. This is not always required.
 
