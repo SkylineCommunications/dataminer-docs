@@ -1,3 +1,7 @@
+---
+uid: BPA_SRM_Function_Resources_Consistency
+---
+
 # SRM Framework Configuration
 
 This BPA test checks for Bookings with invalid Properties that have end date in the future.
