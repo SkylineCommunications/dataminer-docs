@@ -88,7 +88,7 @@ If there is more than one DataMiner Agent in your cluster, the time in the clust
 > [!NOTE]
 >
 > - If you want to **uninstall** Microsoft Visual C++ 2010, make sure to do so only **after upgrading** to 10.3.9, 10.3.0 [CU6], or 10.2.0 [CU18], as otherwise the upgrade will fail.
->- Microsoft Visual C++ versions 2015 up to 2022 are backwards-compatible, and only one version can be installed at the same time. For this reason, we recommend updating to the latest version of Microsoft Visual C++ 2022.
+> - Microsoft Visual C++ versions 2015 up to 2022 are backwards-compatible, and only one version can be installed at the same time. For this reason, we recommend updating to the latest version of Microsoft Visual C++ 2022.
 
 ### Computer name
 
