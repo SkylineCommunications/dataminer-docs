@@ -140,4 +140,4 @@ Afterwards DataMiner needs to be restarted.
 This should restore DataMiner to a functional state.  
 
 > [!IMPORTANT]
-> If the main Elasticsearch cluster goes down, it will need to be restored afterwards. To ensure that the data is not in sync, first follow the procedure on [Verifying Elasticsearch synchronization](xref:Verifying_Elasticsearch_Synchronization#checking-database-health), then follow the procedure to restore on [Taking a snapshot of one Elasticsearch cluster and restoring it to another](xref:Taking_snapshot_Elasticsearch_cluster#taking-a-snapshot-of-one-elasticsearch-cluster-and-restoring-it-to-another).
+> If the main Elasticsearch cluster goes down, it will need to be restored afterwards. To ensure that the data is not in sync, first follow the procedure on [Verifying Elasticsearch synchronization](xref:Verifying_Elasticsearch_Synchronization#checking-database-health), then follow the procedure to restore on [Taking a snapshot of one Elasticsearch cluster and restoring it to another](xref:Taking_snapshot_Elasticsearch_cluster_and_restoring_to_different_cluster).
