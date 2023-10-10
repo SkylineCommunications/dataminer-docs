@@ -65,7 +65,7 @@ The detailed JSON output of the BPA may contain the following messages, dependin
 
 - ICMP Ping to these agents failed: X (where X is is the summary of regarding agents).
 
-- ICMP Ping to these agents returned response but the round-trip time was bigger than 50ms: X (where X is the summary of regarding agents and the round-trip time).
+- ICMP Ping round-trip time was bigger than 50ms: X (where X is the summary of regarding agents and the round-trip time).
 
 ### Not Executed
 
