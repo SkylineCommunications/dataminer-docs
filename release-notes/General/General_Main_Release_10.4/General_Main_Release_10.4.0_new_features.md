@@ -555,7 +555,7 @@ The DataMiner software now supports a more extensive configuration of behavioral
 
 From now on, you will be able to choose between the following types of anomaly monitoring:
 
-- Smart anomaly monitoring (i.e. anomaly monitoring as it existing before)
+- Smart anomaly monitoring (i.e. anomaly monitoring as it existed before)
 - Customized anomaly monitoring
 
 Customized anomaly monitoring will enable you to do the following:

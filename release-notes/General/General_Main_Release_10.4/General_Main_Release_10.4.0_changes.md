@@ -525,6 +525,18 @@ When a parameter has anomalous flatline periods in its trend data history that a
 
 Up to now, a DataMiner using STaaS communicated with the database via TCP/IP ports 443, 5671 and 5672. From now on, it will communicate with the database via port 443 only.
 
+#### Storage as a Service: Enhanced performance of DOM and SRM queries [ID_37495]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+Because of a number of enhancements, overall performance of DOM and SRM queries has increased.
+
+#### Storage as a Service: Enhanced error handling [ID_37554]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+A number of enhancements have been made with regard to error handling.
+
 ### Fixes
 
 #### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID_34981]

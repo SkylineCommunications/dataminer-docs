@@ -30,7 +30,7 @@ The DataMiner software now supports a more extensive configuration of behavioral
 
 From now on, you will be able to choose between the following types of anomaly monitoring:
 
-- Smart anomaly monitoring (i.e. anomaly monitoring as it existing before)
+- Smart anomaly monitoring (i.e. anomaly monitoring as it existed before)
 - Customized anomaly monitoring
 
 Customized anomaly monitoring will enable you to do the following:
@@ -92,17 +92,23 @@ A number of enhancements have been made with regard to the verification of forec
 
 When a parameter has anomalous flatline periods in its trend data history that are breaking the normal trend data patterns, from now on, those flatline periods will no longer be included into the training data of the prediction model. As a result, a more accurate prediction can be expected on this kind of behavior.
 
+#### Storage as a Service: Enhanced performance of DOM and SRM queries [ID_37495]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+Because of a number of enhancements, overall performance of DOM and SRM queries has increased.
+
 #### Security enhancements [ID_37540]
 
 <!-- 37540: MR 10.4.0 - FR 10.3.12 -->
 
 A number of security enhancements have been made.
 
-#### DataMiner Cube: Caching enhancements [ID_37553]
+#### Storage as a Service: Enhanced error handling [ID_37554]
 
-<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+<!-- MR 10.4.0 - FR 10.3.12 -->
 
-A number of general enhancements have been made with regard to cache management.
+A number of enhancements have been made with regard to error handling.
 
 ### Fixes
 
