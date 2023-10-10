@@ -8,6 +8,8 @@ Available from DataMiner 10.3.10/10.4.0 onwards<!-- RN 37200 -->.
 
 This component is used to guide the user through a workflow by splitting it up into different numbered or labeled steps. It indicates the progress through the workflow by showing the past steps, current step, and future steps. The component uses a stateful DOM instance or DOM definition (i.e. a DOM instance or DOM definition that contains states) as data input.
 
+From DataMiner 10.3.11 onwards<!--RN 37242-->, text will automatically wrap onto a new line when it reaches the edge of the label box, using available horizontal and vertical space. If the text exceeds the label's capacity, it will be truncated with an ellipsis. In DataMiner 10.3.10, long names that exceed the label length are cut off.
+
 To configure the component:
 
 1. Apply a DOM definition or DOM instance data feed. See [Applying a data feed](xref:Configuring_dashboard_components#applying-a-data-feed).
