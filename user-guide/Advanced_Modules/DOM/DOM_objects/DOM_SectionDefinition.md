@@ -133,7 +133,11 @@ The table below lists the properties of the `CustomSectionDefinition` object. (T
 
 - When you **update** a `SectionDefinition`:
 
-  - You cannot remove `FieldDescriptors` from a `SectionDefinition` when a `DomInstance` already uses that definition.
+  - `FieldDescriptors` cannot be removed from a `SectionDefinition` when they:
+
+    - are still used in a `DomInstanceNameDefinition` set on a `DomDefinition`,
+    - are still used in a `DomStatusSectionDefinitionLink` for that `SectionDefinition` on a `DomBehaviorDefinition`,
+    - have a value set on a `DomInstance` linked to a section for that `SectionDefinition`.
 
   - During an update, the properties of the previous and updated version of the `FieldDescriptor` are checked. The behavior of this check depends on the type of `FieldDescriptor`, but by default, the following properties can be changed freely:
 
