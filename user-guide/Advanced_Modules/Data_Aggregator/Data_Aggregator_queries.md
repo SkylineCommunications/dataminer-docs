@@ -35,6 +35,9 @@ To get a correctly configured query, you can make use of the DataMiner Dashboard
    > }
    > ```
 
+   > [!NOTE]
+   > From DataMiner 10.3.11/10.4.0 onwards<!--RN 37360-->, the *ConvertQueryToProtoJson* web method supports node keys.
+
 1. From the received response, copy the value of *d:*.
 
    The copied value is a JSON-wrapped JSON string.
