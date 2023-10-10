@@ -143,3 +143,9 @@ Up to now, when you stopped both *Alarm Focus* and *Automatic Incident Tracking*
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
 
 When a resource did not have both a minimum and maximum value for a particular range point, the resource capability exposers would not work correctly for that range point.
+
+#### Newly created element could get assigned the same DmaId/ElementId key as another, already existing element [ID_37560]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+In some cases, a newly created element could get assigned the same DmaId/ElementId key as another, already existing element on another DataMiner Agent in the cluster. From now on, this will be prevented as long as the DataMiner Agents in questions can communicate with each other.

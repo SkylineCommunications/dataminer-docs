@@ -700,3 +700,9 @@ Due to a cache synchronization issue, problems could occur when trying to edit a
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
 In EPM environments, an error could occur when SLNet requested information from other DataMiner Agents in the DMS.  
+
+#### Newly created element could get assigned the same DmaId/ElementId key as another, already existing element [ID_37560]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+In some cases, a newly created element could get assigned the same DmaId/ElementId key as another, already existing element on another DataMiner Agent in the cluster. From now on, this will be prevented as long as the DataMiner Agents in questions can communicate with each other.
