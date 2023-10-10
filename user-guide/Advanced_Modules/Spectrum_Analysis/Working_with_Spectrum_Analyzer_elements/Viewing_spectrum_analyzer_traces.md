@@ -78,6 +78,40 @@ It is possible to manually freeze and unfreeze the trace. To do so:
 > [!NOTE]
 > When the display is in frozen mode, *Frozen* is displayed in the middle of the graph area.
 
+## Panning the trace horizontally and vertically
+
+From DataMiner 10.3.11/10.4.0 onwards, it is possible to pan the trace horizontally and vertically<!--RN 37461 + RN 37284-->.
+
+- To pan horizontally, click the trace and drag your mouse.
+
+  The following will happen:
+
+  - The trace moves to the left or right while being refreshed at a rate equal to the original rate.
+
+  - The unknown part of the trace (i.e. the frequency range located outside of the original span) is visualized as a gray area with a grid in the background.
+
+  - The frequency labels on the X axis are updated continuously to reflect the ongoing change.
+
+  When you release the mouse button, the info pane to the right of the display section will automatically update with start, stop, and center frequencies that align with the new data. A new trace based on the updated center frequency will replace the gray area.
+
+  > [!IMPORTANT]
+  > Horizontal panning is only available when the spectrum protocol includes the *Start frequency*, *Stop frequency*, and *Center frequency* parameters.
+
+- To pan vertically, click the trace and drag your mouse while keeping Ctrl pressed.
+
+  The following will happen:
+
+  - The trace moves up or down while being refreshed at a rate equal to the original rate.
+
+  - The unknown part of the trace (i.e. the amplitude range located outside of the original span) is visualized as a gray area with a grid in the background.
+
+  - The amplitude labels on the Y axis are updated continuously to reflect the ongoing change.
+
+  When you release the mouse button and Ctrl, the info pane to the right of the display section will automatically update with a reference level and amplitude scale that align with the new data. A new trace based on the updated reference level will now replace the gray area.
+
+  > [!IMPORTANT]
+  > Vertical panning is only available when the spectrum protocol includes the *Reference level* parameter.
+
 ## Displaying the minimum and maximum hold of the trace
 
 It is possible to display the minimum and/or maximum hold of the trace you are currently viewing. To do so:

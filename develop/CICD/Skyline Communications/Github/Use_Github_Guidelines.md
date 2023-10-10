@@ -60,6 +60,8 @@ The repository name should look like this (using "-" as separator): **{customerA
   - GQIDS (GQI data source)
   - GQIO (GQI operator)
   - UDAPI (User-Defined APIs)
+  - DOC (Documentation)
+  - DISMACRO (DIS Macro)
 
   > [!NOTE]
   > If you think an item type should be added, please contact us so we can add it before you create the repository.
@@ -96,6 +98,8 @@ Here is a list of topics you should use (this list is to be extended):
 - dataminer-UI-test
 - dataminer-bot
 - dataminer-user-defined-api
+- dataminer-doc
+- dataminer-dis-macro
 
 If you have code for a specific project/customer, you should add a topic with the customer's name as well, e.g. `Skyline-Communications`. Always use a hyphen ("-") as a separator.
 

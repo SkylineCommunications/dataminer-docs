@@ -4,9 +4,6 @@ uid: EPM_6.1.9_I-DOCSIS
 
 # EPM 6.1.9 I-DOCSIS
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
-
 ## New features
 
 #### US QAM Ch Bitrate and DS QAM Ch Bitrate trending added for CCAP connectors [ID_37134]

@@ -62,12 +62,19 @@ To **migrate existing data** to STaaS, the following limitations apply:
 In addition, the following **other limitations** currently apply:
 
 - [Jobs](xref:jobs), [Ticketing](xref:ticketing), and [API Deployment](xref:Overview_of_Soft_Launch_Options#apideployment) data are not supported.
+
 - The following indexing engine functionality is not supported: Alarm Console search tab, search suggestions in the Alarm Console, aliases, and aggregation.
+
 - Direct queries from DataMiner Cube to the database are not supported.
+
 - The [SLReset tool](xref:Factory_reset_tool) is not supported.
+
 - [Exporting trend data](xref:Exporting_elements_services_etc_to_a_dmimport_file) to a .dmimport file is not supported.
+
 - Proxy and DMZ setups are currently not supported.
+
 - The [autoincrement](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#autoincrement) tag on logger tables is not supported.
+
 - DOM queries can be slower depending on the number of DOM records and the complexity of the query. This limitation will be removed in the near future.
 
 ## Troubleshooting
