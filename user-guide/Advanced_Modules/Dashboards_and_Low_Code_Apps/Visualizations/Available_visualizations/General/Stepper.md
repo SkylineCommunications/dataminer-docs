@@ -23,7 +23,7 @@ To configure the component:
 
      > [!NOTE]
      >
-     > - If the DOM history saving behavior of a module has been set to *Disabled* in [the `DomInstanceHistorySettings` object](xref:DOM_DomInstanceHistorySettings), the stepper component will not show a history of traversed states for any DOM instances. From DataMiner 10.3.11/10.4.0 onwards<!--RN 37233-->, instances without a history calculate the happy path from the initial state to the current state and then to the final state. In DataMiner 10.3.10, instances without a history calculate the happy path from the current state to the final state.
+     > - If the DOM history saving behavior of a module has been set to *Disabled* in [the `DomInstanceHistorySettings` object](xref:DOM_DomInstanceHistorySettings), the stepper component will not show the actual history of traversed states for any DOM instances. Instead, from DataMiner 10.3.11/10.4.0 onwards<!--RN 37233-->, instances without a history calculate the happy path from the initial state to the current state and then to the final state. In DataMiner 10.3.10, instances without a history only calculate the happy path from the current state to the final state.
      > - The DOM instance history objects are by default stored asynchronously, which enhances performance but may result in an outdated history when retrieved. In such cases, the path between the incomplete history and the current state is also completed according to the standard flow.
 
 1. Fine-tune the component layout. In the *Component > Layout* tab, the following options are available:
