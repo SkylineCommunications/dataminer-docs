@@ -21,7 +21,7 @@ The **Health package** is an insurance policy for your system that includes feat
 
 ## Storage as a Service (STaaS)
 
-Platform services prioritize convenience. The hassle of managing your own Cassandra and Elasticsearch database clusters is a thing of the past. With the scaling and complexity taken care of, you and your team can focus on the core business of your company. Our Storage as a Service (STaaS) solution streamlines your core operations by utilizing Skyline’s hosting service for your storage cluster, resulting in a significant reduction of on-premises resources, configuration, and maintenance.
+Platform services prioritize convenience. The hassle of managing your own Cassandra and OpenSearch/Elasticsearch database clusters is a thing of the past. With the scaling and complexity taken care of, you and your team can focus on the core business of your company. Our Storage as a Service (STaaS) solution streamlines your core operations by utilizing Skyline’s hosting service for your storage cluster, resulting in a significant reduction of on-premises resources, configuration, and maintenance.
 
 This is a powerful option where we manage the storage for you, so you can save on infrastructure and IT maintenance costs.
 

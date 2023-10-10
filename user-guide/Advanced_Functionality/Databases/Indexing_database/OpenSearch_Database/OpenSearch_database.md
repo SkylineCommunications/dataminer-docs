@@ -6,7 +6,7 @@ uid: OpenSearch_database
 
 If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STaaS) setup but instead want to use a self-hosted dedicated clustered storage setup, once you have configured a Cassandra-compatible database service, you can complete your setup by installing a dedicated OpenSearch indexing database cluster.
 
-Alternatives to the OpenSearch database are the [Elasticsearch database](xref:Elasticsearch_database) and the [Amazon OpenSearch Service](xref:Amazon_OpenSearch_Service).
+Alternatives to the OpenSearch database are the the [Amazon OpenSearch Service](xref:Amazon_OpenSearch_Service) and [Elasticsearch database](xref:Elasticsearch_database). The latter is only supported up to Elasticsearch version 6.8 and is consequently not recommended.
 
 For more information on how to **install an OpenSearch database**, see [Installing an OpenSearch database](xref:Installing_OpenSearch_database).
 

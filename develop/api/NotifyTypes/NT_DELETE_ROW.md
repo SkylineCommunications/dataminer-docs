@@ -48,7 +48,7 @@ int rowCount = (int)protocol.NotifyDataMiner(156 /*NT_DELETE_ROW*/, ids, primary
 ## Remarks
 
 - In order to delete multiple rows, provide a string array containing the primary keys of the rows to remove as second parameter.
-- Also supported for logger tables in an Elasticsearch database from DataMiner 9.6.4 (RN 17018) onwards.
+- Also supported for logger tables in the indexing database from DataMiner 9.6.4 (RN 17018) onwards.
 
 ## See also
 

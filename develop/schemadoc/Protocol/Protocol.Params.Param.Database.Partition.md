@@ -26,13 +26,14 @@ One of the following values:
 
 - day
 - hour
-- month (only supported with Cassandra/Elasticsearch)
-- year (only supported with Cassandra/Elasticsearch)
-- infinite (only supported with Elasticsearch, from DataMiner 9.6.4 (RN 19993) onwards): Ensures no rollover can occur.
+- month (only supported with Cassandra and indexing database)
+- year (only supported with Cassandra and indexing database)
+- infinite (only supported with indexing database, from DataMiner 9.6.4 (RN 19993) onwards): Ensures no rollover can occur.
 
 Please note the following:
+
 - For SQL databases, the Partition tag must be specified on a column that has ColumnDefinition set to DATETIME.
-- Partitioning in Cassandra is supported since DataMiner version 9.0.0 (RN12170). If ColumnDefinition is set to DATETIME and the Partition tag is set, Cassandra will use a TTL with the specified time. Since DataMiner version 9.5.7, you can specify the TTL of a logger table column via the Partition tag on any column.
+- Partitioning in Cassandra is supported since DataMiner version 9.0.0 (RN 12170). If ColumnDefinition is set to DATETIME and the Partition tag is set, Cassandra will use a TTL with the specified time. Since DataMiner version 9.5.7, you can specify the TTL of a logger table column via the Partition tag on any column.
 
 ```xml
 <Param id="1003" trending="false">

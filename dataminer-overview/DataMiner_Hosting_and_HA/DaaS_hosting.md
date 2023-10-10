@@ -31,7 +31,7 @@ DataMiner as a Service will allow you to spin up your DataMiner System in the cl
 
 - *Benefit from DataMiner Storage as a Service (STaaS)*
 
-  DataMiner as a Service comes with our very own Storage as a Service (STaaS) solution. This means your DataMiner System will immediately benefit from being connected to a scalable and user-friendly cloud-native storage platform. Gone are the days of estimating your storage requirements in advance, placing specific VM orders, or configuring complex Cassandra and Elasticsearch or OpenSearch clusters with the necessary replication and backup.
+  DataMiner as a Service comes with our very own Storage as a Service (STaaS) solution. This means your DataMiner System will immediately benefit from being connected to a scalable and user-friendly cloud-native storage platform. Gone are the days of estimating your storage requirements in advance, placing specific VM orders, or configuring complex Cassandra and OpenSearch clusters with the necessary replication and backup.
 
 - *Security first*
 

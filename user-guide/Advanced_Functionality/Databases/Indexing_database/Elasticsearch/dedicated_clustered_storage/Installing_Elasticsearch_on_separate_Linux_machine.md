@@ -4,6 +4,9 @@ uid: Installing_Elasticsearch_on_separate_Linux_machine
 
 # Installing Elasticsearch on a separate Linux machine
 
+> [!IMPORTANT]
+> Elasticsearch is **only supported up to version 6.8**. We therefore recommend using [Storage as a Service](xref:STaaS) instead, or if you do want to continue using self-hosted storage, using [dedicated clustered storage](xref:Dedicated_clustered_storage) with OpenSearch or the Amazon OpenSearch Service on AWS.
+
 If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STaaS) setup but instead choose a self-hosted dedicated clustered storage setup, and you want to use an Elasticsearch cluster for your DMS, install Elasticsearch on a Linux machine as detailed below.
 
 > [!NOTE]

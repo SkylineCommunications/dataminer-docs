@@ -65,7 +65,7 @@ The current settings structure (with regards to `DomManager`) is as follows:
 
 ## Notes
 
-- The module settings are saved in a separate Elasticsearch index (dms-cmodulesettings-xxx).
+- The module settings are saved in a separate OpenSearch/Elasticsearch index (dms-cmodulesettings-xxx).
 
 - Issues/events are logged in the *SLModuleSettingsManager.txt* log file.
 

@@ -205,7 +205,7 @@ If your DMS uses the Cassandra Cluster database type (i.e. one Cassandra cluster
 
 ### Example of a general database configuration
 
-The following example illustrates the configuration of a general database of type Cassandra cluster (i.e. one Cassandra cluster for the entire DMS, also known as the “Cassandra cluster” feature, available from DataMiner 10.1.0/10.1.2 onwards). As this also requires an Elasticsearch database (see [Indexing database settings](#indexing-database-settings)), the configuration for this database is included in the example:
+The following example illustrates the configuration of a general database of type Cassandra cluster (i.e. one Cassandra cluster for the entire DMS, also known as the “Cassandra cluster” feature, available from DataMiner 10.1.0/10.1.2 onwards). As this also requires an OpenSearch or Elasticsearch database (see [Indexing database settings](#indexing-database-settings)), the configuration for this database is included in the example:
 
 ```xml
 <DataBases xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.skyline.be/config/db">
@@ -471,9 +471,9 @@ To configure this:
 
 ## Indexing database settings
 
-Elasticsearch can be installed on DMAs with a Cassandra database as an additional indexing database. In that case, an additional database will be added to *DB.xml*.
+If a Cassandra database is used, an additional indexing database can be installed. In a setup with storage per DMA, only Elasticsearch is supported, but this setup is not recommended. In a clustered storage setup, you can use OpenSearch, Amazon OpenSearch Services, or Elasticsearch. This indexing database will also be added to *DB.xml*.
 
-The *\<Database>* tag for an Elasticsearch database has the following attributes:
+The *\<Database>* tag for an indexing database has the following attributes:
 
 - **active**: If set to true, the database is active.
 
@@ -486,11 +486,11 @@ The *\<Database>* tag for an Elasticsearch database has the following attributes
 > - There can only be one active indexing database on a DMA. However, that database can consist of multiple nodes. In that case, the IP addresses for these nodes are all added in the DBServer tag, separated by commas. For example: `<DBServer>10.10.10.1,10.10.10.2,10.10.10.3</DBServer>`
 > - From DataMiner 10.2.0/10.1.1 until DataMiner 10.3.0/10.3.3, Elastic Amazon AWS can be used. In that case, the URL should be specified in the DBServer element. For example: *\<DBServer>mycompany-elastic.amazonaws.com\</DBServer>*.
 > - From DataMiner 10.3.0/10.3.3 onwards, OpenSearch and Amazon OpenSearch Services can be used.
-> - From DataMiner 10.2.0/10.1.3 onwards, a *DBConfiguration.xml* file can be configured, which overrides the settings in this section of *DB.xml*. See [Configuring multiple Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters).
+> - From DataMiner 10.2.0/10.1.3 onwards, a *DBConfiguration.xml* file can be configured, which overrides the settings in this section of *DB.xml*. See [Configuring multiple OpenSearch clusters](xref:Configuring_multiple_OpenSearch_clusters) or [Configuring multiple Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters).
 
-### Defining a custom port for an Elasticsearch database
+### Defining a custom port for an indexing database
 
-From DataMiner 10.0.7 onwards, you can define a custom port for an Elasticsearch database. By default, port 9200 is used.
+From DataMiner 10.0.7 onwards, you can define a custom port for an indexing database. By default, port 9200 is used.
 
 To define a different port:
 
@@ -498,7 +498,7 @@ To define a different port:
 
 1. Open the file *DB.xml* (in the folder *C:\\Skyline DataMiner\\*).
 
-1. In the \<DBServer> element for the Indexing database, add a colon after the hostname or IP and specify the port.
+1. In the \<DBServer> element for the indexing database, add a colon after the hostname or IP and specify the port.
 
     For example:
 
@@ -507,13 +507,13 @@ To define a different port:
     ```
 
     > [!NOTE]
-    > The port specified in *DB.xml* must always be the same as the port defined in the Elasticsearch configuration. By default, this configuration is located in the folder *C:\\Program Files\\Elasticsearch\\config\\elasticsearch.yml*.
+    > The port specified in *DB.xml* must always be the same as the port defined in the configuration of the indexing database. For Elasticsearch, this configuration is by default located in the folder *C:\\Program Files\\Elasticsearch\\config\\elasticsearch.yml*.
 
 1. Save the file and restart the DMA.
 
-### Specifying a custom prefix for the Elasticsearch indexes
+### Specifying a custom prefix for the indexes
 
-To support the possibility to have two independent DataMiner Systems using the same Elasticsearch cluster, from DataMiner 10.0.11 onwards, you can specify a custom prefix for the Elasticsearch indices, instead of the default "dms" prefix.
+To support the possibility to have two independent DataMiner Systems using the same indexing database cluster, from DataMiner 10.0.11 onwards, you can specify a custom prefix for the indices, instead of the default "dms" prefix.
 
 To do so:
 

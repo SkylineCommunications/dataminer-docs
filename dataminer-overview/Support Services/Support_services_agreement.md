@@ -59,7 +59,7 @@ Upgrades shall be released at Skyline's discretion and based on the technology i
 
 Installation of Updates and Upgrades on the User's system by Skyline is not included in the Support Services.
 
-Installation and configuration of hardware and databases (Cassandra, Elasticsearch, etc.) in the User's system by Skyline is not included in the Support Services.
+Installation and configuration of hardware and databases (Cassandra, OpenSearch, etc.) in the User's system by Skyline is not included in the Support Services.
 
 ## Support for software issues
 

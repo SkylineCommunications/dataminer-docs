@@ -10,9 +10,9 @@ If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STa
 
 - [Amazon OpenSearch Service](xref:Amazon_OpenSearch_Service): Supported from DataMiner 10.3.0/10.3.3 onwards.
 
-- [Elasticsearch](xref:Elasticsearch_database): Supported from DataMiner 9.6.4 onwards.
+- [Elasticsearch](xref:Elasticsearch_database): Only supported up to Elasticsearch 6.8. Not recommended.
 
-In a setup with storage per DMA, you can [deploy an Elasticsearch database](xref:Configuring_indexing_database_per_DMS) to unlock additional DataMiner features, including:
+While these are not recommended, we also still support setups with storage per DMA using [an Elasticsearch database](xref:Configuring_indexing_database_per_DMS). In such setups, deploying Elasticsearch unlocks additional DataMiner features, including:
 
 - DataMiner Advanced Analytics features such as pattern matching
 

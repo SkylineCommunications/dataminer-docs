@@ -4,7 +4,8 @@ uid: Separate_Cassandra_setup_without_Elasticsearch
 
 # Separate Cassandra setup without indexing
 
-This architecture is currently still supported, though it is **not recommended**. Instead, we recommend using [Storage as a Service (STaaS)](xref:STaaS).
+> [!IMPORTANT]
+> This architecture is currently still supported, though it is **not recommended**. Instead, we recommend using [Storage as a Service (STaaS)](xref:STaaS).
 
 With this architecture, **each DMA has its own Cassandra database** (which can be a cluster with several nodes). No indexing database is used, which means that certain DataMiner features will not be available.
 

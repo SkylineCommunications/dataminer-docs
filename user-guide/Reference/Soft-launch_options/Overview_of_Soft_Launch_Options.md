@@ -137,7 +137,7 @@ Enables dynamic units in Data Display in DataMiner Cube and the Monitoring app. 
 
 ### ElasticTicketing
 
-Allows you to store tickets in the Elasticsearch database.
+Allows you to store tickets in the indexing database.
 
 - **Minimum version**: 9.6.4
 - **Release version**: 10.0.13/10.1.0 ([RN 26677](xref:General_Feature_Release_10.0.13_new_features#ticketing-app-move-to-elasticsearch-database-and-other-improvements-id_24667id_25539-id_25713id_26644id_26676id_26677id_26911id_26982id_27974id_28016id_28043-id_28079id_28153))

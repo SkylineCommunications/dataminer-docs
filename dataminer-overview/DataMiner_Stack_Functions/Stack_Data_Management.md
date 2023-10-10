@@ -14,7 +14,7 @@ uid: Stack_Data_Management
 
 DataMiner collects and analyzes log files from various data sources (devices, servers, applications, etc.) in a central location. This allows for more efficient troubleshooting and faster resolution of issues. The log files can be automatically monitored for errors, warnings, or other predefined events, and alerts can be generated to notify operators when such events occur.
 
-Using Elasticsearch indexing for log file management, this allows for efficient indexing, searching, and filtering of log files to quickly locate specific events.
+Using OpenSearch indexing for log file management, this allows for efficient indexing, searching, and filtering of log files to quickly locate specific events.
 
 ## Backup
 
