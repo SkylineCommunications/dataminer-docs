@@ -69,7 +69,7 @@ To configure this setup, proceed as follows:
 > If an exception occurs for one of the replicated clusters, an alarm will be generated in the Alarm Console, indicating that not all data might be replicated. If further errors occur, no new alarms will be created until the DMA is restarted.
 
 > [!TIP]
-> For troubleshooting information, see [Investigating OpenSearch issues](xref:investigating_openSearch_issues)
+> For troubleshooting information, see [Investigating OpenSearch issues](xref:Investigating_OpenSearch_Issues)
 
 # Using multiple Opensearch clusters
 
