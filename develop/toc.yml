@@ -699,6 +699,8 @@
         topicUid: ClassLibraryMonitorsStartingAStartedMonitor
       - name: Stopping a stopped monitor
         topicUid: ClassLibraryMonitorsStoppingAStoppedMonitor
+    - name: Scheduler
+      topicUid: Scheduler_NuGet_Package
     - name: Examples
       topicUid:  ClassLibraryExamples
 - name: API documentation
