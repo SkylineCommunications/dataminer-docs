@@ -78,9 +78,9 @@ It is possible to manually freeze and unfreeze the trace. To do so:
 > [!NOTE]
 > When the display is in frozen mode, *Frozen* is displayed in the middle of the graph area.
 
-## Panning horizontally and vertically inside the trace
+## Panning the trace horizontally and vertically
 
-From DataMiner 10.3.11/10.4.0 onwards, it is possible to pan horizontally and vertically inside the trace<!--RN 37461 + RN 37284-->.
+From DataMiner 10.3.11/10.4.0 onwards, it is possible to pan the trace horizontally and vertically<!--RN 37461 + RN 37284-->.
 
 - To pan horizontally, click the trace and drag your mouse.
 
@@ -92,7 +92,7 @@ From DataMiner 10.3.11/10.4.0 onwards, it is possible to pan horizontally and ve
 
   - The frequency labels on the X axis are updated continuously to reflect the ongoing change.
 
-  Upon releasing the mouse button, the info pane to the right of the display section automatically updates with start, stop, and center frequencies that align with the new data. A new uniform trace based on the updated center frequency now replaces the gray area.
+  When you release the mouse button, the info pane to the right of the display section will automatically update with start, stop, and center frequencies that align with the new data. A new trace based on the updated center frequency will replace the gray area.
 
   > [!IMPORTANT]
   > Horizontal panning is only available when the spectrum protocol includes the *Start frequency*, *Stop frequency*, and *Center frequency* parameters.
@@ -107,7 +107,7 @@ From DataMiner 10.3.11/10.4.0 onwards, it is possible to pan horizontally and ve
 
   - The amplitude labels on the Y axis are updated continuously to reflect the ongoing change.
 
-  Upon releasing the mouse button and Ctrl, the info pane to the right of the display section automatically updates with a reference level and amplitude scale that align with the new data. A new uniform trace based on the updated reference level now replaces the gray area.
+  When you release the mouse button and Ctrl, the info pane to the right of the display section will automatically update with a reference level and amplitude scale that align with the new data. A new trace based on the updated reference level will now replace the gray area.
 
   > [!IMPORTANT]
   > Vertical panning is only available when the spectrum protocol includes the *Reference level* parameter.
