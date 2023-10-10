@@ -115,6 +115,9 @@ A few details to pay attention to:
 
 ### nats-server.config
 
+> [!NOTE]
+> From DataMiner 10.3.11/10.3.0 [CU8] onwards<!--RN 37401-->, when DataMiner makes changes to *nats-server.config*, the old version of that file is saved in the *C:\Skyline DataMiner\Recycle Bin* folder.
+
 #### Cluster of 3 or more DMAs
 
 This is an example of **nats-server.config** in a NATS cluster of 3 or more Agents:
@@ -306,6 +309,9 @@ server_name: MyServerName
 There should only be one primary NAS in each DMS, with the configuration detailed below. Every other NAS should be configured as a secondary, except in a cluster of exactly 2 Agents.
 
 In a cluster of exactly 2 Agents, both NATS configs will point to the same NAS in their resolver setting. The other NAS will be running, but neither NATS will connect to it.
+
+> [!NOTE]
+> From DataMiner 10.3.11/10.3.0 [CU8] onwards<!--RN 37401-->, when DataMiner makes changes to *nas.config*, the old version of that file is saved in the *C:\Skyline DataMiner\Recycle Bin* folder.
 
 #### Primary NAS
 
@@ -533,3 +539,6 @@ First, the algorithm will collect all the reachable primary IPs in the cluster (
   1. *SLCloud.xml* is updated with the new configuration.
 
 This algorithm is run on all DMAs at the same time and will only change the configuration of the local NAS/NATS/DMA. It is therefore important that all DMAs in your cluster are online and reachable when you run the NATS reset.
+
+> [!NOTE]
+> From DataMiner 10.3.11/10.3.0 [CU8] onwards<!--RN 37401-->, when DataMiner makes changes to the *SLCloud.xml*, *nats-server.config*, or *nas.config* files, the old version of that file is saved in the *C:\Skyline DataMiner\Recycle Bin* folder.
