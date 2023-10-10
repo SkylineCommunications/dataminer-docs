@@ -18,6 +18,12 @@ uid: General_Main_Release_10.2.0_CU21
 
 A number of security enhancements have been made.
 
+#### DataMiner Cube: Caching enhancements [ID_37553]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+
+A number of general enhancements have been made with regard to cache management.
+
 ### Fixes
 
 #### DataMiner Cube - Alarm Console: Display issues when a correlation alarm was based on another correlation alarm [ID_37497]
