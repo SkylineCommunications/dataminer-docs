@@ -4,7 +4,7 @@ uid: Get_resources
 
 # Get resources
 
-Available from DataMiner 10.2.8/10.3.0 onwards<!--RN 33553-->. The *Get resources* data source (...)
+Available from DataMiner 10.2.8/10.3.0 onwards<!--RN 33553-->. The *Get resources* data source retrieves all resources in the DataMiner System.
 
 Depending on your DataMiner version, you may need to enable the [*GenericInterface* soft-launch option](xref:Overview_of_Soft_Launch_Options#genericinterface).
 
