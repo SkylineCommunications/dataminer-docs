@@ -125,6 +125,19 @@ To configure this setup:
 1. After the file has been added, restart DataMiner. *DBConfiguration.xml* will now take precedence over the Elasticsearch configuration defined in the file *DB.xml*.
 
 > [!NOTE]
-> If an exception occurs for one of the replicated clusters, an alarm will be generated in the Alarm Console, indicating that not all data might be replicated. If further errors occur, no new alarms are created until the DMA is restarted.
+> If the replicated cluster is still up and running, but an exception occurs for one of the replicated clusters, an alarm will be generated in the Alarm Console, indicating that not all data might be replicated. If further errors occur, no new alarms are created until the DMA is restarted.
 
 <!--***-->
+
+# Using multiple Elasticsearch clusters
+
+During normal operation, DataMiner will offload the data written to both Elasticsearch clusters simultaneously. 
+If one of the Clusters goes down, an error will be displayed in the alarm console denoting that the indexing cluster is down.
+*All nodes in the indexing cluster are down* and/or *All nodes in the Replicated indexing cluster [IP1, IP2,...] are down.*
+If this happens, the *priorityOrder* (see above) needs to be altered so that the backup indexing cluster becomes active. 
+Specifically, this means setting *priorityOrder="0"* where the *priorityOrder* used to be 1 and the other way around.
+Afterwards DataMiner needs to be restarted.
+This should restore DataMiner to a functional state. 
+
+> [!IMPORTANT]
+> If the main Elasticsearch cluster goes down, it will need to be restored afterwards. To ensure that the data is not in sync, first follow the procedure on [Verifying Elasticsearch synchronization](xref:Verifying_Elasticsearch_Synchronization#Checking-database-health), then follow the procedure to restore on [Taking a snapshot of one Elasticsearch cluster and restoring it to another](xref:Taking_snapshot_Elasticsearch_cluster#Taking-a-snapshot-of-one-Elasticsearch-cluster-and-restoring-it-to-another).
