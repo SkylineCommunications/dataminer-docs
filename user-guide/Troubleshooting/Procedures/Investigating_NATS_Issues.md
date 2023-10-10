@@ -116,7 +116,7 @@ A few details to pay attention to:
 ### nats-server.config
 
 > [!NOTE]
-> From DataMiner 10.3.11/10.3.0 [CU8] onwards<!--RN 37401-->, when changes are made to *nats-server.config*, the old version of that file is saved in the *C:\Skyline DataMiner\Recycle Bin* folder.
+> From DataMiner 10.3.11/10.3.0 [CU8] onwards<!--RN 37401-->, when DataMiner makes changes to *nats-server.config*, the old version of that file is saved in the *C:\Skyline DataMiner\Recycle Bin* folder.
 
 #### Cluster of 3 or more DMAs
 
@@ -311,7 +311,7 @@ There should only be one primary NAS in each DMS, with the configuration detaile
 In a cluster of exactly 2 Agents, both NATS configs will point to the same NAS in their resolver setting. The other NAS will be running, but neither NATS will connect to it.
 
 > [!NOTE]
-> From DataMiner 10.3.11/10.3.0 [CU8] onwards<!--RN 37401-->, when changes are made to *nas.config*, the old version of that file is saved in the *C:\Skyline DataMiner\Recycle Bin* folder.
+> From DataMiner 10.3.11/10.3.0 [CU8] onwards<!--RN 37401-->, when DataMiner makes changes to *nas.config*, the old version of that file is saved in the *C:\Skyline DataMiner\Recycle Bin* folder.
 
 #### Primary NAS
 
