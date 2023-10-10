@@ -148,3 +148,20 @@ If applicable, add the **Interfaces** and/or **DCF Connections** sections as det
 If you want to add information about the connector that does not fit under any of the other sections, add a **Notes** section for this. This section can also have subsections if it contains a lot of information.
 
 If you do not need a Notes section, leave it out.
+
+### Table of contents
+
+When you add a new connector help page, you will need to add it to the table of contents as well. To do so, add it to the *toc.yml* file in the *connector_help* folder. Please note:
+
+- The connector help pages are listed in alphabetical order underneath each vendor node. Make sure to add your help page in the correct location.
+- Use the following syntax to add the page:
+
+  ```yml
+    - name: Connector name
+      topicUid: Connector_help_Connector_name
+  ```
+
+> [!NOTE]
+> If you do not configure the table of contents correctly, the automatic checks that run after you submit your pull request will fail. You can then click *Details* to find out what exactly went wrong.
+>
+> ![Pull request check failed](~/develop/images/Pull_request_check_failed.png)
