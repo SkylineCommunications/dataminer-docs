@@ -32,9 +32,9 @@ When an interactive Automation script is executed **in a web app**, the UI block
 
 See also [DataMiner Cube Feature Release 10.3.12](xref:Cube_Feature_Release_10.3.12#interactive-automation-scripts-fileselector-now-allows-to-keep-the-files-that-were-already-uploaded-after-the-ui-was-shown-id_37260)
 
-#### Security enhancements [ID_37488]
+#### Security enhancements [ID_37488] [ID_37520]
 
-<!-- RN 37488: MR 10.3.0 [CU9] - FR 10.3.12 -->
+<!-- RN 37488/37520: MR 10.3.0 [CU9] - FR 10.3.12 -->
 
 A number of security enhancements have been made.
 
@@ -89,3 +89,9 @@ In some cases, a Dropdown component in an interactive Automation script would no
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
 
 When, in a table component, you changed the order of the columns, and then exported table data to a CSV file, the order of the cells in the exported rows would incorrectly not match the order of the table headers at the top of the CSV file.
+
+#### Web apps: Waffle menu would not open on mobile devices [ID_37535]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When you clicked the waffle button while viewing a DataMiner web app (e.g. Monitoring) on a mobile device, the menu would incorrectly not open.

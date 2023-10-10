@@ -92,6 +92,12 @@ A number of enhancements have been made with regard to the verification of forec
 
 When a parameter has anomalous flatline periods in its trend data history that are breaking the normal trend data patterns, from now on, those flatline periods will no longer be included into the training data of the prediction model. As a result, a more accurate prediction can be expected on this kind of behavior.
 
+#### Security enhancements [ID_37540]
+
+<!-- 37540: MR 10.4.0 - FR 10.3.12 -->
+
+A number of security enhancements have been made.
+
 #### DataMiner Cube: Caching enhancements [ID_37553]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
