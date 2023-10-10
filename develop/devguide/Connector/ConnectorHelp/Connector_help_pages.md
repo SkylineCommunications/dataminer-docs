@@ -8,13 +8,7 @@ For every connector that is developed for DataMiner, a corresponding help page s
 
 When you develop a connector using DIS, you can generate the connector help with the *Plugins* > *Generate driver help* option in the [DIS menu](xref:DIS_menu). You can also create the connector help directly in Markdown, starting from our [template](xref:Connector_help_template). When you have created the help page, add it in the [dataminer-docs-connectors](https://github.com/SkylineCommunications/dataminer-docs-connectors) repository.
 
-## Writing connector help
-
-When you write connector help, keep the instructions below in mind.
-
-### Markdown syntax
-
-Use DocFX Flavored Markdown (DFM). See [Markdown syntax](xref:contributing#markdown-syntax).
+## Adding a new connector help page
 
 ### File name and folder
 
@@ -23,6 +17,34 @@ To make sure your help page can be automatically included in the [DataMiner Cata
 - Make sure the **file name** is the **exact name of the connector in the Catalog**, but with **underscores instead of spaces**. For example, the file name of the *Microsoft Platform* connector help has to be *Microsoft_Platform.md*.
 
 - Add your help file in the following folder of the [dataminer-docs-connectors](https://github.com/SkylineCommunications/dataminer-docs-connectors) repository: */dataminer-docs-connectors/connector_help/connector-help*
+
+### Table of contents
+
+When you add a new connector help page, you will need to add it to the table of contents as well. To do so, add it to the *toc.yml* file in the *connector_help* folder. Please note:
+
+- The connector help pages are listed in alphabetical order underneath each vendor node. Make sure to add your help page in the correct location.
+- Use the following syntax to add the page:
+
+  ```yml
+    - name: Connector name
+      topicUid: Connector_help_Connector_name
+  ```
+
+> [!TIP]
+> The value you need to specify next to "topicUid:" is a UID that should be specified at the top of the markdown file. See [Adding a page](xref:contributing#adding-a-new-page).
+
+> [!NOTE]
+> If you do not configure the table of contents correctly, the automatic checks that run after you submit your pull request will fail. You can then click *Details* to find out what exactly went wrong.
+>
+> ![Pull request check failed](~/develop/images/Pull_request_check_failed.png)
+
+## Writing connector help
+
+When you write connector help, keep the instructions below in mind.
+
+### Markdown syntax
+
+Use DocFX Flavored Markdown (DFM). See [Markdown syntax](xref:contributing#markdown-syntax).
 
 ### Title
 
