@@ -64,7 +64,7 @@ For all supported DataMiner versions, we support all Windows versions that Micro
 
 If there is more than one DataMiner Agent in your cluster, the time in the cluster must be synchronized (NTP).
 
-### Microsoft .NET Framework
+### Microsoft .NET
 
 - Microsoft .NET Framework **4.6.2** is recommended for versions prior to DataMiner 10.1.11.
 
@@ -78,6 +78,15 @@ If there is more than one DataMiner Agent in your cluster, the time in the clust
 
 > [!NOTE]
 > We recommend always upgrading to the latest .NET Framework version.
+
+### Microsoft Visual C++
+
+- Prior to DataMiner versions **10.3.9**, **10.3.0 [CU6]** and **10.2.0 [CU18]**, Microsoft Visual C++ 2010 and 2015 are required.
+
+- From DataMiner version **10.3.9**, **10.3.0 [CU6]** and **10.2.0 [CU18]** onwards, only Microsoft Visual C++ 2015 is required.
+
+> [!NOTE]
+> When uninstalling MVC++ 2010, make sure to do so only after upgrading to **10.3.9**, **10.3.0 [CU6]** or **10.2.0 [CU18]** or the upgrade will fail.
 
 ### Computer name
 
