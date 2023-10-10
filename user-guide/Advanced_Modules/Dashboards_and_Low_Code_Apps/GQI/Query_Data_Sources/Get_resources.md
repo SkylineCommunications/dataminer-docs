@@ -4,12 +4,10 @@ uid: Get_resources
 
 # Get resources
 
-Available from DataMiner 10.2.8/10.3.0 onwards<!--RN 33553-->. The *Get resources* data source retrieves all resources in the DataMiner System.
+> [!IMPORTANT]
+> At present, this feature is only available in preview, if the [GenericInterface](xref:Overview_of_Soft_Launch_Options#genericinterface) soft-launch option is enabled. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
 
-Depending on your DataMiner version, you may need to enable the [*GenericInterface* soft-launch option](xref:Overview_of_Soft_Launch_Options#genericinterface).
-
-> [!NOTE]
-> Future DataMiner versions may already include this feature. To check the release version of a soft-launch option, see [Overview of soft-launch options](xref:Overview_of_Soft_Launch_Options).
+Available in soft launch from DataMiner 10.2.8/10.3.0 onwards<!--RN 33553-->. The *Get resources* data source retrieves all resources in the DataMiner System. For each resource, this includes among others the ID, name, and description of the resource, the name of the user who created and who last modified the resource, the time when the resource was created, and the time when the resource was last modified.
 
 From DataMiner 10.3.11/10.4.0 onwards<!--RN 36970-->, the *Get resources* data source also allows you to filter resources by resource pool ID or booking ID.
 

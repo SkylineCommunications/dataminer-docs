@@ -35,7 +35,7 @@ Estimated duration: 20 minutes.
 - Depending on your DataMiner version, you may need to enable the [*GenericInterface* soft-launch option](xref:Overview_of_Soft_Launch_Options#genericinterface).
 
   > [!NOTE]
-  > Future DataMiner versions may already include this feature. To check the release version of a soft-launch option, see [Overview of soft-launch options](xref:Overview_of_Soft_Launch_Options).
+  > To check whether this soft-launch option is required in your DataMiner version, see [Overview of soft-launch options](xref:Overview_of_Soft_Launch_Options).
 
   > [!TIP]
   > See [Activating soft-launch options](xref:Activating_Soft_Launch_Options).
