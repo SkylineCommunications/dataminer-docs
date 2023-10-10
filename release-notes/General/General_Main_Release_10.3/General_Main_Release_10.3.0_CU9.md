@@ -50,8 +50,22 @@ In some cases, incorrect data would be returned when requesting alarm monitoring
 
 When a parameter that was used to store the dynamic IP address of an element connection was updated, the dynamic IP address would incorrectly be applied to all connections of that element when the element was restarted.
 
+#### Duplicate PropertyChangeEvent objects would be created in the event cache [ID_37485]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+In some cases, incorrect duplicate PropertyChangeEvent objects would be created in the event cache.
+
+The properties were correctly updated on the respective elements, but the DMAs that forwarded the requests would incorrectly generate additional, incorrect PropertyChangedEvents, which could lead to, for example, outdated property values being displayed in user interfaces.
+
 #### SLAnalytics: Problem when simultaneously stopping the 'Alarm Focus' and 'Automatic Incident Tracking' features [ID_37496]
 
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
 
 Up to now, when you stopped both *Alarm Focus* and *Automatic Incident Tracking* at the same time (e.g. via *System Center > System settings > analytics config* in DataMiner Cube), only *Alarm Focus* would actually be stopped. *Automatic Incident Tracking* would still be active, but in an incorrect state.
+
+#### Service & Resource Management: Problem with resource capability exposers [ID_37503]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When a resource did not have both a minimum and maximum value for a particular range point, the resource capability exposers would not work correctly for that range point.
