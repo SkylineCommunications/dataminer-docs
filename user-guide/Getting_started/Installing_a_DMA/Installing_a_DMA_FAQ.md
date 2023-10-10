@@ -6,7 +6,6 @@ uid: Installing_a_DMA_FAQ
 
 Questions in this section:
 
-- [How can I manually create the MySQL database?](#how-can-i-manually-create-the-mysql-database)
 - [How can I boot the computer without a keyboard?](#how-can-i-boot-the-computer-without-a-keyboard)
 - [What do I do if I get the HTTP error 401.3 when trying to browse to the DMA?](#what-do-i-do-if-i-get-the-http-error-4013-when-trying-to-browse-to-the-dma)
 - [What do I do if get HTTP error 500.19?](#what-do-i-do-if-get-http-error-50019)
@@ -19,15 +18,6 @@ Questions in this section:
 - [What do I do if I get an 'unauthorized access exception' after saving annotations?](#what-do-i-do-if-i-get-an-unauthorized-access-exception-after-saving-annotations)
 - [How do I manually configure Windows Firewall?](#how-do-i-manually-configure-windows-firewall)
 - [How do I manually configure DCOM?](#how-do-i-manually-configure-dcom)
-
-## How can I manually create the MySQL database?
-
-1. Go to *Start > All Programs > MySQL > MySQL Workbench*.
-1. In the *SQL Development* section, double-click the "localhost" connection to open SQL Editor.
-1. Optionally, drop the test database. To do so, right-click the "test" schema in the *Object Browser*, and select *Drop Schema*.
-1. Right-click anywhere in the *Object Browser*, and select *Create New Schema*.
-1. In the *new_schema* dialog box, set *Name* to "SLDMADB", and click *Apply*.
-1. Close SQL Editor.
 
 ## How can I boot the computer without a keyboard?
 
@@ -119,7 +109,7 @@ To solve this problem, proceed as follows:
 
 ### Problem with DataMiner database dump
 
-On 64-bit systems, a DataMiner backup procedure can fail the moment a database dump has to be performed.
+On 64-bit systems, a DataMiner backup procedure can fail the moment a database dump has to be performed for a legacy MySQL database.
 
 This error is caused by SLDMS being unable to start or locate *mysqldump.exe*.
 

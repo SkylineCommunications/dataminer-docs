@@ -135,6 +135,11 @@ items:
         topicUid: DataMiner_Teams_bot
       - name: Chat integration
         topicUid: Microsoft_Teams_Chat_Integration
+      - name: Tutorials
+        topicUid: ChatOps_Tutorials_Custom_Command_Hello_World
+        items:
+          - name: Hello World
+            topicUid: ChatOps_Tutorials_Custom_Command_Hello_World
   - name: Advanced configuration
     topicUid: Custom_cloud_endpoint_configuration
     items:

@@ -9,6 +9,9 @@ In the *Failover* dialog box, you can access synchronization information about t
 > [!NOTE]
 > In a system with Cassandra databases, the synchronization is handled by Cassandra instead of by DataMiner. As such, synchronization information and manual synchronization are not available in DataMiner for such a system.
 
+> [!NOTE]
+> We recommend switching to [Storage as a Service](xref:STaaS) instead, so that all the complexity of managing the DataMiner data storage is taken care of for you.
+
 ## Viewing DMA synchronization information
 
 In the *Failover* dialog box, click the *Sync* button to open the *DataMiner Sync Status* window.

@@ -15,6 +15,9 @@ The tool duplicates tables, which is different from taking a snapshot (i.e. a ba
 > - It is possible to run this tool while DataMiner is still running. However, if it is used while DataMiner is running, rows written by DataMiner while a table is being cloned may not be present in the cloned table.
 > - Make sure there is enough free disk space to duplicate the tables. At most, you will need as much free space as is currently taken up by the folder `C:\ProgramData\Cassandra`.
 
+> [!TIP]
+> If you do not want the hassle of maintaining the DataMiner storage databases yourself, we recommend using [DataMiner Storage as a Service](xref:STaaS) instead.
+
 ## Usage
 
 1. Extract the files you downloaded to a local folder.

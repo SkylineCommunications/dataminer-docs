@@ -139,6 +139,9 @@ In the left-hand pane, click one of the following components, and drag it onto a
 | Timer | A timer that starts whenever an output is selected, and automatically clears the current input/output selection after a period of time (default: 60 seconds) |
 | Visio | A panel that contains the Visio drawing of a DataMiner view. |
 
+> [!NOTE]
+> A GitHub repository is available with a Router Control button designer: <https://github.com/bertbsky/RouterControlButtonDesigner>.
+
 ## Configuring a component on a matrix tab page
 
 1. Select the component, or hover over the component and click the green cogwheel in the top-right corner.

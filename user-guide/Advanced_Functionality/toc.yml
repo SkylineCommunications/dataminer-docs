@@ -142,7 +142,7 @@ items:
       - name: Sharing DataMiner data with third parties
         topicUid: Sharing_DataMiner_data_with_third_parties
       - name: DataMiner maintenance tools
-        topicUid: DMS_maintenance_tools
+        topicUid: Cleaning_up_unused_files_on_a_DMA
         items:
           - name: Cleaning up unused files on a DMA
             topicUid: Cleaning_up_unused_files_on_a_DMA
@@ -185,7 +185,7 @@ items:
       - name: About DMA Failover
         topicUid: About_DMA_Failover
       - name: Viewing Failover information
-        topicUid: Viewing_Failover_information
+        topicUid: Viewing_the_Failover_setup
         items:
           - name: Viewing the Failover setup
             topicUid: Viewing_the_Failover_setup
@@ -209,7 +209,7 @@ items:
       - name: Ending a Failover configuration
         topicUid: Ending_a_Failover_configuration
       - name: Frequently asked questions about DMA Failover
-        topicUid: Frequently_asked_questions_about_DMA_Failover
+        topicUid: Failover_FAQ_what_if_DMA_stopped
         items:
           - name: What if one of the DMAs is stopped?
             topicUid: Failover_FAQ_what_if_DMA_stopped
@@ -243,7 +243,7 @@ items:
             topicUid: Separate_Cassandra_setup_without_Elasticsearch
           - name: Legacy setup with MySQL or MSSQL database
             topicUid: Legacy_setup_with_MySQL_or_MSSQL_database
-      - name: Storage as a Service
+      - name: Storage as a Service (STaaS)
         topicUid: STaaS
       - name: Database configuration
         topicUid: Configuring_dedicated_clustered_storage
@@ -305,8 +305,6 @@ items:
               - name: MySQL database
                 topicUid: MySQL_database
                 items:
-                  - name: Activating one file per table for an existing MySQL database
-                    topicUid: Activating_one_file_per_table_for_an_existing_MySQL_database
                   - name: Deleting element data from a MySQL database
                     topicUid: Deleting_element_data_from_a_MySQL_database
                   - name: Moving MySQL data to another location
@@ -316,6 +314,17 @@ items:
           - name: Configuring an indexing database
             topicUid: Indexing_Database
             items:
+              - name: OpenSearch database
+                topicUid: OpenSearch_database
+                items:
+                  - name: Installing an OpenSearch database
+                    topicUid: Installing_OpenSearch_database
+                  - name: Configuring multiple OpenSearch clusters
+                    topicUid: Configuring_multiple_OpenSearch_clusters
+                  - name: Configuring OpenSearch backups
+                    topicUid: Configuring_OpenSearch_Backups
+              - name: Amazon OpenSearch Service
+                topicUid: Amazon_OpenSearch_Service
               - name: Elasticsearch
                 topicUid: Elasticsearch_database
                 items:
@@ -360,17 +369,6 @@ items:
                         topicUid: Configuring_Elasticsearch_backups_Windows
                   - name: Removing an Elasticsearch cluster node
                     topicUid: Configuring_Elasticsearch_node_remove
-              - name: OpenSearch database
-                topicUid: OpenSearch_database
-                items:
-                  - name: Installing an OpenSearch database
-                    topicUid: Installing_OpenSearch_database
-                  - name: Configuring multiple OpenSearch clusters
-                    topicUid: Configuring_multiple_OpenSearch_clusters
-                  - name: Configuring OpenSearch backups
-                    topicUid: Configuring_OpenSearch_Backups
-              - name: Amazon Opensearch Service
-                topicUid: Amazon_OpenSearch_Service
           - name: Common database settings
             topicUid: Specifying_TTL_overrides
             items:
@@ -426,7 +424,7 @@ items:
       - name: DataMiner user permissions
         topicUid: DataMiner_user_permissions
       - name: Basic security configuration
-        topicUid: Basic_security_configuration
+        topicUid: Managing_users
         items:
           - name: Managing users
             topicUid: Managing_users
@@ -478,13 +476,13 @@ items:
           - name: Frequently asked questions about user group settings
             topicUid: Frequently_asked_questions_about_user_group_settings
       - name: Advanced security configuration
-        topicUid: Advanced_security_configuration
+        topicUid: Cassandra_authentication
         items:
-          - name: Securing the DataMiner Databases
-            topicUid: Database_security
+          - name: Securing self-hosted DataMiner storage
+            topicUid: Cassandra_authentication
             items:
               - name: Securing the Cassandra general database
-                topicUid: Security_Cassandra_general
+                topicUid: Cassandra_authentication
                 items:
                   - name: Cassandra authentication
                     topicUid: Cassandra_authentication
@@ -503,7 +501,7 @@ items:
               - name: Securing the Elasticsearch database
                 topicUid: Security_Elasticsearch
           - name: Securing the web server
-            topicUid: Webserver_security
+            topicUid: HTTP_Headers
             items:
               - name: HTTP headers
                 topicUid: HTTP_Headers
@@ -522,7 +520,7 @@ items:
           - name: Enabling TLS encryption
             topicUid: Enabling_TLS_encryption
   - name: SNMP managers
-    topicUid: SNMP
+    topicUid: About_SNMP_managers
     items:
       - name: About SNMP managers
         topicUid: About_SNMP_managers
@@ -532,7 +530,7 @@ items:
           - name: Interaction between SNMP manager and SNMP agent
             topicUid: Interaction_between_SNMP_manager_and_SNMP_agent
       - name: Configuring SNMP managers
-        topicUid: Configuring_SNMP_managers
+        topicUid: Configuring_an_SNMP_manager_in_DataMiner_Cube
         items:
           - name: Configuring an SNMP manager in DataMiner Cube
             topicUid: Configuring_an_SNMP_manager_in_DataMiner_Cube
@@ -553,7 +551,7 @@ items:
       - name: Resending alarms to an SNMP manager
         topicUid: Resending_alarms_to_an_SNMP_manager
       - name: DataMiner SNMP notification definition
-        topicUid: DataMiner_SNMP_notification_definition
+        topicUid: Default_DataMiner_notification
         items:
           - name: Default DataMiner notification
             topicUid: Default_DataMiner_notification
@@ -567,7 +565,7 @@ items:
       - name: Viewing element connections
         topicUid: Viewing_element_connections
       - name: Configuring element connectivity in Cube
-        topicUid: Configuring_element_connectivity_in_Cube
+        topicUid: Editing_element_connections_in_the_Properties_window
         items:
           - name: Editing element connections in the Properties window
             topicUid: Editing_element_connections_in_the_Properties_window

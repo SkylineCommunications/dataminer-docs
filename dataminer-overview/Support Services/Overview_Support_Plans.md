@@ -39,7 +39,7 @@ The *Evolve* plan goes beyond standard support, adds improved response and corre
 
 The *Evolve* plan goes beyond premium support; it is a partnership between the user and Skyline to leverage DataMiner to its full potential, adopting an agile mindset to support your continuous evolution.
 
-Because its foundation is mutual commitment, the Evolve plan is not sold as a separate commercial product. To upgrade from *Continuity* to *Evolve*, an organization must have a [DataMiner DevOps](https://community.dataminer.services/dataminer-devops-professional-program/) team in place, and they must accumulate [DevOps Points](xref:Benefits_DevOps_Professionals_Program#accumulating-devops-points) attesting to that team's engagement and effort.
+Because its foundation is mutual commitment, the Evolve plan is not sold as a separate commercial product. To upgrade from *Continuity* to *Evolve*, an organization must have a [DataMiner DevOps](https://community.dataminer.services/dataminer-devops-professional-program/) team in place, and they must accumulate [DevOps Points](xref:DevOps_Points) attesting to that team's engagement and effort.
 
 > [!NOTE]
 > The number of DevOps Points measured at the end of the calendar year is the number used in the next support renewal to determine the support plan, i.e. *Continuity* or *Evolve*.

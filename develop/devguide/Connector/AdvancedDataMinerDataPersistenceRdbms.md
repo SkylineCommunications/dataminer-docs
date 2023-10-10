@@ -4,20 +4,15 @@ uid: AdvancedDataMinerDataPersistenceRdbms
 
 # DataMiner general database – RDBMS
 
-DataMiner supports either MySQL Server or Microsoft SQL Server (MSSQL Server) as local RDBMS. (The offload database also supports Oracle).
+DataMiner legacy setups use either MySQL Server or Microsoft SQL Server (MSSQL Server) as local RDBMS. However, note that such legacy setups do not have access to all DataMiner features. In addition, MSSQL is no longer supported from DataMiner 10.3.0 onwards.
 
-Database structure
-
-The following sections provide an overview of different tables that can be found in the local MySQL database (called "sldmadb") of a DataMiner Agent:
-
-- Element data
-- Information events
-- Alarm data
-- Trend data
-- DVE information
+The sections below provide an overview of different tables that can be found in the MySQL general database (called "sldmadb") of a DataMiner Agent.
 
 > [!WARNING]
 > The tables and their structure are subject to change. Therefore, it is not supported to directly communicate with the database.
+
+> [!NOTE]
+> The recommended setup for DataMiner storage is [Storage as a Service](xref:STaaS).
 
 ## Element data
 

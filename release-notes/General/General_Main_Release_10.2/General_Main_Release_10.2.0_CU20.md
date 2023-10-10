@@ -46,14 +46,6 @@ From now on, when you start a Cassandra Cluster migration, a warning message wil
 
 Not all [Protocol.Params.Param.Interprete.Others](xref:Protocol.Params.Param.Interprete.Others) tags would be read out, which could lead to unexpected behavior.
 
-#### Problem with .NET Framework DLL files used by QActions or Automation scripts [ID_36984]
-
-<!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
-
-When a QAction or Automation script used a NuGet package containing a .NET Framework DLL file on a DataMiner Agent that used a more recent .NET Framework that included that same DLL file by default, a compilation error would occur.
-
-Also, certain DLL files located in a subfolder of the .NET Framework would not be resolved correctly.
-
 #### Dashboards app: 'Loading...' indicator would appear when trying to save a folder of which the name consists of spaces [ID_37046]
 
 <!-- 10.2.0 [CU20]/MR 10.3.0 [CU7] - FR 10.3.10 -->
@@ -166,14 +158,36 @@ When you took a DataMiner backup either via Cube or via the Taskbar Utility, the
 
 An error could occur in the SLAnalytics process due to some features not starting up correctly.
 
+#### Protocols: Problem when using 'MultipleGetBulk' in combination with 'PartialSNMP' [ID_37336]
+
+<!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
+
+When a protocol was configured to use `MultipleGetBulk` in combination with `PartialSNMP` (e.g. `<OID options="partialSNMP:10;multipleGetBulk:10">`), and the device would return less table cells than the configured `MultipleGetBulk` value, certain fields would not get filled in.
+
 #### DataMiner Cube: No breadcrumbs would be displayed when you opened a service card [ID_37384]
 
 <!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
 
 When you opened a service card, in some rare cases, no breadcrumbs would be displayed.
 
-#### SLAnalytics: Problem when the SLNet connection got lost while resetting data sources [ID_37402]
+#### SLAnalytics: Problem when the SLNet connection got lost while resetting the data sources [ID_37402]
 
 <!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
 
-During initialization, in some cases, an error could occur in SLAnalytics when the SLNet connection got lost while resetting data sources.
+An error could occur in SLAnalytics when the SLNet connection got lost while resetting the data sources.
+
+#### DataMiner Cube: Parameter value with decimals would be displayed incorrectly in context menus [ID_37420]
+
+<!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
+
+Up to now, when you opened a context menu with a text box that contained a parameter value with decimals, and the default value of the parameter also contained decimals, the decimal point in the value in the text box would be displayed incorrectly. For example, 44.2 would incorrectly be displayed as 442.0.
+
+The issue was due to Cube trying to parse the default value with the current culture in the Windows machine.
+
+#### DataMiner Cube - Alarm Console: Tooltip of suggestion counter would incorrectly show 'suggestion' in capitals [ID_37454]
+
+<!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
+
+In the Alarm Console footer, you can find counters that display the number of alarms in the current tab per severity. When you hover over one of those counters, a tooltip appears with the text "[nr of alarms] [severity]" (e.g. 31 Major).
+
+Up to now, when you hovered over the suggestions counter, the tooltip would incorrectly show the word "SUGGESTION" in capitals. From now on, it will be shown as "Suggestion" (with capital S).

@@ -27,10 +27,10 @@ The following steps can be taken to configure the backups for a DMA:
 
 1. In the *General* tab, under *Policy*, enter the number of backups that should be kept.
 
-1. In case the system uses an indexing (i.e. Elastic) database, in the *Indexing Engine Location* section of the *General* tab, the backup path can be modified if necessary.
+1. In case the system uses an indexing database, in the *Indexing Engine Location* section of the *General* tab, the backup path can be modified if necessary.
 
    > [!NOTE]
-   > For more information on Elasticsearch backups, see [Configuring Elasticsearch backups](xref:Configuring_Elasticsearch_backups).
+   > For more information on indexing backups, see [Configuring OpenSearch backups](xref:Configuring_OpenSearch_Backups) or [Configuring Elasticsearch backups](xref:Configuring_Elasticsearch_backups).
 
 1. In the *Schedule* tab, select when the backup should be executed: monthly, weekly, daily, or only when it is manually initiated.
 
@@ -40,14 +40,14 @@ The following steps can be taken to configure the backups for a DMA:
 
      - *Full Backup*: Backup containing all data necessary to restore the entire DataMiner Agent (default).
 
-     - *Full Backup without Database*: Similar to the full backup, but does not include the database.
+     - *Full Backup without Database*: Similar to the full backup, but does not include the database. If you are using [STaaS](xref:STaaS), you can choose this option, as you do not have a self-hosted database in that case.
 
      - *Configuration Backup*: Backup containing all data necessary to restore the configuration of the DataMiner Agent. This also contains parameter values saved in the database, but not alarm or trending data.
 
        > [!NOTE]
        > The configuration backup does not include DataMiner Files and Logging.
 
-     - *Configuration Backup without Database*: Similar to the configuration backup, but does not include any information from the database.
+     - *Configuration Backup without Database*: Similar to the configuration backup, but does not include any information from the database. If you are using [STaaS](xref:STaaS), you can choose this option, as you do not have a self-hosted database in that case.
 
      - *Visual Configuration Backup*: Backup containing all protocols (including Visio files, WFMs, and the production protocol), all Visio files linked to views, and the contents of the folder *C:\\Skyline DataMiner\\Webpages*.
 

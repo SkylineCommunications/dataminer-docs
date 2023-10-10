@@ -6,6 +6,21 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 9 October 2023 - Fix - CoreGateway 2.13.2 - Resolved an issue that could occur after a DataMiner up- or downgrade [ID_37441]
+
+When a local DataMiner Agent was up- or downgraded, it could occur that the CoreGateway DxM did not reinitialize its DataMiner dependencies. In that case, serialization issues could occur at runtime, for example when the DataMiner Teams bot was used. This issue has been resolved.
+
+#### 2 October 2023 - Enhancement - CloudFeed 1.3.0 - Upgrade to .NET 6 [ID_36940]
+
+DataMiner CloudFeed has been upgraded to .NET 6, so that it no longer depends on .NET 5. **Make sure .NET 6 is installed** before you upgrade to this version.
+
+#### 26 September 2023 - Fix - Remote Access automatic login now works with special characters in DataMiner account configuration [ID_37438]
+
+If your DataMiner account contained one or more special characters, for example in the full name field, and you used Remote Access (e.g. the Monitoring app via dataminer.services), it was not possible to log in. Now you can log in automatically with your linked DataMiner account.
+
+> [!NOTE]
+> If you log in manually, you will still encounter this issue: This will not work when you have one or more special characters configured in your DataMiner account. To resolve this, [link your DataMiner account to your dataminer.services account](https://aka.dataminer.services/account-linking). The automatic login will allow you to use Remote Access without requiring any further actions.
+
 #### 21 September 2023 - New feature - CoreGateway 2.13.1 - Support new GQI queries [ID_37302]
 
 Support has been added for the latest GQI queries introduced with DataAggregator 2.1.0 and DataMiner 10.3.9.

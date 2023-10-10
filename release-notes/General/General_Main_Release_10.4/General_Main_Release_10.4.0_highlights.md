@@ -9,6 +9,15 @@ uid: General_Main_Release_10.4.0_highlights
 
 ## Highlights
 
+#### Storage as a Service (STaaS) [ID_34616] [ID_37141] [ID_37256] [ID_37257] [ID_37283]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+<!-- RN 37141: MR 10.4.0 - FR 10.3.10 [CU1] -->
+
+DataMiner now supports Storage as a Service (STaaS), a scalable and user-friendly cloud-native storage platform that provides a fully fletched alternative to on-premises databases.
+
+For detailed information, see [Storage as a Service (STaaS)](xref:STaaS).
+
 #### User-Defined APIs [ID_34910] [ID_35134] [ID_35169] [ID_35417] [ID_35743] [ID_35810] [ID_35880] [ID_35885] [ID_36118] [ID_36250] [ID_36273] [ID_36366]
 
 With the DataMiner User-Defined APIs, you can define custom API calls that will be made available on DataMiner Agents hosting the *UserDefinableApiEndpoint* DxM. This DxM is included in DataMiner upgrade packages from now on and will be automatically installed when you upgrade. The APIs can be secured using API tokens, which can be generated on the fly and linked to the API definitions.

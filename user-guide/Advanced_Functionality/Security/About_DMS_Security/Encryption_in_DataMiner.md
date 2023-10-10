@@ -73,7 +73,7 @@ For DataMiner Systems configured to use a Cassandra database, it is possible to 
 We recommend changing the default Cassandra credentials.
 
 > [!NOTE]
-> For more information, see [Securing the Cassandra general database](xref:Security_Cassandra_general).
+> For more information, see [Securing the Cassandra general database](xref:Cassandra_authentication).
 
 ### Elasticsearch
 

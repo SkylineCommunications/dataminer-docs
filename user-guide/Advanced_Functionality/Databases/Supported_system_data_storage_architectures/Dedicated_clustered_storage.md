@@ -4,21 +4,23 @@ uid: Dedicated_clustered_storage
 
 # Dedicated clustered storage
 
-The **recommended** DataMiner setup can be either on premises or in the cloud, or a mix of both. You will need:
+If you do not use the recommended [Storage as a Service (STaaS)](xref:STaaS) setup but instead choose self-hosted storage, dedicated clustered storage is the most typical setup. The storage nodes can be either on premises or in the cloud, or a mix of both. You will need:
 
 - One **Cassandra cluster** for the entire DataMiner System (DMS) or the [Amazon Keyspaces Service on AWS](xref:Amazon_Keyspaces_Service) or [Azure Managed Instance for Apache Cassandra](xref:Azure_Managed_Instance_for_Apache_Cassandra). Unlike setups with a Cassandra cluster per individual DataMiner Agent (DMA), this allows the database to be scaled for the entire DMS at once.
 
-- One **Elasticsearch** or **OpenSearch** cluster for the entire DMS or the [Amazon OpenSearch Service on AWS](xref:Amazon_OpenSearch_Service).
+- One **OpenSearch** or **Elasticsearch** cluster for the entire DMS or the [Amazon OpenSearch Service on AWS](xref:Amazon_OpenSearch_Service).
 
 > [!TIP]
 > For information on how to implement a setup like this based on an existing DataMiner setup with SQL or Cassandra databases per DMA, see [Migrating the general database to a DMS Cassandra cluster](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster)
 
 > [!NOTE]
-> Using managed services from a cloud provider instead of on-premises databases is supported from DataMiner 10.3.0/10.3.3 onwards. Using an on-premises OpenSearch database is also supported from DataMiner 10.3.0/10.3.3 onwards.
+>
+> - In the setups described below, a "machine" or "compute node" can be a virtual machine or a physical server. Every machine must meet the minimum requirements detailed in [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements). In the images illustrating the setups, the dark-blue line indicates a cluster of nodes, the gray line indicates a compute node, and the light-blue line indicates a regional boundary (high latency).
+> - Using managed services from a cloud provider instead of on-premises databases is supported from DataMiner 10.3.0/10.3.3 onwards. Using an on-premises OpenSearch database is also supported from DataMiner 10.3.0/10.3.3 onwards.
 
 ## Single DMA setups
 
-We recommend running DataMiner, Cassandra, and Elasticsearch/OpenSearch on **dedicated machines**, or using **managed services from a cloud provider**. At present, we support the Amazon Keyspaces Service, Azure Managed Instance for Apache Cassandra Service, and Amazon OpenSearch Service. We intend to soon make it possible to deploy a DataMiner node as a service as well.
+We recommend running DataMiner, Cassandra, and OpenSearch/Elasticsearch on **dedicated machines**, or using **managed services from a cloud provider**. At present, we support the Amazon Keyspaces Service, Azure Managed Instance for Apache Cassandra Service, and Amazon OpenSearch Service. We intend to soon make it possible to deploy a DataMiner node as a service as well.
 
 An on-premises **Elasticsearch** cluster should consist of **at least 3 nodes**, running on **Windows or Linux** machines. While it is possible to use one single Elasticsearch node, this means you will miss out on the replication features. An **OpenSearch** cluster is similar but only supports **Linux**.
 
@@ -59,11 +61,11 @@ For **Cassandra**, any number of nodes can be used, ideally running on **Linux**
 
 ## Failover setups (without geo-redundancy)
 
-A Failover setup is similar to the previously mentioned setups. You can consider the Failover pair to be like one DMA in the DMS. Both DataMiner instances point to the same databases. For added resilience, you can use **managed services in the cloud** instead of a Cassandra cluster and Elasticsearch/OpenSearch cluster on premises. At present, we support the Amazon Keyspaces Service, Azure Managed Instance for Apache Cassandra Service, and Amazon OpenSearch Service.
+A Failover setup is similar to the previously mentioned setups. You can consider the Failover pair to be like one DMA in the DMS. Both DataMiner instances point to the same databases. For added resilience, you can use **managed services in the cloud** instead of a Cassandra cluster and OpenSearch/Elasticsearch cluster on premises. At present, we support the Amazon Keyspaces Service, Azure Managed Instance for Apache Cassandra Service, and Amazon OpenSearch Service.
 
-An on-premises setup should at the very least consist of two DataMiner machines, one Elasticsearch machine, and one Cassandra machine. However, if the Cassandra or Elasticsearch machine are no longer available in this setup, you will no longer be able to start DataMiner, so this is not recommended for redundancy setups. To be fully hardware-redundant, we recommend **at least three machines hosting Elasticsearch** nodes, **two machines hosting the DataMiner Failover pair** and **two machines hosting Cassandra nodes**. More Cassandra and Elasticsearch nodes can be needed depending on the load on your system. Check the [**node calculator**](https://community.dataminer.services/calculator/) for more information.
+An on-premises setup should at the very least consist of two DataMiner machines, one OpenSearch or Elasticsearch machine, and one Cassandra machine. However, if the Cassandra or OpenSearch/Elasticsearch machine are no longer available in this setup, you will no longer be able to start DataMiner, so this is not recommended for redundancy setups. To be fully hardware-redundant, we recommend **at least three machines hosting OpenSearch/Elasticsearch** nodes, **two machines hosting the DataMiner Failover pair** and **two machines hosting Cassandra nodes**. More Cassandra and OpenSearch/Elasticsearch nodes can be needed depending on the load on your system. Check the [**node calculator**](https://community.dataminer.services/calculator/) for more information.
 
-Note that in a Failover setup, it is bad practice to host the Elasticsearch nodes and DataMiner nodes on the same machine, as this would not allow you to get the desired resilience.
+Note that in a Failover setup, it is bad practice to host the OpenSearch/Elasticsearch nodes and DataMiner nodes on the same machine, as this would not allow you to get the desired resilience.
 
 ![DataMiner Failover pair using a Cassandra and Elasticsearch database running on dedicated machines](~/user-guide/images/Failover-pair-Cassandra-and-Elasticsearch.png)<br>
 *DataMiner Failover pair using a Cassandra and Elasticsearch database running on dedicated machines*
@@ -81,7 +83,7 @@ Note that in a Failover setup, it is bad practice to host the Elasticsearch node
 
 To achieve geo-redundancy and reduce latency between DMAs deployed across the globe, typically data center setups are used. In case you need a setup with multiple data centers deployed worldwide, please contact Skyline.
 
-The easiest way to achieve geo-redundancy for your databases is to use **managed services in the cloud** instead of a Cassandra cluster and Elasticsearch/OpenSearch cluster on premises. At present, we support the Amazon Keyspaces Service, Azure Managed Instance for Apache Cassandra Service, and Amazon OpenSearch Service.
+The easiest way to achieve geo-redundancy for your self-hosted databases is to use **managed services in the cloud** instead of a Cassandra cluster and OpenSearch/Elasticsearch cluster on premises. At present, we support the Amazon Keyspaces Service, Azure Managed Instance for Apache Cassandra Service, and Amazon OpenSearch Service.
 
 ![Setup with cloud services](~/user-guide/images/Cassandra_DataMiner_Opensearch.png)<br>
 *Setup with managed services in the cloud*
