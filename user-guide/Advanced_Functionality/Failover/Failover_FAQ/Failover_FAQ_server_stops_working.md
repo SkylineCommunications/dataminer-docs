@@ -25,4 +25,7 @@ If the database server on the **offline** DMA stops working:
 - Database data will still be forwarded, but the data will only be inserted into the database of the offline DMA when that database is accessible again.
 
 > [!TIP]
-> See also: [Viewing Failover information](xref:Viewing_Failover_information)
+> See also: [Viewing Failover information](xref:Viewing_the_Failover_setup)
+
+> [!NOTE]
+> We recommend switching to [Storage as a Service](xref:STaaS) instead.

@@ -16,11 +16,11 @@ uid: Cube_Feature_Release_10.3.11
 
 ## New features
 
-#### Spectrum analysis: Panning inside a spectrum window [ID_37284]
+#### Spectrum analysis: Panning horizontally inside a spectrum window [ID_37284]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
-It is now possible to pan inside a spectrum window by clicking and dragging.
+It is now possible to pan horizontally inside a spectrum window by clicking and dragging.
 
 When, after clicking the left mouse button, you start dragging, the following will happen:
 
@@ -35,9 +35,40 @@ Only upon releasing the left mouse button will the unknown part of the trace be 
 > [!IMPORTANT]
 > This feature is only available if the spectrum protocol includes the *Start Frequency*, *Center Frequency* and *Stop Frequency* parameters.
 
+#### Credentials Library now supports username and password credentials [ID_37416]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+In the Credentials Library in DataMiner Cube (available via *System Center* > *System Settings* > *Credentials Library*), you can now configure a new type of credentials, i.e. username and password credentials. To do so, in the *Type* dropdown, select *Username and password credentials*, and then specify the username and password.
+
+#### Spectrum analysis: Panning vertically inside a spectrum window [ID_37461]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+It is now possible to pan vertically inside a spectrum window by CTRL+clicking and dragging.
+
+When, after pressing the CTRL key and clicking the left mouse button, you start dragging, the following will happen:
+
+- The spectrum trace will move up or down while being refreshed at a rate equal to the original rate.
+- The amplitude labels on the Y axis will continuously update to reflect the ongoing change.
+- The unknown part of the trace (i.e. the amplitude range located outside of the original span) will be visualized as a grey area with a grid in the background.
+
+When you stop dragging and release the left mouse button, the panning dimensions will be set on the spectrum analyzer device and the screen will be updated with the new data.
+
+Only upon releasing the left mouse button will the unknown part of the trace be requested from the spectrum analyzer. The newly received trace points will then replace the grey area and a new, uniform spectrum trace will be displayed based on the new reference level.
+
+> [!IMPORTANT]
+> This feature is only available if the spectrum protocol includes the *Reference level* parameter.
+
 ## Changes
 
 ### Enhancements
+
+#### Opening element card for DVE alarm from Alarm Console did not work correctly [ID_37297]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+When you opened the element card for an alarm on a parameter of a DVE element from the Alarm Console, this did not have the same behavior as for regular alarms. Now this action will open the trend graph of the parameter if the parameter is trended, or otherwise it will show the parameter details.
 
 #### CefSharp package download enhancements [ID_37319]
 
@@ -98,3 +129,52 @@ When, in the Alarm Console, you created a linked alarm tab while connected to a 
 <!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
 
 When you opened a service card, in some rare cases, no breadcrumbs would be displayed.
+
+#### Visual Overview: No longer possible to return to the initially selected page when the VdxPage property was linked to a session variable [ID_37419]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+In a visual overview containing multiple pages, it would no longer be possible to return to the initially selected page when the shape used to switch pages had its `VdxPage` property updated using a session variable.
+
+#### DataMiner Cube: Parameter value with decimals would be displayed incorrectly in context menus [ID_37420]
+
+<!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
+
+Up to now, when you opened a context menu with a text box that contained a parameter value with decimals, and the default value of the parameter also contained decimals, the decimal point in the value in the text box would be displayed incorrectly. For example, 44.2 would incorrectly be displayed as 442.0.
+
+The issue was due to Cube trying to parse the default value with the current culture in the Windows machine.
+
+#### Trending: Problem when trying to edit a multivariate pattern [ID_37433]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+Due to a cache synchronization issue, problems could occur when trying to edit a multivariate pattern of which one of the elements is located on another DataMiner Agent.
+
+#### DataMiner Cube could become unresponsive during startup when the Alarm Console did not contain any alarm tabs [ID_37436]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When starting up, DataMiner Cube could become unresponsive during the *Connected!* step When the Alarm Console did not contain any alarm tabs.
+
+#### Automation app: Problems with scripts using user-defined APIs [ID_37442]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When you opened the Automation app, an exception could be thrown in the background when verifying if scripts used user-defined APIs.
+
+Also, when you clicked *Configure API...* for a particular Automation script, the *New token...* button would incorrectly be disabled.
+
+#### DataMiner Cube - Alarm Console: Tooltip of suggestion counter would incorrectly show 'suggestion' in capitals [ID_37454]
+
+<!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
+
+In the Alarm Console footer, you can find counters that display the number of alarms in the current tab per severity. When you hover over one of those counters, a tooltip appears with the text "[nr of alarms] [severity]" (e.g. 31 Major).
+
+Up to now, when you hovered over the suggestions counter, the tooltip would incorrectly show the word "SUGGESTION" in capitals. From now on, it will be shown as "Suggestion" (with capital S).
+
+#### Alarm Console: Light bulb would not show suggestions related to the current tab when Cube was started with only one alarm tab [ID_37458]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+<!-- Not added to MR 10.4.0 -->
+
+When DataMiner Cube was started with only one alarm tab, the Alarm Console lightbulb would incorrectly not show any suggestions related to the current alarm tab.

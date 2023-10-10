@@ -539,6 +539,13 @@ items:
                     topicUid: CO_Building_blocks
                   - name: Life cycle of a custom operator
                     topicUid: CO_Life_cycle
+                  - name: Tutorials
+                    topicUid: Creating_Minus_Operator
+                    items:
+                      - name: Creating a minus operator
+                        topicUid: Creating_Minus_Operator
+                      - name: Optimizing your custom operator
+                        topicUid: Custom_Operator_Tutorial
               - name: API reference
                 topicUid: GQIArgument
                 items:
@@ -723,6 +730,11 @@ items:
                 topicUid: DOM_editor_deleting_section
               - name: Naming a DOM instance
                 topicUid: DOM_editor_naming_instance
+      - name: Tutorials
+        topicUid: DOM_Remove_Enum_Entry
+        items:
+          - name: Removing an enum entry from a GenericEnumFieldDescriptor
+            topicUid: DOM_Remove_Enum_Entry
   - name: Experience and Performance Management
     topicUid: EPM
     items:

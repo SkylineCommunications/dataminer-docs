@@ -4,6 +4,8 @@ uid: Overview_DCP
 
 # dataminer.services
 
+![dataminer.services.categories](~/dataminer-overview/images/dataminer.services_visual.png)
+
 With dataminer.services, you gain access to innovative and game-changing solutions that support the **transition into the emerging ICT media and broadband landscape** and **empower digital transformation** programs.
 
 By connecting your DataMiner System to dataminer.services via a single and secured connection, you gain access to a host of additional capabilities. This opens up a new world of possibilities with respect to how DataMiner integrations are done and how interactions with partners, customers, and technology vendors take place. It's not just a service, it's a **catalyst for digital transformation**, driving your business towards a brighter, more connected future.
@@ -14,7 +16,7 @@ Enabled [in just a few clicks](xref:Linking_your_DataMiner_and_DCP_account), dat
 
 So, what exactly does “dataminer.services” refer to?
 
-![dataminer.services.categories](~/dataminer-overview/images/DMS_dataminer_services_categories.png)
+![dataminer.services.categories](~/dataminer-overview/images/DMS_dataminer_services_categories.jpg)
 
 It is a **collection of functions** that are available when your DataMiner System is connected to the cloud, grouped in **three categories**, based on a **shared value**:
 

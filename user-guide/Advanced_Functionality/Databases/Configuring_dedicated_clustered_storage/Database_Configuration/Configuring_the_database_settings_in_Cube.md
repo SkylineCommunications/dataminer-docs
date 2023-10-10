@@ -4,7 +4,7 @@ uid: Configuring_the_database_settings_in_Cube
 
 # Configuring the general database settings
 
-You can configure the database settings for your DataMiner System's dedicated clustered storage in DataMiner Cube.
+If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STaaS) setup but instead choose to host a dedicated clustered storage setup yourself, you can configure the database settings for your DataMiner System's dedicated clustered storage in DataMiner Cube.
 
 > [!NOTE]
 > If you want an external program to execute queries against a DataMiner database, you will need to use an offload database. For information on offload database settings, see [Offload database](xref:Offload_database).

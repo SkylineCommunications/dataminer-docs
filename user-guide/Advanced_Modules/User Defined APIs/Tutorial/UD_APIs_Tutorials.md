@@ -2,13 +2,13 @@
 uid: UD_APIs_Tutorials
 ---
 
-# Tutorials
+# User-defined APIs tutorials
 
 With the DataMiner User-Defined APIs module, you can create custom APIs to interact with DataMiner. The tutorials in this section will show you how to set up a custom API and how to use it.
 
 ## Prerequisites
 
-- A DataMiner System using DataMiner 10.3.6 or higher with [indexing database](xref:Indexing_Database) and [HTTPS setup](xref:Setting_up_HTTPS_on_a_DMA)
+- A DataMiner System using DataMiner 10.3.6 or higher with [Storage as a Service](xref:STaaS) or self-hosted storage setup with [indexing database](xref:Indexing_Database), as well as [HTTPS setup](xref:Setting_up_HTTPS_on_a_DMA)
 - [DataMiner Cube](https://community.dataminer.services/dataminer-cube-installer/)
 - [User-Defined APIs user permissions](xref:DataMiner_user_permissions#modules--user-defined-apis)
 - [Automation user permissions](xref:DataMiner_user_permissions#modules--automation)

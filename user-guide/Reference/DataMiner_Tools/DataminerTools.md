@@ -47,4 +47,4 @@ This section provides information on the following tools:
 > For more information on other DataMiner tools or third-party tools, see:
 >
 > - [DataMiner Development Tools](xref:TOOLS)
-> - [DataMiner maintenance tools](xref:DMS_maintenance_tools)
+> - [DataMiner maintenance tools](xref:Cleaning_up_unused_files_on_a_DMA)

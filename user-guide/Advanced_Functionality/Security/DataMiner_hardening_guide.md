@@ -34,6 +34,8 @@ After you have run these BPA tests, they will provide an overview of the detecte
 
 ### Web apps
 
+#### HTTPS
+
 By default, DataMiner uses HTTP to serve the web applications. HTTP is unencrypted and vulnerable to man-in-the-middle attacks, so we highly recommend [setting up HTTPS instead](xref:Setting_up_HTTPS_on_a_DMA).
 
 In addition, we also recommend that you configure your operating system to **block deprecated SSL/TLS versions**. HTTPS uses SSL/TLS for encrypting communication, but the older versions of this protocol are no longer considered secure. At present, all major browsers support the latest TLS version (TLS 1.3), but TLS 1.2 is also still regarded as secure.
@@ -49,6 +51,24 @@ In addition, we also recommend that you configure your operating system to **blo
 | TLS 1.3 | 2018 | Supported (most secure) |
 
 For more information about disabling legacy SSL/TLS versions, refer to [TLS, DTLS, and SSL protocol version settings](https://learn.microsoft.com/en-us/windows-server/security/tls/tls-registry-settings?tabs=diffie-hellman#tls-dtls-and-ssl-protocol-version-settings) in the Microsoft documentation. We have also made tools and scripts available for this [on GitHub](https://github.com/SkylineCommunications/windows-hardening), or you can use third-party tools such as [IIS Crypto](https://www.nartac.com/Products/IISCrypto).
+
+#### HTTP headers
+
+When configuring HTTPS in IIS on your DataMiner Agent, we also recommend setting the following HTTP headers:
+
+- [HTTP Strict Transport Security](xref:Setting_up_HTTPS_on_a_DMA#configuring-the-https-binding-in-iis)
+
+- [X-Frame-Options](https://support.microsoft.com/en-us/office/mitigating-framesniffing-with-the-x-frame-options-header-1911411b-b51e-49fd-9441-e8301dcdcd79): We recommend setting this to *DENY* or *SAMEORIGIN*.
+
+- [X-Content-Type-Options](https://docs.oracle.com/en/industries/health-sciences/argus-safety/8.2.1/asmsc/configuring-x-content-type-options-iis.html#GUID-954EE526-1220-4DD7-A946-0FEAA1A39679): We recommend setting this to *NOSNIFF*.
+
+There are some other HTTP headers that can improve security; however, their value depends on your specific DataMiner setup (e.g. resources used in Dashboards/Low-Code Apps):
+
+- [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP)
+
+- [Referrer Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy)
+
+- [Permissions-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy)
 
 ### DataMiner Cube
 
@@ -147,6 +167,8 @@ The **Remote Administration** rule must be enabled when the DataMiner server is 
 > [!TIP]
 > See also: [Configuring the IP network ports](xref:Configuring_the_IP_network_ports)
 
-## Secure the databases
+## Secure self-hosted DataMiner storage
 
-Cassandra and Elasticsearch/OpenSearch form a crucial part of recent DataMiner Systems. For this reason, it is important that you spend some time making sure their configuration is as secure as possible. For detailed information, refer to [Securing the DataMiner databases](xref:Database_security).
+If you do not make use of [Storage as a Service (STaaS)](xref:STaaS) but manage DataMiner storage yourself, you need to make sure that the databases used for DataMiner storage are fully secure.
+
+In recent DataMiner Systems, Cassandra and OpenSearch/Elasticsearch are used for this. It is important that you spend some time making sure their configuration is as secure as possible. For detailed information, refer to [Securing self-hosted DataMiner storage](xref:Cassandra_authentication).

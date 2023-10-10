@@ -61,6 +61,16 @@ The following example would result in something like "*My element Localhost is f
 > - Any part that contain spaces should be enclosed by double quotes.
 > - The name of each part can be found in the *FEEDS* data source of the edit panel's *DATA* tab.
 
+#### Dashboards app & Low-Code Apps: A backup of all existing dashboards and low-code apps will now be made when performing a DataMiner upgrade  [ID_37413]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+When you install a DataMiner upgrade (either a full upgrade or a web-only upgrade), a backup of all existing dashboards and low-code apps on the system will now be made.
+
+After a DataMiner upgrade, all dashboards and low-code apps will, if necessary, be migrated in order to make them compatible with the newer software versions. If an error occurs during this migration, or if you need to perform a DataMiner downgrade, you will now be able to restore the dashboards and low-code apps stored in the backup. However, note that restoring these items will have to be done manually.
+
+All backups of dashboards and low-code apps will be stored in `C:\Skyline DataMiner\System Cache\Web\Backups`.
+
 ## Changes
 
 ### Enhancements
@@ -93,6 +103,12 @@ In all other cases (e.g. multiple aggregation nodes, grouping, different columns
 
 A DOM instance without history will now default to the happy path, i.e. the path that illustrates the states an instance would undergo following the standard workflow.
 
+#### Dashboards app: Components will now only show skeleton loading during the initial load [ID_37274]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+Up to now, some components would show skeleton loading until after the data had been loaded. From now on, those components will only show skeleton loading during the initial load.
+
 #### Dashboards app/Low-Code Apps - Visual Overview component: Initial visual overview data will now be retrieved asynchronously [ID_37341]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
@@ -104,6 +120,12 @@ Up to now, a dashboard containing Visual Overview components would retrieve the 
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
 Before you can add a GQI query to the Data Aggregator configuration file, you have to convert it first by means of the *ConvertQueryToProtoJson* web method. This method now supports node keys.
+
+#### Security enhancements [ID_37421] [ID_37426]
+
+<!-- RN 37421/37426: MR 10.4.0 - FR 10.3.11 -->
+
+A number of security enhancements have been made.
 
 ### Fixes
 
@@ -184,7 +206,7 @@ When, in the *Monitoring* app, a visual overview page was opened using a shape d
 
 #### Problem with the IIS web server when redirecting the user to the login page [ID_37288]
 
-<!-- MR 10.4.0 - FR 10.3.11 -->
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
 
 In some cases, an error could occur in the IIS web server when redirecting the user to the login page.
 
@@ -211,3 +233,33 @@ When actions had been configured on a table visualization with multiple queries,
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
 When you edited an existing action, in some cases, the *Execute component* action would not be able to properly restore the form.
+
+#### Dashboards app/Low-Code Apps: Feed linker would no longer select the feed type when there was only a single option [ID_37396]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+The feed linker would no longer automatically select the feed type when there was only a single option. Moreover, as it was not possible to open the drop-down box, no feed could be selected manually either.
+
+#### Monitoring app: Problem when navigating to another visual overview page [ID_37415]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When, in the *Monitoring* app, you selected an element or a service, and navigated to another visual overview page, a `Cannot convert null to a value type` error would be thrown.
+
+#### Low-Code Apps: No longer possible to edit a newly created app after refreshing one of its pages [ID_37425]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When you had created and published an app with at least one component, it would no longer be possible to edit it after refreshing one of its pages.
+
+#### Dashboards app - Query builder: Problem with 'Row by row' option [ID_37463]
+
+<!-- MR TBD - FR 10.3.11 -->
+
+Due to a compatibility issue, a `Cannot read properties of undefined (reading IsHidden)` error could be thrown when, in the query builder, you joined queries on a DataMiner Agent that did not (yet) supported the *Row by row* option.
+
+#### Low-Code Apps: Problem when accessing apps of which page and/or panel names contained special characters [ID_37474]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 [CU0] -->
+
+After an upgrade to version 10.3.10, it would no longer be possible to access existing apps of which page and/or panel names contained special characters. Also, when adding a page or a panel, it would no longer be possible to enter a page or panel name that contained special characters.

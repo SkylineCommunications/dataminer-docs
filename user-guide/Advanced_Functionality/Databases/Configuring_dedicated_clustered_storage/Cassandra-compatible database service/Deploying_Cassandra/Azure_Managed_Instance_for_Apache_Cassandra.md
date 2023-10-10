@@ -4,7 +4,7 @@ uid: Azure_Managed_Instance_for_Apache_Cassandra
 
 # Setting up an Azure Managed Instance for Apache Cassandra
 
-From DataMiner 10.3.5/10.4.0 onwards<!-- RN 35830 -->, it is possible to use an Azure Managed Instance for Apache Cassandra as an alternative to a Cassandra cluster hosted on premises.
+If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STaaS) setup but instead choose self-hosted storage, you can use an Azure Managed Instance for Apache Cassandra as an alternative to a Cassandra cluster hosted on premises. This is supported from DataMiner 10.3.5/10.4.0 onwards<!-- RN 35830 -->.
 
 You will first need to [create your Azure Managed Instance for Apache Cassandra](#creating-your-azure-managed-instance-for-apache-cassandra), and then [connect your DataMiner System to the created instance](#connecting-your-dataminer-system-to-the-azure-managed-instance).
 

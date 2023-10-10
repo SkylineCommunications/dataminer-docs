@@ -6,7 +6,7 @@ uid: Part1GettingStarted
 
 <div class="row"> 
   <div class="column">
-    <a href="/user-guide/Getting_started/Installing_a_DataMiner_Agent.html" title="Installing a DMA" target="_self"><img src="~/user-guide/images/Docs_InstallingDMA.svg" style="width:100%"></a>
+    <a href="/user-guide/Getting_started/Deploying_a_DataMiner_System.html" title="Deploying a DMS" target="_self"><img src="~/user-guide/images/Deploying_DMS.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/user-guide/Getting_started/BasicConcepts/BasicConcepts.html" title="Basic Concepts" target="_self"><img src="~/user-guide/images/Docs_BasicConcepts.svg" style="width:100%"></a>

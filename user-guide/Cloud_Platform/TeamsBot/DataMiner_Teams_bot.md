@@ -114,6 +114,9 @@ To add a custom command for the Teams bot to your DMS, create an [Automation scr
 > - For examples of command scripts, refer to [Custom Command Examples](https://github.com/SkylineCommunications/ChatOps-Extensions/tree/main/CustomCommandExamples) on GitHub.
 > - For a video guide on creating custom commands, see [Elevate your DataMiner ChatOps game](https://www.youtube.com/watch?v=Sr6EEp2DFps). ![Video](~/user-guide/images/video_Duo.png)
 
+> [!NOTE]
+> A number of advanced custom commands have been made available on GitHub. You can find them tagged with *dataminer-bot* here: [dataminer-bot](https://github.com/topics/dataminer-bot).
+
 ### Input and output of the commands
 
 The commands allow dynamic input, such as [dummies](xref:Script_variables#creating-a-dummy), [parameters](xref:Script_variables#creating-a-parameter), [parameters with value files](xref:Script_variables#creating-a-parameter), and [memory files](xref:Script_variables#creating-a-memory-file).

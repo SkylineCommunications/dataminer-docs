@@ -26,7 +26,7 @@ The DataMiner Web Services API is north bound accessible for third-party applica
 
 ## Data Offloading
 
-All data in DataMiner can easily be offloaded to a central database, your own data plane or even files.
+All data in DataMiner can easily be offloaded to an offload database, your own data plane or even files.
 
 > [!TIP]
 >

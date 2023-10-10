@@ -14,3 +14,6 @@ To open the tool, go to the folder `C:\Program Files\Cassandra\DevCenter\` on th
 
 > [!TIP]
 > For more information on how to use this tool, see [DataStax DevCenter](https://docs.datastax.com/en/archived/developer/devcenter/doc/devcenter/dcToc.html).
+
+> [!NOTE]
+> The recommended setup for DataMiner storage is [Storage as a Service](xref:STaaS).

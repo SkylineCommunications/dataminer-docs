@@ -540,6 +540,11 @@
         items:
         - name: Launching EPM objects by clicking buttons in Data Display table cells
           topicUid: AdvancedEPMLaunchEPMObjectsTableCellButtons
+    - name: Connector help pages
+      topicUid: Connector_help_pages
+      items:
+      - name: Connector help template
+        topicUid: Connector_help_template
     - name: Questions & Answers
       topicUid: QuestionsAndAnswers
     - name: How-tos
@@ -5289,8 +5294,10 @@
         - name: Tutorials
           topicUid: DisTutorials_MibBrowser
           items:
-            - name: Exploring the DIS MIB Browser
-              topicUid: DisTutorials_MibBrowser
+          - name: Exploring the DIS MIB browser
+            topicUid: DisTutorials_MibBrowser
+          - name: DIS Validator and GitHub DevOps
+            topicUid: DisTutorials_DevOpsGitHubValidator
         - name: Troubleshooting
           topicUid: Troubleshooting
           items:

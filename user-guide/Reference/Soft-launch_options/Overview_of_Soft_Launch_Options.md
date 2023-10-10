@@ -47,6 +47,9 @@ Enables behavioral anomaly detection and suggestion events. See [Behavioral anom
 > [!NOTE]
 > Deprecated from DataMiner 10.3.6 onwards. No longer supported from DataMiner 10.4.1 onwards. This feature is replaced by the [UserDefinableAPI](#userdefinableapi) feature.
 
+> [!CAUTION]
+> APIDeployment is not supported on systems using [Storage as a Service (STaaS)](xref:STaaS).
+
 Enables dynamic API deployment on the SLAPIEndpoint application.
 
 Requires the .NET 5.0 hosting bundle.

@@ -14,7 +14,7 @@ uid: Web_apps_Feature_Release_10.3.5
 
 #### BREAKING CHANGE: One single authentication app for all web apps [ID_35772] [ID_35896]
 
-<!-- MR 10.4.0 - FR 10.3.5 -->
+<!-- MR 10.3.0 [CU8] - FR 10.3.5 -->
 
 Up to now, every web app had its own login screen and its own way of authenticating users. When using external authentication via SAML, this meant that, for every web app, a separate `AssertionConsumerService` element had to be added to the `spMetadata.xml` file.
 

@@ -12,8 +12,6 @@ uid: General_configuration
 
 - [How do I keep DataMiner Cube from disconnecting automatically?](#how-do-i-keep-dataminer-cube-from-disconnecting-automatically)
 
-- [How do I delete all alarms on a DMA?](#how-do-i-delete-all-alarms-on-a-dma)
-
 - [What do I do if two DMAs cannot communicate?](#what-do-i-do-if-two-dmas-cannot-communicate)
 
 - [What do I do if there is an SLNet process disappearance?](#what-do-i-do-if-there-is-an-slnet-process-disappearance)
@@ -138,51 +136,6 @@ However, under certain circumstances, it may be necessary to keep a session open
 1. Go to the *Connection* tab.
 
 1. Clear the option *Time before automatic disconnect*.
-
-## How do I delete all alarms on a DMA?
-
-To delete all alarms on a DMA from the history database, you have to drop a number of tables in the MySQL database.
-
-> [!WARNING]
-> Performing the following procedure has a severe impact on a DataMiner system.
-
-All history alarms will be deleted indiscriminately, and the Alarm Console, reports, and dashboards will no longer contain any history alarm data.
-
-1. Connect to the DMA using Remote Desktop.
-
-1. Stop the DataMiner software. See [Starting or stopping DataMiner Agents in your DataMiner System](xref:Starting_or_stopping_a_DMA_in_DataMiner_Cube).
-
-1. Open [MySQL Workbench](xref:MySQL_Workbench). In the logon window, click *OK* to connect to the database using the default settings.
-
-1. Open the SLDMADB tree.
-
-1. Right-click and select *Drop Table* for the following tables:
-
-   - Alarm
-
-   - Alarm_property
-
-   - Brainlink
-
-   - Latch_state
-
-   - Rep_pd_info
-
-   - Rep_pd_newalarms
-
-   - Rep_pd_states
-
-   - Service_alarm
-
-   If you also want to clear all information events, then also select *Drop Table* for the following table:
-
-   - Info
-
-1. Close MySQL Workbench.
-
-1. Restart the DataMiner. See [Starting or stopping DataMiner Agents in your DataMiner System](xref:Starting_or_stopping_a_DMA_in_DataMiner_Cube).
-
-    On startup, DataMiner will recreate the tables you have dropped, and the new tables will all be empty.
 
 ## What do I do if two DMAs cannot communicate?
 
