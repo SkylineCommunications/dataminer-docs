@@ -10,7 +10,7 @@ For this setup, both a Cassandra-compatible database service and [indexing datab
 
 First install a Cassandra Cluster (i.e. a Cassandra cluster used for all DMAs in a DMS, as opposed to [a Cassandra cluster per DMA](xref:Configuring_storage_per_DMA)) or an equivalent database service, as this is a prerequisite for installing an indexing database afterwards. From DataMiner 10.3.0/10.3.3 onwards, Amazon Keyspaces Service on AWS is supported as an alternative for the Cassandra Cluster setup.
 
-Then install the indexing database. You can use an on-premises Elasticsearch cluster (supported from DataMiner 9.6.4 onwards), Amazon OpenSearch Service on AWS (supported from DataMiner 10.3.0/10.3.3 onwards), or an on-premises OpenSearch cluster (supported from DataMiner 10.3.0/10.3.3 onwards).
+Then install the indexing database. You can use an on-premises OpenSearch cluster (supported from DataMiner 10.3.0/10.3.3 onwards) or Amazon OpenSearch Service on AWS (supported from DataMiner 10.3.0/10.3.3 onwards). While an Elasticsearch cluster can also be used, Elasticsearch is only supported up to version 6.8, so this is not recommended.
 
 ![dedicated clustered storage](~/user-guide/images/Dedicated_clustered_storage.svg)
 

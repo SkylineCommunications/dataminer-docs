@@ -13,7 +13,7 @@ The following settings are available:
 
 - *Enable indexing on alarms:* Enables indexing of alarms. If this option is not enabled, the enhanced search options in the Alarm Console are not available.
 
-- *Migrate booking data to Indexing Engine*: Starts a wizard that allows you to migrate booking data from the Cassandra database to the Elasticsearch database. Only displayed in case booking data have not been migrated yet.
+- *Migrate booking data to Indexing Engine*: Starts a wizard that allows you to migrate booking data from the Cassandra database to the indexing database. Only displayed in case booking data have not been migrated yet.
 
   Please note the following regarding the migration of booking data:
 

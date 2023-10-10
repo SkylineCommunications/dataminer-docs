@@ -237,7 +237,7 @@ items:
             topicUid: Dedicated_clustered_storage
           - name: Separate Cassandra setup with Elasticsearch
             topicUid: Separate_Cassandra_setup_with_Elasticsearch
-          - name: Separate Cassandra setup without Elasticsearch
+          - name: Separate Cassandra setup without indexing
             topicUid: Separate_Cassandra_setup_without_Elasticsearch
           - name: Legacy setup with MySQL or MSSQL database
             topicUid: Legacy_setup_with_MySQL_or_MSSQL_database
@@ -352,8 +352,6 @@ items:
                         topicUid: Installing_Elasticsearch_via_DataMiner
                       - name: Migrating SRM resources to Elasticsearch
                         topicUid: Resources_migration_to_elastic
-                      - name: Configuring indexing settings in DataMiner Cube
-                        topicUid: Configuring_DataMiner_Indexing
                       - name: Configuring the Elasticsearch database (Windows)
                         topicUid: Configuring_Elasticsearch_database_Windows
                   - name: Manually connecting a DMA to an Elasticsearch cluster
@@ -367,6 +365,8 @@ items:
                         topicUid: Configuring_Elasticsearch_backups_Windows
                   - name: Removing an Elasticsearch cluster node
                     topicUid: Configuring_Elasticsearch_node_remove
+              - name: Configuring indexing settings in DataMiner Cube
+                topicUid: Configuring_DataMiner_Indexing
           - name: Common database settings
             topicUid: Specifying_TTL_overrides
             items:

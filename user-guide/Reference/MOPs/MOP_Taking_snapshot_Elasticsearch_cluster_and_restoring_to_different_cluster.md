@@ -4,6 +4,9 @@ uid: MOP_Taking_snapshot_Elasticsearch_cluster_and_restoring_to_different_cluste
 
 # Taking a snapshot of one Elasticsearch cluster and restoring it to another
 
+> [!IMPORTANT]
+> Elasticsearch is **only supported up to version 6.8**. We therefore recommend using [Storage as a Service](xref:STaaS) instead, or if you do want to continue using self-hosted storage, using [dedicated clustered storage](xref:Dedicated_clustered_storage) with OpenSearch or the Amazon OpenSearch Service on AWS.
+
 The procedure details how you can take and restore snapshots to back up and restore Elasticsearch data. See the [documentation on taking and restoring snapshots](xref:Configuring_Elasticsearch_backups_Windows_Linux).
 
 > [!NOTE]

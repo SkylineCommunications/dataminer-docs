@@ -44,6 +44,12 @@ In some cases, an error could occur in different native processes when interacti
 
 In some cases, incorrect data would be returned when requesting alarm monitoring information for a parameter exported as a standalone parameter to a DVE child element, especially when dynamic thresholds had been configured in the alarm template.
 
+#### Updated dynamic IP address would incorrectly be applied to all connections of an element [ID_37445]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+
+When a parameter that was used to store the dynamic IP address of an element connection was updated, the dynamic IP address would incorrectly be applied to all connections of that element when the element was restarted.
+
 #### SLAnalytics: Problem when simultaneously stopping the 'Alarm Focus' and 'Automatic Incident Tracking' features [ID_37496]
 
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->

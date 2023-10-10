@@ -92,6 +92,12 @@ A number of enhancements have been made with regard to the verification of forec
 
 When a parameter has anomalous flatline periods in its trend data history that are breaking the normal trend data patterns, from now on, those flatline periods will no longer be included into the training data of the prediction model. As a result, a more accurate prediction can be expected on this kind of behavior.
 
+#### DataMiner Cube: Caching enhancements [ID_37553]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+
+A number of general enhancements have been made with regard to cache management.
+
 ### Fixes
 
 #### Problem when requesting alarm monitoring information for an exported parameter [ID_37424]
@@ -99,6 +105,12 @@ When a parameter has anomalous flatline periods in its trend data history that a
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
 
 In some cases, incorrect data would be returned when requesting alarm monitoring information for a parameter exported as a standalone parameter to a DVE child element, especially when dynamic thresholds had been configured in the alarm template.
+
+#### Updated dynamic IP address would incorrectly be applied to all connections of an element [ID_37445]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+
+When a parameter that was used to store the dynamic IP address of an element connection was updated, the dynamic IP address would incorrectly be applied to all connections of that element when the element was restarted.
 
 #### SLAnalytics: Problem when simultaneously stopping the 'Alarm Focus' and 'Automatic Incident Tracking' features [ID_37496]
 

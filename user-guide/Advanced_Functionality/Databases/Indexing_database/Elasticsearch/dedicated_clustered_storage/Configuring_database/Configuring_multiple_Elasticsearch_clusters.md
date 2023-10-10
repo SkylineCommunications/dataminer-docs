@@ -4,10 +4,11 @@ uid: Configuring_multiple_Elasticsearch_clusters
 
 # Configuring multiple Elasticsearch clusters
 
+> [!IMPORTANT]
+> Elasticsearch is **only supported up to version 6.8**. We therefore recommend using [Storage as a Service](xref:STaaS) instead, or if you do want to continue using self-hosted storage, using [dedicated clustered storage](xref:Dedicated_clustered_storage) with OpenSearch or the Amazon OpenSearch Service on AWS.
+
 > [!NOTE]
->
-> - Instead of hosting the DataMiner storage yourself, we highly recommend switching to [DataMiner Storage as a Service](xref:STaaS). With this cloud-native storage platform, you will no longer need to set up and manage your own storage databases.
-> This procedure can be followed both on Linux and Windows setups. However, we highly recommend configuring this setup on Linux.
+> This procedure can be followed both on Linux and Windows setups. However, we highly recommend using Linux.
 
 From DataMiner 10.2.0/10.1.3 onwards, you can have data offloaded to multiple Elasticsearch clusters, i.e. one main cluster and several replicated clusters. Data is always read from the main cluster, but data updates are sent to all clusters.
 
@@ -80,7 +81,7 @@ To configure this setup:
 
    - *Password*: The password to connect to Elasticsearch. This is the equivalent of the *PWD* tag in *DB.xml* (see [Specifying custom credentials for Elasticsearch](xref:DB_xml#specifying-custom-credentials-for-elasticsearch)).
 
-   - *Prefix*: The prefix for the Elasticsearch indexes. This is the equivalent of the *DB* tag in *DB.xml* (see [Specifying a custom prefix for the Elasticsearch indexes](xref:DB_xml#specifying-a-custom-prefix-for-the-elasticsearch-indexes)).
+   - *Prefix*: The prefix for the Elasticsearch indexes. This is the equivalent of the *DB* tag in *DB.xml* (see [Specifying a custom prefix for the Elasticsearch indexes](xref:DB_xml#specifying-a-custom-prefix-for-the-indexes)).
 
    - *FileOffloadIdentifier*: String used to identify this connection. Each connection should have a different identifier, which will be used for file offloads.
 

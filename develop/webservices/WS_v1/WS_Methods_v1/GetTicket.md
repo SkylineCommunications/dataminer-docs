@@ -9,7 +9,7 @@ Use this method to retrieve a particular ticket.
 > [!NOTE]
 >
 > - From DataMiner 10.0.13 onwards, use the *GetTicketV2* method instead. See [GetTicketV2](xref:GetTicketV2).
-> - DataMiner Ticketing requires a Cassandra database as well as a specific license. From DataMiner 10.0.13 onwards, it also requires an Elasticsearch database. For more information on acquiring a Ticketing license, contact the Skyline Sales department.
+> - DataMiner Ticketing requires a Cassandra database as well as a specific license. From DataMiner 10.0.13 onwards, it also requires an indexing database. For more information on acquiring a Ticketing license, contact the Skyline Sales department.
 
 > [!CAUTION]
 >
