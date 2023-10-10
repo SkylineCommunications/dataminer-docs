@@ -105,7 +105,7 @@ From DataMiner 10.3.11/10.4.0 onwards<!--RN 37404-->, [smart-serial connections]
 > [!IMPORTANT]
 >
 > - Dynamic polling is only supported when the smart-serial connection acts as a client, not as a server. Assigning IP addresses like "127.0.0.1" or "any" makes the element act as a server, and it cannot switch to client mode without stopping first. Also, trying to assign a value like "127.0.0.1" to the dynamic IP parameter at runtime will cause an error.
-> - We highly recommend configuring the connection type as *smart-serial single* or *serial single*. This ensures that each connection is assigned a dedicated socket in SLPort. If multiple smart-serial or serial elements hosted on the same DMA share the same IP address and port through the element wizard, they will all use the new IP address if one of them changes the IP address dynamically.
+> - We highly recommend configuring the connection type as *smart-serial single* or *serial single*. This ensures that each connection is assigned a dedicated socket in SLPort. If multiple smart-serial or serial elements hosted on the same DMA are configured to share the same IP address and port, they will all use the new IP address if one of them changes the IP address dynamically.
 
 ### dynamic snmp get
 
