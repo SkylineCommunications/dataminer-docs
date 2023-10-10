@@ -81,13 +81,14 @@ If there is more than one DataMiner Agent in your cluster, the time in the clust
 
 ### Microsoft Visual C++
 
-- Prior to DataMiner versions **10.3.9**, **10.3.0 [CU6]** and **10.2.0 [CU18]**, Microsoft Visual C++ 2010 and Microsoft Visual C++ 2015 or newer are required.
+- From DataMiner versions 10.3.9, 10.3.0 [CU6], and 10.2.0 [CU18] onwards<!-- RN 36745 -->, only Microsoft Visual C++ **2015** or newer is required.
 
-- From DataMiner versions **10.3.9**, **10.3.0 [CU6]** and **10.2.0 [CU18]** onwards, only Microsoft Visual C++ 2015 or newer is required.
+- Prior to DataMiner versions 10.3.9, 10.3.0 [CU6], and 10.2.0 [CU18], Microsoft Visual C++ **2010** and Microsoft Visual C++ **2015** or newer are required.
 
 > [!NOTE]
-> When uninstalling MVC++ 2010, make sure to do so only after upgrading to **10.3.9**, **10.3.0 [CU6]** or **10.2.0 [CU18]** or the upgrade will fail.
-> Versions of MVC++ 2015 up to 2022 are backwards compatible and only one version can be installed simultaniously. For this reason, we recommend updating to the latest version of MVC++ 2022.
+>
+> - If you want to **uninstall** Microsoft Visual C++ 2010, make sure to do so only **after upgrading** to 10.3.9, 10.3.0 [CU6], or 10.2.0 [CU18], as otherwise the upgrade will fail.
+>- Microsoft Visual C++ versions 2015 up to 2022 are backwards-compatible, and only one version can be installed at the same time. For this reason, we recommend updating to the latest version of Microsoft Visual C++ 2022.
 
 ### Computer name
 
