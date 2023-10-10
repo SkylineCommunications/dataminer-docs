@@ -26,7 +26,7 @@ To use the library, first initialize the [Scheduler](xref:Skyline.DataMiner.Core
 var scheduler = new Scheduler(task => task != null);
 ```
 
-In the above example, all available tasks in the DMS will be retrieved.
+In the example above, all available tasks in the DMS will be retrieved.
 
 Now you can call methods to get and delete scheduled tasks according to a given filter:
 

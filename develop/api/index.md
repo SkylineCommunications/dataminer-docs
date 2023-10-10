@@ -13,7 +13,7 @@ uid: ApiDocumentation
 |[Skyline.DataMiner.Core.DataMinerSystem.Common](xref:Skyline.DataMiner.Core.DataMinerSystem.Common)|This namespace contains types used for development of protocols and Automation scripts. For more information on how to use types from this namespace, refer to [Introduction](xref:ClassLibraryIntroduction).|
 |[Skyline.DataMiner.Core.DataMinerSystem.Automation](xref:Skyline.DataMiner.Core.DataMinerSystem.Automation)|This namespace contains types used for development of Automation scripts.|
 |[Skyline.DataMiner.Core.DataMinerSystem.Protocol](xref:Skyline.DataMiner.Core.DataMinerSystem.Protocol)|This namespace contains types used for development of protocols.|
-|[Skyline.DataMiner.Core.Scheduler.Automation](xref:Skyline.DataMiner.Core.Scheduler.Automation)|This namespace contains types used to interact wiht DataMiner Scheduler module from Automation Scripts.|
+|[Skyline.DataMiner.Core.Scheduler.Automation](xref:Skyline.DataMiner.Core.Scheduler.Automation)|This namespace contains types used to interact with the DataMiner Scheduler module from Automation Scripts.|
 |[Skyline.DataMiner.Core.Matrix.Protocol](xref:Skyline.DataMiner.Core.Matrix.Protocol)|This namespace contains types for defining a matrix component in a connector.|
 |[Skyline.DataMiner.Utils.InteractiveAutomationScript](xref:Skyline.DataMiner.Utils.InteractiveAutomationScript)|This namespace contains types used for developing interactive Automation scripts using the InteractiveAutomationScriptToolkit.|
 |[Skyline.DataMiner.Utils.Interfaces](xref:Skyline.DataMiner.Utils.Interfaces)|This namespace defines types for calculation rates of interfaces.|
