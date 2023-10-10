@@ -53,7 +53,7 @@ To configure this setup, proceed as follows:
                <Hosts>10.11.1.44,10.11.2.44,10.11.3.44</Hosts>
                <Username />
                <Password>root</Password>
-               <Prefix>replica</Prefix>
+               <Prefix>dms</Prefix>
                <FileOffloadIdentifier>cluster2</FileOffloadIdentifier>
             </ElasticCluster>
          </ElasticConnections>
@@ -70,3 +70,18 @@ To configure this setup, proceed as follows:
 
 > [!TIP]
 > For troubleshooting information, see [Investigating OpenSearch issues](xref:Investigating_OpenSearch_Issues)
+
+# Using multiple Opensearch clusters
+
+During normal operation, DataMiner will offload the data written to both Opensearch clusters simultaneously. 
+If one of the Clusters goes down, an error will be displayed in the alarm console denoting that the indexing cluster is down.
+*All nodes in the indexing cluster are down* and/or *All nodes in the Replicated indexing cluster [IP1, IP2,...] are down.*
+If this happens, the *priorityOrder* (see above) needs to be altered so that the backup indexing cluster becomes active. 
+Specifically, this means setting *priorityOrder="0"* where the *priorityOrder* used to be 1 and the other way around.
+Afterwards DataMiner needs to be restarted.
+This should restore DataMiner to a functional state. 
+
+> [!IMPORTANT]
+> If the main Opensearch cluster goes down, it will need to be restored afterwards. Be sure to have a a backup set up to restore as indicated in: [Configuring OpenSearch backups](xref:Configuring_OpenSearch_Backups#Configuring-OpenSearch-backups) To restore it, stop DataMiner fully and restore the backup to the out of sync node as shown in aforementioned page.
+
+
