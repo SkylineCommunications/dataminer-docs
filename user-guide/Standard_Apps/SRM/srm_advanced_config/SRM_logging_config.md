@@ -23,11 +23,13 @@ uid: SRM_logging_config
 
    - Only a network path is supported.
 
+   - Make sure to always use a shared folder.
+
    - The path must end in a backslash character.
 
    - Both the client machine and the DataMiner servers must have access to the network share. If necessary, validate the access to the shared folder using file explorer locally on each server.
-  
-   - The local *C:\Skyline DataMiner\Documents* folder can **never** be configured as the booking logging location, as synchronization issues will arise. Make sure to always use a shared folder.
+
+   - The local `C:\Skyline DataMiner\Documents\` folder must **never** be configured as the booking logging location, as this will cause synchronization issues.
 
 1. Optionally, you can also configure the following settings in the *Logging Settings*  window:
 
