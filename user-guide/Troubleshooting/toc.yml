@@ -54,8 +54,6 @@ items:
         topicUid: The_terminal_server_has_exceeded_the_maximum_number_of_allowed_connections
       - name: Thread problem in x. y
         topicUid: Thread_problem_in_x
-      - name: Trust not granted
-        topicUid: Trust_not_granted
       - name: Unknown Error
         topicUid: Unknown_Error
   - name: Logging
@@ -330,8 +328,6 @@ items:
             topicUid: KI_Incorrect_RTE_counts_in_SLWatchdog2txt_and_Alarm_Console
           - name: NATS error message after 10.1 installation
             topicUid: KI_NATS_error_message_after_10_1_installation
-          - name: Not possible to generate reports on Windows Server 2012 or earlier
-            topicUid: KI_Not_possible_to_generate_reports_on_Windows_Server_2012_or_earlier
           - name: Shapes in DataMiner stencils not found in Visio search
             topicUid: KI_Shapes_in_DataMiner_stencils_not_found_in_Visio_search
           - name: SLDataMiner addressChangeThread RTE after DMA startup

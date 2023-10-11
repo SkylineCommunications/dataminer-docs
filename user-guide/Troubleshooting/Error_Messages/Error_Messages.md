@@ -58,6 +58,4 @@ This section provides more information on the following error messages:
 
 - [Thread problem in x: y](xref:Thread_problem_in_x)
 
-- [Trust not granted](xref:Trust_not_granted)
-
 - [Unknown Error](xref:Unknown_Error)
