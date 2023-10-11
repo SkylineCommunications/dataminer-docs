@@ -80,4 +80,4 @@ If one of the clusters goes down, an error will be displayed in the Alarm Consol
 If this happens, you need to alter the *priorityOrder* (see above) so that the backup indexing cluster becomes active. Specifically, this means setting *priorityOrder="0"* where the *priorityOrder* used to be 1 and the other way around. After you have done so, restart DataMiner. This should restore DataMiner to a functional state.
 
 > [!IMPORTANT]
-> If the main OpenSearch cluster goes down, it will need to be restored afterwards. Make sure you have a backup set up to restore. To restore the backup, stop DataMiner completely and then restore the backup to the node that is out of sync, as described. For more detailed information, see [Configuring OpenSearch backups](xref:Configuring_OpenSearch_Backups).
+> If the main OpenSearch cluster goes down, it will need to be restored afterwards. Make sure you have a backup set up to restore. To restore the backup, stop DataMiner completely and then restore the backup to the node that is out of sync. For more detailed information, see [Configuring OpenSearch backups](xref:Configuring_OpenSearch_Backups).
