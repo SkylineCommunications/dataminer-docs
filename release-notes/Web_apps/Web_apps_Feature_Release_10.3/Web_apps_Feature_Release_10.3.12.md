@@ -105,3 +105,11 @@ When, in a table component, you changed the order of the columns, and then expor
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
 
 When you clicked the waffle button while viewing a DataMiner web app (e.g. Monitoring) on a mobile device, the menu would incorrectly not open.
+
+#### Dashboards app & Low-Code Apps: Numeric input component would not get the focus when one of its arrow buttons was clicked [ID_37543]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+Up to now, a *Numeric input* component would not automatically get the focus when you clicked one of its arrow buttons. As a result, the feed value of the component would also not get updated.
+
+From now on, when you click the *Up* or *Down* button of a *Numeric input* component, it will get the focus and its feed value will be updated.
