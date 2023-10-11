@@ -26,6 +26,14 @@ A number of general enhancements have been made with regard to cache management.
 
 ### Fixes
 
+#### NATSCustodian could incorrectly pick an offline DMA as NAS candidate [ID_37312]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+
+Up to now, when NATSCustodian had to pick a NAS candidate, in some cases, it could pick a DataMiner Agent that was offline, causing an error to occur when trying to copy the credentials.
+
+From now on, it will only be possible to trigger a NATS configuration reset when all DataMiner Agents in the cluster are online/running.
+
 #### Updated dynamic IP address would incorrectly be applied to all connections of an element [ID_37445]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
