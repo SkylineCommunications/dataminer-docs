@@ -155,3 +155,9 @@ In some cases, SLNet could leak memory due to MessageBroker instances not being 
 <!-- MR 10.4.0 - FR 10.3.12 -->
 
 In some cases, a newly created element could get assigned the same DmaId/ElementId key as another, already existing element on another DataMiner Agent in the cluster. From now on, this will be prevented as long as the DataMiner Agents in questions can communicate with each other.
+
+#### PropertyChangeEvents would not be removed from the SLNet event cache when an element was deleted [ID_37576]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+
+When an element was deleted, `PropertyChangeEvent` instances for that element would incorrectly not get removed from the SLNet event cache.

@@ -39,3 +39,9 @@ When a parameter that was used to store the dynamic IP address of an element con
 When a correlation rule was based on another correlation rule, display issues could occur in the Alarm Console.
 
 When the main correlation alarm got cleared, the base alarm would no longer be shown in the alarm tab, and when the base alarm got updated, it would be shown twice: once as the source of the other correlation alarm and once as a regular alarm.
+
+#### PropertyChangeEvents would not be removed from the SLNet event cache when an element was deleted [ID_37576]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+
+When an element was deleted, `PropertyChangeEvent` instances for that element would incorrectly not get removed from the SLNet event cache.
