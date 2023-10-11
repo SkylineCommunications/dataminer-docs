@@ -130,7 +130,6 @@ uid: Known_issues
 | [Smart-serial communication no longer working](xref:KI_Smart-serial_communication_no_longer_working) | 10.1.x | - |
 | [Incorrect RTE counts in SLWatchdog2.txt and Alarm Console](xref:KI_Incorrect_RTE_counts_in_SLWatchdog2txt_and_Alarm_Console) | 10.0.x<br>9.6.x | - |
 | [DataMiner Cube freeze on startup](xref:KI_DataMiner_Cube_freeze_on_startup) | N/A | - |
-| [Not possible to generate reports on Windows Server 2012 or earlier](xref:KI_Not_possible_to_generate_reports_on_Windows_Server_2012_or_earlier) | N/A | - |
 | [Setting a protocol to production takes a long time](xref:KI_Setting_a_protocol_to_production_takes_a_long_time) | N/A | - |
 | [Shapes in DataMiner stencils not found in Visio search](xref:KI_Shapes_in_DataMiner_stencils_not_found_in_Visio_search) | N/A | - |
 | [SLDataMiner addressChangeThread RTE after DMA startup](xref:KI_SLDataMiner_addressChangeThread_RTE_after_DMA_startup) | N/A | - |
