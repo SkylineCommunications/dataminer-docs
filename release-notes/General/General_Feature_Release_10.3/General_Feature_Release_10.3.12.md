@@ -112,6 +112,14 @@ A number of enhancements have been made with regard to error handling.
 
 ### Fixes
 
+#### NATSCustodian could incorrectly pick an offline DMA as NAS candidate [ID_37312]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+Up to now, when NATSCustodian had to pick a NAS candidate, in some cases, it could pick a DataMiner Agent that was offline, causing an error to occur when trying to copy the credentials.
+
+From now on, it will only be possible to trigger a NATS configuration reset when all DataMiner Agents in the cluster are online/running.
+
 #### Problem when requesting alarm monitoring information for an exported parameter [ID_37424]
 
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
