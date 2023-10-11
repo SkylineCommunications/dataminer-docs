@@ -7,6 +7,7 @@ uid: Known_issues
 
 | Issue | DataMiner version | Date added |
 |--|--|--|
+| [Various issues when using MessageBroker with chunking](xref:KI_DataMinerMessageBroker2)| From DataMiner 10.3.5 [CU0]/10.3.8 onwards | October 11, 2023 |
 | [Offload to MySQL offload database fails](xref:KI_offload_database_incorrect_integer_value) | Any version | October 4, 2023 |
 | [Elements not loading after upgrade of DMS with multiple Elasticsearch clusters](xref:KI_elements_not_loading_in_DMS_with_multiple_ES) | From DataMiner 10.3.10 onwards | October 3, 2023 |
 | [SLNet deadlock in EPM setups](xref:KI_SLNet_Deadlock_EPM_Setups) | From DataMiner 10.3.9 onwards | September 28, 2023 |
