@@ -53,7 +53,7 @@ If the test fails to execute, this message is displayed:
 ## Impact when issues detected
 
 - Impact: Bookings may not execute correctly.
-- Action: Please contact <support.automation-orchestration@skyline.be> for support.
+- Action: Please contact your system administrator for support.
 
 ## Limitations
 
