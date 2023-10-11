@@ -19,3 +19,6 @@ From DataMiner 10.3.0/10.3.3 onwards, DataMiner web upgrades are available separ
 From DataMiner 10.3.11/10.3.0 [CU8] onwards<!--RN 37413-->, whenever you [upgrade your DMA](xref:Upgrading_a_DataMiner_Agent) or install a DataMiner web upgrade, an automatic backup of all existing dashboards and low-code apps on the system is generated and stored in *C:\Skyline DataMiner\System Cache\Web\Backups*.
 
 After the upgrade process, your dashboards and low-code apps may be migrated to ensure compatibility with the updated software version. If an error occurs during this migration, or if you need to perform a DataMiner downgrade, you can manually restore your dashboards and low-code apps from the backup.
+
+> [!NOTE]
+> The *Backups* folder retains only the ten most recent backup files.
