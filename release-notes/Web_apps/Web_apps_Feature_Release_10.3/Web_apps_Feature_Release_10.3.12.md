@@ -106,6 +106,12 @@ When, in a table component, you changed the order of the columns, and then expor
 
 When you clicked the waffle button while viewing a DataMiner web app (e.g. Monitoring) on a mobile device, the menu would incorrectly not open.
 
+#### Dashboards app & Low-Code Apps: Problem when feeding falsy values [ID_37538]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When a falsy value (empty string, 0, etc.) was fed to another component, that value would not be updated correctly.
+
 #### Dashboards app & Low-Code Apps: Numeric input component would not get the focus when one of its arrow buttons was clicked [ID_37543]
 
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
