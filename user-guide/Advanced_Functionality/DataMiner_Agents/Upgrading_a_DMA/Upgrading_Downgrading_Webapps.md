@@ -2,11 +2,9 @@
 uid: Upgrading_Downgrading_Webapps
 ---
 
-# Upgrading and downgrading the DataMiner web apps
+# Upgrading the DataMiner web apps
 
-## DataMiner web upgrades
-
-From DataMiner 10.3.0/10.3.3 onwards, DataMiner web upgrades are available. These updates include only the web API and the web apps, and typically take about 1 minute to install. This way you get access to the latest features and enhancements of the web apps, without having to do a DataMiner upgrade. All other DataMiner processes remain untouched.
+From DataMiner 10.3.0/10.3.3 onwards, DataMiner web upgrades are available separately from the general DataMiner upgrades. These updates include only the web API and the web apps, and typically take about 1 minute to install. This way you can get access to the latest features and enhancements of the web apps without having to do a full DataMiner upgrade. All other DataMiner processes remain untouched.
 
 > [!NOTE]
 >
@@ -16,7 +14,7 @@ From DataMiner 10.3.0/10.3.3 onwards, DataMiner web upgrades are available. Thes
 > [!TIP]
 > You can download the latest web upgrade package on [DataMiner Dojo](https://community.dataminer.services/dataminer-web-upgrade-packages/).
 
-## DataMiner web downgrades
+## Automatic backup
 
 From DataMiner 10.3.11/10.3.0 [CU8] onwards<!--RN 37413-->, whenever you [upgrade your DMA](xref:Upgrading_a_DataMiner_Agent) or install a DataMiner web upgrade, an automatic backup of all existing dashboards and low-code apps on the system is generated and stored in *C:\Skyline DataMiner\System Cache\Web\Backups*.
 
