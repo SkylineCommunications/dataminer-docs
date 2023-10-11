@@ -33,11 +33,38 @@ In the *Layout* tab for this component, the *Column filters* option is available
 
 - You can remove a column filter again by selecting *No color* instead of a specific color.
 
-You can **resize the columns** of the table by dragging the edges of the column headers. From DataMiner 10.2.0/10.1.8 onwards, you can also change the order of the columns by dragging the column headers to a different position.
+From DataMiner 10.4.1/10.5.0 onwards, You can **change the look** of a column in the option *Column appearence*, also available in the *Layout* tab. It needs to by configured as follows: <!-- RN 37522 -->
+
+1. In the dropdown, select the column you want to change.
+
+1. Click on the preview of that column to open its available presets. You can pick between:
+
+    - Left, to align the content to the left.
+
+    - Center, to align the content to the center.
+
+    - Right, to align the content to the right.
+
+    - Icon, to display an icon instead of text.
+
+    - Link, to make the text appear as a link.
+
+    - Background, to add a background color to the cell.
+
+1. Click on one of those presets to apply it to the column.
+
+1. Alternatively, you can fully customize the appearence by clicking *more (···)* > *Customize preset*, which will open the template editor.
+
+You can **resize the columns** of the table by dragging the edges of the column headers. From DataMiner 10.1.8/10.2.0 onwards, you can also change the order of the columns by dragging the column headers to a different position.
+
+  > [!TIP]
+  > From DataMiner 10.4.1/10.5.0 onwards, you can define the default column width by resizing the template in the column appearance.
 
 ## Adding actions to a table
 
 If you add a table component to a custom app using the [DataMiner Low-Code Apps](xref:Application_framework), you can also configure actions for the component. This feature is not available in the Dashboards app. <!-- RN 29394 -->
+
+### Prior to DataMiner 10.4.1/10.5.0
 
 To configure actions:
 
@@ -52,6 +79,19 @@ To configure actions:
 1. In the *Icon* box, select an icon for the action.
 
 1. In the *Action* box, select the action that should be executed. You can for instance use this to add an update action to the table, or to allow users to select an item or clear their selection. See [Configuring low-code app events](xref:LowCodeApps_event_config).
+
+### From DataMiner 10.4.1/10.5.0 onwards
+
+Actions can be linked to the *On click* event of a shape in a column template. This allows to define your own links or buttons inside a table.
+
+Next to cell actions you can also configure what should happen when a row is double-clicked:
+
+1. In the *Component* \> *Settings* pane, expand the *Actions* section.
+
+1. Click *On double click*.
+
+1. In the popup, configure what should happen. See [Configuring low-code app events](xref:LowCodeApps_event_config).
+
 
 ## Configuring other component settings
 
@@ -68,7 +108,7 @@ In the *Settings* tab for this component, you can customize its behavior to suit
 
 ## Exporting the table
 
-From DataMiner 10.2.0/10.1.3 onwards, you can export the content of the table by clicking the ... button in the top-right corner of the component and selecting *Export to CSV*. What happens next depends on your DataMiner version:
+From DataMiner 10.1.3/10.2.0 onwards, you can export the content of the table by clicking the ... button in the top-right corner of the component and selecting *Export to CSV*. What happens next depends on your DataMiner version:
 
 - Prior to DataMiner 10.3.8/10.4.0, if nothing is selected in the table, the entire table will be exported; otherwise only the selected rows will be exported. The data will contain the display values, not the raw values. This means that units will be included for the parameter values and that discrete values will be replaced by their corresponding display values.
 
