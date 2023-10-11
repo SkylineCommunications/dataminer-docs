@@ -1,5 +1,5 @@
 ---
-uid: public_to_catalog
+uid: publish_to_catalog
 ---
 
 # Publish to the Catalog

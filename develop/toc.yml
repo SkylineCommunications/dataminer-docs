@@ -5122,6 +5122,8 @@
   - name: CI/CD at Skyline Communications
     topicUid: CICD_at_Skyline
     items:
+    - name: Publish to Catalog
+      topicUid: publish_to_catalog
     - name: CI/CD Skyline Communications GitHub
       topicUid: migration_from_gerrit_to_github
       items:
