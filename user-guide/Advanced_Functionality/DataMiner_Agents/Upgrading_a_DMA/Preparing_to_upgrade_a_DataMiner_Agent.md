@@ -58,7 +58,7 @@ We recommend making a backup of your DataMiner System before executing an upgrad
 Making a backup can be done with a VM snapshot or DataMiner.
 
 > [!NOTE]
-> From DataMiner 10.3.11/10.3.0 [CU8] onwards<!--RN 37413-->, whenever you [upgrade your DMA](xref:Upgrading_a_DataMiner_Agent) or install a [DataMiner web upgrade](xref:Upgrading_a_DataMiner_Agent#other-types-of-upgrades), an automatic backup of all existing dashboards and low-code apps on the system is generated and stored in *C:\Skyline DataMiner\System Cache\Web\Backups*.
+> From DataMiner 10.3.11/10.3.0 [CU8] onwards<!--RN 37413-->, whenever you [upgrade your DMA](xref:Upgrading_a_DataMiner_Agent) or install a [DataMiner web upgrade](xref:Upgrading_Downgrading_Webapps), an automatic backup of all existing dashboards and low-code apps on the system is generated and stored in *C:\Skyline DataMiner\System Cache\Web\Backups*.
 
 ### VM snapshot
 

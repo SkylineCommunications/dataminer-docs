@@ -10,7 +10,7 @@ This section of the documentation provides detailed instructions on properly [co
 
 To [back up your DMA](xref:Backing_up_a_DataMiner_Agent), you have the option to use either the DataMiner Taskbar Utility or DataMiner Cube. Alternatively, in case you use self-hosted DataMiner storage nodes instead of the recommended [Storage as a Service](xref:STaaS), you can follow the backup procedure specific to your databases. Depending on the backup method employed, you can [restore your DMA](xref:Restoring_a_DataMiner_Agent) using the Taskbar Utility.
 
-To ensure you have access to the latest DataMiner features, you can [upgrade your DMA](xref:Upgrading_a_DataMiner_Agent) through the Update Center, Taskbar Utility, or System Center. From DataMiner 10.3.0/10.3.3 onwards, separate DataMiner web upgrades are available. These upgrades allow you to access the latest web app features without requiring a complete DataMiner upgrade.
+To ensure you have access to the latest DataMiner features, you can [upgrade your DMA](xref:Upgrading_a_DataMiner_Agent) through the Update Center, Taskbar Utility, or System Center. From DataMiner 10.3.0/10.3.3 onwards, separate [DataMiner web upgrades](xref:Upgrading_Downgrading_Webapps) are available. These upgrades allow you to access the latest web app features without requiring a complete DataMiner upgrade.
 
 Furthermore, you will find instructions on [monitoring the health of your DMA](xref:Health_Assessment_Guidelines_for_DataMiner_Agent), [uninstalling your DMA](xref:Uninstalling_a_DataMiner_Agent), managing [DataMiner packages](xref:DataMiner_packages), and [exporting and importing them on your DMA](xref:Exporting_and_importing_packages_on_a_DMA).
 
