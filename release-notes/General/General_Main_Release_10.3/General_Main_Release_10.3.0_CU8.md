@@ -223,3 +223,9 @@ In some cases, an error could occur in SLAnalytics when fetching protocol inform
 <!-- RN 37459: MR 10.3.0 [CU8] - FR 10.3.11 -->
 
 An error could occur in SLAnalytics when the SLNet connection got lost while resetting the data sources.
+
+#### SLNet: Memory leak due to MessageBroker instances not being cleaned up properly [ID_37525]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.12 -->
+
+In some cases, SLNet could leak memory due to MessageBroker instances not being cleaned up properly.

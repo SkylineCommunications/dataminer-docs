@@ -38,6 +38,16 @@ See also [DataMiner Cube Feature Release 10.3.12](xref:Cube_Feature_Release_10.3
 
 A number of security enhancements have been made.
 
+#### Dashboards app & Low-Code Apps - GQI: Use browser locale to determine query culture [ID_37505]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+Up to now, when the Dashboards app or a low-code app executed a GQI query, the invariant culture would always be used by default because the Web API was not able to provide a culture.
+
+From now on, the Web API will allow the web apps to specify a `LanguageTag` in the `DMAGenericInterfaceQueryFetchOptions`. This `LanguageTag` should contain a [BCP 47](https://www.rfc-editor.org/info/bcp47) string representation of a specific language (e.g. "en", "en-US", etc.), which will then be converted to a C# culture before being passed to GQI. For more information, see <https://learn.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo.getcultureinfo>. If no valid `LanguageTag` value is provided, the invariant culture will be used as fallback.
+
+By default, the web apps will use the browser locale to determine the culture. For more information, see <https://developer.mozilla.org/en-US/docs/Web/API/Navigator/language>.
+
 ### Fixes
 
 #### Dashboards app: Problem with 'Clear all' button [ID_37232]
@@ -95,3 +105,11 @@ When, in a table component, you changed the order of the columns, and then expor
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
 
 When you clicked the waffle button while viewing a DataMiner web app (e.g. Monitoring) on a mobile device, the menu would incorrectly not open.
+
+#### Dashboards app & Low-Code Apps: Numeric input component would not get the focus when one of its arrow buttons was clicked [ID_37543]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+Up to now, a *Numeric input* component would not automatically get the focus when you clicked one of its arrow buttons. As a result, the feed value of the component would also not get updated.
+
+From now on, when you click the *Up* or *Down* button of a *Numeric input* component, it will get the focus and its feed value will be updated.

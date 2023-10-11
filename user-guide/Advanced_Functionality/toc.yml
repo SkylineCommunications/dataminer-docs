@@ -169,6 +169,8 @@ items:
             topicUid: BPA_Report_Active_RTE
           - name: Service Automatic Properties
             topicUid: BPA_Service_Automatic_Properties
+          - name: SRM Framework Configuration
+            topicUid: BPA_SRM_Framework_Configuration
           - name: SRM Function Resources Consistency
             topicUid: BPA_SRM_Function_Resources_Consistency
           - name: Validate connectors

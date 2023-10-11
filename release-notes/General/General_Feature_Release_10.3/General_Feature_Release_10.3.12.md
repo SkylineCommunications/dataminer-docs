@@ -143,3 +143,21 @@ Up to now, when you stopped both *Alarm Focus* and *Automatic Incident Tracking*
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
 
 When a resource did not have both a minimum and maximum value for a particular range point, the resource capability exposers would not work correctly for that range point.
+
+#### SLNet: Memory leak due to MessageBroker instances not being cleaned up properly [ID_37525]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.12 -->
+
+In some cases, SLNet could leak memory due to MessageBroker instances not being cleaned up properly.
+
+#### Newly created element could get assigned the same DmaId/ElementId key as another, already existing element [ID_37560]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+In some cases, a newly created element could get assigned the same DmaId/ElementId key as another, already existing element on another DataMiner Agent in the cluster. From now on, this will be prevented as long as the DataMiner Agents in questions can communicate with each other.
+
+#### PropertyChangeEvents would not be removed from the SLNet event cache when an element was deleted [ID_37576]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+
+When an element was deleted, `PropertyChangeEvent` instances for that element would incorrectly not get removed from the SLNet event cache.
