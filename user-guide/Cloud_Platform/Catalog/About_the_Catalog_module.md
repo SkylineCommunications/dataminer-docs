@@ -4,7 +4,7 @@ uid: About_the_Catalog_module
 
 # About the Catalog module
 
-As part of dataminer.services, the Catalog module allows Skyline customers and DataMiner Strategic Partners to browse available DataMiner connectors, install packages, Visio drawings, Automation scripts, dashboards, etc. and deploy them to their DataMiner System.
+As part of dataminer.services, the Catalog module allows Skyline customers and DataMiner Strategic Partners to browse and deploy available DataMiner connectors, packages, Visio drawings, Automation scripts, dashboards, and more.
 
 To access the Catalog module:
 
