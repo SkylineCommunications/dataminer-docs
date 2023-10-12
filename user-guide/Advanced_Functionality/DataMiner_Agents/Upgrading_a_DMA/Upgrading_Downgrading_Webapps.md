@@ -4,7 +4,7 @@ uid: Upgrading_Downgrading_Webapps
 
 # Upgrading the DataMiner web apps
 
-From DataMiner 10.3.0/10.3.3 onwards, DataMiner web upgrades are available separately from the general DataMiner upgrades. These updates include only the web API and the web apps, and typically take about 1 minute to install. This way you can get access to the latest features and enhancements of the web apps without having to do a full DataMiner upgrade. All other DataMiner processes remain untouched.
+From DataMiner 10.3.0/10.3.3 onwards, DataMiner web upgrades are available separately from the general DataMiner upgrades. These updates include only the web API and the web apps, leaving all other DataMiner processes untouched. This way you can get access to the latest features and enhancements of the web apps without having to do a full DataMiner upgrade. The web upgrades only require a brief installation and do not necessitate a DataMiner restart, ensuring uninterrupted monitoring and orchestration.
 
 > [!NOTE]
 >
@@ -21,4 +21,4 @@ From DataMiner 10.3.11/10.3.0 [CU8] onwards<!--RN 37413-->, whenever you [upgrad
 After the upgrade process, your dashboards and low-code apps may be migrated to ensure compatibility with the updated software version. If an error occurs during this migration, or if you need to perform a DataMiner downgrade, you can manually restore your dashboards and low-code apps from the backup.
 
 > [!NOTE]
-> The *Backups* folder retains only the ten most recent backup files.
+> The *Backups* folder retains only the five most recent backup files.
