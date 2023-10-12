@@ -118,12 +118,6 @@ body {
   word-wrap: break-word;
 }
 
-#search-query {
-  /* hide the original search */
-  display: none;
-}
-
-
 h1,
 .h1,
 h2,
@@ -198,17 +192,23 @@ article h1, article h2, article h3, article h4 {
   z-index: 100;
 }
 
-.nav-link
+.navbar-nav .nav-link
 {
 	color: #eef2f5;
 }
 
-.nav-link.active
+.navbar-nav .nav-link.active
 {
 	color: #eef2f5;
 }
 
 .nav-link:hover
+{
+	color: var(--color-toc-hover);
+	text-decoration: underline;
+}
+
+.navbar-nav .nav-link:hover
 {
 	color: #eef2f5;
 	text-decoration: underline;
@@ -217,11 +217,6 @@ article h1, article h2, article h3, article h4 {
 .navbar-nav .nav-link.active
 {
 	color: #eef2f5;
-}
-
-#dropdown
-{
-	color: #FF0000;
 }
 
 .dropdown-toggle
@@ -237,11 +232,6 @@ article h1, article h2, article h3, article h4 {
 .dropdown-toggle:show
 {
 	color: #eef2f5;
-}
-
-.dropdown-toggle btn
-{
-	color: #ff0000;
 }
 
 .d-md-none
@@ -433,22 +423,288 @@ code {
   background-color: var(--color-background);
 }
 
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
-  .column {
-    -ms-flex: 50%;
-    flex: 50%;
-    max-width: 50%;
+.navbar-right
+{
+  order: 50
+}
+
+.dropdown > a
+{
+	color: var(--color-navbar);
+}
+
+.btn:first-child:active
+{
+	color: #eef2f5;
+}
+
+.dropdown > a:hover
+{
+	color: #eef2f5;
+}
+
+.dropdown > a:active
+{
+	color: #eef2f5;
+}
+
+.dropdown > a.btn.show
+{
+	color: var(--color-navbar);
+}
+
+
+.dropdown > a.btn.show:active
+{
+	color: #eef2f5;
+}
+
+.dropdown > a.btn.show:focus-visible
+{
+	color: #eef2f5;
+}
+
+
+.icons > a
+{
+	color: var(--color-navbar);
+}
+
+.icons > a:hover
+{
+	color: #eef2f5;
+}
+
+@media (min-width: 769px) and (max-width: 991px) {
+	.container {
+	width: 100%;
+	}
+	.sidefilter {
+	  width: 33.3%;
+	}
+	.sidetoc {
+	  width: 33.3%;
+	}
+	.article.grid-right {
+	  margin-left: 33.3%;
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1768px) {
+  .container {
+    width: 100%;
+  }
+  .sidefilter {
+    width: 25%;
+  }
+  .sidetoc {
+    width: 25%;
+  }
+  .article.grid-right {
+    margin-left: 25%;
+  }
+  .col-md-10{width:75%}
+  .col-md-2{width:25%}
+  .sideaffix {
+    width: 18%;
+  }
+  .affix ul>li.active>a {
+    white-space: initial;
+  }
+  .affix ul>li>a {
+    width: 99%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 }
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    -ms-flex: 100%;
-    flex: 100%;
-    max-width: 100%;
+@media (min-width: 1769px) {
+  .container {
+    width: 1752px;
   }
+  .sidefilter {
+    width: 438px;
+  }
+  .sidetoc {
+    width: 438px;
+  }
+  .article.grid-right {
+    margin-left: 430px;
+  }
+  .col-md-10{width:75%}
+  .col-md-2{width:25%}
+  .sideaffix {
+    width: 18%;
+  }
+  .affix ul>li.active>a {
+    white-space: initial;
+  }
+  .affix ul>li>a {
+    width: 99%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+#search-query {
+  /* hide the original search */
+  display: none;
+}
+
+#new-search-btn
+{
+	color: var(--color-navbar);
+}
+
+#new-search-btn:hover {
+  color: #eef2f5;
+}
+#new-search-btn:focus {
+  outline: none;
+}
+
+#new-search-container
+{
+	flex: 1
+}
+
+#search-results-new {
+  max-width: 960px !important;
+  margin-top: 60px;
+  margin-bottom: 115px;
+  margin-left: auto;
+  margin-right: auto;
+  display: none;
+}
+
+#search-box {
+  padding: 0 0 2em 0;
+  display: flex;
+  flex-direction: column;
+}
+
+#search-close-btn {
+  align-self: flex-end;
+  padding: 0;
+  margin-bottom: 30px;
+  outline: none;
+  color: #337ab7;
+  font-size: smaller;
+  text-decoration: none;
+}
+
+#search-results-new #search-input {
+  width: 100%;
+  font-weight: 400;
+  color: var(--color-foreground);
+  background-color: var(--color-background);
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  height: 46px;
+  padding: 5px 20px;
+  font-size: 16px;
+  line-height: 1.5;
+  border-radius: 24px;
+}
+
+#search-results-new #search-input:hover {
+  border-color: #80bdff;
+}
+
+#search-results-new #search-input:focus {
+  border-color: #80bdff;
+  outline: 0;
+}
+
+#search-result-items {
+  padding: 0 1.5rem;
+}
+
+#search-result-items .result {
+  margin-bottom: 18px;
+  overflow: hidden;
+}
+
+#search-result-items .result:hover .title {
+  text-decoration: underline;
+}
+
+#search-result-items .result > a {
+  padding: 6px 7px;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+#search-result-items .result .url {
+  font-size: 11px;
+  color: #878787;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#search-result-items .result .title {
+  font-size: 18px;
+  font-weight: 600;
+  word-break: break-word;
+  word-wrap: break-word;
+  color: #337ab7; 
+}
+
+.code-header > .language {
+  padding: 2px 16px;
+  flex-grow: 1;
+  text-transform: uppercase;
+  line-height: 26px;
+}
+
+.code-header > .action {
+  position: relative;
+  padding: 2px 10px;
+  background-color: transparent;
+  border: 0 solid var(--color-underline);
+  border-left-width: 1px;
+  color: var(--color-foreground);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  line-height: normal;
+}
+
+.code-header .glyphicon {
+  margin-right: 0.25em;
+}
+
+.code-header > .action:hover {
+  background-color: var(--color-background-table-alt);
+}
+
+.code-header + pre {
+  margin-top: 0;
+  border: 1px solid var(--color-underline);
+}
+
+.code-header > .action .successful-copy-alert {
+  justify-content: center;
+  align-items: center;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  position: absolute;
+  display: flex;
+  background-color: #128712;
+  outline-color: #fff;
+  color: #fff;
+}
+
+.code-header > .action .successful-copy-alert.is-transparent {
+  opacity: 0;
+  transition: 500ms opacity ease-in-out;
+}
 
 /* Styles for image grid on index page */
 
@@ -481,4 +737,22 @@ code {
 
 .column img:active{
   background-color: #d1d1d1;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
 }
