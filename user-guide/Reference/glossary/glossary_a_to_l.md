@@ -122,7 +122,7 @@ uid: glossary_a_to_l
 | Data Display | Legacy term referring to the data pages of cards in DataMiner Cube. |
 | DataMiner Agent | A piece of hardware running the DataMiner software. Abbreviated as DMA. |
 | DataMiner Analytics | Artificial intelligence technology built into DataMiner, which among others provides trend predictions.<br>See [Working with trend predictions](xref:Working_with_trend_predictions). |
-| DataMiner Catalog | Central repository for components that can facilitate and accelerate the use of DataMiner, including the complete connector database.<br>See [DataMiner Catalog](xref:Catalog#dataminer-catalog). |
+| DataMiner Catalog | Central repository for components that can facilitate and accelerate the use of DataMiner, including the complete connector database.<br>See [DataMiner Catalog](xref:About_the_Catalog_module). |
 | DataMiner Certification Program | Program that allows you to test your DataMiner knowledge and skills and prove your expertise with our official certificates. |
 | DataMiner Client | An entity communicating with a DataMiner Agent. The term is mostly used to denote a client application that allows users to interact with the DataMiner Agent. |
 | DataMiner Cloud Platform | Online platform with information related to the DataMiner software and DataMiner projects. Includes software downloads, release notes, etc. Abbreviated as DCP. See [dataminer.services](xref:AboutCloudPlatform). |

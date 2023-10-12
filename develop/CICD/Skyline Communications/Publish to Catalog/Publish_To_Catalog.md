@@ -12,7 +12,7 @@ This platform is constantly getting improved. At present, several workarounds ar
 > Publishing items to the Catalog is currently only possible for members of Skyline Communications. However, we are planning to add a "private" section of the Catalog where you will be able to add items that you publish yourself as part of the larger DevOps community.
 
 > [!TIP]
-> See also: [DataMiner Catalog](xref:Catalog)
+> See also: [DataMiner Catalog](xref:About_the_Catalog_module)
 
 ## Publishing connectors
 

@@ -55,12 +55,10 @@ items:
           - name: Statuses
             topicUid: Statuses
   - name: DataMiner Catalog
-    topicUid: Catalog
+    topicUid: About_the_Catalog_module
     items:
       - name: About the Catalog module
         topicUid: About_the_Catalog_module
-      - name: Accessing the Catalog module
-        topicUid: Accessing_the_Catalog_module
       - name: Looking up a DataMiner connector
         topicUid: Looking_up_a_DataMiner_connector
       - name: Deploying a DataMiner connector to your system
