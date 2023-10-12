@@ -707,6 +707,12 @@ Due to a cache synchronization issue, problems could occur when trying to edit a
 
 In EPM environments, an error could occur when SLNet requested information from other DataMiner Agents in the DMS.  
 
+#### Problem with ExistsCustomDataTypeRequest message when using a database other than Cassandra [ID_37470]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+On systems using a database other than Cassandra, up to now, an `ExistsCustomDataTypeRequest` message would always return false and cause an error to be logged in the *SLDBConnection.txt* and *SLErrors.txt* files.
+
 #### Storage as a Service: Paged data retrieval operations would be cut off prematurely [ID_37533]
 
 <!-- MR 10.4.0 - FR 10.3.12 -->

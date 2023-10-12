@@ -138,6 +138,12 @@ In some cases, incorrect data would be returned when requesting alarm monitoring
 
 When a parameter that was used to store the dynamic IP address of an element connection was updated, the dynamic IP address would incorrectly be applied to all connections of that element when the element was restarted.
 
+#### Problem with ExistsCustomDataTypeRequest message when using a database other than Cassandra [ID_37470]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+On systems using a database other than Cassandra, up to now, an `ExistsCustomDataTypeRequest` message would always return false and cause an error to be logged in the *SLDBConnection.txt* and *SLErrors.txt* files.
+
 #### Duplicate PropertyChangeEvent objects would be created in the event cache [ID_37485]
 
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
