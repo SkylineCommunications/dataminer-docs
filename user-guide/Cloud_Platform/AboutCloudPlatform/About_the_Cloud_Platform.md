@@ -14,7 +14,7 @@ On the dataminer.services home page, you will find links to the different availa
 
 - [Project Collaboration](xref:Collaboration)
 
-- [DataMiner Catalog](xref:Catalog)
+- [DataMiner Catalog](xref:About_the_Catalog_module)
 
 - [DataMiner Sharing](xref:Sharing)
 
