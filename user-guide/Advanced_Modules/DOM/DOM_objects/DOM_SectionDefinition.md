@@ -133,14 +133,14 @@ The table below lists the properties of the `CustomSectionDefinition` object. (T
 
 - When you **update** a `SectionDefinition`:
 
-  - You cannot remove `FieldDescriptors` from a `SectionDefinition` when a `DomInstance` already uses that definition.
+  - Prior to DataMiner 10.3.12/10.4.0, you cannot remove `FieldDescriptors` from a `SectionDefinition` when a `DomInstance` already uses that definition.
 
-    From DataMiner 10.3.12/10.4.0 onwards<!-- RN 37395 --> it is possible to remove them in that case. However they cannot be removed when they:
+    From DataMiner 10.3.12/10.4.0 onwards<!-- RN 37395 -->, removing `FieldDescriptors` is not possible in the following cases only:
 
-    - have a value set on a section, for that `SectionDefinition`, on a `DomInstance`.
-    - are still used on the `DomManagerSettings` of the DOM manager. Either in the `DomInstanceNameDefinition`, or in one of the `FieldAliases`.
-    - are still used in a `DomInstanceNameDefinition` set on a `DomDefinition`.
-    - are still used in a `DomStatusSectionDefinitionLink` for that `SectionDefinition` on a `DomBehaviorDefinition`.
+    - When they have a value set on a section, for that `SectionDefinition`, on a `DomInstance`.
+    - When they are still used on the `DomManagerSettings` of the DOM manager. Either in the `DomInstanceNameDefinition`, or in one of the `FieldAliases`.
+    - When they are still used in a `DomInstanceNameDefinition` set on a `DomDefinition`.
+    - When they are still used in a `DomStatusSectionDefinitionLink` for that `SectionDefinition` on a `DomBehaviorDefinition`.
 
   - During an update, the properties of the previous and updated version of the `FieldDescriptor` are checked. The behavior of this check depends on the type of `FieldDescriptor`, but by default, the following properties can be changed freely:
 
