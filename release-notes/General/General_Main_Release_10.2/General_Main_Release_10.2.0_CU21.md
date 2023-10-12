@@ -18,6 +18,12 @@ uid: General_Main_Release_10.2.0_CU21
 
 A number of security enhancements have been made.
 
+#### DataMiner Cube - Surveyor: Enhanced processing of alarm statistics [ID_37552]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+
+In the Surveyor, statistical alarm data can be displayed next to elements, services and views. A number of enhancements have now been made to enhance the processing of those alarm statistics.
+
 #### DataMiner Cube: Caching enhancements [ID_37553]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->

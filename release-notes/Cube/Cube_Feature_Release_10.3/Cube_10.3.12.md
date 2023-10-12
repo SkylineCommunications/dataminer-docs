@@ -32,6 +32,12 @@ When an interactive Automation script is executed **in Cube**, the UI block need
 
 See also [DataMiner web apps Feature Release 10.3.12](xref:Web_apps_Feature_Release_10.3.12#interactive-automation-scripts-fileselector-now-allows-to-keep-the-files-that-were-already-uploaded-after-the-ui-was-shown-id_37260)
 
+#### Surveyor: Enhanced processing of alarm statistics [ID_37552]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+
+In the Surveyor, statistical alarm data can be displayed next to elements, services and views. A number of enhancements have now been made to enhance the processing of those alarm statistics.
+
 #### Caching enhancements [ID_37553]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
