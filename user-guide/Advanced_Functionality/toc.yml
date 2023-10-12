@@ -79,6 +79,8 @@ items:
                 topicUid: Upgrade_path_1000-100x_to_1030-103x
               - name: DataMiner 10.1.0/10.1.x to 10.2.0/10.2.x
                 topicUid: Upgrade_path_1010-101x_to_1020-102x
+          - name: Upgrading the DataMiner web apps
+            topicUid: Upgrading_Downgrading_Webapps
           - name: Checking the upgrade history of a DataMiner Agent
             topicUid: Checking_the_upgrade_history_of_a_DataMiner_Agent
           - name: Configuring the default upgrade options
