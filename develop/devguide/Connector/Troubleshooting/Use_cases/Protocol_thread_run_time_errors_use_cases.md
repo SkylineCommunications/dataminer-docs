@@ -205,19 +205,13 @@ Case 3 and case 4 are very similar in concept.
 
 ### Case 5: Ping group
 
-When a group with ID -1 is the root of an open protocol thread RTE, then the cause is a badly defined ping group in the protocol definition (see [Ping group](xref:ConnectionsHttpPingGroup)).
+When a group with ID -1 is the root of an open protocol thread RTE, then the cause is a badly defined ping group in the protocol definition (see [Ping group](xref:ConnectionsPingGroup)).
 
 - A ping group needs to be a polling group
 
 - A ping group only works on the first connection
 
 Note that the ping group is only used when slow polling is active on the element. This is the reason a driver with a badly defined ping will work perfectly when slow polling is not activated.
-
-- SNMP communication: First defined group in the protocol XML
-
-- Serial communication: Group defined with the ping attribute
-
-- HTTP communication: Group with the lowest ID
 
 ## Useful links
 

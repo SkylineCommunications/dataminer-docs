@@ -340,13 +340,13 @@ For each connection, this section also has to contain one of the following array
 
     - **DeviceAddress**: Contains the device address and can be relevant for specific protocols. For example, for an HTTP connection, this field could contain *bypassproxy*.
 
-    - **PortID**: Indicates the order of the connection in the element. The first connection in the element needs to be assigned value 1, the second connection needs to have value 2, etc. You can easily verify the order of the connections by editing or creating an element using the protocol in question (see [Adding and deleting elements](xref:Adding_and_deleting_elements)).
+    - **PortID**: Indicates the order of the connection in the element. The first connection in the element needs to be assigned value 1, the second connection needs to have value 2, etc. You can easily verify the order of the connections by editing or creating an element using the protocol in question (see [Adding elements](xref:Adding_elements)).
 
-    - **IsSslTlsEnabled**: Indicates whether SSL/TLS encryption should be enabled, similar to the SSL/TLS checkbox in the element editor in DataMiner Cube (see [Adding and deleting elements](xref:Adding_and_deleting_elements)). This is only relevant when *TypeConnection* is *Serial* or *SmartSerial* and *Type* is *IP*. This also requires DataMiner version 10.0.3 or higher. The default value is false.
+    - **IsSslTlsEnabled**: Indicates whether SSL/TLS encryption should be enabled, similar to the SSL/TLS checkbox in the element editor in DataMiner Cube (see [Adding elements](xref:Adding_elements)). This is only relevant when *TypeConnection* is *Serial* or *SmartSerial* and *Type* is *IP*. This also requires DataMiner version 10.0.3 or higher. The default value is false.
 
     - **IsServerModeEnabled**: If this is set to true, the accepted IP addresses (cf. below) can be configured. Otherwise, this is not possible. This boolean is only relevant if *TypeConnection* is *SmartSerial*, *Type* is *IP* and the IP address is "any" or "127.0.0.1".
 
-    - **AcceptedIpAddresses**: Represents the accepted IP addresses. Only relevant if *IsServerModeEnabled* is *true*. Allows you to specify one or more allowed IP addresses for the connection. The element will then only communicate with those IP addresses. This serves the same purpose as the *Accepted IP address* field in the element editor in DataMiner Cube (see [Adding and deleting elements](xref:Adding_and_deleting_elements)).
+    - **AcceptedIpAddresses**: Represents the accepted IP addresses. Only relevant if *IsServerModeEnabled* is *true*. Allows you to specify one or more allowed IP addresses for the connection. The element will then only communicate with those IP addresses. This serves the same purpose as the *Accepted IP address* field in the element editor in DataMiner Cube (see [Adding elements](xref:Adding_elements)).
 
     Below is an example of four connections that are required to create an element.
 
@@ -447,7 +447,7 @@ For each connection, this section also has to contain one of the following array
 
     - **PortNumber**: Allows you to specify the port number of the device (e.g. 161, 80, etc.).
 
-    - **PortID**: Indicates the order of the connection in the element. The first connection in the element needs to be assigned value 1, the second connection needs to have value 2, etc. You can easily verify the order of the connections by editing or creating an element using the protocol in question (see [Adding and deleting elements](xref:Adding_and_deleting_elements)).
+    - **PortID**: Indicates the order of the connection in the element. The first connection in the element needs to be assigned value 1, the second connection needs to have value 2, etc. You can easily verify the order of the connections by editing or creating an element using the protocol in question (see [Adding elements](xref:Adding_elements)).
 
     - **DeviceAddress**: Contains the device address, which can be relevant for specific protocols.
 
@@ -509,7 +509,7 @@ For each connection, this section also has to contain one of the following array
 
     - **PortNumber**: The port number of the device (e.g. 161, 80, etc.).
 
-    - **PortID**: Indicates the order of the connection in the element. The first connection in the element needs to be assigned value 1, the second connection needs to have value 2, etc. You can easily verify the order of the connections by editing or creating an element using the protocol in question (see [Adding and deleting elements](xref:Adding_and_deleting_elements)).
+    - **PortID**: Indicates the order of the connection in the element. The first connection in the element needs to be assigned value 1, the second connection needs to have value 2, etc. You can easily verify the order of the connections by editing or creating an element using the protocol in question (see [Adding elements](xref:Adding_elements)).
 
     Example:
 

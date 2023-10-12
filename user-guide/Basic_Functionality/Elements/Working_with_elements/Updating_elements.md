@@ -10,7 +10,7 @@ If you want to update one element:
 
 1. Right-click the element in the Surveyor and select *Edit*.
 
-   The same card will open as when you create a new element, but with all information already filled in.
+   The same card will open as when you [create an element](xref:Adding_elements), but with all information already filled in.
 
 1. Make the necessary changes, and click *Apply*.
 

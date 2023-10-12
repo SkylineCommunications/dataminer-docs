@@ -65,3 +65,19 @@ var filter = DomInstanceExposers.CreatedBy.Equal("John Doe");
 
 > [!NOTE]
 > The DOM objects created prior to DataMiner 10.3.2/10.4.0 will not have a value for these fields. However, after an existing object is updated once, the `LastModified` and `LastModifiedBy` fields will be filled in.
+
+## Soft-deletable objects
+
+From DataMiner 10.3.9/10.4.0 onwards, the following DOM objects can be soft-deleted:
+
+- [FieldDescriptor](xref:DOM_SectionDefinition#fielddescriptor)
+- [SectionDefinitionLink](xref:DomDefinition#sectiondefinitionlink)
+- [DomStatusSectionDefinitionLink](xref:DOM_status_system#configuring-fields)
+
+When the fields linked to a soft-deleted `FieldDescriptor` or part of a soft-deleted `SectionDefinitionLink` or `DomStatusSectionDefinitionLink` are marked as *IsSoftDeleted*, the following applies:
+
+- The fields will not be shown in a UI form.
+- The fields are not validated when the `SectionDefinition`, `DomDefinition`, or `DomBehaviorDefinition` is updated.
+- The fields are never be required.
+- Values are allowed to exist in the fields on a `DomInstance` for a soft-deleted `FieldDescriptor`, `SectionDefinitionLink`, or `DomStatusSectionDefinitionLink`.
+- Updating a `DomInstance` with new/updated values will be blocked for a field that has a soft-deleted `FieldDescriptor`, or is part of a soft-deleted `SectionDefinitionLink` or `DomStatusSectionDefinitionLink` (for that status). A [ValueForSoftDeletedFieldNotAllowed error](xref:DomInstance#errors) will be returned.

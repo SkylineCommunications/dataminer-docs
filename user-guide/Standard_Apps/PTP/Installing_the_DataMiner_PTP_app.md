@@ -17,7 +17,7 @@ To install and set up the DataMiner PTP app:
 
 1. Click the *Finished* button to close the upgrade window.
 
-1. Open DataMiner Cube. See [Opening DataMiner Cube](xref:Opening_DataMiner_Cube).
+1. Open DataMiner Cube. See [Opening DataMiner Cube](xref:Opening_the_desktop_app).
 
 1. In DataMiner Cube, go to *Apps* > *Automation*.
 

@@ -14,7 +14,7 @@ The Admin app is intended for the management of DataMiner Systems connected to d
 
 - [Controlling remote access](xref:Controlling_remote_access)
 
-- [Granting admin consent for Teams actions](xref:Granting_admin_consent)
+- [Granting admin consent for Teams Chat Integration](xref:Granting_admin_consent)
 
 - [Controlling cloud feed data offloads](xref:Controlling_cloudfeed_data_offloads)
 

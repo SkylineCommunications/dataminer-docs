@@ -51,6 +51,20 @@ In the *QAction\@dllImport* attribute, you can now reference a DLL file that is 
 
 Up to now, the *QAction\@dllImport* attribute would only contain the name of the DLL file. From now on, it will include the subfolders as well.
 
+#### Snippets, plugins and macros: References to former Class Library updated [ID_35769]
+
+The Class Library has been split up in smaller NuGet packages. For more information, see [Unlimited DevOps power at your fingertips – Code Library NuGet packages are living on the cloud!](https://community.dataminer.services/unlimited-devops-power-at-your-fingertips-code-library-nuget-packages-are-living-on-the-cloud).
+
+Every snippet, plugin and macro has been updated with the new namespaces and the correct references.
+
+#### Support for connecting to DataMiner Agents via gRPC [ID_36035]
+
+Before connecting to a DataMiner Agent, DIS will now first check the connection settings of that Agent and connect to it via either .NET Remoting or gRPC. This will enable DIS to also connect to cloud-connected Agents.
+
+#### Minimum supported DataMiner version is now 10.1.0 [ID_36036]
+
+The minimum supported DataMiner version has now been incremented to version 10.1.0.
+
 ### Validator
 
 #### New feature check: Usage of NuGet packages [ID_34527]
@@ -65,8 +79,6 @@ This check can return the following error messages:
 | 1.25.2 | MinVersionTooLow_Sub | '{requiredDmVersion}' : '{usedFeature}' |
 | 1.25.3 | MinVersionFeatureUsedInItemWithId_Sub | Feature used in '{itemKind}' with '{identifierType}' '{itemId}'. |
 
-### XML Schema
-
 ## Changes
 
 ### Enhancements
@@ -78,6 +90,16 @@ A number of enhancements have been made to the DIS diagram, especially with rega
 #### Remove regions from QAction_1 in template [ID_35007]
 
 In the DataMiner protocol template, the region preprocessor directives have been removed from QAction_1.
+
+#### Executables in VSIX extension package are now signed [ID_35879]
+
+The executables included in the DIS VSIX extension package are now signed.
+
+#### Automation script template: Namespace added and input argument updated [ID_36033]
+
+The Automation script template will now put a namespace around the `Script` class.
+
+Also, the `Engine` argument in the *Run* methods has been changed to `IEngine`.
 
 ### Fixes
 

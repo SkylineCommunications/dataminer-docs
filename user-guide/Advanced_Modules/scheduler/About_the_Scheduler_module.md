@@ -16,7 +16,7 @@ The Scheduler module allows you to schedule events in two ways:
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/ruis-rapid-recap-scheduler/>
+> [Rui’s Rapid Recap – Scheduler](https://community.dataminer.services/video/ruis-rapid-recap-scheduler/) ![Video](~/user-guide/images/video_Duo.png)
 
 ## Overview of the Scheduler UI
 

@@ -240,7 +240,7 @@ In a Cassandra database, the "time to live" (TTL) setting of spectrum trace data
 
 When a tree control contained EPM objects, in some cases, the alarm bubble-up feature would not work correctly.
 
-#### Dashboards app & Low-code apps - Line & area chart component: Problems when visualizing resource availability [ID_35408]
+#### Dashboards app & Low-Code Apps - Line & area chart component: Problems when visualizing resource availability [ID_35408]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
@@ -274,7 +274,7 @@ SLDataGateway would not correctly return errors when querying SLA logger tables 
 
 When northbound SNMP inform messages were being sent in chronological order, an error could occur when sending those messages suddenly stopped.
 
-#### Low-code apps: Problem when creating a new draft version [ID_35446]
+#### Low-Code Apps: Problem when creating a new draft version [ID_35446]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 

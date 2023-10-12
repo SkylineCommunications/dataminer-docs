@@ -4,7 +4,7 @@ uid: Manifest.Content.Functions.Function
 
 # Function element
 
-Specifies a function to be included in the package.
+Specifies a function to include in the package.
 
 ## Parent
 

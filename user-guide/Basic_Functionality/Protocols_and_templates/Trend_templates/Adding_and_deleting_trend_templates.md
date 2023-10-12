@@ -4,14 +4,6 @@ uid: Adding_and_deleting_trend_templates
 
 # Adding and deleting trend templates
 
-In this section:
-
-- [Creating a trend template](#creating-a-trend-template)
-
-- [Uploading a trend template](#uploading-a-trend-template)
-
-- [Deleting a trend template](#deleting-a-trend-template)
-
 ## Creating a trend template
 
 To create a new trend template:

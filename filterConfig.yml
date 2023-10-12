@@ -90,9 +90,6 @@ apiRules:
     uidRegex: ^Skyline\.DataMiner\.Net\.History\.CrudType$
     type: Type
 - exclude:
-    uidRegex: ^Skyline\.DataMiner\.Net\.IConnection$
-    type: Type
-- exclude:
     uidRegex: ^Skyline\.DataMiner\.Net\.IDMAObjectRef$
     type: Type
 - exclude:
@@ -360,13 +357,13 @@ apiRules:
     uidRegex: ^SLLoggerUtil\.
     type: Namespace   
 - include:
-    uidRegex: ^Skyline\.DataMiner\.Library\.Common
+    uidRegex: ^Skyline\.DataMiner\.Core\.DataMinerSystem\.Common
     type: Namespace
 - include:
-    uidRegex: ^Skyline\.DataMiner\.Library\.Protocol
+    uidRegex: ^Skyline\.DataMiner\.Core\.DataMinerSystem\.Protocol
     type: Namespace
 - include:
-    uidRegex: ^Skyline\.DataMiner\.Library\.Automation
+    uidRegex: ^Skyline\.DataMiner\.Core\.DataMinerSystem\.Automation
     type: Namespace
 - include:
     uidRegex: ^Skyline\.DataMiner\.Automation$
@@ -538,6 +535,12 @@ apiRules:
       uid: System.ComponentModel.EditorBrowsableAttribute
       ctorArguments:
       - System.ComponentModel.EditorBrowsableState.Never
+- exclude:
+    uidRegex: ^Gnmi$
+    type: Namespace
+- exclude:
+    uidRegex: ^GnmiExt$
+    type: Namespace
 attributeRules:
 - exclude:
     uidRegex: ^System\.ComponentModel\.Design$

@@ -20,6 +20,8 @@ From DataMiner 10.0.0/10.0.2 onwards, you can find the following items in the he
 
   - *Show cluster name*: Determines whether the name of the cluster is displayed. (Available from DataMiner 10.0.12 onwards.)
 
+  - *Show search box*: Determines whether the search box is displayed. (Available from DataMiner 10.3.5/10.4.0 onwards).
+
 - **User icon**: Click this icon to open a menu containing information on the user and the DMA, as well as the following options:
 
   - *Account details*: Opens your user card.

@@ -21,6 +21,9 @@ Example:
 > [!NOTE]
 > From DataMiner 10.2.0/10.1.6 onwards, the use of hostnames instead of IP addresses is supported in DMS.xml.
 
+> [!IMPORTANT]
+> Only some of the tags of DMS.xml are explained on this page, because the configuration in this file should ideally only ever be modified through DataMiner Cube (mainly via System Center > *Agents*).
+
 ## Attributes of the DMS tag
 
 | Attribute               | Description                                              | Default value |
@@ -69,7 +72,9 @@ For example, in a cluster with two DMAs, with IPs 10.4.2.92 and 10.4.2.93, DMS.x
 ```
 
 > [!NOTE]
-> The passwords in the *pwd* attribute are encrypted and replaced with an encryption token when they are first read out by DataMiner.
+>
+> - The passwords in the *pwd* attribute are encrypted and replaced with an encryption token when they are first read out by DataMiner.
+> - You can also disable .NET Remoting for inter-DMA communication in *MaintenanceSettings.xml* instead. See [Disabling .NET Remoting](xref:Configuration_of_DataMiner_processes#disabling-net-remoting).
 
 > [!TIP]
 > See also: [DataMiner hardening guide](xref:DataMiner_hardening_guide)

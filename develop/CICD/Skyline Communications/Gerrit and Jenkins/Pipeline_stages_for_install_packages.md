@@ -52,7 +52,7 @@ If one of the sub items failed, then the pipeline will be marked as unstable.
 
 ## Scan test projects
 
-This stage scans the solution for the presence of any test projects. Projects with a name that end with "Integration Tests" or "IntegrationTests" (case insensitive) will be considered integration test projects. All other projects that end with "Tests" will be considered unit test projects.
+This stage scans the solution for the presence of any test projects. Projects with a name that ends in "Integration Tests" or "IntegrationTests" (case insensitive) will be considered integration test projects. All other projects with a name that ends in "Tests" will be considered unit test projects.
 
 ## Run unit tests
 

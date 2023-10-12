@@ -15,12 +15,13 @@ In this section:
 - <xref:ConnectionsSnmpRetrievingTables>
 - <xref:ConnectionsSnmpAlteringATableCell>
 - <xref:ConnectionsSnmpTraps>
-- <xref:ConnectionsSnmpPingGroups>
 - <xref:ConnectionsSnmpBitRateCalculations>
 - <xref:ConnectionsSnmpProtocolInnterWorkings>
 - <xref:ConnectionsSnmpExercise>
 
 ## See also
+
+- [Slow poll mode ping group](xref:ConnectionsPingGroup)
 
 DataMiner Protocol Markup Language:
 

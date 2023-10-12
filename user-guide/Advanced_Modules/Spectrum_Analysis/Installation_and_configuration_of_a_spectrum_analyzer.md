@@ -4,10 +4,6 @@ uid: Installation_and_configuration_of_a_spectrum_analyzer
 
 # Installation and configuration of a spectrum analyzer
 
-This section consists of the following topics:
+Installing and configuring a spectrum analyzer in your DataMiner System involves [establishing a connection between the spectrum analyzer and DataMiner](xref:Connecting_spectrum_analyzers_to_your_DataMiner_System) through a GPIB gateway or direct TCP/IP interface. For GPIB connections, the [Keysight/Agilent IO Libraries need to be installed and configured](xref:Installing_the_Keysight_Agilent_IO_Libraries), enabling seamless communication.
 
-- [Connecting spectrum analyzers to your DataMiner System](xref:Connecting_spectrum_analyzers_to_your_DataMiner_System)
-
-- [Installing the Keysight/Agilent IO Libraries](xref:Installing_the_Keysight_Agilent_IO_Libraries#installing-the-keysightagilent-io-libraries)
-
-- [Configuring the GPIB settings of a spectrum analyzer element](xref:Configuring_the_GPIB_settings_of_a_spectrum_analyzer_element)
+Additionally, when creating a spectrum analyzer element, you will need to [specify the connection settings of the GPIB/LAN gateway](xref:GPIB_Connection).

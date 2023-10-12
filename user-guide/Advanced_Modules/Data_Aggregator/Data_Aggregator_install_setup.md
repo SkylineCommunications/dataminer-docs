@@ -13,7 +13,7 @@ Data Aggregator does not necessarily have to be installed on a server running a 
 - DataMiner 10.2.12 or higher must be installed on the DataMiner Agents you want to use Data Aggregator with.
 
   > [!NOTE]
-  > If you want to use queries with [ad hoc data sources](xref:Query_data_sources#get-ad-hoc-datacustom-data), you will need DataMiner 10.3.3/10.4.0 or higher.
+  > If you want to use queries with [ad hoc data sources](xref:Get_ad_hoc_data), you will need DataMiner 10.3.3/10.4.0 or higher.
 
 - CoreGateway 2.12.0 or higher (included in Cloud Pack 2.8.4) must be installed on the DataMiner Agents you want to use Data Aggregator with. To install this DxM, you can use the [DataMiner Cloud Pack](xref:CloudPackages). The DMAs do not have to be connected to dataminer.services.
 

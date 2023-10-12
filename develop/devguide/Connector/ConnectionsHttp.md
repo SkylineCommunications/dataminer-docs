@@ -13,10 +13,11 @@ In this section:
 - <xref:ConnectionsHttpHttps>
 - <xref:ConnectionsHttpParsingHtml>
 - <xref:ConnectionsHttpParsingJson>
-- <xref:ConnectionsHttpPingGroup>
 - <xref:ConnectionsHttpExamples>
 
 ## See also
+
+- [Slow poll mode ping group](xref:ConnectionsPingGroup)
 
 DataMiner Protocol Markup Language:
 

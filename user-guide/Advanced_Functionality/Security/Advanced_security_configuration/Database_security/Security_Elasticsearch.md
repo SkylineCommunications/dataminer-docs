@@ -116,6 +116,34 @@ To configure TLS encryption for client-server communication:
 > [!TIP]
 > To troubleshoot problems after enabling TLS encryption, consult the *SLSearch.txt* log file.
 
+### Troubleshooting: executing the generate-certificates.sh script
+
+#### Syntax error
+
+**Situation**: You have cloned the "Generate-TLS-Certificates" GitHub repository on a Windows machine, and have transferred the *generate-certificates.sh* file to a Linux machine using SCP. You have executed the following command:
+
+```bash
+sudo generate-certificates.sh
+```
+
+**Symptom**: Bash indicates that there are syntax errors in the script.
+
+**Resolution**: Convert the .sh file to Unix format.
+
+1. Begin by installing *dos2unix* with the following command:
+
+   ```bash
+   sudo apt install dos2unix
+   ```
+
+1. Next, run the following command:
+
+   ```bash
+   dos2unix generate-certificates.sh
+   ```
+
+   Once the conversion is complete, you can execute the script again.
+
 ## Inter-node TLS encryption
 
 By default inter-node communication in Elasticsearch is unencrypted.

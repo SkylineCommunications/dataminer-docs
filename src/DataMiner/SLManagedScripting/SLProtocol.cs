@@ -2308,7 +2308,7 @@ namespace Skyline.DataMiner.Scripting
 		/// Determines whether the parameter with the specified ID has been initialized.
 		/// </summary>
 		/// <param name="iID">The ID of the parameter.</param>
-		/// <returns><c>true</c> if the value has been initialized; otherwise, <c>false</c>.</returns>
+		/// <returns><c>true</c> if the value has not been initialized; otherwise, <c>false</c>.</returns>
 		/// <remarks>
 		///		<list type = "bullet" >
 		///			<item>

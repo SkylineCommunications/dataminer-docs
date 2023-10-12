@@ -159,29 +159,31 @@ Set the value to an integer indicating the position of the resource for this nod
 
 **Mandatory**: No
 
-This property is used to define how to generate a contributing booking for a specific service definition.
+This property is used to define how to generate a contributing booking for a specific service definition. (See [Configuring contributing bookings](xref:Service_Orchestration_contrib_bookings#configuring-contributing-bookings).)
 
-The JSON value of this property should contain the following fields:
+The JSON value of this property can contain the following fields:
 
-- *CandidateResources*: The resources that should be used per node (optional). You can specify a list of resources for each node. In case no resources are specified or none of the specified resources are available, the system will select the first available resource from the global list of resources.
+- *CandidateResources*: Optional. The resources that should be used per node. You can specify a list of resources for each node. In case no resources are specified or none of the specified resources are available, the system will select the first available resource from the global list of resources.
 
-- *Concurrency*: Integer defining the maximum concurrency for the contributing resource.
+- *Concurrency*: Integer defining the maximum concurrency for the contributing resource (i.e. the number of overlapping bookings allowed to make use of the resource).
 
-- *ConvertToContributing*: Determines whether the *Convert to Contributing* checkbox is selected by default (true) or not (false).
+- *ConvertToContributing*:  Determines whether the *Convert to Contributing* checkbox is selected by default (*true*) or not (*false*).<!-- RN 28069 -->
 
-- *LifeCycle*: The type of lock life cycle, which can be *Locked* or *Unlocked*. *Locked* means the timing of the contributing booking is tied to that of the main booking; *Unlocked* means it is independent from the main booking.
+- *LifeCycle*: The type of lock life cycle, which can be *Locked* or *Unlocked*. *Locked* means the timing of the contributing booking is tied to that of the main booking; *Unlocked* means it is independent from the main booking. See [Locked or unlocked](xref:Service_Orchestration_contrib_bookings#locked-or-unlocked).
 
-- *OrchestrationTrigger*: *Local* or *Main*. If set to *Main*, the service state will not be updated and LSO will not be triggered.
+- *LiteContributingResource*: Optional. Determines whether a lite contributing resource is used. If the property is not specified, regular contributing resources will be created. See [Enabling lite contributing bookings](xref:Service_Orchestration_contrib_bookings#enabling-lite-contributing-bookings).<!-- RN 31182 -->
 
-- *ParentSystemFunction*: GUID of the parent system function.
+- *OrchestrationTrigger*: *Local* or *Main*. If set to *Main*, the service state will not be updated and LSO will not be triggered. See [Main or local](xref:Service_Orchestration_contrib_bookings#main-or-local).
 
-- *PostRoll*: The post-roll interval in minutes.
+- *ParentSystemFunction*: The GUID of the system function that defines the signature of the contributing resource.
 
-- *PreRoll*: The pre-roll interval in minutes.
+- *PostRoll*: Optional. The post-roll interval in minutes. Only used for Dijkstra use case.
 
-- *ReservationAppendixName*: String that will be appended to the current booking name.
+- *PreRoll*: Optional. The pre-roll interval in minutes. Only used for Dijkstra use case.
 
-- *ReservationType*: The type of booking, i.e.:
+- *ReservationAppendixName*: Optional. String that will be appended to the booking name.
+
+- *ReservationType*: Optional. Only used for Dijkstra use case. Represents the type of booking, i.e.:
 
   - *Standalone*
 
@@ -191,7 +193,7 @@ The JSON value of this property should contain the following fields:
 
 - *ResourcePool*: The name of the resource pool in which the contributing resource should be included.
 
-- *Script*: Custom script that can be triggered after creating the contributing booking. It is typically used to assign capabilities/capacities to the associated contributing resource. Configured in the format "*Script:Script Name\|\|Parameter Name 1=Parameter 1;Parameter Name 2=Parameter 2;...*". The *\[RESERVATIONID\]* and *\[RESOURCEID\]* placeholders can be used, representing the resulting contributing booking ID and resource ID, respectively.
+- *Script*: Optional. Defines a custom Automation script that can be triggered after creating the contributing booking. It is typically used to assign capabilities/capacities to the associated contributing resource. Configured in the format "*Script:Script Name\|\|Parameter Name 1=Parameter 1;Parameter Name 2=Parameter 2;...*". The *\[RESERVATIONID\]* and *\[RESOURCEID\]* placeholders can be used, representing the resulting contributing booking ID and resource ID, respectively.<!-- RN 28243 & 28961 -->
 
 - *VisioFileName*: The Visio drawing that should be used for the contributing booking. While in other cases the Visio file configured in the service definition is used when a contributing booking is generated, when it is generated based on a *Path* parameter, the Visio file must be explicitly mentioned with this option.
 
@@ -248,6 +250,9 @@ This property is used to transfer data between nodes of a booking. When a profil
 
 As the value of this property, in JSON, specify the script that implements the transfer logic and the parameters, resources or profile instances of which a change will trigger the script.
 
+> [!TIP]
+> See also: [Service Orchestration Data Transfer Rules configuration](xref:Service_Orchestration_DTR)
+
 **Example values**:
 
 ```json
@@ -295,7 +300,7 @@ The property value above will cause the script "SRM_ApplyDataTransferRules" to b
 }
 ```
 
-The property value above will cause the script “SRM_DataTransferRulesTemplate” to be triggered whenever the profile instance on the node with label “Demodulator 1” changes.
+The property value above will cause the script "SRM_DataTransferRulesTemplate" to be triggered whenever the profile instance on the node with label "Demodulator 1" changes.
 
 ### Enhanced Protocol
 
@@ -381,6 +386,9 @@ Set this property to *Yes* to hide the node if a resource is available.
 This property identifies a contributing node in a service definition, so that the Booking Manager knows that a contributing booking may need to be created for this node.
 
 Set the property to *TRUE* to indicate that a node is a contributing node.
+
+> [!TIP]
+> See also: [Configuring contributing bookings](xref:Service_Orchestration_contrib_bookings#configuring-contributing-bookings)
 
 ### IsProfileInstanceOptional
 
@@ -560,6 +568,9 @@ This property allows you to define the script that should be launched during boo
 Set this property to a JSON object with a *Script* key, as illustrated below.
 
 If the property is defined both on instance and on definition level, the instance level takes precedence. If several service profiles have a configuration defined, the scripts will be executed top-down.
+
+> [!TIP]
+> See also: [Configuring service profile Data Transfer Rules](xref:Service_Orchestration_DTR#configuring-service-profile-data-transfer-rules)
 
 **Example value**:
 

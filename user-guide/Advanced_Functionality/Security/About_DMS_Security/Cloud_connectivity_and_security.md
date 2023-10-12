@@ -46,7 +46,7 @@ Only outgoing traffic needs to be allowed through for the domain *.dataminer.ser
 > - Technical details of this implementation may be subject to change, as we regularly review our security implementations.
 > - Users can disconnect their system from dataminer.services at any given time. For more information, please refer to [Connecting your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
-## Live Sharing
+## Live sharing
 
 Users can share a dashboard by clicking the *Start sharing* button in the dashboard menu bar. They can then specify a list of email addresses to share the dashboard with. Those email addresses will receive a link to the shared dashboard.
 
@@ -68,10 +68,10 @@ When a dashboard is shared, DataMiner will build a **whitelist based on the API 
 
 All data is encrypted at rest using AES-256 encryption. The keys are managed by our cloud providers, which also control the key rotation schedule. For more information, see [Database security](https://docs.microsoft.com/en-us/azure/cosmos-db/database-security?tabs=sql-api).
 
-## Physical Security
+## Physical security
 
 Currently, dataminer.services is hosted on Microsoft Azure. For more information, see [Azure physical security](https://docs.microsoft.com/en-us/azure/security/fundamentals/physical-security#physical-security).
 
-## Disaster Recovery
+## Disaster recovery
 
 All data on dataminer.services is backed up multiple times per day and stored in a geo-redundant setup.

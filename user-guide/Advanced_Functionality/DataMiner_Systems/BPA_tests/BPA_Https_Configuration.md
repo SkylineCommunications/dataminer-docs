@@ -45,4 +45,4 @@ This BPA does not create errors.
 
 Enable HTTPS in DataMiner and disable .NET Remoting.
 
-For more information, see [Setting up HTTPS in DataMiner](https://docs.dataminer.services/user-guide/Advanced_Functionality/DataMiner_Agents/Configuring_a_DMA/Setting_up_HTTPS_on_a_DMA.html).
+For more information, see [Setting up HTTPS in DataMiner](xref:Setting_up_HTTPS_on_a_DMA).

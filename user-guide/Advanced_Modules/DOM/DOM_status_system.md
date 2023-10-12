@@ -29,6 +29,8 @@ class DomStatus {
 class DomStatusSectionDefinitionLink {
    Id : DomStatusSectionDefinitionLinkId
    FieldDescriptorLinks : List~DomStatusFieldDescriptorLink~
+   AllowMultipleSections: bool
+   IsSoftDeleted: bool
 }
 
 class DomStatusTransition {
@@ -127,7 +129,8 @@ For each status, you can configure the requirements of a specific field. This is
 |--|--|--|
 | Id | DomStatusSectionDefinitionLinkId | Contains the `SectionDefinitionID` and status ID. |
 | FieldDescriptorLinks | `List<DomStatusFieldDescriptorLink>` | Contains the links to `FieldDescriptors` that are part of the `SectionDefinition`. |
-| AllowMultipleValues | bool | Defines whether a `DomInstance` can have multiple `Sections` for this `SectionDefinition` in this specific status. |
+| AllowMultipleSections | bool | Defines whether a `DomInstance` can have multiple `Sections` for this `SectionDefinition` in this specific status. |
+| IsSoftDeleted | bool | Defines whether this `StatusSectionDefinitionLink` is soft-deleted or not. See [soft-deletable objects](xref:DOM_objects#soft-deletable-objects). Available from DataMiner 10.3.9/10.4.0 onwards. |
 
 > [!NOTE]
 >

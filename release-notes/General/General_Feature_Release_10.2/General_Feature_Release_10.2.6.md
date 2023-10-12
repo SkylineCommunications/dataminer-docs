@@ -630,7 +630,9 @@ When you removed an alarm from a manually created incident (alarm group), in som
 
 When a group that contained multiple tables of which some had the partialSNMP option enabled was polled, in some cases, that same group would incorrectly get re-polled indefinitely.
 
-#### Alarm templates: Problem with anomaly detection alarms \[ID_33216\]
+#### Alarm templates: Problem with anomaly detection alarms [ID_33216]
+
+<!-- MR 10.2.0 [CU16] - FR 10.2.6 -->
 
 When you created an element with an alarm template in which anomaly detection alarms were configured for table parameters, in some cases, none of the enabled types of change points would trigger an alarm.
 

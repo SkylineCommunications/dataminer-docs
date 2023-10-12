@@ -1,0 +1,2451 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Skyline.DataMiner.DataSources.OpenConfig.Gnmi</name>
+    </assembly>
+    <members>
+        <member name="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient">
+             <summary>
+             A class that represents a single gRPC connection which can be used to handle gNMI communication.
+             This requires the CommunicationGateway DxM to be available.
+            
+             'Channel' refers to a virtual connection to a conceptual endpoint in the DxM.
+             'Connection' refers to an active gRPC (HTTP2) connection with an endpoint.
+             'DataSource' refers to a conceptual endpoint and its identifying parameters.
+             'Node' refers to a location in the OpenConfig schema, represented by a path. A node can be a leaf, a container, a list, ...
+             </summary>
+        </member>
+        <member name="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient._responseHandlers">
+            <summary>
+            Mapping from the command type to the function handling said command.
+            </summary>
+            <remarks>
+            Any new request type for this handler should be added in PrepareRequestHandlers().
+            </remarks>
+        </member>
+        <member name="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient._natsDxmTimeoutTimer">
+            <summary>
+            A watchdog timer to check if the DxM on NATS is still sending messages (responses, events, or heartbeats).
+            Will disconnect when breached.
+            </summary>
+        </member>
+        <member name="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient._natsHeartbeatRequiredTimer">
+            <summary>
+            A watchdog timer to check if we have been silent for too long and need to send a heartbeat message to the DxM.
+            When the DxM does not receive any message from us, it will forcibly close the connection.
+            </summary>
+        </member>
+        <member name="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient._emptyRequestBytes">
+            <summary>
+            We often need an empty request (e.g. for heartbeats), so avoid the memory trouble and just create it once.
+            We cannot make it a value in the class definition since it is generated from a proto file.
+            </summary>
+        </member>
+        <member name="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient._dataMapper">
+            <summary>
+            An optional object that can be set on a client which will take care of processing and executing an action on the notification.
+            </summary>
+        </member>
+        <member name="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient._isDxmConnected">
+            <summary>
+            We cannot make a property volatile, so we use a private member to hold the connected state as volatile.
+            </summary>
+        </member>
+        <member name="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient._isFullyDisconnected">
+            <summary>
+            Boolean to know if a full disconnect was requested.
+            </summary>
+            <remarks>This avoids the race condition where the timeout timer and heartbeat would try to reconnect when the disconnect was requested at the same time.</remarks>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.#ctor(System.UInt32,System.UInt32,System.String,Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.DataSourceConfiguration,Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.ILogger)">
+            <summary>
+            Constructs a gNMI/gRPC client that will use the CommunicationGateway DxM to connect to a device.
+            The connection is only set up when Connect() is called.
+            </summary>
+            <param name="agentId">The DataMiner agent ID of the element if applicable. Becomes part of the channel ID and helps identify the source when investigating logging and traces.</param>
+            <param name="elementId">The element ID of the element if applicable. Becomes part of the channel ID and helps identify the source when investigating logging and traces.</param>
+            <param name="channelName">A descriptive name for this channel, to differentiate the logging if multiple channels are logging to the same file.</param>
+            <param name="dataSourceConfiguration">The details needed to find and connect to the endpoint.</param>
+            <param name="logger">The interface that will be called for any logging.</param>
+            <exception cref="T:System.ArgumentException">The channelName should not be <see langword="null"/> or empty or whitespace.</exception>
+            <exception cref="T:System.ArgumentException">The value should be a NATS token friendly name.</exception>
+        </member>
+        <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.IsConnected">
+            <summary>
+            Gets a boolean indicating if there is a connection with the channel.
+            </summary>
+            <value><c>true</c> if connected; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="E:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.ConnectionStateChanged">
+            <summary>
+            Action that will be called when the connection state changed.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.IsAllConnectionStateChanges">
+            <summary>
+            Boolean indicating if OnConnectionStateChanged should always be called when connect state changes, even if an internal reconnect happens which briefly will call disconnect and connect.  
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.OnConnectionStateChanged(System.EventArgs)">
+            <summary>
+            Triggers the execution of the ConnectionStateChanged event handler.
+            </summary>
+            <param name="ea">Event arguments to be passed to the invoke of the ConnectionStateChanged event handler.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.ChangeConfiguration(Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.DataSourceConfiguration)">
+            <summary>
+            When the configuration is different, this will trigger a disconnect and update the data source configuration to then reconnect.
+            </summary>
+            <param name="newConfiguration">Configuration to be used when connecting.</param>
+            <exception cref="T:System.ArgumentNullException">The input argument should not be <see langword="null"/>.</exception>
+            <exception cref="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.RequestFailedException">There was an exception when setting up the connection.</exception>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Connect">
+            <summary>
+            Registers the channel with a CommunicationGateway DxM and makes the DxM attempt a connection with the endpoint.
+            </summary>
+            <exception cref="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.RequestFailedException">There was an exception when setting up the connection.</exception>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Disconnect">
+            <summary>
+            Closes the connection with the endpoint and unregisters the channel with the DxM.
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Get(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Get the gNMI values for the specified paths.
+            </summary>
+            <param name="paths">The paths to request. A path should be formatted as a concatenation of node names separated by either a forward or backward slash.</param>
+            <returns>The individual response values, this is usually one value per path. Can only be iterated once.</returns>
+            <exception cref="T:System.ArgumentNullException">The input argument cannot be <see langword="null"/>.</exception>
+            <exception cref="T:System.ArgumentException">There should be at least one path present.</exception>
+            <exception cref="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.RequestFailedException">There was an exception thrown by the DxM.</exception>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Get(System.Collections.Generic.IEnumerable{Gnmi.Path})">
+            <summary>
+            Get the gNMI values for the specified paths.
+            </summary>
+            <param name="paths">The paths to request. This uses the actual gNMI Path class.</param>
+            <returns>The individual response values, this is usually one value per path. Can only be iterated once.</returns>
+            <exception cref="T:System.ArgumentNullException">The input argument cannot be <see langword="null"/>.</exception>
+            <exception cref="T:System.ArgumentException">There should be at least one path present.</exception>
+            <exception cref="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.RequestFailedException">There was an exception thrown by the DxM.</exception>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.SetDataMapper(Skyline.DataMiner.DataSources.OpenConfig.Gnmi.DataMapper.IDataMapper)">
+            <summary>
+            Sets the data mapper that will process incoming messages.
+            An SLProtocol compatible implementation is available in the Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol Nuget: DataMinerConnectorDataMapper.
+            </summary>
+            <param name="dataMapper">A <see cref="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.DataMapper.IDataMapper"/> implementation which will take care of the notifications.</param>
+            <exception cref="T:System.ArgumentNullException">The input argument cannot be <see langword="null"/>.</exception>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Subscribe(System.String,System.TimeSpan,System.Collections.Generic.IEnumerable{System.String},System.Action{System.Collections.Generic.IEnumerable{Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.GnmiResponseValue}})">
+            <summary>
+            Adds a subscription with a sample interval on the endpoint for the specified paths.
+            </summary>
+            <param name="subscriptionName">An identifying name for this subscription. The name must be unique for the channel or the request will be ignored if already active.</param>
+            <param name="sampleInterval">Interval between samples. Assign zero to receive at lowest interval as possible.</param>
+            <param name="paths">The model paths to subscribe to. A path should be formatted as a concatenation of node names separated by either a forward or backward slash.</param>
+            <param name="action">The callback action to execute when an update is received.</param>
+            <exception cref="T:System.ArgumentNullException">The action argument cannot be <see langword="null"/> when there is no DataMapper present.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">The sampleInterval argument cannot be negative.</exception>
+            <exception cref="T:System.ArgumentException">Name of the subscription cannot be <see langword="null"/>, empty, or a whitespace.</exception>
+            <exception cref="T:System.ArgumentNullException">The paths argument cannot be <see langword="null"/>.</exception>
+            <exception cref="T:System.ArgumentException">There should be at least one path present in the paths argument.</exception>
+            <exception cref="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.RequestFailedException">There was an exception thrown by the DxM.</exception>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Subscribe(System.String,System.Collections.Generic.IEnumerable{System.String},System.Action{System.Collections.Generic.IEnumerable{Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.GnmiResponseValue}})">
+            <summary>
+            Adds a subscription for changed values on the endpoint for the specified paths.
+            </summary>
+            <param name="subscriptionName">An identifying name for this subscription. The name must be unique for the channel or the request will be ignored if already active.</param>
+            <param name="paths">The model paths to subscribe to. A path should be formatted as a concatenation of node names separated by either a forward or backward slash.</param>
+            <param name="action">The callback action to execute when an update is received.</param>
+            <exception cref="T:System.ArgumentNullException">The action argument cannot be <see langword="null"/> when there is no DataMapper present.</exception>
+            <exception cref="T:System.ArgumentException">Name of the subscription cannot be <see langword="null"/>, empty, or a whitespace.</exception>
+            <exception cref="T:System.ArgumentNullException">The paths argument cannot be <see langword="null"/>.</exception>
+            <exception cref="T:System.ArgumentException">There should be at least one path present in the paths argument.</exception>
+            <exception cref="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.RequestFailedException">There was an exception thrown by the DxM.</exception>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Subscribe(System.String,System.TimeSpan,System.Collections.Generic.IEnumerable{Gnmi.Path},System.Action{System.Collections.Generic.IEnumerable{Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.GnmiResponseValue}})">
+            <summary>
+            Adds a subscription with a sample interval on the endpoint for the specified paths.
+            </summary>
+            <param name="subscriptionName">An identifying name for this subscription. The name must be unique for the channel or the request will be ignored if already active.</param>
+            <param name="sampleInterval">Interval between samples. Assign zero to receive at lowest interval as possible.</param>
+            <param name="paths">The model paths to subscribe to. This uses the actual gNMI Path class.</param>
+            <param name="action">The callback action to execute when an update is received.</param>
+            <exception cref="T:System.ArgumentNullException">The action argument cannot be <see langword="null"/> when there is no DataMapper present.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">The sampleInterval argument cannot be negative.</exception>
+            <exception cref="T:System.ArgumentException">Name of the subscription cannot be <see langword="null"/>, empty, or a whitespace.</exception>
+            <exception cref="T:System.ArgumentNullException">The paths argument cannot be <see langword="null"/>.</exception>
+            <exception cref="T:System.ArgumentException">There should be at least one path present in the paths argument.</exception>
+            <exception cref="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.RequestFailedException">There was an exception thrown by the DxM.</exception>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Subscribe(System.String,System.Collections.Generic.IEnumerable{Gnmi.Path},System.Action{System.Collections.Generic.IEnumerable{Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.GnmiResponseValue}})">
+            <summary>
+            Adds a subscription for changed values on the endpoint for the specified paths.
+            </summary>
+            <param name="subscriptionName">An identifying name for this subscription. The name must be unique for the channel or the request will be ignored if already active.</param>
+            <param name="paths">The model paths to subscribe to. This uses the actual gNMI Path class.</param>
+            <param name="action">The callback action to execute when an update is received.</param>
+            <exception cref="T:System.ArgumentNullException">The action argument cannot be <see langword="null"/> when there is no DataMapper present.</exception>
+            <exception cref="T:System.ArgumentException">Name of the subscription cannot be <see langword="null"/>, empty, or a whitespace.</exception>
+            <exception cref="T:System.ArgumentNullException">The paths argument cannot be <see langword="null"/>.</exception>
+            <exception cref="T:System.ArgumentException">There should be at least one path present in the paths argument.</exception>
+            <exception cref="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.RequestFailedException">There was an exception thrown by the DxM.</exception>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Unsubscribe(System.String)">
+            <summary>
+            Removes a subscription from the endpoint.
+            </summary>
+            <param name="subscriptionName">The name of the subscription to unsubscribe from.</param>
+            <exception cref="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.RequestFailedException">Removing the subscription failed.</exception>
+            <exception cref="T:System.ArgumentException">Name of the subscription cannot be <see langword="null"/>, empty, or a whitespace.</exception>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Set(System.String,System.String)">
+            <summary>
+            Sets the value for a specific path.
+            </summary>
+            <param name="path">The node path to set. This should be a leaf node.</param>
+            <param name="value">The string value to set. The gNMI TypedValue used will be StringVal.</param>
+            <exception cref="T:System.ArgumentException">The path argument cannot be empty, or a whitespace.</exception>
+            <exception cref="T:System.ArgumentNullException">The path argument cannot be <see langword="null"/>.</exception>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Set(Gnmi.Path,System.String)">
+            <summary>
+            Sets the value for a specific path.
+            </summary>
+            <param name="path">The node path to set. This should be a leaf node.</param>
+            <param name="value">The string value to set. The gNMI TypedValue used will be StringVal.</param>
+            <exception cref="T:System.ArgumentNullException">The path argument cannot be <see langword="null"/>.</exception>
+            <exception cref="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.RequestFailedException">There was an exception thrown by the DxM.</exception>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Capabilities">
+            <summary>
+            Get the capabilities of the endpoint.
+            </summary>
+            <returns>The gNMI CapabilityResponse object.</returns>
+            <exception cref="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.RequestFailedException">There was an exception thrown by the DxM.</exception>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Dispose">
+            <summary>
+            The dispose will also call Disconnect.
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Dispose(System.Boolean)">
+            <summary>
+            Disposing the object.
+            </summary>
+            <param name="disposing">Boolean indicating if the dispose needs to disconnect and clean up the resources.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Subscribe(Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.GnmiSubscriptionDetails)">
+            <summary>
+            Subscribe to a gNMI path value.
+            </summary>
+            <param name="subscription">Details of the gNMI subscription.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.EnsureIsSubscribedToResponses">
+            <summary>
+            Makes the subscription with the messagebroker if this would not be the case yet.
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.ConnectInternal(System.Boolean,System.Boolean)">
+            <summary>
+            Registers the channel with a CommunicationGateway DxM and makes the DxM attempt a connection with the endpoint.
+            </summary>
+            <param name="isTimeoutReconnect">Boolean to know if the connect request is initiated from a timeout.</param>
+            <param name="isChangeConnectionState">Boolean indicating if the ConnectionStateChanged needs to be called.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.VerifyConnectResult(System.Byte[])">
+            <summary>
+            Verifies the response from the ConnectRequest to determine if the request was successful or not.
+            </summary>
+            <param name="connectResult">Response of the connect request.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.DisconnectInternal(System.Boolean,System.Boolean)">
+            <summary>
+            Disconnects from the current channel, but only removes the subscriptions when requested.
+            If the subscriptions are retained, we will keep the DxM timeout timer alive and let it trigger occasional Connect attempts.
+            </summary>
+            <param name="retainSubscriptionData">Boolean indicating if the DxM timeout timer needs to stay active.</param>
+            <param name="isChangeConnectionState">Boolean indicating if the ConnectionStateChanged needs to be called.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.ReconnectInternal">
+            <summary>
+            Disconnects and connects again.
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.LogException(System.Exception)">
+            <summary>
+            Logs an error message if the logger exists.
+            </summary>
+            <param name="e">Exception to be logged.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.LogIfError(CommunicationGateway.OpenConfig.Api.ErrorCode)">
+            <summary>
+            Logs the error code with its friendly name as a warning if the code is not OK.
+            The full description is logged on the debug level.
+            </summary>
+            <param name="errorCode">Error code to be logged.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.NatsDxmTimeoutTimer_TimedOut(System.Object,System.EventArgs)">
+            <summary>
+            Called when the <see cref="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient._natsDxmTimeoutTimer"/> goes off.
+            </summary>
+            <param name="sender">Sender that triggered this method.</param>
+            <param name="e">Event arguments.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.NatsHeartbeatRequiredTimer_TimedOut(System.Object,System.EventArgs)">
+            <summary>
+            Called when the NatsHeartbeatRequiredTimer goes off.
+            </summary>
+            <param name="sender">Sender that triggered this method.</param>
+            <param name="e">Event arguments.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.HandleHeartbeatMessage(Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.ResponseArguments)">
+            <summary>
+            Processes a heartbeat message received from the CommunicationGateway DxM.
+            </summary>
+            <param name="responseArguments">A wrapper containing the remaining subject tokens.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.OnSubscribeResponseMessage(DataMinerMessageBroker.API.IMessage)">
+            <summary>
+            The callback for a NATS message. Validates the message and then passes it on to a <see cref="T:System.Threading.Tasks.Task"/>.
+            </summary>
+            <param name="message">The MessageBroker message.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.OnSubscribeResponseMessageInternal(DataMinerMessageBroker.API.IMessage)">
+            <summary>
+            Processes a NATS message and assumes some validation has already been done by the OnSubscribeResponseMessage function. To be called as a separate thread/task.
+            </summary>
+            <param name="message">The MessageBroker message.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.HandleGrpcChannelConnectionChange(Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.ResponseArguments)">
+            <summary>
+            Processes a <see cref="T:Skyline.DataMiner.Protobuf.CommunicationGateway.OpenConfig.Api.Model.v1.GrpcChannelStateResponse"/> that is sent when the connection between the CommunicationGateway DxM and the gNMI service changes.
+            </summary>
+            <param name="responseArguments">A wrapper containing what is expected to be a massage of type <see cref="T:Skyline.DataMiner.Protobuf.CommunicationGateway.OpenConfig.Api.Model.v1.GrpcChannelStateResponse"/>.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.HandleUpdateResponse(Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.ResponseArguments)">
+            <summary>
+            Processes a <see cref="T:Gnmi.SubscribeResponse"/> that we expect for a gNMI subscription from the CommunicationGateway DxM.
+            </summary>
+            <param name="responseArguments">A wrapper containing what is expected to be a message of type <see cref="T:Gnmi.SubscribeResponse"/> and the remaining subject tokens.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Capabilities(Gnmi.CapabilityRequest)">
+            <summary>
+            Gets the capabilities of the endpoint.
+            </summary>
+            <param name="request">Request to be executed.</param>
+            <returns>The gNMI CapabilityResponse object.</returns>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Get(Gnmi.GetRequest)">
+            <summary>
+            Gets the gNMI values for the specified paths.
+            </summary>
+            <param name="request">Request containing the paths to get.</param>
+            <returns>Response result of the get.</returns>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Set(Gnmi.SetRequest)">
+            <summary>
+            Sets the value for a specific path.
+            </summary>
+            <param name="request">Request containing the set to be executed.</param>
+            <returns>Response result of the set.</returns>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.GetMessageBroker">
+            <summary>
+            Creates a new message broker.
+            </summary>
+            <returns>The newly created message broker.</returns>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.TryRequestAsyncAndWait(System.String,Skyline.DataMiner.Protobuf.CommunicationGateway.OpenConfig.Api.Model.v1.Request,Skyline.DataMiner.Protobuf.CommunicationGateway.OpenConfig.Api.Model.v1.Response@)">
+            <summary>
+            Sends a request on the messageBroker, and waits for the result unless the token source is canceled.
+            The heartbeat timer is also reset since we are sending a message.
+            </summary>
+            <param name="subject">Subject to publish on the message broker.</param>
+            <param name="request">Request to publish on the message broker.</param>
+            <param name="response">Response of the message that was sent.</param>
+            <returns>Boolean indicating if a response was received.</returns>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.ChangeCommunicationStateGrpcChannel(System.Boolean)">
+            <summary>
+            Processes the new communication state of the gRPC channel and triggers changes accordingly.
+            </summary>
+            <param name="hasValidGrpcChannelCommunication">Boolean indicating if the gRPC channel socket is open and no error codes are received.</param>
+        </member>
+        <member name="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.RequestFailedException">
+            <summary>
+            Represents errors with the call to or its response value from the CommunicationGateway DxM.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.RequestFailedException.ErrorCode">
+            <summary>
+            The error code if one was received, empty otherwise.
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.RequestFailedException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.RequestFailedException"/> class.
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.RequestFailedException.#ctor(System.String)">
+            <summary>
+            Builds an exception based on a message, reverts to the default behavior of the Exception class.
+            </summary>
+            <param name="message">A description of the error and any relevant information.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.RequestFailedException.#ctor(CommunicationGateway.OpenConfig.Api.ErrorCode)">
+            <summary>
+            Builds an exception based on a CommunicationGateway API error code.
+            </summary>
+            <param name="errorCode">The error code received from the CommunicationGateway DxM.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.RequestFailedException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.RequestFailedException"/> class with a specified error message and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception, or a null reference if no inner exception is specified.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.RequestFailedException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Builds an exception based on a CommunicationGateway API error code.
+            </summary>
+            <param name="info">The serialized object data about the exception being thrown.</param>
+            <param name="context">The contextual information about the source or destination</param>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.RequestFailedException.ToString">
+            <summary>
+            In case there is an error code, overwrites the default Exception.ToString call and builds a comprehensive message around the code.
+            </summary>
+            <returns>The error message with all of its data.</returns>
+        </member>
+        <member name="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.DataMapper.IDataEntity">
+            <summary>
+            Represents a container where the value needs to be stored.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.DataMapper.IDataEntity.PathYangModelAsString">
+            <summary>
+            Gets the path in the YANG model in string format.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.DataMapper.IDataEntity.PathYangModel">
+            <summary>
+            Gets the path in the YANG model.
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.DataMapper.IDataEntity.ChangeValue(Gnmi.PathElem[],Gnmi.TypedValue,System.DateTime,Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.DataValueOriginType,System.String)">
+            <summary>
+            Processes the update and changes the necessary values.
+            </summary>
+            <param name="pathElems">A collection of all path elements.</param>
+            <param name="updateValue">Value that needs to be changed.</param>
+            <param name="timestampUtc">UTC time when the value was taken.</param>
+            <param name="origin">Indication of where the data originated from.</param>
+            <param name="subscriptionName">Name of the subscription in case the value came in through subscription.</param>
+            <returns>Boolean indicating if there is something that needs to be changed.</returns>
+        </member>
+        <member name="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.DataMapper.IDataMapper">
+            <summary>
+            A <see cref="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.DataMapper.IDataMapper"/> can process gNMI notifications and automatically
+            set the values on a certain <see cref="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.DataMapper.IDataEntity"/>.
+            When developing a connector, the DataMainerConnectorDataMapper can be used from
+            the Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol package.
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.DataMapper.IDataMapper.ProcessNotification(Gnmi.Notification,Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.DataValueOriginType,System.Boolean,System.String)">
+            <summary>
+            Processes the gNMI notification and adapts the <see cref="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.DataMapper.IDataEntity"/> values accordingly.
+            </summary>
+            <param name="notification">gNMI notification to be processed.</param>
+            <param name="origin">Indication of where the data originated from.</param>
+            <param name="isSyncResponse">Boolean indicating that the initial transmission of updates has concluded.</param>
+            <param name="subscriptionName">Name of the subscription under which the notification entered.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.DataMapper.IDataMapper.ReadExistingValues">
+            <summary>
+            Reads out the existing values and stores them internally.
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.DataMapper.IDataMapper.RegisterSubscriptionPaths(System.String,System.Collections.Generic.IEnumerable{Gnmi.Path})">
+            <summary>
+            Registers the <see cref="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.DataMapper.IDataEntity"/> objects that are linked with a subscription name.
+            </summary>
+            <param name="subscriptionName">Name of the subscription.</param>
+            <param name="paths">List of paths that are subscribed.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.DataMapper.IDataMapper.SetLogger(Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.ILogger)">
+            <summary>
+            Assigns a logger interface.
+            </summary>
+            <param name="logger">Logger interface</param>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.DataMapper.IDataMapper.SuppressCommunication(System.Boolean)">
+            <summary>
+            Suppresses the communication, no more values will be filled in or logging will be written out.
+            </summary>
+            <param name="isSuppress">Boolean indicating if communication should be suppressed.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.DataMapper.IDataMapper.UnregisterSubscriptionPaths(System.String)">
+            <summary>
+            Unregisters the paths that are linked with a subscription name.
+            </summary>
+            <param name="subscriptionName">Name of the subscription.</param>
+        </member>
+        <member name="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.DataValueOriginType">
+            <summary>
+            Indicates where the value originated from.
+            </summary>
+        </member>
+        <member name="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.DataValueOriginType.Unknown">
+            <summary>
+            Not known where the entered data came from.
+            </summary>
+        </member>
+        <member name="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.DataValueOriginType.Poll">
+            <summary>
+            Data entered through polling.
+            </summary>
+        </member>
+        <member name="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.DataValueOriginType.Subscription">
+            <summary>
+            Data entered through subscription.
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.DataSourceConfiguration">
+            <summary>
+            Contains the configuration parameters for a gNMI endpoint.
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.DataSourceConfiguration.#ctor">
+            <summary>
+            Initializes an empty data source object.
+            Note that IP address and port are still required for the object to be usable by the GnmiClient.
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.DataSourceConfiguration.#ctor(System.String,System.UInt32)">
+            <summary>
+            Initializes a data source object with the minimally required values for it to be usable by the GnmiClient. 
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.DataSourceConfiguration.#ctor(Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.DataSourceConfiguration)">
+            <summary>
+            Initializes by copying the specified configuration.
+            </summary>
+            <param name="configuration">The endpoint configuration to copy.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.DataSourceConfiguration.Equals(Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.DataSourceConfiguration)">
+            <summary>
+            Compares this configuration against all the parameters of the provided configuration.
+            </summary>
+            <param name="other">The configuration to compare against.</param>
+            <returns>True when all parameters are the same.</returns>
+        </member>
+        <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.DataSourceConfiguration.IpAddress">
+            <summary>
+            The IP Address or domain name of the endpoint.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.DataSourceConfiguration.Port">
+            <summary>
+            The TCP port ID of the endpoint.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.DataSourceConfiguration.UserName">
+            <summary>
+            If required, the user name to authenticate with when connecting to the endpoint.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.DataSourceConfiguration.Password">
+            <summary>
+            If required, the password to authenticate with when connecting to the endpoint.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.DataSourceConfiguration.ClientCertificate">
+            <summary>
+            The location on the local machine of the client certificate file.
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.DataSourceConfiguration.ConvertToGrpcEndpointDetails">
+            <summary>
+            Converts the DataSourceConfiguration properties to GrpcEndPointDetails.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.GnmiResponseValue">
+            <summary>
+            A class that represents the value of the gNMI response.
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.GnmiResponseValue.#ctor">
+            <summary>
+            Constructor with empty values.
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.GnmiResponseValue.#ctor(Gnmi.Path,System.Int64,Gnmi.Path)">
+            <summary>
+            Constructor used for deleted values.
+            </summary>
+            <param name="prefix">Prefix of the path.</param>
+            <param name="timestamp">Timestamp in nanoseconds since epoch.</param>
+            <param name="path">Path that has been deleted.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.GnmiResponseValue.#ctor(Gnmi.Path,System.Int64,Gnmi.Path,Gnmi.TypedValue)">
+            <summary>
+            Constructor used for updated values.
+            </summary>
+            <param name="prefix">Prefix of the path.</param>
+            <param name="timestamp">Timestamp in nanoseconds since epoch.</param>
+            <param name="path">Path that has the updated value.</param>
+            <param name="value">Value that has been updated.</param>
+        </member>
+        <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.GnmiResponseValue.IsDeleted">
+            <summary>
+            Gets a boolean indicating if the path has been deleted.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.GnmiResponseValue.IsSyncResponse">
+            <summary>
+            Gets a boolean indicating that the initial transmission of updates has concluded.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.GnmiResponseValue.StringPath">
+            <summary>
+            Gets the path of the gNMI response as a string value.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.GnmiResponseValue.TimestampRawEpoch">
+            <summary>
+            Gets the associated timestamp of the value in nanoseconds since Epoch. Usage of this property is recommended only when using Subscribe, not Get.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.GnmiResponseValue.TimestampUtc">
+            <summary>
+            Gets the associated timestamp of the value in UTC time format. Usage of this property is recommended only when using Subscribe, not Get.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.GnmiResponseValue.Value">
+            <summary>
+            The value as one of the corresponding base types:
+            * null
+            * bool
+            * ulong
+            * long
+            * double
+            * string
+            </summary>
+            <exception cref="T:System.ArgumentException">When the underlying type is not recognized, this exception will throw what type is detected.</exception>
+        </member>
+        <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.GnmiResponseValue.ValueType">
+            <summary>
+            Returns the parsed value type, this will return one of these expected types:
+            * null
+            * bool
+            * ulong
+            * long
+            * double
+            * string
+            </summary>
+            <exception cref="T:System.ArgumentException">When the underlying type is not recognized, this exception will throw what type is detected.</exception>
+        </member>
+        <member name="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.GnmiSubscriptionDetails">
+            <summary>
+            A class that contains the details of the gNMI subscription.
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.GnmiSubscriptionDetails.#ctor(Skyline.DataMiner.Protobuf.CommunicationGateway.OpenConfig.Api.Model.v1.SubscriptionId,System.Action{System.Collections.Generic.IEnumerable{Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.GnmiResponseValue}},Gnmi.SubscriptionList)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.GnmiSubscriptionDetails"/> class.
+            </summary>
+            <param name="id">Identifier of the subscription.</param>
+            <param name="handler">The callback action to execute when an update is received.</param>
+            <param name="subscriptionList">The list of items to subscribe to.</param>
+        </member>
+        <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.GnmiSubscriptionDetails.ID">
+            <summary>
+            Gets the identifier of the subscription.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.GnmiSubscriptionDetails.Handler">
+            <summary>
+            Gets the callback action to execute when an update is received.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.GnmiSubscriptionDetails.SubscriptionList">
+            <summary>
+            Gets the list of items to subscribe to.
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.HeartbeatSettings">
+            <summary>
+            A wrapper for the heartbeat WatchdogTimer settings.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.HeartbeatSettings.DxmTimeoutMs">
+            <summary>
+            The timeout time in ms for a heartbeat to arrive from the DxM (CommunicationGateway).
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.GnmiLoggerWrapper">
+            <summary>
+            A class that adds a wrapper around the external logger interface. This makes it also possible to suppress logging, e.g. when disposing.
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.GnmiLoggerWrapper.#ctor(Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.ILogger)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.GnmiLoggerWrapper"/> class.
+            </summary>
+            <param name="externalLogger">Logger interface.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown when the passed logger interface would be null.</exception>
+        </member>
+        <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.GnmiLoggerWrapper.ExternalLogger">
+            <summary>
+            Gets the logger interface.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.GnmiLoggerWrapper.IsLoggingEnabled">
+            <summary>
+            Gets a boolean indicating if logging is enabled.
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.GnmiLoggerWrapper.LogFatal(System.String)">
+            <summary>
+            Logs a message when the process encountered a problem that could not be handled without loss of functionality.
+            </summary>
+            <param name="message">Message to be logged.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.GnmiLoggerWrapper.LogError(System.String)">
+            <summary>
+            Logs a message when the process encountered an exception when handling a request.
+            </summary>
+            <param name="message">Message to be logged.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.GnmiLoggerWrapper.LogWarning(System.String)">
+            <summary>
+            Logs a message when the process received an invalid request.
+            </summary>
+            <param name="message">Message to be logged.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.GnmiLoggerWrapper.LogInfo(System.String)">
+            <summary>
+            Logs a message for fundamental process execution.
+            </summary>
+            <param name="message">Message to be logged.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.GnmiLoggerWrapper.LogDebug(System.String)">
+            <summary>
+            Logs a message when an action is undertaken.
+            </summary>
+            <param name="message">Message to be logged.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.GnmiLoggerWrapper.LogTrace(System.String)">
+            <summary>
+            Logs a message to trace every action or function call being executed.
+            </summary>
+            <param name="message">Message to be logged.</param>
+        </member>
+        <member name="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.GnmiUtils">
+            <summary>
+            Some utilities to parse or format gNMI items.
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.GnmiUtils.ConvertPathToString(Gnmi.Path,Gnmi.Path,System.Boolean)">
+            <summary>
+            Converts two gNMI Path objects into a single path string.
+            </summary>
+            <param name="prefix">The first path acting as a prefix.</param>
+            <param name="path">The second path to append after the prefix.</param>
+            <param name="doIncludeKeys">Includes keys in the output when a path contains those.</param>
+            <returns>A path string containing the path node names separated by a forward slash '/'.</returns>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.GnmiUtils.ConvertPathToString(Gnmi.Path,System.Boolean)">
+            <summary>
+            Converts a gNMI Path object into a path string.
+            </summary>
+            <param name="path">The path to format.</param>
+            <param name="doIncludeKeys">Includes keys in the output when a path contains those.</param>
+            <returns>A path string containing the path node names separated by a forward slash '/'.</returns>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.GnmiUtils.ConvertPathElemToStringLimited(Gnmi.PathElem[],System.Int32,System.Boolean)">
+            <summary>
+            Converts a limited gNMI PathElem object into a path string.
+            </summary>
+            <param name="pathElems">The path elements to convert.</param>
+            <param name="length">The number of path elements to be included in the result.</param>
+            <param name="doIncludeKeys">Boolean indicating if the path element keys need to be added.</param>
+            <returns>A path string containing the path node names separated by a forward slash '/'.</returns>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.GnmiUtils.ConvertPathElemToString(Gnmi.PathElem[],System.Boolean)">
+            <summary>
+            Converts a gNMI PathElem object into a path string.
+            </summary>
+            <param name="pathElems">The path elements to convert.</param>
+            <param name="doIncludeKeys">Boolean indicating if the path element keys need to be added.</param>
+            <returns>A path string containing the path node names separated by a forward slash '/'.</returns>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.GnmiUtils.FindLastKeyOccurrenceInPath(Gnmi.PathElem[])">
+            <summary>
+            Finds the last occurrence of a key in a certain path.
+            <remarks>
+            A path should typically only contain one key but in case there are multiple,
+            it will return the one of the deepest child node.
+            </remarks>
+            </summary>
+            <param name="pathElems">The path elements in which needs to be searched.</param>
+            <returns>The key that is found in the path.</returns>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.GnmiUtils.GetValueByCase(Gnmi.TypedValue)">
+            <summary>
+            Given a gNMI TypedValue, will return the appropriate object type with the parsed value.
+            </summary>
+            <param name="typedValue">The value to parse.</param>
+            <returns>The value contained in an appropriate type: string, bool, double, long, or ulong</returns>
+            <exception cref="T:System.ArgumentException">When the underlying type is not recognized, this exception will throw what type is detected.</exception>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.GnmiUtils.MergePathElems(Gnmi.Path,Gnmi.Path)">
+            <summary>
+            Merges two Paths into one PathElem collection.
+            </summary>
+            <param name="prefixPath">First Path to be merged.</param>
+            <param name="suffixPath">Second Path to be merged.</param>
+            <returns>PathElem collection containing the merged paths.</returns>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.GnmiUtils.TryRemoveRootPathElements(Gnmi.Path,Gnmi.PathElem[],System.String@,Gnmi.PathElem[]@)">
+            <summary>
+            Removes the root path from the full path.
+            </summary>
+            <param name="rootPath">Root path.</param>
+            <param name="fullPath">Full path.</param>
+            <param name="cleanPaths">Full path without the root path.</param>
+            <param name="lastFoundKey">Last key that was found that was not included in the root path.</param>
+            <returns>Boolean indicating if there are items present in the cleanPaths.</returns>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.GnmiUtils.ParsePaths(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Parses the provided string paths into gNMI Path objects.
+            </summary>
+            <param name="stringPaths">The string paths to parse.</param>
+            <returns>A gNMI Path object for each enumerated string.</returns>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.GnmiUtils.GetValueByCase(Gnmi.TypedValue,System.Type@)">
+            <summary>
+            Given a gNMI TypedValue, will return the appropriate object type with the parsed value.
+            </summary>
+            <param name="typedValue">The value to parse.</param>
+            <param name="type">Returns the type of the resulting value, will be null, string, bool, double, long, or ulong.</param>
+            <returns>The value contained in an appropriate type: null, string, bool, double, long, or ulong</returns>
+            <exception cref="T:System.ArgumentException">When the underlying type is not recognized, this exception will throw what type is detected.</exception>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.GnmiUtils.ParsePath(System.String)">
+            <summary>
+            Converts a path as string into a gNMI path.
+            </summary>
+            <param name="stringPath">Path as string to be converted.</param>
+            <returns>gNMI path.</returns>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.GnmiUtils.ConvertStringPathWithoutKeys(System.String)">
+            <summary>
+            Removes the keys from the string path element.
+            </summary>
+            <param name="stringPath">String path from which the keys should be removed.</param>
+            <returns>String path without keys.</returns>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.GnmiUtils.ConvertStringPathElemWithoutKeys(System.String)">
+            <summary>
+            Removes the keys from the string path element.
+            </summary>
+            <param name="stringPathElem">String path from which the keys should be removed.</param>
+            <returns>String path without keys.</returns>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.GnmiUtils.ParsePathElem(System.String)">
+            <summary>
+            Parses a PathElem from a string.
+            </summary>
+            <param name="stringPathElem">String to be parsed.</param>
+            <returns>Parsed PathElem.</returns>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.GnmiUtils.AppendPath(System.Text.StringBuilder,Gnmi.Path,System.Boolean)">
+            <summary>
+            Adds a gNMI path to the stringbuilder with existing paths.
+            </summary>
+            <param name="sb">Stringbuilder that is containing all the paths.</param>
+            <param name="path">gNMI path to be added.</param>
+            <param name="doIncludeKeys">Boolean indicating if the path element keys need to be added.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.GnmiUtils.ConvertPathElemKeyToString(System.Text.StringBuilder,Gnmi.PathElem)">
+            <summary>
+            Adds a gNMI path element to the stringbuilder with existing paths.
+            </summary>
+            <param name="sb">Stringbuilder that is containing all the paths.</param>
+            <param name="element">gNMI path element to be added.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.GnmiUtils.ParseByteString(Google.Protobuf.ByteString)">
+            <summary>
+            Converts a bytestring into a string.
+            </summary>
+            <param name="byteString">Bytestring to be converted.</param>
+            <returns>Converted string result.</returns>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.GnmiUtils.TryGetNonMatchingKey(Google.Protobuf.Collections.MapField{System.String,System.String},Google.Protobuf.Collections.MapField{System.String,System.String},System.String@)">
+            <summary>
+            Tries to get the last key value if it is not specified in the root map.
+            </summary>
+            <param name="rootKeys">Keys that are defined in the root path.</param>
+            <param name="pathKeys">Keys that are returned by the data source in the path.</param>
+            <param name="key">Found key.</param>
+            <returns>Boolean indicating if a key was found.</returns>
+        </member>
+        <member name="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.ILogger">
+            <summary>
+            An interface that makes it possible to log.
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.ILogger.LogFatal(System.String)">
+            <summary>
+            Logs a message when the process encountered a problem that could not be handled without loss of functionality.
+            Recommended DataMiner log level: ERROR, ALWAYS
+            </summary>
+            <param name="message">Message to be logged.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.ILogger.LogError(System.String)">
+            <summary>
+            Logs a message when the process encountered an exception when handling a request.
+            Recommended DataMiner log level: ERROR, 0
+            </summary>
+            <param name="message">Message to be logged.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.ILogger.LogWarning(System.String)">
+            <summary>
+            Logs a message when the process received an invalid request.
+            Recommended DataMiner log level: ERROR, 1
+            </summary>
+            <param name="message">Message to be logged.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.ILogger.LogInfo(System.String)">
+            <summary>
+            Logs a message for fundamental process execution.
+            Recommended DataMiner log level: INFO, 0-1
+            </summary>
+            <param name="message">Message to be logged.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.ILogger.LogDebug(System.String)">
+            <summary>
+            Logs a message when an action is undertaken.
+            Recommended DataMiner log level: DEBUG, 1-3
+            </summary>
+            <param name="message">Message to be logged.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.ILogger.LogTrace(System.String)">
+            <summary>
+            Logs a message to trace every action or function call being executed.
+            Recommended DataMiner log level: DEBUG, 5
+            </summary>
+            <param name="message">Message to be logged.</param>
+        </member>
+        <member name="T:Gnmi.GnmiReflection">
+            <summary>Holder for reflection information generated from proto/gnmi.proto</summary>
+        </member>
+        <member name="P:Gnmi.GnmiReflection.Descriptor">
+            <summary>File descriptor for proto/gnmi.proto</summary>
+        </member>
+        <member name="T:Gnmi.GnmiExtensions">
+            <summary>Holder for extension identifiers generated from the top level of proto/gnmi.proto</summary>
+        </member>
+        <member name="F:Gnmi.GnmiExtensions.GnmiService">
+            <summary>
+            The gNMI service semantic version.
+            </summary>
+        </member>
+        <member name="T:Gnmi.Encoding">
+            <summary>
+            Encoding defines the value encoding formats that are supported by the gNMI
+            protocol. These encodings are used by both the client (when sending Set
+            messages to modify the state of the target) and the target when serializing
+            data to be returned to the client (in both Subscribe and Get RPCs).
+            Reference: gNMI Specification Section 2.3
+            </summary>
+        </member>
+        <member name="F:Gnmi.Encoding.Json">
+            <summary>
+            JSON encoded text.
+            </summary>
+        </member>
+        <member name="F:Gnmi.Encoding.Bytes">
+            <summary>
+            Arbitrarily encoded bytes.
+            </summary>
+        </member>
+        <member name="F:Gnmi.Encoding.Proto">
+            <summary>
+            Encoded according to scalar values of TypedValue.
+            </summary>
+        </member>
+        <member name="F:Gnmi.Encoding.Ascii">
+            <summary>
+            ASCII text of an out-of-band agreed format.
+            </summary>
+        </member>
+        <member name="F:Gnmi.Encoding.JsonIetf">
+            <summary>
+            JSON encoded text as per RFC7951.
+            </summary>
+        </member>
+        <member name="T:Gnmi.SubscriptionMode">
+            <summary>
+            SubscriptionMode is the mode of the subscription, specifying how the
+            target must return values in a subscription.
+            Reference: gNMI Specification Section 3.5.1.3
+            </summary>
+        </member>
+        <member name="F:Gnmi.SubscriptionMode.TargetDefined">
+            <summary>
+            The target selects the relevant mode for each element.
+            </summary>
+        </member>
+        <member name="F:Gnmi.SubscriptionMode.OnChange">
+            <summary>
+            The target sends an update on element value change.
+            </summary>
+        </member>
+        <member name="F:Gnmi.SubscriptionMode.Sample">
+            <summary>
+            The target samples values according to the interval.
+            </summary>
+        </member>
+        <member name="T:Gnmi.Notification">
+            <summary>
+            Notification is a re-usable message that is used to encode data from the
+            target to the client. A Notification carries two types of changes to the data
+            tree:
+             - Deleted values (delete) - a set of paths that have been removed from the
+               data tree.
+             - Updated values (update) - a set of path-value pairs indicating the path
+               whose value has changed in the data tree.
+            Reference: gNMI Specification Section 2.1
+            </summary>
+        </member>
+        <member name="F:Gnmi.Notification.TimestampFieldNumber">
+            <summary>Field number for the "timestamp" field.</summary>
+        </member>
+        <member name="P:Gnmi.Notification.Timestamp">
+            <summary>
+            Timestamp in nanoseconds since Epoch.
+            </summary>
+        </member>
+        <member name="F:Gnmi.Notification.PrefixFieldNumber">
+            <summary>Field number for the "prefix" field.</summary>
+        </member>
+        <member name="P:Gnmi.Notification.Prefix">
+            <summary>
+            Prefix used for paths in the message.
+            </summary>
+        </member>
+        <member name="F:Gnmi.Notification.AliasFieldNumber">
+            <summary>Field number for the "alias" field.</summary>
+        </member>
+        <member name="P:Gnmi.Notification.Alias">
+            <summary>
+            An alias for the path specified in the prefix field.
+            Reference: gNMI Specification Section 2.4.2
+            </summary>
+        </member>
+        <member name="F:Gnmi.Notification.UpdateFieldNumber">
+            <summary>Field number for the "update" field.</summary>
+        </member>
+        <member name="P:Gnmi.Notification.Update">
+            <summary>
+            Data elements that have changed values.
+            </summary>
+        </member>
+        <member name="F:Gnmi.Notification.DeleteFieldNumber">
+            <summary>Field number for the "delete" field.</summary>
+        </member>
+        <member name="P:Gnmi.Notification.Delete">
+            <summary>
+            Data elements that have been deleted.
+            </summary>
+        </member>
+        <member name="F:Gnmi.Notification.AtomicFieldNumber">
+            <summary>Field number for the "atomic" field.</summary>
+        </member>
+        <member name="P:Gnmi.Notification.Atomic">
+            <summary>
+            This notification contains a set of paths that are always updated together
+            referenced by a globally unique prefix.
+            </summary>
+        </member>
+        <member name="T:Gnmi.Update">
+            <summary>
+            Update is a re-usable message that is used to store a particular Path,
+            Value pair.
+            Reference: gNMI Specification Section 2.1
+            </summary>
+        </member>
+        <member name="F:Gnmi.Update.PathFieldNumber">
+            <summary>Field number for the "path" field.</summary>
+        </member>
+        <member name="P:Gnmi.Update.Path">
+            <summary>
+            The path (key) for the update.
+            </summary>
+        </member>
+        <member name="F:Gnmi.Update.ValueFieldNumber">
+            <summary>Field number for the "value" field.</summary>
+        </member>
+        <member name="P:Gnmi.Update.Value">
+            <summary>
+            The value (value) for the update.
+            </summary>
+        </member>
+        <member name="F:Gnmi.Update.ValFieldNumber">
+            <summary>Field number for the "val" field.</summary>
+        </member>
+        <member name="P:Gnmi.Update.Val">
+            <summary>
+            The explicitly typed update value.
+            </summary>
+        </member>
+        <member name="F:Gnmi.Update.DuplicatesFieldNumber">
+            <summary>Field number for the "duplicates" field.</summary>
+        </member>
+        <member name="P:Gnmi.Update.Duplicates">
+            <summary>
+            Number of coalesced duplicates.
+            </summary>
+        </member>
+        <member name="T:Gnmi.TypedValue">
+            <summary>
+            TypedValue is used to encode a value being sent between the client and
+            target (originated by either entity).
+            </summary>
+        </member>
+        <member name="F:Gnmi.TypedValue.StringValFieldNumber">
+            <summary>Field number for the "string_val" field.</summary>
+        </member>
+        <member name="P:Gnmi.TypedValue.StringVal">
+            <summary>
+            String value.
+            </summary>
+        </member>
+        <member name="F:Gnmi.TypedValue.IntValFieldNumber">
+            <summary>Field number for the "int_val" field.</summary>
+        </member>
+        <member name="P:Gnmi.TypedValue.IntVal">
+            <summary>
+            Integer value.
+            </summary>
+        </member>
+        <member name="F:Gnmi.TypedValue.UintValFieldNumber">
+            <summary>Field number for the "uint_val" field.</summary>
+        </member>
+        <member name="P:Gnmi.TypedValue.UintVal">
+            <summary>
+            Unsigned integer value.
+            </summary>
+        </member>
+        <member name="F:Gnmi.TypedValue.BoolValFieldNumber">
+            <summary>Field number for the "bool_val" field.</summary>
+        </member>
+        <member name="P:Gnmi.TypedValue.BoolVal">
+            <summary>
+            Bool value.
+            </summary>
+        </member>
+        <member name="F:Gnmi.TypedValue.BytesValFieldNumber">
+            <summary>Field number for the "bytes_val" field.</summary>
+        </member>
+        <member name="P:Gnmi.TypedValue.BytesVal">
+            <summary>
+            Arbitrary byte sequence value.
+            </summary>
+        </member>
+        <member name="F:Gnmi.TypedValue.FloatValFieldNumber">
+            <summary>Field number for the "float_val" field.</summary>
+        </member>
+        <member name="P:Gnmi.TypedValue.FloatVal">
+            <summary>
+            Deprecated - use double_val.
+            </summary>
+        </member>
+        <member name="F:Gnmi.TypedValue.DoubleValFieldNumber">
+            <summary>Field number for the "double_val" field.</summary>
+        </member>
+        <member name="P:Gnmi.TypedValue.DoubleVal">
+            <summary>
+            Floating point value.
+            </summary>
+        </member>
+        <member name="F:Gnmi.TypedValue.DecimalValFieldNumber">
+            <summary>Field number for the "decimal_val" field.</summary>
+        </member>
+        <member name="P:Gnmi.TypedValue.DecimalVal">
+            <summary>
+            Deprecated - use double_val.
+            </summary>
+        </member>
+        <member name="F:Gnmi.TypedValue.LeaflistValFieldNumber">
+            <summary>Field number for the "leaflist_val" field.</summary>
+        </member>
+        <member name="P:Gnmi.TypedValue.LeaflistVal">
+            <summary>
+            Mixed type scalar array value.
+            </summary>
+        </member>
+        <member name="F:Gnmi.TypedValue.AnyValFieldNumber">
+            <summary>Field number for the "any_val" field.</summary>
+        </member>
+        <member name="P:Gnmi.TypedValue.AnyVal">
+            <summary>
+            protobuf.Any encoded bytes.
+            </summary>
+        </member>
+        <member name="F:Gnmi.TypedValue.JsonValFieldNumber">
+            <summary>Field number for the "json_val" field.</summary>
+        </member>
+        <member name="P:Gnmi.TypedValue.JsonVal">
+            <summary>
+            JSON-encoded text.
+            </summary>
+        </member>
+        <member name="F:Gnmi.TypedValue.JsonIetfValFieldNumber">
+            <summary>Field number for the "json_ietf_val" field.</summary>
+        </member>
+        <member name="P:Gnmi.TypedValue.JsonIetfVal">
+            <summary>
+            JSON-encoded text per RFC7951.
+            </summary>
+        </member>
+        <member name="F:Gnmi.TypedValue.AsciiValFieldNumber">
+            <summary>Field number for the "ascii_val" field.</summary>
+        </member>
+        <member name="P:Gnmi.TypedValue.AsciiVal">
+            <summary>
+            Arbitrary ASCII text.
+            </summary>
+        </member>
+        <member name="F:Gnmi.TypedValue.ProtoBytesFieldNumber">
+            <summary>Field number for the "proto_bytes" field.</summary>
+        </member>
+        <member name="P:Gnmi.TypedValue.ProtoBytes">
+            <summary>
+            Protobuf binary encoded bytes. The message type is not included.
+            See the specification at
+            github.com/openconfig/reference/blob/master/rpc/gnmi/protobuf-vals.md
+            for a complete specification. [Experimental]
+            </summary>
+        </member>
+        <member name="T:Gnmi.TypedValue.ValueOneofCase">
+            <summary>Enum of possible cases for the "value" oneof.</summary>
+        </member>
+        <member name="T:Gnmi.Path">
+            <summary>
+            Path encodes a data tree path as a series of repeated strings, with
+            each element of the path representing a data tree node name and the
+            associated attributes.
+            Reference: gNMI Specification Section 2.2.2.
+            </summary>
+        </member>
+        <member name="F:Gnmi.Path.ElementFieldNumber">
+            <summary>Field number for the "element" field.</summary>
+        </member>
+        <member name="P:Gnmi.Path.Element">
+            <summary>
+            Elements of the path are no longer encoded as a string, but rather within
+            the elem field as a PathElem message.
+            </summary>
+        </member>
+        <member name="F:Gnmi.Path.OriginFieldNumber">
+            <summary>Field number for the "origin" field.</summary>
+        </member>
+        <member name="P:Gnmi.Path.Origin">
+            <summary>
+            Label to disambiguate path.
+            </summary>
+        </member>
+        <member name="F:Gnmi.Path.ElemFieldNumber">
+            <summary>Field number for the "elem" field.</summary>
+        </member>
+        <member name="P:Gnmi.Path.Elem">
+            <summary>
+            Elements of the path.
+            </summary>
+        </member>
+        <member name="F:Gnmi.Path.TargetFieldNumber">
+            <summary>Field number for the "target" field.</summary>
+        </member>
+        <member name="P:Gnmi.Path.Target">
+            <summary>
+            The name of the target
+            </summary>
+        </member>
+        <member name="T:Gnmi.PathElem">
+            <summary>
+            PathElem encodes an element of a gNMI path, along with any attributes (keys)
+            that may be associated with it.
+            Reference: gNMI Specification Section 2.2.2.
+            </summary>
+        </member>
+        <member name="F:Gnmi.PathElem.NameFieldNumber">
+            <summary>Field number for the "name" field.</summary>
+        </member>
+        <member name="P:Gnmi.PathElem.Name">
+            <summary>
+            The name of the element in the path.
+            </summary>
+        </member>
+        <member name="F:Gnmi.PathElem.KeyFieldNumber">
+            <summary>Field number for the "key" field.</summary>
+        </member>
+        <member name="P:Gnmi.PathElem.Key">
+            <summary>
+            Map of key (attribute) name to value.
+            </summary>
+        </member>
+        <member name="T:Gnmi.Value">
+            <summary>
+            Value encodes a data tree node's value - along with the way in which
+            the value is encoded. This message is deprecated by gNMI 0.3.0.
+            Reference: gNMI Specification Section 2.2.3.
+            </summary>
+        </member>
+        <member name="F:Gnmi.Value.Value_FieldNumber">
+            <summary>Field number for the "value" field.</summary>
+        </member>
+        <member name="P:Gnmi.Value.Value_">
+            <summary>
+            Value of the variable being transmitted.
+            </summary>
+        </member>
+        <member name="F:Gnmi.Value.TypeFieldNumber">
+            <summary>Field number for the "type" field.</summary>
+        </member>
+        <member name="P:Gnmi.Value.Type">
+            <summary>
+            Encoding used for the value field.
+            </summary>
+        </member>
+        <member name="T:Gnmi.Error">
+            <summary>
+            Error message previously utilised to return errors to the client. Deprecated
+            in favour of using the google.golang.org/genproto/googleapis/rpc/status
+            message in the RPC response.
+            Reference: gNMI Specification Section 2.5
+            </summary>
+        </member>
+        <member name="F:Gnmi.Error.CodeFieldNumber">
+            <summary>Field number for the "code" field.</summary>
+        </member>
+        <member name="P:Gnmi.Error.Code">
+            <summary>
+            Canonical gRPC error code.
+            </summary>
+        </member>
+        <member name="F:Gnmi.Error.MessageFieldNumber">
+            <summary>Field number for the "message" field.</summary>
+        </member>
+        <member name="P:Gnmi.Error.Message">
+            <summary>
+            Human readable error.
+            </summary>
+        </member>
+        <member name="F:Gnmi.Error.DataFieldNumber">
+            <summary>Field number for the "data" field.</summary>
+        </member>
+        <member name="P:Gnmi.Error.Data">
+            <summary>
+            Optional additional information.
+            </summary>
+        </member>
+        <member name="T:Gnmi.Decimal64">
+            <summary>
+            Decimal64 is used to encode a fixed precision decimal number. The value
+            is expressed as a set of digits with the precision specifying the
+            number of digits following the decimal point in the digit set.
+            </summary>
+        </member>
+        <member name="F:Gnmi.Decimal64.DigitsFieldNumber">
+            <summary>Field number for the "digits" field.</summary>
+        </member>
+        <member name="P:Gnmi.Decimal64.Digits">
+            <summary>
+            Set of digits.
+            </summary>
+        </member>
+        <member name="F:Gnmi.Decimal64.PrecisionFieldNumber">
+            <summary>Field number for the "precision" field.</summary>
+        </member>
+        <member name="P:Gnmi.Decimal64.Precision">
+            <summary>
+            Number of digits following the decimal point.
+            </summary>
+        </member>
+        <member name="T:Gnmi.ScalarArray">
+            <summary>
+            ScalarArray is used to encode a mixed-type array of values.
+            </summary>
+        </member>
+        <member name="F:Gnmi.ScalarArray.ElementFieldNumber">
+            <summary>Field number for the "element" field.</summary>
+        </member>
+        <member name="P:Gnmi.ScalarArray.Element">
+            <summary>
+            The set of elements within the array. Each TypedValue message should
+            specify only elements that have a field identifier of 1-7 (i.e., the
+            values are scalar values).
+            </summary>
+        </member>
+        <member name="T:Gnmi.SubscribeRequest">
+            <summary>
+            SubscribeRequest is the message sent by the client to the target when
+            initiating a subscription to a set of paths within the data tree. The
+            request field must be populated and the initial message must specify a
+            SubscriptionList to initiate a subscription. The message is subsequently
+            used to define aliases or trigger polled data to be sent by the target.
+            Reference: gNMI Specification Section 3.5.1.1
+            </summary>
+        </member>
+        <member name="F:Gnmi.SubscribeRequest.SubscribeFieldNumber">
+            <summary>Field number for the "subscribe" field.</summary>
+        </member>
+        <member name="P:Gnmi.SubscribeRequest.Subscribe">
+            <summary>
+            Specify the paths within a subscription.
+            </summary>
+        </member>
+        <member name="F:Gnmi.SubscribeRequest.PollFieldNumber">
+            <summary>Field number for the "poll" field.</summary>
+        </member>
+        <member name="P:Gnmi.SubscribeRequest.Poll">
+            <summary>
+            Trigger a polled update.
+            </summary>
+        </member>
+        <member name="F:Gnmi.SubscribeRequest.AliasesFieldNumber">
+            <summary>Field number for the "aliases" field.</summary>
+        </member>
+        <member name="P:Gnmi.SubscribeRequest.Aliases">
+            <summary>
+            Aliases to be created.
+            </summary>
+        </member>
+        <member name="F:Gnmi.SubscribeRequest.ExtensionFieldNumber">
+            <summary>Field number for the "extension" field.</summary>
+        </member>
+        <member name="P:Gnmi.SubscribeRequest.Extension">
+            <summary>
+            Extension messages associated with the SubscribeRequest. See the
+            gNMI extension specification for further definition.
+            </summary>
+        </member>
+        <member name="T:Gnmi.SubscribeRequest.RequestOneofCase">
+            <summary>Enum of possible cases for the "request" oneof.</summary>
+        </member>
+        <member name="T:Gnmi.Poll">
+            <summary>
+            Poll is sent within a SubscribeRequest to trigger the device to
+            send telemetry updates for the paths that are associated with the
+            subscription.
+            Reference: gNMI Specification Section Section 3.5.1.4
+            </summary>
+        </member>
+        <member name="T:Gnmi.SubscribeResponse">
+            <summary>
+            SubscribeResponse is the message used by the target within a Subscribe RPC.
+            The target includes a Notification message which is used to transmit values
+            of the path(s) that are associated with the subscription. The same message
+            is to indicate that the target has sent all data values once (is
+            synchronized).
+            Reference: gNMI Specification Section 3.5.1.4
+            </summary>
+        </member>
+        <member name="F:Gnmi.SubscribeResponse.UpdateFieldNumber">
+            <summary>Field number for the "update" field.</summary>
+        </member>
+        <member name="P:Gnmi.SubscribeResponse.Update">
+            <summary>
+            Changed or sampled value for a path.
+            </summary>
+        </member>
+        <member name="F:Gnmi.SubscribeResponse.SyncResponseFieldNumber">
+            <summary>Field number for the "sync_response" field.</summary>
+        </member>
+        <member name="P:Gnmi.SubscribeResponse.SyncResponse">
+            <summary>
+            Indicate target has sent all values associated with the subscription
+            at least once.
+            </summary>
+        </member>
+        <member name="F:Gnmi.SubscribeResponse.ErrorFieldNumber">
+            <summary>Field number for the "error" field.</summary>
+        </member>
+        <member name="P:Gnmi.SubscribeResponse.Error">
+            <summary>
+            Deprecated in favour of google.golang.org/genproto/googleapis/rpc/status
+            </summary>
+        </member>
+        <member name="F:Gnmi.SubscribeResponse.ExtensionFieldNumber">
+            <summary>Field number for the "extension" field.</summary>
+        </member>
+        <member name="P:Gnmi.SubscribeResponse.Extension">
+            <summary>
+            Extension messages associated with the SubscribeResponse. See the
+            gNMI extension specification for further definition.
+            </summary>
+        </member>
+        <member name="T:Gnmi.SubscribeResponse.ResponseOneofCase">
+            <summary>Enum of possible cases for the "response" oneof.</summary>
+        </member>
+        <member name="T:Gnmi.SubscriptionList">
+            <summary>
+            SubscriptionList is used within a Subscribe message to specify the list of
+            paths that the client wishes to subscribe to. The message consists of a
+            list of (possibly prefixed) paths, and options that relate to the
+            subscription.
+            Reference: gNMI Specification Section 3.5.1.2
+            </summary>
+        </member>
+        <member name="F:Gnmi.SubscriptionList.PrefixFieldNumber">
+            <summary>Field number for the "prefix" field.</summary>
+        </member>
+        <member name="P:Gnmi.SubscriptionList.Prefix">
+            <summary>
+            Prefix used for paths.
+            </summary>
+        </member>
+        <member name="F:Gnmi.SubscriptionList.SubscriptionFieldNumber">
+            <summary>Field number for the "subscription" field.</summary>
+        </member>
+        <member name="P:Gnmi.SubscriptionList.Subscription">
+            <summary>
+            Set of subscriptions to create.
+            </summary>
+        </member>
+        <member name="F:Gnmi.SubscriptionList.UseAliasesFieldNumber">
+            <summary>Field number for the "use_aliases" field.</summary>
+        </member>
+        <member name="P:Gnmi.SubscriptionList.UseAliases">
+            <summary>
+            Whether target defined aliases are allowed within the subscription.
+            </summary>
+        </member>
+        <member name="F:Gnmi.SubscriptionList.QosFieldNumber">
+            <summary>Field number for the "qos" field.</summary>
+        </member>
+        <member name="P:Gnmi.SubscriptionList.Qos">
+            <summary>
+            DSCP marking to be used.
+            </summary>
+        </member>
+        <member name="F:Gnmi.SubscriptionList.ModeFieldNumber">
+            <summary>Field number for the "mode" field.</summary>
+        </member>
+        <member name="F:Gnmi.SubscriptionList.AllowAggregationFieldNumber">
+            <summary>Field number for the "allow_aggregation" field.</summary>
+        </member>
+        <member name="P:Gnmi.SubscriptionList.AllowAggregation">
+            <summary>
+            Whether elements of the schema that are marked as eligible for aggregation
+            should be aggregated or not.
+            </summary>
+        </member>
+        <member name="F:Gnmi.SubscriptionList.UseModelsFieldNumber">
+            <summary>Field number for the "use_models" field.</summary>
+        </member>
+        <member name="P:Gnmi.SubscriptionList.UseModels">
+            <summary>
+            The set of schemas that define the elements of the data tree that should
+            be sent by the target.
+            </summary>
+        </member>
+        <member name="F:Gnmi.SubscriptionList.EncodingFieldNumber">
+            <summary>Field number for the "encoding" field.</summary>
+        </member>
+        <member name="P:Gnmi.SubscriptionList.Encoding">
+            <summary>
+            The encoding that the target should use within the Notifications generated
+            corresponding to the SubscriptionList.
+            </summary>
+        </member>
+        <member name="F:Gnmi.SubscriptionList.UpdatesOnlyFieldNumber">
+            <summary>Field number for the "updates_only" field.</summary>
+        </member>
+        <member name="P:Gnmi.SubscriptionList.UpdatesOnly">
+            <summary>
+            An optional field to specify that only updates to current state should be
+            sent to a client. If set, the initial state is not sent to the client but
+            rather only the sync message followed by any subsequent updates to the
+            current state. For ONCE and POLL modes, this causes the server to send only
+            the sync message (Sec. 3.5.2.3).
+            </summary>
+        </member>
+        <member name="T:Gnmi.SubscriptionList.Types">
+            <summary>Container for nested types declared in the SubscriptionList message type.</summary>
+        </member>
+        <member name="T:Gnmi.SubscriptionList.Types.Mode">
+            <summary>
+            Mode of the subscription.
+            </summary>
+        </member>
+        <member name="F:Gnmi.SubscriptionList.Types.Mode.Stream">
+            <summary>
+            Values streamed by the target (Sec. 3.5.1.5.2).
+            </summary>
+        </member>
+        <member name="F:Gnmi.SubscriptionList.Types.Mode.Once">
+            <summary>
+            Values sent once-off by the target (Sec. 3.5.1.5.1).
+            </summary>
+        </member>
+        <member name="F:Gnmi.SubscriptionList.Types.Mode.Poll">
+            <summary>
+            Values sent in response to a poll request (Sec. 3.5.1.5.3).
+            </summary>
+        </member>
+        <member name="T:Gnmi.Subscription">
+            <summary>
+            Subscription is a single request within a SubscriptionList. The path
+            specified is interpreted (along with the prefix) as the elements of the data
+            tree that the client is subscribing to. The mode determines how the target
+            should trigger updates to be sent.
+            Reference: gNMI Specification Section 3.5.1.3
+            </summary>
+        </member>
+        <member name="F:Gnmi.Subscription.PathFieldNumber">
+            <summary>Field number for the "path" field.</summary>
+        </member>
+        <member name="P:Gnmi.Subscription.Path">
+            <summary>
+            The data tree path.
+            </summary>
+        </member>
+        <member name="F:Gnmi.Subscription.ModeFieldNumber">
+            <summary>Field number for the "mode" field.</summary>
+        </member>
+        <member name="P:Gnmi.Subscription.Mode">
+            <summary>
+            Subscription mode to be used.
+            </summary>
+        </member>
+        <member name="F:Gnmi.Subscription.SampleIntervalFieldNumber">
+            <summary>Field number for the "sample_interval" field.</summary>
+        </member>
+        <member name="P:Gnmi.Subscription.SampleInterval">
+            <summary>
+            ns between samples in SAMPLE mode.
+            </summary>
+        </member>
+        <member name="F:Gnmi.Subscription.SuppressRedundantFieldNumber">
+            <summary>Field number for the "suppress_redundant" field.</summary>
+        </member>
+        <member name="P:Gnmi.Subscription.SuppressRedundant">
+            <summary>
+            Indicates whether values that have not changed should be sent in a SAMPLE
+            subscription.
+            </summary>
+        </member>
+        <member name="F:Gnmi.Subscription.HeartbeatIntervalFieldNumber">
+            <summary>Field number for the "heartbeat_interval" field.</summary>
+        </member>
+        <member name="P:Gnmi.Subscription.HeartbeatInterval">
+            <summary>
+            Specifies the maximum allowable silent period in nanoseconds when
+            suppress_redundant is in use. The target should send a value at least once
+            in the period specified.
+            </summary>
+        </member>
+        <member name="T:Gnmi.QOSMarking">
+            <summary>
+            QOSMarking specifies the DSCP value to be set on transmitted telemetry
+            updates from the target.
+            Reference: gNMI Specification Section 3.5.1.2
+            </summary>
+        </member>
+        <member name="F:Gnmi.QOSMarking.MarkingFieldNumber">
+            <summary>Field number for the "marking" field.</summary>
+        </member>
+        <member name="T:Gnmi.Alias">
+            <summary>
+            Alias specifies a data tree path, and an associated string which defines an
+            alias which is to be used for this path in the context of the RPC. The alias
+            is specified as a string which is prefixed with "#" to disambiguate it from
+            data tree element paths.
+            Reference: gNMI Specification Section 2.4.2
+            </summary>
+        </member>
+        <member name="F:Gnmi.Alias.PathFieldNumber">
+            <summary>Field number for the "path" field.</summary>
+        </member>
+        <member name="P:Gnmi.Alias.Path">
+            <summary>
+            The path to be aliased.
+            </summary>
+        </member>
+        <member name="F:Gnmi.Alias.Alias_FieldNumber">
+            <summary>Field number for the "alias" field.</summary>
+        </member>
+        <member name="P:Gnmi.Alias.Alias_">
+            <summary>
+            The alias value, a string prefixed by "#".
+            </summary>
+        </member>
+        <member name="T:Gnmi.AliasList">
+            <summary>
+            AliasList specifies a list of aliases. It is used in a SubscribeRequest for
+            a client to create a set of aliases that the target is to utilize.
+            Reference: gNMI Specification Section 3.5.1.6
+            </summary>
+        </member>
+        <member name="F:Gnmi.AliasList.AliasFieldNumber">
+            <summary>Field number for the "alias" field.</summary>
+        </member>
+        <member name="P:Gnmi.AliasList.Alias">
+            <summary>
+            The set of aliases to be created.
+            </summary>
+        </member>
+        <member name="T:Gnmi.SetRequest">
+            <summary>
+            SetRequest is sent from a client to the target to update values in the data
+            tree. Paths are either deleted by the client, or modified by means of being
+            updated, or replaced. Where a replace is used, unspecified values are
+            considered to be replaced, whereas when update is used the changes are
+            considered to be incremental. The set of changes that are specified within
+            a single SetRequest are considered to be a transaction.
+            Reference: gNMI Specification Section 3.4.1
+            </summary>
+        </member>
+        <member name="F:Gnmi.SetRequest.PrefixFieldNumber">
+            <summary>Field number for the "prefix" field.</summary>
+        </member>
+        <member name="P:Gnmi.SetRequest.Prefix">
+            <summary>
+            Prefix used for paths in the message.
+            </summary>
+        </member>
+        <member name="F:Gnmi.SetRequest.DeleteFieldNumber">
+            <summary>Field number for the "delete" field.</summary>
+        </member>
+        <member name="P:Gnmi.SetRequest.Delete">
+            <summary>
+            Paths to be deleted from the data tree.
+            </summary>
+        </member>
+        <member name="F:Gnmi.SetRequest.ReplaceFieldNumber">
+            <summary>Field number for the "replace" field.</summary>
+        </member>
+        <member name="P:Gnmi.SetRequest.Replace">
+            <summary>
+            Updates specifying elements to be replaced.
+            </summary>
+        </member>
+        <member name="F:Gnmi.SetRequest.UpdateFieldNumber">
+            <summary>Field number for the "update" field.</summary>
+        </member>
+        <member name="P:Gnmi.SetRequest.Update">
+            <summary>
+            Updates specifying elements to updated.
+            </summary>
+        </member>
+        <member name="F:Gnmi.SetRequest.ExtensionFieldNumber">
+            <summary>Field number for the "extension" field.</summary>
+        </member>
+        <member name="P:Gnmi.SetRequest.Extension">
+            <summary>
+            Extension messages associated with the SetRequest. See the
+            gNMI extension specification for further definition.
+            </summary>
+        </member>
+        <member name="T:Gnmi.SetResponse">
+            <summary>
+            SetResponse is the response to a SetRequest, sent from the target to the
+            client. It reports the result of the modifications to the data tree that were
+            specified by the client. Errors for this RPC should be reported using the
+            https://github.com/googleapis/googleapis/blob/master/google/rpc/status.proto
+            message in the RPC return. The gnmi.Error message can be used to add additional
+            details where required.
+            Reference: gNMI Specification Section 3.4.2
+            </summary>
+        </member>
+        <member name="F:Gnmi.SetResponse.PrefixFieldNumber">
+            <summary>Field number for the "prefix" field.</summary>
+        </member>
+        <member name="P:Gnmi.SetResponse.Prefix">
+            <summary>
+            Prefix used for paths.
+            </summary>
+        </member>
+        <member name="F:Gnmi.SetResponse.ResponseFieldNumber">
+            <summary>Field number for the "response" field.</summary>
+        </member>
+        <member name="P:Gnmi.SetResponse.Response">
+            <summary>
+            A set of responses specifying the result of the operations specified in
+            the SetRequest.
+            </summary>
+        </member>
+        <member name="F:Gnmi.SetResponse.MessageFieldNumber">
+            <summary>Field number for the "message" field.</summary>
+        </member>
+        <member name="P:Gnmi.SetResponse.Message">
+            <summary>
+            The overall status of the transaction.
+            </summary>
+        </member>
+        <member name="F:Gnmi.SetResponse.TimestampFieldNumber">
+            <summary>Field number for the "timestamp" field.</summary>
+        </member>
+        <member name="P:Gnmi.SetResponse.Timestamp">
+            <summary>
+            Timestamp of transaction (ns since epoch).
+            </summary>
+        </member>
+        <member name="F:Gnmi.SetResponse.ExtensionFieldNumber">
+            <summary>Field number for the "extension" field.</summary>
+        </member>
+        <member name="P:Gnmi.SetResponse.Extension">
+            <summary>
+            Extension messages associated with the SetResponse. See the
+            gNMI extension specification for further definition.
+            </summary>
+        </member>
+        <member name="T:Gnmi.UpdateResult">
+            <summary>
+            UpdateResult is used within the SetResponse message to communicate the
+            result of an operation specified within a SetRequest message.
+            Reference: gNMI Specification Section 3.4.2
+            </summary>
+        </member>
+        <member name="F:Gnmi.UpdateResult.TimestampFieldNumber">
+            <summary>Field number for the "timestamp" field.</summary>
+        </member>
+        <member name="P:Gnmi.UpdateResult.Timestamp">
+            <summary>
+            Deprecated timestamp for the UpdateResult, this field has been
+            replaced by the timestamp within the SetResponse message, since
+            all mutations effected by a set should be applied as a single
+            transaction.
+            </summary>
+        </member>
+        <member name="F:Gnmi.UpdateResult.PathFieldNumber">
+            <summary>Field number for the "path" field.</summary>
+        </member>
+        <member name="P:Gnmi.UpdateResult.Path">
+            <summary>
+            Path associated with the update.
+            </summary>
+        </member>
+        <member name="F:Gnmi.UpdateResult.MessageFieldNumber">
+            <summary>Field number for the "message" field.</summary>
+        </member>
+        <member name="P:Gnmi.UpdateResult.Message">
+            <summary>
+            Status of the update operation.
+            </summary>
+        </member>
+        <member name="F:Gnmi.UpdateResult.OpFieldNumber">
+            <summary>Field number for the "op" field.</summary>
+        </member>
+        <member name="P:Gnmi.UpdateResult.Op">
+            <summary>
+            Update operation type.
+            </summary>
+        </member>
+        <member name="T:Gnmi.UpdateResult.Types">
+            <summary>Container for nested types declared in the UpdateResult message type.</summary>
+        </member>
+        <member name="T:Gnmi.UpdateResult.Types.Operation">
+            <summary>
+            The operation that was associated with the Path specified.
+            </summary>
+        </member>
+        <member name="F:Gnmi.UpdateResult.Types.Operation.Delete">
+            <summary>
+            The result relates to a delete of Path.
+            </summary>
+        </member>
+        <member name="F:Gnmi.UpdateResult.Types.Operation.Replace">
+            <summary>
+            The result relates to a replace of Path.
+            </summary>
+        </member>
+        <member name="F:Gnmi.UpdateResult.Types.Operation.Update">
+            <summary>
+            The result relates to an update of Path.
+            </summary>
+        </member>
+        <member name="T:Gnmi.GetRequest">
+            <summary>
+            GetRequest is sent when a client initiates a Get RPC. It is used to specify
+            the set of data elements for which the target should return a snapshot of
+            data. The use_models field specifies the set of schema modules that are to
+            be used by the target - where use_models is not specified then the target
+            must use all schema models that it has.
+            Reference: gNMI Specification Section 3.3.1
+            </summary>
+        </member>
+        <member name="F:Gnmi.GetRequest.PrefixFieldNumber">
+            <summary>Field number for the "prefix" field.</summary>
+        </member>
+        <member name="P:Gnmi.GetRequest.Prefix">
+            <summary>
+            Prefix used for paths.
+            </summary>
+        </member>
+        <member name="F:Gnmi.GetRequest.PathFieldNumber">
+            <summary>Field number for the "path" field.</summary>
+        </member>
+        <member name="P:Gnmi.GetRequest.Path">
+            <summary>
+            Paths requested by the client.
+            </summary>
+        </member>
+        <member name="F:Gnmi.GetRequest.TypeFieldNumber">
+            <summary>Field number for the "type" field.</summary>
+        </member>
+        <member name="P:Gnmi.GetRequest.Type">
+            <summary>
+            The type of data being requested.
+            </summary>
+        </member>
+        <member name="F:Gnmi.GetRequest.EncodingFieldNumber">
+            <summary>Field number for the "encoding" field.</summary>
+        </member>
+        <member name="P:Gnmi.GetRequest.Encoding">
+            <summary>
+            Encoding to be used.
+            </summary>
+        </member>
+        <member name="F:Gnmi.GetRequest.UseModelsFieldNumber">
+            <summary>Field number for the "use_models" field.</summary>
+        </member>
+        <member name="P:Gnmi.GetRequest.UseModels">
+            <summary>
+            The schema models to be used.
+            </summary>
+        </member>
+        <member name="F:Gnmi.GetRequest.ExtensionFieldNumber">
+            <summary>Field number for the "extension" field.</summary>
+        </member>
+        <member name="P:Gnmi.GetRequest.Extension">
+            <summary>
+            Extension messages associated with the GetRequest. See the
+            gNMI extension specification for further definition.
+            </summary>
+        </member>
+        <member name="T:Gnmi.GetRequest.Types">
+            <summary>Container for nested types declared in the GetRequest message type.</summary>
+        </member>
+        <member name="T:Gnmi.GetRequest.Types.DataType">
+            <summary>
+            Type of elements within the data tree.
+            </summary>
+        </member>
+        <member name="F:Gnmi.GetRequest.Types.DataType.All">
+            <summary>
+            All data elements.
+            </summary>
+        </member>
+        <member name="F:Gnmi.GetRequest.Types.DataType.Config">
+            <summary>
+            Config (rw) only elements.
+            </summary>
+        </member>
+        <member name="F:Gnmi.GetRequest.Types.DataType.State">
+            <summary>
+            State (ro) only elements.
+            </summary>
+        </member>
+        <member name="F:Gnmi.GetRequest.Types.DataType.Operational">
+            <summary>
+            Data elements marked in the schema as operational. This refers to data
+            elements whose value relates to the state of processes or interactions
+            running on the device.
+            </summary>
+        </member>
+        <member name="T:Gnmi.GetResponse">
+            <summary>
+            GetResponse is used by the target to respond to a GetRequest from a client.
+            The set of Notifications corresponds to the data values that are requested
+            by the client in the GetRequest.
+            Reference: gNMI Specification Section 3.3.2
+            </summary>
+        </member>
+        <member name="F:Gnmi.GetResponse.NotificationFieldNumber">
+            <summary>Field number for the "notification" field.</summary>
+        </member>
+        <member name="P:Gnmi.GetResponse.Notification">
+            <summary>
+            Data values.
+            </summary>
+        </member>
+        <member name="F:Gnmi.GetResponse.ErrorFieldNumber">
+            <summary>Field number for the "error" field.</summary>
+        </member>
+        <member name="P:Gnmi.GetResponse.Error">
+            <summary>
+            Errors that occurred in the Get.
+            </summary>
+        </member>
+        <member name="F:Gnmi.GetResponse.ExtensionFieldNumber">
+            <summary>Field number for the "extension" field.</summary>
+        </member>
+        <member name="P:Gnmi.GetResponse.Extension">
+            <summary>
+            Extension messages associated with the GetResponse. See the
+            gNMI extension specification for further definition.
+            </summary>
+        </member>
+        <member name="T:Gnmi.CapabilityRequest">
+            <summary>
+            CapabilityRequest is sent by the client in the Capabilities RPC to request
+            that the target reports its capabilities.
+            Reference: gNMI Specification Section 3.2.1
+            </summary>
+        </member>
+        <member name="F:Gnmi.CapabilityRequest.ExtensionFieldNumber">
+            <summary>Field number for the "extension" field.</summary>
+        </member>
+        <member name="P:Gnmi.CapabilityRequest.Extension">
+            <summary>
+            Extension messages associated with the CapabilityRequest. See the
+            gNMI extension specification for further definition.
+            </summary>
+        </member>
+        <member name="T:Gnmi.CapabilityResponse">
+            <summary>
+            CapabilityResponse is used by the target to report its capabilities to the
+            client within the Capabilities RPC.
+            Reference: gNMI Specification Section 3.2.2
+            </summary>
+        </member>
+        <member name="F:Gnmi.CapabilityResponse.SupportedModelsFieldNumber">
+            <summary>Field number for the "supported_models" field.</summary>
+        </member>
+        <member name="P:Gnmi.CapabilityResponse.SupportedModels">
+            <summary>
+            Supported schema models.
+            </summary>
+        </member>
+        <member name="F:Gnmi.CapabilityResponse.SupportedEncodingsFieldNumber">
+            <summary>Field number for the "supported_encodings" field.</summary>
+        </member>
+        <member name="P:Gnmi.CapabilityResponse.SupportedEncodings">
+            <summary>
+            Supported encodings.
+            </summary>
+        </member>
+        <member name="F:Gnmi.CapabilityResponse.GNMIVersionFieldNumber">
+            <summary>Field number for the "gNMI_version" field.</summary>
+        </member>
+        <member name="P:Gnmi.CapabilityResponse.GNMIVersion">
+            <summary>
+            Supported gNMI version.
+            </summary>
+        </member>
+        <member name="F:Gnmi.CapabilityResponse.ExtensionFieldNumber">
+            <summary>Field number for the "extension" field.</summary>
+        </member>
+        <member name="P:Gnmi.CapabilityResponse.Extension">
+            <summary>
+            Extension messages associated with the CapabilityResponse. See the
+            gNMI extension specification for further definition.
+            </summary>
+        </member>
+        <member name="T:Gnmi.ModelData">
+            <summary>
+            ModelData is used to describe a set of schema modules. It can be used in a
+            CapabilityResponse where a target reports the set of modules that it
+            supports, and within the SubscribeRequest and GetRequest messages to specify
+            the set of models from which data tree elements should be reported.
+            Reference: gNMI Specification Section 3.2.3
+            </summary>
+        </member>
+        <member name="F:Gnmi.ModelData.NameFieldNumber">
+            <summary>Field number for the "name" field.</summary>
+        </member>
+        <member name="P:Gnmi.ModelData.Name">
+            <summary>
+            Name of the model.
+            </summary>
+        </member>
+        <member name="F:Gnmi.ModelData.OrganizationFieldNumber">
+            <summary>Field number for the "organization" field.</summary>
+        </member>
+        <member name="P:Gnmi.ModelData.Organization">
+            <summary>
+            Organization publishing the model.
+            </summary>
+        </member>
+        <member name="F:Gnmi.ModelData.VersionFieldNumber">
+            <summary>Field number for the "version" field.</summary>
+        </member>
+        <member name="P:Gnmi.ModelData.Version">
+            <summary>
+            Semantic version of the model.
+            </summary>
+        </member>
+        <member name="P:Gnmi.gNMI.Descriptor">
+            <summary>Service descriptor</summary>
+        </member>
+        <member name="T:Gnmi.gNMI.gNMIClient">
+            <summary>Client for gNMI</summary>
+        </member>
+        <member name="M:Gnmi.gNMI.gNMIClient.#ctor(Grpc.Core.ChannelBase)">
+            <summary>Creates a new client for gNMI</summary>
+            <param name="channel">The channel to use to make remote calls.</param>
+        </member>
+        <member name="M:Gnmi.gNMI.gNMIClient.#ctor(Grpc.Core.CallInvoker)">
+            <summary>Creates a new client for gNMI that uses a custom <c>CallInvoker</c>.</summary>
+            <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+        </member>
+        <member name="M:Gnmi.gNMI.gNMIClient.#ctor">
+            <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+        </member>
+        <member name="M:Gnmi.gNMI.gNMIClient.#ctor(Grpc.Core.ClientBase.ClientBaseConfiguration)">
+            <summary>Protected constructor to allow creation of configured clients.</summary>
+            <param name="configuration">The client configuration.</param>
+        </member>
+        <member name="M:Gnmi.gNMI.gNMIClient.Capabilities(Gnmi.CapabilityRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            Capabilities allows the client to retrieve the set of capabilities that
+            is supported by the target. This allows the target to validate the
+            service version that is implemented and retrieve the set of models that
+            the target supports. The models can then be specified in subsequent RPCs
+            to restrict the set of data that is utilized.
+            Reference: gNMI Specification Section 3.2
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:Gnmi.gNMI.gNMIClient.Capabilities(Gnmi.CapabilityRequest,Grpc.Core.CallOptions)">
+            <summary>
+            Capabilities allows the client to retrieve the set of capabilities that
+            is supported by the target. This allows the target to validate the
+            service version that is implemented and retrieve the set of models that
+            the target supports. The models can then be specified in subsequent RPCs
+            to restrict the set of data that is utilized.
+            Reference: gNMI Specification Section 3.2
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="options">The options for the call.</param>
+            <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:Gnmi.gNMI.gNMIClient.CapabilitiesAsync(Gnmi.CapabilityRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            Capabilities allows the client to retrieve the set of capabilities that
+            is supported by the target. This allows the target to validate the
+            service version that is implemented and retrieve the set of models that
+            the target supports. The models can then be specified in subsequent RPCs
+            to restrict the set of data that is utilized.
+            Reference: gNMI Specification Section 3.2
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:Gnmi.gNMI.gNMIClient.CapabilitiesAsync(Gnmi.CapabilityRequest,Grpc.Core.CallOptions)">
+            <summary>
+            Capabilities allows the client to retrieve the set of capabilities that
+            is supported by the target. This allows the target to validate the
+            service version that is implemented and retrieve the set of models that
+            the target supports. The models can then be specified in subsequent RPCs
+            to restrict the set of data that is utilized.
+            Reference: gNMI Specification Section 3.2
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="options">The options for the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:Gnmi.gNMI.gNMIClient.Get(Gnmi.GetRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            Retrieve a snapshot of data from the target. A Get RPC requests that the
+            target snapshots a subset of the data tree as specified by the paths
+            included in the message and serializes this to be returned to the
+            client using the specified encoding.
+            Reference: gNMI Specification Section 3.3
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:Gnmi.gNMI.gNMIClient.Get(Gnmi.GetRequest,Grpc.Core.CallOptions)">
+            <summary>
+            Retrieve a snapshot of data from the target. A Get RPC requests that the
+            target snapshots a subset of the data tree as specified by the paths
+            included in the message and serializes this to be returned to the
+            client using the specified encoding.
+            Reference: gNMI Specification Section 3.3
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="options">The options for the call.</param>
+            <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:Gnmi.gNMI.gNMIClient.GetAsync(Gnmi.GetRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            Retrieve a snapshot of data from the target. A Get RPC requests that the
+            target snapshots a subset of the data tree as specified by the paths
+            included in the message and serializes this to be returned to the
+            client using the specified encoding.
+            Reference: gNMI Specification Section 3.3
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:Gnmi.gNMI.gNMIClient.GetAsync(Gnmi.GetRequest,Grpc.Core.CallOptions)">
+            <summary>
+            Retrieve a snapshot of data from the target. A Get RPC requests that the
+            target snapshots a subset of the data tree as specified by the paths
+            included in the message and serializes this to be returned to the
+            client using the specified encoding.
+            Reference: gNMI Specification Section 3.3
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="options">The options for the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:Gnmi.gNMI.gNMIClient.Set(Gnmi.SetRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            Set allows the client to modify the state of data on the target. The
+            paths to modified along with the new values that the client wishes
+            to set the value to.
+            Reference: gNMI Specification Section 3.4
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:Gnmi.gNMI.gNMIClient.Set(Gnmi.SetRequest,Grpc.Core.CallOptions)">
+            <summary>
+            Set allows the client to modify the state of data on the target. The
+            paths to modified along with the new values that the client wishes
+            to set the value to.
+            Reference: gNMI Specification Section 3.4
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="options">The options for the call.</param>
+            <returns>The response received from the server.</returns>
+        </member>
+        <member name="M:Gnmi.gNMI.gNMIClient.SetAsync(Gnmi.SetRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            Set allows the client to modify the state of data on the target. The
+            paths to modified along with the new values that the client wishes
+            to set the value to.
+            Reference: gNMI Specification Section 3.4
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:Gnmi.gNMI.gNMIClient.SetAsync(Gnmi.SetRequest,Grpc.Core.CallOptions)">
+            <summary>
+            Set allows the client to modify the state of data on the target. The
+            paths to modified along with the new values that the client wishes
+            to set the value to.
+            Reference: gNMI Specification Section 3.4
+            </summary>
+            <param name="request">The request to send to the server.</param>
+            <param name="options">The options for the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:Gnmi.gNMI.gNMIClient.Subscribe(Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">
+            <summary>
+            Subscribe allows a client to request the target to send it values
+            of particular paths within the data tree. These values may be streamed
+            at a particular cadence (STREAM), sent one off on a long-lived channel
+            (POLL), or sent as a one-off retrieval (ONCE).
+            Reference: gNMI Specification Section 3.5
+            </summary>
+            <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+            <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+            <param name="cancellationToken">An optional token for canceling the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:Gnmi.gNMI.gNMIClient.Subscribe(Grpc.Core.CallOptions)">
+            <summary>
+            Subscribe allows a client to request the target to send it values
+            of particular paths within the data tree. These values may be streamed
+            at a particular cadence (STREAM), sent one off on a long-lived channel
+            (POLL), or sent as a one-off retrieval (ONCE).
+            Reference: gNMI Specification Section 3.5
+            </summary>
+            <param name="options">The options for the call.</param>
+            <returns>The call object.</returns>
+        </member>
+        <member name="M:Gnmi.gNMI.gNMIClient.NewInstance(Grpc.Core.ClientBase.ClientBaseConfiguration)">
+            <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+        </member>
+        <member name="T:GnmiExt.GnmiExtReflection">
+            <summary>Holder for reflection information generated from proto/gnmi_ext.proto</summary>
+        </member>
+        <member name="P:GnmiExt.GnmiExtReflection.Descriptor">
+            <summary>File descriptor for proto/gnmi_ext.proto</summary>
+        </member>
+        <member name="T:GnmiExt.ExtensionID">
+            <summary>
+            RegisteredExtension is an enumeration acting as a registry for extensions
+            defined by external sources.
+            </summary>
+        </member>
+        <member name="F:GnmiExt.ExtensionID.EidUnset">
+            <summary>
+            New extensions are to be defined within this enumeration - their definition
+            MUST link to a reference describing their implementation.
+            </summary>
+        </member>
+        <member name="F:GnmiExt.ExtensionID.EidExperimental">
+            <summary>
+            An experimental extension that may be used during prototyping of a new
+            extension.
+            </summary>
+        </member>
+        <member name="T:GnmiExt.Extension">
+            <summary>
+            The Extension message contains a single gNMI extension.
+            </summary>
+        </member>
+        <member name="F:GnmiExt.Extension.RegisteredExtFieldNumber">
+            <summary>Field number for the "registered_ext" field.</summary>
+        </member>
+        <member name="P:GnmiExt.Extension.RegisteredExt">
+            <summary>
+            A registered extension.
+            </summary>
+        </member>
+        <member name="F:GnmiExt.Extension.MasterArbitrationFieldNumber">
+            <summary>Field number for the "master_arbitration" field.</summary>
+        </member>
+        <member name="P:GnmiExt.Extension.MasterArbitration">
+            <summary>
+            Well known extensions.
+            </summary>
+        </member>
+        <member name="F:GnmiExt.Extension.HistoryFieldNumber">
+            <summary>Field number for the "history" field.</summary>
+        </member>
+        <member name="P:GnmiExt.Extension.History">
+            <summary>
+            History extension.
+            </summary>
+        </member>
+        <member name="T:GnmiExt.Extension.ExtOneofCase">
+            <summary>Enum of possible cases for the "ext" oneof.</summary>
+        </member>
+        <member name="T:GnmiExt.RegisteredExtension">
+            <summary>
+            The RegisteredExtension message defines an extension which is defined outside
+            of this file.
+            </summary>
+        </member>
+        <member name="F:GnmiExt.RegisteredExtension.IdFieldNumber">
+            <summary>Field number for the "id" field.</summary>
+        </member>
+        <member name="P:GnmiExt.RegisteredExtension.Id">
+            <summary>
+            The unique ID assigned to this extension.
+            </summary>
+        </member>
+        <member name="F:GnmiExt.RegisteredExtension.MsgFieldNumber">
+            <summary>Field number for the "msg" field.</summary>
+        </member>
+        <member name="P:GnmiExt.RegisteredExtension.Msg">
+            <summary>
+            The binary-marshalled protobuf extension payload.
+            </summary>
+        </member>
+        <member name="T:GnmiExt.MasterArbitration">
+            <summary>
+            MasterArbitration is used to select the master among multiple gNMI clients
+            with the same Roles. The client with the largest election_id is honored as
+            the master.
+            The document about gNMI master arbitration can be found at
+            https://github.com/openconfig/reference/blob/master/rpc/gnmi/gnmi-master-arbitration.md
+            </summary>
+        </member>
+        <member name="F:GnmiExt.MasterArbitration.RoleFieldNumber">
+            <summary>Field number for the "role" field.</summary>
+        </member>
+        <member name="F:GnmiExt.MasterArbitration.ElectionIdFieldNumber">
+            <summary>Field number for the "election_id" field.</summary>
+        </member>
+        <member name="T:GnmiExt.Uint128">
+            <summary>
+            Representation of unsigned 128-bit integer.
+            </summary>
+        </member>
+        <member name="F:GnmiExt.Uint128.HighFieldNumber">
+            <summary>Field number for the "high" field.</summary>
+        </member>
+        <member name="F:GnmiExt.Uint128.LowFieldNumber">
+            <summary>Field number for the "low" field.</summary>
+        </member>
+        <member name="T:GnmiExt.Role">
+            <summary>
+            There can be one master for each role. The role is identified by its id.
+            </summary>
+        </member>
+        <member name="F:GnmiExt.Role.IdFieldNumber">
+            <summary>Field number for the "id" field.</summary>
+        </member>
+        <member name="P:GnmiExt.Role.Id">
+            <summary>
+            More fields can be added if needed, for example, to specify what paths the
+            role can read/write.
+            </summary>
+        </member>
+        <member name="T:GnmiExt.History">
+            <summary>
+            The History extension allows clients to request historical data. Its
+            spec can be found at
+            https://github.com/openconfig/reference/blob/master/rpc/gnmi/gnmi-history.md
+            </summary>
+        </member>
+        <member name="F:GnmiExt.History.SnapshotTimeFieldNumber">
+            <summary>Field number for the "snapshot_time" field.</summary>
+        </member>
+        <member name="P:GnmiExt.History.SnapshotTime">
+            <summary>
+            Nanoseconds since the epoch
+            </summary>
+        </member>
+        <member name="F:GnmiExt.History.RangeFieldNumber">
+            <summary>Field number for the "range" field.</summary>
+        </member>
+        <member name="T:GnmiExt.History.RequestOneofCase">
+            <summary>Enum of possible cases for the "request" oneof.</summary>
+        </member>
+        <member name="F:GnmiExt.TimeRange.StartFieldNumber">
+            <summary>Field number for the "start" field.</summary>
+        </member>
+        <member name="P:GnmiExt.TimeRange.Start">
+            <summary>
+            Nanoseconds since the epoch
+            </summary>
+        </member>
+        <member name="F:GnmiExt.TimeRange.EndFieldNumber">
+            <summary>Field number for the "end" field.</summary>
+        </member>
+        <member name="P:GnmiExt.TimeRange.End">
+            <summary>
+            Nanoseconds since the epoch
+            </summary>
+        </member>
+    </members>
+</doc>

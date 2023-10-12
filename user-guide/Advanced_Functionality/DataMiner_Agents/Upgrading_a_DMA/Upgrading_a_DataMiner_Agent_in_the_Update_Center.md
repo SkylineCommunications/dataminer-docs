@@ -62,6 +62,9 @@ To do so:
 
      - *Upgrade backup Agent first, switch over, upgrade main, then switch back again* (legacy)
 
+     > [!NOTE]
+     > To specify the default Failover policy, in DataMiner Cube, go to *System Center* > *System Settings* > *upgrade* > *Failover options*. We highly recommend that you set this to *Upgrade main and backup Agent simultaneously*.
+
 1. Click *Upgrade* to start the upgrade or update procedure.
 
     Alternatively, you can also click *Upload only*, if you wish to only upload the package for now and execute the upgrade or update later.

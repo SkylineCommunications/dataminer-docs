@@ -89,7 +89,7 @@ The pane consists of a tree view with several fixed nodes:
 - **DASHBOARDS**: Displays the legacy *Dashboards* app.
 
   > [!NOTE]
-  > From DataMiner 10.2.0/10.1.12 onwards, the legacy Dashboards app is no longer available by default in new DataMiner installations. To enable it, set the soft-launch option *LegacyReportsAndDashboards* to true. See [Soft-launch options](xref:SoftLaunchOptions).
+  > From DataMiner 10.2.0/10.1.12 onwards, the legacy Dashboards app can be disabled using the soft-launch option *LegacyReportsAndDashboards*. See [Soft-launch options](xref:SoftLaunchOptions).
 
 - **NOTES**: Allows users to add short notes to DataMiner items:
 
@@ -102,7 +102,7 @@ The pane consists of a tree view with several fixed nodes:
 - **ANNOTATIONS**: Displays more extensive comments on DataMiner items. With the pencil icon on this page, you can open an HTML editor that allows you to add text, hyperlinks, pictures, etc. to the annotations. There is also an icon that can be used to print the annotations, and an icon to refresh the annotations page.
 
   > [!NOTE]
-  > From DataMiner 10.2.0/10.1.12 onwards, annotations are no longer available by default in new DataMiner installations. To enable them, set the soft-launch option *LegacyAnnotations* to true. See [Soft-launch options](xref:SoftLaunchOptions).
+  > From DataMiner 10.2.0/10.1.12 onwards, annotations can be disabled using the soft-launch option *LegacyAnnotations*. See [Soft-launch options](xref:SoftLaunchOptions).
 
 Depending on the type of cards, more nodes may be available, e.g. *AGGREGATION* on view cards.
 
@@ -228,3 +228,30 @@ To unpin the card again, right-click the card header bar and clear the selection
 >
 > - On a pinned card, no close button is available, so that you cannot close the card by accident. However, you can still close the card by selecting *Close card* in the header bar context menu.
 > - If you use the tab layout, an additional option is available in the header bar context menu: *Use small pinned tabs*. If you select this option, pinned cards will have smaller tabs that only display the item’s icon.
+> - This feature cannot be combined with marking cards as non-closable or designating a Master card. When you select *Pin this card* in the hamburger menu, the *Hide close button* and *Set as Master card* options (Available from 10.3.9/10.4.0) will be disabled.
+
+## Marking cards as non-closable
+
+From DataMiner 10.3.9/10.4.0 onwards, if the [card layout](#changing-the-card-layout) is set to "Proportional", it is possible to hide the close button in the top-right corner of a card to prevent it from being closed.
+
+To do so, click the hamburger button in the top-left corner and select *Hide close button*.
+
+To restore the close button, click the hamburger button and clear the selection from *Hide close button*.
+
+> [!NOTE]
+> This feature cannot be combined with pinning. When you select *Hide close button* in the hamburger menu, the *Pin this card* option will be disabled.
+
+## Selecting a Master card
+
+From DataMiner 10.3.9/10.4.0 onwards, if the [card layout](#changing-the-card-layout) is set to "Proportional", it is possible to promote one card to Master card.
+
+To do so, click the hamburger button in the top-left corner and select *Set as Master card*.
+
+Once a Master card is chosen, all new cards open within it, regardless of the number of displayed cards.
+
+To deselect a Master card, click the hamburger button and clear the selection from *Set as Master card*.
+
+> [!NOTE]
+>
+> - Only one card can be Master card at a time.
+> - This feature cannot be combined with pinning. When you select *Set as Master card* in the hamburger menu, the *Pin this card* option will be disabled.

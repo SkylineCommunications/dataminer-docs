@@ -5,7 +5,7 @@ uid: Adding_a_service
 # Adding a service
 
 > [!TIP]
-> See also: <https://community.dataminer.services/video/ruis-rapid-recap-creating-a-service/>
+> See also: [Rui’s Rapid Recap – Creating a service](https://community.dataminer.services/video/ruis-rapid-recap-creating-a-service/) ![Video](~/user-guide/images/video_Duo.png)
 
 1. Right-click in the Surveyor and select *New \> Service* to add a new service.
 
@@ -64,7 +64,7 @@ uid: Adding_a_service
 
            > [!NOTE]
            >
-           > - You can also quickly change the selected template by clicking the following button to the right of the field: ![App icon](~/user-guide/images/Open_protocols_app_icon.png)<br>This will temporarily open the Protocol & Templates app, where you can make the necessary changes. See [Configuring alarm templates](xref:Configuring_alarm_templates) and [Configuring trend templates](xref:Configuring_trend_templates).
+           > - You can also quickly change the selected template by clicking the following button to the right of the field: ![App icon](~/user-guide/images/Open_protocols_app_icon.png)<br>This will temporarily open the Protocol & Templates app, where you can make the necessary changes. See [Configuring alarm thresholds](xref:Configuring_normal_alarm_thresholds) and [Configuring trend templates](xref:Configuring_trend_templates).
            > - A service that has been created using a service protocol is called an “enhanced service”.
 
 1. Click the *Next* button in the lower right corner to go to the *parameters* page.

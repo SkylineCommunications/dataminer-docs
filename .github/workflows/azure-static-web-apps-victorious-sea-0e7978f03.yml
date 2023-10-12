@@ -17,32 +17,27 @@ jobs:
       - uses: actions/checkout@v3
         with:
           submodules: true
-      - name: install DocFX
-        run: |
-          dotnet tool update -g docfx
+      - name: Install DocFX
+        run: dotnet tool update -g docfx
         env:
           CI: true
       - name: Restore NuGet
-        run: |
-          dotnet restore "src/Base Class Library"
-          dotnet restore "build"
+        run: dotnet restore "src/NuGetPackages"
+      - name: Build
+        run: dotnet build "src/NuGetPackages" --configuration Release
       - name: Build Documentation
         id: build-documentation
-        run: dotnet run --project build | Tee-Object -FilePath log.txt
-        shell: powershell
-      - name: verify build
         run: |
-          with open('log.txt', 'r', encoding='utf-16') as f:
-            buildLog = f.read()
-            if not "Build succeeded" in buildLog or not "0 warning(s)" in buildLog:
-              print('Warnings detected. See output previous step for details.')
-              exit(1)
-        shell: python
+          docfx metadata
+          docfx build --warningsAsErrors
+        shell: powershell
+      - name: Zip artifact for deployment
+        run: Compress-Archive -Path _site/* -DestinationPath .\_site.zip
       - name: Publish results
         uses: actions/upload-artifact@v3
         with:
-          name: _site
-          path: _site/
+          name: release
+          path: _site.zip
           
   deploy_job:
     if: (github.event_name == 'push' && github.repository == 'SkylineCommunications/dataminer-docs')
@@ -52,8 +47,11 @@ jobs:
     steps:
       - uses: actions/download-artifact@v3
         with:
-          name: _site
-          path: _site 
+          name: release
+          path: .
+      - name: Unzip artifact for deployment
+        run: Expand-Archive -Path _site.zip -DestinationPath ./_site
+        shell: pwsh
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
@@ -67,8 +65,7 @@ jobs:
           api_location: "" # Api source code path - optional
           output_location: "" # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
-  
-  
+    
   deploy_job_Storage_Account:
     if: (github.event_name == 'push' && github.repository == 'SkylineCommunications/dataminer-docs')
     runs-on: ubuntu-latest
@@ -77,8 +74,11 @@ jobs:
     steps:
       - uses: actions/download-artifact@v3
         with:
-          name: _site
-          path: _site
+          name: release
+          path: .
+      - name: Unzip artifact for deployment
+        run: Expand-Archive -Path _site.zip -DestinationPath ./_site
+        shell: pwsh
       - name: Upload the new files
         uses: bacongobbler/azure-blob-storage-upload@main
         with:

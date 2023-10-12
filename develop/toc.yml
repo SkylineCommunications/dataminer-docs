@@ -11,6 +11,9 @@
       items:
       - name: Metadata
         topicUid: Metadata
+        items:
+        - name: Protocol version semantics
+          topicUid: ProtocolVersionSemantics
       - name: Logic
         topicUid: Logic
         items:
@@ -226,9 +229,12 @@
           topicUid: UIComponentsTableSettingRowTextColor
         - name: Configuring buttons to open DataMiner objects from table cells
           topicUid: UIComponentsTableRowButtons
+        - name: Exercise
+          topicUid: UIComponentsTableExercise
       - name: Custom table context menu
         topicUid: UIComponentsCustomTableContextMenu
       - name: Matrix
+        topicUid: UIComponentsMatrix
         items:
           - name: Standard matrix
             topicUid: UIComponentsMatrix
@@ -301,8 +307,6 @@
           topicUid: ConnectionsSnmpAlteringATableCell
         - name: Traps
           topicUid: ConnectionsSnmpTraps
-        - name: Ping groups
-          topicUid: ConnectionsSnmpPingGroups
         - name: Bitrate calculations
           topicUid: ConnectionsSnmpBitRateCalculations
         - name: Protocol inner workings
@@ -322,8 +326,6 @@
           topicUid: ConnectionsSerialBreakSignal
         - name: Displaying bytes as numbers
           topicUid: ConnectionsSerialDisplayingBytesAsNumbers
-        - name: Ping pair
-          topicUid: ConnectionsSerialPingPair
         - name: Serially polling different devices from a single element
           topicUid: ConnectionsSerialSeriallyPollingDevices
         - name: Serial single
@@ -370,8 +372,6 @@
           topicUid: ConnectionsHttpParsingHtml
         - name: Parsing JSON
           topicUid: ConnectionsHttpParsingJson
-        - name: Ping group
-          topicUid: ConnectionsHttpPingGroup
         - name: Examples
           topicUid: ConnectionsHttpExamples
       - name: WebSockets
@@ -391,14 +391,14 @@
           topicUid: ConnectionsWebSocketsUseCases
           items:
           - name: Normal WebSocket connection
-            topicUID: ConnectionsWebSocketsUseCase1
+            topicUid: ConnectionsWebSocketsUseCase1
           - name: WebSocket connection with dynamic IP
-            topicUID: ConnectionsWebSocketsUseCase2
+            topicUid: ConnectionsWebSocketsUseCase2
           - name: WebSocket connection with custom handshake
-            topicUID: ConnectionsWebSocketsUseCase3
+            topicUid: ConnectionsWebSocketsUseCase3
           - name: WebSocket connection with custom handshake and dynamic IP
-            topicUID: ConnectionsWebSocketsUseCase4
-      - name: Ping group
+            topicUid: ConnectionsWebSocketsUseCase4
+      - name: Slow poll mode ping group
         topicUid: ConnectionsPingGroup
       - name: Service
         topicUid: ConnectionsService
@@ -543,73 +543,73 @@
     - name: Questions & Answers
       topicUid: QuestionsAndAnswers
     - name: How-tos
-      topicUID: How_to_aggregate_alarm_severities
+      topicUid: How_to_aggregate_alarm_severities
       items:
       - name: How to aggregate alarm severities
-        topicUID: How_to_aggregate_alarm_severities
+        topicUid: How_to_aggregate_alarm_severities
       - name: How to configure multi-threaded timers
-        topicUID: How_to_configure_multi_threaded_timers
+        topicUid: How_to_configure_multi_threaded_timers
       - name: How to create an HTTP connector (CoinMarketCap use case)
-        topicUID: How_to_create_an_HTTP_connector_CoinMarketCap_use_case
+        topicUid: How_to_create_an_HTTP_connector_CoinMarketCap_use_case
       - name: How to define serial and smart-serial responses in one and the same protocol
-        topicUID: How_to_define_serial_and_smart_serial_responses_in_one_and_the_same_protocol
+        topicUid: How_to_define_serial_and_smart_serial_responses_in_one_and_the_same_protocol
       - name: How to handle XML and JSON data in QActions
-        topicUID: How_to_handle_XML_and_JSON_data_in_QActions
+        topicUid: How_to_handle_XML_and_JSON_data_in_QActions
       - name: How to implement the Subtable feature
-        topicUID: How_to_implement_the_subtable_feature
+        topicUid: How_to_implement_the_subtable_feature
       - name: How to integrate RabbitMQ with DataMiner
-        topicUID: How_to_integrate_RabbitMQ_with_DataMiner
+        topicUid: How_to_integrate_RabbitMQ_with_DataMiner
       - name: How to integrate the HTTP Sessions Table in a connector
-        topicUID: How_to_integrate_the_HTTP_sessions_table_in_a_connector
+        topicUid: How_to_integrate_the_HTTP_sessions_table_in_a_connector
       - name: How to retrieve protocol pending calls
-        topicUID: How_to_retrieve_protocol_pending_calls
+        topicUid: How_to_retrieve_protocol_pending_calls
       - name: How to set up an SSH connection within a protocol
-        topicUID: How_to_set_up_an_SSH_connection_within_a_protocol
+        topicUid: How_to_set_up_an_SSH_connection_within_a_protocol
       - name: How to use history sets on a protocol parameter
-        topicUID: How_to_use_history_sets_on_a_protocol_parameter
+        topicUid: How_to_use_history_sets_on_a_protocol_parameter
       - name: How to use multiple protocol threads to split communication and parsing
-        topicUID: How_to_use_multiple_protocol_threads_to_split_communication_and_parsing
+        topicUid: How_to_use_multiple_protocol_threads_to_split_communication_and_parsing
       - name: How to use 'on each' in a protocol trigger
-        topicUID: How_to_use_on_each_in_a_protocol_trigger
+        topicUid: How_to_use_on_each_in_a_protocol_trigger
       - name: How to use the element log in connector integrations
-        topicUID: How_to_use_the_element_log_in_connector_integrations
+        topicUid: How_to_use_the_element_log_in_connector_integrations
     - name: Troubleshooting
-      topicUID: Investigating_a_protocol_thread_RTE
+      topicUid: Investigating_a_protocol_thread_RTE
       items:
       - name: Investigating a protocol thread RTE
-        topicUID: Investigating_a_protocol_thread_RTE
+        topicUid: Investigating_a_protocol_thread_RTE
       - name: Why is serial data not visible in DataMiner?
-        topicUID: Why_is_serial_data_not_visible_in_DataMiner
+        topicUid: Why_is_serial_data_not_visible_in_DataMiner
       - name: QAction exceptions
-        topicUID: QAction_exceptions
+        topicUid: QAction_exceptions
         items:
         - name: System.NullReferenceException
-          topicUID: System_NullReferenceException
+          topicUid: System_NullReferenceException
         - name: System.IndexOutOfRangeException
-          topicUID: System_IndexOutOfRangeException
+          topicUid: System_IndexOutOfRangeException
         - name: System.FormatException
-          topicUID: System_FormatException
+          topicUid: System_FormatException
         - name: System.Collections.Generic.KeyNotFoundException
-          topicUID: System_Collections_Generic_KeyNotFoundException
+          topicUid: System_Collections_Generic_KeyNotFoundException
         - name: Identifying the source of an exception
-          topicUID: Identifying_the_source_of_an_exception
+          topicUid: Identifying_the_source_of_an_exception
       - name: Use cases
-        topicUID: Debugging_connectors_Element_connections
+        topicUid: Debugging_connectors_Element_connections
         items:
         - name: Debugging connectors - element connections
-          topicUID: Debugging_connectors_Element_connections
+          topicUid: Debugging_connectors_Element_connections
         - name: Debugging connectors - RTE caused by non-poll group in timer
-          topicUID: Debugging_connectors_RTE_caused_by_non-poll_group_in_timer
+          topicUid: Debugging_connectors_RTE_caused_by_non-poll_group_in_timer
         - name: Debugging connectors - seeing through the smoke
-          topicUID: Debugging_connectors_seeing_through_the_smoke
+          topicUid: Debugging_connectors_seeing_through_the_smoke
         - name: Debugging connectors - serial communication returning command echoes
-          topicUID: Debugging_connectors_serial_communication_returning_command_echoes
+          topicUid: Debugging_connectors_serial_communication_returning_command_echoes
         - name: Debugging connectors - tracing the stack
-          topicUID: Debugging_connectors_tracing_the_stack
+          topicUid: Debugging_connectors_tracing_the_stack
         - name: Investigating slow device control using dotTrace
-          topicUID: Investigating_slow_device_control_using_dotTrace
+          topicUid: Investigating_slow_device_control_using_dotTrace
         - name: Protocol thread run-time errors - use cases
-          topicUID: Protocol_thread_run_time_errors_use_cases
+          topicUid: Protocol_thread_run_time_errors_use_cases
   - name: Automation scripts
     topicUid: AutomationDevGuideIndex
     items:
@@ -665,9 +665,9 @@
     - name: How-tos
       items:
       - name: How to make your Automation scripts debug ready
-        topicUID: How_to_make_your_automation_scripts_debug_ready
+        topicUid: How_to_make_your_automation_scripts_debug_ready
       - name: Getting started with the IAS Toolkit
-        topicUID: Getting_Started_with_the_IAS_Toolkit
+        topicUid: Getting_Started_with_the_IAS_Toolkit
   - name: Class Library
     topicUid: ClassLibraryIntroduction
     items:
@@ -708,14 +708,16 @@
       topicUid: Skyline.DataMiner.Scripting
     - name: Skyline.DataMiner.Automation
       topicUid: Skyline.DataMiner.Automation
-    - name: Skyline.DataMiner.Library.Common
-      topicUid: Skyline.DataMiner.Library.Common
-    - name: Skyline.DataMiner.Library.Automation
-      topicUid: Skyline.DataMiner.Library.Automation
-    - name: Skyline.DataMiner.Library.Protocol
-      topicUid: Skyline.DataMiner.Library.Protocol
+    - name: Skyline.DataMiner.Core.DataMinerSystem.Common
+      topicUid: Skyline.DataMiner.Core.DataMinerSystem.Common
+    - name: Skyline.DataMiner.Core.DataMinerSystem.Automation
+      topicUid: Skyline.DataMiner.Core.DataMinerSystem.Automation
+    - name: Skyline.DataMiner.Core.DataMinerSystem.Protocol
+      topicUid: Skyline.DataMiner.Core.DataMinerSystem.Protocol
     - name: Skyline.DataMiner.Net
       topicUid: Skyline.DataMiner.Net
+    - name: Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api
+      topicUid: Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api
     - name: Interop.SLDms
       topicUid: Interop.SLDms
     - name: Tamir.SharpSsh
@@ -1326,6 +1328,8 @@
             topicUid: Protocol.ExportRules.ExportRule-tag
           - name: '@value'
             topicUid: Protocol.ExportRules.ExportRule-value
+          - name: '@whereAttribute'
+            topicUid: Protocol.ExportRules.ExportRule-whereAttribute
           - name: '@whereTag'
             topicUid: Protocol.ExportRules.ExportRule-whereTag
           - name: '@whereValue'
@@ -1770,11 +1774,6 @@
                 topicUid: Protocol.Params.Param.ArrayOptions.ColumnOption-type
               - name: '@value'
                 topicUid: Protocol.Params.Param.ArrayOptions.ColumnOption-value
-            - name: ColumnOptions
-              topicUid: Protocol.Params.Param.ArrayOptions.ColumnOptions
-              items: 
-              - name: ColumnOption
-                topicUid: Protocol.Params.Param.ArrayOptions.ColumnOptions.ColumnOption
             - name: NamingFormat
               topicUid: Protocol.Params.Param.ArrayOptions.NamingFormat
           - name: CRC
@@ -2538,15 +2537,15 @@
         topicUid: Protocol.ProcessAutomation
         items:
         - name: ProcessAutomationOptions
-          topicUID: Protocol.ProcessAutomation.ProcessAutomationOptions
+          topicUid: Protocol.ProcessAutomation.ProcessAutomationOptions
           items:
           - name: ProcessAutomationOption
-            topicUID: Protocol.ProcessAutomation.ProcessAutomationOptions.ProcessAutomationOption
+            topicUid: Protocol.ProcessAutomation.ProcessAutomationOptions.ProcessAutomationOption
             items:
             - name: '@name'
-              topicUID: Protocol.ProcessAutomation.ProcessAutomationOptions.ProcessAutomationOption-name
+              topicUid: Protocol.ProcessAutomation.ProcessAutomationOptions.ProcessAutomationOption-name
             - name: '@pid'
-              topicUID: Protocol.ProcessAutomation.ProcessAutomationOptions.ProcessAutomationOption-pid
+              topicUid: Protocol.ProcessAutomation.ProcessAutomationOptions.ProcessAutomationOption-pid
       - name: Provider
         topicUid: Protocol.Provider
       - name: QActions
@@ -3171,6 +3170,27 @@
       - name: Content
         topicUid: Manifest.Content
         items: 
+        - name: AppPackages
+          topicUid: Manifest.Content.AppPackages
+          items: 
+          - name: AppPackage
+            topicUid: Manifest.Content.AppPackages.AppPackage
+            items: 
+            - name: RepoPath
+              topicUid: Manifest.Content.AppPackages.AppPackage.RepoPath
+            - name: Version
+              topicUid: Manifest.Content.AppPackages.AppPackage.Version
+              items: 
+              - name: Selection
+                topicUid: Manifest.Content.AppPackages.AppPackage.Version.Selection
+                items: 
+                - name: Range
+                  topicUid: Manifest.Content.AppPackages.AppPackage.Version.Selection.Range
+                  items: 
+                  - name: '@rangeSelection'
+                    topicUid: Manifest.Content.AppPackages.AppPackage.Version.Selection.Range-rangeSelection
+                - name: Specific
+                  topicUid: Manifest.Content.AppPackages.AppPackage.Version.Selection.Specific
         - name: AutomationScripts
           topicUid: Manifest.Content.AutomationScripts
           items: 
@@ -3195,8 +3215,6 @@
                   items: 
                   - name: '@rangeSelection'
                     topicUid: Manifest.Content.AutomationScripts.AutomationScript.Version.Selection.Range-rangeSelection
-                  - name: '@triggerPackagePipelineOnChange '
-                    topicUid: Manifest.Content.AutomationScripts.AutomationScript.Version.Selection.Range-triggerPackagePipelineOnChange 
                 - name: Specific
                   topicUid: Manifest.Content.AutomationScripts.AutomationScript.Version.Selection.Specific
         - name: CompanionFiles
@@ -3227,8 +3245,6 @@
                   items: 
                   - name: '@rangeSelection'
                     topicUid: Manifest.Content.CompanionFiles.CompanionFile.Version.Selection.Range-rangeSelection
-                  - name: '@triggerPackagePipelineOnChange '
-                    topicUid: Manifest.Content.CompanionFiles.CompanionFile.Version.Selection.Range-triggerPackagePipelineOnChange 
                 - name: Specific
                   topicUid: Manifest.Content.CompanionFiles.CompanionFile.Version.Selection.Specific
         - name: CustomSolutions
@@ -3259,8 +3275,6 @@
                   items: 
                   - name: '@rangeSelection'
                     topicUid: Manifest.Content.CustomSolutions.CustomSolution.Version.Selection.Range-rangeSelection
-                  - name: '@triggerPackagePipelineOnChange '
-                    topicUid: Manifest.Content.CustomSolutions.CustomSolution.Version.Selection.Range-triggerPackagePipelineOnChange 
                 - name: Specific
                   topicUid: Manifest.Content.CustomSolutions.CustomSolution.Version.Selection.Specific
         - name: Dashboards
@@ -3284,8 +3298,6 @@
                   items: 
                   - name: '@rangeSelection'
                     topicUid: Manifest.Content.Dashboards.Dashboard.Version.Selection.Range-rangeSelection
-                  - name: '@triggerPackagePipelineOnChange '
-                    topicUid: Manifest.Content.Dashboards.Dashboard.Version.Selection.Range-triggerPackagePipelineOnChange 
                 - name: Specific
                   topicUid: Manifest.Content.Dashboards.Dashboard.Version.Selection.Specific
         - name: Functions
@@ -3307,8 +3319,6 @@
                   items: 
                   - name: '@rangeSelection'
                     topicUid: Manifest.Content.Functions.Function.Version.Selection.Range-rangeSelection
-                  - name: '@triggerPackagePipelineOnChange '
-                    topicUid: Manifest.Content.Functions.Function.Version.Selection.Range-triggerPackagePipelineOnChange 
                 - name: Specific
                   topicUid: Manifest.Content.Functions.Function.Version.Selection.Specific
         - name: Protocols
@@ -3359,8 +3369,6 @@
                   items: 
                   - name: '@rangeSelection'
                     topicUid: Manifest.Content.Protocols.Protocol.Version.Selection.Range-rangeSelection
-                  - name: '@triggerPackagePipelineOnChange '
-                    topicUid: Manifest.Content.Protocols.Protocol.Version.Selection.Range-triggerPackagePipelineOnChange 
                 - name: Specific
                   topicUid: Manifest.Content.Protocols.Protocol.Version.Selection.Specific
               - name: SetAsProduction
@@ -3387,8 +3395,6 @@
                   items: 
                   - name: '@rangeSelection'
                     topicUid: Manifest.Content.Visios.Visio.Version.Selection.Range-rangeSelection
-                  - name: '@triggerPackagePipelineOnChange '
-                    topicUid: Manifest.Content.Visios.Visio.Version.Selection.Range-triggerPackagePipelineOnChange 
                 - name: Specific
                   topicUid: Manifest.Content.Visios.Visio.Version.Selection.Specific
               - name: SetAsDefault
@@ -3499,17 +3505,17 @@
       topicUid: Manifest-TypeAlarmTemplateName
       items:
       - name: TypeAlarmTemplateName
-        topicUID: Manifest-TypeAlarmTemplateName
+        topicUid: Manifest-TypeAlarmTemplateName
       - name: TypeEmptyString
-        topicUID: Manifest-TypeEmptyString
+        topicUid: Manifest-TypeEmptyString
       - name: TypeInformationTemplateName
-        topicUID: Manifest-TypeInformationTemplateName
+        topicUid: Manifest-TypeInformationTemplateName
       - name: TypeNonEmptyString
-        topicUID: Manifest-TypeNonEmptyString
+        topicUid: Manifest-TypeNonEmptyString
       - name: TypePackageVersion
-        topicUID: Manifest-TypePackageVersion
+        topicUid: Manifest-TypePackageVersion
       - name: TypeTrendTemplateName
-        topicUID: Manifest-TypeTrendTemplateName
+        topicUid: Manifest-TypeTrendTemplateName
 - name: Web Services
   items:
   - name: Web Services (v1)
@@ -3521,14 +3527,14 @@
           - name: Using the Web Services (v1)
             topicUid: Using_the_Web_Services_v1
           - name: Examples
-            topicUID: WS_v1_examples
+            topicUid: WS_v1_examples
       - name: Methods (v1)
         topicUid: WS_Methods_v1_overview
         items:
           - name: ActivateElement
             topicUid: ActivateElementv1
           - name: AddBookingAttachment
-            topicUID: AddBookingAttachment
+            topicUid: AddBookingAttachment
           - name: AddBookingAttachmentV2
             topicUid: AddBookingAttachmentV2
           - name: AddCommentToAlarm
@@ -3542,7 +3548,7 @@
           - name: AddElementsToRecent
             topicUid: AddElementsToRecent
           - name: AddJobAttachment
-            topicUID: AddJobAttachment
+            topicUid: AddJobAttachment
           - name: AddJobAttachmentV2
             topicUid: AddJobAttachmentV2
           - name: AddOrUpdateJobsSectionDefinitionField
@@ -3554,7 +3560,7 @@
           - name: AddServicesToRecent
             topicUid: AddServicesToRecent
           - name: AddTicketAttachment
-            topicUID: AddTicketAttachment
+            topicUid: AddTicketAttachment
           - name: AddTicketAttachmentV2
             topicUid: AddTicketAttachmentV2
           - name: AddTicketField
@@ -4629,7 +4635,7 @@
           - name: DMAServiceDefinitionEdgeLite
             topicUid: DMAServiceDefinitionEdgeLite
           - name: DMAServiceDefinitionLite
-            topicUID: DMAServiceDefinitionLite
+            topicUid: DMAServiceDefinitionLite
           - name: DMAServiceDefinitionNode
             topicUid: DMAServiceDefinitionNode
           - name: DMAServiceInfoGroupDefinition
@@ -4685,9 +4691,9 @@
           - name: DMATimeZoneInfo
             topicUid: DMATimeZoneInfo
           - name: DMATopAlarmCountData
-            topicUID: DMATopAlarmCountData
+            topicUid: DMATopAlarmCountData
           - name: DMATopAlarmStateData
-            topicUID: DMATopAlarmStateData
+            topicUid: DMATopAlarmStateData
           - name: DMATopologyChainsField
             topicUid: DMATopologyChainsField
           - name: DMATopologyFieldValues
@@ -5007,8 +5013,6 @@
               topicUid: Primary_keys1
             - name: Display keys
               topicUid: Display_keys1
-            - name: Key column description
-              topicUid: Key_column_description
             - name: Data handling
               topicUid: Data_handling
             - name: Integrity constraints
@@ -5016,7 +5020,7 @@
             - name: Preserve state option
               topicUid: Preserve_state_option
             - name: Clear Table Data on Polling Disable
-              topicUID: Clear_Table_Data_on_Polling_Disable
+              topicUid: Clear_Table_Data_on_Polling_Disable
         - name: Parameters
           topicUid: Parameters3
           items:
@@ -5128,8 +5132,29 @@
       - name: High-level overview
         topicUid: High-level_overview
       - name: Components
-        topicUid: Gerrit
+        topicUid: TOOSLCSERepositoryManager
         items:
+        - name: SLC SE Repository Manager
+          topicUid: TOOSLCSERepositoryManager
+          items:
+          - name: Cloning a repository
+            topicUid: Cloning_a_repository
+          - name: Pushing to a repository
+            topicUid: Pushing_to_a_repository
+          - name: Creating a repository
+            topicUid: Creating_a_repository
+          - name: Reloading the tree
+            topicUid: Reloading_the_tree
+          - name: Removing a repository
+            topicUid: Removing_a_repository
+          - name: Options window
+            topicUid: Options_window
+          - name: Sandbox mode
+            topicUid: Sandbox_mode
+          - name: Updating .gitignore and Jenkins file
+            topicUid: Updating_gitignore_and_Jenkins_file
+          - name: Repository types
+            topicUid: Repository_types 
         - name: Gerrit
           topicUid: Gerrit
         - name: Jenkins
@@ -5181,22 +5206,142 @@
           topicUid: Pipeline_stages_for_install_packages
       - name: FAQ
         topicUid: FAQ
+  - name: SRM project configuration using CI/CD
+    topicUid: SRM_project_config_using_CICD
 - name: DataMiner Development Tools
   topicUid: TOOLS
   items:
+    - name: DataMiner Integration Studio (DIS)
+      topicUid: DIS
+      items:
+        - name: Introduction
+          topicUid: Overall_concept_of_the_DataMiner_Integration_Studio
+        - name: Installation and configuration
+          topicUid: Installing_and_configuring_the_software
+          items:
+            - name: Prerequisites
+              topicUid: Prerequisites
+            - name: Installing and configuring DIS
+              topicUid: Installing_and_configuring_DataMiner_Integration_Studio
+            - name: Configuring Microsoft Visual Studio
+              topicUid: Configuring_Microsoft_Visual_Studio
+        - name: DIS menu
+          topicUid: DIS_menu
+        - name: Editors
+          topicUid: DisEditors
+          items:
+          - name: XML editor
+            topicUid: XML_editor
+          - name: Display editor
+            topicUid: Display_editor
+          - name: Function editor
+            topicUid: Function_editor
+          - name: Table editor
+            topicUid: Table_editor
+          - name: Version editor
+            topicUid: Version_editor
+          - name: C# editor
+            topicUid: C_editor
+        - name: Tool windows
+          topicUid: DisToolWindows
+          items:
+            - name: DIS Tree
+              topicUid: DisTreeViewToolWindow
+            - name: DIS Mapping
+              topicUid: DisMappingViewToolWindow
+            - name: DIS Grid View
+              topicUid: DisGridViewToolWindow
+            - name: DIS Diagram
+              topicUid: DisDiagramToolWindow
+            - name: DIS Validator
+              topicUid: DisValidatorToolWindow
+            - name: DIS Comparer
+              topicUid: DisComparerToolWindow
+            - name: DIS Macros
+              topicUid: DisMacrosToolWindow
+            - name: DIS Inject
+              topicUid: DisInjectToolWindow
+            - name: DIS MIB Browser
+              topicUid: DisMibBrowserToolWindow
+        - name: Plugins
+          topicUid: DisPlugins
+        - name: Development using DIS
+          topicUid: DisVisualStudioSolutions
+          items:
+            - name: Visual Studio solutions
+              topicUid: DisVisualStudioSolutionsIntroduction
+            - name: Developing connectors
+              topicUid: Developing_connectors_as_Visual_Studio_solutions
+            - name: Developing Automation scripts
+              topicUid: Developing_Automation_scripts_as_Visual_Studio_solutions
+        - name: Debugging connectors and Automation scripts
+          topicUid: Debugging_connectors_and_Automation_scripts
+          items:
+            - name: Concept
+              topicUid: Concept_of_debugging_connectors_and_Automation_scripts
+            - name: Preparing to debug on the local DataMiner Agent
+              topicUid: Preparing_to_debug_on_the_local_DataMiner_Agent
+            - name: Preparing to debug on a remote DataMiner Agent
+              topicUid: Preparing_to_debug_on_a_remote_DataMiner_Agent
+            - name: Debugging a connector
+              topicUid: Debugging_a_connector
+            - name: Debugging an Automation script
+              topicUid: Debugging_an_Automation_script
+        - name: Troubleshooting
+          topicUid: Troubleshooting
+          items:
+            - name: Repairing an incorrectly installed DIS package on Visual Studio 2010
+              topicUid: Repairing_an_incorrectly_installed_DIS_package_on_Visual_Studio_2010
+            - name: Could not find SLScripting process, is DataMiner running?
+              topicUid: Could_not_find_SLScripting_process_is_DataMiner_running
+            - name: Clicking the Publish button causes an error
+              topicUid: Clicking_the_Publish_button_causes_an_error
+        - name: DIS reference
+          topicUid: DIS_reference
+          items:
+            - name: DIS settings
+              topicUid: DIS_settings
+            - name: DIS keyboard shortcuts
+              topicUid: DIS_keyboard_shortcuts
+            - name: Microsoft Visual Studio keyboard shortcuts
+              topicUid: Microsoft_Visual_Studio_keyboard_shortcuts
+            - name: Class Library packages
+              topicUid: Class_Library_packages
+    - name: NuGet packages
+      topicUid: TOONuGet
+      items:
+        - name: Skyline NuGet packages
+          topicUid: SkylineNuGetPackages
+          items:
+          - name: DataMiner DevPacks
+            topicUid: TOODataMinerDevPackages
+          - name: Interactive Automation Script Toolkit
+            topicUid: Interactive_Automation_Script_Toolkit
+          - name: Visual Studio Templates
+            topicUid: VisualStudioTemplates
+          - name: Middleware NuGet packages
+            topicUid: Nuget_Communication_Middleware
+        - name: Consuming NuGet packages
+          topicUid: Consuming_NuGet
+          items:
+          - name: Assembly binding
+            topicUid: Assembly_Binding
+            items:
+            - name: Compilation-time assembly binding
+              topicUid: Compilation_Time_Assembly_Binding
+            - name: Run-time assembly binding
+              topicUid: Run_Time_Assembly_Binding
+        - name: Producing NuGet packages
+          topicUid: Producing_NuGet
     - name: Application packages
       topicUid: TOOApplicationPackages
       items:
-      - name: Creating an application package
-        topicUID: Creating_an_app_package
+      - name: Application package structure
+        topicUid: Creating_an_app_package
       - name: Installing an application package
-        topicUID: Installing_an_app_package
+        topicUid: Installing_an_app_package
       - name: Creating application package scripts
-        topicUID: Creating_app_package_scripts
-    - name: Change Element States Offline
-      topicUID: Change_Element_States_Offline
-    - name: Copy Element Data
-      topicUID: Copy_Element_Data
+        topicUid: Creating_app_package_scripts
     - name: DataMiner Application Package Builder
       topicUid: TOODataMinerPackageBuilder
       items:
@@ -5223,143 +5368,6 @@
               topicUid: CLI_legacy_packages_only
             - name: Logging
               topicUid: Logging1
-    - name: DataMiner Development Packages
-      topicUid: TOODataMinerDevPackages
-    - name: DataMiner Integration Studio
-      topicUid: DIS
-      items:
-        - name: Concepts
-          topicUid: Concepts
-          items:
-            - name: Overall concept of the DataMiner Integration Studio
-              topicUid: Overall_concept_of_the_DataMiner_Integration_Studio
-            - name: Concept of debugging QActions and Automation scripts
-              topicUid: Concept_of_debugging_QActions_and_Automation_scripts
-        - name: Installing and configuring the software
-          topicUid: Installing_and_configuring_the_software
-          items:
-            - name: Prerequisites
-              topicUid: Prerequisites
-            - name: Installing and configuring DataMiner Integration Studio
-              topicUid: Installing_and_configuring_DataMiner_Integration_Studio
-            - name: Configuring Microsoft Visual Studio
-              topicUid: Configuring_Microsoft_Visual_Studio
-        - name: Protocols as a Visual Studio solution
-          topicUid: Protocols_as_a_Visual_Studio_solution
-        - name: DIS menu
-          topicUid: DIS_menu
-        - name: XML editor
-          topicUid: XML_editor
-        - name: Display editor
-          topicUid: Display_editor
-        - name: Function editor
-          topicUid: Function_editor
-        - name: Table editor
-          topicUid: Table_editor
-        - name: Version editor
-          topicUid: Version_editor
-        - name: C# editor
-          topicUid: C_editor
-        - name: Debugging QActions and Automation scripts
-          topicUid: Debugging_QActions_and_Automation_scripts
-          items:
-            - name: Preparing to debug on the local DataMiner Agent
-              topicUid: Preparing_to_debug_on_the_local_DataMiner_Agent
-            - name: Preparing to debug on a remote DataMiner Agent
-              topicUid: Preparing_to_debug_on_a_remote_DataMiner_Agent
-            - name: Debugging a QAction
-              topicUid: Debugging_a_QAction
-            - name: Debugging an Automation script
-              topicUid: Debugging_an_Automation_script
-        - name: Developing DataMiner protocols and Automation scripts as Visual Studio solutions
-          topicUid: Developing_DataMiner_protocols_and_Automation_scripts_as_Visual_Studio_solutions
-          items:
-            - name: Developing DataMiner protocols as Visual Studio solutions
-              topicUid: Developing_DataMiner_protocols_as_Visual_Studio_solutions
-            - name: Developing Automation scripts as Visual Studio solutions
-              topicUid: Developing_Automation_scripts_as_Visual_Studio_solutions
-        - name: Troubleshooting
-          topicUid: Troubleshooting
-          items:
-            - name: Repairing an incorrectly installed DIS package on Visual Studio 2010
-              topicUid: Repairing_an_incorrectly_installed_DIS_package_on_Visual_Studio_2010
-            - name: Could not find SLScripting process, is DataMiner running?
-              topicUid: Could_not_find_SLScripting_process_is_DataMiner_running
-            - name: Clicking the Publish button causes an error
-              topicUid: Clicking_the_Publish_button_causes_an_error
-        - name: DIS reference
-          topicUid: DIS_reference
-          items:
-            - name: DIS settings
-              topicUid: DIS_settings
-            - name: DIS keyboard shortcuts
-              topicUid: DIS_keyboard_shortcuts
-            - name: Microsoft Visual Studio keyboard shortcuts
-              topicUid: Microsoft_Visual_Studio_keyboard_shortcuts
-            - name: Class Library packages
-              topicUid: Class_Library_packages
-    - name: DataStax DevCenter
-      topicUID: DataStax_DevCenter
-    - name: dnSpy
-      topicUID: dnSpy
-    - name: EBU LIST
-      topicUID: EBU_Live_IP_Software_Toolkit_LIST
-    - name: Interactive Automation Script Toolkit
-      topicUID: Interactive_Automation_Script_Toolkit
-    - name: Nodetool
-      topicUid: TOONodetool
-      items:
-        - name: Logging queries
-          topicUid: Logging_queries
-    - name: NuGet packages
-      topicUid: TOONuGet
-      items:
-        - name: Consuming NuGet packages
-          topicUid: Consuming_NuGet
-        - name: Producing NuGet packages
-          topicUid: Producing_NuGet
-        - name: Assembly binding
-          topicUid: Assembly_Binding
-          items:
-          - name: Compilation-time assembly binding
-            topicUid: Compilation_Time_Assembly_Binding
-          - name: Run-time assembly binding
-            topicUid: Run_Time_Assembly_Binding
-    - name: Skyline Device Simulator
-      topicUid: TOOQASNMPSimulator
-      items:
-        - name: Simulations
-          topicUid: Simulations
-          items:
-            - name: Creating SNMP simulations
-              topicUid: Creating_SNMP_simulations
-            - name: Creating HTTP simulations
-              topicUid: Creating_HTTP_simulations
-            - name: Running simulations
-              topicUid: Running_simulations
-            - name: Static simulations
-              topicUid: Static_simulations
-            - name: Artificial dynamic simulations
-              topicUid: Artificial_dynamic_simulations
-            - name: Realistic dynamic simulations
-              topicUid: Realistic_dynamic_simulations
-        - name: Trap sender
-          topicUid: Trap_sender
-          items:
-            - name: File menu
-              topicUid: File_menu
-            - name: General configuration
-              topicUid: General_config
-            - name: Packet interval schedule
-              topicUid: Packet_interval_schedule
-            - name: Loaded packets
-              topicUid: Loaded_packets
-            - name: Packet configuration and bindings
-              topicUid: Packet_configuration_and_bindings
-            - name: Sending
-              topicUid: Sending
-        - name: Trap receiver
-          topicUid: Trap_receiver
     - name: Skyline Driver Passport Platform
       topicUid: TOODriverPassportPlatform
       items:
@@ -5373,110 +5381,112 @@
           topicUid: Notifications
         - name: Viewing test results
           topicUid: Viewing_test_results
-    - name: SLC SE Repository Manager
-      topicUid: TOOSLCSERepositoryManager
+    - name: Third-party Tools
+      uid: ThirdPartyTools
       items:
-        - name: Cloning a repository
-          topicUid: Cloning_a_repository
-        - name: Pushing to a repository
-          topicUid: Pushing_to_a_repository
-        - name: Creating a repository
-          topicUid: Creating_a_repository
-        - name: Reloading the tree
-          topicUid: Reloading_the_tree
-        - name: Removing a repository
-          topicUid: Removing_a_repository
-        - name: Options window
-          topicUid: Options_window
-        - name: Sandbox mode
-          topicUid: Sandbox_mode
-        - name: Updating .gitignore and Jenkins file
-          topicUid: Updating_gitignore_and_Jenkins_file
-        - name: Repository types
-          topicUid: Repository_types
-    - name: SourceTree
-      topicUid: TOOSourceTree
-      items:
-        - name: Installing SourceTree
-          topicUid: Installing_SourceTree
-        - name: Using SourceTree
-          topicUid: Using_SourceTree
-    - name: TortoiseSVN
-      topicUid: TOOTortoiseSVN
-      items:
-        - name: Installation
-          topicUid: Installation1
-        - name: Configuration
-          topicUid: TurtoiseSVNConfiguration
-        - name: Usage
-          topicUid: Usage1
-          items:
-            - name: Shell extension
-              topicUid: Shell_extension
-            - name: Repository
-              topicUid: Repository
-            - name: Working copy
-              topicUid: Working_copy
-            - name: Pulling content
-              topicUid: Pulling_content
-            - name: Locking files
-              topicUid: Locking_files
-            - name: Adding new content
-              topicUid: Adding_new_content
-            - name: Pushing changes
-              topicUid: Pushing_changes
-            - name: Reverting changes
-              topicUid: Reverting_changes
-            - name: Removing files
-              topicUid: Removing_files
-        - name: Troubleshooting
-          topicUid: TortoiseSVNTroubleshooting
-          items:
-            - name: Locking failed while acquiring a lock
-              topicUid: Locking_failed_while_acquiring_a_lock
-            - name: Merging conflicts
-              topicUid: Merging_conflicts
-    - name: Visual Studio
-      topicUid: TOOVisualStudio
-      items:
-        - name: Installation procedure
-          topicUid: Installation_procedure
-        - name: Settings
-          topicUid: VisualStudioSettings
-          items:
-            - name: Text editor general
-              topicUid: Text_editor_general
-            - name: C# settings
-              topicUid: C_settings
-        - name: Shortcuts
-          topicUid: Shortcuts
-        - name: Plugins
-          topicUid: Plugins
-          items:
-            - name: DataMiner Integration Studio (DIS)
-              topicUid: DataMiner_Integration_Studio_DIS
-            - name: Visual Studio spell checker
-              topicUid: Visual_Studio_spell_checker
-            - name: CodeMaid
-              topicUid: CodeMaid
-            - name: SonarLint
-              topicUid: SonarLint
-        - name: NuGet packages
-          topicUid: VisualStudioNuGetPackages
-          items:
-            - name: StyleCop.Analyzers
-              topicUid: StyleCopAnalyzers
-    - name: WFetch
-      topicUid: TOOWFetch
-    - name: Upgrade packages
-      topicUid: TOOUpgradePackageContent
-      items:
-        - name: Contents of an upgrade package
-          topicUid: Contents_of_an_upgrade_package
-        - name: Steps taken during an upgrade operation
-          topicUid: Steps_taken_during_an_upgrade_operation
-        - name: Actions that can be performed during an upgrade operation
-          topicUid: Actions_that_can_be_performed_during_an_upgrade_operation
+      - name: DataStax DevCenter
+        topicUid: DataStax_DevCenter
+      - name: dnSpy
+        topicUid: dnSpy
+      - name: dotPeek
+        topicUid: dotPeek
+      - name: EBU LIST
+        topicUid: EBU_Live_IP_Software_Toolkit_LIST
+      - name: Fiddler
+        topicUid: Fiddler
+      - name: ManageEngine MIB Browser
+        topicUid: ManageEngine_MIB_Browser
+      - name: MySQL Workbench
+        topicUid: MySQL_Workbench
+      - name: Nodetool
+        topicUid: TOONodetool
+        items:
+        - name: Logging queries
+          topicUid: Logging_queries
+      - name: Postman
+        topicUid: Postman
+      - name: RawCap
+        topicUid: RawCap
+      - name: SoapUI
+        topicUid: SoapUI
+      - name: SourceTree
+        topicUid: TOOSourceTree
+        items:
+          - name: Installing SourceTree
+            topicUid: Installing_SourceTree
+          - name: Using SourceTree
+            topicUid: Using_SourceTree
+      - name: TCPView
+        topicUid: TCPView
+      - name: TortoiseSVN
+        topicUid: TOOTortoiseSVN
+        items:
+          - name: Installation
+            topicUid: Installation1
+          - name: Configuration
+            topicUid: TurtoiseSVNConfiguration
+          - name: Usage
+            topicUid: Usage1
+            items:
+              - name: Shell extension
+                topicUid: Shell_extension
+              - name: Repository
+                topicUid: Repository
+              - name: Working copy
+                topicUid: Working_copy
+              - name: Pulling content
+                topicUid: Pulling_content
+              - name: Locking files
+                topicUid: Locking_files
+              - name: Adding new content
+                topicUid: Adding_new_content
+              - name: Pushing changes
+                topicUid: Pushing_changes
+              - name: Reverting changes
+                topicUid: Reverting_changes
+              - name: Removing files
+                topicUid: Removing_files
+          - name: Troubleshooting
+            topicUid: TortoiseSVNTroubleshooting
+            items:
+              - name: Locking failed while acquiring a lock
+                topicUid: Locking_failed_while_acquiring_a_lock
+              - name: Merging conflicts
+                topicUid: Merging_conflicts
+      - name: Visual Studio
+        topicUid: TOOVisualStudio
+        items:
+          - name: Installation procedure
+            topicUid: Installation_procedure
+          - name: Settings
+            topicUid: VisualStudioSettings
+            items:
+              - name: Text editor general
+                topicUid: Text_editor_general
+              - name: C# settings
+                topicUid: C_settings
+          - name: Shortcuts
+            topicUid: Shortcuts
+          - name: Plugins
+            topicUid: Plugins
+            items:
+              - name: DataMiner Integration Studio (DIS)
+                topicUid: DataMiner_Integration_Studio_DIS
+              - name: Visual Studio spell checker
+                topicUid: Visual_Studio_spell_checker
+              - name: CodeMaid
+                topicUid: CodeMaid
+              - name: SonarLint
+                topicUid: SonarLint
+          - name: NuGet packages
+            topicUid: VisualStudioNuGetPackages
+            items:
+              - name: StyleCop.Analyzers
+                topicUid: StyleCopAnalyzers
+      - name: Visual Studio Code
+        topicUid: Visual_Studio_Code
+      - name: Wireshark
+        topicUid: Wireshark
 - name: DataMiner Device-Specific Integrations
   topicUid: DSI
   items:
@@ -5506,8 +5516,15 @@
           topicUid: DMS_protocol
         - name: Viewer
           topicUid: Viewer
+    - name: OpenConfig
+      topicUid: DSI_OpenConfig
+      items:
+        - name: Introduction
+          topicUid: DSI_OpenConfig_Introduction
+        - name: Middleware package
+          topicUid: DSI_OpenConfig_Middleware
 - name: Third-party integrations
-  topicUID: ThirdPartyIntegrations
+  topicUid: ThirdPartyIntegrations
   items:
     - name: Ansible
       topicUid: Configure_DataMiner_using_Ansible

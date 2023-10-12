@@ -4,7 +4,7 @@ uid: How_to_implement_the_subtable_feature
 
 # How to implement the Subtable feature
 
-Below, we describe one of the possible ways of implementing the *Subtable* feature in DataMiner.
+Below, we describe one of the possible ways of implementing the *[Subtable](xref:Protocol.Params.Param.SNMP.OID-options#subtable)* feature in DataMiner.
 
 In the example below, we will filter the interface table of a data source. The example is based on the *SAP Base Info Table* of the [Alcatel SR Manager](https://catalog.dataminer.services/result/driver/2390) connector.
 

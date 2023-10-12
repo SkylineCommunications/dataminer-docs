@@ -6,7 +6,7 @@ uid: AdvancedDataMinerMediationLayerLinkingParameters
 
 There are two ways to establish links between parameters in a base protocol and parameters in a device protocol. You can create a parameter in a base protocol and link it to one or more parameters in a number of device protocols or you can create a parameter in a device protocol and link it to a parameter in a base protocol.
 
-## Creating a parameter in a base protocol and linking it to parameters in device protocols
+## Creating a parameter in a base protocol and linking it to parameters in data source protocols
 
 ```xml
 <Param id="73102">
@@ -28,7 +28,7 @@ In the example above, the base protocol refers to a protocol parameter by specif
 <LinkTo description="Audio Output Level" />
 ```
 
-## Creating a parameter in a device protocol and linking it to a parameter in a base protocol
+## Creating a parameter in a data source protocol and linking it to a parameter in a base protocol
 
 In order to link a parameter in a device protocol to a parameter in a base protocol, just add a Mediation.LinkTo tag containing the ID of the latter.
 
@@ -46,3 +46,6 @@ For example:
 ## See also
 
 <xref:AdvancedDataMinerMediationLayerSyntaxOfMediationLinkToTags>
+
+> [!NOTE]
+> Note that currently the mapping for mediation parameters is a 1-1 mapping. Each mediation parameter (on a given mediation protocol) can only link to a single data source parameter (on a given data source protocol). Each data source parameter (on a given data source protocol) can only be linked to one mediation parameter (on a given mediation protocol).

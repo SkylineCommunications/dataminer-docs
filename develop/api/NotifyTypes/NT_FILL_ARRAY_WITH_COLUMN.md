@@ -4,7 +4,7 @@ uid: NT_FILL_ARRAY_WITH_COLUMN
 
 # NT_FILL_ARRAY_WITH_COLUMN (220)
 
-Sets or updates one or more table column with provided values.
+Sets or updates one or more table columns with provided values.
 
 ## Parameters
 

@@ -4,7 +4,7 @@ uid: Booking_Manager_user_interface
 
 # Booking Manager user interface
 
-The Booking Manager app is the main interface used to interact with the generic SRM Solution.
+The Booking Manager app is a standard application that allows you to create and manage bookings using DataMiner Service & Resource Management (SRM).
 
 This app consists of three tabs:
 

@@ -27,33 +27,25 @@ These are the most important things to keep in mind:
 
 1. Make a new task if one does not exist yet under the *SLC-SE-Class Library* project. You can set the type to *Consultancy*.
 
-1. Clone the repo *Custom Solutions/Internal/Class Library/Base Class Library*.
+1. Clone the repo *Custom Solutions/Generic/Skyline.DataMiner.Core/DataMinerSystem*.
 
     >[!NOTE]
     > If you are working remotely and the clone takes longer than 15 minutes, please ask Data Acquisition for assistance (by sending an email to [domain.create.data-acquisition@skyline.be](mailto:domain.create.data-acquisition@skyline.be)).
 
-1. Select the master branch you want to start with (1.2.0.X or 1.1.2.X current).
+1. Select the master branch you want to start with.
 
 1. Make a new branch: gerrit/DCPxxxx_subject (or dev/DCPxxxx if you are not using Gerrit).
 
 1. In a text editor, change the Jenkins file from *jenkins.groovy* to *jenkinsNoIntegration.groovy*.
 
-1. In a text editor, change the manifest file so that the version starts with "10." instead of "1.". (This is for the version of the old code-generated class library .zip file.)
-
-1. Commit these two changes and push them.
+1. Commit these changes and push them.
 
 1. Wait until SonarQube is finished, then open the *Issues* tab and bulk edit everything as "won't fix".
 
     > [!NOTE]
     > You may find 20 or so code smells that were not fixed, but these can be ignored. All new issues reported in SonarQube from now on will be related to your changes specifically.
 
-1. For branches older than 1.1.2.X only:
-
-    1. In Visual Studio, go to *Tools* > *Nuget Package Manager* > *Package Manager Settings*.
-
-    1. Select *Package Sources*.
-
-    1. Add "DataMinerDevPacks" as a new source, using the path `\\SLC-NAS-01.skyline.local\Shares\Public\Squad\Lightning\POC Nuget`.
+1. If your branch introduces a new minimum required DataMiner version, configure the corresponding version of the `Skyline.DataMiner.Dev.*` NuGet packages.
 
 1. Start development.
 
@@ -68,6 +60,4 @@ These are the most important things to keep in mind:
     1. Send an email to [domain.create.data-acquisition@skyline.be](mailto:domain.create.data-acquisition@skyline.be) mentioning that you added something and in which branch this was done.
 
 > [!TIP]
-> At this point, if you already want to use a beta package of your new class library version (and possibly even release your protocols with it), you can find it in the Jenkins artifacts of your branch. To use it, add it to `%DIS_PATH%\Files\Class Library`, and then select it in the DIS options class library.
->
-> Under the SLC internal Nuget store, you will also be able to find a NuGet of your class library branch for use instead of the DIS code generation. (This requires DataMiner 10.0.10 or higher.)
+> At this point, if you already want to use a beta package of your new class library version (and possibly even release your protocols with it), Under the SLC internal Nuget store, you will also be able to find a NuGet of your class library branch for use instead of the DIS code generation.

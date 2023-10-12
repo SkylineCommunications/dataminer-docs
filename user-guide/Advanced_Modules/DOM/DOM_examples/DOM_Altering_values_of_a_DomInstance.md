@@ -74,6 +74,9 @@ There is currently no extension method to remove `FieldValues` or `Sections` fro
 
 - *void* **AddOrUpdateListFieldValue&lt;T&gt;** (SectionDefinitionID, FieldDescriptorID, T)
 
+> [!IMPORTANT]
+> When you call these methods, you will add or update a field value to the local copy of the `DomInstance` that was retrieved during the read operation using the `DomHelper`. No additional calls are done to set these new values in the database. After setting new values to the local object, you need to call the "Add" or "Update" methods on the `DomHelper` to save your changes to the database.
+
 ##### Get a value from a 'DomInstance'
 
 - *ValueWrapper&lt;T&gt;* **GetFieldValue&lt;T&gt;** (SectionDefinition, FieldDescriptor)
@@ -83,6 +86,9 @@ There is currently no extension method to remove `FieldValues` or `Sections` fro
 - *ListValueWrapper&lt;T&gt;* **GetListFieldValue&lt;T&gt;** (SectionDefinition, FieldDescriptor)
 
 - *ListValueWrapper&lt;T&gt;* **GetListFieldValue&lt;T&gt;** (SectionDefinitionID, FieldDescriptorID)
+
+> [!IMPORTANT]
+> When you call these methods, you will retrieve the field values from the local copy of the `DomInstance` that was retrieved during the read operation using the `DomHelper`. No additional calls are done to retrieve the current values in the database. If you require the latest version, you will first need to read the instance again using the `DomHelper`.
 
 #### Examples
 

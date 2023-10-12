@@ -4,7 +4,7 @@ uid: Manifest.Content.Visios.Visio
 
 # Visio element
 
-Specifies a Visio file to be included in the package.
+Specifies a Visio file to include in the package.
 
 ## Parent
 

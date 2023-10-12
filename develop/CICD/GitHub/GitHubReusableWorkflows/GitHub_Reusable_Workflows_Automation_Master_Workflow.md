@@ -10,7 +10,10 @@ It was migrated from a workflow using an [internal Jenkins pipeline](xref:Pipeli
 
 At present, this workflow will not work on solutions containing SDK-style projects. It instead expects the legacy project style, which DIS provides automatically.
 
-This workflow will act as a quality gate and code coverage collection, only creating and uploading an artifact of your Automation script solution to the catalog if it passes the Skyline quality gate job.
+This workflow will act as a quality gate and code coverage collection, only creating and uploading an artifact of your Automation script solution to your private storage in the catalog if it passes the Skyline quality gate job.
+
+> [!NOTE]
+> This private storage is not yet accessible from within the Catalog UI.
 
 The following actions will be performed:
 
@@ -27,7 +30,7 @@ Only when the actions above have been successful, will the "Artifact Registratio
 - [Set artifact ID](#set-artifact-id)
 
 > [!IMPORTANT]
-> This workflow can run for both development or release cycles. A development cycle is any run that triggered from a change to a branch. A release cycle is any run that triggered from adding a tag with format `A.B.C.D`. During a development cycle, the version of an artifact automatically includes the run number. During a release cycle, the version of the artifact is the tag provided.
+> This workflow can run for both development or release cycles. A development cycle is any run that triggered from a change to a branch. A release cycle is any run that triggered from adding a tag with format `A.B.C.D` or `A.B.C`. During a development cycle, only the quality control actions are performed and artifact uploading is ignored (this means the secret "DATAMINER_DEPLOY_KEY" is optional). During a release cycle, an actual artifact is created and uploaded to the catalog (this means the secret "DATAMINER_DEPLOY_KEY" is required). A release cycle can also be a pre-release with versions of format `A.B.C.D-text` or `A.B.C-text`. 
 
 ## How to use
 

@@ -26,6 +26,7 @@ string
 - Only use a Sequence on communication parameters (i.e. parameters that are directly filled in by polling via SNMP, serial, etc.). Do not use it for custom/retrieved parameters (parameters filled in via a QAction.)
 - The Sequence should always be provided with the `noset="true"` attribute.
 - Only a change of the parameter with the Sequence tag can trigger the sequence. If the Sequence uses "id" in its content, changing the content of the parameter with that ID will not force the sequence to run when the parameter with the Sequence tag is updated with the same value as before.
+- A Sequence is only supported in combination with the [snmpSetAndGet](xref:Protocol.Params.Param-snmpSetAndGet) attribute when used on a single parameter.
 
   ```xml
   <Param id="10">

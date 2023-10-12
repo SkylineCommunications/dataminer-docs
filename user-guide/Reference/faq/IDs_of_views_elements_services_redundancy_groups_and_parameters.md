@@ -2,17 +2,21 @@
 uid: IDs_of_views_elements_services_redundancy_groups_and_parameters
 ---
 
-# IDs of views, elements, services, redundancy groups and parameters
+# Frequently asked questions about IDs of views, elements, services, redundancy groups and parameters
+
+- [How do I find the ID of a view?](#how-do-i-find-the-id-of-a-view)
+
+- [How do I find the ID of an element, service, or redundancy group?](#how-do-i-find-the-id-of-an-element-service-or-redundancy-group)
+
+- [How do I find the ID of a parameter?](#how-do-i-find-the-id-of-a-parameter)
 
 ## How do I find the ID of a view?
-
-### Finding the ID of a view
 
 In DataMiner Cube, right-click the view in the Surveyor and select *Properties*.
 
 The view ID is displayed in the *general* tab, to the right of the name of the view.
 
-## How do I find the ID of an element, service or redundancy group?
+## How do I find the ID of an element, service, or redundancy group?
 
 > [!NOTE]
 > The ID of an element, service or redundancy group always consists of two parts, separated by a forward slash:

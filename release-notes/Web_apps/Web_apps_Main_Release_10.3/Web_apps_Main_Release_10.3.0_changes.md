@@ -340,7 +340,7 @@ When, in the *Monitoring* app, you selected a view and opened the histogram page
 
 When a Visual Overview component was linked to a feed, in some cases, it would not show any content.
 
-#### Dashboards app & low-code apps: Loading indicator would not appear when sorting, filtering or refreshing a table [ID_35238]
+#### Dashboards app & Low-Code Apps: Loading indicator would not appear when sorting, filtering or refreshing a table [ID_35238]
 
 <!-- MR 10.3.0 - FR 10.3.2 -->
 
@@ -380,7 +380,7 @@ Up to now, in some cases, one folder would incorrectly take over feed selections
 
 When a web app (e.g. Dashboards) tried to execute a GQI query, in some cases, a `Node: 'X' is not supported by the current server version.` error could be thrown (`'X'` being the node that caused the error).
 
-#### Low-code apps: Panels of which the 'Fit to view' option was selected would incorrectly switch to mobile mode [ID_35542]
+#### Low-Code Apps: Panels of which the 'Fit to view' option was selected would incorrectly switch to mobile mode [ID_35542]
 
 <!-- MR 10.3.0 - FR 10.3.3 -->
 

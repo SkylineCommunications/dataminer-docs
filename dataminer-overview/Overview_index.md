@@ -11,6 +11,7 @@ We are working on adding more information to this section soon, so check back fo
 - [General introduction](xref:Overview_General_Introduction)
 - [DataMiner platform – empowering your digital transformation](xref:Overview_Platform_intro)
 - [dataminer.services](xref:Overview_DCP)
+- [Stack functions](xref:Overview_Stack_Functions)
 - [Agile partnership](xref:Overview_Agile_Partnership_intro)
 - [DevOps](xref:Overview_DevOps_index)
 - [Training courses and certification](xref:Overview_Training_intro)

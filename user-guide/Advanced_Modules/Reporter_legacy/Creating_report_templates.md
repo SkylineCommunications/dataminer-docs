@@ -20,4 +20,4 @@ These report templates can then be used to:
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/email-reports-configuring-email-reports/>
+> [Email Reports – Configuring email reports](https://community.dataminer.services/video/email-reports-configuring-email-reports/) ![Video](~/user-guide/images/video_Duo.png)

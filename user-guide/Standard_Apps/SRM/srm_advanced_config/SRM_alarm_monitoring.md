@@ -17,7 +17,7 @@ The SRM framework can generate alarms in the following situations:
 
 To configure SRM alarm monitoring:
 
-1. Create an element using the *Skyline Booking Monitoring* protocol. See [Adding an element](xref:Adding_and_deleting_elements).
+1. Create an element using the *Skyline Booking Monitoring* protocol. See [Adding elements](xref:Adding_elements).
 
    This is the element that will generate the alarm records.
 

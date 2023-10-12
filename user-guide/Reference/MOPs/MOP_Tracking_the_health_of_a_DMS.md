@@ -17,17 +17,17 @@ Follow the steps below for each DMA in the DataMiner System.
 
 1. Create a new element representing the DMA, using the *Microsoft Platform* protocol.
 
-   For more information on how to create elements, see [Adding and deleting elements](xref:Adding_and_deleting_elements).
+   For more information on how to create elements, see [Adding elements](xref:Adding_elements).
 
 1. Make sure the *Poll Task Manager* parameter is enabled in the element and all parameters are polled.
 1. Make sure the *Auto Clear Task Manager* parameter is enabled.
 1. Assign an alarm template to the element to make sure alarm monitoring is enabled for the *Poll Task Manager* parameter.
 
-   For more information on alarm templates, see [Alarm templates](xref:Alarm_templates).
+   For more information on alarm templates, see [Alarm templates](xref:About_alarm_templates).
 
 1. Assign a trend template to the element with average trending enabled for the parameters listed below. Create the trend template if it does not exist yet. Two standard templates are available for this, which can be downloaded [below](#standard-trend-templates).
 
-   For more information on trend templates, see [Trend templates](xref:Trend_templates).
+   For more information on trend templates, see [Trend templates](xref:About_trend_templates).
 
    Average trending must be enabled for the following parameters:
 

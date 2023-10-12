@@ -158,6 +158,9 @@ Length parameters are used to hold the length of a frame used in a communication
 
 To hold the correct length, the number of parameters on which the length will be calculated must be defined in the LENGTH parameter.
 
+> [!NOTE]
+> The maximimum byte length for this parameter is 4 bytes.
+
 ### matrix
 
 With this parameter, matrix mappings are configured for each table. This is done in the *Param.Matrix* element.

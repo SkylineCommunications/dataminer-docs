@@ -473,12 +473,6 @@ In some cases, TTL settings defined in an Elasticsearch database would not be ap
 
 Up to now, when SLPort received a WebSocket message larger than the WebSocket buffer (i.e. 65 kB), it would incorrectly split that message in multiple chunks before passing it to the protocol.
 
-#### Alarm templates: Problem with anomaly detection alarms [ID_33216]
-
-<!-- MR 10.3.0 - FR 10.2.6 -->
-
-When you created an element with an alarm template in which anomaly detection alarms were configured for table parameters, in some cases, none of the enabled types of change points would trigger an alarm.
-
 #### SLAnalytics - Automatic incident tracking: Incorrect error message would be generated [ID_33305]
 
 <!-- MR 10.3.0 - FR 10.2.7 -->

@@ -610,7 +610,7 @@ The DataMiner Analytics features store and maintain model data and extracted ins
 - [analytics_alarmfocus](#analytics_alarmfocus)
 - [analytics_arrowwindows](#analytics_arrowwindows)
 - [analytics_changepoints](#analytics_changepoints)
-- [analytics_changepointalarmentries](#analytics_changepointalarmentries)
+- [ai_cpalarms](#ai_cpalarms) (or *analytics_changepointalarmentries* prior to DataMiner 10.3.0 [CU5]/10.3.8)
 - [analytics_parameterinfo](#analytics_parameterinfo)
 - [analytics_trendalarms](#analytics_trendalarms)
 - [analytics_wavestream](#analytics_wavestream)
@@ -679,9 +679,9 @@ The analytics_changepoints table is defined as follows:
 |st|timestamp|No|Start change point time range|
 |sv|double|No|Change point start value|
 
-#### analytics_changepointalarmentries
+#### ai_cpalarms
 
-This table is used to keep track of the open suggestion events and alarm events created by [behavioral anomaly detection](xref:Behavioral_anomaly_detection).
+This table is used to keep track of the open suggestion events and alarm events created by [behavioral anomaly detection](xref:Behavioral_anomaly_detection). From DataMiner 10.3.0 [CU5]/10.3.8 onwards, the table is named *ai_cpalarms* to comply with the restrictions on table name lengths. In older versions, the name *analytics_changepointalarmentries* is used.
 
 This table is defined as follows:
 

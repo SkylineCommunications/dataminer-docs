@@ -99,7 +99,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="protocol">Instance that implements <see cref="SLProtocol"/>.</param>
 		/// <param name="tableId">The ID of the table parameter.</param>
 		/// <returns>The number of rows left. In case the ClearAllKeys method has been invoked specifying an empty table, -1 is returned.</returns>
-		/// <remarks>This method first retrieves all primary keys from the table using a NotifyProtocol type 168 [NT_GET_INDEXES](xref:NT_GET_INDEXES) call. If there is at least on primary key present, the method performs a NofityProtoocl type 156 call [NT_DELETE_ROW](xref:NT_DELETE_ROW), removing all rows.</remarks>
+		/// <remarks>This method first retrieves all primary keys from the table using a NotifyProtocol type 168 [NT_GET_INDEXES](xref:NT_GET_INDEXES) call. If there is at least one primary key present, the method performs a NofityProtoocl type 156 call [NT_DELETE_ROW](xref:NT_DELETE_ROW), removing all rows.</remarks>
 		[Obsolete("Use protocol.ClearAllKeys instead", false)]
 		public static object ClearAllKeys(SLProtocol protocol, int tableId)
 		{

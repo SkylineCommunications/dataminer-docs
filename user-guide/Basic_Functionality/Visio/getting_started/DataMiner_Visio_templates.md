@@ -59,4 +59,4 @@ Every custom Visio template must have a name identical to its Skyline-supplied c
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/visio-customizing-default-and-template-drawings/>
+> [Visio – Customizing default and template drawings](https://community.dataminer.services/video/visio-customizing-default-and-template-drawings/) ![Video](~/user-guide/images/video_Duo.png)

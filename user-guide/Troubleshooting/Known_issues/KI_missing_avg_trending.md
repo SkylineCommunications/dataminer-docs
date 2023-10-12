@@ -15,7 +15,7 @@ Day records for trending are only written into the Cassandra database if there i
 
 ## Fix
 
-Install DataMiner DataMiner 10.2.0 [CU11] or 10.3.2. <!-- RN 35179 -->
+Install DataMiner 10.2.0 [CU11] or 10.3.2. <!-- RN 35179 -->
 
 ## Workaround
 

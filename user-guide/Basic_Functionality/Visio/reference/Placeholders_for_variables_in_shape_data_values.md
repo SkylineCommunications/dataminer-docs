@@ -479,20 +479,6 @@ In this placeholder, specify three items, separated by commas:
 | y    | The input (e.g. a session variable).              |
 | z    | The string that will replace each of the matches. |
 
-Example:
-
-In case the *sessionvar* variable contains the value “*alpha\|beta\|gamma\|delta*”, you can place the following placeholder in the value of a shape data field:
-
-```txt
-[RegexReplace:(?<token>[^|]+)((?<separator>[|])|$),[var:sessionvar],value=1005 == ${token};]
-```
-
-The placeholder will then be replaced by the following string of text:
-
-```txt
-value=1005 == alpha;value=1005 == beta;value=1005 == gamma; value=1005 == delta;
-```
-
 > [!NOTE]
 >
 > - \[RegexReplace:x,y,z\] placeholders can be nested.
@@ -501,6 +487,26 @@ value=1005 == alpha;value=1005 == beta;value=1005 == gamma; value=1005 == delta;
 >   ```txt
 >   [RegexReplace:[Sep:,#]x#y#z]
 >   ```
+
+Examples:
+
+- In case the *sessionvar* variable contains the value “*alpha\|beta\|gamma\|delta*”, you can place the following placeholder in the value of a shape data field:
+
+  ```txt
+  [RegexReplace:(?<token>[^|]+)((?<separator>[|])|$),[var:sessionvar],value=1005 == ${token};]
+  ```
+
+  The placeholder will then be replaced by the following string of text:
+
+  ```txt
+  value=1005 == alpha;value=1005 == beta;value=1005 == gamma; value=1005 == delta;
+  ```
+
+- You can use this placeholder to remove the unit suffix of a parameter, so that it can be used within the [Sum](#sumxyz) placeholder. This is necessary if the sum uses a [param](#paramdmaidelementidparameterid) placeholder and the value of the parameter includes a unit, to make sure that value can be parsed into an integer. For example, to remove the unit "Frames" and calculate the sum of the parameter with ID 5 and a fixed value of 17, you can use this placeholder:
+
+  ```txt
+  [sum:[RegexReplace:\sFrames$,[param:*,5],],17]
+  ```
 
 ### \[Reservation:...\]
 
@@ -798,7 +804,20 @@ From DataMiner 9.6.8 onwards, this placeholder can be used to calculate datetime
 
     \[Subtract:23:33:15,00:03:15\]
 
-By default, datetime and time span values will be displayed in the regional date/time format. If you want such a value to be displayed in another format, then specify the format inside the placeholder, for example: *\[Subtract:23:33:15,00:03:15\|Format=HH:mm\]*
+By default, datetime and time span values will be displayed in the regional date/time format. If you want such a value to be displayed in another format, then specify the format inside the placeholder, for example: *\[Subtract:23:33:15,00:03:15\|Format=hh\:mm\]*.
+
+> [!NOTE]
+> For more info on possible formats, refer to <https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-timespan-format-strings>.
+
+From DataMiner 10.3.8/10.4.0 onwards, the subtract placeholder also supports numerics. Just like with time spans, you can subtract consecutive numbers from the first number.
+
+- Subtracting one number from another:
+
+    \[Subtract:10,3\]
+
+- Subtracting multiple numbers from the first number:
+
+    \[Subtract:10.1,3.3, 2.6\]
 
 ### \[Sum:X,Y,Z\]
 

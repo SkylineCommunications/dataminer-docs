@@ -26,7 +26,7 @@ DataMiner Protocol Markup Language:
 - [Protocol.Params.Param.ArrayOptions@options:discreetDestination](xref:Protocol.Params.Param.ArrayOptions-options#discreetdestination)
 - [Protocol.Params.Param.Measurement.Type: matrix](xref:Protocol.Params.Param.Measurement.Type#matrix)
 - [Protocol.Params.Param.Measurement.Type@link](xref:Protocol.Params.Param.Measurement.Type-link)
-- [Protocol.Params.Param.Measurement.Type: Options for measurement type “matrix”](xref:MeasurementTypeOptionsOverview#options-for-measurement-type-matrix)
+- [Protocol.Params.Param.Measurement.Type: Options for measurement type “matrix”](xref:Protocol.Params.Param.Measurement.Type-options#options-for-measurement-type-matrix)
 - [Protocol.Params.Param.Type: array](xref:Protocol.Params.Param.Type#array)
 - [Protocol.Params.Param.Type: discreet info](xref:Protocol.Params.Param.Type#discreet-info)
 - [Protocol.Params.Param.Type options: columnTypes](xref:Protocol.Params.Param.Type-options#columntypes)

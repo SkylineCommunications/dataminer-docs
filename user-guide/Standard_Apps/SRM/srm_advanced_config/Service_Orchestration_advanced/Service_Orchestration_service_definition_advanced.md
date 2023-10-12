@@ -2,7 +2,7 @@
 uid: Service_Orchestration_service_definition_advanced
 ---
 
-# Service Orchestration service definitions configuration
+# Service Orchestration: service definitions configuration
 
 In a [service definition](xref:srm_definitions#service-definition), several fields can be configured to define the behavior of bookings:
 

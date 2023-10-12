@@ -147,7 +147,7 @@ This page contains an overview of software management details for CI Types, with
 
 - **Version Parameter**: Displays the parameter name of the element where the software version is checked. This can be configured via the *Advanced* button.
 
-- **Set Baseline in Alarm Template**: This option allows you to have an alarm generated if a managed element runs a different software version than expected. For this purpose, both this option and *Software Compliancy* must be enabled and the *Version Baseline* and *Version Parameter Name* must be specified (via the *Advanced* page button). In the alarm template for the managed element, dynamic alarm thresholds should be assigned. You can do so by adding an asterisk ("\*") at the alarm threshold level for the desired alarm severity. See [Configuring an alarm template with dynamic alarm thresholds](xref:Configuring_alarm_templates#configuring-an-alarm-template-with-dynamic-alarm-thresholds).
+- **Set Baseline in Alarm Template**: This option allows you to have an alarm generated if a managed element runs a different software version than expected. For this purpose, both this option and *Software Compliancy* must be enabled and the *Version Baseline* and *Version Parameter Name* must be specified (via the *Advanced* page button). In the alarm template for the managed element, dynamic alarm thresholds should be assigned. You can do so by adding an asterisk ("\*") at the alarm threshold level for the desired alarm severity. See [Configuring dynamic alarm thresholds](xref:Configuring_dynamic_alarm_thresholds).
 
 - **Advanced**: Contains a button that launches a wizard where you can specify the software update script and image file location, as well as the compliancy version and the compliancy version parameter. See [Software image management configuration](#software-image-management-configuration).
 
@@ -199,7 +199,7 @@ The provisioning configuration window of the CI Type Management wizard contains 
 
 - **DMA**: The DMA where the element should be created. You can select any of the DMAs in the DMS, or select *Based on device address* to have a DMA assigned based on the discovered IP address (see [Provisioning](xref:Provisioning)).
 
-- **Element Details**: Click the *Details* button to specify the protocol that should be used for the provisioned element, the protocol version, the alarm and trend template, connection settings, and other details that would otherwise be available during element creation. See [Adding an element](xref:Adding_and_deleting_elements#adding-an-element).
+- **Element Details**: Click the *Details* button to specify the protocol that should be used for the provisioned element, the protocol version, the alarm and trend template, connection settings, and other details that would otherwise be available during element creation. See [Adding elements](xref:Adding_elements).
 
 - **Password Setup**: Click the *Setup* button to specify any parameters required for authentication along with their values.
 
@@ -253,7 +253,7 @@ The software image configuration window of the CI Type Management wizard contain
 
 - **Version parameter**: The parameter name of the element where the software version is checked.
 
-- **Set Baseline in Alarm Template**: This option allows you to have an alarm generated if a managed element runs a different software version than expected. For this purpose, both this option and *Software Compliancy* must be enabled and the *Version Baseline* and *Version Parameter Name* must be specified. In the alarm template for the managed element, dynamic alarm thresholds should be assigned. You can do so by adding an asterisk ("\*") at the alarm threshold level for the desired alarm severity. See [Configuring an alarm template with dynamic alarm thresholds](xref:Configuring_alarm_templates#configuring-an-alarm-template-with-dynamic-alarm-thresholds).
+- **Set Baseline in Alarm Template**: This option allows you to have an alarm generated if a managed element runs a different software version than expected. For this purpose, both this option and *Software Compliancy* must be enabled and the *Version Baseline* and *Version Parameter Name* must be specified. In the alarm template for the managed element, dynamic alarm thresholds should be assigned. You can do so by adding an asterisk ("\*") at the alarm threshold level for the desired alarm severity. See [Configuring dynamic alarm thresholds](xref:Configuring_dynamic_alarm_thresholds).
 
 ### Facilities configuration
 

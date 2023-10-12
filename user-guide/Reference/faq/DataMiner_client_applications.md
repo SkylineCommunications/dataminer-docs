@@ -2,7 +2,13 @@
 uid: DataMiner_client_applications
 ---
 
-# DataMiner client applications
+# Frequently asked questions about DataMiner client applications
+
+- [How do I send info about my DataMiner client to Technical Support?](#how-do-i-send-info-about-my-dataminer-client-to-technical-support)
+
+- [How do I reinstall the DataMiner Cube browser app?](#how-do-i-reinstall-the-dataminer-cube-browser-app)
+
+- [What should I do if I cannot connect to a DMA using the DataMiner Cube browser app?](#what-should-i-do-if-i-cannot-connect-to-a-dma-using-the-dataminer-cube-browser-app)
 
 ## How do I send info about my DataMiner client to Technical Support?
 

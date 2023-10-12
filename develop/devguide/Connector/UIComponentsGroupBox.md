@@ -61,4 +61,4 @@ The first parameter defines the group box header.
 DataMiner Protocol Markup Language:
 
 - [Protocol.Params.Param.Measurement.Type: title](xref:Protocol.Params.Param.Measurement.Type#title)
-- [Options for measurement type “title”](xref:MeasurementTypeOptionsOverview#options-for-measurement-type-title)
+- [Options for measurement type “title”](xref:Protocol.Params.Param.Measurement.Type-options#options-for-measurement-type-title)

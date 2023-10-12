@@ -7,7 +7,7 @@ uid: WorkingWithTheAlarmConsoleHistorySlider
 In the Alarm Console, you can display a timeline at the bottom of the *Active alarms* tab. To do so, click the *History slider* button in the alarm bar: ![history slider button](~/user-guide/images/History_Slider_button.png)
 
 > [!TIP]
-> See also: [Alarm Console – Alarm history](https://community.dataminer.services/video/alarm-console-alarm-history/) on DataMiner Dojo.
+> See also: [Alarm Console – Alarm history](https://community.dataminer.services/video/alarm-console-alarm-history/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 ## Active alarms tab timeline
 

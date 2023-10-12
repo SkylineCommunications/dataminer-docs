@@ -15,6 +15,9 @@ DataMiner supports the following types of directories for user management:
 
 By default, DataMiner will import users from its local Active Directory.
 
+> [!NOTE]
+> Importing users via these methods does not necessarily allow these users to sign in. See [User authentication](#user-authentication).
+
 ## Local users
 
 Apart from directory users, DataMiner also has a notion of local users, i.e. users created within the DataMiner System. Behind the scenes, when a new local user is created, DataMiner will create a new Windows user. Local users are completely managed by the Windows Server hosting your DataMiner System. This means Windows is responsible for password storage, complexity, and audit trail requirements.

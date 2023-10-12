@@ -87,6 +87,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | PAM | Production Asset Management. System designed to manage the production workflow, often in digital media production. |
 | Parameter | A variable that refers to pieces of data in the system.<br>See [Parameters](xref:parameters). |
 | Parameter dependency | A relationship between two or more parameters defined in an element protocol.<br>See [Parameter dependencies](xref:Parameter_dependencies). |
+| Pattern matching | The automatic recognition of a tagged pattern in the trend data of a parameter.<br>See [Working with pattern matching](xref:Working_with_pattern_matching). |
 | Pending inventory | In the context of DataMiner IDP, this represents the elements in a DMS that are not yet managed by IDP. Also known as "unmanaged inventory".<br>See [DataMiner IDP app](xref:SolIDP#dataminer-idp-app). |
 | PHY | Physical layer. |
 | PMR | Private Mobile Radio. Two-way radio voice communication systems using portable, mobile, base station and dispatch console radios. Also known as Professional Mobile Radio and Land Mobile Radio (LMR). |
@@ -95,6 +96,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | Post-roll | The final stage of a booking life cycle, which contains the events that should take place after the booking has ended.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
 | Pre-roll | The initial stage of a booking life cycle, which contains the events that should take place before the booking itself starts.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
 | Primary element | Element within a redundancy group that is operational in normal conditions.<br>See [Primary elements, backup elements and virtual primary elements](xref:About_redundancy_groups#primary-elements-backup-elements-and-virtual-primary-elements). |
+| Proactive (cap) detection | The automatic prediction of future alarm threshold breaches.<br>See [Proactive cap detection](xref:Proactive_cap_detection). |
 | Production version | The version of a protocol that is currently the main version used in the DMS. |
 | Profile | Configuration required for a function resource.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
 | Profile definition | Definition of the configuration, monitored KPIs, capacities and capabilities of a function resource, which can contain parameters and scripts.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
@@ -129,7 +131,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | Redundancy group template | A template that contains the configuration for a redundancy group but does not have fixed elements assigned.<br>See [Creating a redundancy group template](xref:Creating_a_redundancy_group_template) and [Assigning elements to a redundancy group template](xref:Assigning_elements_to_a_redundancy_group_template). |
 | Redundancy mode | Mode that determines whether element switchover and switchback in a redundancy group happen automatically or manually, or a combination of both.<br>See [Changing the redundancy mode](xref:Changing_the_redundancy_mode). |
 | Regular expression | Sequence of characters resulting in a pattern that can be used to find and manage matching text. |
-| Relative alarm threshold | Dynamic alarm threshold that is configured as a percentage representing the delta with the baseline value.<br>See [Configuring an alarm template with dynamic alarm thresholds](xref:Configuring_alarm_templates#configuring-an-alarm-template-with-dynamic-alarm-thresholds). |
+| Relative alarm threshold | Dynamic alarm threshold that is configured as a percentage representing the delta with the baseline value.<br>See [Configuring dynamic alarm thresholds](xref:Configuring_dynamic_alarm_thresholds). |
 | Replicated element/service | An element or service that is shown in a DMS, but managed by a different DMS. It inherits all parameter values from its counterpart in the other DMS. |
 | Report | Document with specific information on the DataMiner System, based on a report template in the DMS Reporter module.<br>See [DMS Reporter](xref:reporter). |
 | Reporter | DataMiner application that allows you to generate graphical reports showing statistical data and operational metrics of the DMS.<br>See [DMS Reporter](xref:reporter). |
@@ -174,7 +176,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | SDV | Switched Digital Video. Also referred to as Switched Broadcast (SWB). Method for distributing digital video via cable, where digitally encrypted channels are switched out when they are not being watched and switched in when they are needed. |
 | Second-party DataMiner Connector | DataMiner connector developed by the owner of a DataMiner System. |
 | Serial Gateway | Serial server that allows you to connect multiple RS-232 ports to a DMS via the acquisition LAN of a DMA.<br>See [Serial gateways](xref:SerialGateways#serial-gateways). |
-| Service | Group of elements or partial elements, combined from the perspective of a particular business aspect.<br>See [Services and service templates](xref:services#services-and-service-templates). |
+| Service | Group of elements or partial elements, combined from the perspective of a particular business aspect.<br>See [Services and service templates](xref:About_services). |
 | Service booking instance | Booking instance that will create a matching DataMiner service while it is active.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
 | Service booking definition | Blueprint for service booking instances that are grouped in a recurring pattern.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
 | Service definition | Definition of the topology, behavior (LSO) and data exchange ruleset (DTR) of a service, in the context of DataMiner SRM.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
@@ -185,7 +187,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | Service profile | Profile for one or more service definitions that makes it possible to preconfigure profile instances for the service definitions, so that these no longer need to be selected during booking creation. In DataMiner, this is available in the form of service profile definitions with corresponding service profile instances.<br>See [Using the profiles tab](xref:SRM_Services_profiles). |
 | Service profile definition | Definition of a service profile that includes the service definitions to which the service profile applies and the mapping of the service profile nodes to the service definition nodes.<br>See [Using the profiles tab](xref:SRM_Services_profiles). |
 | Service profile instance | Instance of a service profile definition with specific profile instances linked to it.<br>See [Using the profiles tab](xref:SRM_Services_profiles). |
-| Service protocol | Protocol that can be assigned to a service when the service is created or edited. Such a service is known as an “enhanced service” and allows alarm monitoring and trending. <br> Note that in earlier DataMiner versions the term “service definition” was used instead, but this term is now exclusively used for the definition of how the various functions in a service are linked to each other, in the context of DataMiner SRM. |
+| Service protocol | Protocol that can be assigned to a service when the service is created or edited. Such a service is known as an "enhanced service" and allows alarm monitoring and trending. <br> Note that in earlier DataMiner versions the term "service definition" was used instead, but this term is now exclusively used for the definition of how the various functions in a service are linked to each other, in the context of DataMiner SRM. |
 | Service state | In the context of DataMiner SRM, this is the state that is defined for each phase in the life cycle of the service representing a booking, e.g. start, stop, pause, standby, etc. When there is a change in the life cycle of the booking, the resources used in the booking will be configured according the settings for the corresponding service state.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
 | Service template | Template that can be used to easily create many similar services at the same time.<br>See [Service templates](xref:Service_templates). |
 | Service Templates | DataMiner Cube module that allows easy management of service templates.<br>See [Using the Service Templates module](xref:Managing_service_templates#using-the-service-templates-module). |
@@ -238,13 +240,14 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | SRM Standard Solution | DataMiner blueprint configuration that facilitates and accelerates the design and deployment of application-specific SRM solutions. This includes an installation and upgrade package of the required DataMiner components, a pre-built user interface to configure and operate SRM solutions, and ready-made workflows for booking and life cycle orchestration of services (LSO). |
 | SSH | Secure Shell. Protocol for secure remote login and other secure network services over an insecure network. |
 | SSPA | Solid-State Power Amplifier. Amplifier that uses field-effect transistors to amplify radio frequency signals. |
+| STaaS | Storage as a Service. Cloud-native storage platform that allows users to connect their DMS to a scalable storage platform. |
 | StatMux | Statistical Multiplexing. Multiplexing technique where a communication channel is divided into an arbitrary number of variable bitrate data streams. |
 | STB | Set-top box. Device connecting a TV to an external source in order to receive digital television broadcasts. |
 | Stencil | Preconfigured shapes or groups of shapes in Microsoft Visio. DataMiner supplies stencils in the DataMiner house style.<br>See [Accessing the DataMiner stencils](xref:Working_with_shape_data_in_Microsoft_Visio#accessing-the-dataminer-stencils). |
 | Stream sniffer | Functionality within the stream viewer application that allows the capture of a stream for diagnostic purposes.<br>See [Connecting to an element using Stream Viewer](xref:Connecting_to_an_element_using_Stream_Viewer). |
 | Stream viewer | DataMiner application that provides a real-time view of communication between a DMA and an element.<br>See [Connecting to an element using Stream Viewer](xref:Connecting_to_an_element_using_Stream_Viewer). |
 | String parameter | A parameter that has a string as its value. |
-| Suggestion event | Notification in the Alarm Console indicating that an anomalous level shift, trend change or variance change has been detected.<br>See [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection). |
+| Suggestion event | Notification in the Alarm Console generated by the DataMiner artificial intelligence capabilities.<br>See [Advanced analytics features in the Alarm Console](xref:Advanced_analytics_features_in_the_Alarm_Console). |
 | Surveyor | Pane in DataMiner Cube that contains a hierarchical overview of all views, elements, services, etc. in the DataMiner System. |
 | SVN | Subversion. |
 | Sweeptime | The time that a spectrum analyzer takes to tune across the displayed frequency span.<br>See [Changing the spectrum analyzer settings](xref:Changing_the_spectrum_analyzer_settings). |
@@ -264,7 +267,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | TFTP | Trivial File Transfer Protocol. Simple file transfer protocol that can be used to retrieve a file from or put a file on a remote host. |
 | Third-party DataMiner Connector | DataMiner connector developed by a DataMiner Strategic Partner, which can be a product vendor, a system integrator, a consultancy company or a reseller. |
 | Ticket | A record in the system related to a specific problem, which can contain information such as the affected resource and the severity of the issue.<br>See [Ticketing](xref:ticketing). |
-| Ticket domain | Definition of the layout of a collection of tickets, which allows the tickets of a third-party system to sync with DataMiner tickets. Also known as a “ticket field resolver”.<br>See [Ticketing](xref:ticketing). |
+| Ticket domain | Definition of the layout of a collection of tickets, which allows the tickets of a third-party system to sync with DataMiner tickets. Also known as a "ticket field resolver".<br>See [Ticketing](xref:ticketing). |
 | Ticketing | Application used to create and/or manage tickets in DataMiner.<br>See [Ticketing](xref:ticketing). |
 | Timer base | General parameter of an element that can be used to adjust the polling speed of the element.<br>See [Changing the polling speed of an element](xref:Changing_the_polling_speed_of_an_element). |
 | Timetrace data | History alarm data used to list history alarms in alarm tabs and to graphically visualize history alarm information in the Alarm Console history slider. |
@@ -273,8 +276,9 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | Transparent clock | Device in a PTP environment that passes the time it retrieves from a boundary clock or grandmaster clock on to endpoint devices.<br>See [DataMiner PTP app](xref:SolPTP#dataminer-ptp-app) |
 | Trend change | Change in the behavior of a trend, detected by DataMiner Analytics, where the value suddenly starts to increase or decrease at an unusual rate.<br>See [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection). |
 | Trend group | A group of parameters for which trending is displayed.<br>See [Working with trend groups](xref:Working_with_trend_groups). |
+| Trend pattern | A tagged pattern in the trend data of a parameter.<br>See [Working with pattern matching](xref:Working_with_pattern_matching) and [Monitoring of trend patterns](xref:Monitoring_of_trend_patterns). |
 | Trend prediction | Prediction of the expected trend of a parameter value in the future.<br>See [Working with trend predictions](xref:Working_with_trend_predictions). |
-| Trend template | Template that defines for which parameter trending information has to be logged and which kind of trending information has to be included.<br>See [Trend templates](xref:Trend_templates). |
+| Trend template | Template that defines for which parameter trending information has to be logged and which kind of trending information has to be included.<br>See [Trend templates](xref:About_trend_templates). |
 | Trending | DataMiner functionality that allows you to visualize the trend of parameter values.<br>See [Trending](xref:trending). |
 | TS | Transport Stream. Digital container format for transmission and storage of audio, video and data of a broadcast. |
 | TSoIP | Transport Stream over IP. Transfer of transport streams over IP-based networks. |
@@ -303,18 +307,18 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | VDA | Video Distribution Amplifier. Device that amplifies a video signal and sends it to multiple outputs. |
 | VF | Virtual Function. |
 | VHF | Very High Frequency. Refers to radio frequencies between 30 MHz and 299.9 MHz. |
-| View | Folder within the DataMiner software that can contain elements, services and other DataMiner components.<br>See [Views](xref:views). |
+| View | Folder within the DataMiner software that can contain elements, services and other DataMiner components.<br>See [Views](xref:About_views). |
 | Violation filter | Filter configured on an SLA to give a specific weight to certain alarms or to filter out alarms.<br>See [Setting a violation filter](xref:Configuring_the_alarm_settings_for_an_SLA#setting-a-violation-filter). |
 | Virtual element | Element that does not communicate directly with a device. Usually, it instead connects to one or more other elements in the DMS.<br>See [Virtual elements](xref:Virtual_elements). |
 | Virtual function | Virtual DataMiner element that represents a specific virtual function resource. Abbreviated as VF.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
 | Virtual function definition | Definition of the parameters, interfaces, etc. of a virtual function resource.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
 | Virtual function instance | Instantiation of a virtual function definition, consisting of both a virtual function and a virtual function resource. The virtual function is used to access the relevant virtual function parameters, while the virtual function resource is used to prevent overbooking of the virtual function.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
-| Virtual function resource | Resource that is part of an element with a specific function, sometimes simply called “function”. Virtual function resources are represented in DataMiner as a specific type of virtual elements, i.e. virtual functions.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
+| Virtual function resource | Resource that is part of an element with a specific function, sometimes simply called "function". Virtual function resources are represented in DataMiner as a specific type of virtual elements, i.e. virtual functions.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
 | Virtual platform | Logical collection of resource pools, in the context of DataMiner SRM.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
 | Virtual primary element | Virtual element within a redundancy group that represents a primary or backup element in the group, depending on which of these is currently operational.<br>See [Primary elements, backup elements and virtual primary elements](xref:About_redundancy_groups#primary-elements-backup-elements-and-virtual-primary-elements). |
 | Virtual SNMP agent | SNMP agent functionality that can be activated for an element in Cube, so that it forwards SNMP notifications toward every activated SNMP manager defined in the DataMiner System.<br>See [Enabling the virtual SNMP agent of an element](xref:Enabling_the_virtual_SNMP_agent_of_an_element). |
 | Visio | Microsoft Visio is an application that can be used to create diagrams and vector graphics. Visio drawings can be used in DataMiner as visual overviews.<br>See [Visio drawings](xref:visio#visio-drawings). |
-| Visual overview | Graphical representation of components and data in the system. The visual overviews in DataMiner are created in Microsoft Visio. The pages of a card that contain these graphical representations are also referred to as “Visual Overview” in general. |
+| Visual overview | Graphical representation of components and data in the system. The visual overviews in DataMiner are created in Microsoft Visio. The pages of a card that contain these graphical representations are also referred to as "Visual Overview" in general. |
 | VPN | Virtual Private Network. Secure, encrypted connection between two networks or between an individual user and a network. |
 | VRF | Virtual Routing and Forwarding. Technology that allows multiple instances of a routing table to exist in the same router at the same time. |
 | VSAT | Very Small Aperture Terminal. Earth station with a dish antenna that is smaller than 3.8 meters. |

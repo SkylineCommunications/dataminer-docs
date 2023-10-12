@@ -48,7 +48,7 @@ This will return the following response:
 ![ConnectApp API Request](~/develop/images/Ansible_webapi.png)
 
 > [!NOTE]
-> It can be helpful to first test your API requests with an API platform like Postman and check the returned values.
+> It can be helpful to first test your API requests with an API platform like [Postman](xref:Postman) and check the returned values.
 
 > [!TIP]
 > For detailed information about each of the available methods, see [Methods (v1)](xref:WS_Methods_v1_overview).

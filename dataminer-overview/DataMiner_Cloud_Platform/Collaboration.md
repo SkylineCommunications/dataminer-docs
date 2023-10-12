@@ -19,6 +19,7 @@ uid: Overview_Collaboration
 > - [Workflow Use Case - DataMiner Live Dashboard Sharing](https://community.dataminer.services/use-case/dataminer-live-data-sharing/)
 > - [Use Case - Dashboard sharing facilitating collaboration across the entire supply chain](https://community.dataminer.services/use-case/dashboard-sharing-facilitating-collaboration-across-the-entire-supply-chain/)
 > - [Use Case - Dashboard sharing reducing OPEX while accelerating incident resolution](https://community.dataminer.services/use-case/dashboard-sharing-reducing-opex-while-accelerating-incident-resolution/)
+> - [Real-time Software Router Control Panel Sharing](https://community.dataminer.services/real-time-software-router-control-panel-sharing/)
 > - [User Guide - Sharing a Dashboard](xref:Sharing_a_dashboard)
 
 ## Remote Access
@@ -40,10 +41,11 @@ uid: Overview_Collaboration
 > [!TIP]
 > See also:
 >
+> - [Let us enhance your DataMiner ChatOps experience!](https://community.dataminer.services/let-us-enhance-your-dataminer-chatops-experience/)
 > - [ChatOps User Guide](xref:ChatOps)
-> - [Example Use Case - Custom chat commands](https://community.dataminer.services/use-case/dataminer-chatops-custom-commands/)
-> - [Examples - Custom chat commands](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/CustomCommandExamples)
-> - [Examples - Chat integration](https://github.com/SkylineCommunications/ChatOps-Extensions/tree/main/ChatIntegrationExamples)
+> - [Example use case - Custom chat commands](https://community.dataminer.services/use-case/dataminer-chatops-custom-commands/)
+> - [Examples - Custom chat commands](xref:DataMiner_Teams_bot)
+> - [Examples - Chat integration](xref:Microsoft_Teams_Chat_Integration)
 
 ## API Share *(coming soon)*
 
@@ -54,7 +56,7 @@ User-defined API sharing is primarily focused on **machine-to-machine interactio
 > [!TIP]
 > See also:
 >
-> - [Video - DataMiner compute and storage, on-prem and in the cloud](https://community.dataminer.services/video/dataminer-compute-and-storage-on-prem-and-in-the-cloud/)
+> - [Video - DataMiner compute and storage, on-prem and in the cloud](https://community.dataminer.services/video/dataminer-compute-and-storage-on-prem-and-in-the-cloud/) ![Video](~/user-guide/images/video_Duo.png)
 
 ## App Share *(coming soon)*
 

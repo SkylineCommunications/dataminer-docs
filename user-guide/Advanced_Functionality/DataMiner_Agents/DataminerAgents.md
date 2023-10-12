@@ -4,23 +4,15 @@ uid: DataminerAgents
 
 # DataMiner Agents
 
-This section consists of the following topics:
+A DataMiner Agent (DMA) or node is a physical or virtual compute instance running the DataMiner software. You typically [install a DMA](xref:Installing_a_DataMiner_Agent) using the DataMiner installer.
 
-- [Installing a DataMiner Agent](xref:Installing_a_DataMiner_Agent)
+This section of the documentation provides detailed instructions on properly [configuring a DataMiner Agent](xref:Changing_the_DMA_ID). It covers various aspects such as modifying the DataMiner ID of a DMA, configuring the IP network ports and polling request timeout, and more.
 
-- [Configuring a DataMiner Agent](xref:Configuring_a_DataMiner_Agent)
+To [back up your DMA](xref:Backing_up_a_DataMiner_Agent), you have the option to use either the DataMiner Taskbar Utility or DataMiner Cube. Alternatively, you can follow the backup procedure specific to Cassandra and Elasticsearch databases. Depending on the backup method employed, you can [restore your DMA](xref:Restoring_a_DataMiner_Agent) using the Taskbar Utility.
 
-- [Backing up a DataMiner Agent](xref:Backing_up_a_DataMiner_Agent)
+To ensure you have access to the latest DataMiner features, you can [upgrade your DMA](xref:Upgrading_a_DataMiner_Agent) through the Update Center, Taskbar Utility, or System Center. From DataMiner 10.3.0/10.3.3 onwards, separate DataMiner web upgrades are available. These upgrades allow you to access the latest web app features without requiring a complete DataMiner upgrade.
 
-- [Restoring a DataMiner Agent](xref:Restoring_a_DataMiner_Agent)
-
-- [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent)
-
-- [Uninstalling a DataMiner Agent](xref:Uninstalling_a_DataMiner_Agent)
-
-- [DataMiner packages](xref:DataMiner_packages)
-
-- [Exporting and importing packages on a DMA](xref:Exporting_and_importing_packages_on_a_DMA)
+Furthermore, you will find instructions on [monitoring the health of your DMA](xref:Health_Assessment_Guidelines_for_DataMiner_Agent), [uninstalling your DMA](xref:Uninstalling_a_DataMiner_Agent), managing [DataMiner packages](xref:DataMiner_packages), and [exporting and importing them on your DMA](xref:Exporting_and_importing_packages_on_a_DMA).
 
 > [!TIP]
-> See also: [Rui’s Rapid Recap – Agents page](https://community.dataminer.services/video/ruis-rapid-recap-agents-page/) on DataMiner Dojo.
+> See also: [Rui’s Rapid Recap – Agents page](https://community.dataminer.services/video/ruis-rapid-recap-agents-page/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)

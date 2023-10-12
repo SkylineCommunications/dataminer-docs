@@ -4,7 +4,7 @@ uid: BPA_Check_Antivirus_DLLs
 
 # Check Antivirus DLLs
 
-When installed on a DataMiner Agent, antivirus software must be configured to exclude the DataMiner processes.
+When installed on a DataMiner Agent, [antivirus software must be configured to exclude the DataMiner processes](xref:Regarding_antivirus_software).
 
 The *Check Antivirus DLLs* BPA test specifically detects the presence of antivirus DLLs loaded into DataMiner processes (SL*.exe hosted from the `C:\Skyline DataMiner\Files` folder). You can find information about this BPA test below.
 

@@ -2,7 +2,7 @@
 uid: Troubleshooting_Trending
 ---
 
-# Troubleshooting - Trending
+# Troubleshooting - trending
 
 > [!NOTE]
 >
@@ -27,7 +27,7 @@ classDef classSolution fill:#58595b,stroke:#58595b,color:#ffffff,stroke-width:0p
 %% Define blocks %%
 START([Trend issue])
 GetDELT{{Get a .dmimport package with trend data,\nunzip it and check the 'Database' folder.}}
-TrendDataInspector{{"Check the data with the trend data inspector.\n(Client test tool => Advanced => Test => Trend Data Inspector)"}}
+TrendDataInspector{{"Check the data with the trend data inspector."}}
 QueryDatabase{{Query the database directly.}}
 DataPresent([Is the data there?])
 ReadIssue([Read issue])
@@ -42,6 +42,7 @@ TrendDataInspector --- DataPresent
 DataPresent --- |Yes|ReadIssue
 DataPresent --- |No|WriteIssue
 %% Define hyperlinks %%
+click TrendDataInspector "/user-guide/Reference/DataMiner_Tools/SLNetClientTest_tool/SLNetClientTest_tool_diagnostic_procedures/SLNetClientTest_trend_data_inspector.html"
 click ReadIssue "#read-issue" "Trending"
 click WriteIssue "#write-issue" "Trending"
 %% Apply styles to blocks %%
@@ -87,6 +88,11 @@ class GetDELT,TrendDataInspector,QueryDatabase,FollowCTT,ReadIssueChecks,ClientE
 class DataPresent classDecision;
 class NotFixed classSolution;
 </div>
+
+> [!NOTE]
+>
+> - For more information on trend logging, see [Debug settings](xref:Computer_settings#debug-settings).
+> - For more information on following a Cube session via the SLNetClientTest tool, see [Tracking DMA communication](xref:SLNetClientTest_tracking_dma_communication). Tracking the requests and responses should be sufficient.
 
 ### Write Issue
 

@@ -78,7 +78,7 @@ From now on, the URL of a published version of an app will no longer contain the
 
 The `Clusterstate.xml` file, located in the `C:\Skyline DataMiner` folder, was obsolete and has now been removed.
 
-#### Low-code apps: Enhanced confirmation message when deleting an app [ID_35269]
+#### Low-Code Apps: Enhanced confirmation message when deleting an app [ID_35269]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
@@ -376,13 +376,13 @@ On DataMiner clusters with a Cassandra Cluster database, incorrect *db.xml* entr
 
 When you had defined an inline preset while configuring an embedded spectrum component, that preset would no longer be applied. Instead, a `Please select at least one of the preset content items before clicking Load.` message would appear.
 
-#### Dashboards app & Low-code apps: Enhanced caching of items in query column selection box [ID_35251]
+#### Dashboards app & Low-Code Apps: Enhanced caching of items in query column selection box [ID_35251]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
 When creating or editing a query, you can select the query columns from a selection box. A number of enhancements have now been made with regard to the caching of this list of query columns.
 
-#### Dashboards app & Low-code apps: Selected data would incorrectly not get removed after being deleted [ID_35254]
+#### Dashboards app & Low-Code Apps: Selected data would incorrectly not get removed after being deleted [ID_35254]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
@@ -394,7 +394,7 @@ When data (e.g. a query) was deleted while it was selected, in some cases, it wo
 
 When, in the side bar, you right-clicked a folder or a dashboard, and then clicking the ellipsis ("...") in the tab header, two context menus could incorrectly be displayed simultaneously.
 
-#### Dashboards app & Low-code apps - Node edge component: Problem with 'Set as ...' commands in component settings [ID_35256]
+#### Dashboards app & Low-Code Apps - Node edge component: Problem with 'Set as ...' commands in component settings [ID_35256]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
@@ -402,7 +402,7 @@ When, in the settings of a node edge component, you had selected a configured ed
 
 From now on, it will only be possible to set a node as edge and vice versa.
 
-#### Dashboards app & Low-code apps: Unknown components would incorrectly no longer be indicated as such [ID_35257]
+#### Dashboards app & Low-Code Apps: Unknown components would incorrectly no longer be indicated as such [ID_35257]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
@@ -422,7 +422,7 @@ Up to now, when email addresses and hyperlinks to web pages were retrieved from 
 
 When a client application connects to a DataMiner Agent, it will first try to set up communication via eventing. If communication via eventing fails, the DataMiner Agent will fall back to communication via polling. In some rare cases, both types of communication (i.e. eventing and polling) would incorrectly be used simultaneously.
 
-#### Low-code apps: Keyboard shortcuts would not work in the dashboard editor [ID_35274]
+#### Low-Code Apps: Keyboard shortcuts would not work in the dashboard editor [ID_35274]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 

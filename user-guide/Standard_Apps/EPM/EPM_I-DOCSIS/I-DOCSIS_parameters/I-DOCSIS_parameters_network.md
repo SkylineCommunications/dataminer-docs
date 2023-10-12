@@ -28,7 +28,9 @@ This page contains an overview of the Network parameters available in the I-DOCS
 
 - **Number CM DOCSIS 3.1**
 
-- **Number CM DOCSIS Other**
+- **Number CM DOCSIS Other**: Calculated. The number of CMs associated with the given level that have an unknown DOCSIS version.
+
+  Calculated by adding up the number of CMs with an unknown DOCSIS version that are part of the network.
 
 - **Number CM Ping OK**
 

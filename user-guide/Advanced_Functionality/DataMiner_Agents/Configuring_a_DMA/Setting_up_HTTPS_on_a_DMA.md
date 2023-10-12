@@ -101,6 +101,9 @@ Redirecting HTTP traffic to HTTPS is recommended when external systems (or clien
 
    1. Under *Pattern*, fill in the following pattern: *(.\*)*
 
+      > [!NOTE]
+      > Make sure to include the parentheses.
+
    1. Under *Conditions*, click *Add*, and add the following condition:
 
       - **Input**: {HTTPS}
@@ -176,7 +179,7 @@ The following auto-detect methods can be specified:
 
 - **I can no longer launch DataMiner Cube from the DataMiner Cube start window**
 
-    If you added the DMS based on the IP address, this may no longer work if HTTPS is required. Add a new DataMiner System and **use the FQDN** instead of the IP address. See [Opening DataMiner Cube](xref:Opening_DataMiner_Cube).
+    If you added the DMS based on the IP address, this may no longer work if HTTPS is required. Add a new DataMiner System and **use the FQDN** instead of the IP address. See [Opening DataMiner Cube](xref:Opening_the_desktop_app).
 
 - **The webpage could not be found (HTTP 404 error)**
 

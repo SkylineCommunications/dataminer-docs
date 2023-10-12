@@ -4,7 +4,7 @@ uid: docs_dataminer_services
 
 # docs.dataminer.services
 
-Welcome to the home of DataMiner documentation!
+Welcome to the home of DataMiner documentation! 
 
 This is where you'll find all essential information on how to use DataMiner and develop your DataMiner System (including connectors, Visual Overview, Automation, etc.).
 

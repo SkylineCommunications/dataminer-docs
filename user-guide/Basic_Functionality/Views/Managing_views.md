@@ -38,14 +38,16 @@ In the Surveyor, the following actions are possible:
 
    - If you hold the item you are dragging over a collapsed view, after two seconds, the view will expand. Dragging the item to the top or bottom of the Surveyor list will make the Surveyor scroll automatically.
 
-   - To copy multiple items from one view to another at the same time, select the items on the “below this view” page of the source view using Shift or Ctrl and drag them all to the target view in the Surveyor at the same time.
+   - To move multiple items from one view to another at the same time, select the items on the “below this view” page of the source view using Shift or Ctrl and drag them all to the target view in the Surveyor at the same time.
 
      > [!NOTE]
      >
+     > - Prior to DataMiner 10.3.5/10.4.0, this will copy the items instead of moving them. You can remove the items individually by right-clicking the element and selecting *Remove from parent*.
      > - If the source view is not yet open while you are in *Drag and drop editing* mode, use the Surveyor right-click menu to open it.
-     > - Copying multiple items from one view to another will not remove them from the source view. The items can be removed individually by right-clicking the element and selecting *Remove from parent*.
 
-   - In the editing mode, complete views can be copied as well.
+   - From DataMiner 10.3.5/10.4.0 onwards, press Ctrl while dragging to copy an item into the view. This will create a copy, not a duplicate item.
+
+   - In the editing mode, complete views can be moved or copied as well.
 
 1. Click *Exit editing* to exit the drag-and-drop editing mode.
 

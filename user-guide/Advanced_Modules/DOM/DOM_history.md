@@ -8,8 +8,17 @@ From DataMiner 10.1.3/10.2.0 onwards, The DOM manager tracks the history of all 
 
 When a `DomInstance` is created or updated, a new `HistoryChange` object will be stored containing the created, updated, or deleted values. When a `DomInstance` is deleted, all history data is automatically deleted.
 
+Prior to DataMiner version 10.3.9/10.4.0<!-- RN 36785 -->, this is done synchronously during `DomInstance` calls. This can cause these calls to take longer than expected. In case of a `DomInstance` delete, this delay could add up when there have been a lot of updates for that instance. From DataMiner 10.3.9/10.4.0 onwards, all DOM managers will by default execute the history actions asynchronously in the background. This prevents this delay on the `DomInstance` calls and thus improves their performance. However, note that it may still take a while for delete actions to be completed in the background.
+
 > [!NOTE]
-> If for some reason the history storage is not working correctly, the CRUD operations for DOM instances will still continue to work, but the history will no longer be tracked. If this happens, an error will be logged for every failed history save. The notice will only be generated every hour to prevent an excessive number of notices.
+>
+> - When designing a DOM manager, consider disabling the DOM history if these records are not required. This reduces the load on the database and reduces the amount of storage required. See [Disabling the history or changing the storage behavior](#disabling-the-history-or-changing-the-storage-behavior).
+> - If for some reason the history storage is not working correctly, the CRUD operations for DOM instances will still continue to work, but the history will no longer be tracked. If this happens, an error will be logged for every failed history save. A notice in the Alarm Console will only be generated every hour to prevent an excessive number of notices.
+> - It can happen that history records are still returned for a deleted DOM instance for a short time after this instance is deleted. This time can vary depending on the history settings, the number of records, and the database performance.
+
+## Disabling the history or changing the storage behavior
+
+From DataMiner 10.3.9/10.4.0 onwards, you can override the default asynchronous save and delete behavior of the DOM instance history by setting the *DomInstanceHistoryStorageBehavior* option in the `ModuleSettings`. With this option, you can force the history to be saved synchronously, or you can disable history saving completely. For more information, see [DomInstanceHistorySettings](xref:DOM_DomInstanceHistorySettings).
 
 ## Changes to the field values
 

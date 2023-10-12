@@ -42,4 +42,4 @@ Set the Type of the Measurement tag to "analog".
 
 DataMiner Protocol Markup Language:
 
-- [Protocol.Params.Param.Measurement.Type@options: analog](xref:MeasurementTypeOptionsOverview#options-for-measurement-type-analog)
+- [Protocol.Params.Param.Measurement.Type@options: analog](xref:Protocol.Params.Param.Measurement.Type-options#options-for-measurement-type-analog)

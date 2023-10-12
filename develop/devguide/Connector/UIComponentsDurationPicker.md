@@ -31,4 +31,4 @@ Allows the user to select a duration.
 
 DataMiner Protocol Markup Language:
 
-- [Protocol.Params.Param.Measurement.Type options: time](xref:MeasurementTypeOptionsOverview#options-for-measurement-type-number)
+- [Protocol.Params.Param.Measurement.Type options: time](xref:Protocol.Params.Param.Measurement.Type-options#options-for-measurement-type-number)

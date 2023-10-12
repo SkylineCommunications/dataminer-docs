@@ -13,7 +13,7 @@ Updates and upgrades are available for:
 
 ### Supported versions
 
-Skyline Communications supports up to 3 major versions at any time, being the current Main Release and the 2 previous Main Releases. For instance, if the current latest DataMiner version is 10.2.x, the versions 10.1.x and 10.0.x will still be supported via an active DataMiner Maintenance and Support Contract. See [DataMiner Supported Life Cycle Policy](https://community.dataminer.services/dataminer-supported-versions-lifecycle/).
+Skyline Communications supports up to 3 major versions at any time, being the current Main Release and the 2 previous Main Releases. For instance, if the current latest DataMiner version is 10.2.x, the versions 10.1.x and 10.0.x will still be supported via an active DataMiner Maintenance and Support Contract. See [DataMiner Supported Life Cycle Policy](xref:Software_support_life_cycles).
 
 ### Upgrade cycle
 
@@ -27,10 +27,10 @@ Every available release is announced with comprehensive release notes, containin
 DataMiner is based on a non-exclusive upgrade model, meaning that users can skip any of the available updates and then only install the most recent upgrade, which automatically brings along all previous upgrades.
 
 > [!NOTE]
-> In case you skip multiple major releases, you will need to install each Main Release version sequentially to upgrade to the latest version. See [Upgrading your DataMiner System](xref:Upgrading_a_DataMiner_Agent).
+> In case you skip multiple major releases, follow the instructions detailed under [Upgrade Paths](xref:Upgrade_Paths), as sometimes intermediate steps are required.
 
 > [!TIP]
-> For more detailed information on the DataMiner release cycles, see [DataMiner Main Release vs. Feature Release](https://community.dataminer.services/dataminer-main-release-vs-feature-release/).
+> For more detailed information on the DataMiner release cycles, see [DataMiner Main Release vs. Feature Release](xref:DataMiner_MR_vs_FR).
 
 ## Connector update policy
 

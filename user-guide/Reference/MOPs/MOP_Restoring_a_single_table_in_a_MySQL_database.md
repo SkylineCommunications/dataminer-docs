@@ -10,7 +10,7 @@ The procedure below details how you can restore a single table in a MySQL databa
 
 - Access to the servers with administrator rights. This requires a connection dedicated completely or partially to this procedure, via VPN or local network.
 - In case of data modelling needs, access to a spreadsheet application.
-- Access to MySQL Workbench.
+- Access to [MySQL Workbench](xref:MySQL_Workbench).
 
 ## Procedure
 

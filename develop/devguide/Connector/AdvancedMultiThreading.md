@@ -6,22 +6,22 @@ uid: AdvancedMultiThreading
 
 For each element, a main protocol execution thread is created in the SLProtocol process (see Inner workings). In a protocol, it is possible to specify that additional threads should be created. This can be useful, for example, to separate time-critical actions from the polling of a device.
 
-An extra thread in a driver is linked to a connection. This can be a real connection (e.g. SNMP, serial, etc.) or a virtual connection (for non-polling related functionality, e.g. implementing cleanup). The new thread has its own group execution queue and RTE registration.
+An extra thread in a protocol is linked to one or more connections. This can be a real connection (e.g. SNMP, serial, etc.) or a virtual connection (for non-polling related functionality, e.g. implementing cleanup). The new thread has its own group execution queue and RTE registration.
 
 > [!NOTE]
 > When a new thread is specified for a virtual connection, a connection ID of 1001 or higher is used.
 
-The following example defines an HTTP connection (the main connection) and a serial connection.
+The following example defines an SNMP connection (the main connection) a serial connection, and an HTTP connection.
 
 ```xml
-<Type relativeTimers="true" advanced="serial:mySerialConnection">http</Type>
+<Type relativeTimers="true" advanced="serial:mySerialConnection;http:myHttpConnection">snmp</Type>
 ```
 
-Next to the main execution thread (which is always created and active), a number of additional threads are defined. The thread with connection ID 1 will correspond with the serial connection. The other threads (with ID >1000) are threads used to execute logic that is not related to connections defined in the Type tag.
+Next to the main execution thread (which is always created and active), a number of additional threads are defined. The thread with connection IDs "1,2" will correspond with the serial connection and the HTTP connection, respectively. The other threads (with ID > 1000) are threads used to execute logic that is not related to connections defined in the Type tag.
 
 ```xml
 <Threads>
-   <Thread connection="1" /> <!-- 2nd Device connection = serial. -->
+   <Thread connection="1,2" /> <!-- 2nd and 3rd device connection = serial and HTTP. -->
    <Thread connection="1001" /> <!-- Internal 1. -->
    <Thread connection="1002" /> <!-- Internal 2. -->
 </Threads>

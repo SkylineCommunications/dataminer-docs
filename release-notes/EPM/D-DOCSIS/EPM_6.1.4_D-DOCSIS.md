@@ -17,6 +17,18 @@ Monitoring of the fan trays and power supply modules has been added to the CCAP 
 
 An *All* filter option has been added to all table drop-down filters, so that users can clear specific filters without using the *Clear* button, which clears all active filters.
 
+#### COX CBR-8 Platform D-DOCSIS: Linecard Redundancy Status added [ID_36072]
+
+The COX CBR-8 Platform D-DOCSIS connector will now display the Linecard Redundancy Status, so that the failover state of the device can be taken into account. It is possible to configure alarm monitoring on this parameter.
+
+#### Option to refresh data on RPD and Node Segment Overview pages [ID_36074]
+
+On all RPD and Node Segment Overview pages, you can now refresh the data and request all cable modem data related to the selected RPD. There is also a status indicator, and the time when the report was last requested is displayed.
+
+#### Description column added to Spine Interfaces pages [ID_36076]
+
+On the *Interfaces* page of any Spine, a new *Description* column has been added.
+
 ## Changes
 
 ### Enhancements
@@ -85,6 +97,34 @@ These changes include:
 
 MLD status alarm monitoring is now disabled on Core Leaf level.
 
+#### CM Upstream table no longer displayed [ID_36018]
+
+To improve performance, the CM Upstream table will no longer be displayed.
+
+#### Enhanced EPM messaging [ID_36019]
+
+To increase scalability in systems with a larger number of elements, EPM D-DOCSIS will no longer handle ID requests ad hoc. Instead it will perform this logic based on a timer and using batches of files, so that it can run the logic less frequently and update the entire system more quickly.
+
+#### Improved performance – Workflow Managers no longer need to send messages to front end [ID_36067]
+
+To improve performance, messages no longer need to be sent from the Workflow Managers to the EPM front end.
+
+#### Remote view filtering in Skyline CCAP Platform EPM connector [ID_36068]
+
+To improve view lookup speed as well as the overall performance of the system, the remote view filtering feature has been integrated in the Skyline CCAP Platform EPM connector.
+
+#### Skyline CCAP Platform WM: Improved handling of Kafka Topics [ID_36069]
+
+The Skyline CCAP Platform WM element will now only read a Kafka Topic file once and service all the collectors it manages. This will increase the efficiency of data handling and improve performance.
+
+#### CM level removed [ID_36070]
+
+To improve stability and scalability, the CM level (i.e. the CPE level) has been removed from the EPM D-DOCSIS Solution. Relations are still established for aggregation, but they are gathered at the collector level instead of at the CM level.
+
+#### New Kafka Topic with Cable Modem data [ID_36073]
+
+A new Kafka Topic with data specific to the Cable Modem has been added to the EPM D-DOCSIS Solution. The new data points will be used for new KPIs at the CM, RPD, and Node Segment level.
+
 ### Fixes
 
 #### Ceeview link on RPD Topology page not working [ID_33612]
@@ -128,3 +168,23 @@ In the Market visual overview, if there were several hubs under a market, it cou
 #### Incorrect offline RPDs metric on Node Leaf level [ID_35162]
 
 When there were offline RPDs associated with a node leaf, the percentage calculation for offline RPDs in the node leaf visual overview could be incorrect. The relevant aggregation operations have been reviewed to prevent this, and EPM relations have been added on connector level to make the calculations more efficient.
+
+#### Restarting Skyline CCAP Platform WM element could cause corrupted file [ID_36066]
+
+When the Skyline CCAP Platform WM element was restarted while it was writing a file, the file could get corrupted, which would break subsequent workflows.
+
+#### Generic Kafka Consumer: Incorrect timestamp in file name caused files to be ignored by Workflow Manager [ID_36071]
+
+If not much data was retrieved during a polling cycle, it could occur that the timestamp in a file name was older than the actual file creation time. This could cause the Workflow Manager to ignore certain files in some circumstances. To prevent this, the timestamps will now align with the file creation time.
+
+#### Negative longitude/latitude value not shown for Cox CBR 8 on Node Segments page [ID_36079]
+
+Previously, if a longitude or latitude value for a CBR 8 was negative, this was displayed as N/A on the Node Segments page. Now all values will be shown, even negative ones.
+
+#### Smart PHY issue causing outdated data to be displayed [ID_36080]
+
+In some cases, a problem with Smart PHY could cause no new file to be exported, so that outdated data were displayed in the system.
+
+#### CBR 8 data retrieved through CLI command not visualized correctly [ID_36081]
+
+It could occur that the information in the CBR 8 that was retrieved through the CLI command was not visualized correctly, so that users had to manually update the data in order to see the correct information.

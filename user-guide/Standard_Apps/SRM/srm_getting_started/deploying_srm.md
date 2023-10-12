@@ -41,7 +41,7 @@ uid: deploying_srm
 1. If you are using a version of the SRM framework prior to SRM 1.2.19, create an element with the name *SRM Log Manager*, using the protocol *Generic Bookings Log*.
 
    > [!TIP]
-   > See also: [Adding and deleting elements](xref:Adding_and_deleting_elements)
+   > See also: [Adding elements](xref:Adding_elements)
 
 1. If you are using a version of the SRM framework prior to SRM 1.2.19, on the *Configuration* page of the *SRM Log Manager* element, set the *Path* parameter to a shared folder accessible from both the client machine and the DataMiner servers.
 

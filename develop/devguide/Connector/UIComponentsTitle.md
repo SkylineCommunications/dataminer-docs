@@ -26,4 +26,4 @@ To define a title, create a parameter of type "fixed". In the Measurement tag, s
 DataMiner Protocol Markup Language:
 
 - [Protocol.Params.Param.Measurement.Type: title](xref:Protocol.Params.Param.Measurement.Type#title)
-- [Options for measurement type “title”](xref:MeasurementTypeOptionsOverview#options-for-measurement-type-title)
+- [Options for measurement type “title”](xref:Protocol.Params.Param.Measurement.Type-options#options-for-measurement-type-title)

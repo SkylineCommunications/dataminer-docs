@@ -6,7 +6,8 @@ uid: KI_GenIf_Folder_Growing_In_Size
 
 ## Affected versions
 
-From DataMiner 10.1.0/10.0.13 onwards.
+- DataMiner 10.1.0 up to 10.3.0 [CU4].
+- DataMiner 10.0.13 up to 10.3.7.
 
 ## Cause
 
@@ -14,9 +15,9 @@ To investigate issues, a `GenIf` folder can be manually added in the folder `C:\
 
 ## Fix
 
-As soon as you no longer need the `GenIf` folder for debugging, remove this folder.
+In DataMiner versions prior 10.3.0 [CU5]/10.3.8, as soon as you no longer need the `GenIf` folder for debugging, remove this folder. If you do wish to keep the folder, make sure it gets cleaned up automatically using Automation or another tool.
 
-If you do wish to keep the folder, make sure it gets cleaned up automatically using Automation or another tool.
+If you install DataMiner 10.3.0 [CU5] or 10.3.8, older recordings in the `GenIf` folder will automatically be removed when a new recording is created, so that the size of the folder is limited to at most 100 MB.<!-- RN 36642 -->
 
 ## Issue description
 

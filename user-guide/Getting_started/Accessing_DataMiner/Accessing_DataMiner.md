@@ -8,7 +8,7 @@ Several applications are available to access DataMiner: in addition to the main 
 
 | Application | Description |
 |--|--|
-| DataMiner Cube | The main client application used to connect to a DMA. See [Accessing DataMiner Cube](xref:Accessing_DataMiner_Cube) |
+| DataMiner Cube | The main client application used to connect to a DMA. See [Accessing DataMiner Cube](xref:Installing_configuring_the_DataMiner_Cube_software) |
 | Monitoring app | The main web application to monitor a DataMiner System, available from DataMiner 10.0.0/10.0.2 onwards. See [Accessing the Monitoring app](xref:Accessing_the_Monitoring_app). In earlier DataMiner version, instead the Monitoring & Control app was available. See [Accessing the legacy Monitoring & Control app](xref:Accessing_the_legacy_Monitoring_Control_app#accessing-the-legacy-monitoring--control-app). |
 | Dashboards app | Cross-platform dashboard web application available from DataMiner 9.6.9 onwards. See [Dashboards app](xref:newR_D) |
 | Reports & Dashboards | Legacy module that allows you to consult reports and/or dashboards within DataMiner Cube and in a separate application. See [DMS Reporter](xref:reporter) and [DMS Dashboards](xref:dashboards). |

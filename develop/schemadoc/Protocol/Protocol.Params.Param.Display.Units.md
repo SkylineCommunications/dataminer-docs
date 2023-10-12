@@ -75,6 +75,7 @@ Contains one of the following values:
 |cC|centicoulomb|
 |ccal|centicalorie|
 |cd|candela|
+|cd/m^2|candela per square meter|
 |cdeg|centidegree (plane angle)|
 |Cells|Cells|
 |ceV|centi-electronvolt|
@@ -626,6 +627,7 @@ Contains one of the following values:
 |nPa|nanopascal|
 |ns|nanosecond|
 |ns/s|nanoseconds per second (drift)|
+|nt|nit (non-SI name for candela per square meter)|
 |nT|nanotesla|
 |nV|nanovolt|
 |nV/Cell|nanovolts per Cell|

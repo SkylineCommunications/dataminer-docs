@@ -34,10 +34,12 @@ To do so:
     After you confirm the migration in a confirmation box, the progress of the migration process will be indicated. When the migration is complete, a pop-up message will indicate if it was successful.
 
 > [!NOTE]
+>
 > - You need to have the permissions *Elements* > *Access*, *Elements* > *Edit*, *Elements* > *Export DELT* and *Elements* > *Import DELT*. In addition, only elements that you have the right to access will be displayed in the *Element migration* window.
 > - It is not possible to migrate spectrum analyzer elements, SLA elements or separate DVE child elements.
 
 > [!TIP]
 > See also:
-> - <https://community.dataminer.services/video/ruis-rapid-recap-delt/>
-> - <https://community.dataminer.services/video/agents-migrating-elements-from-one-dma-to-another/>
+>
+> - [Rui's Rapid Recap - DELT](https://community.dataminer.services/video/ruis-rapid-recap-delt/) ![Video](~/user-guide/images/video_Duo.png)
+> - [Agents – Migrating elements from one DMA to another](https://community.dataminer.services/video/agents-migrating-elements-from-one-dma-to-another/) ![Video](~/user-guide/images/video_Duo.png)

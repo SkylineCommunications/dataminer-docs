@@ -22,7 +22,7 @@ This page consists of three sections:
 
 ## Changing log levels
 
-### From DataMiner 10.0.4 onwards
+### [From DataMiner 10.0.4 onwards](#tab/tabid-1)
 
 From DataMiner 10.0.4 onwards, the log levels for each module are indicated to the right of the module name in the log file list. Example: 0 0 0, 1 0 0, 1 3 2, etc. At the top of the list, the default settings are displayed.
 
@@ -51,9 +51,11 @@ To change the log levels for a specific module:
 1. Click *Apply levels* to apply your changes.
 
 > [!NOTE]
-> Logging requires resources from your DataMiner Agent (CPU and HD usage), so be careful with the higher log levels like *Log everything (5)* and *Development logging (6)*.
+>
+> - Logging requires resources from your DataMiner Agent (CPU and HD usage), so be careful with the higher log levels like *Log everything (5)* and *Development logging (6)*.
+> - Not all log files are available in DataMiner Cube. If you want to change the log levels for a log file that is not available in Cube, you can [do so using the SLNetClientTest tool](xref:SLNetClientTest_changing_log_levels).
 
-### Prior to DataMiner 10.0.4
+### [Prior to DataMiner 10.0.4](#tab/tabid-2)
 
 The log levels of a DMA are indicated in the group header of that DMA. Example: 0 0 0, 1 0 0, 1 3 2, etc.
 
@@ -72,6 +74,8 @@ In the *Log settings* section, you can change the log levels for all modules of 
 
 > [!NOTE]
 > Logging requires resources from your DataMiner Agent (CPU and HD usage), so be careful with the higher log levels like *Log everything (5)* and *Development logging (6)*.
+
+***
 
 ## Sorting the log file list
 
@@ -113,7 +117,7 @@ Some items in the list are of particular note:
 | SNMP Agents | Log file of the DMA’s SNMP agent software. |
 | SNMP Managers | Log file of the DMA’s SNMP manager software. Mentions among others the SNMP notifications the DMA has been receiving. |
 | Spectrum | Log file of the Spectrum Analyzer module of the DMA. If the logging level for this file is set to *Log everything*, it also includes logging for spectrum script execution and measurement point selection. |
-| SSH | Dedicated log file for SSH connections. <br> Note the following regarding SSH logging:<br> -  You can fully disable SSH logging by creating a file called “*SLSshDisableLog.txt*” in the folder *C:\\Skyline Dataminer\\Logging\\*. This can be useful to improve performance in some cases. <br> -  Alternatively, you can enable extended logging by creating a file called “*SLSSHExt.txt*” in the folder *C:\\Skyline Dataminer\\Logging\\*. This will activate extended logging regarding the beginning and end of reads/writes and regarding what data is written/read. However, extended logging uses a lot of memory, so do not leave this enabled while this is not needed. |
+| SSH | Dedicated log file for SSH connections. <br> Note the following regarding SSH logging:<br> - You can fully disable SSH logging by creating a file called “*SLSshDisableLog.txt*” in the folder *C:\\Skyline Dataminer\\Logging\\*. This can be useful to improve performance in some cases. <br> - Alternatively, you can enable extended logging by creating a file called “*SLSSHExt.txt*” in the folder *C:\\Skyline Dataminer\\Logging\\*. This will activate extended logging regarding the beginning and end of reads/writes and regarding what data is written/read. However, extended logging uses a lot of memory, so do not leave this enabled while this is not needed. |
 | Watchdog | Log file with the details of runtime errors detected by the SLWatchdog process. For more information, see [Watchdog logging](xref:Watchdog_logging) |
 
 > [!NOTE]

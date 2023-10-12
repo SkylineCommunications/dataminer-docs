@@ -4,7 +4,7 @@ uid: Alarm_cards
 
 # Alarm cards
 
-An alarm card shows detailed information about an alarm. To open an alarm card, right-click an alarm in the Alarm Console, and select *Open \> Alarm Card*.
+An alarm card shows detailed information about an alarm. To open an alarm card, right-click an alarm in the Alarm Console in DataMiner Cube, and select *Open \> Alarm Card*.
 
 If the user setting *Alarm double-click action* is set to *Open alarm card*, you can also simply double-click the alarm in the Alarm Console. See [Alarm Console settings](xref:User_settings#alarm-console-settings).
 

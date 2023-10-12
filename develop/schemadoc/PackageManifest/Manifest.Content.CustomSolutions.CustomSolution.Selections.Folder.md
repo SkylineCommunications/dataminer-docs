@@ -4,7 +4,7 @@ uid: Manifest.Content.CustomSolutions.CustomSolution.Selections.Folder
 
 # Folder element
 
-Specifies a folder to be included.
+Specifies a folder to include.
 
 ## Content type
 

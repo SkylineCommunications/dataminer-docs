@@ -16,4 +16,4 @@ uid: dynamic_virtual_element_benchmarks
 | \# | Specification | Scope | Metric | Remarks | Configuration |
 | -- | ------------- | ----- | ------ | ------- | ------------- |
 | 1 | Time to create 100 DVEs | DMA | 117 s | Create 100 DVEs from 1 main element | No other tests running. |
-| 2 | Time to remove 100 DVEs | DMA | 48 s | Remote 100 DVEs from 1 main element | No other tests running. |
+| 2 | Time to remove 100 DVEs | DMA | 48 s | Remove 100 DVEs from 1 main element | No other tests running. |

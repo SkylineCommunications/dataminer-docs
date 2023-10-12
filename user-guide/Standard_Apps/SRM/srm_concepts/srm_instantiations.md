@@ -107,6 +107,15 @@ Contributing bookings are only used in the context of Service Orchestration.
 
 A contributing booking is a **booking that is converted into a virtual function resource** so that it can be used in another booking. The resource representing a contributing booking is only available for the duration of the contributing booking itself.
 
+This can be useful in the following situations:
+
+- To limit or hide the complexity of service definitions when multiple nodes can be grouped together.
+- To reuse part of the resources in several overlapping bookings.
+- To use a generic high-level service definition, where the number of functions depends on the selected resources.
+
+> [!TIP]
+> See also: [Service Orchestration contributing bookings configuration](xref:Service_Orchestration_contrib_bookings)
+
 ## Virtual platform
 
 A virtual platform **groups various components into a single domain**, such as a separate virtual platform for Satellite Downlink, Encoding, etc. This is used in DataMiner Systems that have multiple booking applications, to differentiate between the components that can be used by these separate applications:

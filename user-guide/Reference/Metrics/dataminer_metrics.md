@@ -15,7 +15,7 @@ The metrics provided below are provided as a guide to help dimension DataMiner p
 > - Take care when combining metrics. For example, it is impossible to run 1000 regular elements next to 100,000 EPM (formerly CPE) devices on a single DMA.
 > - The metrics are specified by DMA and DMS. DMA being a single DataMiner node and DMS referring to the whole clustered system.
 
-All specifications are provided based on the assumption that DMAs are running on servers that comply with the [DataMiner compute requirements](https://community.dataminer.services/dataminer-compute-requirements/).
+All specifications are provided based on the assumption that DMAs are running on servers that comply with the [DataMiner compute requirements](xref:DataMiner_Compute_Requirements).
 
 ## Limits
 
@@ -68,6 +68,6 @@ All specifications are provided based on the assumption that DMAs are running on
 - [Service benchmarks](xref:service_benchmarks)
 - [Service profile benchmarks](xref:service_profile_benchmarks)
 - [Service & Resource Management benchmarks](xref:service_resource_management_benchmarks)
-- [User-defined API benchmarks](xref:user-defined_API_benchmarks)
+- [User-Defined APIs benchmarks](xref:user-defined_API_benchmarks)
 - [View benchmarks](xref:view_benchmarks)
 - [Visual Overview benchmarks](xref:visual_overview_benchmarks)

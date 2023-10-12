@@ -199,7 +199,7 @@ When you configure a timer to automatically send ping requests to a device, you 
 
 When a parameter feed has an EPM identifier feed as source, from now on, the *Auto-select all* setting will no longer be available.
 
-#### Dashboards app / Low-code apps: Enhanced performance of node-edge components [ID_34517]
+#### Dashboards app & Low-Code Apps: Enhanced performance of node-edge components [ID_34517]
 
 <!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
 

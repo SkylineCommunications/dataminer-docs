@@ -18,7 +18,7 @@ Specifies the ID(s) of the timer(s) to start.
 
 ```xml
 <Action id="1">
-  <On id="1">timer</On>
+   <On id="1">timer</On>
    <Type>start</Type>
 </Action>
 ```

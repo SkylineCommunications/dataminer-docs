@@ -29,5 +29,6 @@ In case DataMiner Cube was open while you edited the settings, the changes will 
 
 > [!TIP]
 > See also:
-> - <https://community.dataminer.services/video/alarm-console-extending-the-right-click-menu/>
+>
+> - [Alarm Console – Extending the right-click menu](https://community.dataminer.services/video/alarm-console-extending-the-right-click-menu/) ![Video](~/user-guide/images/video_Duo.png)
 > - [Linking a shape to an Automation script](xref:Linking_a_shape_to_an_Automation_script)

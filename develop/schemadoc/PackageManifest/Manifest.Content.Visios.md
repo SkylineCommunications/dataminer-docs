@@ -4,7 +4,7 @@ uid: Manifest.Content.Visios
 
 # Visios element
 
-Specifies the Visio files to be included in the package.
+Specifies the Visio files to include in the package.
 
 ## Parent
 
@@ -14,4 +14,4 @@ Specifies the Visio files to be included in the package.
 
 |Name|Occurrences|Description|
 |--- |--- |--- |
-|&nbsp;&nbsp;[Visio](xref:Manifest.Content.Visios.Visio)|[1, *]|Specifies a Visio file to be included in the package.|
+|&nbsp;&nbsp;[Visio](xref:Manifest.Content.Visios.Visio)|[1, *]|Specifies a Visio file to include in the package.|

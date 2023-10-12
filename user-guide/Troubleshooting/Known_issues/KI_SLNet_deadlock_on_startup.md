@@ -6,8 +6,8 @@ uid: KI_SLNet_deadlock_on_startup
 
 ## Affected versions
 
-- DataMiner Main Release versions from 10.1.0 onwards
-- DataMiner Feature Release versions from 10.1.2 onwards
+- DataMiner 10.1.0 up to 10.2.0 [CU15]/10.3.0 [CU3].
+- DataMiner 10.1.2 up to 10.3.2.
 
 ## Cause
 
@@ -15,7 +15,7 @@ In a DMS using a Cassandra cluster setup, when multiple DataMiner Agents are sta
 
 ## Fix
 
-No fix is available yet.
+Install DataMiner 10.2.0 [CU16], 10.3.0 [CU3], or 10.3.3.
 
 ## Workaround
 

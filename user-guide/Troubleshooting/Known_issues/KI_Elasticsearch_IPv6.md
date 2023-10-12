@@ -14,7 +14,7 @@ Because IPV6 addresses were parsed incorrectly, DataMiner believed that the Elas
 
 ## Fix
 
-Install DataMiner DataMiner 10.2.0 [CU11] or 10.3.2. <!-- RN 34744 -->
+Install DataMiner 10.2.0 [CU11] or 10.3.2. <!-- RN 34744 -->
 
 ## Issue description
 

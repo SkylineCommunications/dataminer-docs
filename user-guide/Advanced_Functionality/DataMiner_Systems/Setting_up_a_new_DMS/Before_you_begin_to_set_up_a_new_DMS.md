@@ -15,3 +15,4 @@ Once the initial synchronization of a newly created DMS has finished, the “pri
 > - During the initial synchronization, some data is copied from the primary DMA to the other DMAs. As such, it is important that the **other DMAs are empty**, as otherwise data may be lost and issues may occur. In addition, it is also important that the other DMAs have the same software version as the primary DMA.
 > - As local users are synchronized, their passwords are checked against the password policy of the new server. To prevent issues during user sync, make sure the **password policy** across the servers in the DMS is the **same**.
 > - Synchronization depends on the server time. It is therefore important that all servers in the DMS are **synchronized to the same NTP server**.
+> - For more information about the data that is synchronized among DMAs in a DMS, see [Skyline DataMiner folder](xref:Overview_of_the_files_found_in_the_root_folder).

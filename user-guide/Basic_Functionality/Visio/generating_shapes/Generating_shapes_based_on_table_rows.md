@@ -82,7 +82,7 @@ The following shape data fields can be added to the group containing the table r
 
   - **Center**: If you want the generated shapes to be centered, then add a shape data field of type **ChildrenOptions** to the container shape, and set its value to "Center".
 
-  - **“Subscribe=true”**: If there is a service context, by default only the columns included in the service are taken into account when calculating the summary color ("\*\|ALARM") of a row. However, if you want all columns to be taken into account, then add a shape data field of type **ChildrenOptions** to the container shape, and set its value to "Subscribe=true".
+  - **"Subscribe=true"**: If there is a service context, by default only the columns included in the service are taken into account when calculating the summary color ("\*\|ALARM") of a row. However, if you want all columns to be taken into account, then add a shape data field of type **ChildrenOptions** to the container shape, and set its value to "Subscribe=true".
 
   - **LazyLoading**: If the child shapes will be generated in a scrollable container shape (stack panel, wrap panel, etc.), use this option to configure lazy loading. Though the child shapes will then be generated immediately, they will only be initialized the moment they come into view.
 
@@ -202,13 +202,13 @@ The following shape data fields can be added to the group containing the table r
   | ChildrenSource   | \*/1600            |
   | Options          | NoSelectionFilters |
 
-## Displaying information from the data table instead of the linked element
+## Displaying information from the data table in case it links to DataMiner elements
 
-When dynamic shape positioning is used based on data stored in a table, by default all subshapes will be linked to an element ID that was fetched from a column of that table. As a result, those subshapes will only be able to display information from the element to which they are linked.
+When you use dynamic shape positioning based on a table containing rows linked to DataMiner elements, by default all subshapes will be linked to the element IDs retrieved from the table. As a result, those subshapes will only be able to display information from the element to which they are linked.
 
-However, it is also possible to have those subshapes display information from specific columns in the table containing the positioning data. To do so, use a double asterisk in the subshape's **Element** data field.
+If you do not want this default behavior, you can instead have the subshapes display information from specific columns in the table. To do so, use a double asterisk in the subshape's **Element** data field.
 
-Example: If you specify the following shape data in the main shape and the subshape, then the subshape will display the contents of a specific row in column 118 of the data table.
+For example, if you specify the following shape data in the main shape and the subshape, then the subshape will display the contents of a specific row in column 118 of the data table.
 
 | Shape      | Shape data field | Value                     |
 | ---------- | ---------------- | ------------------------- |

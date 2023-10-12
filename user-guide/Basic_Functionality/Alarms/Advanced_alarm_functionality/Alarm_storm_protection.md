@@ -26,7 +26,7 @@ Two types of alarm storm protection are available:
 These two alarm storm protection types can be combined.
 
 > [!TIP]
-> See also: [Rui’s Rapid Recap – Alarm storm prevention](https://community.dataminer.services/video/ruis-rapid-recap-alarm-storm-prevention/) on DataMiner Dojo.
+> See also: [Rui’s Rapid Recap – Alarm storm prevention](https://community.dataminer.services/video/ruis-rapid-recap-alarm-storm-prevention/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 ## Configuring alarm storm protection
 

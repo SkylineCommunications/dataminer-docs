@@ -22,9 +22,9 @@ To do so:
 
    - *Reboot after upgrade*: Select this option if you want the DataMiner Agent(s) to be automatically rebooted at the end of the upgrade procedure.
 
-   - *Failover policy*: Determines in which order the DMA in a Failover are upgraded.
+   - *Failover policy*: This option allows you to select the default policy for upgrading a Failover setup. This determines in which order the DMA in a Failover setup are upgraded by default.
 
-     > [!NOTE]
+     > [!IMPORTANT]
      > We highly recommend that you set this to *Upgrade main and backup Agent simultaneously*.
 
 1. After you have configured the options to your preferences, click the *Save* button in the lower right corner.

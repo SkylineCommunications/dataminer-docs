@@ -29,10 +29,11 @@ In the *DataMiner.xml* file, you can specify the colors you want to assign to ea
    1. Click the *Sync now* button.
 
 > [!NOTE]
-> The alarm colors have to be specified in the *\<Colors>* tag of the *DataMiner.xml* file. If the *\<Colors>* tag is missing, it should be added. In that case, we advise you to add the tag you find in the example below. It contains all default colors.
+> The alarm colors have to be specified in the *\<Colors>* tag of the *DataMiner.xml* file. If the *\<Colors>* tag is missing, it should be added. In that case, we recommend adding the tag you find in the example below. It contains all default colors.
 
 > [!TIP]
 > See also:
+>
 > - [Alarm severity levels](xref:Alarm_types#alarm-severity-levels)
 > - [DataMiner.xml](xref:DataMiner_xml#dataminerxml)
 

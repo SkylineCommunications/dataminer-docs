@@ -27,6 +27,6 @@ In order to improve readability (and type safety) of code in QActions, the follo
     Since DataMiner 9.0, the implementation of the GetKeys method has been updated. Retrieving the primary keys no longer involves the SLElement process. However, note that obtaining the display keys (NotifyProtocol.KeyType.DisplayKey) is still based on SLElement.
 
 > [!NOTE]
-> -  The implementation of the Keys property of the QActionTable class also makes use of the GetKeys method. Therefore, the use of the Keys property should also be avoided prior to DataMiner 9.0.
-> -  The ClearAllKeys() method still uses the NT_GET_INDEXES call, so for this reason the use of this method should be avoided.
 >
+> - The implementation of the Keys property of the QActionTable class also makes use of the GetKeys method. Therefore, the use of the Keys property should also be avoided prior to DataMiner 9.0.
+> - The ClearAllKeys() method still uses the NT_GET_INDEXES call, so for this reason the use of this method should be avoided.

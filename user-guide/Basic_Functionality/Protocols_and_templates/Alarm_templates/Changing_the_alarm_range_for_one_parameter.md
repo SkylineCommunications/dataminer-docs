@@ -18,11 +18,10 @@ In the alarm range editor, you can do the following:
 
 - Clear the *Monitored* checkbox to stop monitoring the parameter.
 
-- Change the type of alarm monitoring: *Normal*, *Relative*, *Absolute* or *Rate*.
+- Change the type of alarm monitoring: *Normal*, *Relative*, *Absolute*, or *Rate*.
 
     > [!TIP]
-    > See also:
-    > [Configuring an alarm template with dynamic alarm thresholds](xref:Configuring_alarm_templates#configuring-an-alarm-template-with-dynamic-alarm-thresholds)
+    > See also: [Configuring dynamic alarm thresholds](xref:Configuring_dynamic_alarm_thresholds)
 
 - Enter different values for the alarm thresholds.
 

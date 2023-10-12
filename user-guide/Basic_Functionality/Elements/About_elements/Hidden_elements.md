@@ -18,7 +18,7 @@ You could, for example, create a hidden IO gateway that reads analog and digital
 To create a hidden element, follow the normal procedure for element creation, but select the option *Hidden*.
 
 > [!TIP]
-> See also: [Adding and deleting elements](xref:Adding_and_deleting_elements)
+> See also: [Adding elements](xref:Adding_elements)
 
 ## Viewing hidden elements
 

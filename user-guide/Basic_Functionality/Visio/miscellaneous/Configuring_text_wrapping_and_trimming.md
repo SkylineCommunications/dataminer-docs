@@ -18,9 +18,9 @@ For example:
 
 - **NoWrap**: The text will not wrap onto a new line, unless one was explicitly configured with a line break. Text that exceeds the bounds of the shape width or height will not be shown.
 
-- **Wrap**: The text will automatically wrap onto a new line when the width of the shape is exceeded. The text past the boundaries of the shape height will not be shown.
+- **Wrap**: The text will automatically wrap onto a new line when the width of the shape is exceeded. The text past the boundaries of the shape height will not be shown. (Default behavior from 10.3.0 [CU5]/10.3.8 onwards<!-- RN 36363 -->.)
 
-- **WrapWithOverflow**: The text will automatically wrap onto a new line when the width of the shape is exceeded. The text can be shown past the boundaries of the shape height. (Default behavior.)
+- **WrapWithOverflow**: The text will automatically wrap onto a new line when the width of the shape is exceeded. The text can be shown past the boundaries of the shape height. (Default behavior prior to 10.3.0 [CU5]/10.3.8.)
 
 **TextTrimming** determines what happens when the text does not fit in the shape and has to be cut off. It can be set to the following values:
 

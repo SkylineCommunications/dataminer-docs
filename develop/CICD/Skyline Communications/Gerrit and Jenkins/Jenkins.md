@@ -97,7 +97,7 @@ Under *Details*, you can click a specific issue to view more information related
 
 > [!NOTE]
 > In case there are too many reported issues, the publishing step will be skipped. To inspect the results in such a case, consult the XML artifacts.
-
+>
 > - In case the DIS Validator reports over 200 issues, the validator results will not be published to the Jenkins Warnings plugin.
 > - In case the DIS Major Change checker reports over 50 major changes, the validator results will not be published to the Jenkins Warnings plugin.
 > - In case publishing takes too much time, the results will not be published to the Jenkins Warnings plugin (the timeout has been set to 30s for MSBuild results and 1 minute for DIS Validator and DIS Major Change Checker results).

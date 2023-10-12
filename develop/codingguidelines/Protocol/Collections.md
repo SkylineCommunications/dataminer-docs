@@ -39,6 +39,6 @@ uid: Collections
 
 > [!TIP]
 > See also:
-> -  <https://msdn.microsoft.com/en-us/library/system.collections.arraylist(v=vs.110).aspx>
-> -  <https://msdn.microsoft.com/en-us/library/6sh2ey19(v=vs.110).aspx>
 >
+> - <https://msdn.microsoft.com/en-us/library/system.collections.arraylist(v=vs.110).aspx>
+> - <https://msdn.microsoft.com/en-us/library/6sh2ey19(v=vs.110).aspx>

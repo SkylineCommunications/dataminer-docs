@@ -6,7 +6,7 @@ uid: Cleaning_up_unused_files_on_a_DMA
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/ruis-rapid-recap-cleaning-up-unused-items/>
+> [Rui’s Rapid Recap – Cleaning up unused items](https://community.dataminer.services/video/ruis-rapid-recap-cleaning-up-unused-items/) ![Video](~/user-guide/images/video_Duo.png)
 
 In System Center, you can clean up unused protocols, unused alarm filters and unused Visio files.
 

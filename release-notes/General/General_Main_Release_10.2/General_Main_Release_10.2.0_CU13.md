@@ -79,7 +79,7 @@ SLLogCollector packages will now also include the following additional file:
 
 A clearer error message will now be returned when you are building a query against a logger table without `RTDisplay=true` settings, neither on table level nor on column level.
 
-#### Dashboards app & Low-code apps - Line & area chart component: Enhanced performance when exporting trend data to CSV [ID_35727]
+#### Dashboards app & Low-Code Apps - Line & area chart component: Enhanced performance when exporting trend data to CSV [ID_35727]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
@@ -128,7 +128,7 @@ From now on, Cube will check whether the pattern matching feature is enabled eac
 
 When an EPM element was stopped, in some rare cases, an error could occur in SLElement.
 
-#### Dashboards app & Low-code apps - GQI: Problem with 'Update data' option when using the 'Get parameter table by ID' data source [ID_35490]
+#### Dashboards app & Low-Code Apps - GQI: Problem with 'Update data' option when using the 'Get parameter table by ID' data source [ID_35490]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
@@ -170,7 +170,7 @@ From now on, when you activate the follow mode by specifying the *EnableFollowMo
 
 #### Dashboards app: Problem with width of PDF reports [ID_35531]
 
-<!-- MR 10.2.0 [CU13] - FR 10.3.4 -->
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU3] - FR 10.3.4 -->
 
 When a PDF report was generated via Automation or Scheduler, in some cases, its width would be set incorrectly.
 
@@ -200,7 +200,7 @@ Error parsing SNMPv3 password for port: <port number> on element: <element name>
 
 Also, an error could occur in SLDataMiner when you tried to re-enter the SNMPv3 port settings.
 
-#### Low-code apps: Sidebar would incorrectly be displayed when there was only one visible page [ID_35544]
+#### Low-Code Apps: Sidebar would incorrectly be displayed when there was only one visible page [ID_35544]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
@@ -212,7 +212,7 @@ Up to now, whether the sidebar was displayed or not would incorrectly depend on 
 
 In some cases, alarm groups could incorrectly be created without a focus value.
 
-#### Low-code apps: Clock components in a published low-code app would incorrectly only update when you moved the mouse [ID_35554]
+#### Low-Code Apps: Clock components in a published low-code app would incorrectly only update when you moved the mouse [ID_35554]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
@@ -319,7 +319,7 @@ When you applied a filter to an alarm tab, no alarms would be shown when you had
 
 When you exported the data shown in a line & area chart component to a CSV file, the file could incorrectly contain duplicate data.
 
-#### Dashboards app & low-code apps - State component: Changing the query order would incorrectly only be applied when the browser was refreshed [ID_35690]
+#### Dashboards app & Low-Code Apps - State component: Changing the query order would incorrectly only be applied when the browser was refreshed [ID_35690]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
@@ -331,13 +331,13 @@ When you changed the order of the queries added to a State component, this chang
 
 When a line & area chart was filtered by means of a time range feed, in some cases, the dashboard would incorrectly keep on loading when a new time range was selected.
 
-#### Dashboards app & Low-code apps: Last nodes of a migrated query would incorrectly be cut off [ID_35693]
+#### Dashboards app & Low-Code Apps: Last nodes of a migrated query would incorrectly be cut off [ID_35693]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
 When a GQI was migrated, in some cases, the last nodes of the migrated query would incorrectly be cut off.
 
-#### Dashboards app & Low-code apps - Node edge component: An incorrect tooltip would appear when hovering over a segment of an edge [ID_35696]
+#### Dashboards app & Low-Code Apps - Node edge component: An incorrect tooltip would appear when hovering over a segment of an edge [ID_35696]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 

@@ -28,7 +28,7 @@ This gives an overview of the beginning and the end of the action. In our case, 
 
 ## Wireshark
 
-Wireshark visualizes the communication between DataMiner and the device.
+[Wireshark](xref:Wireshark) visualizes the communication between DataMiner and the device.
 
 Using the timestamps from the Automation script and the timestamps from Wireshark, we were able to see that 60 ms were lost between setting the crosspoint on the write parameter of the element and the transmission of the message to the device to execute this. The device took 200 ms to respond. The remaining time (approx. 1.7 seconds) was used in DataMiner to process the response message.
 

@@ -239,7 +239,7 @@ Restrictions:
 ## Online help and user assistance
 
 > [!TIP]
-> See also: [Rui’s Rapid Recap – C# Automation snippets](https://community.dataminer.services/video/ruis-rapid-recap-c-automation-snippets/) on DataMiner Dojo
+> See also: [The Basics of DataMiner Automation Snippets](https://community.dataminer.services/video/the-basics-of-dataminer-automation-snippets/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 ### Sample snippets in shortcut menu
 

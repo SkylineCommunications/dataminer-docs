@@ -9,7 +9,7 @@ DataMiner communicates with devices asynchronously. This makes it difficult to a
 > [!NOTE]
 >
 > - The extra communication cycle information is only available for SNMP devices.
-> - An example protocol "SLC SDF Bitrates" is available in the Protocol Development Guide Companion Files.
+> - An example protocol "SLC SDF Rates - SNMP" is available in the [Protocol Development Guide Companion Files](https://community.dataminer.services/documentation/protocol-development-guide-companion-files/).
 
 ## Counters tracked by SLSNMPManager
 
@@ -113,9 +113,9 @@ currentData[9], currentData[10], currentData[11]
 ));
 ```
 
-## Rate calculations in SNMP drivers using the class library
+## Rate calculations in SNMP connectors
 
-It is recommended to use the RateCalculator class from the class library available in DIS, which supports the calculation of rate values in SNMP drivers. For more information on available classes, methods, etc., refer to Skyline.DataMiner.Library.Protocol.Rates namespace.
+We recommend using the [Skyline.DataMiner.Utils.SNMP](https://www.nuget.org/packages/Skyline.DataMiner.Utils.SNMP), [Skyline.DataMiner.Utils.Rates.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Rates.Protocol), and [Skyline.DataMiner.Utils.SafeConverters](https://www.nuget.org/packages/Skyline.DataMiner.Utils.SafeConverters) NuGet packages, which support the calculation of rate values in SNMP connectors. For more information on available classes, methods, etc., refer to Skyline.DataMiner.Utils.Rates.Protocol namespace.
 
 - Calculated rate is provided in bps or counter unit per second using the following formula.
   - (current counter value - previous counter value) / delta

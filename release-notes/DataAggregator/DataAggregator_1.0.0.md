@@ -323,7 +323,7 @@ Every GQI query you want to execute must be saved in a separate file in JSON for
 
 To get a correctly configured query, you can make use of the DataMiner Dashboards app:
 
-1. In the DataMiner Dashboards app, [create a dashboard](xref:Creating_a_completely_new_dashboard), and then [create a query](xref:Configuring_GQI_feeds).
+1. In the DataMiner Dashboards app, [create a dashboard](xref:Creating_a_completely_new_dashboard), and then [create a query](xref:Creating_GQI_query).
 
 1. Visualize this query on the dashboard, for example using the [Table component](xref:DashboardTable).
 

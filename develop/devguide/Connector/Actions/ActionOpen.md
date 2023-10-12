@@ -4,7 +4,7 @@ uid: LogicActionOpen
 
 # open
 
-This action can must be executed on protocol.
+This action must be executed on protocol.
 
 This action opens the port of which the connection number is specified in the nr attribute of the Type tag.
 

@@ -15,7 +15,7 @@ DataMiner should regularly rewrite stable trend data points to keep them alive, 
 
 ## Fix
 
-Install DataMiner DataMiner 10.2.0 [CU11] or 10.3.2. <!-- RN 35139 -->
+Install DataMiner 10.2.0 [CU11] or 10.3.2. <!-- RN 35139 -->
 
 ## Issue description
 

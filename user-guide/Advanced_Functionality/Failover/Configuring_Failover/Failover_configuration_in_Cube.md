@@ -5,7 +5,7 @@ uid: Failover_configuration_in_Cube
 # Failover configuration in Cube
 
 > [!TIP]
-> See also: [Agents – Configuring DMA Failover](https://community.dataminer.services/video/agents-configuring-dma-failover/) on DataMiner Dojo.
+> See also: [Agents – Configuring DMA Failover](https://community.dataminer.services/video/agents-configuring-dma-failover/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 ## [From DataMiner 10.1.8 onwards](#tab/tabid-1)
 

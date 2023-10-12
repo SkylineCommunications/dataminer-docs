@@ -26,7 +26,7 @@ You can **adjust or completely disable** this endpoint for each DataMiner CloudG
 1. Restart DataMiner CloudGateway on each server for the changes to take effect.
 
 > [!NOTE]
-> Make sure that the configured ports also are open on the internal network, so other DataMiner Extension Modules can access these endpoints hosted in DataMiner CloudGateway.
+> Make sure that the configured ports are also open on the internal network, so other DataMiner Extension Modules can access these endpoints hosted in DataMiner CloudGateway.
 
 > [!IMPORTANT]
 > Disabling the dataminer.services endpoint for each DataMiner CloudGateway will also disable features that depend on this DxM, such as Remote Log Collection. DataMiner CloudGateway can only start if the configured port is available on the hosting server.

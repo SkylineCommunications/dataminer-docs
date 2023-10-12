@@ -70,6 +70,7 @@ To configure an aggregation rule, select it in the tree view on the left. In the
    1. In the third line, specify if a condition has to apply, and if so, specify the condition. For some aggregation types, a condition is always required.
 
       > [!NOTE]
+      >
       > - If the source you pick for the condition is a column parameter, an extra option will appear in the condition line that allows you to filter on an instance of that column.
       > - From DataMiner 10.1.10/10.2.0 onwards, the condition can include a regular expression. When you select *Matches regular expression*, you can select to match by value or by reference. If you select *by reference*, you will need to select the parameter containing the regular expression.
 
@@ -90,7 +91,7 @@ To configure an aggregation rule, select it in the tree view on the left. In the
 
 1. In the Monitoring & Trending section, indicate whether the rule should be monitored and/or trended.
 
-   - To enable monitoring, select *Monitored*, and enter the values for the alarm thresholds. This is done the same way as for a regular alarm template, including the possibility to use a smart baseline. For more information, see [Configuring alarm templates](xref:Configuring_alarm_templates).
+   - To enable monitoring, select *Monitored*, and enter the values for the alarm thresholds. This is done the same way as for a regular alarm template, including the possibility to use a smart baseline. For more information, see [Configuring normal alarm thresholds](xref:Configuring_normal_alarm_thresholds) and [Configuring dynamic alarm thresholds](xref:Configuring_dynamic_alarm_thresholds).
 
    - To enable trending, select *Average* and/or *Real-time*. For more information, see [About trend templates](xref:About_trend_templates).
 

@@ -6,7 +6,7 @@ uid: VSAT_metrics
 
 The metrics provided below are given as a guide to help dimension EPM VSAT deployments.
 
-All specifications are provided based on the assumption that DMAs are running on servers that comply with the [DataMiner compute requirements](https://community.dataminer.services/dataminer-compute-requirements/) and the recommended [data storage architecture](xref:Supported_system_data_storage_architectures).
+All specifications are provided based on the assumption that DMAs are running on servers that comply with the [DataMiner compute requirements](xref:DataMiner_Compute_Requirements) and the recommended [data storage architecture](xref:Supported_system_data_storage_architectures).
 
 ## Limits
 

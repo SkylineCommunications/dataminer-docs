@@ -18,5 +18,5 @@ There are several ways to access trend information:
 
 > [!NOTE]
 >
-> - For more information on how to make sure a parameter is being trended, see [Trend templates](xref:Trend_templates).
+> - For more information on how to make sure a parameter is being trended, see [Trend templates](xref:About_trend_templates).
 > - To ensure optimal performance, we advise you not to open more than 10 trend graphs simultaneously.

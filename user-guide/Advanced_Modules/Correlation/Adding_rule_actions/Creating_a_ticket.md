@@ -11,7 +11,7 @@ This action is only available if:
 - The DMA has a Ticketing license and uses a Cassandra database.
 
 > [!WARNING]
-> This feature is currently still in preview. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
+> This is a deprecated soft-launch feature. While you can still use it for now, it will never be released, and it will at some point become unavailable. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
 
 Use this action to create a ticket linked to the correlated alarm.
 

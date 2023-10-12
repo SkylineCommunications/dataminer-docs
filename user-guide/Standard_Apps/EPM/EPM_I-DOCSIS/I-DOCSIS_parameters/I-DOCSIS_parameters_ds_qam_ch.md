@@ -6,6 +6,8 @@ uid: I-DOCSIS_parameters_ds_qam_ch
 
 This page contains an overview of the DS QAM CH parameters available in the I-DOCSIS branch of the EPM Solution.
 
+These parameters are displayed for the Node Segment and Service Group levels in the I-DOCSIS dashboards.
+
 - **Name \[IDX]**: Direct value. The display name of the downstream channel.
 
   Concatenation of the CMTS name and the DS channel name, using "/" as a separator.
@@ -77,3 +79,9 @@ This page contains an overview of the DS QAM CH parameters available in the I-DO
   - Nº octets transmitted: OID 1.3.6.1.2.1.2.2.1.16
 
   - Interface's current bandwidth: OID 1.3.6.1.2.1.2.2.1.5
+
+- **DS QAM Ch Output Bitrate**: Calculated. The average value of the DS QAM Ch Output Bitrate related to the cable modems served by the given channel.
+
+  Calculated as follows: DS QAM Ch Output Bitrate = (Current Nº octets transmitted - Nº octets transmitted previously) / (Delta \* 1000.0).
+
+  - Nº octets transmitted: OID 1.3.6.1.2.1.2.2.1.16

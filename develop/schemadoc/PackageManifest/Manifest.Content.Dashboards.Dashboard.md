@@ -4,7 +4,7 @@ uid: Manifest.Content.Dashboards.Dashboard
 
 # Dashboard element
 
-Specifies a dashboard to be included in the package.
+Specifies a dashboard to include in the package.
 
 ## Parent
 

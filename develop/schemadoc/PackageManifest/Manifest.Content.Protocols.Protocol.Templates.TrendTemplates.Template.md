@@ -4,7 +4,7 @@ uid: Manifest.Content.Protocols.Protocol.Templates.TrendTemplates.Template
 
 # Template element
 
-Specifies a trend template to be included in the package for this protocol.
+Specifies a trend template to include in the package for this protocol.
 
 ## Type
 

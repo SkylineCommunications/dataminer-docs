@@ -4,16 +4,13 @@ uid: Deleting_a_user
 
 # Deleting a user
 
-To delete a user from the DMS:
+[Local users](xref:Types_of_users#local-users) and [manually added domain users](xref:Types_of_users#manually-added-domain-users) can be deleted on the *Users / Groups* page in System Center:
 
 1. In the *Users / Groups* section of the System Center module, go to the *users* tab.
 
-2. Right-click the user in the *Local* or *Domain* list and select *Delete*.
+1. Right-click the user in the *Local* or *Domain* list and select *Delete*.
 
-3. In the confirmation window, click *OK*.
+1. In the confirmation window, click *OK*.
 
 > [!NOTE]
-> - When you delete a local user, the associated Windows user account will also be removed from the DataMiner Agents.
-> - When you delete a manually added domain user, only the reference to that user will be removed from the DataMiner System.
-> - An automatically added domain user cannot be deleted. To remove such users, they must be removed from the domain group.
->
+> If you want to delete an [automatically added domain user](xref:Types_of_users#automatically-added-domain-users), you will need to remove it from the domain group outside of DataMiner.

@@ -4,7 +4,7 @@ uid: Manifest.Content.Protocols.Protocol.Templates.AlarmTemplates.Template
 
 # Template element
 
-Specifies an alarm template to be included in the package for this protocol.
+Specifies an alarm template to include in the package for this protocol.
 
 ## Type
 

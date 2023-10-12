@@ -87,8 +87,14 @@ Here is a list of topics you should use (this list is to be extended):
 - dataminer-life-service-orchestration
 - dataminer-gqi-data-source
 - dataminer-gqi-operator
+- dataminer-regression-test
+- dataminer-UI-test
+- dataminer-bot
 
 If you have code for a specific project/customer, you should add a topic with the customer's name as well, e.g. `Skyline-Communications`. Always use a hyphen ("-") as a separator.
+
+> [!NOTE]
+> For regression tests, use *T* as the item type in the repository name, and use topics to identify the type of test, e.g. *dataminer-regression-test*.
 
 > [!TIP]
 > Refer to the [guidelines about adding topics](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics) and [Searching for repositories](https://docs.github.com/en/search-github/searching-on-github/searching-for-repositories) on docs.github.com.

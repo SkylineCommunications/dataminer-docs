@@ -2,11 +2,14 @@
 uid: Granting_admin_consent
 ---
 
-# Granting admin consent for Teams actions
+# Granting admin consent for Teams Chat Integration
 
-When the Microsoft Teams Chat Integration functionality is used, admin consent is required for certain actions, e.g. to create teams or channels, or to add members to a team.
+To use the Microsoft Teams Chat Integration functionality, which involves DataMiner Automation interacting with Teams without user interaction, admin consent is required. This is specifically needed for actions such as creating teams or channels, adding members to a team, etc. For more detailed information, see [Microsoft Teams Chat Integration](xref:Microsoft_Teams_Chat_Integration#using-chat-integration).
 
 After you have granted this consent, you will need to configure the Microsoft tenant for your dataminer.services organization.
+
+> [!NOTE]
+> This admin consent is only required for the Chat Integration feature. It is not needed for user interaction with the DataMiner Teams bot, even with custom commands.
 
 To grant admin consent and configure your tenant:
 
@@ -38,12 +41,12 @@ To grant admin consent and configure your tenant:
 
 1. Click *Confirm*.
 
-1. In the pop-up window, log in to our multi-tenant app with your Microsoft account. **Make sure to log in with the same user as you granted consent with**.
+1. In the pop-up window, log in with your Microsoft account. **Make sure to log in with the same user as you granted consent with**.
 
-   After you log in successfully, your tenant is configured.
+   After you log in successfully, the DataMiner app will be approved in your tenant.
 
 > [!NOTE]
 >
-> - You can **revoke the permissions given to Skyline Communications at any time in the Azure Portal**. For more information, refer to the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/manage-application-permissions?pivots=portal).
-> - You can unlink the tenant by clicking the x next to the tenant ID. However, **unlinking the tenant** from the organization **will not remove the permissions given to Skyline**.
-> - If there are **changes to the software** that cause new or different permissions to be required, you will need to **repeat** the grand admin consent procedure in order to also provide consent for those permissions. You can do this by **unlinking** your tenant first.
+> - You can **revoke the permissions given to the DataMiner app at any time in the Azure Portal**. For more information, refer to the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/manage-application-permissions?pivots=portal).
+> - You can unlink the tenant by clicking the *Remove* button next to the tenant ID. However, **unlinking the tenant** from the organization **will not remove the permissions given to the DataMiner app**.
+> - If there are **changes to the software** that cause new or different permissions to be required, you can grant admin consent again by clicking the *Regrant* button next to the tenant ID.

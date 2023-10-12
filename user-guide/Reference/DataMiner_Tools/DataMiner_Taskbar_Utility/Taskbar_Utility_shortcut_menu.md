@@ -8,7 +8,7 @@ When you right-click the DataMiner Taskbar Utility system tray icon, a menu appe
 
 - **Launch \> DataMiner Cube**
 
-    Starts DataMiner Cube.
+    Starts DataMiner Cube as a web application.
 
 - **Launch \> Tools \> Client Test**
 

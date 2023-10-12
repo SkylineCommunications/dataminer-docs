@@ -18,6 +18,8 @@ This section provides further information on the following files and folders:
 
 - [DB.xml](xref:DB_xml)
 
+- [DBConfiguration.xml](xref:DBConfiguration_xml)
+
 - [DBMaintenance.xml and DBMaintenanceDMS.xml](xref:DBMaintenance_xml_and_DBMaintenanceDMS_xml)
 
 - [DMS.xml](xref:DMS_xml)

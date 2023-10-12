@@ -8,7 +8,7 @@ This section lists tips and tricks on how to use DataMiner Cube, including the t
 
 ## About alarms
 
-- Too many alarms in your Alarm Console? Adding conditions in the alarm template can help you reduce unnecessary alarms. See [Using conditions in an alarm template](xref:Configuring_alarm_templates#using-conditions-in-an-alarm-template).
+- Too many alarms in your Alarm Console? Adding conditions in the alarm template can help you reduce unnecessary alarms. See [Using conditions in an alarm template](xref:Using_conditions_in_an_alarm_template).
 
 - You can drag and drop an element, service or view to the Alarm Console to instantly create an alarm tab linked to it. See [Applying an alarm filter by dragging an item onto the Alarm Console](xref:ApplyingAlarmFiltersInTheAlarmConsole#applying-an-alarm-filter-by-dragging-an-item-onto-the-alarm-console).
 

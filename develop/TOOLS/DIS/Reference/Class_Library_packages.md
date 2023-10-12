@@ -4,6 +4,28 @@ uid: Class_Library_packages
 
 # Class Library packages
 
+## [From DIS 2.41 onwards](#tab/CLP-1)
+
+> [!IMPORTANT]
+> The class library generation feature has been removed from DIS v2.41 onwards in favor of NuGet packages. If you have a connector or Automation script that makes use of the official class library, replace it with the corresponding NuGet package(s). For more information, refer to [Class library introduction](xref:ClassLibraryIntroduction). If you have a connector or Automation script that makes use of a community package, we recommend turning this into a NuGet package (For more information on how to create a NuGet package, refer to [Producing NuGet packages](xref:Producing_NuGet)). Alternatively, you can put all the code from the community library zip file in a QAction/Exe block.
+>
+> Note also that the class library has been split up into multiple NuGet packages and that the namespaces have been updated:
+>
+> - [Skyline.DataMiner.Core.DataMinerSystem.Common](https://www.nuget.org/packages/Skyline.DataMiner.Core.DataMinerSystem.Common): This NuGet package allows interaction with a DataMiner System.
+> - [Skyline.DataMiner.Core.DataMinerSystem.Automation](https://www.nuget.org/packages/Skyline.DataMiner.Core.DataMinerSystem.Automation): This NuGet package contains extension methods for accessing an IDms instance via the Engine class or IEngine interface.
+> - [Skyline.DataMiner.Core.DataMinerSystem.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Core.DataMinerSystem.Protocol): This NuGet package contains extension methods for retrieving an IDms instance via the SLProtocol interface.
+> - [Skyline.DataMiner.Core.InterAppCalls.Common](https://www.nuget.org/packages/Skyline.DataMiner.Core.InterAppCalls.Common): This NuGet package contains the InterApp functionality.
+> - [Skyline.DataMiner.Core.Matrix.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Core.Matrix.Protocol): This NuGet package allows you to define a matrix component in a connector.
+> - [Skyline.DataMiner.Utils.SNMP](https://www.nuget.org/packages/Skyline.DataMiner.Utils.SNMP): This NuGet package defines types related to SNMP.
+> - [Skyline.DataMiner.Utils.Rates.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Rates.Protocol): This NuGet package defines types for calculation rates in a connector.
+> - [Skyline.DataMiner.Utils.Rates.Common](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Rates.Common): This NuGet package defines types related to calculating rates.
+> - [Skyline.DataMiner.Utils.SafeConverters](https://www.nuget.org/packages/Skyline.DataMiner.Utils.SafeConverters): This NuGet package defines types that allow safe conversion from double to integers.
+> - [Skyline.DataMiner.Utils.Interfaces](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Interfaces): This NuGet package defines types for calculation rates of interfaces.
+> - [Skyline.DataMiner.Utils.SNMP.Traps.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Utils.SNMP.Traps.Protocol): This NuGet package provides functionality to easily parse traps in a connector.
+> - [Skyline.DataMiner.Utils.Table.ContextMenu](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Table.ContextMenu): This NuGet package provides functionality to easily create a custom context menu.
+
+## [Prior to DIS 2.41](#tab/CLP-2)
+
 A Class Library package (CLP) contains generic code that can be shared by multiple QActions and Automation scripts.
 
 In a Class Library package, you can add extension methods, vendor-specific code (which, for example, processes data from proprietary communication protocols), project-specific code that needs to be used by different protocols, etc.
@@ -52,7 +74,7 @@ Package.zip
 
 The Manifest.xml file, which must be placed in the zip file’s root folder, describes the content of the package and lists the dependencies between the package in question and other packages.
 
-When DIS generates a Class Library QAction (with ID 63000) or a Class Library EXE block, it will copy the contents of the Manifest.xml file to the QActions section of the Protocol.xml file or the top of the EXE block respectively. That way, when the Protocol file or Automation script file is opened later on, DIS will be able to determine from which Class Library packages code was copied.
+When DIS generates a Class Library QAction (with ID 63000) or a Class Library EXE block, it will copy the contents of the Manifest.xml file to the QActions section of the *protocol.xml* file or the top of the EXE block respectively. That way, when the Protocol file or Automation script file is opened later on, DIS will be able to determine from which Class Library packages code was copied.
 
 A Manifest.xml file could, for example, contain the following information:
 
@@ -80,7 +102,7 @@ For more information about the tags used in a Manifest.xml file, see below:
 
 > [!NOTE]
 > If you want IntelliSense support when creating a Manifest.xml file, make sure to add the correct XML namespace to the \<CodePackage> tag:
-> *\<CodePackage xmlns=”http://www.skyline.be/ClassLibrary”>*
+> *\<CodePackage xmlns="http://www.skyline.be/ClassLibrary">*
 
 ## Version numbering
 
@@ -90,7 +112,7 @@ Base packages, i.e. default packages shipped with DIS, have a version number mad
 
 | Component | Description |
 |-----------|-------------|
-| Major release | Start with “1” for the first release, and increment each time you make a new major release. |
+| Major release | Start with "1" for the first release, and increment each time you make a new major release. |
 | Minimum DataMiner version | This number indicates the minimum DataMiner version required for the package to work (e.g. 1=DM 8.5, 2=DM 9.6, etc.). |
 | Major change | Increment this number when the package contains changes that break functionality present in the previous version (e.g. API changes). |
 | Iteration | Increment this number when the package contains changes that do not break functionality present in the previous version (e.g. API additions). |
@@ -101,9 +123,9 @@ If you create a custom community package, you are free to use your own versionin
 
 ## DLL references
 
-When an external DLL file is needed to be able to execute a piece of code, a “DllImport” line has to be added above that piece of code.
+When an external DLL file is needed to be able to execute a piece of code, a "DllImport" line has to be added above that piece of code.
 
-Whenever DIS detects at least one such line above a piece of code that is being used in a QAction, it will automatically add a DLL import statement when it generates the Class Library QAction. This means, that you do not have to add a “DllImport” line above every possible piece of code. Instead, you can just add one above a piece of code of which you know it will be included in the code that DIS will generate.
+Whenever DIS detects at least one such line above a piece of code that is being used in a QAction, it will automatically add a DLL import statement when it generates the Class Library QAction. This means, that you do not have to add a "DllImport" line above every possible piece of code. Instead, you can just add one above a piece of code of which you know it will be included in the code that DIS will generate.
 
 In the following example, a "DllImport" line was added above a piece of code:
 
@@ -118,7 +140,7 @@ When DIS loads a package, it will combine C# code from different sources into a 
 
 The following C#/.NET features are currently not supported:
 
-- With regard to LINQ queries, “query syntax” is not supported. Only “method syntax” is supported.
+- With regard to LINQ queries, "query syntax" is not supported. Only "method syntax" is supported.
 
     > [!NOTE]
     > For more information about the difference between these two types of syntax, see<br>https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq

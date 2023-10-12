@@ -30,4 +30,4 @@ A difference between the SetParameter and CheckTrigger methods is that CheckTrig
 A QAction can contain the option "queued", which means that it will not wait until it is finished before another instance can run. This should only be used when needed and when external applications need to be used, such as a database or external DLLs.
 
 > [!NOTE]
-> DataMiner provides multiple configuration options related to the SLScripting process, which are described in Configuration of DataMiner processes](xref:Configuration_of_DataMiner_processes).
+> DataMiner provides multiple configuration options related to the SLScripting process, which are described in [Configuring DataMiner processes](xref:Configuration_of_DataMiner_processes).

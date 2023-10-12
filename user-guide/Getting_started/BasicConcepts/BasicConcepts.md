@@ -60,7 +60,7 @@ A DataMiner System can have several additional modules or apps. Depending on the
 | Apps | DataMiner can have countless custom-made apps, designed specifically for a particular vendor or technology. The possibilities for these apps are endless, so they are not all included in this documentation. |
 
 > [!NOTE]
-> For information on the other modules, refer to the module in question in the section [Advanced DataMiner modules](xref:Part4AdvancedModules).
+> For information on the other modules, refer to the module in question in the section [DataMiner modules](xref:Part4AdvancedModules).
 
 ## DataMiner Standard Apps
 

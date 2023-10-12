@@ -8,7 +8,7 @@ The following table contains an overview of all Notify types.
 
 > [!WARNING]
 >
-> - The use of DMS Notify types is deprecated. Use types from the Class Library (Skyline.DataMiner.Library) instead.
+> - The use of DMS Notify types is deprecated. Use the Skyline.DataMiner.Core.DataMinerSystem.Common NuGet package instead. For more information, refer to [Class library introduction](xref:ClassLibraryIntroduction).
 > - The table below gives an overview of all the defined DMS Notify types. However, the Notify types for which no additional documentation is provided should not be used.
 
 |ID  |Name  |Description  |

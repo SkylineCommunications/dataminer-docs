@@ -6,7 +6,7 @@ uid: Recycle_bin
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/backup-using-the-recycle-bin-of-dataminer/>
+> [Backup – Using the recycle bin of DataMiner](https://community.dataminer.services/video/backup-using-the-recycle-bin-of-dataminer/) ![Video](~/user-guide/images/video_Duo.png)
 
 The *Recycle Bin* folder contains a number of zip files, one for each configuration change that has been implemented in the system.
 

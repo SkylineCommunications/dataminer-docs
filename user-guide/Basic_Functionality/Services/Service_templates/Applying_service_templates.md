@@ -4,8 +4,6 @@ uid: Applying_service_templates
 
 # Applying service templates
 
-## Applying a service template
-
 1. Right-click the service template in the Surveyor, and select *Apply*.
 
    Alternatively, you can also right-click a view, select *Actions* > *Apply service template*, and then select the template you wish to apply.

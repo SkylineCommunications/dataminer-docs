@@ -6,12 +6,14 @@ uid: Getting_Started_with_the_IAS_Toolkit
 
 ## Introduction
 
-The Interactive Automation Script Toolkit ( or “IAS Toolkit” in short) is a class library that can be used to create interactive Automation scripts. Its main purpose is to make developing interactive Automation scripts easier.
+The Interactive Automation Script Toolkit (or “IAS Toolkit” in short) is a library that can be used to create interactive Automation scripts. Its main purpose is to make developing interactive Automation scripts easier.
 
 > [!TIP]
-> For more information on its **main features**, the **different versions**, and **how to install** the IAS Toolkit, see [Interactive Automation Script Toolkit](xref:Interactive_Automation_Script_Toolkit).
+> For more information on its **main features**, and the **different versions**, see [Interactive Automation Script Toolkit](xref:Interactive_Automation_Script_Toolkit).
 
-To choose your version of the IAS Toolkit, the first thing you need to know is the [version of DataMiner](xref:Interactive_Automation_Script_Toolkit#versions) where you want your script to run. As DataMiner keeps improving, so does its support for newer, more advanced IAS components. In this introduction, DataMiner version 10.1.2.0-9866 is used. This means that [version 1.0.5.2](https://community.dataminer.services/download/ias-toolkit-1-0-5-2-10-1-2-0-9815/) of the toolkit can be used.
+To choose your version of the IAS Toolkit, the first thing you need to know is the [version of DataMiner](xref:Interactive_Automation_Script_Toolkit#versions) where you want your script to run. As DataMiner keeps improving, so does its support for newer, more advanced IAS components.
+
+In this introduction, DataMiner version 10.1.2 is used. This means that [version 2.0.x](https://www.nuget.org/packages/Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit/2.0.0) of the toolkit can be used.
 
 Just like for protocol and regular Automation script development, our IDE of choice is [Visual Studio](xref:TOOVisualStudio) with the latest version of [DIS](xref:DIS). If you do not have DIS installed, you can find more information on how to do so under [Installing and configuring the software](xref:Installing_and_configuring_the_software).
 
@@ -29,18 +31,31 @@ To start creating your script:
 
    ![IAS2](~/develop/images/IAS2.png)
 
+## Installing the library
+
+1. Open [NuGet Package Manager](https://learn.microsoft.com/en-us/nuget/quickstart/install-and-use-a-package-in-visual-studio) in Visual Studio.
+
+1. Search for [Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit](https://www.nuget.org/packages/Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit).
+
+1. Select a [version](xref:Interactive_Automation_Script_Toolkit#versions) that is compatible with your DataMiner version.
+
+1. Click *Install*.
+
+> [!TIP]
+> For more information on using NuGet packages, see [Consuming NuGet packages](xref:Consuming_NuGet).
+
 ## Defining an InteractiveController
 
 With the steps above, you have created a regular Automation script. But if you want this script to display something, you need to define an *InteractiveController*. This controller is used to display dialogs. It will also handle UI updates and trigger the events on the widgets. It is part of the following namespace:
 
-`Skyline.DataMiner.DeveloperCommunityLibrary.InteractiveAutomationToolkit`
+`Skyline.DataMiner.Utils.InteractiveAutomationScript`
 
 The script now looks like this:
 
 ```csharp
 using System;
 using Skyline.DataMiner.Automation;
-using Skyline.DataMiner.DeveloperCommunityLibrary.InteractiveAutomationToolkit;
+using Skyline.DataMiner.Utils.InteractiveAutomationScript;
 /// <summary>
 /// DataMiner Script Class.
 /// </summary>
@@ -53,6 +68,13 @@ public class Script
     /// <param name="engine">Link with SLAutomation process.</param>
     public void Run(Engine engine)
     {
+        // DO NOT REMOVE THIS COMMENTED-OUT CODE OR THE SCRIPT WON'T RUN!
+        // DataMiner evaluates if the script needs to launch in interactive mode.
+        // This is determined by a simple string search looking for "engine.ShowUI" in the source code.
+        // However, because of the toolkit NuGet package, this string cannot be found here.
+        // So this comment is here as a workaround.
+        //// engine.ShowUI();
+    
         try
         {
             controller = new InteractiveController(engine);
@@ -73,7 +95,7 @@ Now you can start to develop the first dialog. A dialog is a single page in an I
 
 Before you start programming a dialog, it can be useful to create a mockup of the script. While this may be a bit redundant for this example, it can be very useful when you create bigger, more complex dialogs.
 
-To create a dialog, you need to create a class that inherits the Dialog class. In this case, we will call it “HelloWorldDialog”. In the constructor of each dialog, you need to define an Engine parameter, which you need to pass to the dialog constructor using the base keyword.
+To create a dialog, you need to create a class that inherits the *Dialog* class. In this case, we will call it “HelloWorldDialog”. In the constructor of each dialog, you need to define an *Engine* parameter, which you need to pass to the dialog constructor using the *base* keyword.
 
 ```csharp
 public class HelloWorldDialog : Dialog
@@ -85,6 +107,9 @@ public class HelloWorldDialog : Dialog
 ```
 
 Next, set the title of the dialog using the *Title* property, and define the different widgets used in the dialog. Ideally, you should always try to keep the background logic separated from the UI logic. This increases the maintainability of the script. In this use case, we are making the text box and the button publicly available as they will be used in the background logic.
+
+> [!TIP]
+> See also: [Model View Presenter](https://community.dataminer.services/courses/dataminer-automation/lessons/model-view-presenter/)
 
 ```csharp
 public class HelloWorldDialog : Dialog
@@ -128,6 +153,9 @@ public class HelloWorldDialog : Dialog
 }
 ```
 
+> [!NOTE]
+> If you do not add a button to the dialog, a default button will be added at position 0,0.
+
 Once you have added the widgets, the dialog is done.
 
 ## Displaying the dialog
@@ -147,6 +175,13 @@ public class Script
     /// <param name="engine">Link with SLAutomation process.</param>
     public void Run(Engine engine)
     {
+        // DO NOT REMOVE THIS COMMENTED-OUT CODE OR THE SCRIPT WON'T RUN!
+        // DataMiner evaluates if the script needs to launch in interactive mode.
+        // This is determined by a simple string search looking for "engine.ShowUI" in the source code.
+        // However, because of the toolkit NuGet package, this string cannot be found here.
+        // So this comment is here as a workaround.
+        //// engine.ShowUI();
+        
         try
         {
             controller = new InteractiveController(engine);
@@ -165,11 +200,14 @@ You can now publish the script to your DMA, using either of the following ways:
 
 - Navigate to the *IAS_Helloworld.xml* file in Visual Studio and use the *DIS Publish* button (requires that your DMA is configured in the DIS settings).
 
-- Import your script into the Automation module on your DMA.
+- Use a CI/CD workflow to publish the script to your DataMiner System.
 
-If everything goes well, you will see that you have two C# code blocks. The first one will contain all class library code and is autogenerated by DIS, the second one contains the code you have written.
+  > [!TIP]
+  > For instructions on setting up a CI/CD workflow, see [CI/CD using GitHub](xref:CICD_on_GitHub) or [CI/CD using GitLab](xref:Deploying_Automation_scripts_from_a_GitLab_repository).
 
-To take a look at the script in action, click the Execute button in the lower right corner and then click *Execute now*.
+If everything goes well, you will see your script in the Automation module in DataMiner Cube.
+
+To take a look at the script in action, click the *Execute* button in the lower right corner and then click *Execute now*.
 
    ![IAS4](~/develop/images/IAS4.png)
 
@@ -190,6 +228,13 @@ public class Script
     /// <param name="engine">Link with SLAutomation process.</param>
     public void Run(Engine engine)
     {
+        // DO NOT REMOVE THIS COMMENTED-OUT CODE OR THE SCRIPT WON'T RUN!
+        // DataMiner evaluates if the script needs to launch in interactive mode.
+        // This is determined by a simple string search looking for "engine.ShowUI" in the source code.
+        // However, because of the toolkit NuGet package, this string cannot be found here.
+        // So this comment is here as a workaround.
+        //// engine.ShowUI();
+    
         try
         {
             controller = new InteractiveController(engine);

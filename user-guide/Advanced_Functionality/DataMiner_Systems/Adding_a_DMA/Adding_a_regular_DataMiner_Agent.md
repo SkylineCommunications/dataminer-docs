@@ -6,7 +6,7 @@ uid: Adding_a_regular_DataMiner_Agent
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/agents-adding-a-dma-to-a-cluster/>
+> [Agents – Adding a DMA to a cluster](https://community.dataminer.services/video/agents-adding-a-dma-to-a-cluster/) ![Video](~/user-guide/images/video_Duo.png)
 
 1. On the DMA you intend to add to the cluster, go to the *System Center* module and select the *Agents* page.
 

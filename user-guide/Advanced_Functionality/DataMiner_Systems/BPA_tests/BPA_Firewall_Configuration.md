@@ -11,7 +11,7 @@ A firewall policy that is too lax may allow adversaries to attack internal servi
 This BPA test verifies that no excessive ports are open in the Windows firewall.
 
 > [!NOTE]
-> This BPA is available from DataMiner version 10.2.12 and 10.3.0 onwards.
+> This BPA is available from DataMiner version 10.2.12 and 10.3.0 onwards. From DataMiner 10.3.7/10.4.0 onwards, this prerequisite runs automatically when you upgrade, to ensure TCP port 5100 is correctly configured to allow inbound communication.
 
 ## Metadata
 
@@ -36,7 +36,7 @@ This BPA does not create errors.
 
 ## Mitigation
 
-Restrict the number of ports allowed through the Windows firewall. For more information see: [Securing the DataMiner firewall](https://community.dataminer.services/securing-dataminer-part-2-firewall/).
+Restrict the number of ports allowed through the Windows firewall. For more information see [Configure the firewall](xref:DataMiner_hardening_guide#configure-the-firewall).
 
 ## Limitations
 

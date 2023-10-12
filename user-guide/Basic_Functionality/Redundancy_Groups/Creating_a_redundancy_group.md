@@ -5,7 +5,7 @@ uid: Creating_a_redundancy_group
 # Creating a redundancy group
 
 > [!TIP]
-> See also: [Rui’s Rapid Recap – Redundancy groups](https://community.dataminer.services/video/ruis-rapid-recap-redundancy-groups/) on DataMiner Dojo.
+> See also: [Rui’s Rapid Recap – Redundancy groups](https://community.dataminer.services/video/ruis-rapid-recap-redundancy-groups/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 To create a redundancy group:
 

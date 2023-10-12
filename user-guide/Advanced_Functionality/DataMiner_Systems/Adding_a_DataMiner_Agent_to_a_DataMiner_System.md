@@ -17,4 +17,4 @@ More information on adding DataMiner Agents is included in the following section
 > If you add a DataMiner Agent to a DataMiner System, please make sure that it is a new DataMiner Agent that has not yet been put into use and that uses the same software version as the other Agents in the system.
 
 > [!TIP]
-> See also: [Setting up a new DataMiner System](xref:Setting_up_a_new_DataMiner_System).
+> See also: [Setting up a new DataMiner System](xref:Before_you_begin_to_set_up_a_new_DMS).
