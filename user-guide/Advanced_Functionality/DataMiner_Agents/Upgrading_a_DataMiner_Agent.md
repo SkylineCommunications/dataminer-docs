@@ -44,4 +44,4 @@ You can also start an upgrade from the Agents page in DataMiner Cube’s System 
 
 For detailed steps, go to [Upgrading a DataMiner Agent in System Center](xref:Upgrading_a_DataMiner_Agent_in_System_Center).
 
-***
+This is new information I am trying to add.
