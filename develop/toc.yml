@@ -540,10 +540,10 @@
         items:
         - name: Launching EPM objects by clicking buttons in Data Display table cells
           topicUid: AdvancedEPMLaunchEPMObjectsTableCellButtons
-    - name: Connector help pages
+    - name: Connector documentation
       topicUid: Connector_help_pages
       items:
-      - name: Connector help template
+      - name: Connector documentation template
         topicUid: Connector_help_template
     - name: Questions & Answers
       topicUid: QuestionsAndAnswers

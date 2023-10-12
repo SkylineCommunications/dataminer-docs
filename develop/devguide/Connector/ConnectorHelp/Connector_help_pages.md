@@ -2,27 +2,27 @@
 uid: Connector_help_pages
 ---
 
-# Connector help pages
+# Connector documentation
 
-For every connector that is developed for DataMiner, a corresponding help page should be available. This help page details among others how the connections should be set up when you create an element with the connector, how the element should be used, etc. If a connector exports child connectors, a help page should also be created for each of these child connectors.
+For every connector that is developed for DataMiner, a corresponding page should be available in the connector documentation. This "connector help" page details among others how the connections should be set up when you create an element with the connector, how the element should be used, etc. If a connector exports child connectors, a page should also be created for each of these child connectors.
 
-When you develop a connector using DIS, you can generate the connector help with the *Plugins* > *Generate driver help* option in the [DIS menu](xref:DIS_menu). You can also create the connector help directly in Markdown, starting from our [template](xref:Connector_help_template). When you have created the help page, add it in the [dataminer-docs-connectors](https://github.com/SkylineCommunications/dataminer-docs-connectors) repository.
+When you develop a connector using DIS, you can generate the connector documentation with the *Plugins* > *Generate driver help* option in the [DIS menu](xref:DIS_menu). You can also create the page directly in Markdown, starting from our [template](xref:Connector_help_template). When you have created the page, add it in the [dataminer-docs-connectors](https://github.com/SkylineCommunications/dataminer-docs-connectors) repository.
 
-## Adding a new connector help page
+## Adding a new connector documentation page
 
 ### File name and folder
 
-To make sure your help page can be automatically included in the [DataMiner Catalog](https://catalog.dataminer.services/), it is important that you use the correct file name and place the file in the correct folder:
+To make sure your page can be automatically included in the [DataMiner Catalog](https://catalog.dataminer.services/), it is important that you use the correct file name and place the file in the correct folder:
 
-- Make sure the **file name** is the **exact name of the connector in the Catalog**, but with **underscores instead of spaces**. For example, the file name of the *Microsoft Platform* connector help has to be *Microsoft_Platform.md*.
+- Make sure the **file name** is the **exact name of the connector in the Catalog**, but with **underscores instead of spaces**. For example, the file name of the *Microsoft Platform* documentation page has to be *Microsoft_Platform.md*.
 
-- Add your help file in the following folder of the [dataminer-docs-connectors](https://github.com/SkylineCommunications/dataminer-docs-connectors) repository: */dataminer-docs-connectors/connector_help/connector-help*
+- Add your documentation file in the following folder of the [dataminer-docs-connectors](https://github.com/SkylineCommunications/dataminer-docs-connectors) repository: */dataminer-docs-connectors/connector_help/connector-help*
 
 ### Table of contents
 
-When you add a new connector help page, you will need to add it to the table of contents as well. To do so, add it to the *toc.yml* file in the *connector_help* folder. Please note:
+When you add a new page to the connector documentation, you will need to add it to the table of contents as well. To do so, add it to the *toc.yml* file in the *connector_help* folder. Please note:
 
-- The connector help pages are listed in alphabetical order underneath each vendor node. Make sure to add your help page in the correct location.
+- The connector documentation pages are listed in alphabetical order underneath each vendor node. Make sure to add your page in the correct location.
 - Use the following syntax to add the page:
 
   ```yml
@@ -38,9 +38,9 @@ When you add a new connector help page, you will need to add it to the table of 
 >
 > ![Pull request check failed](~/develop/images/Pull_request_check_failed.png)
 
-## Writing connector help
+## Writing connector documentation
 
-When you write connector help, keep the instructions below in mind.
+When you write connector documentation, keep the instructions below in mind.
 
 ### Markdown syntax
 
@@ -48,11 +48,11 @@ Use DocFX Flavored Markdown (DFM). See [Markdown syntax](xref:contributing#markd
 
 ### Title
 
-The title of the help page should be the name of the connector in the [DataMiner Catalog](https://catalog.dataminer.services/).
+The title of the page should be the name of the connector in the [DataMiner Catalog](https://catalog.dataminer.services/).
 
 ### Introduction paragraph
 
-In the **first paragraph** below the title, add a short paragraph explaining the **function of the connector**. Try to also include some **information about the data source**. If you copy this information from somewhere else, make sure it fits the informative context of a help page (e.g. remove meaningless praise like "best-of-breed", "top-of-the-line", etc.).
+In the **first paragraph** below the title, add a short paragraph explaining the **function of the connector**. Try to also include some **information about the data source**. If you copy this information from somewhere else, make sure it fits the informative context of documentation (e.g. remove meaningless praise like "best-of-breed", "top-of-the-line", etc.).
 
 ### 'About' section
 
@@ -73,7 +73,7 @@ In the **Configuration** section, add the information needed to create a DataMin
 
 #### 'Connections' subsection
 
-Except for exported child connectors, every connector help should have a **Connections** subsection. For each connection, you should add a title mentioning the name of the connection as defined in the connector, e.g. "SNMP Connection – Trap Input". For the Main connection, use "Main" as the name of the connection.
+Except for exported child connectors, every connector documentation page should have a **Connections** subsection. For each connection, you should add a title mentioning the name of the connection as defined in the connector, e.g. "SNMP Connection – Trap Input". For the Main connection, use "Main" as the name of the connection.
 
 Below are a couple of examples of such connections sections.
 
@@ -133,11 +133,11 @@ Depending on the connector, other subsections may be needed, e.g. in case Automa
 
 ### 'How to Use' section
 
-The **How to Use** section of the connector help is where you explain what users can actually do with the connector, and especially how they can do it.
+The **How to Use** section of your page is where you explain what users can actually do with the connector, and especially how they can do it.
 
 Also specify the **communication method** if relevant. For example: "SOAP calls are used to retrieve the device information. SNMP traps can be retrieved when this is enabled on the device." In case no data traffic will be seen in the Stream Viewer, you should clearly mention this.
 
-Make sure you **always specify something in this section**, keeping in mind what users may be looking for when they consult the help page. Ask yourself the question, "If someone who knows nothing at all about this connector goes looking for help about it, what would they need to see?"
+Make sure you **always specify something in this section**, keeping in mind what users may be looking for when they consult the documentation. Ask yourself the question, "If someone who knows nothing at all about this connector goes looking for help about it, what would they need to see?"
 
 For example:
 
@@ -159,7 +159,7 @@ For a connector that supports DCF, add information on which connector range supp
 
 Always add this additional provision, to make sure user changes in DataMiner or changes from third-party connectors are covered: "DCF can also be implemented through the DataMiner DCF user interface and through third-party DataMiner connectors (e.g. a manager)."
 
-For a connector help for a parent DVE element, to make it clear that DCF in a child DVE is actually managed by the parent, add this provision: "Connectivity for all exported connectors is managed by this connector."
+For a page for a parent DVE element, to make it clear that DCF in a child DVE is actually managed by the parent, add this provision: "Connectivity for all exported connectors is managed by this connector."
 
 For a DVE child element, no detailed description is necessary in this section. Instead it is sufficient to mention the following: "Connectivity for this connector is managed by the parent connector [connector name]."
 
