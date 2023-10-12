@@ -43,3 +43,5 @@ For detailed steps, go to [Upgrading a DataMiner Agent using DataMiner Taskbar U
 You can also start an upgrade from the Agents page in DataMiner Cube’s System Center. You will need to download the necessary upgrade package(s) from the [DataMiner Software](https://community.dataminer.services/downloads/) page to do so.
 
 For detailed steps, go to [Upgrading a DataMiner Agent in System Center](xref:Upgrading_a_DataMiner_Agent_in_System_Center).
+
+***
