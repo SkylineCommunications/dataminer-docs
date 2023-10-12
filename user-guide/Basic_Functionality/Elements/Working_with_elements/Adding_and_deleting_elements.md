@@ -156,6 +156,9 @@ uid: Adding_and_deleting_elements
 
        - If you specify “any” as the host address, DataMiner listens on all IP addresses on the specified port.
 
+> [!NOTE]
+> This is the note I am trying to add.
+
      - **IP port**: The IP port of the destination. This is not always required.
 
      - **Accepted IP address**: Available from DataMiner 9.6.13 onwards, if a smart-serial server port of type TCP is used. Allows you to specify one or more allowed IP addresses for the connection. The element will then only communicate with those IP addresses. This configuration makes it possible for several elements to listen on the same port but communicate exclusively with a different set of IPs.
