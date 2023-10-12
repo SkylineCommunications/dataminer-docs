@@ -48,6 +48,14 @@ When a correlation rule was based on another correlation rule, display issues co
 
 When the main correlation alarm got cleared, the base alarm would no longer be shown in the alarm tab, and when the base alarm got updated, it would be shown twice: once as the source of the other correlation alarm and once as a regular alarm.
 
+#### DataMiner Cube - Spectrum Analysis: Problem when making changes to a spectrum monitor [ID_37542]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+
+When you create a spectrum monitor, you can define a parameter and select a number of measurement points. Each combination of a parameter and a measurement point then is assigned an ID.
+
+Up to now, when you made a change to a spectrum monitor, in some cases, the ID of certain parameter/measurement point combinations could change even when the parameter or the measurement points had not been changed.
+
 #### PropertyChangeEvents would not be removed from the SLNet event cache when an element was deleted [ID_37576]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
