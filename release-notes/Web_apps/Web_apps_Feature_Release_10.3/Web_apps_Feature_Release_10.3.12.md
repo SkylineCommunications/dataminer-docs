@@ -125,3 +125,9 @@ When a falsy value (empty string, 0, etc.) was fed as an argument of an app acti
 Up to now, a *Numeric input* component would not automatically get the focus when you clicked one of its arrow buttons. As a result, the feed value of the component would also not get updated.
 
 From now on, when you click the *Up* or *Down* button of a *Numeric input* component, it will get the focus and its feed value will be updated.
+
+#### Dashboards app & Low-Code Apps - Table component: Exporting data to CSV would incorrectly be possible when the table was empty [ID_37585]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+Up to now, it would incorrectly be possible to export table data to a CSV file when a table did not display any rows. From now on, when a table does not display any rows (e.g. when no rows match the applied filter), the button allowing you to export the table data to a CSV file will be disabled.
