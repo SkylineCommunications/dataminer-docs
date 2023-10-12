@@ -92,6 +92,12 @@ A number of enhancements have been made with regard to the verification of forec
 
 When a parameter has anomalous flatline periods in its trend data history that are breaking the normal trend data patterns, from now on, those flatline periods will no longer be included into the training data of the prediction model. As a result, a more accurate prediction can be expected on this kind of behavior.
 
+#### SLAnalytics: Not all occurrences of multivariate patterns containing subpatterns hosted on different DMAs would be detected [ID_37451]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+Up to now, when you had created a multivariate pattern containing subpatterns hosted on different DMAs, in some cases, not all occurrences would get detected internally. From now on, all occurrences of multivariate patterns containing subpatterns hosted on different DMAs will be correctly detected.
+
 #### Storage as a Service: Enhanced performance of DOM and SRM queries [ID_37495]
 
 <!-- MR 10.4.0 - FR 10.3.12 -->
@@ -157,6 +163,12 @@ When a resource did not have both a minimum and maximum value for a particular r
 <!-- MR 10.3.0 [CU8] - FR 10.3.12 -->
 
 In some cases, SLNet could leak memory due to MessageBroker instances not being cleaned up properly.
+
+#### Storage as a Service: Paged data retrieval operations would be cut off prematurely [ID_37533]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+When reading data from the database page by page, in some cases, the operation would be cut off prematurely.
 
 #### Newly created element could get assigned the same DmaId/ElementId key as another, already existing element [ID_37560]
 

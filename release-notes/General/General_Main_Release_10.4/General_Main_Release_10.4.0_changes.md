@@ -519,6 +519,12 @@ When, in the SLNetClientTest tool, you select the new *Debug SAML* checkbox befo
 
 When a parameter has anomalous flatline periods in its trend data history that are breaking the normal trend data patterns, from now on, those flatline periods will no longer be included into the training data of the prediction model. As a result, a more accurate prediction can be expected on this kind of behavior.
 
+#### SLAnalytics: Not all occurrences of multivariate patterns containing subpatterns hosted on different DMAs would be detected [ID_37451]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+Up to now, when you had created a multivariate pattern containing subpatterns hosted on different DMAs, in some cases, not all occurrences would get detected internally. From now on, all occurrences of multivariate patterns containing subpatterns hosted on different DMAs will be correctly detected.
+
 #### Storage as a Service: DataMiner Agent will now communicate with the database via port 443 only [ID_37480]
 
 <!-- MR 10.4.0 - FR 10.3.11 [CU0] -->
@@ -700,6 +706,12 @@ Due to a cache synchronization issue, problems could occur when trying to edit a
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
 In EPM environments, an error could occur when SLNet requested information from other DataMiner Agents in the DMS.  
+
+#### Storage as a Service: Paged data retrieval operations would be cut off prematurely [ID_37533]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+When reading data from the database page by page, in some cases, the operation would be cut off prematurely.
 
 #### Newly created element could get assigned the same DmaId/ElementId key as another, already existing element [ID_37560]
 
