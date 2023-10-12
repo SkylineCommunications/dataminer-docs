@@ -25,7 +25,7 @@ The following steps can be taken to configure the backups for a DMA:
      > [!NOTE]
      > Only SMB file shares are supported for network backups. It is not possible to back up to e.g. (S)FTP shares.
 
-1. In the *General* tab, under *Policy*, enter the number of backups that should be kept.
+1. In the *General* tab, next to *Number of backups to keep*, enter the number of backups that should be kept.
 
 1. In case the system uses an indexing database, in the *Indexing Engine Location* section of the *General* tab, the backup path can be modified if necessary.
 
