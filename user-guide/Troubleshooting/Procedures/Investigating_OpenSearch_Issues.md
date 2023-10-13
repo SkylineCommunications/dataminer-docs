@@ -105,11 +105,11 @@ To fix this issue:
 > [!IMPORTANT]
 > Deleting the nodes folder will result in loss of data. You should only do so with a new installation of OpenSearch.
 
-## OpenSearch logging mentions, unknown setting [node.voting only]
+## OpenSearch logging mentions unknown setting [node.voting only]
 
-When [node.voting only] was configured for your tiebreaker in the opensearch.yml, this will not work because OpenSearch appears to have blocked the implementation when it was forked from ElasticSearch.
+When [node.voting only] was configured for your tiebreaker in the *opensearch.yml*, this will not work because OpenSearch appears to have blocked the implementation when it was forked from ElasticSearch.
 
-When using tiebreakers, configure them to use the master-eligible role in the opensearch.yml.
+When using tie-breakers, configure them to use the master-eligible role in *opensearch.yml*.
 
 ## SLSearch.txt logging mentions OpenSearch version is not officially supported
 
