@@ -20,7 +20,7 @@ dataminer.services is a cloud based extension of your DataMiner system. Connecti
 
 ### How do I connect my DataMiner system to dataminer.services?
 
-To connect your DataMiner system to dataminer.services you have to install the Cloud Pack on one or more of your DataMiner agents. After doing so, you still have to set up the connection by going to *System center > Cloud* within cube and clicking on the *Connect* button on that page. More details on how to connect your DataMiner system to dataminer.services can be found [here](xref:Connecting_your_DataMiner_System_to_the_cloud)
+Connecting your DataMiner system to dataminer.services can be done very simply by installing the [DataMiner Cloud Pack](https://community.dataminer.services/dataminer-cloud-pack/) on one or more of your DataMiner agents. After doing so, you still have to set up the connection by going to *System center > Cloud* within cube and clicking on the *Connect* button on that page. More details on how to connect your DataMiner system to dataminer.services can be found [here](xref:Connecting_your_DataMiner_System_to_the_cloud)
 
 ### Do all agents in a DMS have to be connected to dataminer.services?
 
