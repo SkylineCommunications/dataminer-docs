@@ -203,7 +203,32 @@ After you have followed the procedure above and system requirements are met, you
 
 ## After the migration
 
-1. To improve the security of the Cassandra database, follow the procedures mentioned under [Cassandra authentication](xref:Cassandra_authentication) .
+1. To improve the security of the Cassandra database, follow the procedures mentioned under [Cassandra authentication](xref:Cassandra_authentication).
+
+1. To ensure that your Cassandra database does not run out of memory under load, configure the heap size for Cassandra.
+
+   Using the default "CMS" garbage collector, the heap space should ideally be between 8 and 16 GB.
+
+   In **Windows**, you can change the heap size as follows:
+
+   1. Stop Cassandra.
+
+   1. Open Regedit  and go to the following key:
+
+      ```txt
+      HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Apache Software Foundation\Procrun 2.0\cassandra\Parameters\Java
+      ```
+
+   1. Right-click *Options* and select *Modify*.
+
+   1. Add or update the entries containing **Xms** and **Xmx** with the heap size in megabyte, e.g. **-Xms8192M** and **-Xmx8192M** for 8 GB.
+
+   1. Make these same changes in `C:\Program Files\Cassandra\conf\jvm.options`.
+
+   1. Restart Cassandra.
+
+   > [!TIP]
+   > For more information on how to tune the resources of Cassandra's Java Virtual Machine, including how to configure this on a Linux machine, see [Tuning the Java heap](https://docs.datastax.com/en/cassandra-oss/3.0/cassandra/operations/opsTuneJVM.html#opsTuneJVM__tuning-the-java-heap).
 
 1. If MySQL or MSSQL are no longer used on the DMA server, disable the relevant service:
 
