@@ -840,6 +840,96 @@ The only time when "the user" is appropriate is when whoever you are writing for
 
 ## Troubleshooting
 
+### Merge conflicts
+
+#### Scenario 1: web editor
+
+**Symptom**: After creating a pull request, a warning about conflicts in the branch appears, requiring these to be resolved before merging your branch into the main branch.
+
+![Conflicting files](~/images/Conflicting_Files.png)
+
+**Resolution**:
+
+- If the *Resolve conflicts* button is deactivated, your pull request's merge conflicts are too complex to resolve in the web editor. In this case, use [GitHub Desktop](#scenario-2-github-desktop) to resolve the conflicts.
+
+- If you can click the *Resolve conflicts* button, proceed to resolve the merge conflicts in the web editor.
+
+  On the left side of the web editor, a list of conflicting files is displayed. The header bar shows the number of conflicts in the current file.
+
+  ![Conflicts](~/images/Conflicts.png)
+
+  To resolve the merge conflict(s):
+
+  1. Decide whether to keep your branch's changes (i.e. the current changes), the main branch's changes (i.e. the incoming changes), or combine both. The bracket on the left indicates the beginning and end of the current and incoming changes.
+
+     ![Web editor](~/images/Web_Editor.png)
+
+  1. Delete the conflict markers `<<<<<<<`, `=======`, and `>>>>>>>`.
+
+  1. If multiple merge conflicts exist in the file, scroll down to the next set of conflict markers, and repeat steps one and two to resolve your merge conflict.
+
+  1. Click *Mark as resolved* in the top-right corner of the header bar.
+
+  1. If multiple files have conflicts, select the next file you want to edit and repeat steps one through four until all merge conflicts are resolved.
+
+  1. To save your changes, select *Commit merge*.
+
+     ![Commit merge](~/images/Commit_Merge.png)
+
+#### Scenario 2: GitHub Desktop
+
+**Symptom**:
+
+- After creating a pull request, a warning about conflicts in the branch appears, requiring these to be resolved before merging your branch into the main branch. However, your pull request's merge conflicts are too complex to resolve in the web editor, or
+
+- In GitHub Desktop, attempting to merge the main branch into your current branch results in a warning of one or multiple conflicted files.
+
+  > [!NOTE]
+  > If this is your starting point, proceed directly to step 4 of the resolution below.
+
+**Resolution**:
+
+> [!NOTE]
+> Ensure you have [Visual Studio Code](https://code.visualstudio.com/) installed before following this procedure.
+
+1. In GitHub Desktop, select *Current branch*.
+
+1. Click *Choose a branch to merge into \[name-of-branch]*.
+
+   ![Merge into branch](~/images/Merge_into_Branch.png)
+
+1. Select the main branch. A warning appears indicating conflicted files. Click *Create a merge commit*.
+
+   > [!NOTE]
+   > Make sure the main branch is up to date. If you suspect the latest changes are not on your local machine, switch to the main branch, and click *Fetch origin* to receive the latest changes from the remote repository.
+
+   ![Conflicted files](~/images/Conflicted_Files_GitHub.png)
+
+1. GitHub Desktop will display a list of merge conflicts to be resolved. Select *Open in Visual Studio Code*.
+
+1. In Visual Studio Code, decide whether you want to keep your branch's changes (i.e. the current changes), the main branch's changes (i.e. the incoming changes), or if you want to combine the two. Color indicators represent the beginning and end of the current and incoming changes.
+
+   ![Merge conflicts](~/images/VSC_Merge_Conflicts.png)
+
+1. Delete the conflict markers `<<<<<<<`, `=======`, and `>>>>>>>`.
+
+   > [!NOTE]
+   > If you select a preset option, e.g. *Accept Incoming Change*, the conflict markers are automatically removed.
+
+1. If multiple merge conflicts exist in the file, scroll down to the next set of conflict markers, and repeat steps five and six to resolve your merge conflict.
+
+1. Click *File* in the top-left corner of the Visual Studio Code header bar, and select *Save*.
+
+1. Open GitHub Desktop. If a green checkmark appears next to the conflicted file name, the merge conflicts have been resolved. If no checkmark is visible, you may have overlooked a merge conflict in your file.
+
+1. If multiple files have conflicts, select the next file you want to edit and repeat steps four through nine until all merge conflicts are resolved.
+
+1. To save your changes, select *Continue merge*.
+
+   ![Continue merge](~/images/Continue_Merge.png)
+
+1. Click *Push origin*. The number of local commits being pushed to GitHub may vary, depending on how outdated your current branch was.
+
 ### There is a duplicate item in the TOC even though it only occurs once in the toc.yml
 
 **Symptom**: An item shows up twice in the table of contents even though it was only entered once in the *toc.yml*.
