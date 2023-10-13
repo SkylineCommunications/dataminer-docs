@@ -108,6 +108,22 @@ To resolve this issue, use the following workaround:
 > [!NOTE]
 > If you have a DataMiner System consisting of multiple DMAs, it is sufficient to do this on one of the DMAs.
 
+### API Deployment Manager failed to initialize
+
+When the [APIDeployment](xref:Overview_of_Soft_Launch_Options#apideployment) option is still enabled in *SoftLaunchOptions.xml*, the following alarm will be shown in Cube:
+
+```txt
+APIDeploymentManager failed to initialize, retrying. Check SLAPIDeploymentManager.txt for additional information.
+```
+
+In the SLDBConnection.txt log file, the error will look like this:
+
+```txt
+2023/10/10 20:30:18.308|SLDBConnection|SLDataGateway.Repositories|INF|0|354|2023-10-10T20:30:18.302|ERROR|Repository.RepositoryStorageProvider.DeployerToken|Refreshing storage [failed]: SLDataGateway.API.Types.Exceptions.StorageTypeNotFoundException: No storage type found for DataType: DeployerToken
+```
+
+To resolve this issue, remove the [APIDeployment](xref:Overview_of_Soft_Launch_Options#apideployment) option from *SoftLaunchOptions.xml*.
+
 ### Connector-specific issues
 
 Some connector versions may contain a bug that causes a lot of parameter sets to be saved to the database. In the interest of saving cost and reducing load, we therefore **recommend using the latest version** available for most connectors.
@@ -115,15 +131,3 @@ Some connector versions may contain a bug that causes a lot of parameter sets to
 This issue is known to occur with the following connector versions:
 
 - [Microsoft Platform](https://catalog.dataminer.services/result/driver/251): 1.1.2.x, 1.2.0.x, 1.2.1.1
-
-### API Deployment
-
-When [API Deployment](xref:Overview_of_Soft_Launch_Options#apideployment) is still enabled in the SoftLaunchOptions, the following alarm will be shown in Cube:
-
-![API Deployment Error](~/user-guide/images/STaaS_API_Deployment_Error.png)
-
-In the SLDBConnection.txt log file, the error will look like this:
-
-`2023/10/10 20:30:18.308|SLDBConnection|SLDataGateway.Repositories|INF|0|354|2023-10-10T20:30:18.302|ERROR|Repository.RepositoryStorageProvider.DeployerToken|Refreshing storage [failed]: SLDataGateway.API.Types.Exceptions.StorageTypeNotFoundException: No storage type found for DataType: DeployerToken`
-
-To resolve this issue, disable [API Deployment](xref:Overview_of_Soft_Launch_Options#apideployment) in the SoftLaunchOptions.
