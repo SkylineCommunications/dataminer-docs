@@ -134,6 +134,12 @@ When, in the Dashboards app, parameters belonging to a stopped element were retr
 
 From now on, element lists will no longer include non-active elements. As a result, it will no longer be possible to select parameters belonging to non-active elements.
 
+#### Dashboards app & Low-Code Apps - Chart components: Basic updates no longer triggered a refresh of the visualized data [ID_37567]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When the *Column & bar chart*, *Line & area chart* and *Pie & donut chart* components were fed by a query that did not support full real-time updates, basic updates to those components would no longer trigger a refresh of the visualized data.
+
 #### Dashboards app & Low-Code Apps - Table component: Exporting data to CSV would incorrectly be possible when the table was empty [ID_37585]
 
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
