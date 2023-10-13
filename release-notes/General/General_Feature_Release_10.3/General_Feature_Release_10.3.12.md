@@ -1,6 +1,9 @@
 ---
 uid: General_Feature_Release_10.3.12
-keywords: mytest, myspecialtest, my tag test
+keywords:
+- mytest
+- myspecialtest
+- my tag test
 ---
 
 # General Feature Release 10.3.12 – Preview
