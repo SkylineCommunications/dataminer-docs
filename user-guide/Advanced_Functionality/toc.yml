@@ -354,7 +354,7 @@ items:
                     items:
                       - name: Installing Elasticsearch on a DMA via DataMiner
                         topicUid: Installing_Elasticsearch_via_DataMiner
-                      - name: Migrating SRM resources to Elasticsearch
+                      - name: Migrating SRM resources to the indexing database
                         topicUid: Resources_migration_to_elastic
                       - name: Configuring the Elasticsearch database (Windows)
                         topicUid: Configuring_Elasticsearch_database_Windows

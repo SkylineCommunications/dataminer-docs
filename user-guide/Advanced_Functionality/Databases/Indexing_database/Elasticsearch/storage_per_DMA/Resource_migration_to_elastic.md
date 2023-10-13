@@ -2,26 +2,25 @@
 uid: Resources_migration_to_elastic
 ---
 
-# Migrating SRM resources to Elasticsearch
+# Migrating SRM resources to the indexing database
 
-> [!IMPORTANT]
-> Elasticsearch is **only supported up to version 6.8**. We therefore recommend using [Storage as a Service](xref:STaaS) instead, or if you do want to continue using self-hosted storage, using [dedicated clustered storage](xref:Dedicated_clustered_storage) with OpenSearch or the Amazon OpenSearch Service on AWS.
+Starting from DataMiner version 10.3.0/10.3.2, you can migrate the resources and resource pools from the *Resources.xml* file to the indexing database. This improves the scalability and performance on systems that have a large number of resources.
 
-Starting from DataMiner version 10.3.0/10.3.2, you can migrate the resources and resource pools from the *Resources.xml* file to Elasticsearch. This improves the scalability and performance on systems that have a large number of resources.
-
-Resources are not automatically migrated when you [install Elasticsearch](xref:Installing_Elasticsearch_via_DataMiner) and [migrate booking data](xref:Configuring_DataMiner_Indexing). Based on your specific setup, and keeping in mind the [limitations and differences between XML and Elasticsearch storage](#limitations-and-differences-with-xml-storage), you can decide independently whether or not you want to start this migration.
+When you [install an indexing database](xref:Installing_Elasticsearch_via_DataMiner) and [migrate booking data](xref:Configuring_DataMiner_Indexing) on an existing DataMiner System prior to DataMiner 10.4.0, resources are not automatically migrated. Based on your specific setup, and keeping in mind the [limitations and differences with XML storage](#limitations-and-differences-with-xml-storage), you can decide independently whether or not you want to start this migration. However, **from DataMiner 10.4.0 onwards**, the use of an indexing database (or Storage as a Service) to store resources and resource pools is **mandatory**. Using XML storage is no longer possible from that DataMiner version onwards.
 
 > [!TIP]
 >
-> - For metrics related to resource performance with Elasticsearch or with XML storage, see [Resources benchmarks](xref:resources_benchmarks).
+> - For metrics related to resource performance with an indexing database or with XML storage, see [Resources benchmarks](xref:resources_benchmarks).
 > - If you are looking for information on how to migrate an SRM configuration from one DMA to another, see [Migrating an SRM configuration](xref:SRM_migrating).
 
 > [!NOTE]
-> From DataMiner 10.4.0 onwards, the use of Elasticsearch to store resources and resource pools is mandatory. XML storage will no longer be supported. Upgrading to 10.4.0 will not be possible if the resources data is still stored in XML.
+>
+> - XML storage is longer supported from DataMiner 10.4.0 onwards. Upgrading to 10.4.0 will not be possible if the resources data is still stored in XML.
+> - Elasticsearch is only supported up to version 6.8. If you are using Elasticsearch as the indexing database, we therefore recommend using [Storage as a Service](xref:STaaS) instead, or if you do want to continue using self-hosted storage, using [dedicated clustered storage](xref:Dedicated_clustered_storage) with OpenSearch or the Amazon OpenSearch Service on AWS.
 
-## Migrating from XML to Elasticsearch
+## Migrating from XML to the indexing database
 
-To migrate the resources, you will need to use the SLNetClientTest tool.
+To migrate the resources, you will need to use the SLNetClientTest tool. Note that while the tool mentions only "Elastic", it can also be used for a migration to OpenSearch.
 
 ![SLNetClientTest tool](~/user-guide/images/ClientTestToolMigrationUI_ResourceMigration.jpg)<br>
 *Migration window in SLNetClientTest tool (version 10.3.2)*
@@ -45,7 +44,7 @@ To migrate the resources, you will need to use the SLNetClientTest tool.
 
 1. Click *Continue Migration*.
 
-   The custom properties of the resources and resource pools that are incompatible with Elasticsearch (see [Allowed property names](#allowed-property-names)) will be shown, along with the conversion that will be automatically applied. If the *Resources.xml* file is corrupt, the properties cannot be collected. In that case, an error will be shown, and the migration cannot be started. If all found properties are compatible with Elasticsearch, the wizard will show *No properties that need conversion were found*.
+   The custom properties of the resources and resource pools that are incompatible with an indexing database (see [Allowed property names](#allowed-property-names)) will be shown, along with the conversion that will be automatically applied. If the *Resources.xml* file is corrupt, the properties cannot be collected. In that case, an error will be shown, and the migration cannot be started. If all found properties are compatible with the indexing database, the wizard will show *No properties that need conversion were found*.
 
 1. If you agree with the proposed conversion of the properties or no conversion is necessary, click *Continue Migration* to start the actual migration process. If you do not accept the conversion, click *Cancel Migration*.
 
@@ -59,9 +58,9 @@ To migrate the resources, you will need to use the SLNetClientTest tool.
 
    - All resources and resource pools will be loaded from the *Resources.xml* file on the DataMiner Agent where the migration was triggered. The *Resources.xml* files of the other DataMiner Agents in the cluster are not migrated. This is not necessary, as the *Resources.xml* file is synced in the cluster.
 
-   - The properties (for resources and resource pools) and property definitions (for resource pools) will be converted if needed and written to Elasticsearch. **Empty property names will be discarded** at this stage, since they cannot be indexed in Elasticsearch. **Empty property values will be replaced with an empty string**.
+   - The properties (for resources and resource pools) and property definitions (for resource pools) will be converted if needed and written to the indexing database. **Empty property names will be discarded** at this stage, since they cannot be indexed in an indexing database. **Empty property values will be replaced with an empty string**.
 
-   - When the migration for both resources and resource pools is completed, the configuration will automatically switch to Elasticsearch storage, and the local Resource Manager (where the migration was triggered) will be initialized. Then all other Resource Manager instances in the cluster will be notified that they should start up and switch to Elasticsearch storage.
+   - When the migration for both resources and resource pools is completed, the configuration will automatically switch to indexing database storage, and the local Resource Manager (where the migration was triggered) will be initialized. Then all other Resource Manager instances in the cluster will be notified that they should start up and switch to indexing database storage.
 
 > [!NOTE]
 >
@@ -78,21 +77,21 @@ If a ``MigrationStatus`` is stuck in the ``InProgress`` state, you will need to 
 
 When a new DataMiner Agent is installed, the used storage type will depend on when Resource Manager starts up for the first time.
 
-- If DataMiner is installed with the 10.2.0 installer and Resource Manager is used, XML storage will be used. Elasticsearch is not yet supported as a storage type for resources and resource pools in DataMiner 10.2.0. After you have upgraded this DataMiner Agent to DataMiner 10.3.0 or later, it will continue to use XML storage until you trigger the migration.
+- If DataMiner is installed with the 10.2.0 installer and Resource Manager is used, XML storage will be used. An indexing database is not yet supported as a storage type for resources and resource pools in DataMiner 10.2.0. After you have upgraded this DataMiner Agent to DataMiner 10.3.0 or later, it will continue to use XML storage until you trigger the migration.
 
-- If DataMiner is installed with the 10.2.0 installer but Resource Manager never starts up while this version is used (for example because Elasticsearch is not installed, which is a requirement for Resource Manager to start as Elasticsearch is used to store bookings), and the DataMiner Agent is then upgraded to 10.3.1, Resource Manager will use Elasticsearch storage when it is initialized.
+- If DataMiner is installed with the 10.2.0 installer but Resource Manager never starts up while this version is used (for example because no indexing database is installed, while this is a requirement for Resource Manager to start as the indexing database is used to store bookings), and the DataMiner Agent is then upgraded to 10.3.1, Resource Manager will use indexing database storage when it is initialized.
 
 - When you add a new DataMiner Agent to an existing cluster, Resource Manager will use the storage type of the DataMiner Agent that has been in the cluster the longest. If not all DataMiner Agents in the cluster are using the same storage type, during the midnight sync, all DataMiner Agents will switch to the storage type of the DataMiner Agent that has been in the cluster the longest.
 
 ## Checking the storage type used by a DataMiner Agent
 
-If you want to know which storage type a DataMiner Agent is currently using, open the migration window as detailed under [Migrating from XML to Elasticsearch](#migrating-from-xml-to-elasticsearch).
+If you want to know which storage type a DataMiner Agent is currently using, open the migration window as detailed under [Migrating from XML to the indexing database](#migrating-from-xml-to-the-indexing-database).
 
 ## Limitations and differences with XML storage
 
 ### Allowed property names
 
-Since the properties of SRM objects are indexed in Elasticsearch after the migration, the following restrictions apply:
+To use indexing database storage, the following restrictions apply:
 
 - Property names must not start with character ``_``.
 - Property names must not contain characters ``.`` (period), ``#`` (hashtag), ``*`` (star), ``,`` (comma), ``"`` (double quote) or ``'`` (single quote).
@@ -100,27 +99,27 @@ Since the properties of SRM objects are indexed in Elasticsearch after the migra
 - Property values must not be ``null``.
 
 > [!NOTE]
-> If Elasticsearch storage is enabled and a resource or resource pool with invalid properties is added or updated, the API will return a ``ResourceManagerErrorData`` in the ``TraceData``, with reason ``InvalidCharactersInPropertyNames``.
+> If indexing database storage is enabled and a resource or resource pool with invalid properties is added or updated, the API will return a ``ResourceManagerErrorData`` in the ``TraceData``, with reason ``InvalidCharactersInPropertyNames``.
 
 ### Difference when deleting resources
 
-When XML storage is used, it is not possible to remove a resource when one of the DataMiner Agents in the cluster cannot be reached, as this could cause syncing issues. No such restrictions apply when Elasticsearch storage is used.
+When XML storage is used, it is not possible to remove a resource when one of the DataMiner Agents in the cluster cannot be reached, as this could cause syncing issues. No such restrictions apply when indexing database storage is used.
 
 ### Field size
 
-Field names in Elasticsearch have a maximum length of 32766 bytes, which means any field of a resource or resource pool indexed in Elasticsearch can only contain 32766 bytes. This limit is mostly important for string fields, which can contain 32766 characters of one byte (or 16383 characters of two bytes).
+Field names in the indexing database have a maximum length of 32766 bytes, which means any field of a resource or resource pool indexed in the database can only contain 32766 bytes. This limit is mostly important for string fields, which can contain 32766 characters of one byte (or 16383 characters of two bytes).
 
 > [!NOTE]
-> If there is an attempt to save a resource or resource pool with a field that is too big, the API will return an ``UnknownError``. The ``SLResourceManager.txt`` log file will contain the actual exception, which will mention the field that could not be indexed in Elasticsearch.
+> If there is an attempt to save a resource or resource pool with a field that is too big, the API will return an ``UnknownError``. The ``SLResourceManager.txt`` log file will contain the actual exception, which will mention the field that could not be indexed in the database.
 
 ### Number of indices
 
-When a resource is indexed in Elasticsearch, all its properties, capacities, and capabilities will be indexed as well. This means that each unique property name and unique capacity and capability ID will become a field mapping in Elasticsearch. If there is an unusually large number of capacities, capabilities, and/or property names, this may lead to reduced performance of Elasticsearch. During testing, this was noticed when more than 300 unique field mappings were present. We therefore recommend that you limit the number of unique capacity IDs, capability IDs, and property names over all resources in the system so that it remains below 300.
+When a resource is indexed in the indexing database, all its properties, capacities, and capabilities will be indexed as well. This means that each unique property name and unique capacity and capability ID will become a field mapping in the database. If there is an unusually large number of capacities, capabilities, and/or property names, this may lead to reduced performance of the database. During testing, this was noticed when more than 300 unique field mappings were present. We therefore recommend that you limit the number of unique capacity IDs, capability IDs, and property names over all resources in the system so that it remains below 300.
 
 ### Initial event on subscriptions
 
-If XML storage is used and you subscribe to the *ResourceManagerEventMessage*, you will receive an initial event with all resources and resource pools. This event is not sent when Elasticsearch storage is used, in order to prevent sending a message to the client containing thousands of resources.
+If XML storage is used and you subscribe to the *ResourceManagerEventMessage*, you will receive an initial event with all resources and resource pools. This event is not sent when indexing database storage is used, in order to prevent sending a message to the client containing thousands of resources.
 
 ### Syncing
 
-If XML storage is used, all Resource Manager instances in the cluster will sync the resources in their XML file on startup and during the midnight sync. If Elasticsearch storage is used, DataMiner relies on Elasticsearch to do the syncing, so this does not happen during the midnight sync or on startup. However, Resource Manager will refresh the cached resources during the midnight sync by reading all resources and resource pools again from Elasticsearch. There is no functional difference between these approaches, but using Elasticsearch as storage will reduce the communication between Resource Manager instances in a cluster environment.
+If XML storage is used, all Resource Manager instances in the cluster will sync the resources in their XML file on startup and during the midnight sync. If indexing database storage is used, DataMiner relies on the database to do the syncing, so this does not happen during the midnight sync or on startup. However, Resource Manager will refresh the cached resources during the midnight sync by reading all resources and resource pools again from the database. There is no functional difference between these approaches, but using the indexing database for storage will reduce the communication between Resource Manager instances in a cluster environment.
