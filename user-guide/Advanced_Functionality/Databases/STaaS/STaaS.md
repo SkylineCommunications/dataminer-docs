@@ -118,7 +118,11 @@ This issue is known to occur with the following connector versions:
 
 ### API Deployment
 
-When [API Deployment](xref:Overview_of_Soft_Launch_Options#apideployment) is still enabled in the SoftLaunchOptions, the following error will be shown in the SLDBConnection.txt log file:
+When [API Deployment](xref:Overview_of_Soft_Launch_Options#apideployment) is still enabled in the SoftLaunchOptions, the following alarm will be shown in Cube:
+
+![API Deployment Error](~/user-guide/images/STaaS_API_Deployment_Error.png)
+
+In the SLDBConnection.txt log file, the error will look like this:
 
 `2023/10/10 20:30:18.308|SLDBConnection|SLDataGateway.Repositories|INF|0|354|2023-10-10T20:30:18.302|ERROR|Repository.RepositoryStorageProvider.DeployerToken|Refreshing storage [failed]: SLDataGateway.API.Types.Exceptions.StorageTypeNotFoundException: No storage type found for DataType: DeployerToken`
 
