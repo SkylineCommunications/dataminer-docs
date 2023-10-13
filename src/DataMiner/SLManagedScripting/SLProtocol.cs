@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Runtime.InteropServices;
 
 using Skyline.DataMiner.Net;
@@ -1115,6 +1116,9 @@ namespace Skyline.DataMiner.Scripting
 		///			<item>
 		///				<description>This method is intended to be used when the data stored in the ElementData.xml file is unique for all parameters. If this is not the case, the method will return the value of one of the parameters that has the specified value in the ElementData.xml file.</description>
 		///			</item>
+		///			<item>
+		///				<description>This method is deprecated since DataMiner 10.3.4.</description>
+		///			</item>
 		///		</list>
 		///	</remarks>
 		///	<example>
@@ -1153,6 +1157,7 @@ namespace Skyline.DataMiner.Scripting
 		///		object result = protocol.GetParameterByData("Data");
 		///	</code>
 		///	</example>
+		[Obsolete("This method is obsolete since DataMiner 10.3.4.")]
 		object GetParameterByData(string data);
 
 		/// <summary>
@@ -1168,6 +1173,9 @@ namespace Skyline.DataMiner.Scripting
 		///			</item>
 		///			<item>
 		///				<description>In case multiple parameters need to be set by data, use the <see cref="SLProtocol.SetParametersByData"/> method instead.</description>
+		///			</item>
+		///			<item>
+		///				<description>This method is deprecated since DataMiner 10.3.4.</description>
 		///			</item>
 		///		</list>
 		///	</remarks>
@@ -1207,6 +1215,7 @@ namespace Skyline.DataMiner.Scripting
 		///		 int result = protocol.SetParameterByData("Data", "B");
 		///		 </code>
 		///	</example>
+		[Obsolete("This method is obsolete since DataMiner 10.3.4.")]
 		int SetParameterByData(string data, object value);
 
 		/// <summary>
@@ -1223,8 +1232,12 @@ namespace Skyline.DataMiner.Scripting
 		///			<item>
 		///				<description>Feature introduced in DataMiner version 8.0.3.</description>
 		///			</item>
+		///			<item>
+		///				<description>This method is deprecated since DataMiner 10.3.4.</description>
+		///			</item>
 		///		</list>
 		///	</remarks>
+		[Obsolete("This method is obsolete since DataMiner 10.3.4.")]
 		object SetParametersByData(string[] datas, object[] values);
 
 		/// <summary>
@@ -1237,8 +1250,12 @@ namespace Skyline.DataMiner.Scripting
 		///			<item>
 		///				<description>This is a wrapper method for the NotifyProtocol type 88 <see href="xref:NT_GET_ITEM_DATA">NT_GET_ITEM_DATA</see> call.</description>
 		///			</item>
+		///			<item>
+		///				<description>This method is deprecated since DataMiner 10.3.4.</description>
+		///			</item>
 		///		</list>
 		///	</remarks>
+		[Obsolete("This method is obsolete since DataMiner 10.3.4.")]
 		object GetParameterItemData(string data);
 
 		/// <summary>
@@ -1258,8 +1275,12 @@ namespace Skyline.DataMiner.Scripting
 		///			<item>
 		///				<description>When multiple parameters need to be set at once, use the <see cref="SLProtocol.SetParametersItemData"/> method instead.</description>
 		///			</item>
+		///			<item>
+		///				<description>This method is deprecated since DataMiner 10.3.4.</description>
+		///			</item>
 		///		</list>
 		///	</remarks>
+		[Obsolete("This method is obsolete since DataMiner 10.3.4.")]
 		int SetParameterItemData(string data, object value);
 
 		/// <summary>
@@ -1279,8 +1300,12 @@ namespace Skyline.DataMiner.Scripting
 		///			<item>
 		///				<description>The ElementData.xml file is located in the folder “C:\Skyline DataMiner\Elements\[ElementName]\”.</description>
 		///			</item>
+		///			<item>
+		///				<description>This method is deprecated since DataMiner 10.3.4.</description>
+		///			</item>
 		///		</list>
 		///	</remarks>
+		[Obsolete("This method is obsolete since DataMiner 10.3.4.")]
 		object SetParametersItemData(string[] datas, object[] values);
 
 		/// <summary>

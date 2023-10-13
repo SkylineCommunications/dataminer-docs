@@ -47,4 +47,5 @@ else
 
 ## Remarks
 
-- The SLProtocol interface defines two wrapper methods for this call: "SetParameterItemData" and "SetParametersItemData". See SLProtocol.SetParameterItemData method and SLProtocol.SetParametersItemData method.
+- The [SLProtocol](xref:Skyline.DataMiner.Scripting.SLProtocol) interface defines two wrapper methods for this call: [SetParameterItemData](xref:Skyline.DataMiner.Scripting.SLProtocol.SetParameterItemData(System.String,System.Object)) and [SetParametersItemData](xref:Skyline.DataMiner.Scripting.SLProtocol.SetParametersItemData(System.String[],System.Object[])).
+- This Notify type is deprecated since DataMiner 10.3.4.
