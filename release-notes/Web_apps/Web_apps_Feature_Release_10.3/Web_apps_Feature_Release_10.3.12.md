@@ -126,6 +126,14 @@ Up to now, a *Numeric input* component would not automatically get the focus whe
 
 From now on, when you click the *Up* or *Down* button of a *Numeric input* component, it will get the focus and its feed value will be updated.
 
+#### Dashboards app: 'No parameters available' error would appear when trying to retrieve parameters belonging to a stopped element [ID_37561]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When, in the Dashboards app, parameters belonging to a stopped element were retrieved, a *No parameters available* error would appear.
+
+From now on, element lists will no longer include non-active elements. As a result, it will no longer be possible to select parameters belonging to non-active elements.
+
 #### Dashboards app & Low-Code Apps - Table component: Exporting data to CSV would incorrectly be possible when the table was empty [ID_37585]
 
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
