@@ -713,6 +713,12 @@ In EPM environments, an error could occur when SLNet requested information from 
 
 On systems using a database other than Cassandra, up to now, an `ExistsCustomDataTypeRequest` message would always return false and cause an error to be logged in the *SLDBConnection.txt* and *SLErrors.txt* files.
 
+#### Storage as a Service: Row limits were disregarded when a post filter was applied to a query result [ID_37515]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+In cases where SLDataGateway retrieved an entire table and then applied a filter afterwards, any row limits defined for the query in question would incorrectly be disregarded.
+
 #### Storage as a Service: Paged data retrieval operations would be cut off prematurely [ID_37533]
 
 <!-- MR 10.4.0 - FR 10.3.12 -->

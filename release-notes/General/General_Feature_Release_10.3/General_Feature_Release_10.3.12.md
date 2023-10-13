@@ -1,5 +1,6 @@
 ---
 uid: General_Feature_Release_10.3.12
+tags: mytest, myspecialtest, my tag test
 ---
 
 # General Feature Release 10.3.12 – Preview
@@ -163,6 +164,12 @@ Up to now, when you stopped both *Alarm Focus* and *Automatic Incident Tracking*
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
 
 When a resource did not have both a minimum and maximum value for a particular range point, the resource capability exposers would not work correctly for that range point.
+
+#### Storage as a Service: Row limits were disregarded when a post filter was applied to a query result [ID_37515]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+In cases where SLDataGateway retrieved an entire table and then applied a filter afterwards, any row limits defined for the query in question would incorrectly be disregarded.
 
 #### SLNet: Memory leak due to MessageBroker instances not being cleaned up properly [ID_37525]
 
