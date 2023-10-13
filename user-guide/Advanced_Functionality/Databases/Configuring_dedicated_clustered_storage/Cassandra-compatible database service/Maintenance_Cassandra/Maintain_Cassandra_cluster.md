@@ -4,6 +4,8 @@ uid: Maintain_Cassandra_Cluster
 
 # Maintaining a Cassandra cluster
 
+If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STaaS) setup but instead choose self-hosted storage, you are responsible for maintaining and monitoring the database used for DataMiner system storage. With a Cassandra cluster setup, this involves setting the heap space, monitoring the database, keeping the nodes repaired, and keeping the software up to date.
+
 ## Setting the heap space
 
 To ensure that your Cassandra database does not run out of memory under load, in the *jvm-server.options* file, configure the parameters **Xmx** and **Xms** to set the Cassandra heap space.

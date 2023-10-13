@@ -4,10 +4,7 @@ uid: Installing_Cassandra
 
 # Installing Cassandra on a Linux machine
 
-If you want to use a Cassandra cluster as the general database for your DMS (i.e. a "Cassandra Cluster" setup), install Cassandra on a Linux machine as detailed below.
-
-> [!TIP]
-> If you want to use a managed service from a cloud provider instead of installing and managing Cassandra yourself, refer to [AWS Keyspaces](xref:Amazon_Keyspaces_Service) or [Azure Managed Instance for Apache Cassandra](xref:Azure_Managed_Instance_for_Apache_Cassandra).
+If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STaaS) setup but instead choose self-hosted storage, and you want to use a Cassandra cluster as the general database for your DMS (i.e. a "Cassandra Cluster" setup), install Cassandra on a Linux machine as detailed below.
 
 > [!NOTE]
 > We promote the use of Ubuntu LTS as the preferred Linux distribution. As such, the commands mentioned below will work on any Debian-based system, including Ubuntu.

@@ -10,10 +10,12 @@ This log collector tool is available on every DMA from DataMiner 10.0.5 onwards.
 
 From DataMiner 9.6.0 \[CU23\], 10.0.0 \[CU13\], 10.1.0 \[CU2\] and 10.1.5 onwards, you can also access SLLogCollector from the shortcut menu of the [DataMiner Taskbar Utility](xref:DataMiner_Taskbar_Utility). To do so, right-click the taskbar utility icon and select *Launch* > *Tools* > *Log Collector.*
 
+If SLLogCollector is not installed on your DataMiner Agent, you can download it from [DataMiner Dojo](https://community.dataminer.services/download/sllogcollector/).
+
 > [!NOTE]
 >
 > - This tool requires .Net Framework 4.6 or higher.
-> - If our tech support team has requested that you run this tool, they will also provide a link to a secure SharePoint site where you can upload the resulting package. 
+> - If our tech support team has requested that you run this tool, they will also provide a link to a secure SharePoint site where you can upload the resulting package.
 
 ## Running the tool
 

@@ -25,9 +25,7 @@ The trigger will run an action that will add a group to the group execution queu
 > [!NOTE]
 > A QAction can contain a SetParameter (SLProtocol) or a CheckTrigger (SLProtocol) method call. Both cases will result in the same behavior regarding execution and when the QAction will continue execution. The QAction does not continue until everything being triggered by the SetParameter or CheckTrigger method call is executed. When a group needs to be added to the queue, it will stop there and does not wait until this group was executed.
 
-A difference between the SetParameter and CheckTrigger methods is that CheckTrigger is handled by a thread created by the QAction (and therefore not started from the protocol thread). Consequently, it is not possible to start e.g. a 'set with wait' action from a QAction unless you add a group to the queue containing the "set with wait" action.
-
 A QAction can contain the option "queued", which means that it will not wait until it is finished before another instance can run. This should only be used when needed and when external applications need to be used, such as a database or external DLLs.
 
 > [!NOTE]
-> DataMiner provides multiple configuration options related to the SLScripting process, which are described in Configuration of DataMiner processes](xref:Configuration_of_DataMiner_processes).
+> DataMiner provides multiple configuration options related to the SLScripting process, which are described in [Configuring DataMiner processes](xref:Configuration_of_DataMiner_processes).

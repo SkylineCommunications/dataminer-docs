@@ -18,7 +18,8 @@ namespace Skyline.DataMiner.Scripting
 		public QActionTable(SLProtocol protocol, int tableId, string tableName) { }
 
 		/// <summary>
-		/// Gets or sets the row at the specified index (0-based).
+		/// Gets or sets the row at the specified index (0-based).<br/>
+		/// Note that this indexer should not be used. Using <see cref="this[string]"/> instead is highly recommended.
 		/// </summary>
 		/// <param name="row">The 0-based index of the row.</param>
 		/// <returns>The row data.</returns>
@@ -34,7 +35,8 @@ namespace Skyline.DataMiner.Scripting
 		public object[] this[string row] { get { return null; } set { } }
 
 		/// <summary>
-		/// Gets or sets the cell at the specified row and column index (0-based).
+		/// Gets or sets the cell at the specified row and column index (0-based).<br/>
+		/// Note that this indexer should not be used. Using <see cref="this[string, int]"/> instead is highly recommended.
 		/// </summary>
 		/// <param name="row">The 0-based index of the row.</param>
 		/// <param name="column">The 0-based index of the column.</param>

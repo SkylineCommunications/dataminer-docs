@@ -31,6 +31,6 @@ Specifies the ID(s) of the responses to read.
 <Action id="608">
    <Name>Read Response 508</Name>
    <On id="508">response</On>
-  <Type>read</Type>
+   <Type>read</Type>
 </Action>
 ```

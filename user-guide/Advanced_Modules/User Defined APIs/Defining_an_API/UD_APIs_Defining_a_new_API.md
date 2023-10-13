@@ -59,6 +59,13 @@ The entry point method has two parameters.
   | Route | `string` | The suffix of the URL that this API call is triggered with. Having this available makes it possible to reuse the same script for different routes. See [Route](#route).|
   | RawBody | `string` | The full body of the HTTP request as a string. This can be deserialized and used in the script. See [User input data](#user-input-data). |
   | Parameters | `Dictionary<string, string>` | Contains the deserialized parameters if you select *Dictionary (parsed from JSON)* when configuring the API. See [User input data](#user-input-data). |
+  | Context | [ApiTriggerContext](#apitriggercontext) | Contains properties with info about the request. Available from DataMiner 10.3.9/10.4.0 onwards. <!-- RN 37015 --> |
+
+#### ApiTriggerContext
+
+  | Property | Type | Description |
+  |--|--|--|
+  | TokenId | `Guid` | Contains the ID of the [ApiToken](xref:UD_APIs_Objects_ApiToken) with which the API is triggered. Available from DataMiner 10.3.9/10.4.0 onwards<!-- RN 36856 --><!-- RN 37015 -->. |
 
 #### RequestMethod
 

@@ -6,7 +6,7 @@ uid: TOOLS
 
 This section contains information on useful tools for system developers.
 
-It also contains information on DataMiner [Application packages](xref:TOOApplicationPackages).
+It also contains information on DataMiner [Application packages](xref:ApplicationPackages).
 
 The most important of the tools for developers is **[DataMiner Integration Studio (DIS)](xref:DIS)**.
 

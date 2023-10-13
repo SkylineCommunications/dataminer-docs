@@ -59,15 +59,19 @@ The current settings structure (with regards to `DomManager`) is as follows:
 
     - [TtlSettings](xref:DOM_TtlSettings)
 
+    - [DomInstanceHistorySettings](xref:DOM_DomInstanceHistorySettings)
+
+    - [StorageSettings](xref:DOM_StorageSettings)
+
 ## Notes
 
-- The module settings are saved in a separate Elasticsearch index (dms-cmodulesettings-xxx).
+- The module settings are saved in a separate OpenSearch/Elasticsearch index (dms-cmodulesettings-xxx).
 
 - Issues/events are logged in the *SLModuleSettingsManager.txt* log file.
 
 - Only users with the [Module Settings](xref:DataMiner_user_permissions#modules--system-configuration--object-manager--module-settings) permission can create, delete, or update module settings.
 
-- To include the module settings in a [custom backup](xref:Backing_up_a_DataMiner_Agent_in_DataMiner_Cube#configuring-the-dataminer-backups) in Cube, select *Create a backup of the database* > *Include module specific configuration data*.
+- To include the module settings in a [custom backup](xref:Backing_up_a_DataMiner_Agent_in_DataMiner_Cube#configuring-the-dataminer-backups) in Cube, select *Create a backup of the database* > *Include module specific configuration data*. However, note that this is unnecessary if your system uses [Storage as a Service](xref:STaaS).
 
 - There are no license checks when module settings are added.
 

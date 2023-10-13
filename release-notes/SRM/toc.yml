@@ -1,0 +1,112 @@
+items:
+  - name: Main release track
+    topicUid: SRM_10.3.0.1
+    items:
+      - name: SRM 10.3.0.1
+        topicUid: SRM_10.3.0.1
+  - name: Feature release track
+    topicUid: SRM_1.2.33
+    items:
+      - name: SRM 1.2.33
+        topicUid: SRM_1.2.33
+      - name: SRM 1.2.32
+        topicUid: SRM_1.2.32
+      - name: SRM 1.2.31
+        topicUid: SRM_1.2.31
+      - name: SRM 1.2.30
+        topicUid: SRM_1.2.30
+        items:
+          - name: New features and changes
+            topicUid: SRM_1.2.30
+          - name: Addendum CU1
+            topicUid: SRM_1.2.30_CU1
+          - name: Addendum CU2
+            topicUid: SRM_1.2.30_CU2
+          - name: Addendum CU3
+            topicUid: SRM_1.2.30_CU3
+          - name: Addendum CU4
+            topicUid: SRM_1.2.30_CU4
+      - name: SRM 1.2.29
+        topicUid: SRM_1.2.29
+      - name: SRM 1.2.28
+        topicUid: SRM_1.2.28
+        items:
+          - name: New features and changes
+            topicUid: SRM_1.2.28
+          - name: Addendum CU1
+            topicUid: SRM_1.2.28_CU1
+      - name: SRM 1.2.27
+        topicUid: SRM_1.2.27
+      - name: SRM 1.2.26
+        topicUid: SRM_1.2.26
+      - name: SRM 1.2.25
+        topicUid: SRM_1.2.25
+      - name: SRM 1.2.24
+        topicUid: SRM_1.2.24
+      - name: SRM 1.2.23
+        topicUid: SRM_1.2.23
+      - name: SRM 1.2.22
+        topicUid: SRM_1.2.22
+      - name: SRM 1.2.21
+        topicUid: SRM_1.2.21
+      - name: SRM 1.2.20
+        topicUid: SRM_1.2.20
+        items:
+          - name: New features and changes
+            topicUid: SRM_1.2.20
+          - name: Addendum CU1
+            topicUid: SRM_1.2.20_CU1
+      - name: SRM 1.2.19
+        topicUid: SRM_1.2.19
+      - name: SRM 1.2.18
+        topicUid: SRM_1.2.18
+      - name: SRM 1.2.17
+        topicUid: SRM_1.2.17
+      - name: SRM 1.2.16
+        topicUid: SRM_1.2.16
+      - name: SRM 1.2.15
+        topicUid: SRM_1.2.15
+        items:
+          - name: New features and changes
+            topicUid: SRM_1.2.15
+          - name: Addendum CU1
+            topicUid: SRM_1.2.15_CU1
+      - name: SRM 1.2.14
+        topicUid: SRM_1.2.14
+        items:
+          - name: New features and changes
+            topicUid: SRM_1.2.14
+          - name: Addendum CU1
+            topicUid: SRM_1.2.14_CU1
+      - name: SRM 1.2.13
+        topicUid: SRM_1.2.13
+      - name: SRM 1.2.12
+        topicUid: SRM_1.2.12
+      - name: SRM 1.2.11
+        topicUid: SRM_1.2.11
+      - name: SRM 1.2.10
+        topicUid: SRM_1.2.10
+      - name: SRM 1.2.9
+        topicUid: SRM_1.2.9
+      - name: SRM 1.2.8
+        topicUid: SRM_1.2.8
+      - name: SRM 1.2.7
+        topicUid: SRM_1.2.7
+      - name: SRM 1.2.6
+        topicUid: SRM_1.2.6
+      - name: SRM_1.2.5
+        topicUid: SRM_1.2.5
+      - name: SRM 1.2.4
+        topicUid: SRM_1.2.4
+      - name: SRM 1.2.3
+        topicUid: SRM_1.2.3
+      - name: SRM 1.2.2
+        topicUid: SRM_1.2.2
+      - name: SRM 1.2.1
+        topicUid: SRM_1.2.1
+      - name: SRM 1.2.0
+        topicUid: SRM_1.2.0
+      - name: SRM 1.1.1
+        topicUid: SRM_1.1.1
+      - name: SRM 1.1.0
+        topicUid: SRM_1.1.0

@@ -32,3 +32,16 @@ https://*.skyline.be/*
 > [!IMPORTANT]
 > DIS works with Visual Studio Community, Visual Studio Professional, and Visual Studio Enterprise.
 > Visual Studio Code and Visual Studio for Mac are not supported.
+
+### Required user permissions
+
+You need the following DataMiner user permissions to have access to all DIS functionality:
+
+- [Modules > Automation > UI available](xref:DataMiner_user_permissions#modules--automation--ui-available)
+- [Modules > Automation > Add](xref:DataMiner_user_permissions#modules--automation--add)
+- [Modules > Automation > Edit](xref:DataMiner_user_permissions#modules--automation--edit)
+- [Modules > Automation > Execute](xref:DataMiner_user_permissions#modules--automation--execute)
+- [Modules > Protocols & Templates > Protocols > UI available](xref:DataMiner_user_permissions#modules--protocols--templates--protocols--ui-available)
+- [Modules > Protocols & Templates > Protocols > Add](xref:DataMiner_user_permissions#modules--protocols--templates--protocols--add)
+- [Modules > Protocols & Templates > Protocols > Edit](xref:DataMiner_user_permissions#modules--protocols--templates--protocols--edit)
+- [Modules > System configuration > Agents > Install App packages](xref:DataMiner_user_permissions#modules--system-configuration--agents--install-app-packages)

@@ -6,7 +6,7 @@ uid: Overview_Collaboration
 
 *Collaborate within the entire service supply chain.*
 
-![dataminer.services.categories](~/dataminer-overview/images/DMS_Collaboration.png)
+![dataminer.services.categories](~/dataminer-overview/images/DMS_Collaboration.jpg)
 
 ## Dashboard Share
 

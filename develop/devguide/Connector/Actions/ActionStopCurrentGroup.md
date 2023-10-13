@@ -15,7 +15,7 @@ This action, which only affects groups containing pairs, will stop the execution
 
 ```xml
 <Action id="1">
-  <On>protocol</On>
+   <On>protocol</On>
    <Type>stop current group</Type>
 </Action>
 ```

@@ -26,6 +26,8 @@ This category contains the following visualizations:
 
 - [Image](xref:DashboardImage)
 
+- [Stepper](xref:DashboardStepper)
+
 - [Text](xref:DashboardText)
 
 - [Web](xref:DashboardWeb)

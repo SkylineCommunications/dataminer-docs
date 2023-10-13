@@ -4,7 +4,7 @@ uid: ClassLibraryInterAppClasses
 
 # InterApp classes
 
-The InterApp classes provide a C# message and response architecture that can be used:
+The InterApp classes, available through the NuGet package [Skyline.DataMiner.Core.InterAppCalls.Common](https://www.nuget.org/packages/Skyline.DataMiner.Core.InterAppCalls.Common), provide a C# message and response architecture that can be used:
 
 - From element to element and back.
 - From Automation script to element and back.
@@ -350,6 +350,9 @@ You then specify the parameter that you are expecting the return message to arri
 ```csharp
 myCommands.ReturnAddress = new ReturnAddress(152, 22, 9000001);
 ```
+
+> [!IMPORTANT]
+> The parameter selected with the *ReturnAddress* must not be on the source element (the parameter 9000001 on the destination element is recommended). If you use a parameter on the element you are sending from, you will cause deadlocks. This happens because the sending QAction waits on a response, but the response cannot be set to the parameter because there is a QAction running (i.e. the one waiting on the response).
 
 Now you create messages from your API.
 

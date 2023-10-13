@@ -12,13 +12,13 @@ From version 2.7.0 of the CloudGateway DxM onwards, you can connect a DMS to dat
 
 1. Configure the firewall of the DMZ:
 
-   - Make sure it allows access to the endpoints mentioned in [Connecting your DataMiner System to dataminer.services](xref:Connect_to_cloud_requirements).
+   - Make sure outbound communication is allowed to the endpoints mentioned in [Connecting your DataMiner System to dataminer.services](xref:Connect_to_cloud_requirements).
 
-   - Make sure the DMZ can communicate with the DMS through port 80, or through port 443 for a secure connection.
+   - Make sure bidirectional communication between the DMZ and the DMS is possible over port 80, or through port 443 for a secure connection.
 
-   - Make sure the DMZ can communicate with the DMS through NATS on port 4222.
+   - Make sure bidirectional communication between the DMZ and the DMS is possible through NATS on port 4222.
 
-   - Make sure the [DxMs](xref:DataMinerExtensionModules) on all servers can communicate towards dataminer.services thought the DMZ CloudGateway on port 5100.
+   - Make sure bidirectional communication between the [DxMs](xref:DataMinerExtensionModules) on all servers and the DMZ is possible through NATS on port 5100.
 
      > [!NOTE]
      > If communication through port 5100 is not possible, it is possible to configure a different port. See [Customizing the dataminer.services endpoint configuration](xref:Custom_cloud_endpoint_configuration).

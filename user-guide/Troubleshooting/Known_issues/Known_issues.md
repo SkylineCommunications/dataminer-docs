@@ -7,12 +7,20 @@ uid: Known_issues
 
 | Issue | DataMiner version | Date added |
 |--|--|--|
+| [Various issues when using MessageBroker with chunking](xref:KI_DataMinerMessageBroker2)| From DataMiner 10.3.5 [CU0]/10.3.8 onwards | October 11, 2023 |
+| [Offload to MySQL offload database fails](xref:KI_offload_database_incorrect_integer_value) | Any version | October 4, 2023 |
+| [Elements not loading after upgrade of DMS with multiple Elasticsearch clusters](xref:KI_elements_not_loading_in_DMS_with_multiple_ES) | From DataMiner 10.3.10 onwards | October 3, 2023 |
+| [SLNet deadlock in EPM setups](xref:KI_SLNet_Deadlock_EPM_Setups) | From DataMiner 10.3.9 onwards | September 28, 2023 |
+| [Max Payload exceptions occur when using MessageBroker with chunking](xref:KI_DataMinerMessageBroker_Chunking_MaxPayload)| From DataMiner 10.3.5 [CU0]/10.3.8 onwards | September 26, 2023 |
+| [Cassandra backups no longer working](xref:KI_Cassandra_backups_not_working)| DataMiner 10.3.9 [CU0] | August 29, 2023 |
+| [Default NATS port is already in use](xref:KI_NATS_port_9090) | From DataMiner 10.1.0/10.1.1 onwards | August 3, 2023 |
+| [Unable to connect to DMS when using .NET Remoting](xref:KI_Unable_to_Connect_Net_Remoting) | DataMiner Cube 10.3.7 and 10.3.8 <br>Any versions from DataMiner 10.2.0 onwards using automatic client updates | August 1, 2023 |
 | [Various issues with a geo-redundant Cassandra setup with multiple data centers](xref:KI_Multiple_Datacenters) | Cassandra Cluster setups | June 1, 2023 |
 | [Cassandra disconnects after loss of a single node](xref:KI_Cassandra_disconnects_after_loss_of_a_single_node) | Cassandra Cluster setups | June 1, 2023 |
 | [Corrupted low-code app after concurrent editing actions](xref:KI_app_corruption_after_editing) | From DataMiner 10.2.5/10.3.0 onwards | May 26, 2023 |
 | [Cassandra cluster data not offloaded while database is unavailable](xref:KI_Cassandra_cluster_data_not_offloaded) | Cassandra Cluster setups | May 22, 2023 |
 | [Inaccessible logger table data in Elasticsearch because of incorrect casing](xref:KI_Inaccessible_data_Elasticsearch_casing) | From DataMiner 10.3.0 to 10.3.0 [CU2]<br>From DataMiner 10.3.3 to 10.3.5.| May 8, 2023 |
-| [RTEs caused by problem during automatic NATS reconfiguration](xref:KI_RTEs_NATS_reconfiguration) | From DataMiner 10.3.4 onward | May 5, 2023 |
+| [RTEs caused by problem during automatic NATS reconfiguration](xref:KI_RTEs_NATS_reconfiguration) | DataMiner 10.3.4 up to 10.3.8 | May 5, 2023 |
 | [Activities and scripts delayed because of CheckVIPs thread](xref:KI_CheckVIPs_delays_activities) | DataMiner 10.2.0 up to 10.2.0 [CU15]/10.3.0 [CU4]<br>DataMiner 10.1.12 up to 10.3.6 | April 28, 2023 |
 | [Elasticsearch not initialized when DataMiner starts up](xref:KI_Elasticsearch_not_initialized_on_DMA_startup) | Any version using Elasticsearch | April 20, 2023 |
 | [DataMiner keeps trying to restart when Elasticsearch is unavailable](xref:KI_Restart_loop_when_Elasticsearch_unavailable) | DataMiner 10.3 main and feature releases | April 11, 2023 |
@@ -24,7 +32,7 @@ uid: Known_issues
 | [Contents of state_changes table not migrated after Cassandra Cluster migration](xref:KI_Contents_of_State_changes_Table_not_Migrated_after_Cassandra_Cluster_Migration) | Cassandra Cluster setups | January 16, 2023 |
 | [Cassandra cluster node in unexpected state](xref:KI_Cassandra_cluster_node_unexpected_state) | Cassandra Cluster setups | January 10,2023 |
 | [Year 2038 problem for Cassandra](xref:Year_2038_Problem_for_Cassandra) | All DataMiner versions with a Cassandra setup<br>prior to DataMiner 10.2.0 [CU14]/10.3.0 [CU2]/10.3.4 | January 10, 2023 |
-| [Null reference exceptions in SLDBConnection.txt and unhandled exception when retrieving Correlation details](xref:KI_NullReferenceException_SLDBConnection) | DataMiner 10.1.0 up to 10.2.0 [CU10]<br>DataMiner 10.1.2 up to 10.3.1 | December 20,2022 |
+| [Null reference exceptions in SLDBConnection.txt and unhandled exception when retrieving Correlation details](xref:KI_NullReferenceException_SLDBConnection) | DataMiner 10.1.0 up to 10.2.0 [CU10]<br>DataMiner 10.1.2 up to 10.3.1 | December 20, 2022 |
 | [SLProtocol timer thread run-time error](xref:KI_SLProtocol_timer_thread_RTE) | DataMiner versions prior to 10.2.0 [CU10]/10.3.1 | December 20, 2022 |
 | [Vertical text in Visual Overview not displayed correctly](xref:KI_Visual_Overview_Vertical_Text_no_longer_working) | From DataMiner 10.2.0 [CU3]/10.2.3 onwards | December 16, 2022 |
 | [SLNet deadlock on DMA startup](xref:KI_SLNet_deadlock_on_startup) | DataMiner 10.1.0 up to 10.2.0 [CU15]/10.3.0 [CU3]<br>DataMiner 10.1.2 up to 10.3.2 | December 14, 2022 |
@@ -43,6 +51,10 @@ uid: Known_issues
 
 | Issue | DataMiner version | Date added |
 |--|--|--|
+| [Offload to MySQL offload database fails](xref:KI_offload_database_incorrect_integer_value) | Any version | October 4, 2023 |
+| [Default NATS port is already in use](xref:KI_NATS_port_9090) | From DataMiner 10.1.0/10.1.1 onwards | August 3, 2023 |
+| [Unable to connect to DMS when using .NET Remoting](xref:KI_Unable_to_Connect_Net_Remoting) | Any versions from DataMiner 10.2.0 onwards using automatic client updates | August 1, 2023 |
+| [RTEs caused by problem when updating alarm templates](xref:KI_RTEs_Alarm_Template_Issue) | DataMiner 10.2.0 [CU15], [CU16], and [CU17] | July 31, 2023 |
 | [Various issues with a geo-redundant Cassandra setup with multiple data centers](xref:KI_Multiple_Datacenters) | Cassandra Cluster setups | June 1, 2023 |
 | [Cassandra disconnects after loss of a single node](xref:KI_Cassandra_disconnects_after_loss_of_a_single_node) | Cassandra Cluster setups | June 1, 2023 |
 | [Corrupted low-code app after concurrent editing actions](xref:KI_app_corruption_after_editing) | From DataMiner 10.2.5/10.3.0 onwards | May 26, 2023 |
@@ -87,6 +99,8 @@ uid: Known_issues
 
 | Issue | DataMiner version | Date added |
 |--|--|--|
+| [Offload to MySQL offload database fails](xref:KI_offload_database_incorrect_integer_value) | Any version | October 4, 2023 |
+| [Default NATS port is already in use](xref:KI_NATS_port_9090) | From DataMiner 10.1.0/10.1.1 onwards | August 3, 2023 |
 | [Various issues with a geo-redundant Cassandra setup with multiple data centers](xref:KI_Multiple_Datacenters) | Cassandra Cluster setups | June 1, 2023 |
 | [Cassandra disconnects after loss of a single node](xref:KI_Cassandra_disconnects_after_loss_of_a_single_node) | Cassandra Cluster setups | June 1, 2023 |
 | [SRM - Auto Select Resource not read for silent booking](xref:KI_SRM_Auto_Select_Resource_Not_Read) | SRM 1.2.30 CU2 | March 29, 2023 |
@@ -117,7 +131,6 @@ uid: Known_issues
 | [Smart-serial communication no longer working](xref:KI_Smart-serial_communication_no_longer_working) | 10.1.x | - |
 | [Incorrect RTE counts in SLWatchdog2.txt and Alarm Console](xref:KI_Incorrect_RTE_counts_in_SLWatchdog2txt_and_Alarm_Console) | 10.0.x<br>9.6.x | - |
 | [DataMiner Cube freeze on startup](xref:KI_DataMiner_Cube_freeze_on_startup) | N/A | - |
-| [Not possible to generate reports on Windows Server 2012 or earlier](xref:KI_Not_possible_to_generate_reports_on_Windows_Server_2012_or_earlier) | N/A | - |
 | [Setting a protocol to production takes a long time](xref:KI_Setting_a_protocol_to_production_takes_a_long_time) | N/A | - |
 | [Shapes in DataMiner stencils not found in Visio search](xref:KI_Shapes_in_DataMiner_stencils_not_found_in_Visio_search) | N/A | - |
 | [SLDataMiner addressChangeThread RTE after DMA startup](xref:KI_SLDataMiner_addressChangeThread_RTE_after_DMA_startup) | N/A | - |

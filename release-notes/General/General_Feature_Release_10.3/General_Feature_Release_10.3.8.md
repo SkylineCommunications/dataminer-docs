@@ -213,7 +213,7 @@ When smart baselines were configured, by default information events would be gen
 
 #### NATS connection could fail due to payloads being too large [ID_36427]
 
-<!-- MR 10.4.0 - FR 10.3.8 -->
+<!-- MR 10.3.0 [CU8] - FR 10.3.8 -->
 
 In some cases, the NATS connection could fail due to payloads being too large. As a result, parameter updates and alarms would no longer be saved to the database.
 

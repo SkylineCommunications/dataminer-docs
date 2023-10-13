@@ -18,7 +18,7 @@ To configure the component:
 
    - To customize the value range of the component, in the *Settings* tab, select *Fixed minimum* and/or *Fixed maximum* and specify the custom minimum and/or maximum.
 
-1. Fine-tune the component layout. In the *Component* > *Layout*, tab the following options are available:
+1. Fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
 
    - The default options available for all components. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
 

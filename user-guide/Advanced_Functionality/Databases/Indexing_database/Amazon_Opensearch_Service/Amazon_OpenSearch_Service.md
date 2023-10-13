@@ -4,23 +4,20 @@ uid: Amazon_OpenSearch_Service
 
 # Amazon OpenSearch Service
 
-To complete the configuration of a dedicated clustered storage setup, when a Cassandra-compatible database service has been set up, you can use Amazon OpenSearch Service on AWS.
+If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STaaS) setup but instead want to use a self-hosted dedicated clustered storage setup, once you have configured a Cassandra-compatible database service, you can complete your setup with the Amazon OpenSearch Service on AWS.
 
 This setup is supported from DataMiner 10.3.0/10.3.3 onwards.
 
 > [!NOTE]
-> Although the service is named after OpenSearch, it offers both OpenSearch and Elasticsearch clusters.
+> Although the service is named after OpenSearch, it offers both OpenSearch and Elasticsearch clusters. However, note that DataMiner only supports Elasticsearch version 6.8, so using Elasticsearch is not recommended.
 
 ## Compatibility
 
 Supported versions:
 
-- Elasticsearch version 6.8
 - OpenSearch version 1.X
 - OpenSearch version 2.X
-
-> [!NOTE]
-> DataMiner currently does not support Elasticsearch version 7.X setups.
+- Elasticsearch version 6.8 (not recommended)
 
 ## Creating your Amazon OpenSearch Service domain
 

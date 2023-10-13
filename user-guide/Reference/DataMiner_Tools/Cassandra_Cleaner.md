@@ -6,13 +6,16 @@ uid: Cassandra_Cleaner
 
 ## About this tool
 
-This tool can be used to remove data from the Cassandra *timetrace* or *infotrace* table for a specific time range. This can be useful in case you urgently need to reclaim disk space on a DMA using a Cassandra local database, and you do not want to wait for the TTL of the timetrace or infotrace data (which is by default set to 1 year) to expire.
+This tool can be used to remove data from the Cassandra *timetrace* or *infotrace* table for a specific time range. This can be useful in case you urgently need to reclaim disk space on a DMA using a Cassandra database, and you do not want to wait for the TTL of the timetrace or infotrace data (which is by default set to 1 year) to expire.
 
 Do not use this tool unless you have no other option, as DataMiner functionality related to **alarm monitoring with time ranges will no longer work for the deleted time range**. For more information, refer to the FAQ section below. Note that you also need advanced knowledge of Cassandra in order to use this tool.
 
 DataMiner does not need to be stopped to run this tool.
 
 You can download this tool from [DataMiner Dojo](https://community.dataminer.services/download/cassandra-cleaner/).
+
+> [!TIP]
+> If you do not want the hassle of maintaining the DataMiner storage databases yourself, we recommend using [DataMiner Storage as a Service](xref:STaaS) instead.
 
 ## Configuring the tool
 
@@ -67,7 +70,7 @@ Depending on the table specified in the *db.yaml* configuration, the following a
 
   To execute both steps sequentially in one run, specify both options: `clean -l -s`
 
-- **Infotrace table**
+- **Infotrace table**<!-- RN 36592 -->
 
   - `clean -l` or `clean --large-partition` to clean the "-1_-1_-1_-1" partition.
 

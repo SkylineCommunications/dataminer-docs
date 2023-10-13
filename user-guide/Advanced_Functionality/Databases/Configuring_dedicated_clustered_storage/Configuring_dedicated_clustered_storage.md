@@ -4,11 +4,15 @@ uid: Configuring_dedicated_clustered_storage
 
 # Configuring dedicated clustered storage
 
-To properly configure a dedicated clustered storage setup, both a Cassandra-compatible database service and [indexing database](xref:Indexing_Database) (also known as Search Cluster) are required. This setup can be either on premises or in the cloud, or a mix of both.
+If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STaaS) setup but instead choose self-hosted storage, typically, you will need to configure a dedicated clustered storage setup.
+
+For this setup, both a Cassandra-compatible database service and [indexing database](xref:Indexing_Database) (also known as Search Cluster) are required. This setup can be either on premises or in the cloud, or a mix of both.
 
 First install a Cassandra Cluster (i.e. a Cassandra cluster used for all DMAs in a DMS, as opposed to [a Cassandra cluster per DMA](xref:Configuring_storage_per_DMA)) or an equivalent database service, as this is a prerequisite for installing an indexing database afterwards. From DataMiner 10.3.0/10.3.3 onwards, Amazon Keyspaces Service on AWS is supported as an alternative for the Cassandra Cluster setup.
 
-Then install the indexing database. You can use an on-premises Elasticsearch cluster (supported from DataMiner 9.6.4 onwards), Amazon OpenSearch Service on AWS (supported from DataMiner 10.3.0/10.3.3 onwards), or an on-premises OpenSearch cluster (supported from DataMiner 10.3.0/10.3.3 onwards).
+Then install the indexing database. You can use an on-premises OpenSearch cluster (supported from DataMiner 10.3.0/10.3.3 onwards) or Amazon OpenSearch Service on AWS (supported from DataMiner 10.3.0/10.3.3 onwards). While an Elasticsearch cluster can also be used, Elasticsearch is only supported up to version 6.8, so this is not recommended.
+
+![dedicated clustered storage](~/user-guide/images/Dedicated_clustered_storage.svg)
 
 - **Cassandra-compatible database service**
 

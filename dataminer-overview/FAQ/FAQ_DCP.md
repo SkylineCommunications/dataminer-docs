@@ -23,7 +23,7 @@ No, this is only required for a single Agent within a private DataMiner System. 
   > [!NOTE]
   > At this time, we recommend running 1 to 3 Cloud Gateway nodes in a cluster. Running more Cloud Gateway nodes than that in a cluster would only add an unnecessary extra load on dataminer.services.
 
-- **Streamlined support services**: The [Support Assistant module](xref:DataMinerExtensionModules#supportassistant) needs to be installed on all DataMiner Agents to allow our Tech Support team to [remotely collect logs](https://docs.dataminer.services/user-guide/Troubleshooting/RemoteLogCollection.html) and to carry out other automated support actions, which definitely speeds up the support process. Even though not all DMAs have to be cloud-connected for this, they do all need to have this DxM installed.
+- **Streamlined support services**: The [Support Assistant module](xref:DataMinerExtensionModules#supportassistant) needs to be installed on all DataMiner Agents to allow our Tech Support team to [remotely collect logs](xref:RemoteLogCollection) and to carry out other automated support actions, which definitely speeds up the support process. Even though not all DMAs have to be cloud-connected for this, they do all need to have this DxM installed.
 
 ### How does the live sharing work, and how is it secured?
 

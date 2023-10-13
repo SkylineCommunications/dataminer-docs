@@ -2,10 +2,10 @@
 uid: Web_apps_Main_Release_10.3.0_CU6
 ---
 
-# DataMiner web apps Main Release 10.3.0 CU6 – Preview
+# DataMiner web apps Main Release 10.3.0 CU6
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to the web applications, see [General Main Release 10.3.0 CU6](xref:General_Main_Release_10.3.0_CU6).
@@ -30,6 +30,15 @@ Because of this change, the behavior of aggregations applied on all types of emp
 | (Distinct) Count   | 0    | 0                |
 | Std dev/Percentile | null | "Not applicable" |
 | Sum                | 0    | 0                |
+
+#### Dashboards app & Low-Code Apps: Deleting components by pressing the DELETE button [ID_36753]
+
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
+
+You can now delete components by pressing the *DELETE* button on your keyboard.
+
+1. In Edit mode, select the component(s) you want to delete.
+1. Press the *DELETE* button.
 
 ### Fixes
 
@@ -99,7 +108,7 @@ Up to now, it would incorrectly not be possible to feed a selected timeline item
 
 #### Dashboards app & Low-Code Apps: User menu would not close when clicking the user icon [ID_36829]
 
-<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
 When you had opened the user menu by clicking the user icon in the top-right corner, that menu would not close when you clicked the user icon a second time.
 
@@ -108,3 +117,81 @@ When you had opened the user menu by clicking the user icon in the top-right cor
 <!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
 
 In some cases, an error could be thrown when you shared a dashboard that contained a *Gauge* component fed by a *State* component with indices.
+
+#### Web services API: Problem when fetching the next page of a GQI query [ID_36903]
+
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
+
+When a table visualization fetched the next page of a GQI query, GQI would throw an exception saying that the session was already closed.
+
+This was due to GQI incorrectly closing the session automatically after 5 minutes of inactivity.
+
+#### Dashboards app & Low-Code Apps - GQI: Not possible to link empty feeds to ad hoc arguments [ID_36913]
+
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
+
+Up to now, when empty feeds had not yet been initialized with a value, it would not be possible to link those feeds to ad hoc arguments.
+
+From now on, it will always be possible to link feeds to ad hoc arguments, regardless of their value.
+
+#### Dashboards app & Monitoring app: Problem with parameter table component when switching from mobile view to desktop view [ID_36949]
+
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
+
+When the Dashboards app or the Monitoring app switched from mobile view to desktop view, the parameter table component would incorrectly continue to use the mobile UI.
+
+#### Dashboards app: Problem when generating a PDF file with a custom paper size [ID_36968]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+When a PDF file with a custom paper size was generated, the following error would be thrown:
+
+`Cannot read properties of undefined (reading 'width')'.`
+
+#### Dashboards app & Low-Code Apps: Problem when exporting a table with a query row feed to a CSV file [ID_36969]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+Up to now, an error would be thrown when you tried to export a table with a query row feed to a CSV file.
+
+#### Low-Code Apps: Problem when a form component linked to a DOM instance feed was not fed an instance [ID_37000]
+
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
+
+When a form component linked to a DOM instance feed was not fed an instance, it would get stuck in a loading state.
+
+#### Dashboards app & Low-Code Apps: Form component would not be cleared when it was no longer fed a DOM instance or a DOM definition [ID_37001]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+The *Form* component would not be cleared when it was no longer fed a DOM instance or a DOM definition.
+
+#### Dashboards app: 'Loading...' indicator would appear when trying to save a nameless folder [ID_37002]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+When, in the *Create folder* or *Create dashboard* window, you clicked inside the *Location* box, clicked "+" to add a new folder, entered a folder name, cleared that same folder name, and then clicked the checkmark button, a "Loading..." indicator would appear at the top of the window but nothing would happen.
+
+#### Low-Code Apps: Header bar changes would not be shown in preview mode [ID_37005]
+
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
+
+When changes had been made to the header bar of a low-code app, those changes would incorrectly not be shown when you switched to preview mode.
+
+#### Monitoring app: Problem when no view properties were shown in the Surveyor [ID_37010]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+When you opened the *Monitoring* app, an error could occur when no view properties were shown in the Surveyor.
+
+#### Monitoring app & Dashboards app: Cleared alarm groups would incorrectly still appear in alarm lists [ID_37045]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+When you opened the Alarm Console in the *Monitoring* app or an alarm list in the *Dashboards* app, alarm groups that had already been cleared would incorrectly still appear in the list.
+
+#### Dashboards app: Shared dashboards would not be allowed to perform a GetParameterTable API call [ID_37122]
+
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 [CU0] -->
+
+In some cases, a shared dashboard was incorrectly not allowed to perform a *GetParameterTable* API call.

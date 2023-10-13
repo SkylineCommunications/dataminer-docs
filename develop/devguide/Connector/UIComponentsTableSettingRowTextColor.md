@@ -12,30 +12,30 @@ Since DataMiner version 7.5, it is possible to change the text color of table ro
   <Description>Table</Description>
   <Type>array</Type>
   <ArrayOptions index="0">
-     <ColumnOption idx="0" pid="101" type="retrieved" options="" /><!--Index[IDX]-->
-     <ColumnOption idx="1" pid="102" type="retrieved" options="" /><!-- Name-->
-     <ColumnOption idx="2" pid="103" type="retrieved" options=";save;rowTextColoring" /><!-- RowColor-->
+    <ColumnOption idx="0" pid="101" type="retrieved" options="" />
+    <ColumnOption idx="1" pid="102" type="retrieved" options="" />
+    <ColumnOption idx="2" pid="103" type="retrieved" options=";save;rowTextColoring" />
   </ArrayOptions>
-  ...
+  <Display>
+    <RTDisplay>true</RTDisplay>
+  </Display>
 </Param>
 <Param id="103" trending="false">
   <Name>RowColor</Name>
   <Description>RowColor</Description>
-  <Information>...</Information>
   <Type>read</Type>
-  <Interprete>...</Interprete>
   <Measurement>
-     <Type>discreet</Type>
-     <Discreets>
-        <Discreet options="rowTextColor=#FF0000">
-           <Display>Red</Display>
-           <Value>0</Value>
-        </Discreet>
-        <Discreet options="rowTextColor=#0000FF">
-           <Display>Blue</Display>
-           <Value>2</Value>
-        </Discreet>
-     </Discreets>
+    <Type>discreet</Type>
+    <Discreets>
+      <Discreet options="rowTextColor=#FF0000">
+        <Display>Red</Display>
+        <Value>0</Value>
+      </Discreet>
+      <Discreet options="rowTextColor=#0000FF">
+        <Display>Blue</Display>
+        <Value>2</Value>
+      </Discreet>
+    </Discreets>
   </Measurement>
 </Param>
 ```

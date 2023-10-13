@@ -34,7 +34,7 @@ To configure the component:
 
    - If you want the first item in the component to be selected by default, in the *Settings* tab, under *Initial Selection*, set the toggle button to *On* (available from DataMiner 10.3.6/10.4.0 onwards<!-- RN 35984 -->). This way, the first item will be automatically selected whenever the component is loaded or when the data is refreshed.
 
-1. Fine-tune the component layout. In the *Component* > *Layout*, tab the following options are available:
+1. Fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
 
    - The default options available for all components. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
 

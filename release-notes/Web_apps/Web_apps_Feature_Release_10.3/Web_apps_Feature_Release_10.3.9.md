@@ -2,10 +2,10 @@
 uid: Web_apps_Feature_Release_10.3.9
 ---
 
-# DataMiner web apps Feature Release 10.3.9 – Preview
+# DataMiner web apps Feature Release 10.3.9
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to the web applications, see [General Feature Release 10.3.9](xref:General_Feature_Release_10.3.9).
@@ -93,6 +93,14 @@ For more information, see [Button panel](xref:DashboardButtonPanel).
 
 Ad hoc data sources can now include columns of type `GQITimeSpanColumn`. These columns can contain a time span and can have operators applied to them.
 
+#### Dashboards app & Low-Code Apps - Parameters dataset: Selecting an index/cell of a column parameter [ID_36724]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+In the *Parameters* section of the edit panel's *DATA* tab, column parameters will now by default list their first 100 indices (i.e. cells). When you drag one of those cells onto a component, element ID, parameter ID as well as index will be passed along.
+
+If the index (i.e. cell) you need is not among the first 100 indices that are listed, you can use the search box above the parameter list to narrow down the list of indices.
+
 ## Changes
 
 ### Enhancements
@@ -103,11 +111,20 @@ Ad hoc data sources can now include columns of type `GQITimeSpanColumn`. These c
 
 A number of enhancements have been made to the way in which PDF files are generated from dashboards. For example, up to now, items selected on a dashboard would no longer be selected after a PDF file had been generated.
 
-#### Dashboards app & Low-Code Apps: Retrieving trend data asynchronously via websockets [ID_36583]
+#### Monitoring app, Dashboards app & Low-Code Apps: Asynchronous operations now also supported when using WebSockets [ID_36583] [ID_36884] [ID_36885] [ID_36886] [ID_36887] [ID_36896] [ID_36904] [ID_37029] [ID_37031]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
-Because of a number of enhancements, dashboards and low-code apps are now fully capable of retrieving trend data asynchronously via websockets.
+Up to now, the following asynchronous operations were only supported over HTTP(s). From now on, these asynchronous operations will also be supported when using WebSockets.
+
+- Retrieving trend data
+- Retrieving alarm details
+- Retrieving alarm history
+- Retrieving visual overviews of elements, services and views
+- Retrieving parameter status information (serving as input for pivot table components)
+- Generating PDF reports
+- Sending emails containing PDF reports
+- Sharing a dashboard
 
 #### Dashboards app: Enhanced mechanism to update the list of dashboards in the navigation pane [ID_36604]
 
@@ -152,9 +169,15 @@ From now on, when you hover over each of the possible visualizations in the over
 
 Also, the component will no longer change instantly when you hover over a visualization in the overview. A visualization preview will be shown when the mouse pointer has been hovering over a particular visualization icon for more than 400ms and will disappear when the mouse pointer leaves the visualizations overview. The component will change its visualization only when you click a certain visualization in the overview.
 
-#### Dashboards app & Low-Code Apps: Deleting components by pressing the DELETE button [ID_36753]
+#### DataMiner Comparison tool: Redesigned header and sidebar [ID_36747]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
+
+The header and sidebar of the DataMiner Comparison tool have been redesigned.
+
+#### Dashboards app & Low-Code Apps: Deleting components by pressing the DELETE button [ID_36753]
+
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
 
 You can now delete components by pressing the *DELETE* button on your keyboard.
 
@@ -170,11 +193,49 @@ The *Get trend data patterns* and *Get trend data pattern events* data sources n
 
 Each time the time range of a pattern gets updated, a new pattern record is created with a new pattern version.
 
+#### Monitoring app: A new type of buttons and toggle buttons will now be used on parameter pages [ID_36773]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+In the *Monitoring* app, a new type of buttons and toggle buttons will now be used on parameter pages.
+
+#### Dashboards app - Line chart component: Enhanced performance [ID_36869]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When a line chart component used element table column parameters as data and indices as filter, up to now, it would cross-match indices across the unique elements associated with the table column parameters. This will now be prevented when the *Hide non-trended parameters* option is disabled.
+
+> [!NOTE]
+> The *Hide non-trended parameters* setting is now disabled by default.
+
+> [!IMPORTANT]
+> Because of the enhancements that have been made, in some cases, a line chart will no longer show any data when the indices are not available in the specified table. If so, you can opt to work with cell parameters instead (see [release note 36724](#dashboards-app--low-code-apps---parameters-dataset-selecting-an-indexcell-of-a-column-parameter-id_36724)) or to enable the *Hide non-trended parameters* option.
+
+#### Monitoring app: Parameter control now supports dynamic units [ID_36892]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+The parameter control used in the *Monitoring* app now supports dynamic units.
+
 #### Dashboards app & Low-Code Apps: 'ReportsAndDashboardsAlpha' soft-launch option is now deprecated [ID_36894]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
 The *ReportsAndDashboardsAlpha* soft-launch option is now deprecated.
+
+#### Dashboards app/Low-Code Apps: Removed unused legacy components [ID_36907]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+In order to reduce the package size for the Dashboards app and Low-Code Apps, a number of legacy components, which were not used and were unavailable in the UI, have now been removed.
+
+#### Dashboards app & Low-Code Apps - 'Numeric input' and 'Text input' feeds: New setting to determine the position of the label [ID_36983]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+Up to now, a *Numeric input* feed would display the label above the input box while a *Text input* feed would display the label in front of the input box.
+
+When, in edit mode, you select one of these feeds and open the *Layout* tab, below the *Label* box you can now find the *Label is inline* checkbox. Select this checkbox if you want the label to be displayed in front of the input box. By default, this option is disabled, meaning that the label will be displayed above the input box.
 
 ### Fixes
 
@@ -238,7 +299,7 @@ Up to now, it would incorrectly not be possible to feed a selected timeline item
 
 #### Dashboards app & Low-Code Apps: User menu would not close when clicking the user icon [ID_36829]
 
-<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
 When you had opened the user menu by clicking the user icon in the top-right corner, that menu would not close when you clicked the user icon a second time.
 
@@ -254,10 +315,140 @@ Up to now, when DCF interface properties were fetched, only the properties found
 
 In some cases, an error could be thrown when you shared a dashboard that contained a *Gauge* component fed by a *State* component with indices.
 
+#### Web services API: Problem when fetching the next page of a GQI query [ID_36903]
+
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
+
+When a table visualization fetched the next page of a GQI query, GQI would throw an exception saying that the session was already closed.
+
+This was due to GQI incorrectly closing the session automatically after 5 minutes of inactivity.
+
 #### Dashboards app & Low-Code Apps - GQI: Not possible to link empty feeds to ad hoc arguments [ID_36913]
 
-<!-- MR 10.4.0 - FR 10.3.9 -->
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
 
 Up to now, when empty feeds had not yet been initialized with a value, it would not be possible to link those feeds to ad hoc arguments.
 
 From now on, it will always be possible to link feeds to ad hoc arguments, regardless of their value.
+
+#### Dashboards app & Monitoring app: Problem with parameter table component when switching from mobile view to desktop view [ID_36949]
+
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
+
+When the Dashboards app or the Monitoring app switched from mobile view to desktop view, the parameter table component would incorrectly continue to use the mobile UI.
+
+#### Dashboards app & Low-Code Apps: Query row feed would send a selected row twice when the table used two identical queries [ID_36952]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+Up to now, when you selected a row of a table that used two identical queries, the query row feed would send the row twice. From now on, it will only send the row once.
+
+#### Dashboards app: Problem when generating a PDF file with a custom paper size [ID_36968]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+When a PDF file with a custom paper size was generated, the following error would be thrown:
+
+`Cannot read properties of undefined (reading 'width')'.`
+
+#### Dashboards app & Low-Code Apps: Problem when exporting a table with a query row feed to a CSV file [ID_36969]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+Up to now, an error would be thrown when you tried to export a table with a query row feed to a CSV file.
+
+#### Dashboards app & Low-Code Apps - GQI: Link to feed not saved when the feed value is identical [ID_36990]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+In some cases, query nodes that were linked to a feed would incorrectly not save their link when a new feed was linked with the exact same value.
+
+From now on, queries will always be updated when the source (dashboard/page), selector (component), type (datatype) or property of the link changes.
+
+#### Low-Code Apps: Problem after removing a query used by a component [ID_36998]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When you removed a query that was used by a component on the page you were viewing, the *UpdateDashboard* call and all subsequent calls would fail.
+
+#### Low-Code Apps: Problem when a form component linked to a DOM instance feed was not fed an instance [ID_37000]
+
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
+
+When a form component linked to a DOM instance feed was not fed an instance, it would get stuck in a loading state.
+
+#### Dashboards app & Low-Code Apps: Form component would not be cleared when it was no longer fed a DOM instance or a DOM definition [ID_37001]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+The *Form* component would not be cleared when it was no longer fed a DOM instance or a DOM definition.
+
+#### Dashboards app: 'Loading...' indicator would appear when trying to save a nameless folder [ID_37002]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+When, in the *Create folder* or *Create dashboard* window, you clicked inside the *Location* box, clicked "+" to add a new folder, entered a folder name, cleared that same folder name, and then clicked the checkmark button, a "Loading..." indicator would appear at the top of the window but nothing would happen.
+
+#### Low-Code Apps: Header bar changes would not be shown in preview mode [ID_37005]
+
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
+
+When changes had been made to the header bar of a low-code app, those changes would incorrectly not be shown when you switched to preview mode.
+
+#### Monitoring app: Problem when no view properties were shown in the Surveyor [ID_37010]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+When you opened the *Monitoring* app, an error could occur when no view properties were shown in the Surveyor.
+
+#### Dashboards app: Height of 'Data used in Dashboard' section would not be reduced when you deleted multiple components at once [ID_37032]
+
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.9 -->
+
+When, while in edit mode, you deleted multiple components at once, the *Data used in Dashboard* section of the edit pane would not be updated correctly. The data would be removed, but the height of the section would incorrectly not be reduced.
+
+#### Dashboards app: Problem when adding or configuring a node edge graph component [ID_37039]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+In some cases, it would no longer be possible to add a new node edge graph component to a dashboard. Also, an error could occur when trying to configure a node edge graph that had already been added.
+
+#### Monitoring app & Dashboards app: Cleared alarm groups would incorrectly still appear in alarm lists [ID_37045]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+When you opened the Alarm Console in the *Monitoring* app or an alarm list in the *Dashboards* app, alarm groups that had already been cleared would incorrectly still appear in the list.
+
+#### Dashboards app/Low-Code Apps: Invalid value when configuring query because of incorrectly parsed capabilities [ID_37074]
+
+<!-- MR 10.4.0 - FR 10.3.9 [CU0] -->
+
+When you configured a query in a dashboard or low-code app, it could occur that an error in the format 'Invalid value for [node]' was displayed because capability values were parsed incorrectly.
+
+#### Monitoring app: Parameter controls in Visual Overview not working correctly [ID_37079]
+
+<!-- MR 10.4.0 - FR 10.3.9 [CU0] -->
+
+In some cases, it could occur that parameter controls in Visual Overview did not work correctly in the Monitoring app.
+
+#### Dashboards app: Shared dashboard containing query with 'Start from' data source not loading [ID_37115]
+
+<!-- MR 10.4.0 - FR 10.3.9 [CU0] -->
+
+If a shared dashboard contained a query that built on another query (using the "Start from" data source), in some cases it could occur that the dashboard could not be loaded and the loading screen continued to be displayed.
+
+#### Dashboards app: Shared dashboards would not be allowed to perform a GetParameterTable API call [ID_37122]
+
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 [CU0] -->
+
+In some cases, a shared dashboard was incorrectly not allowed to perform a *GetParameterTable* API call.
+
+#### Dashboards app/Low-Code Apps: Problem when migrating GQI components [ID_37156]
+
+<!-- MR 10.4.0 - FR 10.3.9 [CU0] -->
+
+In some cases, an error could occur when migrating a GQI component:
+
+- When the query used DOM data and contained nodes that were linked to feeds, the links to those feeds could get broken and, in some cases, exceptions could be thrown due to missing feed links.
+
+- When the query used ad hoc data with multiple arguments, and one argument linked to query rows came after an argument linked to something other than query rows, the migration would not succeed and would cause the app to no longer be editable.

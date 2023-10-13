@@ -52,7 +52,7 @@ setBindings="1,250"
 
 > [!NOTE]
 >
-> - For more examples, see setBindings example.
+> - For more examples, see [setBindings example](xref:Protocol.Params.Param.SNMP.TrapOID-setBindings).
 > - When you set the log level to "Log Everything", information about incoming traps is logged in the SLSNMPManager log file.
 > - An example protocol "SLC SDF SNMP - Traps" is available in the Protocol Development Guide Companion Files.
 
@@ -201,6 +201,11 @@ In the following example, the severity is user-definable. The severity attribute
 </Param>
 ```
 
+> [!IMPORTANT]
+> 
+> - [RTDisplay](xref:Protocol.Params.Param.Display.RTDisplay) must be set to `true` to generate alarms.
+> - [RTDisplay](xref:Protocol.Params.Param.Display.RTDisplay) can be set to `false` if you only want to receive the trap.
+
 ## Processing traps in a QAction
 
 It is possible that a QAction is required to process an incoming trap. When the setBindings attribute is set to "allBindingInfo", an object holding the trap information will be available in the QAction.
@@ -243,7 +248,7 @@ trapInfo (object[]):
     - binding[0] (string): Binding OID
     - binding[1] (string): Binding value
 
-Note that the [Skyline.DataMiner.Utils.SNMP.Traps.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Utils.SNMP.Traps.Protocol) NuGet package can be used to parse the trap: The TrapInfo class (see TrapInfo class) allows the creation of a TrapInfo object from the raw trap info object.
+Note that the [Skyline.DataMiner.Utils.SNMP.Traps.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Utils.SNMP.Traps.Protocol) NuGet package can be used to parse the trap: The TrapInfo class (see [TrapInfo class](xref:Skyline.DataMiner.Utils.SNMP.Traps.Protocol.TrapInfo)) allows the creation of a TrapInfo object from the raw trap info object.
 
 ```csharp
 TrapInfo trap = TrapInfo.FromTrapData(trapInfo);
@@ -262,7 +267,7 @@ string bindingValue = binding.Value;
 
 ## Creating and sending traps from a QAction
 
-A DataMiner protocol can send SNMP traps independently from any alarms that are received. For this, the Notify method of the DMS class can be used. (For more information on this method, see DMS_SNMP_NOTIFICATION (73).) This will send a message to the SLDMS process, which in turn will instruct the SLSNMPAgent process to send the trap.
+A DataMiner protocol can send SNMP traps independently from any alarms that are received. For this, the Notify method of the DMS class can be used. (For more information on this method, see [DMS_SNMP_NOTIFICATION (73)](xref:DMS_SNMP_NOTIFICATION).) This will send a message to the SLDMS process, which in turn will instruct the SLSNMPAgent process to send the trap.
 
 Note that if you use custom traps in a protocol, you need to update the MIB for that protocol. As it is nearly impossible to auto-generate this custom MIB data, you can add a Mib tag to the protocol. The contents of that tag will then be added to the auto-generated MIB.
 

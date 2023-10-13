@@ -355,7 +355,10 @@ apiRules:
     type: Type
 - include:
     uidRegex: ^SLLoggerUtil\.
-    type: Namespace   
+    type: Namespace
+- include:
+    uidRegex: ^Skyline\.DataMiner\.Core\.Scheduler\.Automation
+    type: Namespace
 - include:
     uidRegex: ^Skyline\.DataMiner\.Core\.DataMinerSystem\.Common
     type: Namespace

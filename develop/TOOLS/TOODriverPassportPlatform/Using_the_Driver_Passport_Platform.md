@@ -30,8 +30,6 @@ The *Scheduler* page allows you to create tests. To do so:
 
     - Interval: 10m.
 
-    For more information on how to create a DMT package with these settings, refer to [DataMiner Application Package Builder](xref:TOODataMinerPackageBuilder#dataminer-application-package-builder).
-
 2. In the *Driver Passport Platform* app, go to *Scheduler*.
 
 3. In the *New Test Package* drop-down list, select *Refresh List*. This will update the drop-down list with the most recently uploaded packages.

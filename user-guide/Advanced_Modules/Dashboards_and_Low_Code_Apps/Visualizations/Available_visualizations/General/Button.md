@@ -4,7 +4,7 @@ uid: DashboardButton
 
 # Button
 
-> [!WARNING]
+> [!IMPORTANT]
 > In the Dashboards app, this feature is currently still in preview. For more information, see [Soft-launch options](xref:SoftLaunchOptions). However, it is fully available in the [DataMiner Low-Code Apps](xref:Application_framework).
 
 In the Dashboards app, this component is available in soft launch from DataMiner 10.0.3 onwards, if the soft-launch option *ReportsAndDashboardsButton* is enabled. In the DataMiner Low-Code Apps, it is available by default.
@@ -15,7 +15,7 @@ To configure the component:
 
 1. In the *Component* > *Settings* tab, click the configuration icon next to *On click* and select the action(s) you want the button to execute. See [Configuring low-code app events](xref:LowCodeApps_event_config).
 
-1. Fine-tune the component layout. In the *Component* > *Layout*, tab the following options are available:
+1. Fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
 
    - The default options available for all components. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
 
@@ -31,7 +31,7 @@ In the Dashboards app, the soft-launch button component can be used to execute t
 
    You will only be able to select button parameters for the data feed. Several parameters can be added in the same component.
 
-1. Fine-tune the component layout. In the *Component* > *Layout*, tab the following options are available:
+1. Fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
 
    - The default options available for all components. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
 

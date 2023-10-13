@@ -12,16 +12,16 @@ Allows the user to select a duration.
   <Description>Event Duration</Description>
   <Type>write</Type>
   <Interprete>
-     <RawType>numeric text</RawType>
-     <LengthType>next param</LengthType>
-     <Type>double</Type>
+    <RawType>numeric text</RawType>
+    <Type>double</Type>
+    <LengthType>next param</LengthType>
   </Interprete>
   <Display>
-     <RTDisplay>true</RTDisplay>
+    <RTDisplay>true</RTDisplay>
   </Display>
-   <Measurement>
-      <Type options="time">number</Type>
-   </Measurement>
+  <Measurement>
+    <Type options="time">number</Type>
+  </Measurement>
 </Param>
 ```
 

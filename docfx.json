@@ -10,6 +10,7 @@
                 "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Core.DataMinerSystem.Common.dll",
                 "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Core.DataMinerSystem.Protocol.dll",
                 "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Core.Matrix.Protocol.dll",
+				"src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Core.Scheduler.Automation.dll",
                 "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Core.InterAppCalls.Common.dll",
                 "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Utils.Interfaces.dll",
                 "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Utils.Rates.Common.dll",
@@ -19,7 +20,9 @@
                 "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Utils.SNMP.Traps.Protocol.dll",
                 "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Utils.Table.ContextMenu.dll",
                 "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit.dll",
-                "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Core.AppPackageCreator.dll"
+                "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Core.AppPackageCreator.dll",
+                "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Core.AppPackageInstaller.dll",
+                "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Core.AppPackageInstaller.SRM.dll"
             ],
           "exclude": [
             "**/obj/**",
@@ -44,6 +47,8 @@
           "user-guide/**/toc.yml",
           "release-notes/**.md",
           "release-notes/**/toc.yml",
+          "tutorials/**.md",
+          "tutorials/**/toc.yml",
           "develop/**.md",
           "develop/toc.yml",
 		      "develop/**/toc.yml",
@@ -53,7 +58,7 @@
         ]
       }
     ],
- 	"xrefService": [ "https://xref.docs.microsoft.com/query?uid={uid}" ],
+ 	"xrefService": [ "https://learn.microsoft.com/api/xref/query?uid={uid}" ],
 	"xref" : [ "xref/newtonsoft.yml" ],
   "resource": [
       {

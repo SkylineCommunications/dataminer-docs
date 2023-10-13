@@ -21,6 +21,8 @@ Please take the following information into account:
   > [!NOTE]
   > To take a backup of the Cassandra database only, from DataMiner 10.2.0/10.1.8 onwards, you can use the [Standalone Cassandra Backup tool](xref:Standalone_Cassandra_Backup_Tool).
 
+- For systems using **OpenSearch**, see [Configuring OpenSearch backups](xref:Configuring_OpenSearch_Backups).
+
 - For systems using **Elasticsearch**:
 
   Taking a backup of a system using Elasticsearch is not possible if no backup path has been specified. See [Configuring Elasticsearch backups](xref:Configuring_Elasticsearch_backups).

@@ -30,7 +30,7 @@ For example, the following parameter indicates that this parameter can be used a
 </Param>
 ```
 
-The virtual attribute allows you to further restrict to which protocols or parameters a connection can be established. For more information, see virtual.
+The virtual attribute allows you to further restrict to which protocols or parameters a connection can be established. For more information, see [virtual](xref:Protocol.Params.Param.Type-virtual).
 
 In the Element Connections app, this parameter will be included in the overview of the elements running this protocol:
 

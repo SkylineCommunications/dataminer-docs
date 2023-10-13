@@ -44,7 +44,7 @@ To generate C# classes from JSON text, you can rely on a built-in Visual Studio 
 Alternatively, there are many online converters to automatically convert JSON text into an object-oriented C# class. Here are a few examples:
 
 - <https://JSON2csharp.com/>
-- <https://JSONformatter.org/JSON-to-csharp>
+- <https://quicktype.io/csharp>
 
 The following code snippet describes a JSON-formatted text:
 

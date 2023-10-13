@@ -40,3 +40,18 @@ uid: dataminer_object_model_benchmarks
 | 22 | Delete 1000 DomDefinitions |	DMS | 54,955 ms | Each DomDefinition has an id, name and 10 sectiondefinitionlinks | ±1000 DomDefinitions, DomTemplates and SectionDefinitions present |
 | 23 | Delete 1000 DomTemplates | DMS | 42,336 ms	| Each DomTemplate has an id, name and DomInstance (id + 50 fields each containing a string of 256 characters) | ±1000 DomTemplates and SectionDefinitions present |
 | 24 | Delete 1000 SectionDefinitions | DMS | 68,367 ms | Each SectionDefinition had an id, name and 5 fields |	±1000 SectionDefinitions present |
+
+## Load Test
+
+### Specifications
+
+- Intel i7-12700 (12 core / 20 threads)
+- 32GB DDR5 RAM (4800 MT/s)
+- SSD (NVMe) (850K Write IOPS)
+- Windows 11 Pro (10.0.22621 Build 22621)
+- Elasticsearch version 6.8.23 (8GB allocated memory)
+- DataMiner version 10.3.9
+
+### Summary
+
+A load test was performed using DOM models representing 'transport stream' data. DOM definitions representing 'service', 'PID', and 'transport stream' were created, each containing around 20 fields. Using realistic data, 5,000,000 DOM instances were sequentially created, with a fairly constant average creation time of approximately 90 ms. The Elasticsearch index size reached about 45GB. Query performance using a GQI query in a low-code app remained consistently smooth compared to a system with significantly less DOM instances.

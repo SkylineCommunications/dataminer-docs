@@ -678,7 +678,7 @@ This way, DataMiner will inform the web server that it supports gzip and deflate
 Due to this enhancement, overall transfer speed and bandwidth utilization will increase.
 
 > [!NOTE]
-> The feature only works on DataMiner Agents running Windows 8.1, Windows Server 2012 R2, or a more recent Windows operating system.
+> This feature only works on DataMiner Agents running Windows Server 2012 R2 or a more recent Windows operating system.
 
 #### 'FillArray' and 'FillArrayWithColumn' functions now support history sets \[ID_21482\]
 

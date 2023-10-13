@@ -122,4 +122,3 @@ While Change Management is not part of the scope of the project deliverables, it
 
 > [!NOTE]
 > Both the End-User Stakeholder Representative and the Change Management Manager are critical roles. They should therefore be appointed to people with the required expertise, authority, motivation and mindset, and the user organization must consider that these people need to have sufficient authority and time available to fulfill these critical roles.
->

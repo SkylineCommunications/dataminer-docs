@@ -30,27 +30,25 @@ The first parameter defines the group box header.
 
 ```xml
 <Param id="500">
-    <Name>Title_Begin_Identification</Name>
-    <Description>Identification</Description>
-    <Type>fixed</Type>
-    <Display>
-        <RTDisplay>true</RTDisplay>
-        ...
-    </Display>
-    <Measurement>
-        <Type options="begin">title</Type>
-    </Measurement>
+  <Name>Title_Begin_Identification</Name>
+  <Description>Identification</Description>
+  <Type>fixed</Type>
+  <Display>
+    <RTDisplay>true</RTDisplay>
+  </Display>
+  <Measurement>
+    <Type options="begin">title</Type>
+  </Measurement>
 </Param>
 <Param id="501">
-    <Name>Title_End_Generic</Name>
-    <Type>fixed</Type>
-    <Display>
-        <RTDisplay>true</RTDisplay>
-        ...
-    </Display>
-    <Measurement>
-        <Type options="end">title</Type>
-    </Measurement>
+  <Name>Title_End_Generic</Name>
+  <Type>fixed</Type>
+  <Display>
+    <RTDisplay>true</RTDisplay>
+  </Display>
+  <Measurement>
+    <Type options="end">title</Type>
+  </Measurement>
 </Param>
 ```
 

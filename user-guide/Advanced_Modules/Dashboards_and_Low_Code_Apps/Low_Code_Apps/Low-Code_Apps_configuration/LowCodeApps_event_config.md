@@ -32,6 +32,9 @@ To configure an event to navigate to a URL:
 
 1. Select *Navigate to a URL* and specify the URL.
 
+   > [!TIP]
+   > You can link the URL to a feed using the [feed link syntax](xref:Feed_Link#syntax).
+
 1. Optionally, to open the webpage in a new tab, enable the option *Open in new tab*.
 
 ## Opening a page of the app
@@ -96,6 +99,9 @@ This option is only displayed if there is a component action that can be execute
 To configure an event to execute a component action:
 
 1. Select *Execute component action* and specify which action should be executed.
+
+> [!NOTE]
+> Actions applied to components will exclusively take effect on components that are currently visible. Any action attempted on an invisible component will be disregarded, along with any subsequent actions related to it.
 
 Examples:
 

@@ -4,7 +4,7 @@ uid: Protocol.Params.Param.Interprete.Exceptions.Exception
 
 # Exception element
 
-Defines an exception for an exception value you want to intercept of which the Interprete.Type is identical to that of the parameter in question..
+Defines an exception for an exception value you want to intercept of which the [Interprete.Type](xref:Protocol.Params.Param.Interprete.Type) is identical to that of the parameter in question.
 
 ## Parent
 

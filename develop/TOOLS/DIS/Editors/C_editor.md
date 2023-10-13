@@ -6,8 +6,11 @@ uid: C_editor
 
 If, in a file tab containing a protocol XML file or an Automation script XML file, you click an *Edit C#* button in front of a QAction or an Exe code block, a temporary C# project will be created, containing the code of that QAction or Exe code block. Also, the code of the QAction or Exe code block will appear in a new, customized file tab.
 
+![C# editor](~/develop/images/DIS_CSharpEditor.png)
+
 > [!NOTE]
 > DIS defines a default set of analysis rules for QAction projects. These rules can then be used by Visual Studio extensions like e.g. SonarLint or StyleCop to analyze the code.
+>
 > - When, in Visual Studio, your solution is in release mode, analysis is disabled for performance reasons.
 > - Analysis is always disabled for the QAction_Helper and QAction_ClassLibrary projects.
 

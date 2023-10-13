@@ -331,15 +331,27 @@ When such a button is clicked in a low-code app, the UI of the interactive Autom
 > [!NOTE]
 > One button can only execute one action. So, one button can only execute one interactive Automation script.
 
-#### DataMiner Object Models: New field descriptors [ID_35278]
+#### DataMiner Object Models: New field descriptors [ID_35278] [ID_36556]
 
-<!-- MR 10.4.0 - FR 10.3.3 -->
+<!-- RN 35278: MR 10.4.0 - FR 10.3.3 -->
+<!-- RN 36556: MR 10.4.0 - FR 10.3.9 -->
 
 Two new field descriptors have been added to the DataMiner Object Models:
 
 - GroupFieldDescriptor: Can be used to define that a field should contain the name of a DataMiner user group.
 
 - UserFieldDescriptor: Can be used to define that a field should contain the name of a DataMiner user. There is a *GroupNames* property that can be used to define which groups the user can be a part of.
+
+The form component will render these descriptors as filterable dropdown boxes.
+
+- Fields defined as `GroupFieldDescriptor` will display the group name and use that same group name as value.
+
+- Fields defined as `UserFieldDescriptor` will display the full name of the user, but will store the user name as value.
+
+  When the field descriptor defines any group names, the dropdown box will only list the users belonging to those groups.
+
+> [!NOTE]
+> Up to now, only users with *Modules > System configuration > Security > UI available* permission were allowed to view the list of DataMiner users. From now on, even users without *Modules > System configuration > Security > UI available* permission will at least be able to view the list of DataMiner users who are a member of any of the groups they themselves are a member of.
 
 #### DataMiner upgrade: Additional prerequisite will now check for incompatible connectors [ID_35605]
 
@@ -451,25 +463,27 @@ Once the creation is finished, you will see your newly created cluster on the *A
 
 1. Restart DataMiner.
 
-#### DataMiner installation/upgrade: Automatic installation of DataMiner Extension Modules [ID_36085] [ID_36513] [ID_36514] [ID_36799]
+#### DataMiner installation/upgrade: Automatic installation of DataMiner Extension Modules [ID_36085] [ID_36513] [ID_36514] [ID_36799] [ID_37137]
 
 <!-- MR 10.4.0 - FR 10.3.7 -->
-<!-- RN 36799: MR 10.4.0 - FR 10.3.9 -->
+<!-- RNs 36799/37137: MR 10.4.0 - FR 10.3.9 -->
 
 When you install or upgrade a DataMiner Agent, the following DataMiner Extension Modules (DxMs) will now automatically be installed (if not present yet):
 
-- DataMiner ArtifactDeployer (version 1.4.6)
-- DataMiner CoreGateway (version 2.13.0)
-- DataMiner FieldControl (version 2.8.3)
-- DataMiner Orchestrator (version 1.3.3)
-- DataMiner SupportAssistant (version 1.4.0)
+- DataMiner ArtifactDeployer (version 1.5.0)
+- DataMiner CoreGateway (version 2.12.0)
+- DataMiner FieldControl (version 2.9.0)
+- DataMiner Orchestrator (version 1.4.0)
+- DataMiner SupportAssistant (version 1.5.0)
 
 The BPA test *Firewall Configuration* has been altered to also check if TCP port 5100 is properly configured in the firewall. This port is required for communication with the cloud via the endpoint hosted in DataMiner CloudGateway.
 
 In addition, the DataMiner installer will now also add a firewall rule allowing inbound TCP port 5100 communication.
 
 > [!NOTE]
-> For detailed information on the changes included in the different versions of these DxMs, refer to the [dataminer.services change log](xref:DCP_change_log).
+>
+> - For detailed information on the changes included in the different versions of these DxMs, refer to the [dataminer.services change log](xref:DCP_change_log).
+> - The above-mentioned DxMs all use .NET 6.
 
 #### DataMiner Object Models: Caching of DOM configuration data [ID_36412]
 
@@ -504,15 +518,18 @@ In the log files, you will be able to find out which caches are enabled and when
 
 When the caches are enabled, it is no longer possible to get paged results when retrieving DomDefinitions, DomBehaviorDefinitions or SectionDefinitions. Instead, the complete list of objects matching the given query will be returned, even if that list is larger than the configured page size.
 
-#### DataMiner Object Models: Soft-deletable objects [ID_36721]
+#### DataMiner Object Models: Soft-deletable objects [ID_36721] [ID_37121]
 
-<!-- MR 10.4.0 - FR 10.3.9 -->
+<!-- RN 36721: MR 10.4.0 - FR 10.3.9 -->
+<!-- RN 37121: MR 10.4.0 - FR 10.3.10 -->
+<!-- Additional fix of 37121 added under WebApps/Fixes -->
 
 The following DOM objects can now be soft-deleted:
 
-- [FieldDescriptor](xref:DOM_SectionDefinition#fielddescriptor)
-- [SectionDefinitionLink](xref:DomDefinition#sectiondefinitionlink)
 - [DomStatusSectionDefinitionLink](xref:DOM_status_system#configuring-fields)
+- [FieldDescriptor](xref:DOM_SectionDefinition#fielddescriptor)
+- GenericEnumEntry
+- [SectionDefinitionLink](xref:DomDefinition#sectiondefinitionlink)
 
 When the fields linked to a soft-deleted `FieldDescriptor` or part of a soft-deleted `SectionDefinitionLink` or `DomStatusSectionDefinitionLink` are marked as *IsSoftDeleted*, the following applies:
 
@@ -521,6 +538,77 @@ When the fields linked to a soft-deleted `FieldDescriptor` or part of a soft-del
 - The fields are never be required.
 - Values are allowed to exist in the fields on a `DomInstance` for a soft-deleted `FieldDescriptor`, `SectionDefinitionLink`, or `DomStatusSectionDefinitionLink`.
 - Updating a `DomInstance` with new/updated values will be blocked for a field that has a soft-deleted `FieldDescriptor`, or is part of a soft-deleted `SectionDefinitionLink` or `DomStatusSectionDefinitionLink` (for that status). A [ValueForSoftDeletedFieldNotAllowed error](xref:DomInstance#errors) will be returned.
+
+Soft-deleting a *GenericEnumEntry* object will have the following consequences:
+
+- The *GenericEnumEntry* will not be displayed on UI forms used to create an instance.
+- The *GenericEnumEntry* will be displayed on a UI form used to update an instance of which the value is set to the soft-deleted *GenericEnumEntry* in question.
+- It will not be possible to create an instance of which the value is set to the soft-deleted *GenericEnumEntry*.
+- It will not be possible to update the value of an instance to the soft-deleted *GenericEnumEntry*.
+- It is allowed to have instances of which the value is set to the soft-deleted *GenericEnumEntry*.
+
+#### Configuration of behavioral anomaly alarms [ID_36857] [ID_36976] [ID_37124] [ID_37246] [ID_37250] [ID_37334] [37434]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+The DataMiner software now supports a more extensive configuration of behavioral anomaly alarms.
+
+From now on, you will be able to choose between the following types of anomaly monitoring:
+
+- Smart anomaly monitoring (i.e. anomaly monitoring as it existed before)
+- Customized anomaly monitoring
+
+Customized anomaly monitoring will enable you to do the following:
+
+- Set absolute or relative thresholds on the jump sizes of the change points of type *Level Shift* or *Outlier*.
+- Enable or disable monitoring for each of the two possible directions of a behavioral change for level shifts, trend changes, variance changes and outliers. This will allow you, for example, to configure different alarm monitoring behaviors for downward level shifts and upward level shifts.
+
+For more information on how to configure anomaly monitoring in DataMiner Cube, see RN37148 and RN37171.
+
+Summary of server-side changes:
+
+- The behavioral anomaly configuration can be requested by sending a *GetAlarmTemplateMessage*. The *GetAlarmTemplateResponseMessage* will then return the behavioral anomaly configuration in a new *AnomalyConfiguration* field.
+
+  If you enable behavioral anomaly monitoring, the *AnomalyConfiguration* field will contain information on which change point types are being monitored and how. If no behavioral anomaly monitoring has been configured, this field will remain empty.
+
+  The legacy anomaly monitoring fields *LevelShiftMonitor*, *TrendMonitor*, *VarianceMonitor* and *FlatlineMonitor* in the *GetAlarmTemplateResponseMessage* have been marked as obsolete. If, in existing alarm templates, at least one of those legacy fields was enabled, the *AnomalyConfiguration* field will be filled with values consistent with the old settings.  
+
+- The  anomaly configuration information for a parameter is no longer available in the *ParameterAlarmInfo* of each parameter. This means that the anomaly monitoring information can no longer be retrieved by means of a *GetElementProtocolMessage*.
+
+  The legacy anomaly monitoring fields *LevelShiftMonitor*, *TrendMonitor*, *VarianceMonitor* and *FlatlineMonitor* in the *ParameterAlarmInfo* have been marked as obsolete and will no longer be taken into account by SLAnalytics.
+
+- When upgrading to this DataMiner version, existing alarm template XML files will not be changed.
+
+  When you update an existing alarm template or creating a new one, a new `<AnomalyConfig>` element will be added into the body of the `<Alarm>` element if, and only if, behavioral anomaly monitoring is enabled and an extended anomaly configuration has been set via the *AnomalyConfiguration* field of the *GetAlarmTemplateResponse* or the template parameters.
+
+  The existing attributes of the `<Monitored>` element (i.e. *varianceMonitor*, *trendMonitor*, *levelShiftMonitor* and *flatLineMonitor*) have not been changed or removed to ensure compatibility of the new alarm template XML files with older DataMiner versions.
+
+- When you set up a customized behavioral anomaly monitoring containing relative or absolute thresholds, this setup will be lost when you downgrade to an older server version that does not support this extended anomaly configuration (i.e. DataMiner version 10.3.11 or older). A fallback to the legacy "smart anomaly monitoring" will happen for all the change point types that had some kind of anomaly monitoring enabled.
+
+- The internal SLAnalytics alarm template monitoring mechanism now also takes into account alarm template group information. As a result, SLAnalytics modules making use of this mechanism will get notified about changes to group entries and can react to these changes.
+
+- A behavioral change point of type "flatline" shown in the trend graph will now always receive the correct alarm color when an anomaly alarm was created for it. In other words, if a critical behavioral anomaly alarm was created for the behavioral change of type "flatline", the change point bar shown in the trend graph will receive the red color.
+
+#### DataMiner Object Models: 'Full CRUD meta' scripts [ID_37004]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+Apart from **ID only** scripts, which use the `OnDomInstanceCrud` entry point method and give you access to the CRUD type and the ID of the `DomInstance` in the script, it is now also possible to configure **Full CRUD meta** scripts. These use the `OnDomInstanceCrudWithFullMeta` entry point method and give you access to the CRUD type and the full `DomInstance` object(s).
+
+For more detailed information, see [ExecuteScriptOnDomInstanceActionSettings](xref:ExecuteScriptOnDomInstanceActionSettings).
+
+#### Proactive cap detection extended to absolute and relative alarm types [ID_37373]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+The proactive cap detection feature has been extended to dynamic alarm thresholds.
+
+As a result, proactive detection will now predict when a parameter will cross one of the following bounds:
+
+- A high and/or low data range value specified in the protocol.
+- A (by default) critical alarm limit of type normal specified in the alarm template.
+- A (by default) critical alarm limit of type "absolute" or "relative" specified in the alarm template if either a fixed baseline value is set or a dynamically updated baseline value is configured in the alarm template to detect a continuos degradation.
+- A data range indirectly derived from the protocol info. Currently this is limited to the values 0 and 100 for percentage data for which no historical values were encountered outside the [0,100] interval.
 
 ### Protocols
 
@@ -542,18 +630,20 @@ In this next example, all *Column* elements of parameters that have a `level` at
 <ExportRule table="*" tag="Protocol/Params/Param/Display/Positions/Position/Column" value="2" whereTag="Protocol/Params/Param" whereAttribute="level" whereValue="5"/>
 ```
 
-### Correlation
+#### Smart-serial communication now supports dynamic polling [ID_37404]
 
-#### Correlation alarms will now by default contain the value of the alarm property by which they are grouped [ID_35583]
+<!-- MR 10.4.0 - FR 10.3.11 -->
 
-<!-- MR 10.4.0 - FR 10.3.4 -->
+Smart-serial connection will now support dynamic polling, i.e. the ability to change the IP address and IP port while the element is active.
 
-When a correlation rule is configured to use alarm grouping via an alarm property, from now on, the value of the alarm property by which the alarms are grouped will now by default be added to the correlated alarm.
+To enable dynamic polling for a smart-serial connection, add a parameter that contains the following:
 
-If you do not want the alarm property value to be added to the correlation alarm, then you can disable this behavior by adding the `NewAlarmOptions.DisableGroupedProperty` flag to the `NewAlarmActionDefinition.Properties` using the *SLNetClientTest* tool.
+`<Type options="dynamic ip">read</Type>`
 
-> [!WARNING]
-> Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+> [!IMPORTANT]
+>
+> - Dynamic polling is only supported when the connection acts as a client. When you create the element, do not assign an IP address like "127.0.0.1", "any", etc. to it. If you do, the element will act as a server, and there is no way to make the element act as a client without stopping it. Also, trying to assign a value like "127.0.0.1" to the dynamic IP parameter at runtime will cause an error to occur.
+> - We strongly advise you to always set the connection type to "smart-serial single" so the connection is assigned a dedicated socket in SLPort. If two or more smart-serial elements hosted on the same DMA are assigned the same IP address and port via the element wizard, they will share the same connection in SLPort. This means that, if one of these elements changes the IP address dynamically, the other ones will also start using the new IP address.
 
 ### Maps
 

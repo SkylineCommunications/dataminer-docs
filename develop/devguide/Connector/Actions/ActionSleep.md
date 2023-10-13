@@ -20,7 +20,7 @@ Default: 5000 ms.
 
 ```xml
 <Action id="1">
-  <On>protocol</On>
+   <On>protocol</On>
    <Type value="1000">sleep</Type>
 </Action>
 ```

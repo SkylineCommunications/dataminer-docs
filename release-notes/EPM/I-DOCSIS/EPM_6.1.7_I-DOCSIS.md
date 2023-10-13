@@ -123,6 +123,10 @@ The following changes have been done to the Skyline EPM Platform DOCSIS WM conne
 - Inter-app calls are now aggregated to send information to the back-end elements.
 - Information coming from the back-end elements is now processed through inter-app communication.
 
+#### EPM front end removed from passive logic workflow [ID_36356]
+
+To improve performance, the EPM front-end element is no longer involved in retrieving the passive data in the system.
+
 #### Unnecessary columns hidden on topology data pages [ID_36451]
 
 The following columns are now by default hidden on the topology data pages, so that the pages have a cleaner look: *Network ID*, *Market ID*, *Hub ID*, *View Impact*, *CCAP Core ID*, *DS Line Card ID*, *US Line Card ID*, *DS Port ID*, *US Port ID*, *Node Segment ID*, *CM ID*, *Service Group ID*, *DS Service Group ID*, *US Service Group ID*, *Number Other DOCSIS*, *Node ID*, *Amplifier ID*, and *Tap ID*.
@@ -181,6 +185,12 @@ When the name of CCAP elements contained a hyphen, the CCAP page of the *Skyline
 #### Skyline EPM Platform DOCSIS: Incorrect default value for average percentage US and DS utilization [ID_36096]
 
 Up to now, the default value of the average percentage of US and DS utilization for the Skyline EPM Platform DOCSIS back-end connector was incorrectly indicated as "0". This has now been corrected to the exception value "-1".
+
+#### Huawei 5688-5800 CCAP Platform: Incorrect Percentage DS and US values [ID_36248]
+
+In the Interface table, it could occur that values above 100% were shown for the utilization percentage. To correct this, a new way to calculate the bitrate has been implemented, which uses the [SLC SDF Bitrate calculations library](xref:ConnectionsSnmpBitRateCalculations).
+
+With this new implementation, the following columns are no longer needed in the Interface Extended Overview and Interfaces tables: InUtilization, OutUtilization, and TotalUtilization. The latter will be renamed to Utilization.
 
 #### Too many cable modems report to have other DOCSIS version [ID_36317]
 

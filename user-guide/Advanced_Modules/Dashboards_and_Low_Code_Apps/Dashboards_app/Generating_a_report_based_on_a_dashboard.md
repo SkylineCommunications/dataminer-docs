@@ -33,5 +33,5 @@ When you do so, from DataMiner 10.0.13 onwards, a *Configure* button is availabl
 
 > [!NOTE]
 >
-> - By design, the following components are not included in reports: button panel ([soft launch](xref:SoftLaunchOptions)), map, and web components.
+> - By design, the following components are not included in reports: button panel, map, and web components.
 > - If access to a dashboard is limited to some users only, this dashboard will not be available to generate reports from DataMiner Cube.

@@ -243,7 +243,7 @@ On the *Cube* page, the following settings are available:
 
 - **Show the DataMiner TV section**: Obsolete. Determines whether the optional DataMiner TV section is displayed on the DataMiner Pulse welcome page in Cube. Available from DataMiner 9.5.14 up to DataMiner 10.1.0 [CU22]/10.2.0 [CU10]/10.3.1.
 
-- **Display the workspace buttons in the header**: Available from DataMiner 10.0.0/10.0.2 onwards. Determines whether the four blue squares indicating the Cube workspaces are displayed in the header. This setting can also be enabled or disabled via the header quick menu.
+- **Display the workspace buttons in the header**: Available from DataMiner 10.0.0/10.0.2 onwards. Determines whether the four squares indicating the Cube workspaces are displayed in the header. This setting can also be enabled or disabled via the header quick menu.
 
 - **Display the server time in the header**: Available from DataMiner 10.0.0/10.0.2 onwards. Determines whether server time is displayed in the header. This setting can also be enabled or disabled via the header quick menu.
 
@@ -336,7 +336,7 @@ These settings allow you to specify which alarm levels and icons are shown next 
 
 On the *Regional* page, the following settings are available:
 
-- **Language of the user interface**: Choose the language for the user interface. You must restart DataMiner Cube for this setting to take effect. Currently, the officially supported languages are Dutch, French, German, Portuguese (Portugal), Russian and Spanish. Other languages are available for demo purposes only.
+- **Language of the user interface**: Choose the language for the user interface. You must restart DataMiner Cube for this setting to take effect. Currently, the officially supported languages are Dutch, French, German, Portuguese (Portugal), Russian (up to DataMiner 10.2.6), and Spanish. Other languages are available for demo purposes only.
 
     > [!NOTE]
     > From DataMiner 9.5.2 onwards, by default, only the officially supported languages can be selected in the user settings.
@@ -392,17 +392,17 @@ On the *Sidebar page,* or prior to DataMiner 10.2.0/10.1.3, the *Surveyor* page,
 
   - Up to DataMiner 10.0.6, the default action is *Select*, which means that the left mouse button can be used to select a section of the graph to zoom in on. Other options are *Pan* or *None*.
 
-  - From DataMiner 10.0.7 onwards, the default action is *Pan*. Other options are *Select*, *Zoom* or *None*. The *Zoom* option does the same as the *Select* option from earlier DataMiner versions. The *Select* option now allows you to select a part of the graph in order to assign tags to it. However, note that this is only possible on systems with a Cassandra database and Elasticsearch database.
+  - From DataMiner 10.0.7 onwards, the default action is *Pan*. Other options are *Select*, *Zoom* or *None*. The *Zoom* option does the same as the *Select* option from earlier DataMiner versions. The *Select* option now allows you to select a part of the graph in order to assign tags to it. However, note that this is only possible on systems using [Storage as a Service](xref:STaaS) or a [self-hosted Cassandra-compatible database and indexing database](xref:Supported_system_data_storage_architectures).
 
 - **Right mouse button action on graph**: Select the action executed by dragging the right mouse button on a trend graph.
 
   - Up to DataMiner 10.0.6, the default action is *Pan*. Other options are *None* or *Select*, which allows you to use the left mouse button to select a section of the graph to zoom in on.
 
-  - From DataMiner 10.0.7 onwards, the default action is *Zoom*, which does the same as the *Select* option from earlier DataMiner versions. Other options are *Pan*, *Select* or *None*. The *Select* option now allows you to select a part of the graph in order to assign tags to it. However, note that this is only possible on systems with a Cassandra database and Elasticsearch database.
+  - From DataMiner 10.0.7 onwards, the default action is *Zoom*, which does the same as the *Select* option from earlier DataMiner versions. Other options are *Pan*, *Select* or *None*. The *Select* option now allows you to select a part of the graph in order to assign tags to it. However, note that this is only possible on systems using [Storage as a Service](xref:STaaS) or a [self-hosted Cassandra-compatible database and indexing database](xref:Supported_system_data_storage_architectures).
 
 - **Hotkey for mouse button action on graph**: Available from DataMiner 10.0.7 onwards. Allows you to specify which key can be used in order to apply an action on a trend graph by pressing this key and dragging with the left mouse button at the same time. The default hotkey is *Ctrl*. Other options are *Alt* and *Shift*.
 
-- **Hotkey + left mouse button action on graph**: Available from DataMiner 10.0.7 onwards. Select the action executed by pressing the hotkey configured in the setting above and dragging the left mouse button on a trend graph. The default option is Select, which allows you to select a part of the graph in order to assign tags to it. However, note that this is only possible on systems with a Cassandra database and Elasticsearch database. Other options are *Zoom*, *Pan* or *None*.
+- **Hotkey + left mouse button action on graph**: Available from DataMiner 10.0.7 onwards. Select the action executed by pressing the hotkey configured in the setting above and dragging the left mouse button on a trend graph. The default option is Select, which allows you to select a part of the graph in order to assign tags to it. However, note that this is only possible on systems using [Storage as a Service](xref:STaaS) or a [self-hosted Cassandra-compatible database and indexing database](xref:Supported_system_data_storage_architectures). Other options are *Zoom*, *Pan* or *None*.
 
 - **Extend trend data from the database with real-time parameter changes**: Available from DataMiner 9.5.7 onwards. From that version of DataMiner onwards, by default, trend graphs are redrawn after each parameter change. When this setting is enabled, parameter changes will be displayed using a lighter color in order to clearly show the difference between this parameter data and “confirmed” trend data from the database. The moment a trend data update is received, the confirmed trend data will be drawn using the standard trend data color.
 
@@ -421,6 +421,7 @@ On the *Sidebar page,* or prior to DataMiner 10.2.0/10.1.3, the *Surveyor* page,
 - **Update interval**: Available from DataMiner 10.3.0/10.2.4 onwards. Allows you to specify a custom refresh rate for trend graphs (ranging from 5 seconds to 5 minutes). By default, this is set to 2 minutes.
 
 > [!NOTE]
+>
 > - Changing this refresh rate can have a minor effect on overall performance, especially when trend graphs with more than 10 parameters are opened.
 > - If you change this setting, you will need to close and reopen any currently opened trend graphs for the setting to take effect on them.
 
@@ -443,7 +444,7 @@ On the *Advanced* page, the following settings are available:
 - **DataMiner Cube User \[username\] reset**: Click the button *Factory defaults* to reset all settings back to default.
 
 > [!NOTE]
+>
 > - If a setting other than the default has been applied, it will be displayed in bold. You can quickly reset to the default setting by clicking the *Reset to \[setting\]* field underneath the setting.
 > - If a setting requires that you enter a value in a box, and the value you entered is incorrect, the edge of the box will be displayed in red and the change to the setting will not be applied.
 > - It is possible to limit the changes a user can apply to the settings. For more information, see [Configuring a set of user group settings](xref:Configuring_a_set_of_user_group_settings).
->

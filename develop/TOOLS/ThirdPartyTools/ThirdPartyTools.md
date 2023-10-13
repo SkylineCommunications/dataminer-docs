@@ -10,6 +10,7 @@ The following table lists some development tools that can be very useful while d
 |---------|---------|---------|
 |[DataStax DevCenter](xref:DataStax_DevCenter)     |This tool allows you to perform CQL queries or run scripts on a Cassandra database.         |Database         |
 |[dnSpy](xref:dnSpy)     |dnSpy is a debugger and .NET assembly editor.        |Debugger         |
+|[dotPeek](xref:dotPeek)     |dotPeek is a free .NET decompiler and assembly browser.     | Decompiler         |
 |[EBU LIST](xref:EBU_Live_IP_Software_Toolkit_LIST)     |EBU LIST is a freely available suite of software tools that can be used to check the state of IP-based networks and their high-bitrate media traffic.         |Network         |
 |[Fiddler](xref:Fiddler)     |Fiddler is a free web debugging tool that logs all HTTP(S) traffic between your computer and the Internet.         |Network         |
 |[ManageEngine MIB Browser](xref:ManageEngine_MIB_Browser)     |This tool allows you to monitor SNMP-enabled devices/servers.          |SNMP         |

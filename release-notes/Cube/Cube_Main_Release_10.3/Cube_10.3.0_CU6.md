@@ -2,10 +2,10 @@
 uid: Cube_Main_Release_10.3.0_CU6
 ---
 
-# DataMiner Cube Main Release 10.3.0 CU6 – Preview
+# DataMiner Cube Main Release 10.3.0 CU6
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to DataMiner Cube, see [General Main Release 10.3.0 CU6](xref:General_Main_Release_10.3.0_CU6).
@@ -30,6 +30,24 @@ Up to now, embedding a visual overview assigned to a view in that same visual ov
 
 A number of enhancements have been made with regard to how help buttons in the *Services* module are linked to pages on <https://docs.dataminer.services/>.
 
+#### Alarm Console: Enhanced performance when loading history alarms [ID_36929]
+
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
+
+Because of a number of enhancements, overall performance has considerably increased when loading history alarms.
+
+#### Visual Overview: Warning message when embedding visual overview assigned to element in that same visual overview [ID_37078]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+Up to now, embedding a visual overview assigned to an element in that same visual overview could cause an infinite loop, leading to the Cube client becoming unresponsive. From now on, when Cube detects that a visual overview assigned to an element in that same visual overview has been embedded, a warning message will be displayed.
+
+#### Visual Overview: Warning message when embedding visual overview assigned to service in that same visual overview [ID_37082]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+Up to now, embedding a visual overview assigned to a service in that same visual overview could cause an infinite loop, leading to the Cube client becoming unresponsive. From now on, when Cube detects that a visual overview assigned to a service in that same visual overview has been embedded, a warning message will be displayed.
+
 ### Fixes
 
 #### DataMiner Cube: Report or dashboard would not be selected after 'Email', 'Upload to FTP' or 'Upload to shared folder' action was initialized [ID_36631]
@@ -44,7 +62,7 @@ In *Automation*, *Correlation* and *Scheduler*, you can select a report of a das
 
 When you opened a trend graph showing trend data of a parameter that only had average trending enabled, in some cases, it would not be possible to pan across the graph.
 
-#### DataMiner Cube - Visual Overview: Problem when opening a service chain shape while element updates were being received [ID_36794]
+#### DataMiner Cube - Visual Overview: Problem when opening a service chain shape while element updates were being received [ID_36794] [ID_36966]
 
 <!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
 
@@ -63,3 +81,12 @@ For example, when you had specified `[param: [this EnhancedServiceID], 1]`, the 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
 When, on the *General parameters* page of an element card, you click *Configure* next to *DataMiner Connectivity Framework*, a window with four tables is displayed. Up to now, these tables would incorrectly no longer have a filter box. From now on, they will all have a filter box again.
+
+#### Problems when selecting report in Automation or Scheduler module [ID_37052]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+In the Automation or Scheduler module, when you selected a report for the email, FTP, or shared folder action, the following issues could occur:
+
+- In some cases, the "required info" label was not shown.
+- When you switched from a different action to the email, FTP, or shared folder action, it could occur that the list of selectable reports and dashboards was not loaded in the dropdown boxes.

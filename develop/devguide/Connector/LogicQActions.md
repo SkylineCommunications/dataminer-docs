@@ -20,7 +20,7 @@ The following QAction runs when a button (with parameter ID 100) is clicked and 
     using System;
     using Skyline.DataMiner.Scripting;
 
-    public class QAction
+    public static class QAction
     {
         public static void Run(SLProtocol protocol)
         {
@@ -119,6 +119,9 @@ In the example above, the Run method of the QAction class is defined as a static
 
 It is also possible to define static fields in the QAction class. As only one copy of a static member exists, regardless of how many instances of the class are created, static fields are also shared between all the elements executing this protocol and persist as long as the SLScripting process is running.
 
+> [!NOTE]
+> Static fields are only shared between elements with the same protocol version.
+
 Consider the following example of a protocol that defines a button (with parameter ID 100) triggering a QAction. The QAction defines a static field executionCount and a static method Run:
 
 ```xml
@@ -126,7 +129,7 @@ Consider the following example of a protocol that defines a button (with paramet
 <![CDATA[
     using Skyline.DataMiner.Scripting;
 
-    public class QAction
+    public static class QAction
     {
         private static int executionCount;
         private static object thisLock = new object();
@@ -151,7 +154,7 @@ In case you only want to keep track of the execution count on a per element basi
 
 ### Instance entry methods
 
-From DataMiner 7.5.6.2 (RN 5481) onwards, it is possible to use instance entry methods in QActions. To obtain this behavior, define the entry method as an instance method (by removing the keyword "static" of the Run method).
+From DataMiner 7.5.6.2 (RN 5481) onwards, it is possible to use instance entry methods in QActions. To obtain this behavior, define the entry method as an instance method (by removing the keyword "static" of the Run method and on the QAction class).
 
 In the QAction class, you can now define instance fields, which are available in the instance entry method.
 
@@ -268,7 +271,7 @@ In the example below, the values of parameters with ID 200 and 201 are passed to
 <![CDATA[
 using Skyline.DataMiner.Scripting;
 
-public class QAction
+public static class QAction
 {
     /// <summary>
     /// Quick Action entry point.
@@ -292,7 +295,7 @@ Alternatively, the GetInputParameter method can be used:
 <![CDATA[
 using Skyline.DataMiner.Scripting;
 
-public class QAction
+public static class QAction
 {
     /// <summary>
     /// Quick Action entry point.
@@ -318,7 +321,7 @@ In the example below, the values of two standalone parameters are retrieved by p
 using System;
 using Skyline.DataMiner.Scripting;
 
-public class QAction
+public static class QAction
 {
     /// <summary>
     /// Quick Action example.
@@ -416,7 +419,7 @@ namespace Skyline.Protocol.Model
 using Skyline.DataMiner.Scripting;
 using Skyline.Protocol.Model;
 
-public class QAction
+public static class QAction
 {
   public static void Run(SLProtocol protocol)
   {
@@ -561,7 +564,7 @@ using DWORD = System.UInt32;
 using LPWSTR = System.String;
 using NET_API_STATUS = System.UInt32;
 
-public class QAction
+public static class QAction
 {
 	/// <summary>
 	/// Quick Action example.
@@ -677,7 +680,7 @@ using System.Web.Script.Serialization;
 
 using Skyline.DataMiner.Scripting;
 
-public class QAction
+public static class QAction
 {
 	public static void Run(SLProtocol protocol)
 	{
@@ -702,7 +705,7 @@ public class QAction
 
 > [!NOTE]
 > - When an instance of the JavaScriptSerializer is created, it has a maximum length of JSON strings that are accepted. In case a device can return large JSON responses, this default size can be too small. If this is the case, be sure to set the maximum length property of the JavaScriptSerializer instance before using the instance to deserialize the response.
-> - A useful JSON editor can be found at http://jsoneditor.appspot.com/.
+> - A useful JSON editor can be found at https://jsoneditoronline.org.
 > - The online generator available at http://json2csharp.com/ can be used to convert JSON to C# classes.
 
 
@@ -762,7 +765,7 @@ using Skyline.DataMiner.Scripting;
 /// <summary>
 /// Processing gzip compressed data.
 /// </summary>
-public class QAction
+public static class QAction
 {
 	/// <summary>
 	/// QAction entry point.

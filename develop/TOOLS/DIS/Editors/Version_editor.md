@@ -6,6 +6,8 @@ uid: Version_editor
 
 If you click *Version Editor* in the file tab header when editing a protocol XML file, the XML editor you are working in will be turned into a dedicated protocol version editor. This editor will allow you to manage the information in the Protocol.Version and Protocol.VersionHistory elements in a more user-friendly way.
 
+![Version editor](~/develop/images/DIS_VersionHistoryEditor.png)
+
 If you want to save the changes you made and return to the XML editor, click *Apply Changes*. If you want to discard the changes you made, click *Cancel*.
 
 ## Current version

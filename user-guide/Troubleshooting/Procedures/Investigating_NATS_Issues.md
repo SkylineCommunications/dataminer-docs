@@ -2,7 +2,7 @@
 uid: Investigating_NATS_Issues
 ---
 
-# Investigating NATS Issues
+# Investigating NATS issues
 
 To investigate NATS issues, follow the actions detailed below, in the specified order:
 
@@ -14,7 +14,9 @@ To investigate NATS issues, follow the actions detailed below, in the specified 
 1. [Try a NATS reset](#try-a-nats-reset)
 1. [Check if new NATS connections can be established](#check-if-new-nats-connections-can-be-established)
 1. [Check the NAS and NATS logging](#check-the-nas-and-nats-logging)
+1. [Check if port is already in use](#check-if-port-is-already-in-use)
 1. [Remaining steps](#remaining-steps)
+
 
 It may also be useful to understand the [algorithms used by DataMiner to configure NATS](#algorithms-used-by-dataminer-to-configure-nats).
 
@@ -113,9 +115,14 @@ A few details to pay attention to:
 
 ### nats-server.config
 
+> [!NOTE]
+> From DataMiner 10.3.11/10.3.0 [CU8] onwards<!--RN 37401-->, when DataMiner makes changes to *nats-server.config*, the old version of that file is saved in the *C:\Skyline DataMiner\Recycle Bin* folder.
+
 #### Cluster of 3 or more DMAs
 
 This is an example of **nats-server.config** in a NATS cluster of 3 or more Agents:
+
+##### [From DataMiner 10.2.0(CU6)/10.2.8 onwards](#tab/tabid-1)
 
 ```txt
 port: 4222 # Port for client connections
@@ -123,8 +130,29 @@ max_payload: 30000000 # maximum number of bytes in a message payload
 http_port: 8222 # http port for server monitoring
 operator: "C:\\Skyline DataMiner\\NATS\\nsc\\.nsc\\nats\\DataMinerOperator\\DataMinerOperator.jwt" # Path to operator JWT
 resolver: URL(http://0.0.0.0:9090/jwt/v1/accounts/) # URL to nats-account-server. Example: URL(http://10.11.3.201:9090/jwt/v1/accounts/)
-debug: true
-trace: true
+debug: false
+trace: false
+logtime: true
+log_file: "C:\\Skyline DataMiner\\NATS\\nats-streaming-server\\nats-server.log" # Path to the log file (nats-server.log)
+streaming: {
+	cluster_id: "10.10.73.30" # Cluster name
+}
+cluster: {
+	routes: ["nats://10.10.73.10:6222/","nats://10.10.73.20:6222/"]
+	listen: 0.0.0.0:6222
+}
+```
+
+##### [Prior to DataMiner 10.2.0(CU6)/10.2.8](#tab/tabid-2)
+
+```txt
+port: 4222 # Port for client connections
+max_payload: 30000000 # maximum number of bytes in a message payload
+http_port: 8222 # http port for server monitoring
+operator: "C:\\Skyline DataMiner\\NATS\\nsc\\.nsc\\nats\\DataMinerOperator\\DataMinerOperator.jwt" # Path to operator JWT
+resolver: URL(http://0.0.0.0:9090/jwt/v1/accounts/) # URL to nats-account-server. Example: URL(http://10.11.3.201:9090/jwt/v1/accounts/)
+debug: false
+trace: false
 logtime: true
 log_file: "C:\\Skyline DataMiner\\NATS\\nats-streaming-server\\nats-server.log" # Path to the log file (nats-server.log)
 streaming: {
@@ -154,6 +182,10 @@ cluster: {
 server_name: MyServerName # Unique on each node
 ```
 
+***
+
+<br/>
+
 The following values can vary in each DMS:
 
 - **streaming.cluster_id**: Based on the cluster name in DataMiner.
@@ -162,7 +194,51 @@ The following values can vary in each DMS:
 
 #### Cluster of 2 DMAs
 
-This is an example of **nats-server.config** in a NATS cluster of exactly 2 Agents:
+This is an example of **nats-server.config** in a NATS cluster of exactly 2 Agents. In DataMiner versions prior to 10.2.0[CU17]/10.3.0[CU5]/10.3.8, this constituted a special type of configuration. From DataMiner 10.2.0[CU17]/10.3.0[CU5]/10.3.8 onwards, an identical configuration as for [a cluster of 3 or more DMAs](#cluster-of-3-or-more-dmas) is required.
+
+##### [From DataMiner 10.2.0 [CU18]/10.3.0 [CU6]/10.3.9 onwards](#tab/tabid-4)
+
+```txt
+port: 4222 # Port for client connections
+max_payload: 30000000 # maximum number of bytes in a message payload
+http_port: 8222 # http port for server monitoring
+operator: "C:\\Skyline DataMiner\\NATS\\nsc\\.nsc\\nats\\DataMinerOperator\\DataMinerOperator.jwt" # Path to operator JWT
+resolver: URL(http://0.0.0.0:9090/jwt/v1/accounts/) # URL to nats-account-server. Example: URL(http://10.11.3.201:9090/jwt/v1/accounts/)
+debug: false
+trace: false
+logtime: true
+log_file: "C:\\Skyline DataMiner\\NATS\\nats-streaming-server\\nats-server.log" # Path to the log file (nats-server.log)
+streaming: {
+	cluster_id: "10.10.73.10" # Cluster name
+    credentials: "C:\\Skyline DataMiner\\NATS\\nsc\\.nkeys\\creds\\DataMinerOperator\\DataMinerAccount\\DataMinerUser.creds" # Credentials file to connect to external NATS 2.0+ Server
+}
+cluster: {
+	routes: ["nats://10.10.73.20:6222/"]
+	listen: 0.0.0.0:6222
+}
+```
+
+##### [DataMiner 10.2.0 [CU6]/10.2.8 to 10.2.0 [CU17]/10.3.0 [CU5]/10.3.8](#tab/tabid-5)
+
+```txt
+port: 4222 # Port for client connections
+max_payload: 30000000 # maximum number of bytes in a message payload
+http_port: 8222 # http port for server monitoring
+operator: "C:\\Skyline DataMiner\\NATS\\nsc\\.nsc\\nats\\DataMinerOperator\\DataMinerOperator.jwt" # Path to operator JWT
+resolver: URL(http://10.103.0.22:9090/jwt/v1/accounts/) # URL to nats-account-server. Example: URL(http://10.11.3.201:9090/jwt/v1/accounts/)
+debug: false
+trace: false
+logtime: true
+logfile_size_limit: 10MB
+log_file: "C:\\Skyline DataMiner\\NATS\\nats-streaming-server\\nats-server.log" # Path to the log file (nats-server.log)
+streaming: {
+    cluster_id: SLUMS # Cluster name
+    credentials: "C:\\Skyline DataMiner\\NATS\\nsc\\.nkeys\\creds\\DataMinerOperator\\DataMinerAccount\\DataMinerUser.creds" # Credentials file to connect to external NATS 2.0+ Server
+}
+server_name: MyServerName
+```
+
+##### [Prior to DataMiner 10.2.0[CU6]/10.2.8](#tab/tabid-3)
 
 ```txt
 port: 4222 # Port for client connections
@@ -189,7 +265,11 @@ streaming: {
 }
 server_name: MyServerName
 ```
-  
+
+***
+
+<br/>
+
 The only difference between this config and a config of an Agent that has a standalone NATS is that the resolver is different from 0.0.0.0.
 
 #### Standalone NATS
@@ -209,14 +289,6 @@ logfile_size_limit: 10MB
 log_file: "C:\\Skyline DataMiner\\NATS\\nats-streaming-server\\nats-server.log" # Path to the log file (nats-server.log)
 streaming: {
     cluster_id: SLUMS # Cluster name
-    store_limits: {
-        max_age: "600s" # How long messages can stay in the log
-        max_inactivity: "600s" # How long without any subscription and any new message before a channel can be automatically deleted
-        max_channels: 0 # Maximum number of channels, 0 means unlimited
-        max_msgs: 0 # Maximum number of messages per channel, 0 means unlimited
-        max_subs: 0 # Maximum number of subscriptions per channel, 0 means unlimited
-        max_bytes: 0 # Total size of messages per channel, 0 means unlimited
-    }
     credentials: "C:\\Skyline DataMiner\\NATS\\nsc\\.nkeys\\creds\\DataMinerOperator\\DataMinerAccount\\DataMinerUser.creds" # Credentials file to connect to external NATS 2.0+ Server
 }
 server_name: MyServerName
@@ -237,6 +309,9 @@ server_name: MyServerName
 There should only be one primary NAS in each DMS, with the configuration detailed below. Every other NAS should be configured as a secondary, except in a cluster of exactly 2 Agents.
 
 In a cluster of exactly 2 Agents, both NATS configs will point to the same NAS in their resolver setting. The other NAS will be running, but neither NATS will connect to it.
+
+> [!NOTE]
+> From DataMiner 10.3.11/10.3.0 [CU8] onwards<!--RN 37401-->, when DataMiner makes changes to *nas.config*, the old version of that file is saved in the *C:\Skyline DataMiner\Recycle Bin* folder.
 
 #### Primary NAS
 
@@ -310,6 +385,76 @@ For example, in a cluster of 4 agents, the following situation could occur:
 
 This will result in Agent 2 receiving different information about the same cluster from its peers. Because Agent 2 cannot resolve this, it will shut itself down, without stating a particular reason for doing so. This makes it look like Agent 2 is the one experiencing issues because it is the only one where NATS will not start. However, it is in fact the only server where all the connections are working correctly.
 
+## Check if port is already in use
+
+NATS uses port 9090 by default. If another program is already using this port, you will notice the following behavior:
+
+- DataMiner fails to start.
+
+- NAS is running.
+
+- NATS is stopped.
+
+- Several 2kB large log files can be found in the *C:\Skyline DataMiner\NATS\nats-account-server* folder.
+
+  > [!NOTE]
+  > The number of log files in this folder can increase rapidly (over 30,000 files in 12 hours).
+
+  The log files contain the following entry:
+
+  `listen tcp 0.0.0.0:9090: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.`
+
+The 9090 port may already be in use if your DMA has elements using [GPIB communication](xref:GPIB_Connection) and you have the [Keysight Connection Expert software](xref:Installing_the_Keysight_Agilent_IO_Libraries) from IO Libraries installed. This is commonly the case for [spectrum analyzer elements](xref:Connecting_spectrum_analyzers_to_your_DataMiner_System).
+
+Check whether Keysight Agilent IO Libraries or a different third-party software is using the 9090 port:
+
+1. Ensure that NAS and NATS are stopped.
+
+1. Run the following command in a command prompt window: `netstat -aon | findstr 9090`.
+
+1. If you identify a process using port 9090, open Windows Task Manager to find the process PID, e.g. *kdi-controller.exe*.
+
+### Manually configuring a custom port for NATS
+
+To resolve this issue, manually configure a custom port for NATS that is not yet in use, e.g. port 9091.
+
+1. Stop DataMiner and the NAS and NATS services.
+
+1. Make sure SLWatchdog is stopped.
+
+1. Open *C:\Skyline DataMiner\NATS\nats-account-server\nas.config* and change the port from 9090 to your chosen custom port, e.g. 9091.
+
+1. Open a command prompt as Administrator and navigate to the location of the NATS account server:
+
+   ```txt
+   cd C:\Skyline DataMiner\NATS\nats-account-server
+   ```
+
+1. Run the following command in the command prompt window: `nssm edit NAS`.
+
+1. Change any mentions of 9090 to 9091.
+
+1. Open *C:\Skyline DataMiner\NATS\nats-streaming-server\nats-server.config* and change the port from 9090 to 9091.
+
+1. In Windows Firewall, locate the inbound rule for NAS. Change the port from 9090 to 9091.
+
+1. Open *C:\Skyline DataMiner\MaintenanceSettings.xml* and add the following lines:
+
+   ```xml
+   <SLNet>
+   <NATSForceManualConfig>true</NATSForceManualConfig>
+   </SLNet>
+   ```
+
+> [!NOTE]
+> If you enable the *NATSForceManualConfig* option, this means you become responsible for providing a valid NATS cluster and maintaining its configuration. See [Disabling automatic NATS configuration](xref:SLNetClientTest_disabling_automatic_nats_config).
+
+1. Start the NAS and NATS services.
+
+1. Start DataMiner.
+
+1. Repeat this process for every Agent in the cluster.
+
 ## Remaining steps
 
 If you continue to have NATS issues, try the following steps:
@@ -377,9 +522,9 @@ First, the algorithm will collect all the reachable primary IPs in the cluster (
 
 - If only 1 reachable IP is found and the local system is NOT in a Failover setup, the config will be reverted to the “standalone” config. This is the same as the default config when first installing NATS. The algorithm exits after this. Otherwise, it will sort all the nodes by IP (sortedNodes).
 
-- If only 2 nodes are found, a special algorithm will be run designed for 2 nodes only. It will first reset both nodes to the standalone configuration. Then it will select the node with the alphabetically first IP address or hostname and configure that one as “master” and the other as “guest”. The master node will be left as the default config, while the guest node will be configured to use NATS and NAS from the master node. This means that the guest node will still be running the NAS and NATS service, but the DataMiner Agent will never connect to it; it will always connect with the NATS of the master node. This is needed because a cluster of exactly 2 NATS nodes is impossible. This can be a vulnerability on systems that run a standalone Failover setup. If the master node goes down for any reason, the guest node will no longer be able to use NATS either.
+- Prior to DataMiner 10.2.0 [CU18]/10.3.0 [CU6]/10.3.9:  If only 2 nodes are found, a special algorithm will be run designed for 2 nodes only. It will first reset both nodes to the standalone configuration. Then it will select the node with the alphabetically first IP address or hostname and configure that one as “master” and the other as “guest”. The master node will be left as the default config, while the guest node will be configured to use NATS and NAS from the master node. This means that the guest node will still be running the NAS and NATS service, but the DataMiner Agent will never connect to it; it will always connect with the NATS of the master node. This is needed because a cluster of exactly 2 NATS nodes is impossible. This can be a vulnerability on systems that run a standalone Failover setup. If the master node goes down for any reason, the guest node will no longer be able to use NATS either.
 
-- If 3 or more nodes are detected, the algorithm will cluster them all together.
+- If 2 or more nodes are detected, the algorithm will cluster them all together.
 
   1. Using the sorted IPs, it will try to find the next 4 IPs in the list after itself and use these as routes and peers. The list is iterated in a wrap-around fashion so that the last few IPs in the sorted list still get up to 4 peers/routes. A node will never select itself as a peer/route.
 
@@ -387,10 +532,13 @@ First, the algorithm will collect all the reachable primary IPs in the cluster (
 
   1. The filestore and raft logging are cleaned up (`..\NATS\nats-streaming-server\fileStore` and `..\NATS\nats-streaming-server\raftLog`). This is done to remove any references and cached data from the previous cluster configuration.
 
-  1. The alphabetically first IP or hostname is selected to become the primary NAS; all the other nodes are configured as a secondary NAS and will reference the primary NAS.
+  1. The **alphabetically** first IP or hostname is selected to become the primary NAS; all the other nodes are configured as a secondary NAS and will reference the primary NAS.
 
   1. The cluster ID is set using the DMS cluster name, transformed to Base64 string. This transformation is done to prevent special symbols in the cluster ID.
 
   1. *SLCloud.xml* is updated with the new configuration.
 
 This algorithm is run on all DMAs at the same time and will only change the configuration of the local NAS/NATS/DMA. It is therefore important that all DMAs in your cluster are online and reachable when you run the NATS reset.
+
+> [!NOTE]
+> From DataMiner 10.3.11/10.3.0 [CU8] onwards<!--RN 37401-->, when DataMiner makes changes to the *SLCloud.xml*, *nats-server.config*, or *nas.config* files, the old version of that file is saved in the *C:\Skyline DataMiner\Recycle Bin* folder.
