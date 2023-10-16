@@ -56,7 +56,7 @@ The (primary or secondary) key should be added as a masked variable in the repos
         - uploadTag
         - deploy
 
-    # Uploading a commit on a branch with the build number of the pipeline (e.g.: 0.0.56)
+    # Uploading a commit on a branch with the build number of the pipeline (e.g. 0.0.56)
     uploadBranch:
         rules:
             - if: $CI_COMMIT_BRANCH
@@ -79,7 +79,7 @@ The (primary or secondary) key should be added as a masked variable in the repos
                 # Store the artifact-id in the SkylineOutput.env to later use in the deploy stage.
                 dotenv: SkylineOutput.env
 
-    # Uploading a tag which will be used as the version number      
+    # Uploading a tag that will be used as the version number
     uploadTag:
         rules:
             - if: $CI_COMMIT_TAG
