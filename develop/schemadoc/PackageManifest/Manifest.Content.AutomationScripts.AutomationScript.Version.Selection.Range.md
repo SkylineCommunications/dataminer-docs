@@ -6,6 +6,9 @@ uid: Manifest.Content.AutomationScripts.AutomationScript.Version.Selection.Range
 
 Specifies a range.
 
+This can either be the name of a github branch like 'main' or 'master' or a branch from SLC SE RepoManager like '1.0.0.X'.
+
+
 ## Content type
 
 [TypeNonEmptyString](xref:Manifest-TypeNonEmptyString)
