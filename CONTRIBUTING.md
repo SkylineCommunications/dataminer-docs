@@ -943,6 +943,43 @@ You encounter one of the following situations:
 
    The number of local commits being pushed to GitHub may vary, depending on how outdated your current branch was.
 
+### Pull request shows an unusually high number of commits and changed files
+
+**Symptoms**: You have made a pull request, but there is an unusually high number listed next to *Commits* and *Files changed*. The list of commits includes changes made by other contributors of the DataMiner documentation.
+
+![incorrect base repository](~/images/wrong_base_repository.png)
+
+**Cause**: Your changes are being pushed to the wrong base repository. To verify whether this is the case, hover your mouse over *main* in `[Your-GitHub-username] wants to merge # commits into main from [name-of-branch]`.
+
+- Correct: `SkylineCommunications/dataminer-docs:main`
+
+- Incorrect: `[your-GitHub-username]/dataminer-docs:main`
+
+  ![Hover](~/images/Hover_Base_Repo.png)
+
+**Resolution**:
+
+1. Scroll down and click *Merge pull request*.
+
+1. Select *Confirm merge*.
+
+1. In the top-left corner, click *dataminer-docs*.
+
+   ![dataminer-docs](~/images/DataMiner-docs.png)
+
+1. Click the downwards arrow next to *Contribute* and select *Open pull request*.
+
+   ![Open pull request](~/images/Open_Pr.png)
+
+1. Ensure that the base repository you are merging to is `SkylineCommunications/dataminer-docs`.
+
+   ![Base repository](~/images/base-repo.png)
+
+1. Enter a title and description for your changes and click *Create pull request*.
+
+   > [!NOTE]
+   > Make sure the option *Allow edits by maintainers* is selected when you create the pull request, so that the documentation team will be able to correct any small issues (e.g. typos) directly.
+
 ### There is a duplicate item in the TOC even though it only occurs once in the toc.yml
 
 **Symptom**: An item shows up twice in the table of contents even though it was only entered once in the *toc.yml*.
