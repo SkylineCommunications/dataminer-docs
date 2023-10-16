@@ -66,6 +66,10 @@ Depending on the type of device, DataMiner supports different communication prot
 | HTTP(S) | We recommend interfacing with devices or APIs over [HTTPS](xref:ConnectionsHttpHttps), which uses TLS encryption. |
 | TCP/IP | DataMiner can poll devices over a TLS-encrypted TCP/IP channel. See [Enabling TLS encryption](xref:Enabling_TLS_encryption). |
 
+### Storage as a Service
+
+For DataMiner Systems configured to use [STaaS](xref:STaaS), all communication between DataMiner and the database is TLS encrypted by default since it makes use of the [the connection towards dataminer.services](xref:Cloud_connectivity_and_security#connecting-to-dataminerservices).
+
 ### Cassandra
 
 For DataMiner Systems configured to use a Cassandra database, it is possible to [enable TLS encryption between DataMiner and the Cassandra cluster](xref:DB_xml#enabling-tls-on-the-cassandra-database-connection). Please refer to the official Cassandra documentation on [enabling TLS encryption](https://docs.datastax.com/en/cassandra-oss/3.x/cassandra/configuration/secureSSLClientToNode.html).
