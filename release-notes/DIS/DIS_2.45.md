@@ -58,7 +58,7 @@ Extended packages:
 
 Skyline.DataMiner.CICD.Models.Protocol
 
-TThe SLDisCompiler project has been extracted from DIS and the functionality from this project has been migrated to the already existing NuGet package "Skyline.DataMiner.CICD.Parsers.Protocol" and the newly introduced NuGet package "Skyline.DataMiner.CICD.Assemblers.Protocol".
+The SLDisCompiler project has been extracted from DIS and the functionality from this project has been migrated to the already existing NuGet package "Skyline.DataMiner.CICD.Parsers.Protocol" and the newly introduced NuGet package "Skyline.DataMiner.CICD.Assemblers.Protocol".
 
 DIS has also been reworked so that it now makes use of these updated/new NuGet packages.
 
