@@ -171,4 +171,8 @@ The **Remote Administration** rule must be enabled when the DataMiner server is 
 
 If you do not make use of [Storage as a Service (STaaS)](xref:STaaS) but manage DataMiner storage yourself, you need to make sure that the databases used for DataMiner storage are fully secure.
 
-In recent DataMiner Systems, Cassandra and OpenSearch/Elasticsearch are used for this. It is important that you spend some time making sure their configuration is as secure as possible. For detailed information, refer to [Securing self-hosted DataMiner storage](xref:Cassandra_authentication).
+We recommend Cassandra cluster + OpenSearch as on premise databases. It is important that you spend some time making sure their configuration is as secure as possible. For detailed information, refer to [securing Cassandra](xref:Cassandra_authentication), [Securing OpenSearch](xref:Installing_OpenSearch_database#tls-configuration) or [Securing ElasticSearch](xref:Security_Elasticsearch).
+
+> [!NOTE]
+> If you do use Storage as a Service, you have nothing to worry about. We will take care of protecting your data, making use of existing and secure storage solutions provided by [Microsoft Azure](https://learn.microsoft.com/en-us/azure/storage/common/storage-introduction).
+> Previously, we did recommend ElasticSearch instead of OpenSearch. [Here](https://community.dataminer.services/from-elasticsearch-to-opensearch-to-staas/) you can find more details on why we chose to follow the OpenSearch split-of of ElastiSearch.
