@@ -45,7 +45,7 @@ Here we can distinguish several communication flows:
 
 ### DataMiner Cube
 
-DataMiner Cube will communicate with the DataMiner back end over .NET Remoting. By default, this is encrypted using the Rijndael (256-bit key, CBC mode) algorithm. The encryption key is negotiated over a 2048-bit RSA-secured communication channel.
+DataMiner Cube will communicate with the DataMiner back end over .NET Remoting by default. This is encrypted using the Rijndael (256-bit key, CBC mode) algorithm. The encryption key is negotiated over a 2048-bit RSA-secured communication channel. It is also possible to configure DataMiner so [gRPC is used instead of .NET Remoting](xref:DataMiner_hardening_guide#dataminer-cube).
 
 ### DataMiner Web Apps & API
 
@@ -53,7 +53,7 @@ By default, the DataMiner Web Apps (Reports, Dashboards, Monitoring, etc.) are s
 
 ### Inter-DataMiner
 
-When a DataMiner System consists of multiple DataMiner nodes, inter-node communication flows through a .NET Remoting channel. By default, this is encrypted using the Rijndael algorithm (256-bit key, CBC mode). The encryption key is negotiated over a 2048-bit RSA-secured communication channel.
+When a DataMiner System consists of multiple DataMiner nodes, inter-node communication flows through a .NET Remoting channel by default. This is encrypted using the Rijndael algorithm (256-bit key, CBC mode). The encryption key is negotiated over a 2048-bit RSA-secured communication channel. It is also possible to [configure DataMiner to use gRPC instead of .Net Remoting](xref:DataMiner_hardening_guide#grpc).
 
 ### Data acquisition
 
@@ -74,6 +74,13 @@ We recommend changing the default Cassandra credentials.
 
 > [!NOTE]
 > For more information, see [Securing the Cassandra general database](xref:Cassandra_authentication).
+
+### OpenSearch
+
+For DataMiner Systems configured to use an OpenSearch database, we recommend enabling HTTPS. Please refer to the official OpenSearch documentation on [enabling TLS encryption](https://opensearch.org/docs/latest/security/configuration/tls/).
+
+> [!NOTE]
+> For more information, see [Securing the OpenSearch database](xref:Installing_OpenSearch_database#tls-configuration).
 
 ### Elasticsearch
 
