@@ -28,7 +28,7 @@ Create a default layout for the Alarm Console:
 
 ## Fix
 
-Install DataMiner 10.3.11<!--RN 37436-->.
+No fix is available yet. <!--Install DataMiner 10.3.11 (RN 37436).-->
 
 ## Description
 
