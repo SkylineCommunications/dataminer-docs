@@ -68,7 +68,7 @@ Depending on the type of device, DataMiner supports different communication prot
 
 ### Storage as a Service
 
-For DataMiner Systems configured to use [STaaS](xref:STaaS), all communication between DataMiner and the database is TLS encrypted by default since it makes use of the [the connection towards dataminer.services](xref:Cloud_connectivity_and_security#connecting-to-dataminerservices).
+For DataMiner Systems configured to use [STaaS](xref:STaaS), all communication between DataMiner and the database is TLS-encrypted by default, since it makes use of the [the connection towards dataminer.services](xref:Cloud_connectivity_and_security#connecting-to-dataminerservices).
 
 ### Cassandra
 
@@ -84,7 +84,7 @@ We recommend changing the default Cassandra credentials.
 For DataMiner Systems configured to use an OpenSearch database, we recommend enabling HTTPS. Please refer to the official OpenSearch documentation on [enabling TLS encryption](https://opensearch.org/docs/latest/security/configuration/tls/).
 
 > [!NOTE]
-> For more information, see [Securing the OpenSearch database](xref:Security_Opensearch).
+> For more information, see [Securing the OpenSearch database](xref:Security_OpenSearch).
 
 ### Elasticsearch
 
@@ -101,20 +101,23 @@ Please refer to the official NATS documentation on [enabling TLS encryption](htt
 
 ## Encryption at rest
 
-DataMiner only encrypts passwords at rest, all other data is not encrypted by default. This behavior is not configurable in DataMiner. Note that it is possible to [enable Windows BitLocker](https://docs.microsoft.com/en-us/windows/security/information-protection/bitlocker/bitlocker-group-policy-settings) to encrypt all data on disk.
+DataMiner only encrypts passwords at rest, all other data is not encrypted by default. This behavior is not configurable in DataMiner.
+
+> [!NOTE]
+> To encrypt all data on disk, you can [enable Windows BitLocker](https://docs.microsoft.com/en-us/windows/security/information-protection/bitlocker/bitlocker-group-policy-settings).
 
 ### Storage as a Service
 
-STaaS makes use of existing secure storage solutions of Microsoft Azure, which means that all data is encrypted at rest.
+DataMiner Storage as a Service (STaaS) makes use of existing secure storage solutions of Microsoft Azure, which means that all data is encrypted at rest.
 
 ### Cassandra
 
-If you are using Cassandra enterprise edition, we recommend enabling the [transparent_encryption_options](https://docs.datastax.com/en/security/6.7/security/secEncryptTDE.html), effectively encrypting all your database data at rest. This option is not available in Apache Cassandra, so we recommend to enable disk encryption on the operating system level.
+If you are using Cassandra enterprise edition, we recommend enabling the [transparent_encryption_options](https://docs.datastax.com/en/security/6.7/security/secEncryptTDE.html), effectively encrypting all your database data at rest. This option is not available in Apache Cassandra, so we recommend enabling disk encryption on the operating system level for this.
 
 ### OpenSearch
 
-OpenSearch does not have the option to encrypt data at rest, for this reason we recommend to enable disk encryption on the operating system level.
+OpenSearch does not have the option to encrypt data at rest. For this reason, we recommend enabling disk encryption on the operating system level.
 
 ### ElasticSearch
 
-ElasticSearch does not have the option to encrypt data at rest, for this reason we recommend to enable disk encryption on the operating system level.
+ElasticSearch does not have the option to encrypt data at rest. For this reason, we recommend enabling disk encryption on the operating system level.

@@ -31,7 +31,7 @@ If you are using an older DataMiner version or a setup with storage per DMA, fol
    > [!TIP]
    > See also:
    >
-   > - [Specifying custom credentials for Elasticsearch](xref:DB_xml#specifying-custom-credentials-for-opensearchelasticsearch).
+   > - [Specifying custom credentials for OpenSearch or Elasticsearch](xref:DB_xml#specifying-custom-credentials-for-opensearch-or-elasticsearch).
    > - [Indexing database settings in DB.xml](xref:DB_xml#indexing-database-settings)
 
    Example:

@@ -525,9 +525,9 @@ To do so:
 
 1. Save the file and restart the DMA.
 
-### Specifying custom credentials for OpenSearch\Elasticsearch
+### Specifying custom credentials for OpenSearch or Elasticsearch
 
-From DataMiner 10.0.11 onwards, it is possible to configure a custom username and password for OpenSearch\Elasticsearch in *DB.xml*.
+From DataMiner 10.0.11 onwards, it is possible to configure a custom username and password for OpenSearch or Elasticsearch in *DB.xml*.
 
 To do so:
 
@@ -535,7 +535,7 @@ To do so:
 
 1. Open the file *DB.xml* (in the folder *C:\\Skyline DataMiner\\*).
 
-1. In the *UID* and *PWD* elements below the OpenSearch\Elasticsearch *Database* tag, specify the username and password, respectively.
+1. In the *UID* and *PWD* elements below the Elasticsearch *Database* tag (which is also used for OpenSearch), specify the username and password, respectively.
 
     For example:
 
