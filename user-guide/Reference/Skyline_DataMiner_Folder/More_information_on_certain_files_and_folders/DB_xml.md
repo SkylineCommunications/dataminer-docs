@@ -540,7 +540,7 @@ To do so:
     For example:
 
     ```xml
-    <DataBase active="true" search="true" type="OpenSearch\Elasticsearch">
+    <DataBase active="true" search="true" type="Elasticsearch">
      <DBServer>10.11.51.58</DBServer>
      <UID>username</UID>
      <PWD>password123</PWD>
