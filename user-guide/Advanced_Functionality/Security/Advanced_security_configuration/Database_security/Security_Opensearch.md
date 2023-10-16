@@ -9,4 +9,4 @@ uid: Security_Opensearch
 
 ## TLS Encryption
 
-For guidance on how to enable both client-server and inter-node TLS encryption, refer to [TLS Configuration](xref:Installing_OpenSearch_database.#tls-configuration)
+For guidance on how to enable both client-server and inter-node TLS encryption, refer to [TLS Configuration](xref:Installing_OpenSearch_database#tls-configuration)
