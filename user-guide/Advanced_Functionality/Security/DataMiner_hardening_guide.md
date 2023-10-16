@@ -171,8 +171,9 @@ The **Remote Administration** rule must be enabled when the DataMiner server is 
 
 If you do not make use of [Storage as a Service (STaaS)](xref:STaaS) but manage DataMiner storage yourself, you need to make sure that the databases used for DataMiner storage are fully secure.
 
-We recommend Cassandra cluster + OpenSearch as on premise databases. It is important that you spend some time making sure their configuration is as secure as possible. For detailed information, refer to [securing Cassandra](xref:Cassandra_authentication), [Securing OpenSearch](xref:Installing_OpenSearch_database#tls-configuration) or [Securing ElasticSearch](xref:Security_Elasticsearch).
+If you use on-premises databases, we recommend using a [Cassandra cluster and OpenSearch cluster](xref:Dedicated_clustered_storage). It is important that you spend some time making sure the configuration of these databases is as secure as possible. For detailed information, refer to [Securing Cassandra](xref:Cassandra_authentication), [Securing OpenSearch](xref:Installing_OpenSearch_database#tls-configuration) or [Securing Elasticsearch](xref:Security_Elasticsearch).
 
 > [!NOTE]
-> If you do use Storage as a Service, you have nothing to worry about. We will take care of protecting your data, making use of existing and secure storage solutions provided by [Microsoft Azure](https://learn.microsoft.com/en-us/azure/storage/common/storage-introduction).
-> Previously, we did recommend ElasticSearch instead of OpenSearch. For more details on why we shifted from ElasticSearch to the OpenSearch spin-of, refer to [From ElasticSearch to OpenSearch to StaaS](https://community.dataminer.services/from-elasticsearch-to-opensearch-to-staas/).
+>
+> - If you do use Storage as a Service, Skyline will take care of protecting your data, making use of existing and secure storage solutions provided by [Microsoft Azure](https://learn.microsoft.com/en-us/azure/storage/common/storage-introduction).
+> - Previously, Elasticsearch was recommended as the on-premises indexing database instead of OpenSearch. For more information on why OpenSearch is now recommended instead, see [From Elasticsearch to OpenSearch to StaaS](https://community.dataminer.services/from-elasticsearch-to-opensearch-to-staas/).
