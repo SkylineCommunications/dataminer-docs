@@ -355,6 +355,8 @@
           topicUid: ConnectionsSmartSerialBehaviorAfterDisconnect
         - name: Logging incoming data
           topicUid: ConnectionsSmartSerialLogging
+        - name: Dynamic polling
+          topicUid: ConnectionsSmartSerialDynamicPolling
       - name: HTTP
         topicUid: ConnectionsHttp
         items:
