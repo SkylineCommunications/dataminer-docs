@@ -175,4 +175,4 @@ We recommend Cassandra cluster + OpenSearch as on premise databases. It is impor
 
 > [!NOTE]
 > If you do use Storage as a Service, you have nothing to worry about. We will take care of protecting your data, making use of existing and secure storage solutions provided by [Microsoft Azure](https://learn.microsoft.com/en-us/azure/storage/common/storage-introduction).
-> Previously, we did recommend ElasticSearch instead of OpenSearch. [Here](https://community.dataminer.services/from-elasticsearch-to-opensearch-to-staas/) you can find more details on why we chose to follow the OpenSearch split-of of ElastiSearch.
+> Previously, we did recommend ElasticSearch instead of OpenSearch. For more details on why we shifted from ElasticSearch to the OpenSearch spin-of, refer to [From ElasticSearch to OpenSearch to StaaS](https://community.dataminer.services/from-elasticsearch-to-opensearch-to-staas/).
