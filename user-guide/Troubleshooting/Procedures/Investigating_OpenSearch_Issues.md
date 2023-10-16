@@ -105,6 +105,12 @@ To fix this issue:
 > [!IMPORTANT]
 > Deleting the nodes folder will result in loss of data. You should only do so with a new installation of OpenSearch.
 
+## OpenSearch logging mentions unknown setting [node.voting only]
+
+When [node.voting only] was configured for your tiebreaker in *opensearch.yml*, this will not work because this is not supported by OpenSearch. When OpenSearch was forked from Elasticsearch, this functionality was blocked.
+
+If you use tiebreakers, configure them to use the master-eligible role in *opensearch.yml*.
+
 ## SLSearch.txt logging mentions OpenSearch version is not officially supported
 
 If the *SLSearch.txt* log file mentions that the OpenSearch version is not officially supported, you can resolve this by upgrading your DMS to DataMiner 10.3.6 or higher.
