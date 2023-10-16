@@ -39,7 +39,7 @@ Removed old validator error 2603: RawType double has no length definition.
 
 #### Driver help generator now generates markdown [ID_37313]
 
-The driver help generation in DIS has been updated so that it now generates a markdown file (.md) to be used in the docs repository instead of an HTML page that was used on DCP. The menu item that allowed to open the driver help on DCP has been renamed and will now open the corresponding page on the GitHub repository (if it exists).
+The driver help generation in DIS has been updated so that it now generates a markdown file (.md) to be used in the docs repository instead of an HTML page that was used on DCP. The menu item that allowed to open the driver help on DCP will now open the corresponding page on the GitHub repository (if it exists).
 
 An issue was also fixed related to the menu item for opening the OneNote of a driver. Opening the OneNote of a driver should now work again.
 
