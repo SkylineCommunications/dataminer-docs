@@ -10,7 +10,7 @@ DataMiner versions 10.3.9 and 10.3.10.
 
 ## Cause
 
-By default, the [three default alarm tabs](xref:ChangingTheAlarmConsoleLayout#the-three-default-alarm-tabs) are displayed at startup: active alarms, information events, and masked alarms. However, when the Alarm Console settings have been configured to display no tabs in the Alarm Console, a startup issue may occur.
+By default, the [three default alarm tabs](xref:ChangingTheAlarmConsoleLayout#the-three-default-alarm-tabs) are displayed at startup: active alarms, information events, and masked alarms. However, when the Alarm Console settings have been configured to display no tabs in the Alarm Console, a connection issue may occur.
 
 ## Workaround
 
