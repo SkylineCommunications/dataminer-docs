@@ -186,6 +186,12 @@ Please note the following regarding the alarm focus feature:
 > [!NOTE]
 > You can enable or disable the alarm focus feature via *System Center* > *System settings* > *analytics config*. However, note that if you disable alarm focus, [automatic incident tracking](xref:Automatic_incident_tracking) is automatically also disabled, and only [manual incident tracking](xref:Automatic_incident_tracking#manually-updating-an-alarm-group) can still be used. <!-- RN 33348 -->
 
+> [!NOTE]
+> Alarm Focus internally creates a model for every parameter that had an alarm in the last two weeks up to a limit of 100 000 models. This upper limit should be plenty for most use cases, 
+but can be reached in rare cases. If this limit is reached, you will see a notice 'Alarm Focus has reached its maximum cache size' in the alarm console, and all alarms on parameters that have no model yet
+will be marked as unlikely. This notice will not have an influence on any other part of the system, and can be safely ignored. However, if you see this notice regularly, it can be a sign that your 
+parameters are not spread optimally over your DataMiner system, or that one of your protocols is generating alarms on many different rows in a table.
+
 ## Applying an alarm filter by dragging an item onto the Alarm Console
 
 Instead of manually applying a filter in a tab, you can also drag an item from the Cube UI onto the Alarm Console to create a tab filtered specifically for that item.
