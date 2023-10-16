@@ -40,11 +40,10 @@ For a script, the correct license is **MIT**.
 
 ## Repository naming convention
 
-If the repository is private the name should look like this (using "-" as separator): **{customerAcronym}-{itemType}-{itemName}**
+If the repository is private, the name should look like this (using "-" as separator): **{customerAcronym}-{itemType}-{itemName}**
 
 > [!IMPORTANT]
-> IF the repository is PUBLIC then DO NOT USE customer acronym on the repository name, USE Skyline acronym 'SLC' instead.
-
+> If the repository is **public**, **do not use a customer acronym** in the repository name. Instead, use the **Skyline acronym "SLC"**.
 
 - For a list of **customer acronyms**, refer to [DCP](https://dcp.skyline.be/Lists/Customers/AllItems.aspx). For generic repositories, use the Skyline Communications acronym (SLC).
 
