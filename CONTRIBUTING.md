@@ -975,7 +975,10 @@ You encounter one of the following situations:
 
    ![Base repository](~/images/base-repo.png)
 
-1. Enter a title and description for your changes and click *Create pull request*. We recommend that you select the option *Allow edits by maintainers*, so that the documentation team will be able to correct any small issues (e.g. typos) directly.
+1. Enter a title and description for your changes and click *Create pull request*.
+
+   > [!NOTE]
+   > Make sure the option *Allow edits by maintainers* is selected when you create the pull request, so that the documentation team will be able to correct any small issues (e.g. typos) directly.
 
 ### There is a duplicate item in the TOC even though it only occurs once in the toc.yml
 
