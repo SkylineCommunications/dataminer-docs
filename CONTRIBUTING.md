@@ -1042,6 +1042,22 @@ fatal: empty ident name (for <>) not allowed
 > [!NOTE]
 > If you have upgraded DocFX, but this upgrade does not seem to have taken effect, check whether you have a path parameter configured that leads to an older version. Go to *Edit the system environment variables* > *Advanced* > *Environment Variables*, select the *Path* parameter, if available, and click *Edit*. If an entry is listed that goes to a DocFX folder containing an old version of DocFX, delete that entry.
 
+### Other people are unable to make changes to your pull request
+
+**Symptom**: You have made a pull request, but editors are unable to make direct changes to it, even though you want them to.
+
+**Resolution**: This problem can have several solutions, depending on its cause.
+
+- Cause: The option *Allow edits by maintainers* was not selected when you created the pull request.
+
+  Resolution: Go to the pull request on GitHub, and make sure the option *Allow edits by maintainers* is selected.
+
+  ![Allow edits by maintainers option](~/images/Allow_edits_maintainers.png)
+
+- Cause: The branch you have used to create the pull request is protected.
+
+  Resolution: On the page for your fork on GitHub (i.e. `https://github.com/[Your GitHub handle]/dataminer-docs/`), go to *Settings* > *Branches*, and check if you have enabled protection for the branch. If you have, disable this protection.
+
 ## References
 
 As our way of working is very similar to the approach used for Microsoft Docs, it can be useful to take a look at the [Microsoft Docs Contributor Guide](https://docs.microsoft.com/en-us/contribute/) for additional information and guidelines.
