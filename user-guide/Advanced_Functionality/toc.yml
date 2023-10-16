@@ -500,6 +500,8 @@ items:
                     topicUid: Cassandra_updating
                   - name: Updating Java for Cassandra
                     topicUid: Cassandra_Java_updating
+              - name: Securing the OpenSearch database
+                topicUid: Security_OpenSearch
               - name: Securing the Elasticsearch database
                 topicUid: Security_Elasticsearch
           - name: Securing the web server
