@@ -12,7 +12,6 @@ Though this is not recommended, once a DataMiner Agent has been connected to dat
 > - Skyline Communications will no longer be able to provide [CCA Support Services](xref:CCA_Support_Services) for your DMS.
 > - All data for the DMS that was saved on dataminer.services will be lost, including shares, settings, and users and permissions configured on dataminer.services.
 > - If your DMS consists of one or more fully self-hosted DataMiner Agents, these will continue to work, but you will no longer have access to dataminer.services features.
-> - If your DMS uses **DataMiner as a Service** (DaaS), the **entire DataMiner System will be removed**.
 > - If your DMS uses DataMiner **Storage as a Service** (STaaS), **all data will be permanently lost** and the system will become unusable.
 
 To disconnect a DataMiner Agent from dataminer.services:
@@ -33,3 +32,8 @@ To disconnect a DataMiner Agent from dataminer.services:
 
    > [!WARNING]
    > This action is **irreversible** and can have far-reaching consequences for your DataMiner System. Always consult with a Skyline DevOps Engineer before you use this option.
+
+1. Contact Skyline Communications to remove the remaining information for your DMS from dataminer.services.
+
+> [!NOTE]
+> This procedure is not applicable for DataMiner as a Service (DaaS) systems. If you want to deactivate a DaaS system, contact Skyline Communications. However, note that this will cause that DataMiner System to be permanently removed.
