@@ -145,3 +145,5 @@ items:
         topicUid: Custom_cloud_endpoint_configuration
       - name: Disabling reports and notifications offloading
         topicUid: Disable_Offloading_Reports_and_Notifications
+      - name: Disconnecting from dataminer.services
+        topicUid: Disconnecting_from_dataminer.services
