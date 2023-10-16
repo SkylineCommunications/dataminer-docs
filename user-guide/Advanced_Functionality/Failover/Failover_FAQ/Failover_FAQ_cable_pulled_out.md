@@ -35,7 +35,7 @@ Different scenarios are possible:
 > [!TIP]
 > See also:
 >
-> - [Viewing Failover information](xref:Viewing_Failover_information)
+> - [Viewing Failover information](xref:Viewing_the_Failover_setup)
 > - [Heartbeats](xref:Advanced_Failover_options#heartbeats)
 
 ## If the network cable used for synchronization is pulled out of the online DMA
@@ -59,7 +59,7 @@ Different scenarios are possible:
 - Once the cable is reconnected, synchronization will again be OK.
 
 > [!TIP]
-> See also: [Viewing Failover information](xref:Viewing_Failover_information)
+> See also: [Viewing Failover information](xref:Viewing_the_Failover_setup)
 
 ## If both network cables are pulled out of the online DMA
 
@@ -84,7 +84,7 @@ Different scenarios are possible:
 > [!TIP]
 > See also:
 >
-> - [Viewing Failover information](xref:Viewing_Failover_information)
+> - [Viewing Failover information](xref:Viewing_the_Failover_setup)
 > - [Heartbeats](xref:Advanced_Failover_options#heartbeats)
 
 ## If the network cable connecting to the switch or router is pulled out of the offline DMA
@@ -100,7 +100,7 @@ Different scenarios are possible:
 > [!TIP]
 > See also:
 >
-> - [Viewing Failover information](xref:Viewing_Failover_information)
+> - [Viewing Failover information](xref:Viewing_the_Failover_setup)
 > - [Heartbeats](xref:Advanced_Failover_options#heartbeats)
 
 ## If the network cable used for synchronization is pulled out of the offline DMA
@@ -126,7 +126,7 @@ Different scenarios are possible:
 - Once the cable is reconnected, synchronization will again be OK.
 
 > [!TIP]
-> See also: [Viewing Failover information](xref:Viewing_Failover_information)
+> See also: [Viewing Failover information](xref:Viewing_the_Failover_setup)
 
 ## If both network cables are pulled out of the offline DMA
 
@@ -149,5 +149,5 @@ Different scenarios are possible:
 > [!TIP]
 > See also:
 >
-> - [Viewing Failover information](xref:Viewing_Failover_information)
+> - [Viewing Failover information](xref:Viewing_the_Failover_setup)
 > - [Heartbeats](xref:Advanced_Failover_options#heartbeats)

@@ -29,7 +29,7 @@ Go to this tab to configure the network interface for data synchronization from 
 > [!NOTE]
 >
 > - If there is a third network interface that connects both DMAs using a cross cable, it is advisable to select that one in order to prevent synchronization failures.
-> - Note that synchronization of a Cassandra or Elasticsearch database is taken care of by the database itself, outside of DataMiner.
+> - Note that synchronization of a Cassandra or OpenSearch/Elasticsearch database is taken care of by the database itself, outside of DataMiner.
 
 ## Heartbeats
 

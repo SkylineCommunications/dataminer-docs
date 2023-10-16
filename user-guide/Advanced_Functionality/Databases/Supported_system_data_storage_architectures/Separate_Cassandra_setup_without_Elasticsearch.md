@@ -2,12 +2,18 @@
 uid: Separate_Cassandra_setup_without_Elasticsearch
 ---
 
-# Separate Cassandra setup without Elasticsearch
+# Separate Cassandra setup without indexing
 
-This architecture is currently still supported, though it is **not recommended**. In this case, **each DMA has its own Cassandra database** (which can be a cluster with several nodes). No Elasticsearch database is used, which means that certain DataMiner features will not be available.
+> [!IMPORTANT]
+> This architecture is currently still supported, though it is **not recommended**. Instead, we recommend using [Storage as a Service (STaaS)](xref:STaaS).
+
+With this architecture, **each DMA has its own Cassandra database** (which can be a cluster with several nodes). No indexing database is used, which means that certain DataMiner features will not be available.
 
 > [!TIP]
 > For information on how to migrate a legacy setup with MySQL/MSSQL database to Cassandra, see [Migrating the general database to Cassandra](xref:Migrating_the_general_database_to_Cassandra).
+
+> [!NOTE]
+> In the setups described below, a "machine" or "compute node" can be a virtual machine or a physical server. Every machine must meet the minimum requirements detailed in [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements). In the images illustrating the setups, the dark-blue line indicates a cluster of nodes, the gray line indicates a compute node, and the light-blue line indicates a regional boundary (high latency).
 
 By default, Cassandra is installed on the same machine as DataMiner. However, when your system has a high load, it is strongly recommended to move the Cassandra database towards an external (Windows or Linux) machine. This way, DataMiner and Cassandra do not affect each other during heavy operations. The best way to do so is by adding one or more external nodes to the Cassandra cluster and then decommissioning the original node on the DataMiner machine. See [Adding and removing nodes in a Cassandra cluster database](xref:Scale_Cassandra_Database).
 

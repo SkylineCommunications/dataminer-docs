@@ -19,9 +19,12 @@ From DataMiner 10.2.0/10.1.5 onwards, you can configure the timeout of the conne
     ```xml
     <SLCLoud>
      <...>
-     <ConnectTimeout>3000</ConnectTimeout>.
+     <ConnectTimeout>3000</ConnectTimeout>
      <...>
     </SLCloud>
     ```
 
 4. Save your changes and restart DataMiner.
+
+> [!NOTE]
+> From DataMiner 10.3.11/10.3.0 [CU8] onwards<!--RN 37401-->, when DataMiner makes changes to the *SLCloud.xml* file, the old version of that file is saved in the *C:\Skyline DataMiner\Recycle Bin* folder.

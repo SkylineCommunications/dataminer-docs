@@ -34,6 +34,8 @@ After you have run these BPA tests, they will provide an overview of the detecte
 
 ### Web apps
 
+#### HTTPS
+
 By default, DataMiner uses HTTP to serve the web applications. HTTP is unencrypted and vulnerable to man-in-the-middle attacks, so we highly recommend [setting up HTTPS instead](xref:Setting_up_HTTPS_on_a_DMA).
 
 In addition, we also recommend that you configure your operating system to **block deprecated SSL/TLS versions**. HTTPS uses SSL/TLS for encrypting communication, but the older versions of this protocol are no longer considered secure. At present, all major browsers support the latest TLS version (TLS 1.3), but TLS 1.2 is also still regarded as secure.
@@ -50,6 +52,24 @@ In addition, we also recommend that you configure your operating system to **blo
 
 For more information about disabling legacy SSL/TLS versions, refer to [TLS, DTLS, and SSL protocol version settings](https://learn.microsoft.com/en-us/windows-server/security/tls/tls-registry-settings?tabs=diffie-hellman#tls-dtls-and-ssl-protocol-version-settings) in the Microsoft documentation. We have also made tools and scripts available for this [on GitHub](https://github.com/SkylineCommunications/windows-hardening), or you can use third-party tools such as [IIS Crypto](https://www.nartac.com/Products/IISCrypto).
 
+#### HTTP headers
+
+When configuring HTTPS in IIS on your DataMiner Agent, we also recommend setting the following HTTP headers:
+
+- [HTTP Strict Transport Security](xref:Setting_up_HTTPS_on_a_DMA#configuring-the-https-binding-in-iis)
+
+- [X-Frame-Options](https://support.microsoft.com/en-us/office/mitigating-framesniffing-with-the-x-frame-options-header-1911411b-b51e-49fd-9441-e8301dcdcd79): We recommend setting this to *DENY* or *SAMEORIGIN*.
+
+- [X-Content-Type-Options](https://docs.oracle.com/en/industries/health-sciences/argus-safety/8.2.1/asmsc/configuring-x-content-type-options-iis.html#GUID-954EE526-1220-4DD7-A946-0FEAA1A39679): We recommend setting this to *NOSNIFF*.
+
+There are some other HTTP headers that can improve security; however, their value depends on your specific DataMiner setup (e.g. resources used in Dashboards/Low-Code Apps):
+
+- [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP)
+
+- [Referrer Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy)
+
+- [Permissions-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy)
+
 ### DataMiner Cube
 
 By default, Cube currently uses .NET Remoting to communicate with DataMiner. From DataMiner 10.1.7 onwards, this communication is encrypted using the Rijndael algorithm using a 256-bit key, which is negotiated over a 1024-bit RSA encrypted communication channel. However, .NET Remoting is a legacy technology and is widely considered insecure. For this reason, DataMiner 10.3.2/10.3.0 introduces the possibility to use gRPC instead as a secure alternative.
@@ -61,12 +81,18 @@ To enable gRPC for the client-server connection, edit the *ConnectionSettings.tx
 
 ## Secure server-server communication
 
+### gRPC
+
 Like for the communication with DataMiner Cube, for the inter-DMA communication, you can also use gRPC instead of .NET Remoting from DataMiner 10.3.2/10.3.0 onwards.
 
 > [!IMPORTANT]
 > The gRPC connection feature is still a beta feature in DataMiner 10.3.2/10.3.0 CU0, which means you may still encounter issues and the connection might still be less stable than with .NET Remoting.
 
 To enable gRPC for the communication between DataMiner Agents in a cluster, add [redirects in DMS.xml](xref:DMS_xml#redirects-subtag).
+
+### NATS
+
+From version 10.1.0/10.1.1 onwards, DataMiner relies on NATS for some inter-process communication. By default, this NATS traffic is not yet encrypted. For more information, refer to the [official NATS documentation on enabling TLS encryption](https://docs.nats.io/running-a-nats-service/configuration/securing_nats/tls).
 
 ## Disable legacy components
 
@@ -141,6 +167,13 @@ The **Remote Administration** rule must be enabled when the DataMiner server is 
 > [!TIP]
 > See also: [Configuring the IP network ports](xref:Configuring_the_IP_network_ports)
 
-## Secure the databases
+## Secure self-hosted DataMiner storage
 
-Cassandra and Elasticsearch form a crucial part of recent DataMiner Systems. For this reason, it is important that you spend some time making sure their configuration is as secure as possible. For detailed information, refer to [Securing the DataMiner databases](xref:Database_security).
+If you do not make use of [Storage as a Service (STaaS)](xref:STaaS) but manage DataMiner storage yourself, you need to make sure that the databases used for DataMiner storage are fully secure.
+
+If you use on-premises databases, we recommend using a [Cassandra cluster and OpenSearch cluster](xref:Dedicated_clustered_storage). It is important that you spend some time making sure the configuration of these databases is as secure as possible. For detailed information, refer to [Securing Cassandra](xref:Cassandra_authentication), [Securing OpenSearch](xref:Installing_OpenSearch_database#tls-configuration) or [Securing Elasticsearch](xref:Security_Elasticsearch).
+
+> [!NOTE]
+>
+> - If you do use Storage as a Service, Skyline will take care of protecting your data, making use of existing and secure storage solutions provided by [Microsoft Azure](https://learn.microsoft.com/en-us/azure/storage/common/storage-introduction).
+> - Previously, Elasticsearch was recommended as the on-premises indexing database instead of OpenSearch. For more information on why OpenSearch is now recommended instead, see [From Elasticsearch to OpenSearch to StaaS](https://community.dataminer.services/from-elasticsearch-to-opensearch-to-staas/).

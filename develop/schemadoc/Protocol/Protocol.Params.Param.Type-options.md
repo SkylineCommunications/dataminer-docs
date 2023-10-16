@@ -100,6 +100,13 @@ If you do not specify a port, then the last port set will be used. If no port ha
 
 Only applicable for parameters of type read.
 
+From DataMiner 10.3.11/10.4.0 onwards<!--RN 37404-->, [smart-serial connections](xref:Smart_Serial_Connection) support dynamic polling, allowing you to change the IP address and IP port while the element remains active.
+
+> [!IMPORTANT]
+>
+> - Dynamic polling is only supported when the smart-serial connection acts as a client, not as a server. Assigning IP addresses like "127.0.0.1" or "any" makes the element act as a server, and it cannot switch to client mode without stopping first. Also, trying to assign a value like "127.0.0.1" to the dynamic IP parameter at runtime will cause an error.
+> - We highly recommend configuring the connection type as *smart-serial single* or *serial single*. This ensures that each connection is assigned a dedicated socket in SLPort. If multiple smart-serial or serial elements hosted on the same DMA are configured to share the same IP address and port, they will all use the new IP address if one of them changes the IP address dynamically.
+
 ### dynamic snmp get
 
 With this option, an SNMP Get can be triggered dynamically when a parameter value changes.
@@ -194,22 +201,32 @@ For more information, refer to [Multi-threaded timers SNMP](xref:AdvancedMultiTh
 
 ### ssh pwd
 
-This option specifies that this parameter holds the password used for setting up SSH communication based on user credentials. When using this option, there should also be another parameter that uses the "ssh username" option. The SSH connection is established by DataMiner itself, if the parameters are filled in correctly.
+> [!CAUTION]
+> Using this option is not recommended. It only supports connectors with a single SSH connection using the fixed port 22. Instead, link this parameter via the [Password](xref:Protocol.PortSettings.SSH.Credentials.Password) element.
+
+This option specifies that this parameter holds the password for setting up SSH communication based on user credentials. When this option is used, there should also be another parameter that uses the "ssh username" option. The SSH connection is established by DataMiner itself, if the parameters are filled in correctly.
 
 Only applicable for parameters of type read.
 
+> [!IMPORTANT]
+> Use the [password](xref:Protocol.Params.Param.Measurement.Type-options#options-for-measurement-type-string) option when this parameter is displayed. Using this option ensures greater security.
+
 ### ssh username
 
-This option specifies that this parameter holds the username used for setting up SSH communication based on user credentials. When using this option, there should also be another parameter that uses the "ssh pwd" option. The SSH connection is established by DataMiner itself, if the parameters are filled in correctly.
+> [!CAUTION]
+> Using this option is not recommended. It only supports connectors with a single SSH connection using the fixed port 22. Instead, link this via the [Username](xref:Protocol.PortSettings.SSH.Credentials.Username) element.
+
+This option specifies that this parameter holds the username for setting up SSH communication based on user credentials. When this option is used, there should also be another parameter that uses the "ssh pwd" option. The SSH connection is established by DataMiner itself, if the parameters are filled in correctly.
 
 Only applicable for parameters of type read.
 
 ### ssh options
 
-This option specifies that this parameter holds the required data for setting up SSH communication based on an identity file. This is an alternative way to set up an SSH connection (instead of user credentials). The content of the "ssh options" parameter is as follows:
+> [!CAUTION]
+> Using this option is not recommended. It only supports connectors with a single SSH connection using the fixed port 22. Instead, link this via the [Identity](xref:Protocol.PortSettings.SSH.Identity) element.
 
-```none
-Key=path to the identity file;pass=passphrase
-```
+This option specifies that this parameter holds the path to the private key for setting up SSH communication based on public key authentication. This is an alternative way to set up an SSH connection (instead of user credentials).
+
+The content of the "ssh options" parameter is as follows: ```key=C:\Users\User\.ssh\my_key_rsa;pass=passphrase```
 
 Only applicable for parameters of type read.

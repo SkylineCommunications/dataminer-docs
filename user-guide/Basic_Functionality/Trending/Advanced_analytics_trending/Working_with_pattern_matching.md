@@ -6,7 +6,7 @@ uid: Working_with_pattern_matching
 
 ## Univariate patterns
 
-From DataMiner 10.0.7 onwards, on systems using a Cassandra and Elasticsearch database, DataMiner Analytics can automatically recognize recurring patterns in trend data. For this purpose, you first need to [define the patterns](xref:Defining_a_pattern) DataMiner Analytics needs to track. This pattern definition is also known as a "tag".
+From DataMiner 10.0.7 onwards, on systems using [Storage as a Service](xref:STaaS) or a [self-hosted Cassandra-compatible database and indexing database](xref:Supported_system_data_storage_architectures), DataMiner Analytics can automatically recognize recurring patterns in trend data. For this purpose, you first need to [define the patterns](xref:Defining_a_pattern) DataMiner Analytics needs to track. This pattern definition is also known as a "tag".
 
 If you are viewing a trend graph for a single parameter, and it contains patterns matching existing tags, these will be highlighted in orange when you hover the mouse pointer over the button representing a tag, or if the option *Expand tags* is selected in the right-click menu. The matches can be highlighted in bright orange or in a lighter orange. The meaning of these colors depends on the DataMiner version:
 
@@ -14,6 +14,9 @@ If you are viewing a trend graph for a single parameter, and it contains pattern
 
   - Matches are highlighted in **lighter orange** if the non-streaming method was used. These matches are detected only when trend data is fetched from the database after you opened a trend graph.
   - Matches are highlighted in **bright orange** if the streaming method was used. These matches are detected while tracking for trend patterns whenever a trended parameter is updated. When such a match is detected, a suggestion event is generated. Matches obtained through the streaming method will be stored in the database.
+
+    > [!NOTE]
+    > Prior to DataMiner 10.3.10/10.4.0, Cube will not display new matches that are detected while a trend graph is open. You need to close and reopen the trend graph to see this. In more recent DataMiner versions<!-- RN 37153-->, pattern matches are shown in real time.
 
 - In earlier DataMiner versions, matches found for the same element/parameter as the one for which a tag was defined will be shown in bright orange, while matches associated with tags created for another element/parameter will be shown in lighter orange.
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Runtime.InteropServices;
 
 using Skyline.DataMiner.Net;
@@ -1115,6 +1116,9 @@ namespace Skyline.DataMiner.Scripting
 		///			<item>
 		///				<description>This method is intended to be used when the data stored in the ElementData.xml file is unique for all parameters. If this is not the case, the method will return the value of one of the parameters that has the specified value in the ElementData.xml file.</description>
 		///			</item>
+		///			<item>
+		///				<description>This method is deprecated since DataMiner 10.3.4.</description>
+		///			</item>
 		///		</list>
 		///	</remarks>
 		///	<example>
@@ -1153,6 +1157,7 @@ namespace Skyline.DataMiner.Scripting
 		///		object result = protocol.GetParameterByData("Data");
 		///	</code>
 		///	</example>
+		[Obsolete("This method is obsolete since DataMiner 10.3.4.")]
 		object GetParameterByData(string data);
 
 		/// <summary>
@@ -1168,6 +1173,9 @@ namespace Skyline.DataMiner.Scripting
 		///			</item>
 		///			<item>
 		///				<description>In case multiple parameters need to be set by data, use the <see cref="SLProtocol.SetParametersByData"/> method instead.</description>
+		///			</item>
+		///			<item>
+		///				<description>This method is deprecated since DataMiner 10.3.4.</description>
 		///			</item>
 		///		</list>
 		///	</remarks>
@@ -1207,6 +1215,7 @@ namespace Skyline.DataMiner.Scripting
 		///		 int result = protocol.SetParameterByData("Data", "B");
 		///		 </code>
 		///	</example>
+		[Obsolete("This method is obsolete since DataMiner 10.3.4.")]
 		int SetParameterByData(string data, object value);
 
 		/// <summary>
@@ -1223,8 +1232,12 @@ namespace Skyline.DataMiner.Scripting
 		///			<item>
 		///				<description>Feature introduced in DataMiner version 8.0.3.</description>
 		///			</item>
+		///			<item>
+		///				<description>This method is deprecated since DataMiner 10.3.4.</description>
+		///			</item>
 		///		</list>
 		///	</remarks>
+		[Obsolete("This method is obsolete since DataMiner 10.3.4.")]
 		object SetParametersByData(string[] datas, object[] values);
 
 		/// <summary>
@@ -1237,8 +1250,12 @@ namespace Skyline.DataMiner.Scripting
 		///			<item>
 		///				<description>This is a wrapper method for the NotifyProtocol type 88 <see href="xref:NT_GET_ITEM_DATA">NT_GET_ITEM_DATA</see> call.</description>
 		///			</item>
+		///			<item>
+		///				<description>This method is deprecated since DataMiner 10.3.4.</description>
+		///			</item>
 		///		</list>
 		///	</remarks>
+		[Obsolete("This method is obsolete since DataMiner 10.3.4.")]
 		object GetParameterItemData(string data);
 
 		/// <summary>
@@ -1258,8 +1275,12 @@ namespace Skyline.DataMiner.Scripting
 		///			<item>
 		///				<description>When multiple parameters need to be set at once, use the <see cref="SLProtocol.SetParametersItemData"/> method instead.</description>
 		///			</item>
+		///			<item>
+		///				<description>This method is deprecated since DataMiner 10.3.4.</description>
+		///			</item>
 		///		</list>
 		///	</remarks>
+		[Obsolete("This method is obsolete since DataMiner 10.3.4.")]
 		int SetParameterItemData(string data, object value);
 
 		/// <summary>
@@ -1279,8 +1300,12 @@ namespace Skyline.DataMiner.Scripting
 		///			<item>
 		///				<description>The ElementData.xml file is located in the folder “C:\Skyline DataMiner\Elements\[ElementName]\”.</description>
 		///			</item>
+		///			<item>
+		///				<description>This method is deprecated since DataMiner 10.3.4.</description>
+		///			</item>
 		///		</list>
 		///	</remarks>
+		[Obsolete("This method is obsolete since DataMiner 10.3.4.")]
 		object SetParametersItemData(string[] datas, object[] values);
 
 		/// <summary>
@@ -1323,7 +1348,8 @@ namespace Skyline.DataMiner.Scripting
 		int SetParameterDescription(int iID, object value);
 
 		/// <summary>
-		/// Retrieves the value of a cell in the table specified by the 1-based row and column position.
+		/// Retrieves the value of a cell in the table specified by the 1-based row and column position.<br/>
+		/// Note that this method should not be used. Using <see cref="GetParameterIndexByKey(int, string, int)"/> instead is highly recommended.
 		/// </summary>
 		/// <param name="iID">The ID of the table parameter.</param>
 		/// <param name="iX">The 1-based position of the row.</param>
@@ -1350,7 +1376,8 @@ namespace Skyline.DataMiner.Scripting
 		object GetParameterIndex(int iID, int iX, int iY);
 
 		/// <summary>
-		/// Sets the value of a cell in a table, identified by its 1-based row and column position, with the specified value.
+		/// Sets the value of a cell in a table, identified by its 1-based row and column position, with the specified value.<br/>
+		/// Note that this method should not be used. Using <see cref="SetParameterIndexByKey(int, string, int, object, ValueType)"/> instead is highly recommended.
 		/// </summary>
 		/// <param name="iID">The ID of the table parameter.</param>
 		/// <param name="iX">The 1-based row position.</param>
@@ -1383,7 +1410,8 @@ namespace Skyline.DataMiner.Scripting
 		bool SetParameterIndex(int iID, int iX, int iY, object value, ValueType timeInfo);
 
 		/// <summary>
-		/// Sets the value of a cell in a table, identified by its 1-based row and column position, with the specified value.
+		/// Sets the value of a cell in a table, identified by its 1-based row and column position, with the specified value.<br/>
+		/// Note that this method should not be used. Using <see cref="SetParameterIndexByKey(int, string, int, object)"/> instead is highly recommended.
 		/// </summary>
 		/// <param name="iID">The ID of the table parameter.</param>
 		/// <param name="iX">The 1-based row position.</param>
@@ -1412,7 +1440,8 @@ namespace Skyline.DataMiner.Scripting
 		bool SetParameterIndex(int iID, int iX, int iY, object value);
 
 		/// <summary>
-		/// Sets the value of cells in tables, identified by their 1-based row and column position, with the specified values.
+		/// Sets the value of cells in tables, identified by their 1-based row and column position, with the specified values.<br/>
+		/// Note that this method should not be used. Using <see cref="SetParametersIndexByKey(int[], string[], int[], object[], DateTime[])"/> instead is highly recommended.
 		/// </summary>
 		/// <param name="ids">The IDs of the table parameters.</param>
 		/// <param name="iXs">The 1-based positions of the rows.</param>
@@ -1442,7 +1471,8 @@ namespace Skyline.DataMiner.Scripting
 		object SetParametersIndex(int[] ids, int[] iXs, int[] iYs, object[] values, DateTime[] timeInfos);
 
 		/// <summary>
-		/// Sets the value of cells in tables, identified by their 1-based row and column position, with the specified values.
+		/// Sets the value of cells in tables, identified by their 1-based row and column position, with the specified values.<br/>
+		/// Note that this method should not be used. Using <see cref="SetParametersIndexByKey(int[], string[], int[], object[])"/> instead is highly recommended.
 		/// </summary>
 		/// <param name="ids">The IDs of the table parameters.</param>
 		/// <param name="iXs">The 1-based positions of the rows.</param>
@@ -1649,7 +1679,8 @@ namespace Skyline.DataMiner.Scripting
 		object SetParametersIndexByKey(int[] ids, string[] keys, int[] iYs, object[] values);
 
 		/// <summary>
-		/// Gets the row data of the specified row in the specified table.
+		/// Gets the row data of the specified row in the specified table.<br/>
+		/// Note that this method should not be used. Using <see cref="GetRow(int, string)"/> instead is highly recommended.
 		/// </summary>
 		/// <param name="iPID">The ID of the table parameter.</param>
 		/// <param name="iRow">The 0-based index of the row.</param>
@@ -1701,7 +1732,8 @@ namespace Skyline.DataMiner.Scripting
 		object GetRow(int iPID, string key);
 
 		/// <summary>
-		/// Sets the data of the specified row to the specified values.
+		/// Sets the data of the specified row to the specified values.<br/>
+		/// Note that this method should not be used. Using <see cref="SetRow(int, string, object, ValueType, bool)"/> instead is highly recommended.
 		/// </summary>
 		/// <param name="iPID">The ID of the table parameter.</param>
 		/// <param name="iRow">The 0-based index of the row.</param>
@@ -1731,7 +1763,8 @@ namespace Skyline.DataMiner.Scripting
 		object SetRow(int iPID, int iRow, object row, ValueType timeInfo, [MarshalAs(UnmanagedType.U1)] bool bOverrideBehaviour);
 
 		/// <summary>
-		/// Sets the data of the specified row to the specified values.
+		/// Sets the data of the specified row to the specified values.<br/>
+		/// Note that this method should not be used. Using <see cref="SetRow(int, string, object, ValueType)"/> instead is highly recommended.
 		/// </summary>
 		/// <param name="iPID">The ID of the table parameter.</param>
 		/// <param name="iRow">The 0-based index of the row.</param>
@@ -1760,7 +1793,8 @@ namespace Skyline.DataMiner.Scripting
 		object SetRow(int iPID, int iRow, object row, ValueType timeInfo);
 
 		/// <summary>
-		/// Sets the data of the specified row to the specified values.
+		/// Sets the data of the specified row to the specified values.<br/>
+		/// Note that this method should not be used. Using <see cref="SetRow(int, string, object, bool)"/> instead is highly recommended.
 		/// </summary>
 		/// <param name="iPID">The ID of the table parameter.</param>
 		/// <param name="iRow">The 0-based index of the row.</param>
@@ -1786,7 +1820,8 @@ namespace Skyline.DataMiner.Scripting
 		object SetRow(int iPID, int iRow, object row, [MarshalAs(UnmanagedType.U1)] bool bOverrideBehaviour);
 
 		/// <summary>
-		/// Sets the data of the specified row to the specified values.
+		/// Sets the data of the specified row to the specified values.<br/>
+		/// Note that this method should not be used. Using <see cref="SetRow(int, string, object)"/> instead is highly recommended.
 		/// </summary>
 		/// <param name="iPID">The ID of the table parameter.</param>
 		/// <param name="iRow">The 0-based index of the row.</param>
@@ -2132,7 +2167,8 @@ namespace Skyline.DataMiner.Scripting
 		object Row(object theArray, int iRow);
 
 		/// <summary>
-		/// Gets the 1-based row position of the row that triggered the execution of the QAction.
+		/// Gets the 1-based row position of the row that triggered the execution of the QAction.<br/>
+		/// Note that this method should not be used. Using <see cref="RowKey()"/> instead is highly recommended.
 		/// </summary>
 		/// <returns>The position of the row.</returns>
 		/// <remarks>
@@ -2323,6 +2359,9 @@ namespace Skyline.DataMiner.Scripting
 		///			<item>
 		///				<description>In case a table ID or a column ID is provided, the following message is logged: NT_GET_DATA for [tableID] failed. 0x80040239.</description>
 		///			</item>
+		///			<item>
+		///				<description>In case the parameter has a fixed length, IsEmpty will always return false.</description>
+		///			</item>
 		///		</list>
 		///	</remarks>
 		/// <example>
@@ -2444,7 +2483,8 @@ namespace Skyline.DataMiner.Scripting
 		int CheckTrigger(int iID);
 
 		/// <summary>
-		/// Logs a message to the element log file.
+		/// Logs a message to the element log file.<br/>
+		/// Note that this method should not be used. Using <see cref="Log(string, LogType, LogLevel)"/> instead is recommended.
 		/// </summary>
 		/// <param name="iType">The logging type. Supported values: 1=Information, 2=Error, 4=DebugInfo, 8=Always.</param>
 		/// <param name="iLevel">The logging level. Supported values: -1=Development Logging, 0=No Logging, 1=Level 1 Logging, 2=Level 2 Logging, 3=Level 3 logging, 4=Level 4 Logging, 5=Log everything.</param>

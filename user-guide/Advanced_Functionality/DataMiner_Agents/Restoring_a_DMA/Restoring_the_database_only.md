@@ -4,13 +4,22 @@ uid: Restoring_the_database_only
 
 # Restoring the database only
 
-If you do not use the Taskbar Utility to restore a DMA, there are two ways you can restore the DMA database:
+If you do not use the Taskbar Utility to restore a DMA, there are two ways you can restore a legacy MySQL database:
 
 - by restoring the MySQL database dump, or
 
 - by manually copying the data files.
 
-## Restoring the database dump
+For information on how to restore other self-hosted data storage nodes, see:
+
+- [Standalone Cassandra Backup tool](xref:Standalone_Cassandra_Backup_Tool)
+- [Configuring OpenSearch backups](xref:Configuring_OpenSearch_Backups)
+- [Restoring backups using the Standalone Elastic Backup Tool](xref:Configuring_Elasticsearch_backups_Windows)
+
+> [!NOTE]
+> If you are using [Storage as a Service](xref:STaaS), there is no need to restore the database. If you want to restore your DataMiner Agent on a new (virtual) machine, contact <staas@dataminer.services> to make sure your new setup is connected correctly.
+
+## Restoring a MySQL database dump
 
 1. If it is not running yet, start the MySQL service.
 
@@ -25,7 +34,7 @@ The restore operation, displayed in a command window, can take up to several hou
 > [!NOTE]
 > If the restore operation does not start, then open the batch file in Microsoft Notepad, and check the location of MySQL. Depending on the MySQL version, the location should be either *C:\\MySQL\\bin\\* or *C:\\Program Files\\MySQL\\MySQL Server 5.0\\bin\\*.
 
-## Copying the data files manually
+## Copying MySQL data files manually
 
 When both the original and the destination server run the exact same version of MySQL, you can restore the database simply by copying the data files.
 

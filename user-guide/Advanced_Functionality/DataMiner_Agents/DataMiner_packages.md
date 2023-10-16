@@ -11,15 +11,10 @@ It is possible to modify a DataMiner package by changing the packet extension to
 The following types of DataMiner packages are available:
 
 - [Upgrade package (.dmupgrade)](#upgrade-package-dmupgrade)
-
 - [Update package (.dmupdate)](#update-package-dmupdate)
-
 - [Backup package (.dmbackup)](#backup-package-dmbackup)
-
 - [Application package (.dmapp)](#application-package-dmapp)
-
 - [Protocol package (.dmprotocol)](#protocol-package-dmprotocol)
-
 - [Import package (.dmimport)](#import-package-dmimport)
 
 ## Upgrade package (.dmupgrade)
@@ -66,7 +61,7 @@ Package containing all files necessary to install a particular DataMiner app on 
 > - .dmapp packages can also contain report templates, dashboards and aggregation rules.
 
 > [!TIP]
-> See also: [Application packages](xref:TOOApplicationPackages)
+> See also: [Application packages](xref:ApplicationPackages)
 
 ## Protocol package (.dmprotocol)
 

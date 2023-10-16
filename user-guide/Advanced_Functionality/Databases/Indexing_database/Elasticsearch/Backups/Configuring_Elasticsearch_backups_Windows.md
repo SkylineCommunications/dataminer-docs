@@ -4,6 +4,9 @@ uid: Configuring_Elasticsearch_backups_Windows
 
 # Restoring backups using the Standalone Elastic Backup Tool
 
+> [!IMPORTANT]
+> Elasticsearch is **only supported up to version 6.8**. We therefore recommend using [Storage as a Service](xref:STaaS) instead, or if you do want to continue using self-hosted storage, using [dedicated clustered storage](xref:Dedicated_clustered_storage) with OpenSearch or the Amazon OpenSearch Service on AWS.
+
 If your Elasticsearch database does not contain any remote Elasticsearch nodes, you can use database backups created by DataMiner:
 
 - These will be placed in the backup location specified during [Elasticsearch installation](xref:Installing_Elasticsearch_via_DataMiner). From DataMiner 9.6.11 onwards, you can also modify this location in System Center on the *Backup* page, in the section *Indexing Engine location*.

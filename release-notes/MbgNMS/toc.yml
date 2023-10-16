@@ -1,0 +1,13 @@
+items:
+  - name: MbgNMS 1.2.2
+    topicUid: MbgNMS_1.2.2
+  - name: MbgNMS 1.2.1
+    topicUid: MbgNMS_1.2.1
+  - name: MbgNMS 1.2.0
+    topicUid: MbgNMS_1.2.0
+  - name: MbgNMS 1.1.1
+    topicUid: MbgNMS_1.1.1
+  - name: MbgNMS 1.1.0
+    topicUid: MbgNMS_1.1.0
+  - name: MbgNMS 1.0.1
+    topicUid: MbgNMS_1.0.1

@@ -12,6 +12,11 @@ The namespace consists of three sub-namespaces:
 - [Skyline.DataMiner.Core.DataMinerSystem.Protocol](xref:Skyline.DataMiner.Core.DataMinerSystem.Protocol): This namespace contains all the types that are only relevant in protocols.
 - [Skyline.DataMiner.Core.DataMinerSystem.Automation](xref:Skyline.DataMiner.Core.DataMinerSystem.Protocol): This namespace contains all the types that are only relevant in Automation scripts.
 
+> [!IMPORTANT]
+>
+> - If you encounter abbreviations like *SLC*, *Lib*, or *CLib*, make sure to update the NuGet packages to the latest version, as these are considered obsolete.
+> - QAction 63000 Auto-generated Class Library is obsolete and should be replaced by the latest NuGet packages.
+
 To use the class library in a protocol, install the following NuGet package: [Skyline.DataMiner.Core.DataMinerSystem.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Core.DataMinerSystem.Protocol).
 
 To use the class library in an Automation script, install the following NuGet package: [Skyline.DataMiner.Core.DataMinerSystem.Automation](https://www.nuget.org/packages/Skyline.DataMiner.Core.DataMinerSystem.Automation).

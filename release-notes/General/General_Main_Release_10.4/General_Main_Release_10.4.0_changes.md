@@ -124,12 +124,14 @@ The zoom range of a map can now be set by means of a slider.
 
 Because of a number of enhancements, overall performance has increased when fetching relation information for the automatic incident tracking feature.
 
-#### Security enhancements [ID_35434] [ID_35997] [ID_36319] [ID_36624] [ID_36928]
+#### Security enhancements [ID_35434] [ID_35997] [ID_36319] [ID_36624] [ID_36928] [ID_37345] [ID_37540]
 
 <!-- 35434: MR 10.4.0 - FR 10.3.4 -->
 <!-- 35997: MR 10.4.0 - FR 10.3.5 -->
 <!-- 36319/36928: MR 10.4.0 - FR 10.3.9 -->
 <!-- 36624: MR 10.4.0 - FR 10.3.8 -->
+<!-- 37345: MR 10.4.0 - FR 10.3.11 -->
+<!-- 37540: MR 10.4.0 - FR 10.3.12 -->
 
 A number of security enhancements have been made.
 
@@ -158,17 +160,10 @@ In the *SLNetClientTest* tool, the following new DOM-related features have been 
   > [!NOTE]
   >
   > - When you instruct the *SLNetClientTest* tool to delete a DOM Manager, it will count the number of DOM instances. If the DOM Manager in question contains more than 10,000 DOM instances, an error message will appear, saying that deleting the DOM Manager would take too long.
-
   > - When you instruct the *SLNetClientTest* tool to delete a DOM Manager, it will not remove the indices from the Elasticsearch database. These indices have to be deleted manually. If you do not delete them manually, we recommend to not re-use the module ID as this could cause configuration conflicts.
 
 > [!CAUTION]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
-
-#### SLAnalytics will now send regular notifications instead of client notifications [ID_35591]
-
-<!-- MR 10.4.0 - FR 10.3.4 -->
-
-Up to now, when SLAnalytics sent a notification, it would generate an event of type *client notification* with parameter ID 64574. From now on, it will instead generate an event of type *notification* with parameter ID 64570.
 
 #### SLAnalytics - Proactive cap detection: Enhanced accuracy [ID_35695]
 
@@ -311,6 +306,20 @@ SLProtocol is now a 64-bit process by default.
 
 However, if necessary, it can still be run as a 32-bit process. For more information, see [Activating SLProtocol as a 32-bit process](xref:Activating_SLProtocol_as_a_32_Bit_Process).
 
+#### Service & Resource Management: A series of checks will now be performed when you add or upload a functions file [ID_36732]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When a functions file is added or uploaded, the following checks will now be performed:
+
+1. Can the content of the file (in XML format) be parsed?
+1. Does the file contain the name of the protocol?
+1. Does the protocol name in the file correspond to the protocol name in the request?
+1. Does the file contain a version number?
+1. Does the DataMiner System not contain a functions file with the same version for the protocol in question?
+
+When you try to upload a functions file using DataMiner Cube, the log entry (in Cube logging) and the information event (in the Alarm Console) created when the upload fails will indicate the checks that did not return true.
+
 #### DataMiner Object Models: DomInstanceHistory will now be saved asynchronously [ID_36785]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
@@ -452,6 +461,88 @@ Some log entries have been rewritten to make them clearer, have been assigned an
 
 Up to now, when a DOM instance was deleted, the associated HistoryChange records were removed one by one. From now on, when a DOM instance is deleted, its HistoryChange records will be deleted in bulk. This will greatly improve overall performance when deleting DOM instances, especially when they are deleted synchronously.
 
+#### DataMiner.xml: objectId attribute of AzureAD element will now be considered optional [ID_37162]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+Up to now, a run-time error would be thrown when the `<AzureAD>` element in the *DataMiner.xml* file did not contain an `objectId` attribute.
+
+This `objectId` attribute will now be considered optional. Hence, no run-time error will be thrown anymore when it has not been specified.
+
+#### SLAnalytics: Enhanced performance when using automatic incident tracking based on properties [ID_37198]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+Because of a number of enhancements, overall performance has increased when using automatic incident tracking based on service, view or element properties.
+
+> [!IMPORTANT]
+> For the properties that should be taken into account, the option *Update alarms on value changed* must be selected. For more information, see [Configuration of incident tracking based on properties](xref:Automatic_incident_tracking#configuration-of-incident-tracking-based-on-properties).
+
+#### SLLogCollector now collects information regarding the IIS configuration [ID_37273]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+SLLogCollector packages now include information regarding the IIS configuration:
+
+| Folder              | Information                                           |
+|---------------------|-------------------------------------------------------|
+| IIS                 | The IIS configuration                                 |
+| Network Information | Information regarding the SSL certificate on port 443 |
+| SSL Cert            | The SSL certificate for port 443                      |
+
+#### Improved alarm grouping for DVE child elements [ID_37275]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+Alarm grouping for DVE child elements has been improved. As change points are generated on DVE parent elements, previously these were not taken into account for the grouping of alarms for the DVE child elements. Now the change points of the DVE parent element will be taken into account for the DVE child elements as well.
+
+However, note that cases where a main DVE element exports the same parameter to multiple DVE child elements are not supported for this.
+
+#### SLAnalytics - Proactive cap detection: Enhanced verification of forecasted alarms [ID_37368]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+A number of enhancements have been made with regard to the verification of forecasted alarms generated by the proactive cap detection feature.
+
+#### SLNetClientTest: New 'Debug SAML' checkbox [ID_37370]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When, in the SLNetClientTest tool, you select the new *Debug SAML* checkbox before connecting to a DataMiner Agent that used external authentication via SAML, two additional pop-up windows will now appear, displaying the SAML requests and SAML responses respectively.
+
+> [!CAUTION]
+> Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
+#### SLAnalytics - Trend predictions: Flatline periods will no longer be included in the prediction model training data [ID_37432]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+When a parameter has anomalous flatline periods in its trend data history that are breaking the normal trend data patterns, from now on, those flatline periods will no longer be included into the training data of the prediction model. As a result, a more accurate prediction can be expected on this kind of behavior.
+
+#### SLAnalytics: Not all occurrences of multivariate patterns containing subpatterns hosted on different DMAs would be detected [ID_37451]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+Up to now, when you had created a multivariate pattern containing subpatterns hosted on different DMAs, in some cases, not all occurrences would get detected internally. From now on, all occurrences of multivariate patterns containing subpatterns hosted on different DMAs will be correctly detected.
+
+#### Storage as a Service: DataMiner Agent will now communicate with the database via port 443 only [ID_37480]
+
+<!-- MR 10.4.0 - FR 10.3.11 [CU0] -->
+
+Up to now, a DataMiner using STaaS communicated with the database via TCP/IP ports 443, 5671 and 5672. From now on, it will communicate with the database via port 443 only.
+
+#### Storage as a Service: Enhanced performance of DOM and SRM queries [ID_37495]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+Because of a number of enhancements, overall performance of DOM and SRM queries has increased.
+
+#### Storage as a Service: Enhanced error handling [ID_37554]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+A number of enhancements have been made with regard to error handling.
+
 ### Fixes
 
 #### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID_34981]
@@ -537,12 +628,6 @@ When NATS tried to automatically reconnect at a moment when none of the servers 
 
 When, in element settings, community credentials from the credential library were used, those credentials would be ignored for SNMPv1 and SNMPv2. The get-community and set-community configured on the element would incorrectly be used instead.
 
-#### NATS connection could fail due to payloads being too large [ID_36427]
-
-<!-- MR 10.4.0 - FR 10.3.8 -->
-
-In some cases, the NATS connection could fail due to payloads being too large. As a result, parameter updates and alarms would no longer be saved to the database.
-
 #### SLNet would incorrectly return certain port information fields of type string as null values [ID_36524]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
@@ -580,14 +665,68 @@ In some rare cases, an error could be thrown when an element was renamed.
 
 The deprecated DMS_GET_INFO call would return unexpected data when it returned data of elements that contained remotely hosted DVE child elements.
 
-#### Problem when restarting DataMiner [ID_37112]
+#### SLAnalytics: Problem when creating or editing a multivariate pattern [ID_37212]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
-When DataMiner was restarted, in some rare cases, it would not start up again.
+When you created or edited a linked pattern with subpatterns from elements on different agents, and the first subpattern was from an element on an agent other than the one from which the CreateLinkedPatternMessage or EditLinkedPatternMessage was originally sent, SLNet would throw an exception.
 
 #### Problem when importing an existing element [ID_37214]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
 When you imported an element that already existed in the system, in some cases, an error could occur in SLDataMiner.
+
+#### SLAnalytics: Problem when deleting trend pattern while connected to a DMA running an old DataMiner version [ID_37225]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When you deleted a trend pattern when connected to a DataMiner Agent running an old DataMiner version (e.g. 10.3.0), the pattern itself was deleted but the occurrences/matches would remain visible until you closed the trend graph and opened it again.
+
+#### DataMiner.xml: Entire LDAP section could get removed when settings were updated with values containing illegal XML characters [ID_37235]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When settings inside the `<LDAP>` element of the *DataMiner.xml* file were updated with values that contained illegal XML characters, the entire `<LDAP>` element would be removed from the file.
+
+#### MessageHandler method in SLHelperTypes.SLHelper would incorrectly try to serialize exceptions that could not be serialize [ID_37238]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+Up to now, the MessageHandler method in SLHelperTypes.SLHelper would incorrectly try to serialize exceptions that could not be serialized, causing other exceptions to be thrown.
+
+#### SLAnalytics: Problem when trying to edit a multivariate pattern [ID_37270]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+Due to a cache synchronization issue, problems could occur when trying to edit a multivariate pattern of which one of the elements is located on another DataMiner Agent.
+
+#### EPM: Problem when SLNet requested information from other DataMiner Agents in the DMS [ID_37462]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+In EPM environments, an error could occur when SLNet requested information from other DataMiner Agents in the DMS.  
+
+#### Problem with ExistsCustomDataTypeRequest message when using a database other than Cassandra [ID_37470]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+On systems using a database other than Cassandra, up to now, an `ExistsCustomDataTypeRequest` message would always return false and cause an error to be logged in the *SLDBConnection.txt* and *SLErrors.txt* files.
+
+#### Storage as a Service: Row limits were disregarded when a post filter was applied to a query result [ID_37515]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+In cases where SLDataGateway retrieved an entire table and then applied a filter afterwards, any row limits defined for the query in question would incorrectly be disregarded.
+
+#### Storage as a Service: Paged data retrieval operations would be cut off prematurely [ID_37533]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+When reading data from the database page by page, in some cases, the operation would be cut off prematurely.
+
+#### Newly created element could get assigned the same DmaId/ElementId key as another, already existing element [ID_37560]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+In some cases, a newly created element could get assigned the same DmaId/ElementId key as another, already existing element on another DataMiner Agent in the cluster. From now on, this will be prevented as long as the DataMiner Agents in questions can communicate with each other.

@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.3.0_CU7
 ---
 
-# General Main Release 10.3.0 CU7 – Preview
+# General Main Release 10.3.0 CU7
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
@@ -93,6 +93,12 @@ This notice will now be logged in the *SLSNMPAgent.txt* log file instead.
 
 ### Fixes
 
+#### Cassandra Cluster: Problem when retrieving all active alarm events for an element from Elasticsearch [ID_36674]
+
+<!-- MR 10.3.0 [CU7] - FR 10.3.10 -->
+
+When, on a system with a Cassandra Cluster database, an element had more than 10000 alarm events, not all of those events would get retrieved from the Elasticsearch database. This would cause (a) SLElement to generate additional alarm events when the element was restarted and (b) alarm trees to be incorrect.
+
 #### DataMiner upgrade failed because prerequisites check incorrectly marked Agent as failed [ID_36776]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
@@ -119,7 +125,7 @@ A number of issues related to NT_FILL_ARRAY_WITH_COLUMN_ONLY_UPDATES (336) notif
 
 #### NATS configuration inconsistent in Failover setup after reconfiguring NATS [ID_37023]
 
-<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.9 [CU1] -->
 
 Up to now, the offline DMA in a Failover pair built its NATS configuration by fetching the nodes from the online DMA. In case the online DMA could not communicate with the rest of the cluster, this caused the offline DMA to also mark all other DMAs as unreachable. This meant that when NATS was reconfigured, even when the offline DMA was actually able to reach them, these "unreachable" DMAs were excluded from its routes. Moreover, as the offline DMA cannot generate alarms, there would be no notification of this until it was switched to online.
 
@@ -135,7 +141,7 @@ Up to now, SLReset would re-install NATS **before** it cleaned up the `C:\Skylin
 
 #### Failover: NATS servers would incorrectly use the virtual IP address of a Failover setup to establish the route to the online agent [ID_37073]
 
-<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.9 [CU2] -->
 
 When the NATS server builds the route connections to the agents in a Failover setup, in some cases, when establishing the route to the online agent, it used the virtual IP address of the Failover setup instead of the primary address of the online agent.
 
@@ -146,6 +152,14 @@ From now on, *NATS Custodian* will check whether the routes list contains any vi
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
 
 The Cassandra Cluster Migrator tool would incorrectly not migrate any logger tables.
+
+#### Cassandra Cluster: Incorrect calculation of replication factors [ID_37117]
+
+<!-- MR 10.3.0 [CU7] - FR 10.3.10 -->
+
+In setups including a Cassandra Cluster database, the *NetworkTopologyStrategy* would incorrectly not be taken into account when calculating the data replication factors. Only the *SimpleStrategy* would be taken into account.
+
+As a result, when only one node went down, DataMiner would erroneously go into data offload mode even though enough Cassandra Cluster nodes were online.
 
 #### Problem when running queries against Elasticsearch [ID_37138]
 
@@ -161,6 +175,12 @@ When a custom timeout was passed to a `HandleMessage` method on a GRPCConnection
 
 From now on, when a custom timeout is passed to a `HandleMessage` method on a GRPCConnection/gRPC connection, that method will correctly use the custom timeout that was passed.
 
+#### Protocols: Length parameter in a response would not be set to the correct value [ID_37172]
+
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
+
+In some cases, the length parameter in a response would not be set to the the correct value.
+
 #### Service & Resource Management: Booking status would be set to 'Ended' too soon [ID_37176]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
@@ -168,3 +188,9 @@ From now on, when a custom timeout is passed to a `HandleMessage` method on a GR
 In some cases, events scheduled to run at the end of a booking would not be run because the status of the booking was set to "Ended" too soon.
 
 From now on, the status of a booking will only be set to "Ended" once all events have been run.
+
+#### Problem when updating the NATS server [ID_37305]
+
+<!-- 10.2.0 [CU19]/MR 10.3.0 [CU7] - FR 10.3.10 [CU0] -->
+
+In some cases, when updating the NATS server, an error could occur while replacing the *nats-streaming-server.exe* file.

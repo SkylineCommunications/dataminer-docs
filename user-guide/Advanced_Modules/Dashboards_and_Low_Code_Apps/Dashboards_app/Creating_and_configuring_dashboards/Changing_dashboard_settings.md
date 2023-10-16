@@ -44,9 +44,6 @@ uid: Changing_dashboard_settings
 
    - **Dashboard updates**
 
-       > [!NOTE]
-       > Web socket communication is not supported on DMAs using operating systems prior to Windows Server 2012 or Windows 8.
-
      - *Fast polling timer*: The polling interval (in s) for components that display real-time information.
 
      - *Slow polling timer*: The polling interval (in s) for components that do not display real-time information.

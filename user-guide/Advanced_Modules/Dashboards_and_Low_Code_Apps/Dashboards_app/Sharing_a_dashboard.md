@@ -69,6 +69,9 @@ To do so:
 
 1. To get an uncompressed version of the URL, select *Use uncompressed URL parameters*.
 
+   > [!NOTE]
+   > This option can for instance be useful if you want to embed the dashboard in a Visio drawing and use placeholders in the URL. See [Linking a shape to a webpage](xref:Linking_a_shape_to_a_webpage).
+
 1. To the right of the URL, click the *Copy* button.
 
 ## Sharing a dashboard as a PDF report via email

@@ -10,7 +10,7 @@ The main component in the main execution thread of the SLProtocol process is the
 
 Groups present in the queue are processed as soon as they arrive at the front of the queue. A group can either contain one or more parameters, pairs, sessions, triggers or actions. This is indicated by a dashed black line in the figure. Each item in the group is executed sequentially.
 
-See also: Groups
+See also: [Groups](xref:LogicGroups)
 
 In case the item from the group to be executed is a Pair (serial, smart-serial) or a Session (HTTP), interaction with the SLPort process is initiated. In case the item from the group is a parameter, interaction with the SLSNMPManager is initiated (note that this is intended for parameters that will poll data via SNMP). In case the item from the group is an action, the specified action is executed. Finally, in case the item from the group is a trigger, the trigger is executed. A trigger either triggers another trigger or an action.
 

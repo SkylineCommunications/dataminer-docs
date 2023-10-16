@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.3.10
 ---
 
-# General Feature Release 10.3.10 – Preview
+# General Feature Release 10.3.10
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!IMPORTANT]
 > When downgrading from DataMiner Feature Release version 10.3.8 (or higher) to DataMiner Feature Release version 10.3.4, 10.3.5, 10.3.6 or 10.3.7, an extra manual step has to be performed. For more information, see [Downgrading a DMS](xref:MOP_Downgrading_a_DMS).
@@ -18,11 +18,55 @@ uid: General_Feature_Release_10.3.10
 
 ## Highlights
 
-*No highlights have been added to this release yet.*
+- [DataMiner Object Models: 'Full CRUD meta' scripts [ID_37004]](#dataminer-object-models-full-crud-meta-scripts-id_37004)
+- [Support for real-time GQI row updates](#support-for-real-time-gqi-row-updates-id_37060)
+- [Storage as a Service](#storage-as-a-service-staas-id_34616-id_37256-id_37257-id_37283)
 
-## Other features
+## New features
 
-*No other features have been added to this release yet.*
+#### DataMiner Object Models: 'Full CRUD meta' scripts [ID_37004]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+Apart from **ID only** scripts, which use the `OnDomInstanceCrud` entry point method and give you access to the CRUD type and the ID of the `DomInstance` in the script, it is now also possible to configure **Full CRUD meta** scripts. These use the `OnDomInstanceCrudWithFullMeta` entry point method and give you access to the CRUD type and the full `DomInstance` object(s).
+
+For more detailed information, see [ExecuteScriptOnDomInstanceActionSettings](xref:ExecuteScriptOnDomInstanceActionSettings).
+
+#### Support for real-time GQI row updates [ID_37060]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+Real-time row updates are now supported for GQI session results for specific data sources and operators. This means that, when this is supported in the client, real-time updates can be displayed for row additions, modification, or deletions.
+
+At present, this is supported for the following GQI data sources:
+
+- Parameter table (except partial and view tables)
+- Views
+
+It is supported for the *Select* operator, but it can also be supported for other operators if they are combined with specific data sources, for instance for a filter on a parameter table.
+
+#### DataMiner Object Models: GenericEnumEntry objects can now be soft-deleted [ID_37121]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+<!-- Additional fix added under WebApps/Fixes -->
+
+It is now possible to soft-delete *GenericEnumEntry* objects.
+
+Soft-deleting a *GenericEnumEntry* object will have the following consequences:
+
+- The *GenericEnumEntry* will not be displayed on UI forms used to create an instance.
+- The *GenericEnumEntry* will be displayed on a UI form used to update an instance of which the value is set to the soft-deleted *GenericEnumEntry* in question.
+- It will not be possible to create an instance of which the value is set to the soft-deleted *GenericEnumEntry*.
+- It will not be possible to update the value of an instance to the soft-deleted *GenericEnumEntry*.
+- It is allowed to have instances of which the value is set to the soft-deleted *GenericEnumEntry*.
+
+#### Storage as a Service (STaaS) [ID_34616] [ID_37256] [ID_37257] [ID_37283]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+DataMiner now supports Storage as a Service (STaaS), a scalable and user-friendly cloud-native storage platform that provides a fully fletched alternative to on-premises databases.
+
+For detailed information, see [Storage as a Service (STaaS)](xref:STaaS).
 
 ## Changes
 
@@ -43,6 +87,20 @@ Also, in DataMiner Cube, the *By value/By reference* toggle button has now been 
 
 > [!NOTE]
 > When the `isValueCopy` property of a ProfileInstance is set to true, it will only be assigned a TTL of 1 year when that ProfileInstance is stored in Elasticsearch.
+
+#### Service & Resource Management: A series of checks will now be performed when you add or upload a functions file [ID_36732]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When a functions file is added or uploaded, the following checks will now be performed:
+
+1. Can the content of the file (in XML format) be parsed?
+1. Does the file contain the name of the protocol?
+1. Does the protocol name in the file correspond to the protocol name in the request?
+1. Does the file contain a version number?
+1. Does the DataMiner System not contain a functions file with the same version for the protocol in question?
+
+When you try to upload a functions file using DataMiner Cube, the log entry (in Cube logging) and the information event (in the Alarm Console) created when the upload fails will indicate the checks that did not return true.
 
 #### Updated bookings now only set to Confirmed when necessary [ID_36818]
 
@@ -110,7 +168,22 @@ When you connected to a DataMiner Agent, up to now, the Alarm Console would ofte
 
 This notice will now be logged in the *SLSNMPAgent.txt* log file instead.
 
+#### SLAnalytics: Enhanced performance when using automatic incident tracking based on properties [ID_37198]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+Because of a number of enhancements, overall performance has increased when using automatic incident tracking based on service, view or element properties.
+
+> [!IMPORTANT]
+> For the properties that should be taken into account, the option *Update alarms on value changed* must be selected. For more information, see [Configuration of incident tracking based on properties](xref:Automatic_incident_tracking#configuration-of-incident-tracking-based-on-properties).
+
 ### Fixes
+
+#### Cassandra Cluster: Problem when retrieving all active alarm events for an element from Elasticsearch [ID_36674]
+
+<!-- MR 10.3.0 [CU7] - FR 10.3.10 -->
+
+When, on a system with a Cassandra Cluster database, an element had more than 10000 alarm events, not all of those events would get retrieved from the Elasticsearch database. This would cause (a) SLElement to generate additional alarm events when the element was restarted and (b) alarm trees to be incorrect.
 
 #### DataMiner upgrade failed because prerequisites check incorrectly marked Agent as failed [ID_36776]
 
@@ -136,14 +209,6 @@ A number of issues related to NT_FILL_ARRAY_WITH_COLUMN_ONLY_UPDATES (336) notif
 - A small memory leak could occur when a NT_FILL_ARRAY_WITH_COLUMN_ONLY_UPDATES notification was sent to SLDataMiner with invalid data.
 - If the user sending such a notification did not have sufficient rights on the element, or if the element was locked by another user, this did not cause this notification to fail. Now it will fail. This same issue has also been resolved for the NT_DELETE_ROW (156), NT_ADD_ROW (149), and NT_ADD_ROW_RETURN_KEY (240) notifications.
 
-#### NATS configuration inconsistent in Failover setup after reconfiguring NATS [ID_37023]
-
-<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
-
-Up to now, the offline DMA in a Failover pair built its NATS configuration by fetching the nodes from the online DMA. In case the online DMA could not communicate with the rest of the cluster, this caused the offline DMA to also mark all other DMAs as unreachable. This meant that when NATS was reconfigured, even when the offline DMA was actually able to reach them, these "unreachable" DMAs were excluded from its routes. Moreover, as the offline DMA cannot generate alarms, there would be no notification of this until it was switched to online.
-
-This will now be prevented. The offline DMA will now collect all nodes locally when setting up its NATS configuration instead of fetching them from the online DMA.
-
 #### SLReset: Problem due to NATS being re-installed before cleaning up the 'C:\\Skyline DataMiner' folder [ID_37072]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
@@ -151,14 +216,6 @@ This will now be prevented. The offline DMA will now collect all nodes locally w
 When you perform a factory reset by running *SLReset.exe*, NATS will automatically be re-installed.
 
 Up to now, SLReset would re-install NATS **before** it cleaned up the `C:\Skyline DataMiner` folder. As, in some cases, this could cause unexpected behavior, SLReset will now re-install NATS **after** the file clean-up.
-
-#### Failover: NATS servers would incorrectly use the virtual IP address of a Failover setup to establish the route to the online agent [ID_37073]
-
-<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
-
-When the NATS server builds the route connections to the agents in a Failover setup, in some cases, when establishing the route to the online agent, it used the virtual IP address of the Failover setup instead of the primary address of the online agent.
-
-From now on, *NATS Custodian* will check whether the routes list contains any virtual IP addresses. If so, it will replace each virtual IP address with the correct primary address of the online agent when performing the NATS configuration checks. However, it will not restart NATS.
 
 #### Cassandra Cluster Migrator tool would incorrectly not migrate any logger tables [ID_37083]
 
@@ -168,9 +225,17 @@ The Cassandra Cluster Migrator tool would incorrectly not migrate any logger tab
 
 #### Problem when restarting DataMiner [ID_37112]
 
-<!-- MR 10.4.0 - FR 10.3.10 -->
+<!-- MR 10.3.0 [CU8] - FR 10.3.10 -->
 
 When DataMiner was restarted, in some rare cases, it would not start up again.
+
+#### Cassandra Cluster: Incorrect calculation of replication factors [ID_37117]
+
+<!-- MR 10.3.0 [CU7] - FR 10.3.10 -->
+
+In setups including a Cassandra Cluster database, the *NetworkTopologyStrategy* would incorrectly not be taken into account when calculating the data replication factors. Only the *SimpleStrategy* would be taken into account.
+
+As a result, when only one node went down, DataMiner would erroneously go into data offload mode even though enough Cassandra Cluster nodes were online.
 
 #### Problem when running queries against Elasticsearch [ID_37138]
 
@@ -186,6 +251,12 @@ When a custom timeout was passed to a `HandleMessage` method on a GRPCConnection
 
 From now on, when a custom timeout is passed to a `HandleMessage` method on a GRPCConnection/gRPC connection, that method will correctly use the custom timeout that was passed.
 
+#### Protocols: Length parameter in a response would not be set to the correct value [ID_37172]
+
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
+
+In some cases, the length parameter in a response would not be set to the the correct value.
+
 #### Service & Resource Management: Booking status would be set to 'Ended' too soon [ID_37176]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
@@ -194,8 +265,26 @@ In some cases, events scheduled to run at the end of a booking would not be run 
 
 From now on, the status of a booking will only be set to "Ended" once all events have been run.
 
+#### SLAnalytics: Problem when creating or editing a multivariate pattern [ID_37212]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When you created or edited a linked pattern with subpatterns from elements on different agents, and the first subpattern was from an element on an agent other than the one from which the CreateLinkedPatternMessage or EditLinkedPatternMessage was originally sent, SLNet would throw an exception.
+
 #### Problem when importing an existing element [ID_37214]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
 When you imported an element that already existed in the system, in some cases, an error could occur in SLDataMiner.
+
+#### SLAnalytics: Problem when deleting trend pattern while connected to a DMA running an old DataMiner version [ID_37225]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When you deleted a trend pattern when connected to a DataMiner Agent running an old DataMiner version (e.g. 10.3.0), the pattern itself was deleted but the occurrences/matches would remain visible until you closed the trend graph and opened it again.
+
+#### Problem when updating the NATS server [ID_37305]
+
+<!-- 10.2.0 [CU19]/MR 10.3.0 [CU7] - FR 10.3.10 [CU0] -->
+
+In some cases, when updating the NATS server, an error could occur while replacing the *nats-streaming-server.exe* file.

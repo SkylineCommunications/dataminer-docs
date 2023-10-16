@@ -40,7 +40,10 @@ For a script, the correct license is **MIT**.
 
 ## Repository naming convention
 
-The repository name should look like this (using "-" as separator): **{customerAcronym}-{itemType}-{itemName}**
+If the repository is private, the name should look like this (using "-" as separator): **{customerAcronym}-{itemType}-{itemName}**
+
+> [!IMPORTANT]
+> If the repository is **public**, **do not use a customer acronym** in the repository name. Instead, use the **Skyline acronym "SLC"**.
 
 - For a list of **customer acronyms**, refer to [DCP](https://dcp.skyline.be/Lists/Customers/AllItems.aspx). For generic repositories, use the Skyline Communications acronym (SLC).
 
@@ -59,6 +62,9 @@ The repository name should look like this (using "-" as separator): **{customerA
   - T (Tests)
   - GQIDS (GQI data source)
   - GQIO (GQI operator)
+  - UDAPI (User-Defined APIs)
+  - DOC (Documentation)
+  - DISMACRO (DIS Macro)
 
   > [!NOTE]
   > If you think an item type should be added, please contact us so we can add it before you create the repository.
@@ -68,6 +74,10 @@ The repository name should look like this (using "-" as separator): **{customerA
 ## Adding a README file
 
 It is important to add a *README.md* file to the root folder. The contents of this file should provide users with the necessary information to understand the purpose of the code and learn how to use it.
+
+## Adding a .gitignore
+
+It is important to add a *.gitignore* file to the root folder. The contents of this file will ensure that you do not commit things like assemblies from the bin folders or other user-specific configuration. Using the default suggested .gitignore should be sufficient.
 
 ## Adding topics to a repository
 
@@ -90,6 +100,9 @@ Here is a list of topics you should use (this list is to be extended):
 - dataminer-regression-test
 - dataminer-UI-test
 - dataminer-bot
+- dataminer-user-defined-api
+- dataminer-doc
+- dataminer-dis-macro
 
 If you have code for a specific project/customer, you should add a topic with the customer's name as well, e.g. `Skyline-Communications`. Always use a hyphen ("-") as a separator.
 

@@ -540,6 +540,11 @@
         items:
         - name: Launching EPM objects by clicking buttons in Data Display table cells
           topicUid: AdvancedEPMLaunchEPMObjectsTableCellButtons
+    - name: Connector documentation
+      topicUid: Connector_help_pages
+      items:
+      - name: Connector documentation template
+        topicUid: Connector_help_template
     - name: Questions & Answers
       topicUid: QuestionsAndAnswers
     - name: How-tos
@@ -563,8 +568,6 @@
         topicUid: How_to_integrate_the_HTTP_sessions_table_in_a_connector
       - name: How to retrieve protocol pending calls
         topicUid: How_to_retrieve_protocol_pending_calls
-      - name: How to set up an SSH connection within a protocol
-        topicUid: How_to_set_up_an_SSH_connection_within_a_protocol
       - name: How to use history sets on a protocol parameter
         topicUid: How_to_use_history_sets_on_a_protocol_parameter
       - name: How to use multiple protocol threads to split communication and parsing
@@ -696,6 +699,8 @@
         topicUid: ClassLibraryMonitorsStartingAStartedMonitor
       - name: Stopping a stopped monitor
         topicUid: ClassLibraryMonitorsStoppingAStoppedMonitor
+    - name: Scheduler
+      topicUid: Scheduler_NuGet_Package
     - name: Examples
       topicUid:  ClassLibraryExamples
 - name: API documentation
@@ -5119,6 +5124,8 @@
   - name: CI/CD at Skyline Communications
     topicUid: CICD_at_Skyline
     items:
+    - name: Publishing artifacts to the DataMiner Catalog
+      topicUid: publish_to_catalog
     - name: CI/CD Skyline Communications GitHub
       topicUid: migration_from_gerrit_to_github
       items:
@@ -5206,8 +5213,6 @@
           topicUid: Pipeline_stages_for_install_packages
       - name: FAQ
         topicUid: FAQ
-  - name: SRM project configuration using CI/CD
-    topicUid: SRM_project_config_using_CICD
 - name: DataMiner Development Tools
   topicUid: TOOLS
   items:
@@ -5272,6 +5277,9 @@
               topicUid: DisVisualStudioSolutionsIntroduction
             - name: Developing connectors
               topicUid: Developing_connectors_as_Visual_Studio_solutions
+              items:
+                - name: Using the DIS MIB Browser
+                  topicUid: DIS_MIB_Browser
             - name: Developing Automation scripts
               topicUid: Developing_Automation_scripts_as_Visual_Studio_solutions
         - name: Debugging connectors and Automation scripts
@@ -5287,6 +5295,13 @@
               topicUid: Debugging_a_connector
             - name: Debugging an Automation script
               topicUid: Debugging_an_Automation_script
+        - name: Tutorials
+          topicUid: DisTutorials_MibBrowser
+          items:
+          - name: Exploring the DIS MIB browser
+            topicUid: DisTutorials_MibBrowser
+          - name: DIS Validator and GitHub DevOps
+            topicUid: DisTutorials_DevOpsGitHubValidator
         - name: Troubleshooting
           topicUid: Troubleshooting
           items:
@@ -5333,41 +5348,25 @@
               topicUid: Run_Time_Assembly_Binding
         - name: Producing NuGet packages
           topicUid: Producing_NuGet
+          items:
+            - name: Producing NuGet packages via SLC SE Repository Manager
+              topicUid: Producing_NuGet_RepoManager
+            - name: Producing NuGet packages via GitHub
+              topicUid: Producing_NuGet_GitHub
     - name: Application packages
-      topicUid: TOOApplicationPackages
+      topicUid: ApplicationPackages
       items:
-      - name: Application package structure
-        topicUid: Creating_an_app_package
+      - name: Creating application packages
+        topicUid: CreatingApplicationPackages
+        items:
+        - name: Creating application package scripts
+          topicUid: Creating_app_package_scripts
       - name: Installing an application package
         topicUid: Installing_an_app_package
-      - name: Creating application package scripts
-        topicUid: Creating_app_package_scripts
-    - name: DataMiner Application Package Builder
-      topicUid: TOODataMinerPackageBuilder
-      items:
-        - name: Installation
-          topicUid: Installation
-        - name: Use case
-          topicUid: Use_case
-        - name: Usage
-          topicUid: Usage
-          items:
-            - name: Content tab
-              topicUid: Content_tab
-            - name: DMAPP tab
-              topicUid: DMAPP_tab
-            - name: DMAPP (Legacy) tab
-              topicUid: DMAPP_Legacy_tab
-            - name: DMT tab
-              topicUid: DMT_tab
-            - name: Profiles
-              topicUid: Profiles
-            - name: DMAppBuilderConfig.xml
-              topicUid: DMAppBuilderConfig_xml
-            - name: CLI (legacy packages only)
-              topicUid: CLI_legacy_packages_only
-            - name: Logging
-              topicUid: Logging1
+      - name: Application package structure
+        topicUid: ApplicationPackageStructure
+      - name: Application packages for SRM projects
+        topicUid: SRM_project_config_using_CICD
     - name: Skyline Driver Passport Platform
       topicUid: TOODriverPassportPlatform
       items:

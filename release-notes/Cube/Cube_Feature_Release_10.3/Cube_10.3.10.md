@@ -2,19 +2,43 @@
 uid: Cube_Feature_Release_10.3.10
 ---
 
-# DataMiner Cube Feature Release 10.3.10 – Preview
+# DataMiner Cube Feature Release 10.3.10
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to DataMiner Cube, see [General Feature Release 10.3.10](xref:General_Feature_Release_10.3.10).
 
 ## Highlights
 
-*No highlights have been added to this release yet.*
+- [Alarm Console: Light bulb [ID_36777] [ID_36871] [ID_36918] [ID_37057] [ID_37136] [ID_37145] [ID_37167] [ID_37184]](#alarm-console-light-bulb-id_36777-id_36871-id_36918-id_37057-id_37136-id_37145-id_37167-id_37184)
 
-## Other new features
+- [Protocols & Templates app: Editing, deleting and duplicating elements [ID_36971]](#protocols--templates-app-editing-deleting-and-duplicating-elements-id_36971)
+
+## New features
+
+#### Alarm Console: Light bulb [ID_36777] [ID_36871] [ID_36918] [ID_37057] [ID_37136] [ID_37145] [ID_37167] [ID_37184]
+
+<!-- RNs 36777/36871/36918: MR 10.4.0 - FR 10.3.9 -->
+<!-- RNs 37057/37136/37145/37167/37184: MR 10.4.0 - FR 10.3.10 -->
+
+In the top-right corner of the Alarm Console, you can now find a light bulb icon that will light up when there are alarms or suggestion events related to an SLAnalytics feature. When you click this light bulb, a menu will open, possibly showing you the following notifications:
+
+| Notification | Action when clicked |
+|--------------|---------------------|
+| X alarms require your focus in the current tab | Applies a filter that makes the current tab only list the focused alarms. |
+| Also show alarms not requiring focus      | Clears the above-mentioned filter and makes the current tab list all alarms. |
+| X incidents are present on the system     | Opens a new tab listing all active incidents. |
+| X anomalies were found in your trend data | Opens a new tab listing all anomaly suggestions/alarms. |
+| X alarms are predicted in the near future | Opens a new tab listing all prediction suggestions/alarms. |
+| X recent pattern occurrence detected      | Opens a new tab listing all trend pattern suggestions. |
+
+> [!NOTE]
+>
+> - Each of the above-mentioned notifications will only appear in the menu when there is at least one alarm, incident, anomaly or pattern occurrence.
+> - When at least one SLAnalytics feature (alarm focus, automatic incident tracking, behavioral anomaly detection, proactive cap detection or pattern matching) is disabled or not available, a link to [Advanced analytics features in the Alarm Console](xref:Advanced_analytics_features_in_the_Alarm_Console) will appear below the light bulb icon.
+> - If the DataMiner System does not include a Cassandra database, the menu will only show a notification saying the Cassandra is required.
 
 #### Trending - Pattern matching: Pattern highlighted when mouse pointer hovers over label [ID_36863]
 
@@ -48,6 +72,12 @@ From now on, when you select the *Include alarms* option, the masked alarms will
 
 > [!NOTE]
 > When you add a new tab of type "sliding window", you will still be able to select the *Include masked alarms* option.
+
+#### Trending - Pattern matching: Pattern occurrences will now be added to a trend graph in real time [ID_37153]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+DataMiner Cube now supports pattern occurrence events. This means that occurrences of patterns that are already displayed on a trend graph will be added in real time.
 
 ## Changes
 
@@ -108,3 +138,18 @@ Up to now, when a user set the *Viewport* variable on a Resource Manager timelin
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
 
 If no preset was available for a particular spectrum element, it could occur that the *Preset* tab for the spectrum element kept loading indefinitely.
+
+#### Trending - Pattern matching: Problem when adding and highlighting curves [ID_37174]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When, in a trend graph, you hovered over a pattern of which the instance of the curve was not equal to the instance of the pattern (which had its instancePartOfIdentity property set to false), the curve would incorrectly not be highlighted.
+
+Also, incorrect curves would be added when you clicked to load the linked patterns, and incorrect curves were highlighted when you hovered over a pattern that consisted of two subpatterns from different elements.
+
+#### DataMiner Cube v10.3.9 would receive incorrect EPM data when connected to a DataMiner Agent v10.3.8 or older [ID_37391]
+
+<!-- MR 10.4.0 - FR 10.3.10 [CU0] -->
+<!-- Not added to MR 10.4.0 -->
+
+A DataMiner Cube version 10.3.9 would receive incorrect EPM data when connected to a DataMiner Agent version 10.3.8 or older.

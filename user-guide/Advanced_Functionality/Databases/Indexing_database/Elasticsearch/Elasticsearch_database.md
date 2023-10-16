@@ -4,11 +4,11 @@ uid: Elasticsearch_database
 
 # Elasticsearch
 
-The default indexing database used by DataMiner is Elasticsearch.
+If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STaaS) setup but instead choose self-hosted storage, you need an indexing database in order to have access to all DataMiner features.
 
-If you use a **dedicated clustered storage** setup, you need to set up an [Elasticsearch database on a Linux machine](xref:Installing_Elasticsearch_on_separate_Linux_machine). As an alternative to the Elasticsearch database, from DataMiner 10.3.0/10.3.3 onwards, [OpenSearch](xref:OpenSearch_database) and the [Amazon OpenSearch Service](xref:Amazon_OpenSearch_Service) are also supported.
+If you use a **dedicated clustered storage** setup, it is best to use [OpenSearch](xref:OpenSearch_database) or the [Amazon OpenSearch Service](xref:Amazon_OpenSearch_Service), but you can also use an [Elasticsearch database on a Linux machine](xref:Installing_Elasticsearch_on_separate_Linux_machine). However, Elasticsearch is only supported up to version 6.8. and is therefore not recommended. OpenSearch and the Amazon OpenSearch Service are supported from DataMiner 10.3.0/10.3.3 onwards.
 
-If you use a setup with **storage per DMA**, you should also [deploy an Elasticsearch database](xref:Configuring_indexing_database_per_DMS) to gain access to DataMiner features such as GQI, SRM, and DOM.
+While this is not recommended, you can also still use a setup with **storage per DMA**, where you can [deploy an Elasticsearch database](xref:Configuring_indexing_database_per_DMS) to gain access to DataMiner features such as GQI, SRM, and DOM.
 
 In this section of the documentation, you will also find instructions on how to [manually connect a DMA to an existing Elasticsearch cluster](xref:Manually_Connecting_DMA_to_Elasticsearch_Cluster) in the *DB.xml* file, [configure Elasticsearch backups](xref:Configuring_Elasticsearch_backups), and [remove an Elasticsearch cluster node](xref:Configuring_Elasticsearch_node_remove).
 

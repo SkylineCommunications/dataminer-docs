@@ -58,13 +58,13 @@ As a rule, we recommend a throughput ranging from 100 Mbps to 1 Gbps and a laten
 
 ### Operating System
 
-We recommend that you use the latest Windows Server version. This will not only allow you to make use of the latest features, but also ensures that you will get support and security patches for as long as possible. At the moment, Windows Server 2022 is the recommended version.
+For all supported DataMiner versions, we support all Windows versions that Microsoft currently supports. However, we recommend that you use the latest Windows Server version. This will not only allow you to make use of the latest features, but also ensures that you will get support and security patches for as long as possible. At the moment, Windows Server 2022 is the recommended version.
 
 ### Time
 
 If there is more than one DataMiner Agent in your cluster, the time in the cluster must be synchronized (NTP).
 
-### Microsoft .NET Framework
+### Microsoft .NET
 
 - Microsoft .NET Framework **4.6.2** is recommended for versions prior to DataMiner 10.1.11.
 
@@ -78,6 +78,17 @@ If there is more than one DataMiner Agent in your cluster, the time in the clust
 
 > [!NOTE]
 > We recommend always upgrading to the latest .NET Framework version.
+
+### Microsoft Visual C++
+
+- From DataMiner versions 10.3.9, 10.3.0 [CU6], and 10.2.0 [CU18] onwards<!-- RN 36745 -->, only Microsoft Visual C++ **2015** or newer is required.
+
+- Prior to DataMiner versions 10.3.9, 10.3.0 [CU6], and 10.2.0 [CU18], Microsoft Visual C++ **2010** and Microsoft Visual C++ **2015** or newer are required.
+
+> [!NOTE]
+>
+> - If you want to **uninstall** Microsoft Visual C++ 2010, make sure to do so only **after upgrading** to 10.3.9, 10.3.0 [CU6], or 10.2.0 [CU18], as otherwise the upgrade will fail.
+> - Microsoft Visual C++ versions 2015 up to 2022 are backwards-compatible, and only one version can be installed at the same time. For this reason, we recommend updating to the latest version of Microsoft Visual C++ 2022.
 
 ### Computer name
 

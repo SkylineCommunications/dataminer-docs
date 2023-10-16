@@ -10,7 +10,7 @@ To run a Correlation analyzer:
 
 1. Click the *Start analyzing* button at the bottom of the details pane.
 
-1. If the option *Enable real-time analyzing* wasn’t selected, select a time range for the history alarms you want to analyze and click *Apply*.
+1. If the option *Enable real-time analyzing* was not selected, select a time range for the history alarms you want to analyze and click *Apply*.
 
    While the analyzer is working, its status will change from *Idle* to *Collecting*.
 
