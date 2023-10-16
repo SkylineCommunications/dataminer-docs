@@ -84,7 +84,7 @@ We recommend changing the default Cassandra credentials.
 For DataMiner Systems configured to use an OpenSearch database, we recommend enabling HTTPS. Please refer to the official OpenSearch documentation on [enabling TLS encryption](https://opensearch.org/docs/latest/security/configuration/tls/).
 
 > [!NOTE]
-> For more information, see [Securing the OpenSearch database](xref:Installing_OpenSearch_database#tls-configuration).
+> For more information, see [Securing the OpenSearch database](xref:Security_Opensearch).
 
 ### Elasticsearch
 
