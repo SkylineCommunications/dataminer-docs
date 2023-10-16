@@ -107,9 +107,9 @@ To fix this issue:
 
 ## OpenSearch logging mentions unknown setting [node.voting only]
 
-When [node.voting only] was configured for your tiebreaker in the *opensearch.yml*, this will not work because OpenSearch appears to have blocked the implementation when it was forked from ElasticSearch.
+When [node.voting only] was configured for your tiebreaker in *opensearch.yml*, this will not work because this is not supported by OpenSearch. When OpenSearch was forked from Elasticsearch, this functionality was blocked.
 
-When using tie-breakers, configure them to use the master-eligible role in *opensearch.yml*.
+If you use tiebreakers, configure them to use the master-eligible role in *opensearch.yml*.
 
 ## SLSearch.txt logging mentions OpenSearch version is not officially supported
 
