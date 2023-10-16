@@ -205,8 +205,10 @@ items:
     topicUid: Known_issues
     items:
       - name: Current issues
-        topicUid: KI_DataMinerMessageBroker2
+        topicUid: KI_Cube_connection_issue_alarm_tabs
         items:
+          - name: Cube freezes on 'Connected!' loading screen when no alarm tabs are displayed
+            topicUid: KI_Cube_connection_issue_alarm_tabs
           - name: Various issues when using MessageBroker with chunking
             topicUid: KI_DataMinerMessageBroker2
           - name: Elements not loading after upgrade of DMS with multiple Elasticsearch clusters
