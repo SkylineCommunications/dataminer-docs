@@ -6,7 +6,7 @@ uid: KI_Cube_connection_issue_alarm_tabs
 
 ## Affected versions
 
-- DataMiner versions 10.3.9 and 10.3.10.
+- DataMiner versions 10.3.9 and 10.3.10
 
 - Any versions from DataMiner 10.2.0 onwards using automatic client updates
 
