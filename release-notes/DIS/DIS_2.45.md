@@ -50,8 +50,8 @@ The SLDisCsharpAnalysis project has been extracted from DIS and new NuGet packag
 New packages:
 
 - Skyline.DataMiner.CICD.CSharpAnalysis.Common
-
 - Skyline.DataMiner.CICD.CSharpAnalysis.Protocol
+
 - Skyline.DataMiner.CICD.Models.Common
 
 Extended packages:
