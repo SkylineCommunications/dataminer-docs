@@ -83,6 +83,6 @@ From now on, the Validator will no longer generate a minor issue when one of the
 - databaseNameProtocol
 - sizeHint
 
-#### Validator: DuplicateValue error messages now check case-insensitive [ID_37287]
+#### Validator will now check for duplicate values case-insensitively [ID_37287]
 
-When checking for duplicate values (e.g.: parameter names), the checks will now be case-insensitive.
+The Validator will now check for duplicate values (e.g. duplicate parameter names) case-insensitively.
