@@ -34,56 +34,55 @@ The following checks and error messages have been added.
 
 Former validator error 2603 (RawType double has no length definition) has been removed.
 
+### XML Schema
+
+#### PackageManifest Schema: DestinationPath for Dashboard is optional [ID_37586]
+
+In the *PackageManifest* schema, the *DestinationPath* tag for Dashboards has now been marked optional.
+
 ## Changes
 
 ### Enhancements
 
-#### Driver help generator now generates markdown [ID_37313]
+#### 'Generate driver help' command will now create a Markdown file [ID_37313]
 
-The driver help generation in DIS has been updated so that it now generates a markdown file (.md) to be used in the docs repository instead of an HTML page that was used on DCP. The menu item that allowed to open the driver help on DCP will now open the corresponding page on the GitHub repository (if it exists).
+When you click the *Generate driver help* menu command, a Markdown file with extension .md will now be created in the GitHub repository named *dataminer-docs-connectors*.
 
-An issue was also fixed related to the menu item for opening the OneNote of a driver. Opening the OneNote of a driver should now work again.
+#### SLDisCSharpAnalysis and SLDisCompiler projects have been replaced by NuGet packages [ID_37536] [ID_37359]
 
-#### SLDisCSharpAnalysis and SLDisCompiler replaced by NuGet packages [ID_37536] [ID_37359]
+The *SLDisCsharpAnalysis* project has been removed from DIS and NuGet packages have been created and/or extended to replace its functionality:
 
-The SLDisCsharpAnalysis project has been extracted from DIS and new NuGet packages have been created/extend to hold this extracted functionality:
+- New packages:
 
-New packages:
+  - Skyline.DataMiner.CICD.CSharpAnalysis.Common
+  - Skyline.DataMiner.CICD.CSharpAnalysis.Protocol
+  - Skyline.DataMiner.CICD.Models.Common
 
-- Skyline.DataMiner.CICD.CSharpAnalysis.Common
-- Skyline.DataMiner.CICD.CSharpAnalysis.Protocol
+- Extended packages:
 
-- Skyline.DataMiner.CICD.Models.Common
+  - Skyline.DataMiner.CICD.Models.Protocol
 
-Extended packages:
+The *SLDisCompiler* project has been removed from DIS. Its functionality has been migrated to the existing *Skyline.DataMiner.CICD.Parsers.Protocol* NuGet package and the newly introduced *Skyline.DataMiner.CICD.Assemblers.Protocol* NuGet package.
 
-Skyline.DataMiner.CICD.Models.Protocol
-
-The SLDisCompiler project has been extracted from DIS and the functionality from this project has been migrated to the already existing NuGet package "Skyline.DataMiner.CICD.Parsers.Protocol" and the newly introduced NuGet package "Skyline.DataMiner.CICD.Assemblers.Protocol".
-
-DIS has also been reworked so that it now makes use of these updated/new NuGet packages.
+DIS has also been reworked so that it will now make use of these new/updated NuGet packages.
 
 ### Fixes
 
-#### XSD - PackageManifest - DestinationPath for Dashboard is optional [ID_37586]
+#### XML editor: Problem when opening a QAction that did not contain the default QAction_{id}.cs file [ID_37358]
 
-The PackageManifest XSD has been adapted so that the DestinationPath tag for Dashboards is optional.
+An *InvalidOperationException* would be thrown when you tried to open a QAction that did not contain the default *QAction_{id}.cs* file.
 
-#### Fix open QAction without default QAction_{id}.cs file [ID_37358]
+From now on, when you open a QAction that does not contain the default *QAction_{id}.cs* file, it will take the next available C# file instead.
 
-When trying to open a QAction that did not have the default QAction_{id}.cs file in it, it would throw an InvalidOperationException.
+#### Validator will now longer generate a minor issue when Param.ArrayOptions@options includes customDatabaseName, databaseName, databaseNameProtocol or sizehint [ID_37276]
 
-This has now been fixed and will take the next available C# file.
-
-#### Val Fix - Param.ArrayOptions - Options - customDatabaseName, sizehint, databaseName, databaseNameProtocol [ID_37276]
-
-The validator has been extended to no longer generate a minor issue when one of the following options is used in the ArrayOptions@options attribute:
+From now on, the Validator will no longer generate a minor issue when one of the following options is used in the *options* attribute of the *ArrayOptions* element:
 
 - customDatabaseName
 - databaseName
 - databaseNameProtocol
 - sizeHint
 
-#### Val Fix - DuplicateValue error messages now check case-insensitive [ID_37287]
+#### Validator: DuplicateValue error messages now check case-insensitive [ID_37287]
 
 When checking for duplicate values (e.g.: parameter names), the checks will now be case-insensitive.
