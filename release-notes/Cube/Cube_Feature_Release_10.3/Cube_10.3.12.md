@@ -1,9 +1,6 @@
 ---
 uid: Cube_Feature_Release_10.3.12
-keywords:
-- mysearchtest
-- myteststring
-- my string
+keywords: mysearchtest, myteststring, my string
 ---
 
 # DataMiner Cube Feature Release 10.3.12 – Preview
@@ -43,6 +40,12 @@ Unlike other UI block types, *FileSelector* does not allow setting an [InitialVa
 When an interactive Automation script is executed **in Cube**, the UI block needs to keep the same [DestVar](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIBlockDefinition_DestVar) within the session. If there is no file selector block with the same [DestVar](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIBlockDefinition_DestVar) when the UI is shown again, the information about the uploaded files is lost.
 
 See also [DataMiner web apps Feature Release 10.3.12](xref:Web_apps_Feature_Release_10.3.12#interactive-automation-scripts-fileselector-now-allows-to-keep-the-files-that-were-already-uploaded-after-the-ui-was-shown-id_37260)
+
+#### DataMiner Cube - Alarm Console: Button to show focused alarms now shows the number of focused alarms [ID_37455]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+
+From now on, the button to only show the focused alarms in the current alarm tab will show the number of focused alarms in the current alarm tab and will only be visible when the alarm tab actually contains focused alarms.
 
 #### Surveyor: Enhanced processing of alarm statistics [ID_37552]
 

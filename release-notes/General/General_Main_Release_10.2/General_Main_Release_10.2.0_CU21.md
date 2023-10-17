@@ -26,6 +26,12 @@ The SLAnalytics feature "pattern matching" has now fully been integrated in the 
 
 A number of security enhancements have been made.
 
+#### DataMiner Cube - Alarm Console: Button to show focused alarms now shows the number of focused alarms [ID_37455]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+
+From now on, the button to only show the focused alarms in the current alarm tab will show the number of focused alarms in the current alarm tab and will only be visible when the alarm tab actually contains focused alarms.
+
 #### DataMiner Cube - Surveyor: Enhanced processing of alarm statistics [ID_37552]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
