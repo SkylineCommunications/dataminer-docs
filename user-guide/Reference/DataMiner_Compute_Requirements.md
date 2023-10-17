@@ -5,17 +5,19 @@ uid: DataMiner_Compute_Requirements
 # DataMiner Compute Requirements
 
 > [!IMPORTANT]
-> The compute requirements below are only relevant for older supported storage setups. With [Storage as a Service (STaaS)](xref:STaaS), scheduled for production release in Q3 of 2023, the entire DataMiner setup is configured automatically for optimal performance.
+> If you use [DataMiner as a Service (DaaS)](xref:Deploying_a_DMS_in_the_cloud), your entire DataMiner setup is automatically configured for optimal performance.
 
-To make sure your DataMiner System performs optimally, it is important that sufficient resources are available. The overview below shows the requirements for a DataMiner setup using the latest version of DataMiner, with Cassandra and Elasticsearch. Minimum requirements are displayed in gray, default requirements in light blue, and requirements for high-end applications in dark blue. Below this, you will find more detailed information on the requirements.
+To make sure your DataMiner System performs optimally, it is important that sufficient resources are available. The overview below shows the requirements for a DataMiner setup using the latest version of DataMiner, with self-hosted Cassandra and OpenSearch databases. If you are using [Storage as a Service](xref:STaaS), only the requirements for DataMiner itself will be relevant for you.
+
+Minimum requirements are displayed in gray, default requirements in light blue, and requirements for high-end applications in dark blue. Below this, you will find more detailed information on the requirements.
 
 > [!TIP]
 >
 > - To estimate how many nodes your DMS will need and what the specifications of these nodes should be, you can use the [DataMiner Node Calculator](https://community.dataminer.services/calculator/)
 > - For other information on requirements (e.g. client requirements), see [DataMiner System Requirements](https://community.dataminer.services/documentation/dataminer-system-requirements/).
 
-> [!IMPORTANT]
-> If you intend to run e.g. DataMiner, Cassandra, and Elasticsearch on a single server, the hardware requirements in the diagram below need to be added up. So, when it comes to RAM, in this case you would need a minimum of 96 GB (32 GB for DataMiner, 32 GB for Cassandra, and 32 GB for Elasticsearch).
+> [!NOTE]
+> While this is not recommended, you can run DataMiner, Cassandra, and Elasticsearch on a single server. In that case, the hardware requirements in the diagram below need to be added up. For example, for RAM, you would need a minimum of 96 GB (32 GB for DataMiner, 32 GB for Cassandra, and 32 GB for Elasticsearch).
 
 ![DataMiner setup](~/user-guide/images/dataminer-compute-requirements_V04_Outline.svg "DataMiner setup")
 
@@ -66,15 +68,15 @@ If there is more than one DataMiner Agent in your cluster, the time in the clust
 
 ### Microsoft .NET
 
-- Microsoft .NET Framework **4.6.2** is recommended for versions prior to DataMiner 10.1.11.
+In the table below, you can find which .NET (Framework) versions are required for specific DataMiner versions.
 
-- From DataMiner **10.1.11** onwards, Microsoft .NET Framework **4.8** is required.
-
-- From DataMiner **10.1.12** onwards, in addition to Microsoft .NET Framework 4.8, Microsoft .NET **5.0** is required.
-
-- From DataMiner **10.3.0 [CU3]/10.3.3** onwards, in addition to Microsoft .NET Framework 4.8 and .NET 5.0, .NET **6.0** is also required.
-
-- From DataMiner **10.3.9/10.4.0** onwards, in addition to Microsoft .NET Framework 4.8, .NET **6.0** is also required.
+| DataMiner version       | Required .NET (Framework) versions        |
+|-------------------------|-------------------------------------------|
+| DataMiner 10.3.9/10.4.0 and higher | Microsoft .NET Framework 4.8 and .NET 6.0 |
+| DataMiner 10.3.3 to 10.3.8<br>DataMiner 10.3.0 main release versions from 10.3.0 [CU3] onwards | Microsoft .NET Framework 4.8, .NET 5.0, and .NET 6.0 |
+| DataMiner 10.1.12 to 10.3.2/10.3.0 [CU2] | Microsoft .NET Framework 4.8 and .NET 5.0 |
+| DataMiner 10.1.11 | Microsoft .NET Framework 4.8 |
+| DataMiner versions prior to 10.1.11 | Microsoft .NET Framework 4.6.2 |
 
 > [!NOTE]
 > We recommend always upgrading to the latest .NET Framework version.
@@ -104,7 +106,7 @@ The minimum supported version for the Cassandra software is **3.11**. If a datab
 
 > [!NOTE]
 >
-> - Cassandra 4.x does not support Windows so you will need extra Linux servers to host the Cassandra database in order to use this version.
+> - Cassandra 4.x does not support Windows, so you will need extra Linux servers to host the Cassandra database in order to use this version.
 > - Currently, Cassandra versions 4.0 and 4.1 are supported in the 4.x range.
 
 ### RAM
@@ -147,9 +149,9 @@ We recommend installing Cassandra on Linux. In fact, from Cassandra 4.0 onwards,
 
 If there is more than one Cassandra node, the time in the cluster must be synchronized (NTP).
 
-## Elasticsearch requirements
+## OpenSearch/Elasticsearch requirements
 
-For certain DataMiner features, an additional indexing engine is required. This [Elasticsearch cluster](https://community.dataminer.services/expert-hub-elastic/) comes with additional requirements. For these, we follow Elastics’s official [guidelines](https://www.elastic.co/guide/en/elasticsearch/guide/current/hardware.html).
+Several DataMiner features are only available if your data storage setup includes an [indexing database](xref:Indexing_Database). Ideally, this should be an OpenSearch cluster. An Elasticsearch cluster can be used instead, but this is not recommended.
 
 ### RAM
 
@@ -169,14 +171,14 @@ In addition, the disk throughput is of vital importance. The following minimum r
 
 ### CPU
 
-A passmark of >10K is sufficient for Elasticsearch. Having an extra logical core in favor of a few extra CPU cycles is preferred.
+A passmark of >10K is sufficient. Having an extra logical core in favor of a few extra CPU cycles is preferred.
 
 ### Network
 
 Gigabit Ethernet is required for throughput, and low latency is required for easy cluster communication. Latency between the different nodes in a cluster should be similar.
 
-If there are multiple Elasticsearch nodes in the cluster, a [shared network path](xref:Configuring_Elasticsearch_backups_Windows) is required where the backups of the database can be stored.
-
 ### Operating System
+
+We recommend installing OpenSearch on Linux. While OpenSearch is compatible with Windows (see [Operating system compatibility](https://opensearch.org/docs/2.2/install-and-configure/install-opensearch/index/#operating-system-compatibility)), this setup is not covered in our testing and therefore not recommended.
 
 Elasticsearch can be installed on the operating system of your choice, under the condition that it is supported by Elastic. A 64-bit OS is preferred.
