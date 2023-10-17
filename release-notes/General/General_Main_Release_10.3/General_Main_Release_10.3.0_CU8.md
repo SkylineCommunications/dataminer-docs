@@ -122,7 +122,7 @@ Not all [Protocol.Params.Param.Interprete.Others](xref:Protocol.Params.Param.Int
 
 When DataMiner was restarted, in some rare cases, it would not start up again.
 
-#### DataMiner backup: Number of backups to be kept would be interpreted incorrectly [ID_37143]
+#### DataMiner backup: Number of backups to be kept would be interpreted incorrectly [ID_37143] [ID_37509]
 
 <!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
 
@@ -133,7 +133,9 @@ Up to now, this setting would incorrectly be interpreted as the total number of 
 From now on, the number of backups you specify will be the number of backups that will be kept per DMA or Failover setup. For example, when you set the number of backups to be kept to 3 on a DMS with 5 DMAs or Failover setups, 3 backups will now be kept on every DMA or Failover setup.
 
 > [!NOTE]
-> A DataMiner Agent will now store its backups in a subfolder of the folder set as backup location. The name of that subfolder will be identical to the DMA ID of the DataMiner Agent in question.
+>
+> - A DataMiner Agent will now store its backups in a subfolder of the folder set as backup location. The name of that subfolder will be identical to the DMA ID of the DataMiner Agent in question.
+> - When you upgrade to this DataMiner version, an upgrade action will automatically divide the number of backups to be kept by the number of DataMiner Agents in the DMS if the number of backups to be kept is set to more than 3 and if there are at least two DMAs in the DMS. Note that this upgrade action will do nothing if, in the backup settings, you specified that all DMAs in the DMS have to store their backups on the same network path.
 
 #### Inventory & Asset Management: Problem when synchronizing between the DMA and the database [ID_37177]
 
