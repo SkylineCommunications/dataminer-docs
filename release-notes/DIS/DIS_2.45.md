@@ -8,33 +8,31 @@ uid: DIS_2.45
 
 ### IDE
 
-#### Automation Scripts - Rename script & update Exe ID [ID_37423]
+#### XML editor: New Automation script tag options [ID_37423]
 
-A new dropdown is introduced on the Name tag in the Automation script XML with the option to rename the script.
+In the XML editor, you can click a small down arrow in front of certain XML tags to open a shortcut menu. Two new commands have been added.
 
-This will update the linked projects and the xml itself to have the new name.
-
-On the dropdown for the Exe tags, a new option to change the ID has been added. This behaves the same as with QActions and necessary updates will be done to the XML and projects.
+|Tag   | Command       | Function |
+|------|---------------|----------|
+| Name | Rename script | Rename the Automation script XML and update all linked projects. |
+| Exe  | Update Exe ID | Change the ID of the *Exe* code block. |
 
 ### Validator
 
-#### VAL NF - Check Length/LengthType of Parameter Type fixed [ID_37259] [ID_37265]
+#### New checks and error messages [ID_37259] [ID_37265]
 
-The validator has been extended with the following checks:
+The following checks and error messages have been added.
 
-- 2.73 (CheckLengthTypeTag)
+| Check ID | Error message name | Error message |
+|--|--|--|
+| 2.73.1 | MissingTag   | The Protocol.Params.Param.Interprete.LengthType tag is missing |
+| 2.73.2 | EmptyTag     | The Protocol.Params.Param.Interprete.LengthType tag is empty |
+| 2.73.3 | InvalidValue | The Protocol.Params.Param.Interprete.LengthType tag has an invalid value |
+| 2.74.1 | MissingTag   | The Protocol.Params.Param.Interprete.Length tag is missing |
+| 2.74.2 | EmptyTag     | The Protocol.Params.Param.Interprete.Length tag is empty |
+| 2.74.3 | InvalidValue | The Protocol.Params.Param.Interprete.Length tag has an invalid value.<br>Note: Parameters that have Type set to "length" cannot have an Interprete.Length value that is greater than 4. |
 
-  - 2.73.1 (MissingTag): The Protocol.Params.Param.Interprete.LengthType tag is missing
-  - 2.73.2 (EmptyTag): The Protocol.Params.Param.Interprete.LengthType tag is empty
-  - 2.73.3 (InvalidValue): The Protocol.Params.Param.Interprete.LengthType tag has an invalid value
-
-- 2.74 (CheckLengthTag):
-
-  - 2.74.1 (MissingTag): The Protocol.Params.Param.Interprete.Length tag is missing
-  - 2.74.2 (EmptyTag): The Protocol.Params.Param.Interprete.Length tag is empty
-  - 2.74.3 (InvalidValue): The Protocol.Params.Param.Interprete.Length tag has an invalid value. For parameters that have Type set to "length" it is verified that the value of Interprete.Length is not bigger than 4.
-
-Removed old validator error 2603: RawType double has no length definition.
+Former validator error 2603 (RawType double has no length definition) has been removed.
 
 ## Changes
 
