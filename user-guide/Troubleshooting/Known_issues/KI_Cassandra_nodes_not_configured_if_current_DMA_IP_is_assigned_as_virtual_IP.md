@@ -14,7 +14,7 @@ Unknown
 
 ## Fix
 
-None yet.
+Install DataMiner 10.1.0 [CU6]/10.1.9<!--RN 30213-->.
 
 ## Issue description
 
