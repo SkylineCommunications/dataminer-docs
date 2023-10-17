@@ -29,6 +29,8 @@ keywords: mysearchtest, myteststring, my string
 
 Up to now, when you opened a trend graph showing data from several parameters, only the trend patterns of the first parameter would be loaded onto the graph. From now on, the trend patterns of all parameters shown on the graph will be loaded.
 
+The SLAnalytics feature "pattern matching" has now fully been integrated in the Trending module.
+
 #### Interactive Automation scripts: FileSelector now allows to keep the files that were already uploaded after the UI was shown [ID_37260]
 
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->

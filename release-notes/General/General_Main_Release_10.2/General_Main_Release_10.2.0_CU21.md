@@ -18,6 +18,8 @@ uid: General_Main_Release_10.2.0_CU21
 
 Up to now, when you opened a trend graph showing data from several parameters, only the trend patterns of the first parameter would be loaded onto the graph. From now on, the trend patterns of all parameters shown on the graph will be loaded.
 
+The SLAnalytics feature "pattern matching" has now fully been integrated in the Trending module.
+
 #### Security enhancements [ID_37267]
 
 <!-- RN 37267: MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.11 -->
