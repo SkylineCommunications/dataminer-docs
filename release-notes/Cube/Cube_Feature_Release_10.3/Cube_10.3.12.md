@@ -1,6 +1,9 @@
 ---
 uid: Cube_Feature_Release_10.3.12
-keywords: mysearchtest, myteststring, my string
+keywords:
+- mysearchtest
+- myteststring
+- my string
 ---
 
 # DataMiner Cube Feature Release 10.3.12 – Preview
