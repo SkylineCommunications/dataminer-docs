@@ -2,10 +2,43 @@
 uid: Disconnecting_from_dataminer.services
 ---
 
-# Permanently disconnecting from dataminer.services
+# Disconnecting from dataminer.services
 
-Though this is not recommended, once a DataMiner Agent has been connected to dataminer.services, it is possible to disconnect it again.
-If you only want to temporarily disconnect your system from dataminer.services take a look at [Temporarely disconnecting from dataminer.services](#temporarely-disconnecting-from-dataminer.services)
+Though this is not recommended, once a DataMiner Agent has been connected to dataminer.services, it is possible to disconnect it again. You can either [disconnect temporarily](#temporarily-disconnecting-from-dataminerservices), or [disconnect permanently](#permanently-disconnecting-from-dataminerservices).
+
+## Temporarily disconnecting from dataminer.services
+
+Temporarily disconnect your system from dataminer.services, go to each server that has the CloudGateway module installed, and complete the following steps:
+
+1. Stop the CloudGateway service through the Task Manager:
+
+   1. Open Windows Task Manager.
+
+   1. Go to the *Services* tab.
+
+   1. Locate the *DataMiner CloudGateway* service
+
+   1. Right-click the service and click *Stop*.
+
+1. Disable automatic startup for the CloudGateway service:
+
+   1. Search for *Services* in Windows.
+
+   1. Locate the *DataMiner CloudGateway* service.
+
+   1. Right-click and select *Properties*.
+
+   1. Change the startup type from *Automatic* to *Disabled*.
+
+> [!NOTE]
+> If you do not disable the automatic startup for the service, the CloudGateway module will restart when the server restarts.
+
+To **reconnect your system**, you will need to change the startup type for the DataMiner CloudGateway service from *Disabled* to *Automatic* again and start the service manually.
+
+> [!IMPORTANT]
+> Disconnecting your system for a longer period of time might lead to your cloud session becoming invalid. When this happens, you will need to manually renew the connection via DataMiner Cube by going to *System Center* > *Cloud* and clicking the renew button.
+
+## Permanently disconnecting from dataminer.services
 
 > [!WARNING]
 > Disconnecting a DataMiner System from dataminer.services will result in the **loss of all data for that DataMiner System on dataminer.services**. This action is **irreversible** and can have far-reaching consequences:
@@ -38,28 +71,3 @@ To disconnect a DataMiner Agent from dataminer.services:
 
 > [!NOTE]
 > This procedure is not applicable for DataMiner as a Service (DaaS) systems. If you want to deactivate a DaaS system, contact Skyline Communications. However, note that this will cause that DataMiner System to be permanently removed.
-
-# Temporarely disconnecting from dataminer.services
-
-Follow this procedure if you would like to temporarily disconnect your system from dataminer.services.
-
-Go to each server that has the CloudGateway module installed and complete the following steps:
-
-1. Stop the service through the task manager:
-   1. Open the task manager
-   2. Go to Services
-   3. Find the _DataMiner CloudGateway_ service
-   4. Right-click the service and click **Stop**
-
-2. Disable automatic startup for the service:
-   1. Search for _Services_ in Windows
-   2. Locate the _DataMiner CloudGateway_ service
-   3. Right-click and select _Properties_
-   4. Change the startup type from _Automatic_ to _Disabled_
-
-> [!WARNING]
-> If you do not disable the automatic startup for the service, the CloudGateway module will restart when the server restarts.
-
-If you want to **reconnect your system** you will need to change the startup type for the DataMiner CloudGateway service from _Disabled_ to _Automatic_ again and start the service manually. 
-
-Disconnecting your system for a longer period of time might lead to your Cloud session becoming invalid. When this happens you will need to manually renew the connection by going to _System center > Cloud_ in Cube and clicking the renew button.
