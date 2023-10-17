@@ -13,7 +13,7 @@ The Cassandra Cluster Migrator tool (called *SLCCMigrator.exe*) is available on 
 > [!NOTE]
 > From DataMiner 10.3.7/10.3.0[CU4] onwards, the Cassandra Cluster Migrator tool is able to establish TLS connections towards the databases. To enable this functionality, configure TLS encryption on your [OpenSearch database](xref:Installing_OpenSearch_database#tls-configuration) or [Elasticsearch database](xref:Security_Elasticsearch#client-server-tls-encryption) and your [Cassandra database](xref:Security_Cassandra_TLS), and enable the *Cassandra TLS* and *Elastic TLS* options when configuring the [Cassandra and OpenSearch/Elasticsearch settings](#running-the-migration) in the migration tool.<!-- RN 34852 --> For OpenSearch, configuring TLS is highly recommended.
 
-### Prerequisites
+## Prerequisites
 
 - All DMAs must run DataMiner 10.2.0/10.2.2 or higher.
 
@@ -50,7 +50,7 @@ During the migration, each DMA will go through the following stages:
 
 ### [Running a regular migration](#tab/tabid-1)
 
-If your system does not use an indexing database yet or if it already uses a OpenSearch or Elasticsearch cluster connected to the DMS, you can run a regular migration as described below. However, if your system uses an Elasticsearch database installed on a DMA, follow the procedure under [Running a migration with bespoke Elasticsearch data](#running-a-migration-with-bespoke-elasticsearch-data).
+If your system does not use an indexing database yet or if it already uses a OpenSearch or Elasticsearch cluster connected to the DMS, you can run a regular migration as described below. However, if your system uses an Elasticsearch database installed on a DMA, follow the procedure in the next tab, "Running a migration with bespoke Elasticsearch data".
 
 1. On one of the DMAs in your cluster, go to `C:\Skyline DataMiner\Tools\`, and run *SLCCMigrator.exe*.
 
@@ -85,7 +85,7 @@ If your system does not use an indexing database yet or if it already uses a Ope
 
      - *Elastic password*: The password for the specified username.
 
-     - *Elastic TLS*: Available from DataMiner 10.3.7/10.3.0[CU4] onwards. Allows you to establish TLS connections towards the databases. <!-- RN 34852 -->
+     - *Elastic TLS*: Available from DataMiner 10.3.7/10.3.0[CU4] onwards. Allows you to establish TLS connections towards the databases. For OpenSearch, configuring this is highly recommended.<!-- RN 34852 -->
 
 1. Once the DMAs have been initialized, start the migration. You can do this for all DMAs at once with the *Start Migration* button at the top, or for one DMA at a time by clicking the *Details* button for that DMA and selecting *Migrate all storages*.
 
