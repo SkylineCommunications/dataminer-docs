@@ -7,7 +7,9 @@ uid: Unattended_DM_installation
 The unattended installation process can be used to install a standalone DMA, but also to install a cluster, set up Failover, or even add a DMA to an existing cluster.
 
 > [!NOTE]
-> The 10.2.0 installer currently does not support unattended installation of a cluster.
+>
+> - The 10.2.0 installer currently does not support unattended installation of a cluster.
+> - Unattended installation of a DataMiner System with OpenSearch database is currently not supported.
 
 To make sure the installation is executed correctly, a valid configuration file and license file must be included in the same folder as *Setup.exe*. See [Unattended installation configuration file](#unattended-installation-configuration-file).
 
