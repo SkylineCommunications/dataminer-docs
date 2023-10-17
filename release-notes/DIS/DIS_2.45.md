@@ -18,15 +18,18 @@ On the dropdown for the Exe tags, a new option to change the ID has been added. 
 
 ### Validator
 
-#### VAL NF - Check Length/LengthType of Parameter Type fixed [ID_37259], [ID_37265]
+#### VAL NF - Check Length/LengthType of Parameter Type fixed [ID_37259] [ID_37265]
 
 The validator has been extended with the following checks:
 
 - 2.73 (CheckLengthTypeTag)
+
   - 2.73.1 (MissingTag): The Protocol.Params.Param.Interprete.LengthType tag is missing
   - 2.73.2 (EmptyTag): The Protocol.Params.Param.Interprete.LengthType tag is empty
   - 2.73.3 (InvalidValue): The Protocol.Params.Param.Interprete.LengthType tag has an invalid value
+
 - 2.74 (CheckLengthTag):
+
   - 2.74.1 (MissingTag): The Protocol.Params.Param.Interprete.Length tag is missing
   - 2.74.2 (EmptyTag): The Protocol.Params.Param.Interprete.Length tag is empty
   - 2.74.3 (InvalidValue): The Protocol.Params.Param.Interprete.Length tag has an invalid value. For parameters that have Type set to "length" it is verified that the value of Interprete.Length is not bigger than 4.
@@ -43,7 +46,7 @@ The driver help generation in DIS has been updated so that it now generates a ma
 
 An issue was also fixed related to the menu item for opening the OneNote of a driver. Opening the OneNote of a driver should now work again.
 
-#### SLDisCSharpAnalysis and SLDisCompiler replaced by NuGet packages [ID_37536], [ID_37359]
+#### SLDisCSharpAnalysis and SLDisCompiler replaced by NuGet packages [ID_37536] [ID_37359]
 
 The SLDisCsharpAnalysis project has been extracted from DIS and new NuGet packages have been created/extend to hold this extracted functionality:
 
