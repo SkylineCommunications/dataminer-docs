@@ -164,6 +164,12 @@ Up to now, when you stopped both *Alarm Focus* and *Automatic Incident Tracking*
 
 When a resource did not have both a minimum and maximum value for a particular range point, the resource capability exposers would not work correctly for that range point.
 
+#### Cassandra Cluster Migrator tool would stop migrating certain tables after 1000 rows [ID_37513]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When the Cassandra Cluster Migrator tool (*SLCCMigrator.exe*) was migrating tables from MySQL to Cassandra Cluster, in some cases, it would incorrectly stop after 1000 rows.
+
 #### Storage as a Service: Row limits were disregarded when a post filter was applied to a query result [ID_37515]
 
 <!-- MR 10.4.0 - FR 10.3.12 -->
