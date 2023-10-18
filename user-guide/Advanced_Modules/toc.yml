@@ -429,7 +429,7 @@ items:
             items:
               - name: EPM feed
                 topicUid: DashboardCPEFeed
-              - name: Drop-down feed
+              - name: Dropdown feed
                 topicUid: DashboardDropdownFeed
               - name: List feed
                 topicUid: DashboardListFeed
@@ -444,10 +444,10 @@ items:
               - name: Query filter feed
                 topicUid: DashboardQueryFilterFeed
           - name: Basic controls
-            topicUid: DashboardDropdownFeed
+            topicUid: DashboardDropdown
             items:
-              - name: Drop-down feed
-                topicUid: DashboardDropdownFeed
+              - name: Dropdown
+                topicUid: DashboardDropdown
               - name: Numeric input
                 topicUid: DashboardNumericInputFeed
               - name: Text input
