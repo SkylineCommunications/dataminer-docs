@@ -128,6 +128,12 @@ A number of enhancements have been made with regard to error handling.
 
 If, upon detection of a new trend, the trend returns to the old trend (i.e. the trend before the behavioral change) within the hour, the behavioral change will be labeled a level shift rather than a trend change.
 
+#### ManagerStore: Exceptions thrown during actions of high importance will now be logged as errors [ID_37631]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+Up to now, when managers under the control of the ManagerStore framework in SLNet (DOM, Profiles, User-Defined APIs) threw exceptions during a de-initialization, a failover switch or a midnight synchronization, those exceptions would be logged as level-5 log entries of type *Info*. From now on, they will be logged as level-0 log entries of type *Error*.
+
 ### Fixes
 
 #### NATSCustodian could incorrectly pick an offline DMA as NAS candidate [ID_37312]
@@ -188,13 +194,6 @@ When the Cassandra Cluster Migrator tool (*SLCCMigrator.exe*) was migrating tabl
 
 In cases where SLDataGateway retrieved an entire table and then applied a filter afterwards, any row limits defined for the query in question would incorrectly be disregarded.
 
-#### SLNet: Memory leak due to MessageBroker instances not being cleaned up properly [ID_37525]
-
-<!-- MR 10.3.0 [CU8] - FR 10.3.12 -->
-<!-- Reverted from MR 10.3.0 [CU8] by RN 37630 -->
-
-In some cases, SLNet could leak memory due to MessageBroker instances not being cleaned up properly.
-
 #### Storage as a Service: Paged data retrieval operations would be cut off prematurely [ID_37533]
 
 <!-- MR 10.4.0 - FR 10.3.12 -->
@@ -217,4 +216,4 @@ When an element was deleted, `PropertyChangeEvent` instances for that element wo
 
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
 
-When SLAnalytics lost connection with SLDataGateway, an exception would be thrown, causing SLAnalytics to leak memory or to become unresponsive.
+When SLAnalytics lost connection with SLDataGateway, an exception would be thrown, causing SLAnalytics to become unresponsive.

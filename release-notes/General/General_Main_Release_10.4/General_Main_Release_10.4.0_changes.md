@@ -543,6 +543,12 @@ Because of a number of enhancements, overall performance of DOM and SRM queries 
 
 A number of enhancements have been made with regard to error handling.
 
+#### ManagerStore: Exceptions thrown during actions of high importance will now be logged as errors [ID_37631]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+Up to now, when managers under the control of the ManagerStore framework in SLNet (DOM, Profiles, User-Defined APIs) threw exceptions during a de-initialization, a failover switch or a midnight synchronization, those exceptions would be logged as level-5 log entries of type *Info*. From now on, they will be logged as level-0 log entries of type *Error*.
+
 ### Fixes
 
 #### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID_34981]
