@@ -191,6 +191,7 @@ In cases where SLDataGateway retrieved an entire table and then applied a filter
 #### SLNet: Memory leak due to MessageBroker instances not being cleaned up properly [ID_37525]
 
 <!-- MR 10.3.0 [CU8] - FR 10.3.12 -->
+<!-- Reverted from MR 10.3.0 [CU8] by RN 37630 -->
 
 In some cases, SLNet could leak memory due to MessageBroker instances not being cleaned up properly.
 
