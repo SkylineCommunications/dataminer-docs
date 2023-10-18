@@ -213,8 +213,6 @@
           topicUid: FAQ_GDPR
         - name: Does Skyline offer an escrow service
           topicUid: FAQ_Escrow
-        - name: Does Skyline offer serial and GPIO converters
-          topicUid: FAQ_Serial_GPIO_converters
         - name: What are the principal advantages of DataMiner
           topicUid: FAQ_Principal_advantages
         - name: What do you mean with multi-vendor technology
