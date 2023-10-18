@@ -205,3 +205,9 @@ In some cases, a newly created element could get assigned the same DmaId/Element
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
 
 When an element was deleted, `PropertyChangeEvent` instances for that element would incorrectly not get removed from the SLNet event cache.
+
+#### SLAnalytics: Problem after losing connection with SLDataGateway [ID_37603]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When SLAnalytics lost connection with SLDataGateway, an exception would be thrown, causing SLAnalytics to leak memory or to become unresponsive.
