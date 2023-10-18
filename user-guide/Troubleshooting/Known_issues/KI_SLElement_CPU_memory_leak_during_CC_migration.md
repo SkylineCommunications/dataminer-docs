@@ -6,7 +6,7 @@ uid: KI_SLElement_CPU_memory_leak_during_CC_migration
 
 ## Affected versions
 
-DataMiner 10.1.0/10.1.2 up to 10.2.0[CU9]/10.3.0.
+DataMiner 10.1.0/10.1.2 up to 10.2.0 [CU9]/10.3.0.
 
 ## Cause
 

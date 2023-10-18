@@ -43,8 +43,8 @@ uid: Known_issues
 | [Various SLElement issues](xref:KI_SLElement_various_issues) | See [detailed page](xref:KI_SLElement_various_issues). | November 25, 2022 |
 | [Element data lost after migrating elements in Cassandra Cluster setup](xref:KI_element_data_loss_after_migration_in_CC_setup) | DataMiner 10.1.0 up to 10.2.0 [CU11]<br>DataMiner 10.0.11 up to 10.3.1 | November 15, 2022 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | November 8, 2022 |
-| [Excessive SLElement CPU usage during Cassandra Cluster migration](xref:KI_SLElement_CPU_high_during_CC_migration) | DataMiner 10.1.0/10.1.2 up to 10.2.0[CU9]/10.3.0 | October 28, 2022 |
-| [SLElement memory leak during Cassandra Cluster migration](xref:KI_SLElement_CPU_memory_leak_during_CC_migration) | DataMiner 10.1.0/10.1.2 up to 10.2.0[CU9]/10.3.0. | October 28, 2022 |
+| [Excessive SLElement CPU usage during Cassandra Cluster migration](xref:KI_SLElement_CPU_high_during_CC_migration) | DataMiner 10.1.0/10.1.2 up to 10.2.0 [CU9]/10.3.0 | October 28, 2022 |
+| [SLElement memory leak during Cassandra Cluster migration](xref:KI_SLElement_CPU_memory_leak_during_CC_migration) | DataMiner 10.1.0/10.1.2 up to 10.2.0 [CU9]/10.3.0. | October 28, 2022 |
 | [Data from Elasticsearch cluster with IPv6 addresses offloaded to files](xref:KI_Elasticsearch_IPv6) | Any version prior to DataMiner 10.2.0 [CU11]/10.3.2 with Elasticsearch cluster using IPv6 addresses | October 21, 2022 |
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From 10.2.0 CU1 and 10.2.4 onwards | September 2, 2022 |
 
@@ -84,8 +84,8 @@ uid: Known_issues
 | [Multiple issues when Failover based on hostnames is used](xref:KI_Failover_with_hostnames) | From DataMiner 10.2.0/10.1.8 <br>onwards | November 15, 2022 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | November 8, 2022 |
 | [SLDataGateway memory leak during Cassandra Cluster migration](xref:KI_SLDataGateway_leak_during_CC_migration) | DataMiner 10.1.0 prior to CU22<br>DataMiner 10.2.0 prior to CU10<br>DataMiner 10.1.2 to 10.2.12 | November 3, 2022 |
-| [Excessive SLElement CPU usage during Cassandra Cluster migration](xref:KI_SLElement_CPU_high_during_CC_migration) | DataMiner 10.1.0/10.1.2 up to 10.2.0[CU9]/10.3.0 | October 28, 2022 |
-| [SLElement memory leak during Cassandra Cluster migration](xref:KI_SLElement_CPU_memory_leak_during_CC_migration) | DataMiner 10.1.0/10.1.2 up to 10.2.0[CU9]/10.3.0 | October 28, 2022 |
+| [Excessive SLElement CPU usage during Cassandra Cluster migration](xref:KI_SLElement_CPU_high_during_CC_migration) | DataMiner 10.1.0/10.1.2 up to 10.2.0 [CU9]/10.3.0 | October 28, 2022 |
+| [SLElement memory leak during Cassandra Cluster migration](xref:KI_SLElement_CPU_memory_leak_during_CC_migration) | DataMiner 10.1.0/10.1.2 up to 10.2.0 [CU9]/10.3.0 | October 28, 2022 |
 | [SLProtocol memory leak when HTTP connectors are used](xref:KI_SLProtocol_memory_leak_HTTP) | DataMiner 10.1.0 [CU19], 10.2.0 <br>[CU7], and 10.2.8 to 10.2.11 | October 26, 2022 |
 | [Data from Elasticsearch cluster with IPv6 addresses offloaded to files](xref:KI_Elasticsearch_IPv6) | Any version prior to DataMiner 10.2.0 [CU11]/10.3.2 with Elasticsearch cluster using IPv6 addresses | October 21, 2022 |
 | [Increased CPU load and degraded performance because of excessive number of SPI events](xref:Excessive_SPI_events_causing_CPU_load) | 10.2 Main and Feature Release <br>versions prior to 10.2.0 [CU6]<br> and 10.2.9. | October 19, 2022 |
@@ -119,8 +119,8 @@ uid: Known_issues
 | [Multiple issues when Failover based on hostnames is used](xref:KI_Failover_with_hostnames) | From DataMiner 10.2.0/10.1.8 <br>onwards | November 15, 2022 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | November 8, 2022 |
 | [SLDataGateway memory leak during Cassandra Cluster migration](xref:KI_SLDataGateway_leak_during_CC_migration) | DataMiner 10.1.0 prior to CU22<br>DataMiner 10.2.0 prior to CU10<br>DataMiner 10.1.2 to 10.2.12 | November 3, 2022 |
-| [Excessive SLElement CPU usage during Cassandra Cluster migration](xref:KI_SLElement_CPU_high_during_CC_migration) | DataMiner 10.1.0/10.1.2 up to 10.2.0[CU9]/10.3.0. | October 28, 2022 |
-| [SLElement memory leak during Cassandra Cluster migration](xref:KI_SLElement_CPU_memory_leak_during_CC_migration) | DataMiner 10.1.0/10.1.2 up to 10.2.0[CU9]/10.3.0 | October 28, 2022 |
+| [Excessive SLElement CPU usage during Cassandra Cluster migration](xref:KI_SLElement_CPU_high_during_CC_migration) | DataMiner 10.1.0/10.1.2 up to 10.2.0 [CU9]/10.3.0. | October 28, 2022 |
+| [SLElement memory leak during Cassandra Cluster migration](xref:KI_SLElement_CPU_memory_leak_during_CC_migration) | DataMiner 10.1.0/10.1.2 up to 10.2.0 [CU9]/10.3.0 | October 28, 2022 |
 | [SLProtocol memory leak when HTTP connectors are used](xref:KI_SLProtocol_memory_leak_HTTP) | DataMiner 10.1.0 [CU19], 10.2.0 <br>[CU7], and 10.2.8 to 10.2.11 | October 26, 2022 |
 | [Increased CPU load and degraded performance because of excessive number of SPI events](xref:Excessive_SPI_events_causing_CPU_load) | 10.2 Main and Feature Release <br>versions prior to 10.2.0 [CU6]<br> and 10.2.9. | October 19, 2022 |
 | [SLDataGateway memory leak](xref:KI_SLDataGateway_memory_leak) | Cassandra Cluster setups<br>prior to 10.2.0 [CU8]/10.2.11 | October 10, 2022 |
