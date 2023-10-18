@@ -252,7 +252,7 @@ As dashboards are a purely visual artifact, the source code is rarely changed di
 
 ## Publishing Visio files
 
-Visio files can be used as a custom user interface for elements, services, or views. They are generally published as single .vsix files.
+Visio files can be used as a custom user interface for elements, services, or views. They are generally published as single .vsdx files.
 
 Publishing them can be done in the same way as [publishing dashboards](#publishing-dashboards), with the following differences:
 
