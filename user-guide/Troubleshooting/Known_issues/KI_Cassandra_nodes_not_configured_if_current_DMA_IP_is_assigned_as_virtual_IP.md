@@ -6,7 +6,8 @@ uid: KI_Cassandra_nodes_not_configured_if_current_DMA_IP_is_assigned_as_virtual_
 
 ## Affected versions
 
-10.1.x
+- From DataMiner 10.1.0 [CU1] to 10.1.0 [CU5]
+- From DataMiner 10.1.1 to 10.1.9
 
 ## Cause
 

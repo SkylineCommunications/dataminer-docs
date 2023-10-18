@@ -127,7 +127,7 @@ uid: Known_issues
 | [Taskbar Utility performance issue while agents are being upgraded](xref:KI_Taskbar_Utility_performance_issue_while_agents_are_being_upgraded) | 10.1.0 [CU19] and 10.2.0 [CU7]<br>10.2.10 | September 23, 2022 |
 | [SLDMS Hosting Agent cache issue](xref:KI_SLDMS_hosting_agent_cache_issue) | 10.2 Main & Feature Release<br>prior to 10.2.0 CU7 and 10.2.10 | September 15, 2022 |
 | [Closed alarms migrated too slowly from dms-activealarms index in Elasticsearch database](xref:KI_Closed_alarms_migrated_too_slowly) | Versions using Elasticsearch<br>for alarm indexing prior to<br>10.2.0 CU8 and 10.2.11 | September 14, 2022 |
-| [Cassandra nodes not configured if current DMA IP is assigned as virtual IP](xref:KI_Cassandra_nodes_not_configured_if_current_DMA_IP_is_assigned_as_virtual_IP) | 10.1.x | - |
+| [Cassandra nodes not configured if current DMA IP is assigned as virtual IP](xref:KI_Cassandra_nodes_not_configured_if_current_DMA_IP_is_assigned_as_virtual_IP) | DataMiner 10.1.0 [CU1]/10.1.1 to 10.1.0 [CU5]/10.1.9 | - |
 | [Migration of Ticketing data from Cassandra to Elasticsearch fails](xref:KI_Migration_of_Ticketing_data_from_Cassandra_to_Elasticsearch_fails) | 10.1.x<br>10.0.x | - |
 | [NATS error message after 10.1 installation](xref:KI_NATS_error_message_after_10_1_installation) | 10.1.x | - |
 | [Smart-serial communication no longer working](xref:KI_Smart-serial_communication_no_longer_working) | 10.1.x | - |

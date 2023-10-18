@@ -233,8 +233,6 @@ items:
             topicUid: KI_Failover_with_hostnames
           - name: NATS not starting if DMS name contains special characters
             topicUid: KI_NATS_not_starting_special_chars
-          - name: Excessive SLElement CPU usage during Cassandra Cluster migration
-            topicUid: KI_SLElement_CPU_high_during_CC_migration
           - name: Upgrade fails because of VerifyClusterPort.dll prerequisite
             topicUid: KI_Upgrade_fails_VerifyClusterPorts_prerequisite
           - name: DataMiner Cube freeze on startup
