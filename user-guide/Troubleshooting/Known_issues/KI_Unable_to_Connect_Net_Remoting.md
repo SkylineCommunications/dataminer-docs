@@ -16,7 +16,7 @@ Because of a race condition in DataMiner Cube you may be unable to connect to yo
 
 ## Fix
 
-No fix is available yet.
+Install DataMiner 10.3.9/10.4.0<!--RN 37022-->.
 
 ## Workaround
 

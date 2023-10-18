@@ -213,48 +213,28 @@ items:
             topicUid: KI_DataMinerMessageBroker2
           - name: Elements not loading after upgrade of DMS with multiple Elasticsearch clusters
             topicUid: KI_elements_not_loading_in_DMS_with_multiple_ES
-          - name: SLNet deadlock in EPM setups
-            topicUid: KI_SLNet_Deadlock_EPM_Setups
           - name: Max Payload exceptions occur when using MessageBroker with chunking
             topicUid: KI_DataMinerMessageBroker_Chunking_MaxPayload
-          - name: Unable to connect to DMS when using .NET Remoting
-            topicUid: KI_Unable_to_Connect_Net_Remoting
           - name: Various issues with a geo-redundant Cassandra setup with multiple data centers
             topicUid: KI_Multiple_Datacenters
-          - name: Cassandra disconnects after loss of a single node
-            topicUid: KI_Cassandra_disconnects_after_loss_of_a_single_node
           - name: Corrupted low-code app after concurrent editing actions
             topicUid: KI_app_corruption_after_editing
-          - name: Cassandra cluster data not offloaded while database is unavailable
-            topicUid: KI_Cassandra_cluster_data_not_offloaded
           - name: Elasticsearch not initialized when DataMiner starts up
             topicUid: KI_Elasticsearch_not_initialized_on_DMA_startup
           - name: DataMiner keeps trying to restart when Elasticsearch is unavailable
             topicUid: KI_Restart_loop_when_Elasticsearch_unavailable
-          - name: SRM - Auto Select Resource not read for silent booking
-            topicUid: KI_SRM_Auto_Select_Resource_Not_Read
           - name: IP address in SAN field of TLS certificate ignored in Windows 2012 R2
             topicUid: KI_Win2012R2_ignores_IP_in_SAN_field
           - name: Local user unable to access DMA after first reboot after installation
             topicUid: KI_Local_user_unable_to_access_DMA_after_first_reboot_after_installation
-          - name: Contents of state_changes table not migrated after Cassandra Cluster migration
-            topicUid: KI_Contents_of_State_changes_Table_not_Migrated_after_Cassandra_Cluster_Migration
-          - name: Vertical text in Visual Overview not displayed correctly
-            topicUid: KI_Visual_Overview_Vertical_Text_no_longer_working
           - name: Various SLElement issues
             topicUid: KI_SLElement_various_issues
           - name: Multiple issues when Failover based on hostnames is used
             topicUid: KI_Failover_with_hostnames
           - name: NATS not starting if DMS name contains special characters
             topicUid: KI_NATS_not_starting_special_chars
-          - name: Excessive SLElement CPU usage during Cassandra Cluster migration
-            topicUid: KI_SLElement_CPU_high_during_CC_migration
-          - name: SLElement memory leak during Cassandra Cluster migration
-            topicUid: KI_SLElement_CPU_memory_leak_during_CC_migration
           - name: Upgrade fails because of VerifyClusterPort.dll prerequisite
             topicUid: KI_Upgrade_fails_VerifyClusterPorts_prerequisite
-          - name: Cassandra nodes not configured if current DMA IP is assigned as virtual IP
-            topicUid: KI_Cassandra_nodes_not_configured_if_current_DMA_IP_is_assigned_as_virtual_IP
           - name: DataMiner Cube freeze on startup
             topicUid: KI_DataMiner_Cube_freeze_on_startup
           - name: Migration of Ticketing data from Cassandra to Elasticsearch fails
@@ -262,8 +242,30 @@ items:
           - name: Setting a protocol to production takes a long time
             topicUid: KI_Setting_a_protocol_to_production_takes_a_long_time
       - name: Resolved issues
-        topicUid: KI_offload_database_incorrect_integer_value
+        topicUid: KI_SLNet_Deadlock_EPM_Setups
         items:
+          - name: SLNet deadlock in EPM setups
+            topicUid: KI_SLNet_Deadlock_EPM_Setups
+          - name: Unable to connect to DMS when using .NET Remoting
+            topicUid: KI_Unable_to_Connect_Net_Remoting
+          - name: Various resolved issues with a geo-redundant Cassandra setup with multiple data centers
+            topicUid: KI_Multiple_Datacenters_resolved_issues
+          - name: Cassandra disconnects after loss of a single node
+            topicUid: KI_Cassandra_disconnects_after_loss_of_a_single_node
+          - name: Cassandra cluster data not offloaded while database is unavailable
+            topicUid: KI_Cassandra_cluster_data_not_offloaded
+          - name: SRM - Auto Select Resource not read for silent booking
+            topicUid: KI_SRM_Auto_Select_Resource_Not_Read
+          - name: Contents of state_changes table not migrated after Cassandra Cluster migration
+            topicUid: KI_Contents_of_State_changes_Table_not_Migrated_after_Cassandra_Cluster_Migration
+          - name: Vertical text in Visual Overview not displayed correctly
+            topicUid: KI_Visual_Overview_Vertical_Text_no_longer_working
+          - name: Excessive SLElement CPU usage during Cassandra Cluster migration
+            topicUid: KI_SLElement_CPU_high_during_CC_migration
+          - name: SLElement memory leak during Cassandra Cluster migration
+            topicUid: KI_SLElement_CPU_memory_leak_during_CC_migration
+          - name: Cassandra nodes not configured if current DMA IP is assigned as virtual IP
+            topicUid: KI_Cassandra_nodes_not_configured_if_current_DMA_IP_is_assigned_as_virtual_IP
           - name: Offload to MySQL offload database fails
             topicUid: KI_offload_database_incorrect_integer_value
           - name: Cassandra backups no longer working
