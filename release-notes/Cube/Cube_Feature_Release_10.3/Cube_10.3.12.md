@@ -69,6 +69,12 @@ When you panned a trend graph, in some cases, the graph would suddenly disappear
 > [!NOTE]
 > From now on, trending errors will also be logged in the main Cube logging (*System Center > Logging*).
 
+#### Alarm Console: Alarm tab filter would not be re-evaluated when the focus score of an alarm was updated [ID_37475]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+
+When an alarm in a filtered alarm tab received a focus score update, the system would incorrectly not re-evaluate whether that alarm still matched the filter that was applied.
+
 #### Alarm Console: Display issues when a correlation alarm was based on another correlation alarm [ID_37497]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
@@ -92,3 +98,15 @@ Up to now, when you made a change to a spectrum monitor, in some cases, the ID o
 When, in the Alarm Console, you add a column showing an alarm property you are allowed to edit, all cells in that column will display a pencil icon you can click to update a particular value.
 
 Up to now, when you changed the alignment of such a column, the pencil icons would disappear and the new alignment would not be applied. From now on, when you change the alignment of a column showing an alarm property you are allowed to edit, the new alignment will be applied correctly and the pencil icons will stay visible. However, regardless of the alignment, the pencil icons will stay on the left, and when you change a value, the text box will also be aligned to the left.
+
+#### DataMiner Cube - Alarm Console: Text-to-speech button would overlap the counter showing the number of alarms with severity 'Suggestion' [ID_37590]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+
+In the footer of the Alarm Console, the button to cancel the current text-to-speech operation would overlap the counter showing the number of alarms with severity "Suggestion" in the current alarm tab.
+
+#### DataMiner Cube - Alarm Console: Focus score would not be updated correctly when an alarm was duplicated [ID_37600]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+
+When, in the Alarm Console, an alarm was duplicated, in some cases, its focus score would not be updated correctly.
