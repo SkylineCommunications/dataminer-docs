@@ -22,7 +22,7 @@ uid: Cube_Feature_Release_10.3.12
 
 ### Enhancements
 
-#### DataMiner Cube - Trending: All trend patterns will now be loaded when you open a trend graph showing data from several parameters [ID_36661]
+#### Trending: All trend patterns will now be loaded when you open a trend graph showing data from several parameters [ID_36661]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
 
@@ -40,7 +40,7 @@ When an interactive Automation script is executed **in Cube**, the UI block need
 
 See also [DataMiner web apps Feature Release 10.3.12](xref:Web_apps_Feature_Release_10.3.12#interactive-automation-scripts-fileselector-now-allows-to-keep-the-files-that-were-already-uploaded-after-the-ui-was-shown-id_37260)
 
-#### DataMiner Cube - Alarm Console: Button to show focused alarms now shows the number of focused alarms [ID_37455]
+#### Alarm Console: Button to show focused alarms now shows the number of focused alarms [ID_37455]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
 
@@ -69,7 +69,7 @@ When you panned a trend graph, in some cases, the graph would suddenly disappear
 > [!NOTE]
 > From now on, trending errors will also be logged in the main Cube logging (*System Center > Logging*).
 
-#### DataMiner Cube - Alarm Console: Display issues when a correlation alarm was based on another correlation alarm [ID_37497]
+#### Alarm Console: Display issues when a correlation alarm was based on another correlation alarm [ID_37497]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
 
@@ -77,10 +77,18 @@ When a correlation rule was based on another correlation rule, display issues co
 
 When the main correlation alarm got cleared, the base alarm would no longer be shown in the alarm tab, and when the base alarm got updated, it would be shown twice: once as the source of the other correlation alarm and once as a regular alarm.
 
-#### DataMiner Cube - Spectrum Analysis: Problem when making changes to a spectrum monitor [ID_37542]
+#### Spectrum Analysis: Problem when making changes to a spectrum monitor [ID_37542]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
 
 When you create a spectrum monitor, you can define a parameter and select a number of measurement points. Each combination of a parameter and a measurement point then is assigned an ID.
 
 Up to now, when you made a change to a spectrum monitor, in some cases, the ID of certain parameter/measurement point combinations could change even when the parameter or the measurement points had not been changed.
+
+#### Alarm Console: Problem when changing the alignment of an alarm property column [ID_37574]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+
+When, in the Alarm Console, you add a column showing an alarm property you are allowed to edit, all cells in that column will display a pencil icon you can click to update a particular value.
+
+Up to now, when you changed the alignment of such a column, the pencil icons would disappear and the new alignment would not be applied. From now on, when you change the alignment of a column showing an alarm property you are allowed to edit, the new alignment will be applied correctly and the pencil icons will stay visible. However, regardless of the alignment, the pencil icons will stay on the left, and when you change a value, the text box will also be aligned to the left.
