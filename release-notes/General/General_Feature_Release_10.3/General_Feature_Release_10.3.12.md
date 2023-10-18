@@ -116,6 +116,12 @@ A number of security enhancements have been made.
 
 A number of enhancements have been made with regard to error handling.
 
+#### SLAnalytics - Behavioral anomaly detection: Enhanced trend change detection [ID_37571]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+If, upon detection of a new trend, the trend returns to the old trend (i.e. the trend before the behavioral change) within the hour, the behavioral change will be labeled a level shift rather than a trend change.
+
 ### Fixes
 
 #### NATSCustodian could incorrectly pick an offline DMA as NAS candidate [ID_37312]
