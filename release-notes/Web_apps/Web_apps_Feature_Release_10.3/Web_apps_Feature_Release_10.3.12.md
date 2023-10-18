@@ -145,3 +145,11 @@ When the *Column & bar chart*, *Line & area chart* and *Pie & donut chart* compo
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
 
 Up to now, it would incorrectly be possible to export table data to a CSV file when a table did not display any rows. From now on, when a table does not display any rows (e.g. when no rows match the applied filter), the button allowing you to export the table data to a CSV file will be disabled.
+
+#### Dashboards app: Sidebar would overlap large components when the viewport was too narrow [ID_37594]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When a component was too large to fit into a narrow viewport (e.g. when viewing the dashboard on a mobile device), in some cases, the sidebar would incorrectly overlap the component.
+
+This issue would also occur when a visual overview had been embedded in a *Visual overview* component that was too small.
