@@ -104,6 +104,12 @@ Up to now, when you had created a multivariate pattern containing subpatterns ho
 
 Because of a number of enhancements, overall performance of DOM and SRM queries has increased.
 
+#### Service & Resource Management: Initialization of ResourceManager and SRMServiceStateManager will be retried up to 5 times [ID_37507]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When *ResourceManager* and *SRMServiceStateManager* fail to get initialized at DataMiner startup, the system will now retry up to 5 times to get those managers up and running.
+
 #### Security enhancements [ID_37540]
 
 <!-- 37540: MR 10.4.0 - FR 10.3.12 -->

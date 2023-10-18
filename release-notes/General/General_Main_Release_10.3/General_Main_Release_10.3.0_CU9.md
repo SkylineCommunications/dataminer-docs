@@ -30,6 +30,12 @@ A number of security enhancements have been made.
 
 Because of a number of enhancements, overall performance has increased when offloading data in case the database is down.
 
+#### Service & Resource Management: Initialization of ResourceManager and SRMServiceStateManager will be retried up to 5 times [ID_37507]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When *ResourceManager* and *SRMServiceStateManager* fail to get initialized at DataMiner startup, the system will now retry up to 5 times to get those managers up and running.
+
 #### SLAnalytics - Behavioral anomaly detection: Enhanced trend change detection [ID_37571]
 
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
