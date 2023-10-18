@@ -11,7 +11,7 @@ uid: Known_issues
 | [Various issues when using MessageBroker with chunking](xref:KI_DataMinerMessageBroker2)| From DataMiner 10.3.5 [CU0]/10.3.8 onwards | October 11, 2023 |
 | [Offload to MySQL offload database fails](xref:KI_offload_database_incorrect_integer_value) | Any version | October 4, 2023 |
 | [Elements not loading after upgrade of DMS with multiple Elasticsearch clusters](xref:KI_elements_not_loading_in_DMS_with_multiple_ES) | From DataMiner 10.3.10 onwards | October 3, 2023 |
-| [SLNet deadlock in EPM setups](xref:KI_SLNet_Deadlock_EPM_Setups) | From DataMiner 10.3.9 onwards | September 28, 2023 |
+| [SLNet deadlock in EPM setups](xref:KI_SLNet_Deadlock_EPM_Setups) | DataMiner 10.3.9 and 10.3.10 | September 28, 2023 |
 | [Max Payload exceptions occur when using MessageBroker with chunking](xref:KI_DataMinerMessageBroker_Chunking_MaxPayload)| From DataMiner 10.3.5 [CU0]/10.3.8 onwards | September 26, 2023 |
 | [Cassandra backups no longer working](xref:KI_Cassandra_backups_not_working)| DataMiner 10.3.9 [CU0] | August 29, 2023 |
 | [Default NATS port is already in use](xref:KI_NATS_port_9090) | From DataMiner 10.1.0/10.1.1 onwards | August 3, 2023 |

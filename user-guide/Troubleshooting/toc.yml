@@ -213,20 +213,12 @@ items:
             topicUid: KI_DataMinerMessageBroker2
           - name: Elements not loading after upgrade of DMS with multiple Elasticsearch clusters
             topicUid: KI_elements_not_loading_in_DMS_with_multiple_ES
-          - name: SLNet deadlock in EPM setups
-            topicUid: KI_SLNet_Deadlock_EPM_Setups
           - name: Max Payload exceptions occur when using MessageBroker with chunking
             topicUid: KI_DataMinerMessageBroker_Chunking_MaxPayload
-          - name: Unable to connect to DMS when using .NET Remoting
-            topicUid: KI_Unable_to_Connect_Net_Remoting
           - name: Various issues with a geo-redundant Cassandra setup with multiple data centers
             topicUid: KI_Multiple_Datacenters
-          - name: Cassandra disconnects after loss of a single node
-            topicUid: KI_Cassandra_disconnects_after_loss_of_a_single_node
           - name: Corrupted low-code app after concurrent editing actions
             topicUid: KI_app_corruption_after_editing
-          - name: Cassandra cluster data not offloaded while database is unavailable
-            topicUid: KI_Cassandra_cluster_data_not_offloaded
           - name: Elasticsearch not initialized when DataMiner starts up
             topicUid: KI_Elasticsearch_not_initialized_on_DMA_startup
           - name: DataMiner keeps trying to restart when Elasticsearch is unavailable
@@ -252,8 +244,18 @@ items:
           - name: Setting a protocol to production takes a long time
             topicUid: KI_Setting_a_protocol_to_production_takes_a_long_time
       - name: Resolved issues
-        topicUid:
+        topicUid: KI_SLNet_Deadlock_EPM_Setups
         items:
+          - name: SLNet deadlock in EPM setups
+            topicUid: KI_SLNet_Deadlock_EPM_Setups
+          - name: Unable to connect to DMS when using .NET Remoting
+            topicUid: KI_Unable_to_Connect_Net_Remoting
+          - name: Various resolved issues with a geo-redundant Cassandra setup with multiple data centers
+            topicUid: KI_Multiple_Datacenters_resolved_issues
+          - name: Cassandra disconnects after loss of a single node
+            topicUid: KI_Cassandra_disconnects_after_loss_of_a_single_node
+          - name: Cassandra cluster data not offloaded while database is unavailable
+            topicUid: KI_Cassandra_cluster_data_not_offloaded
           - name: SRM - Auto Select Resource not read for silent booking
             topicUid: KI_SRM_Auto_Select_Resource_Not_Read
           - name: Contents of state_changes table not migrated after Cassandra Cluster migration
