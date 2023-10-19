@@ -6,6 +6,11 @@ items:
         topicUid: ChatOps_Tutorials
       - name: Dashboards and Low-Code Apps tutorials
         topicUid: Dashboards_Low-Code_Apps_Tutorials
+      - name: DataMiner Analytics tutorials
+        topicUid: Analytics_Tutorials
+        items:
+         - name: Detecting anomalies with DataMiner
+           topicUid: Anomaly_Tutorial
       - name: DataMiner Integration Studio (DIS) tutorials
         topicUid: DIS_Tutorials
       - name: DataMiner Object Manager (DOM) tutorials
