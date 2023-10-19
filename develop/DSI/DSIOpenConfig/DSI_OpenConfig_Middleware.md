@@ -156,7 +156,7 @@ private void OnConnectionStateChanged(object sender, EventArgs e)
 ```
 
 > [!NOTE]
-> In case you are setting up a secure channel, it is important that the server certificate is issued to the hostname configured in the [DataSourceConfiguration](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.DataSourceConfiguration). The whole certificate chain needs to be trusted and must not be expired. There is no option to disable this. When this is not the desired behavior, you will need to fall back to insecure HTTP.
+> In case you are setting up a secure channel, it is important that the server certificate is issued to the hostname configured in the [DataSourceConfiguration](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.DataSourceConfiguration). The whole certificate chain needs to be trusted and must not be expired. If you are running **CommunicationGateway 1.3.0** or newer, there is the possibility to skip certificate validation for certain whitelisted hosts through the [*SkipVerifyHosts* option](xref:DataMinerExtensionModules#grpc-configuration). We advise to use this with caution. Improper certificate validation can lead to a range of different security threats such as *man-in-the-middle attacks*.
 
 ### Disconnecting
 

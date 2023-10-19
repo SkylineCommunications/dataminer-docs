@@ -86,6 +86,30 @@ The CommunicationGateway module makes it possible for connectors or scripts runn
 
 At present, we support the [gNMI](xref:DSI_OpenConfig_Introduction#gnmi) service, but more services and RPC connections may be added.
 
+#### gRPC Configuration
+
+The configuration for the gRPC related settings are stored in the optional file *CommunicationGateway.gRPC.config.json*. This file can be changed at runtime and changes will reflect immediately so there's no need to restart the CommunicationGateway service.
+
+Example:
+
+```json
+{
+   "SkipVerifyHosts": [
+      "dev.skyline.be",
+      "pre-prod.company.org"
+   ]
+}
+```
+
+##### SkipVerifyHosts
+
+Allows to configure hosts for which server certificate validation will be skipped.
+
+> [!IMPORTANT]
+> We advise to use this with caution. Improper certificate validation can lead to a range of different security threats such as *man-in-the-middle attacks*.
+
+#### Middleware
+
 This DxM exists in tandem with service-specific [middleware](xref:Nuget_Communication_Middleware) that facilitates the NATS communication to the DxM. However, not all middleware require the CommunicationGateway to establish a connection with the device. The DxM is primarily used to bridge the gap between different .NET versions. This is because gRPC requires .NET 5 or higher for full functionality, while SLScripting still runs on .NET 4.6.2.
 
 > [!TIP]
