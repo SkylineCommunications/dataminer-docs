@@ -101,3 +101,9 @@ When an element was deleted, `PropertyChangeEvent` instances for that element wo
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
 
 When SLAnalytics lost connection with SLDataGateway, an exception would be thrown, causing SLAnalytics to become unresponsive.
+
+#### DataMiner Object Models: DomManager would not initialize when it received its first call [ID_37604]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When the first call to a DomManager after a DMA (re)start was a call to create, update or delete a HistoryChange object, the call would fail and the DomManager would not initialize.
