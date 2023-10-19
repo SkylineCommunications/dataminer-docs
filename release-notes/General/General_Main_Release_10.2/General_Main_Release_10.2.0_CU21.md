@@ -74,6 +74,14 @@ When a correlation rule was based on another correlation rule, display issues co
 
 When the main correlation alarm got cleared, the base alarm would no longer be shown in the alarm tab, and when the base alarm got updated, it would be shown twice: once as the source of the other correlation alarm and once as a regular alarm.
 
+#### DataMiner Cube: Problem when trying to display broadcast messages while being used as a service [ID_37524]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+
+When Cube tried to display a broadcast message it had received from the DataMiner Agent while being used as a service by SLHelper, an error could occur in the latter.
+
+From now on, Cube will no longer display any broadcast messages while being used as a service (e.g. when displaying a visual overview on a mobile device).
+
 #### DataMiner Cube - Spectrum Analysis: Problem when making changes to a spectrum monitor [ID_37542]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
