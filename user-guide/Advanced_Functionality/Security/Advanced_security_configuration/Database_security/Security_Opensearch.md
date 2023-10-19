@@ -1,5 +1,6 @@
 ---
 uid: Security_OpenSearch
+keywords: updating OpenSearch, upgrading OpenSearch, OpenSearch security
 ---
 
 # Securing the OpenSearch database
@@ -13,34 +14,42 @@ For information on how to enable both client-server and inter-node TLS encryptio
 
 ## Upgrading OpenSearch
 
-DataMiner supports both the 1.X and 2.X version range of OpenSearch, however, for new installations we recommend installing OpenSearch 2.X. We also recommend to keep your OpenSearch installation up to date with the latest version withing your release line.
+DataMiner supports both the 1.X and 2.X version range of OpenSearch; however, for new installations, we recommend installing OpenSearch 2.X.
 
-## Minor upgrade
+We also recommend that you keep your OpenSearch installation up to date with the latest version within the range you have chosen.
 
-There are 2 posibilities when performing a minor upgrade of your OpenSearch cluster:
+### Minor upgrade
 
-1. [A cluster restart upgrade](https://opensearch.org/docs/latest/install-and-configure/upgrade-opensearch/index/#cluster-restart-upgrade)
-1. [A roling upgrade](https://opensearch.org/docs/latest/install-and-configure/upgrade-opensearch/rolling-upgrade/)
+There are two ways to perform a minor upgrade of an OpenSearch cluster:
 
-Regardless of which upgrade strategy you choose, the first few steps remain the same:
+- [A cluster restart upgrade](#cluster-restart-upgrade)
+- [A rolling upgrade](#rolling-upgrade)
 
-1. Download the latest version within your release track: [1.X](https://opensearch.org/lines/1x.html), [2.X](https://opensearch.org/lines/2x.html).
+Regardless of which upgrade strategy you choose, you will first need to perform these steps:
+
+1. Download the latest version within your release track: [1.X](https://opensearch.org/lines/1x.html) or [2.X](https://opensearch.org/lines/2x.html).
 1. [Back up the configuration files](https://opensearch.org/docs/latest/install-and-configure/upgrade-opensearch/index/#backing-up-configuration-files).
 1. Back up the cluster by [taking a snapshot](https://opensearch.org/docs/latest/tuning-your-cluster/availability-and-recovery/snapshots/snapshot-restore/).
 
-## Cluster restart upgrade
-
-To perform a cluster restoart upgrade:
+#### Cluster restart upgrade
 
 1. Stop OpenSearch and OpenSearch Dashboards on all nodes in the cluster.
-1. Once the nodes are stopped, you can install a new version of OpenSearch.
-1. After installing the new version on every node, start the nodes again.
-1. The cluster is now running the new version of OpenSearch.
 
-### Roling upgrade
+1. Install the new version of OpenSearch.
 
-To perform a rolling upgrade, refer to the [roling upgrade guide](https://opensearch.org/docs/latest/install-and-configure/upgrade-opensearch/rolling-upgrade/) in the OpenSearch documentation.
+1. Start the nodes again.
 
-## Major upgrade
+   The cluster will now run the new version of OpenSearch.
 
-When going from one major release line to another (e.g. 1.X to 2.X), we recommend to first upgrade to the latest version in the current range before upgrading to the new range. It is also not possible to use the roling upgrade strategy for major upgrades, so you will have to perform a cluster restart upgrade as described [above](#cluster-restart-upgrade).
+> [!TIP]
+> See also: [Cluster restart upgrade](https://opensearch.org/docs/latest/install-and-configure/upgrade-opensearch/index/#cluster-restart-upgrade) in the OpenSearch documentation.
+
+#### Rolling upgrade
+
+To perform a rolling upgrade, refer to the [rolling upgrade guide](https://opensearch.org/docs/latest/install-and-configure/upgrade-opensearch/rolling-upgrade/) in the OpenSearch documentation.
+
+### Major upgrade
+
+To go from one major release range to another (e.g. 1.X to 2.X), we recommend first upgrading to the latest version in the current range before upgrading to the new range.
+
+It is not possible to use the rolling upgrade strategy for major upgrades, so you will have to perform a [cluster restart upgrade](#cluster-restart-upgrade) for this.
