@@ -140,6 +140,12 @@ A number of enhancements have been made with regard to error handling.
 
 If, upon detection of a new trend, the trend returns to the old trend (i.e. the trend before the behavioral change) within the hour, the behavioral change will be labeled a level shift rather than a trend change.
 
+#### New downgrade action that adapts the SLAnalytics configuration file when downgrading to version 10.3.0 or older [ID_37582]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+When you downgrade a DataMiner Agent from version 10.3.1 or later to version 10.3.0 or older, a downgrade action will now remove the section related to relation grouping from the SLAnalytics configuration file.
+
 #### SLAnalytics: Enhanced error handling [ID_37607]
 
 <!-- MR 10.4.0 - FR 10.3.12 -->
