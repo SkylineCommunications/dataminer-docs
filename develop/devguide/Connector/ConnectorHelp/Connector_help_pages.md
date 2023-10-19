@@ -16,11 +16,11 @@ To make sure your page can be automatically included in the [DataMiner Catalog](
 
 - Make sure the **file name** is the **exact name of the connector in the Catalog**, but with **underscores instead of spaces**. For example, the file name of the *Microsoft Platform* documentation page has to be *Microsoft_Platform.md*.
 
-- Add your documentation file in the following folder of the [dataminer-docs-connectors](https://github.com/SkylineCommunications/dataminer-docs-connectors) repository: */dataminer-docs-connectors/connector_help/connector-help*
+- Add your documentation file in the following folder of the [dataminer-docs-connectors](https://github.com/SkylineCommunications/dataminer-docs-connectors) repository: */dataminer-docs-connectors/connector/doc*
 
 ### Table of contents
 
-When you add a new page to the connector documentation, you will need to add it to the table of contents as well. To do so, add it to the *toc.yml* file in the *connector_help* folder. Please note:
+When you add a new page to the connector documentation, you will need to add it to the table of contents as well. To do so, add it to the *toc.yml* file in the *connector* folder. Please note:
 
 - The connector documentation pages are listed in alphabetical order underneath each vendor node. Make sure to add your page in the correct location.
 - Use the following syntax to add the page:
