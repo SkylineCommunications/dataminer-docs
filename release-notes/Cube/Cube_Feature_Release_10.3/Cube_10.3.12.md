@@ -89,7 +89,7 @@ When the main correlation alarm got cleared, the base alarm would no longer be s
 
 When Cube tried to display a broadcast message it had received from the DataMiner Agent while being used as a service by SLHelper, an error could occur in the latter.
 
-From now on, Cube will no longer display any broadcast messages while being used as a service (e.g. when displaying a visual overview on a mobile device).
+From now on, Cube will disregard broadcast messages while being used as a service (e.g. when displaying a visual overview on a mobile device).
 
 #### Spectrum Analysis: Problem when making changes to a spectrum monitor [ID_37542]
 
