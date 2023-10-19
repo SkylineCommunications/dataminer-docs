@@ -140,6 +140,14 @@ A number of enhancements have been made with regard to error handling.
 
 If, upon detection of a new trend, the trend returns to the old trend (i.e. the trend before the behavioral change) within the hour, the behavioral change will be labeled a level shift rather than a trend change.
 
+#### SLAnalytics: Enhanced error handling [ID_37607]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+Because of a number of enhancements with regard to error handling, the following error message will no longer be generated when the SLAnalytics process is restarted on one of the DataMiner Agents in the DataMiner System:
+
+`Unexpected number of responses returned on GetInfoMessage...`
+
 #### ManagerStore: Exceptions thrown during actions of high importance will now be logged as errors [ID_37631]
 
 <!-- MR 10.4.0 - FR 10.3.12 -->
