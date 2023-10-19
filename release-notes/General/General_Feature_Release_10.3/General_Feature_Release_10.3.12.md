@@ -110,6 +110,18 @@ Because of a number of enhancements, overall performance of DOM and SRM queries 
 
 When *ResourceManager* and *SRMServiceStateManager* fail to get initialized at DataMiner startup, the system will now retry up to 5 times to get those managers up and running.
 
+#### SLAnalytics - Automatic incident tracking: Enhanced error handling [ID_37530]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+Up to now, when the table index of an alarm update had a casing that was not identical to that of previous alarm events in the same alarm tree, SLAnalytics would log errors similar to the following ones:
+
+`Updating alarm in tree X/X , but old alarm could not be found in the loose alarms or in the groups`
+
+`Alarm X/X was in state but neither in loose alarms, in an automatic group or in a manual group`
+
+Because of a number of enhancements made to the automatic incident tracking feature, SLAnalytics will no longer throw errors like the ones above.
+
 #### Security enhancements [ID_37540]
 
 <!-- 37540: MR 10.4.0 - FR 10.3.12 -->
