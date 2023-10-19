@@ -20,6 +20,37 @@ Up to now, when you opened a trend graph showing data from several parameters, o
 
 The SLAnalytics feature "pattern matching" has now fully been integrated in the Trending module.
 
+#### DataMiner Cube - Alarm templates: Configuration of behavioral anomaly alarms [ID_37148] [ID_37171]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+
+Up to now, the behavioral anomaly detection feature only allowed users to have alarms generated instead of suggestion events, depending on the parameter and the type of anomaly. From now on, when configuring an alarm template, users will have more options to specify what should happen when behavioral anomalies are detected.
+
+For example, it is now possible to make a distinction between upward and downward behavioral changes (e.g. an upward spike or a downward spike). For example, you can request to have alarms only for upward level shifts and not for downward level shifts. However, in that case, it would still be possible to have suggestions for downward level shifts. Also, you can now fine-tune and decide to have an upward level shift alarm only when the level shift rises more than 10 (i.e. an absolute threshold of 10) or more than 10 percent of the current value (i.e. a relative threshold of 10).
+
+To configure the behavioral anomaly detection for a particular (numeric) parameter, do the following:
+
+1. Open the alarm template in the *Protocols & Templates* app.
+1. At the top, click the cogwheel button and check whether the *Advanced configuration of anomaly detection* option is selected. If not, select it.
+1. In the right-most column of the parameter in question, click the *Anomalies* button.
+1. In the *Anomaly alarm settings* window, open the *Select preset* selection box, and select one of the following options:
+
+   - "Disabled"
+   - "All Smart" (i.e. anomaly monitoring as it existed up to now)
+   - "Select preset" (i.e. the new, advanced way of configuring anomaly monitoring)
+
+1. If you selected "Select preset", then below the selection box configure how anomaly monitoring should react to anomalies of type level shift, outlier, variance change, trend change and/or flatline.
+
+1. Click close to exit the *Anomaly alarm settings* window.
+
+   > [!IMPORTANT]
+   > Closing this window does not yet save the changes you made in this window.
+
+1. Back in the alarm template editor, click *OK* or *Apply* to save the changes you made.
+
+> [!NOTE]
+> It is not possible to have both a suggestion event and an alarm generated for the same issue. However, it is possible to have suggestion events generated for e.g. downward spikes, even if downward spikes are disabled in the *Anomaly alarm settings* window.
+
 #### Security enhancements [ID_37267]
 
 <!-- RN 37267: MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.11 -->
