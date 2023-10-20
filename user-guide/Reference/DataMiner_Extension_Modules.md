@@ -88,7 +88,7 @@ At present, we support the [gNMI](xref:DSI_OpenConfig_Introduction#gnmi) service
 
 #### gRPC Configuration
 
-The configuration for the gRPC related settings are stored in the optional file *CommunicationGateway.gRPC.config.json*. This file can be changed at runtime and changes will reflect immediately so there's no need to restart the CommunicationGateway service.
+The configuration for the gRPC-related settings is stored in the optional file *CommunicationGateway.gRPC.config.json*. This file can be changed at runtime, and changes will be effective immediately without any need to restart the CommunicationGateway service.
 
 Example:
 
@@ -103,10 +103,10 @@ Example:
 
 ##### SkipVerifyHosts
 
-Allows to configure hosts for which server certificate validation will be skipped.
+This option allows you to configure hosts for which server certificate validation will be skipped.
 
 > [!IMPORTANT]
-> We advise to use this with caution. Improper certificate validation can lead to a range of different security threats such as *man-in-the-middle attacks*.
+> Use this with caution, as improper certificate validation can lead to a range of different security threats such as man-in-the-middle attacks.
 
 #### Middleware
 
