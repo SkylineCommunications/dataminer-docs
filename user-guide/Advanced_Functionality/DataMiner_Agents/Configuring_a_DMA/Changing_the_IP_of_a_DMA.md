@@ -1,5 +1,6 @@
 ---
 uid: Changing_the_IP_of_a_DMA
+keywords: hardware migration
 ---
 
 # Changing the IP of a DMA
