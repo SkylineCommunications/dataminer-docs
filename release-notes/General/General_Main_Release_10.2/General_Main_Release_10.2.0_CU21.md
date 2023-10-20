@@ -20,6 +20,27 @@ Up to now, when you opened a trend graph showing data from several parameters, o
 
 The SLAnalytics feature "pattern matching" has now fully been integrated in the Trending module.
 
+#### DataMiner Cube - System Center: New rule with regard to adding agents to a cluster [ID_37075]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+
+Up to now, it was possible to have a DataMiner System in which some DMAs had been added by IP address while other DMAs had been added by hostname. As this could potentially lead to problems, especially in DataMiner Systems that include Failover pairs, the following rule has now been introduced:
+
+- If the cluster includes any Failover pairs with shared hostname or any DMA with a hostname in its *IP address* field:
+
+  - Allowed to add DMAs either by hostname or by IP address.
+  - Allowed to create Failover pairs with shared hostname only.
+
+- If the cluster includes any Failover pairs with virtual IP addresses:
+
+  - Allowed to add DMAs IP address only.
+  - Allowed to create Failover pairs with virtual IP addresses only.
+
+- In all other cases:
+
+  - Allowed to add DMAs either by hostname or by IP address.
+  - Allowed to create Failover pairs with shared hostname or with virtual IP addresses.
+
 #### DataMiner Cube - Alarm templates: Configuration of behavioral anomaly alarms [ID_37148] [ID_37171]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
