@@ -27,22 +27,27 @@ For example, it is now possible to make a distinction between upward and downwar
 To configure the behavioral anomaly detection for a particular (numeric) parameter, do the following:
 
 1. Open the alarm template in the *Protocols & Templates* app.
-1. At the top, click the cogwheel button and check whether the *Advanced configuration of anomaly detection* option is selected. If not, select it.
-1. In the right-most column of the parameter in question, click the *Anomalies* button.
+1. In the right-most column of the parameter in question, click the *Anomalies* button to open the *Anomaly alarm settings* window.
 1. In the *Anomaly alarm settings* window, open the *Select preset* selection box, and select one of the following options:
 
-   - "Disabled"
-   - "All Smart" (i.e. anomaly monitoring as it existed up to now)
-   - "Select preset" (i.e. the new, advanced way of configuring anomaly monitoring)
+   - "All disabled" (i.e. no anomaly monitoring)
+   - "All smart" (i.e. anomaly monitoring as it existed up to now)
 
-1. If you selected "Select preset", then below the selection box configure how anomaly monitoring should react to anomalies of type level shift, outlier, variance change, trend change and/or flatline.
+1. Below the selection box, if necessary, you can fine-tune the configuration by specifying how anomaly monitoring should react to anomalies of type level shift, outlier, variance change, trend change and/or flatline.
 
-1. Click close to exit the *Anomaly alarm settings* window.
+1. Click *Close* to exit the *Anomaly alarm settings* window.
 
    > [!IMPORTANT]
    > Closing this window does not yet save the changes you made in this window.
 
 1. Back in the alarm template editor, click *OK* or *Apply* to save the changes you made.
+
+   > [!NOTE]
+   > The *Anomalies* button in the right-most column of the parameter in question will indicate the level of anomaly monitoring that has been configured:
+   >
+   > - "Disabled" (i.e. no anomaly monitoring)
+   > - "Customized" (i.e. the new customized anomaly monitoring)
+   > - "Smart" (i.e. anomaly monitoring as it existed up to now).
 
 > [!NOTE]
 > It is not possible to have both a suggestion event and an alarm generated for the same issue. However, it is possible to have suggestion events generated for e.g. downward spikes, even if downward spikes are disabled in the *Anomaly alarm settings* window.
