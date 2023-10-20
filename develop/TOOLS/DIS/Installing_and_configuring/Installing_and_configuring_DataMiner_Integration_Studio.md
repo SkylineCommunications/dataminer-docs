@@ -36,3 +36,17 @@ After installing DataMiner Integration Studio, you can configure its settings fr
     For an overview of all DIS settings, see [DIS settings](xref:DIS_settings)
 
 1. Click *OK*.
+
+
+
+## Installing DIS on a locked down corporate workstation
+
+The above method to install DIS will fail if your local user account does not have elevated privledges, or install but not have full functionality.
+
+You may request your IT Service Desk or user that has administrative privledges on your workstation to install by the following method
+
+1. Download the applicable DIS as per links above.
+1. Supply the .visx file to your adminstrator.
+1. With Visual Studio 2022 have them run the following in a command or powershell terminal with adminstrator privledges:
+"C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\VSIXInstaller.exe" /a C:\PathToLocaltionWithDIS\DataMinerIntegrationStudio17-2.45.1.4.vsix
+Replacing the filename to match the actual vsix file provided.   The /a command installs the plugin for all users on that workstation.
