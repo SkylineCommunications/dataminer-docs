@@ -25,20 +25,20 @@ The DataMiner Low-Code Apps are available on the DataMiner landing page. To acce
    >
    > ![Add app icon](~/user-guide/images/RootAddNoOtherApps.png)
 
-1. Rename your app to 'IPAM'.
+1. Rename your app to "IPAM".
 
 1. To modify the appearance of your app, click the icon in the top-left corner.
 
    ![App icon](~/user-guide/images/Name.png)
 
-1. Browse to your preferred 'Network' icon and select it.
+1. Browse to your preferred "Network" icon and select it.
 
    ![New app icon selection](~/user-guide/images/Style.png)
 
-1. Change the color of your app to either:
+1. Change the color of your app to one of the following possibilities:
 
-   1. *Hex* '#2c746c'
-   2. *RGB* 'rgb(44,116,108)'
+   - *Hex* "#2c746c"
+   - *RGB* "rgb(44,116,108)"
 
 1. Click the icon in the top left-corner again to return to your app.
 
@@ -50,7 +50,7 @@ Your app is currently in the "Draft" stage, but you can now take it live by publ
 
    ![Publish icon](~/user-guide/images/PublishHeader.png)
 
-1. Provide a short description 'Something about IPs', for your app and confirm by clicking *Publish*.
+1. Provide a short description for your app, "Something about IPs", and confirm by clicking *Publish*.
 
    ![Publication pop-up window](~/user-guide/images/PublishPopup.png)
 
