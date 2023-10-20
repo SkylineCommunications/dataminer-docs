@@ -159,3 +159,9 @@ This issue would also occur when a visual overview had been embedded in a *Visua
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
 
 When, while editing a panel in a low-code app, you used CTRL+a to select all components on that panel and pressed DELETE to delete them, this would not only delete the components on the panel but also the other components on the rest of the page.
+
+#### Dashboards app & Low-Code Apps: Node keys would be omitted when converting a query to a JSON string [ID_37627]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+In some cases, when a query using node keys was converted to a JSON string, the node keys would incorrect be omitted.
