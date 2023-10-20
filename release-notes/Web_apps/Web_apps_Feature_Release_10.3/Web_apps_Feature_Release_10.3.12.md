@@ -165,3 +165,9 @@ When, while editing a panel in a low-code app, you used CTRL+a to select all com
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
 
 In some cases, when a query using node keys was converted to a JSON string, the node keys would incorrect be omitted.
+
+#### Dashboards app & Low-Code Apps - Table component: Header bar options would not reinitialize correctly after the table data had been refreshed [ID_37643]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+The options shown on the header bar of a table component would not reinitialize correctly after the table data had been refreshed.
