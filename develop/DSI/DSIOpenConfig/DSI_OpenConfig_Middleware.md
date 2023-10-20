@@ -419,11 +419,11 @@ public static object ConvertEpochTimeUtcTicksToOleAutomationTime(DataMinerConnec
 }
 ```
 
-#### Complex value
+##### Complex value
 
 When values are not a basic type e.g., a string array, then this will be passed as JSON string by the DataMapper. This way the OnRawValueChange can be used to fully custom process this JSON value and set the parameter as desired, or when this method is not implemented it will set the parameter as JSON string.
 
-#### Boolean value
+##### Boolean value
 
 In case the incoming value is of type boolean, the passed object to the OnRawValueChange can be casted as *bool*. However, as executing a protocol.SetParameter(parameterId, true); results in a *-1* value, the DataMapper will set the parameter with a value *1* in case the boolean is *true*, and a value *0* in case the boolean is *false*.
 
