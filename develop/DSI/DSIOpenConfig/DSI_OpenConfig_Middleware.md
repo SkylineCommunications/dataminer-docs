@@ -250,6 +250,14 @@ client.Set("system/config/login-banner", "Hello DataMiner!");
 
 In OpenConfig, the read-write objects are commonly stored under the */config* path, while the readable counterpart with the current value is stored under the */state* path.
 
+### Deleting a value in the YANG path
+
+In the background this is using the `Set` RPC with delete arguments. More info on the `Set` RPC can be found int the [OpenConfig introduction](xref:DSI_OpenConfig_Introduction#set).
+
+```csharp
+client.Delete("system/config/login-banner");
+```
+
 ### Subscribing to a YANG path
 
 You can find more info on the `Subscribe` RPC in the [OpenConfig introduction](xref:DSI_OpenConfig_Introduction#subscribe).
@@ -298,6 +306,13 @@ Now anytime a `leaf` changes, it will send out a notification with the new value
 If you need to access a specific instance in a `container`, you can use [ ] to specify the instance. For example: `interfaces/interface[name='Ethernet1']/state`
 
 Using this path will result in only reading or writing the *Ethernet1* instance of the *interfaces/interface/state* `container`.
+
+### Specifying a path origin
+
+A Path.Origin can be specified in the path as string by adding it as a prefix followed by ':/' before the actual path. For example:
+`eos_native:/Sysdb/ptp/status/parentDS`
+
+Using this path will result in reading or writing with Path.Origin specified as *eos_native* of the *Sysdb/ptp/status/parentDS* `container`.
 
 ### Troubleshooting
 
@@ -405,6 +420,13 @@ public static object ConvertEpochTimeUtcTicksToOleAutomationTime(DataMinerConnec
 }
 ```
 
+#### Complex value
+
+When values are not a basic type e.g., a string array, then this will be passed as JSON string by the DataMapper. This way the OnRawValueChange can be used to fully custom process this JSON value and set the parameter as desired, or when this method is not implemented it will set the parameter as JSON string.
+
+#### Boolean value
+In case the incoming value is of type boolean, the passed object to the OnRawValueChange can be casted as *bool*. However, as executing a protocol.SetParameter(parameterId, true); results in a *-1* value, the DataMapper will be setting the parameter with a value *1* in case the boolean is *true*, and a value *0* in case the boolean is *false*.
+
 #### Displaying octets as rates
 
 In case you are retrieving octets, it can be desirable to display those as rates. The [RateCalculator](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGridColumn.RateCalculator) property on a [DataMinerConnectorDataGridColumn](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGridColumn) can be used for this.
@@ -470,3 +492,26 @@ public static object CreateDisplayKey(DataMinerConnectorTriggerValueArgs trigger
 }
 
 ```
+
+#### Adding a state column
+
+By default rows are automatically removed. This behavior can be changed by adding a column to keep track of the state.
+Add a numeric parameter of ColumnOption type *retrieved* with discreet values *1=Updated*, *2=Equal*, *3=New*, *4=Deleted*, *5=Recreated*.
+Add a DataMinerConnectorDataGridColumn to the DataMinerConnectorDataGrid that uses the constructor that needs the parameter ID as first argument and the DataMinerConnectorDataGridColumnType that is set to *State* as second argument.
+
+```csharp
+new DataMinerConnectorDataGridColumn(Parameter.Interfacesstate.Pid.interfacesstaterowstate, Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.Enums.DataMinerConnectorDataGridColumnType.State)
+```
+
+Rows will not be automatically be removed anymore when a state column is added to the data grid.
+Automatic removal can be activated again by setting the `IsAutoDelete` property of the state column to *true*.
+Rows that have the deleted state can be manually removed by calling one of the following methods on the `DataMapper`
+
+```csharp
+dataMapper.RemoveMissingRowForPid(tablePid, primaryKey); // Removes the row with this primary key when it has the deleted state.
+dataMapper.RemoveMissingRowsForPid(tablePid, primaryKeys); // Removes the rows of these primary keys in the collection when they have the deleted state.
+dataMapper.RemoveMissingRowsForPid(tablePid);  // Removes all the rows that have the deleted state.
+```
+
+> [!NOTE]
+> The state *Equal* is already defined, but is not used yet. At this moment it will have the state *Updated* even when all values are equal.
