@@ -575,6 +575,12 @@ Because of a number of enhancements with regard to error handling, the following
 
 Up to now, when managers under the control of the ManagerStore framework in SLNet (DOM, Profiles, User-Defined APIs) threw exceptions during a de-initialization, a failover switch or a midnight synchronization, those exceptions would be logged as level-5 log entries of type *Info*. From now on, they will be logged as level-0 log entries of type *Error*.
 
+#### Storage as a Service: Enhanced performance when restarting elements or performing certain DOM and SRM operations [ID_37638]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+Because of a number of enhancements, overall performance has increased, especially when restarting elements or performing certain DOM and SRM operations.
+
 ### Fixes
 
 #### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID_34981]
