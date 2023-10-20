@@ -252,7 +252,7 @@ In OpenConfig, the read-write objects are commonly stored under the */config* pa
 
 ### Deleting a value in the YANG path
 
-In the background this is using the `Set` RPC with delete arguments. More info on the `Set` RPC can be found int the [OpenConfig introduction](xref:DSI_OpenConfig_Introduction#set).
+In the background, this uses the `Set` RPC with delete arguments. For more info on the `Set` RPC, see [OpenConfig introduction](xref:DSI_OpenConfig_Introduction#set).
 
 ```csharp
 client.Delete("system/config/login-banner");
@@ -309,10 +309,9 @@ Using this path will result in only reading or writing the *Ethernet1* instance 
 
 ### Specifying a path origin
 
-A Path.Origin can be specified in the path as string by adding it as a prefix followed by ':/' before the actual path. For example:
-`eos_native:/Sysdb/ptp/status/parentDS`
+You can specify a *Path.Origin* as string by adding it as a prefix followed by `:/` before the actual path. For example: `eos_native:/Sysdb/ptp/status/parentDS`
 
-Using this path will result in reading or writing with Path.Origin specified as *eos_native* of the *Sysdb/ptp/status/parentDS* `container`.
+Using this path will result in reading or writing with *Path.Origin* specified as *eos_native* of the *Sysdb/ptp/status/parentDS* `container`.
 
 ### Troubleshooting
 
@@ -326,7 +325,7 @@ The logging of the CommunicationGateway DxM can be found under `C:\ProgramData\S
 
 The [DataMinerConnectorDataMapper](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataMapper) is an object that sits between your device and the DataMiner connector. It will automatically parse the incoming notifications and populate DataMiner parameters or tables with the data.
 
-#### Map a YANG path to a parameter
+#### Mapping a YANG path to a parameter
 
 ```csharp
 IDataMapper dataMapper = new DataMinerConnectorDataMapper(
@@ -425,7 +424,8 @@ public static object ConvertEpochTimeUtcTicksToOleAutomationTime(DataMinerConnec
 When values are not a basic type e.g., a string array, then this will be passed as JSON string by the DataMapper. This way the OnRawValueChange can be used to fully custom process this JSON value and set the parameter as desired, or when this method is not implemented it will set the parameter as JSON string.
 
 #### Boolean value
-In case the incoming value is of type boolean, the passed object to the OnRawValueChange can be casted as *bool*. However, as executing a protocol.SetParameter(parameterId, true); results in a *-1* value, the DataMapper will be setting the parameter with a value *1* in case the boolean is *true*, and a value *0* in case the boolean is *false*.
+
+In case the incoming value is of type boolean, the passed object to the OnRawValueChange can be casted as *bool*. However, as executing a protocol.SetParameter(parameterId, true); results in a *-1* value, the DataMapper will set the parameter with a value *1* in case the boolean is *true*, and a value *0* in case the boolean is *false*.
 
 #### Displaying octets as rates
 
@@ -461,7 +461,7 @@ The `CustomRates` method will take care of the rate calculation and will set the
 > [!TIP]
 > In this scenario, you will typically want to map the `RateColumnParameterId` to a default value so it gets populated when there is insufficient information to calculate the rate.
 
-#### Trigger an action when another column changes
+#### Triggering an action when another column changes
 
 There might be scenarios where you want to execute a specific action when a certain column changed. An example of this is to regenerate the display key when the interface description changes.
 
@@ -495,17 +495,19 @@ public static object CreateDisplayKey(DataMinerConnectorTriggerValueArgs trigger
 
 #### Adding a state column
 
-By default rows are automatically removed. This behavior can be changed by adding a column to keep track of the state.
-Add a numeric parameter of ColumnOption type *retrieved* with discreet values *1=Updated*, *2=Equal*, *3=New*, *4=Deleted*, *5=Recreated*.
-Add a DataMinerConnectorDataGridColumn to the DataMinerConnectorDataGrid that uses the constructor that needs the parameter ID as first argument and the DataMinerConnectorDataGridColumnType that is set to *State* as second argument.
+By default, rows are automatically removed. You can change this behavior by adding a column to keep track of the state.
 
-```csharp
-new DataMinerConnectorDataGridColumn(Parameter.Interfacesstate.Pid.interfacesstaterowstate, Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.Enums.DataMinerConnectorDataGridColumnType.State)
-```
+1. Add a numeric parameter of ColumnOption type *retrieved* with discrete values *1=Updated*, *2=Equal*, *3=New*, *4=Deleted*, *5=Recreated*.
 
-Rows will not be automatically be removed anymore when a state column is added to the data grid.
-Automatic removal can be activated again by setting the `IsAutoDelete` property of the state column to *true*.
-Rows that have the deleted state can be manually removed by calling one of the following methods on the `DataMapper`
+1. Add a DataMinerConnectorDataGridColumn to the DataMinerConnectorDataGrid using the constructor that needs the parameter ID as first argument and the DataMinerConnectorDataGridColumnType that is set to *State* as second argument.
+
+   ```csharp
+   new DataMinerConnectorDataGridColumn(Parameter.Interfacesstate.Pid.interfacesstaterowstate, Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.Enums.DataMinerConnectorDataGridColumnType.State)
+   ```
+
+Rows will no  longer be automatically removed  when a state column is added to the data grid. To activate automatic removal again, set the `IsAutoDelete` property of the state column to *true*.
+
+You can manually remove rows that have the deleted state by calling one of the following methods on the `DataMapper`:
 
 ```csharp
 dataMapper.RemoveMissingRowForPid(tablePid, primaryKey); // Removes the row with this primary key when it has the deleted state.
@@ -514,4 +516,4 @@ dataMapper.RemoveMissingRowsForPid(tablePid);  // Removes all the rows that have
 ```
 
 > [!NOTE]
-> The state *Equal* is already defined, but is not used yet. At this moment it will have the state *Updated* even when all values are equal.
+> The state *Equal* is already defined but is not used yet. At present, it will have the state *Updated* even when all values are equal.
