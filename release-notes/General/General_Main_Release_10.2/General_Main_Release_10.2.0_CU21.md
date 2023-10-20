@@ -53,9 +53,9 @@ To configure the behavioral anomaly detection for a particular (numeric) paramet
 
 1. Open the alarm template in the *Protocols & Templates* app.
 1. In the right-most column of the parameter in question, click the *Anomalies* button to open the *Anomaly alarm settings* window.
-1. In the *Anomaly alarm settings* window, open the *Select preset* selection box, and select one of the following options:
+1. In the *Anomaly alarm settings* window, optionally open the *Select preset* selection box, and select one of the following options:
 
-   - "All disabled" (i.e. no anomaly monitoring)
+   - "All disabled" (i.e. no anomaly alarms)
    - "All smart" (i.e. anomaly monitoring as it existed up to now)
 
 1. Below the selection box, if necessary, you can fine-tune the configuration by specifying how anomaly monitoring should react to anomalies of type level shift, outlier, variance change, trend change and/or flatline.
@@ -70,7 +70,7 @@ To configure the behavioral anomaly detection for a particular (numeric) paramet
    > [!NOTE]
    > The *Anomalies* button in the right-most column of the parameter in question will indicate the level of anomaly monitoring that has been configured:
    >
-   > - "Disabled" (i.e. no anomaly monitoring)
+   > - "Disabled" (i.e. no anomaly alarms)
    > - "Customized" (i.e. the new customized anomaly monitoring)
    > - "Smart" (i.e. anomaly monitoring as it existed up to now).
 
