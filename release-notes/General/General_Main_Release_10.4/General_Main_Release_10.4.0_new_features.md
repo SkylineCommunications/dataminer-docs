@@ -563,7 +563,7 @@ Customized anomaly monitoring will enable you to do the following:
 - Set absolute or relative thresholds on the jump sizes of the change points of type *Level Shift* or *Outlier*.
 - Enable or disable monitoring for each of the two possible directions of a behavioral change for level shifts, trend changes, variance changes and outliers. This will allow you, for example, to configure different alarm monitoring behaviors for downward level shifts and upward level shifts.
 
-For more information on how to configure anomaly monitoring in DataMiner Cube, see [DataMiner Cube - Alarm templates: Configuration of behavioral anomaly alarms [ID_37148] [ID_37171]](xref:Cube_Feature_Release_10.3.12#dataminer-cube---alarm-templates-configuration-of-behavioral-anomaly-alarms-id_37148-id_37171).
+For more information on how to configure anomaly monitoring in DataMiner Cube, see [DataMiner Cube - Alarm templates: Configuration of behavioral anomaly alarms [ID_37148] [ID_37171]](xref:Cube_Feature_Release_10.3.12#alarm-templates-configuration-of-behavioral-anomaly-alarms-id_37148-id_37171).
 
 Summary of server-side changes:
 
