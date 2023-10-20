@@ -205,10 +205,8 @@ items:
     topicUid: Known_issues
     items:
       - name: Current issues
-        topicUid: KI_Cube_connection_issue_alarm_tabs
+        topicUid: KI_DataMinerMessageBroker2
         items:
-          - name: Cube freezes on 'Connected!' loading screen when no alarm tabs are displayed
-            topicUid: KI_Cube_connection_issue_alarm_tabs
           - name: Various issues when using MessageBroker with chunking
             topicUid: KI_DataMinerMessageBroker2
           - name: Elements not loading after upgrade of DMS with multiple Elasticsearch clusters
@@ -242,8 +240,10 @@ items:
           - name: Setting a protocol to production takes a long time
             topicUid: KI_Setting_a_protocol_to_production_takes_a_long_time
       - name: Resolved issues
-        topicUid: KI_SLNet_Deadlock_EPM_Setups
+        topicUid: KI_Cube_connection_issue_alarm_tabs
         items:
+          - name: Cube freezes on 'Connected!' loading screen when no alarm tabs are displayed
+            topicUid: KI_Cube_connection_issue_alarm_tabs
           - name: SLNet deadlock in EPM setups
             topicUid: KI_SLNet_Deadlock_EPM_Setups
           - name: Unable to connect to DMS when using .NET Remoting
