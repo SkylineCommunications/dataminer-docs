@@ -56,4 +56,4 @@ Estimated duration: 15 minutes.
 
 1. Trigger an alarm and verify that the notification is received in a Teams chat.
 
-   ![ChatIntegration Examples Teams chat](~/user-guide/images/chatops_notification_03_002.png)
+   ![ChatIntegration Examples Teams chat](~/user-guide/images/chatops_notification_03_003.png)
