@@ -8,9 +8,12 @@ The "time to live" (TTL) determines how long specific data is retained before be
 
 This page explains how to configure TTL settings to optimize your database performance and resource utilization.
 
+> [!NOTE]
+> If a DMS uses [Storage as a Service](xref:STaaS), the default TTL is automatically applied for most database records. The configuration in Cube is only taken into account for real-time trending.
+
 In System Center, you can configure a custom TTL for data in the database. This determines how long the data is kept in the database.
 
-1. Go to System Center \> *System settings* > *time to live*.
+1. In DataMiner Cube, go to System Center \> *System settings* > *time to live*.
 
 1. To configure general TTL overrides:
 
