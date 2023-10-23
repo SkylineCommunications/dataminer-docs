@@ -149,7 +149,7 @@ If there is more than one Cassandra node, the time in the cluster must be synchr
 
 ## Elasticsearch requirements
 
-For certain DataMiner features, an additional indexing engine is required. This [Elasticsearch cluster](https://community.dataminer.services/expert-hub-elastic/) comes with additional requirements. For these, we follow Elastics’s official [guidelines](https://www.elastic.co/guide/en/elasticsearch/guide/current/hardware.html).
+For certain DataMiner features, an additional indexing engine is required. This [Elasticsearch cluster](xref:Elasticsearch_database) comes with additional requirements. For these, we follow Elastics’s official [guidelines](https://www.elastic.co/guide/en/elasticsearch/guide/current/hardware.html).
 
 ### RAM
 

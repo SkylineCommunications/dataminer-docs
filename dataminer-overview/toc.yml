@@ -100,6 +100,21 @@
               topicUid: What_is_DataMiner_DevOps_Enablement
             - name: The DataMiner DevOps Professional Program
               topicUid: DevOps_Enablement_and_the_DevOps_Professional_program
+        - name: DataMiner DevOps Creative Collective
+          topicUid: DataMiner_DevOps_Creative_Collective
+          items:
+            - name: DataMiner Solutions
+              topicUid: DataMiner_Solutions
+            - name: Solution Product Owner
+              topicUid: Solution_Product_Owner
+            - name: Agile best practices for DataMiner Solution Product Owners
+              topicUid: Agile_Methodologies
+            - name: Core values
+              topicUid: Core_Values
+            - name: Recommended policies
+              topicUid: Recommended_Policies
+            - name: Unlimited opportunity
+              topicUid: Unlimited_Opportunity
     - name: Training courses and certification
       topicUid: Overview_Training_intro
       items:

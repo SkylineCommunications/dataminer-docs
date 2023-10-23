@@ -555,11 +555,31 @@ Because of a number of enhancements made to the automatic incident tracking feat
 
 A number of enhancements have been made with regard to error handling.
 
+#### New downgrade action that adapts the SLAnalytics configuration file when downgrading to version 10.3.0 or older [ID_37582]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+When you downgrade a DataMiner Agent from version 10.3.1 or later to version 10.3.0 or older, a downgrade action will now remove the section related to relation grouping from the SLAnalytics configuration file.
+
+#### SLAnalytics: Enhanced error handling [ID_37607]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+Because of a number of enhancements with regard to error handling, the following error message will no longer be generated when the SLAnalytics process is restarted on one of the DataMiner Agents in the DataMiner System:
+
+`Unexpected number of responses returned on GetInfoMessage...`
+
 #### ManagerStore: Exceptions thrown during actions of high importance will now be logged as errors [ID_37631]
 
 <!-- MR 10.4.0 - FR 10.3.12 -->
 
 Up to now, when managers under the control of the ManagerStore framework in SLNet (DOM, Profiles, User-Defined APIs) threw exceptions during a de-initialization, a failover switch or a midnight synchronization, those exceptions would be logged as level-5 log entries of type *Info*. From now on, they will be logged as level-0 log entries of type *Error*.
+
+#### Storage as a Service: Enhanced performance when restarting elements or performing certain DOM and SRM operations [ID_37638]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+Because of a number of enhancements, overall performance has increased, especially when restarting elements or performing certain DOM and SRM operations.
 
 ### Fixes
 

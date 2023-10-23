@@ -38,7 +38,7 @@ Customized anomaly monitoring will enable you to do the following:
 - Set absolute or relative thresholds on the jump sizes of the change points of type *Level Shift* or *Outlier*.
 - Enable or disable monitoring for each of the two possible directions of a behavioral change for level shifts, trend changes, variance changes and outliers. This will allow you, for example, to configure different alarm monitoring behaviors for downward level shifts and upward level shifts.
 
-For more information on how to configure anomaly monitoring in DataMiner Cube, see RN37148 and RN37171.
+For more information on how to configure anomaly monitoring in DataMiner Cube, see [DataMiner Cube - Alarm templates: Configuration of behavioral anomaly alarms [ID_37148] [ID_37171]](xref:Cube_Feature_Release_10.3.12#alarm-templates-configuration-of-behavioral-anomaly-alarms-id_37148-id_37171).
 
 Summary of server-side changes:
 
@@ -140,11 +140,31 @@ A number of enhancements have been made with regard to error handling.
 
 If, upon detection of a new trend, the trend returns to the old trend (i.e. the trend before the behavioral change) within the hour, the behavioral change will be labeled a level shift rather than a trend change.
 
+#### New downgrade action that adapts the SLAnalytics configuration file when downgrading to version 10.3.0 or older [ID_37582]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+When you downgrade a DataMiner Agent from version 10.3.1 or later to version 10.3.0 or older, a downgrade action will now remove the section related to relation grouping from the SLAnalytics configuration file.
+
+#### SLAnalytics: Enhanced error handling [ID_37607]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+Because of a number of enhancements with regard to error handling, the following error message will no longer be generated when the SLAnalytics process is restarted on one of the DataMiner Agents in the DataMiner System:
+
+`Unexpected number of responses returned on GetInfoMessage...`
+
 #### ManagerStore: Exceptions thrown during actions of high importance will now be logged as errors [ID_37631]
 
 <!-- MR 10.4.0 - FR 10.3.12 -->
 
 Up to now, when managers under the control of the ManagerStore framework in SLNet (DOM, Profiles, User-Defined APIs) threw exceptions during a de-initialization, a failover switch or a midnight synchronization, those exceptions would be logged as level-5 log entries of type *Info*. From now on, they will be logged as level-0 log entries of type *Error*.
+
+#### Storage as a Service: Enhanced performance when restarting elements or performing certain DOM and SRM operations [ID_37638]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+Because of a number of enhancements, overall performance has increased, especially when restarting elements or performing certain DOM and SRM operations.
 
 ### Fixes
 
@@ -212,6 +232,14 @@ In cases where SLDataGateway retrieved an entire table and then applied a filter
 
 When reading data from the database page by page, in some cases, the operation would be cut off prematurely.
 
+#### DELT export of an element from a Cassandra Cluster would incorrectly not include any data [ID_37557]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+
+When a DELT export of an element was performed on a DataMiner Agent running a Cassandra Cluster database, the import package would incorrectly not contain a database folder. As a result, no data from the element in question would be exported.
+
+Also, DELT exports would incorrectly not include the mask status of elements or alarms.
+
 #### Newly created element could get assigned the same DmaId/ElementId key as another, already existing element [ID_37560]
 
 <!-- MR 10.4.0 - FR 10.3.12 -->
@@ -229,3 +257,9 @@ When an element was deleted, `PropertyChangeEvent` instances for that element wo
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
 
 When SLAnalytics lost connection with SLDataGateway, an exception would be thrown, causing SLAnalytics to become unresponsive.
+
+#### DataMiner Object Models: DomManager would not initialize when it received its first call [ID_37604]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When the first call to a DomManager after a DMA (re)start was a call to create, update or delete a HistoryChange object, the call would fail and the DomManager would not initialize.

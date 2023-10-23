@@ -153,3 +153,21 @@ Up to now, it would incorrectly be possible to export table data to a CSV file w
 When a component was too large to fit into a narrow viewport (e.g. when viewing the dashboard on a mobile device), in some cases, the sidebar would incorrectly overlap the component.
 
 This issue would also occur when a visual overview had been embedded in a *Visual overview* component that was too small.
+
+#### Low-Code Apps: Deleting all components on a panel using the Delete button would delete all components on the page [ID_37615]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When, while editing a panel in a low-code app, you used CTRL+a to select all components on that panel and pressed DELETE to delete them, this would not only delete the components on the panel but also the other components on the rest of the page.
+
+#### Dashboards app & Low-Code Apps: Node keys would be omitted when converting a query to a JSON string [ID_37627]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+In some cases, when a query using node keys was converted to a JSON string, the node keys would incorrect be omitted.
+
+#### Dashboards app & Low-Code Apps - Table component: Header bar options would not reinitialize correctly after the table data had been refreshed [ID_37643]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+The options shown on the header bar of a table component would not reinitialize correctly after the table data had been refreshed.

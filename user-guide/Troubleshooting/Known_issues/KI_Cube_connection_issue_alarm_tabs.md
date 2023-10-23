@@ -8,7 +8,7 @@ uid: KI_Cube_connection_issue_alarm_tabs
 
 - DataMiner versions 10.3.9 and 10.3.10
 
-- Any versions from DataMiner 10.2.0 onwards using automatic client updates
+- DataMiner versions from DataMiner 10.2.0 onwards using automatic client updates, prior to the DataMiner 10.3.11 release.
 
 ## Cause
 
@@ -30,7 +30,9 @@ Create a default layout for the Alarm Console:
 
 ## Fix
 
-No fix is available yet. <!--Install DataMiner 10.3.11 (RN 37436).-->
+If no automatic updates are used, install DataMiner 10.2.0 CU19, 10.3.0 CU7, or 10.3.11.<!-- RN 37436 -->
+
+If automatic updates are used, this issue will be fixed automatically with the 10.3.11 release.
 
 ## Description
 

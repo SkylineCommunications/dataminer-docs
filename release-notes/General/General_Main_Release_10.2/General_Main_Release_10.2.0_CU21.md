@@ -20,6 +20,63 @@ Up to now, when you opened a trend graph showing data from several parameters, o
 
 The SLAnalytics feature "pattern matching" has now fully been integrated in the Trending module.
 
+#### DataMiner Cube - System Center: New rule with regard to adding agents to a cluster [ID_37075]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+
+Up to now, it was possible to have a DataMiner System in which some DMAs had been added by IP address while other DMAs had been added by hostname. As this could potentially lead to problems, especially in DataMiner Systems that include Failover pairs, the following rule has now been introduced:
+
+- If the cluster includes any Failover pairs with shared hostname or any DMA with a hostname in its *IP address* field:
+
+  - Allowed to add DMAs either by hostname or by IP address.
+  - Allowed to create Failover pairs with shared hostname only.
+
+- If the cluster includes any Failover pairs with virtual IP addresses:
+
+  - Allowed to add DMAs IP address only.
+  - Allowed to create Failover pairs with virtual IP addresses only.
+
+- In all other cases:
+
+  - Allowed to add DMAs either by hostname or by IP address.
+  - Allowed to create Failover pairs with shared hostname or with virtual IP addresses.
+
+#### DataMiner Cube - Alarm templates: Configuration of behavioral anomaly alarms [ID_37148] [ID_37171]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+
+Up to now, the behavioral anomaly detection feature only allowed users to have alarms generated instead of suggestion events, depending on the parameter and the type of anomaly. From now on, when configuring an alarm template, users will have more options to specify what should happen when behavioral anomalies are detected.
+
+For example, it is now possible to make a distinction between upward and downward behavioral changes (e.g. an upward spike or a downward spike). For example, you can request to have alarms only for upward level shifts and not for downward level shifts. However, in that case, it would still be possible to have suggestions for downward level shifts. Also, you can now fine-tune and decide to have an upward level shift alarm only when the level shift rises more than 10 (i.e. an absolute threshold of 10) or more than 10 percent of the current value (i.e. a relative threshold of 10).
+
+To configure the behavioral anomaly detection for a particular (numeric) parameter, do the following:
+
+1. Open the alarm template in the *Protocols & Templates* app.
+1. In the right-most column of the parameter in question, click the *Anomalies* button to open the *Anomaly alarm settings* window.
+1. In the *Anomaly alarm settings* window, optionally open the *Select preset* selection box, and select one of the following options:
+
+   - "All disabled" (i.e. no anomaly alarms)
+   - "All smart" (i.e. anomaly monitoring as it existed up to now)
+
+1. Below the selection box, if necessary, you can fine-tune the configuration by specifying how anomaly monitoring should react to anomalies of type level shift, outlier, variance change, trend change and/or flatline.
+
+1. Click *Close* to exit the *Anomaly alarm settings* window.
+
+   > [!IMPORTANT]
+   > Closing this window does not yet save the changes you made in this window.
+
+1. Back in the alarm template editor, click *OK* or *Apply* to save the changes you made.
+
+   > [!NOTE]
+   > The *Anomalies* button in the right-most column of the parameter in question will indicate the level of anomaly monitoring that has been configured:
+   >
+   > - "Disabled" (i.e. no anomaly alarms)
+   > - "Customized" (i.e. the new customized anomaly monitoring)
+   > - "Smart" (i.e. anomaly monitoring as it existed up to now).
+
+> [!NOTE]
+> It is not possible to have both a suggestion event and an alarm generated for the same issue. However, it is possible to have suggestion events generated for e.g. downward spikes, even if downward spikes are disabled in the *Anomaly alarm settings* window.
+
 #### Security enhancements [ID_37267]
 
 <!-- RN 37267: MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.11 -->
@@ -45,6 +102,12 @@ In the Surveyor, statistical alarm data can be displayed next to elements, servi
 A number of general enhancements have been made with regard to cache management.
 
 ### Fixes
+
+#### Problem when restarting DataMiner [ID_37112]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU8] - FR 10.3.10 -->
+
+When DataMiner was restarted, in some rare cases, it would not start up again.
 
 #### NATSCustodian could incorrectly pick an offline DMA as NAS candidate [ID_37312]
 
@@ -89,6 +152,13 @@ From now on, Cube will disregard broadcast messages while being used as a servic
 When you create a spectrum monitor, you can define a parameter and select a number of measurement points. Each combination of a parameter and a measurement point then is assigned an ID.
 
 Up to now, when you made a change to a spectrum monitor, in some cases, the ID of certain parameter/measurement point combinations could change even when the parameter or the measurement points had not been changed.
+
+#### DELT export/import did not correctly include mask status [ID_37557]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+<!-- For 10.2.0 branch, only mask status issue was merged -->
+
+When a DELT export package was created, the mask status of elements and alarms was not correctly included in the package. The mask status was also not correctly imported when such a package was imported.
 
 #### DataMiner Cube - Alarm Console: Problem when changing the alignment of an alarm property column [ID_37574]
 

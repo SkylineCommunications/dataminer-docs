@@ -8,7 +8,7 @@ uid: KI_Unable_to_Connect_Net_Remoting
 
 - DataMiner Cube 10.3.7 and 10.3.8
 
-- Any versions from DataMiner 10.2.0 onwards using automatic client updates
+- DataMiner versions from DataMiner 10.2.0 onwards using automatic client updates, prior to the DataMiner 10.3.9 release.
 
 ## Cause
 

@@ -138,6 +138,8 @@ items:
         items:
           - name: Hello World
             topicUid: ChatOps_Tutorials_Custom_Command_Hello_World
+          - name: Chat notifications
+            topicUid: ChatOps_Tutorials_Chat_Notification
   - name: Advanced configuration
     topicUid: Custom_cloud_endpoint_configuration
     items:

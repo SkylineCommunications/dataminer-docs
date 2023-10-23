@@ -118,7 +118,7 @@ Not all [Protocol.Params.Param.Interprete.Others](xref:Protocol.Params.Param.Int
 
 #### Problem when restarting DataMiner [ID_37112]
 
-<!-- MR 10.3.0 [CU8] - FR 10.3.10 -->
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU8] - FR 10.3.10 -->
 
 When DataMiner was restarted, in some rare cases, it would not start up again.
 

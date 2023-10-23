@@ -16,7 +16,41 @@ uid: Cube_Feature_Release_10.3.12
 
 ## New features
 
-*No new features have been added yet.*
+#### Alarm templates: Configuration of behavioral anomaly alarms [ID_37148] [ID_37171]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+
+Up to now, the behavioral anomaly detection feature only allowed users to have alarms generated instead of suggestion events, depending on the parameter and the type of anomaly. From now on, when configuring an alarm template, users will have more options to specify what should happen when behavioral anomalies are detected.
+
+For example, it is now possible to make a distinction between upward and downward behavioral changes (e.g. an upward spike or a downward spike). For example, you can request to have alarms only for upward level shifts and not for downward level shifts. However, in that case, it would still be possible to have suggestions for downward level shifts. Also, you can now fine-tune and decide to have an upward level shift alarm only when the level shift rises more than 10 (i.e. an absolute threshold of 10) or more than 10 percent of the current value (i.e. a relative threshold of 10).
+
+To configure the behavioral anomaly detection for a particular (numeric) parameter, do the following:
+
+1. Open the alarm template in the *Protocols & Templates* app.
+1. In the right-most column of the parameter in question, click the *Anomalies* button to open the *Anomaly alarm settings* window.
+1. In the *Anomaly alarm settings* window, optionally open the *Select preset* selection box, and select one of the following options:
+
+   - "All disabled" (i.e. no anomaly alarms)
+   - "All smart" (i.e. anomaly monitoring as it existed up to now)
+
+1. Below the selection box, if necessary, you can fine-tune the configuration by specifying how anomaly monitoring should react to anomalies of type level shift, outlier, variance change, trend change and/or flatline.
+
+1. Click *Close* to exit the *Anomaly alarm settings* window.
+
+   > [!IMPORTANT]
+   > Closing this window does not yet save the changes you made in this window.
+
+1. Back in the alarm template editor, click *OK* or *Apply* to save the changes you made.
+
+   > [!NOTE]
+   > The *Anomalies* button in the right-most column of the parameter in question will indicate the level of anomaly monitoring that has been configured:
+   >
+   > - "Disabled" (i.e. no anomaly alarms)
+   > - "Customized" (i.e. the new customized anomaly monitoring)
+   > - "Smart" (i.e. anomaly monitoring as it existed up to now).
+
+> [!NOTE]
+> It is not possible to have both a suggestion event and an alarm generated for the same issue. However, it is possible to have suggestion events generated for e.g. downward spikes, even if downward spikes are disabled in the *Anomaly alarm settings* window.
 
 ## Changes
 
@@ -29,6 +63,27 @@ uid: Cube_Feature_Release_10.3.12
 Up to now, when you opened a trend graph showing data from several parameters, only the trend patterns of the first parameter would be loaded onto the graph. From now on, the trend patterns of all parameters shown on the graph will be loaded.
 
 The SLAnalytics feature "pattern matching" has now fully been integrated in the Trending module.
+
+#### System Center: New rule with regard to adding agents to a cluster [ID_37075]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+
+Up to now, it was possible to have a DataMiner System in which some DMAs had been added by IP address while other DMAs had been added by hostname. As this could potentially lead to problems, especially in DataMiner Systems that include Failover pairs, the following rule has now been introduced:
+
+- If the cluster includes any Failover pairs with shared hostname or any DMA with a hostname in its *IP address* field:
+
+  - Allowed to add DMAs either by hostname or by IP address.
+  - Allowed to create Failover pairs with shared hostname only.
+
+- If the cluster includes any Failover pairs with virtual IP addresses:
+
+  - Allowed to add DMAs IP address only.
+  - Allowed to create Failover pairs with virtual IP addresses only.
+
+- In all other cases:
+
+  - Allowed to add DMAs either by hostname or by IP address.
+  - Allowed to create Failover pairs with shared hostname or with virtual IP addresses.
 
 #### Interactive Automation scripts: FileSelector now allows to keep the files that were already uploaded after the UI was shown [ID_37260]
 
@@ -107,13 +162,13 @@ When, in the Alarm Console, you add a column showing an alarm property you are a
 
 Up to now, when you changed the alignment of such a column, the pencil icons would disappear and the new alignment would not be applied. From now on, when you change the alignment of a column showing an alarm property you are allowed to edit, the new alignment will be applied correctly and the pencil icons will stay visible. However, regardless of the alignment, the pencil icons will stay on the left, and when you change a value, the text box will also be aligned to the left.
 
-#### DataMiner Cube - Alarm Console: Text-to-speech button would overlap the counter showing the number of alarms with severity 'Suggestion' [ID_37590]
+#### Alarm Console: Text-to-speech button would overlap the counter showing the number of alarms with severity 'Suggestion' [ID_37590]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
 
 In the footer of the Alarm Console, the button to cancel the current text-to-speech operation would overlap the counter showing the number of alarms with severity "Suggestion" in the current alarm tab.
 
-#### DataMiner Cube - Alarm Console: Focus score would not be updated correctly when an alarm was duplicated [ID_37600]
+#### Alarm Console: Focus score would not be updated correctly when an alarm was duplicated [ID_37600]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
 
