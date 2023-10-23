@@ -1,5 +1,6 @@
 ---
 uid: Configuring_external_authentication_via_an_identity_provider_using_SAML
+keywords: Azure AD, AzureAD, Microsoft Entra ID, SAML, Okta, Azure B2C
 ---
 
 # Configuring external authentication via an identity provider using SAML
@@ -65,7 +66,7 @@ Once this has been configured, if users try to log in to the DMA using external 
 > - For the **Web apps**, when external authentication is enabled, it is no longer possible to log in with local accounts. As a workaround, since you do not need to configure external authentication on every DMA of the cluster, you can log in to the web apps using external authentication on one DMA and log in using a local account on another DMA.
 
 > [!CAUTION]
-> If there are two DataMiner users who share the same email address, both users will not be able to log in. To prevent this from happening, we recommended not using more than one method to add users. For example, do not add Windows domain users if the Azure AD users use the same email address.
+> If there are two DataMiner users who share the same email address, both users will not be able to log in. To prevent this from happening, we recommended not using more than one method to add users. For example, do not add Windows domain users if the Entra ID users use the same email address.
 
 > [!TIP]
 > See also: [Authenticating Azure AD Users on DataMiner with SAML](https://community.dataminer.services/video/authenticating-azure-ad-users-on-dataminer-with-saml/) in the Dojo video library ![Video](~/user-guide/images/video_Duo.png)
@@ -162,18 +163,19 @@ DataMiner currently supports the following identity providers:
 - [Azure B2C](#azure-b2c)
 - [Okta](#okta)
 
-### Azure Active Directory
+### Microsoft Entra ID (Formerly Azure Active Directory)
 
-DataMiner supports Azure AD as identity provider as from version 10.1.5. Azure Active Directory is Microsoft's cloud-based identity and access management service, which helps users sign in and access resources.
+Microsoft has renamed Azure Active Directory to Microsoft Entra ID, functionally everything remains the same but we refer to Entra ID now instead of Azure AD.
+DataMiner supports Entra ID as identity provider as from version 10.1.5. Azure Active Directory is Microsoft's cloud-based identity and access management service, which helps users sign in and access resources.
 
-#### Setting up an Azure AD Enterprise application
+#### Setting up a Microsoft Entra ID Enterprise application
 
-From DataMiner 10.3.4/10.4.0 onwards, you must create an Enterprise Application in Azure AD when setting up external authentication. In earlier DataMiner versions from DataMiner 10.2.0/10.2.1 onwards, creating an Enterprise Application is highly recommended, as otherwise not all features will be available.
+From DataMiner 10.3.4/10.4.0 onwards, you must create an Enterprise Application in Entra ID when setting up external authentication. In earlier DataMiner versions from DataMiner 10.2.0/10.2.1 onwards, creating an Enterprise Application is highly recommended, as otherwise not all features will be available.
 
 > [!NOTE]
 > Only a Global Administrator, Application Administrator, Cloud Application Administrator, and Application Developer have the necessary permissions to create Enterprise applications.
 
-1. In Azure AD, register DataMiner as an Enterprise Application:
+1. In Entra ID, register DataMiner as an Enterprise Application:
 
    1. Navigate to ``portal.azure.com`` and log in.
    1. Select the Azure Active Directory service.
@@ -215,17 +217,17 @@ From DataMiner 10.3.4/10.4.0 onwards, you must create an Enterprise Application 
    > - See also: [Creating a DataMiner metadata file](#creating-a-dataminer-metadata-file)  
    > - See also: [Additional configuration for systems connected to dataminerservices](#additional-configuration-for-systems-connected-to-dataminerservices) 
 
-#### Retrieving the identity provider's metadata file on Azure AD
+#### Retrieving the identity provider's metadata file on Microsoft Entra ID
 
-In Azure AD, the ipMetadata URL can be found under *Single sign-on > SAML Signing Certificate – App Federation Metadata Url*.
+In Entra ID, the ipMetadata URL can be found under *Single sign-on > SAML Signing Certificate – App Federation Metadata Url*.
 
-#### Configuring DataMiner to import users and groups from Azure AD
+#### Configuring DataMiner to import users and groups from Microsoft Entra ID
 
-Once you have established a trust relationship between DataMiner (i.e. the service provider) and Azure AD (i.e. the identity provider), you can also configure DataMiner to import users and user groups from Azure AD. To do so, proceed as follows.
+Once you have established a trust relationship between DataMiner (i.e. the service provider) and Entra ID (i.e. the identity provider), you can also configure DataMiner to import users and user groups from Entra ID. To do so, proceed as follows.
 
 1. Gather the following information:
 
-   - **Client ID**, **Object ID**, and **Tenant ID**: These GUIDs identify the application (DataMiner) in the Azure AD platform, and identify the users & groups directory on the Azure portal, respectively. You can find these fields on the root page of the application: *Azure Active Directory > App registrations > [your application name]*.
+   - **Client ID**, **Object ID**, and **Tenant ID**: These GUIDs identify the application (DataMiner) in the Entra ID platform, and identify the users & groups directory on the Azure portal, respectively. You can find these fields on the root page of the application: *Microsoft Entra ID > App registrations > [your application name]*.
 
      Creating an Enterprise Application will also create an app registration with the same name, but you will not find it under *owned application*.
 
@@ -244,7 +246,7 @@ Once you have established a trust relationship between DataMiner (i.e. the servi
         > [!IMPORTANT]
         > Once you leave this page, you will no longer be able to access the secret value.
 
-   - **Username** and **Password**: The Azure AD user account that DataMiner will use to request data from Azure AD. Technically this can be any account, but we recommend that you create an account that will be use exclusively for this purpose. Note that, depending on the method of querying, specifying this account can be optional from DataMiner 10.1.11/10.2.0 onwards (see note below).
+   - **Username** and **Password**: The Entra ID user account that DataMiner will use to request data from Azure. Technically this can be any account, but we recommend that you create an account that will be use exclusively for this purpose. Note that, depending on the method of querying, specifying this account can be optional from DataMiner 10.1.11/10.2.0 onwards (see note below).
 
 1. Configure DataMiner with this information:
 
@@ -265,7 +267,7 @@ Once you have established a trust relationship between DataMiner (i.e. the servi
       ```
 
       > [!NOTE]
-      > From DataMiner 10.1.11/10.2.0 onwards, DataMiner supports Azure AD application querying. If this is used instead of delegated querying, an authentication secret will suffice and no username and password will need to be specified here.
+      > From DataMiner 10.1.11/10.2.0 onwards, DataMiner supports Entra ID application querying. If this is used instead of delegated querying, an authentication secret will suffice and no username and password will need to be specified here.
 
    1. Save the file and restart DataMiner.
 
@@ -288,24 +290,24 @@ Once you have established a trust relationship between DataMiner (i.e. the servi
    - Microsoft Graph \> User.Read.All – Application - Read all users’ full profiles
    - Microsoft Graph \> User.Read – Delegated – Sign in and read user profile
 
-1. Add the Azure AD users to DataMiner:
+1. Add the Entra ID users to DataMiner:
 
    1. Open DataMiner Cube and log in with an existing Administrator account.
-   1. Add the users/groups as described in [Adding a user](xref:Adding_a_user) and [Adding a user group](xref:Adding_a_user_group). If you choose to add an existing user or group, you will be presented a list of all users and groups available on Azure AD.
+   1. Add the users/groups as described in [Adding a user](xref:Adding_a_user) and [Adding a user group](xref:Adding_a_user_group). If you choose to add an existing user or group, you will be presented a list of all users and groups available on Entra ID.
    1. When you have added the necessary users, configure their permissions. See [Configuring a user group](xref:Configuring_a_user_group).
 
-   It is now possible to log in to DataMiner with any of the Azure AD user accounts you have added, using either the domain and username (DOMAIN\\user) or the email address.
+   It is now possible to log in to DataMiner with any of the Entra ID user accounts you have added, using either the domain and username (DOMAIN\\user) or the email address.
 
-#### Configuring automatic creation of users authenticated by Azure AD using SAML
+#### Configuring automatic creation of users authenticated by Entra ID using SAML
 
-From DataMiner 10.2.0/10.1.12 onwards, users authenticated by Azure AD using SAML can be automatically created and assigned to groups in DataMiner. This is often referred to as JIT (Just-In-Time) Provisioning.
+From DataMiner 10.2.0/10.1.12 onwards, users authenticated by Entra ID using SAML can be automatically created and assigned to groups in DataMiner. This is often referred to as JIT (Just-In-Time) Provisioning.
 
 1. Go to *Single Sign-on > Attributes & Claims* and add a group claim.
 
    > [!NOTE]
    > If you add a group claim, the account name of the group will only be sent via SAML when the groups are synchronized. Otherwise, the ID of the group will be sent instead.
 
-1. In DataMiner Cube, add the groups corresponding with the groups you added in Azure AD. See [Adding a user group](xref:Adding_a_user_group).
+1. In DataMiner Cube, add the groups corresponding with the groups you added in Entra ID. See [Adding a user group](xref:Adding_a_user_group).
 
 1. Stop DataMiner.
 
@@ -352,15 +354,15 @@ From DataMiner 10.2.0/10.1.12 onwards, users authenticated by Azure AD using SAM
 DataMiner supports Azure B2C as identity provider from version 10.2.6/10.3.0 onwards. To configure this:
 
 1. Configure Azure B2C. See [Azure Active Directory B2C documentation | Microsoft Docs](https://docs.microsoft.com/en-us/azure/active-directory-b2c/).
-1. Create a DataMiner metadata file. You can do this in the same way as for [Azure AD](#creating-a-dataminer-metadata-file).
-1. Set up an Azure AD Enterprise application. You can do this in the same way as for [Azure AD](#setting-up-an-azure-ad-enterprise-application).
+1. Create a DataMiner metadata file. You can do this in the same way as for [Entra ID](#creating-a-dataminer-metadata-file).
+1. Set up an Entra ID Enterprise application. You can do this in the same way as for [Entra ID](#setting-up-an-azure-ad-enterprise-application).
 1. Configure policies for Azure B2C. See [Tutorial: Create user flows and custom policies in Azure Active Directory B2C | Microsoft Docs](https://docs.microsoft.com/en-us/azure/active-directory-b2c/tutorial-create-user-flows?pivots=b2c-custom-policy).
 1. Get the metadata URL:
 
    1. In Azure, go to *App registrations*, select your app, and select *Overview* > *Endpoints*.
    1. Select the Azure AD B2C SAML metadata endpoint, e.g. `https://dataminerservices.b2clogin.com/dataminerservices.onmicrosoft.com/<policy-name>/Samlp/metadata`, and replace \<policy-name> with the name of the policy you created earlier.
 
-1. Configure DataMiner to automatically create users from Azure B2C. You can do this in the same way as for [Azure AD](#configuring-automatic-creation-of-users-authenticated-by-azure-ad-using-saml). For the ipMetadata link, use the link created in the previous step.
+1. Configure DataMiner to automatically create users from Azure B2C. You can do this in the same way as for [Entra ID](#configuring-automatic-creation-of-users-authenticated-by-azure-ad-using-saml). For the ipMetadata link, use the link created in the previous step.
 
    > [!NOTE]
    > To create SAML users in DataMiner using Azure B2C, a domain is required in the usernames. For this reason, email addresses must be used as the usernames. If the default username of the identity provider is not a valid email address, add a \<PreferredLoginClaim> element to the \<AutomaticUserCreation> element in *DataMiner.xml* that refers to a claim containing a valid email address.
