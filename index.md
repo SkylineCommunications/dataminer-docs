@@ -33,6 +33,6 @@ Can't find what you need here? Go to our [DataMiner Community website](https://c
     <a href="/tutorials/Tutorials.html" title="DataMiner Tutorials" target="_self"><img src="images/Docs_DataMinerTutorials.svg" style="width:100%"></a>
   </div>
   <div class="column">
-    <a href="https://happy-dune-071cbee03.3.azurestaticapps.net/connector/index.html" title="Connector Documentation" target="_self"><img src="images/Docs_ConnectorDocumentation.svg" style="width:100%"></a>
+    <a href="https://docs.dataminer.services/connector/index.html" title="Connector Documentation" target="_self"><img src="images/Docs_ConnectorDocumentation.svg" style="width:100%"></a>
   </div>
 </div>
