@@ -33,6 +33,19 @@ uid: Importing_and_exporting_elements
 > - For more information on how DataMiner checks for duplicate names, see [Duplicate name check](#duplicate-name-check).
 > - As CSV separator settings may have changed in DataMiner 10.0.0/10.0.2, before you import a CSV file that was exported using a version of Cube prior to 10.0.0/10.0.2, make sure to check the separator used in that file.
 
+### Importing SNMPv3 elements
+
+For elements communicating via SNMPv3, some fields in the CSV file have different meaning:
+
+| Field name    | SNMPv3 parameter                 |
+|---------------|----------------------------------|
+| Parity        | Authentication algorithm         |
+| Data Bits     | Username                         |
+| Stop Bits     | Security level and protocol      |
+| Flow Control  | Encryption algorithm             |
+| Get Community | Authentication password          |
+| Set Community | Encryption password              |
+
 ### Duplicate name check
 
 When you import elements via a CSV file, DataMiner checks for duplicate names.
@@ -87,6 +100,10 @@ Name checks are case-insensitive. This means that for instance “element1” is
    - *copy to clipboard*: makes a copy of the element information to the clipboard.
 
    - *print*: exports the element information to a printer.
+
+   > [!NOTE]
+   >
+   > Private information, such as SNMPv3 authentication and encryption passwords, will not be exported for security reasons. 
 
 1. Click *Export*.
 
