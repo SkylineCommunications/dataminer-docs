@@ -705,6 +705,10 @@ namespace Skyline.DataMiner.Scripting
 		///	<code>
 		///	string myValue = Convert.ToString(protocol.GetParameter(100));
 		/// </code>
+		/// <para>In order to avoid magic numbers, you can make use of the <see href="xref:Skyline.DataMiner.Scripting.Parameter" /> class.</para>
+		///	<code>
+		///	string myValue = Convert.ToString(protocol.GetParameter(Parameter.myparameter));
+		/// </code>
 		/// </example>
 		object GetParameter(int iID);
 
@@ -781,6 +785,10 @@ namespace Skyline.DataMiner.Scripting
 		///	<code>
 		///	protocol.SetParameter(100, "myValue");
 		/// </code>
+		/// <para>In order to avoid magic numbers, you can make use of the <see href="xref:Skyline.DataMiner.Scripting.Parameter" /> class.</para>
+		///	<code>
+		///	protocol.SetParameter(Parameter.myparameter, "myValue");
+		/// </code>
 		/// </example>
 		int SetParameter(int iID, object value);
 
@@ -831,6 +839,10 @@ namespace Skyline.DataMiner.Scripting
 		///	<example>
 		///	<code>
 		///	protocol.SetParameters(new int[] { 31, 32 }, new object[] { "value A", "value B" });
+		/// </code>
+		/// <para>In order to avoid magic numbers, you can make use of the <see href="xref:Skyline.DataMiner.Scripting.Parameter" /> class.</para>
+		///	<code>
+		///	protocol.SetParameters(new int[] { Parameter.myparameter, Parameter.myparameter2 }, new object[] { "value A", "value B" });
 		/// </code>
 		/// </example>
 		object SetParameters(int[] ids, object[] values);
@@ -884,6 +896,10 @@ namespace Skyline.DataMiner.Scripting
 		///	<example>
 		///	<code>
 		///	object[] parameters = (object[])protocol.GetParameters(new uint[] { 631, 831, 31 });
+		/// </code>
+		/// <para>In order to avoid magic numbers, you can make use of the <see href="xref:Skyline.DataMiner.Scripting.Parameter" /> class.</para>
+		///	<code>
+		///	object[] parameters = (object[])protocol.GetParameters(new uint[] { Parameter.myparameter, Parameter.myotherparameter, Parameter.anotherparameter });
 		/// </code>
 		/// </example>
 		object GetParameters(object ids);
