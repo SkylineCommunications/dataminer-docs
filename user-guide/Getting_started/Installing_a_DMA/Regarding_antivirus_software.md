@@ -11,7 +11,7 @@ It is possible to install antivirus software on a DMA. However, you need to keep
   - `C:\Skyline DataMiner`
   - `C:\Program Files\Skyline Communications`
   - In case you are using self-hosted data storage instead of [Storage as a Service](xref:STaaS), the data directories of the databases (e.g. `C:\ProgramData\Cassandra`)
-
+  - On client machines, the DataMiner Cube directories `%LocalAppData%\Skyline\DataMiner\DataMinerCube`
 - Exclude the following processes:
 
   - All DataMiner processes (process names starting with "SL" or "DataMiner").
