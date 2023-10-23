@@ -69,7 +69,7 @@ Once this has been configured, if users try to log in to the DMA using external 
 > If there are two DataMiner users who share the same email address, both users will not be able to log in. To prevent this from happening, we recommended not using more than one method to add users. For example, do not add Windows domain users if the Entra ID users use the same email address.
 
 > [!TIP]
-> See also: [Authenticating Azure AD Users on DataMiner with SAML](https://community.dataminer.services/video/authenticating-azure-ad-users-on-dataminer-with-saml/) in the Dojo video library ![Video](~/user-guide/images/video_Duo.png)
+> See also: [Authenticating Azure AD (i.e. Entra ID) users on DataMiner with SAML](https://community.dataminer.services/video/authenticating-azure-ad-users-on-dataminer-with-saml/) in the Dojo video library ![Video](~/user-guide/images/video_Duo.png)
 
 ### Creating a DataMiner metadata file
 
@@ -159,14 +159,16 @@ When your DataMiner System is connected to dataminer.services, the following add
 
 DataMiner currently supports the following identity providers:
 
-- [Azure Active Directory](#azure-active-directory)
+- [Microsoft Entra ID](#microsoft-entra-id-formerly-azure-ad)
 - [Azure B2C](#azure-b2c)
 - [Okta](#okta)
 
-### Microsoft Entra ID (Formerly Azure Active Directory)
+### Microsoft Entra ID (formerly Azure AD)
 
-Microsoft has renamed Azure Active Directory to Microsoft Entra ID, functionally everything remains the same but we refer to Entra ID now instead of Azure AD.
-DataMiner supports Entra ID as identity provider as from version 10.1.5. Azure Active Directory is Microsoft's cloud-based identity and access management service, which helps users sign in and access resources.
+DataMiner supports Entra ID (previously known as Azure Active Directory) as identity provider as from version 10.1.5. Entra ID is Microsoft's cloud-based identity and access management service, which helps users sign in and access resources.
+
+> [!NOTE]
+> Prior to July 2023, Microsoft Entra ID was called Azure Active Directory.
 
 #### Setting up a Microsoft Entra ID Enterprise application
 
@@ -214,8 +216,8 @@ From DataMiner 10.3.4/10.4.0 onwards, you must create an Enterprise Application 
    - Set *Sign on URL* to the IP address or DNS name specified in the *spMetadata.xml* file, for example ``https://dataminer.example.com/``.
 
    > [!TIP]
-   > - See also: [Creating a DataMiner metadata file](#creating-a-dataminer-metadata-file)  
-   > - See also: [Additional configuration for systems connected to dataminerservices](#additional-configuration-for-systems-connected-to-dataminerservices) 
+   > - See also: [Creating a DataMiner metadata file](#creating-a-dataminer-metadata-file)
+   > - See also: [Additional configuration for systems connected to dataminer.services](#additional-configuration-for-systems-connected-to-dataminerservices)
 
 #### Retrieving the identity provider's metadata file on Microsoft Entra ID
 
@@ -355,14 +357,14 @@ DataMiner supports Azure B2C as identity provider from version 10.2.6/10.3.0 onw
 
 1. Configure Azure B2C. See [Azure Active Directory B2C documentation | Microsoft Docs](https://docs.microsoft.com/en-us/azure/active-directory-b2c/).
 1. Create a DataMiner metadata file. You can do this in the same way as for [Entra ID](#creating-a-dataminer-metadata-file).
-1. Set up an Entra ID Enterprise application. You can do this in the same way as for [Entra ID](#setting-up-an-azure-ad-enterprise-application).
+1. Set up an Entra ID Enterprise application. You can do this in the same way as for [Entra ID](#setting-up-a-microsoft-entra-id-enterprise-application).
 1. Configure policies for Azure B2C. See [Tutorial: Create user flows and custom policies in Azure Active Directory B2C | Microsoft Docs](https://docs.microsoft.com/en-us/azure/active-directory-b2c/tutorial-create-user-flows?pivots=b2c-custom-policy).
 1. Get the metadata URL:
 
    1. In Azure, go to *App registrations*, select your app, and select *Overview* > *Endpoints*.
    1. Select the Azure AD B2C SAML metadata endpoint, e.g. `https://dataminerservices.b2clogin.com/dataminerservices.onmicrosoft.com/<policy-name>/Samlp/metadata`, and replace \<policy-name> with the name of the policy you created earlier.
 
-1. Configure DataMiner to automatically create users from Azure B2C. You can do this in the same way as for [Entra ID](#configuring-automatic-creation-of-users-authenticated-by-azure-ad-using-saml). For the ipMetadata link, use the link created in the previous step.
+1. Configure DataMiner to automatically create users from Azure B2C. You can do this in the same way as for [Entra ID](#configuring-automatic-creation-of-users-authenticated-by-entra-id-using-saml). For the ipMetadata link, use the link created in the previous step.
 
    > [!NOTE]
    > To create SAML users in DataMiner using Azure B2C, a domain is required in the usernames. For this reason, email addresses must be used as the usernames. If the default username of the identity provider is not a valid email address, add a \<PreferredLoginClaim> element to the \<AutomaticUserCreation> element in *DataMiner.xml* that refers to a claim containing a valid email address.
