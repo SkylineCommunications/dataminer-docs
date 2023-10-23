@@ -16,11 +16,11 @@ Estimated duration: 15 minutes.
 
 ## Overview
 
-- [Step 1: Deploy the ChatIntegration Examples package from the Catalog](#deploy-the-chatintegration-examples-package-from-the-catalog)
-- [Step 2: Fetch the private chat for a user and send a notification](#fetch-the-private-chat-for-a-user-and-send-a-notification)
-- [Step 3: Configure a Correlation rule triggered by a specific alarm to send the chat notification](#configure-a-correlation-rule-triggered-by-a-specific-alarm-to-send-the-chat-notification)
+- [Step 1: Deploy the ChatIntegration Examples package from the Catalog](#step-1-deploy-the-chatintegration-examples-package-from-the-catalog)
+- [Step 2: Fetch the private chat for a user and send a notification](#step-2-fetch-the-private-chat-for-a-user-and-send-a-notification)
+- [Step 3: Configure a Correlation rule triggered by a specific alarm to send the chat notification](#step-3-configure-a-correlation-rule-triggered-by-a-specific-alarm-to-send-the-chat-notification)
 
-## Deploy the ChatIntegration Examples package from the Catalog
+## Step 1: Deploy the ChatIntegration Examples package from the Catalog
 
 1. Browse to <https://catalog.dataminer.services/catalog/3129>.
 
@@ -32,7 +32,7 @@ Estimated duration: 15 minutes.
 
    ![ChatIntegration Examples scripts](~/user-guide/images/chatops_notification_01_002.png)
 
-## Fetch the private chat for a user and send a notification
+## Step 2: Fetch the private chat for a user and send a notification
 
 1. Execute the *Fetch Private Chat Example* script with the email address of the user.
 
@@ -46,7 +46,7 @@ Estimated duration: 15 minutes.
 
    ![ChatIntegration Examples Send Chat Notification](~/user-guide/images/chatops_notification_02_003.png)
 
-## Configure a Correlation rule triggered by a specific alarm to send the chat notification
+## Step 3: Configure a Correlation rule triggered by a specific alarm to send the chat notification
 
 1. Configure a Correlation rule so it will be triggered by a specific alarm and will execute the *Send Chat Notification Example* script.
 
