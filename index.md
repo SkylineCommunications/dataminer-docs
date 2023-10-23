@@ -1,5 +1,6 @@
 ---
 uid: docs_dataminer_services
+_layout: landing
 ---
 
 # docs.dataminer.services
