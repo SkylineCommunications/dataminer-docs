@@ -22,7 +22,7 @@ If you do install antivirus software on the **server**, you must:
 
 - Avoid scheduled virus scans affecting the available resources for the DataMiner software at certain moments in time.
 
-If you install antivirus software on **client** machines, exclude the DataMiner Cube directories `%LocalAppData%\Skyline\DataMiner\DataMinerCube`
+If you install antivirus software on **client** machines, exclude the DataMiner Cube directories `%LocalAppData%\Skyline\DataMiner\DataMinerCube`.
 
 > [!NOTE]
 >
