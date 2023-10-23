@@ -10,6 +10,9 @@ This tutorial shows how you can create and publish an IP Address Management (IPA
 - [Step 1: Create an app](#step-1-create-an-app)
 - [Step 2: Publish the app](#step-2-publish-the-app)
 
+> [!TIP]
+> See also: [Kata #3: Build your first low-code app](https://community.dataminer.services/courses/kata-3/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+
 ## Step 1: Create an app
 
 The DataMiner Low-Code Apps are available on the DataMiner landing page. To access this page, browse to the IP or hostname of a DMA or to *https://[Your DMA]/root*, depending on your configuration.
