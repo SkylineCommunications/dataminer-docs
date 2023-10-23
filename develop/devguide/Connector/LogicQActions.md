@@ -198,27 +198,27 @@ By default, the entry method is expected to be defined in the QAction class. How
 
 The entry point method of a QAction can be defined with an argument of type [SLProtocol](xref:Skyline.DataMiner.Scripting.SLProtocol) or [SLProtocolExt](xref:Skyline.DataMiner.Scripting.SLProtocolExt).
 
-When DataMiner is going to execute a QAction, a new instance of SLProtocol or SLProtocolExt is created and passed as an argument to the entry point method (if the entry point method defines an argument of type SLProtocol or SLProtocolExt). This new instance contains information about
+When DataMiner is going to execute a QAction, a new instance of SLProtocol or SLProtocolExt is created and passed as an argument to the entry point method (if the entry point method defines an argument of type SLProtocol or SLProtocolExt). This new instance contains the following information:
 
-- element ([ElementID](xref:Skyline.DataMiner.Scripting.SLProtocol.ElementID) and [DataMinerID](xref:Skyline.DataMiner.Scripting.SLProtocol.DataMinerID))
-- trigger parameter ([GetTriggerParameter](xref:Skyline.DataMiner.Scripting.SLProtocol.GetTriggerParameter))
-- element name ([ElementName](xref:Skyline.DataMiner.Scripting.SLProtocol.ElementName))
-- protocol name and version ([ProtocolName](xref:Skyline.DataMiner.Scripting.SLProtocol.ProtocolName), [ProtocolVersion](xref:Skyline.DataMiner.Scripting.SLProtocol.ProtocolVersion) and [ElementProtocolVersion](xref:Skyline.DataMiner.Scripting.SLProtocol.ElementProtocolVersion))
-- user ([UserInfo](xref:Skyline.DataMiner.Scripting.SLProtocol.UserInfo) and [UserCookie](xref:Skyline.DataMiner.Scripting.SLProtocol.UserCookie))
-- DB type ([GetLocalDatabaseType](xref:Skyline.DataMiner.Scripting.SLProtocol.GetLocalDatabaseType))
-- any additional values that should be passed along as input arguments to the QAction entry point method (see [Via inputParameters Attribute](xref:LogicQActions#via-inputparameters-attribute))
+- Element ([ElementID](xref:Skyline.DataMiner.Scripting.SLProtocol.ElementID) and [DataMinerID](xref:Skyline.DataMiner.Scripting.SLProtocol.DataMinerID))
+- Trigger parameter ([GetTriggerParameter](xref:Skyline.DataMiner.Scripting.SLProtocol.GetTriggerParameter))
+- Element name ([ElementName](xref:Skyline.DataMiner.Scripting.SLProtocol.ElementName))
+- Protocol name and version ([ProtocolName](xref:Skyline.DataMiner.Scripting.SLProtocol.ProtocolName), [ProtocolVersion](xref:Skyline.DataMiner.Scripting.SLProtocol.ProtocolVersion), and [ElementProtocolVersion](xref:Skyline.DataMiner.Scripting.SLProtocol.ElementProtocolVersion))
+- User ([UserInfo](xref:Skyline.DataMiner.Scripting.SLProtocol.UserInfo) and [UserCookie](xref:Skyline.DataMiner.Scripting.SLProtocol.UserCookie))
+- Database type ([GetLocalDatabaseType](xref:Skyline.DataMiner.Scripting.SLProtocol.GetLocalDatabaseType))
+- Any additional values that should be passed along as input arguments to the QAction entry point method (see [Via inputParameters Attribute](xref:LogicQActions#via-inputparameters-attribute))
 
-If the QAction is triggered on a row, additional information is passed along
+If the QAction is triggered on a row, additional information is passed along:
 
-- idx ([RowIndex](xref:Skyline.DataMiner.Scripting.SLProtocol.RowIndex))
-- the primary key ([RowKey](xref:Skyline.DataMiner.Scripting.SLProtocol.RowKey))
-- old row data ([OldRow](xref:Skyline.DataMiner.Scripting.SLProtocol.OldRow))
-- new row data ([NewRow](xref:Skyline.DataMiner.Scripting.SLProtocol.NewRow))
-- ping RTT ([RowRTT](xref:Skyline.DataMiner.Scripting.SLProtocol.RowRTT))
-- timestamp ([RowPingTimestamp](xref:Skyline.DataMiner.Scripting.SLProtocol.RowPingTimestamp))
+- The IDX ([RowIndex](xref:Skyline.DataMiner.Scripting.SLProtocol.RowIndex))
+- The primary key ([RowKey](xref:Skyline.DataMiner.Scripting.SLProtocol.RowKey))
+- Old row data ([OldRow](xref:Skyline.DataMiner.Scripting.SLProtocol.OldRow))
+- New row data ([NewRow](xref:Skyline.DataMiner.Scripting.SLProtocol.NewRow))
+- Ping RTT ([RowRTT](xref:Skyline.DataMiner.Scripting.SLProtocol.RowRTT))
+- Timestamp ([RowPingTimestamp](xref:Skyline.DataMiner.Scripting.SLProtocol.RowPingTimestamp))
 
 > [!NOTE]
-> The SLProtocolExt interface extends the SLProtocol interface with additional members that can improve code readability. However, if you do not make use of the additional functionality provided by SLProtocolExt, it is advised to define the entry point method with an argument of type SLProtocol instead of SLProtocolExt.
+> The SLProtocolExt interface extends the SLProtocol interface with additional members that can improve code readability. However, if you do not make use of the additional functionality provided by SLProtocolExt, we recommend defining the entry point method with an argument of type SLProtocol instead of SLProtocolExt.
 
 ## Executing a QAction
 
