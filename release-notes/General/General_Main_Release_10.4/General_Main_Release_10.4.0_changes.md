@@ -763,14 +763,6 @@ In cases where SLDataGateway retrieved an entire table and then applied a filter
 
 When reading data from the database page by page, in some cases, the operation would be cut off prematurely.
 
-#### DELT export of an element from a Cassandra Cluster would incorrectly not include any data [ID_37557]
-
-<!-- MR 10.4.0 - FR 10.3.12 -->
-
-When a DELT export of an element was performed on a DataMiner Agent running a Cassandra Cluster database, the import package would incorrectly not contain a database folder. As a result, no data from the element in question would be exported.
-
-Also, DELT exports would incorrectly not include the mask status of elements or alarms.
-
 #### Newly created element could get assigned the same DmaId/ElementId key as another, already existing element [ID_37560]
 
 <!-- MR 10.4.0 - FR 10.3.12 -->

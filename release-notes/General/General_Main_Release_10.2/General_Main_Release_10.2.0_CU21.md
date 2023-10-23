@@ -153,6 +153,14 @@ When you create a spectrum monitor, you can define a parameter and select a numb
 
 Up to now, when you made a change to a spectrum monitor, in some cases, the ID of certain parameter/measurement point combinations could change even when the parameter or the measurement points had not been changed.
 
+#### DELT export of an element from a Cassandra Cluster would incorrectly not include any data [ID_37557]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+
+When a DELT export of an element was performed on a DataMiner Agent running a Cassandra Cluster database, the import package would incorrectly not contain a database folder. As a result, no data from the element in question would be exported.
+
+Also, DELT exports would incorrectly not include the mask status of elements or alarms.
+
 #### DataMiner Cube - Alarm Console: Problem when changing the alignment of an alarm property column [ID_37574]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->

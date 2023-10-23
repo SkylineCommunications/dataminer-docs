@@ -90,6 +90,14 @@ Up to now, when you stopped both *Alarm Focus* and *Automatic Incident Tracking*
 
 When a resource did not have both a minimum and maximum value for a particular range point, the resource capability exposers would not work correctly for that range point.
 
+#### DELT export of an element from a Cassandra Cluster would incorrectly not include any data [ID_37557]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+
+When a DELT export of an element was performed on a DataMiner Agent running a Cassandra Cluster database, the import package would incorrectly not contain a database folder. As a result, no data from the element in question would be exported.
+
+Also, DELT exports would incorrectly not include the mask status of elements or alarms.
+
 #### PropertyChangeEvents would not be removed from the SLNet event cache when an element was deleted [ID_37576]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->

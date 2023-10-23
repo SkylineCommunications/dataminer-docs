@@ -234,7 +234,7 @@ When reading data from the database page by page, in some cases, the operation w
 
 #### DELT export of an element from a Cassandra Cluster would incorrectly not include any data [ID_37557]
 
-<!-- MR 10.4.0 - FR 10.3.12 -->
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
 
 When a DELT export of an element was performed on a DataMiner Agent running a Cassandra Cluster database, the import package would incorrectly not contain a database folder. As a result, no data from the element in question would be exported.
 
