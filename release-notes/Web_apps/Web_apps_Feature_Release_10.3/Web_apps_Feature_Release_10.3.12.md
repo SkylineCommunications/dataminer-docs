@@ -195,3 +195,9 @@ When, in the query builder, you opened an unused query, too much whitespace woul
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
 
 When the query of a *Bar* chart or a *Pie & donut* chart was linked to a feed as a filter, in some cases, the chart configuration could get changed unexpectedly.
+
+#### Low-Code Apps: Images on a low-code app would only be visible to users who had permission to view dashboards [ID_37667]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When you opened a low-code app you were allowed to view, the images on that low-code app would not be visible unless you had permission to view dashboards.
