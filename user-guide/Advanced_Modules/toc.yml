@@ -412,6 +412,8 @@ items:
           - name: Other
             topicUid: Other
             items:
+              - name: Grid
+                topicUid: DashboardGrid
               - name: Node edge graph
                 topicUid: DashboardNodeEdgeGraph
               - name: Parameter page
