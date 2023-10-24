@@ -1,5 +1,6 @@
 ---
 uid: Deleting_a_protocol_or_protocol_version_from_your_DataMiner_System
+keywords: deleting a driver, deleting a connector
 ---
 
 # Deleting a protocol or protocol version from your DataMiner System

@@ -71,6 +71,9 @@ Total estimated time of the procedure: approximately 40 minutes, depending on th
             nodetool clearsnapshot
             ```
 
+      > [!TIP]
+      > If you are using a system with self-hosted DataMiner storage (e.g. Cassandra), we recommend switching to [Storage as a Service](xref:STaaS) instead.
+
     - **Cleaning up alarm and trend templates – approx. 2 minutes/protocol**
 
         In the *Protocols & Templates* app, check if alarm and trend templates can be refined to avoid unnecessarily detailed monitoring or trending:

@@ -1,5 +1,6 @@
 ---
 uid: Promoting_a_protocol_version_to_production_version
+keywords: production protocol, production driver, production connector
 ---
 
 # Promoting a protocol version to production version
@@ -12,18 +13,17 @@ When you add a new version of a particular protocol to your DataMiner System, it
 
 1. In the settings of your test element, set the protocol version to the newly added version instead of *Production*.
 
-2. If, after a certain test period, you notice that the element has been running smoothly, switch the element’s protocol version back to *Production*.
+1. If, after a certain test period, you notice that the element has been running smoothly, switch the element’s protocol version back to *Production*.
 
-3. Promote the new protocol version to production version.
+1. Promote the new protocol version to production version.
 
 To promote a protocol version to the production version:
 
 1. Go to *Apps* > *Protocols & Templates*.
 
-2. Under *Protocols*, select the protocol.
+1. Under *Protocols*, select the protocol.
 
-3. Under *Versions*, right-click the protocol version and select *Set as production*.
+1. Under *Versions*, right-click the protocol version and select *Set as production*.
 
 > [!NOTE]
 > DVE child protocols cannot be set as production protocol.
->

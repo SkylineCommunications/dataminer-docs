@@ -52,15 +52,7 @@ A standard DataMiner upgrade updates the core processes, DataMiner Cube, the web
 
 The following other types of upgrades exist:
 
-- **DataMiner web upgrades**: These include only the web API and the web apps. This way you get access to the latest features and enhancements of the web apps, without having to do a DataMiner upgrade. DataMiner web upgrades are available from DataMiner 10.3.0/10.3.3 onwards and typically take about 1 minute to install. All other DataMiner processes remain untouched.
-
-  > [!NOTE]
-  >
-  > - Executing a DataMiner upgrade will override any DataMiner web upgrades that have been performed in the past.
-  > - New web functionality that depends on new features in the core processes will not be available until you have also upgraded the core software. For example, GQI is part of the core DataMiner software, so new GQI features will only become available with a full DataMiner upgrade.
-
-  > [!TIP]
-  > You can download the latest web upgrade package on [DataMiner Dojo](https://community.dataminer.services/dataminer-web-upgrade-packages/).
+- **DataMiner web upgrades**: Web apps and web API can be updated independently with the [DataMiner web upgrades](xref:Upgrading_Downgrading_Webapps).
 
 - **DxM upgrades**: [DataMiner Extension Modules (DxMs)](xref:DataMinerExtensionModules) can be updated independently in the [Admin app](https://admin.dataminer.services).
 

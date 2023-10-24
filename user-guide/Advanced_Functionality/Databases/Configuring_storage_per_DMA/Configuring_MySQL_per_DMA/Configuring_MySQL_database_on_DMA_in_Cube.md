@@ -4,10 +4,13 @@ uid: Configuring_MySQL_database_in_Cube
 
 # Configuring the SQL database settings
 
+If you are still using a legacy setup with a MySQL or MSSQL database, you can configure the database settings in System Center as detailed below.
+
 > [!IMPORTANT]
 > If a DataMiner Agent in a cluster is offline, database configuration changes will not be applied to that DataMiner Agent. From DataMiner 10.3.6/10.4.0 onwards, you will get a warning on the *Database* page in System Center to make you aware of this. However, this warning will not be triggered for the offline Agent in a Failover setup. <!-- RN 36184 -->
 
-For a legacy MySQL or MSSQL database, configure the settings as follows:
+> [!NOTE]
+> With this legacy setup, you will not have access to all the latest DataMiner features. We highly recommend switching to [Storage as a Service](xref:STaaS) instead.
 
 1. Go to *Apps* > *System Center* > *Database*.
 

@@ -4,31 +4,63 @@ uid: FAQ_DCP
 
 # Questions related to dataminer.services
 
-### How is security handled by dataminer.services?
+## Getting started
 
-See [Cloud connectivity and security](xref:Cloud_connectivity_and_security).
+### What is dataminer.services?
 
-### How do I connect a DMS to dataminer.services? What are the prerequisites?
+dataminer.services is a cloud-based extension of the DataMiner System. Connecting your DataMiner System to dataminer.services allows you to augment it with several features that are otherwise not available:
 
-See [Connecting your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
+- [Storage as a Service](xref:STaaS)
+- [Remote access](xref:Cloud_Remote_Access) to the web pages.
+- [Live sharing](xref:Sharing) of dashboards.
+- Connector deployments from the [Catalog](xref:About_the_Catalog_module)
+- [ChatOps](xref:ChatOps)
+- [Streamlined support services](xref:RemoteLogCollection)
+- ...
+
+### How do I connect my DataMiner System to dataminer.services?
+
+To connect your DataMiner System to dataminer.services, you need to install the [DataMiner Cloud Pack](https://community.dataminer.services/dataminer-cloud-pack/) on one or more of your DataMiner Agents. When this is done, you can set up the connection by going to *System Center > Cloud* in DataMiner Cube and clicking the *Connect* button on that page.
+
+> [!TIP]
+> For more detailed information, see [Connecting your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
 ### Do all Agents in a DMS have to be connected to dataminer.services?
 
-No, this is only required for a single Agent within a private DataMiner System. However, there are a couple of advantages to connecting more than one Agent:
+No, You will have full access to all dataminer.services features even with only a single connected DataMiner Agent. However, there are a couple of advantages to connecting more than one Agent:
 
-- **Redundancy**: The Cloud Gateway nodes run independently from each other. Each one of them will maintain a tunnel connection to dataminer.services. This means that when the connection is lost for one DMA, you will still be connected through the other Cloud Gateway nodes.
-
-- **Load balancing**: Every time you open a shared dashboard or relay to your DMS, a random Cloud Gateway node is chosen to process your session. This means that the opening of multiple shares is distributed over the various Cloud Gateways. As a Cloud Gateway always forwards the traffic to the same web API service, this also distributes the load across different web API services in the cluster.
+- **Redundancy**: The Cloud Gateway nodes work independently from each other, which means that as long as one Cloud Gateway node can maintain its connection towards DataMiner.services, your DataMiner System will remain connected to dataminer.services.
+- **Load balancing**: Having multiple Agents connected to dataminer.services allows dataminer.services to spread incoming requests across multiple Agents. For example, when multiple shared dashboards are accessed simultaneously, the load will be spread across the connected Agents.
+- **Streamlined support services**: Even though not all Agents need to be connected to dataminer.services for this, the [Support Assistant module](xref:DataMinerExtensionModules#supportassistant) needs to be installed on all DataMiner Agents to allow our tech support team to carry out [automated support actions](xref:CCA_Support_Services).
 
   > [!NOTE]
   > At this time, we recommend running 1 to 3 Cloud Gateway nodes in a cluster. Running more Cloud Gateway nodes than that in a cluster would only add an unnecessary extra load on dataminer.services.
 
-- **Streamlined support services**: The [Support Assistant module](xref:DataMinerExtensionModules#supportassistant) needs to be installed on all DataMiner Agents to allow our Tech Support team to [remotely collect logs](xref:RemoteLogCollection) and to carry out other automated support actions, which definitely speeds up the support process. Even though not all DMAs have to be cloud-connected for this, they do all need to have this DxM installed.
+## Features
 
-### How does the live sharing work, and how is it secured?
+### How does live sharing work?
 
 Users can share a dashboard by clicking *Share* or *Start sharing* at the top of the dashboard. For more details, see [Sharing a dashboard](xref:Sharing_a_dashboard).
 
 The sharing recipients will receive a link via email on the email address specified by the share creator. When they open the link, the recipients will be asked to authenticate as the rightful owner of the email address by logging in to an account from dataminer.services, Microsoft, Google, LinkedIn, or Amazon linked to that email address, or by creating a dedicated dataminer.services account if they do not have any of the formerly mentioned accounts. After successfully authenticating, the recipient will be directed to the dashboard through the dataminer.services tunnel.
 
-No data from the private DataMiner System hosting the dashboard is stored on dataminer.services. The share can be deleted in the same way as it was created. All emailed links will then automatically become unreachable.
+The share can be deleted in the same way as it was created. All emailed links will then automatically become unreachable.
+
+## Security
+
+### Is the connection towards dataminer.services secure?
+
+Yes, all communication from and towards dataminer.services happens over HTTPS and WSS, both using TLS 1.2.
+
+### Do I need to allow inbound traffic towards my DMS?
+
+No, only outbound HTTPS traffic needs to be allowed. When a DataMiner Agent is connected to dataminer.services, the Cloud Gateway will send an HTTPS request to dataminer.services with the request to upgrade to a WebSocket. This WebSocket allows bidirectional communication without the need to open up the firewall for inbound traffic.
+
+> [!TIP]
+> For more details, see [Cloud connectivity and security](xref:Cloud_connectivity_and_security).
+
+### Will my data be stored in the cloud?
+
+Unless you use Storage as a Service, all data that is collected and processed by your DataMiner System remains stored in your self-hosted databases. Some configuration and analytics data is offloaded or stored in the cloud.
+
+For an exact overview of which data is stored in the cloud, see [Cloud data storage policies](xref:Cloud_data_storage_policies).

@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.3.11
 ---
 
-# General Feature Release 10.3.11 – Preview
+# General Feature Release 10.3.11
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!IMPORTANT]
 > When downgrading from DataMiner Feature Release version 10.3.8 (or higher) to DataMiner Feature Release version 10.3.4, 10.3.5, 10.3.6 or 10.3.7, an extra manual step has to be performed. For more information, see [Downgrading a DMS](xref:MOP_Downgrading_a_DMS).
@@ -15,10 +15,6 @@ uid: General_Feature_Release_10.3.11
 > - For release notes related to DataMiner Cube, see [DataMiner Cube Feature Release 10.3.11](xref:Cube_Feature_Release_10.3.11).
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.3.11](xref:Web_apps_Feature_Release_10.3.11).
 > - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
-
-## Highlights
-
-*No highlights have been added to this section yet.*
 
 ## New features
 
@@ -97,7 +93,8 @@ This `objectId` attribute will now be considered optional. Hence, no run-time er
 
 #### Security enhancements [ID_37267] [ID_37291] [ID_37335] [ID_37345]
 
-<!-- RN 37267/37345: MR 10.4.0 - FR 10.3.11 -->
+<!-- RN 37267: MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.11 -->
+<!-- RN 37345: MR 10.4.0 - FR 10.3.11 -->
 <!-- RN 37291: MR 10.3.0 [CU8] - FR 10.3.11 -->
 <!-- RN 37335: 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
 
@@ -168,6 +165,12 @@ When changes are made to one of the following NATS configuration files, from now
 
 This will allow you to trace changes made to these configuration files when issues arise.
 
+#### Storage as a Service: DataMiner Agent will now communicate with the database via port 443 only [ID_37480]
+
+<!-- MR 10.4.0 - FR 10.3.11 [CU0] -->
+
+Up to now, a DataMiner using STaaS communicated with the database via TCP/IP ports 443, 5671 and 5672. From now on, it will communicate with the database via port 443 only.
+
 ### Fixes
 
 #### Failover: Data can get lost when the backup agent is the online agent during a Cassandra Cluster migration [ID_34018]
@@ -184,7 +187,7 @@ From now on, when you start a Cassandra Cluster migration, a warning message wil
 
 Not all [Protocol.Params.Param.Interprete.Others](xref:Protocol.Params.Param.Interprete.Others) tags would be read out, which could lead to unexpected behavior.
 
-#### DataMiner backup: Number of backups to be kept would be interpreted incorrectly [ID_37143]
+#### DataMiner backup: Number of backups to be kept would be interpreted incorrectly [ID_37143] [ID_37509]
 
 <!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
 
@@ -195,11 +198,13 @@ Up to now, this setting would incorrectly be interpreted as the total number of 
 From now on, the number of backups you specify will be the number of backups that will be kept per DMA or Failover setup. For example, when you set the number of backups to be kept to 3 on a DMS with 5 DMAs or Failover setups, 3 backups will now be kept on every DMA or Failover setup.
 
 > [!NOTE]
-> A DataMiner Agent will now store its backups in a subfolder of the folder set as backup location. The name of that subfolder will be identical to the DMA ID of the DataMiner Agent in question.
+>
+> - A DataMiner Agent will now store its backups in a subfolder of the folder set as backup location. The name of that subfolder will be identical to the DMA ID of the DataMiner Agent in question.
+> - When you upgrade to this DataMiner version, an upgrade action will automatically divide the number of backups to be kept by the number of DataMiner Agents in the DMS if the number of backups to be kept is set to more than 3 and if there are at least two DMAs in the DMS. Note that this upgrade action will do nothing if, in the backup settings, you specified that all DMAs in the DMS have to store their backups on the same network path.
 
 #### Problem in different native processes when interacting with message broker calls [ID_37150]
 
-<!-- MR 10.4.0 - FR 10.3.11 -->
+<!-- MR 10.3.0 [CU9] - FR 10.3.11 -->
 
 In some cases, an error could occur in different native processes when interacting with message broker calls.
 
@@ -311,14 +316,28 @@ In some cases, an error could occur in SLAnalytics when a feature (e.g. automati
 
 When a protocol was configured to use `MultipleGetBulk` in combination with `PartialSNMP` (e.g. `<OID options="partialSNMP:10;multipleGetBulk:10">`), and the device would return less table cells than the configured `MultipleGetBulk` value, certain fields would not get filled in.
 
-#### Problem with SLAnalytics when fetching protocol information while creating a multivariate pattern [ID_37366]
+#### SLAnalytics: Problem when fetching protocol information while creating a multivariate pattern [ID_37366]
 
 <!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
 
-In some cases, SLAnalytics could throw an exception when fetching protocol information while creating a multivariate pattern.
+In some cases, an error could occur in SLAnalytics when fetching protocol information while creating a multivariate pattern.
 
-#### SLAnalytics: Problem when the SLNet connection got lost while resetting data sources [ID_37402]
+#### SLAnalytics: Problem when the SLNet connection got lost while resetting the data sources [ID_37402] [ID_37459]
 
-<!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
+<!-- RN 37402: MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
+<!-- RN 37459: MR 10.3.0 [CU8] - FR 10.3.11 -->
 
-During initialization, in some cases, an error could occur in SLAnalytics when the SLNet connection got lost while resetting data sources.
+An error could occur in SLAnalytics when the SLNet connection got lost while resetting the data sources.
+
+#### EPM: Problem when SLNet requested information from other DataMiner Agents in the DMS [ID_37462]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+In EPM environments, an error could occur when SLNet requested information from other DataMiner Agents in the DMS.  
+
+#### GQI: Problem when aggregating Elasticsearch table columns [ID_37472]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+<!-- Not added to MR 10.4.0 -->
+
+When Elasticsearch table columns were aggregated via GQI, the aggregation columns would all share the same incorrect column ID.

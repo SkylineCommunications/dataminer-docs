@@ -20,7 +20,7 @@ This filter box can be used in different ways:
 
   - *Exclude \[highlighted text\] in filter*: This option can only be used on an item that is not yet in the filter, and adds a negative filter for this item. This is the equivalent to adding an exclamation mark in front of an item when you type text in the filter.
 
-  - *Search for \[selected text\] in new tab*: This option opens a new *Search alarms* tab in the Alarm Console, in which you can search through alarms using this filter. This option is only available on a DMA using at least DataMiner 10.0.0/10.0.2 with [Elasticsearch](xref:Elasticsearch_database).
+  - *Search for \[selected text\] in new tab*: This option opens a new *Search alarms* tab in the Alarm Console, in which you can search through alarms using this filter. This option is only available on a DMA with [indexing database](xref:Indexing_Database).
 
     > [!NOTE]
     > Prior to DataMiner 10.0.7, to have access to this feature, you need to have the *System configuration* > *Indexing Engine* > *UI available* user permission. This user permission is only displayed if *?EnableFeature=Indexing* is added to the Cube URL. From DataMiner 10.0.7 onwards, this user permission is no longer needed.
@@ -102,7 +102,7 @@ To add such a filtered tab page:
 
 ## Creating a search tab in the Alarm Console
 
-When you are connected to a DMA using at least DataMiner version 10.0.0/10.0.2 with [Elasticsearch](xref:Elasticsearch_database), the Alarm Console provides an additional option to create a dynamic search tab.
+When you are connected to a DMA with [indexing database](xref:Indexing_Database), the Alarm Console provides an additional option to create a dynamic search tab.
 
 > [!NOTE]
 > Prior to DataMiner 10.0.7, to have access to this feature, you need to have the *System configuration* > *Indexing Engine* > *UI available* user permission. This user permission is only displayed if *?EnableFeature=Indexing* is added to the Cube URL. From DataMiner 10.0.7 onwards, this user permission is no longer needed.
@@ -171,7 +171,7 @@ To filter the alarm list to only show such unexpected alarms, click the followin
 
 Please note the following regarding the alarm focus feature:
 
-- This feature is only available if a Cassandra database is used. See [Cassandra database](xref:Cassandra_database).
+- This feature is only available if your DataMiner System uses [Storage as a Service](xref:STaaS) or a [self-hosted Cassandra-compatible database](xref:Supported_system_data_storage_architectures).
 
 - The focus icon in the alarm bar is only displayed on tabs displaying active alarms.
 
@@ -182,6 +182,8 @@ Please note the following regarding the alarm focus feature:
 - If an alarm template changes, all alarms of the parameters for which a change was implemented in the alarm template will be treated as unexpected.
 
 - In case of an alarm storm, the update of focus scores of persistent alarms is postponed until after the alarm storm ends.
+
+- A model is created in DataMiner for every parameter that has had an alarm in the last two weeks, up to a limit of 100&thinsp;000 models. This upper limit is rarely ever reached, but when it is, the notice "Alarm Focus has reached its maximum cache size" is displayed in the Alarm Console, and all alarms on parameters that have no model yet will be marked as unlikely. This notice will not influence any other part of the system and can be safely ignored. However, if you see this notice regularly, it can be a sign that your parameters are not spread optimally over your DataMiner System, or that one of your protocols is generating alarms on many different rows in a table.
 
 > [!NOTE]
 > You can enable or disable the alarm focus feature via *System Center* > *System settings* > *analytics config*. However, note that if you disable alarm focus, [automatic incident tracking](xref:Automatic_incident_tracking) is automatically also disabled, and only [manual incident tracking](xref:Automatic_incident_tracking#manually-updating-an-alarm-group) can still be used. <!-- RN 33348 -->

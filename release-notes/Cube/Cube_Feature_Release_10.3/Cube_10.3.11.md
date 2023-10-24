@@ -2,17 +2,13 @@
 uid: Cube_Feature_Release_10.3.11
 ---
 
-# DataMiner Cube Feature Release 10.3.11 – Preview
+# DataMiner Cube Feature Release 10.3.11
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to DataMiner Cube, see [General Feature Release 10.3.11](xref:General_Feature_Release_10.3.11).
-
-## Highlights
-
-*No highlights have been selected yet.*
 
 ## New features
 
@@ -136,17 +132,33 @@ When you opened a service card, in some rare cases, no breadcrumbs would be disp
 
 In a visual overview containing multiple pages, it would no longer be possible to return to the initially selected page when the shape used to switch pages had its `VdxPage` property updated using a session variable.
 
-#### DataMiner Cube: Numbers with decimals would not be displayed in context menus [ID_37420]
+#### DataMiner Cube: Parameter value with decimals would be displayed incorrectly in context menus [ID_37420]
 
 <!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
 
-Up to now, when you opened a context menu with a text box containing a number with decimals, that number would incorrectly be replaced by "0.0".
+Up to now, when you opened a context menu with a text box that contained a parameter value with decimals, and the default value of the parameter also contained decimals, the decimal point in the value in the text box would be displayed incorrectly. For example, 44.2 would incorrectly be displayed as 442.0.
+
+The issue was due to Cube trying to parse the default value with the current culture in the Windows machine.
+
+#### Trending: Problem when trying to edit a multivariate pattern [ID_37433]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+Due to a cache synchronization issue, problems could occur when trying to edit a multivariate pattern of which one of the elements is located on another DataMiner Agent.
 
 #### DataMiner Cube could become unresponsive during startup when the Alarm Console did not contain any alarm tabs [ID_37436]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
 When starting up, DataMiner Cube could become unresponsive during the *Connected!* step When the Alarm Console did not contain any alarm tabs.
+
+#### Automation app: Problems with scripts using user-defined APIs [ID_37442]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When you opened the Automation app, an exception could be thrown in the background when verifying if scripts used user-defined APIs.
+
+Also, when you clicked *Configure API...* for a particular Automation script, the *New token...* button would incorrectly be disabled.
 
 #### DataMiner Cube - Alarm Console: Tooltip of suggestion counter would incorrectly show 'suggestion' in capitals [ID_37454]
 
@@ -162,3 +174,10 @@ Up to now, when you hovered over the suggestions counter, the tooltip would inco
 <!-- Not added to MR 10.4.0 -->
 
 When DataMiner Cube was started with only one alarm tab, the Alarm Console lightbulb would incorrectly not show any suggestions related to the current alarm tab.
+
+#### Problem when loading elements [ID_37539]
+
+<!-- MR 10.4.0 - FR 10.3.11 [CU0] -->
+<!-- Not added to MR 10.4.0 -->
+
+Due to an exception being thrown when requesting database information, DataMiner Cube would fail to load elements.

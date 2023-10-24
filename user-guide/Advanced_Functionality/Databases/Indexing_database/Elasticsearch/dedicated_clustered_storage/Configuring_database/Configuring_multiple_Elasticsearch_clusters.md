@@ -4,8 +4,11 @@ uid: Configuring_multiple_Elasticsearch_clusters
 
 # Configuring multiple Elasticsearch clusters
 
+> [!IMPORTANT]
+> Elasticsearch is **only supported up to version 6.8**. We therefore recommend using [Storage as a Service](xref:STaaS) instead, or if you do want to continue using self-hosted storage, using [dedicated clustered storage](xref:Dedicated_clustered_storage) with OpenSearch or the Amazon OpenSearch Service on AWS.
+
 > [!NOTE]
-> This procedure can be followed both on Linux and Windows setups. However, we highly recommend configuring this setup on Linux.
+> This procedure can be followed both on Linux and Windows setups. However, we highly recommend using Linux.
 
 From DataMiner 10.2.0/10.1.3 onwards, you can have data offloaded to multiple Elasticsearch clusters, i.e. one main cluster and several replicated clusters. Data is always read from the main cluster, but data updates are sent to all clusters.
 
@@ -74,11 +77,11 @@ To configure this setup:
 
    - *Hosts*: The hosts of the cluster, separated by commas. This is the equivalent the *DBServer* tag in *DB.xml* (see [Indexing database settings](xref:DB_xml#indexing-database-settings))
 
-   - *Username*: The username to connect to Elasticsearch. This is the equivalent of the *UID* tag in *DB.xml* (see [Specifying custom credentials for Elasticsearch](xref:DB_xml#specifying-custom-credentials-for-elasticsearch)).
+   - *Username*: The username to connect to Elasticsearch. This is the equivalent of the *UID* tag in *DB.xml* (see [Specifying custom credentials for OpenSearch or Elasticsearch](xref:DB_xml#specifying-custom-credentials-for-opensearch-or-elasticsearch)).
 
-   - *Password*: The password to connect to Elasticsearch. This is the equivalent of the *PWD* tag in *DB.xml* (see [Specifying custom credentials for Elasticsearch](xref:DB_xml#specifying-custom-credentials-for-elasticsearch)).
+   - *Password*: The password to connect to Elasticsearch. This is the equivalent of the *PWD* tag in *DB.xml* (see [Specifying custom credentials for OpenSearch or Elasticsearch](xref:DB_xml#specifying-custom-credentials-for-opensearch-or-elasticsearch)).
 
-   - *Prefix*: The prefix for the Elasticsearch indexes. This is the equivalent of the *DB* tag in *DB.xml* (see [Specifying a custom prefix for the Elasticsearch indexes](xref:DB_xml#specifying-a-custom-prefix-for-the-elasticsearch-indexes)).
+   - *Prefix*: The prefix for the Elasticsearch indexes. This is the equivalent of the *DB* tag in *DB.xml* (see [Specifying a custom prefix for the indexes](xref:DB_xml#specifying-a-custom-prefix-for-the-indexes)).
 
    - *FileOffloadIdentifier*: String used to identify this connection. Each connection should have a different identifier, which will be used for file offloads.
 
@@ -123,6 +126,17 @@ To configure this setup:
 1. After the file has been added, restart DataMiner. *DBConfiguration.xml* will now take precedence over the Elasticsearch configuration defined in the file *DB.xml*.
 
 > [!NOTE]
-> If an exception occurs for one of the replicated clusters, an alarm will be generated in the Alarm Console, indicating that not all data might be replicated. If further errors occur, no new alarms are created until the DMA is restarted.
+> If the replicated cluster is still up and running, but an exception occurs for one of the replicated clusters, an alarm will be generated in the Alarm Console, indicating that not all data might be replicated. If further errors occur, no new alarms are created until the DMA is restarted.
 
 <!--***-->
+
+## Troubleshooting
+
+During normal operation, DataMiner will offload the data written to both Elasticsearch clusters simultaneously.
+
+If one of the clusters goes down, an error will be displayed in the Alarm Console to indicate that the indexing cluster is down: `All nodes in the indexing cluster are down` and/or `All nodes in the replicated indexing cluster [IP1, IP2,...] are down`.
+
+If this happens, you need to alter the *priorityOrder* (see above) so that the backup indexing cluster becomes active. Specifically, this means setting *priorityOrder="0"* where the *priorityOrder* used to be 1 and the other way around. After you have done so, restart DataMiner. This should restore DataMiner to a functional state.
+
+> [!IMPORTANT]
+> If the main Elasticsearch cluster goes down, it will need to be restored afterwards. To ensure that the data is in sync, first follow the procedure on [Verifying Elasticsearch synchronization](xref:Verifying_Elasticsearch_Synchronization#checking-database-health), then follow the procedure to restore on [Taking a snapshot of one Elasticsearch cluster and restoring it to another](xref:Taking_snapshot_Elasticsearch_cluster_and_restoring_to_different_cluster).

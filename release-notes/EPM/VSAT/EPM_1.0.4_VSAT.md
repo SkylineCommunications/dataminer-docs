@@ -12,6 +12,10 @@ To prevent a potential issue where the entities config file gets corrupted, the 
 
 In addition, a daily backup functionality has been added. On the new *Admin* > *Backup* page in the Verizon VSAT Platform Manager visual overview, you can configure how often the backup should occur and where the backup file should be located.
 
+#### Newtec Dialog Platform VSAT: HRC modem type integration [ID_37375]
+
+The Newtec Dialog Platform VSAT connector has been updated to include dynamic return technologies so that HRC/MRC type modems can be processed and data can be collected from the right locations.
+
 ## Changes
 
 ### Enhancements

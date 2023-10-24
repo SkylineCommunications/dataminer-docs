@@ -4,7 +4,7 @@ uid: Protocol.Params.Param-snapshot
 
 # snapshot attribute
 
-Specifies the offload of snapshots of a parameter to the central database.
+Specifies the offload of snapshots of a parameter to the offload database.
 
 ## Content Type
 

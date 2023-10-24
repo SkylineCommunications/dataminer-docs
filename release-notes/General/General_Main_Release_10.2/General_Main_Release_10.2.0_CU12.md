@@ -114,6 +114,12 @@ Up to now, when you right-clicked the *DataMiner Taskbar Utility* system tray ic
 
 Also, after DataMiner had been stopped, up to now, the *SLXml*, *SLLog* and *SLDataGateway* processes would incorrectly start up again.
 
+#### Problem with SLElement when an alarm template was assigned to an element or unassigned from an element while an alarm was being updated [ID_34813]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.1 -->
+
+When an alarm template was assigned to an element or unassigned from an element while an alarm was being updated, in some cases, an error could occur in SLElement.
+
 #### Problem with SLElement when a trend template was being assigned [ID_34824]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.1 -->

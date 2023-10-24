@@ -67,6 +67,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | OID | Object Identifier. Value uniquely identifying a managed object in a MIB hierarchy. |
 | OLT | Optical Line Termination. Device that serves as the service provider endpoint of a passive optical network. |
 | ONT | Optical Network Terminal. Device used to terminate a fiber-optic line, demultiplex the signal into its component parts and provide power to customer telephones. Also known as ONU (Optical Network Unit). |
+| OpenSearch | Open-source search and analytics engine, which can be used as the DataMiner Indexing database.<br>See [OpenSearch database](xref:OpenSearch_database). |
 | OPEX | Operating expense. The ongoing cost to run a product, system or business. |
 | OSM | OpenStreetMap. Free community-built map application, which can be integrated with DataMiner Maps from DataMiner 9.5.8 onwards.<br>See [Maps](xref:maps). |
 | OSPF | Open Shortest Path First. Routing protocol for IP networks used to find the best path between the source and destination router within an autonomous system. |

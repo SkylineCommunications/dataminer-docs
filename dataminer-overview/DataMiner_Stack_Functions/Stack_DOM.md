@@ -24,8 +24,6 @@ Data modeling involves the process of creating logical representations of the da
 
 The **DataMiner Object Model (DOM)** enables the quick modeling and management of any type of **administrative or business-related data** within your DataMiner System, such as ticketing and jobs information, planned maintenance records, product catalog data, contractual and customer records, and more.
 
-All defined DOM instances are stored in an Elasticsearch database to ensure optimal performance and scalability.
-
 > [!TIP]
 > For more information:
 >

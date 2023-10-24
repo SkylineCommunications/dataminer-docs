@@ -6,7 +6,8 @@
 <script type="text/javascript" src="{{_rel}}styles/search.js"></script>
 
 <!-- mermaid support -->
-<script type="text/javascript" src="https://unpkg.com/mermaid@9.1.7/dist/mermaid.min.js"></script>
+<!-- pre mermaid 10 : <script type="text/javascript" src="https://unpkg.com/mermaid@9.1.7/dist/mermaid.min.js"></script> -->
+<script type="module">import mermaid from "https://unpkg.com/mermaid@10.5.1/dist/mermaid.esm.min.mjs"</script>
 <script>
     mermaid.initialize({
         startOnLoad: false,

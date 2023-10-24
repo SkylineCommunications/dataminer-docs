@@ -677,8 +677,31 @@ In the *Database* section of *System Center*, when *Type* was set to "Database p
 
 In a visual overview containing multiple pages, it would no longer be possible to return to the initially selected page when the shape used to switch pages had its `VdxPage` property updated using a session variable.
 
+#### Trending: Problem when trying to edit a multivariate pattern [ID_37433]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+Due to a cache synchronization issue, problems could occur when trying to edit a multivariate pattern of which one of the elements is located on another DataMiner Agent.
+
 #### DataMiner Cube could become unresponsive during startup when the Alarm Console did not contain any alarm tabs [ID_37436]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
 When starting up, DataMiner Cube could become unresponsive during the *Connected!* step When the Alarm Console did not contain any alarm tabs.
+
+#### Automation app: Problems with scripts using user-defined APIs [ID_37442]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When you opened the Automation app, an exception could be thrown in the background when verifying if scripts used user-defined APIs.
+
+Also, when you clicked *Configure API...* for a particular Automation script, the *New token...* button would incorrectly be disabled.
+
+#### Trending: Trend graph would disappear when panning [ID_37453]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+When you panned a trend graph, in some cases, the graph would suddenly disappear.
+
+> [!NOTE]
+> From now on, trending errors will also be logged in the main Cube logging (*System Center > Logging*).

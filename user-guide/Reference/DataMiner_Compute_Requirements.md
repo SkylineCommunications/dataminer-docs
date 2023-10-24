@@ -64,7 +64,7 @@ For all supported DataMiner versions, we support all Windows versions that Micro
 
 If there is more than one DataMiner Agent in your cluster, the time in the cluster must be synchronized (NTP).
 
-### Microsoft .NET Framework
+### Microsoft .NET
 
 - Microsoft .NET Framework **4.6.2** is recommended for versions prior to DataMiner 10.1.11.
 
@@ -78,6 +78,17 @@ If there is more than one DataMiner Agent in your cluster, the time in the clust
 
 > [!NOTE]
 > We recommend always upgrading to the latest .NET Framework version.
+
+### Microsoft Visual C++
+
+- From DataMiner versions 10.3.9, 10.3.0 [CU6], and 10.2.0 [CU18] onwards<!-- RN 36745 -->, only Microsoft Visual C++ **2015** or newer is required.
+
+- Prior to DataMiner versions 10.3.9, 10.3.0 [CU6], and 10.2.0 [CU18], Microsoft Visual C++ **2010** and Microsoft Visual C++ **2015** or newer are required.
+
+> [!NOTE]
+>
+> - If you want to **uninstall** Microsoft Visual C++ 2010, make sure to do so only **after upgrading** to 10.3.9, 10.3.0 [CU6], or 10.2.0 [CU18], as otherwise the upgrade will fail.
+> - Microsoft Visual C++ versions 2015 up to 2022 are backwards-compatible, and only one version can be installed at the same time. For this reason, we recommend updating to the latest version of Microsoft Visual C++ 2022.
 
 ### Computer name
 
@@ -138,7 +149,7 @@ If there is more than one Cassandra node, the time in the cluster must be synchr
 
 ## Elasticsearch requirements
 
-For certain DataMiner features, an additional indexing engine is required. This [Elasticsearch cluster](https://community.dataminer.services/expert-hub-elastic/) comes with additional requirements. For these, we follow Elastics’s official [guidelines](https://www.elastic.co/guide/en/elasticsearch/guide/current/hardware.html).
+For certain DataMiner features, an additional indexing engine is required. This [Elasticsearch cluster](xref:Elasticsearch_database) comes with additional requirements. For these, we follow Elastics’s official [guidelines](https://www.elastic.co/guide/en/elasticsearch/guide/current/hardware.html).
 
 ### RAM
 

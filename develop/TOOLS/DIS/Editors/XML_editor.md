@@ -369,11 +369,18 @@ In the XML editor, you can click a small *Down* arrow in front of certain XML ta
 | Edit Script | Create a temporary C# project containing the code of the "Exe" C# code block, and open the code block in a new C# editor tab. |
 | Edit All Scripts | For each of the available "Exe" C# code blocks, create a temporary C# project containing the code of that block, and open each code block in a new C# editor tab. |
 | Copy Script to Clipboard | Copy the entire contents of the "Exe" C# code block (i.e. the Automation script) to the Windows Clipboard. |
+| Update Exe ID | Change the ID of the *Exe* code block. |
 
 > [!NOTE]
 >
 > - If, in an "Include in ..." list or an "Add Existing ..." list, you select an item that is already included, then that item will be removed.
 > - "Include in ..." and "Add Existing ..." lists do not close when you have selected an item. They will stay open to allow you to select multiple items.
+
+#### Name
+
+| Command | Function |
+|---------|----------|
+| Rename script | Rename the Automation script XML and update all linked projects. |
 
 ### IntelliSense and instant XML validation
 

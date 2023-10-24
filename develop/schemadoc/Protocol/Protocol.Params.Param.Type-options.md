@@ -96,9 +96,12 @@ Parameter syntax: IP:PORT
 
 If, in the parameter, you specify the value “10.12.0.63:4000”, all communication will go via port 4000 of address 10.12.0.63.
 
-If you do not specify a port, then the last port set will be used. If no port has been set yet, the port configured in the Element wizard will be used.
+If you do not specify a port, then the last port set will be used. If no port has been set yet, the port configured during element creation will be used.
 
 Only applicable for parameters of type read.
+
+> [!NOTE]
+> For smart-serial connections, [dynamic polling](xref:ConnectionsSmartSerialDynamicPolling) is supported from DataMiner 10.3.11/10.4.0 onwards<!--RN 37404-->.
 
 ### dynamic snmp get
 
@@ -130,20 +133,21 @@ When, later on, the value of parameter 2 changes to “1.3.6.”, that same grou
 
 In the communication stream, you will notice the following entry:
 
-```
+```txt
 Dynamic group for parameter 1 [triggered by 1.3.6.]
 ```
 
 *Feature introduced in DataMiner 7.5.2.0 (RN 4734).*
 
 > [!NOTE]
+>
 > - Only applicable for parameters of type read.
 > - This option is rendered obsolete by the dedicated dynamicSnmpGet attribute.
 
 ### headerTrailerLink
 
 This option is only applicable for smart-serial connections. It defines a link between a header and a trailer
-parameter (See [Data forwarding from SLPort to SLProtocol](xref:ConnectionsSmartSerialDataForwarding).
+parameter (see [Data forwarding from SLPort to SLProtocol](xref:ConnectionsSmartSerialDataForwarding)).
 
 With this option, it is also possible to only specify a trailer (i.e. where no corresponding header has the same value specified for the headerTrailerLink option).
 

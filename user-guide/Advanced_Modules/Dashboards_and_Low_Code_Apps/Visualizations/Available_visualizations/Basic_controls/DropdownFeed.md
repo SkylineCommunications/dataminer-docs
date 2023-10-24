@@ -1,5 +1,5 @@
 ---
-uid: DashboardDropdownFeed
+uid: DashboardDropdown
 ---
 
 # Dropdown

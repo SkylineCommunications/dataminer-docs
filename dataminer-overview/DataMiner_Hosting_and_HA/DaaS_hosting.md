@@ -10,7 +10,7 @@ We therefore also offer **DataMiner as a Service (DaaS)**, a DataMiner platform 
 
 **You operate the platform, we build and maintain the platform for you.**
 
-Our DaaS model guarantees that you immediately get access to a wide range of capabilities for streamlined and worry-free solution development. DaaS also enables the DataMiner intelligent resource distribution or "swarming", which will enable you to automatically redistribute elements between nodes for even more efficiency.
+Our DaaS model guarantees that you immediately get access to a wide range of capabilities for streamlined and worry-free solution development.
 
 > [!TIP]
 > For a sneak peek video, see [Sneak peek: DataMiner as a Service (DaaS) in action - DataMiner Dojo](https://community.dataminer.services/sneak-peek-dataminer-as-a-service-daas-in-action)
@@ -31,7 +31,7 @@ DataMiner as a Service will allow you to spin up your DataMiner System in the cl
 
 - *Benefit from DataMiner Storage as a Service (STaaS)*
 
-  DataMiner as a Service comes with our very own Storage as a Service (STaaS) solution. This means your DataMiner System will immediately benefit from being connected to a scalable and user-friendly cloud-native storage platform. Gone are the days of estimating your storage requirements in advance, placing specific VM orders, or configuring complex Cassandra and Elasticsearch or OpenSearch clusters with the necessary replication and backup.
+  DataMiner as a Service comes with our very own Storage as a Service (STaaS) solution. This means your DataMiner System will immediately benefit from being connected to a scalable and user-friendly cloud-native storage platform. Gone are the days of estimating your storage requirements in advance, placing specific VM orders, or configuring complex Cassandra and OpenSearch clusters with the necessary replication and backup.
 
 - *Security first*
 

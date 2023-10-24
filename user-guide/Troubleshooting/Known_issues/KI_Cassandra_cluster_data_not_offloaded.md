@@ -24,7 +24,7 @@ When the connection with the Cassandra cluster is temporarily lost, data is not 
 
 ## Fix
 
-No fix is available yet.
+Install DataMiner 10.2.0 [CU18]/10.3.0 [CU6]/10.3.9<!--RN 36865-->.
 
 ## Description
 

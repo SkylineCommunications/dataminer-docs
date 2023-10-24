@@ -21,5 +21,5 @@ uid: DMAConnectAndInfo
 | SLNetConnectionID | String | The SLNet connection ID. |
 | Cookie | String | The encoded timestamp, client info hash, username and password |
 | ClusterInfo.IsCassandraActive | Boolean | Indicates whether the DMA uses a Cassandra database. |
-| ClusterInfo.IsSearchActive | Boolean | Indicates whether the DMA uses an Elasticsearch database. |
+| ClusterInfo.IsSearchActive | Boolean | Indicates whether the DMA uses an indexing database. |
 | HasDelegatedAuthentication | Boolean | Indicates whether authentication is delegated to a third-party system. |

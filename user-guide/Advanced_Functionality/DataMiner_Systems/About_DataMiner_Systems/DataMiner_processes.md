@@ -41,9 +41,9 @@ The central process of a DataMiner Agent.
 
 This process calculates the average trending information.
 
-If a Cassandra database is installed, this process also handles the following:
+If a Cassandra database or Cassandra-compatible database is installed, this process also handles the following:
 
-- All communication with Cassandra (communication with legacy databases happens via SLElement).
+- All communication with that database (communication with legacy databases happens via SLElement).
 
 - The building of time traces, used for heat maps.
 
@@ -125,7 +125,7 @@ For information on the main processes, see [Main DMA software components](#main-
 
 ### SLAnalytics
 
-This process only starts on a DMA that uses a Cassandra database. It supports advanced artificial intelligence functions in DataMiner, such as trend forecasting, anomaly detection, and alarm focus calculation.
+This process only starts on a DMA that uses [Storage as a Service](xref:STaaS) or a [Cassandra-compatible database](xref:Supported_system_data_storage_architectures). It supports advanced artificial intelligence functions in DataMiner, such as trend forecasting, anomaly detection, and alarm focus calculation.
 
 > [!NOTE]
 > Prior to DataMiner 9.5.5, it is possible to configure when prediction models are backed up, in the file *SLAnalytics.config*. However, from DataMiner 9.5.5 onwards, prediction models are no longer backed up, but instead retrieved from a cache and re-computed in case they are not available in the cache. For more information, see [SLAnalytics.config](xref:SLAnalytics_config#slanalyticsconfig).

@@ -31,9 +31,6 @@ The backup DMA must be a newly installed DataMiner Agent.
 
 - The backup DMA may not be a member of a DMS cluster.
 
-> [!NOTE]
-> When you set up a new pair of Failover DMAs, the entire general database of the main DMA will be copied to the backup DMA. However, if you are working with DataMiner Agents prior to version 7.5.0, you must make sure that the database on the backup DMA is an exact copy of the one on the primary DMA. For more information on restoring a DMA database, see [Restoring the database only](xref:Restoring_the_database_only).
-
 ## Additional IP addresses or hostname
 
 When Failover is configured, one or two additional IP addresses are needed, depending on the number of network interfaces of the DMAs. These will be used as the virtual IP addresses of the primary or the backup DMA, depending on which of the two is online. If the DMAs only have one network interface, only one additional IP address is needed.

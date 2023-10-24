@@ -79,6 +79,8 @@ items:
                 topicUid: Upgrade_path_1000-100x_to_1030-103x
               - name: DataMiner 10.1.0/10.1.x to 10.2.0/10.2.x
                 topicUid: Upgrade_path_1010-101x_to_1020-102x
+          - name: Upgrading the DataMiner web apps
+            topicUid: Upgrading_Downgrading_Webapps
           - name: Checking the upgrade history of a DataMiner Agent
             topicUid: Checking_the_upgrade_history_of_a_DataMiner_Agent
           - name: Configuring the default upgrade options
@@ -169,6 +171,8 @@ items:
             topicUid: BPA_Report_Active_RTE
           - name: Service Automatic Properties
             topicUid: BPA_Service_Automatic_Properties
+          - name: SRM Framework Configuration
+            topicUid: BPA_SRM_Framework_Configuration
           - name: SRM Function Resources Consistency
             topicUid: BPA_SRM_Function_Resources_Consistency
           - name: Validate connectors
@@ -237,7 +241,7 @@ items:
             topicUid: Dedicated_clustered_storage
           - name: Separate Cassandra setup with Elasticsearch
             topicUid: Separate_Cassandra_setup_with_Elasticsearch
-          - name: Separate Cassandra setup without Elasticsearch
+          - name: Separate Cassandra setup without indexing
             topicUid: Separate_Cassandra_setup_without_Elasticsearch
           - name: Legacy setup with MySQL or MSSQL database
             topicUid: Legacy_setup_with_MySQL_or_MSSQL_database
@@ -303,8 +307,6 @@ items:
               - name: MySQL database
                 topicUid: MySQL_database
                 items:
-                  - name: Activating one file per table for an existing MySQL database
-                    topicUid: Activating_one_file_per_table_for_an_existing_MySQL_database
                   - name: Deleting element data from a MySQL database
                     topicUid: Deleting_element_data_from_a_MySQL_database
                   - name: Moving MySQL data to another location
@@ -314,6 +316,17 @@ items:
           - name: Configuring an indexing database
             topicUid: Indexing_Database
             items:
+              - name: OpenSearch database
+                topicUid: OpenSearch_database
+                items:
+                  - name: Installing an OpenSearch database
+                    topicUid: Installing_OpenSearch_database
+                  - name: Configuring multiple OpenSearch clusters
+                    topicUid: Configuring_multiple_OpenSearch_clusters
+                  - name: Configuring OpenSearch backups
+                    topicUid: Configuring_OpenSearch_Backups
+              - name: Amazon OpenSearch Service
+                topicUid: Amazon_OpenSearch_Service
               - name: Elasticsearch
                 topicUid: Elasticsearch_database
                 items:
@@ -341,12 +354,12 @@ items:
                     items:
                       - name: Installing Elasticsearch on a DMA via DataMiner
                         topicUid: Installing_Elasticsearch_via_DataMiner
-                      - name: Migrating SRM resources to Elasticsearch
+                      - name: Migrating SRM resources to the indexing database
                         topicUid: Resources_migration_to_elastic
-                      - name: Configuring indexing settings in DataMiner Cube
-                        topicUid: Configuring_DataMiner_Indexing
                       - name: Configuring the Elasticsearch database (Windows)
                         topicUid: Configuring_Elasticsearch_database_Windows
+                      - name: Uninstalling Elasticsearch from a DMA
+                        topicUid: Uninstalling_Elasticsearch_from_a_DMA
                   - name: Manually connecting a DMA to an Elasticsearch cluster
                     topicUid: Manually_Connecting_DMA_to_Elasticsearch_Cluster
                   - name: Configuring Elasticsearch backups
@@ -358,17 +371,8 @@ items:
                         topicUid: Configuring_Elasticsearch_backups_Windows
                   - name: Removing an Elasticsearch cluster node
                     topicUid: Configuring_Elasticsearch_node_remove
-              - name: OpenSearch database
-                topicUid: OpenSearch_database
-                items:
-                  - name: Installing an OpenSearch database
-                    topicUid: Installing_OpenSearch_database
-                  - name: Configuring multiple OpenSearch clusters
-                    topicUid: Configuring_multiple_OpenSearch_clusters
-                  - name: Configuring OpenSearch backups
-                    topicUid: Configuring_OpenSearch_Backups
-              - name: Amazon Opensearch Service
-                topicUid: Amazon_OpenSearch_Service
+              - name: Configuring indexing settings in DataMiner Cube
+                topicUid: Configuring_DataMiner_Indexing
           - name: Common database settings
             topicUid: Specifying_TTL_overrides
             items:
@@ -478,7 +482,7 @@ items:
       - name: Advanced security configuration
         topicUid: Cassandra_authentication
         items:
-          - name: Securing the DataMiner Databases
+          - name: Securing self-hosted DataMiner storage
             topicUid: Cassandra_authentication
             items:
               - name: Securing the Cassandra general database
@@ -498,6 +502,8 @@ items:
                     topicUid: Cassandra_updating
                   - name: Updating Java for Cassandra
                     topicUid: Cassandra_Java_updating
+              - name: Securing the OpenSearch database
+                topicUid: Security_OpenSearch
               - name: Securing the Elasticsearch database
                 topicUid: Security_Elasticsearch
           - name: Securing the web server

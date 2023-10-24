@@ -4,19 +4,24 @@ uid: TicketingVersionDifferences
 
 # Ticketing differences depending on the DataMiner version
 
-In DataMiner 10.0.13, multiple important changes are introduced in the Ticketing app. The most important difference introduced by this DataMiner version is a switch to the use of the Elasticsearch database instead of the Cassandra database. In addition, this DataMiner version introduces several breaking changes.
+In DataMiner 10.0.13, multiple important changes are introduced in the Ticketing app. The most important difference introduced by this DataMiner version is a switch to the use of the indexing database instead of the Cassandra database. In addition, this DataMiner version introduces several breaking changes.
 
 > [!NOTE]
 >
-> - If you upgrade to DataMiner 10.0.13 and your DMS already uses an Elasticsearch database, all ticketing data is migrated automatically.
-> - If you upgrade to DataMiner 10.0.13 and your DMS does not use an Elasticsearch database yet, the ticketing data will be migrated automatically as soon as you add an Elasticsearch database to your DataMiner System. However, as long as there is no Elasticsearch database, you will not be able to use the Ticketing app. A run-time error in the Alarm Console will indicate that Ticketing Manager could not be initialized because there is no Elasticsearch database.
+> - If you upgrade to DataMiner 10.0.13 and your DMS already uses an indexing database, all ticketing data is migrated automatically.
+> - If you upgrade to DataMiner 10.0.13 and your DMS does not use an indexing database yet, the ticketing data will be migrated automatically as soon as you add an indexing database to your DataMiner System. However, as long as there is no indexing database, you will not be able to use the Ticketing app. A run-time error in the Alarm Console will indicate that Ticketing Manager could not be initialized because there is no indexing database.
 
-## Ticketing with Elasticsearch vs. with Cassandra
+> [!CAUTION]
+>
+> - The Ticketing app is being retired. See [DataMiner functionality evolution and retirement](xref:Software_support_life_cycles) for more details. ![EOL](~/user-guide/images/EOL_Duo.png)
+> - The Ticketing app is not supported on systems using [Storage as a Service (STaaS)](xref:STaaS).
 
-The switch to the Elasticsearch database results in the following important functionality changes:
+## Ticketing with indexing vs. with Cassandra
 
-- With Elasticsearch, a ticket has a UID property of type GUID, which is always unique and which replaces the TicketID object used with Cassandra. This TicketID consists of a DataMiner ID and ticket ID. However, in Elasticsearch, the DataMiner ID is not needed. While tickets still have a unique ticket ID, new implementations from DataMiner 10.0.13 onwards should make use of the UID instead.
-- With Elasticsearch, the TicketingHelper should be used to read, create, update and delete tickets, ticket field resolvers and ticket history in scripts, instead of the TicketingGatewayHelper. The TicketingGatewayHelper remains backwards compatible, but should not be used for new implementations or to update existing code. For an example, see TicketingHelper class.
+The switch to the indexing database results in the following important functionality changes:
+
+- With the indexing database, a ticket has a UID property of type GUID, which is always unique and which replaces the TicketID object used with Cassandra. This TicketID consists of a DataMiner ID and ticket ID. However, in the indexing database, the DataMiner ID is not needed. While tickets still have a unique ticket ID, new implementations from DataMiner 10.0.13 onwards should make use of the UID instead.
+- With the indexing database, the TicketingHelper should be used to read, create, update and delete tickets, ticket field resolvers and ticket history in scripts, instead of the TicketingGatewayHelper. The TicketingGatewayHelper remains backwards compatible, but should not be used for new implementations or to update existing code. For an example, see TicketingHelper class.
 
 ## Breaking changes introduced in DataMiner 10.0.13
 
@@ -52,4 +57,4 @@ DataMiner 10.0.13 also introduces the following breaking changes:
 
 - Tickets must now always contain a field for their state if the TicketFieldResolver defines a state TicketFieldDescriptor
 
- If the ticket field resolver defines a state TicketFieldDescriptor, tickets must now always contain a field indicating their state. When tickets are initially migrated to Elasticsearch, a state will automatically be defined for any tickets where this was not yet the case.
+  If the ticket field resolver defines a state TicketFieldDescriptor, tickets must now always contain a field indicating their state. When tickets are initially migrated to the indexing database, a state will automatically be defined for any tickets where this was not yet the case.

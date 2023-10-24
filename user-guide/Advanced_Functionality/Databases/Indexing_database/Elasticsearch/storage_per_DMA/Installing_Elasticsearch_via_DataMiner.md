@@ -4,10 +4,13 @@ uid: Installing_Elasticsearch_via_DataMiner
 
 # Installing Elasticsearch on a DMA via DataMiner
 
-> [!IMPORTANT]
-> This procedure is intended for a setup using a Cassandra database per DMA. If you use the [Cassandra Cluster](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster) feature, you will need to install Elasticsearch on a separate Linux machine. See [Installing Elasticsearch](xref:Installing_Elasticsearch_on_separate_Linux_machine).
+If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STaaS) setup but instead want to use a self-hosted storage setup with a Cassandra database per DMA, you can install Elasticsearch via DataMiner as detailed below.
 
-To install Elasticsearch on a DataMiner Agent via DataMiner:
+> [!NOTE]
+> Elasticsearch is only supported up to version 6.8. As a consequence, if you do want to use self-hosted storage instead of [STaaS](xref:STaaS), we recommend using [dedicated clustered storage](xref:Dedicated_clustered_storage) with OpenSearch or the Amazon OpenSearch Service on AWS.
+
+> [!IMPORTANT]
+> This procedure is intended for a setup using a Cassandra database per DMA. For a [dedicated clustered storage](xref:Dedicated_clustered_storage) setup with Elasticsearch, see [Installing Elasticsearch on a separate Linux machine](xref:Installing_Elasticsearch_on_separate_Linux_machine).
 
 1. In DataMiner Cube, go to *System Center \> Search & Indexing* and click *Install Indexing Engine*.
 
