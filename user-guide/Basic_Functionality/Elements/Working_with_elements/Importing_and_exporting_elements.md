@@ -88,7 +88,6 @@ Name checks are case-insensitive. This means that for instance “element1” is
    - *print*: exports the element information to a printer.
 
    > [!NOTE]
-   >
    > Private information, such as SNMPv3 authentication and encryption passwords, will not be exported for security reasons. 
 
 1. Click *Export*.
