@@ -74,7 +74,7 @@ An *InvalidOperationException* would be thrown when you tried to open a QAction 
 
 From now on, when you open a QAction that does not contain the default *QAction_{id}.cs* file, it will take the next available C# file instead.
 
-#### Validator will now longer generate a minor issue when Param.ArrayOptions@options includes customDatabaseName, databaseName, databaseNameProtocol or sizehint [ID_37276]
+#### Validator will no longer generate a minor issue when Param.ArrayOptions@options includes customDatabaseName, databaseName, databaseNameProtocol or sizehint [ID_37276]
 
 From now on, the Validator will no longer generate a minor issue when one of the following options is used in the *options* attribute of the *ArrayOptions* element:
 
