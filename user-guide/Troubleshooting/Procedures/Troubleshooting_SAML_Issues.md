@@ -158,7 +158,7 @@ Assertion consumer service \<URL> was not found.
 - Application: Web apps
 - Cause: The Assertion Consumer Service URL is spelled incorrectly or cannot be found in *spMetadata.xml*.
 
-### Azure AD errors
+### Entra ID (formerly Azure AD) errors
 
 AADSTS50011: The reply URL specified in the request does not match the reply URLs configured for the application: '\<ID>'.
 
