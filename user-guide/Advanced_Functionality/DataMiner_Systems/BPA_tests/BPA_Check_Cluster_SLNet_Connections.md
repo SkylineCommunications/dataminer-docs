@@ -100,5 +100,3 @@ If you are unable to resolve the issues, please contact Skyline Technical Suppor
 - Results may vary from the agent you start the BPA from. It might be interesting to also start the BPA from another agent.
 
 - This BPA could detect possible issues. There is no guarantee nothing can be improved when the BPA succeeds.
-
-- Needs to run on an agent that is part of a cluster.
