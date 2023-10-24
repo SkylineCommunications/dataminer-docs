@@ -178,6 +178,12 @@ The options shown on the header bar of a table component would not reinitialize 
 
 In some cases, multiple context menus could incorrectly be opened at the same time. From now on, when you open a context menu while another one is still open, that open menu will first be closed.
 
+#### Low-Code Apps: Problem when a component refetched its data multiple times in quick succession [ID_37654]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When a component refetched its data multiple times in quick succession, a `There are no open sessions` error would be thrown.
+
 #### Dashboards app - Query builder: Too much whitespace below a query after its migration had finished [ID_37660]
 
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
