@@ -307,10 +307,10 @@ items:
           - name: Editing a low-code application
             topicUid: Editing_custom_apps
           - name: Configuring low-code applications
-            topicUid: LowCodeApps_Custom_Icon
+            topicUid: LowCodeApps_Layout
             items:
-              - name: Customizing the icon and color of an app
-                topicUid: LowCodeApps_Custom_Icon
+              - name: Configuring the low-code app lay-out
+                topicUid: LowCodeApps_Layout
               - name: Configuring a page of a low-code app
                 topicUid: LowCodeApps_page_config
               - name: Configuring a panel of a low-code app

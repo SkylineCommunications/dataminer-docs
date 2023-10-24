@@ -15,7 +15,7 @@ To create a new low-code application:
 
 1. Specify the name of your new app in the header bar, instead of the default name "New application".
 
-1. To customize the color and icon for the app, see [Customizing the icon and color of an app](xref:LowCodeApps_Custom_Icon).
+1. To customize the color and icon for the app, see [Customizing the icon and color of an app](xref:LowCodeApps_Layout#customizing-the-icon-and-color-of-an-app).
 
 1. Add and configure the necessary [pages](xref:LowCodeApps_page_config), [panels](xref:LowCodeApps_panel_config), and [events](xref:LowCodeApps_event_config) for the app.
 
