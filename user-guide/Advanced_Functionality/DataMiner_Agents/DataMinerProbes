@@ -27,4 +27,4 @@ This means that a probe needs to be upgraded separatedly from the cluster.
 A probe only has 1 single view with optional Visual Overview. All connected devices will be displayed within this view.
 
 ### Historical data
-The probe can only store up to 7 days of historical d
+The probe can only store up to 7 days of historical data. However this data is typically forwarded towards the cluster, where it is stored longer.
