@@ -75,7 +75,7 @@ To configure the behavioral anomaly detection for a particular (numeric) paramet
    > - "Smart" (i.e. anomaly monitoring as it existed up to now).
 
 > [!NOTE]
-> It is not possible to have both a suggestion event and an alarm generated for the same issue. However, it is possible to have suggestion events generated for e.g. downward spikes, even if downward spikes are disabled in the *Anomaly alarm settings* window.
+> It is not possible to have both a suggestion event and an alarm generated for the same issue. However, it is possible to have suggestion events generated for e.g. downward level shifts, even if downward level shifts are disabled in the *Anomaly alarm settings* window.
 
 #### Security enhancements [ID_37267]
 
