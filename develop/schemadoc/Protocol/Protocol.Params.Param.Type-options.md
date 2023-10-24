@@ -162,6 +162,12 @@ Example:
 
 *Feature introduced in DataMiner 8.0.3 (RN 6115).*
 
+> [!IMPORTANT]
+> Headers and trailers are by default applicable to all connections. It is strongly advised to always use the headerTrailerLink option in combination with a specified connection. This will make sure those headers and trailers only apply to the specified defined smart-serial connection, because without the connection this can quickly cause unintended bugs and behavior.
+> ```xml
+> <Type options="headerTrailerLink=1;connection=0>header</Type>"
+> ``` 
+
 ### linkAlarmValue=TRUE
 
 With this option you can link externally generated alarms based on the alarm value. When there is an exact value match the alarms are linked, whether or not a root key has been specified.
