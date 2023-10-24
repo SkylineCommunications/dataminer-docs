@@ -1,0 +1,30 @@
+---
+uid: dataminerprobes
+---
+
+# DataMiner Probes
+
+A DMP or a DataMiner Probe is comparable to a limited DataMiner Agent.
+DataMiner Probes enable operators to bring the power and intelligence of DataMiner to the most remote, isolated and/or unmanned locations, and to embed intelligent self-sustaining network management pockets within the operation. 
+As a loosely coupled intermediate gateway, it guarantees the continuity you require for fault management, performance management and procedure automation (e.g. redundancy switching, automatic configuration for scheduled services and bookings, etc.).
+
+DMPs are typically installed for example in remote VSAT terminals, satellite hubs, terrestrial transmitter sites, small network nodes, cellular network base centers, etc.
+
+## Limitations of DMPs, compared to regular DMAs:
+### Capacity
+Probes only support up to 50 devices.
+
+### Users
+You can add as many users as you want to a DMP, but it can only be accessed by 1 user at a time.
+
+### Ecosystem
+Multiple DMAs can be clustered forming a DMS. However a DMP is not part of the DMS, it functions as a standalone gateway or proxy between its devices and the DMS.
+This means that a probe needs to be upgraded separatedly from the cluster.
+> [!NOTE]
+> Go to probe upgrade
+
+### View structure
+A probe only has 1 single view with optional Visual Overview. All connected devices will be displayed within this view.
+
+### Historical data
+The probe can only store up to 7 days of historical d
