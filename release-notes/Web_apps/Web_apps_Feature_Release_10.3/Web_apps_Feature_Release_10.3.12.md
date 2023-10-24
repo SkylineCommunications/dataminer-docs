@@ -177,3 +177,9 @@ The options shown on the header bar of a table component would not reinitialize 
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
 
 In some cases, multiple context menus could incorrectly be opened at the same time. From now on, when you open a context menu while another one is still open, that open menu will first be closed.
+
+#### Dashboards app - Query builder: Too much whitespace below a query after its migration had finished [ID_37660]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When, in the query builder, you opened an unused query, too much whitespace would be shown below it when its migration had finished.
