@@ -39,8 +39,8 @@ One or more issues have been found:
 - The *PostRoll* property value is different from TimeSpan.Zero while the *End* property has the value *Not Applicable*.
 - The *Booking Manager* property value refers to an existing DataMiner element using the connector *Skyline Booking Manager* but that element is not active.
 - The booking does not have the *Virtual Platform* property or does have this property but with a value that is different from the element's *Default Virtual Platform* parameter.
-- The *Booking Manager* does not have a parameter with name *Logging location*.
-- The *Booking Manager* *Logging location* is not configured, is invalid, does not exist, is not accessible, is part of 'Skyline DataMiner\Documents', or does not end in a backslash character.
+- The Booking Manager does not have a parameter with name *Logging location*.
+- The Booking Manager *Logging location* is not configured, is invalid, does not exist, is not accessible, is part of 'Skyline DataMiner\Documents', or does not end in a backslash character.
 
 ### Warning
 
