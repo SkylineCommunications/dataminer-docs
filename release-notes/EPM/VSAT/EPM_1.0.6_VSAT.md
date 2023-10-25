@@ -36,3 +36,7 @@ Up to now, the *InformationEventsGQI* script could result in missing information
 #### Generic KAFKA Consumer: Exceptions related to files marked for deletion [ID_37583]
 
 When a KAFKA topic file was deleted, it could occur that it was erroneously marked for deletion twice, resulting in exceptions in the KAFKA Consumer element.
+
+#### Verizon iDirect Evolution Platform Collector: Duplicate active alarms [ID_37690]
+
+After an iDirect upgrade, it could occur that the Verizon iDirect Evolution Platform Collector had duplicate active alarms. The cleanup logic of retained rows has now been adjusted to resolve this issue.

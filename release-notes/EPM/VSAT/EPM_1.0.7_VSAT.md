@@ -10,6 +10,30 @@ uid: EPM_1.0.7_VSAT
 
 A new *Event State* parameter has been added to the Generic Trap Processor connector, which can be used to track the state of a trap message. The state is *Active* if the message has entered the Alarmed state and *Cleared* if it has left this state.
 
+#### Verizon iDirect Evolution Platform Collector: ATDMA Carrier parameters updated and new IP Throughput parameter [ID_37694]
+
+Several changes have been implemented in the Verizon iDirect Evolution Platform Collector connector:
+
+- A new *IP Throughput* parameter has been added to the Hub Return Carriers and Hub Return Overview tables.
+
+- The calculations for Hub Return Overview table parameters have been updated:
+
+  - Available Bandwidth: IP Throughput - Actual Data Rate
+
+  - Utilization: Actual Data Rate/IP Throughput * 100
+
+  - IP Throughput: Sum of Carrier IP Throughput from same inroute group.
+
+- The calculations for the Hub Return Carriers table parameters have been updated:
+
+  - Available Bandwidth: IP Throughput - Actual Data Rate
+
+  - Utilization: Actual Data Rate/IP Throughput * 100
+
+  - IP Throughput: (.75 or .80 or .85 based on Payload) * Information Rate
+
+  - Actual Symbol Rate: Actual Data Rate * (1.25, 1.2, 1.15 based on Payload) / (Modulation * Code Rate)
+
 ## Changes
 
 ### Enhancements
@@ -40,4 +64,6 @@ When the Remotes State is in an alarm state other than Warning (yellow), the Cir
 
 ### Fixes
 
-*No fixes have been added to this release yet.*
+#### Verizon iDirect Evolution Platform Collector: Linecard event types not collected [ID_37691]
+
+Because of a change to the remote event logic, it could occur that some linecard event types were not collected. The way linecards are handled has been updated to resolve this issue.
