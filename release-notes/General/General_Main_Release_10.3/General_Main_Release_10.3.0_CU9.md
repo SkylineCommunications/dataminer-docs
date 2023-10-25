@@ -42,6 +42,12 @@ When *ResourceManager* and *SRMServiceStateManager* fail to get initialized at D
 
 If, upon detection of a new trend, the trend returns to the old trend (i.e. the trend before the behavioral change) within the hour, the behavioral change will be labeled a level shift rather than a trend change.
 
+#### SLAnalytics - Alarm focus: A notice will now be generated when the AlarmFocusRecords cache reaches its maximum size [ID_37624]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When the *AlarmFocusRecords* cache reached its maximal size, up to now, an error message would be added to the *SLAnalytics.txt* log file. From now on, a notice will be generated instead.
+
 ### Fixes
 
 #### Problem in different native processes when interacting with message broker calls [ID_37150]

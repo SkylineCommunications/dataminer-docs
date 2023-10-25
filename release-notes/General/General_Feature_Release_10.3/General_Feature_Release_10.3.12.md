@@ -154,6 +154,12 @@ Because of a number of enhancements with regard to error handling, the following
 
 `Unexpected number of responses returned on GetInfoMessage...`
 
+#### SLAnalytics - Alarm focus: A notice will now be generated when the AlarmFocusRecords cache reaches its maximum size [ID_37624]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When the *AlarmFocusRecords* cache reached its maximal size, up to now, an error message would be added to the *SLAnalytics.txt* log file. From now on, a notice will be generated instead.
+
 #### ManagerStore: Exceptions thrown during actions of high importance will now be logged as errors [ID_37631]
 
 <!-- MR 10.4.0 - FR 10.3.12 -->
