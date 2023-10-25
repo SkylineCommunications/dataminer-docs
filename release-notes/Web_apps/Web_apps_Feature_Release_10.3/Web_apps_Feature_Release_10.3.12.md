@@ -177,3 +177,27 @@ The options shown on the header bar of a table component would not reinitialize 
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
 
 In some cases, multiple context menus could incorrectly be opened at the same time. From now on, when you open a context menu while another one is still open, that open menu will first be closed.
+
+#### Low-Code Apps: Problem when a component refetched its data multiple times in quick succession [ID_37654]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When a component refetched its data multiple times in quick succession, a `There are no open sessions` error would be thrown.
+
+#### Dashboards app - Query builder: Too much whitespace below a query after its migration had finished [ID_37660]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When, in the query builder, you opened an unused query, too much whitespace would be shown below it when its migration had finished.
+
+#### Dashboards app & Low-Code Apps - Bar chart and Pie & donut chart: Chart configuration could get changed unexpectedly [ID_37662]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When the query of a *Bar* chart or a *Pie & donut* chart was linked to a feed as a filter, in some cases, the chart configuration could get changed unexpectedly.
+
+#### Low-Code Apps: Images on a low-code app would only be visible to users who had permission to view dashboards [ID_37667]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When you opened a low-code app you were allowed to view, the images on that low-code app would not be visible unless you had permission to view dashboards.

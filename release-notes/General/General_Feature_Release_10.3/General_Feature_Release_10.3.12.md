@@ -263,3 +263,9 @@ When SLAnalytics lost connection with SLDataGateway, an exception would be throw
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
 
 When the first call to a DomManager after a DMA (re)start was a call to create, update or delete a HistoryChange object, the call would fail and the DomManager would not initialize.
+
+#### Service & Resource Management: Problem when updating a booking using resources that had been used by other bookings in the past [ID_37647]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When you updated a booking using resources that had also been used earlier by other bookings in the past, a concurrency error could incorrectly be thrown.
