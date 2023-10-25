@@ -17,3 +17,5 @@ Note that when the column of type *displaykey* needs to be moved (for example to
 The *displaykey* column is in this case only used to display the display key in Cube and should not be causing issues.
 
 ## Workarounds
+
+There is no workaround.

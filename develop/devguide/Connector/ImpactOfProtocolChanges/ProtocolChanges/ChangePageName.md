@@ -19,5 +19,3 @@ Changes to page name will be approved in case:
 - The current page name is wrong (for example the name of the page does not reflect the type of parameters that are presented)
 
 All other page name changes will generally be rejected.
-
-A software task was created to decouple the layout configurations from the protocol.xml, please see [task 83409](https://collaboration.dataminer.services/task/83409).

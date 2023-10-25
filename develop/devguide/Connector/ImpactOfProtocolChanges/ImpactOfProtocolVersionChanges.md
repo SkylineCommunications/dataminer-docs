@@ -104,12 +104,6 @@ No additional version request is needed anymore as these changes were already ap
 
 This is also a call to all Driver Product Owners to keep an eye on this project and try to get these tasks picked up whenever changes are done in the protocols you are the owner for.
 
-## To Be Removed
-
-[Old references to be removed]
-
-Please have a look the [System Development/DMS Protocol Impacting Changes](https://wiki.skyline.be/wiki/System_Development/DMS_Protocol_Impacting_Changes) Wiki page for more details on protocol impacting changes.
-
 ### Workaround
 
 - [Change normalization](https://wiki.skyline.be/wiki/System_Development/Driver/Change_normalization)
