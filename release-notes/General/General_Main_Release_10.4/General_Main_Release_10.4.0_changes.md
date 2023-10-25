@@ -549,6 +549,23 @@ Up to now, when the table index of an alarm update had a casing that was not ide
 
 Because of a number of enhancements made to the automatic incident tracking feature, SLAnalytics will no longer throw errors like the ones above.
 
+#### DataMiner Object Models: GQI sort operations will now be executed by the database [ID_37541]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+Previously, when you added a sort node to a GQI query against the DOM data source, all DOM instances matching any filter node needed to be retrieved before the sorting could occur. Sorting a data set with a large amount of DOM instances was practically impossible.
+
+From now on, the sort nodes (e.g. By X, Then By Y, etc.) will be forwarded to the database. This will considerably increase overall performance when sorting DOM instances, especially when the data set includes a large amount of items.
+
+> [!NOTE]
+>
+> - Fields that have multiple values (i.e. list fields) cannot be sorted.
+> - All string sorting occurs in a non-natural way.
+> - TimeSpan fields are evaluated as strings. As a result, similar to strings, they will also be ordered in a non-natural way.
+> - Multiple sorts are supported using the `Sort by, Then sort by, etc.` node concatenation. If a new *Sort by* node is added to the query, the previous will be ignored.
+> - When sorting by DOM status or by an enum field, the sorting is will occur on the underlying value stored in the DOM instance and not on the display value.
+> - When the DOM GQI query is combined in a join operation, any sort node added after the join node will not be forwarded to the database. This will also be the case when the sorting uses the header of the table and the DOM query is part of a join.
+
 #### Storage as a Service: Enhanced error handling [ID_37554]
 
 <!-- MR 10.4.0 - FR 10.3.12 -->
