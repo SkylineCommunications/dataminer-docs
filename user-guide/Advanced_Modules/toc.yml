@@ -275,8 +275,6 @@ items:
                 topicUid: Changing_dashboard_settings
               - name: Configuring the dashboard layout
                 topicUid: Configuring_the_dashboard_layout
-              - name: Configuring dashboard components
-                topicUid: Configuring_dashboard_components
               - name: Embedding a dashboard component in a webpage or Visio drawing
                 topicUid: Embedding_a_dashboard_component_in_a_webpage_or_Visio_drawing
           - name: Sharing a dashboard
@@ -342,6 +340,17 @@ items:
                 topicUid: Tutorial_Apps_Managing_Pages
               - name: Using the stepper component in a low-code app
                 topicUid: TutorialStepper
+      - name: Configuring components
+        topicUid: Configuring_components
+        items:
+          - name: Applying a visualization
+            topicUid: Apply_Visualization
+          - name: Applying a data feed
+            topicUid: Apply_Data_Feed
+          - name: Customizing the component layout
+            topicUid: Customize_Component_Layout
+          - name: Deleting a component
+            topicUid: Delete_Component
       - name: Available visualizations
         topicUid: Available_visualizations
         items:
