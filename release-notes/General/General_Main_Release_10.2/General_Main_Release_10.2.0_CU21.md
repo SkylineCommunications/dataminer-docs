@@ -101,6 +101,14 @@ In the Surveyor, statistical alarm data can be displayed next to elements, servi
 
 A number of general enhancements have been made with regard to cache management.
 
+#### DataMiner Cube - Spectrum Analysis: RBW and VBW settings can now be modified by means of plus and minus buttons [ID_37601]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+
+In the *View* tab of a spectrum card, you can change the *RBW* (Resolution bandwidth) and *VBW* (Video bandwidth) settings.
+
+Up to now, these could be modified by means of a drop-down box. From now on, they can be modified by means of "+" (plus) and "-" (minus) buttons.
+
 ### Fixes
 
 #### Problem when restarting DataMiner [ID_37112]
