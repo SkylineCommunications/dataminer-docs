@@ -21,8 +21,6 @@ uid: Importing_and_exporting_elements
 
 1. In the lower left corner of the *Import* window, select *Import comma-separated file*.
 
-   Prior to DataMiner 9.6.3, select the option *Import elements from CSV*.
-
 1. In the *Import file* dialog box, select the CSV file you want to import, and click *Open*.
 
 > [!NOTE]
@@ -32,6 +30,7 @@ uid: Importing_and_exporting_elements
 > - For more information on how you can modify an exported CSV file for later import, see [Altering an exported CSV file in a third-party application](#altering-an-exported-csv-file-in-a-third-party-application).
 > - For more information on how DataMiner checks for duplicate names, see [Duplicate name check](#duplicate-name-check).
 > - As CSV separator settings may have changed in DataMiner 10.0.0/10.0.2, before you import a CSV file that was exported using a version of Cube prior to 10.0.0/10.0.2, make sure to check the separator used in that file.
+> - For elements communicating via SNMPv3, some fields in the CSV file have a different meaning. See [Altering an exported CSV file in a third-party application](#altering-an-exported-csv-file-in-a-third-party-application).
 
 ### Duplicate name check
 
@@ -88,6 +87,9 @@ Name checks are case-insensitive. This means that for instance “element1” is
 
    - *print*: exports the element information to a printer.
 
+   > [!NOTE]
+   > Private information, such as SNMPv3 authentication and encryption passwords, will not be exported for security reasons. 
+
 1. Click *Export*.
 
 1. Depending on the type of export you selected, you will still need to:
@@ -105,6 +107,17 @@ When altering an exported CSV file in a third-party application like Microsoft E
 - When changing existing elements, do not change the DataMiner ID or the element ID.
 
 - When you import a CSV file into MS Excel, remember that tabs will be automatically removed. MS Excel does not support the use of tabs inside cell values. If you want tabs to survive an import operation, replace each tab by *\\t*.
+
+- For elements communicating via SNMPv3, some fields in the CSV file have a different meaning:
+
+  | Field name    | SNMPv3 parameter                                                             |
+  |---------------|------------------------------------------------------------------------------|
+  | Parity        | Authentication algorithm (MD5, SHA-1, SHA-224, SHA-256, SHA-384, or SHA-512) |
+  | Data Bits     | Username                                                                     |
+  | Stop Bits     | Security level and protocol (noAuthNoPriv, authNoPriv, or authPriv)          |
+  | Flow Control  | Encryption algorithm (DES, AES-128, AES-192, or AES-256)                     |
+  | Get Community | Authentication password                                                      |
+  | Set Community | Encryption password                                                          |
 
 - You cannot delete existing elements by importing a CSV file.
 

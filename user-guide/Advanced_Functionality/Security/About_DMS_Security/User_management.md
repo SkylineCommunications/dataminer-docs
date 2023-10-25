@@ -52,7 +52,7 @@ To **enable** the local Administrator user:
 To actually sign in users in DataMiner, several authentication methods are supported:
 
 - [SSPI](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dn169026(v=ws.10)) (default)
-- [SAML](xref:Configuring_external_authentication_via_an_identity_provider_using_SAML) (Azure AD, Okta, ...)
+- [SAML](xref:Configuring_external_authentication_via_an_identity_provider_using_SAML) (Entra ID, Okta, etc.)
 - [RADIUS](xref:Configuring_RADIUS_settings)
 
 ## Multi-Factor Authentication (MFA)
@@ -65,5 +65,6 @@ Once your users are imported into the DataMiner System, it is possible to assign
 
 > [!TIP]
 > See also:
+>
 > - [User rights](xref:User_rights)
 > - [User groups](xref:User_groups)

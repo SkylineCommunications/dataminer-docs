@@ -137,6 +137,9 @@
               topicUid: LogicActionWmi
         - name: QActions
           topicUid: LogicQActions
+          items:
+          - name: Examples
+            topicUid: LogicQActionsExamples
         - name: Conditions
           topicUid: LogicConditions
         - name: Examples

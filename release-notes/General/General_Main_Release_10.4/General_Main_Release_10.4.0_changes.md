@@ -537,11 +537,66 @@ Up to now, a DataMiner using STaaS communicated with the database via TCP/IP por
 
 Because of a number of enhancements, overall performance of DOM and SRM queries has increased.
 
+#### SLAnalytics - Automatic incident tracking: Enhanced error handling [ID_37530]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+Up to now, when the table index of an alarm update had a casing that was not identical to that of previous alarm events in the same alarm tree, SLAnalytics would log errors similar to the following ones:
+
+`Updating alarm in tree X/X , but old alarm could not be found in the loose alarms or in the groups`
+
+`Alarm X/X was in state but neither in loose alarms, in an automatic group or in a manual group`
+
+Because of a number of enhancements made to the automatic incident tracking feature, SLAnalytics will no longer throw errors like the ones above.
+
+#### DataMiner Object Models: GQI sort operations will now be executed by the database [ID_37541]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+Previously, when you added a sort node to a GQI query against the DOM data source, all DOM instances matching any filter node needed to be retrieved before the sorting could occur. Sorting a data set with a large amount of DOM instances was practically impossible.
+
+From now on, the sort nodes (e.g. By X, Then By Y, etc.) will be forwarded to the database. This will considerably increase overall performance when sorting DOM instances, especially when the data set includes a large amount of items.
+
+> [!NOTE]
+>
+> - Fields that have multiple values (i.e. list fields) cannot be sorted.
+> - All string sorting occurs in a non-natural way.
+> - TimeSpan fields are evaluated as strings. As a result, similar to strings, they will also be ordered in a non-natural way.
+> - Multiple sorts are supported using the `Sort by, Then sort by, etc.` node concatenation. If a new *Sort by* node is added to the query, the previous will be ignored.
+> - When sorting by DOM status or by an enum field, the sorting is will occur on the underlying value stored in the DOM instance and not on the display value.
+> - When the DOM GQI query is combined in a join operation, any sort node added after the join node will not be forwarded to the database. This will also be the case when the sorting uses the header of the table and the DOM query is part of a join.
+
 #### Storage as a Service: Enhanced error handling [ID_37554]
 
 <!-- MR 10.4.0 - FR 10.3.12 -->
 
 A number of enhancements have been made with regard to error handling.
+
+#### New downgrade action that adapts the SLAnalytics configuration file when downgrading to version 10.3.0 or older [ID_37582]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+When you downgrade a DataMiner Agent from version 10.3.1 or later to version 10.3.0 or older, a downgrade action will now remove the section related to relation grouping from the SLAnalytics configuration file.
+
+#### SLAnalytics: Enhanced error handling [ID_37607]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+Because of a number of enhancements with regard to error handling, the following error message will no longer be generated when the SLAnalytics process is restarted on one of the DataMiner Agents in the DataMiner System:
+
+`Unexpected number of responses returned on GetInfoMessage...`
+
+#### ManagerStore: Exceptions thrown during actions of high importance will now be logged as errors [ID_37631]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+Up to now, when managers under the control of the ManagerStore framework in SLNet (DOM, Profiles, User-Defined APIs) threw exceptions during a de-initialization, a failover switch or a midnight synchronization, those exceptions would be logged as level-5 log entries of type *Info*. From now on, they will be logged as level-0 log entries of type *Error*.
+
+#### Storage as a Service: Enhanced performance when restarting elements or performing certain DOM and SRM operations [ID_37638]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+Because of a number of enhancements, overall performance has increased, especially when restarting elements or performing certain DOM and SRM operations.
 
 ### Fixes
 

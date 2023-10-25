@@ -10,7 +10,7 @@ Feature release versions from DataMiner 10.3.10 onwards.
 
 ## Cause
 
-DataMiner 10.3.10 added a new *ID* attribute to the *ElasticCluster* tag in *DBConfiguration.xml*. In setups with multiple Elasticsearch clusters, existing files did not have this tag and did not get updated automatically, which made it impossible to information from the Elasticsearch database in Cube.
+DataMiner 10.3.10 added a new *ID* attribute to the *ElasticCluster* tag in *DBConfiguration.xml*. In setups with multiple Elasticsearch clusters, existing files did not have this tag and did not get updated automatically, which made it impossible to load information from the Elasticsearch database in Cube.
 
 ## Workaround
 

@@ -108,6 +108,7 @@ Below, you find an alphabetical overview of all shape data fields that can be sp
 | Table | [Linking a shape to an Asset Manager table](xref:Linking_a_shape_to_an_Asset_Manager_table) |
 | Tag | [Highlighting connections based on the source and target of the connection](xref:Options_for_highlighting_DCF_connections#highlighting-connections-based-on-the-source-and-target-of-the-connection) |
 | TextStyle | Available from DataMiner 10.3.0/10.2.3 onwards.<br>[Configuring a shape's text wrapping and trimming](xref:Configuring_text_wrapping_and_trimming) |
+| Tooltip | [Making a shape display a custom tooltip](xref:Making_a_shape_display_a_custom_tooltip) |  
 | Variable | [Making a shape display the current value of a variable](xref:Making_a_shape_display_the_current_value_of_a_variable)<br> [Embedding a Resource Manager component](xref:Embedding_a_Resource_Manager_component)<br> [Configuring a shape to display or set the Surveyor search text](xref:Configuring_a_shape_to_display_or_set_the_Surveyor_search_text) |
 | VdxPage | [Making a shape display a particular page of the current Visio drawing](xref:Making_a_shape_display_a_particular_page_of_the_current_Visio_drawing)<br> [Turning a shape into a tab control that displays pages of a Visio file](xref:Turning_a_shape_into_a_tab_control_that_displays_pages_of_a_Visio_file)<br> [Navigation options for automatically drawn connections](xref:Positioning_shapes_dynamically1#navigation-options-for-automatically-drawn-connections) |
 | View | [Linking a shape to a view](xref:Linking_a_shape_to_a_view) |

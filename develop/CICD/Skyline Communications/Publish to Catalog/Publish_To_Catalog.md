@@ -249,3 +249,13 @@ As dashboards are a purely visual artifact, the source code is rarely changed di
          </Dashboard>
       </Dashboards>
       ```
+
+## Publishing Visio files
+
+Visio files can be used as a custom user interface for elements, services, or views. They are generally published as single .vsdx files.
+
+Publishing them can be done in the same way as [publishing dashboards](#publishing-dashboards), with the following differences:
+
+- Use the *Visios* tab in the SLC SE RepoManager.
+
+- Use the *Visios* tag when making an install package.

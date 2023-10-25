@@ -145,3 +145,59 @@ When the *Column & bar chart*, *Line & area chart* and *Pie & donut chart* compo
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
 
 Up to now, it would incorrectly be possible to export table data to a CSV file when a table did not display any rows. From now on, when a table does not display any rows (e.g. when no rows match the applied filter), the button allowing you to export the table data to a CSV file will be disabled.
+
+#### Dashboards app: Sidebar would overlap large components when the viewport was too narrow [ID_37594]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When a component was too large to fit into a narrow viewport (e.g. when viewing the dashboard on a mobile device), in some cases, the sidebar would incorrectly overlap the component.
+
+This issue would also occur when a visual overview had been embedded in a *Visual overview* component that was too small.
+
+#### Low-Code Apps: Deleting all components on a panel using the Delete button would delete all components on the page [ID_37615]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When, while editing a panel in a low-code app, you used CTRL+a to select all components on that panel and pressed DELETE to delete them, this would not only delete the components on the panel but also the other components on the rest of the page.
+
+#### Dashboards app & Low-Code Apps: Node keys would be omitted when converting a query to a JSON string [ID_37627]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+In some cases, when a query using node keys was converted to a JSON string, the node keys would incorrect be omitted.
+
+#### Dashboards app & Low-Code Apps - Table component: Header bar options would not reinitialize correctly after the table data had been refreshed [ID_37643]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+The options shown on the header bar of a table component would not reinitialize correctly after the table data had been refreshed.
+
+#### Low-Code Apps: Multiple context menus could incorrectly be opened at the same time [ID_37652]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+In some cases, multiple context menus could incorrectly be opened at the same time. From now on, when you open a context menu while another one is still open, that open menu will first be closed.
+
+#### Low-Code Apps: Problem when a component refetched its data multiple times in quick succession [ID_37654]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When a component refetched its data multiple times in quick succession, a `There are no open sessions` error would be thrown.
+
+#### Dashboards app - Query builder: Too much whitespace below a query after its migration had finished [ID_37660]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When, in the query builder, you opened an unused query, too much whitespace would be shown below it when its migration had finished.
+
+#### Dashboards app & Low-Code Apps - Bar chart and Pie & donut chart: Chart configuration could get changed unexpectedly [ID_37662]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When the query of a *Bar* chart or a *Pie & donut* chart was linked to a feed as a filter, in some cases, the chart configuration could get changed unexpectedly.
+
+#### Low-Code Apps: Images on a low-code app would only be visible to users who had permission to view dashboards [ID_37667]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When you opened a low-code app you were allowed to view, the images on that low-code app would not be visible unless you had permission to view dashboards.

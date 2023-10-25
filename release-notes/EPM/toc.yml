@@ -74,7 +74,7 @@ items:
     items:
       - name: EPM 1.0.6 VSAT - preview
         topicUid: EPM_1.0.6_VSAT
-      - name: EPM 1.0.5 VSAT - preview
+      - name: EPM 1.0.5 VSAT
         topicUid: EPM_1.0.5_VSAT
       - name: EPM 1.0.4 VSAT
         topicUid: EPM_1.0.4_VSAT

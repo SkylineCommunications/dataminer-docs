@@ -30,6 +30,24 @@ A number of security enhancements have been made.
 
 Because of a number of enhancements, overall performance has increased when offloading data in case the database is down.
 
+#### Service & Resource Management: Initialization of ResourceManager and SRMServiceStateManager will be retried up to 5 times [ID_37507]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When *ResourceManager* and *SRMServiceStateManager* fail to get initialized at DataMiner startup, the system will now retry up to 5 times to get those managers up and running.
+
+#### SLAnalytics - Behavioral anomaly detection: Enhanced trend change detection [ID_37571]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+If, upon detection of a new trend, the trend returns to the old trend (i.e. the trend before the behavioral change) within the hour, the behavioral change will be labeled a level shift rather than a trend change.
+
+#### SLAnalytics - Alarm focus: A notice will now be generated when the AlarmFocusRecords cache reaches its maximum size [ID_37624]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When the *AlarmFocusRecords* cache reached its maximal size, up to now, an error message would be added to the *SLAnalytics.txt* log file. From now on, a notice will be generated instead.
+
 ### Fixes
 
 #### Problem in different native processes when interacting with message broker calls [ID_37150]
@@ -78,8 +96,34 @@ Up to now, when you stopped both *Alarm Focus* and *Automatic Incident Tracking*
 
 When a resource did not have both a minimum and maximum value for a particular range point, the resource capability exposers would not work correctly for that range point.
 
+#### DELT export of an element from a Cassandra Cluster would incorrectly not include any data [ID_37557]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+
+When a DELT export of an element was performed on a DataMiner Agent running a Cassandra Cluster database, the import package would incorrectly not contain a database folder. As a result, no data from the element in question would be exported.
+
+Also, DELT exports would incorrectly not include the mask status of elements or alarms.
+
 #### PropertyChangeEvents would not be removed from the SLNet event cache when an element was deleted [ID_37576]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
 
 When an element was deleted, `PropertyChangeEvent` instances for that element would incorrectly not get removed from the SLNet event cache.
+
+#### SLAnalytics: Problem after losing connection with SLDataGateway [ID_37603]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When SLAnalytics lost connection with SLDataGateway, an exception would be thrown, causing SLAnalytics to become unresponsive.
+
+#### DataMiner Object Models: DomManager would not initialize when it received its first call [ID_37604]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When the first call to a DomManager after a DMA (re)start was a call to create, update or delete a HistoryChange object, the call would fail and the DomManager would not initialize.
+
+#### Service & Resource Management: Problem when updating a booking using resources that had been used by other bookings in the past [ID_37647]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When you updated a booking using resources that had also been used earlier by other bookings in the past, a concurrency error could incorrectly be thrown.

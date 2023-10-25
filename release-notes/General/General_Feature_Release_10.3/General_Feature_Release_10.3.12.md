@@ -38,7 +38,7 @@ Customized anomaly monitoring will enable you to do the following:
 - Set absolute or relative thresholds on the jump sizes of the change points of type *Level Shift* or *Outlier*.
 - Enable or disable monitoring for each of the two possible directions of a behavioral change for level shifts, trend changes, variance changes and outliers. This will allow you, for example, to configure different alarm monitoring behaviors for downward level shifts and upward level shifts.
 
-For more information on how to configure anomaly monitoring in DataMiner Cube, see RN37148 and RN37171.
+For more information on how to configure anomaly monitoring in DataMiner Cube, see [DataMiner Cube - Alarm templates: Configuration of behavioral anomaly alarms [ID_37148] [ID_37171]](xref:Cube_Feature_Release_10.3.12#alarm-templates-configuration-of-behavioral-anomaly-alarms-id_37148-id_37171).
 
 Summary of server-side changes:
 
@@ -104,17 +104,90 @@ Up to now, when you had created a multivariate pattern containing subpatterns ho
 
 Because of a number of enhancements, overall performance of DOM and SRM queries has increased.
 
+#### Service & Resource Management: Initialization of ResourceManager and SRMServiceStateManager will be retried up to 5 times [ID_37507]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When *ResourceManager* and *SRMServiceStateManager* fail to get initialized at DataMiner startup, the system will now retry up to 5 times to get those managers up and running.
+
+#### SLAnalytics - Automatic incident tracking: Enhanced error handling [ID_37530]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+Up to now, when the table index of an alarm update had a casing that was not identical to that of previous alarm events in the same alarm tree, SLAnalytics would log errors similar to the following ones:
+
+`Updating alarm in tree X/X , but old alarm could not be found in the loose alarms or in the groups`
+
+`Alarm X/X was in state but neither in loose alarms, in an automatic group or in a manual group`
+
+Because of a number of enhancements made to the automatic incident tracking feature, SLAnalytics will no longer throw errors like the ones above.
+
 #### Security enhancements [ID_37540]
 
 <!-- 37540: MR 10.4.0 - FR 10.3.12 -->
 
 A number of security enhancements have been made.
 
+#### DataMiner Object Models: GQI sort operations will now be executed by the database [ID_37541]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+Previously, when you added a sort node to a GQI query against the DOM data source, all DOM instances matching any filter node needed to be retrieved before the sorting could occur. Sorting a data set with a large amount of DOM instances was practically impossible.
+
+From now on, the sort nodes (e.g. By X, Then By Y, etc.) will be forwarded to the database. This will considerably increase overall performance when sorting DOM instances, especially when the data set includes a large amount of items.
+
+> [!NOTE]
+>
+> - Fields that have multiple values (i.e. list fields) cannot be sorted.
+> - All string sorting occurs in a non-natural way.
+> - TimeSpan fields are evaluated as strings. As a result, similar to strings, they will also be ordered in a non-natural way.
+> - Multiple sorts are supported using the `Sort by, Then sort by, etc.` node concatenation. If a new *Sort by* node is added to the query, the previous will be ignored.
+> - When sorting by DOM status or by an enum field, the sorting is will occur on the underlying value stored in the DOM instance and not on the display value.
+> - When the DOM GQI query is combined in a join operation, any sort node added after the join node will not be forwarded to the database. This will also be the case when the sorting uses the header of the table and the DOM query is part of a join.
+
 #### Storage as a Service: Enhanced error handling [ID_37554]
 
 <!-- MR 10.4.0 - FR 10.3.12 -->
 
 A number of enhancements have been made with regard to error handling.
+
+#### SLAnalytics - Behavioral anomaly detection: Enhanced trend change detection [ID_37571]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+If, upon detection of a new trend, the trend returns to the old trend (i.e. the trend before the behavioral change) within the hour, the behavioral change will be labeled a level shift rather than a trend change.
+
+#### New downgrade action that adapts the SLAnalytics configuration file when downgrading to version 10.3.0 or older [ID_37582]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+When you downgrade a DataMiner Agent from version 10.3.1 or later to version 10.3.0 or older, a downgrade action will now remove the section related to relation grouping from the SLAnalytics configuration file.
+
+#### SLAnalytics: Enhanced error handling [ID_37607]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+Because of a number of enhancements with regard to error handling, the following error message will no longer be generated when the SLAnalytics process is restarted on one of the DataMiner Agents in the DataMiner System:
+
+`Unexpected number of responses returned on GetInfoMessage...`
+
+#### SLAnalytics - Alarm focus: A notice will now be generated when the AlarmFocusRecords cache reaches its maximum size [ID_37624]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When the *AlarmFocusRecords* cache reached its maximal size, up to now, an error message would be added to the *SLAnalytics.txt* log file. From now on, a notice will be generated instead.
+
+#### ManagerStore: Exceptions thrown during actions of high importance will now be logged as errors [ID_37631]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+Up to now, when managers under the control of the ManagerStore framework in SLNet (DOM, Profiles, User-Defined APIs) threw exceptions during a de-initialization, a failover switch or a midnight synchronization, those exceptions would be logged as level-5 log entries of type *Info*. From now on, they will be logged as level-0 log entries of type *Error*.
+
+#### Storage as a Service: Enhanced performance when restarting elements or performing certain DOM and SRM operations [ID_37638]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+Because of a number of enhancements, overall performance has increased, especially when restarting elements or performing certain DOM and SRM operations.
 
 ### Fixes
 
@@ -164,23 +237,31 @@ Up to now, when you stopped both *Alarm Focus* and *Automatic Incident Tracking*
 
 When a resource did not have both a minimum and maximum value for a particular range point, the resource capability exposers would not work correctly for that range point.
 
+#### Cassandra Cluster Migrator tool would stop migrating certain tables after 1000 rows [ID_37513]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When the Cassandra Cluster Migrator tool (*SLCCMigrator.exe*) was migrating tables from MySQL to Cassandra Cluster, in some cases, it would incorrectly stop after 1000 rows.
+
 #### Storage as a Service: Row limits were disregarded when a post filter was applied to a query result [ID_37515]
 
 <!-- MR 10.4.0 - FR 10.3.12 -->
 
 In cases where SLDataGateway retrieved an entire table and then applied a filter afterwards, any row limits defined for the query in question would incorrectly be disregarded.
 
-#### SLNet: Memory leak due to MessageBroker instances not being cleaned up properly [ID_37525]
-
-<!-- MR 10.3.0 [CU8] - FR 10.3.12 -->
-
-In some cases, SLNet could leak memory due to MessageBroker instances not being cleaned up properly.
-
 #### Storage as a Service: Paged data retrieval operations would be cut off prematurely [ID_37533]
 
 <!-- MR 10.4.0 - FR 10.3.12 -->
 
 When reading data from the database page by page, in some cases, the operation would be cut off prematurely.
+
+#### DELT export of an element from a Cassandra Cluster would incorrectly not include any data [ID_37557]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+
+When a DELT export of an element was performed on a DataMiner Agent running a Cassandra Cluster database, the import package would incorrectly not contain a database folder. As a result, no data from the element in question would be exported.
+
+Also, DELT exports would incorrectly not include the mask status of elements or alarms.
 
 #### Newly created element could get assigned the same DmaId/ElementId key as another, already existing element [ID_37560]
 
@@ -193,3 +274,21 @@ In some cases, a newly created element could get assigned the same DmaId/Element
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
 
 When an element was deleted, `PropertyChangeEvent` instances for that element would incorrectly not get removed from the SLNet event cache.
+
+#### SLAnalytics: Problem after losing connection with SLDataGateway [ID_37603]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When SLAnalytics lost connection with SLDataGateway, an exception would be thrown, causing SLAnalytics to become unresponsive.
+
+#### DataMiner Object Models: DomManager would not initialize when it received its first call [ID_37604]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When the first call to a DomManager after a DMA (re)start was a call to create, update or delete a HistoryChange object, the call would fail and the DomManager would not initialize.
+
+#### Service & Resource Management: Problem when updating a booking using resources that had been used by other bookings in the past [ID_37647]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When you updated a booking using resources that had also been used earlier by other bookings in the past, a concurrency error could incorrectly be thrown.

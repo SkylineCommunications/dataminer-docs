@@ -358,6 +358,8 @@ items:
                         topicUid: Resources_migration_to_elastic
                       - name: Configuring the Elasticsearch database (Windows)
                         topicUid: Configuring_Elasticsearch_database_Windows
+                      - name: Uninstalling Elasticsearch from a DMA
+                        topicUid: Uninstalling_Elasticsearch_from_a_DMA
                   - name: Manually connecting a DMA to an Elasticsearch cluster
                     topicUid: Manually_Connecting_DMA_to_Elasticsearch_Cluster
                   - name: Configuring Elasticsearch backups
