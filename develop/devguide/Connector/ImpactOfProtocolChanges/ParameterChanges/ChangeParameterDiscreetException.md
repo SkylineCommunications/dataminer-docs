@@ -20,7 +20,3 @@ Note, a change in *dependancyValue* will not cause any impact.
 | 2.12.1  | UpdatedValue | Discreet value tag with display '{displayValue}' on Param '{paramId}' was changed from '{previousValue}' into '{newValue}'. |
 | 2.12.2  | RemovedItem | Discreet tag with value '{discreetValue}' on Param '{paramId}' was removed. |
 | 2.13.1  | UpdatedValue | Discreet display tag with value '{oldValue}' on Param '{paramId}' was changed from '{previousDispay}' into '{newDisplay}'. |
-
-## Workarounds
-
-Please see [task 83409](https://dcp.skyline.be/Lists/Tasks/DispForm.aspx?ID=83409)
