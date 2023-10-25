@@ -607,7 +607,7 @@ Up to now, a GQI query starting from a DOM node would return columns that contai
 From now on, when GQI detects that having multiple sections is allowed for a particular SectionDefinition, all fields part of that SectionDefinition will no longer be returned as columns.
 
 > [!IMPORTANT]
-> This change will break any existing query that returns columns containing multiple values due to being linked to SectionDefinitions that allowed multiple sections in one DOM instance.
+> This change will break any existing query that references columns containing multiple values due to being linked to SectionDefinitions that allowed multiple sections in one DOM instance.
 
 ### Fixes
 
