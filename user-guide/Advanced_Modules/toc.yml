@@ -534,6 +534,11 @@ items:
                     topicUid: Ad_hoc_Life_cycle
                   - name: Tutorials
                     topicUid: Ad_hoc_Tutorials
+                    items:
+                      - name: Create your first GQI data source - Dummy data
+                        topicUid: Ad_hoc_Tutorials
+                      - name: Create your first GQI data source - Satellites
+                        topicUid: Ad_hoc_Tutorials_Satellites
               - name: Configuring a custom operator
                 topicUid: GQI_Custom_Operator
                 items:
