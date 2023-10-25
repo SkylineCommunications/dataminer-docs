@@ -4,35 +4,24 @@ uid: upgrading_a_dataminer_probe
 
 # Upgrading a DataMiner Probe
 
-When you run a regular DataMiner upgrade in a DMS, DMPs will not be included in the upgrade process. This is because a DMP does not function as one of the DataMiner nodes in a DataMiner System, but instead as a standalone gateway or proxy between its devices and the DMS. As a consequence, it should be upgraded in a different way from a a regular DataMiner Agent.
+Upgrading a DataMiner Probe differs from upgrading a regular DataMiner Agent.
+A DMP is not part of the DMS, it functions as a standalone gateway or proxy between its devices and the DMS.
+Because of this, when upgrading the cluster, DMPs are not included in the upgrade process.
 
-Follow the steps below to upgrade a DMP:
-
-1. Open a remote session towards each server.
-
-1. Download and unpack the [CLI package](https://github.com/nats-io/natscli/releases/) on each server.
-
-1. Open the NATS credentials file `C:/Skyline DataMiner/SLCloud.xml` and copy the value from within the *NatsCredsFile* tag.
-
-1. Open a command line window and navigate to the NATS CLI folder.
-
-1. Initialize the subscribers:
-
-   ```txt
-   nats --creds="C:\Skyline DataMiner\NATS\nsc\.nkeys\creds\DataMinerOperator\DataMinerAccount\DataMinerUser.creds" sub cli.demo
-   ```
-
-   The subscribers will now listen to the subject "cli.demo"
-
-1. Initialize the publisher:
-
-   ```txt
-   nats --creds="C:\Skyline DataMiner\NATS\nsc\.nkeys\creds\DataMinerOperator\DataMinerAccount\DataMinerUser.creds" pub cli.demo "test connectivity"
-   ```
-
-   This will publish the string "test connectivity" onto the cli.demo channel
-
-1. Verify that the message was received on each subscriber command line
+Nonetheless, a DataMiner Probe should also use the same version as the version found on the entire cluster.
 
 > [!TIP]
-> For more information on the publish-subscribe principle, see [Publish-Subscribe](https://docs.nats.io/nats-concepts/core-nats/pubsub) in the NATS documentation.
+> See also: [DataMiner Probes](xref:DataMinerProbes).
+
+## Procedure
+The procedure is similar to a regular upgrade, except that you need to manually upgrade each DataMiner Probe separately.
+
+1. Make sure the DMS is upgraded already before upgrading the DMP(s).
+2. Upload the upgrade package to the DataMiner Probe server(s).
+> [!NOTE]
+> Be sure to create a backup as indicated in the regular upgrade [preparation](xref:Preparing_to_upgrade_a_DataMiner_Agent)
+
+3. Upgrade the DataMiner Probe, by double-clicking the upgrade package or by using the Taskbar Utility method.
+The upgrade should be installed on the localhost only, instead of the cluster.
+> [!NOTE]
+> More information on it can be found [here](xref:Upgrading_a_DataMiner_Agent_using_DataMiner_Taskbar_Utility)
