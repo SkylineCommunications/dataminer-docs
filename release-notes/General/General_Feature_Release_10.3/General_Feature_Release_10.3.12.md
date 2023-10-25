@@ -189,6 +189,17 @@ Up to now, when managers under the control of the ManagerStore framework in SLNe
 
 Because of a number of enhancements, overall performance has increased, especially when restarting elements or performing certain DOM and SRM operations.
 
+#### DataMiner Objects Models: Fields used in multiple sections will no longer be returned for GQI queries [ID_37644]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+Up to now, a GQI query starting from a DOM node would return columns that contained multiple values due to being linked to SectionDefinitions that allowed multiple sections in one DOM instance. However, when displayed in a table, those columns would only show the first value found in the DOM instance. Also, when you sorted the data by one of those columns, in some cases, the order would seem random as the database would pick either the lowest or highest value available for a field when sorting.
+
+From now on, when GQI detects that having multiple sections is allowed for a particular SectionDefinition, all fields part of that SectionDefinition will no longer be returned as columns.
+
+> [!IMPORTANT]
+> This change will break any existing query that returns columns containing multiple values due to being linked to SectionDefinitions that allowed multiple sections in one DOM instance.
+
 ### Fixes
 
 #### NATSCustodian could incorrectly pick an offline DMA as NAS candidate [ID_37312]
