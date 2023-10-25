@@ -4,27 +4,23 @@ uid: DataMinerProbes
 
 # DataMiner Probes
 
-A DMP or a DataMiner Probe is comparable to a limited DataMiner Agent.
-DataMiner Probes enable operators to bring the power and intelligence of DataMiner to the most remote, isolated and/or unmanned locations, and to embed intelligent self-sustaining network management pockets within the operation. 
-As a loosely coupled intermediate gateway, it guarantees the continuity you require for fault management, performance management and procedure automation (e.g. redundancy switching, automatic configuration for scheduled services and bookings, etc.).
+A DataMiner Probe (DMP) is a DataMiner Agent with limited capabilities. DMPs typically, but not necessarily, run on small-form-factor compute instances in remote and unmanned locations where communication channels often have capacity constraints and/or intermittent availability.
 
-DMPs are typically installed for example in remote VSAT terminals, satellite hubs, terrestrial transmitter sites, small network nodes, cellular network base centers, etc.
+DMPs can support a multitude of applications and are typically installed in e.g. remote VSAT terminals, satellite hubs, terrestrial transmitter sites, small network nodes, cellular network base centers, etc.
 
-## Limitations of DMPs, compared to regular DMAs:
-### Capacity
-Probes only support up to 50 devices.
+> [!TIP]
+> See also: [Adding a DataMiner Probe](xref:Adding_a_DataMiner_Probe)
 
-### Users
-You can add as many users as you want to a DMP, but it can only be accessed by 1 user at a time.
+## DMP limitations
 
-### Ecosystem
-Multiple DMAs can be clustered forming a DMS. However a DMP is not part of the DMS, it functions as a standalone gateway or proxy between its devices and the DMS.
-This means that a probe needs to be upgraded separatedly from the cluster.
-> [!NOTE]
-> Go to probe upgrade
+Compared to regular DataMiner Agents, DataMiner Probes have the following limitations:
 
-### View structure
-A probe only has 1 single view with optional Visual Overview. All connected devices will be displayed within this view.
+- **Capacity**: DMPs only support up to 50 devices.
 
-### Historical data
-The probe can only store up to 7 days of historical data. However this data is typically forwarded towards the cluster, where it is stored longer.
+- **Users**: While you can add as many users as you want to a DMP, only one user at a time can access the DMP.
+
+- **Ecosystem**: A DMP does not function as one of the DataMiner nodes in a DataMiner System. Instead it functions as a standalone gateway or proxy between its devices and the DMS. This means that you should [upgrade a DataMiner Probe](xref:upgrading_a_dataminer_probe) separately from the rest of the DMS.
+
+- **View structure**: A DMP only has 1 single view with optional visual overview. All connected devices will be displayed within this view.
+
+- **Historical data**: A DMP can only store up to 7 days of historical data. However, this data is typically forwarded towards the cluster, where it is stored for a longer time.
