@@ -110,14 +110,14 @@ When altering an exported CSV file in a third-party application like Microsoft E
 
 - For elements communicating via SNMPv3, some fields in the CSV file have a different meaning:
 
-  | Field name    | SNMPv3 parameter                 |
-  |---------------|----------------------------------|
-  | Parity        | Authentication algorithm         |
-  | Data Bits     | Username                         |
-  | Stop Bits     | Security level and protocol      |
-  | Flow Control  | Encryption algorithm             |
-  | Get Community | Authentication password          |
-  | Set Community | Encryption password              |
+  | Field name    | SNMPv3 parameter                                                             |
+  |---------------|------------------------------------------------------------------------------|
+  | Parity        | Authentication algorithm (MD5, SHA-1, SHA-224, SHA-256, SHA-384, or SHA-512) |
+  | Data Bits     | Username                                                                     |
+  | Stop Bits     | Security level and protocol (noAuthNoPriv, authNoPriv, or authPriv)          |
+  | Flow Control  | Encryption algorithm (DES, AES-128, AES-192, or AES-256)                     |
+  | Get Community | Authentication password                                                      |
+  | Set Community | Encryption password                                                          |
 
 - You cannot delete existing elements by importing a CSV file.
 
