@@ -1,5 +1,5 @@
 ---
-uid:upgrading_a_dataminer_probe
+uid: upgrading_a_dataminer_probe
 ---
 
 # Upgrading a DataMiner Probe

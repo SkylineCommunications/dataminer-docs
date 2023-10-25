@@ -1,5 +1,5 @@
 ---
-uid: dataminerprobes
+uid: DataMinerProbes
 ---
 
 # DataMiner Probes

@@ -67,7 +67,7 @@ items:
           - name: Upgrading a DataMiner Agent in System Center
             topicUid: Upgrading_a_DataMiner_Agent_in_System_Center
           - name: Upgrading a DataMiner Probe
-            topicUid: Upgrading_a_DataMiner_Probe
+            topicUid: upgrading_a_dataminer_probe
           - name: Upgrade paths
             topicUid: Upgrade_Paths
             items:
@@ -94,7 +94,7 @@ items:
       - name: DataMiner packages
         topicUid: DataMiner_packages
       - name: DataMiner Probes
-        topicUid: dataminerprobes
+        topicUid: DataMinerProbes
       - name: Exporting and importing packages on a DMA
         topicUid: Exporting_and_importing_packages_on_a_DMA
         items:
