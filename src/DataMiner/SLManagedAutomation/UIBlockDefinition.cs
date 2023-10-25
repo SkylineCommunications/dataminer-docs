@@ -323,6 +323,30 @@ namespace Skyline.DataMiner.Automation
 		public bool IsMultiline { get; set; }
 
 		/// <summary>
+		/// Gets or sets a value indicating whether the control is read-only in the UI.
+		/// </summary>
+		/// <value><c>true</c> if the control should be read-only in the UI; otherwise, <c>false</c>.</value>
+		/// <remarks>
+		/// <para>Default: false.</para>
+		/// <para>Feature introduced in DataMiner 10.4.1 (RN 37659).</para>
+		/// <para>This feature is available for interactive automation scripts executed in a web environment. 
+		/// The following UIBlockTypes are supported:
+		/// 	<list type="bullet">
+		/// 		<item><term>TextBox</term></item>
+		/// 		<item><term>Numeric</term></item>
+		/// 		<item><term>Dropdown</term></item>
+		/// 		<item><term>Checkbox</term></item>
+		/// 		<item><term>CheckboxList</term></item>
+		/// 		<item><term>RadiobuttonList</term></item>
+		/// 		<item><term>Calendar</term></item>
+		/// 		<item><term>Time</term></item>
+		/// 		<item><term>Treeview</term></item>
+		/// 	</list>
+		/// </para>
+		/// </remarks>
+		public bool IsReadOnly { get; set; }
+
+		/// <summary>
 		/// Gets or sets a value indicating whether this input control requires a value.
 		/// </summary>
 		/// <value><c>true</c> if this input control requires a valued; otherwise, <c>false</c>.</value>
