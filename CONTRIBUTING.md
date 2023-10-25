@@ -161,6 +161,9 @@ When you install GitHub Desktop, you will also need to add the correct repositor
    If this is the case:
 
    1. Select *Create a fork*.
+   1. Uncheck *Copy the main branch only*.
+   
+      ![Uncheck Copy Main Branch Only](~/images/Copy_Main_Branch_Only.png)
 
    1. Click *Fork this repository*.
 
