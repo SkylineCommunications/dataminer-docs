@@ -124,18 +124,15 @@ h2,
 .h2,
 h3,
 .h3 {
-  margin-top: 30px;
-  margin-bottom: 18px;
   font-weight: 600;
 }
+
 h4,
 .h4,
 h5,
 .h5,
 h6,
 .h6 {
-  margin-top: 30px;
-  margin-bottom: 15px;
   font-weight: 600;
 }
 
@@ -546,6 +543,20 @@ code {
     white-space: nowrap;
     text-overflow: ellipsis;
   }
+}
+
+a.backtotoplink
+{
+	text-decoration: none;
+	color: #337ab7;
+    cursor: pointer;
+	font-size: 90%;
+}
+
+a.backtotoplink:hover
+{
+	text-decoration: underline;
+	color: var(--color-foreground-hyperlink-hover);
 }
 
 #search-query {
