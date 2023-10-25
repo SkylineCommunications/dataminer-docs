@@ -181,3 +181,9 @@ In the footer of the Alarm Console, the button to cancel the current text-to-spe
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
 
 When, in the Alarm Console, an alarm was duplicated, in some cases, its focus score would not be updated correctly.
+
+#### DataMiner Cube: Problem when parsing anomaly alarms [ID_37680]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+
+When you opened DataMiner Cube or when you opened a new alarm tab, an error could occur when parsing anomaly alarms.
