@@ -329,7 +329,7 @@ namespace Skyline.DataMiner.Automation
 		/// <remarks>
 		/// <para>Default: false.</para>
 		/// <para>Feature introduced in DataMiner 10.4.1 (RN 37659).</para>
-		/// <para>This feature is available for interactive automation scripts executed in a web environment. 
+		/// <para>This feature is available for interactive Automation scripts executed in a web environment. 
 		/// The following UIBlockTypes are supported:
 		/// 	<list type="bullet">
 		/// 		<item><term>TextBox</term></item>
