@@ -535,9 +535,9 @@ items:
                   - name: Tutorials
                     topicUid: Ad_hoc_Tutorials
                     items:
-                      - name: Create your first GQI data source - Dummy data
+                      - name: Forwarding dummy data to the GQI
                         topicUid: Ad_hoc_Tutorials
-                      - name: Create your first GQI data source - Satellites
+                      - name: Building a GQI data source that fetches satellites
                         topicUid: Ad_hoc_Tutorials_Satellites
               - name: Configuring a custom operator
                 topicUid: GQI_Custom_Operator
