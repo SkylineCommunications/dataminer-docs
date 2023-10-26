@@ -201,3 +201,9 @@ When the query of a *Bar* chart or a *Pie & donut* chart was linked to a feed as
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
 
 When you opened a low-code app you were allowed to view, the images on that low-code app would not be visible unless you had permission to view dashboards.
+
+#### Web apps - Visual Overview: Pop-up window containing a page from another visual overview could not be opened [ID_37685]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When a visual overview was opened on a mobile device, it would not be possible to open another page in a pop-up window when that other page was part of a visual overview linked to another object.
