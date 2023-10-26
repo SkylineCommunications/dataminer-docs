@@ -22,7 +22,7 @@ uid: Upgrading_a_DataMiner_Agent
 > [!NOTE]
 >
 > - You can [configure the default options](xref:Configuring_the_default_upgrade_options) for upgrades in System Center.
-> - DMPs can be upgraded in System Center like regular DMAs, though additional options will be available in the upgrade window. If the DMP is not ready for an upgrade, or no connection can be established, by default after 10 seconds a warning will appear.
+> - For more information on how to upgrade DMPs, see [Upgrading a DataMiner Probe](xref:upgrading_a_dataminer_probe).
 
 ## Upgrading a DataMiner Agent in the Update Center
 
