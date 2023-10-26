@@ -207,3 +207,9 @@ When you opened a low-code app you were allowed to view, the images on that low-
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
 
 When a visual overview was opened on a mobile device, it would not be possible to open another page in a pop-up window when that other page was part of a visual overview linked to another object.
+
+#### Dashboards app - Query builder: Filter would ignore changes made to boolean columns the dashboard had been refreshed [ID_37697]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When, in a query, a filter had been applied to a boolean column, the filter would ignore any changes made to that boolean column after you had refreshed the dashboard. In other words, when the query was used to fetch data to be displayed in a table component, the table would not reflect changes made to that boolean column as the filter would not apply those changes.
