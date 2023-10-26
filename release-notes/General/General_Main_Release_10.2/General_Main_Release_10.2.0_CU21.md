@@ -182,6 +182,14 @@ Up to now, when you changed the alignment of such a column, the pencil icons wou
 
 When an element was deleted, `PropertyChangeEvent` instances for that element would incorrectly not get removed from the SLNet event cache.
 
+#### Alerter: Problem when connecting to a DataMiner Agent using gRPC [ID_37580]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+
+When Alerter connected to a DataMiner Agent using gRPC, on each subsequent startup, it would display a message box showing the following error:
+
+`There is no connection available, please add one.`
+
 #### DataMiner Cube - Alarm Console: Text-to-speech button would overlap the counter showing the number of alarms with severity 'Suggestion' [ID_37590]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->

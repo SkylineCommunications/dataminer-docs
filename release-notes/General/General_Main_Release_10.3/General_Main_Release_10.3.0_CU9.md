@@ -110,6 +110,14 @@ Also, DELT exports would incorrectly not include the mask status of elements or 
 
 When an element was deleted, `PropertyChangeEvent` instances for that element would incorrectly not get removed from the SLNet event cache.
 
+#### Alerter: Problem when connecting to a DataMiner Agent using gRPC [ID_37580]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+
+When Alerter connected to a DataMiner Agent using gRPC, on each subsequent startup, it would display a message box showing the following error:
+
+`There is no connection available, please add one.`
+
 #### SLAnalytics: Problem after losing connection with SLDataGateway [ID_37603]
 
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
