@@ -18,6 +18,14 @@ uid: General_Main_Release_10.3.0_CU9
 
 Because of a number of enhancements, overall performance has increased when editing or deleting profile parameters of type *Capability* or *Capacity*, especially on systems with a large number of future bookings.
 
+#### Legacy Reporter is now fully compatible with Cassandra Cluster [ID_37185]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+The legacy Reporter has now been made fully compatible with Cassandra Cluster.
+
+Also, an issue has been fixed for all types of databases. Up to now, when an SLA was created on top of an enhanced service, in some cases, the SLA report would not include all affected alarms.
+
 #### Security enhancements [ID_37267]
 
 <!-- RN 37267: MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.11 -->
