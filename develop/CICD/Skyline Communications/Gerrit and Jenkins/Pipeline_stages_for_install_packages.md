@@ -25,7 +25,7 @@ This stage verifies that a tag matches the regular expression `^\d+\.\d+\.\d+-CU
 ## Validate possible dependency NuGets
 
 - Checks whether projects use the obsolete packages.config package management format.
-- Checks whether projects have any vulnerable, deprecated or outdated NuGet packages.
+- Checks whether projects have any vulnerable, deprecated, or outdated NuGet packages.
 
 ## Sync DataMiner feature release DLLs
 
