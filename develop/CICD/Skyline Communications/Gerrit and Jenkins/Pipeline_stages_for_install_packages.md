@@ -22,6 +22,11 @@ During this stage, the repository is scanned for the presence of a Visual Studio
 
 This stage verifies that a tag matches the regular expression `^\d+\.\d+\.\d+-CU\d+$`, e.g. `1.0.1-CU0`.
 
+## Validate possible dependency NuGets
+
+- Checks whether projects use the obsolete packages.config package management format.
+- Checks whether projects have any vulnerable, deprecated or outdated NuGet packages.
+
 ## Sync DataMiner feature release DLLs
 
 This stage ensures that the next build stage will build against the latest feature release of DataMiner. It will verify on DCP whether a new feature release has been released and, if it has, Jenkins will make sure to use that feature release to build against from that point onwards.
