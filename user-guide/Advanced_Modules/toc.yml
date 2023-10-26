@@ -271,8 +271,6 @@ items:
                 topicUid: Deleting_a_dashboard
               - name: Editing a dashboard
                 topicUid: Editing_a_dashboard
-              - name: Changing dashboard settings
-                topicUid: Changing_dashboard_settings
               - name: Configuring the dashboard layout
                 topicUid: Configuring_the_dashboard_layout
               - name: Embedding a dashboard component in a webpage or Visio drawing
@@ -472,6 +470,8 @@ items:
             topicUid: Specifying_data_input_in_a_dashboard_URL
           - name: Configuring a dashboard to use a URL feed without a feed component
             topicUid: Configuring_a_dashboard_to_use_a_URL_feed_without_a_feed_component
+      - name: Changing dashboard and low-code app settings
+        topicUid: Changing_dashboard_low-code_app_settings
       - name: Generic Query Interface (GQI)
         topicUid: Generic_Query_Interface
         items:
