@@ -10,10 +10,13 @@ To install DataMiner Integration Studio, you have to install the *DataMinerInteg
 
 1. Check which version of Visual Studio you are using, download the correct *DataMinerIntegrationStudio.vsix* extension file, and place it in a temporary folder on your computer:
 
-    | Visual Studio version | Download location |
-    |-----------------------|-------------------|
-    | Visual Studio 2019 or newer | <https://community.dataminer.services/exphub-dis/> |
-    | Visual Studio 2010 to 2019  | <https://community.dataminer.services/dataminer-integration-studio-other-downloads/> |
+   | Visual Studio version | Download location |
+   |-----------------------|-------------------|
+   | Visual Studio 2019 or newer | <https://community.dataminer.services/exphub-dis/> |
+   | Visual Studio 2010 to 2019  | <https://community.dataminer.services/dataminer-integration-studio-other-downloads/> |
+
+   > [!IMPORTANT]
+   > In order to download DataMiner Integration Studio, you will need to log in with your Dojo account. If you do not have one yet, go to <https://community.dataminer.services/> and click *Register*.
 
 1. Verify whether you have administrator privileges on your computer. If you do not, you will need to contact someone with these privileges to install DIS for you.
 
