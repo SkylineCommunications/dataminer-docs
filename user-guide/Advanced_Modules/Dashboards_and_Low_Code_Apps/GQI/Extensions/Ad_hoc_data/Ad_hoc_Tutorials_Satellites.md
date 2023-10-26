@@ -8,6 +8,10 @@ In this tutorial, you will learn how you can create a GQI data source that can b
 
 Expected duration: 15 minutes.
 
+
+> [!NOTE]
+> This tutorial uses DataMiner version 10.3.0.
+
 ## Prerequisites
 
 - [Visual Studio](https://visualstudio.microsoft.com/downloads/) with [DataMiner Integration Studio](xref:Installing_and_configuring_DataMiner_Integration_Studio)
@@ -24,7 +28,7 @@ Expected duration: 15 minutes.
 
 1. Go to [https://catalog.dataminer.services/catalog/5406](https://catalog.dataminer.services/catalog/5406)
 
-1. Deploy the catalog item to your DataMiner Agent.
+1. Deploy the catalog item to your DataMiner Agent, by clicking the *Deploy* button.
 
 ## Step 2: Open the data source in Visual Studio
 
@@ -34,11 +38,16 @@ Expected duration: 15 minutes.
 
 1. Select *Satellites - GQIDS* and click *Import*.
 
-1. Go to the C# code of the imported Automation script.
+1. Go to the C# code of the imported Automation script, by clicking the C# icon.
+![Go to the C# code](~/user-guide/images/GQI_code.png)
+
+
+> [!NOTE]
+> If certain types can not be found in the file, verify if the *Skyline.DataMiner.Dev.Automation* NuGet package has the correct version. Go to *Tools* > *NuGet Package Manager* > *Manage NuGet Packages for Solution...*. Select *Skyline.DataMiner.Dev.Automation* and verify the version installed for the current project is at least *10.2.4*.
 
 ## Step 3: Complete the data source
 
-1. Add the *IGQIDataSource* interface to the *SatellitesDataSource* class.
+1. Add the *IGQIDataSource* interface to the *SatellitesDataSource* class. Do this by removing the comments (//) in front of *IGQIDataSource*.
 
 1. Implement the *GetColumns* method to provide GQI with all the columns of the data source.
 
@@ -77,12 +86,16 @@ Expected duration: 15 minutes.
    By implementing both methods provided by the *IGQIDataSource* interface, you have now successfully finished the data source.
 
 1. To publish your changes, go to the XML file and click *Publish* in the top left corner.
+![Publish your data source](~/user-guide/images/GQI_publish.png)
 
 ## Step 4: Use the data source
 
-1. Open the *Dashboards* app, [create a new dashboard](xref:Creating_a_completely_new_dashboard) and go to *queries* in the right panel.
+1. Open the *Dashboards* app and [create a new dashboard](xref:Creating_a_completely_new_dashboard).
 
-1. Create a new query, select *Get ad hoc data* and select *Satellites* as *Data source* option.
+1. Go to *Queries* in the right panel and click the '+'-icon to create a query.
+![Create a query](~/user-guide/images/GQI_create_query.png)
+
+1. Select *Get ad hoc data* and select *Satellites* as *Data source* option.
 
 1. Drag the query to the dashboard and pick a table visualization.
 
