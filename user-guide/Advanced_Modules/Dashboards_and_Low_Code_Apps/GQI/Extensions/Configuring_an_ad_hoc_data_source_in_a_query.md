@@ -15,7 +15,7 @@ To use an ad hoc data source in a query:
 
 1. Above the class, add the *GQIMetaData* attribute in order to configure the name of the data source as displayed in the Dashboards app.
 
-   For example (see [Example ad hoc data script](xref:Ad_hoc_Tutorials#example-of-forwarding-dummy-data-to-the-gqi) for a full example):
+   For example (see [Example ad hoc data script](xref:Ad_hoc_Tutorials) for a full example):
 
    ```csharp
    using Skyline.DataMiner.Analytics.GenericInterface;

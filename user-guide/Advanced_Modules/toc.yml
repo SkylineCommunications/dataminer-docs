@@ -534,6 +534,11 @@ items:
                     topicUid: Ad_hoc_Life_cycle
                   - name: Tutorials
                     topicUid: Ad_hoc_Tutorials
+                    items:
+                      - name: Forwarding dummy data to the GQI
+                        topicUid: Ad_hoc_Tutorials
+                      - name: Building a GQI data source that fetches satellites
+                        topicUid: Ad_hoc_Tutorials_Satellites
               - name: Configuring a custom operator
                 topicUid: GQI_Custom_Operator
                 items:
