@@ -357,4 +357,4 @@ When you updated a booking using resources that had also been used earlier by ot
 
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
 
-When, for a trended parameter, a change in trend was detected, up to now, two change points of type "trend change" would incorrectly be created. From now on, only one such change point will be created.
+When, for a trended parameter, a change in trend was detected, in some cases, two change points of type "trend change" would incorrectly be created.
