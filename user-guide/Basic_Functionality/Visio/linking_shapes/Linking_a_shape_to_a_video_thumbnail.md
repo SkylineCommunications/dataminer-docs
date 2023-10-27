@@ -179,7 +179,7 @@ Another reason to use a proxy is to avoid CORS or CSP restrictions: if you run t
 This will install and run [HLS-Proxy](https://github.com/warren-bank/HLS-Proxy):
 
 1. Make sure you have [NodeJS](https://nodejs.org/) installed.
-2. Create folder and open it in a command prompt or PowerShell, for example `C:\HLS-Proxy`.
+2. Create a folder and open it in a command prompt or PowerShell, for example `C:\HLS-Proxy`.
 3. Run the following command: `npm install "@warren-bank/hls-proxy" --save`
 4. In case you have to use HTTPS (recommended), copy your certificate (.crt) and private key (.key) in this folder.
 5. Run the following command: `npx hlsd --port 8080 --tls-cert yourcertificate.crt --tls-key private.key --tls-pass password.txt`
