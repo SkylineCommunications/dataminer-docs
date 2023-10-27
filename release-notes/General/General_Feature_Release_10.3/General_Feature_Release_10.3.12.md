@@ -295,6 +295,12 @@ In cases where SLDataGateway retrieved an entire table and then applied a filter
 
 When reading data from the database page by page, in some cases, the operation would be cut off prematurely.
 
+#### Elasticsearch/OpenSearch: Problem when a repository failed to initialize [ID_37550]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When a repository failed to initialize, all subsequent initialization attempts would throw a `NullReferenceException`.
+
 #### DELT export of an element from a Cassandra Cluster would incorrectly not include any data [ID_37557]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
