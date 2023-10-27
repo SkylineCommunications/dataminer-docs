@@ -77,3 +77,6 @@ However, by setting `discovery.zen.minimum_master_nodes` to 2 in the *elasticsea
 ### More than 3 nodes
 
 In general, when you have more than 3 nodes, you can configure the cluster in the same way as a 3-node cluster and set the `node.master` property of any additional node to false. There is no real need to increase the number of nodes eligible to become master, except in certain special cases. In these special cases, as a rule of thumb, you can define an N amount of potential master nodes and set `discovery.zen.minimum_master_nodes` to (N + 1)/2.
+
+> [!TIP]
+> If you have your nodes spread between different data centers, zones, racks,... it's advised to setup [Allocation Awareness](xref:Configuring_multiple_datacenter_Elasticsearch_cluster) on your ElasticSearch cluster.

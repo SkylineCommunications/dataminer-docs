@@ -325,6 +325,8 @@ items:
                     topicUid: Configuring_multiple_OpenSearch_clusters
                   - name: Configuring OpenSearch backups
                     topicUid: Configuring_OpenSearch_Backups
+                  - name: Configure Allocation Awareness
+                    topicUid: Configuring_Allocation_Awareness_OpenSearch
               - name: Amazon OpenSearch Service
                 topicUid: Amazon_OpenSearch_Service
               - name: Elasticsearch
@@ -342,6 +344,8 @@ items:
                             topicUid: Configuring_master_Elasticsearch_nodes
                           - name: Adding an Elasticsearch cluster node
                             topicUid: Configuring_Elasticsearch_node_add
+                          - name: Configure Allocation Awareness
+                            topicUid: Configuring_multiple_datacenter_Elasticsearch_cluster
                           - name: Configuring multiple Elasticsearch clusters
                             topicUid: Configuring_multiple_Elasticsearch_clusters
                             items:

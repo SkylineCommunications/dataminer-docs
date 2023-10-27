@@ -14,6 +14,8 @@ From DataMiner 10.3.0/10.3.3 onwards, you can have data offloaded to **multiple 
 
 For more information on how to configure OpenSearch backups, see [Configuring OpenSearch backups](xref:Configuring_OpenSearch_Backups).
 
+When having bigger clusters spread over different zones, data centers, racks,... you can use the advised [Allocation Awareness](xref:Configuring_Allocation_Awareness_OpenSearch) feature to have a more safer cluster.
+
 This setup is supported from DataMiner 10.3.0/10.3.3 onwards.
 
 > [!TIP]
