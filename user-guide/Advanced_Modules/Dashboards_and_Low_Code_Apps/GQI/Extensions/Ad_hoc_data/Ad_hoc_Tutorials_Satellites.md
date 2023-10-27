@@ -100,6 +100,6 @@ Expected duration: 15 minutes.
 
 1. Drag the query to the dashboard.
 
-1. [Select a table visualization](xref:Configuring_dashboard_components#applying-a-visualization) for the component.
+1. [Select a table visualization](xref:Apply_Visualization) for the component.
 
    The satellites should now be displayed in the table.

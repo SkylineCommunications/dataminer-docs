@@ -359,32 +359,32 @@ items:
           - name: General
             topicUid: General
             items:
-              - name: Form
-                topicUid: DashboardForm
-              - name: Block
-                topicUid: DashboardBlock
               - name: Button
                 topicUid: DashboardButton
               - name: Button panel
                 topicUid: DashboardButtonPanel
-              - name: Clock (analog)
-                topicUid: DashboardClockAnalog
-              - name: Clock (digital)
-                topicUid: DashboardClockDigital
-              - name: Generic map
-                topicUid: DashboardGenericMap
-              - name: Group
-                topicUid: DashboardGroup
-              - name: Icon
-                topicUid: DashboardIcon
-              - name: Image
-                topicUid: DashboardImage
-              - name: Stepper
-                topicUid: DashboardStepper
               - name: Text
                 topicUid: DashboardText
+              - name: Clock (digital)
+                topicUid: DashboardClockDigital
+              - name: Form
+                topicUid: DashboardForm
+              - name: Image
+                topicUid: DashboardImage
+              - name: Icon
+                topicUid: DashboardIcon
+              - name: Stepper
+                topicUid: DashboardStepper
               - name: Web
                 topicUid: DashboardWeb
+              - name: Generic map
+                topicUid: DashboardGenericMap
+              - name: Clock (analog)
+                topicUid: DashboardClockAnalog
+              - name: Block
+                topicUid: DashboardBlock
+              - name: Group
+                topicUid: DashboardGroup
           - name: States and values
             topicUid: States_and_values
             items:
