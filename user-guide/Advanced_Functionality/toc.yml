@@ -525,6 +525,8 @@ items:
             topicUid: Setting_up_Azure_Active_Directory_Domain_Services
           - name: Enabling TLS encryption
             topicUid: Enabling_TLS_encryption
+          - name: Skipping certificate validation when consuming gRPC services
+            topicUid: Skipping_certificate_validation_when_consuming_gRPC_services
   - name: SNMP managers
     topicUid: About_SNMP_managers
     items:
