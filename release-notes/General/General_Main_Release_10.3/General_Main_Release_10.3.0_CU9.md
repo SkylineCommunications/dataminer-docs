@@ -92,6 +92,12 @@ In some cases, incorrect duplicate PropertyChangeEvent objects would be created 
 
 The properties were correctly updated on the respective elements, but the DMAs that forwarded the requests would incorrectly generate additional, incorrect PropertyChangedEvents, which could lead to, for example, outdated property values being displayed in user interfaces.
 
+#### Cassandra: Problem with health monitor after reconnecting [ID_37494]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When the Cassandra health monitor reconnected to a remote Cassandra or Cassandra Cluster database, in some cases, an error could occur.
+
 #### SLAnalytics: Problem when simultaneously stopping the 'Alarm Focus' and 'Automatic Incident Tracking' features [ID_37496]
 
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
