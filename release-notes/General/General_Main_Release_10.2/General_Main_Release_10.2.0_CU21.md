@@ -109,6 +109,15 @@ In the *View* tab of a spectrum card, you can change the *RBW* (Resolution bandw
 
 Up to now, these could be modified by means of a drop-down box. From now on, they can be modified by means of "+" (plus) and "-" (minus) buttons.
 
+#### Default page size when retrieving element data from Cassandra has been set to 5000 [ID_37673]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+
+For performance reasons, the default page size when retrieving element data from a Cassandra database has been changed from 50000 to 5000.
+
+> [!NOTE]
+> When retrieving element data from a MySQL or Microsoft SQL Server database, the default page size remains set to 50000.
+
 #### DataMiner Cube - Spectrum Analysis: New marker button 'Center to marker frequency' [ID_37705]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
@@ -144,6 +153,12 @@ When a parameter that was used to store the dynamic IP address of an element con
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
 
 When an alarm in a filtered alarm tab received a focus score update, the system would incorrectly not re-evaluate whether that alarm still matched the filter that was applied.
+
+#### Element connections would not work with destination tables that had naming configured [ID_37478]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+
+Element connections would not work with destination tables that had naming configured.
 
 #### DataMiner Cube - Alarm Console: Display issues when a correlation alarm was based on another correlation alarm [ID_37497]
 

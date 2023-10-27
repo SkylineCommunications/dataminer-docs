@@ -208,6 +208,15 @@ From now on, when GQI detects that having multiple sections is allowed for a par
 > [!IMPORTANT]
 > This change will break any existing query that references columns containing multiple values due to being linked to SectionDefinitions that allowed multiple sections in one DOM instance.
 
+#### Default page size when retrieving element data from Cassandra has been set to 5000 [ID_37673]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+
+For performance reasons, the default page size when retrieving element data from a Cassandra database has been changed from 50000 to 5000.
+
+> [!NOTE]
+> When retrieving element data from a MySQL or Microsoft SQL Server database, the default page size remains set to 50000.
+
 ### Fixes
 
 #### NATSCustodian could incorrectly pick an offline DMA as NAS candidate [ID_37312]
@@ -235,6 +244,12 @@ When a parameter that was used to store the dynamic IP address of an element con
 <!-- MR 10.4.0 - FR 10.3.12 -->
 
 On systems using a database other than Cassandra, up to now, an `ExistsCustomDataTypeRequest` message would always return false and cause an error to be logged in the *SLDBConnection.txt* and *SLErrors.txt* files.
+
+#### Element connections would not work with destination tables that had naming configured [ID_37478]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+
+Element connections would not work with destination tables that had naming configured.
 
 #### Duplicate PropertyChangeEvent objects would be created in the event cache [ID_37485]
 

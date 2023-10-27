@@ -56,6 +56,15 @@ If, upon detection of a new trend, the trend returns to the old trend (i.e. the 
 
 When the *AlarmFocusRecords* cache reached its maximal size, up to now, an error message would be added to the *SLAnalytics.txt* log file. From now on, a notice will be generated instead.
 
+#### Default page size when retrieving element data from Cassandra has been set to 5000 [ID_37673]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+
+For performance reasons, the default page size when retrieving element data from a Cassandra database has been changed from 50000 to 5000.
+
+> [!NOTE]
+> When retrieving element data from a MySQL or Microsoft SQL Server database, the default page size remains set to 50000.
+
 ### Fixes
 
 #### Problem in different native processes when interacting with message broker calls [ID_37150]
@@ -83,6 +92,12 @@ In some cases, incorrect data would be returned when requesting alarm monitoring
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
 
 When a parameter that was used to store the dynamic IP address of an element connection was updated, the dynamic IP address would incorrectly be applied to all connections of that element when the element was restarted.
+
+#### Element connections would not work with destination tables that had naming configured [ID_37478]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+
+Element connections would not work with destination tables that had naming configured.
 
 #### Duplicate PropertyChangeEvent objects would be created in the event cache [ID_37485]
 
