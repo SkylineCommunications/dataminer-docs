@@ -179,6 +179,12 @@ Because of a number of enhancements with regard to error handling, the following
 
 `Unexpected number of responses returned on GetInfoMessage...`
 
+#### SLAnalytics: Lost session with SLDataGateway will now automatically be restored [ID_37614]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+From now on, when SLAnalytics loses the session with SLDataGateway, it will now automatically restore the session.
+
 #### SLAnalytics - Alarm focus: A notice will now be generated when the AlarmFocusRecords cache reaches its maximum size [ID_37624]
 
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->

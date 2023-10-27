@@ -50,6 +50,12 @@ When *ResourceManager* and *SRMServiceStateManager* fail to get initialized at D
 
 If, upon detection of a new trend, the trend returns to the old trend (i.e. the trend before the behavioral change) within the hour, the behavioral change will be labeled a level shift rather than a trend change.
 
+#### SLAnalytics: Lost session with SLDataGateway will now automatically be restored [ID_37614]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+From now on, when SLAnalytics loses the session with SLDataGateway, it will now automatically restore the session.
+
 #### SLAnalytics - Alarm focus: A notice will now be generated when the AlarmFocusRecords cache reaches its maximum size [ID_37624]
 
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
