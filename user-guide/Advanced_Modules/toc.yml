@@ -455,7 +455,7 @@ items:
               - name: Query filter feed
                 topicUid: DashboardQueryFilterFeed
           - name: Basic controls
-            topicUid: DashboardDropdown
+            topicUid: Basic_controls
             items:
               - name: Dropdown
                 topicUid: DashboardDropdown
