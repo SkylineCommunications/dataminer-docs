@@ -101,6 +101,14 @@ In the Surveyor, statistical alarm data can be displayed next to elements, servi
 
 A number of general enhancements have been made with regard to cache management.
 
+#### DataMiner Cube - Spectrum Analysis: RBW and VBW settings can now be modified by means of plus and minus buttons [ID_37601]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+
+In the *View* tab of a spectrum card, you can change the *RBW* (Resolution bandwidth) and *VBW* (Video bandwidth) settings.
+
+Up to now, these could be modified by means of a drop-down box. From now on, they can be modified by means of "+" (plus) and "-" (minus) buttons.
+
 ### Fixes
 
 #### Problem when restarting DataMiner [ID_37112]
@@ -174,6 +182,14 @@ Up to now, when you changed the alignment of such a column, the pencil icons wou
 
 When an element was deleted, `PropertyChangeEvent` instances for that element would incorrectly not get removed from the SLNet event cache.
 
+#### Alerter: Problem when connecting to a DataMiner Agent using gRPC [ID_37580]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+
+When Alerter connected to a DataMiner Agent using gRPC, on each subsequent startup, it would display a message box showing the following error:
+
+`There is no connection available, please add one.`
+
 #### DataMiner Cube - Alarm Console: Text-to-speech button would overlap the counter showing the number of alarms with severity 'Suggestion' [ID_37590]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
@@ -185,3 +201,9 @@ In the footer of the Alarm Console, the button to cancel the current text-to-spe
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
 
 When, in the Alarm Console, an alarm was duplicated, in some cases, its focus score would not be updated correctly.
+
+#### DataMiner Cube: Problem when parsing anomaly alarms [ID_37680]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+
+When you opened DataMiner Cube or when you opened a new alarm tab, an error could occur when parsing anomaly alarms.
