@@ -401,10 +401,10 @@ items:
           - name: Tables
             topicUid: Tables
             items:
-              - name: Alarm table
-                topicUid: DashboardAlarmTable
               - name: Parameter table
                 topicUid: DashboardParameterTable
+              - name: Alarm table
+                topicUid: DashboardAlarmTable
               - name: Pivot table
                 topicUid: DashboardPivotTable
               - name: Table
