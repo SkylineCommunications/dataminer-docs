@@ -63,7 +63,7 @@ A typical use case is to make use of the Resource Manager component in Visual Ov
    >
    >   | Shape data field | Value |
    >   |--|--|
-   >   | InitVar | `YAxisResources:[This View]` |
+   >   | InitVar | `YAxisResources:view=[This View]` |
    >   | Options | `CardVariable` |
    >
    > - Add the following shape data on the rectangle shape that will be used to embed the timeline:

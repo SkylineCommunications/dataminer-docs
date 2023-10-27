@@ -74,6 +74,14 @@ Summary of server-side changes:
 
 Because of a number of enhancements, overall performance has increased when editing or deleting profile parameters of type *Capability* or *Capacity*, especially on systems with a large number of future bookings.
 
+#### Legacy Reporter is now fully compatible with Cassandra Cluster [ID_37185]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+The legacy Reporter has now been made fully compatible with Cassandra Cluster.
+
+Also, an issue has been fixed for all types of databases. Up to now, when an SLA was created on top of an enhanced service, in some cases, the SLA report would not include all affected alarms.
+
 #### Enhanced performance when offloading data in case the database is down [ID_37365]
 
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->

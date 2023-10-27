@@ -121,6 +121,14 @@ In the *View* tab of a spectrum card, you can change the *RBW* (Resolution bandw
 
 Up to now, these could be modified by means of a drop-down box. From now on, they can be modified by means of "+" (plus) and "-" (minus) buttons.
 
+#### DataMiner Cube - Spectrum Analysis: New marker button 'Center to marker frequency' [ID_37705]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+
+In the *View* tab of a spectrum card, up to now, each marker listed in the *Markers* section had two buttons next to it: an *Edit* button (i.e. a pencil icon) and a *Delete* button (i.e. a cross icon). A *Center to marker frequency* button has now been added. Clicking this button will set the center frequency to the frequency of the marker in question.
+
+Also, the three buttons will now show a tooltip when you hover over them.
+
 ### Fixes
 
 #### Trending: Trend graph would disappear when panning [ID_37453]
