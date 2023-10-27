@@ -41,7 +41,7 @@ Up to now, it was possible to have a DataMiner System in which some DMAs had bee
   - Allowed to add DMAs either by hostname or by IP address.
   - Allowed to create Failover pairs with shared hostname or with virtual IP addresses.
 
-#### DataMiner Cube - Alarm templates: Configuration of behavioral anomaly alarms [ID_37148] [ID_37171]
+#### DataMiner Cube - Alarm templates: Configuration of behavioral anomaly alarms [ID_37148] [ID_37171] [ID_37670]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
 
@@ -75,7 +75,9 @@ To configure the behavioral anomaly detection for a particular (numeric) paramet
    > - "Smart" (i.e. anomaly monitoring as it existed up to now).
 
 > [!NOTE]
-> It is not possible to have both a suggestion event and an alarm generated for the same issue. However, it is possible to have suggestion events generated for e.g. downward level shifts, even if downward level shifts are disabled in the *Anomaly alarm settings* window.
+>
+> - It is not possible to have both a suggestion event and an alarm generated for the same issue. However, it is possible to have suggestion events generated for e.g. downward level shifts, even if downward level shifts are disabled in the *Anomaly alarm settings* window.
+> - Any settings configured in the *Anomaly alarm settings* window will only affect parameters that are being trended.
 
 #### Security enhancements [ID_37267]
 
