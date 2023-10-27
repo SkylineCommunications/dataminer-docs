@@ -352,3 +352,9 @@ When the first call to a DomManager after a DMA (re)start was a call to create, 
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
 
 When you updated a booking using resources that had also been used earlier by other bookings in the past, a concurrency error could incorrectly be thrown.
+
+#### SLAnalytics - Behavioral Anomaly Detection: Change in trend would incorrectly cause two change points to be created [ID_37703]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When, for a trended parameter, a change in trend was detected, up to now, two change points of type "trend change" would incorrectly be created. From now on, only one such change point will be created.
