@@ -213,3 +213,9 @@ When a visual overview was opened on a mobile device, it would not be possible t
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
 
 When, in a query, a filter had been applied to a boolean column, the filter would ignore any changes made to that boolean column after you had refreshed the dashboard. In other words, when the query was used to fetch data to be displayed in a table component, the table would not reflect changes made to that boolean column as the filter would not apply those changes.
+
+#### Values of URL-encoded parameters could incorrectly get changed when the Authentication app redirected you back after logging in [ID_37704]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When IIS redirected you to the Authentication app after you had clicked a URL containing URL-encoded parameters, in some cases, those URL-encoded parameters would not be encoded correctly. When the Authentication app redirected you back after you had logged in, in some cases, the values of those parameters had incorrectly changed.
