@@ -14,7 +14,7 @@ keywords: allocation awareness, opensearch
 
 **Allocation Awareness** will assign all the missing replica's shards to the still running nodes in the other location(s). This can cause a big load on the still running nodes. If your nodes wouldn't be able to handle this, you can solve this by using **Forced Awareness**. Forced Awareness will **never** allowing copies of the same shard to be allocated to the same location(s).
 
-You also can find more information on this topic on the website of [Opensearch](xref:https://opensearch.org/docs/latest/tuning-your-cluster/index/#shard-allocation-awareness).
+You also can find more information on this topic on the website of [Opensearch](https://opensearch.org/docs/latest/tuning-your-cluster/index/#shard-allocation-awareness).
 
 > [!IMPORTANT]
 > We advise to use the **Allocation Awareness**, as the **Forced Awareness** hasn't been tested yet.

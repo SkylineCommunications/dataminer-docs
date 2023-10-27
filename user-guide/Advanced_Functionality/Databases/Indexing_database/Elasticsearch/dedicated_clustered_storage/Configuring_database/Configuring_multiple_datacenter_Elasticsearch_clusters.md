@@ -18,7 +18,7 @@ keywords: allocation awareness, elasticsearch
 
 **Allocation Awareness** will assign all the missing replica's shards to the still running nodes in the other location(s). This can cause a big load on the still running nodes. If your nodes wouldn't be able to handle this, you can solve this by using **Forced Awareness**. Forced Awareness will **never** allowing copies of the same shard to be allocated to the same location(s).
 
-You also can find more information on this topic on the website of [ElasticSearch](xref:https://www.elastic.co/guide/en/elasticsearch/reference/6.8/allocation-awareness.html).
+You also can find more information on this topic on the website of [ElasticSearch](https://www.elastic.co/guide/en/elasticsearch/reference/6.8/allocation-awareness.html).
 
 > [!IMPORTANT]
 > We advise to use the **Allocation Awareness**, as the **Forced Awareness** hasn't been tested yet.
@@ -31,7 +31,7 @@ To configure the Allocation Awareness you need to add some parameters in the ela
 sudo systemctl stop elasticsearch.service
 ```
 
-Now change the elasticsearch.yml file that is standard located in /etc/elasticsearch/ folder.
+Now change the elasticsearch.yaml file that is standard located in /etc/elasticsearch/ folder.
 
 In below example you can see how the configuration would look like in a 6 node cluster spread over 2 data centers:
 
