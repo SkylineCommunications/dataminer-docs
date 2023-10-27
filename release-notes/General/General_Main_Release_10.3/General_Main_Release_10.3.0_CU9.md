@@ -56,14 +56,14 @@ If, upon detection of a new trend, the trend returns to the old trend (i.e. the 
 
 When the *AlarmFocusRecords* cache reached its maximal size, up to now, an error message would be added to the *SLAnalytics.txt* log file. From now on, a notice will be generated instead.
 
-#### Default page size when retrieving element data from Cassandra has been set to 5000 [ID_37673]
+#### Page size when retrieving element data from Cassandra has been set to 5000 [ID_37673]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
 
-For performance reasons, the default page size when retrieving element data from a Cassandra database has been changed from 50000 to 5000.
+For performance reasons, the page size when retrieving element data from a Cassandra database has been changed from 50000 to 5000.
 
 > [!NOTE]
-> When retrieving element data from a MySQL or Microsoft SQL Server database, the default page size remains set to 50000.
+> When retrieving element data from a MySQL or Microsoft SQL Server database, the page size remains set to 50000.
 
 ### Fixes
 

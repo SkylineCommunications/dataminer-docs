@@ -109,14 +109,14 @@ In the *View* tab of a spectrum card, you can change the *RBW* (Resolution bandw
 
 Up to now, these could be modified by means of a drop-down box. From now on, they can be modified by means of "+" (plus) and "-" (minus) buttons.
 
-#### Default page size when retrieving element data from Cassandra has been set to 5000 [ID_37673]
+#### Page size when retrieving element data from Cassandra has been set to 5000 [ID_37673]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
 
-For performance reasons, the default page size when retrieving element data from a Cassandra database has been changed from 50000 to 5000.
+For performance reasons, the page size when retrieving element data from a Cassandra database has been changed from 50000 to 5000.
 
 > [!NOTE]
-> When retrieving element data from a MySQL or Microsoft SQL Server database, the default page size remains set to 50000.
+> When retrieving element data from a MySQL or Microsoft SQL Server database, the page size remains set to 50000.
 
 #### DataMiner Cube - Spectrum Analysis: New marker button 'Center to marker frequency' [ID_37705]
 
