@@ -182,3 +182,9 @@ When you updated a booking using resources that had also been used earlier by ot
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
 
 When, for a trended parameter, a change in trend was detected, in some cases, two change points of type "trend change" would incorrectly be created.
+
+#### SLAnalytics - Alarm focus: Problem when alarm focus cache got full [ID_37710]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When the alarm focus cache got full, an error could occur in SLAnalytics.
