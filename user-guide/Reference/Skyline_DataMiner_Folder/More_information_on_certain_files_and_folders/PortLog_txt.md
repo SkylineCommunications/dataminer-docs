@@ -16,6 +16,8 @@ In the *PortLog.txt* file, you can specify IP addresses of DataMiner elements fo
 > [!NOTE]
 > This is only applicable for (smart) serial connections.
 >
+> This file is normally not present in the DataMiner system by itself. You need to create the PortLog.txt file yourself and add it to the above location! This is for debugging purposes only. After debugging it is recommended to remove the file to prevent any issues and crashes during normal use of the element.
+>
 > To have additional logging for HTTP connections, you can enable WinHTTP logging (see <https://docs.microsoft.com/en-us/windows/win32/wsdapi/capturing-winhttp-logs>). However, this requires a restart to enable or disable the logging.
 
 ## Portlog.txt syntax
