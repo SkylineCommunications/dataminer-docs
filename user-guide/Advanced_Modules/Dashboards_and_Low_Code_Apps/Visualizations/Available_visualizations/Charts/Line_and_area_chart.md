@@ -177,7 +177,7 @@ To add component to a dashboard to show a basic trend graph with several DMA KPI
 
 ### Trend graph showing DMA trend data using profile parameters
 
-To add component to a dashboard to show a basic trend graph using profile parameters:
+To add a component to a dashboard to show a basic trend graph using profile parameters:
 
 1. In edit mode, drag the *Line & area chart* visualization to the dashboard.
 
