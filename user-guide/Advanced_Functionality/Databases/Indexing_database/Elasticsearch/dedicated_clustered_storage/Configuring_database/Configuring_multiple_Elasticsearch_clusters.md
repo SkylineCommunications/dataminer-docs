@@ -5,7 +5,7 @@ uid: Configuring_multiple_Elasticsearch_clusters
 # Configuring multiple Elasticsearch clusters
 
 > [!IMPORTANT]
-> Elasticsearch is **only supported up to version 6.8**. We therefore recommend using [Storage as a Service](xref:STaaS) instead, or if you do want to continue using self-hosted storage, using [dedicated clustered storage](xref:Dedicated_clustered_storage) with OpenSearch or the Amazon OpenSearch Service on AWS.
+> Elasticsearch is **only supported up to version 6.8**. We therefore recommend using [Storage as a Service](xref:STaaS) instead, or if you do want to continue using self-hosted storage, using [dedicated clustered storage](xref:Dedicated_clustered_storage) with OpenSearch.
 
 > [!NOTE]
 > This procedure can be followed both on Linux and Windows setups. However, we highly recommend using Linux.

@@ -4,12 +4,15 @@ uid: Amazon_Keyspaces_Service
 
 # Amazon Keyspaces Service
 
-If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STaaS) setup but instead choose self-hosted storage, you can use the Amazon Keyspaces Service on AWS as an alternative for a Cassandra Cluster setup. This is supported from DataMiner 10.3.0/10.3.3 onwards.
+> [!IMPORTANT]
+> This setup is deprecated. We recommend using [Storage as a Service (STaaS)](xref:STaaS) instead. If you want to use self-hosted storage, install a [Cassandra Cluster](xref:Cassandra_database) database.
+
+Using the Amazon Keyspaces Service on AWS as an alternative for a Cassandra Cluster setup is supported from DataMiner 10.3.0 [CU0] up to 10.3.0 [CU8] and from DataMiner 10.3.3 up to 10.3.11.
 
 In this section of the documentation, you can find instructions on [how to deploy the Amazon Keyspaces Service](xref:Deploying_Amazon_Keyspaces_Service) as a first step in configuring dedicated clustered storage.
 
 > [!IMPORTANT]
-> Migrating existing databases to Amazon Keyspaces is not yet supported.
+> Migrating existing databases to Amazon Keyspaces is not supported.
 
 > [!NOTE]
 >
