@@ -16,7 +16,7 @@ To edit an existing low-code application:
 
 1. Click the user icon in the top-right corner and select *Edit*.
 
-1. [Customize the app](xref:LowCodeApps_Custom_Icon), or edit the [pages](xref:LowCodeApps_page_config), [panels](xref:LowCodeApps_panel_config), [header bar](xref:LowCodeApps_header_config), [events](xref:LowCodeApps_event_config), or [security](xref:LowCodeApps_security_config) as needed.
+1. [Customize the app](xref:LowCodeApps_Layout#customizing-the-icon-and-color-of-an-app), or edit the [pages](xref:LowCodeApps_page_config), [panels](xref:LowCodeApps_panel_config), [header bar](xref:LowCodeApps_header_config), [events](xref:LowCodeApps_event_config), or [security](xref:LowCodeApps_security_config) as needed.
 
 1. When the app is ready, click the ![Publish](~/user-guide/images/AppPublishIcon.png) icon in the header bar to save your changes and publish it.
 

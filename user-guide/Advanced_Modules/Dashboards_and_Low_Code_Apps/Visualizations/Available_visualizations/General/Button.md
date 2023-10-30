@@ -17,7 +17,7 @@ To configure the component:
 
 1. Fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
 
-   - The default options available for all components. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
+   - The default options available for all components. See [Customizing the component layout](xref:Customize_Component_Layout).
 
    - *Label*: Determines which text is displayed on the button.
 
@@ -27,13 +27,13 @@ To configure the component:
 
 In the Dashboards app, the soft-launch button component can be used to execute the action of a button parameter. As such, it must be configured with a button parameter data feed.
 
-1. Apply a parameter data feed. See [Applying a data feed](xref:Configuring_dashboard_components#applying-a-data-feed).
+1. Apply a parameter data feed. See [Applying a data feed](xref:Apply_Data_Feed).
 
    You will only be able to select button parameters for the data feed. Several parameters can be added in the same component.
 
 1. Fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
 
-   - The default options available for all components. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
+   - The default options available for all components. See [Customizing the component layout](xref:Customize_Component_Layout).
 
    - In case the component displays more than one parameter, in the *Advanced* > *Layout* section, you can adjust the way the different items are displayed:
 
