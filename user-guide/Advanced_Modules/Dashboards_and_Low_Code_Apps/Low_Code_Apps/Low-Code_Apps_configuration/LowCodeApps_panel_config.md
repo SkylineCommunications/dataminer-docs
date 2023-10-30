@@ -14,7 +14,7 @@ In addition to pages, panels can be configured in apps in the Low-Code Apps modu
 
 1. To configure a header bar for the panel, follow the same steps as to configure this for a page. See [Configuring the header bar of a low-code app page](xref:LowCodeApps_header_config).
 
-1. Click the pencil icon to configure the components on the panel. See [Configuring components](xref:Configuring_components) and [Changing dashboard settings](xref:Changing_dashboard_settings). For a list of the available components, refer to [Available visualizations](xref:Available_visualizations).
+1. Click the pencil icon to configure the components on the panel. See [Configuring components](xref:Configuring_components) and [Changing dashboard settings](xref:Changing_dashboard_settings). For a list of the available components, refer to [Available visualizations](xref:General).
 
 > [!NOTE]
 >

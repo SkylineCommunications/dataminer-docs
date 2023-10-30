@@ -32,3 +32,8 @@ This category contains the following visualizations:
     <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Charts/Pie_and_donut_chart.html" title="Pie & Donut Chart" target="_self"><img src="~/user-guide/images/Pie&Donut_Chart.svg" style="width:100%"></a>
   </div>  
 </div>
+
+<br/>
+
+> [!NOTE]
+> The [Bar chart (horizontal)](xref:DashboardDropdown) visualization is also a type of chart, but has been deprecated since DataMiner 10.0.13. ![EOL](~/user-guide/images/EOL_Duo.png)

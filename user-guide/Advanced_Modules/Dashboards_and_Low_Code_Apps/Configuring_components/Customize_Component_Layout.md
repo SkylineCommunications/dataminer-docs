@@ -97,6 +97,6 @@ Each component in a dashboard or low-code app has a number of default options. B
 
     - In the *Shadow* section, select the size of the shadow displayed behind the components.
 
-Depending on the visualization, additional layout options may be available. For more information, refer to the relevant section in [Available visualizations](xref:Available_visualizations).
+Depending on the visualization, additional layout options may be available. For more information, refer to the relevant section in [Available visualizations](xref:General).
 
 ***

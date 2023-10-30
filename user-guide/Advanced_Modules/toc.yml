@@ -354,7 +354,7 @@ items:
           - name: Deleting a component
             topicUid: Delete_Component
       - name: Available visualizations
-        topicUid: Available_visualizations
+        topicUid: General
         items:
           - name: General
             topicUid: General
@@ -414,12 +414,12 @@ items:
             items:
               - name: Column & Bar chart
                 topicUid: ColumnAndBarChart
-              - name: Bar chart (horizontal)
-                topicUid: BarChartHorizontal
               - name: Line & area chart
                 topicUid: LineAndAreaChart
               - name: Pie & donut chart
                 topicUid: PieAndDonutChart
+              - name: Bar chart (horizontal)
+                topicUid: BarChartHorizontal
           - name: Other
             topicUid: Other
             items:
