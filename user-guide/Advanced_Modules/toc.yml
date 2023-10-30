@@ -438,22 +438,22 @@ items:
           - name: Feeds
             topicUid: Feeds
             items:
-              - name: EPM feed
-                topicUid: DashboardCPEFeed
-              - name: Dropdown feed
-                topicUid: DashboardDropdownFeed
-              - name: List feed
-                topicUid: DashboardListFeed
-              - name: Parameter feed
-                topicUid: DashboardParameterFeed
               - name: Time range feed
                 topicUid: DashboardTimeRangeFeed
+              - name: List feed
+                topicUid: DashboardListFeed
               - name: Tree feed
                 topicUid: DashboardTreeFeed
-              - name: Trigger feed
-                topicUid: DashboardTriggerFeed
+              - name: Parameter feed
+                topicUid: DashboardParameterFeed
+              - name: EPM feed
+                topicUid: DashboardCPEFeed
               - name: Query filter feed
                 topicUid: DashboardQueryFilterFeed
+              - name: Trigger feed
+                topicUid: DashboardTriggerFeed
+              - name: Dropdown feed
+                topicUid: DashboardDropdownFeed
           - name: Basic controls
             topicUid: Basic_controls
             items:
