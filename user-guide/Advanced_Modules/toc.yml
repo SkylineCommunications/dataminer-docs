@@ -354,10 +354,10 @@ items:
           - name: Deleting a component
             topicUid: Delete_Component
       - name: Available visualizations
-        topicUid: General
+        topicUid: Available_visualizations
         items:
           - name: General
-            topicUid: General
+            topicUid: DashboardButton
             items:
               - name: Button
                 topicUid: DashboardButton
@@ -386,7 +386,7 @@ items:
               - name: Group
                 topicUid: DashboardGroup
           - name: States and values
-            topicUid: States_and_values
+            topicUid: DashboardState
             items:
               - name: State
                 topicUid: DashboardState
@@ -399,7 +399,7 @@ items:
               - name: State timeline
                 topicUid: DashboardStateTimeline
           - name: Tables
-            topicUid: Tables
+            topicUid: DashboardParameterTable
             items:
               - name: Parameter table
                 topicUid: DashboardParameterTable
@@ -410,7 +410,7 @@ items:
               - name: Table
                 topicUid: DashboardTable
           - name: Charts
-            topicUid: Charts
+            topicUid: ColumnAndBarChart
             items:
               - name: Column & Bar chart
                 topicUid: ColumnAndBarChart
@@ -421,7 +421,7 @@ items:
               - name: Bar chart (horizontal)
                 topicUid: BarChartHorizontal
           - name: Other
-            topicUid: Other
+            topicUid: DashboardNodeEdgeGraph
             items:
               - name: Node edge graph
                 topicUid: DashboardNodeEdgeGraph
@@ -455,7 +455,7 @@ items:
               - name: Dropdown feed
                 topicUid: DashboardDropdownFeed
           - name: Basic controls
-            topicUid: Basic_controls
+            topicUid: DashboardDropdown
             items:
               - name: Dropdown
                 topicUid: DashboardDropdown

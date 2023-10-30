@@ -24,4 +24,4 @@ The following actions are then possible to configure the component:
 
 - [Deleting a component](xref:Delete_Component)
 
-In addition, depending on the visualization, additional configuration options may be available. For more information, refer to the relevant section in [Available visualizations](xref:General).
+In addition, depending on the visualization, additional configuration options may be available. For more information, refer to the relevant section in [Available visualizations](xref:Available_visualizations).
