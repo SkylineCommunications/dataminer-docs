@@ -2,7 +2,7 @@
 uid: LowCodeApps_Layout
 ---
 
-# Configuring the low-code app lay-out
+# Configuring the low-code app layout
 
 ## Customizing the icon and color of an app
 

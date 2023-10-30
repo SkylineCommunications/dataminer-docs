@@ -307,7 +307,7 @@ items:
           - name: Configuring low-code applications
             topicUid: LowCodeApps_Layout
             items:
-              - name: Configuring the low-code app lay-out
+              - name: Configuring the low-code app layout
                 topicUid: LowCodeApps_Layout
               - name: Configuring a page of a low-code app
                 topicUid: LowCodeApps_page_config
