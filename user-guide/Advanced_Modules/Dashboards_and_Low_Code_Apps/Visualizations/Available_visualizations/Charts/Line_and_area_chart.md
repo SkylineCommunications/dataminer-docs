@@ -156,7 +156,7 @@ From DataMiner 9.6.13 onwards, it is possible to export the trend data to CSV. T
 
 ### Trend graph showing DMA KPIs
 
-To add component to a dashboard to show a basic trend graph with several DMA KPIs:
+To add a component to a dashboard to show a basic trend graph with several DMA KPIs:
 
 1. In edit mode, drag the *Line & area chart* visualization to the dashboard.
 
