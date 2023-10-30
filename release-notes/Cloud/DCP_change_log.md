@@ -6,6 +6,14 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 30 October 2023 - Fix - CloudGateway 2.12.2 - Resolved an issue that could occur when using multiple CloudGateway modules [ID_37686]
+
+When multiple CloudGateway modules were installed in a cluster, they were not able to sync with each other anymore. In that case, the dataminer.services identity of the DMS was not synced correctly and only one CloudGateway would be able to function correctly, causing stability issues in the dataminer.services connection and features. This has now been resolved.
+
+#### 30 October 2023 - Fix - CloudGateway 2.12.2 - Resolved an issue that could occur when starting the CloudGateway module [ID_37713]
+
+When the CloudGateway module started, it tried to setup the connection to dataminer.services before it was assigned a port by the server. In that case, the connection would not work and the module would not function correctly, causing stability issues in the dataminer.services connection and features. This has now been resolved.
+
 #### 9 October 2023 - Fix - CoreGateway 2.13.2 - Resolved an issue that could occur after a DataMiner up- or downgrade [ID_37441]
 
 When a local DataMiner Agent was up- or downgraded, it could occur that the CoreGateway DxM did not reinitialize its DataMiner dependencies. In that case, serialization issues could occur at runtime, for example when the DataMiner Teams bot was used. This issue has been resolved.
