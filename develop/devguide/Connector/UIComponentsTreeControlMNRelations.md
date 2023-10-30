@@ -89,7 +89,7 @@ Suppose we want to create a tree control that lists all services and the audio a
         </Param>       
         ```
 
-1. Finally, create an additional intermediate table that is required for the tree control (ID: 1000).
+1. Finally, create an additional intermediate table that is required for the tree control (ID: 2000).
 
       ```xml
          <Param id="2000" trending="false">
