@@ -8,6 +8,9 @@ In this tutorial, you will learn how you can create a GQI data source that can b
 
 Expected duration: 15 minutes.
 
+> [!TIP]
+> See also: [Kata #4: Build your first GQI](https://community.dataminer.services/courses/kata-4/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+
 > [!NOTE]
 > This tutorial uses DataMiner version 10.3.0.
 
