@@ -8,11 +8,11 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 #### 30 October 2023 - Fix - CloudGateway 2.12.2 - Resolved an issue that could occur when using multiple CloudGateway modules [ID_37686]
 
-When multiple CloudGateway modules were installed in a cluster, they were not able to sync with each other anymore. In that case, the dataminer.services identity of the DMS was not synced correctly and only one CloudGateway would be able to function correctly, causing stability issues in the dataminer.services connection and features. This has now been resolved.
+When multiple CloudGateway modules were installed in a cluster, it could occur that they were no longer able to sync with each other. As a result, the dataminer.services identity of the DMS was not synced properly, and only one CloudGateway instance was able to function correctly, causing stability issues in the dataminer.services connection and features. This has now been resolved.
 
 #### 30 October 2023 - Fix - CloudGateway 2.12.2 - Resolved an issue that could occur when starting the CloudGateway module [ID_37713]
 
-When the CloudGateway module started, it tried to setup the connection to dataminer.services before it was assigned a port by the server. In that case, the connection would not work and the module would not function correctly, causing stability issues in the dataminer.services connection and features. This has now been resolved.
+When the CloudGateway module started, it could occur that it tried to set up the connection to dataminer.services before it was assigned a port by the server. This caused the connection to fail and the module to function incorrectly, which in turn caused stability issues in the dataminer.services connection and features. This has now been resolved.
 
 #### 9 October 2023 - Fix - CoreGateway 2.13.2 - Resolved an issue that could occur after a DataMiner up- or downgrade [ID_37441]
 
