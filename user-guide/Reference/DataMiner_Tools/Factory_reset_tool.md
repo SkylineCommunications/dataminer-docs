@@ -109,6 +109,5 @@ This tool can be run with the following arguments:
 
   Default: int.MaxValue (~2 billion)
 
-
-  > [!NOTE]
-> When the tool is run from the factory reset tool, the arguments passed are defaulted to '-k -d -f'.  
+> [!NOTE]
+> When *SLDataGateway.Tools.Database.exe* is run from the factory reset tool, it runs with the arguments `-k -d -f`.
