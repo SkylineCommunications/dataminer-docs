@@ -4,7 +4,7 @@ uid: Adding_a_Dashboards_User_to_the_DMS
 
 # Adding a Dashboards User to the DMS
 
-> [!CAUTION]
+> [!IMPORTANT]
 > This information is applicable to the DMS Dashboards module, which will reach End of Life as of DataMiner version 10.4.x. See [DataMiner functionality evolution and retirement](xref:Software_support_life_cycles#dataminer-functionality-evolution-and-retirement). For more information on the Dashboards web app available from DataMiner 9.6.9 onwards, see [Dashboards app](xref:newR_D).
 
 In order for a new customer to access dashboards with DMS Dashboard Gateway, the following steps are required:

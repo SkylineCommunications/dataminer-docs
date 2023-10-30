@@ -17,7 +17,10 @@ To create a new low-code application:
 
 1. To customize the color and icon for the app, see [Customizing the icon and color of an app](xref:LowCodeApps_Layout#customizing-the-icon-and-color-of-an-app).
 
-1. Add and configure the necessary [pages](xref:LowCodeApps_page_config), [panels](xref:LowCodeApps_panel_config), and [events](xref:LowCodeApps_event_config) for the app.To configure the settings for pages and panels in a low-code app, see [Changing low-code app settings](xref:Changing_low-code_app_settings).
+1. Add and configure the necessary [pages](xref:LowCodeApps_page_config), [panels](xref:LowCodeApps_panel_config), and [events](xref:LowCodeApps_event_config) for the app.
+
+   > [!TIP]
+   > To configure the settings for pages and panels in a low-code app, see [Changing low-code app settings](xref:Changing_low-code_app_settings).
 
 1. To customize who can access or edit the application, see [Configuring security for a low-code app](xref:LowCodeApps_security_config).
 
