@@ -251,12 +251,22 @@
       - name: Connectors
         topicUid: FAQs_Connectors
         items:
+        - name: What is a connector
+          topicUid: FAQ_What_is_a_connector
         - name: What is the standard lead time for new connectors
           topicUid: FAQ_Standard_lead_time_new_connectors
         - name: What are the limitations when using the Generic SNMP connector as opposed to a dedicated connector
           topicUid: FAQ_Limitations_generic_SNMP_connector
         - name: What are the standard operating procedures for connector deployment?
           topicUid: FAQ_SOP_connectors
+        - name: What kind of training is available for DIS?
+          topicUid: FAQ_DIS_Training
+        - name: Does technical support apply to the actual DataMiner connectors I design?
+          topicUid: FAQ_Support_for_own_connector
+        - name: Can I copy existing third-party DataMiner connectors or parts of them?
+          topicUid: FAQ_Copy_existing_connector
+        - name: What if a second- or third-party DataMiner connector malfunctions?
+          topicUid: FAQ_2nd_3rd_party_connector_malfunctions
       - name: Commercial models
         topicUid: FAQs_Pricing
       - name: Support Services
