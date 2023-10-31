@@ -9,14 +9,15 @@ features and teaches you how you can use it to detect and alarm on certain failu
 
 ## Prerequisites
 
-- DataMiner version 10.0.0 or higher. For step 3, DataMiner 10.3.12 or higher is required.
-- A recent Cube version (10.3.2343.2020 or higher)
-- A DataMiner System with [Storage as a Service (STaaS)](xref:STaaS) or a
+- DataMiner version 10.2.0 or higher with [Storage as a Service (STaaS)](xref:STaaS) or a
   [self-hosted Cassandra-compatible databse](xref:Supported_system_data_storage_architectures).
-- Install AnomalyDetectionTutorial.dmimport (TODO: put this on the catalog)
+  For step&nbsp;3, DataMiner 10.3.12 or higher is required.
+- A recent Cube version (10.3.2343.2020 or higher)
+- Install the package [Anomaly Detection Tutorial](https://catalog.dataminer.services/catalog/5467) from DataMiner Catalog
 - If you changed the default settings:
   - Make sure Behavioral Anomaly Detection is turned on in *System Center* > *System settings* > *analytics config*.
-  - Make sure time to live for trending is at least 1 day for real-time trending and 1 month for minute records.
+  - Make sure [time to live](xref:Setting_the_default_sliding_window_size_for_real-time_trending)
+    for trending is at least 1 day for real-time trending and 1 month for minute records.
 
 ## Overview
 
@@ -55,10 +56,10 @@ Now, let us look at an example.
 You have now loaded in data for the *Audio Bit Rate Channel 1* parameter. Let us have a look
 [trend graph](xref:Manipulating_trend_graphs)
 by pressing ![the trend icon](~/user-guide/images/trend_icon_unknown.png)
-next to our parameter. Then, press 'Month to date' have a look at the whole last month of data. As you can see,
+next to our parameter. Then, press 'Month to date' to have a look at the whole last month of data. As you can see,
 the bitrate first remained stable around 96 kBps for the better part of two weeks before temporarily jumping up a few
 times
-to values around 256 kBps. Finally, after 5 jumps there is one jump to over 1000 kBps.
+to values around 256 kBps. Finally, after 5 jumps, there is one jump to over 1000 kBps.
 
 ![Audio bit rate with several jumps, some of which are marked as anomalous](images/Audio_bit_rate.gif)
 
@@ -91,7 +92,7 @@ requests received per minute by a CAS server.
 blue, indicating that it found something interesting. Click this light bulb.
 1. A menu is now shown with (among others) an item saying '2 anomalies are found on your system' (or a higher number
 if your system detected anomalies on other elements). Click this menu item.
-1. A new tab called *Anomalies* is now shown in your alarm console containing two anomalies our element
+1. A new tab called *Anomalies* is now shown in your alarm console containing two anomalies on our element
 *Encryption Key Requests*.
 
 ![Anomaly tab in the alarm console showing the anomalies on 'Encryption Key Requests'](images/Encryption_Key_Requests_Lightbulb.gif)
@@ -127,7 +128,7 @@ the exact same data as *Encryption Key Requests*.
 Create an [alarm template](xref:About_alarm_templates) so that the anomalies detected
 on this parameter are shown in the *Active alarms* tab as follows.
 
-### [DataMiner 10.3.12 or higher](#tab/tabid-1)
+### [DataMiner 10.3.12 or higher](#tab/all-smart-new-version)
 
 1. Right-click the element *Encryption Key Requests 2* in the surveyor.
 1. Go to *Protocols & Templates* > *Assign alarm templates* > *New alarm template*.
@@ -144,7 +145,7 @@ alarming on anomalies.
 
 ![The pop-up to configure alarming on anomalies on DataMiner 10.3.12 or higher](images/Anomaly_Alarming_Popup_All_Smart.gif)
 
-### [Earlier versions](#tab/tabid-2)
+### [Earlier versions](#tab/all-smart-old-version)
 
 1. Right-click the element *Encryption Key Requests 2* in the surveyor.
 1. Go to *Protocols & Templates* > *Assign alarm templates* > *New alarm template*.
@@ -189,7 +190,7 @@ However, we might want to get notified if the bitrate starts fluctuating a lot o
 because it is being encoded using a variable bit rate scheme instead of an constant bit rate scheme).
 We can do that by turning on alarming only for *variance changes*, as follows.
 
-### [DataMiner 10.3.12 or higher](#tab/tabid-1)
+### [DataMiner 10.3.12 or higher](#tab/variance-change-new-version)
 
 1. Right-click the element *Audio bit rate (CBR-VBR)* in the surveyor.
 1. Go to *Protocols & Templates* > *Assign alarm templates* > *New alarm template*.
@@ -197,13 +198,13 @@ We can do that by turning on alarming only for *variance changes*, as follows.
 1. Turn on alarming on the parameter *Audio Bit Rate Channel 1* by checking the box in the Monitored (*MON*) column.
 1. Look for the column *ANOMALIES* on the right-hand side (you might have to scroll to the right to see it) and
 click the button in that column.
-1. Check the boxes before *Variance increase* and *Variance decrease*.
+1. In the pop-up that shows up, check the boxes before *Variance increase* and *Variance decrease*.
 1. Press *Close* to close the pop-up.
 1. Press *OK* to save the alarm template.
 
 ![Configure alarming on variance increases and decreases](images/Anomaly_Alarming_Popup_Variance_Changes.gif)
 
-### [Earlier versions](#tab/tabid-2)
+### [Earlier versions](#tab/variance-change-old-version)
 
 1. Right-click the element *Audio bit rate (CBR-VBR)* in the surveyor.
 1. Go to *Protocols & Templates* > *Assign alarm templates* > *New alarm template*.
@@ -211,7 +212,7 @@ click the button in that column.
 1. Turn on alarming on the parameter *Audio Bit Rate Channel 1* by checking the box in the Monitored (*MON*) column.
 1. Look for the column *ANOMALIES* on the right-hand side (you might have to scroll to the right to see it) and
 click the button in that column.
-1. Click the button next to *Variance change* to switch it to *Enabled*.
+1. In the pop-up that shows up, click the button next to *Variance change* to switch it to *Enabled*.
 1. Press *Close* to close the pop-up.
 1. Press *OK* to save the alarm template.
 
@@ -235,7 +236,6 @@ Note that it would not be easy, or even next to impossible to configure similar 
 using static alarm thresholds. This shows the power of alarming on anomalies for detecting sudden unexpected behavior.
 For a complete list of all options related to alarming on anomalies, see
 [Configuring anomaly detection alarms for specific parameters](xref:Configuring_anomaly_detection_alarms).
- TODO: is the advanced configuration also explained here?
 
 ## Step 3: Setting custom alarm thresholds (requires DataMiner 10.3.12 or higher)
 
@@ -334,7 +334,7 @@ than DataMiner 10.3.12 can also be done on a DataMiner version 10.3.12 or higher
 Remember that you can always duplicate the element to try a second time, if you did not yet reach optimal
 results on your first attempt.
 
-### [DataMiner 10.3.12 or higher](#tab/tabid-1)
+### [DataMiner 10.3.12 or higher](#tab/exercise-new-version)
 
 You will have to configure the alarm template such that alarms the following alarms are generated
 
@@ -351,7 +351,7 @@ Below is a picture of the situation you should achieve. Good luck!
 
 ![Trend graph of 'Signal strength' with the required alarms](images/Signal_Strength_Goal.png)
 
-### [Earlier versions](#tab/tabid-2)
+### [Earlier versions](#tab/exercise-old-version)
 
 You will have to configure the alarm template such that the alarms are generated for both longer drops, but no
 alarm is generated for the higher fluctuations, or the shorter drops.
@@ -371,15 +371,15 @@ Adhere to the following email format:
 - Subject: Tutorial - Anomalies tutorial
 - To: [ai@skyline.be](mailto:ai@skyline.be)
 - Body:
-  - Exercise version: mention whether you completed the exercise for DataMiner version 10.3.12 or higher, or for
+  - Exercise version: Mention whether you completed the exercise for DataMiner version 10.3.12 or higher, or for
     an earlier version (or both).
   - Dojo account: Clearly mention the email address you use to sign into your Dojo account, especially if you are using
     a different email addess to send this email
-  - Feedback (optionally): We value your feedback! Please share any thought or suggestions regarding this tutorial or
+  - Feedback (optionally): We value your feedback! Please share any thoughts or suggestions regarding this tutorial or
     the anomaly detection feature.
 - Attachment:
-  - a picture of the trend graph with the correct anomalies
-  - a [.dmimport file](xref:Exporting_elements_services_etc_to_a_dmimport_file) containing your element with the correct alarms.
+  - A picture of the trend graph with the correct anomalies.
+  - A [.dmimport file](xref:Exporting_elements_services_etc_to_a_dmimport_file) containing your element with the correct alarms.
 
 > [!NOTE]
 > Skyline will review your submission. Upon successful validation, you will be awarded the appropriate DevOps Points as
