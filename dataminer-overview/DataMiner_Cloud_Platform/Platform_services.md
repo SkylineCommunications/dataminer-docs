@@ -10,13 +10,15 @@ uid: Overview_Platform_services
 
 ## Health
 
-The **Health package** is an insurance policy for your system that includes features like automated log file collection in order to act quicker and the upcoming **SPI (System Performance Indicators) collection** *(coming soon)* for proactive support. Thanks to automated log file collection, we can provide faster support without requiring a user action. The upcoming SPI collection, currently under development, aims to enhance visibility by providing superior coverage through a steady flow of data, which ensures that even proactive support can be offered. This means that potential incidents will be identified early on, allowing for prompt discovery and resolution before they impact the user.
+The **Health package** is an insurance policy for your system that includes features like automated log file collection, that allows us to **provide faster support without requiring a user action**.
+In addition, when you connect your DataMiner Agents to dataminer.services, your connection to our CDMR platform (Customer DataMiner Reporting) is automatically enabled. This means daily updates of your system status are sent to us, enabling **proactive support by monitoring the health of your operation**. Also, for existing DataMiner Agents reporting to CDMR, you will no longer need a mail connection to send the system health information to us.
 
 > [!TIP]
 > See also:
 >
 > - [New cloud services that enable faster support are on the way!](https://community.dataminer.services/new-cloud-services-that-enable-faster-support-are-on-the-way/)
 > - [Introducing your DataMiner co-pilot](https://community.dataminer.services/introducing-your-dataminer-co-pilot/)
+> - [Customer DataMiner Reporting (CDMR)](xref:CDMR)
 > - [CCA Support Services](xref:CCA_Support_Services)
 
 ## Storage as a Service (STaaS)
@@ -28,7 +30,11 @@ This is a powerful option where we manage the storage for you, so you can save o
 > [!TIP]
 > See also:
 >
+> - [DataMiner STaaS: shifting the responsibility and financial burden of managing data storage infrastructure and technology to a highly professional cloud provider](https://community.dataminer.services/storage-as-a-service/)
+> - [DataMiner STaaS: a game-changer for your storage needs](https://community.dataminer.services/dataminer-staas-a-game-changer-for-your-storage-needs/)
+> - [Storage as a Service (STaaS) User Guide](xref:STaaS)
 > - [Self-hosted DataMiner nodes with Storage as a Service (STaaS)](xref:DM_selfhosted_and_StaaS)
+> - [FAQ about Storage as a Service (STaaS)](xref:FAQ_DCP)
 
 ## DataMiner as a Service (DaaS)
 
