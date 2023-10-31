@@ -18,7 +18,7 @@ To configure this component:
 
    - *Default page*: In case the Visio drawing consists of several pages, select the page that should be displayed by default in this dropdown list. Keep in mind that if *Page selection* is not selected, this is the only page the user will be able to see.
 
-1. Optionally, fine-tune the component layout. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
+1. Optionally, fine-tune the component layout. See [Customizing the component layout](xref:Customize_Component_Layout).
 
 > [!NOTE]
 >

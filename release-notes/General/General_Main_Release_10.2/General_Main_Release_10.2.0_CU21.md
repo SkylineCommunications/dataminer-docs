@@ -41,7 +41,7 @@ Up to now, it was possible to have a DataMiner System in which some DMAs had bee
   - Allowed to add DMAs either by hostname or by IP address.
   - Allowed to create Failover pairs with shared hostname or with virtual IP addresses.
 
-#### DataMiner Cube - Alarm templates: Configuration of behavioral anomaly alarms [ID_37148] [ID_37171]
+#### DataMiner Cube - Alarm templates: Configuration of behavioral anomaly alarms [ID_37148] [ID_37171] [ID_37670]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
 
@@ -75,7 +75,9 @@ To configure the behavioral anomaly detection for a particular (numeric) paramet
    > - "Smart" (i.e. anomaly monitoring as it existed up to now).
 
 > [!NOTE]
-> It is not possible to have both a suggestion event and an alarm generated for the same issue. However, it is possible to have suggestion events generated for e.g. downward level shifts, even if downward level shifts are disabled in the *Anomaly alarm settings* window.
+>
+> - It is not possible to have both a suggestion event and an alarm generated for the same issue. However, it is possible to have suggestion events generated for e.g. downward level shifts, even if downward level shifts are disabled in the *Anomaly alarm settings* window.
+> - Any settings configured in the *Anomaly alarm settings* window will only affect parameters that are being trended.
 
 #### Security enhancements [ID_37267]
 
@@ -109,6 +111,23 @@ In the *View* tab of a spectrum card, you can change the *RBW* (Resolution bandw
 
 Up to now, these could be modified by means of a drop-down box. From now on, they can be modified by means of "+" (plus) and "-" (minus) buttons.
 
+#### Page size when retrieving element data from Cassandra has been set to 5000 [ID_37673]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+
+For performance reasons, the page size when retrieving element data from a Cassandra database has been changed from 50000 to 5000.
+
+> [!NOTE]
+> When retrieving element data from a MySQL or Microsoft SQL Server database, the page size remains set to 50000.
+
+#### DataMiner Cube - Spectrum Analysis: New marker button 'Center to marker frequency' [ID_37705]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+
+In the *View* tab of a spectrum card, up to now, each marker listed in the *Markers* section had two buttons next to it: an *Edit* button (i.e. a pencil icon) and a *Delete* button (i.e. a cross icon). A *Center to marker frequency* button has now been added. Clicking this button will set the center frequency to the frequency of the marker in question.
+
+Also, the three buttons will now show a tooltip when you hover over them.
+
 ### Fixes
 
 #### Problem when restarting DataMiner [ID_37112]
@@ -136,6 +155,12 @@ When a parameter that was used to store the dynamic IP address of an element con
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
 
 When an alarm in a filtered alarm tab received a focus score update, the system would incorrectly not re-evaluate whether that alarm still matched the filter that was applied.
+
+#### Element connections would not work with destination tables that had naming configured [ID_37478]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+
+Element connections would not work with destination tables that had naming configured.
 
 #### DataMiner Cube - Alarm Console: Display issues when a correlation alarm was based on another correlation alarm [ID_37497]
 

@@ -323,6 +323,8 @@ items:
                     topicUid: Installing_OpenSearch_database
                   - name: Configuring multiple OpenSearch clusters
                     topicUid: Configuring_multiple_OpenSearch_clusters
+                  - name: Configuring a multiple data center OpenSearch cluster
+                    topicUid: Configuring_multiple_datacenter_OpenSearch_cluster
                   - name: Configuring OpenSearch backups
                     topicUid: Configuring_OpenSearch_Backups
               - name: Amazon OpenSearch Service
@@ -342,6 +344,8 @@ items:
                             topicUid: Configuring_master_Elasticsearch_nodes
                           - name: Adding an Elasticsearch cluster node
                             topicUid: Configuring_Elasticsearch_node_add
+                          - name: Configuring a multiple data center Elasticsearch cluster
+                            topicUid: Configuring_multiple_datacenter_Elasticsearch_cluster
                           - name: Configuring multiple Elasticsearch clusters
                             topicUid: Configuring_multiple_Elasticsearch_clusters
                             items:
@@ -525,6 +529,8 @@ items:
             topicUid: Setting_up_Azure_Active_Directory_Domain_Services
           - name: Enabling TLS encryption
             topicUid: Enabling_TLS_encryption
+          - name: Skipping certificate validation when consuming gRPC services
+            topicUid: Skipping_certificate_validation_when_consuming_gRPC_services
   - name: SNMP managers
     topicUid: About_SNMP_managers
     items:

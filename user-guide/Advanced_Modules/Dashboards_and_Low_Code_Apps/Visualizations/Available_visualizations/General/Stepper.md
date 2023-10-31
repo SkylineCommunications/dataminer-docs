@@ -10,7 +10,7 @@ This component is used to guide the user through a workflow by splitting it up i
 
 To configure the component:
 
-1. Apply a DOM definition or DOM instance data feed. See [Applying a data feed](xref:Configuring_dashboard_components#applying-a-data-feed).
+1. Apply a DOM definition or DOM instance data feed. See [Applying a data feed](xref:Apply_Data_Feed).
 
    You can apply a DOM definition or DOM instance directly, or use e.g. a feed based on a table component, so that the stepper will display the information linked to the item selected in the table component.
 
@@ -28,7 +28,7 @@ To configure the component:
 
 1. Fine-tune the component layout. In the *Component > Layout* tab, the following options are available:
 
-   - The default options available for all components. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
+   - The default options available for all components. See [Customizing the component layout](xref:Customize_Component_Layout).
 
    - *Appearance*: Allows you to select a template. This determines among others whether steps are numbered, whether check marks are displayed for steps that are completed, etc.
 
