@@ -562,6 +562,8 @@ items:
                     items:
                       - name: Creating a minus operator
                         topicUid: Creating_Minus_Operator
+                      - name: Creating a duration operator
+                        topicUid: Creating_Duration_Operator
                       - name: Optimizing your custom operator
                         topicUid: Custom_Operator_Tutorial
               - name: API reference
