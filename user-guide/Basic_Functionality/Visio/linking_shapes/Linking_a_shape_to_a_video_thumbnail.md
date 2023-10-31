@@ -167,103 +167,112 @@ To configure the thumbnail, add a shape data field of type **Link** to the shape
 
 ### Video streaming with proxy
 
-Video streams are typically only accessible within the internal network. There's typically also a good reason for this, for example it could be paid TV channels which shouldn't be publicly available.
+Video streams are typically only accessible within the internal network, and this is usually for a good reason, for example because paid TV channels are involved that should not be publicly available. Another reason to use a proxy is to avoid CORS or CSP restrictions: if you run the proxy on the same origin as the web app playing the video, it will load the video from the same origin, which is not a cross-origin request.
 
-Another reason to use a proxy is to avoid CORS or CSP restrictions: if you run the proxy on the same origin as the web app playing the video then it will load the video from the same origin which is not a cross-origin request.
+> [!CAUTION]
+> Setting up a proxy could create a weakness in the network security, giving users from the public network access to resources on the private network. Use this with extreme caution.
 
-> [!NOTE]
-> Setting up a proxy could create a hole in the network security, giving users from the public network access to resources on the private network. Use with extreme caution.
+#### Installing and running HLS Proxy
 
-#### HLS-Proxy
-
-This will install and run [HLS-Proxy](https://github.com/warren-bank/HLS-Proxy):
+To install and run [HLS Proxy](https://github.com/warren-bank/HLS-Proxy):
 
 1. Make sure you have [NodeJS](https://nodejs.org/) installed.
-2. Create a folder and open it in a command prompt or PowerShell, for example `C:\HLS-Proxy`.
-3. Run the following command: `npm install "@warren-bank/hls-proxy" --save`
-4. In case you have to use HTTPS (recommended), copy your certificate (.crt) and private key (.key) in this folder.
-5. Run the following command: `npx hlsd --port 8080 --tls-cert yourcertificate.crt --tls-key private.key --tls-pass password.txt`
-6. The proxy should now be up and running.
-7. A stream can be opened via the proxy by using the following url (example in JavaScript):
 
-    ```JavaScript
-    const proxy_url = 'https://proxy-server:8080';
-    const video_url = 'https://example.com/video/master.m3u8';
-    const file_extension = '.m3u8';
+1. Create a folder and open it in a command prompt or PowerShell, for example `C:\HLS-Proxy`.
 
-    const video_url_via_proxy = `${proxy_url}/${btoa(video_url)}${file_extension}`; // btoa = base64-encode
-    const videothumbnails = `https://dma-server/videothumbnails/video.htm?type=HTML5-HLS&source=${encodeURIComponent(video_url_via_proxy)}`; // encodeURIComponent = url-encode
-    ```
+1. Run the following command: `npm install "@warren-bank/hls-proxy" --save`
 
-8. Optionally, the HLS-Proxy server can be installed as a Windows service using [node-windows](https://github.com/coreybutler/node-windows).
+1. In case you have to use HTTPS (recommended), copy your certificate (.crt) and private key (.key) into the created folder.
 
-    1. Install *node-windows*: `npm install node-windows --save`
-    2. Create a `run.js` script that launches the proxy:
+1. Run the following command: `npx hlsd --port 8080 --tls-cert yourcertificate.crt --tls-key private.key --tls-pass password.txt`
 
-        ```JavaScript
-        var spawn = require('node:child_process').spawn;
+The proxy should now be up and running.
 
-        var child = spawn('npx', [
-            'hlsd',
-            '--port',
-            '8080',
-            '--tls-cert',
-            'yourcertificate.crt',
-            '--tls-key',
-            'private.key',
-            '--tls-pass',
-            'password.txt'
-        ], { shell: process.platform === 'win32' });
-        child.stdout.pipe(process.stdout);
-        ```
+You can **open a stream** via the proxy by using the following URL (example in JavaScript):
 
-    3. Create a script `install-service.js` to create the Windows service:
+```JavaScript
+const proxy_url = 'https://proxy-server:8080';
+const video_url = 'https://example.com/video/master.m3u8';
+const file_extension = '.m3u8';
 
-        ```JavaScript
-        var Service = require('node-windows').Service;
+const video_url_via_proxy = `${proxy_url}/${btoa(video_url)}${file_extension}`; // btoa = base64-encode
+const videothumbnails = `https://dma-server/videothumbnails/video.htm?type=HTML5-HLS&source=${encodeURIComponent(video_url_via_proxy)}`; // encodeURIComponent = url-encode
+```
 
-        // Create a new service object
-        var svc = new Service({
-            name: 'HLS-Proxy',
-            description: 'HLS proxy server.',
-            script: require('path').join(__dirname, 'run.js'),
-            nodeOptions: [
-                '--max_old_space_size=4096'
-            ],
-            workingDirectory: __dirname
-        });
+#### Installing the HLS Proxy server as a Windows service
 
-        // Listen for the "install" event, which indicates the
-        // process is available as a service.
-        svc.on('install', function() {
-            svc.start();
-        });
+Optionally, you can install the HLS Proxy server as a Windows service using [node-windows](https://github.com/coreybutler/node-windows).
 
-        svc.install();
-        ```
+1. Install *node-windows*: `npm install node-windows --save`
 
-    4. Run `node install-service.js` (with administrator privileges).
+1. Create a `run.js` script that launches the proxy:
 
-    5. Create a script `uninstall-service.js` to remove the Windows service:
+   ```JavaScript
+   var spawn = require('node:child_process').spawn;
 
-        ```JavaScript
-        var Service = require('node-windows').Service;
+   var child = spawn('npx', [
+       'hlsd',
+       '--port',
+       '8080',
+       '--tls-cert',
+       'yourcertificate.crt',
+       '--tls-key',
+       'private.key',
+       '--tls-pass',
+       'password.txt'
+   ], { shell: process.platform === 'win32' });
+   child.stdout.pipe(process.stdout);
+   ```
 
-        // Create a new service object
-        var svc = new Service({
-            name: 'HLS-Proxy',
-            script: require('path').join(__dirname, 'run.js'),
-            workingDirectory: __dirname
-        });
+1. Create a script `install-service.js` to create the Windows service:
 
-        // Listen for the "uninstall" event so we know when it's done.
-        svc.on('uninstall', function() {
-            console.log('Uninstall complete.');
-            console.log('The service exists: ', svc.exists);
-        });
+   ```JavaScript
+   var Service = require('node-windows').Service;
 
-        // Uninstall the service.
-        svc.uninstall();
-        ```
+   // Create a new service object
+   var svc = new Service({
+       name: 'HLS-Proxy',
+       description: 'HLS proxy server.',
+       script: require('path').join(__dirname, 'run.js'),
+       nodeOptions: [
+           '--max_old_space_size=4096'
+       ],
+       workingDirectory: __dirname
+   });
 
-    6. If you want to remove the service, run `node uninstall-service.js` (with administrator privileges).
+   // Listen for the "install" event, which indicates the
+   // process is available as a service.
+   svc.on('install', function() {
+       svc.start();
+   });
+
+   svc.install();
+   ```
+
+1. Run `node install-service.js` (with administrator privileges).
+
+To remove this Windows service again:
+
+1. Create a script `uninstall-service.js`:
+
+   ```JavaScript
+   var Service = require('node-windows').Service;
+
+   // Create a new service object
+   var svc = new Service({
+       name: 'HLS-Proxy',
+       script: require('path').join(__dirname, 'run.js'),
+       workingDirectory: __dirname
+   });
+
+   // Listen for the "uninstall" event so we know when it's done.
+   svc.on('uninstall', function() {
+       console.log('Uninstall complete.');
+       console.log('The service exists: ', svc.exists);
+   });
+
+   // Uninstall the service.
+   svc.uninstall();
+   ```
+
+1. Run `node uninstall-service.js` (with administrator privileges).
