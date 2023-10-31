@@ -34,6 +34,21 @@ Several changes have been implemented in the Verizon iDirect Evolution Platform 
 
   - Actual Symbol Rate: Actual Data Rate * (1.25, 1.2, 1.15 based on Payload) / (Modulation * Code Rate)
 
+#### New Verizon DCATGQI AddSubscription Automation script [ID_37747]
+
+A new interactive Automation script, *Verizon DCATGQI AddSubscription*, has been created, allowing users to add entries to the following tables for the Verizon Reports and Dashboards Solution connector:
+
+- Entity Subscription
+- KPI Entry Subscription
+- Profile DCAT Metric
+- Profile DCAT Metric Status
+- Profile DCAT Listing
+- Profile DCAT FUW
+
+#### New Verizon DCATGQIExecutionTable Automation script [ID_37748]
+
+A new Automation script, *Verizon DCATGQIExecutionTable*, has been added. It functions as an ad hoc data source for the DCAT low-code app, in order to display Live and Live History data.
+
 ## Changes
 
 ### Enhancements
@@ -61,6 +76,26 @@ Empty strings and null values are now supported in the file that is used to impo
 #### Verizon iDirect Evolution Platform Collector: Circuit Availability now 0% when Remotes State is in alarm state other than Warning [ID_37657]
 
 When the Remotes State is in an alarm state other than Warning (yellow), the Circuit Availability KPI will now be 0%. If its alarm state is Warning, the Circuit Availability logic based on the Fwd C/N levels is used instead.
+
+#### Verizon ETMS Platform: Logging logic updated [ID_37742]
+
+The logging logic of the Verizon ETMS Platform connector has been updated to that all requests and responses to update a ticket (for an alarm or clear event) will now be logged into a file. The logging will include the time, the entity name, and the type of request made. In addition, to prevent excessive growth of the log files, cleanup logic for the files can be configured.
+
+#### Verizon WM DCAT: Update to handle low-code app changes [ID_37743]
+
+The Verizon WM DCAT connector has been updated to handle changes made to Automation scripts for the updated low-code app for DCAT.
+
+#### Verizon WM RDS: Update to handle cell changes for Verizon Reports and Dashboards Solution connector tables [ID_37744]
+
+The Verizon WM RD connector has been updated to handle changes to the  Verizon Reports and Dashboards Solution connector. It now allows cell changes of tables.
+
+#### Verizon DCAT OnExecute script now interactive [ID_37745]
+
+The Verizon DCAT OnExecute script has been changed into an interactive Automation script, so it can be used as part of the new Verizon DCAT low-code app.
+
+#### Verizon DCAT OnResult script now interactive [ID_37746]
+
+The Verizon DCAT OnResult script has been changed into an interactive Automation script, so it can be used as part of the new Verizon DCAT low-code app.
 
 ### Fixes
 
