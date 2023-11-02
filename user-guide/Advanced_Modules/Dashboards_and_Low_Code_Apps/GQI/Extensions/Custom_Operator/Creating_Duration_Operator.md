@@ -27,7 +27,7 @@ Expected duration: 15 minutes.
 - [Step 3: Provide the input arguments for the custom operator](#step-3-provide-the-input-arguments-for-the-custom-operator)
 - [Step 4: Create a new column to show the duration](#step-4-create-a-new-column-to-show-the-duration)
 - [Step 5: Add the duration to the added column](#step-5-add-the-duration-to-the-added-column)
-- [Step 6: Use the custom operator](#step-6-use-the-custom-operator)
+- [Step 6: Use the data source](#step-6-use-the-data-source)
 
 ## Step 1: Get a quick start from the catalog
 
@@ -108,7 +108,6 @@ This is the first step to implement the custom operator.
             row.SetValue(_durationColumn, duration);
         }
     ```
-
 
 ## Step 6: Use the data source
 
