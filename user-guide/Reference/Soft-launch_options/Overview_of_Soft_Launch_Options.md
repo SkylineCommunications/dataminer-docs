@@ -133,7 +133,7 @@ Enables the use of DOM data in dashboards and applications.
 Enables dynamic units in Data Display in DataMiner Cube and the Monitoring app. If you want to test this feature for one DataMiner Cube session only, use the argument `SOFTLAUNCH_DYNAMICUNITS=Enabled`.
 
 - **Minimum version**: 10.0.12
-- **Estimated release version**: 10.3.12
+- **Estimated release version**: To be determined.
 
 ### ElasticTicketing
 
