@@ -26,4 +26,8 @@ uid: Web_apps_Feature_Release_10.4.1
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Low-Code Apps: Panels would not stack in the correct order [ID_37696]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+Panels would not stack in the correct order. From now on, they will stack in the order in which they were opened, and panels opening as pop-up windows will always stack on top of the left/right panels.
