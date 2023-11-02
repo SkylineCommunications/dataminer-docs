@@ -97,6 +97,25 @@ The Verizon DCAT OnExecute script has been changed into an interactive Automatio
 
 The Verizon DCAT OnResult script has been changed into an interactive Automation script, so it can be used as part of the new Verizon DCAT low-code app.
 
+#### Verizon iDirect Evolution Platform Collector: Hub Return Slots per Frame now rounded to the nearest integer [ID_37759]
+
+In the Hub Return Overview and Hub Return Carriers tables of the Verizon iDirect Evolution Platform Collector connector, the value of the Slots per Frame parameters will now be rounded to the nearest integer, so that these are displayed as whole numbers.
+
+#### Verizon Reports and Dashboards Solution: Tables updated to allow cell changes [ID_37766]
+
+In the Verizon Reports and Dashboards Solution connector, the following tables have been updated to allow changes for each cell:
+
+- Entity Subscription
+- KPI Entry Subscription
+- Profile DCAT Metric
+- Profile DCAT Fault
+- Profile DCAT Listing
+- Profile DCAT FUW
+
+These tables now also have a button that allows users to delete a row without opening the context menu.
+
+In addition, the logic in the connector has been updated to allow the addition of entries from an interactive Automation script.
+
 ### Fixes
 
 #### Verizon iDirect Evolution Platform Collector: Linecard event types not collected [ID_37691]
