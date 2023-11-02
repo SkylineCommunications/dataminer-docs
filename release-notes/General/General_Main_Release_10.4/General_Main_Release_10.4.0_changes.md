@@ -821,3 +821,9 @@ When reading data from the database page by page, in some cases, the operation w
 <!-- MR 10.4.0 - FR 10.3.12 -->
 
 In some cases, a newly created element could get assigned the same DmaId/ElementId key as another, already existing element on another DataMiner Agent in the cluster. From now on, this will be prevented as long as the DataMiner Agents in questions can communicate with each other.
+
+#### Storage as a Service: Every agent in the DMS would send the average trend data to the cloud during a migration [ID_37717]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+When data was being migrated from a Cassandra Cluster database to a STaaS database, every DataMiner Agent in the DMS would incorrectly send the average trend data to the cloud. From now on, only one of the agents will send this data.

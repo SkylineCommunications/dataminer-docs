@@ -389,3 +389,9 @@ When, for a trended parameter, a change in trend was detected, in some cases, tw
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
 
 When the alarm focus cache got full, an error could occur in SLAnalytics.
+
+#### Storage as a Service: Every agent in the DMS would send the average trend data to the cloud during a migration [ID_37717]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+When data was being migrated from a Cassandra Cluster database to a STaaS database, every DataMiner Agent in the DMS would incorrectly send the average trend data to the cloud. From now on, only one of the agents will send this data.
