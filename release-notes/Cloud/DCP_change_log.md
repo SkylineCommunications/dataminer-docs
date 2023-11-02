@@ -6,6 +6,21 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 2 November 2023 - Fix - DataMiner ArtifactDeployer 1.5.1 - Resolved an issue that could occur when the hosting server of DataMiner CloudGateway had more than one NIC [ID_37762]
+
+When using ArtifactDeployer 1.5.1 or earlier, it could occur that deployments failed when the CloudGateway module was installed on a server with more than one network interface (NIC). This has now been resolved. 
+Make sure to also install DataMiner CloudGateway 2.12.3 to make use of this fix.
+
+#### 2 November 2023 - Fix - DataMiner SupportAssistant 1.5.1 - Resolved an issue that could occur when the hosting server of DataMiner CloudGateway had more than one NIC [ID_37770]
+
+When using SupportAssistant 1.5.1 or earlier, it could occur that remote log collection failed when uploading the package when the CloudGateway module was installed on a server with more than one network interface (NIC). This has now been resolved. 
+Make sure to also install DataMiner CloudGateway 2.12.3 to make use of this fix.
+
+#### 2 November 2023 - Fix - CloudGateway 2.12.3 - Resolved an issue that could occur when the hosting server had more than one NIC [ID_37761]
+
+When CloudGateway was installed on a server with more than one network interface (NIC), it could occur that CloudGateway returned the wrong NIC address to other modules like the DataMiner SupportAssistant and DataMiner ArtifactDeployer, causing deployments and remote log collections to fail. This has now been resolved. 
+Make sure to also install DataMiner SupportAssistant 1.5.1 and DataMiner ArtifactDeployer 1.5.1 to make use of this fix.
+
 #### 30 October 2023 - Fix - CloudGateway 2.12.2 - Resolved an issue that could occur when using multiple CloudGateway modules [ID_37686]
 
 When multiple CloudGateway modules were installed in a cluster, it could occur that they were no longer able to sync with each other. As a result, the dataminer.services identity of the DMS was not synced properly, and only one CloudGateway instance was able to function correctly, causing stability issues in the dataminer.services connection and features such as sharing and remote access. This has now been resolved.
