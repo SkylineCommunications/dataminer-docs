@@ -513,6 +513,31 @@ When, in the SLNetClientTest tool, you select the new *Debug SAML* checkbox befo
 > [!CAUTION]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
+#### DataMiner Object Models: Enhanced checks when removing field descriptors from a section definition [ID_37395]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+Up to now, when a field descriptor was removed from a section definition that was being used by any DOM instances, the update of the section would fail and a `SectionDefinitionError` with reason `SectionDefinitionInUseByDomInstances` would be added to the trace data.
+
+To allow certain field descriptors to be removed, this behavior has now been changed. From now on, the update of a section will only fail if the removed field descriptors are still being used.
+
+A `SectionDefinitionError` with reason `SectionDefinitionFieldsInUse` will be added to the trace data in the following cases:
+
+- If any of the removed field descriptors is being used in the DOM manager settings of the DOM module (either in the name definition or in one of the field aliases). When a field descriptor is detected in those settings, `UsedInDomManagerSettings` will be set to true.
+
+- If any of the removed field descriptors is being used in the name definition defined on a DOM definition. The IDs of those DOM definitions will be specified in `DomDefinitionIds`.
+
+- If any of the removed field descriptors is being used in any of the status section definition links on a DOM behavior definition. The IDs of the DOM behavior definitions will be specified in `DomBehaviorDefinitionIds`.
+
+- If any of the removed field descriptors is assigned a value in any DOM instance. The IDs of the DOM instances (limited to 100) will be specified in `DomInstanceIds`. If a large number of field descriptors were removed, only the first 100 field descriptors that match will be taken into account.
+
+Also, the `SectionDefinitionError` will have `SectionDefinitionID` set to the ID of the SectionDefinition that could not be updated. `FieldDescriptorIds` will contain the IDs of the FieldDescriptors that were found to be in use.
+
+Other changes to a section definition that fail when the section is being used by any DOM instance will still fail with reason `SectionDefinitionInUseByDomInstances`. Up to now, all DOM instance IDs would be included in the error data. From now on, only the first 100 IDs will be included.
+
+> [!NOTE]
+> Currently, on systems using STaaS, the validation of DOM instances might not detect if a field descriptor is in use when there are more then 100 DOM instances. In that case, the removal of the field descriptor in question will be allowed.
+
 #### SLAnalytics - Trend predictions: Flatline periods will no longer be included in the prediction model training data [ID_37432]
 
 <!-- MR 10.4.0 - FR 10.3.12 -->
