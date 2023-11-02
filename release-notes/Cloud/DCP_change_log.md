@@ -6,19 +6,22 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
-#### 2 November 2023 - Fix - DataMiner ArtifactDeployer 1.5.1 - Resolved an issue that could occur when the hosting server of DataMiner CloudGateway had more than one NIC [ID_37762]
+#### 2 November 2023 - Fix - ArtifactDeployer 1.5.1 - Issue when hosting server of DataMiner CloudGateway had more than one NIC [ID_37762]
 
-When using ArtifactDeployer 1.5.1 or earlier, it could occur that deployments failed when the CloudGateway module was installed on a server with more than one network interface (NIC). This has now been resolved. 
+When ArtifactDeployer 1.5.1 or earlier was used, it could occur that deployments failed when the CloudGateway module was installed on a server with more than one network interface (NIC). This has now been resolved.
+
 Make sure to also install DataMiner CloudGateway 2.12.3 to make use of this fix.
 
-#### 2 November 2023 - Fix - DataMiner SupportAssistant 1.5.1 - Resolved an issue that could occur when the hosting server of DataMiner CloudGateway had more than one NIC [ID_37770]
+#### 2 November 2023 - Fix - SupportAssistant 1.5.1 - Issue when hosting server of DataMiner CloudGateway had more than one NIC [ID_37770]
 
-When using SupportAssistant 1.5.1 or earlier, it could occur that remote log collection failed when uploading the package when the CloudGateway module was installed on a server with more than one network interface (NIC). This has now been resolved. 
+When SupportAssistant 1.5.1 or earlier was used, it could occur that remote log collection failed when uploading the package in case the CloudGateway module was installed on a server with more than one network interface (NIC). This has now been resolved. 
+
 Make sure to also install DataMiner CloudGateway 2.12.3 to make use of this fix.
 
-#### 2 November 2023 - Fix - CloudGateway 2.12.3 - Resolved an issue that could occur when the hosting server had more than one NIC [ID_37761]
+#### 2 November 2023 - Fix - CloudGateway 2.12.3 - Issue when hosting server had more than one NIC [ID_37761]
 
-When CloudGateway was installed on a server with more than one network interface (NIC), it could occur that CloudGateway returned the wrong NIC address to other modules like the DataMiner SupportAssistant and DataMiner ArtifactDeployer, causing deployments and remote log collections to fail. This has now been resolved. 
+When CloudGateway was installed on a server with more than one network interface (NIC), it could occur that CloudGateway returned the wrong NIC address to other modules such as DataMiner SupportAssistant and DataMiner ArtifactDeployer, causing deployments and remote log collection to fail. This has now been resolved. 
+
 Make sure to also install DataMiner SupportAssistant 1.5.1 and DataMiner ArtifactDeployer 1.5.1 to make use of this fix.
 
 #### 30 October 2023 - Fix - CloudGateway 2.12.2 - Resolved an issue that could occur when using multiple CloudGateway modules [ID_37686]
