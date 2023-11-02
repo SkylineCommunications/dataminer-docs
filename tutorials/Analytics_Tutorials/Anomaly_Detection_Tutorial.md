@@ -187,7 +187,7 @@ In some cases, it can be useful to only generate alarms from certain types of an
 the bitrate parameter from Step 1.1. The jumps between different encoding bitrates might be expected, depending
 on the stream that gets encoded at that time.
 However, we might want to get notified if the bitrate starts fluctuating a lot on a certain stream (e.g.
-because it is being encoded using a variable bit rate scheme instead of an constant bit rate scheme).
+because it is being encoded using a variable bit rate scheme instead of a constant bit rate scheme).
 We can do that by turning on alarming only for *variance changes*, as follows.
 
 ### [DataMiner 10.3.12 or higher](#tab/variance-change-new-version)
@@ -250,12 +250,12 @@ whenever the data generation is finished.
 
 ![Trend graph of 'Cable Modems Out of Service' without alarming configured](images/CMOOS_Trend_Graph_No_Alarming.png)
 
-As you can see, the data tends to follow a wave pattern with a low number of cable modems out of service during a day,
+As you can see, the data tends to follow a wave pattern with a low number of cable modems out of service during the day,
 and a high number at night.
 This is caused by a significant number of people turning off their cable modem at night, making the CMTS unable
-to connect to it. Moreover, in the last 2 days, you can see four periods where more modems were out of service than
+to connect to it. Moreover, in the last two days, you can see four periods where more modems were out of service than
 expected: the data suddenly jumps up with around 70 units before dropping again a few hours later.
-Unfortunately, DataMiner only detects the first and the 3rd period as anomalous, as seen by the dark grey
+Unfortunately, DataMiner only detects the first and the third period as anomalous, as seen by the dark grey
 blocks in the trend graph. This is because DataMiner assumes too quickly that the observed behavior is not anomalous
 since it has seen it before.
 
@@ -329,14 +329,14 @@ As you can see on the image below, the data contains
 - three short drops, on October 24th, October 25th and October 29th on the picture,
 - two longer drops, on October 25th on the picture.
 
-The alarms you have to generate for this exercise depend on your version of DataMiner. Note that the version for versions earlier
+The alarms you have to generate for this exercise depend on your version of DataMiner. Note that the exercise for versions earlier
 than DataMiner 10.3.12 can also be done on a DataMiner version 10.3.12 or higher, but not the other way around.
 Remember that you can always duplicate the element to try a second time, if you did not yet reach optimal
 results on your first attempt.
 
 ### [DataMiner 10.3.12 or higher](#tab/exercise-new-version)
 
-You will have to configure the alarm template such that alarms the following alarms are generated
+You will have to configure the alarm template such that the following alarms are generated
 
 - a *major* alarm for all three shorter drops,
 - a *critical* alarm for both longer drops,
@@ -353,7 +353,7 @@ Below is a picture of the situation you should achieve. Good luck!
 
 ### [Earlier versions](#tab/exercise-old-version)
 
-You will have to configure the alarm template such that the alarms are generated for both longer drops, but no
+You will have to configure the alarm template such that alarms are generated for both longer drops, but no
 alarm is generated for the higher fluctuations, or the shorter drops.
 
 The severity of the generated alarms does not matter for the exercise. Below is a picture of the situation you should achieve. Good luck!
