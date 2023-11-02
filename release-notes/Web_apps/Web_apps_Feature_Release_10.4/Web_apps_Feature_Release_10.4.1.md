@@ -31,3 +31,18 @@ uid: Web_apps_Feature_Release_10.4.1
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
 
 Panels would not stack in the correct order. From now on, they will stack in the order in which they were opened, and panels opening as pop-up windows will always stack on top of the left/right panels.
+
+#### Low-Code Apps: Initials would be displayed instead of user icon in edit mode [ID_37700]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+In edit mode, the user's initials would be displayed instead of the user icon.
+
+> [!NOTE]
+> In all DataMiner web apps, the user's initials will be displayed until the user icon has been retrieved.
+
+#### Web APIs: Changes made to a user's access level would not be applied immediately [ID_37730]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+When the access level of a user was changed, up to now, that change would not immediately get applied to existing Web API connections.
