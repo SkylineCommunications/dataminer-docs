@@ -15,7 +15,9 @@ uid: EPM_6.1.10_I-DOCSIS
 
 ### Enhancements
 
-*No enhancements have been added to this release yet.*
+#### Dashboard folders adjusted and unused dashboards removed [ID_37767]
+
+Several unused dashboards have been removed, along with the *EPM Solution* folder containing them. In addition, two new folders, *CCAP* and *Network*, have been added, each containing the respective overview pages. Finally, the Service Group Overview dashboard has been moved to the *SERVICE GROUP* folder.
 
 ### Fixes
 
