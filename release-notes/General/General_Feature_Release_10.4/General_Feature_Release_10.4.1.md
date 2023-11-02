@@ -32,4 +32,8 @@ uid: General_Feature_Release_10.4.1
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### DataMiner Cube - Relation learning: Problem when checking ModelHost DxM license [ID_37653]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+
+In some cases, DataMiner Cube could become unresponsive when checking the ModelHost DxM license.
