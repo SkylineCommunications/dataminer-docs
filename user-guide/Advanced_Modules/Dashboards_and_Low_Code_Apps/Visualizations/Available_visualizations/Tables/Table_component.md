@@ -33,65 +33,78 @@ In the *Layout* tab for this component, the *Column filters* option is available
 
 - You can remove a column filter again by selecting *No color* instead of a specific color.
 
-From DataMiner 10.4.1/10.5.0 onwards, You can **change the look** of a column in the option *Column appearence*, also available in the *Layout* tab. It needs to by configured as follows: <!-- RN 37522 -->
+From DataMiner 10.4.1/10.5.0 onwards<!-- RN 37522 -->, in the *Layout* tab, the *Column appearance* option is available, which allows you to customize the appearance of a column.
 
-1. In the dropdown, select the column you want to change.
+- *Column appearance > Alignment*: Allows you to align the contents of the column to the left, in the center, or to the right.
 
-1. Click on the preview of that column to open its available presets. You can pick between:
+- *Column appearance > Select a column*: Allows you to alter the appearance of a column using presets. You can configure this option as follows:
 
-    - Left, to align the content to the left.
+  1. In the dropdown list, select the column you want to change.
 
-    - Center, to align the content to the center.
+     A preview of the column's appearance is displayed underneath the name of the column.
 
-    - Right, to align the content to the right.
+  1. Click the preview to expand a list of available presets. These show what the column would look like if that preset was selected.
 
-    - Icon, to display an icon instead of text.
+  1. Select one of the presets to apply it to the column.
 
-    - Link, to make the text appear as a link.
+     Available presets:
 
-    - Background, to add a background color to the cell.
+     - Left: Align the content to the left.
 
-1. Click on one of those presets to apply it to the column.
+     - Center: Align the content in the center.
 
-1. Alternatively, you can fully customize the appearence by clicking *more (···)* > *Customize preset*, which will open the template editor.
+     - Right: Align the content to the right.
+
+     - Icon: Display an icon instead of text.
+
+     - Link: Make the text appear as a link.
+
+     - Background: Add a background color to the cell.
+
+- To freely customize the appearance of a column, click the ellipsis button ("...") and select *Edit preset* to open the Template Editor.
+
+  > [!TIP]
+  > For more information on using the Template Editor, see [Template Editor](xref:Template_Editor).
 
 You can **resize the columns** of the table by dragging the edges of the column headers. From DataMiner 10.1.8/10.2.0 onwards, you can also change the order of the columns by dragging the column headers to a different position.
 
-  > [!TIP]
-  > From DataMiner 10.4.1/10.5.0 onwards, you can define the default column width by resizing the template in the column appearance.
+> [!TIP]
+> From DataMiner 10.4.1/10.5.0 onwards<!--RN 37522-->, you can adjust the default column width by accessing the [Template Editor](xref:Template_Editor) through *Layout > Column appearance*.
 
 ## Adding actions to a table
 
 If you add a table component to a custom app using the [DataMiner Low-Code Apps](xref:Application_framework), you can also configure actions for the component. This feature is not available in the Dashboards app. <!-- RN 29394 -->
 
-### Prior to DataMiner 10.4.1/10.5.0
-
 To configure actions:
 
-1. In the *Component* \> *Settings* pane, expand the *Actions* section.
+- From DataMiner 10.4.1/10.5.0 onwards<!--RN 37522-->:
 
-1. Click *Add action*.
+  In the Template Editor, you can **configure actions for table columns**. Actions can be linked to the *On click* event of a shape in a column template, allowing you to define your own links or buttons inside a table.
 
-1. To specify how the action is triggered, at the top of the action configuration section, click the icon for text hyperlink, row double-click, or cell button.
+  > [!TIP]
+  > For more information, see [Template Editor](xref:Template_Editor).
 
-1. In the *Label* box, specify a label for the action.
+  You can also **configure actions that are executed when a row is double-clicked**:
 
-1. In the *Icon* box, select an icon for the action.
+  1. In the *Component* \> *Settings* pane, expand the *Actions* section.
 
-1. In the *Action* box, select the action that should be executed. You can for instance use this to add an update action to the table, or to allow users to select an item or clear their selection. See [Configuring low-code app events](xref:LowCodeApps_event_config).
+  1. Click *On double-click*.
 
-### From DataMiner 10.4.1/10.5.0 onwards
+  1. In the pop-up window, select the action that should be executed. See [Configuring low-code app events](xref:LowCodeApps_event_config).
 
-Actions can be linked to the *On click* event of a shape in a column template. This allows to define your own links or buttons inside a table.
+- Prior to DataMiner 10.4.1/10.5.0:
 
-Next to cell actions you can also configure what should happen when a row is double-clicked:
+  1. In the *Component* \> *Settings* pane, expand the *Actions* section.
 
-1. In the *Component* \> *Settings* pane, expand the *Actions* section.
+  1. Click *Add action*.
 
-1. Click *On double click*.
+  1. To specify how the action is triggered, at the top of the action configuration section, click the icon for text hyperlink, row double-click, or cell button.
 
-1. In the popup, configure what should happen. See [Configuring low-code app events](xref:LowCodeApps_event_config).
+  1. In the *Label* box, specify a label for the action.
 
+  1. In the *Icon* box, select an icon for the action.
+
+  1. In the *Action* box, select the action that should be executed. You can for instance use this to add an update action to the table, or to allow users to select an item or clear their selection. See [Configuring low-code app events](xref:LowCodeApps_event_config).
 
 ## Configuring other component settings
 
