@@ -1,4 +1,12 @@
 items:
+  - name: v10.5
+    topicUid: General_Main_Release_10.5.0
+    items:
+      - name: Main Release
+        topicUid: General_Main_Release_10.5.0
+        items:
+          - name: General Main Release 10.5.0 - Preview
+            topicUid: General_Main_Release_10.5.0
   - name: v10.4
     topicUid: General_Main_Release_10.4.0
     items:
