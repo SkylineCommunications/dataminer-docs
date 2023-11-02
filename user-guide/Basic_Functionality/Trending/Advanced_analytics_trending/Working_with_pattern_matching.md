@@ -43,3 +43,6 @@ As with single-parameter patterns (i.e. [univariate patterns](#univariate-patter
 If you are viewing a trend graph where one or more of the parameters involved in the multivariate pattern are loaded and multivariate patterns have been detected, these patterns will be highlighted in orange when you hover the mouse pointer over the button representing a pattern, or if the option *Expand tags* is selected in the right-click menu.
 
 The ![multivariate](~/user-guide/images/multivariate_icon.png) icon indicates that the pattern combines trend information from different parameters. By clicking this icon, you can load all trend graphs of the parameters that are part of the pattern. <!-- RN 36628 -->
+
+> [!NOTE]
+> From DataMiner 10.2.0 [CU21]/10.3.0 [CU9]/10.3.12 onwards<!--RN 36661-->, trend patterns of all parameters are loaded onto the trend graph. Prior to DataMiner 10.2.0 [CU21]/10.3.0 [CU9]/10.3.12, only the trend pattern of the first parameter is loaded onto the trend graph.
