@@ -285,7 +285,7 @@ Enables the button panel component in the Dashboards app.
 Enables the grid component in the Dashboards app.
 
 - **Minimum version**: 10.2.12
-- **Estimated release version**: 10.3.12
+- **Estimated release version**: 10.4.1
 
 ### ReportsAndDashboardsExport
 
@@ -299,7 +299,7 @@ Enables the export to PDF button within the Dashboards app itself. Creating PDFs
 Enables a new Maps component in the Dashboards app and the Low-Code Apps.
 
 - **Minimum version**: 10.3.2
-- **Estimated release version**: 10.3.12
+- **Estimated release version**: 10.4.2
 
 ### ReportsAndDashboardsGuides
 
@@ -325,7 +325,7 @@ Enables the Query Filter component in the Dashboards app.
 Enables the Timeline component in the Dashboards app.
 
 - **Minimum version**: 10.1.10
-- **Estimated release version**: 10.3.12
+- **Estimated release version**: 10.4.1
 
 ### ResourceList
 
