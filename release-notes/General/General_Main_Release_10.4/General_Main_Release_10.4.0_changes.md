@@ -634,6 +634,15 @@ From now on, when GQI detects that having multiple sections is allowed for a par
 > [!IMPORTANT]
 > This change will break any existing query that references columns containing multiple values due to being linked to SectionDefinitions that allowed multiple sections in one DOM instance.
 
+#### SLAnalytics - Behavioral anomaly detection: Flatline suggestion events will now automatically be cleared after a set amount of time [ID_37716]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+Similar to other types of anomaly suggestion events, flatline suggestion events will now also be cleared automatically after a set amount of time.
+
+> [!NOTE]
+> Flatline alarms stay open until the flatline in question disappears or SLAnalytics is restarted.
+
 ### Fixes
 
 #### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID_34981]
