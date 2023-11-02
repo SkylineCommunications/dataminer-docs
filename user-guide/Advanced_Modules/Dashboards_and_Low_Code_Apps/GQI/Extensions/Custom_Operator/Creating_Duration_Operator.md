@@ -4,21 +4,31 @@ uid: Creating_Duration_Operator
 
 # Building a GQI custom operator that calculates a duration
 
-In this tutorial, you will learn how you can create a GQI custom operator that can be used to calculate the duration.
+In this tutorial, you will learn how you can create a GQI custom operator that can be used to calculate a duration.
 
 Expected duration: 15 minutes.
+
+> [!TIP]
+> See also: [Configuring a custom operator for a query](xref:GQI_Custom_Operator)
 
 > [!NOTE]
 > This tutorial uses DataMiner version 10.3.2.
 
-> [!WARNING]
-> The custom operator is available from DataMiner 10.2.7/10.3.0 onwards, if the soft-launch option GenericInterface is enabled. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
-
 ## Prerequisites
 
 - [Visual Studio](https://visualstudio.microsoft.com/downloads/) with [DataMiner Integration Studio](xref:Installing_and_configuring_DataMiner_Integration_Studio)
+
 - A DataMiner Agent [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud)
-- Having the GenericInterface soft-launch option enabled. For more information, see [Soft-launch options]
+
+- Depending on your DataMiner version, you may need to enable the [*GenericInterface* soft-launch option](xref:Overview_of_Soft_Launch_Options#genericinterface).
+
+  > [!NOTE]
+  > To check whether this soft-launch option is required in your DataMiner version, see [Overview of soft-launch options](xref:Overview_of_Soft_Launch_Options).
+
+  > [!TIP]
+  > See [Activating soft-launch options](xref:Activating_Soft_Launch_Options).
+
+- Basic knowledge of GQI extension development.
 
 ## Overview
 
@@ -51,63 +61,71 @@ Expected duration: 15 minutes.
 > If certain types cannot be found in the file, verify if the *Skyline.DataMiner.Dev.Automation* NuGet package has the correct version. Go to *Tools* > *NuGet Package Manager* > *Manage NuGet Packages for Solution*. Select *Skyline.DataMiner.Dev.Automation*, and verify whether the version installed for the current project is at least *10.3.2*.
 
 ## Step 3: Provide the input arguments for the custom operator
+
 This is the first step to implement the custom operator.
 
 1. Add the *IGQIInputArguments* interface to the *DurationOperator* class.
-    ```csharp
-       public class DurationOperator : IGQIInputArguments
-    ```
+
+   ```csharp
+   public class DurationOperator : IGQIInputArguments
+   ```
 
 1. Implement the *GetInputArguments* method to provide GQI with the arguments that the user should fill in.
-    ```csharp
-        public GQIArgument[] GetInputArguments()
-        {
-            return new GQIArgument[] { _startColumnArg, _endColumnArg };
-        }
-    ```
 
-1. Implement the *OnArgumentsProcessed* method to store the values that the users has filled in through the arguments.
-    ```csharp
-        public OnArgumentsProcessedOutputArgs OnArgumentsProcessed(OnArgumentsProcessedInputArgs args)
-        {
-            _startColumn =  args.GetArgumentValue(_startColumnArg);
-            _endColumn = args.GetArgumentValue(_endColumnArg);
-            return default;
-        }
-    ```
+   ```csharp
+   public GQIArgument[] GetInputArguments()
+   {
+      return new GQIArgument[] { _startColumnArg, _endColumnArg };
+   }
+   ```
+
+1. Implement the *OnArgumentsProcessed* method to store the values that the user has filled in through the arguments.
+
+   ```csharp
+   public OnArgumentsProcessedOutputArgs OnArgumentsProcessed(OnArgumentsProcessedInputArgs args)
+   {
+      _startColumn =  args.GetArgumentValue(_startColumnArg);
+      _endColumn = args.GetArgumentValue(_endColumnArg);
+      return default;
+   }
+   ```
 
 ## Step 4: Create a new column to show the duration
 
 1. Add the *IGQIColumnOperator* interface to the *DurationOperator* class.
-    ```csharp
-        public class DurationOperator : IGQIInputArguments, IGQIColumnOperator
-    ```
+
+   ```csharp
+   public class DurationOperator : IGQIInputArguments, IGQIColumnOperator
+   ```
 
 1. Implement the *HandleColumns* method to let GQI know that a new column should be added.
-    ```csharp
-        public void HandleColumns(GQIEditableHeader header)
-        {
-            header.AddColumns(_durationColumn);
-        }
-    ```
+
+   ```csharp
+   public void HandleColumns(GQIEditableHeader header)
+   {
+      header.AddColumns(_durationColumn);
+   }
+   ```
 
 ## Step 5: Add the duration to the added column
 
 1. Add the *IGQIRowOperator* interface to the *DurationOperator* class.
-    ```csharp
-        public class DurationOperator : IGQIInputArguments, IGQIColumnOperator, IGQIRowOperator
-    ```
+
+   ```csharp
+   public class DurationOperator : IGQIInputArguments, IGQIColumnOperator, IGQIRowOperator
+   ```
 
 1. Implement the *HandleRow* method to calculate the duration and set that value in the cell matching the new duration column.
-    ```csharp
-        public void HandleRow(GQIEditableRow row)
-        {
-            var start = row.GetValue<DateTime>(_startColumn);
-            var end = row.GetValue<DateTime>(_endColumn);
-            var duration = end - start;
-            row.SetValue(_durationColumn, duration);
-        }
-    ```
+
+   ```csharp
+   public void HandleRow(GQIEditableRow row)
+   {
+      var start = row.GetValue<DateTime>(_startColumn);
+      var end = row.GetValue<DateTime>(_endColumn);
+      var duration = end - start;
+      row.SetValue(_durationColumn, duration);
+   }
+   ```
 
 ## Step 6: Use the data source
 
@@ -119,8 +137,8 @@ This is the first step to implement the custom operator.
 
 1. Select a data source that has at least two columns containing datetime values.
 
-> [!NOTE]
-> If you don't have an applicable data source you can download one from the catalog: [https://catalog.dataminer.services/catalog/5407](https://catalog.dataminer.services/catalog/5407)
+   > [!NOTE]
+   > If you do not have an applicable data source, you can [download one from the catalog](https://catalog.dataminer.services/catalog/5407).
 
 1. Add a custom operator to the query and select *Duration*.
 
