@@ -45,15 +45,16 @@ It's a service, so for the user this is completely transparent and you don't nee
 ### What about resiliency?
 
 Our solution separately replicates your storage account synchronously across three Azure availability zones (i.e. a group of datacenters in a region, close enough to have a low-latency of < 2ms) in the primary region - each availability zone is a separate physical location in one region with independent power, cooling and networking  means you are protected against server, rack, driver failures and physical disasters (such as fire or flooding) within the data center.
+
 See also [Zone Redundant Storage](https://learn.microsoft.com/en-us/azure/storage/common/storage-redundancy#zone-redundant-storage).
 
 ### How fast is the data being stored in the cloud database (our default config)?
 
-The speed is similar as an on-premises DataMiner System with Cassandra.  There is a throttling mechanism configured as safety mechanism.
+The speed is similar as an on-premises DataMiner System with Cassandra. There is a throttling mechanism configured as safety mechanism.
 
 ### How long is the data stored in the cloud database?
 
-Equal configuration settings are being used as when having an on-premises DataMiner System, based on the 'storage period' & the concurrent number of alarms.
+Equal configuration settings are being used as when having an on-premises DataMiner System, based on the 'storage period' and the concurrent number of alarms.
 
 ### Can I download the data for archiving purposes?
 
@@ -77,7 +78,7 @@ Please visit [Azure Geographies](https://azure.microsoft.com/en-us/explore/globa
 
 ### What is the cost for the traffic billed by Azure?
 
-No additional cost applicable,  our STaaS offering includes both the storage and upload/download Azure traffic costs.
+No additional cost applicable, our STaaS offering includes both the storage and upload/download Azure traffic costs.
 
 ### How is the data migrated from an on-premises database to the Azure Cloud Stack?
 
