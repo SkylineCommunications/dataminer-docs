@@ -26,7 +26,7 @@ uid: Cube_Feature_Release_10.4.1
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
-A number of enhancements have been made with regard to service chain behavior in visual overviews.
+A number of UI enhancements have been made with regard to service chain behavior in visual overviews.
 
 Up to now, in some cases, service chains could get redrawn too often, or shapes would not get redrawn when a service chain was updated. Also, context menus of shapes would not always close when those shapes were updated and context menus would incorrectly show the *Display connectivity* command twice.
 
