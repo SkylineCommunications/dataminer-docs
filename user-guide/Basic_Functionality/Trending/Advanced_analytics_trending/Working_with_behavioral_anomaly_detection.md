@@ -31,7 +31,7 @@ From DataMiner 10.0.0/10.0.2 onwards, the DataMiner Analytics software can detec
 
 - **Unlabeled change**: If a change point cannot be classified as one of the above-mentioned change points, it is considered an unlabeled change.
 
-If a change point other than an outlier or unlabeled change is unexpected, it will be considered anomalous. Level shifts that have a different direction than previous recent jumps or that jump to a previously unseen level will typically be labeled “anomalous”. Similarly, trend or variance changes will be labeled “anomalous” when no earlier trend or variance changes in the same direction were detected during the last weeks. A flatline will be considered anomalous when no recent flatline change point of approximately the same length or longer is detected.
+If a change point other than an unlabeled change is unexpected, it will be considered anomalous. Prior to DataMiner 10.3.12/10.4.0<!--RN 37171-->, if a change point other than an outlier or unlabeled change is unexpected, it will be considered anomalous. Level shifts that have a different direction than previous recent jumps or that jump to a previously unseen level will typically be labeled “anomalous”. Similarly, trend or variance changes will be labeled “anomalous” when no earlier trend or variance changes in the same direction were detected during the last weeks. A flatline will be considered anomalous when no recent flatline change point of approximately the same length or longer is detected.
 
 From DataMiner 10.3.8/10.4.0 onwards<!-- RN 36664 -->, a change can also be considered anomalous if it has been seen before in the historical behavior of the parameter but it does not fit in the usual periodic pattern.
 
