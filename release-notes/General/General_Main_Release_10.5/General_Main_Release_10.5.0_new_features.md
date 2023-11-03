@@ -19,4 +19,6 @@ uid: General_Main_Release_10.5.0_new_features
 
 <!-- MR 10.5.0 - FR 10.4.1 -->
 
-When a DataMiner Agent is upgraded to version 10.5.0/10.4.1, the *BrokerGateway* DxM will automatically be installed in the `C:\Program Files\Skyline Communications\DataMiner BrokerGateway` folder.
+When a DataMiner Agent is upgraded to version 10.5.0/10.4.1 or above, the *BrokerGateway* DxM will automatically be installed in the `C:\Program Files\Skyline Communications\DataMiner BrokerGateway` folder.
+
+This new DxM, which is currently still under development, is intended to manage all NATS configurations.
