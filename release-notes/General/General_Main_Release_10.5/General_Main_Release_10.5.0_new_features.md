@@ -14,3 +14,9 @@ uid: General_Main_Release_10.5.0_new_features
 ## New features
 
 ### Core functionality
+
+#### BrokerGateway DxM will now be installed automatically during a DataMiner upgrade [ID_37714]
+
+<!-- MR 10.5.0 - FR 10.4.1 -->
+
+When a DataMiner Agent is upgraded to version 10.5.0/10.4.1, the *BrokerGateway* DxM will automatically be installed in the `C:\Program Files\Skyline Communications\DataMiner BrokerGateway` folder.
