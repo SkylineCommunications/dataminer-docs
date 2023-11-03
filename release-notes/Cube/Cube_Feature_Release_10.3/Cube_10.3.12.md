@@ -16,7 +16,7 @@ uid: Cube_Feature_Release_10.3.12
 
 ## New features
 
-#### Alarm templates: Configuration of behavioral anomaly alarms [ID_37148] [ID_37171]
+#### Alarm templates: Configuration of behavioral anomaly alarms [ID_37148] [ID_37171] [ID_37670]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
 
@@ -50,7 +50,9 @@ To configure the behavioral anomaly detection for a particular (numeric) paramet
    > - "Smart" (i.e. anomaly monitoring as it existed up to now).
 
 > [!NOTE]
-> It is not possible to have both a suggestion event and an alarm generated for the same issue. However, it is possible to have suggestion events generated for e.g. downward level shifts, even if downward level shifts are disabled in the *Anomaly alarm settings* window.
+>
+> - It is not possible to have both a suggestion event and an alarm generated for the same issue. However, it is possible to have suggestion events generated for e.g. downward level shifts, even if downward level shifts are disabled in the *Anomaly alarm settings* window.
+> - Any settings configured in the *Anomaly alarm settings* window will only affect parameters that are being trended.
 
 ## Changes
 
@@ -121,6 +123,14 @@ In the *View* tab of a spectrum card, you can change the *RBW* (Resolution bandw
 
 Up to now, these could be modified by means of a drop-down box. From now on, they can be modified by means of "+" (plus) and "-" (minus) buttons.
 
+#### DataMiner Cube - Spectrum Analysis: New marker button 'Center to marker frequency' [ID_37705]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+
+In the *View* tab of a spectrum card, up to now, each marker listed in the *Markers* section had two buttons next to it: an *Edit* button (i.e. a pencil icon) and a *Delete* button (i.e. a cross icon). A *Center to marker frequency* button has now been added. Clicking this button will set the center frequency to the frequency of the marker in question.
+
+Also, the three buttons will now show a tooltip when you hover over them.
+
 ### Fixes
 
 #### Trending: Trend graph would disappear when panning [ID_37453]
@@ -187,3 +197,10 @@ When, in the Alarm Console, an alarm was duplicated, in some cases, its focus sc
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
 
 When you opened DataMiner Cube or when you opened a new alarm tab, an error could occur when parsing anomaly alarms.
+
+#### Alarm Console: Alarm tab listing all anomaly suggestions/alarms would incorrectly not include any outlier alarms [ID_37709]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+<!-- Not added to MR 10.4.0 -->
+
+When, in the top-right corner of the Alarm Console, you clicked the light bulb icon and then clicked the *X anomalies were found in your trend data* notification to open an alarm tab listing all anomaly suggestions/alarms, this tab would incorrectly not include any outlier alarms.

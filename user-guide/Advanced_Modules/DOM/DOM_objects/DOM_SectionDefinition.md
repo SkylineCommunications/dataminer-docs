@@ -72,7 +72,14 @@ There are also special types of `FieldDescriptors` that are purpose-made to stor
 
 - **GroupFieldDescriptor**: Available from DataMiner 10.3.3/10.4.0 onwards. Can be used to define that a field should contain the name of a DataMiner user group.
 
-- **UserFieldDescriptor**: Available from DataMiner 10.3.3/10.4.0 onwards. Can be used to define that a field should contain the name of a DataMiner user. There is a *GroupNames* property that can be used to define which groups the user can be a part of. 
+- **UserFieldDescriptor**: Available from DataMiner 10.3.3/10.4.0 onwards. Can be used to define that a field should contain the name of a DataMiner user. There is a *GroupNames* property that can be used to define which groups the user can be a part of.
+
+> [!IMPORTANT]
+> The ID of a `FieldDescriptor` should be unique within a DOM module.
+>
+> Currently, the uniqueness of the ID does not get enforced when a `SectionDefinition` is added or updated.
+>
+> Using `FieldDescriptors` that have the same ID in multiple `SectionDefinitions` might result in inconsistent behavior. When a `FieldDescriptor` with the same ID is used in a name definition, the name of the `DomInstance` might differ depending on the first section available in the `DomInstance` that has a value assigned for the `FieldDescriptor` with that ID. During the validation of changes to the `FieldDescriptor`, this might result in DataMiner incorrectly detecting that a `FieldDescriptor` is no longer in use, which may cause the removal of a descriptor that is actually still in use.
 
 > [!NOTE]
 > From DataMiner 10.2.3/10.3.0 onwards, the following `FieldDescriptors` can have **multiple values**:
@@ -133,7 +140,14 @@ The table below lists the properties of the `CustomSectionDefinition` object. (T
 
 - When you **update** a `SectionDefinition`:
 
-  - You cannot remove `FieldDescriptors` from a `SectionDefinition` when a `DomInstance` already uses that definition.
+  - Prior to DataMiner 10.3.12/10.4.0, you cannot remove `FieldDescriptors` from a `SectionDefinition` when a `DomInstance` already uses that definition.
+
+    From DataMiner 10.3.12/10.4.0 onwards<!-- RN 37395 -->, removing `FieldDescriptors` is not possible in the following cases only:
+
+    - When they have a value set on a section, for that `SectionDefinition`, on a `DomInstance`.
+    - When they are still used on the `DomManagerSettings` of the DOM manager. Either in the `DomInstanceNameDefinition`, or in one of the `FieldAliases`.
+    - When they are still used in a `DomInstanceNameDefinition` set on a `DomDefinition`.
+    - When they are still used in a `DomStatusSectionDefinitionLink` for that `SectionDefinition` on a `DomBehaviorDefinition`.
 
   - During an update, the properties of the previous and updated version of the `FieldDescriptor` are checked. The behavior of this check depends on the type of `FieldDescriptor`, but by default, the following properties can be changed freely:
 

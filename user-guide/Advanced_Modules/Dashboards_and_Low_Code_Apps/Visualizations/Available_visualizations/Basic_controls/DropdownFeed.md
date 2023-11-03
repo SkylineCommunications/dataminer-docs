@@ -11,11 +11,11 @@ This basic control allows the user to select an item in a dropdown list. The sel
 
 To configure the component:
 
-1. Apply the necessary data feeds. See [Applying a data feed](xref:Configuring_dashboard_components#applying-a-data-feed).
+1. Apply the necessary data feeds. See [Applying a data feed](xref:Apply_Data_Feed).
 
 1. Optionally, fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
 
-   - The default options available for all components. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
+   - The default options available for all components. See [Customizing the component layout](xref:Customize_Component_Layout).
 
    - *Label*: Allows you to specify text that should be displayed next to the dropdown box.
 

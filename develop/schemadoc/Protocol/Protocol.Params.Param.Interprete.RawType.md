@@ -68,7 +68,7 @@ In the following example, the value -3 will be saved in database as 2D 33:
 
 Values made up of different types.
 
-See Protocol.Params.Param.Interprete.[Others](xref:Protocol.Params.Param.Interprete.Others).
+See [Protocol.Params.Param.Interprete.Others](xref:Protocol.Params.Param.Interprete.Others).
 
 ### other
 

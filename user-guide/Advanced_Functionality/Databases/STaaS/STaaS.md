@@ -34,7 +34,7 @@ Advantages of DataMiner Storage as a Service (STaaS) include:
 
 1. Make sure you have at least **DataMiner CloudGateway 2.8.0** installed on the system. See [Upgrading nodes to the latest DxM versions](xref:Managing_cloud-connected_nodes#upgrading-nodes-to-the-latest-dxm-versions).
 
-1. Contact your Skyline representative or <staas@dataminer.services> to register you system to use STaaS.
+1. Contact your Skyline representative or <staas@dataminer.services> to register your system to use STaaS.
 
 1. Wait until you receive confirmation that the registration is completed.
 

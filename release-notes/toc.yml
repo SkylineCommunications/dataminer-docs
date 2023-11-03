@@ -20,7 +20,7 @@ items:
             topicUid: DataAggregator_2.0.0
             href: DataAggregator/toc.yml
           - name: Communication Gateway release notes
-            topicUid: CommunicationGateway_1.2.0
+            topicUid: CommunicationGateway_1.2.2
             href: CommunicationGateway/toc.yml
           - name: Model Host release notes
             topicUid: ModelHost_1.1.0
