@@ -5,7 +5,7 @@ uid: DataMiner_Compute_Requirements
 # DataMiner Compute Requirements
 
 > [!IMPORTANT]
-> If you use [DataMiner as a Service (DaaS)](xref:Deploying_a_DMS_in_the_cloud), your entire DataMiner setup is automatically configured for optimal performance.
+> If you use [DataMiner as a Service (DaaS)](xref:Creating_a_DMS_in_the_cloud), your entire DataMiner setup is automatically configured for optimal performance.
 
 To make sure your DataMiner System performs optimally, it is important that sufficient resources are available. The overview below shows the requirements for a DataMiner setup using the latest version of DataMiner, with self-hosted Cassandra and OpenSearch databases. If you are using [Storage as a Service](xref:STaaS), only the requirements for DataMiner itself will be relevant for you.
 
