@@ -1,4 +1,17 @@
 items:
+  - name: v10.5
+    topicUid: Cube_Main_Release_10.5.0
+    items:
+      - name: Main Release
+        topicUid: Cube_Main_Release_10.5.0
+        items:
+          - name: DataMiner Cube Main Release 10.5.0 - Preview
+            topicUid: Cube_Main_Release_10.5.0
+            items:
+              - name: New features - Preview
+                topicUid: Cube_Main_Release_10.5.0_new_features
+              - name: Changes - Preview
+                topicUid: Cube_Main_Release_10.5.0_changes
   - name: v10.4
     topicUid: Cube_Main_Release_10.4.0
     items:
