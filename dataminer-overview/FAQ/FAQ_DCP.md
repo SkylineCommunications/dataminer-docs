@@ -36,6 +36,76 @@ No, You will have full access to all dataminer.services features even with only 
   > [!NOTE]
   > At this time, we recommend running 1 to 3 Cloud Gateway nodes in a cluster. Running more Cloud Gateway nodes than that in a cluster would only add an unnecessary extra load on dataminer.services.
 
+## Storage as a Service (STaaS)
+
+### In STaaS, there's no longer mentioning of Cassandra and ElasticSearch/OpenSearch, it mainly just says ‘storage’?
+
+It's a service, so for the user this is completely transparent and you don't need to worry or care for it. The underlying technology is Azure Cosmos DB, a high performance cloud-native data storage solution from Microsoft.
+
+### What about resiliency?
+
+Our solution separately replicates your storage account synchronously across three Azure availability zones (i.e. a group of datacenters in a region, close enough to have a low-latency of < 2ms) in the primary region - each availability zone is a separate physical location in one region with independent power, cooling and networking  means you are protected against server, rack, driver failures and physical disasters (such as fire or flooding) within the data center.
+
+See also [Zone Redundant Storage](https://learn.microsoft.com/en-us/azure/storage/common/storage-redundancy#zone-redundant-storage).
+
+### How fast is the data being stored in the cloud database (our default config)?
+
+The speed is similar as an on-premises DataMiner System with Cassandra. There is a throttling mechanism configured as safety mechanism.
+
+### How long is the data stored in the cloud database?
+
+Equal configuration settings are being used as when having an on-premises DataMiner System, based on the 'storage period' and the concurrent number of alarms.
+
+### Can I download the data for archiving purposes?
+
+It's not allowed to access the data directly from the database (similar as with an on-premises DataMiner System), however the standard data-offload feature in DataMiner remains fully functional in case you would have to offload data e.g. for archiving/legal purposes.
+
+### What type of databases are used in the cloud?
+
+Azure Cosmos DB (NOSQL, fully managed DBaaS) & Azure Table storage.
+
+### What is the latency towards any Azure datacenter from within my location?
+
+Please visit [Azure Speed Test](https://azurespeedtest.azurewebsites.net/) to measure the latency.
+
+### What if I am in Government business, or located in a country with e.g. strict regulations?
+
+There are separated 'Azure Ecosystems' completely isolated from the 'commercial Azure', which are in cooperation with a local/in-country datacenter service provider that has pretty much the full Azure stack available, allowing Skyline Communications to deploy everything over there in a separate URL if that would be needed.
+
+### Where does MS Azure has active datacenters deployed?
+
+Please visit [Azure Geographies](https://azure.microsoft.com/en-us/explore/global-infrastructure/geographies/#overview) to find out.
+
+### What is the cost for the traffic billed by Azure?
+
+No additional cost applicable, our STaaS offering includes both the storage and upload/download Azure traffic costs.
+
+### How is the data migrated from an on-premises database to the Azure Cloud Stack?
+
+We support AUTO LIVE-MIGRATION of the data from a Cassandra cluster, a Cassandra single node, as well as from ElasticSearch. MySQL is not automatically supported and needs manual interaction.
+
+### What is the TCO of on-premises versus cloud storage?
+
+While it's very difficult to assess and also being different from region to region, as a rule of thumb we could say that a server having an initial cost of €10k purchase price, has an overall TCO of €5k over its lifespan of 5 years.
+
+### CapEx vs OpEx?
+
+CapEx investments depreciate over the useful life of the asset whereas cloud server expenses are considered as operational expenses that are deducted from costs supporting the day-to-day operations. From an accounting point of view, these are funds that are used at the end of the accounting period, or within the year they are purchased, meaning they can be deducted in full, from taxes the year they are incurred. CapEx are depreciated, meaning they are deducted over their expected useful life (e.g. an asset purchased for $10.000, for example, might depreciate by $2000 a year, over an expected five years of use).
+
+OpEx purchases, such as cloud storage, require only to pay for items you use. You can scale up or scale down as defined by your actual needs, rather than trying to predict how much capacity you will need in the distant future. It enables more cash at hand and creates a predictable recurring cost structure that aligns with your net income. Also, it's important to understand that capital expenditures typically have to go through several management approvals before they can be purchased. Operational expenditures on the other hand, can typically be procured as long as they are considered within the operating expense budget.
+
+### Isn't my on-premises datacenter more secure?
+
+No, looking at nowadays' volatile infrastructure and hardware costs, the quickly evolving technology, and the frequent cybersecurity threats, the likelihood that your on-premises datacenter is not able to keep up with the level of Microsoft, having a team of +3.500 globally distributed cybersecurity experts, is valid.
+
+### What is the ROI of cloud storage vs on-premises storage?
+
+Please visit [DataMiner STaaS: a game changer](https://community.dataminer.services/storage-as-a-service/).
+
+### Can I subscribe to DataMiner, including STaaS, using my own Microsoft Azure Marketplace credit balance?
+
+Yes, it's possible to subscribe directly through MS Marketplace. If interested, please get in touch with your [sales representative](https://community.dataminer.services/get-in-touch/sales-team/).
+
 ## Features
 
 ### How does live sharing work?
