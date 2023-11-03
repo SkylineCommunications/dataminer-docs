@@ -9,7 +9,10 @@ In this tutorial, you will learn how you can create a GQI custom operator that c
 Expected duration: 15 minutes.
 
 > [!TIP]
-> See also: [Configuring a custom operator for a query](xref:GQI_Custom_Operator)
+> See also:
+>
+> - [Configuring a custom operator for a query](xref:GQI_Custom_Operator)
+> - [Kata #5: Transform data with GQI](https://community.dataminer.services/courses/kata-5/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 > [!NOTE]
 > This tutorial uses DataMiner version 10.3.2.
