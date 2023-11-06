@@ -69,7 +69,7 @@ If a ``MigrationStatus`` is stuck in the ``InProgress`` state, you will need to 
 
 When a new DataMiner Agent is installed, the used storage type will depend on when Profile Manager starts up for the first time.
 
-- If DataMiner is installed with the 10.0.7 installer and Profile Manager is used, XML storage will be used. An indexing database is not yet supported as a storage type for profiles in DataMiner 10.0.7. After you have upgraded this DataMiner Agent to DataMiner 10.0.8 or later, it will continue to use XML storage until you trigger the migration.
+- If DataMiner is installed with the 10.0 installer and Profile Manager is used, XML storage will be used. An indexing database is not yet supported as a storage type for profiles in DataMiner 10.0 . After you have upgraded this DataMiner Agent to DataMiner 10.2 or later, it will continue to use XML storage until you trigger the migration.
 
 - If DataMiner is installed with the 10.4.0 installer and Profile Manager is used, indexing database storage will be used.
 
