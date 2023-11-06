@@ -49,6 +49,15 @@ A new interactive Automation script, *Verizon DCATGQI AddSubscription*, has been
 
 A new Automation script, *Verizon DCATGQIExecutionTable*, has been added. It functions as an ad hoc data source for the DCAT low-code app, in order to display Live and Live History data.
 
+#### New Heartbeat Table [ID_37760]
+
+A new Heartbeat Table is now available, in which information about heartbeats is displayed.
+
+In the existing Rules Table, two new parameters have been added for this:
+
+- *Rule Type*: Can be set to *Regular* for traps that should be included in the Processed Messages Table, or *Heartbeat* for trap that should be included in the Heartbeat Table.
+- *Heartbeat Interval*: If *Rule Type* is set to *Heartbeat*, you can configure this parameter with an interval of time. This interval will be compared with the *Time Since Last Heartbeat* parameter. If the time since the last heartbeat is greater than the configured interval, *Heartbeat Status* will be displayed as *FAIL* in the Heartbeat Table.
+
 ## Changes
 
 ### Enhancements
