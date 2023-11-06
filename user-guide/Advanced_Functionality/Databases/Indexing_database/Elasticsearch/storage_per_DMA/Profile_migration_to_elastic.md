@@ -28,7 +28,7 @@ To migrate the profiles, you will need to use the SLNetClientTest tool. Note tha
 >
 > - Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 > - All Profile Manager instances in the cluster will keep working during the migration. But any creates/updates done during the migration will no longer be migrated.
-> - After migration the storage type will still be XML, to switch to Elastic, press the *Start using Elastic* button.
+> - After migration the storage type will still be XML, to switch to indexing database storage, press the *Start using Elastic* button.
 
 1. Connect to the DMS using the *SLNetClientTest* tool:
 
@@ -52,7 +52,7 @@ To migrate the profiles, you will need to use the SLNetClientTest tool. Note tha
 
    - The profiles objects will be written to the indexing database.
 
-   - When the migration for profiles is completed, the configuration will not switch to indexing database storage. To switch to Elastic, press the *Start using Elastic* button.
+   - When the migration for profiles is completed, the configuration will not switch to indexing database storage. To switch to indexing database storage, press the *Start using Elastic* button.
 
 > [!NOTE]
 >
@@ -61,7 +61,7 @@ To migrate the profiles, you will need to use the SLNetClientTest tool. Note tha
 
 ### Troubleshooting
 
-If the migration should fail for any reason, the migration status object in the SLNetClientTest tool window will get a red background color. The ``SLMigrationManager.txt`` and ``SLProfileManager.txt`` log files will contain more information. Profile Manager will not switch the configuration, so XML storage will still be used after a failed migration.
+If the migration should fail for any reason, the migration status object in the SLNetClientTest tool window will get a red background color. The ``SLMigrationManager.txt`` and ``SLProfileManager.txt`` log files will contain more information.
 
 If a ``MigrationStatus`` is stuck in the ``InProgress`` state, you will need to cancel the migration and trigger the migration again. You can do so with the *Cancel Migration* button in the *ProfileManger XML to Elastic* section of the SLNetClientTest tool window.
 
@@ -71,13 +71,15 @@ When a new DataMiner Agent is installed, the used storage type will depend on wh
 
 - If DataMiner is installed with the 10.0.7 installer and Profile Manager is used, XML storage will be used. An indexing database is not yet supported as a storage type for profiles in DataMiner 10.0.7. After you have upgraded this DataMiner Agent to DataMiner 10.0.8 or later, it will continue to use XML storage until you trigger the migration.
 
-- If DataMiner is installed with the 10.4.0 installer and Profile Manager is used, Elastic storage will be used.
+- If DataMiner is installed with the 10.4.0 installer and Profile Manager is used, indexing database storage will be used.
 
 - When you add a new DataMiner Agent to an existing cluster, the same behavior applies as mentioned above.
 
 ## Checking the storage type used by a DataMiner Agent
 
 If you want to know which storage type a DataMiner Agent is currently using, open the migration window as detailed under [Migrating from XML to the indexing database](#migrating-from-xml-to-the-indexing-database).
+
+The current storage type is displayed in the *ProfileManger XML to Elastic* section, under the *Cancel Migration* button stating "Currently using ..." .
 
 ## Limitations and differences with XML storage
 
