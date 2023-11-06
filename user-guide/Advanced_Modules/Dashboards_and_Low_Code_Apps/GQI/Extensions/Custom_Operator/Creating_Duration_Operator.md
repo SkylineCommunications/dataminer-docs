@@ -15,7 +15,7 @@ Expected duration: 15 minutes.
 > - [Kata #5: Transform data with GQI](https://community.dataminer.services/courses/kata-5/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 > [!NOTE]
-> This tutorial uses DataMiner version 10.3.2.
+> This tutorial uses DataMiner version 10.3.9.
 
 ## Prerequisites
 
