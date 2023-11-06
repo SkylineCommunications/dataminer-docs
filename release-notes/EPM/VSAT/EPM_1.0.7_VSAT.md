@@ -49,9 +49,9 @@ A new interactive Automation script, *Verizon DCATGQI AddSubscription*, has been
 
 A new Automation script, *Verizon DCATGQIExecutionTable*, has been added. It functions as an ad hoc data source for the DCAT low-code app, in order to display Live and Live History data.
 
-#### New Heartbeat Table [ID_37760]
+#### Generic Trap Processor: New Heartbeat Table [ID_37760]
 
-A new Heartbeat Table is now available, in which information about heartbeats is displayed.
+In the Generic Trap Processor connector, a new Heartbeat Table is now available, in which information about heartbeats is displayed.
 
 In the existing Rules Table, two new parameters have been added for this:
 
