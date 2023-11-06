@@ -32,9 +32,9 @@ Example:
 
 #### Reconnect mechanism when gNMI channel goes down and there is an active subscription [ID_37411]
 
-Up to now, when there was an active subscription and the connection between the CommunicationGateway and the gNMI service would go down, the subscription would not be automatically created again once the connection could be restored.
+Previously, when there was an active subscription and the connection between the CommunicationGateway and the gNMI service went down, the subscription was not automatically created again once the connection could be restored. Now a reconnect mechanism with exponential backoff has been implemented.
 
-From now on, there is a reconnect mechanism with exponential backoff in place. Meaning that once the connection goes down, it will try to reconnect after one second. In case it did not succeed, it will try again in two seconds followed by four seconds, eight seconds and so on. There is a maximum waiting time of five minutes between two reconnects so if the exponential backoff would be more than five, in any case it will continue to try to set up connection again after five minutes.
+This means that when the connection goes down, there will now be an attempt to reconnect after one second. In case this does not succeed, there will be another attempt in two seconds, followed by another in four seconds, in eight seconds, and so on. There is a maximum waiting time of five minutes between two reconnects, so in any case CommunicationGateway will continue to try to set up the connection again after five minutes.
 
 > [!NOTE]
 > The reconnect mechanism will only trigger when there is an active subscription. If there are no active subscriptions and the connection goes down, it will remain down until a new request is sent.
