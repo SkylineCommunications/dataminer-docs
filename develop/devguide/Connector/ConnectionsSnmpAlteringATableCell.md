@@ -8,8 +8,8 @@ Different approaches are possible to implement this functionality in a protocol.
 
 > [!NOTE]
 >
-> - This section assumes some knowledge about Quick Actions. For more information, see Quick actions.
-> - The Protocol Development Guide Companion Files include example protocols illustrating the different methods to alter a table cell discussed next.
+> - This section assumes some knowledge about Quick Actions. For more information, see [QActions](xref:LogicQActions).
+> - The [Protocol Development Guide Companion Files](https://community.dataminer.services/documentation/protocol-development-guide-companion-files/) include example protocols illustrating the different methods to alter a table cell discussed next.
 
 ## snmpSetAndGet
 

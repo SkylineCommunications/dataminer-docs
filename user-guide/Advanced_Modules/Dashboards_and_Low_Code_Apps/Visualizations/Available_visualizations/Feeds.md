@@ -6,22 +6,6 @@ uid: Feeds
 
 Feeds can be added to a dashboard to allow a user to select a DataMiner object for which information can be displayed in other components.
 
-The following types of feeds are available:
-
-- [EPM feed](xref:DashboardCPEFeed)
-
-- [List](xref:DashboardListFeed)
-
-- [Parameter feed](xref:DashboardParameterFeed)
-
-- [Time range](xref:DashboardTimeRangeFeed)
-
-- [Tree](xref:DashboardTreeFeed)
-
-- [Trigger](xref:DashboardTriggerFeed)
-
-- [Query filter](xref:DashboardQueryFilterFeed)
-
 > [!NOTE]
 >
 > - Feeds can be pre-configured in dashboard URLs. See [Specifying data input in a dashboard URL](xref:Specifying_data_input_in_a_dashboard_URL).

@@ -19,7 +19,7 @@ To configure the component:
 
   1. Optionally, fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
 
-     - The default options available for all components. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
+     - The default options available for all components. See [Customizing the component layout](xref:Customize_Component_Layout).
 
      - *Show label*: Determines whether the names of the chain filters are displayed next to the selection boxes in the component.
 
@@ -35,6 +35,6 @@ To configure the component:
 
   1. Optionally, fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
 
-     - The default options available for all components. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
+     - The default options available for all components. See [Customizing the component layout](xref:Customize_Component_Layout).
 
      - *Show label*: Determines whether the names of the chain filters are displayed next to the selection boxes in the component.

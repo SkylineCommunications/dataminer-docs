@@ -14,7 +14,7 @@ To configure this component:
 
 In the *Component \> Layout* tab, the following options can be configured:
 
-- The default options available for all components. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
+- The default options available for all components. See [Customizing the component layout](xref:Customize_Component_Layout).
 
 - *Image size*: Available from DataMiner 10.0.11 onwards. Can be set to:
 

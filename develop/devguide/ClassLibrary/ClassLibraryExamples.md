@@ -275,4 +275,4 @@ serviceConfig.Views.Add(CreateSdfTestViewIfNotExists(myDms));
 var createdServiceId = myAgent.CreateService(serviceConfig);
 ```
 
-You can also find an example protocol “SLC SDF Services” in the Protocol Development Guide Companion Files.
+You can also find an example protocol “SLC SDF Services” in the [Protocol Development Guide Companion Files](https://community.dataminer.services/documentation/protocol-development-guide-companion-files/).

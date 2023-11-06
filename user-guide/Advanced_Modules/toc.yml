@@ -259,7 +259,7 @@ items:
           - name: Managing dashboard folders
             topicUid: Managing_dashboard_folders
           - name: Creating and configuring dashboards
-            topicUid: Creating_and_configuring_dashboards
+            topicUid: Creating_a_completely_new_dashboard
             items:
               - name: Creating a completely new dashboard
                 topicUid: Creating_a_completely_new_dashboard
@@ -275,8 +275,6 @@ items:
                 topicUid: Changing_dashboard_settings
               - name: Configuring the dashboard layout
                 topicUid: Configuring_the_dashboard_layout
-              - name: Configuring dashboard components
-                topicUid: Configuring_dashboard_components
               - name: Embedding a dashboard component in a webpage or Visio drawing
                 topicUid: Embedding_a_dashboard_component_in_a_webpage_or_Visio_drawing
           - name: Sharing a dashboard
@@ -307,14 +305,16 @@ items:
           - name: Editing a low-code application
             topicUid: Editing_custom_apps
           - name: Configuring low-code applications
-            topicUid: LowCodeApps_Custom_Icon
+            topicUid: LowCodeApps_Layout
             items:
-              - name: Customizing the icon and color of an app
-                topicUid: LowCodeApps_Custom_Icon
+              - name: Configuring the low-code app layout
+                topicUid: LowCodeApps_Layout
               - name: Configuring a page of a low-code app
                 topicUid: LowCodeApps_page_config
               - name: Configuring a panel of a low-code app
                 topicUid: LowCodeApps_panel_config
+              - name: Changing low-code app settings
+                topicUid: Changing_low-code_app_settings
               - name: Configuring the header bar of a low-code app page
                 topicUid: LowCodeApps_header_config
               - name: Configuring low-code app events
@@ -342,40 +342,51 @@ items:
                 topicUid: Tutorial_Apps_Managing_Pages
               - name: Using the stepper component in a low-code app
                 topicUid: TutorialStepper
+      - name: Configuring components
+        topicUid: Configuring_components
+        items:
+          - name: Applying a visualization
+            topicUid: Apply_Visualization
+          - name: Applying a data feed
+            topicUid: Apply_Data_Feed
+          - name: Customizing the component layout
+            topicUid: Customize_Component_Layout
+          - name: Deleting a component
+            topicUid: Delete_Component
       - name: Available visualizations
         topicUid: Available_visualizations
         items:
           - name: General
-            topicUid: General
+            topicUid: DashboardButton
             items:
-              - name: Form
-                topicUid: DashboardForm
-              - name: Block
-                topicUid: DashboardBlock
               - name: Button
                 topicUid: DashboardButton
               - name: Button panel
                 topicUid: DashboardButtonPanel
-              - name: Clock (analog)
-                topicUid: DashboardClockAnalog
-              - name: Clock (digital)
-                topicUid: DashboardClockDigital
-              - name: Generic map
-                topicUid: DashboardGenericMap
-              - name: Group
-                topicUid: DashboardGroup
-              - name: Icon
-                topicUid: DashboardIcon
-              - name: Image
-                topicUid: DashboardImage
-              - name: Stepper
-                topicUid: DashboardStepper
               - name: Text
                 topicUid: DashboardText
+              - name: Clock (digital)
+                topicUid: DashboardClockDigital
+              - name: Form
+                topicUid: DashboardForm
+              - name: Image
+                topicUid: DashboardImage
+              - name: Icon
+                topicUid: DashboardIcon
+              - name: Stepper
+                topicUid: DashboardStepper
               - name: Web
                 topicUid: DashboardWeb
+              - name: Generic map
+                topicUid: DashboardGenericMap
+              - name: Clock (analog)
+                topicUid: DashboardClockAnalog
+              - name: Block
+                topicUid: DashboardBlock
+              - name: Group
+                topicUid: DashboardGroup
           - name: States and values
-            topicUid: States_and_values
+            topicUid: DashboardState
             items:
               - name: State
                 topicUid: DashboardState
@@ -388,29 +399,29 @@ items:
               - name: State timeline
                 topicUid: DashboardStateTimeline
           - name: Tables
-            topicUid: Tables
+            topicUid: DashboardParameterTable
             items:
-              - name: Alarm table
-                topicUid: DashboardAlarmTable
               - name: Parameter table
                 topicUid: DashboardParameterTable
+              - name: Alarm table
+                topicUid: DashboardAlarmTable
               - name: Pivot table
                 topicUid: DashboardPivotTable
               - name: Table
                 topicUid: DashboardTable
           - name: Charts
-            topicUid: Charts
+            topicUid: ColumnAndBarChart
             items:
               - name: Column & Bar chart
                 topicUid: ColumnAndBarChart
-              - name: Bar chart (horizontal)
-                topicUid: BarChartHorizontal
               - name: Line & area chart
                 topicUid: LineAndAreaChart
               - name: Pie & donut chart
                 topicUid: PieAndDonutChart
+              - name: Bar chart (horizontal)
+                topicUid: BarChartHorizontal
           - name: Other
-            topicUid: Other
+            topicUid: DashboardNodeEdgeGraph
             items:
               - name: Node edge graph
                 topicUid: DashboardNodeEdgeGraph
@@ -427,22 +438,22 @@ items:
           - name: Feeds
             topicUid: Feeds
             items:
-              - name: EPM feed
-                topicUid: DashboardCPEFeed
-              - name: Dropdown feed
-                topicUid: DashboardDropdownFeed
-              - name: List feed
-                topicUid: DashboardListFeed
-              - name: Parameter feed
-                topicUid: DashboardParameterFeed
               - name: Time range feed
                 topicUid: DashboardTimeRangeFeed
+              - name: List feed
+                topicUid: DashboardListFeed
               - name: Tree feed
                 topicUid: DashboardTreeFeed
-              - name: Trigger feed
-                topicUid: DashboardTriggerFeed
+              - name: Parameter feed
+                topicUid: DashboardParameterFeed
+              - name: EPM feed
+                topicUid: DashboardCPEFeed
               - name: Query filter feed
                 topicUid: DashboardQueryFilterFeed
+              - name: Trigger feed
+                topicUid: DashboardTriggerFeed
+              - name: Dropdown feed
+                topicUid: DashboardDropdownFeed
           - name: Basic controls
             topicUid: DashboardDropdown
             items:
@@ -551,6 +562,8 @@ items:
                     items:
                       - name: Creating a minus operator
                         topicUid: Creating_Minus_Operator
+                      - name: Creating a duration operator
+                        topicUid: Creating_Duration_Operator
                       - name: Optimizing your custom operator
                         topicUid: Custom_Operator_Tutorial
               - name: API reference

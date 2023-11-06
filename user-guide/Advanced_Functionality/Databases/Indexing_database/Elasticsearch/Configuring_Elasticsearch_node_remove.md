@@ -5,7 +5,7 @@ uid: Configuring_Elasticsearch_node_remove
 # Removing an Elasticsearch cluster node
 
 > [!IMPORTANT]
-> Elasticsearch is **only supported up to version 6.8**. We therefore recommend using [DataMiner Storage as a Service](xref:STaaS) instead, or if you want to continue using self-hosted storage, using [dedicated clustered storage](xref:Dedicated_clustered_storage) with OpenSearch or the Amazon OpenSearch Service on AWS.
+> Elasticsearch is **only supported up to version 6.8**. We therefore recommend using [DataMiner Storage as a Service](xref:STaaS) instead, or if you want to continue using self-hosted storage, using [dedicated clustered storage](xref:Dedicated_clustered_storage) with OpenSearch.
 
 ## Prerequisites
 

@@ -11,7 +11,7 @@ This chart can be used to display the elements or services in a view that caused
 
 To configure the component:
 
-1. Apply a view data feed. See [Applying a data feed](xref:Configuring_dashboard_components#applying-a-data-feed).
+1. Apply a view data feed. See [Applying a data feed](xref:Apply_Data_Feed).
 
    From DataMiner 10.0.13 onwards, this component also supports queries as data input. See [Creating a GQI query](xref:Creating_GQI_query).
 
@@ -42,7 +42,7 @@ To configure the component:
 
 1. Optionally, fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available if the chart is not used with queries data input:
 
-   - The default options available for all components. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
+   - The default options available for all components. See [Customizing the component layout](xref:Customize_Component_Layout).
 
    - *Advanced* \> *Include severities*: Allows you to exclude certain severity levels by clearing the checkboxes for those levels.
 
@@ -60,7 +60,7 @@ To configure the component:
 
    The following options are available if the chart is used with queries data input:
 
-   - The default options available for all components. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
+   - The default options available for all components. See [Customizing the component layout](xref:Customize_Component_Layout).
 
    - *Advanced \> Chart layout*: Available from DataMiner 10.0.13 onwards. Allows you to choose how the dimensions of the bars are determined. Possible values:
 

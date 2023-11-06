@@ -16,7 +16,7 @@ In the *Component* > *Settings* tab, the following settings can be configured fo
 
 In the *Component \> Layout* tab, the following options can be configured:
 
-- The default options available for all components. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
+- The default options available for all components. See [Customizing the component layout](xref:Customize_Component_Layout).
 
 - *Show seconds*: Select this option to have the clock display the seconds.
 
