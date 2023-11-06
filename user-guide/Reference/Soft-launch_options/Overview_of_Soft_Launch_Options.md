@@ -133,7 +133,7 @@ Enables the use of DOM data in dashboards and applications.
 Enables dynamic units in Data Display in DataMiner Cube and the Monitoring app. If you want to test this feature for one DataMiner Cube session only, use the argument `SOFTLAUNCH_DYNAMICUNITS=Enabled`.
 
 - **Minimum version**: 10.0.12
-- **Estimated release version**: 10.3.12
+- **Estimated release version**: To be determined.
 
 ### ElasticTicketing
 
@@ -285,7 +285,7 @@ Enables the button panel component in the Dashboards app.
 Enables the grid component in the Dashboards app.
 
 - **Minimum version**: 10.2.12
-- **Estimated release version**: 10.3.12
+- **Estimated release version**: 10.4.1
 
 ### ReportsAndDashboardsExport
 
@@ -299,7 +299,7 @@ Enables the export to PDF button within the Dashboards app itself. Creating PDFs
 Enables a new Maps component in the Dashboards app and the Low-Code Apps.
 
 - **Minimum version**: 10.3.2
-- **Estimated release version**: 10.3.12
+- **Estimated release version**: 10.4.2
 
 ### ReportsAndDashboardsGuides
 
@@ -325,7 +325,7 @@ Enables the Query Filter component in the Dashboards app.
 Enables the Timeline component in the Dashboards app.
 
 - **Minimum version**: 10.1.10
-- **Estimated release version**: 10.3.12
+- **Estimated release version**: 10.4.1
 
 ### ResourceList
 
