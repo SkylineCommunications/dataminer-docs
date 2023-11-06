@@ -9,6 +9,7 @@ The following example shows how an M-to-N relation can be modeled for use in a t
 Suppose we want to create a tree control that lists all services and the audio and video streams that are part of the services. A service can consist of multiple audio and video streams and an audio (or video) stream can belong to multiple services. This is a so-called many-to-many (M:N) relation. This can be implemented as follows:
 
 1. Create three tables:
+
     - Services (ID 1000): Contains the services
 
       ```xml
@@ -26,7 +27,7 @@ Suppose we want to create a tree control that lists all services and the audio a
         </Param>
       ```
 
-    - - Audio (ID 4000): Contains the audio streams
+    - Audio (ID 4000): Contains the audio streams
 
        ```xml
         <Param id="4000" trending="false">
@@ -63,6 +64,7 @@ Suppose we want to create a tree control that lists all services and the audio a
         ```
 
 1. Next, create the following two tables:
+
     - Audio Links (ID: 3000): Links the audio streams to the services they are part of.
 
         ```xml
@@ -99,8 +101,9 @@ Suppose we want to create a tree control that lists all services and the audio a
         </Param>       
         ```
 
-1. Finally, create two additional intermediate tables which are required for the tree control.
-	- Link Type (ID: 2000): Contains the different child node options for the Services (Audio / Video).
+1. Finally, create two additional intermediate tables, which are required for the tree control.
+
+   - Link Type (ID: 2000): Contains the different child node options for the services (Audio/Video).
 
       ```xml
         <Param id="2000" trending="false">
@@ -118,32 +121,32 @@ Suppose we want to create a tree control that lists all services and the audio a
         </Param>
       ```
 
-	- Link Type With Service (ID: 7000): Links the Services with the correct Link Type.
-	
-		```xml
-		<Param id="7000" trending="false">
-			<Name>tblLink_TypeWithService</Name>
-			<Description>Link Type With Service</Description>
-			<Type>array</Type>
-			<ArrayOptions index="0" displayColumn="0">
-				<ColumnOption idx="0" pid="7001" type="autoincrement" options=""/>
-				<ColumnOption idx="1" pid="7002" type="retrieved" options=";foreignKey=1000"/>
-				<ColumnOption idx="2" pid="7003" type="retrieved" options=";foreignKey=2000"/>
-			</ArrayOptions>
-			<Display>
+   - Link Type With Service (ID: 7000): Links the services with the correct link type.
+
+      ```xml
+      <Param id="7000" trending="false">
+         <Name>tblLink_TypeWithService</Name>
+         <Description>Link Type With Service</Description>
+         <Type>array</Type>
+         <ArrayOptions index="0" displayColumn="0">
+            <ColumnOption idx="0" pid="7001" type="autoincrement" options=""/>
+            <ColumnOption idx="1" pid="7002" type="retrieved" options=";foreignKey=1000"/>
+            <ColumnOption idx="2" pid="7003" type="retrieved" options=";foreignKey=2000"/>
+         </ArrayOptions>
+         <Display>
             <RTDisplay>true</RTDisplay>
-          </Display>
-        </Param>
-		```
-	
+         </Display>
+      </Param>
+      ```
+
 1. Define the following relations:
 
     ```xml
     <Relations>
-		<Relation path="1000;3000;4000" options="includeInAlarms:topology1"/>
-		<Relation path="1000;5000;6000" options="includeInAlarms:topology2"/>
-		<Relation path="1000;7000;2000" options="includeInAlarms:topology3"/>
-	</Relations>
+      <Relation path="1000;3000;4000" options="includeInAlarms:topology1"/>
+      <Relation path="1000;5000;6000" options="includeInAlarms:topology2"/>
+      <Relation path="1000;7000;2000" options="includeInAlarms:topology3"/>
+   </Relations>
     ```
 
     The table hierarchy of the tree control is then defined as follows:
@@ -175,6 +178,6 @@ Suppose we want to create a tree control that lists all services and the audio a
 
     The resulting tree control looks like this:
 
-    ![alt text](../../images/TreeControlMNTablesOverview.png "Overview of tables with example data")
+    ![Overview of tables with example data](../../images/TreeControlMNTablesOverview.png "Overview of tables with example data")
 
-    ![alt text](../../images/TreeControlMtoNTree.png "Overview of resulting tree control")
+    ![Overview of resulting tree control](../../images/TreeControlMtoNTree.png "Overview of resulting tree control")
