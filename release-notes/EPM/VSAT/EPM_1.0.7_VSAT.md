@@ -58,6 +58,10 @@ In the existing Rules Table, two new parameters have been added for this:
 - *Rule Type*: Can be set to *Regular* for traps that should be included in the Processed Messages Table, or *Heartbeat* for trap that should be included in the Heartbeat Table.
 - *Heartbeat Interval*: If *Rule Type* is set to *Heartbeat*, you can configure this parameter with an interval of time. This interval will be compared with the *Time Since Last Heartbeat* parameter. If the time since the last heartbeat is greater than the configured interval, *Heartbeat Status* will be displayed as *FAIL* in the Heartbeat Table.
 
+#### Skyline EPM Platform PLM: Default alarm template [ID_37789]
+
+A default alarm template is now available for the Skyline EPM Platform PLM connector.
+
 ## Changes
 
 ### Enhancements
@@ -130,3 +134,7 @@ In addition, the logic in the connector has been updated to allow the addition o
 #### Verizon iDirect Evolution Platform Collector: Linecard event types not collected [ID_37691]
 
 Because of a change to the remote event logic, it could occur that some linecard event types were not collected. The way linecards are handled has been updated to resolve this issue.
+
+#### Skyline EPM Platform PLM: Auto-delete logic adjusted [ID_37790]
+
+In some cases, it could occur that the auto-delete logic failed to function as intended, leading to inconsistent data retention in the PLM Overview and PLM Records tables. The auto-delete logic has now been adjusted to ensure that the tables are consistently cleaned up according to the configured auto-delete delay parameter.
