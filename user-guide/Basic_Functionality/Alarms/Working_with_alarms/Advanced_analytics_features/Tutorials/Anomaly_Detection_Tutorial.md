@@ -8,6 +8,8 @@ This tutorial illustrates DataMiner's [Behavioral Anomaly Detection](xref:Workin
 
 By default, behavioral anomaly detection is active on trended parameters. It will monitor the parameters in real time and notify users about any detected anomalies. The feature models the behavior of a parameter based on its recent history. The tutorial will make use of [history sets](xref:How_to_use_history_sets_on_a_protocol_parameter) to quickly simulate a parameter with historical trend data. Trending is activated by default on the parameters used in this tutorial.
 
+Estimated duration: 45 minutes.
+
 > [!TIP]
 > For more information, such as technical limitations to anomaly detection, see [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection).
 
