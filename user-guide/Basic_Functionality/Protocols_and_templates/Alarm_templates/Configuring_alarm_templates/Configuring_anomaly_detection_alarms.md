@@ -4,16 +4,16 @@ uid: Configuring_anomaly_detection_alarms
 
 # Configuring anomaly detection alarms for specific parameters
 
-From DataMiner 10.0.3 onwards, you can enable alarm monitoring on specific types of anomalies for parameters in an alarm template. If you enable this, an alarm is generated whenever an anomaly of the relevant type is detected for those parameters. From DataMiner 10.2.0 [CU21]/10.3.0 [CU9]/10.3.12 onwards<!--RN 37171-->, you can choose whether an alarm or a suggestion event is generated for a specific type of anomaly detection, e.g. have suggestions appear for downward level shifts while alarms occur for upward level shifts.
+From DataMiner 10.0.3 onwards, you can enable alarm monitoring on specific types of anomalies for parameters in an alarm template. If you enable this, an alarm is generated whenever an anomaly of the relevant type is detected for those parameters.
 
 > [!NOTE]
 > Suggestion events are cleared two hours after their creation time or their last update time. You can view them by creating a suggestion event tab in the Alarm Console. See [Adding and removing alarm tabs in the Alarm Console](xref:ChangingTheAlarmConsoleLayout#adding-and-removing-alarm-tabs-in-the-alarm-console).
 
-## [From DataMiner 10.2.0 [CU21]/10.3.0 [CU9]/10.3.12 onwards](#tab/tabid-1)
+## [From DataMiner 10.3.12/10.4.0 onwards](#tab/tabid-1)
 
 To configure anomaly detection alarms for specific parameters<!--RN 37171 + 37148-->:
 
-1. In the alarm template editor, click the *Anomalies* button for the parameter in question. By default, this is set to *Disabled*.
+1. In the alarm template editor, click the button in the *Anomalies* column for the parameter in question. By default, this is set to *Disabled*.
 
 1. In the *Anomaly Alarm Settings* pop-up window, you can select one of the preset options or configure the anomaly alarm settings according to your preference.
 
@@ -51,17 +51,23 @@ To configure anomaly detection alarms for specific parameters<!--RN 37171 + 3714
         > [!NOTE]
         > If you, for example, select the checkbox next to *Slope increases* but clear the checkbox next to *Slope decreases*, an alarm will be generated when an anomalous slope increase is detected but a suggestion event will be generated if an anomalous slope decrease is detected. It is not possible to generate both an alarm and a suggestion event for the same type of anomaly detection.
 
-     1. For anomaly detection of types *Level shift* and *Outlier*, specify when an alarm should occur.
+     1. For anomaly detection of types *Level shift* and *Outlier*, you can set custom alarm thresholds that determine when an alarm should occur. The dropdown menu offers the following options:
 
         - **Smart**: Alarm thresholds are set based on what DataMiner Analytics determines to be an anomaly. This is the default option.
 
         - **Relative**: Alarm thresholds are set as a percentage, which represents the delta with the baseline value.
 
+          For example, if you input "30" for the *Major* alarm severity in the case of *Outlier > Upward spikes*, a 50% upward spike will trigger a *Major* alarm as it surpasses the predefined 30%. A 20% spike, such as 100 to 120, will not trigger any alarms or suggestion events since it is below the set 30%.
+
         - **Absolute**: Alarm thresholds are set as an absolute value, which represents the delta with the baseline value.
+
+          For example, if you input "40" for the *Major* alarm severity in the case of *Outlier > Upward spikes*, a parameter jump from 100 to 150 will trigger a *Major* alarm as it surpasses the predefined 40. A jump from 100 to 130, however, will not trigger any alarms or suggestion events since it is below the set 40.
+
+        ![Alarm thresholds](~/user-guide/images/Anomaly_Alarm_Settings.png)<br/>*Anomaly Alarm Settings pop-up window in DataMiner 10.3.12*
 
 1. Click *Close* in the lower right corner to exit the *Anomaly Alarm Settings* pop-up window.
 
-   In the alarm template editor, depending on your changes, the *Anomalies* button will now indicate the level of anomaly monitoring that has been configured:
+   In the alarm template editor, depending on your changes, the button in the *Anomalies* column will now indicate the level of anomaly monitoring that has been configured:
 
    - **Disabled**: No anomaly alarms are generated for this parameter.
 
@@ -71,7 +77,46 @@ To configure anomaly detection alarms for specific parameters<!--RN 37171 + 3714
 
 1. To save your changes, click *OK* or *Apply* in the lower right corner of the alarm template editor.
 
-## [Prior to DataMiner 10.2.0 [CU21]/10.3.0 [CU9]/10.3.12](#tab/tabid-2)
+## [DataMiner versions using automatic client updates, prior to DataMiner 10.3.12/10.4.0](#tab/tabid-2)
+
+To configure anomaly detection alarms for specific parameters<!--RN 37171 + 37148-->:
+
+1. In the alarm template editor, click the button in the *Anomalies* column for the parameter in question. By default, this is set to *Disabled*.
+
+1. In the *Anomaly Alarm Settings* pop-up window, you can select one of the preset options or configure the anomaly alarm settings according to your preference.
+
+   > [!NOTE]
+   > The configured anomaly alarm settings only take effect for trended parameters<!--RN 37670-->.
+
+   - To choose one of the preset options, click the *Select preset* selection box in the top-left corner:
+
+     - **All disabled**: No anomaly alarms are generated.
+
+     - **All smart**: Anomaly alarms are generated based on what DataMiner Analytics determines to be an anomaly.
+
+   - To customize the anomaly alarm settings, click the toggle buttons next to the specific types of anomaly detection:
+
+     - *Level shift*: Enables or disables alarms for level shift anomalies.
+
+     - *Trend change*: Enables or disables alarms for trend changes.
+
+     - *Variance change*: Enables or disables alarms for variance changes.
+
+     - *Flatline*: Enables or disables alarms for flatline anomalies. Available from DataMiner 10.2.6/10.3.0 onwards.
+
+1. Click *Close* in the lower right corner to exit the *Anomaly Alarm Settings* pop-up window.
+
+   In the alarm template editor, depending on your changes, the button in the *Anomalies* column will now indicate the level of anomaly monitoring that has been configured:
+
+   - **Disabled**: No anomaly alarms are generated for this parameter.
+
+   - **Customized**: You have customized the anomaly alarm settings for this parameter.
+
+   - **Smart**: Anomaly alarms are generated for this parameter based on what DataMiner Analytics determines to be an anomaly.
+
+1. To save your changes, click *OK* or *Apply* in the lower right corner of the alarm template editor.
+
+## [Prior to DataMiner 10.3.12/10.4.0](#tab/tabid-3)
 
 To enable or disable different types of anomaly alarm monitoring:
 
