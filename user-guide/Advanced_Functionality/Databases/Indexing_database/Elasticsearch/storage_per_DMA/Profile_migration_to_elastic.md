@@ -28,7 +28,7 @@ To migrate the profiles, you will need to use the SLNetClientTest tool. Note tha
 >
 > - Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 > - All Profile Manager instances in the cluster will keep working during the migration. But any creates/updates done during the migration will no longer be migrated.
-> - After migration the storage type will still be XML, to switch to indexing database storage, press the *Start using Elastic* button.
+> - After migration the storage type will still be XML, to switch to indexing database storage, press the *Start using Elastic* button. If the *Start using Elastic* button is not be visible, that means there is no configuration file yet, press the *Create Configuration* button to create the configuration file.
 
 1. Connect to the DMS using the *SLNetClientTest* tool:
 
@@ -46,13 +46,11 @@ To migrate the profiles, you will need to use the SLNetClientTest tool. Note tha
 
    - The progress of the scheduled actions will be shown in the *MigrationStatus* table in SLNetClientTest tool, where a row will be created for the migration of profiles. These rows will be updated to reflect the progress of the migration.
 
-   - While the migration is in progress, a notice will be added in the Alarm Console. Once the migration is completed, the notice will be cleared and an information event will be generated, stating that the migration has finished.
-
    - All profiles will be loaded from the *Profiles.xml* file on the DataMiner Agent where the migration was triggered. The *Profiles.xml* files of the other DataMiner Agents in the cluster are not migrated. This is not necessary, as the *Profiles.xml* file is synced in the cluster.
 
    - The profiles objects will be written to the indexing database.
 
-   - When the migration for profiles is completed, the configuration will not switch to indexing database storage. To switch to indexing database storage, press the *Start using Elastic* button.
+   - When the migration for profiles is completed, the configuration will not switch to indexing database storage. To switch to indexing database storage, press the *Start using Elastic* button. If the *Start using Elastic* button is not be visible, that means there is no configuration file yet, press the *Create Configuration* button to create the configuration file.
 
 > [!NOTE]
 >
@@ -83,16 +81,12 @@ The current storage type is displayed in the *ProfileManger XML to Elastic* sect
 
 ## Limitations and differences with XML storage
 
-### Difference when deleting profiles
-
-When XML storage is used, it is not possible to remove a profile when one of the DataMiner Agents in the cluster cannot be reached, as this could cause syncing issues. No such restrictions apply when indexing database storage is used.
-
 ### Field size
 
 Field names in the indexing database have a maximum length of 32766 bytes, which means any field of a profile indexed in the database can only contain 32766 bytes. This limit is mostly important for string fields, which can contain 32766 characters of one byte (or 16383 characters of two bytes).
 
 > [!NOTE]
-> If there is an attempt to save a profile with a field that is too big, the API will return an ``UnknownError``. The ``SLProfileManager.txt`` log file will contain the actual exception, which will mention the field that could not be indexed in the database.
+> While using indexing database storage, if there is an attempt to save a profile with a field that is too big, the API will return an ``Unknown`` error. The ``SLProfileManager.txt`` log file will contain the actual exception, which will mention the field that could not be indexed in the database.
 
 ### Initial event on subscriptions
 
