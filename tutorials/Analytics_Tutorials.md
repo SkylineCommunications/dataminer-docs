@@ -2,7 +2,7 @@
 uid: Analytics_Tutorials
 ---
 
-# Augmented Operations tutorials
+# DataMiner Analytics tutorials
 
 DataMiner [Augmented Operations](xref:Stack_Augmented_Operations) leverages state-of-the-art big data and artificial
 intelligence technology for several features. Here, you can find some tutorials related to those features.
