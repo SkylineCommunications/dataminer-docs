@@ -56,3 +56,9 @@ Similar to other types of anomaly suggestion events, flatline suggestion events 
 <!-- MR 10.5.0 - FR 10.4.1 -->
 
 When you started a migrating from a MySQL database to a Cassandra database, an error could occur when the connection to the MySQL database took a long time to get established.
+
+#### DELT package created on DataMiner v10.3.8 or newer could no longer be imported on DataMiner v10.3.7 or older [ID_37731]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+When you exported elements via a DELT package on a DMA running DataMiner version 10.3.8 or newer, it would no longer be possible to import that DELT package on a DMA running DataMiner version 10.3.7 or older.
