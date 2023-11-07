@@ -65,6 +65,9 @@ To configure anomaly detection alarms for specific parameters<!--RN 37171 + 3714
 
         ![Alarm thresholds](~/user-guide/images/Anomaly_Alarm_Settings.png)<br/>*Anomaly alarm settings in DataMiner 10.3.12*
 
+        > [!NOTE]
+        > Any customized behavioral anomaly monitoring setup containing relative or absolute thresholds will be lost if you downgrade to DataMiner version 10.3.11 or older. These versions do not support this extended anomaly configuration, and the thresholds will be automatically determined by DataMiner Analytics, similar to the default *Smart* option<!--RN 37434-->.
+
 1. Click *Close* in the lower right corner to exit the *Anomaly Alarm Settings* pop-up window.
 
    In the alarm template editor, depending on your changes, the button in the *Anomalies* column will now indicate the level of anomaly monitoring that has been configured:
