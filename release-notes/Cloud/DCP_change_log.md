@@ -14,7 +14,7 @@ Several dependencies have been updated.
 
 Improved the logging by adjusting the log level in some particular cases to reduce log spam and improve visibility on more important logs.
 
-#### 8 November 2023 - Fix - ArtifactDeployer 1.5.2 & Orchestrator 1.4.1 - Issue where timeout errors were logged in ArtifactDeployer [ID_37784] [ID_37785]
+#### 8 November 2023 - Fix - ArtifactDeployer 1.5.2 & Orchestrator 1.4.1 - Issue where a timeout error was logged in ArtifactDeployer [ID_37784] [ID_37785]
 
 When Orchestrator 1.4.0 and/or ArtifactDeployer 1.5.1 or older was/were used, the ArtifactDeployer would log a timeout exception in some specific cases when the Orchestrator module had an error. This has now been resolved.
 
