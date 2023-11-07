@@ -129,6 +129,20 @@ These tables now also have a button that allows users to delete a row without op
 
 In addition, the logic in the connector has been updated to allow the addition of entries from an interactive Automation script.
 
+#### Carrier Performance and Information Events dashboard improvements [ID_37809]
+
+The Carrier Performance dashboard has been updated so that the IP Throughput and Slots Per Frame KPIs are now included in both the calculated stats table and the carrier summary table.
+
+In addition, the Information Events dashboards have been updated with improved default values and new names, and parameter feeds in these dashboards are now set to display up to 30,000 indices.
+
+#### Generic Kafka Consumer: Improved logging [ID_37810]
+
+Logging of the Generic Kafka Consumer connector has been improved to make important log entries stand out more and to make debugging easier.
+
+#### Generic Trap Processor: Memory caching improved [ID_37811]
+
+The memory caching logic for the Rules Table, Source Name Table, and Source IP Name Table of the Generic Trap Processor connector has been improved so that it is no longer necessary to restart the element to make sure changes in those tables take effect for upcoming traps.
+
 ### Fixes
 
 #### Verizon iDirect Evolution Platform Collector: Linecard event types not collected [ID_37691]
