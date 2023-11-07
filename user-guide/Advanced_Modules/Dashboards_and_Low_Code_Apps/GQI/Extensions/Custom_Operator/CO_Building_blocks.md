@@ -63,4 +63,4 @@ The following **optional interfaces** can be implemented to add additional funct
   > - The `Optimize` method will be called each time there is a new next operator.
 
   > [!NOTE]
-  > Currently, the `Optimize` method only triggers for filter operators (typed `IGQIFilterOperator`).
+  > Currently, the `Optimize` method only triggers for filter operators (`IGQIFilterOperator`) and sort operators (`IGQISortOperator`).
