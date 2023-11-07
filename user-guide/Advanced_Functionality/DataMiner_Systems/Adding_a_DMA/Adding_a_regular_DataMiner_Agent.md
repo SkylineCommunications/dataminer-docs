@@ -21,7 +21,10 @@ uid: Adding_a_regular_DataMiner_Agent
 
 1. In the *Manage* tab, below the list of DMAs in the cluster, click *Add*.
 
-1. Enter the IP of the DMA you want to add and click *Add*.
+1. Enter the IP address or the hostname of the DMA you want to add and click *Add*.
+
+   > [!NOTE]
+   > From DataMiner 10.2.0 [CU21]/10.3.0 [CU9]/10.3.12 onwards<!--RN 37075-->, always enter the IP address if the DataMiner System already contains a Failover pair configured with virtual IP addresses.
 
 > [!NOTE]
 > To add a Failover pair to a DataMiner System, first add the primary DMA as a regular DataMiner Agent, and then configure Failover. See [Preparing the two DataMiner Agents](xref:Preparing_the_two_DataMiner_Agents).
