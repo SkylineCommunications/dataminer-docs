@@ -4,7 +4,10 @@ uid: Installing_Elasticsearch_on_separate_Linux_machine
 
 # Installing Elasticsearch on a separate Linux machine
 
-If you want to use an Elasticsearch cluster for your DMS (which is required to use the [Cassandra Cluster](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster) feature), install Elasticsearch on a Linux machine as detailed below.
+> [!IMPORTANT]
+> Elasticsearch is **only supported up to version 6.8**. We therefore recommend using [Storage as a Service](xref:STaaS) instead, or if you do want to continue using self-hosted storage, using [dedicated clustered storage](xref:Dedicated_clustered_storage) with OpenSearch.
+
+If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STaaS) setup but instead choose a self-hosted dedicated clustered storage setup, and you want to use an Elasticsearch cluster for your DMS, install Elasticsearch on a Linux machine as detailed below.
 
 > [!NOTE]
 > We promote the use of Ubuntu LTS as the preferred Linux distribution. As such, the commands mentioned below will work on any Debian-based system, including Ubuntu.

@@ -30,11 +30,17 @@ In other words, a DataMiner client can access the DataMiner System by connecting
 
 ## DataMiner database
 
-For storage of data, DataMiner comes fully integrated with industry-standard data storage solutions.
-
-The **general database** is the mandatory storage solution required for a fully operational DataMiner System. The DataMiner System uses the general database to store and retrieve data. To do so as efficiently as possible, it relies on references and IDs. This makes the database less readable for a third-party software application without intimate knowledge of the data structures used by DataMiner. The general database is therefore considered to be exclusively used by the DataMiner System. The DataMiner System also includes all the logic required to maintain the good health and optimal performance of the general database, as this database is intended to be zero-maintenance and require no Database Admin. Prior to DataMiner 9.0, the general database is by default a MySQL database. From DataMiner 9.0 onwards, a Cassandra database is used by default. Note that in older DataMiner versions, the general database was known as the "local database".
+For essential **system data storage**, a DataMiner System can either make use of [Storage as a Service (STaaS)](xref:STaaS), in which case all the complexity and scaling of the databases is taken care of by Skyline, or you can choose to host the storage databases yourself. To store and retrieve data, the DataMiner System relies on references and IDs. This makes the database less readable for a third-party software application without intimate knowledge of the data structures used by DataMiner. The system data storage is therefore considered to be exclusively used by the DataMiner System.
 
 The **offload database** is an optional second data storage solution that can be added to a DataMiner System for the purpose of exporting the data and making it available for third-party software applications. When the DataMiner System is configured to also offload its data to the offload database, it will translate the data to more human-readable data (e.g. element ID references are replaced with element names), so that it is easier for third-party applications to digest. A DataMiner System will only write data to the offload database but will not read from it. The DataMiner System will also not perform maintenance of the offload database.
+
+## dataminer.services
+
+dataminer.services is a cloud platform hosted by Skyline that provides various services. While it is not mandatory for a DataMiner System to be connected to this platform, the connection is required to have access to some DataMiner features.
+
+The most full use of dataminer.services is [DataMiner as a Service](xref:Deploying_a_DMS_in_the_cloud), where the entire DataMiner System is hosted by Skyline in the cloud. It is also possible to only have the system data storage hosted by Skyline with [Storage as a Service](xref:STaaS). But even if you host a DataMiner System entirely on your own compute instances, being connected to dataminer.services provides a host of additional features, including dashboard sharing and ChatOps.
+
+For an overview of all dataminer.services functionality, refer to [dataminer.services](xref:Overview_DCP).
 
 ## DataMiner Probes
 

@@ -10,6 +10,9 @@ This tutorial shows how to edit an existing app.
 - [Step 1: Edit the latest version of your app](#step-1-edit-the-latest-version-of-your-app)
 - [Step 2: Edit a previous version of your app](#step-2-edit-a-previous-version-of-your-app)
 
+> [!TIP]
+> See also: [Kata #3: Build your first low-code app](https://community.dataminer.services/courses/kata-3/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+
 ## Step 1: Edit the latest version of your app
 
 The DataMiner Low-Code Apps are available on the DataMiner landing page. To access this page, browse to the IP or hostname of a DMA or to *https://[Your DMA]/root*, depending on your configuration.
@@ -18,7 +21,7 @@ The DataMiner Low-Code Apps are available on the DataMiner landing page. To acce
 
 1. To start editing the app, click your user image or initials and select *Edit*.
 
-   ![Edit option](~/tutorials/images/EditApp.png)
+   ![Edit option](~/user-guide/images/EditApp.png)
 
    This will open the application editor again, which was used before when creating the application. A new draft version of your app is made, to which you can make the necessary changes.
 
@@ -32,13 +35,13 @@ Occasionally, there may be a need to edit a previous version of an application. 
 
 1. Click your user image or initials and select *Versions*.
 
-   ![Versions option](~/tutorials/images/VersionsUser.png)
+   ![Versions option](~/user-guide/images/VersionsUser.png)
 
    This brings up a list of previous versions.
 
 1. Open the version you want to edit by hovering over it in the list and then clicking the pencil icon.
 
-   ![Version history](~/tutorials/images/EditHistory.png)
+   ![Version history](~/user-guide/images/EditHistory.png)
 
    This will open up the application editor. A new draft version of your app is made based on the version you selected, to which you can make changes in the same way as when you edit the latest version.
 

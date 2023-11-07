@@ -6,7 +6,7 @@ uid: Overview_DevOps
 
 *Empowering every single user to unleash their imagination and use all the functions available.*
 
-![dataminer.services.categories](~/dataminer-overview/images/DMS_DevOps.png)
+![dataminer.services.categories](~/dataminer-overview/images/DMS_DevOps.jpg)
 
 ## Community
 

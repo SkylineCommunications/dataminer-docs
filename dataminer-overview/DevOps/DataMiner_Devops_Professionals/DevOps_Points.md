@@ -41,8 +41,6 @@ In general, the more active you are in the DataMiner Dojo community and the more
   > [!TIP]
   > Unsure of how to start contributing? Take a look at the [Contributing page](xref:contributing) or at our [video series](https://www.youtube.com/playlist?list=PLFb70A6JV6vj1f0DPcdYXExEbNWVPYMgW) on how to contribute to the DataMiner documentation!
 
-- **Contributing to the DataMiner Catalog**: If you have designed a nice add-on for a DataMiner System for a specific use case, and you are willing to share this in the [DataMiner Catalog](https://catalog.dataminer.services/) to help empower the larger DataMiner community, you will be eligible for 250 up to 1000 DevOps Points. This could be a custom GQI operator, a custom Teams ChatOps operator, an Object Model, a user-definable API, etc.
-
 - **Writing blog posts**: You can opt to write and submit a [blog post](https://community.dataminer.services/blog/) for the community, and upon acceptance, this will result in 500 up to 1000 points. Blog posts can revolve around any technology or topic relevant to the community or could, for example, describe a solution that you have designed with DataMiner.
 
   > [!TIP]

@@ -26,6 +26,7 @@ Default tooltip: *Link to 'http://URL'*
 > - Both HTTP and HTTPS are supported.
 > - If you put a "#" sign in front of the URL, the webpage will be displayed inside the shape.
 > - Links starting with "mailto:" are not supported in the DataMiner web apps prior to DataMiner 10.2.0/10.1.8.
+> - It is also possible to link to a DataMiner dashboard this way. However, note that the URL of a dashboard is by default compressed through LZ compression. If you want to [use placeholders](#special-placeholders-that-can-be-used-within-a-url), it can be useful to have the uncompressed URL instead. To get this, [retrieve the URL via the sharing option](xref:Sharing_a_dashboard#sharing-a-dashboard-url) and select *Use uncompressed URL parameters*.
 
 ## Options for shapes linked to a webpage
 

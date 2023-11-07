@@ -5,7 +5,7 @@ uid: MySQL_Workbench
 # MySQL Workbench
 
 > [!NOTE]
-> From DataMiner 10.4.0 onwards, MySQL is no longer supported as the general database. For the currently supported DataMiner versions, we highly recommend switching to Cassandra.
+> From DataMiner 10.4.0 onwards, MySQL is no longer supported as the general database. We recommend switching to [Storage as a Service](xref:STaaS).
 
 MySQL Workbench is a tool for exploring [MySQL databases](xref:MySQL_database) and performing administrative actions.
 

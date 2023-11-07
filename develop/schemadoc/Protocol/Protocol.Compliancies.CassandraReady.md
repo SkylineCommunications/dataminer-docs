@@ -40,4 +40,4 @@ The protocol is not compatible with a Cassandra database. This means for example
 >
 > - Performing SQL queries to a DMA database in QActions.
 > - Using the displayColumn attribute in tables.
-> - Presence of logger tables that make use of the autoincrement column type (see autoincrement).
+> - Presence of logger tables that make use of the [autoincrement](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#autoincrement) column type.

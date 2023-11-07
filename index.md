@@ -13,7 +13,7 @@ Can't find what you need here? Go to our [DataMiner Community website](https://c
 > [!TIP]
 > Want to contribute? Go to [Contributing to the DataMiner docs](xref:contributing) for more info.
 
-<div class="row"> 
+<div class="row">
   <div class="column">
     <a href="/dataminer-overview/Overview_index.html" title="DataMiner Overview" target="_self"><img src="images/Docs_DataminerOverview.svg" style="width:100%"></a>
   </div>
@@ -23,7 +23,16 @@ Can't find what you need here? Go to our [DataMiner Community website](https://c
   <div class="column">
     <a href="/develop/index.html" title="Developer Documentation" target="_self"><img src="images/Docs_DeveloperDocumentation.svg" style="width:100%"></a>
   </div>
+</div>
+
+<div class="row">
   <div class="column">
     <a href="/release-notes/DataMiner_General_RNs_index.html" title="DataMiner Release Notes" target="_self"><img src="images/Docs_DataminerReleaseNotes.svg" style="width:100%"></a>
+  </div>
+  <div class="column">
+    <a href="/tutorials/Tutorials.html" title="DataMiner Tutorials" target="_self"><img src="images/Docs_DataMinerTutorials.svg" style="width:100%"></a>
+  </div>
+  <div class="column">
+    <a href="https://docs.dataminer.services/connector/index.html" title="Connector Documentation" target="_self"><img src="images/Docs_ConnectorDocumentation.svg" style="width:100%"></a>
   </div>
 </div>

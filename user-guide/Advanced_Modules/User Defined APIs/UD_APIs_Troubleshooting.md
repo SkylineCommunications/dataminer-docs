@@ -26,7 +26,7 @@ An information event will be generated for every create, update, and delete acti
 
 Below, you can find the request flow when a trigger comes in. This may help you during troubleshooting.
 
-```mermaid
+<div class="mermaid">
 flowchart LR
 client("User") -- "HTTP(S) request" --> a
 subgraph "IIS"
@@ -39,7 +39,7 @@ subgraph "Core DataMiner"
     c -- NATS --> d("UserDefinableApiManager\n(SLNet.exe)") 
     d -- IPC --> e("SLAutomation.exe")
 end
-```
+</div>
 
 ## Installation issues
 

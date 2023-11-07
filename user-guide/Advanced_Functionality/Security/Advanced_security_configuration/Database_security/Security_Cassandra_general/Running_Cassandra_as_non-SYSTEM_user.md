@@ -7,7 +7,9 @@ uid: Running_Cassandra_as_non-SYSTEM_user
 By default, DataMiner will run the Cassandra service with SYSTEM privileges. To reduce the impact of a breach through the Cassandra service, we recommend running Cassandra as a restricted user.
 
 > [!TIP]
-> A PowerShell script is available to modify the Cassandra service user. You can download this *Modify-CassandraServiceUser* Powershell script from [GitHub](https://github.com/SkylineCommunications/Modify-CassandraServiceUser).
+>
+> - A PowerShell script is available to modify the Cassandra service user. You can download this *Modify-CassandraServiceUser* Powershell script from [GitHub](https://github.com/SkylineCommunications/Modify-CassandraServiceUser).
+> - If you do not want the hassle of maintaining the DataMiner storage databases yourself, we recommend using [DataMiner Storage as a Service](xref:STaaS) instead.
 
 To run Cassandra as a non-SYSTEM user:
 

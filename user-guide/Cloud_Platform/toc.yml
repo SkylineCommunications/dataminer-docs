@@ -55,12 +55,10 @@ items:
           - name: Statuses
             topicUid: Statuses
   - name: DataMiner Catalog
-    topicUid: Catalog
+    topicUid: About_the_Catalog_module
     items:
       - name: About the Catalog module
         topicUid: About_the_Catalog_module
-      - name: Accessing the Catalog module
-        topicUid: Accessing_the_Catalog_module
       - name: Looking up a DataMiner connector
         topicUid: Looking_up_a_DataMiner_connector
       - name: Deploying a DataMiner connector to your system
@@ -135,6 +133,13 @@ items:
         topicUid: DataMiner_Teams_bot
       - name: Chat integration
         topicUid: Microsoft_Teams_Chat_Integration
+      - name: Tutorials
+        topicUid: ChatOps_Tutorials_Custom_Command_Hello_World
+        items:
+          - name: Hello World
+            topicUid: ChatOps_Tutorials_Custom_Command_Hello_World
+          - name: Chat notifications
+            topicUid: ChatOps_Tutorials_Chat_Notification
   - name: Advanced configuration
     topicUid: Custom_cloud_endpoint_configuration
     items:
@@ -142,3 +147,5 @@ items:
         topicUid: Custom_cloud_endpoint_configuration
       - name: Disabling reports and notifications offloading
         topicUid: Disable_Offloading_Reports_and_Notifications
+      - name: Disconnecting from dataminer.services
+        topicUid: Disconnecting_from_dataminer.services

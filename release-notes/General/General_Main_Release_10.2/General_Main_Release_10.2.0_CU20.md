@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.2.0_CU20
 ---
 
-# General Main Release 10.2.0 CU20 – Preview
+# General Main Release 10.2.0 CU20
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
@@ -54,7 +54,7 @@ When, in the *Create folder* or *Create dashboard* window, you clicked inside th
 
 Also, from now on, it is no longer allowed to save a folder with a name containing leading spaces.
 
-#### DataMiner backup: Number of backups to be kept would be interpreted incorrectly [ID_37143]
+#### DataMiner backup: Number of backups to be kept would be interpreted incorrectly [ID_37143] [ID_37509]
 
 <!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
 
@@ -65,7 +65,9 @@ Up to now, this setting would incorrectly be interpreted as the total number of 
 From now on, the number of backups you specify will be the number of backups that will be kept per DMA or Failover setup. For example, when you set the number of backups to be kept to 3 on a DMS with 5 DMAs or Failover setups, 3 backups will now be kept on every DMA or Failover setup.
 
 > [!NOTE]
-> A DataMiner Agent will now store its backups in a subfolder of the folder set as backup location. The name of that subfolder will be identical to the DMA ID of the DataMiner Agent in question.
+>
+> - A DataMiner Agent will now store its backups in a subfolder of the folder set as backup location. The name of that subfolder will be identical to the DMA ID of the DataMiner Agent in question.
+> - When you upgrade to this DataMiner version, an upgrade action will automatically divide the number of backups to be kept by the number of DataMiner Agents in the DMS if the number of backups to be kept is set to more than 3 and if there are at least two DMAs in the DMS. Note that this upgrade action will do nothing if, in the backup settings, you specified that all DMAs in the DMS have to store their backups on the same network path.
 
 #### Inventory & Asset Management: Problem when synchronizing between the DMA and the database [ID_37177]
 
@@ -170,8 +172,24 @@ When a protocol was configured to use `MultipleGetBulk` in combination with `Par
 
 When you opened a service card, in some rare cases, no breadcrumbs would be displayed.
 
-#### SLAnalytics: Problem when the SLNet connection got lost while resetting data sources [ID_37402]
+#### SLAnalytics: Problem when the SLNet connection got lost while resetting the data sources [ID_37402]
 
 <!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
 
-During initialization, in some cases, an error could occur in SLAnalytics when the SLNet connection got lost while resetting data sources.
+An error could occur in SLAnalytics when the SLNet connection got lost while resetting the data sources.
+
+#### DataMiner Cube: Parameter value with decimals would be displayed incorrectly in context menus [ID_37420]
+
+<!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
+
+Up to now, when you opened a context menu with a text box that contained a parameter value with decimals, and the default value of the parameter also contained decimals, the decimal point in the value in the text box would be displayed incorrectly. For example, 44.2 would incorrectly be displayed as 442.0.
+
+The issue was due to Cube trying to parse the default value with the current culture in the Windows machine.
+
+#### DataMiner Cube - Alarm Console: Tooltip of suggestion counter would incorrectly show 'suggestion' in capitals [ID_37454]
+
+<!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
+
+In the Alarm Console footer, you can find counters that display the number of alarms in the current tab per severity. When you hover over one of those counters, a tooltip appears with the text "[nr of alarms] [severity]" (e.g. 31 Major).
+
+Up to now, when you hovered over the suggestions counter, the tooltip would incorrectly show the word "SUGGESTION" in capitals. From now on, it will be shown as "Suggestion" (with capital S).

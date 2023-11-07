@@ -12,8 +12,6 @@ uid: General_configuration
 
 - [How do I keep DataMiner Cube from disconnecting automatically?](#how-do-i-keep-dataminer-cube-from-disconnecting-automatically)
 
-- [How do I delete all alarms on a DMA?](#how-do-i-delete-all-alarms-on-a-dma)
-
 - [What do I do if two DMAs cannot communicate?](#what-do-i-do-if-two-dmas-cannot-communicate)
 
 - [What do I do if there is an SLNet process disappearance?](#what-do-i-do-if-there-is-an-slnet-process-disappearance)
@@ -58,7 +56,7 @@ More information about SNTP can be found in RFC 4330:
 
 The time server will provide the correct time settings for all DMAs.
 
-To turn any computer using Windows Server 2008 R2, Windows 7 or later into a time server, whether it serves as a DMA or not, do the following:
+To turn any computer into a time server, whether it serves as a DMA or not, do the following:
 
 1. Log on locally to the machine that will act as time server, or establish a remote desktop session with it.
 
@@ -75,11 +73,6 @@ To turn any computer using Windows Server 2008 R2, Windows 7 or later into a tim
 1. Set the *AnnounceFlags* value to 5.
 
 1. Start the Windows Time service again and set the start type to *Automatic*.
-
-> [!NOTE]
->
-> - If you are using Windows Server 2012 R2 (64-bit), set the start type to "Automatic (Delayed Start)" for the service to start automatically.
-> - If you are using Windows 7 or Windows Server 2008 R2, and the Windows Time service always stops, follow the instructions from this [Microsoft support page](https://support.microsoft.com/en-us/help/2385818).
 
 ### Time client
 
@@ -138,51 +131,6 @@ However, under certain circumstances, it may be necessary to keep a session open
 1. Go to the *Connection* tab.
 
 1. Clear the option *Time before automatic disconnect*.
-
-## How do I delete all alarms on a DMA?
-
-To delete all alarms on a DMA from the history database, you have to drop a number of tables in the MySQL database.
-
-> [!WARNING]
-> Performing the following procedure has a severe impact on a DataMiner system.
-
-All history alarms will be deleted indiscriminately, and the Alarm Console, reports, and dashboards will no longer contain any history alarm data.
-
-1. Connect to the DMA using Remote Desktop.
-
-1. Stop the DataMiner software. See [Starting or stopping DataMiner Agents in your DataMiner System](xref:Starting_or_stopping_a_DMA_in_DataMiner_Cube).
-
-1. Open [MySQL Workbench](xref:MySQL_Workbench). In the logon window, click *OK* to connect to the database using the default settings.
-
-1. Open the SLDMADB tree.
-
-1. Right-click and select *Drop Table* for the following tables:
-
-   - Alarm
-
-   - Alarm_property
-
-   - Brainlink
-
-   - Latch_state
-
-   - Rep_pd_info
-
-   - Rep_pd_newalarms
-
-   - Rep_pd_states
-
-   - Service_alarm
-
-   If you also want to clear all information events, then also select *Drop Table* for the following table:
-
-   - Info
-
-1. Close MySQL Workbench.
-
-1. Restart the DataMiner. See [Starting or stopping DataMiner Agents in your DataMiner System](xref:Starting_or_stopping_a_DMA_in_DataMiner_Cube).
-
-    On startup, DataMiner will recreate the tables you have dropped, and the new tables will all be empty.
 
 ## What do I do if two DMAs cannot communicate?
 

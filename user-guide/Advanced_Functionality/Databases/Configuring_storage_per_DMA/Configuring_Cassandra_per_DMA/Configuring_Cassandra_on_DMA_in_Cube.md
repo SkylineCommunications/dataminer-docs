@@ -7,7 +7,7 @@ uid: Configuring_Cassandra_per_DMA_in_Cube
 > [!IMPORTANT]
 > If a DataMiner Agent in a cluster is offline, database configuration changes will not be applied to that DataMiner Agent. From DataMiner 10.3.6/10.4.0 onwards, you will get a warning on the *Database* page in System Center to make you aware of this. However, this warning will not be triggered for the offline Agent in a Failover setup. <!-- RN 36184 -->
 
-In case a separate Cassandra cluster is used per DMA, configure the settings as follows:
+If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STaaS) setup but instead choose self-hosted storage with a separate Cassandra cluster per DMA, configure the settings as follows:
 
 1. Go to *Apps* > *System Center* > *Database*.
 

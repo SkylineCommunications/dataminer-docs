@@ -4,14 +4,14 @@ uid: Proactive_cap_detection
 
 # Proactive cap detection
 
-This DataMiner Analytics feature monitors the global trend in the real-time incoming data of a metric and will automatically generate a notification when the metric is predicted to reach a (critical) low or high value when the trend is extended into the future. To give an accurate estimate of the timing of future issues, proactive cap detection uses a prediction model based on trend data in the Cassandra database. 
+This DataMiner Analytics feature monitors the global trend in the real-time incoming data of a metric and will automatically generate a notification when the metric is predicted to reach a (critical) low or high value when the trend is extended into the future. To give an accurate estimate of the timing of future issues, proactive cap detection uses a prediction model based on trend data stored in the cloud with [STaaS](xref:STaaS) or in a self-hosted Cassandra-compatible database.
 
 > [!TIP]
->  A trend prediction can also be visualized in a trend graph. See [Working with trend predictions](xref:Working_with_trend_predictions).
+> A trend prediction can also be visualized in a trend graph. See [Working with trend predictions](xref:Working_with_trend_predictions).
 
 ## Specifications
 
-For the best results, both real-time and average trending should be activated on a parameter for which you want proactive cap detection to be available. To calculate its predictions, DataMiner Analytics will make use of the available real-time and average data. It can predict at most 200 data points into the future. This is further limited by the available data: if there is a data set of a specific number of points, DataMiner Analytics can never predict further than that number of points divided by ten. For example, if the database contains one year of hourly averages and no daily averages, then DataMiner Analytics computes 365 daily averages and is able to predict issues 36 days into the future.
+For the best results, both real-time and average trending should be activated on a parameter for which you want proactive cap detection to be available. To calculate its predictions, DataMiner Analytics will make use of the available real-time and average data. It can predict at most 200 data points into the future. This is further limited by the available data: if there is a data set of a specific number of points, DataMiner Analytics can never predict further than that number of points divided by ten. For example, if the DataMiner storage contains one year of hourly averages and no daily averages, then DataMiner Analytics computes 365 daily averages and is able to predict issues 36 days into the future.
 
 This feature is currently only available for trended parameters with numeric values, and not for [partial table parameters](xref:Table_parameters#partial-tables). Because of memory constraints, proactive cap detection is also only possible for up to 100 000 parameters per DMA. If there are more parameters for which proactive cap detection would be possible, no predictions will be available for these and the Analytics log file will mention that the number of tracked parameters exceeded the maximum.
 
@@ -20,6 +20,8 @@ In addition, proactive cap detection is currently only supported for parameters 
 - A high and/or low data range value specified in the protocol, or,
 
 - A (by default) critical alarm limit of type normal (i.e. not rate or baseline) specified in the alarm template, or,
+
+- From DataMiner 10.3.11/10.4.0 onwards<!--RN 37373-->: A (by default) critical alarm limit of type "absolute" or "relative" specified in the alarm template if either a fixed baseline value is set or a dynamically updated baseline value is configured in the alarm template to detect a continuos degradation, or,
 
 - A data range indirectly derived from the protocol info. Currently this is limited to the values 0 and 100 for percentage data for which no historical values were encountered outside the \[0,100\] interval.
 

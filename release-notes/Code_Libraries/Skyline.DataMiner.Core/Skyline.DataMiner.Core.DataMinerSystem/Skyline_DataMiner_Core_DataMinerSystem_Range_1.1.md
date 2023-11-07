@@ -7,6 +7,14 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.1
 > [!NOTE]
 > Range 1.1.x.x is supported as from **DataMiner 10.1.11**. It makes use of a change introduced in DataMiner 10.1.11 that makes it possible to obtain table cell data using the primary key. In earlier DataMiner versions, the display key was needed to obtain this data.
 
+### 1.1.1.2
+
+#### Fix - Monitors could stop working for long duration user actions
+
+When many monitors were started, and the actions you provided took several seconds to execute, there could be a race condition, and the monitor for an element could go into a faulted state because of the incoming initial events. The element would then ignore all new events coming in until the monitors were manually stopped and then started again.
+
+This has been fixed by adding additional low-level locking. Benchmark tests show no negative impact on efficiency from this change.
+
 ### 1.1.1.1
 
 #### Breaking Change - AddSubscriptions in ICommunication

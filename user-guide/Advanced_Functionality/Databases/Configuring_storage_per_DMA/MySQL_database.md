@@ -4,7 +4,7 @@ uid: MySQL_database
 
 # MySQL database
 
-On legacy DataMiner Systems, typically a MySQL (or MSSQL) database is used as the general database. For the currently supported DataMiner versions, a Cassandra database is preferred instead. Though DataMiner can still be used with a MySQL or MSSQL database, [switching to Cassandra](xref:Migrating_the_general_database_to_Cassandra) is highly recommended as it leads to enhanced performance, and certain DataMiner features are only available if a Cassandra database is used.
+On legacy DataMiner Systems, typically a MySQL (or MSSQL) database is used as the general database. To have access to all the latest DataMiner features, switching to [Storage as a Service (STaaS)](xref:STaaS) is highly recommended. For this, you first need to [migrate to Cassandra](xref:Migrating_the_general_database_to_Cassandra). If you choose to keep using self-hosted storage, migrating to Cassandra is also highly recommended.
 
 > [!IMPORTANT]
 > MSSQL is no longer supported as the general database as from DataMiner 10.3.0.

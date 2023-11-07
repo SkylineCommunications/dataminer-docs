@@ -21,9 +21,9 @@ Contains all the tree controls defined in the protocol.
 
 ```xml
 <TreeControls>
-												<TreeControl parameterId="1" ...="">...</TreeControl>
-												<TreeControl parameterId="2" ...="">...</TreeControl>
-											</TreeControls>
+  <TreeControl parameterId="1" ...="">...</TreeControl>
+  <TreeControl parameterId="2" ...="">...</TreeControl>
+</TreeControls>
 ```
 
 
