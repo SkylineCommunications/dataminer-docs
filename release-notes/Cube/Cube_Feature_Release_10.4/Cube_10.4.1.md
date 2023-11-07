@@ -37,3 +37,9 @@ Up to now, in some cases, service chains could get redrawn too often, or shapes 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
 In some cases, DataMiner Cube could become unresponsive when checking the ModelHost DxM license.
+
+#### DataMiner Cube - Pattern matching: Memory leak [ID_37771]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+
+DataMiner Cube could start leaking memory when you opened trend graphs with pattern matching.
