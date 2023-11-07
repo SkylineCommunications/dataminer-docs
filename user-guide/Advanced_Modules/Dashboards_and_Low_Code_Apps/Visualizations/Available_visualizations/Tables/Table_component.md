@@ -35,8 +35,6 @@ In the *Layout* tab for this component, the *Column filters* option is available
 
 From DataMiner 10.4.1/10.5.0 onwards<!-- RN 37522 -->, in the *Layout* tab, the *Column appearance* option is available, which allows you to customize the appearance of a column.
 
-- *Column appearance > Alignment*: Allows you to align the contents of the column to the left, in the center, or to the right.
-
 - *Column appearance > Select a column*: Allows you to alter the appearance of a column using presets. You can configure this option as follows:
 
   1. In the dropdown list, select the column you want to change.
