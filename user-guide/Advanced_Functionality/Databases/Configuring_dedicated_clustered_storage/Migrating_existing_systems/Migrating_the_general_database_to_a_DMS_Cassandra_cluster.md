@@ -103,6 +103,9 @@ If your system does not use an indexing database yet or if it already uses a Ope
 
 ### [Running a migration with bespoke Elasticsearch data](#tab/tabid-2)
 
+> [!NOTE]
+> It is not possible to use this procedure to migrate from a DMA with bespoke Elasticsearch data to a DMS with Cassandra cluster and Opensearch cluster.
+
 In case your DataMiner System contains bespoke Elasticsearch data or SRM data, use the procedure below.
 
 1. Follow the step-by-step guide on [taking and restoring snapshots](xref:Configuring_Elasticsearch_backups_Windows_Linux).
