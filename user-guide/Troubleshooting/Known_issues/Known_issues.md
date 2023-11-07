@@ -3,6 +3,12 @@ uid: Known_issues
 ---
 # Known issues
 
+## 10.4.x
+
+| Issue | DataMiner version | Date added |
+|--|--|--|
+| [Upgrade fails because of VerifyNoObsoleteApiDeployed.dll prerequisite](xref:KI_Upgrade_fails_VerifyNoObsoleteApiDeployed_prerequisite) | From DataMiner 10.4.0 onwards | November XX, 2023 |
+
 ## 10.3.x
 
 | Issue | DataMiner version | Date added |

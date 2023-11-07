@@ -45,7 +45,7 @@ Enables behavioral anomaly detection and suggestion events. See [Behavioral anom
 ### APIDeployment
 
 > [!NOTE]
-> Deprecated from DataMiner 10.3.6 onwards. No longer supported from DataMiner 10.4.1 onwards. This feature is replaced by the [UserDefinableAPI](#userdefinableapi) feature.
+> Deprecated from DataMiner 10.3.6 onwards. No longer supported from DataMiner 10.4.0/10.4.1 onwards. This feature is replaced by the [UserDefinableAPI](#userdefinableapi) feature. When upgrading to 10.4.0+ a prerequisite will block the upgrade if you still have deprecated APIs deployed, more info on [Upgrade fails because of VerifyNoObsoleteApiDeployed.dll prerequisite](xref:KI_Upgrade_fails_VerifyNoObsoleteApiDeployed_prerequisite).
 
 > [!CAUTION]
 > APIDeployment is not supported on systems using [Storage as a Service (STaaS)](xref:STaaS).
