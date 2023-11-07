@@ -14,7 +14,7 @@ From DataMiner 10.4.0 onwards, the obsolete *API Deployment* feature will be com
 
 ## Fix
 
-If you don't want to lose your APIs, you will have to migrate them to use the new User-Defined APIs feature. There is documentation on how to [define a new API](xref:UD_APIs_Define_New_API) and how to [create an API from an existing automation script](xref:UD_APIs_Using_existing_scripts).
+If you do not want to lose your APIs, you will have to migrate them to use the new User-Defined APIs feature. There is documentation on how to [define a new API](xref:UD_APIs_Define_New_API) and how to [create an API from an existing automation script](xref:UD_APIs_Using_existing_scripts).
 
 If you just want to remove your obsolete APIs from your system, follow below steps. Note that you will also have to follow these steps after you migrated your APIs to the *User-Defined APIs* feature.
 
