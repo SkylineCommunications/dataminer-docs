@@ -44,7 +44,7 @@ To migrate the profiles, you will need to use the SLNetClientTest tool. Note tha
 
 1. A window will show the migration actions that have been scheduled. If you close this window, the migration will continue in the background. To cancel the migration, click the *Cancel Migration* button.
 
-   - The progress of the scheduled actions will be shown in the *MigrationStatus* table in SLNetClientTest tool, where a row will be created for the migration of profiles. These rows will be updated to reflect the progress of the migration.
+   - The progress of the scheduled actions will be shown in the *MigrationStatus* table in SLNetClientTest tool, where 3 rows (profile instances, definitions & parameters) will be created for the migration of profiles. These rows will be updated to reflect the progress of the migration.
 
    - All profiles will be loaded from the *Profiles.xml* file on the DataMiner Agent where the migration was triggered. The *Profiles.xml* files of the other DataMiner Agents in the cluster are not migrated. This is not necessary, as the *Profiles.xml* file is synced in the cluster.
 
