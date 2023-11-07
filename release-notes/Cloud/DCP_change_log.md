@@ -6,6 +6,24 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 8 November 2023 - Enhancement - CloudGateway 2.12.4, SupportAssistant 1.5.2, FieldControl 2.9.1, CoreGateway 2.13.3, ArtifactDeployer 1.5.2, Orchestrator 1.4.1 - Dependencies updated [ID_37798] [ID_37797]  [ID_37784] [ID_37785] [ID_37800] [ID_37805]
+
+Several dependencies have been updated.
+
+#### 8 November 2023 - Enhancement - Orchestrator 1.4.1 - Improved logging [ID_37175]
+
+Improved the logging by adjusting the log level in some particular cases to reduce log spam and improve visibility on more important logs.
+
+#### 8 November 2023 - Fix - ArtifactDeployer 1.5.2 & Orchestrator 1.4.1 - Issue where timeout errors were logged in ArtifactDeployer [ID_37784] [ID_37785]
+
+When Orchestrator 1.4.0 and/or ArtifactDeployer 1.5.1 or older was/were used, the ArtifactDeployer would log a timeout exception in some specific cases when the Orchestrator module had an error. This has now been resolved.
+
+#### 8 November 2023 - Fix - ArtifactDeployer 1.5.2 - Deployment issues with ArtifactDeployers ArtifactDeployer 1.5.1 in clusters [ID_37784] [ID_37784]
+
+When ArtifactDeployer 1.5.1 was used in a cluster, it could occur that deployments were displayed as pending or failed on admin.dataminer.services, while in fact they succeeded. This has now been resolved.
+
+Make sure to also install DataMiner CloudGateway 2.12.3 to make use of this fix.
+
 #### 2 November 2023 - Fix - ArtifactDeployer 1.5.1 - Issue when hosting server of DataMiner CloudGateway had more than one NIC [ID_37762]
 
 When ArtifactDeployer 1.5.1 or earlier was used, it could occur that deployments failed when the CloudGateway module was installed on a server with more than one network interface (NIC). This has now been resolved.
