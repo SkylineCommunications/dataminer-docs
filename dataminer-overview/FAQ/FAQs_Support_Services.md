@@ -32,3 +32,11 @@ uid: FAQs_Support_Services
   - Your platform is exposed to technical & security vulnerabilities.
   - New purchased connectors added to your DataMiner platform are at risk to not be (fully) supported because an outdated DataMiner software version is in use.
   - You have the option to get support for the DataMiner core & connectors (except for upgrades). This is charged as [professional credit services](https://community.dataminer.services/professional-service-credits/).
+
+- **What defines the APA%**
+
+- The Annual Price Adjustment Percentage (%APA) shall be determined by reference to the official inflation rates of Belgium, as publicly available on websites such as "Belgium Inflation Rate" on tradingeconomics.com. The choice of Belgium as the relevant reference for this calculation is predicated on the significant volume of support services and the development of new software from Skyline's headquarters located in Belgium.
+
+On an annual basis, Skyline's leadership team shall assess the official inflation trends by considering the preceding six months' data metrics and forecasting the trend for the subsequent six months. Subsequently, the %APA shall be finalized and established as the new baseline for pricing in support renewals, encompassing the forthcoming period.
+
+The revised %APA rate will be formally communicated and integrated into the support renewal process, commencing three months prior to the anniversary date of the Users' ongoing support plan.
