@@ -21,7 +21,6 @@ When Orchestrator 1.4.0 and/or ArtifactDeployer 1.5.1 or older was/were used, th
 #### 8 November 2023 - Fix - ArtifactDeployer 1.5.2 - Deployment issues with ArtifactDeployer 1.5.1 in clusters [ID_37784] [ID_37784]
 
 When ArtifactDeployer 1.5.1 was used in a cluster, it could occur that deployments were displayed as pending or failed and contain a lot of events in the details overlay on admin.dataminer.services, while in fact the deployment succeeded. This has now been resolved.
-Make sure to also install DataMiner CloudGateway 2.12.3 to make use of this fix.
 
 #### 2 November 2023 - Fix - ArtifactDeployer 1.5.1 - Issue when hosting server of DataMiner CloudGateway had more than one NIC [ID_37762]
 
