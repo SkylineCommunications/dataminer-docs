@@ -90,7 +90,13 @@ There are now two ways to duplicate a low-code app:
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Dashboards app: User and user group information will no longer automatically be retrieved when you enter edit mode [ID_37727]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+Up to now, as soon as you entered edit mode, a number of API calls were executed in order to retrieve user and user group information.
+
+From now on, those API calls will only be executed the moment you open the *Settings* tab on the right.
 
 ### Fixes
 
