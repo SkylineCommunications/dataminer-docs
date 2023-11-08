@@ -62,3 +62,9 @@ When you started a migrating from a MySQL database to a Cassandra database, an e
 <!-- MR 10.4.0 - FR 10.4.1 -->
 
 When you exported elements via a DELT package on a DMA running DataMiner version 10.3.8 or newer, it would no longer be possible to import that DELT package on a DMA running DataMiner version 10.3.7 or older.
+
+#### SLAnalytics: Problem when the alarm repository was not available at startup [ID_37782]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+
+In some cases, an error could occur in SLAnalytics when it was not able to connect to the alarm repository at startup.
