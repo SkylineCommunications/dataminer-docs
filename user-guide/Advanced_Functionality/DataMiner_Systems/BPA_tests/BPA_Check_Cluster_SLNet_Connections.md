@@ -4,9 +4,12 @@ uid: BPA_Check_Cluster_SLNet_Connections
 
 # Check Cluster SLNet Connections BPA
 
+> [!NOTE]
+> This BPA is available from DataMiner version 10.4.1 and 10.5.0 onwards.
+
 The Check Cluster SLNet Connections BPA is a cluster BPA that will triggger a local BPA on each agent that is reachable from the one initiating the cluster BPA, to check the connections between agents. It is important to know if there are issues with these connections as they are used for inter DMS communication. Running this BPA might indicate if there are potential problems.
 
-This BPA test is available on demand. You can [run it in System Center](xref:Running_BPA_tests) (on the *Agents > BPA* tab, available from DataMiner 10.3.12), this BPA test is available by default.
+This BPA test is available on demand. You can [run it in System Center](xref:Running_BPA_tests) (on the *Agents > BPA* tab, available from DataMiner version 10.4.1 and 10.5.0 onwards), this BPA test is available by default.
 
 ## Metadata
 
@@ -19,7 +22,7 @@ This BPA test is available on demand. You can [run it in System Center](xref:Run
 
 ### Success
 
-- Test succeeded: From this point of view, all SLNet connections and connections between failover pairs (if applicable) look good.
+Test succeeded: From this point of view, all SLNet connections and connections between failover pairs (if applicable) look good.
 
 ### Error
 
