@@ -643,6 +643,12 @@ Similar to other types of anomaly suggestion events, flatline suggestion events 
 > [!NOTE]
 > Flatline alarms stay open until the flatline in question disappears or SLAnalytics is restarted.
 
+#### Storage as a Service: Enhanced performance when migrating data from Cassandra to the cloud [ID_37740]
+
+<!-- MR 10.4.0 - FR 10.3.12 [CU0] -->
+
+Because of a number of enhancements, overall performance has increased when migrating data from a Cassandra database to the cloud.
+
 ### Fixes
 
 #### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID_34981]

@@ -248,6 +248,12 @@ For performance reasons, the page size when retrieving element data from a Cassa
 > [!NOTE]
 > When retrieving element data from a MySQL or Microsoft SQL Server database, the page size remains set to 50000.
 
+#### Storage as a Service: Enhanced performance when migrating data from Cassandra to the cloud [ID_37740]
+
+<!-- MR 10.4.0 - FR 10.3.12 [CU0] -->
+
+Because of a number of enhancements, overall performance has increased when migrating data from a Cassandra database to the cloud.
+
 ### Fixes
 
 #### NATSCustodian could incorrectly pick an offline DMA as NAS candidate [ID_37312]
@@ -395,3 +401,9 @@ When the alarm focus cache got full, an error could occur in SLAnalytics.
 <!-- MR 10.4.0 - FR 10.3.12 -->
 
 When data was being migrated from a Cassandra Cluster database to a STaaS database, every DataMiner Agent in the DMS would incorrectly send the average trend data to the cloud. From now on, only one of the agents will send this data.
+
+#### Protocol VDX files imported via a DELT package would not be displayed until a DataMiner restart [ID_37781]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 [CU0] -->
+
+When you imported a DELT package that contained protocol VDX files linked to elements in the package, in some rare cases, those VDX files would incorrectly not be displayed until after a DataMiner restart.

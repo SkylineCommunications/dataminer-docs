@@ -188,3 +188,9 @@ When, for a trended parameter, a change in trend was detected, in some cases, tw
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
 
 When the alarm focus cache got full, an error could occur in SLAnalytics.
+
+#### Protocol VDX files imported via a DELT package would not be displayed until a DataMiner restart [ID_37781]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 [CU0] -->
+
+When you imported a DELT package that contained protocol VDX files linked to elements in the package, in some rare cases, those VDX files would incorrectly not be displayed until after a DataMiner restart.

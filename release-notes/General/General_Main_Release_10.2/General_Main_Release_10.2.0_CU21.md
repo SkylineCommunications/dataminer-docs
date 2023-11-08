@@ -232,3 +232,9 @@ When, in the Alarm Console, an alarm was duplicated, in some cases, its focus sc
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
 
 When you opened DataMiner Cube or when you opened a new alarm tab, an error could occur when parsing anomaly alarms.
+
+#### Protocol VDX files imported via a DELT package would not be displayed until a DataMiner restart [ID_37781]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 [CU0] -->
+
+When you imported a DELT package that contained protocol VDX files linked to elements in the package, in some rare cases, those VDX files would incorrectly not be displayed until after a DataMiner restart.
