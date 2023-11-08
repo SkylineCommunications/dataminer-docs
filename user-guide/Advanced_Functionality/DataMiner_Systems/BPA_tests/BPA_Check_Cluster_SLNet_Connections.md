@@ -100,6 +100,8 @@ If you are unable to resolve the issues, please contact Skyline Technical Suppor
 
 ## Limitations
 
+- When using hostnames in DMS.xml, this BPA could potentially falsely indicate problems.
+
 - Results may vary from the agent you start the BPA from. It might be interesting to also start the BPA from another agent.
 
 - This BPA could detect possible issues. There is no guarantee nothing can be improved when the BPA succeeds.
