@@ -12,15 +12,15 @@ Several dependencies have been updated.
 
 #### 8 November 2023 - Enhancement - Orchestrator 1.4.1 - Improved logging [ID_37175]
 
-Improved the logging by adjusting the log level in some particular cases to reduce log spam and improve visibility on more important logs.
+Logging for the Orchestrator DxM has been improved. In several cases, the log level has been adjusted to improve visibility of important logs.
 
 #### 8 November 2023 - Fix - ArtifactDeployer 1.5.2 & Orchestrator 1.4.1 - Issue where a timeout error was logged in ArtifactDeployer [ID_37784] [ID_37785]
 
-When Orchestrator 1.4.0 and/or ArtifactDeployer 1.5.1 or older was/were used, the ArtifactDeployer would log a timeout exception in some specific cases when the Orchestrator DxM had an error. This has now been resolved.
+When Orchestrator 1.4.0 and/or ArtifactDeployer 1.5.1 or older were used, in some specific cases, the ArtifactDeployer DxM logged a timeout exception when the Orchestrator DxM encountered an error. This has now been resolved.
 
 #### 8 November 2023 - Fix - ArtifactDeployer 1.5.2 - Deployment issues with ArtifactDeployer 1.5.1 in clusters [ID_37784] [ID_37784]
 
-When ArtifactDeployer 1.5.1 was used in a cluster, it could occur that deployments were displayed as pending or failed and contain a lot of events in the details overlay on admin.dataminer.services, while in fact the deployment succeeded. This has now been resolved.
+When ArtifactDeployer 1.5.1 was used in a cluster, it could occur that deployments were displayed as pending or failed and there were many events in the details overlay on admin.dataminer.services, while in fact the deployment had succeeded. This has now been resolved.
 
 #### 2 November 2023 - Fix - ArtifactDeployer 1.5.1 - Issue when hosting server of DataMiner CloudGateway had more than one NIC [ID_37762]
 
