@@ -10,7 +10,7 @@ As soon as more than one data item is displayed by the group component, the comp
 
 To configure this component:
 
-1. Add one or more data feeds. See [Applying a data feed](xref:Configuring_dashboard_components#applying-a-data-feed).
+1. Add one or more data feeds. See [Applying a data feed](xref:Apply_Data_Feed).
 
    The component accepts elements, parameters, redundancy groups, services and views as data feeds.
 

@@ -9,7 +9,7 @@ Conditions are used to enable conditional item execution. A condition is defined
 > [!NOTE]
 >
 > - A condition can be enclosed in a CDATA tag, e.g. when you want to define a condition that uses the < operator.
-> - An example protocol "SLC SDF Conditions" is available in the Protocol Development Guide Companion Files.
+> - An example protocol "SLC SDF Conditions" is available in the [Protocol Development Guide Companion Files](https://community.dataminer.services/documentation/protocol-development-guide-companion-files/).
 
 ## Operators
 

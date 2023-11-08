@@ -7,7 +7,6 @@ uid: FAQs_General
 - [What is Skyline's mission and vision?](xref:FAQ_MissionVision)
 - [Does DataMiner process personal data in a GDPR-compliant manner?](xref:FAQ_GDPR)
 - [Does Skyline offer an escrow service?](xref:FAQ_Escrow)
-- [Does Skyline offer serial and GPIO converters?](xref:FAQ_Serial_GPIO_converters)
 - [What are the principal advantages of DataMiner?](xref:FAQ_Principal_advantages)
 - [What do you mean with multi-vendor technology?](xref:FAQ_Multi-vendor_technology)
 - [What are the benefits of using clustered DataMiner Agents as opposed to separate ones?](xref:FAQ_Clustered_DMAs)

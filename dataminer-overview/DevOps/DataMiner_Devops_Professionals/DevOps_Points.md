@@ -4,7 +4,7 @@ uid: DevOps_Points
 
 # Accumulating DevOps Points
 
-To maintain a DataMiner DevOps Professional status and to be an official member of the exclusive DataMiner DevOps Professionals community and unlock the associated benefits, you must accumulate a set quantity of DevOps Points on an annual basis.
+To maintain a DataMiner DevOps Professional status and to be an official member of the exclusive DataMiner DevOps Professionals community and unlock the associated [benefits](xref:Benefits_DevOps_Professionals_Program), you must accumulate a set quantity of DevOps Points [on an annual basis](#devops-points-life-cycle).
 
 There are three levels available for DataMiner DevOps Professionals, with *Advocate* being the entry level and *Catalyst* being the top tier.
 
@@ -14,6 +14,9 @@ There are three levels available for DataMiner DevOps Professionals, with *Advoc
 |--|--|--|
 | ***a well-performing community member*** | ***a trusted DevOps Professional*** | ***an advanced DevOps Professional*** |
 | 750 points per year | 5,000 points per year | 25,000 points per year |
+
+> [!IMPORTANT]
+> Your DevOps Points expire once a period of 12 months has passed since you first signed up. For more information, see [DevOps Points life cycle](#devops-points-life-cycle).
 
 In general, the more active you are in the DataMiner Dojo community and the more you work with DataMiner, the more DevOps Points you will accumulate. This can be achieved through a variety of actions, such as:
 
@@ -38,8 +41,6 @@ In general, the more active you are in the DataMiner Dojo community and the more
   > [!TIP]
   > Unsure of how to start contributing? Take a look at the [Contributing page](xref:contributing) or at our [video series](https://www.youtube.com/playlist?list=PLFb70A6JV6vj1f0DPcdYXExEbNWVPYMgW) on how to contribute to the DataMiner documentation!
 
-- **Contributing to the DataMiner Catalog**: If you have designed a nice add-on for a DataMiner System for a specific use case, and you are willing to share this in the [DataMiner Catalog](https://catalog.dataminer.services/) to help empower the larger DataMiner community, you will be eligible for 250 up to 1000 DevOps Points. This could be a custom GQI operator, a custom Teams ChatOps operator, an Object Model, a user-definable API, etc.
-
 - **Writing blog posts**: You can opt to write and submit a [blog post](https://community.dataminer.services/blog/) for the community, and upon acceptance, this will result in 500 up to 1000 points. Blog posts can revolve around any technology or topic relevant to the community or could, for example, describe a solution that you have designed with DataMiner.
 
   > [!TIP]
@@ -58,3 +59,40 @@ In general, the more active you are in the DataMiner Dojo community and the more
 
 > [!IMPORTANT]
 > In addition to automatic tracking for most of the aforementioned activities to generate points, our community administrators will track certain activities to the best of their abilities to ensure that everybody is awarded all the points they are eligible for in due time. However, you are always welcome to expedite or facilitate the process by highlighting your activities via [devops@skyline.be](mailto:devops@skyline.be) if DevOps Points were not automatically attributed.
+
+> [!TIP]
+> For more information on how to **earn DevOps Points as a business or technology partner**, see [Benefits for DataMiner business and technology partners](xref:Benefits_Business_and_Tech_Partners).
+
+## DevOps Points life cycle
+
+The life cycle of DevOps Points operates as follows:
+
+- **Expiration**: The DevOps Points you have collected expire after 12 months from your sign-up date for the program (referred to as your anniversary date). However, although your DevOps Points total will reset to zero, you will retain the DevOps Professional status you had on your anniversary date.
+
+- **Renewal period**: After your anniversary date, a new 12-month period begins. During this period, you have the opportunity to gather enough points to reach a higher status level.
+
+- **Status maintenance**: If, by the end of the 12-month period, you have not accumulated sufficient points to retain your current status level, you will lose your status and be demoted to a lower level, if applicable (e.g. from enabler to advocate).
+
+Example:
+
+- You sign up for the DevOps Professional Program on April 12, 2023. This means you have until April 12, 2024, to reach the next status level (i.e. a 12-month period).
+
+- By June 12th, you have earned 750 DevOps Points, qualifying you as an advocate.
+
+- By November 24th, you have earned 5000 DevOps Points, qualifying you as an enabler.
+
+- Upon reaching your first anniversary on April 12, 2024, you have earned a total of 7600 DevOps Points. Your DevOps Points are reset to zero, but you retain your enabler level. To maintain this status, you will need to accumulate 5000 DevOps Points again before April 12, 2025.
+
+  ![DevOpsPointsLifeCycle](~/dataminer-overview/images/DevOps_Life_Cycle1.svg)
+
+- By August 13th, you have earned 750 DevOps Points, ensuring your advocate status at the end of the 12-month period. However, despite reaching the advocate status again, you still remain an enabler, as the 12-month period has not elapsed yet.
+
+- Upon reaching your second anniversary on April 12, 2025, you have earned a total of 4300 DevOps Points. You did not accumulate the required 5000 Points to retain the enabler level within a 12-month period. Consequently, you are now demoted to the advocate level. To retain this level, you will need to collect 750 DevOps Points before April 12, 2026.
+
+  ![DevOpsPointsLifeCycle2](~/dataminer-overview/images/DevOps_Life_Cycle2.svg)
+
+- By June 5th, you have earned 750 DevOps Points, ensuring your advocate status at the end of the 12-month period.
+
+- By September 9th, you have earned 5000 DevOps Points and are promoted to the enabler level.
+
+- Upon reaching your third anniversary on April 12, 2026, you have earned a total of 7500 DevOps Points and have reached the enabler level.

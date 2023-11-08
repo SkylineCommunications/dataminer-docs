@@ -35,14 +35,20 @@ Estimated duration: 20 minutes.
 - Depending on your DataMiner version, you may need to enable the [*GenericInterface* soft-launch option](xref:Overview_of_Soft_Launch_Options#genericinterface).
 
   > [!NOTE]
-  > Future DataMiner versions may already include this feature. To check the release version of a soft-launch option, see [Overview of soft-launch options](xref:Overview_of_Soft_Launch_Options).
+  > To check whether this soft-launch option is required in your DataMiner version, see [Overview of soft-launch options](xref:Overview_of_Soft_Launch_Options).
 
   > [!TIP]
   > See [Activating soft-launch options](xref:Activating_Soft_Launch_Options).
 
 - Basic knowledge of GQI extension development.
 
-## Create a basic implementation
+## Overview
+
+- [Step 1: Create a basic implementation](#step-1-create-a-basic-implementation)
+- [Step 2: Make the operator reusable](#step-2-make-the-operator-reusable)
+- [Final result](#final-result)
+
+## Step 1: Create a basic implementation
 
 Create a new class that implements the `IGQIColumnOperator` and the `IGQIRowOperator` interfaces.
 
@@ -84,7 +90,7 @@ public class MyCustomOperator : IGQIColumnOperator, IGQIRowOperator
 }
 ```
 
-## Make the operator reusable
+## Step 2: Make the operator reusable
 
 The solution you have just created is specific to the data. To make the operator more generic and reusable, allow users to select the columns used for subtraction in the query builder and choose a custom name for the newly generated column. This means you will no longer hardcode the column name ("Profit") or the columns that contain the *Sales* and *Cost* values.
 

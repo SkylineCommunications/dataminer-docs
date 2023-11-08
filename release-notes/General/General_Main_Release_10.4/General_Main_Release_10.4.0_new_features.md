@@ -555,7 +555,7 @@ The DataMiner software now supports a more extensive configuration of behavioral
 
 From now on, you will be able to choose between the following types of anomaly monitoring:
 
-- Smart anomaly monitoring (i.e. anomaly monitoring as it existing before)
+- Smart anomaly monitoring (i.e. anomaly monitoring as it existed before)
 - Customized anomaly monitoring
 
 Customized anomaly monitoring will enable you to do the following:
@@ -563,7 +563,7 @@ Customized anomaly monitoring will enable you to do the following:
 - Set absolute or relative thresholds on the jump sizes of the change points of type *Level Shift* or *Outlier*.
 - Enable or disable monitoring for each of the two possible directions of a behavioral change for level shifts, trend changes, variance changes and outliers. This will allow you, for example, to configure different alarm monitoring behaviors for downward level shifts and upward level shifts.
 
-For more information on how to configure anomaly monitoring in DataMiner Cube, see XXX (RN37148 & RN37171).
+For more information on how to configure anomaly monitoring in DataMiner Cube, see [Alarm templates: Configuration of behavioral anomaly alarms [ID_37148] [ID_37171] [ID_37670]](xref:Cube_Feature_Release_10.3.12#alarm-templates-configuration-of-behavioral-anomaly-alarms-id_37148-id_37171-id_37670).
 
 Summary of server-side changes:
 
@@ -583,15 +583,11 @@ Summary of server-side changes:
 
   The existing attributes of the `<Monitored>` element (i.e. *varianceMonitor*, *trendMonitor*, *levelShiftMonitor* and *flatLineMonitor*) have not been changed or removed to ensure compatibility of the new alarm template XML files with older DataMiner versions.
 
-<!--
-When a user configures a customized behavioral anomaly monitoring containing relative or absolute thresholds, this information will be lost upon a downgrade to an older server version (<10.3.11.0) not yet supporting the extended anomaly configuration functionality. A fallback to the automatic "smart" anomaly monitoring will happen for all the change point types which had some kind of anomaly monitoring enabled.
+- When you set up a customized behavioral anomaly monitoring containing relative or absolute thresholds, this setup will be lost when you downgrade to an older server version that does not support this extended anomaly configuration (i.e. DataMiner version 10.3.11 or older). A fallback to the legacy "smart anomaly monitoring" will happen for all the change point types that had some kind of anomaly monitoring enabled.
 
-SLAnalytics takes into account the new extended anomaly configuration to correctly alarm on the detected behavioral anomalies. That is, SLAnalytics now takes into account thresholds on level shift or outlier jump size and the direction of a change point, if any of these were specified in the anomaly configuration.
+- The internal SLAnalytics alarm template monitoring mechanism now also takes into account alarm template group information. As a result, SLAnalytics modules making use of this mechanism will get notified about changes to group entries and can react to these changes.
 
-- [RN37250] The internal SLAnalytics alarm template monitoring mechanism now also takes into account alarm template group information. As a result, SLAnalytics modules making use of this mechanism will get notified about changes to group entries and can react to these changes.
-
-- [RN37334] a flatline behavioral change point shown in the trend graph will now always receive the correct alarm color when an anomaly alarm was created for it. That is, if a critical behavioral anomaly alarm was created for the flatline behavioral change, the change point bar shown in the cube trend graph will receive the red color. It will be orange when the engine created a major alarm for it,...
--->
+- A behavioral change point of type "flatline" shown in the trend graph will now always receive the correct alarm color when an anomaly alarm was created for it. In other words, if a critical behavioral anomaly alarm was created for the behavioral change of type "flatline", the change point bar shown in the trend graph will receive the red color.
 
 #### DataMiner Object Models: 'Full CRUD meta' scripts [ID_37004]
 

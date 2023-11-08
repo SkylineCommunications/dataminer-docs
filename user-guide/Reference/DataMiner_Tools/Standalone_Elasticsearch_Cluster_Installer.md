@@ -3,6 +3,9 @@ uid: Standalone_Elasticsearch_Cluster_Installer
 ---
 # Standalone Elasticsearch Cluster Installer
 
+> [!NOTE]
+> Elasticsearch is **only supported up to version 6.8**. We therefore recommend using [Storage as a Service](xref:STaaS) instead, or if you do want to continue using self-hosted storage, using [dedicated clustered storage](xref:Dedicated_clustered_storage) with OpenSearch.
+
 ## About this tool
 
 The Standalone Elasticsearch Cluster Installer can be used to install Elasticsearch 6.8.23 on Windows. This version of Elasticsearch has been tested for use with DataMiner.

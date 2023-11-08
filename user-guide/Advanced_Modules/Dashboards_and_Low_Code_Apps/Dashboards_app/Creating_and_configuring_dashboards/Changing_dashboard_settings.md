@@ -40,12 +40,9 @@ uid: Changing_dashboard_settings
        > [!NOTE]
        > The built-in Administrator account always has full access to all dashboards.
 
-     - *Allow WebSocket communication*: Web socket communication is enabled by default, but can be disabled, e.g. in case this is not allowed by the firewalls in your network.
-
    - **Dashboard updates**
 
-       > [!NOTE]
-       > Web socket communication is not supported on DMAs using operating systems prior to Windows Server 2012 or Windows 10.
+     - *Allow WebSocket communication*: Web socket communication is enabled by default, but can be disabled, e.g. in case this is not allowed by the firewalls in your network.
 
      - *Fast polling timer*: The polling interval (in s) for components that display real-time information.
 
@@ -55,3 +52,6 @@ uid: Changing_dashboard_settings
 
 > [!NOTE]
 > The settings for a page or panel of a custom low-code app can be configured in the same way as those for a dashboard. See [Configuring a page of a low-code app](xref:LowCodeApps_page_config) or [Configuring a panel of a low-code app](xref:LowCodeApps_panel_config).
+
+> [!TIP]
+> See also: [Changing low-code app settings](xref:Changing_low-code_app_settings)

@@ -137,6 +137,9 @@
               topicUid: LogicActionWmi
         - name: QActions
           topicUid: LogicQActions
+          items:
+          - name: Examples
+            topicUid: LogicQActionsExamples
         - name: Conditions
           topicUid: LogicConditions
         - name: Examples
@@ -355,6 +358,8 @@
           topicUid: ConnectionsSmartSerialBehaviorAfterDisconnect
         - name: Logging incoming data
           topicUid: ConnectionsSmartSerialLogging
+        - name: Dynamic polling
+          topicUid: ConnectionsSmartSerialDynamicPolling
       - name: HTTP
         topicUid: ConnectionsHttp
         items:
@@ -540,10 +545,10 @@
         items:
         - name: Launching EPM objects by clicking buttons in Data Display table cells
           topicUid: AdvancedEPMLaunchEPMObjectsTableCellButtons
-    - name: Connector help pages
+    - name: Connector documentation
       topicUid: Connector_help_pages
       items:
-      - name: Connector help template
+      - name: Connector documentation template
         topicUid: Connector_help_template
     - name: Questions & Answers
       topicUid: QuestionsAndAnswers
@@ -699,6 +704,8 @@
         topicUid: ClassLibraryMonitorsStartingAStartedMonitor
       - name: Stopping a stopped monitor
         topicUid: ClassLibraryMonitorsStoppingAStoppedMonitor
+    - name: Scheduler
+      topicUid: Scheduler_NuGet_Package
     - name: Examples
       topicUid:  ClassLibraryExamples
 - name: API documentation
@@ -5122,6 +5129,8 @@
   - name: CI/CD at Skyline Communications
     topicUid: CICD_at_Skyline
     items:
+    - name: Publishing artifacts to the DataMiner Catalog
+      topicUid: publish_to_catalog
     - name: CI/CD Skyline Communications GitHub
       topicUid: migration_from_gerrit_to_github
       items:

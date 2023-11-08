@@ -59,7 +59,7 @@ Upgrades shall be released at Skyline's discretion and based on the technology i
 
 Installation of Updates and Upgrades on the User's system by Skyline is not included in the Support Services.
 
-Installation and configuration of hardware and databases (Cassandra, Elasticsearch, etc.) in the User's system by Skyline is not included in the Support Services.
+Installation and configuration of hardware and databases (Cassandra, OpenSearch, etc.) in the User's system by Skyline is not included in the Support Services.
 
 ## Support for software issues
 
@@ -182,13 +182,7 @@ The following time frame shall apply for Issues reported during Out of Business 
 
 This Evolve plan section shall only be applicable for Users that comply with the requirements of the Evolve plan. These requirements shall be tested for compliance at regular intervals. In case of non-compliance by the User, Skyline reserves the right to limit the User's Support Services to the provisions of the Continuity plan.
 
-#### Requirements
-
-To be eligible for the Evolve Support Services plan, the User is at all times required to have in their organization:
-
-- a minimum of two active DevOps Professionals, level Enabler, or one DevOps Professional, level Catalyst
-
-- access to [dataminer.services](xref:Overview_DCP)
+For the minimum requirements to enable the Evolve plan, refer to [Minimum requirements](xref:Overview_Support_Plans#minimum-requirements).
 
 Do not hesitate to [contact your sales representative](https://community.dataminer.services/get-in-touch/sales-team/).
 

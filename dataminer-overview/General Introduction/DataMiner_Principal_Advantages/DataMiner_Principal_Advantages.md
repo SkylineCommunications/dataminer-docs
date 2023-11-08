@@ -35,7 +35,7 @@ DataMiner features open-source connectors, meaning that there is complete transp
 - Modify and develop at any time
 
 > [!TIP]
-> See also: [DataMiner Catalog](xref:Catalog)
+> See also: [DataMiner Catalog](xref:About_the_Catalog_module)
 
 ## Unique concept
 

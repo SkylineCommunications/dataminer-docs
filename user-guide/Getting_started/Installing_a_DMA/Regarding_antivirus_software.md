@@ -4,7 +4,9 @@ uid: Regarding_antivirus_software
 
 # Regarding antivirus software
 
-It is possible to install antivirus software on a DMA. However, you need to keep in mind that this is going to consume resources of the server. As such, we recommend that you do not install such software if the server is in a well-protected environment. If you do install antivirus software, you must:
+It is possible to install antivirus software on a DMA. However, you need to keep in mind that this is going to consume resources of the server. As such, we recommend that you do not install such software if the server is in a well-protected environment.
+
+If you do install antivirus software on the **server**, you must:
 
 - Exclude the following directories:
 
@@ -20,10 +22,12 @@ It is possible to install antivirus software on a DMA. However, you need to keep
 
 - Avoid scheduled virus scans affecting the available resources for the DataMiner software at certain moments in time.
 
+If you install antivirus software on **client** machines, exclude the DataMiner Cube directories `%LocalAppData%\Skyline\DataMiner\DataMinerCube`.
+
 > [!NOTE]
 >
 > - These restrictions do not apply for Windows Defender.
-> - Deploying antivirus software on Cassandra, Elasticsearch, or OpenSearch nodes may affect performance. If this is the case, we recommend excluding the data and logs directories from the antivirus scans.
+> - Deploying antivirus software on Cassandra, OpenSearch, or Elasticsearch nodes may affect performance. If this is the case, we recommend excluding the data and logs directories from the antivirus scans.
 
 > [!CAUTION]
-> Failing to make these adjustments when using antivirus software may cause undesired operational problems with your DataMiner system, which are not covered under warranty or support. See [Exclusions](xref:Support_services_terms#exclusions) and [Supported products](xref:Support_services_terms#supported-products) in the *Support services terms*.
+> Failing to make these adjustments when using antivirus software may cause undesired operational problems with your DataMiner System, which are not covered under warranty or support. See [Exclusions](xref:Support_services_terms#exclusions) and [Supported products](xref:Support_services_terms#supported-products) in the *Support services terms*.

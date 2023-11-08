@@ -44,8 +44,6 @@ items:
                 topicUid: Changing_the_default_browser_engine_used_in_DataMiner_Cube
               - name: Configuring Microsoft Edge to run DataMiner Cube
                 topicUid: Configuring_Microsoft_edge_to_run_Cube
-              - name: Installing the Skyline certificates
-                topicUid: Installing_the_Skyline_certificates
               - name: DataMiner Cube deployment methods
                 topicUid: DataMiner_Cube_deployment_methods
           - name: Opening DataMiner Cube

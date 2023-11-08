@@ -20,12 +20,12 @@ Estimated duration: 10 minutes.
 
 ## Overview
 
-- [Step 1: Create an Automation script solution](#create-an-automation-script-solution)
-- [Step 2: Create the Automation script](#create-the-automation-script)
-- [Step 3: Publish the Automation script](#publish-the-automation-script)
-- [Step 4: Run the custom command](#run-the-custom-command)
+- [Step 1: Create an Automation script solution](#step-1-create-an-automation-script-solution)
+- [Step 2: Create the Automation script](#step-2-create-the-automation-script)
+- [Step 3: Publish the Automation script](#step-3-publish-the-automation-script)
+- [Step 4: Run the custom command](#step-4-run-the-custom-command)
 
-## Create an Automation script solution
+## Step 1: Create an Automation script solution
 
 1. In Visual Studio, select *Create a new project*.
 
@@ -43,7 +43,7 @@ Estimated duration: 10 minutes.
 
    ![Visual Studio create Automation script](~/user-guide/images/chatops_01_003.png)
 
-## Create the Automation script
+## Step 2: Create the Automation script
 
 1. For the bot to find your script, you need to place it in the *bot* folder:
 
@@ -87,7 +87,7 @@ Estimated duration: 10 minutes.
    }
    ```
 
-## Publish the Automation script
+## Step 3: Publish the Automation script
 
 When the custom command script is complete, you will need to publish it to the DataMiner System. You can do so using the built-in publish feature of DIS. Make sure that DIS can connect to the DataMiner System you want to upload your script to. You will need to [edit the DIS settings](xref:DIS_settings#dma) so the DMA is selectable.
 
@@ -99,7 +99,7 @@ When the custom command script is complete, you will need to publish it to the D
 
    ![Publish to DMA](~/user-guide/images/chatops_02_004.png)
 
-## Run the custom command
+## Step 4: Run the custom command
 
 1. [Start a conversation with the Teams bot](xref:DataMiner_Teams_bot#starting-a-conversation-with-the-teams-bot).
 

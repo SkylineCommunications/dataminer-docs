@@ -14,7 +14,7 @@ During the migration from a Cassandra Single setup to a Cassandra Cluster setup,
 
 ## Fix
 
-No fix is available yet.
+Install DataMiner 10.3.0 [CU3]/10.2.0 [CU15]/10.3.4<!--RN 35699-->.
 
 ## Issue description
 

@@ -1,5 +1,6 @@
 ---
 uid: Advanced_analytics_features_in_the_Alarm_Console
+keywords: alarm focus, AI
 ---
 
 # Advanced analytics features in the Alarm Console

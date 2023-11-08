@@ -9,4 +9,4 @@ If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STa
 For instructions on how to deploy and configure the Elasticsearch indexing database, see [Setting up an Elasticsearch database in a setup with storage per DMA](xref:Configuring_indexing_database_per_DMS).
 
 > [!NOTE]
-> To use OpenSearch instead, switch to a [dedicated clustered storage setup](xref:Configuring_dedicated_clustered_storage).
+> Elasticsearch is only supported up to version 6.8. As a consequence, if you do want to use self-hosted storage instead of [STaaS](xref:STaaS), we recommend using [dedicated clustered storage](xref:Dedicated_clustered_storage) with OpenSearch.

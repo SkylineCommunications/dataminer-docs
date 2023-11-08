@@ -8,10 +8,11 @@ If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STa
 
 You can [deploy the Elasticsearch indexing database](xref:Installing_Elasticsearch_via_DataMiner) via DataMiner Cube. When the database has been deployed, you can also [configure the indexing settings](xref:Configuring_DataMiner_Indexing) in DataMiner Cube.
 
+> [!IMPORTANT]
+> Elasticsearch is only supported up to version 6.8. As a consequence, if you do want to use self-hosted storage instead of [STaaS](xref:STaaS), we recommend using [dedicated clustered storage](xref:Dedicated_clustered_storage) with OpenSearch.
+
 > [!NOTE]
->
-> - For information on the system requirements for Elasticsearch, refer to [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements).
-> - To use OpenSearch instead, switch to a [dedicated clustered storage setup](xref:Configuring_dedicated_clustered_storage).
+> For information on the system requirements for Elasticsearch, refer to [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements).
 
 > [!TIP]
 > See also:

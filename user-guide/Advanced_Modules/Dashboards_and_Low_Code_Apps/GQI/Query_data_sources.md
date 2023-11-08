@@ -35,6 +35,8 @@ When you create a query, you can use one or more of the data sources listed belo
 
 - [Get parameters for element where](xref:Get_parameters_for_element_where)
 
+- [Get resources](xref:Get_resources)
+
 - [Get services](xref:Get_services)
 
 - [Get view relations](xref:Get_view_relations)

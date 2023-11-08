@@ -42,17 +42,17 @@ For a Cassandra cluster database (i.e. one Cassandra cluster that is used as the
 
    - **Password**: Password with which the DMA has to log on to Cassandra.
 
-1. From DataMiner Cube 10.3.0/10.3.3 onwards, you can also specify the database settings for Elasticsearch. Note that if the server supports [OpenSearch](xref:OpenSearch_database), Cube will allow you to configure this type of database instead of Elasticsearch.
+1. From DataMiner Cube 10.3.0/10.3.3 onwards, you can also specify the database settings for the indexing database.
 
-   - **Database**: The type of database, e.g. *Elasticsearch*.
+   - **Database**: The type of database, e.g. *Elasticsearch/OpenSearch*.
 
    - **Database prefix**: The prefix that the DataMiner System will use to create the indices.
 
-   - **DB server**: The IP addresses or hostnames of the Elasticsearch nodes, separated by commas. If TLS is enabled, the full URL must be specified, e.g. `https://elastic.mydomain.local`. If no port is provided, the default Elasticsearch port is used instead (see [Configuring the IP network ports](xref:Configuring_the_IP_network_ports)).
+   - **DB server**: The IP addresses or hostnames of the indexing database nodes, separated by commas. If TLS is enabled, the full URL must be specified, e.g. `https://elastic.mydomain.local`. If no port is provided, the default port for the indexing database is used instead (see [Configuring the IP network ports](xref:Configuring_the_IP_network_ports)).
 
-   - **User**: The username with which the DMA has to log on to Elasticsearch (if applicable).
+   - **User**: The username with which the DMA has to log on to the indexing database (if applicable).
 
-   - **Password**: The password with which the DMA has to log on to Elasticsearch (if applicable).
+   - **Password**: The password with which the DMA has to log on to the indexing database (if applicable).
 
      ![Cube Cassandra Cluster Configuration](~/user-guide/images/CassandraCluster_CubeConfiguration.png)
 
@@ -143,7 +143,7 @@ To configure the connection to an [Amazon Keyspaces database](xref:Amazon_Keyspa
 
 1. Optionally, you can verify that the DMS is using the database.
 
-   1. Open the `OpenSearch Dashboards URL` to be redirected to your dashboard (equivalent of Kibana for Elasticsearch).
+   1. Open the `OpenSearch Dashboards URL` to be redirected to your dashboard.
 
    1. Select the hamburger button and go to *Management* > *Dev Tools*.
 

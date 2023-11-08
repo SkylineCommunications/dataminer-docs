@@ -56,7 +56,7 @@ More information about SNTP can be found in RFC 4330:
 
 The time server will provide the correct time settings for all DMAs.
 
-To turn any computer using Windows Server 2008 R2, Windows 7 or later into a time server, whether it serves as a DMA or not, do the following:
+To turn any computer into a time server, whether it serves as a DMA or not, do the following:
 
 1. Log on locally to the machine that will act as time server, or establish a remote desktop session with it.
 
@@ -73,11 +73,6 @@ To turn any computer using Windows Server 2008 R2, Windows 7 or later into a tim
 1. Set the *AnnounceFlags* value to 5.
 
 1. Start the Windows Time service again and set the start type to *Automatic*.
-
-> [!NOTE]
->
-> - If you are using Windows Server 2012 R2 (64-bit), set the start type to "Automatic (Delayed Start)" for the service to start automatically.
-> - If you are using Windows 7 or Windows Server 2008 R2, and the Windows Time service always stops, follow the instructions from this [Microsoft support page](https://support.microsoft.com/en-us/help/2385818).
 
 ### Time client
 

@@ -6,7 +6,7 @@ uid: DisPlugins
 
 ## Generate driver help
 
-Generates a help page for the connector. See [Connector help pages](xref:Connector_help_pages).
+Generates a help page for the connector. See [Connector documentation](xref:Connector_help_pages).
 
 ## Add After Startup
 
