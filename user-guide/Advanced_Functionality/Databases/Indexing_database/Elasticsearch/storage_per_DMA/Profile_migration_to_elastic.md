@@ -54,7 +54,7 @@ To migrate the profiles, you will need to use the SLNetClientTest tool.
 
 > [!NOTE]
 >
-> - The migration should not take more than a few minutes. During testing, migrating a *Profiles.xml* file of 100 MB in a system with a local Elasticsearch database took about 1 minute.
+> - The migration should not take more than a few minutes. During testing, migrating a *Profiles.xml* file of 100 MB in a system with a local Elasticsearch database took about 4 minutes.
 > - You can cancel the migration process by clicking the *Cancel Migration* button in the *ProfileManager XML to Elastic* section.
 
 ### Troubleshooting
