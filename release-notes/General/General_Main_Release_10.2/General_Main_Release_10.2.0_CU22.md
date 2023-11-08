@@ -39,3 +39,15 @@ In some cases, DataMiner Cube could become unresponsive when checking the ModelH
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
 DataMiner Cube could start leaking memory when you opened trend graphs with pattern matching.
+
+#### SLAnalytics: Problem when the alarm repository was not available at startup [ID_37782]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+
+In some cases, an error could occur in SLAnalytics when it was not able to connect to the alarm repository at startup.
+
+#### DataMiner Cube - Data Display: Problem when hovering over lite parameter controls in Skyline Black theme [ID_37814]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+
+When DataMiner Cube was using the *Skyline Black* theme, lite parameter controls would become unreadable when you hovered over them.
