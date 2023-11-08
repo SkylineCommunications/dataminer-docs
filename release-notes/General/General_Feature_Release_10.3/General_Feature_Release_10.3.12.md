@@ -407,3 +407,12 @@ When data was being migrated from a Cassandra Cluster database to a STaaS databa
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 [CU0] -->
 
 When you imported a DELT package that contained protocol VDX files linked to elements in the package, in some rare cases, those VDX files would incorrectly not be displayed until after a DataMiner restart.
+
+#### Profile migrations to Elasticsearch/OpenSearch will now fail when the profiles.xml file is corrupt [ID_37818]
+
+<!-- MR 10.3.0 [CU10] - FR 10.3.12 [CU0] -->
+
+When you started a profile migration to an Elasticsearch/OpenSearch database while the *profiles.xml* file was corrupt, up to now, a new empty *profiles.xml* file would be created and the migration would continue. From now on, no new *profiles.xml* file will be created anymore and the migration will go into an error status.
+
+> [!NOTE]
+> When, in the SLNetClientTest tool, you go to *Advanced > Migration*, all migrations in an error status will now have a red background.
