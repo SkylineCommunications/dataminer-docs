@@ -46,6 +46,46 @@ To change the appearance of a column using presets, in the *Column appearance* s
 > - In the *Parameter table* component, the default column alignment is now "Left" instead of "Center".
 > - The default alignment of GQI table columns is now "Left" for columns of type string and "Right" for columns of type numeric or date.
 
+#### Low-Code Apps: Duplicating low-code apps [ID_37698] [ID_37724]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+There are now two ways to duplicate a low-code app:
+
+- **On the Root page of a DataMiner Agent:**
+
+  1. Hover over the application that you want to duplicate. An ellipsis ("...") button will appear.
+  1. Click the ellipsis ("...") button to open the context menu.
+  1. Select *Duplicate*.
+
+  The most recently published app version will now be duplicated. If the app has not yet been published, its draft version will be duplicated instead.
+
+  The newly created duplicate will be assigned a unique name and will automatically be opened in a new browser tab. On the root page, this new app will be added to the list if the *Show draft applications* option is enabled.
+
+- **On the Application page:**
+
+  1. In the top-right corner, right-click the user icon.
+  1. In the user menu, select *Duplicate*.
+
+  If the edit page is open, the current draft version will be copied and the newly created app will automatically be opened in a new browser tab.
+
+  To duplicate the most recently published version of the app:
+
+  1. Open the published version.
+  1. Right-click the user icon.
+  1. In the user menu, select *Duplicate*.
+  
+  To duplicate a different version of the app:
+
+  1. Right-click the user icon.
+  1. In the user menu, select *Versions*.
+  1. Select the desired version.
+  1. Right-click the user icon.
+  1. In the user menu, select *Duplicate*.
+
+  > [!NOTE]
+  > If you are only allowed to duplicate an older version of an app if you have permission to edit the app in question.
+
 ## Changes
 
 ### Enhancements
