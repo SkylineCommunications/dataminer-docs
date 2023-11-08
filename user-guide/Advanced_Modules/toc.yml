@@ -373,6 +373,8 @@ items:
                 topicUid: DashboardImage
               - name: Icon
                 topicUid: DashboardIcon
+              - name: Maps
+                topicUid: DashboardMaps
               - name: Stepper
                 topicUid: DashboardStepper
               - name: Web
