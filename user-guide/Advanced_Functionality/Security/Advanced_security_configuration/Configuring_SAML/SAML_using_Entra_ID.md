@@ -208,6 +208,8 @@ Once authentication has been configured, you need to make sure users are provisi
 
    These GUIDs identify the application (DataMiner) in the Entra ID platform, and identify the users & groups directory on the Azure portal, respectively. You will need these later in this procedure.
 
+   ![SAML application info](~/user-guide/images/SAML_application_info.png)
+
    > [!NOTE]
    > Do not use the *Object ID* under *Azure Active Directory > Enterprise applications > [your application name]*. This is a different Object ID, which will not work for this procedure.
 
@@ -244,7 +246,7 @@ Once authentication has been configured, you need to make sure users are provisi
    > [!NOTE]
    > After you restart DataMiner, the specified client secret will be replaced by a GUID in the *DataMiner.xml* file.
 
-1. In the Azure portal, go back to the root page for the Data Miner application under *App registrations*.
+1. In the Azure portal, go back to the root page for the DataMiner application under *App registrations*.
 
 1. In the pane on the left, select *API Permissions*.
 
