@@ -22,24 +22,22 @@ uid: Web_apps_Feature_Release_10.4.1
 
 When editing a table component, you can now find a *Column appearance* section in the *Layout* tab. This section allows you to customize the appearance of a column.
 
-- To change the alignment of a column, select the column and, in the *Column appearance* section, set *Alignment* to "Left", "Center" or "Right".
+To change the appearance of a column using presets, in the *Column appearance* section, do the following:
 
-- To change the appearance of a column using presets, in the *Column appearance* section, do the following:
+1. In the selection box, select the column of which you want to change the appearance.
+1. Click the preview to expand a list of available presets.
+1. Select the preset that you want to be applied to the column.
 
-  1. In the selection box, select the column of which you want to change the appearance.
-  1. Click the preview to expand a list of available presets.
-  1. Select the preset that you want to be applied to the column.
+   Available presets:
 
-  Available presets:
+   - *Left*: Align the content to the left.
+   - *Center*: Align the content in the center.
+   - *Right*: Align the content to the right.
+   - *Icon*: Display an icon instead of text.
+   - *Link*: Make the text appear as a link.
+   - *Background*: Add a background color to the cell.
 
-  - *Left*: Align the content to the left.
-  - *Center*: Align the content in the center.
-  - *Right*: Align the content to the right.
-  - *Icon*: Display an icon instead of text.
-  - *Link*: Make the text appear as a link.
-  - *Background*: Add a background color to the cell.
-
-  To tweak the preset you selected, click the ellipsis button (*...*) and select *Edit preset*. This will open the template editor, which will allow you to fully customize the column appearance.
+   To tweak the preset you selected, click the ellipsis button (*...*) and select *Edit preset*. This will open the template editor, which will allow you to fully customize the column appearance.
 
 > [!NOTE]
 >
