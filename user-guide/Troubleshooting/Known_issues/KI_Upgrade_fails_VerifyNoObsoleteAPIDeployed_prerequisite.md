@@ -35,6 +35,3 @@ When finished, you should only have *Unused Tokens* left in your treeview. This 
 ## Issue description
 
 Upgrading to 10.4.0+ will remove API Deployment and all configuration/data related to it. If you still have APIs deployed with this feature, they would be removed by the upgrade. This prerequisite prevents this by forcing you to remove the deployments.
-
-> [!TIP]
-> If you cannot see the UI in *System Center*, you could be missing the *APIDeployment* soft-launch flag. See [Activating soft-launch options](xref:Activating_Soft_Launch_Options) for more info.
