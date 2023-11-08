@@ -18,7 +18,7 @@ Logging for the Orchestrator DxM has been improved. In several cases, the log le
 
 When Orchestrator 1.4.0 and/or ArtifactDeployer 1.5.1 or older were used, in some specific cases, the ArtifactDeployer DxM logged a timeout exception when the Orchestrator DxM encountered an error. This has now been resolved.
 
-#### 8 November 2023 - Fix - ArtifactDeployer 1.5.2 - Deployment issues with ArtifactDeployer 1.5.1 in clusters [ID_37784] [ID_37784]
+#### 8 November 2023 - Fix - ArtifactDeployer 1.5.2 - Deployment issues with ArtifactDeployer 1.5.1 in clusters [ID_37785]
 
 When ArtifactDeployer 1.5.1 was used in a cluster, it could occur that deployments were displayed as pending or failed and there were many events in the details overlay on admin.dataminer.services, while in fact the deployment had succeeded. This has now been resolved.
 
