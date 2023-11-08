@@ -34,6 +34,12 @@ In the *View* tab of a spectrum card, the buttons in the *Reference lines* panel
 
 In some cases, DataMiner Cube could become unresponsive when checking the ModelHost DxM license.
 
+#### DataMiner Cube - Visual Overview: Placeholder containing '[Elapsed Time]' would not be updated when the elapsed time had changed [ID_37756]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+
+When the placeholder `[Elapsed Time]` was used inside another placeholder (e.g. `[Subtract:[Elapsed Time],[PreRoll]]`), the entire placeholder (e.g. `[Subtract:[Elapsed Time],[PreRoll]]`) would not be updated when the elapsed time had changed.
+
 #### DataMiner Cube - Pattern matching: Memory leak [ID_37771]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->

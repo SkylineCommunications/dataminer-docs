@@ -34,6 +34,12 @@ This new DxM, which is currently still under development, is intended to manage 
 
 ### Enhancements
 
+#### Deprecated NotifyDataMiner type 'NT_CONNECTIONS_TO_REMOVE' can no longer be used [ID_37595]
+
+<!-- MR 10.5.0 - FR 10.4.1 -->
+
+From now on, the deprecated NotifyDataMiner type *NT_CONNECTIONS_TO_REMOVE* can no longer be used.
+
 #### SLAnalytics - Proactive cap detection: Enhanced detection of possible future alarm threshold breaches [ID_37681]
 
 <!-- MR 10.5.0 - FR 10.4.1 -->
