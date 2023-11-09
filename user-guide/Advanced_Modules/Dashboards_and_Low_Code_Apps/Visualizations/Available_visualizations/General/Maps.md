@@ -4,10 +4,10 @@ uid: DashboardMaps
 
 # Maps
 
-This component is used to display markers and/or lines on a map. It uses a GQI query as data input. 
+This component is used to display markers and/or lines on a map. It uses one or more GQI queries as data input. 
 
 > [!NOTE]
-> To use the Maps component, the host servers for DataMiner Maps have to be configured in the file *C:\Skyline DataMiner\Maps\ServerConfig.xml*. If this file does not exist, it will be created automatically when using a Maps component for the first time and it will contain the default configuration. To change the configuration, see [Configuring the DataMiner Maps host servers](xref:Configuring_the_DataMiner_Maps_host_servers)
+> To use the Maps component, the host servers for DataMiner Maps have to be configured in the file *C:\Skyline DataMiner\Maps\ServerConfig.xml*. If this file does not exist, it will be created automatically when using a Maps component for the first time. To change the configuration, see [Configuring the DataMiner Maps host servers](xref:Configuring_the_DataMiner_Maps_host_servers)
 
 ## Adding Data
 
@@ -20,7 +20,7 @@ The data is visualized as a set of markers by default, but can also be configure
 3. If no match is found, the component will take the first column containing string values for the ID and the first two columns containing numbers for latitude and longitude while taking into account the columns that are already assigned to other dimensions.
 4. The chosen column values can be seen for each query. If a dimension is set incorrectly, it can still be changed manually by the user at any point.
 
-This process is similar for the configuration of lines, but instead of one latitude and longitude value, 2 pairs of latitude and longitude values need to be configured, one for the starting point and one for the end point of the line.
+This process is similar for the configuration of lines, but instead of one latitude and longitude value, 2 pairs of coordinates need to be configured, one for the starting point and one for the end point of the line.
 
 ## Layer settings
 
@@ -57,9 +57,9 @@ In the *Component > Layout > Map settings* tab, the following options are availa
 
 When using the maps component in a [low-code app](xref:Application_framework), a set of different component actions can be configured (see [Configuring low-code app events](xref:LowCodeApps_event_config)). The following actions are available:
 
-- *Fetch the data*: This action refetches the data from the component.
-- *Pan to view*: This action pans to a certain point on the map. The latitude and longitude inputs for this action can be static or dynamic by using a feed.
-- *Set zoom level*: This action zooms to a certain level on the map. The zoom level input can be static or dynamic by using a feed.
+- *Fetch the data*: This action fetches the data from the component again.
+- *Pan to view*: This action pans to a certain location. The coordinates for this action can be static or dynamic by using a feed.
+- *Set zoom level*: This action zooms to a certain level on the map. The zoom level can be static or dynamic by using a feed.
 - *Overlay actions*: Using app actions, different types of overlays can be shown on the map. The supported overlay types are .kml, .kmz and .geoJSON. The source of the overlay needs to be specified in an input (that can also be received from a feed ) and can be either a local source, specified by a relative path in the *C://Skyline DataMiner/Maps* folder or a web source, specified by a public URL that hosts the overlay. The following overlay actions are available: 
     - *Open overlay*
     - *Close overlay*
