@@ -39,7 +39,7 @@ With DataMiner Express, you can deploy a standalone, fully featured DataMiner Sy
 This is the perfect way to get started, allowing anyone to use the platform and build up knowledge on the many possibilities it has to offer. When ready to scale up, you can set up a yearly subscription or start with a number of credits in the Pay-per-Use model.
 
 - **Private instance**: Express systems deployed on your own infrastructure (on-premises or in a private cloud) are free, but must be renewed every 12 months.
-- **DataMiner as a Service**: Express systems [deployed as a service](xref:Deploying_a_DMS_in_the_cloud) are free for the first 15 days, and require a subscription or pay-per-use credits after that.
+- **DataMiner as a Service**: Express systems [deployed as a service](xref:Deploying_a_DMS_in_the_cloud) are free for the first 7 days, with a subscription after that.
 
 > [!TIP]
 > See also:

@@ -523,13 +523,13 @@ To allow certain field descriptors to be removed, this behavior has now been cha
 
 A `SectionDefinitionError` with reason `SectionDefinitionFieldsInUse` will be added to the trace data in the following cases:
 
-- If any of the removed field descriptors is being used in the DOM manager settings of the DOM module (either in the name definition or in one of the field aliases). When a field descriptor is detected in those settings, `UsedInDomManagerSettings` will be set to true.
+- If any of the removed field descriptors is being used in the DOM manager settings of the DOM module (either in the name definition or in one of the field aliases). When a field descriptor is detected in those settings, `UsedInDomManagerSettings` will be set to true in the `SectionDefinitionError`.
 
-- If any of the removed field descriptors is being used in the name definition defined on a DOM definition. The IDs of those DOM definitions will be specified in `DomDefinitionIds`.
+- If any of the removed field descriptors is being used in the name definition defined on a DOM definition. The IDs of those DOM definitions will be specified in `DomDefinitionIds` of the `SectionDefinitionError`.
 
-- If any of the removed field descriptors is being used in any of the status section definition links on a DOM behavior definition. The IDs of the DOM behavior definitions will be specified in `DomBehaviorDefinitionIds`.
+- If any of the removed field descriptors is being used in any of the status section definition links on a DOM behavior definition. The IDs of the DOM behavior definitions will be specified in `DomBehaviorDefinitionIds` of the `SectionDefinitionError`.
 
-- If any of the removed field descriptors is assigned a value in any DOM instance. The IDs of the DOM instances (limited to 100) will be specified in `DomInstanceIds`. If a large number of field descriptors were removed, only the first 100 field descriptors that match will be taken into account.
+- If any of the removed field descriptors is assigned a value in any DOM instance. The IDs of the DOM instances (limited to 100) will be specified in `DomInstanceIds` of the `SectionDefinitionError`. If a large number of field descriptors were removed, only the first 100 field descriptors that match will be taken into account.
 
 Also, the `SectionDefinitionError` will have `SectionDefinitionID` set to the ID of the SectionDefinition that could not be updated. `FieldDescriptorIds` will contain the IDs of the FieldDescriptors that were found to be in use.
 
@@ -642,6 +642,12 @@ Similar to other types of anomaly suggestion events, flatline suggestion events 
 
 > [!NOTE]
 > Flatline alarms stay open until the flatline in question disappears or SLAnalytics is restarted.
+
+#### Storage as a Service: Enhanced performance when migrating data from Cassandra to the cloud [ID_37740]
+
+<!-- MR 10.4.0 - FR 10.3.12 [CU0] -->
+
+Because of a number of enhancements, overall performance has increased when migrating data from a Cassandra database to the cloud.
 
 ### Fixes
 
@@ -836,3 +842,9 @@ In some cases, a newly created element could get assigned the same DmaId/Element
 <!-- MR 10.4.0 - FR 10.3.12 -->
 
 When data was being migrated from a Cassandra Cluster database to a STaaS database, every DataMiner Agent in the DMS would incorrectly send the average trend data to the cloud. From now on, only one of the agents will send this data.
+
+#### DELT package created on DataMiner v10.3.8 or newer could no longer be imported on DataMiner v10.3.7 or older [ID_37731]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+When you exported elements via a DELT package on a DMA running DataMiner version 10.3.8 or newer, it would no longer be possible to import that DELT package on a DMA running DataMiner version 10.3.7 or older.
