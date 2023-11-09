@@ -96,6 +96,15 @@ To feed a component from the URL, you need to link the component to the URL feed
 
 `?data={"feed": {"strings": ["data for url feed"], "numbers": [1]}}`
 
+#### Dashboards app & Low-Code Apps: Duplicating GQI queries [ID_37739]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+It is now possible to duplicate a GQI query:
+
+1. In the *Data* tab, open the *Queries* section, and click the ellipsis ("...") button of the GQI query that you want to duplicate.
+1. In the context menu, select *Duplicate*.
+
 ## Changes
 
 ### Enhancements
