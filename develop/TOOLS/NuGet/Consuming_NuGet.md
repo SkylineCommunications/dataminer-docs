@@ -119,3 +119,39 @@ In case you are using a token that has an expiration date or if you entered the 
 1. Select the credentials you want to edit and click *Edit* in the lower left corner.
 
 1. Update the username and/or password, and click *Save*.
+
+#### Issues with credentials
+
+In case you are having issues with the credentials in Visual Studio were each time the pop-up window for the credentials appear, you can try this way:
+
+Remove the credentials that are configured in the Credential Manager in Windows. See [Editing credentials](#editing-credentials) to find the location.
+Make sure all Visual Studio instances are closed so that there is no accidental caching going on.
+
+Go to *%appdata%\NuGet* and open the ***NuGet.config*** file. In there you'll find something similar to this:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <packageSources>
+    <add key="nuget.org" value="https://api.nuget.org/v3/index.json" protocolVersion="3" />
+    <add key="Microsoft Visual Studio Offline Packages" value="C:\Program Files (x86)\Microsoft SDKs\NuGetPackages\" />
+    <add key="GitHub" value="https://nuget.pkg.github.com/SkylineCommunications/index.json" />
+  </packageSources>
+  <packageRestore>
+    <add key="enabled" value="True" />
+    <add key="automatic" value="True" />
+  </packageRestore>
+  <bindingRedirects>
+    <add key="skip" value="False" />
+  </bindingRedirects>
+  <packageManagement>
+    <add key="format" value="1" />
+    <add key="disabled" value="False" />
+  </packageManagement>
+</configuration>
+```
+
+Here you can add your credentials as described by [Microsoft](https://learn.microsoft.com/en-us/nuget/reference/nuget-config-file#packagesourcecredentials).
+
+> [!IMPORTANT]
+> If you are adding the credentials in an unencrypted way, I would highly recommend to make sure that the scopes for the token is restricted to only read packages as mentioned [above](#step-1-creating-a-personal-access-token).
