@@ -269,13 +269,16 @@ Once authentication has been configured, you need to make sure users are provisi
 
 1. Make sure the following permissions are enabled:
 
-   - Microsoft Graph > Application.Read.All – Application – Read applications
-
    - Microsoft Graph > GroupMember.Read.All – Application – Read groups memberships
 
    - Microsoft Graph > User.Read.All – Application - Read all users' full profiles
 
    - Microsoft Graph > User.Read – Delegated – Sign in and read user profile
+
+   - Microsoft Graph > Application.Read.All – Application – Read applications
+
+     > [!NOTE]
+     > From DataMiner 10.3.12 onwards, the *Application.Read.All* permission is optional. However, if you do not enable this permission, you will not get a warning if your client secret is about to expire, so we **strongly recommend that you enable this**.
 
 1. Open DataMiner Cube and log in with an existing Administrator account.
 
