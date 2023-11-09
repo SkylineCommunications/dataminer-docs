@@ -239,11 +239,11 @@ items:
             topicUid: KI_Migration_of_Ticketing_data_from_Cassandra_to_Elasticsearch_fails
           - name: Setting a protocol to production takes a long time
             topicUid: KI_Setting_a_protocol_to_production_takes_a_long_time
-          - name: Upgrade fails because of VerifyNoObsoleteApiDeployed.dll prerequisite
-            topicUid: KI_Upgrade_fails_VerifyNoObsoleteApiDeployed_prerequisite
       - name: Resolved issues
         topicUid: KI_Cube_connection_issue_alarm_tabs
         items:
+          - name: Upgrade fails because of VerifyNoObsoleteApiDeployed.dll prerequisite
+            topicUid: KI_Upgrade_fails_VerifyNoObsoleteApiDeployed_prerequisite
           - name: Cube freezes on 'Connected!' loading screen when no alarm tabs are displayed
             topicUid: KI_Cube_connection_issue_alarm_tabs
           - name: SLNet deadlock in EPM setups
