@@ -13,7 +13,9 @@ To configure external authentication with Entra ID as the identity provider, you
 To configure authentication, follow these steps:
 
 1. [Set up a Microsoft Entra ID Enterprise application](#setting-up-a-microsoft-entra-id-enterprise-application)
+
 1. [Create a DataMiner metadata file](#creating-a-dataminer-metadata-file)
+
 1. [Configure DataMiner.xml to use external authentication](#configuring-dataminerxml-to-use-external-authentication)
 
 ### Setting up a Microsoft Entra ID Enterprise application
@@ -65,17 +67,25 @@ To set up external authentication, you first need to create an enterprise applic
       - For older DataMiner versions only:
 
         - ``https://dataminer.example.com/root/``
+
         - ``https://dataminer.example.com/ticketing/``
+
         - ``https://dataminer.example.com/jobs/``
+
         - ``https://dataminer.example.com/monitoring/``
+
         - ``https://dataminer.example.com/dashboard/``
+
         - ``https://dataminer.example.com/API/``
+
         - ``https://dataminer.example.com/``
 
       - If the DMA is connected to dataminer.services, also add the following URLs, replacing `<dms-dns-name>` with the DNS name of the DataMiner System and `<organization-name>` with the name of the organization
 
         - `https://<dms-dns-name>-<organization-name>.on.dataminer.services/API/`
+
         - `https://<dms-dns-name>-<organization-name>.on.dataminer.services/account-linking`
+
         - `https://<dms-dns-name>-<organization-name>.on.dataminer.services/account-linking/`
 
       ![Editing the basic SAML configuration](~/user-guide/images/SAML_Reply_URLs.png)
@@ -167,8 +177,11 @@ To set up external authentication, you first need to create an enterprise applic
    ```
 
    - **type**: `SAML` (Identity federation using SAML assertions)
+
    - **ipMetadata**: The path to or the URL of the identity provider's metadata file, which you copied while [setting up the Microsoft Entra ID Enterprise application](#setting-up-a-microsoft-entra-id-enterprise-application).
+
    - **spMetadata**: The path to or the URL of the [DataMiner metadata file](#creating-a-dataminer-metadata-file) you created earlier.
+
    - **timeout**: Optional. The amount of time DataMiner should wait for the user to be authenticated by the identity provider. If this attribute is not specified, DataMiner will wait 300 seconds (5 minutes).
 
 1. Save and close the file, and restart the DMA.
@@ -201,7 +214,9 @@ Once authentication has been configured, you need to make sure users are provisi
 1. Gather the following information from this page:
 
    - *Application (client) ID*
+
    - *Object ID* (optional from 10.3.11/10.4.0 onwards<!-- RN 37162 -->)
+
    - *Tenant ID*
 
    These GUIDs identify the application (DataMiner) in the Entra ID platform, and identify the users & groups directory on the Azure portal, respectively. You will need these later in this procedure.
@@ -215,7 +230,11 @@ Once authentication has been configured, you need to make sure users are provisi
 
    1. In the *Client secrets* section, select *New client secret*.
 
-   1. Enter a description and an expiration date for the application secret.
+      ![New client secret](~/user-guide/images/SAML_New_client_secret.png)
+
+   1. Enter a description and an expiration date for the application secret, and click *Add*.
+
+      ![Add client secret](~/user-guide/images/SAML_Add_client_secret.png)
 
    1. Copy the secret value for later on. You will need this value later in this procedure.
 
@@ -251,8 +270,11 @@ Once authentication has been configured, you need to make sure users are provisi
 1. Make sure the following permissions are enabled:
 
    - Microsoft Graph > Application.Read.All – Application – Read applications
+
    - Microsoft Graph > GroupMember.Read.All – Application – Read groups memberships
+
    - Microsoft Graph > User.Read.All – Application - Read all users' full profiles
+
    - Microsoft Graph > User.Read – Delegated – Sign in and read user profile
 
 1. Open DataMiner Cube and log in with an existing Administrator account.
@@ -278,7 +300,9 @@ While it is possible to use DataMiner versions prior to DataMiner 10.1.11/10.2.0
 1. Gather the following information from this page:
 
    - *Application (client) ID*
+
    - *Object ID* (optional from 10.3.11/10.4.0 onwards<!-- RN 37162 -->)
+
    - *Tenant ID*
 
    These GUIDs identify the application (DataMiner) in the Entra ID platform, and identify the users & groups directory on the Azure portal, respectively. You will need these later in this procedure.
@@ -318,8 +342,11 @@ While it is possible to use DataMiner versions prior to DataMiner 10.1.11/10.2.0
 1. Make sure the following permissions are enabled:
 
    - Microsoft Graph > Application.Read.All – Delegated – Read applications
+
    - Microsoft Graph > GroupMember.Read.All – Delegated – Read groups memberships
+
    - Microsoft Graph > User.Read – Delegated – Sign in and read user profile
+
    - Microsoft Graph > User.Read.All – Delegated – Read all users' full profiles
 
 1. Open DataMiner Cube and log in with an existing Administrator account.
@@ -339,6 +366,7 @@ From DataMiner 10.2.0/10.1.12 onwards, users authenticated by Entra ID using SAM
 There are two ways to configure this setup: with or without group claims.
 
 - With group claims, when a user logs in for the first time, they will be added to an existing group that exists both in Entra ID and in DataMiner.
+
 - Without group claims, any user that logs in for the first time will be added to one default security group, which you will need to configure during the setup detailed below. This is easier to configure, but has the disadvantage that user information that is created will not be updated.
 
 #### [With group claims](#tab/tabid-3)

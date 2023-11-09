@@ -31,7 +31,9 @@ There are two ways to configure this setup: with or without group claims. If gro
    - **App logo**: Optional logo to be linked to your application.
 
      - Format: PNG, JPG or GIF
+
      - Max. size: 1 MB
+
      - Min. resolution: 420 x 120 pixels
 
      > [!TIP]
@@ -46,6 +48,7 @@ There are two ways to configure this setup: with or without group claims. If gro
      - Select the following checkboxes:
 
        - *Use this for Recipient URL and Destination URL*
+
        - *Allow this app to request other SSO URLs*
 
      - Open *Show Advanced Settings* and enter the following additional URLs to *Other Requestable SSO URLs* (replacing `dataminer.example.com` with the actual IP address or DNS name of your DMS):
@@ -55,12 +58,26 @@ There are two ways to configure this setup: with or without group claims. If gro
        - ``https://dataminer.example.com/API/``
 
        Older DataMiner versions:
+
        - ``https://dataminer.example.com/root/``
+
        - ``https://dataminer.example.com/API/``
+
        - ``https://dataminer.example.com/dashboard/``
+
        - ``https://dataminer.example.com/monitoring/``
+
        - ``https://dataminer.example.com/jobs/``
+
        - ``https://dataminer.example.com/ticketing/``
+
+       If the DMA is connected to dataminer.services, also add the following URLs, replacing `<dms-dns-name>` with the DNS name of the DataMiner System and `<organization-name>` with the name of the organization
+
+        - `https://<dms-dns-name>-<organization-name>.on.dataminer.services/API/`
+
+        - `https://<dms-dns-name>-<organization-name>.on.dataminer.services/account-linking`
+
+        - `https://<dms-dns-name>-<organization-name>.on.dataminer.services/account-linking/`
 
        > [!NOTE]
        > The indexes here should be the same as the indexes in `C:\Skyline DataMiner\okta-sp-metadata.xml`, which you will create later in this procedure.
@@ -83,7 +100,9 @@ There are two ways to configure this setup: with or without group claims. If gro
    - **Attribute Statements**: Add the following attribute statements, all with "Basic" format:
 
       - name "Email", value "user.email"
+
       - name "Firstname", value "user.firstName"
+
       - name "Lastname", value "user.lastName"
 
    - **When using group claims:**
@@ -171,5 +190,16 @@ There are two ways to configure this setup: with or without group claims. If gro
      </md:SPSSODescriptor>
    </md:EntityDescriptor>
    ```
+
+   For a DMA connected to dataminer.services, add the three following additional bindings within the `<md:SPSSODescriptor>` element:
+
+   ```xml
+     <md:SPSSODescriptor AuthnRequestsSigned="false" WantAssertionsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+       ...
+       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://<dms-dns-name>-<organization-name>.on.dataminer.services/API/" index="1" isDefault="true"/>
+       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://<dms-dns-name>-<organization-name>.on.dataminer.services/account-linking" index="2" isDefault="false"/>
+       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://<dms-dns-name>-<organization-name>.on.dataminer.services/account-linking/" index="3" isDefault="false"/>
+     </md:SPSSODescriptor>
+     ```
 
 1. Restart DataMiner.

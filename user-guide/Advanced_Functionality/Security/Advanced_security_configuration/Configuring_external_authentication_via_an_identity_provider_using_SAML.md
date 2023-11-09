@@ -30,7 +30,7 @@ Please note the following:
 
 - DataMiner will expect one of the claims provided by the identity provider to be the "name" claim: `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name`. This field must contain either the username or the email address.
 
-- If a default username is not in email format or if DataMiner is unable to locate it, add a `<PreferredEmailClaim>` tag to the DataMiner metadata file to make sure it points to the correct email address. See [Creating a DataMiner metadata file](xref:SAML_using_Entra_ID#creating-a-dataminer-metadata-file).
+- If a default username is not in email format or if DataMiner is unable to locate it, add a `<PreferredEmailClaim>` element to the `<AutomaticUserCreation>` element in *DataMiner.xml* that refers to a claim containing a valid email address tag. See [Configuring DataMiner.xml to use external authentication](xref:SAML_using_Entra_ID#configuring-dataminerxml-to-use-external-authentication).
 
 - If there are two DataMiner users who share the same email address, both users will not be able to log in. To prevent this from happening, we recommended not using more than one method to add users. For example, do not add Windows domain users if the Entra ID users use the same email address.
 
