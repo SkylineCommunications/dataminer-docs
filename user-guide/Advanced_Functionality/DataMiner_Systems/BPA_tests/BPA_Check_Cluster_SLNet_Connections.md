@@ -7,7 +7,7 @@ uid: BPA_Check_Cluster_SLNet_Connections
 > [!NOTE]
 > This BPA is available from DataMiner version 10.4.1 and 10.5.0 onwards.
 
-The Check Cluster SLNet Connections BPA is a cluster BPA that will triggger a local BPA on each agent that is reachable from the one initiating the cluster BPA, to check the connections between agents. It is important to know if there are issues with these connections as they are used for inter DMS communication. Running this BPA might indicate if there are potential problems.
+The Check Cluster SLNet Connections BPA is a cluster BPA that will trigger a local BPA on each agent that is reachable from the one initiating the cluster BPA, to check the connections between agents. It is important to know if there are issues with these connections as they are used for inter DMS communication. Running this BPA might indicate if there are potential problems.
 
 This BPA test is available on demand. You can [run it in System Center](xref:Running_BPA_tests) (on the *Agents > BPA* tab, available from DataMiner version 10.4.1 and 10.5.0 onwards), this BPA test is available by default.
 
@@ -26,7 +26,7 @@ Test succeeded: From this point of view, all SLNet connections and connections b
 
 ### Error
 
-One or more potential problems where detected.
+One or more potential problems were detected.
 
 The detailed JSON output of the BPA may contain the following possible messages, depending on which potential issues are detected:
 
@@ -54,7 +54,7 @@ The detailed JSON output of the BPA may contain the following possible messages,
 
 - The LegacyRemotingConnection ports are closed on these agents: X (where X is the summary of the regarding agents and the port).
 
-- The ports are closed on these agents: X (where X is the summary of the regarding agents and the port).
+- Unable to communicate with port X from failover buddy.
   
 - Could not determine which connection is used to these agents: X (where X is the summary of the regarding agents).
 
@@ -100,7 +100,7 @@ If you are unable to resolve the issues, please contact Skyline Technical Suppor
 
 ## Limitations
 
-- When using hostnames in DMS.xml, this BPA could potentially falsely indicate problems.
+- When using hostnames in DMS.xml, this BPA can potentially falsely indicate problems.
 
 - Results may vary from the agent you start the BPA from. It might be interesting to also start the BPA from another agent.
 
