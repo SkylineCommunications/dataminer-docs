@@ -69,6 +69,12 @@ When you change the anomaly configuration in an alarm template assigned to a mai
 
 When you started a migrating from a MySQL database to a Cassandra database, an error could occur when the connection to the MySQL database took a long time to get established.
 
+#### DELT: Trend data missing in DELT package after exporting tables with primary keys of type string [ID_37664]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+When you exported tables of which the primary keys were of type string, the DELT export package would incorrectly not contain any trend data.
+
 #### DELT package created on DataMiner v10.3.8 or newer could no longer be imported on DataMiner v10.3.7 or older [ID_37731]
 
 <!-- MR 10.4.0 - FR 10.4.1 -->

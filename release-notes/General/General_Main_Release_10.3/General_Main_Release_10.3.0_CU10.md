@@ -16,6 +16,12 @@ uid: General_Main_Release_10.3.0_CU10
 
 ### Fixes
 
+#### DELT: Trend data missing in DELT package after exporting tables with primary keys of type string [ID_37664]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+When you exported tables of which the primary keys were of type string, the DELT export package would incorrectly not contain any trend data.
+
 #### SLAnalytics: Problem when the alarm repository was not available at startup [ID_37782]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
