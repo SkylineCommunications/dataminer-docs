@@ -35,3 +35,5 @@ When creating a new Automation script from Cube, the options attribute has the d
 - 0x040: SupportsBackForward
 - 0x080: SkipElementChecks
 - 0x100: SavedFromCube
+
+For more information about the meaning of each flag, refer to [General script configuration](xref:General_script_configuration).
