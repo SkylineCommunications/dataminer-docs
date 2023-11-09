@@ -84,7 +84,7 @@ There are now two ways to duplicate a low-code app:
   1. In the user menu, select *Duplicate*.
 
   > [!NOTE]
-  > If you are only allowed to duplicate an older version of an app if you have permission to edit the app in question.
+  > You are only allowed to duplicate an older version of an app if you have permission to edit the app in question.
 
 #### Dashboards app & Low-Code Apps: 'Text input' and 'Numeric input' components can now be fed data from other components and from the URL [ID_37736]
 
