@@ -58,7 +58,7 @@ To move a marker in Cube, you can:
 
 - Click the pencil icon next to the marker in the info pane, and enter a new marker frequency.
 
-- Click the ![center frequency](~/user-guide/images/Center_Frequency.png) button next to the marker in the info pane to move the marker to the center frequency (Available from DataMiner 10.2.0 [CU21]/10.3.0 [CU9]/10.3.12 onwards<!--RN 37705-->).
+- Click the ![center frequency](~/user-guide/images/Center_Frequency.png) button next to the marker in the info pane to move the marker to the center frequency (available from DataMiner 10.2.0 [CU21]/10.3.0 [CU9]/10.3.12 onwards<!--RN 37705-->).
 
 - Drag the marker to a different position on the real-time display.
 
