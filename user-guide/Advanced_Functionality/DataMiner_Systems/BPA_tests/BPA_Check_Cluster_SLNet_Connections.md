@@ -50,9 +50,9 @@ The detailed JSON output of the BPA may contain the following possible messages,
 
 - Connection port [Y] of failover buddy is not open. (agent is part of a failover setup but the connection port of the buddy looks closed. Y represents the port)
 
-- The gRPC ports are closed on these agents: X (where X is the summary of the regarding agents and the port).
+- Unable to communicate with gRPC ports on these agents: X (where X is the summary of the regarding agents and the port).
 
-- The LegacyRemotingConnection ports are closed on these agents: X (where X is the summary of the regarding agents and the port).
+- Unable to communicate with LegacyRemotingConnection ports on these agents: X (where X is the summary of the regarding agents and the port).
 
 - Unable to communicate with port X from failover buddy.
   
