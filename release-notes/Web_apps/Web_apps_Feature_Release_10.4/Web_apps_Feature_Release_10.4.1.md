@@ -86,6 +86,16 @@ There are now two ways to duplicate a low-code app:
   > [!NOTE]
   > If you are only allowed to duplicate an older version of an app if you have permission to edit the app in question.
 
+#### Dashboards app & Low-Code Apps: 'Text input' and 'Numeric input' components can now be fed data from other components and from the URL [ID_37736]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+*Text input* and *Numeric input* components can now be fed data from other components as well as from the URL.
+
+To feed a component from the URL, you need to link the component to the URL feed of the correct type, and use the query parameters of the dashboard or app. See the following example:
+
+`?data={"feed": {"strings": ["data for url feed"], "numbers": [1]}}`
+
 ## Changes
 
 ### Enhancements
