@@ -44,12 +44,6 @@ In the *View* tab of a spectrum card, the buttons in the *Reference lines* panel
 
 When the placeholder `[Elapsed Time]` was used inside another placeholder (e.g. `[Subtract:[Elapsed Time],[PreRoll]]`), the entire placeholder (e.g. `[Subtract:[Elapsed Time],[PreRoll]]`) would not be updated when the elapsed time had changed.
 
-#### Relation learning: Problem when checking ModelHost DxM license [ID_37653]
-
-<!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
-
-In some cases, DataMiner Cube could become unresponsive when checking the ModelHost DxM license.
-
 #### Pattern matching: Memory leak [ID_37771]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
