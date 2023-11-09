@@ -75,6 +75,12 @@ When you started a migrating from a MySQL database to a Cassandra database, an e
 
 When you exported tables of which the primary keys were of type string, the DELT export package would incorrectly not contain any trend data.
 
+#### Problem with remote clients after restarting a DMA in a gRPC-only cluster [ID_37726]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+When a DataMiner System was configured to use gRPC connections only (i.e. when *EnableDotNetRemoting* was set to false on all agents), in some cases, remote clients would not get properly registered with SLDataMiner after restarting a DataMiner Agent. This would cause remote requests to fail if they had to be handled by SLDataMiner on the DataMiner Agent that was restarted.
+
 #### DELT package created on DataMiner v10.3.8 or newer could no longer be imported on DataMiner v10.3.7 or older [ID_37731]
 
 <!-- MR 10.4.0 - FR 10.4.1 -->
