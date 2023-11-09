@@ -11,6 +11,14 @@ uid: General_Main_Release_10.5.0_changes
 
 ### Enhancements
 
+#### GQI: Enhanced error handling when an error occurs while executing a query before it is joined with another query [ID_37521]
+
+<!-- MR 10.5.0 - FR 10.4.1 -->
+
+Up to now, when an error occurred during the execution of a GQI query that, later on, was joined with another query, the exception message would always read `One or more errors occurred`.
+
+From now on, an exception that occurs when executing a query before it is joined with another query will be re-thrown afterwards. This will make sure the exception reveals the actual reason why the query failed.
+
 #### Deprecated NotifyDataMiner type 'NT_CONNECTIONS_TO_REMOVE' can no longer be used [ID_37595]
 
 <!-- MR 10.5.0 - FR 10.4.1 -->
