@@ -11,4 +11,4 @@ Prior to DataMiner 10.3.8/10.4.0, if the query you start from is modified, the n
 > [!NOTE]
 >
 > - By default, only a limited number of columns will be displayed in the dashboard for certain data sources. For example, for a parameter table, only the first 10 columns are displayed by default. In such a case, you can use the [*Select* operator](xref:GQI_Select) to display other columns or more columns than this default.
-> - Prior to DataMiner 10.3.12/10.4.0, only the first value is displayed for a DOM instance linked to SectionDefinitions that allow multiple sections in one DOM instance. From DataMiner 10.3.12/10.4.0 onwards<!--RN 37644-->, GQI will no longer return the field parts of that SectionDefinition as columns upon identifying that a linked SectionDefinition allows multiple sections.
+> - Prior to DataMiner 10.3.12/10.4.0, only the first value is displayed for a DOM instance linked to section definitions that allow multiple sections in one DOM instance. From DataMiner 10.3.12/10.4.0 onwards<!--RN 37644-->, GQI will no longer return the field parts of section definitions as columns upon identifying that these section definitions allow multiple sections.
