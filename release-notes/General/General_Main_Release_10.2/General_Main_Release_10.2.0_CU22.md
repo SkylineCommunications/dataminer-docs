@@ -28,12 +28,6 @@ In the *View* tab of a spectrum card, the buttons in the *Reference lines* panel
 
 ### Fixes
 
-#### DataMiner Cube - Relation learning: Problem when checking ModelHost DxM license [ID_37653]
-
-<!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
-
-In some cases, DataMiner Cube could become unresponsive when checking the ModelHost DxM license.
-
 #### DataMiner Cube - Visual Overview: Placeholder containing '[Elapsed Time]' would not be updated when the elapsed time had changed [ID_37756]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
