@@ -55,6 +55,14 @@ Similar to other types of anomaly suggestion events, flatline suggestion events 
 > [!NOTE]
 > Flatline alarms stay open until the flatline in question disappears or SLAnalytics is restarted.
 
+#### Service & Resource Management: Enhanced performance of ResourceManagerHelper.GetResources when using the ResourceExposers.ID.Equal filter [ID_37720]
+
+<!-- MR 10.5.0 - FR 10.4.1 -->
+
+Because of a number of enhancements, overall performance of the `ResourceManagerHelper.GetResources` method has increased when using a `ResourceExposers.ID.Equal` filter.
+
+Also, the performance of `TrueFilterElement<Resource>` has been improved.
+
 #### SLAnalytics - Behavioral anomaly detection: Changes made to the anomaly configuration in an alarm template of a main DVE element will immediately be applied to all open anomaly alarm events [ID_37788]
 
 <!-- MR 10.5.0 - FR 10.4.1 -->
