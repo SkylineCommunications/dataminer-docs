@@ -172,7 +172,7 @@ Provides access to additional data sources and operators for GQI in the Dashboar
 > - The object manager instances data source (available from DataMiner 10.3.6 onwards).<!-- RN 36124 -->
 
 - **Minimum version**: 10.0.13
-- **Estimated release version for the custom operator**: 10.3.12
+- **Estimated release version for the custom operator**: 10.4.1
 - **Estimated release version for other data sources and operators**: To be determined
 
 ### GenericOwnership
