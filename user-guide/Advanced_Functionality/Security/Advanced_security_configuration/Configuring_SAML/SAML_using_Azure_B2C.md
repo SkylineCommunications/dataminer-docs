@@ -24,29 +24,7 @@ To configure this:
 
 1. Configure DataMiner to use external authentication. You can do this in the same way as for [Entra ID](xref:SAML_using_Entra_ID#configuring-dataminerxml-to-use-external-authentication).
 
-   - For the *ipMetadata* link, use the link created in the previous step.
-
-   - If a default username is not in email format or if DataMiner is unable to locate it, add the `<PreferredEmailClaim>` tag to ensure it points to the correct email address:
-
-     ```xml
-     <DataMiner ...>
-       ...
-       <ExternalAuthentication
-         type="SAML"
-         ipMetadata="[Path/URL of the identity provider’s metadata file]"
-         spMetadata="[Path/URL of DataMiner's metadata file]"
-         timeout="300">
-         <AutomaticUserCreation enabled="true">
-           <EmailClaim>http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress</EmailClaim>
-           <Givenname>http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname</Givenname>
-           <Surname>http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname</Surname>
-           <PreferredEmailClaim>http://schemas.xmlsoap.org/ws/2005/05/identity/claims/email</PreferredEmailClaim>
-           <Groups claims="true">[group claim name]</Groups>
-         </AutomaticUserCreation>
-       </ExternalAuthentication>
-       ...
-     </DataMiner>
-     ```
+   For the *ipMetadata* link, use the link created in the previous step.
 
 1. Configure DataMiner to automatically create users from Azure B2C. You can do this in the same way as for [Entra ID](xref:SAML_using_Entra_ID#configuring-automatic-creation-of-users-authenticated-by-entra-id-using-saml).
 

@@ -16,8 +16,6 @@ To configure authentication, follow these steps:
 1. [Create a DataMiner metadata file](#creating-a-dataminer-metadata-file)
 1. [Configure DataMiner.xml to use external authentication](#configuring-dataminerxml-to-use-external-authentication)
 
-With this setup, you will generate a metadata file for DataMiner and a metadata file for the identity provider, and DataMiner and the identity provider will exchange metadata files. This way, a trust relationship between the two is established.
-
 ### Setting up a Microsoft Entra ID Enterprise application
 
 To set up external authentication, you first need to create an enterprise application in Entra ID.
