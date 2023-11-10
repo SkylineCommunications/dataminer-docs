@@ -36,7 +36,7 @@ This new DxM, which is currently still under development, is intended to manage 
 
 #### GQI: Enhanced error handling when an error occurs while executing a query before it is joined with another query [ID_37521]
 
-<!-- MR 10.5.0 - FR 10.4.1 -->
+<!-- MR 10.4.0 - FR 10.4.1 -->
 
 Up to now, when an error occurred during the execution of a GQI query that, later on, was joined with another query, the exception message would always read `One or more errors occurred`.
 
@@ -73,7 +73,7 @@ Also, the performance of `TrueFilterElement<Resource>` has been improved.
 
 #### SLAnalytics - Behavioral anomaly detection: Changes made to the anomaly configuration in an alarm template of a main DVE element will immediately be applied to all open anomaly alarm events [ID_37788]
 
-<!-- MR 10.5.0 - FR 10.4.1 -->
+<!-- MR 10.4.0 - FR 10.4.1 -->
 
 When you change the anomaly configuration in an alarm template assigned to a main DVE element, from now on, the changes will immediately be applied to all open anomaly alarm events. The severity of the open alarm events will be changed to the new severity defined in the updated anomaly configuration.
 

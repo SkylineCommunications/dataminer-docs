@@ -562,6 +562,14 @@ Up to now, a DataMiner using STaaS communicated with the database via TCP/IP por
 
 Because of a number of enhancements, overall performance of DOM and SRM queries has increased.
 
+#### GQI: Enhanced error handling when an error occurs while executing a query before it is joined with another query [ID_37521]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+Up to now, when an error occurred during the execution of a GQI query that, later on, was joined with another query, the exception message would always read `One or more errors occurred`.
+
+From now on, an exception that occurs when executing a query before it is joined with another query will be re-thrown afterwards. This will make sure the exception reveals the actual reason why the query failed.
+
 #### SLAnalytics - Automatic incident tracking: Enhanced error handling [ID_37530]
 
 <!-- MR 10.4.0 - FR 10.3.12 -->
@@ -648,6 +656,12 @@ Similar to other types of anomaly suggestion events, flatline suggestion events 
 <!-- MR 10.4.0 - FR 10.3.12 [CU0] -->
 
 Because of a number of enhancements, overall performance has increased when migrating data from a Cassandra database to the cloud.
+
+#### SLAnalytics - Behavioral anomaly detection: Changes made to the anomaly configuration in an alarm template of a main DVE element will immediately be applied to all open anomaly alarm events [ID_37788]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+When you change the anomaly configuration in an alarm template assigned to a main DVE element, from now on, the changes will immediately be applied to all open anomaly alarm events. The severity of the open alarm events will be changed to the new severity defined in the updated anomaly configuration.
 
 ### Fixes
 
