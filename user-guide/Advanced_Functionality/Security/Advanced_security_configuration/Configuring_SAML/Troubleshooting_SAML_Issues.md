@@ -21,7 +21,7 @@ When you encounter SAML issues, investigate the logs detailed below, in the spec
 ## Troubleshooting
 
 > [!IMPORTANT]
-> Before proceeding with any troubleshooting procedures, we highly recommend reading [Configuring external authentication via an identity provider using SAML](xref:Configuring_external_authentication_via_an_identity_provider_using_SAML).
+> Before you proceed with any troubleshooting procedures, we highly recommend that you read [Configuring SAML settings](xref:Configuring_external_authentication_via_an_identity_provider_using_SAML).
 
 This troubleshooting section addresses the following common SAML issues:
 
@@ -37,7 +37,7 @@ This troubleshooting section addresses the following common SAML issues:
 
 ### Partial setup
 
-Partial setups are not compatible with SAML. Ensure that all settings are correctly configured for both DataMiner and the identity provider before attempting to log in. See [Configuring external authentication via an identity provider using SAML](xref:Configuring_external_authentication_via_an_identity_provider_using_SAML).
+Partial setups are not compatible with SAML. Ensure that all settings are correctly configured for both DataMiner and the identity provider before attempting to log in. See [Configuring SAML settings](xref:Configuring_external_authentication_via_an_identity_provider_using_SAML).
 
 ### SAML authentication issues in Cube/online
 
@@ -127,7 +127,7 @@ Here are some other common SAML-related issues:
 
   - Ensure that the username is always an email address.
 
-  - In [Azure setups](xref:Configuring_external_authentication_via_an_identity_provider_using_SAML#identity-providers), missing email field values can cause problems, even though the default username is an email.
+  - If [Microsoft Entra ID](xref:SAML_using_Entra_ID) is used as the identity provider for external authentication, missing email field values can cause problems, even though the default username is an email.
 
 ### Error messages
 

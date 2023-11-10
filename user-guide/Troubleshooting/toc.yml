@@ -197,8 +197,6 @@ items:
         topicUid: Keeping_a_DMA_from_running_out_of_disk_space
       - name: Sharing dashboard window does not disappear
         topicUid: Sharing_dashboard_window_does_not_disappear
-      - name: Troubleshooting SAML issues
-        topicUid: Troubleshooting_SAML_Issues
       - name: Manually removing old alarms from an Elasticsearch cluster
         topicUid: Manually_removing_old_alarms_from_ES
   - name: Known issues
