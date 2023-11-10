@@ -33,7 +33,7 @@ The following **optional interfaces** can be implemented to add additional funct
   | **Method** | **Parameters** | **Returns** | **Description** |
   |--|--|--|--|
   | GetInputArguments | - | GQIArgument[] | Asks the user for additional information during data source configuration. |
-  | OnArgumentsProcessed | OnArgumentsProcessedInputArgs | OnArgumentsProcessedOutputArgs | Indicates that the arguments have been processed. The processed arguments can be found in the *OnArgumentsProcessedInputArgs*. |
+  | OnArgumentsProcessed | [OnArgumentsProcessedInputArgs](xref:GQI_OnArgumentsProcessedInputArgs) | OnArgumentsProcessedOutputArgs | Indicates that the arguments have been processed. The processed arguments can be found in the *OnArgumentsProcessedInputArgs*. |
 
   > [!IMPORTANT]
   > GQI does not validate the input arguments. For example, a user can input an SQL query as a text input argument, and GQI will forward it to the custom data source implementation without validation.

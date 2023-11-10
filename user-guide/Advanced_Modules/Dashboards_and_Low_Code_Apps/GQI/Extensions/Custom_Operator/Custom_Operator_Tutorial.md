@@ -344,4 +344,4 @@ If a filter attempts to use an affected column, it will only run after the colum
 Filtering by the original *Name* column will now yield no results.
 
 > [!NOTE]
-> The `IGQIColumn` interface is used for the affected columns array, combining both new columns (`GQIColumn`) and existing columns (`GQIEditableColumn`).
+> The [IGQIColumn](xref:GQI_IGQIColumn) interface is used for the affected columns array, combining both new columns ([GQIColumn](xref:GQIColumn)) and existing columns (`GQIEditableColumn`).

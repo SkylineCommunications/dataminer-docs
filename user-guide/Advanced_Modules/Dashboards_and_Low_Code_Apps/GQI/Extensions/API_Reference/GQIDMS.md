@@ -31,7 +31,7 @@ To do so, the [*IGQIDataSource* interface](xref:IGQIDataSource) must implement t
 OnInitOutputArgs OnInit(OnInitInputArgs args)
 ```
 
-When passed to the `OnInit` method, `OnInitInputArgs` will contain the following new property:
+When passed to the `OnInit` method, [OnInitInputArgs](xref:GQI_OnInitInputArgs) will contain the following new property:
 
 ```csharp
 GQIDMS DMS

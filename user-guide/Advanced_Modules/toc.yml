@@ -581,8 +581,16 @@ items:
                     topicUid: GQIPage
                   - name: GQIRow
                     topicUid: GQIRow
+                  - name: IGQIColumn
+                    topicUid: GQI_IGQIColumn
+                  - name: IGQICoreBlock
+                    topicUid: GQI_IGQICoreBlock
+                  - name: IGQICoreOperator
+                    topicUid: GQI_IGQICoreOperator
                   - name: IGQIDataSource
                     topicUid: IGQIDataSource
+                  - name: IGQIFilterOperator
+                    topicUid: GQI_IGQIFilterOperator
                   - name: IGQIInputArguments
                     topicUid: IGQIInputArguments
                   - name: IGQIOnDestroy
@@ -591,6 +599,14 @@ items:
                     topicUid: IGQIOnInit
                   - name: IGQIOnPrepareFetch
                     topicUid: IGQIOnPrepareFetch
+                  - name: IGQIOperatorNode
+                    topicUid: GQI_IGQIOperatorNode
+                  - name: IGQIQueryNode
+                    topicUid: GQI_IGQIQueryNode
+                  - name: OnArgumentsProcessedInputArgs
+                    topicUid: GQI_OnArgumentsProcessedInputArgs
+                  - name: OnInitInputArgs
+                    topicUid: GQI_OnInitInputArgs
           - name: Query updates
             topicUid: Query_updates
           - name: Importing a query
