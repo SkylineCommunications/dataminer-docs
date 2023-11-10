@@ -36,7 +36,7 @@ You can create a query as follows:
 
 ## Duplicating a query
 
-From DataMiner 10.4.1 onwards, you can duplicate a query. To duplicate a query, click the '...' button in the query in the data pane and then select *Duplicate*.
+From DataMiner 10.3.0 [CU10]/10.4.1 onwards, you can duplicate a query. To do so, click the "..." button next to the query in the data pane and then select *Duplicate*.
 
 ## Notes on GQI queries
 
