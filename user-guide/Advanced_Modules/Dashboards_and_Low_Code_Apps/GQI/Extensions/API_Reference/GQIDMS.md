@@ -1,31 +1,59 @@
 ---
-uid: GQIDMS
+uid: GQI_GQIDMS
 ---
 
-# GQIDMS
+# GQIDMS Class
+
+## Definition
+
+Namespace: `Skyline.DataMiner.Analytics.GenericInterface`  
+Assembly: `SLAnalyticsTypes.dll`
+
+Represents the *DataMiner System* (DMS). Can be used to request information from the system.
+Communication happens through DMSMessage objects.
 
 Available from DataMiner 10.3.4/10.4.0 onwards. <!-- RN 35701 -->
 
+> [!TIP]
+> See also: [Example of retrieving data by means of DMS messages](#example-of-retrieving-data-by-means-of-dms-messages)
+
+## Methods
 The `GQIDMS` class contains the following methods, which can be used to request information in the form of `DMSMessage` objects:
-
-| Method | Function |
-|--------|----------|
-| `DMSMessage SendMessage(DMSMessage message)` | Sends a request that expects a single response. |
-| `DMSMessage[] SendMessages(params DMSMessage[] messages)` | Sends multiple requests at once, or sends a request that expects multiple responses. |
-
-Generally, an ad hoc data source implementation will want to add a private field where it can store the `GQIDMS` object to be used later in other callbacks when columns and rows are created.
 
 > [!IMPORTANT]
 > DMS messages are subject to change without notice. If you can implement an alternative using the [built-in data sources](xref:Query_data_sources), we highly recommend that you do so instead.
 
-> [!TIP]
-> See also: [Example of retrieving data by means of DMS messages](#example-of-retrieving-data-by-means-of-dms-messages)
+### DMSMessage SendMessage(DMSMessage message)
+
+Send one request to retrieve one response from the DMS.
+This is a shortcut for [SendMessages](#dmsmessage-sendmessagesparams-dmsmessage-message).
+
+#### Parameters
+
+- `DMSMessage` `message`: the request message for the DMS
+
+#### Returns
+
+A single response from the DMS or `null`. If the DMS replied with more than 1 response, the first one will be returned.
+
+### DMSMessage[] SendMessages(params DMSMessage[] message)
+
+Send one or more messages to retrieve multiple responses from the DMS.
+
+#### Parameters
+
+- `DMSMessage[]` `messages`: the request messages for the DMS
+
+#### Returns
+
+A `DMSMessage` array of all responses from the DMS.
+
 
 ## Retrieving data by means of DMS messages
 
 From DataMiner 10.3.4/10.4.0 onwards, ad hoc data sources can retrieve data by means of DMS messages. <!-- RN 35701 -->
 
-To do so, the [*IGQIDataSource* interface](xref:IGQIDataSource) must implement the [*IGQIOnInit* interface](xref:IGQIOnInit), of which the `OnInit` method can also be used to initialize a data source:
+To do so, the [*IGQIDataSource* interface](xref:GQI_IGQIDataSource) must implement the [*IGQIOnInit* interface](xref:GQI_IGQIOnInit), of which the `OnInit` method can also be used to initialize a data source:
 
 ```csharp
 OnInitOutputArgs OnInit(OnInitInputArgs args)
@@ -37,14 +65,13 @@ When passed to the `OnInit` method, [OnInitInputArgs](xref:GQI_OnInitInputArgs) 
 GQIDMS DMS
 ```
 
-> [!IMPORTANT]
-> DMS messages are subject to change without notice. If you can implement an alternative using the [built-in data sources](xref:Query_data_sources), we highly recommend that you do so instead.
+Generally, an ad hoc data source implementation will want to add a private field where it can store the `GQIDMS` object to be used later in other callbacks when columns and rows are created.
 
 ### Example of retrieving data by means of DMS messages
 
-Below you can find an example script that uses the [*GQIDMS* object](xref:GQIDMS) provided in the OnInitPutArgs to [create a data source of active client connections](#retrieving-data-by-means-of-dms-messages). The name of the data source, as defined in the *GQIMetaData* attribute, will be “Client connections”.
+Below you can find an example script that uses the [*GQIDMS* object](xref:GQI_GQIDMS) provided in the OnInitPutArgs to [create a data source of active client connections](#retrieving-data-by-means-of-dms-messages). The name of the data source, as defined in the *GQIMetaData* attribute, will be “Client connections”.
 
-Two interfaces are implemented: [*IGQIDataSource*](xref:IGQIDataSource) and [*IGQIOnInit*](xref:IGQIOnInit). The `GetNextPage` method retrieves client connections using a *GetInfoMessage* request and returns a *GQIPage* containing the data.
+Two interfaces are implemented: [*IGQIDataSource*](xref:GQI_IGQIDataSource) and [*IGQIOnInit*](xref:GQI_IGQIOnInit). The `GetNextPage` method retrieves client connections using a *GetInfoMessage* request and returns a *GQIPage* containing the data.
 
 ```csharp
 using System;

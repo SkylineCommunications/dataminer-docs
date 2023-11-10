@@ -570,17 +570,17 @@ items:
                 topicUid: GQIArgument
                 items:
                   - name: GQIArgument
-                    topicUid: GQIArgument
+                    topicUid: GQI_GQIArgument
                   - name: GQICell
-                    topicUid: GQICell
+                    topicUid: GQI_GQICell
                   - name: GQIColumn
-                    topicUid: GQIColumn
+                    topicUid: GQI_GQIColumn
                   - name: GQIDMS
-                    topicUid: GQIDMS
+                    topicUid: GQI_GQIDMS
                   - name: GQIPage
-                    topicUid: GQIPage
+                    topicUid: GQI_GQIPage
                   - name: GQIRow
-                    topicUid: GQIRow
+                    topicUid: GQI_GQIRow
                   - name: IGQIColumn
                     topicUid: GQI_IGQIColumn
                   - name: IGQICoreBlock
@@ -588,17 +588,17 @@ items:
                   - name: IGQICoreOperator
                     topicUid: GQI_IGQICoreOperator
                   - name: IGQIDataSource
-                    topicUid: IGQIDataSource
+                    topicUid: GQI_IGQIDataSource
                   - name: IGQIFilterOperator
                     topicUid: GQI_IGQIFilterOperator
                   - name: IGQIInputArguments
-                    topicUid: IGQIInputArguments
+                    topicUid: GQI_IGQIInputArguments
                   - name: IGQIOnDestroy
-                    topicUid: IGQIOnDestroy
+                    topicUid: GQI_IGQIOnDestroy
                   - name: IGQIOnInit
-                    topicUid: IGQIOnInit
+                    topicUid: GQI_IGQIOnInit
                   - name: IGQIOnPrepareFetch
-                    topicUid: IGQIOnPrepareFetch
+                    topicUid: GQI_IGQIOnPrepareFetch
                   - name: IGQIOperatorNode
                     topicUid: GQI_IGQIOperatorNode
                   - name: IGQIQueryNode
