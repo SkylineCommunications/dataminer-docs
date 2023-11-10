@@ -117,13 +117,13 @@ Up to now, as soon as you entered edit mode, a number of API calls were executed
 
 From now on, those API calls will only be executed the moment you open the *Settings* tab on the right.
 
-#### Legacy Reports, Dashboards and Annotations modules will by default be disabled in new installations [ID_37786]
+#### Legacy Reports, Dashboards and Annotations modules are now end-of-life and will be disabled by default [ID_37786]
 
 <!-- MR 10.4.0 - FR 10.4.1 -->
 
-As from DataMiner versions 10.1.12/10.2.0, the legacy *Reports*, *Dashboards* and *Annotations* modules were hidden by default, but it was still possible to set the *LegacyReportsAndDashboards* and/or *LegacyAnnotations* soft-launch options to true if necessary.
+As from DataMiner versions 10.1.12/10.2.0, the *LegacyReportsAndDashboards* and/or *LegacyAnnotations* soft-launch options allowed you to enable or disable the legacy *Reports*, *Dashboards* and *Annotations* modules. By default, they were enabled.
 
-The above-mentioned soft-launch options have now been removed from the *SoftLaunchOptions.xml* file. As a result, these modules will now be disabled by default.
+Now, the above-mentioned soft-launch options will be disabled by default, causing the legacy *Reports*, *Dashboards* and *Annotations* modules to be hidden. If you want to continue using these modules, which are now considered end-of-live, you will have to explicitly enable the soft-launch options.
 
 ### Fixes
 
