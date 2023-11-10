@@ -122,12 +122,13 @@ In case you are using a token that has an expiration date or if you entered the 
 
 #### Issues with credentials
 
-In case you are having issues with the credentials in Visual Studio were each time the pop-up window for the credentials appear, you can try this way:
+If you encounter problems with credentials in Visual Studio, particularly when the credentials pop-up window appears repeatedly, you can follow these steps to resolve the issue:
 
-Remove the credentials that are configured in the Credential Manager in Windows. See [Editing credentials](#editing-credentials) to find the location.
-Make sure all Visual Studio instances are closed so that there is no accidental caching going on.
+1. Ensure that all instances of Visual Studio are closed to prevent accidental credential caching
 
-Go to *%appdata%\NuGet* and open the ***NuGet.config*** file. In there you'll find something similar to this:
+1. Remove the stored credentials from the Windows Credential Manager. You can find detailed instructions for this on the section on [Editing credentials](#editing-credentials).
+
+1. Navigate to the *%AppData%\NuGet* directory and locate the ***NuGet.config*** file. Inside this file, you will find XML content similar to the following:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -151,7 +152,7 @@ Go to *%appdata%\NuGet* and open the ***NuGet.config*** file. In there you'll fi
 </configuration>
 ```
 
-Here you can add your credentials as described by [Microsoft](https://learn.microsoft.com/en-us/nuget/reference/nuget-config-file#packagesourcecredentials).
+In this file, you can add your credentials following the guidelines provided by [Microsoft](https://learn.microsoft.com/en-us/nuget/reference/nuget-config-file#packagesourcecredentials).
 
 > [!IMPORTANT]
-> If you are adding the credentials in an unencrypted way, I would highly recommend to make sure that the scopes for the token is restricted to only read packages as mentioned [above](#step-1-creating-a-personal-access-token).
+> If you choose to add your credentials in an unencrypted manner, it is highly recommended to restrict the token's scope to only allow reading packages, as explained in [step 1 of creating a personal access token](#step-1-creating-a-personal-access-token).
