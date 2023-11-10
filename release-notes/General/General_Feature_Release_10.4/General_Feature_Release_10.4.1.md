@@ -108,3 +108,9 @@ When you exported elements via a DELT package on a DMA running DataMiner version
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
 In some cases, an error could occur in SLAnalytics when it was not able to connect to the alarm repository at startup.
+
+#### Entire SNMPv3 response would be discarded when one or more cells contained 'no such instance' [ID_37815]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+
+When a table was polled via SNMPv3 and the response included a cell that contained *no such instance*, the table would not get populated with the values that were received. Instead, the entire result set would be discarded.

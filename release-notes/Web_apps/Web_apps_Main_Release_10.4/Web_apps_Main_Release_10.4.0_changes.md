@@ -504,6 +504,14 @@ Up to now, a dashboard containing Visual Overview components would retrieve the 
 
 Before you can add a GQI query to the Data Aggregator configuration file, you have to convert it first by means of the *ConvertQueryToProtoJson* web method. This method now supports node keys.
 
+#### Legacy Reports, Dashboards and Annotations modules will by default be disabled in new installations [ID_37786]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+As from DataMiner versions 10.1.12/10.2.0, the legacy *Reports*, *Dashboards* and *Annotations* modules were hidden by default, but it was still possible to set the *LegacyReportsAndDashboards* and/or *LegacyAnnotations* soft-launch options to true if necessary.
+
+The above-mentioned soft-launch options have now been removed from the *SoftLaunchOptions.xml* file. As a result, these modules will now be disabled by default.
+
 ### Fixes
 
 #### Web apps: Problem with external authentication [ID_33405]
