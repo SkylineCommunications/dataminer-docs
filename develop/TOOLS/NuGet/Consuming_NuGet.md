@@ -39,7 +39,7 @@ NuGet Libraries from nuget.org are considered third-party libraries, so make sur
 
 Consult the Stop/Go/Caution list on the internal Skyline wiki. If your license does not appear on the list, or if the use you intend (i.e. internal vs. distribution) is not listed for that license, the use will be considered a "Stop".
 
-If you are unsure as to the identification of the license, please contact the [OSS team](oss@skyline.be).
+If you are unsure as to the identification of the license, please contact the [OSS team](mailto:oss@skyline.be).
 
 ## Avoid NuGets with direct external communication
 
