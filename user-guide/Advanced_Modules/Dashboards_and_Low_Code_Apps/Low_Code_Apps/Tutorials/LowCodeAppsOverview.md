@@ -23,3 +23,5 @@ With the DataMiner Low-Code Apps module, you can create custom applications that
 - [Managing pages](xref:Tutorial_Apps_Managing_Pages)
 
 - [Using the stepper component in a low-code app](xref:TutorialStepper)
+
+- [Using the maps component in a low-code app](xref:TutorialMaps)

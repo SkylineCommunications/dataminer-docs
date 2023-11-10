@@ -18,6 +18,7 @@ uid: Dashboards_Low-Code_Apps_Tutorials
 | [Editing an existing app](xref:Tutorial_Apps_Edit_Existing_App) | Edit an existing low-code app. |
 | [Managing the pages in an app](xref:Tutorial_Apps_Managing_Pages) | Add, change, and remove pages in a low-code app. |
 | [Using the stepper component in a low-code app](xref:TutorialStepper) | Add and configure a stepper component in a low-code app to help with managing incidents and their different states. |
+| [Using the maps component in a low-code app](xref:TutorialMaps) | Add and configure a maps component in a low-code app to visualize cell towers, their connections and their coverage. |
 
 ### GQI tutorials
 

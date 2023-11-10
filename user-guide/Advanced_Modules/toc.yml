@@ -342,6 +342,8 @@ items:
                 topicUid: Tutorial_Apps_Managing_Pages
               - name: Using the stepper component in a low-code app
                 topicUid: TutorialStepper
+              - name: Using the maps component in a low-code app
+                topicUid: TutorialMaps
       - name: Configuring components
         topicUid: Configuring_components
         items:
