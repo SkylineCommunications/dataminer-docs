@@ -278,7 +278,7 @@ Once authentication has been configured, you need to make sure users are provisi
    - Microsoft Graph > Application.Read.All – Application – Read applications
 
      > [!NOTE]
-     > From DataMiner 10.3.12 onwards, the *Application.Read.All* permission is optional. However, if you do not enable this permission, you will not get a warning if your client secret is about to expire, so we **strongly recommend that you enable this**.
+     > From DataMiner 10.3.12 onwards, the *Application.Read.All* permission is optional. However, if you do not enable this permission, you will not get a warning if your client secret is about to expire, so we **strongly recommend that you enable this**. If this is enabled, you will get the following notice in the Alarm Console when appropriate: *Your Azure AD application's client secret is expiring soon.*
 
 1. Open DataMiner Cube and log in with an existing Administrator account.
 
