@@ -405,7 +405,7 @@ There are two ways to configure this setup: with or without group claims.
    ![Group claim configuration](~/user-guide/images/SAML_Group_claim_config.png)
 
    > [!NOTE]
-   > The account name of the group will only be sent via SAML when the groups are synchronized. Otherwise, the ID of the group will be sent instead.
+   > The account name of the group will only be sent via SAML when the groups are synchronized (from an on-premises AD). Otherwise, the ID of the group will be sent instead.
 
 1. In DataMiner Cube, add the groups corresponding with the groups you included in the group claim in Entra ID. See [Adding a user group](xref:Adding_a_user_group).
 
