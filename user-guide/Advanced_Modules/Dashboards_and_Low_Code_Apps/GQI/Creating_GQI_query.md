@@ -34,6 +34,10 @@ You can create a query as follows:
 > - From DataMiner 10.1.4 onwards, you can import a query from a different dashboard in the DMS. For more information, see [Importing a query](xref:Importing_a_query)
 > - Using the Data Aggregator module, you can schedule GQI queries to run periodically at fixed times, dates, or intervals. For more information, see [Data Aggregator](xref:Data_Aggregator_DxM).
 
+## Duplicating a query
+
+From DataMiner 10.3.0 [CU10]/10.4.1 onwards, you can duplicate a query. To do so, click the "..." button next to the query in the data pane and then select *Duplicate*.
+
 ## Notes on GQI queries
 
 Please note the following regarding query data input:
