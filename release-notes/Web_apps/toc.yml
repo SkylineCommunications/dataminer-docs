@@ -1,4 +1,17 @@
 items:
+  - name: v10.5
+    topicUid: Web_apps_Main_Release_10.5.0
+    items:
+      - name: Main Release
+        topicUid: Web_apps_Main_Release_10.5.0
+        items:
+          - name: DataMiner web apps Main Release 10.5.0 - Preview
+            topicUid: Web_apps_Main_Release_10.5.0
+            items:
+              - name: New features
+                topicUid: Web_apps_Main_Release_10.5.0_new_features
+              - name: Changes
+                topicUid: Web_apps_Main_Release_10.5.0_changes
   - name: v10.4
     topicUid: Web_apps_Main_Release_10.4.0
     items:

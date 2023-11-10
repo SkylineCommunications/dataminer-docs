@@ -16,4 +16,20 @@ uid: General_Main_Release_10.3.0_CU10
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### DELT: Trend data missing in DELT package after exporting tables with primary keys of type string [ID_37664]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+When you exported tables of which the primary keys were of type string, the DELT export package would incorrectly not contain any trend data.
+
+#### Problem with remote clients after restarting a DMA in a gRPC-only cluster [ID_37726]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+When a DataMiner System was configured to use gRPC connections only (i.e. when *EnableDotNetRemoting* was set to false on all agents), in some cases, remote clients would not get properly registered with SLDataMiner after restarting a DataMiner Agent. This would cause remote requests to fail if they had to be handled by SLDataMiner on the DataMiner Agent that was restarted.
+
+#### SLAnalytics: Problem when the alarm repository was not available at startup [ID_37782]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+
+In some cases, an error could occur in SLAnalytics when it was not able to connect to the alarm repository at startup.

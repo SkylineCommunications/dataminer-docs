@@ -192,6 +192,12 @@ In the footer of the Alarm Console, the button to cancel the current text-to-spe
 
 When, in the Alarm Console, an alarm was duplicated, in some cases, its focus score would not be updated correctly.
 
+#### DataMiner Cube - Relation learning: Problem when checking ModelHost DxM license [ID_37653]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 [CU0] -->
+
+In some cases, DataMiner Cube could become unresponsive when checking the ModelHost DxM license.
+
 #### DataMiner Cube: Problem when parsing anomaly alarms [ID_37680]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
