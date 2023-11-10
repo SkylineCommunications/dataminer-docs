@@ -17,9 +17,7 @@ To configure the component:
 
    - *WebSocket settings*: Allows you to customize the polling interval for this component. To do so, clear the checkbox in this section and specify the custom polling interval.
 
-   - *Override dynamic units*:
-
-   - *Use dynamic units*: Determines whether parameter units will change dynamically based on their value and protocol definition.
+   - *General > Override dynamic units*: Disables parameter units from changing dynamically based on their value and protocol definition.
 
    - *Data retrieval > Update data*: Allows updates to be enabled or disabled. This setting will enable updates for all queries executed by the selected component.
 
@@ -29,14 +27,12 @@ To configure the component:
 
    - The default options available for all components. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
 
-   - *Filters & Highlighting*: Allows you to configure a number of filtering and highlighting options. However, note that the filtering options require the [*Query filter* component](xref:DashboardQueryFilterFeed), available from DataMiner 10.3.9/10.4.0 onwards.
+   - *Filtering & Highlighting > Highlight*: When this option is enabled, the nodes that match the filter will be highlighted. Default: Enabled
 
-     - *Highlight*: When this option is enabled, the nodes that match the filter will be highlighted. Default: Enabled
+   - *Filtering & Highlighting > Opacity*: When the *Highlight* option is enabled, this option will allow you to set the level of transparency of the nodes and edges that do not match the filter.
 
-     - *Opacity*: When the *Highlight* option is enabled, this option will allow you to set the level of transparency of the nodes and edges that do not match the filter.
-
-       > [!NOTE]
-       > When you disable the *Highlight* option, the nodes that do not match the filter will no longer be displayed and the remaining nodes will be reorganized.
+     > [!NOTE]
+     > When you disable the *Highlight* option, the nodes that do not match the filter will no longer be displayed and the remaining nodes will be reorganized.
 
    - *Advanced > Empty Result message*: Available from 10.3.11/10.4.0 onwards<!-- RN 37173 -->. Allows you to specify a custom message that is displayed when a query returns no results.
 
@@ -45,6 +41,21 @@ To configure the component:
 
    - *Advanced > Grid template*: Allows you to customize the number of columns and rows displayed in the grid component, along with scaling options.
 
-     - By default, the columns and rows are set to *Auto*. To modify the displayed columns and rows, select *Auto* and enter your desired number. To reset to *Auto*, delete the number.
+     - By default, the number of displayed columns and rows is set to *Auto*. To modify this number, clear the checkbox in this section and specify the desired amount. To revert to *Auto*, delete the entry.
 
-     - By default, the scaling is set to *Scaled to fit (fixed)*. To switch to *Scaled to fit (scaling)*, select the corresponding checkbox. Click the expand icon ![expand icon](~/user-guide/images/Expand_Grid_Template.png) to switch back to *Scaled to fit (fixed)*.
+     - To switch between scaling options, select one of the following buttons:
+
+       - ![Scaled to fit (scaling)](~/user-guide/images/Scaling.png) : All columns and/or rows are displayed. This is the default setting.
+
+       - ![Scaled to fit (fixed)](~/user-guide/images/Fixed.png) : All columns and/or rows are displayed using the fixed scaling.
+
+     > [!NOTE]
+     >
+     > - The number of items that can be displayed in a grid component is limited to 1000<!--RN 37699-->.
+     > - If the number of items to be displayed exceeds the size of the component, a green button with a sidewards arrow is available underneath the grid. <!--zowel naar links als rechts, dus 1 pagina naar rechts, kan je ook weer terugkeren-->
+
+   - *Item templates > Alarms*: Allows you to freely customize the appearance of the grid component using templates.
+
+     - To access the Template Editor, click the pencil icon.
+
+     - To reuse a template you previously created and saved, click the ![reuse template](~/user-guide/images/Reuse_Template.png) button.
