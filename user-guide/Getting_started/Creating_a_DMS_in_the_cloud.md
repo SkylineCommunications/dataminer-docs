@@ -12,20 +12,20 @@ With **DataMiner as a Service (DaaS)**, you can create a complete DataMiner Syst
 ## Creating a new DMS on dataminer.services
 
 > [!IMPORTANT]
-> You must be part of an organization to create a new DaaS instance.
+> You must be a member of an [organization](xref:Pricing_Usage_based_service#organization) to create a new DaaS instance and have sufficient DataMiner Credits.
 
 1. Log on to [dataminer.services](https://dataminer.services).
 
    > [!TIP]
    > For more detailed information, see [Logging on to dataminer.services](xref:Logging_on_to_the_DataMiner_Cloud_Platform).
 
-1. Under *DataMiner Systems*, click *Add a new DataMiner system*.
+1. Under *DataMiner Systems*, click *Add a new DataMiner System*.
 
-   ![Add a new DataMiner system button](~/user-guide/images/daas_create_001.png)
+   ![Add a new DataMiner System button](~/user-guide/images/daas_create_001.png)
 
-1. Click *Add a new DataMiner system*.
+1. Click *Add a new DataMiner System*.
 
-   ![Add a new DataMiner system button](~/user-guide/images/daas_create_002.png)
+   ![Add a new DataMiner System button](~/user-guide/images/daas_create_002.png)
 
 1. Select the *Organization* under which you want to register the DataMiner System.
 
@@ -54,7 +54,7 @@ With **DataMiner as a Service (DaaS)**, you can create a complete DataMiner Syst
    > [!TIP]
    > For more detailed information, see [Logging on to dataminer.services](xref:Logging_on_to_the_DataMiner_Cloud_Platform).
 
-1. Under *DataMiner Systems*, click on *Open in desktop app*.
+1. Under *DataMiner Systems*, click *Open in desktop app*.
 
    ![Open in desktop app on dataminer.services](~/user-guide/images/daas_access_001.png "Open dekstop app")
 
