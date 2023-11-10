@@ -40,7 +40,7 @@ To migrate the profiles, you will need to use the SLNetClientTest tool.
 
 1. In the *ProfileManger XML to Elastic* section, click the *Start Migration* button to start the migration wizard.
 
-   During the migrations, the Profile Manager is not stopped, so it will keep working as expected. This also means a snapshot of the Profiles.xml is migrated. Any creates/updates done during the migration will no longer be migrated.
+   During the migrations, the Profile Manager is not stopped, so it will keep working as expected. This also means a snapshot of the Profiles.xml is migrated. Any creates/updates done during the migration will no longer be migrated. So make sure to not do any operations (create/update/delete) on profile objects during the migration or when swapping storage type.
 
 1. A window will show the migration actions that have been scheduled. If you close this window, the migration will continue in the background. To cancel the migration, click the *Cancel Migration* button.
 
