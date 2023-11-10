@@ -202,7 +202,7 @@ Enables the [Jobs app](xref:jobs).
 
 Enables or disables the legacy Annotations module.
 
-- **Minimum version**: 10.1.12/10.2.0 ([RN 31329](xref:General_Feature_Release_10.1.12#legacy-reports-dashboards-and-annotations-modules-will-by-default-be-hidden-in-new-installations-id_31329))
+- **Minimum version**: 10.1.10/10.2.0
 
 > [!NOTE]
 > The legacy Annotations module is disabled by default as from DataMiner versions 10.4.1/10.5.0 ([RN 37786](xref:Web_apps_Feature_Release_10.4.1#legacy-reports-dashboards-and-annotations-modules-are-now-end-of-life-and-will-be-disabled-by-default-id_37786)).
@@ -211,7 +211,7 @@ Enables or disables the legacy Annotations module.
 
 Enables or disables the legacy Reports and Dashboards modules.
 
-- **Minimum version**: 10.1.12/10.2.0 ([RN 31329](xref:General_Feature_Release_10.1.12#legacy-reports-dashboards-and-annotations-modules-will-by-default-be-hidden-in-new-installations-id_31329))
+- **Minimum version**: 10.1.10/10.2.0
 
 > [!NOTE]
 > The legacy Reports and Dashboards modules are disabled by default as from DataMiner versions 10.4.1/10.5.0 ([RN 37786](xref:Web_apps_Feature_Release_10.4.1#legacy-reports-dashboards-and-annotations-modules-are-now-end-of-life-and-will-be-disabled-by-default-id_37786)).
