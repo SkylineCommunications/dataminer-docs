@@ -17,9 +17,6 @@ Estimated duration: 45 minutes.
 
 - DataMiner 10.3.12 or higher with [Storage as a Service (STaaS)](xref:STaaS) or a [self-hosted Cassandra database](xref:Supported_system_data_storage_architectures).
 
-  > [!NOTE]
-  > Part of the tutorial can be done with earlier DataMiner versions, starting from DataMiner 10.2.0 [CU3]/10.2.6 , as long as [automatic updates are enabled](xref:DMA_configuration_related_to_client_applications#managing-client-versions) for DataMiner Cube, so that you are using the latest available version of Cube.
-
 - Behavioral Anomaly Detection is enabled (in DataMiner Cube: *System Center* > *System settings* > *analytics config*).
 
 - The [time to live](xref:Specifying_TTL_overrides) for trending is at least 1 day for real-time trending and 1 month for minute records.
@@ -110,121 +107,105 @@ The tutorial consists of the following steps.
 
 As anomalies might flag potential problems in your operation, it can be useful to show alarms for these events.
 
-Let us return to the previous example. The element *Encryption Key Requests 2* is a copy generating the exact same data as *Encryption Key Requests*. Create an [alarm template](xref:About_alarm_templates) so that the anomalies detected on this parameter are shown in the *Active alarms* tab as follows.
+1. Create an alarm template for the example element *Encryption Key Requests 2*:
 
-#### [DataMiner 10.3.12 or higher](#tab/all-smart-new-version)
+   1. Right-click the element *Encryption Key Requests 2* in the Surveyor, and select *Protocols & Templates* > *Assign alarm templates* > *New alarm template*.
 
-1. Right-click the element *Encryption Key Requests 2* in the Surveyor, and select *Protocols & Templates* > *Assign alarm templates* > *New alarm template*.
+      > [!NOTE]
+      > This element is a copy of *Encryption Key Requests*, which generates the same data.
 
-   > [!NOTE]
-   > This element is a copy of *Encryption Key Requests*, which generates the same data.
+   1. Specify a name for the alarm template, e.g. *Alarming on anomalies*, and click *OK*.
 
-1. Specify a name for the alarm template, e.g. *Alarming on anomalies*, and click *OK*.
+   1. Select the checkbox in the *MON* column for the parameter *Encryption Key Requests*.
 
-1. Select the checkbox in the *MON* column for the parameter *Encryption Key Requests*.
+      This will enable alarm monitoring for this parameter.
 
-   This will enable alarm monitoring for this parameter.
+   1. Scroll to the far right of the alarm template to find the *ANOMALIES* column.
 
-1. Scroll to the far right of the alarm template to find the *ANOMALIES* column.
+      This column contains a button showing whether alarm monitoring on anomalies is currently enabled. By default, it will show *Disabled*.
 
-   This column contains a button showing whether alarm monitoring on anomalies is currently enabled. By default, it will show *Disabled*.
+   1. Click the button in the *ANOMALIES* column.
 
-1. Click the button in the *ANOMALIES* column.
+      This will open a new pop-up window where you can configure alarm monitoring for anomalies.
 
-   This will open a new pop-up window where you can configure alarm monitoring for anomalies.
-  
-1. In the dropdown box at the top, which by default shows *All disabled*, select *All smart*.
+   1. In the dropdown box at the top, which by default shows *All disabled*, select *All smart*.
 
-1. Click *Close* to close the window.
+   1. Click *Close* to close the window.
 
-1. Click *OK* to save the alarm template.
+   1. Click *OK* to save the alarm template.
 
-   ![Anomaly alarm settings in DataMiner 10.3.12](~/user-guide/images/Anomaly_Alarming_Popup_All_Smart.gif)
+      ![Anomaly alarm settings in DataMiner 10.3.12](~/user-guide/images/Anomaly_Alarming_Popup_All_Smart.gif)
 
-#### [Earlier versions](#tab/all-smart-old-version)
+      You have now enabled alarm monitoring for all types of anomalies detected on the parameter *Encryption Key Requests*. This means that anomalies that would previously be shown in the *Suggestion events* tab will now be shown in the *Active alarms* tab.
 
-1. Right-click the element *Encryption Key Requests 2* in the Surveyor, and select *Protocols & Templates* > *Assign alarm templates* > *New alarm template*.
+1. Simulate the data so anomalies are detected:
 
-   > [!NOTE]
-   > This element is a copy of *Encryption Key Requests*, which generates the same data.
+   1. In DataMiner Cube, select the element *Encryption Key Requests 2* in the Surveyor.
 
-1. Specify a name for the alarm template, e.g. *Alarming on anomalies*, and click *OK*.
+   1. Click the *Generate Data* button to generate data for the parameter *Encryption Key Requests*.
 
-1. Select the checkbox in the *MON* column for the parameter *Encryption Key Requests*.
+   1. Wait until the *Data Generated?* parameter displays *Yes*.
 
-   This will enable alarm monitoring for this parameter.
+1. In the Alarm Console, check the *Active alarms* tab.
 
-1. Scroll to the far right of the alarm template to find the *ANOMALIES* column.
+   ![Anomalies generated by "Encryption Key Requests 2" in the Active alarms tab](~/user-guide/images/Encryption_Key_Requests_Active_Alarms.gif)
 
-   This column contains a button showing whether alarm monitoring on anomalies is currently enabled. By default, it will show *Disabled*.
+   Two anomalies marked as critical will be displayed in the *Active alarms* tab. This severity is determined by how severe DataMiner considers the anomaly to be. Larger jumps will for instance be considered more severe than lower jumps. Note that the *Anomalies* tab, which you can open via the light bulb icon, still contains these events, while the *Suggestion events* tab now does not.
 
-1. Click the button in the *ANOMALIES* column.
+1. Double click one of the anomaly alarms to inspect the trend data.
 
-   This will open a new pop-up window where you can configure alarm monitoring for anomalies.
-  
-1. In the dropdown box at the top, which by default shows *All disabled*, select *All enabled*.
+   Note that the anomalies are now indicated in red at the bottom of the trend graph, corresponding to the critical severity of the alarm that was generated.
 
-1. Click *Close* to close the window.
-
-1. Click *OK* to save the alarm template.
-
-![The pop-up to configure alarming on anomalies on earlier DataMiner versions than 10.3.12](~/user-guide/images/Anomaly_Alarming_Popup_All_Smart_Legacy.gif)
-
-***
-
-You have now enabled alarming on all types of anomalies detected on the parameter *Encryption Key Requests*. This means that the anomalies that would previously be shown in the *Suggestion events* tab, will now be shown in the active alarms tab. Now, simulate the data by pressing the *Generate data* button on *Encryption Key Requests 2*.
-
-![Anomalies generated by 'Encryption Key Requests 2' in the active alarms tab](~/user-guide/images/Encryption_Key_Requests_Active_Alarms.gif)
-
-Again, two anomalies are generated, but now they appear in the *Active alarms* tab, and they are marked as critical. The severity is determined by how severe DataMiner considers the anomaly to be. Larger jumps will for instance be considered more severe than lower jumps. Note that the *Anomalies* tab, opened via the Light Bulb icon, still contains these events, while the *Suggestion events* tab does not.
-
-Again, you can inspect the trend data by double-clicking the alarm. Note that the anomalies are now indicated in red at the bottom of the trend graph, corresponding to the critical severity of the alarm that was generated.
-
-![The trend graph of the 'Encryption Key Requests' parameter showing the anomalous region in red](~/user-guide/images/Encryption_Key_Requests_Trend_Graph_Alarms.gif)
+   ![Trend graph of the "Encryption Key Requests" parameter showing the anomalous region in red](~/user-guide/images/Encryption_Key_Requests_Trend_Graph_Alarms.gif)
 
 ## Step 5: Make DataMiner generate alarms for specific anomaly types
 
-In some cases, it can be useful to only generate alarms from certain types of anomalies. Consider for instance the bitrate parameter from Step 1.1. The jumps between different encoding bit rates might be expected, depending on the stream that gets encoded at that time. However, we might want to get notified if the bitrate starts fluctuating a lot on a certain stream (e.g. because it is being encoded using a variable bit rate scheme instead of a constant bit rate scheme). We can do that by turning on alarming only for *variance changes*, as follows.
+In some cases, it can be useful to only generate alarms for certain types of anomalies, for example the bit rate parameter from step 2 above. The jumps between different encoding bit rates might be expected, depending on the stream that gets encoded at that time, but you might want to get notified if the bit rate starts fluctuating a lot on a certain stream (e.g. because it is being encoded using a variable bit rate scheme instead of a constant bit rate scheme). You can do this by activating alarm monitoring for *variance changes* only:
 
-#### [DataMiner 10.3.12 or higher](#tab/variance-change-new-version)
+1. Create an alarm template:
 
-1. Right-click the element *Audio bit rate (CBR-VBR)* in the surveyor.
-1. Go to *Protocols & Templates* > *Assign alarm templates* > *New alarm template*.
-1. Give your alarm template a name, e.g. *Alarming on variance changes*.
-1. Turn on alarming on the parameter *Audio Bit Rate Channel 1* by checking the box in the Monitored (*MON*) column.
-1. Look for the column *ANOMALIES* on the right-hand side (you might have to scroll to the right to see it) and click the button in that column.
-1. In the pop-up that shows up, check the boxes before *Variance increase* and *Variance decrease*.
-1. Press *Close* to close the pop-up.
-1. Press *OK* to save the alarm template.
+   1. Right-click the element *Audio bit rate (CBR-VBR)* in the Surveyor, and select *Protocols & Templates* > *Assign alarm templates* > *New alarm template*.
 
-![Configure alarming on variance increases and decreases](~/user-guide/images/Anomaly_Alarming_Popup_Variance_Changes.gif)
+   1. Specify a name for the alarm template, e.g. *Alarming on variance changes*, and click *OK*.
 
-#### [Earlier versions](#tab/variance-change-old-version)
+   1. Select the checkbox in the *MON* column for the parameter *Audio Bit Rate Channel 1*.
 
-1. Right-click the element *Audio bit rate (CBR-VBR)* in the surveyor.
-1. Go to *Protocols & Templates* > *Assign alarm templates* > *New alarm template*.
-1. Give your alarm template a name, e.g. *Alarming on variance changes*.
-1. Turn on alarming on the parameter *Audio Bit Rate Channel 1* by checking the box in the Monitored (*MON*) column.
-1. Look for the column *ANOMALIES* on the right-hand side (you might have to scroll to the right to see it) and click the button in that column.
-1. In the pop-up that shows up, click the button next to *Variance change* to switch it to *Enabled*.
-1. Press *Close* to close the pop-up.
-1. Press *OK* to save the alarm template.
+   1. Scroll to the far right of the alarm template to find the *ANOMALIES* column.
 
-![Configure alarming on variance increases and decreases](~/user-guide/images/Anomaly_Alarming_Popup_Variance_Changes_Legacy.gif)
+   1. Click the button in the *ANOMALIES* column.
 
-***
+   1. In the pop-up window, select *Variance increase* and *Variance decrease*.
 
-Now, simulate the data by pressing *Generate Data* on *Audio bit rate (CBR-VBR)*. After a few seconds, a *variance increase* alarm will show up in the *Active alarms* tab.
+      ![Configure alarming on variance increases and decreases](~/user-guide/images/Anomaly_Alarming_Popup_Variance_Changes.gif)
 
-![A variance increase on 'Audio bit rate (CBR-VBR)' in the active alarms tab](~/user-guide/images/Audio_Bit_Rate_CBR_Alarm_Console_Variance_Increase.png)
+   1. Click *Close* to close the window.
 
-By double-clicking the alarm, you will see that it indeed corresponds to a region with a much higher fluctuation in bit rate than normal. Note that the other anomalies that are detected on the parameter only show up in the *Suggestion events* tab and not in the *Active alarms* tab.
+   1. Click *OK* to save the alarm template.
 
-![The trend graph of the 'Audio bit rate' parameter on 'Audio bit rate (CBR-VBR)'](~/user-guide/images/Audio_Bit_Rate_CBR_Trending_Variance_Increase.png)
+1. Simulate the data so anomalies are detected:
 
-Note that it would not be easy, or even next to impossible to configure similar alarming behavior in the examples above using static alarm thresholds. This shows the power of alarming on anomalies for detecting sudden unexpected behavior. For a complete list of all options related to alarming on anomalies, see [Configuring anomaly detection alarms for specific parameters](xref:Configuring_anomaly_detection_alarms).
+   1. Select the element *Audio bit rate (CBR-VBR)* in the Surveyor.
 
-## Step 6: Set custom alarm thresholds (requires DataMiner 10.3.12 or higher)
+   1. Click the *Generate Data* button to generate data for the parameter *Audio Bit Rate Channel 1*.
+
+   1. Wait until the *Data Generated?* parameter displays *Yes*.
+
+1. In the Alarm Console, check the *Active alarms* tab.
+
+   A *variance increase* alarm will show up in this tab.
+
+   ![Variance increase on "Audio bit rate (CBR-VBR)" in the Active alarms tab](~/user-guide/images/Audio_Bit_Rate_CBR_Alarm_Console_Variance_Increase.png)
+
+1. Double-click the alarm.
+
+   You will see that the alarm indeed corresponds to a region with a much higher fluctuation in bit rate than normal. Note that the other anomalies that are detected on the parameter only show up in the *Suggestion events* tab and not in the *Active alarms* tab.
+
+   ![Trend graph of the "Audio Bit Rate Channel 1" parameter](~/user-guide/images/Audio_Bit_Rate_CBR_Trending_Variance_Increase.png)
+
+> [!TIP]
+> It would be very difficult to configure similar alarm monitoring behavior using static alarm thresholds. This shows the power of anomaly alarm monitoring for detecting sudden unexpected behavior. For a complete list of all options related to alarming on anomalies, see [Configuring anomaly detection alarms for specific parameters](xref:Configuring_anomaly_detection_alarms).
+
+## Step 6: Set custom alarm thresholds
 
 In the previous steps, DataMiner determined autonomously whether certain behavior was considered anomalous or not. This is definitely handy, as it requires very little configuration, but in some cases it might be required to give DataMiner a bit more input. In this step, you will configure specific thresholds for alarming on *level shifts* anomalies.
 
@@ -291,8 +272,6 @@ As you can see on the image below, the data contains
 
 The alarms you have to generate for this exercise depend on your version of DataMiner. Note that the exercise for versions earlier than DataMiner 10.3.12 can also be done on a DataMiner version 10.3.12 or higher, but not the other way around. Remember that you can always duplicate the element to try a second time, if you did not yet reach optimal results on your first attempt.
 
-### [DataMiner 10.3.12 or higher](#tab/exercise-new-version)
-
 You will have to configure the alarm template such that the following alarms are generated
 
 - a *major* alarm for all three shorter drops,
@@ -307,17 +286,6 @@ Make sure that no extra alarm is generated. In particular, no alarm should be ge
 Below is a picture of the situation you should achieve. Good luck!
 
 ![Trend graph of 'Signal strength' with the required alarms](~/user-guide/images/Signal_Strength_Goal.png)
-
-### [Earlier versions](#tab/exercise-old-version)
-
-You will have to configure the alarm template such that alarms are generated for both longer drops, but no
-alarm is generated for the higher fluctuations, or the shorter drops.
-
-The severity of the generated alarms does not matter for the exercise. Below is a picture of the situation you should achieve. Good luck!
-
-![Trend graph of 'Signal strength' with the required alarms](~/user-guide/images/Signal_Strength_Goal_legacy.png)
-
-***
 
 If you complete one of the exercises above correctly, and send us a picture of the trend
 graph along with a [.dmimport file](xref:Exporting_elements_services_etc_to_a_dmimport_file) containing your element,
