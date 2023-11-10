@@ -205,7 +205,7 @@ Shows the legacy Annotations module in Cube.
 - **Minimum version**: 10.1.12/10.2.0 ([RN 31329](xref:General_Feature_Release_10.1.12#legacy-reports-dashboards-and-annotations-modules-will-by-default-be-hidden-in-new-installations-id_31329))
 
 > [!NOTE]
-> The legacy Annotations module is disabled as from DataMiner versions 10.4.1/10.5.0 ([RN 37786](xref:Web_apps_Feature_Release_10.4.1#legacy-reports-dashboards-and-annotations-modules-will-by-default-be-disabled-in-new-installations-id_33786)).
+> The legacy Annotations module is disabled as from DataMiner versions 10.4.1/10.5.0 ([RN 37786](xref:Web_apps_Feature_Release_10.4.1#legacy-reports-dashboards-and-annotations-modules-will-by-default-be-disabled-in-new-installations-id_37786)).
 
 ### LegacyReportsAndDashboards
 
@@ -214,7 +214,7 @@ Shows the legacy Reports and Dashboards modules in Cube.
 - **Minimum version**: 10.1.12/10.2.0 ([RN 31329](xref:General_Feature_Release_10.1.12#legacy-reports-dashboards-and-annotations-modules-will-by-default-be-hidden-in-new-installations-id_31329))
 
 > [!NOTE]
-> The legacy Reports and Dashboards modules are disabled as from DataMiner versions 10.4.1/10.5.0 ([RN 37786](xref:Web_apps_Feature_Release_10.4.1#legacy-reports-dashboards-and-annotations-modules-will-by-default-be-disabled-in-new-installations-id_33786)).
+> The legacy Reports and Dashboards modules are disabled as from DataMiner versions 10.4.1/10.5.0 ([RN 37786](xref:Web_apps_Feature_Release_10.4.1#legacy-reports-dashboards-and-annotations-modules-will-by-default-be-disabled-in-new-installations-id_37786)).
 
 ### MonitoringAndControl
 
