@@ -6,6 +6,40 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 8 November 2023 - Enhancement - CloudGateway 2.12.4, SupportAssistant 1.5.2, FieldControl 2.9.1, CoreGateway 2.13.3, ArtifactDeployer 1.5.2, Orchestrator 1.4.1 - Dependencies updated [ID_37784] [ID_37785] [ID_37797] [ID_37798] [ID_37800] [ID_37805]
+
+Several dependencies have been updated.
+
+#### 8 November 2023 - Enhancement - Orchestrator 1.4.1 - Improved logging [ID_37175]
+
+Logging for the Orchestrator DxM has been improved. In several cases, the log level has been adjusted to improve visibility of important logs.
+
+#### 8 November 2023 - Fix - ArtifactDeployer 1.5.2 & Orchestrator 1.4.1 - Issue where a timeout error was logged in ArtifactDeployer [ID_37784] [ID_37785]
+
+When Orchestrator 1.4.0 and/or ArtifactDeployer 1.5.1 or older were used, in some specific cases, the ArtifactDeployer DxM logged a timeout exception when the Orchestrator DxM encountered an error. This has now been resolved.
+
+#### 8 November 2023 - Fix - ArtifactDeployer 1.5.2 - Deployment issues with ArtifactDeployer 1.5.1 in clusters [ID_37785]
+
+When ArtifactDeployer 1.5.1 was used in a cluster, it could occur that deployments were displayed as pending or failed, and there were many events in the details overlay on admin.dataminer.services, while in fact the deployment had succeeded. This has now been resolved.
+
+#### 2 November 2023 - Fix - ArtifactDeployer 1.5.1 - Issue when hosting server of DataMiner CloudGateway had more than one NIC [ID_37762]
+
+When ArtifactDeployer 1.5.1 or earlier was used, it could occur that deployments failed when the CloudGateway module was installed on a server with more than one network interface (NIC). This has now been resolved.
+
+Make sure to also install DataMiner CloudGateway 2.12.3 to make use of this fix.
+
+#### 2 November 2023 - Fix - SupportAssistant 1.5.1 - Issue when hosting server of DataMiner CloudGateway had more than one NIC [ID_37770]
+
+When SupportAssistant 1.5.1 or earlier was used, it could occur that remote log collection failed when uploading the package in case the CloudGateway module was installed on a server with more than one network interface (NIC). This has now been resolved. 
+
+Make sure to also install DataMiner CloudGateway 2.12.3 to make use of this fix.
+
+#### 2 November 2023 - Fix - CloudGateway 2.12.3 - Issue when hosting server had more than one NIC [ID_37761]
+
+When CloudGateway was installed on a server with more than one network interface (NIC), it could occur that CloudGateway returned the wrong NIC address to other modules such as DataMiner SupportAssistant and DataMiner ArtifactDeployer, causing deployments and remote log collection to fail. This has now been resolved. 
+
+Make sure to also install DataMiner SupportAssistant 1.5.1 and DataMiner ArtifactDeployer 1.5.1 to make use of this fix.
+
 #### 30 October 2023 - Fix - CloudGateway 2.12.2 - Resolved an issue that could occur when using multiple CloudGateway modules [ID_37686]
 
 When multiple CloudGateway modules were installed in a cluster, it could occur that they were no longer able to sync with each other. As a result, the dataminer.services identity of the DMS was not synced properly, and only one CloudGateway instance was able to function correctly, causing stability issues in the dataminer.services connection and features such as sharing and remote access. This has now been resolved.

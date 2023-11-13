@@ -8,6 +8,9 @@ This tutorial shows you how you can use our Chat Integration examples to send no
 
 Estimated duration: 15 minutes.
 
+> [!TIP]
+> See also: [Kata #6: Custom ChatOps operator](https://community.dataminer.services/courses/kata-6/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+
 ## Prerequisites
 
 - [A DataMiner System connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud)

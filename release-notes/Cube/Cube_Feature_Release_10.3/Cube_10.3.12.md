@@ -2,17 +2,13 @@
 uid: Cube_Feature_Release_10.3.12
 ---
 
-# DataMiner Cube Feature Release 10.3.12 – Preview
+# DataMiner Cube Feature Release 10.3.12
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to DataMiner Cube, see [General Feature Release 10.3.12](xref:General_Feature_Release_10.3.12).
-
-## Highlights
-
-*No highlights have been selected yet.*
 
 ## New features
 
@@ -192,8 +188,21 @@ In the footer of the Alarm Console, the button to cancel the current text-to-spe
 
 When, in the Alarm Console, an alarm was duplicated, in some cases, its focus score would not be updated correctly.
 
+#### DataMiner Cube - Relation learning: Problem when checking ModelHost DxM license [ID_37653]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 [CU0] -->
+
+In some cases, DataMiner Cube could become unresponsive when checking the ModelHost DxM license.
+
 #### DataMiner Cube: Problem when parsing anomaly alarms [ID_37680]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
 
 When you opened DataMiner Cube or when you opened a new alarm tab, an error could occur when parsing anomaly alarms.
+
+#### Alarm Console: Alarm tab listing all anomaly suggestions/alarms would incorrectly not include any outlier alarms [ID_37709]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+<!-- Not added to MR 10.4.0 -->
+
+When, in the top-right corner of the Alarm Console, you clicked the light bulb icon and then clicked the *X anomalies were found in your trend data* notification to open an alarm tab listing all anomaly suggestions/alarms, this tab would incorrectly not include any outlier alarms.

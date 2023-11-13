@@ -1,5 +1,6 @@
 ---
 uid: Desktop_app_command_line_arguments
+keywords: launcher
 ---
 
 # Desktop application command-line arguments
