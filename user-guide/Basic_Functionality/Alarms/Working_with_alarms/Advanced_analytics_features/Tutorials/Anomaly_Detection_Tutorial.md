@@ -4,14 +4,14 @@ uid: Anomaly_Tutorial
 
 # Detecting anomalies with DataMiner
 
-This tutorial illustrates DataMiner's [Behavioral Anomaly Detection](xref:Working_with_behavioral_anomaly_detection) features and show how you can use these to detect certain failures in your operation.
+This tutorial illustrates DataMiner's [Behavioral Anomaly Detection](xref:Working_with_behavioral_anomaly_detection) features and shows how you can use these to detect certain failures in your operation.
 
 By default, behavioral anomaly detection is active on trended parameters. It will monitor the parameters in real time and notify users about any detected anomalies. The feature models the behavior of a parameter based on its recent history. The tutorial will make use of [history sets](xref:How_to_use_history_sets_on_a_protocol_parameter) to quickly simulate a parameter with historical trend data. Trending is activated by default on the parameters used in this tutorial.
 
 Estimated duration: 45 minutes.
 
 > [!TIP]
-> For more information, such as technical limitations to anomaly detection, see [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection).
+> For more information, such as technical limitations of anomaly detection, see [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection).
 
 ## Prerequisites
 
@@ -23,7 +23,7 @@ Estimated duration: 45 minutes.
 
 ## Overview
 
-The tutorial consists of the following steps.
+The tutorial consists of the following steps:
 
 - [Step 1: Install the example package from the catalog](#step-1-install-the-example-package-from-the-catalog)
 - [Step 2: Discover anomaly detection in trend graphs](#step-2-discover-anomaly-detection-in-trend-graphs)
@@ -82,7 +82,7 @@ The tutorial consists of the following steps.
 
 1. Wait until the *Data Generated?* parameter displays *Yes*.
 
-1. Click the light bulb icon in the top right corner of the Alarm Console.
+1. Click the light bulb icon in the top-right corner of the Alarm Console.
 
    This icon lights up in blue to indicate that DataMiner Analytics found something interesting. For more detailed info, see [Working with the Alarm Console light bulb feature](xref:Light_Bulb_Feature).
 
@@ -114,7 +114,7 @@ As anomalies might flag potential problems in your operation, it can be useful t
       > [!NOTE]
       > This element is a copy of *Encryption Key Requests*, which generates the same data.
 
-   1. Specify a name for the alarm template, e.g. *Alarming on anomalies*, and click *OK*.
+   1. Specify a name for the alarm template, e.g. *Monitoring of anomalies*, and click *OK*.
 
    1. Select the checkbox in the *MON* column for the parameter *Encryption Key Requests*.
 
@@ -122,7 +122,7 @@ As anomalies might flag potential problems in your operation, it can be useful t
 
    1. Scroll to the far right of the alarm template to find the *ANOMALIES* column.
 
-      This column contains a button showing whether alarm monitoring on anomalies is currently enabled. By default, it will show *Disabled*.
+      This column contains a button showing whether alarm monitoring for anomalies is currently enabled. By default, it will show *Disabled*.
 
    1. Click the button in the *ANOMALIES* column.
 
@@ -138,7 +138,7 @@ As anomalies might flag potential problems in your operation, it can be useful t
 
       You have now enabled alarm monitoring for all types of anomalies detected on the parameter *Encryption Key Requests*. This means that anomalies that would previously be shown in the *Suggestion events* tab will now be shown in the *Active alarms* tab.
 
-1. Simulate the data so anomalies are detected:
+1. Simulate the data so that anomalies are detected:
 
    1. In DataMiner Cube, select the element *Encryption Key Requests 2* in the Surveyor.
 
@@ -166,7 +166,7 @@ In some cases, it can be useful to only generate alarms for certain types of ano
 
    1. Right-click the element *Audio bit rate (CBR-VBR)* in the Surveyor, and select *Protocols & Templates* > *Assign alarm templates* > *New alarm template*.
 
-   1. Specify a name for the alarm template, e.g. *Alarming on variance changes*, and click *OK*.
+   1. Specify a name for the alarm template, e.g. *Variance change monitoring*, and click *OK*.
 
    1. Select the checkbox in the *MON* column for the parameter *Audio Bit Rate Channel 1*.
 
@@ -176,13 +176,13 @@ In some cases, it can be useful to only generate alarms for certain types of ano
 
    1. In the pop-up window, select *Variance increase* and *Variance decrease*.
 
-      ![Configure alarming on variance increases and decreases](~/user-guide/images/Anomaly_Alarming_Popup_Variance_Changes.gif)
+      ![Configure monitoring of variance increases and decreases](~/user-guide/images/Anomaly_Alarming_Popup_Variance_Changes.gif)
 
    1. Click *Close* to close the window.
 
    1. Click *OK* to save the alarm template.
 
-1. Simulate the data so anomalies are detected:
+1. Simulate the data so that anomalies are detected:
 
    1. Select the element *Audio bit rate (CBR-VBR)* in the Surveyor.
 
@@ -203,123 +203,170 @@ In some cases, it can be useful to only generate alarms for certain types of ano
    ![Trend graph of the "Audio Bit Rate Channel 1" parameter](~/user-guide/images/Audio_Bit_Rate_CBR_Trending_Variance_Increase.png)
 
 > [!TIP]
-> It would be very difficult to configure similar alarm monitoring behavior using static alarm thresholds. This shows the power of anomaly alarm monitoring for detecting sudden unexpected behavior. For a complete list of all options related to alarming on anomalies, see [Configuring anomaly detection alarms for specific parameters](xref:Configuring_anomaly_detection_alarms).
+> It would be very difficult to configure similar alarm monitoring behavior using static alarm thresholds. This shows the power of anomaly alarm monitoring for detecting sudden unexpected behavior. For a complete list of all options related to alarm monitoring of anomalies, see [Configuring anomaly detection alarms for specific parameters](xref:Configuring_anomaly_detection_alarms).
 
 ## Step 6: Set custom alarm thresholds
 
-In the previous steps, DataMiner determined autonomously whether certain behavior was considered anomalous or not. This is definitely handy, as it requires very little configuration, but in some cases it might be required to give DataMiner a bit more input. In this step, you will configure specific thresholds for alarming on *level shifts* anomalies.
+In the previous steps, DataMiner determined autonomously whether certain behavior was considered anomalous or not. However, sometimes it can be handy to add some more configuration to give DataMiner more input. In this example, you will configure specific thresholds for alarm monitoring of *level shift* anomalies.
 
-Let us look at the element *Cable Modems Out of Service*, containing a parameter representing the number of cable modems that are out of service at a CMTS. Press the *Generate Data* button and open the trend graph whenever the data generation is finished.
+1. Check the current behavior with the example element *Cable Modems Out of Service*:
 
-![Trend graph of 'Cable Modems Out of Service' without alarming configured](~/user-guide/images/CMOOS_Trend_Graph_No_Alarming.png)
+   1. Select the element in the Surveyor.
 
-As you can see, the data tends to follow a wave pattern with a low number of cable modems out of service during the day, and a high number at night. This is caused by a significant number of people turning off their cable modem at night, making the CMTS unable to connect to it. Moreover, in the last two days, you can see four periods where more modems were out of service than expected: the data suddenly jumps up with around 70 units before dropping again a few hours later. Unfortunately, DataMiner only detects the first and the third period as anomalous, as seen by the dark grey blocks in the trend graph. This is because DataMiner assumes too quickly that the observed behavior is not anomalous since it has seen it before.
+   1. Click the *Generate Data* button to generate data for the parameter *Cable Modems Out of Service*.
 
-The element *Cable Modems Out of Service 2* contains exactly the same data as above. You can configure thresholds for *level shift increase* anomalies in the alarm template so that alarms are generated during all four periods of anomalous behavior, as follows.
+   1. Wait until the *Data Generated?* parameter displays *Yes*.
 
-1. Right-click the element *Cable Modems Out of Service 2* in the surveyor.
-1. Go to *Protocols & Templates* > *Assign alarm templates* > *New alarm template*.
-1. Give your alarm template a name, e.g. *Alarming with absolute thresholds*.
-1. Turn on alarming on the parameter *Cable Modems Out of Service* by checking the box in the Monitored (*MON*) column.
-1. Look for the column *ANOMALIES* on the right-hand side (you might have to scroll to the right to see it) and click the button in that column.
-1. Check the box before *Level increases*.
-1. In the drop-down list next to it, select *Absolute*.
-1. Fill in 50 in the yellow box, corresponding to a major severity.
-1. Press *Close* to close the pop-up.
-1. Press *OK* to save the alarm template.
+   1. Click the trend icon ![the trend icon](~/user-guide/images/trend_icon_unknown.png) next to the parameter.
 
-![Configure alarming on level increases of size 50 or higher](~/user-guide/images/Anomaly_Alarming_Popup_Level_Increase_50.gif)
+      ![Trend graph example without additional configuration](~/user-guide/images/CMOOS_Trend_Graph_No_Alarming.png)
 
-Generate data on element *Cable Modems Out of Service 2* by pressing the corresponding button. When the data generation is done, open the trend graph. As you can see all four jumps upwards received a major alarm.
+      As you can see, the data tends to follow a wave pattern with a low number of cable modems out of service during the day, and a high number at night. This is caused by a significant number of people turning off their cable modem at night, making the CMTS unable to connect to it. Moreover, in the last two days, you can see four periods where more modems were out of service than expected: the data suddenly jumps up with around 70 units before dropping again a few hours later. Unfortunately, DataMiner only detects the first and the third period as anomalous, as seen by the dark grey blocks in the trend graph. This is because DataMiner assumes too quickly that the observed behavior is not anomalous since it has seen it before.
 
-![Trend graph of 'Cable Modems Out of Service' with absolute thresholds configured for level shifts](~/user-guide/images/CMOOS_Trend_Graph_With_Absolute_Alarming.png)
+1. Configure level shift anomaly alarm detection for the element *Cable Modems Out of Service 2*, so that alarms are generated during all four periods of anomalous behavior:
 
-That is great! However, one could argue that the third major alarm is less severe than the other three, as a lot of other cable modems are already offline when the jump happens. Indeed, hovering over the change point, we see that the parameter jumps from around 300 to around 385 at that point, representing an increase of around 28%, while the first, second and fourth jump represent increases of around 38%, 35% and 33%, respectively. Hence, we might only want a minor alarm for the third jump.
+   1. Right-click the element *Cable Modems Out of Service 2* in the Surveyor, and select *Protocols & Templates* > *Assign alarm templates* > *New alarm template*.
 
-![Details of the third level shift, a jump from 301 to 386 units](~/user-guide/images/CMOOS_Trend_Graph_Details_Third_Level_Shift.png)
+      > [!NOTE]
+      > This element is a copy of *Cable Modems Out of Service*, which generates the same data.
 
-To generate this minor alarm, you can use *relative* thresholds, as follows.
+   1. Specify a name for the alarm template, e.g. *Monitoring of absolute thresholds*, and click *OK*.
 
-1. Right-click the element *Cable Modems Out of Service 3* in the surveyor.
-1. Go to *Protocols & Templates* > *Assign alarm templates* > *New alarm template*.
-1. Give your alarm template a name, e.g. *Alarming with relative thresholds*.
-1. Turn on alarming on the parameter *Cable Modems Out of Service* by checking the box in the Monitored (*MON*) column.
-1. Look for the column *ANOMALIES* on the right-hand side (you might have to scroll to the right to see it) and
-click the button in that column.
-1. Check the box before *Level increases*.
-1. In the drop-down list next to it, select *Relative*.
-1. Fill in 25 in the light blue box and 30 in the yellow box, corresponding to a minor and major severity, respectively.
-1. Press *Close* to close the pop-up.
-1. Press *OK* to save the alarm template.
+   1. Select the checkbox in the *MON* column for the parameter *Cable Modems Out of Service*.
 
-![Configure alarming on level increases using relative thresholds](~/user-guide/images/Anomaly_Alarming_Popup_Level_Increase_Relative.gif)
+   1. Scroll to the far right of the alarm template to find the *ANOMALIES* column.
 
-Again, generate data on element *Cable Modems Out of Service 3* by pressing the corresponding button, and open the trend graph when the data generation is done. You should indeed see major alarms on the first, second and forth jump and a minor alarm on the third jump.
+   1. Click the button in the *ANOMALIES* column.
 
-![Trend graph of 'Cable Modems Out of Service' with relative thresholds configured for level shifts](~/user-guide/images/CMOOS_Trend_Graph_With_Relative_Alarming.png)
+   1. In the pop-up window, select *Level increases*.
 
-In exactly the same way, one can configure alarming on *outlier* anomalies. A complete description can be found [here](xref:Configuring_anomaly_detection_alarms).
+   1. Next to *Level increases*, select *Absolute*.
+
+   1. In the yellow box (i.e. major severity), fill in *50*.
+
+      ![Configure alarm monitoring of level increases of size 50 or higher](~/user-guide/images/Anomaly_Alarming_Popup_Level_Increase_50.gif)
+
+   1. Click *Close* to close the window.
+
+   1. Click *OK* to save the alarm template.
+
+1. Generate data for the element *Cable Modems Out of Service 2*:
+
+   1. Select the element in the Surveyor.
+
+   1. Click the *Generate Data* button to generate data for the parameter *Cable Modems Out of Service*.
+
+   1. Wait until the *Data Generated?* parameter displays *Yes*.
+
+   1. Click the trend icon ![the trend icon](~/user-guide/images/trend_icon_unknown.png) next to the parameter.
+
+      You will see that now a major alarm was generated for all four upward jumps.
+
+      ![Trend graph of 'Cable Modems Out of Service' with absolute thresholds configured for level shifts](~/user-guide/images/CMOOS_Trend_Graph_With_Absolute_Alarming.png)
+
+      While this is already a great improvement, the third major alarm could be considered less severe than the other three, as a lot of other cable modems are already offline when the jump happens. When you hover the mouse pointer over the change point, you will see that the parameter jumps from around 300 to around 385 at that point, representing an increase of around 28%, while the first, second, and fourth jump represent increases of around 38%, 35%, and 33%, respectively. This means that the alarm monitoring could be further refined, so that only a minor alarm is generated for the third jump.
+
+      ![Details of the third level shift, a jump from 301 to 386 units](~/user-guide/images/CMOOS_Trend_Graph_Details_Third_Level_Shift.png)
+
+1. Configure *Cable Modems Out of Service 3* with relative alarm thresholds for more refined monitoring:
+
+   1. Right-click the element *Cable Modems Out of Service 3* in the Surveyor, and select *Protocols & Templates* > *Assign alarm templates* >  *New alarm template*.
+
+   1. Specify a name for the alarm template, e.g. *Monitoring of relative thresholds*, and click *OK*.
+
+   1. Select the checkbox in the *MON* column for the parameter *Cable Modems Out of Service*.
+
+   1. Scroll to the far right of the alarm template to find the *ANOMALIES* column.
+
+   1. Click the button in the *ANOMALIES* column.
+
+   1. In the pop-up window, select *Level increases*.
+
+   1. Next to *Level increases*, select *Relative*.
+
+   1. Fill in *25* in the light-blue box (i.e. minor severity) and *30* in the yellow box (i.e. major severity).
+
+      ![Configure alarm monitoring of level increases using relative thresholds](~/user-guide/images/Anomaly_Alarming_Popup_Level_Increase_Relative.gif)
+
+   1. Click *Close* to close the window.
+
+   1. Click *OK* to save the alarm template.
+
+1. Generate data for the element *Cable Modems Out of Service 3*:
+
+   1. Select the element in the Surveyor.
+
+   1. Click the *Generate Data* button to generate data for the parameter *Cable Modems Out of Service*.
+
+   1. Wait until the *Data Generated?* parameter displays *Yes*.
+
+   1. Click the trend icon ![the trend icon](~/user-guide/images/trend_icon_unknown.png) next to the parameter.
+
+      You should now indeed see major alarms for the first, second, and fourth jump, and a minor alarm for the third jump.
+
+      ![Trend graph of 'Cable Modems Out of Service' with relative thresholds configured for level shifts](~/user-guide/images/CMOOS_Trend_Graph_With_Relative_Alarming.png)
+
+> [!TIP]
+> In exactly the same way, you can configure alarm monitoring of *outlier* anomalies. See [Configuring anomaly detection alarms](xref:Configuring_anomaly_detection_alarms).
 
 ## Step 7: Final exercise
 
-You have now learned everything there is to know about DataMiner's Behavioral Anomaly Detection features. But we have one last exercise for you, where you will need to apply everything you have learned earlier. Open the element *Signal Strength*. It represents the strength of a signal received by a satellite dish. Your task is to make sure alarms are generated when something goes wrong, without creating too many alarms.
+In this final step, you will apply everything you have learned earlier in a practical exercise:
 
-As you can see on the image below, the data contains
+- Use the element *Signal Strength*. This element contains a parameter representing the strength of a signal received by a satellite dish.
 
-- a period of about a week with higher fluctuations than normal, starting at October 11th on the picture,
-- three short drops, on October 24th, October 25th and October 29th on the picture,
-- two longer drops, on October 25th on the picture.
+- Configure an alarm template for this element so that alarms are generated when something goes wrong. You will need to make sure that not too many alarms get created.
 
-The alarms you have to generate for this exercise depend on your version of DataMiner. Note that the exercise for versions earlier than DataMiner 10.3.12 can also be done on a DataMiner version 10.3.12 or higher, but not the other way around. Remember that you can always duplicate the element to try a second time, if you did not yet reach optimal results on your first attempt.
+Here is a screenshot of what the trend graph for the *Signal Strength* parameter should look like when everything has been configured correctly:
 
-You will have to configure the alarm template such that the following alarms are generated
+![Trend graph of "Signal strength" with the required alarms](~/user-guide/images/Signal_Strength_Goal.png)
 
-- a *major* alarm for all three shorter drops,
-- a *critical* alarm for both longer drops,
-- a *critical* alarm at the start of the period with higher fluctuations.
+You can see the following notable things in the data illustrated above:
 
-Make sure that no extra alarm is generated. In particular, no alarm should be generated
+- A period of about a week with higher fluctuations than normal (starting at October 11th).
+- Three short drops (on October 24th, October 25th, and October 29th).
+- Two longer drops (on October 25th).
 
-- at the moment the higher fluctuations stop, around October 18th on the picture,
-- for any other drop than indicated in the picture below.
+Based on what you have learned in the previous steps, you should now configure the alarm template so that the following alarms are generated:
 
-Below is a picture of the situation you should achieve. Good luck!
+- A *major* alarm for all three shorter drops.
+- A *critical* alarm for both longer drops.
+- A *critical* alarm at the start of the period with higher fluctuations.
 
-![Trend graph of 'Signal strength' with the required alarms](~/user-guide/images/Signal_Strength_Goal.png)
+Make sure that no extra alarms are generated, for example for the following things:
 
-If you complete one of the exercises above correctly, and send us a picture of the trend
-graph along with a [.dmimport file](xref:Exporting_elements_services_etc_to_a_dmimport_file) containing your element,
-you will be rewarded with DevOps Points.
+- The moment the higher fluctuations stop.
+- Any other drops than indicated above.
 
-Adhere to the following email format:
+Remember that you can always duplicate the element to try a second time, if you have not yet reached optimal results on a first attempt.
 
-- Subject: Tutorial - Anomalies tutorial
-- To: [ai@skyline.be](mailto:ai@skyline.be)
-- Body:
-  - Exercise version: Mention whether you completed the exercise for DataMiner version 10.3.12 or higher, or for an earlier version (or both).
-  - Dojo account: Clearly mention the email address you use to sign into your Dojo account, especially if you are using a different email address to send this email
-  - Feedback (optionally): We value your feedback! Please share any thoughts or suggestions regarding this tutorial or the anomaly detection feature.
-- Attachment:
-  - A picture of the trend graph with the correct anomalies.
-  - A [.dmimport file](xref:Exporting_elements_services_etc_to_a_dmimport_file) containing your element with the correct alarms.
-
-> [!NOTE]
+> If you are a member of the DevOps Program and you have completed the exercise above, send us a screenshot of the trend graph along with a [.dmimport file](xref:Exporting_elements_services_etc_to_a_dmimport_file) containing your element to get DevOps Points.
+>
+> Use the following email format:
+>
+> - Subject: Tutorial - Anomalies tutorial
+> - To: [ai@skyline.be](mailto:ai@skyline.be)
+> - Body:
+>   - Dojo account: Clearly mention the email address you use to sign into your Dojo account, especially if you are using a different email address to send this email
+>   - Feedback (optionally): We value your feedback! Please share any thoughts or suggestions regarding this tutorial or the anomaly detection feature.
+> - Attachment:
+>   - A picture of the trend graph with the correct anomalies.
+>   - A [.dmimport file](xref:Exporting_elements_services_etc_to_a_dmimport_file) containing your element with the correct alarm configuration.
+>
 > Skyline will review your submission. Upon successful validation, you will be awarded the appropriate DevOps Points as a token of your accomplishment.
 
-### Look for anomalies detected in your operation
-
-We believe DataMiner's behavioral anomaly detection feature will help you to detect incidents in your daily operation. However, no feature is perfect, and your feedback is always helpful! Help us by looking for a good example of a detected anomaly and/or an example where the detection can be improved (either no anomaly was detected, or an anomaly was detected for something that is not problematic). Send us your examples and be rewarded with DevOps Points.
-
-Adhere to the following email format:
-
-- Subject: Tutorial - Anomaly detection feedback
-- To: [ai@skyline.be](mailto:ai@skyline.be)
-- Body:
-  - Dojo account: Clearly mention the email address you use to sign into your Dojo account, especially if you are using a different email address to send this email.
-  - Feedback: Provide a short explanation of what we see on the examples you are sending us and why the detected anomaly is good or bad.
-- Attachment:
-  - A picture of the trend graph with the detected anomaly.
-  - An [export of your trend graph](xref:Exporting_a_trend_graph) obtained by right-clicking the trend graph and selecting *Export to CSV*.
-
-> [!NOTE]
-> Skyline will review your submission. Upon successful validation, you will be awarded the appropriate DevOps Points as a token of appreciation for your effort in helping to improve DataMiner.
+> [!IMPORTANT]
+> We want to keep improving our Behavioral Anomaly Detection features, and your feedback is very helpful for this. That is why you can also earn DevOps Points by sending us good examples of detected anomalies and/or situations where the anomaly detection can be improved (e.g. no anomaly was detected, or an anomaly was detected for something that is not problematic).
+>
+> Use the following email format to send us your examples:
+>
+> - Subject: Tutorial - Anomaly detection feedback
+> - To: [ai@skyline.be](mailto:ai@skyline.be)
+> - Body:
+>   - Dojo account: Clearly mention the email address you use to sign into your Dojo account, especially if you are using a different email address to send this email.
+>   - Feedback: Provide a short explanation of what is shown in the examples you are sending us and why the detected anomaly is good or bad.
+> - Attachment:
+>   - A picture of the trend graph with the detected anomaly.
+>   - An [export of your trend graph](xref:Exporting_a_trend_graph), obtained by right-clicking the trend graph and selecting *Export to CSV*.
+>
+> Skyline will review your submission. Upon successful validation, you will be awarded the appropriate DevOps Points.
