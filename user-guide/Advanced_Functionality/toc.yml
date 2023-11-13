@@ -517,14 +517,25 @@ items:
                 topicUid: HTTP_Headers
               - name: Disabling legacy protocols
                 topicUid: Disabling_legacy_protocols
+          - name: Configuring SAML settings
+            topicUid: Configuring_external_authentication_via_an_identity_provider_using_SAML
+            items:
+            - name: Configuring SAML with Microsoft Entra ID
+              topicUid: SAML_using_Entra_ID
+            - name: Configuring SAML with Azure B2C
+              topicUid: SAML_using_Azure_B2C
+            - name: Configuring SAML with Okta
+              topicUid: SAML_using_Okta
+            - name: Additional configuration for systems connected to dataminer.services
+              topicUid: SAML_config_to_connect_to_cloud
+            - name: Troubleshooting SAML issues
+              topicUid: Troubleshooting_SAML_Issues
           - name: Configuring LDAP settings
             topicUid: Configuring_LDAP_settings
           - name: Configuring Atlassian Crowd settings
             topicUid: Configuring_Atlassian_Crowd_settings
           - name: Configuring RADIUS settings
             topicUid: Configuring_RADIUS_settings
-          - name: Configuring external authentication via an identity provider using SAML
-            topicUid: Configuring_external_authentication_via_an_identity_provider_using_SAML
           - name: Setting up Azure Active Directory Domain Services
             topicUid: Setting_up_Azure_Active_Directory_Domain_Services
           - name: Enabling TLS encryption

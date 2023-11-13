@@ -16,13 +16,114 @@ uid: Web_apps_Feature_Release_10.4.1
 
 ## New features
 
-*No new features have been added yet.*
+#### Dashboards app & Low-Code Apps - Table component: Customizing the appearance of a column [ID_37522]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+When editing a table component, you can now find a *Column appearance* section in the *Layout* tab. This section allows you to customize the appearance of a column.
+
+To change the appearance of a column using presets, in the *Column appearance* section, do the following:
+
+1. In the selection box, select the column of which you want to change the appearance.
+1. Click the preview to expand a list of available presets.
+1. Select the preset that you want to be applied to the column.
+
+   Available presets:
+
+   - *Left*: Align the content to the left.
+   - *Center*: Align the content in the center.
+   - *Right*: Align the content to the right.
+   - *Icon*: Display an icon instead of text.
+   - *Link*: Make the text appear as a link.
+   - *Background*: Add a background color to the cell.
+
+   To tweak the preset you selected, click the ellipsis button (*...*) and select *Edit preset*. This will open the template editor, which will allow you to fully customize the column appearance.
+
+> [!NOTE]
+>
+> - To resize the columns of a table, drag the edges of the column headers, and to change the order of the columns, drag the column headers to a different position. To change the default column width, use the template editor.
+> - When you add a table component to a low-code app, the template editor will also allow you to configure actions that will be executed when a shape in a column is clicked or when a row is double-clicked.
+> - In the *Parameter table* component, the default column alignment is now "Left" instead of "Center".
+> - The default alignment of GQI table columns is now "Left" for columns of type string and "Right" for columns of type numeric or date.
+
+#### Low-Code Apps: Duplicating low-code apps [ID_37698] [ID_37724]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+There are now two ways to duplicate a low-code app:
+
+- **On the Root page of a DataMiner Agent:**
+
+  1. Hover over the application that you want to duplicate. An ellipsis ("...") button will appear.
+  1. Click the ellipsis ("...") button to open the context menu.
+  1. Select *Duplicate*.
+
+  The most recently published app version will now be duplicated. If the app has not yet been published, its draft version will be duplicated instead.
+
+  The newly created duplicate will be assigned a unique name and will automatically be opened in a new browser tab. On the root page, this new app will be added to the list if the *Show draft applications* option is enabled.
+
+- **On the Application page:**
+
+  1. In the top-right corner, right-click the user icon.
+  1. In the user menu, select *Duplicate*.
+
+  If the edit page is open, the current draft version will be copied and the newly created app will automatically be opened in a new browser tab.
+
+  To duplicate the most recently published version of the app:
+
+  1. Open the published version.
+  1. Right-click the user icon.
+  1. In the user menu, select *Duplicate*.
+  
+  To duplicate a different version of the app:
+
+  1. Right-click the user icon.
+  1. In the user menu, select *Versions*.
+  1. Select the desired version.
+  1. Right-click the user icon.
+  1. In the user menu, select *Duplicate*.
+
+  > [!NOTE]
+  > You are only allowed to duplicate an older version of an app if you have permission to edit the app in question.
+
+#### Dashboards app & Low-Code Apps: 'Text input' and 'Numeric input' components can now be fed data from other components and from the URL [ID_37736]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+*Text input* and *Numeric input* components can now be fed data from other components as well as from the URL.
+
+To feed a component from the URL, you need to link the component to the URL feed of the correct type, and use the query parameters of the dashboard or app. See the following example:
+
+`?data={"feed": {"strings": ["data for url feed"], "numbers": [1]}}`
+
+#### Dashboards app & Low-Code Apps: Duplicating GQI queries [ID_37739]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+It is now possible to duplicate a GQI query:
+
+1. In the *Data* tab, open the *Queries* section, and click the ellipsis ("...") button of the GQI query that you want to duplicate.
+1. In the context menu, select *Duplicate*.
 
 ## Changes
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Dashboards app: User and user group information will no longer automatically be retrieved when you enter edit mode [ID_37727]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+Up to now, as soon as you entered edit mode, a number of API calls were executed in order to retrieve user and user group information.
+
+From now on, those API calls will only be executed the moment you open the *Settings* tab on the right.
+
+#### Legacy Reports, Dashboards and Annotations modules are now end-of-life and will be disabled by default [ID_37786]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+As from DataMiner versions 10.1.10/10.2.0, the *LegacyReportsAndDashboards* and/or *LegacyAnnotations* soft-launch options allowed you to enable or disable the legacy *Reports*, *Dashboards* and *Annotations* modules. By default, they were enabled.
+
+Now, the above-mentioned soft-launch options will be disabled by default, causing the legacy *Reports*, *Dashboards* and *Annotations* modules to be hidden. If you want to continue using these modules, which are now considered end-of-live, you will have to explicitly enable the soft-launch options.
 
 ### Fixes
 

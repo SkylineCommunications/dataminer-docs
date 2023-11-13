@@ -2,17 +2,13 @@
 uid: Cube_Feature_Release_10.3.12
 ---
 
-# DataMiner Cube Feature Release 10.3.12 – Preview
+# DataMiner Cube Feature Release 10.3.12
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to DataMiner Cube, see [General Feature Release 10.3.12](xref:General_Feature_Release_10.3.12).
-
-## Highlights
-
-*No highlights have been selected yet.*
 
 ## New features
 
@@ -191,6 +187,12 @@ In the footer of the Alarm Console, the button to cancel the current text-to-spe
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
 
 When, in the Alarm Console, an alarm was duplicated, in some cases, its focus score would not be updated correctly.
+
+#### DataMiner Cube - Relation learning: Problem when checking ModelHost DxM license [ID_37653]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 [CU0] -->
+
+In some cases, DataMiner Cube could become unresponsive when checking the ModelHost DxM license.
 
 #### DataMiner Cube: Problem when parsing anomaly alarms [ID_37680]
 

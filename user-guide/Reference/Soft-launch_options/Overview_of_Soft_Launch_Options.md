@@ -1,6 +1,7 @@
 ---
 uid: Overview_of_Soft_Launch_Options
 ---
+
 # Overview of soft-launch options
 
 The table below contains an overview of all available soft-launch options. Unless otherwise specified, the key in the “Feature key” column must be added in *SoftLaunchOptions.xml* with the value “true” in order to activate the feature.
@@ -45,7 +46,8 @@ Enables behavioral anomaly detection and suggestion events. See [Behavioral anom
 ### APIDeployment
 
 > [!NOTE]
-> Deprecated from DataMiner 10.3.6 onwards. No longer supported from DataMiner 10.4.1 onwards. This feature is replaced by the [UserDefinableAPI](#userdefinableapi) feature.
+> Deprecated from DataMiner 10.3.6 onwards. No longer supported from DataMiner 10.4.0/10.4.1 onwards.
+> This feature is replaced by the [UserDefinableAPI](#userdefinableapi) feature. When upgrading to 10.4.0 or newer, a prerequisite will block the upgrade if you still have deprecated APIs deployed. For more information, see [Upgrade fails because of VerifyNoObsoleteApiDeployed.dll prerequisite](xref:KI_Upgrade_fails_VerifyNoObsoleteApiDeployed_prerequisite).
 
 > [!CAUTION]
 > APIDeployment is not supported on systems using [Storage as a Service (STaaS)](xref:STaaS).
@@ -172,7 +174,7 @@ Provides access to additional data sources and operators for GQI in the Dashboar
 > - The object manager instances data source (available from DataMiner 10.3.6 onwards).<!-- RN 36124 -->
 
 - **Minimum version**: 10.0.13
-- **Estimated release version for the custom operator**: 10.3.12
+- **Estimated release version for the custom operator**: 10.4.1
 - **Estimated release version for other data sources and operators**: To be determined
 
 ### GenericOwnership
@@ -198,15 +200,21 @@ Enables the [Jobs app](xref:jobs).
 
 ### LegacyAnnotations
 
-Shows the legacy Annotations module in Cube.
+Enables or disables the legacy Annotations module.
 
-- **Minimum version**: 10.1.12/10.2.0 ([RN 31329](xref:General_Feature_Release_10.1.12#legacy-reports-dashboards-and-annotations-modules-will-by-default-be-hidden-in-new-installations-id_31329))
+- **Minimum version**: 10.1.10/10.2.0
+
+> [!NOTE]
+> The legacy Annotations module is disabled by default as from DataMiner versions 10.4.1/10.5.0 ([RN 37786](xref:Web_apps_Feature_Release_10.4.1#legacy-reports-dashboards-and-annotations-modules-are-now-end-of-life-and-will-be-disabled-by-default-id_37786)).
 
 ### LegacyReportsAndDashboards
 
-Shows the legacy Reports & Dashboards module in Cube.
+Enables or disables the legacy Reports and Dashboards modules.
 
-- **Minimum version**: 10.1.12/10.2.0 ([RN 31329](xref:General_Feature_Release_10.1.12#legacy-reports-dashboards-and-annotations-modules-will-by-default-be-hidden-in-new-installations-id_31329))
+- **Minimum version**: 10.1.10/10.2.0
+
+> [!NOTE]
+> The legacy Reports and Dashboards modules are disabled by default as from DataMiner versions 10.4.1/10.5.0 ([RN 37786](xref:Web_apps_Feature_Release_10.4.1#legacy-reports-dashboards-and-annotations-modules-are-now-end-of-life-and-will-be-disabled-by-default-id_37786)).
 
 ### MonitoringAndControl
 
