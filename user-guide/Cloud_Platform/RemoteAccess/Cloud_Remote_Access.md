@@ -34,7 +34,7 @@ If [remote access is enabled](xref:Controlling_remote_access) for a DMS, and you
 
 ## Accessing your DMS remotely with Cube
 
-If [remote access is enabled](xref:Controlling_remote_access) for a DMS, and you have been [granted access to dataminer.services features](xref:Giving_users_access_to_cloud_features), you can access your DMS via the remote access URL. To be able to remotely access your system with Cube you need to have the Cube desktop application installed on your system. More information on how to install Cube can be found (here)[xref:Installing_configuring_the_DataMiner_Cube_software].
+If [Remote Access is enabled](xref:Controlling_remote_access) for a DMS, and you have been [granted access to dataminer.services features](xref:Giving_users_access_to_cloud_features), you can access your DMS via the Remote Access URL. To be able to remotely access your system with Cube you need to have the Cube desktop application installed on your system. More information on how to install Cube can be found (here)[xref:Installing_configuring_the_DataMiner_Cube_software].
 
 Remote Cube will use the same URL that is being used for remote access to the web pages, but without the protocol prefix "https://".
 
