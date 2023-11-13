@@ -68,7 +68,7 @@ When a new DataMiner Agent is installed, the used storage type will depend on wh
 
 - If DataMiner is installed with the 10.0 installer and Profile Manager is used, XML storage will be used. An indexing database is not yet supported as a storage type for profiles in DataMiner 10.0. After you have upgraded this DataMiner Agent to DataMiner 10.0.8 or later, it will continue to use XML storage until you trigger the migration.
 
-- If DataMiner is installed on version 10.4.0 and Profile Manager is used, indexing database storage will be used. This means profiles will only be functional on a DataMiner System that has indexing database storage running.
+- If DataMiner is installed and upgraded to 10.4 before Profile Manager is first started, or if it is installed with the 10.4 installer, indexing database storage will be used. This means profiles will only be functional on a DataMiner System that has indexing database storage running.
 
 - When you add a new DataMiner Agent to an existing cluster, it will have the same behavior as the rest of the cluster.
 
