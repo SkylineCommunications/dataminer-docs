@@ -12,7 +12,14 @@ uid: General_Main_Release_10.3.0_CU10
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### SLAnalytics - Behavioral anomaly detection: Flatline suggestion events will now automatically be cleared after a set amount of time [ID_37716]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+Similar to other types of anomaly suggestion events, flatline suggestion events will now also be cleared automatically after a set amount of time.
+
+> [!NOTE]
+> Flatline alarms stay open until the flatline in question disappears or SLAnalytics is restarted.
 
 ### Fixes
 

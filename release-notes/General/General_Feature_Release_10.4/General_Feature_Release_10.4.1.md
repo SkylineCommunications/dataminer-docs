@@ -56,7 +56,7 @@ When an increasing or decreasing trend is detected on a highly aggregated level 
 
 #### SLAnalytics - Behavioral anomaly detection: Flatline suggestion events will now automatically be cleared after a set amount of time [ID_37716]
 
-<!-- MR 10.4.0 - FR 10.4.1 -->
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
 
 Similar to other types of anomaly suggestion events, flatline suggestion events will now also be cleared automatically after a set amount of time.
 
