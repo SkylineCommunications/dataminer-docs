@@ -31,7 +31,7 @@ No, You will have full access to all dataminer.services features even with only 
 
 - **Redundancy**: The Cloud Gateway nodes work independently from each other, which means that as long as one Cloud Gateway node can maintain its connection towards DataMiner.services, your DataMiner System will remain connected to dataminer.services.
 - **Load balancing**: Having multiple Agents connected to dataminer.services allows dataminer.services to spread incoming requests across multiple Agents. For example, when multiple shared dashboards are accessed simultaneously, the load will be spread across the connected Agents.
-- **Streamlined support services**: Even though not all Agents need to be connected to dataminer.services for this, the [Support Assistant module](xref:DataMinerExtensionModules#supportassistant) needs to be installed on all DataMiner Agents to allow our tech support team to carry out [automated support actions](xref:CCA_Support_Services).
+- **Streamlined support services**: Even though not all Agents need to be connected to dataminer.services for this, the [Support Assistant module](xref:DataMinerExtensionModules#supportassistant) needs to be installed on all DataMiner Agents to allow our tech support team to carry out [automated support actions](xref:Proactive_Support).
 
   > [!NOTE]
   > At this time, we recommend running 1 to 3 Cloud Gateway nodes in a cluster. Running more Cloud Gateway nodes than that in a cluster would only add an unnecessary extra load on dataminer.services.
