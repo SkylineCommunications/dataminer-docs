@@ -31,23 +31,23 @@ Feel free to try this out on your local computer as a test.
 
 The following tools are the most useful:
 
-- Skyline.DataMiner.CICD.Tools.Packager
+- [Skyline.DataMiner.CICD.Tools.Packager](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.Packager#readme-body-tab)
 This .NET tool allows you to create application (.dmapp) and protocol (.dmprotocol) packages starting from a Visual Studio solution as created by DIS.
 Allows packaging visio's, dashboards, connectors, automationscripts, ...
 
-- Skyline.DataMiner.CICD.Tools.SDKChecker
+- [Skyline.DataMiner.CICD.Tools.SDKChecker](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.SDKChecker#readme-body-tab)
 Most tools and code these days only work either on Legacy style Visual Studio projects or SDK style visual studio projects. This dotnet tool will check if every project in a Visual Studio solution is SDK style or Legacy style. Calling it while providing the path to the Workspace will return a "#"-separated list with all project names still using legacy style.
 
-- Skyline.DataMiner.CICD.Tools.NuGetPackageConfigDetector
+- [Skyline.DataMiner.CICD.Tools.NuGetPackageConfigDetector](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.NuGetPackageConfigDetector#readme-body-tab)
 Most tools and code that need to read or change NuGet libraries in a solution only work either on Legacy style package.config or SDK Style NuGet usage. This dotnet tool will check if every project in a Visual Studio solution is SDK style or Legacy style. Calling it while providing the path to the Workspace will return a "#"-separated list with all project names still using the legacy style packages.config.
 
-- Skyline.DataMiner.CICD.Tools.NuGetToggleOnBuild
+- [Skyline.DataMiner.CICD.Tools.NuGetToggleOnBuild](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.NuGetToggleOnBuild#readme-body-tab)
 When creating libraries that end up as NuGets, you'll often let MSBuild automatically create the NuGets. However during a pipeline run you often need to run MSBuild more than once. This tool allows you to disable or enable creation of the NuGets during MSBuild. This helps in avoiding a pipeline to create the NuGets more than once.
 
-- Skyline.DataMiner.CICD.Tools.NuGetPreBuildApplyBranchOrTag
+- [Skyline.DataMiner.CICD.Tools.NuGetPreBuildApplyBranchOrTag](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.NuGetPreBuildApplyBranchOrTag/1.0.1-1.0.0.X.20#readme-body-tab)
 When creating libraries that end up as NuGets, this tool will change the version of the to be created NuGets and Assemblies in your solution to the specific version (this is often the Tag you provide in GIT). It also allows you to provide the name of a branch with a buildnumber which will then create a pre-release version from that data.
 
-- Skyline.DataMiner.CICD.Tools.NuGetChangeVersion
+- [Skyline.DataMiner.CICD.Tools.NuGetChangeVersion](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.NuGetChangeVersion#readme-body-tab)
 This allows you to change the version of a NuGet used in your SDK solution to a specific version (or the highest one).
 
 For the complete list, use NuGet and search for [Skyline CICD.Tools](https://www.nuget.org/packages?q=Skyline+CICD.Tools&prerel=true&sortby=relevance)
@@ -59,28 +59,28 @@ By providing these, it allows flexibility to other developers if they need to cr
 
 The following libraries are the most useful:
 
-- Skyline.DataMiner.CICD.FileSystem
+- [Skyline.DataMiner.CICD.FileSystem](https://www.nuget.org/packages/Skyline.DataMiner.CICD.FileSystem#readme-body-tab)
 Recommended to use this instead of System.IO for all tool/stage development in c#. This supports *long paths* in windows and also allows you to manipulate windows style paths while on a linux system and the other way around. It also handles some authentication issues you may encounter with System.IO when running in GitHub.
 
-- Skyline.DataMiner.CICD.Parsers.Automation
-- Skyline.DataMiner.CICD.Parsers.Common
-- Skyline.DataMiner.CICD.Parsers.Protocol
-These libraries are meant to assist with parsing XML files like Connectors(Protocol) or AutomationScripts. They provide an object oriented way to working with the content of those files.
+- [Skyline.DataMiner.CICD.Parsers.Automation](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Parsers.Automation#readme-body-tab)
+- [Skyline.DataMiner.CICD.Parsers.Common](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Parsers.Common#readme-body-tab)
+- [Skyline.DataMiner.CICD.Parsers.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Parsers.Protocol#readme-body-tab)
+These libraries are meant to assist with parsing XML files like Connectors(Protocol) or AutomationScripts. They provide logic that allows traversal and lookups within the XML itself.
 
-- Skyline.DataMiner.CICD.Assemblers.Automation
-- Skyline.DataMiner.CICD.Assemblers.Common
-- Skyline.DataMiner.CICD.Assemblers.Protocol
+- [Skyline.DataMiner.CICD.Assemblers.Automation](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Assemblers.Automation#readme-body-tab)
+- [Skyline.DataMiner.CICD.Assemblers.Common](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Assemblers.Common#readme-body-tab)
+- [Skyline.DataMiner.CICD.Assemblers.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Assemblers.Protocol#readme-body-tab)
 These libraries are meant to assist with converting a DIS Visual Studio solution of a Connector or AutomationScript into its XML files and required assemblies.
 
-- Skyline.DataMiner.CICD.DMApp.Automation
-- Skyline.DataMiner.CICD.DMApp.Common
-- Skyline.DataMiner.CICD.DMApp.Dashboard
-- Skyline.DataMiner.CICD.DMApp.Visio
-- Skyline.DataMiner.CICD.DMProtocol
+- [Skyline.DataMiner.CICD.DMApp.Automation](https://www.nuget.org/packages/Skyline.DataMiner.CICD.DMApp.Automation)
+- [Skyline.DataMiner.CICD.DMApp.Common](https://www.nuget.org/packages/Skyline.DataMiner.CICD.DMApp.Common)
+- [Skyline.DataMiner.CICD.DMApp.Dashboard](https://www.nuget.org/packages/Skyline.DataMiner.CICD.DMApp.Dashboard)
+- [Skyline.DataMiner.CICD.DMApp.Visio](https://www.nuget.org/packages/Skyline.DataMiner.CICD.DMApp.Visio)
+- [Skyline.DataMiner.CICD.DMProtocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.DMProtocol)
 These libraries are meant to create a dmapp or dmprotocol from a DIS Visual Studio Solution.
 
-- Skyline.DataMiner.CICD.Models.Common
-- Skyline.DataMiner.CICD.Models.Protocol
+- [Skyline.DataMiner.CICD.Models.Common](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Models.Common#readme-body-tab)
+- [Skyline.DataMiner.CICD.Models.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Models.Protocol#readme-body-tab)
 Represents the protocol.xml as an Object Oriented model to be used in code.
 
 For the complete list, use NuGet and search for [Skyline CICD.](https://www.nuget.org/packages?q=Skyline+CICD.&prerel=true&sortby=relevance)
