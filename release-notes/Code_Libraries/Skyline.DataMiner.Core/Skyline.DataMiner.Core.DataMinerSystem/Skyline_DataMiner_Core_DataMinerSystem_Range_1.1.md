@@ -21,6 +21,10 @@ This has been fixed by adding additional low-level locking. Benchmark tests show
 
 A breaking change was introduced in the ICommunication interface. This will only affect users that directly access and use RemotingCommunication.
 
+#### Breaking Change - Initial Data on Monitors no longer received
+
+A breaking change was introduced. Starting a Monitor will not always return the initial data as an event. This is no longer possible with the way the Monitors add subscription filters in the background. It's recommended that users use other IDms calls to retrieve initial data if this is required.
+
 #### New feature - .NET DataFlow applied to Monitors
 
 Scalability and performance of the Monitors has been improved through the use of .NET DataFlow technology and parallel processing in the background. This version moves the largest bottleneck away from the software and places it mostly with the user hardware. Also, where before you would have affected other elements by using Monitors, this is now much more isolated between elements.
