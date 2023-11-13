@@ -1,15 +1,12 @@
 ---
-uid: Deploying_a_DataMiner_System
+uid: Creating_a_DataMiner_System
 ---
 
-# Deploying a DataMiner System
+# Creating a DataMiner System
 
-To deploy a DataMiner System (DMS), there are different possibilities:
+To create a DataMiner System (DMS), there are different possibilities:
 
-- You can make use of **DataMiner as a Service (Daas)**. This means that you [deploy your DMS in the cloud](xref:Deploying_a_DMS_in_the_cloud) in just a few clicks, and it will be fully hosted and maintained by Skyline Communications.
-
-  > [!IMPORTANT]
-  > At present, this feature is only available in preview for the "Empower" organization.
+- You can make use of **DataMiner as a Service (Daas)**. This means that you [create your DMS in the cloud](xref:Creating_a_DMS_in_the_cloud) in just a few clicks, and it will be fully hosted and maintained by Skyline Communications.
 
 - You can host the DataMiner nodes yourself. For **self-hosted DataMiner nodes**, you will need to [install the DataMiner Agents](xref:Installing_a_DataMiner_Agent) and then set up your DataMiner System yourself. For the data storage for these nodes, two options are available:
 
