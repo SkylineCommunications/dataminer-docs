@@ -27,4 +27,4 @@ uid: Adding_a_regular_DataMiner_Agent
 > To add a Failover pair to a DataMiner System, first add the primary DMA as a regular DataMiner Agent, and then configure Failover. See [Preparing the two DataMiner Agents](xref:Preparing_the_two_DataMiner_Agents).
 
 > [!TIP]
-> To verify the cluster is still working correctly, run this BPA: [Check Cluster SLNet Connections BPA](xref:BPA_Check_Cluster_SLNet_Connections)
+> To verify if your DataMiner cluster is working correctly, you can run the [Check Cluster SLNet Connections BPA test](xref:BPA_Check_Cluster_SLNet_Connections).

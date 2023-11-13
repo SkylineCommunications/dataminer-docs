@@ -63,4 +63,4 @@ Using .NET Remoting:
 > - [Configuring client communication settings](xref:DMA_configuration_related_to_client_applications#configuring-client-communication-settings)
 
 > [!TIP]
-> To verify the cluster is still working correctly, run this BPA: [Check Cluster SLNet Connections BPA](xref:BPA_Check_Cluster_SLNet_Connections)
+> To verify if your DataMiner cluster is working correctly, you can run the [Check Cluster SLNet Connections BPA test](xref:BPA_Check_Cluster_SLNet_Connections).
