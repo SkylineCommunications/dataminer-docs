@@ -38,11 +38,11 @@ If [Remote Access is enabled](xref:Controlling_remote_access) for a DMS, and you
 
 Remote Cube will use the same URL that is being used for remote access to the web pages, but without the protocol prefix "https://".
 
-To access your system remotely with Cube their are a few options to start the Cube session:
+To access your system remotely with Cube there are a few options to start the Cube session:
 
 ### By using the Cube launcher
 
-Open the Cube launcher and add a new DMS. Here you will be prompted to enter a "host" and an "alias". In the host field you need to fill in the Remote Access URL of your system, without the protocol prefix. This will look something like this: "ziine-skyline.on.dataminer.services". To be able to easily identify your system you can fill in a human readable and easy to remember name in the alias field.
+Open the Cube launcher and add a new DMS. Here you will be prompted to fill in a "host" and an "alias" field. In the host field you need to fill in the Remote Access URL of your system, without the protocol prefix. This will look something like this: "ziine-skyline.on.dataminer.services". To be able to easily identify your system you can fill in a human readable and easy to remember name in the alias field.
 
 ![Remote Cube in the launcher](~/user-guide/images/RemoteCubeLauncher.png)
 
@@ -54,6 +54,6 @@ Open a browser and navigate to [admin.dataminer.services](https://admin.datamine
 
 ### By using the button on dataminer.services
 
-Open a browser and navigate to [dataminer.services](https://dataminer.services). Find your DMS in the list and click the "Open  in desktop app" button. Pressing this button will open up the Cube application with the correct URL in the host field. Simply click "Connect" and Cube will setup a session with your DMS.
+Open a browser and navigate to [dataminer.services](https://dataminer.services). Find your DMS in the list and click the "Open  in desktop app" button. Pressing this button will open up the Cube application with the correct URL in the host field already filled in. Simply click "Connect" and Cube will setup a session with your DMS.
 
 ![Remote Cube in the home app](~/user-guide/images/RemoteCubeHomeApp.png)
