@@ -577,10 +577,16 @@ items:
                     topicUid: GQIColumn
                   - name: GQIDMS
                     topicUid: GQIDMS
+                  - name: GQIEditableHeader
+                    topicUid: GQI_GQIEditableHeader
+                  - name: GQIEditableRow
+                    topicUid: GQI_GQIEditableRow
                   - name: GQIPage
                     topicUid: GQIPage
                   - name: GQIRow
                     topicUid: GQIRow
+                  - name: IGQIColumnOperator
+                    topicUid: GQI_IGQIColumnOperator
                   - name: IGQIDataSource
                     topicUid: IGQIDataSource
                   - name: IGQIInputArguments
@@ -591,6 +597,10 @@ items:
                     topicUid: IGQIOnInit
                   - name: IGQIOnPrepareFetch
                     topicUid: IGQIOnPrepareFetch
+                  - name: IGQIOperator
+                    topicUid: GQI_IGQIOperator
+                  - name: IGQIRowOperator
+                    topicUid: GQI_IGQIRowOperator  
           - name: Query updates
             topicUid: Query_updates
           - name: Importing a query
