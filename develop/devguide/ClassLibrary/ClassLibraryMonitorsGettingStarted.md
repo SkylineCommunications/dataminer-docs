@@ -7,6 +7,7 @@ uid: ClassLibraryMonitorsGettingStarted
 > [!NOTE]
 > An example protocol "SLC SDF Monitors" is available in the [Protocol Development Guide Companion Files](https://community.dataminer.services/documentation/protocol-development-guide-companion-files/).
 
+
 The monitor methods are extension methods on the current DMS classes framework provided with the class library.
 
 To access these extension methods you need the following two namespaces:
@@ -25,6 +26,9 @@ A StartMonitor method requires:
   > SLProtocol should not be used in this logic.
 
 - The primary key of the row, in case of table manipulation (optional).
+
+    > [!IMPORTANT]
+    > Since Skyline.DataMiner.Core.DataMinerSystem version 1.1.1.1 initial data will not always be returned when starting a monitor. If you need initial data it's recommended to retrieve the data using other library calls.
 
 A StopMonitor method requires:
 
