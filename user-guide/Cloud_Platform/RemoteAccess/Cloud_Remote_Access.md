@@ -44,7 +44,7 @@ To access your system remotely with Cube their are a few options to start the Cu
 
 Open the Cube launcher and add a new DMS. Here you will be prompted to enter a "host" and an "alias". In the host field you need to fill in the Remote Access URL of your system, without the protocol prefix. This will look something like this: "ziine-skyline.on.dataminer.services". To be able to easily identify your system you can fill in a human readable and easy to remember name in the alias field.
 
-![Remote cube in the launcher](~/user-guide/images/RemoteCubeLauncher.png)
+![Remote Cube in the launcher](~/user-guide/images/RemoteCubeLauncher.png)
 
 ### By using the button on admin.dataminer.services
 
