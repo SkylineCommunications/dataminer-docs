@@ -34,7 +34,7 @@ If [remote access is enabled](xref:Controlling_remote_access) for a DMS, and you
 
 ## Accessing your DMS remotely with Cube
 
-If [remote access is enabled](xref:Controlling_remote_access) for a DMS, and you have been [granted access to dataminer.services features](xref:Giving_users_access_to_cloud_features), you can access your DMS via the remote access URL. To be able to remotely access your system with Cube you need to have the Cube desktop application installed on your system. More information on how to install Cube can be found (here)[xref:Installing_configuring_the_DataMiner_Cube_software].
+If [Remote Access is enabled](xref:Controlling_remote_access) for a DMS, and you have been [granted access to dataminer.services features](xref:Giving_users_access_to_cloud_features), you can access your DMS via the Remote Access URL. To be able to remotely access your system with Cube you need to have the Cube desktop application installed on your system. More information on how to install Cube can be found (here)[xref:Installing_configuring_the_DataMiner_Cube_software].
 
 Remote Cube will use the same URL that is being used for remote access to the web pages, but without the protocol prefix "https://".
 
@@ -44,7 +44,7 @@ To access your system remotely with Cube their are a few options to start the Cu
 
 Open the Cube launcher and add a new DMS. Here you will be prompted to enter a "host" and an "alias". In the host field you need to fill in the Remote Access URL of your system, without the protocol prefix. This will look something like this: "ziine-skyline.on.dataminer.services". To be able to easily identify your system you can fill in a human readable and easy to remember name in the alias field.
 
-![Remote cube in the launcher](~/user-guide/images/RemoteCubeLauncher.png)
+![Remote Cube in the launcher](~/user-guide/images/RemoteCubeLauncher.png)
 
 ### By using the button on admin.dataminer.services
 
