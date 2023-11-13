@@ -50,7 +50,7 @@ Open the Cube launcher and add a new DMS. Here you will be prompted to enter a "
 
 Open a browser and navigate to [admin.dataminer.services](https://admin.dataminer.services) and navigate to the overview of your system. Here you will find a button that is labeled "Open Desktop Application". Pressing this button will open up the Cube application with the correct URL in the host field. Simply click the "connect" button and cube will setup a session with your DMS.
 
-![Remote cube in the admin app](~/user-guide/images/RemoteCubeAdminApp.png)
+![Remote Cube in the admin app](~/user-guide/images/RemoteCubeAdminApp.png)
 
 ### By using the button on dataminer.services
 
