@@ -54,6 +54,6 @@ Open a browser and navigate to [admin.dataminer.services](https://admin.datamine
 
 ### By using the button on dataminer.services
 
-Open a browser and navigate to [dataminer.services](https://dataminer.services). Find your DMS in the list and click the "Open desktop application" button. Pressing this button will open up the Cube application with the correct URL in the host field. Simply click the "connect" button and cube will setup a session with your DMS.
+Open a browser and navigate to [dataminer.services](https://dataminer.services). Find your DMS in the list and click the "Open  in desktop app" button. Pressing this button will open up the Cube application with the correct URL in the host field. Simply click "Connect" and Cube will setup a session with your DMS.
 
 ![Remote Cube in the home app](~/user-guide/images/RemoteCubeHomeApp.png)
