@@ -358,10 +358,6 @@ items:
                     items:
                       - name: Installing Elasticsearch on a DMA via DataMiner
                         topicUid: Installing_Elasticsearch_via_DataMiner
-                      - name: Migrating SRM resources to the indexing database
-                        topicUid: Resources_migration_to_elastic
-                      - name: Migrating SRM profiles to the indexing database
-                        topicUid: Profile_migration_to_elastic
                       - name: Configuring the Elasticsearch database (Windows)
                         topicUid: Configuring_Elasticsearch_database_Windows
                       - name: Uninstalling Elasticsearch from a DMA
@@ -379,6 +375,10 @@ items:
                     topicUid: Configuring_Elasticsearch_node_remove
               - name: Configuring indexing settings in DataMiner Cube
                 topicUid: Configuring_DataMiner_Indexing
+              - name: Migrating SRM resources to the indexing database
+                topicUid: Resources_migration_to_elastic
+              - name: Migrating SRM profiles to the indexing database
+                topicUid: Profile_migration_to_elastic
           - name: Common database settings
             topicUid: Specifying_TTL_overrides
             items:
