@@ -88,6 +88,14 @@ Because of a number of enhancements, overall performance of the `ResourceManager
 
 Also, the performance of `TrueFilterElement<Resource>` has been improved.
 
+#### Legacy Reports, Dashboards and Annotations modules are now end-of-life and will be disabled by default [ID_37786]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+As from DataMiner versions 10.1.10/10.2.0, the *LegacyReportsAndDashboards* and/or *LegacyAnnotations* soft-launch options allowed you to enable or disable the legacy *Reports*, *Dashboards* and *Annotations* modules. By default, they were enabled.
+
+Now, the above-mentioned soft-launch options will be disabled by default, causing the legacy *Reports*, *Dashboards* and *Annotations* modules to be hidden. If you want to continue using these modules, which are now considered end-of-life, you will have to explicitly enable the soft-launch options.
+
 #### SLAnalytics - Behavioral anomaly detection: Changes made to the anomaly configuration in an alarm template of a main DVE element will immediately be applied to all open anomaly alarm events [ID_37788]
 
 <!-- MR 10.4.0 - FR 10.4.1 -->
@@ -99,6 +107,12 @@ When you change the anomaly configuration in an alarm template assigned to a mai
 <!-- MR 10.4.0 - FR 10.4.1 -->
 
 Because of a number of enhancements, overall performance has increased when executing join queries of which the subqueries are sorted.
+
+#### GQI: Enhanced performance when executing queries containing sort operators [ID_37806]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+Because of a number of enhancements, overall performance has increased when executing queries containing sort operators.
 
 ### Fixes
 
