@@ -45,7 +45,7 @@ In legacy-style projects, you can use either the [packages.config](https://learn
 
 - [Skyline.DataMiner.CICD.Tools.NuGetToggleOnBuild](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.NuGetToggleOnBuild#readme-body-tab)
 
-When creating libraries that end up as NuGets, you'll often let MSBuild automatically create the NuGets. However during a pipeline run you often need to run MSBuild more than once. This tool allows you to disable or enable creation of the NuGets during MSBuild. This helps in avoiding a pipeline to create the NuGets more than once.
+When creating libraries that end up as NuGet packages, you will often let MSBuild automatically create the NuGet packages. However, during a pipeline run you often need to run MSBuild more than once. This tool allows you to disable or enable creation of the NuGet packages during MSBuild. This helps in avoiding a pipeline to create the NuGet packages more than once.
 
 - [Skyline.DataMiner.CICD.Tools.NuGetPreBuildApplyBranchOrTag](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.NuGetPreBuildApplyBranchOrTag/1.0.1-1.0.0.X.20#readme-body-tab)
 
