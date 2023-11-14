@@ -108,11 +108,11 @@ When you change the anomaly configuration in an alarm template assigned to a mai
 
 Because of a number of enhancements, overall performance has increased when executing join queries of which the subqueries are sorted.
 
-#### GQI: Enhanced performance when executing queries containing sort operators [ID_37806]
+#### GQI: Enhanced performance when executing sorted queries [ID_37806]
 
 <!-- MR 10.4.0 - FR 10.4.1 -->
 
-Because of a number of enhancements, overall performance has increased when executing queries containing sort operators.
+Forwarding sort operators to the backend is now supported for a wider range of query configurations. This will considerably increase overall performance of numerous sorted queries.
 
 ### Fixes
 
