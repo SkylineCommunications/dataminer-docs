@@ -32,7 +32,7 @@ The following tools are the most useful:
 - [Skyline.DataMiner.CICD.Tools.Packager](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.Packager#readme-body-tab)
 
 This .NET tool allows you to create application (.dmapp) and protocol (.dmprotocol) [packages](xref:ApplicationPackages) starting from a Visual Studio solution as created by [DIS](xref:DIS).
-Allows packaging visio's, dashboards, connectors, automationscripts, ...
+Allows packaging Visio files, dashboards, connectors, Automation scripts, etc.
 
 - [Skyline.DataMiner.CICD.Tools.SDKChecker](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.SDKChecker#readme-body-tab)
 
