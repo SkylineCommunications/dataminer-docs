@@ -80,7 +80,7 @@ These libraries are meant to assist with parsing XML files or Visual Studio solu
     - [Skyline.DataMiner.CICD.Assemblers.Common](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Assemblers.Common#readme-body-tab)
     - [Skyline.DataMiner.CICD.Assemblers.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Assemblers.Protocol#readme-body-tab)
 
-These libraries are meant to assist with converting a DIS Visual Studio solution of a Connector or AutomationScript into its XML files and required assemblies.
+These libraries are meant to assist with converting a DIS Visual Studio solution of a connector or Automation script into its XML files and required assemblies.
 
 - Skyline.DataMiner.CICD.DMApp/DMProtocol
     - [Skyline.DataMiner.CICD.DMApp.Automation](https://www.nuget.org/packages/Skyline.DataMiner.CICD.DMApp.Automation)
