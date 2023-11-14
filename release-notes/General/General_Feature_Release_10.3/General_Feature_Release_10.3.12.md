@@ -326,7 +326,7 @@ In cases where SLDataGateway retrieved an entire table and then applied a filter
 
 <!-- MR 10.4.0 - FR 10.3.12 -->
 
-In some cases, MessageBroker threads could leak when using chunking.
+On high-load systems, MessageBroker threads could leak when using chunking.
 
 #### Storage as a Service: Paged data retrieval operations would be cut off prematurely [ID_37533]
 
