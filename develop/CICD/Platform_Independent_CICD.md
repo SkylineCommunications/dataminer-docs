@@ -40,7 +40,8 @@ Most tools and code these days only work either on legacy-style or SDK-style Vis
 
 - [Skyline.DataMiner.CICD.Tools.NuGetPackageConfigDetector](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.NuGetPackageConfigDetector#readme-body-tab)
 
-Most tools and code that need to read or change NuGet libraries in a solution only work either on Legacy style package.config or SDK Style NuGet usage. This dotnet tool will check if every project in a Visual Studio solution is SDK style or Legacy style. Calling it while providing the path to the Workspace will return a "#"-separated list with all project names still using the legacy style packages.config.
+In legacy-style projects, you can use either the [packages.config](https://learn.microsoft.com/en-us/nuget/reference/packages-config) or the [packageReference](https://learn.microsoft.com/en-us/nuget/consume-packages/package-references-in-project-files) package management format.
+(SDK-style projects only support the packageReference package management format). This dotnet tool checks if legacy-style use the packages.config package management format. Calling it while providing the path to the workspace will return a "#"-separated list with all project names still using the packages.config package management format in legacy-style projects.
 
 - [Skyline.DataMiner.CICD.Tools.NuGetToggleOnBuild](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.NuGetToggleOnBuild#readme-body-tab)
 
