@@ -4,7 +4,7 @@ uid: Installing_a_DataMiner_Agent
 
 # Installing a self-hosted DataMiner Agent
 
-If you want to take care of hosting your DataMiner System yourself, you can manually install the DataMiner Agents instead of [deploying the DMS in the cloud](xref:Deploying_a_DMS_in_the_cloud).
+If you want to take care of hosting your DataMiner System yourself, you can manually install the DataMiner Agents instead of [creating the DMS in the cloud](xref:Creating_a_DMS_in_the_cloud).
 
 > [!IMPORTANT]
 > The server onto which you plan to install the DataMiner Agent software has to comply with the DataMiner system requirements. See [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements).

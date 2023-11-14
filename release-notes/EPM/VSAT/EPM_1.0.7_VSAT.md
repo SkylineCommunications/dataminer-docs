@@ -49,6 +49,19 @@ A new interactive Automation script, *Verizon DCATGQI AddSubscription*, has been
 
 A new Automation script, *Verizon DCATGQIExecutionTable*, has been added. It functions as an ad hoc data source for the DCAT low-code app, in order to display Live and Live History data.
 
+#### Generic Trap Processor: New Heartbeat Table [ID_37760]
+
+In the Generic Trap Processor connector, a new Heartbeat Table is now available, in which information about heartbeats is displayed.
+
+In the existing Rules Table, two new parameters have been added for this:
+
+- *Rule Type*: Can be set to *Regular* for traps that should be included in the Processed Messages Table, or *Heartbeat* for trap that should be included in the Heartbeat Table.
+- *Heartbeat Interval*: If *Rule Type* is set to *Heartbeat*, you can configure this parameter with an interval of time. This interval will be compared with the *Time Since Last Heartbeat* parameter. If the time since the last heartbeat is greater than the configured interval, *Heartbeat Status* will be displayed as *FAIL* in the Heartbeat Table.
+
+#### Skyline EPM Platform PLM: Default alarm template [ID_37789]
+
+A default alarm template is now available for the Skyline EPM Platform PLM connector.
+
 ## Changes
 
 ### Enhancements
@@ -97,8 +110,45 @@ The Verizon DCAT OnExecute script has been changed into an interactive Automatio
 
 The Verizon DCAT OnResult script has been changed into an interactive Automation script, so it can be used as part of the new Verizon DCAT low-code app.
 
+#### Verizon iDirect Evolution Platform Collector: Hub Return Slots per Frame now rounded to the nearest integer [ID_37759]
+
+In the Hub Return Overview and Hub Return Carriers tables of the Verizon iDirect Evolution Platform Collector connector, the value of the Slots per Frame parameters will now be rounded to the nearest integer, so that these are displayed as whole numbers.
+
+#### Verizon Reports and Dashboards Solution: Tables updated to allow cell changes [ID_37766]
+
+In the Verizon Reports and Dashboards Solution connector, the following tables have been updated to allow changes for each cell:
+
+- Entity Subscription
+- KPI Entry Subscription
+- Profile DCAT Metric
+- Profile DCAT Fault
+- Profile DCAT Listing
+- Profile DCAT FUW
+
+These tables now also have a button that allows users to delete a row without opening the context menu.
+
+In addition, the logic in the connector has been updated to allow the addition of entries from an interactive Automation script.
+
+#### Carrier Performance and Information Events dashboard improvements [ID_37809]
+
+The Carrier Performance dashboard has been updated so that the IP Throughput and Slots Per Frame KPIs are now included in both the calculated stats table and the carrier summary table.
+
+In addition, the Information Events dashboards have been updated with improved default values and new names, and parameter feeds in these dashboards are now set to display up to 30,000 indices.
+
+#### Generic Kafka Consumer: Improved logging [ID_37810]
+
+Logging of the Generic Kafka Consumer connector has been improved to make important log entries stand out more and to make debugging easier.
+
+#### Generic Trap Processor: Memory caching improved [ID_37811]
+
+The memory caching logic for the Rules Table, Source Name Table, and Source IP Name Table of the Generic Trap Processor connector has been improved so that it is no longer necessary to restart the element to make sure changes in those tables take effect for upcoming traps.
+
 ### Fixes
 
 #### Verizon iDirect Evolution Platform Collector: Linecard event types not collected [ID_37691]
 
 Because of a change to the remote event logic, it could occur that some linecard event types were not collected. The way linecards are handled has been updated to resolve this issue.
+
+#### Skyline EPM Platform PLM: Auto-delete logic adjusted [ID_37790]
+
+In some cases, it could occur that the auto-delete logic failed to function as intended, leading to inconsistent data retention in the PLM Overview and PLM Records tables. The auto-delete logic has now been adjusted to ensure that the tables are consistently cleaned up according to the configured auto-delete delay parameter.

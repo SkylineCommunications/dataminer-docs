@@ -74,7 +74,7 @@
           "develop/images/**",
           "tutorials/images/**",
           "develop/schemadoc/Protocol/images/**",
-		  "develop/schemadoc/Automation/images/**"
+          "develop/schemadoc/Automation/images/**"
         ]
       }
     ],

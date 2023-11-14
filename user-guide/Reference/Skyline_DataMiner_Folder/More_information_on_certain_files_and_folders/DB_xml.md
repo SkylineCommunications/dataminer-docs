@@ -485,7 +485,7 @@ The *\<Database>* tag for an indexing database has the following attributes:
 >
 > - There can only be one active indexing database on a DMA. However, that database can consist of multiple nodes. In that case, the IP addresses for these nodes are all added in the DBServer tag, separated by commas. For example: `<DBServer>10.10.10.1,10.10.10.2,10.10.10.3</DBServer>`
 > - From DataMiner 10.2.0/10.1.1 until DataMiner 10.3.0/10.3.3, Elastic Amazon AWS can be used. In that case, the URL should be specified in the DBServer element. For example: *\<DBServer>mycompany-elastic.amazonaws.com\</DBServer>*.
-> - From DataMiner 10.3.0/10.3.3 onwards, OpenSearch and Amazon OpenSearch Services can be used.
+> - DataMiner 10.3.0 [CU0] up to 10.3.0 [CU8] and from DataMiner 10.3.3 up to 10.3.11, OpenSearch and Amazon OpenSearch Services can be used.
 > - From DataMiner 10.2.0/10.1.3 onwards, a *DBConfiguration.xml* file can be configured, which overrides the settings in this section of *DB.xml*. See [Configuring multiple OpenSearch clusters](xref:Configuring_multiple_OpenSearch_clusters) or [Configuring multiple Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters).
 
 ### Defining a custom port for an indexing database
