@@ -24,7 +24,7 @@ dotnet tool install -g Skyline.DataMiner.CICD.Tools.SDKChecker
 SDKChecker "PathToSolutionWorkspace"
 ```
 
-Where *PathToSolutionWorkspace* should be a path to a Visual Studio Solution Directory. This tool detects if any project is legacy style or SDK Style.
+Where *PathToSolutionWorkspace* should be a path to a Visual Studio Solution Directory. This tool detects if any project is legacy-style or SDK-style.
 Feel free to try this out on your local computer as a test.
 
 The following tools are the most useful:
