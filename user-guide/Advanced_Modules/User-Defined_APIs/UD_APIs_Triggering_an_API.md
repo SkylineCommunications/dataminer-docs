@@ -138,6 +138,7 @@ The *errorCode* field of an error contains an error code that can be used by the
 | AuthenticationHeaderInvalid | 1008 | 401 | The HTTP [authentication](#authentication) header is not valid. Make sure the token is passed as a `Bearer` token. |
 | BodyTooLarge | 1009 | 413 | The body size is limited to 30 MB. This error will be thrown if the size is larger than that. |
 | AuthenticationFailed | 1010 | 401 | The passed secret is empty, is invalid, is disabled, cannot be found, or is not allowed for this API definition. |
+| QueryStringTooLarge | 1011 | 414 | The query string size is limited to 2KB, this error will be thrown if the seze is larger than that.
 
 > [!NOTE]
 > For some of these errors, more information will also be logged in the *UserDefinableApiEndpoint.txt* log file. The location of this log file depends on the [UserDefinableApiEndpoint configuration](xref:UD_APIs_UserDefinableApiEndpoint#consulting-logging-for-the-dxm).

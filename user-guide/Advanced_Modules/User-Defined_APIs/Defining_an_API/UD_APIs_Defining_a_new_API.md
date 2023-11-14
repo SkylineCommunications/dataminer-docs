@@ -60,6 +60,7 @@ The entry point method has two parameters.
   | RawBody | `string` | The full body of the HTTP request as a string. This can be deserialized and used in the script. See [User input data](#user-input-data). |
   | Parameters | `Dictionary<string, string>` | Contains the deserialized parameters if you select *Dictionary (parsed from JSON)* when configuring the API. See [User input data](#user-input-data). |
   | Context | [ApiTriggerContext](#apitriggercontext) | Contains properties with info about the request. Available from DataMiner 10.3.9/10.4.0 onwards. <!-- RN 37015 --> |
+  | QueryParameters | [IQueryParameters](#query-parameters) | Contains the request query string parameters. Available from DataMiner 10.4.1/10.4.0 onwards. <!-- RN 37733 --> |
 
 #### ApiTriggerContext
 
@@ -80,7 +81,11 @@ This makes it possible to define the four CRUD (create, read, update, delete) ac
 
 #### User input data
 
-There are two ways to pass data to the API script if you make use of the *OnApiTrigger* entry point method. Which way is used depends on the selected option in the dropdown when you define the API in Cube. See [Creating the API definition(s)](#creating-an-api-and-tokens-in-dataminer-automation).
+There's two ways to pass data to your API. You can use [query parameters](#query-parameters), that allow you to pass data in a key-value format. Or you can use the [request body](#request-body), that you can deserialize in your script, or you can use the built-in deserialization.
+
+##### Request body
+
+There are two ways to pass the request body to the API script if you make use of the *OnApiTrigger* entry point method. Which way is used depends on the selected option in the dropdown when you define the API in Cube. See [Creating the API definition(s)](#creating-an-api-and-tokens-in-dataminer-automation).
 
 - If *Dictionary (parsed from JSON)* is selected, the JSON body of the HTTP request will automatically be converted to a `Dictionary<string, string>` in the `Parameters` property of the `ApiTriggerInput` object. In the `RawBody` property, the raw string body will remain available.
 
@@ -98,6 +103,29 @@ There are two ways to pass data to the API script if you make use of the *OnApiT
 
 > [!TIP]
 > To see how these two options are used in an API script, see [API script examples](xref:UD_APIs_API_script_examples).
+
+##### Query parameters
+
+Query parameters are available in the QueryParameters property in the `ApiTriggerInput`. The `IQueryParameters` exposes following methods:
+
+| Method name | Return type | Summary |
+|-------------|-------------|---------|
+| `TryGetValues(string key, out List<string> values)` | `bool` | Tries to get the value(s) for the associated key. Returns `true` in case value(s) are found for that key, `false` if not. The values will be in the `out` parameter. Key is case-sensitive! |
+| `TryGetValue(string key, out string value)` | `bool` | Tries to get the value for the associated key. Returns `true` in case a value is found for that key, `false` if not. The value will be in the `out` parameter.  The first value will be returned in case there are multiple. Key is case-sensitive! |
+| `GetAllKeys()` | `List<string>` | Returns all keys for which there is a value. |
+| `ContainsKey(string key)` | `bool` | Returns whether the key is present or not. Key name is case-sensitive! |  
+
+Query parameter keys are unique, and case-insensitive. Passing multiple keys with different casing will result in all values being added to the first key.  
+  
+**Example:**  
+The query string: `?limit=10&LIMIT=20`  
+Will result in the following list of values when calling `requestData.QueryParameters.TryGetValues("limit")` : `[10, 20]`  
+But calling `requestData.QueryParameters.TryGetValues("LIMIT")` would result in a `false` result with `null` as the out paramter with the list of values.
+
+> [!NOTE]
+>
+> - The maximum size for the query string is 2KB.
+> - Query parameters are available from DataMiner 10.4.1/10.4.0 onwards.
 
 #### Route
 
