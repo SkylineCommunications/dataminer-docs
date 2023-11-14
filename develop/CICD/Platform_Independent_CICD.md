@@ -73,7 +73,7 @@ Recommended to use this instead of System.IO for all tool/stage development in C
     - [Skyline.DataMiner.CICD.Parsers.Common](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Parsers.Common#readme-body-tab)
     - [Skyline.DataMiner.CICD.Parsers.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Parsers.Protocol#readme-body-tab)
 
-These libraries are meant to assist with parsing XML files like Connectors(Protocol) or AutomationScripts. They provide logic that allows traversal and lookups within the XML itself.
+These libraries are meant to assist with parsing XML files or Visual Studio solutions of connectors (protocol) or Automation scripts. They provide logic that allows traversal and lookups within the XML itself.
 
 - Skyline.DataMiner.CICD.Assemblers
     - [Skyline.DataMiner.CICD.Assemblers.Automation](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Assemblers.Automation#readme-body-tab)
