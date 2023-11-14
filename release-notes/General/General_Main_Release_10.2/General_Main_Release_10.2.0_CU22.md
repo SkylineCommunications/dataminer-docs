@@ -12,6 +12,12 @@ uid: General_Main_Release_10.2.0_CU22
 
 ### Enhancements
 
+#### Security enhancements [ID_37641]
+
+<!-- 37641: MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+
+A number of security enhancements have been made.
+
 #### DataMiner Cube - Visual Overview: Enhanced service chain behavior [ID_37645]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
@@ -19,6 +25,22 @@ uid: General_Main_Release_10.2.0_CU22
 A number of UI enhancements have been made with regard to service chain behavior in visual overviews.
 
 Up to now, in some cases, service chains could get redrawn too often, or shapes would not get redrawn when a service chain was updated. Also, context menus of shapes would not always close when those shapes were updated and context menus would incorrectly show the *Display connectivity* command twice.
+
+#### Spectrum analysis: Zooming inside a spectrum window [ID_37668]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+
+It is now possible to zoom inside a spectrum window:
+
+- To zoom horizontally, scroll up and down. This has the same effect as altering the frequency span.
+- To zoom vertically, scroll up and down while pressing the CTRL key. This has the same effect as altering the amplitude scale.
+
+When you stop scrolling, the new zoom dimensions will be set on the spectrum analyzer device and the screen will be updated with the new data.
+
+> [!IMPORTANT]
+>
+> - It is only possible to zoom horizontally if the spectrum protocol includes the *Start frequency*, *Stop frequency* and *Frequency span* parameters.
+> - It is only possible to zoom vertically if the spectrum protocol includes the *Amplitude scale* parameter.
 
 #### DataMiner Cube - Spectrum Analysis: Buttons in 'Reference lines' panel, 'Thresholds' panel and 'Measurement Points' panel have been restyled [ID_37752]
 

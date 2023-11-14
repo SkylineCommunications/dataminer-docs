@@ -12,6 +12,12 @@ uid: General_Main_Release_10.3.0_CU10
 
 ### Enhancements
 
+#### Security enhancements [ID_37641]
+
+<!-- 37641: MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+
+A number of security enhancements have been made.
+
 #### SLAnalytics - Behavioral anomaly detection: Flatline suggestion events will now automatically be cleared after a set amount of time [ID_37716]
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->

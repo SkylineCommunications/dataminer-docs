@@ -16,7 +16,21 @@ uid: Cube_Feature_Release_10.4.1
 
 ## New features
 
-*No new features have been added yet.*
+#### Spectrum analysis: Zooming inside a spectrum window [ID_37668]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+
+It is now possible to zoom inside a spectrum window:
+
+- To zoom horizontally, scroll up and down. This has the same effect as altering the frequency span.
+- To zoom vertically, scroll up and down while pressing the CTRL key. This has the same effect as altering the amplitude scale.
+
+When you stop scrolling, the new zoom dimensions will be set on the spectrum analyzer device and the screen will be updated with the new data.
+
+> [!IMPORTANT]
+>
+> - It is only possible to zoom horizontally if the spectrum protocol includes the *Start frequency*, *Stop frequency* and *Frequency span* parameters.
+> - It is only possible to zoom vertically if the spectrum protocol includes the *Amplitude scale* parameter.
 
 ## Changes
 

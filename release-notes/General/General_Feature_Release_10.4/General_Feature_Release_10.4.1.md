@@ -48,6 +48,12 @@ From now on, an exception that occurs when executing a query before it is joined
 
 From now on, the deprecated NotifyDataMiner type *NT_CONNECTIONS_TO_REMOVE* can no longer be used.
 
+#### Security enhancements [ID_37641]
+
+<!-- 37641: MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+
+A number of security enhancements have been made.
+
 #### SLAnalytics - Proactive cap detection: Enhanced detection of possible future alarm threshold breaches [ID_37681]
 
 <!-- MR 10.5.0 - FR 10.4.1 -->
