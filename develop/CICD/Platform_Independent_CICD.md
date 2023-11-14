@@ -53,7 +53,7 @@ When creating libraries that end up as NuGet packages, this tool changes the ver
 
 - [Skyline.DataMiner.CICD.Tools.NuGetChangeVersion](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.NuGetChangeVersion#readme-body-tab)
 
-This allows you to change the version of a NuGet used in your SDK solution to a specific version (or the highest one).
+This allows you to change the version of a NuGet package used in your SDK-style project to a specific version (or the highest one).
 
 For the complete list, use NuGet and search for [Skyline CICD.Tools](https://www.nuget.org/packages?q=Skyline+CICD.Tools&prerel=true&sortby=relevance)
 
