@@ -4,7 +4,7 @@ uid: Platform_independent_CICD
 
 # Platform-independent CI/CD
 
-Due to several technology stacks being used all over the world to handle source-control and CI/CD (Github, Gitlab, GIT, Azure DevOps, ...) it is vital to provide tooling and libraries that can run on any of them.
+Due to several technology stacks being used all over the world to handle source-control and CI/CD (GitHub, GitLab, Git, Azure, ...) it is vital to provide tooling and libraries that can run on any of these.
 
 At Skyline Communication we are tackling this in two ways:
 
