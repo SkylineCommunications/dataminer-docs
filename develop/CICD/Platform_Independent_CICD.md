@@ -49,7 +49,7 @@ When creating libraries that end up as NuGet packages, you will often let MSBuil
 
 - [Skyline.DataMiner.CICD.Tools.NuGetPreBuildApplyBranchOrTag](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.NuGetPreBuildApplyBranchOrTag/1.0.1-1.0.0.X.20#readme-body-tab)
 
-When creating libraries that end up as NuGets, this tool will change the version of the to be created NuGets and Assemblies in your solution to the specific version (this is often the Tag you provide in GIT). It also allows you to provide the name of a branch with a buildnumber which will then create a pre-release version from that data.
+When creating libraries that end up as NuGet packages, this tool changes the version of the to be created NuGet packages and assemblies in your solution to the specific version (this is often the Tag you provide in Git). It also allows you to provide the name of a branch with a build number which will then create a pre-release version from that data.
 
 - [Skyline.DataMiner.CICD.Tools.NuGetChangeVersion](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.NuGetChangeVersion#readme-body-tab)
 
