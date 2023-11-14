@@ -66,7 +66,7 @@ The following libraries are the most useful:
 
 - [Skyline.DataMiner.CICD.FileSystem](https://www.nuget.org/packages/Skyline.DataMiner.CICD.FileSystem#readme-body-tab)
 
-Recommended to use this instead of System.IO for all tool/stage development in c#. This supports *long paths* in windows and also allows you to manipulate windows style paths while on a linux system and the other way around. It also handles some authentication issues you may encounter with System.IO when running in GitHub.
+Recommended to use this instead of System.IO for all tool/stage development in C#. This supports *long paths* in windows and also allows you to manipulate windows style paths while on a Linux system and the other way around. It also handles some authentication issues you may encounter with System.IO when running on GitHub.
 
 - Skyline.DataMiner.CICD.Parsers
     - [Skyline.DataMiner.CICD.Parsers.Automation](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Parsers.Automation#readme-body-tab)
