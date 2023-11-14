@@ -36,7 +36,7 @@ Allows packaging Visio files, dashboards, connectors, Automation scripts, etc.
 
 - [Skyline.DataMiner.CICD.Tools.SDKChecker](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.SDKChecker#readme-body-tab)
 
-Most tools and code these days only work either on Legacy style Visual Studio projects or SDK style visual studio projects. This dotnet tool will check if every project in a Visual Studio solution is SDK style or Legacy style. Calling it while providing the path to the Workspace will return a "#"-separated list with all project names still using legacy style.
+Most tools and code these days only work either on legacy-style or SDK-style Visual Studio projects. This dotnet tool will check if every project in a Visual Studio solution is SDK-style or legacy-style. Calling it while providing the path to the workspace will return a "#"-separated list with all project names that are still using legacy-style.
 
 - [Skyline.DataMiner.CICD.Tools.NuGetPackageConfigDetector](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.NuGetPackageConfigDetector#readme-body-tab)
 
