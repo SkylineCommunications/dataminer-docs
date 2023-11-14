@@ -356,7 +356,7 @@ IDataMapper dataMapper = new DataMinerConnectorDataMapper(
 ```
 
 > [!IMPORTANT]
-> Applicable for **OpenConfig middleware version range 1.x.x**: When configuring the path for a column, always specify the YANG module name as well. Notifications of type `JSON` do not contain it but notifications of type `JSON_IETF` do. The DataMapper is capable of handling both, but for that reason the YANG module name needs to be known. It is no longer required to add the YANG module name to the column path when using **OpenConfig middleware version 2.0.0** or higher.
+> If you use **OpenConfig middleware version range 1.x.x**, when configuring the path for a column, always specify the YANG module name as well. Notifications of type `JSON` do not contain it, but notifications of type `JSON_IETF` do. The DataMapper is capable of handling both, but for that reason the YANG module name needs to be known. If you use **OpenConfig middleware version 2.0.0** or higher, you no longer need to add the YANG module name to the column path.
 
 You need to create a [DataMinerConnectorDataGrid](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid) and pass it the root YANG path of the `container` that will be stored. Then it is a matter of mapping the column parameters to the YANG paths of the `leaf` items.
 
