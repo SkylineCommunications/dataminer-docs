@@ -117,6 +117,12 @@ Up to now, as soon as you entered edit mode, a number of API calls were executed
 
 From now on, those API calls will only be executed the moment you open the *Settings* tab on the right.
 
+#### Dashboards app & Low-Code Apps: Enhanced About box [ID_37757]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+A number of enhancements have been made to the About box.
+
 #### Legacy Reports, Dashboards and Annotations modules are now end-of-life and will be disabled by default [ID_37786]
 
 <!-- MR 10.4.0 - FR 10.4.1 -->
