@@ -13,7 +13,7 @@ At Skyline Communication we are tackling this in two ways:
 
 ## .NET Tools
 
-These tools are the work-horse behind a lot of the CI/CD. They can be run on Linux or Windows systems from command-line and can be triggered from any CI/CD technology stack (Github, Gitlab, Azure,...).
+These tools are the work-horse behind a lot of the CI/CD. They can be run on Linux or Windows systems from command-line and can be triggered from any CI/CD technology stack (GitHub Actions, GitLab pipelines, Azure pipelines, etc.).
 
 The only requirement is an internet connection.
 
