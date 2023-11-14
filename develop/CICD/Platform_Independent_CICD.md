@@ -89,7 +89,7 @@ These libraries are meant to assist with converting a DIS Visual Studio solution
     - [Skyline.DataMiner.CICD.DMApp.Visio](https://www.nuget.org/packages/Skyline.DataMiner.CICD.DMApp.Visio)
     - [Skyline.DataMiner.CICD.DMProtocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.DMProtocol)
 
-These libraries are meant to create a dmapp or dmprotocol from a DIS Visual Studio Solution.
+These libraries are meant to create an application (.dmapp) or protocol (.dmprotocol) package from a DIS Visual Studio solution.
 
 
 - Skyline.DataMiner.CICD.Models
