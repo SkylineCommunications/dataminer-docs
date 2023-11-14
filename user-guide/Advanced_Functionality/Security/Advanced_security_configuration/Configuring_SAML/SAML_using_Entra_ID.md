@@ -431,7 +431,7 @@ There are two ways to configure this setup: with or without group claims.
          <EmailClaim>http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress</EmailClaim>
          <Givenname>http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname</Givenname>
          <Surname>http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname</Surname>
-         <Groups claims="true">[group claim name]</Groups>
+         <Groups claims="true">http://schemas.microsoft.com/ws/2008/06/identity/claims/groups</Groups>
        </AutomaticUserCreation>
      </ExternalAuthentication>
      ...
