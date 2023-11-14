@@ -59,7 +59,7 @@ For the complete list, use NuGet and search for [Skyline CICD.Tools](https://www
 
 ## NuGet libraries
 
-We also provide code libraries that can be used for development of custom programs. These contain functionality that we use when creating programs like the .NET Tools or DIS.
+We also provide code libraries that can be used for development of custom programs. These contain functionality that we use when creating programs like the .NET tools or DIS.
 By providing these, it allows flexibility to other developers if they need to create their own extensions, programs or tools specifically for your pipelines.
 
 The following libraries are the most useful:
