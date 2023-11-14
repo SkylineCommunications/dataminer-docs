@@ -57,7 +57,7 @@ This allows you to change the version of a NuGet package used in your SDK-style 
 
 For the complete list, use NuGet and search for [Skyline CICD.Tools](https://www.nuget.org/packages?q=Skyline+CICD.Tools&prerel=true&sortby=relevance)
 
-## NuGet Libraries
+## NuGet libraries
 
 We also provide code libraries that can be used for development of custom programs. These contain functionality that we use when creating programs like the .NET Tools or DIS.
 By providing these, it allows flexibility to other developers if they need to create their own extensions, programs or tools specifically for your pipelines.
