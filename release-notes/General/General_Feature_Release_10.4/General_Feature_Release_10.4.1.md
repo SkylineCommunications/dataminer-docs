@@ -34,6 +34,17 @@ This new DxM, which is currently still under development, is intended to manage 
 
 ### Enhancements
 
+#### New BPA test 'Check Cluster SLNet Connections' [ID_37110]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+When run on a particular agent in a DataMiner System, this new BPA test will trigger a local test on each agent in the DMS that will
+
+- check the connections between the different DMAs and between the DMAs in Failover setups, and
+- report any communication problems.
+
+For more information, see [Check Cluster SLNet Connections](xref:BPA_Check_Cluster_SLNet_Connections).
+
 #### GQI: Enhanced error handling when an error occurs while executing a query before it is joined with another query [ID_37521]
 
 <!-- MR 10.4.0 - FR 10.4.1 -->

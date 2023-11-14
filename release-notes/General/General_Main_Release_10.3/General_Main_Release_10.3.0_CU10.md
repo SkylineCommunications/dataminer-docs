@@ -12,6 +12,17 @@ uid: General_Main_Release_10.3.0_CU10
 
 ### Enhancements
 
+#### New BPA test 'Check Cluster SLNet Connections' [ID_37110]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+When run on a particular agent in a DataMiner System, this new BPA test will trigger a local test on each agent in the DMS that will
+
+- check the connections between the different DMAs and between the DMAs in Failover setups, and
+- report any communication problems.
+
+For more information, see [Check Cluster SLNet Connections](xref:BPA_Check_Cluster_SLNet_Connections).
+
 #### Security enhancements [ID_37641]
 
 <!-- 37641: MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
