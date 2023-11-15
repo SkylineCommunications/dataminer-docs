@@ -6,7 +6,7 @@ uid: KI_Upgrade_fails_VerifyElasticStorageType_prerequisite
 
 ## Affected versions
 
-DataMiner 10.4.0 or newer.
+DataMiner 10.4.0 or newer.<!-- RN 37763 -->
 
 ## Cause
 
