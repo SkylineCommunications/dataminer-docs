@@ -7,6 +7,7 @@ uid: Known_issues
 
 | Issue | DataMiner version | Date added |
 |--|--|--|
+| [Upgrade fails because of VerifyElasticStorageTypePrerequisite.dll prerequisite](xref:KI_Upgrade_fails_VerifyElasticStorageType_prerequisite) | From DataMiner 10.4.0 onwards | November 13, 2023 |
 | [Upgrade fails because of VerifyNoObsoleteApiDeployed.dll prerequisite](xref:KI_Upgrade_fails_VerifyNoObsoleteApiDeployed_prerequisite) | From DataMiner 10.4.0 onwards | November 9, 2023 |
 
 ## 10.3.x
