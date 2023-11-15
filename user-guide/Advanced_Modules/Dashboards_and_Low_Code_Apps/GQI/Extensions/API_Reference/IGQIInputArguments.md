@@ -9,7 +9,7 @@ uid: GQI_IGQIInputArguments
 Namespace: `Skyline.DataMiner.Analytics.GenericInterface`  
 Assembly: `SLAnalyticsTypes.dll`
 
-Implement this interface to define input arguments for an Ad Hoc data source or custom operator.
+Implement this interface to define input arguments for an ad hoc data source or custom operator.
 
 > [!IMPORTANT]
 > The GQI does not validate the input arguments specified by the user. For example, a user can input an SQL query as a string input argument, and the content of the string argument will be forwarded to the ad hoc data source implementation without validation.

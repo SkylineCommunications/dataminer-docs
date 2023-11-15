@@ -24,7 +24,7 @@ Creates a new row with the provided cells.
 > [!NOTE]
 > A row key based on the row index will automatically be assigned when the row appears in a query result.
 >
-> Since this row key depends on the number of rows that came before it, it will not be available in the Ad Hoc data source. The value of the [Key](#properties) property will be `null`.
+> Since this row key depends on the number of rows that came before it, it will not be available in the ad hoc data source. The value of the [Key](#properties) property will be `null`.
 
 ### GQIRow(string key, GQICell[] cells)
 
