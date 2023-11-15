@@ -17,7 +17,7 @@ These technical support capabilities include the following:
 
 - These abilities can lead to **faster SLA response times** and give our teams **better information** to make strong interventions and fixes
 
-- When you connect your DataMiner Agents to dataminer.services, your connection to our [CDMR platform](xref:CDMR) (Customer DataMiner Reporting) is automatically enabled (provided the necessary [prerequisites](RemoteLogCollection#requirements) are met). This means daily updates of your system status are sent to us, enabling **proactive support by monitoring the health of your operation**. Also, for existing DataMiner Agents reporting to CDMR, you will no longer need a mail connection to send the system health information to us.
+- When you connect your DataMiner Agents to dataminer.services, your connection to our [CDMR platform](xref:CDMR) (Customer DataMiner Reporting) is automatically enabled (provided the necessary [prerequisites](xref:RemoteLogCollection#requirements) are met). This means daily updates of your system status are sent to us, enabling **proactive support by monitoring the health of your operation**. Also, for existing DataMiner Agents reporting to CDMR, you will no longer need a mail connection to send the system health information to us.
 
 We are continuing to evolve these remote support features to turn our Operations team into your ultimate DataMiner co-pilot, so you can have peace of mind to get on with running your operation and let us take care of the rest.
 
