@@ -26,7 +26,7 @@ An array of [GQIArgument](xref:GQI_GQIArgument), which provides all arguments th
 
 ### void OnArgumentsProcessed(OnArgumentsProcessedInputArgs args)
 
-The user has filled in the arguments.
+GQI has processed the input arguments provided by the user.
 
 #### Parameters
 
