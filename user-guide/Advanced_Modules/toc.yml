@@ -567,7 +567,7 @@ items:
                       - name: Optimizing your custom operator
                         topicUid: Custom_Operator_Tutorial
               - name: API reference
-                topicUid: GQIArgument
+                topicUid: GQI_GQIArgument
                 items:
                   - name: GQIArgument
                     topicUid: GQI_GQIArgument
