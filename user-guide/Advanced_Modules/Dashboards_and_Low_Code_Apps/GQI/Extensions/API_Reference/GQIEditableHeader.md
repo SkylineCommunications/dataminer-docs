@@ -51,11 +51,11 @@ Get the column by name.
 
 #### Returns
 
-The [GQIColumn](xref:GQI_GQIColumn) matching the provided name. An `exception` is thrown if the column could not be found.
+The [GQIColumn](xref:GQI_GQIColumn) matching the provided name.
 
 ### void RenameColumn(GQIColumn column, string newName)
 
-Change the name of a provided column.
+Change the name of the provided column.
 
 #### Parameters
 

@@ -9,7 +9,7 @@ uid: GQI_GQIEditableRow
 Namespace: `Skyline.DataMiner.Analytics.GenericInterface`  
 Assembly: `SLAnalyticsTypes.dll`
 
-Represents the row that the custom operator can manipulate.
+Represents a row that a custom operator can manipulate.
 
 ## Methods
 
@@ -19,7 +19,7 @@ Delete the row.
 
 ### string GetDisplayValue(GQIColumn column)
 
-Get the display value for the cell matching the provided column.
+Get the display value for the cell of the specified column.
 
 #### Parameters
 
@@ -31,7 +31,7 @@ The value, of type `T`, of the cell matching the provided column.
 
 ### string GetDisplayValue(string columnName)
 
-Get the display value for the cell matching the provided column name.
+Get the display value for the cell of the specified column name.
 
 #### Parameters
 
@@ -43,7 +43,7 @@ The display value of the cell matching the provided column.
 
 ### T GetValue\<T\>(GQIColumn column)
 
-Get the value for the cell matching the provided column.
+Get the value for the cell of the specified column.
 
 #### Parameters
 
@@ -55,10 +55,10 @@ The value, of type `T`, of the cell matching the provided column.
 
 ### T GetValue\<T\>(GQIColumn\<T\> column)
 
-Get the value for the cell matching the provided column.
+Get the value for the cell of the specified column.
 
 > [!NOTE]
-> `GetValue` returns the default of type `T` if no value is available in that cell. If it is important to know if a value was present, use the `TryGetValue` variant.
+> `GetValue` returns the default of type `T` if no value is available in that cell. If it is important to know if a value was present, use the `TryGetValue` method instead.
 
 #### Parameters
 
@@ -70,7 +70,7 @@ The value, of type `T`, of the cell matching the provided column.
 
 ### T GetValue\<T\>(string columnName)
 
-Get the value for the cell matching the provided column name.
+Get the value for the cell of the specified column name.
 
 #### Parameters
 
@@ -82,7 +82,7 @@ The value, of type `T`, of the cell matching the provided column.
 
 ### object GetValue(string columnName)
 
-Get the value for the cell matching the provided column.
+Get the value for the cell of the specified column name.
 
 #### Parameters
 
@@ -94,7 +94,7 @@ The value, of type `object`, of the cell matching the provided column.
 
 ### bool TryGetValue\<T\>(GQIColumn column, out T value)
 
-Get the value for a certain column.
+Get the value for the cell of the specified column.
 
 #### Parameters
 
@@ -107,7 +107,7 @@ Get the value for a certain column.
 
 ### bool TryGetValue\<T\>(GQIColumn\<T\> column, out T value)
 
-Get the value for a certain column.
+Get the value for the cell of the specified column.
 
 #### Parameters
 
@@ -120,7 +120,7 @@ Get the value for a certain column.
 
 ### bool TryGetValue\<T\>(string columnName, out T value)
 
-Get the value for a certain column.
+Get the value for the cell of the specified column name.
 
 #### Parameters
 
@@ -133,7 +133,7 @@ Get the value for a certain column.
 
 ### void SetDisplayValue(GQIColumn column, string displayValue)
 
-Set the display value for the cell matching the column of the provided column name.
+Set the display value for the cell of the specified column.
 
 #### Parameters
 
@@ -142,7 +142,7 @@ Set the display value for the cell matching the column of the provided column na
 
 ### void SetDisplayValue(string columnName, string displayValue)
 
-Set the display value for the cell matching the column of the provided column name.
+Set the display value for the cell of the specified column name.
 
 #### Parameters
 
@@ -151,7 +151,7 @@ Set the display value for the cell matching the column of the provided column na
 
 ### void SetValue(GQIColumn column, object value, string displayValue = null)
 
-Set the value for the cell matching the provided column.
+Set the value for the cell of the specified column.
 
 #### Parameters
 
@@ -161,7 +161,7 @@ Set the value for the cell matching the provided column.
 
 ### void SetValue\<T\>(GQIColumn\<T\> column, T value, string displayValue = null)
 
-Set the value for the cell matching the provided column.
+Set the value for the cell of the specified column.
 
 #### Parameters
 
@@ -171,7 +171,7 @@ Set the value for the cell matching the provided column.
 
 ### void SetValue(string columnName, object value, string displayValue = null)
 
-Set the value for the cell matching the column of the provided column name.
+Set the value for the cell of the specified column.
 
 #### Parameters
 

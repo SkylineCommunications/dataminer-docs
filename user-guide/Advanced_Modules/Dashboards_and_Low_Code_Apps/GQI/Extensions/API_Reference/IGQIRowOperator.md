@@ -15,7 +15,7 @@ This interface makes it possible to manipulate the rows in a custom operator.
 
 ### void HandleRow(GQIEditableRow row)
 
-Makes it possible to manipulate the rows the custom operator is working with.
+This method is called exactly once for every row when executing a query. It allows you to get or set cell values from the given row.
 
 #### Parameters
 
