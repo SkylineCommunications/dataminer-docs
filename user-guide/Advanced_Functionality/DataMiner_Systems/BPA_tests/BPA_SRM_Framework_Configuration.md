@@ -6,7 +6,7 @@ uid: BPA_SRM_Framework_Configuration
 
 This BPA test checks for booking managers with invalid configurations and bookings with invalid properties that have an end date in the future.
 
-This test is currently not available yet but will soon be released as part of the SRM framework.<!-- RN 37417 -->
+This test is included in the SRM framework from SRM version 1.2.34 onwards.<!-- RN 37417 -->
 
 > [!NOTE]
 > Depending on the number of bookings in the system, the BPA test can take some time to run.
