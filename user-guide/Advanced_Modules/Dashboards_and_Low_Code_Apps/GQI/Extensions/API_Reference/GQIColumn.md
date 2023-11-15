@@ -27,5 +27,3 @@ The *GQIColumn* object is an abstract class, with the derived types:
 |--|--|--|--|
 | Name | String | Yes | The column name. |
 | Type | GQIColumnType | Yes | The type of data in the column. *GQIColumnType* is an enum that contains the following values: String, Int, DateTime, Boolean, Double, or TimeSpan. |
-
-`GQIColumnType` is an enum that contains the following values: `String`, `Int`, `DateTime`, `Boolean`, `Double` or `TimeSpan`.

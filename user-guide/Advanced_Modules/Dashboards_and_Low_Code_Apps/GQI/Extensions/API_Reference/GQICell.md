@@ -19,7 +19,7 @@ Represents a single cell in a [GQIRow](xref:GQI_GQIRow).
 | DisplayValue | String | No | The display value of the cell. |
 
 > [!NOTE]
-> Empty cells, cells without value, can be added.
+> Empty cells, i.e. cells without value, are allowed.
 
 > [!IMPORTANT]
 > The type of the value of a cell should match the type of the corresponding column.

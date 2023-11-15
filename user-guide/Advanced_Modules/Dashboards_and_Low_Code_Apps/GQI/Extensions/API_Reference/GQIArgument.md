@@ -31,7 +31,7 @@ In addition, the following derived types are supported from DataMiner 10.3.0/10.
 
 - `GQIStringListArgument`
 
-Arguments only available for operators:
+Additionally, for custom operators you can also use the following arguments to select existing columns:
 
 - `GQIColumnDropdownArgument`
 
