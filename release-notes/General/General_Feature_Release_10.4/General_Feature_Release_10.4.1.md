@@ -34,6 +34,17 @@ This new DxM, which is currently still under development, is intended to manage 
 
 ### Enhancements
 
+#### New BPA test 'Check Cluster SLNet Connections' [ID_37110]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+When run on a particular agent in a DataMiner System, this new BPA test will trigger a local test on each agent in the DMS that will
+
+- check the connections between the different DMAs and between the DMAs in Failover setups, and
+- report any communication problems.
+
+For more information, see [Check Cluster SLNet Connections](xref:BPA_Check_Cluster_SLNet_Connections).
+
 #### GQI: Enhanced error handling when an error occurs while executing a query before it is joined with another query [ID_37521]
 
 <!-- MR 10.4.0 - FR 10.4.1 -->
@@ -47,6 +58,12 @@ From now on, an exception that occurs when executing a query before it is joined
 <!-- MR 10.5.0 - FR 10.4.1 -->
 
 From now on, the deprecated NotifyDataMiner type *NT_CONNECTIONS_TO_REMOVE* can no longer be used.
+
+#### Security enhancements [ID_37641]
+
+<!-- 37641: MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+
+A number of security enhancements have been made.
 
 #### SLAnalytics - Proactive cap detection: Enhanced detection of possible future alarm threshold breaches [ID_37681]
 
@@ -71,11 +88,31 @@ Because of a number of enhancements, overall performance of the `ResourceManager
 
 Also, the performance of `TrueFilterElement<Resource>` has been improved.
 
+#### Legacy Reports, Dashboards and Annotations modules are now end-of-life and will be disabled by default [ID_37786]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+As from DataMiner versions 10.1.10/10.2.0, the *LegacyReportsAndDashboards* and/or *LegacyAnnotations* soft-launch options allowed you to enable or disable the legacy *Reports*, *Dashboards* and *Annotations* modules. By default, they were enabled.
+
+Now, the above-mentioned soft-launch options will be disabled by default, causing the legacy *Reports*, *Dashboards* and *Annotations* modules to be hidden. If you want to continue using these modules, which are now considered end-of-life, you will have to explicitly enable the soft-launch options.
+
 #### SLAnalytics - Behavioral anomaly detection: Changes made to the anomaly configuration in an alarm template of a main DVE element will immediately be applied to all open anomaly alarm events [ID_37788]
 
 <!-- MR 10.4.0 - FR 10.4.1 -->
 
 When you change the anomaly configuration in an alarm template assigned to a main DVE element, from now on, the changes will immediately be applied to all open anomaly alarm events. The severity of the open alarm events will be changed to the new severity defined in the updated anomaly configuration.
+
+#### GQI: Enhanced performance when executing join queries of which the subqueries are sorted [ID_37803]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+Because of a number of enhancements, overall performance has increased when executing join queries of which the subqueries are sorted.
+
+#### GQI: Enhanced performance when executing sorted queries [ID_37806]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+Forwarding sort operators to the backend is now supported for a wider range of query configurations. This will considerably increase overall performance of numerous sorted queries.
 
 ### Fixes
 

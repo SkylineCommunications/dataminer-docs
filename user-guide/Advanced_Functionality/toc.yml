@@ -157,6 +157,8 @@ items:
             topicUid: BPA_Cassandra_DB_Size
           - name: Check Antivirus DLLs
             topicUid: BPA_Check_Antivirus_DLLs
+          - name: Check Cluster SLNet Connections
+            topicUid: BPA_Check_Cluster_SLNet_Connections
           - name: Database Security
             topicUid: BPA_Database_Security
           - name: Firewall Configuration

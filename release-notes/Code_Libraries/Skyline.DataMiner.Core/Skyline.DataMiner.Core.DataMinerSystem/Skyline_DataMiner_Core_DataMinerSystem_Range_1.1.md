@@ -21,9 +21,13 @@ This has been fixed by adding additional low-level locking. Benchmark tests show
 
 A breaking change was introduced in the ICommunication interface. This will only affect users that directly access and use RemotingCommunication.
 
-#### New feature - .NET DataFlow applied to Monitors
+#### Breaking Change - Initial data on monitors no longer received
 
-Scalability and performance of the Monitors has been improved through the use of .NET DataFlow technology and parallel processing in the background. This version moves the largest bottleneck away from the software and places it mostly with the user hardware. Also, where before you would have affected other elements by using Monitors, this is now much more isolated between elements.
+A breaking change was introduced: Starting a monitor will now not always return the initial data as an event. This is no longer possible with the way the monitors add subscription filters in the background. We recommend using other IDms calls to retrieve initial data if this is required.
+
+#### New feature - .NET DataFlow applied to monitors
+
+Scalability and performance of the monitors has been improved through the use of .NET DataFlow technology and parallel processing in the background. This version moves the largest bottleneck away from the software and places it mostly with the user hardware. Also, where before you would have affected other elements by using monitors, this is now much more isolated between elements.
 
 The latest benchmark tests, at the time of release, demonstrate that the system's capacity to handle large workloads has increased by a factor ranging from 4 to 150 times depending on the hardware.
 
@@ -83,7 +87,7 @@ Element creation through this library produced corrupt elements since DataMiner 
 
 #### New feature - Migration from Class Library
 
-IDms classes and functionality have been extracted alongside Class Library Monitors into a public available NuGet library. This was extracted from Class Library range 1.3.0.X
+IDms classes and functionality have been extracted alongside Class Library monitors into a public available NuGet library. This was extracted from Class Library range 1.3.0.X
 
 #### Overloads added for specifying primary/display key [ID_35048]
 
