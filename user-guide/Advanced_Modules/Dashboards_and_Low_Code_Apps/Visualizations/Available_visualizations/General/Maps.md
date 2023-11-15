@@ -60,11 +60,14 @@ When using the maps component in a [low-code app](xref:Application_framework), a
 - *Fetch the data*: This action fetches the data from the component again.
 - *Pan to view*: This action pans to a certain location. The coordinates for this action can be static or dynamic by using a feed.
 - *Set zoom level*: This action zooms to a certain level on the map. The zoom level can be static or dynamic by using a feed.
-- *Overlay actions*: Using app actions, different types of overlays can be shown on the map. The supported overlay types are .kml, .kmz and .geoJSON. The source of the overlay needs to be specified in an input (that can also be received from a feed ) and can be either a local source, specified by a relative path in the *C://Skyline DataMiner/Maps* folder or a web source, specified by a public URL that hosts the overlay. The following overlay actions are available: 
+- *Overlay actions*: Using app actions, different types of overlays can be shown on the map. The supported overlay types are .kml, .kmz and .geoJSON. The source of the overlay needs to be specified in an input (that can also be received from a feed ) and can be either a local source, specified by a relative path in the *C:\Skyline DataMiner\Maps* folder or a web source, specified by a public URL that hosts the overlay. The following overlay actions are available: 
     - *Open overlay*
     - *Close overlay*
     - *Toggle overlay*
     - *Close all overlays*
 
 > [!NOTE]
-> While local sources are more secure and not openly accessible like public sources on the internet, you do have to make sure the route to the GetSecureFile API method (*https///DMA/API/v1/GetSecureFile.aspx*) is openly accessible in order to use the local overlay files.
+> While local sources are more secure and not openly accessible like public sources on the internet, you do have to make sure the route to the GetSecureFile API method (*https://DMA/API/v1/GetSecureFile.aspx*) is openly accessible in order to use the local overlay files.
+
+> [!NOTE]
+> For more information about the different types of overlays, see [Layer types](xref:Layer_types#layers-of-sourcetype-overlay)
