@@ -10,7 +10,7 @@ DataMiner 10.4.0 or newer.
 
 ## Cause
 
-From DataMiner 10.4.0 onwards, the obsolete *API Deployment* feature will be completely removed from DataMiner and replaced by [User-Defined APIs](xref:UD_APIs). The *VerifyNoObsoleteApiDeployed* upgrade prerequisite verifies that no obsolete APIs are deployed before upgrading, as these will no longer work after the upgrade.
+From DataMiner 10.4.0 onwards, the obsolete *API Deployment* feature will be completely removed from DataMiner and replaced by [User-Defined APIs](xref:UD_APIs). The *VerifyNoObsoleteApiDeployed* upgrade prerequisite check verifies that no obsolete APIs are deployed before upgrading, as these will no longer work after the upgrade.
 
 ## Fix
 
@@ -34,4 +34,4 @@ When finished, you should only have *Unused Tokens* left in your tree view. This
 
 ## Issue description
 
-Upgrading to 10.4.0 or newer will remove *API Deployment* and all configuration/data related to it. If you still have APIs deployed with this feature, they would be removed by the upgrade. This prerequisite prevents this by forcing you to remove the deployments.
+Upgrading to 10.4.0 or newer will remove *API Deployment* and all configuration/data related to it. If you still have APIs deployed with this feature, they would be removed by the upgrade. This prerequisite check prevents this by forcing you to remove the deployments.
