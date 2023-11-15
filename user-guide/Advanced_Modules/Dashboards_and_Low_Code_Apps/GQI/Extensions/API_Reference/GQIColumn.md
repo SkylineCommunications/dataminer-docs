@@ -14,11 +14,11 @@ Provides the base class for a column in GQI.
 ## Derived types
 
 The *GQIColumn* object is an abstract class, with the derived types:
-- `GQIStringColumn`
 - `GQIBooleanColumn`
-- `GQIIntColumn`
 - `GQIDateTimeColumn`
-- `GQIDoubleColumn`
+- `GQIDoubleColumn` 
+- `GQIIntColumn`
+- `GQIStringColumn`
 - `GQITimeSpanColumn` (from DataMiner 10.3.9/10.4.0 onwards<!-- RN 36717 -->)
 
 ## Properties
