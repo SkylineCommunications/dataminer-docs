@@ -342,6 +342,8 @@ items:
                 topicUid: Tutorial_Apps_Managing_Pages
               - name: Using the stepper component in a low-code app
                 topicUid: TutorialStepper
+              - name: Styling an order arrival table
+                topicUid: Tutorial_Apps_Style_A_Table
       - name: Configuring components
         topicUid: Configuring_components
         items:
