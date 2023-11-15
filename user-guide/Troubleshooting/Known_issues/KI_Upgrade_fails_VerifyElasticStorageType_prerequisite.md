@@ -28,7 +28,7 @@ More detailed information about the result of the prerequisite can be found in `
 
 To fix a failing prerequisite check, you need to migrate the profiles and/or resources data to an indexing database and update the configuration. See [migrating profiles data](xref:Profile_migration_to_elastic) and [migrating resource data](xref:Resources_migration_to_elastic).
 
-In case the system does not have an indexing database configured, no migration will be possible. In this case, the Profile Manager and Resource Manager features are no longer usable. The data files will need to be removed while the system is offline in order to upgrade the system. After the upgrade, the Resource Manager and Profile Manager will no longer initialize.
+In case the system does not have an indexing database configured, no migration will be possible. In this case, the Profile Manager and Resource Manager features are no longer usable. The data files `C:\Skyline Dataminer\ResourceManager\Resources.xml` and `C:\Skyline Dataminer\ProfileManager\Profiles.xml` will need to be removed while the system is offline in order to upgrade the system. After the upgrade, the Resource Manager and Profile Manager will no longer initialize.
 
 ## Issue description
 
