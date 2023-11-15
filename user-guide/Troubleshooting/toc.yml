@@ -240,10 +240,10 @@ items:
         items:
           - name: Various issues when using MessageBroker with chunking
             topicUid: KI_DataMinerMessageBroker2
-          - name: Upgrade fails because of VerifyNoObsoleteApiDeployed.dll prerequisite
-            topicUid: KI_Upgrade_fails_VerifyNoObsoleteApiDeployed_prerequisite
           - name: Upgrade fails because of VerifyElasticStorageType.dll prerequisite
             topicUid: KI_Upgrade_fails_VerifyElasticStorageType_prerequisite
+          - name: Upgrade fails because of VerifyNoObsoleteApiDeployed.dll prerequisite
+            topicUid: KI_Upgrade_fails_VerifyNoObsoleteApiDeployed_prerequisite
           - name: Cube freezes on 'Connected!' loading screen when no alarm tabs are displayed
             topicUid: KI_Cube_connection_issue_alarm_tabs
           - name: SLNet deadlock in EPM setups
