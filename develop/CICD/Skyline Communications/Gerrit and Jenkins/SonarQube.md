@@ -49,6 +49,12 @@ SonarQube does not analyze code that it considers auto-generated. SonarQube cons
 
 It is also possible to use a region containing "generated" (case insensitive) to indicate that a region of code should be considered auto-generated.
 
+> [!NOTE]
+> If auto-generated code is the only code remaining, SonarQube may not effectively validate it.
+>
+> For instance, in a Connector Solution with just the QAction_Helper project, it's recommended to add a dummy QAction project.
+> This ensures SonarQube can accurately validate the dummy project and not the auto-generated code in QAction_Helper.
+
 ## Excluding a project, files, or folders from analysis
 
 To exclude a complete project from analysis, add the following to the .xxproj file:
