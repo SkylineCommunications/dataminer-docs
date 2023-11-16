@@ -5,7 +5,7 @@ uid: DataMiner_Compute_Requirements
 # DataMiner Compute Requirements
 
 > [!IMPORTANT]
-> If you use [DataMiner as a Service (DaaS)](xref:Deploying_a_DMS_in_the_cloud), your entire DataMiner setup is automatically configured for optimal performance.
+> If you use [DataMiner as a Service (DaaS)](xref:Creating_a_DMS_in_the_cloud), your entire DataMiner setup is automatically configured for optimal performance.
 
 To make sure your DataMiner System performs optimally, it is important that sufficient resources are available. The overview below shows the requirements for a DataMiner setup using the latest version of DataMiner, with self-hosted Cassandra and OpenSearch databases. If you are using [Storage as a Service](xref:STaaS), only the requirements for DataMiner itself will be relevant for you.
 
@@ -17,7 +17,7 @@ Minimum requirements are displayed in gray, default requirements in light blue, 
 > - For other information on requirements (e.g. client requirements), see [DataMiner System Requirements](https://community.dataminer.services/documentation/dataminer-system-requirements/).
 
 > [!NOTE]
-> While this is not recommended, you can run DataMiner, Cassandra, and Elasticsearch on a single server. In that case, the hardware requirements in the diagram below need to be added up. For example, for RAM, you would need a minimum of 96 GB (32 GB for DataMiner, 32 GB for Cassandra, and 32 GB for Elasticsearch).
+> While this is not recommended, you can run DataMiner, Cassandra, and OpenSearch on a single server. In that case, the hardware requirements in the diagram below need to be added up. For example, for RAM, you would need a minimum of 96 GB (32 GB for DataMiner, 32 GB for Cassandra, and 32 GB for OpenSearch).
 
 ![DataMiner setup](~/user-guide/images/dataminer-compute-requirements_V04_Outline.svg "DataMiner setup")
 
@@ -29,7 +29,7 @@ To make sure you have immediate access to all the data from your system and to e
 
 A DataMiner System can need a lot of RAM depending on the size of your network. There is a significant difference between “regular” DataMiner Systems and systems where a lot of aggregation is needed.
 
-As a rule, between 32 GB and 128 GB RAM is needed, although 128 GB is an exceptionally high value that mostly applies for EPM/CPE environments.
+As a rule, between 16 GB and 128 GB RAM is needed, although 128 GB is an exceptionally high value that mostly applies for EPM/CPE environments.
 
 > [!NOTE]
 > The data rate and latency are also important in the choice of RAM (e.g. DDR4-3200 with ECC).

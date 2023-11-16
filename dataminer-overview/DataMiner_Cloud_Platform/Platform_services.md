@@ -20,7 +20,7 @@ In addition, when you connect your DataMiner Agents to dataminer.services, your 
 > - [New cloud services that enable faster support are on the way!](https://community.dataminer.services/new-cloud-services-that-enable-faster-support-are-on-the-way/)
 > - [Introducing your DataMiner co-pilot](https://community.dataminer.services/introducing-your-dataminer-co-pilot/)
 > - [Customer DataMiner Reporting (CDMR)](xref:CDMR)
-> - [CCA Support Services](xref:CCA_Support_Services)
+> - [Proactive Support](xref:Proactive_Support)
 
 ## Storage as a Service (STaaS)
 

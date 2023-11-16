@@ -748,7 +748,7 @@ items:
                 topicUid: DOM_editor_changing_field_name
               - name: Deleting a field
                 topicUid: DOM_editor_deleting_field
-              - name: Deleting a section
+              - name: Deleting a section definition
                 topicUid: DOM_editor_deleting_section
               - name: Naming a DOM instance
                 topicUid: DOM_editor_naming_instance
@@ -1202,6 +1202,11 @@ items:
         topicUid: UD_APIs_UserDefinableApiEndpoint
       - name: Troubleshooting
         topicUid: UD_APIs_Troubleshooting
+        items:
+          - name: Troubleshooting User-Defined APIs
+            topicUid: UD_APIs_Troubleshooting
+          - name: Bad and best practices
+            topicUid: UD_APIs_Bad_and_Best_Practice
       - name: Tutorials
         topicUid: UD_APIs_Tutorials
         items:

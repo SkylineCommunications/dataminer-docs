@@ -11,4 +11,8 @@ uid: Web_apps_Main_Release_10.5.0_changes
 
 ### Enhancements
 
+*No enhancements have been added yet.*
+
 ### Fixes
+
+*No fixes have been added yet.*

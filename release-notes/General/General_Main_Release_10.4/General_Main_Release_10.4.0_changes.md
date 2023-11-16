@@ -562,6 +562,14 @@ Up to now, a DataMiner using STaaS communicated with the database via TCP/IP por
 
 Because of a number of enhancements, overall performance of DOM and SRM queries has increased.
 
+#### GQI: Enhanced error handling when an error occurs while executing a query before it is joined with another query [ID_37521]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+Up to now, when an error occurred during the execution of a GQI query that, later on, was joined with another query, the exception message would always read `One or more errors occurred`.
+
+From now on, an exception that occurs when executing a query before it is joined with another query will be re-thrown afterwards. This will make sure the exception reveals the actual reason why the query failed.
+
 #### SLAnalytics - Automatic incident tracking: Enhanced error handling [ID_37530]
 
 <!-- MR 10.4.0 - FR 10.3.12 -->
@@ -634,20 +642,37 @@ From now on, when GQI detects that having multiple sections is allowed for a par
 > [!IMPORTANT]
 > This change will break any existing query that references columns containing multiple values due to being linked to SectionDefinitions that allowed multiple sections in one DOM instance.
 
-#### SLAnalytics - Behavioral anomaly detection: Flatline suggestion events will now automatically be cleared after a set amount of time [ID_37716]
-
-<!-- MR 10.4.0 - FR 10.4.1 -->
-
-Similar to other types of anomaly suggestion events, flatline suggestion events will now also be cleared automatically after a set amount of time.
-
-> [!NOTE]
-> Flatline alarms stay open until the flatline in question disappears or SLAnalytics is restarted.
-
 #### Storage as a Service: Enhanced performance when migrating data from Cassandra to the cloud [ID_37740]
 
 <!-- MR 10.4.0 - FR 10.3.12 [CU0] -->
 
 Because of a number of enhancements, overall performance has increased when migrating data from a Cassandra database to the cloud.
+
+#### Legacy Reports, Dashboards and Annotations modules are now end-of-life and will be disabled by default [ID_37786]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+As from DataMiner versions 10.1.10/10.2.0, the *LegacyReportsAndDashboards* and/or *LegacyAnnotations* soft-launch options allowed you to enable or disable the legacy *Reports*, *Dashboards* and *Annotations* modules. By default, they were enabled.
+
+Now, the above-mentioned soft-launch options will be disabled by default, causing the legacy *Reports*, *Dashboards* and *Annotations* modules to be hidden. If you want to continue using these modules, which are now considered end-of-life, you will have to explicitly enable the soft-launch options.
+
+#### SLAnalytics - Behavioral anomaly detection: Changes made to the anomaly configuration in an alarm template of a main DVE element will immediately be applied to all open anomaly alarm events [ID_37788]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+When you change the anomaly configuration in an alarm template assigned to a main DVE element, from now on, the changes will immediately be applied to all open anomaly alarm events. The severity of the open alarm events will be changed to the new severity defined in the updated anomaly configuration.
+
+#### GQI: Enhanced performance when executing join queries of which the subqueries are sorted [ID_37803]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+Because of a number of enhancements, overall performance has increased when executing join queries of which the subqueries are sorted.
+
+#### GQI: Enhanced performance when executing sorted queries [ID_37806]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+Forwarding sort operators to the backend is now supported for a wider range of query configurations. This will considerably increase overall performance of numerous sorted queries.
 
 ### Fixes
 
@@ -824,6 +849,12 @@ On systems using a database other than Cassandra, up to now, an `ExistsCustomDat
 <!-- MR 10.4.0 - FR 10.3.12 -->
 
 In cases where SLDataGateway retrieved an entire table and then applied a filter afterwards, any row limits defined for the query in question would incorrectly be disregarded.
+
+#### Problem when using MessageBroker with chunking [ID_37532]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+On high-load systems, MessageBroker threads could leak when using chunking.
 
 #### Storage as a Service: Paged data retrieval operations would be cut off prematurely [ID_37533]
 

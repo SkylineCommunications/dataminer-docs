@@ -84,13 +84,44 @@ There are now two ways to duplicate a low-code app:
   1. In the user menu, select *Duplicate*.
 
   > [!NOTE]
-  > If you are only allowed to duplicate an older version of an app if you have permission to edit the app in question.
+  > You are only allowed to duplicate an older version of an app if you have permission to edit the app in question.
+
+#### Dashboards app & Low-Code Apps: 'Text input' and 'Numeric input' components can now be fed data from other components and from the URL [ID_37736]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+*Text input* and *Numeric input* components can now be fed data from other components as well as from the URL.
+
+To feed a component from the URL, you need to link the component to the URL feed of the correct type, and use the query parameters of the dashboard or app. See the following example:
+
+`?data={"feed": {"strings": ["data for url feed"], "numbers": [1]}}`
+
+#### Dashboards app & Low-Code Apps: Duplicating GQI queries [ID_37739]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+It is now possible to duplicate a GQI query:
+
+1. In the *Data* tab, open the *Queries* section, and click the ellipsis ("...") button of the GQI query that you want to duplicate.
+1. In the context menu, select *Duplicate*.
 
 ## Changes
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Dashboards app: User and user group information will no longer automatically be retrieved when you enter edit mode [ID_37727]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+Up to now, as soon as you entered edit mode, a number of API calls were executed in order to retrieve user and user group information.
+
+From now on, those API calls will only be executed the moment you open the *Settings* tab on the right.
+
+#### Dashboards app & Low-Code Apps: Enhanced About box [ID_37757]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+A number of enhancements have been made to the About box.
 
 ### Fixes
 
