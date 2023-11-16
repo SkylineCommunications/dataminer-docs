@@ -56,6 +56,14 @@ When you add a new alarm tab showing the current suggestion events, that tab wil
 
 This means that suggestion events will automatically disappear from the tab approximately 2 hours after they have been detected.
 
+#### DataMiner Cube - Desktop application: New command-line argument 'UseInitialArgumentsAfterDisconnect' [ID_37888]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+
+You can now start the DataMiner Cube desktop application with the new command-line argument *UseInitialArgumentsAfterDisconnect=true*.
+
+This argument will make sure that all other arguments you specified when you started the application will again be applied when Cube has to reconnect for some reason.
+
 ### Fixes
 
 #### DataMiner Cube - Protocols & Templates: Function definitions would not be listed when you activated a functions file [ID_37754]

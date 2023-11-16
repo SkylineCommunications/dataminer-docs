@@ -32,6 +32,14 @@ When you stop scrolling, the new zoom dimensions will be set on the spectrum ana
 > - It is only possible to zoom horizontally if the spectrum protocol includes the *Start frequency*, *Stop frequency* and *Frequency span* parameters.
 > - It is only possible to zoom vertically if the spectrum protocol includes the *Amplitude scale* parameter.
 
+#### Desktop application: New command-line argument 'UseInitialArgumentsAfterDisconnect' [ID_37888]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+
+You can now start the DataMiner Cube desktop application with the new command-line argument *UseInitialArgumentsAfterDisconnect=true*.
+
+This argument will make sure that all other arguments you specified when you started the application will again be applied when Cube has to reconnect for some reason.
+
 ## Changes
 
 ### Enhancements
