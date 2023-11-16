@@ -105,6 +105,12 @@ It is now possible to duplicate a GQI query:
 1. In the *Data* tab, open the *Queries* section, and click the ellipsis ("...") button of the GQI query that you want to duplicate.
 1. In the context menu, select *Duplicate*.
 
+#### Low-Code Apps: New Edit and Delete commands in app context menu of Root page [ID_37830]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+When, on the Root page of a DataMiner Agent, you hover over an application and click the ellipsis ("...") button, the context menu will now include an *Edit* command as well as a *Delete* command.
+
 ## Changes
 
 ### Enhancements
