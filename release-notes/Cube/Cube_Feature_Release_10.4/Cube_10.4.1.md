@@ -50,6 +50,14 @@ Up to now, in some cases, service chains could get redrawn too often, or shapes 
 
 In the *View* tab of a spectrum card, the buttons in the *Reference lines* panel and the *Thresholds* panel as well as the delete buttons in the *Measurement Points* panel have been restyled to match the buttons in the *Markers* panel.
 
+#### DataMiner Cube - Alarm Console: New alarm tab showing current suggestion events now has the 'Automatically remove cleared alarms' option enabled by default [ID_37855]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+
+When you add a new alarm tab showing the current suggestion events, that tab will now have the *Automatically remove cleared alarms* option enabled by default.
+
+This means that suggestion events will automatically disappear from the tab approximately 2 hours after they have been detected.
+
 ### Fixes
 
 #### DataMiner Cube - Protocols & Templates: Function definitions would not be listed when you activated a functions file [ID_37754]
