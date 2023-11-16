@@ -154,7 +154,7 @@ If you use **GitHub**, it is currently not possible to publish scripts directly 
 
       The workflow for the release should be green. If it is not, you may need to click it and select *Re-run all jobs* in the top-right corner.
       
-      If the workflow of the release is still red and you notice error logging speaking about a *Missing argument "api-key"* you will have to add the DATAMINER_DEPLOY_KEY to your repository secrets before re-running.
+      If the workflow of the release remains red, and you notice error logging mentioning *Missing argument "api-key"*, add the DATAMINER_DEPLOY_KEY to your repository secrets before re-running the jobs.
 
 1. To make sure the deployed GitHub Automation script is shown in the catalog, use the following workaround:
 
