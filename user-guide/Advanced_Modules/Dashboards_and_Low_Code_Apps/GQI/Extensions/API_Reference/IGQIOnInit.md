@@ -2,12 +2,12 @@
 uid: GQI_IGQIOnInit
 ---
 
-# IGQIOnInit Interface
+# IGQIOnInit interface
 
 ## Definition
 
-Namespace: `Skyline.DataMiner.Analytics.GenericInterface`  
-Assembly: `SLAnalyticsTypes.dll`
+- Namespace: `Skyline.DataMiner.Analytics.GenericInterface`
+- Assembly: `SLAnalyticsTypes.dll`
 
 The *IGQIOnInit* interface can be implemented for an ad hoc data source or custom operator to get notified when the data source or operator is created. It can, for instance, be used to set up a connection to a database.
 

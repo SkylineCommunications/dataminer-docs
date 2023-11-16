@@ -2,10 +2,10 @@
 uid: GQI_GQICell
 ---
 
-# GQICell Class
+# GQICell class
 
-Namespace: `Skyline.DataMiner.Analytics.GenericInterface`  
-Assembly: `SLAnalyticsTypes.dll`
+- Namespace: `Skyline.DataMiner.Analytics.GenericInterface`
+- Assembly: `SLAnalyticsTypes.dll`
 
 ## Definition
 

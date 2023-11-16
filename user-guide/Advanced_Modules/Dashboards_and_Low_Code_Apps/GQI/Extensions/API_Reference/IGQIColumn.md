@@ -2,12 +2,12 @@
 uid: GQI_IGQIColumn
 ---
 
-# IGQIColumn Interface
+# IGQIColumn interface
 
 ## Definition
 
-Namespace: `Skyline.DataMiner.Analytics.GenericInterface`  
-Assembly: `SLAnalyticsTypes.dll`
+- Namespace: `Skyline.DataMiner.Analytics.GenericInterface`
+- Assembly: `SLAnalyticsTypes.dll`
 
 Provides a common interface for all GQI column classes. It can be used in situations where both newly-defined columns as well as existing columns are accepted.
 

@@ -2,12 +2,12 @@
 uid: GQI_IGQIInputArguments
 ---
 
-# IGQIInputArguments Interface
+# IGQIInputArguments interface
 
 ## Definition
 
-Namespace: `Skyline.DataMiner.Analytics.GenericInterface`  
-Assembly: `SLAnalyticsTypes.dll`
+- Namespace: `Skyline.DataMiner.Analytics.GenericInterface`
+- Assembly: `SLAnalyticsTypes.dll`
 
 Implement this interface to define input arguments for an ad hoc data source or custom operator.
 
@@ -30,4 +30,4 @@ GQI has processed the input arguments provided by the user.
 
 #### Parameters
 
-- [OnArgumentsProcessedInputArgs](xref:GQI_OnArgumentsProcessedInputArgs) `args`: an object containing the arguments filled in by the user.
+- [OnArgumentsProcessedInputArgs](xref:GQI_OnArgumentsProcessedInputArgs) `args`: An object containing the arguments filled in by the user.

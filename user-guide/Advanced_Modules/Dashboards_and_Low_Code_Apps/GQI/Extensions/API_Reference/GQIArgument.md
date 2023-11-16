@@ -2,14 +2,14 @@
 uid: GQI_GQIArgument
 ---
 
-# GQIArgument Class
+# GQIArgument class
 
 ## Definition
 
-Namespace: `Skyline.DataMiner.Analytics.GenericInterface`  
-Assembly: `SLAnalyticsTypes.dll`
+- Namespace: `Skyline.DataMiner.Analytics.GenericInterface`
+- Assembly: `SLAnalyticsTypes.dll`
 
-Provides the base class of an argument for a user defined data source or operator.
+Provides the base class of an argument for a user-defined data source or operator.
 
 ## Derived types
 
@@ -31,7 +31,7 @@ In addition, the following derived types are supported from DataMiner 10.3.0/10.
 
 - `GQIStringListArgument`
 
-Additionally, for custom operators you can also use the following arguments to select existing columns:
+For custom operators, you can also use the following arguments to select existing columns:
 
 - `GQIColumnDropdownArgument`
 

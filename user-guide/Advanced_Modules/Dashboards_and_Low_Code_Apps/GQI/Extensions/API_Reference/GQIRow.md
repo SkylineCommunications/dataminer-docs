@@ -2,12 +2,12 @@
 uid: GQI_GQIRow
 ---
 
-# GQIRow Class
+# GQIRow class
 
 ## Definition
 
-Namespace: `Skyline.DataMiner.Analytics.GenericInterface`  
-Assembly: `SLAnalyticsTypes.dll`
+- Namespace: `Skyline.DataMiner.Analytics.GenericInterface`
+- Assembly: `SLAnalyticsTypes.dll`
 
 Represents a row from a query result.
 
@@ -19,7 +19,7 @@ Creates a new row with the provided cells.
 
 #### Parameters
 
-- [GQICell](xref:GQI_GQICell)[] `cells`: the cells of this row.
+- [GQICell](xref:GQI_GQICell)[] `cells`: The cells of this row.
 
 > [!NOTE]
 > A row key based on the row index will automatically be assigned when the row appears in a query result.
@@ -32,18 +32,18 @@ Creates a new row with a specified row key and the provided cells.
 
 #### Parameters
 
-- [GQICell](xref:GQI_GQICell)[] `cells`: the cells of this row.
-- `string` `key`: identifier of the row within its data source.
+- [GQICell](xref:GQI_GQICell)[] `cells`: The cells of this row.
+- `string` `key`: Identifier of the row within its data source.
 
 > [!NOTE]
 > From DataMiner 10.3.5/10.4.0 onwards<!-- RN 35999 -->, a row key based on the row index will automatically be assigned when the row appears in a query result. Since this row key depends on the number of rows that came before it, it will not be available in the ad hoc data source.
 
 > [!IMPORTANT]
-> The row key should obey all of the following requirements:
+> The row key should meet all of the following requirements:
 >
-> 1. It may not be `null` or the empty string.
-> 1. It should be unique within the data source.
-> 1. It should be deterministic, meaning that the same data should always have the same key.
+> 1. It must not be `null` or the empty string.
+> 1. It must be unique within the data source.
+> 1. It must be deterministic, meaning that the same data should always have the same key.
 
 ## Properties
 

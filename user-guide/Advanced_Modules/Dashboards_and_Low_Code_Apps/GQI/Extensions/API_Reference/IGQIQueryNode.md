@@ -2,14 +2,14 @@
 uid: GQI_IGQIQueryNode
 ---
 
-# IGQIQueryNode Interface
+# IGQIQueryNode interface
 
 ## Definition
 
-Namespace: `Skyline.DataMiner.Analytics.GenericInterface`  
-Assembly: `SLAnalyticsTypes.dll`
+- Namespace: `Skyline.DataMiner.Analytics.GenericInterface`
+- Assembly: `SLAnalyticsTypes.dll`
 
-Represents a **node** in a query. This interface is used to handle query optimizations. A node can either be a data source node or an operator node.
+Represents a **node** in a query. This interface is used to handle query optimizations. A node can be either a data source node or an operator node.
 
 ## Derived types
 
@@ -20,11 +20,11 @@ Represents a **node** in a query. This interface is used to handle query optimiz
 
 ### IGQIQueryNode Append(IGQICoreOperator nextOperator)
 
-Append any operator to this query node.
+Appends any operator to this query node.
 
 #### Parameters
 
-- [IGQICoreOperator](xref:GQI_IGQICoreOperator) `nextOperator`: the operator to append
+- [IGQICoreOperator](xref:GQI_IGQICoreOperator) `nextOperator`: The operator to append.
 
 #### Returns
 

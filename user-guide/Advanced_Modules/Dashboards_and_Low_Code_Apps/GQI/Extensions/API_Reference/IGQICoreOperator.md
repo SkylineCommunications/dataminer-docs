@@ -2,12 +2,12 @@
 uid: GQI_IGQICoreOperator
 ---
 
-# IGQICoreOperator Interface
+# IGQICoreOperator interface
 
 ## Definition
 
-Namespace: `Skyline.DataMiner.Analytics.GenericInterface`  
-Assembly: `SLAnalyticsTypes.dll`
+- Namespace: `Skyline.DataMiner.Analytics.GenericInterface`
+- Assembly: `SLAnalyticsTypes.dll`
 
 Represents any **operator** in the core framework.
 

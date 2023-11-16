@@ -6,8 +6,8 @@ uid: GQI_IGQIFilterOperator
 
 ## Definition
 
-Namespace: `Skyline.DataMiner.Analytics.GenericInterface.Operators`  
-Assembly: `SLAnalyticsTypes.dll`
+- Namespace: `Skyline.DataMiner.Analytics.GenericInterface.Operators`  
+- Assembly: `SLAnalyticsTypes.dll`
 
 Represents a **filter operator** in the core framework.
 
