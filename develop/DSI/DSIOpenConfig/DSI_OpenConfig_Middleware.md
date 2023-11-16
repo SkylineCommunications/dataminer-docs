@@ -156,7 +156,7 @@ private void OnConnectionStateChanged(object sender, EventArgs e)
 ```
 
 > [!NOTE]
-> In case you are setting up a secure channel, it is important that the server certificate is issued to the hostname configured in the [DataSourceConfiguration](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.DataSourceConfiguration). The whole certificate chain needs to be trusted and must not be expired. There is no option to disable this. When this is not the desired behavior, you will need to fall back to insecure HTTP.
+> In case you are setting up a secure channel, it is important that the server certificate is issued to the hostname configured in the [DataSourceConfiguration](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.DataSourceConfiguration). The whole certificate chain needs to be trusted and must not be expired. If you are running **CommunicationGateway 1.2.2** or higher, you can optionally skip certificate validation for certain whitelisted hosts with the [SkipVerifyHosts](xref:Skipping_certificate_validation_when_consuming_gRPC_services) option. Use this with caution, as improper certificate validation can lead to a range of different security threats such as man-in-the-middle attacks.
 
 ### Disconnecting
 
@@ -356,7 +356,7 @@ IDataMapper dataMapper = new DataMinerConnectorDataMapper(
 ```
 
 > [!IMPORTANT]
-> When configuring the path for a column, always specify the YANG module name as well. Notifications of type `JSON` do not contain it but notifications of type `JSON_IETF` do. The DataMapper is capable of handling both, but for that reason the YANG module name needs to be known.
+> If you use **OpenConfig middleware version range 1.x.x**, when configuring the path for a column, always specify the YANG module name as well. Notifications of type `JSON` do not contain it, but notifications of type `JSON_IETF` do. The DataMapper is capable of handling both, but for that reason the YANG module name needs to be known. If you use **OpenConfig middleware version 2.0.0** or higher, you no longer need to add the YANG module name to the column path.
 
 You need to create a [DataMinerConnectorDataGrid](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid) and pass it the root YANG path of the `container` that will be stored. Then it is a matter of mapping the column parameters to the YANG paths of the `leaf` items.
 

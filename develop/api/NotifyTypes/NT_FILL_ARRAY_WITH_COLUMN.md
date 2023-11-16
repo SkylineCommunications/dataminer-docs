@@ -25,7 +25,7 @@ protocol.NotifyProtocol(220 /*NT_FILL_ARRAY_WITH_COLUMN*/, columnInfo, values);
   - columnInfo[1…n]: ID of column parameter.
 - values (object[]):
   - values[0] (object[]): Primary keys (as string).
-  - values[1] (object[]): Values to set/update.
+  - values[1…n] (object[]): Values to set/update.
 
 In case the column data make use of the protocol.Clear and/or protocol.Leave properties, the columnInfo array must contain an additional Boolean which is set to true indicating that the method call should consider the values corresponding with protocol.Clear and protocol.Leave as special values indicating a cell action to clear or preserve the cell content (respectively) instead of an actual cell value.
 
@@ -61,7 +61,7 @@ protocol.NotifyProtocol(220 /*NT_FILL_ARRAY_WITH_COLUMN*/, columnInfo, values);
 
 - values (object[]):
   - values[0] (object[]): Primary keys (as string).
-  - values[1] (object[]): Values to set/update.
+  - values[1…n] (object[]): Values to set/update.
 
 ## Return Value
 

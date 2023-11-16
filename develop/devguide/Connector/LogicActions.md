@@ -20,4 +20,4 @@ The following [overview](xref:LogicActionsOverview) lists all available actions 
 > [!NOTE]
 >
 > - For more information on how to define an action in a protocol, see [Protocol.Actions.Action](xref:Protocol.Actions.Action).
-> - An example protocol "SLC SDF Actions - On Parameters" is available in the Protocol Development Guide Companion Files illustrating actions on parameters.
+> - An example protocol "SLC SDF Actions - On Parameters" is available in the [Protocol Development Guide Companion Files](https://community.dataminer.services/documentation/protocol-development-guide-companion-files/) illustrating actions on parameters.

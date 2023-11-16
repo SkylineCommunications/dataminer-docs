@@ -157,6 +157,8 @@ items:
             topicUid: BPA_Cassandra_DB_Size
           - name: Check Antivirus DLLs
             topicUid: BPA_Check_Antivirus_DLLs
+          - name: Check Cluster SLNet Connections
+            topicUid: BPA_Check_Cluster_SLNet_Connections
           - name: Database Security
             topicUid: BPA_Database_Security
           - name: Firewall Configuration
@@ -323,6 +325,8 @@ items:
                     topicUid: Installing_OpenSearch_database
                   - name: Configuring multiple OpenSearch clusters
                     topicUid: Configuring_multiple_OpenSearch_clusters
+                  - name: Configuring a multiple data center OpenSearch cluster
+                    topicUid: Configuring_multiple_datacenter_OpenSearch_cluster
                   - name: Configuring OpenSearch backups
                     topicUid: Configuring_OpenSearch_Backups
               - name: Amazon OpenSearch Service
@@ -342,6 +346,8 @@ items:
                             topicUid: Configuring_master_Elasticsearch_nodes
                           - name: Adding an Elasticsearch cluster node
                             topicUid: Configuring_Elasticsearch_node_add
+                          - name: Configuring a multiple data center Elasticsearch cluster
+                            topicUid: Configuring_multiple_datacenter_Elasticsearch_cluster
                           - name: Configuring multiple Elasticsearch clusters
                             topicUid: Configuring_multiple_Elasticsearch_clusters
                             items:
@@ -354,8 +360,6 @@ items:
                     items:
                       - name: Installing Elasticsearch on a DMA via DataMiner
                         topicUid: Installing_Elasticsearch_via_DataMiner
-                      - name: Migrating SRM resources to the indexing database
-                        topicUid: Resources_migration_to_elastic
                       - name: Configuring the Elasticsearch database (Windows)
                         topicUid: Configuring_Elasticsearch_database_Windows
                       - name: Uninstalling Elasticsearch from a DMA
@@ -373,6 +377,10 @@ items:
                     topicUid: Configuring_Elasticsearch_node_remove
               - name: Configuring indexing settings in DataMiner Cube
                 topicUid: Configuring_DataMiner_Indexing
+              - name: Migrating SRM resources to the indexing database
+                topicUid: Resources_migration_to_elastic
+              - name: Migrating SRM profiles to the indexing database
+                topicUid: Profile_migration_to_elastic
           - name: Common database settings
             topicUid: Specifying_TTL_overrides
             items:
@@ -513,18 +521,31 @@ items:
                 topicUid: HTTP_Headers
               - name: Disabling legacy protocols
                 topicUid: Disabling_legacy_protocols
+          - name: Configuring SAML settings
+            topicUid: Configuring_external_authentication_via_an_identity_provider_using_SAML
+            items:
+            - name: Configuring SAML with Microsoft Entra ID
+              topicUid: SAML_using_Entra_ID
+            - name: Configuring SAML with Azure B2C
+              topicUid: SAML_using_Azure_B2C
+            - name: Configuring SAML with Okta
+              topicUid: SAML_using_Okta
+            - name: Additional configuration for systems connected to dataminer.services
+              topicUid: SAML_config_to_connect_to_cloud
+            - name: Troubleshooting SAML issues
+              topicUid: Troubleshooting_SAML_Issues
           - name: Configuring LDAP settings
             topicUid: Configuring_LDAP_settings
           - name: Configuring Atlassian Crowd settings
             topicUid: Configuring_Atlassian_Crowd_settings
           - name: Configuring RADIUS settings
             topicUid: Configuring_RADIUS_settings
-          - name: Configuring external authentication via an identity provider using SAML
-            topicUid: Configuring_external_authentication_via_an_identity_provider_using_SAML
           - name: Setting up Azure Active Directory Domain Services
             topicUid: Setting_up_Azure_Active_Directory_Domain_Services
           - name: Enabling TLS encryption
             topicUid: Enabling_TLS_encryption
+          - name: Skipping certificate validation when consuming gRPC services
+            topicUid: Skipping_certificate_validation_when_consuming_gRPC_services
   - name: SNMP managers
     topicUid: About_SNMP_managers
     items:

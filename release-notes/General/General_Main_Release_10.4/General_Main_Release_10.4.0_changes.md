@@ -513,6 +513,31 @@ When, in the SLNetClientTest tool, you select the new *Debug SAML* checkbox befo
 > [!CAUTION]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
+#### DataMiner Object Models: Enhanced checks when removing field descriptors from a section definition [ID_37395]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+Up to now, when a field descriptor was removed from a section definition that was being used by any DOM instances, the update of the section would fail and a `SectionDefinitionError` with reason `SectionDefinitionInUseByDomInstances` would be added to the trace data.
+
+To allow certain field descriptors to be removed, this behavior has now been changed. From now on, the update of a section will only fail if the removed field descriptors are still being used.
+
+A `SectionDefinitionError` with reason `SectionDefinitionFieldsInUse` will be added to the trace data in the following cases:
+
+- If any of the removed field descriptors is being used in the DOM manager settings of the DOM module (either in the name definition or in one of the field aliases). When a field descriptor is detected in those settings, `UsedInDomManagerSettings` will be set to true in the `SectionDefinitionError`.
+
+- If any of the removed field descriptors is being used in the name definition defined on a DOM definition. The IDs of those DOM definitions will be specified in `DomDefinitionIds` of the `SectionDefinitionError`.
+
+- If any of the removed field descriptors is being used in any of the status section definition links on a DOM behavior definition. The IDs of the DOM behavior definitions will be specified in `DomBehaviorDefinitionIds` of the `SectionDefinitionError`.
+
+- If any of the removed field descriptors is assigned a value in any DOM instance. The IDs of the DOM instances (limited to 100) will be specified in `DomInstanceIds` of the `SectionDefinitionError`. If a large number of field descriptors were removed, only the first 100 field descriptors that match will be taken into account.
+
+Also, the `SectionDefinitionError` will have `SectionDefinitionID` set to the ID of the SectionDefinition that could not be updated. `FieldDescriptorIds` will contain the IDs of the FieldDescriptors that were found to be in use.
+
+Other changes to a section definition that fail when the section is being used by any DOM instance will still fail with reason `SectionDefinitionInUseByDomInstances`. Up to now, all DOM instance IDs would be included in the error data. From now on, only the first 100 IDs will be included.
+
+> [!NOTE]
+> Currently, on systems using STaaS, the validation of DOM instances might not detect if a field descriptor is in use when there are more then 100 DOM instances. In that case, the removal of the field descriptor in question will be allowed.
+
 #### SLAnalytics - Trend predictions: Flatline periods will no longer be included in the prediction model training data [ID_37432]
 
 <!-- MR 10.4.0 - FR 10.3.12 -->
@@ -537,6 +562,14 @@ Up to now, a DataMiner using STaaS communicated with the database via TCP/IP por
 
 Because of a number of enhancements, overall performance of DOM and SRM queries has increased.
 
+#### GQI: Enhanced error handling when an error occurs while executing a query before it is joined with another query [ID_37521]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+Up to now, when an error occurred during the execution of a GQI query that, later on, was joined with another query, the exception message would always read `One or more errors occurred`.
+
+From now on, an exception that occurs when executing a query before it is joined with another query will be re-thrown afterwards. This will make sure the exception reveals the actual reason why the query failed.
+
 #### SLAnalytics - Automatic incident tracking: Enhanced error handling [ID_37530]
 
 <!-- MR 10.4.0 - FR 10.3.12 -->
@@ -548,6 +581,23 @@ Up to now, when the table index of an alarm update had a casing that was not ide
 `Alarm X/X was in state but neither in loose alarms, in an automatic group or in a manual group`
 
 Because of a number of enhancements made to the automatic incident tracking feature, SLAnalytics will no longer throw errors like the ones above.
+
+#### DataMiner Object Models: GQI sort operations will now be executed by the database [ID_37541]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+Previously, when you added a sort node to a GQI query against the DOM data source, all DOM instances matching any filter node needed to be retrieved before the sorting could occur. Sorting a data set with a large amount of DOM instances was practically impossible.
+
+From now on, the sort nodes (e.g. By X, Then By Y, etc.) will be forwarded to the database. This will considerably increase overall performance when sorting DOM instances, especially when the data set includes a large amount of items.
+
+> [!NOTE]
+>
+> - Fields that have multiple values (i.e. list fields) cannot be sorted.
+> - All string sorting occurs in a non-natural way.
+> - TimeSpan fields are evaluated as strings. As a result, similar to strings, they will also be ordered in a non-natural way.
+> - Multiple sorts are supported using the `Sort by, Then sort by, etc.` node concatenation. If a new *Sort by* node is added to the query, the previous will be ignored.
+> - When sorting by DOM status or by an enum field, the sorting is will occur on the underlying value stored in the DOM instance and not on the display value.
+> - When the DOM GQI query is combined in a join operation, any sort node added after the join node will not be forwarded to the database. This will also be the case when the sorting uses the header of the table and the DOM query is part of a join.
 
 #### Storage as a Service: Enhanced error handling [ID_37554]
 
@@ -580,6 +630,49 @@ Up to now, when managers under the control of the ManagerStore framework in SLNe
 <!-- MR 10.4.0 - FR 10.3.12 -->
 
 Because of a number of enhancements, overall performance has increased, especially when restarting elements or performing certain DOM and SRM operations.
+
+#### DataMiner Objects Models: Fields used in multiple sections will no longer be returned for GQI queries [ID_37644]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+Up to now, a GQI query starting from a DOM node would return columns that contained multiple values due to being linked to SectionDefinitions that allowed multiple sections in one DOM instance. However, when displayed in a table, those columns would only show the first value found in the DOM instance. Also, when you sorted the data by one of those columns, in some cases, the order would seem random as the database would pick either the lowest or highest value available for a field when sorting.
+
+From now on, when GQI detects that having multiple sections is allowed for a particular SectionDefinition, all fields part of that SectionDefinition will no longer be returned as columns.
+
+> [!IMPORTANT]
+> This change will break any existing query that references columns containing multiple values due to being linked to SectionDefinitions that allowed multiple sections in one DOM instance.
+
+#### Storage as a Service: Enhanced performance when migrating data from Cassandra to the cloud [ID_37740]
+
+<!-- MR 10.4.0 - FR 10.3.12 [CU0] -->
+
+Because of a number of enhancements, overall performance has increased when migrating data from a Cassandra database to the cloud.
+
+#### Legacy Reports, Dashboards and Annotations modules are now end-of-life and will be disabled by default [ID_37786]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+As from DataMiner versions 10.1.10/10.2.0, the *LegacyReportsAndDashboards* and/or *LegacyAnnotations* soft-launch options allowed you to enable or disable the legacy *Reports*, *Dashboards* and *Annotations* modules. By default, they were enabled.
+
+Now, the above-mentioned soft-launch options will be disabled by default, causing the legacy *Reports*, *Dashboards* and *Annotations* modules to be hidden. If you want to continue using these modules, which are now considered end-of-life, you will have to explicitly enable the soft-launch options.
+
+#### SLAnalytics - Behavioral anomaly detection: Changes made to the anomaly configuration in an alarm template of a main DVE element will immediately be applied to all open anomaly alarm events [ID_37788]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+When you change the anomaly configuration in an alarm template assigned to a main DVE element, from now on, the changes will immediately be applied to all open anomaly alarm events. The severity of the open alarm events will be changed to the new severity defined in the updated anomaly configuration.
+
+#### GQI: Enhanced performance when executing inner of left join queries in which sorting is applied to the left query [ID_37803]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+Because of a number of enhancements, overall performance has increased when executing inner or left join queries in which sorting is applied to the left query.
+
+#### GQI: Enhanced performance when executing sorted queries [ID_37806]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+Forwarding sort operators to the backend is now supported for a wider range of query configurations. This will considerably increase overall performance of numerous sorted queries.
 
 ### Fixes
 
@@ -757,6 +850,12 @@ On systems using a database other than Cassandra, up to now, an `ExistsCustomDat
 
 In cases where SLDataGateway retrieved an entire table and then applied a filter afterwards, any row limits defined for the query in question would incorrectly be disregarded.
 
+#### Problem when using MessageBroker with chunking [ID_37532]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+On high-load systems, MessageBroker threads could leak when using chunking.
+
 #### Storage as a Service: Paged data retrieval operations would be cut off prematurely [ID_37533]
 
 <!-- MR 10.4.0 - FR 10.3.12 -->
@@ -768,3 +867,15 @@ When reading data from the database page by page, in some cases, the operation w
 <!-- MR 10.4.0 - FR 10.3.12 -->
 
 In some cases, a newly created element could get assigned the same DmaId/ElementId key as another, already existing element on another DataMiner Agent in the cluster. From now on, this will be prevented as long as the DataMiner Agents in questions can communicate with each other.
+
+#### Storage as a Service: Every agent in the DMS would send the average trend data to the cloud during a migration [ID_37717]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+When data was being migrated from a Cassandra Cluster database to a STaaS database, every DataMiner Agent in the DMS would incorrectly send the average trend data to the cloud. From now on, only one of the agents will send this data.
+
+#### DELT package created on DataMiner v10.3.8 or newer could no longer be imported on DataMiner v10.3.7 or older [ID_37731]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+When you exported elements via a DELT package on a DMA running DataMiner version 10.3.8 or newer, it would no longer be possible to import that DELT package on a DMA running DataMiner version 10.3.7 or older.

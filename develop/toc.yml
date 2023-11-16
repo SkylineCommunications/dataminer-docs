@@ -5103,6 +5103,8 @@
 - name: CI/CD
   topicUid: CICD
   items:
+  - name: Platform-independent CI/CD
+    topicUid: Platform_independent_CICD
   - name: CI/CD using GitHub
     topicUid: CICD_on_GitHub
     items:

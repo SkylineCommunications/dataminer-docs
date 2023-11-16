@@ -36,8 +36,8 @@ To configure the component:
 
 1. Optionally, fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
 
-   - The default options available for all components. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
+   - The default options available for all components. See [Customizing the component layout](xref:Customize_Component_Layout).
 
    - *Expand on hover*: If this option is selected, and not all data within the component can be shown in the available space, the component will expand across other components when you hover the mouse pointer over it in order to show as much data as possible.
 
-1. Optionally, apply a data filter. Element, parameter, index, service and view data can be used as a filter. Various feed components, such as a parameter feed and time range feed, can also be used as a filter. See [Applying a data feed](xref:Configuring_dashboard_components#applying-a-data-feed).
+1. Optionally, apply a data filter. Element, parameter, index, service and view data can be used as a filter. Various feed components, such as a parameter feed and time range feed, can also be used as a filter. See [Applying a data feed](xref:Apply_Data_Feed).

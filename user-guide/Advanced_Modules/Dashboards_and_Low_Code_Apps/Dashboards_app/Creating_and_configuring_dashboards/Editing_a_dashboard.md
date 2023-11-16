@@ -12,7 +12,7 @@ To edit an existing dashboard:
 
    - To change one of the existing components into a different component, hover the mouse pointer over the component, click the ![Visualizations icon](~/user-guide/images/DashboardsX_visualizations.png) icon, and select a different visualization below the icon.
 
-   - To change the data input for an existing component, drag the data from the data panel to the component. For more information, see [Applying a data feed](xref:Configuring_dashboard_components#applying-a-data-feed).
+   - To change the data input for an existing component, drag the data from the data panel to the component. For more information, see [Applying a data feed](xref:Apply_Data_Feed).
 
    - To duplicate one of the existing components, hover the mouse pointer over the component and click the ![Duplicate component icon](~/user-guide/images/DashboardsX_duplicate.png) icon.
 
@@ -26,7 +26,7 @@ To edit an existing dashboard:
 
    - To view or hide the grid lines of the dashboard while in edit mode, click the *Show grid* or *Hide grid* button in the dashboard header bar. These grid lines show the columns and rows that the components are arranged on.
 
-   - To add a new component, see [Configuring dashboard components](xref:Configuring_dashboard_components).
+   - To add a new component, see [Configuring components](xref:Configuring_components).
 
    - To change the overall layout of the dashboard, see [Configuring the dashboard layout](xref:Configuring_the_dashboard_layout).
 

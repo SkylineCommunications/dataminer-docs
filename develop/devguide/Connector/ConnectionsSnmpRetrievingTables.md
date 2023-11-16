@@ -22,7 +22,7 @@ Multiple methods are available for retrieving tables via SNMP in a protocol. The
 - Comparison
 
 > [!NOTE]
-> The Protocol Development Guide Companion Files include the following [Wireshark](xref:Wireshark) captures to help understand the different retrieval methods:
+> The [Protocol Development Guide Companion Files](https://community.dataminer.services/documentation/protocol-development-guide-companion-files/) include the following [Wireshark](xref:Wireshark) captures to help understand the different retrieval methods:
 >
 > - GetNext.pcap
 > - GetNext+MultipleGet.pcap

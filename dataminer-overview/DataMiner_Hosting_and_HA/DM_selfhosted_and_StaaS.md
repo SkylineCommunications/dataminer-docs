@@ -35,5 +35,6 @@ With DataMiner STaaS, you can rest assured that your data is safe and secure. Al
 > [!TIP]
 > See also:
 >
+> - [DataMiner STaaS: shifting the responsibility and financial burden of managing data storage infrastructure and technology to a highly professional cloud provider](https://community.dataminer.services/storage-as-a-service/)
 > - [DataMiner STaaS: a game-changer for your storage needs](https://community.dataminer.services/dataminer-staas-a-game-changer-for-your-storage-needs/)
 > - [Storage as a Service (STaaS)](xref:STaaS)

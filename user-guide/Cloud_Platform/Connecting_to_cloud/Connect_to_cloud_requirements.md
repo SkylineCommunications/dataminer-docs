@@ -21,7 +21,7 @@ Before connecting your DataMiner System to dataminer.services, verify that the f
   > **At least one DMA** in the DMS must be able to reach these endpoints. On DMAs that **do not allow network traffic** towards `*.dataminer.services`, make sure **DataMiner CloudGateway is not installed**. From DataMiner 10.3.7/10.4.0 onwards<!-- RN 36085 -->, a Cloud Pack without DataMiner CloudGateway is installed by default when you upgrade or install DataMiner. In earlier DataMiner versions, if you install the Cloud Pack on additional DMAs that do not allow network traffic towards `*.dataminer.services`, after the installation, uninstall DataMiner CloudGateway on those DMAs. See [uninstalling a program in Windows](https://support.microsoft.com/en-us/windows/uninstall-or-remove-apps-and-programs-in-windows-4b55f974-2cc6-2d2b-d092-5905080eaf98).
 
   > [!TIP]
-  > Using SAML? See also: [Additional configuration for systems connected to dataminer.services](xref:Configuring_external_authentication_via_an_identity_provider_using_SAML#additional-configuration-for-systems-connected-to-dataminerservices)
+  > Using SAML? See also: [Additional configuration for systems connected to dataminer.services](xref:SAML_config_to_connect_to_cloud)
   
 - The **internal network must allow [HTTP(S) traffic via port TCP 5100](xref:Configuring_the_IP_network_ports#overview-of-ip-ports-used-in-a-dms)**. For more information about configuring this endpoint, see [Custom dataminer.services endpoint configuration](xref:Custom_cloud_endpoint_configuration).
 

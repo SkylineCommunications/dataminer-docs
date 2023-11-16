@@ -8,7 +8,7 @@ This component shows the value of one or more analog parameters with a progress 
 
 To configure the component:
 
-1. Apply a parameter data feed. See [Applying a data feed](xref:Configuring_dashboard_components#applying-a-data-feed).
+1. Apply a parameter data feed. See [Applying a data feed](xref:Apply_Data_Feed).
 
 1. Optionally, customize the following component options:
 
@@ -20,7 +20,7 @@ To configure the component:
 
 1. Fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
 
-   - The default options available for all components. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
+   - The default options available for all components. See [Customizing the component layout](xref:Customize_Component_Layout).
 
    - *Labels*: In this section, you can select whether the parameter name, the element name, the index (for a table parameter) and/or the value should be displayed in the component.
 

@@ -84,6 +84,6 @@ uid: Part4AdvancedModules
     <a href="/user-guide/Advanced_Modules/Ticketing/Ticketing.html" title="Ticketing" target="_self"><img src="~/user-guide/images/Ticketing.svg" style="width:100%"></a>
   </div>  
   <div class="column">
-    <a href="/user-guide/Advanced_Modules/User%20Defined%20APIs/UD_APIs.html" title="User-Defined APIs" target="_self"><img src="~/user-guide/images/User_Defined_APIs.svg" style="width:100%"></a>
+    <a href="/user-guide/Advanced_Modules/User-Defined_APIs/UD_APIs.html" title="User-Defined APIs" target="_self"><img src="~/user-guide/images/User_Defined_APIs.svg" style="width:100%"></a>
   </div>
 </div>

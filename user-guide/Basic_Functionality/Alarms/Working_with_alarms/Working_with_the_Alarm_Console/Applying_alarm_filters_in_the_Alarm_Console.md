@@ -169,6 +169,11 @@ Depending on the focus score, an alarm can be considered unexpected. In that cas
 
 To filter the alarm list to only show such unexpected alarms, click the following button in the alarm bar: ![Focus button](~/user-guide/images/AlarmFocusFilter.png)
 
+> [!NOTE]
+>
+> - From DataMiner 10.2.0 [CU21]/10.3.0 [CU9]/10.3.12 onwards<!--RN 37455-->, the focus icon is only visible in the alarm bar when the *Active alarms* tab contains focused alarms.
+> - From DataMiner 10.2.0 [CU21]/10.3.0 [CU9]/10.3.12 onwards<!--RN 37455-->, a number is displayed next to the focus icon in the alarm bar, indicating the number of focused alarms in the *Active alarms* tab.
+
 Please note the following regarding the alarm focus feature:
 
 - This feature is only available if your DataMiner System uses [Storage as a Service](xref:STaaS) or a [self-hosted Cassandra-compatible database](xref:Supported_system_data_storage_architectures).

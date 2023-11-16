@@ -54,7 +54,7 @@ setBindings="1,250"
 >
 > - For more examples, see [setBindings example](xref:Protocol.Params.Param.SNMP.TrapOID-setBindings).
 > - When you set the log level to "Log Everything", information about incoming traps is logged in the SLSNMPManager log file.
-> - An example protocol "SLC SDF SNMP - Traps" is available in the Protocol Development Guide Companion Files.
+> - An example protocol "SLC SDF SNMP - Traps" is available in the [Protocol Development Guide Companion Files](https://community.dataminer.services/documentation/protocol-development-guide-companion-files/).
 
 > [!IMPORTANT]
 > A Trigger 'on change' on a trap receiver parameter will never trigger. Because of the way the trap data is received, stored and forwarded, the actual value of the trap receiver parameter will not change. In case you want to trigger an operation upon receiving a trap (e.g. poll a table), you need to either:

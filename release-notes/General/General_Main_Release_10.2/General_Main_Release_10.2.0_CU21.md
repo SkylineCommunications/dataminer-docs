@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.2.0_CU21
 ---
 
-# General Main Release 10.2.0 CU21 – Preview
+# General Main Release 10.2.0 CU21
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
@@ -41,7 +41,7 @@ Up to now, it was possible to have a DataMiner System in which some DMAs had bee
   - Allowed to add DMAs either by hostname or by IP address.
   - Allowed to create Failover pairs with shared hostname or with virtual IP addresses.
 
-#### DataMiner Cube - Alarm templates: Configuration of behavioral anomaly alarms [ID_37148] [ID_37171]
+#### DataMiner Cube - Alarm templates: Configuration of behavioral anomaly alarms [ID_37148] [ID_37171] [ID_37670]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
 
@@ -75,7 +75,9 @@ To configure the behavioral anomaly detection for a particular (numeric) paramet
    > - "Smart" (i.e. anomaly monitoring as it existed up to now).
 
 > [!NOTE]
-> It is not possible to have both a suggestion event and an alarm generated for the same issue. However, it is possible to have suggestion events generated for e.g. downward level shifts, even if downward level shifts are disabled in the *Anomaly alarm settings* window.
+>
+> - It is not possible to have both a suggestion event and an alarm generated for the same issue. However, it is possible to have suggestion events generated for e.g. downward level shifts, even if downward level shifts are disabled in the *Anomaly alarm settings* window.
+> - Any settings configured in the *Anomaly alarm settings* window will only affect parameters that are being trended.
 
 #### Security enhancements [ID_37267]
 
@@ -100,6 +102,31 @@ In the Surveyor, statistical alarm data can be displayed next to elements, servi
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
 
 A number of general enhancements have been made with regard to cache management.
+
+#### DataMiner Cube - Spectrum Analysis: RBW and VBW settings can now be modified by means of plus and minus buttons [ID_37601]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+
+In the *View* tab of a spectrum card, you can change the *RBW* (Resolution bandwidth) and *VBW* (Video bandwidth) settings.
+
+Up to now, these could be modified by means of a drop-down box. From now on, they can be modified by means of "+" (plus) and "-" (minus) buttons.
+
+#### Page size when retrieving element data from Cassandra has been set to 5000 [ID_37673]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+
+For performance reasons, the page size when retrieving element data from a Cassandra database has been changed from 50000 to 5000.
+
+> [!NOTE]
+> When retrieving element data from a MySQL or Microsoft SQL Server database, the page size remains set to 50000.
+
+#### DataMiner Cube - Spectrum Analysis: New marker button 'Center to marker frequency' [ID_37705]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+
+In the *View* tab of a spectrum card, up to now, each marker listed in the *Markers* section had two buttons next to it: an *Edit* button (i.e. a pencil icon) and a *Delete* button (i.e. a cross icon). A *Center to marker frequency* button has now been added. Clicking this button will set the center frequency to the frequency of the marker in question.
+
+Also, the three buttons will now show a tooltip when you hover over them.
 
 ### Fixes
 
@@ -128,6 +155,12 @@ When a parameter that was used to store the dynamic IP address of an element con
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
 
 When an alarm in a filtered alarm tab received a focus score update, the system would incorrectly not re-evaluate whether that alarm still matched the filter that was applied.
+
+#### Element connections would not work with destination tables that had naming configured [ID_37478]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+
+Element connections would not work with destination tables that had naming configured.
 
 #### DataMiner Cube - Alarm Console: Display issues when a correlation alarm was based on another correlation alarm [ID_37497]
 
@@ -174,6 +207,14 @@ Up to now, when you changed the alignment of such a column, the pencil icons wou
 
 When an element was deleted, `PropertyChangeEvent` instances for that element would incorrectly not get removed from the SLNet event cache.
 
+#### Alerter: Problem when connecting to a DataMiner Agent using gRPC [ID_37580]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+
+When Alerter connected to a DataMiner Agent using gRPC, on each subsequent startup, it would display a message box showing the following error:
+
+`There is no connection available, please add one.`
+
 #### DataMiner Cube - Alarm Console: Text-to-speech button would overlap the counter showing the number of alarms with severity 'Suggestion' [ID_37590]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
@@ -185,3 +226,36 @@ In the footer of the Alarm Console, the button to cancel the current text-to-spe
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
 
 When, in the Alarm Console, an alarm was duplicated, in some cases, its focus score would not be updated correctly.
+
+#### DataMiner Cube - Relation learning: Problem when checking ModelHost DxM license [ID_37653]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 [CU0] -->
+
+In some cases, DataMiner Cube could become unresponsive when checking the ModelHost DxM license.
+
+#### DataMiner Cube: Problem when parsing anomaly alarms [ID_37680]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
+
+When you opened DataMiner Cube or when you opened a new alarm tab, an error could occur when parsing anomaly alarms.
+
+#### Protocol VDX files imported via a DELT package would not be displayed until a DataMiner restart [ID_37781]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 [CU0] -->
+
+When you imported a DELT package that contained protocol VDX files linked to elements in the package, in some rare cases, those VDX files would incorrectly not be displayed until after a DataMiner restart.
+
+#### SLNetClientTest tool would not indicate that a profile migration to Elasticsearch/OpenSearch had failed due to a profile object with an invalid name [ID_37808]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 [CU0] -->
+
+When, in the SLNetClientTest tool, you went to *Advanced > Migration*, the migration overview would not indicate that a migration of profiles towards Elasticsearch/OpenSearch had failed due to a profile object with a name longer than 32,766 characters.
+
+#### Profile migrations to Elasticsearch/OpenSearch will now fail when the profiles.xml file is corrupt [ID_37818]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 [CU0] -->
+
+When you started a profile migration to an Elasticsearch/OpenSearch database while the *profiles.xml* file was corrupt, up to now, a new empty *profiles.xml* file would be created and the migration would continue. From now on, no new *profiles.xml* file will be created anymore and the migration will go into an error status.
+
+> [!NOTE]
+> When, in the SLNetClientTest tool, you go to *Advanced > Migration*, all migrations in an error status will now have a red background.

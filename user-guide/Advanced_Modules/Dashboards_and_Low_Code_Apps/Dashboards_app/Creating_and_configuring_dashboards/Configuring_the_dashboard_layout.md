@@ -8,7 +8,7 @@ The layout of a dashboard can be configured on two levels:
 
 - The layout of the dashboard on the whole. See [Customizing the dashboard theme](#customizing-the-dashboard-theme).
 
-- Overrides for each specific component. See [Configuring dashboard components](xref:Configuring_dashboard_components).
+- Overrides for each specific component. See [Configuring dashboard components](xref:Customize_Component_Layout).
 
 ## Customizing the dashboard theme
 
@@ -165,6 +165,6 @@ To configure the default layout for each of the components in a dashboard:
    - In the *Shadow* section, select the size of the shadow displayed behind the components.
 
 > [!NOTE]
-> For each separate component, it is possible to override this default layout. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
+> For each separate component, it is possible to override this default layout. See [Customizing the component layout](xref:Customize_Component_Layout).
 
 ***

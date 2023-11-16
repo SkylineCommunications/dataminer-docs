@@ -13,7 +13,7 @@ This dashboard feed allows the user to select multiple parameters from a predefi
 
 To configure this component:
 
-1. Apply the necessary data feeds. See [Applying a data feed](xref:Configuring_dashboard_components#applying-a-data-feed).
+1. Apply the necessary data feeds. See [Applying a data feed](xref:Apply_Data_Feed).
 
    - The component supports element and parameter data feeds. In case a table parameter is added, an indices filter can be specified. In case all parameters or all elements are added, a protocol or view feed can be used as an additional filter.
 
@@ -58,7 +58,7 @@ To configure this component:
 
 1. Optionally, fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
 
-   - The default options available for all components. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
+   - The default options available for all components. See [Customizing the component layout](xref:Customize_Component_Layout).
 
    - *Column order*: Click the up or down arrow next to a column name to change the order in which the columns of the component are displayed. Available from DataMiner 9.6.13 onwards.
 

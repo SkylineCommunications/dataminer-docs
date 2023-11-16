@@ -13,12 +13,12 @@ This dashboard feed allows the user to filter and refine data based on specific 
 
 To configure this component:
 
-1. Apply the necessary data feeds. See [Applying a data feed](xref:Configuring_dashboard_components#applying-a-data-feed).
+1. Apply the necessary data feeds. See [Applying a data feed](xref:Apply_Data_Feed).
 
    > [!NOTE]
    > The assigned feed name will be visible in the bottom-right corner of the query filter component (e.g. Query filter 1).
 
-1. Optionally, fine-tune the component layout. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
+1. Optionally, fine-tune the component layout. See [Customizing the component layout](xref:Customize_Component_Layout).
 
 1. Optionally, customize the following component options in the *Component* > *Settings* tab:
 

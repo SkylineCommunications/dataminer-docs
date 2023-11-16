@@ -424,14 +424,10 @@ items:
   - name: Obtaining a DataMiner license
     topicUid: DataminerLicenses
     items:
-      - name: License for DMA to be installed by Skyline
-        topicUid: License_for_DMA_to_be_installed_by_Skyline
-      - name: Full license for DMA to be installed by user
-        topicUid: Full_license_for_DMA_to_be_installed_by_user
-      - name: Online demo license for DMA to be installed by user
-        topicUid: Online_demo_license_for_DMA_to_be_installed_by_user
-      - name: Offline demo license for DMA to be installed by user
-        topicUid: Offline_demo_license_for_DMA_to_be_installed_by_user
+      - name: Permanent license
+        topicUid: Permanent_license
+      - name: Time-based license
+        topicUid: Time-based_license
   - name: Software support life cycles
     topicUid: Software_support_life_cycles
   - name: Soft-launch options

@@ -197,18 +197,14 @@ items:
         topicUid: Keeping_a_DMA_from_running_out_of_disk_space
       - name: Sharing dashboard window does not disappear
         topicUid: Sharing_dashboard_window_does_not_disappear
-      - name: Troubleshooting SAML issues
-        topicUid: Troubleshooting_SAML_Issues
       - name: Manually removing old alarms from an Elasticsearch cluster
         topicUid: Manually_removing_old_alarms_from_ES
   - name: Known issues
     topicUid: Known_issues
     items:
       - name: Current issues
-        topicUid: KI_DataMinerMessageBroker2
+        topicUid: KI_elements_not_loading_in_DMS_with_multiple_ES
         items:
-          - name: Various issues when using MessageBroker with chunking
-            topicUid: KI_DataMinerMessageBroker2
           - name: Elements not loading after upgrade of DMS with multiple Elasticsearch clusters
             topicUid: KI_elements_not_loading_in_DMS_with_multiple_ES
           - name: Max Payload exceptions occur when using MessageBroker with chunking
@@ -240,8 +236,14 @@ items:
           - name: Setting a protocol to production takes a long time
             topicUid: KI_Setting_a_protocol_to_production_takes_a_long_time
       - name: Resolved issues
-        topicUid: KI_Cube_connection_issue_alarm_tabs
+        topicUid: KI_DataMinerMessageBroker2
         items:
+          - name: Various issues when using MessageBroker with chunking
+            topicUid: KI_DataMinerMessageBroker2
+          - name: Upgrade fails because of VerifyElasticStorageType.dll prerequisite
+            topicUid: KI_Upgrade_fails_VerifyElasticStorageType_prerequisite
+          - name: Upgrade fails because of VerifyNoObsoleteApiDeployed.dll prerequisite
+            topicUid: KI_Upgrade_fails_VerifyNoObsoleteApiDeployed_prerequisite
           - name: Cube freezes on 'Connected!' loading screen when no alarm tabs are displayed
             topicUid: KI_Cube_connection_issue_alarm_tabs
           - name: SLNet deadlock in EPM setups
