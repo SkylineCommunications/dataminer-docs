@@ -662,11 +662,11 @@ Now, the above-mentioned soft-launch options will be disabled by default, causin
 
 When you change the anomaly configuration in an alarm template assigned to a main DVE element, from now on, the changes will immediately be applied to all open anomaly alarm events. The severity of the open alarm events will be changed to the new severity defined in the updated anomaly configuration.
 
-#### GQI: Enhanced performance when executing join queries of which the subqueries are sorted [ID_37803]
+#### GQI: Enhanced performance when executing inner of left join queries in which sorting is applied to the left query [ID_37803]
 
 <!-- MR 10.4.0 - FR 10.4.1 -->
 
-Because of a number of enhancements, overall performance has increased when executing join queries of which the subqueries are sorted.
+Because of a number of enhancements, overall performance has increased when executing inner or left join queries in which sorting is applied to the left query.
 
 #### GQI: Enhanced performance when executing sorted queries [ID_37806]
 
