@@ -52,8 +52,7 @@ It is also possible to use a region containing "generated" (case insensitive) to
 > [!NOTE]
 > If auto-generated code is the only code remaining, SonarQube may not effectively validate it.
 >
-> For instance, in a Connector Solution with just the QAction_Helper project, it's recommended to add a dummy QAction project.
-> This ensures SonarQube can accurately validate the dummy project and not the auto-generated code in QAction_Helper.
+> For instance, in a connector solution with just the QAction_Helper project, we recommended adding a dummy QAction project. This ensures that SonarQube can accurately validate the dummy project and not the auto-generated code in QAction_Helper.
 
 ## Excluding a project, files, or folders from analysis
 
