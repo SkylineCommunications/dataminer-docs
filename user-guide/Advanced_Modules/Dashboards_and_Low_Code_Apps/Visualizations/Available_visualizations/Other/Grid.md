@@ -7,11 +7,13 @@ uid: DashboardGrid
 > [!IMPORTANT]
 > At present, this component is only available in preview, if the [ReportsAndDashboardsDynamicVisuals](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsdynamicvisuals) soft-launch option is enabled. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
 
-This component allows you to visualize data as a grid.
+Available from DataMiner 10.4.1/10.5.0<!--RN 34761-->This component allows you to visualize data as a grid.
 
 To configure the component:
 
 1. Apply a data feed. See [Applying a data feed](xref:Configuring_dashboard_components#applying-a-data-feed).
+
+1. Optionally, hover the mouse over the component, click the filter icon, and then add a filter feed from the *queries* section of the data pane. You can repeat this several times in order to filter on several queries<!--RN 34761-->.
 
 1. Optionally, customize the following component options:
 
@@ -19,7 +21,7 @@ To configure the component:
 
    - *General > Override dynamic units*: Disables parameter units from changing dynamically based on their value and protocol definition.
 
-   - *Data retrieval > Update data*: Allows updates to be enabled or disabled. This setting will enable updates for all queries executed by the selected component.
+   - *Data retrieval > Update data*: Allows updates to be enabled or disabled. This setting will enable real-time updates for all queries executed by the selected component<!--RN 37269-->.
 
    - *Initial Selection*: Allows you to specify a default value. This is the value that will be applied in the feed when the dashboard is opened, unless a custom URL is used specifying a different value.
 
@@ -39,7 +41,7 @@ To configure the component:
      > [!TIP]
      > See also: [Displaying a custom empty component message](xref:Tutorial_Dashboards_Displaying_a_custom_empty_component_message).
 
-   - *Advanced > Grid template*: Allows you to customize the number of columns and rows displayed in the grid component, along with scaling options.
+   - *Advanced > Grid template*: Allows you to customize the number of columns and rows displayed in the grid component, along with scaling options<!--RN 34761 + 34781-->.
 
      - By default, the number of displayed columns and rows is set to *Auto*. To modify this number, clear the checkbox in this section and specify the desired amount. To revert to *Auto*, delete the entry.
 
@@ -52,10 +54,13 @@ To configure the component:
      > [!NOTE]
      >
      > - The number of items that can be displayed in a grid component is limited to 1000<!--RN 37699-->.
-     > - If the number of items to be displayed exceeds the size of the component, a green button with a sidewards arrow is available underneath the grid. <!--zowel naar links als rechts, dus 1 pagina naar rechts, kan je ook weer terugkeren-->
+     > - If the number of items to be displayed exceeds the size of the component, navigation buttons are available to navigate through the data<!--RN 34761-->.
 
-   - *Item templates > Alarms*: Allows you to freely customize the appearance of the grid component using templates.
+   - *Item templates > Alarms*: Allows you to freely customize the appearance of the grid component using templates<!--RN 34761-->.
 
      - To access the Template Editor, click the pencil icon.
 
-     - To reuse a template you previously created and saved, click the ![reuse template](~/user-guide/images/Reuse_Template.png) button.
+     - To reuse previously saved templates for components in the same dashboard or low-code app, click the ![reuse template](~/user-guide/images/Reuse_Template.png) button<!--RN 34948-->.
+
+       > [!NOTE]
+       > This button is only visible when a component in the dashboard or low-code app is configured with a custom template.
