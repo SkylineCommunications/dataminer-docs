@@ -50,7 +50,7 @@ When you exported tables of which the primary keys were of type string, the DELT
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
 
-In some rare cases, an attempt would incorrectly be made to update a service that had already been deleted, causing that service to re-appear.
+In some rare cases, if an attempt was made to update a service that had just been deleted, the service could re-appear.
 
 Additional logging has now been added to allow better tracing of errors that occur while creating or updating services.
 
