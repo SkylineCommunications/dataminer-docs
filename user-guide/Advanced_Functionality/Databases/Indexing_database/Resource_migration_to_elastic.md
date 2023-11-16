@@ -33,7 +33,9 @@ To migrate the resources, you will need to use the SLNetClientTest tool. Note th
 1. Connect to the DMS using the *SLNetClientTest* tool:
 
     1. In the *SLNetClientTest* tool, go to *Connection* > *Connect*.
+
     1. In the *Connect* window, under *Authentication*, select *Explicit credentials* and specify the credentials of an administrator user.
+
     1. Click the *Connect* button.
 
 1. In the *Advanced* menu, select *Migration*.

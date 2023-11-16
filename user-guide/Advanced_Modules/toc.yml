@@ -748,7 +748,7 @@ items:
                 topicUid: DOM_editor_changing_field_name
               - name: Deleting a field
                 topicUid: DOM_editor_deleting_field
-              - name: Deleting a section
+              - name: Deleting a section definition
                 topicUid: DOM_editor_deleting_section
               - name: Naming a DOM instance
                 topicUid: DOM_editor_naming_instance

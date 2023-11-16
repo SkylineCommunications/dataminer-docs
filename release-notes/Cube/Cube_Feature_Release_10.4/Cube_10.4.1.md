@@ -16,7 +16,21 @@ uid: Cube_Feature_Release_10.4.1
 
 ## New features
 
-*No new features have been added yet.*
+#### Spectrum analysis: Zooming inside a spectrum window [ID_37668]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+
+It is now possible to zoom inside a spectrum window:
+
+- To zoom horizontally, scroll up and down. This has the same effect as altering the frequency span.
+- To zoom vertically, scroll up and down while pressing the CTRL key. This has the same effect as altering the amplitude scale.
+
+When you stop scrolling, the new zoom dimensions will be set on the spectrum analyzer device and the screen will be updated with the new data.
+
+> [!IMPORTANT]
+>
+> - It is only possible to zoom horizontally if the spectrum protocol includes the *Start frequency*, *Stop frequency* and *Frequency span* parameters.
+> - It is only possible to zoom vertically if the spectrum protocol includes the *Amplitude scale* parameter.
 
 ## Changes
 
@@ -37,6 +51,12 @@ Up to now, in some cases, service chains could get redrawn too often, or shapes 
 In the *View* tab of a spectrum card, the buttons in the *Reference lines* panel and the *Thresholds* panel as well as the delete buttons in the *Measurement Points* panel have been restyled to match the buttons in the *Markers* panel.
 
 ### Fixes
+
+#### DataMiner Cube - Protocols & Templates: Function definitions would not be listed when you activated a functions file [ID_37754]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+
+When, in the *Protocols & Templates* app, you activated a functions file, the activated function definitions would incorrectly not be listed. For this list to be displayed, you had to close the *Protocols & Templates* app and re-opened it again.
 
 #### Visual Overview: Placeholder containing '[Elapsed Time]' would not be updated when the elapsed time had changed [ID_37756]
 

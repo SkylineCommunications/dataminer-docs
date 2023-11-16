@@ -322,6 +322,12 @@ When the Cassandra Cluster Migrator tool (*SLCCMigrator.exe*) was migrating tabl
 
 In cases where SLDataGateway retrieved an entire table and then applied a filter afterwards, any row limits defined for the query in question would incorrectly be disregarded.
 
+#### Problem when using MessageBroker with chunking [ID_37532]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+On high-load systems, MessageBroker threads could leak when using chunking.
+
 #### Storage as a Service: Paged data retrieval operations would be cut off prematurely [ID_37533]
 
 <!-- MR 10.4.0 - FR 10.3.12 -->
@@ -409,6 +415,12 @@ When you imported a DELT package that contained protocol VDX files linked to ele
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 [CU0] -->
 
 When, in the SLNetClientTest tool, you went to *Advanced > Migration*, the migration overview would not indicate that a migration of profiles towards Elasticsearch/OpenSearch had failed due to a profile object with a name longer than 32,766 characters.
+
+#### Cassandra Cluster & STaaS: Correlation matchinfo and slidingwindow records could be overwritten [ID_37813]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 [CU0] -->
+
+On systems using a Cassandra Cluster database or STaaS, in some cases, DataMiner Agents could overwrite each other's correlation matchinfo and slidingwindow records.
 
 #### Profile migrations to Elasticsearch/OpenSearch will now fail when the profiles.xml file is corrupt [ID_37818]
 
