@@ -88,6 +88,14 @@ Because of a number of enhancements, overall performance of the `ResourceManager
 
 Also, the performance of `TrueFilterElement<Resource>` has been improved.
 
+#### Service & Resource Management: ProfileManager cache [ID_37735]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+When profile data is stored in an Elasticsearch/OpenSearch database, all ProfileDefinitions and ProfileParameters in the ProfileManager will now be cached on each of the DMAs in the DataMiner System. During the midnight synchronization, all these caches will be reloaded to ensure that they all remain in sync.
+
+Also, additional logging has been added to indicate when a cache was refilled and how many objects were added, updated, removed or ignored. Each log entry will also include the IDs of the first ten of these objects.
+
 #### Legacy Reports, Dashboards and Annotations modules are now end-of-life and will be disabled by default [ID_37786]
 
 <!-- MR 10.4.0 - FR 10.4.1 -->

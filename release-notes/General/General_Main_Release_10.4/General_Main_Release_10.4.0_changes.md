@@ -642,6 +642,14 @@ From now on, when GQI detects that having multiple sections is allowed for a par
 > [!IMPORTANT]
 > This change will break any existing query that references columns containing multiple values due to being linked to SectionDefinitions that allowed multiple sections in one DOM instance.
 
+#### Service & Resource Management: ProfileManager cache [ID_37735]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+When profile data is stored in an Elasticsearch/OpenSearch database, all ProfileDefinitions and ProfileParameters in the ProfileManager will now be cached on each of the DMAs in the DataMiner System. During the midnight synchronization, all these caches will be reloaded to ensure that they all remain in sync.
+
+Also, additional logging has been added to indicate when a cache was refilled and how many objects were added, updated, removed or ignored. Each log entry will also include the IDs of the first ten of these objects.
+
 #### Storage as a Service: Enhanced performance when migrating data from Cassandra to the cloud [ID_37740]
 
 <!-- MR 10.4.0 - FR 10.3.12 [CU0] -->
