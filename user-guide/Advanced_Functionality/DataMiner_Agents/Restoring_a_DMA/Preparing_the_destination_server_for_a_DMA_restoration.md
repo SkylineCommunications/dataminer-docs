@@ -94,6 +94,20 @@ To prepare the destination server, there are several possibilities:
 
         - *C:\\Program Files\\MySQL\\MySQL Server 5.0\\data\\SLDMADB*
 
+  1. For a DMA using a local ElasticSearch database:
+
+      1. Open Windows Task Manager and stop the ElasticSearch service.
+
+      1. Delete the content of the folder *D:\\ProgramData\\ElasticSearch\\*.
+
+  1. For a DMA using local OpenSearch database:
+
+      1. Stop your OpenSearch by clicking CTRL+C in the Command Prompt or Powershell. Or simply close the window.
+
+      1. open your opensearch.yaml file and look for path.data
+
+      1. Delete the content of the folder found in the yaml file above. If no path.data has been set this will be stored in *C:\\Users\\<username>\\AppData\\Local\\OpenSearch* of the user that was running the OpenSearch database.
+
   1. Delete the Windows user accounts on the server that have a corresponding DataMiner account.
 
   1. In the *C:\\Skyline DataMiner* folder, replace the content of the file *Views.xml* with the following content:
@@ -114,4 +128,5 @@ To prepare the destination server, there are several possibilities:
 > - If you intend to migrate to another server while the original DMA stays online, take care to avoid an IP conflict:
 >     - Either keep the destination server offline as long as the original DMA is online, or
 >     - Make sure that the destination server has a different IP address and computer name.
+> - For the DxM's running on the server, no changes are needed.
 >
