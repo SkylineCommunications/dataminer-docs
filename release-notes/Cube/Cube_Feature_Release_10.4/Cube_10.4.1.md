@@ -98,6 +98,12 @@ In the *Settings* window, the default values of the following trend graph action
 | Right mouse button action on graph         | Select |
 | Hotkey + left mouse button action on graph | Zoom   |
 
+#### Service templates: Scrollbar added inside every tab of a service template card [ID_37882]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+
+A number of enhancements have been made to the service template card, one of which is a scrollbar added inside every tab.
+
 #### Alarm templates: Enhanced selection box in 'Anomaly alarm settings' window [ID_37899]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->

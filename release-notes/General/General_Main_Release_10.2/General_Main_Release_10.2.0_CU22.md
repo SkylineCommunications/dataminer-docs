@@ -69,6 +69,14 @@ To modify the reference level:
 > [!NOTE]
 > To change the unit of either the center frequency or the reference level, go to the settings menu on the right.
 
+#### Protocols: Buffer for SNMP responses now has a dynamic size [ID_37824]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+
+Up to now, when an SNMP response was received, a buffer with a fixed size of 10240 characters was used to translate the response to the requested format (e.g. OctetStringUTF8). When the response was larger that 10240 characters, it was cut off.
+
+From now on, the buffer will have a dynamic size. This allow larger responses to be processed, and will also make sure that less memory has to be reserved when smaller responses are received.
+
 #### DataMiner Cube - Alarm Console: New alarm tab showing current suggestion events now has the 'Automatically remove cleared alarms' option enabled by default [ID_37855]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
@@ -87,6 +95,12 @@ In the *Settings* window, the default values of the following trend graph action
 |---------|-------------------|
 | Right mouse button action on graph         | Select |
 | Hotkey + left mouse button action on graph | Zoom   |
+
+#### DataMiner Cube - Service templates: Scrollbar added inside every tab of a service template card [ID_37882]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+
+A number of enhancements have been made to the service template card, one of which is a scrollbar added inside every tab.
 
 #### DataMiner Cube - Desktop application: New command-line argument 'UseInitialArgumentsAfterDisconnect' [ID_37888]
 
