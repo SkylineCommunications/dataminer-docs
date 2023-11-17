@@ -23,7 +23,7 @@ Get the display value for the cell of the specified column.
 
 #### Parameters
 
-- [GQIColumn](xref:GQI_GQIColumn) `column`: the column for which the display value should be retrieved.
+- [GQIColumn](xref:GQIColumn) `column`: the column for which the display value should be retrieved.
 
 #### Returns
 
@@ -47,7 +47,7 @@ Get the value for the cell of the specified column.
 
 #### Parameters
 
-- [GQIColumn](xref:GQI_GQIColumn) `column`: the column for which the value should be retrieved.
+- [GQIColumn](xref:GQIColumn) `column`: the column for which the value should be retrieved.
 
 #### Returns
 
@@ -62,7 +62,7 @@ Get the value for the cell of the specified column.
 
 #### Parameters
 
-- [GQIColumn\<T\>](xref:GQI_GQIColumn) `column`: the column for which the value should be retrieved. 
+- [GQIColumn\<T\>](xref:GQIColumn) `column`: the column for which the value should be retrieved. 
 
 #### Returns
 
@@ -98,7 +98,7 @@ Get the value for the cell of the specified column.
 
 #### Parameters
 
-- [GQIColumn](xref:GQI_GQIColumn) `column`: the column for which the value should be retrieved.
+- [GQIColumn](xref:GQIColumn) `column`: the column for which the value should be retrieved.
 - *out* `T` value: the value, of type `T`, of the cell matching the provided column.
 
 #### Returns
@@ -111,7 +111,7 @@ Get the value for the cell of the specified column.
 
 #### Parameters
 
-- [GQIColumn\<T\>](xref:GQI_GQIColumn) `column`: the column for which the value should be retrieved.
+- [GQIColumn\<T\>](xref:GQIColumn) `column`: the column for which the value should be retrieved.
 - *out* `T` value: the value, of type `T`, in the row matching the provided column.
 
 #### Returns
@@ -137,7 +137,7 @@ Set the display value for the cell of the specified column.
 
 #### Parameters
 
-- [GQIColumn](xref:GQI_GQIColumn) `column`: the column for which the display value should be set.
+- [GQIColumn](xref:GQIColumn) `column`: the column for which the display value should be set.
 - string `displayValue`: the display value that should be set.
 
 ### void SetDisplayValue(string columnName, string displayValue)
@@ -155,7 +155,7 @@ Set the value for the cell of the specified column.
 
 #### Parameters
 
-- [GQIColumn](xref:GQI_GQIColumn) `column`: the column for which the value should be set.
+- [GQIColumn](xref:GQIColumn) `column`: the column for which the value should be set.
 - object `value`: the value that should be set.
 - (optional) string `displayValue`: the display value that should be set.
 
@@ -165,7 +165,7 @@ Set the value for the cell of the specified column.
 
 #### Parameters
 
-- [GQIColumn\<T\>](xref:GQI_GQIColumn) `column`: the column for which the value should be set.
+- [GQIColumn\<T\>](xref:GQIColumn) `column`: the column for which the value should be set.
 - object `value`: the value that should be set.
 - (optional) string `displayValue`: the display value that should be set.
 
