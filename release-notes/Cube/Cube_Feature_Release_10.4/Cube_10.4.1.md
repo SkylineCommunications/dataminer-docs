@@ -58,7 +58,7 @@ Up to now, in some cases, service chains could get redrawn too often, or shapes 
 
 In the *View* tab of a spectrum card, the buttons in the *Reference lines* panel and the *Thresholds* panel as well as the delete buttons in the *Measurement Points* panel have been restyled to match the buttons in the *Markers* panel.
 
-#### DataMiner Cube - Alarm Console: New alarm tab showing current suggestion events now has the 'Automatically remove cleared alarms' option enabled by default [ID_37855]
+#### Alarm Console: New alarm tab showing current suggestion events now has the 'Automatically remove cleared alarms' option enabled by default [ID_37855]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
@@ -68,7 +68,17 @@ This means that suggestion events will automatically disappear from the tab appr
 
 ### Fixes
 
-#### DataMiner Cube - Protocols & Templates: Function definitions would not be listed when you activated a functions file [ID_37754]
+#### A number of Automation issues have been fixed [ID_37674]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+
+A number of issues have been fixed with regard to Automation:
+
+- When, in the Automation app, you opened a script in an undocked card, it would not be possible to edit the name of the script.
+- A *nullreference* exception could be thrown when an Automation script was deleted.
+- Cube could leak memory each time you opened an Automation script in a new card.
+
+#### Protocols & Templates: Function definitions would not be listed when you activated a functions file [ID_37754]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
