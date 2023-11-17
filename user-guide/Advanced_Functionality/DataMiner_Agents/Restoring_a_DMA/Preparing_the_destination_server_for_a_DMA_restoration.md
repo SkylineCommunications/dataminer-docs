@@ -102,7 +102,9 @@ To prepare the destination server, there are several possibilities:
 
   1. For a DMA using a local OpenSearch database:
 
-      1. Stop OpenSearch by clicking CTRL+C in the command prompt or Powershell. Or simply close the window.
+      1. Connect to the server with the user who configured OpenSearch.
+
+      1. To stop OpenSearch, find the Command Prompt or Powershell that is running OpenSearch and stop it by clicking CTRL+C or by closing the screen.
 
       1. Open the *opensearch.yaml* file and look for *path.data*.
 
