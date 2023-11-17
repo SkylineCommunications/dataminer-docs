@@ -15,7 +15,7 @@ Expected duration: 5 minutes.
 
 ## Prerequisites
 
-- A DataMiner System using DataMiner 10.3.6 or higher, which is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
+- A DataMiner System using DataMiner 10.3.11 or higher, which is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
 ## Overview
 
