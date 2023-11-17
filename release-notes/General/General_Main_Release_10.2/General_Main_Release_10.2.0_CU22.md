@@ -96,6 +96,12 @@ You can now start the DataMiner Cube desktop application with the new command-li
 
 This argument will make sure that all other arguments you specified when you started the application will again be applied when Cube has to reconnect for some reason.
 
+#### DataMiner Cube - Alarm templates: Enhanced selection box in 'Anomaly alarm settings' window [ID_37899]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+
+The selection box at the top of the *Anomaly alarm settings* window has now been made wider in order to better accommodate content in languages other than English.
+
 ### Fixes
 
 #### DataMiner Cube: A number of Automation issues have been fixed [ID_37674]

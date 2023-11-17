@@ -98,6 +98,12 @@ In the *Settings* window, the default values of the following trend graph action
 | Right mouse button action on graph         | Select |
 | Hotkey + left mouse button action on graph | Zoom   |
 
+#### Alarm templates: Enhanced selection box in 'Anomaly alarm settings' window [ID_37899]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+
+The selection box at the top of the *Anomaly alarm settings* window has now been made wider in order to better accommodate content in languages other than English.
+
 ### Fixes
 
 #### A number of Automation issues have been fixed [ID_37674]
