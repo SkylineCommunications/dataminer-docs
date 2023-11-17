@@ -132,8 +132,8 @@ If you have a dependency on .NET Framework (e.g. Skyline.DataMiner.Dev.*), you w
  
 - *Skyline.DataMiner.ProjectAPI.XXX*
 
-  - Holds project specific packages. There is no real use for these packages outside of the project scope.
-  - E.g. Skyline.DataMiner.ProjectAPI.[CustomerName].[ProjectName].XXX
+  - Holds project-specific packages. There is no real use for these packages outside of the project scope.
+  - For example: Skyline.DataMiner.ProjectAPI.[CustomerName].[ProjectName].XXX
 
 ## Versioning conventions
 
