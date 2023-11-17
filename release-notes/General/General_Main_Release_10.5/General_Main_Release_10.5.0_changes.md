@@ -31,12 +31,6 @@ Because of a number of enhancements, overall performance of the `ResourceManager
 
 Also, the performance of `TrueFilterElement<Resource>` has been improved.
 
-#### SLAnalytics - Behavioral anomaly detection: Changes made to the anomaly configuration in an alarm template of a main DVE element will immediately be applied to all open anomaly alarm events [ID_37788]
-
-<!-- MR 10.5.0 - FR 10.4.1 -->
-
-When you change the anomaly configuration in an alarm template assigned to a main DVE element, from now on, the changes will immediately be applied to all open anomaly alarm events. The severity of the open alarm events will be changed to the new severity defined in the updated anomaly configuration.
-
 ### Fixes
 
 #### Databases: Problem when starting a migration from MySQL to Cassandra [ID_37589]

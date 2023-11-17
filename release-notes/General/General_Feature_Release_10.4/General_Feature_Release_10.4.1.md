@@ -30,15 +30,48 @@ When a DataMiner Agent is upgraded to version 10.5.0/10.4.1 or above, the *Broke
 
 This new DxM, which is currently still under development, is intended to manage all NATS configurations.
 
+#### DataMiner upgrade: Additional prerequisite will now check whether profiles and resources are stored in an indexing database [ID_37763]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+Starting from DataMiner version 10.4.0, XML storage for profiles and resources is no longer supported. When you upgrade DataMiner to version 10.4.0, the `VerifyElasticStorageType` prerequisite will verify whether the system has successfully switched to an indexing database. If profiles and/or resources are still stored in XML files, this prerequisite will cause the upgrade to fail.
+
+See also: [Upgrade fails because of VerifyElasticStorageType.dll prerequisite](xref:KI_Upgrade_fails_VerifyElasticStorageType_prerequisite)
+
 ## Changes
 
 ### Enhancements
+
+#### New BPA test 'Check Cluster SLNet Connections' [ID_37110]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+When run on a particular agent in a DataMiner System, this new BPA test will trigger a local test on each agent in the DMS that will
+
+- check the connections between the different DMAs and between the DMAs in Failover setups, and
+- report any communication problems.
+
+For more information, see [Check Cluster SLNet Connections](xref:BPA_Check_Cluster_SLNet_Connections).
+
+#### GQI: Enhanced error handling when an error occurs while executing a query before it is joined with another query [ID_37521]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+Up to now, when an error occurred during the execution of a GQI query that, later on, was joined with another query, the exception message would always read `One or more errors occurred`.
+
+From now on, an exception that occurs when executing a query before it is joined with another query will be re-thrown afterwards. This will make sure the exception reveals the actual reason why the query failed.
 
 #### Deprecated NotifyDataMiner type 'NT_CONNECTIONS_TO_REMOVE' can no longer be used [ID_37595]
 
 <!-- MR 10.5.0 - FR 10.4.1 -->
 
 From now on, the deprecated NotifyDataMiner type *NT_CONNECTIONS_TO_REMOVE* can no longer be used.
+
+#### Security enhancements [ID_37641]
+
+<!-- 37641: MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+
+A number of security enhancements have been made.
 
 #### SLAnalytics - Proactive cap detection: Enhanced detection of possible future alarm threshold breaches [ID_37681]
 
@@ -48,7 +81,7 @@ When an increasing or decreasing trend is detected on a highly aggregated level 
 
 #### SLAnalytics - Behavioral anomaly detection: Flatline suggestion events will now automatically be cleared after a set amount of time [ID_37716]
 
-<!-- MR 10.4.0 - FR 10.4.1 -->
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
 
 Similar to other types of anomaly suggestion events, flatline suggestion events will now also be cleared automatically after a set amount of time.
 
@@ -63,11 +96,45 @@ Because of a number of enhancements, overall performance of the `ResourceManager
 
 Also, the performance of `TrueFilterElement<Resource>` has been improved.
 
+#### Service & Resource Management: ProfileManager cache [ID_37735]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+When profile data is stored in an Elasticsearch/OpenSearch database, all ProfileDefinitions and ProfileParameters in the ProfileManager will now be cached on each of the DMAs in the DataMiner System. During the midnight synchronization, all these caches will be reloaded to ensure that they all remain in sync.
+
+Also, additional logging has been added to indicate when a cache was refilled and how many objects were added, updated, removed or ignored. Each log entry will also include the IDs of the first ten of these objects.
+
+#### Legacy Reports, Dashboards and Annotations modules are now end-of-life and will be disabled by default [ID_37786]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+As from DataMiner versions 10.1.10/10.2.0, the *LegacyReportsAndDashboards* and/or *LegacyAnnotations* soft-launch options allowed you to enable or disable the legacy *Reports*, *Dashboards* and *Annotations* modules. By default, they were enabled.
+
+Now, the above-mentioned soft-launch options will be disabled by default, causing the legacy *Reports*, *Dashboards* and *Annotations* modules to be hidden. If you want to continue using these modules, which are now considered end-of-life, you will have to explicitly enable the soft-launch options.
+
 #### SLAnalytics - Behavioral anomaly detection: Changes made to the anomaly configuration in an alarm template of a main DVE element will immediately be applied to all open anomaly alarm events [ID_37788]
 
-<!-- MR 10.5.0 - FR 10.4.1 -->
+<!-- MR 10.4.0 - FR 10.4.1 -->
 
 When you change the anomaly configuration in an alarm template assigned to a main DVE element, from now on, the changes will immediately be applied to all open anomaly alarm events. The severity of the open alarm events will be changed to the new severity defined in the updated anomaly configuration.
+
+#### GQI: Enhanced performance when executing inner of left join queries in which sorting is applied to the left query [ID_37803]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+Because of a number of enhancements, overall performance has increased when executing inner or left join queries in which sorting is applied to the left query.
+
+#### GQI: Enhanced performance when executing sorted queries [ID_37806]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+Forwarding sort operators to the backend is now supported for a wider range of query configurations. This will considerably increase overall performance of numerous sorted queries.
+
+#### SLNet will no longer allow DataMiner Agents to connect when they share the same DataMiner GUID [ID_37819]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+When two DataMiner Agents try to connect via SLNet, from now on, this will no longer be allowed if the two agents share the same DataMiner GUID (except when they are both part of the same Failover setup).
 
 ### Fixes
 
@@ -82,6 +149,14 @@ When you started a migrating from a MySQL database to a Cassandra database, an e
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
 
 When you exported tables of which the primary keys were of type string, the DELT export package would incorrectly not contain any trend data.
+
+#### Attempt to update a deleted service would incorrectly cause that service to re-appear [ID_37679]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+In some rare cases, if an attempt was made to update a service that had just been deleted, the service could re-appear.
+
+Additional logging has now been added to allow better tracing of errors that occur while creating or updating services.
 
 #### Problem with remote clients after restarting a DMA in a gRPC-only cluster [ID_37726]
 
@@ -100,3 +175,9 @@ When you exported elements via a DELT package on a DMA running DataMiner version
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
 In some cases, an error could occur in SLAnalytics when it was not able to connect to the alarm repository at startup.
+
+#### Entire SNMPv3 response would be discarded when one or more cells contained 'no such instance' [ID_37815]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+
+When a table was polled via SNMPv3 and the response included a cell that contained *no such instance*, the table would not get populated with the values that were received. Instead, the entire result set would be discarded.

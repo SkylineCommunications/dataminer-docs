@@ -22,7 +22,7 @@ The following sections provide more information on working with markers in Cube:
 
 ## Adding a marker
 
-1. In the info pane, to the left of the real-time display on the spectrum analyzer card, click the *Add marker* button.
+1. In the info pane, to the right of the real-time display on the spectrum analyzer card, click the *Add marker* button.
 
     The marker is automatically added at the center frequency, and takes the color of the trace. If you move the marker to a different trace, the color will be adapted accordingly.
 

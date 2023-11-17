@@ -147,8 +147,8 @@ items:
           topicUid: Overview_Support_upgrade_policy
         - name: Out-of-business-hours support
           topicUid: Overview_Out_Of_Business_Hours_Support
-        - name: CCA Support Services
-          topicUid: CCA_Support_Services
+        - name: Proactive Support
+          topicUid: Proactive_Support
         - name: Support services terms
           topicUid: Support_services_terms
     - name: Compliance statements
