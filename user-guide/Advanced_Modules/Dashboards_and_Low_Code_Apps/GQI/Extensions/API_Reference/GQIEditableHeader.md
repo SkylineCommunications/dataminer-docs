@@ -51,7 +51,7 @@ Get the column by name.
 
 #### Returns
 
-The [GQIColumn](xref:GQIColumn) matching the provided name.
+The [GQIColumn](xref:GQI_GQIColumn) matching the provided name.
 
 ### void RenameColumn(GQIColumn column, string newName)
 
@@ -59,7 +59,7 @@ Change the name of the provided column.
 
 #### Parameters
 
-- [GQIColumn](xref:GQIColumn) `column`: the column for which the name should be updated.
+- [GQIColumn](xref:GQI_GQIColumn) `column`: the column for which the name should be updated.
 - string `newName`: the new name.
 
 ### void RenameColumn(string column, string newName)

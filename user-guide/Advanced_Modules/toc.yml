@@ -576,7 +576,7 @@ items:
                   - name: GQIColumn
                     topicUid: GQI_GQIColumn
                   - name: GQIDMS
-                    topicUid: GQIDMS
+                    topicUid: GQI_GQIDMS
                   - name: GQIEditableHeader
                     topicUid: GQI_GQIEditableHeader
                   - name: GQIEditableRow
