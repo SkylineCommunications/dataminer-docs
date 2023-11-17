@@ -22,12 +22,12 @@ While these are not recommended, we also still support setups with storage per D
   > - [Advanced analytics features in the Alarm Console](xref:Advanced_analytics_features_in_the_Alarm_Console)
   > - [Advanced analytics in trend graphs](xref:Advanced_analytics_trending)
 
-- The [Generic Query Interface (GQI)](xref:Generic_Query_Interface) in DataMiner Dashboards
-
 - [DataMiner Object Models (DOM)](xref:DOM)
 
 - [DataMiner Service & Resource Management (SRM)](xref:SRM)
 
 - [DataMiner User-Defined APIs](xref:UD_APIs)
+
+- [Specific GQI data sources](xref:Get_parameter_table_by_alias)
 
 ![indexing database per DMS](~/user-guide/images/Indexing_database_per_DMS.svg)
