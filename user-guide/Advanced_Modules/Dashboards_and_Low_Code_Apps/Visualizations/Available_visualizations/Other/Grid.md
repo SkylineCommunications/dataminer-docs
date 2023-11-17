@@ -7,11 +7,11 @@ uid: DashboardGrid
 > [!IMPORTANT]
 > At present, this component is only available in preview, if the [ReportsAndDashboardsDynamicVisuals](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsdynamicvisuals) soft-launch option is enabled. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
 
-Available from DataMiner 10.4.1/10.5.0<!--RN 34761-->This component allows you to visualize data as a grid.
+Available from DataMiner 10.4.1/10.5.0<!--RN 34761-->. This component allows you to visualize data as a grid.
 
 To configure the component:
 
-1. Apply a data feed. See [Applying a data feed](xref:Configuring_dashboard_components#applying-a-data-feed).
+1. Apply a data feed. See [Applying a data feed](xref:Apply_Data_Feed).
 
 1. Optionally, hover the mouse over the component, click the filter icon, and then add a filter feed from the *queries* section of the data pane. You can repeat this several times in order to filter on several queries<!--RN 34761-->.
 
@@ -27,7 +27,7 @@ To configure the component:
 
 1. Fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
 
-   - The default options available for all components. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
+   - The default options available for all components. See [Customizing the component layout](xref:Customize_Component_Layout).
 
    - *Filtering & Highlighting > Highlight*: When this option is enabled, the nodes that match the filter will be highlighted. Default: Enabled
 
@@ -54,7 +54,8 @@ To configure the component:
      > [!NOTE]
      >
      > - The number of items that can be displayed in a grid component is limited to 1000<!--RN 37699-->.
-     > - If the number of items to be displayed exceeds the size of the component, navigation buttons are available to navigate through the data<!--RN 34761-->.
+     > - If the number of items to be displayed exceeds the number of cells displayed in the component, navigation buttons are available to navigate through the data<!--RN 34761-->.
+     > - When the scaling is set to *fixed* and there are too many columns and/or rows to show them at once in the component, in read mode, it is possible to scroll through them with a scrollbar that becomes visible when you hover over the component<!--RN 37699-->.
 
    - *Item templates > Alarms*: Allows you to freely customize the appearance of the grid component using templates<!--RN 34761-->.
 

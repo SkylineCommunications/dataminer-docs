@@ -421,7 +421,7 @@ items:
               - name: Bar chart (horizontal)
                 topicUid: BarChartHorizontal
           - name: Other
-            topicUid: DashboardNodeEdgeGraph
+            topicUid: DashboardGrid
             items:
               - name: Grid
                 topicUid: DashboardGrid
