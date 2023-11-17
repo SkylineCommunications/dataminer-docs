@@ -32,6 +32,14 @@ When you stop scrolling, the new zoom dimensions will be set on the spectrum ana
 > - It is only possible to zoom horizontally if the spectrum protocol includes the *Start frequency*, *Stop frequency* and *Frequency span* parameters.
 > - It is only possible to zoom vertically if the spectrum protocol includes the *Amplitude scale* parameter.
 
+#### Desktop application: New command-line argument 'UseInitialArgumentsAfterDisconnect' [ID_37888]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+
+You can now start the DataMiner Cube desktop application with the new command-line argument *UseInitialArgumentsAfterDisconnect=true*.
+
+This argument will make sure that all other arguments you specified when you started the application will again be applied when Cube has to reconnect for some reason.
+
 ## Changes
 
 ### Enhancements
@@ -49,6 +57,14 @@ Up to now, in some cases, service chains could get redrawn too often, or shapes 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
 In the *View* tab of a spectrum card, the buttons in the *Reference lines* panel and the *Thresholds* panel as well as the delete buttons in the *Measurement Points* panel have been restyled to match the buttons in the *Markers* panel.
+
+#### DataMiner Cube - Alarm Console: New alarm tab showing current suggestion events now has the 'Automatically remove cleared alarms' option enabled by default [ID_37855]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+
+When you add a new alarm tab showing the current suggestion events, that tab will now have the *Automatically remove cleared alarms* option enabled by default.
+
+This means that suggestion events will automatically disappear from the tab approximately 2 hours after they have been detected.
 
 ### Fixes
 

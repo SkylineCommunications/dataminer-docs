@@ -46,6 +46,14 @@ Similar to other types of anomaly suggestion events, flatline suggestion events 
 
 When you exported tables of which the primary keys were of type string, the DELT export package would incorrectly not contain any trend data.
 
+#### Attempt to update a deleted service would incorrectly cause that service to re-appear [ID_37679]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+In some rare cases, if an attempt was made to update a service that had just been deleted, the service could re-appear.
+
+Additional logging has now been added to allow better tracing of errors that occur while creating or updating services.
+
 #### Problem with remote clients after restarting a DMA in a gRPC-only cluster [ID_37726]
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->

@@ -610,6 +610,14 @@ As a result, proactive detection will now predict when a parameter will cross on
 - A (by default) critical alarm limit of type "absolute" or "relative" specified in the alarm template if either a fixed baseline value is set or a dynamically updated baseline value is configured in the alarm template to detect a continuos degradation.
 - A data range indirectly derived from the protocol info. Currently this is limited to the values 0 and 100 for percentage data for which no historical values were encountered outside the [0,100] interval.
 
+#### DataMiner upgrade: Additional prerequisite will now check whether profiles and resources are stored in an indexing database [ID_37763]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+Starting from DataMiner version 10.4.0, XML storage for profiles and resources is no longer supported. When you upgrade DataMiner to version 10.4.0, the `VerifyElasticStorageType` prerequisite will verify whether the system has successfully switched to an indexing database. If profiles and/or resources are still stored in XML files, this prerequisite will cause the upgrade to fail.
+
+See also: [Upgrade fails because of VerifyElasticStorageType.dll prerequisite](xref:KI_Upgrade_fails_VerifyElasticStorageType_prerequisite)
+
 ### Protocols
 
 #### 'ExportRule' elements can now have a 'whereAttribute' attribute [ID_36622]

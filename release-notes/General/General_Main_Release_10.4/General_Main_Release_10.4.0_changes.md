@@ -642,6 +642,14 @@ From now on, when GQI detects that having multiple sections is allowed for a par
 > [!IMPORTANT]
 > This change will break any existing query that references columns containing multiple values due to being linked to SectionDefinitions that allowed multiple sections in one DOM instance.
 
+#### Service & Resource Management: ProfileManager cache [ID_37735]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+When profile data is stored in an Elasticsearch/OpenSearch database, all ProfileDefinitions and ProfileParameters in the ProfileManager will now be cached on each of the DMAs in the DataMiner System. During the midnight synchronization, all these caches will be reloaded to ensure that they all remain in sync.
+
+Also, additional logging has been added to indicate when a cache was refilled and how many objects were added, updated, removed or ignored. Each log entry will also include the IDs of the first ten of these objects.
+
 #### Storage as a Service: Enhanced performance when migrating data from Cassandra to the cloud [ID_37740]
 
 <!-- MR 10.4.0 - FR 10.3.12 [CU0] -->
@@ -662,17 +670,23 @@ Now, the above-mentioned soft-launch options will be disabled by default, causin
 
 When you change the anomaly configuration in an alarm template assigned to a main DVE element, from now on, the changes will immediately be applied to all open anomaly alarm events. The severity of the open alarm events will be changed to the new severity defined in the updated anomaly configuration.
 
-#### GQI: Enhanced performance when executing join queries of which the subqueries are sorted [ID_37803]
+#### GQI: Enhanced performance when executing inner of left join queries in which sorting is applied to the left query [ID_37803]
 
 <!-- MR 10.4.0 - FR 10.4.1 -->
 
-Because of a number of enhancements, overall performance has increased when executing join queries of which the subqueries are sorted.
+Because of a number of enhancements, overall performance has increased when executing inner or left join queries in which sorting is applied to the left query.
 
 #### GQI: Enhanced performance when executing sorted queries [ID_37806]
 
 <!-- MR 10.4.0 - FR 10.4.1 -->
 
 Forwarding sort operators to the backend is now supported for a wider range of query configurations. This will considerably increase overall performance of numerous sorted queries.
+
+#### SLNet will no longer allow DataMiner Agents to connect when they share the same DataMiner GUID [ID_37819]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+When two DataMiner Agents try to connect via SLNet, from now on, this will no longer be allowed if the two agents share the same DataMiner GUID (except when they are both part of the same Failover setup).
 
 ### Fixes
 
