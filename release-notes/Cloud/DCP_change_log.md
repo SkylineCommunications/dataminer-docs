@@ -6,6 +6,10 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 17 November 2023 - Enhancement - SupportAssistant 1.5.3 - Fixed potential memory leak [ID_37843]
+
+When SupportAssistant 1.5.2 or older was installed, there was a potential memory and disk space leak for non cloud connected systems or systems with invalid cloud connection configurations or setups. This has now been resolved.
+
 #### 8 November 2023 - Enhancement - CloudGateway 2.12.4, SupportAssistant 1.5.2, FieldControl 2.9.1, CoreGateway 2.13.3, ArtifactDeployer 1.5.2, Orchestrator 1.4.1 - Dependencies updated [ID_37784] [ID_37785] [ID_37797] [ID_37798] [ID_37800] [ID_37805]
 
 Several dependencies have been updated.
