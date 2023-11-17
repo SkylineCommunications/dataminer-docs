@@ -129,6 +129,11 @@ If you have a dependency on .NET Framework (e.g. Skyline.DataMiner.Dev.*), you w
 - *Skyline.DataMiner.DataSources.XXX*
 
   - Holds the packages that can communicate with external data sources. This also includes packages like OpenConfig.Gnmi that rely on the CommunicationGateway DxM.
+ 
+- *Skyline.DataMiner.ProjectAPI.XXX*
+
+  - Holds project-specific packages. There is no real use for these packages outside of the project scope.
+  - For example: Skyline.DataMiner.ProjectAPI.[CustomerName].[ProjectName].XXX
 
 ## Versioning conventions
 
