@@ -13,11 +13,28 @@ uid: SRM_1.2.34
 
 It is now possible to view the details of a booking in the Booking Manager application. To do so, when you have selected a booking on the timeline, click the *Details* icon in the lower right corner.
 
-#### SRM Framework Configuration BPA [ID_37689]
+#### SRM Framework Configuration BPA [ID_37417] [ID_37689]
 
 A new SRM Framework Configuration BPA test is now included in the SRM Framework.
 
-You can use this BPA test to check if the SRM logging location is correctly configured. The test will check if there is a parameter with name *Logging Location*, and it will check whether the value of this parameter is valid, it is part of the Skyline DataMiner\\Documents folder, and it does not end in a backslash character.
+You can use this BPA test to check if properties of current and future bookings have been set correctly and to check if the SRM logging location is correctly configured.
+
+For the properties, the test will check the following things:
+
+- Whether each booking has properties with the name *Booking Manager*, *Booking Life Cycle*, *FriendlyReference*, *PreRoll*, *PostRoll*, *Service State*, *Start*, *End*, *VisualBackground*, and/or *VisualForeground*.
+- Whether the above-mentioned properties have a value.
+- Whether the properties *Start* and *End* are in DateTime format.
+- Whether the properties *PreRoll* and *PostRoll* are in TimeSpan format.
+- Whether the *Start* - *PreRoll* property value is the same as *Reservation.Start*.
+- Whether the *End* + *PostRoll* property value is the same as *Reservation.End* when the *End* property does not have the value *Not Applicable*.
+- Whether the *PostRoll* property value is the same as *TimeSpan.Zero* when the *End* property has the value *Not Applicable*.
+- Whether the Booking Manager property value refers to an existing, active DataMiner element using the connector Skyline Booking Manager.
+- Whether the booking has the *Virtual Platform* property and its value is the same as the value of the element's *Default Virtual Platform* parameter.
+
+For the booking location, the test will check if there is a parameter with name *Logging Location*, and it will check whether the value of this parameter is valid, it is part of the Skyline DataMiner\\Documents folder, and it does not end in a backslash character.
+
+> [!NOTE]
+> Depending on the number of bookings in the system, the BPA test can take some time to run.
 
 #### Booking creation now supports security view IDs [ID_37774]
 
