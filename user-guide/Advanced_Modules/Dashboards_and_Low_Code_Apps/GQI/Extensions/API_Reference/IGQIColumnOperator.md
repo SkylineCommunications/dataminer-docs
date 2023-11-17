@@ -6,8 +6,8 @@ uid: GQI_IGQIColumnOperator
 
 ## Definition
 
-Namespace: `Skyline.DataMiner.Analytics.GenericInterface`  
-Assembly: `SLAnalyticsTypes.dll`
+- Namespace: `Skyline.DataMiner.Analytics.GenericInterface`
+- Assembly: `SLAnalyticsTypes.dll`
 
 This interface makes it possible to manipulate the columns in a custom operator.
 
@@ -19,4 +19,4 @@ Makes it possible to manipulate the columns the custom operator is working with.
 
 #### Parameters
 
-- [GQIEditableHeader](xref:GQI_GQIEditableHeader) `header`: a reference to the header representing the columns.
+- [GQIEditableHeader](xref:GQI_GQIEditableHeader) `header`: A reference to the header representing the columns.

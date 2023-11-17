@@ -6,8 +6,8 @@ uid: GQI_GQIEditableHeader
 
 ## Definition
 
-Namespace: `Skyline.DataMiner.Analytics.GenericInterface`  
-Assembly: `SLAnalyticsTypes.dll`
+- Namespace: `Skyline.DataMiner.Analytics.GenericInterface`
+- Assembly: `SLAnalyticsTypes.dll`
 
 Represents the header, containing columns, that the custom operator can manipulate.
 
@@ -19,35 +19,35 @@ Adds new columns to the header.
 
 #### Parameters
 
-- *params* `GQIColumn[]` columns: the columns to add.
+- *params* `GQIColumn[]` columns: The columns to add.
 
 ### void DeleteAllColumns()
 
-Delete all the columns in the header.
+Deletes all the columns in the header.
 
 ### void DeleteColumns(params GQIColumn[] columns)
 
-Delete the provided columns from the header.
+Deletes the provided columns from the header.
 
 #### Parameters
 
-- *params* `GQIColumn[]` columns: the columns to delete.
+- *params* `GQIColumn[]` columns: The columns to delete.
 
 ### void DeleteColumns(params string[] columnNames)
 
-Delete the columns, matching the provided names, from the header.
+Deletes the columns matching the provided names from the header.
 
 #### Parameters
 
-- *params* `string[]` columns: the column names of the columns to delete.
+- *params* `string[]` columns: The column names of the columns to delete.
 
 ### GQIColumn GetColumn(string name)
 
-Get the column by name.
+Gets the column by name.
 
 #### Parameters
 
-- string `name`: the column name.
+- string `name`: The column name.
 
 #### Returns
 
@@ -55,18 +55,18 @@ The [GQIColumn](xref:GQI_GQIColumn) matching the provided name.
 
 ### void RenameColumn(GQIColumn column, string newName)
 
-Change the name of the provided column.
+Changes the name of the provided column.
 
 #### Parameters
 
-- [GQIColumn](xref:GQI_GQIColumn) `column`: the column for which the name should be updated.
-- string `newName`: the new name.
+- [GQIColumn](xref:GQI_GQIColumn) `column`: The column for which the name should be updated.
+- string `newName`: The new name.
 
 ### void RenameColumn(string column, string newName)
 
-Change the name of a column.
+Changes the name of a column.
 
 #### Parameters
 
-- string `column`: the column name of the column for which the name should be updated.
-- string `newName`: the new name.
+- string `column`: The column name of the column for which the name should be updated.
+- string `newName`: The new name.

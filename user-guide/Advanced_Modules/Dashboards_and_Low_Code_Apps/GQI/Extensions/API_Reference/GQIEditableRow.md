@@ -6,8 +6,8 @@ uid: GQI_GQIEditableRow
 
 ## Definition
 
-Namespace: `Skyline.DataMiner.Analytics.GenericInterface`  
-Assembly: `SLAnalyticsTypes.dll`
+- Namespace: `Skyline.DataMiner.Analytics.GenericInterface`
+- Assembly: `SLAnalyticsTypes.dll`
 
 Represents a row that a custom operator can manipulate.
 
@@ -15,15 +15,15 @@ Represents a row that a custom operator can manipulate.
 
 ### void Delete()
 
-Delete the row.
+Deletes the row.
 
 ### string GetDisplayValue(GQIColumn column)
 
-Get the display value for the cell of the specified column.
+Gets the display value for the cell of the specified column.
 
 #### Parameters
 
-- [GQIColumn](xref:GQI_GQIColumn) `column`: the column for which the display value should be retrieved.
+- [GQIColumn](xref:GQI_GQIColumn) `column`: The column for which the display value should be retrieved.
 
 #### Returns
 
@@ -31,11 +31,11 @@ The value, of type `T`, of the cell matching the provided column.
 
 ### string GetDisplayValue(string columnName)
 
-Get the display value for the cell of the specified column name.
+Gets the display value for the cell of the specified column name.
 
 #### Parameters
 
-- string `columnName`: the column name of the column for which the display value should be retrieved.
+- string `columnName`: The column name of the column for which the display value should be retrieved.
 
 #### Returns
 
@@ -43,11 +43,11 @@ The display value of the cell matching the provided column.
 
 ### T GetValue\<T\>(GQIColumn column)
 
-Get the value for the cell of the specified column.
+Gets the value for the cell of the specified column.
 
 #### Parameters
 
-- [GQIColumn](xref:GQI_GQIColumn) `column`: the column for which the value should be retrieved.
+- [GQIColumn](xref:GQI_GQIColumn) `column`: The column for which the value should be retrieved.
 
 #### Returns
 
@@ -55,14 +55,14 @@ The value, of type `T`, of the cell matching the provided column.
 
 ### T GetValue\<T\>(GQIColumn\<T\> column)
 
-Get the value for the cell of the specified column.
+Gets the value for the cell of the specified column.
 
 > [!NOTE]
 > `GetValue` returns the default of type `T` if no value is available in that cell. If it is important to know if a value was present, use the `TryGetValue` method instead.
 
 #### Parameters
 
-- [GQIColumn\<T\>](xref:GQI_GQIColumn) `column`: the column for which the value should be retrieved. 
+- [GQIColumn\<T\>](xref:GQI_GQIColumn) `column`: The column for which the value should be retrieved.
 
 #### Returns
 
@@ -70,11 +70,11 @@ The value, of type `T`, of the cell matching the provided column.
 
 ### T GetValue\<T\>(string columnName)
 
-Get the value for the cell of the specified column name.
+Gets the value for the cell of the specified column name.
 
 #### Parameters
 
-- string `columnName`: the column name of the column for which the value should be retrieved.
+- string `columnName`: The column name of the column for which the value should be retrieved.
 
 #### Returns
 
@@ -82,11 +82,11 @@ The value, of type `T`, of the cell matching the provided column.
 
 ### object GetValue(string columnName)
 
-Get the value for the cell of the specified column name.
+Gets the value for the cell of the specified column name.
 
 #### Parameters
 
-- string `columnName`: the column name of the column for which the value should be retrieved.
+- string `columnName`: The column name of the column for which the value should be retrieved.
 
 #### Returns
 
@@ -94,80 +94,80 @@ The value, of type `object`, of the cell matching the provided column.
 
 ### bool TryGetValue\<T\>(GQIColumn column, out T value)
 
-Get the value for the cell of the specified column.
+Gets the value for the cell of the specified column.
 
 #### Parameters
 
-- [GQIColumn](xref:GQI_GQIColumn) `column`: the column for which the value should be retrieved.
-- *out* `T` value: the value, of type `T`, of the cell matching the provided column.
+- [GQIColumn](xref:GQI_GQIColumn) `column`: The column for which the value should be retrieved.
+- *out* `T` value: The value, of type `T`, of the cell matching the provided column.
 
 #### Returns
 
-`true` if the value was successfully retrieved, otherwise `false`.
+`true` if the value has been successfully retrieved, otherwise `false`.
 
 ### bool TryGetValue\<T\>(GQIColumn\<T\> column, out T value)
 
-Get the value for the cell of the specified column.
+Gets the value for the cell of the specified column.
 
 #### Parameters
 
-- [GQIColumn\<T\>](xref:GQI_GQIColumn) `column`: the column for which the value should be retrieved.
-- *out* `T` value: the value, of type `T`, in the row matching the provided column.
+- [GQIColumn\<T\>](xref:GQI_GQIColumn) `column`: The column for which the value should be retrieved.
+- *out* `T` value: The value, of type `T`, in the row matching the provided column.
 
 #### Returns
 
-`true` if the value was successfully retrieved, otherwise `false`.
+`true` if the value has been successfully retrieved, otherwise `false`.
 
 ### bool TryGetValue\<T\>(string columnName, out T value)
 
-Get the value for the cell of the specified column name.
+Gets the value for the cell of the specified column name.
 
 #### Parameters
 
-- string `columnName`: the name of the column for which the value should be retrieved.
-- *out* `T` value: the value, of type `T`, in the row matching the provided column.
+- string `columnName`: The name of the column for which the value should be retrieved.
+- *out* `T` value: The value, of type `T`, in the row matching the provided column.
 
 #### Returns
 
-`true` if the value was successfully retrieved, otherwise `false`.
+`true` if the value has been successfully retrieved, otherwise `false`.
 
 ### void SetDisplayValue(GQIColumn column, string displayValue)
 
-Set the display value for the cell of the specified column.
+Sets the display value for the cell of the specified column.
 
 #### Parameters
 
-- [GQIColumn](xref:GQI_GQIColumn) `column`: the column for which the display value should be set.
-- string `displayValue`: the display value that should be set.
+- [GQIColumn](xref:GQI_GQIColumn) `column`: The column for which the display value should be set.
+- string `displayValue`: The display value that should be set.
 
 ### void SetDisplayValue(string columnName, string displayValue)
 
-Set the display value for the cell of the specified column name.
+Sets the display value for the cell of the specified column name.
 
 #### Parameters
 
-- string `columnName`: the column name of the column for which the display value should be set.
-- string `displayValue`: the display value that should be set.
+- string `columnName`: The column name of the column for which the display value should be set.
+- string `displayValue`: The display value that should be set.
 
 ### void SetValue(GQIColumn column, object value, string displayValue = null)
 
-Set the value for the cell of the specified column.
+Sets the value for the cell of the specified column.
 
 #### Parameters
 
-- [GQIColumn](xref:GQI_GQIColumn) `column`: the column for which the value should be set.
-- object `value`: the value that should be set.
-- (optional) string `displayValue`: the display value that should be set.
+- [GQIColumn](xref:GQI_GQIColumn) `column`: The column for which the value should be set.
+- object `value`: The value that should be set.
+- (optional) string `displayValue`: The display value that should be set.
 
 ### void SetValue\<T\>(GQIColumn\<T\> column, T value, string displayValue = null)
 
-Set the value for the cell of the specified column.
+Sets the value for the cell of the specified column.
 
 #### Parameters
 
-- [GQIColumn\<T\>](xref:GQI_GQIColumn) `column`: the column for which the value should be set.
-- object `value`: the value that should be set.
-- (optional) string `displayValue`: the display value that should be set.
+- [GQIColumn\<T\>](xref:GQI_GQIColumn) `column`: The column for which the value should be set.
+- object `value`: The value that should be set.
+- (optional) string `displayValue`: The display value that should be set.
 
 ### void SetValue(string columnName, object value, string displayValue = null)
 
@@ -175,6 +175,6 @@ Set the value for the cell of the specified column.
 
 #### Parameters
 
-- string `columnName`: the column name of the column for which the value should be set.
-- object `value`: the value that should be set.
-- (optional) string `displayValue`: the display value that should be set.
+- string `columnName`: The column name of the column for which the value should be set.
+- object `value`: The value that should be set.
+- (optional) string `displayValue`: The display value that should be set.
