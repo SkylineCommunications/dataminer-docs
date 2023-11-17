@@ -28,6 +28,6 @@ While these are not recommended, we also still support setups with storage per D
 
 - [DataMiner User-Defined APIs](xref:UD_APIs)
 
-- [Specific GQI data sources](xref:Get_parameter_table_by_alias)
+- [Specific GQI data sources](xref:Query_data_sources)
 
 ![indexing database per DMS](~/user-guide/images/Indexing_database_per_DMS.svg)
