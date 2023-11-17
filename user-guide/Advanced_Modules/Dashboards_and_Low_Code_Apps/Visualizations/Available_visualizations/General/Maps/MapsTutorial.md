@@ -8,6 +8,9 @@ In this tutorial, you will learn how to add and configure a maps component in a 
 
 The content and screenshots for this tutorial have been created in DataMiner version 10.4.1.
 
+## Prerequisites
+To complete this tutorial, you need a DataMiner version >= 10.4.1 and should have the *ReportsAndDashboardsGQIMaps* soft-launch option active.
+
 ## Overview
 - [Step 1: Set up the data](#step-1-set-up-the-data)
 - [Step 2: Visualize the cell towers](#step-2-visualize-the-cell-towers)
