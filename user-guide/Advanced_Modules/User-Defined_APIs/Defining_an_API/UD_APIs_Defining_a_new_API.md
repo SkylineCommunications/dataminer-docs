@@ -115,15 +115,10 @@ Query parameters are available in the QueryParameters property in the `ApiTrigge
 | `GetAllKeys()` | `List<string>` | Returns all keys for which there is a value. |
 | `ContainsKey(string key)` | `bool` | Returns whether the key is present or not. Key name is case-sensitive! |  
 
-Query parameter keys are unique, and case-insensitive. Passing multiple keys with different casing will result in all values being added to the first key.  
-  
-**Example:**  
-The query string: `?limit=10&LIMIT=20`  
-Will result in the following list of values when calling `requestData.QueryParameters.TryGetValues("limit")` : `[10, 20]`  
-But calling `requestData.QueryParameters.TryGetValues("LIMIT")` would result in a `false` result with `null` as the out paramter with the list of values.
-
 > [!NOTE]
 >
+> - Multiple values can be added for one key.
+> - Query parameter keys are case-sensitive.
 > - The maximum size for the query string is 2KB.
 > - Query parameters are available from DataMiner 10.4.1/10.4.0 onwards.
 
