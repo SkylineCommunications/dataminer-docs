@@ -58,6 +58,27 @@ Up to now, in some cases, service chains could get redrawn too often, or shapes 
 
 In the *View* tab of a spectrum card, the buttons in the *Reference lines* panel and the *Thresholds* panel as well as the delete buttons in the *Measurement Points* panel have been restyled to match the buttons in the *Markers* panel.
 
+#### Spectrum Analysis: Editing the X-axis and Y-axis labels [ID_37821]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+
+In a spectrum view, it is now possible to modify the center frequency and reference level.
+
+To modify the center frequency:
+
+1. Click the pencil icon next to the center frequency X-axis label.
+1. Use the up/down buttons to change the center frequency.
+1. Click *Confirm* or press ENTER.
+
+To modify the reference level:
+
+1. Click the pencil icon next to the reference level Y-axis label.
+1. Use the up/down buttons to change the reference level.
+1. Click *Confirm* or press ENTER.
+
+> [!NOTE]
+> To change the unit of either the center frequency or the reference level, go to the settings menu on the right.
+
 #### Alarm Console: New alarm tab showing current suggestion events now has the 'Automatically remove cleared alarms' option enabled by default [ID_37855]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
