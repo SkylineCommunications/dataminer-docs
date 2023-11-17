@@ -87,6 +87,17 @@ When you add a new alarm tab showing the current suggestion events, that tab wil
 
 This means that suggestion events will automatically disappear from the tab approximately 2 hours after they have been detected.
 
+#### Settings: Default values of trend graph action settings have been changed [ID_37867]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+
+In the *Settings* window, the default values of the following trend graph action settings have been changed:
+
+| Setting | New default value |
+|---------|-------------------|
+| Right mouse button action on graph         | Select |
+| Hotkey + left mouse button action on graph | Zoom   |
+
 ### Fixes
 
 #### A number of Automation issues have been fixed [ID_37674]

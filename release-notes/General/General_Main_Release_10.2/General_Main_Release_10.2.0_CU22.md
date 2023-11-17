@@ -77,6 +77,17 @@ When you add a new alarm tab showing the current suggestion events, that tab wil
 
 This means that suggestion events will automatically disappear from the tab approximately 2 hours after they have been detected.
 
+#### DataMiner Cube - Settings: Default values of trend graph action settings have been changed [ID_37867]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+
+In the *Settings* window, the default values of the following trend graph action settings have been changed:
+
+| Setting | New default value |
+|---------|-------------------|
+| Right mouse button action on graph         | Select |
+| Hotkey + left mouse button action on graph | Zoom   |
+
 #### DataMiner Cube - Desktop application: New command-line argument 'UseInitialArgumentsAfterDisconnect' [ID_37888]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
