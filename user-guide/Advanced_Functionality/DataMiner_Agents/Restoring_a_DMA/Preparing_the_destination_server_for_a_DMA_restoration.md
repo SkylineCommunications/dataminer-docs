@@ -94,19 +94,21 @@ To prepare the destination server, there are several possibilities:
 
         - *C:\\Program Files\\MySQL\\MySQL Server 5.0\\data\\SLDMADB*
 
-  1. For a DMA using a local ElasticSearch database:
+  1. For a DMA using a local Elasticsearch database:
 
-      1. Open Windows Task Manager and stop the ElasticSearch service.
+      1. Open Windows Task Manager and stop the Elasticsearch service.
 
       1. Delete the content of the folder *D:\\ProgramData\\ElasticSearch\\*.
 
-  1. For a DMA using local OpenSearch database:
+  1. For a DMA using a local OpenSearch database:
 
-      1. Stop your OpenSearch by clicking CTRL+C in the Command Prompt or Powershell. Or simply close the window.
+      1. Stop OpenSearch by clicking CTRL+C in the command prompt or Powershell. Or simply close the window.
 
-      1. open your opensearch.yaml file and look for path.data
+      1. Open the *opensearch.yaml* file and look for *path.data*.
 
-      1. Delete the content of the folder found in the yaml file above. If no path.data has been set this will be stored in *C:\\Users\\<username>\\AppData\\Local\\OpenSearch* of the user that was running the OpenSearch database.
+      1. Delete the content of the folder specified with *path.data*.
+
+         If no path.data folder is configured in the YAML file, you will instead need to remove the content of the folder *C:\\Users\\<username>\\AppData\\Local\\OpenSearch* of the user that was running the OpenSearch database.
 
   1. Delete the Windows user accounts on the server that have a corresponding DataMiner account.
 
@@ -123,10 +125,10 @@ To prepare the destination server, there are several possibilities:
   1. Start DataMiner. During startup, the necessary database tables will be created.
 
 > [!NOTE]
+>
 > - The destination DataMiner Agent must run exactly the same DataMiner software version as the original server. If it does not, perform either a software upgrade or a software downgrade to make sure the version is the same.
 > - The destination server must have enough resources (CPU, memory, hard disk performance, etc.) to be able to handle the DataMiner configuration that you intend to restore on that server.
 > - If you intend to migrate to another server while the original DMA stays online, take care to avoid an IP conflict:
->     - Either keep the destination server offline as long as the original DMA is online, or
->     - Make sure that the destination server has a different IP address and computer name.
-> - For the DxM's running on the server, no changes are needed.
->
+>   - Either keep the destination server offline as long as the original DMA is online, or
+>   - Make sure that the destination server has a different IP address and computer name.
+> - For the DxMs running on the server, no changes are needed.
