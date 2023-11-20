@@ -38,6 +38,14 @@ Similar to other types of anomaly suggestion events, flatline suggestion events 
 > [!NOTE]
 > Flatline alarms stay open until the flatline in question disappears or SLAnalytics is restarted.
 
+#### Protocols: Buffer for SNMP responses now has a dynamic size [ID_37824]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+
+Up to now, when an SNMP response was received, a buffer with a fixed size of 10240 characters was used to translate the response to the requested format (e.g. OctetStringUTF8). When the response was larger that 10240 characters, it was cut off.
+
+From now on, the buffer will have a dynamic size. This allow larger responses to be processed, and will also make sure that less memory has to be reserved when smaller responses are received.
+
 ### Fixes
 
 #### DELT: Trend data missing in DELT package after exporting tables with primary keys of type string [ID_37664]
@@ -50,7 +58,7 @@ When you exported tables of which the primary keys were of type string, the DELT
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
 
-In some rare cases, an attempt would incorrectly be made to update a service that had already been deleted, causing that service to re-appear.
+In some rare cases, if an attempt was made to update a service that had just been deleted, the service could re-appear.
 
 Additional logging has now been added to allow better tracing of errors that occur while creating or updating services.
 

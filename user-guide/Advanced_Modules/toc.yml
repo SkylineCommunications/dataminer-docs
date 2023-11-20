@@ -569,30 +569,56 @@ items:
                       - name: Optimizing your custom operator
                         topicUid: Custom_Operator_Tutorial
               - name: API reference
-                topicUid: GQIArgument
+                topicUid: GQI_GQIArgument
                 items:
                   - name: GQIArgument
-                    topicUid: GQIArgument
+                    topicUid: GQI_GQIArgument
                   - name: GQICell
-                    topicUid: GQICell
+                    topicUid: GQI_GQICell
                   - name: GQIColumn
-                    topicUid: GQIColumn
+                    topicUid: GQI_GQIColumn
                   - name: GQIDMS
-                    topicUid: GQIDMS
+                    topicUid: GQI_GQIDMS
+                  - name: GQIEditableHeader
+                    topicUid: GQI_GQIEditableHeader
+                  - name: GQIEditableRow
+                    topicUid: GQI_GQIEditableRow
                   - name: GQIPage
-                    topicUid: GQIPage
+                    topicUid: GQI_GQIPage
                   - name: GQIRow
-                    topicUid: GQIRow
+                    topicUid: GQI_GQIRow
+                  - name: IGQIColumn
+                    topicUid: GQI_IGQIColumn
+                  - name: IGQIColumnOperator
+                    topicUid: GQI_IGQIColumnOperator
+                  - name: IGQICoreBlock
+                    topicUid: GQI_IGQICoreBlock
+                  - name: IGQICoreOperator
+                    topicUid: GQI_IGQICoreOperator
                   - name: IGQIDataSource
-                    topicUid: IGQIDataSource
+                    topicUid: GQI_IGQIDataSource
+                  - name: IGQIFilterOperator
+                    topicUid: GQI_IGQIFilterOperator
                   - name: IGQIInputArguments
-                    topicUid: IGQIInputArguments
+                    topicUid: GQI_IGQIInputArguments
                   - name: IGQIOnDestroy
-                    topicUid: IGQIOnDestroy
+                    topicUid: GQI_IGQIOnDestroy
                   - name: IGQIOnInit
-                    topicUid: IGQIOnInit
+                    topicUid: GQI_IGQIOnInit
                   - name: IGQIOnPrepareFetch
-                    topicUid: IGQIOnPrepareFetch
+                    topicUid: GQI_IGQIOnPrepareFetch
+                  - name: IGQIOperator
+                    topicUid: GQI_IGQIOperator
+                  - name: IGQIOperatorNode
+                    topicUid: GQI_IGQIOperatorNode
+                  - name: IGQIQueryNode
+                    topicUid: GQI_IGQIQueryNode
+                  - name: IGQIRowOperator
+                    topicUid: GQI_IGQIRowOperator
+                  - name: OnArgumentsProcessedInputArgs
+                    topicUid: GQI_OnArgumentsProcessedInputArgs
+                  - name: OnInitInputArgs
+                    topicUid: GQI_OnInitInputArgs
           - name: Query updates
             topicUid: Query_updates
           - name: Importing a query

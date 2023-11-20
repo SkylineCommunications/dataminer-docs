@@ -105,6 +105,12 @@ It is now possible to duplicate a GQI query:
 1. In the *Data* tab, open the *Queries* section, and click the ellipsis ("...") button of the GQI query that you want to duplicate.
 1. In the context menu, select *Duplicate*.
 
+#### Low-Code Apps: New Edit and Delete commands in app context menu of Root page [ID_37830]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+When, on the Root page of a DataMiner Agent, you hover over an application and click the ellipsis ("...") button, the context menu will now include an *Edit* command as well as a *Delete* command.
+
 ## Changes
 
 ### Enhancements
@@ -151,3 +157,15 @@ When the access level of a user was changed, up to now, that change would not im
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
 
 When, in the settings of a *Clock* component, you had specified that it had to display the current DataMiner time (i.e. the time of the DataMiner server to which you are connected), the component would incorrectly display the local time (i.e. the DataMiner client time), and vice versa.
+
+#### Dashboards app & Low-Code Apps: Problem when a 'Line & area chart' component was linked to a query [ID_37863]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+When, in the Dashboards app or a low-code app, a *Line & area chart* component was linked to a query, in some cases, the entire app could become unresponsive.
+
+#### Web Services API: Problem with GetServicesForFilter method [ID_37901]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+In some cases, the filter passed to the *GetServicesForFilter* method would not get deserialized correctly, causing an exception to be thrown.

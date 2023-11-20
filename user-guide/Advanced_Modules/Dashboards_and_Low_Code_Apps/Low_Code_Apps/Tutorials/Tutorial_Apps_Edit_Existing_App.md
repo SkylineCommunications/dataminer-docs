@@ -49,7 +49,7 @@ Occasionally, there may be a need to edit a previous version of an application. 
 
 Now that you know how to edit an app, you can start adding more pages to the app.
 
-- [Adding pages and panels](xref:Tutorial_Apps_Managing_Pages)
+- [Managing the pages in an app](xref:Tutorial_Apps_Managing_Pages)
 
 ## Learning paths
 
