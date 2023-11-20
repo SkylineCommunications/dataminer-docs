@@ -66,6 +66,10 @@ The *SRM_ResourceAction* "Add" action now supports lite contributing resources.
 
 ### Fixes
 
+#### SRM Function Resources Consistency BPA test could not find hidden or service element [ID_37568]
+
+When the main element referenced by a resource was a hidden element or service element, it could occur that the SRM Function Resources Consistency BPA test reported that this element could not be found.
+
 #### Not possible to reset resource pool parameter with DTR [ID_37639]
 
 When a data transfer rule (DTR) was used to reset a resource pool parameter, it could occur that this did not work. After a value was set in the parameter, only values that were present in the parameter discrete options were accepted, so a reset to an empty string was discarded.
