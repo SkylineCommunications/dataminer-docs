@@ -173,7 +173,7 @@ This stage converts the protocol Visual Studio solution back to a protocol XML f
 
 ## Create protocol package
 
-This stage creates a .dmprotocol package including the protocol XML, assemblies, Visio and Help files.
+This stage creates a .dmprotocol package including the protocol XML, assemblies and Visio files.
 
 ## Scan test projects
 
