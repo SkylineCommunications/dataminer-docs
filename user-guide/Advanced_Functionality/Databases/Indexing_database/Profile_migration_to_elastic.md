@@ -13,7 +13,7 @@ When you [install an indexing database](xref:Installing_Elasticsearch_via_DataMi
 
 > [!NOTE]
 >
-> - XML storage is no longer supported from DataMiner 10.4.0 onwards. Upgrading to 10.4.0 will not be possible if the profile data is still stored in XML.
+> - XML storage is no longer supported from DataMiner 10.4.0 onwards. Upgrading to 10.4.0 will not be possible if the profile data is still stored in XML. It is not possible to switch storage types after you upgrade to DataMiner 10.4.0.
 > - Elasticsearch is only supported up to version 6.8. If you are using Elasticsearch as the indexing database, we therefore recommend using [Storage as a Service](xref:STaaS) instead, or if you do want to continue using self-hosted storage, using [dedicated clustered storage](xref:Dedicated_clustered_storage) with OpenSearch.
 
 ## Migrating from XML to the indexing database
@@ -51,10 +51,11 @@ To migrate the profiles, you will need to use the SLNetClientTest tool. Note tha
 
    > [!NOTE]
    > The migration should not take more than a few minutes. During testing, migrating a *Profiles.xml* file of 100 MB in a system with a local Elasticsearch database took about 4 minutes.
+   > In the MigrationStatus table in SLNetClientTest tool, the profile instances, definitions and parameters rows will reflect the progress of the migration. 
 
-1. When the migration is complete, click the *Start using Elastic* button to switch to indexing database storage.
+1. When the migration is complete, click the *Create Configuration* button to create the configuration file.
 
-   If the *Start using Elastic* button is not visible, that means there is no configuration file yet. in that case, click the *Create Configuration* button to create the configuration file.
+   If this button is not visible, that means you already hava a configuration file. You can continue by clicking the *Start using Elastic* button to switch to indexing database storage.
 
 ### Troubleshooting
 

@@ -10,6 +10,9 @@ The content and screenshots for this tutorial were created in DataMiner version 
 
 Expected duration: 5 minutes.
 
+> [!TIP]
+> See also: [Kata #7: Pages, panels and headers in a low-code app](https://community.dataminer.services/courses/kata-7/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+
 ## Prerequisites
 
 - A DataMiner System using DataMiner 10.3.11 or higher, which is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
