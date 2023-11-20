@@ -30,4 +30,4 @@ To configure a header bar:
 > To delete a button, click the garbage can icon next to that button in the page configuration pane, and then click the check mark icon to confirm.
 
 > [!TIP]
-> See also: [Using button components and header bars in Low-Code Apps](https://community.dataminer.services/video/using-button-components-and-header-bars-in-dataminer-apps/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> See also: [Using button components and header bars in Low-Code Apps](https://community.dataminer.services/video/using-button-components-and-header-bars-in-dataminer-apps/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png) and the [Using a headerbar](xref:Tutorial_Apps_Headerbar) tutorial.

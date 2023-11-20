@@ -10,9 +10,6 @@ The content and screenshots for this tutorial were created in DataMiner version 
 
 Expected duration: 5 minutes.
 
-> [!NOTE]
-> A low-code app will only show the navigation sidebar if there are at least two pages. If an app has only one page, the sidebar is not displayed outside of edit mode.
-
 ## Prerequisites
 
 - A DataMiner System using DataMiner 10.3.11 or higher, which is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
@@ -41,6 +38,9 @@ Expected duration: 5 minutes.
 1. In the sidebar on the left, click the "+" icon (in case the sidebar is collapsed) or click *Create page* (if the sidebar is expanded).
 
    ![Create page button](~/user-guide/images/PageAdd.png)
+
+> [!NOTE]
+> A low-code app will only show the navigation sidebar if there are at least two pages. If an app has only one page, the sidebar is not displayed outside of edit mode.
 
 ## Step 3: Configure how your page is shown
 
@@ -125,6 +125,12 @@ You can quickly create a duplicate of an existing page, resulting in a new page 
    - *Delete*: This will ask you if you are sure you want to delete the page. If you confirm, the page will be removed along with all its content.
 
    ![Page context menu](~/user-guide/images/PageContextMenu.png)
+
+## Next tutorial
+
+In addition to displaying pages, we can also show panels. Let us explore how to achieve this.
+
+- [Showing a panel](xref:Tutorial_Apps_Panel)
 
 ## Learning paths
 

@@ -22,4 +22,8 @@ With the DataMiner Low-Code Apps module, you can create custom applications that
 
 - [Managing pages](xref:Tutorial_Apps_Managing_Pages)
 
+- [Showing a panel](xref:Tutorial_Apps_Panel)
+
+- [Using a headerbar](xref:Tutorial_Apps_Headerbar)
+
 - [Using the stepper component in a low-code app](xref:TutorialStepper)
