@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.3.12
 ---
 
-# General Feature Release 10.3.12 – Preview
+# General Feature Release 10.3.12
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!IMPORTANT]
 > When downgrading from DataMiner Feature Release version 10.3.8 (or higher) to DataMiner Feature Release version 10.3.4, 10.3.5, 10.3.6 or 10.3.7, an extra manual step has to be performed. For more information, see [Downgrading a DMS](xref:MOP_Downgrading_a_DMS).
@@ -15,10 +15,6 @@ uid: General_Feature_Release_10.3.12
 > - For release notes related to DataMiner Cube, see [DataMiner Cube Feature Release 10.3.12](xref:Cube_Feature_Release_10.3.12).
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.3.12](xref:Web_apps_Feature_Release_10.3.12).
 > - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
-
-## Highlights
-
-*No highlights have been added to this section yet.*
 
 ## New features
 
@@ -248,6 +244,12 @@ For performance reasons, the page size when retrieving element data from a Cassa
 > [!NOTE]
 > When retrieving element data from a MySQL or Microsoft SQL Server database, the page size remains set to 50000.
 
+#### Storage as a Service: Enhanced performance when migrating data from Cassandra to the cloud [ID_37740]
+
+<!-- MR 10.4.0 - FR 10.3.12 [CU0] -->
+
+Because of a number of enhancements, overall performance has increased when migrating data from a Cassandra database to the cloud.
+
 ### Fixes
 
 #### NATSCustodian could incorrectly pick an offline DMA as NAS candidate [ID_37312]
@@ -319,6 +321,12 @@ When the Cassandra Cluster Migrator tool (*SLCCMigrator.exe*) was migrating tabl
 <!-- MR 10.4.0 - FR 10.3.12 -->
 
 In cases where SLDataGateway retrieved an entire table and then applied a filter afterwards, any row limits defined for the query in question would incorrectly be disregarded.
+
+#### Problem when using MessageBroker with chunking [ID_37532]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+On high-load systems, MessageBroker threads could leak when using chunking.
 
 #### Storage as a Service: Paged data retrieval operations would be cut off prematurely [ID_37533]
 
@@ -395,3 +403,30 @@ When the alarm focus cache got full, an error could occur in SLAnalytics.
 <!-- MR 10.4.0 - FR 10.3.12 -->
 
 When data was being migrated from a Cassandra Cluster database to a STaaS database, every DataMiner Agent in the DMS would incorrectly send the average trend data to the cloud. From now on, only one of the agents will send this data.
+
+#### Protocol VDX files imported via a DELT package would not be displayed until a DataMiner restart [ID_37781]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 [CU0] -->
+
+When you imported a DELT package that contained protocol VDX files linked to elements in the package, in some rare cases, those VDX files would incorrectly not be displayed until after a DataMiner restart.
+
+#### SLNetClientTest tool would not indicate that a profile migration to Elasticsearch/OpenSearch had failed due to a profile object with an invalid name [ID_37808]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 [CU0] -->
+
+When, in the SLNetClientTest tool, you went to *Advanced > Migration*, the migration overview would not indicate that a migration of profiles towards Elasticsearch/OpenSearch had failed due to a profile object with a name longer than 32,766 characters.
+
+#### Cassandra Cluster & STaaS: Correlation matchinfo and slidingwindow records could be overwritten [ID_37813]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 [CU0] -->
+
+On systems using a Cassandra Cluster database or STaaS, in some cases, DataMiner Agents could overwrite each other's correlation matchinfo and slidingwindow records.
+
+#### Profile migrations to Elasticsearch/OpenSearch will now fail when the profiles.xml file is corrupt [ID_37818]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 [CU0] -->
+
+When you started a profile migration to an Elasticsearch/OpenSearch database while the *profiles.xml* file was corrupt, up to now, a new empty *profiles.xml* file would be created and the migration would continue. From now on, no new *profiles.xml* file will be created anymore and the migration will go into an error status.
+
+> [!NOTE]
+> When, in the SLNetClientTest tool, you go to *Advanced > Migration*, all migrations in an error status will now have a red background.

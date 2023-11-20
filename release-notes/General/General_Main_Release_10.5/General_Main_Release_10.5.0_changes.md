@@ -11,11 +11,25 @@ uid: General_Main_Release_10.5.0_changes
 
 ### Enhancements
 
+#### Deprecated NotifyDataMiner type 'NT_CONNECTIONS_TO_REMOVE' can no longer be used [ID_37595]
+
+<!-- MR 10.5.0 - FR 10.4.1 -->
+
+From now on, the deprecated NotifyDataMiner type *NT_CONNECTIONS_TO_REMOVE* can no longer be used.
+
 #### SLAnalytics - Proactive cap detection: Enhanced detection of possible future alarm threshold breaches [ID_37681]
 
 <!-- MR 10.5.0 - FR 10.4.1 -->
 
 When an increasing or decreasing trend is detected on a highly aggregated level (i.e. a trend that persists for more than 24 hours), from now on, a proactive cap detection suggestion event will be generated when there is a probability that the trend change in question could lead to a breach of a critical alarm limit at some point in the future, even when the breach has not yet been confirmed by the full prediction model built on the historic trend data.
+
+#### Service & Resource Management: Enhanced performance of ResourceManagerHelper.GetResources when using the ResourceExposers.ID.Equal filter [ID_37720]
+
+<!-- MR 10.5.0 - FR 10.4.1 -->
+
+Because of a number of enhancements, overall performance of the `ResourceManagerHelper.GetResources` method has increased when using a `ResourceExposers.ID.Equal` filter.
+
+Also, the performance of `TrueFilterElement<Resource>` has been improved.
 
 ### Fixes
 
