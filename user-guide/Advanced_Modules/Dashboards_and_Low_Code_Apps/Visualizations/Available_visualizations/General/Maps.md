@@ -34,13 +34,13 @@ This process is similar for the configuration of lines, but instead of one latit
 
 On the *Component > Layout* tab, you can configure the following settings under *Layer settings*:
 
-- *Weight*: Determines which marker is put in the foreground and which in the background in case markers or lines from different layers overlap with each other. The higher the weight of the layer, the more it will be pushed to the foreground. The default weight is 1.
+- **Weight**: Determines which marker is put in the foreground and which in the background in case markers or lines from different layers overlap with each other. The higher the weight of the layer, the more it will be pushed to the foreground. The default weight is 1.
 
-- *Query type*: By default, each query is configured as a set of markers, which is indicated with a circle icon next to the name of the query. If you hover the mouse pointer over the query name, a line icon will also become visible. Click this icon to change the visualization of the data from a set of markers to a set of lines and to reconfigure the dimensions so they can be visualized as lines.
+- **Circle or line icon**: By default, each query is configured as a set of markers, which is indicated with a circle icon to the right of the name of the query. If you hover the mouse pointer over the query name, a line icon will also become visible. Click this icon to change the visualization of the data from a set of markers to a set of lines and to reconfigure the dimensions so they can be visualized as lines.
 
-- *Dimensions*: For each dimension, a dropdown is shown where the chosen column for that dimension can be changed. All dropdowns contain only valid options for that dimension, i.e. string valued columns for the ID and numeric valued columns for the latitude and longitude.
+- **Identifier**/**Latitude**/**Longitude**: For each dimension, a dropdown is shown where the chosen column for that dimension can be changed. All dropdowns contain only valid options for that dimension. For markers, you need to select string-valued columns for the ID and numeric-valued columns for the latitude and longitude. For lines, you need to select a latitude and longitude for both the source and the destination.
 
-- *Template*: Only available when the query is configured as a set of markers. Allows you to change the appearance of the markers. When you click Edit, an editor window opens where you can make changes to the template.
+- **Template**: Only available when the query is configured as a set of markers. Allows you to change the appearance of the markers. When you click Edit, an editor window opens where you can make changes to the template.
 
   > [!NOTE]
   > The center of the marker template is determined by the latitude and longitude values for that marker.
