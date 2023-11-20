@@ -1,0 +1,59 @@
+---
+uid: DIS_2.46
+---
+
+# DIS 2.46
+
+## New features
+
+### IDE
+
+#### Set Param From: Parameter update locations [ID_37831]
+
+In the dropdown for a parameter, a new option has been added: Parameter Update Locations.
+
+This will open up a new window that will show a list of all the locations that update that parameter or possibly update that parameter.
+
+Currently implemented:
+
+- Actions: When a parameter is impacted by one of the following action types: pow, multiply, increment, aggregate, changelength and go.
+
+- Groups: When a SNMP parameter is included in a group.
+
+- Responses: When a parameter is part of a response.
+
+- QActions: When a parameter is being set via protocol.SetParameter or protocol.SetParameters.
+
+When double clicking on an item, you'll go the location of that item. You can also use the context menu to navigate and close the window at the same time.
+
+### Validator
+
+#### New checks and error messages [ID_37367]
+
+The following checks and error messages have been added.
+
+| Check ID | Error message name | Error message |
+|--|--|--|
+| 2.21.20 | UnrecommendedSshOptions                | Unrecommended option 'option' in Param 'pid'. |
+| 2.21.21 | InvalidMixOfSshOptionsAndPortSettings  | Mixing option 'option' and PortSettings SSH is invalid. Param ID 'pid'. |
+
+The check on PortSettings@name has been extended to expect 'SSH Connection' for SSH connections.
+
+### Snippets
+
+#### New snippet: Interactive Toolkit [ID_37932]
+
+A new snippet has been added that jumpstarts the creation of interactive automation scripts with the [IAS Toolkit](https://www.nuget.org/packages/Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit).
+
+It replaces the existing script class with a new one that holds some boiler plate code to start working with the IAS Toolkit.
+
+> [!NOTE]
+> Due to the limitations of snippets, you have to manually add the NuGet package to the project.
+
+## Changes
+
+### Fixes
+
+#### Table editor: Selecting rows was not visible [ID_37728]
+
+In the Table Editor for the *All Columns* and *All Displayed Columns* tables, selecting one or more rows was not properly visualized. This has now been improved and is consistent with the DIS Tree View.
