@@ -19,11 +19,13 @@ To configure the component:
 
    - *WebSocket settings*: Allows you to customize the polling interval for this component. To do so, clear the checkbox in this section and specify the custom polling interval.
 
-   - *General > Override dynamic units*: Disables parameter units from changing dynamically based on their value and protocol definition.
+   - *General > Override dynamic units*: Disables parameter units from changing dynamically based on their value and protocol definition. Disabled by default.
+
+   - *General > Use dynamic units*: When the *Override dynamic units* option is enabled, this option will allow you to determine whether parameter units will change dynamically based on their value and protocol definition. Available from DataMiner 10.0.11 onwards.
 
    - *Data retrieval > Update data*: Allows updates to be enabled or disabled. This setting will enable real-time updates for all queries executed by the selected component<!--RN 37269-->.
 
-   - *Initial Selection*: Allows you to specify a default value. This is the value that will be applied in the feed when the dashboard is opened, unless a custom URL is used specifying a different value.
+   - *Initial Selection*: If enabled, the first item is selected by default. This is the value that will be applied in the grid when the dashboard is opened, unless a custom URL is used specifying a different value. Disabled by default.
 
 1. Fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
 
@@ -43,25 +45,25 @@ To configure the component:
 
    - *Advanced > Grid template*: Allows you to customize the number of columns and rows displayed in the grid component, along with scaling options<!--RN 34761 + 34781-->.
 
-     - By default, the number of displayed columns and rows is set to *Auto*. To modify this number, clear the checkbox in this section and specify the desired amount. To revert to *Auto*, delete the entry.
+     - By default, the number of displayed columns and rows is set to *Auto* (i.e. all columns and/or rows are displayed). To modify the number of displayed columns and rows, clear the checkbox in this section and specify the desired amount. To revert to *Auto*, delete the entry.
 
      - To switch between scaling options, select one of the following buttons:
 
-       - ![Scaled to fit (scaling)](~/user-guide/images/Scaling.png) : All columns and/or rows are displayed. This is the default setting.
+       - ![Scaled to fit (fixed)](~/user-guide/images/Fixed.png) : The scaling of the cells in the columns and/or rows is adjusted dynamically to fit within the boundaries of the grid component.
 
-       - ![Scaled to fit (fixed)](~/user-guide/images/Fixed.png) : All columns and/or rows are displayed using the fixed scaling.
+       - ![Scaled to fit (scaling)](~/user-guide/images/Scaling.png) : The scaling of the cells in the columns and/or rows is set to a fixed size. This is the default setting.
 
      > [!NOTE]
      >
      > - The number of items that can be displayed in a grid component is limited to 1000<!--RN 37699-->.
      > - If the number of items to be displayed exceeds the number of cells displayed in the component, navigation buttons are available to navigate through the data<!--RN 34761-->.
-     > - When the scaling is set to *fixed* and there are too many columns and/or rows to show them at once in the component, in read mode, it is possible to scroll through them with a scrollbar that becomes visible when you hover over the component<!--RN 37699-->.
+     > - When the scaling of the cells is set to a fixed size and there are too many columns and/or rows to show them at once in the component, in read mode, it is possible to scroll through them with a scrollbar that becomes visible when you hover over the component<!--RN 37699-->.
 
    - *Item templates > Alarms*: Allows you to freely customize the appearance of the grid component using templates<!--RN 34761-->.
 
-     - To access the Template Editor, click the pencil icon.
+     - To access the Template Editor, click *Edit* next to the pencil icon.
 
-     - To reuse previously saved templates for components in the same dashboard or low-code app, click the ![reuse template](~/user-guide/images/Reuse_Template.png) button<!--RN 34948-->.
+     - To reuse previously saved templates for components in the same dashboard or low-code app, click *Reuse template* next to the ![reuse template](~/user-guide/images/Reuse_Template.png) button<!--RN 34948-->.
 
        > [!NOTE]
-       > This button is only visible when a component in the dashboard or low-code app is configured with a custom template.
+       > This option is only visible when a component in the dashboard or low-code app is configured with a custom template.
