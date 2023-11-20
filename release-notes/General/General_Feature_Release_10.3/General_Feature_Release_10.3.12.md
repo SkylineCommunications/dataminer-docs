@@ -250,6 +250,17 @@ For performance reasons, the page size when retrieving element data from a Cassa
 
 Because of a number of enhancements, overall performance has increased when migrating data from a Cassandra database to the cloud.
 
+#### DxMs upgraded [ID_37895]
+
+The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
+
+- DataMiner ArtifactDeployer: version 1.5.2
+- DataMiner FieldControl: version 2.9.1
+- DataMiner Orchestrator: version 1.4.1
+- DataMiner SupportAssistant: version 1.5.3
+
+For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
+
 ### Fixes
 
 #### NATSCustodian could incorrectly pick an offline DMA as NAS candidate [ID_37312]
