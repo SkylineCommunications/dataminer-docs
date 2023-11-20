@@ -131,7 +131,7 @@ You can quickly create a duplicate of an existing page, resulting in a new page 
 
 ## Next tutorial
 
-In addition to displaying pages, we can also show panels. Let us explore how to achieve this.
+In addition to pages, you can also show panels in a low-code app:
 
 - [Showing a panel](xref:Tutorial_Apps_Panel)
 

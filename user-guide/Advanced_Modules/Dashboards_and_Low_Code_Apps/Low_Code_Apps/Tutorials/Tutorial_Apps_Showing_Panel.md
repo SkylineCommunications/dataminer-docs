@@ -5,6 +5,13 @@ uid: Tutorial_Apps_Panel
 
 This tutorial explains how you can add and display a panel in an app.
 
+The content and screenshots for this tutorial were created in DataMiner version 10.3.11.
+
+Expected duration: 5 minutes
+
+> [!TIP]
+> See also: [Kata #7: Pages, panels and headers in a low-code app](https://community.dataminer.services/courses/kata-7/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+
 ## Overview
 
 - [Step 1: Install the dummy data sources package](#step-1-install-the-dummy-data-sources-package)
@@ -14,7 +21,7 @@ This tutorial explains how you can add and display a panel in an app.
 
 ## Prerequisites
 
-- A DataMiner System using DataMiner 10.2.6 or higher, which is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
+- A DataMiner System that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
 ## Step 1: Install the dummy data sources package
 
@@ -26,30 +33,38 @@ This tutorial explains how you can add and display a panel in an app.
 
 ## Step 2: Create a panel
 
-1. Ensure that you are editing the application, and be sure to expand the "panels" section in the grey side panel.
+1. Make sure that you are editing the application, and expand the "panels" section in the gray side panel.
 
 1. Click the "+" sign in this section to create a panel.
 
    ![Add a panel](~/user-guide/images/AddPanel.png)
 
-1. Assign a meaningful name to the panel. In our IPAM app, we will name it "Metrics".
+1. Specify a meaningful name for the panel, for example "Metrics".
 
 > [!NOTE]
-> If you have already created apps in the past, then a panel will already be created by default.
+> If you have already created apps in the past, a panel will already be created by default.
 
 ## Step 3: Add content to the panel
 
-1. Create a GQI query that uses the "IP subnets - Dummy" ad hoc data source. Add an aggregate operator to it and count the records using the "Network adress" column.
+1. Create a GQI query:
 
-   ![Count the subnets](~/user-guide/images/CountSubnets.png)
+   1. Use the "IP subnets - Dummy" ad hoc data source.
 
-1. Drag the query on the panel and display it using a state component.
+   1. Add an *Aggregate* operator to it.
 
-1. Configure its layout.
+   1. Configure it to count the records using the "Network address" column.
+
+      ![Count the subnets](~/user-guide/images/CountSubnets.png)
+
+1. Drag the query onto the panel and display it using a state component.
+
+1. Configure the layout of the component.
+
    - Use the large design.
-   - Align in the center. 
 
-   The result should look something like this.
+   - Align in the center.
+
+   The result should look like this:
 
    ![Subnet count](~/user-guide/images/SubnetCountState.png)
 
@@ -57,36 +72,49 @@ This tutorial explains how you can add and display a panel in an app.
 
 ## Step 4: Show the panel
 
-1. We currently have a panel, however, these panels do not appear automatically in your low-code app. Instead, they require activation through a specific action. Actions define the tasks to be executed in response to events.
+You have now added a panel; however, panels are not automatically displayed in a your low-code app. They need to be activated through a specific action. Actions define tasks that need to be executed in response to events.
 
-1. Add a button to our page and configure a label and icon for it. Additionally, use the "Transparent" team for the button. The button should look something like this.
+1. Add a button component to the page and configure its layout:
+
+   - Specify a label.
+
+   - Select an icon.
+
+   - Under Styles, select the *Transparent* theme.
+
+   The button should look like this:
 
    ![Show metrics](~/user-guide/images/ShowMetrics.png)
 
-1. Currently nothing will happen when clicking the button as we have associated no actions with the "On click" event of the button. Go to the settings of the button and click on the "Configure actions" icon. This will open the action editor popup.
+   At this point, nothing will happen yet if a user clicks the button. For this, actions need to be associated with the *On click* event of the button.
+
+1. Go to the settings of the button and click the "Configure actions" icon.
+
+   This will open the action editor.
 
    ![Button on click](~/user-guide/images/ButtonOnClick.png)
 
-1. Pick the "Open a panel" action which brings up additional configuration options.
+1. Select the *Open a panel* action.
 
-   - The panel we intend to open should be automatically selected by default, given that we only have one panel.
-   - You have the option to configure its display location.
-   - Adjust the width of the panel as a percentage of the screen.
-   - Specify whether an overlay should be applied. If enabled, an overlay will be placed on the original page, closing the panel when clicked.
+   Additional configuration options will become available.
 
-   Your action configuration might resemble the following.
+   - The panel will be automatically selected in this case, as you have only one panel. If you were to have multiple panels, you would first have to select the right one. 
+
+   - Under *Where*, you can configure the display location of the panel.
+
+   - Under *Width*, adjust the width of the panel to a percentage of the screen.
+
+   - Enable the *As overlay* toggle button to open the panel as an overlay over the original page, which is automatically closed as soon as the user clicks outside the panel.
 
    ![Open a panel action](~/user-guide/images/OpenPanelAction.png)
 
-1. Publish your changes and validate that clicking the button opens the **Metrics** panel.
-
-[Using a headerbar](xref:Tutorial_Apps_Headerbar)
+1. Publish your changes and check that clicking the button indeed opens the **Metrics** panel.
 
 ## Next tutorial
 
-Header bars can also be used to open panels. Let's explore how to incorporate them into your app.
+You can also use a header bar to open panels:
 
-- [using a headerbar](xref:Tutorial_Apps_Headerbar)
+- [Using a header bar](xref:Tutorial_Apps_Headerbar)
 
 ## Learning paths
 

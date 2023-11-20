@@ -1,9 +1,16 @@
 ---
 uid: Tutorial_Apps_Headerbar
 ---
-# Using a headerbar
+# Using a header bar
 
 This tutorial explains how you can add a header bar to your pages and panels.
+
+The content and screenshots for this tutorial were created in DataMiner version 10.3.11.
+
+Expected duration: 5 minutes
+
+> [!TIP]
+> See also: [Kata #7: Pages, panels and headers in a low-code app](https://community.dataminer.services/courses/kata-7/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 ## Overview
 
@@ -11,21 +18,21 @@ This tutorial explains how you can add a header bar to your pages and panels.
 - [Step 2: Create a header button](#step-2-create-a-header-button)
 - [Step 3: (Optional) Create a panel header bar](#step-3-optional-create-a-panel-header-bar)
 
-## Prerequisites
-
-- A DataMiner System using DataMiner 10.2.6 or higher.
-
 ## Step 1: Add a page header bar
 
-1. Make sure you're editing the app.
+1. Make sure you are editing the app.
 
-2. Within the "Header bar" section, toggle the switch to the right to add a header bar to your page.
+1. In the gray side panel on the left, next to *Header bar*, toggle the switch to the right.
+
+   This will add a header bar to your page.
 
    ![Enable a header bar](~/user-guide/images/HeaderBarOption.png)
 
 ## Step 2: Create a header button
 
-1. There is a "+" sign visible on both the left and right sides of your header bar. Clicking on it will add a header button aligned either to the left or right. Add a button on the right side.
+1. Click the "+" icon on the right side of your header bar.
+
+   This will add a header bar button on the right. There is also a "+" icon on the left, which can be used to add a button on the left.
 
    ![Header bar button](~/user-guide/images/HeaderbarButton.png)
 
@@ -33,8 +40,9 @@ This tutorial explains how you can add a header bar to your pages and panels.
 
    ![Header bar button config](~/user-guide/images/HeaderBarButtonConfig.png)
 
-   1. Give the button a nice icon. You can search for "Dashboard" to find applicable icons for a "Metrics" panel.
-   2. Configure the button to open the side panel, as was done in [Showing a panel](xref:Tutorial_Apps_Panel).
+   1. Give the button a suitable icon. You can search for "Dashboard" to find applicable icons for a "Metrics" panel.
+
+   1. Configure the button to open the side panel, as was done in [Showing a panel](xref:Tutorial_Apps_Panel).
 
 1. Publish the app and validate that clicking the button in the header bar opens the panel.
 
@@ -58,4 +66,5 @@ This tutorial is part of the following learning path:
 
 ## Related documentation
 
-- [Close a panel of a low-code app](xref:LowCodeApps_event_config)
+- [Configuring the header bar of a low-code app page](xref:LowCodeApps_header_config)
+- [Closing a panel of a low-code app](xref:LowCodeApps_event_config#closing-a-panel-of-the-app)

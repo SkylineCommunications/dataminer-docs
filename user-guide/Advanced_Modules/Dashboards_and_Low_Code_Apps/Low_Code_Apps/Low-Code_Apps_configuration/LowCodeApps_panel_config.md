@@ -23,7 +23,7 @@ In addition to pages, panels can be configured in apps in the Low-Code Apps modu
 > - From DataMiner 10.3.6/10.4.0 onwards, to duplicate a panel, click the ellipsis button next to the panel name in the page configuration pane, and select *Duplicate*. <!-- RN 36097 -->
 
 > [!TIP]
-> See also: [Using panels in DataMiner Low-Code Apps](https://community.dataminer.services/video/using-panels-in-dataminer-low-code-apps/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
-
-> [!TIP]
-> See also: [Tutorials - Showing a panel](xref:Tutorial_Apps_Panel)
+> See also:
+>
+> - [Tutorials — Showing a panel](xref:Tutorial_Apps_Panel)
+> - [Using panels in DataMiner Low-Code Apps](https://community.dataminer.services/video/using-panels-in-dataminer-low-code-apps/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)

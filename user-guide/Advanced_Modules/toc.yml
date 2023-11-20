@@ -342,7 +342,7 @@ items:
                 topicUid: Tutorial_Apps_Managing_Pages
               - name: Creating and showing a panel
                 topicUid: Tutorial_Apps_Panel
-              - name: Using a headerbar
+              - name: Using a header bar
                 topicUid: Tutorial_Apps_Headerbar
               - name: Using the stepper component in a low-code app
                 topicUid: TutorialStepper
