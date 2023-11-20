@@ -13,6 +13,9 @@ Expected duration: 5 minutes.
 > [!NOTE]
 > A low-code app will only show the navigation sidebar if there are at least two pages. If an app has only one page, the sidebar is not displayed outside of edit mode.
 
+> [!TIP]
+> See also: [Kata #7: Pages, panels and headers in a low-code app](https://community.dataminer.services/courses/kata-7/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+
 ## Prerequisites
 
 - A DataMiner System using DataMiner 10.3.11 or higher, which is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
