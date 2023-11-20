@@ -63,7 +63,7 @@ The following **optional interfaces** can be implemented to add additional funct
   > - The `Optimize` method will be called each time there is a new next operator.
 
   > [!NOTE]
-  > Currently, the `Optimize` method only triggers for filter operators (typed `IGQIFilterOperator`).
+  > Currently, the `Optimize` method only triggers for filter operators (`IGQIFilterOperator`) and (from DataMiner 10.4.0/10.4.1 onwards<!-- RN 37806 -->) sort operators (`IGQISortOperator`).
 
 #### Examples
 
