@@ -15,6 +15,7 @@ The content and screenshots for this tutorial have been created in DataMiner 10.
 - [Step 3: Style the 'created' column](#step-3-style-the-created-column)
 - [Step 4: Style the Fullfilment column with some conditional coloring](#step-4-style-the-fullfilment-column-with-some-conditional-coloring)
 - [Step 5: Adding a Table column to show which row is currently selected](#step-5-adding-a-table-column-to-show-which-row-is-currently-selected)
+- [Step 6: Adding a context menu](#step-6-adding-a-context-menu)
 
 ## Step 1: Configure the query and add a table component to the dashboard  
 
@@ -415,7 +416,7 @@ Format like this `{0}` and just put a space in the 'New column name' field.
 
 - Let's now style this column! We'll start by adding this column to the column appearance section of the table component. For this one we'll start from the icon preset (i). Open the template editor.
 
-- We'll first change the height of the table rows. We can do this by changing the height of the template. To do this, make sure no layer is selected by clicking next to the template in the center and then change the height in the right sidebar.
+- First change the height of the table rows. This can be done  by changing the height of the template. To do this, make sure no layer is selected by clicking next to the template in the center and then change the height in the right sidebar.
 
     ![Change template height](~/user-guide/images/ChangeTemplateHeight.png)
 
@@ -423,10 +424,32 @@ Format like this `{0}` and just put a space in the 'New column name' field.
 
     ![Change icon](~/user-guide/images/ChangeIcon.png)
 
-- We can now add a conditional override to make the checkmark green when the row is selected. To do this, in the right sidebar, under the 'Conditional cases' section, click on the 'Add case' button. In the conditions select 'State - Is Selected', check 'Yes', show the icon and change the color to green. Save the template.
+- We can now add a conditional override to make the checkmark green when the row is selected. To do this, in the right sidebar, under the 'Conditional cases' section, click on the 'Add case' button. In the conditions select 'State - Is Selected', check 'Yes', show the icon and change the color to green.
 
     ![Add conditional override](~/user-guide/images/AddConditionalColorOverride.png)
 
-- Publish the app and see the result. Select a row by clicking on it, the checkmark will now be green for the selected row.
+## Step 6: Adding a context menu
 
-    ![Result](~/user-guide/images/TableResult.png)
+Let's add a context menu to this table. First add another icon to the template from the previous step. We'll use the 'More' icon. Rescale it so it fits the template nicely.
+
+![Add context menu icon](~/user-guide/images/AddContextMenuIcon.png)
+
+- Opening a context menu is an action we can add on the icon. To do this, in the right sidebar, under the properties dropdown click 'Configure actions'. On the popup that now appears, we can configure actions that happen when clicking the icon. To do this, click on the 'No action' dropdown and select 'Show context menu'. The menu to add a context menu now appears. In this menu we can configure items to put in the context menu. On each item all actions available in 'Low Code Apps' can be executed when clicking (Launch a script, navigate to a URL, Open a page, ...).
+
+    ![ContextMenu menu](~/user-guide/images/ContextMenuMenu.png)
+
+- Let's add a 'Calculate percentage profit' button to the context menu where we divide the 'profit' column with the 'total' column, We'll just use google and search the division to show the result. On the left side on the menu we can first add an icon to the item. We'll use a calculator icon for this tutorial. After that we can add a name to the item. Let's pick 'Calculate percentage profit'
+
+    ![Configure Name and Icon](~/user-guide/images/ConfigureIconAndName.gif)
+
+- We now need to configure an action. Click the button next to the name (Configure actions). This opens the actions menu we already know. Here select the action to 'Navigate to URL' and enter the following URL: `https://google.com/search?q={Profit}%2F{Total}`. This will open google and search the division of the profit and total column. We can use the intellisense provided by low code apps to grab the profit and total. To do this, make sure a column is selected, type '{' and start using the intellisense to select the correct column (To confirm a intellisense selection, press 'TAB' and use the arrow keys to navigate).
+
+    ![Configure action](~/user-guide/images/ConfigureGoogleAction.gif)
+
+- Adding another item in the context menu is done the same way. Click 'Add menu item'. Let's use a 'Search' icon and just google the orderID again, Name it 'Search order'. We can now configure an action the same way we did before. Using  the 'Navigate to URL' action and enter the following URL: `https://google.com/search?q={Order ID}` (Use intellisense to configure the Order ID column).
+
+    ![Configure action](~/user-guide/images/ConfigureGoogleAction2.gif)
+
+Publish the app and see the result. Select a row by clicking on it, the checkmark will now be green for the selected row. Click the 3 dots to open the context menu and click on 'Calculate percentage profit'. A new tab will open with the google search results for the division of the profit and total column. Same for the 'Search order' option.
+
+![Result](~/user-guide/images/TableResult.png)
