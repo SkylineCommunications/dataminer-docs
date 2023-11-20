@@ -100,3 +100,101 @@ Each component in a dashboard or low-code app has a number of default options. B
 Depending on the visualization, additional layout options may be available. For more information, refer to the relevant section in [Available visualizations](xref:Available_visualizations).
 
 ***
+
+## Template Editor
+
+> [!IMPORTANT]
+> At present, the Template Editor is only available in preview, if the [ReportsAndDashboardsDynamicVisuals](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsdynamicvisuals) and [ReportsAndDashboardsScheduler](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsscheduler) soft-launch options are enabled. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
+
+Available from DataMiner 10.4.1/10.5.0. Currently only supported for specific components, such as the grid, timeline, and table component.
+
+To access the Template Editor:
+
+- For the grid and timeline components:
+
+  1. Select the component and go to the *Layout* tab on the right.
+
+  1. In the *Item templates* section, click *Edit*.
+
+     > [!NOTE]
+     > A preview of the template currently used for this component is displayed in the *Item templates* section.
+
+- For the table component:
+
+  1. Select the component and go to the *Layout* tab on the right.
+
+  1. In the *Column appearance* section, click the downward arrow next to *Select a column* and select the column you want to create a template for.
+
+  1. Click the ellipsis ("...") in the top-right corner and select *Customize preset*.
+
+### Using the Template Editor
+
+The Template Editor UI consists of the following main components:
+
+- Side pane:
+
+  - The *Layers* tab (1A)
+
+  - The *Tools* tab (1B)
+
+- Preview (2)
+
+- Info pane (3)
+
+![Template Editor](~/user-guide/images/Template_Editor.png)<br/>*The Template Editor in DataMiner 10.4.1*
+
+#### Working with layers
+
+In the side pane of the Template Editor, go to the *Layers* tab to access an overview of all layers. Layers are used in the Template Editor to make non-destructive edits by stacking icons, text, rectangles, and ellipses one on top of the other without compromising the pixels of individual elements.
+
+The benefits of working with layers:
+
+- Add elements on top of each other without removing data.
+
+- You can apply filters to only one layer of the template. See [Changing layer settings](#changing-layer-settings).
+
+- You can discard any unsatisfactory layers without affecting the entire template.
+
+- You can mask layers so that they are temporarily hidden without having to delete them.
+
+- ...
+
+If one layer is positioned higher than another, the higher layer will appear in front of the lower one. To **change the order of layers**, click the ![*Drag-and-drop*](~/user-guide/images/drag-and-drop.png) button and drag the layer up or down in the *layers* panel. Release the mouse button when you reach the position where you want to place the selected layer.
+
+To **mask a layer**, hover the mouse over the layer and click the *eye* icon in the lower right corner. The layer is now no longer visible in the end result. Clicking the *eye* icon also makes the layer visible again.
+
+To **delete a layer**, hover the mouse over the layer and click the *delete* button in the top-right corner. Alternatively, select the associated element (i.e. icon, text, rectangle, or ellipse) in the preview and press the *Delete* button on your keyboard.
+
+To **add a new layer**, [add a new element in the *Tools* tab](#adding-new-tools).
+
+In the lower left corner of each layer, an icon indicates the type of layer: an *icon*, *text*, *rectangle*, or *ellipse* layer.
+
+#### Adding new tools
+
+In the *Tools* tab, you can add new layers to the template. Each tool you add to the template equals a new layer. You can add the following elements:
+
+- icon
+
+- text
+
+- rectangle
+
+- ellipse
+
+![*Tools* tab](~/user-guide/images/Tools_Tab.png)<br/>*The Template Editor in DataMiner 10.4.1*
+
+1. To add a new tool to the template, click the *Icon*, *Text*, *Rectangle*, or *Ellipse* button.
+
+   When you move your cursor to the preview, the cursor turns into a crosshair.
+
+1. In the preview, press and hold down the left mouse button to select the area you choose for the element to go. Dotted lines appear in a frame around the selected area. <!--You arrived here-->
+
+#### Changing layer settings
+
+In the *Info* pane on the right, ...
+
+If no layers are selected, you can adjust the dimensions of the complete template.
+
+If a layer is selected, you can adjust the dimensions, properties, and conditional cases tied to that layer.
+
+<!--Add all dimensions icons as images in a table (similar to info pane Spectrum Analyzer)-->
