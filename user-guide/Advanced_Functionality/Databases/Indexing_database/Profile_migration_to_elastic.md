@@ -51,9 +51,8 @@ To migrate the profiles, you will need to use the SLNetClientTest tool. Note tha
 
    > [!NOTE]
    > The migration should not take more than a few minutes. During testing, migrating a *Profiles.xml* file of 100 MB in a system with a local Elasticsearch database took about 4 minutes.
-   > In the MigrationStatus table in SLNetClientTest tool, the profile instances, definitions and parameters rows will reflect the progress of the migration. 
 
-1. When the migration is complete, click the *Create Configuration* button to create the configuration file.
+1. When the migration is complete (in the MigrationStatus table in SLNetClientTest tool, the migration of profile instances, definitions and parameters have status completed and don't have any error messages), click the *Create Configuration* button to create the configuration file.
 
    If this button is not visible, that means you already hava a configuration file. You can continue by clicking the *Start using Elastic* button to switch to indexing database storage.
 
