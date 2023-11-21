@@ -26,6 +26,12 @@ Currently implemented:
 
 When double clicking on an item, you'll go the location of that item. You can also use the context menu to navigate and close the window at the same time.
 
+#### Open Driver Help [ID_37964]
+
+In the *DIS menu*, you can now find the *Administration* menu item when you have a protocol XML open. This contains the *Open Driver Help* action that will open the default web browser and go to the connector help page on the [Connector Documentation](https://docs.dataminer.services/connector/index.html).
+
+In case there is no matching page, it will direct you to the section on how to [contribute](xref:Connector_help_pages#adding-a-new-connector-documentation-page) to the Connector Documentation.
+
 ### Validator
 
 #### New checks and error messages [ID_37367]
