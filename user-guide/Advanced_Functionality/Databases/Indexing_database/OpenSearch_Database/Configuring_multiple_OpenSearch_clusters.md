@@ -32,7 +32,7 @@ To configure this setup, proceed as follows:
       <SearchConfiguration>
          <ElasticConnections>
             <!-- Reads will be handled by the ElasticCluster with the lowest priorityOrder -->
-            <ElasticCluster priorityOrder="0">
+            <ElasticCluster priorityOrder="0" ID="0">
                <Hosts>localhost</Hosts>
                <Username />
                <Password>root</Password>
@@ -49,7 +49,7 @@ To configure this setup, proceed as follows:
                -->
                <FileOffloadIdentifier>cluster1</FileOffloadIdentifier>
             </ElasticCluster>
-            <ElasticCluster priorityOrder="1">
+            <ElasticCluster priorityOrder="1" ID="1">
                <Hosts>10.11.1.44,10.11.2.44,10.11.3.44</Hosts>
                <Username />
                <Password>root</Password>
