@@ -20,7 +20,7 @@ The table below lists the properties of the `DomDefinition` object. It also indi
 | SectionDefinitionLinks  | List\<[SectionDefinitionLink](#sectiondefinitionlink)> | Yes        | Contains the required/allowed `SectionDefinitions`.                                                                                                          |
 | VisualStructure         | DomDefinitionVisualStructure                           | No         | Contains settings related to the client UI. Most of these do not apply for DOM. This property should be ignored since it will be removed in the near future. |
 | DomBehaviorDefinitionId | DomBehaviorDefinitionId                                | Yes        | ID of the `DomBehaviorDefinition` that this `DomDefinition` is linked to. See [DomBehaviorDefinition](xref:DomBehaviorDefinition).                           |
-| ModuleSettingsOverrides | [ModuleSettingsOverrides](#modulesettingsoverrides)    | No         | Used to override some `ModuleSettings`. See [DomInstanceNameDefinition](xref:DomInstanceNameDefinition).                                                     |
+| ModuleSettingsOverrides | [ModuleSettingsOverrides](#modulesettingsoverrides)    | No         | Used to override some `ModuleSettings`. See [DomInstanceNameDefinition](xref:DomInstanceNameDefinition) and [ExecuteScriptOnDomInstanceActionSettings](xref:ExecuteScriptOnDomInstanceActionSettings).                                                     |
 
 ### SectionDefinitionLink
 
@@ -38,6 +38,7 @@ The object contains settings that override the settings defined in the `ModuleSe
 At present, the following setting can be overridden:
 
 - DomInstanceNameDefinition
+- ExecuteScriptOnDomInstanceActionSettings (from 10.4.2/10.5.0 onwards)
 
 ## Requirements
 

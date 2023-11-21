@@ -4,6 +4,10 @@ uid: ExecuteScriptOnDomInstanceActionSettings
 
 # ExecuteScriptOnDomInstanceActionSettings
 
+>[!NOTE]
+>
+> - Since 10.4.2/10.5.0 onwards, it is possible to override this setting in a `DomDefinition` with the [ModuleSettingsOverrides](xref:DomDefinition#modulesettingsoverrides) property.
+
 This settings object contains the names of the scripts that should be executed after a [DomInstance](xref:DomInstance) is created, updated, or deleted. If no name is filled in, no script will be executed. From DataMiner version 10.3.10/10.4.0 onwards, it is also possible to define which type of script (entry point) should be executed. In earlier DataMiner versions, only the "ID only" type is supported.
 
 |Property |Type   |Description |
