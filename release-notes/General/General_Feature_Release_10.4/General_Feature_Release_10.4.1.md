@@ -211,3 +211,9 @@ When a table was polled via SNMPv3 and the response included a cell that contain
 When a Cassandra Cluster was in a yellow state because a number of nodes were down, up to now, Failover setups within the system would incorrectly report errors.
 
 From now on, Failover setups within the system will only report errors if the Cassandra Cluster is in a red state.
+
+#### SLAutomation: Problem when deleting an Automation script dummy that had already been deleted [ID_37907]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+In some rare cases, it would incorrectly be possible to delete an Automation script dummy that had already been deleted, causing an error to occur in SLAutomation.

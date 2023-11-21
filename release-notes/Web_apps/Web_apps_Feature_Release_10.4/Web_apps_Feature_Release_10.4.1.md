@@ -180,6 +180,12 @@ After the table component had displayed an error message, the header options wou
 
 For example, it would incorrectly be possible to select *Export to CSV* even when the table component displayed an error.
 
+#### Low-Code Apps: Newly added themes seemed to disappear [ID_37871]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+Newly added themes seemed to disappear when opening the theme editor or when switching to another page. This was due to newly added themes not being correctly added to the theme cache.
+
 #### Web Services API: Problem with GetServicesForFilter method [ID_37901]
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
