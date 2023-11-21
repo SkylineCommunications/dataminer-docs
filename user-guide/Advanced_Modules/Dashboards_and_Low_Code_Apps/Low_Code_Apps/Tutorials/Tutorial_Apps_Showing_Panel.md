@@ -72,7 +72,7 @@ Expected duration: 5 minutes
 
 ## Step 4: Show the panel
 
-You have now added a panel; however, panels are not automatically displayed in a your low-code app. They need to be activated through a specific action. Actions define tasks that need to be executed in response to events.
+You have now added a panel; however, panels are not automatically displayed in a low-code app. They need to be activated through a specific action. Actions define tasks that need to be executed in response to events.
 
 1. Add a button component to the page and configure its layout:
 
@@ -80,13 +80,13 @@ You have now added a panel; however, panels are not automatically displayed in a
 
    - Select an icon.
 
-   - Under Styles, select the *Transparent* theme.
+   - Under *Styles*, select the *Transparent* theme.
 
    The button should look like this:
 
    ![Show metrics](~/user-guide/images/ShowMetrics.png)
 
-   At this point, nothing will happen yet if a user clicks the button. For this, actions need to be associated with the *On click* event of the button.
+   At this point, nothing will happen yet if a user clicks the button, because actions still need to be associated with the *On click* event of the button.
 
 1. Go to the settings of the button and click the "Configure actions" icon.
 
@@ -98,7 +98,7 @@ You have now added a panel; however, panels are not automatically displayed in a
 
    Additional configuration options will become available.
 
-   - The panel will be automatically selected in this case, as you have only one panel. If you were to have multiple panels, you would first have to select the right one. 
+   - The panel will be automatically selected in this case, as you have only one panel. If you were to have multiple panels, you would first have to select the right one.
 
    - Under *Where*, you can configure the display location of the panel.
 
@@ -108,7 +108,7 @@ You have now added a panel; however, panels are not automatically displayed in a
 
    ![Open a panel action](~/user-guide/images/OpenPanelAction.png)
 
-1. Publish your changes and check that clicking the button indeed opens the **Metrics** panel.
+1. Publish your changes and check if clicking the button indeed opens the **Metrics** panel.
 
 ## Next tutorial
 
