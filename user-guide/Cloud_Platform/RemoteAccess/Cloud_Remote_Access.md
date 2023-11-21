@@ -57,3 +57,9 @@ Open a browser, navigate to [admin.dataminer.services](https://admin.dataminer.s
 Open a browser and navigate to [dataminer.services](https://dataminer.services). Find your DMS in the list and click the "Open  in desktop app" button. Pressing this button will open up the Cube application with the correct URL in the host field already filled in. Simply click "Connect" and Cube will setup a session with your DMS.
 
 ![Remote Cube in the home app](~/user-guide/images/RemoteCubeHomeApp.png)
+
+### Known limitations
+
+If the DMS has SAML authentication configured, users will not be able to use Remote Cube Access.
+
+If the DMS has multiple CloudGateway instances, Remote Cube Access will not function correctly. This is due to the fact that Cube needs a session with a specific DMA, while now all requests are being distributed across the available CloudGateways.
