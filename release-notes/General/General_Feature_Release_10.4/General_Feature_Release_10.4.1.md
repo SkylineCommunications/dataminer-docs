@@ -218,6 +218,16 @@ When a Cassandra Cluster was in a yellow state because a number of nodes were do
 
 From now on, Failover setups within the system will only report errors if the Cassandra Cluster is in a red state.
 
+#### Incorrect 'Clearing cache ...' entries in SLEventCache.txt [ID_37874]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+Incorrect entries would be added to the *SLEventCache.txt* log file on DataMiner startup and when new objects (e.g. elements) had been created.
+
+Example of an incorrect log entry:
+
+`Clearing cache: predicate<entries with old hosting agent id> for type XXXXXX`
+
 #### SLAutomation: Problem when deleting an Automation script dummy that had already been deleted [ID_37907]
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->

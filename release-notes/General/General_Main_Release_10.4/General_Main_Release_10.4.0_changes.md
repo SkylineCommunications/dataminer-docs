@@ -893,3 +893,13 @@ When data was being migrated from a Cassandra Cluster database to a STaaS databa
 <!-- MR 10.4.0 - FR 10.4.1 -->
 
 When you exported elements via a DELT package on a DMA running DataMiner version 10.3.8 or newer, it would no longer be possible to import that DELT package on a DMA running DataMiner version 10.3.7 or older.
+
+#### Incorrect 'Clearing cache ...' entries in SLEventCache.txt [ID_37874]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+Incorrect entries would be added to the *SLEventCache.txt* log file on DataMiner startup and when new objects (e.g. elements) had been created.
+
+Example of an incorrect log entry:
+
+`Clearing cache: predicate<entries with old hosting agent id> for type XXXXXX`
