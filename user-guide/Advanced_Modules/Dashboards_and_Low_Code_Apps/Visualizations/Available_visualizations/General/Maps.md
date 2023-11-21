@@ -38,20 +38,20 @@ On the *Component > Layout* tab, you can configure the following settings under 
 
 - **Circle or line icon**: By default, each query is configured as a set of markers, which is indicated with a circle icon to the right of the name of the query. If you hover the mouse pointer over the query name, a line icon will also become visible. Click this icon to change the visualization of the data from a set of markers to a set of lines and to reconfigure the dimensions so they can be visualized as lines.
 
-- **Identifier**/**Latitude**/**Longitude**: For each dimension, a dropdown is shown where the chosen column for that dimension can be changed. All dropdowns contain only valid options for that dimension. For markers, you need to select string-valued columns for the ID and numeric-valued columns for the latitude and longitude. For lines, you need to select a latitude and longitude for both the source and the destination.
+- **Identifier**/**Latitude**/**Longitude**: For each dimension, a dropdown box is shown where the column used for that dimension can be changed. You can only select valid options for each dimension. For markers, you need to select string-valued columns for the ID and numeric-valued columns for the latitude and longitude. For lines, you need to select a latitude and longitude for both the source and the destination.
 
 - **Template**: Only available when the query is configured as a set of markers. Allows you to change the appearance of the markers. When you click Edit, an editor window opens where you can make changes to the template.
 
   > [!NOTE]
   > The center of the marker template is determined by the latitude and longitude values for that marker.
 
-- *Style*: When the query is configured as a set of lines, you can use these settings to change the appearance of the lines. You can change the color, direction visualization, type, and width of the lines.
+- **Style**: When the query is configured as a set of lines, you can use these settings to change the appearance of the lines. You can change the color, direction visualization, type, and width of the lines.
 
-- *Advanced settings*: Expand the advanced settings section to access the following settings:
+- **Advanced settings**: Expand the advanced settings section to access the following settings:
 
   - *Show in zoom level*: Determines in which range of zoom levels the query should be visible.
 
-  - *Weight*: Similar to the weight setting on layer level, this setting determines which markers or lines are push to the foreground when two markers or lines from the same layer overlap with each other.
+  - *Weight*: Similar to the weight setting on layer level, this setting determines which markers or lines are pushed to the foreground when two markers or lines from the same layer overlap with each other.
 
 ## Map settings
 
@@ -70,13 +70,13 @@ On the *Component > Layout* tab, you can configure the following settings under 
 
 - *Map bounds* > *Enable bounds*: Enable this option to configure the north, east, south, and west bounds of the map.
 
-- *Default Map Type* > *Map type*: Allows you to select the type of the map. The available types depend on the map provider. At present, only Google Maps is supported, with the following map types: roadmap, satellite, hybrid, and terrain.
+- *Default Map Type* > *Map type*: Allows you to select the type of the map. The available types depend on the map provider. At present, only Google Maps is supported, with the following map types: *roadmap*, *satellite*, *hybrid*, and *terrain*.
 
 - *Default Map Type* > *Show map type control*: Makes the map type setting visible in the component itself.
 
 ## Adding actions
 
-When the maps component is used in a [low-code app](xref:Application_framework), a set of different component actions can be configured (see [Configuring low-code app events](xref:LowCodeApps_event_config)).
+When a maps component is used in a [low-code app](xref:Application_framework), a set of different component actions can be configured (see [Configuring low-code app events](xref:LowCodeApps_event_config)).
 
 The following actions are available:
 
