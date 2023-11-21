@@ -61,7 +61,7 @@ To migrate the profiles, you will need to use the SLNetClientTest tool. Note tha
 
 1. When the migration is complete, click the *Create Configuration* button to create the configuration file.
 
-   If this button is not visible, that means you already hava a configuration file. You can continue by clicking the *Start using Elastic* button to switch to indexing database storage.
+   If this button is not visible, that means you already have a configuration file. You can continue by clicking the *Start using Elastic* button to switch to indexing database storage.
 
 ### Troubleshooting
 
