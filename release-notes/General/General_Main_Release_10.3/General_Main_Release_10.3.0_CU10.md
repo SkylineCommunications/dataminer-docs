@@ -12,6 +12,20 @@ uid: General_Main_Release_10.3.0_CU10
 
 ### Enhancements
 
+#### Elasticsearch/OpenSearch: Enhanced log entry when creating a custom data storage fails [ID_26965]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+When an attempt to create a custom data storage fails, the log entry will now also mention the data storage type.
+
+Former log entry:
+
+`Cannot create a custom data table for Elastic when Elastic is not active.`
+
+New log entry:
+
+`Cannot create a custom data table for {typeof(T)} in Elastic when Elastic is not active.`
+
 #### New BPA test 'Check Cluster SLNet Connections' [ID_37110]
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
