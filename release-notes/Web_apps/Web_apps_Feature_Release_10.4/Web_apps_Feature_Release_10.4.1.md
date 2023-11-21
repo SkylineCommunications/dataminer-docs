@@ -115,6 +115,14 @@ When, on the Root page of a DataMiner Agent, you hover over an application and c
 
 ### Enhancements
 
+#### Dashboards app: Selection box data for 'All available data' tab will no longer automatically be retrieved when you enter edit mode [ID_37706]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+Up to now, as soon as you entered edit mode, the client would send a number of requests in order to retrieve all data needed to populate the selection boxes on the *All available data* tab.
+
+From now on, the client will only send a request the moment you open a particular selection box on the *All available data* tab.
+
 #### Dashboards app: User and user group information will no longer automatically be retrieved when you enter edit mode [ID_37727]
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
