@@ -9,9 +9,11 @@ In this tutorial, you will learn how to add and configure a maps component in a 
 The content and screenshots for this tutorial have been created in DataMiner version 10.4.1.
 
 ## Prerequisites
+
 To complete this tutorial, you need a DataMiner version >= 10.4.1 and should have the *ReportsAndDashboardsGQIMaps* soft-launch option active.
 
 ## Overview
+
 - [Step 1: Set up the data](#step-1-set-up-the-data)
 - [Step 2: Visualize the cell towers](#step-2-visualize-the-cell-towers)
 - [Step 3: Configure the map](#step-3-configure-the-map)
@@ -22,6 +24,7 @@ To complete this tutorial, you need a DataMiner version >= 10.4.1 and should hav
 - [Step 8: Add an overlay](#step-8-add-an-overlay)
 
 ## Step 1: Set up the data
+
 Before you can begin to create the app, you will need to add some data to your system that you can visualize in the app. To do so, deploy the [Maps tutorial](https://catalog.dataminer.services/catalog/5506) from the catalog.
 
 This package contains an [ad hoc data source](xref:Get_ad_hoc_data) that can read in a JSON file and return GQI rows. It also contains 3 JSON files with cell tower data that will be visualized in this tutorial.
@@ -83,7 +86,7 @@ Now that all the cell towers are visualized on the map, we can visualize the con
 
 We want to be able to show and hide these connections, so we will add them to the maps component in an other layer than the cell towers. This is done by first adding the query as before. Then, a new layer is added in the layer settings and the query can be dragged & dropped from the first layer onto that new layer. To make sure the connections are shown underneath our markers in the other layer, the layer weight can be set higher. By default, the query will be visualized as markers, this can be changed by hovering over the query name and clicking *Set as line*. The component will try to automatically configure the dimensions and show the lines on the map. Just as with the markers, lines can also by styled to match our application. 
 
-![CellTowerConnectionsSettings](~/user-guide/images/MapsCellTowerConnectionsSettings.png)
+![CellTowerConnectionsSettings](~/user-guide/images/MapsCellTowersConnectionsSettings.png)
 
 ![CellTowerConnections](~/user-guide/images/MapsCellTowersConnections.png)
 
@@ -97,11 +100,11 @@ Then we can configure the grid template, via the layout settings of the componen
 
 1. *Pan to view* action to pan to our grouped marker. We link the latitude & longitude arguments to the corresponding columns that are fed by our grid.
 
-    ![PanToViewAction](~/user-guide/images/MapsPanToViewAction.png)
+   ![PanToViewAction](~/user-guide/images/MapsPanToViewAction.png)
 
 1. *Set zoom level* action to set the zoom level to a level where we can see the cell towers.
 
-    ![SetZoomLevelAction](~/user-guide/images/MapsSetZoomLevelAction.png)
+   ![SetZoomLevelAction](~/user-guide/images/MapsSetZoomLevelAction.png)
 
 Now these actions are executed whenever an item in the grid is clicked.
 
