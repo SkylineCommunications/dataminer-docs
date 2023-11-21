@@ -7,6 +7,34 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.0
 > [!NOTE]
 > Range 1.0.x.x is supported as from **DataMiner 10.1.0**. This is a continuation from the now obsolete [Class Library](xref:ClassLibrary_Range_1.2).
 
+### 1.0.1.3
+
+#### New Feature - Partial Table Support for QueryData method in DmsTable class
+
+QueryData method in DMSTable can be used to retrieve very specific table data using column filters. Those filters were changed into interfaces.
+QueryData now also support retrieving & filtering data from partial tables
+
+#### Fix - Partial Table Support for Table Monitors
+
+Monitors on partial tables would only work for the first page.
+This was changed so that you can now monitor value changes on all pages of a partial table.
+
+> [!NOTE]
+> Monitoring on value changes of a partial table requires a lot of extra computation power in the background. So there is a drop in scalability and performance when monitoring partial tables.
+> It should be ok to monitor a few of them, but benchmarking shows that setting up 20 monitors to a partial table will limit it's ability to handle 'burst' event (value changes every 100ms) to around 300 events before needing > 5 seconds to handle an event. This compared to 1400 events before the same occurs on non-partial tables.
+
+#### New Feature - Migrated GetParameters and SetParameters from the Community Utility Library
+
+You can retrieve the LocalElement from IDms and from there you can now perform a special GetParameters that retrieves multiple parameters and converts them into their given types.
+This can be done on both stand-alone parameters and on columns of tables
+
+You can retrieve the LocalElement from IDms and from there you can now perform a special SetParameters that allow you to group together SetParameterRequest objects to perform a single call.
+
+#### New Feature - AutomationScript execution enhanced with Async execution and additional runflags
+
+You are now able to trigger an execution of an AutomationScript asyncronously.
+You are now able to provide several different *Run Options* similar to the options you get when triggering a script maually. (e.g. LockElements, CheckSets, WaitWhenLocked, ...)
+
 ### 1.0.1.2
 
 #### Fix - Monitors could stop working for long duration user actions
