@@ -4,7 +4,7 @@ uid: Ad_hoc_Metadata
 
 # Linking rows to DataMiner objects
 
-Just like the built-in data sources, you can link the rows of your ad hoc data source to specific DataMiner objects. This will allow you to feed these objects in the Dashboards and Low-Code Apps to other components.
+Just like the rows from built-in data sources can contain metadata that allow you to feed certain DataMiner objects in your Dashboards and Low-Code Apps, so too can you link the rows of your ad hoc data source to these DataMiner objects.
 
 To link a GQI row to a DataMiner object, add a reference to the object in the [Metadata property](xref:GQI_GQIRow#properties) of the row.
 
