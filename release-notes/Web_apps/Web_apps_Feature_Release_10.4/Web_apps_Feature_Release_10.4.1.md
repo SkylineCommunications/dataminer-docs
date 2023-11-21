@@ -197,3 +197,15 @@ Newly added themes seemed to disappear when opening the theme editor or when swi
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
 
 In some cases, the filter passed to the *GetServicesForFilter* method would not get deserialized correctly, causing an exception to be thrown.
+
+#### Dashboards app & Low-Code Apps: Problem when opening the query data set [ID_37920]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+When, during a session, you opened the query data set for the first time, a run-time error would be thrown when there were no queries.
+
+#### Dashboards app - Parameter table component: Filter could incorrectly be duplicated [ID_37928]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+It would incorrectly be possible to duplicate the filter of a *Parameter table* component. The *Duplicate* option has now been removed.
