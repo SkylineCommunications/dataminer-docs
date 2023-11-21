@@ -9,7 +9,7 @@ uid: GQI_GQIEditableRow
 - Namespace: `Skyline.DataMiner.Analytics.GenericInterface`
 - Assembly: `SLAnalyticsTypes.dll`
 
-Represents a row that a custom operator can manipulate.
+Represents a row that a custom operator can manipulate. Inherits from [GQIRow](xref:GQI_GQIRow).
 
 ## Methods
 
