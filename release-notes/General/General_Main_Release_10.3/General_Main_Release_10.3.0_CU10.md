@@ -93,3 +93,11 @@ In some cases, an error could occur in SLAnalytics when it was not able to conne
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
 When a table was polled via SNMPv3 and the response included a cell that contained *no such instance*, the table would not get populated with the values that were received. Instead, the entire result set would be discarded.
+
+#### Cassandra Cluster: Failover setups would incorrectly report errors when the cluster status was yellow [ID_37868]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+When a Cassandra Cluster was in a yellow state because a number of nodes were down, up to now, Failover setups within the system would incorrectly report errors.
+
+From now on, Failover setups within the system will only report errors if the Cassandra Cluster is in a red state.

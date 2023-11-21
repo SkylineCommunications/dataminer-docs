@@ -172,6 +172,14 @@ When, in the settings of a *Clock* component, you had specified that it had to d
 
 When, in the Dashboards app or a low-code app, a *Line & area chart* component was linked to a query, in some cases, the entire app could become unresponsive.
 
+#### Dashboards app - Table component: Header options would not be initialized correctly after an error message had been displayed [ID_37869]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+After the table component had displayed an error message, the header options would not be initialized correctly.
+
+For example, it would incorrectly be possible to select *Export to CSV* even when the table component displayed an error.
+
 #### Web Services API: Problem with GetServicesForFilter method [ID_37901]
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
