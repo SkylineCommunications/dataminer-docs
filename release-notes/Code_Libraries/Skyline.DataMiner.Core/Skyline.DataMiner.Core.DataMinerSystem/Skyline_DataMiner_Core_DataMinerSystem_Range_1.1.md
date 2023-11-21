@@ -28,7 +28,7 @@ This was changed so that you can now monitor value changes on all pages of a par
 You can retrieve the LocalElement from IDms and from there you can now perform a special GetParameters that retrieves multiple parameters and converts them into their given types.
 This can be done on both stand-alone parameters and on columns of tables
 
-You can retrieve the LocalElement from IDms and from there you can now perform a special SetParameters that allow you to group together SetParameterRequest objects to perform a single call.
+You can retrieve the LocalElement from IDms and from there you can now perform a special SetParameters that allow you to group together SetParameterRequest objects or provide a Dictionary of parameter ids and values to perform a single call.
 
 #### New Feature - AutomationScript execution enhanced with Async execution and additional runflags
 
