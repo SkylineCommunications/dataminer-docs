@@ -17,7 +17,7 @@ Expected duration: 10 minutes
 ## Prerequisites
 
 - A DataMiner System that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
-- This exercise is continuing on the [Showing a panel](Tutorial_Apps_Panel) tutorial.
+- This exercise is continuing on the [Showing a panel](xref:Tutorial_Apps_Panel) tutorial.
 
 ## Step 1: Install the dummy data sources package
 

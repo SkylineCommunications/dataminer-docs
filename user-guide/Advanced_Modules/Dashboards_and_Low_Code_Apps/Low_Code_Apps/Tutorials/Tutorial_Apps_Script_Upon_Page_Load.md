@@ -52,7 +52,7 @@ Your script should look like this. Verify its functionality by running the scrip
 
 You can also chain actions so they're executed one after another:
 
-- [Chaining actions](Tutorial_Apps_Chaining_Actions)
+- [Chaining actions](xref:Tutorial_Apps_Chaining_Actions)
 
 ## Learning paths
 
