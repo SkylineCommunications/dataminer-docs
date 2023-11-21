@@ -4,7 +4,7 @@ uid: LowCodeApps_event_config
 
 # Configuring low-code app events
 
-At present two types of events can be configured in the DataMiner Low-Code Apps:
+At present, you can configure actions for two types of events in the DataMiner Low-Code Apps:
 
 - *On page load*: This event takes place when a page is loaded. (See [Configuring a page of a low-code app](xref:LowCodeApps_page_config).)
 - *On click*: This event takes place when a user clicks a button. (See [Configuring the header bar of a low-code app page](xref:LowCodeApps_header_config).)
