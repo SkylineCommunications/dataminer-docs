@@ -19,6 +19,8 @@ uid: Dashboards_Low-Code_Apps_Tutorials
 | [Managing the pages in an app](xref:Tutorial_Apps_Managing_Pages) | Add, change, duplicate, and remove pages in a low-code app. |
 | [Showing a panel](xref:Tutorial_Apps_Panel) | Show a panel in a low-code app. |
 | [Using a header bar](xref:Tutorial_Apps_Headerbar) | Use a header bar in a low-code app. |
+| [Running a script upon page load](Tutorial_Apps_Script_Upon_Page_Load) | Running a script on page load of a low-code app. |
+| [Chaining actions](Tutorial_Apps_Chaining_Actions) | Perform consecutive actions in a low-code app. |
 | [Using the stepper component in a low-code app](xref:TutorialStepper) | Add and configure a stepper component in a low-code app to help with managing incidents and their different states. |
 
 ### GQI tutorials

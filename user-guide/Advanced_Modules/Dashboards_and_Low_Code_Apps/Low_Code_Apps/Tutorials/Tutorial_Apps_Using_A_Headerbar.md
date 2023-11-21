@@ -68,6 +68,12 @@ Expected duration: 5 minutes
 
 1. Publish the app and check if clicking the new button in the panel header closes the panel.
 
+## Next tutorial
+
+Now that we have all navigational controls covered, we can have a look at how we can execute actions.
+
+- [Running a script upon page load](xref:Tutorial_Apps_Script_Upon_Page_Load)
+
 ## Learning paths
 
 This tutorial is part of the following learning path:
