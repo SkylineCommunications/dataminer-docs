@@ -137,6 +137,12 @@ From now on, those API calls will only be executed the moment you open the *Sett
 
 A number of enhancements have been made to the About box.
 
+#### Dashboards app & Low-Code Apps - State component: Alignment setting will now always be displayed [ID_37918]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+Up to now, the *State* component's *Alignment* setting would only be displayed when the *Design* setting was not set to "Auto Size". From now on, the *Alignment* setting will always be displayed.
+
 ### Fixes
 
 #### Low-Code Apps: Panels would not stack in the correct order [ID_37696]
