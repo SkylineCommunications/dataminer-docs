@@ -58,7 +58,28 @@ Up to now, in some cases, service chains could get redrawn too often, or shapes 
 
 In the *View* tab of a spectrum card, the buttons in the *Reference lines* panel and the *Thresholds* panel as well as the delete buttons in the *Measurement Points* panel have been restyled to match the buttons in the *Markers* panel.
 
-#### DataMiner Cube - Alarm Console: New alarm tab showing current suggestion events now has the 'Automatically remove cleared alarms' option enabled by default [ID_37855]
+#### Spectrum Analysis: Editing the X-axis and Y-axis labels [ID_37821]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+
+In a spectrum view, it is now possible to modify the center frequency and reference level.
+
+To modify the center frequency:
+
+1. Click the pencil icon next to the center frequency X-axis label.
+1. Use the up/down buttons to change the center frequency.
+1. Click *Confirm* or press ENTER.
+
+To modify the reference level:
+
+1. Click the pencil icon next to the reference level Y-axis label.
+1. Use the up/down buttons to change the reference level.
+1. Click *Confirm* or press ENTER.
+
+> [!NOTE]
+> To change the unit of either the center frequency or the reference level, go to the settings menu on the right.
+
+#### Alarm Console: New alarm tab showing current suggestion events now has the 'Automatically remove cleared alarms' option enabled by default [ID_37855]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
@@ -66,9 +87,42 @@ When you add a new alarm tab showing the current suggestion events, that tab wil
 
 This means that suggestion events will automatically disappear from the tab approximately 2 hours after they have been detected.
 
+#### Settings: Default values of trend graph action settings have been changed [ID_37867]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+
+In the *Settings* window, the default values of the following trend graph action settings have been changed:
+
+| Setting | New default value |
+|---------|-------------------|
+| Right mouse button action on graph         | Select |
+| Hotkey + left mouse button action on graph | Zoom   |
+
+#### Service templates: Scrollbar added inside every tab of a service template card [ID_37882]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+
+A number of enhancements have been made to the service template card, one of which is a scrollbar added inside every tab.
+
+#### Alarm templates: Enhanced selection box in 'Anomaly alarm settings' window [ID_37899]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+
+The selection box at the top of the *Anomaly alarm settings* window has now been made wider in order to better accommodate content in languages other than English.
+
 ### Fixes
 
-#### DataMiner Cube - Protocols & Templates: Function definitions would not be listed when you activated a functions file [ID_37754]
+#### A number of Automation issues have been fixed [ID_37674]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+
+A number of issues have been fixed with regard to Automation:
+
+- When, in the Automation app, you opened a script in an undocked card, it would not be possible to edit the name of the script.
+- A *nullreference* exception could be thrown when an Automation script was deleted.
+- Cube could leak memory each time you opened an Automation script in a new card.
+
+#### Protocols & Templates: Function definitions would not be listed when you activated a functions file [ID_37754]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 

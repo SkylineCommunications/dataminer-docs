@@ -17,6 +17,8 @@ Estimated duration: 45 minutes.
 
 - DataMiner 10.3.12 or higher with [Storage as a Service (STaaS)](xref:STaaS) or a [self-hosted Cassandra database](xref:Supported_system_data_storage_architectures).
 
+- A DataMiner System [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
+
 - Behavioral Anomaly Detection is enabled (in DataMiner Cube: *System Center* > *System settings* > *analytics config*).
 
 - The [time to live](xref:Specifying_TTL_overrides) for trending is at least 1 day for real-time trending and 1 month for minute records.

@@ -111,12 +111,6 @@ Also, log entries indicating an exception thrown during baseline calculations wi
 
 From now on, when you zoom in or out, the data of the previous zoom level will stay visible until the data of the current zoom level has been loaded.
 
-#### Maps: Zoom range can now be set by means of a slider [ID_35381]
-
-<!-- MR 10.4.0 - FR 10.3.3 -->
-
-The zoom range of a map can now be set by means of a slider.
-
 #### SLAnalytics - Automatic incident tracking: Enhanced performance when fetching relation information [ID_35414] [ID_35508]
 
 <!-- 35414:  MR 10.4.0 - FR 10.3.3 -->
