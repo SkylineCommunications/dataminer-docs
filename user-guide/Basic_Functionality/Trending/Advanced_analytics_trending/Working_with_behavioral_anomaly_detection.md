@@ -72,7 +72,7 @@ Please note the following regarding these icons:
 
 ## Change points in trend graphs
 
-On a trend graph, a change point is indicated by a bar below the graph. The length of the bar indicates the approximate time frame in which the change started, the height of the bar indicates the importance of the change, and the color of the bar indicates the severity.
+On a trend graph, a change point is indicated by a bar below the graph. The length of the bar indicates the approximate time frame in which the change started, the height of the bar indicates the importance of the change, and the color of the bar indicates the severity. From DataMiner 10.4.1/10.5.0 onwards<!-- RN 37827 -->, the color is typically light gray, unless the change point was severe enough to trigger an event. Then, in case alarm monitoring is activated for change points, the color reflects the severity of the triggered alarm. In case alarm monitoring is not activated, the color is dark gray.
 
 When you hover the mouse pointer over a change point bar, a semi-transparent ribbon will be displayed over the entire height of the trend graph, showing more information about the change point.
 

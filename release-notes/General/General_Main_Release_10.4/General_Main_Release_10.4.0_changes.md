@@ -111,12 +111,6 @@ Also, log entries indicating an exception thrown during baseline calculations wi
 
 From now on, when you zoom in or out, the data of the previous zoom level will stay visible until the data of the current zoom level has been loaded.
 
-#### Maps: Zoom range can now be set by means of a slider [ID_35381]
-
-<!-- MR 10.4.0 - FR 10.3.3 -->
-
-The zoom range of a map can now be set by means of a slider.
-
 #### SLAnalytics - Automatic incident tracking: Enhanced performance when fetching relation information [ID_35414] [ID_35508]
 
 <!-- 35414:  MR 10.4.0 - FR 10.3.3 -->
@@ -688,6 +682,12 @@ Forwarding sort operators to the backend is now supported for a wider range of q
 
 When two DataMiner Agents try to connect via SLNet, from now on, this will no longer be allowed if the two agents share the same DataMiner GUID (except when they are both part of the same Failover setup).
 
+#### Authentication response message now includes the domain user name [ID_37823]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+When a DataMiner Agent receives an authentication request from a client application, it will now include the domain user name in the authentication response message it returns to the client application.
+
 ### Fixes
 
 #### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID_34981]
@@ -893,3 +893,13 @@ When data was being migrated from a Cassandra Cluster database to a STaaS databa
 <!-- MR 10.4.0 - FR 10.4.1 -->
 
 When you exported elements via a DELT package on a DMA running DataMiner version 10.3.8 or newer, it would no longer be possible to import that DELT package on a DMA running DataMiner version 10.3.7 or older.
+
+#### Incorrect 'Clearing cache ...' entries in SLEventCache.txt [ID_37874]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+Incorrect entries would be added to the *SLEventCache.txt* log file on DataMiner startup and when new objects (e.g. elements) had been created.
+
+Example of an incorrect log entry:
+
+`Clearing cache: predicate<entries with old hosting agent id> for type XXXXXX`
