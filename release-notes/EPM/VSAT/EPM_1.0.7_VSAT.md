@@ -62,6 +62,15 @@ In the existing Rules Table, two new parameters have been added for this:
 
 A default alarm template is now available for the Skyline EPM Platform PLM connector.
 
+#### Intelsat Flex Platform VSAT: REST API integration [ID_37916]
+
+In the Intelsat Flex Platform VSAT connector, the following changes were implemented to integrate the REST API:
+
+- The *REST API Authentication* and *REST API Endpoints Configuration* tables have been implemented on the *REST API Endpoints Configuration* page for advanced management.
+- The *Terminals* and *SSPCs* tables have been moved to the *Remote Stats* page.
+- The *Remotes Overview* table has been added to the *Remotes* page.
+- The *Circuits Overview* table has been added to the *Circuits* page.
+
 ## Changes
 
 ### Enhancements
@@ -129,6 +138,18 @@ These tables now also have a button that allows users to delete a row without op
 
 In addition, the logic in the connector has been updated to allow the addition of entries from an interactive Automation script.
 
+#### Newtec Dialog Platform VSAT: New Debug Logging parameter [ID_37801]
+
+In the Newtec Dialog Platform VSAT connector, a new *Debug Logging* parameter was added. This parameter allows you to enable or disable the generating of information events when the connector starts the *EPM Message Handler* script.
+
+#### Verizon iDirect Evolution Platform Collector: New Debug Logging parameter [ID_37802]
+
+In the Verizon iDirect Evolution Platform Collector connector, a new *Debug Logging* parameter was added. This parameter allows you to enable or disable the generating of information events when the connector starts the *EPM Message Handler* script.
+
+#### Verizon VSAT Platform Manager: New Debug Logging parameter [ID_37804]
+
+In the Verizon VSAT Platform Manager connector, a new *Debug Logging* parameter was added. This parameter allows you to enable or disable the generating of information events when the connector starts the *EPM Message Handler* script.
+
 #### Carrier Performance and Information Events dashboard improvements [ID_37809]
 
 The Carrier Performance dashboard has been updated so that the IP Throughput and Slots Per Frame KPIs are now included in both the calculated stats table and the carrier summary table.
@@ -143,6 +164,25 @@ Logging of the Generic Kafka Consumer connector has been improved to make import
 
 The memory caching logic for the Rules Table, Source Name Table, and Source IP Name Table of the Generic Trap Processor connector has been improved so that it is no longer necessary to restart the element to make sure changes in those tables take effect for upcoming traps.
 
+#### Verizon ETMS Platform: Line card performance events priority adjusted [ID_37917]
+
+In the Verizon ETMS Platform connector, the priority level for line card performance events during ticket creation has been changed from 1 to 2.
+
+#### Generic Trap Processor: Information added in table descriptions on required rules configuration [ID_37936]
+
+The descriptions of the Processed Messages Table and Heartbeat Table have been updated to include that there needs to be an entry in the Rules Table of type "Regular" or "Heartbeat" in order for the respective tables to be populated with upcoming traps.
+
+#### Verizon WM DCAT improvements [ID_37939]
+
+The following improvements have been implemented in the Verizon WM DCAT connector:
+
+- Element data is now stored in memory referenced in loops in order to reduce the number of DMS calls.
+- The read file logic has been updated to prevent conflicts.
+
+#### Generic Trap Processor: Sorting Processed Messages Table adjusted [ID_37940]
+
+In the Generic Trap Processor connector, the Processed Messages Table is now by default first sorted on event state, and then on timestamp. this way the most recent active events will be displayed at the top.
+
 ### Fixes
 
 #### Verizon iDirect Evolution Platform Collector: Linecard event types not collected [ID_37691]
@@ -152,3 +192,7 @@ Because of a change to the remote event logic, it could occur that some linecard
 #### Skyline EPM Platform PLM: Auto-delete logic adjusted [ID_37790]
 
 In some cases, it could occur that the auto-delete logic failed to function as intended, leading to inconsistent data retention in the PLM Overview and PLM Records tables. The auto-delete logic has now been adjusted to ensure that the tables are consistently cleaned up according to the configured auto-delete delay parameter.
+
+#### Verizon Computer Associates Interface: VCAI Sun Outage Next Execution Time incorrect at end of month [ID_37937]
+
+A problem with the way the VCAI Sun Outage Next Execution Time KPI was calculated could cause this data to be incorrect at the end of the month.
