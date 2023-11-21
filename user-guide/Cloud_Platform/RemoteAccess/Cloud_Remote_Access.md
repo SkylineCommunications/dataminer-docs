@@ -19,7 +19,7 @@ When a DMS is [connected to dataminer.services](xref:Connecting_your_DataMiner_S
 > [!TIP]
 > The URL usually has the format `https://[dms_name]-[company_name].on.dataminer.services`, although this depends on what was configured when the DMS was connected to dataminer.services.
 
-## Accessing web pages remotely
+## Accessing DataMiner web apps remotely
 
 If [remote access is enabled](xref:Controlling_remote_access) for a DMS, and you have been [granted access to dataminer.services features](xref:Giving_users_access_to_cloud_features), you can access each of the DataMiner web apps via the remote access URL:
 
@@ -32,34 +32,32 @@ If [remote access is enabled](xref:Controlling_remote_access) for a DMS, and you
 > [!NOTE]
 > To access the web apps, you will need to have the [General > DataMiner web apps](xref:DataMiner_user_permissions#general--dataminer-web-apps--dataminer-cube-mobile-access) user permission, as well as any other user permissions required to access specific apps.
 
-## Accessing your DMS remotely with Cube
+## Accessing your DMS remotely with DataMiner Cube
 
-If [Remote Access is enabled](xref:Controlling_remote_access) for a DMS, and you have been [granted access to dataminer.services features](xref:Giving_users_access_to_cloud_features), you can access your DMS via the Remote Access URL. To be able to remotely access your system with Cube you need to have the Cube desktop application installed on your system. More information on how to install Cube can be found (here)[xref:Installing_configuring_the_DataMiner_Cube_software].
+If [remote access is enabled](xref:Controlling_remote_access) for a DMS, and you have been [granted access to dataminer.services features](xref:Giving_users_access_to_cloud_features), you can use DataMiner Cube to access your DMS via the remote access URL. To do so, you need to [have the DataMiner Cube desktop application installed](xref:Installing_configuring_the_DataMiner_Cube_software).
 
-Remote Cube will use the same URL that is being used for remote access to the web pages, but without the protocol prefix "https://".
+To access the DMS remotely via Cube, use the same URL as for remote access to the web pages, but without the protocol prefix `https://`.
 
-To access your system remotely with Cube there are a few options to start the Cube session:
+You can start the Cube session in different ways:
 
-### By using the Cube launcher
+- **Via the desktop app on a client PC**: [Open the Cube desktop app](xref:Opening_the_desktop_app) and add a new DMS. In the *host* field, fill in the remote access URL of your system, without the protocol prefix, e.g. `ziine-skyline.on.dataminer.services`. In the *alias* field, you can fill in a more user-friendly name to make it easy to identify the system.
 
-Open the Cube launcher and add a new DMS. Here you will be prompted to fill in a "host" and an "alias" field. In the host field you need to fill in the Remote Access URL of your system, without the protocol prefix. This will look something like this: "ziine-skyline.on.dataminer.services". To be able to easily identify your system you can fill in a human readable and easy to remember name in the alias field.
+  ![Remote Cube in the launcher](~/user-guide/images/RemoteCubeLauncher.png)
 
-![Remote Cube in the launcher](~/user-guide/images/RemoteCubeLauncher.png)
+- **With the button on dataminer.services**: Open a browser and navigate to [dataminer.services](https://dataminer.services). Find your DMS in the list and click the *Open in desktop app* button. This will open Cube with the correct remote access URL filled in in the host field. Then click *Connect* to connect to your DMS.
 
-### By using the button on admin.dataminer.services
+  ![Remote Cube in the home app](~/user-guide/images/RemoteCubeHomeApp.png)
 
-Open a browser, navigate to [admin.dataminer.services](https://admin.dataminer.services) and go to the overview of your system. Here you will find a button that is labeled "Open Desktop Application". Pressing this button will open up the Cube application with the correct URL in the host field. Simply click on "Connect" and Cube will start a session with your DMS.
+  > [!NOTE]
+  > If your DMS is not listed, check if the correct organization is selected in the top-right corner.
 
-![Remote Cube in the admin app](~/user-guide/images/RemoteCubeAdminApp.png)
+- **With the button on admin.dataminer.services**: Open a browser, navigate to [admin.dataminer.services](https://admin.dataminer.services), and go to the overview of your system. Here you will find the button *Open Desktop Application*. This works in the same way as the button on dataminer.services.
 
-### By using the button on dataminer.services
+  ![Remote Cube in the admin app](~/user-guide/images/RemoteCubeAdminApp.png)
 
-Open a browser and navigate to [dataminer.services](https://dataminer.services). Find your DMS in the list and click the "Open  in desktop app" button. Pressing this button will open up the Cube application with the correct URL in the host field already filled in. Simply click "Connect" and Cube will setup a session with your DMS.
-
-![Remote Cube in the home app](~/user-guide/images/RemoteCubeHomeApp.png)
-
-### Known limitations
-
-If the DMS has SAML authentication configured, users will not be able to use Remote Cube Access.
-
-If the DMS has multiple CloudGateway instances, Remote Cube Access will not function correctly. This is due to the fact that Cube needs a session with a specific DMA, while now all requests are being distributed across the available CloudGateways.
+> [!IMPORTANT]
+>
+> At present, the following **limitations** apply:
+>
+> - If the DMS has **SAML** authentication configured, users will not be able to access the DMS remotely with Cube.
+> - If the DMS has **multiple CloudGateway instances**, remote access using DataMiner Cube will not function correctly, because Cube needs a session with a specific DMA, while with such a setup requests are distributed across the available CloudGateway instances.
