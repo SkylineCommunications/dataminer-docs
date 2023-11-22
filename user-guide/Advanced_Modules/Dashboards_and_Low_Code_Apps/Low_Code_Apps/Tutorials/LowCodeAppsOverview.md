@@ -25,11 +25,11 @@ With the DataMiner Low-Code Apps module, you can create custom applications that
 
 - [Managing pages](xref:Tutorial_Apps_Managing_Pages)
 
-- [Showing a panel](xref:Tutorial_Apps_Panel)
+- [Creating and showing a panel](xref:Tutorial_Apps_Panel)
 
 - [Using a header bar](xref:Tutorial_Apps_Headerbar)
 
-- [Running a script upon page load](xref:Tutorial_Apps_Script_Upon_Page_Load)
+- [Running a script when a page opens](xref:Tutorial_Apps_Script_Upon_Page_Load)
 
 - [Chaining actions](xref:Tutorial_Apps_Chaining_Actions)
 

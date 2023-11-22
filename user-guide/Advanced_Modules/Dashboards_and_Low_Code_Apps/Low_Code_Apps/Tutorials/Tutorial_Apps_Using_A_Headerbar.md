@@ -46,7 +46,7 @@ Expected duration: 5 minutes
 
       You can search for "Dashboard" to find applicable icons for a "Metrics" panel.
 
-   1. Configure the button to open a side panel, similar to the way this was done in [Showing a panel](xref:Tutorial_Apps_Panel).
+   1. Configure the button to open a side panel, similar to the way this was done in [Creating and showing a panel](xref:Tutorial_Apps_Panel).
 
 1. Publish the app and check if clicking the button in the header bar opens the panel.
 
@@ -70,9 +70,9 @@ Expected duration: 5 minutes
 
 ## Next tutorial
 
-Now that we have all navigational controls covered, we can have a look at how we can execute actions.
+Now that you know how to create navigational controls, take a look at how you can execute actions:
 
-- [Running a script upon page load](xref:Tutorial_Apps_Script_Upon_Page_Load)
+- [Running a script when a page opens](xref:Tutorial_Apps_Script_Upon_Page_Load)
 
 ## Learning paths
 
