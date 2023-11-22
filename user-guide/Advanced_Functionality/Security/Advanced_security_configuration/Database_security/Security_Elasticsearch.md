@@ -104,6 +104,31 @@ To configure TLS encryption for client-server communication:
    bin\elasticsearch-keystore add xpack.security.http.ssl.keystore.secure_password
    bin\elasticsearch-keystore add xpack.security.http.ssl.truststore.secure_password
    ```
+   For Ubuntu the procedure is the following:
+
+   1. Navigate to the bin folder using the following command:
+
+      ```bash
+      cd /usr/share/elasticsearch/bin
+      ```
+
+   1.Set the password for the keystore using the following command:
+
+      ```bash
+      sudo ./elasticsearch-keystore add xpack.security.http.ssl.keystore.secure_password
+      ```
+
+   1. Set the password for the truststore using the following command:
+
+      ```bash
+      sudo ./elasticsearch-keystore add xpack.security.http.ssl.truststore.secure_password
+      ```
+
+   > [!NOTE]
+   > Depending on the flavor of operating system Windows, Ubuntu or other OS the procedure can be different. > We generally recommend Ubuntu.
+
+   > [!TIP]
+   > If the password needs updating, because you ran the generate-tls-certificates again and you acquired a new password for the key- and truststore, the above commands regarding setting the key- and truststore passwords in the /usr/share/elasticsearch/bin need be executed again and will overwrite the previously old password.
 
 1. Start the *elasticsearch-service-x64* service and verify that you can connect with a browser to <https://FQDN:9200>.
 
@@ -119,9 +144,11 @@ To configure TLS encryption for client-server communication:
 > [!TIP]
 > To troubleshoot problems after enabling TLS encryption, consult the *SLSearch.txt* log file.
 
-### Troubleshooting: executing the generate-certificates.sh script
+### Troubleshooting:
 
-#### Syntax error
+#### Executing the generate-certificates.sh script
+
+##### Syntax error
 
 **Situation**: You have cloned the "Generate-TLS-Certificates" GitHub repository on a Windows machine, and have transferred the *generate-certificates.sh* file to a Linux machine using SCP. You have executed the following command:
 
