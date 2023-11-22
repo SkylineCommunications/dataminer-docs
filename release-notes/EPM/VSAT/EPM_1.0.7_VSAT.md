@@ -71,6 +71,25 @@ In the Intelsat Flex Platform VSAT connector, the following changes were impleme
 - The *Remotes Overview* table has been added to the *Remotes* page.
 - The *Circuits Overview* table has been added to the *Circuits* page.
 
+#### Generic Trap Processor: New 'Auto Clear' configuration page [ID_37938]
+
+A new *Auto Clear* configuration page has been added to the Generic Trap Processor connector, which allows you to configure when events are automatically cleaned up. You can configure the following parameters on this page:
+
+- *Event Cleanup Timer*: The interval at which the cleanup operation takes place.
+- *Maximum Age of Events*: Any events older than the time configured here are cleaned up automatically.
+- *Keep Active*: If this option is selected, events will only be cleaned up when they gave been cleared.
+- *Max Processed Messages*: If there are more processed messages than this number, the oldest messages are cleaned up automatically.
+- *Max Received Traps*: If there are more received traps than this number, the oldest traps are cleaned up automatically.
+
+At the bottom of the page, you can also see the current status of the cleanup operation and the time when the cleanup operation last took place.
+
+#### Newtec Dialog Platform VSAT: Cleanup logic implemented for Remotes Overview and Circuits Overview tables [ID_37942]
+
+In the Remotes Overview and Circuits Overview tables of the Newtec Dialog Platform VSAT connector, an *Entity State* and *Entity State Time* column have been added. Based on these columns, cleanup logic has now also been implemented. For this, you can configure the following new parameters:
+
+- *Automatic Entity Removal*: Determines whether entries are automatically removed or not.
+- *Entity Removal Period*: Determines after how long entries are removed if automatic removal is enabled.
+
 ## Changes
 
 ### Enhancements
@@ -196,3 +215,7 @@ In some cases, it could occur that the auto-delete logic failed to function as i
 #### Verizon Computer Associates Interface: VCAI Sun Outage Next Execution Time incorrect at end of month [ID_37937]
 
 A problem with the way the VCAI Sun Outage Next Execution Time KPI was calculated could cause this data to be incorrect at the end of the month.
+
+#### Generic KAFKA Consumer stuck in while loop [ID_37941]
+
+In some cases, the Generic KAFKA Consumer connector could cause run-time errors, which could only be resolved by restarting the element. This happened when a server-side issue caused the connector to be stuck in a "while" loop.
