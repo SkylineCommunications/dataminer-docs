@@ -8,6 +8,7 @@ The following breaking changes have been introduced in recent DataMiner releases
 
 | Release note ID | Release version(s) | Description |
 |--|--|--|
+| [37644](xref:General_Feature_Release_10.3.12#dataminer-objects-models-fields-used-in-multiple-sections-will-no-longer-be-returned-for-gqi-queries-id_37644) | DataMiner 10.4.0/10.3.12 | Fields used in multiple sections will no longer be returned for GQI queries. |
 | [36621](xref:Web_apps_Feature_Release_10.3.9#breaking-change-gqi---get-alarms-data-source-format-of-alarm-ids-has-changed-id_36621) | DataMiner 10.4.0/10.3.9 | The format of the alarm IDs listed in the *AlarmID* column of the *Get alarms* data source has been changed. |
 | [36606](xref:Web_apps_Feature_Release_10.3.8#monitoring-app-a-new-type-of-datetime-boxes-will-now-be-used-on-parameter-pages-id_36606) | DataMiner 10.4.0/10.3.8 | All API methods that are used to set a value of a date or datetime parameter will now expect that value to be passed as a Unix timestamp in milliseconds instead of an OLE Automation date. Also, all API methods that are used to retrieve values of date or datetime parameters will now return those values as Unix timestamps in milliseconds instead of OLE Automation dates. |
 | [35956](xref:SRM_1.2.31) | SRM 1.2.31 | The logic to assign resources for unmapped nodes has been modified so that it is similar to the logic when creating a new booking. |
