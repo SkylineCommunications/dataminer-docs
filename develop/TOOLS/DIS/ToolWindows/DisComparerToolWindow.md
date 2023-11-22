@@ -47,6 +47,10 @@ When you compare two protocols, DIS will also automatically validate both these 
 
 - *Validator* - The differences between the two protocol validations.
 
+> [!NOTE]
+>
+> As comparing between 2 solutions is not possible, the C# checks will not throw any errors as not all the required information is present.
+
 When you right-click an error in the list, a shortcut menu offers you the following options:
 
 | Command | Function |
