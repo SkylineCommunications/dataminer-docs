@@ -56,7 +56,7 @@
           "toc.yml",
           "*.md"
         ]
-      },
+      }
     ],
 	"sitemap": {
       "baseUrl": "https://docs.dataminer.services/",
