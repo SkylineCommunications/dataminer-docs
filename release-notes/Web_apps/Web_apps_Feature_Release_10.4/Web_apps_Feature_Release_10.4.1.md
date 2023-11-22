@@ -16,6 +16,26 @@ uid: Web_apps_Feature_Release_10.4.1
 
 ## New features
 
+#### Dashboards app & Low-Code Apps: New Grid and Timeline components [ID_33276] [ID_33287] [ID_34761] [ID_34948] [ID_37269] [ID_37699] [ID_37812]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+Two new components are now available:
+
+- the *Grid* component, which allows you to visualize and manage data as a grid, and
+- the *Timeline* component, which allows you to visualize scheduled tasks and events on a timeline.
+
+To both components, add a data feed and, optionally, a filter feed.
+
+In additional to the normal layout options, you can use the Template Editor to fully customize these components as to appearance and behavior.
+
+> [!NOTE]
+>
+> - The *Grid* component supports real-time row updates. This feature can be enabled by selecting the *Data retrieval > Update data* option.
+> - The number of items that can be displayed in a grid component is limited to 1000.
+> - If the number of items to be displayed exceeds the number of cells displayed in the component, navigation buttons are available to navigate through the data.
+> - When the scaling of the cells is set to a fixed size and there are too many columns and/or rows to show them at once in the component, in read mode, it is possible to scroll through them with a scrollbar that becomes visible when you hover over the component.
+
 #### Dashboards app & Low-Code Apps - Table component: Customizing the appearance of a column [ID_37522]
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->

@@ -152,7 +152,7 @@ When two DataMiner Agents try to connect via SLNet, from now on, this will no lo
 
 #### Authentication response message now includes the domain user name [ID_37823]
 
-<!-- MR 10.4.0 - FR 10.4.1 -->
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
 
 When a DataMiner Agent receives an authentication request from a client application, it will now include the domain user name in the authentication response message it returns to the client application.
 
