@@ -228,11 +228,11 @@ items:
   - name: Databases
     topicUid: Databases_about
     items:
-      - name: Backup Restore Casasndra Cluster
-        topicUid: Cassandra_cluster_backup_restore
+      - name: Cassandra Cluster Backup using Medusa
+        topicUid: Backup_Restore_Cassandra_Cluster
         items:
-          - name: Cassandra Cluster Backup using Medusa
-            topicUid: Backup_Restore_Cassandra_Cluster
+          - name: Backup Restore Casasndra Cluster
+            topicUid: Cassandra_cluster_backup_restore
       - name: About databases
         topicUid: Databases_about
       - name: Supported system data storage architectures
