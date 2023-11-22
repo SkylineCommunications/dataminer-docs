@@ -102,8 +102,8 @@ When a Cassandra Cluster was in a yellow state because a number of nodes were do
 
 From now on, Failover setups within the system will only report errors if the Cassandra Cluster is in a red state.
 
-#### SLAutomation: Problem when deleting an Automation script dummy that had already been deleted [ID_37907]
+#### SLAutomation would not properly cleanup deleted references to elements [ID_37907]
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
 
-In some rare cases, it would incorrectly be possible to delete an Automation script dummy that had already been deleted, causing an error to occur in SLAutomation.
+In some rare cases, SLAutomation would not clean up deleted references to elements, causing the process to stop unexpectedly when the Automation script ended.
