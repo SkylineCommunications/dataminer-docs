@@ -135,6 +135,27 @@ When, on the Root page of a DataMiner Agent, you hover over an application and c
 
 ### Enhancements
 
+#### Interactive Automation scripts: Certain components can now be visualized as read-only in web environments [ID_37659]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+
+*UIBlockDefinition* now has an *IsReadOnly* option, which is set to false by default. When set to true, and when the interactive Automation script is executed in a web environment, the following UI components will now be displayed read-only:
+
+- Calendar
+- Checkbox
+- CheckboxList
+- Dropdown
+- Numeric
+- RadiobuttonList
+- TextBox
+- Time
+- Treeview
+
+> [!NOTE]
+>
+> - Although read-only HTML components look as if they are read-write, users will not be able to change their value.
+> - When a component has its *IsEnabled* option set to false and its *IsReadOnly* option set to true, it will be considered disabled. Except for components of UIBlockType *Treeview*. These will behave as enabled and read-only.
+
 #### Dashboards app: Selection box data for 'All available data' tab will no longer automatically be retrieved when you enter edit mode [ID_37706]
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
