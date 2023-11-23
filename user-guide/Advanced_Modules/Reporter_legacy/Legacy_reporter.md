@@ -28,3 +28,6 @@ In DataMiner Cube, built-in reports are available on several types of cards, as 
 
 > [!NOTE]
 > From DataMiner 10.2.0/10.1.12 onwards, the legacy Reporter module can be disabled using the soft-launch option *LegacyReportsAndDashboards*. See [Soft-launch options](xref:SoftLaunchOptions).
+
+> [!CAUTION]
+> This module is being retired. For more detailed information, see [DataMiner functionality evolution and retirement](xref:Software_support_life_cycles#dataminer-functionality-evolution-and-retirement). ![EOL](~/user-guide/images/EOL_Duo.png)
