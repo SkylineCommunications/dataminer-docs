@@ -18,7 +18,7 @@ Remove any existing legacy reports and legacy dashboards. Note that these can be
 
 The [Dashboards app](xref:newR_D) replaces the legacy Reporter and legacy Dashboards modules.
 
-If you still rely on certain functionality and want to keep on using the legacy Reports &amp; Dashboards module, it's possible to enable them by configuring a [soft-launch option](xref:Overview_of_Soft_Launch_Options#LegacyReportsAndDashboards).
+If you still rely on certain functionality and want to keep on using the legacy Reports &amp; Dashboards module, it's possible to enable them by configuring a [soft-launch option](xref:Overview_of_Soft_Launch_Options#legacyreportsanddashboards).
 
 ## Issue description
 
