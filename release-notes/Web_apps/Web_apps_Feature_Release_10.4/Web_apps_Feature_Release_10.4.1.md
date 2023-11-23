@@ -266,3 +266,9 @@ When, during a session, you opened the query data set for the first time, a run-
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
 
 It would incorrectly be possible to duplicate the filter of a *Parameter table* component. The *Duplicate* option has now been removed.
+
+#### Dashboards app & Low-Code Apps: Problem when editing the property of a feed linked to a query row [ID_37947]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+When you tried to edit the property of a feed linked to a query row, the input box would incorrectly not display the existing value.
