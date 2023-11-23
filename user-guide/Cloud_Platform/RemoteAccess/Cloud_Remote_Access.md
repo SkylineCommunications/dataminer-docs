@@ -59,7 +59,6 @@ You can start the Cube session in different ways:
 
 > [!IMPORTANT]
 >
-> At present, the following **limitations** apply:
+> At present, the following **limitation** applies:
 >
 > - If the DMS has **SAML** authentication configured, users will not be able to access the DMS remotely with Cube.
-> - If the DMS has **multiple CloudGateway instances**, remote access using DataMiner Cube will not function correctly, because Cube needs a session with a specific DMA, while with such a setup requests are distributed across the available CloudGateway instances.
