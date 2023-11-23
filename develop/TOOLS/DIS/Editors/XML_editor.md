@@ -274,23 +274,23 @@ In the XML editor, you can click a small *Down* arrow in front of certain XML ta
 |---------|----------|
 | Edit Table... | Open the parameter in the table editor.<br>(only for table parameters) |
 | Add New Column | Add a new column to a table parameter.<br>- The new column will automatically be assigned a default parameter ID.<br>- The name of the new column will get a prefix containing the name of the table parameter.<br>- The description of the new column will get a suffix containing the description of the table in parenthesis.<br>- When the last column of the table is a displayKey column, then the new column will be inserted before that displayKey column.<br>- When the last column of the table has a write column next to it, then the new column will be added after the write column. It will not be added in between a read and a write column. |
-| Add Context Menu... | Create a context menu parameter and QAction. See also plugin '[Add Table Context Menu...](xref:DisPlugins#add-table-context-menu)' <br> (only for table parameters) |
+| Add Context Menu... | Create a context menu parameter and a QAction. See also the *[Add Table Context Menu...](xref:DisPlugins#add-table-context-menu)* plugin.<br>(only for table parameters) |
 | Generate Write Parameter... | Create an identical parameter of type "Write".<br> (only for read parameters) |
 | Include in Group | Include the parameter in one of the listed groups of type "poll".<br> From now on, this command is only available for SNMP parameters (i.e. parameters with an \<SNMP> subtag). |
 | Generate New Trigger (on change) | Create a new "on change" trigger that will get activated when the parameter changes. |
 | Generate New QAction | Creates a new blank QAction that will be run when the parameter changes. |
-| Generate New QAction - Context Menu | Creates a new QAction that holds the context menu logic. See also plugin '[Add Table Context Menu...](xref:DisPlugins#add-table-context-menu)' <br> (only for context menu parameters) |
-| Generate New QAction - Trap Receiver | Creates a new QAction that holds the SNMP trap logic. See also plugin '[Add SNMP Trap Receiver...](xref:DisPlugins#add-snmp-trap-receiver)' <br> (only for trap receiver parameters) |
-| Parameter Update Locations | Opens a new window with the locations from where the parameter is (possibly) being updated. |
+| Generate New QAction - Context Menu | Creates a new QAction that holds the context menu logic. See also the *[Add Table Context Menu...](xref:DisPlugins#add-table-context-menu)* plugin.<br>(only for context menu parameters) |
+| Generate New QAction - Trap Receiver | Creates a new QAction that holds the SNMP trap logic. See also the *[Add SNMP Trap Receiver...](xref:DisPlugins#add-snmp-trap-receiver)* plugin.<br>(only for trap receiver parameters) |
+| Parameter Update Locations | Opens a new window with the locations where the parameter will (possibly) be updated. |
 
 #### Trigger
 
 | Command | Function |
 |---------|----------|
 | Include in Group | Include the trigger in one of the listed groups of type "trigger" or "poll trigger". |
-| Add Existing Action | Add an existing action to the trigger.<br> (only if the trigger is of type "action") |
-| Generate New Action | Create a new action.<br> (only if the trigger is of type "action") |
-| Add Existing Trigger | Add an existing trigger to the trigger.<br> (only if the trigger is of type "trigger") |
+| Add Existing Action | Add an existing action to the trigger.<br>(only if the trigger is of type "action") |
+| Generate New Action | Create a new action.<br>(only if the trigger is of type "action") |
+| Add Existing Trigger | Add an existing trigger to the trigger.<br>(only if the trigger is of type "trigger") |
 
 #### Action
 
@@ -330,7 +330,7 @@ In the XML editor, you can click a small *Down* arrow in front of certain XML ta
 | Include in Timer | Include the group in one of the listed timers. |
 | Generate New Parameter<br>Add Existing Parameter<br>Generate New Pair<br>Add Existing Pair<br>Generate New Session<br>Add Existing Session | As long as a group of type "poll" is still empty, you can use these commands to add a parameter, a pair, or a session to it.<br>However, once you added one item to a group of type "poll", all other items you add must be of the same type. If a group already contains a pair, for example, you will no longer be allowed to add parameters or sessions to that group. |
 | Generate New Action | Create a new action.<br>(only if the group is of type "action" or "poll action") |
-| Add Existing Action | Add an existing action to the group.<br> (only if the group is of type "action" or "poll action") |
+| Add Existing Action | Add an existing action to the group.<br>(only if the group is of type "action" or "poll action") |
 | Add Existing Trigger | Add an existing trigger to the group.<br>(only if the group is of type "trigger" or "poll trigger") |
 
 #### Command
@@ -372,8 +372,8 @@ In the XML editor, you can click a small *Down* arrow in front of certain XML ta
 |---------|----------|
 | Edit Script... | Create a temporary C# project containing the code of the "Exe" C# code block, and open the code block in a new C# editor tab. |
 | Edit All Scripts... | For each of the available "Exe" C# code blocks, create a temporary C# project containing the code of that block, and open each code block in a new C# editor tab. |
-| Change Exe ID... | Change the ID of an Exe.<br>Note that when you change the ID of an Exe, the following items will be updated:<br>- The id attribute of the \<Exe> tag<br>- The name of the C# project ("scriptName_ID")<br>- The name of the main C# file ("scriptName_ID.cs")<br>- The name of the default namespace<br>- ("scriptName_ID")<br>- The AssemblyInfo.cs file<br>- The name of the project folder on disk |
-| Delete Script | Delete the entire Exe element as well as the associated C# project.<br> Note: This action cannot be undone as it will also remove all associated C# project files stored on disk. |
+| Change Exe ID... | Change the ID of an Exe.<br>Note that when you change the ID of an Exe, the following items will be updated:<br>- The id attribute of the \<Exe> tag<br>- The name of the C# project ("scriptName_ID")<br>- The name of the main C# file ("scriptName_ID.cs")<br>- The name of the default namespace ("scriptName_ID")<br>- The AssemblyInfo.cs file<br>- The name of the project folder on disk |
+| Delete Script | Delete the entire Exe element as well as the associated C# project.<br>Note: This action cannot be undone as it will also remove all associated C# project files stored on disk. |
 | Copy Script to Clipboard | Copy the entire contents of the "Exe" C# code block (i.e. the Automation script) to the Windows Clipboard. |
 
 > [!NOTE]

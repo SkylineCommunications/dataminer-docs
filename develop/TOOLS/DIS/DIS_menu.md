@@ -82,9 +82,9 @@ In the *DMA* submenu, you can find the following commands:
 
 ## Administration \> Open Driver Help
 
-If there is an existing connector help available on the [connector documentation](https://docs.dataminer.services/connector/index.html), then it will open it in the default web browser.
+If a connector help page is available on [DataMiner Connector Documentation](https://docs.dataminer.services/connector/index.html), selecting *Open Driver Help* will open that page in the default web browser.
 
-In case there is no matching page, it will direct you to the section on how to [contribute](xref:Connector_help_pages#adding-a-new-connector-documentation-page) to the Connector Documentation.
+If no matching page can be found, you will be directed to a page explaining [how to add a new connector documentation page](xref:Connector_help_pages#adding-a-new-connector-documentation-page).
 
 ## Protocol \> Generate QAction helper code
 
