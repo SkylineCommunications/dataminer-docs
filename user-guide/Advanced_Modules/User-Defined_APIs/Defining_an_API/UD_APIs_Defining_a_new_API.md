@@ -81,7 +81,25 @@ This makes it possible to define the four CRUD (create, read, update, delete) ac
 
 #### User input data
 
-There's two ways to pass data to your API. You can use [query parameters](#query-parameters), that allow you to pass data in a key-value format. Or you can use the [request body](#request-body), that you can deserialize in your script, or you can use the built-in deserialization.
+There are two ways to pass data to your API. You can use [query parameters](#query-parameters), which allow you to pass data in a key-value format. Or you can use the [request body](#request-body), which you can either deserialize yourself in your script, or let it be deserialized to a key-value format by the built-in deserialization.
+
+##### Query parameters
+
+Query parameters are available in the QueryParameters property in the `ApiTriggerInput`. The `IQueryParameters` exposes following methods:
+
+| Method name | Return type | Summary |
+|-------------|-------------|---------|
+| `TryGetValues(string key, out List<string> values)` | `bool` | Tries to get the value(s) for the associated key. Returns `true` in case value(s) are found for that key, `false` if not. The values will be in the `out` parameter. |
+| `TryGetValue(string key, out string value)` | `bool` | Tries to get the value for the associated key. Returns `true` in case a value is found for that key, `false` if not. The value will be in the `out` parameter.  The first value will be returned in case there are multiple. |
+| `GetAllKeys()` | `List<string>` | Returns all keys for which there is a value. |
+| `ContainsKey(string key)` | `bool` | Returns whether the key is present or not. |  
+
+> [!NOTE]
+>
+> - Multiple values can be added for one key.
+> - Query parameter keys are case-sensitive.
+> - The maximum size for the query string is 2KB.
+> - Query parameters are available from DataMiner 10.4.1/10.4.0 onwards.
 
 ##### Request body
 
@@ -103,24 +121,6 @@ There are two ways to pass the request body to the API script if you make use of
 
 > [!TIP]
 > To see how these two options are used in an API script, see [API script examples](xref:UD_APIs_API_script_examples).
-
-##### Query parameters
-
-Query parameters are available in the QueryParameters property in the `ApiTriggerInput`. The `IQueryParameters` exposes following methods:
-
-| Method name | Return type | Summary |
-|-------------|-------------|---------|
-| `TryGetValues(string key, out List<string> values)` | `bool` | Tries to get the value(s) for the associated key. Returns `true` in case value(s) are found for that key, `false` if not. The values will be in the `out` parameter. Key is case-sensitive! |
-| `TryGetValue(string key, out string value)` | `bool` | Tries to get the value for the associated key. Returns `true` in case a value is found for that key, `false` if not. The value will be in the `out` parameter.  The first value will be returned in case there are multiple. Key is case-sensitive! |
-| `GetAllKeys()` | `List<string>` | Returns all keys for which there is a value. |
-| `ContainsKey(string key)` | `bool` | Returns whether the key is present or not. Key name is case-sensitive! |  
-
-> [!NOTE]
->
-> - Multiple values can be added for one key.
-> - Query parameter keys are case-sensitive.
-> - The maximum size for the query string is 2KB.
-> - Query parameters are available from DataMiner 10.4.1/10.4.0 onwards.
 
 #### Route
 
