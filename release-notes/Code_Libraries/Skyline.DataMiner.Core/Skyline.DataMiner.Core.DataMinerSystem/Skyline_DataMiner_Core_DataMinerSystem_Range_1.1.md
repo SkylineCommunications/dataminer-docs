@@ -9,31 +9,30 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.1
 
 ### 1.1.1.3
 
-#### New Feature - Partial Table Support for QueryData method in DmsTable class
+#### New feature - Partial table support for QueryData method in DmsTable class
 
-QueryData method in DMSTable can be used to retrieve very specific table data using column filters. Those filters were changed into interfaces.
-QueryData now also support retrieving & filtering data from partial tables
+The *QueryData* method in the DMSTable class can be used to retrieve very specific table data using column filters. Those filters have been changed into interfaces.
 
-#### Fix - Partial Table Support for Table Monitors
+*QueryData* now also supports retrieving and filtering data from partial tables.
 
-Monitors on partial tables would only work for the first page.
-This was changed so that you can now monitor value changes on all pages of a partial table.
+#### Fix - Partial table support for table monitors
+
+Up to now, monitors on partial tables only worked for the first page.
+
+This has been changed so that you can now monitor value changes on all pages of a partial table.
 
 > [!NOTE]
-> Monitoring on value changes of a partial table requires a lot of extra computation power in the background. So there is a drop in scalability and performance when monitoring partial tables.
-> It should be ok to monitor a few of them, but benchmarking shows that setting up 20 monitors to a partial table will limit it's ability to handle 'burst' event (value changes every 100ms) to around 300 events before needing > 5 seconds to handle an event. This compared to 1400 events before the same occurs on non-partial tables.
+> Monitoring on value changes of a partial table requires a lot of extra computing power in the background, so there is a drop in scalability and performance when monitoring partial tables. It should be OK to monitor a few of them, but benchmarking shows that setting up 20 monitors for a partial table will limit the ability to handle "burst" events (value changes every 100 ms) to around 300 events before more than 5 seconds are needed to handle an event (this compared to 1400 events before the same occurs on non-partial tables).
 
-#### New Feature - Migrated GetParameters and SetParameters from the Community Utility Library
+#### New feature - Migrated GetParameters and SetParameters from the Community Utility Library
 
-You can retrieve the LocalElement from IDms and from there you can now perform a special GetParameters that retrieves multiple parameters and converts them into their given types.
-This can be done on both stand-alone parameters and on columns of tables
+When you retrieve the local element from IDms, you can now perform a special *GetParameters* call that retrieves multiple parameters and converts them into their given types. This can be done for both standalone parameters and column parameters.
 
-You can retrieve the LocalElement from IDms and from there you can now perform a special SetParameters that allow you to group together SetParameterRequest objects or provide a Dictionary of parameter ids and values to perform a single call.
+When you retrieve the local element from IDms, you can now also perform a special *SetParameters* call that allows you to group together *SetParameterRequest* objects or provide a dictionary of parameter IDs and values to perform a single call.
 
-#### New Feature - AutomationScript execution enhanced with Async execution and additional runflags
+#### New feature - Automation script execution enhanced with async execution and additional run flags
 
-You are now able to trigger an execution of an AutomationScript asyncronously.
-You are now able to provide several different *Run Options* similar to the options you get when triggering a script maually. (e.g. LockElements, CheckSets, WaitWhenLocked, ...)
+You can now trigger the execution of an Automation script asynchronously. In addition, you can provide several different run options similar to the options you get when triggering a script manually (e.g. LockElements, CheckSets, WaitWhenLocked, etc.).
 
 ### 1.1.1.2
 
