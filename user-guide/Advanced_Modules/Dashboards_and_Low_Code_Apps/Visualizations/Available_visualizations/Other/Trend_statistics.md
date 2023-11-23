@@ -4,7 +4,7 @@ uid: DashboardTrendStatistics
 
 # Trend statistics
 
-This component displays the minimum, average and maximum value of one or more trended parameters. Available from DataMiner 9.6.13 onwards;
+This component displays the minimum, average and maximum value of one or more trended parameters. Available from DataMiner 9.6.13 onwards.
 
 To configure the component:
 
