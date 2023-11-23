@@ -69,7 +69,7 @@ For more information, see [Check Cluster SLNet Connections](xref:BPA_Check_Clust
 
 #### DataMiner Object Models: Generic enum field descriptors now allow you to select multiple values [ID_37482]
 
-<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+<!-- MR 10.4.0 - FR 10.4.1 -->
 
 A generic enum field descriptor now allows you to select multiple values.
 
