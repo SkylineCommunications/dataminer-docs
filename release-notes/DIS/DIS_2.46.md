@@ -10,27 +10,24 @@ uid: DIS_2.46
 
 #### Set Param From: Parameter update locations [ID_37831]
 
-In the dropdown for a parameter, a new option has been added: Parameter Update Locations.
+When you right-click a parameter, you can now find a new option in the context menu: *Parameter Update Locations*
 
-This will open up a new window that will show a list of all the locations that update that parameter or possibly update that parameter.
+Clicking this option will open a new window that will show a list of all the locations where that parameter will (possibly) be updated.
 
 Currently implemented:
 
-- Actions: When a parameter is impacted by one of the following action types: pow, multiply, increment, aggregate, changelength and go.
+- **Actions**: When a parameter is affected by one of the following action types: pow, multiply, increment, aggregate, changelength and go.
+- **Groups**: When an SNMP parameter is included in a group.
+- **Responses**: When a parameter is part of a response.
+- **QActions**: When a parameter is set via `protocol.SetParameter` or `protocol.SetParameters`.
 
-- Groups: When a SNMP parameter is included in a group.
-
-- Responses: When a parameter is part of a response.
-
-- QActions: When a parameter is being set via protocol.SetParameter or protocol.SetParameters.
-
-When double clicking on an item, you'll go the location of that item. You can also use the context menu to navigate and close the window at the same time.
+When you double-clicking on an item, you will be directed to the location of that item. You can also use the context menu to navigate and close the window at the same time.
 
 #### Open Driver Help [ID_37964]
 
-In the *DIS menu*, you can now find the *Administration* menu item when you have a protocol XML open. This contains the *Open Driver Help* action that will open the default web browser and go to the connector help page on the [Connector Documentation](https://docs.dataminer.services/connector/index.html).
+When you open a protocol XML file, the *DIS menu* will now include an *Administration* submenu, containing the *Open Driver Help* command. Selecting that command will open the default web browser and go to the connector help page on [DataMiner Connector Documentation](https://docs.dataminer.services/connector/index.html).
 
-In case there is no matching page, it will direct you to the section on how to [contribute](xref:Connector_help_pages#adding-a-new-connector-documentation-page) to the Connector Documentation.
+If no matching page can be found, you will be directed to a page explaining [how to add a new connector documentation page](xref:Connector_help_pages#adding-a-new-connector-documentation-page).
 
 ### Validator
 
@@ -43,7 +40,7 @@ The following checks and error messages have been added.
 | 2.21.20 | UnrecommendedSshOptions                | Unrecommended option 'option' in Param 'pid'. |
 | 2.21.21 | InvalidMixOfSshOptionsAndPortSettings  | Mixing option 'option' and PortSettings SSH is invalid. Param ID 'pid'. |
 
-The check on PortSettings@name has been extended to expect 'SSH Connection' for SSH connections.
+The *InvalidConnectionName* check (1.23.2) has been extended to expect *SSH Connection* for SSH connections.
 
 ### Snippets
 
