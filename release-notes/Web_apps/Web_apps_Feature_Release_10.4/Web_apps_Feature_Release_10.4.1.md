@@ -272,3 +272,9 @@ It would incorrectly be possible to duplicate the filter of a *Parameter table* 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
 
 When you tried to edit the property of a feed linked to a query row, the input box would incorrectly not display the existing value.
+
+#### Dashboards app & Low-Code Apps: Problem when opening the DOM Definitions or DOM Instances datasets on a system without Elasticsearch/OpenSearch  [ID_37997]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+When the *DOM Definitions* or *DOM Instances* datasets were opened on a system that did not have Elasticsearch or OpenSearch installed, an error would be thrown.
