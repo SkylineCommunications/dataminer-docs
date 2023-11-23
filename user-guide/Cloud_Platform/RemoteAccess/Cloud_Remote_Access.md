@@ -58,7 +58,4 @@ You can start the Cube session in different ways:
   ![Remote Cube in the admin app](~/user-guide/images/RemoteCubeAdminApp.png)
 
 > [!IMPORTANT]
->
-> At present, the following **limitation** applies:
->
-> - If the DMS has **SAML** authentication configured, users will not be able to access the DMS remotely with Cube.
+> At present, the following **limitation** applies: If the DMS has **SAML** authentication configured, users will not be able to access the DMS remotely with Cube.
