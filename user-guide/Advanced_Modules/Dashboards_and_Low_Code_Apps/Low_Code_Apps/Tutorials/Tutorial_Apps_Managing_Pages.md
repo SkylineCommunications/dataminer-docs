@@ -10,9 +10,6 @@ The content and screenshots for this tutorial were created in DataMiner version 
 
 Expected duration: 5 minutes.
 
-> [!NOTE]
-> A low-code app will only show the navigation sidebar if there are at least two pages. If an app has only one page, the sidebar is not displayed outside of edit mode.
-
 > [!TIP]
 > See also: [Kata #7: Pages, panels and headers in a low-code app](https://community.dataminer.services/courses/kata-7/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
@@ -35,7 +32,7 @@ Expected duration: 5 minutes.
 
 1. Click the *Deploy* button to deploy the *IPAM - GQI dummy data sources* packages on your DMA.
 
-   This package contains some data which will be used throughout the tutorial.
+   This package contains data that will be used in this tutorial.
 
 ## Step 2: Add a page to your app
 
@@ -44,6 +41,9 @@ Expected duration: 5 minutes.
 1. In the sidebar on the left, click the "+" icon (in case the sidebar is collapsed) or click *Create page* (if the sidebar is expanded).
 
    ![Create page button](~/user-guide/images/PageAdd.png)
+
+> [!NOTE]
+> A low-code app will only show the navigation sidebar if there are at least two pages. If an app has only one page, the sidebar is not displayed outside of edit mode.
 
 ## Step 3: Configure how your page is shown
 
@@ -128,6 +128,12 @@ You can quickly create a duplicate of an existing page, resulting in a new page 
    - *Delete*: This will ask you if you are sure you want to delete the page. If you confirm, the page will be removed along with all its content.
 
    ![Page context menu](~/user-guide/images/PageContextMenu.png)
+
+## Next tutorial
+
+In addition to pages, you can also show panels in a low-code app:
+
+- [Creating and showing a panel](xref:Tutorial_Apps_Panel)
 
 ## Learning paths
 

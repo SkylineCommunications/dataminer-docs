@@ -340,6 +340,14 @@ items:
                 topicUid: Tutorial_Apps_Edit_Existing_App
               - name: Managing the pages in an app
                 topicUid: Tutorial_Apps_Managing_Pages
+              - name: Creating and showing a panel
+                topicUid: Tutorial_Apps_Panel
+              - name: Using a header bar
+                topicUid: Tutorial_Apps_Headerbar
+              - name: Running a script when a page opens
+                topicUid: Tutorial_Apps_Script_Upon_Page_Load
+              - name: Chaining actions
+                topicUid: Tutorial_Apps_Chaining_Actions
               - name: Using the stepper component in a low-code app
                 topicUid: TutorialStepper
       - name: Configuring components
@@ -373,6 +381,8 @@ items:
                 topicUid: DashboardImage
               - name: Icon
                 topicUid: DashboardIcon
+              - name: Maps
+                topicUid: DashboardMaps
               - name: Stepper
                 topicUid: DashboardStepper
               - name: Web

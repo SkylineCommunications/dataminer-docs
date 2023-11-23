@@ -4,7 +4,7 @@ uid: LowCodeApps_event_config
 
 # Configuring low-code app events
 
-At present two types of events can be configured in the DataMiner Low-Code Apps:
+At present, you can configure actions for two types of events in the DataMiner Low-Code Apps:
 
 - *On page load*: This event takes place when a page is loaded. (See [Configuring a page of a low-code app](xref:LowCodeApps_page_config).)
 - *On click*: This event takes place when a user clicks a button. (See [Configuring the header bar of a low-code app page](xref:LowCodeApps_header_config).)
@@ -13,6 +13,8 @@ For each of these events, you can configure actions as detailed below.
 
 > [!TIP]
 > Actions can be combined and chained to create more complex behavior. For example, an *Open a page* action can be followed by an *Open a panel* action to open a panel on a specific page. While the panel is being opened, a *Launch a script* action can execute an Automation script that updates parameters that will be displayed on that panel. All of this can be triggered from a header bar button, for example on the initial page.
+>
+> See also: [Tutorials — Running a script when a page opens](xref:Tutorial_Apps_Script_Upon_Page_Load) and [Tutorials — Chaining actions](xref:Tutorial_Apps_Chaining_Actions).
 
 ## Launching a script
 

@@ -463,18 +463,19 @@ Once the creation is finished, you will see your newly created cluster on the *A
 
 1. Restart DataMiner.
 
-#### DataMiner installation/upgrade: Automatic installation of DataMiner Extension Modules [ID_36085] [ID_36513] [ID_36514] [ID_36799] [ID_37137]
+#### DataMiner installation/upgrade: Automatic installation of DataMiner Extension Modules [ID_36085] [ID_36513] [ID_36514] [ID_36799] [ID_37137] [ID_37895]
 
 <!-- MR 10.4.0 - FR 10.3.7 -->
 <!-- RNs 36799/37137: MR 10.4.0 - FR 10.3.9 -->
+<!-- RNs 37895: MR 10.4.0 - FR 10.3.12 -->
 
 When you install or upgrade a DataMiner Agent, the following DataMiner Extension Modules (DxMs) will now automatically be installed (if not present yet):
 
-- DataMiner ArtifactDeployer (version 1.5.0)
+- DataMiner ArtifactDeployer (version 1.5.2)
 - DataMiner CoreGateway (version 2.12.0)
-- DataMiner FieldControl (version 2.9.0)
-- DataMiner Orchestrator (version 1.4.0)
-- DataMiner SupportAssistant (version 1.5.0)
+- DataMiner FieldControl (version 2.9.1)
+- DataMiner Orchestrator (version 1.4.1)
+- DataMiner SupportAssistant (version 1.5.3)
 
 The BPA test *Firewall Configuration* has been altered to also check if TCP port 5100 is properly configured in the firewall. This port is required for communication with the cloud via the endpoint hosted in DataMiner CloudGateway.
 

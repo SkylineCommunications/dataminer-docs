@@ -42,6 +42,20 @@ See also: [Upgrade fails because of VerifyElasticStorageType.dll prerequisite](x
 
 ### Enhancements
 
+#### Elasticsearch/OpenSearch: Enhanced log entry when creating a custom data storage fails [ID_26965]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+When an attempt to create a custom data storage fails, the log entry will now also mention the data storage type.
+
+Former log entry:
+
+`Cannot create a custom data table for Elastic when Elastic is not active.`
+
+New log entry:
+
+`Cannot create a custom data table for {typeof(T)} in Elastic when Elastic is not active.`
+
 #### New BPA test 'Check Cluster SLNet Connections' [ID_37110]
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
@@ -136,6 +150,12 @@ Forwarding sort operators to the backend is now supported for a wider range of q
 
 When two DataMiner Agents try to connect via SLNet, from now on, this will no longer be allowed if the two agents share the same DataMiner GUID (except when they are both part of the same Failover setup).
 
+#### Authentication response message now includes the domain user name [ID_37823]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+When a DataMiner Agent receives an authentication request from a client application, it will now include the domain user name in the authentication response message it returns to the client application.
+
 #### Protocols: Buffer for SNMP responses now has a dynamic size [ID_37824]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
@@ -189,3 +209,27 @@ In some cases, an error could occur in SLAnalytics when it was not able to conne
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
 When a table was polled via SNMPv3 and the response included a cell that contained *no such instance*, the table would not get populated with the values that were received. Instead, the entire result set would be discarded.
+
+#### Cassandra Cluster: Failover setups would incorrectly report errors when the cluster status was yellow [ID_37868]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+When a Cassandra Cluster was in a yellow state because a number of nodes were down, up to now, Failover setups within the system would incorrectly report errors.
+
+From now on, Failover setups within the system will only report errors if the Cassandra Cluster is in a red state.
+
+#### Incorrect 'Clearing cache ...' entries in SLEventCache.txt [ID_37874]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+Incorrect entries would be added to the *SLEventCache.txt* log file on DataMiner startup and when new objects (e.g. elements) had been created.
+
+Example of an incorrect log entry:
+
+`Clearing cache: predicate<entries with old hosting agent id> for type XXXXXX`
+
+#### SLAutomation would not properly cleanup deleted references to elements [ID_37907]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+In some rare cases, SLAutomation would not clean up deleted references to elements, causing the process to stop unexpectedly when the Automation script ended.

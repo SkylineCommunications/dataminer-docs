@@ -16,6 +16,26 @@ uid: Web_apps_Feature_Release_10.4.1
 
 ## New features
 
+#### Dashboards app & Low-Code Apps: New Grid and Timeline components [ID_33276] [ID_33287] [ID_34761] [ID_34948] [ID_37269] [ID_37699] [ID_37812]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+Two new components are now available:
+
+- the *Grid* component, which allows you to visualize and manage data as a grid, and
+- the *Timeline* component, which allows you to visualize scheduled tasks and events on a timeline.
+
+To both components, add a data feed and, optionally, a filter feed.
+
+In additional to the normal layout options, you can use the Template Editor to fully customize these components as to appearance and behavior.
+
+> [!NOTE]
+>
+> - The *Grid* component supports real-time row updates. This feature can be enabled by selecting the *Data retrieval > Update data* option.
+> - The number of items that can be displayed in a grid component is limited to 1000.
+> - If the number of items to be displayed exceeds the number of cells displayed in the component, navigation buttons are available to navigate through the data.
+> - When the scaling of the cells is set to a fixed size and there are too many columns and/or rows to show them at once in the component, in read mode, it is possible to scroll through them with a scrollbar that becomes visible when you hover over the component.
+
 #### Dashboards app & Low-Code Apps - Table component: Customizing the appearance of a column [ID_37522]
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
@@ -115,6 +135,14 @@ When, on the Root page of a DataMiner Agent, you hover over an application and c
 
 ### Enhancements
 
+#### Dashboards app: Selection box data for 'All available data' tab will no longer automatically be retrieved when you enter edit mode [ID_37706]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+Up to now, as soon as you entered edit mode, the client would send a number of requests in order to retrieve all data needed to populate the selection boxes on the *All available data* tab.
+
+From now on, the client will only send a request the moment you open a particular selection box on the *All available data* tab.
+
 #### Dashboards app: User and user group information will no longer automatically be retrieved when you enter edit mode [ID_37727]
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
@@ -128,6 +156,12 @@ From now on, those API calls will only be executed the moment you open the *Sett
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
 
 A number of enhancements have been made to the About box.
+
+#### Dashboards app & Low-Code Apps - State component: Alignment setting will now always be displayed [ID_37918]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+Up to now, the *State* component's *Alignment* setting would only be displayed when the *Design* setting was not set to "Auto Size". From now on, the *Alignment* setting will always be displayed.
 
 ### Fixes
 
@@ -164,8 +198,34 @@ When, in the settings of a *Clock* component, you had specified that it had to d
 
 When, in the Dashboards app or a low-code app, a *Line & area chart* component was linked to a query, in some cases, the entire app could become unresponsive.
 
+#### Dashboards app - Table component: Header options would not be initialized correctly after an error message had been displayed [ID_37869]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+After the table component had displayed an error message, the header options would not be initialized correctly.
+
+For example, it would incorrectly be possible to select *Export to CSV* even when the table component displayed an error.
+
+#### Low-Code Apps: Newly added themes seemed to disappear [ID_37871]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+Newly added themes seemed to disappear when opening the theme editor or when switching to another page. This was due to newly added themes not being correctly added to the theme cache.
+
 #### Web Services API: Problem with GetServicesForFilter method [ID_37901]
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
 
 In some cases, the filter passed to the *GetServicesForFilter* method would not get deserialized correctly, causing an exception to be thrown.
+
+#### Dashboards app & Low-Code Apps: Problem when opening the query data set [ID_37920]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+When, during a session, you opened the query data set for the first time, a run-time error would be thrown when there were no queries.
+
+#### Dashboards app - Parameter table component: Filter could incorrectly be duplicated [ID_37928]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+It would incorrectly be possible to duplicate the filter of a *Parameter table* component. The *Duplicate* option has now been removed.
