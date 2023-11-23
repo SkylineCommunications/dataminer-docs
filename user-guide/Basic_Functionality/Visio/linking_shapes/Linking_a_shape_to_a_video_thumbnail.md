@@ -203,7 +203,7 @@ const videothumbnails = `https://dma-server/videothumbnails/video.htm?type=HTML5
 
 Optionally, it is possible to run the HLS Proxy server behind a front-end web server with a [reverse proxy](xref:Dashboard_Gateway_installation#reverse-proxy). The `--host` parameter can be specified containing the public FQDN and port of the public-facing server. This way, no separate port needs to be made publicly accessible, and there is no need to configure the HTTPS certificate on the HLS proxy because the web server can take care of that.
 
-Any leading path (for example `/hls-proxy`) in the request is echoed into all proxied URLs in the modified HLS manifest by the HLS Proxy.
+The HLS Proxy echoes any leading path (for example `/hls-proxy`) in the request into all proxied URLs in the modified HLS manifest.
 
 ```JavaScript
 const proxy_url = 'https://dma-server/hls-proxy';
