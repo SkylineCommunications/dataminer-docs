@@ -30,7 +30,7 @@ To access the Template Editor:
 
   1. Click the ellipsis button ("...") in the top-right corner and select *Customize preset*.
 
-The Template Editor UI consists of the following main components:
+The Template Editor UI consists of the following main components<!--RN 34858-->:
 
 - Side pane:
 
@@ -121,7 +121,7 @@ With the *Settings* pane to the right side of the preview, you can change the se
 
 ### Specifying layer dimensions
 
-The table below describes the dimension settings available for template layers.
+The table below describes the dimension settings available for template layers<!--RN 37476-->.
 
 | Icon | Setting | Description |
 |--|--|--|
@@ -135,7 +135,8 @@ The table below describes the dimension settings available for template layers.
 > [!NOTE]
 >
 > - In the preview, when you use the drag-and-drop functionality to move a layer, or when you resize a layer by dragging the frame edges, the dimension settings in the *Settings* pane will automatically adjust.
-> - You can use the lock functionality to secure one or multiple dimension settings of a layer by clicking the ![*Lock*](~/user-guide/images/Dimensions_Lock.png) button next to the chosen setting. If you now move or resize that layer in the preview, any attempt to override the specified locked dimension will be restricted.
+> - You can change the unit to percentages by clicking *px* next to the dimension values.
+> - You can use the lock functionality to enhance the security of your design, locking one or multiple dimension settings of a layer by clicking the ![*Lock*](~/user-guide/images/Dimensions_Lock.png) button next to the chosen setting. Once locked, any attempt to override this specified dimension will be restricted, including moving or resizing that layer in the preview and resizing the component in the dashboard or low-code app edit mode (e.g. changing the size of a table column). The locked dimensions will ensure the template remains in its designated position. If you cannot lock a dimension setting because of the locking of other settings, it will appear grayed out.
 > - For some layers, the width and height is determined by the left and right position and can therefore not be modified.
 > - When resizing a layer in the preview, do not release the mouse button if one or more dimension settings are surrounded by a red frame, signaling that they no longer meet the minimum required pixel count. Releasing the mouse button in this state may result in the deletion of your layer.
 
@@ -147,7 +148,7 @@ Depending on the type of layer, you can specify different layer properties in th
 
   - *Show icon*: Allows you to mask the layer, rendering it temporarily invisible. If disabled, the layer is still visible in the preview with lowered opacity, but will not be visible in the template's end result.
 
-  - Color: Allows you to specify a custom icon color, either by specifying the color in RGB format or by using the color picker box on the right.
+  - *Color*: Allows you to specify a custom icon color, either by specifying the color in RGB format or by using the color picker box on the right.
 
   - *Icon*: Allows you to select any of the available icons from the dropdown list, or search for a specific icon using the search bar functionality.
 
@@ -155,7 +156,7 @@ Depending on the type of layer, you can specify different layer properties in th
 
   - *Show text*: Allows you to mask the layer, rendering it temporarily invisible. If disabled, the layer is still visible in the preview with lowered opacity, but will not be visible in the template's end result.
 
-  - Text box: Allows you to enter a custom text. You can add formatting to your text using HTML text formatting. To insert the corresponding cell value inside your text, enter the column name surrounded by curly brackets, i.e. `{column name}`.
+  - *Text box*: Allows you to enter a custom text. You can add formatting to your text using HTML text formatting. To insert the corresponding cell value inside your text, enter the column name surrounded by curly brackets, i.e. `{column name}`.
 
     ![HTML text formatting](~/user-guide/images/HTML_Text_Formatting.png)<br/>*Template Editor in DataMiner 10.4.1*
 
@@ -179,9 +180,9 @@ Depending on the type of layer, you can specify different layer properties in th
 
   - *Show rectangle*: Allows you to mask the layer, rendering it temporarily invisible. If disabled, the layer is still visible in the preview with lowered opacity, but will not be visible in the template's end result.
 
-  - Color: Allows you to specify a custom color for the rectangle, either by specifying the color in RGB format or by using the color picker box on the right.
+  - *Color*: Allows you to specify a custom color for the rectangle, either by specifying the color in RGB format or by using the color picker box on the right.
 
-  - Border radius: Allows you to specify the roundness (in pixels) of the rectangle edges.
+  - *Border radius*: Allows you to specify the roundness (in pixels) of the rectangle edges.
 
   - *Link width to*: Allows you to link the width of this column to that of another column, selected from the dropdown list. Only available for table and grid components.
   
@@ -191,7 +192,10 @@ Depending on the type of layer, you can specify different layer properties in th
 
   - *Show ellipse*: Allows you to mask the layer, rendering it temporarily invisible. If disabled, the layer is still visible in the preview with lowered opacity, but will not be visible in the template's end result.
 
-  - Color: Allows you to specify a custom color for the ellipse, either by specifying the color in RGB format or by using the color picker box on the right.
+  - *Color*: Allows you to specify a custom color for the ellipse, either by specifying the color in RGB format or by using the color picker box on the right.
+
+> [!NOTE]
+> When you change the color of a layer, the most recently used template colors and the theme colors are always displayed<!--RN 34876-->.
 
 ### Adding conditional cases to a layer
 
@@ -292,7 +296,7 @@ The end result behavior will be:
 
 ## Reusing a template
 
-You can reuse a template if you have already configured a template for a component of the same type in the same dashboard or low-code app you are working on.
+You can reuse a template if you have already configured a template for a component of the same type in the same dashboard or low-code app you are working on<!--RN 34948-->.
 
 1. Navigate to *Layout > Item templates* and click *Reuse template*.
 
