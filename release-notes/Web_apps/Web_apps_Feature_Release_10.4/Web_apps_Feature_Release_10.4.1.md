@@ -214,6 +214,21 @@ When the access level of a user was changed, up to now, that change would not im
 
 When, in the settings of a *Clock* component, you had specified that it had to display the current DataMiner time (i.e. the time of the DataMiner server to which you are connected), the component would incorrectly display the local time (i.e. the DataMiner client time), and vice versa.
 
+#### Dashboards app & Low-Code Apps: Problems with certain component settings [ID_37829]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+A number of component settings no longer worked.
+
+| Component | Problem |
+|-----------|---------|
+| Alarm table | Time span, window size, window refresh and group by would no longer work. |
+| Button      | Custom success message would always be hidden. |
+| Clock       | Time zone selection box would be disabled. |
+| Timeline    | Highlighting the time range via feed did not disable the time range selection. |
+| Trigger     | Time description and timer refresh would always be hidden. |
+| Web         | Text area would always be hidden. URL input would be hidden depending on the type. |
+
 #### Dashboards app & Low-Code Apps: Problem when a 'Line & area chart' component was linked to a query [ID_37863]
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
