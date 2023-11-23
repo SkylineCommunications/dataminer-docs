@@ -155,6 +155,7 @@ When, on the Root page of a DataMiner Agent, you hover over an application and c
 >
 > - Although read-only HTML components look as if they are read-write, users will not be able to change their value.
 > - When a component has its *IsEnabled* option set to false and its *IsReadOnly* option set to true, it will be considered disabled. Except for components of UIBlockType *Treeview*. These will behave as enabled and read-only.
+> - When an interactive Automation script is executed in DataMiner Cube, the *IsReadOnly* option will be ignored.
 
 #### Dashboards app: Selection box data for 'All available data' tab will no longer automatically be retrieved when you enter edit mode [ID_37706]
 
