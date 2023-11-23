@@ -38,7 +38,7 @@ In the Cube start window, you can select which Cube update track should be used:
 
 To set a DMS as the default DMS to connect to:
 
-1. Hover the mouse over the tile representing this DMS and click “...” in the top-right corner.
+1. Hover the mouse pointer over the tile representing this DMS and click “...” in the top-right corner.
 
 1. Select *Set as default* in the pop-up window and click *Save*.
 
@@ -46,7 +46,7 @@ To set a DMS as the default DMS to connect to:
 
 To specify a different DMA in a DMS to connect to:
 
-1. Hover the mouse over the tile representing this DMS and click “...” in the top-right corner.
+1. Hover the mouse pointer over the tile representing this DMS and click “...” in the top-right corner.
 
 1. Expand the *Agent* section, select the DMA and click *Save*.
 
@@ -54,7 +54,7 @@ To specify a different DMA in a DMS to connect to:
 
 To connect to a DMS using specific arguments:
 
-1. Hover the mouse over the tile representing this DMS and click “...” in the top-right corner.
+1. Hover the mouse pointer over the tile representing this DMS and click “...” in the top-right corner.
 
 1. Expand the *Advanced* section, specify the arguments and click *Save*.
 
@@ -66,7 +66,7 @@ From DataMiner 10.2.6/10.3.0 onwards, you can configure whether Cube should conn
 
 To do so:
 
-1. Hover the mouse over the tile representing this DMS and click “...” in the top-right corner.
+1. Hover the mouse pointer over the tile representing this DMS and click “...” in the top-right corner.
 
 1. Expand the *Advanced* section.
 
@@ -78,7 +78,7 @@ To do so:
 
 To remove the tile representing a DMS from the start window:
 
-1. Hover the mouse over the tile representing this DMS and click “...” in the top-right corner.
+1. Hover the mouse pointer over the tile representing this DMS and click “...” in the top-right corner.
 
 1. Click the garbage can icon in the pop-up window.
 

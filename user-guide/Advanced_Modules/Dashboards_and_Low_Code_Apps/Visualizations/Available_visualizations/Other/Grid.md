@@ -4,7 +4,7 @@ uid: DashboardGrid
 
 # Grid
 
-> [!WARNING]
+> [!IMPORTANT]
 > The grid component is in preview until DataMiner 10.4.1/10.5.0. If you use the preview version of the feature, its functionality may be different from what is described below. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
 
 Available from DataMiner 10.4.1/10.5.0 onwards<!--RN 34761-->. Prior to this, the component is available in soft launch from DataMiner 10.2.12 onwards, if the soft-launch option *ReportsAndDashboardsDynamicVisuals* is enabled.
@@ -15,7 +15,7 @@ To configure the component:
 
 1. Apply a data feed. See [Applying a data feed](xref:Apply_Data_Feed).
 
-1. Optionally, hover the mouse over the component, click the filter icon, and then add a filter feed from the *Feeds > URL > Query columns* section of the data pane. You can repeat this several times in order to filter on several query columns<!--RN 34761-->.
+1. Optionally, hover the mouse pointer over the component, click the filter icon, and then add a filter feed from the *Feeds > URL > Query columns* section of the data pane. You can repeat this several times in order to filter on several query columns<!--RN 34761-->.
 
 1. Optionally, customize the following component options:
 
@@ -23,7 +23,7 @@ To configure the component:
 
    - *General > Override dynamic units*: Disables parameter units from changing dynamically based on their value and protocol definition. Disabled by default.
 
-   - *General > Use dynamic units*: When the *Override dynamic units* option is enabled, this option will allow you to determine whether parameter units will change dynamically based on their value and protocol definition. Available from DataMiner 10.0.11 onwards.
+   - *General > Use dynamic units*: When the *Override dynamic units* option is enabled, this option will allow you to determine whether parameter units will change dynamically based on their value and protocol definition.
 
    - *Data retrieval > Update data*: Allows updates to be enabled or disabled. This setting will enable real-time updates for all queries executed by the selected component<!--RN 37269-->.
 
@@ -47,7 +47,7 @@ To configure the component:
 
    - *Advanced > Grid template*: Allows you to customize the number of columns and rows displayed in the grid component, along with scaling options<!--RN 34761 + 34781-->.
 
-     - By default, the number of displayed columns and rows is set to *Auto* (i.e. all columns and/or rows are displayed). To modify the number of displayed columns and rows, clear the checkbox in this section and specify the desired amount. To revert to *Auto*, delete the entry.
+     - By default, the number of displayed columns and rows is set to *Auto* (i.e. all columns and/or rows are displayed). To modify the number of displayed columns and rows, clear the checkbox in this section and specify the desired number. To revert to *Auto*, delete the entry.
 
      - To switch between scaling options, select one of the following buttons:
 
