@@ -26,28 +26,6 @@ A number of UI enhancements have been made with regard to service chain behavior
 
 Up to now, in some cases, service chains could get redrawn too often, or shapes would not get redrawn when a service chain was updated. Also, context menus of shapes would not always close when those shapes were updated and context menus would incorrectly show the *Display connectivity* command twice.
 
-#### Interactive Automation scripts: Certain components can now be visualized as read-only in web environments [ID_37659]
-
-<!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
-
-*UIBlockDefinition* now has an *IsReadOnly* option, which is set to false by default. When set to true, and when the interactive Automation script is executed in a web environment, the following UI components will now be displayed read-only:
-
-- Calendar
-- Checkbox
-- CheckboxList
-- Dropdown
-- Numeric
-- RadiobuttonList
-- TextBox
-- Time
-- Treeview
-
-> [!NOTE]
->
-> - Although read-only HTML components look as if they are read-write, users will not be able to change their value.
-> - When a component has its *IsEnabled* option set to false and its *IsReadOnly* option set to true, it will be considered disabled. Except for components of UIBlockType *Treeview*. These will behave as enabled and read-only.
-> - When an interactive Automation script is executed in DataMiner Cube, the *IsReadOnly* option will be ignored.
-
 #### DataMiner Cube - Spectrum analysis: Zooming inside a spectrum window [ID_37668]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
