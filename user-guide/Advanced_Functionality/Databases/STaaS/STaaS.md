@@ -55,7 +55,7 @@ Advantages of DataMiner Storage as a Service (STaaS) include:
 
 To **migrate existing data** to STaaS, the following limitations apply:
 
-- Migration for loggertables from a Cassandra Cluster setup is supported from 10.3.11[CU0]. From Cassandra Single setups is supported from 10.3.12[CU0]
+- Migrating logger tables is supported from DataMiner 10.3.11 onwards for systems using a [dedicated clustered storage setup](xref:Dedicated_clustered_storage), and from DataMiner 10.3.12 onwards for systems using a Cassandra database per DMA.
 - Migration of an OpenSearch or Elasticsearch database that is defined in [DBConfiguration.xml](xref:DBConfiguration_xml) instead of [DB.xml](xref:DB_xml) (e.g. because a setup with multiple OpenSearch/Elasticsearch clusters is used) is not yet supported.
 - Migration from a MySQL setup is not yet supported.
 
