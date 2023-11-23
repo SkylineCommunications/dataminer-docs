@@ -51,7 +51,7 @@ A new snippet has been added that jump-starts the creation of interactive Automa
 It replaces the existing script class with a new one that contains boiler plate code that will help you work with the IAS Toolkit.
 
 > [!NOTE]
-> Due to snippet limitations, the NuGet package has to added manually to the project.
+> Due to snippet limitations, the NuGet package has to be added manually to the project.
 
 ## Changes
 
