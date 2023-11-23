@@ -16,7 +16,7 @@ From DataMiner 10.4.0 onwards, the [legacy Reporter](xref:reporter) and [legacy 
 
 If you no longer need the legacy Reporter and Dashboards modules, remove any existing legacy reports and legacy dashboards. Note that other DataMiner modules, such as Automation and Scheduler, may also make use of these.
 
-If you still rely on certain functionality and want to keep on using the legacy Reports &amp; Dashboards module, enable legacy reports and dashboards by setting the [*LegacyReportsAndDashboards* soft-launch option](xref:Overview_of_Soft_Launch_Options#legacyreportsanddashboards) to true.
+If you still rely on certain functionality and want to keep on using the legacy Reports &amp; Dashboards module, enable them by setting the [*LegacyReportsAndDashboards* soft-launch option](xref:Overview_of_Soft_Launch_Options#legacyreportsanddashboards) to true. Then run `C:\Skyline DataMiner\Tools\ConfigureIIS.bat` as Administrator and restart the DataMiner Agent.
 
 ## Issue description
 
