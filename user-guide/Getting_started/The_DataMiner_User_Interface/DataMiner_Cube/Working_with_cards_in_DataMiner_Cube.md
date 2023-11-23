@@ -86,10 +86,10 @@ The pane consists of a tree view with several fixed nodes:
 
 - **REPORTS**: Displays graphical reports of the alarm distribution, alarm events, alarm states, and alarms on a timeline.
 
-- **DASHBOARDS**: Displays the legacy *Dashboards* app.
+- **DASHBOARDS**: Displays the legacy *Dashboards* module.
 
   > [!NOTE]
-  > From DataMiner 10.2.0/10.1.12 onwards, the legacy Dashboards app can be disabled using the soft-launch option *LegacyReportsAndDashboards*. See [Soft-launch options](xref:SoftLaunchOptions).
+  > The legacy Dashboards module is by default disabled from DataMiner 10.4.0/10.4.1 onwards.<!-- RN 37786 --> If you want to keep using this module, you need to enable it with the [*LegacyReportsAndDashboards* soft-launch option](xref:Overview_of_Soft_Launch_Options#legacyreportsanddashboards). Prior to this, starting from DataMiner 10.2.0/10.1.12, the legacy Dashboards module can optionally be disabled with this soft-launch option.
 
 - **NOTES**: Allows users to add short notes to DataMiner items:
 

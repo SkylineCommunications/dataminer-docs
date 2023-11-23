@@ -107,6 +107,9 @@ DataMiner has some components that are considered legacy. They are still around 
 
 To make the changes take effect, you then need to run the *ConfigureIIS.bat* script located in the `C:\Skyline DataMiner\Tools` folder.
 
+> [!NOTE]
+> The legacy Reports and Dashboards modules are disabled by default as from DataMiner versions 10.4.0/10.4.1.
+
 ## Configure the firewall
 
 On DataMiner versions installed using the **10.0 installer** (or older), the DataMiner installation opens the following (inbound) ports and rules in the Windows firewall:
