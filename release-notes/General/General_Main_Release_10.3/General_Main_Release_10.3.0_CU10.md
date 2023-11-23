@@ -37,6 +37,31 @@ When run on a particular agent in a DataMiner System, this new BPA test will tri
 
 For more information, see [Check Cluster SLNet Connections](xref:BPA_Check_Cluster_SLNet_Connections).
 
+#### DataMiner Object Models: Generic enum field descriptors now allow you to select multiple values [ID_37482]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+A generic enum field descriptor now allows you to select multiple values.
+
+For a *GenericEnumFieldDescriptor* to allow multiple values, its field type should be set as follows:
+
+- For integer values: `FieldType = typeof(List<GenericEnum<int>>)`
+- For string values: `FieldType = typeof(List<GenericEnum<string>>)`
+
+Values need to be set as follows:
+
+- Integer values:
+
+  ```csharp
+  new ListValueWrapper<int>(new List<int>(){0, 1});
+  ```
+
+- String values:
+
+  ```csharp
+  new ListValueWrapper<string>(new List<string>(){ "Value 0", "Value 1" });
+  ```
+
 #### Security enhancements [ID_37641]
 
 <!-- 37641: MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
@@ -102,8 +127,8 @@ When a Cassandra Cluster was in a yellow state because a number of nodes were do
 
 From now on, Failover setups within the system will only report errors if the Cassandra Cluster is in a red state.
 
-#### SLAutomation: Problem when deleting an Automation script dummy that had already been deleted [ID_37907]
+#### SLAutomation would not properly cleanup deleted references to elements [ID_37907]
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
 
-In some rare cases, it would incorrectly be possible to delete an Automation script dummy that had already been deleted, causing an error to occur in SLAutomation.
+In some rare cases, SLAutomation would not clean up deleted references to elements, causing the process to stop unexpectedly when the Automation script ended.

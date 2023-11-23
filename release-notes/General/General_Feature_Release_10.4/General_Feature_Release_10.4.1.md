@@ -67,6 +67,31 @@ When run on a particular agent in a DataMiner System, this new BPA test will tri
 
 For more information, see [Check Cluster SLNet Connections](xref:BPA_Check_Cluster_SLNet_Connections).
 
+#### DataMiner Object Models: Generic enum field descriptors now allow you to select multiple values [ID_37482]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+A generic enum field descriptor now allows you to select multiple values.
+
+For a *GenericEnumFieldDescriptor* to allow multiple values, its field type should be set as follows:
+
+- For integer values: `FieldType = typeof(List<GenericEnum<int>>)`
+- For string values: `FieldType = typeof(List<GenericEnum<string>>)`
+
+Values need to be set as follows:
+
+- Integer values:
+
+  ```csharp
+  new ListValueWrapper<int>(new List<int>(){0, 1});
+  ```
+
+- String values:
+
+  ```csharp
+  new ListValueWrapper<string>(new List<string>(){ "Value 0", "Value 1" });
+  ```
+
 #### GQI: Enhanced error handling when an error occurs while executing a query before it is joined with another query [ID_37521]
 
 <!-- MR 10.4.0 - FR 10.4.1 -->
@@ -152,7 +177,7 @@ When two DataMiner Agents try to connect via SLNet, from now on, this will no lo
 
 #### Authentication response message now includes the domain user name [ID_37823]
 
-<!-- MR 10.4.0 - FR 10.4.1 -->
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
 
 When a DataMiner Agent receives an authentication request from a client application, it will now include the domain user name in the authentication response message it returns to the client application.
 
@@ -228,8 +253,8 @@ Example of an incorrect log entry:
 
 `Clearing cache: predicate<entries with old hosting agent id> for type XXXXXX`
 
-#### SLAutomation: Problem when deleting an Automation script dummy that had already been deleted [ID_37907]
+#### SLAutomation would not properly cleanup deleted references to elements [ID_37907]
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
 
-In some rare cases, it would incorrectly be possible to delete an Automation script dummy that had already been deleted, causing an error to occur in SLAutomation.
+In some rare cases, SLAutomation would not clean up deleted references to elements, causing the process to stop unexpectedly when the Automation script ended.

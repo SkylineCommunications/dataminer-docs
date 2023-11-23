@@ -344,6 +344,10 @@ items:
                 topicUid: Tutorial_Apps_Panel
               - name: Using a header bar
                 topicUid: Tutorial_Apps_Headerbar
+              - name: Running a script when a page opens
+                topicUid: Tutorial_Apps_Script_Upon_Page_Load
+              - name: Chaining actions
+                topicUid: Tutorial_Apps_Chaining_Actions
               - name: Using the stepper component in a low-code app
                 topicUid: TutorialStepper
       - name: Configuring components

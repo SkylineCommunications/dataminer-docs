@@ -96,6 +96,15 @@ In the *Settings* window, the default values of the following trend graph action
 | Right mouse button action on graph         | Select |
 | Hotkey + left mouse button action on graph | Zoom   |
 
+#### DataMiner Cube - Protocols & Templates: Clicking Help will now open the protocol's help page on 'DataMiner Connector Documentation' [ID_37873]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+
+When, in the *Protocols & Templates* app, you right-click a protocol in the *Protocols* list and select *Help*, a new browser window will now open, showing the protocol's help page on [DataMiner Connector Documentation](https://docs.dataminer.services/connector/index.html).
+
+> [!NOTE]
+> That same help page will appear when, in an element card, you open the hamburger menu and select *Help*.
+
 #### DataMiner Cube - Service templates: Scrollbar added inside every tab of a service template card [ID_37882]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
@@ -169,6 +178,12 @@ When a table was polled via SNMPv3 and the response included a cell that contain
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
 When the URL specified in a shape data item of type *Link* did not link to a DataMiner web app, but contained a keyword that could be interpreted as a keyword of a DataMiner web app, a connection ticket would incorrectly be added to that URL.
+
+#### DataMiner Cube could leak memory leak when a card in tab layout was closed before it had fully been loaded [ID_37857]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+
+When a card in tab layout was closed before it had fully been loaded, DataMiner Cube could leak memory due to list boxes not being cleared from memory.
 
 #### DataMiner Cube - System Center: Term 'Client independent updates' replaced by 'Server independent client updates' [ID_37926]
 

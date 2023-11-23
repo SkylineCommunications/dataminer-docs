@@ -293,7 +293,7 @@ Enables the button panel component in the Dashboards app.
 Enables the grid component in the Dashboards app.
 
 - **Minimum version**: 10.2.12
-- **Estimated release version**: 10.4.1
+- **Release version**: 10.3.0 [CU10]/10.4.1 ([RN 37812](xref:Web_apps_Feature_Release_10.4.1#dashboards-app--low-code-apps-new-grid-and-timeline-components-id_33276-id_33287-id_34761-id_34948-id_37269-id_37699-id_37812))
 
 ### ReportsAndDashboardsExport
 
@@ -333,7 +333,7 @@ Enables the Query Filter component in the Dashboards app.
 Enables the Timeline component in the Dashboards app.
 
 - **Minimum version**: 10.1.10
-- **Estimated release version**: 10.4.1
+- **Release version**: 10.3.0 [CU10]/10.4.1 ([RN 37812](xref:Web_apps_Feature_Release_10.4.1#dashboards-app--low-code-apps-new-grid-and-timeline-components-id_33276-id_33287-id_34761-id_34948-id_37269-id_37699-id_37812))
 
 ### ResourceList
 

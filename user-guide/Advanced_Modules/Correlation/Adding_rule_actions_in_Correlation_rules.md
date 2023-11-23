@@ -28,8 +28,8 @@ There are several possible types of actions:
 
 These actions can be combined, so that they will be triggered in a particular order. To change the order of the actions:
 
-- Hover the mouse over the actions and move them up or down in the list using the upward or downward triangles.
+- Hover the mouse pointer over the actions and move them up or down in the list using the upward or downward triangles.
 
 To delete an action:
 
-- Hover the mouse over the action and click the X.
+- Hover the mouse pointer over the action and click the X.
