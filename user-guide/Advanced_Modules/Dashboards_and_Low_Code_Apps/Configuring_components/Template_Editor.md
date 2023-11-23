@@ -5,9 +5,11 @@ uid: Template_Editor
 # Using the Template Editor
 
 > [!IMPORTANT]
-> At present, the Template Editor is only available in preview, if the [ReportsAndDashboardsDynamicVisuals](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsdynamicvisuals) and [ReportsAndDashboardsScheduler](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsscheduler) soft-launch options are enabled. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
+> The Template Editor is in preview until DataMiner 10.4.1/10.5.0. If you use the preview version of the feature, its functionality may be different from what is described below. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
 
-Available from DataMiner 10.4.1/10.5.0. Currently only supported for specific components, such as the grid, timeline, and table component.
+Available from DataMiner 10.4.1/10.5.0. Prior to this, the Template Editor is available in soft launch from DataMiner 102.12 onwards, if the soft-launch options *ReportsAndDashboardsDynamicVisuals* and *ReportsAndDashboardsScheduler* are enabled.
+
+Currently only supported for specific components, such as the grid, timeline, and table component.
 
 To access the Template Editor:
 
@@ -26,7 +28,7 @@ To access the Template Editor:
 
   1. In the *Column appearance* section, click the downward arrow next to *Select a column* and select the column you want to create a template for.
 
-  1. Click the ellipsis ("...") in the top-right corner and select *Customize preset*.
+  1. Click the ellipsis button ("...") in the top-right corner and select *Customize preset*.
 
 The Template Editor UI consists of the following main components:
 
@@ -43,7 +45,7 @@ The Template Editor UI consists of the following main components:
 ![Template Editor](~/user-guide/images/Template_Editor.png)<br/>*The Template Editor in DataMiner 10.4.1*
 
 > [!IMPORTANT]
-> Any changes made in the Template Editor are only saved once you click the *Save* button in the lower right corner. Closing the Template Editor by clicking the "X" in the top-right corner or the *Cancel* button in the lower right corner, will alert you of any unsaved changes that may be lost if you close the editor prematurely.
+> Any changes made in the Template Editor are only saved once you click the *Save* button in the lower right corner. When you close the Template Editor by clicking the "X" in the top-right corner or the *Cancel* button in the lower right corner, you will be alerted of any unsaved changes that may be lost if you close the editor prematurely.
 
 ## Working with layers
 
@@ -65,12 +67,12 @@ If one layer is positioned higher than another, the higher layer will appear in 
 
 ![Change order layers](~/user-guide/images/Change_Order_Layers.gif)<br/>*The Template Editor in DataMiner 10.4.1*
 
-To **mask a layer**, hover the mouse over the layer and click the *eye* icon in the lower right corner. The layer is now no longer visible in the template's end result. Clicking the *eye* icon once more makes the layer visible again. Alternatively, you can mask the layer by adjusting its properties in the *Settings* pane. See [Specifying layer properties](#specifying-layer-properties).
+To **mask a layer**, hover the mouse pointer over the layer and click the *eye* icon in the lower right corner. The layer is now no longer visible in the template's end result. Clicking the *eye* icon once more makes the layer visible again. Alternatively, you can mask the layer by adjusting its properties in the *Settings* pane. See [Specifying layer properties](#specifying-layer-properties).
 
 > [!NOTE]
 > In cases where you have masked a layer in both the *Layer* tab and the layer properties, undoing the masking in only one of these locations will result in the layer remaining invisible. Ensure that you reverse the masking in both places to render the layer visible again.
 
-To **delete a layer**, hover the mouse over the layer and click the *delete* button in the top-right corner. Alternatively, select the associated tool (i.e. icon, text, rectangle, or ellipse) in the preview and press the *Delete* button on your keyboard.
+To **delete a layer**, hover the mouse pointer over the layer and click the *delete* button in the top-right corner. Alternatively, select the associated tool (i.e. icon, text, rectangle, or ellipse) in the preview and press the *Delete* button on your keyboard.
 
 To **add a new layer**, [add a new tool](#adding-new-tools) in the *Tools* tab.
 
@@ -123,18 +125,19 @@ The table below describes the dimension settings available for template layers.
 
 | Icon | Setting | Description |
 |--|--|--|
-| ![Width](~/user-guide/images/Dimensions_Width.png) | Width | Specify a number of pixels to which the width of the layer will be fixed. |
-| ![Height](~/user-guide/images/Dimensions_Height.png) | Height | Specify a number of pixels to which the height of the layer will be fixed. |
-| ![Top](~/user-guide/images/Dimensions_Top.png) | Top | Specify a number of pixels to which the top of the layer will be fixed. |
-| ![Bottom](~/user-guide/images/Dimensions_Bottom.png) | Bottom | Specify a number of pixels to which the bottom of the layer will be fixed. |
-| ![Left](~/user-guide/images/Dimensions_Left.png) | Left | Specify a number of pixels to which the left of the layer will be fixed. |
-| ![Right](~/user-guide/images/Dimensions_Right.png) | Right | Specify a number of pixels to which the right of the layer will be fixed. |
+| ![Width](~/user-guide/images/Dimensions_Width.png) | Width | Specify a number of pixels to which the width of the layer will be fixed. This value should be lower than or equal to the width of the overall template. |
+| ![Height](~/user-guide/images/Dimensions_Height.png) | Height | Specify a number of pixels to which the height of the layer will be fixed. This value should be lower than or equal to the height of the overall template. |
+| ![Top](~/user-guide/images/Dimensions_Top.png) | Top | Specify a number of pixels to which the top of the layer will be fixed. This value should be lower than the height of the overall template. |
+| ![Bottom](~/user-guide/images/Dimensions_Bottom.png) | Bottom | Specify a number of pixels to which the bottom of the layer will be fixed. This value should be lower than the height of the overall template. |
+| ![Left](~/user-guide/images/Dimensions_Left.png) | Left | Specify a number of pixels to which the left of the layer will be fixed. This value should be lower than the width of the overall template. |
+| ![Right](~/user-guide/images/Dimensions_Right.png) | Right | Specify a number of pixels to which the right of the layer will be fixed. This value should be lower than the width of the overall template. |
 
 > [!NOTE]
 >
-> - When you use the drag-and-drop functionality to move a layer in the preview, the dimension settings in the *Settings* pane will automatically adjust.
-> - You can use the lock functionality to secure one or multiple dimension settings of a layer by clicking the ![*Lock*](~/user-guide/images/Dimensions_Lock.png) button next to the chosen setting. If you now move that layer in the preview, any attempt to override the specified locked dimension will be restricted.
-> - For some *text* layers, the width and height is determined by the left and right position and can therefore not be modified.
+> - In the preview, when you use the drag-and-drop functionality to move a layer, or when you resize a layer by dragging the frame edges, the dimension settings in the *Settings* pane will automatically adjust.
+> - You can use the lock functionality to secure one or multiple dimension settings of a layer by clicking the ![*Lock*](~/user-guide/images/Dimensions_Lock.png) button next to the chosen setting. If you now move or resize that layer in the preview, any attempt to override the specified locked dimension will be restricted.
+> - For some layers, the width and height is determined by the left and right position and can therefore not be modified.
+> - When resizing a layer in the preview, do not release the mouse button if one or more dimension settings are surrounded by a red frame, signaling that they no longer meet the minimum required pixel count. Releasing the mouse button in this state may result in the deletion of your layer.
 
 ### Specifying layer properties
 
@@ -146,13 +149,18 @@ Depending on the type of layer, you can specify different layer properties in th
 
   - Color: Allows you to specify a custom icon color, either by specifying the color in RGB format or by using the color picker box on the right.
 
-  - *Icon*: Allows you to select any of the available icons.
+  - *Icon*: Allows you to select any of the available icons from the dropdown list, or search for a specific icon using the search bar functionality.
 
 - For *Text* layers, you can specify the following properties:
 
   - *Show text*: Allows you to mask the layer, rendering it temporarily invisible. If disabled, the layer is still visible in the preview with lowered opacity, but will not be visible in the template's end result.
 
-  - Text box: Allows you to enter a custom text.
+  - Text box: Allows you to enter a custom text. You can add formatting to your text using HTML text formatting. To insert the corresponding cell value inside your text, enter the column name surrounded by curly brackets, i.e. `{column name}`.
+
+    ![HTML text formatting](~/user-guide/images/HTML_Text_Formatting.png)<br/>*Template Editor in DataMiner 10.4.1*
+
+    > [!TIP]
+    > For more information on formatting elements designed to display special types of text, see [HTML Text Formatting](https://www.w3schools.com/html/html_formatting.asp).
 
   - The table below describes the remaining settings available for *Text* layers:
 
@@ -160,7 +168,7 @@ Depending on the type of layer, you can specify different layer properties in th
     |--|--|--|
     | ![Font size](~/user-guide/images/Text_Font_Size.png) | Font size | Specify the size (in pixels) of the text. |
     | ![Color](~/user-guide/images/Text_Color.png) | Color | Specify a custom text color, either by specifying the color in RGB format or by using the color picker box on the right. |
-    | ![Roundness](~/user-guide/images/Text_Roundness.png) | Roundness | Specify the roundness (in pixels) of the background color that can be displayed behind the text (optionally). |
+    | ![Border radius](~/user-guide/images/Text_Roundness.png) | Border radius | Specify the roundness (in pixels) of the background color that can be displayed behind the text (optionally). |
     | ![Background color](~/user-guide/images/Text_Background_Color.png) | Background color | Specify a custom background color, either by specifying the color in RGB format or by using the color picker box on the right. |
     | ![Horizontal padding](~/user-guide/images/Text_Horizontal_Padding.png) | Horizontal padding | Specify the amount of space (in pixels) that should be left free above the text. |
     | ![Vertical padding](~/user-guide/images/Text_Vertical_Padding.png) | Vertical padding | Specify the amount of space (in pixels) that should be left free underneath the text. |
@@ -173,7 +181,11 @@ Depending on the type of layer, you can specify different layer properties in th
 
   - Color: Allows you to specify a custom color for the rectangle, either by specifying the color in RGB format or by using the color picker box on the right.
 
-  - Roundness: Allows you to specify the roundness (in pixels) of the rectangle edges.
+  - Border radius: Allows you to specify the roundness (in pixels) of the rectangle edges.
+
+  - *Link width to*: Allows you to link the width of this column to that of another column, selected from the dropdown list. Only available for table and grid components.
+  
+  - *Link height to*: Allows you to link the height of this column to that of another column, selected from the dropdown list. Only available for table and grid components.
 
 - For *Ellipse* layers, you can specify the following properties:
 
@@ -193,13 +205,15 @@ To add a condition:
 
 1. Choose a state or column from the dropdown list.
 
-1. When you have added a state, select *Yes* or *No*.
+1. When you have chosen a state, select *Yes* or *No*.
 
    - Yes: The action executes only when the element is in the specified state.
 
    - No: The action executes only when the element is not in the specified state.
 
-1. When you have added a column, provide the necessary details based on the column type:
+1. When you have chosen a column, provide the necessary details based on the column type.
+
+   Some examples:
 
    - Element name: The action executes only when the element name matches this entry.
 
@@ -217,15 +231,54 @@ To add a condition:
 
      - `≤ dd/MM/yyyy hh:mm`: The root time occurs at or before the specified upper bound.
 
-   - Severity: The action executes only if the alarm severity matches the selected levels of alarm severity.
-
-   - Alarm type: The action executes only if the alarm type matches this entry.
-
 1. Enable or disable the toggle button next to `Show [tool-type]`. If enabled, the selected tool is shown if the conditions are met. If disabled, the selected tool is hidden if the conditions are met.
 
-1. If you chose to show the tool in the previous step, optionally select a different color for the tool when the conditions are met, either by specifying the color in RGB format or by using the color picker box on the right.
+1. If you chose to show the tool in the previous step, optionally change the look of the tool when the conditions are met. Depending on the type of layer and the type of component, the following options may be available:
 
-1. Optionally, add another condition and follow the previous steps again until you are finished.
+   - *Icon* layer:
+
+     - *Color*: Allows you to select a color for the tool, either by specifying the color in RGB format or by using the color picker box on the right.
+
+     - *Icon*: Allows you to select a new icon from the dropdown list, or search for a specific icon using the search bar functionality.
+
+   - *Text* layer:
+
+     - *Text*: Allows you to enter a custom text. You can add formatting to your text using HTML text formatting.
+
+       > [!TIP]
+       > For more information on formatting elements designed to display special types of text, see [HTML Text Formatting](https://www.w3schools.com/html/html_formatting.asp).
+
+     - *Font size*: Allows you to set the font size.
+
+     - *Text color*: Allows you to select a text color, either by specifying the color in RGB format or by using the color picker box on the right.
+
+     - *Border radius*: Allows you to specify the roundness (in pixels) of the background color that can be displayed behind the text (optionally).
+
+     - *Background*: Allows you to specify a custom background color, either by specifying the color in RGB format or by using the color picker box on the right.
+
+     - *Horizontal padding*: Allows you to specify the amount of space (in pixels) that should be left free above the text.
+
+     - *Vertical padding*: Allows you to specify the amount of space (in pixels) that should be left free underneath the text.
+
+     - *Text alignment*: Allows you to choose between the available horizontal alignment options (Left, center, right, or justify).
+
+     - *Vertical alignment*: Allows you to choose between the available vertical alignment options (Top, center, or bottom).
+
+   - *Rectangle* layer:
+
+     - *Color*: Allows you to select a color for the tool, either by specifying the color in RGB format or by using the color picker box on the right.
+
+     - *Border radius*: Allows you to specify the roundness (in pixels) of the background color that can be displayed behind the text (optionally).
+
+     - *Link width to*: Allows you to link the width of this tool to that of another column, selected from the dropdown list.
+
+     - *Link height to*: Allows you to link the height of this tool to that of another column, selected from the dropdown list.
+
+   - *Ellipse* layer:
+
+     - *Color*: Allows you to select a color for the tool, either by specifying the color in RGB format or by using the color picker box on the right.
+
+1. If you want to add another condition, go back to step 1 and repeat the steps until you are finished.
 
 Example:
 
