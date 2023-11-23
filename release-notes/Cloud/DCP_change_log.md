@@ -10,10 +10,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 It is now possible to connect to a DataMiner System via remote access using DataMiner Cube. If remote access is enabled for a DMS and you have been granted access to dataminer.services features, you can access the DMS remotely via Cube using the same URL as for remote access to the web pages, but without the protocol prefix `https://`. A button is also available on dataminer.services and in the Admin app that can be used to open Cube with the correct remote access filled in as the host.
 
-At present, there are still two limitations to this feature:
-
-- If the DMS has SAML authentication configured, users will not be able to access the DMS remotely with Cube.
-- If the DMS has multiple CloudGateway instances, remote access using DataMiner Cube will not function correctly, because Cube needs a session with a specific DMA, while with such a setup requests are distributed across the available CloudGateway instances.
+At present, there are still a limitation to this feature, if the DMS has SAML authentication configured, users will not be able to access the DMS remotely with Cube.
 
 #### 17 November 2023 - Enhancement - SupportAssistant 1.5.3 - Potential memory leak [ID_37843]
 
