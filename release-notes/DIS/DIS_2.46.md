@@ -46,17 +46,19 @@ The *InvalidConnectionName* check (1.23.2) has been extended to expect *SSH Conn
 
 #### New snippet: Interactive Toolkit [ID_37932]
 
-A new snippet has been added that jumpstarts the creation of interactive automation scripts with the [IAS Toolkit](https://www.nuget.org/packages/Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit).
+A new snippet has been added that jump-starts the creation of interactive Automation scripts with the [IAS Toolkit](https://www.nuget.org/packages/Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit).
 
-It replaces the existing script class with a new one that holds some boiler plate code to start working with the IAS Toolkit.
+It replaces the existing script class with a new one that contains boiler plate code that will help you work with the IAS Toolkit.
 
 > [!NOTE]
-> Due to the limitations of snippets, you have to manually add the NuGet package to the project.
+> Due to snippet limitations, the NuGet package has to added manually to the project.
 
 ## Changes
 
 ### Fixes
 
-#### Table editor: Selecting rows was not visible [ID_37728]
+#### Table editor: Selected rows would not be visualized property [ID_37728]
 
-In the Table Editor for the *All Columns* and *All Displayed Columns* tables, selecting one or more rows was not properly visualized. This has now been improved and is consistent with the DIS Tree View.
+In the Table Editor, selected rows would not be visualized properly, especially for *All Columns* and *All Displayed Columns*.
+
+This has now been improved and made consistent with the DIS Tree View.
