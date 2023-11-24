@@ -205,7 +205,7 @@ Enables or disables the legacy Annotations module.
 - **Minimum version**: 10.1.10/10.2.0
 
 > [!NOTE]
-> The legacy Annotations module is disabled by default as from DataMiner versions 10.4.0/10.4.1 ([RN 37786](xref:General_Feature_Release_10.4.1#legacy-reports-dashboards-and-annotations-modules-are-now-end-of-life-and-will-be-disabled-by-default-id_37786)).
+> The legacy Annotations module is disabled by default as from DataMiner versions 10.4.0/10.4.1 ([RN 37786](xref:General_Feature_Release_10.4.1#legacy-reports-dashboards-and-annotations-modules-are-now-end-of-life-and-will-be-disabled-by-default-id_37786)). If you want to keep on using this legacy module, set this soft-launch option to *true*, then run `C:\Skyline DataMiner\Tools\ConfigureIIS.bat` as Administrator, and restart the DataMiner Agent.
 
 ### LegacyReportsAndDashboards
 
@@ -214,7 +214,7 @@ Enables or disables the legacy Reports and Dashboards modules.
 - **Minimum version**: 10.1.10/10.2.0
 
 > [!NOTE]
-> The legacy Reports and Dashboards modules are disabled by default as from DataMiner versions 10.4.0/10.4.1 ([RN 37786](xref:General_Feature_Release_10.4.1#legacy-reports-dashboards-and-annotations-modules-are-now-end-of-life-and-will-be-disabled-by-default-id_37786)).
+> The legacy Reports and Dashboards modules are disabled by default as from DataMiner versions 10.4.0/10.4.1 ([RN 37786](xref:General_Feature_Release_10.4.1#legacy-reports-dashboards-and-annotations-modules-are-now-end-of-life-and-will-be-disabled-by-default-id_37786)). If you want to keep on using these legacy modules, set this soft-launch option to *true*, then run `C:\Skyline DataMiner\Tools\ConfigureIIS.bat` as Administrator, and restart the DataMiner Agent.
 
 ### MonitoringAndControl
 
