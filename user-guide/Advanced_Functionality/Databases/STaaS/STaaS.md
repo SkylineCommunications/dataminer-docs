@@ -77,6 +77,14 @@ In addition, the following **other limitations** currently apply:
 
 - DOM queries can be slower depending on the number of DOM records and the complexity of the query. This limitation will be removed in the near future.
 
+## Backups
+
+Your data is backed up **daily** and stored for **30 days**.
+
+- Daily Backups: STaaS performs daily backups, maintaining a 30-day rolling snapshot of your data. This procedure ensures a comprehensive data history for potential restorations.
+
+- Data Restoration and Support: In the event a roll-back is necessary, our support team is prepared to assist. Please submit a rollback request by opening a ticket with our support team. They will guide you through the necessary steps to ensure a successful data restoration.
+
 ## Troubleshooting
 
 > [!NOTE]
