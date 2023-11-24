@@ -189,6 +189,12 @@ Up to now, when an SNMP response was received, a buffer with a fixed size of 102
 
 From now on, the buffer will have a dynamic size. This allow larger responses to be processed, and will also make sure that less memory has to be reserved when smaller responses are received.
 
+#### Behavioral anomaly detection: Flatline detection now takes into account the decimal precision of parameter values [ID_37828]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+From now on, the flatline detection algorithm will take into account the decimal precision of parameter values displayed in client applications.
+
 ### Fixes
 
 #### Databases: Problem when starting a migration from MySQL to Cassandra [ID_37589]
