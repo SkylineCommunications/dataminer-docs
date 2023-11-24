@@ -201,6 +201,16 @@ From now on, the buffer will have a dynamic size. This allow larger responses to
 
 From now on, the flatline detection algorithm will take into account the decimal precision of parameter values displayed in client applications.
 
+#### Service & Resource Management: Enhanced performance when updating/applying profile instances [ID_37976]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+Overall performance has increased when updating/applying profile instances by providing a way to pass cached profile instances instead of first having to retrieve them from the database. To achieve this, the `ResourceUsageDefinition` now has a new overload method:
+
+```csharp
+public virtual void UpdateAllCapacitiesAndCapabilitiesByReference(Func<FilterElement<ProfileInstance>, List<ProfileInstance>> retriever, Dictionary<Guid, ProfileInstance> profileInstanceCache, IEnumerable<QuarantinedResourceUsageDefinition> correspondingQuarantines = null);
+```
+
 ### Fixes
 
 #### Databases: Problem when starting a migration from MySQL to Cassandra [ID_37589]
