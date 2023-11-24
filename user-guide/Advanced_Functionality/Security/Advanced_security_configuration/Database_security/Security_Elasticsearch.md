@@ -128,7 +128,7 @@ To configure TLS encryption for client-server communication:
    > [!NOTE]
    >
    > - Depending on the flavor of operating system (Windows, Ubuntu, or another OS), the procedure can be different. Note that we generally recommend Ubuntu.
-   > - If the password needs to be updated, because you ran the generate-tls-certificates again and you acquired a new password for the keystore and truststore, the commands above to set the keystore and truststore passwords in `/usr/share/elasticsearch/bin` need be executed again. These will overwrite the previous password.
+   > - If the password needs to be updated, after you have run generate-tls-certificates again and acquired a new password for the keystore and truststore, you need to execute the commands above to set the keystore and truststore passwords in `/usr/share/elasticsearch/bin` again. These will overwrite the previous password.
 
 1. Start the *elasticsearch-service-x64* service and verify that you can connect with a browser to <https://FQDN:9200>.
 
