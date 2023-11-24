@@ -46,7 +46,7 @@ Use the steps below to restore tables in a MySQL DataMiner database after a data
 
 1. Check the log information.
 
-   - You can find the MySQL error log in a file with the name of the DMA and the extension *.err* in the MySQL installation folder, e.g. `C:\ProgramData\MySQL\MySQL Server 5.5`.
+   - You can find the MySQL error log in a file with the name of the DMA and the extension *.err* in the MySQL installation folder, e.g. `C:\Program Files\MySQL\MySQL Server 5.5`.
    - DataMiner logging can be found in the *SLDatagateway*, *SLDBconnection* and *SLDatabase* log files in the folder `C:\Skyline DataMiner\Logging`.
 
 1. Open MySQL Workbench to verify the integrity of the SLDMADB tables. If you need to provide credentials, use `-user root -password (empty)`.
