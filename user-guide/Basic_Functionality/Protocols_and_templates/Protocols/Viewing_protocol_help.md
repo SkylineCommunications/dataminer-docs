@@ -5,13 +5,13 @@ keywords: driver help, connector help, protocol help, connector documentation
 
 # Viewing protocol documentation
 
-For DataMiner protocols provided by Skyline Communications, documentation is available which can be accessed from DataMiner Cube. This can for instance contain more information on the device the protocol is meant for, the various versions of the protocol, and the information that will be displayed on the element card.
+For DataMiner protocols provided by Skyline Communications, you can access documentation from DataMiner Cube. This documentation can for instance contain more information on the device the protocol is meant for, the various versions of the protocol, and the information that will be displayed on the element card.
 
 There are several ways to access this documentation:
 
 - From an element card:
 
-  - Click the hamburger button in the top-left corner of the card and select *Help*, or
+  Click the hamburger button in the top-left corner of the element card and select *Help*.
 
 - From the Protocols & Templates module:
 
