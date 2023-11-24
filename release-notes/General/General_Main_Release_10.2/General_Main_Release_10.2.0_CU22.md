@@ -77,6 +77,19 @@ Up to now, when an SNMP response was received, a buffer with a fixed size of 102
 
 From now on, the buffer will have a dynamic size. This allow larger responses to be processed, and will also make sure that less memory has to be reserved when smaller responses are received.
 
+#### DataMiner Cube - Trending: Relation learning light bulb enhancements [ID_37834]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+
+The checks run to decide whether to show the relation learning light bulb in the top-right corner of a trend graph window have been optimized.
+
+Also, this light bulb can now have the following states, which will indicate why it is not yet showing any results:
+
+| State | Description |
+|-------|-------------|
+| Checking requirements | The light bulb is still checking whether all requirements are met. |
+| Loading               | The light bulb is fetching the relations. |
+
 #### DataMiner Cube - Alarm Console: New alarm tab showing current suggestion events now has the 'Automatically remove cleared alarms' option enabled by default [ID_37855]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->

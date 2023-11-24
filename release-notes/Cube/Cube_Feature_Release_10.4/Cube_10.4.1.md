@@ -79,6 +79,19 @@ To modify the reference level:
 > [!NOTE]
 > To change the unit of either the center frequency or the reference level, go to the settings menu on the right.
 
+#### Trending: Relation learning light bulb enhancements [ID_37834]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+
+The checks run to decide whether to show the relation learning light bulb in the top-right corner of a trend graph window have been optimized.
+
+Also, this light bulb can now have the following states, which will indicate why it is not yet showing any results:
+
+| State | Description |
+|-------|-------------|
+| Checking requirements | The light bulb is still checking whether all requirements are met. |
+| Loading               | The light bulb is fetching the relations. |
+
 #### Alarm Console: New alarm tab showing current suggestion events now has the 'Automatically remove cleared alarms' option enabled by default [ID_37855]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
