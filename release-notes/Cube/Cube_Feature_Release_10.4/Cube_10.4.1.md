@@ -92,6 +92,12 @@ Also, this light bulb can now have the following states, which will indicate why
 | Checking requirements | The light bulb is still checking whether all requirements are met. |
 | Loading               | The light bulb is fetching the relations. |
 
+> [!NOTE]
+> The following prerequisites are now optional instead of mandatory:
+>
+> - *DataMiner CloudFeed* version 1.1.0 or higher
+> - *Allow performance and usage data offload* option
+
 #### Alarm Console: New alarm tab showing current suggestion events now has the 'Automatically remove cleared alarms' option enabled by default [ID_37855]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
