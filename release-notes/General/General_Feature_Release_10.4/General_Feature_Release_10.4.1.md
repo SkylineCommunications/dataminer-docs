@@ -211,6 +211,12 @@ In some rare cases, if an attempt was made to update a service that had just bee
 
 Additional logging has now been added to allow better tracing of errors that occur while creating or updating services.
 
+#### Problem with SLDataGateway during a Cassandra Cluster migration [ID_37684]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+SLDataGateway would leak memory during a Cassandra Cluster migration.
+
 #### Problem with remote clients after restarting a DMA in a gRPC-only cluster [ID_37726]
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
