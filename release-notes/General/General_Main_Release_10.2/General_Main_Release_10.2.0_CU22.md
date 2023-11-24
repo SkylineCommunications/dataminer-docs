@@ -138,6 +138,19 @@ This argument will make sure that all other arguments you specified when you sta
 
 The selection box at the top of the *Anomaly alarm settings* window has now been made wider in order to better accommodate content in languages other than English.
 
+#### DataMiner Cube - Spectrum analysis: Zero span mode [ID_37946]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+
+Spectrum windows now support zero span mode.
+
+To enter zero span mode, set the frequency span to 0. The X axis will then change from a frequency axis to a time axis, and all frequency-related features will be disabled.
+
+In zero span mode, the sweeptime parameter is used to indicate the time on the X axis:
+
+- Left: 0
+- Right: Sweeptime
+
 ### Fixes
 
 #### DataMiner Cube: A number of Automation issues have been fixed [ID_37674]
