@@ -633,6 +633,8 @@ items:
                     topicUid: GQI_OnInitInputArgs
                   - name: RowMetadataBase
                     topicUid: GQI_RowMetadataBase
+                  - name: TimeRangeMetadata
+                    topicUid: GQI_TimeRangeMetadata
           - name: Query updates
             topicUid: Query_updates
           - name: Importing a query

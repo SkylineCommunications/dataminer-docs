@@ -51,4 +51,4 @@ Creates a new row with a specified row key and the provided cells.
 | -------- | ---- | ----------- |
 | Key | `string` | Unique identifier of the row within the query result. |
 | Cells | [GQICell](xref:GQI_GQICell)[] | Cells of the row. |
-| Metadata | [GenIfRowMetadata](xref:GQI_GenIfRowMetadata) | Links to DataMiner objects. |
+| Metadata | [GenIfRowMetadata](xref:GQI_GenIfRowMetadata) | Extra information to aid clients in interpreting the row. |
