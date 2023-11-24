@@ -57,7 +57,7 @@ Element cards can look quite different depending on the element protocol. Howeve
   - **ANNOTATIONS**: Page where more extensive annotations can be added and viewed. With the pencil icon on this page, you can open an HTML editor that allows you to add text, hyperlinks, pictures, etc. to the annotations. There is also an icon that can be used to print the annotations, and an icon to refresh the annotations page.
 
     > [!NOTE]
-    > From DataMiner 10.2.0/10.1.12 onwards, annotations can be disabled using the soft-launch option *LegacyAnnotations*. See [Soft-launch options](xref:SoftLaunchOptions).
+    > The Annotations module is by default disabled from DataMiner 10.4.0/10.4.1 onwards.<!-- RN 37786 --> If you want to keep using this module, you need to enable it with the [*LegacyAnnotations* soft-launch option](xref:Overview_of_Soft_Launch_Options#legacyannotations). Prior to this, starting from DataMiner 10.2.0/10.1.12, Annotations can optionally be disabled with this soft-launch option.
 
   - **HELP**: Help page for the protocol of the element. This page is only displayed if such a help page is available for the protocol (from DataMiner 9.5.7 onwards).
 

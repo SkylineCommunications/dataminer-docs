@@ -108,7 +108,7 @@ DataMiner has some components that are considered legacy. They are still around 
 To make the changes take effect, you then need to run the *ConfigureIIS.bat* script as Administrator located in the `C:\Skyline DataMiner\Tools` folder.
 
 > [!NOTE]
-> Annotations and the legacy Reports and Dashboards modules are disabled by default as from DataMiner versions 10.4.0/10.4.1.
+> The legacy Annotations and Reports and Dashboards modules are disabled by default as from DataMiner versions 10.4.0/10.4.1.
 
 ## Configure the firewall
 
