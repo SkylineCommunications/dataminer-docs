@@ -12,6 +12,9 @@ Expected duration: 10 minutes
 - [Step 1: Create an information event script](#step-1-create-an-information-event-script)
 - [Step 2: Use the 'on page load' event](#step-2-use-the-on-page-load-event)
 
+>[!TIP]
+>See also: [Kata #8: Actions and events in a low-code app](https://community.dataminer.services/courses/kata-8/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+
 ## Step 1: Create an information event script
 
 1. Open DataMiner Cube and go to the **Automation** module.
