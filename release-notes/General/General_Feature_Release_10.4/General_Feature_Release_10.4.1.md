@@ -253,6 +253,14 @@ In some cases, an error could occur in SLAnalytics when it was not able to conne
 
 When a table was polled via SNMPv3 and the response included a cell that contained *no such instance*, the table would not get populated with the values that were received. Instead, the entire result set would be discarded.
 
+#### Reports for DVE elements would show either incorrect alarm information or no alarm information at all [ID_37816]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+When, in e.g. DataMiner Cube, you double-clicked a parameter of a DVE element and navigated to the *Details* tab, in some cases, the reports would show either incorrect alarm information or no alarm information at all.
+
+The same issue would occur when, in DataMiner Cube, you opened an element card and navigated to *Reports > General*.
+
 #### Cassandra Cluster: Failover setups would incorrectly report errors when the cluster status was yellow [ID_37868]
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
@@ -270,6 +278,12 @@ Incorrect entries would be added to the *SLEventCache.txt* log file on DataMiner
 Example of an incorrect log entry:
 
 `Clearing cache: predicate<entries with old hosting agent id> for type XXXXXX`
+
+#### SLAnalytics - Behavioral anomaly detection: Incorrect flatline stops could be generated [ID_37903]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+In some cases, incorrect flatline stops could be generated.
 
 #### SLAutomation would not properly cleanup deleted references to elements [ID_37907]
 
