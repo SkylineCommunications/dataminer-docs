@@ -52,6 +52,12 @@ Similar to other types of anomaly suggestion events, flatline suggestion events 
 > [!NOTE]
 > Flatline alarms stay open until the flatline in question disappears or SLAnalytics is restarted.
 
+#### Enhanced performance when locking or unlocking inputs and output of matrices in client applications [ID_37755]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+
+Because of a number of enhancements, overall performance has increased when locking or unlocking inputs and output of matrices in client applications.
+
 #### Protocols: Buffer for SNMP responses now has a dynamic size [ID_37824]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->

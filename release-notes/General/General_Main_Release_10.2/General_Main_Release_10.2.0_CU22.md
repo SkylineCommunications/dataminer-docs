@@ -48,6 +48,12 @@ When you stop scrolling, the new zoom dimensions will be set on the spectrum ana
 
 In the *View* tab of a spectrum card, the buttons in the *Reference lines* panel and the *Thresholds* panel as well as the delete buttons in the *Measurement Points* panel have been restyled to match the buttons in the *Markers* panel.
 
+#### Enhanced performance when locking or unlocking inputs and output of matrices in client applications [ID_37755]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+
+Because of a number of enhancements, overall performance has increased when locking or unlocking inputs and output of matrices in client applications.
+
 #### DataMiner Cube - Spectrum Analysis: Editing the X-axis and Y-axis labels [ID_37821]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
