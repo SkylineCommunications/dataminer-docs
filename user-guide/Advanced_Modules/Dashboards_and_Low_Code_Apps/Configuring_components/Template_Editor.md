@@ -232,7 +232,7 @@ To add a condition:
 
    - *Hovering*: The action will be executed when a user hovers the mouse pointer over the tool<!--RN 34761-->.
 
-   - *Is loading*: The action will be executed when the component is loading<!--RN 34859-->.
+   - *Is loading*: The action will be executed when the component is loading<!--RN 34859-->. Only available for grid components.
 
 1. When you have chosen a state, select *Yes* or *No*.
 
