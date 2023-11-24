@@ -19,6 +19,9 @@ Expected duration: 10 minutes
 - [Step 3: Create and configure the header button](#step-3-create-and-configure-the-header-button)
 - [Step 4: Chain an action](#step-4-chain-an-action)
 
+> [!TIP]
+> See also: [Kata #8: Actions and events in a low-code app](https://community.dataminer.services/courses/kata-8/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+
 ## Step 1: Install the dummy data sources package
 
 1. Go to <https://catalog.dataminer.services/catalog/5410>.
