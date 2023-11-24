@@ -152,6 +152,11 @@ Depending on the type of layer, you can specify different layer properties in th
 
   - *Icon*: Allows you to select any of the available icons from the dropdown list, or search for a specific icon using the search bar functionality.
 
+  - *Configure actions*: Allows you to configure actions that are executed when a user clicks the icon. Only available for DataMiner Low-Code Apps<!--RN 34761-->.
+
+    > [!TIP]
+    > For more information on how to configure these actions, see [Configuring low-code app events](xref:LowCodeApps_event_config).
+
 - For *Text* layers, you can specify the following properties:
 
   - *Show text*: Allows you to mask the layer, rendering it temporarily invisible. If disabled, the layer is still visible in the preview with lowered opacity, but will not be visible in the template's end result.
@@ -188,11 +193,21 @@ Depending on the type of layer, you can specify different layer properties in th
   
   - *Link height to*: Allows you to link the height of this column to that of another column, selected from the dropdown list. Only available for table and grid components.
 
+  - *Configure actions*: Allows you to configure actions that are executed when a user clicks the rectangle. Only available for DataMiner Low-Code Apps<!--RN 34761-->.
+
+    > [!TIP]
+    > For more information on how to configure these actions, see [Configuring low-code app events](xref:LowCodeApps_event_config).
+
 - For *Ellipse* layers, you can specify the following properties:
 
   - *Show ellipse*: Allows you to mask the layer, rendering it temporarily invisible. If disabled, the layer is still visible in the preview with lowered opacity, but will not be visible in the template's end result.
 
   - *Color*: Allows you to specify a custom color for the ellipse, either by specifying the color in RGB format or by using the color picker box on the right.
+
+  - *Configure actions*: Allows you to configure actions that are executed when a user clicks the ellipse. Only available for DataMiner Low-Code Apps<!--RN 34761-->.
+
+    > [!TIP]
+    > For more information on how to configure these actions, see [Configuring low-code app events](xref:LowCodeApps_event_config).
 
 > [!NOTE]
 > When you change the color of a layer, the most recently used template colors and the theme colors are always displayed<!--RN 34876-->.
@@ -208,6 +223,16 @@ To add a condition:
 1. Click *Add case*.
 
 1. Choose a state or column from the dropdown list.
+
+   The available states:
+
+   - *Is selected*: The action will be executed when a user selects the tool<!--RN 34761-->.
+
+   - *Is busy*: The action will be executed when the component is busy.
+
+   - *Hovering*: The action will be executed when a user hovers the mouse pointer over the tool<!--RN 34761-->.
+
+   - *Is loading*: The action will be executed when the component is loading<!--RN 34859-->.
 
 1. When you have chosen a state, select *Yes* or *No*.
 
@@ -281,6 +306,14 @@ To add a condition:
    - *Ellipse* layer:
 
      - *Color*: Allows you to select a color for the tool, either by specifying the color in RGB format or by using the color picker box on the right.
+
+   > [!NOTE]
+   > Any visual changes made when configuring a conditional case will not show up in the preview.
+
+1. Optionally, in a low-code app, you can configure actions that are executed when a user clicks the tool. Only available for *Icon*, *Rectangle*, and *Ellipse* layers<!--RN 34761-->.
+
+   > [!TIP]
+   > For more information on how to configure these actions, see [Configuring low-code app events](xref:LowCodeApps_event_config).
 
 1. If you want to add another condition, go back to step 1 and repeat the steps until you are finished.
 
