@@ -414,8 +414,17 @@ items:
           - name: Querying a Cassandra database compared to MySQL
             topicUid: Querying_Cassandra_vs_MySQL
   - name: Security
-    topicUid: About_DMS_Security
+    topicUid: About_security
     items:
+      - name: About security
+        topicUid: About_security
+        items:
+          - name: Key principles and best practices
+            topicUid: Security_key_principles
+          - name: Automation in the context of security
+            topicUid: Security_and_automation
+          - name: Must-have requirements
+            topicUid: Security_must_haves
       - name: About DataMiner security
         topicUid: About_DMS_Security
         items:
