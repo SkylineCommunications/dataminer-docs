@@ -10,13 +10,14 @@ uid: GQI_ObjectRefMetadata
 - Assembly: `SLAnalyticsTypes.dll`
 
 Represents a link to a DataMiner object for a [GQIRow](xref:GQI_GQIRow).
+
 Inherits from [RowMetadataBase](xref:GQI_RowMetadataBase).
 
 ## Properties
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| Object | [DMAObjectRef](#dmaobjectref) | A type specific reference to the DataMiner object. |
+| Object | [DMAObjectRef](#dmaobjectref) | A type-specific reference to the DataMiner object. |
 
 ## DMAObjectRef
 

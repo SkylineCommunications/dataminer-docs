@@ -10,6 +10,7 @@ uid: GQI_TimeRangeMetadata
 - Assembly: `SLAnalyticsTypes.dll`
 
 Represents a link to a specific time range for a [GQIRow](xref:GQI_GQIRow).
+
 Inherits from [RowMetadataBase](xref:GQI_RowMetadataBase).
 
 ## Properties
