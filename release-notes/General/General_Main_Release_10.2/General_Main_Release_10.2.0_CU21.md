@@ -259,3 +259,9 @@ When you started a profile migration to an Elasticsearch/OpenSearch database whi
 
 > [!NOTE]
 > When, in the SLNetClientTest tool, you go to *Advanced > Migration*, all migrations in an error status will now have a red background.
+
+#### Memory leak when closing card showing inline visual overviews [ID_37996]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU10] - FR 10.4.1 -->
+
+When a card was closed that showed a visual overview with inline visual overviews of other objects, it could occur that subscriptions were left open for those inline visual overview and memory was not freed.

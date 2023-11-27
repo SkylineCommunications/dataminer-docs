@@ -220,3 +220,9 @@ When a card in tab layout was closed before it had fully been loaded, DataMiner 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
 In the *System settings > Manage client versions* section of *System Center*, the term *client independent updates* has been replaced by *server independent client updates*.
+
+#### Memory leak when closing card showing inline visual overviews [ID_37996]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU10] - FR 10.4.1 -->
+
+When a card was closed that showed a visual overview with inline visual overviews of other objects, it could occur that subscriptions were left open for those inline visual overview and memory was not freed.
