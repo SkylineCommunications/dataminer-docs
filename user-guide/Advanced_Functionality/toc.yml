@@ -228,11 +228,6 @@ items:
   - name: Databases
     topicUid: Databases_about
     items:
-      - name: Cassandra Cluster Backup using Medusa
-        topicUid: Backup_Restore_Cassandra_Cluster
-        items:
-          - name: Backup Restore Casasndra Cluster
-            topicUid: Cassandra_cluster_backup_restore
       - name: About databases
         topicUid: Databases_about
       - name: Supported system data storage architectures
@@ -277,6 +272,8 @@ items:
                             topicUid: Azure_Managed_Instance_for_Apache_Cassandra
                       - name: Maintaining a Cassandra cluster
                         topicUid: Maintain_Cassandra_Cluster
+                      - name: Backing up and restoring a Cassandra cluster using Medusa
+                        topicUid: Backup_Restore_Cassandra_Cluster
                   - name: Amazon Keyspaces Service
                     topicUid: Amazon_Keyspaces_Service
                     items:
