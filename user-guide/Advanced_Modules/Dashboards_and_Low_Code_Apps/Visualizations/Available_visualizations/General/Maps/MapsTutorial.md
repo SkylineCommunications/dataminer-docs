@@ -4,13 +4,16 @@ uid: TutorialMaps
 
 # Using the maps component in a low-code app
 
-In this tutorial, you will learn how to add and configure a maps component in a low-code app, by means of an example where the maps component is used to visualize cell towers, their connections and their coverage.
+In this tutorial, you will learn how to add and configure a maps component in a low-code app, by means of an example where the maps component is used to visualize cell towers, their connections, and their coverage.
 
 The content and screenshots for this tutorial have been created in DataMiner version 10.4.1.
 
 ## Prerequisites
 
-To complete this tutorial, you need a DataMiner version >= 10.4.1 and should have the *ReportsAndDashboardsGQIMaps* soft-launch option active.
+- A DataMiner System using DataMiner 10.4.1 or higher, which is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
+
+> [!NOTE]
+> Depending on your DataMiner version, you may need to activate the [ReportsAndDashboardsGQIMaps](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsgqimaps) soft-launch option to be able to use the maps component. See [Soft-launch options](xref:SoftLaunchOptions).
 
 ## Overview
 
@@ -25,38 +28,83 @@ To complete this tutorial, you need a DataMiner version >= 10.4.1 and should hav
 
 ## Step 1: Set up the data
 
-Before you can begin to create the app, you will need to add some data to your system that you can visualize in the app. To do so, deploy the [Maps tutorial](https://catalog.dataminer.services/catalog/5506) from the catalog.
+1. Go to <https://catalog.dataminer.services/catalog/5506>.
 
-This package contains an [ad hoc data source](xref:Get_ad_hoc_data) that can read in a JSON file and return GQI rows. It also contains 3 JSON files with cell tower data that will be visualized in this tutorial.
+1. Click the *Deploy* button to deploy the *Maps tutorial* package on your DMA.
 
-> [!TIP]
-> Deploying a package is very similar to deploying a DataMiner connector. See [Deploying a DataMiner connector to your system](xref:Deploying_A_DataMiner_Connector_to_your_system).
-
-After the package is deployed, you can [create a new application](xref:Creating_custom_apps) to visualize the data.
+   This package contains an [ad hoc data source](xref:Get_ad_hoc_data) that can read in a JSON file and return GQI rows. It also contains three JSON files with cell tower data that will be visualized in this tutorial.
 
 ## Step 2: Visualize the cell towers
 
-Since the maps component can only visualize query rows, a query is needed that represents our cell towers. For this we fetch all cell towers from the *CellTowers.json* file using the *JSON Reader* ad hoc source.
+1. [Create a new low-code app](xref:Creating_custom_apps).
 
-![CellTowersQuery](~/user-guide/images/MapsCellTowersQuery.png)
+1. In the data pane, [create a new query](xref:Creating_GQI_query).
 
-Now that we have our query, we can add a maps component to the page and add the query to it by [applying a data feed](xref:Apply_Data_Feed). The maps component will look at the columns returned by our query and will try to automatically configure the identifier, latitude & longitude dimensions. This means that our cell towers will automatically be visible on the map. By default the query will be in the first layer, this layer can be renamed to *Cell towers*. The layer settings can be found in the layout settings of the maps component.
+1. Configure the query to retrieve the cell towers from the *CellTowers.json* file using the *JSON Reader* ad hoc data source.
 
-![CellTowersSettings](~/user-guide/images/MapsCellTowersSettings.png)
+   ![CellTowersQuery](~/user-guide/images/MapsCellTowersQuery.png)
+
+1. Add a [maps visualization](xref:DashboardMaps) to the page and add the query to it by [applying a data feed](xref:Apply_Data_Feed).
+
+   The maps component will look at the columns returned by the query and will try to automatically configure the identifier, latitude, and longitude. This means that the cell towers will automatically be shown on the map. By default, the query will be in the first layer.
+
+1. Make sure the component is selected and go to the *Layout* tab on the right.
+
+1. Under *Layer settings*, rename the first layer to *Cell towers*:
+
+   ![CellTowersSettings](~/user-guide/images/MapsCellTowersSettings.png)
 
 ## Step 3: Configure the map
 
-The markers we have added in step 2 are all located on a small part of the map, but the map itself shows a large part of the world by default. To make it easier for the users of our app to locate the markers, we can set some default values & limits on the map. We can set a default map center & default zoom level by navigating to what we want as a default view on the component and by then pressing the *Save current view* button in the layout settings of the component. We can also limit the minimum zoom level so the user cannot zoom out past a certain level and limit the bounds so the user cannot pan to far away away from the markers.
+The markers you added in the previous step are all located on a small part of the map, but the map itself shows a large part of the world by default. To make it easier for the users to locate the markers, you can set some default values and limits for the map:
 
-![MapsSettings](~/user-guide/images/MapsSettings.png)
+1. Zoom to the area of the map that you would like to have as the default view.
+
+1. In the *Layout* tab, go to the *Map settings* section, and click *Save current view*.
+
+   This will set the default map center and default zoom level to what is currently displayed.
+
+1. Under *Map zoom*, use the slider to limit the minimum zoom level.
+
+   This will make it impossible for a user to zoom out past a certain level.
+
+1. Under *Map bounds*, select *Enable bounds*.
+
+   This will limit the bounds of the map, so that the user cannot pan too far away away from the markers.
+
+   ![MapsSettings](~/user-guide/images/MapsSettings.png)
 
 ## Step 4: Style the markers
 
-The cell tower markers are now always visible on our component, but they are still looking very basic. We will edit their template to make them stand out more and display some useful information in them. The template of the markers can be edited via the layer settings using the template editor. The template consists of 3 shapes:
+At this point, the cell tower markers are always shown in the component, but they still look very basic. To make them stand out more and display some additional information, you can edit their template:
 
-- A text shape that displays the number of transceivers on the tower. For this the *Transceivers* column from the query is used as the text value using the interpolation feature.
-- An ellipse as a background for the text.
-- An icon that indicates a cell tower.
+1. In the *Layout* tab for the component expand the *Layer settings* and then expand the *Cell towers* layer.
+
+1. In the *Template* box, click *Edit*.
+
+   This will open the template editor.
+
+1. Create a text layer that displays the number of transceivers on the tower:
+
+   1. In the *Tools* tab on the left, select *Text* and then click and drag in the center pane to add a text layer.
+
+   1. In the box below *Show text* on the right, enter the text `{Tranceivers}`.
+
+      This placeholder text will be replaced by the content of the corresponding cell value from the query data source.
+
+1. Create an ellipse layer as the background for the text:
+
+   1. In the *Tools* tab on the left, select *Ellipse* and then click and drag to create an ellipse shape around the text placeholder in the center pane.
+
+   1. Below *Show ellipse* on the right, click the color icon to select a custom color for the background.
+
+1. Create an icon layer to represent the cell towers:
+
+   1. In the *Tools* tab on the left, select *Ellipse* and then click and drag to place the icon in the right location in the center pane.
+
+   1. In the pane on the right, click *Icon*, enter `tower` in the filter box, and select the tower icon.
+
+The result should look like this:
 
 ![CellTowersTemplate](~/user-guide/images/MapsCellTowersTemplate.png)
 
@@ -64,7 +112,9 @@ The cell tower markers are now always visible on our component, but they are sti
 
 ## Step 5: Add grouped markers
 
-The templates added in the previous step are looking good, but the visualization feels cluttered when zoomed out al the way. In this step we will add grouped markers. The catalog package from step 1 contains 2 more JSON files, *CellTowersGroups* & *CellTowersCities*, that represent a more grouped overview of the cell towers. To visualize these we need 2 new queries identical to our first one, but with a different file as a source. Theses queries can then be added to the maps component. We also configure a simple template for both queries that shows the *Count* of cell towers that are grouped in the markers.
+The templates you added in the previous step look good, but at this point the visualization still feels cluttered when you zoom out all the way. You can deal with this by adding grouped markers. For this, you will need to create additional queries to retrieve data from the *CellTowersGroups* and *CellTowersCities* JSON files you installed with the package in step 1:
+
+To visualize these we need 2 new queries identical to our first one, but with a different file as a source. Theses queries can then be added to the maps component. We also configure a simple template for both queries that shows the *Count* of cell towers that are grouped in the markers.
 
 ![GroupedCellTowersTemplate](~/user-guide/images/MapsGroupedCellTowersTemplate.png)
 
