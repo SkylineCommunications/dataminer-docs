@@ -81,7 +81,7 @@ In addition, the following **other limitations** currently apply:
 
 Your data is backed up **daily** and stored for **30 days**.
 
-- Daily Backups: STaaS performs daily backups, maintaining a 30-day rolling snapshot of your data. This process protects against user errors and accidental changes, ensuring data resilience for potential restorations.
+- Daily Backups: STaaS performs daily backups, maintaining a 30-day rolling snapshot of your data. This process protects against user errors and accidental changes, ensuring data resilience for potential recovery scenarios.
 
 - Data Restoration and Support: In the event a roll-back is necessary, our support team is prepared to assist. Please submit a rollback request by opening a ticket with our support team. They will guide you through the necessary steps to ensure a successful data restoration.
 
