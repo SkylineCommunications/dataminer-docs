@@ -19,13 +19,13 @@ The provided code below accomplishes this by:
 
 - Creating a DOM module.
 
-- Creating a DOM definition links to a *SectionDefinition* containing a *GenericEnumFieldDescriptor*.
+- Creating a DOM definition linked to a *SectionDefinition* containing a *GenericEnumFieldDescriptor*.
 
 - Creating a DOM instance with a value for each *FieldDescriptor*.
 
 ```C#
-using System;
 using System.Collections.Generic;
+using System.Linq;
 using Skyline.DataMiner.Automation;
 using Skyline.DataMiner.Net.Apps.DataMinerObjectModel;
 using Skyline.DataMiner.Net.Apps.Modules;
@@ -70,7 +70,7 @@ namespace Tutorial
 
             var genericEnum = new GenericEnum<int>();
             genericEnum.AddEntry("Director", 0);
-            genericEnum.AddEntry("Project manager", 1);
+            genericEnum.AddEntry("Project Manager", 1);
             genericEnum.AddEntry("Engineer", 2);
             genericEnum.AddEntry("Secretary", 3);
 
@@ -78,7 +78,7 @@ namespace Tutorial
             {
                 FieldType = typeof(GenericEnum<int>),
                 GenericEnumInstance = genericEnum,
-                Name = "JobTitle",
+                Name = "Job title",
             };
 
             // Put all the FieldDescriptors in a SectionDefinition
@@ -106,40 +106,24 @@ namespace Tutorial
 
             personDomDefinition = domHelper.DomDefinitions.Create(personDomDefinition);
 
-
-            // Create a list of FieldValues for the general Section
-            var fieldValues = new List<FieldValue>()
-            {
-                new FieldValue(firstNameFieldDescriptor.ID, new ValueWrapper<string>("John")),
-                new FieldValue(lastNameFieldDescriptor.ID, new ValueWrapper<string>("Doe")),
-                new FieldValue(phoneNumberFieldDescriptor.ID, new ValueWrapper<string>("0423482635")),
-                new FieldValue(jobTitleFieldDescriptor.ID, new ValueWrapper<int>(0)),
-            };
-
-            // Add them to a Section linked to the ID of the GeneralSectionDefinition
-            var generalSection = new Section()
-            {
-                SectionDefinitionID = sectionDefinition.ID
-            };
-
-            foreach (var fieldValue in fieldValues)
-            {
-                generalSection.AddOrReplaceFieldValue(fieldValue);
-            }
-
-            // Create the actual DomInstance
+            // All of the configuration items have now been created. We can start creating our DOM instance.
             var domInstance = new DomInstance()
             {
                 DomDefinitionId = personDomDefinition.ID,
-                Sections = { generalSection }
             };
+
+            domInstance.AddOrUpdateFieldValue(sectionDefinition.ID, firstNameFieldDescriptor.ID, "John");
+            domInstance.AddOrUpdateFieldValue(sectionDefinition.ID, lastNameFieldDescriptor.ID, "Doe");
+            domInstance.AddOrUpdateFieldValue(sectionDefinition.ID, phoneNumberFieldDescriptor.ID, "0423482635");
+            domInstance.AddOrUpdateFieldValue(sectionDefinition.ID, jobTitleFieldDescriptor.ID, 0);
+
             domInstance = domHelper.DomInstances.Create(domInstance);
         }
     }
 }
 ```
 
-To visualize the setup, create a low-code app.
+To visualize the setup, you could create a low-code app.
 
 > [!TIP]
 > See [Creating low-code applications](xref:Creating_custom_apps).
@@ -154,6 +138,6 @@ In that low-code app:
 
 1. Drag the GQI query onto the canvas and apply the [table visualization](xref:DashboardTable).
 
-![Step1](~/user-guide/images/DOM_Remove_Enum_Entry_Step1_1.png)
+![Step1](~/user-guide/images/DOM_Create_Basic_Setup_Step1_1.png)
 
-![Step1_2](~/user-guide/images/DOM_Remove_Enum_Entry_Step1_2.png)
+![Step1_2](~/user-guide/images/DOM_Create_Basic_Setup_Step1_2.png)
