@@ -7,9 +7,14 @@ uid: Template_Editor
 > [!IMPORTANT]
 > The Template Editor is in preview until DataMiner 10.4.1/10.5.0. If you use the preview version of the feature, its functionality may be different from what is described below. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
 
-Available from DataMiner 10.4.1/10.5.0. Prior to this, the Template Editor is available in soft launch from DataMiner 10.2.12 onwards, if the soft-launch options *ReportsAndDashboardsDynamicVisuals* and *ReportsAndDashboardsScheduler* are enabled.
+Available from DataMiner 10.4.1/10.5.0 onwards. Prior to this, the Template Editor is available in soft launch from DataMiner 10.2.12 onwards, if the soft-launch options *ReportsAndDashboardsDynamicVisuals* and *ReportsAndDashboardsScheduler* are enabled.
 
-Currently only supported for specific components, such as the grid, timeline, and table component.
+The Template Editor is currently supported for the following components:
+
+- [Grid](xref:DashboardGrid)
+- Timeline
+- [Table](xref:DashboardTable)
+- Maps (requires the [ReportsAndDashboardsGQIMaps soft-launch option](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsgqimaps) prior to DataMiner 10.4.2)
 
 To access the Template Editor:
 
