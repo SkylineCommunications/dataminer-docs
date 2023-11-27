@@ -60,7 +60,7 @@ The entry point method has two parameters.
   | RawBody | `string` | The full body of the HTTP request as a string. This can be deserialized and used in the script. See [User input data](#user-input-data). |
   | Parameters | `Dictionary<string, string>` | Contains the deserialized parameters if you select *Dictionary (parsed from JSON)* when configuring the API. See [User input data](#user-input-data). |
   | Context | [ApiTriggerContext](#apitriggercontext) | Contains properties with info about the request. Available from DataMiner 10.3.9/10.4.0 onwards. <!-- RN 37015 --> |
-  | QueryParameters | [IQueryParameters](#query-parameters) | Contains the request query string parameters. Available from DataMiner 10.4.1/10.4.0 onwards. <!-- RN 37733 --> |
+  | QueryParameters | [IQueryParameters](#query-parameters) | Contains the request query string parameters. Available from DataMiner 10.4.1/10.5.0 onwards. <!-- RN 37733 --> |
 
 #### ApiTriggerContext
 
@@ -99,7 +99,7 @@ Query parameters are available in the QueryParameters property in the `ApiTrigge
 > - Multiple values can be added for one key.
 > - Query parameter keys are case-sensitive.
 > - The maximum size for the query string is 2KB.
-> - Query parameters are available from DataMiner 10.4.1/10.4.0 onwards.
+> - Query parameters are available from DataMiner 10.4.1/10.5.0 onwards.
 
 ##### Request body
 
