@@ -48,6 +48,12 @@ When you stop scrolling, the new zoom dimensions will be set on the spectrum ana
 
 In the *View* tab of a spectrum card, the buttons in the *Reference lines* panel and the *Thresholds* panel as well as the delete buttons in the *Measurement Points* panel have been restyled to match the buttons in the *Markers* panel.
 
+#### Enhanced performance when locking or unlocking inputs and output of matrices in client applications [ID_37755]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+
+Because of a number of enhancements, overall performance has increased when locking or unlocking inputs and output of matrices in client applications.
+
 #### DataMiner Cube - Spectrum Analysis: Editing the X-axis and Y-axis labels [ID_37821]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
@@ -77,6 +83,25 @@ Up to now, when an SNMP response was received, a buffer with a fixed size of 102
 
 From now on, the buffer will have a dynamic size. This allow larger responses to be processed, and will also make sure that less memory has to be reserved when smaller responses are received.
 
+#### DataMiner Cube - Trending: Relation learning light bulb enhancements [ID_37834]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+
+The checks run to decide whether to show the relation learning light bulb in the top-right corner of a trend graph window have been optimized.
+
+Also, this light bulb can now have the following states, which will indicate why it is not yet showing any results:
+
+| State | Description |
+|-------|-------------|
+| Checking requirements | The light bulb is still checking whether all requirements are met. |
+| Loading               | The light bulb is fetching the relations. |
+
+> [!NOTE]
+> The following prerequisites are now optional instead of mandatory:
+>
+> - *DataMiner CloudFeed* version 1.1.0 or higher
+> - *Allow performance and usage data offload* option
+
 #### DataMiner Cube - Alarm Console: New alarm tab showing current suggestion events now has the 'Automatically remove cleared alarms' option enabled by default [ID_37855]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
@@ -95,6 +120,15 @@ In the *Settings* window, the default values of the following trend graph action
 |---------|-------------------|
 | Right mouse button action on graph         | Select |
 | Hotkey + left mouse button action on graph | Zoom   |
+
+#### DataMiner Cube - Protocols & Templates: Clicking Help will now open the protocol's help page on 'DataMiner Connector Documentation' [ID_37873]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+
+When, in the *Protocols & Templates* app, you right-click a protocol in the *Protocols* list and select *Help*, a new browser window will now open, showing the protocol's help page on [DataMiner Connector Documentation](https://docs.dataminer.services/connector/index.html).
+
+> [!NOTE]
+> That same help page will appear when, in an element card, you open the hamburger menu and select *Help*.
 
 #### DataMiner Cube - Service templates: Scrollbar added inside every tab of a service template card [ID_37882]
 
@@ -115,6 +149,29 @@ This argument will make sure that all other arguments you specified when you sta
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
 The selection box at the top of the *Anomaly alarm settings* window has now been made wider in order to better accommodate content in languages other than English.
+
+#### DataMiner Cube: Legacy Reports, Dashboards and Annotations modules are now end-of-life and will be disabled by default [ID_37935]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+
+As from DataMiner versions 10.1.10/10.2.0, the *LegacyReportsAndDashboards* and/or *LegacyAnnotations* soft-launch options allowed you to enable or disable the legacy *Reports*, *Dashboards* and *Annotations* modules. By default, they were enabled.
+
+Now, the above-mentioned soft-launch options will be disabled by default, causing the legacy *Reports*, *Dashboards* and *Annotations* modules to be hidden. If you want to continue using these modules, which are now considered end-of-life, you will have to explicitly enable the soft-launch options.
+
+In DataMiner Cube, all buttons related to these modules will now by default also be hidden.
+
+#### DataMiner Cube - Spectrum analysis: Zero span mode [ID_37946]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+
+Spectrum windows now support zero span mode.
+
+To enter zero span mode, set the frequency span to 0. The X axis will then change from a frequency axis to a time axis, and all frequency-related features will be disabled.
+
+In zero span mode, the sweeptime parameter is used to indicate the time on the X axis:
+
+- Left: 0
+- Right: Sweeptime
 
 ### Fixes
 
@@ -163,3 +220,21 @@ When DataMiner Cube was using the *Skyline Black* theme, lite parameter controls
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
 When a table was polled via SNMPv3 and the response included a cell that contained *no such instance*, the table would not get populated with the values that were received. Instead, the entire result set would be discarded.
+
+#### DataMiner Cube - Visual Overview: URLs that did not link to a DataMiner web apps would incorrectly get a connection ticket [ID_37822]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+
+When the URL specified in a shape data item of type *Link* did not link to a DataMiner web app, but contained a keyword that could be interpreted as a keyword of a DataMiner web app, a connection ticket would incorrectly be added to that URL.
+
+#### DataMiner Cube could leak memory leak when a card in tab layout was closed before it had fully been loaded [ID_37857]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+
+When a card in tab layout was closed before it had fully been loaded, DataMiner Cube could leak memory due to list boxes not being cleared from memory.
+
+#### DataMiner Cube - System Center: Term 'Client independent updates' replaced by 'Server independent client updates' [ID_37926]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+
+In the *System settings > Manage client versions* section of *System Center*, the term *client independent updates* has been replaced by *server independent client updates*.

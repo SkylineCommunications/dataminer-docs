@@ -60,7 +60,7 @@ To configure the component, up to DataMiner 9.6.11:
 
 1. If you add a table parameter, also add the table indices. To do so:
 
-   1. Hover the mouse over the component and click the groups icon ( ![Groups icon](~/user-guide/images/NewRD_Groups.png) ).
+   1. Hover the mouse pointer over the component and click the groups icon ( ![Groups icon](~/user-guide/images/NewRD_Groups.png) ).
 
    2. Drag the *indices* group from the *Data* tab to the component.
 

@@ -22,7 +22,7 @@ On the right of the user name, you find the computer name and the number of Data
 [User name] ([Computer name]) ([Number of sessions])
 ```
 
-If you hover the mouse over one of the listed users, a tooltip appears, containing the following details:
+If you hover the mouse pointer over one of the listed users, a tooltip appears, containing the following details:
 
 - User name & computer name:
 

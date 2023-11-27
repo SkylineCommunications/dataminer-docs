@@ -4,7 +4,10 @@ uid: Protocol.HTTP.Session-timeout
 
 # timeout attribute
 
-Specifies that DataMiner must use this timeout value instead of the default one (or the one specified in the Session tag) when executing this connection of this session.
+Specifies that DataMiner must use this timeout value instead of the default one.
+
+> [!NOTE]
+> For a [Connection](xref:Protocol.HTTP.Session.Connection) in this Session, you can override the timeout to be used via the [Connection@timeout](xref:Protocol.HTTP.Session.Connection-timeout) attribute.
 
 ## Content Type
 

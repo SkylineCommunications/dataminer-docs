@@ -42,6 +42,20 @@ See also: [Upgrade fails because of VerifyElasticStorageType.dll prerequisite](x
 
 ### Enhancements
 
+#### Elasticsearch/OpenSearch: Enhanced log entry when creating a custom data storage fails [ID_26965]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+When an attempt to create a custom data storage fails, the log entry will now also mention the data storage type.
+
+Former log entry:
+
+`Cannot create a custom data table for Elastic when Elastic is not active.`
+
+New log entry:
+
+`Cannot create a custom data table for {typeof(T)} in Elastic when Elastic is not active.`
+
 #### New BPA test 'Check Cluster SLNet Connections' [ID_37110]
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
@@ -52,6 +66,31 @@ When run on a particular agent in a DataMiner System, this new BPA test will tri
 - report any communication problems.
 
 For more information, see [Check Cluster SLNet Connections](xref:BPA_Check_Cluster_SLNet_Connections).
+
+#### DataMiner Object Models: Generic enum field descriptors now allow you to select multiple values [ID_37482]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+A generic enum field descriptor now allows you to select multiple values.
+
+For a *GenericEnumFieldDescriptor* to allow multiple values, its field type should be set as follows:
+
+- For integer values: `FieldType = typeof(List<GenericEnum<int>>)`
+- For string values: `FieldType = typeof(List<GenericEnum<string>>)`
+
+Values need to be set as follows:
+
+- Integer values:
+
+  ```csharp
+  new ListValueWrapper<int>(new List<int>(){0, 1});
+  ```
+
+- String values:
+
+  ```csharp
+  new ListValueWrapper<string>(new List<string>(){ "Value 0", "Value 1" });
+  ```
 
 #### GQI: Enhanced error handling when an error occurs while executing a query before it is joined with another query [ID_37521]
 
@@ -104,6 +143,12 @@ When profile data is stored in an Elasticsearch/OpenSearch database, all Profile
 
 Also, additional logging has been added to indicate when a cache was refilled and how many objects were added, updated, removed or ignored. Each log entry will also include the IDs of the first ten of these objects.
 
+#### Enhanced performance when locking or unlocking inputs and output of matrices in client applications [ID_37755]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+
+Because of a number of enhancements, overall performance has increased when locking or unlocking inputs and output of matrices in client applications.
+
 #### Legacy Reports, Dashboards and Annotations modules are now end-of-life and will be disabled by default [ID_37786]
 
 <!-- MR 10.4.0 - FR 10.4.1 -->
@@ -136,6 +181,12 @@ Forwarding sort operators to the backend is now supported for a wider range of q
 
 When two DataMiner Agents try to connect via SLNet, from now on, this will no longer be allowed if the two agents share the same DataMiner GUID (except when they are both part of the same Failover setup).
 
+#### Authentication response message now includes the domain user name [ID_37823]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+When a DataMiner Agent receives an authentication request from a client application, it will now include the domain user name in the authentication response message it returns to the client application.
+
 #### Protocols: Buffer for SNMP responses now has a dynamic size [ID_37824]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
@@ -143,6 +194,22 @@ When two DataMiner Agents try to connect via SLNet, from now on, this will no lo
 Up to now, when an SNMP response was received, a buffer with a fixed size of 10240 characters was used to translate the response to the requested format (e.g. OctetStringUTF8). When the response was larger that 10240 characters, it was cut off.
 
 From now on, the buffer will have a dynamic size. This allow larger responses to be processed, and will also make sure that less memory has to be reserved when smaller responses are received.
+
+#### Behavioral anomaly detection: Flatline detection now takes into account the decimal precision of parameter values [ID_37828]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+From now on, the flatline detection algorithm will take into account the decimal precision of parameter values displayed in client applications.
+
+#### Service & Resource Management: Enhanced performance when updating/applying profile instances [ID_37976]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+Overall performance has increased when updating/applying profile instances by providing a way to pass cached profile instances instead of first having to retrieve them from the database. To achieve this, the `ResourceUsageDefinition` now has a new overload method:
+
+```csharp
+public virtual void UpdateAllCapacitiesAndCapabilitiesByReference(Func<FilterElement<ProfileInstance>, List<ProfileInstance>> retriever, Dictionary<Guid, ProfileInstance> profileInstanceCache, IEnumerable<QuarantinedResourceUsageDefinition> correspondingQuarantines = null);
+```
 
 ### Fixes
 
@@ -165,6 +232,12 @@ When you exported tables of which the primary keys were of type string, the DELT
 In some rare cases, if an attempt was made to update a service that had just been deleted, the service could re-appear.
 
 Additional logging has now been added to allow better tracing of errors that occur while creating or updating services.
+
+#### Problem with SLDataGateway during a Cassandra Cluster migration [ID_37684]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+SLDataGateway would leak memory during a Cassandra Cluster migration.
 
 #### Problem with remote clients after restarting a DMA in a gRPC-only cluster [ID_37726]
 
@@ -189,3 +262,60 @@ In some cases, an error could occur in SLAnalytics when it was not able to conne
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
 When a table was polled via SNMPv3 and the response included a cell that contained *no such instance*, the table would not get populated with the values that were received. Instead, the entire result set would be discarded.
+
+#### Reports for DVE elements would show either incorrect alarm information or no alarm information at all [ID_37816]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+When, in e.g. DataMiner Cube, you double-clicked a parameter of a DVE element and navigated to the *Details* tab, in some cases, the reports would show either incorrect alarm information or no alarm information at all.
+
+The same issue would occur when, in DataMiner Cube, you opened an element card and navigated to *Reports > General*.
+
+#### Security: Users would incorrectly not be allowed to update the Visio file linked to a service [ID_37866]
+
+<!-- MR 10.5.0 - FR 10.4.1 -->
+
+Up to now, when users had the following permissions, they would not be allowed to update the Visio file associated with a service by using the  *Upload new visio file* or *Set new blank visio file* commands:
+
+- *General > Visual Overview > Access Visual Overviews*
+- *General > Visual Overview > Edit Visio drawings*
+- *General > Services > Edit*
+- *Write* and *Config* permission for the service in question
+
+From now on, when users have the permission to link a Visio file to a specific service, they will always be allowed to update the Visio file linked to that service.
+
+#### Cassandra Cluster: Failover setups would incorrectly report errors when the cluster status was yellow [ID_37868]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+When a Cassandra Cluster was in a yellow state because a number of nodes were down, up to now, Failover setups within the system would incorrectly report errors.
+
+From now on, Failover setups within the system will only report errors if the Cassandra Cluster is in a red state.
+
+#### Incorrect 'Clearing cache ...' entries in SLEventCache.txt [ID_37874]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+Incorrect entries would be added to the *SLEventCache.txt* log file on DataMiner startup and when new objects (e.g. elements) had been created.
+
+Example of an incorrect log entry:
+
+`Clearing cache: predicate<entries with old hosting agent id> for type XXXXXX`
+
+#### SLAnalytics - Behavioral anomaly detection: Incorrect flatline stops could be generated [ID_37903]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+In some cases, incorrect flatline stops could be generated.
+
+#### SLAutomation would not properly cleanup deleted references to elements [ID_37907]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+In some rare cases, SLAutomation would not clean up deleted references to elements, causing the process to stop unexpectedly when the Automation script ended.
+
+#### GQI: 'Could not find PK column' error after performing a query against an empty parameter table [ID_37978]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.1 -->
+
+Up to now, in some rare cases, performing a GQI query against an empty parameter table would result in a `Could not find PK column` error. From now on, GQI will return an empty result set instead.

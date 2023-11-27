@@ -9,6 +9,7 @@ After you have installed the DIS extension, the Microsoft Visual Studio menu bar
 The following sections provide more information on the DIS menu:
 
 - [DMA](#dma)
+- [Administration \> Open Driver Help](#administration--open-driver-help)
 - [Protocol \> Generate QAction helper code](#protocol--generate-qaction-helper-code)
 - [Protocol \> Generate Class Library code](#protocol--generate-class-library-code) (removed from DIS v2.41 onwards)
 - [Protocol \> Convert to Solution...](#protocol--convert-to-solution)
@@ -78,6 +79,12 @@ In the *DMA* submenu, you can find the following commands:
 > - When, in the DIS menu, you select *DMA > Import Protocol* while an Automation script solution is open, a pop-up window will appear, saying that it is impossible to import a protocol while an Automation script solution is open.
 > - When, in the DIS menu, you select *DMA > Import Automation Script* while a protocol solution is open, a pop-up window will appear, saying that it is impossible to import an Automation script while a protocol solution is open.
 > - When, in the DIS menu, you select *DMA > Import Automation Script* while an Automation script solution is open, a pop-up window will appear, asking you whether you want the script to be imported into the open Automation script solution.
+
+## Administration \> Open Driver Help
+
+If a connector help page is available on [DataMiner Connector Documentation](https://docs.dataminer.services/connector/index.html), selecting *Open Driver Help* will open that page in the default web browser.
+
+If no matching page can be found, you will be directed to a page explaining [how to add a new connector documentation page](xref:Connector_help_pages#adding-a-new-connector-documentation-page).
 
 ## Protocol \> Generate QAction helper code
 

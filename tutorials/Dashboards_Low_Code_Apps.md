@@ -17,8 +17,10 @@ uid: Dashboards_Low-Code_Apps_Tutorials
 | [Creating and publishing an app](xref:Tutorial_Apps_Creating_And_Publishing) | Create and publish your first low-code app. |
 | [Editing an existing app](xref:Tutorial_Apps_Edit_Existing_App) | Edit an existing low-code app. |
 | [Managing the pages in an app](xref:Tutorial_Apps_Managing_Pages) | Add, change, duplicate, and remove pages in a low-code app. |
-| [Showing a panel](xref:Tutorial_Apps_Panel) | Show a panel in a low-code app. |
+| [Creating and showing a panel](xref:Tutorial_Apps_Panel) | Show a panel in a low-code app. |
 | [Using a header bar](xref:Tutorial_Apps_Headerbar) | Use a header bar in a low-code app. |
+| [Running a script when a page opens](xref:Tutorial_Apps_Script_Upon_Page_Load) | Run a script when a page of a low-code app is opened. |
+| [Chaining actions](xref:Tutorial_Apps_Chaining_Actions) | Perform consecutive actions in a low-code app. |
 | [Using the stepper component in a low-code app](xref:TutorialStepper) | Add and configure a stepper component in a low-code app to help with managing incidents and their different states. |
 | [Using the maps component in a low-code app](xref:TutorialMaps) | Add and configure a maps component in a low-code app to visualize cell towers, their connections and their coverage. |
 

@@ -11,7 +11,7 @@ To create a new low-code application:
 
 1. Go to the DataMiner landing page (see [Accessing the Low-Code Apps module](xref:Accessing_custom_apps)).
 
-1. If no apps exist yet, click *Create a new app*. Otherwise, hover the mouse over the *Other apps* section and click the "+" button next to *Other apps*.
+1. If no apps exist yet, click *Create a new app*. Otherwise, hover the mouse pointer over the *Other apps* section and click the "+" button next to *Other apps*.
 
 1. Specify the name of your new app in the header bar, instead of the default name "New application".
 

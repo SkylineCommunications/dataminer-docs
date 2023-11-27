@@ -550,6 +550,31 @@ Up to now, when you had created a multivariate pattern containing subpatterns ho
 
 Up to now, a DataMiner using STaaS communicated with the database via TCP/IP ports 443, 5671 and 5672. From now on, it will communicate with the database via port 443 only.
 
+#### DataMiner Object Models: Generic enum field descriptors now allow you to select multiple values [ID_37482]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+A generic enum field descriptor now allows you to select multiple values.
+
+For a *GenericEnumFieldDescriptor* to allow multiple values, its field type should be set as follows:
+
+- For integer values: `FieldType = typeof(List<GenericEnum<int>>)`
+- For string values: `FieldType = typeof(List<GenericEnum<string>>)`
+
+Values need to be set as follows:
+
+- Integer values:
+
+  ```csharp
+  new ListValueWrapper<int>(new List<int>(){0, 1});
+  ```
+
+- String values:
+
+  ```csharp
+  new ListValueWrapper<string>(new List<string>(){ "Value 0", "Value 1" });
+  ```
+
 #### Storage as a Service: Enhanced performance of DOM and SRM queries [ID_37495]
 
 <!-- MR 10.4.0 - FR 10.3.12 -->
@@ -681,6 +706,16 @@ Forwarding sort operators to the backend is now supported for a wider range of q
 <!-- MR 10.4.0 - FR 10.4.1 -->
 
 When two DataMiner Agents try to connect via SLNet, from now on, this will no longer be allowed if the two agents share the same DataMiner GUID (except when they are both part of the same Failover setup).
+
+#### Service & Resource Management: Enhanced performance when updating/applying profile instances [ID_37976]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+Overall performance has increased when updating/applying profile instances by providing a way to pass cached profile instances instead of first having to retrieve them from the database. To achieve this, the `ResourceUsageDefinition` now has a new overload method:
+
+```csharp
+public virtual void UpdateAllCapacitiesAndCapabilitiesByReference(Func<FilterElement<ProfileInstance>, List<ProfileInstance>> retriever, Dictionary<Guid, ProfileInstance> profileInstanceCache, IEnumerable<QuarantinedResourceUsageDefinition> correspondingQuarantines = null);
+```
 
 ### Fixes
 
@@ -887,3 +922,13 @@ When data was being migrated from a Cassandra Cluster database to a STaaS databa
 <!-- MR 10.4.0 - FR 10.4.1 -->
 
 When you exported elements via a DELT package on a DMA running DataMiner version 10.3.8 or newer, it would no longer be possible to import that DELT package on a DMA running DataMiner version 10.3.7 or older.
+
+#### Incorrect 'Clearing cache ...' entries in SLEventCache.txt [ID_37874]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+Incorrect entries would be added to the *SLEventCache.txt* log file on DataMiner startup and when new objects (e.g. elements) had been created.
+
+Example of an incorrect log entry:
+
+`Clearing cache: predicate<entries with old hosting agent id> for type XXXXXX`

@@ -6,6 +6,12 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 21 November 2023 - New Feature - Remote access using DataMiner Cube [ID_37841]
+
+It is now possible to connect to a DataMiner System via remote access using DataMiner Cube. If remote access is enabled for a DMS and you have been granted access to dataminer.services features, you can access the DMS remotely via Cube using the same URL as for remote access to the web pages, but without the protocol prefix `https://`. A button is also available on dataminer.services and in the Admin app that can be used to open Cube with the correct remote access filled in as the host.
+
+At present, there is still a limitation to this feature: if the DMS has SAML authentication configured, users will not be able to access the DMS remotely with Cube.
+
 #### 17 November 2023 - Enhancement - SupportAssistant 1.5.3 - Potential memory leak [ID_37843]
 
 When SupportAssistant 1.5.2 or older was installed, a memory and disk space leak could occur for systems that were not connected to dataminer.services or for systems with an invalid dataminer.services connection configuration or setup. This has now been resolved.

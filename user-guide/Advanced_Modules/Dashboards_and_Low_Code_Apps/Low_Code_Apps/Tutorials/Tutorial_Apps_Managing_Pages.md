@@ -32,7 +32,7 @@ Expected duration: 5 minutes.
 
 1. Click the *Deploy* button to deploy the *IPAM - GQI dummy data sources* packages on your DMA.
 
-   This package contains some data which will be used throughout the tutorial.
+   This package contains data that will be used in this tutorial.
 
 ## Step 2: Add a page to your app
 
@@ -133,7 +133,7 @@ You can quickly create a duplicate of an existing page, resulting in a new page 
 
 In addition to pages, you can also show panels in a low-code app:
 
-- [Showing a panel](xref:Tutorial_Apps_Panel)
+- [Creating and showing a panel](xref:Tutorial_Apps_Panel)
 
 ## Learning paths
 
