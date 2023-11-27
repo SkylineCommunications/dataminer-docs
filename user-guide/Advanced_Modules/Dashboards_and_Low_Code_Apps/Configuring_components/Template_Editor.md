@@ -99,8 +99,6 @@ In the *Tools* tab, you can add new layers to the template. Each tool in the *To
 
 1. To add a new layer to the template, click the *Icon*, *Text*, *Rectangle*, or *Ellipse* button.
 
-   When you move your cursor to the preview, the cursor turns into a crosshair.
-
 1. Within the preview, press and hold down the left mouse button to define the area for your new layer. The layer appears, enclosed by dotted lines in a frame around the selected area. Release the mouse button once you are satisfied with the size and shape of the tool.
 
 1. Optionally, you can resize the layer by dragging the frame edges or move the layer by dragging and dropping it using the left mouse button.
@@ -143,7 +141,6 @@ The table below describes the dimension settings available for template layers<!
 > - You can change the unit to percentages by clicking *px* next to the dimension values.
 > - You can secure one or multiple dimension settings of a layer by clicking the ![*Lock*](~/user-guide/images/Dimensions_Lock.png) button next to the chosen setting. This lock functionality enhances the security of your design, preserving your template's intended appearance, especially when dealing with variable widths and heights. For example, when adjusting a table column width, you may want to maintain specific proportions. Once a setting is locked, any attempt to override the specified dimension will be restricted. This includes moving or resizing the layer in the preview and adjusting the component size in the dashboard or low-code app edit mode (e.g. changing the size of a table column). The locked dimensions ensure the template remains in its designated position. If you are unable to lock a dimension setting because of the locking of other settings, it will appear grayed out.
 > - For some layers, the width and height is determined by the left and right position and can therefore not be modified.
-> - When resizing a layer in the preview, do not release the mouse button if one or more dimension settings are surrounded by a red frame, signaling that they no longer meet the minimum required pixel count. Releasing the mouse button in this state may result in the deletion of your layer.
 
 ### Specifying layer properties
 
