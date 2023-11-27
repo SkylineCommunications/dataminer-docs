@@ -16,9 +16,9 @@ The Template Editor is currently supported for the following components:
 - [Table](xref:DashboardTable)
 - [Maps](xref:DashboardMaps) (requires the [ReportsAndDashboardsGQIMaps soft-launch option](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsgqimaps) prior to DataMiner 10.4.2)
 
-To access the Template Editor:
+## Accessing the Template Editor
 
-- For the grid and timeline components:
+- For the **grid** and **timeline** components:
 
   1. Select the component and go to the *Layout* tab on the right.
 
@@ -27,13 +27,25 @@ To access the Template Editor:
      > [!NOTE]
      > A preview of the template currently used for this component is displayed in the *Item templates* section.
 
-- For the table component:
+- For the **table** component:
 
   1. Select the component and go to the *Layout* tab on the right.
 
   1. In the *Column appearance* section, click the downward arrow next to *Select a column* and select the column you want to create a template for.
 
   1. Click the ellipsis button ("...") in the top-right corner and select *Customize preset*.
+
+- For the **maps** component:
+
+  1. Select the component and go to the *Layout* tab on the right.
+
+  1. Under the *Layer settings* for a specific layer of the map, click *Edit* in the template section.
+
+     These settings will only be available once a set of markers has been added to the component.
+
+## Template Editor UI overview
+
+![Template Editor](~/user-guide/images/Template_Editor.png)<br/>*The Template Editor in DataMiner 10.4.1*
 
 The Template Editor UI consists of the following main components<!--RN 34858-->:
 
@@ -47,14 +59,12 @@ The Template Editor UI consists of the following main components<!--RN 34858-->:
 
 - *Settings* pane (3)
 
-![Template Editor](~/user-guide/images/Template_Editor.png)<br/>*The Template Editor in DataMiner 10.4.1*
-
 > [!IMPORTANT]
 > Any changes made in the Template Editor are only saved once you click the *Save* button in the lower right corner. When you close the Template Editor by clicking the "X" in the top-right corner or the *Cancel* button in the lower right corner, you will be alerted of any unsaved changes that may be lost if you close the editor prematurely.
 
 ## Working with layers
 
-In the side pane of the Template Editor, the *Layers* tab offers an overview of all layers. Layers are used in the Template Editor to make non-destructive edits by stacking icons, text, rectangles, and ellipses one on top of the other without compromising the pixels of individual elements.
+In the side pane of the Template Editor, the *Layers* tab offers an overview of all layers. Layers are used to make non-destructive edits by stacking icons, text, rectangles, and ellipses one on top of the other without compromising the pixels of individual elements.
 
 The benefits of working with layers:
 
@@ -62,22 +72,20 @@ The benefits of working with layers:
 
 - You can apply conditions to only one layer of the template. See [Adding conditional cases to a layer](#adding-conditional-cases-to-a-layer).
 
-- You can discard any unsatisfactory layers without affecting the entire template.
+- You can discard any layers you no longer need without affecting the entire template.
 
 - You can mask layers so that they are temporarily hidden without the need to delete them.
-
-- ...
 
 If one layer is positioned higher than another, the higher layer will appear in front of the lower one. To **change the order of layers**, click the ![*Drag-and-drop*](~/user-guide/images/drag-and-drop.png) button and drag the layer up or down in the *Layers* tab. Release the mouse button when you reach the position where you want to place the selected layer.
 
 ![Change order layers](~/user-guide/images/Change_Order_Layers.gif)<br/>*The Template Editor in DataMiner 10.4.1*
 
-To **temporarily mask a layer** within the Template Editor, hover the mouse pointer over the layer and click the *eye* icon in the lower right corner. This action renders the layer invisible while modifying the template. To bring the layer back into view, click the *eye* icon once more.
+To **temporarily mask a layer** within the Template Editor, hover the mouse pointer over the layer and click the *eye* icon in the lower right corner. This action renders the layer invisible while you modify the template. To bring the layer back into view, click the *eye* icon again.
 
 > [!TIP]
 > If you want to render a layer invisible in the final result, you can mask the layer by adjusting its properties in the *Settings* pane. See [Specifying layer properties](#specifying-layer-properties).
 
-To **delete a layer**, hover the mouse pointer over the layer and click the *delete* button in the top-right corner. Alternatively, select the layer in the preview and press the *Delete* button on your keyboard.
+To **delete a layer**, hover the mouse pointer over the layer and click the *delete* button in the top-right corner. Alternatively, select the layer in the preview and press *Delete* on your keyboard.
 
 To **add a new layer**, [add a new tool](#adding-new-layers) in the *Tools* tab.
 
