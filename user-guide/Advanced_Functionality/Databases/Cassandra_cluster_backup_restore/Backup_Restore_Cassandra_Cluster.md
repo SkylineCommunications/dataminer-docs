@@ -1,14 +1,23 @@
 ---
 uid: Backup_Restore_Cassandra_Cluster
 ---
-# About Cassandra cluster backup and restore
 
-A complete guide on how to take a backup of the Cassandra database (single or cluster) is available on [Github](https://github.com/thelastpickle/cassandra-medusa/tree/master/docs). In this documentation, we will summarize the steps that are required for a local storage. Besides local storage, there are two other storage providers that can be used, google or s3 and may be configured using the afore referenced Github documentation.
+# Backing up and restoring a Cassandra cluster using Medusa
 
-## Taking a backup of Cassandra Cluster using Medusa
+Medusa is an Apache Cassandra backup system. It is a command line tool that can be used to back up or restore a single Cassandra node or an entire cluster. It supports local storage, but also Google Cloud Storage (GCS), Azure Blob Storage, and AWS S3. The procedures below assume local storage is used. For more information, including on how to work with the mentioned storage providers, refer to the [Cassandra Medusa documentation](https://github.com/thelastpickle/cassandra-medusa/tree/master/docs).
 
 > [!IMPORTANT]
-> All nodes in the cluster must be granted SSH access to connect to every nodes in the cluster, including the node where the backup is configured. Therefore, generate SSH keys in PEM format and add the SSH credentials to the configuration file.
+> All nodes in the cluster must be granted SSH access to connect to every node in the cluster, including the node where the backup is configured. You will therefore need to generate SSH keys in PEM format and add the SSH credentials to the configuration file.
+
+## Generate SSH keys
+
+1. Generate private key PEM format: `$ ssh-keygen -t rsa -b 4096 -m PEM -f <file_name>`
+
+1. Copy the public key to all nodes.
+
+1. Write the public key to the authorized_keys on all nodes in the cluster `cat [Path to file]/<file_name>.pub >>~/.ssh/authorized_keys`
+
+## Taking a backup of a Cassandra cluster using Medusa
 
 1. You need a shared folder to store the backups, please follow the [How to Set Up NFS Server and Client on CentOS 8](https://www.tecmint.com/install-nfs-server-on-centos-8/) guide.
 
@@ -29,21 +38,13 @@ A complete guide on how to take a backup of the Cassandra database (single or cl
 
 1. [Take a backup](https://github.com/thelastpickle/cassandra-medusa/blob/master/docs/Performing-backups.md), choose whether to take a single node backup or a cluster backup.
 
-   - Taking a full backup of a single node: `$ medusa backup --backup-name=<name of the backup> --mode=full`</break>
+   - Taking a full backup of a single node: `$ medusa backup --backup-name=<name of the backup> --mode=full`
 
-   - Taking a full backup of a cluster: `$ medusa backup-cluster --backup-name=<name of the backup> --mode=full`</break>
+   - Taking a full backup of a cluster: `$ medusa backup-cluster --backup-name=<name of the backup> --mode=full`
 
 1. Verify that the backup is taken for every node in the cluster
 
-## Generating SSH keys
-
-1. Generate private key PEM format: `$ ssh-keygen -t rsa -b 4096 -m PEM -f <file_name>`
-
-1. Copy the public key to the all nodes
-
-1. Write the public key to the authorized_keys on all nodes in the cluster `cat [Path to file]/<file_name>.pub >>~/.ssh/authorized_keys`
-
-## Restoring the backup
+## Restoring a backup using Medusa
 
 Choose if you want to:
 
