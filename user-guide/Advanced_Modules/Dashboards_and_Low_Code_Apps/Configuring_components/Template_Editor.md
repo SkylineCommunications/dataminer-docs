@@ -67,20 +67,20 @@ If one layer is positioned higher than another, the higher layer will appear in 
 
 ![Change order layers](~/user-guide/images/Change_Order_Layers.gif)<br/>*The Template Editor in DataMiner 10.4.1*
 
-To **mask a layer**, hover the mouse pointer over the layer and click the *eye* icon in the lower right corner. The layer is now no longer visible in the template's end result. Clicking the *eye* icon once more makes the layer visible again. Alternatively, you can mask the layer by adjusting its properties in the *Settings* pane. See [Specifying layer properties](#specifying-layer-properties).
+To **temporarily mask a layer** within the Template Editor, hover the mouse pointer over the layer and click the *eye* icon in the lower right corner. This action renders the layer invisible while modifying the template. To bring the layer back into view, click the *eye* icon once more.
 
-> [!NOTE]
-> In cases where you have masked a layer in both the *Layer* tab and the layer properties, undoing the masking in only one of these locations will result in the layer remaining invisible. Ensure that you reverse the masking in both places to render the layer visible again.
+> [!TIP]
+> If you want to render a layer invisible in the final result, you can mask the layer by adjusting its properties in the *Settings* pane. See [Specifying layer properties](#specifying-layer-properties).
 
-To **delete a layer**, hover the mouse pointer over the layer and click the *delete* button in the top-right corner. Alternatively, select the associated tool (i.e. icon, text, rectangle, or ellipse) in the preview and press the *Delete* button on your keyboard.
+To **delete a layer**, hover the mouse pointer over the layer and click the *delete* button in the top-right corner. Alternatively, select the layer in the preview and press the *Delete* button on your keyboard.
 
-To **add a new layer**, [add a new tool](#adding-new-tools) in the *Tools* tab.
+To **add a new layer**, [add a new tool](#adding-new-layers) in the *Tools* tab.
 
 In the lower left corner of each layer, an icon denotes the layer type: an *icon*, *text*, *rectangle*, or *ellipse* layer.
 
-## Adding new tools
+## Adding new layers
 
-In the *Tools* tab, you can add new layers to the template. Each tool you add to the template equals a new layer. You can add the following tools:
+In the *Tools* tab, you can add new layers to the template. Each tool in the *Tools* tab corresponds to a type of layer you can incorporate into your template. You can choose from the following types:
 
 - Icon
 
@@ -92,18 +92,18 @@ In the *Tools* tab, you can add new layers to the template. Each tool you add to
 
 ![*Tools* tab](~/user-guide/images/Tools_Tab.png)<br/>*The Template Editor in DataMiner 10.4.1*
 
-1. To add a new tool to the template, click the *Icon*, *Text*, *Rectangle*, or *Ellipse* button.
+1. To add a new layer to the template, click the *Icon*, *Text*, *Rectangle*, or *Ellipse* button.
 
    When you move your cursor to the preview, the cursor turns into a crosshair.
 
-1. In the preview, press and hold down the left mouse button to select the designated area for your new tool. The tool appears, surrounded by dotted lines in a frame around the selected area. Release the mouse button once you are happy with the size and shape of the tool.
+1. Within the preview, press and hold down the left mouse button to define the area for your new layer. The layer appears, enclosed by dotted lines in a frame around the selected area. Release the mouse button once you are satisfied with the size and shape of the tool.
 
-1. Optionally, you can resize the tool by dragging the frame edges or move the tool by dragging and dropping it with the left mouse button.
+1. Optionally, you can resize the layer by dragging the frame edges or move the layer by dragging and dropping it using the left mouse button.
 
    > [!NOTE]
-   > Alternatively, you can also adjust the size, shape, and position of the tool in the [*Dimensions* section](#specifying-layer-dimensions) of the *Settings* pane.
+   > Alternatively, you can also adjust the size, shape, and position of the layer in the [*Dimensions* section](#specifying-layer-dimensions) of the *Settings* pane.
 
-1. Optionally, you can add certain properties and/or conditional cases to the tool. See [Specifying layer properties](#specifying-layer-properties) and [Adding conditional cases to a layer](#adding-conditional-cases-to-a-layer).
+1. Optionally, you can add certain properties and/or conditional cases to the layer. See [Specifying layer properties](#specifying-layer-properties) and [Adding conditional cases to a layer](#adding-conditional-cases-to-a-layer).
 
 ## Changing template settings
 
@@ -136,7 +136,7 @@ The table below describes the dimension settings available for template layers<!
 >
 > - In the preview, when you use the drag-and-drop functionality to move a layer, or when you resize a layer by dragging the frame edges, the dimension settings in the *Settings* pane will automatically adjust.
 > - You can change the unit to percentages by clicking *px* next to the dimension values.
-> - You can use the lock functionality to enhance the security of your design, locking one or multiple dimension settings of a layer by clicking the ![*Lock*](~/user-guide/images/Dimensions_Lock.png) button next to the chosen setting. Once locked, any attempt to override this specified dimension will be restricted, including moving or resizing that layer in the preview and resizing the component in the dashboard or low-code app edit mode (e.g. changing the size of a table column). The locked dimensions will ensure the template remains in its designated position. If you cannot lock a dimension setting because of the locking of other settings, it will appear grayed out.
+> - You can secure one or multiple dimension settings of a layer by clicking the ![*Lock*](~/user-guide/images/Dimensions_Lock.png) button next to the chosen setting. This lock functionality enhances the security of your design, preserving your template's intended appearance, especially when dealing with variable widths and heights. For example, when adjusting a table column width, you may want to maintain specific proportions. Once a setting is locked, any attempt to override the specified dimension will be restricted. This includes moving or resizing the layer in the preview and adjusting the component size in the dashboard or low-code app edit mode (e.g. changing the size of a table column). The locked dimensions ensure the template remains in its designated position. If you are unable to lock a dimension setting because of the locking of other settings, it will appear grayed out.
 > - For some layers, the width and height is determined by the left and right position and can therefore not be modified.
 > - When resizing a layer in the preview, do not release the mouse button if one or more dimension settings are surrounded by a red frame, signaling that they no longer meet the minimum required pixel count. Releasing the mouse button in this state may result in the deletion of your layer.
 
@@ -148,7 +148,12 @@ Depending on the type of layer, you can specify different layer properties in th
 
   - *Show icon*: Allows you to mask the layer, rendering it temporarily invisible. If disabled, the layer is still visible in the preview with lowered opacity, but will not be visible in the template's end result.
 
-  - *Color*: Allows you to specify a custom icon color, either by specifying the color in RGB format or by using the color picker box on the right.
+  - *Color*: Allows you to specify a custom icon color, either by specifying the color in RGB format, by entering the Hex value or HTML color name, or by using the color picker box.
+
+    ![RGB or Hex or HTML](~/user-guide/images/Color_RGB_Hex_HTML.png)<br/>*Template Editor in DataMiner 10.4.1*
+
+    > [!TIP]
+    > For a full overview of all HTML color names, see [HTML Color Names](https://www.w3schools.com/tags/ref_colornames.asp).
 
   - *Icon*: Allows you to select any of the available icons from the dropdown list, or search for a specific icon using the search bar functionality.
 
@@ -173,9 +178,9 @@ Depending on the type of layer, you can specify different layer properties in th
     | Icon | Setting | Description |
     |--|--|--|
     | ![Font size](~/user-guide/images/Text_Font_Size.png) | Font size | Specify the size (in pixels) of the text. |
-    | ![Color](~/user-guide/images/Text_Color.png) | Color | Specify a custom text color, either by specifying the color in RGB format or by using the color picker box on the right. |
+    | ![Color](~/user-guide/images/Text_Color.png) | Color | Specify a custom text color, either by specifying the color in RGB format, by entering the Hex value or HTML color name, or by using the color picker box.|
     | ![Border radius](~/user-guide/images/Text_Roundness.png) | Border radius | Specify the roundness (in pixels) of the background color that can be displayed behind the text (optionally). |
-    | ![Background color](~/user-guide/images/Text_Background_Color.png) | Background color | Specify a custom background color, either by specifying the color in RGB format or by using the color picker box on the right. |
+    | ![Background color](~/user-guide/images/Text_Background_Color.png) | Background color | Specify a custom background color, either by specifying the color in RGB format, by entering the Hex value or HTML color name, or by using the color picker box. |
     | ![Horizontal padding](~/user-guide/images/Text_Horizontal_Padding.png) | Horizontal padding | Specify the amount of space (in pixels) that should be left free above the text. |
     | ![Vertical padding](~/user-guide/images/Text_Vertical_Padding.png) | Vertical padding | Specify the amount of space (in pixels) that should be left free underneath the text. |
     | ![Horizontal alignment](~/user-guide/images/Text_Horizontal_Alignment.png) | Horizontal alignment | Left, center, right, or justify. |
@@ -185,7 +190,10 @@ Depending on the type of layer, you can specify different layer properties in th
 
   - *Show rectangle*: Allows you to mask the layer, rendering it temporarily invisible. If disabled, the layer is still visible in the preview with lowered opacity, but will not be visible in the template's end result.
 
-  - *Color*: Allows you to specify a custom color for the rectangle, either by specifying the color in RGB format or by using the color picker box on the right.
+  - *Color*: Allows you to specify a custom color for the rectangle, either by specifying the color in RGB format, by entering the Hex value or HTML color name, or by using the color picker box.
+
+    > [!TIP]
+    > For a full overview of all HTML color names, see [HTML Color Names](https://www.w3schools.com/tags/ref_colornames.asp).
 
   - *Border radius*: Allows you to specify the roundness (in pixels) of the rectangle edges.
 
@@ -202,7 +210,10 @@ Depending on the type of layer, you can specify different layer properties in th
 
   - *Show ellipse*: Allows you to mask the layer, rendering it temporarily invisible. If disabled, the layer is still visible in the preview with lowered opacity, but will not be visible in the template's end result.
 
-  - *Color*: Allows you to specify a custom color for the ellipse, either by specifying the color in RGB format or by using the color picker box on the right.
+  - *Color*: Allows you to specify a custom color for the ellipse, either by specifying the color in RGB format, by entering the Hex value or HTML color name, or by using the color picker box.
+
+    > [!TIP]
+    > For a full overview of all HTML color names, see [HTML Color Names](https://www.w3schools.com/tags/ref_colornames.asp).
 
   - *Configure actions*: Allows you to configure actions that are executed when a user clicks the ellipse. Only available for DataMiner Low-Code Apps<!--RN 34761-->.
 
@@ -264,7 +275,7 @@ To add a condition:
 
    - *Icon* layer:
 
-     - *Color*: Allows you to select a color for the tool, either by specifying the color in RGB format or by using the color picker box on the right.
+     - *Color*: Allows you to select a color for the tool, either by specifying the color in RGB format, by entering the Hex value or HTML color name, or by using the color picker box.
 
      - *Icon*: Allows you to select a new icon from the dropdown list, or search for a specific icon using the search bar functionality.
 
@@ -277,11 +288,11 @@ To add a condition:
 
      - *Font size*: Allows you to set the font size.
 
-     - *Text color*: Allows you to select a text color, either by specifying the color in RGB format or by using the color picker box on the right.
+     - *Text color*: Allows you to select a text color, either by specifying the color in RGB format, by entering the Hex value or HTML color name, or by using the color picker box.
 
      - *Border radius*: Allows you to specify the roundness (in pixels) of the background color that can be displayed behind the text (optionally).
 
-     - *Background*: Allows you to specify a custom background color, either by specifying the color in RGB format or by using the color picker box on the right.
+     - *Background*: Allows you to specify a custom background color, either by specifying the color in RGB format, by entering the Hex value or HTML color name, or by using the color picker box.
 
      - *Horizontal padding*: Allows you to specify the amount of space (in pixels) that should be left free above the text.
 
@@ -293,7 +304,7 @@ To add a condition:
 
    - *Rectangle* layer:
 
-     - *Color*: Allows you to select a color for the tool, either by specifying the color in RGB format or by using the color picker box on the right.
+     - *Color*: Allows you to select a color for the tool, either by specifying the color in RGB format, by entering the Hex value or HTML color name, or by using the color picker box.
 
      - *Border radius*: Allows you to specify the roundness (in pixels) of the background color that can be displayed behind the text (optionally).
 
@@ -303,7 +314,10 @@ To add a condition:
 
    - *Ellipse* layer:
 
-     - *Color*: Allows you to select a color for the tool, either by specifying the color in RGB format or by using the color picker box on the right.
+     - *Color*: Allows you to select a color for the tool, either by specifying the color in RGB format, by entering the Hex value or HTML color name, or by using the color picker box.
+
+   > [!TIP]
+   > For a full overview of all HTML color names, see [HTML Color Names](https://www.w3schools.com/tags/ref_colornames.asp).
 
    > [!NOTE]
    > Any visual changes made when configuring a conditional case will not show up in the preview.
