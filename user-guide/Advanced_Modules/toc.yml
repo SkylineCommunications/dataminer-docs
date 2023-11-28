@@ -759,6 +759,8 @@ items:
             topicUid: DOM_status_system_example
           - name: Altering values of a DomInstance - examples
             topicUid: DOM_Altering_values_of_a_DomInstance
+          - name: Processing multiple DomInstances - examples
+            topicUid: DOM_BulkProcessing_Example
       - name: DOM DevOps tools
         topicUid: DOM_DevOps_tools
         items:
