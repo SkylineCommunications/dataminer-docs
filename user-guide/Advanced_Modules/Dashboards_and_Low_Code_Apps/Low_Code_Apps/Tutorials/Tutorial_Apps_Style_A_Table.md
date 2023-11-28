@@ -19,307 +19,312 @@ The content and screenshots for this tutorial have been created in DataMiner 10.
 
 ## Step 1: Configure the query and add a table component to the dashboard  
 
-- For this tutorial we'll use an Adhoc data source that allows us to read data from a JSON file. This data source can be found on [Github](https://github.com/SkylineCommunications/SLC-GQIDS-JsonReader) or installed directly to a dataminer system via the [Catalog](https://catalog.dataminer.services/catalog/5491).
+In this tutorial, an [ad hoc data source](xref:Get_ad_hoc_data) is used, which can retrieve data from a JSON file.
 
-- Since this is a JSONReader we'll need to add a Json file in the correct location on our dataminer system. Add the following json data to a file named `Orders.json` and put it in this location: `C:\Skyline DataMiner\Documents\GQI data sources\Orders`
+1. Download the JSON reader [from Github](https://github.com/SkylineCommunications/SLC-GQIDS-JsonReader), or deploy it directly to your DataMiner System via the [Catalog](https://catalog.dataminer.services/catalog/5491).
 
-```json
-{
-    "Columns": [
-        {
-            "Name": "Order ID",
-            "Type": "string"
-        },
-        {
-            "Name": "Created",
-            "Type": "datetime"
-        },
-        {
-            "Name": "Customer",
-            "Type": "string"
-        },
-        {
-            "Name": "Fullfillment",
-            "Type": "string"
-        },
-        {
-            "Name": "Total",
-            "Type": "Double"
-        },
-        {
-            "Name": "Profit",
-            "Type": "Double"
-        },
-        {
-            "Name": "Status",
-            "Type": "string"
-        },
-        {
-            "Name": "Updated",
-            "Type": "datetime"
-        }
-    ],
-    "Rows": [
-        {
-            "Cells": [
-                {
-                    "Value": 149384
-                },
-                {
-                    "DisplayValue": "Nov 3, 2023",
-                    "Value": 1699009200000
-                },
-                {
-                    "Value": "Sebastiaan Dumoulein"
-                },
-                {
-                    "Value": "Unfulfilled"
-                },
-                {
-                    "DisplayValue": "$604.50",
-                    "Value": 604.50
-                },
-                {
-                    "DisplayValue": "$182.50",
-                    "Value": 182.50
-                },
-                {
-                    "Value": "Authorized"
-                },
-                {
-                    "DisplayValue": "Today",
-                    "Value": 1698966000000
-                }
-            ]
-        },
-        {
-            "Cells": [
-                {
-                    "Value": 153322
-                },
-                {
-                    "DisplayValue": "Oct 28, 2023",
-                    "Value": 1698487200000
-                },
-                {
-                    "Value": "Abbas Melendez"
-                },
-                {
-                    "Value": "Fulfilled"
-                },
-                {
-                    "DisplayValue": "$307.70",
-                    "Value": 307.70
-                },
-                {
-                    "DisplayValue": "$68.20",
-                    "Value": 68.20
-                },
-                {
-                    "Value": "Paid"
-                },
-                {
-                    "DisplayValue": "Today",
-                    "Value": 1698966000000
-                }
-            ]
-        },
-        {
-            "Cells": [
-                {
-                    "Value": 148826
-                },
-                {
-                    "DisplayValue": "Oct 25, 2023",
-                    "Value": 1698228000000
-                },
-                {
-                    "Value": "Harmony Franklin"
-                },
-                {
-                    "Value": "Unfulfilled"
-                },
-                {
-                    "DisplayValue": "$528.35",
-                    "Value": 528.35
-                },
-                {
-                    "DisplayValue": "$90.50",
-                    "Value": 90.50
-                },
-                {
-                    "Value": "Authorized"
-                },
-                {
-                    "DisplayValue": "Today",
-                    "Value": 1698966000000
-                }
-            ]
-        },
-        {
-            "Cells": [
-                {
-                    "Value": 146178
-                },
-                {
-                    "DisplayValue": "Oct 22, 2023",
-                    "Value": 1697968800000
-                },
-                {
-                    "Value": "Sahil Middleton"
-                },
-                {
-                    "Value": "Pending Receipt"
-                },
-                {
-                    "DisplayValue": "$62.60",
-                    "Value": 62.60
-                },
-                {
-                    "DisplayValue": "$10.10",
-                    "Value": 10.10
-                },
-                {
-                    "Value": "Paid"
-                },
-                {
-                    "DisplayValue": "Yesterday",
-                    "Value": 1698879600000
-                }
-            ]
-        },
-        {
-            "Cells": [
-                {
-                    "Value": 142115
-                },
-                {
-                    "DisplayValue": "Oct 20, 2023",
-                    "Value": 1697796000000
-                },
-                {
-                    "Value": "Elijah Copeland"
-                },
-                {
-                    "Value": "Fulfilled"
-                },
-                {
-                    "DisplayValue": "$905.50",
-                    "Value": 905.50
-                },
-                {
-                    "DisplayValue": "$206.75",
-                    "Value": 206.75
-                },
-                {
-                    "Value": "Paid"
-                },
-                {
-                    "DisplayValue": "Yesterday",
-                    "Value": 1698879600000
-                }
-            ]
-        },
-        {
-            "Cells": [
-                {
-                    "Value": 137265
-                },
-                {
-                    "DisplayValue": "Oct 18, 2023",
-                    "Value": 1697623200000
-                },
-                {
-                    "Value": "Philip Acosta"
-                },
-                {
-                    "Value": "Fulfilled"
-                },
-                {
-                    "DisplayValue": "$657.35",
-                    "Value": 657.35
-                },
-                {
-                    "DisplayValue": "$264.55",
-                    "Value": 264.55
-                },
-                {
-                    "Value": "Paid"
-                },
-                {
-                    "DisplayValue": "Yesterday",
-                    "Value": 1698879600000
-                }
-            ]
-        },
-        {
-            "Cells": [
-                {
-                    "Value": 133255
-                },
-                {
-                    "DisplayValue": "Oct 15, 2023",
-                    "Value": 1697364000000
-                },
-                {
-                    "Value": "Sian Vaughan"
-                },
-                {
-                    "Value": "Pending Receipt"
-                },
-                {
-                    "DisplayValue": "$365.40",
-                    "Value": 365.40
-                },
-                {
-                    "DisplayValue": "$58.00",
-                    "Value": 58.00
-                },
-                {
-                    "Value": "Authorized"
-                },
-                {
-                    "DisplayValue": "Oct 15, 2023",
-                    "Value": 1697364000000
-                }
-            ]
-        },
-        {
-            "Cells": [
-                {
-                    "Value": 112025
-                },
-                {
-                    "DisplayValue": "Oct 06, 2023",
-                    "Value": 1696586400000
-                },
-                {
-                    "Value": "Haaris Carroll"
-                },
-                {
-                    "Value": "Pending Receipt"
-                },
-                {
-                    "DisplayValue": "$259.50",
-                    "Value": 259.50
-                },
-                {
-                    "DisplayValue": "$80.20",
-                    "Value": 80.20
-                },
-                {
-                    "Value": "Paid"
-                },
-                {
-                    "DisplayValue": "Oct 06, 2023",
-                    "Value": 1696586400000
-                }
-            ]
-        }
-    ],
-    "Version": 1
-}
-```
+   > [!TIP]
+   > Deploying a package is very similar to deploying a DataMiner connector. See [Deploying a DataMiner connector to your system](xref:Deploying_A_DataMiner_Connector_to_your_system).
+
+1. Add the following data to a JSON file named `Orders.json` and put it in this location: `C:\Skyline DataMiner\Documents\GQI data sources\Orders`
+
+   ```json
+   {
+       "Columns": [
+           {
+               "Name": "Order ID",
+               "Type": "string"
+           },
+           {
+               "Name": "Created",
+               "Type": "datetime"
+           },
+           {
+               "Name": "Customer",
+               "Type": "string"
+           },
+           {
+               "Name": "Fullfillment",
+               "Type": "string"
+           },
+           {
+               "Name": "Total",
+               "Type": "Double"
+           },
+           {
+               "Name": "Profit",
+               "Type": "Double"
+           },
+           {
+               "Name": "Status",
+               "Type": "string"
+           },
+           {
+               "Name": "Updated",
+               "Type": "datetime"
+           }
+       ],
+       "Rows": [
+           {
+               "Cells": [
+                   {
+                       "Value": 149384
+                   },
+                   {
+                       "DisplayValue": "Nov 3, 2023",
+                       "Value": 1699009200000
+                   },
+                   {
+                       "Value": "Sebastiaan Dumoulein"
+                   },
+                   {
+                       "Value": "Unfulfilled"
+                   },
+                   {
+                       "DisplayValue": "$604.50",
+                       "Value": 604.50
+                   },
+                   {
+                       "DisplayValue": "$182.50",
+                       "Value": 182.50
+                   },
+                   {
+                       "Value": "Authorized"
+                   },
+                   {
+                       "DisplayValue": "Today",
+                       "Value": 1698966000000
+                   }
+               ]
+           },
+           {
+               "Cells": [
+                   {
+                       "Value": 153322
+                   },
+                   {
+                       "DisplayValue": "Oct 28, 2023",
+                       "Value": 1698487200000
+                   },
+                   {
+                       "Value": "Abbas Melendez"
+                   },
+                   {
+                       "Value": "Fulfilled"
+                   },
+                   {
+                       "DisplayValue": "$307.70",
+                       "Value": 307.70
+                   },
+                   {
+                       "DisplayValue": "$68.20",
+                       "Value": 68.20
+                   },
+                   {
+                       "Value": "Paid"
+                   },
+                   {
+                       "DisplayValue": "Today",
+                       "Value": 1698966000000
+                   }
+               ]
+           },
+           {
+               "Cells": [
+                   {
+                       "Value": 148826
+                   },
+                   {
+                       "DisplayValue": "Oct 25, 2023",
+                       "Value": 1698228000000
+                   },
+                   {
+                       "Value": "Harmony Franklin"
+                   },
+                   {
+                       "Value": "Unfulfilled"
+                   },
+                   {
+                       "DisplayValue": "$528.35",
+                       "Value": 528.35
+                   },
+                   {
+                       "DisplayValue": "$90.50",
+                       "Value": 90.50
+                   },
+                   {
+                       "Value": "Authorized"
+                   },
+                   {
+                       "DisplayValue": "Today",
+                       "Value": 1698966000000
+                   }
+               ]
+           },
+           {
+               "Cells": [
+                   {
+                       "Value": 146178
+                   },
+                   {
+                       "DisplayValue": "Oct 22, 2023",
+                       "Value": 1697968800000
+                   },
+                   {
+                       "Value": "Sahil Middleton"
+                   },
+                   {
+                       "Value": "Pending Receipt"
+                   },
+                   {
+                       "DisplayValue": "$62.60",
+                       "Value": 62.60
+                   },
+                   {
+                       "DisplayValue": "$10.10",
+                       "Value": 10.10
+                   },
+                   {
+                       "Value": "Paid"
+                   },
+                   {
+                       "DisplayValue": "Yesterday",
+                       "Value": 1698879600000
+                   }
+               ]
+           },
+           {
+               "Cells": [
+                   {
+                       "Value": 142115
+                   },
+                   {
+                       "DisplayValue": "Oct 20, 2023",
+                       "Value": 1697796000000
+                   },
+                   {
+                       "Value": "Elijah Copeland"
+                   },
+                   {
+                       "Value": "Fulfilled"
+                   },
+                   {
+                       "DisplayValue": "$905.50",
+                       "Value": 905.50
+                   },
+                   {
+                       "DisplayValue": "$206.75",
+                       "Value": 206.75
+                   },
+                   {
+                       "Value": "Paid"
+                   },
+                   {
+                       "DisplayValue": "Yesterday",
+                       "Value": 1698879600000
+                   }
+               ]
+           },
+           {
+               "Cells": [
+                   {
+                       "Value": 137265
+                   },
+                   {
+                       "DisplayValue": "Oct 18, 2023",
+                       "Value": 1697623200000
+                   },
+                   {
+                       "Value": "Philip Acosta"
+                   },
+                   {
+                       "Value": "Fulfilled"
+                   },
+                   {
+                       "DisplayValue": "$657.35",
+                       "Value": 657.35
+                   },
+                   {
+                       "DisplayValue": "$264.55",
+                       "Value": 264.55
+                   },
+                   {
+                       "Value": "Paid"
+                   },
+                   {
+                       "DisplayValue": "Yesterday",
+                       "Value": 1698879600000
+                   }
+               ]
+           },
+           {
+               "Cells": [
+                   {
+                       "Value": 133255
+                   },
+                   {
+                       "DisplayValue": "Oct 15, 2023",
+                       "Value": 1697364000000
+                   },
+                   {
+                       "Value": "Sian Vaughan"
+                   },
+                   {
+                       "Value": "Pending Receipt"
+                   },
+                   {
+                       "DisplayValue": "$365.40",
+                       "Value": 365.40
+                   },
+                   {
+                       "DisplayValue": "$58.00",
+                       "Value": 58.00
+                   },
+                   {
+                       "Value": "Authorized"
+                   },
+                   {
+                       "DisplayValue": "Oct 15, 2023",
+                       "Value": 1697364000000
+                   }
+               ]
+           },
+           {
+               "Cells": [
+                   {
+                       "Value": 112025
+                   },
+                   {
+                       "DisplayValue": "Oct 06, 2023",
+                       "Value": 1696586400000
+                   },
+                   {
+                       "Value": "Haaris Carroll"
+                   },
+                   {
+                       "Value": "Pending Receipt"
+                   },
+                   {
+                       "DisplayValue": "$259.50",
+                       "Value": 259.50
+                   },
+                   {
+                        "DisplayValue": "$80.20",
+                        "Value": 80.20
+                   },
+                   {
+                       "Value": "Paid"
+                   },
+                   {
+                       "DisplayValue": "Oct 06, 2023",
+                       "Value": 1696586400000
+                   }
+               ]
+           }
+       ],
+       "Version": 1
+   }
+   ```
 
 - The query can now be created using this data source. Create a new app and add a new query to it. Select 'Get ad hoc data', in the Data source dropdown, select 'JSON Reader' and in the File dropdown select 'Orders\Orders.json'.
 
