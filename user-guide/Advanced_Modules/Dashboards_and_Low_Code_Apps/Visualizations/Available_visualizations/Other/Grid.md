@@ -40,7 +40,7 @@ To configure the component:
      > [!NOTE]
      > When you disable the *Highlight* option, the nodes that do not match the filter will no longer be displayed and the remaining nodes will be reorganized.
 
-   - *Advanced > Empty Result message*: Available from 10.3.11/10.4.0 onwards<!-- RN 37173 -->. Allows you to specify a custom message that is displayed when a query returns no results.
+   - *Advanced > Empty result message*: Available from 10.3.11/10.4.0 onwards<!-- RN 37173 -->. Allows you to specify a custom message that is displayed when a query returns no results.
 
      > [!TIP]
      > See also: [Displaying a custom empty component message](xref:Tutorial_Dashboards_Displaying_a_custom_empty_component_message).
@@ -61,11 +61,14 @@ To configure the component:
      > - If the number of items to be displayed exceeds the number of cells displayed in the component, navigation buttons are available to navigate through the data<!--RN 34761-->.
      > - When the scaling of the cells is set to a fixed size and there are too many columns and/or rows to show them at once in the component, in read mode, it is possible to scroll through them with a scrollbar that becomes visible when you hover over the component<!--RN 37699-->.
 
-   - *Item templates*: Allows you to freely customize the appearance of the grid component items using templates<!--RN 34761-->.
+   - *Item templates*: Allows you to freely customize the appearance of the grid component items using the Template Editor<!--RN 34761-->.
 
      - To access the Template Editor, click *Edit* next to the pencil icon.
+
+       > [!TIP]
+       > For more information on how to use the Template Editor to customize the appearance of component items, see [Using the Template Editor](xref:Template_Editor).
 
      - To reuse previously saved templates for components in the same dashboard or low-code app, click *Reuse template* next to the ![reuse template](~/user-guide/images/Reuse_Template.png) button<!--RN 34948-->.
 
        > [!NOTE]
-       > This option is only visible when a component in the dashboard or low-code app is configured with a custom template.
+       > This option is only visible when another grid component in the dashboard or low-code app is configured with a custom template.

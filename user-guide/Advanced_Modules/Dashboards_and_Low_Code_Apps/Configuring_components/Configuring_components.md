@@ -22,6 +22,8 @@ The following actions are then possible to configure the component:
 
 - [Customizing the component layout](xref:Customize_Component_Layout)
 
+- [Using the Template Editor](xref:Template_Editor)
+
 - [Deleting a component](xref:Delete_Component)
 
 In addition, depending on the visualization, additional configuration options may be available. For more information, refer to the relevant section in [Available visualizations](xref:Available_visualizations).
