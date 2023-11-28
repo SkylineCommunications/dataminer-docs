@@ -36,6 +36,9 @@ Advantages of DataMiner Storage as a Service (STaaS) include:
 
 1. Contact your Skyline representative or <staas@dataminer.services> to register your system to use STaaS.
 
+   > [!NOTE]
+   > If you have a specific preference with respect to the [data location and redundancy setup](#data-location-and-redundancy), let us know when you register your system.
+
 1. Wait until you receive confirmation that the registration is completed.
 
 1. **Optionally**, contact your Skyline representative or <staas@dataminer.services> to migrate your existing data to STaaS.
@@ -50,6 +53,17 @@ Advantages of DataMiner Storage as a Service (STaaS) include:
    ```
 
 1. Restart DataMiner to begin using STaaS.
+
+## Data location and redundancy
+
+DataMiner STaaS relies on Azure Storage, which stores multiple copies of your data to make sure it is always available even in case outages or disasters occur. Different storage redundancy setups are possible. STaaS supports zone-redundant storage and geo-redundant storage. When you contact Skyline to register your system to use STaaS, you can include your preferences as to the region(s) where your data should be stored and the type of storage redundancy that should be used.
+
+- **Zone-redundant storage (ZRS)** copies your data synchronously across three Azure availability zones in one region. Each availability zone is a separate physical location with independent power, cooling, and networking.
+
+- **Geo-redundant storage (GRS)** copies your data synchronously three times within a single physical location in the primary region and then also copies your data asynchronously to a single physical location in the secondary region. Only specific regions can be combined in such a setup, e.g. if the primary region is Switzerland North, the secondary region can only be Switzerland West. For an overview of the supported regions, see [Azure paired regions](https://learn.microsoft.com/en-us/azure/reliability/cross-region-replication-azure#azure-paired-regions).
+
+> [!TIP]
+> For detailed information, see [Azure Storage redundancy on learn.microsoft.com](https://learn.microsoft.com/en-us/azure/storage/common/storage-redundancy)
 
 ## Limitations
 

@@ -361,6 +361,8 @@ items:
             topicUid: Apply_Data_Feed
           - name: Customizing the component layout
             topicUid: Customize_Component_Layout
+          - name: Using the Template Editor
+            topicUid: Template_Editor
           - name: Deleting a component
             topicUid: Delete_Component
       - name: Available visualizations
