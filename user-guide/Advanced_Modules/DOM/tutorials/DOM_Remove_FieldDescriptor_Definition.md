@@ -31,7 +31,7 @@ Estimated duration: 10 minutes.
 
 ## Step 1: DOM setup
 
-This tutorial assumes that you use the setup from the tutorial [Creating a basic DOM setup](xref:DOM_Create_Basic_Setup), but you can also create a new setup of your own.
+This tutorial assumes that you use the setup from the tutorial [Creating a basic DOM setup](xref:DOM_Create_Basic_Setup), but you can also use a setup of your own.
 
 ## Step 2: Soft-delete the field
 
