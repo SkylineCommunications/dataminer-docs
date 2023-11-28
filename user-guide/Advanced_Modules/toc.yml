@@ -695,6 +695,8 @@ items:
         topicUid: Data_Aggregator_settings
       - name: Configuring GQI queries
         topicUid: Data_Aggregator_queries
+      - name: Troubleshooting
+        topicUid: Data_Aggregator_troubleshooting
   - name: DataMiner Object Models (DOM)
     topicUid: DOM
     items:

@@ -139,6 +139,9 @@ For example:
 }
 ```
 
+> [!NOTE]
+> The `PageSize` parameter within a query significantly influences the optimization of execution time and job performance. Adjusting this parameter can enhance efficiency. A lower PageSize necessitates more round trips but reduces the likelihood of timeouts when processing extensive rows. Conversely, a higher PageSize minimizes round trip durations but increases the potential for timeouts when requesting larger data volumes.
+
 ## Jobs
 
 The configured GQI queries can be used in one or more DataMiner jobs.
