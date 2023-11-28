@@ -402,3 +402,9 @@ Enables the Cube UI for [User-Defined APIs](xref:UD_APIs).
 
 - **Minimum version**: 10.3.5
 - **Release version**: 10.3.6/10.4.0 ([RN 36273](xref:General_Feature_Release_10.3.6#user-defined-apis-id_34910-id_35134-id_35169-id_35417-id_35743-id_35810-id_35880-id_35885-id_36118-id_36250-id_36273-id_36366))
+
+### SnmpPollingSnmpPlusPlusOnly
+
+Configures the DataMiner system to use *snmp++* for polling all three SNMP versions instead of only SNMPv3.
+
+- **Minimum version**: 10.4.2
