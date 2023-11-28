@@ -5,7 +5,7 @@ uid: DBConfiguration_xml
 # DBConfiguration.xml
 
 > [!IMPORTANT]
-> Starting from DataMiner 10.3.12/10.4.0 onwards the below functionality has been moved to [DB.xml](xref:DB_xml).
+> Starting from DataMiner 10.4.2/10.5.0, the functionality described below has been moved to [DB.xml](xref:DB_xml).
 
 The *DBConfiguration.xml* file is not present by default on a DMA. It can be added to configure certain database settings, as detailed below.
 
@@ -14,7 +14,7 @@ The *DBConfiguration.xml* file is not present by default on a DMA. It can be add
 
 ## Configuring a size limit for file offloads
 
-When the main database is offline, file offloads are used to store write/delete operations. From DataMiner 10.1.0 \[CU5\]/10.1.8 onwards, you can configure a limit for the file size of these offloads in the file *DBConfiguration.xml*. When the limit is reached, new data will be dropped.
+When the main database is offline, file offloads are used to store write/delete operations. From DataMiner 10.1.0 [CU5]/10.1.8 up to DataMiner 10.4.2/10.5.0, you can configure a limit for the file size of these offloads in the file *DBConfiguration.xml*. When the limit is reached, new data will be dropped.
 
 You can configure this size limit as follows:
 
@@ -34,9 +34,10 @@ You can configure this size limit as follows:
 
 > [!NOTE]
 >
+> - From DataMiner 10.4.2/10.5.0 onwards, this is configured in [DB.xml](xref:DB_xml#configuring-a-size-limit-for-file-offloads) instead.
 > - If no limit is set in DBConfiguration.xml or if the file offload configuration is invalid, the size of the database offload files will by default be limited to 10 GB.
 > - When the specified limit has been reached, the following alarm will be generated: "Max file offload disk usage for certain storages has been reached, new data for these storages will be dropped."
 
 ## Configuring multiple OpenSearch or Elasticsearch clusters
 
-It is possible to have data offloaded to multiple OpenSearch or Elasticsearch clusters, i.e. one main cluster and several replicated clusters. This <!--Prior to DataMiner 10.3.10/10.4.0 (RN 36399 - reverted in RN 37322), this -->is configured in *DBConfiguration.xml*. For detailed information, see [Configuring multiple OpenSearch clusters](xref:Configuring_multiple_OpenSearch_clusters) or [Configuring multiple Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters).
+It is possible to have data offloaded to multiple OpenSearch or Elasticsearch clusters, i.e. one main cluster and several replicated clusters. Prior to DataMiner 10.4.2/10.5.0, this is configured in *DBConfiguration.xml*. In later DataMiner versions, it is configured in *DB.xml*. For detailed information, see [Configuring multiple OpenSearch clusters](xref:Configuring_multiple_OpenSearch_clusters) or [Configuring multiple Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters).

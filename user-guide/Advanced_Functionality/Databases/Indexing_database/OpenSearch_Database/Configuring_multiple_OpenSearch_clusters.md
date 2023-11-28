@@ -8,34 +8,33 @@ From DataMiner 10.3.0/10.3.3 onwards, you can have data offloaded to multiple Op
 
 To configure this setup, proceed as follows:
 
-## [From DataMiner 10.3.12/10.4.0 onwards]
+## [From DataMiner 10.4.2/10.5.0 onwards](#tab/tabid-1)
 
-> [!IMPORTANT]
-> From DataMiner 10.3.12/10.4.0 onwards, the configuration for multiple OpenSearch clusters is saved in [DB.xml](xref:DB_xml)
+1. In the `C:\Skyline DataMiner\` folder, open *DB.xml*.
 
-1. For each OpenSearch cluster a *DataBase* tag must be added with the following configuration:
+1. For each OpenSearch cluster, add a *DataBase* tag with the following configuration:
 
-    - *active* attribute: Set this to "true" if you wish your elastic cluster to be added to the list of clusters to offload data to.
-    
-    - *search* attribute: Always set this to "true". 
+   - *active* attribute: Set this to "true" if you wish your OpenSearch cluster to be added to the list of clusters to offload data to.
 
-    - *ID* attribute: This should be a unique number, preferably starting at 0 and increasing by 1 for each additional cluster.
-    
-    - *priorityOrder* attribute: Indicates the priority of the different clusters. The lower the value, the greater the priority. The cluster with the lowest value is the main cluster, from which data will be read.
-    
-    - *type* attribute: Always set this to "ElasticSearch". Referral to ElasticSearch here is for legacy and compatibility reasons.
-    
-    - *DBServer*: The hosts of the cluster, separated by commas (see [Indexing database settings](xref:DB_xml#indexing-database-settings))
-    
-    - *UID*: The username to connect to OpenSearch.
-    
-    - *PWD*: The password to connect to OpenSearch.
-    
-    - *DB*: The prefix for the OpenSearch indexes. 
-    
-    - *FileOffloadIdentifier*: String used to identify this connection. Each connection should have a different identifier, which will be used for file offloads.
-     
-     Example:
+   - *search* attribute: Always set this to "true".
+
+   - *ID* attribute: This should be a unique number, preferably starting at 0 and increasing by 1 for each additional cluster.
+
+   - *priorityOrder* attribute: Indicates the priority of the different clusters. The lower the value, the greater the priority. The cluster with the lowest value is the main cluster, from which data will be read.
+
+   - *type* attribute: Always set this to "ElasticSearch". This is necessary for legacy and compatibility reasons.
+
+   - *DBServer*: The hosts of the cluster, separated by commas (see [Indexing database settings](xref:DB_xml#indexing-database-settings))
+
+   - *UID*: The username to connect to OpenSearch.
+
+   - *PWD*: The password to connect to OpenSearch.
+
+   - *DB*: The prefix for the OpenSearch indexes.
+
+   - *FileOffloadIdentifier*: String used to identify this connection. Each connection should have a different identifier, which will be used for file offloads.
+
+   Example:
 
    ```xml
    <DataBases>
@@ -62,14 +61,14 @@ To configure this setup, proceed as follows:
    </DataBases>
    ```
 
-1. Remove or disable any previous Elasticsearch configuration from the DB.xml.
+1. Remove or disable any previous OpenSearch/Elasticsearch configuration from *DB.xml*.
 
 1. Restart DataMiner.
 
 > [!NOTE]
 > If an exception occurs for one of the replicated clusters, an alarm will be generated in the Alarm Console, indicating that not all data might be replicated. If further errors occur, no new alarms are created until the DMA is restarted.
 
-## [Prior to DataMiner 10.3.12/10.4.0]
+## [Prior to DataMiner 10.4.2/10.5.0](#tab/tabid-2)
 
 > [!NOTE]
 > For reasons of legacy and compatibility with Elasticsearch, the *DBConfiguration.xml* file will have XML tags referring to Elasticsearch instead of OpenSearch such as the \<ElasticConnections\> or \<ElasticCluster\> tags. Tags such as \<OpenSearchCluster\> will not work.
@@ -131,8 +130,7 @@ To configure this setup, proceed as follows:
 > [!NOTE]
 > If an exception occurs for one of the replicated clusters, an alarm will be generated in the Alarm Console, indicating that not all data might be replicated. If further errors occur, no new alarms will be created until the DMA is restarted.
 
-> [!TIP]
-> For troubleshooting information, see [Investigating OpenSearch issues](xref:Investigating_OpenSearch_Issues)
+***
 
 ## Troubleshooting
 
@@ -144,3 +142,6 @@ If this happens, you need to alter the *priorityOrder* (see above) so that the b
 
 > [!IMPORTANT]
 > If the main OpenSearch cluster goes down, it will need to be restored afterwards. Make sure you have a backup set up to restore. To restore the backup, stop DataMiner completely and then restore the backup to the node that is out of sync. For more detailed information, see [Configuring OpenSearch backups](xref:Configuring_OpenSearch_Backups).
+
+> [!TIP]
+> For more troubleshooting information, see [Investigating OpenSearch issues](xref:Investigating_OpenSearch_Issues)
