@@ -81,26 +81,26 @@ To configure this setup:
 1. For each Elasticsearch cluster a *DataBase* tag must be added with the following configuration:
 
     - *active* attribute: Set this to "true" if you wish your elastic cluster to be added to the list of clusters to offload data to.
-    
+
     - *search* attribute: Always set this to "true".     
 
     - *ID* attribute: This should be a unique number, preferably starting at 0 and increasing by 1 for each additional cluster.
-    
+
     - *priorityOrder* attribute: Indicates the priority of the different clusters. The lower the value, the greater the priority. The cluster with the lowest value is the main cluster, from which data will be read.
-    
+
     - *type* attribute: Always set this to "ElasticSearch".
-    
+
     - *DBServer*: The hosts of the cluster, separated by commas (see [Indexing database settings](xref:DB_xml#indexing-database-settings))
-    
-    - *UID*: The username to connect to Elasticsearch (see [Specifying custom credentials for Elasticsearch](xref:DB_xml#specifying-custom-credentials-for-elasticsearch)).
-    
-    - *PWD*: The password to connect to Elasticsearch (see [Specifying custom credentials for Elasticsearch](xref:DB_xml#specifying-custom-credentials-for-elasticsearch)).
-    
-    - *DB*: The prefix for the Elasticsearch indexes (see [Specifying a custom prefix for the Elasticsearch indexes](xref:DB_xml#specifying-a-custom-prefix-for-the-elasticsearch-indexes)). 
-    
+
+    - *UID*: The username to connect to Elasticsearch (see [Specifying custom credentials for Elasticsearch](xref:DB_xml#specifying-custom-credentials-for-opensearch-or-elasticsearch)).
+
+    - *PWD*: The password to connect to Elasticsearch (see [Specifying custom credentials for Elasticsearch](xref:DB_xml#specifying-custom-credentials-for-opensearch-or-elasticsearch)).
+
+    - *DB*: The prefix for the Elasticsearch indexes (see [Specifying a custom prefix for the Elasticsearch indexes](xref:DB_xml#specifying-a-custom-prefix-for-the-indexes)).
+
     - *FileOffloadIdentifier*: String used to identify this connection. Each connection should have a different identifier, which will be used for file offloads.
-     
-     Example:
+
+   Example:
 
    ```xml
    <DataBases>
