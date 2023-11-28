@@ -4,8 +4,9 @@ uid: DOM_Create_Basic_Setup
 
 # Creating a basic DOM setup
 
-In this small tutorial, a basic DOM setup is created. 
-Each DOM instance will represent a person and contains the following information:
+In this tutorial, you will learn how to create a basic DOM setup.
+
+Each DOM instance will represent a person and contain the following information:
 
 - First name
 
@@ -15,13 +16,30 @@ Each DOM instance will represent a person and contains the following information
 
 - Job title
 
-The provided code below accomplishes this by:
+Estimated duration: 5 minutes.
 
-- Creating a DOM module.
+> [!NOTE]
+> The content and screenshots for this tutorial have been created in DataMiner version 10.3.10.
 
-- Creating a DOM definition linked to a *SectionDefinition* containing a *GenericEnumFieldDescriptor*.
+## Prerequisites
 
-- Creating a DOM instance with a value for each *FieldDescriptor*.
+- DataMiner version 10.3.10 or higher
+
+- A DataMiner System with an [indexing database](xref:Indexing_Database)
+
+- Basic knowledge of DataMiner Object Models (DOM)
+
+## Overview
+
+## Step 1: Configure the DOM module
+
+Use the code below to accomplish the following:
+
+- A DOM module is created.
+
+- A DOM definition is created linked to a `SectionDefinition` containing a `GenericEnumFieldDescriptor`.
+
+- A DOM instance is created with a value for each `FieldDescriptor`.
 
 ```C#
 using System.Collections.Generic;
@@ -123,12 +141,11 @@ namespace Tutorial
 }
 ```
 
-To visualize the setup, you could create a low-code app.
+## Step 2: Create a low-code app to visualize your setup
 
-> [!TIP]
-> See [Creating low-code applications](xref:Creating_custom_apps).
+Create a low-code app to visualize your DOM setup:
 
-In that low-code app:
+1. Create a low-code app as detailed under [Creating low-code applications](xref:Creating_custom_apps).
 
 1. Drag the DOM definition onto the canvas: *"Object Manager Definitions" > "people_app" > "PersonDomDefinition"*.
 
@@ -137,6 +154,8 @@ In that low-code app:
 1. Create a GQI query that shows all instances: *"Queries" > "Get object manager instances" > "people_app" > "PersonDomDefinition"*.
 
 1. Drag the GQI query onto the canvas and apply the [table visualization](xref:DashboardTable).
+
+The result should look like this:
 
 ![Step1](~/user-guide/images/DOM_Create_Basic_Setup_Step1_1.png)
 

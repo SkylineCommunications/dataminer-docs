@@ -9,7 +9,7 @@ In this tutorial, you will learn to soft-delete and permanently delete an enum e
 Estimated duration: 10 minutes.
 
 > [!NOTE]
-> This tutorial uses DataMiner version 10.3.10
+> The content and screenshots for this tutorial have been created in DataMiner 10.3.10.
 
 ## Prerequisites
 
@@ -35,17 +35,17 @@ If the entry is used by a DOM instance, that value needs to be removed from thos
 
 ## Step 1: DOM setup
 
-In [Creating a basic DOM setup](xref:DOM_Create_Basic_Setup) you can find a setup that will be used during this tutorial. You can also use your own and move on to [step 2](#step-2-soft-delete-the-enum-entry), following all subsequent steps accordingly.
+This tutorial assumes that you use the setup from the tutorial [Creating a basic DOM setup](xref:DOM_Create_Basic_Setup), but you can also create a new setup of your own.
 
 ## Step 2: Soft-delete the enum entry
 
 The provided code below accomplishes the following:
 
-- The enum entry (in this example: "Director") is retrieved from the *SectionDefinition*.
+- The enum entry (in this example: "Director") is retrieved from the `SectionDefinition`.
 
-- The *IsSoftDeleted* property of the enum entry is set to *true*.
+- The `IsSoftDeleted` property of the enum entry is set to *true*.
 
-- The *SectionDefinition* is updated.
+- The `SectionDefinition` is updated.
 
 ```C#
 using System;

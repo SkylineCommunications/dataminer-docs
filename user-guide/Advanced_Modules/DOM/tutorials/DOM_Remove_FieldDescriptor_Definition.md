@@ -2,42 +2,48 @@
 uid: DOM_Remove_FieldDescriptor_Definition
 ---
 
-# Removing a *FieldDescriptor* from a definition
+# Removing a field descriptor from a definition
 
-In this tutorial, we have an existing DOM model with a phone number field that we no longer need and thus want to remove. This is done by removing a *FieldDescriptor* from a *SectionDefinition* which you will learn here.
+This tutorial shows how you can remove a field descriptor from a section definition. It uses an example of an existing DOM model with a phone number field that is no longer needed and therefore needs to be removed.
 
 Estimated duration: 10 minutes.
 
 > [!NOTE]
-> This tutorial uses DataMiner version 10.3.12. This is the minimum version where a *FieldDescriptor* can be removed using this procedure.
+> The content and screenshots for this tutorial have been created in DataMiner version 10.3.12.
 
-# Overview
+## Prerequisites
 
-There are a few steps that need to be done before an existing *FieldDescriptor* can be removed. We first need to mark the field as 'soft-deleted'.
-The soft-delete option on a *FieldDescriptor* prevents the creation of more DOM instances using that FieldDescriptor. Later, it can be completely removed.
+- DataMiner version 10.3.12 or higher
 
-If the field value for the *FieldDescriptor* is used by a DOM instance, that value needs to be removed from those instances before removing the descriptor. If that *FieldDescriptor* is not used, it can be immediately removed (see Step 4: Delete *FieldDescriptor* from the section definition).
+- A DataMiner System with an [indexing database](xref:Indexing_Database)
+
+- Basic knowledge of DataMiner Object Models (DOM)
+
+## Overview
 
 - [Step 1: DOM setup](#step-1-dom-setup)
 
-- [Step 2: Soft delete one of the fields](#step-2-soft-delete-one-of-the-fields)
+- [Step 2: Soft-delete the field](#step-2-soft-delete-the-field)
 
-- [Step 3: Remove field from existing instances](#step-3-remove-field-from-existing-instances)
+- [Step 3: Remove the field from existing instances](#step-3-remove-the-field-from-existing-instances)
 
-- [Step 4: Delete *FieldDescriptor* from the section definition](#step-4-delete-fielddescriptor-from-the-section-definition)
+- [Step 4: Delete the field descriptor from the section definition](#step-4-delete-the-field-descriptor-from-the-section-definition)
 
-# Step 1: DOM setup
-In [creating a basic DOM setup](xref:DOM_Create_Basic_Setup) you can find a setup that will be used during this tutorial. You can also use your own and move on to [step 2](#step-2-soft-delete-one-of-the-fields), following all subsequent steps accordingly.
+## Step 1: DOM setup
 
-# Step 2: Soft delete one of the fields
+This tutorial assumes that you use the setup from the tutorial [Creating a basic DOM setup](xref:DOM_Create_Basic_Setup), but you can also create a new setup of your own.
 
-The provided code below accomplishes the following:
+## Step 2: Soft-delete the field
 
-- The *FieldDescriptor* we want to delete is retrieved from the *SectionDefinition*. 
+Before an existing field descriptor can be removed, you first need to mark the field as "soft-deleted". The soft-delete option on a `FieldDescriptor` object prevents the creation of more DOM instances using that field descriptor.
 
-- The *IsSoftDeleted* property of the *FieldDescriptor* is set to *true*. 
+Use the code provided below to accomplish the following:
 
-- The *SectionDefinition* is updated.
+- The `FieldDescriptor` that should be deleted is retrieved from the `SectionDefinition`.
+
+- The `IsSoftDeleted` property of the `FieldDescriptor` is set to *true*.
+
+- The `SectionDefinition` is updated.
 
 ```C#
 using System.Linq;
@@ -87,19 +93,24 @@ namespace Tutorial
 }
 ```
 
-After you have soft-deleted the *FieldDescriptor*, you should no longer see it in your low-code app while creating a new instance.
+After you have implemented this, the field descriptor is soft-deleted, and you should no longer see it in your low-code app when you create a new instance.
 
-![Step2](~/user-guide/images/DOM_Remove_FieldDescriptor_Definition_Step2.png)
+![Low-code app example](~/user-guide/images/DOM_Remove_FieldDescriptor_Definition_Step2.png)
 
-# Step 3: Remove field from existing instances
+## Step 3: Remove the field from existing instances
 
-The provided code below accomplishes the following:
+> [!NOTE]
+> If the field descriptor is not used in any DOM instances, you can skip this step.
 
-- All instances using the *SectionDefinition* are retrieved.
+If the field value for the field descriptor is used by one or more DOM instances, that value needs to be removed from those instances before you can remove the descriptor.
 
-- The *FieldValues* for that *FieldDescriptor* are removed from the section in the instances. 
+Use the code provided below to accomplish the following:
 
-- The instances are updated. 
+- All instances using the `SectionDefinition` are retrieved.
+
+- The field values for the `FieldDescriptor` are removed from the section in the instances.
+
+- The instances are updated.
 
 ```C#
 using System.Collections.Generic;
@@ -163,17 +174,19 @@ namespace Tutorial
 }
 ```
 
-After the values has been removed, the phone number for each person should no longer be visible in your low-code app.
+After you have implemented this, the phone number for each person should no longer be visible in your low-code app.
 
 ![Step3](~/user-guide/images/DOM_Remove_FieldDescriptor_Definition_Step3.png)
 
-# Step 4: Delete *FieldDescriptor* from the section definition
+## Step 4: Delete the field descriptor from the section definition
 
-The provided code below accomplishes the following: 
+Once the field descriptor has been soft-deleted and you have made sure that it is not used in any DOM instances, you can delete the field descriptor from the section definition.
 
-- The *FieldDescriptor* is deleted from the *SectionDefinition*.
+Use the code provided below to accomplish the following:
 
-- The *SectionDefinition* is updated.
+- The `FieldDescriptor` is deleted from the `SectionDefinition`.
+
+- The `SectionDefinition` is updated.
 
 ```C#
 using System.Linq;
@@ -219,6 +232,6 @@ namespace Tutorial
 }
 ```
 
-Optionally, you can inspect the *SectionDefinition* with the [SLNetClientTest tool](xref:Opening_the_SLNetClientTest_tool) to check the phone number is now completely removed.
+Optionally, you can inspect the `SectionDefinition` with the [SLNetClientTest tool](xref:Opening_the_SLNetClientTest_tool) to check if the phone number is now completely removed:
 
 ![Step4](~/user-guide/images/DOM_Remove_FieldDescriptor_Definition_Step4.png)
