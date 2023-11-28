@@ -37,6 +37,6 @@ You can configure this size limit as follows:
 > - If no limit is set in DBConfiguration.xml or if the file offload configuration is invalid, the size of the database offload files will by default be limited to 10 GB.
 > - When the specified limit has been reached, the following alarm will be generated: "Max file offload disk usage for certain storages has been reached, new data for these storages will be dropped."
 
-## Configuring multiple Elasticsearch clusters
+## Configuring multiple OpenSearch or Elasticsearch clusters
 
-It is possible to have data offloaded to multiple Elasticsearch clusters, i.e. one main cluster and several replicated clusters. This <!--Prior to DataMiner 10.3.10/10.4.0 (RN 36399 - reverted in RN 37322), this -->is configured in *DBConfiguration.xml*. For detailed information, see [Configuring multiple Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters).
+It is possible to have data offloaded to multiple OpenSearch or Elasticsearch clusters, i.e. one main cluster and several replicated clusters. This <!--Prior to DataMiner 10.3.10/10.4.0 (RN 36399 - reverted in RN 37322), this -->is configured in *DBConfiguration.xml*. For detailed information, see [Configuring multiple OpenSearch clusters](xref:Configuring_multiple_OpenSearch_clusters) or [Configuring multiple Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters).

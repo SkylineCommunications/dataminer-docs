@@ -11,3 +11,6 @@ Skyline Communications offers three different hosting possibilities, each with i
 1. Self-hosted DataMiner nodes and storage nodes
 1. Self-hosted DataMiner nodes with Storage as a Service
 1. DataMiner as a Service: both the DataMiner nodes and the storage nodes as a service
+
+> [!TIP]
+> For more hands-on information, refer to our [user guide](xref:Creating_a_DataMiner_System)

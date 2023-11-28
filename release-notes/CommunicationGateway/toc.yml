@@ -1,4 +1,8 @@
 items:
+  - name: Communication Gateway 1.2.2
+    topicUid: CommunicationGateway_1.2.2
+  - name: Communication Gateway 1.2.1
+    topicUid: CommunicationGateway_1.2.1
   - name: Communication Gateway 1.2.0
     topicUid: CommunicationGateway_1.2.0
   - name: Communication Gateway 1.1.0

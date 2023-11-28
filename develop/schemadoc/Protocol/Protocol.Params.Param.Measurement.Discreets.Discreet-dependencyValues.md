@@ -23,7 +23,7 @@ If the other parameter has one of the values specified in the attribute, the dis
 - This will use the displayed value and not the value in case it is linked to another discreet.
 - The dependencyValues attribute can be combined with the table:selection and table:singleselection options.
 
-When the value of the parameter with ID 55 is equal to A, the discreet “Display 1” will be available. When it is equal to B, the discreet “Display 2” will be available:
+When the value of the parameter with ID 55 is equal to A, the discreet "Display 1" will be available. When it is equal to B, the discreet "Display 2" will be available:
 
 ```xml
 <Measurement>
@@ -46,7 +46,7 @@ This does not work for tables. However, there is one exception. When the column 
 > [!NOTE]
 > The parameter using the dependency needs to be of type write.
 
-In case of a ContextMenu parameter (of which the name is identical to that of the table with “_ContextMenu” suffix), the dependencyValues will first ask the user to enter the value of each parameter specified in this attribute.
+In case of a ContextMenu parameter (of which the name is identical to that of the table with "_ContextMenu" suffix), the dependencyValues will first ask the user to enter the value of each parameter specified in this attribute.
 
 ```xml
 <Param id="1000" trending="false">
@@ -87,5 +87,5 @@ In the dependencyValues attribute of a menu item, you can specify the following:
 |--- |--- |
 |1005|The user MUST enter a value using (write) parameter 1005.|
 |1005?|The user CAN enter a value using (write) parameter 1005.|
-|1005:default|The user MUST enter a value using (write) parameter 1005, and a default value is specified. `<default>` represents either a fixed value (e.g. 1005:10) or uses a placeholder (see sections below for more information about the available placeholders) (e.g. 1005:[value:1005]).|
-|1005?:default|The user CAN enter a value using (write) parameter 1005, and a default value is specified. `<default>` represents either a fixed value (e.g. 1005?:10) or uses a placeholder (see sections below for more information about the available placeholders) (e.g. 1005?:[value:1005]).|
+|1005:default|The user MUST enter a value using (write) parameter 1005, and a default value is specified. `<default>` represents either a fixed value (e.g. 1005:10) or uses a placeholder (See [Placeholders](xref:UIComponentsCustomTableContextMenu#placeholders) for more information about the available placeholders) (e.g. 1005:[value:1005]).|
+|1005?:default|The user CAN enter a value using (write) parameter 1005, and a default value is specified. `<default>` represents either a fixed value (e.g. 1005?:10) or uses a placeholder (See [Placeholders](xref:UIComponentsCustomTableContextMenu#placeholders) for more information about the available placeholders) (e.g. 1005?:[value:1005]).|

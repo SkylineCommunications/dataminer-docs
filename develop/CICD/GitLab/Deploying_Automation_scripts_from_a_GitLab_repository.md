@@ -52,38 +52,72 @@ The (primary or secondary) key should be added as a masked variable in the repos
 
     ```yml
     stages:
-        - upload
+        - uploadBranch
+        - uploadTag
         - deploy
-    upload:
-        stage: upload
+
+    # Uploading a commit on a branch with the build number of the pipeline (e.g. 0.0.56)
+    uploadBranch:
+        rules:
+            - if: $CI_COMMIT_BRANCH
+        stage: uploadBranch
         image: docker:latest
         services:
             - docker:dind
         script:
-            - docker run -e CI_PROJECT_URL -v $(pwd):/mnt ghcr.io/skylinecommunications/skyline-dataminer-deploy-action:<version>
+            # Create package and upload it to the cloud.
+            - docker run -e CI_PROJECT_URL -e CI_COMMIT_REF_NAME -e CI_COMMIT_TAG -v $(pwd):/mnt ghcr.io/skylinecommunications/skyline-dataminer-deploy-action:<version>
                 --stage Upload 
                 --api-key $MY_KEY
                 --solution-path ./AutomationScript.sln
                 --base-path ./mnt
-                --package-name Paris-IP-Flow-Management 
-                --version 1.0.1
+                --artifact-name Paris-IP-Flow-Management 
+                --build-number $CI_CONCURRENT_ID
                 --timeout 300
         artifacts:
             reports:
-            dotenv: SkylineOutput.env
+                # Store the artifact-id in the SkylineOutput.env to later use in the deploy stage.
+                dotenv: SkylineOutput.env
+
+    # Uploading a tag that will be used as the version number
+    uploadTag:
+        rules:
+            - if: $CI_COMMIT_TAG
+        stage: uploadBranch
+        image: docker:latest
+        services:
+            - docker:dind
+        script:
+            # Create package and upload it to the cloud.
+            - docker run -e CI_PROJECT_URL -e CI_COMMIT_REF_NAME -e CI_COMMIT_TAG -v $(pwd):/mnt ghcr.io/skylinecommunications/skyline-dataminer-deploy-action:<version>
+                --stage Upload 
+                --api-key $MY_KEY
+                --solution-path ./AutomationScript.sln
+                --base-path ./mnt
+                --artifact-name Paris-IP-Flow-Management 
+                --version $CI_COMMIT_TAG
+                --timeout 300
+        artifacts:
+            reports:
+                # Store the artifact-id in the SkylineOutput.env to later use in the deploy stage.
+                dotenv: SkylineOutput.env
+
     deploy:
         stage: deploy
         image: docker:latest
         services:
             - docker:dind
         script:
-            - docker run -e CI_PROJECT_URL -v $(pwd):/mnt ghcr.io/skylinecommunications/skyline-dataminer-deploy-action:<version>
+            # Deploy the package that was created in the upload stage.
+            - docker run -e CI_PROJECT_URL -e CI_COMMIT_REF_NAME -e CI_COMMIT_TAG -v $(pwd):/mnt ghcr.io/skylinecommunications/skyline-dataminer-deploy-action:<version>
                 --stage Deploy 
                 --api-key $MY_KEY
                 --artifact-id $ARTIFACT_ID
+                --base-path ./mnt
                 --timeout 300
         dependencies:
-            - upload
+            - uploadBranch
+            - uploadTag
     ```
 
 1. Replace the `<version>` field with the latest version of the action. The latest version together with some additional information about the action can be found on the [GitHub Marketplace](https://github.com/marketplace/actions/skyline-dataminer-deploy-action)

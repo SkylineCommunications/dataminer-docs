@@ -20,7 +20,7 @@ When activated, a trigger can:
 > [!NOTE]
 >
 > - For more information on how to define a trigger in a protocol, see [Protocol.Triggers.Trigger](xref:Protocol.Triggers.Trigger).
-> - An example protocol "SLC SDF After Group Trigger" is available in the Protocol Development Guide Companion Files.
+> - An example protocol "SLC SDF After Group Trigger" is available in the [Protocol Development Guide Companion Files](https://community.dataminer.services/documentation/protocol-development-guide-companion-files/).
 
 ## See also
 

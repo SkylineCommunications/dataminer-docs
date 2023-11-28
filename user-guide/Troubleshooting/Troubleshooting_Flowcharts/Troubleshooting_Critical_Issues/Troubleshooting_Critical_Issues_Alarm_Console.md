@@ -119,7 +119,7 @@ class Home,SLLogCollector,Investigation LightBlue;
 
   1. Check the firewall for blocked ports.
 
-  1. Check the element configuration, and compare with the information in the connector help.
+  1. Check the element configuration, and compare with the information in the connector documentation.
 
   1. Check element logs for error logging.
 

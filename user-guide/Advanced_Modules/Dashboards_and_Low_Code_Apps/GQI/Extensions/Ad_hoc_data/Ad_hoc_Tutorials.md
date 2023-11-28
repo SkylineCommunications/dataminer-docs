@@ -2,9 +2,7 @@
 uid: Ad_hoc_Tutorials
 ---
 
-# Tutorials
-
-## Example of forwarding dummy data to the GQI
+# Forwarding dummy data to the GQI
 
 Below you can find an example script that forwards dummy data to the GQI. The name of the data source, as defined in the *GQIMetaData* attribute, will be “People”.
 
@@ -56,7 +54,7 @@ public class MyDataSource : IGQIDataSource, IGQIInputArguments
                         new GQICell() { Value = "Alice" },
                         new GQICell() { Value = 32 },
                         new GQICell() { Value = 1.74, DisplayValue = "1.74 m" },
-                        new GQICell() { Value = new DateTime(1990, 5, 12) },
+                        new GQICell() { Value = new DateTime(1990, 5, 12, 0, 0, 0, DateTimeKind.Utc) },
                         new GQICell() { Value = true }
                     }),
             new GQIRow(
@@ -65,7 +63,7 @@ public class MyDataSource : IGQIDataSource, IGQIInputArguments
                         new GQICell() { Value = "Bob" },
                         new GQICell() { Value = 22 },
                         new GQICell() { Value = 1.85, DisplayValue = "1.85 m" },
-                        new GQICell() { Value = new DateTime(2000, 1, 22) },
+                        new GQICell() { Value = new DateTime(2000, 1, 22, 0, 0, 0, DateTimeKind.Utc) },
                         new GQICell() { Value = true }
                     }),
             new GQIRow(
@@ -74,7 +72,7 @@ public class MyDataSource : IGQIDataSource, IGQIInputArguments
                         new GQICell() { Value = "Carol" },
                         new GQICell() { Value = 27 },
                         new GQICell() { Value = 1.67, DisplayValue = "1.67 m" },
-                        new GQICell() { Value = new DateTime(1995, 10, 3) },
+                        new GQICell() { Value = new DateTime(1995, 10, 3, 0, 0, 0, DateTimeKind.Utc) },
                         new GQICell() { Value = false }
                     })
             };

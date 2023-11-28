@@ -24,7 +24,7 @@ else
 
 ## Parameters
 
-- data (string): The data value stored in the ElementData.xml for the parameter. 
+- data (string): The data value stored in the ElementData.xml for the parameter.
 
 ## Return Value
 
@@ -32,4 +32,5 @@ else
 
 ## Remarks
 
-- The SLProtocol interface defines a wrapper method "GetParameterByData" for this call. See SLProtocol.GetParameterByData method.
+- The [SLProtocol](xref:Skyline.DataMiner.Scripting.SLProtocol) interface defines a wrapper method [GetParameterByData](xref:Skyline.DataMiner.Scripting.SLProtocol.GetParameterByData(System.String)) for this call.
+- This Notify type is deprecated since DataMiner 10.3.4.

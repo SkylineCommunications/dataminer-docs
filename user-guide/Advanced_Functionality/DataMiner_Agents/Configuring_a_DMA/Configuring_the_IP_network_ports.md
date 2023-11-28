@@ -24,8 +24,8 @@ A DataMiner System makes extensive use of TCP/IP communication. Below, you find 
 | N/A     | 7001/tcp | Cassandra: TLS setup (available from DataMiner 10.1.3 onwards) |
 | N/A     | 7199/tcp | Cassandra cluster backups |
 | N/A     | 9042/tcp | Cassandra (server listening for client requests) |
-| N/A     | 9200/tcp | Elasticsearch |
-| N/A     | 9300/tcp | Elasticsearch (inter-node communication) |
+| N/A     | 9200/tcp | OpenSearch/Elasticsearch |
+| N/A     | 9300/tcp | OpenSearch/Elasticsearch (inter-node communication) |
 | Multiple protocols | 4222/tcp<br> 6222/tcp | NATS (required from DataMiner 10.1.1 onwards) |
 | Multiple protocols | 8222/tcp | NATS Monitoring (relevant from DataMiner 10.1.1 onwards) |
 | NAS    | 9090/tcp  | NATS Account Server (required from DataMiner 10.1.1 onwards) |
@@ -61,3 +61,6 @@ Using .NET Remoting:
 >
 > - [Configuring DMA communication settings in SLNet.exe.config](xref:Configuration_of_DataMiner_processes#configuring-the-ports-for-net-remoting-andor-xml-web-services)
 > - [Configuring client communication settings](xref:DMA_configuration_related_to_client_applications#configuring-client-communication-settings)
+
+> [!TIP]
+> To verify if your DataMiner cluster is working correctly, you can run the [Check Cluster SLNet Connections BPA test](xref:BPA_Check_Cluster_SLNet_Connections).

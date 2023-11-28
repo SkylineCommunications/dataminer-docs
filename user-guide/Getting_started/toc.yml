@@ -1,19 +1,24 @@
 items:
-  - name: Installing a DataMiner Agent
-    topicUid: Installing_a_DataMiner_Agent
+  - name: Creating a DataMiner System
+    topicUid: Creating_a_DataMiner_System
     items:
-      - name: Installing DataMiner using the DataMiner Installer
-        topicUid: Installing_DM_using_the_DM_installer
-      - name: Unattended DataMiner installation
-        topicUid: Unattended_DM_installation
-      - name: Checking the DataMiner installation
-        topicUid: Checking_the_DM_installation
-      - name: Regarding virtual servers
-        topicUid: Regarding_virtual_servers
-      - name: Regarding antivirus software
-        topicUid: Regarding_antivirus_software
-      - name: Frequently asked questions
-        topicUid: Installing_a_DMA_FAQ
+    - name: Creating a DataMiner System in the cloud (DaaS)
+      topicUid: Creating_a_DMS_in_the_cloud
+    - name: Installing a self-hosted DataMiner Agent
+      topicUid: Installing_a_DataMiner_Agent
+      items:
+        - name: Installing DataMiner using the DataMiner Installer
+          topicUid: Installing_DM_using_the_DM_installer
+        - name: Unattended DataMiner installation
+          topicUid: Unattended_DM_installation
+        - name: Checking the DataMiner installation
+          topicUid: Checking_the_DM_installation
+        - name: Regarding virtual servers
+          topicUid: Regarding_virtual_servers
+        - name: Regarding antivirus software
+          topicUid: Regarding_antivirus_software
+        - name: Frequently asked questions
+          topicUid: Installing_a_DMA_FAQ
   - name: Basic concepts
     topicUid: BasicConcepts
   - name: DataMiner System layout
@@ -39,8 +44,6 @@ items:
                 topicUid: Changing_the_default_browser_engine_used_in_DataMiner_Cube
               - name: Configuring Microsoft Edge to run DataMiner Cube
                 topicUid: Configuring_Microsoft_edge_to_run_Cube
-              - name: Installing the Skyline certificates
-                topicUid: Installing_the_Skyline_certificates
               - name: DataMiner Cube deployment methods
                 topicUid: DataMiner_Cube_deployment_methods
           - name: Opening DataMiner Cube

@@ -36,7 +36,9 @@ For a daily report, an additional archive `<timestamp>_All_Reports.zip` is gener
 
 ## Activating CDMR
 
-To activate CDMR, you must configure SMTP so that emails can be sent and configure *MaintenanceSettings.xml* so that emails are sent to the correct address. Once the configuration is complete, Skyline Communications must also be notified.
+If your DMS is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud) and the necessary [prerequisites](xref:RemoteLogCollection#requirements) are met for remote log collection, CDMR is automatically activated.
+
+Otherwise, to activate CDMR, you must configure SMTP so that emails can be sent and configure *MaintenanceSettings.xml* so that emails are sent to the correct address. Once the configuration is complete, Skyline Communications must also be notified.
 
 > [!NOTE]
 >

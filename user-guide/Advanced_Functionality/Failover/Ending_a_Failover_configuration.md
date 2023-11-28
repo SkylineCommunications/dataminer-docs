@@ -9,9 +9,9 @@ When two DMAs are linked together in a Failover setup, it is possible to end the
 > [!CAUTION]
 > While it is possible from DataMiner 10.2.0 [CU9]/10.2.12 onwards to decommission a Failover setup while the server hosting the offline Agent is unavailable, this will not reset the offline Agent to a clean installation. As such, you will need to make sure the offline Agent is not brought online again in the network as this would cause double polling. In addition, there could be minor data loss and inconsistencies on the database level as the database node cannot be cleanly decommissioned.
 
-## Verifying the replication factor of the Cassandra database
+## Verifying the replication factor of a Cassandra database
 
-In you use [Cassandra storage per DMA](xref:Databases_about), you first need to check whether the replication factor of your Cassandra configuration is correct. As breaking up the Failover configuration will revert the database to a single node, you need to make sure that the data will be included on both nodes. This means that the replication factor must be set to **2**.
+In you use a self-hosted storage setup with [Cassandra storage per DMA](xref:Databases_about), you first need to check whether the replication factor of your Cassandra configuration is correct. As breaking up the Failover configuration will revert the database to a single node, you need to make sure that the data will be included on both nodes. This means that the replication factor must be set to **2**.
 
 To verify this:
 
@@ -30,6 +30,9 @@ To verify this:
 In case this is set to **1**, you will need to update the value and repair the keyspaces to make sure the data is in both databases. For more information, refer to [Data Replication](xref:replication_and_consistency_configuration).
 
 If the replication factor is correct, you can continue ending the Failover configuration.
+
+> [!NOTE]
+> We recommend switching to [Storage as a Service](xref:STaaS) instead, so that all the complexity of maintaining the DataMiner data storage is taken care of for you.
 
 ## Ending the Failover configuration in System Center
 

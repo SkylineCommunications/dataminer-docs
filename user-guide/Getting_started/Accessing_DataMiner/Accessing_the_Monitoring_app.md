@@ -22,7 +22,7 @@ If two-step authentication is enabled, when you log on, a challenge will be show
 
 > [!NOTE]
 >
-> - Along with the other DataMiner web apps, you can upgrade the Monitoring app separately from your main DataMiner installation. This means that you can for example have a DataMiner System using version 10.3.4, while you already use version 10.3.5 for the web apps. You can [download the web apps upgrade package from DataMiner Dojo](https://community.dataminer.services/downloads/).
+> - Along with the other DataMiner web apps, you can [upgrade the Monitoring app](xref:Upgrading_Downgrading_Webapps) separately from your main DataMiner installation. This means that you can for example have a DataMiner System using version 10.3.4, while you already use version 10.3.5 for the web apps. You can [download the web apps upgrade package from DataMiner Dojo](https://community.dataminer.services/downloads/).
 > - You can add this app to the home screen of a mobile device. The way this is done depends on the device and browser used. For example, when using Chrome on Android, you can add the app to the home screen by browsing to the app and then selecting *Add to Home screen* in the Chrome settings.
 > - If WebSockets are supported and available on the server, the app will use a WebSocket connection to retrieve element information. Otherwise, it will fall back to polling every 5 seconds.
 > - The Monitoring app can also be made available via a gateway server. See [Dashboard Gateway installation](xref:Dashboard_Gateway_installation).

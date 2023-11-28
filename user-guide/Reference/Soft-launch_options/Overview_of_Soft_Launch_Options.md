@@ -1,6 +1,7 @@
 ---
 uid: Overview_of_Soft_Launch_Options
 ---
+
 # Overview of soft-launch options
 
 The table below contains an overview of all available soft-launch options. Unless otherwise specified, the key in the “Feature key” column must be added in *SoftLaunchOptions.xml* with the value “true” in order to activate the feature.
@@ -45,7 +46,11 @@ Enables behavioral anomaly detection and suggestion events. See [Behavioral anom
 ### APIDeployment
 
 > [!NOTE]
-> Deprecated from DataMiner 10.3.6 onwards. No longer supported from DataMiner 10.4.1 onwards. This feature is replaced by the [UserDefinableAPI](#userdefinableapi) feature.
+> Deprecated from DataMiner 10.3.6 onwards. No longer supported from DataMiner 10.4.0/10.4.1 onwards.
+> This feature is replaced by the [UserDefinableAPI](#userdefinableapi) feature. When upgrading to 10.4.0 or newer, a prerequisite will block the upgrade if you still have deprecated APIs deployed. For more information, see [Upgrade fails because of VerifyNoObsoleteApiDeployed.dll prerequisite](xref:KI_Upgrade_fails_VerifyNoObsoleteApiDeployed_prerequisite).
+
+> [!CAUTION]
+> APIDeployment is not supported on systems using [Storage as a Service (STaaS)](xref:STaaS).
 
 Enables dynamic API deployment on the SLAPIEndpoint application.
 
@@ -130,11 +135,11 @@ Enables the use of DOM data in dashboards and applications.
 Enables dynamic units in Data Display in DataMiner Cube and the Monitoring app. If you want to test this feature for one DataMiner Cube session only, use the argument `SOFTLAUNCH_DYNAMICUNITS=Enabled`.
 
 - **Minimum version**: 10.0.12
-- **Estimated release version**: 10.3.12
+- **Estimated release version**: To be determined.
 
 ### ElasticTicketing
 
-Allows you to store tickets in the Elasticsearch database.
+Allows you to store tickets in the indexing database.
 
 - **Minimum version**: 9.6.4
 - **Release version**: 10.0.13/10.1.0 ([RN 26677](xref:General_Feature_Release_10.0.13_new_features#ticketing-app-move-to-elasticsearch-database-and-other-improvements-id_24667id_25539-id_25713id_26644id_26676id_26677id_26911id_26982id_27974id_28016id_28043-id_28079id_28153))
@@ -169,7 +174,7 @@ Provides access to additional data sources and operators for GQI in the Dashboar
 > - The object manager instances data source (available from DataMiner 10.3.6 onwards).<!-- RN 36124 -->
 
 - **Minimum version**: 10.0.13
-- **Estimated release version for the custom operator**: 10.3.12
+- **Estimated release version for the custom operator**: 10.4.1
 - **Estimated release version for other data sources and operators**: To be determined
 
 ### GenericOwnership
@@ -195,15 +200,21 @@ Enables the [Jobs app](xref:jobs).
 
 ### LegacyAnnotations
 
-Shows the legacy Annotations module in Cube.
+Enables or disables the legacy Annotations module.
 
-- **Minimum version**: 10.1.12/10.2.0 ([RN 31329](xref:General_Feature_Release_10.1.12#legacy-reports-dashboards-and-annotations-modules-will-by-default-be-hidden-in-new-installations-id_31329))
+- **Minimum version**: 10.1.10/10.2.0
+
+> [!NOTE]
+> The legacy Annotations module is disabled by default as from DataMiner versions 10.4.0/10.4.1 ([RN 37786](xref:General_Feature_Release_10.4.1#legacy-reports-dashboards-and-annotations-modules-are-now-end-of-life-and-will-be-disabled-by-default-id_37786)). If you want to keep on using this legacy module, set this soft-launch option to *true*, then run `C:\Skyline DataMiner\Tools\ConfigureIIS.bat` as Administrator, and restart the DataMiner Agent.
 
 ### LegacyReportsAndDashboards
 
-Shows the legacy Reports & Dashboards module in Cube.
+Enables or disables the legacy Reports and Dashboards modules.
 
-- **Minimum version**: 10.1.12/10.2.0 ([RN 31329](xref:General_Feature_Release_10.1.12#legacy-reports-dashboards-and-annotations-modules-will-by-default-be-hidden-in-new-installations-id_31329))
+- **Minimum version**: 10.1.10/10.2.0
+
+> [!NOTE]
+> The legacy Reports and Dashboards modules are disabled by default as from DataMiner versions 10.4.0/10.4.1 ([RN 37786](xref:General_Feature_Release_10.4.1#legacy-reports-dashboards-and-annotations-modules-are-now-end-of-life-and-will-be-disabled-by-default-id_37786)). If you want to keep on using these legacy modules, set this soft-launch option to *true*, then run `C:\Skyline DataMiner\Tools\ConfigureIIS.bat` as Administrator, and restart the DataMiner Agent.
 
 ### MonitoringAndControl
 
@@ -282,7 +293,7 @@ Enables the button panel component in the Dashboards app.
 Enables the grid component in the Dashboards app.
 
 - **Minimum version**: 10.2.12
-- **Estimated release version**: 10.3.12
+- **Release version**: 10.3.0 [CU10]/10.4.1 ([RN 37812](xref:Web_apps_Feature_Release_10.4.1#dashboards-app--low-code-apps-new-grid-and-timeline-components-id_33276-id_33287-id_34761-id_34948-id_37269-id_37699-id_37812))
 
 ### ReportsAndDashboardsExport
 
@@ -296,7 +307,7 @@ Enables the export to PDF button within the Dashboards app itself. Creating PDFs
 Enables a new Maps component in the Dashboards app and the Low-Code Apps.
 
 - **Minimum version**: 10.3.2
-- **Estimated release version**: 10.3.12
+- **Estimated release version**: 10.4.2
 
 ### ReportsAndDashboardsGuides
 
@@ -322,7 +333,7 @@ Enables the Query Filter component in the Dashboards app.
 Enables the Timeline component in the Dashboards app.
 
 - **Minimum version**: 10.1.10
-- **Estimated release version**: 10.3.12
+- **Release version**: 10.3.0 [CU10]/10.4.1 ([RN 37812](xref:Web_apps_Feature_Release_10.4.1#dashboards-app--low-code-apps-new-grid-and-timeline-components-id_33276-id_33287-id_34761-id_34948-id_37269-id_37699-id_37812))
 
 ### ResourceList
 

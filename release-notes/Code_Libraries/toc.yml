@@ -6,6 +6,15 @@ items:
       topicUid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.1
     - name: Skyline.DataMiner.Core.DataMinerSystem Range 1.0
       topicUid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.0
+  - name: Skyline.DataMiner.DataSources.OpenConfig
+    topicUid: Skyline_DataMiner_DataSources_OpenConfig_2.0.1
+    items:
+    - name: Skyline DataMiner DataSources OpenConfig 2.0.1
+      topicUid: Skyline_DataMiner_DataSources_OpenConfig_2.0.1
+    - name: Skyline DataMiner DataSources OpenConfig 2.0.0
+      topicUid: Skyline_DataMiner_DataSources_OpenConfig_2.0.0
+    - name: Skyline DataMiner DataSources OpenConfig 1.0.3
+      topicUid: Skyline_DataMiner_DataSources_OpenConfig_1.0.3
   - name: Class Library release notes (deprecated)
     topicUid: ClassLibrary_Range_1.4
     items:

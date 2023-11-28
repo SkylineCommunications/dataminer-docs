@@ -2,30 +2,15 @@
 uid: Web_apps_Feature_Release_10.3.11
 ---
 
-# DataMiner web apps Feature Release 10.3.11 – Preview
+# DataMiner web apps Feature Release 10.3.11
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to the web applications, see [General Feature Release 10.3.11](xref:General_Feature_Release_10.3.11).
 
-## Highlights
-
-*No highlights have been selected yet.*
-
 ## New features
-
-#### GQI: Resources data source now allows filtering by resource pool ID or booking ID [ID_36970]
-
-<!-- MR 10.4.0 - FR 10.3.11 -->
-
-The *Resources* data source now allows you to filter resources by resource pool ID or booking ID.
-
-> [!NOTE]
->
-> - The *Resources* data source is only available on systems with a *ResourceManager* license and/or an *IDP* license.
-> - Currently, the *Resources* data source still requires the *GenericInterface* [soft-launch option](xref:SoftLaunchOptions).
 
 #### Dashboards app & Low-Code Apps - GQI components: New setting 'Empty result message' [ID_37173]
 
@@ -102,6 +87,12 @@ In all other cases (e.g. multiple aggregation nodes, grouping, different columns
 <!-- Not added to MR 10.4.0 -->
 
 A DOM instance without history will now default to the happy path, i.e. the path that illustrates the states an instance would undergo following the standard workflow.
+
+#### Dashboards app: Components will now only show skeleton loading during the initial load [ID_37274]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+Up to now, some components would show skeleton loading until after the data had been loaded. From now on, those components will only show skeleton loading during the initial load.
 
 #### Dashboards app/Low-Code Apps - Visual Overview component: Initial visual overview data will now be retrieved asynchronously [ID_37341]
 
@@ -239,3 +230,21 @@ The feed linker would no longer automatically select the feed type when there wa
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
 When, in the *Monitoring* app, you selected an element or a service, and navigated to another visual overview page, a `Cannot convert null to a value type` error would be thrown.
+
+#### Low-Code Apps: No longer possible to edit a newly created app after refreshing one of its pages [ID_37425]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When you had created and published an app with at least one component, it would no longer be possible to edit it after refreshing one of its pages.
+
+#### Dashboards app - Query builder: Problem with 'Row by row' option [ID_37463]
+
+<!-- MR TBD - FR 10.3.11 -->
+
+Due to a compatibility issue, a `Cannot read properties of undefined (reading IsHidden)` error could be thrown when, in the query builder, you joined queries on a DataMiner Agent that did not (yet) supported the *Row by row* option.
+
+#### Low-Code Apps: Problem when accessing apps of which page and/or panel names contained special characters [ID_37474]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 [CU0] -->
+
+After an upgrade to version 10.3.10, it would no longer be possible to access existing apps of which page and/or panel names contained special characters. Also, when adding a page or a panel, it would no longer be possible to enter a page or panel name that contained special characters.

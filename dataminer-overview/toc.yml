@@ -1,3 +1,4 @@
+items:
 - name: DataMiner Overview
   topicUid: OverviewIndex
   items:
@@ -89,6 +90,8 @@
               topicUid: Benefits_DevOps_Professionals_Program
             - name: Benefits for business and tech partners
               topicUid: Benefits_Business_and_Tech_Partners
+            - name: Accumulating DevOps Points
+              topicUid: DevOps_Points
             - name: Required skill sets
               topicUid: Skill_Sets_DevOps_Professionals_Program
         - name: DataMiner DevOps Enablement Service
@@ -98,6 +101,21 @@
               topicUid: What_is_DataMiner_DevOps_Enablement
             - name: The DataMiner DevOps Professional Program
               topicUid: DevOps_Enablement_and_the_DevOps_Professional_program
+        - name: DataMiner DevOps Creative Collective
+          topicUid: DataMiner_DevOps_Creative_Collective
+          items:
+            - name: DataMiner Solutions
+              topicUid: DataMiner_Solutions
+            - name: Solution Product Owner
+              topicUid: Solution_Product_Owner
+            - name: Agile best practices for DataMiner Solution Product Owners
+              topicUid: Agile_Methodologies
+            - name: Core values
+              topicUid: Core_Values
+            - name: Recommended policies
+              topicUid: Recommended_Policies
+            - name: Unlimited opportunity
+              topicUid: Unlimited_Opportunity
     - name: Training courses and certification
       topicUid: Overview_Training_intro
       items:
@@ -129,8 +147,8 @@
           topicUid: Overview_Support_upgrade_policy
         - name: Out-of-business-hours support
           topicUid: Overview_Out_Of_Business_Hours_Support
-        - name: CCA Support Services
-          topicUid: CCA_Support_Services
+        - name: Proactive Support
+          topicUid: Proactive_Support
         - name: Support services terms
           topicUid: Support_services_terms
     - name: Compliance statements
@@ -211,8 +229,6 @@
           topicUid: FAQ_GDPR
         - name: Does Skyline offer an escrow service
           topicUid: FAQ_Escrow
-        - name: Does Skyline offer serial and GPIO converters
-          topicUid: FAQ_Serial_GPIO_converters
         - name: What are the principal advantages of DataMiner
           topicUid: FAQ_Principal_advantages
         - name: What do you mean with multi-vendor technology
@@ -236,12 +252,22 @@
       - name: Connectors
         topicUid: FAQs_Connectors
         items:
+        - name: What is a connector
+          topicUid: FAQ_What_is_a_connector
         - name: What is the standard lead time for new connectors
           topicUid: FAQ_Standard_lead_time_new_connectors
         - name: What are the limitations when using the Generic SNMP connector as opposed to a dedicated connector
           topicUid: FAQ_Limitations_generic_SNMP_connector
-        - name: What are the standard operating procedures for connector deployment?
+        - name: What are the standard operating procedures for connector deployment
           topicUid: FAQ_SOP_connectors
+        - name: What kind of training is available for DIS
+          topicUid: FAQ_DIS_Training
+        - name: Does technical support apply to the actual DataMiner connectors I design
+          topicUid: FAQ_Support_for_own_connector
+        - name: Can I copy existing third-party DataMiner connectors or parts of them
+          topicUid: FAQ_Copy_existing_connector
+        - name: What if a second- or third-party DataMiner connector malfunctions
+          topicUid: FAQ_2nd_3rd_party_connector_malfunctions
       - name: Commercial models
         topicUid: FAQs_Pricing
       - name: Support Services

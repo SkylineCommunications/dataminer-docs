@@ -28,4 +28,5 @@ if (result != null)
 
 ## Remarks
 
-- The SLProtocol interface defines a wrapper method "GetParameterItemData" for this call. See SLProtocol.GetParameterItemData method.
+- The [SLProtocol](xref:Skyline.DataMiner.Scripting.SLProtocol) interface defines a wrapper method [GetParameterItemData](xref:Skyline.DataMiner.Scripting.SLProtocol.GetParameterItemData(System.String)) for this call.
+- This Notify type is deprecated since DataMiner 10.3.4.

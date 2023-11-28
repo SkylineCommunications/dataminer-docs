@@ -568,6 +568,12 @@ When, in a dialog box of an interactive Automation script, you selected an item 
 
 When a row linked to a DVE child element was deleted, in some cases, standalone parameters belonging to another child of the same DVE parent element could be set to "Not Initialized".
 
+#### Problem with SLElement when an alarm template was assigned to an element or unassigned from an element while an alarm was being updated [ID_34813]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.1 -->
+
+When an alarm template was assigned to an element or unassigned from an element while an alarm was being updated, in some cases, an error could occur in SLElement.
+
 #### GQI: Filter operations would not be forwarded to the correct query when multiple data sources were joined [ID_34819]
 
 <!-- MR 10.2.0 [CU10] - FR 10.3.1 -->

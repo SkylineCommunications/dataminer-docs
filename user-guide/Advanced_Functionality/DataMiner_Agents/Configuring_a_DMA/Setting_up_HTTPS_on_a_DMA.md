@@ -69,7 +69,7 @@ To do so:
 > [!TIP]
 > See also:
 >
-> - [Securing the DataMiner web server](xref:Webserver_security)
+> - [Securing the DataMiner web server](xref:HTTP_Headers)
 > - [Disabling legacy SSL/TLS protocols](xref:Disabling_legacy_protocols)
 > - [TLS encryption in Cassandra](xref:Security_Cassandra_TLS)
 > - [Securing the Elasticsearch database](xref:Security_Elasticsearch)

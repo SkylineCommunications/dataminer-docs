@@ -30,7 +30,7 @@ The content and screenshots for this tutorial have been created in DataMiner 10.
 
 1. Drag and drop any of the above-mentioned components to the dashboard, for example a table.
 
-   ![Possible components](~/tutorials/images/PossibleComponents.png)
+![Possible components](~/user-guide/images/PossibleComponents.png)<br/>*DataMiner 10.3.11 with soft-launch options ReportsAndDashboardsScheduler and ReportsAndDashboardsDynamicVisuals enabled.*
 
 1. Add a query to the component.
 
@@ -42,10 +42,10 @@ Configure the message that should be shown when no data is received for the quer
 
 1. Under *Advanced*, set the *Empty result message* to the message you want the component to display when no data is returned for the query.
 
-   ![Text Field](~/tutorials/images/TextField.png)
+   ![Text Field](~/user-guide/images/TextField.png)
 
 The custom message will now be properly configured.
 
 The example above will result in the following message:
 
-![Custom message](~/tutorials/images/CustomMessage.png)
+![Custom message](~/user-guide/images/CustomMessage.png)

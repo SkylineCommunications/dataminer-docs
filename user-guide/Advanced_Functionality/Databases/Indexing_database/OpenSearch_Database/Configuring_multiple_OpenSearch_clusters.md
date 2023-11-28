@@ -80,11 +80,11 @@ To configure this setup, proceed as follows:
 
    - **Hosts**: The hosts of the cluster, separated by commas. This is the equivalent of the *DBServer* tag in the *DB.xml* file (see [Indexing database settings](xref:DB_xml#indexing-database-settings)).
 
-   - **Username**: The username that will be used to connect to OpenSearch. This is the equivalent of the *UID* tag in the *DB.xml* file.
+   - **Username**: The username that will be used to connect to OpenSearch. This is the equivalent of the *UID* tag in *DB.xml* (see [Specifying custom credentials for OpenSearch or Elasticsearch](xref:DB_xml#specifying-custom-credentials-for-opensearch-or-elasticsearch)).
 
-   - **Password**: The password that will be used to connect to OpenSearch. This is the equivalent of the *PWD* tag in the *DB.xml* file.
+   - **Password**: The password that will be used to connect to OpenSearch. This is the equivalent of the *PWD* tag in the *DB.xml* file (see [Specifying custom credentials for OpenSearch or Elasticsearch](xref:DB_xml#specifying-custom-credentials-for-opensearch-or-elasticsearch)).
 
-   - **Prefix**: The prefix for the OpenSearch indexes. This is the equivalent of the *DB* tag in the *DB.xml* file.
+   - **Prefix**: The prefix for the OpenSearch indexes. This is the equivalent of the *DB* tag in the *DB.xml* file (see [Specifying a custom prefix for the indexes](xref:DB_xml#specifying-a-custom-prefix-for-the-indexes)).
 
    - **FileOffloadIdentifier**: The string used to identify this connection. Each connection should have a different identifier, which will be used for file offloads.
 
@@ -116,7 +116,7 @@ To configure this setup, proceed as follows:
                <Hosts>10.11.1.44,10.11.2.44,10.11.3.44</Hosts>
                <Username />
                <Password>root</Password>
-               <Prefix>replica</Prefix>
+               <Prefix>dms</Prefix>
                <FileOffloadIdentifier>cluster2</FileOffloadIdentifier>
             </ElasticCluster>
          </ElasticConnections>
@@ -133,3 +133,14 @@ To configure this setup, proceed as follows:
 
 > [!TIP]
 > For troubleshooting information, see [Investigating OpenSearch issues](xref:Investigating_OpenSearch_Issues)
+
+## Troubleshooting
+
+During normal operation, DataMiner will offload the data written to both OpenSearch clusters simultaneously.
+
+If one of the clusters goes down, an error will be displayed in the Alarm Console to indicate that the indexing cluster is down: `All nodes in the indexing cluster are down` and/or `All nodes in the replicated indexing cluster [IP1, IP2,...] are down`.
+
+If this happens, you need to alter the *priorityOrder* (see above) so that the backup indexing cluster becomes active. Specifically, this means setting *priorityOrder="0"* where the *priorityOrder* used to be 1 and the other way around. After you have done so, restart DataMiner. This should restore DataMiner to a functional state.
+
+> [!IMPORTANT]
+> If the main OpenSearch cluster goes down, it will need to be restored afterwards. Make sure you have a backup set up to restore. To restore the backup, stop DataMiner completely and then restore the backup to the node that is out of sync. For more detailed information, see [Configuring OpenSearch backups](xref:Configuring_OpenSearch_Backups).

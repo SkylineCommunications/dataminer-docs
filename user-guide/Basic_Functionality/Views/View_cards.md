@@ -184,17 +184,17 @@ This page displays all alarms related to the view, in the default Alarm Console 
 
 ### REPORTS
 
-A graphic representation of the alarm distribution, alarm events and alarm states, as well as a heatmap for the view’s child items (on systems using a Cassandra database). You can set the period for which data are shown to the last 24 hours, one week to date, or one month to date.
+A graphic representation of the alarm distribution, alarm events and alarm states, as well as a heatmap for the view’s child items (on systems using [Storage as a Service](xref:STaaS) or a [self-hosted Cassandra-compatible database](xref:Supported_system_data_storage_architectures)). You can set the period for which data are shown to the last 24 hours, one week to date, or one month to date.
 
 > [!TIP]
 > See also: [Viewing the reports page on a card](xref:Viewing_the_reports_page_on_a_card)
 
 ### DASHBOARDS
 
-This page links to the legacy DMS Dashboards app
+This page links to the legacy DMS Dashboards module.
 
 > [!NOTE]
-> From DataMiner 10.2.0/10.1.12 onwards, the legacy Dashboards app can be disabled using the soft-launch option *LegacyReportsAndDashboards*. See [Soft-launch options](xref:SoftLaunchOptions).
+> The legacy Dashboards module is by default disabled from DataMiner 10.4.0/10.4.1 onwards.<!-- RN 37786 --> If you want to keep using this module, you need to enable it with the [*LegacyReportsAndDashboards* soft-launch option](xref:Overview_of_Soft_Launch_Options#legacyreportsanddashboards). Prior to this, starting from DataMiner 10.2.0/10.1.12, the legacy Dashboards module can optionally be disabled with this soft-launch option.
 
 ### AGGREGATION
 
@@ -250,4 +250,4 @@ On this page, you can add short notes to the view. For more information, see [Ca
 On this page, you can add, view and edit extensive annotations to the view. With the pencil icon on this page, you can open an HTML editor that allows you to add text, hyperlinks, pictures, etc. to the annotations. There is also an icon that can be used to print the annotations, and an icon to refresh the annotations page.
 
 > [!NOTE]
-> From DataMiner 10.2.0/10.1.12 onwards, annotations can be disabled using the soft-launch option *LegacyAnnotations*. See [Soft-launch options](xref:SoftLaunchOptions).
+> The Annotations module is by default disabled from DataMiner 10.4.0/10.4.1 onwards.<!-- RN 37786 --> If you want to keep using this module, you need to enable it with the [*LegacyAnnotations* soft-launch option](xref:Overview_of_Soft_Launch_Options#legacyannotations). Prior to this, starting from DataMiner 10.2.0/10.1.12, Annotations can optionally be disabled with this soft-launch option.

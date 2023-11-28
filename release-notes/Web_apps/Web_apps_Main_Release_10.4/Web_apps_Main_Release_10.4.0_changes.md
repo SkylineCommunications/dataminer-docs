@@ -486,6 +486,12 @@ Up to now, a column resizer would span across the entire height of the column. F
 
 Note that, while you dragging a resizer, its height will be equal to that of the entire column you are resizing.
 
+#### Dashboards app: Components will now only show skeleton loading during the initial load [ID_37274]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+Up to now, some components would show skeleton loading until after the data had been loaded. From now on, those components will only show skeleton loading during the initial load.
+
 #### Dashboards app/Low-Code Apps - Visual Overview component: Initial visual overview data will now be retrieved asynchronously [ID_37341]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
@@ -884,3 +890,9 @@ The feed linker would no longer automatically select the feed type when there wa
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
 When, in the *Monitoring* app, you selected an element or a service, and navigated to another visual overview page, a `Cannot convert null to a value type` error would be thrown.
+
+#### Low-Code Apps: No longer possible to edit a newly created app after refreshing one of its pages [ID_37425]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When you had created and published an app with at least one component, it would no longer be possible to edit it after refreshing one of its pages.
