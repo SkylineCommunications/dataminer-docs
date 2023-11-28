@@ -120,7 +120,7 @@ In the *Tools* tab, you can add new layers to the template. Each tool in the *To
 
 With the *Settings* pane to the right side of the preview, you can change the settings for the entire template and the different layers. The preview is then immediately updated according to the changes.
 
-- To modify the **template settings**, make sure no layers are selected. In the *Settings* pane, you can specify a number of pixels to which the width and/or height of the template will be fixed.
+- To modify the **template settings**, make sure no layers are selected. In the *Settings* pane, you can specify the width and/or height of the template in pixels.
 
 - To modify the **layer settings**, make sure a layer is selected. In the *Settings* pane, you can adjust the following layer settings in three collapsible sections:
 
@@ -136,18 +136,18 @@ The table below describes the dimension settings available for template layers<!
 
 | Icon | Setting | Description |
 |--|--|--|
-| ![Width](~/user-guide/images/Dimensions_Width.png) | Width | Specify a number of pixels to which the width of the layer will be fixed. This value should be lower than or equal to the width of the overall template. |
-| ![Height](~/user-guide/images/Dimensions_Height.png) | Height | Specify a number of pixels to which the height of the layer will be fixed. This value should be lower than or equal to the height of the overall template. |
-| ![Top](~/user-guide/images/Dimensions_Top.png) | Top | Specify a number of pixels to which the top of the layer will be fixed. This value should be lower than the height of the overall template. |
-| ![Bottom](~/user-guide/images/Dimensions_Bottom.png) | Bottom | Specify a number of pixels to which the bottom of the layer will be fixed. This value should be lower than the height of the overall template. |
-| ![Left](~/user-guide/images/Dimensions_Left.png) | Left | Specify a number of pixels to which the left of the layer will be fixed. This value should be lower than the width of the overall template. |
-| ![Right](~/user-guide/images/Dimensions_Right.png) | Right | Specify a number of pixels to which the right of the layer will be fixed. This value should be lower than the width of the overall template. |
+| ![Width](~/user-guide/images/Dimensions_Width.png) | Width | Specify the width of the layer (in pixels or percent). This value should be lower than or equal to the width of the overall template. |
+| ![Height](~/user-guide/images/Dimensions_Height.png) | Height | Specify the height of the layer (in pixels or percent). This value should be lower than or equal to the height of the overall template. |
+| ![Top](~/user-guide/images/Dimensions_Top.png) | Top | Specify the location of the top of the layer (in pixels or percent). This value should be lower than the height of the overall template. |
+| ![Bottom](~/user-guide/images/Dimensions_Bottom.png) | Bottom | Specify the location of the bottom of the layer (in pixels or percent). This value should be lower than the height of the overall template. |
+| ![Left](~/user-guide/images/Dimensions_Left.png) | Left | Specify the location of the left edge of the layer (in pixels or percent). This value should be lower than the width of the overall template. |
+| ![Right](~/user-guide/images/Dimensions_Right.png) | Right | Specify the location of the right edge of the layer (in pixels or percent). This value should be lower than the width of the overall template. |
 
 > [!NOTE]
 >
-> - In the preview, when you use the drag-and-drop functionality to move a layer, or when you resize a layer by dragging the frame edges, the dimension settings in the *Settings* pane will automatically adjust.
-> - You can change the unit to percentages by clicking *px* next to the dimension values.
-> - You can secure one or multiple dimension settings of a layer by clicking the ![*Lock*](~/user-guide/images/Dimensions_Lock.png) button next to the chosen setting. This lock functionality enhances the security of your design, preserving your template's intended appearance, especially when dealing with variable widths and heights. For example, when adjusting a table column width, you may want to maintain specific proportions. Once a setting is locked, any attempt to override the specified dimension will be restricted. This includes moving or resizing the layer in the preview and adjusting the component size in the dashboard or low-code app edit mode (e.g. changing the size of a table column). The locked dimensions ensure the template remains in its designated position. If you are unable to lock a dimension setting because of the locking of other settings, it will appear grayed out.
+> - In the preview, when you use the drag-and-drop functionality to move a layer, or when you resize a layer by dragging the frame edges, the dimension settings in the *Settings* pane will automatically be adjusted.
+> - You can change the unit to percent by clicking *px* next to the dimension values.
+> - You can secure one or multiple dimension settings of a layer by clicking the ![*Lock*](~/user-guide/images/Dimensions_Lock.png) icon next to the chosen setting. This lock functionality enhances the security of your design, preserving your template's intended appearance, especially when dealing with variable widths and heights. For example, when adjusting a table column width, you may want to maintain specific proportions. Once a setting is locked, any attempt to override the specified dimension will be restricted. This includes moving or resizing the layer in the preview and adjusting the component size in the dashboard or low-code app edit mode (e.g. changing the size of a table column). The locked dimensions ensure that the template remains in its designated position. If you are unable to lock a dimension setting because of the locking of other settings, the lock icon will be grayed out.
 > - For some layers, the width and height is determined by the left and right position and can therefore not be modified.
 
 ### Specifying layer properties
@@ -156,16 +156,16 @@ Depending on the type of layer, you can specify different layer properties in th
 
 - For *Icon* layers, you can specify the following properties:
 
-  - *Show icon*: Allows you to mask the layer, rendering it temporarily invisible. If disabled, the layer is still visible in the preview with lowered opacity, but will not be visible in the template's end result.
+  - *Show icon*: Allows you to mask the layer, rendering it temporarily invisible. If disabled, the layer is still visible in the preview with lowered opacity, but it will not be visible in the template's end result.
 
-  - *Color*: Allows you to specify a custom icon color, either by specifying the color in RGB format, by entering the Hex value or HTML color name, or by using the color picker box.
+  - *Color*: Allows you to specify a custom icon color, either by specifying the color in RGB format, by entering the hex value or HTML color name, or by using the color picker box.
 
-    ![RGB or Hex or HTML](~/user-guide/images/Color_RGB_Hex_HTML.png)<br/>*Template Editor in DataMiner 10.4.1*
+    ![RGB or hex or HTML](~/user-guide/images/Color_RGB_Hex_HTML.png)<br/>*Template Editor in DataMiner 10.4.1*
 
     > [!TIP]
     > For a full overview of all HTML color names, see [HTML Color Names](https://www.w3schools.com/tags/ref_colornames.asp).
 
-  - *Icon*: Allows you to select any of the available icons from the dropdown list, or search for a specific icon using the search bar functionality.
+  - *Icon*: Allows you to select any of the available icons from the dropdown list. You can search for a specific icon using the filter box at the top.
 
   - *Configure actions*: Allows you to configure actions that are executed when a user clicks the icon. Only available for DataMiner Low-Code Apps<!--RN 34761-->.
 
@@ -174,9 +174,9 @@ Depending on the type of layer, you can specify different layer properties in th
 
 - For *Text* layers, you can specify the following properties:
 
-  - *Show text*: Allows you to mask the layer, rendering it temporarily invisible. If disabled, the layer is still visible in the preview with lowered opacity, but will not be visible in the template's end result.
+  - *Show text*: Allows you to mask the layer, rendering it temporarily invisible. If disabled, the layer is still visible in the preview with lowered opacity, but it will not be visible in the template's end result.
 
-  - *Text box*: Allows you to enter a custom text. You can add formatting to your text using HTML text formatting. To insert the corresponding cell value inside your text, enter the column name surrounded by curly brackets, i.e. `{column name}`.
+  - *Text box*: Allows you to enter custom text. HTML text formatting is supported, and you can enter a column name surrounded by curly brackets (e.g. `{my column}`) to insert the corresponding cell value inside your text.
 
     ![HTML text formatting](~/user-guide/images/HTML_Text_Formatting.png)<br/>*Template Editor in DataMiner 10.4.1*
 
@@ -188,9 +188,9 @@ Depending on the type of layer, you can specify different layer properties in th
     | Icon | Setting | Description |
     |--|--|--|
     | ![Font size](~/user-guide/images/Text_Font_Size.png) | Font size | Specify the size (in pixels) of the text. |
-    | ![Color](~/user-guide/images/Text_Color.png) | Color | Specify a custom text color, either by specifying the color in RGB format, by entering the Hex value or HTML color name, or by using the color picker box.|
+    | ![Color](~/user-guide/images/Text_Color.png) | Color | Specify a custom text color, either by specifying the color in RGB format, by entering the hex value or HTML color name, or by using the color picker box.|
     | ![Border radius](~/user-guide/images/Text_Roundness.png) | Border radius | Specify the roundness (in pixels) of the background color that can be displayed behind the text (optionally). |
-    | ![Background color](~/user-guide/images/Text_Background_Color.png) | Background color | Specify a custom background color, either by specifying the color in RGB format, by entering the Hex value or HTML color name, or by using the color picker box. |
+    | ![Background color](~/user-guide/images/Text_Background_Color.png) | Background color | Specify a custom background color, either by specifying the color in RGB format, by entering the hex value or HTML color name, or by using the color picker box. |
     | ![Horizontal padding](~/user-guide/images/Text_Horizontal_Padding.png) | Horizontal padding | Specify the amount of space (in pixels) that should be left free above the text. |
     | ![Vertical padding](~/user-guide/images/Text_Vertical_Padding.png) | Vertical padding | Specify the amount of space (in pixels) that should be left free underneath the text. |
     | ![Horizontal alignment](~/user-guide/images/Text_Horizontal_Alignment.png) | Horizontal alignment | Left, center, right, or justify. |
@@ -198,9 +198,9 @@ Depending on the type of layer, you can specify different layer properties in th
 
 - For *Rectangle* layers, you can specify the following properties:
 
-  - *Show rectangle*: Allows you to mask the layer, rendering it temporarily invisible. If disabled, the layer is still visible in the preview with lowered opacity, but will not be visible in the template's end result.
+  - *Show rectangle*: Allows you to mask the layer, rendering it temporarily invisible. If disabled, the layer is still visible in the preview with lowered opacity, but it will not be visible in the template's end result.
 
-  - *Color*: Allows you to specify a custom color for the rectangle, either by specifying the color in RGB format, by entering the Hex value or HTML color name, or by using the color picker box.
+  - *Color*: Allows you to specify a custom color for the rectangle, either by specifying the color in RGB format, by entering the hex value or HTML color name, or by using the color picker box.
 
     > [!TIP]
     > For a full overview of all HTML color names, see [HTML Color Names](https://www.w3schools.com/tags/ref_colornames.asp).
@@ -218,9 +218,9 @@ Depending on the type of layer, you can specify different layer properties in th
 
 - For *Ellipse* layers, you can specify the following properties:
 
-  - *Show ellipse*: Allows you to mask the layer, rendering it temporarily invisible. If disabled, the layer is still visible in the preview with lowered opacity, but will not be visible in the template's end result.
+  - *Show ellipse*: Allows you to mask the layer, rendering it temporarily invisible. If disabled, the layer is still visible in the preview with lowered opacity, but it will not be visible in the template's end result.
 
-  - *Color*: Allows you to specify a custom color for the ellipse, either by specifying the color in RGB format, by entering the Hex value or HTML color name, or by using the color picker box.
+  - *Color*: Allows you to specify a custom color for the ellipse, either by specifying the color in RGB format, by entering the hex value or HTML color name, or by using the color picker box.
 
     > [!TIP]
     > For a full overview of all HTML color names, see [HTML Color Names](https://www.w3schools.com/tags/ref_colornames.asp).
@@ -255,19 +255,19 @@ To add a condition:
 
 1. When you have chosen a state, select *Yes* or *No*.
 
-   - Yes: The action executes only when the element is in the specified state.
+   - *Yes*: The action is only executed when the element is in the specified state.
 
-   - No: The action executes only when the element is not in the specified state.
+   - *No*: The action is only executed when the element is not in the specified state.
 
 1. When you have chosen a column, provide the necessary details based on the column type.
 
    Some examples:
 
-   - Element name: The action executes only when the element name matches this entry.
+   - Element name: The action is only executed when the element name matches this entry.
 
-   - Parameter description: The action executes only when the parameter description matches this entry.
+   - Parameter description: The action is only executed when the parameter description matches this entry.
 
-   - Root time: The action executes only when the current time aligns with the specified timestamp.
+   - Root time: The action is only executed when the current time aligns with the specified timestamp.
 
      - `= dd/MM/yyyy hh:mm`: The root time matches the specified timestamp.
 
@@ -279,42 +279,48 @@ To add a condition:
 
      - `≤ dd/MM/yyyy hh:mm`: The root time occurs at or before the specified upper bound.
 
-1. Enable or disable the toggle button next to `Show [tool-type]`. If enabled, the selected tool is shown if the conditions are met. If disabled, the selected tool is hidden if the conditions are met.
+1. Enable or disable the toggle button next to `Show [tool-type]`:
 
-1. If you chose to show the tool in the previous step, optionally change the look of the tool when the conditions are met. Depending on the type of layer and the type of component, the following options may be available:
+   - If this is enabled, the selected tool is shown if the conditions are met.
+
+   - If this is disabled, the selected tool is hidden if the conditions are met.
+
+1. If you chose to show the tool in the previous step, optionally change the look of the tool when the conditions are met.
+
+   Depending on the type of layer and the type of component, the following options may be available:
 
    - *Icon* layer:
 
-     - *Color*: Allows you to select a color for the tool, either by specifying the color in RGB format, by entering the Hex value or HTML color name, or by using the color picker box.
+     - *Color*: Allows you to select a color for the tool, either by specifying the color in RGB format, by entering the hex value or HTML color name, or by using the color picker box.
 
-     - *Icon*: Allows you to select a new icon from the dropdown list, or search for a specific icon using the search bar functionality.
+     - *Icon*: Allows you to select a new icon from the dropdown list. You can search for a specific icon using the filter box at the top.
 
    - *Text* layer:
 
-     - *Text*: Allows you to enter a custom text. You can add formatting to your text using HTML text formatting.
+     - *Text*: Allows you to enter custom text. HTML text formatting is supported.
 
        > [!TIP]
        > For more information on formatting elements designed to display special types of text, see [HTML Text Formatting](https://www.w3schools.com/html/html_formatting.asp).
 
      - *Font size*: Allows you to set the font size.
 
-     - *Text color*: Allows you to select a text color, either by specifying the color in RGB format, by entering the Hex value or HTML color name, or by using the color picker box.
+     - *Text color*: Allows you to select a text color, either by specifying the color in RGB format, by entering the hex value or HTML color name, or by using the color picker box.
 
      - *Border radius*: Allows you to specify the roundness (in pixels) of the background color that can be displayed behind the text (optionally).
 
-     - *Background*: Allows you to specify a custom background color, either by specifying the color in RGB format, by entering the Hex value or HTML color name, or by using the color picker box.
+     - *Background*: Allows you to specify a custom background color, either by specifying the color in RGB format, by entering the hex value or HTML color name, or by using the color picker box.
 
      - *Horizontal padding*: Allows you to specify the amount of space (in pixels) that should be left free above the text.
 
      - *Vertical padding*: Allows you to specify the amount of space (in pixels) that should be left free underneath the text.
 
-     - *Text alignment*: Allows you to choose between the available horizontal alignment options (Left, center, right, or justify).
+     - *Text alignment*: Determines the horizontal alignment (left, center, right, or justify).
 
-     - *Vertical alignment*: Allows you to choose between the available vertical alignment options (Top, center, or bottom).
+     - *Vertical alignment*: Determines the vertical alignment (top, center, or bottom).
 
    - *Rectangle* layer:
 
-     - *Color*: Allows you to select a color for the tool, either by specifying the color in RGB format, by entering the Hex value or HTML color name, or by using the color picker box.
+     - *Color*: Allows you to select a color for the tool, either by specifying the color in RGB format, by entering the hex value or HTML color name, or by using the color picker box.
 
      - *Border radius*: Allows you to specify the roundness (in pixels) of the background color that can be displayed behind the text (optionally).
 
@@ -324,7 +330,7 @@ To add a condition:
 
    - *Ellipse* layer:
 
-     - *Color*: Allows you to select a color for the tool, either by specifying the color in RGB format, by entering the Hex value or HTML color name, or by using the color picker box.
+     - *Color*: Allows you to select a color for the tool, either by specifying the color in RGB format, by entering the hex value or HTML color name, or by using the color picker box.
 
    > [!TIP]
    > For a full overview of all HTML color names, see [HTML Color Names](https://www.w3schools.com/tags/ref_colornames.asp).
@@ -337,21 +343,21 @@ To add a condition:
    > [!TIP]
    > For more information on how to configure these actions, see [Configuring low-code app events](xref:LowCodeApps_event_config).
 
-1. If you want to add another condition, go back to step 1 and repeat the steps until you are finished.
+1. If you want to add another condition, go back to step 1 and repeat the steps until all the necessary conditions have been added.
 
-Example:
+#### Example
 
-If you configure the following conditional case:
+This is a possible conditional case configuration:
 
 ![Conditional case](~/user-guide/images/Conditional_Case.png)<br/>*Template Editor in DataMiner 10.4.1*
 
-The end result behavior will be:
+This is the behavior that will result from this configuration:
 
-![Conditional case behavior](~/user-guide/images/Conditional_Case.gif)<br/>*Template Editor in DataMiner 10.4.1*
+![Conditional case behavior](~/user-guide/images/Conditional_Case.gif)<br/>*Grid component in DataMiner 10.4.1*
 
 ## Reusing a template
 
-You can reuse a template if you have already configured a template for a component of the same type in the same dashboard or low-code app you are working on<!--RN 34948-->.
+If you have already configured a template for a component of the same type in the same dashboard or low-code app you are working on, you can reuse a template.<!--RN 34948-->
 
 1. Navigate to *Layout > Item templates* and click *Reuse template*.
 
