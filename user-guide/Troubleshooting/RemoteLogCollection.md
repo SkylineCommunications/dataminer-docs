@@ -16,9 +16,15 @@ To use this feature, your system needs to meet the following requirements:
 
 - Your system must be connected to dataminer.services. For information on how to connect, see [Connecting your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
-- Cloud Pack version 2.8.1 or later must be installed **on all DataMiner Agents** from which logs need to be collected. You can always find the latest Cloud Pack on [DataMiner Dojo](https://community.dataminer.services/downloads/).
+- Port **5100** must be open for traffic on the **internal network** for the remote log collection to work. For more information on this endpoint, see [Customizing the dataminer.services endpoint configuration](xref:Custom_cloud_endpoint_configuration).
+
+- The correct versions of specific DxMs must be running on the DataMiner Agents:
+
+  - **All DataMiner Agents** in the system need both **Orchestrator 1.4.0** or higher and **SupportAssistant 1.5.3** or higher.
+
+  - DataMiner Agents with **internet access** (or proxy or DMZ server) also need to use **CloudGateway 2.12.3** or higher.
+
+  The easiest way to install these DxMs is to upgrade all DataMiner Agents to **DataMiner 10.3.12/10.4.0** or higher and install the **Cloud Pack 3.1.5** or higher on the DataMiner Agents with internet access.
 
    > [!NOTE]
-   > If you install the Cloud Pack on additional DataMiner Agents that **do not allow network traffic** towards `*.dataminer.services`, after the installation, **uninstall DataMiner CloudGateway** on those Agents. See [uninstalling a program in Windows](https://support.microsoft.com/en-us/windows/uninstall-or-remove-apps-and-programs-in-windows-4b55f974-2cc6-2d2b-d092-5905080eaf98).
-
-- Port **5100** must be open for traffic on the **internal network** for the remote log collection to work. For more information on this endpoint, see [Customizing the dataminer.services endpoint configuration](xref:Custom_cloud_endpoint_configuration).
+   > If your DMS is already connected to dataminer.services, you can also [update the DxMs via the Admin app](xref:Managing_cloud-connected_nodes#upgrading-nodes-to-the-latest-dxm-versions), **except if your DMS contains one or more DMAs with internet access that have multiple NICs**. For systems with such DMAs, DataMiner 10.3.12/10.4.0 or higher is required, along with the Cloud Pack 3.1.5 or higher on DMAs with internet access. Alternatively, instead of upgrading to DataMiner 10.3.12/10.4.0, you can install the Cloud Pack 3.1.5 or higher on all DMAs and then afterwards uninstall CloudGateway and CloudFeed on the DMAs that do not have internet access. See [uninstalling a program in Windows](https://support.microsoft.com/en-us/windows/uninstall-or-remove-apps-and-programs-in-windows-4b55f974-2cc6-2d2b-d092-5905080eaf98).
