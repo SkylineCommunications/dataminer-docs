@@ -4,29 +4,46 @@ uid: Tutorial_Apps_Style_A_Table
 
 # Styling an order arrival table
 
-This tutorial demonstrates how we can style an order arrival table in a Low-Code App.
+This tutorial demonstrates how you can style an order arrival table in a low-code app.
 
-The content and screenshots for this tutorial have been created in DataMiner 10.4.-
+Expected duration: ** minutes.
+
+> [!TIP]
+> See also: [Using the Template Editor](xref:Template_Editor)
+
+> [!NOTE]
+> This tutorial uses DataMiner version 10.4.1.
+
+## Prerequisites
+
+- DataMiner 10.4.1/10.5.0 or higher.
+
+- Download the JSON reader [from Github](https://github.com/SkylineCommunications/SLC-GQIDS-JsonReader), or deploy it directly to your DataMiner System via the [Catalog](https://catalog.dataminer.services/catalog/5491).
+
+  > [!TIP]
+  > Deploying a package is very similar to deploying a DataMiner connector. See [Deploying a DataMiner connector to your system](xref:Deploying_A_DataMiner_Connector_to_your_system).
 
 ## Overview
 
-- [Step 1: Configure the query and add a table component to the dashboard](#step-1-configure-the-query-and-add-a-table-component-to-the-dashboard)
-- [Step 2: Create an order hyperlink](#step-2-create-an-order-hyperlink)
-- [Step 3: Style the 'created' column](#step-3-style-the-created-column)
-- [Step 4: Style the Fullfilment column with some conditional coloring](#step-4-style-the-fullfilment-column-with-some-conditional-coloring)
-- [Step 5: Adding a Table column to show which row is currently selected](#step-5-adding-a-table-column-to-show-which-row-is-currently-selected)
-- [Step 6: Adding a context menu](#step-6-adding-a-context-menu)
+- [Step 1: Configure the query](#step-1-configure-the-query)
 
-## Step 1: Configure the query and add a table component to the dashboard  
+- [Step 2: Add a table component](#step-2-add-a-table-component)
 
-In this tutorial, an [ad hoc data source](xref:Get_ad_hoc_data) is used, which can retrieve data from a JSON file.
+- [Step 3: Configure a hyperlink](#step-3-configure-a-hyperlink)
 
-1. Download the JSON reader [from Github](https://github.com/SkylineCommunications/SLC-GQIDS-JsonReader), or deploy it directly to your DataMiner System via the [Catalog](https://catalog.dataminer.services/catalog/5491).
+- [Step 4: Style the 'created' column](#step-4-style-the-created-column)
 
-   > [!TIP]
-   > Deploying a package is very similar to deploying a DataMiner connector. See [Deploying a DataMiner connector to your system](xref:Deploying_A_DataMiner_Connector_to_your_system).
+- [Step 5: Add conditional coloring to the 'Fulfillment' column](#step-5-add-conditional-coloring-to-the-fulfillment-column)
 
-1. Add the following data to a JSON file named `Orders.json` and put it in this location: `C:\Skyline DataMiner\Documents\GQI data sources\Orders`
+- [Step 6: Add a table column that indicates which row is selected](#step-6-add-a-table-column-that-indicates-which-row-is-selected)
+
+- [Step 7: Add a context menu](#step-7-add-a-context-menu)
+
+## Step 1: Configure the query
+
+In this tutorial, you will use an [ad hoc data source](xref:Get_ad_hoc_data), which can retrieve data from a JSON file.
+
+1. Add the following data to a JSON file.
 
    ```json
    {
@@ -326,124 +343,264 @@ In this tutorial, an [ad hoc data source](xref:Get_ad_hoc_data) is used, which c
    }
    ```
 
-- The query can now be created using this data source. Create a new app and add a new query to it. Select 'Get ad hoc data', in the Data source dropdown, select 'JSON Reader' and in the File dropdown select 'Orders\Orders.json'.
+1. Save the file under the name *Orders.json* in the *C:\Skyline DataMiner\Documents\GQI data sources* folder.
 
-    ![Query](~/user-guide/images/OrdersQuery.png).
+## Step 2: Add a table component
 
-- Drag and drop a table component on the App page.
+You can now create the query using the *Orders.json* file as the data source.
 
-- Drag the query on the component.
+1. Create a new low-code app. See [Creating low-code applications](xref:Creating_custom_apps).
 
-    ![Default unstyled table](~/user-guide/images/DefaultTable.png)
+1. In the data pane, select *Queries* and click the + icon to add a new query.
 
-## Step 2: Create an order hyperlink
+1. Give the query a name, e.g. "Orders".
 
-For the first column we want to make the Order ID a clickable link that opens a webpage in a new tab.
+1. In the dropdown box, select *Get ad hoc data*.
 
-- To change the layout for this column, select the table component, go to the *Layout* tab on the right side of the Application. And then go to the *Column Appearance* section.
+1. Select *JSON Reader* from the *Data source* dropdown list.
 
-- Select the Order ID column in the dropdown. And select the hyperlink preset by clicking on the already set 'Left' template.
+1. Select *Orders.json* from the *Filter* dropdown list.
 
-    ![Selecting hyperlink preset](~/user-guide/images/SelectingHyperlinkPreset.gif)
+   ![Query](~/user-guide/images/OrdersQuery.png).
 
-- Since the template already has most of the things we want, we can just change the action that happens when clicking on the hyperlink. To do this, we need to open the template editor by clicking on the ![More button](~/user-guide/images/MoreButton.png) and selecting 'Customize preset'.
+1. Drag the ad hoc data feed onto an empty section of the low-code app page.
 
-- In the template editor, on an icon, rectangle and ellipse we can add an action. Since we want the hyperlink to open when we click on the Order ID cell, we need to have an (invisible) rectangle we can configure this action on. Since we used the preset, this rectangle is already there. We just need to configure the action. Select the rectangle and click on the 'Configure Actions' button.
+1. Hover the mouse pointer over the component and click the ![Visualizations](~/user-guide/images/DashboardsX_visualizations00095.png) icon.
 
-    ![Configure action](~/user-guide/images/ConfigureAction.png)
+1. Choose the [table](xref:DashboardTable) visualization.
 
-- On the popup that now appears, we can configure actions that happen when clicking the rectangle. For this tutorial we'll just open google and search the clicked ID. To do this, we just need to change the already present 'Navigate to a URL' action to the correct link.
+   ![Default unstyled table](~/user-guide/images/DefaultTable.png)
 
-    ![Configure action URL](~/user-guide/images/ConfigureActionPopup.png)
+## Step 3: Configure a hyperlink
 
-With this configured. We can save everything by pressing 'Ok' and then 'Save' on the template editor. When the app is now publish, the result will be that when clicking on the Order ID, a new tab will open with the google search results for the Order ID.
+Now that the table component is set up, make it so that the first table column, *Order ID*, is configured to open a webpage in a new tab when clicked.
 
-## Step 3: Style the 'created' column
+1. Make sure the table component is selected, and navigate to *Layout > Column Appearance*.
 
-For the second column we just want to center the date, make the text bold and change the text color.
+1. Select *Order ID* from the dropdown list.
 
-- Repeat 1 and 2 from the previous step for the 'Created' column. Instead of selecting the hyperlink preset, select the 'Center' preset.
+   A preview of the column's appearance is displayed. By default, this is set to *Left*.
 
-    ![Center Preset](~/user-guide/images/CenterPreset.png)
+1. Click the preview and select *Hyperlink* from the list of available presets.
 
-- Alter this preset by clicking '...' and selecting 'Customize preset'.
+   ![Selecting hyperlink preset](~/user-guide/images/SelectingHyperlinkPreset.gif)
 
-- To make text bold we can use a HTML tag. In the template editor, put a \<b> element in front of {Created} and add \</b> at the end.
+1. To specify the webpage this hyperlink redirects to, configure an action in the Template Editor.
 
-    ![Bold text](~/user-guide/images/BoldText.png)
+   > [!TIP]
+   > In the Template Editor, you can configure actions for icon, rectangle, and ellipse layers. For more information, see [Specifying layer properties](xref:Template_Editor#specifying-layer-properties)
 
-- To change the text color, in the right sidebar we can change it using the color picker. Don't forget to click Apply to confirm the change.
+   1. In the *Column Appearance* settings, click the ellipsis button ("...") and select *Customize preset* to open the Template Editor.
 
-    ![Change text color](~/user-guide/images/ChangeTextColor.png)
+   1. In the *Layers* tab, select the rectangle layer and click *Configure actions* in the *Settings* pane.
 
-- With this configured. We can save everything by pressing 'Save' on the template editor.
+      > [!TIP]
+      > You can recognize the type of layer by the symbol displayed in the lower left corner. For a rectangle layer, a rectangle icon is displayed.
 
-Repeat this for the Profit column to give it some styling too.
+      ![Configure action](~/user-guide/images/ConfigureAction.png)
 
-## Step 4: Style the Fullfilment column with some conditional coloring
+      Because you used the *Hyperlink* preset option, a [*Navigate to a URL* action](xref:LowCodeApps_event_config#navigating-to-a-url) is already configured that redirects the user to `http(s)://[DMA name]/{Order ID}` when they click the shape.
 
-For this column we want to apply some conditional colors depending on the value of the column.
+   1. To edit this hyperlink, expand the configuration section by clicking the sideward arrow. Replace the URL with the following link: `https://www.google.com/search?q={Order ID}`.
 
-- Add the 'Fullfilment' column to the column appearance section of the table component. For this one we'll start from the already selected 'Left' preset. and open the template editor
+      ![Configure action URL](~/user-guide/images/ConfigureActionPopup.png)
 
-- Since we want to add conditional coloring, We need to add some Horizontal and vertical padding to the text. This way we can add a background color to the text. This can be done in the right sidebar by changing the padding values.
+   1. To save the new hyperlink, click *Ok* in the lower right corner.
 
-    ![Add padding](~/user-guide/images/AddPadding.png)
+   1. To save all changes, click *Save* in the lower right corner of the Template Editor.
 
-- We can now add conditional overrides to change the background color of the text. To do this, in the right sidebar, under the 'Conditional cases' section, click on the 'Add case' button.
+      Now, when you click a table cell in the *Order ID* column, a google search page is opened with results for that order ID.
 
-- Since we want to change the color depending on the value of the cell, in the 'When condition' dropdown, we can select the 'Fullfillment' column. In the text field we can enter the value we want to apply this conditional override to. Let's start with 'Pending Receipt'.
+## Step 4: Style the 'created' column
 
-    ![Add conditional override](~/user-guide/images/AddConditionalOverride.gif)
+For the second column, *Created*, ensure a more visually appealing styling by centering the date, making the text bold, and changing the text color.
 
-- Now we can change what happens to the text when this 'Case' is true. We first off al want the text to be shown, so we can toggle 'Show text' to true. Then we can click on the 'Background' button to override this setting. Open the picker again to choose an override color. Let's go with purple. Don't forget to change the opacity to 100%.
+1. Make sure the table component is selected, and navigate to *Layout > Column Appearance*.
 
-    ![Override background color](~/user-guide/images/OverrideBackgroundColor.png)
+1. Select *Created* from the dropdown list.
 
-- Add conditional overrides for 'Fulfilled' and 'Unfullfilled' as well. For 'Fulfilled' we'll use green and for 'Unfulfilled' we'll use red.
+   A preview of the column's appearance is displayed. By default, this is set to *Right*.
 
-    ![Other overrides](~/user-guide/images/OtherConditionalBackgroundOverrides.png)
+1. Click the preview and select *Center* from the list of available presets.
 
-Repeat this step for the Status column to give it some conditional coloring as well.
+   ![Center Preset](~/user-guide/images/CenterPreset.png)
 
-## Step 5: Adding a Table column to show which row is currently selected
+1. Click the ellipsis button ("...") and select *Customize preset* to open the Template Editor.
 
-For this step we'll add a column that shows which row is currently selected using an icon. We'll first use GQI to add a new column and then style it using the template editor.
+1. In the *Layers* tab, select the text layer.
 
-- To first start with this we'll need to add a row to the table component. We can do so by using the 'Column manipulations' operator and using the 'Concatenate' manipulation method. We can choose any column to concatenate, since we'll just change the template later on. For the purpose of this tutorial we'll choose the 'Order ID' column.
-Format like this `{0}` and just put a space in the 'New column name' field.
+1. In the *Properties* section of the *Settings* pane on the right side of the preview, enclose the text by HTML \<b> elements to signify bold text.
 
-    ![Concatenate](~/user-guide/images/ConcatenateGQIOperator.png)
+1. To modify the text color, use the color picker box and select *Apply*.
 
-- Our new column has now been added to the right side of the table. We can move it to the left side by using the 'Select' operator. Hover over the new column and click the pointer arrows on the right hand side to move it to the top of the list.
+   ![Change text color](~/user-guide/images/ChangeTextColor.png)
 
-    ![Select](~/user-guide/images/SelectGQIOperator.png)
+1. To save all changes, click *Save* in the lower right corner of the Template Editor.
 
-- Let's now style this column! We'll start by adding this column to the column appearance section of the table component. For this one we'll start from the icon preset (i). Open the template editor.
+1. Optionally, you can repeat these steps for the *Profit* column to apply similar styling.
 
-- First change the height of the table rows. This can be done  by changing the height of the template. To do this, make sure no layer is selected by clicking next to the template in the center and then change the height in the right sidebar.
+## Step 5: Add conditional coloring to the 'Fulfillment' column
 
-    ![Change template height](~/user-guide/images/ChangeTemplateHeight.png)
+For the fourth column, *Fulfillment*, we want to add conditional coloring, dependent on the value of the column.
 
-- Let's change this icon to a checkmark. We can do this by selecting the icon and then changing the icon in the right sidebar. Rescale the icon so it fits the template nicely.
+1. Make sure the table component is selected, and navigate to *Layout > Column Appearance*.
 
-    ![Change icon](~/user-guide/images/ChangeIcon.png)
+1. Select *Fulfillment* from the dropdown list.
 
-- We can now add a conditional override to make the checkmark green when the row is selected. To do this, in the right sidebar, under the 'Conditional cases' section, click on the 'Add case' button. In the conditions select 'State - Is Selected', check 'Yes', show the icon and change the color to green.
+   A preview of the column's appearance is displayed. By default, this is set to *Left*.
 
-    ![Add conditional override](~/user-guide/images/AddConditionalColorOverride.png)
+1. Click the ellipsis button ("...") and select *Customize preset* to open the Template Editor.
 
-## Step 6: Adding a context menu
+1. In the *Layers* tab, select the text layer.
 
-Let's add a context menu to this table. First add another icon to the template from the previous step. We'll use the 'More' icon. Rescale it so it fits the template nicely.
+1. In the *Properties* section of the *Settings* pane on the right side of the preview, change the horizontal padding to 10 px and the vertical padding to 2 px.
 
-![Add context menu icon](~/user-guide/images/AddContextMenuIcon.png)
+   ![Add padding](~/user-guide/images/AddPadding.png)
 
-- Opening a context menu is an action we can add on the icon. To do this, in the right sidebar, under the properties dropdown click 'Configure actions'. On the popup that now appears, we can configure actions that happen when clicking the icon. To do this, click on the 'No action' dropdown and select 'Show context menu'. The menu to add a context menu now appears. In this menu we can configure items to put in the context menu. On each item all actions available in 'Low Code Apps' can be executed when clicking (Launch a script, navigate to a URL, Open a page, ...).
+   By adjusting these padding settings, you can now add a clearly visible background color.
 
-    ![ContextMenu menu](~/user-guide/images/ContextMenuMenu.png)
+1. In the *Conditional cases* section of the *Settings* pane, click *Add case*.
 
-- Let's add a 'Calculate percentage profit' button to the context menu where we divide the 'profit' column with the 'total' column, We'll just use google and search the division to show the result. On the left side on the menu we can first add an icon to the item. We'll use a calculator icon for this tutorial. After that we can add a name to the item. Let's pick 'Calculate percentage profit'
+1. Select *Fulfillment* from the dropdown list.
+
+1. Enter "Pending Receipt" in the *Filter* text box.
+
+   ![Add conditional override](~/user-guide/images/AddConditionalOverride.gif)
+
+   The configured action will now only be executed when the value in the *Fulfillment* column is set to *Pending Receipt*.
+
+1. To configure what will happen to the text when the item meets the condition, follow these steps:
+
+   1. Enable *Show text*.
+
+   1. Click *Background* and use the color picker box to adjust the background color to purple. Make sure the opacity is set to 100%.
+
+      ![Override background color](~/user-guide/images/OverrideBackgroundColor.png)
+
+   Click *Apply* to save these changes.
+
+1. Click *Add case* to add another conditional case.
+
+1. Select *Fulfillment* from the dropdown list.
+
+1. Enter "Fulfilled" in the *Filter* text box.
+
+1. Configure the following settings:
+
+   1. Enable *Show text*.
+
+   1. Click *Background* and use the color picker box to adjust the background color to green. Make sure the opacity is set to 100%.
+
+   Click *Apply* to save these changes.
+
+1. Click *Add case* to add another conditional case.
+
+1. Select *Fulfillment* from the dropdown list.
+
+1. Enter "Unfulfilled" in the *Filter* text box.
+
+1. Configure the following settings:
+
+   1. Enable *Show text*.
+
+   1. Click *Background* and use the color picker box to adjust the background color to red. Make sure the opacity is set to 100%.
+
+   Click *Apply* to save these changes.
+
+1. To save all changes, click *Save* in the lower right corner of the Template Editor.
+
+1. Optionally, you can repeat these steps for the *States* column to apply similar styling.
+
+## Step 6: Add a table column that indicates which row is selected
+
+To add a column that shows which row is currently selected, you must add a new column using GQI and customize an icon with the Template Editor.
+
+Add a new column using GQI:
+
+1. In the *Data* tab, go to *Queries*.
+
+1. Click the pencil icon next to *Orders* and specify the following details:
+
+   - Operator: *Column manipulations*.
+
+   - Manipulation method: *Concatenate*.
+
+   - Columns: *Order ID*.
+
+   - Format: `{0}`.
+
+   - New column name: Enter one space.
+
+1. Add *Select* as a second operator.
+
+   ![Select](~/user-guide/images/SelectGQIOperator.png)
+
+1. To stop editing the *Orders* query, click the pencil icon.
+
+1. Select the top row of the newly added column and drag it from the far right to the far left side of the table.
+
+Customize the column appearance in the Template Editor:
+
+1. Make sure the table component is selected, and navigate to *Layout > Column Appearance*.
+
+1. Select your new column from the dropdown list.
+
+1. Click the preview and select the [Icon](~/user-guide/images/Icon_Preset.png) icon from the list of available presets.
+
+1. Click the ellipsis button ("...") and select *Customize preset* to open the Template Editor.
+
+1. Make sure no layers are selected. In the *Settings* pane, change the height to 64 px.
+
+   This change will modify the height of the table rows.
+
+   ![Change template height](~/user-guide/images/ChangeTemplateHeight.png)
+
+1. In the *Layers* tab, select the icon layer.
+
+1. In the *Properties* section of the *Settings* pane, click *Icon* and change the icon to a checkmark.
+
+1. Rescale the icon so that it fits the template nicely.
+
+   ![Change icon](~/user-guide/images/ChangeIcon.png)
+
+1. In the *Conditional cases* section of the *Settings* pane, click *Add case*.
+
+1. Select *Is selected* from the dropdown list.
+
+1. Select *Yes*.
+
+1. Configure the following settings:
+
+   1. Enable *Show icon*.
+
+   1. Click *color* and use the color picker box to adjust the text color to green.
+
+1. Do not close the Template Editor yet, as you will need it again in step 7.
+
+## Step 7: Add a context menu
+
+To finish off this tutorial, you will add a context menu to the table.
+
+1. In the *Tools* tab, click *Icon*.
+
+1. Within the preview, press and hold down the left mouse button to define the area for your new icon layer. Release the mouse button once you are satisfied with the size and shape of the icon.
+
+1. In the *Properties* section of the *Settings* pane, click *Icon* and change the icon to an ellipsis ("...").
+
+   > [!TIP]
+   > To locate this icon more efficiently, enter "More" in the filter box at the top.
+
+1. Make sure the new icon layer is selected in the *Layers* tab and rescale the icon so that it fits the template nicely.
+
+   ![Add context menu icon](~/user-guide/images/AddContextMenuIcon.png)
+
+1. In the *Properties* section of the *Settings* pane, click *Configure actions*.
+
+1. In the pop-up window, select *Show context menu* from the dropdown list.
+
+1. Configure the different menu items:
+
+   - Let's add a 'Calculate percentage profit' button to the context menu where we divide the 'profit' column with the 'total' column, We'll just use google and search the division to show the result. On the left side on the menu we can first add an icon to the item. We'll use a calculator icon for this tutorial. After that we can add a name to the item. Let's pick 'Calculate percentage profit'
 
     ![Configure Name and Icon](~/user-guide/images/ConfigureIconAndName.gif)
 
