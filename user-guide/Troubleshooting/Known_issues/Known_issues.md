@@ -7,14 +7,16 @@ uid: Known_issues
 
 | Issue | DataMiner version | Date added |
 |--|--|--|
+| [Upgrade fails because of VerifyNoLegacyReportsDashboards.dll prerequisite](xref:KI_Upgrade_fails_VerifyNoLegacyReportsDashboards_prerequisite) | From DataMiner 10.4.0 onwards | November 23, 2023 |
+| [Upgrade fails because of VerifyElasticStorageTypePrerequisite.dll prerequisite](xref:KI_Upgrade_fails_VerifyElasticStorageType_prerequisite) | From DataMiner 10.4.0 onwards | November 13, 2023 |
 | [Upgrade fails because of VerifyNoObsoleteApiDeployed.dll prerequisite](xref:KI_Upgrade_fails_VerifyNoObsoleteApiDeployed_prerequisite) | From DataMiner 10.4.0 onwards | November 9, 2023 |
 
 ## 10.3.x
 
 | Issue | DataMiner version | Date added |
 |--|--|--|
-| [Cube freezes on 'Connected!' loading screen when no alarm tabs are displayed](xref:KI_Cube_connection_issue_alarm_tabs) | DataMiner 10.3.9 and 10.3.10 <br/>Any versions from DataMiner 10.2.0 onwards using automatic client updates| October 16, 2023 |
-| [Various issues when using MessageBroker with chunking](xref:KI_DataMinerMessageBroker2)| From DataMiner 10.3.5 [CU0]/10.3.8 onwards | October 11, 2023 |
+| [Cube freezes on 'Connected!' loading screen when no alarm tabs are displayed](xref:KI_Cube_connection_issue_alarm_tabs) | DataMiner 10.3.9 and 10.3.10 <br>Any versions from DataMiner 10.2.0 onwards using automatic client updates| October 16, 2023 |
+| [Various issues when using MessageBroker with chunking](xref:KI_DataMinerMessageBroker2)| 10.3.0 Main Release from 10.3.0 [CU5] onwards <br>DataMiner 10.3.8 to 10.3.11 | October 11, 2023 |
 | [Offload to MySQL offload database fails](xref:KI_offload_database_incorrect_integer_value) | Any version | October 4, 2023 |
 | [Elements not loading after upgrade of DMS with multiple Elasticsearch clusters](xref:KI_elements_not_loading_in_DMS_with_multiple_ES) | From DataMiner 10.3.10 onwards | October 3, 2023 |
 | [SLNet deadlock in EPM setups](xref:KI_SLNet_Deadlock_EPM_Setups) | DataMiner 10.3.9 and 10.3.10 | September 28, 2023 |

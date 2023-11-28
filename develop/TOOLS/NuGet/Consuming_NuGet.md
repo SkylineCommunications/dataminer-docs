@@ -39,7 +39,7 @@ NuGet Libraries from nuget.org are considered third-party libraries, so make sur
 
 Consult the Stop/Go/Caution list on the internal Skyline wiki. If your license does not appear on the list, or if the use you intend (i.e. internal vs. distribution) is not listed for that license, the use will be considered a "Stop".
 
-If you are unsure as to the identification of the license, please contact the OSS team (oss@skyline.be).
+If you are unsure as to the identification of the license, please contact the [OSS team](mailto:oss@skyline.be).
 
 ## Avoid NuGets with direct external communication
 
@@ -119,3 +119,40 @@ In case you are using a token that has an expiration date or if you entered the 
 1. Select the credentials you want to edit and click *Edit* in the lower left corner.
 
 1. Update the username and/or password, and click *Save*.
+
+#### Issues with credentials
+
+If you encounter problems with credentials in Visual Studio, particularly when the credentials pop-up window appears repeatedly, you can follow these steps to resolve the issue:
+
+1. Ensure that all instances of Visual Studio are closed to prevent accidental credential caching.
+
+1. Remove the stored credentials from the Windows Credential Manager. For detailed instructions, see [Editing credentials](#editing-credentials).
+
+1. Navigate to the *%AppData%\NuGet* directory and locate the **NuGet.config** file. Inside this file, you will find XML content similar to the following:
+
+   ```xml
+   <?xml version="1.0" encoding="utf-8"?>
+   <configuration>
+      <packageSources>
+         <add key="nuget.org" value="https://api.nuget.org/v3/index.json" protocolVersion="3" />
+         <add key="Microsoft Visual Studio Offline Packages" value="C:\Program Files (x86)\Microsoft SDKs\NuGetPackages\" />
+         <add key="GitHub" value="https://nuget.pkg.github.com/SkylineCommunications/index.json" />
+      </packageSources>
+      <packageRestore>
+         <add key="enabled" value="True" />
+         <add key="automatic" value="True" />
+      </packageRestore>
+      <bindingRedirects>
+         <add key="skip" value="False" />
+      </bindingRedirects>
+      <packageManagement>
+         <add key="format" value="1" />
+         <add key="disabled" value="False" />
+      </packageManagement>
+   </configuration>
+   ```
+
+   In this file, you can add your credentials according to the [Microsoft guidelines](https://learn.microsoft.com/en-us/nuget/reference/nuget-config-file#packagesourcecredentials).
+
+> [!IMPORTANT]
+> If you choose to add your credentials in an unencrypted manner, it is highly recommended to restrict the token's scope to only allow reading packages, as explained in [step 1 of creating a personal access token](#step-1-creating-a-personal-access-token).

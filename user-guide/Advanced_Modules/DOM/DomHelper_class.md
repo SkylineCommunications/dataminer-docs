@@ -89,7 +89,7 @@ There are two ways to stitch DOM instances:
 From DataMiner 10.1.3/10.2.0 onwards, it is possible to save attachments with the `DomHelper`. These are linked to a `DomInstanceId`. You can use the `Attachments` helper on the `DomInstance` CRUD component.
 
 ```csharp
-var domHelper new DomHelper(engine.SendSLNetMessages, PermissionTestModuleId);
+var domHelper = new DomHelper(engine.SendSLNetMessages, PermissionTestModuleId);
 var fileBytes = File.ReadAllBytes("C:\MyDocuments\ImportantDocument.txt");
 
 // Adding an attachment

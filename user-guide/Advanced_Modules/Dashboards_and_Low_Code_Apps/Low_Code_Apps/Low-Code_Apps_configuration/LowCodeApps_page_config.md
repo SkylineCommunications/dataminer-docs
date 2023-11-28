@@ -32,8 +32,8 @@ To configure a page:
 
 > [!NOTE]
 >
-> - From DataMiner 10.3.6/10.4.0 onwards, to delete a page, click the ellipsis button next to the page name in the pane on the left, select *Delete*, and click the confirmation icon.<!-- RN 36097 --> Prior to DataMiner 10.3.6/10.4.0, to delete a page, click the garbage can icon next to the page name in the pane on the left, and then click the confirmation icon.
-> - From DataMiner 10.3.6/10.4.0 onwards, to duplicate a page, click the ellipsis button next to the page name in the pane on the left, and select *Duplicate*. <!-- RN 36097 -->
+> - From DataMiner 10.3.6/10.4.0 onwards, to **delete** a page, click the ellipsis button next to the page name in the pane on the left, select *Delete*, and click the confirmation icon.<!-- RN 36097 --> Prior to DataMiner 10.3.6/10.4.0, to delete a page, click the garbage can icon next to the page name in the pane on the left, and then click the confirmation icon.
+> - From DataMiner 10.3.6/10.4.0 onwards, to **duplicate** a page, click the ellipsis button next to the page name in the pane on the left, and select *Duplicate*.<!-- RN 36097 --> The duplicated page will contain the same configuration, including feed references. However note that while feed references are maintained when you duplicate a page, other pages that consume feeds from the original page will not receive values from the duplicated page.
 
 > [!TIP]
 > See also: [Tutorials - Managing the pages of an app](xref:Tutorial_Apps_Managing_Pages)

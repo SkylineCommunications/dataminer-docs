@@ -62,7 +62,11 @@ The endpoint supports the following content types:
 The Content-Length header is calculated and filled in automatically depending on how you send the request. It contains the length of the body in bytes. *UserDefinableApiEndpoint* will only read the number of bytes of the body specified in the Content-Length header.
 
 > [!IMPORTANT]
-> The endpoint limits the size of requests to 30 MB.
+> Depending on the DataMiner version, the endpoint limits the size of requests as follows:
+>
+> - DataMiner 10.3.6: 30 MB
+> - DataMiner 10.3.8: 16.7 MB
+> - DataMiner 10.4.1/10.4.0: 29 MB
 
 ### Body
 

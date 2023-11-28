@@ -23,11 +23,10 @@ For a list of possible values, see [dynamicSnmpGet](xref:Protocol.Params.Param.T
 *Feature introduced in DataMiner 8.0.7 (RN 6962).*
 
 > [!NOTE]
-
+>
 > - From DataMiner 9.0.1 (RN 12017) onwards, the SnmpSetAndGet method can be triggered by means of a button inside a table cell. When the button is clicked, the value of the button will be sent along with an SNMP Set command.
 >
-> - From DataMiner 9.0.2 (RN 12409) onwards, you can specify a multipleGet option when retrieving table data using dynamicSnmpGet or snmpSetAndGet, allowing a reduction of the number of SNMP requests.
-For more information see dynamicSnmpGet.
+> - From DataMiner 9.0.2 (RN 12409) onwards, you can specify a multipleGet option when retrieving table data using dynamicSnmpGet or snmpSetAndGet, allowing a reduction of the number of SNMP requests. For more information see dynamicSnmpGet.
 >
 > - In case the SNMP connection through which this set and get operation must be performed is not the main connection, make sure to specify the connection ID in the "connection" options:
 >

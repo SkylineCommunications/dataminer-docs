@@ -4,7 +4,7 @@ uid: LowCodeApps_event_config
 
 # Configuring low-code app events
 
-At present two types of events can be configured in the DataMiner Low-Code Apps:
+At present, you can configure actions for two types of events in the DataMiner Low-Code Apps:
 
 - *On page load*: This event takes place when a page is loaded. (See [Configuring a page of a low-code app](xref:LowCodeApps_page_config).)
 - *On click*: This event takes place when a user clicks a button. (See [Configuring the header bar of a low-code app page](xref:LowCodeApps_header_config).)
@@ -13,6 +13,8 @@ For each of these events, you can configure actions as detailed below.
 
 > [!TIP]
 > Actions can be combined and chained to create more complex behavior. For example, an *Open a page* action can be followed by an *Open a panel* action to open a panel on a specific page. While the panel is being opened, a *Launch a script* action can execute an Automation script that updates parameters that will be displayed on that panel. All of this can be triggered from a header bar button, for example on the initial page.
+>
+> See also: [Tutorials — Running a script when a page opens](xref:Tutorial_Apps_Script_Upon_Page_Load) and [Tutorials — Chaining actions](xref:Tutorial_Apps_Chaining_Actions).
 
 ## Launching a script
 
@@ -33,7 +35,9 @@ To configure an event to navigate to a URL:
 1. Select *Navigate to a URL* and specify the URL.
 
    > [!TIP]
-   > You can link the URL to a feed using the [feed link syntax](xref:Feed_Link#syntax).
+   >
+   > - You can link the URL to a feed using the [feed link syntax](xref:Feed_Link#syntax).
+   > - In the Template Editor (available from DataMiner 10.4.1/10.5.0 onwards), you can create dynamic links or pass context to a script by incorporating variables within the URL, denoted by enclosing the column name within curly brackets ("`{}`")<!--RN 34761-->.
 
 1. Optionally, to open the webpage in a new tab, enable the option *Open in new tab*.
 
@@ -108,6 +112,33 @@ Examples:
 - If you configure this action for a [Table](xref:DashboardTable) component, you can select the options *Clear selection*, *Fetch the data*, or *Select an item*. Or from DataMiner 10.2.10/10.3.0 onwards, you can select *Fetch the data* for any component that uses query data as input, so that users can manually refresh the displayed data.
 
 - From DataMiner 10.3.5/10.4.0 onwards<!--  RN 35933 -->, if you add a line chart component and a button component, you can configure this action on the button and select the option *Set timespan*, so that users can use the button to set the timespan for the line chart. The action has two arguments, To and From, which can be either set to a static value or linked to a numeric value feed.
+
+## Showing a context menu
+
+From DataMiner 10.4.1/10.5.0 onwards<!--RN 37209-->, this option is only available during the configuration of actions in the [Template Editor](xref:Template_Editor) for *Icon*, *Rectangle*, and *Ellipse* layers.
+
+To configure an event to show a context menu:
+
+1. Select *Show context menu*.
+
+1. Provide the necessary details for your menu item:
+
+   - Optionally, click the gray square to the left, and choose an icon from the dropdown list or search for a specific one using the search bar functionality.
+
+      The selected icon will be displayed in the square.
+
+   - Enter a label name.
+
+   - Click the ![Configure actions](~/user-guide/images/Configure_Actions.png) button to configure one or more actions to execute when the menu item is clicked.
+
+     Save the actions by selecting *Ok* in the lower right corner.
+
+1. Optionally, add additional menu items, following the same steps until you are satisfied with the number of menu items.
+
+   > [!NOTE]
+   >
+   > - If there are multiple menu items, you can change their order by clicking the ![*Drag-and-drop*](~/user-guide/images/drag-and-drop.png) button and dragging the item up or down in the list. Release the mouse button when you reach the position where you want to place the selected item.
+   > - To delete a menu item, click the ![Trashcan](~/user-guide/images/Trashcan.png) button.
 
 ## Configuring another action for the same event
 

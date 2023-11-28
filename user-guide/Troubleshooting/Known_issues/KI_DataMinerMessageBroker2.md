@@ -6,7 +6,9 @@ uid: KI_DataMinerMessageBroker2
 
 ## Affected versions
 
-From DataMiner 10.3.0 [CU5]/10.3.8 onwards.
+- 10.3.0 Main Release versions from DataMiner 10.3.0 [CU5] onwards.
+
+- DataMiner 10.3.8 to 10.3.11.
 
 ## Cause
 
@@ -14,7 +16,7 @@ DataMiner 10.3.8/10.3.0 [CU5] introduces a change to the way DataMiner MessageBr
 
 ## Fix
 
-No fix is available yet.<!--RN 37532-->
+Install DataMiner 10.3.12 or 10.4.0.<!--RN 37532-->
 
 ## Description
 

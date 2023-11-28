@@ -184,7 +184,7 @@ To install and run [HLS Proxy](https://github.com/warren-bank/HLS-Proxy):
 
 1. In case you have to use HTTPS (recommended), copy your certificate (.crt) and private key (.key) into the created folder.
 
-1. Run the following command: `npx hlsd --port 8080 --tls-cert yourcertificate.crt --tls-key private.key --tls-pass password.txt`
+1. Run the following command: `npx hlsd --port 8080 --tls-cert yourcertificate.crt --tls-key private.key --tls-pass password.txt`. In case the video server uses an untrusted HTTPS certificate, also add `--req-insecure` to the command.
 
 The proxy should now be up and running.
 
@@ -192,6 +192,21 @@ You can **open a stream** via the proxy by using the following URL (example in J
 
 ```JavaScript
 const proxy_url = 'https://proxy-server:8080';
+const video_url = 'https://example.com/video/master.m3u8';
+const file_extension = '.m3u8';
+
+const video_url_via_proxy = `${proxy_url}/${btoa(video_url)}${file_extension}`; // btoa = base64-encode
+const videothumbnails = `https://dma-server/videothumbnails/video.htm?type=HTML5-HLS&source=${encodeURIComponent(video_url_via_proxy)}`; // encodeURIComponent = url-encode
+```
+
+#### Using the HLS Proxy server behind a front-end web server
+
+Optionally, it is possible to run the HLS Proxy server behind a front-end web server with a [reverse proxy](xref:Dashboard_Gateway_installation#reverse-proxy). The `--host` parameter can be specified containing the public FQDN and port of the public-facing server. This way, no separate port needs to be made publicly accessible, and there is no need to configure the HTTPS certificate on the HLS proxy because the web server can take care of that.
+
+The HLS Proxy echoes any leading path (for example `/hls-proxy`) in the request into all proxied URLs in the modified HLS manifest.
+
+```JavaScript
+const proxy_url = 'https://dma-server/hls-proxy';
 const video_url = 'https://example.com/video/master.m3u8';
 const file_extension = '.m3u8';
 
@@ -212,14 +227,17 @@ Optionally, you can install the HLS Proxy server as a Windows service using [nod
 
    var child = spawn('npx', [
        'hlsd',
+       '--host',
+       'dma.skyline.be:443',
        '--port',
-       '8080',
-       '--tls-cert',
-       'yourcertificate.crt',
-       '--tls-key',
-       'private.key',
-       '--tls-pass',
-       'password.txt'
+       '8080'
+       //'--req-insecure',
+       //'--tls-cert',
+       //'yourcertificate.crt',
+       //'--tls-key',
+       //'private.key',
+       //'--tls-pass',
+       //'password.txt'
    ], { shell: process.platform === 'win32' });
    child.stdout.pipe(process.stdout);
    ```

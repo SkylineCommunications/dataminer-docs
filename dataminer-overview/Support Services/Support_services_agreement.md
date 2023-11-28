@@ -81,7 +81,7 @@ To be able to assist the User in an efficient manner, when generating a ticket o
 
 ## Proactive support
 
-Skyline assumes that the Software is always connected to dataminer.services and that the Customer DataMiner Reporting tool ("**CDMR**") is permanently enabled. This allows the User and Skyline to proactively react to occurrences before they may become critical.
+Skyline assumes that the Software is always connected to dataminer.services and that the necessary [prerequisites](xref:RemoteLogCollection#requirements) are met for remote log collection using the Customer DataMiner Reporting tool ("**CDMR**"). This allows the User and Skyline to proactively react to occurrences before they may become critical.
 
 ## Exclusions
 

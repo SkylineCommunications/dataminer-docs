@@ -396,7 +396,11 @@ There are two ways to configure this setup: with or without group claims.
 
       With this option, the groups you configured when [setting up the application](#setting-up-a-microsoft-entra-id-enterprise-application) will be included in the group claim.
 
-   1. Under *Source attribute*, we recommend selecting *sAMAccountName*.
+   1. Under *Source attribute*, select one of the following options from the dropdown list, depending on your setup:
+
+      1. If Entra ID is synced with an on-premises Active Directory, select *sAMAccountName*.
+
+      1. If the groups only exist on Azure, select *Cloud-only group display names*.
 
    1. Optionally, expand the advanced options to add a filter or customize the name of the group claim.
 
@@ -427,7 +431,7 @@ There are two ways to configure this setup: with or without group claims.
          <EmailClaim>http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress</EmailClaim>
          <Givenname>http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname</Givenname>
          <Surname>http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname</Surname>
-         <Groups claims="true">[group claim name]</Groups>
+         <Groups claims="true">http://schemas.microsoft.com/ws/2008/06/identity/claims/groups</Groups>
        </AutomaticUserCreation>
      </ExternalAuthentication>
      ...

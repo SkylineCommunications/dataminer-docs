@@ -8,7 +8,7 @@ When you create a query, you can also use an ad hoc data source (i.e. external d
 
 To use an ad hoc data source in a query:
 
-1. In the Automation app, add a script containing a new class that implements the [*IGQIDataSource* interface](xref:IGQIDataSource).
+1. In the Automation app, add a script containing a new class that implements the [*IGQIDataSource* interface](xref:GQI_IGQIDataSource).
 
    > [!NOTE]
    > All object types needed to create an ad hoc data source can be found within *SLAnalyticsTypes.dll*, which is located in the folder *C:\Skyline DataMiner\Files*.
