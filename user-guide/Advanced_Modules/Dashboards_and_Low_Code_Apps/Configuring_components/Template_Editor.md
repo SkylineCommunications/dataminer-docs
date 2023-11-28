@@ -247,11 +247,11 @@ To add a condition:
 
    The available states:
 
-   - *Is selected*: The action will be executed when a user selects the tool<!--RN 34761-->.
+   - *Is selected*: The action will be executed when a user selects the item<!--RN 34761-->.
 
    - *Is busy*: The action will be executed when the component is busy<!--RN 34859-->.
 
-   - *Hovering*: The action will be executed when a user hovers the mouse pointer over the tool<!--RN 34761-->.
+   - *Hovering*: The action will be executed when a user hovers the mouse pointer over the item<!--RN 34761-->.
 
 1. When you have chosen a state, select *Yes* or *No*.
 
@@ -279,13 +279,13 @@ To add a condition:
 
      - `≤ dd/MM/yyyy hh:mm`: The root time occurs at or before the specified upper bound.
 
-1. Enable or disable the toggle button next to `Show [tool-type]`:
+1. Enable or disable the toggle button next to `Show [layer-type]`:
 
-   - If this is enabled, the selected tool is shown if the conditions are met.
+   - If this is enabled, the selected layer is shown if the conditions are met.
 
-   - If this is disabled, the selected tool is hidden if the conditions are met.
+   - If this is disabled, the selected layer is hidden if the conditions are met.
 
-1. If you chose to show the tool in the previous step, optionally change the look of the tool when the conditions are met.
+1. If you chose to show the layer in the previous step, optionally change the look of the layer when the conditions are met.
 
    Depending on the type of layer and the type of component, the following options may be available:
 
