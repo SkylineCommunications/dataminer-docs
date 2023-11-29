@@ -75,16 +75,15 @@ There are also special types of `FieldDescriptors` that are purpose-made to stor
 - **UserFieldDescriptor**: Available from DataMiner 10.3.3/10.4.0 onwards. Can be used to define that a field should contain the name of a DataMiner user. There is a *GroupNames* property that can be used to define which groups the user can be a part of. 
 
 > [!NOTE]
-> From DataMiner 10.2.3/10.3.0 onwards, the following `FieldDescriptors` can have **multiple values**:
+> Depending on the DataMiner version, the following `FieldDescriptors` can have **multiple values**:
 >
-> - DomInstanceFieldDescriptor
-> - ElementFieldDescriptor
-> - ResourceFieldDescriptor
-> - ReservationFieldDescriptor
-> - ServiceDefinitionFieldDescriptor
->
-> From DataMiner 10.2.5/10.3.0 onwards, this also applies for the *DomInstanceValueFieldDescriptor*.
-> From DataMiner 10.4.1/10.5.0 onwards, this also applies for the *GenericEnumFieldDescriptor*.
+> - DomInstanceFieldDescriptor (from DataMiner 10.2.3/10.3.0 onwards)
+> - DomInstanceValueFieldDescriptor (from DataMiner 10.2.5/10.3.0 onwards)<!-- RN 32904 -->
+> - ElementFieldDescriptor (from DataMiner 10.2.3/10.3.0 onwards)
+> - GenericEnumFieldDescriptor (from DataMiner 10.4.0/10.4.1 onwards)<!-- RN 37482 -->
+> - ResourceFieldDescriptor (from DataMiner 10.2.3/10.3.0 onwards)
+> - ReservationFieldDescriptor (from DataMiner 10.2.3/10.3.0 onwards)
+> - ServiceDefinitionFieldDescriptor (from DataMiner 10.2.3/10.3.0 onwards)
 >
 > These `FieldDescriptors` therefore also support a list of the type that was already supported before.
 >
