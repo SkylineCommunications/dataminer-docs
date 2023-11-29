@@ -65,6 +65,14 @@ DataMiner STaaS relies on Azure Storage, which stores multiple copies of your da
 > [!TIP]
 > For detailed information, see [Azure Storage redundancy on learn.microsoft.com](https://learn.microsoft.com/en-us/azure/storage/common/storage-redundancy)
 
+## Data resilience and backups
+
+To ensure data resilience for potential recovery scenarios, protecting against user errors and accidental changes, your data is backed up with a **granularity of 1 day**. Backups are stored for **30 days**.
+
+- **Daily Backups**: STaaS performs backups with a granularity of 1 day and maintains a 30-day rolling snapshot of your data.
+
+- **Data Restoration and Support**: In the event a rollback is necessary, our support team will assist you. Submit a rollback request by opening a ticket with the support team. They will guide you through the necessary steps to ensure a successful data restoration.
+
 ## Limitations
 
 To **migrate existing data** to STaaS, the following limitations apply:
@@ -90,14 +98,6 @@ In addition, the following **other limitations** currently apply:
 - The [autoincrement](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#autoincrement) tag on logger tables is not supported.
 
 - DOM queries can be slower depending on the number of DOM records and the complexity of the query. This limitation will be removed in the near future.
-
-## Backups
-
-Your data is backed up **daily** and stored for **30 days**.
-
-- Daily Backups: STaaS performs daily backups, maintaining a 30-day rolling snapshot of your data. This process protects against user errors and accidental changes, ensuring data resilience for potential recovery scenarios.
-
-- Data Restoration and Support: In the event a roll-back is necessary, our support team is prepared to assist. Please submit a rollback request by opening a ticket with our support team. They will guide you through the necessary steps to ensure a successful data restoration.
 
 ## Troubleshooting
 
