@@ -143,6 +143,14 @@ When profile data is stored in an Elasticsearch/OpenSearch database, all Profile
 
 Also, additional logging has been added to indicate when a cache was refilled and how many objects were added, updated, removed or ignored. Each log entry will also include the IDs of the first ten of these objects.
 
+#### User-Defined APIs: Maximum size of HTTP request body has been reduced to 29MB [ID_37753]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+The maximum size of the HTTP request body has been reduced from 30 MB to 29 MB.
+
+Also, additional logging will be added to the *SLUserDefinableApiManager.txt* log file when subscribing on NATS fails and when sending a reply on an incoming NATS request fails.
+
 #### Enhanced performance when locking or unlocking inputs and output of matrices in client applications [ID_37755]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->

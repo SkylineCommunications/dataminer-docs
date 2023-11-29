@@ -675,6 +675,14 @@ Also, additional logging has been added to indicate when a cache was refilled an
 
 Because of a number of enhancements, overall performance has increased when migrating data from a Cassandra database to the cloud.
 
+#### User-Defined APIs: Maximum size of HTTP request body has been reduced to 29MB [ID_37753]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+The maximum size of the HTTP request body has been reduced from 30 MB to 29 MB.
+
+Also, additional logging will be added to the *SLUserDefinableApiManager.txt* log file when subscribing on NATS fails and when sending a reply on an incoming NATS request fails.
+
 #### Legacy Reports, Dashboards and Annotations modules are now end-of-life and will be disabled by default [ID_37786]
 
 <!-- MR 10.4.0 - FR 10.4.1 -->
