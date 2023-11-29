@@ -740,6 +740,15 @@ Also, the newly added *UninstallApiDeployment* upgrade action will remove everyt
 
 - Remove the *APIDeployment* soft-launch flag from *SoftLaunchOptions.xml*.
 
+#### GQI: Ad hoc data sources and custom operators now support row metadata [ID_37879]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+Ad hoc data sources and custom operators now support row metadata.
+
+- In case of an ad hoc data source, any metadata can be attached to a row.
+- In case of a custom operator, row metadata can be read from existing rows, and row metadata can be modified.
+
 #### Service & Resource Management: Enhanced performance when updating/applying profile instances [ID_37976]
 
 <!-- MR 10.4.0 - FR 10.4.1 -->
