@@ -60,6 +60,7 @@ The entry point method has two parameters.
   | RawBody | `string` | The full body of the HTTP request as a string. This can be deserialized and used in the script. See [User input data](#user-input-data). |
   | Parameters | `Dictionary<string, string>` | Contains the deserialized parameters if you select *Dictionary (parsed from JSON)* when configuring the API. See [User input data](#user-input-data). |
   | Context | [ApiTriggerContext](#apitriggercontext) | Contains properties with info about the request. Available from DataMiner 10.3.9/10.4.0 onwards. <!-- RN 37015 --> |
+  | QueryParameters | [IQueryParameters](#query-parameters) | Contains the request query string parameters. Available from DataMiner 10.4.1/10.5.0 onwards. <!-- RN 37733 --> |
 
 #### ApiTriggerContext
 
@@ -80,7 +81,32 @@ This makes it possible to define the four CRUD (create, read, update, delete) ac
 
 #### User input data
 
-There are two ways to pass data to the API script if you make use of the *OnApiTrigger* entry point method. Which way is used depends on the selected option in the dropdown when you define the API in Cube. See [Creating the API definition(s)](#creating-an-api-and-tokens-in-dataminer-automation).
+There are two ways to pass data to the API:
+
+- You can use [query parameters](#query-parameters), which allow you to pass data in a key-value format.
+- You can use the [request body](#request-body), which you can either deserialize yourself in your script, or you can have deserialized to a key-value format by the built-in deserialization.
+
+##### Query parameters
+
+Query parameters are available in the *QueryParameters* property in the `ApiTriggerInput`. `IQueryParameters` exposes the following methods:
+
+| Method name | Return type | Summary |
+|-------------|-------------|---------|
+| `TryGetValues(string key, out List<string> values)` | `bool` | Tries to get the values for the associated key. Returns `true` in case one or more values are found for the key, and `false` if not. The values will be in the `out` parameter. |
+| `TryGetValue(string key, out string value)` | `bool` | Tries to get the value for the associated key. Returns `true` in case a value is found for the key, and `false` if not. The value will be in the `out` parameter. In case there are multiple values, the first value will be returned. |
+| `GetAllKeys()` | `List<string>` | Returns all keys for which there is a value. |
+| `ContainsKey(string key)` | `bool` | Returns whether the key is present or not. |
+
+> [!NOTE]
+>
+> - Multiple values can be added for one key.
+> - Query parameter keys are case-sensitive.
+> - The maximum size for the query string is 2 KB.
+> - Query parameters are available from DataMiner 10.4.1/10.5.0 onwards.<!-- RN 37733 -->
+
+##### Request body
+
+There are two ways to pass the request body to the API script if you make use of the *OnApiTrigger* entry point method. Which way is used depends on the selected option in the dropdown when you define the API in Cube. See [Creating the API definition(s)](#creating-an-api-and-tokens-in-dataminer-automation).
 
 - If *Dictionary (parsed from JSON)* is selected, the JSON body of the HTTP request will automatically be converted to a `Dictionary<string, string>` in the `Parameters` property of the `ApiTriggerInput` object. In the `RawBody` property, the raw string body will remain available.
 
