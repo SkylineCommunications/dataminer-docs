@@ -71,7 +71,7 @@ To ensure data resilience for potential recovery scenarios, protecting against u
 
 - **Daily Backups**: STaaS performs backups with a granularity of 1 day and maintains a 30-day rolling snapshot of your data.
 
-- **Data Restoration and Support**: In the event a rollback is necessary, our support team will assist you. Submit a rollback request by opening a ticket with the [support team](support.cloud.ecosystem@skyline.be). They will guide you through the necessary steps to ensure a successful data restoration.
+- **Data Restoration and Support**: In the event a rollback is necessary, our support team will assist you. Submit a rollback request, contacting the support team, by sending an email to <staas@dataminer.services>. They will guide you through the necessary steps to ensure a successful data restoration.
 
 ## Limitations
 
