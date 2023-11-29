@@ -223,6 +223,35 @@ The following example illustrates the configuration of a general database of typ
 </DataBases>
 ```
 
+## Configuring a size limit for file offloads
+
+> [!NOTE]
+> Prior to DataMiner 10.4.2/10.5.0, this functionality is configured in [DBConfiguration.xml](xref:DBConfiguration_xml) instead.
+
+When the main database is offline, file offloads are used to store write/delete operations. You can configure a limit for the file size of these offloads in *DB.xml*. When the limit is reached, new data will be dropped.
+
+To configure this size limit:
+
+1. Open the file *DB.xml* in the folder *C:\\Skyline DataMiner\\*.
+
+1. Configure the file with a *FileOffloadConfiguration* element with the desired maximum size (in MB), as illustrated below:
+
+    ```xml
+    <DataBases>
+      ...
+      <FileOffloadConfiguration>
+        <MaxSizeMB>20</MaxSizeMB>
+      </FileOffloadConfiguration>
+    </DataBases>
+    ```
+
+1. Restart DataMiner.
+
+> [!NOTE]
+>
+> - If no limit is set in *DB.xml* or if the file offload configuration is invalid, the size of the database offload files will by default be limited to 10 GB.
+> - When the specified limit has been reached, the following alarm will be generated: "Max file offload disk usage for certain storages has been reached, new data for these storages will be dropped."
+
 ## Offload database settings
 
 The configuration data for the offload or “central” database has to be specified in a *\<Database>* tag of which the *local* attribute is set to “false”.
@@ -551,6 +580,13 @@ To do so:
 
 > [!NOTE]
 > For more information on how to configure TLS and security in Elasticsearch, see [Securing the Elasticsearch database](xref:Security_Elasticsearch).
+
+### Configuring multiple OpenSearch or Elasticsearch clusters
+
+> [!NOTE]
+> Prior to DataMiner 10.4.2/10.5.0, this functionality is configured in [DBConfiguration.xml](xref:DBConfiguration_xml) instead.
+
+It is possible to have data offloaded to multiple OpenSearch or Elasticsearch clusters, i.e. one main cluster and several replicated clusters. From DataMiner 10.4.2/10.5.0 onwards, this is configured in *DB.xml*. For detailed information, see [Configuring multiple OpenSearch clusters](xref:Configuring_multiple_OpenSearch_clusters) or [Configuring multiple Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters).
 
 ## CMDB settings
 
