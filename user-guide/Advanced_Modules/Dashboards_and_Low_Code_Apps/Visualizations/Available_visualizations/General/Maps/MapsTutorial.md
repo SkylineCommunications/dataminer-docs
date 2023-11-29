@@ -4,7 +4,9 @@ uid: TutorialMaps
 
 # Using the maps component in a low-code app
 
-In this tutorial, you will learn how to add and configure a maps component in a low-code app, by means of an example where the maps component is used to visualize cell towers, their connections, and their coverage. Following this tutorial will take approximately 30 minutes.
+In this tutorial, you will learn how to add and configure a maps component in a low-code app, by means of an example where the maps component is used to visualize cell towers, their connections, and their coverage.
+
+Expected duration: 30 minutes.
 
 The content and screenshots for this tutorial have been created in DataMiner version 10.4.1.
 
@@ -83,10 +85,10 @@ At this point, the cell tower markers are always shown in the component, but the
 1. In the *Template* box, click *Edit*.
 
    This will open the template editor.
-   
+
 1. Modify the default ellipse layer to use as the background for a text shape:
 
-   1. In the *Layers* tab on the left, select the layer and then modify the *Dimensions* on the right to position it on the bottom right of the template.
+   1. In the *Layers* tab on the left, select the layer and then modify the *Dimensions* on the right to position it at the bottom right of the template.
 
    1. Below *Show ellipse* on the right, click the color icon to select a custom color for the background.
 
@@ -112,83 +114,109 @@ The result should look like this:
 
 ## Step 5: Add grouped markers
 
-The templates you added in the previous step look good, but at this point the visualization still feels cluttered when you zoom out all the way. You can deal with this by adding grouped markers. For this, you will need to create additional queries to retrieve data from the *CellTowersGroups* and *CellTowersCities* JSON files you installed with the package in step 1:
+The templates you added in the previous step look good, but at this point the visualization still feels cluttered when you zoom out all the way. You can deal with this by adding grouped markers. For this, you will need to create additional queries to retrieve data from the *CellTowersGroups* and *CellTowersCities* JSON files you installed with the package in step 1.
 
-To visualize these you need 2 new queries identical to the first one, but with a different file as a source. Theses queries can then be added to the maps component. You also configure a simple template for both queries that shows the *Count* of cell towers that are grouped in the markers:
+1. In the data pane, [create a new query](xref:Creating_GQI_query), and configure it to retrieve the cell towers from the *CellTowersGroups.json* file using the *JSON Reader* ad hoc data source.
 
-1. Modify the default ellipse layer to use as the background for a text shape:
+1. Create another query similar to the previous one, but this time use the *CellTowersCities.json* file.
 
-   1. Below *Show ellipse* on the right, click the color icon to select a custom color for the background.
-   
-1. Create a text layer that displays the number of transceivers in the group:
+1. Drag the two new queries to the maps component.
 
-   1. In the *Tools* tab on the left, select *Text* and then click and drag in the center pane to add a text layer.
+1. Configure a template for both queries that shows the *Count* of cell towers that are grouped in the markers:
 
-   1. In the box below *Show text* on the right, enter the text `{Count}`.
+   1. Modify the default ellipse layer to use as the background for a text shape:
 
-      This placeholder text will be replaced by the content of the corresponding cell value from the query data source.
+      1. In the *Layers* tab on the left, select the layer.
 
-The resulting template should look like this:
+      1. Below *Show ellipse* on the right, click the color icon to select a custom color for the background.
 
-![GroupedCellTowersTemplate](~/user-guide/images/MapsGroupedCellTowersTemplate.png)
+   1. Create a text layer that displays the number of transceivers in the group:
 
-You only want to show these new markers between certain zoom levels, this can be configured in the *Advanced settings* part of the layer settings:
+      1. In the *Tools* tab on the left, select *Text* and then click and drag in the center pane to add a text layer.
 
-1. In the *Layout* tab for the component expand the *Layer settings* and then expand the *Cell towers* layer.
+      1. In the box below *Show text* on the right, enter the text `{Count}`.
 
-1. Expand a query and open the *Advanced settings* section for that query.
+         This placeholder text will be replaced by the content of the corresponding cell value from the query data source.
 
-1. Enter the minimum and maximum zoom levels where the markers of the query should be shown on the map:
+   The resulting template should look like this:
 
-      Cell towers should be shown from 60 to 100.
+   ![GroupedCellTowersTemplate](~/user-guide/images/MapsGroupedCellTowersTemplate.png)
 
-      Cell towers groups should be shown from 52 to 60.
+1. Configure the new markers to only be shown between certain zoom levels:
 
-      Cell towers cities should be shown from 50 to 52.
+   1. In the *Layout* tab for the component, expand the *Layer settings* and then expand the *Cell towers* layer.
 
-This configuration makes more and more grouped markers appear when zooming in on the map until the cell towers themselves become visible.
+   1. Expand a query and open the *Advanced settings* section for that query.
 
-Combined with the custom template, you will have created this:
+   1. Enter the minimum and maximum zoom levels where the markers of the query should be shown on the map:
+
+      - Cell towers should be shown from 60 to 100.
+
+      - Cell towers groups should be shown from 52 to 60.
+
+      - Cell towers cities should be shown from 50 to 52.
+
+When you zoom in on the map, more and more grouped markers should now be shown, until the cell towers themselves become visible:
 
 ![GroupedCellTowersTemplate](~/user-guide/images/MapsGroupedCellTowers.gif)
 
 ## Step 6: Visualize connections
 
-Now that all the cell towers are visualized on the map, you can visualize the connections between them. The *CellTowers* dataset contains a *source* column with the ID of the cell tower an other tower is linked to. You can create a new query that starts from the *CellTowers* query and joins on itself based on this column. You can also create a new concatenated column of the IDs of both towers and only select the interesting columns. This results in a new dataset with a unique ID, and 2 sets of coordinates that you can visualize as lines on the map:
+Now that all the cell towers are shown on the map, you can visualize the connections between them.
 
-1. Start from the *Cell towers* query.
+1. Create a new query.
 
-1. Inner join the query of another query starting from the *Cell towers* query.
+1. Select the data source *Start from* and the query *Cell towers*.
 
-1. Join the *Source* on the *Tower ID*.
+   This *CellTowers* data set contains a *source* column with the ID of the cell tower that another tower is linked to.
 
-1. Create a new concatenated column, names *Connection ID* from the *Tower ID* of both queries.
+1. Create a new query that starts from the *CellTowers* query and joins itself based on this column:
 
-1. Select only the necessary columns to display the connections: *Connection ID*, *Latitude*, *Longitude*, *Latitude (2)* & *Longitude (2)*.
+   1. As the name of the query, specify *Connections*.
 
-The resulting query will look like this:
+   1. Select the operator *Join* and the type *Inner*.
 
-![CellTowersConnectionsQuery](~/user-guide/images/MapsCellTowersConnectionsQuery.png)
+   1. Below the *Join* operator, select the data source *Start from* and the query *Cell towers*.
 
-You want to be able to show and hide these connections, so you will add them to the maps component in an other layer than the cell towers:
+   1. Select the fields *Source* and *Tower ID*.
 
-1. Add the query to the component in the same way as the other queries.
+1. Create a new concatenated column of the IDs of both towers:
 
-1. Add a new layer using the *Add layer* button in the *Layer settings*.
+   1. Continuing from the same query, add the operator *Column manipulations* with the manipulation method *Concatenate*.
 
-1. Drag & drop the *Connectionc* query to the new layer.
+   1. Select the column *Tower ID*.
 
-1. To make sure that the connections are shown underneath the markers, the layer weight of the new layer is increased by one.
+   1. In the *Format* box, specify `{0}/{1}`.
 
-1. Change the query to be visualized as connections by hovering over the query and clicking *Set as line* on the right of the query name.
+   1. In the *New column name* box, specify *Connection ID*.
 
-   The component will try to automatically configure the dimensions and show the lines on the map.
+1. Select only the necessary columns to display the connections:
 
-1. Style the connections using the *Style* section.
+   1. Continuing from the same query, add the operator *Select*.
 
-   1. Pick a color, width & type for the lines.
+   1. Make sure only the following columns are selected: *Connection ID*, *Latitude*, *Longitude*, *Latitude (2)*, and *Longitude (2)*.
 
-After configuring the connections, their settings will look like this:
+   This will result in a new data set with a unique ID and two sets of coordinates that you can visualize as lines on the map:
+
+   ![CellTowersConnectionsQuery](~/user-guide/images/MapsCellTowersConnectionsQuery.png)
+
+1. To be able to show and hide these connections, add them to the maps component in another layer than the cell towers:
+
+   1. Drag the query from the *Data* pane to the component.
+
+   1. In the *Layout* pane, under *Layer settings*, click *Add layer* to add a new layer.
+
+   1. Drag and drop the *Connections* query from the top layer to the new layer.
+
+   1. To make sure that the connections are shown underneath the markers, increase the weight of the new layer by one.
+
+   1. To make sure the query is visualized as connections, hover over the query and click *Set as line* to the right of the query name.
+
+      The component will try to automatically configure the dimensions and show the lines on the map.
+
+   1. In the *Style* section, pick a color, width, and type for the lines.
+
+When the connections have been configured, their settings will look like this:
 
 ![CellTowerConnectionsSettings](~/user-guide/images/MapsCellTowersConnectionsSettings.png)
 
