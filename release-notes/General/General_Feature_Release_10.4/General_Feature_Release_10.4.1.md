@@ -38,6 +38,30 @@ Starting from DataMiner version 10.4.0, XML storage for profiles and resources i
 
 See also: [Upgrade fails because of VerifyElasticStorageType.dll prerequisite](xref:KI_Upgrade_fails_VerifyElasticStorageType_prerequisite)
 
+#### Service & Resource Management: Storage type for ProfileManager and ResourceManager will now always be Elasticsearch/OpenSearch [ID_37877]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+From now on, the storage type for ProfileManager and ResourceManager will always be Elasticsearch/OpenSearch. XML storage is no longer supported.
+
+When you retrieve the storage type, it will now always return Elasticsearch/OpenSearch, even if the ProfileManager or ResourceManager configuration states that the storage type is XML. If no ProfileManager configuration can be found, a default configuration will now be created with storage type set to Elasticsearch/OpenSearch.
+
+If you would try to send a `SetResourceManagerConfigMessage` to change the storage type to XML, the response message will state that the attempt failed and will contain the following error message:
+
+`Ignoring the config change, Xml is no longer supported as ResourceStorageType.`
+
+If you would try to set the ProfileManager configuration to Elasticsearch/OpenSearch via the configuration manager, this will fail. The ProfileManager log file should then contain the following trace data:
+
+```txt
+TraceData: (amount = 1)
+   - ErrorData: (amount = 1)
+      - ProfileManagerErrorData: ErrorReason: InvalidConfigurationFile,
+                                 Message: Xml is no longer supported as ProfileManagerStorageType,
+```
+
+> [!NOTE]
+> The *SLNetClientTest* tool will no longer allow you to switch the storage type from XML to Elasticsearch/OpenSearch or vice versa, nor will it allow you to create a ProfileManager configuration anymore.
+
 ## Changes
 
 ### Enhancements
