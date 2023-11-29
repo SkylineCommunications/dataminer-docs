@@ -363,6 +363,13 @@ Enables SLProtocol as a 32-bit process. This option is not configured in *SoftLa
 - **Minimum version**: 10.3.9
 - **Release version**: N/A
 
+### SnmpPollingSnmpPlusPlusOnly
+
+Configures the DataMiner System to use SNMP++ for the polling of all three SNMP versions, instead of only for SNMPv3.<!-- RN 37778 -->
+
+- **Minimum version**: 10.4.2
+- **Release version**: To be determined.
+
 ### SrmOwnServices
 
 Enables ownership support for SRM services.
@@ -383,13 +390,6 @@ Enables [Swarming](xref:Swarming) support for eligible systems.
 
 - **Minimum version**: 10.3.11
 
-### VisualDataManager
-
-Enables the new VisualDataHelper.
-
-- **Minimum version**: 9.6.1
-- **Release version**: 9.6.4
-
 ### UseWebIAS
 
 Uses an embedded web browser for Automation script execution instead of the native Cube pop-up window.
@@ -403,8 +403,9 @@ Enables the Cube UI for [User-Defined APIs](xref:UD_APIs).
 - **Minimum version**: 10.3.5
 - **Release version**: 10.3.6/10.4.0 ([RN 36273](xref:General_Feature_Release_10.3.6#user-defined-apis-id_34910-id_35134-id_35169-id_35417-id_35743-id_35810-id_35880-id_35885-id_36118-id_36250-id_36273-id_36366))
 
-### SnmpPollingSnmpPlusPlusOnly
+### VisualDataManager
 
-Configures the DataMiner system to use *snmp++* for polling all three SNMP versions instead of only SNMPv3.
+Enables the new VisualDataHelper.
 
-- **Minimum version**: 10.4.2
+- **Minimum version**: 9.6.1
+- **Release version**: 9.6.4
