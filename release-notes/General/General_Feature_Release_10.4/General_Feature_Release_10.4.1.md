@@ -316,6 +316,6 @@ In some rare cases, SLAutomation would not clean up deleted references to elemen
 
 #### GQI: 'Could not find PK column' error after performing a query against an empty parameter table [ID_37978]
 
-<!-- MR 10.4.0 - FR 10.4.1 -->
+<!-- MR 10.3.0 [CU11] - FR 10.4.1 -->
 
 Up to now, in some rare cases, performing a GQI query against an empty parameter table would result in a `Could not find PK column` error. From now on, GQI will return an empty result set instead.
