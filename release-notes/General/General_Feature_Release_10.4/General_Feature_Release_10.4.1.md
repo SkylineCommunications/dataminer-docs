@@ -267,6 +267,14 @@ Ad hoc data sources and custom operators now support row metadata.
 - In case of an ad hoc data source, any metadata can be attached to a row.
 - In case of a custom operator, row metadata can be read from existing rows, and row metadata can be modified.
 
+#### DataMiner upgrade: New prerequisite will check whether the DMA still contains legacy reports or legacy dashboards [ID_37922]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+When you upgrade DataMiner from a version older than 10.4.0 to a version from 10.4.0 onwards, the newly added prerequisite will check whether the DataMiner Agent still contains legacy reports or legacy dashboards. If so, the prerequisite will fail.
+
+See also: [Upgrade fails because of VerifyNoLegacyReportsDashboards.dll prerequisite](xref:KI_Upgrade_fails_VerifyNoLegacyReportsDashboards_prerequisite)
+
 #### Service & Resource Management: Enhanced performance when updating/applying profile instances [ID_37976]
 
 <!-- MR 10.4.0 - FR 10.4.1 -->
