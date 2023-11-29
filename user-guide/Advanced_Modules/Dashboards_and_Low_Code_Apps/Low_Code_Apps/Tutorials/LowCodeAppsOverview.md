@@ -34,3 +34,5 @@ With the DataMiner Low-Code Apps module, you can create custom applications that
 - [Chaining actions](xref:Tutorial_Apps_Chaining_Actions)
 
 - [Using the stepper component in a low-code app](xref:TutorialStepper)
+
+- [Styling an order arrival table](xref:Tutorial_Apps_Style_A_Table)

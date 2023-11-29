@@ -350,6 +350,8 @@ items:
                 topicUid: Tutorial_Apps_Chaining_Actions
               - name: Using the stepper component in a low-code app
                 topicUid: TutorialStepper
+              - name: Styling a table component
+                topicUid: Tutorial_Apps_Style_A_Table
       - name: Configuring components
         topicUid: Configuring_components
         items:

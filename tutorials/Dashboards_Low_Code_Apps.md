@@ -22,6 +22,7 @@ uid: Dashboards_Low-Code_Apps_Tutorials
 | [Running a script when a page opens](xref:Tutorial_Apps_Script_Upon_Page_Load) | Run a script when a page of a low-code app is opened. |
 | [Chaining actions](xref:Tutorial_Apps_Chaining_Actions) | Perform consecutive actions in a low-code app. |
 | [Using the stepper component in a low-code app](xref:TutorialStepper) | Add and configure a stepper component in a low-code app to help with managing incidents and their different states. |
+| [Styling a table component](xref:Tutorial_Apps_Style_A_Table) | Style a table component in a low-code app using GQI queries and the Template Editor. |
 
 ### GQI tutorials
 
