@@ -66,7 +66,7 @@ The Content-Length header is calculated and filled in automatically depending on
 >
 > - DataMiner 10.3.6: 30 MB
 > - DataMiner 10.3.8: 16.7 MB
-> - DataMiner 10.4.1/10.4.0: 29 MB
+> - DataMiner 10.4.0/10.4.1: 29 MB
 
 ### Body
 
