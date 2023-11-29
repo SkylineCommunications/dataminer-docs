@@ -2,11 +2,11 @@
 uid: Tutorial_Apps_Style_A_Table
 ---
 
-# Styling an order arrival table
+# Styling a table component
 
 This tutorial demonstrates how you can style an order arrival table in a low-code app.
 
-Expected duration: ** minutes.
+Expected duration: 30 minutes.
 
 > [!TIP]
 > See also: [Using the Template Editor](xref:Template_Editor)
@@ -353,15 +353,17 @@ You can now create the query using the *Orders.json* file as the data source.
 
 1. In the data pane, select *Queries* and click the + icon to add a new query.
 
-1. Give the query a name, e.g. "Orders".
+1. Provide the necessary information:
 
-1. In the dropdown box, select *Get ad hoc data*.
+   1. Give the query a name, e.g. "Orders".
 
-1. Select *JSON Reader* from the *Data source* dropdown list.
+   1. In the dropdown box, select *Get ad hoc data*.
 
-1. Select *Orders.json* from the *Filter* dropdown list.
+   1. Select *JSON Reader* from the *Data source* dropdown list.
 
-   ![Query](~/user-guide/images/OrdersQuery.png).
+   1. Select *Orders.json* from the *Filter* dropdown list.
+
+      ![Query](~/user-guide/images/OrdersQuery.png).
 
 1. Drag the ad hoc data feed onto an empty section of the low-code app page.
 
@@ -373,7 +375,7 @@ You can now create the query using the *Orders.json* file as the data source.
 
 ## Step 3: Configure a hyperlink
 
-Now that the table component is set up, make it so that the first table column, *Order ID*, is configured to open a webpage in a new tab when clicked.
+Now that the table component is configured, enable the first table column, *Order ID*, to act as a hyperlink, opening a webpage in a new tab when clicked.
 
 1. Make sure the table component is selected, and navigate to *Layout > Column Appearance*.
 
@@ -385,10 +387,7 @@ Now that the table component is set up, make it so that the first table column, 
 
    ![Selecting hyperlink preset](~/user-guide/images/SelectingHyperlinkPreset.gif)
 
-1. To specify the webpage this hyperlink redirects to, configure an action in the Template Editor.
-
-   > [!TIP]
-   > In the Template Editor, you can configure actions for icon, rectangle, and ellipse layers. For more information, see [Specifying layer properties](xref:Template_Editor#specifying-layer-properties)
+1. To specify the webpage this hyperlink redirects to, configure an action in the Template Editor:
 
    1. In the *Column Appearance* settings, click the ellipsis button ("...") and select *Customize preset* to open the Template Editor.
 
@@ -399,7 +398,7 @@ Now that the table component is set up, make it so that the first table column, 
 
       ![Configure action](~/user-guide/images/ConfigureAction.png)
 
-      Because you used the *Hyperlink* preset option, a [*Navigate to a URL* action](xref:LowCodeApps_event_config#navigating-to-a-url) is already configured that redirects the user to `http(s)://[DMA name]/{Order ID}` when they click the shape.
+      Because you used the *Hyperlink* preset option, a [*Navigate to a URL* action](xref:LowCodeApps_event_config#navigating-to-a-url) is already configured, redirecting the user to `http(s)://[DMA name]/{Order ID}` when clicking the shape.
 
    1. To edit this hyperlink, expand the configuration section by clicking the sideward arrow. Replace the URL with the following link: `https://www.google.com/search?q={Order ID}`.
 
@@ -409,7 +408,7 @@ Now that the table component is set up, make it so that the first table column, 
 
    1. To save all changes, click *Save* in the lower right corner of the Template Editor.
 
-      Now, when you click a table cell in the *Order ID* column, a google search page is opened with results for that order ID.
+      Once the app has been published, when you click a table cell in the *Order ID* column, a Google search page opens with results for that order ID.
 
 ## Step 4: Style the 'created' column
 
@@ -441,85 +440,89 @@ For the second column, *Created*, ensure a more visually appealing styling by ce
 
 ## Step 5: Add conditional coloring to the 'Fulfillment' column
 
-For the fourth column, *Fulfillment*, we want to add conditional coloring, dependent on the value of the column.
+For the fourth column, *Fulfillment*, follow these steps to incorporate conditional coloring based on the column value.
 
 1. Make sure the table component is selected, and navigate to *Layout > Column Appearance*.
 
 1. Select *Fulfillment* from the dropdown list.
 
-   A preview of the column's appearance is displayed. By default, this is set to *Left*.
-
 1. Click the ellipsis button ("...") and select *Customize preset* to open the Template Editor.
 
 1. In the *Layers* tab, select the text layer.
 
-1. In the *Properties* section of the *Settings* pane on the right side of the preview, change the horizontal padding to 10 px and the vertical padding to 2 px.
+1. In the *Properties* section of the *Settings* pane on the right side of the preview, set the horizontal padding to 10 px and the vertical padding to 2 px.
 
    ![Add padding](~/user-guide/images/AddPadding.png)
 
-   By adjusting these padding settings, you can now add a clearly visible background color.
+   Adjusting these padding settings allows for a clearly visible background color.
 
-1. In the *Conditional cases* section of the *Settings* pane, click *Add case*.
+### Add conditional cases
 
-1. Select *Fulfillment* from the dropdown list.
+- When the value in the *Fulfillment* column is set to *Pending Receipt*, the background color should be purple.
 
-1. Enter "Pending Receipt" in the *Filter* text box.
+  1. In the *Conditional cases* section of the *Settings* pane, click *Add case*.
 
-   ![Add conditional override](~/user-guide/images/AddConditionalOverride.gif)
+  1. Select *Fulfillment* from the dropdown list.
 
-   The configured action will now only be executed when the value in the *Fulfillment* column is set to *Pending Receipt*.
+  1. Enter "Pending Receipt" in the *Filter* text box.
 
-1. To configure what will happen to the text when the item meets the condition, follow these steps:
+     ![Add conditional override](~/user-guide/images/AddConditionalOverride.gif)
 
-   1. Enable *Show text*.
+     The configured action will now only be executed when the value in the *Fulfillment* column is set to *Pending Receipt*.
 
-   1. Click *Background* and use the color picker box to adjust the background color to purple. Make sure the opacity is set to 100%.
+  1. To configure the text layer's behavior when the condition is met, follow these steps:
 
-      ![Override background color](~/user-guide/images/OverrideBackgroundColor.png)
+     1. Enable *Show text*.
 
-   Click *Apply* to save these changes.
+     1. Click *Background* and use the color picker box to adjust the background color to purple. Make sure the opacity is set to 100%.
 
-1. Click *Add case* to add another conditional case.
+     Click *Apply* to save these changes.
 
-1. Select *Fulfillment* from the dropdown list.
+- When the value in the *Fulfillment* column is set to *Fulfilled*, the background color should be green.
 
-1. Enter "Fulfilled" in the *Filter* text box.
+  1. Click *Add case* to add another conditional case.
 
-1. Configure the following settings:
+  1. Select *Fulfillment* from the dropdown list.
 
-   1. Enable *Show text*.
+  1. Enter "Fulfilled" in the *Filter* text box.
 
-   1. Click *Background* and use the color picker box to adjust the background color to green. Make sure the opacity is set to 100%.
+  1. Configure the following settings:
 
-   Click *Apply* to save these changes.
+     1. Enable *Show text*.
 
-1. Click *Add case* to add another conditional case.
+     1. Click *Background* and use the color picker box to adjust the background color to green. Make sure the opacity is set to 100%.
 
-1. Select *Fulfillment* from the dropdown list.
+     Click *Apply* to save these changes.
 
-1. Enter "Unfulfilled" in the *Filter* text box.
+- When the value in the *Fulfillment* column is set to *Fulfilled*, the background color should be red.
 
-1. Configure the following settings:
+  1. Click *Add case* to add another conditional case.
 
-   1. Enable *Show text*.
+  1. Select *Fulfillment* from the dropdown list.
 
-   1. Click *Background* and use the color picker box to adjust the background color to red. Make sure the opacity is set to 100%.
+  1. Enter "Unfulfilled" in the *Filter* text box.
 
-   Click *Apply* to save these changes.
+  1. Configure the following settings:
 
-1. To save all changes, click *Save* in the lower right corner of the Template Editor.
+     1. Enable *Show text*.
 
-1. Optionally, you can repeat these steps for the *States* column to apply similar styling.
+     1. Click *Background* and use the color picker box to adjust the background color to red. Make sure the opacity is set to 100%.
+
+     Click *Apply* to save these changes.
+
+  1. To save all changes, click *Save* in the lower right corner of the Template Editor.
+
+Optionally, you can repeat these steps for the *States* column to apply similar styling.
 
 ## Step 6: Add a table column that indicates which row is selected
 
-To add a column that shows which row is currently selected, you must add a new column using GQI and customize an icon with the Template Editor.
+To add a column indicating the currently selected row, follow these steps using GQI and the Template Editor.
 
 Add a new column using GQI:
 
 1. In the *Data* tab, go to *Queries*.
 
-1. Click the pencil icon next to *Orders* and specify the following details:
+1. Click the pencil icon next to *Orders*. Configure as follows:
 
    - Operator: *Column manipulations*.
 
@@ -537,7 +540,7 @@ Add a new column using GQI:
 
 1. To stop editing the *Orders* query, click the pencil icon.
 
-1. Select the top row of the newly added column and drag it from the far right to the far left side of the table.
+1. Select the top row of the new column and drag it from the far right to the far left side of the table.
 
 Customize the column appearance in the Template Editor:
 
@@ -549,9 +552,7 @@ Customize the column appearance in the Template Editor:
 
 1. Click the ellipsis button ("...") and select *Customize preset* to open the Template Editor.
 
-1. Make sure no layers are selected. In the *Settings* pane, change the height to 64 px.
-
-   This change will modify the height of the table rows.
+1. Make sure no layers are selected. In the *Settings* pane, change the height to 64 px to adjust the height of the table rows.
 
    ![Change template height](~/user-guide/images/ChangeTemplateHeight.png)
 
@@ -559,13 +560,13 @@ Customize the column appearance in the Template Editor:
 
 1. In the *Properties* section of the *Settings* pane, click *Icon* and change the icon to a checkmark.
 
-1. Rescale the icon so that it fits the template nicely.
+1. Adjust the icon to fit the template nicely.
 
    ![Change icon](~/user-guide/images/ChangeIcon.png)
 
 1. In the *Conditional cases* section of the *Settings* pane, click *Add case*.
 
-1. Select *Is selected* from the dropdown list.
+1. Choose *Is selected* from the dropdown list.
 
 1. Select *Yes*.
 
@@ -575,11 +576,11 @@ Customize the column appearance in the Template Editor:
 
    1. Click *color* and use the color picker box to adjust the text color to green.
 
-1. Do not close the Template Editor yet, as you will need it again in step 7.
+1. Keep the Template Editor open, as you will need it again in step 7.
 
 ## Step 7: Add a context menu
 
-To finish off this tutorial, you will add a context menu to the table.
+To conclude this tutorial, incorporate a context menu into the table.
 
 1. In the *Tools* tab, click *Icon*.
 
@@ -590,28 +591,75 @@ To finish off this tutorial, you will add a context menu to the table.
    > [!TIP]
    > To locate this icon more efficiently, enter "More" in the filter box at the top.
 
-1. Make sure the new icon layer is selected in the *Layers* tab and rescale the icon so that it fits the template nicely.
+1. Make sure the new icon layer is selected in the *Layers* tab and adjust the icon to fit the template nicely.
 
    ![Add context menu icon](~/user-guide/images/AddContextMenuIcon.png)
 
-1. In the *Properties* section of the *Settings* pane, click *Configure actions*.
+1. Click *Save* in the lower right corner to briefly exit the Template Editor.
+
+1. Select a row in the table component.
+
+1. Navigate to *Layout > Column Appearance* and re-enter the Template Editor for the same column.
+
+1. Make sure the icon layer with the ellipsis icon is selected, and click *Configure actions* in the *Properties* section of the *Settings* pane.
 
 1. In the pop-up window, select *Show context menu* from the dropdown list.
 
 1. Configure the different menu items:
 
-   - Let's add a 'Calculate percentage profit' button to the context menu where we divide the 'profit' column with the 'total' column, We'll just use google and search the division to show the result. On the left side on the menu we can first add an icon to the item. We'll use a calculator icon for this tutorial. After that we can add a name to the item. Let's pick 'Calculate percentage profit'
+   - Add a menu item to divide the *Profit* column by the *Total* column:
 
-    ![Configure Name and Icon](~/user-guide/images/ConfigureIconAndName.gif)
+     1. Click the empty gray square to the left, and enter "Calculator" in the filter box at the top to add a calculator icon.
 
-- We now need to configure an action. Click the button next to the name (Configure actions). This opens the actions menu we already know. Here select the action to 'Navigate to URL' and enter the following URL: `https://google.com/search?q={Profit}%2F{Total}`. This will open google and search the division of the profit and total column. We can use the intellisense provided by low code apps to grab the profit and total. To do this, make sure a column is selected, type '{' and start using the intellisense to select the correct column (To confirm a intellisense selection, press 'TAB' and use the arrow keys to navigate).
+     1. In the *Label* box, enter "Calculate percentage profit".
 
-    ![Configure action](~/user-guide/images/ConfigureGoogleAction.gif)
+        ![Configure Name and Icon](~/user-guide/images/ConfigureIconAndName.gif)
 
-- Adding another item in the context menu is done the same way. Click 'Add menu item'. Let's use a 'Search' icon and just google the orderID again, Name it 'Search order'. We can now configure an action the same way we did before. Using  the 'Navigate to URL' action and enter the following URL: `https://google.com/search?q={Order ID}` (Use intellisense to configure the Order ID column).
+     1. Configure an action for this menu item:
 
-    ![Configure action](~/user-guide/images/ConfigureGoogleAction2.gif)
+        1. Click the ![Configure actions](~/user-guide/images/Configure_Actions.png) icon.
 
-Publish the app and see the result. Select a row by clicking on it, the checkmark will now be green for the selected row. Click the 3 dots to open the context menu and click on 'Calculate percentage profit'. A new tab will open with the google search results for the division of the profit and total column. Same for the 'Search order' option.
+        1. Select *Navigate to URL* from the actions dropdown list.
 
-![Result](~/user-guide/images/TableResult.png)
+        1. Enter the following URL: `https://google.com/search?q={Profit}%2F{Total}`.
+
+           - Replace `{Profit}` with the complete path to the *Profit* column by clicking TAB to use IntelliSense suggestions, e.g. `{FEED.Page."Table 1"."Selected rows"."Query rows".Profit}`.
+
+           - Replace `{Total}` with the complete path to the *Total* column by clicking TAB to use IntelliSense suggestions, e.g. `{FEED.Page."Table 1"."Selected rows"."Query rows".Total}`
+
+           ![Configure action](~/user-guide/images/ConfigureGoogleAction.gif)
+
+           > [!IMPORTANT]
+           > IntelliSense will only provide suggestions if a table row was selected in the low-code app edit mode.
+
+   - Add a menu item to google the order ID:
+
+     1. Click the empty gray square and enter "Search" in the filter box to add a magnifying glass icon.
+
+     1. In the *Label* box, enter "Search order".
+
+     1. Configure an action for this menu item:
+
+        1. Click the ![Configure actions](~/user-guide/images/Configure_Actions.png) icon.
+
+        1. Select *Navigate to URL* from the actions dropdown list.
+
+        1. Enter the following URL: `https://google.com/search?q={Order ID}`.
+
+           Replace `{Order ID}` with the complete path to the *Order ID* column by clicking TAB to use IntelliSense suggestions, e.g. `{FEED.Page."Table 1"."Selected rows"."Query rows"."Order ID"}`
+
+           ![Configure action](~/user-guide/images/ConfigureGoogleAction2.gif)
+
+1. Click *Ok* in the lower right corner to save the context menu.
+
+1. To save all changes, click *Save* in the lower right corner of the Template Editor.
+
+1. Publish the low-code app and test the result.
+
+   - Select a row. The checkmark in that row will now be green.
+
+   - Click the ellipsis in the first table column to open the context menu and select  *Calculate percentage profit*. A new tab will open with the Google search results for the division of the profit and total column.
+
+   - Open the context menu and select *Search order*. A new tab will open with the Google search results for the order ID.
+
+   ![Result](~/user-guide/images/TableResult.png)
