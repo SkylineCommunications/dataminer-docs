@@ -61,7 +61,7 @@ In this tutorial, you will use an [ad hoc data source](xref:Get_ad_hoc_data), wh
                "Type": "string"
            },
            {
-               "Name": "Fullfillment",
+               "Name": "Fulfillment",
                "Type": "string"
            },
            {
