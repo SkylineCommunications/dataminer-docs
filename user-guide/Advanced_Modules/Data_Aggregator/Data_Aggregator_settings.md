@@ -140,7 +140,7 @@ For example:
 ```
 
 > [!NOTE]
-> The `PageSize` parameter within a query significantly influences the optimization of execution time and job performance. Adjusting this parameter can enhance efficiency. A lower PageSize necessitates more round trips but reduces the likelihood of timeouts when processing extensive rows. Conversely, a higher PageSize minimizes round trip durations but increases the potential for timeouts when requesting larger data volumes.
+> The `PageSize` parameter within a query can in some scenarios significantly influence execution times and overall job performance. A lower PageSize necessitates more round trips but reduces the likelihood of timeouts when processing extensive rows. Conversely, a higher PageSize minimizes round trip durations but increases the potential for timeouts when requesting larger data volumes.
 
 ## Jobs
 

@@ -4,13 +4,13 @@ uid: Data_Aggregator_troubleshooting
 
 # Troubleshooting
 
-Check DataAggregator Log Files for Errors
+Check the DataAggregator Log Files for Errors
 
-Ensure to inspect the DataAggregator log files for any potential errors. By default, the log file for Data Aggregator is located in: `C:\ProgramData\Skyline Communications\DataMiner DataAggregator\Logs`.
+Be sure to inspect the DataAggregator log files for any potential errors. By default, the log file for Data Aggregator is located in: `C:\ProgramData\Skyline Communications\DataMiner DataAggregator\Logs`.
 
 ## The DataMiner DataAggregator process is not starting up
 
-When encountering issues with the DataMiner DataAggregator process failing to start, one common reason is an invalid JSON format within the settings. This is often reflected in an event logged in the `Event Viewer`.
+When the DataMiner DataAggregator service fails to start, a common reason is invalid JSON syntax in the settings configuration. The settings can be found in `C:\Program Files\Skyline Communications\DataMiner DataAggregator`. In that case, an event will be logged in the `Event Viewer`.
 
 1. Navigate to Event Viewer: Open the `Event Viewer` and search for errors registered by the `DataMiner DataAggregator.exe` application. The event's content will provide detailed information about the encountered issue.
 
