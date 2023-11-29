@@ -81,25 +81,28 @@ This makes it possible to define the four CRUD (create, read, update, delete) ac
 
 #### User input data
 
-There are two ways to pass data to your API. You can use [query parameters](#query-parameters), which allow you to pass data in a key-value format. Or you can use the [request body](#request-body), which you can either deserialize yourself in your script, or let it be deserialized to a key-value format by the built-in deserialization.
+There are two ways to pass data to the API:
+
+- You can use [query parameters](#query-parameters), which allow you to pass data in a key-value format.
+- You can use the [request body](#request-body), which you can either deserialize yourself in your script, or you can have deserialized to a key-value format by the built-in deserialization.
 
 ##### Query parameters
 
-Query parameters are available in the QueryParameters property in the `ApiTriggerInput`. The `IQueryParameters` exposes following methods:
+Query parameters are available in the *QueryParameters* property in the `ApiTriggerInput`. `IQueryParameters` exposes the following methods:
 
 | Method name | Return type | Summary |
 |-------------|-------------|---------|
-| `TryGetValues(string key, out List<string> values)` | `bool` | Tries to get the value(s) for the associated key. Returns `true` in case value(s) are found for that key, `false` if not. The values will be in the `out` parameter. |
-| `TryGetValue(string key, out string value)` | `bool` | Tries to get the value for the associated key. Returns `true` in case a value is found for that key, `false` if not. The value will be in the `out` parameter.  The first value will be returned in case there are multiple. |
+| `TryGetValues(string key, out List<string> values)` | `bool` | Tries to get the values for the associated key. Returns `true` in case one or more values are found for the key, and `false` if not. The values will be in the `out` parameter. |
+| `TryGetValue(string key, out string value)` | `bool` | Tries to get the value for the associated key. Returns `true` in case a value is found for the key, and `false` if not. The value will be in the `out` parameter. In case there are multiple values, the first value will be returned. |
 | `GetAllKeys()` | `List<string>` | Returns all keys for which there is a value. |
-| `ContainsKey(string key)` | `bool` | Returns whether the key is present or not. |  
+| `ContainsKey(string key)` | `bool` | Returns whether the key is present or not. |
 
 > [!NOTE]
 >
 > - Multiple values can be added for one key.
 > - Query parameter keys are case-sensitive.
-> - The maximum size for the query string is 2KB.
-> - Query parameters are available from DataMiner 10.4.1/10.5.0 onwards.
+> - The maximum size for the query string is 2 KB.
+> - Query parameters are available from DataMiner 10.4.1/10.5.0 onwards.<!-- RN 37733 -->
 
 ##### Request body
 
