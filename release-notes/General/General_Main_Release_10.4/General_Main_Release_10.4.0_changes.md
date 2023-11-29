@@ -715,6 +715,31 @@ Forwarding sort operators to the backend is now supported for a wider range of q
 
 When two DataMiner Agents try to connect via SLNet, from now on, this will no longer be allowed if the two agents share the same DataMiner GUID (except when they are both part of the same Failover setup).
 
+#### DataMiner upgrade: New 'UninstallAPIDeployment' upgrade action and 'VerifyNoObsoleteApiDeployed' prerequisite [ID_37825]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+The newly added *VerifyNoObsoleteApiDeployed* prerequisite will check whether the *APIDeployment* soft-launch flag is active and whether APIs are deployed. If so, the prerequisite will fail and return a link to the following page:
+
+- [Upgrade fails because of VerifyNoObsoleteApiDeployed.dll prerequisite](xref:KI_Upgrade_fails_VerifyNoObsoleteApiDeployed_prerequisite)
+
+Also, the newly added *UninstallApiDeployment* upgrade action will remove everything related to the deprecated [API Deployment](xref:Overview_of_Soft_Launch_Options#apideployment) feature:
+
+- Stop and delete the *SLAPIEndpoint* service.
+
+- Remove the following files (if present):
+
+  - *C:\Skyline DataMiner\SLAPIEndpoint*
+  - *C:\Skyline DataMiner\DeployerTokens*
+  - *C:\Skyline DataMiner\ForceDeployerTokensFileStorage.txt*
+  - *C:\Skyline DataMiner\Resources\SLAPIEndpoint.zip*
+
+- If present, remove the rewrite rules for API Deployment.
+
+- Remove the API Deployment configuration file from *C:\Skyline DataMiner\Configurations\JSON*.
+
+- Remove the *APIDeployment* soft-launch flag from *SoftLaunchOptions.xml*.
+
 #### Service & Resource Management: Enhanced performance when updating/applying profile instances [ID_37976]
 
 <!-- MR 10.4.0 - FR 10.4.1 -->

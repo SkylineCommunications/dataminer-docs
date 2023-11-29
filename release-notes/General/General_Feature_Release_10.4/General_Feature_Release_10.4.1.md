@@ -203,6 +203,31 @@ Up to now, when an SNMP response was received, a buffer with a fixed size of 102
 
 From now on, the buffer will have a dynamic size. This allow larger responses to be processed, and will also make sure that less memory has to be reserved when smaller responses are received.
 
+#### DataMiner upgrade: New 'UninstallAPIDeployment' upgrade action and 'VerifyNoObsoleteApiDeployed' prerequisite [ID_37825]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+The newly added *VerifyNoObsoleteApiDeployed* prerequisite will check whether the *APIDeployment* soft-launch flag is active and whether APIs are deployed. If so, the prerequisite will fail and return a link to the following page:
+
+- [Upgrade fails because of VerifyNoObsoleteApiDeployed.dll prerequisite](xref:KI_Upgrade_fails_VerifyNoObsoleteApiDeployed_prerequisite)
+
+Also, the newly added *UninstallApiDeployment* upgrade action will remove everything related to the deprecated [API Deployment](xref:Overview_of_Soft_Launch_Options#apideployment) feature:
+
+- Stop and delete the *SLAPIEndpoint* service.
+
+- Remove the following files (if present):
+
+  - *C:\Skyline DataMiner\SLAPIEndpoint*
+  - *C:\Skyline DataMiner\DeployerTokens*
+  - *C:\Skyline DataMiner\ForceDeployerTokensFileStorage.txt*
+  - *C:\Skyline DataMiner\Resources\SLAPIEndpoint.zip*
+
+- If present, remove the rewrite rules for API Deployment.
+
+- Remove the API Deployment configuration file from *C:\Skyline DataMiner\Configurations\JSON*.
+
+- Remove the *APIDeployment* soft-launch flag from *SoftLaunchOptions.xml*.
+
 #### Behavioral anomaly detection: Flatline detection now takes into account the decimal precision of parameter values [ID_37828]
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
