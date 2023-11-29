@@ -194,7 +194,7 @@ The following values can vary in each DMS:
 
 #### Cluster of 2 DMAs
 
-This is an example of **nats-server.config** in a NATS cluster of exactly 2 Agents. In DataMiner versions prior to 10.2.0[CU17]/10.3.0[CU5]/10.3.8, this constituted a special type of configuration. From DataMiner 10.2.0[CU17]/10.3.0[CU5]/10.3.8 onwards, an identical configuration as for [a cluster of 3 or more DMAs](#cluster-of-3-or-more-dmas) is required.
+This is an example of **nats-server.config** in a NATS cluster of exactly 2 Agents. In DataMiner versions prior to 10.2.0 [CU17]/10.3.0 [CU5]/10.3.8, this constituted a special type of configuration. From DataMiner 10.2.0 [CU17]/10.3.0 [CU5]/10.3.8 onwards, an identical configuration as for [a cluster of 3 or more DMAs](#cluster-of-3-or-more-dmas) is required.
 
 ##### [From DataMiner 10.2.0 [CU18]/10.3.0 [CU6]/10.3.9 onwards](#tab/tabid-4)
 
@@ -238,7 +238,7 @@ streaming: {
 server_name: MyServerName
 ```
 
-##### [Prior to DataMiner 10.2.0[CU6]/10.2.8](#tab/tabid-3)
+##### [Prior to DataMiner 10.2.0 [CU6]/10.2.8](#tab/tabid-3)
 
 ```txt
 port: 4222 # Port for client connections

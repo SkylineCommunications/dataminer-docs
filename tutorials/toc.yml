@@ -2,6 +2,8 @@ items:
   - name: DataMiner tutorials
     topicUid: Tutorials
     items:
+      - name: DataMiner Analytics tutorials
+        topicUid: Analytics_Tutorials
       - name: ChatOps Custom Command tutorials
         topicUid: ChatOps_Tutorials
       - name: Dashboards and Low-Code Apps tutorials
@@ -12,8 +14,3 @@ items:
         topicUid: DOM_tutorials
       - name: User-defined APIs tutorials
         topicUid: User-defined_APIs_Tutorials
-        items:
-          - name: Hello world
-            topicUid: UD_APIs_Hello_world_tutorial
-          - name: Creating an API to retrieve elements in alarm
-            topicUid: UD_APIs_Elements_in_alarm_tutorial

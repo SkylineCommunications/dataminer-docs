@@ -5,10 +5,11 @@ namespace Skyline.DataMiner.Scripting
 	/// <summary>
 	/// Holds an overview of the protocol parameters.
 	/// </summary>
-	/// <remarks>
-	///		<para>The Parameter class is an auto-generated static class. It allows you to improve readability and maintainability of QAction code. This class can be found in the [Protocol Name].[Protocol Version].QAction.Helper.dll DLL located in the folder C:\Skyline DataMiner\ProtocolScripts.</para>
-	///		<para>For every standalone read parameter, the class defines two public constant fields, one using the name of the parameter (lower cased and removing special characters) and one with an additional suffix consisting of an underscore and the parameter ID (e.g. "_108").</para>
-	///		<para>For example, suppose a protocol defines a parameter of type "read" with ID 108 and name "Status Code", then the Parameter class will define the following two fields:</para>
+	/// <remarks><list type="bullet">
+	///		<item><description>The Parameter class is an auto-generated static class. It allows you to improve readability and maintainability of QAction code. This class can be found in the [Protocol Name].[Protocol Version].QAction.Helper.dll DLL located in the folder C:\Skyline DataMiner\ProtocolScripts.</description></item>
+	///		<item><description>For every standalone read parameter, the class defines two public constant fields, one using the name of the parameter (lower cased and removing special characters) and one with an additional suffix consisting of an underscore and the parameter ID (e.g. "_108").</description></item>
+	///		<item><description>For example, suppose a protocol defines a parameter of type "read" with ID 108 and name "Status Code", then the Parameter class will define the following two fields:</description></item>
+	///		</list>
 	///		<code language="c#">
 	///	public static class Parameter
 	///	{

@@ -223,6 +223,35 @@ The following example illustrates the configuration of a general database of typ
 </DataBases>
 ```
 
+## Configuring a size limit for file offloads
+
+> [!NOTE]
+> Prior to DataMiner 10.4.2/10.5.0, this functionality is configured in [DBConfiguration.xml](xref:DBConfiguration_xml) instead.
+
+When the main database is offline, file offloads are used to store write/delete operations. You can configure a limit for the file size of these offloads in *DB.xml*. When the limit is reached, new data will be dropped.
+
+To configure this size limit:
+
+1. Open the file *DB.xml* in the folder *C:\\Skyline DataMiner\\*.
+
+1. Configure the file with a *FileOffloadConfiguration* element with the desired maximum size (in MB), as illustrated below:
+
+    ```xml
+    <DataBases>
+      ...
+      <FileOffloadConfiguration>
+        <MaxSizeMB>20</MaxSizeMB>
+      </FileOffloadConfiguration>
+    </DataBases>
+    ```
+
+1. Restart DataMiner.
+
+> [!NOTE]
+>
+> - If no limit is set in *DB.xml* or if the file offload configuration is invalid, the size of the database offload files will by default be limited to 10 GB.
+> - When the specified limit has been reached, the following alarm will be generated: "Max file offload disk usage for certain storages has been reached, new data for these storages will be dropped."
+
 ## Offload database settings
 
 The configuration data for the offload or “central” database has to be specified in a *\<Database>* tag of which the *local* attribute is set to “false”.
@@ -485,7 +514,7 @@ The *\<Database>* tag for an indexing database has the following attributes:
 >
 > - There can only be one active indexing database on a DMA. However, that database can consist of multiple nodes. In that case, the IP addresses for these nodes are all added in the DBServer tag, separated by commas. For example: `<DBServer>10.10.10.1,10.10.10.2,10.10.10.3</DBServer>`
 > - From DataMiner 10.2.0/10.1.1 until DataMiner 10.3.0/10.3.3, Elastic Amazon AWS can be used. In that case, the URL should be specified in the DBServer element. For example: *\<DBServer>mycompany-elastic.amazonaws.com\</DBServer>*.
-> - From DataMiner 10.3.0/10.3.3 onwards, OpenSearch and Amazon OpenSearch Services can be used.
+> - DataMiner 10.3.0 [CU0] up to 10.3.0 [CU8] and from DataMiner 10.3.3 up to 10.3.11, OpenSearch and Amazon OpenSearch Services can be used.
 > - From DataMiner 10.2.0/10.1.3 onwards, a *DBConfiguration.xml* file can be configured, which overrides the settings in this section of *DB.xml*. See [Configuring multiple OpenSearch clusters](xref:Configuring_multiple_OpenSearch_clusters) or [Configuring multiple Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters).
 
 ### Defining a custom port for an indexing database
@@ -525,9 +554,9 @@ To do so:
 
 1. Save the file and restart the DMA.
 
-### Specifying custom credentials for Elasticsearch
+### Specifying custom credentials for OpenSearch or Elasticsearch
 
-From DataMiner 10.0.11 onwards, it is possible to configure a custom username and password for Elasticsearch in *DB.xml*.
+From DataMiner 10.0.11 onwards, it is possible to configure a custom username and password for OpenSearch or Elasticsearch in *DB.xml*.
 
 To do so:
 
@@ -535,14 +564,14 @@ To do so:
 
 1. Open the file *DB.xml* (in the folder *C:\\Skyline DataMiner\\*).
 
-1. In the *UID* and *PWD* elements below the Elasticsearch *Database* tag, specify the username and password, respectively.
+1. In the *UID* and *PWD* elements below the Elasticsearch *Database* tag (which is also used for OpenSearch), specify the username and password, respectively.
 
     For example:
 
     ```xml
     <DataBase active="true" search="true" type="Elasticsearch">
      <DBServer>10.11.51.58</DBServer>
-     <UID>elastic</UID>
+     <UID>username</UID>
      <PWD>password123</PWD>
     </DataBase>
     ```
@@ -551,6 +580,13 @@ To do so:
 
 > [!NOTE]
 > For more information on how to configure TLS and security in Elasticsearch, see [Securing the Elasticsearch database](xref:Security_Elasticsearch).
+
+### Configuring multiple OpenSearch or Elasticsearch clusters
+
+> [!NOTE]
+> Prior to DataMiner 10.4.2/10.5.0, this functionality is configured in [DBConfiguration.xml](xref:DBConfiguration_xml) instead.
+
+It is possible to have data offloaded to multiple OpenSearch or Elasticsearch clusters, i.e. one main cluster and several replicated clusters. From DataMiner 10.4.2/10.5.0 onwards, this is configured in *DB.xml*. For detailed information, see [Configuring multiple OpenSearch clusters](xref:Configuring_multiple_OpenSearch_clusters) or [Configuring multiple Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters).
 
 ## CMDB settings
 

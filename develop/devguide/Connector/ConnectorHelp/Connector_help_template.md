@@ -2,7 +2,7 @@
 uid: Connector_help_template
 ---
 
-# Connector help template
+# Connector documentation template
 
 [Short description of the data source and of the function of the connector.]
 
@@ -115,7 +115,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-[In this section, provide a more detailed description of how the connector functions. For more information, refer to [Writing connector help](xref:Connector_help_pages#writing-connector-help).]
+[In this section, provide a more detailed description of how the connector functions. For more information, refer to [Writing connector documentation](xref:Connector_help_pages#writing-connector-documentation).]
 
 ## DataMiner Connectivity Framework
 

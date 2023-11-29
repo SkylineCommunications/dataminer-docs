@@ -2,21 +2,13 @@
 uid: Web_apps_Feature_Release_10.3.12
 ---
 
-# DataMiner web apps Feature Release 10.3.12 – Preview
+# DataMiner web apps Feature Release 10.3.12
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to the web applications, see [General Feature Release 10.3.12](xref:General_Feature_Release_10.3.12).
-
-## Highlights
-
-*No highlights have been selected yet.*
-
-## New features
-
-*No new features have been added yet.*
 
 ## Changes
 
@@ -106,6 +98,18 @@ When, in a table component, you changed the order of the columns, and then expor
 
 When you clicked the waffle button while viewing a DataMiner web app (e.g. Monitoring) on a mobile device, the menu would incorrectly not open.
 
+#### Dashboards app: Problem when migrating empty queries [ID_37537]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+Up to now, attempts to migrate empty queries would fail. From now on, no errors will occur anymore when migrating empty queries.
+
+#### Low-Code Apps: Problem when feeding falsy values to app actions [ID_37538]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When a falsy value (empty string, 0, etc.) was fed as an argument of an app action, that value would not be updated correctly.
+
 #### Dashboards app & Low-Code Apps: Numeric input component would not get the focus when one of its arrow buttons was clicked [ID_37543]
 
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
@@ -113,3 +117,103 @@ When you clicked the waffle button while viewing a DataMiner web app (e.g. Monit
 Up to now, a *Numeric input* component would not automatically get the focus when you clicked one of its arrow buttons. As a result, the feed value of the component would also not get updated.
 
 From now on, when you click the *Up* or *Down* button of a *Numeric input* component, it will get the focus and its feed value will be updated.
+
+#### Dashboards app: 'No parameters available' error would appear when trying to retrieve parameters belonging to a stopped element [ID_37561]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When, in the Dashboards app, parameters belonging to a stopped element were retrieved, a *No parameters available* error would appear.
+
+From now on, element lists will no longer include non-active elements. As a result, it will no longer be possible to select parameters belonging to non-active elements.
+
+#### Dashboards app & Low-Code Apps - Chart components: Basic updates no longer triggered a refresh of the visualized data [ID_37567]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When the *Column & bar chart*, *Line & area chart* and *Pie & donut chart* components were fed by a query that did not support full real-time updates, basic updates to those components would no longer trigger a refresh of the visualized data.
+
+#### Dashboards app & Low-Code Apps - Table component: Exporting data to CSV would incorrectly be possible when the table was empty [ID_37585]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+Up to now, it would incorrectly be possible to export table data to a CSV file when a table did not display any rows. From now on, when a table does not display any rows (e.g. when no rows match the applied filter), the button allowing you to export the table data to a CSV file will be disabled.
+
+#### Dashboards app: Sidebar would overlap large components when the viewport was too narrow [ID_37594]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When a component was too large to fit into a narrow viewport (e.g. when viewing the dashboard on a mobile device), in some cases, the sidebar would incorrectly overlap the component.
+
+This issue would also occur when a visual overview had been embedded in a *Visual overview* component that was too small.
+
+#### Low-Code Apps: Deleting all components on a panel using the Delete button would delete all components on the page [ID_37615]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When, while editing a panel in a low-code app, you used CTRL+a to select all components on that panel and pressed DELETE to delete them, this would not only delete the components on the panel but also the other components on the rest of the page.
+
+#### Dashboards app & Low-Code Apps: Node keys would be omitted when converting a query to a JSON string [ID_37627]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+In some cases, when a query using node keys was converted to a JSON string, the node keys would incorrect be omitted.
+
+#### Dashboards app & Low-Code Apps - Table component: Header bar options would not reinitialize correctly after the table data had been refreshed [ID_37643]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+The options shown on the header bar of a table component would not reinitialize correctly after the table data had been refreshed.
+
+#### Low-Code Apps: Multiple context menus could incorrectly be opened at the same time [ID_37652]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+In some cases, multiple context menus could incorrectly be opened at the same time. From now on, when you open a context menu while another one is still open, that open menu will first be closed.
+
+#### Low-Code Apps: Problem when a component refetched its data multiple times in quick succession [ID_37654]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When a component refetched its data multiple times in quick succession, a `There are no open sessions` error would be thrown.
+
+#### Dashboards app - Query builder: Too much whitespace below a query after its migration had finished [ID_37660]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When, in the query builder, you opened an unused query, too much whitespace would be shown below it when its migration had finished.
+
+#### Dashboards app & Low-Code Apps - Bar chart and Pie & donut chart: Chart configuration could get changed unexpectedly [ID_37662]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When the query of a *Bar* chart or a *Pie & donut* chart was linked to a feed as a filter, in some cases, the chart configuration could get changed unexpectedly.
+
+#### Low-Code Apps: Images on a low-code app would only be visible to users who had permission to view dashboards [ID_37667]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When you opened a low-code app you were allowed to view, the images on that low-code app would not be visible unless you had permission to view dashboards.
+
+#### Web apps - Visual Overview: Pop-up window containing a page from another visual overview could not be opened [ID_37685]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When a visual overview was opened on a mobile device, it would not be possible to open another page in a pop-up window when that other page was part of a visual overview linked to another object.
+
+#### Dashboards app - Query builder: Filter would ignore changes made to boolean columns the dashboard had been refreshed [ID_37697]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When, in a query, a filter had been applied to a boolean column, the filter would ignore any changes made to that boolean column after you had refreshed the dashboard. In other words, when the query was used to fetch data to be displayed in a table component, the table would not reflect changes made to that boolean column as the filter would not apply those changes.
+
+#### Dashboards app - Query builder: Problem when a string specified in a filter node exceeded the width of the input box [ID_37701]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When a filter node that filtered a column of type string was set to a string that exceeded the width of the input box, up to now, the contents of that input box would not wrap to the next line. From now on, it will.
+
+#### Values of URL-encoded parameters could incorrectly get changed when the Authentication app redirected you back after logging in [ID_37704]
+
+<!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
+
+When IIS redirected you to the Authentication app after you had clicked a URL containing URL-encoded parameters, in some cases, those URL-encoded parameters would not be encoded correctly. When the Authentication app redirected you back after you had logged in, in some cases, the values of those parameters had incorrectly changed.

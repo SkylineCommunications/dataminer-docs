@@ -35,4 +35,4 @@ To summarize: when a table can be skipped in the topology, first specify the sho
 > [!NOTE]
 >
 > - It is advised to use "numeric text" content for the keys when you want to link tables with each other. Strings may cause problems.
-> - An example protocol "SLC SDF Relations" is available in the Protocol Development Guide Companion Files.
+> - An example protocol "SLC SDF Relations" is available in the [Protocol Development Guide Companion Files](https://community.dataminer.services/documentation/protocol-development-guide-companion-files/).

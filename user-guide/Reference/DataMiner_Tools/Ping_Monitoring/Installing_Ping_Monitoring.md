@@ -25,7 +25,7 @@ uid: Installing_Ping_Monitoring
 
   > [!TIP]
   >
-  > - For more information about configuring destinations, consult the [Generic Ping connector help](https://catalog.dataminer.services/result/driver/530).
+  > - For more information about configuring destinations, consult the [Generic Ping connector documentation](https://catalog.dataminer.services/result/driver/530).
   > - See also: [Working with elements in DataMiner](xref:Element_cards)
 
 - Depending on your DataMiner version, you may need to enable the following soft-launch options:

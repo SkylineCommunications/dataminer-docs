@@ -34,7 +34,10 @@ Advantages of DataMiner Storage as a Service (STaaS) include:
 
 1. Make sure you have at least **DataMiner CloudGateway 2.8.0** installed on the system. See [Upgrading nodes to the latest DxM versions](xref:Managing_cloud-connected_nodes#upgrading-nodes-to-the-latest-dxm-versions).
 
-1. Contact your Skyline representative or <staas@dataminer.services> to register you system to use STaaS.
+1. Contact your Skyline representative or <staas@dataminer.services> to register your system to use STaaS.
+
+   > [!NOTE]
+   > If you have a specific preference with respect to the [data location and redundancy setup](#data-location-and-redundancy), let us know when you register your system.
 
 1. Wait until you receive confirmation that the registration is completed.
 
@@ -51,11 +54,30 @@ Advantages of DataMiner Storage as a Service (STaaS) include:
 
 1. Restart DataMiner to begin using STaaS.
 
+## Data location and redundancy
+
+DataMiner STaaS relies on Azure Storage, which stores multiple copies of your data to make sure it is always available even in case outages or disasters occur. Different storage redundancy setups are possible. STaaS supports zone-redundant storage and geo-redundant storage. When you contact Skyline to register your system to use STaaS, you can include your preferences as to the region(s) where your data should be stored and the type of storage redundancy that should be used.
+
+- **Zone-redundant storage (ZRS)** copies your data synchronously across three Azure availability zones in one region. Each availability zone is a separate physical location with independent power, cooling, and networking.
+
+- **Geo-redundant storage (GRS)** copies your data synchronously three times within a single physical location in the primary region and then also copies your data asynchronously to a single physical location in the secondary region. Only specific regions can be combined in such a setup, e.g. if the primary region is Switzerland North, the secondary region can only be Switzerland West. For an overview of the supported regions, see [Azure paired regions](https://learn.microsoft.com/en-us/azure/reliability/cross-region-replication-azure#azure-paired-regions).
+
+> [!TIP]
+> For detailed information, see [Azure Storage redundancy on learn.microsoft.com](https://learn.microsoft.com/en-us/azure/storage/common/storage-redundancy)
+
+## Data resilience and backups
+
+To ensure data resilience for potential recovery scenarios, protecting against user errors and accidental changes, your data is backed up with a **granularity of 1 day**. Backups are stored for **30 days**.
+
+- **Daily backups**: STaaS performs backups with a granularity of 1 day and maintains a 30-day rolling snapshot of your data.
+
+- **Data restoration and support**: In the event a rollback is necessary, our support team will assist you. To submit a rollback request, contact the support team by sending an email to <staas@dataminer.services>. They will guide you through the necessary steps to ensure a successful data restoration.
+
 ## Limitations
 
 To **migrate existing data** to STaaS, the following limitations apply:
 
-- If you migrate from a Cassandra database, logger tables cannot be migrated yet. Support for the migration of logger tables will be introduced in a future DataMiner version.
+- Migrating logger tables is supported from DataMiner 10.3.11 onwards<!-- RN 37283 --> for systems using a [dedicated clustered storage setup](xref:Dedicated_clustered_storage), and from DataMiner 10.3.12 onwards<!-- RN 37408 --> for systems using a Cassandra database per DMA.
 - Migration of an OpenSearch or Elasticsearch database that is defined in [DBConfiguration.xml](xref:DBConfiguration_xml) instead of [DB.xml](xref:DB_xml) (e.g. because a setup with multiple OpenSearch/Elasticsearch clusters is used) is not yet supported.
 - Migration from a MySQL setup is not yet supported.
 
@@ -107,6 +129,22 @@ To resolve this issue, use the following workaround:
 
 > [!NOTE]
 > If you have a DataMiner System consisting of multiple DMAs, it is sufficient to do this on one of the DMAs.
+
+### API Deployment Manager failed to initialize
+
+When the [APIDeployment](xref:Overview_of_Soft_Launch_Options#apideployment) option is still enabled in *SoftLaunchOptions.xml*, the following alarm will be shown in Cube:
+
+```txt
+APIDeploymentManager failed to initialize, retrying. Check SLAPIDeploymentManager.txt for additional information.
+```
+
+In the SLDBConnection.txt log file, the error will look like this:
+
+```txt
+2023/10/10 20:30:18.308|SLDBConnection|SLDataGateway.Repositories|INF|0|354|2023-10-10T20:30:18.302|ERROR|Repository.RepositoryStorageProvider.DeployerToken|Refreshing storage [failed]: SLDataGateway.API.Types.Exceptions.StorageTypeNotFoundException: No storage type found for DataType: DeployerToken
+```
+
+To resolve this issue, remove the [APIDeployment](xref:Overview_of_Soft_Launch_Options#apideployment) option from *SoftLaunchOptions.xml*.
 
 ### Connector-specific issues
 

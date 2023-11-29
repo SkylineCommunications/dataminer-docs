@@ -1,11 +1,24 @@
 ---
-uid: IGQIOnDestroy
+uid: GQI_IGQIOnDestroy
 ---
 
-# IGQIOnDestroy
+# IGQIOnDestroy interface
 
-The *IGQIOnDestroy* interface is called when the instance object is destroyed, which happens when the session is closed, e.g. in case of inactivity or when all the necessary data has been retrieved. It can for instance be used to end the connection with a database. This interface has one method:
+## Definition
 
-| Method | Input arguments | Output arguments | Description |
-|--|--|--|--|
-| OnDestroy | OnDestroyInputArgs | OnDestroyOutputArgs | Indicates that the GQI will close the session. |
+- Namespace: `Skyline.DataMiner.Analytics.GenericInterface`
+- Assembly: `SLAnalyticsTypes.dll`
+
+The *IGQIOnDestroy* interface can be implemented for an ad hoc data source or custom operator to clean up resources after it has been used. It can, for instance, be used to close a database connection.
+
+> [!TIP]
+> See also: [IGQIOnInit](xref:GQI_IGQIOnInit)
+
+## Methods
+
+### OnDestroyOutputArgs OnDestroy(OnDestroyInputArgs args)
+
+This method is invoked when the data source or custom operator instance will no longer be used. It can be implemented to clean up or dispose of any resources the instance may hold.
+
+> [!TIP]
+> Learn more about when this method is called within an [ad hoc data source](xref:Ad_hoc_Life_cycle) or [custom operator](xref:CO_Life_cycle).

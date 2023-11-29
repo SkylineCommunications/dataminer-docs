@@ -16,7 +16,7 @@ In addition to *Continuity* or *Evolve*, you can subscribe to the [Out-of-Busine
 
 ### Community
 
-The *Community* plan enables access to Skyline's Operations team through the forum ([questions](https://community.dataminer.services/questions/) section) and unlimited access to technical resources such as the learning materials, tutorials, or code examples. [Proactive support services](xref:CCA_Support_Services) are included in this plan.
+The *Community* plan enables access to Skyline's Operations team through the forum ([questions](https://community.dataminer.services/questions/) section) and unlimited access to technical resources such as the learning materials, tutorials, or code examples. [Proactive support services](xref:Proactive_Support) are included in this plan.
 
 While software updates to the DataMiner core software are included, connector updates and access to remote technical support (i.e. Operations team) are charged per hour.
 

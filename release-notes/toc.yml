@@ -20,7 +20,7 @@ items:
             topicUid: DataAggregator_2.0.0
             href: DataAggregator/toc.yml
           - name: Communication Gateway release notes
-            topicUid: CommunicationGateway_1.2.0
+            topicUid: CommunicationGateway_1.2.2
             href: CommunicationGateway/toc.yml
           - name: Model Host release notes
             topicUid: ModelHost_1.1.0
@@ -50,7 +50,7 @@ items:
             topicUid: PTP_1.1.3
             href: PTP/toc.yml
           - name: SRM release notes
-            topicUid: SRM_10.3.0.1
+            topicUid: SRM_10.3.0.2
             href: SRM/toc.yml
       - name: Breaking changes
         topicUid: Breaking_changes

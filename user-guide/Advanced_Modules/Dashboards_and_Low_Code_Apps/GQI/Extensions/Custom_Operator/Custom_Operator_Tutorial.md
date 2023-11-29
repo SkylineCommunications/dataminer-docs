@@ -60,7 +60,16 @@ The result will look like this:
 
 - Basic knowledge of GQI extension development.
 
-## Create the implementation
+## Overview
+
+- [Step 1: Create the implementation](#step-1-create-the-implementation)
+- [Step 2: Optimize your custom operator](#step-2-optimize-your-custom-operator)
+
+  - [Use case: Filtering by 'Age'](#use-case-filtering-by-age)
+  - [Use case: Filtering by 'Balance'](#use-case-filter-by-balance)
+  - [Use case: Filtering by 'Name'](#use-case-filter-by-name)
+
+## Step 1: Create the implementation
 
 Change the *GQIMetaData* attribute above the class to configure a new name for your custom operator, e.g. "Balance & obfuscate".
 
@@ -159,7 +168,7 @@ public class MyOperator : IGQIColumnOperator, IGQIRowOperator, IGQIInputArgument
 }
 ```
 
-## Optimize your custom operator
+## Step 2: Optimize your custom operator
 
 This tutorial includes three use cases demonstrating different strategies to optimize your custom operators and highlights common pitfalls that may arise during the process.
 
@@ -335,4 +344,4 @@ If a filter attempts to use an affected column, it will only run after the colum
 Filtering by the original *Name* column will now yield no results.
 
 > [!NOTE]
-> The `IGQIColumn` interface is used for the affected columns array, combining both new columns (`GQIColumn`) and existing columns (`GQIEditableColumn`).
+> The [IGQIColumn](xref:GQI_IGQIColumn) interface is used for the affected columns array, combining both new columns ([GQIColumn](xref:GQI_GQIColumn)) and existing columns (`GQIEditableColumn`).

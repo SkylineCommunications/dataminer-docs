@@ -34,6 +34,14 @@ For essential **system data storage**, a DataMiner System can either make use of
 
 The **offload database** is an optional second data storage solution that can be added to a DataMiner System for the purpose of exporting the data and making it available for third-party software applications. When the DataMiner System is configured to also offload its data to the offload database, it will translate the data to more human-readable data (e.g. element ID references are replaced with element names), so that it is easier for third-party applications to digest. A DataMiner System will only write data to the offload database but will not read from it. The DataMiner System will also not perform maintenance of the offload database.
 
+## dataminer.services
+
+dataminer.services is a cloud platform hosted by Skyline that provides various services. While it is not mandatory for a DataMiner System to be connected to this platform, the connection is required to have access to some DataMiner features.
+
+The most full use of dataminer.services is [DataMiner as a Service](xref:Creating_a_DMS_in_the_cloud), where the entire DataMiner System is hosted by Skyline in the cloud. It is also possible to only have the system data storage hosted by Skyline with [Storage as a Service](xref:STaaS). But even if you host a DataMiner System entirely on your own compute instances, being connected to dataminer.services provides a host of additional features, including dashboard sharing and ChatOps.
+
+For an overview of all dataminer.services functionality, refer to [dataminer.services](xref:Overview_DCP).
+
 ## DataMiner Probes
 
 A DataMiner Probe (DMP) provides standalone intelligent network management functionality, and typically reports to a central system. It has limited capabilities compared to a full DataMiner Agent, and typically, but not necessarily, runs on a small-form-factor compute instance in remote and unmanned locations where communication channels often have capacity constraints and/or intermittent availability.

@@ -25,7 +25,10 @@ The following steps can be taken to configure the backups for a DMA:
      > [!NOTE]
      > Only SMB file shares are supported for network backups. It is not possible to back up to e.g. (S)FTP shares.
 
-1. In the *General* tab, under *Policy*, enter the number of backups that should be kept.
+1. In the *General* tab, next to *Number of backups to keep*, enter the number of backups that should be kept.
+
+   > [!NOTE]
+   > Prior to DataMiner 10.2.0 [CU20], 10.3.0 [CU8], and 10.3.11<!-- RN 37143, 37509 -->, this number determines the number of backups kept in the entire system. From those DataMiner versions onwards, it determines the number of backups per DMA or Failover setup. As older systems are often configured with a higher number of backups because of this, upgrading to these DataMiner versions will adjust the number of backups to keep if necessary. If the number is set to more than 3, there are 2 or more DMAs in the system, and the backups are not saved to the same network path, the number of backups to keep will automatically be divided by the number of DMAs in the system during the upgrade.
 
 1. In case the system uses an indexing database, in the *Indexing Engine Location* section of the *General* tab, the backup path can be modified if necessary.
 

@@ -38,8 +38,9 @@ From DataMiner 10.3.8/10.4.0 onwards<!-- RN 36664 -->, a change can also be cons
 > [!NOTE]
 >
 > - Whenever an anomalous change point is detected, a “suggestion event” is generated, which is cleared again two hours after its creation time or its last update time. You can view these suggestion events by creating a suggestion event tab in the Alarm Console. See [Adding and removing alarm tabs in the Alarm Console](xref:ChangingTheAlarmConsoleLayout#adding-and-removing-alarm-tabs-in-the-alarm-console).
-> - You can configure alarm templates to have alarms generated instead of suggestion events, depending on the parameter and the type of anomaly See [Configuring anomaly detection alarms for specific parameters](xref:Configuring_anomaly_detection_alarms).
+> - You can configure alarm templates to have alarms generated instead of suggestion events, depending on the parameter and the type of anomaly. See [Configuring anomaly detection alarms for specific parameters](xref:Configuring_anomaly_detection_alarms).
 > - If a very high number of behavioral change points are detected in a short period, detection of behavioral anomalies is temporarily disabled to avoid unreliable results. This is indicated in the SLAnalytics logging. Prior to DataMiner 10.2.3/10.3.0, a notification is also displayed in the Alarm Console, which disappears again 2 hours after the change point flood has been resolved.
+> - From DataMiner 10.3.0 [CU9]/10.3.12 onwards<!--RN 37571-->, a change in trend must maintain its altered state for at least an hour before it is labeled as a trend change.
 
 ## Trend icons on data pages
 
@@ -71,7 +72,7 @@ Please note the following regarding these icons:
 
 ## Change points in trend graphs
 
-On a trend graph, a change point is indicated by a bar below the graph. The length of the bar indicates the approximate time frame in which the change started, the height of the bar indicates the importance of the change, and the color of the bar indicates the severity.
+On a trend graph, a change point is indicated by a bar below the graph. The length of the bar indicates the approximate time frame in which the change started, the height of the bar indicates the importance of the change, and the color of the bar indicates the severity. From DataMiner 10.4.1/10.5.0 onwards<!-- RN 37827 -->, the color is typically light gray, unless the change point was severe enough to trigger an event. Then, in case alarm monitoring is activated for change points, the color reflects the severity of the triggered alarm. In case alarm monitoring is not activated, the color is dark gray.
 
 When you hover the mouse pointer over a change point bar, a semi-transparent ribbon will be displayed over the entire height of the trend graph, showing more information about the change point.
 

@@ -6,8 +6,8 @@ uid: KI_Visual_Overview_Vertical_Text_no_longer_working
 
 ## Affected versions
 
-- DataMiner Main Release versions from DataMiner 10.2.0 [CU3] onwards.
-- DataMiner Feature Release versions from DataMiner 10.2.3 onwards.
+- DataMiner Main Release versions from DataMiner 10.2.0 [CU3] up to 10.3.0 [CU4].
+- DataMiner Feature Release versions from DataMiner 10.2.3 up to 10.3.7.
 
 ## Cause
 
@@ -15,7 +15,7 @@ A feature introduced in DataMiner 10.2.3 that enables text wrapping and trimming
 
 ## Fix
 
-No fix is available yet.
+Install DataMiner 10.3.0 [CU5]/10.3.8<!--RN 36363-->.
 
 ## Workaround
 

@@ -10,7 +10,7 @@ If you are using a [dedicated clustered storage](xref:Dedicated_clustered_storag
 If you are using an older DataMiner version or a setup with storage per DMA, follow the steps below.
 
 > [!IMPORTANT]
-> Elasticsearch is **only supported up to version 6.8**. As a consequence, if you want to use self-hosted storage instead of the recommended [Storage as a Service](xref:STaaS), we recommend using [dedicated clustered storage](xref:Dedicated_clustered_storage) with OpenSearch or the Amazon OpenSearch Service on AWS.
+> Elasticsearch is **only supported up to version 6.8**. As a consequence, if you want to use self-hosted storage instead of the recommended [Storage as a Service](xref:STaaS), we recommend using [dedicated clustered storage](xref:Dedicated_clustered_storage) with OpenSearch.
 
 > [!CAUTION]
 > Make sure the DataMiner Agent has an available connection to each node of the Elasticsearch cluster. To verify this, enter `http://elasticnodeip:9200/` in your browser's address bar to access the general server information.
@@ -31,7 +31,7 @@ If you are using an older DataMiner version or a setup with storage per DMA, fol
    > [!TIP]
    > See also:
    >
-   > - [Specifying custom credentials for Elasticsearch](xref:DB_xml#specifying-custom-credentials-for-elasticsearch).
+   > - [Specifying custom credentials for OpenSearch or Elasticsearch](xref:DB_xml#specifying-custom-credentials-for-opensearch-or-elasticsearch).
    > - [Indexing database settings in DB.xml](xref:DB_xml#indexing-database-settings)
 
    Example:

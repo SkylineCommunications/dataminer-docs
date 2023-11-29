@@ -30,7 +30,7 @@ Here, instead of the expected “replication_factor” keyword, the name of the 
 
 ## Fix
 
-No fix is available yet.
+Install DataMiner 10.3.0 [CU7]/10.3.10<!--RN 37117-->.
 
 ## Description
 

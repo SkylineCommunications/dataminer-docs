@@ -105,7 +105,10 @@ DataMiner has some components that are considered legacy. They are still around 
 </SLNet>
 ```
 
-To make the changes take effect, you then need to run the *ConfigureIIS.bat* script located in the `C:\Skyline DataMiner\Tools` folder.
+To make the changes take effect, you then need to run the *ConfigureIIS.bat* script as Administrator located in the `C:\Skyline DataMiner\Tools` folder.
+
+> [!NOTE]
+> The legacy Annotations and Reports and Dashboards modules are disabled by default as from DataMiner versions 10.4.0/10.4.1.
 
 ## Configure the firewall
 
@@ -171,4 +174,9 @@ The **Remote Administration** rule must be enabled when the DataMiner server is 
 
 If you do not make use of [Storage as a Service (STaaS)](xref:STaaS) but manage DataMiner storage yourself, you need to make sure that the databases used for DataMiner storage are fully secure.
 
-In recent DataMiner Systems, Cassandra and OpenSearch/Elasticsearch are used for this. It is important that you spend some time making sure their configuration is as secure as possible. For detailed information, refer to [Securing self-hosted DataMiner storage](xref:Cassandra_authentication).
+If you use on-premises databases, we recommend using a [Cassandra cluster and OpenSearch cluster](xref:Dedicated_clustered_storage). It is important that you spend some time making sure the configuration of these databases is as secure as possible. For detailed information, refer to [Securing Cassandra](xref:Cassandra_authentication), [Securing OpenSearch](xref:Security_OpenSearch), or [Securing Elasticsearch](xref:Security_Elasticsearch).
+
+> [!NOTE]
+>
+> - If you do use Storage as a Service, Skyline will take care of protecting your data, making use of existing and secure storage solutions provided by [Microsoft Azure](https://learn.microsoft.com/en-us/azure/storage/common/storage-introduction).
+> - Previously, Elasticsearch was recommended as the on-premises indexing database instead of OpenSearch. For more information on why OpenSearch is now recommended instead, see [From Elasticsearch to OpenSearch to StaaS](https://community.dataminer.services/from-elasticsearch-to-opensearch-to-staas/).

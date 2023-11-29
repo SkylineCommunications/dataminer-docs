@@ -10,7 +10,7 @@ We therefore also offer **DataMiner as a Service (DaaS)**, a DataMiner platform 
 
 **You operate the platform, we build and maintain the platform for you.**
 
-Our DaaS model guarantees that you immediately get access to a wide range of capabilities for streamlined and worry-free solution development. DaaS also enables the DataMiner intelligent resource distribution or "swarming", which will enable you to automatically redistribute elements between nodes for even more efficiency.
+Our DaaS model guarantees that you immediately get access to a wide range of capabilities for streamlined and worry-free solution development.
 
 > [!TIP]
 > For a sneak peek video, see [Sneak peek: DataMiner as a Service (DaaS) in action - DataMiner Dojo](https://community.dataminer.services/sneak-peek-dataminer-as-a-service-daas-in-action)

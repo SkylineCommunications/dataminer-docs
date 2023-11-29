@@ -15,7 +15,7 @@ This component can be used to display a trend graph.
 
 To configure the component:
 
-1. Apply one or more parameter data feeds. See [Applying a data feed](xref:Configuring_dashboard_components#applying-a-data-feed).
+1. Apply one or more parameter data feeds. See [Applying a data feed](xref:Apply_Data_Feed).
 
    > [!NOTE]
    >
@@ -68,7 +68,7 @@ To configure the component:
 
 1. Optionally, fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
 
-   - The default options available for all components. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
+   - The default options available for all components. See [Customizing the component layout](xref:Customize_Component_Layout).
 
    - *Layout*: In case the component will display multiple trend charts, this section allows you to configure how these charts are displayed:
 
@@ -151,3 +151,44 @@ From DataMiner 9.6.13 onwards, it is possible to export the trend data to CSV. T
 >
 > - The separator used in CSV exports is based on the *CSV separator* setting in Cube. If this setting cannot be retrieved, the local browser settings are used instead.
 > - From DataMiner 10.3.3/10.4.0 onwards, the *Show average*, *Show minimum*, and *Show maximum* settings are also taken into account when you export a chart to CSV. In addition, if the *Show min/max shading* option is enabled, minimum and maximum values will always be taken into account in the export. <!-- RN 35311 -->
+
+## Examples
+
+### Trend graph showing DMA KPIs
+
+To add a component to a dashboard to show a basic trend graph with several DMA KPIs:
+
+1. In edit mode, drag the *Line & area chart* visualization to the dashboard.
+
+1. Click the ![Data feed icon](~/user-guide/images/dashboards_data.png) icon to filter the available data in the data pane.
+
+1. Expand the *Parameters* section in the data pane and specify the element representing the DMA in the *Element* box.
+
+1. Select a parameter you want to display in the graph, and drag it to the graph. Repeat this for each parameter that should be displayed in the graph.
+
+   > [!TIP]
+   > Select the *Trended* checkbox at the top of the *Parameters* section to only view parameters for which trending is enabled. Depending on your DataMiner version, you may need to select the filter icon first.
+   >
+   > ![Parameters section with filter](~/user-guide/images/dashboard_parameter_filter_icon.png)<br>*Parameters section with filter in DataMiner 10.3.11*
+
+1. In the *Settings* tab, in the *Group by* box, select *Element*. This way all KPIs will be shown in the same graph.
+
+![Example of a trend graph shown with a Line & area chart component](~/user-guide/images/dashboard_example_linechart1.png)
+
+### Trend graph showing DMA trend data using profile parameters
+
+To add a component to a dashboard to show a basic trend graph using profile parameters:
+
+1. In edit mode, drag the *Line & area chart* visualization to the dashboard.
+
+1. Click the ![Data feed icon](~/user-guide/images/dashboards_data.png) icon to filter the available data in the data pane.
+
+1. Expand the *Profile parameters* section in the data pane.
+
+   If you have configured it correctly in DataMiner Cube, there should be a profile parameter linked with a protocol and a trended parameter of the data you want to see.
+
+1. Select the profile parameter you want to display in the graph, and drag it to the graph.
+
+1. Expand the *Elements* section in the data pane, select the element you want to display in the graph, and drag it to the graph.
+
+![Example of a trend graph shown with a Line & area chart component](~/user-guide/images/dashboard_example_linechart2.png)

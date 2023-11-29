@@ -169,6 +169,11 @@ Depending on the focus score, an alarm can be considered unexpected. In that cas
 
 To filter the alarm list to only show such unexpected alarms, click the following button in the alarm bar: ![Focus button](~/user-guide/images/AlarmFocusFilter.png)
 
+> [!NOTE]
+>
+> - From DataMiner 10.2.0 [CU21]/10.3.0 [CU9]/10.3.12 onwards<!--RN 37455-->, the focus icon is only visible in the alarm bar when the *Active alarms* tab contains focused alarms.
+> - From DataMiner 10.2.0 [CU21]/10.3.0 [CU9]/10.3.12 onwards<!--RN 37455-->, a number is displayed next to the focus icon in the alarm bar, indicating the number of focused alarms in the *Active alarms* tab.
+
 Please note the following regarding the alarm focus feature:
 
 - This feature is only available if your DataMiner System uses [Storage as a Service](xref:STaaS) or a [self-hosted Cassandra-compatible database](xref:Supported_system_data_storage_architectures).
@@ -182,6 +187,8 @@ Please note the following regarding the alarm focus feature:
 - If an alarm template changes, all alarms of the parameters for which a change was implemented in the alarm template will be treated as unexpected.
 
 - In case of an alarm storm, the update of focus scores of persistent alarms is postponed until after the alarm storm ends.
+
+- A model is created in DataMiner for every parameter that has had an alarm in the last two weeks, up to a limit of 100&thinsp;000 models. This upper limit is rarely ever reached, but when it is, the notice "Alarm Focus has reached its maximum cache size" is displayed in the Alarm Console, and all alarms on parameters that have no model yet will be marked as unlikely. This notice will not influence any other part of the system and can be safely ignored. However, if you see this notice regularly, it can be a sign that your parameters are not spread optimally over your DataMiner System, or that one of your protocols is generating alarms on many different rows in a table.
 
 > [!NOTE]
 > You can enable or disable the alarm focus feature via *System Center* > *System settings* > *analytics config*. However, note that if you disable alarm focus, [automatic incident tracking](xref:Automatic_incident_tracking) is automatically also disabled, and only [manual incident tracking](xref:Automatic_incident_tracking#manually-updating-an-alarm-group) can still be used. <!-- RN 33348 -->

@@ -145,9 +145,15 @@ This stage verifies whether a MaximumSupportedVersion was defined in the protoco
 
 ## Validate possible dependency NuGets
 
-For solutions that consist of legacy-style projects, this stage checks whether projects use the obsolete packages.config package management format.
+For solutions that consist of legacy-style projects:
 
-For solutions that consist of SDK-style projects, this stage is not executed as packageReference is the only supported package management format for this type of project.
+    - Checks whether projects use the obsolete packages.config package management format.
+    - Checks whether projects have any vulnerable, deprecated, or outdated NuGet packages.
+
+For solutions that consist of SDK-style projects:
+
+    - Does **not** check whether projects use the obsolete packages.config package management format, as packageReference is the only supported package management format for this type of project.
+    - Checks whether projects have any vulnerable, deprecated, or outdated NuGet packages.
 
 ## Sync DataMiner feature release DLLs
 
@@ -167,7 +173,7 @@ This stage converts the protocol Visual Studio solution back to a protocol XML f
 
 ## Create protocol package
 
-This stage creates a .dmprotocol package including the protocol XML, assemblies, Visio and Help files.
+This stage creates a .dmprotocol package including the protocol XML, assemblies, and Visio files.
 
 ## Scan test projects
 
