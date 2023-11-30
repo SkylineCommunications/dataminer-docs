@@ -260,3 +260,11 @@ In the *System settings > Manage client versions* section of *System Center*, th
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11] - FR 10.4.2 -->
 
 When, in a view card, you selected a large number of elements and/or services and then right-clicked, in some cases, Cube could become unresponsive.
+
+#### DataMiner Cube - Correlation: Problem with 'Dynamic' option in 'Send email' action [ID_37995]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU11] - FR 10.4.2 -->
+
+When configuring a Correlation rule, you can make that rule send an email by adding a *Send email* action to it.
+
+In some cases, when you opened a *Send email* action, it would incorrectly not be possible to select the *Dynamic* option to indicate that the elements that triggered the Correlation rule have to be included.
