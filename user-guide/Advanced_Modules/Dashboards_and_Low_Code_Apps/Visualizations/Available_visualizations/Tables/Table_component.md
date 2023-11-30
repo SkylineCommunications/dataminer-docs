@@ -46,11 +46,11 @@ From DataMiner 10.4.1/10.5.0 onwards<!-- RN 37522 -->, in the *Layout* tab, the 
 
 - To use one of the available presets to alter the column appearance, click the preview below the column name and select a preset option:
 
-  - **Left**: The text is displayed on the left side of the column cell. This is the default setting.
+  - **Left**: The text is displayed on the left side of the column cell. This is the default setting for columns containing values of type string.
 
   - **Center**: The text is displayed in the center of the column cell.
 
-  - **Right**: The text is displayed on the right side of the column cell.
+  - **Right**: The text is displayed on the right side of the column cell. This is the default setting for columns containing values of type double or datetime.
 
   - **Hyperlink**: Only available for DataMiner Low-Code Apps. The text functions as a hyperlink, redirecting users to a new webpage in a separate tab.
 
