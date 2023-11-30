@@ -78,18 +78,18 @@ To configure actions:
 
 - From DataMiner 10.4.1/10.5.0 onwards<!--RN 37522-->:
 
-  In the Template Editor, you can **configure actions for table columns**. Actions can be linked to the *On click* event of a shape in a column template, allowing you to define your own links or buttons inside a table.
+  - In the Template Editor, you can **configure actions for table columns**. Actions can be linked to the *On click* event of a shape in a column template, allowing you to define your own links or buttons inside a table.
 
-  > [!TIP]
-  > For more information, see [Template Editor](xref:Template_Editor).
+    > [!TIP]
+    > For more information, see [Changing template settings](xref:Template_Editor#changing-template-settings).
 
-  You can also **configure actions that are executed when a row is double-clicked**:
+  - You can also **configure actions that are executed when a row is double-clicked**:
 
-  1. In the *Component* \> *Settings* pane, expand the *Actions* section.
+    1. In the *Component > Settings* pane, expand the *Actions* section.
 
-  1. Click *On double-click*.
+    1. Click *On double-click*.
 
-  1. In the pop-up window, select the action that should be executed. See [Configuring low-code app events](xref:LowCodeApps_event_config).
+    1. In the pop-up window, select the action that should be executed. See [Configuring low-code app events](xref:LowCodeApps_event_config).
 
 - Prior to DataMiner 10.4.1/10.5.0:
 
