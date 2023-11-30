@@ -64,6 +64,8 @@ The markers you added in the previous step are all located on a small part of th
 
 1. In the *Layout* tab, go to the *Map settings* section, and click *Save current view*.
 
+   ![Save current view](~/user-guide/images/MapsTutorialSaveCurrentView.png)
+
    This will set the default map center and default zoom level to what is currently displayed.
 
 1. Under *Map zoom*, use the slider to limit the minimum zoom level.
@@ -92,11 +94,15 @@ At this point, the cell tower markers are always shown in the component, but the
 
    1. Below *Show ellipse* on the right, click the color icon to select a custom color for the background.
 
+      ![Custom color selection for ellipse](~/user-guide/images/MapsTutorialEllipseColor.png)
+
 1. Create a text layer that displays the number of transceivers on the tower:
 
    1. In the *Tools* tab on the left, select *Text* and then click and drag in the center pane to add a text layer.
 
    1. In the box below *Show text* on the right, enter the text `{Tranceivers}`.
+
+      ![Placeholder text](~/user-guide/images/MapsTutorialTranceiversText.png)
 
       This placeholder text will be replaced by the content of the corresponding cell value from the query data source.
 
@@ -105,6 +111,8 @@ At this point, the cell tower markers are always shown in the component, but the
    1. In the *Tools* tab on the left, select *Icon* and then click and drag to place the icon in the right location in the center pane.
 
    1. In the pane on the right, click *Icon*, enter `tower` in the filter box, and select the tower icon.
+
+      ![Tower icon](~/user-guide/images/MapsTutorialTowerIcon.png)
 
 The result should look like this:
 
@@ -116,9 +124,9 @@ The result should look like this:
 
 The templates you added in the previous step look good, but at this point the visualization still feels cluttered when you zoom out all the way. You can deal with this by adding grouped markers. For this, you will need to create additional queries to retrieve data from the *CellTowersGroups* and *CellTowersCities* JSON files you installed with the package in step 1.
 
-1. In the data pane, [create a new query](xref:Creating_GQI_query), and configure it to retrieve the cell towers from the *CellTowersGroups.json* file using the *JSON Reader* ad hoc data source.
+1. In the data pane, [create a new query](xref:Creating_GQI_query) named *Cell tower groups*, and configure it to retrieve the cell towers from the *CellTowersGroups.json* file using the *JSON Reader* ad hoc data source.
 
-1. Create another query similar to the previous one, but this time use the *CellTowersCities.json* file.
+1. Create another query similar to the previous one, but this time use the name *Cell tower cities* and the *CellTowersCities.json* file.
 
 1. Drag the two new queries to the maps component.
 
@@ -129,6 +137,8 @@ The templates you added in the previous step look good, but at this point the vi
       1. In the *Layers* tab on the left, select the layer.
 
       1. Below *Show ellipse* on the right, click the color icon to select a custom color for the background.
+
+         ![Custom color selection for ellipse](~/user-guide/images/MapsTutorialEllipseColor2.png)
 
    1. Create a text layer that displays the number of transceivers in the group:
 
@@ -151,6 +161,8 @@ The templates you added in the previous step look good, but at this point the vi
    1. Enter the minimum and maximum zoom levels where the markers of the query should be shown on the map:
 
       - Cell towers should be shown from 60 to 100.
+
+        ![Cell towers zoom level](~/user-guide/images/MapsTutorialZoomLevel.png)
 
       - Cell towers groups should be shown from 52 to 60.
 
@@ -211,6 +223,8 @@ Now that all the cell towers are shown on the map, you can visualize the connect
    1. To make sure that the connections are shown underneath the markers, increase the weight of the new layer by one.
 
    1. To make sure the query is visualized as connection lines, hover over the query and click *Set as line* to the right of the query name.
+
+      ![Set as line](~/user-guide/images/MapsTutorialConnectionsLine.png)
 
       The component will try to automatically configure the dimensions and show the lines on the map.
 
