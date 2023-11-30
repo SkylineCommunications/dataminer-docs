@@ -175,6 +175,16 @@ In zero span mode, the sweeptime parameter is used to indicate the time on the X
 
 ### Fixes
 
+#### DataMiner Cube: Problem when adding up [Start Time:] placeholders [ID_37661]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU11] - FR 10.4.2 -->
+
+When the [Sum:] placeholder was used to add [Start Time:] placeholders, in some cases, the sum would not be correct.
+
+From now on, when configuring [Start Time:] placeholders that will be used in Sum operations, a format will have to be specified.
+
+See also: [Linking a shape to a booking](xref:Linking_a_shape_to_a_booking)
+
 #### DataMiner Cube: A number of Automation issues have been fixed [ID_37674]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
