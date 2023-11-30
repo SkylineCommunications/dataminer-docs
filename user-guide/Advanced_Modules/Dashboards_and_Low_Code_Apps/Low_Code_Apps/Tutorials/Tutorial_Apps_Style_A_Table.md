@@ -632,6 +632,9 @@ To conclude this tutorial, incorporate a context menu into the table.
            > [!IMPORTANT]
            > IntelliSense will only provide suggestions if a table row was selected in the low-code app edit mode.
 
+           > [!TIP]
+           > For more information on how to create feed references inside textual settings, see [Dynamically referencing feed values in text](xref:Feed_Link).
+
    - Add a menu item to google the order ID:
 
      1. Click the empty gray square and enter "Search" in the filter box to add a magnifying glass icon.
