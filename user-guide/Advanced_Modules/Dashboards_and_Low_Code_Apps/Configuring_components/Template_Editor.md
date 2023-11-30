@@ -357,19 +357,19 @@ This is the behavior that will result from this configuration:
 
 ## Reusing a template
 
-If you have already configured a template for a component of the same type in the same dashboard or low-code app you are working on, you can reuse a template.<!--RN 34948--> Only available for the grid, timeline, and maps components.
+If you have already configured a template for a component of the same type in the same dashboard or low-code app you are working on, you can reuse a template<!--RN 34948-->. Only available for the grid and timeline components.
 
-- For the **grid** and **timeline** components:
+1. Select the component and go the *Layout* tab on the right.
 
-  1. Select the component and go the *Layout* tab on the right.
+1. Under *Item templates*, click *Reuse template*.
 
-  1. Under *Item templates*, click *Reuse template*.
+1. Click *Filter* and select a template from the dropdown list.
 
-  1. Click *Filter* and select a template from the dropdown list.
+   A preview of the template you have selected will appear.
 
-     A preview of the template you have selected will appear.
+1. Select *Reuse*.
 
-  1. Select *Reuse*.
+<!--
 
 - For the **maps** component:
 
@@ -381,4 +381,4 @@ If you have already configured a template for a component of the same type in th
 
      A preview of the template you have selected will appear.
 
-  1. Select *Reuse*.
+  1. Select *Reuse*. -->
