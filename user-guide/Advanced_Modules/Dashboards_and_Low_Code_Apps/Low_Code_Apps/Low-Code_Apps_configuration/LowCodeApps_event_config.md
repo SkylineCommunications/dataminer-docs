@@ -37,7 +37,7 @@ To configure an event to navigate to a URL:
    > [!TIP]
    >
    > - You can link the URL to a feed using the [feed link syntax](xref:Feed_Link#syntax).
-   > - In the Template Editor (available from DataMiner 10.4.1/10.5.0 onwards), you can create dynamic links or pass context to a script by incorporating variables within the URL, denoted by enclosing the column name within curly brackets ("`{}`")<!--RN 34761-->.
+   > - In the Template Editor (available from DataMiner 10.4.1/10.5.0 onwards), you can create dynamic links or pass context to a script by incorporating variables within the URL, denoted by enclosing the column name within curly brackets ("`{}`")<!--RN 34761-->. See [Dynamically referencing feed values in text](xref:Feed_Link).
 
 1. Optionally, to open the webpage in a new tab, enable the option *Open in new tab*.
 
