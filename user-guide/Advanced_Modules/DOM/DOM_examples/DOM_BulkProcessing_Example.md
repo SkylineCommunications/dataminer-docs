@@ -27,7 +27,7 @@ For the `DomInstances` that fail, their name and the issue will be logged in thi
   var updateResult = domHelper.DomInstances.CreateOrUpdate(domInstances);
 
   // Log what items were successfully removed.
-  Log($"The new type was successfully set on {updateResult.SuccessfulItems.Count}");
+  Log($"The new type was successfully set on {updateResult.SuccessfulItems.Count} items");
 
   // Log that some updates are not successful. Per DomInstance, check how the issue occurred.
   var incorrectInstances = updateResult.TraceDataPerItem.Where(x => !x.Value.HasSucceeded()).ToList();
