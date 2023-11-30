@@ -313,6 +313,12 @@ When you upgrade DataMiner from a version older than 10.4.0 to a version from 10
 
 See also: [Upgrade fails because of VerifyNoLegacyReportsDashboards.dll prerequisite](xref:KI_Upgrade_fails_VerifyNoLegacyReportsDashboards_prerequisite)
 
+#### SLAnalytics: Enhanced error logging when retrieving trend data [ID_37931]
+
+<!-- MR 10.5.0 - FR 10.4.1 -->
+
+More extensive information will now be logged when errors occur while retrieving trend data.
+
 #### Service & Resource Management: Enhanced performance when updating/applying profile instances [ID_37976]
 
 <!-- MR 10.4.0 - FR 10.4.1 -->
