@@ -3,21 +3,21 @@ uid: DOM_BulkProcessing_Example
 ---
 # Processing multiple DomInstances - examples
 
-From DataMiner 10.4.2/10.5.0 onwards a `DomInstance` CRUD helper component supports processing multiple `DomInstances` in one call.
+From DataMiner 10.4.2/10.5.0 onwards the `DomInstance` CRUD helper component supports processing multiple `DomInstances` in one call.
 
 This page contains simple examples of how you can use these calls, provided by the [DomHelper](xref:DomHelper_class#multiple-instances).
 
 ## Update a value for multiple DomInstances
 
-In the following example the *type* of some `DomInstances` needs to be updated. The update for some of them might not succeed. For instance: the *type* `FieldDescriptor` might not be allowed for the status that *DomInstance* is in, or the `SectionDefinition` might not be supported for that *DomInstance*.
+In the following example the *Type* field of some `DomInstances` needs to be updated. The update for some of them might not succeed. For instance: the *type* `FieldDescriptor` might not be allowed for the status that *DomInstance* is in, or the `SectionDefinition` might not be supported for that *DomInstance*.
 
 For the `DomInstances` that fail, their name and the issue will be logged in this example.
 
   ```csharp
-  // Retrieve the DomInstances that need processing
+  // Retrieve the DomInstances that need processing.
   var domInstances = domHelper.DomInstances.Read(filter);
 
-  // Update the field value on those DomInstances
+  // Update the field value on those DomInstances.
   foreach(var domInstance in domInstances)
   {
       domInstance.AddOrUpdateFieldValue<int>(sectionDefinitionId, fieldDescriptorId, newType);
@@ -26,10 +26,10 @@ For the `DomInstances` that fail, their name and the issue will be logged in thi
   // Save them to the DB.
   var updateResult = domHelper.DomInstances.CreateOrUpdate(domInstances);
 
-  // Log what items were successfully removed
+  // Log what items were successfully removed.
   Log($"The new type was successfully set on {updateResult.SuccessfulItems.Count}");
 
-  // Log that some updates went wrong. Per DomInstance, check how the issue occurred.
+  // Log that some updates are not successful. Per DomInstance, check how the issue occurred.
   var incorrectInstances = updateResult.TraceDataPerItem.Where(x => !x.Value.HasSucceeded()).ToList();
   if (incorrectInstances.Count > 0)
   {
@@ -53,11 +53,11 @@ In this example, the `TraceData` will be logged. Depending on the issue that occ
   var domInstanceTwo = new DomInstance() { DomDefinitionId = advancedDomDefinitionId };
   domInstanceTwo.AddOrUpdateFieldValue<string>(sectionDefinitionId, incorrectFieldDescriptorId, "World");
 
-  // Save them to the DB
+  // Save them to the DB.
   var domInstances = new List<DomInstance> { domInstanceOne, domInstanceTwo };
   domHelper.DomInstances.CreateOrUpdate(domInstances);
 
-  // Log if an issue occurred
+  // Log if an issue occurs.
   var traceData = domHelper.DomInstances.GetTraceDataLastCall();
   if (!traceData.HasSucceeded())
   {
@@ -75,16 +75,16 @@ In case the `Read` or `Delete` call is unsuccessful because of a database issue,
   ```csharp
   try
   {
-      // Retrieve the DomInstances that need to get deleted
+      // Retrieve the DomInstances that need to get deleted.
       var domInstances = domHelper.DomInstances.Read(filter);
 
       // Remove them from the DB.
       var deleteResult = domHelper.DomInstances.Delete(domInstances);
 
-      // Log what items are successfully removed
+      // Log what items are successfully removed.
       Log($"Successfully removed {deleteResult.SuccessfulIds.Count} items");
 
-      // Log that some updates went wrong. Per DomInstance check how the issue occurred.
+      // Log that some deletes are not successful. Per DomInstance check which issue occurs.
       var incorrectInstances = deleteResult.TraceDataPerItem.Where(x => !x.Value.HasSucceeded()).ToList();
       if (incorrectInstances.Count > 0)
       {
@@ -94,7 +94,7 @@ In case the `Read` or `Delete` call is unsuccessful because of a database issue,
   }
   catch (CrudFailedException ex)
   {
-      // Log the issue that occurred
+      // Log the issue that occurs.
       Log($"Unable to perform the removal, the following error occurred: {ex.TraceData}");
   }
   ```
