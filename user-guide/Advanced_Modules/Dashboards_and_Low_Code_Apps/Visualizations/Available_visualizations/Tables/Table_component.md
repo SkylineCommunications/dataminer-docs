@@ -68,7 +68,7 @@ From DataMiner 10.4.1/10.5.0 onwards<!-- RN 37522 -->, in the *Layout* tab, the 
 
 - If you open the Template Editor after selecting a preset option, the template may already contain certain configured layers.
 
-  For example, if you selected the *Hyperlink* preset, a rectangle layer with opacity 0%, including a *Navigate to a URL* action, will be configured. Additionally, the text color of the text layer will be set to blue (#1F68BF), and the text inside the text box will be enclosed by HTML <u> elements to define underlined text.
+  For example, if you selected the *Hyperlink* preset, a rectangle layer with opacity 0%, including a *Navigate to a URL* action, will be configured. Additionally, the text color of the text layer will be set to blue (#1F68BF), and the text inside the text box will be enclosed by HTML `<u>` elements to define underlined text.
 
 ## Adding actions to a table
 
