@@ -369,7 +369,7 @@ If you have already configured a template for a component of the same type in th
 
 1. Select *Reuse*.
 
-<!--
+<!-- document when issue resolved, DCP: 226720
 
 - For the **maps** component:
 
