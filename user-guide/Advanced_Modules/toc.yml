@@ -352,6 +352,8 @@ items:
                 topicUid: TutorialStepper
               - name: Styling a table component
                 topicUid: Tutorial_Apps_Style_A_Table
+              - name: Using the maps component in a low-code app
+                topicUid: TutorialMaps
       - name: Configuring components
         topicUid: Configuring_components
         items:
