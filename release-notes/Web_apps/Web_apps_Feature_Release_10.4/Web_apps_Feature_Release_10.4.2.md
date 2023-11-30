@@ -22,7 +22,16 @@ uid: Web_apps_Feature_Release_10.4.2
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Low-Code Apps: Separate 'Delete draft' and 'Delete app' buttons [ID_37878]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+Up to now, in the header bar of a low-code app, there was one button to either delete the current draft or the entire application.
+
+From now on, a low-code app will have two separate delete buttons:
+
+- a *Delete current draft* button in the header bar, and
+- a *Delete app* button in the user menu.
 
 ### Fixes
 
