@@ -35,4 +35,6 @@ With the DataMiner Low-Code Apps module, you can create custom applications that
 
 - [Using the stepper component in a low-code app](xref:TutorialStepper)
 
+- [Styling a table component](xref:Tutorial_Apps_Style_A_Table)
+
 - [Using the maps component in a low-code app](xref:TutorialMaps)

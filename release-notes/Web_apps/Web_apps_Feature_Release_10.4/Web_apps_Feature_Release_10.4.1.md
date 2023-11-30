@@ -153,6 +153,18 @@ It is now possible to duplicate a GQI query:
 
 When, on the Root page of a DataMiner Agent, you hover over an application and click the ellipsis ("...") button, the context menu will now include an *Edit* command as well as a *Delete* command.
 
+#### Dashboards app & Low-Code Apps: Configuring custom operators [ID_37840]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+
+In the query builder, it is now possible to configure custom operators without having to first enable the *GenericInterface* soft-launch option.
+
+On [docs.dataminer.services](xref:docs_dataminer_services), you can find a number of examples showing you how to work with custom operators:
+
+- [Creating a minus operator](xref:Creating_Minus_Operator)
+- [Building a GQI custom operator that calculates a duration](xref:Creating_Duration_Operator)
+- [Optimizing your custom operator](xref:Custom_Operator_Tutorial)
+
 ## Changes
 
 ### Enhancements

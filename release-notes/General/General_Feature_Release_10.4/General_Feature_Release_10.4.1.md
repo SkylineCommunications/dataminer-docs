@@ -30,6 +30,31 @@ When a DataMiner Agent is upgraded to version 10.5.0/10.4.1 or above, the *Broke
 
 This new DxM, which is currently still under development, is intended to manage all NATS configurations.
 
+#### User-defined APIs: Query string support [ID_37733]
+
+<!-- MR 10.5.0 - FR 10.4.1 -->
+
+User-defined APIs now support the use of query strings.
+
+The query parameters from the API requests are available in the `QueryParameters` property of the `ApiTriggerInput` class. This property is of type `IQueryParameters`.
+
+The `IQueryParameters` class exposes the following methods:
+
+```csharp
+bool TryGetValues(string key, out List<string> values);
+
+bool TryGetValue(string key, out string value);
+
+List<string> GetAllKeys();
+
+bool ContainsKey(string key);
+```
+
+> [!NOTE]
+>
+> - Multiple values can be added for one key.
+> - Query parameter keys are case-sensitive.
+
 #### DataMiner upgrade: Additional prerequisite will now check whether profiles and resources are stored in an indexing database [ID_37763]
 
 <!-- MR 10.4.0 - FR 10.4.1 -->
@@ -37,6 +62,30 @@ This new DxM, which is currently still under development, is intended to manage 
 Starting from DataMiner version 10.4.0, XML storage for profiles and resources is no longer supported. When you upgrade DataMiner to version 10.4.0, the `VerifyElasticStorageType` prerequisite will verify whether the system has successfully switched to an indexing database. If profiles and/or resources are still stored in XML files, this prerequisite will cause the upgrade to fail.
 
 See also: [Upgrade fails because of VerifyElasticStorageType.dll prerequisite](xref:KI_Upgrade_fails_VerifyElasticStorageType_prerequisite)
+
+#### Service & Resource Management: Storage type for ProfileManager and ResourceManager will now always be Elasticsearch/OpenSearch [ID_37877]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+From now on, the storage type for ProfileManager and ResourceManager will always be Elasticsearch/OpenSearch. XML storage is no longer supported.
+
+When you retrieve the storage type, it will now always return Elasticsearch/OpenSearch, even if the ProfileManager or ResourceManager configuration states that the storage type is XML. If no ProfileManager configuration can be found, a default configuration will now be created with storage type set to Elasticsearch/OpenSearch.
+
+If you would try to send a `SetResourceManagerConfigMessage` to change the storage type to XML, the response message will state that the attempt failed and will contain the following error message:
+
+`Ignoring the config change, Xml is no longer supported as ResourceStorageType.`
+
+If you would try to set the ProfileManager configuration to Elasticsearch/OpenSearch via the configuration manager, this will fail. The ProfileManager log file should then contain the following trace data:
+
+```txt
+TraceData: (amount = 1)
+   - ErrorData: (amount = 1)
+      - ProfileManagerErrorData: ErrorReason: InvalidConfigurationFile,
+                                 Message: Xml is no longer supported as ProfileManagerStorageType,
+```
+
+> [!NOTE]
+> The *SLNetClientTest* tool will no longer allow you to switch the storage type from XML to Elasticsearch/OpenSearch or vice versa, nor will it allow you to create a ProfileManager configuration anymore.
 
 ## Changes
 
@@ -143,6 +192,14 @@ When profile data is stored in an Elasticsearch/OpenSearch database, all Profile
 
 Also, additional logging has been added to indicate when a cache was refilled and how many objects were added, updated, removed or ignored. Each log entry will also include the IDs of the first ten of these objects.
 
+#### User-Defined APIs: Maximum size of HTTP request body has been reduced to 29MB [ID_37753]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+The maximum size of the HTTP request body has been reduced from 30 MB to 29 MB.
+
+Also, additional logging will be added to the *SLUserDefinableApiManager.txt* log file when subscribing on NATS fails and when sending a reply on an incoming NATS request fails.
+
 #### Enhanced performance when locking or unlocking inputs and output of matrices in client applications [ID_37755]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
@@ -195,11 +252,72 @@ Up to now, when an SNMP response was received, a buffer with a fixed size of 102
 
 From now on, the buffer will have a dynamic size. This allow larger responses to be processed, and will also make sure that less memory has to be reserved when smaller responses are received.
 
+#### DataMiner upgrade: New 'UninstallAPIDeployment' upgrade action and 'VerifyNoObsoleteApiDeployed' prerequisite [ID_37825]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+When you upgrade DataMiner from a version older than 10.4.0 to a version from 10.4.0 onwards, the newly added *VerifyNoObsoleteApiDeployed* prerequisite will check whether the *APIDeployment* soft-launch flag is active and whether APIs are deployed. If so, the prerequisite will fail and return a link to the following page:
+
+- [Upgrade fails because of VerifyNoObsoleteApiDeployed.dll prerequisite](xref:KI_Upgrade_fails_VerifyNoObsoleteApiDeployed_prerequisite)
+
+Also, the newly added *UninstallApiDeployment* upgrade action will remove everything related to the deprecated [API Deployment](xref:Overview_of_Soft_Launch_Options#apideployment) feature:
+
+- Stop and delete the *SLAPIEndpoint* service.
+
+- Remove the following files (if present):
+
+  - *C:\Skyline DataMiner\SLAPIEndpoint*
+  - *C:\Skyline DataMiner\DeployerTokens*
+  - *C:\Skyline DataMiner\ForceDeployerTokensFileStorage.txt*
+  - *C:\Skyline DataMiner\Resources\SLAPIEndpoint.zip*
+
+- If present, remove the rewrite rules for API Deployment.
+
+- Remove the API Deployment configuration file from *C:\Skyline DataMiner\Configurations\JSON*.
+
+- Remove the *APIDeployment* soft-launch flag from *SoftLaunchOptions.xml*.
+
+#### SLAnalytics - Behavioral anomaly detection: Enhanced coloring of trend graph change point indicators [ID_37827]
+
+<!-- MR 10.5.0 - FR 10.4.1 -->
+
+In a trend graph, the occurrence of change points is indicated by colored rectangular regions below the graph.
+
+Up to now, these regions had a dark color when an alarm event would have been triggered for the change point in question if alarm monitoring had been activated for that type of change point.
+
+From now on, a rectangular region will have a dark color when the change point in question actually triggered an event:
+
+- a suggestion event (if alarm monitoring was not activated for that type of change point), or
+- an alarm event (if alarm monitoring was activated for that type of change point).
+
 #### Behavioral anomaly detection: Flatline detection now takes into account the decimal precision of parameter values [ID_37828]
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
 
 From now on, the flatline detection algorithm will take into account the decimal precision of parameter values displayed in client applications.
+
+#### GQI: Ad hoc data sources and custom operators now support row metadata [ID_37879]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+Ad hoc data sources and custom operators now support row metadata.
+
+- In case of an ad hoc data source, any metadata can be attached to a row.
+- In case of a custom operator, row metadata can be read from existing rows, and row metadata can be modified.
+
+#### DataMiner upgrade: New prerequisite will check whether the DMA still contains legacy reports or legacy dashboards [ID_37922]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+When you upgrade DataMiner from a version older than 10.4.0 to a version from 10.4.0 onwards, the newly added prerequisite will check whether the DataMiner Agent still contains legacy reports or legacy dashboards. If so, the prerequisite will fail.
+
+See also: [Upgrade fails because of VerifyNoLegacyReportsDashboards.dll prerequisite](xref:KI_Upgrade_fails_VerifyNoLegacyReportsDashboards_prerequisite)
+
+#### SLAnalytics: Enhanced error logging when retrieving trend data [ID_37931]
+
+<!-- MR 10.5.0 - FR 10.4.1 -->
+
+More extensive information will now be logged when errors occur while retrieving trend data.
 
 #### Service & Resource Management: Enhanced performance when updating/applying profile instances [ID_37976]
 

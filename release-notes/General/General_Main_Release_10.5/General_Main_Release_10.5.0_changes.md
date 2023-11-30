@@ -31,6 +31,25 @@ Because of a number of enhancements, overall performance of the `ResourceManager
 
 Also, the performance of `TrueFilterElement<Resource>` has been improved.
 
+#### SLAnalytics - Behavioral anomaly detection: Enhanced coloring of trend graph change point indicators [ID_37827]
+
+<!-- MR 10.5.0 - FR 10.4.1 -->
+
+In a trend graph, the occurrence of change points is indicated by colored rectangular regions below the graph.
+
+Up to now, these regions had a dark color when an alarm event would have been triggered for the change point in question if alarm monitoring had been activated for that type of change point.
+
+From now on, a rectangular region will have a dark color when the change point in question actually triggered an event:
+
+- a suggestion event (if alarm monitoring was not activated for that type of change point), or
+- an alarm event (if alarm monitoring was activated for that type of change point).
+
+#### SLAnalytics: Enhanced error logging when retrieving trend data [ID_37931]
+
+<!-- MR 10.5.0 - FR 10.4.1 -->
+
+More extensive information will now be logged when errors occur while retrieving trend data.
+
 ### Fixes
 
 #### Databases: Problem when starting a migration from MySQL to Cassandra [ID_37589]

@@ -65,6 +65,14 @@ DataMiner STaaS relies on Azure Storage, which stores multiple copies of your da
 > [!TIP]
 > For detailed information, see [Azure Storage redundancy on learn.microsoft.com](https://learn.microsoft.com/en-us/azure/storage/common/storage-redundancy)
 
+## Data resilience and backups
+
+To ensure data resilience for potential recovery scenarios, protecting against user errors and accidental changes, your data is backed up with a **granularity of 1 day**. Backups are stored for **30 days**.
+
+- **Daily backups**: STaaS performs backups with a granularity of 1 day and maintains a 30-day rolling snapshot of your data.
+
+- **Data restoration and support**: In the event a rollback is necessary, our support team will assist you. To submit a rollback request, contact the support team by sending an email to <staas@dataminer.services>. They will guide you through the necessary steps to ensure a successful data restoration.
+
 ## Limitations
 
 To **migrate existing data** to STaaS, the following limitations apply:

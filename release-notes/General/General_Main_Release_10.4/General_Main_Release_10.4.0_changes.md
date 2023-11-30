@@ -675,6 +675,14 @@ Also, additional logging has been added to indicate when a cache was refilled an
 
 Because of a number of enhancements, overall performance has increased when migrating data from a Cassandra database to the cloud.
 
+#### User-Defined APIs: Maximum size of HTTP request body has been reduced to 29MB [ID_37753]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+The maximum size of the HTTP request body has been reduced from 30 MB to 29 MB.
+
+Also, additional logging will be added to the *SLUserDefinableApiManager.txt* log file when subscribing on NATS fails and when sending a reply on an incoming NATS request fails.
+
 #### Legacy Reports, Dashboards and Annotations modules are now end-of-life and will be disabled by default [ID_37786]
 
 <!-- MR 10.4.0 - FR 10.4.1 -->
@@ -706,6 +714,48 @@ Forwarding sort operators to the backend is now supported for a wider range of q
 <!-- MR 10.4.0 - FR 10.4.1 -->
 
 When two DataMiner Agents try to connect via SLNet, from now on, this will no longer be allowed if the two agents share the same DataMiner GUID (except when they are both part of the same Failover setup).
+
+#### DataMiner upgrade: New 'UninstallAPIDeployment' upgrade action and 'VerifyNoObsoleteApiDeployed' prerequisite [ID_37825]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+When you upgrade DataMiner from a version older than 10.4.0 to a version from 10.4.0 onwards, the newly added *VerifyNoObsoleteApiDeployed* prerequisite will check whether the *APIDeployment* soft-launch flag is active and whether APIs are deployed. If so, the prerequisite will fail and return a link to the following page:
+
+- [Upgrade fails because of VerifyNoObsoleteApiDeployed.dll prerequisite](xref:KI_Upgrade_fails_VerifyNoObsoleteApiDeployed_prerequisite)
+
+Also, the newly added *UninstallApiDeployment* upgrade action will remove everything related to the deprecated [API Deployment](xref:Overview_of_Soft_Launch_Options#apideployment) feature:
+
+- Stop and delete the *SLAPIEndpoint* service.
+
+- Remove the following files (if present):
+
+  - *C:\Skyline DataMiner\SLAPIEndpoint*
+  - *C:\Skyline DataMiner\DeployerTokens*
+  - *C:\Skyline DataMiner\ForceDeployerTokensFileStorage.txt*
+  - *C:\Skyline DataMiner\Resources\SLAPIEndpoint.zip*
+
+- If present, remove the rewrite rules for API Deployment.
+
+- Remove the API Deployment configuration file from *C:\Skyline DataMiner\Configurations\JSON*.
+
+- Remove the *APIDeployment* soft-launch flag from *SoftLaunchOptions.xml*.
+
+#### GQI: Ad hoc data sources and custom operators now support row metadata [ID_37879]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+Ad hoc data sources and custom operators now support row metadata.
+
+- In case of an ad hoc data source, any metadata can be attached to a row.
+- In case of a custom operator, row metadata can be read from existing rows, and row metadata can be modified.
+
+#### DataMiner upgrade: New prerequisite will check whether the DMA still contains legacy reports or legacy dashboards [ID_37922]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+When you upgrade DataMiner from a version older than 10.4.0 to a version from 10.4.0 onwards, the newly added prerequisite will check whether the DataMiner Agent still contains legacy reports or legacy dashboards. If so, the prerequisite will fail.
+
+See also: [Upgrade fails because of VerifyNoLegacyReportsDashboards.dll prerequisite](xref:KI_Upgrade_fails_VerifyNoLegacyReportsDashboards_prerequisite)
 
 #### Service & Resource Management: Enhanced performance when updating/applying profile instances [ID_37976]
 

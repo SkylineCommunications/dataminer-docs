@@ -174,7 +174,7 @@ Provides access to additional data sources and operators for GQI in the Dashboar
 > - The object manager instances data source (available from DataMiner 10.3.6 onwards).<!-- RN 36124 -->
 
 - **Minimum version**: 10.0.13
-- **Estimated release version for the custom operator**: 10.4.1
+- **Release version for the custom operator**: 10.3.0 [CU10]/10.4.1 ([RN 37840](xref:Web_apps_Feature_Release_10.4.1#dashboards-app--low-code-apps-configuring-custom-operators-id_37840))
 - **Estimated release version for other data sources and operators**: To be determined
 
 ### GenericOwnership
@@ -363,6 +363,13 @@ Enables SLProtocol as a 32-bit process. This option is not configured in *SoftLa
 - **Minimum version**: 10.3.9
 - **Release version**: N/A
 
+### SnmpPollingSnmpPlusPlusOnly
+
+Configures the DataMiner System to use SNMP++ for the polling of all three SNMP versions, instead of only for SNMPv3.<!-- RN 37778 -->
+
+- **Minimum version**: 10.4.2
+- **Release version**: To be determined.
+
 ### SrmOwnServices
 
 Enables ownership support for SRM services.
@@ -383,13 +390,6 @@ Enables [Swarming](xref:Swarming) support for eligible systems.
 
 - **Minimum version**: 10.3.11
 
-### VisualDataManager
-
-Enables the new VisualDataHelper.
-
-- **Minimum version**: 9.6.1
-- **Release version**: 9.6.4
-
 ### UseWebIAS
 
 Uses an embedded web browser for Automation script execution instead of the native Cube pop-up window.
@@ -402,3 +402,10 @@ Enables the Cube UI for [User-Defined APIs](xref:UD_APIs).
 
 - **Minimum version**: 10.3.5
 - **Release version**: 10.3.6/10.4.0 ([RN 36273](xref:General_Feature_Release_10.3.6#user-defined-apis-id_34910-id_35134-id_35169-id_35417-id_35743-id_35810-id_35880-id_35885-id_36118-id_36250-id_36273-id_36366))
+
+### VisualDataManager
+
+Enables the new VisualDataHelper.
+
+- **Minimum version**: 9.6.1
+- **Release version**: 9.6.4
