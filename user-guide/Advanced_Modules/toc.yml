@@ -447,10 +447,12 @@ items:
                 topicUid: DashboardServiceDefinition
               - name: Spectrum Analyzer
                 topicUid: DashboardSpectrumAnalyzer
-              - name: Trend statistics
-                topicUid: DashboardTrendStatistics
               - name: Visual Overview
                 topicUid: DashboardVisualOverview
+              - name: Timeline
+                topicUid: DashboardTimeline
+              - name: Trend statistics
+                topicUid: DashboardTrendStatistics
           - name: Feeds
             topicUid: Feeds
             items:
