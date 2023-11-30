@@ -80,7 +80,7 @@ The markers you added in the previous step are all located on a small part of th
 
 At this point, the cell tower markers are always shown in the component, but they still look very basic. To make them stand out more and display some additional information, you can edit their template:
 
-1. In the *Layout* tab for the component expand the *Layer settings* and then expand the *Cell towers* query.
+1. In the *Layout* tab for the component, expand the *Layer settings* and then expand the *Cell towers* query.
 
 1. In the *Template* box, click *Edit*.
 
@@ -102,7 +102,7 @@ At this point, the cell tower markers are always shown in the component, but the
 
 1. Create an icon layer to represent the cell towers:
 
-   1. In the *Tools* tab on the left, select *Ellipse* and then click and drag to place the icon in the right location in the center pane.
+   1. In the *Tools* tab on the left, select *Icon* and then click and drag to place the icon in the right location in the center pane.
 
    1. In the pane on the right, click *Icon*, enter `tower` in the filter box, and select the tower icon.
 
@@ -162,7 +162,7 @@ When you zoom in on the map, more and more grouped markers should now be shown, 
 
 ## Step 6: Visualize connections
 
-Now that all the cell towers are shown on the map, you can visualize the connections between them.
+Now that all the cell towers are shown on the map, you can visualize the connections between them:
 
 1. Create a new query.
 
@@ -210,76 +210,96 @@ Now that all the cell towers are shown on the map, you can visualize the connect
 
    1. To make sure that the connections are shown underneath the markers, increase the weight of the new layer by one.
 
-   1. To make sure the query is visualized as connections, hover over the query and click *Set as line* to the right of the query name.
+   1. To make sure the query is visualized as connection lines, hover over the query and click *Set as line* to the right of the query name.
 
       The component will try to automatically configure the dimensions and show the lines on the map.
 
    1. In the *Style* section, pick a color, width, and type for the lines.
 
-When the connections have been configured, their settings will look like this:
+This is what the configuration of the connections will look like:
 
 ![CellTowerConnectionsSettings](~/user-guide/images/MapsCellTowersConnectionsSettings.png)
+
+This will be the result in the maps component:
 
 ![CellTowerConnections](~/user-guide/images/MapsCellTowersConnections.png)
 
 ## Step 7: Add navigation buttons
 
-The maps component can show (grouped) cell towers and connections. Another feature that you can add is the ability to easily navigate between different groups of markers. For this you will add a new component to our page, the grid component. This component can also visualize query results using templates. You will visualize a new query that starts from our cell tower cities and sorts them by transceiver count.
+Now that your map will show the grouped cell towers and connections, you should add a way to easily navigate between different groups of markers. For this, you can add a grid component that visualizes another query:
 
-![SortedCellTowersCitiesQuery](~/user-guide/images/MapsSortedCellTowersCitiesQuery.png)
+1. In the visualizations pane, in the *Other* section, select the grid visualization and drag it to the area below your map component.
 
-Then you can configure the grid template, via the layout settings of the component, to execute an action when clicked:
+1. In the *Data* pane, create a query that starts from the cell tower cities and sorts them by transceiver count:
 
-1. Modify the default text layer to use display the text bigger & centered in the template:
+   ![SortedCellTowersCitiesQuery](~/user-guide/images/MapsSortedCellTowersCitiesQuery.png)
 
-   1. Below *Show ellipse* on the right, change the font size with the input on the right.
+1. Drag the new query to the grid component.
 
-   1. In the same section, change the color of the text.
+1. Go to the *Layout* pane for the component, and click *Edit* in the *Item templates* section.
 
-   1. At the bottom of the section, use the buttons to center the text horizontally & vertically.
+1. Configure the template as follows:
 
-1. Create a transparent layer that executes actions when clicked:
+   1. Modify the default text layer to display the text in a larger font and center it in the template:
 
-   1. In the *Tools* tab on the left, select *Rectangle* and then click and drag in the center pane to add a rectangle layer.
+      1. Below *Show text* on the right, change the font size:
 
-   1. Below *Show rectangle* on the right, click the color icon to select a custom color for the background.
+         ![Change the font size](~/user-guide/images/MapsTutorialTextFont.png)
 
-      Make sure the opacity is set to 0.
+      1. In the same section, change the color of the text:
 
-   1. Add the actions that should be executed using the *Configure actions* button on the right.
+         ![Change the text color](~/user-guide/images/MapsTutorialTextColor.png)
 
-      1. *Pan to view* action to pan to our grouped marker. Link the latitude & longitude arguments to the corresponding columns that are fed by our grid.
+      1. Use the buttons at the bottom to center the text horizontally and vertically:
 
-      ![PanToViewAction](~/user-guide/images/MapsPanToViewAction.png)
+         ![Change the text alignment](~/user-guide/images/MapsTutorialTextAlignment.png)
 
-      1. *Set zoom level* action to set the zoom level to a level where we can see the cell towers.
+   1. Create a transparent layer that executes actions when clicked:
 
-      ![SetZoomLevelAction](~/user-guide/images/MapsSetZoomLevelAction.png)
+      1. In the *Tools* tab on the left, select *Rectangle* and then click and drag in the center pane to add a rectangle layer.
 
-      Now these actions are executed whenever an item in the grid is clicked.
+      1. Below *Show rectangle* on the right, select a custom color for the background, making sure the opacity is set to 100:
 
-In the end, the component will look and function like this:
+         ![Select the background color](~/user-guide/images/MapsTutorialRectangleColor.png)
+
+      1. Click the *Configure actions* button on the right to add the actions that should be executed when an item in the grid is clicked:
+
+         1. Select *Execute component action* and *Pan to view* to pan to the grouped marker.
+
+         1. Link the latitude and longitude arguments to the corresponding columns that are fed by the grid:
+
+            ![PanToViewAction](~/user-guide/images/MapsPanToViewAction.png)
+
+         1. Click *Add action* at the bottom to add another action.
+
+         1. Select *Execute component action* and *Set zoom level* to set the zoom level to a level where the cell towers are visible:
+
+            ![SetZoomLevelAction](~/user-guide/images/MapsSetZoomLevelAction.png)
+
+         1. Click *Ok* to close the actions configuration and *Save* to save the template.
+
+In the end, the component should look and function like this:
 
 ![NavigationActions](~/user-guide/images/MapsNavigationActions.gif)
 
 ## Step 8: Add an overlay
 
-You will add an overlay to the component to visualize the coverage of all the cell towers. This can be done via a KML file that is toggled with a component action:
+As a final touch to finish the configuration, you can now add an overlay to the component to visualize the coverage of all the cell towers. This can be done via a KML file that is toggled with a component action:
 
-1. Add a new button component to the page, next to the existing grid component.
+1. In the visualizations pane, in the *Other* section, select the button visualization and drag it below your maps component, to the right of the grid component.
 
-1. Configure an action on the button.
+1. Configure an action for the button:
 
-   1. In the *Settings* tab of the component, click the button next to the *On click* event.
+   1. In the *Settings* tab for the component, click the button next to *On click*.
 
-   1. Add a *Execute component action* to toggle an overlay for the maps component.
+   1. Select *Execute component action* and *Toggle overlay*.
 
-   1. Enter `KMLs/CellTowersCoverage.kml` as a local source for the overlay. This overlay file was provided with the catalog package from step 1.
+   1. Enter `KMLs/CellTowersCoverage.kml` as a local source for the overlay.
 
-This will result in the following config:
+      This overlay file is included in the package you deployed in step 1.
 
-![OverlayAction](~/user-guide/images/MapsOverlayAction.png)
+   ![OverlayAction](~/user-guide/images/MapsOverlayAction.png)
+
+You should now have a fully functioning application that can visualize (grouped) markers, their connections, and their coverage, and that allows users to easily navigate to the different cell towers on the map.
 
 ![Overlay](~/user-guide/images/MapsOverlay.gif)
-
-With step 8, the low-code app is done. The application can visualize (grouped) markers, their connections and their coverage. You have also added an easy way to navigate to different cell towers on the map.
