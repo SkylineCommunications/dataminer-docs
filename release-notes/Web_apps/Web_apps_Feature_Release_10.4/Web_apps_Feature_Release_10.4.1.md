@@ -291,7 +291,7 @@ When you tried to edit the property of a feed linked to a query row, the input b
 
 In some cases, the node edge graph component would not apply filtering and/or analytical coloring correctly when the data contained parameters and the graph was filtered using a query filter.
 
-#### Dashboards app & Low-Code Apps: Problem when opening the DOM Definitions or DOM Instances datasets on a system without Elasticsearch/OpenSearch  [ID_37997]
+#### Dashboards app & Low-Code Apps: Problem when opening the DOM Definitions or DOM Instances datasets on a system without Elasticsearch/OpenSearch [ID_37997]
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
 

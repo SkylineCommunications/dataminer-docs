@@ -16,6 +16,12 @@ uid: General_Main_Release_10.3.0_CU11
 
 ### Fixes
 
+#### SLDataGateway: Problem with casing when retrieving data from Elasticsearch/OpenSearch [ID_37835]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+When SLDataGateway retrieved data from Elasticsearch/OpenSearch on behalf of a DataMiner app (e.g. Ticketing), in some cases, it would pass an incorrect result set to that app due to a casing issue.
+
 #### GQI: 'Could not find PK column' error after performing a query against an empty parameter table [ID_37978]
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.1 -->
