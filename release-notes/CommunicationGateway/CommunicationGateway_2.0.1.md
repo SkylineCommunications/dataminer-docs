@@ -12,4 +12,4 @@ When a subscription is created and an exception other than an RPC exception occu
 
 However in case another exception occurred, Communication Gateway did not try to set up the connection again but just read out the stream, which would immediately fail again. This resulted in the service trying to read out the response stream over and over again, causing a high CPU load until the connector removed the subscription.
 
-To resolve this, when an exception occurs that is not likely to be resolved with a reconnect, CommunicationGateway will no longer attempt to retry. It will be up to the connector to decide when to recreate the subscription.
+To resolve this, when an exception occurs that is not likely to be resolved with a reconnect, Communication Gateway will no longer attempt to retry. It will be up to the connector to decide when to recreate the subscription.
