@@ -30,6 +30,31 @@ When a DataMiner Agent is upgraded to version 10.5.0/10.4.1 or above, the *Broke
 
 This new DxM, which is currently still under development, is intended to manage all NATS configurations.
 
+#### User-defined APIs: Query string support [ID_37733]
+
+<!-- MR 10.5.0 - FR 10.4.1 -->
+
+User-defined APIs now support the use of query strings.
+
+The query parameters from the API requests are available in the `QueryParameters` property of the `ApiTriggerInput` class. This property is of type `IQueryParameters`.
+
+The `IQueryParameters` class exposes the following methods:
+
+```csharp
+bool TryGetValues(string key, out List<string> values);
+
+bool TryGetValue(string key, out string value);
+
+List<string> GetAllKeys();
+
+bool ContainsKey(string key);
+```
+
+> [!NOTE]
+>
+> - Multiple values can be added for one key.
+> - Query parameter keys are case-sensitive.
+
 #### DataMiner upgrade: Additional prerequisite will now check whether profiles and resources are stored in an indexing database [ID_37763]
 
 <!-- MR 10.4.0 - FR 10.4.1 -->
