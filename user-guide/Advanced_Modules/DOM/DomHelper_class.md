@@ -20,7 +20,7 @@ var helper = new DomHelper(engine.SendSLNetMessages, "a_module_id");
 You can then call the *Create*, *Read*, *Update*, or *Delete* methods on the CRUD helper components of the helper.
 
 > [!NOTE]
-> When multiple `DomInstances` need processing, from DataMiner 10.4.2 onwards [calls are available](xref:DomHelper_class#multiple-instances) to do so in one go.
+> When multiple `DomInstances` need processing, from DataMiner 10.4.2/10.5.0 onwards [calls are available](xref:DomHelper_class#multiple-instances) to do so in one go.
 
 For example:
 
@@ -59,10 +59,10 @@ if (!traceData.HasSucceeded())
 
 ### Multiple instances
 
-When multiple `DomInstances` need to get create, updated or deleted, it's recommended to call the *CreateOrUpdate* or *Delete* methods on a `DomInstance` CRUD helper component, with a list of those `DomInstances`. This feature is available from DataMiner 10.4.2 onwards. More information and best practices on how to use these calls is available [in these examples](xref:DOM_BulkProcessing_Example).
+When multiple `DomInstances` need to get create, updated or deleted, it is recommended to call the *CreateOrUpdate* or *Delete* methods on a `DomInstance` CRUD helper component, with a list of those `DomInstances`. This feature is available from DataMiner 10.4.2/10.5.0 onwards. More information and best practices on how to use these calls is available [in these examples](xref:DOM_BulkProcessing_Example).
 
 When the operation fails for one of the `DomInstances`, the result of those calls will contain the necessary information.
-When calling `CreateOrUpdate`, the result will contain a list of `DomInstance` that were successfully created or updated. The trace data is available per token ID.
+When calling `CreateOrUpdate`, the result will contain a list of `DomInstances` that were successfully created or updated. The trace data is available per token ID.
 When calling `Delete` with a list of `DomInstances`, the result will contain a list of `DomInstance` IDs that were successfully deleted. Also here the trace data is available per token ID.
 
 If an issue occurs when any item gets created or updated or deleted (e.g. validation), no exception will be thrown (even when `ThrowExceptionsOnErrorData` is true). The result of the call can used to check for which `DomInstances` the call failed. Next to that the trace data of that call is available and will contain the trace data for all processed `DomInstances`.
