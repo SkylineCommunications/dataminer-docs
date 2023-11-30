@@ -110,6 +110,12 @@ When you add a new alarm tab showing the current suggestion events, that tab wil
 
 This means that suggestion events will automatically disappear from the tab approximately 2 hours after they have been detected.
 
+#### DataMiner Cube: Optimization of memory handling when closing cards [ID_37858]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU11] - FR 10.4.2 -->
+
+Overall memory handling when closing cards has been optimized.
+
 #### DataMiner Cube - Settings: Default values of trend graph action settings have been changed [ID_37867]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
@@ -248,3 +254,9 @@ When a card in tab layout was closed before it had fully been loaded, DataMiner 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
 In the *System settings > Manage client versions* section of *System Center*, the term *client independent updates* has been replaced by *server independent client updates*.
+
+#### DataMiner Cube: Problem when right-clicking after selecting a large number of elements and/or services in a view card [ID_37981]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU11] - FR 10.4.2 -->
+
+When, in a view card, you selected a large number of elements and/or services and then right-clicked, in some cases, Cube could become unresponsive.

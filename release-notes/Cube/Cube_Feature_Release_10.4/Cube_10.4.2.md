@@ -22,11 +22,15 @@ uid: Cube_Feature_Release_10.4.2
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Optimization of memory handling when closing cards [ID_37858]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU11] - FR 10.4.2 -->
+
+Overall memory handling when closing cards has been optimized.
 
 ### Fixes
 
-#### DataMiner Cube: Problem when adding up [Start Time:] placeholders [ID_37661]
+#### Problem when adding up [Start Time:] placeholders [ID_37661]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11] - FR 10.4.2 -->
 
@@ -35,3 +39,9 @@ When the [Sum:] placeholder was used to add [Start Time:] placeholders, in some 
 From now on, when configuring [Start Time:] placeholders that will be used in Sum operations, a format will have to be specified.
 
 See also: [Linking a shape to a booking](xref:Linking_a_shape_to_a_booking)
+
+#### Problem when right-clicking after selecting a large number of elements and/or services in a view card [ID_37981]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU11] - FR 10.4.2 -->
+
+When, in a view card, you selected a large number of elements and/or services and then right-clicked, in some cases, Cube could become unresponsive.
