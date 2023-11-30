@@ -23,6 +23,13 @@ It displays the different possible data sources of queries as follows:
 
 ## Configuring the layout
 
+You can **resize the columns** of the table by dragging the edges of the column headers. From DataMiner 10.1.8/10.2.0 onwards, you can also change the order of the columns by dragging the column headers to a different position.
+
+> [!TIP]
+> From DataMiner 10.4.1/10.5.0 onwards<!--RN 37522-->, you can adjust the default column width by accessing the [Template Editor](xref:Template_Editor) through *Layout > Column appearance*.
+
+### Filtering & highlighting
+
 In the *Layout* tab for this component, the *Column filters* option is available, which allows you to highlight cells based on a condition. You can configure this option as follows:
 
 - If the column you want to use for highlighting contains values for which a specific range can be specified, select the column, indicate the range to be highlighted, select the range and then click the color icon on the right to specify a highlight color. Multiple ranges can be indicated for one column, each with a color of its own.
@@ -33,41 +40,35 @@ In the *Layout* tab for this component, the *Column filters* option is available
 
 - You can remove a column filter again by selecting *No color* instead of a specific color.
 
+### Column appearance
+
 From DataMiner 10.4.1/10.5.0 onwards<!-- RN 37522 -->, in the *Layout* tab, the *Column appearance* option is available, which allows you to customize the appearance of a column.
 
-- *Column appearance > Select a column*: Allows you to alter the appearance of a column using presets. You can configure this option as follows:
+- To use one of the available presets to alter the column appearance, click the preview below the column name and select a preset option:
 
-  1. In the dropdown list, select the column you want to change.
+  - **Left**: The text is displayed on the left side of the column cell. This is the default setting.
 
-     A preview of the column's appearance is displayed underneath the name of the column.
+  - **Center**: The text is displayed in the center of the column cell.
 
-  1. Click the preview to expand a list of available presets. These show what the column would look like if that preset was selected.
+  - **Right**: The text is displayed on the right side of the column cell.
 
-  1. Select one of the presets to apply it to the column.
+  - **Hyperlink**: Only available for DataMiner Low-Code Apps. The text functions as a hyperlink, redirecting users to a new webpage in a separate tab.
 
-     Available presets:
+    > [!NOTE]
+    > If you select this preset option, a [*Navigate to a URL* action](xref:LowCodeApps_event_config#navigating-to-a-url) is automatically configured. The default URL is `https://[Your DMA]/{DMA root}`, which you can edit in the [Template Editor](xref:Template_Editor).
 
-     - Left: Align the content to the left.
+  - **Icon**: An icon is displayed in the center of the column cell. By default, the info icon is used.
 
-     - Center: Align the content in the center.
+  - **Background**: A background color is added to the column cell. By default, a blue color (#1F68BF) is used.
 
-     - Right: Align the content to the right.
-
-     - Icon: Display an icon instead of text.
-
-     - Link: Make the text appear as a link.
-
-     - Background: Add a background color to the cell.
-
-- To freely customize the appearance of a column, click the ellipsis button ("...") and select *Edit preset* to open the Template Editor.
+- To freely customize the appearance of a column, click the ellipsis button ("...") next to the column name and select *Customize preset* to open the Template Editor.
 
   > [!TIP]
   > For more information on using the Template Editor, see [Template Editor](xref:Template_Editor).
 
-You can **resize the columns** of the table by dragging the edges of the column headers. From DataMiner 10.1.8/10.2.0 onwards, you can also change the order of the columns by dragging the column headers to a different position.
+- If you open the Template Editor after selecting a preset option, the template may already contain certain configured layers.
 
-> [!TIP]
-> From DataMiner 10.4.1/10.5.0 onwards<!--RN 37522-->, you can adjust the default column width by accessing the [Template Editor](xref:Template_Editor) through *Layout > Column appearance*.
+  For example, if you selected the *Hyperlink* preset, a rectangle layer with opacity 0%, including a *Navigate to a URL* action, will be configured. Additionally, the text color of the text layer will be set to blue (#1F68BF), and the text inside the text box will be enclosed by HTML <u> elements to define underlined text.
 
 ## Adding actions to a table
 
