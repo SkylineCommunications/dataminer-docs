@@ -277,6 +277,19 @@ Also, the newly added *UninstallApiDeployment* upgrade action will remove everyt
 
 - Remove the *APIDeployment* soft-launch flag from *SoftLaunchOptions.xml*.
 
+#### SLAnalytics - Behavioral anomaly detection: Enhanced coloring of trend graph change point indicators [ID_37827]
+
+<!-- MR 10.5.0 - FR 10.4.1 -->
+
+In a trend graph, the occurrence of change points is indicated by colored rectangular regions below the graph.
+
+Up to now, these regions had a dark color when an alarm event would have been triggered for the change point in question if alarm monitoring had been activated for that type of change point.
+
+From now on, a rectangular region will have a dark color when the change point in question actually triggered an event:
+
+- a suggestion event (if alarm monitoring was not activated for that type of change point), or
+- an alarm event (if alarm monitoring was activated for that type of change point).
+
 #### Behavioral anomaly detection: Flatline detection now takes into account the decimal precision of parameter values [ID_37828]
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
