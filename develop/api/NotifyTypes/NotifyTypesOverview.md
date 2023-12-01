@@ -73,7 +73,7 @@ uid: NTNotifyTypesOverview
 |60|<xref:NT_GET_DATA>|Gets the raw data of the specified item.|
 |61|NT_DELETE_PROPERTY||
 |62|<xref:NT_EDIT_PROPERTY>|Edits a property.|
-|63|NT_CONNECTIONS_TO_REMOVE||
+|63|NT_CONNECTIONS_TO_REMOVE|Deprecated. No longer available from DataMiner 10.4.1/10.5.0 onwards.|
 |64|NT_SET_DMSREVISION_TIME||
 |65|NT_REDUNDANT_TRIGGER||
 |66|NT_SET_DERIVED_ELEMENT||
