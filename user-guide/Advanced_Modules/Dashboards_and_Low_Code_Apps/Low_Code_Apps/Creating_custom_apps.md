@@ -7,7 +7,7 @@ uid: Creating_custom_apps
 > [!NOTE]
 > To view, add, edit, delete, or publish low-code applications, you need to have the necessary user permissions under [Modules > User-definable apps](xref:DataMiner_user_permissions#modules--user-definable-apps) as well as the [DataMiner web apps](xref:DataMiner_user_permissions#general--dataminer-web-apps--dataminer-cube-mobile-access) user permission.
 
-To create a new low-code application:
+## Creating a new low-code app
 
 1. Go to the DataMiner landing page (see [Accessing the Low-Code Apps module](xref:Accessing_custom_apps)).
 
@@ -31,3 +31,40 @@ To create a new low-code application:
 
 > [!TIP]
 > See also: [Tutorials - Creating and publishing an app](xref:Tutorial_Apps_Creating_And_Publishing)
+
+## Duplicating an existing low-code app
+
+From DataMiner 10.3.0 [CU10]/10.4.1 onwards<!-- RN 37698+37724 -->, it is possible to duplicate an existing low-code app. You can do so [from the DataMiner landing page](#duplicating-an-app-from-the-dataminer-landing-page) or [from the page of the app itself](#duplicating-an-app-from-the-app-page-itself).
+
+### Duplicating an app from the DataMiner landing page
+
+1. Go to the DataMiner landing page (see [Accessing the Low-Code Apps module](xref:Accessing_custom_apps)).
+
+1. Hover over the app you want to duplicate until you see the ellipsis ("...") button.
+
+1. Click the ellipsis button to open the context menu, and select *Duplicate*.
+
+The most recently published app version will now be duplicated. If the app has not yet been published, its draft version will be duplicated instead.
+
+The newly created duplicate will be assigned a unique name and will automatically be opened in a new browser tab. On the root page, this landing app will be added to the list if the *Show draft applications* option is enabled.
+
+### Duplicating an app from the app page itself
+
+1. Open the version you want to duplicate:
+
+   - To duplicate the most recently published version of the app, open the app.
+
+   - To duplicate the latest draft version of the app, open the app and go to edit mode.
+
+   - To duplicate a different version:
+
+     1. In the top-right corner, click the user icon and select *Versions*.
+
+     1. Select the desired version.
+
+     > [!NOTE]
+     > You can only duplicate an older version of an app if you have permission to edit the app in question.
+
+1. In the top-right corner, click the user icon, and select *Duplicate* in the user menu.
+
+   The current draft version will be copied and the newly created app will automatically be opened in a new browser tab.
