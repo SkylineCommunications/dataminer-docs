@@ -12,7 +12,16 @@ uid: General_Main_Release_10.3.0_CU11
 
 ### Enhancements
 
-*No enhancements have been added to this release yet.*
+#### SNMPv3 responses now have a dynamic size [ID_37948]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+Up to now, the size of SNMPv3 responses was limited to 16000 bytes. When larger responses were received, a timeout message would appear in StreamViewer.
+
+From now on, the size of SNMPv3 responses will no longer be limited, meaning that the only constriction will be the maximum size of a UDP packet (i.e. 65000 bytes).
+
+> [!NOTE]
+> When sending SNMPv3 messages, the size of those messages is still limited to 16000 bytes.
 
 ### Fixes
 
