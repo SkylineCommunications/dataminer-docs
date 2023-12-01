@@ -30,8 +30,11 @@ Up to now, in the header bar of a low-code app, there was one button to either d
 
 From now on, a low-code app will have two separate delete buttons:
 
-- a *Delete current draft* button in the header bar, and
+- a *Discard draft* button in the header bar, and
 - a *Delete app* button in the user menu.
+
+> [!NOTE]
+> When you click one of these buttons, a confirmation box will appear. Only when you confirm will the draft or app be deleted.
 
 ### Fixes
 
