@@ -60,3 +60,11 @@ From now on, when the DataMiner System does not include an Elasticsearch/OpenSea
 When you re-opened a dataset you had filtered earlier, the filter box would be empty although the dataset would still be filtered.
 
 From now on, when you re-open a dataset you had filtered earlier, the filter box will still contain the filter you entered.
+
+#### Dashboards app: Problem when clicking the search bar [ID_38029]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+When you clicked the search bar in the header of the *Dashboards* app, in some cases, the following error message would appear:
+
+`this._dmaDashboardsService.dashboards is not iterable`
