@@ -21,7 +21,7 @@ uid: Part3AdvancedFunctionalities
     <a href="/user-guide/Advanced_Functionality/Databases/Databases_about.html" title="Databases" target="_self"><img src="~/user-guide/images/Databases.svg" style="width:100%"></a>
   </div>
   <div class="column">
-    <a href="/user-guide/Advanced_Functionality/Security/About_DMS_Security.html" title="Security" target="_self"><img src="~/user-guide/images/Security.svg" style="width:100%"></a>
+    <a href="/user-guide/Advanced_Functionality/Security/About_security.html" title="Security" target="_self"><img src="~/user-guide/images/Security.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/user-guide/Advanced_Functionality/SNMP_managers/SNMP_managers.html" title="SNMP Managers" target="_self"><img src="~/user-guide/images/SNMP_Managers.svg" style="width:100%"></a>
