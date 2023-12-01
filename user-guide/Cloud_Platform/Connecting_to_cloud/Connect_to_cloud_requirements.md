@@ -2,6 +2,9 @@
 uid: Connect_to_cloud_requirements
 ---
 
+>[!TIP]
+>See also: [Kata #9: How to make your DataMiner Agent cloud connected](https://community.dataminer.services/courses/kata-9/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+
 # Requirements for connection to dataminer.services
 
 Before connecting your DataMiner System to dataminer.services, verify that the following **requirements** are met:
