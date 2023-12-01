@@ -43,3 +43,9 @@ When SLDataGateway retrieved data from Elasticsearch/OpenSearch on behalf of a D
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
 
 When the end event of a booking used a timeout script, in some cases, that script would not get executed when the DataMiner Agent was stopped within the time range of the booking.
+
+#### DataMiner Taskbar Utility: Problem when making SLTaskbarUtility perform an action using the command prompt [ID_37952]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+When you made the DataMiner Taskbar Utility perform some action using the command prompt, the arguments would not be parsed correctly when no instance of SLTaskbarUtility was running.
