@@ -23,6 +23,14 @@ From now on, the size of SNMPv3 responses will no longer be limited, meaning tha
 > [!NOTE]
 > When sending SNMPv3 messages, the size of those messages is still limited to 16000 bytes.
 
+#### Enhanced performance when compiling QActions in SLScripting [ID_37993]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+When QActions are compiled in SLScripting, several resources need to be loaded. Up to now, those resources would be loaded for every QAction individually. From now on, they will be loaded only once and stored in a cache in order to reduce memory and CPU overhead.
+
+Every 10 seconds, resources that have not been referenced in the last 30 seconds will be removed from the cache.
+
 ### Fixes
 
 #### SLDataGateway: Problem with casing when retrieving data from Elasticsearch/OpenSearch [ID_37835]
