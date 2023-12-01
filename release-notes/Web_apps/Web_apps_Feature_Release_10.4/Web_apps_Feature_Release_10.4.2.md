@@ -36,6 +36,21 @@ From now on, a low-code app will have two separate delete buttons:
 > [!NOTE]
 > When you click one of these buttons, a confirmation box will appear. Only when you confirm will the draft or app be deleted.
 
+#### Dashboards app & Low-Code Apps: Certain datasets will now be hidden when Elasticsearch/OpenSearch is not installed [ID_38009]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+Up to now, the dashboard editor would display datasets that did not contain any data due to Elasticsearch/OpenSearch not being installed.
+
+From now on, when the DataMiner System does not include an Elasticsearch/OpenSearch database, a number of datasets will be hidden. See the overview below.
+
+| DMA version | Elasticsearch/OpenSearch installed | Hidden datasets |
+|-------------|------------------------------------|-----------------|
+| >= 10.4 | Yes | None |
+| >= 10.4 | No  | Bookings<br>Object manager definitions<br>Object manager instances<br>Profile parameters<br>Resources<br>Service definitions |
+| < 10.4  | Yes | None |
+| < 10.4  | No  | Bookings<br>Object manager definitions<br>Object manager instances<br>Service definitions |
+
 ### Fixes
 
 #### Dashboards app & Low-Code Apps: Filter box would incorrectly be empty when re-opening a previously filtered dataset [ID_38006]
