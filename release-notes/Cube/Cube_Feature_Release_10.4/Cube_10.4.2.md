@@ -28,6 +28,12 @@ uid: Cube_Feature_Release_10.4.2
 
 Overall memory handling when closing cards has been optimized.
 
+#### DataMiner Cube - Alarm Console: All alarms tabs listing suggestion events now have the 'Automatically remove cleared alarms' option enabled by default [ID_38034]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU11] - FR 10.4.2 -->
+
+From now on, all alarm tabs listing suggestion events will behave like alarm tabs listing active alarms, i.e. the *Automatically remove cleared alarms* option will be enabled by default, except for alarm tabs listing historical alarms or information events.
+
 ### Fixes
 
 #### Problem when adding up [Start Time:] placeholders [ID_37661]
