@@ -48,3 +48,9 @@ When you made the DataMiner Taskbar Utility perform some action using the comman
 <!-- MR 10.3.0 [CU11] - FR 10.4.1 -->
 
 Up to now, in some rare cases, performing a GQI query against an empty parameter table would result in a `Could not find PK column` error. From now on, GQI will return an empty result set instead.
+
+#### SLDataGateway would incorrectly keep waiting for acknowledgements from SLDataGatewayAPI [ID_37985]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+SLDataGateway would incorrectly keep waiting for an acknowledgement from SLDataGatewayAPI, causing numerous `Waiting for SLDataGatewayAPI to acknowledge ...` entries to be added to the *SLDataGateway.txt* log file.

@@ -58,3 +58,9 @@ When the end event of a booking used a timeout script, in some cases, that scrip
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
 
 When you made the DataMiner Taskbar Utility perform some action using the command prompt, the arguments would not be parsed correctly when no instance of SLTaskbarUtility was running.
+
+#### SLDataGateway would incorrectly keep waiting for acknowledgements from SLDataGatewayAPI [ID_37985]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+SLDataGateway would incorrectly keep waiting for an acknowledgement from SLDataGatewayAPI, causing numerous `Waiting for SLDataGatewayAPI to acknowledge ...` entries to be added to the *SLDataGateway.txt* log file.
