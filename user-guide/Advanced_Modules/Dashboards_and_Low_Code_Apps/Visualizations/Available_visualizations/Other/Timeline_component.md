@@ -33,6 +33,9 @@ To configure the component:
 
      ![Custom time range](~/user-guide/images/Default_Time_Range.png)<br/>*Settings timeline component in DataMiner 10.4.1*
 
+     > [!NOTE]
+     > The component has a minimum time range of 5 milliseconds and a maximum of 10 years<!--RN 35620-->.
+
      To use the default time range configured for another timeline component in the dashboard or low-code app, click the ![Link to feed](~/user-guide/images/Link_to_Feed.png) icon next to *Link time range to feed* and select the component from the dropdown list. Modifying the default time frame for this component will automatically synchronize the time range for any linked components as well.
 
    - *Data retrieval > Update data*: Allows updates to be enabled or disabled. This setting will enable real-time updates for all queries executed by the selected component. Disabled by default.
@@ -67,7 +70,7 @@ To configure the component:
 
      - *Lock timeline to now*: Determines whether users are allowed to navigate past the current timestamp in read mode. Disabled by default.
 
-   - *Item templates*: Allows you to freely customize the appearance of the timeline component items using the Template Editor<!--RN 34761-->.
+   - *Item templates*: Allows you to freely customize the appearance of the timeline component items using the Template Editor<!--RN 33311-->.
 
      - To access the Template Editor, click *Edit* next to the pencil icon.
 
@@ -78,3 +81,14 @@ To configure the component:
 
        > [!NOTE]
        > This option is only visible when another timeline component in the dashboard or low-code app is configured with a custom template.
+
+## Zooming and panning
+
+- To **zoom in** on the timeline component and adjust the displayed time range, press CTRL while scrolling up. To zoom out, press CTRL while scrolling down.
+
+  > [!NOTE]
+  > The component has a minimum time range of 5 milliseconds and a maximum of 10 years, setting the zoom limit<!--RN 35620-->.
+
+- To **move left or right** across the timeline component, click the timeline and drag your mouse.
+
+- If the number of events exceeds the size of the component, a scrollbar becomes visible when you hover over the component, allowing you to **navigate up or down** through the events.
