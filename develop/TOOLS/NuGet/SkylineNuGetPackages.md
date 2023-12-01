@@ -19,4 +19,4 @@ The following table provides more information about some of the NuGet packages c
 |[Skyline.DataMiner.Core.AppPackageCreator](https://www.nuget.org/packages/Skyline.DataMiner.Core.AppPackageCreator)     |This NuGet package allows the creation of DataMiner Application packages.         |
 |[Skyline.DataMiner.Core.AppPackageInstaller](https://www.nuget.org/packages/Skyline.DataMiner.Core.AppPackageInstaller)     |This NuGet package contains the API to install an application package.         |
 |[Skyline.DataMiner.Core.AppPackageInstaller.SRM](https://www.nuget.org/packages/Skyline.DataMiner.Core.AppPackageInstaller.SRM)     |This NuGet package contains the API to install the SRM-related components of an application package.         |
-|[Skyline.DataMiner.Utils.QAPortalAPI](https://www.nuget.org/packages/Skyline.DataMiner.Utils.QAPortalAPI)     |Thus NuGet package allows you to easily push test results in a standardized way to the QAPortal.         |
+|[Skyline.DataMiner.Utils.QAPortalAPI](https://www.nuget.org/packages/Skyline.DataMiner.Utils.QAPortalAPI)     |This NuGet package allows you to easily push test results in a standardized way to the QAPortal.         |
