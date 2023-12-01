@@ -84,11 +84,23 @@ To configure the component:
 
 ## Zooming and panning
 
-- To **zoom in** on the timeline component and adjust the displayed time range, press CTRL while scrolling up. To zoom out, press CTRL while scrolling down.
+To manipulate the timeline component in read mode, follow these instructions:
+
+- Adjusting the displayed time range:
+
+  - To **zoom in** on the timeline component, press CTRL while scrolling up.
+
+  - To **zoom out**, press CTRL while scrolling down.
 
   > [!NOTE]
   > The component has a minimum time range of 5 milliseconds and a maximum of 10 years, setting the zoom limit<!--RN 35620-->.
 
 - To **move left or right** across the timeline component, click the timeline and drag your mouse.
 
-- If the number of events exceeds the size of the component, a scrollbar becomes visible when you hover over the component, allowing you to **navigate up or down** through the events.
+- If the number of events exceeds the size of the component, a scrollbar appears when you hover over the component, allowing you to **navigate up or down** through the events.
+
+> [!NOTE]
+> When visualized on a mobile device<!--RN 35619-->:
+>
+> - You can zoom in on the component by placing your thumb and index finger tips together on the screen and moving them apart. To zoom out, use a pinching motion, starting with your fingers apart and bringing them together.
+> - You can move left or right by sliding one finger across the component.
