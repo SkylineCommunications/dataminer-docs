@@ -6,11 +6,24 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 4 December 2023 - New Feature - DataMiner as a Service [ID_XXXXXXXXXXXXXXXXXXX]
+
+From now onwards it is possible to create a DataMiner System as a Service on dataminer.services, in short called DaaS. 
+Deploying such a DaaS will deduct 3 DataMiner credits from the organization. Every week onwards another 3 DataMiner Credits will be deducted unless the organization runs out of DataMiner Credits. In that case the particulaar DaaS instance will be deleted.
+When a DaaS is created, the dataminer.services account and the DataMiner account will automatically be linked to each each other, so the web apps like Monitoring are easily available.
+A DaaS can be manually deleted easily from dataminer.services like you would for any other DMS.
+
+// TODO link to DaaS docs
+// TODO link to DM credits docs
+// TODO link to Delete DMS docs
+// TODO link RN
+
 #### 21 November 2023 - New Feature - Remote access using DataMiner Cube [ID_37841]
 
 It is now possible to connect to a DataMiner System via remote access using DataMiner Cube. If remote access is enabled for a DMS and you have been granted access to dataminer.services features, you can access the DMS remotely via Cube using the same URL as for remote access to the web pages, but without the protocol prefix `https://`. A button is also available on dataminer.services and in the Admin app that can be used to open Cube with the correct remote access filled in as the host.
 
-At present, there is still a limitation to this feature: if the DMS has SAML authentication configured, users will not be able to access the DMS remotely with Cube.
+> [!NOTE]
+> At present, there is still a limitation to this feature: if the DMS has SAML authentication configured, users will not be able to access the DMS remotely with Cube.
 
 #### 17 November 2023 - Enhancement - SupportAssistant 1.5.3 - Potential memory leak [ID_37843]
 
