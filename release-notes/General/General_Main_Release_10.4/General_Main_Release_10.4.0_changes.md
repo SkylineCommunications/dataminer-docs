@@ -973,19 +973,6 @@ When data was being migrated from a Cassandra Cluster database to a STaaS databa
 
 When you exported elements via a DELT package on a DMA running DataMiner version 10.3.8 or newer, it would no longer be possible to import that DELT package on a DMA running DataMiner version 10.3.7 or older.
 
-#### Security: Users would incorrectly not be allowed to update the Visio file linked to a service [ID_37866]
-
-<!-- MR 10.4.0 - FR 10.4.1 -->
-
-Up to now, when users had the following permissions, they would not be allowed to update the Visio file associated with a service by using the  *Upload new visio file* or *Set new blank visio file* commands:
-
-- *General > Visual Overview > Access Visual Overviews*
-- *General > Visual Overview > Edit Visio drawings*
-- *General > Services > Edit*
-- *Write* and *Config* permission for the service in question
-
-From now on, when users have the permission to link a Visio file to a specific service, they will always be allowed to update the Visio file linked to that service.
-
 #### Incorrect 'Clearing cache ...' entries in SLEventCache.txt [ID_37874]
 
 <!-- MR 10.4.0 - FR 10.4.1 -->

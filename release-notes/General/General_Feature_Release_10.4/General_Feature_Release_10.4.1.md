@@ -391,9 +391,9 @@ The same issue would occur when, in DataMiner Cube, you opened an element card a
 
 #### Security: Users would incorrectly not be allowed to update the Visio file linked to a service [ID_37866]
 
-<!-- MR 10.4.0 - FR 10.4.1 -->
+<!-- MR 10.3.0 [CU11] - FR 10.4.1 -->
 
-Up to now, when users had the following permissions, they would not be allowed to update the Visio file associated with a service by using the  *Upload new visio file* or *Set new blank visio file* commands:
+Up to now, when users had the following permissions, they would not be allowed to update the Visio file associated with a service by using the *Upload new visio file* or *Set new blank visio file* commands:
 
 - *General > Visual Overview > Access Visual Overviews*
 - *General > Visual Overview > Edit Visio drawings*
