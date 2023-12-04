@@ -8,8 +8,8 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 #### 4 December 2023 - New Feature - DataMiner as a Service for staging systems [ID_XXXXXXXXXXXXXXXXXXX]
 
-From now onwards it is possible to create a DataMiner as a Service (DaaS) system on dataminer.services for staging systems. Read more about [DataMiner as a Service](https://docs.dataminer.services/user-guide/Getting_started/Creating_a_DMS_in_the_cloud.html) or about [DataMiner Express](https://docs.dataminer.services/dataminer-overview/Pricing/Pricing_Commercial_Models.html#dataminer-express).
-Deploying such a DaaS system will deduct 3 DataMiner credits from the organization every week onwards as [Pay-per-Use](https://docs.dataminer.services/dataminer-overview/Pricing/Pricing_Commercial_Models.html#pay-per-use). In case the organization runs out of DataMiner credits, the particular DaaS system will be deleted. By default every organization is provided with 3 DataMiner credits, so a DaaS system can be tried out for one week free of charge.
+From now onwards it is possible to create a DataMiner as a Service (DaaS) system on dataminer.services for staging systems. Read more about [DataMiner as a Service](xref:Creating_a_DMS_in_the_cloud) or about [DataMiner Express](xref:Pricing_Commercial_Models#dataminer-express).
+Deploying such a DaaS system will deduct 3 DataMiner credits from the organization every week onwards as [Pay-per-Use](xref:Pricing_Commercial_Models#pay-per-use). In case the organization runs out of DataMiner credits, the particular DaaS system will be deleted. By default every organization is provided with 3 DataMiner credits, so a DaaS system can be tried out for one week free of charge.
 When created a DaaS system, your dataminer.services account will automatically be linked to your DataMiner account, so you can easily access the web apps like Monitoring via remote access.
 A DaaS system can be manually deleted easily from dataminer.services like you would for any other DMS, but take note this is irreversible and all data will be lost.
 
