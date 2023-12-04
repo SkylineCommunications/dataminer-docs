@@ -101,3 +101,9 @@ The following actions are available:
 
   > [!TIP]
   > For more information about the different types of overlays, see [Layer types](xref:Layer_types#layers-of-sourcetype-overlay)
+
+## Configuring other component settings
+
+In the *Settings* tab for this component, you can customize its behavior to suit your requirements.
+
+- If you want the data in the map to be refreshed automatically (provided this is supported by the data source), Set *Update data* to *On*. Do note that this is currently only applicable for the markers on map, the lines won't update yet.
