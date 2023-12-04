@@ -6,11 +6,25 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 4 December 2023 - New Feature - DataMiner as a Service for staging systems [ID_38087]
+
+It is now possible to create a [DataMiner as a Service (DaaS)](xref:Creating_a_DMS_in_the_cloud) system on dataminer.services for staging systems.
+
+Our [Pay-per-Use](xref:Pricing_Commercial_Models#pay-per-use) model is used for this: When you deploy such a DaaS system, 3 DataMiner credits will be deducted from your organization every week. In case your organization runs out of DataMiner credits, the DaaS system will be deleted. By default, every organization is provided with 3 DataMiner credits, so you can try out a DaaS system for one week free of charge.
+
+> [!TIP]
+> See also: [DataMiner Express](xref:Pricing_Commercial_Models#dataminer-express)
+
+When you create a DaaS system, your dataminer.services account will automatically be linked to your DataMiner account, so you can easily access DataMiner web apps such as the Monitoring app via remote access.
+
+You can manually delete a DaaS system from dataminer.services, just like any other DMS; however, note that this is irreversible, and all data of the system will be lost.
+
 #### 21 November 2023 - New Feature - Remote access using DataMiner Cube [ID_37841]
 
 It is now possible to connect to a DataMiner System via remote access using DataMiner Cube. If remote access is enabled for a DMS and you have been granted access to dataminer.services features, you can access the DMS remotely via Cube using the same URL as for remote access to the web pages, but without the protocol prefix `https://`. A button is also available on dataminer.services and in the Admin app that can be used to open Cube with the correct remote access filled in as the host.
 
-At present, there is still a limitation to this feature: if the DMS has SAML authentication configured, users will not be able to access the DMS remotely with Cube.
+> [!NOTE]
+> At present, there is still a limitation to this feature: if the DMS has SAML authentication configured, users will not be able to access the DMS remotely with Cube.
 
 #### 17 November 2023 - Enhancement - SupportAssistant 1.5.3 - Potential memory leak [ID_37843]
 
