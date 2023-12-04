@@ -5,13 +5,29 @@ uid: DOM_BulkProcessing_Example
 
 From DataMiner 10.4.2/10.5.0 onwards the `DomInstance` CRUD helper component supports processing multiple `DomInstances` in one call.
 
-This page contains simple examples of how you can use these calls, provided by the [DomHelper](xref:DomHelper_class#multiple-instances).
+This page contains a few examples on how you can use these calls, provided by the [DomHelper](xref:DomHelper_class#multiple-instances).
+
+## Create multiple DomInstances
+
+In this example, two `DomInstances` get created.
+
+  ```csharp
+  // Instantiate a new DomInstance & assign 'Hello' as a value.
+  var domInstanceOne = new DomInstance() { DomDefinitionId = domDefinitionId };
+  domInstanceOne.AddOrUpdateFieldValue<string>(sectionDefinitionId, fieldDescriptorId, "Hello");
+
+  // Instantiate a new DomInstance & assign 'World' as a value.
+  var domInstanceTwo = new DomInstance() { DomDefinitionId = domDefinitionId };
+  domInstanceOne.AddOrUpdateFieldValue<string>(sectionDefinitionId, fieldDescriptorId, "World");
+
+  // Save them to the DB.
+  var domInstances = new List<DomInstance> { domInstanceOne, domInstanceTwo };
+  domHelper.DomInstances.CreateOrUpdate(domInstances);
+  ```
 
 ## Update a value for multiple DomInstances
 
-In the following example the *Type* field of some `DomInstances` needs to be updated. The update for some of them might not succeed. For instance: the *type* `FieldDescriptor` might not be allowed for the status that *DomInstance* is in, or the `SectionDefinition` might not be supported for that *DomInstance*.
-
-For the `DomInstances` that fail, their name and the issue will be logged in this example.
+In the following example a field gets updated on multiple `DomInstances`.
 
   ```csharp
   // Retrieve the DomInstances that need processing.
@@ -20,81 +36,93 @@ For the `DomInstances` that fail, their name and the issue will be logged in thi
   // Update the field value on those DomInstances.
   foreach(var domInstance in domInstances)
   {
-      domInstance.AddOrUpdateFieldValue<int>(sectionDefinitionId, fieldDescriptorId, newType);
+      domInstance.AddOrUpdateFieldValue<string>(sectionDefinitionId, fieldDescriptorId, newValue);
   }
+
+  // Save them to the DB.
+  domHelper.DomInstances.CreateOrUpdate(domInstances);
+  ```
+
+### Checking issues
+
+For some of the `DomInstances` the update might not succeed. In this example the number of `DomInstances` that fails is logged, together with the issues that occurred. Next the number of `DomInstances` that succeeds gets logged.
+
+  ```csharp
+  // Update the DomInstances.
 
   // Save them to the DB.
   var updateResult = domHelper.DomInstances.CreateOrUpdate(domInstances);
 
+  // Check if some of the updates are not successful.
+  if (updateResult.HasFailed())
+  {
+      // Log the number of DomInstances that was not updated.
+      // Also log the `TraceData` for all failing `DomInstances`. The `TraceData` contains all errors and warnings.
+      Log($"Could not perform the update for {updateResult.UnsuccessfulIds.Count} items: {updateResult.GetTraceData()}");
+  }
+
   // Log what items were successfully removed.
-  Log($"The new type was successfully set on {updateResult.SuccessfulItems.Count} items");
-
-  // Log that some updates are not successful. Per DomInstance, check how the issue occurred.
-  var incorrectInstances = updateResult.TraceDataPerItem.Where(x => !x.Value.HasSucceeded()).ToList();
-  if (incorrectInstances.Count > 0)
-  {
-      var issues = incorrectInstances.Select(x => $"{domInstances.FirstOrDefault(y => x.Equals(y.ID))?.Name}: {x.Value}");
-      Log($"The type could not be updated for {incorrectInstances.Count} items: {string.Join(Environment.NewLine, issues)}");
-  }
+  Log($"Could perform the update successfully for {updateResult.SuccessfulItems.Count} items");
   ```
 
-## Create multiple DomInstances
+Next to a summarized logging using `GetTraceData()`, `TraceDataPerItem` can be used to check for errors and warnings per `DomInstanceId`.
 
-In this example, two `DomInstances` get created. The second `DomInstance` will be created using a `FieldDescriptor` that no longer is supported for the initial state it gets created in.
-
-In this example, the `TraceData` will be logged. Depending on the issue that occurs, the ID of the `DomInstance` might be included in the error.
-
-  ```csharp
-  // Instantiate a new DomInstance & assign 'Hello' as a value for a correct FieldDescriptor.
-  var domInstanceOne = new DomInstance() { DomDefinitionId = basicDomDefinitionId };
-  domInstanceOne.AddOrUpdateFieldValue<string>(sectionDefinitionId, fieldDescriptorId, "Hello");
-
-  // Instantiate a new DomInstance & assign 'World' as a value for a FieldDescriptor no longer supported for the initial state.
-  var domInstanceTwo = new DomInstance() { DomDefinitionId = advancedDomDefinitionId };
-  domInstanceTwo.AddOrUpdateFieldValue<string>(sectionDefinitionId, incorrectFieldDescriptorId, "World");
-
-  // Save them to the DB.
-  var domInstances = new List<DomInstance> { domInstanceOne, domInstanceTwo };
-  domHelper.DomInstances.CreateOrUpdate(domInstances);
-
-  // Log if an issue occurs.
-  var traceData = domHelper.DomInstances.GetTraceDataLastCall();
-  if (!traceData.HasSucceeded())
-  {
-      Log($"Some of the instances could not be created: {traceData}");
-  }
-  ```
+When multiple `DomInstances` are created or deleted, the issues can be logged the same way.
 
 ## Remove multiple DomInstances
 
 In this example, some `DomInstances` get filtered out to be removed.
 
-If, for example, the user executing this example is not allowed to remove them, it will be logged for each `DomInstance`.
-In case the `Read` or `Delete` call is unsuccessful because of a database issue, a `CrudFailedException` will be thrown. Details of the issue will be available in the `TraceData` of that exception.
+  ```csharp
+  // Retrieve the DomInstances that need to get deleted.
+  var domInstances = domHelper.DomInstances.Read(filter);
+
+  // Remove them from the DB.
+  var deleteResult = domHelper.DomInstances.Delete(domInstances);
+  ```
+
+## Unexpected issue
+
+In case the `Delete` call is unsuccessful because of for instance a database issue, by default a `CrudFailedException` will be thrown. Details of the issue will be available in the `TraceData` of that exception.
 
   ```csharp
   try
   {
-      // Retrieve the DomInstances that need to get deleted.
-      var domInstances = domHelper.DomInstances.Read(filter);
-
       // Remove them from the DB.
       var deleteResult = domHelper.DomInstances.Delete(domInstances);
 
       // Log what items are successfully removed.
       Log($"Successfully removed {deleteResult.SuccessfulIds.Count} items");
-
-      // Log that some deletes are not successful. Per DomInstance check which issue occurs.
-      var incorrectInstances = deleteResult.TraceDataPerItem.Where(x => !x.Value.HasSucceeded()).ToList();
-      if (incorrectInstances.Count > 0)
-      {
-          var issues = incorrectInstances.Select(x => $"{domInstances.FirstOrDefault(y => x.Equals(y.ID))?.Name}: {x.Value}");
-          Log($"Unable to remove {incorrectInstances.Count} items: {string.Join(Environment.NewLine, issues)}");
-      }
   }
   catch (CrudFailedException ex)
   {
       // Log the issue that occurs.
-      Log($"Unable to perform the removal, the following error occurred: {ex.TraceData}");
+      Log($"Cannot perform the removal, because of the following issue: {ex.TraceData}");
+  }
+  ```
+
+You can however disable this and check if something went wrong yourself by requesting the `TraceData` object of the last call.
+
+  ```csharp
+  // Disable the exceptions.
+  domHelper.DomInstances.ThrowExceptionsOnErrorData = false;
+
+  // Remove them from the DB.
+  var deleteResult = domHelper.DomInstances.DomInstances.Delete(domInstances);
+
+  // Check if a result is available.
+  if (deleteResult != null)
+  {
+    // Log what items are successfully removed.
+    Log($"Successfully removed {deleteResult.SuccessfulIds.Count} items");
+    return;
+  }
+  
+  // Get the TraceData and check if the last call succeeded.
+  var traceData = domHelper.DomInstances.GetTraceDataLastCall();
+  if (!traceData.HasSucceeded())
+  {
+    // Log the issue that occurs.
+    Log($"Cannot perform the removal, because of the following issue: {traceData}");
   }
   ```
