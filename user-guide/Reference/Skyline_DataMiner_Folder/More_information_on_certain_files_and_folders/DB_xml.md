@@ -226,7 +226,7 @@ The following example illustrates the configuration of a general database of typ
 ## Configuring a size limit for file offloads
 
 > [!NOTE]
-> Prior to DataMiner 10.4.2/10.5.0, this functionality is configured in [DBConfiguration.xml](xref:DBConfiguration_xml) instead.
+> Prior to DataMiner 10.4.0/10.4.2<!-- RN 37446 -->, this functionality is configured in [DBConfiguration.xml](xref:DBConfiguration_xml) instead.
 
 When the main database is offline, file offloads are used to store write/delete operations. You can configure a limit for the file size of these offloads in *DB.xml*. When the limit is reached, new data will be dropped.
 
@@ -584,9 +584,9 @@ To do so:
 ### Configuring multiple OpenSearch or Elasticsearch clusters
 
 > [!NOTE]
-> Prior to DataMiner 10.4.2/10.5.0, this functionality is configured in [DBConfiguration.xml](xref:DBConfiguration_xml) instead.
+> Prior to DataMiner 10.4.0/10.4.2<!-- RN 37446 -->, this functionality is configured in [DBConfiguration.xml](xref:DBConfiguration_xml) instead.
 
-It is possible to have data offloaded to multiple OpenSearch or Elasticsearch clusters, i.e. one main cluster and several replicated clusters. From DataMiner 10.4.2/10.5.0 onwards, this is configured in *DB.xml*. For detailed information, see [Configuring multiple OpenSearch clusters](xref:Configuring_multiple_OpenSearch_clusters) or [Configuring multiple Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters).
+It is possible to have data offloaded to multiple OpenSearch or Elasticsearch clusters, i.e. one main cluster and several replicated clusters. From DataMiner 10.4.0/10.4.2 onwards, this is configured in *DB.xml*. For detailed information, see [Configuring multiple OpenSearch clusters](xref:Configuring_multiple_OpenSearch_clusters) or [Configuring multiple Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters).
 
 ## CMDB settings
 
