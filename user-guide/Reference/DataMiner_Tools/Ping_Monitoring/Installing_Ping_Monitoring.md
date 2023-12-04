@@ -21,7 +21,9 @@ uid: Installing_Ping_Monitoring
 - At least one Generic Ping element within your DMS that is configured with one or multiple destinations
 
   > [!IMPORTANT]
-  > The DataMiner Ping Monitoring tool will only recognize Generic Ping elements using the production version of the connector. See [Promoting a protocol to production version](xref:Promoting_a_protocol_version_to_production_version).
+  > The DataMiner Ping Monitoring tool will only recognize Generic Ping elements using the production version of the connector. See [Promoting a protocol to production version
+  
+- Promoting_a_protocol_version_to_production_version).
 
   > [!TIP]
   >
