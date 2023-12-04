@@ -8,7 +8,9 @@ From DataMiner 10.3.0/10.3.3 onwards, you can have data offloaded to multiple Op
 
 To configure this setup, proceed as follows:
 
-## [From DataMiner 10.4.2/10.5.0 onwards](#tab/tabid-1)
+## [From DataMiner 10.4.0/10.4.2 onwards](#tab/tabid-1)
+
+<!-- RN 37446 -->
 
 1. In the `C:\Skyline DataMiner\` folder, open *DB.xml*.
 
@@ -68,7 +70,7 @@ To configure this setup, proceed as follows:
 > [!NOTE]
 > If an exception occurs for one of the replicated clusters, an alarm will be generated in the Alarm Console, indicating that not all data might be replicated. If further errors occur, no new alarms are created until the DMA is restarted.
 
-## [Prior to DataMiner 10.4.2/10.5.0](#tab/tabid-2)
+## [Prior to DataMiner 10.4.0/10.4.2](#tab/tabid-2)
 
 > [!NOTE]
 > For reasons of legacy and compatibility with Elasticsearch, the *DBConfiguration.xml* file will have XML tags referring to Elasticsearch instead of OpenSearch such as the \<ElasticConnections\> or \<ElasticCluster\> tags. Tags such as \<OpenSearchCluster\> will not work.

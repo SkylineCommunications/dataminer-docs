@@ -26,7 +26,9 @@ Configuring multiple Elasticsearch clusters becomes crucial when on-premises set
 
 To configure this setup:
 
-## [From DataMiner 10.4.2/10.5.0 onwards](#tab/tabid-1)
+## [From DataMiner 10.4.0/10.4.2 onwards](#tab/tabid-1)
+
+<!-- RN 37446 -->
 
 1. In the `C:\Skyline DataMiner\` folder, open *DB.xml*.
 
@@ -89,7 +91,7 @@ To configure this setup:
 > [!TIP]
 > See also: [DB.xml](xref:DB_xml).
 
-## [Prior to DataMiner 10.4.2/10.5.0](#tab/tabid-2)
+## [Prior to DataMiner 10.4.0/10.4.2](#tab/tabid-2)
 
 1. Create and configure a file *DBConfiguration.xml* as illustrated below. For each Elasticsearch cluster, an *ElasticCluster* tag must be added with the following configuration:
 
