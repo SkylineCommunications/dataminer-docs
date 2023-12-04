@@ -240,7 +240,7 @@ Any errors that occur during a migration process will be displayed in a pop-up w
 - If **TLS** is enabled on the Elasticsearch or OpenSearch nodes and **some Agents do not initialize**, you can check the connection to the Elasticsearch/OpenSearch nodes as follows:
 
   1. Open a browser on the DataMiner servers that you want to migrate from
-  
+
   1. Enter `https://[IP address]:9200/` in the browser's address bar, replacing "[IP address]" with your IP address of the nodes.
- 
-If this is failing, please check if TLS was configured correctly and the root certifcate was correctly installed on the DataMiner server, see configure TLS encryption on your [OpenSearch database](xref:Installing_OpenSearch_database#tls-configuration) or [Elasticsearch database](xref:Security_Elasticsearch#client-server-tls-encryption).
+
+  If this fails, check if TLS was configured correctly and if the root certificate was correctly installed on the DataMiner server. See [TLS configuration for the OpenSearch database](xref:Installing_OpenSearch_database#tls-configuration) or [TLS configuration for the Elasticsearch database](xref:Security_Elasticsearch#client-server-tls-encryption).
