@@ -35,6 +35,9 @@ With **DataMiner as a Service (DaaS)**, you can create a complete DataMiner Syst
 
 1. Enter a username and password for your DataMiner account.
 
+   > [!IMPORTANT]
+   > Do not use an ampersand ("&") in your password. This is currently not supported.
+
 1. Select the box next to *I agree to the terms of service*.
 
 1. Click *Create*.
