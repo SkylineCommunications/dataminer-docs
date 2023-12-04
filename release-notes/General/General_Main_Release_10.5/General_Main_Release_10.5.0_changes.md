@@ -58,15 +58,3 @@ More extensive information will now be logged when errors occur while retrieving
 
 When you started a migrating from a MySQL database to a Cassandra database, an error could occur when the connection to the MySQL database took a long time to get established.
 
-#### Security: Users would incorrectly not be allowed to update the Visio file linked to a service [ID_37866]
-
-<!-- MR 10.5.0 - FR 10.4.1 -->
-
-Up to now, when users had the following permissions, they would not be allowed to update the Visio file associated with a service by using the  *Upload new visio file* or *Set new blank visio file* commands:
-
-- *General > Visual Overview > Access Visual Overviews*
-- *General > Visual Overview > Edit Visio drawings*
-- *General > Services > Edit*
-- *Write* and *Config* permission for the service in question
-
-From now on, when users have the permission to link a Visio file to a specific service, they will always be allowed to update the Visio file linked to that service.
