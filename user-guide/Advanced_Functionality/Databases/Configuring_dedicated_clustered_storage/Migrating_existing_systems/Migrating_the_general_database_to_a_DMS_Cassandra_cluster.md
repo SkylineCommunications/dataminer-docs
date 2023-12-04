@@ -233,3 +233,5 @@ If you encounter an **issue initializing all the Agents**, check whether the log
 
 > [!CAUTION]
 > Always be very careful when you use the SLNetClientTest tool, as it allows actions that can have far-reaching consequences for a DataMiner System. Always ask for support in case you need to use this tool and something is not clear.
+
+- If TLS is enabled on the Elastic or OpenSearch nodes and some agent don't start with initializing, you can check the connection to ElasticSearch/OpenSearch nodes by opening a browser on the DataMiner servers where you want to migrate from and trying to resolve he nodes by entering `https://[IP address]:9200/` in your browser's address bar. Replace "[IP address]" with your IP address of the nodes.
