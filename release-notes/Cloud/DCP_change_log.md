@@ -6,7 +6,7 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
-#### 4 December 2023 - New Feature - DataMiner as a Service for staging systems [ID_XXXXXXXXXXXXXXXXXXX]
+#### 4 December 2023 - New Feature - DataMiner as a Service for staging systems [ID_38087]
 
 From now onwards it is possible to create a DataMiner as a Service (DaaS) system on dataminer.services for staging systems. Read more about [DataMiner as a Service](xref:Creating_a_DMS_in_the_cloud) or about [DataMiner Express](xref:Pricing_Commercial_Models#dataminer-express).
 Deploying such a DaaS system will deduct 3 DataMiner credits from the organization every week onwards as [Pay-per-Use](xref:Pricing_Commercial_Models#pay-per-use). In case the organization runs out of DataMiner credits, the particular DaaS system will be deleted. By default every organization is provided with 3 DataMiner credits, so a DaaS system can be tried out for one week free of charge.
