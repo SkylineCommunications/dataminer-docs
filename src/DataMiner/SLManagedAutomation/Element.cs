@@ -759,6 +759,9 @@ namespace Skyline.DataMiner.Automation
 		/// var value = element.GetParameter(1002, "1");
 		/// </code>
 		/// </example>
+		/// <remarks>
+		/// <para>When the primary key is in a column hidden by an information template, this method will return an empty value. It is recommended to use the <see cref="GetParameter(int, string)"/> method.</para>
+		/// </remarks>
 		public virtual object GetParameterByPrimaryKey(int pid, string primaryKey) { return null; }
 
 		/// <summary>
