@@ -6,17 +6,12 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
-#### 4 December 2023 - New Feature - DataMiner as a Service [ID_XXXXXXXXXXXXXXXXXXX]
+#### 4 December 2023 - New Feature - DataMiner as a Service for staging systems [ID_XXXXXXXXXXXXXXXXXXX]
 
-From now onwards it is possible to create a DataMiner System as a Service on dataminer.services, in short called DaaS. 
-Deploying such a DaaS will deduct 3 DataMiner credits from the organization. Every week onwards another 3 DataMiner Credits will be deducted unless the organization runs out of DataMiner Credits. In that case the particulaar DaaS instance will be deleted.
-When a DaaS is created, the dataminer.services account and the DataMiner account will automatically be linked to each each other, so the web apps like Monitoring are easily available.
-A DaaS can be manually deleted easily from dataminer.services like you would for any other DMS.
-
-// TODO link to DaaS docs
-// TODO link to DM credits docs
-// TODO link to Delete DMS docs
-// TODO link RN
+From now onwards it is possible to create a DataMiner System as a Service on dataminer.services, in short called DaaS, for staging systems. Read more about [DataMiner as a Service](https://docs.dataminer.services/user-guide/Getting_started/Creating_a_DMS_in_the_cloud.html) or about [DataMiner Express](https://docs.dataminer.services/dataminer-overview/Pricing/Pricing_Commercial_Models.html#dataminer-express).
+Deploying such a DaaS will deduct 3 DataMiner credits from the organization. Every week onwards another 3 DataMiner Credits will be deducted unless the organization runs out of DataMiner credits. In that case the particular DaaS instance will be deleted. By default every organization is provided with 3 DataMiner credits, so DaaS can be tried out for one week free of charge. Read more about [Pay-per-Use](https://docs.dataminer.services/dataminer-overview/Pricing/Pricing_Commercial_Models.html#pay-per-use)
+When created a DaaS, your dataminer.services account will automatically be linked to your DataMiner account, so you can easily access the web apps like Monitoring via remote access.
+A DaaS can be manually deleted easily from dataminer.services like you would for any other DMS, but take note this is irreversible and all data will be lost.
 
 #### 21 November 2023 - New Feature - Remote access using DataMiner Cube [ID_37841]
 
