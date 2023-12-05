@@ -437,3 +437,9 @@ In some rare cases, SLAutomation would not clean up deleted references to elemen
 <!-- MR 10.3.0 [CU11] - FR 10.4.1 -->
 
 Up to now, in some rare cases, performing a GQI query against an empty parameter table would result in a `Could not find PK column` error. From now on, GQI will return an empty result set instead.
+
+#### Storage as a Service: Problem when starting a database migration [ID_38059]
+
+<!-- MR 10.4.0 - FR 10.4.1 [CU0] -->
+
+When you tried to start a migration of an on-premises database to a DataMiner Storage as a Service platform, in some cases, the connection towards the cloud could not get established.

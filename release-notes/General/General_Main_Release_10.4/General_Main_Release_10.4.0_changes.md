@@ -982,3 +982,9 @@ Incorrect entries would be added to the *SLEventCache.txt* log file on DataMiner
 Example of an incorrect log entry:
 
 `Clearing cache: predicate<entries with old hosting agent id> for type XXXXXX`
+
+#### Storage as a Service: Problem when starting a database migration [ID_38059]
+
+<!-- MR 10.4.0 - FR 10.4.1 [CU0] -->
+
+When you tried to start a migration of an on-premises database to a DataMiner Storage as a Service platform, in some cases, the connection towards the cloud could not get established.
