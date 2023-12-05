@@ -197,9 +197,6 @@ To enable inter-node TLS encryption:
 
 1. Point it towards your *rootCa.jks* truststore file and use the password you used to generate it.
 
-> [!NOTE]
-> Currently, we only support TLS version 1.0 for the client-server encryption. If connecting to Cassandra over TLS fails, make sure to check that this version is not disabled on operating system level.
-
 ## Connecting with DataMiner
 
 1. Ensure TLS encryption is working by connecting to the Cassandra database through DevCenter.
