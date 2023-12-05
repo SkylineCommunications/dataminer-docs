@@ -41,9 +41,6 @@ To apply a data feed or change the data feed of a component:
 
    - A data feed can also be provided by a **feed component**. When such a component has been added to the dashboard or low-code app, the *Feeds* section is added to the available data in the *Data* pane. You can then drag an entry from this section to a component in order to link the component to the feed component.
 
-     > [!NOTE]
-     > From DataMiner 10.4.1/10.5.0 onwards<!--RN 35639-->, if a timeline component is configured, *Timeline > Viewport > Timespans* is available in the *Feeds* section of the *Data* pane, denoting the start and end time of the timeline.
-
    - Some components allow you to specify **multiple data feeds**. For example, for a *State* component and a *Line chart* component, multiple parameters can be dragged onto the component.
 
      > [!NOTE]
