@@ -62,11 +62,11 @@ To configure the component:
 
    - *Data retrieval > Update data*: Allows updates to be enabled or disabled. This setting will enable real-time updates for all queries executed by the selected component. Disabled by default.
 
-   - *Highlight range > Use highlighting*: Determines whether an event in the timeline component is highlighted when it falls within the configured time range. When an event is highlighted, it receives a blue background color. Events that do not fall within the set time range are still visible with lowered opacity. Disabled by default.
+   - *Highlight range > Use highlighting*: Determines whether an event in the timeline component is highlighted when it falls within the configured time range. When an event is highlighted, it receives a blue background color. Events that do not fall within the set time range are still visible with lowered opacity. Disabled by default<!--RN 33639-->.
 
      ![Highlight](~/user-guide/images/Timeline_Highlight.png)<br/>*Timeline component in DataMiner 10.4.1*
 
-     To use the highlight time range configured for another timeline component in the dashboard or low-code app, click the ![Link to feed](~/user-guide/images/Link_to_Feed.png) icon next to the *Time range* dropdown box, and select the component from the dropdown list. Modifying the highlight time frame for this component will automatically synchronize the time range for any linked components as well.
+     To use the time range configured for another component in the dashboard or low-code app, click the ![Link to feed](~/user-guide/images/Link_to_Feed.png) icon next to the *Time range* dropdown box, and select the component from the dropdown list. Modifying the highlight time frame for this component will automatically synchronize the time range for any linked components as well.
 
 1. Fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
 
