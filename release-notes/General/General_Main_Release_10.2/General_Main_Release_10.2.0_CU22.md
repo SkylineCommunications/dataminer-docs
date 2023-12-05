@@ -249,9 +249,10 @@ When a table was polled via SNMPv3 and the response included a cell that contain
 
 When the URL specified in a shape data item of type *Link* did not link to a DataMiner web app, but contained a keyword that could be interpreted as a keyword of a DataMiner web app, a connection ticket would incorrectly be added to that URL.
 
-#### DataMiner Cube could leak memory leak when a card in tab layout was closed before it had fully been loaded [ID_37857]
+#### DataMiner Cube could leak memory leak when a card in tab layout was closed before it had fully been loaded [ID_37857] [ID_38021]
 
-<!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+<!-- RN 37857: MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+<!-- RN 38021: MR 10.2.0 [CU22]/10.3.0 [CU11] - FR 10.4.2 -->
 
 When a card in tab layout was closed before it had fully been loaded, DataMiner Cube could leak memory due to list boxes not being cleared from memory.
 
@@ -282,6 +283,12 @@ In some cases, when you opened a *Send email* action, it would incorrectly not b
 When, in DataMiner Cube, you right-clicked inside a visual overview linked to a service, the context menu would incorrectly allow you to edit the visual overview when you had permission to edit services in general but no permission to edit that specific service.
 
 From now on, when you right-click inside a visual overview linked to a service, the context menu will only allow you to edit the visual overview when you have permission to edit that specific service (on top of the permission to edit services in general and the permission to access and edit visual overviews).
+
+#### DataMiner Cube: Memory leak in Alarm Console [ID_38057]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
+
+The Alarm Console would leak memory each time you opened an active alarms tab.
 
 #### DataMiner Cube - System Center: 'Clean up unused' tool would incorrectly consider custom Visio files assigned to elements as unused [ID_38061]
 

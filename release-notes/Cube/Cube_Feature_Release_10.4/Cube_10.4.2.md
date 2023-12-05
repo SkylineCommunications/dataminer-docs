@@ -68,6 +68,18 @@ When, in DataMiner Cube, you right-clicked inside a visual overview linked to a 
 
 From now on, when you right-click inside a visual overview linked to a service, the context menu will only allow you to edit the visual overview when you have permission to edit that specific service (on top of the permission to edit services in general and the permission to access and edit visual overviews).
 
+#### DataMiner Cube could leak memory leak when a card in tab layout was closed before it had fully been loaded [ID_38021]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU11] - FR 10.4.2 -->
+
+When a card in tab layout was closed before it had fully been loaded, DataMiner Cube could leak memory due to list boxes not being cleared from memory.
+
+#### Memory leak in Alarm Console [ID_38057]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
+
+The Alarm Console would leak memory each time you opened an active alarms tab.
+
 #### System Center: 'Clean up unused' tool would incorrectly consider custom Visio files assigned to elements as unused [ID_38061]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
