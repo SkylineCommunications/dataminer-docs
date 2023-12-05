@@ -538,6 +538,17 @@ Other changes to a section definition that fail when the section is being used b
 
 When a parameter has anomalous flatline periods in its trend data history that are breaking the normal trend data patterns, from now on, those flatline periods will no longer be included into the training data of the prediction model. As a result, a more accurate prediction can be expected on this kind of behavior.
 
+#### Configuration of database offload functionality moved from DBConfiguration.xml to DB.xml [ID_37446]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+All database offload functionality that had to be configured in the *DBConfiguration.xml* file now has to be configured in the *DB.xml* file instead.
+
+For more information, see:
+
+- [Configuring a size limit for file offloads](xref:DB_xml#configuring-a-size-limit-for-file-offloads)
+- [Configuring multiple OpenSearch or Elasticsearch clusters](xref:DB_xml#configuring-multiple-opensearch-or-elasticsearch-clusters)
+
 #### SLAnalytics: Not all occurrences of multivariate patterns containing subpatterns hosted on different DMAs would be detected [ID_37451]
 
 <!-- MR 10.4.0 - FR 10.3.12 -->

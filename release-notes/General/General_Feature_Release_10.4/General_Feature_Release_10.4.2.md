@@ -28,6 +28,17 @@ uid: General_Feature_Release_10.4.2
 
 ### Enhancements
 
+#### Configuration of database offload functionality moved from DBConfiguration.xml to DB.xml [ID_37446]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+All database offload functionality that had to be configured in the *DBConfiguration.xml* file now has to be configured in the *DB.xml* file instead.
+
+For more information, see:
+
+- [Configuring a size limit for file offloads](xref:DB_xml#configuring-a-size-limit-for-file-offloads)
+- [Configuring multiple OpenSearch or Elasticsearch clusters](xref:DB_xml#configuring-multiple-opensearch-or-elasticsearch-clusters)
+
 #### SNMPv3 responses now have a dynamic size [ID_37948]
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
@@ -48,7 +59,7 @@ When QActions are compiled in SLScripting, several resources need to be loaded. 
 Every 10 seconds, resources that have not been referenced in the last 30 seconds will be removed from the cache.
 
 > [!NOTE]
-> When you upload protocols or app packages that contain different versions of DLL files stored in the same location, we recommend to not compile against the shipped version immediately after the upload if the previous version was also uploaded and put in use. Compiling the QActions after a short interval will prevent any compilation errors from occurring.
+> Uploading protocol or app packages that contain different versions of DLL files stored in the same location may not compile against the shipped version if the previous version was also uploaded and put in use in the previous 60 seconds. Forcing a recompilation of the QActions a minute later (causing the packages to be uploaded again) will yield the expected result.
 >
 > Protocols and scripts should use NuGet packages as much as possible. The DLL files in those packages will then automatically be placed in folders by version. When protocols use custom non-NuGet DLL files, those should also be placed in folders by version.
 >
