@@ -93,7 +93,9 @@ In case the entire operation fails (e.g. when the storage layer fails while stor
 
 Since these calls might trigger related actions (such as [launching script actions](xref:ExecuteScriptOnDomInstanceActionSettings)), this could cause a high load on the system when a lot of instances are involved. A limit of 100 `DomInstances` is set, to make sure those bulk operations are implemented with scalability in mind. When a higher number of instances need processing, these actions will need to be performed in batches.
 
-The maximum number of items allowed for the `CreateOrUpdate` or `Delete` calls is available in the `MaxAmountBulkOperation` property on a `DomInstance` CRUD helper component. If more items get passed, these calls will fail with a `DomInstanceCrudMaxAmountExceededArgumentException`; and the message of the exception will state how many items have passed.
+You can also find this maximum number of instances for the `CreateOrUpdate` or `Delete` calls in the `MaxAmountBulkOperation` property on a `DomInstance` CRUD helper component.
+
+If more items get passed, `CreateOrUpdate` or `Delete` calls will fail with a `DomInstanceCrudMaxAmountExceededArgumentException`, and the message of the exception will state how many items were passed.
 
 ## Special methods
 
