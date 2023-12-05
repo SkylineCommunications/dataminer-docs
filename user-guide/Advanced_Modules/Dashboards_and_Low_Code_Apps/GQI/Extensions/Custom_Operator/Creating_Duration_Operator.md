@@ -23,10 +23,7 @@ Expected duration: 15 minutes.
 
 - A DataMiner Agent [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud)
 
-- Depending on your DataMiner version, you may need to enable the [*GenericInterface* soft-launch option](xref:Overview_of_Soft_Launch_Options#genericinterface).
-
-  > [!NOTE]
-  > To check whether this soft-launch option is required in your DataMiner version, see [Overview of soft-launch options](xref:Overview_of_Soft_Launch_Options).
+- If you are using a DataMiner version prior to DataMiner 10.3.0 [CU10]/10.4.1, make sure the [*GenericInterface* soft-launch option](xref:Overview_of_Soft_Launch_Options#genericinterface) is enabled.
 
   > [!TIP]
   > See [Activating soft-launch options](xref:Activating_Soft_Launch_Options).
