@@ -53,6 +53,12 @@ From now on, when the DataMiner System does not include an Elasticsearch/OpenSea
 
 ### Fixes
 
+#### Dashboards app & Low-Code Apps - Template editor: Clicking a template would incorrectly be considered identical to updating that template [ID_37960]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+Clicking a template in the template editor would incorrectly be considered identical to updating that template. As a result, the *Save* button would be enabled and, after clicking *Cancel*, a window mentioning unsaved changes would appear.
+
 #### Dashboards app & Low-Code Apps: Filter box would incorrectly be empty when re-opening a previously filtered dataset [ID_38006]
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
