@@ -9,7 +9,7 @@ uid: DashboardTimeline
 
 Available from DataMiner 10.4.1/10.5.0 onwards<!--RN 37812-->. Prior to this, the component is available in soft launch from DataMiner 10.1.10 onwards, if the soft-launch option *ReportsAndDashboardsScheduler* is enabled.
 
-This component provides you with an overview of scheduled events.
+This component allows you to visualize and manage bookings, events, and other time-bound data (e.g. appointments and project timelines).
 
 To configure the component:
 
@@ -108,7 +108,7 @@ To configure the component:
 
 ## Zooming and panning
 
-In read mode, you can manipulate the timeline component to navigate through the scheduled events.
+In read mode, you can manipulate the timeline component to navigate through the scheduled events, bookings, or time-bound data .
 
 - Adjusting the displayed time range:
 
@@ -121,7 +121,7 @@ In read mode, you can manipulate the timeline component to navigate through the 
 
 - To **move left or right** across the timeline component, click the timeline and drag your mouse.
 
-- If the number of events exceeds the size of the component, a scrollbar appears when you hover over the component, allowing you to **navigate up or down** through the events.
+- If the number of items exceeds the size of the component, a scrollbar appears when you hover over the component, allowing you to **navigate up or down** through the items.
 
 > [!NOTE]
 > When visualized on a mobile device<!--RN 35619-->:
