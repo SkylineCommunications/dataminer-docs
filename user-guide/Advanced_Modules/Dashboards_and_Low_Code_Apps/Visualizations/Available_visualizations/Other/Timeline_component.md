@@ -9,7 +9,7 @@ uid: DashboardTimeline
 
 Available from DataMiner 10.4.1/10.5.0 onwards<!--RN 37812-->. Prior to this, the component is available in soft launch from DataMiner 10.1.10 onwards, if the soft-launch option *ReportsAndDashboardsScheduler* is enabled.
 
-This component provides you an overview of scheduled tasks.
+This component provides you with an overview of scheduled events.
 
 To configure the component:
 
@@ -34,7 +34,7 @@ To configure the component:
 
    - *WebSocket settings*: Determines whether the websocket settings configured in the page/panel settings should be applied to this component. Enabled by default.
 
-   - *General > Timeline*: Allows you to configure the start and end of the timeline component. You can choose between the following options: *Start*, *End*, and *Discount*.
+   - *General > Timeline*: Allows you to configure the start and end times of the timeline component. You can choose between the following options: *Start*, *End*, and *Discount*.
 
    - *General > Override dynamic units*: Disables parameter units from changing dynamically based on their value and protocol definition. Disabled by default.
 
@@ -49,7 +49,7 @@ To configure the component:
      > [!NOTE]
      > The component has a minimum time range of 5 milliseconds and a maximum of 10 years<!--RN 35620-->.
 
-     To use the default time range configured for another timeline component in the dashboard or low-code app, click the ![Link to feed](~/user-guide/images/Link_to_Feed.png) icon next to *Link time range to feed* and select the component from the dropdown list. Modifying the default time frame for this component will automatically synchronize the time range for any linked components as well.
+     To use the default time range configured for another component in the dashboard or low-code app, click the ![Link to feed](~/user-guide/images/Link_to_Feed.png) icon next to *Link time range to feed* and select the component from the dropdown list. Modifying the default time frame for this component will automatically synchronize the time range for any linked components as well.
 
      > [!NOTE]
      > Optionally, you can use a [time range component](xref:DashboardTimeRangeFeed) to adjust and/or display the time range configured for the timeline component<!--RN 33287-->.
