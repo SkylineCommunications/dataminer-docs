@@ -279,7 +279,7 @@ items:
   - name: Remote PHY Monitoring
     topicUid: Remote_PHY_Monitoring
     items:
-      - name: Remote PHY Monitoring installation
+      - name: Installing Remote PHY Monitoring
         topicUid: Remote_PHY_Monitoring_Installation
       - name: Remote PHY Monitoring components
         topicUid: Remote_PHY_Monitoring_Components
