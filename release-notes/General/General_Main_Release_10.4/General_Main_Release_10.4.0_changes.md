@@ -542,12 +542,48 @@ When a parameter has anomalous flatline periods in its trend data history that a
 
 <!-- MR 10.4.0 - FR 10.4.2 -->
 
-All database offload functionality that had to be configured in the *DBConfiguration.xml* file now has to be configured in the *DB.xml* file instead.
+Up to now, the database offload functionality described below had to be configured in the *DBConfiguration.xml* file. From now on, it has to be configured in the *DB.xml* file instead.
 
-For more information, see:
+- **Configuring a size limit for file offloads**
 
-- [Configuring a size limit for file offloads](xref:DB_xml#configuring-a-size-limit-for-file-offloads)
-- [Configuring multiple OpenSearch or Elasticsearch clusters](xref:DB_xml#configuring-multiple-opensearch-or-elasticsearch-clusters)
+  When the main database is offline, file offloads are used to store write/delete operations. You can configure a limit for the file size of these offloads. When the limit is reached, new data will be dropped.
+
+  Example:
+
+  ```xml
+  <DataBases>
+    ...
+    <FileOffloadConfiguration>
+      <MaxSizeMB>20</MaxSizeMB>
+    </FileOffloadConfiguration>
+  </DataBases>
+  ```
+
+- **Configuring multiple OpenSearch or Elasticsearch clusters**
+
+  It is possible to have data offloaded to multiple OpenSearch or Elasticsearch clusters, i.e. one main cluster and several replicated clusters.
+
+  Example:
+
+  ```xml
+  <DataBases>
+    <!-- Reads will be handled by the ElasticCluster with the lowest priorityOrder -->
+    <DataBase active="true" search="true" ID="0" priorityOrder="0" type="ElasticSearch">
+      <DBServer>localhost</DBServer>
+      <UID />
+      <PWD>root</PWD>
+      <DB>dms</DB>
+      <FileOffloadIdentifier>cluster1</FileOffloadIdentifier>
+    </DataBase>
+    <DataBase active="true" search="true" ID="0" priorityOrder="1" type="ElasticSearch">
+      <DBServer>10.11.1.44,10.11.2.44,10.11.3.44</DBServer>
+      <UID />
+      <PWD>root</PWD>
+      <DB>dms</DB>
+      <FileOffloadIdentifier>cluster2</FileOffloadIdentifier>
+    </DataBase>
+  </DataBases>
+  ```
 
 #### SLAnalytics: Not all occurrences of multivariate patterns containing subpatterns hosted on different DMAs would be detected [ID_37451]
 
