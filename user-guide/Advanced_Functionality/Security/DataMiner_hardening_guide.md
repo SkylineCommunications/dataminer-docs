@@ -101,7 +101,7 @@ To make the changes take effect, you then need to run the *ConfigureIIS.bat* scr
 
 ### TLS versions
 
-In addition, we also recommend that you configure your operating system to **block deprecated SSL/TLS versions**. HTTPS uses SSL/TLS for encrypting communication, but the older versions of this protocol are no longer considered secure. At present, all major browsers support the latest TLS version (TLS 1.3), but TLS 1.2 is also still regarded as secure.
+In addition to enabling HTTPS, we also recommend that you configure your operating system to **block deprecated SSL/TLS versions**. HTTPS uses SSL/TLS for encrypting communication, but the older versions of this protocol are no longer considered secure. At present, all major browsers support the latest TLS version (TLS 1.3), but TLS 1.2 is also still regarded as secure.
 
 | Protocol | Published | Status |
 |--|--|--|
@@ -155,7 +155,7 @@ If you use the **DataMiner 10.1 installer or a more recent installer**, the port
 
 - TCP port **23** can be closed if the DataMiner Telnet feature is disabled. For more information, see [DataMiner.Telnet](xref:DataMiner_xml#dataminertelnet).
 
-- TCP port **80** can be closed if IIS is configured to require HTTPS connections. We highly recommended enabling HTTPS on your DataMiner System. Note that TCP port 443 needs to be open for HTTPS connections. For more information, see [Setting up https on a DMA](xref:Setting_up_HTTPS_on_a_DMA).
+- TCP port **80** can be closed if IIS is configured to require HTTPS connections and if IIS is not configured to redirect HTTP to HTTPS. We highly recommended enabling HTTPS on your DataMiner System. Note that TCP port 443 needs to be open for HTTPS connections. For more information, see [Setting up https on a DMA](xref:Setting_up_HTTPS_on_a_DMA).
 
 - TCP port **9004** can always be closed from DataMiner 10.0.11 CU0 and 10.0.0 CU6 onwards.
 
