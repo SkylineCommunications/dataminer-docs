@@ -45,7 +45,7 @@ In the following example a field gets updated on multiple `DomInstances`.
 
 ### Checking issues
 
-For some of the `DomInstances` the update might not succeed. In this example the number of `DomInstances` that fails is logged, together with the issues that occurred. Next the number of `DomInstances` that succeeds gets logged.
+For some of the `DomInstances` the create or update might not succeed. In this example the number of `DomInstances` that fails is logged, together with the issues that occurred. Next the number of `DomInstances` that succeeds gets logged.
 
   ```csharp
   // Update the DomInstances.
