@@ -55,11 +55,11 @@ Every 10 seconds, resources that have not been referenced in the last 30 seconds
 
 When SLDataGateway retrieved data from Elasticsearch/OpenSearch on behalf of a DataMiner app (e.g. Ticketing), in some cases, it would pass an incorrect result set to that app due to a casing issue.
 
-#### Service & Resource Management: Timeout script in end event of booking would not get executed when DMA was stopped within the time range of the booking [ID_37911]
+#### Service & Resource Management: Timeout script in end event of booking would not get executed when the booking was set to end while the DMA was being stopped [ID_37911]
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
 
-When the end event of a booking used a timeout script, in some cases, that script would not get executed when the DataMiner Agent was stopped within the time range of the booking.
+When the end event of a booking used a timeout script, in some cases, that script would not get executed when the booking was set to end while the DataMiner Agent was being stopped.
 
 #### DataMiner Taskbar Utility: Problem when making SLTaskbarUtility perform an action using the command prompt [ID_37952]
 
