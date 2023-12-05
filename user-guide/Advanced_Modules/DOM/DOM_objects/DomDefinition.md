@@ -35,7 +35,7 @@ It also has the *IsSoftDeleted* boolean. See [soft-deletable objects](xref:DOM_o
 
 The object contains settings that override the settings defined in the `ModuleSettings`. See [ModuleSettings](xref:DOM_ModuleSettings) for details about the specific settings.
 
-At present, the following setting can be overridden:
+At present, the following settings can be overridden:
 
 - DomInstanceNameDefinition
 - ExecuteScriptOnDomInstanceActionSettings (from 10.4.2/10.5.0 onwards)
