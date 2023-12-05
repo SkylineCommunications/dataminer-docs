@@ -54,7 +54,7 @@ For some of the `DomInstances` the update might not succeed. In this example the
   var updateResult = domHelper.DomInstances.CreateOrUpdate(domInstances);
 
   // Check if some of the updates are not successful.
-  if (updateResult.HasFailed())
+  if (updateResult.HasFailures())
   {
       // Log the number of DomInstances that was not updated.
       // Also log the `TraceData` for all failing `DomInstances`. The `TraceData` contains all errors and warnings.
