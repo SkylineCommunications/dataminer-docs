@@ -72,3 +72,17 @@ When you made the DataMiner Taskbar Utility perform some action using the comman
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
 
 SLDataGateway would incorrectly keep waiting for an acknowledgement from SLDataGatewayAPI, causing numerous `Waiting for SLDataGatewayAPI to acknowledge ...` entries to be added to the *SLDataGateway.txt* log file.
+
+#### Problem with SLProtocol when a parameter was updated while an SLA window was changing [ID_37990]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+When one of the following parameters was updated while an SLA window was changing, a run-time error could occur in SLProtocol:
+
+- Base timestamp
+- Monitor span
+- Window size
+- Window unit
+- Window type
+- Validity start
+- Validity end
