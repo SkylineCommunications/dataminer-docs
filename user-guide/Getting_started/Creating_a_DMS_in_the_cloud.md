@@ -46,6 +46,7 @@ With **DataMiner as a Service (DaaS)**, you can create a complete DataMiner Syst
 > - When you create a DaaS system, your dataminer.services account will automatically be linked to your DataMiner account, so you can easily access DataMiner web apps such as the Monitoring app via remote access.
 > - To remove a DaaS system, on the dataminer.services page, click the "..." button in the top-right corner of the box representing the system and select *Delete DMS*. Note that this is **irreversible**, and **all data of the system will be lost**.
 
+
 ## Accessing a newly created DMS for the first time
 
 1. Log on to [dataminer.services](https://dataminer.services).
@@ -70,3 +71,11 @@ With **DataMiner as a Service (DaaS)**, you can create a complete DataMiner Syst
    ![Logging into Cube](~/user-guide/images/daas_access_004.png)
 
 Now that you are logged in, you can configure your DataMiner System to your specific preferences.
+
+## Removing a DaaS system
+
+To remove a DaaS system, on the dataminer.services page, click the "..." button in the top-right corner of the box representing the system and select *Delete DMS*. 
+You will be prompted to fill in the name of the system. This is a safeguard to confirm that you are removing the correct system.
+
+> [!WARNING]  
+> Note that this is **irreversible**, and **all data of the system will be lost**.
