@@ -8,7 +8,7 @@ uid: Remote_PHY_Monitoring_Installation
    - Your DataMiner System uses DataMiner 10.3.0 or higher.
 
      > [!IMPORTANT]
-     > If you are using a version older than 1.0.4.0, upgrade the DataMiner web apps version to DataMiner 10.3.11 or higher.
+     > Upgrade the DataMiner web apps version to DataMiner 10.3.11 or higher.
 
      > [!TIP]
      > See also: [Upgrading the DataMiner web apps](xref:Upgrading_Downgrading_Webapps)
