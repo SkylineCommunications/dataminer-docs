@@ -50,12 +50,14 @@ To configure the component:
 
    - The default options available for all components. See [Customizing the component layout](xref:Customize_Component_Layout).
 
-   - *Filtering & Highlighting > Highlight*: When this option is enabled, the nodes that match the filter will be highlighted. Enabled by default.
+   - *Filtering & Highlighting*: Available from DataMiner 10.1.11/10.2.0 onwards<!--RN 33276-->. Allows you to configure a number of filtering and highlighting options. However, note that the filtering options require the [Query filter component](xref:DashboardQueryFilterFeed), available from DataMiner 10.3.9/10.4.0 onwards.
 
-   - *Filtering & Highlighting > Opacity*: When the *Highlight* option is enabled, this option will allow you to set the level of transparency of the nodes and edges that do not match the filter.
+     - *Highlight*: When this option is enabled, the nodes that match the filter will be highlighted. Enabled by default.
 
-     > [!NOTE]
-     > When you disable the *Highlight* option, the nodes that do not match the filter will no longer be displayed and the remaining nodes will be reorganized.
+     - *Opacity*: When the *Highlight* option is enabled, this option will allow you to set the level of transparency of the nodes and edges that do not match the filter.
+
+       > [!NOTE]
+       > When you disable the *Highlight* option, the nodes that do not match the filter will no longer be displayed and the remaining nodes will be reorganized.
 
    - *Advanced > Empty result message*: Available from 10.3.11/10.4.0 onwards<!-- RN 37173 -->. Allows you to specify a custom message that is displayed when a query returns no results.
 
