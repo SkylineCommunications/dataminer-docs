@@ -40,7 +40,7 @@ To configure the component:
 
    - *General > Use dynamic units*: When the *Override dynamic units* option is enabled, this option will allow you to determine whether parameter units will change dynamically based on their value and protocol definition.
 
-   - *General > Default time range*: Allows you to select an option with a particular time to zoom to this time on the timeline, e.g. Today, Last 7 days, Next hour, etc. The options are divided in the following categories: *Still busy*, *In the past*, *Near future*, *Recently*, *Long run*, *Starting from now*, and *Distant future*. Set to *Still busy, This week* by default.
+   - *General > Default time range*: Allows you to select an option with a particular time to zoom to this time on the timeline, e.g. Today, Last 7 days, Next hour, etc. The options are divided in the following categories: *Still busy*, *In the past*, *Near future*, *Recently*, *Long run*, *Starting from now*, and *Distant future*. Set to *Still busy, This week* by default<!--RN 33287-->.
 
      If you select *Custom*, you can set a custom start and end time.
 
@@ -50,6 +50,15 @@ To configure the component:
      > The component has a minimum time range of 5 milliseconds and a maximum of 10 years<!--RN 35620-->.
 
      To use the default time range configured for another timeline component in the dashboard or low-code app, click the ![Link to feed](~/user-guide/images/Link_to_Feed.png) icon next to *Link time range to feed* and select the component from the dropdown list. Modifying the default time frame for this component will automatically synchronize the time range for any linked components as well.
+
+     > [!NOTE]
+     > Optionally, you can use a [time range component](xref:DashboardTimeRangeFeed) to adjust and/or display the time range configured for the timeline component<!--RN 33287-->.
+     > To do so:
+     >
+     > 1. Select *Timeline # > Viewport > Timespans* in the *Feeds* section of the *Data* tab.
+     > 1. Drag it onto an empty section of the dashboard or low-code app page.
+     >
+     > When you manually adjust the time range by zooming in or out, or by moving across the timeline component, the time range displayed in the time range component will automatically be adjusted.
 
    - *Data retrieval > Update data*: Allows updates to be enabled or disabled. This setting will enable real-time updates for all queries executed by the selected component. Disabled by default.
 
