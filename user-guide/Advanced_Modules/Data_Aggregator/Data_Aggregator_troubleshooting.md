@@ -4,17 +4,24 @@ uid: Data_Aggregator_troubleshooting
 
 # Troubleshooting
 
-Check the DataAggregator Log Files for Errors
-
-Be sure to inspect the DataAggregator log files for any potential errors. By default, the log file for Data Aggregator is located in: `C:\ProgramData\Skyline Communications\DataMiner DataAggregator\Logs`.
+If you encounter any issues, first check the Data Aggregator log files for errors. By default, you can find these in the folder `C:\ProgramData\Skyline Communications\DataMiner DataAggregator\Logs`.
 
 ## The DataMiner DataAggregator process is not starting up
 
-When the DataMiner DataAggregator service fails to start, a common reason is invalid JSON syntax in the settings configuration. The settings can be found in `C:\Program Files\Skyline Communications\DataMiner DataAggregator`. In that case, an event will be logged in the `Event Viewer`.
+When the DataMiner DataAggregator service fails to start, this is often because of invalid JSON syntax in the settings configuration.
 
-1. Open the `Windows Event Viewer`.
+You can find these settings in the folder `C:\Program Files\Skyline Communications\DataMiner DataAggregator`.
 
-1. Search for errors registered by the `DataMiner DataAggregator.exe` application. 
+To check whether invalid JSON syntax is the cause of the issue, check the Windows Event Viewer:
 
-1. The event's content will provide detailed information about the encountered issue. Look for indications within the event that suggest the issue. For example, an `invalid escapable character within a JSON string`, in following screenshot.
-![Event Viewer](~/user-guide/images/DataAggregatorEventViewer.png)
+1. Open the *Event Viewer* application in Windows.
+
+1. In the sidebar on the left, navigate to *Windows Logs* > *Application*.
+
+1. Search for errors registered by the `DataMiner DataAggregator.exe` application.
+
+1. Check the information about the error events for details that explain the issue.
+
+   This can for example be an `invalid escapable character within a JSON string`:
+
+   ![Event Viewer](~/user-guide/images/DataAggregatorEventViewer.png)
