@@ -20,7 +20,7 @@ var helper = new DomHelper(engine.SendSLNetMessages, "a_module_id");
 You can then call the *Create*, *Read*, *Update*, or *Delete* methods on the CRUD helper components of the helper.
 
 > [!NOTE]
-> When multiple `DomInstances` need processing, from DataMiner 10.4.2/10.5.0 onwards [calls are available](xref:DomHelper_class#multiple-instances) to do so in one go.
+> When multiple `DomInstances` need processing, from DataMiner 10.4.2/10.5.0 onwards [calls are available](xref:DomHelper_class#multiple-instances) to do so for [up to **100** `DomInstances`](xref:DomHelper_class#maximum-amount) in one go.
 
 For example:
 
@@ -75,7 +75,7 @@ More information and best practices on using these calls are available [in these
 > [!IMPORTANT]
 > When designing the object model, consider if a high number of `DomInstances` might need to be processed quickly or need to be provisioned. If so, it is recommended to avoid related actions such as [launching script actions](xref:ExecuteScriptOnDomInstanceActionSettings) and [history tracking](xref:DOM_history).
 >
-> A limit is set to [restrict the number of `DomInstances`](xref:DomHelper_class#maximum-amount) in one call, but since those related actions might outlive these CRUD calls, repeating them in succession might impact the stability of the system.
+> The number of `DomInstances`, that can be passed to these methods, [is limited to **100**](xref:DomHelper_class#maximum-amount). Since those related actions might outlive these CRUD calls, keep in mind that repeating these operations in succession can still impact the stability of the system.
 
 #### Call result
 

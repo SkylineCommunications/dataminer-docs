@@ -47,6 +47,8 @@ In the following example a field gets updated on multiple `DomInstances`.
 
 For some of the `DomInstances` the create or update might not succeed. In this example the number of `DomInstances` that fails is logged, together with the issues that occurred. Next the number of `DomInstances` that succeeds gets logged.
 
+Same as in the previous example, some `DomInstances` need to be updated:
+
   ```csharp
   // Update the DomInstances.
 
@@ -65,9 +67,9 @@ For some of the `DomInstances` the create or update might not succeed. In this e
   Log($"Could perform the update successfully for {updateResult.SuccessfulItems.Count} items");
   ```
 
-Next to a summarized logging using `GetTraceData()`, `TraceDataPerItem` can be used to check for errors and warnings per `DomInstanceId`.
+The result that `CreateOrUpdate` returns, contains `SuccessfulItems` and `SuccessfulIds` to reuse or check the `DomInstances` that are successfully created or update. The ID of the items that did not succeed are available in `UnsuccessfulIds`.
 
-When multiple `DomInstances` are created or deleted, the issues can be logged the same way.
+Next to a summarized logging using `GetTraceData()`, `TraceDataPerItem` can be used to check for errors and warnings per `DomInstanceId`.
 
 ## Remove multiple DomInstances
 
@@ -81,9 +83,13 @@ In this example, some `DomInstances` get filtered out to be removed.
   var deleteResult = domHelper.DomInstances.Delete(domInstances);
   ```
 
+Similar to the [result of `CreateOrUpdate`](xref:DOM_BulkProcessing_Example#checking-issues), it is possible to get `UnsuccessfulIds` and `TraceDataPerItem` and call `HasFailures()` and `GetTraceData()` using the `deleteResult`, to log any failures that occurred. The `deleteResult` only contains the `SuccessfulIds` though.
+
 ## Unexpected issue
 
-In case the `Delete` call is unsuccessful because of for instance a database issue, by default a `CrudFailedException` will be thrown. Details of the issue will be available in the `TraceData` of that exception.
+In case a `CreateOrUpdate` or a `Delete` call are unsuccessful, because of for instance a database issue, by default a `CrudFailedException` will be thrown. Details of the issue will be available in the `TraceData` of that exception.
+
+In the following example some `DomInstances` need to be deleted:
 
   ```csharp
   try
@@ -101,7 +107,7 @@ In case the `Delete` call is unsuccessful because of for instance a database iss
   }
   ```
 
-You can however disable this and check if something went wrong yourself by requesting the `TraceData` object of the last call.
+It is also possible to disable this and check if something went wrong yourself by requesting the `TraceData` object of the last call.
 
   ```csharp
   // Disable the exceptions.
