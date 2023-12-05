@@ -54,7 +54,7 @@ The newly created duplicate will be assigned a unique name and will automaticall
 
    - To duplicate the most recently published version of the app, open the app.
 
-   - To duplicate the latest draft version of the app, open the app and go to edit mode.
+   - To duplicate the current draft version of an app, open the app and go to edit mode.
 
    - To duplicate a different version:
 
