@@ -19,11 +19,15 @@ To test sending a request, you can use a tool like Postman.
 
 To send a request to *UserDefinableApiEndpoint*, use a URL in the format `http(s)://{hostname}/api/custom/{route}`. (See [Route](xref:UD_APIs_Define_New_API#route).)
 
+> [!NOTE]
+> If your DataMiner System is connected to dataminer.services, you can also call your user-defined API through dataminer.services. To do so, replace the `{hostname}` part of the URL with the remote access URL of your system (see [Remote access](xref:Cloud_Remote_Access)).
+
 Examples:
 
 ```
 http://staging-agent-b3/api/custom/switchers/status
 https://production-agent-a1/api/custom/encoder/main/status
+https://ziine-skyline.on.dataminer.services/api/custom/encoder/main/status
 ```
 
 ### HTTP methods
