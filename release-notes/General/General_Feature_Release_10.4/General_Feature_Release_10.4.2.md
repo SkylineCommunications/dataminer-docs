@@ -47,6 +47,13 @@ When QActions are compiled in SLScripting, several resources need to be loaded. 
 
 Every 10 seconds, resources that have not been referenced in the last 30 seconds will be removed from the cache.
 
+> [!NOTE]
+> When you upload protocols or app packages that contain different versions of DLL files stored in the same location, we recommend to not compile against the shipped version immediately after the upload if the previous version was also uploaded and put in use. Compiling the QActions after a short interval will prevent any compilation errors from occurring.
+>
+> Protocols and scripts should use NuGet packages as much as possible. The DLL files in those packages will then automatically be placed in folders by version. When protocols use custom non-NuGet DLL files, those should also be placed in folders by version.
+>
+> With DLL files such as NewtonSoft, which protocols do not reference using NuGet, overwriting the DLL file with a newer version will cause protocols with QActions that have already been compiled to no longer work after a DataMiner restart as the correct strong-named assembly can no longer be found.
+
 ### Fixes
 
 #### SLDataGateway: Problem with casing when retrieving data from Elasticsearch/OpenSearch [ID_37835]
