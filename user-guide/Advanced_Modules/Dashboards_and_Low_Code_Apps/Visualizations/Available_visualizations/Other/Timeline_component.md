@@ -17,6 +17,19 @@ To configure the component:
 
 1. Optionally, hover the mouse pointer over the component, click the filter icon, and then add a filter feed from the *Feeds > URL > Query columns* section of the data pane. You can repeat this several times in order to filter on several query columns.
 
+1. To add item selection and group selection to the timeline component simultaneously<!--35638-->:
+
+   1. Hover the mouse pointer over the component and click the ![Groups](~/user-guide/images/NewRD_Groups.png) icon.
+
+      In the data pane on the right, any data feeds that cannot be added will become unavailable. Data feeds that are compatible will be marked with the following icon: ![available groups](~/user-guide/images/Group_Icon.png)
+
+   1. Drag the compatible data feed onto the component.
+
+      > [!NOTE]
+      > If you add a query column to the timeline component that contains data where the start and end time are empty, these empty groups are still displayed<!--RN 35600-->.
+
+   1. Add a feed from the *Feeds > Timeline # > Selected groups > Query rows* section of the data pane.
+
 1. Optionally, customize the following component options:
 
    - *WebSocket settings*: Determines whether the websocket settings configured in the page/panel settings should be applied to this component. Enabled by default.
@@ -86,7 +99,7 @@ To configure the component:
 
 ## Zooming and panning
 
-To manipulate the timeline component in read mode, follow these instructions:
+In read mode, you can manipulate the timeline component to navigate through the scheduled events.
 
 - Adjusting the displayed time range:
 
