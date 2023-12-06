@@ -30,7 +30,7 @@ For markers, the process of applying the dimensions works as follows:
 
 This process is similar for the configuration of lines, but instead of one latitude and longitude value, two pairs of coordinates need to be configured, one for the starting point and one for the end point of the line.
 
-## Layer settings
+## Configuring layer settings
 
 On the *Component > Layout* tab, you can configure the following settings under *Layer settings*:
 
@@ -53,7 +53,7 @@ On the *Component > Layout* tab, you can configure the following settings under 
 
   - *Weight*: Similar to the weight setting on layer level, this setting determines which markers or lines are pushed to the foreground when two markers or lines from the same layer overlap with each other.
 
-## Map settings
+## Configuring map settings
 
 On the *Component > Layout* tab, you can configure the following settings under *Map settings*:
 
@@ -73,6 +73,13 @@ On the *Component > Layout* tab, you can configure the following settings under 
 - *Default Map Type* > *Map type*: Allows you to select the type of the map. The available types depend on the map provider. At present, only Google Maps is supported, with the following map types: *roadmap*, *satellite*, *hybrid*, and *terrain*.
 
 - *Default Map Type* > *Show map type control*: Makes the map type setting visible in the component itself.
+
+In addition, in the *Settings* tab for this component, you can further customize the map behavior:
+
+- *Update data*: If you want the data in the map to be refreshed automatically (provided this is supported by the data source), set this setting to *On*.
+
+  > [!NOTE]
+  > This is currently only applicable for the markers on the map. Real-time updates are not yet supported for lines.
 
 ## Adding actions
 
