@@ -111,6 +111,12 @@ When one of the following parameters was updated while an SLA window was changin
 - Validity start
 - Validity end
 
+#### SLNet: Problem when a client application sent multiple messages to the same manager [ID_38025]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+When a client application (e.g. DataMiner Cube) sent multiple messages to the same manager, in some cases, a number of those messages would return an exception and would not get processed.
+
 #### Problem with protocol compliancies cache in SLNet [ID_38043]
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
