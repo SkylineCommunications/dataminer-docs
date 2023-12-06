@@ -88,3 +88,9 @@ From now on, when you re-open a dataset you had filtered earlier, the filter box
 When you clicked the search bar in the header of the *Dashboards* app, in some cases, the following error message would appear:
 
 `this._dmaDashboardsService.dashboards is not iterable`
+
+#### Dashboards app & Low-Code Apps: Color theme changes would not be applied immediately [ID_38082]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+When you changed the color theme of a component, the change would incorrectly only get applied after a reload. Now, the change will be applied instantly.
