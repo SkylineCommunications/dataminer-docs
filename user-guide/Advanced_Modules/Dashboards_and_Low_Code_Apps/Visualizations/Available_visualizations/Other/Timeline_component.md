@@ -40,7 +40,7 @@ To configure the component:
 
    - *General > Use dynamic units*: When the *Override dynamic units* option is enabled, this option will allow you to determine whether parameter units will change dynamically based on their value and protocol definition.
 
-   - *General > Default time range*: Allows you to select an option with a particular time to zoom to this time on the timeline, e.g. Today, Last 7 days, Next hour, etc. The options are divided in the following categories: *Still busy*, *In the past*, *Near future*, *Recently*, *Long run*, *Starting from now*, and *Distant future*. Set to *Still busy, This week* by default<!--RN 33287-->.
+   - *General > Default time range*: Allows you to select an option with a particular time to zoom to this time on the timeline, e.g. Today, Last 7 days, Next hour, etc. The options are divided into the following categories: *Still busy*, *In the past*, *Near future*, *Recently*, *Long run*, *Starting from now*, and *Distant future*. Set to *Still busy, This week* by default<!--RN 33287-->.
 
      If you select *Custom*, you can set a custom start and end time.
 
@@ -49,11 +49,12 @@ To configure the component:
      > [!NOTE]
      > The component has a minimum time range of 5 milliseconds and a maximum of 10 years<!--RN 35620-->.
 
-     To use the default time range configured for another component in the dashboard or low-code app, click the ![Link to feed](~/user-guide/images/Link_to_Feed.png) icon next to *Link time range to feed* and select the component from the dropdown list. Modifying the default time frame for this component will automatically synchronize the time range for any linked components as well.
+     To synchronize the time range of the timeline with another component in the dashboard or low-code app, click the ![Link to feed](~/user-guide/images/Link_to_Feed.png) icon next to *Link time range to feed* and select the component from the dropdown list, such as a time range component. Modifying the default time frame for this component will automatically synchronize the time range for any linked components as well.
+
+     By linking the timeline to another component, the timeline will dynamically adjust to the selected time range of the linked component. For example, if you switch the time range in the linked component to *This week*, the timeline will automatically update to display the corresponding time frame.
 
      > [!NOTE]
-     > Optionally, you can use a [time range component](xref:DashboardTimeRangeFeed) to adjust and/or display the time range configured for the timeline component<!--RN 33287-->.
-     > To do so:
+     > To add a [time range component](xref:DashboardTimeRangeFeed) to the dashboard or low-code app that allows you to adjust and/or display the time range configured for the timeline component<!--RN 33287-->:
      >
      > 1. Select *Timeline # > Viewport > Timespans* in the *Feeds* section of the *Data* tab.
      > 1. Drag it onto an empty section of the dashboard or low-code app page.
@@ -62,7 +63,7 @@ To configure the component:
 
    - *Data retrieval > Update data*: Allows updates to be enabled or disabled. This setting will enable real-time updates for all queries executed by the selected component. Disabled by default.
 
-   - *Highlight range > Use highlighting*: Determines whether an event in the timeline component is highlighted when it falls within the configured time range. When an event is highlighted, it receives a blue background color. Events that do not fall within the set time range are still visible with lowered opacity. Disabled by default<!--RN 33639-->.
+   - *Highlight range > Use highlighting*: Determines whether an event in the timeline component is highlighted when it falls within the configured time range. When an event is highlighted, it receives a background color determined by the [dashboard theme](xref:Configuring_the_dashboard_layout#customizing-the-dashboard-theme) or the [low-code app theme](xref:LowCodeApps_Layout#customizing-the-theme-for-a-low-code-app-page). Events that do not fall within the set time range are still visible with lowered opacity. Disabled by default<!--RN 33639-->.
 
      ![Highlight](~/user-guide/images/Timeline_Highlight.png)<br/>*Timeline component in DataMiner 10.4.1*
 
@@ -74,12 +75,14 @@ To configure the component:
 
    - *Filtering & Highlighting*: Available from DataMiner 10.1.11/10.2.0 onwards<!--RN 33276-->. Allows you to configure a number of filtering and highlighting options. However, note that the filtering options require the [Query filter component](xref:DashboardQueryFilterFeed), available from DataMiner 10.3.9/10.4.0 onwards.
 
-     - *Highlight*: When this option is enabled, the nodes that match the filter will be highlighted. Enabled by default.
+     - *Highlight*: When this option is enabled, the items that match the filter will be highlighted. Enabled by default.
 
-     - *Opacity*: When the *Highlight* option is enabled, this option will allow you to set the level of transparency of the nodes and edges that do not match the filter.
+     - *Opacity*: When the *Highlight* option is enabled, this option will allow you to set the level of transparency of the items that do not match the filter.
 
        > [!NOTE]
-       > When you disable the *Highlight* option, the nodes that do not match the filter will no longer be displayed and the remaining nodes will be reorganized.
+       > When you disable the *Highlight* option, the items that do not match the filter will no longer be displayed and the remaining items will be reorganized.
+
+     ![Filtering & Highlighting](~/user-guide/images/Filtering_Highlighting.png)<br/>*Timeline and query filter components in DataMiner 10.4.1*
 
    - *Advanced > Empty result message*: Available from 10.3.11/10.4.0 onwards<!-- RN 37173 -->. Allows you to specify a custom message that is displayed when a query returns no results.
 
@@ -92,7 +95,7 @@ To configure the component:
 
      - *Segment lines*: Determines whether segment lines are displayed in the timeline component. Enabled by default.
 
-     - *Lock timeline to now*: Determines whether users are allowed to navigate past the current timestamp in read mode. Disabled by default.
+     - *Lock timeline to now*: Determines whether a "now" indicator is set at a fixed position on the timeline. When this option is enabled, users can zoom in and out on the timeline, but are restricted from panning past the indicator. Disabled by default.
 
    - *Item templates*: Allows you to freely customize the appearance of the timeline component items using the Template Editor<!--RN 33311-->.
 
@@ -108,7 +111,7 @@ To configure the component:
 
 ## Zooming and panning
 
-In read mode, you can manipulate the timeline component to navigate through the scheduled events, bookings, or time-bound data .
+In read mode, you can manipulate the timeline component to navigate through the scheduled events, bookings, or time-bound data.
 
 - Adjusting the displayed time range:
 
