@@ -17,6 +17,7 @@ This section provides information on the following tools:
 - [Connection Check](xref:Connection_Check)
 - [Copy Element Data](xref:Copy_Element_Data)
 - [DataMiner Comparison tool](xref:DataMinerComparisonTool)
+- [DataMiner Huawei Manager dashboard](xref:Huawei_Manager_Dashboard)
 - [DataMiner Ping Monitoring tool](xref:PingMonitoring)
 - [DataMiner Size tool](xref:DataMinerSizeTool)
 - [DataMiner Taskbar Utility](xref:DataMiner_Taskbar_Utility)

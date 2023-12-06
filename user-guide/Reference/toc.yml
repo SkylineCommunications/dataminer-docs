@@ -114,6 +114,13 @@ items:
         topicUid: Copy_Element_Data
       - name: DataMiner Comparison tool
         topicUid: DataMinerComparisonTool
+      - name: DataMiner Huawei Manager dashboard
+        topicUid: Huawei_Manager_Dashboard
+        items:
+          - name: Installing the Huawei Manager dashboard
+            topicUid: Installing_Huawei_Manager_Dashboard
+          - name: Working with the Huawei Manager dashboard
+            topicUid: Working_with_Huawei_Maganer_dashboard
       - name: DataMiner Ping Monitoring tool
         topicUid: PingMonitoring
         items:
