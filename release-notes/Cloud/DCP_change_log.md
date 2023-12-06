@@ -6,6 +6,10 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 6 December 2023 - New Feature - Remote Access setting is now checked for user-defined API access [ID_38102]
+
+Users will now only be able to access a user-defined API using the remote access URL if the Remote Access setting is enabled in the Admin app.
+
 #### 4 December 2023 - New Feature - DataMiner as a Service for staging systems [ID_38087]
 
 It is now possible to create a [DataMiner as a Service (DaaS)](xref:Creating_a_DMS_in_the_cloud) system on dataminer.services for staging systems.
