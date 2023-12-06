@@ -51,6 +51,14 @@ From now on, when the DataMiner System does not include an Elasticsearch/OpenSea
 | < 10.4  | Yes | None |
 | < 10.4  | No  | Bookings<br>Object manager definitions<br>Object manager instances<br>Service definitions |
 
+#### DataMiner Object Models: Web APIs will no longer retrieve all items when a DOM list value is empty [ID_38024]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+When DOM instances are retrieved in the web APIs, an attempt is also made to generate a display value for each field value. If a field value is a DOM instance reference (DomInstanceFieldDescriptor), a call is made to retrieve the DOM instance in question. The same applies for the list variant, where a single call is made to retrieve all selected DOM instances.
+
+Up to now, when an empty list was saved in a DOM instance, the default filter used by the web APIs would incorrectly retrieve all items from the database.
+
 ### Fixes
 
 #### Dashboards app & Low-Code Apps - Template editor: Clicking a template would incorrectly be considered identical to updating that template [ID_37960]
