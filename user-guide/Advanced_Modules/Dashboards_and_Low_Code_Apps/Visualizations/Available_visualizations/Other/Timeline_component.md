@@ -17,7 +17,7 @@ To configure the component:
 
 1. Optionally, hover the mouse pointer over the component and click the ![filter](~/user-guide/images/DashboardsX_filter.png) icon. In the data pane on the right, any data feeds that cannot be added will become unavailable. Data feeds that are compatible will be marked with the following icon: ![available filters](~/user-guide/images/Available_Filters.png)
 
-1. To add item selection and group selection to the timeline component simultaneously<!--35638-->:
+1. Optionally, add groups to the timeline component<!--35638-->:
 
    1. Hover the mouse pointer over the component and click the ![Groups](~/user-guide/images/NewRD_Groups.png) icon.
 
@@ -25,8 +25,12 @@ To configure the component:
 
    1. Drag the compatible data feed onto the component.
 
+      All groups are now displayed in a gray column to the left of the timeline. The timeline items are displayed next to the group they are part of.
+
+      ![Timeline groups](~/user-guide/images/Groups_Timeline.png)
+
       > [!NOTE]
-      > If you add a query column to the timeline component that contains data where the start and end time are empty, these empty groups are still displayed<!--RN 35600-->.
+      > If a group is empty (i.e. there is no start and end time), it is still displayed in the timeline component<!--RN 35600-->.
 
    1. Add a feed from the *Feeds > Timeline # > Selected groups > Query rows* section of the data pane.
 
@@ -34,7 +38,7 @@ To configure the component:
 
    - *WebSocket settings*: Determines whether the websocket settings configured in the page/panel settings should be applied to this component. Enabled by default.
 
-   - *General > Timeline*: Allows you to configure the start and end times of the timeline component. When you add a new timeline component, this is automatically configured.
+   - *General > Timeline*: Allows you to configure the start and end times of the timeline component. When you add a new timeline component, this is automatically configured<!--RN 33657-->.
 
    - *General > Override dynamic units*: Disables parameter units from changing dynamically based on their value and protocol definition. Disabled by default.
 
