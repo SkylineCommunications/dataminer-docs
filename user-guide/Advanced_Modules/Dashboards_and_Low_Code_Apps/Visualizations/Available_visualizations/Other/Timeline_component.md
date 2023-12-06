@@ -15,7 +15,7 @@ To configure the component:
 
 1. Apply a data feed. See [Applying a data feed](xref:Apply_Data_Feed).
 
-1. Optionally, hover the mouse pointer over the component, click the filter icon, and then add a filter feed from the *Feeds > URL > Query columns* section of the data pane. You can repeat this several times in order to filter on several query columns.
+1. Optionally, hover the mouse pointer over the component and click the ![filter](~/user-guide/images/DashboardsX_filter.png) icon. In the data pane on the right, any data feeds that cannot be added will become unavailable. Data feeds that are compatible will be marked with the following icon: ![available filters](~/user-guide/images/Available_Filters.png)
 
 1. To add item selection and group selection to the timeline component simultaneously<!--35638-->:
 
@@ -34,7 +34,7 @@ To configure the component:
 
    - *WebSocket settings*: Determines whether the websocket settings configured in the page/panel settings should be applied to this component. Enabled by default.
 
-   - *General > Timeline*: Allows you to configure the start and end times of the timeline component. You can choose between the following options: *Start*, *End*, and *Discount*.
+   - *General > Timeline*: Allows you to configure the start and end times of the timeline component. When you add a new timeline component, this is automatically configured.
 
    - *General > Override dynamic units*: Disables parameter units from changing dynamically based on their value and protocol definition. Disabled by default.
 
@@ -54,7 +54,7 @@ To configure the component:
      By linking the timeline to another component, the timeline will dynamically adjust to the selected time range of the linked component. For example, if you switch the time range in the linked component to *This week*, the timeline will automatically update to display the corresponding time frame.
 
      > [!NOTE]
-     > To add a [time range component](xref:DashboardTimeRangeFeed) to the dashboard or low-code app that allows you to adjust and/or display the time range configured for the timeline component<!--RN 33287-->:
+     > To add a [time range component](xref:DashboardTimeRangeFeed) to the dashboard or low-code app that displays the time range configured for the timeline component<!--RN 33287-->:
      >
      > 1. Select *Timeline # > Viewport > Timespans* in the *Feeds* section of the *Data* tab.
      > 1. Drag it onto an empty section of the dashboard or low-code app page.
@@ -63,11 +63,11 @@ To configure the component:
 
    - *Data retrieval > Update data*: Allows updates to be enabled or disabled. This setting will enable real-time updates for all queries executed by the selected component. Disabled by default.
 
-   - *Highlight range > Use highlighting*: Determines whether an event in the timeline component is highlighted when it falls within the configured time range. When an event is highlighted, it receives a background color determined by the [dashboard theme](xref:Configuring_the_dashboard_layout#customizing-the-dashboard-theme) or the [low-code app theme](xref:LowCodeApps_Layout#customizing-the-theme-for-a-low-code-app-page). Events that do not fall within the set time range are still visible with lowered opacity. Disabled by default<!--RN 33639-->.
+   - *Highlight range > Use highlighting*: Determines whether a configured time range in the timeline component is highlighted. When this option is enabled, the section of the timeline that falls within the set time range receives a different background color determined by the [dashboard theme](xref:Configuring_the_dashboard_layout#customizing-the-dashboard-theme) or the [low-code app theme](xref:LowCodeApps_Layout#customizing-the-theme-for-a-low-code-app-page). Events that (partially) occur within this set time range are displayed with normal opacity, while those outside the time range are displayed with lowered opacity. Disabled by default<!--RN 33639-->.
 
      ![Highlight](~/user-guide/images/Timeline_Highlight.png)<br/>*Timeline component in DataMiner 10.4.1*
 
-     To use the time range configured for another component in the dashboard or low-code app, click the ![Link to feed](~/user-guide/images/Link_to_Feed.png) icon next to the *Time range* dropdown box, and select the component from the dropdown list. Modifying the highlight time frame for this component will automatically synchronize the time range for any linked components as well.
+     To link the time range of another component in the dashboard or low-code app to the timeline component, click the ![Link to feed](~/user-guide/images/Link_to_Feed.png) icon next to the *Time range* dropdown box, and select the desired component from the dropdown list. Adjusting the highlight time range of this chosen component will automatically synchronize the time range for the linked timeline component as well.
 
 1. Fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
 
