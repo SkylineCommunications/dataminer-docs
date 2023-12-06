@@ -1035,3 +1035,9 @@ Example of an incorrect log entry:
 <!-- MR 10.4.0 - FR 10.4.1 [CU0] -->
 
 When you tried to start a migration of an on-premises database to a DataMiner Storage as a Service platform, the connection towards the cloud could not get established.
+
+#### DataMiner Storage Module: Thread leak [ID_38095]
+
+<!-- MR 10.4.0 - FR 10.4.1 [CU0] -->
+
+In some cases, the DataMiner Storage Module could leak threads.
