@@ -306,7 +306,9 @@ server_name: MyServerName
 
 ### nas.config
 
-There should only be one primary NAS in each DMS, with the configuration detailed below. Every other NAS should be configured as a secondary, except in a cluster of exactly 2 Agents.
+Prior to 10.3.0 \[CU11]/10.4.0/10.4.2, DataMiner configures a singular primary NAS in each DMS, with the configuration detailed below. Every other NAS should be configured as a secondary, except in a cluster of exactly 2 Agents.
+
+Starting from 10.3.0 \[CU11]/10.4.0/10.4.2, DataMiner configures every node as a primary NAS. This is to avoid startup issues in case the primary NAS is not (yet) fully started up or its hosting port is blocked. DataMiner synchronizes all credential files anyway so having each node host its own standalone NAS is ok.
 
 In a cluster of exactly 2 Agents, both NATS configs will point to the same NAS in their resolver setting. The other NAS will be running, but neither NATS will connect to it.
 
@@ -331,6 +333,7 @@ store: {
 ```
 
 #### Secondary NAS
+Only up to DataMiner 10.3.0 \[CU11]/10.4.0/10.4.2.
 
 ```txt
 http: {
@@ -532,7 +535,7 @@ First, the algorithm will collect all the reachable primary IPs in the cluster (
 
   1. The filestore and raft logging are cleaned up (`..\NATS\nats-streaming-server\fileStore` and `..\NATS\nats-streaming-server\raftLog`). This is done to remove any references and cached data from the previous cluster configuration.
 
-  1. The **alphabetically** first IP or hostname is selected to become the primary NAS; all the other nodes are configured as a secondary NAS and will reference the primary NAS.
+  1. Prior to 10.3.0 \[CU11]/10.4.0/10.4.2, the **alphabetically** first IP or hostname is selected to become the primary NAS; all the other nodes are configured as a secondary NAS and will reference the primary NAS. After 10.4.2, all nodes are configured as a primary NAS. This avoids corner cases where the primary NAS is not (yet) started or its host has the necessary port blocked. DataMiner syncs all credential files in the cluster anyway, so each NAS will use the same set of credentials to verify against.
 
   1. The cluster ID is set using the DMS cluster name, transformed to Base64 string. This transformation is done to prevent special symbols in the cluster ID.
 
