@@ -1034,4 +1034,4 @@ Example of an incorrect log entry:
 
 <!-- MR 10.4.0 - FR 10.4.1 [CU0] -->
 
-When you tried to start a migration of an on-premises database to a DataMiner Storage as a Service platform, in some cases, the connection towards the cloud could not get established.
+When you tried to start a migration of an on-premises database to a DataMiner Storage as a Service platform, the connection towards the cloud could not get established.
