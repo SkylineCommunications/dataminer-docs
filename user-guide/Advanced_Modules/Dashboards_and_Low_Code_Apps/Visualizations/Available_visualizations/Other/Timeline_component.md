@@ -82,7 +82,7 @@ To configure the component:
        > [!NOTE]
        > When you disable the *Highlight* option, the items that do not match the filter will no longer be displayed and the remaining items will be reorganized.
 
-     ![Filtering & Highlighting](~/user-guide/images/Filtering_Highlighting.png)<br/>*Timeline and query filter components in DataMiner 10.4.1*
+     ![Filtering & Highlighting](~/user-guide/images/Filtering_Highlighting.png)<br/>*Query filter and timeline components in DataMiner 10.4.1*
 
    - *Advanced > Empty result message*: Available from 10.3.11/10.4.0 onwards<!-- RN 37173 -->. Allows you to specify a custom message that is displayed when a query returns no results.
 
@@ -123,6 +123,9 @@ In read mode, you can manipulate the timeline component to navigate through the 
   > The component has a minimum time range of 5 milliseconds and a maximum of 10 years, setting the zoom limit<!--RN 35620-->.
 
 - To **move left or right** across the timeline component, click the timeline and drag your mouse.
+
+  > [!NOTE]
+  > If you have enabled the *Lock timeline to now* setting, you will be unable to pan past the "now" indicator.
 
 - If the number of items exceeds the size of the component, a scrollbar appears when you hover over the component, allowing you to **navigate up or down** through the items.
 
