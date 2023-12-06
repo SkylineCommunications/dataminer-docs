@@ -44,6 +44,14 @@ Every 10 seconds, resources that have not been referenced in the last 30 seconds
 
 A number of security enhancements have been made.
 
+#### NATS: All nodes will now be considered primary nodes [ID_38089]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+From now on, there will no longer be any primary and secondary NAS configurations. All nodes will now be considered primary and will be using their local credential files.
+
+Also, when the NATS configuration is reset, the DMS IP addresses will now be collected via the online Failover agent.
+
 ### Fixes
 
 #### SLDataGateway: Problem with casing when retrieving data from Elasticsearch/OpenSearch [ID_37835]
