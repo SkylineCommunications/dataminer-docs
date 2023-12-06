@@ -38,7 +38,7 @@ The object contains settings that override the settings defined in the `ModuleSe
 At present, the following settings can be overridden:
 
 - DomInstanceNameDefinition
-- ExecuteScriptOnDomInstanceActionSettings (from 10.4.2/10.5.0 onwards)
+- ExecuteScriptOnDomInstanceActionSettings (from 10.4.2/10.5.0 onwards<!-- RN 37963 -->)
 
 ## Requirements
 
