@@ -284,6 +284,12 @@ When, in DataMiner Cube, you right-clicked inside a visual overview linked to a 
 
 From now on, when you right-click inside a visual overview linked to a service, the context menu will only allow you to edit the visual overview when you have permission to edit that specific service (on top of the permission to edit services in general and the permission to access and edit visual overviews).
 
+#### DataMiner Cube: Memory leak in About window [ID_38055]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
+
+DataMiner Cube would leak memory each time you opened the About window.
+
 #### DataMiner Cube: Memory leak in Alarm Console [ID_38057]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
