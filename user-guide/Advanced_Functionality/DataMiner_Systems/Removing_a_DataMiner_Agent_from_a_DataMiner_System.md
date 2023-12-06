@@ -36,6 +36,6 @@ Depending on whether the DataMiner Agent is part of a Failover pair or not, a di
 
 1. Stop both Agents of the Failover pair.
 
-1. Manually edit their [DMS.xml](xref:DMS_xml) and remove all `<DMA />` and `<Redirect />` tags that contain IP addresses from the previous cluster.
+1. Open the [DMS.xml](xref:DMS_xml) file on both DMAs.
 
-1. Restart the DMA you have removed.
+1. Remove all `<DMA />` and `<Redirect />` tags in *DMS.xml* that contain IP addresses from the previous cluster, and save the file.
