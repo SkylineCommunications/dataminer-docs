@@ -59,6 +59,12 @@ When DOM instances are retrieved in the web APIs, an attempt is also made to gen
 
 Up to now, when an empty list was saved in a DOM instance, the default filter used by the web APIs would incorrectly retrieve all items from the database.
 
+#### Dashboards app & Low-Code Apps: GQI components will now all behave in the same way when loading [ID_38067]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+All GQI components (*State*, *Pie chart*, *Bar chart*, *Line chart*, *Table*, *Grid*, *Scheduler*, *Maps* and *Node Edge*) will now behave in the same way when loading.
+
 ### Fixes
 
 #### Dashboards app & Low-Code Apps - Template editor: Clicking a template would incorrectly be considered identical to updating that template [ID_37960]
