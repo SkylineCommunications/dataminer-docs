@@ -1020,6 +1020,14 @@ When data was being migrated from a Cassandra Cluster database to a STaaS databa
 
 When you exported elements via a DELT package on a DMA running DataMiner version 10.3.8 or newer, it would no longer be possible to import that DELT package on a DMA running DataMiner version 10.3.7 or older.
 
+#### SLAnalytics: Problem with table parameter indices containing special characters [ID_37860]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+Up to now, SLAnalytics would not correctly handle special characters in the table parameter indices. These characters will now be handled correctly. If parameters with indices containing special characters are trended, they will now also receive a trend prediction in the trend graph, and their behavioral change points will now be displayed.
+
+Also, special characters in parameter indices will no longer cause errors to be logged.
+
 #### Incorrect 'Clearing cache ...' entries in SLEventCache.txt [ID_37874]
 
 <!-- MR 10.4.0 - FR 10.4.1 -->

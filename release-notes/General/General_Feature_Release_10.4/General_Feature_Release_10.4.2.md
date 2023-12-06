@@ -123,6 +123,14 @@ Also, when the NATS configuration is reset, the DMS IP addresses will now be col
 
 When SLDataGateway retrieved data from Elasticsearch/OpenSearch on behalf of a DataMiner app (e.g. Ticketing), in some cases, it would pass an incorrect result set to that app due to a casing issue.
 
+#### SLAnalytics: Problem with table parameter indices containing special characters [ID_37860]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+Up to now, SLAnalytics would not correctly handle special characters in the table parameter indices. These characters will now be handled correctly. If parameters with indices containing special characters are trended, they will now also receive a trend prediction in the trend graph, and their behavioral change points will now be displayed.
+
+Also, special characters in parameter indices will no longer cause errors to be logged.
+
 #### Service & Resource Management: Timeout script in end event of booking would not get executed when the booking was set to end while the DMA was being stopped [ID_37911]
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
