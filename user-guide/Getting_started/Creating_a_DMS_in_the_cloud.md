@@ -44,8 +44,6 @@ With **DataMiner as a Service (DaaS)**, you can create a complete DataMiner Syst
 >
 > - It is possible to create a DaaS system as a staging system. Our Pay-per-Use model is used for this. For detailed information, see [DataMiner Express](xref:Pricing_Commercial_Models#dataminer-express).
 > - When you create a DaaS system, your dataminer.services account will automatically be linked to your DataMiner account, so you can easily access DataMiner web apps such as the Monitoring app via remote access.
-> - To remove a DaaS system, on the dataminer.services page, click the "..." button in the top-right corner of the box representing the system and select *Delete DMS*. Note that this is **irreversible**, and **all data of the system will be lost**.
-
 
 ## Accessing a newly created DMS for the first time
 
@@ -74,8 +72,11 @@ Now that you are logged in, you can configure your DataMiner System to your spec
 
 ## Removing a DaaS system
 
-To remove a DaaS system, on the dataminer.services page, click the "..." button in the top-right corner of the box representing the system and select *Delete DMS*. 
-You will be prompted to fill in the name of the system. This is a safeguard to confirm that you are removing the correct system.
+> [!WARNING]
+> When you remove a DaaS system, this is **irreversible**, and **all data of the system will be lost**.
 
-> [!WARNING]  
-> Note that this is **irreversible**, and **all data of the system will be lost**.
+1. On the dataminer.services page, click the "..." button in the top-right corner of the box representing the system and select *Delete DMS*.
+
+1. Fill in the name of the system to confirm that this is the system you want to remove.
+
+1. Click *Delete*.
