@@ -814,6 +814,14 @@ Overall performance has increased when updating/applying profile instances by pr
 public virtual void UpdateAllCapacitiesAndCapabilitiesByReference(Func<FilterElement<ProfileInstance>, List<ProfileInstance>> retriever, Dictionary<Guid, ProfileInstance> profileInstanceCache, IEnumerable<QuarantinedResourceUsageDefinition> correspondingQuarantines = null);
 ```
 
+#### GQI - 'Get parameter table by ID' data source: Enhanced sorting [ID_38039]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+When multiple, separate sort operators were applied to the GQI data source *Get parameter table by ID*, up to now, they would each be optimized as if they were part of the same sort operation. From now on, only the last sort operator will be optimized.
+
+For example, from now on, when you first sort by A and then, later on in the GQI query, you sort by B, the query will now only be sorted by B.
+
 ### Fixes
 
 #### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID_34981]
