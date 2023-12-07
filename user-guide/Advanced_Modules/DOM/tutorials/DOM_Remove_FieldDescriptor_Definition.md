@@ -29,7 +29,7 @@ Estimated duration: 10 minutes.
 
 - [Step 4: Delete the field descriptor from the section definition](#step-4-delete-the-field-descriptor-from-the-section-definition)
 
-- [Optional: Inspect the SectionDefinition with SLNetClientTest tool](#opional-inspect-the-sectiondefinition-with-slnetclienttest-tool)
+- [Step 5 - Optional: Inspect the SectionDefinition with SLNetClientTest tool](#step-5---optional-inspect-the-sectiondefinition-with-slnetclienttest-tool)
 
 ## Step 1: DOM setup
 
@@ -234,18 +234,23 @@ namespace Tutorial
 }
 ```
 
-## Opional: Inspect the SectionDefinition with SLNetClientTest tool
+## Step 5 - Optional: Inspect the SectionDefinition with SLNetClientTest tool
 
-If you want to be entirely sure the phone number is completely removed, you can inspect the `SectionDefinition` with the [SLNetClientTest tool](xref:Opening_the_SLNetClientTest_tool).
+If you want to be entirely sure the phone number is completely removed, you can inspect the `SectionDefinition` with the SLNetClientTest tool.
 
-Follow these steps to check the `SectionDefinition`:
+> [!WARNING]
+> Always be extremely careful when using SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
-1. Open your SLNetClientTest tool. 
+1. [Open the SLNetClientTest tool](xref:Opening_the_SLNetClientTest_tool).
 
 1. Select *Advanced* > *Apps* > *DataMiner Object Model*.
 
-1. Here, you can find the different *ModuleSettings*. Select the one you want to inspect (in this case the 'people_app') and click *Open*.
+   The different module settings will be shown.
 
-1. On the top, select the *SectionDefinitions* tab and open the definition you want to inspect. There we can see the phone number is completely removed from the *SectionDefinition*.
+1. Select the one you want to inspect (in this case "people_app") and click *Open*.
 
-![Optional](~/user-guide/images/DOM_Remove_FieldDescriptor_Definition_Optional.png)
+1. At the top, select the *SectionDefinitions* tab and open the definition you want to inspect.
+
+   In this case, you will see that the phone number has been completely removed from the *SectionDefinition*:
+
+   ![SLNetClientTest tool](~/user-guide/images/DOM_Remove_FieldDescriptor_Definition_Optional.png)
