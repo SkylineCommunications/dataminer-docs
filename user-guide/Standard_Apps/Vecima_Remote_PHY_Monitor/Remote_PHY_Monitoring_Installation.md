@@ -5,7 +5,7 @@ uid: Remote_PHY_Monitoring_Installation
 
 1. Make sure the following **prerequisites** are met:
 
-   - Your DataMiner System uses DataMiner 10.3.0 or higher.
+   - Your DataMiner System uses DataMiner 10.3.0 or higher and is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
    - Make sure the DataMiner web apps are upgraded to DataMiner 10.3.11 or higher.
 
