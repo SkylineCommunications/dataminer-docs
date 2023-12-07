@@ -120,7 +120,7 @@ items:
           - name: Installing the Huawei Manager dashboard
             topicUid: Installing_Huawei_Manager_Dashboard
           - name: Working with the Huawei Manager dashboard
-            topicUid: Working_with_Huawei_Maganer_dashboard
+            topicUid: Working_with_Huawei_Manager_dashboard
       - name: DataMiner Ping Monitoring tool
         topicUid: PingMonitoring
         items:
