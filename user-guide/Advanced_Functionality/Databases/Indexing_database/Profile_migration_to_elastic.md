@@ -21,7 +21,7 @@ When you [install an indexing database](xref:Installing_Elasticsearch_via_DataMi
 To migrate the profiles, you will need to use the SLNetClientTest tool. Note that while the tool mentions only "Elastic", it can also be used for a migration to OpenSearch.
 
 ![SLNetClientTest tool](~/user-guide/images/ClientTestToolMigrationUI_ProfileMigration.jpg)<br>
-*Migration window in SLNetClientTest tool (version 10.4.2)*
+*Migration window in SLNetClientTest tool (version 10.3.2)*
 
 > [!WARNING]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
