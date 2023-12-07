@@ -75,6 +75,12 @@ Enables the [BookingData](xref:Linking_a_shape_to_a_booking#making-the-booking-s
 - **Minimum version**: 10.2.7
 - **Release version**: 10.3.8/10.4.0 ([RN 36489](xref:Cube_Feature_Release_10.3.8#visual-overview-new-bookingdata-component-id_33215-id_36489))
 
+### BrokerGateway
+
+Disables specific NATS logic, in order to use the BrokerGateway DxM for the NATS configuration instead.
+
+- **Minimum version**: 10.4.1<!-- RN 37649 -->
+
 ### CassandraCluster
 
 Allows you to set up the [Cassandra cluster](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster) configuration in DataMiner Cube.
