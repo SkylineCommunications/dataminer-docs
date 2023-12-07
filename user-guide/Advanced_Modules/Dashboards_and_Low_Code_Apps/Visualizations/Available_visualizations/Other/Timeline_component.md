@@ -23,6 +23,8 @@ To configure the component:
 
       In the data pane on the right, any data feeds that cannot be added will become unavailable. Data feeds that are compatible will be marked with the following icon: ![available groups](~/user-guide/images/Group_Icon.png)
 
+      ![groups](~/user-guide/images/Example_Groups.png)<br/>*Data tab in DataMiner 10.4.1*
+
    1. Drag the compatible data feed onto the component.
 
       All groups are now displayed in a gray column to the left of the timeline. The timeline items are displayed next to the group they are part of.
@@ -32,7 +34,23 @@ To configure the component:
       > [!NOTE]
       > If a group is empty (i.e. there is no start and end time), it is still displayed in the timeline component<!--RN 35600-->.
 
-   1. Add a feed from the *Feeds > Timeline # > Selected groups > Query rows* section of the data pane.
+   1. To add a table component **displaying the selected group**:
+
+      1. Go to *Feeds > Timeline # > Selected groups > Query rows* in the *Data* tab, and drag it onto an empty section of the dashboard or low-code app page.
+
+      1. Hover the mouse pointer over the component and click the ![visualization](~/user-guide/images/DashboardsX_visualizations00095.png) icon.
+
+      1. Select the table visualization.
+
+   1. To add a table component **displaying the selected item**:
+
+      1. Go to *Feeds > Timeline # > Selected items > Query rows* in the *Data* tab, and drag it onto an empty section of the dashboard or low-code app page.
+
+      1. Hover the mouse pointer over the component and click the ![visualization](~/user-guide/images/DashboardsX_visualizations00095.png) icon.
+
+      1. Select the table visualization.
+
+   ![Selected group and item](~/user-guide/images/Selected_Items_Groups.png)<br/>*Timeline and table components in DataMiner 10.4.1*
 
 1. Optionally, customize the following component options:
 
