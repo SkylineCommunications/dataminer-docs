@@ -4,12 +4,17 @@ uid: Deleting_custom_apps
 
 # Deleting a low-code application
 
-> [!NOTE]
-> To view, add, edit, delete, or publish low-code applications, you need to have the necessary user permissions under [Modules > User-definable apps](xref:DataMiner_user_permissions#modules--user-definable-apps) as well as the [DataMiner web apps](xref:DataMiner_user_permissions#general--dataminer-web-apps--dataminer-cube-mobile-access) user permission.
+You can delete a low-code app from within the app or from the DataMiner landing page.
 
-To delete an existing low-code application:
+From the DataMiner **landing page** (supported from DataMiner 10.3.0 [CU10]/10.4.0 onwards<!-- RN 37830 -->):
 
-1. Open the application from the DataMiner landing page (see [Accessing the Low-Code Apps module](xref:Accessing_custom_apps)).
+1. Hover the mouse pointer over the app icon until you see the ellipsis ("...") button.
+
+1. Click the ellipsis button and select *Delete*.
+
+1. Click *Confirm*.
+
+From **within an application**:
 
 1. Click the user icon in the top-right corner and select *Edit*.
 
@@ -17,5 +22,7 @@ To delete an existing low-code application:
 
 1. In the pop-up window, select to delete the entire application, and click *Delete*.
 
-   > [!NOTE]
-   > You can also select to delete the current draft version of the app instead. This draft version gets created as soon as you click *Edit*, so selecting this option will never remove a previously saved version.
+   You can also select to delete the current draft version of the app instead. This draft version gets created as soon as you click *Edit*, so selecting this option will never remove a previously saved version.
+
+> [!NOTE]
+> To view, add, edit, delete, or publish low-code applications, you need to have the necessary user permissions under [Modules > User-definable apps](xref:DataMiner_user_permissions#modules--user-definable-apps) as well as the [DataMiner web apps](xref:DataMiner_user_permissions#general--dataminer-web-apps--dataminer-cube-mobile-access) user permission.
