@@ -89,6 +89,14 @@ When you clicked the search bar in the header of the *Dashboards* app, in some c
 
 `this._dmaDashboardsService.dashboards is not iterable`
 
+#### Dashboards app & Low-Code Apps: Template editor could incorrectly be opened before the default template was created [ID_38031]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+While configuring a *Grid*, *Timeline* or *Maps* component, it would incorrectly already be possible to open the template editor before the default template was created.
+
+From now on, as long as the default template has not been created yet, a loading indicator will be displayed and it will not be possible to open the template editor.
+
 #### Dashboards app & Low-Code Apps: Color theme changes would not be applied immediately [ID_38082]
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
