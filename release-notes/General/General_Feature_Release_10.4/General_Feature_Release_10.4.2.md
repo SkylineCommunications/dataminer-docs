@@ -182,3 +182,9 @@ When a client application (e.g. DataMiner Cube) sent multiple messages to the sa
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
 
 The compliancies cache in SLNet, which keeps track of the minimum required version of a protocol or of whether a protocol supports Cassandra, was only refreshed when you uploaded a *protocol.xml* file that did not contain a `<Compliancies>` tag or when the cache was accessed for the first time.
+
+#### GQI: Problem when retrieving a large amount of alarms [ID_38065]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+When a GQI query had to retrieve a large amount of paged alarms, after a while, a timeout exception would be thrown even though none of the paged requests had timed out.
