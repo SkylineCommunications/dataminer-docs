@@ -17,7 +17,7 @@ To configure the component:
 
 1. Optionally, hover the mouse pointer over the component and click the ![filter](~/user-guide/images/DashboardsX_filter.png) icon. In the data pane on the right, any data feeds that cannot be added will become unavailable. Data feeds that are compatible will be marked with the following icon: ![available filters](~/user-guide/images/Available_Filters.png)
 
-1. Optionally, add groups to the timeline component<!--35638-->:
+1. Optionally, add groups to the timeline component, so that you can group items on the timeline based on one of the columns in your data feed<!--35638-->:
 
    1. Hover the mouse pointer over the component and click the ![Groups](~/user-guide/images/NewRD_Groups.png) icon.
 
@@ -25,7 +25,7 @@ To configure the component:
 
       ![groups](~/user-guide/images/Example_Groups.png)<br/>*Data tab in DataMiner 10.4.1*
 
-   1. Drag the compatible data feed onto the component.
+   1. Drag a compatible data feed onto the component.
 
       All groups are now displayed in a gray column to the left of the timeline<!--RN 33694-->. The timeline items are displayed next to the group they are part of.
 
@@ -34,7 +34,7 @@ To configure the component:
       > [!NOTE]
       > If a group is empty (i.e. there is no start and end time), it is still displayed in the timeline component<!--RN 35600-->.
 
-   1. To add a table component **displaying the selected group**:
+   1. To make sure users can see which group is selected, you can add a table component displaying the selected group:
 
       1. Go to *Feeds > Timeline # > Selected groups > Query rows* in the *Data* tab, and drag it onto an empty section of the dashboard or low-code app page.
 
@@ -42,7 +42,7 @@ To configure the component:
 
       1. Select the table visualization.
 
-   1. To add a table component **displaying the selected item**:
+   1. To make sure users can see which item is selected, you can add a table component displaying the selected item:
 
       1. Go to *Feeds > Timeline # > Selected items > Query rows* in the *Data* tab, and drag it onto an empty section of the dashboard or low-code app page.
 
@@ -50,10 +50,9 @@ To configure the component:
 
       1. Select the table visualization.
 
-   ![Selected group and item](~/user-guide/images/Selected_Items_Groups.png)<br/>*Timeline and table components in DataMiner 10.4.1*
+      ![Selected group and item](~/user-guide/images/Selected_Items_Groups.png)<br/>*Timeline and table components in DataMiner 10.4.1*
 
-   > [!NOTE]
-   > To display the name of the column the data was grouped by, make sure the *Advanced > Style > Grouping by* setting is enabled in the *Layout* tab.
+   1. If you want to display the name of the column the data was grouped by, make sure the *Advanced > Style > Grouping by* setting is enabled in the *Layout* tab.
 
 1. Optionally, customize the following component options:
 
@@ -76,7 +75,7 @@ To configure the component:
 
      To synchronize the time range of the timeline with that of another component in the dashboard or low-code app, click the ![Link to feed](~/user-guide/images/Link_to_Feed.png) icon next to *Link time range to feed* and select the component from the dropdown list, such as a time range component. Modifying the default time frame for this component will automatically synchronize the time range for any linked timeline component as well.
 
-     By linking the timeline to another component, the timeline will dynamically adjust to the selected time range of the linked component. For example, if you switch the time range in the linked component to *This week*, the timeline will automatically update to display the corresponding time frame.
+     If the timeline is linked to another component, the timeline will dynamically adjust to the selected time range of the linked component. For example, if you switch the time range in the linked component to *This week*, the timeline will automatically update to display the corresponding time frame.
 
      > [!NOTE]
      > To add a [time range component](xref:DashboardTimeRangeFeed) to the dashboard or low-code app that displays the time range configured for the timeline component<!--RN 33287-->:
