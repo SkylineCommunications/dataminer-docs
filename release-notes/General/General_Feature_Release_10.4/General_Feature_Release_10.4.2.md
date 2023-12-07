@@ -171,6 +171,13 @@ When one of the following parameters was updated while an SLA window was changin
 - Validity start
 - Validity end
 
+#### SLNet prefetcher would request the web API URL too often [ID_38012]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+<!-- Not added to MR 10.4.0 -->
+
+Since the legacy Reports, Dashboards and Annotations modules were disabled by default, the prefetcher in SLNet only requests the URL of the web APIs. However, up to now, it would request that URL once every second. From now on, it will only request that URL once every 10 minutes.
+
 #### SLNet: Problem when a client application sent multiple messages to the same manager [ID_38025]
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
