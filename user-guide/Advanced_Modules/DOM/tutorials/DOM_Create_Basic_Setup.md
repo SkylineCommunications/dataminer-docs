@@ -31,6 +31,10 @@ Estimated duration: 5 minutes.
 
 ## Overview
 
+- [Step 1: Configure the DOM module](#step-1-configure-the-dom-module)
+
+- [Step 2: Create a low-code app to visualize your setup](#step-2-create-a-low-code-app-to-visualize-your-setup)
+
 ## Step 1: Configure the DOM module
 
 Use the code below to accomplish the following:
