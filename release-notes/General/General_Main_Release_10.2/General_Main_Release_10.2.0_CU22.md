@@ -302,7 +302,13 @@ DataMiner Cube would leak memory each time you opened and closed an alarm card a
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
 
-DataMiner Cube would leak memory each time you opened the About window.
+DataMiner Cube would leak memory each time you opened the *About* window.
+
+#### DataMiner Cube - System Center: Memory leak in Update Center window [ID_38056]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
+
+DataMiner Cube would leak memory each time you opened the *Update Center* window.
 
 #### DataMiner Cube: Memory leak in Alarm Console [ID_38057]
 
