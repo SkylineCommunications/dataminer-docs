@@ -101,6 +101,12 @@ Every 10 seconds, resources that have not been referenced in the last 30 seconds
 >
 > With DLL files such as NewtonSoft, which protocols do not reference using NuGet, overwriting the DLL file with a newer version will cause protocols with QActions that have already been compiled to no longer work after a DataMiner restart as the correct strong-named assembly can no longer be found.
 
+#### Elasticsearch/OpenSearch: TTL-based rollover for the CustomData and LoggerTables storage types is now disabled [ID_38000]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+TTL-based rollover for the CustomData and LoggerTables storage types is now disabled.
+
 #### GQI - 'Get parameter table by ID' data source: Enhanced sorting [ID_38039]
 
 <!-- MR 10.4.0 - FR 10.4.2 -->
