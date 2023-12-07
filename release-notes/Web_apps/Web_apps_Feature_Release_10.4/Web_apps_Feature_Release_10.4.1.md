@@ -94,10 +94,12 @@ To change the appearance of a column using presets, in the *Column appearance* s
 
 There are now two ways to duplicate a low-code app:
 
-- **On the Root page of a DataMiner Agent:**
+- **On the landing page of a DataMiner Agent:**
 
   1. Hover over the application that you want to duplicate. An ellipsis ("...") button will appear.
+
   1. Click the ellipsis ("...") button to open the context menu.
+
   1. Select *Duplicate*.
 
   The most recently published app version will now be duplicated. If the app has not yet been published, its draft version will be duplicated instead.
@@ -106,24 +108,21 @@ There are now two ways to duplicate a low-code app:
 
 - **On the Application page:**
 
-  1. In the top-right corner, right-click the user icon.
-  1. In the user menu, select *Duplicate*.
+  1. Open the app version you want to duplicate:
 
-  If the edit page is open, the current draft version will be copied and the newly created app will automatically be opened in a new browser tab.
+     - To duplicate the most recently published version of the app, open the app.
 
-  To duplicate the most recently published version of the app:
+     - To duplicate the current draft version of an app, open the app and go to edit mode.
 
-  1. Open the published version.
-  1. Right-click the user icon.
-  1. In the user menu, select *Duplicate*.
-  
-  To duplicate a different version of the app:
+     - To duplicate a different version:
 
-  1. Right-click the user icon.
-  1. In the user menu, select *Versions*.
-  1. Select the desired version.
-  1. Right-click the user icon.
-  1. In the user menu, select *Duplicate*.
+       1. In the top-right corner, click the user icon and select *Versions*.
+
+       1. Select the desired version.
+
+  1. In the top-right corner, click the user icon, and select *Duplicate* in the user menu.
+
+     The current draft version will be copied and the newly created app will automatically be opened in a new browser tab.
 
   > [!NOTE]
   > You are only allowed to duplicate an older version of an app if you have permission to edit the app in question.

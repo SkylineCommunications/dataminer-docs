@@ -538,6 +538,53 @@ Other changes to a section definition that fail when the section is being used b
 
 When a parameter has anomalous flatline periods in its trend data history that are breaking the normal trend data patterns, from now on, those flatline periods will no longer be included into the training data of the prediction model. As a result, a more accurate prediction can be expected on this kind of behavior.
 
+#### Configuration of database offload functionality moved from DBConfiguration.xml to DB.xml [ID_37446]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+Up to now, the database offload functionality described below had to be configured in the *DBConfiguration.xml* file. From now on, it has to be configured in the *DB.xml* file instead.
+
+- **Configuring a size limit for file offloads**
+
+  When the main database is offline, file offloads are used to store write/delete operations. You can configure a limit for the file size of these offloads. When the limit is reached, new data will be dropped.
+
+  Example:
+
+  ```xml
+  <DataBases>
+    ...
+    <FileOffloadConfiguration>
+      <MaxSizeMB>20</MaxSizeMB>
+    </FileOffloadConfiguration>
+  </DataBases>
+  ```
+
+- **Configuring multiple OpenSearch or Elasticsearch clusters**
+
+  It is possible to have data offloaded to multiple OpenSearch or Elasticsearch clusters, i.e. one main cluster and several replicated clusters.
+
+  Example:
+
+  ```xml
+  <DataBases>
+    <!-- Reads will be handled by the ElasticCluster with the lowest priorityOrder -->
+    <DataBase active="true" search="true" ID="0" priorityOrder="0" type="ElasticSearch">
+      <DBServer>localhost</DBServer>
+      <UID />
+      <PWD>root</PWD>
+      <DB>dms</DB>
+      <FileOffloadIdentifier>cluster1</FileOffloadIdentifier>
+    </DataBase>
+    <DataBase active="true" search="true" ID="0" priorityOrder="1" type="ElasticSearch">
+      <DBServer>10.11.1.44,10.11.2.44,10.11.3.44</DBServer>
+      <UID />
+      <PWD>root</PWD>
+      <DB>dms</DB>
+      <FileOffloadIdentifier>cluster2</FileOffloadIdentifier>
+    </DataBase>
+  </DataBases>
+  ```
+
 #### SLAnalytics: Not all occurrences of multivariate patterns containing subpatterns hosted on different DMAs would be detected [ID_37451]
 
 <!-- MR 10.4.0 - FR 10.3.12 -->
@@ -767,6 +814,14 @@ Overall performance has increased when updating/applying profile instances by pr
 public virtual void UpdateAllCapacitiesAndCapabilitiesByReference(Func<FilterElement<ProfileInstance>, List<ProfileInstance>> retriever, Dictionary<Guid, ProfileInstance> profileInstanceCache, IEnumerable<QuarantinedResourceUsageDefinition> correspondingQuarantines = null);
 ```
 
+#### GQI - 'Get parameter table by ID' data source: Enhanced sorting [ID_38039]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+When multiple, separate sort operators were optimized by the GQI data source *Get parameter table by ID*, up to now, they would be incorrectly combined into a single multi-level sort operation. From now on, only the last sort operator will be used, consistent with the behavior in case the sort operators are not optimized.
+
+For example, from now on, when you sort by A and, later on in the GQI query, sort again by B, the query will now only be sorted by B.
+
 ### Fixes
 
 #### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID_34981]
@@ -973,6 +1028,14 @@ When data was being migrated from a Cassandra Cluster database to a STaaS databa
 
 When you exported elements via a DELT package on a DMA running DataMiner version 10.3.8 or newer, it would no longer be possible to import that DELT package on a DMA running DataMiner version 10.3.7 or older.
 
+#### SLAnalytics: Problem with table parameter indices containing special characters [ID_37860]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+Up to now, SLAnalytics would not correctly handle special characters in the table parameter indices. These characters will now be handled correctly. If parameters with indices containing special characters are trended, they will now also receive a trend prediction in the trend graph, and their behavioral change points will now be displayed.
+
+Also, special characters in parameter indices will no longer cause errors to be logged.
+
 #### Incorrect 'Clearing cache ...' entries in SLEventCache.txt [ID_37874]
 
 <!-- MR 10.4.0 - FR 10.4.1 -->
@@ -982,3 +1045,15 @@ Incorrect entries would be added to the *SLEventCache.txt* log file on DataMiner
 Example of an incorrect log entry:
 
 `Clearing cache: predicate<entries with old hosting agent id> for type XXXXXX`
+
+#### Storage as a Service: Problem when starting a database migration [ID_38059]
+
+<!-- MR 10.4.0 - FR 10.4.1 [CU0] -->
+
+When you tried to start a migration of an on-premises database to a DataMiner Storage as a Service platform, the connection towards the cloud could not get established.
+
+#### DataMiner Storage Module: Thread leak [ID_38095]
+
+<!-- MR 10.4.0 - FR 10.4.1 [CU0] -->
+
+In some cases, the DataMiner Storage Module could leak threads.

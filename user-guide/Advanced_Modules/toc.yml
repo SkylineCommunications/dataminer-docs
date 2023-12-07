@@ -449,10 +449,12 @@ items:
                 topicUid: DashboardServiceDefinition
               - name: Spectrum Analyzer
                 topicUid: DashboardSpectrumAnalyzer
-              - name: Trend statistics
-                topicUid: DashboardTrendStatistics
               - name: Visual Overview
                 topicUid: DashboardVisualOverview
+              - name: Timeline
+                topicUid: DashboardTimeline
+              - name: Trend statistics
+                topicUid: DashboardTrendStatistics
           - name: Feeds
             topicUid: Feeds
             items:
@@ -713,6 +715,8 @@ items:
         topicUid: Data_Aggregator_settings
       - name: Configuring GQI queries
         topicUid: Data_Aggregator_queries
+      - name: Troubleshooting
+        topicUid: Data_Aggregator_troubleshooting
   - name: DataMiner Object Models (DOM)
     topicUid: DOM
     items:

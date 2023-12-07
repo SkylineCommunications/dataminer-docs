@@ -12,15 +12,21 @@ In most spectrum elements, the following settings are available, though this dep
 
 - **Reference level**: The amplitude reference level. Different units can be selected for the value you enter, e.g. dBm, dBmV, mV.
 
+  From DataMiner 10.2.0 [CU22]/10.3.0 [CU10]/10.4.1 onwards<!--RN 37821-->, you can also change the reference level using the pencil next to the reference level Y-axis label in the real-time display section of the spectrum analyzer card.
+
 - **Amplitude scale**: The scale used in the real-time display. Select a different value to change the size of each square in the grid.
 
 - **Start frequency**: The start frequency of the displayed frequency span. Different units can be selected for the value you enter, e.g. kHz, GHz.
 
 - **Stop frequency**: The stop frequency of the displayed frequency span. Different units can be selected for the value you enter, e.g. kHz, GHz.
 
-- **Frequency span**: The range between the start and stop frequencies. Can be set to 0 to enter zero-span mode.
+- **Frequency span**: The range between the start and stop frequencies.
+
+  From DataMiner 10.2.0 [CU22]/10.3.0 [CU10]/10.4.1 onwards<!-- RN 37946 -->, you can set the frequency span to 0 to enter zero-span mode. The X-axis will then change to a time axis instead of a frequency axis, using the sweeptime as its time indicator. All other frequency-related features will be disabled.
 
 - **Center frequency**: The frequency in the middle of the display’s frequency axis. Different units can be selected for the value you enter, e.g. kHz, GHz.
+
+  From DataMiner 10.2.0 [CU22]/10.3.0 [CU10]/10.4.1 onwards<!--RN 37821-->, you can also change the center frequency using the pencil next to the center frequency X-axis label in the real-time display section of the spectrum analyzer card.
 
 - **Resolution bandwidth**: RBW filter. Can be set to auto, or to a custom value that can be selected in the drop-down list.
 

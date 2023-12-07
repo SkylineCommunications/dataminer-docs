@@ -37,7 +37,7 @@ uid: Installing_Ping_Monitoring
   - [ReportsAndDashboardsButton](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsbutton)
 
   > [!NOTE]
-  > Future DataMiner versions may already include these features. To check the release version of a soft-launch option, see [Overview of soft-launch options](xref:Overview_of_Soft_Launch_Options).
+  > To check whether your DataMiner version requires these soft-launch options, see [Overview of soft-launch options](xref:Overview_of_Soft_Launch_Options).
 
   > [!TIP]
   > See [Activating soft-launch options](xref:Activating_Soft_Launch_Options).
