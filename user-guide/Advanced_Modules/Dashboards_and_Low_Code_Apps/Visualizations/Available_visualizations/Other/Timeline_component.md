@@ -27,7 +27,7 @@ To configure the component:
 
    1. Drag the compatible data feed onto the component.
 
-      All groups are now displayed in a gray column to the left of the timeline. The timeline items are displayed next to the group they are part of.
+      All groups are now displayed in a gray column to the left of the timeline<!--RN 33694-->. The timeline items are displayed next to the group they are part of.
 
       ![Timeline groups](~/user-guide/images/Groups_Timeline.png)
 
