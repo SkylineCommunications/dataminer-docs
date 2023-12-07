@@ -52,6 +52,9 @@ To configure the component:
 
    ![Selected group and item](~/user-guide/images/Selected_Items_Groups.png)<br/>*Timeline and table components in DataMiner 10.4.1*
 
+   > [!NOTE]
+   > To display the name of the column the data was grouped by, make sure the *Advanced > Style > Grouping by* setting is enabled in the *Layout* tab.
+
 1. Optionally, customize the following component options:
 
    - *WebSocket settings*: Determines whether the websocket settings configured in the page/panel settings should be applied to this component. Enabled by default.
@@ -62,7 +65,7 @@ To configure the component:
 
    - *General > Use dynamic units*: When the *Override dynamic units* option is enabled, this option will allow you to determine whether parameter units will change dynamically based on their value and protocol definition.
 
-   - *General > Default time range*: Allows you to select an option with a particular time to zoom to this time on the timeline, e.g. Today, Last 7 days, Next hour, etc. The options are divided into the following categories: *Still busy*, *In the past*, *Near future*, *Recently*, *Long run*, *Starting from now*, and *Distant future*. Set to *Still busy, This week* by default<!--RN 33287-->.
+   - *General > Default time range*: Allows you to select an option with a particular time to zoom to this time on the timeline, e.g. *Today*, *Last 7 days*, *Next hour*, etc. The options are divided into the following categories: *Still busy*, *In the past*, *Near future*, *Recently*, *Long run*, *Starting from now*, and *Distant future*. Set to *Still busy, This week* by default<!--RN 33287-->.
 
      If you select *Custom*, you can set a custom start and end time.
 
@@ -71,7 +74,7 @@ To configure the component:
      > [!NOTE]
      > The component has a minimum time range of 5 milliseconds and a maximum of 10 years<!--RN 35620-->.
 
-     To synchronize the time range of the timeline with another component in the dashboard or low-code app, click the ![Link to feed](~/user-guide/images/Link_to_Feed.png) icon next to *Link time range to feed* and select the component from the dropdown list, such as a time range component. Modifying the default time frame for this component will automatically synchronize the time range for any linked components as well.
+     To synchronize the time range of the timeline with that of another component in the dashboard or low-code app, click the ![Link to feed](~/user-guide/images/Link_to_Feed.png) icon next to *Link time range to feed* and select the component from the dropdown list, such as a time range component. Modifying the default time frame for this component will automatically synchronize the time range for any linked timeline component as well.
 
      By linking the timeline to another component, the timeline will dynamically adjust to the selected time range of the linked component. For example, if you switch the time range in the linked component to *This week*, the timeline will automatically update to display the corresponding time frame.
 
@@ -82,6 +85,8 @@ To configure the component:
      > 1. Drag it onto an empty section of the dashboard or low-code app page.
      >
      > When you manually adjust the time range by zooming in or out, or by moving across the timeline component, the time range displayed in the time range component will automatically be adjusted.
+     >
+     > Note that modifying the time range displayed in the time range component will not update the time range displayed in the timeline component, unless it has been linked to that time range component in the *Default time range* settings.
 
    - *Data retrieval > Update data*: Allows updates to be enabled or disabled. This setting will enable real-time updates for all queries executed by the selected component. Disabled by default.
 
@@ -113,7 +118,7 @@ To configure the component:
 
    - *Advanced > Style*: Allows you to edit the style of the timeline component. The following options are available:
 
-     - *Grouping by*: Determines whether groupings are displayed in the timeline component. Disabled by default.
+     - *Grouping by*: Determines whether the name of the column the data was grouped by (optionally) is displayed in the timeline component. Disabled by default.
 
      - *Segment lines*: Determines whether segment lines are displayed in the timeline component. Enabled by default.
 
