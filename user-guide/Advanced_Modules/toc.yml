@@ -811,10 +811,14 @@ items:
               - name: Naming a DOM instance
                 topicUid: DOM_editor_naming_instance
       - name: Tutorials
-        topicUid: DOM_Remove_Enum_Entry
+        topicUid: DOM_Create_Basic_Setup
         items:
+          - name: Creating a basic DOM setup
+            topicUid: DOM_Create_Basic_Setup
           - name: Removing an enum entry from a GenericEnumFieldDescriptor
             topicUid: DOM_Remove_Enum_Entry
+          - name: Removing a field descriptor from a definition
+            topicUid: DOM_Remove_FieldDescriptor_Definition
   - name: Experience and Performance Management
     topicUid: EPM
     items:
