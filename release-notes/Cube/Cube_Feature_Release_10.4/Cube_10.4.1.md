@@ -2,17 +2,20 @@
 uid: Cube_Feature_Release_10.4.1
 ---
 
-# DataMiner Cube Feature Release 10.4.1 – Preview
+# DataMiner Cube Feature Release 10.4.1
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to DataMiner Cube, see [General Feature Release 10.4.1](xref:General_Feature_Release_10.4.1).
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [Spectrum analysis: Zooming inside a spectrum window [ID_37668]](#spectrum-analysis-zooming-inside-a-spectrum-window-id_37668)
+- [Desktop application: New command-line argument 'UseInitialArgumentsAfterDisconnect' [ID_37888]](#desktop-application-new-command-line-argument-useinitialargumentsafterdisconnect-id_37888)
+- [DataMiner Cube: Legacy Reports, Dashboards and Annotations modules are now end-of-life and will be disabled by default [ID_37935]](#dataminer-cube-legacy-reports-dashboards-and-annotations-modules-are-now-end-of-life-and-will-be-disabled-by-default-id_37935)
+- [DataMiner Cube - Spectrum analysis: Zero span mode [ID_37946]](#dataminer-cube---spectrum-analysis-zero-span-mode-id_37946)
 
 ## New features
 
