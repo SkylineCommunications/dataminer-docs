@@ -1,0 +1,132 @@
+@font-face {
+  font-family: Segoe UI, SegoeUI, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Segoe UI, SegoeUI, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal:
+}
+
+body {
+  margin: 0;
+  font-family: Segoe UI, SegoeUI, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+}
+
+.container {
+  margin: 50px auto auto auto;
+  padding: 0 20px;
+  width: 100%;
+  max-width: 1340px;
+  flex-direction: row
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.py-5 {
+  padding-bottom: 3rem !important;
+}
+
+.contextual-region {
+  position: relative;
+}
+
+.contextual {
+  position: absolute;
+  z-index: 500;
+  top: 6px;
+  right: 0;
+}
+
+.wp-block-column {
+  flex-grow: 1;
+  min-width: 0;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+.pageNotFound {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  color: #00aeef;
+  font-weight: 900;
+}
+
+.lead {
+  color: #6c757d;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  white-space: normal;
+  display: inline-block;
+  font-weight: 400;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.95rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-lg,
+.btn-group-lg>.btn {
+  font-weight: bold;
+}
+
+.btn-lg,
+.btn-group-lg>.btn {
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-radius: 0.3rem;
+}
+
+.btn-secondary {
+  color: #fff;
+  background-color: #00aeef;
+  border-color: #00aeef;
+  text-decoration: none;
+}
+
+.inline-image {
+  width: 100%;
+  height: auto;
+  max-width: 1038;
+  max-height: 711;
+}
+
+img {
+  vertical-align: middle;
+  border-style: none;
+  max-width: 1038px;
+  max-height: 711px;
+}
