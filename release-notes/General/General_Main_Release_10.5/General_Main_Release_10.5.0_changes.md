@@ -57,3 +57,9 @@ More extensive information will now be logged when errors occur while retrieving
 <!-- MR 10.5.0 - FR 10.4.1 -->
 
 When you started a migrating from a MySQL database to a Cassandra database, an error could occur when the connection to the MySQL database took a long time to get established.
+
+#### Storage as a Service: Resources would not always be released correctly [ID_38058]
+
+<!-- MR 10.5.0 - FR 10.4.2 -->
+
+Resources would not always be released correctly, causing some resources to be used for longer than strictly necessary.

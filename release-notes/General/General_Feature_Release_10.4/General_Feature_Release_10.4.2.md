@@ -202,6 +202,12 @@ When a client application (e.g. DataMiner Cube) sent multiple messages to the sa
 
 The compliancies cache in SLNet, which keeps track of the minimum required version of a protocol or of whether a protocol supports Cassandra, was only refreshed when you uploaded a *protocol.xml* file that did not contain a `<Compliancies>` tag or when the cache was accessed for the first time.
 
+#### Storage as a Service: Resources would not always be released correctly [ID_38058]
+
+<!-- MR 10.5.0 - FR 10.4.2 -->
+
+Resources would not always be released correctly, causing some resources to be used for longer than strictly necessary.
+
 #### GQI: Problem when retrieving a large amount of alarms [ID_38065]
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
