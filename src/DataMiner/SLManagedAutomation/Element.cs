@@ -760,7 +760,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <para>If a column is hidden by an information template, the value for a cell of that column can no longer be retrieved by this method (null is returned). However, the value can stilll be retrieved using the <see cref="GetParameter(int, string)"/> method. Using the GetParameter method is therefore recommended.</para>
+		/// <para>If a column is hidden by an information template, the value for a cell of that column can no longer be retrieved by this method (null is returned). However, the value can still be retrieved using the <see cref="GetParameter(int, string)"/> method. Using the GetParameter method is therefore recommended.</para>
 		/// </remarks>
 		public virtual object GetParameterByPrimaryKey(int pid, string primaryKey) { return null; }
 
