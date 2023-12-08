@@ -21,7 +21,7 @@ Expected duration: 30 minutes.
 - Download the JSON reader [from Github](https://github.com/SkylineCommunications/SLC-GQIDS-JsonReader), or deploy it directly to your DataMiner System via the [Catalog](https://catalog.dataminer.services/catalog/5491).
 
   > [!TIP]
-  > Deploying a package is very similar to deploying a DataMiner connector. See [Deploying a DataMiner connector to your system](xref:Deploying_A_DataMiner_Connector_to_your_system).
+  > For information on how to deploy a package, see [Deploying a Catalog item](xref:Deploying_a_catalog_item).
 
 ## Overview
 

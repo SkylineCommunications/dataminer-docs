@@ -59,10 +59,10 @@ items:
     items:
       - name: About the Catalog module
         topicUid: About_the_Catalog_module
-      - name: Looking up a DataMiner connector
-        topicUid: Looking_up_a_DataMiner_connector
-      - name: Deploying a DataMiner connector to your system
-        topicUid: Deploying_A_DataMiner_Connector_to_your_system
+      - name: Looking up an item in the Catalog
+        topicUid: Looking_up_an_item_in_the_catalog
+      - name: Deploying a Catalog item
+        topicUid: Deploying_a_catalog_item
   - name: DataMiner Sharing
     topicUid: Sharing
     items:
