@@ -16,7 +16,7 @@ uid: Installing_Ping_Monitoring
 - The [*Generic Ping* connector](https://catalog.dataminer.services/result/driver/530)
 
   > [!TIP]
-  > We recommend using Generic Ping version 3.1.2.11 or higher. See [Deploying a DataMiner connector to your system](xref:Deploying_A_DataMiner_Connector_to_your_system).
+  > We recommend using Generic Ping version 3.1.2.11 or higher. See [Deploying a Catalog item](xref:Deploying_a_catalog_item).
 
 - At least one Generic Ping element within your DMS that is configured with one or multiple destinations
 
