@@ -111,6 +111,12 @@ From now on, as long as the default template has not been created yet, a loading
 
 When you changed the color theme of a component, the change would incorrectly only get applied after a reload. Now, the change will be applied instantly.
 
+#### Low-Code Apps - Node edge component: Script action dummies would not be filled in [ID_38106]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+When an Automation script action using dummies was linked to a node of a node edge component, in some cases, the dummies would not get filled in.
+
 #### Dashboards app & Low-Code Apps: Timeline component would apply incorrect colors [ID_38130]
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
