@@ -70,11 +70,13 @@ items:
       - name: EPM 5.0.0 I-DOCSIS
         topicUid: EPM_5.0.0_I-DOCSIS
   - name: VSAT
-    topicUid: EPM_1.0.7_VSAT
+    topicUid: EPM_1.0.8_VSAT
     items:
-      - name: EPM 1.0.7 VSAT - preview
+      - name: EPM 1.0.8 VSAT - preview
+        topicUid: EPM_1.0.8_VSAT
+      - name: EPM 1.0.7 VSAT
         topicUid: EPM_1.0.7_VSAT
-      - name: EPM 1.0.6 VSAT - preview
+      - name: EPM 1.0.6 VSAT
         topicUid: EPM_1.0.6_VSAT
       - name: EPM 1.0.5 VSAT
         topicUid: EPM_1.0.5_VSAT
