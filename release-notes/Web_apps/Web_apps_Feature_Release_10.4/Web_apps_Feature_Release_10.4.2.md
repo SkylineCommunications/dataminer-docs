@@ -73,7 +73,7 @@ All GQI components (*State*, *Pie chart*, *Bar chart*, *Line chart*, *Table*, *G
 
 When a DataMiner Agent is connected to dataminer.services, you can use the remote access URL to access the DataMiner web apps from anywhere.
 
-Up to now, when a web app that was accessed via a remote access URL lost its connection with the cloud-connected DataMiner Agent, it would incorrectly redirect you to the shares overview page. From now on, it will instead try to reconnect with the DataMiner Agent.
+Up to now, when a web app that was accessed via a remote access URL lost its connection with the cloud-connected DataMiner Agent, it would incorrectly redirect you to the shares overview page. From now on, it will instead display a message, asking you to reload the page.
 
 #### Dashboards app & Low-Code Apps - Template editor: Clicking a template would incorrectly be considered identical to updating that template [ID_37960]
 
