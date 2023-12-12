@@ -115,7 +115,7 @@ When you changed the color theme of a component, the change would incorrectly on
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
 
-When an Automation script action using dummies was linked to a node of a node edge component, in some cases, the dummies would not get filled in.
+When an Automation script action using dummies was linked to a node of a node edge component, up to now, the dummies incorrectly would not get filled in automatically. From now on, they will be filled in automatically when the node matches the dummy type.
 
 #### Dashboards app & Low-Code Apps: Timeline component would apply incorrect colors [ID_38130]
 
