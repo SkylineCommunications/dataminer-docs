@@ -2,7 +2,7 @@
 uid: EPM_1.0.7_VSAT
 ---
 
-# EPM 1.0.7 VSAT - preview
+# EPM 1.0.7 VSAT
 
 ## New features
 
