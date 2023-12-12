@@ -13,7 +13,7 @@ DataMiner credits are a form of currency used to subscribe to DataMiner software
 
 ### Where can I check the current DataMiner credit balance of my organization?
 
-The credit balance of an organization is displayed in the [Admin app](https://admin.dataminer.services/).
+The DataMiner credit balance of an organization is displayed in the [Admin app](https://admin.dataminer.services/).
 
 ### How can I acquire more DataMiner credits?
 
