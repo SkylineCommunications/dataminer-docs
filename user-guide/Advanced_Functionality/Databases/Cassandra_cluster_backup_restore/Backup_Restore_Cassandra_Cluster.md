@@ -2,39 +2,106 @@
 uid: Backup_Restore_Cassandra_Cluster
 ---
 
-# Backing up and restoring a Cassandra cluster using Medusa
+# Backing up and restoring a Cassandra cluster using Medusa in Linux - Local storage
 
-Medusa is an Apache Cassandra backup system. It is a command line tool that can be used to back up or restore a single Cassandra node or an entire cluster. It supports local storage, but also Google Cloud Storage (GCS), Azure Blob Storage, and AWS S3. The procedures below assume local storage is used. For more information, including on how to work with the mentioned storage providers, refer to the [Cassandra Medusa documentation](https://github.com/thelastpickle/cassandra-medusa/tree/master/docs).
+Medusa serves as an Apache Cassandra backup system, offering a command-line interface for backing up or restoring either a single Cassandra node or an entire cluster. Its functionality extends to supporting various storage options, including local storage as well as cloud services such as Google Cloud Storage (GCS), Azure Blob Storage, and AWS S3. For detailed instructions and guidance on utilizing the specified storage providers, please consult the [Cassandra Medusa documentation](https://github.com/thelastpickle/cassandra-medusa/tree/master/docs). In this guide, we have opted to use local storage.
+
+> [!NOTE]
+   > We promote the use of Ubuntu LTS as the preferred Linux distribution. As such, the commands mentioned below will work on any Debian-based system, including Ubuntu.
+
+## Configuring the firewall and generating SSH keys
+
+We will set up the backup configuration on one of the nodes in the cluster, establishing a connection from this node to the remaining nodes during backup execution. Hence, it is crucial that all nodes within the cluster can communicate through the SSH port (default port 22). The following steps provide details on how to enable SSH access.
+
+
 
 > [!IMPORTANT]
-> All nodes in the cluster must be granted SSH access to connect to every node in the cluster, including the node where the backup is configured. You will therefore need to generate SSH keys in PEM format and add the SSH credentials to the configuration file.
+> This documentation assumes that you have activated the firewall, and port 22 has been opened following our recommendation in [Installing Cassandra on a Linux machine](xref:Installing_Cassandra). If the firewall is currently disabled, please refer to section 2 of the aforementioned documentation first and ensure that the firewall permits traffic on ports 7000, 7001, and 9042 before proceeding with the backup configuration.
 
-## Generate SSH keys
+1. Configure each node to allow access to port 22 from each node in the cluster.
+   - Example of commands on node 1:
 
-1. Generate private key PEM format: `$ ssh-keygen -t rsa -b 4096 -m PEM -f <file_name>`
+       `$ sudo ufw allow from [IP node 2] to [IP node 1] proto tcp port 22`
 
-1. Copy the public key to all nodes.
+       `$ sudo ufw allow from [IP node 3] to [IP node 1] proto tcp port 22`
 
-1. Write the public key to the authorized_keys on all nodes in the cluster `cat [Path to file]/<file_name>.pub >>~/.ssh/authorized_keys`
+   - Example of commands on node 2:
 
-## Taking a backup of a Cassandra cluster using Medusa
+       `$ sudo ufw allow from [IP node 1] to [IP node 2] proto tcp port 22`
 
-1. You need a shared folder to store the backups, please follow the [How to Set Up NFS Server and Client on CentOS 8](https://www.tecmint.com/install-nfs-server-on-centos-8/) guide.
+       `$ sudo ufw allow from [IP node 3] to [IP node 2] proto tcp port 22`
+   - Example of commands on node 3:
+
+       `$ sudo ufw allow from [IP node 1] to [IP node 3] proto tcp port 22`
+
+       `$ sudo ufw allow from [IP node 2] to [IP node 3] proto tcp port 22`
+2. Generate SSH keys
+
+    You will  need to generate SSH keys in PEM format and add the path of the private key to the SSH section in the medusa.ini configuration file.
+
+   - On the node where the backup will run (Node 1 in this example), generate a 4096-bit RSA key pair using the following command: `$ ssh-keygen -t rsa -b 4096 -m PEM -f <file_name>`
+        - Example: 
+        `$ ssh-keygen -t rsa -b 4096 -m PEM -f id_rsa`
+    
+     The command above creates a private key (**id_rsa**) and its corresponding public key (**id_rsa.pub**) in PEM format within the home folder.
+
+   - Copy the public key to all nodes, run the command: 
+   `$ scp id_rsa.pub username@<Node1_IP>:/home/<username>/`
+        - Example copy to Node 2:  
+        `$ scp id_rsa.pub myUser@10.10.10.12:/home/myUser/`
+        - Example copy to Node 3:  
+        `$ scp id_rsa.pub myUser@10.10.10.13:/home/myUser/`
+
+   - Write the public key to the authorized_keys on all nodes in the cluster, run the command `$ cat [Path to file]/<file_name>.pub >>~/.ssh/authorized_keys`
+             Example:  
+             `$ cat /home/myUser/id_rsa.pub >>~/.ssh/authorized_keys`
+> [!IMPORTANT]
+> If the backup is initiated from one of the nodes in the cluster, the public key should also be appended to the authorized_keys file on this node.
+
+## Configuring the NFS share
+
+To facilitate storage for backups, a shared folder is necessary, and all nodes in the cluster must be mounted to the same network path. Follow the [How to Set Up NFS Server and Client on CentOS 8](https://www.tecmint.com/install-nfs-server-on-centos-8/) guide to setup an NFS share.
+Please make a note of the path, as you will need to set this path in the 'base_path' property within the Medusa.ini configuration file.
 
    > [!NOTE]
-   > All nodes in the cluster must be mounted to the same network path. When using a local path, only the backups of the local node will be visible.
+   > If you opt for a local path (rather than a network share), only the backups of the local node will be accessible. We strongly recommend utilizing a shared folder for improved visibility and centralized access to backups across all nodes in the cluster.
 
-1. [Install Medusa](https://github.com/thelastpickle/cassandra-medusa/blob/master/docs/Installation.md)
+## Installing and configuring Medusa
 
-1. [Configure Medusa](https://github.com/thelastpickle/cassandra-medusa/blob/master/docs/Configuration.md).
+Execute the following steps on each node in the cluster:
 
-   Important properties that must be configured:
+1. Install python3-pip, run the commands:
+    1. `$ sudo apt update`
+    1.  `$ sudo apt install python3-pip`
+1. Install Medusa, follow the [installation guide on GitHub](https://github.com/thelastpickle/cassandra-medusa/blob/master/docs/Installation.md)
 
-   - Cassandra: config_file and CQL/nodetool credentials
+1. To configure Medusa, create the */etc/medusa* directory if it doesn't exist and create the file */etc/medusa/medusa.ini*. For detailed configuration information, refer to the [Configure Medusa on GitHub](https://github.com/thelastpickle/cassandra-medusa/blob/master/docs/Configuration.md).
 
-   - Storage: bucket_name, base_path
+    - Create Directory: `$ sudo mkdir -p /etc/medusa/`
+    - Create file: `$ sudo touch /etc/medusa/medusa.ini`
 
-   - SSH: username, password, key_file,port,cert_file. 
+   Ensure the following properties are configured:
+
+   - Cassandra: 
+        - *config_file*
+        - CQL credentials
+            - *cql_username*
+            - *cql_password*
+        - nodetool credentials
+            - *nodetool_username*
+            - *nodetool_password*
+
+   - Storage: 
+       - *storage_provider*
+       - *bucket_name*
+       - *base_path*
+
+   - SSH: 
+       - *key_file*(Path to the rsa private key)
+       - *port*
+   
+
+## Taking a backup using Medusa
 
 1. [Take a backup](https://github.com/thelastpickle/cassandra-medusa/blob/master/docs/Performing-backups.md), choose whether to take a single node backup or a cluster backup.
 
@@ -42,11 +109,11 @@ Medusa is an Apache Cassandra backup system. It is a command line tool that can 
 
    - Taking a full backup of a cluster: `$ medusa backup-cluster --backup-name=<name of the backup> --mode=full`
 
-1. Verify that the backup is taken for every node in the cluster
+1. Verify that the backup is taken for every node in the cluster. The location of the backup is *base_path*/*bucket_name*.
 
 ## Restoring a backup using Medusa
 
-Choose if you want to:
+Select your preference:
 
 - [Restore a full cluster](https://github.com/thelastpickle/cassandra-medusa/blob/master/docs/Restoring-a-full-cluster.md)
 
