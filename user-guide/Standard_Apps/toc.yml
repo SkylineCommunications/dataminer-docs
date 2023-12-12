@@ -277,7 +277,7 @@ items:
           - name: Overview of the DataMiner PTP app UI
             topicUid: Overview_of_the_DataMiner_PTP_app_UI
   - name: Monitoring Solutions
-    topicUid: Huawei_Manager_Dashboard
+    topicUid: Monitoring_Solutions
     items:
       - name: DataMiner Huawei Manager dashboard
         topicUid: Huawei_Manager_Dashboard
