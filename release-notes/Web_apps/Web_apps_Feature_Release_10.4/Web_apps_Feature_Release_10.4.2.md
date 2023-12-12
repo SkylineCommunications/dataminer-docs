@@ -65,6 +65,15 @@ Up to now, when an empty list was saved in a DOM instance, the default filter us
 
 All GQI components (*State*, *Pie chart*, *Bar chart*, *Line chart*, *Table*, *Grid*, *Scheduler*, *Maps* and *Node Edge*) will now behave in the same way when loading.
 
+#### Dashboards app & Low-Code Apps - Query filter component: Number and date filters will no longer list discrete values unless they are meant to filter columns containing discrete values [ID_38114]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+When you enabled the filter assistance in a query filter component, up to now, all number and date filters would list all possible values that existed in the data source. As some of these lists could contain a very large number of values, from now on, number and date filters will no longer list discrete values, unless they are meant to filter number or date columns containing discrete values.
+
+> [!NOTE]
+> Filters for columns containing string values will continue to list discrete values, even when the columns do not contain discrete values.
+
 ### Fixes
 
 #### Web apps accessed via a remote access URL would redirect to the shares overview page when they lost connection with the cloud-connected DMA [ID_33789]
