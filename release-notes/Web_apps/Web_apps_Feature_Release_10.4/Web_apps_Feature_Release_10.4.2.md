@@ -67,6 +67,14 @@ All GQI components (*State*, *Pie chart*, *Bar chart*, *Line chart*, *Table*, *G
 
 ### Fixes
 
+#### Web apps accessed via a remote access URL would redirect to the shares overview page when they lost connection with the cloud-connected DMA [ID_33789]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+When a DataMiner Agent is connected to dataminer.services, you can use the remote access URL to access the DataMiner web apps from anywhere.
+
+Up to now, when a web app that was accessed via a remote access URL lost its connection with the cloud-connected DataMiner Agent, it would incorrectly redirect you to the shares overview page. From now on, it will instead try to reconnect with the DataMiner Agent.
+
 #### Dashboards app & Low-Code Apps - Template editor: Clicking a template would incorrectly be considered identical to updating that template [ID_37960]
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
