@@ -6,7 +6,7 @@ uid: Creating_a_DaaS_system_FAQ
 
 ### What are DataMiner credits?
 
-DataMiner Credits are a form of currency used to subscribe to DataMiner software and hosting services.
+DataMiner credits are a form of currency used to subscribe to DataMiner software and hosting services.
 
 > [!TIP]
 > For more information, see [Usage terms](xref:Pricing_Usage_based_service#usage-terms).
