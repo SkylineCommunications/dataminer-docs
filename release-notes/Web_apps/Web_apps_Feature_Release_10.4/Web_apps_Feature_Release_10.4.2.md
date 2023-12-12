@@ -131,3 +131,11 @@ When an Automation script action using dummies was linked to a node of a node ed
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
 
 In some cases, a timeline component would apply incorrect colors.
+
+#### Low-Code Apps: Feed value would never be cleared after being sent to be used in actions [ID_38133]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+Up to now, a feed value would never be cleared after being sent to be used in actions.
+
+For example, when a feed was used in a script action parameter, the last feed value would always be inserted, even when the feed was no longer present when the action was executed.
