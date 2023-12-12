@@ -102,3 +102,9 @@ From now on, as long as the default template has not been created yet, a loading
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
 
 When you changed the color theme of a component, the change would incorrectly only get applied after a reload. Now, the change will be applied instantly.
+
+#### Dashboards app & Low-Code Apps: Timeline component would apply incorrect colors [ID_38130]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+In some cases, a timeline component would apply incorrect colors.
