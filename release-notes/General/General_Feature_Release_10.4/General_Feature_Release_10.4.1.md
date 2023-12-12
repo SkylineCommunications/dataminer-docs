@@ -297,6 +297,12 @@ From now on, a rectangular region will have a dark color when the change point i
 
 From now on, the flatline detection algorithm will take into account the decimal precision of parameter values displayed in client applications.
 
+#### Parameter ID range 10,000,000 to 10,999,999 now reserved [ID_37837]
+
+<!-- MR 10.5.0 - FR 10.4.1 -->
+
+Parameters IDs in the range of 10,000,000 to 10,999,999 are now reserved for DataMiner parameters. These will be used for DataMiner features in the future.
+
 #### GQI: Ad hoc data sources and custom operators now support row metadata [ID_37879]
 
 <!-- MR 10.4.0 - FR 10.4.1 -->
