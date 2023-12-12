@@ -9,7 +9,9 @@ uid: EPM_6.1.10_I-DOCSIS
 
 ## New features
 
-*No new features have been added to this release yet.*
+#### Topology chains and chain fields can now be hidden [ID_37944]
+
+It is now possible to hide specific chains, chain fields, search chains, search chain tabs, and search chain fields in the I-DOCSIS EPM UI in DataMiner Cube. You can do so on the *Configuration* > *Chain and Field Settings* page of the EPM front-end element.
 
 ## Changes
 
