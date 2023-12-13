@@ -16,6 +16,12 @@ uid: EPM_1.0.8_VSAT
 
 The descriptions for the Hub Return Overview and Carriers tables KPIs have been improved, so that these now include the correct calculations and sources.
 
+#### Intelsat Flex Platform VSAT: Remote stats history sets integration [ID_38136]
+
+Previously, The Intelsat Flex Platform VSAT connector was configured to poll and record only one data point every 5 minutes, or at an interval set by the *Topic Data Import Timer* parameter on the *Topic Settings* page.
+
+To improve the granularity and timeliness of the data being captured and displayed in the trend graph, history sets have now been implemented to the KPIs in the *Terminals* and *SSPCs* tables. This enhancement means that instead of capturing a single data point per polling cycle, the system now records all available data points.
+
 ### Fixes
 
 #### Verizon iDirect Evolution Platform Collector: Actual Data Rate for Hub Return Carriers Table averaged incorrectly [ID_38074]
