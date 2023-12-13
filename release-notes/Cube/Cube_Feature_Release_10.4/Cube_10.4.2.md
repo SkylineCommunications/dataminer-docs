@@ -66,6 +66,12 @@ See also: [Linking a shape to a booking](xref:Linking_a_shape_to_a_booking)
 
 When, in a view card, you selected a large number of elements and/or services and then right-clicked, in some cases, Cube could become unresponsive.
 
+#### DataMiner Cube - Automation: Save button would incorrectly not be enabled after renaming an Automation script [ID_37987]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU11] - FR 10.4.2 -->
+
+When you had renamed an Automation script, in some rare cases, the *Save* button would incorrectly not be enabled. As a result, it was not possible to save the change.
+
 #### Correlation: Problem with 'Dynamic' option in 'Send email' action [ID_37995]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11] - FR 10.4.2 -->
@@ -123,3 +129,9 @@ In *System Center*, you can clean up unused Visio files. However, up to now, thi
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
 
 When the *DynamicUnits* soft-launch option was enabled, exception values of numeric parameters would be displayed incorrectly.
+
+#### DataMiner Cube could become unresponsive when event messages were being sent [ID_38115]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
+
+In some rare cases, DataMiner Cube could become unresponsive when event messages were being sent.
