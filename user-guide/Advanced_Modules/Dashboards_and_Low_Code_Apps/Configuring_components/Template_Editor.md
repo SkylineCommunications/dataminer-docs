@@ -12,9 +12,9 @@ Available from DataMiner 10.4.1/10.5.0 onwards. Prior to this, the Template Edit
 The Template Editor is currently supported for the following components:
 
 - [Grid](xref:DashboardGrid)
-- Timeline
+- [Timeline](xref:DashboardTimeline)
 - [Table](xref:DashboardTable)
-- [Maps](xref:DashboardMaps) (requires the [ReportsAndDashboardsGQIMaps soft-launch option](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsgqimaps) prior to DataMiner 10.4.2)
+- [Maps](xref:DashboardMaps) (requires the [*ReportsAndDashboardsGQIMaps* soft-launch option](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsgqimaps) prior to DataMiner 10.4.2)
 
 ## Accessing the Template Editor
 

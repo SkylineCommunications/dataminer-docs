@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.4.1
 ---
 
-# General Feature Release 10.4.1 – Preview
+# General Feature Release 10.4.1
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!IMPORTANT]
 > When downgrading from DataMiner Feature Release version 10.3.8 (or higher) to DataMiner Feature Release version 10.3.4, 10.3.5, 10.3.6 or 10.3.7, an extra manual step has to be performed. For more information, see [Downgrading a DMS](xref:MOP_Downgrading_a_DMS).
@@ -18,7 +18,8 @@ uid: General_Feature_Release_10.4.1
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [Service & Resource Management: Storage type for ProfileManager and ResourceManager will now always be Elasticsearch/OpenSearch [ID_37877]](#service--resource-management-storage-type-for-profilemanager-and-resourcemanager-will-now-always-be-elasticsearchopensearch-id_37877)
+- [Legacy Reports, Dashboards and Annotations modules are now end-of-life and will be disabled by default [ID_37786]](#legacy-reports-dashboards-and-annotations-modules-are-now-end-of-life-and-will-be-disabled-by-default-id_37786)
 
 ## New features
 
@@ -295,6 +296,12 @@ From now on, a rectangular region will have a dark color when the change point i
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
 
 From now on, the flatline detection algorithm will take into account the decimal precision of parameter values displayed in client applications.
+
+#### Parameter ID range 10,000,000 to 10,999,999 now reserved [ID_37837]
+
+<!-- MR 10.5.0 - FR 10.4.1 -->
+
+Parameters IDs in the range of 10,000,000 to 10,999,999 are now reserved for DataMiner parameters. These will be used for DataMiner features in the future.
 
 #### GQI: Ad hoc data sources and custom operators now support row metadata [ID_37879]
 

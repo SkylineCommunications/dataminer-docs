@@ -54,6 +54,12 @@ In the *View* tab of a spectrum card, the buttons in the *Reference lines* panel
 
 Because of a number of enhancements, overall performance has increased when locking or unlocking inputs and output of matrices in client applications.
 
+#### DataMiner Cube - Visual Overview: Enhanced performance when opening a visual overview with a large amount of shapes that link to a webpage [ID_37799]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
+
+Because of a number of enhancements, overall performance has increased when opening a visual overview with a large amount of shapes that link to a webpage.
+
 #### DataMiner Cube - Spectrum Analysis: Editing the X-axis and Y-axis labels [ID_37821]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->

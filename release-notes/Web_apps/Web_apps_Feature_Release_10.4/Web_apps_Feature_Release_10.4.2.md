@@ -65,7 +65,24 @@ Up to now, when an empty list was saved in a DOM instance, the default filter us
 
 All GQI components (*State*, *Pie chart*, *Bar chart*, *Line chart*, *Table*, *Grid*, *Scheduler*, *Maps* and *Node Edge*) will now behave in the same way when loading.
 
+#### Dashboards app & Low-Code Apps - Query filter component: Number and date filters will no longer list discrete values unless they are meant to filter columns containing discrete values [ID_38114]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+When you enabled the filter assistance in a query filter component, up to now, all number and date filters would list all possible values that existed in the data source. As some of these lists could contain a very large number of values, from now on, number and date filters will no longer list discrete values, unless they are meant to filter number or date columns containing discrete values.
+
+> [!NOTE]
+> Filters for columns containing string values will continue to list discrete values, even when the columns do not contain discrete values.
+
 ### Fixes
+
+#### Web apps accessed via a remote access URL would redirect to the shares overview page when they lost connection with the cloud-connected DMA [ID_33789]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+When a DataMiner Agent is connected to dataminer.services, you can use the remote access URL to access the DataMiner web apps from anywhere.
+
+Up to now, when a web app that was accessed via a remote access URL lost its connection with the cloud-connected DataMiner Agent, it would incorrectly redirect you to the shares overview page. From now on, it will instead display a message, asking you to reload the page.
 
 #### Dashboards app & Low-Code Apps - Template editor: Clicking a template would incorrectly be considered identical to updating that template [ID_37960]
 
@@ -102,3 +119,23 @@ From now on, as long as the default template has not been created yet, a loading
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
 
 When you changed the color theme of a component, the change would incorrectly only get applied after a reload. Now, the change will be applied instantly.
+
+#### Low-Code Apps - Node edge component: Script action dummies would not be filled in [ID_38106]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+When an Automation script action using dummies was linked to a node of a node edge component, up to now, the dummies incorrectly would not get filled in automatically. From now on, they will be filled in automatically when the node matches the dummy type.
+
+#### Dashboards app & Low-Code Apps: Timeline component would apply incorrect colors [ID_38130]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+In some cases, a timeline component would apply incorrect colors.
+
+#### Low-Code Apps: Feed value would never be cleared after being sent to be used in actions [ID_38133]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+Up to now, a feed value would never be cleared after being sent to be used in actions.
+
+For example, when a feed was used in a script action parameter, the last feed value would always be inserted, even when the feed was no longer present when the action was executed.

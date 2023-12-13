@@ -32,7 +32,7 @@ string[] secondViewElementIds = new string[] { "346/761", "346/760" };
 var allViewDetails = new object[]{firstViewDetails, secondViewDetails};
 var allElementIds = new object[]{firstViewElementIds, secondViewElementIds};
 
-uint[] viewIds = (uint[]) protocol.NotifyDataMiner(454 /*NT_ADD_VIEW*/ , allViewDetails, allElementIds);
+uint[] viewIds = (uint[]) protocol.NotifyDataMiner(454 /*NT_ADD_VIEWS*/ , allViewDetails, allElementIds);
 ```
 
 ## Parameters

@@ -369,6 +369,12 @@ Only upon releasing the left mouse button will the unknown part of the trace be 
 > [!IMPORTANT]
 > This feature is only available if the spectrum protocol includes the *Reference level* parameter.
 
+#### DataMiner Cube - Visual Overview: Enhanced performance when opening a visual overview with a large amount of shapes that link to a webpage [ID_37799]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
+
+Because of a number of enhancements, overall performance has increased when opening a visual overview with a large amount of shapes that link to a webpage.
+
 ## Changes
 
 ### Enhancements
