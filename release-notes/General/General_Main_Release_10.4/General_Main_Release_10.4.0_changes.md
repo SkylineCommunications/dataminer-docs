@@ -1062,7 +1062,7 @@ In some cases, the DataMiner Storage Module could leak threads.
 
 <!-- MR 10.4.0 - FR 10.4.2 -->
 
-When small, unlabelled changes were detected in a trend graph of a parameter of which the value was clearly increasing or decreasing, up to now, the trend icon would incorrectly not be updated to indicate an increase or decrease. From now on, when a small, unlabelled change occurs in a trend graph that clearly increases or decreases, the trend icon will be updated to indicate this.
+When small, unlabelled changes were detected in a trend graph of a parameter of which the value was clearly increasing, decreasing or remaining stable, up to now, the trend icon would incorrectly not be updated to indicate this increasing, decreasing or stable trend. From now on, when a small, unlabelled change occurs in a trend graph that clearly increases, decreases or remains stable, the trend icon will be updated to indicate this.
 
 #### Storage as a Service: Database write operations would not get processed [ID_38112]
 

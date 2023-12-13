@@ -113,11 +113,11 @@ Every 10 seconds, resources that have not been referenced in the last 30 seconds
 
 TTL-based rollover for the CustomData and LoggerTables storage types is now disabled.
 
-#### DataMiner Object Models: Enhanced performance when reading DOM objects and ModuleSettings [ID_38023]
+#### DataMiner Object Models: Reading DOM objects and ModuleSettings in parallel [ID_38023]
 
 <!-- MR 10.5.0 - FR 10.4.2 -->
 
-Because of a number of enhancements, overall performance has increased when reading DOM objects and ModuleSettings.
+It is now possible to read DOM objects and ModuleSettings in parallel. This will considerably improve overall performance.
 
 #### GQI - 'Get parameter table by ID' data source: Enhanced sorting [ID_38039]
 
@@ -224,7 +224,7 @@ When a GQI query had to retrieve a large amount of paged alarms, after a while, 
 
 <!-- MR 10.4.0 - FR 10.4.2 -->
 
-When small, unlabelled changes were detected in a trend graph of a parameter of which the value was clearly increasing or decreasing, up to now, the trend icon would incorrectly not be updated to indicate an increase or decrease. From now on, when a small, unlabelled change occurs in a trend graph that clearly increases or decreases, the trend icon will be updated to indicate this.
+When small, unlabelled changes were detected in a trend graph of a parameter of which the value was clearly increasing, decreasing or remaining stable, up to now, the trend icon would incorrectly not be updated to indicate this increasing, decreasing or stable trend. From now on, when a small, unlabelled change occurs in a trend graph that clearly increases, decreases or remains stable, the trend icon will be updated to indicate this.
 
 #### Storage as a Service: Database write operations would not get processed [ID_38112]
 
