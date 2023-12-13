@@ -2054,6 +2054,9 @@ namespace Skyline.DataMiner.Scripting
 		///			<item>
 		///				<description>The value of the parameter obtained via the GetInputParameter method will be the value of the parameter at the time the QAction started.</description>
 		///			</item>
+		///			<item>
+		///				<description>Prior to DataMiner 10.2.0 CU17, 10.3.0 CU5, and 10.3.8 (RN 36528), the table column array objects always have a reference. From these DataMiner versions onwards, the table column array objects will have a null reference when the table is empty, e.g. table[0] will be null when the table has no rows.</description>
+		///			</item>
 		///		</list>
 		///	</remarks>
 		///	<example>
