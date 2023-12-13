@@ -1058,11 +1058,11 @@ When you tried to start a migration of an on-premises database to a DataMiner St
 
 In some cases, the DataMiner Storage Module could leak threads.
 
-#### Behavioral anomaly detection: Unlabelled changes would incorrect have no effect on the trend icon [ID_38105]
+#### Behavioral anomaly detection: Unlabelled changes would cause the trend icon to not be updated [ID_38105]
 
 <!-- MR 10.4.0 - FR 10.4.2 -->
 
-When unlabelled changes were detected in the behavior of a trend, the trend icon would incorrectly not be updated to reflect those changes.
+When small, unlabelled changes were detected in a trend graph of a parameter of which the value was clearly increasing or decreasing, up to now, the trend icon would incorrectly not be updated to indicate an increase or decrease. From now on, when a small, unlabelled change occurs in a trend graph that clearly increases or decreases, the trend icon will be updated to indicate this.
 
 #### Storage as a Service: Database write operations would not get processed [ID_38112]
 

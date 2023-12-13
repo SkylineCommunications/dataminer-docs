@@ -56,6 +56,12 @@ Parameters IDs in the range of 10,000,000 to 10,999,999 are now reserved for Dat
 
 More extensive information will now be logged when errors occur while retrieving trend data.
 
+#### DataMiner Object Models: Enhanced performance when reading DOM objects and ModuleSettings [ID_38023]
+
+<!-- MR 10.5.0 - FR 10.4.2 -->
+
+Because of a number of enhancements, overall performance has increased when reading DOM objects and ModuleSettings.
+
 ### Fixes
 
 #### Databases: Problem when starting a migration from MySQL to Cassandra [ID_37589]

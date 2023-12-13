@@ -113,6 +113,12 @@ Every 10 seconds, resources that have not been referenced in the last 30 seconds
 
 TTL-based rollover for the CustomData and LoggerTables storage types is now disabled.
 
+#### DataMiner Object Models: Enhanced performance when reading DOM objects and ModuleSettings [ID_38023]
+
+<!-- MR 10.5.0 - FR 10.4.2 -->
+
+Because of a number of enhancements, overall performance has increased when reading DOM objects and ModuleSettings.
+
 #### GQI - 'Get parameter table by ID' data source: Enhanced sorting [ID_38039]
 
 <!-- MR 10.4.0 - FR 10.4.2 -->
@@ -214,11 +220,11 @@ Resources would not always be released correctly, causing some resources to be u
 
 When a GQI query had to retrieve a large amount of paged alarms, after a while, a timeout exception would be thrown even though none of the paged requests had timed out.
 
-#### Behavioral anomaly detection: Unlabelled changes would incorrect have no effect on the trend icon [ID_38105]
+#### Behavioral anomaly detection: Unlabelled changes would cause the trend icon to not be updated [ID_38105]
 
 <!-- MR 10.4.0 - FR 10.4.2 -->
 
-When unlabelled changes were detected in the behavior of a trend, the trend icon would incorrectly not be updated to reflect those changes.
+When small, unlabelled changes were detected in a trend graph of a parameter of which the value was clearly increasing or decreasing, up to now, the trend icon would incorrectly not be updated to indicate an increase or decrease. From now on, when a small, unlabelled change occurs in a trend graph that clearly increases or decreases, the trend icon will be updated to indicate this.
 
 #### Storage as a Service: Database write operations would not get processed [ID_38112]
 
