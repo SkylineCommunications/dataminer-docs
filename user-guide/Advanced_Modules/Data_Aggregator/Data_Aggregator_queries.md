@@ -26,6 +26,9 @@ To get a correctly configured query, you can make use of the DataMiner Dashboard
 
    `POST https://dataminer.company.local/API/v1/Internal.asmx/ConvertQueryToProtoJson`
 
+   > [!NOTE]
+   > Replace `dataminer.company.local` with the hostname or IP address of your DataMiner Agent.
+
    with payload:
 
    > ``` json
