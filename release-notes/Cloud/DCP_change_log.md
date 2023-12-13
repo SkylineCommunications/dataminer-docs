@@ -6,6 +6,10 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 13 December 2023 - New Feature - Email notifications for expiring and expired DataMiner Express DaaS systems [ID_38183]
+
+From now onwards, when a DataMiner Express DaaS system is about to expire an email notification will be sent to the owners of the organization and the person who deployed the DaaS system, so that they can take action if this is not intended. Another notication will be sent when the DataMiner Express DaaS system is actually being deleted.
+
 #### 6 December 2023 - New Feature - Remote Access setting is now checked for user-defined API access [ID_38102]
 
 Users will now only be able to access a user-defined API using the remote access URL if the Remote Access setting is enabled in the Admin app.
