@@ -120,11 +120,23 @@ From now on, as long as the default template has not been created yet, a loading
 
 When you changed the color theme of a component, the change would incorrectly only get applied after a reload. Now, the change will be applied instantly.
 
+#### Dashboards app & Low-Code Apps: Data would incorrectly not be refetched after changing the visualization of a component [ID_38094]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+When you changed the visualization of a component showing data fetched by a GQI query, the data would incorrectly not be refetched.
+
 #### Low-Code Apps - Node edge component: Script action dummies would not be filled in [ID_38106]
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
 
 When an Automation script action using dummies was linked to a node of a node edge component, up to now, the dummies incorrectly would not get filled in automatically. From now on, they will be filled in automatically when the node matches the dummy type.
+
+#### Low-Code Apps: Problem with input validation when using interactive Automation scripts [ID_38111]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+When an interactive Automation script was used in a low-code app, input validation would not work correctly. When a validation failed, the border of the input field would turn red, but the corresponding error text would not be displayed.
 
 #### Dashboards app & Low-Code Apps: Timeline component would apply incorrect colors [ID_38130]
 
@@ -139,3 +151,9 @@ In some cases, a timeline component would apply incorrect colors.
 Up to now, a feed value would never be cleared after being sent to be used in actions.
 
 For example, when a feed was used in a script action parameter, the last feed value would always be inserted, even when the feed was no longer present when the action was executed.
+
+#### Low-Code Apps: Subheader would overlap the page [ID_38144]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+In a low-code app, the subheader would overlap the contents of a page. From now on, it will be displayed above the page.
