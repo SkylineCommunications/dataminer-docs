@@ -213,3 +213,15 @@ Resources would not always be released correctly, causing some resources to be u
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
 
 When a GQI query had to retrieve a large amount of paged alarms, after a while, a timeout exception would be thrown even though none of the paged requests had timed out.
+
+#### Behavioral anomaly detection: Unlabelled changes would incorrect have no effect on the trend icon [ID_38105]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+When unlabelled changes were detected in the behavior of a trend, the trend icon would incorrectly not be updated to reflect those changes.
+
+#### Storage as a Service: Database write operations would not get processed [ID_38112]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+In some rare cases, a database write operation could incorrectly remain stuck in an internal queue and would never get processed.

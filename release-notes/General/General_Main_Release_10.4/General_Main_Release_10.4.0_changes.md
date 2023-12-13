@@ -1057,3 +1057,15 @@ When you tried to start a migration of an on-premises database to a DataMiner St
 <!-- MR 10.4.0 - FR 10.4.1 [CU0] -->
 
 In some cases, the DataMiner Storage Module could leak threads.
+
+#### Behavioral anomaly detection: Unlabelled changes would incorrect have no effect on the trend icon [ID_38105]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+When unlabelled changes were detected in the behavior of a trend, the trend icon would incorrectly not be updated to reflect those changes.
+
+#### Storage as a Service: Database write operations would not get processed [ID_38112]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+In some rare cases, a database write operation could incorrectly remain stuck in an internal queue and would never get processed.
