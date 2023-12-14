@@ -20,6 +20,9 @@ uid: Creating_a_DMS_on_dataminer_services
 
 1. Select the *Organization* under which you want to register the DataMiner System.
 
+   > [!NOTE]
+   > If the organization is not available yet in the dropdown list, you can add a new organization by clicking *Create new*. You will be able to specify the name and the URL for the organization. Note that in the URL of the organization only lowercase alphanumerical characters (a-z and 0-9) are allowed, and the URL cannot consist of numbers only.
+
 1. Enter a *DataMiner System Name*.
 
 1. Enter a custom *DataMiner System URL* if you want the URL to be different from the *DataMiner System Name*.
