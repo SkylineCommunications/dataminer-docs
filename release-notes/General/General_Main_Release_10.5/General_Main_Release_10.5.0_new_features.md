@@ -23,6 +23,14 @@ When a DataMiner Agent is upgraded to version 10.5.0/10.4.1 or above, the *Broke
 
 This new DxM, which is currently still under development, is intended to manage all NATS configurations.
 
+#### SLNetTypes and SLGlobal now support a new AlarmTreeID/SLAlarmTreeKey object [ID_37950]
+
+<!-- MR 10.5.0 - FR 10.4.2 -->
+
+The *SLNetTypes* and *SLGlobal* implementations have been updated to support a new *AlarmTreeID/SLAlarmTreeKey* object, which can used to refer to an alarm tree. This new object was created in order to support alarm ID ranges per element rather than per DataMiner Agent, a feature that is still in progress.
+
+Also, a number of client messages have been adapted to support passing this new *AlarmTreeID/SLAlarmTreeKey* object, and a number of existing properties have been marked as obsolete.
+
 ### Service & Resource Management
 
 #### ResourceManagerHelper & ServiceManagerHelper: New Count methods [ID_37885]
