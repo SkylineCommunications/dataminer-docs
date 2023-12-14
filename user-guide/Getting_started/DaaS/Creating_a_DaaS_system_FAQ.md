@@ -23,6 +23,9 @@ Contact [your Account Manager](https://community.dataminer.services/get-in-touch
 
 Your DaaS system along with all its associated resources and data will be irreversibly deleted.
 
+> [!NOTE]
+> If you are the owner of a DaaS system or you deployed a DaaS system, you will get an email notification 5 days before the system expires, so that you can take appropriate action to prevent losing your resources and data.
+
 ### How can I manually delete my DaaS system?
 
 You can delete your DaaS system at any time before its expiration. See [Removing a DaaS system](xref:Removing_a_DaaS_system).
