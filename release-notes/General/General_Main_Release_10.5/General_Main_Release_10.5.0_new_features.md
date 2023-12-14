@@ -23,6 +23,31 @@ When a DataMiner Agent is upgraded to version 10.5.0/10.4.1 or above, the *Broke
 
 This new DxM, which is currently still under development, is intended to manage all NATS configurations.
 
+### Service & Resource Management
+
+#### ResourceManagerHelper & ServiceManagerHelper: New Count methods [ID_37885]
+
+<!-- MR 10.5.0 - FR 10.4.2 -->
+
+The *ResourceManagerHelper* and *ServiceManagerHelper* now include the following *Count* methods that will allow you to count objects using a filter.
+
+- ServiceManagerHelper:
+
+  - CountServiceDefinitions(filter)
+
+- ResourceManageHelper:
+
+  - CountResources(filter)
+  - CountResourcePools(filter)
+  - CountReservationInstances(filter)
+
+Example:
+
+```csharp
+var resourceManagerHelper = new ResourceManagerHelper(engine.SendSLNetSingleResponseMessage);
+var count = resourceManagerHelper.CountResources(ResourceExposers.Name.Contains("name"));
+```
+
 ### DataMiner modules
 
 #### User-defined APIs: Query string support [ID_37733]

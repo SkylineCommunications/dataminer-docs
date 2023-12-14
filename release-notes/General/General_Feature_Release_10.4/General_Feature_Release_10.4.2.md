@@ -22,7 +22,28 @@ uid: General_Feature_Release_10.4.2
 
 ## New features
 
-*No new features have been added yet.*
+#### Service & Resource Management - ResourceManagerHelper & ServiceManagerHelper: New Count methods [ID_37885]
+
+<!-- MR 10.5.0 - FR 10.4.2 -->
+
+The *ResourceManagerHelper* and *ServiceManagerHelper* now include the following *Count* methods that will allow you to count objects using a filter.
+
+- ServiceManagerHelper:
+
+  - CountServiceDefinitions(filter)
+
+- ResourceManageHelper:
+
+  - CountResources(filter)
+  - CountResourcePools(filter)
+  - CountReservationInstances(filter)
+
+Example:
+
+```csharp
+var resourceManagerHelper = new ResourceManagerHelper(engine.SendSLNetSingleResponseMessage);
+var count = resourceManagerHelper.CountResources(ResourceExposers.Name.Contains("name"));
+```
 
 ## Changes
 
