@@ -220,6 +220,12 @@ Resources would not always be released correctly, causing some resources to be u
 
 When a GQI query had to retrieve a large amount of paged alarms, after a while, a timeout exception would be thrown even though none of the paged requests had timed out.
 
+#### SLAnalytics: Problem when ArrowCalculator worker was stopped immediately after it was started [ID_38072]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+In some cases, an error could occur in SLAnalytics when the *ArrowCalculator* worker was stopped immediately after it was started.
+
 #### Behavioral anomaly detection: Unlabelled changes would cause the trend icon to not be updated [ID_38105]
 
 <!-- MR 10.4.0 - FR 10.4.2 -->

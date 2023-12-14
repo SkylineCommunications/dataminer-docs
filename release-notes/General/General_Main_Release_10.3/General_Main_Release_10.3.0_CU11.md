@@ -140,3 +140,9 @@ The compliancies cache in SLNet, which keeps track of the minimum required versi
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
 
 When a GQI query had to retrieve a large amount of paged alarms, after a while, a timeout exception would be thrown even though none of the paged requests had timed out.
+
+#### SLAnalytics: Problem when ArrowCalculator worker was stopped immediately after it was started [ID_38072]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+In some cases, an error could occur in SLAnalytics when the *ArrowCalculator* worker was stopped immediately after it was started.
