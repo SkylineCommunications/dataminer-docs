@@ -20,9 +20,15 @@ uid: Creating_a_DMS_on_dataminer_services
 
 1. Select the *Organization* under which you want to register the DataMiner System.
 
+   > [!NOTE]
+   > If the organization is not available yet in the dropdown list, you can add a new organization by clicking *Create new*. You will be able to specify the name and the URL for the organization. Note that in the URL of the organization only lowercase alphanumerical characters (a-z and 0-9) are allowed, and the URL cannot consist of numbers only.
+
 1. Enter a *DataMiner System Name*.
 
 1. Enter a custom *DataMiner System URL* if you want the URL to be different from the *DataMiner System Name*.
+
+   > [!NOTE]
+   > Only lowercase alphanumerical characters (a-z and 0-9) are allowed in the URL, and it cannot consist of numbers only.
 
 1. Enter a username and password for your DataMiner account.
 
@@ -35,6 +41,5 @@ uid: Creating_a_DMS_on_dataminer_services
 
 > [!NOTE]
 >
-> - In the *Organization*, *DataMiner System Name*, and *DataMiner System URL* fields, only lowercase alphanumerical characters (a-z and 0-9) are allowed. These fields cannot be filled in with numbers only.
 > - It is possible to create a DaaS system as a staging system. Our Pay-per-Use model is used for this. For detailed information, see [DataMiner Express](xref:Pricing_Commercial_Models#dataminer-express).
 > - When you create a DaaS system, your dataminer.services account will automatically be linked to your DataMiner account, so you can easily access DataMiner web apps such as the Monitoring app via remote access.
