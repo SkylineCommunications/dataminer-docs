@@ -172,6 +172,12 @@ Also, when the NATS configuration is reset, the DMS IP addresses will now be col
 
 ### Fixes
 
+#### PropertyConfiguration.xml: New properties could incorrectly be assigned an existing property ID [ID_37596]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+When, in a client application (e.g. DataMiner Cube) you created a new custom property, in some cases, that new property would incorrectly be assigned an ID that had already been assigned to another, existing property.
+
 #### SLDataGateway: Problem with casing when retrieving data from Elasticsearch/OpenSearch [ID_37835]
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->

@@ -1016,6 +1016,12 @@ When reading data from the database page by page, in some cases, the operation w
 
 In some cases, a newly created element could get assigned the same DmaId/ElementId key as another, already existing element on another DataMiner Agent in the cluster. From now on, this will be prevented as long as the DataMiner Agents in questions can communicate with each other.
 
+#### PropertyConfiguration.xml: New properties could incorrectly be assigned an existing property ID [ID_37596]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+When, in a client application (e.g. DataMiner Cube) you created a new custom property, in some cases, that new property would incorrectly be assigned an ID that had already been assigned to another, existing property.
+
 #### Storage as a Service: Every agent in the DMS would send the average trend data to the cloud during a migration [ID_37717]
 
 <!-- MR 10.4.0 - FR 10.3.12 -->
