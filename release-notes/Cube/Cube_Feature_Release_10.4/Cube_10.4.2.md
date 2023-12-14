@@ -22,7 +22,7 @@ uid: Cube_Feature_Release_10.4.2
 
 ### Enhancements
 
-#### DataMiner Cube - Visual Overview: Enhanced performance when opening a visual overview with a large amount of shapes that link to a webpage [ID_37799]
+#### Visual Overview: Enhanced performance when opening a visual overview with a large amount of shapes that link to a webpage [ID_37799]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
 
@@ -40,13 +40,21 @@ Overall memory handling when closing cards has been optimized.
 
 From now on, all alarm tabs listing suggestion events will behave like alarm tabs listing active alarms, i.e. the *Automatically remove cleared alarms* option will be enabled by default, except for alarm tabs listing historical alarms or information events.
 
-#### DataMiner Cube - Search: Request to initialize client indexing will only be sent when the user has AdminTools permission [ID_38090]
+#### Search: Request to initialize client indexing will only be sent when the user has AdminTools permission [ID_38090]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
 
 When, in *System Center > Search & Indexing*, the *Enable search indexing on the client* option was enabled, up to now, DataMiner Cube would send a message to the DataMiner Agent requesting to initialize client indexing, regardless of whether or not the user had *Admin tools* permission (*Modules > System configuration > Tools*). When the user had not been granted this permission, an `Exception occurred while receiving search options` error would be logged.
 
 From now on, before it sends the message in question to the DataMiner Agent, DataMiner Cube will first check whether the user has *Admin tools* permission. If not, it will not send the message.
+
+#### Alarm Console: Enhanced performance when loading history alarms of a view, a service or an element dragged onto the Alarm Console [ID_38141]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
+
+Up to now, when you dragged a view, a service or an element onto the Alarm Console, and indicated that you wanted history alarms of that view, service or element to be loaded, it could take a long time for those alarms to get loaded.
+
+Because of a number of enhancements, overall performance has increased when loading the history alarms of a view, a service or an element dragged onto the Alarm Console.
 
 ### Fixes
 
@@ -66,7 +74,7 @@ See also: [Linking a shape to a booking](xref:Linking_a_shape_to_a_booking)
 
 When, in a view card, you selected a large number of elements and/or services and then right-clicked, in some cases, Cube could become unresponsive.
 
-#### DataMiner Cube - Automation: Save button would incorrectly not be enabled after renaming an Automation script [ID_37987]
+#### Automation: Save button would incorrectly not be enabled after renaming an Automation script [ID_37987]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11] - FR 10.4.2 -->
 
@@ -94,7 +102,7 @@ From now on, when you right-click inside a visual overview linked to a service, 
 
 When a card in tab layout was closed before it had fully been loaded, DataMiner Cube could leak memory due to list boxes not being cleared from memory.
 
-#### DataMiner Cube: Memory leaks when opening/closing alarm cards and 'Alarm Console' or 'Cube sides' section of the 'Settings' window [ID_38054]
+#### Memory leaks when opening/closing alarm cards and 'Alarm Console' or 'Cube sides' section of the 'Settings' window [ID_38054]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
 
@@ -106,7 +114,7 @@ DataMiner Cube would leak memory each time you opened and closed an alarm card a
 
 DataMiner Cube would leak memory each time you opened the *About* window.
 
-#### DataMiner Cube - System Center: Memory leak in Update Center window [ID_38056]
+#### System Center: Memory leak in Update Center window [ID_38056]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
 

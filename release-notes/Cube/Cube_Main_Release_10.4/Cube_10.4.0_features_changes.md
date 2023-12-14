@@ -223,7 +223,7 @@ To do so, right-click a resource in the list, and select *Duplicate*.
 
 - If you make a duplicate of a function resource, the instance dropdown will be left empty and the name of the function instance will be the name of the original function instance with the suffix `- copy`.
 
-#### DataMiner Cube - Alarm Console: Special Elasticsearch search box always visible on systems with a Cassandra Cluster database [ID_36735]
+#### Alarm Console: Special Elasticsearch search box always visible on systems with a Cassandra Cluster database [ID_36735]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
@@ -369,7 +369,7 @@ Only upon releasing the left mouse button will the unknown part of the trace be 
 > [!IMPORTANT]
 > This feature is only available if the spectrum protocol includes the *Reference level* parameter.
 
-#### DataMiner Cube - Visual Overview: Enhanced performance when opening a visual overview with a large amount of shapes that link to a webpage [ID_37799]
+#### Visual Overview: Enhanced performance when opening a visual overview with a large amount of shapes that link to a webpage [ID_37799]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
 
@@ -557,13 +557,21 @@ The style of the toggle buttons in the *Included* and *Anomalies* columns of the
 
 From now on, when DataMiner Cube has to download the CefSharp package from a DataMiner Agent, it will first try to download it via HTTPS, and if HTTPS is not configured, it will try again via HTTP.
 
-#### DataMiner Cube - Search: Request to initialize client indexing will only be sent when the user has AdminTools permission [ID_38090]
+#### Search: Request to initialize client indexing will only be sent when the user has AdminTools permission [ID_38090]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
 
 When, in *System Center > Search & Indexing*, the *Enable search indexing on the client* option was enabled, up to now, DataMiner Cube would send a message to the DataMiner Agent requesting to initialize client indexing, regardless of whether or not the user had *Admin tools* permission (*Modules > System configuration > Tools*). When the user had not been granted this permission, an `Exception occurred while receiving search options` error would be logged.
 
 From now on, before it sends the message in question to the DataMiner Agent, DataMiner Cube will first check whether the user has *Admin tools* permission. If not, it will not send the message.
+
+#### Alarm Console: Enhanced performance when loading history alarms of a view, a service or an element dragged onto the Alarm Console [ID_38141]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
+
+Up to now, when you dragged a view, a service or an element onto the Alarm Console, and indicated that you wanted history alarms of that view, service or element to be loaded, it could take a long time for those alarms to get loaded.
+
+Because of a number of enhancements, overall performance has increased when loading the history alarms of a view, a service or an element dragged onto the Alarm Console.
 
 ### Fixes
 
@@ -654,7 +662,7 @@ Processing of property updates has now been improved. `[property:]` placeholders
 
 When you opened a trend graph for a parameter on which a specific multivariate pattern had not been created, and the subpatterns of the pattern were all for the same protocol, a problem could occur when loading all parameters for the multivariate pattern.
 
-#### DataMiner Cube: Failing to connect to a DataMiner Agent at startup when using .NET Remoting [37022]
+#### Failing to connect to a DataMiner Agent at startup when using .NET Remoting [37022]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
@@ -720,7 +728,7 @@ When you panned a trend graph, in some cases, the graph would suddenly disappear
 > [!NOTE]
 > From now on, trending errors will also be logged in the main Cube logging (*System Center > Logging*).
 
-#### DataMiner Cube - Automation: Save button would incorrectly not be enabled after renaming an Automation script [ID_37987]
+#### Automation: Save button would incorrectly not be enabled after renaming an Automation script [ID_37987]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11] - FR 10.4.2 -->
 
@@ -734,7 +742,7 @@ When, in DataMiner Cube, you right-clicked inside a visual overview linked to a 
 
 From now on, when you right-click inside a visual overview linked to a service, the context menu will only allow you to edit the visual overview when you have permission to edit that specific service (on top of the permission to edit services in general and the permission to access and edit visual overviews).
 
-#### DataMiner Cube: Memory leaks when opening/closing alarm cards and 'Alarm Console' or 'Cube sides' section of the 'Settings' window [ID_38054]
+#### Memory leaks when opening/closing alarm cards and 'Alarm Console' or 'Cube sides' section of the 'Settings' window [ID_38054]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
 
@@ -746,7 +754,7 @@ DataMiner Cube would leak memory each time you opened and closed an alarm card a
 
 DataMiner Cube would leak memory each time you opened the *About* window.
 
-#### DataMiner Cube - System Center: Memory leak in Update Center window [ID_38056]
+#### System Center: Memory leak in Update Center window [ID_38056]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
 
