@@ -23,6 +23,9 @@ Contact [your Account Manager](https://community.dataminer.services/get-in-touch
 
 Your DaaS system along with all its associated resources and data will be irreversibly deleted.
 
+> [!NOTE]
+> If you are an owner of the organization of a DaaS system or you deployed a DaaS system, you will get an email notification if your system is about to expire, for example because you do not have enough DataMiner credits left. Depending on how many DataMiner credits you use for other purposes, you will get this notification up to 5 days before the system expires. Another email notification will be sent when the system effectively expires.
+
 ### How can I manually delete my DaaS system?
 
 You can delete your DaaS system at any time before its expiration. See [Removing a DaaS system](xref:Removing_a_DaaS_system).
