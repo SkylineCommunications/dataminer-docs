@@ -69,7 +69,7 @@ Cassandra Reaper is an application that can manage Cassandra cluster repairs on 
 
    For more information on the different options, refer to the [Reaper documentation](http://cassandra-reaper.io/docs/configuration/).
   
-1. Enable automatic startup of the Reaper service:
+1. Run the following command to enable automatic startup of the Reaper service:
 
    `$ systemctl enable cassandra-reaper.service`
 
