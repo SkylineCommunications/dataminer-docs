@@ -573,6 +573,9 @@ Up to now, when you dragged a view, a service or an element onto the Alarm Conso
 
 Because of a number of enhancements, overall performance has increased when loading the history alarms of a view, a service or an element dragged onto the Alarm Console.
 
+> [!NOTE]
+> When indicating that an alarm tab should list history alarms, it is no longer possible to select the *Show masked alarms* option. From now on, all masked alarms will automatically be included when history alarms are loaded.
+
 ### Fixes
 
 #### Profiles app: A profile instance would incorrectly list parameters that had been removed from the profile definition [ID_34679] [ID_34771]
