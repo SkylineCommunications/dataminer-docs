@@ -50,6 +50,14 @@ Every 10 seconds, resources that have not been referenced in the last 30 seconds
 
 TTL-based rollover for the CustomData and LoggerTables storage types is now disabled.
 
+#### SLAnalytics - Proactive cap detection: Cleanup of all proactive suggestion events at startup [ID_38004]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+Up to now, after a restart of the SLAnalytics process, it could occur that a number of open proactive suggestion events were still left on the system. These would then remain open indefinitely unless a user would manually clear them.
+
+From now on, all proactive suggestion events will be cleared when the proactive cap detection mechanism is started, and trend alarm records will no longer be stored in the Cassandra database.
+
 #### Security enhancements [ID_38040]
 
 <!-- 38040: MR 10.3.0 [CU11] - FR 10.4.2 -->
