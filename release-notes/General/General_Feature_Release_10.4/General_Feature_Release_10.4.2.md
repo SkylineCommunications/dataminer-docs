@@ -135,11 +135,11 @@ From now on, the size of SNMPv3 responses will no longer be limited, meaning tha
 > [!NOTE]
 > When sending SNMPv3 messages, the size of those messages is still limited to 16000 bytes.
 
-#### Service & Resource Management: Migrating profiles and resources is no longer supported [ID_37979]
+#### Service & Resource Management: Migrating profiles and resources from XML to Elasticsearch/OpenSearch is no longer supported [ID_37979]
 
 <!-- MR 10.5.0 - FR 10.4.2 -->
 
-As storing profiles and resources in XML files is no longer supported as from DataMiner 10.4.0/10.4.1, migrating profiles and resources is now no longer supported as well. If you need to migrate profiles and resources, do so before you upgrade to version 10.4.0.
+As storing profiles and resources in XML files is no longer supported as from DataMiner 10.4.0/10.4.1, migrating profiles and resources from XML to Elasticsearch/OpenSearch is now no longer supported as well. If you need to migrate profiles and resources, do so before you upgrade to version 10.4.0.
 
 Also, the *NotAllClusterAgentsReachable* error in ResourceManager is now considered obsolete and will no longer be returned.
 
@@ -192,6 +192,12 @@ For example, from now on, when you sort by A and, later on in the GQI query, sor
 
 A number of security enhancements have been made.
 
+#### SLAnalytics - Behavioral anomaly detection: Number of parameters for which the trend icon will be updated has now been restricted [ID_38041]
+
+<!-- MR 10.5.0 - FR 10.4.2 -->
+
+The number of parameters for which the behavioral anomaly detection feature will update the trend icon has now been restricted to 250,000, which amounts to a maximum data usage of about 330 MB.
+
 #### NATS: All nodes will now be considered primary nodes [ID_38089]
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
@@ -201,14 +207,6 @@ From now on, there will no longer be any primary and secondary NAS configuration
 Also, when the NATS configuration is reset, the DMS IP addresses will now be collected via the online Failover agent.
 
 ### Fixes
-
-#### Problems with SLDataMiner [ID_37409]
-
-<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
-
-SLDataMiner would leak memory when retrieving the baseline values of an element while the relative baseline value was being updated. Also, an error could occur in SLDataMiner after a service had been created, updated or deleted.
-
-Apart from the above-mentioned fixes, overall error logging has also been improved.
 
 #### PropertyConfiguration.xml: New properties could incorrectly be assigned an existing property ID [ID_37596]
 

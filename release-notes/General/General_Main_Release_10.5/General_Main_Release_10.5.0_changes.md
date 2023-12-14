@@ -56,11 +56,11 @@ Parameters IDs in the range of 10,000,000 to 10,999,999 are now reserved for Dat
 
 More extensive information will now be logged when errors occur while retrieving trend data.
 
-#### Service & Resource Management: Migrating profiles and resources is no longer supported [ID_37979]
+#### Service & Resource Management: Migrating profiles and resources from XML to Elasticsearch/OpenSearch is no longer supported [ID_37979]
 
 <!-- MR 10.5.0 - FR 10.4.2 -->
 
-As storing profiles and resources in XML files is no longer supported as from DataMiner 10.4.0/10.4.1, migrating profiles and resources is now no longer supported as well. If you need to migrate profiles and resources, do so before you upgrade to version 10.4.0.
+As storing profiles and resources in XML files is no longer supported as from DataMiner 10.4.0/10.4.1, migrating profiles and resources from XML to Elasticsearch/OpenSearch is now no longer supported as well. If you need to migrate profiles and resources, do so before you upgrade to version 10.4.0.
 
 Also, the *NotAllClusterAgentsReachable* error in ResourceManager is now considered obsolete and will no longer be returned.
 
@@ -69,6 +69,12 @@ Also, the *NotAllClusterAgentsReachable* error in ResourceManager is now conside
 <!-- MR 10.5.0 - FR 10.4.2 -->
 
 It is now possible to read DOM objects and ModuleSettings in parallel. This will considerably improve overall performance.
+
+#### SLAnalytics - Behavioral anomaly detection: Number of parameters for which the trend icon will be updated has now been restricted [ID_38041]
+
+<!-- MR 10.5.0 - FR 10.4.2 -->
+
+The number of parameters for which the behavioral anomaly detection feature will update the trend icon has now been restricted to 250,000, which amounts to a maximum data usage of about 330 MB.
 
 ### Fixes
 
