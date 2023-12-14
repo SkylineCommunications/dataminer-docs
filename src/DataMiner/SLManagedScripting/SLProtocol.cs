@@ -42,7 +42,7 @@ namespace Skyline.DataMiner.Scripting
 		///			<item><description>row[0] (object[]): the row data</description></item>
 		///			<item><description>row[1] (DateTime): the time stamp</description></item>
 		///			</list>
-		///			<code>
+		///			<code language = "csharp">
 		///			int tableID = 1000;
 		///			object rowData = new object[] { "Key 200", "S", "20.20" };
 		///			DateTime timeStamp = DateTime.Now - TimeSpan.FromDays(2);
@@ -2061,13 +2061,11 @@ namespace Skyline.DataMiner.Scripting
 		///	</remarks>
 		///	<example>
 		///	<para>In the following example the parameter with ID 1000 is a table parameter.</para>
-		///	<code language = "xml" >
-		///	<![CDATA[
-		///	<QAction id = "1000" name = "ProcessTable" encoding = "csharp" triggers = "10" inputParameters = "1000" >
-		///	]]>
-		///</code>
-		///<para>In the QAction, the input parameter can then be retrieved as follows:</para>
-		///	<code>
+		///	<code language = "xml">
+		///	&lt;QAction id = "1000" name = "ProcessTable" encoding = "csharp" triggers = "10" inputParameters = "1000"&gt;
+		///	</code>
+		///	<para>In the QAction, the input parameter can then be retrieved as follows:</para>
+		///	<code language = "csharp">
 		///	using Skyline.DataMiner.Scripting;
 		///	
 		/// public class QAction
@@ -2100,16 +2098,12 @@ namespace Skyline.DataMiner.Scripting
 		///	</remarks>
 		///	<example>
 		///	<para>Retrieve row count of input parameter table 1000:</para>
-		///	<para><c>&lt;QAction id = "500" encoding="csharp" triggers="500" inputParameters="1000"&gt;</c></para>
+		///	<para><code language = "xml">&lt;QAction id = "500" encoding="csharp" triggers="500" inputParameters="1000"&gt;</code></para>
 		///	<code>
 		/// using Skyline.DataMiner.Scripting;
 		/// 
 		/// public class QAction
 		/// {
-		///	    /// &lt;summary&gt;
-		///	    /// QAction entry point.
-		///	    /// &lt;/summary&gt;
-		///	    /// &lt;param name="protocol">Link with SLProtocol process.&lt;/param&gt;
 		///	    public static void Run(SLProtocolExt protocol)
 		///	    {
 		///	        object table = protocol.GetInputParameter(0);
@@ -2163,12 +2157,9 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="iRow">The 0-based row index in the table.</param>
 		/// <returns>The row data.</returns>
 		/// <example>
-		///		<para>In the following example parameter 1000 represents a table:</para>
-		///		<code language = "xml" >
-		///		<![CDATA[
-		///		<QAction id = "100" name = "Row Method Example" encoding = "csharp" triggers = "500" inputParameters = "1000">
-		///		]]>
-		///		</code>
+		///	<para>In the following example parameter 1000 represents a table:</para>
+		///	<code language = "xml">&lt;QAction id = "100" name = "Row Method Example" encoding = "csharp" triggers = "500" inputParameters = "1000"&gt;</code>
+		///	<para></para>
 		///	<code language="c#">
 		/// using Skyline.DataMiner.Scripting;
 		/// 
