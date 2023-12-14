@@ -225,9 +225,3 @@ When a GQI query had to retrieve a large amount of paged alarms, after a while, 
 <!-- MR 10.4.0 - FR 10.4.2 -->
 
 When small, unlabelled changes were detected in a trend graph of a parameter of which the value was clearly increasing, decreasing or remaining stable, up to now, the trend icon would incorrectly not be updated to indicate this increasing, decreasing or stable trend. From now on, when a small, unlabelled change occurs in a trend graph that clearly increases, decreases or remains stable, the trend icon will be updated to indicate this.
-
-#### Storage as a Service: Database write operations would not get processed [ID_38112]
-
-<!-- MR 10.4.0 - FR 10.4.2 -->
-
-In some rare cases, a database write operation could incorrectly remain stuck in an internal queue and would never get processed.

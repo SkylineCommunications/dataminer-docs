@@ -1066,6 +1066,6 @@ When small, unlabelled changes were detected in a trend graph of a parameter of 
 
 #### Storage as a Service: Database write operations would not get processed [ID_38112]
 
-<!-- MR 10.4.0 - FR 10.4.2 -->
+<!-- MR 10.4.0 - FR 10.4.1 [CU0] -->
 
 In some rare cases, a database write operation could incorrectly remain stuck in an internal queue and would never get processed.
