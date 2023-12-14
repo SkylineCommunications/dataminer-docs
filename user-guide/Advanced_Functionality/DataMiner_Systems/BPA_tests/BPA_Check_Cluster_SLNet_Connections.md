@@ -75,6 +75,9 @@ These are the messages that can appear when the test fails to execute for unexpe
 
 - The BPA did not receive results from other Agents and thus cannot analyze them.
 
+> [!NOTE]
+> If you get the exception "BPA doesn't have valid signature", this means the BPA test is unsigned. In that case, upgrade DataMiner to resolve this issue.
+
 ## Possible solutions
 
 If potential issues are detected, these checks might save you some time:
