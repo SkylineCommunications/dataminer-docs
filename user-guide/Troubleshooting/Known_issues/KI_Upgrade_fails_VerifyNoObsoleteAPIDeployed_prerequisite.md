@@ -30,7 +30,12 @@ If you want to remove obsolete APIs from your system, follow the steps below. No
 
 When finished, you should only have *Unused Tokens* left in your tree view. This process only needs to be done on one DataMiner Agent in the cluster. The changes will be be synchronized to the rest of the cluster.
 
-![No more Obsolete APIs in System Center in Cube on a 10.3.9 DataMiner](~/user-guide/images/UDAPIS_Migration_2.jpg)
+   ![No more Obsolete APIs in System Center in Cube on a 10.3.9 DataMiner](~/user-guide/images/UDAPIS_Migration_2.jpg)
+
+> [!Note]
+> There is a known issue where APIs are deployed using API Deployment, but are not shown in DataMiner Cube because they are not loaded in. In this case the prerequisite will fail but you will not see any deployed APIs in DataMiner Cube.
+>
+> To workaround this issue, you can remove the *APIDeployment* soft-launch option from the [SoftLaunchOptions.xml](xref:Overview_of_Soft_Launch_Options) file. You will have to do this for every DataMiner agent in the cluster where the prerequisite fails.
 
 ## Issue description
 
