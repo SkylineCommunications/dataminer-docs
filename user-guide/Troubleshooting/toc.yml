@@ -234,8 +234,10 @@ items:
           - name: Setting a protocol to production takes a long time
             topicUid: KI_Setting_a_protocol_to_production_takes_a_long_time
       - name: Resolved issues
-        topicUid: KI_elements_not_loading_in_DMS_with_multiple_ES
+        topicUid: KI_CheckClusterSLNetConnections_unsigned
         items:
+          - name: Check Cluster SLNet Connections BPA test does not have valid signature
+            topicUid: KI_CheckClusterSLNetConnections_unsigned
           - name: Elements not loading after upgrade of DMS with multiple Elasticsearch clusters
             topicUid: KI_elements_not_loading_in_DMS_with_multiple_ES
           - name: Various issues when using MessageBroker with chunking

@@ -7,6 +7,7 @@ uid: Known_issues
 
 | Issue | DataMiner version | Date added |
 |--|--|--|
+| [Check Cluster SLNet Connections BPA test does not have valid signature](xref:KI_CheckClusterSLNetConnections_unsigned) | DataMiner 10.3.0 [CU10]<br>DataMiner 10.4.1 [CU0]| December 14, 2023 |
 | [Upgrade fails because of VerifyNoLegacyReportsDashboards.dll prerequisite](xref:KI_Upgrade_fails_VerifyNoLegacyReportsDashboards_prerequisite) | From DataMiner 10.4.0 onwards | November 23, 2023 |
 | [Upgrade fails because of VerifyElasticStorageTypePrerequisite.dll prerequisite](xref:KI_Upgrade_fails_VerifyElasticStorageType_prerequisite) | From DataMiner 10.4.0 onwards | November 13, 2023 |
 | [Upgrade fails because of VerifyNoObsoleteApiDeployed.dll prerequisite](xref:KI_Upgrade_fails_VerifyNoObsoleteApiDeployed_prerequisite) | From DataMiner 10.4.0 onwards | November 9, 2023 |
