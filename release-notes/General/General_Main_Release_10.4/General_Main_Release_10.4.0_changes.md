@@ -597,6 +597,18 @@ Up to now, when you had created a multivariate pattern containing subpatterns ho
 
 Up to now, a DataMiner using STaaS communicated with the database via TCP/IP ports 443, 5671 and 5672. From now on, it will communicate with the database via port 443 only.
 
+#### New BPA test 'Check Cluster SLNet Connections' [ID_37110]
+
+<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
+<!-- Removed from 10.3.0 [CU10] based on feedback from KDG -->
+
+When run on a particular Agent in a DataMiner System, this new BPA test will trigger a local test on each Agent in the DMS that will
+
+- check the connections between the different DMAs and between the DMAs in Failover setups, and
+- report any communication problems.
+
+For more information, see [Check Cluster SLNet Connections](xref:BPA_Check_Cluster_SLNet_Connections).
+
 #### DataMiner Object Models: Generic enum field descriptors now allow you to select multiple values [ID_37482]
 
 <!-- MR 10.4.0 - FR 10.4.1 -->
