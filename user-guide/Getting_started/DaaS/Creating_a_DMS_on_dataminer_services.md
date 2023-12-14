@@ -24,6 +24,9 @@ uid: Creating_a_DMS_on_dataminer_services
 
 1. Enter a custom *DataMiner System URL* if you want the URL to be different from the *DataMiner System Name*.
 
+   > [!NOTE]
+   > Only lowercase alphanumerical characters (a-z and 0-9) are allowed in the URL, and it cannot consist of numbers only.
+
 1. Enter a username and password for your DataMiner account.
 
    > [!IMPORTANT]
