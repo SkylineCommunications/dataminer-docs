@@ -56,6 +56,14 @@ Parameters IDs in the range of 10,000,000 to 10,999,999 are now reserved for Dat
 
 More extensive information will now be logged when errors occur while retrieving trend data.
 
+#### Service & Resource Management: Migrating profiles and resources is no longer supported [ID_37979]
+
+<!-- MR 10.5.0 - FR 10.4.2 -->
+
+As storing profiles and resources in XML files is no longer supported as from DataMiner 10.4.0/10.4.1, migrating profiles and resources is now no longer supported as well. If you need to migrate profiles and resources, do so before you upgrade to version 10.4.0.
+
+Also, the *NotAllClusterAgentsReachable* error in ResourceManager is now considered obsolete and will no longer be returned.
+
 #### DataMiner Object Models: Reading DOM objects and ModuleSettings in parallel [ID_38023]
 
 <!-- MR 10.5.0 - FR 10.4.2 -->

@@ -13,6 +13,7 @@ uid: Web_apps_Feature_Release_10.4.1
 ## Highlights
 
 - [Dashboards app & Low-Code Apps: New Grid and Timeline components [ID_33276] [ID_33287] [ID_34761] [ID_34948] [ID_37269] [ID_37699] [ID_37812]](#dashboards-app--low-code-apps-new-grid-and-timeline-components-id_33276-id_33287-id_34761-id_34948-id_37269-id_37699-id_37812)
+- [Dashboards app & Low-Code Apps - Table component: Customizing the appearance of a column [ID_37522]](#dashboards-app--low-code-apps---table-component-customizing-the-appearance-of-a-column-id_37522)
 - [Low-Code Apps: Duplicating low-code apps [ID_37698] [ID_37724]](#low-code-apps-duplicating-low-code-apps-id_37698-id_37724)
 - [Dashboards app & Low-Code Apps: Duplicating GQI queries [ID_37739]](#dashboards-app--low-code-apps-duplicating-gqi-queries-id_37739)
 - [Dashboards app & Low-Code Apps: Configuring custom operators [ID_37840]](#dashboards-app--low-code-apps-configuring-custom-operators-id_37840)

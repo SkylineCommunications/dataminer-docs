@@ -135,6 +135,14 @@ From now on, the size of SNMPv3 responses will no longer be limited, meaning tha
 > [!NOTE]
 > When sending SNMPv3 messages, the size of those messages is still limited to 16000 bytes.
 
+#### Service & Resource Management: Migrating profiles and resources is no longer supported [ID_37979]
+
+<!-- MR 10.5.0 - FR 10.4.2 -->
+
+As storing profiles and resources in XML files is no longer supported as from DataMiner 10.4.0/10.4.1, migrating profiles and resources is now no longer supported as well. If you need to migrate profiles and resources, do so before you upgrade to version 10.4.0.
+
+Also, the *NotAllClusterAgentsReachable* error in ResourceManager is now considered obsolete and will no longer be returned.
+
 #### Enhanced performance when compiling QActions in SLScripting [ID_37993]
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
