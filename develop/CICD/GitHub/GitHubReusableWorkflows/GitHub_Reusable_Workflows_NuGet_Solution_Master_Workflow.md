@@ -102,8 +102,7 @@ Searches for any project ending with Tests or UnitTests and will then attempt to
 Performs static code analysis using [SonarCloud](https://www.sonarsource.com/products/sonarcloud/). This will check for common errors and bugs found within C# code, track code coverage of your tests, and ensure clean code guidelines.
 
 > [!NOTE]
-> For public repositories, the analysis step uses the SONAR_TOKEN organization secret. For private repositories, you'll need to create a repository secret with name SONAR_TOKEN (as private repositories can't access the organization secret).
-> The value of the secret is an API token that can be created in SonarCloud under the [Security](https://sonarcloud.io/account/security) tab of the account settings.
+> For public repositories, the analysis step uses the SONAR_TOKEN organization secret. For private repositories, you will need to create a repository secret with name SONAR_TOKEN (as private repositories cannot access the organization secret). The value of the secret is an API token that can be created in SonarCloud under the [Security](https://sonarcloud.io/account/security) tab of the account settings.
 
 ### Quality gate
 
