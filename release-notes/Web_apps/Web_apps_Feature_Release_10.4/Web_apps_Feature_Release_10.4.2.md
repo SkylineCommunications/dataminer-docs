@@ -157,3 +157,9 @@ For example, when a feed was used in a script action parameter, the last feed va
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
 
 In a low-code app, the subheader would overlap the contents of a page. From now on, it will be displayed above the page.
+
+#### Dashboards app & Low-Code Apps: Line & area chart would not render aggregation parameters correctly [ID_38166]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+A Line & area chart with multiple aggregation parameters would not render those parameters correctly. Only one line would be shown, and the legend would not show any labels.
