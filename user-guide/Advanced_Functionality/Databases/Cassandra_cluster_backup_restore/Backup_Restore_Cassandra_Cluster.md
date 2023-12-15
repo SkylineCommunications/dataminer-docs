@@ -99,47 +99,58 @@ Execute the following steps on each node in the cluster:
    1. `$ sudo apt update`
    1. `$ sudo apt install python3-pip`
 
-1. Install Medusa, follow the [installation guide on GitHub](https://github.com/thelastpickle/cassandra-medusa/blob/master/docs/Installation.md)
+1. Install Medusa. For detailed instructions, see the [installation guide on GitHub](https://github.com/thelastpickle/cassandra-medusa/blob/master/docs/Installation.md).
 
-1. To configure Medusa, create the */etc/medusa* directory if it doesn't exist and create the file */etc/medusa/medusa.ini*. For detailed configuration information, refer to the [Configure Medusa on GitHub](https://github.com/thelastpickle/cassandra-medusa/blob/master/docs/Configuration.md).
+1. Create the */etc/medusa* directory if it does not exist yet, and create the */etc/medusa/medusa.ini* file. For more detailed information, go to [Configure Medusa on GitHub](https://github.com/thelastpickle/cassandra-medusa/blob/master/docs/Configuration.md).
 
-    - Create Directory: `$ sudo mkdir -p /etc/medusa/`
-    - Create file: `$ sudo touch /etc/medusa/medusa.ini`
+   1. Create the directory by running the following command: `$ sudo mkdir -p /etc/medusa/`
+   1. Create the file by running the following command: `$ sudo touch /etc/medusa/medusa.ini`
+   1. Ensure the following properties are configured:
 
-   Ensure the following properties are configured:
+      - Cassandra:
 
-   - Cassandra:
         - *config_file*
         - CQL credentials
-            - *cql_username*
-            - *cql_password*
-        - nodetool credentials
-            - *nodetool_username*
-            - *nodetool_password*
 
-   - Storage:
-       - *storage_provider*
-       - *bucket_name*
-       - *base_path*
+          - *cql_username*
+          - *cql_password*
 
-   - SSH:
-       - *key_file*(Path to the rsa private key)
-       - *port*
+        - nodetool credentials:
+
+          - *nodetool_username*
+          - *nodetool_password*
+
+      - Storage:
+
+        - *storage_provider*
+        - *bucket_name*
+        - *base_path*
+
+      - SSH:
+
+        - *key_file*(path to the rsa private key)
+        - *port*
 
 ## Taking a backup using Medusa
 
-1. [Take a backup](https://github.com/thelastpickle/cassandra-medusa/blob/master/docs/Performing-backups.md), choose whether to take a single node backup or a cluster backup.
+1. [Take a backup](https://github.com/thelastpickle/cassandra-medusa/blob/master/docs/Performing-backups.md).
 
-   - Taking a full backup of a single node: `$ medusa backup --backup-name=<name of the backup> --mode=full`
+   Choose whether to take a single node backup or a cluster backup.
 
-   - Taking a full backup of a cluster: `$ medusa backup-cluster --backup-name=<name of the backup> --mode=full`
+   - To take a full backup of a single node, run the following command:
+
+     `$ medusa backup --backup-name=<name of the backup> --mode=full`
+
+   - To take a full backup of a cluster, run the following command:
+
+     `$ medusa backup-cluster --backup-name=<name of the backup> --mode=full`
 
 1. Verify that the backup is taken for every node in the cluster. The location of the backup is *base_path*/*bucket_name*.
 
 ## Restoring a backup using Medusa
 
-Select your preference:
+You can restore a full cluster or a single node.
 
-- [Restore a full cluster](https://github.com/thelastpickle/cassandra-medusa/blob/master/docs/Restoring-a-full-cluster.md)
+- To restore a full cluster, see [Restoring a full cluster](https://github.com/thelastpickle/cassandra-medusa/blob/master/docs/Restoring-a-full-cluster.md)
 
-- [Restore a single node](https://github.com/thelastpickle/cassandra-medusa/blob/master/docs/Restoring-a-single-node.md)
+- To restore a single node, see [Restoring a single node](https://github.com/thelastpickle/cassandra-medusa/blob/master/docs/Restoring-a-single-node.md)
