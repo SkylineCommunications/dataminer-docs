@@ -315,8 +315,10 @@ In some cases, SLAnalytics could partially get stuck when the trend icon calcula
 
 When small, unlabelled changes were detected in a trend graph of a parameter of which the value was clearly increasing, decreasing or remaining stable, up to now, the trend icon would incorrectly not be updated to indicate this increasing, decreasing or stable trend. From now on, when a small, unlabelled change occurs in a trend graph that clearly increases, decreases or remains stable, the trend icon will be updated to indicate this.
 
-#### BPA test 'Check Cluster SLNet Connections' did not have valid signature [ID_38201]
+#### BPA test 'Check Cluster SLNet Connections' did not have valid signature [ID_38201] [ID_38208]
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
 
 When you ran the BPA test 'Check Cluster SLNet Connections', this failed with the exception message `BPA doesn’t have a valid signature`. The BPA has now been signed correctly, so this issue will no longer occur.
+
+From now on, this test will be run daily on every Agent in a DataMiner System.
