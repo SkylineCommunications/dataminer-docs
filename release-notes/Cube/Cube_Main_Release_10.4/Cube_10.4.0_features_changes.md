@@ -576,6 +576,12 @@ Because of a number of enhancements, overall performance has increased when load
 > [!NOTE]
 > When indicating that an alarm tab should list history alarms, it is no longer possible to select the *Show masked alarms* option. From now on, all masked alarms will automatically be included when history alarms are loaded.
 
+#### Data Display: Enhanced performance when loading partial tables [ID_38155]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
+
+Because of a number of enhancements, overall performance has increased when loading partial tables in DataMiner Cube.
+
 ### Fixes
 
 #### Profiles app: A profile instance would incorrectly list parameters that had been removed from the profile definition [ID_34679] [ID_34771]
