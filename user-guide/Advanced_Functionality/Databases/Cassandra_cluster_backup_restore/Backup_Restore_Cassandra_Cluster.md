@@ -15,10 +15,12 @@ Medusa serves as an Apache Cassandra backup system, offering a command-line inte
 
 ## Configuring the firewall and generating SSH keys
 
-We will set up the backup configuration on one of the nodes in the cluster, establishing a connection from this node to the remaining nodes during backup execution. Hence, it is crucial that all nodes within the cluster can communicate through the SSH port (default port 22). The following steps provide details on how to enable SSH access.
+The backup is configured on one of the nodes in the cluster. That node will then connect to the other nodes when a backup is performed. Therefore, it is crucial that all nodes within the cluster can communicate through the SSH port (default port 22).
+
+See below for detailed instructions on how to enable SSH access.
 
 > [!IMPORTANT]
-> This documentation assumes that you have activated the firewall, and port 22 has been opened following our recommendation in [Installing Cassandra on a Linux machine](xref:Installing_Cassandra). If the firewall is currently disabled, please refer to section 2 of the aforementioned documentation first and ensure that the firewall permits traffic on ports 7000, 7001, and 9042 before proceeding with the backup configuration.
+> This documentation assumes that you have activated the firewall, and that port 22 has been opened following the recommendation found in [Installing Cassandra on a Linux machine](xref:Installing_Cassandra). If the firewall is disabled, please refer to step 2 of [Installing Cassandra on a Linux machine](xref:Installing_Cassandra) first, and ensure that the firewall permits traffic on ports 7000, 7001 and 9042 before proceeding with the backup configuration.
 
 1. Configure each node to allow access to port 22 from each node in the cluster.
 
@@ -33,61 +35,69 @@ We will set up the backup configuration on one of the nodes in the cluster, esta
      `$ sudo ufw allow from [IP node 1] to [IP node 2] proto tcp port 22`
 
      `$ sudo ufw allow from [IP node 3] to [IP node 2] proto tcp port 22`
+
    - Example of commands on node 3:
 
      `$ sudo ufw allow from [IP node 1] to [IP node 3] proto tcp port 22`
 
      `$ sudo ufw allow from [IP node 2] to [IP node 3] proto tcp port 22`
 
-1. Generate SSH keys
+1. Generate SSH keys.
 
-   You will  need to generate SSH keys in PEM format and add the path of the private key to the SSH section in the medusa.ini configuration file.
+   You will need to generate SSH keys in PEM format, and add the path of the private key to the SSH section in the *medusa.ini* configuration file.
 
-   - On the node where the backup will run (Node 1 in this example), generate a 4096-bit RSA key pair using the following command: `$ ssh-keygen -t rsa -b 4096 -m PEM -f <file_name>`
+   1. On the node where the backup will run (Node 1 in this example), generate a 4096-bit RSA key pair using the following command:
 
-     Example:
+      `$ ssh-keygen -t rsa -b 4096 -m PEM -f <file_name>`
 
-     `$ ssh-keygen -t rsa -b 4096 -m PEM -f id_rsa`
+      Example:
 
-     The command above creates a private key (**id_rsa**) and its corresponding public key (**id_rsa.pub**) in PEM format within the home folder.
+      `$ ssh-keygen -t rsa -b 4096 -m PEM -f id_rsa`
 
-   - Copy the public key to all nodes, run the command:
+      The command above creates a private key (**id_rsa**) and its corresponding public key (**id_rsa.pub**) in PEM format within the home folder.
 
-     `$ scp id_rsa.pub username@<Node1_IP>:/home/<username>/`
+   1. Copy the public key to all nodes by running the following command:
 
-     - Example copy to Node 2:
+      `$ scp id_rsa.pub username@<Node1_IP>:/home/<username>/`
 
-       `$ scp id_rsa.pub myUser@10.10.10.12:/home/myUser/`
+      - Example in which the keys are copied to Node 2:
 
-     - Example copy to Node 3:
+        `$ scp id_rsa.pub myUser@10.10.10.12:/home/myUser/`
 
-       `$ scp id_rsa.pub myUser@10.10.10.13:/home/myUser/`
+      - Example in which the keys are copied to Node 3:
 
-   - Write the public key to the authorized_keys on all nodes in the cluster, run the command `$ cat [Path to file]/<file_name>.pub >>~/.ssh/authorized_keys`
+        `$ scp id_rsa.pub myUser@10.10.10.13:/home/myUser/`
 
-     Example:
+   1. Write the public key to the *authorized_keys* on all nodes in the cluster by running the following command:
 
-     `$ cat /home/myUser/id_rsa.pub >>~/.ssh/authorized_keys`
+      `$ cat [Path to file]/<file_name>.pub >>~/.ssh/authorized_keys`
+
+      Example:
+
+      `$ cat /home/myUser/id_rsa.pub >>~/.ssh/authorized_keys`
 
 > [!IMPORTANT]
-> If the backup is initiated from one of the nodes in the cluster, the public key should also be appended to the authorized_keys file on this node.
+> If the backup is initiated from one of the nodes in the cluster, the public key should also be appended to the *authorized_keys* file on this node.
 
 ## Configuring the NFS share
 
-To facilitate storage for backups, a shared folder is necessary, and all nodes in the cluster must be mounted to the same network path. Follow the [How to Set Up NFS Server and Client on CentOS 8](https://www.tecmint.com/install-nfs-server-on-centos-8/) guide to setup an NFS share.
-Please make a note of the path, as you will need to set this path in the 'base_path' property within the Medusa.ini configuration file.
+To facilitate storage for backups, a shared folder is necessary, and all nodes in the cluster must be mounted to the same network path.
 
-   > [!NOTE]
-   > If you opt for a local path (rather than a network share), only the backups of the local node will be accessible. We strongly recommend utilizing a shared folder for improved visibility and centralized access to backups across all nodes in the cluster.
+Set up an NFS share by following the instructions in [How to Set Up NFS Server and Client on CentOS 8](https://www.tecmint.com/install-nfs-server-on-centos-8/).
+
+Make a note of the path, as you will need to store it in the *base_path* property in the *Medusa.ini* configuration file.
+
+> [!NOTE]
+> If you opt for a local path rather than a network share, only the backups of the local node will be accessible. We strongly recommend utilizing a shared folder for improved visibility and centralized access to backups across all nodes in the cluster.
 
 ## Installing and configuring Medusa
 
 Execute the following steps on each node in the cluster:
 
-1. Install python3-pip, run the commands:
+1. Install python3-pip by running the following commands:
 
-    1. `$ sudo apt update`
-    1. `$ sudo apt install python3-pip`
+   1. `$ sudo apt update`
+   1. `$ sudo apt install python3-pip`
 
 1. Install Medusa, follow the [installation guide on GitHub](https://github.com/thelastpickle/cassandra-medusa/blob/master/docs/Installation.md)
 
