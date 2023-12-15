@@ -206,19 +206,6 @@ From now on, there will no longer be any primary and secondary NAS configuration
 
 Also, when the NATS configuration is reset, the DMS IP addresses will now be collected via the online Failover agent.
 
-#### BPA test 'Check Cluster SLNet Connections' is now signed [ID_38201]
-
-<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
-
-The BPA test 'Check Cluster SLNet Connections', which was added in DataMiner v10.4.1., has now been signed.
-
-When run on a particular Agent in a DataMiner System, this BPA test will trigger a local test on each Agent in the DMS that will
-
-- check the connections between the different DMAs and between the DMAs in Failover setups, and
-- report any communication problems.
-
-For more information, see [Check Cluster SLNet Connections](xref:BPA_Check_Cluster_SLNet_Connections).
-
 ### Fixes
 
 #### PropertyConfiguration.xml: New properties could incorrectly be assigned an existing property ID [ID_37596]
@@ -315,3 +302,9 @@ In some cases, SLAnalytics could partially get stuck when the trend icon calcula
 <!-- MR 10.4.0 - FR 10.4.2 -->
 
 When small, unlabelled changes were detected in a trend graph of a parameter of which the value was clearly increasing, decreasing or remaining stable, up to now, the trend icon would incorrectly not be updated to indicate this increasing, decreasing or stable trend. From now on, when a small, unlabelled change occurs in a trend graph that clearly increases, decreases or remains stable, the trend icon will be updated to indicate this.
+
+#### BPA test 'Check Cluster SLNet Connections' did not have valid signature [ID_38201]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+When you ran the BPA test 'Check Cluster SLNet Connections', this failed with the exception message `BPA doesn’t have a valid signature`. The BPA has now been signed correctly, so this issue will no longer occur.
