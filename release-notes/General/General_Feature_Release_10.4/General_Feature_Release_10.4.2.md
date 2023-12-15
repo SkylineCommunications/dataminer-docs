@@ -170,7 +170,7 @@ TTL-based rollover for the CustomData and LoggerTables storage types is now disa
 
 Up to now, after a restart of the SLAnalytics process, it could occur that a number of open proactive suggestion events were still left on the system. These would then remain open indefinitely unless a user would manually clear them.
 
-From now on, all proactive suggestion events will be cleared when the proactive cap detection mechanism is started, and trend alarm records will no longer be stored in the Cassandra database.
+From now on, all proactive suggestion events will be cleared when proactive cap detection is started, and trend alarm records will no longer be stored in the Cassandra database.
 
 #### DataMiner Object Models: Reading DOM objects and ModuleSettings in parallel [ID_38023]
 
@@ -192,11 +192,11 @@ For example, from now on, when you sort by A and, later on in the GQI query, sor
 
 A number of security enhancements have been made.
 
-#### SLAnalytics - Behavioral anomaly detection: Number of parameters for which the trend icon will be updated has now been restricted [ID_38041]
+#### SLAnalytics - Behavioral anomaly detection: Reduction of memory used for trend icon calculation [ID_38041]
 
 <!-- MR 10.5.0 - FR 10.4.2 -->
 
-The number of parameters for which the behavioral anomaly detection feature will update the trend icon has now been restricted to 250,000, which amounts to a maximum data usage of about 330 MB.
+Up to now, SLAnalytics would always keep one hour of average trend data for all trended parameters on the system in order to determine which trend icon to display in the absence of change points. From now on, it will only keep one hour of trend data for 250,000 trended parameters at the most, reducing memory usage to a maximum of 330 MB.
 
 #### NATS: All nodes will now be considered primary nodes [ID_38089]
 

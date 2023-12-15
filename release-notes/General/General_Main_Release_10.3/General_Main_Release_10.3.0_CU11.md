@@ -56,7 +56,7 @@ TTL-based rollover for the CustomData and LoggerTables storage types is now disa
 
 Up to now, after a restart of the SLAnalytics process, it could occur that a number of open proactive suggestion events were still left on the system. These would then remain open indefinitely unless a user would manually clear them.
 
-From now on, all proactive suggestion events will be cleared when the proactive cap detection mechanism is started, and trend alarm records will no longer be stored in the Cassandra database.
+From now on, all proactive suggestion events will be cleared when proactive cap detection is started, and trend alarm records will no longer be stored in the Cassandra database.
 
 #### Security enhancements [ID_38040]
 
