@@ -212,6 +212,12 @@ Also, when the NATS configuration is reset, the DMS IP addresses will now be col
 
 The amount of memory used for flatline detection has been reduced.
 
+#### GQI: Right query will be fetched lazily in case of a right join [ID_38134]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+Up to now, when a *Join* operator of type "Right join" was applied, both the entire left query and the entire right query would be fetched. From now on, the right query will be fetched lazily.
+
 ### Fixes
 
 #### PropertyConfiguration.xml: New properties could incorrectly be assigned an existing property ID [ID_37596]

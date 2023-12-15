@@ -822,6 +822,12 @@ When multiple, separate sort operators were optimized by the GQI data source *Ge
 
 For example, from now on, when you sort by A and, later on in the GQI query, sort again by B, the query will now only be sorted by B.
 
+#### GQI: Right query will be fetched lazily in case of a right join [ID_38134]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+Up to now, when a *Join* operator of type "Right join" was applied, both the entire left query and the entire right query would be fetched. From now on, the right query will be fetched lazily.
+
 ### Fixes
 
 #### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID_34981]
