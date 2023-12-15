@@ -72,6 +72,17 @@ From now on, there will no longer be any primary and secondary NAS configuration
 
 Also, when the NATS configuration is reset, the DMS IP addresses will now be collected via the online Failover agent.
 
+#### New BPA test 'Check Cluster SLNet Connections' [ID_38201]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+When run on a particular Agent in a DataMiner System, this new BPA test will trigger a local test on each Agent in the DMS that will
+
+- check the connections between the different DMAs and between the DMAs in Failover setups, and
+- report any communication problems.
+
+For more information, see [Check Cluster SLNet Connections](xref:BPA_Check_Cluster_SLNet_Connections).
+
 ### Fixes
 
 #### SLDataGateway: Problem with casing when retrieving data from Elasticsearch/OpenSearch [ID_37835]
