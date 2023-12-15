@@ -11,6 +11,8 @@ uid: Creating_a_DMS_on_dataminer_services
 
    > [!TIP]
    > For more detailed information, see [Logging on to dataminer.services](xref:Logging_on_to_the_DataMiner_Cloud_Platform).
+   >
+   > See also: [Kata #11: Create a DMS on dataminer.services](https://community.dataminer.services/courses/kata-11/) on DataMiner Dojo
 
 1. Under *DataMiner Systems*, click *Add a new DataMiner System*.
 
