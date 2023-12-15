@@ -206,6 +206,12 @@ From now on, there will no longer be any primary and secondary NAS configuration
 
 Also, when the NATS configuration is reset, the DMS IP addresses will now be collected via the online Failover agent.
 
+#### SLAnalytics - Behavioral anomaly detection: Reduction of memory used for flatline detection [ID_38118]
+
+<!-- MR 10.5.0 - FR 10.4.2 -->
+
+The amount of memory used for flatline detection has been reduced.
+
 ### Fixes
 
 #### PropertyConfiguration.xml: New properties could incorrectly be assigned an existing property ID [ID_37596]
