@@ -208,7 +208,7 @@ Also, when the NATS configuration is reset, the DMS IP addresses will now be col
 
 #### SLAnalytics - Behavioral anomaly detection: Reduction of memory used for flatline detection [ID_38118]
 
-<!-- MR 10.5.0 - FR 10.4.2 -->
+<!-- MR 10.4.0 - FR 10.4.2 -->
 
 The amount of memory used for flatline detection has been reduced.
 

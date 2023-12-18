@@ -822,6 +822,12 @@ When multiple, separate sort operators were optimized by the GQI data source *Ge
 
 For example, from now on, when you sort by A and, later on in the GQI query, sort again by B, the query will now only be sorted by B.
 
+#### SLAnalytics - Behavioral anomaly detection: Reduction of memory used for flatline detection [ID_38118]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+The amount of memory used for flatline detection has been reduced.
+
 #### GQI: Right query will be fetched lazily in case of a right join [ID_38134]
 
 <!-- MR 10.4.0 - FR 10.4.2 -->
