@@ -45,7 +45,7 @@ jobs:
     needs: build_job
     name: Deploy Job
     steps:
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4
         with:
           name: release
           path: .
@@ -72,7 +72,7 @@ jobs:
     needs: build_job
     name: Deploy Job to Storage account
     steps:
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4
         with:
           name: release
           path: .
