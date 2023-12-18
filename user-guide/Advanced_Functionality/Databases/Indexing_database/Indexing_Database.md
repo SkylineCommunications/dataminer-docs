@@ -12,7 +12,9 @@ If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STa
 
 - [Amazon OpenSearch Service](xref:Amazon_OpenSearch_Service): Deprecated. Supported from DataMiner 10.3.0 [CU0] up to 10.3.0 [CU8] and from DataMiner 10.3.3 up to 10.3.11.
 
-While these are not recommended, we also still support setups with storage per DMA using [an Elasticsearch database](xref:Configuring_indexing_database_per_DMS). In such setups, deploying Elasticsearch unlocks additional DataMiner features, including:
+While these are not recommended, we also still support setups with [storage per DMA using an indexing database](xref:Configuring_indexing_database_per_DMS).
+
+An indexing database is required to have access to several DataMiner features, including:
 
 - DataMiner Advanced Analytics features such as pattern matching
 
