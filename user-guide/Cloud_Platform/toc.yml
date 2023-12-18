@@ -72,6 +72,13 @@ items:
         topicUid: Managing_your_shares
   - name: Remote access
     topicUid: Cloud_Remote_Access
+    items:
+      - name: Finding the remote access URL
+        topicUid: Cloud_Remote_Access_URL
+      - name: Accessing DataMiner web apps remotely
+        topicUid: Accessing_web_apps_remotely
+      - name: Accessing your DMS remotely with DataMiner Cube
+        topicUid: Accessing_DMS_remotely_with_Cube
   - name: DataMiner Community
     topicUid: Community
     items:
