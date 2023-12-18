@@ -84,7 +84,7 @@ No additional cost is applicable. Our STaaS offering includes both the storage a
 
 We support auto live-migration of the data from a Cassandra cluster, a Cassandra single node, as well as from Elasticsearch. MySQL is not automatically supported and needs manual interaction.
 
-For detailed information on migration limitations, see [Limitations](xref:STaas#limitations)
+For detailed information on migration limitations, see [Limitations](xref:STaaS#limitations)
 
 ### What is the TCO of on-premises versus cloud storage?
 
