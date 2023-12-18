@@ -106,7 +106,7 @@ See [DataMiner STaaS: a game changer](https://community.dataminer.services/stora
 
 ### Can I subscribe to DataMiner, including STaaS, using my own Microsoft Azure Marketplace credit balance?
 
-Yes, you can subscribe directly through Microsoft Marketplace. If interested, please get in touch with your [sales representative](https://community.dataminer.services/get-in-touch/sales-team/).
+Yes, you can subscribe directly through the Azure Marketplace. If interested, please get in touch with your [sales representative](https://community.dataminer.services/get-in-touch/sales-team/).
 
 ## Features
 
