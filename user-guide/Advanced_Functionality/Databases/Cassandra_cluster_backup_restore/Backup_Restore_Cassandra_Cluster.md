@@ -83,7 +83,7 @@ See below for detailed instructions on how to enable SSH access.
 
 To facilitate storage for backups, a shared folder is necessary, and all nodes in the cluster must be mounted to the same network path.
 
-Set up an NFS share by following the instructions in [How to Set Up NFS Server and Client on CentOS 8](https://www.tecmint.com/install-nfs-server-on-centos-8/).
+Set up an NFS share by following the instructions in [How to set up an NFS mount on Ubuntu 20.04](https://www.digitalocean.com/community/tutorials/how-to-set-up-an-nfs-mount-on-ubuntu-20-04) or [Installing and configuring Network File System (NFS) on Ubuntu](https://ubuntu.com/server/docs/service-nfs).
 
 Make a note of the path, as you will need to store it in the *base_path* property in the *Medusa.ini* configuration file.
 
