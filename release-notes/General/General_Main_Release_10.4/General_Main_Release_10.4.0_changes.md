@@ -1087,3 +1087,9 @@ When small, unlabelled changes were detected in a trend graph of a parameter of 
 <!-- MR 10.4.0 - FR 10.4.1 [CU0] -->
 
 In some rare cases, a database write operation could incorrectly remain stuck in an internal queue and would never get processed.
+
+#### Problem loading data of elements hosted on another DMA while a correlation rule action was running [ID_38121]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+When, while an extensive correlation rule action was running, you opened an element card of an element hosted on a DataMiner Agent other than the one you were connected to, it could take a long time for all data of that element to get loaded.
