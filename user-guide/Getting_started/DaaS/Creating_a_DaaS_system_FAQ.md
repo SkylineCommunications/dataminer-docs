@@ -19,6 +19,13 @@ The DataMiner credit balance of an organization is displayed in the [Admin app](
 
 Contact [your Account Manager](https://community.dataminer.services/get-in-touch/sales-team/).
 
+### When does a DaaS system expire?
+
+A DataMiner Express DaaS system will be scheduled to expire as soon as the organization does not have sufficient DataMiner credits to extend its lifetime.
+
+> [!NOTE]
+> When an organization has multiple DaaS systems, they will be extended in chronological order. When your organization does not have enough credits left to extend one of your DaaS systems, that DaaS system will be scheduled to expire. However, at this point, you may still have a number of DataMiner credits left that will be considered reserved for your other DaaS systems.
+
 ### What happens when my DaaS system expires or is deleted?
 
 Your DaaS system along with all its associated resources and data will be irreversibly deleted.
