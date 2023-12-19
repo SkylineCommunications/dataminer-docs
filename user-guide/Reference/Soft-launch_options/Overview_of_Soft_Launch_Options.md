@@ -377,6 +377,9 @@ Configures the DataMiner System to use SNMP++ for the polling of all three SNMP 
 - **Minimum version**: 10.4.2
 - **Release version**: To be determined.
 
+> [!IMPORTANT]
+> This feature does not support polling of IPv6 addresses. In case IPv6 addresses are polled on your DMA, do not activate this feature.
+
 ### SrmOwnServices
 
 Enables ownership support for SRM services.
