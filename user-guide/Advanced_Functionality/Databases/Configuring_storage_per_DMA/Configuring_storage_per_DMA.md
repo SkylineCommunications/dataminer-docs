@@ -20,10 +20,7 @@ By default, when you install a new self-hosted DataMiner System, a Cassandra dat
 ![storage per DMA](~/user-guide/images/Storage_per_DMA.svg)
 
 > [!IMPORTANT]
-> We highly recommend installing an [indexing database](xref:Indexing_Database) as well to get access to additional features.
-
-> [!NOTE]
-> To have access to all the latest DataMiner features, switching to [Storage as a Service (STaaS)](xref:STaaS) is highly recommended.
+> To have access to all the latest DataMiner features, switching to [Storage as a Service (STaaS)](xref:STaaS) is highly recommended. If you prefer to keep using self-hosted storage, we highly recommend installing an [indexing database](xref:Indexing_Database) to get access to additional features such as SRM and DOM.
 
 ## MySQL database
 
