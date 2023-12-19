@@ -10,7 +10,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 From now onwards, when a DataMiner Express DaaS system is about to expire, an email notification will be sent to both the owners of the organization and the owners of the DMS, so that they can take action if they want to prevent deletion. Another email notication will be sent when the DataMiner Express DaaS system has been deleted.
 
-A notification will also be sent when an organization owns multiple DaaS systems and one or more systems will not be able to be extend because the organization will not have enough DataMiner credits anymore by that time (forcasted).
+A notification will also be sent when an organization owns multiple DaaS systems and it will not be possible to extend one or more of these systems because the organization will not have enough DataMiner credits, as predicted based on the current usage.
 
 #### 13 December 2023 - New Feature - Email notifications for expiring and expired DataMiner Express DaaS systems [ID_38183]
 
