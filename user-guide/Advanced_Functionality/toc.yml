@@ -304,8 +304,6 @@ items:
                         topicUid: Configuring_Cassandra_Backups
                       - name: Moving the Cassandra database to a different disk drive
                         topicUid: Moving_the_Cassandra_database_to_a_different_disk_drive
-                  - name: Configuring an indexing database
-                    topicUid: SPD_Configuring_indexing_database
               - name: MySQL database
                 topicUid: MySQL_database
                 items:
