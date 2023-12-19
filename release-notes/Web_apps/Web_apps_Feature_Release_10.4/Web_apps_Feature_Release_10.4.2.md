@@ -74,6 +74,10 @@ When you enabled the filter assistance in a query filter component, up to now, a
 > [!NOTE]
 > Filters for columns containing string values will continue to list discrete values, even when the columns do not contain discrete values.
 
+#### Dashboards app - GQI: New 'Get profile instances' data source [ID_38138]
+
+In the Generic Query Interface, a new "Get profile instances" data source is now available. It will return all profile instances in the DMS.
+
 ### Fixes
 
 #### Web apps accessed via a remote access URL would redirect to the shares overview page when they lost connection with the cloud-connected DMA [ID_33789]
