@@ -4,13 +4,13 @@ uid: Installing_Elasticsearch_via_DataMiner
 
 # Installing Elasticsearch on a DMA via DataMiner
 
-If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STaaS) setup but instead want to use a self-hosted storage setup with a Cassandra database per DMA, you can install Elasticsearch via DataMiner as detailed below.
+If you have a setup with [storage per DMA](xref:Configuring_storage_per_DMA) instead of the recommended [Storage as a Service (STaaS)](xref:STaaS) setup, you can install Elasticsearch via DataMiner as detailed below in order to get access to more DataMiner features.
 
 > [!NOTE]
-> Elasticsearch is only supported up to version 6.8. We recommend using OpenSearch instead, ideally with a [dedicated clustered storage](xref:Dedicated_clustered_storage) setup, although using storage per DMA with OpenSearch is also possible. In that case you will first need to [install an OpenSearch database](xref:Installing_OpenSearch_database) (ideally on a separate Linux server), and then [connect your DMS to the OpenSearch database](xref:Manually_Connecting_DMA_to_Elasticsearch_Cluster).
+> Elasticsearch is only supported up to version 6.8. We recommend using [OpenSearch](xref:OpenSearch_database) instead, ideally with a [dedicated clustered storage](xref:Dedicated_clustered_storage) setup. Using storage per DMA with OpenSearch is also possible; in that case you will first need to [install an OpenSearch database](xref:Installing_OpenSearch_database) (ideally on a separate Linux server), and then [connect your DMS to the OpenSearch database](xref:Manually_Connecting_DMA_to_Elasticsearch_Cluster).
 
 > [!IMPORTANT]
-> This procedure is intended for a setup using a Cassandra database per DMA. For a [dedicated clustered storage](xref:Dedicated_clustered_storage) setup with Elasticsearch, see [Installing Elasticsearch on a separate Linux machine](xref:Installing_Elasticsearch_on_separate_Linux_machine).
+> This procedure is intended for a setup using a **Cassandra database per DMA**. For a [dedicated clustered storage](xref:Dedicated_clustered_storage) setup with Elasticsearch, see [Installing Elasticsearch on a separate Linux machine](xref:Installing_Elasticsearch_on_separate_Linux_machine).
 
 1. In DataMiner Cube, go to *System Center \> Search & Indexing* and click *Install Indexing Engine*.
 

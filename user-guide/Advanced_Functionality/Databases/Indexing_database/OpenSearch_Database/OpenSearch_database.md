@@ -16,8 +16,5 @@ If you have a large cluster with nodes in different zones, data centers, or rack
 
 For more information on how to configure OpenSearch backups, see [Configuring OpenSearch backups](xref:Configuring_OpenSearch_Backups).
 
-> [!TIP]
-> If you are looking to use the Amazon OpenSearch Service instead of on-premises hosted OpenSearch nodes, see [Amazon OpenSearch Service](xref:Amazon_OpenSearch_Service).
-
 > [!NOTE]
 > To query the OpenSearch database, you can use the [ElasticVue](https://elasticvue.com/) browser extension. However, note that ElasticVue was created for ElasticSearch, so not everything may work for OpenSearch.

@@ -332,36 +332,28 @@ items:
               - name: Elasticsearch
                 topicUid: Elasticsearch_database
                 items:
-                  - name: Setting up Elasticsearch for a dedicated clustered storage setup
+                  - name: Installing Elasticsearch on a separate Linux machine
                     topicUid: Installing_Elasticsearch_on_separate_Linux_machine
+                  - name: Installing Elasticsearch on a DMA via DataMiner (storage per DMA only)
+                    topicUid: Installing_Elasticsearch_via_DataMiner
+                  - name: Configuring an Elasticsearch database on a separate machine
+                    topicUid: Configuring_Elasticsearch_Database
                     items:
-                      - name: Installing Elasticsearch on a separate Linux machine
-                        topicUid: Installing_Elasticsearch_on_separate_Linux_machine
-                      - name: Configuring the Elasticsearch database (Linux)
-                        topicUid: Configuring_Elasticsearch_Database
-                        items:
-                          - name: Configuring the master nodes
-                            topicUid: Configuring_master_Elasticsearch_nodes
-                          - name: Adding an Elasticsearch cluster node
-                            topicUid: Configuring_Elasticsearch_node_add
-                          - name: Configuring a multiple data center Elasticsearch cluster
-                            topicUid: Configuring_multiple_datacenter_Elasticsearch_cluster
-                          - name: Configuring multiple Elasticsearch clusters
-                            topicUid: Configuring_multiple_Elasticsearch_clusters
-                            items:
-                              - name: Taking a snapshot of one Elasticsearch cluster and restoring it to another
-                                topicUid: Taking_snapshot_Elasticsearch_cluster_and_restoring_to_different_cluster
-                              - name: Verifying Elasticsearch synchronization
-                                topicUid: Verifying_Elasticsearch_Synchronization
-                  - name: Setting up an indexing database in a setup with storage per DMA
-                    topicUid: Configuring_indexing_database_per_DMS
+                      - name: Configuring the master nodes
+                        topicUid: Configuring_master_Elasticsearch_nodes
+                      - name: Adding an Elasticsearch cluster node
+                        topicUid: Configuring_Elasticsearch_node_add
+                      - name: Configuring a multiple data center Elasticsearch cluster
+                        topicUid: Configuring_multiple_datacenter_Elasticsearch_cluster
+                      - name: Removing an Elasticsearch cluster node
+                        topicUid: Configuring_Elasticsearch_node_remove
+                  - name: Configuring multiple Elasticsearch clusters
+                    topicUid: Configuring_multiple_Elasticsearch_clusters
                     items:
-                      - name: Installing Elasticsearch on a DMA via DataMiner
-                        topicUid: Installing_Elasticsearch_via_DataMiner
-                      - name: Configuring the Elasticsearch database (Windows)
-                        topicUid: Configuring_Elasticsearch_database_Windows
-                      - name: Uninstalling Elasticsearch from a DMA
-                        topicUid: Uninstalling_Elasticsearch_from_a_DMA
+                      - name: Taking a snapshot of one Elasticsearch cluster and restoring it to another
+                        topicUid: Taking_snapshot_Elasticsearch_cluster_and_restoring_to_different_cluster
+                      - name: Verifying Elasticsearch synchronization
+                        topicUid: Verifying_Elasticsearch_Synchronization
                   - name: Configuring Elasticsearch backups
                     topicUid: Configuring_Elasticsearch_backups
                     items:
@@ -369,9 +361,9 @@ items:
                         topicUid: Configuring_Elasticsearch_backups_Windows_Linux
                       - name: Restoring backups using the Standalone Elastic Backup Tool
                         topicUid: Configuring_Elasticsearch_backups_Windows
-                  - name: Removing an Elasticsearch cluster node
-                    topicUid: Configuring_Elasticsearch_node_remove
-              - name: Manually connecting a DMA to an OpenSearch or Elasticsearch database
+                  - name: Uninstalling Elasticsearch from a DMA (storage per DMA only)
+                    topicUid: Uninstalling_Elasticsearch_from_a_DMA
+              - name: Manually connecting a DMA to an indexing database
                 topicUid: Manually_Connecting_DMA_to_Elasticsearch_Cluster
               - name: Configuring indexing settings in DataMiner Cube
                 topicUid: Configuring_DataMiner_Indexing
