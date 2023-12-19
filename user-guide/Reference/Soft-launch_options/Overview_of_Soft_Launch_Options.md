@@ -373,6 +373,7 @@ Enables SLProtocol as a 32-bit process. This option is not configured in *SoftLa
 ### SnmpPollingSnmpPlusPlusOnly
 
 Configures the DataMiner System to use SNMP++ for the polling of all three SNMP versions, instead of only for SNMPv3.<!-- RN 37778 -->
+Polling IPv6 addresses is not supported. In case you poll IPv6 addresses on the agent, do not activate the feature.
 
 - **Minimum version**: 10.4.2
 - **Release version**: To be determined.
