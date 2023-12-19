@@ -116,6 +116,19 @@ When the end event of a booking used a timeout script, in some cases, that scrip
 
 When you made the DataMiner Taskbar Utility perform some action using the command prompt, the arguments would not be parsed correctly when no instance of SLTaskbarUtility was running.
 
+#### MySQL: Problem when elements were started [ID_37973]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+On systems with a MySQL database, in some cases, page handlers would be deleted too soon. This caused the following errors to be logged when an element was started:
+
+```txt
+Querying elementdata
+Could not read the next page of element data for ...
+Failed to query elementdata for parameter ...: General database failure.
+Failed to query elementdata for ...: General database failure.
+```
+
 #### GQI: 'Could not find PK column' error after performing a query against an empty parameter table [ID_37978]
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.1 -->
