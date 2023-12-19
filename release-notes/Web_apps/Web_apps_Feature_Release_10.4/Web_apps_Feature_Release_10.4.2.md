@@ -78,7 +78,15 @@ When you enabled the filter assistance in a query filter component, up to now, a
 
 #### Dashboards app - GQI: New 'Get profile instances' data source [ID_38138]
 
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
 In the Generic Query Interface, a new "Get profile instances" data source is now available. It will return all profile instances in the DMS.
+
+#### Dashboards app & Low-Code Apps - Grid component: Touch screen support [ID_38191]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+The grid component now has full touch screen support. It is now possible to pan by sliding a finger across a grid and to select grid items by tapping them.
 
 ### Fixes
 
