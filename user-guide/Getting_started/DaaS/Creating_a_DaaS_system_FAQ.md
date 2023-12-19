@@ -31,7 +31,7 @@ A DataMiner Express DaaS system will be scheduled to expire as soon as the organ
 Your DaaS system along with all its associated resources and data will be irreversibly deleted.
 
 > [!NOTE]
-> If you are an owner of the organization of a DaaS system or you deployed a DaaS system, you will get an email notification if your system is about to expire, for example because you do not have enough DataMiner credits left. Depending on how many DataMiner credits you use for other purposes, you will get this notification up to 5 days before the system expires. Another email notification will be sent when the system effectively expires.
+> If you are an owner of the organization of a DaaS system or owner of the DMS itselves, you will get an email notification if your system is about to expire, for example because you do not have enough DataMiner credits left. Depending on how many DataMiner credits you use for other purposes, you will get this notification up to 5 days before the system expires. Another email notification will be sent when the system effectively expires.
 
 ### How can I manually delete my DaaS system?
 
