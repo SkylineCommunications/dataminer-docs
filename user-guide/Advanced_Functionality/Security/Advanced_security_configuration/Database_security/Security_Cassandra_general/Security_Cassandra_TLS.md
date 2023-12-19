@@ -55,7 +55,6 @@ To generate the certificates, you will need two tools: *openssl* and the *Java k
    >
    > We also recommend using only ASCII characters in your Cassandra cluster name. The Cassandra documentation is lacking on this front, but we noticed Cassandra failing to start when the *cluster_name* contained certain special/non-ASCII characters.
 
-
 1. Generate the root CA certificate by executing the following command:
 
    ```txt

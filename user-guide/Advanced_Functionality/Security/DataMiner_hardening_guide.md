@@ -33,7 +33,7 @@ After you have run these BPA tests, they will provide an overview of the detecte
 
 ## DataMiner Agent hardening
 
-### Secure cube-server Communication
+### Secure Cube-server communication
 
 By default, Cube currently uses .NET Remoting to communicate with DataMiner. From DataMiner 10.1.7 onwards, this communication is encrypted using the Rijndael algorithm using a 256-bit key, which is negotiated over a 1024-bit RSA encrypted communication channel. However, .NET Remoting is a legacy technology and is widely considered insecure. For this reason, DataMiner 10.3.2/10.3.0 introduces the possibility to use gRPC instead as a secure alternative.
 
@@ -46,7 +46,7 @@ To enable gRPC for the client-server connection, edit the *ConnectionSettings.tx
 
 #### gRPC
 
-Like for the communication with DataMiner Cube, for the inter-DMA communication, you can also use gRPC instead of .NET Remoting from DataMiner 10.3.2/10.3.0 onwards.
+For the inter-DMA communication, like for the communication with DataMiner Cube, you can also use gRPC instead of .NET Remoting from DataMiner 10.3.2/10.3.0 onwards.
 
 > [!IMPORTANT]
 > The gRPC connection feature is still a beta feature in DataMiner 10.3.2/10.3.0 CU0, which means you may still encounter issues and the connection might still be less stable than with .NET Remoting.
@@ -61,7 +61,7 @@ From version 10.1.0/10.1.1 onwards, DataMiner relies on NATS for some inter-proc
 
 ### HTTPS
 
-By default, DataMiner uses HTTP to serve the web applications. HTTP is unencrypted and vulnerable to man-in-the-middle attacks, so we highly recommend [setting up HTTPS instead](xref:Setting_up_HTTPS_on_a_DMA).
+By default, DataMiner uses HTTP to serve the web applications. HTTP is unencrypted and vulnerable to man-in-the-middle attacks, so we highly recommend [setting up HTTPS](xref:Setting_up_HTTPS_on_a_DMA) instead.
 
 ### HTTP headers
 
@@ -73,7 +73,7 @@ When configuring HTTPS in IIS on your DataMiner Agent, we also recommend setting
 
 - [X-Content-Type-Options](https://docs.oracle.com/en/industries/health-sciences/argus-safety/8.2.1/asmsc/configuring-x-content-type-options-iis.html#GUID-954EE526-1220-4DD7-A946-0FEAA1A39679): We recommend setting this to *NOSNIFF*.
 
-There are some other HTTP headers that can improve security; however, their value depends on your specific DataMiner setup (e.g. resources used in Dashboards/Low-Code Apps):
+There are some other HTTP headers that can improve security. However, their value depends on your specific DataMiner setup (e.g. resources used in Dashboards/Low-Code Apps):
 
 - [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP)
 
@@ -95,7 +95,7 @@ DataMiner has some components that are considered legacy. They are still around 
 To make the changes take effect, you then need to run the *ConfigureIIS.bat* script as Administrator located in the `C:\Skyline DataMiner\Tools` folder.
 
 > [!NOTE]
-> The legacy Annotations and Reports and Dashboards modules are disabled by default as from DataMiner versions 10.4.0/10.4.1.
+> The legacy *Annotations* and *Reports and Dashboards* modules are disabled by default as from DataMiner versions 10.4.0/10.4.1.
 
 ## Operating system hardening
 
