@@ -278,6 +278,8 @@ items:
                             topicUid: Azure_Managed_Instance_for_Apache_Cassandra
                       - name: Maintaining a Cassandra cluster
                         topicUid: Maintain_Cassandra_Cluster
+                      - name: Backing up and restoring a Cassandra cluster using Medusa
+                        topicUid: Backup_Restore_Cassandra_Cluster_Medusa
                   - name: Amazon Keyspaces Service
                     topicUid: Amazon_Keyspaces_Service
                     items:
