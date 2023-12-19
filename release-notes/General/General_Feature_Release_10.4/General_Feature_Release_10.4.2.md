@@ -336,11 +336,11 @@ In some cases, SLAnalytics could partially get stuck when the trend icon calcula
 
 When small, unlabelled changes were detected in a trend graph of a parameter of which the value was clearly increasing, decreasing or remaining stable, up to now, the trend icon would incorrectly not be updated to indicate this increasing, decreasing or stable trend. From now on, when a small, unlabelled change occurs in a trend graph that clearly increases, decreases or remains stable, the trend icon will be updated to indicate this.
 
-#### Problem loading data of elements hosted on another DMA while a correlation rule action was running [ID_38121]
+#### Problem when loading data of elements hosted on another DMA while a correlation rule action was running [ID_38121]
 
 <!-- MR 10.4.0 - FR 10.4.2 -->
 
-When, while an extensive correlation rule action was running, you opened an element card of an element hosted on a DataMiner Agent other than the one you were connected to, it could take a long time for all data of that element to get loaded.
+When, while an extensive correlation rule action was running, you opened an element card of an element hosted on a DataMiner Agent other than the one you were connected to, loading the data of that element could get delayed until the correlation rule action had finished.
 
 #### BPA test 'Check Cluster SLNet Connections' did not have valid signature [ID_38201] [ID_38208]
 
