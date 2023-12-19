@@ -11,7 +11,7 @@ The purpose of the OpenConfig middleware is to make it possible to **easily cons
 
 In order to use the OpenConfig middleware, you will need to have the following setup:
 
-- A DataMiner Agent that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud) and runs DataMiner 10.3.0, 10.3.3 or higher.
+- A DataMiner Agent that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud) and runs DataMiner 10.3.0/10.3.3 or higher.
 
 - The [CommunicationGateway DxM](xref:DataMinerExtensionModules#communicationgateway) is installed on at least one of the DataMiner Agents in the cluster.
 
