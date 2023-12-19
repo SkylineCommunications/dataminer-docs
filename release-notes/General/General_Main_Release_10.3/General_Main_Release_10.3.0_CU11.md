@@ -85,6 +85,14 @@ For more information, see [Check Cluster SLNet Connections](xref:BPA_Check_Clust
 
 ### Fixes
 
+#### Problems with SLDataMiner [ID_37409]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+SLDataMiner would leak memory when retrieving the baseline values of an element while the relative baseline value was being updated. Also, an error could occur in SLDataMiner after a service had been created, updated or deleted.
+
+Apart from the above-mentioned fixes, memory management and overall error logging have also been improved.
+
 #### SLDataGateway: Problem with casing when retrieving data from Elasticsearch/OpenSearch [ID_37835]
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
