@@ -6,7 +6,13 @@ uid: EPM_1.0.8_VSAT
 
 ## New features
 
-*No new features have been added to this release yet.*
+#### Intelsat Flex Platform VSAT: Circuit Name added to Terminals Table [ID_38242]
+
+A new parameter, Circuit Name, has been added to the Terminals Table of the Intelsat Flex Platform VSAT connector. In addition, the Circuits Table has been updated to also include remotes that are not present in the VSAT database.
+
+#### Verizon WM Ticketing: Processing of iFlex alarms [ID_38243]
+
+The way the Verizon WM Ticketing connector gets the circuit data from each collector has been updated, so that it can now process iFlex alarms. The connector will get the terminal throwing an iFlex alarm and map it to a circuit in the Circuits Table to get the data to process the ticket. If the terminal has no circuit name, the ticket will be suppressed and the reason will be displayed in the result details.
 
 ## Changes
 
