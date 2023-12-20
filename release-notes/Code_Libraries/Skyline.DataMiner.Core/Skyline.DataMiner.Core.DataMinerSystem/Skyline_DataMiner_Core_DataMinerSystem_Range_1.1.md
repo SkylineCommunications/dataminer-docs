@@ -7,6 +7,14 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.1
 > [!NOTE]
 > Range 1.1.x.x is supported as from **DataMiner 10.1.11**. It makes use of a change introduced in DataMiner 10.1.11 that makes it possible to obtain table cell data using the primary key. In earlier DataMiner versions, the display key was needed to obtain this data.
 
+### 1.1.1.4
+
+#### Fix - 1 minute timeout on Start and Stop Monitors increased to 10 minutes
+
+When starting or stopping a Monitor, creating or clearing the underlying subscription could sometimes time-out after 1 minute on very loaded DataMiner systems.
+
+We increased the timeout to 10 minutes and also improved the exception logging to make it more clear to the user that this was an SLNet Problem.
+
 ### 1.1.1.3
 
 #### New feature - Partial table support for QueryData method in DmsTable class

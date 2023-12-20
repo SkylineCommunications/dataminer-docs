@@ -7,6 +7,14 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.0
 > [!NOTE]
 > Range 1.0.x.x is supported as from **DataMiner 10.1.0**. This is a continuation from the now obsolete [Class Library](xref:ClassLibrary_Range_1.2).
 
+### 1.0.1.4
+
+#### Fix - 1 minute timeout on Start and Stop Monitors increased to 10 minutes
+
+When starting or stopping a Monitor, creating or clearing the underlying subscription could sometimes time-out after 1 minute on very loaded DataMiner systems.
+
+We increased the timeout to 10 minutes and also improved the exception logging to make it more clear to the user that this was an SLNet Problem.
+
 ### 1.0.1.3
 
 #### New feature - Partial table support for QueryData method in DmsTable class
