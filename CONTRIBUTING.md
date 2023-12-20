@@ -737,6 +737,31 @@ For example:
 > [!NOTE]
 > To upload images, use GitHub Desktop. See [Making a larger contribution](#making-a-larger-contribution).
 
+### Video
+
+To embed a video, you have a couple of options:
+
+- docfx allows you to embed a video using this simple syntax. However, note that the video will always take the full page width.
+
+  ```md
+  > [!Video https://youtube.com/embed/hPi9kv8WKGU]
+  ```
+
+- Youtube allows you to click *Share > Embed* to copy the "html embed code" and paste it in your own document. See the following example.
+
+  ```html
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/hPi9kv8WKGU?si=zUwfCA18OMNOFuGn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  ```
+
+- You can also choose to embed a simple `<iframe>` element. See the following example:
+
+  ```html
+  <iframe width="560" height="315" src="https://youtube.com/embed/hPi9kv8WKGU" style="border:none;"></iframe>
+  ```
+
+> [!IMPORTANT]
+> Each of the above-mentioned options will only work if the video URL starts with `https://youtube.com/embed/`.
+
 ### Alerts
 
 It is possible to display special "alert" blocks that focus the reader's attention on something important. The following types of alerts are supported:
