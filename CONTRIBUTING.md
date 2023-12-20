@@ -741,26 +741,33 @@ For example:
 
 To embed a video, you have a couple of options:
 
-- docfx allows you to embed a video using this simple syntax. However, note that the video will always take the full page width.
+- Use the following syntax, which will only work in docfx.
 
   ```md
   > [!Video https://youtube.com/embed/hPi9kv8WKGU]
   ```
 
-- Youtube allows you to click *Share > Embed* to copy the "html embed code" and paste it in your own document. See the following example.
+  > [!NOTE]
+  > If you use this syntax, the video will always take the full page width.
 
-  ```html
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/hPi9kv8WKGU?si=zUwfCA18OMNOFuGn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-  ```
-
-- You can also choose to embed a simple `<iframe>` element. See the following example:
+- Embed an `<iframe>` element that contains a link to the video file. See the following example:
 
   ```html
   <iframe width="560" height="315" src="https://youtube.com/embed/hPi9kv8WKGU" style="border:none;"></iframe>
   ```
 
+- If the video is hosted on Youtube, then you can do the following:
+
+  1. Open the video on Youtube.
+  1. Click *Share > Embed*.
+  1. Copy the "HTML embed code" (i.e. an <iframe> element similar to the one below) and paste it in your own document.
+  
+  ```html
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/hPi9kv8WKGU?si=zUwfCA18OMNOFuGn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  ```
+
 > [!IMPORTANT]
-> Each of the above-mentioned options will only work if the video URL starts with `https://youtube.com/embed/`.
+> If the video you want to embed is a Youtube video, then make sure the URL starts with `https://youtube.com/embed/`.
 
 ### Alerts
 
