@@ -2508,6 +2508,9 @@ namespace Skyline.DataMiner.Scripting
 		///			<item>
 		///				<description>The message will be logged in the log file of the element(located in the folder C:\Skyline DataMiner\logging\).</description>
 		///			</item>
+		///			<item>
+		///				<description>The message is limited to 5120 characters. When providing a larger message, it will be truncated to this limit.</description>
+		///			</item>
 		///		</list>
 		///	</remarks>
 		int Log(int iType, int iLevel, string message);
@@ -2525,6 +2528,9 @@ namespace Skyline.DataMiner.Scripting
 		///			</item>
 		///			<item>
 		///				<description>The message will be logged in the log file of the element(located in the folder C:\Skyline DataMiner\logging\).</description>
+		///			</item>
+		///			<item>
+		///				<description>The message is limited to 5120 characters. When providing a larger message, it will be truncated to this limit.</description>
 		///			</item>
 		///		</list>
 		///	</remarks>
@@ -2546,6 +2552,9 @@ namespace Skyline.DataMiner.Scripting
 		///			<item>
 		///				<description>The message will be logged in the log file of the element(located in the folder C:\Skyline DataMiner\logging\).</description>
 		///			</item>
+		///			<item>
+		///				<description>The message is limited to 5120 characters. When providing a larger message, it will be truncated to this limit.</description>
+		///			</item>
 		///		</list>
 		///	</remarks>
 		void Log(string message, LogLevel logLevel);
@@ -2566,6 +2575,9 @@ namespace Skyline.DataMiner.Scripting
 		///			<item>
 		///				<description>The message will be logged in the log file of the element(located in the folder C:\Skyline DataMiner\logging\).</description>
 		///			</item>
+		///			<item>
+		///				<description>The message is limited to 5120 characters. When providing a larger message, it will be truncated to this limit.</description>
+		///			</item>
 		///		</list>
 		///	</remarks>
 		void Log(string message, LogType logType);
@@ -2584,6 +2596,9 @@ namespace Skyline.DataMiner.Scripting
 		///			</item>
 		///			<item>
 		///				<description>The message will be logged in the log file of the element(located in the folder C:\Skyline DataMiner\logging\).</description>
+		///			</item>
+		///			<item>
+		///				<description>The message is limited to 5120 characters. When providing a larger message, it will be truncated to this limit.</description>
 		///			</item>
 		///		</list>
 		///	</remarks>
