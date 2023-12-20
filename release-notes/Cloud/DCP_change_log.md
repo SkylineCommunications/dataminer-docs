@@ -12,27 +12,27 @@ From now onwards, additional data like soft-launch options, installed solutions,
 
 ####  20 December 2023 - New Feature - SupportAssistant 1.6.0 - DxM status reporter added [ID_38174]
 
-The SupportAssistant will now periodically send a health check to the cloud to indicate that the DxM is running.
+The SupportAssistant DxM will now periodically send a health check to the cloud to indicate that the DxM is running.
 
 ####  20 December 2023 - New Feature - ArtifactDeployer 1.6.0 - DxM status reporter added [ID_38172]
 
-The ArtifactDeployer will now periodically send a health check to the cloud to indicate that the DxM is running.
+The ArtifactDeployer DxM will now periodically send a health check to the cloud to indicate that the DxM is running.
 
 ####  20 December 2023 - New Feature - Orchestrator 1.5.0 - DxM status reporter added [ID_38170]
 
-The Orchestrator will now periodically send a health check to the cloud to indicate that the DxM is running.
+The Orchestrator DxM will now periodically send a health check to the cloud to indicate that the DxM is running.
 
 ####  20 December 2023 - New Feature - CoreGateway 2.14.0 - DxM status reporter added [ID_38200]
 
-The CoreGateway will now periodically send a health check to the cloud to indicate that the DxM is running.
+The CoreGateway DxM will now periodically send a health check to the cloud to indicate that the DxM is running.
 
 ####  20 December 2023 - New Feature - CloudGateway 2.13.0 - DxM status reporter added [ID_38022]
 
-The CloudGateway will now periodically send a health check to the cloud to indicate that the DxM is running.
+The CloudGateway DxM will now periodically send a health check to the cloud to indicate that the DxM is running.
 
 ####  20 December 2023 - New Feature - FieldControl 2.10.0 - DxM status reporter added [ID_38116]
 
-The FieldControl will now periodically send a health check to the cloud to indicate that the DxM is running.
+The FieldControl DxM will now periodically send a health check to the cloud to indicate that the DxM is running.
 
 #### 20 December 2023 - Enhancement - Email notifications for expiring and expired DataMiner Express DaaS systems [ID_38235]
 
