@@ -21,6 +21,8 @@ uid: Troubleshooting_Flowcharts
 
   - [Trending](xref:Troubleshooting_Trending)
 
+  - [Web](xref:Troubleshooting_Web)
+
   - [Process identification](xref:Troubleshooting_Process_Identification)
 
   - [Identify per module](xref:Troubleshooting_Identify_per_Module)

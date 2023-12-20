@@ -12,6 +12,8 @@ uid: Troubleshooting_procedures
 
 - [Investigating NATS issues](xref:Investigating_NATS_Issues)
 
+- [Investigating OpenSearch issues](xref:Investigating_OpenSearch_Issues)
+
 - [Keeping a DMA from running out of disk space](xref:Keeping_a_DMA_from_running_out_of_disk_space)
 
 - ['Sharing dashboard' window does not disappear](xref:Sharing_dashboard_window_does_not_disappear)
