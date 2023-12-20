@@ -19,7 +19,7 @@ Is something not working as expected? Then do the following:
 
    - Are there any network calls failing (e.g. `GetVisioForElement`)?
 
-     This could indicate an issue in the [web APIs](#webapis) or in the DMA core software.
+     This could indicate an issue in the [web APIs](#web-apis) or in the DMA core software.
 
    - Are there any console errors?
 
@@ -83,8 +83,9 @@ The *SLNet Client Test* tool contains a *Trend Data Inspector* (*Advanced > Test
 
 ### GQI
 
-- GQI runs inside [SLHelper](xref:Troubleshooting_SLHelper_exe).
-- Data sources missing? Check if the DMA has the needed licenses and soft-launch options.
+GQI runs inside [SLHelper](xref:Troubleshooting_SLHelper_exe).
+
+- Are data sources missing? Check whether the DMA has the necessary licenses and soft-launch options.
 - No errors, but invalid data? Check the origin of the invalid data.
 - Ad-hoc data source or operator failing? Check with who created the data source or operator (could be on [GitHub](https://github.com/orgs/SkylineCommunications/repositories?q=gqi&type=all)).
 - Error message, no data, no response, or slow performance? Record the GQI session and include the ad-hoc data scripts (if any) when asking support.
