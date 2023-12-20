@@ -16,7 +16,14 @@ uid: Web_apps_Feature_Release_10.4.2
 
 ## New features
 
-*No new features have been added yet.*
+#### Dashboards app & Low-Code Apps: All visualizations now have an Info button to access their help page [ID_38224]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+In edit mode, all visualizations now have a new *Info* button. Clicking this button when configuring a visualization will open its help page on <https://docs.dataminer.services/>.
+
+> [!NOTE]
+> Currently, clicking the *Info* button of the *Grid* component or the *Timeline* component will open the [Unleashing a world of possibilities: Introducing the timeline and grid components](https://community.dataminer.services/unleashing-a-world-of-possibilities-introducing-the-timeline-and-grid-components/) blog post instead.
 
 ## Changes
 
