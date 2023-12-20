@@ -797,4 +797,7 @@ In some rare cases, DataMiner Cube could become unresponsive when event messages
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
 
-DataMiner Cube would leak memory when you closed a card (e.g. an element card) or when you closed an alarm tab containing correlated alarms.
+DataMiner Cube would leak memory
+
+- when you closed an alarm tab containing correlated alarms, or
+- when you closed a card (e.g. an element card) after navigating to it by clicking *Previous* on another card.
