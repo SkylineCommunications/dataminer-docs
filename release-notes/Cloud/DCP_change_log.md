@@ -10,6 +10,30 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 From now onwards, additional data like soft-launch options, installed solutions, manager configurations, and BPA test results will also be offloaded for proactive monitoring via CDMR.
 
+####  20 December 2023 - New Feature - SupportAssistant 1.6.0 - DxM status reporter added [ID_38174]
+
+The SupportAssistant DxM will now periodically send a health check to the cloud to indicate that the DxM is running.
+
+####  20 December 2023 - New Feature - ArtifactDeployer 1.6.0 - DxM status reporter added [ID_38172]
+
+The ArtifactDeployer DxM will now periodically send a health check to the cloud to indicate that the DxM is running.
+
+####  20 December 2023 - New Feature - Orchestrator 1.5.0 - DxM status reporter added [ID_38170]
+
+The Orchestrator DxM will now periodically send a health check to the cloud to indicate that the DxM is running.
+
+####  20 December 2023 - New Feature - CoreGateway 2.14.0 - DxM status reporter added [ID_38200]
+
+The CoreGateway DxM will now periodically send a health check to the cloud to indicate that the DxM is running.
+
+####  20 December 2023 - New Feature - CloudGateway 2.13.0 - DxM status reporter added [ID_38022]
+
+The CloudGateway DxM will now periodically send a health check to the cloud to indicate that the DxM is running.
+
+####  20 December 2023 - New Feature - FieldControl 2.10.0 - DxM status reporter added [ID_38116]
+
+The FieldControl DxM will now periodically send a health check to the cloud to indicate that the DxM is running.
+
 #### 20 December 2023 - Enhancement - Email notifications for expiring and expired DataMiner Express DaaS systems [ID_38235]
 
 From now onwards, when a DataMiner Express DaaS system is about to expire, an email notification will be sent to both the owners of the organization and the owners of the DMS, so that they can take action if they want to prevent deletion. Another email notication will be sent when the DataMiner Express DaaS system has been deleted.
