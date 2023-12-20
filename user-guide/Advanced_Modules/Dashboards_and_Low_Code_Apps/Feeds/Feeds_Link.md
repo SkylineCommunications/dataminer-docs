@@ -37,6 +37,7 @@ To create feed references inside textual settings, use the following syntax:
 
 > [!NOTE]
 > Any part of this syntax that contain spaces should be enclosed in double quotation marks.
+> All parts of this syntax are case sensitive.
 
 ## Example
 
