@@ -2509,7 +2509,7 @@ namespace Skyline.DataMiner.Scripting
 		///				<description>The message will be logged in the log file of the element(located in the folder C:\Skyline DataMiner\logging\).</description>
 		///			</item>
 		///			<item>
-		///				<description>The message is limited to 5120 characters. When providing a larger message, it will be truncated to this limit.</description>
+		///				<description>The message is limited to 5120 characters. When a larger message is provided, it will be truncated to this limit.</description>
 		///			</item>
 		///		</list>
 		///	</remarks>
@@ -2530,7 +2530,7 @@ namespace Skyline.DataMiner.Scripting
 		///				<description>The message will be logged in the log file of the element(located in the folder C:\Skyline DataMiner\logging\).</description>
 		///			</item>
 		///			<item>
-		///				<description>The message is limited to 5120 characters. When providing a larger message, it will be truncated to this limit.</description>
+		///				<description>The message is limited to 5120 characters. When a larger message is provided, it will be truncated to this limit.</description>
 		///			</item>
 		///		</list>
 		///	</remarks>
@@ -2553,7 +2553,7 @@ namespace Skyline.DataMiner.Scripting
 		///				<description>The message will be logged in the log file of the element(located in the folder C:\Skyline DataMiner\logging\).</description>
 		///			</item>
 		///			<item>
-		///				<description>The message is limited to 5120 characters. When providing a larger message, it will be truncated to this limit.</description>
+		///				<description>The message is limited to 5120 characters. When a larger message is provided, it will be truncated to this limit.</description>
 		///			</item>
 		///		</list>
 		///	</remarks>
@@ -2576,7 +2576,7 @@ namespace Skyline.DataMiner.Scripting
 		///				<description>The message will be logged in the log file of the element(located in the folder C:\Skyline DataMiner\logging\).</description>
 		///			</item>
 		///			<item>
-		///				<description>The message is limited to 5120 characters. When providing a larger message, it will be truncated to this limit.</description>
+		///				<description>The message is limited to 5120 characters. When a larger message is provided, it will be truncated to this limit.</description>
 		///			</item>
 		///		</list>
 		///	</remarks>
@@ -2598,7 +2598,7 @@ namespace Skyline.DataMiner.Scripting
 		///				<description>The message will be logged in the log file of the element(located in the folder C:\Skyline DataMiner\logging\).</description>
 		///			</item>
 		///			<item>
-		///				<description>The message is limited to 5120 characters. When providing a larger message, it will be truncated to this limit.</description>
+		///				<description>The message is limited to 5120 characters. When a larger message is provided, it will be truncated to this limit.</description>
 		///			</item>
 		///		</list>
 		///	</remarks>
