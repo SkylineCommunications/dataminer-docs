@@ -57,17 +57,6 @@ To install the Skyline certificates:
 > - When the installation is complete, a message "Certificates have been installed (current user)" or "Certificates have been installed (all users)" will be displayed.
 > - This tool (SLRegCerts.exe) also supports a "/silent" option that suppresses any message box output, so that it can be used in automatic installations.
 
-### Web browser
-
-If DataMiner Cube will be run as a web application instead of a desktop application, you will need one of the following browsers:
-
-- Microsoft Internet Explorer (v9.0 or above)
-
-- Microsoft Edge (using IE compatibility mode)
-
-> [!TIP]
-> For more information, see [Internet Explorer Support](https://community.dataminer.services/documentation/internet-explorer-support/).
-
 ### Optional software
 
 **Microsoft Visio (Standard or Professional, version 2013 or later)**:
