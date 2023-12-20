@@ -113,7 +113,7 @@ items:
             topicUid: Troubleshooting_Services
           - name: Troubleshooting - trending
             topicUid: Troubleshooting_Trending
-          - name: Troubleshooting - Web
+          - name: Troubleshooting - web
             topicUid: Troubleshooting_Web
           - name: Troubleshooting - process identification
             topicUid: Troubleshooting_Process_Identification

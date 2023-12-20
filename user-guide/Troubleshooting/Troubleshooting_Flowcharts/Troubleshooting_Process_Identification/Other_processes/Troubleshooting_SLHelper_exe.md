@@ -10,11 +10,11 @@ uid: Troubleshooting_SLHelper_exe
 
 These are the main functions of *SLHelper.exe*:
 
-- Rendering Visual Overview pages for the Monitoring and Dashboards apps (see [web](xref:Troubleshooting_Web)).
+- Rendering Visual Overview pages for the Monitoring and Dashboards apps (see [Troubleshooting - web](xref:Troubleshooting_Web)).
 
-- Converting documents to PDF in the Reports, Dashboards and Jobs apps (see [web](xref:Troubleshooting_Web)).
+- Converting documents to PDF in the Reports, Dashboards and Jobs apps (see [Troubleshooting - web](xref:Troubleshooting_Web)).
 
-- Executing queries for Dashboards via the Generic Query Interface (GQI) (see [web](xref:Troubleshooting_Web)).
+- Executing queries for Dashboards via the Generic Query Interface (GQI) (see [Troubleshooting - web](xref:Troubleshooting_Web)).
 
 - Running Best Practice Analyzer (BPA) tests.
 
@@ -34,7 +34,7 @@ SLHelper is often updated in new DataMiner builds. Before you report an issue to
 
 ### Logging
 
-The process does not have a dedicated log file. However, since SLHelper gets started from SLNet, logging can be found in *SLHelperWrapper.txt*. Depending on your use case, you can check the following additional log files:
+The process does not have a dedicated log file. However, since SLHelper is started by SLNet, logging can be found in *SLHelperWrapper.txt*. Depending on your use case, you can check the following additional log files:
 
 - *SLUIProvider.txt*: Check this log file to check for Visual Overview issues. Search for "Log:" and "visio" for relevant information.
 
@@ -44,7 +44,7 @@ The process does not have a dedicated log file. However, since SLHelper gets sta
 
 - *SLHelperCrash.txt*: Check this log file for information on crashes.
 
-- For the GQI, there is no dedicated log file, but you can find error information in API responses using the Developer Console of a browser (see [web](xref:Troubleshooting_Web)).
+For the GQI, there is no dedicated log file, but you can find error information in API responses using the Developer Console of a browser (see [Troubleshooting - web](xref:Troubleshooting_Web)).
 
 > [!NOTE]
 > To enable logging of information required for an investigation, make sure you set the log level to "Log Everything (5) ". For more information, see [DataMiner logging](xref:DataMiner_logging).
