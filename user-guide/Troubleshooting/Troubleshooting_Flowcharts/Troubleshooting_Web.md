@@ -86,21 +86,21 @@ The *SLNet Client Test* tool contains a *Trend Data Inspector* (*Advanced > Test
 GQI runs inside [SLHelper](xref:Troubleshooting_SLHelper_exe).
 
 - Are data sources missing? Check whether the DMA has the necessary licenses and soft-launch options.
-- No errors, but invalid data? Check the origin of the invalid data.
-- Ad-hoc data source or operator failing? Check with who created the data source or operator (could be on [GitHub](https://github.com/orgs/SkylineCommunications/repositories?q=gqi&type=all)).
-- Error message, no data, no response, or slow performance? Record the GQI session and include the ad-hoc data scripts (if any) when asking support.
+- Are there no errors, but invalid data? Check the origin of the invalid data.
+- Are ad-hoc data sources or operators failing? Contact the person who created the data source or the operator (check [GitHub](https://github.com/orgs/SkylineCommunications/repositories?q=gqi&type=all)).
+- Error messages, no data, no response, or slow performance? Then record the GQI session and include the ad-hoc data scripts (if any) when asking support.
 
 #### Record GQI session
 
-GQI recording is a debugging feature that allows you to save GQI communication and replay it in a lab environment. GQI recording is disabled by default. To create a recording:
+GQI recording is a debugging feature that allows you to save GQI communication and replay it in a lab environment. GQI recording is disabled by default. To create a recording, do the following:
 
-1. Create the folder `C:\Skyline DataMiner\logging\genif`.
+1. Create the `C:\Skyline DataMiner\logging\genif` folder.
 1. Perform the operation that needs to be recorded.
-1. Save the files written to `C:\Skyline DataMiner\logging\genif`.
-1. Delete the folder to disable recording.
+1. Save the files that were written to `C:\Skyline DataMiner\logging\genif`.
+1. Stop the recording by deleting the folder.
 
 > [!NOTE]
-> Recording has an impact on the performance as it has to write data to the disk. After the wanted recording has been created, disable it again by deleting the folder.
+> Recording does not have any impact on performance as data is written to the disk. Once the recording has been made, stop the recording by deleting the folder.
 
 ### PDF
 
