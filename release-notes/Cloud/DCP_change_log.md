@@ -6,6 +6,10 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 20 December 2023 - Enhancement - SupportAssistant 1.6.1 - Additional data offloaded for proactive monitoring [ID_38250]
+
+From now onwards, additional data like soft-launch options, installed solutions, manager configurations, and BPA test results will also be offloaded for proactive monitoring via CDMR.
+
 #### 20 December 2023 - Enhancement - Email notifications for expiring and expired DataMiner Express DaaS systems [ID_38235]
 
 From now onwards, when a DataMiner Express DaaS system is about to expire, an email notification will be sent to both the owners of the organization and the owners of the DMS, so that they can take action if they want to prevent deletion. Another email notication will be sent when the DataMiner Express DaaS system has been deleted.
