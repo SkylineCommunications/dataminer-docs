@@ -14,6 +14,9 @@ uid: DataMiner_client_applications
 
 In case of problems, Skyline Technical Support may ask you to provide version information and/or debug information. Below, you can find how you can gather the requested information.
 
+> [!TIP]
+> See also: [Collecting data to report an issue to Technical Support](xref:Collecting_data_to_report_an_issue_to_TechSupport)
+
 ### Sending version information to Technical Support
 
 1. In DataMiner Cube, go to *Apps* > *About*.
