@@ -220,7 +220,7 @@ Up to now, when a *Join* operator of type "Right join" was applied, both the ent
 
 #### SLLogCollector will now also collect the backup logs of the StorageModule DxM [ID_38228]
 
-<!-- MR 10.5.0 - FR 10.4.2 -->
+<!-- MR 10.4.0 - FR 10.4.2 -->
 
 SLLogCollector will now also collect the backup logs of the *StorageModule* DxM located in the `C:\ProgramData\Skyline Communications\DataMiner StorageModule\Logs\Backup` folder.
 

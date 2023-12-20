@@ -834,6 +834,12 @@ The amount of memory used for flatline detection has been reduced.
 
 Up to now, when a *Join* operator of type "Right join" was applied, both the entire left query and the entire right query would be fetched. From now on, the right query will be fetched lazily.
 
+#### SLLogCollector will now also collect the backup logs of the StorageModule DxM [ID_38228]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+SLLogCollector will now also collect the backup logs of the *StorageModule* DxM located in the `C:\ProgramData\Skyline Communications\DataMiner StorageModule\Logs\Backup` folder.
+
 ### Fixes
 
 #### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID_34981]
