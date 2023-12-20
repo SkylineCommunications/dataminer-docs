@@ -20,8 +20,8 @@ With this architecture, **each DMA has its own Cassandra database** (which can b
 
 In a development environment with limited load, it is possible to host DataMiner, Cassandra, and OpenSearch/Elasticsearch on one Windows machine. In this case, OpenSearch/Elasticsearch and DataMiner must be installed on a separate disk or partition. However, this is not recommended for normal production environments.
 
-![Development setup: DataMiner, Cassandra, and Elasticsearch hosted on the same machine](~/user-guide/images/Development-setup-DataMiner-Cassandra-and-Elasticsearch.png)<br>
-*Development setup: DataMiner, Cassandra, and Elasticsearch hosted on the same machine*
+![Development setup: DataMiner, Cassandra, and OpenSearch hosted on the same machine](~/user-guide/images/Development-setup-DataMiner-Cassandra-and-OpenSearch.png)<br>
+*Development setup: DataMiner, Cassandra, and OpenSearch hosted on the same machine*
 
 Instead, we recommend running DataMiner, Cassandra, and OpenSearch/Elasticsearch on dedicated machines.
 
@@ -31,14 +31,14 @@ For Cassandra, any number of nodes can be used, ideally running on Linux machine
 
 Several possible setups are illustrated below.
 
-![A DataMiner, Cassandra, and Elasticsearch node, each running on dedicated machines](~/user-guide/images/DataMiner-Cassandra-and-Elasticsearch-node.png)<br>
-*A DataMiner, Cassandra, and Elasticsearch node, each running on dedicated machines*
+![A DataMiner, Cassandra, and OpenSearch node, each running on dedicated machines](~/user-guide/images/DataMiner-Cassandra-and-OpenSearch-node.png)<br>
+*A DataMiner, Cassandra, and OpenSearch node, each running on dedicated machines*
 
-![A DMS consisting of four DMAs, each with their own Cassandra database, and an Elasticsearch cluster](~/user-guide/images/DMS-consisting-of-four-DMAs.png)<br>
-*A DMS consisting of four DMAs, each with their own Cassandra database, and an Elasticsearch cluster*
+![A DMS consisting of four DMAs, each with their own Cassandra database, and an OpenSearch cluster](~/user-guide/images/DMS-consisting-of-four-DMAs.png)<br>
+*A DMS consisting of four DMAs, each with their own Cassandra database, and an OpenSearch cluster*
 
-![Failover pair with Cassandra database hosted on the same machines as DataMiner and a one-node Elasticsearch database](~/user-guide/images/Failover-pair-with-Cassandra-database.png)<br>
-*Failover pair with Cassandra database hosted on the same machines as DataMiner and a one-node Elasticsearch database*
+![Failover pair with Cassandra database hosted on the same machines as DataMiner and a one-node OpenSearch database](~/user-guide/images/Failover-pair-with-Cassandra-database.png)<br>
+*Failover pair with Cassandra database hosted on the same machines as DataMiner and a one-node OpenSearch database*
 
-![Two Failover pairs, each with two Cassandra nodes running on the same machines, and a three-node Elasticsearch database for the entire DMS](~/user-guide/images/two-Cassandra-nodes-running-on-the-same-machines.png)<br>
-*Two Failover pairs, each with two Cassandra nodes running on the same machines, and a three-node Elasticsearch database for the entire DMS*
+![Two Failover pairs, each with two Cassandra nodes running on the same machines, and a three-node OpenSearch database for the entire DMS](~/user-guide/images/two-Cassandra-nodes-running-on-the-same-machines.png)<br>
+*Two Failover pairs, each with two Cassandra nodes running on the same machines, and a three-node OpenSearch database for the entire DMS*
