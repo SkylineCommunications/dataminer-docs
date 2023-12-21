@@ -752,7 +752,7 @@ If you use the above-mentioned syntax, the video will always take the full page 
 ```
 
 > [!IMPORTANT]
-> If the video you want to embed is a Youtube video, then make sure the URL starts with `https://youtube.com/embed/`. Links like `https://youtu.be/hPi9kv8WKGU` won't work.
+> If the video you want to embed is a Youtube video, then make sure the URL starts with `https://youtube.com/embed/`. Links like `https://youtu.be/hPi9kv8WKGU` will not work.
 
 ### Alerts
 
