@@ -741,7 +741,7 @@ For example:
 
 To embed a video, you have a couple of options:
 
-- Use the following syntax, which will only work in **docfx**.
+- Use the following syntax:
 
   ```md
   > [!Video https://youtube.com/embed/hPi9kv8WKGU]
