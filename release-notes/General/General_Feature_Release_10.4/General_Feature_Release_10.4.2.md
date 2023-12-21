@@ -53,13 +53,15 @@ From now on, the DOM API allows you to create, update or delete up to 100 DOM in
 
 ##### CreateOrUpdate
 
+A `CreateOrUpdate` operation will return the IDs of the DomInstances that were successfully created or updated, as well as the IDs of the DomInstances that were not. Trace data will be available per DomInstance ID.
+
 A `CreateOrUpdate` operation will return a list of DomInstances that were successfully created or updated. Trace data will be available per DomInstance ID.
 
 If an issue occurs while creating or updating an item, no exception will be thrown, even when `ThrowExceptionsOnErrorData` is true. The trace data of the last call will contain the data for all items.
 
-If the entire `CreateOrUpdate` operation would fail, a `CrudFailedException` will be thrown. If, in that case, `ThrowExceptionsOnErrorData` was set to false, NULL will be returned and the trace data of the last call will contain more details about the issue.
+If the entire `CreateOrUpdate` operation would fail, a `CrudFailedException` will be thrown. If, in that case, `ThrowExceptionsOnErrorData` was set to false, null will be returned and the trace data of the last call will contain more details about the issue.
 
-If the list returned by a `CreateOrUpdate` operation contains DOM instances sharing the same key, only the last item with that key will be considered to be created or updated.
+If the list returned by a `CreateOrUpdate` operation contains DomInstances sharing the same key, only the last item with that key will be considered to be created or updated.
 
 ```csharp
 /// <summary>
@@ -82,11 +84,11 @@ public BulkCreateOrUpdateResult<DomInstance, DomInstanceId> CreateOrUpdate(List<
 
 ##### Delete
 
-A `Delete` operation will return a list of DomInstances that were successfully deleted. Trace data will be available per DomInstance ID.
+A `Delete` operation will return the IDs of the DomInstances that were deleted, as well as the IDs of the DomInstances that were not deleted. Trace data will be available per DomInstance ID.
 
 If an issue occurs while deleting an item, no exception will be thrown, even when `ThrowExceptionsOnErrorData` is true. The trace data of the last call will contain the data for all items.
 
-If the entire `Delete` operation would fail, a `CrudFailedException` will be thrown. If, in that case, `ThrowExceptionsOnErrorData` was set to false, NULL will be returned and the trace data of the last call will contain more details about the issue.
+If the entire `Delete` operation would fail, a `CrudFailedException` will be thrown. If, in that case, `ThrowExceptionsOnErrorData` was set to false, null will be returned and the trace data of the last call will contain more details about the issue.
 
 ```csharp
 /// <summary>
@@ -109,16 +111,19 @@ public BulkDeleteResult<DomInstanceId> Delete(List<DomInstance> objects)
 
 ##### MaxAmountBulkOperation
 
-By default, `MaxAmountBulkOperation` will be set to 100. This means that any `CreateOrUpdate` or `Delete` operation will be able to process up to 100 DOM instances.
+By default, `MaxAmountBulkOperation` will be set to 100. This means that any `CreateOrUpdate` or `Delete` operation will be able to process up to 100 DOM instances. If more than 100 instances are passed, then an error will occur.
+
+> [!IMPORTANT]
+> Since related actions (e.g. launching script actions and history tracking) might outlive a `CreateOrUpdate` or `Delete` operation, keep in mind that repeating these operations in succession can have an impact on system stability.
 
 ##### Unique IDs
 
 When creating, updating or deleting instances using the above-mentioned bulk operations, make sure each DOM instance in the list has a unique ID.
 
-If multiple instances has the same ID, only the last of those instances will be taken into account.
+If multiple instances share the same ID, only the last of those instances will be taken into account.
 
 > [!NOTE]
-> This also applies when PaTokens are created, updated or deleted in bulk. If multiple instances has the same ID, only the last of those instances will be taken into account.
+> This also applies when PaTokens are created, updated or deleted in bulk. If multiple instances share the same ID, only the last of those instances will be taken into account.
 
 #### SLNetTypes and SLGlobal now support a new AlarmTreeID/SLAlarmTreeKey object [ID_37950]
 
