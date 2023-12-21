@@ -96,7 +96,7 @@ The value, of type `object`, of the cell matching the provided column.
 
 Gets the value for the cell of the specified column.
 
-Available from DataMiner 10.3.4/10.4.0 onwards.
+Available from DataMiner 10.3.4/10.4.0 onwards.<!-- RN 35734 -->
 
 #### Parameters
 
