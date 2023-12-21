@@ -76,6 +76,13 @@ It is now possible to read DOM objects and ModuleSettings in parallel. This will
 
 Up to now, SLAnalytics would always keep one hour of average trend data for all trended parameters on the system in order to determine which trend icon to display in the absence of change points. From now on, it will only keep one hour of trend data for 250,000 trended parameters at the most, reducing memory usage to a maximum of 330 MB.
 
+#### Security enhancements [ID_38052]
+
+<!-- 38052: MR 10.5.0 - FR 10.4.2 -->
+
+A number of security enhancements have been made.
+
+
 ### Fixes
 
 #### Databases: Problem when starting a migration from MySQL to Cassandra [ID_37589]

@@ -261,9 +261,10 @@ When multiple, separate sort operators were optimized by the GQI data source *Ge
 
 For example, from now on, when you sort by A and, later on in the GQI query, sort again by B, the query will now only be sorted by B.
 
-#### Security enhancements [ID_38040]
+#### Security enhancements [ID_38040] [ID_38052]
 
 <!-- 38040: MR 10.3.0 [CU11] - FR 10.4.2 -->
+<!-- 38052: MR 10.5.0 - FR 10.4.2 -->
 
 A number of security enhancements have been made.
 
