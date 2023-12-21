@@ -192,3 +192,9 @@ When you removed a query from a Maps component and then added it again, the comp
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
 
 A Line & area chart with multiple aggregation parameters would not render those parameters correctly. Only one line would be shown, and the legend would not show any labels.
+
+#### Dashboards app & Low-Code Apps - Table component: 'Restore initial view' button would get disabled when an error occurred due to a sort operation [ID_38249]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+When an error occurred in the table component after a user had sorted the data on a column, the *Restore initial view* button would incorrectly get disabled. As a result, it would not be possible to make the error disappear and undo the sort operation.
