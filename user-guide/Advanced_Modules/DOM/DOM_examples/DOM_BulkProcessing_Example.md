@@ -115,7 +115,7 @@ It is also possible to disable this and check if something went wrong yourself b
 domHelper.DomInstances.ThrowExceptionsOnErrorData = false;
 
 // Remove them from the DB.
-var deleteResult = domHelper.DomInstances.DomInstances.Delete(domInstances);
+var deleteResult = domHelper.DomInstances.Delete(domInstances);
 
 // Check if a result is available.
 if (deleteResult != null)
