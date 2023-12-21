@@ -144,6 +144,15 @@
           topicUid: LogicConditions
         - name: Examples
           topicUid: LogicExamples
+        - name: Use cases
+          topicUid: LogicUseCase1
+          items:
+          - name: Internal flow - concept
+            topicUid: LogicUseCase1
+          - name: Internal flow - element startup
+            topicUid: LogicUseCase2
+          - name: Internal flow - QActions
+            topicUid: LogicUseCase3
       - name: Inner workings
         topicUid: InnerWorkings
         items:
@@ -379,6 +388,8 @@
           topicUid: ConnectionsHttpParsingJson
         - name: Examples
           topicUid: ConnectionsHttpExamples
+        - name: Use case
+          topicUid: ConnectionsHttpUseCase
       - name: WebSockets
         topicUid: ConnectionsWebSockets
         items:
