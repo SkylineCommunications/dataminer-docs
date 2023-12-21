@@ -113,8 +113,6 @@ items:
             topicUid: Troubleshooting_Services
           - name: Troubleshooting - trending
             topicUid: Troubleshooting_Trending
-          - name: Troubleshooting - web
-            topicUid: Troubleshooting_Web
           - name: Troubleshooting - process identification
             topicUid: Troubleshooting_Process_Identification
             items:
@@ -195,6 +193,8 @@ items:
         topicUid: Investigating_NATS_Issues
       - name: Investigating OpenSearch issues
         topicUid: Investigating_OpenSearch_Issues
+      - name: Investigating web issues
+        topicUid: Investigating_Web_Issues
       - name: Keeping a DMA from running out of disk space
         topicUid: Keeping_a_DMA_from_running_out_of_disk_space
       - name: Sharing dashboard window does not disappear

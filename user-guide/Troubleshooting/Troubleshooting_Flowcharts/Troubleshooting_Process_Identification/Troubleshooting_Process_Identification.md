@@ -53,4 +53,4 @@ uid: Troubleshooting_Process_Identification
 | [SLHelper.exe](xref:Troubleshooting_SLHelper_exe) | Performs various small tasks. |
 | SLBrain.exe | Backwards compatibility DataMiner 8.0 Correlation.<br>Deprecated. |
 | [SLScheduler.exe](xref:Troubleshooting_SLScheduler_exe) | Schedules DataMiner tasks. |
-| [w3wp.exe](xref:Troubleshooting_Web) | Windows worker process of the IIS Web Server. |
+| [w3wp.exe](xref:Investigating_Web_Issues) | Windows worker process of the IIS Web Server. |

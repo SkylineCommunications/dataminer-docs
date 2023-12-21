@@ -1,8 +1,8 @@
 ---
-uid: Troubleshooting_Web
+uid: Investigating_Web_Issues
 ---
 
-# Troubleshooting - web
+# Investigating web issues
 
 ## Client web app
 
@@ -34,7 +34,7 @@ Is something not working as expected? Then do the following:
   1. In the *Client Test* tool, investigate whether the unexpected result comes from the DMA core software.
 
      - When you ask for support by email, include the *SLNet Client Test* tool dump and, if the issue is caused by the DMA core software, a [Log Collector](xref:Collecting_data_to_report_an_issue_to_TechSupport#log-collector-packages) package.
-  
+
      - If you cannot determine whether it is a DMA core issue or a web API issue, then collect the requests/responses of the web API by saving them as a HAR file (in the F12 developer tools of Google Chrome) or by capturing them using Wireshark.
 
 - The web API process runs inside IIS w3wp. Does this w3wp process crash, request a timeout or return an error page?

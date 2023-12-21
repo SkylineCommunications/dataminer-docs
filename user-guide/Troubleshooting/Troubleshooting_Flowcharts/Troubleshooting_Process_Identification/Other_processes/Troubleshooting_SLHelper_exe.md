@@ -10,11 +10,11 @@ uid: Troubleshooting_SLHelper_exe
 
 These are the main functions of *SLHelper.exe*:
 
-- Rendering Visual Overview pages for the Monitoring and Dashboards apps (see [Troubleshooting - web](xref:Troubleshooting_Web)).
+- Rendering Visual Overview pages for the Monitoring and Dashboards apps (see [Investigating web issues](xref:Investigating_Web_Issues)).
 
-- Converting documents to PDF in the Reports, Dashboards and Jobs apps (see [Troubleshooting - web](xref:Troubleshooting_Web)).
+- Converting documents to PDF in the Reports, Dashboards and Jobs apps (see [Investigating web issues](xref:Investigating_Web_Issues)).
 
-- Executing queries for Dashboards via the Generic Query Interface (GQI) (see [Troubleshooting - web](xref:Troubleshooting_Web)).
+- Executing queries for Dashboards via the Generic Query Interface (GQI) (see [Investigating web issues](xref:Investigating_Web_Issues)).
 
 - Running Best Practice Analyzer (BPA) tests.
 
@@ -44,7 +44,7 @@ The process does not have a dedicated log file. However, since SLHelper is start
 
 - *SLHelperCrash.txt*: Check this log file for information on crashes.
 
-For the GQI, there is no dedicated log file, but you can find error information in API responses using the Developer Console of a browser (see [Troubleshooting - web](xref:Troubleshooting_Web)).
+For the GQI, there is no dedicated log file, but you can find error information in API responses using the Developer Console of a browser (see [Investigating web issues](xref:Investigating_Web_Issues)).
 
 > [!NOTE]
 > To enable logging of information required for an investigation, make sure you set the log level to "Log Everything (5) ". For more information, see [DataMiner logging](xref:DataMiner_logging).
