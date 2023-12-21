@@ -151,6 +151,14 @@ The `ExecuteScriptOnDomInstanceActionSettings` object has been made available as
 
 ### Enhancements
 
+#### Security enhancements [ID_37349] [ID_38040] [ID_38052]
+
+<!-- 37349: MR 10.5.0 - FR 10.4.2 -->
+<!-- 38040: MR 10.3.0 [CU11] - FR 10.4.2 -->
+<!-- 38052: MR 10.5.0 - FR 10.4.2 -->
+
+A number of security enhancements have been made.
+
 #### Configuration of database offload functionality moved from DBConfiguration.xml to DB.xml [ID_37446]
 
 <!-- MR 10.4.0 - FR 10.4.2 -->
@@ -265,13 +273,6 @@ It is now possible to read DOM objects and ModuleSettings in parallel. This will
 When multiple, separate sort operators were optimized by the GQI data source *Get parameter table by ID*, up to now, they would be incorrectly combined into a single multi-level sort operation. From now on, only the last sort operator will be used, consistent with the behavior in case the sort operators are not optimized.
 
 For example, from now on, when you sort by A and, later on in the GQI query, sort again by B, the query will now only be sorted by B.
-
-#### Security enhancements [ID_38040] [ID_38052]
-
-<!-- 38040: MR 10.3.0 [CU11] - FR 10.4.2 -->
-<!-- 38052: MR 10.5.0 - FR 10.4.2 -->
-
-A number of security enhancements have been made.
 
 #### SLAnalytics - Behavioral anomaly detection: Reduction of memory used for trend icon calculation [ID_38041]
 

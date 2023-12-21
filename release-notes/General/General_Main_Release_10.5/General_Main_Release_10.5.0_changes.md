@@ -11,6 +11,13 @@ uid: General_Main_Release_10.5.0_changes
 
 ### Enhancements
 
+#### Security enhancements [ID_37349] [ID_38052]
+
+<!-- 37349: MR 10.5.0 - FR 10.4.2 -->
+<!-- 38052: MR 10.5.0 - FR 10.4.2 -->
+
+A number of security enhancements have been made.
+
 #### Deprecated NotifyDataMiner type 'NT_CONNECTIONS_TO_REMOVE' can no longer be used [ID_37595]
 
 <!-- MR 10.5.0 - FR 10.4.1 -->
@@ -75,13 +82,6 @@ It is now possible to read DOM objects and ModuleSettings in parallel. This will
 <!-- MR 10.5.0 - FR 10.4.2 -->
 
 Up to now, SLAnalytics would always keep one hour of average trend data for all trended parameters on the system in order to determine which trend icon to display in the absence of change points. From now on, it will only keep one hour of trend data for 250,000 trended parameters at the most, reducing memory usage to a maximum of 330 MB.
-
-#### Security enhancements [ID_38052]
-
-<!-- 38052: MR 10.5.0 - FR 10.4.2 -->
-
-A number of security enhancements have been made.
-
 
 ### Fixes
 
