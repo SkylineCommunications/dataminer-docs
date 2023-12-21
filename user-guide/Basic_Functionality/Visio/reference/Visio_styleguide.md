@@ -202,9 +202,11 @@ If you want to download a zip package with the latest versions of the DataMiner 
 
 ## Skylicons
 
-All standard Skyline icons can be downloaded from the [Skylicons](https://skyline.be/skylicons/) website in PNG, XAML or SVG format.
+All standard Skyline icons can be downloaded from the [Skylicons](https://skyline.be/skylicons/) website in PNG or SVG format.
 
-By clicking **download visio stencil** in the header bar of the [Skylicons](https://skyline.be/skylicons/) website, you can download a package with the latest versions of the DataMiner stencils. One of those stencils contains the entire collection of Skyline icons.
+> To request the XAML version of an icon, send an email to [devops@skyline.be](mailto:devops@skyline.be).
+
+You can download either a single icon, or you can opt to download the full icon pack by clicking **click here to download the full pack** above the icon overview.
 
 > To request a new icon or to request an update of an existing icon, send an email to [team.marketing@skyline.be](mailto:team.marketing@skyline.be).
 
