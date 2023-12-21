@@ -834,6 +834,12 @@ The amount of memory used for flatline detection has been reduced.
 
 Up to now, when a *Join* operator of type "Right join" was applied, both the entire left query and the entire right query would be fetched. From now on, the right query will be fetched lazily.
 
+#### SLAnalytics - Behavioral anomaly detection: Enhanced anomaly check algorithm [ID_38176]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+A number of enhancements have been made to the anomaly check algorithm.
+
 #### SLLogCollector will now also collect the backup logs of the StorageModule DxM [ID_38228]
 
 <!-- MR 10.4.0 - FR 10.4.2 -->
