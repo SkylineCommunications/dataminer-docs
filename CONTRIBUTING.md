@@ -741,7 +741,7 @@ For example:
 
 To embed a video, you have a couple of options:
 
-- Use the following syntax, which will only work in docfx.
+- Use the following syntax, which will only work in **docfx**.
 
   ```md
   > [!Video https://youtube.com/embed/hPi9kv8WKGU]
@@ -750,17 +750,17 @@ To embed a video, you have a couple of options:
   > [!NOTE]
   > If you use this syntax, the video will always take the full page width.
 
-- Embed an `<iframe>` element that contains a link to the video file. See the following example:
+- Embed an **`<iframe>`** element that contains a link to the video file. See the following example:
 
   ```html
   <iframe width="560" height="315" src="https://youtube.com/embed/hPi9kv8WKGU" style="border:none;"></iframe>
   ```
 
-- If the video is hosted on Youtube, then you can do the following:
+- If the video is hosted on **Youtube**, then you can do the following:
 
   1. Open the video on Youtube.
   1. Click *Share > Embed*.
-  1. Copy the "HTML embed code" (i.e. an <iframe> element similar to the one below) and paste it in your own document.
+  1. Copy the "HTML embed code" (i.e. an <iframe> element similar to the one below) and paste it in your own Markdown document.
   
   ```html
   <iframe width="560" height="315" src="https://www.youtube.com/embed/hPi9kv8WKGU?si=zUwfCA18OMNOFuGn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -768,6 +768,7 @@ To embed a video, you have a couple of options:
 
 > [!IMPORTANT]
 > If the video you want to embed is a Youtube video, then make sure the URL starts with `https://youtube.com/embed/`.
+> Links like `https://youtu.be/hPi9kv8WKGU` won't work.
 
 ### Alerts
 
