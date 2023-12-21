@@ -45,6 +45,81 @@ var resourceManagerHelper = new ResourceManagerHelper(engine.SendSLNetSingleResp
 var count = resourceManagerHelper.CountResources(ResourceExposers.Name.Contains("name"));
 ```
 
+#### DataMiner Object Models: Creating, updating and deleting multiple DOM instances in one call [ID_37891]
+
+<!-- MR 10.5.0 - FR 10.4.2 -->
+
+From now on, the DOM API allows you to create, update or delete up to 100 DOM instances in one single call.
+
+##### CreateOrUpdate
+
+A `CreateOrUpdate` operation will return a list of DomInstances that were successfully created or updated. Trace data will be available per DomInstance ID.
+
+If an issue occurs while creating or updating an item, no exception will be thrown, even when `ThrowExceptionsOnErrorData` is true. The trace data of the last call will contain the data for all items.
+
+If the entire `CreateOrUpdate` operation would fail, a `CrudFailedException` will be thrown. If, in that case, `ThrowExceptionsOnErrorData` was set to false, NULL will be returned and the trace data of the last call will contain more details about the issue.
+
+If the list returned by a `CreateOrUpdate` operation contains DOM instances sharing the same key, only the last item with that key will be considered to be created or updated.
+
+```csharp
+/// <summary>
+/// Returns the created or updated `objects`.
+/// </summary>
+/// <param name="objects">
+/// List of `DomInstances` to be created or updated.
+/// The number of `DomInstances` should not exceed `MaxAmountBulkOperation`.
+/// </param>
+/// The result containing a list of `DomInstances` that were successfully updated or created,
+/// a list of IDs of the `DomInstances` that were not successfully updated or created
+/// and a list of `TraceData` per item.
+/// `null` if `ThrowExceptionsOnErrorData` is `false` and there is no `BulkCreateOrUpdateResult` available.
+/// </returns>
+/// <exception cref="ArgumentNullException">if `objects` is `null`.</exception>
+/// <exception cref="CrudFailedException">if `ThrowExceptionsOnErrorData` is `true`,  the TraceData contains errors and there is no `BulkCreateOrUpdateResult` available.</exception>
+/// <exception cref="DomInstanceCrudMaxAmountExceededArgumentException">if the number of `objects` exceeds `MaxAmountBulkOperation`.</exception>
+public BulkCreateOrUpdateResult<DomInstance, DomInstanceId> CreateOrUpdate(List<DomInstance> objects)
+```
+
+##### Delete
+
+A `Delete` operation will return a list of DomInstances that were successfully deleted. Trace data will be available per DomInstance ID.
+
+If an issue occurs while deleting an item, no exception will be thrown, even when `ThrowExceptionsOnErrorData` is true. The trace data of the last call will contain the data for all items.
+
+If the entire `Delete` operation would fail, a `CrudFailedException` will be thrown. If, in that case, `ThrowExceptionsOnErrorData` was set to false, NULL will be returned and the trace data of the last call will contain more details about the issue.
+
+```csharp
+/// <summary>
+/// Deletes the given `objects`.
+/// </summary>
+/// <param name="objects">
+/// List of `DomInstances` to be deleted.
+/// The number of `DomInstances` should not exceed `MaxAmountBulkOperation`.
+/// </param>
+/// <returns>
+/// The result containing a list of IDs of `DomInstances` that were successfully deleted
+/// a list of IDs of the `DomInstances` that were not successfully deleted
+/// and a list of `TraceData` per item.
+/// </returns>
+/// <exception cref="ArgumentNullException">if `objects` is `null`.</exception>
+/// <exception cref="CrudFailedException">if `ThrowExceptionsOnErrorData` is `true`,  the TraceData contains errors and there is no `BulkDeleteResult` available.</exception>
+/// <exception cref="DomInstanceCrudMaxAmountExceededArgumentException">if the amount of `objects` exceeds `MaxAmountBulkOperation`.</exception>
+public BulkDeleteResult<DomInstanceId> Delete(List<DomInstance> objects)
+```
+
+##### MaxAmountBulkOperation
+
+By default, `MaxAmountBulkOperation` will be set to 100. This means that any `CreateOrUpdate` or `Delete` operation will be able to process up to 100 DOM instances.
+
+##### Unique IDs
+
+When creating, updating or deleting instances using the above-mentioned bulk operations, make sure each DOM instance in the list has a unique ID.
+
+If multiple instances has the same ID, only the last of those instances will be taken into account.
+
+> [!NOTE]
+> This also applies when PaTokens are created, updated or deleted in bulk. If multiple instances has the same ID, only the last of those instances will be taken into account.
+
 #### SLNetTypes and SLGlobal now support a new AlarmTreeID/SLAlarmTreeKey object [ID_37950]
 
 <!-- MR 10.5.0 - FR 10.4.2 -->
