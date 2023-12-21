@@ -111,7 +111,7 @@ Available from DataMiner 10.3.4/10.4.0 onwards.<!-- RN 35734 -->
 
 Gets the value for the cell of the specified column.
 
-Available from DataMiner 10.3.4/10.4.0 onwards.
+Available from DataMiner 10.3.4/10.4.0 onwards.<!-- RN 35734 -->
 
 #### Parameters
 
@@ -126,7 +126,7 @@ Available from DataMiner 10.3.4/10.4.0 onwards.
 
 Gets the value for the cell of the specified column name.
 
-Available from DataMiner 10.3.4/10.4.0 onwards.
+Available from DataMiner 10.3.4/10.4.0 onwards.<!-- RN 35734 -->
 
 #### Parameters
 
