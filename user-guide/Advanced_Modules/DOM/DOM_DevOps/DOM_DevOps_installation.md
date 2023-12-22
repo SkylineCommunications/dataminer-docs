@@ -19,6 +19,6 @@ uid: DOM_DevOps_installation
    <!-- - Excel import examples to ingest instances from a definition from a CSV file. -->
 
    > [!NOTE]
-   > The versioning of the tools package indicates which **minimum version** of DataMiner is required.
+   > To deploy the tool, pick the version that suits your DataMiner System. The versioning of the tools package indicates which **minimum version** of DataMiner is required.
    >
    > For example package version 10.3.3.x requires at least DataMiner 10.3.3.0. Package 10.4.1.x requires at least DataMiner 10.4.1.0.
