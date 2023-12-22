@@ -17,3 +17,8 @@ uid: DOM_DevOps_installation
    - The [DOM Editor](xref:DOM_Editor).
 
    <!-- - Excel import examples to ingest instances from a definition from a CSV file. -->
+
+   > [!NOTE]
+   > To deploy the tool, pick the version that matches your DataMiner System. The versioning of the tools package indicates which **minimum version** of DataMiner is required.
+   >
+   > For example, package version 10.3.3.x requires at least DataMiner 10.3.3, and package 10.4.1.x requires at least DataMiner 10.4.1.
