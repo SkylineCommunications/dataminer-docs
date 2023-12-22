@@ -451,8 +451,10 @@ items:
         topicUid: automation_benchmarks
       - name: Behavioral anomaly detection benchmarks
         topicUid: behavioral_anomaly_detection_benchmarks
-      - name: Cassandra write performance benchmarks
+      - name: Cassandra (single node) write performance benchmarks
         topicUid: cassandra_write_performance_benchmarks
+      - name: Cassandra (cluster) write performance benchmarks
+        topicUid: cassandra_cluster_write_performance_benchmarks
       - name: Change history metrics
         topicUid: change_history_benchmarks
       - name: Dashboards benchmarks
