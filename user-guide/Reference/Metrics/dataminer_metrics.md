@@ -23,7 +23,7 @@ All specifications are provided based on the assumption that DMAs are running on
 | -- | ------------- | ----- | ------- | ------- |
 | 1 | Number of elements | DMA | 5 - 1,000 | Depending on the license<br>(highest license is 1,000) |
 | 2 | Number of elements | DMS | 25,000 ||
-| 3 | Number of standard services | DMS | 10,000 ||         
+| 3 | Number of standard services | DMA/DMS | 10,000 ||
 | 4 | Number of enhanced services | DMA | 5 - 1,000 ||
 | 5 | Number of enhanced services | DMS | 10,000 ||
 | 6 | Number of SLAs | DMA | 5 - 1,000 ||
