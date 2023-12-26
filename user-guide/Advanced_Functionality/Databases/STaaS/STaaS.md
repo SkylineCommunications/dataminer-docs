@@ -37,6 +37,11 @@ For a self-hosted DataMiner System, follow the steps below to set up STaaS.
 
 1. Make sure your DataMiner System is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
+1. Make sure that your DataMiner System has internet access. For a cluster, all agents need internet access.
+
+   > [!NOTE]
+   > All communication towards STaaS is through HTTPS, and the DataMiner System initiates all outbound connections.
+
 1. Make sure you have at least **DataMiner CloudGateway 2.8.0** installed on the system. See [Upgrading nodes to the latest DxM versions](xref:Managing_cloud-connected_nodes#upgrading-nodes-to-the-latest-dxm-versions).
 
 1. Contact your Skyline representative or <staas@dataminer.services> to register your system to use STaaS.
