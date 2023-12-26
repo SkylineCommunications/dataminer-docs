@@ -1,0 +1,19 @@
+# Migrating a Single Agent Maintaining a Valid Cloud Connection
+
+This guide provides step-by-step instructions on how to migrate a single agent to ensure its cloud connection remains valid.
+
+## Steps
+
+1. **Copy CcaPersistedData from Old Server to New**
+
+    Start by copying the `CcaPersistedData` from the old server to the new server. This data contains important information that the agent needs to maintain its connection to the cloud.
+
+2. **Shut Down Old Server**
+
+    After copying the `CcaPersistedData`, shut down the old server. This is crucial to prevent any conflicts or issues with the cloud connection.
+
+3. **Renew Session on the New Server**
+
+    Once the old server is completely shut down, renew the session on the new server. It's important to do this only after shutting down the old server to ensure there is a valid connection and the session can be renewed.
+
+    This step is particularly important in cases where the old server has refreshed its tokens after the copying of the folder was done. By renewing the session on the new server after the old server is shut down, you can ensure that the new server has the most up-to-date tokens.
