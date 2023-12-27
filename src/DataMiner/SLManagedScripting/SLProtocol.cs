@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.InteropServices;
@@ -640,6 +640,12 @@ namespace Skyline.DataMiner.Scripting
 		///		<list type = "bullet" >
 		///			<item>
 		///				<description>Prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
+		///			</item>
+		///			<item>
+		///				<description>The implementation of the GetKeys method when using <see cref="NotifyProtocol.KeyType.Index"/> will retrieve the primary keys using SLProtocol (This results in a NotifyProtocol type 397 call <see href="xref:NT_GET_KEYS_SLPROTOCOL">NT_GET_KEYS_SLPROTOCOL</see>).</description>
+		///			</item>
+		///			<item>
+		///				<description>Using the option <see cref="NotifyProtocol.KeyType.DisplayKey"/> to obtain the display keys is based on SLElement (a NotifyProtocol type 168 call <see href="xref:NT_GET_INDEXES">NT_GET_INDEXES</see>) and as such it could under certain conditions not return the complete information or the most up to date information.</description>
 		///			</item>
 		///		</list>
 		/// </remarks>
