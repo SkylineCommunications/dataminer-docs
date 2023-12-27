@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.InteropServices;
@@ -29,7 +29,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <remarks>
 		///		<list type = "bullet" >
 		///			<item>
-		///				<description>This method acts as a wrapper for a NotifyProtocol type 149 call ("NT_ADD_ROW").</description>
+		///				<description>This method acts as a wrapper for a NotifyProtocol type 149 call <see href="xref:NT_ADD_ROW">NT_ADD_ROW</see>.</description>
 		///			</item>
 		///			<item>
 		///				<description>Available from DataMiner 10.1.1 (RN 27995) onwards. Prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
@@ -65,7 +65,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <remarks>
 		///		<list type = "bullet" >
 		///			<item>
-		///				<description>This method acts as a wrapper for a NotifyProtocol type 149 call ("NT_ADD_ROW").</description>
+		///				<description>This method acts as a wrapper for a NotifyProtocol type 149 call <see href="xref:NT_ADD_ROW">NT_ADD_ROW</see>.</description>
 		///			</item>
 		///			<item>
 		///				<description>Prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
@@ -84,7 +84,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <remarks>
 		///		<list type = "bullet" >
 		///			<item>
-		///				<description>This method acts as a wrapper for a NotifyProtocol type 149 call ("NT_ADD_ROW").</description>
+		///				<description>This method acts as a wrapper for a NotifyProtocol type 149 call <see href="xref:NT_ADD_ROW">NT_ADD_ROW</see>.</description>
 		///			</item>
 		///			<item>
 		///				<description>Available from DataMiner 10.1.1 (RN 27995) onwards. Prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
@@ -107,7 +107,7 @@ namespace Skyline.DataMiner.Scripting
 		///				<description>Prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
 		///			</item>
 		///			<item>
-		///				<description>This method acts as a wrapper for a NotifyProtocol type 240 call ("NT_ADD_ROW_RETURN_KEY"). See NT_ADD_ROW_RETURN_KEY (240).</description>
+		///				<description>This method acts as a wrapper for a NotifyProtocol type 240 call <see href="xref:NT_ADD_ROW_RETURN_KEY">NT_ADD_ROW_RETURN_KEY</see>.</description>
 		///			</item>
 		///		</list>
 		/// </remarks>
@@ -711,7 +711,7 @@ namespace Skyline.DataMiner.Scripting
 		///	<code>
 		///	string myValue = Convert.ToString(protocol.GetParameter(100));
 		/// </code>
-		/// <para>In order to avoid magic numbers, you can make use of the <see href="xref:Skyline.DataMiner.Scripting.Parameter" /> class.</para>
+		/// <para>In order to avoid magic numbers, you can make use of the <see href="xref:Skyline.DataMiner.Scripting.Parameter">Parameter</see> class.</para>
 		///	<code>
 		///	string myValue = Convert.ToString(protocol.GetParameter(Parameter.myparameter));
 		/// </code>
@@ -737,7 +737,7 @@ namespace Skyline.DataMiner.Scripting
 		///				<description>From DataMiner 10.2.9 onwards (RN 33849), if the DateTime.Kind property of <paramref name="timeInfo"/> is unspecified, the timestamp will be handled as local time.</description>
 		///			</item>
 		///			<item>
-		///				<description>A <see langword="null"/> value will not clear the parameter but keep its current value. To clear a parameter, see <see href="xref:LogicActionClear" />.</description>
+		///				<description>A <see langword="null"/> value will not clear the parameter but keep its current value. To clear a parameter, see <see href="xref:LogicActionClear">clear</see>.</description>
 		///			</item>
 		///		</list>
 		///	</remarks>
@@ -765,7 +765,7 @@ namespace Skyline.DataMiner.Scripting
 		///				<description>Only supported for parameters with <see href="xref:Protocol.Params.Param.Interprete.LengthType">LengthType</see> set to <c>fixed</c>, <c>next param</c> or <c>last next param</c>. For parameters with LengthType set to <c>fixed</c>, the number of bytes that will be set is limited to the value specified in <see href="xref:Protocol.Params.Param.Interprete.Length">Length</see>.</description>
 		///			</item>
 		///			<item>
-		///				<description>Setting a parameter value using this method does not trigger a change event. Refer to <see href="xref:LogicParameters#parameter-change-events"/> for more information on the implications.</description>
+		///				<description>Setting a parameter value using this method does not trigger a change event. Refer to <see href="xref:LogicParameters#parameter-change-events">Parameter change events</see> for more information on the implications.</description>
 		///			</item>
 		///		</list>
 		/// </remarks>
@@ -783,7 +783,7 @@ namespace Skyline.DataMiner.Scripting
 		///				<description>In case multiple parameters need to be set, it is preferred to use a single SetParameters method call in order to reduce the inter-process communication between the SLScripting and SLProtocol processes.</description>
 		///			</item>
 		///			<item>
-		///				<description>A <see langword="null"/> value will not clear the parameter but keep its current value. To clear a parameter, see <see href="xref:LogicActionClear" />.</description>
+		///				<description>A <see langword="null"/> value will not clear the parameter but keep its current value. To clear a parameter, see <see href="xref:LogicActionClear">clear</see>.</description>
 		///			</item>
 		///		</list>
 		///	</remarks>
@@ -791,7 +791,7 @@ namespace Skyline.DataMiner.Scripting
 		///	<code>
 		///	protocol.SetParameter(100, "myValue");
 		/// </code>
-		/// <para>In order to avoid magic numbers, you can make use of the <see href="xref:Skyline.DataMiner.Scripting.Parameter" /> class.</para>
+		/// <para>In order to avoid magic numbers, you can make use of the <see href="xref:Skyline.DataMiner.Scripting.Parameter">Parameter</see> class.</para>
 		///	<code>
 		///	protocol.SetParameter(Parameter.myparameter, "myValue");
 		/// </code>
@@ -814,7 +814,7 @@ namespace Skyline.DataMiner.Scripting
 		///				<description>From DataMiner 10.2.9 onwards (RN 33849), if the DateTime.Kind property of an entry in <paramref name="timeInfos"/> is unspecified, the timestamp entry will be handled as local time.</description>
 		///			</item>
 		///			<item>
-		///				<description>A <see langword="null"/> value will not clear the parameter but keep its current value. To clear a parameter, see <see href="xref:LogicActionClear" />.</description>
+		///				<description>A <see langword="null"/> value will not clear the parameter but keep its current value. To clear a parameter, see <see href="xref:LogicActionClear">clear</see>.</description>
 		///			</item>
 		///		</list>
 		///	</remarks>
@@ -838,7 +838,7 @@ namespace Skyline.DataMiner.Scripting
 		///				<description>Introduced in DataMiner version 8.0.3.</description>
 		///			</item>
 		///			<item>
-		///				<description>A <see langword="null"/> value will not clear the parameter but keep its current value. To clear a parameter, see <see href="xref:LogicActionClear" />.</description>
+		///				<description>A <see langword="null"/> value will not clear the parameter but keep its current value. To clear a parameter, see <see href="xref:LogicActionClear">clear</see>.</description>
 		///			</item>		
 		///		</list>
 		///	</remarks>
@@ -846,7 +846,7 @@ namespace Skyline.DataMiner.Scripting
 		///	<code>
 		///	protocol.SetParameters(new int[] { 31, 32 }, new object[] { "value A", "value B" });
 		/// </code>
-		/// <para>In order to avoid magic numbers, you can make use of the <see href="xref:Skyline.DataMiner.Scripting.Parameter" /> class.</para>
+		/// <para>In order to avoid magic numbers, you can make use of the <see href="xref:Skyline.DataMiner.Scripting.Parameter">Parameter</see> class.</para>
 		///	<code>
 		///	protocol.SetParameters(new int[] { Parameter.myparameter, Parameter.myparameter2 }, new object[] { "value A", "value B" });
 		/// </code>
@@ -895,7 +895,7 @@ namespace Skyline.DataMiner.Scripting
 		///				<para>In case a provided parameter ID in the parameterIDs array does not exist in the protocol, the returned object array will contain a null reference.</para>
 		///			</item>
 		///			<item>
-		///				<para>When calling this method on a numeric parameter(i.e.a parameter having RawType set to either numeric text, signed number or unsigned number) that is not initialized, 0 will be returned.To determine whether a standalone parameter is uninitialized, the <see cref="IsEmpty"/> method should be used.</para>
+		///				<para>When calling this method on a numeric parameter (i.e. a parameter having RawType set to either numeric text, signed number or unsigned number) that is not initialized, 0 will be returned.To determine whether a standalone parameter is uninitialized, the <see cref="IsEmpty"/> method should be used.</para>
 		///			</item>
 		///		</list>
 		///	</remarks>
@@ -903,7 +903,7 @@ namespace Skyline.DataMiner.Scripting
 		///	<code>
 		///	object[] parameters = (object[])protocol.GetParameters(new uint[] { 631, 831, 31 });
 		/// </code>
-		/// <para>In order to avoid magic numbers, you can make use of the <see href="xref:Skyline.DataMiner.Scripting.Parameter" /> class.</para>
+		/// <para>In order to avoid magic numbers, you can make use of the <see href="xref:Skyline.DataMiner.Scripting.Parameter">Parameter</see> class.</para>
 		///	<code>
 		///	object[] parameters = (object[])protocol.GetParameters(new uint[] { Parameter.myparameter, Parameter.myotherparameter, Parameter.anotherparameter });
 		/// </code>
@@ -922,7 +922,7 @@ namespace Skyline.DataMiner.Scripting
 		///				<description>This is a wrapper method for the NotifyProtocol type 84 NT_SET_PARAMETER_BY_NAME call.</description>
 		///			</item>
 		///			<item>
-		///				<description>In case there are both a read and write parameter with the specified name, the set will be performed on the write parameter.In case the read parameter needs to be set, use the SetReadParameterByName method instead.</description>
+		///				<description>In case there are both a read and write parameter with the specified name, the set will be performed on the write parameter.In case the read parameter needs to be set, use the <see cref="SetReadParameterByName"/> method instead.</description>
 		///			</item>
 		///			<item>
 		///				<description>In case multiple parameters need to be set, it is preferred to use a single SetParametersByName method call in order to reduce the inter-process communication between the SLScripting and SLProtocol processes.</description>
@@ -1055,7 +1055,7 @@ namespace Skyline.DataMiner.Scripting
 		/// </summary>
 		/// <value>The user name.</value>
 		/// <remarks>
-		///		<para>Returns the userInfo on who triggered the QAction.This can be useful for write parameters if you want to know who did the set.</para>
+		///		<para>Returns the userInfo on who triggered the QAction. This can be useful for write parameters if you want to know who did the set.</para>
 		///		<para>In case the "Full Name" field of the user has not been filled in, the content of the "Name" field of the user is returned.</para>
 		///	</remarks>
 		string UserInfo { get; }
@@ -1194,7 +1194,7 @@ namespace Skyline.DataMiner.Scripting
 		///				<description>This is a wrapper method for the NotifyProtocol type 86 NT_SET_PARAMETER_BY_DATA call.</description>
 		///			</item>
 		///			<item>
-		///				<description>In case multiple parameters need to be set by data, use the <see cref="SLProtocol.SetParametersByData"/> method instead.</description>
+		///				<description>In case multiple parameters need to be set by data, use the <c>SLProtocol.SetParametersByData</c> method instead.</description>
 		///			</item>
 		///			<item>
 		///				<description>This method is deprecated since DataMiner 10.3.4.</description>
@@ -1416,7 +1416,7 @@ namespace Skyline.DataMiner.Scripting
 		///				<description>In case multiple cells need to be set, it is preferred to use a single SetParametersIndex method call in order to reduce the inter-process communication between the SLScripting and SLProtocol processes.</description>
 		///			</item>
 		///			<item>
-		///				<description>This method acts as a wrapper for a NotifyProtocol type 121 call ("NT_PUT_PARAMETER_INDEX"). See [NT_PUT_PARAMETER_INDEX (121)](xref:NT_PUT_PARAMETER_INDEX).</description>
+		///				<description>This method acts as a wrapper for a NotifyProtocol type 121 call <see href="xref:NT_PUT_PARAMETER_INDEX">NT_PUT_PARAMETER_INDEX</see>.</description>
 		///			</item>
 		///			<item>
 		///				<description>From DataMiner 10.2.9 onwards (RN 33849), if the DateTime.Kind property of <paramref name="timeInfo"/> is unspecified, the timestamp will be handled as local time.</description>
@@ -1507,7 +1507,7 @@ namespace Skyline.DataMiner.Scripting
 		///				<description>Prior to DataMiner 10.2.7 (RN 33198), the SetParametersIndex method cannot be used to update a single cell. In case a single cell must be updated, use the SetParameterIndex method instead. In cases where you dynamically set a number of cells, make sure to check the number of cells that will need to be updated. In case multiple cells need to be updated, use the SetParametersIndex method. If a single cell needs to be updated, use the SetParameterIndex method.</description>
 		///			</item>
 		///			<item>
-		///				<description>This method should only be used in case multiple distinct cells need to be set(e.g., cells in different tables). When appropriate, use the SetRow, FillArray, FillArrayNoDelete, NotifyProtocol type 220 call, etc.to set multiple cells belonging to the same row, column or table, respectively.</description>
+		///				<description>This method should only be used in case multiple distinct cells need to be set (e.g., cells in different tables). When appropriate, use the SetRow, FillArray, FillArrayNoDelete, NotifyProtocol type 220 call, etc.to set multiple cells belonging to the same row, column or table, respectively.</description>
 		///			</item>
 		///			<item>
 		///				<description>This method acts as a wrapper for a NotifyProtocol type 121 <see href="xref:NT_PUT_PARAMETER_INDEX">NT_PUT_PARAMETER_INDEX</see> call.</description>
@@ -1603,7 +1603,7 @@ namespace Skyline.DataMiner.Scripting
 		///				<description>The primary key can never be updated.</description>
 		///			</item>
 		///			<item>
-		///				<description>This method acts as a wrapper for a NotifyProtocol type 121 call ("NT_PUT_PARAMETER_INDEX"). See [NT_PUT_PARAMETER_INDEX (121)](xref:NT_PUT_PARAMETER_INDEX).</description>
+		///				<description>This method acts as a wrapper for a NotifyProtocol type 121 call <see href="xref:NT_PUT_PARAMETER_INDEX">NT_PUT_PARAMETER_INDEX</see>.</description>
 		///			</item>
 		///			<item>
 		///				<description>From DataMiner 10.2.9 onwards (RN 33849), if the DateTime.Kind property of <paramref name="timeInfo"/> is unspecified, the timestamp will be handled as local time.</description>
@@ -1632,7 +1632,7 @@ namespace Skyline.DataMiner.Scripting
 		///				<description>The primary key can never be updated.</description>
 		///			</item>
 		///			<item>
-		///				<description>This method acts as a wrapper for a NotifyProtocol type 121 call ("NT_PUT_PARAMETER_INDEX"). See [NT_PUT_PARAMETER_INDEX (121)](xref:NT_PUT_PARAMETER_INDEX).</description>
+		///				<description>This method acts as a wrapper for a NotifyProtocol type 121 call <see href="xref:NT_PUT_PARAMETER_INDEX">NT_PUT_PARAMETER_INDEX</see>.</description>
 		///			</item>
 		///		</list>
 		///	</remarks>
@@ -1766,7 +1766,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <remarks>
 		///		<list type = "bullet" >
 		///			<item>
-		///				<description>This is a wrapper method for a NotifyProtocol type 225 (NT_SET_ROW) call.</description>
+		///				<description>This is a wrapper method for a NotifyProtocol type 225 <see href="xref:NT_SET_ROW">NT_SET_ROW</see> call.</description>
 		///			</item>
 		///			<item>
 		///				<description>The length of the rowData array must not be larger than the number of columns defined in the table.</description>
@@ -1796,7 +1796,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <remarks>
 		///		<list type = "bullet" >
 		///			<item>
-		///				<description>This is a wrapper method for a NotifyProtocol type 225 (NT_SET_ROW) call.</description>
+		///				<description>This is a wrapper method for a NotifyProtocol type 225 <see href="xref:NT_SET_ROW">NT_SET_ROW</see> call.</description>
 		///			</item>
 		///			<item>
 		///				<description>The length of the rowData array must not be larger than the number of columns defined in the table.</description>
@@ -1826,7 +1826,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <remarks>
 		///		<list type="bullet">
 		///			<item>
-		///				<description>This is a wrapper method for a NotifyProtocol type 225 (NT_SET_ROW) call.</description>
+		///				<description>This is a wrapper method for a NotifyProtocol type 225 <see href="xref:NT_SET_ROW">NT_SET_ROW</see> call.</description>
 		///			</item>
 		///			<item>
 		///				<description>The length of the rowData array must not be larger than the number of columns defined in the table.</description>
@@ -1981,7 +1981,8 @@ namespace Skyline.DataMiner.Scripting
 		/// Gets the value that indicates the cell in the row should be cleared.
 		/// </summary>
 		/// <value>The value that indicates the cell in the row should be cleared.</value>
-		///	<remarks>This corresponds with a value of double.NegativeInfinity.
+		///	<remarks>
+		///	This corresponds with a value of double.NegativeInfinity.
 		///
 		/// This is used with the SetRow method where the enableCellActions parameter has been set to true and NotifyDataMiner types 193 ([NT_FILL_ARRAY](xref:NT_FILL_ARRAY)) and 194 ([NT_FILL_ARRAY_NO_DELETE](xref:NT_FILL_ARRAY_NO_DELETE)) with the Clear and Leave flag enabled.
 		///	</remarks>
@@ -2095,7 +2096,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <remarks>
 		///		<list type = "bullet" >
 		///			<item>
-		///				<description>This a wrapper method for a NotifyProtocol type 195 (NT_ARRAY_ROW_COUNT) call.</description>
+		///				<description>This a wrapper method for a NotifyProtocol type 195 <see href="xref:NT_ARRAY_ROW_COUNT">NT_ARRAY_ROW_COUNT</see> call.</description>
 		///			</item>
 		///			<item>
 		///				<description>In case the protocol does not define a table with the specified ID, -1 is returned.</description>
