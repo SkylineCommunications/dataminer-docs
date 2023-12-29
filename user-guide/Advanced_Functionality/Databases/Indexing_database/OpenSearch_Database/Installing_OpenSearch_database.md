@@ -47,9 +47,9 @@ These are the main steps of the setup:
 
 1. Set up a cluster as detailed under [Creating a cluster](https://opensearch.org/docs/latest/tuning-your-cluster/cluster/). Take the sections below into account when you do so.
 
-#### OpenSearch.yml configuration
+#### opensearch.yml configuration
 
-- For every node in your cluster, configure the *OpenSearch.yml* file as illustrated in the example below (the example uses three nodes):
+- For every node in your cluster, configure the *opensearch.yml* file as illustrated in the example below (the example uses three nodes):
 
   ```yml
   # Use a descriptive name for your cluster:
@@ -109,33 +109,28 @@ These are the main steps of the setup:
   > [!NOTE]
   > As shown above, the `indices.query.bool.max_clause_count` setting should be set to "2147483647" (i.e. the maximum integer value).
 
-- If you want a node to be only a **data node**, add the following configuration in *OpenSearch.yml*:
+- If you want a node to be only a **data node**, add the following configuration in *opensearch.yml*:
 
   ```yml
   node.roles: [ data, ingest ]
   ```
 
-- If you want a node to be only the **cluster manager node** (a.k.a. the master node), add the following configuration in *OpenSearch.yml*:
+- If you want a node to be only the **cluster manager node** (a.k.a. the master node), add the following configuration in *opensearch.yml*:
 
   ```yml
   node.roles: [ cluster_manager ]
   ```
 
-- If you want a data node to take the role of cluster manager in case the current cluster manager node goes down, add the following configuration in *OpenSearch.yml*:
+- If you want a data node to take the role of cluster manager in case the current cluster manager node goes down, add the following configuration in *opensearch.yml*:
 
   ```yml
   node.roles: [ cluster_manager, data, ingest ]
   ```
 
-#### User configuration
+#### TLS and User configuration
 
-Generate a new hash for the admin user as detailed under [Configure a user](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/debian/#configure-a-user) in the OpenSearch documentation.
-
-You will need to remove all demo users except the *admin* user and replace the hash for the admin user with the generated hash.
-
-#### TLS configuration
-
-We highly recommend that you configure TLS in order to have a layer of security between your nodes and your DataMiner client. To do so:
+You should configure TLS in order to have a layer of security between your nodes and your DataMiner client. 
+In addition, the default password of the *admin*`user should be changed and all the other users removed. To do so:
 
 1. [Remove the demo certificates](#remove-the-demo-certificates) that came with the default installation.
 
@@ -143,11 +138,14 @@ We highly recommend that you configure TLS in order to have a layer of security 
 
 1. [Update the trusted root certificates with rootCA.crt](#update-the-trusted-root-certificates-with-rootcacrt).
 
+1. [Set up TLS in the opensearch.yml file](#set-up-tls-in-the-opensearchyml-file).
+
+1. [Change *admin* password and remove other users](#change-admin-password-and-remove-other-users).
+   
+1. [Restart OpenSearch](#restart-opensearch).
+
 1. [Install the rootCA.crt on the DataMiner server](#install-the-rootcacrt-on-the-dataminer-server).
 
-1. [Set up TLS in the OpenSearch.yml file](#set-up-tls-in-the-opensearchyml-file).
-
-1. [Restart OpenSearch](#restart-opensearch).
 
 ##### Remove the demo certificates
 
@@ -165,7 +163,7 @@ sudo rm -f *pem
 
 ##### Generate p12 keystore and truststore p12 files
 
-To configure TLS, instead of using .pem files, we recommend generating p12 keystore and truststore .p12 files. You will then need to reference these in the *OpenSearch.yml* file:
+To configure TLS, instead of using .pem files, we recommend generating p12 keystore and truststore .p12 files. You will then need to reference these in the *opensearch.yml* file:
 
 1. Generate the certificates using the [Generate-TLS-Certificates](https://github.com/SkylineCommunications/generate-tls-certificates) script on GitHub.
 
@@ -175,9 +173,9 @@ To configure TLS, instead of using .pem files, we recommend generating p12 keyst
 
 1. Place the correct .p12 file in the `\etc\opensearch\cert\` folder on each corresponding node (making sure the .p12 name matches the node name).
 
-1. Update the OpenSearch.yml file so that *keystore_filepath* and *truststore_filepath* refer to the location of the .p12 files. (For an example, see [Set up TLS in the OpenSearch.yml file](#set-up-tls-in-the-opensearchyml-file).)
+1. Update the opensearch.yml file so that *keystore_filepath* and *truststore_filepath* refer to the location of the .p12 files. (For an example, see [Set up TLS in the opensearch.yml file](#set-up-tls-in-the-opensearchyml-file).)
 
-1. Add the password to the keystore and truststore password fields in *OpenSearch.yml*. (For an example, see [Set up TLS in the OpenSearch.yml file](#set-up-tls-in-the-opensearchyml-file).)
+1. Add the password to the keystore and truststore password fields in *opensearch.yml*. (For an example, see [Set up TLS in the opensearch.yml file](#set-up-tls-in-the-opensearchyml-file).)
 
 ##### Update the trusted root certificates with rootCA.crt
 
@@ -197,6 +195,129 @@ To configure TLS, instead of using .pem files, we recommend generating p12 keyst
 
    ```bash
    openssl verify rootCA.crt
+   ```
+
+
+##### Set up TLS in the opensearch.yml file
+
+Configure the *opensearch.yml* file as illustrated in the example below.
+
+```yml
+plugins.security.disabled: false
+
+#Transport layer TLS
+plugins.security.ssl.transport.keystore_type: PKCS12
+plugins.security.ssl.transport.keystore_filepath: /etc/opensearch/cert/FQDNOfYourNode-node-keystore.p12
+plugins.security.ssl.transport.keystore_password: ReplaceMeByGeneratedPasswordByGithubScript
+plugins.security.ssl.transport.truststore_type: PKCS12
+plugins.security.ssl.transport.truststore_filepath: /etc/opensearch/cert/FQDNOfYourNode-node-keystore.p12
+plugins.security.ssl.transport.truststore_password: ReplaceMeByGeneratedPasswordByGithubScript
+
+#REST Layer TLS
+plugins.security.ssl.http.enabled: true
+plugins.security.ssl.http.keystore_type: PKCS12
+plugins.security.ssl.http.keystore_filepath: /etc/opensearch/cert/FQDNOfYourNode-node-keystore.p12
+plugins.security.ssl.http.keystore_password: ReplaceMeByGeneratedPasswordByGithubScript
+plugins.security.ssl.http.truststore_type: PKCS12
+plugins.security.ssl.http.truststore_filepath: /etc/opensearch/cert/FQDNOfYourNode-node-keystore.p12
+plugins.security.ssl.http.truststore_password: ReplaceMeByGeneratedPasswordByGithubScript
+
+plugins.security.allow_default_init_securityindex: true
+plugins.security.nodes_dn:
+  - 'CN=FQDNOpenSearchNode1,OU=NameOfYourCluster,O=OpenSearch,C=BE'
+  - 'CN=FQDNOpenSearchNode2,OU=NameOfYourCluster,O=OpenSearch,C=BE'
+  - 'CN=FQDNOpenSearchNode3,OU=NameOfYourCluster,O=OpenSearch,C=BE'
+
+plugins.security.authcz.admin_dn:
+  - 'CN=FQDNOpenSearchNode1,OU=NameOfYourCluster,O=OpenSearch,C=BE'
+
+plugins.security.audit.type: internal_opensearch
+plugins.security.enable_snapshot_restore_privilege: true
+plugins.security.check_snapshot_restore_write_privileges: true
+plugins.security.restapi.roles_enabled: ["all_access", "security_rest_api_access"]
+plugins.security.system_indices.enabled: true
+plugins.security.system_indices.indices: [".plugins-ml-model", ".plugins-ml-task", ".opendistro-alerting-config", ".opendistro-alerting-alert*", ".opendistro-anomaly-results*", ".opendistro-anomaly-detector*", ".opendistro-anomaly-checkpoints", ".opendistro-anomaly-detection-state", ".opendistro-reports-*", ".opensearch-notifications-*", ".opensearch-notebooks", ".opensearch-observability", ".opendistro-asynchronous-search-response*", ".replication-metadata-store",".opendistro-anomaly-detection-state", ".opendistro-reports-*", ".opensearch-notifications-*", ".opensearch-notebooks", ".opensearch-observability", ".opendistro-asynchronous-search-response*", ".replication-metadata-store"]
+```
+
+##### Change *admin* password and remove other users
+Generate a new hash for the admin user as detailed under [Configure a user](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/debian/#configure-a-user) in the OpenSearch documentation:
+
+You will need to remove all the users except the *admin* and replace its the hash with the one generated from the new password.
+
+1. Generate a hash for the new password of the *admin* user:
+    ```bash
+    cd /usr/share/opensearch/plugins/opensearch-security/tools
+    
+    OPENSEARCH_JAVA_HOME=/usr/share/opensearch/jdk ./hash.sh
+    ```
+1. Edit the *internal_users.yml* file, removing all the users except *admin* and replacing the old hash by the one generated:
+    ```bash
+     sudo vi /etc/opensearch/opensearch-security/internal_users.yml
+    ```
+    Example:
+    ```yml
+        ---
+    # This is the internal user database
+    # The hash value is a bcrypt hash and can be generated with plugin/tools/hash.sh
+    
+    _meta:
+      type: "internalusers"
+      config_version: 2
+    
+    # Define your internal users here
+    
+    ## Demo users
+    
+    admin:
+      hash: "$2y$12$EeAQpNRgrIccz2iUK7Fsqektv.qIbWCGnTs1NQYYyA9pgL8zdBxTy"
+      reserved: true
+      backend_roles:
+      - "admin"
+      description: "Demo admin user"
+
+    ```
+
+
+##### Restart OpenSearch
+
+1. Finished the steps above, you will need to restart OpenSearch and apply the user settings:
+
+  ```bash
+   sudo systemctl restart opensearch
+  ```
+  ```bash
+   cd /usr/share/opensearch/plugins/opensearch-security/tools
+
+  OPENSEARCH_JAVA_HOME=/usr/share/opensearch/jdk ./securityadmin.sh -h <IPOfYourNode> -cd /etc/opensearch/opensearch-security -icl -nhnv --diagnose -ts /etc/opensearch/cert/<FQDNOfYourNode-node-keystore.p12> -tspass <GeneratedPasswordByGithubScript> -ks /etc/opensearch/cert/<FQDNOfYourNode-node-keystore.p12>  -kspass <GeneratedPasswordByGithubScript>
+  ```
+  > The command above needs to be executed only in one of the nodes. Don't forget to replace `<IPOfYourNode1>`, `<FQDNOfYourNode-node-keystore.p12>` and `<GeneratedPasswordByGithubScript>`
+
+2. Check via the command line if data is returned:
+
+   ```curl
+   curl https://<IPOfYourNode>:9200 -u admin:yournewpassword --ssl-no-revoke
+   ```
+
+   This should return something like:
+
+   ```text
+   {
+     "name" : "my-elasticsearch-node",
+     "cluster_name" : "NameOfYourCluster",
+     "cluster_uuid" : "7kj65asfjuu9a1vcf6e345asd65dfg",
+     "version" : {
+       "distribution" : "opensearch",
+       "number" : "2.6.0",
+       "build_type" : "deb",
+       "build_hash" : "abcdef1234567890",
+       "build_date" : "2021-03-18T06:04:15.345676Z",
+       "build_snapshot" : false,
+       "lucene_version" : "9.5.0",
+       "minimum_wire_compatibility_version" : "7.10.0",
+       "minimum_index_compatibility_version" : "7.0.0"
+     },
+     "tagline" : "The OpenSearch Project: https://opensearch.org/"
+   }
    ```
 
 ##### Install the rootCA.crt on the DataMiner server
@@ -230,78 +351,6 @@ To build trust between DataMiner and OpenSearch, so that DataMiner can connect t
 
 1. Check in the *SLSearch.txt*, *SLDataGateway.txt*, and *SLDBConnection.txt* log files (in the folder `C:\Skyline DataMiner\Logging`) whether any errors have occurred.
 
-##### Set up TLS in the OpenSearch.yml file
-
-Configure the *OpenSearch.yml* file as illustrated in the example below.
-
-```yml
-plugins.security.disabled: false
-
-#Transport layer TLS
-plugins.security.ssl.transport.keystore_type: PKCS12
-plugins.security.ssl.transport.keystore_filepath: /etc/opensearch/cert/FQDNOfYourNode-node-keystore.p12
-plugins.security.ssl.transport.keystore_password: ReplaceMeByGeneratedPasswordByGithubScript
-plugins.security.ssl.transport.truststore_type: PKCS12
-plugins.security.ssl.transport.truststore_filepath: /etc/opensearch/cert/FQDNOfYourNode-node-keystore.p12
-plugins.security.ssl.transport.truststore_password: ReplaceMeByGeneratedPasswordByGithubScript
-
-#REST Layer TLS
-plugins.security.ssl.http.enabled: true
-plugins.security.ssl.http.keystore_type: PKCS12
-plugins.security.ssl.http.keystore_filepath: /etc/opensearch/cert/FQDNOfYourNode-node-keystore.p12
-plugins.security.ssl.http.keystore_password: ReplaceMeByGeneratedPasswordByGithubScript
-plugins.security.ssl.http.truststore_type: PKCS12
-plugins.security.ssl.http.truststore_filepath: /etc/opensearch/cert/FQDNOfYourNode-node-keystore.p12
-plugins.security.ssl.http.truststore_password: ReplaceMeByGeneratedPasswordByGithubScript
-
-plugins.security.allow_default_init_securityindex: true
-plugins.security.nodes_dn:
-  - 'CN=FQDNOpenSearchNode1,OU=NameOfYourCluster,O=OpenSearch,C=BE'
-  - 'CN=FQDNOpenSearchNode2,OU=NameOfYourCluster,O=OpenSearch,C=BE'
-  - 'CN=FQDNOpenSearchNode3,OU=NameOfYourCluster,O=OpenSearch,C=BE'
-plugins.security.audit.type: internal_opensearch
-plugins.security.enable_snapshot_restore_privilege: true
-plugins.security.check_snapshot_restore_write_privileges: true
-plugins.security.restapi.roles_enabled: ["all_access", "security_rest_api_access"]
-plugins.security.system_indices.enabled: true
-plugins.security.system_indices.indices: [".plugins-ml-model", ".plugins-ml-task", ".opendistro-alerting-config", ".opendistro-alerting-alert*", ".opendistro-anomaly-results*", ".opendistro-anomaly-detector*", ".opendistro-anomaly-checkpoints", ".opendistro-anomaly-detection-state", ".opendistro-reports-*", ".opensearch-notifications-*", ".opensearch-notebooks", ".opensearch-observability", ".opendistro-asynchronous-search-response*", ".replication-metadata-store",".opendistro-anomaly-detection-state", ".opendistro-reports-*", ".opensearch-notifications-*", ".opensearch-notebooks", ".opensearch-observability", ".opendistro-asynchronous-search-response*", ".replication-metadata-store"]
-```
-
-##### Restart OpenSearch
-
-1. When you have finished the TLS configuration and [set a different hash for the admin user](#user-configuration), restart OpenSearch. You can use the following command for this:
-
-   ```bash
-   sudo systemctl restart opensearch
-   ```
-
-1. Check via the command line if data is returned:
-
-   ```curl
-   curl https://166.206.186.146:9200 -u admin:yournewpassword --ssl-no-revoke
-   ```
-
-   This should return the following:
-
-   ```text
-   {
-     "name" : "my-elasticsearch-node",
-     "cluster_name" : "NameOfYourCluster",
-     "cluster_uuid" : "7kj65asfjuu9a1vcf6e345asd65dfg",
-     "version" : {
-       "distribution" : "opensearch",
-       "number" : "2.6.0",
-       "build_type" : "deb",
-       "build_hash" : "abcdef1234567890",
-       "build_date" : "2021-03-18T06:04:15.345676Z",
-       "build_snapshot" : false,
-       "lucene_version" : "9.5.0",
-       "minimum_wire_compatibility_version" : "7.10.0",
-       "minimum_index_compatibility_version" : "7.0.0"
-     },
-     "tagline" : "The OpenSearch Project: https://opensearch.org/"
-   }
-   ```
 
 #### Setting up OpenSearch Dashboards
 
