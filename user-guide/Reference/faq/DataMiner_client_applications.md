@@ -10,6 +10,8 @@ uid: DataMiner_client_applications
 
 - [What should I do if I cannot connect to a DMA using the DataMiner Cube browser app?](#what-should-i-do-if-i-cannot-connect-to-a-dma-using-the-dataminer-cube-browser-app)
 
+- [Can I still use the DataMiner Cube browser app in Internet Explorer?](#can-i-still-use-the-dataminer-cube-browser-app-in-internet-explorer)
+
 ## How do I send info about my DataMiner client to Technical Support?
 
 In case of problems, Skyline Technical Support may ask you to provide version information and/or debug information. Below, you can find how you can gather the requested information.
@@ -83,3 +85,11 @@ To reinstall the browser app, you need to clean the XBAP cache:
    1. Click *Run*.
 
 1. If the problem persists, contact DataMiner Technical Support.
+
+## Can I still use the DataMiner Cube browser app in Internet Explorer?
+
+Support for the DataMiner Cube browser app has ended as of DataMiner 10.3 (see [Third-party software support life cycle](xref:Software_support_life_cycles#third-party-software-support-life-cycle)).
+
+For earlier DataMiner versions, we also recommend using the desktop application. See [Installing the DataMiner Cube desktop application](xref:Installing_the_DataMiner_Cube_desktop_application).
+
+Though the browser app is still supported in older DataMiner versions, it should no longer be used in Internet Explorer, as Microsoft support for Internet Explorer ended in 2022 (see [Lifecycle FAQ - Internet Explorer and Microsoft Edge](https://docs.microsoft.com/en-us/lifecycle/faq/internet-explorer-microsoft-edge)). You can instead open the DataMiner Cube browser app in Microsoft Edge instead. See [Configuring Microsoft Edge to run DataMiner Cube](xref:Configuring_Microsoft_edge_to_run_Cube).
