@@ -193,6 +193,12 @@ When you removed a query from a Maps component and then added it again, the comp
 
 When you added new markers to the Maps component, in some cases, an incorrect template would be applied, causing the newly created markers to not be visualized.
 
+#### Low-Code Apps: Problem when creating a DOM instance containing soft-deleted field descriptors [ID_38164]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+Creating a new DOM instance in a low-code app would fail when that DOM instance contained boolean field descriptors that had been marked as soft-deleted. Those field descriptors would incorrectly have their value set to false.
+
 #### Dashboards app & Low-Code Apps: Line & area chart would not render aggregation parameters correctly [ID_38166]
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
