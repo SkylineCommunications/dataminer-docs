@@ -6,8 +6,9 @@ uid: CICD_Azure_DevOps_Examples
 
 ## Basic Deployment Example
 
-A basic pipeline for upload to catalog and/or deployment to cloud-connected agents.
-It's recommended to combine this with quality control beforehand such as executing static code analysis and running tests.
+This is a basic pipeline for uploading to the catalog and/or deployment to DMAs connected to dataminer.services.
+
+We recommend combining this with quality control beforehand, such as executing static code analysis and running tests.
 
 ## Creating a dataminer.services key
 
