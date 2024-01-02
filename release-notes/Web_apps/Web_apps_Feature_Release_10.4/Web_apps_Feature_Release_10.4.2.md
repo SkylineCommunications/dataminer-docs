@@ -233,3 +233,9 @@ When you changed a component from *Column & bar chart* to another visualization,
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
 
 In some cases, the visualization picker of a component would incorrectly contain visualizations that had been deprecated.
+
+#### Popup window issues in web apps [ID_38272]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+In all DataMiner web apps, a few minor popup window issues have been fixed.
