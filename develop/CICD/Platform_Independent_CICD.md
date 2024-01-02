@@ -35,18 +35,19 @@ The following tools are the most useful:
 
 - [Skyline.DataMiner.CICD.Tools.CatalogUpload](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.CatalogUpload#readme-body-tab)
 
-  This .NET tool allows you to upload application (.dmapp) [packages](xref:ApplicationPackages) directly onto Skylines Azure cloud storage. This can be done without registration, so that you just use the returned GUID for further actions or with registration which will make it visible on your private catalog UI.
+  This .NET tool allows you to upload application (.dmapp) [packages](xref:ApplicationPackages) directly onto Skyline's Azure cloud storage. This can be done without registration, so that you just use the returned GUID for further actions, or with registration, which will make it visible on your private catalog UI.
 
-> [!NOTE]
-> Currently the private catalog UI is not visible yet.
-> Currently uploading protocol packages (.dmprotocol) is not supported yet.
+  > [!NOTE]
+  >
+  > - Currently, the private catalog UI is not visible yet.
+  > - Currently, uploading protocol packages (.dmprotocol) is not supported yet.
 
 - [Skyline.DataMiner.CICD.Tools.DataMinerDeploy](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.DataMinerDeploy#readme-body-tab)
 
-  This .NET tool allows you to deploy application (.dmapp) [packages](xref:ApplicationPackages) to a DataMiner agent using the artifact id as returned from performing a catalog upload.
+  This .NET tool allows you to deploy application (.dmapp) [packages](xref:ApplicationPackages) to a DataMiner Agent using the artifact ID returned when performing a catalog upload.
 
-> [!NOTE]
-> Currently only supports deployment from cloud to cloud-connected agents
+  > [!NOTE]
+  > This currently only supports deployment from dataminer.services to DMAs connected to dataminer.services.
 
 - [Skyline.DataMiner.CICD.Tools.SDKChecker](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.SDKChecker#readme-body-tab)
 

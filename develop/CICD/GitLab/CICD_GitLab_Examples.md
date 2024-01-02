@@ -2,9 +2,9 @@
 uid: CICD_GitLab_Examples
 ---
 
-# GitLab CI/CD Examples
+# GitLab CI/CD examples
 
-## Basic Deployment Example
+## Basic deployment example
 
 This is a basic pipeline for uploading to the catalog and/or deployment to DMAs connected to dataminer.services.
 
@@ -12,11 +12,11 @@ We recommend combining this with quality control beforehand, such as executing s
 
 ### Creating a dataminer.services key
 
-A dataminer.services key is scoped to the specific DMS for which it was created and will allow for deployments to that DMS only.
+A dataminer.services key is scoped to the specific DMS for which it was created and can only be used for deployments to that DMS.
 
 For more information on how to create a dataminer.services key, refer to [Managing dataminer.services keys](xref:Managing_DCP_keys).
 
-### GitLab Workflow
+### GitLab workflow
 
 ```yml
 stages:
@@ -49,5 +49,4 @@ deploy:
     - echo "Upload output: $UPLOAD_OUTPUT"
     
     - dataminer-package-deploy from-catalog --artifact-id "$UPLOAD_OUTPUT" --dm-catalog-token "$CI_JOB_TOKEN"
-
 ```

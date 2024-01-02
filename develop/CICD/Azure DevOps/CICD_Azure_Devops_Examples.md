@@ -2,9 +2,9 @@
 uid: CICD_Azure_DevOps_Examples
 ---
 
-# Azure DevOps CI/CD Examples
+# Azure DevOps CI/CD examples
 
-## Basic Deployment Example
+## Basic deployment example
 
 This is a basic pipeline for uploading to the catalog and/or deployment to DMAs connected to dataminer.services.
 
@@ -12,17 +12,17 @@ We recommend combining this with quality control beforehand, such as executing s
 
 ### Creating a dataminer.services key
 
-A dataminer.services key is scoped to the specific DMS for which it was created and will allow for deployments to that DMS only.
+A dataminer.services key is scoped to the specific DMS for which it was created and can only be used for deployments to that DMS.
 
 For more information on how to create a dataminer.services key, refer to [Managing dataminer.services keys](xref:Managing_DCP_keys).
 
-### Azure DevOps Pipeline
+### Azure DevOps pipeline
 
 You need a secret variable DATAMINER_DEPLOY_KEY.
+
 You need a variable that is allowed to change during the run: uploadOutput
 
 ```yml
-
 trigger:
 - master
 
@@ -51,5 +51,4 @@ steps:
 
 - script: dataminer-package-deploy from-catalog --artifact-id "$(uploadOutput)" --dm-catalog-token $(DATAMINER_DEPLOY_KEY)
   displayName: 'Deploy Package'
-
 ```

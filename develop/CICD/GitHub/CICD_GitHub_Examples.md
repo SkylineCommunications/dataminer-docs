@@ -2,9 +2,9 @@
 uid: CICD_GitHub_Examples
 ---
 
-# GitHub CI/CD Examples
+# GitHub CI/CD examples
 
-## Basic Deployment Example
+## Basic deployment example
 
 This is a basic pipeline for uploading to the catalog and/or deployment to DMAs connected to dataminer.services.
 
@@ -12,19 +12,17 @@ We recommend combining this with quality control beforehand, such as executing s
 
 ### Creating a dataminer.services key
 
-A dataminer.services key is scoped to the specific DMS for which it was created and will allow for deployments to that DMS only.
+A dataminer.services key is scoped to the specific DMS for which it was created and can only be used for deployments to that DMS.
 
 For more information on how to create a dataminer.services key, refer to [Managing dataminer.services keys](xref:Managing_DCP_keys).
 
-### GitHub Workflow
+### GitHub workflow
 
-You will need DATAMINER_DEPLOY_KEY as a secret. This will be the key for your cloud connected agent as provided through https://admin.dataminer.services
+You will need DATAMINER_DEPLOY_KEY as a secret. This will be the key for the DataMiner Agent as provided through the [DataMiner Admin app](xref:CloudAdminApp).
 
-
-On an ubuntu runner:
+On a Ubuntu runner:
 
 ```yml
-
 name: BasicDeployUbuntu
 
 on:
@@ -67,13 +65,11 @@ jobs:
     - name: Deploy DMAPP
       run: dataminer-package-deploy from-catalog --artifact-id "${{ steps.UploadDMAPP.outputs.uploadOutput }}" --dm-catalog-token "${{ secrets.DATAMINER_DEPLOY_KEY }}"
       shell: bash
-
 ```
 
-On a windows runner: 
+On a Windows runner:
 
 ```yml
-
 name: BasicDeploy
 
 on:
@@ -112,5 +108,4 @@ jobs:
     - name: Deploy DMAPP
       run: dataminer-package-deploy from-catalog --artifact-id "${{ steps.UploadDMAPP.outputs.uploadOutput }}" --dm-catalog-token "${{ secrets.DATAMINER_DEPLOY_KEY }}"
       shell: bash
-
 ```

@@ -2,9 +2,9 @@
 uid: CICD_Concourse_Examples
 ---
 
-# Concourse CI/CD Examples
+# Concourse CI/CD examples
 
-## Basic Deployment Example
+## Basic deployment example
 
 This is a basic pipeline for uploading to the catalog and/or deployment to DMAs connected to dataminer.services.
 
@@ -12,14 +12,13 @@ We recommend combining this with quality control beforehand, such as executing s
 
 ### Creating a dataminer.services key
 
-A dataminer.services key is scoped to the specific DMS for which it was created and will allow for deployments to that DMS only.
+A dataminer.services key is scoped to the specific DMS for which it was created and can only be used for deployments to that DMS.
 
 For more information on how to create a dataminer.services key, refer to [Managing dataminer.services keys](xref:Managing_DCP_keys).
 
-### Concourse Pipeline
+### Concourse pipeline
 
 ```yml
-
 resources:
 - name: example-deployment-repo
   type: git
@@ -53,5 +52,4 @@ jobs:
           dataminer-package-create dmapp example-deployment-repo --name HelloFromConcourse --output example-deployment-repo --type automation
           id=$(dataminer-catalog-upload --path-to-artifact "example-deployment-repo/HelloFromConcourse.dmapp" --dm-catalog-token 12345)
           dataminer-package-deploy from-catalog --artifact-id "$id" --dm-catalog-token 12345
-
 ```

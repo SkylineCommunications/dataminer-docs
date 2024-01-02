@@ -2,9 +2,9 @@
 uid: CICD_Command_Line_Examples
 ---
 
-# Command Line CI/CD Examples
+# Command line CI/CD examples
 
-## Basic Deployment Example
+## Basic deployment example
 
 This is a basic script for uploading to the catalog and/or deployment to DMAs connected to dataminer.services.
 
@@ -12,7 +12,7 @@ We recommend combining this with quality control beforehand, such as executing s
 
 ### Creating a dataminer.services key
 
-A dataminer.services key is scoped to the specific DMS for which it was created and will allow for deployments to that DMS only.
+A dataminer.services key is scoped to the specific DMS for which it was created and can only be used for deployments to that DMS.
 
 For more information on how to create a dataminer.services key, refer to [Managing dataminer.services keys](xref:Managing_DCP_keys).
 
@@ -30,12 +30,11 @@ dataminer-package-deploy from-catalog --artifact-id "$id" --dm-catalog-token 123
 
 ```
 
-### Ubuntu Terminal
+### Ubuntu terminal
 
 Prerequisites on Ubuntu/Linux. You need dotnet-sdk-6.0
 
 ```bash
-
 # Get Ubuntu version
 declare repo_version=$(if command -v lsb_release &> /dev/null; then lsb_release -r -s; else grep -oP '(?<=^VERSION_ID=).+' /etc/os-release | tr -d '"'; fi)
 
@@ -52,17 +51,14 @@ rm packages-microsoft-prod.deb
 sudo apt update
 
 sudo apt install dotnet-sdk-6.0
-
 ```
 
 You will need to restart your session or log out and back in before the next part.
 
-Actual code for creation and deployment, assuming you have a solution cloned here: AS-JANS-ExampleDeployment 
+Actual code for creation and deployment, assuming you have a solution cloned here: AS-JANS-ExampleDeployment:
 
 ```bash
-
 dataminer-package-create dmapp AS-JANS-ExampleDeployment --name HelloFromUbuntu --output AS-JANS-ExampleDeployment --type automation
 id=$(dataminer-catalog-upload --path-to-artifact "AS-JANS-ExampleDeployment/HelloFromUbuntu.dmapp" --dm-catalog-token 12345)
 dataminer-package-deploy from-catalog --artifact-id "$id" --dm-catalog-token 12345
-
 ```

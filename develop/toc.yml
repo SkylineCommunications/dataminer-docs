@@ -5105,21 +5105,21 @@
   items:
   - name: Platform-independent CI/CD
     topicUid: Platform_independent_CICD
-  - name: CI/CD using Command Line
+  - name: CI/CD using command line
     topicUid: CICD_Command_Line_Examples
     items:
-    - name: Command Line Examples
+    - name: Command line examples
       topicUid: CICD_Command_Line_Examples
   - name: CI/CD using GitHub
     topicUid: CICD_on_GitHub
     items:
-    - name: GitHub Example Workflows
+    - name: GitHub example workflows
       topicUid: CICD_GitHub_Examples
     - name: GitHub starter workflows
       topicUid: github_starter_workflows
     - name: GitHub validation requirements
       topicUid: github_validation_requirements
-    - name: MarketPlace Action
+    - name: MarketPlace action
       topicUid: Deploying_Automation_scripts_from_a_GitHub_repository
     - name: GitHub reusable workflows
       topicUid: github_reusable_workflows
@@ -5133,24 +5133,24 @@
   - name: CI/CD using GitLab
     topicUid: CICD_GitLab_Examples
     items:
-    - name: GitLab Examples
+    - name: GitLab examples
       topicUid: CICD_GitLab_Examples
-    - name: MarketPlace Action
+    - name: MarketPlace action
       topicUid: Deploying_Automation_scripts_from_a_GitLab_repository
   - name: CI/CD using Jenkins
     topicUid: CICD_Jenkins_Examples
     items:
-    - name: Jenkins Examples
+    - name: Jenkins examples
       topicUid: CICD_Jenkins_Examples
   - name: CI/CD using Azure DevOps
     topicUid: CICD_Azure_DevOps_Examples
     items:
-    - name: Azure DevOps Examples
+    - name: Azure DevOps examples
       topicUid: CICD_Azure_DevOps_Examples
   - name: CI/CD using Concourse
     topicUid: CICD_Concourse_Examples
     items:
-    - name: Concourse Examples
+    - name: Concourse examples
       topicUid: CICD_Concourse_Examples
   - name: CI/CD at Skyline Communications
     topicUid: CICD_at_Skyline
