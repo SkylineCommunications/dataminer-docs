@@ -9,9 +9,6 @@ When you migrate a DataMiner Agent to a new server, you need to follow the steps
 > [!NOTE]
 > This procedure only applies for DataMiner Agents that are connected to dataminer.services. If your DMA is not connected yet, we highly recommend that you [connect to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud) after the migration in order to gain access to additional DataMiner features.
 
-> [!TIP]
-> See also: [Changing the IP of a DMA](xref:Changing_the_IP_of_a_DMA)
-
 1. Copy *CcaPersistedData* from the old server to the new server.
 
    The DataMiner Agent needs this data in order to maintain its connection to the cloud.
