@@ -6,10 +6,11 @@ uid: CICD_Command_Line_Examples
 
 ## Basic Deployment Example
 
-A basic script for upload to catalog and/or deployment to cloud-connected agents.
-It's recommended to combine this with quality control beforehand such as executing static code analysis and running tests when running in an automated way.
+This is a basic script for uploading to the catalog and/or deployment to DMAs connected to dataminer.services.
 
-## Creating a dataminer.services key
+We recommend combining this with quality control beforehand, such as executing static code analysis and running tests.
+
+### Creating a dataminer.services key
 
 A dataminer.services key is scoped to the specific DMS for which it was created and will allow for deployments to that DMS only.
 
