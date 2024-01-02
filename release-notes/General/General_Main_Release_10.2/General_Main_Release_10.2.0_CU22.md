@@ -287,6 +287,12 @@ When the URL specified in a shape data item of type *Link* did not link to a Dat
 
 When a card in tab layout was closed before it had fully been loaded, DataMiner Cube could leak memory due to list boxes not being cleared from memory.
 
+#### DataMiner Cube - Visual Overview: Problem when a parameter value changed while executing an Automation script [ID_37854]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
+
+When, in a visual overview, a parameter value changed while executing an Automation script, an exception would be thrown.
+
 #### DataMiner Cube - System Center: Term 'Client independent updates' replaced by 'Server independent client updates' [ID_37926]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->

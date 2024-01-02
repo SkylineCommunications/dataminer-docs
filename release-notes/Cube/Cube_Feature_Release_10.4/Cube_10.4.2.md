@@ -77,6 +77,12 @@ From now on, when configuring [Start Time:] placeholders that will be used in Su
 
 See also: [Linking a shape to a booking](xref:Linking_a_shape_to_a_booking)
 
+#### DataMiner Cube - Visual Overview: Problem when a parameter value changed while executing an Automation script [ID_37854]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
+
+When, in a visual overview, a parameter value changed while executing an Automation script, an exception would be thrown.
+
 #### Problem when right-clicking after selecting a large number of elements and/or services in a view card [ID_37981]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11] - FR 10.4.2 -->

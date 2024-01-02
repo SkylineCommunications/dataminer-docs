@@ -737,6 +737,12 @@ When you panned a trend graph, in some cases, the graph would suddenly disappear
 > [!NOTE]
 > From now on, trending errors will also be logged in the main Cube logging (*System Center > Logging*).
 
+#### DataMiner Cube - Visual Overview: Problem when a parameter value changed while executing an Automation script [ID_37854]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
+
+When, in a visual overview, a parameter value changed while executing an Automation script, an exception would be thrown.
+
 #### Automation: Save button would incorrectly not be enabled after renaming an Automation script [ID_37987]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11] - FR 10.4.2 -->
