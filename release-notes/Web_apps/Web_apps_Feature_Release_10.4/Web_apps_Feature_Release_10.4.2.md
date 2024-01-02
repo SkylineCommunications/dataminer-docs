@@ -210,3 +210,14 @@ A Line & area chart with multiple aggregation parameters would not render those 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
 
 When an error occurred in the table component after a user had sorted the data on a column, the *Restore initial view* button would incorrectly get disabled. As a result, it would not be possible to make the error disappear and undo the sort operation.
+
+#### Low-Code Apps: An 'error 404' page would appear instead of an 'error 403' page [ID_38253]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+When you tried to open a low-code app to which you had not been granted access, in some rare cases, an "error 404" page would appear instead of an "error 403" page.
+
+From now on
+
+- an "error 403" page will appear when you are not allowed to open the app in question, and
+- an "error 404" page will appear when the app in question cannot be found.
