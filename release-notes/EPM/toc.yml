@@ -36,6 +36,11 @@ items:
     items:
       - name: EPM 6.1.9 I-DOCSIS
         topicUid: EPM_6.1.9_I-DOCSIS
+        items:
+          - name: New features and changes
+            topicUid: EPM_6.1.9_I-DOCSIS
+          - name: Addendum CU1
+            topicUid: EPM_6.1.9_I-DOCSIS_CU1
       - name: EPM 6.1.8 I-DOCSIS
         topicUid: EPM_6.1.8_I-DOCSIS
       - name: EPM 6.1.7 I-DOCSIS
