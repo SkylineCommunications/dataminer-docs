@@ -245,3 +245,17 @@ In all DataMiner web apps, a few minor popup window issues have been fixed.
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
 
 When, while renaming a layer of a Maps component, you deleted a character using the DELETE button, the *Delete component* popup window would incorrectly appear.
+
+#### Dashboards app: Problem when refreshing a dashboard that contained a Parameter table component [ID_38291]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+When you refreshed a dashboard that contained a *Parameter table* component, the following error would be thrown:
+
+`TypeError: Cannot read properties of undefined (reading 'selectMany')`
+
+#### Dashboards app & Low-Code Apps - Template editor: '<=' operators in conditional cases would incorrectly be changed to '=' operators [ID_38296]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+When you saved a template with conditional cases that contained "<=" operators, those operators would incorrectly be changed to "=" operators.

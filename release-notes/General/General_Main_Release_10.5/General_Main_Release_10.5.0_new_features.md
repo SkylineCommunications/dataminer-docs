@@ -58,7 +58,7 @@ bool ContainsKey(string key);
 > - Multiple values can be added for one key.
 > - Query parameter keys are case-sensitive.
 
-#### Service & Resource Management - ResourceManagerHelper & ServiceManagerHelper: New Count methods [ID_37885]
+#### Service & Resource Management - ResourceManagerHelper & ServiceManagerHelper: New Count methods [ID_37885] [ID_38096]
 
 <!-- MR 10.5.0 - FR 10.4.2 -->
 
@@ -80,6 +80,9 @@ Example:
 var resourceManagerHelper = new ResourceManagerHelper(engine.SendSLNetSingleResponseMessage);
 var count = resourceManagerHelper.CountResources(ResourceExposers.Name.Contains("name"));
 ```
+
+> [!NOTE]
+> When a *Get Bookings* GQI query performs a count aggregate on ID, it will now use the new *ResourceManageHelper.CountReservationInstances* method. This will considerably enhance overall performance.
 
 #### DataMiner Object Models: Creating, updating and deleting multiple DOM instances in one call [ID_37891]
 
