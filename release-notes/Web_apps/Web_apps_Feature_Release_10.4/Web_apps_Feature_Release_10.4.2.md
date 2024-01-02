@@ -227,3 +227,9 @@ From now on
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
 
 When you changed a component from *Column & bar chart* to another visualization, and then changed it back to *Column & bar chart*, in some cases, it would no longer show any data.
+
+#### Dashboards app & Low-Code Apps: Visualization picker of a component would contain deprecated visualizations [ID_38270]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+In some cases, the visualization picker of a component would incorrectly contain visualizations that had been deprecated.
