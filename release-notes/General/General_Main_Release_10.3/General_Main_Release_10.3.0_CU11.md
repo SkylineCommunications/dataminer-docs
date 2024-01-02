@@ -29,6 +29,12 @@ From now on, the size of SNMPv3 responses will no longer be limited, meaning tha
 > [!NOTE]
 > When sending SNMPv3 messages, the size of those messages is still limited to 16000 bytes.
 
+#### Reduction of number of information events when clients connect or disconnect [ID_37992]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+In DataMiner Systems with a large number of Agents, up to now, each Agent in the DataMiner System would generate an information event when a client application connected to or disconnected from a particular Agent. From now on, when a client application connects to or disconnects from an Agent, only that particular Agent will generate an information event.
+
 #### Enhanced performance when compiling QActions in SLScripting [ID_37993]
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
