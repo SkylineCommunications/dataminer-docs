@@ -147,6 +147,21 @@ The `ExecuteScriptOnDomInstanceActionSettings` object has been made available as
 > - When, in the DomDefinition, the `ScriptSettings` object is null, the `ScriptSettings` of the `ModuleSettings` will be used instead.
 > - In order for the `ModuleSettings` objects to be used, the objects in the `ModuleSettingsOverrides` of the `DomDefinition` have to be *null*. Just making them empty is not sufficient.
 
+#### SSH: Support for hmac-sha2-512-etm and hmac-sha2-256-etm [ID_38213]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+DataMiner now supports two additional hash-based message authentication algorithms: *hmac-sha2-512-etm* and *hmac-sha2-256-etm*.
+
+From now on, it will propose the following algorithms to the server in the following order:
+
+1. hmac-sha2-512-etm\@openssh.com
+1. hmac-sha2-256-etm\@openssh.com
+1. hmac-sha2-512
+1. hmac-sha2-256
+1. hmac-sha1
+1. hmac-md5
+
 ## Changes
 
 ### Enhancements
@@ -435,6 +450,12 @@ When small, unlabelled changes were detected in a trend graph of a parameter of 
 <!-- MR 10.4.0 - FR 10.4.2 -->
 
 When, while an extensive correlation rule action was running, you opened an element card of an element hosted on a DataMiner Agent other than the one you were connected to, loading the data of that element could get delayed until the correlation rule action had finished.
+
+#### Failover: Problem with DVE elements and virtual function elements after a Failover switch [ID_38167]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+After a Failover switch, in some cases, DVE elements or virtual function elements would not be loaded correctly. Also, new DVE elements would incorrectly not appear in the Surveyor when they were created while their parent element was hosted on the Failover setup that had switched.
 
 #### BPA test 'Check Cluster SLNet Connections' did not have valid signature [ID_38201] [ID_38208]
 

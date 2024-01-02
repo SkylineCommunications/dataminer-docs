@@ -83,6 +83,21 @@ Run daily on every Agent in a DataMiner System, this new BPA test will trigger a
 
 For more information, see [Check Cluster SLNet Connections](xref:BPA_Check_Cluster_SLNet_Connections).
 
+#### SSH: Support for hmac-sha2-512-etm and hmac-sha2-256-etm [ID_38213]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+DataMiner now supports two additional hash-based message authentication algorithms: *hmac-sha2-512-etm* and *hmac-sha2-256-etm*.
+
+From now on, it will propose the following algorithms to the server in the following order:
+
+1. hmac-sha2-512-etm\@openssh.com
+1. hmac-sha2-256-etm\@openssh.com
+1. hmac-sha2-512
+1. hmac-sha2-256
+1. hmac-sha1
+1. hmac-md5
+
 ### Fixes
 
 #### Problems with SLDataMiner [ID_37409]
@@ -186,3 +201,9 @@ When a GQI query had to retrieve a large amount of paged alarms, after a while, 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
 
 In some cases, SLAnalytics could partially get stuck when the trend icon calculation feature was disabled immediately after being enabled.
+
+#### Failover: Problem with DVE elements and virtual function elements after a Failover switch [ID_38167]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+After a Failover switch, in some cases, DVE elements or virtual function elements would not be loaded correctly. Also, new DVE elements would incorrectly not appear in the Surveyor when they were created while their parent element was hosted on the Failover setup that had switched.
