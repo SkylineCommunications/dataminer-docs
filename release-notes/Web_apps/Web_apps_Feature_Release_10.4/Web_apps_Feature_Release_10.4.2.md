@@ -239,3 +239,9 @@ In some cases, the visualization picker of a component would incorrectly contain
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
 
 In all DataMiner web apps, a few minor popup window issues have been fixed.
+
+#### Dashboards app & Low-Code Apps - Maps component: 'Delete component' popup window would appear when deleting a character while renaming a layer [ID_38290]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+When, while renaming a layer of a Maps component, you deleted a character using the DELETE button, the *Delete component* popup window would incorrectly appear.
