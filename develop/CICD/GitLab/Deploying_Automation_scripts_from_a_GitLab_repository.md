@@ -5,7 +5,7 @@ uid: Deploying_Automation_scripts_from_a_GitLab_repository
 # Deploying Automation scripts from a GitLab repository
 
 > [!IMPORTANT]
-> Deprecated. Though this will still work. Consider using the .NET Tools to package, upload and deploy as shown in [this example](#CICD_GitLab_Examples).
+> Deprecated. Though this will still work. Consider using the .NET Tools to package, upload and deploy as shown in [this example](xref:CICD_GitLab_Examples).
 
 It is possible to deploy an Automation script solution from a GitLab repository by using the Skyline DataMiner Deploy Action in a pipeline.
 

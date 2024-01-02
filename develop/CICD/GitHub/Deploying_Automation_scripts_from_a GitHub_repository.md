@@ -5,7 +5,7 @@ uid: Deploying_Automation_scripts_from_a_GitHub_repository
 # Deploying Automation scripts from a GitHub repository
 
 > [!IMPORTANT]
-> Deprecated. Though this will still work. Consider using the .NET Tools to package, upload and deploy as shown in [this example](#CICD_GitHub_Examples).
+> Deprecated. Though this will still work. Consider using the .NET Tools to package, upload and deploy as shown in [this example](xref:CICD_GitHub_Examples).
 
 It is possible to deploy an Automation script solution from a GitHub repository by using the Skyline DataMiner Deploy Action in a workflow.
 
