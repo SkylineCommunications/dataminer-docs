@@ -187,6 +187,12 @@ When you removed a query from a Maps component and then added it again, the comp
 
 `Parameter '_destroy$' cannot be null`
 
+#### Dashboards app & Low-Code Apps - Maps component: Newly created markers would not be visualized [ID_38163]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+When you added new markers to the Maps component, in some cases, an incorrect template would be applied, causing the newly created markers to not be visualized.
+
 #### Dashboards app & Low-Code Apps: Line & area chart would not render aggregation parameters correctly [ID_38166]
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
