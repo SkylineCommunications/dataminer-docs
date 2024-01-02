@@ -16,6 +16,10 @@ To streamline the way DOCSIS version information is displayed, a number of chang
 - The font size in the visual overview for the CM has been adjusted so that it is the same for every KPI.
 - In DataMiner Cube, KPIs can now be displayed over several lines, so that all the data of each KPI is fully visible.
 
+#### Start and Stop Frequency parameters added to CM OFDM Channels dashboard [ID_38287]
+
+In the dashboard *05. CM OFDM Channels*, the Start and Stop Frequency parameters are now displayed in the table *OFDM Channels*. Previously, these parameters were not available in this dashboard.
+
 ## Fixes
 
 #### CISCO CBR-8 CCAP Platform: DS port not found for some QAM Channels [ID_38044]
