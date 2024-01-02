@@ -249,6 +249,12 @@ As storing profiles and resources in XML files is no longer supported as from Da
 
 Also, the *NotAllClusterAgentsReachable* error in ResourceManager is now considered obsolete and will no longer be returned.
 
+#### Reduction of number of information events when clients connect or disconnect [ID_37992]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+In DataMiner Systems with a large number of Agents, up to now, each Agent in the DataMiner System would generate an information event when a client application connected to or disconnected from a particular Agent. From now on, when a client application connects to or disconnects from an Agent, only that particular Agent will generate an information event.
+
 #### Enhanced performance when compiling QActions in SLScripting [ID_37993]
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->

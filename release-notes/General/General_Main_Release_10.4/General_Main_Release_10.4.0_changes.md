@@ -814,6 +814,12 @@ Overall performance has increased when updating/applying profile instances by pr
 public virtual void UpdateAllCapacitiesAndCapabilitiesByReference(Func<FilterElement<ProfileInstance>, List<ProfileInstance>> retriever, Dictionary<Guid, ProfileInstance> profileInstanceCache, IEnumerable<QuarantinedResourceUsageDefinition> correspondingQuarantines = null);
 ```
 
+#### Reduction of number of information events when clients connect or disconnect [ID_37992]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+In DataMiner Systems with a large number of Agents, up to now, each Agent in the DataMiner System would generate an information event when a client application connected to or disconnected from a particular Agent. From now on, when a client application connects to or disconnects from an Agent, only that particular Agent will generate an information event.
+
 #### GQI - 'Get parameter table by ID' data source: Enhanced sorting [ID_38039]
 
 <!-- MR 10.4.0 - FR 10.4.2 -->
