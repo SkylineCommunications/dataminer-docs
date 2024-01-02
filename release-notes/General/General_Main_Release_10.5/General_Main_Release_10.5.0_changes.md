@@ -83,6 +83,18 @@ It is now possible to read DOM objects and ModuleSettings in parallel. This will
 
 Up to now, SLAnalytics would always keep one hour of average trend data for all trended parameters on the system in order to determine which trend icon to display in the absence of change points. From now on, it will only keep one hour of trend data for 250,000 trended parameters at the most, reducing memory usage to a maximum of 330 MB.
 
+#### GQI: Forwarding a sort operator to one of two joined queries [ID_38150]
+
+<!-- MR 10.5.0 - FR 10.4.2 -->
+
+It is now possible to forward a sort operator to one of two joined queries. This will considerably enhance performance, especially when sorting on a joined column.
+
+When sorting on a joined column, a sort operator can be forwarded in the following situations:
+
+- In case of an inner join
+- In case of a left join, but only if sorts are descending
+- In case of a right join
+
 ### Fixes
 
 #### Databases: Problem when starting a migration from MySQL to Cassandra [ID_37589]

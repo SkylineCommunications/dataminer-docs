@@ -318,6 +318,18 @@ The amount of memory used for flatline detection has been reduced.
 
 Up to now, when a *Join* operator of type "Right join" was applied, both the entire left query and the entire right query would be fetched. From now on, the right query will be fetched lazily.
 
+#### GQI: Forwarding a sort operator to one of two joined queries [ID_38150]
+
+<!-- MR 10.5.0 - FR 10.4.2 -->
+
+It is now possible to forward a sort operator to one of two joined queries. This will considerably enhance performance, especially when sorting on a joined column.
+
+When sorting on a joined column, a sort operator can be forwarded in the following situations:
+
+- In case of an inner join
+- In case of a left join, but only if sorts are descending
+- In case of a right join
+
 #### SLAnalytics - Behavioral anomaly detection: Enhanced anomaly check algorithm [ID_38176]
 
 <!-- MR 10.4.0 - FR 10.4.2 -->
