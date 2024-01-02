@@ -13,6 +13,9 @@ The following QActions implement some functionality that is often required when 
 - [Processing gzip-compressed data](#processing-gzip-compressed-data)
 - [Creating an alarm in a QAction](#creating-an-alarm-in-a-qaction)
 
+> [!TIP]
+> See also: [Use case: Internal flow – QActions](xref:LogicUseCase3)
+
 ## Reading from files
 
 Reading data from files can be done using an instance of the *StreamReader* class (System.IO). Always specify the default encoding (System.Text) so content with special characters will be interpreted correctly. By also using a *FileStream* instance (System.IO), it is possible to read files that are already in use.
