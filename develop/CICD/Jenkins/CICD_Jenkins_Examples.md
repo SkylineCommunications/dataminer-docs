@@ -10,6 +10,8 @@ This is a basic pipeline for uploading to the catalog and/or deployment to DMAs 
 
 We recommend combining this with quality control beforehand, such as executing static code analysis and running tests.
 
+For information on creating a new pipeline in Jenkins see: [Jenkins Tutorial](https://www.jenkins.io/doc/pipeline/tour/hello-world/)
+
 ### Creating a dataminer.services key
 
 A dataminer.services key is scoped to the specific DMS for which it was created and can only be used for deployments to that DMS.
@@ -18,7 +20,7 @@ For more information on how to create a dataminer.services key, refer to [Managi
 
 ### Jenkins pipeline
 
-This jenkins server is on a fixed window machine and we are using local caching to avoid redownloading the tools:
+In the below example, the jenkins server is on a fixed window machine and we are using local caching to avoid re-downloading the tools:
 
 ```groovy
 class Globals

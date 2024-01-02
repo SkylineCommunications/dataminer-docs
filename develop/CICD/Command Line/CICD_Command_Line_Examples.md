@@ -10,6 +10,8 @@ This is a basic script for uploading to the catalog and/or deployment to DMAs co
 
 We recommend combining this with quality control beforehand, such as executing static code analysis and running tests.
 
+Our tools supports both Windows users and Linux users. Below you'll find one example in powershell you can use on a windows machine and another example using the Terminal for Ubuntu users.
+
 ### Creating a dataminer.services key
 
 A dataminer.services key is scoped to the specific DMS for which it was created and can only be used for deployments to that DMS.

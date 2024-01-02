@@ -10,6 +10,8 @@ This is a basic pipeline for uploading to the catalog and/or deployment to DMAs 
 
 We recommend combining this with quality control beforehand, such as executing static code analysis and running tests.
 
+For information on creating a new pipeline in GitHub see: [GitLab Tutorial](https://docs.gitlab.com/ee/ci/quick_start/)
+
 ### Creating a dataminer.services key
 
 A dataminer.services key is scoped to the specific DMS for which it was created and can only be used for deployments to that DMS.

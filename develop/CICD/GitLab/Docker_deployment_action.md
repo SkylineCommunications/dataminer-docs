@@ -1,8 +1,8 @@
 ---
-uid: Deploying_Automation_scripts_from_a_GitLab_repository
+uid: Docker_deployment_action
 ---
 
-# Deploying Automation scripts from a GitLab repository
+# Deployment through the use of a docker deployment action
 
 > [!IMPORTANT]
 > Deprecated. Though this will still work, consider using the .NET tools instead to package, upload, and deploy as shown in [this example](xref:CICD_GitLab_Examples).

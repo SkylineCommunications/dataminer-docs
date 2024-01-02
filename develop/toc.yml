@@ -5119,8 +5119,8 @@
       topicUid: github_starter_workflows
     - name: GitHub validation requirements
       topicUid: github_validation_requirements
-    - name: MarketPlace action
-      topicUid: Deploying_Automation_scripts_from_a_GitHub_repository
+    - name: Marketplace deployment action
+      topicUid: Marketplace_deployment_action
     - name: GitHub reusable workflows
       topicUid: github_reusable_workflows
       items:
@@ -5135,8 +5135,8 @@
     items:
     - name: GitLab examples
       topicUid: CICD_GitLab_Examples
-    - name: MarketPlace action
-      topicUid: Deploying_Automation_scripts_from_a_GitLab_repository
+    - name: Docker deployment action
+      topicUid: Docker_deployment_action
   - name: CI/CD using Jenkins
     topicUid: CICD_Jenkins_Examples
     items:

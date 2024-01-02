@@ -1,8 +1,8 @@
 ---
-uid: Deploying_Automation_scripts_from_a_GitHub_repository
+uid: Marketplace_deployment_action
 ---
 
-# Deploying Automation scripts from a GitHub repository
+# Deployment through the GitHub Marketplace action
 
 > [!IMPORTANT]
 > Deprecated. Though this will still work, consider using the .NET tools instead to package, upload, and deploy as shown in [this example](xref:CICD_GitHub_Examples).
