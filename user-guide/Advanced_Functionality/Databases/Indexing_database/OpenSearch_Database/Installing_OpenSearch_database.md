@@ -127,10 +127,9 @@ These are the main steps of the setup:
   node.roles: [ cluster_manager, data, ingest ]
   ```
 
-#### TLS and User configuration
+#### TLS and user configuration
 
-You should configure TLS in order to have a layer of security between your nodes and your DataMiner client. 
-In addition, the default password of the *admin*`user should be changed and all the other users removed. To do so:
+You should configure TLS in order to have a layer of security between your nodes and your DataMiner client. In addition, the default password of the *admin* user should be changed, and all the other users should be removed.
 
 1. [Remove the demo certificates](#remove-the-demo-certificates) that came with the default installation.
 
@@ -140,12 +139,11 @@ In addition, the default password of the *admin*`user should be changed and all 
 
 1. [Set up TLS in the opensearch.yml file](#set-up-tls-in-the-opensearchyml-file).
 
-1. [Change *admin* password and remove other users](#change-admin-password-and-remove-other-users).
-   
+1. [Change the *admin* password and remove other users](#change-the-admin-password-and-remove-other-users).
+
 1. [Restart OpenSearch](#restart-opensearch).
 
 1. [Install the rootCA.crt on the DataMiner server](#install-the-rootcacrt-on-the-dataminer-server).
-
 
 ##### Remove the demo certificates
 
@@ -197,7 +195,6 @@ To configure TLS, instead of using .pem files, we recommend generating p12 keyst
    openssl verify rootCA.crt
    ```
 
-
 ##### Set up TLS in the opensearch.yml file
 
 Configure the *opensearch.yml* file as illustrated in the example below.
@@ -239,22 +236,26 @@ plugins.security.system_indices.enabled: true
 plugins.security.system_indices.indices: [".plugins-ml-model", ".plugins-ml-task", ".opendistro-alerting-config", ".opendistro-alerting-alert*", ".opendistro-anomaly-results*", ".opendistro-anomaly-detector*", ".opendistro-anomaly-checkpoints", ".opendistro-anomaly-detection-state", ".opendistro-reports-*", ".opensearch-notifications-*", ".opensearch-notebooks", ".opensearch-observability", ".opendistro-asynchronous-search-response*", ".replication-metadata-store",".opendistro-anomaly-detection-state", ".opendistro-reports-*", ".opensearch-notifications-*", ".opensearch-notebooks", ".opensearch-observability", ".opendistro-asynchronous-search-response*", ".replication-metadata-store"]
 ```
 
-##### Change *admin* password and remove other users
-Generate a new hash for the admin user as detailed under [Configure a user](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/debian/#configure-a-user) in the OpenSearch documentation:
+##### Change the admin password and remove other users
 
-You will need to remove all the users except the *admin* and replace its the hash with the one generated from the new password.
+Generate a new hash for the admin user as detailed under [Configure a user](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/debian/#configure-a-user) in the OpenSearch documentation. You will need to remove all the users except *admin* and replace its hash with the one generated from the new password:
 
 1. Generate a hash for the new password of the *admin* user:
+
     ```bash
     cd /usr/share/opensearch/plugins/opensearch-security/tools
     
     OPENSEARCH_JAVA_HOME=/usr/share/opensearch/jdk ./hash.sh
     ```
+
 1. Edit the *internal_users.yml* file, removing all the users except *admin* and replacing the old hash by the one generated:
+
     ```bash
      sudo vi /etc/opensearch/opensearch-security/internal_users.yml
     ```
+
     Example:
+
     ```yml
         ---
     # This is the internal user database
@@ -277,28 +278,30 @@ You will need to remove all the users except the *admin* and replace its the has
 
     ```
 
-
 ##### Restart OpenSearch
 
-1. Finished the steps above, you will need to restart OpenSearch and apply the user settings:
+1. When you have completed the steps above, restart OpenSearch and apply the user settings using the following commands, making sure to replace the placeholders `<IPOfYourNode1>`, `<FQDNOfYourNode-node-keystore.p12>`, and `<GeneratedPasswordByGithubScript>` with the appropriate data:
 
-  ```bash
+   ```bash
    sudo systemctl restart opensearch
-  ```
-  ```bash
+   ```
+
+   ```bash
    cd /usr/share/opensearch/plugins/opensearch-security/tools
 
-  OPENSEARCH_JAVA_HOME=/usr/share/opensearch/jdk ./securityadmin.sh -h <IPOfYourNode> -cd /etc/opensearch/opensearch-security -icl -nhnv --diagnose -ts /etc/opensearch/cert/<FQDNOfYourNode-node-keystore.p12> -tspass <GeneratedPasswordByGithubScript> -ks /etc/opensearch/cert/<FQDNOfYourNode-node-keystore.p12>  -kspass <GeneratedPasswordByGithubScript>
-  ```
-  > The command above needs to be executed only in one of the nodes. Don't forget to replace `<IPOfYourNode1>`, `<FQDNOfYourNode-node-keystore.p12>` and `<GeneratedPasswordByGithubScript>`
+   OPENSEARCH_JAVA_HOME=/usr/share/opensearch/jdk ./securityadmin.sh -h <IPOfYourNode> -cd /etc/opensearch/opensearch-security -icl -nhnv --diagnose -ts /etc/opensearch/cert/<FQDNOfYourNode-node-keystore.p12> -tspass <GeneratedPasswordByGithubScript> -ks /etc/opensearch/cert/<FQDNOfYourNode-node-keystore.p12>  -kspass <GeneratedPasswordByGithubScript>
+   ```
 
-2. Check via the command line if data is returned:
+   > [!NOTE]
+   > The command above only needs to be executed on one of the nodes.
+
+1. Check via the command line if data is returned (make sure to replace the placeholder data with the correct data):
 
    ```curl
    curl https://<IPOfYourNode>:9200 -u admin:yournewpassword --ssl-no-revoke
    ```
 
-   This should return something like:
+   This should return something similar to this:
 
    ```text
    {
@@ -350,7 +353,6 @@ To build trust between DataMiner and OpenSearch, so that DataMiner can connect t
 1. Restart the DataMiner Agent.
 
 1. Check in the *SLSearch.txt*, *SLDataGateway.txt*, and *SLDBConnection.txt* log files (in the folder `C:\Skyline DataMiner\Logging`) whether any errors have occurred.
-
 
 #### Setting up OpenSearch Dashboards
 
