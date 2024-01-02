@@ -4,7 +4,7 @@ uid: Managing_DCP_keys
 
 # Managing dataminer.services keys
 
-In the Admin app, you can manage keys that can for example be used with the [GitHub action to deploy Automation scripts](xref:Deploying_Automation_scripts_from_a_GitHub_repository) to DMS that is connected to dataminer.services.
+In the Admin app, you can manage keys that can for example be used with the [GitHub action to deploy Automation scripts](xref:Marketplace_deployment_action) to DMS that is connected to dataminer.services.
 
 To do so:
 

@@ -99,7 +99,7 @@ This step makes sure creation of an application package (.dmapp) includes all as
 
 ### Upload artifact package
 
-This step performs the Skyline Communications [Deploy Action](xref:Deploying_Automation_scripts_from_a_GitHub_repository), set to only "Upload", because deployment is handled in other user-configured jobs.
+This step performs the Skyline Communications [Deploy Action](xref:Marketplace_deployment_action), set to only "Upload", because deployment is handled in other user-configured jobs.
 
 ### Set artifact ID
 

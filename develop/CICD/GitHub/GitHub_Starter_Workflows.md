@@ -6,7 +6,7 @@ uid: github_starter_workflows
 
 We offer a number of starter workflows that can be used as the starting point to create a workflow for your GitHub repository. These .yml files are designed to be small and call both reusable workflows and actions from the marketplace that always try to run the latest versions.
 
-A [GitHub action](xref:Deploying_Automation_scripts_from_a_GitHub_repository) provides an easy access point to a single key action, such as deploying a DMAPP, creating a DMAPP, running tests, and more.
+A [GitHub action](xref:Marketplace_deployment_action) provides an easy access point to a single key action, such as deploying a DMAPP, creating a DMAPP, running tests, and more.
 
 [GitHub reusable workflow](xref:github_reusable_workflows) allows the reuse of a combination of many different GitHub actions and other scripts, running across several jobs combined into a single easy call.
 
