@@ -99,6 +99,15 @@ try
   // Remove them from the DB.
   var deleteResult = domHelper.DomInstances.Delete(domInstances);
 
+  // Check if some of the deletes are not successful.
+  if (deleteResult.HasFailures())
+  {
+    // Log the number of DomInstances that did not get removed.
+    // Also log the `TraceData` for all failing `DomInstances`. The `TraceData` contains all errors and warnings.
+    Log($"Could not perform the delete for {deleteResult.UnsuccessfulIds.Count} items: {deleteResult.GetTraceData()}");
+    return;
+  }
+
   // Log what items are successfully removed.
   Log($"Successfully removed {deleteResult.SuccessfulIds.Count} items");
 }
@@ -119,18 +128,25 @@ domHelper.DomInstances.ThrowExceptionsOnErrorData = false;
 var deleteResult = domHelper.DomInstances.Delete(domInstances);
 
 // Check if a result is available.
-if (deleteResult != null)
+if (deleteResult == null)
 {
-  // Log what items are successfully removed.
-  Log($"Successfully removed {deleteResult.SuccessfulIds.Count} items");
+  // Get the TraceData and check if the last call succeeded.
+  var traceData = domHelper.DomInstances.GetTraceDataLastCall();
+
+  // Log the issue that occurs.
+  Log($"An unexpected issue occurred during the removal, because of the following issue: {traceData}");
   return;
 }
 
-// Get the TraceData and check if the last call succeeded.
-var traceData = domHelper.DomInstances.GetTraceDataLastCall();
-if (!traceData.HasSucceeded())
+// Check if some of the deletes are not successful.
+if (deleteResult.HasFailures())
 {
-  // Log the issue that occurs.
-  Log($"Cannot perform the removal, because of the following issue: {traceData}");
+  // Log the number of DomInstances that did not get removed.
+  // Also log the `TraceData` for all failing `DomInstances`. The `TraceData` contains all errors and warnings.
+  Log($"Could not perform the delete for {deleteResult.UnsuccessfulIds.Count} items: {deleteResult.GetTraceData()}");
+  return;
 }
+
+// Log what items are successfully removed.
+Log($"Successfully removed {deleteResult.SuccessfulIds.Count} items");
 ```
