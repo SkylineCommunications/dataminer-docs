@@ -33,6 +33,22 @@ The following tools are the most useful:
 
   This .NET tool allows you to create application (.dmapp) and protocol (.dmprotocol) [packages](xref:ApplicationPackages) starting from a Visual Studio solution as created by [DIS](xref:DIS). It can be used to package Visio drawings, dashboards, connectors, Automation scripts, etc.
 
+- [Skyline.DataMiner.CICD.Tools.CatalogUpload](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.CatalogUpload#readme-body-tab)
+
+  This .NET tool allows you to upload application (.dmapp) [packages](xref:ApplicationPackages) directly onto Skyline's Azure cloud storage. This can be done without registration, so that you just use the returned GUID for further actions, or with registration, which will make it visible on your private catalog UI.
+
+  > [!NOTE]
+  >
+  > - Currently, the private catalog UI is not visible yet.
+  > - Currently, uploading protocol packages (.dmprotocol) is not supported yet.
+
+- [Skyline.DataMiner.CICD.Tools.DataMinerDeploy](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.DataMinerDeploy#readme-body-tab)
+
+  This .NET tool allows you to deploy application (.dmapp) [packages](xref:ApplicationPackages) to a DataMiner Agent using the artifact ID returned when performing a catalog upload.
+
+  > [!NOTE]
+  > This currently only supports deployment from dataminer.services to DMAs connected to dataminer.services.
+
 - [Skyline.DataMiner.CICD.Tools.SDKChecker](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.SDKChecker#readme-body-tab)
 
   Most tools and code these days only work either on legacy-style or SDK-style Visual Studio projects. This dotnet tool will check if every project in a Visual Studio solution is SDK-style or legacy-style. Calling it while providing the path to the workspace will return a "#"-separated list with all project names that are still using legacy-style.

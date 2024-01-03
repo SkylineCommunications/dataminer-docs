@@ -1,8 +1,11 @@
 ---
-uid: Deploying_Automation_scripts_from_a_GitHub_repository
+uid: Marketplace_deployment_action
 ---
 
-# Deploying Automation scripts from a GitHub repository
+# Deployment through the GitHub Marketplace action
+
+> [!IMPORTANT]
+> Deprecated. Though this will still work, consider using the .NET tools instead to package, upload, and deploy as shown in [this example](xref:CICD_GitHub_Examples).
 
 It is possible to deploy an Automation script solution from a GitHub repository by using the Skyline DataMiner Deploy Action in a workflow.
 
@@ -13,7 +16,7 @@ To do so, you need to [create a dataminer.services key](#creating-a-dataminerser
 
 ## Creating a dataminer.services key
 
-A dataminer.services key is scoped to the specific DMS for which it was created and will allow for deployments to that DMS only.
+A dataminer.services key is scoped to the specific DMS for which it was created and can only be used for deployments to that DMS.
 
 For more information on how to create a dataminer.services key, refer to [Managing dataminer.services keys](xref:Managing_DCP_keys).
 
