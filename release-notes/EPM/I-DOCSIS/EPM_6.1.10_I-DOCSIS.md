@@ -19,7 +19,7 @@ It is now possible to hide specific chains, chain fields, search chains, search 
 
 #### Dashboard folders adjusted and unused dashboards removed [ID_37767]
 
-Several unused dashboards have been removed, along with the *EPM Solution* folder containing them. In addition, two new folders, *CCAP* and *Network*, have been added, each containing the respective overview pages. Finally, the Service Group Overview dashboard has been moved to the *SERVICE GROUP* folder.
+The unused dashboards *I-DOCSIS CCAP -Trend_Test.dmadb* and *I-DOCSIS GLOBAL SYSTEM COUNTS.dmadb* have been removed, along with the *EPM Solution* folder containing them. In addition, two new folders, *CCAP* and *Network*, have been added, each containing the respective overview pages. Finally, the Service Group Overview dashboard has been moved to the *SERVICE GROUP* folder.
 
 ### Fixes
 
