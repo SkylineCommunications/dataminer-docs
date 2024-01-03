@@ -22,6 +22,18 @@ uid: General_Feature_Release_10.4.2
 
 ## New features
 
+#### API Gateway: DataMiner modules can now register with API Gateway [ID_36575] [ID_37734]
+
+<!-- MR 10.5.0 - FR 10.4.2 -->
+
+DataMiner modules can now register with API Gateway. These modules can be either "regular modules" (e.g. SLNet) or "proxy modules" (e.g. a DxM that wishes to expose an API).
+
+All modules registered with API Gateway will be displayed under `/APIGateway/api/version`, showing the following properties:
+
+- Name
+- Version
+- Endpoint on which they can be accessed via API Gateway (proxy modules only)
+
 #### Service & Resource Management - ResourceManagerHelper & ServiceManagerHelper: New Count methods [ID_37885] [ID_38096]
 
 <!-- MR 10.5.0 - FR 10.4.2 -->
@@ -169,9 +181,10 @@ From now on, it will propose the following algorithms to the server in the follo
 
 ### Enhancements
 
-#### Security enhancements [ID_37349] [ID_38040] [ID_38052]
+#### Security enhancements [ID_37349] [ID_37637] [ID_38040] [ID_38052]
 
 <!-- 37349: MR 10.5.0 - FR 10.4.2 -->
+<!-- 37637 (part of 37734): MR 10.5.0 - FR 10.4.2 -->
 <!-- 38040: MR 10.3.0 [CU11] - FR 10.4.2 -->
 <!-- 38052: MR 10.5.0 - FR 10.4.2 -->
 
