@@ -10,7 +10,8 @@ This is a basic pipeline for uploading to the catalog and/or deployment to DMAs 
 
 We recommend combining this with quality control beforehand, such as executing static code analysis and running tests.
 
-For information on creating a new pipeline in Concourse see: [Concourse Tutorial](https://concourse-ci.org/tutorial-hello-world.html)
+> [!TIP]
+> For information on creating a new pipeline in Concourse, see [Concourse Tutorial](https://concourse-ci.org/tutorial-hello-world.html).
 
 ### Creating a dataminer.services key
 

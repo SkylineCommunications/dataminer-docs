@@ -10,7 +10,8 @@ This is a basic script for uploading to the catalog and/or deployment to DMAs co
 
 We recommend combining this with quality control beforehand, such as executing static code analysis and running tests.
 
-Our tools supports both Windows users and Linux users. Below you'll find one example in powershell you can use on a windows machine and another example using the Terminal for Ubuntu users.
+> [!NOTE]
+> Our tools support both Windows and Linux. Below, you will find one example in PowerShell that you can use on a Windows machine, and another example using the terminal for Ubuntu users.
 
 ### Creating a dataminer.services key
 
@@ -18,7 +19,7 @@ A dataminer.services key is scoped to the specific DMS for which it was created 
 
 For more information on how to create a dataminer.services key, refer to [Managing dataminer.services keys](xref:Managing_DCP_keys).
 
-### Windows Powershell
+### Windows PowerShell
 
 ```powershell
 
@@ -34,7 +35,7 @@ dataminer-package-deploy from-catalog --artifact-id "$id" --dm-catalog-token 123
 
 ### Ubuntu terminal
 
-Prerequisites on Ubuntu/Linux. You need dotnet-sdk-6.0
+Prerequisites on Ubuntu/Linux: you need dotnet-sdk-6.0.
 
 ```bash
 # Get Ubuntu version
@@ -57,7 +58,7 @@ sudo apt install dotnet-sdk-6.0
 
 You will need to restart your session or log out and back in before the next part.
 
-Actual code for creation and deployment, assuming you have a solution cloned here: AS-JANS-ExampleDeployment:
+Below you can find the actual code for creation and deployment, assuming you have a solution cloned here: *AS-JANS-ExampleDeployment*.
 
 ```bash
 dataminer-package-create dmapp AS-JANS-ExampleDeployment --name HelloFromUbuntu --output AS-JANS-ExampleDeployment --type automation

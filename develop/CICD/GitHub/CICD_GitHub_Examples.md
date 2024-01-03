@@ -10,7 +10,8 @@ This is a basic pipeline for uploading to the catalog and/or deployment to DMAs 
 
 We recommend combining this with quality control beforehand, such as executing static code analysis and running tests.
 
-For information on creating a new pipeline in GitHub see: [GitHub Tutorial](https://docs.github.com/en/actions/quickstart)
+> [!TIP]
+> For information on creating a new pipeline in GitHub, see [GitHub Tutorial](https://docs.github.com/en/actions/quickstart).
 
 ### Creating a dataminer.services key
 
@@ -22,7 +23,7 @@ For more information on how to create a dataminer.services key, refer to [Managi
 
 You will need DATAMINER_DEPLOY_KEY as a secret. This will be the key for the DataMiner Agent as provided through the [DataMiner Admin app](xref:CloudAdminApp).
 
-On a Ubuntu runner:
+On a **Ubuntu** runner:
 
 ```yml
 name: BasicDeployUbuntu
@@ -69,7 +70,7 @@ jobs:
       shell: bash
 ```
 
-On a Windows runner:
+On a **Windows** runner:
 
 ```yml
 name: BasicDeploy

@@ -10,7 +10,8 @@ This is a basic pipeline for uploading to the catalog and/or deployment to DMAs 
 
 We recommend combining this with quality control beforehand, such as executing static code analysis and running tests.
 
-For information on creating a new pipeline in GitHub see: [GitLab Tutorial](https://docs.gitlab.com/ee/ci/quick_start/)
+> [!NOTE]
+> For information on creating a new pipeline in GitLab, see [GitLab Tutorial](https://docs.gitlab.com/ee/ci/quick_start/).
 
 ### Creating a dataminer.services key
 
