@@ -18,7 +18,7 @@ To streamline the way DOCSIS version information is displayed, a number of chang
 
 #### Start and Stop Frequency parameters added to CM OFDM Channels dashboard [ID_38287]
 
-In the dashboard *05. CM OFDM Channels*, the Start and Stop Frequency parameters are now displayed in the table *OFDM Channels*. Previously, these parameters were not available in this dashboard.
+In the dashboard *05. CM OFDM Channels*, the Start and Stop Frequency parameters are now displayed in the table *OFDM Channels*. These are retrieved from the CCAP. Previously, these parameters were not available in this dashboard.
 
 ## Fixes
 
