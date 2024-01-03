@@ -222,11 +222,11 @@ From now on
 - an "error 403" page will appear when you are not allowed to open the app in question, and
 - an "error 404" page will appear when the app in question cannot be found.
 
-#### Dashboards app & Low-Code Apps: Column & bar chart component no longer showed any data after changing it to another visualization and changing it back [ID_38269]
+#### Dashboards app & Low-Code Apps: Chart components no longer showed any data after switching to another visualization and back [ID_38269]
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
 
-When you changed a component from *Column & bar chart* to another visualization, and then changed it back to *Column & bar chart*, in some cases, it would no longer show any data.
+When you switched a *Column & bar chart* or *Pie & donut chart* component to another visualization, and then switched back, in some cases, it would no longer show any data.
 
 #### Dashboards app & Low-Code Apps: Visualization picker of a component would contain deprecated visualizations [ID_38270]
 
