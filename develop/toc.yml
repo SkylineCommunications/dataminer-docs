@@ -682,6 +682,7 @@
     - name: UIBlockType overview
       topicUid:  UIBlockTypesOverview
     - name: How-tos
+      topicUid: How_to_make_your_automation_scripts_debug_ready
       items:
       - name: How to make your Automation scripts debug ready
         topicUid: How_to_make_your_automation_scripts_debug_ready
