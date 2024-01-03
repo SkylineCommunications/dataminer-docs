@@ -21,7 +21,7 @@ For more information on how to create a dataminer.services key, refer to [Managi
 
 ### Jenkins pipeline
 
-In the example below, the Jenkins server is on a fixed window machine, and local caching is used to avoid re-downloading the tools:
+In the example below, the Jenkins server is on a fixed Windows machine, and local caching is used to avoid re-downloading the tools:
 
 ```groovy
 class Globals
