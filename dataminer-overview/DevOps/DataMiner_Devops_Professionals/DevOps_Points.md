@@ -51,7 +51,7 @@ In general, the more active you are in the DataMiner Dojo community and the more
   > [!TIP]
   > Not really sure how to get started? Take a look at our [use case template](https://community.dataminer.services/download/use-case-template/)!
 
-- **Submitting a solution**: You can choose to submit a [solution](https://community.dataminer.services/solutions/) for the community, and upon acceptance, this will result in 250 up to 2500 points. DataMiner solutions are designed to resolve specific technological problems or challenges, such as orchestrating and providing end-to-end monitoring of [Digital Terrestrial Television (DTT) operations](https://community.dataminer.services/solution/digital-terrestrial-television-dtt/) across diverse networks and technologies.
+- **Submitting a solution**: You can choose to add a solution to the dedicated *Solutions* page on [DataMiner Dojo](https://community.dataminer.services/solutions/), and upon acceptance, this will result in 250 up to 2500 points. DataMiner solutions are designed to resolve specific technological problems or challenges.
 
 - **Submitting feedback**: Your feedback is valuable. You will receive DevOps Points per submission of feedback via <https://aka.dataminer.services/Feedback/>. Each submission of feedback will result in 50 DevOps Points (limited to a maximum of 100 points per month).
 
