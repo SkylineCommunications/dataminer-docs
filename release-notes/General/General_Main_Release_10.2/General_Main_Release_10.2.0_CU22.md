@@ -377,3 +377,9 @@ DataMiner Cube would leak memory
 
 - when you closed an alarm tab containing correlated alarms, or
 - when you closed a card (e.g. an element card) after navigating to it by clicking *Previous* on another card.
+
+#### DataMiner Cube would incorrect show 'Could not connect to the DataMiner Agent' instead of 'This Dataminer Agent is not running' [ID_38212]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
+
+When Cube connected to a DataMiner Agent that had APIGateway running as a process but did not have SLNet running, it would incorrectly show a `Could not connect to the DataMiner Agent` error instead of `This Dataminer Agent is not running`.
