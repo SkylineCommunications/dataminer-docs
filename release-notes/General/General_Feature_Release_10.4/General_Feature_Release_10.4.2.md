@@ -496,6 +496,14 @@ When you ran the BPA test 'Check Cluster SLNet Connections', this failed with th
 
 From now on, this test will be run daily on every Agent in a DataMiner System.
 
+#### SLAnalytics - Automatic incident tracking: Problem after clearing or removing an alarm [ID_38239]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+When an alarm had been cleared or removed, in some cases, the automatic incident tracking feature could incorrectly assume that no more alarms were associated with the parameter in question. As a result, alarms could get grouped incorrectly or error messages similar to the following one could start to appear:
+
+`Parameter key [PARAMETER_KEY] was not in parameterKeyConverter, while it should have been.`
+
 #### SLAnalytics could stop working when it lost its connection to SLNet during start-up [ID_38268]
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->

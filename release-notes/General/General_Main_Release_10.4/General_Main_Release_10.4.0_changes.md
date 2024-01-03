@@ -1115,3 +1115,11 @@ When a DataMiner Agent had the APIGateway service running but not the SLNet proc
 - No exception would be thrown when a client application sent a message via one of the gRPC connections that was still open. Instead, an empty response was returned. As a result, client applications would not notice that there was a problem.
 
 - When an attempt was made to establish a new gRPC connection, an `Invalid username or password` would be returned instead of a `DataMinerNotRunningException`.
+
+#### SLAnalytics - Automatic incident tracking: Problem after clearing or removing an alarm [ID_38239]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+When an alarm had been cleared or removed, in some cases, the automatic incident tracking feature could incorrectly assume that no more alarms were associated with the parameter in question. As a result, alarms could get grouped incorrectly or error messages similar to the following one could start to appear:
+
+`Parameter key [PARAMETER_KEY] was not in parameterKeyConverter, while it should have been.`
