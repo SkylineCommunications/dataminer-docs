@@ -213,3 +213,9 @@ In some cases, SLAnalytics could partially get stuck when the trend icon calcula
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
 
 After a Failover switch, in some cases, DVE elements or virtual function elements would not be loaded correctly. Also, new DVE elements would incorrectly not appear in the Surveyor when they were created while their parent element was hosted on the Failover setup that had switched.
+
+#### SLAnalytics could stop working when it lost its connection to SLNet during start-up [ID_38268]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+Up to now, when SLAnalytics lost its connection to SLNet at a particular moment during start-up, it would stop working because it was not able to reach the database. From now on, when SLAnalytics loses its connection to SLNet at that particular moment during start-up, it will continue working and will try to connect to the database again as soon as its connection to SLNet has been re-established.

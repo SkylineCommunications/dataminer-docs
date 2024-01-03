@@ -495,3 +495,9 @@ When a DataMiner Agent had the APIGateway service running but not the SLNet proc
 When you ran the BPA test 'Check Cluster SLNet Connections', this failed with the exception message `BPA doesn’t have a valid signature`. The BPA has now been signed correctly, so this issue will no longer occur.
 
 From now on, this test will be run daily on every Agent in a DataMiner System.
+
+#### SLAnalytics could stop working when it lost its connection to SLNet during start-up [ID_38268]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+Up to now, when SLAnalytics lost its connection to SLNet at a particular moment during start-up, it would stop working because it was not able to reach the database. From now on, when SLAnalytics loses its connection to SLNet at that particular moment during start-up, it will continue working and will try to connect to the database again as soon as its connection to SLNet has been re-established.
