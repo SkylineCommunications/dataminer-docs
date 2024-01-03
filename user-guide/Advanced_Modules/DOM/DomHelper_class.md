@@ -68,7 +68,7 @@ For example, to create or update multiple `DomInstances`:
 var createResult = helper.DomInstances.CreateOrUpdate(domInstances);
 ```
 
-*CreateOrUpdate* will consider `DomInstances` that are stored already as `DomInstances` that need an update. The remaining `DomInstances` will be created. A mix of both is allowed.
+*CreateOrUpdate* will consider the provided `DomInstances` that already exist as updates, the other `DomInstances` will be created. It is supported to provide a mix of both.
 
 > [!TIP]
 > For more information and best practices for using these calls, see [Processing multiple DomInstances — examples](xref:DOM_BulkProcessing_Example).
