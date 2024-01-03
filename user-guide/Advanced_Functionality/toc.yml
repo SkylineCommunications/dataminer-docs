@@ -51,6 +51,8 @@ items:
             topicUid: Restoring_the_DMA_configuration_only
           - name: Restoring the database only
             topicUid: Restoring_the_database_only
+          - name: Maintaining the dataminer.services connection when restoring a DMA
+            topicUid: Maintaining_cloud_connection_when_restoring
           - name: Starting a restored DataMiner Agent in a cluster
             topicUid: Starting_a_restored_DataMiner_Agent_in_a_cluster
       - name: Upgrading a DataMiner Agent
@@ -85,8 +87,6 @@ items:
             topicUid: Checking_the_upgrade_history_of_a_DataMiner_Agent
           - name: Configuring the default upgrade options
             topicUid: Configuring_the_default_upgrade_options
-      - name: Migrating a DataMiner Agent to a new server
-        topicUid: Migrating_a_DMA_to_a_new_server
       - name: Health assessment guidelines for DataMiner Agents
         topicUid: Health_Assessment_Guidelines_for_DataMiner_Agent
       - name: Uninstalling a DataMiner Agent
