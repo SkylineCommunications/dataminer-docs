@@ -51,6 +51,8 @@ In general, the more active you are in the DataMiner Dojo community and the more
   > [!TIP]
   > Not really sure how to get started? Take a look at our [use case template](https://community.dataminer.services/download/use-case-template/)!
 
+- **Submitting a solution**: You can choose to submit a [solution](https://community.dataminer.services/solutions/) for the community, and upon acceptance, this will result in 250 up to 2500 points. DataMiner solutions are designed to resolve specific technological problems or challenges, such as orchestrating and providing end-to-end monitoring of [Digital Terrestrial Television (DTT) operations](https://community.dataminer.services/solution/digital-terrestrial-television-dtt/) across diverse networks and technologies.
+
 - **Submitting feedback**: Your feedback is valuable. You will receive DevOps Points per submission of feedback via <https://aka.dataminer.services/Feedback/>. Each submission of feedback will result in 50 DevOps Points (limited to a maximum of 100 points per month).
 
 - **Being an advocate for the DataMiner brand**: Being an advocate is also part of the culture of being a DataMiner DevOps Professional. That's why you can earn 250 points simply by adding your DataMiner DevOps level to your LinkedIn headline. Once you've updated your LinkedIn profile, you can send an email to [devops@skyline.be](mailto:devops@skyline.be) with the link to your profile page and we will get you your points! If DataMiner is mentioned in the job title in your email signature, we will hit you up with another 250 points per year. Each LinkedIn post that mentions @skyline and uses the tag #dataminerdevops will automatically result in 50 points per post.
