@@ -81,6 +81,8 @@ There are also special types of `FieldDescriptors` that are purpose-made to stor
 >
 > Using `FieldDescriptors` that have the same ID in multiple `SectionDefinitions` might result in inconsistent behavior. When a `FieldDescriptor` with the same ID is used in a name definition, the name of the `DomInstance` might differ depending on the first section available in the `DomInstance` that has a value assigned for the `FieldDescriptor` with that ID. During the validation of changes to the `FieldDescriptor`, this might result in DataMiner incorrectly detecting that a `FieldDescriptor` is no longer in use, which may cause the removal of a descriptor that is actually still in use.
 
+### List FieldValues
+
 > [!NOTE]
 > Depending on the DataMiner version, the following `FieldDescriptors` can have **multiple values**:
 >
@@ -118,6 +120,9 @@ There are also special types of `FieldDescriptors` that are purpose-made to stor
 >   var values = new List<Guid> { Guid.NewGuid(), Guid.NewGuid() };
 >   domInstance.AddOrUpdateListFieldValue(sectionDefinition, fieldDescriptor, values);
 >   ```
+>
+>From DataMiner 10.4.2/10.5.0 onwards, it is not possible anymore to pass empty lists as value for a `FieldDescriptor` that allows multiple values, if that field is required. A `FieldDescriptor` that is not required will still allow empty lists as value, but note that it is best practice to not pass values for `FieldDescriptors` if the value is empty or an empty list.
+>
 
 ## CustomSectionDefinition properties
 
