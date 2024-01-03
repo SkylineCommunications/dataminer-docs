@@ -4,7 +4,7 @@ uid: Uninstalling_Elasticsearch_from_a_DMA
 
 # Uninstalling Elasticsearch from a DMA
 
-If you have [installed Elasticsearch on a DMA via DataMiner](xref:Installing_Elasticsearch_via_DataMiner), you can uninstall it as detailed below.
+If you have a setup with [storage per DMA](xref:Configuring_storage_per_DMA) and you have [installed Elasticsearch on a DMA via DataMiner](xref:Installing_Elasticsearch_via_DataMiner), you can uninstall it as detailed below.
 
 > [!WARNING]
 > This procedure requires expert knowledge, and it can have far-reaching consequences for your DataMiner System, including loss of data. Contact a Skyline DevOps Engineer if you are unsure about any of the steps.

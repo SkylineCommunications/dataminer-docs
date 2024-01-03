@@ -353,7 +353,8 @@ opensearch.password: pwd
 
 ## Connecting your DMS to an OpenSearch cluster
 
-To configure the connection to an OpenSearch database, configure the settings as detailed under [Cassandra database](xref:Configuring_the_database_settings_in_Cube#cassandra-database).
+To configure the connection to an OpenSearch database:
 
-> [!IMPORTANT]
-> An OpenSearch database requires a separate Cassandra cluster or Amazon Keyspaces.
+- If you are using a dedicated clustered storage setup, configure the settings as detailed under [Cassandra database](xref:Configuring_the_database_settings_in_Cube#cassandra-database).
+
+- If you are using a setup with storage per DMA, [manually connect your DMS to the OpenSearch database](xref:Manually_Connecting_DMA_to_Elasticsearch_Cluster)

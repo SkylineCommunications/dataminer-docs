@@ -8,7 +8,7 @@ If you do not use the recommended [Storage as a Service (STaaS)](xref:STaaS) set
 
 - One **Cassandra cluster** for the entire DataMiner System (DMS). Unlike setups with a Cassandra cluster per individual DataMiner Agent (DMA), this allows the database to be scaled for the entire DMS at once.
 
-- One **OpenSearch cluster** for the entire DMS. While an **Elasticsearch** cluster can also be used, Elasticsearch is only supported up to version 6.8, so this is not recommended.
+- One **OpenSearch cluster** for the entire DMS. While an **Elasticsearch** cluster can also be used, Elasticsearch is only supported up to version 6.8. As this version is no longer supported by Elastic, this is not recommended.
 
 > [!TIP]
 > For information on how to implement a setup like this based on an existing DataMiner setup with SQL or Cassandra databases per DMA, see [Migrating the general database to a DMS Cassandra cluster](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster)
@@ -24,17 +24,17 @@ We recommend running DataMiner, Cassandra, and OpenSearch on **dedicated machine
 
 An on-premises **OpenSearch** cluster should consist of **at least 3 nodes**, running on **Linux** machines. While it is possible to use one single OpenSearch node, this means you will miss out on the replication features.
 
-Instead of OpenSearch, you can also use **Elasticsearch**, which is similar but also supports Windows. However, Elasticsearch is only supported up to version 6.8, so this is **not recommended**.
+Instead of OpenSearch, you can also use **Elasticsearch**. However, Elasticsearch is only supported up to version 6.8, so this is **not recommended**.
 
 For a **Cassandra** cluster, any number of nodes can be used, ideally running on **Linux** machines. To get an idea of how many nodes would be required for your system, use the [**node calculator**](https://community.dataminer.services/calculator/).
 
 ![Recommended setup: DataMiner, Cassandra, and OpenSearch hosted on dedicated machines](~/user-guide/images/Recommended-Setup-1.png)<br>
 *Recommended on-premises setup: DataMiner, Cassandra, and OpenSearch hosted on dedicated machines*
 
-In a development environment with **limited load**, it is possible to host DataMiner, Cassandra, and Elasticsearch on **one Windows machine**. In this case, Elasticsearch and DataMiner must be installed on a separate disk or partition. However, note that this is not recommended for normal production environments.
+In a development environment with **limited load**, it is possible to host DataMiner, Cassandra, and OpenSearch on **one Windows machine**. In this case, OpenSearch and DataMiner must be installed on a separate disk or partition. However, note that this is not recommended for normal production environments.
 
-![Development setup: DataMiner, Cassandra, and Elasticsearch hosted on the same machine](~/user-guide/images/Development-setup-DataMiner-Cassandra-and-Elasticsearch.png)<br>
-*Development setup: DataMiner, Cassandra, and Elasticsearch hosted on the same machine*
+![Development setup: DataMiner, Cassandra, and OpenSearch hosted on the same machine](~/user-guide/images/Development-setup-DataMiner-Cassandra-and-OpenSearch.png)<br>
+*Development setup: DataMiner, Cassandra, and OpenSearch hosted on the same machine*
 
 ## Multiple DMA (non-Failover) setups
 
@@ -42,15 +42,15 @@ In case you have more than one DataMiner Agent, you can scale both on DataMiner 
 
 An **OpenSearch** cluster should ideally consist of **at least 3 nodes**, running on **Linux** machines. While it is possible to use one single OpenSearch node, this means you will miss out on the replication features. Running two nodes is not supported.
 
-Instead of OpenSearch, you can also use **Elasticsearch**, which is similar but also supports Windows. However, Elasticsearch is only supported up to version 6.8, so this is **not recommended**. It is also possible to host a DataMiner and Elasticsearch node on the same machine. In this case, Elasticsearch and DataMiner must be installed on a separate disk or partition. Note that in that case it is not required to install an Elasticsearch node on every single DataMiner node. While compute resources can be shared, logically there still is a separate DataMiner node cluster and Elasticsearch cluster.
+Instead of OpenSearch, you can also use **Elasticsearch**. However, Elasticsearch is only supported up to version 6.8, so this is **not recommended**. It is also possible to host a DataMiner and Elasticsearch node on the same machine. In this case, Elasticsearch and DataMiner must be installed on a separate disk or partition. Note that in that case it is not required to install an Elasticsearch node on every single DataMiner node. While compute resources can be shared, logically there still is a separate DataMiner node cluster and Elasticsearch cluster.
 
 For **Cassandra**, any number of nodes can be used, ideally running on **Linux** machines. To get an idea of how many nodes would be required for your system, use the [**node calculator**](https://community.dataminer.services/calculator/).
 
 ![Recommended setup: DataMiner, Cassandra, and OpenSearch hosted on dedicated machines, with a minimum of three OpenSearch nodes](~/user-guide/images/Recommended-Setup-2.png)<br>
 *Recommended on-premises setup: DataMiner, Cassandra, and OpenSearch hosted on dedicated machines, with a minimum of three OpenSearch nodes*
 
-![Setup with Elasticsearch and DataMiner sharing resources](~/user-guide/images/Elasticsearch-DataMiner-sharing-resources.png)<br>
-*Setup with Elasticsearch and DataMiner sharing resources*
+![Setup with OpenSearch and DataMiner sharing resources](~/user-guide/images/OpenSearch-DataMiner-sharing-resources.png)<br>
+*Setup with OpenSearch and DataMiner sharing resources*
 
 ![Two DMAs using a single Cassandra and OpenSearch node running on dedicated machines](~/user-guide/images/Single-Cassandra-and-OpenSearch-node.png)<br>
 *Two DMAs using a single Cassandra and OpenSearch node running on dedicated machines*

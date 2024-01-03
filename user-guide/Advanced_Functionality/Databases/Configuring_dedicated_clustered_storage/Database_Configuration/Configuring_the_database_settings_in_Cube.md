@@ -56,6 +56,9 @@ For a Cassandra cluster database (i.e. one Cassandra cluster that is used as the
 
      ![Cube Cassandra Cluster Configuration](~/user-guide/images/CassandraCluster_CubeConfiguration.png)
 
+   > [!TIP]
+   > See also: [Configuring an indexing database](xref:Indexing_Database)
+
 <!--1. From DataMiner 10.3.10/10.4.0 onwards (RN 36399 - reverted in RN 37322), you can enable TLS by selecting the checkbox next to *TLS enabled*.
 
    ![Cube Cassandra Cluster Configuration](~/user-guide/images/CassandraCluster_CubeConfig.png)<br>*DataMiner 10.3.10 example configuration*-->
@@ -114,6 +117,9 @@ To configure the connection to an [Amazon Keyspaces database](xref:Amazon_Keyspa
 
 > [!NOTE]
 > Ensure your server version is compatible with OpenSearch. Cube will display `Elasticsearch/OpenSearch` instead of `Elasticsearch` if your server is compatible (i.e. running DataMiner 10.3.0/10.3.3 or higher).
+
+> [!TIP]
+> See also: [Amazon OpenSearch Service](xref:Amazon_OpenSearch_Service)
 
 1. In DataMiner Cube, go to *System Center* > *Database*.
 
