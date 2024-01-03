@@ -21,12 +21,12 @@ If you use self-hosted DataMiner storage instead of the recommended [Storage as 
 
    - There is a default firewall on Linux, but this is disabled by default. To enable the firewall, use the following command:
 
-     `$ sudo ufw enable`
+     `$ sudo ufw allow 22/tcp && sudo ufw enable`
 
      > [!IMPORTANT]
-     > If you connect to your Linux server with SSH, you must immediately exclude port 22 or you will be locked out of the session.
      >
-     > For this, use the following command: `$ sudo ufw allow 22/tcp`
+     > The first part of the command above ensures the TCP port 22 used for SSH connections remains open when the firewall is enabled.
+     > Enabling the firewall without defining the rule for incoming SSH connections may result in loss of connectivity to the server.
 
    - To add the correct ports to the firewall, you can for example use the following commands:
 
