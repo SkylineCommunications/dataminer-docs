@@ -478,6 +478,16 @@ When, while an extensive correlation rule action was running, you opened an elem
 
 After a Failover switch, in some cases, DVE elements or virtual function elements would not be loaded correctly. Also, new DVE elements would incorrectly not appear in the Surveyor when they were created while their parent element was hosted on the Failover setup that had switched.
 
+#### Problems with gRPC connections when SLNet was not running [ID_38177]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+When a DataMiner Agent had the APIGateway service running but not the SLNet process (e.g. a DataMiner Agent that had been fully stopped), the following issues would occur:
+
+- No exception would be thrown when a client application sent a message via one of the gRPC connections that was still open. Instead, an empty response was returned. As a result, client applications would not notice that there was a problem.
+
+- When an attempt was made to establish a new gRPC connection, an `Invalid username or password` would be returned instead of a `DataMinerNotRunningException`.
+
 #### BPA test 'Check Cluster SLNet Connections' did not have valid signature [ID_38201] [ID_38208]
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->

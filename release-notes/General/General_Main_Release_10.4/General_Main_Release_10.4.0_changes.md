@@ -1105,3 +1105,13 @@ In some rare cases, a database write operation could incorrectly remain stuck in
 <!-- MR 10.4.0 - FR 10.4.2 -->
 
 When, while an extensive correlation rule action was running, you opened an element card of an element hosted on a DataMiner Agent other than the one you were connected to, loading the data of that element could get delayed until the correlation rule action had finished.
+
+#### Problems with gRPC connections when SLNet was not running [ID_38177]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+When a DataMiner Agent had the APIGateway service running but not the SLNet process (e.g. a DataMiner Agent that had been fully stopped), the following issues would occur:
+
+- No exception would be thrown when a client application sent a message via one of the gRPC connections that was still open. Instead, an empty response was returned. As a result, client applications would not notice that there was a problem.
+
+- When an attempt was made to establish a new gRPC connection, an `Invalid username or password` would be returned instead of a `DataMinerNotRunningException`.
