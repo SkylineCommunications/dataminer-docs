@@ -24,9 +24,7 @@ If you use self-hosted DataMiner storage instead of the recommended [Storage as 
      `$ sudo ufw allow 22/tcp && sudo ufw enable`
 
      > [!IMPORTANT]
-     >
-     > The first part of the command above ensures the TCP port 22 used for SSH connections remains open when the firewall is enabled.
-     > Enabling the firewall without defining the rule for incoming SSH connections may result in loss of connectivity to the server.
+     > The first part of the command above ensures that the TCP port 22 used for SSH connections remains open when the firewall is enabled. Enabling the firewall without defining the rule for incoming SSH connections may result in loss of connectivity to the server.
 
    - To add the correct ports to the firewall, you can for example use the following commands:
 
