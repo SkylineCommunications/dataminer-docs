@@ -19,7 +19,7 @@ An indexing database is required for many DataMiner features, including:
 - [Specific GQI data sources](xref:Query_data_sources)
 
 > [!IMPORTANT]
-> Elasticsearch is only supported up to version 6.8. As such, we recommend using OpenSearch instead.
+> Elasticsearch is only supported up to version 6.8. As this version is no longer supported by Elastic, we recommend using OpenSearch instead.
 
 > [!NOTE]
 > For information on the system requirements for OpenSearch/Elasticsearch, refer to [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements).

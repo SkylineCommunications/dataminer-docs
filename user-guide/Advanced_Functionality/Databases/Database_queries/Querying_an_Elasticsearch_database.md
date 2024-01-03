@@ -13,7 +13,7 @@ Kibana is a browser-based tool that allows you to connect to and query an Elasti
 In case you suspect there are problems with an Elasticsearch database used by DataMiner, it can be useful to connect to the database and query it. This can for instance be useful when the SLDataGateway process shows high CPU usage, when there is a lot of Elasticsearch communication in the network (visible in WireShark), when Elasticsearch uses too many system resources, or when the SRM features in DataMiner seem to respond very slowly.
 
 > [!NOTE]
-> DataMiner only supports Elasticsearch up to version 6.8. We therefore recommend using [DataMiner Storage as a Service](xref:STaaS) instead, or if you want to continue using self-hosted storage, using [dedicated clustered storage](xref:Dedicated_clustered_storage) with OpenSearch.
+> DataMiner only supports Elasticsearch up to version 6.8. As this version is no longer supported by Elastic, we recommend using [DataMiner Storage as a Service](xref:STaaS) instead, or if you want to continue using self-hosted storage, using OpenSearch.
 
 > [!WARNING]
 > Before you perform queries directly on the database, always check with Skyline Communications first, as performing certain queries can have far-reaching consequences on the functionality of your DataMiner System.

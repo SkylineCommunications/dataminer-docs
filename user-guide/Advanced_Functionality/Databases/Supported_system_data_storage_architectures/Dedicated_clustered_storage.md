@@ -8,7 +8,7 @@ If you do not use the recommended [Storage as a Service (STaaS)](xref:STaaS) set
 
 - One **Cassandra cluster** for the entire DataMiner System (DMS). Unlike setups with a Cassandra cluster per individual DataMiner Agent (DMA), this allows the database to be scaled for the entire DMS at once.
 
-- One **OpenSearch cluster** for the entire DMS. While an **Elasticsearch** cluster can also be used, Elasticsearch is only supported up to version 6.8, so this is not recommended.
+- One **OpenSearch cluster** for the entire DMS. While an **Elasticsearch** cluster can also be used, Elasticsearch is only supported up to version 6.8. As this version is no longer supported by Elastic, this is not recommended.
 
 > [!TIP]
 > For information on how to implement a setup like this based on an existing DataMiner setup with SQL or Cassandra databases per DMA, see [Migrating the general database to a DMS Cassandra cluster](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster)

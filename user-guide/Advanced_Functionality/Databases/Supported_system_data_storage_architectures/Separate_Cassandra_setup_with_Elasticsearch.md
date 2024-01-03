@@ -7,7 +7,7 @@ uid: Separate_Cassandra_setup_with_Elasticsearch
 > [!IMPORTANT]
 > This architecture is currently still supported, but it is **not recommended**. Instead, we recommend using [Storage as a Service (STaaS)](xref:STaaS).
 >
-> Elasticsearch is only supported up to version 6.8. We recommend using OpenSearch instead.
+> Elasticsearch is only supported up to version 6.8. As this version is no longer supported by Elastic, we recommend using OpenSearch instead.
 
 With this architecture, **each DMA has its own Cassandra database** (which can be a cluster with several nodes). However, only one OpenSearch/Elasticsearch cluster is used for the entire DMS.
 
