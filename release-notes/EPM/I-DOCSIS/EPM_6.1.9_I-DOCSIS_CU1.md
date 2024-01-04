@@ -20,6 +20,15 @@ To streamline the way DOCSIS version information is displayed, a number of chang
 
 In the dashboard *05. CM OFDM Channels*, the Start and Stop Frequency parameters are now displayed in the table *OFDM Channels*. These are retrieved from the CCAP. Previously, these parameters were not available in this dashboard.
 
+#### EPM_I_DOCSIS_AddNewCcapCmPair script updated [ID_38326]
+
+The script *EPM_I_DOCSIS_AddNewCcapCmPair*, which is used to create a new CCAP/CM pair, has been updated as follows:
+
+- Users can now create elements by selecting the host instead of the back-end elements.
+- The path of the CCAP is now the same as the selected host, instead of the name of the element pointing to the EPM SOLUTION folder.
+- Custom properties are now updated through the script and take the values of the views in which the element was created.
+- The script now supports the set and get community string for the collector and the CCAP, instead of only the set community string.
+
 ## Fixes
 
 #### CISCO CBR-8 CCAP Platform: DS port not found for some QAM Channels [ID_38044]
