@@ -6,6 +6,16 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 4 January 2024 - Chat Integration with Microsoft Teams now includes sending notification using Adaptive Cards [ID_35983]
+
+From now onwards, notifications using Adaptive Cards can be sent to Chats or Channels with Chat Integration.
+
+In an Automation script, you can use [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) to easily interact with Microsoft Teams.
+
+To get started, you can find several example Automation scripts with more information on [GitHub](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples).
+
+After you have made sure that the [prerequisites](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples/README.md#usage) are in place, you can deploy [the Chat Integration examples](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples/README.md#getting-started) to your DataMiner System and immediately try out these examples.
+
 #### 20 December 2023 - Enhancement - SupportAssistant 1.6.1 - Additional data offloaded for proactive monitoring [ID_38250]
 
 From now onwards, additional data like soft-launch options, installed solutions, manager configurations, and BPA test results will also be offloaded for proactive monitoring via CDMR.
