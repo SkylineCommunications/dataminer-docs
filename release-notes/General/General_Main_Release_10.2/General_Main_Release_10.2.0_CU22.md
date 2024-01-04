@@ -378,6 +378,12 @@ DataMiner Cube would leak memory
 - when you closed an alarm tab containing correlated alarms, or
 - when you closed a card (e.g. an element card) after navigating to it by clicking *Previous* on another card.
 
+#### DataMiner Cube - Visual Overview: Unexpected behavior when locale was set to Turkish [ID_38140]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
+
+When the locale of the client machine was set to Turkish, visual overviews could manifest unexpected behavior due to names of shape data items being transformed incorrectly. These transformations will now be done culture independently.
+
 #### DataMiner Cube would incorrect show 'Could not connect to the DataMiner Agent' instead of 'This Dataminer Agent is not running' [ID_38212]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
