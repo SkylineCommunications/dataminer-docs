@@ -260,6 +260,14 @@ When you refreshed a dashboard that contained a *Parameter table* component, the
 
 When you saved a template with conditional cases that contained "<=" operators, those operators would incorrectly be changed to "=" operators.
 
+#### Dashboards app - 'Column & bar chart' and 'Pie & donut chart' components: Problem when deleting the query of which the data is being displayed [ID_38314]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+When you add multiple queries to a *Column & bar chart* or *Pie & donut chart* component, only the data retrieved by the first one added will be displayed. Up to now, when you deleted the query of which the data was displayed, the component would malfunction until the page was reloaded.
+
+From now on, when you delete the query of which the data is being displayed, the component will automatically switch to the second query added and display the data retrieved by that one.
+
 #### Dashboards app: Unnecessary component properties would be saved in a dashboard configuration [ID_38315]
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
