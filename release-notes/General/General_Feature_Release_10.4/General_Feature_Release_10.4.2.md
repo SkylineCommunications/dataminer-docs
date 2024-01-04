@@ -522,3 +522,9 @@ When an alarm had been cleared or removed, in some cases, the automatic incident
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
 
 Up to now, when SLAnalytics lost its connection to SLNet at a particular moment during start-up, it would stop working because it was not able to reach the database. From now on, when SLAnalytics loses its connection to SLNet at that particular moment during start-up, it will continue working and will try to connect to the database again as soon as its connection to SLNet has been re-established.
+
+#### Correlation alarms with incorrect severity after a DataMiner restart [ID_38286]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+After a DataMiner restart, in some cases, correlation alarms would have an incorrect severity.
