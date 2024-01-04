@@ -222,6 +222,12 @@ From now on
 - an "error 403" page will appear when you are not allowed to open the app in question, and
 - an "error 404" page will appear when the app in question cannot be found.
 
+#### Low-Code Apps - Visual Overview: Problem when opening a popup window from within another popup window [ID_38265]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+When, in a visual overview inside a low-code app, you opened a popup window from within another popup window, it would not be opened correctly.
+
 #### Dashboards app & Low-Code Apps: Chart components no longer showed any data after switching to another visualization and back [ID_38269]
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
