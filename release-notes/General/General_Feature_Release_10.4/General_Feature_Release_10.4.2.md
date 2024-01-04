@@ -594,6 +594,12 @@ When an alarm had been cleared or removed, in some cases, the automatic incident
 
 When, while automatic incident tracking was running, you manually created an incident (i.e. an alarm group) containing non-active alarms, an empty alarm group would be created.
 
+#### Service & Resource Management: Incorrect trace data would be returned after performing a create, update or delete action using the ServiceManagerHelper [ID_38262]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+When you retrieved the trace data after performing a create, update or delete action using the ServiceManagerHelper, in some cases, an error could be returned although the action that was performed had succeeded.
+
 #### SLAnalytics could stop working when it lost its connection to SLNet during start-up [ID_38268]
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
