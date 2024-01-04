@@ -109,3 +109,9 @@ When you started a migrating from a MySQL database to a Cassandra database, an e
 <!-- MR 10.5.0 - FR 10.4.2 -->
 
 Resources would not always be released correctly, causing some resources to be used for longer than strictly necessary.
+
+#### SLReset: Problem when cleaning a Cassandra database [ID_38332]
+
+<!-- MR 10.5.0 - FR 10.4.2 -->
+
+When cleaning (i.e. resetting) a Cassandra database, in some cases, a `TypeInitializationException` could be thrown.

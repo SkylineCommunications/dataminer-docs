@@ -611,3 +611,9 @@ Up to now, when SLAnalytics lost its connection to SLNet at a particular moment 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
 
 After a DataMiner restart, in some cases, correlation alarms would have an incorrect severity.
+
+#### SLReset: Problem when cleaning a Cassandra database [ID_38332]
+
+<!-- MR 10.5.0 - FR 10.4.2 -->
+
+When cleaning (i.e. resetting) a Cassandra database, in some cases, a `TypeInitializationException` could be thrown.
