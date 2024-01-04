@@ -354,6 +354,8 @@ items:
                 topicUid: Tutorial_Apps_Style_A_Table
               - name: Using the maps component in a low-code app
                 topicUid: TutorialMaps
+              - name: Getting started with the Grid component
+                topicUid: Tutorial_Apps_Grid
       - name: Configuring components
         topicUid: Configuring_components
         items:
