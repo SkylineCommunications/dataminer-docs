@@ -831,3 +831,11 @@ When, in the Correlation app, you opened the connectivity editor and loaded the 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
 
 When the *LegacyReportsAndDashboards* soft-launch option was disabled, DataMiner Cube will incorrectly still show the *Add to dashboard...* menu option when you right-clicked a parameter, an element or a service.
+
+#### System center: Description of 'Log file size' setting was incorrect [ID_38330]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
+
+In System Center, you can go to *System settings > Logging* to change the log file size.
+
+Up to now, the description of this setting mentioned that the setting applied to the DataMiner Agent to which you were connected. It will now mention that the setting applies to the entire DataMiner System.
