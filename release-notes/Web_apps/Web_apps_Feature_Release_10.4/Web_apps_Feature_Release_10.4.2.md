@@ -259,3 +259,9 @@ When you refreshed a dashboard that contained a *Parameter table* component, the
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
 
 When you saved a template with conditional cases that contained "<=" operators, those operators would incorrectly be changed to "=" operators.
+
+#### Dashboards app: Unnecessary component properties would be saved in a dashboard configuration [ID_38315]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+In some cases, unnecessary component properties would be saved in a dashboard configuration.
