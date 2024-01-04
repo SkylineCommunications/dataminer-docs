@@ -6,7 +6,7 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
-#### 4 January 2024 - Chat Integration with Microsoft Teams now includes sending notification using Adaptive Cards [ID_35983]
+#### 4 January 2024 - Chat Integration with Microsoft Teams now includes sending notification using Adaptive Cards [ID_38339]
 
 From now onwards, notifications using Adaptive Cards can be sent to Chats or Channels with Chat Integration.
 
