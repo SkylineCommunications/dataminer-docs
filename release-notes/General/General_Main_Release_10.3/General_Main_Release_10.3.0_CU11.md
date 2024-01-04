@@ -214,6 +214,12 @@ In some cases, SLAnalytics could partially get stuck when the trend icon calcula
 
 After a Failover switch, in some cases, DVE elements or virtual function elements would not be loaded correctly. Also, new DVE elements would incorrectly not appear in the Surveyor when they were created while their parent element was hosted on the Failover setup that had switched.
 
+#### Service & Resource Management: Incorrect trace data would be returned after performing a create, update or delete action using the ServiceManagerHelper [ID_38262]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+When you retrieved the trace data after performing a create, update or delete action using the ServiceManagerHelper, in some cases, an error could be returned although the action that was performed had succeeded.
+
 #### SLAnalytics could stop working when it lost its connection to SLNet during start-up [ID_38268]
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
