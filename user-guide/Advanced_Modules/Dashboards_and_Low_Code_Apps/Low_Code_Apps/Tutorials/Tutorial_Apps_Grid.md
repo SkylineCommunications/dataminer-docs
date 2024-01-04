@@ -16,29 +16,31 @@ Expected duration: 5 minutes.
 
 ## Prerequisites
 
-- DataMiner 10.4.1/10.5.0 or higher.
+- A DataMiner System using DataMiner 10.4.1 or higher.
 - The [Style a table](xref:Tutorial_Apps_Style_A_Table) tutorial has been completed.
 
 ## Overview
 
-- [Step 1: Configure the query](#step-1-configure-the-query)
+- [Step 1: Create a query](#step-1-create-a-query)
 
 - [Step 2: Add a grid component](#step-2-add-a-grid-component)
 
-- [Step 3: Style the blocks](#step-3-style-the-blocks)
+- [Step 3: Style the grid blocks](#step-3-style-the-blocks)
 
 - [Step 4: Tweak the grid layout](#step-4-tweak-the-grid-layout)
 
-## Step 1: Configure the query
+## Step 1: Create a query
 
 You can now create the query using the *Orders.json* file as the data source.
 
 > [!NOTE]
-> The *Orders.json* file should have been created while following the [Style a table](xref:Tutorial_Apps_Style_A_Table) tutorial.
+> The *Orders.json* file should have been created while following the [Style a table](xref:Tutorial_Apps_Style_A_Table#step-1-configure-the-query) tutorial.
 
 1. Create a new low-code app. See [Creating low-code applications](xref:Creating_custom_apps).
 
-1. In the data pane, select *Queries* and click the + icon to add a new query.
+1. Select *Queries* in the data pane.
+
+1. Click the + icon to add a new query.
 
 1. Provide the necessary information:
 
@@ -58,22 +60,22 @@ You can now create the query using the *Orders.json* file as the data source.
 
 1. Hover the mouse pointer over the component and click the ![Visualizations](~/user-guide/images/DashboardsX_visualizations00095.png) icon.
 
-1. Choose the [grid](xref:DashboardGrid) visualization. The grid will be populated with a block for each order in the orders dataset.
+1. Choose the [grid](xref:DashboardGrid) visualization. The grid will be populated with a block for every order in the orders dataset.
 
-   ![Default unstyled grid](~/user-guide/images/DefaultGrid.png)
+   ![Default grid](~/user-guide/images/DefaultGrid.png)
 
 ## Step 3: Style the blocks
 
-The default grid blocks look quite boring and do not provide a lot of information, let's change that!
+The default grid blocks look quite basic and do not provide a lot of information, let's change that!
 
 > [!NOTE]
-> Learn more about the Template editor: [Using the Template Editor](xref:Template_Editor)
+> Learn more about the Template Editor: [Using the Template Editor](xref:Template_Editor)
 
 1. Make sure the grid component is selected, and navigate to *Layout > Item templates*.
 
-1. Click *Edit* to open the Template editor.
+1. Click *Edit* to open the Template Editor.
 
-1. After some styling our grid looks something like this.
+1. Use the Template Editor to apply some styles to the grid blocks.
 
    ![Styled grid](~/user-guide/images/StyledGrid.png) 
 
@@ -83,14 +85,14 @@ Let's change the way the blocks are positioned. We would like to show one row of
 
 1. Make sure the grid component is selected, and navigate to *Layout > Advanced*.
 
-1. Under *Grid template* the way the grid blocks are positioned can be changed.
+1. Locate the *Grid template* section. There you can change the way the grid blocks are positioned.
 
-1. Let's set the amount of columns to 4 and make sure *Scaling* is applied.
+1. Set the number of columns to 4 and ensure that *Scaling* is applied.
 
-1. The same can be done for the rows, let's go for 1 row and *Scaling*.
+1. Similarly, for the rows, opt for 1 row and apply *Scaling*.
 
     ![Grid settings](~/user-guide/images/GridSettings.png)
 
-1. Applying these settings will make sure our grid has 4 columns, 1 row and a button to navigate to the next items.  
+Applying these settings will make sure our grid has 4 columns, 1 row and a button to navigate to the next items.
 
-    ![Grid settings](~/user-guide/images/FinishedGrid.png)
+![Finished grid](~/user-guide/images/FinishedGrid.png)
