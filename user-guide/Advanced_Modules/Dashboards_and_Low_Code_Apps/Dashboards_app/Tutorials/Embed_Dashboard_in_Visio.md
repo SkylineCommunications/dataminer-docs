@@ -48,7 +48,7 @@ The tutorial consists of the following steps:
 
     ![Dynamic Dashboard](~/user-guide/images/Dashboards_Tutorial_EmbedInVisio_CreateDashboard.png)
 
-1. Copy the URL with the Embed Query Parameter & use uncompressed URL parameters checked. (ref. [Sharing a dashboard](xref:Sharing_a_dashboard#Sharing-a-dashboard-URL)).
+1. Copy the URL with the Embed Query Parameter & use uncompressed URL parameters checked. (ref. [Sharing a dashboard](xref:Sharing_a_dashboard#sharing-a-dashboard-url)).
 
     <code>https://localhost/dashboard/#/db/Generic%20Dummy.dmadb?<span style="background-color: #FFFF00">data=%7B%22version%22:1,%22feed%22:null,%22components%22:%5B%7B%22cid%22:2,%22select%22:%7B%22elements%22:%5B%22172%2F82%22%5D%7D%7D,%7B%22cid%22:1,%22select%22:%7B%22elements%22:%5B%22172%2F82%22%5D%7D%7D%5D,%22feedAndSelect%22:%7B%7D%7D&embed=true</span></code>
 
