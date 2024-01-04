@@ -181,7 +181,7 @@ protocol.FillArrayNoDelete(int tableId, object[] columns, DateTime? timeInfo, bo
 protocol.FillArrayNoDelete(int tableId, object[] columns, bool useClearAndLeave)
 protocol.FillArrayNoDelete(int tableId, List<object[]> columns, DateTime? timeInfo, bool useClearAndLeave)
 protocol.FillArrayNoDelete(int tableId, List<object[]> columns, bool useClearAndLeave)
-protocol.FillArrayWithColumn(int tableId, int columnPid, object[] keys, object[] values, DateTime. timeInfo, bool useClearAndLeave)
+protocol.FillArrayWithColumn(int tableId, int columnPid, object[] keys, object[] values, DateTime? timeInfo, bool useClearAndLeave)
 protocol.FillArrayWithColumn(int tableId, int columnPid, object[] keys, object[] values, bool useClearAndLeave)
 ```
 
