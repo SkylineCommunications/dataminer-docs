@@ -2,7 +2,7 @@
 uid: Tutorial_Dashboards_Displaying_a_custom_empty_component_message
 ---
 
-# Displaying a custom empty component message
+# Tutorial: Displaying a custom empty component message
 
 This tutorial demonstrates how to add a custom message when a query returns no results for any of the following components of a dashboard:
 
