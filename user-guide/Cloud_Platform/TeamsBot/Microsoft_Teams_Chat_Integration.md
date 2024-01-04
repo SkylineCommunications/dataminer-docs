@@ -53,9 +53,11 @@ The following features are available:
 - Fetching all channels of a team
 - Adding members or owners to your teams
 - Sending notifications in channels in the name of the DataMiner Teams bot
+- Sending notifications using Adaptive Cards in channels in the name of the DataMiner Teams bot
 - Creating a private chat between someone and the DataMiner Teams bot
 - Fetching a private chat between someone and the DataMiner Teams bot
 - Sending notifications in private chats in the name of the DataMiner Teams bot
+- Sending notifications using Adaptive Cards in private chats in the name of the DataMiner Teams bot
 
 To get started, you can find several example Automation scripts with more information on [GitHub](https://github.com/SkylineCommunications/ChatOps-Extensions/tree/main/ChatIntegrationExamples).
 
