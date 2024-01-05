@@ -96,12 +96,12 @@ The `QActionHelper` class has also been adapted.
 - `protocol.Clear` and `protocol.Leave` are now supported when calling the `SetRow` method on the `QActionTable` class objects of `SLProtocolExt`. The following methods have been provided:
 
   ```csharp
-  protocol.QActionTable.AddRow(string row, DateTime? timeInfo = null)
-  protocol.QActionTable.AddRow(object[] row, DateTime? timeInfo = null)
-  protocol.QActionTable.AddRow(QActionTableRow row, DateTime? timeInfo = null)
-  protocol.QActionTable.AddRowReturnKey(DateTime? timeInfo = null)
-  protocol.QActionTable.AddRowReturnKey(object[] row, DateTime? timeInfo = null)
-  protocol.QActionTable.AddRowReturnKey(QActionTableRow row, DateTime timeInfo = null)
+  protocol.QActionTable.AddRow(string row, DateTime? timeInfo)
+  protocol.QActionTable.AddRow(object[] row, DateTime? timeInfo)
+  protocol.QActionTable.AddRow(QActionTableRow row, DateTime? timeInfo)
+  protocol.QActionTable.AddRowReturnKey(DateTime? timeInfo)
+  protocol.QActionTable.AddRowReturnKey(object[] row, DateTime? timeInfo)
+  protocol.QActionTable.AddRowReturnKey(QActionTableRow row, DateTime timeInfo)
   protocol.QActionTable.SetRow(QActionTableRow row, bool createRow, DateTime? timeInfo, bool useClearAndLeave)
   protocol.QActionTable.SetRow(QActionTableRow row, bool createRow, DateTime? timeInfo)
   protocol.QActionTable.SetRow(QActionTableRow row, bool createRow, bool useClearAndLeave)
