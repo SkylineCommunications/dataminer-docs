@@ -38,7 +38,7 @@ You can now create the query using the *Orders.json* file as the data source.
 
 1. Create a new low-code app. See [Creating low-code applications](xref:Creating_custom_apps).
 
-1. Select *Queries* in the data pane.
+1. Expand *Queries* in the data pane.
 
 1. Click the + icon to add a new query.
 
@@ -75,7 +75,7 @@ The default grid blocks look quite basic and do not provide a lot of information
 
 1. Click *Edit* to open the Template Editor.
 
-1. Use the Template Editor to apply some styles to the grid blocks.
+1. Use the Template Editor to style the grid blocks.
 
    ![Styled grid](~/user-guide/images/StyledGrid.png) 
 
