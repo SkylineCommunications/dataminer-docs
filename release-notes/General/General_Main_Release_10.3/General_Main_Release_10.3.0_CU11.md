@@ -78,6 +78,12 @@ From now on, there will no longer be any primary and secondary NAS configuration
 
 Also, when the NATS configuration is reset, the DMS IP addresses will now be collected via the online Failover agent.
 
+#### Enhanced performance when deleting redundancy groups [ID_38173]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+Because of a number of enhancements, overall performance has increased when deleting a redundancy group.
+
 #### New BPA test 'Check Cluster SLNet Connections' [ID_38201] [ID_38208]
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->

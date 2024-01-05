@@ -420,6 +420,12 @@ When you sort on a joined column, the Sort operator will be forwarded in the fol
 - In case of a left join, but only if all sorts are descending
 - In case of a right join
 
+#### Enhanced performance when deleting redundancy groups [ID_38173]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+Because of a number of enhancements, overall performance has increased when deleting a redundancy group.
+
 #### SLAnalytics - Behavioral anomaly detection: Enhanced anomaly check algorithm [ID_38176]
 
 <!-- MR 10.4.0 - FR 10.4.2 -->
