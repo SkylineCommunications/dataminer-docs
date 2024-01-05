@@ -59,6 +59,14 @@ Because of a number of enhancements, overall performance has increased when load
 > [!NOTE]
 > When indicating that an alarm tab should list history alarms, it is no longer possible to select the *Show masked alarms* option. From now on, all masked alarms will automatically be included when history alarms are loaded.
 
+#### System Center: 'Install Indexing Engine' button removed [ID_38145]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
+
+Up to now, you could go to *System Center > Search & Indexing* and click *Install Indexing Engine* to install an Elasticsearch database on a DataMiner Agent to which Cube was connected. This button has now been removed.
+
+Elasticsearch is only supported up to version 6.8, which is no longer supported by Elastic. We recommend using OpenSearch instead, ideally with a dedicated clustered storage setup. Using storage per DMA with OpenSearch is also possible; in that case you will first need to install an OpenSearch database (ideally on a separate Linux server), and then connect your DMS to the OpenSearch database.
+
 #### Data Display: Enhanced performance when loading partial tables [ID_38155]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
