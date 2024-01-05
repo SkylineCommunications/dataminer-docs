@@ -688,6 +688,8 @@
         topicUid: How_to_make_your_automation_scripts_debug_ready
       - name: Getting started with the IAS Toolkit
         topicUid: Getting_Started_with_the_IAS_Toolkit
+      - name: Implementing Interactive Automation Scripts in regression tests (best practices)
+        topicUid: BP_Implementing_IAS_in_Regression_Tests
   - name: Class Library
     topicUid: ClassLibraryIntroduction
     items:
