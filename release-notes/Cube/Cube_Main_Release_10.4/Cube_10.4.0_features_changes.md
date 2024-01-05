@@ -840,6 +840,12 @@ When, in the Correlation app, you opened the connectivity editor and loaded the 
 
 When the *LegacyReportsAndDashboards* soft-launch option was disabled, DataMiner Cube will incorrectly still show the *Add to dashboard...* menu option when you right-clicked a parameter, an element or a service.
 
+#### Visual overview: Problem when VdxPage data item and View data item of a shape were set by the same SetVar shape [ID_38321]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
+
+When a shape had both a *VdxPage* data field and a *View* data field in which the Visio page name as well as the view name were card variables set by the same *SetVar* shape, in some rare cases, the Visio page name would not be applied correctly, causing the incorrect page being displayed.
+
 #### System center: Description of 'Log file size' setting was incorrect [ID_38330]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
