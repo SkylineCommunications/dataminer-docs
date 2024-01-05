@@ -4,13 +4,13 @@ uid: Dashboards_Low-Code_Apps_Tutorials
 
 # Dashboards and Low-Code Apps tutorials
 
-### Dashboards tutorials
+## Dashboards tutorials
 
 | Name | Description |
 |--|--|
 | [Displaying a custom empty component message](xref:Tutorial_Dashboards_Displaying_a_custom_empty_component_message) | Add a custom message when a query returns no results for any of the following components of a dashboard: table, grid, pie & donut chart, line & area chart, timeline, and node edge graph. |
 
-### Low-Code Apps tutorials
+## Low-Code Apps tutorials
 
 | Name | Description |
 |--|--|
@@ -26,7 +26,7 @@ uid: Dashboards_Low-Code_Apps_Tutorials
 | [Using the maps component in a low-code app](xref:TutorialMaps) | Add and configure a maps component in a low-code app to visualize cell towers, their connections, and their coverage. |
 | [Getting started with the grid component](xref:Tutorial_Apps_Grid) | Getting started with a grid component in a low-code app using GQI queries and the Template Editor. |
 
-### GQI tutorials
+## GQI tutorials
 
 | Name | Description |
 |--|--|

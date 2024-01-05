@@ -38,7 +38,7 @@ You can now create the query using the *Orders.json* file as the data source.
 
 1. Create a new low-code app. See [Creating low-code applications](xref:Creating_custom_apps).
 
-1. Expand *Queries* in the data pane.
+1. In the data pane, expand *Queries*.
 
 1. Click the + icon to add a new query.
 
@@ -46,19 +46,19 @@ You can now create the query using the *Orders.json* file as the data source.
 
    1. Give the query a name, e.g. "Orders".
 
-   1. In the dropdown box, select *Get ad hoc data*.
+   1. Open the selection box, and select *Get ad hoc data*.
 
-   1. Select *JSON Reader* from the *Data source* dropdown list.
+   1. Open the *Data source* selection box, and select *JSON Reader*.
 
-   1. Select *Orders.json* from the *Filter* dropdown list.
+   1. Open the *File* selection box, select *Orders.json*.
 
-      ![Query](~/user-guide/images/OrdersQuery.png).
+      ![Query](~/user-guide/images/OrdersQuery.png)
 
 ## Step 2: Add a grid component
 
 1. Drag the created query onto an empty section of the low-code app page.
 
-1. Hover the mouse pointer over the component and click the ![Visualizations](~/user-guide/images/DashboardsX_visualizations00095.png) icon.
+1. Hover the mouse pointer over the component, and click the ![Visualizations](~/user-guide/images/DashboardsX_visualizations00095.png) icon.
 
 1. Choose the [grid](xref:DashboardGrid) visualization. The grid will be populated with a block for every order in the orders dataset.
 
@@ -66,33 +66,33 @@ You can now create the query using the *Orders.json* file as the data source.
 
 ## Step 3: Style the blocks
 
-The default grid blocks look quite basic and do not provide a lot of information, let's change that!
+The default grid blocks look quite basic and do not provide a lot of information. If required, you can change their style.
 
 > [!NOTE]
-> Learn more about the Template Editor: [Using the Template Editor](xref:Template_Editor)
+> For more information about the Template Editor, see [Using the Template Editor](xref:Template_Editor)
 
-1. Make sure the grid component is selected, and navigate to *Layout > Item templates*.
+1. Make sure the grid component is selected, and go to *Layout > Item templates*.
 
 1. Click *Edit* to open the Template Editor.
 
 1. Use the Template Editor to style the grid blocks.
 
-   ![Styled grid](~/user-guide/images/StyledGrid.png) 
+   ![Styled grid](~/user-guide/images/StyledGrid.png)
 
 ## Step 4: Tweak the grid layout
 
-Let's change the way the blocks are positioned. We would like to show one row of four blocks at a time.
+Change the way the blocks are positioned. The goal is to have a row of four blocks.
 
-1. Make sure the grid component is selected, and navigate to *Layout > Advanced*.
+1. Make sure the grid component is selected, and go to *Layout > Advanced*.
 
 1. Locate the *Grid template* section. There you can change the way the grid blocks are positioned.
 
-1. Set the number of columns to 4 and ensure that *Scaling* is applied.
+1. Set the number of columns to 4, and ensure that *Scaling* is applied.
 
-1. Similarly, for the rows, opt for 1 row and apply *Scaling*.
+1. For the rows, opt for 1 row, and apply *Scaling*.
 
-    ![Grid settings](~/user-guide/images/GridSettings.png)
+   ![Grid settings](~/user-guide/images/GridSettings.png)
 
-Applying these settings will make sure our grid has 4 columns, 1 row and a button to navigate to the next items.
+Applying these settings will make sure your grid has 4 columns, 1 row and a button to navigate to the next items.
 
 ![Finished grid](~/user-guide/images/FinishedGrid.png)
