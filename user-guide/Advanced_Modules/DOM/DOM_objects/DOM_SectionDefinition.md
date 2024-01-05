@@ -54,6 +54,9 @@ There are also special types of `FieldDescriptors` that are purpose-made to stor
 
 - **AutoIncrementFieldDescriptor**: Defines a field that will automatically get an incrementing value when saved. When marked as soft-deleted, these fields will no longer be incremented. The value will remain the last value before the descriptor was marked as soft-deleted.
 
+    The `IDFormat` property is used to define a format for the display value. "{0}" will be replaced by the value of the field. For example: "Pre-{0}-Post" will result in "Pre-1-Post" if the field value is 1.
+    If the `IDFormat` property is empty, then its value will not be formatted.
+
 - **GenericEnumFieldDescriptor**: Defines a field that has a list of possible pre-determined values.
 
 - **ReservationFieldDescriptor**: Defines a field that has the ID of an SRM `(Service)ReservationInstance`.
