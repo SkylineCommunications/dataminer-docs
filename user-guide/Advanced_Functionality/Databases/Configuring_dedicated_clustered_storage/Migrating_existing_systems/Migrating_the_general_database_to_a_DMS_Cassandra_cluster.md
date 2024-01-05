@@ -49,7 +49,6 @@ During the migration, each DMA will go through the following stages:
 > [!IMPORTANT]
 > Once the migration is started, all new data will be sent to both the new and the old database. Writing to both databases will continue until the migration has been finalized. In case of a long running migration, there won't be any gaps in the history data between the start and the end of the migration process.
 
-
 ## Running the migration
 
 ### [Running a regular migration](#tab/tabid-1)
