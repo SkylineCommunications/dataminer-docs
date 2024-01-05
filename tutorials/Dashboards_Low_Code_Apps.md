@@ -24,6 +24,7 @@ uid: Dashboards_Low-Code_Apps_Tutorials
 | [Using the stepper component in a low-code app](xref:TutorialStepper) | Add and configure a stepper component in a low-code app to help with managing incidents and their different states. |
 | [Styling a table component](xref:Tutorial_Apps_Style_A_Table) | Style a table component in a low-code app using GQI queries and the Template Editor. |
 | [Using the maps component in a low-code app](xref:TutorialMaps) | Add and configure a maps component in a low-code app to visualize cell towers, their connections, and their coverage. |
+| [Getting started with the grid component](xref:Tutorial_Apps_Grid) | Getting started with a grid component in a low-code app using GQI queries and the Template Editor. |
 
 ### GQI tutorials
 
