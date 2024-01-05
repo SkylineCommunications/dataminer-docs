@@ -2,13 +2,13 @@
 uid: BP_Implementing_IAS_in_Regression_Tests
 ---
 
-# Best practices: Implementing Interactive Automation Scripts in regression tests
+# Best practices: Implementing interactive Automation scripts in regression tests
 
-Integrating Interactive Automation Scripts (IASs) into regression testing often presents challenges due to the inability to perform sets from the regression test framework on the UI.
+Integrating interactive Automation scripts (IASs) into regression testing often presents challenges due to the inability to perform sets from the regression test framework on the UI.
 
 Although there are other ways of testing this, these lack integration with the QA portal. Implementing these alternatives often requires a significant amount of time for both implementation and adapting to changes. To address these issues, implementing a well-considered design methodology early in the process is crucial.
 
-This guide focuses on best practices (recommendations) for integrating Interactive Automation Scripts into regression tests, emphasizing a design approach that ensures flexibility, reusability, and seamless integration.
+This guide focuses on best practices (recommendations) for integrating interactive Automation scripts into regression tests, emphasizing a design approach that ensures flexibility, reusability, and seamless integration.
 
 > [!TIP]
 > See also:
@@ -19,7 +19,7 @@ This guide focuses on best practices (recommendations) for integrating Interacti
 
 ## Use the Model View Presenter (MVP) design pattern
 
-When implementing Interactive Automation Scripts that may be eligible to be tested via regression tests, consider adopting the MVP design pattern. This practice ensures the separation of your logic from other components, significantly facilitating non-interactive runs in the long term.
+When implementing interactive Automation scripts that may be eligible to be tested via regression tests, consider adopting the MVP design pattern. This practice ensures the separation of your logic from other components, significantly facilitating non-interactive runs in the long term.
 
 ## Use JSON parameters for user decisions
 
@@ -55,7 +55,7 @@ Regardless of the invocation method, it triggers and executes the same underlyin
 
 ![SetOnElement](~/develop/images/SetOnElement.png)
 
-Avoid the need for separate scripts. Instead of opting for the creation of two scripts (one for interactive execution and another for non-interactive execution), where the Interactive Automation Script triggers a separate script with decisions for non-interactive execution, opt for a single script.
+Avoid the need for separate scripts. Instead of opting for the creation of two scripts (one for interactive execution and another for non-interactive execution), where the interactive Automation script triggers a separate script with decisions for non-interactive execution, opt for a single script.
 
 In this single-script approach, the code adapts its behavior based on the provided input parameters. This eliminates the need to maintain two separate scripts and the complexity of updating scripts for each other's executions, making the solution more manageable.
 
