@@ -9,7 +9,7 @@ uid: Dashboards_Low-Code_Apps_Tutorials
 | Name | Description |
 |--|--|
 | [Displaying a custom empty component message](xref:Tutorial_Dashboards_Displaying_a_custom_empty_component_message) | Add a custom message when a query returns no results for any of the following components of a dashboard: table, grid, pie & donut chart, line & area chart, timeline, and node edge graph. |
-| [Embed connector dashboard in Visio](xref:Tutorial_Embed_Connector_Dashboard_in_Visio) | Embed a dynamic Dashboard onto your Visual Overview |
+| [Embedding a connector dashboard in Visual Overview](xref:Tutorial_Embed_Connector_Dashboard_in_Visio) | Embed a dynamic dashboard for an element using a specific connector in Visual Overview. |
 
 ### Low-Code Apps tutorials
 

@@ -295,7 +295,7 @@ items:
             items:
               - name: Displaying a custom empty component message
                 topicUid: Tutorial_Dashboards_Displaying_a_custom_empty_component_message
-              - name: Embed connector dashboard in Visio
+              - name: Embedding a connector dashboard in Visual Overview
                 topicUid: Tutorial_Embed_Connector_Dashboard_in_Visio
       - name: Low-Code Apps
         topicUid: Application_framework

@@ -2,7 +2,7 @@
 uid: Tutorial_Embed_Connector_Dashboard_in_Visio
 ---
 
-# Tutorial: Embed Connector Dashboard in Visio
+# Embedding a connector dashboard in Visual Overview
 
 In this tutorial, you will learn how to embed a connector Dashboard into your Visio. This makes it convenient for users who are typically using DataMiner Cube as their main user interface. By making a Dashboard that relates to a single (configurable) element of a particular connector, you can automatically visualize this dashboard with the content related to that element. Of course, it is possible to embed any dashboard onto any visual overview, but here we choose to make use of dynamic inputs to automatically view the related content of a dynamic Dashboard.
 

@@ -9,4 +9,4 @@ With the DataMiner Dashboards module, you can create custom dashboards that inte
 ## Tutorials
 
 - [Displaying a custom message](xref:Tutorial_Dashboards_Displaying_a_custom_empty_component_message)
-- [Embed connector dashboard in Visio](xref:Tutorial_Embed_Connector_Dashboard_in_Visio)
+- [Embedding a connector dashboard in Visual Overview](xref:Tutorial_Embed_Connector_Dashboard_in_Visio)
