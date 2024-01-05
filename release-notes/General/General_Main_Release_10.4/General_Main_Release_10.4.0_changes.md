@@ -787,6 +787,12 @@ Also, the newly added *UninstallApiDeployment* upgrade action will remove everyt
 
 - Remove the *APIDeployment* soft-launch flag from *SoftLaunchOptions.xml*.
 
+#### Parameter ID range 10,000,000 to 10,999,999 now reserved [ID_37837]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+Parameters IDs in the range of 10,000,000 to 10,999,999 are now reserved for DataMiner parameters. These will be used for DataMiner features in the future.
+
 #### GQI: Ad hoc data sources and custom operators now support row metadata [ID_37879]
 
 <!-- MR 10.4.0 - FR 10.4.1 -->
