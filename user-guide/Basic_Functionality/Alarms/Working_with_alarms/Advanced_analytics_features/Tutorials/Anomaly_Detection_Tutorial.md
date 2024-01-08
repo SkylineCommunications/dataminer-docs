@@ -344,7 +344,7 @@ Make sure that no extra alarms are generated, for example for the following thin
 
 Remember that you can always duplicate the element to try a second time, if you have not yet reached optimal results on a first attempt.
 
-> If you are a member of the DevOps Program and you have completed the exercise above, send us a screenshot of the trend graph along with a [.dmimport file](xref:Exporting_elements_services_etc_to_a_dmimport_file) containing your element to get DevOps Points.
+> If you are a member of the DevOps Program and you have completed the exercise above, send us screenshots of the trend graph and your alarm template to get DevOps Points.
 >
 > Use the following email format:
 >
@@ -355,7 +355,7 @@ Remember that you can always duplicate the element to try a second time, if you 
 >   - Feedback (optionally): We value your feedback! Please share any thoughts or suggestions regarding this tutorial or the anomaly detection feature.
 > - Attachment:
 >   - A picture of the trend graph with the correct anomalies.
->   - A [.dmimport file](xref:Exporting_elements_services_etc_to_a_dmimport_file) containing your element with the correct alarm configuration.
+>   - A picture of the *Anomaly Alarm Settings* pop-up in the alarm template that you used to generate the requested alarms.
 >
 > Skyline will review your submission. Upon successful validation, you will be awarded the appropriate DevOps Points as a token of your accomplishment.
 
