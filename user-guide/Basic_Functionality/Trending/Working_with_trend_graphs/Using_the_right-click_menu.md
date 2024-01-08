@@ -46,4 +46,4 @@ When you right-click anywhere in the trend graph window, a shortcut menu appears
   > - By default, the 95 percentile is displayed, but this can be customized in the user settings. See [Trending settings](xref:User_settings#trending-settings).
   > - From DataMiner 10.0.13 onwards, if the trend graph contains average data points in its most detailed data set, only average data will be used in the percentile calculation. This will be indicated with a warning icon in the percentile menu.
 
-- **Add to dashboard**: Adds the trend graph to a dashboard. For more information, see [Adding an item to a dashboard from outside the Dashboards app](xref:Adding_an_item_to_a_dashboard_from_outside_the_Dashboards_app).
+- **Add to dashboard**: Obsolete from DataMiner 10.4.0/10.4.1 onwards. Adds the trend graph to a legacy dashboard. See [Adding an item to a dashboard from outside the Dashboards app](xref:Adding_an_item_to_a_dashboard_from_outside_the_Dashboards_app).
