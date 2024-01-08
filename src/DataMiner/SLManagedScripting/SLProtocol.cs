@@ -23,7 +23,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <summary>
 		/// Adds a row to the table.
 		/// </summary>
-		/// <param name="tableID">The ID of the table parameter.</param>
+		/// <param name="tableId">The ID of the table parameter.</param>
 		/// <param name="row">The row data.</param>
 		/// <returns>The 1-based internal position of the row in the table.</returns>
 		/// <remarks>
@@ -54,13 +54,13 @@ namespace Skyline.DataMiner.Scripting
 		///		</list>
 		/// </remarks>
 		/// 
-		int AddRow(int tableID, object[] row);
+		int AddRow(int tableId, object[] row);
 
 		/// <summary>
 		/// Adds a row to the specified table with the specified primary key.
 		/// </summary>
-		/// <param name="tableID">The ID of the table parameter.</param>
-		/// <param name="primaryKey">The primary key of the row.</param>
+		/// <param name="tableId">The ID of the table parameter.</param>
+		/// <param name="row">The primary key of the row.</param>
 		/// <returns>The 1-based internal position of the row in the table.</returns>
 		/// <remarks>
 		///		<list type = "bullet" >
@@ -72,14 +72,14 @@ namespace Skyline.DataMiner.Scripting
 		///			</item>
 		///		</list>
 		/// </remarks>
-		int AddRow(int tableID, string primaryKey);
+		int AddRow(int tableId, string row);
 
 		/// <summary>
 		/// Adds the specified row to the specified table.
 		/// </summary>
-		/// <param name="tableID">The ID of the table parameter.</param>
+		/// <param name="tableId">The ID of the table parameter.</param>
 		/// <param name="row">The row data.</param>
-		/// <param name="keyMasks">Sets are done in two calls. The first call only sets the columns where the corresponding mask position is set to true, the second call then sets the other columns.</param>
+		/// <param name="keyMask">Sets are done in two calls. The first call only sets the columns where the corresponding mask position is set to true, the second call then sets the other columns.</param>
 		/// <exception cref="ArgumentException">The row and key mask arrays have a different length.</exception>
 		/// <remarks>
 		///		<list type = "bullet" >
@@ -91,12 +91,12 @@ namespace Skyline.DataMiner.Scripting
 		///			</item>
 		///		</list>
 		/// </remarks>
-		void AddRow(int tableID, object[] row, bool[] keyMasks);
+		void AddRow(int tableId, object[] row, bool[] keyMask);
 
 		/// <summary>
 		/// Adds a row to the specified table and returns the primary key.
 		/// </summary>
-		/// <param name="tableID">The ID of the table parameter.</param>
+		/// <param name="tableId">The ID of the table parameter.</param>
 		/// <returns>The primary key of the added row.</returns>
 		/// <remarks>
 		///		<list type = "bullet" >
@@ -111,12 +111,12 @@ namespace Skyline.DataMiner.Scripting
 		///			</item>
 		///		</list>
 		/// </remarks>
-		string AddRowReturnKey(int tableID);
+		string AddRowReturnKey(int tableId);
 
 		/// <summary>
 		/// Removes all rows from the specified table.
 		/// </summary>
-		/// <param name="tableID">The ID of the table parameter.</param>
+		/// <param name="tableId">The ID of the table parameter.</param>
 		/// <returns>The number of rows left. In case the ClearAllKeys method has been invoked specifying an empty table, -1 is returned.</returns>
 		/// <remarks>
 		///		<list type = "bullet">
@@ -128,13 +128,13 @@ namespace Skyline.DataMiner.Scripting
 		///			</item>
 		///		</list>
 		/// </remarks>
-		object ClearAllKeys(int tableID);
+		object ClearAllKeys(int tableId);
 
 		/// <summary>
 		/// Removes the specified row(s) from the specified table.
 		/// </summary>
-		/// <param name="tableID">The ID of the table parameter.</param>
-		/// <param name="rowIndex">The index of the row.</param>
+		/// <param name="tableId">The ID of the table parameter.</param>
+		/// <param name="row">The index of the row.</param>
 		/// <returns>Number of remaining rows in the table.</returns>
 		/// <remarks>
 		///		<list type = "bullet" >
@@ -146,13 +146,13 @@ namespace Skyline.DataMiner.Scripting
 		///			</item>
 		///		</list>
 		/// </remarks>
-		int DeleteRow(int tableID, int rowIndex);
+		int DeleteRow(int tableId, int row);
 
 		/// <summary>
 		/// Removes the specified row(s) from the specified table.
 		/// </summary>
-		/// <param name="tableID">The ID of the table parameter.</param>
-		/// <param name="primaryKey">The primary key of the row to remove.</param>
+		/// <param name="tableId">The ID of the table parameter.</param>
+		/// <param name="rowKey">The primary key of the row to remove.</param>
 		/// <returns>Number of remaining rows in the table.</returns>
 		/// <remarks>
 		///		<list type = "bullet" >
@@ -164,13 +164,13 @@ namespace Skyline.DataMiner.Scripting
 		///			</item>
 		///		</list>
 		/// </remarks>
-		int DeleteRow(int tableID, string primaryKey);
+		int DeleteRow(int tableId, string rowKey);
 
 		/// <summary>
 		/// The ID of the table parameter.
 		/// </summary>
-		/// <param name="tableID">The ID of the table parameter.</param>
-		/// <param name="primaryKeys">The primary keys of the rows to remove.</param>
+		/// <param name="tableId">The ID of the table parameter.</param>
+		/// <param name="rows">The primary keys of the rows to remove.</param>
 		/// <returns>Number of remaining rows in the table.</returns>
 		/// <remarks>
 		///		<list type = "bullet" >
@@ -182,7 +182,7 @@ namespace Skyline.DataMiner.Scripting
 		///			</item>
 		///		</list>
 		/// </remarks>
-		int DeleteRow(int tableID, string[] primaryKeys);
+		int DeleteRow(int tableId, string[] rows);
 
 		/// <summary>
 		/// Executes the specified Automation script.
@@ -254,8 +254,8 @@ namespace Skyline.DataMiner.Scripting
 		/// <summary>
 		/// Determines whether a row with the specified primary key exists in the specified table.
 		/// </summary>
-		/// <param name="tableID">ID of the table parameter</param>
-		/// <param name="primaryKey">The primary key of the row.</param>
+		/// <param name="tableId">ID of the table parameter</param>
+		/// <param name="key">The primary key of the row.</param>
 		/// <returns>Indication of whether the table contains a row with the specified primary key. True means that a row with the primary key is present, false means otherwise.</returns>
 		/// <remarks>
 		///		<list type = "bullet" >
@@ -267,12 +267,12 @@ namespace Skyline.DataMiner.Scripting
 		///			</item>
 		///		</list>
 		/// </remarks>
-		bool Exists(int tableID, string primaryKey);
+		bool Exists(int tableId, string key);
 
 		/// <summary>
 		/// Sets the content of the table to the provided content.
 		/// </summary>
-		/// <param name="tableID">The ID of the table parameter.</param>
+		/// <param name="tableId">The ID of the table parameter.</param>
 		/// <param name="rows">The rows of the table.</param>
 		/// <param name="option">SaveOption.Full = unspecified primary keys are removed; SaveOption .Partial = rows with unspecified primary keys are preserved.</param>
 		/// <returns></returns>
@@ -298,12 +298,44 @@ namespace Skyline.DataMiner.Scripting
 		///			</item>
 		///		</list>
 		/// </remarks>
-		object FillArray(int tableID, List<object[]> rows, NotifyProtocol.SaveOption option);
+		object FillArray(int tableId, List<object[]> rows, NotifyProtocol.SaveOption option);
 
 		/// <summary>
 		/// Sets the content of the table to the provided content.
 		/// </summary>
-		/// <param name="tableID">The ID of the table parameter.</param>
+		/// <param name="tableId">The ID of the table parameter.</param>
+		/// <param name="rows">The rows of the table.</param>
+		/// <param name="option">SaveOption.Full = unspecified primary keys are removed; SaveOption .Partial = rows with unspecified primary keys are preserved.</param>
+		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
+		/// <returns></returns>
+		/// <remarks>
+		///		<list type = "bullet">
+		///			<item>
+		///				<description>This overload is supported from DataMiner 10.4.2 onwards (RN 38153).</description>
+		///			</item>
+		///			<item>
+		///				<description>This method acts as a wrapper for a NotifyProtocol type 193 <see href="xref:NT_FILL_ARRAY">NT_FILL_ARRAY</see> call.</description>
+		///			</item>
+		///			<item>
+		///				<description>The FillArray method overload with the saveOption parameter accepts table rows instead of columns (whereas the other method overloads accept table columns). The implementation of this overload takes the provided list of rows and constructs an array where each element represents a column.</description>
+		///			</item>
+		///			<item>
+		///				<description>In case the data contains null references, the corresponding cells will be cleared.</description>
+		///			</item>
+		///			<item>
+		///				<description>The FillArray method cannot be used together with the "autoincrement" column type.</description>
+		///			</item>
+		///			<item>
+		///				<description>This call is to be used with columns of type "retrieved". In case other column types are present between the specified columns (e.g. columns of type "custom"), these other columns will be skipped.</description>
+		///			</item>
+		///		</list>
+		/// </remarks>
+		object FillArray(int tableId, List<object[]> rows, NotifyProtocol.SaveOption option, bool useClearAndLeave);
+
+		/// <summary>
+		/// Sets the content of the table to the provided content.
+		/// </summary>
+		/// <param name="tableId">The ID of the table parameter.</param>
 		/// <param name="rows">The rows of the table.</param>
 		/// <param name="option">SaveOption.Full = unspecified primary keys are removed; SaveOption .Partial = rows with unspecified primary keys are preserved.</param>
 		/// <param name="timeInfo">Time stamp</param>
@@ -333,12 +365,48 @@ namespace Skyline.DataMiner.Scripting
 		///			</item>
 		///		</list>
 		/// </remarks>
-		object FillArray(int tableID, List<object[]> rows, NotifyProtocol.SaveOption option, DateTime? timeInfo);
+		object FillArray(int tableId, List<object[]> rows, NotifyProtocol.SaveOption option, DateTime? timeInfo);
 
 		/// <summary>
 		/// Sets the content of the table to the provided content.
 		/// </summary>
-		/// <param name="tableID">The ID of the table parameter.</param>
+		/// <param name="tableId">The ID of the table parameter.</param>
+		/// <param name="rows">The rows of the table.</param>
+		/// <param name="option">SaveOption.Full = unspecified primary keys are removed; SaveOption .Partial = rows with unspecified primary keys are preserved.</param>
+		/// <param name="timeInfo">Time stamp</param>
+		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
+		/// <returns></returns>
+		/// <remarks>
+		///		<list type = "bullet">
+		///			<item>
+		///				<description>This overload is supported from DataMiner 10.4.2 onwards (RN 38153).</description>
+		///			</item>
+		///			<item>
+		///				<description>This method acts as a wrapper for a NotifyProtocol type 193 <see href="xref:NT_FILL_ARRAY">NT_FILL_ARRAY</see> call.</description>
+		///			</item>
+		///			<item>
+		///				<description>The FillArray method overload with the saveOption parameter accepts table rows instead of columns (whereas the other method overloads accept table columns). The implementation of this overload takes the provided list of rows and constructs an array where each element represents a column.</description>
+		///			</item>
+		///			<item>
+		///				<description>In case the data contains null references, the corresponding cells will be cleared.</description>
+		///			</item>
+		///			<item>
+		///				<description>The FillArray method cannot be used together with the "autoincrement" column type.</description>
+		///			</item>
+		///			<item>
+		///				<description>This call is to be used with columns of type "retrieved". In case other column types are present between the specified columns (e.g. columns of type "custom"), these other columns will be skipped.</description>
+		///			</item>
+		///			<item>
+		///				<description>If the DateTime.Kind property of <paramref name="timeInfo"/> is unspecified, the timestamp will be handled as local time.</description>
+		///			</item>
+		///		</list>
+		/// </remarks>
+		object FillArray(int tableId, List<object[]> rows, NotifyProtocol.SaveOption option, DateTime? timeInfo, bool useClearAndLeave);
+
+		/// <summary>
+		/// Sets the content of the table to the provided content.
+		/// </summary>
+		/// <param name="tableId">The ID of the table parameter.</param>
 		/// <param name="columns">The columns of the table.</param>
 		/// <param name="timeInfo">Time stamp</param>
 		/// <returns></returns>
@@ -367,12 +435,44 @@ namespace Skyline.DataMiner.Scripting
 		///			</item>
 		///		</list>
 		/// </remarks>
-		object FillArray(int tableID, List<object[]> columns, DateTime? timeInfo);
+		object FillArray(int tableId, List<object[]> columns, DateTime? timeInfo);
 
 		/// <summary>
 		/// Sets the content of the table to the provided content.
 		/// </summary>
-		/// <param name="tableID">The ID of the table parameter.</param>
+		/// <param name="tableId">The ID of the table parameter.</param>
+		/// <param name="columns">The columns of the table.</param>
+		/// <param name="timeInfo">Time stamp</param>
+		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
+		/// <returns></returns>
+		/// <remarks>
+		///		<list type = "bullet">
+		///			<item>
+		///			<description>This overload is supported from DataMiner 10.4.2 onwards (RN 38153).</description>
+		///			</item>
+		///			<item>
+		///				<description>This method acts as a wrapper for a NotifyProtocol type 193 <see href="xref:NT_FILL_ARRAY">NT_FILL_ARRAY</see> call.</description>
+		///			</item>
+		///			<item>
+		///				<description>In case the data contains null references, the corresponding cells will be cleared.</description>
+		///			</item>
+		///			<item>
+		///				<description>The FillArray method cannot be used together with the "autoincrement" column type.</description>
+		///			</item>
+		///			<item>
+		///				<description>This call is to be used with columns of type "retrieved". In case other column types are present between the specified columns (e.g. columns of type "custom"), these other columns will be skipped.</description>
+		///			</item>
+		///			<item>
+		///				<description>If the DateTime.Kind property of <paramref name="timeInfo"/> is unspecified, the timestamp will be handled as local time.</description>
+		///			</item>
+		///		</list>
+		/// </remarks>
+		object FillArray(int tableId, List<object[]> columns, DateTime? timeInfo, bool useClearAndLeave);
+
+		/// <summary>
+		/// Sets the content of the table to the provided content.
+		/// </summary>
+		/// <param name="tableId">The ID of the table parameter.</param>
 		/// <param name="columns">The columns of the table.</param>
 		/// <param name="timeInfo">Time stamp</param>
 		/// <returns></returns>
@@ -398,12 +498,44 @@ namespace Skyline.DataMiner.Scripting
 		///			</item>
 		///		</list>
 		/// </remarks>
-		object FillArray(int tableID, object[] columns, DateTime? timeInfo);
+		object FillArray(int tableId, object[] columns, DateTime? timeInfo);
 
 		/// <summary>
 		/// Sets the content of the table to the provided content.
 		/// </summary>
-		/// <param name="tableID">The ID of the table parameter.</param>
+		/// <param name="tableId">The ID of the table parameter.</param>
+		/// <param name="columns">The columns of the table.</param>
+		/// <param name="timeInfo">Time stamp</param>
+		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
+		/// <returns></returns>
+		/// <remarks>
+		///		<list type = "bullet">
+		///			<item>
+		///				<description>This overload is supported from DataMiner 10.4.2 onwards (RN 38153).</description>
+		///			</item>
+		///			<item>
+		///				<description>This method acts as a wrapper for a NotifyProtocol type 193 <see href="xref:NT_FILL_ARRAY">NT_FILL_ARRAY</see> call.</description>
+		///			</item>
+		///			<item>
+		///				<description>In case the data contains null references, the corresponding cells will be cleared.</description>
+		///			</item>
+		///			<item>
+		///				<description>The FillArray method cannot be used together with the "autoincrement" column type.</description>
+		///			</item>
+		///			<item>
+		///				<description>This call is to be used with columns of type "retrieved". In case other column types are present between the specified columns (e.g. columns of type "custom"), these other columns will be skipped.</description>
+		///			</item>
+		///			<item>
+		///				<description>If the DateTime.Kind property of <paramref name="timeInfo"/> is unspecified, the timestamp will be handled as local time.</description>
+		///			</item>
+		///		</list>
+		/// </remarks>
+		object FillArray(int tableId, object[] columns, DateTime? timeInfo, bool useClearAndLeave);
+
+		/// <summary>
+		/// Sets the content of the table to the provided content.
+		/// </summary>
+		/// <param name="tableId">The ID of the table parameter.</param>
 		/// <param name="columns">The columns of the table.</param>
 		/// <returns></returns>
 		/// <remarks>
@@ -425,12 +557,40 @@ namespace Skyline.DataMiner.Scripting
 		///			</item>
 		///		</list>
 		/// </remarks>
-		object FillArray(int tableID, object[] columns);
+		object FillArray(int tableId, object[] columns);
 
 		/// <summary>
 		/// Sets the content of the table to the provided content.
 		/// </summary>
-		/// <param name="tableID">The ID of the table parameter.</param>
+		/// <param name="tableId">The ID of the table parameter.</param>
+		/// <param name="columns">The columns of the table.</param>
+		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
+		/// <returns></returns>
+		/// <remarks>
+		///		<list type = "bullet">
+		///			<item>
+		///				<description>This overload is supported from DataMiner 10.4.2 onwards (RN 38153).</description>
+		///			</item>
+		///			<item>
+		///				<description>This method acts as a wrapper for a NotifyProtocol type 193 <see href="xref:NT_FILL_ARRAY">NT_FILL_ARRAY</see> call.</description>
+		///			</item>
+		///			<item>
+		///				<description>In case the data contains null references, the corresponding cells will be cleared.</description>
+		///			</item>
+		///			<item>
+		///				<description>The FillArray method cannot be used together with the "autoincrement" column type.</description>
+		///			</item>
+		///			<item>
+		///				<description>This call is to be used with columns of type "retrieved". In case other column types are present between the specified columns (e.g. columns of type "custom"), these other columns will be skipped.</description>
+		///			</item>
+		///		</list>
+		/// </remarks>
+		object FillArray(int tableId, object[] columns, bool useClearAndLeave);
+
+		/// <summary>
+		/// Sets the content of the table to the provided content.
+		/// </summary>
+		/// <param name="tableId">The ID of the table parameter.</param>
 		/// <param name="columns">The columns of the table.</param>
 		/// <returns></returns>
 		/// <remarks>
@@ -455,12 +615,40 @@ namespace Skyline.DataMiner.Scripting
 		///			</item>
 		///		</list>
 		/// </remarks>
-		object FillArray(int tableID, List<object[]> columns);
+		object FillArray(int tableId, List<object[]> columns);
+
+		/// <summary>
+		/// Sets the content of the table to the provided content.
+		/// </summary>
+		/// <param name="tableId">The ID of the table parameter.</param>
+		/// <param name="columns">The columns of the table.</param>
+		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
+		/// <returns></returns>
+		/// <remarks>
+		///		<list type = "bullet">
+		///			<item>
+		///			<description>This overload is supported from DataMiner 10.4.2 onwards (RN 38153).</description>
+		///			</item>
+		///			<item>
+		///				<description>This method acts as a wrapper for a NotifyProtocol type 193 <see href="xref:NT_FILL_ARRAY">NT_FILL_ARRAY</see> call.</description>
+		///			</item>
+		///			<item>
+		///				<description>In case the data contains null references, the corresponding cells will be cleared.</description>
+		///			</item>
+		///			<item>
+		///				<description>The FillArray method cannot be used together with the "autoincrement" column type.</description>
+		///			</item>
+		///			<item>
+		///				<description>This call is to be used with columns of type "retrieved". In case other column types are present between the specified columns (e.g. columns of type "custom"), these other columns will be skipped.</description>
+		///			</item>
+		///		</list>
+		/// </remarks>
+		object FillArray(int tableId, List<object[]> columns, bool useClearAndLeave);
 
 		/// <summary>
 		/// Adds the provided rows to the specified table.
 		/// </summary>
-		/// <param name="tableID">The ID of the table parameter.</param>
+		/// <param name="tableId">The ID of the table parameter.</param>
 		/// <param name="columns">The columns of the table.</param>
 		/// <returns></returns>
 		/// <remarks>
@@ -482,12 +670,40 @@ namespace Skyline.DataMiner.Scripting
 		///			</item>
 		///		</list>
 		/// </remarks>
-		object FillArrayNoDelete(int tableID, object[] columns);
+		object FillArrayNoDelete(int tableId, object[] columns);
 
 		/// <summary>
 		/// Adds the provided rows to the specified table.
 		/// </summary>
-		/// <param name="tableID">The ID of the table parameter.</param>
+		/// <param name="tableId">The ID of the table parameter.</param>
+		/// <param name="columns">The columns of the table.</param>
+		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
+		/// <returns></returns>
+		/// <remarks>
+		///		<list type = "bullet" >
+		///			<item>
+		///				<description>This overload is supported from DataMiner 10.4.2 onwards (RN 38153).</description>
+		///			</item>
+		///			<item>
+		///				<description>This method acts as a wrapper for a NotifyProtocol type 194 <see href="xref:NT_FILL_ARRAY_NO_DELETE">NT_FILL_ARRAY_NO_DELETE</see> call.</description>
+		///			</item>
+		///			<item>
+		///				<description>In case the data contains null references, the corresponding cells will be cleared.</description>
+		///			</item>
+		///			<item>
+		///				<description>The FillArrayNoDelete method cannot be used together with the "autoincrement" column type.</description>
+		///			</item>
+		///			<item>
+		///				<description>This call is to be used with columns of type "retrieved". In case other column types are present between the specified columns (e.g. columns of type "custom"), these other columns will be skipped.</description>
+		///			</item>
+		///		</list>
+		/// </remarks>
+		object FillArrayNoDelete(int tableId, object[] columns, bool useClearAndLeave);
+
+		/// <summary>
+		/// Adds the provided rows to the specified table.
+		/// </summary>
+		/// <param name="tableId">The ID of the table parameter.</param>
 		/// <param name="columns">The columns of the table.</param>
 		/// <returns></returns>
 		/// <remarks>
@@ -512,12 +728,40 @@ namespace Skyline.DataMiner.Scripting
 		///			</item>
 		///		</list>
 		/// </remarks>
-		object FillArrayNoDelete(int tableID, List<object[]> columns);
+		object FillArrayNoDelete(int tableId, List<object[]> columns);
 
 		/// <summary>
 		/// Adds the provided rows to the specified table.
 		/// </summary>
-		/// <param name="tableID">The ID of the table parameter.</param>
+		/// <param name="tableId">The ID of the table parameter.</param>
+		/// <param name="columns">The columns of the table.</param>
+		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
+		/// <returns></returns>
+		/// <remarks>
+		///		<list type = "bullet" >
+		///			<item>
+		///				<description>This overload is supported from DataMiner 10.4.2 onwards (RN 38153).</description>
+		///			</item>
+		///			<item>
+		///				<description>This method acts as a wrapper for a NotifyProtocol type 194 <see href="xref:NT_FILL_ARRAY_NO_DELETE">NT_FILL_ARRAY_NO_DELETE</see> call.</description>
+		///			</item>
+		///			<item>
+		///				<description>In case the data contains null references, the corresponding cells will be cleared.</description>
+		///			</item>
+		///			<item>
+		///				<description>The FillArrayNoDelete method cannot be used together with the "autoincrement" column type.</description>
+		///			</item>
+		///			<item>
+		///				<description>This call is to be used with columns of type "retrieved". In case other column types are present between the specified columns (e.g. columns of type "custom"), these other columns will be skipped.</description>
+		///			</item>
+		///		</list>
+		/// </remarks>
+		object FillArrayNoDelete(int tableId, List<object[]> columns, bool useClearAndLeave);
+
+		/// <summary>
+		/// Adds the provided rows to the specified table.
+		/// </summary>
+		/// <param name="tableId">The ID of the table parameter.</param>
 		/// <param name="columns">The columns of the table.</param>
 		/// <param name="timeInfo">Time stamp</param>
 		/// <returns></returns>
@@ -546,12 +790,44 @@ namespace Skyline.DataMiner.Scripting
 		///			</item>
 		///		</list>
 		/// </remarks>
-		object FillArrayNoDelete(int tableID, List<object[]> columns, DateTime? timeInfo);
+		object FillArrayNoDelete(int tableId, List<object[]> columns, DateTime? timeInfo);
 
 		/// <summary>
 		/// Adds the provided rows to the specified table.
 		/// </summary>
-		/// <param name="tableID">The ID of the table parameter.</param>
+		/// <param name="tableId">The ID of the table parameter.</param>
+		/// <param name="columns">The columns of the table.</param>
+		/// <param name="timeInfo">Time stamp</param>
+		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
+		/// <returns></returns>
+		/// <remarks>
+		///		<list type = "bullet" >
+		///			<item>
+		///				<description>This overload is supported from DataMiner 10.4.2 onwards (RN 38153).</description>
+		///			</item>
+		///			<item>
+		///				<description>This method acts as a wrapper for a NotifyProtocol type 194 <see href="xref:NT_FILL_ARRAY_NO_DELETE">NT_FILL_ARRAY_NO_DELETE</see> call.</description>
+		///			</item>
+		///			<item>
+		///				<description>In case the data contains null references, the corresponding cells will be cleared.</description>
+		///			</item>
+		///			<item>
+		///				<description>The FillArrayNoDelete method cannot be used together with the "autoincrement" column type.</description>
+		///			</item>
+		///			<item>
+		///				<description>This call is to be used with columns of type "retrieved". In case other column types are present between the specified columns (e.g. columns of type "custom"), these other columns will be skipped.</description>
+		///			</item>
+		///			<item>
+		///				<description>If the DateTime.Kind property of <paramref name="timeInfo"/> is unspecified, the timestamp will be handled as local time.</description>
+		///			</item>
+		///		</list>
+		/// </remarks>
+		object FillArrayNoDelete(int tableId, List<object[]> columns, DateTime? timeInfo, bool useClearAndLeave);
+
+		/// <summary>
+		/// Adds the provided rows to the specified table.
+		/// </summary>
+		/// <param name="tableId">The ID of the table parameter.</param>
 		/// <param name="columns">The columns of the table.</param>
 		/// <param name="timeInfo">Time stamp</param>
 		/// <returns></returns>
@@ -577,14 +853,46 @@ namespace Skyline.DataMiner.Scripting
 		///			</item>
 		///		</list>
 		/// </remarks>
-		object FillArrayNoDelete(int tableID, object[] columns, DateTime? timeInfo);
+		object FillArrayNoDelete(int tableId, object[] columns, DateTime? timeInfo);
+
+		/// <summary>
+		/// Adds the provided rows to the specified table.
+		/// </summary>
+		/// <param name="tableId">The ID of the table parameter.</param>
+		/// <param name="columns">The columns of the table.</param>
+		/// <param name="timeInfo">Time stamp</param>
+		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
+		/// <returns></returns>
+		/// <remarks>
+		///		<list type = "bullet" >
+		///			<item>
+		///				<description>This overload is supported from DataMiner 10.4.2 onwards (RN 38153).</description>
+		///			</item>
+		///			<item>
+		///				<description>This method acts as a wrapper for a NotifyProtocol type 194 <see href="xref:NT_FILL_ARRAY_NO_DELETE">NT_FILL_ARRAY_NO_DELETE</see> call.</description>
+		///			</item>
+		///			<item>
+		///				<description>In case the data contains null references, the corresponding cells will be cleared.</description>
+		///			</item>
+		///			<item>
+		///				<description>The FillArrayNoDelete method cannot be used together with the "autoincrement" column type.</description>
+		///			</item>
+		///			<item>
+		///				<description>This call is to be used with columns of type "retrieved". In case other column types are present between the specified columns (e.g. columns of type "custom"), these other columns will be skipped.</description>
+		///			</item>
+		///			<item>
+		///				<description>If the DateTime.Kind property of <paramref name="timeInfo"/> is unspecified, the timestamp will be handled as local time.</description>
+		///			</item>
+		///		</list>
+		/// </remarks>
+		object FillArrayNoDelete(int tableId, object[] columns, DateTime? timeInfo, bool useClearAndLeave);
 
 		/// <summary>
 		/// Sets the specified cells of a column with the provided values.
 		/// </summary>
-		/// <param name="tableID">The ID of the table parameter.</param>
-		/// <param name="columnID">The ID of the column parameter.</param>
-		/// <param name="primaryKeys">The primary keys of the rows for which the column has to be updated.</param>
+		/// <param name="tableId">The ID of the table parameter.</param>
+		/// <param name="columnPid">The ID of the column parameter.</param>
+		/// <param name="keys">The primary keys of the rows for which the column has to be updated.</param>
 		/// <param name="values">The values to set.</param>
 		/// <param name="timeInfo">Time stamp</param>
 		/// <returns></returns>
@@ -605,14 +913,43 @@ namespace Skyline.DataMiner.Scripting
 		///			</item>
 		///		</list>
 		/// </remarks>
-		object FillArrayWithColumn(int tableID, int columnID, object[] primaryKeys, object[] values, DateTime? timeInfo);
+		object FillArrayWithColumn(int tableId, int columnPid, object[] keys, object[] values, DateTime? timeInfo);
 
 		/// <summary>
 		/// Sets the specified cells of a column with the provided values.
 		/// </summary>
-		/// <param name="tableID">The ID of the table parameter.</param>
-		/// <param name="columnID">The ID of the column parameter.</param>
-		/// <param name="primaryKeys">The primary keys of the rows for which the column has to be updated.</param>
+		/// <param name="tableId">The ID of the table parameter.</param>
+		/// <param name="columnPid">The ID of the column parameter.</param>
+		/// <param name="keys">The primary keys of the rows for which the column has to be updated.</param>
+		/// <param name="values">The values to set.</param>
+		/// <param name="timeInfo">Time stamp</param>
+		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
+		/// <returns></returns>
+		/// <exception cref="ArgumentException">The length of "primaryKeys" is not equal to the length of "values" and the length of the values array does not equal 1.</exception>
+		/// <remarks>
+		///		<list type = "bullet" >
+		///			<item>
+		///				<description>This overload is supported from DataMiner 10.4.2 onwards (RN 38153).</description>
+		///			</item>
+		///			<item>
+		///				<description>This method acts as a wrapper for a NotifyProtocol type 220 <see href="xref:NT_FILL_ARRAY_WITH_COLUMN">NT_FILL_ARRAY_WITH_COLUMN</see> call.</description>
+		///			</item>
+		///			<item>
+		///				<description>In case the values array only contains one value, this value will be used for all specified primary keys.</description>
+		///			</item>
+		///			<item>
+		///				<description>If the DateTime.Kind property of <paramref name="timeInfo"/> is unspecified, the timestamp will be handled as local time.</description>
+		///			</item>
+		///		</list>
+		/// </remarks>
+		object FillArrayWithColumn(int tableId, int columnPid, object[] keys, object[] values, DateTime? timeInfo, bool useClearAndLeave);
+
+		/// <summary>
+		/// Sets the specified cells of a column with the provided values.
+		/// </summary>
+		/// <param name="tableId">The ID of the table parameter.</param>
+		/// <param name="columnPid">The ID of the column parameter.</param>
+		/// <param name="keys">The primary keys of the rows for which the column has to be updated.</param>
 		/// <param name="values">The values to set.</param>
 		/// <returns></returns>
 		/// <remarks>
@@ -628,13 +965,37 @@ namespace Skyline.DataMiner.Scripting
 		///			</item>
 		///		</list>
 		/// </remarks>
-		object FillArrayWithColumn(int tableID, int columnID, object[] primaryKeys, object[] values);
+		object FillArrayWithColumn(int tableId, int columnPid, object[] keys, object[] values);
+
+		/// <summary>
+		/// Sets the specified cells of a column with the provided values.
+		/// </summary>
+		/// <param name="tableId">The ID of the table parameter.</param>
+		/// <param name="columnPid">The ID of the column parameter.</param>
+		/// <param name="keys">The primary keys of the rows for which the column has to be updated.</param>
+		/// <param name="values">The values to set.</param>
+		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
+		/// <returns></returns>
+		/// <remarks>
+		///		<list type = "bullet" >
+		///			<item>
+		///				<description>This overload is supported from DataMiner 10.4.2 onwards (RN 38153).</description>
+		///			</item>
+		///			<item>
+		///				<description>This method acts as a wrapper for a NotifyProtocol type 220 <see href="xref:NT_FILL_ARRAY_WITH_COLUMN">NT_FILL_ARRAY_WITH_COLUMN</see> call.</description>
+		///			</item>
+		///			<item>
+		///				<description>In case the values array only contains one value, this value will be used for all specified primary keys.</description>
+		///			</item>
+		///		</list>
+		/// </remarks>
+		object FillArrayWithColumn(int tableId, int columnPid, object[] keys, object[] values, bool useClearAndLeave);
 
 		/// <summary>
 		/// Gets the primary keys or display keys of the specified table.
 		/// </summary>
-		/// <param name="tableID">The ID of the table parameter.</param>
-		/// <param name="keyType">Specify KeyType.DisplayKey to retrieve the display keys.</param>
+		/// <param name="tableId">The ID of the table parameter.</param>
+		/// <param name="type">Specify KeyType.DisplayKey to retrieve the display keys.</param>
 		/// <returns>The primary keys or display keys of the rows present in the table.</returns>
 		/// <remarks>
 		///		<list type = "bullet" >
@@ -649,7 +1010,7 @@ namespace Skyline.DataMiner.Scripting
 		///			</item>
 		///		</list>
 		/// </remarks>
-		string[] GetKeys(int tableID, NotifyProtocol.KeyType keyType);
+		string[] GetKeys(int tableId, NotifyProtocol.KeyType type);
 
 		/// <summary>
 		/// Gets the primary keys of the specified table.
@@ -668,7 +1029,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <summary>
 		/// Gets the primary keys of all rows that have the specified value for the specified column. 
 		/// </summary>
-		/// <param name="columnID">The ID of the column parameter.</param>
+		/// <param name="columnPid">The ID of the column parameter.</param>
 		/// <param name="value">The value to match.</param>
 		/// <returns>The primary keys of the rows that have the specified value for the specified column.</returns>
 		/// <remarks>
@@ -687,7 +1048,7 @@ namespace Skyline.DataMiner.Scripting
 		///			</item>
 		///		</list>
 		/// </remarks>
-		string[] GetKeysForIndex(int columnID, string value);
+		string[] GetKeysForIndex(int columnPid, string value);
 
 		/// <summary>
 		/// Retrieves the value of the parameter with the specified ID.
@@ -719,6 +1080,29 @@ namespace Skyline.DataMiner.Scripting
 		object GetParameter(int iID);
 
 		/// <summary>
+		/// Sets the value of the specified parameter to the specified byte array.
+		/// </summary>
+		/// <param name="pid">The ID of the parameter.</param>
+		/// <param name="data">The binary data to set.</param>
+		/// <remarks>
+		///		<list type = "bullet" >
+		///			<item>
+		///				<description>Prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
+		///			</item>
+		///			<item>
+		///				<description>This method acts as a wrapper for a NotifyProtocol type 177 call <see href="xref:NT_SET_BINARY_DATA">NT_SET_BINARY_DATA</see>.</description>
+		///			</item>
+		///			<item>
+		///				<description>Only supported for parameters with <see href="xref:Protocol.Params.Param.Interprete.LengthType">LengthType</see> set to <c>fixed</c>, <c>next param</c> or <c>last next param</c>. For parameters with LengthType set to <c>fixed</c>, the number of bytes that will be set is limited to the value specified in <see href="xref:Protocol.Params.Param.Interprete.Length">Length</see>.</description>
+		///			</item>
+		///			<item>
+		///				<description>Setting a parameter value using this method does not trigger a change event. Refer to <see href="xref:LogicParameters#parameter-change-events">Parameter change events</see> for more information on the implications.</description>
+		///			</item>
+		///		</list>
+		/// </remarks>
+		void SetParameterBinary(int pid, byte[] data);
+
+		/// <summary>
 		/// Sets the parameter with the specified ID to the specified value.
 		/// </summary>
 		/// <param name="iID">The ID of the parameter.</param>
@@ -747,29 +1131,6 @@ namespace Skyline.DataMiner.Scripting
 		/// </code>
 		/// </example>
 		int SetParameter(int iID, object value, ValueType timeInfo);
-
-		/// <summary>
-		/// Sets the value of the specified parameter to the specified byte array.
-		/// </summary>
-		/// <param name="parameterID">The ID of the parameter.</param>
-		/// <param name="data">The binary data to set.</param>
-		/// <remarks>
-		///		<list type = "bullet" >
-		///			<item>
-		///				<description>Prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
-		///			</item>
-		///			<item>
-		///				<description>This method acts as a wrapper for a NotifyProtocol type 177 call <see href="xref:NT_SET_BINARY_DATA">NT_SET_BINARY_DATA</see>.</description>
-		///			</item>
-		///			<item>
-		///				<description>Only supported for parameters with <see href="xref:Protocol.Params.Param.Interprete.LengthType">LengthType</see> set to <c>fixed</c>, <c>next param</c> or <c>last next param</c>. For parameters with LengthType set to <c>fixed</c>, the number of bytes that will be set is limited to the value specified in <see href="xref:Protocol.Params.Param.Interprete.Length">Length</see>.</description>
-		///			</item>
-		///			<item>
-		///				<description>Setting a parameter value using this method does not trigger a change event. Refer to <see href="xref:LogicParameters#parameter-change-events">Parameter change events</see> for more information on the implications.</description>
-		///			</item>
-		///		</list>
-		/// </remarks>
-		void SetParameterBinary(int parameterID, byte[] data);
 
 		/// <summary>
 		/// Sets the parameter with the specified ID to the specified value.
@@ -1561,7 +1922,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <summary>
 		/// Retrieves the value of a cell in the table specified by the primary key and 1-based column position.
 		/// </summary>
-		/// <param name="iPID">The ID of the table parameter.</param>
+		/// <param name="iID">The ID of the table parameter.</param>
 		/// <param name="key">The primary key of the row.</param>
 		/// <param name="iY">The 1-based position of the column.</param>
 		/// <returns>The value of the cell.</returns>
@@ -1586,7 +1947,7 @@ namespace Skyline.DataMiner.Scripting
 		///	string myValue = Convert.ToString(protocol.GetParameterIndexByKey(100, "Row 1", 6));
 		/// </code>
 		/// </example>
-		object GetParameterIndexByKey(int iPID, string key, int iY);
+		object GetParameterIndexByKey(int iID, string key, int iY);
 
 		/// <summary>
 		/// Sets the value of a cell in a table, identified by the primary key of the row and column position, with the specified value.
@@ -1759,7 +2120,7 @@ namespace Skyline.DataMiner.Scripting
 		/// </summary>
 		/// <param name="iPID">The ID of the table parameter.</param>
 		/// <param name="iRow">The 0-based index of the row.</param>
-		/// <param name="row">The row data. </param>
+		/// <param name="rowInfo">The row data. </param>
 		/// <param name="timeInfo">Time stamp.</param>
 		/// <param name="bOverrideBehaviour">When set to true, protocol.Clear and protocol.Leave can be used as cell values, which will clear or preserve the cell content, respectively.</param>
 		/// <returns>Array with value 0 (No Change) or 1(Change) to indicate the change state of the cell in the row.</returns>
@@ -1782,7 +2143,7 @@ namespace Skyline.DataMiner.Scripting
 		///			</item>
 		///		</list>
 		///	</remarks>
-		object SetRow(int iPID, int iRow, object row, ValueType timeInfo, [MarshalAs(UnmanagedType.U1)] bool bOverrideBehaviour);
+		object SetRow(int iPID, int iRow, object rowInfo, ValueType timeInfo, [MarshalAs(UnmanagedType.U1)] bool bOverrideBehaviour);
 
 		/// <summary>
 		/// Sets the data of the specified row to the specified values.<br/>
@@ -1790,7 +2151,7 @@ namespace Skyline.DataMiner.Scripting
 		/// </summary>
 		/// <param name="iPID">The ID of the table parameter.</param>
 		/// <param name="iRow">The 0-based index of the row.</param>
-		/// <param name="row">The row data. </param>
+		/// <param name="rowInfo">The row data. </param>
 		/// <param name="timeInfo">Time stamp.</param>
 		/// <returns>Array with value 0 (No Change) or 1(Change) to indicate the change state of the cell in the row.</returns>
 		/// <remarks>
@@ -1812,7 +2173,7 @@ namespace Skyline.DataMiner.Scripting
 		///			</item>
 		///		</list>
 		///	</remarks>
-		object SetRow(int iPID, int iRow, object row, ValueType timeInfo);
+		object SetRow(int iPID, int iRow, object rowInfo, ValueType timeInfo);
 
 		/// <summary>
 		/// Sets the data of the specified row to the specified values.<br/>
@@ -1820,7 +2181,7 @@ namespace Skyline.DataMiner.Scripting
 		/// </summary>
 		/// <param name="iPID">The ID of the table parameter.</param>
 		/// <param name="iRow">The 0-based index of the row.</param>
-		/// <param name="row">The row data. </param>
+		/// <param name="rowInfo">The row data. </param>
 		/// <param name="bOverrideBehaviour">When set to true, protocol.Clear and protocol.Leave can be used as cell values, which will clear or preserve the cell content, respectively.</param>
 		/// <returns>Array with value 0 (No Change) or 1(Change) to indicate the change state of the cell in the row.</returns>
 		/// <remarks>
@@ -1839,7 +2200,7 @@ namespace Skyline.DataMiner.Scripting
 		///			</item>
 		///		</list>
 		///	</remarks>
-		object SetRow(int iPID, int iRow, object row, [MarshalAs(UnmanagedType.U1)] bool bOverrideBehaviour);
+		object SetRow(int iPID, int iRow, object rowInfo, [MarshalAs(UnmanagedType.U1)] bool bOverrideBehaviour);
 
 		/// <summary>
 		/// Sets the data of the specified row to the specified values.<br/>
@@ -1847,7 +2208,7 @@ namespace Skyline.DataMiner.Scripting
 		/// </summary>
 		/// <param name="iPID">The ID of the table parameter.</param>
 		/// <param name="iRow">The 0-based index of the row.</param>
-		/// <param name="row">The row data as an object array. </param>
+		/// <param name="rowInfo">The row data as an object array. </param>
 		/// <returns>Array with value 0 (No Change) or 1(Change) to indicate the change state of the cell in the row.</returns>
 		/// <remarks>
 		///		<list type = "bullet" >
@@ -1865,14 +2226,14 @@ namespace Skyline.DataMiner.Scripting
 		///			</item>
 		///		</list>
 		///	</remarks>
-		object SetRow(int iPID, int iRow, object row);
+		object SetRow(int iPID, int iRow, object rowInfo);
 
 		/// <summary>
 		/// Sets the data of the specified row to the specified values.
 		/// </summary>
 		/// <param name="iPID">The ID of the table parameter.</param>
-		/// <param name="key">The primary key of the row.</param>
-		/// <param name="row">The row data.</param>
+		/// <param name="row">The primary key of the row.</param>
+		/// <param name="rowInfo">The row data.</param>
 		/// <param name="timeInfo">Time stamp.</param>
 		/// <param name="bOverrideBehaviour">When set to true, protocol.Clear and protocol.Leave can be used as cell values, which will clear or preserve the cell content, respectively.</param>
 		/// <returns>Array with value 0 (No Change) or 1(Change) to indicate the change state of the cell in the row.</returns>
@@ -1895,14 +2256,14 @@ namespace Skyline.DataMiner.Scripting
 		///			</item>
 		///		</list>
 		///	</remarks>
-		object SetRow(int iPID, string key, object row, ValueType timeInfo, [MarshalAs(UnmanagedType.U1)] bool bOverrideBehaviour);
+		object SetRow(int iPID, string row, object rowInfo, ValueType timeInfo, [MarshalAs(UnmanagedType.U1)] bool bOverrideBehaviour);
 
 		/// <summary>
 		/// Sets the data of the specified row to the specified values.
 		/// </summary>
 		/// <param name="iPID">The ID of the table parameter.</param>
-		/// <param name="key">The primary key of the row.</param>
-		/// <param name="row">The row data. </param>
+		/// <param name="row">The primary key of the row.</param>
+		/// <param name="rowInfo">The row data. </param>
 		/// <param name="timeInfo">Time stamp.</param>
 		/// <returns>Array with value 0 (No Change) or 1(Change) to indicate the change state of the cell in the row.</returns>
 		/// <remarks>
@@ -1924,14 +2285,14 @@ namespace Skyline.DataMiner.Scripting
 		///			</item>
 		///		</list>
 		///	</remarks>
-		object SetRow(int iPID, string key, object row, ValueType timeInfo);
+		object SetRow(int iPID, string row, object rowInfo, ValueType timeInfo);
 
 		/// <summary>
 		/// Sets the data of the specified row to the specified values.
 		/// </summary>
 		/// <param name="iPID">The ID of the table parameter.</param>
-		/// <param name="key">The primary key of the row.</param>
-		/// <param name="row">The row data. </param>
+		/// <param name="row">The primary key of the row.</param>
+		/// <param name="rowInfo">The row data. </param>
 		/// <param name="bOverrideBehaviour">When set to true, protocol.Clear and protocol.Leave can be used as cell values, which will clear or preserve the cell content, respectively.</param>
 		/// <returns>Array with value 0 (No Change) or 1(Change) to indicate the change state of the cell in the row.</returns>
 		/// <remarks>
@@ -1950,14 +2311,14 @@ namespace Skyline.DataMiner.Scripting
 		///			</item>
 		///		</list>
 		///	</remarks>
-		object SetRow(int iPID, string key, object row, [MarshalAs(UnmanagedType.U1)] bool bOverrideBehaviour);
+		object SetRow(int iPID, string row, object rowInfo, [MarshalAs(UnmanagedType.U1)] bool bOverrideBehaviour);
 
 		/// <summary>
 		/// Sets the data of the specified row to the specified values.
 		/// </summary>
 		/// <param name="iPID">The ID of the table parameter.</param>
-		/// <param name="key">The primary key of the row.</param>
-		/// <param name="row">The row data. </param>
+		/// <param name="row">The primary key of the row.</param>
+		/// <param name="rowInfo">The row data. </param>
 		/// <returns>Array with value 0 (No Change) or 1(Change) to indicate the change state of the cell in the row.</returns>
 		/// <remarks>
 		///		<list type = "bullet" >
@@ -1975,7 +2336,7 @@ namespace Skyline.DataMiner.Scripting
 		///			</item>
 		///		</list>
 		///	</remarks>
-		object SetRow(int iPID, string key, object row);
+		object SetRow(int iPID, string row, object rowInfo);
 
 		/// <summary>
 		/// Gets the value that indicates the cell in the row should be cleared.
@@ -2611,13 +2972,11 @@ namespace Skyline.DataMiner.Scripting
 		///	</remarks>
 		void Log(string message);
 
-		//void DisposeResources();
-
 		/// <summary>
 		/// Retrieves the specified DCF interface.
 		/// </summary>
-		/// <param name="DMAId">The DataMiner Agent ID of the element.</param>
-		/// <param name="EId">The element ID of the element.</param>
+		/// <param name="iDMAId">The DataMiner Agent ID of the element.</param>
+		/// <param name="iEId">The element ID of the element.</param>
 		/// <param name="name">The name of the interface.</param>
 		/// <param name="customName"><c>true</c> if the name specified in <paramref name="name"/> is the custom interface name; otherwise, <c>false</c>.</param>
 		/// <param name="exported"><c>true</c> to include interfaces of DVE children; otherwise, <c>false</c>.</param>
@@ -2637,13 +2996,13 @@ namespace Skyline.DataMiner.Scripting
 		/// var myInterface = protocol.GetConnectivityInterface(400, 2000, "MyInterface", true, true);
 		/// </code>
 		/// </example>
-		ConnectivityInterface GetConnectivityInterface(int DMAId, int EId, string name, [MarshalAs(UnmanagedType.U1)] bool customName, [MarshalAs(UnmanagedType.U1)] bool exported);
+		ConnectivityInterface GetConnectivityInterface(int iDMAId, int iEId, string name, [MarshalAs(UnmanagedType.U1)] bool customName, [MarshalAs(UnmanagedType.U1)] bool exported);
 
 		/// <summary>
 		/// Retrieves the specified DCF interface.
 		/// </summary>
-		/// <param name="DMAId">The DataMiner Agent ID of the element.</param>
-		/// <param name="EId">The element ID of the element.</param>
+		/// <param name="iDMAId">The DataMiner Agent ID of the element.</param>
+		/// <param name="iEId">The element ID of the element.</param>
 		/// <param name="name">The name of the interface.</param>
 		/// <param name="customName"><c>true</c> if the name specified in <paramref name="name"/> is the custom interface name; otherwise, <c>false</c>.</param>
 		/// <returns>The specified DCF interface or <see langword="null"/> in case the interface was not found.</returns>
@@ -2662,14 +3021,14 @@ namespace Skyline.DataMiner.Scripting
 		/// var myInterface = protocol.GetConnectivityInterface(400, 2000, "MyInterface", true);
 		/// </code>
 		/// </example>
-		ConnectivityInterface GetConnectivityInterface(int DMAId, int EId, string name, [MarshalAs(UnmanagedType.U1)] bool customName);
+		ConnectivityInterface GetConnectivityInterface(int iDMAId, int iEId, string name, [MarshalAs(UnmanagedType.U1)] bool customName);
 
 		/// <summary>
 		/// Retrieves the specified DCF interface.
 		/// </summary>
-		/// <param name="DMAId">The DataMiner Agent ID of the element the interface is part of.</param>
-		/// <param name="EId">The element ID of the element the interface is part of.</param>
-		/// <param name="ItfId">The ID of the interface.</param>
+		/// <param name="iDMAId">The DataMiner Agent ID of the element the interface is part of.</param>
+		/// <param name="iEId">The element ID of the element the interface is part of.</param>
+		/// <param name="iItfId">The ID of the interface.</param>
 		/// <param name="exported"><c>true</c> to include interfaces of DVE children; otherwise, <c>false</c>.</param>
 		/// <returns>The specified interface or <see langword="null"/> in case the specified interface was not found.</returns>
 		/// <remarks>
@@ -2687,14 +3046,14 @@ namespace Skyline.DataMiner.Scripting
 		/// var myInterface = protocol.GetConnectivityInterface(400, 2000, 1, true);
 		/// </code>
 		/// </example>
-		ConnectivityInterface GetConnectivityInterface(int DMAId, int EId, int ItfId, [MarshalAs(UnmanagedType.U1)] bool exported);
+		ConnectivityInterface GetConnectivityInterface(int iDMAId, int iEId, int iItfId, [MarshalAs(UnmanagedType.U1)] bool exported);
 
 		/// <summary>
 		/// Retrieves the specified DCF interface.
 		/// </summary>
-		/// <param name="DMAId">The DataMiner Agent ID of the element.</param>
-		/// <param name="EId">The element ID of the element.</param>
-		/// <param name="ItfId">The ID of the interface.</param>
+		/// <param name="iDMAId">The DataMiner Agent ID of the element.</param>
+		/// <param name="iEId">The element ID of the element.</param>
+		/// <param name="iItfId">The ID of the interface.</param>
 		/// <returns>The specified DCF interface or <see langword="null"/> in case the interface was not found.</returns>
 		/// <remarks>
 		///		<list type = "bullet" >
@@ -2711,13 +3070,13 @@ namespace Skyline.DataMiner.Scripting
 		/// var myInterface = protocol.GetConnectivityInterface(400, 2000, 1);
 		/// </code>
 		/// </example>
-		ConnectivityInterface GetConnectivityInterface(int DMAId, int EId, int ItfId);
+		ConnectivityInterface GetConnectivityInterface(int iDMAId, int iEId, int iItfId);
 
 		/// <summary>
 		/// Retrieves the DCF interfaces of the specified element that match the specified name filter.
 		/// </summary>
-		/// <param name="DMAId">The DataMiner Agent ID of the element.</param>
-		/// <param name="EId">The element ID of the element.</param>
+		/// <param name="iDMAId">The DataMiner Agent ID of the element.</param>
+		/// <param name="iEId">The element ID of the element.</param>
 		/// <param name="nameFilter">The name filter.</param>
 		/// <param name="customName"><c>true</c> if <paramref name="nameFilter"/> refers to the custom name; otherwise, <c>false</c>.</param>
 		/// <param name="exported"><c>true</c> to include interfaces of DVE children; otherwise, <c>false</c>.</param>
@@ -2730,13 +3089,13 @@ namespace Skyline.DataMiner.Scripting
 		/// Dictionary&lt;int, ConnectivityInterface&gt; interfaces = protocol.GetConnectivityInterfaces(400, 2000, "Input*", true, false);
 		/// </code>
 		/// </example>
-		Dictionary<int, ConnectivityInterface> GetConnectivityInterfaces(int DMAId, int EId, string nameFilter, [MarshalAs(UnmanagedType.U1)] bool customName, [MarshalAs(UnmanagedType.U1)] bool exported);
+		Dictionary<int, ConnectivityInterface> GetConnectivityInterfaces(int iDMAId, int iEId, string nameFilter, [MarshalAs(UnmanagedType.U1)] bool customName, [MarshalAs(UnmanagedType.U1)] bool exported);
 
 		/// <summary>
 		/// Retrieves the DCF interfaces of the specified element that match the specified name filter.
 		/// </summary>
-		/// <param name="DMAId">The DataMiner Agent ID of the element.</param>
-		/// <param name="EId">The element ID of the element.</param>
+		/// <param name="iDMAId">The DataMiner Agent ID of the element.</param>
+		/// <param name="iEId">The element ID of the element.</param>
 		/// <param name="nameFilter">The name filter.</param>
 		/// <param name="customName"><c>true</c> if <paramref name="nameFilter"/> refers to the custom name; otherwise, <c>false</c>.</param>
 		/// <returns>The matching DCF interfaces.</returns>
@@ -2745,13 +3104,13 @@ namespace Skyline.DataMiner.Scripting
 		/// Dictionary&lt;int, ConnectivityInterface&gt; interfaces = protocol.GetConnectivityInterfaces(400, 2000, "Input*", true);
 		/// </code>
 		/// </example>
-		Dictionary<int, ConnectivityInterface> GetConnectivityInterfaces(int DMAId, int EId, string nameFilter, [MarshalAs(UnmanagedType.U1)] bool customName);
+		Dictionary<int, ConnectivityInterface> GetConnectivityInterfaces(int iDMAId, int iEId, string nameFilter, [MarshalAs(UnmanagedType.U1)] bool customName);
 
 		/// <summary>
 		/// Retrieves the DCF interfaces of the specified element.
 		/// </summary>
-		/// <param name="DMAId">The DataMiner Agent ID of the element.</param>
-		/// <param name="EId">The element ID of the element.</param>
+		/// <param name="iDMAId">The DataMiner Agent ID of the element.</param>
+		/// <param name="iEId">The element ID of the element.</param>
 		/// <param name="exported"><c>true</c> to include interfaces of DVE children; otherwise, <c>false</c>.</param>
 		/// <returns>The matching DCF interfaces.</returns>
 		/// <remarks>
@@ -2762,13 +3121,13 @@ namespace Skyline.DataMiner.Scripting
 		/// Dictionary&lt;int, ConnectivityInterface&gt; interfaces = protocol.GetConnectivityInterfaces(400, 2000, false);
 		/// </code>
 		/// </example>
-		Dictionary<int, ConnectivityInterface> GetConnectivityInterfaces(int DMAId, int EId, [MarshalAs(UnmanagedType.U1)] bool exported);
+		Dictionary<int, ConnectivityInterface> GetConnectivityInterfaces(int iDMAId, int iEId, [MarshalAs(UnmanagedType.U1)] bool exported);
 
 		/// <summary>
 		/// Retrieves the DCF interfaces of the specified element.
 		/// </summary>
-		/// <param name="DMAId">The DataMiner Agent ID of the element.</param>
-		/// <param name="EId">The element ID of the element.</param>
+		/// <param name="iDMAId">The DataMiner Agent ID of the element.</param>
+		/// <param name="iEId">The element ID of the element.</param>
 		/// <returns>The DCF interfaces.</returns>
 		/// <remarks>This will not include the interfaces of the DVE children.</remarks>
 		/// <example>
@@ -2776,7 +3135,7 @@ namespace Skyline.DataMiner.Scripting
 		/// Dictionary&lt;int, ConnectivityInterface&gt; interfaces = protocol.GetConnectivityInterfaces(400, 2000);
 		/// </code>
 		/// </example>
-		Dictionary<int, ConnectivityInterface> GetConnectivityInterfaces(int DMAId, int EId);
+		Dictionary<int, ConnectivityInterface> GetConnectivityInterfaces(int iDMAId, int iEId);
 
 		/// <summary>
 		/// Gets the DCF interfaces known by the element that executes this QAction.
@@ -2795,8 +3154,8 @@ namespace Skyline.DataMiner.Scripting
 		/// <summary>
 		/// Retrieves the specified DCF connection.
 		/// </summary>
-		/// <param name="DMAId">The DataMiner Agent ID of the element that holds the corresponding connection entry in the connections table.</param>
-		/// <param name="EId">The element ID of the element that holds the corresponding connection entry in the connections table.</param>
+		/// <param name="iDMAId">The DataMiner Agent ID of the element that holds the corresponding connection entry in the connections table.</param>
+		/// <param name="iEId">The element ID of the element that holds the corresponding connection entry in the connections table.</param>
 		/// <param name="name">The name of the connection.</param>
 		/// <param name="exported"><c>true</c> to include interfaces of DVE children; otherwise, <c>false</c>.</param>
 		/// <returns>The DCF connection or <see langword="null"/> in case the connection was not found.</returns>
@@ -2815,13 +3174,13 @@ namespace Skyline.DataMiner.Scripting
 		/// var connection = protocol.GetConnectivityConnection(400, 2000, "MyConnection", false);
 		/// </code>
 		/// </example>
-		ConnectivityConnection GetConnectivityConnection(int DMAId, int EId, string name, [MarshalAs(UnmanagedType.U1)] bool exported);
+		ConnectivityConnection GetConnectivityConnection(int iDMAId, int iEId, string name, [MarshalAs(UnmanagedType.U1)] bool exported);
 
 		/// <summary>
 		/// Retrieves the specified DCF connection.
 		/// </summary>
-		/// <param name="DMAId">The DataMiner Agent ID of the element that holds the corresponding connection entry in the connections table.</param>
-		/// <param name="EId">The element ID of the element that holds the corresponding connection entry in the connections table.</param>
+		/// <param name="iDMAId">The DataMiner Agent ID of the element that holds the corresponding connection entry in the connections table.</param>
+		/// <param name="iEId">The element ID of the element that holds the corresponding connection entry in the connections table.</param>
 		/// <param name="name">The name of the connection.</param>
 		/// <returns>The DCF connection or <see langword="null"/> in case the connection was not found.</returns>
 		/// <remarks>
@@ -2839,14 +3198,14 @@ namespace Skyline.DataMiner.Scripting
 		/// var connection = protocol.GetConnectivityConnection(400, 2000, "MyConnection");
 		/// </code>
 		/// </example>
-		ConnectivityConnection GetConnectivityConnection(int DMAId, int EId, string name);
+		ConnectivityConnection GetConnectivityConnection(int iDMAId, int iEId, string name);
 
 		/// <summary>
 		/// Retrieves the specified DCF connection.
 		/// </summary>
-		/// <param name="DMAId">The DataMiner Agent ID of the element that holds the corresponding connection entry in the connections table.</param>
-		/// <param name="EId">The element ID of the element that holds the corresponding connection entry in the connections table.</param>
-		/// <param name="ConnectionId">The ID of the connection.</param>
+		/// <param name="iDMAId">The DataMiner Agent ID of the element that holds the corresponding connection entry in the connections table.</param>
+		/// <param name="iEId">The element ID of the element that holds the corresponding connection entry in the connections table.</param>
+		/// <param name="iConnectionId">The ID of the connection.</param>
 		/// <param name="exported"><c>true</c> to include interfaces of DVE children; otherwise, <c>false</c>.</param>
 		/// <returns>The DCF connection or <see langword="null"/> in case the connection was not found.</returns>
 		/// <remarks>
@@ -2864,14 +3223,14 @@ namespace Skyline.DataMiner.Scripting
 		/// var connection = protocol.GetConnectivityConnection(400, 2000, 1, false);
 		/// </code>
 		/// </example>
-		ConnectivityConnection GetConnectivityConnection(int DMAId, int EId, int ConnectionId, [MarshalAs(UnmanagedType.U1)] bool exported);
+		ConnectivityConnection GetConnectivityConnection(int iDMAId, int iEId, int iConnectionId, [MarshalAs(UnmanagedType.U1)] bool exported);
 
 		/// <summary>
 		/// Retrieves the specified DCF connection.
 		/// </summary>
-		/// <param name="DMAId">The DataMiner Agent ID of the element that holds the corresponding connection entry in the connections table.</param>
-		/// <param name="EId">The element ID of the element that holds the corresponding connection entry in the connections table.</param>
-		/// <param name="ConnectionId">The ID of the connection.</param>
+		/// <param name="iDMAId">The DataMiner Agent ID of the element that holds the corresponding connection entry in the connections table.</param>
+		/// <param name="iEId">The element ID of the element that holds the corresponding connection entry in the connections table.</param>
+		/// <param name="iConnectionId">The ID of the connection.</param>
 		/// <returns>The DCF connection or <see langword="null"/> in case the connection was not found.</returns>
 		/// <remarks>
 		///		<list type = "bullet" >
@@ -2888,13 +3247,13 @@ namespace Skyline.DataMiner.Scripting
 		/// var connection = protocol.GetConnectivityConnection(400, 2000, 1);
 		/// </code>
 		/// </example>
-		ConnectivityConnection GetConnectivityConnection(int DMAId, int EId, int ConnectionId);
+		ConnectivityConnection GetConnectivityConnection(int iDMAId, int iEId, int iConnectionId);
 
 		/// <summary>
 		/// Retrieves the DCF connections that are known by the specified element and that match the specified name filter.
 		/// </summary>
-		/// <param name="DMAId">The DataMiner Agent ID of the element.</param>
-		/// <param name="EId">The element ID of the element.</param>
+		/// <param name="iDMAId">The DataMiner Agent ID of the element.</param>
+		/// <param name="iEId">The element ID of the element.</param>
 		/// <param name="nameFilter">The name filter.</param>
 		/// <param name="exported"><c>true</c> to include connections of DVE children; otherwise, <c>false</c>.</param>
 		/// <returns>The DCF connections that are known by the specified element and that match the specified name filter.</returns>
@@ -2906,13 +3265,13 @@ namespace Skyline.DataMiner.Scripting
 		/// Dictionary&lt;int, ConnectivityConnection&gt; connections = protocol.GetConnectivityConnections(400, 2000, "Input*", false);
 		/// </code>
 		/// </example>
-		Dictionary<int, ConnectivityConnection> GetConnectivityConnections(int DMAId, int EId, string nameFilter, [MarshalAs(UnmanagedType.U1)] bool exported);
+		Dictionary<int, ConnectivityConnection> GetConnectivityConnections(int iDMAId, int iEId, string nameFilter, [MarshalAs(UnmanagedType.U1)] bool exported);
 
 		/// <summary>
 		/// Retrieves the DCF connections that are known by the specified element and that match the specified name filter.
 		/// </summary>
-		/// <param name="DMAId">The DataMiner Agent ID of the element.</param>
-		/// <param name="EId">The element ID of the element.</param>
+		/// <param name="iDMAId">The DataMiner Agent ID of the element.</param>
+		/// <param name="iEId">The element ID of the element.</param>
 		/// <param name="nameFilter">The name filter.</param>
 		/// <returns>The DCF connections that are known by the specified element and that match the specified name filter.</returns>
 		/// <example>
@@ -2920,13 +3279,13 @@ namespace Skyline.DataMiner.Scripting
 		/// Dictionary&lt;int, ConnectivityConnection&gt; connections = protocol.GetConnectivityConnections(400, 2000, "Input*");
 		/// </code>
 		/// </example>
-		Dictionary<int, ConnectivityConnection> GetConnectivityConnections(int DMAId, int EId, string nameFilter);
+		Dictionary<int, ConnectivityConnection> GetConnectivityConnections(int iDMAId, int iEId, string nameFilter);
 
 		/// <summary>
 		/// Retrieves the DCF connections that are known by the specified element.
 		/// </summary>
-		/// <param name="DMAId">The DataMiner Agent ID of the element.</param>
-		/// <param name="EId">The element ID of the element.</param>
+		/// <param name="iDMAId">The DataMiner Agent ID of the element.</param>
+		/// <param name="iEId">The element ID of the element.</param>
 		/// <param name="exported"><c>true</c> to include connections of DVE children; otherwise, <c>false</c>.</param>
 		/// <returns>The DCF connections that are known by the specified element.</returns>
 		/// <remarks>
@@ -2937,20 +3296,20 @@ namespace Skyline.DataMiner.Scripting
 		/// Dictionary&lt;int, ConnectivityConnection&gt; connections = protocol.GetConnectivityConnections(400, 2000, true);
 		/// </code>
 		/// </example>
-		Dictionary<int, ConnectivityConnection> GetConnectivityConnections(int DMAId, int EId, [MarshalAs(UnmanagedType.U1)] bool exported);
+		Dictionary<int, ConnectivityConnection> GetConnectivityConnections(int iDMAId, int iEId, [MarshalAs(UnmanagedType.U1)] bool exported);
 
 		/// <summary>
 		/// Retrieves the DCF connections that are known by the specified element.
 		/// </summary>
-		/// <param name="DMAId">The DataMiner Agent ID of the element.</param>
-		/// <param name="EId">The element ID of the element.</param>
+		/// <param name="iDMAId">The DataMiner Agent ID of the element.</param>
+		/// <param name="iEId">The element ID of the element.</param>
 		/// <returns>The DCF connections that are known by the specified element.</returns>
 		/// <example>
 		/// <code>
 		/// Dictionary&lt;int, ConnectivityConnection&gt; connections = protocol.GetConnectivityConnections(400, 2000);
 		/// </code>
 		/// </example>
-		Dictionary<int, ConnectivityConnection> GetConnectivityConnections(int DMAId, int EId);
+		Dictionary<int, ConnectivityConnection> GetConnectivityConnections(int iDMAId, int iEId);
 
 		/// <summary>
 		/// Gets the DCF connections known by the element that executes this QAction.
