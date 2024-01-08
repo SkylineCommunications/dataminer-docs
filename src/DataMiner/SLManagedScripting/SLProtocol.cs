@@ -36,11 +36,11 @@ namespace Skyline.DataMiner.Scripting
 		///			</item>
 		///			<item>
 		///			<description>
-		///			<para>To add a row with a specific time stamp:</para>
+		///			<para>To add a row with a specific timestamp:</para>
 		///			<para>row (object[]):</para>
 		///			<list type="bullet">
 		///			<item><description>row[0] (object[]): the row data</description></item>
-		///			<item><description>row[1] (DateTime): the time stamp</description></item>
+		///			<item><description>row[1] (DateTime): the timestamp</description></item>
 		///			</list>
 		///			<code language = "csharp">
 		///			int tableID = 1000;
@@ -274,7 +274,7 @@ namespace Skyline.DataMiner.Scripting
 		/// </summary>
 		/// <param name="tableId">The ID of the table parameter.</param>
 		/// <param name="rows">The rows of the table.</param>
-		/// <param name="option">SaveOption.Full = unspecified primary keys are removed; SaveOption .Partial = rows with unspecified primary keys are preserved.</param>
+		/// <param name="option">SaveOption.Full = unspecified primary keys are removed; SaveOption.Partial = rows with unspecified primary keys are preserved.</param>
 		/// <returns></returns>
 		/// <remarks>
 		///		<list type = "bullet">
@@ -305,7 +305,7 @@ namespace Skyline.DataMiner.Scripting
 		/// </summary>
 		/// <param name="tableId">The ID of the table parameter.</param>
 		/// <param name="rows">The rows of the table.</param>
-		/// <param name="option">SaveOption.Full = unspecified primary keys are removed; SaveOption .Partial = rows with unspecified primary keys are preserved.</param>
+		/// <param name="option">SaveOption.Full = unspecified primary keys are removed; SaveOption.Partial = rows with unspecified primary keys are preserved.</param>
 		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
 		/// <returns></returns>
 		/// <remarks>
@@ -337,8 +337,8 @@ namespace Skyline.DataMiner.Scripting
 		/// </summary>
 		/// <param name="tableId">The ID of the table parameter.</param>
 		/// <param name="rows">The rows of the table.</param>
-		/// <param name="option">SaveOption.Full = unspecified primary keys are removed; SaveOption .Partial = rows with unspecified primary keys are preserved.</param>
-		/// <param name="timeInfo">Time stamp</param>
+		/// <param name="option">SaveOption.Full = unspecified primary keys are removed; SaveOption.Partial = rows with unspecified primary keys are preserved.</param>
+		/// <param name="timeInfo">Timestamp</param>
 		/// <returns></returns>
 		/// <remarks>
 		///		<list type = "bullet">
@@ -372,8 +372,8 @@ namespace Skyline.DataMiner.Scripting
 		/// </summary>
 		/// <param name="tableId">The ID of the table parameter.</param>
 		/// <param name="rows">The rows of the table.</param>
-		/// <param name="option">SaveOption.Full = unspecified primary keys are removed; SaveOption .Partial = rows with unspecified primary keys are preserved.</param>
-		/// <param name="timeInfo">Time stamp</param>
+		/// <param name="option">SaveOption.Full = unspecified primary keys are removed; SaveOption.Partial = rows with unspecified primary keys are preserved.</param>
+		/// <param name="timeInfo">Timestamp</param>
 		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
 		/// <returns></returns>
 		/// <remarks>
@@ -408,7 +408,7 @@ namespace Skyline.DataMiner.Scripting
 		/// </summary>
 		/// <param name="tableId">The ID of the table parameter.</param>
 		/// <param name="columns">The columns of the table.</param>
-		/// <param name="timeInfo">Time stamp</param>
+		/// <param name="timeInfo">Timestamp</param>
 		/// <returns></returns>
 		/// <remarks>
 		///		<list type = "bullet">
@@ -442,7 +442,7 @@ namespace Skyline.DataMiner.Scripting
 		/// </summary>
 		/// <param name="tableId">The ID of the table parameter.</param>
 		/// <param name="columns">The columns of the table.</param>
-		/// <param name="timeInfo">Time stamp</param>
+		/// <param name="timeInfo">Timestamp</param>
 		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
 		/// <returns></returns>
 		/// <remarks>
@@ -474,7 +474,7 @@ namespace Skyline.DataMiner.Scripting
 		/// </summary>
 		/// <param name="tableId">The ID of the table parameter.</param>
 		/// <param name="columns">The columns of the table.</param>
-		/// <param name="timeInfo">Time stamp</param>
+		/// <param name="timeInfo">Timestamp</param>
 		/// <returns></returns>
 		/// <remarks>
 		///		<list type = "bullet">
@@ -505,7 +505,7 @@ namespace Skyline.DataMiner.Scripting
 		/// </summary>
 		/// <param name="tableId">The ID of the table parameter.</param>
 		/// <param name="columns">The columns of the table.</param>
-		/// <param name="timeInfo">Time stamp</param>
+		/// <param name="timeInfo">Timestamp</param>
 		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
 		/// <returns></returns>
 		/// <remarks>
@@ -763,7 +763,7 @@ namespace Skyline.DataMiner.Scripting
 		/// </summary>
 		/// <param name="tableId">The ID of the table parameter.</param>
 		/// <param name="columns">The columns of the table.</param>
-		/// <param name="timeInfo">Time stamp</param>
+		/// <param name="timeInfo">Timestamp</param>
 		/// <returns></returns>
 		/// <remarks>
 		///		<list type = "bullet" >
@@ -797,7 +797,7 @@ namespace Skyline.DataMiner.Scripting
 		/// </summary>
 		/// <param name="tableId">The ID of the table parameter.</param>
 		/// <param name="columns">The columns of the table.</param>
-		/// <param name="timeInfo">Time stamp</param>
+		/// <param name="timeInfo">Timestamp</param>
 		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
 		/// <returns></returns>
 		/// <remarks>
@@ -829,7 +829,7 @@ namespace Skyline.DataMiner.Scripting
 		/// </summary>
 		/// <param name="tableId">The ID of the table parameter.</param>
 		/// <param name="columns">The columns of the table.</param>
-		/// <param name="timeInfo">Time stamp</param>
+		/// <param name="timeInfo">Timestamp</param>
 		/// <returns></returns>
 		/// <remarks>
 		///		<list type = "bullet" >
@@ -860,7 +860,7 @@ namespace Skyline.DataMiner.Scripting
 		/// </summary>
 		/// <param name="tableId">The ID of the table parameter.</param>
 		/// <param name="columns">The columns of the table.</param>
-		/// <param name="timeInfo">Time stamp</param>
+		/// <param name="timeInfo">Timestamp</param>
 		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
 		/// <returns></returns>
 		/// <remarks>
@@ -894,9 +894,9 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="columnPid">The ID of the column parameter.</param>
 		/// <param name="keys">The primary keys of the rows for which the column has to be updated.</param>
 		/// <param name="values">The values to set.</param>
-		/// <param name="timeInfo">Time stamp</param>
+		/// <param name="timeInfo">Timestamp</param>
 		/// <returns></returns>
-		/// <exception cref="ArgumentException">The length of "primaryKeys" is not equal to the length of "values" and the length of the values array does not equal 1.</exception>
+		/// <exception cref="ArgumentException">The length of "primaryKeys" is not equal to the length of "values", and the length of the values array does not equal 1.</exception>
 		/// <remarks>
 		///		<list type = "bullet" >
 		///			<item>
@@ -922,10 +922,10 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="columnPid">The ID of the column parameter.</param>
 		/// <param name="keys">The primary keys of the rows for which the column has to be updated.</param>
 		/// <param name="values">The values to set.</param>
-		/// <param name="timeInfo">Time stamp</param>
+		/// <param name="timeInfo">Timestamp</param>
 		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
 		/// <returns></returns>
-		/// <exception cref="ArgumentException">The length of "primaryKeys" is not equal to the length of "values" and the length of the values array does not equal 1.</exception>
+		/// <exception cref="ArgumentException">The length of "primaryKeys" is not equal to the length of "values", and the length of the values array does not equal 1.</exception>
 		/// <remarks>
 		///		<list type = "bullet" >
 		///			<item>
@@ -1107,7 +1107,7 @@ namespace Skyline.DataMiner.Scripting
 		/// </summary>
 		/// <param name="iID">The ID of the parameter.</param>
 		/// <param name="value">The value to set.</param>
-		/// <param name="timeInfo">Time stamp.</param>
+		/// <param name="timeInfo">Timestamp.</param>
 		/// <returns>HRESULT value. A value of 0 (S_OK) indicates the set succeeded.</returns>
 		/// <remarks>
 		///		<list type = "bullet" >
@@ -1164,7 +1164,7 @@ namespace Skyline.DataMiner.Scripting
 		/// </summary>
 		/// <param name="ids">The IDs of the parameters to set.</param>
 		/// <param name="values">The values to set.</param>
-		/// <param name="timeInfos">Time stamps.</param>
+		/// <param name="timeInfos">Timestamps.</param>
 		/// <returns>Either a single HRESULT (uint) value specifying an error (e.g. when the size of the parameterIDs array does not match the size of the values array) or an array of HRESULT values (uint[]) (where the array has the same size as the number of parameters that have been set) where each HRESULT value indicates the result of the corresponding item that has been set.</returns>
 		/// <remarks>
 		///		<list type = "bullet" >
@@ -1766,7 +1766,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="iX">The 1-based row position.</param>
 		/// <param name="iY">The 1-based column position.</param>
 		/// <param name="value">The value to set.</param>
-		/// <param name="timeInfo">Time stamp.</param>
+		/// <param name="timeInfo">Timestamp.</param>
 		/// <returns>Whether the cell value has changed. <c>true</c> indicates change; otherwise, <c>false</c>.</returns>
 		/// <remarks>
 		///		<list type = "bullet" >
@@ -1830,7 +1830,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="iXs">The 1-based positions of the rows.</param>
 		/// <param name="iYs">The 1-based positions of the columns.</param>
 		/// <param name="values">The values to set.</param>
-		/// <param name="timeInfos">Time stamps.</param>
+		/// <param name="timeInfos">Timestamps.</param>
 		/// <returns>This method call can return an unsigned integer error code, e.g. when the size of the <paramref name="ids"/> array does not match the size of the values array. Otherwise a uint[] is returned that has the same size as the <paramref name="ids"/> array containing the HRESULT value.At each position, this array contains the result value as would be returned when performing a SetParameterIndex call on the individual cell.In case the value in the array is 262730 (0x0004024AL), this indicates the cell value changed.</returns>
 		/// <remarks>
 		///		<list type = "bullet" >
@@ -1956,7 +1956,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="key">The primary key of the row.</param>
 		/// <param name="iY">The 1-based column position.</param>
 		/// <param name="value">The value to set.</param>
-		/// <param name="timeInfo">Time stamp.</param>
+		/// <param name="timeInfo">Timestamp.</param>
 		/// <returns>Whether the cell value has changed. <c>true</c> indicates change; otherwise, <c>false</c>.</returns>
 		/// <remarks>
 		///		<list type="bullet">
@@ -2012,7 +2012,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="keys">The primary keys of the rows.</param>
 		/// <param name="iYs">The 1-based positions of the columns.</param>
 		/// <param name="values">The values to set.</param>
-		/// <param name="timeInfos">Time stamps.</param>
+		/// <param name="timeInfos">Timestamps.</param>
 		/// <returns>This method call can return an unsigned integer error code, e.g. when the size of the <paramref name="ids"/> array does not match the size of the values array.Otherwise a uint[] is returned that has the same size as the <paramref name="ids"/> array containing the HRESULT value.At each position, this array contains the result value as would be returned when performing a SetParameterIndexByKey call on the individual cell.In case the value in the array is 262730 (0x0004024AL), this indicates the cell value changed.</returns>
 		/// <remarks>
 		///		<list type = "bullet" >
@@ -2121,7 +2121,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="iPID">The ID of the table parameter.</param>
 		/// <param name="iRow">The 0-based index of the row.</param>
 		/// <param name="rowInfo">The row data. </param>
-		/// <param name="timeInfo">Time stamp.</param>
+		/// <param name="timeInfo">Timestamp.</param>
 		/// <param name="bOverrideBehaviour">When set to true, protocol.Clear and protocol.Leave can be used as cell values, which will clear or preserve the cell content, respectively.</param>
 		/// <returns>Array with value 0 (No Change) or 1(Change) to indicate the change state of the cell in the row.</returns>
 		/// <remarks>
@@ -2152,7 +2152,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="iPID">The ID of the table parameter.</param>
 		/// <param name="iRow">The 0-based index of the row.</param>
 		/// <param name="rowInfo">The row data. </param>
-		/// <param name="timeInfo">Time stamp.</param>
+		/// <param name="timeInfo">Timestamp.</param>
 		/// <returns>Array with value 0 (No Change) or 1(Change) to indicate the change state of the cell in the row.</returns>
 		/// <remarks>
 		///		<list type = "bullet" >
@@ -2234,7 +2234,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="iPID">The ID of the table parameter.</param>
 		/// <param name="row">The primary key of the row.</param>
 		/// <param name="rowInfo">The row data.</param>
-		/// <param name="timeInfo">Time stamp.</param>
+		/// <param name="timeInfo">Timestamp.</param>
 		/// <param name="bOverrideBehaviour">When set to true, protocol.Clear and protocol.Leave can be used as cell values, which will clear or preserve the cell content, respectively.</param>
 		/// <returns>Array with value 0 (No Change) or 1(Change) to indicate the change state of the cell in the row.</returns>
 		/// <remarks>
@@ -2264,7 +2264,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="iPID">The ID of the table parameter.</param>
 		/// <param name="row">The primary key of the row.</param>
 		/// <param name="rowInfo">The row data. </param>
-		/// <param name="timeInfo">Time stamp.</param>
+		/// <param name="timeInfo">Timestamp.</param>
 		/// <returns>Array with value 0 (No Change) or 1(Change) to indicate the change state of the cell in the row.</returns>
 		/// <remarks>
 		///		<list type = "bullet" >

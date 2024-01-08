@@ -108,7 +108,7 @@ namespace Skyline.DataMiner.Scripting
 		/// Adds a row to the table.
 		/// </summary>
 		/// <param name="row">The primary key of the row.</param>
-		/// <param name="timeInfo">Time stamp.</param>
+		/// <param name="timeInfo">Timestamp.</param>
 		/// <returns>The 1-based internal position of the row in the table.</returns>
 		/// <remarks>
 		///		<list type="bullet">
@@ -130,7 +130,7 @@ namespace Skyline.DataMiner.Scripting
 		/// Adds a row to the table.
 		/// </summary>
 		/// <param name="row">The row data.</param>
-		/// <param name="timeInfo">Time stamp.</param>
+		/// <param name="timeInfo">Timestamp.</param>
 		/// <returns>The 1-based internal position of the row in the table.</returns>
 		/// <remarks>
 		///		<list type="bullet">
@@ -152,7 +152,7 @@ namespace Skyline.DataMiner.Scripting
 		/// Adds a row to the table.
 		/// </summary>
 		/// <param name="row">The row data.</param>
-		/// <param name="timeInfo">Time stamp.</param>
+		/// <param name="timeInfo">Timestamp.</param>
 		/// <returns>The 1-based internal position of the row in the table.</returns>
 		/// <remarks>
 		///		<list type="bullet">
@@ -172,7 +172,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <summary>
 		/// Adds a row to the table and returns the primary key of the new row.
 		/// </summary>
-		/// <param name="timeInfo">Time stamp.</param>
+		/// <param name="timeInfo">Timestamp.</param>
 		/// <returns>The primary key of the added row.</returns>
 		/// <remarks>
 		///	    <list type="bullet">
@@ -194,7 +194,7 @@ namespace Skyline.DataMiner.Scripting
 		/// Adds a row to the table and returns the primary key of the new row.
 		/// </summary>
 		/// <param name="row">The row data.</param>
-		/// <param name="timeInfo">Time stamp.</param>
+		/// <param name="timeInfo">Timestamp.</param>
 		/// <returns>The primary key of the added row.</returns>
 		/// <remarks>
 		///	    <list type="bullet">
@@ -216,7 +216,7 @@ namespace Skyline.DataMiner.Scripting
 		/// Adds a row to the table and returns the primary key of the new row.
 		/// </summary>
 		/// <param name="row">The row data.</param>
-		/// <param name="timeInfo">Time stamp.</param>
+		/// <param name="timeInfo">Timestamp.</param>
 		/// <returns>The primary key of the added row.</returns>
 		/// <remarks>
 		///	    <list type="bullet">
@@ -266,12 +266,12 @@ namespace Skyline.DataMiner.Scripting
 		/// Sets the content of the table to the provided content.
 		/// </summary>
 		/// <param name="rows">The rows of the table.</param>
-		/// <param name="timeInfo">Time stamp.</param>
+		/// <param name="timeInfo">Timestamp.</param>
 		/// <returns></returns>
 		/// <remarks>
 		///		<list type="bullet">
 		///			<item>
-		///				<description>In case the table did contain rows with other primary keys than the ones provided in the method call, these rows will be removed. In case this is undesired, use the FillArrayNoDelete method instead.</description>
+		///				<description>In case the table contained rows with other primary keys than the ones provided in the method call, these rows will be removed. In case this is undesired, use the FillArrayNoDelete method instead.</description>
 		///			</item>	
 		///			<item>
 		///				<description>In case the data contains null references, the corresponding cells will be cleared.</description>
@@ -284,7 +284,7 @@ namespace Skyline.DataMiner.Scripting
 		/// Sets the content of the table to the provided content.
 		/// </summary>
 		/// <param name="rows">The rows of the table.</param>
-		/// <param name="timeInfo">Time stamp.</param>
+		/// <param name="timeInfo">Timestamp.</param>
 		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
 		/// <returns></returns>
 		/// <remarks>
@@ -293,7 +293,7 @@ namespace Skyline.DataMiner.Scripting
 		///				<description>This overload is supported from DataMiner 10.4.2 onwards (RN 38153).</description>
 		///			</item>
 		///			<item>
-		///				<description>In case the table did contain rows with other primary keys than the ones provided in the method call, these rows will be removed. In case this is undesired, use the FillArrayNoDelete method instead.</description>
+		///				<description>In case the table contained rows with other primary keys than the ones provided in the method call, these rows will be removed. In case this is undesired, use the FillArrayNoDelete method instead.</description>
 		///			</item>	
 		///			<item>
 		///				<description>In case the data contains null references, the corresponding cells will be cleared.</description>
@@ -314,7 +314,7 @@ namespace Skyline.DataMiner.Scripting
 		///				<description>This overload is supported from DataMiner 10.4.2 onwards (RN 38153).</description>
 		///			</item>
 		///			<item>
-		///				<description>In case the table did contain rows with other primary keys than the ones provided in the method call, these rows will be removed. In case this is undesired, use the FillArrayNoDelete method instead.</description>
+		///				<description>In case the table contained rows with other primary keys than the ones provided in the method call, these rows will be removed. In case this is undesired, use the FillArrayNoDelete method instead.</description>
 		///			</item>	
 		///			<item>
 		///				<description>In case the data contains null references, the corresponding cells will be cleared.</description>
@@ -327,7 +327,7 @@ namespace Skyline.DataMiner.Scripting
 		/// Sets the content of the table to the provided content.
 		/// </summary>
 		/// <param name="columns">The <b>columns</b> of the table.</param>
-		/// <param name="timeInfo">Time stamp.</param>
+		/// <param name="timeInfo">Timestamp.</param>
 		/// <returns></returns>
 		/// <remarks>
 		///		<list type="bullet">
@@ -335,7 +335,7 @@ namespace Skyline.DataMiner.Scripting
 		///				<description>This overload is supported from DataMiner 10.2.7 onwards (RN 28573).</description>
 		///			</item>
 		///			<item>
-		///				<description>In case the table did contain rows with other primary keys than the ones provided in the method call, these rows will be removed. In case this is undesired, use the FillArrayNoDelete method instead.</description>
+		///				<description>In case the table contained rows with other primary keys than the ones provided in the method call, these rows will be removed. In case this is undesired, use the FillArrayNoDelete method instead.</description>
 		///			</item>
 		///			<item>
 		///				<description>In case the data contains null references, the corresponding cells will be cleared.</description>
@@ -348,7 +348,7 @@ namespace Skyline.DataMiner.Scripting
 		/// Sets the content of the table to the provided content.
 		/// </summary>
 		/// <param name="columns">The <b>columns</b> of the table.</param>
-		/// <param name="timeInfo">Time stamp.</param>
+		/// <param name="timeInfo">Timestamp.</param>
 		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
 		/// <returns></returns>
 		/// <remarks>
@@ -357,7 +357,7 @@ namespace Skyline.DataMiner.Scripting
 		///				<description>This overload is supported from DataMiner 10.4.2 onwards (RN 38153).</description>
 		///			</item>
 		///			<item>
-		///				<description>In case the table did contain rows with other primary keys than the ones provided in the method call, these rows will be removed. In case this is undesired, use the FillArrayNoDelete method instead.</description>
+		///				<description>In case the table contained rows with other primary keys than the ones provided in the method call, these rows will be removed. In case this is undesired, use the FillArrayNoDelete method instead.</description>
 		///			</item>
 		///			<item>
 		///				<description>In case the data contains null references, the corresponding cells will be cleared.</description>
@@ -378,7 +378,7 @@ namespace Skyline.DataMiner.Scripting
 		///				<description>This overload is supported from DataMiner 10.4.2 onwards (RN 38153).</description>
 		///			</item>
 		///			<item>
-		///				<description>In case the table did contain rows with other primary keys than the ones provided in the method call, these rows will be removed. In case this is undesired, use the FillArrayNoDelete method instead.</description>
+		///				<description>In case the table contained rows with other primary keys than the ones provided in the method call, these rows will be removed. In case this is undesired, use the FillArrayNoDelete method instead.</description>
 		///			</item>
 		///			<item>
 		///				<description>In case the data contains null references, the corresponding cells will be cleared.</description>
@@ -391,12 +391,12 @@ namespace Skyline.DataMiner.Scripting
 		/// Sets the content of the table to the provided content.
 		/// </summary>
 		/// <param name="columns">The <b>columns</b> of the table.</param>
-		/// <param name="timeInfo">Time stamp.</param>
+		/// <param name="timeInfo">Timestamp.</param>
 		/// <returns></returns>
 		/// <remarks>
 		///		<list type="bullet">
 		///			<item>
-		///				<description>In case the table did contain rows with other primary keys than the ones provided in the method call, these rows will be removed. In case this is undesired, use the FillArrayNoDelete method instead.</description>
+		///				<description>In case the table contained rows with other primary keys than the ones provided in the method call, these rows will be removed. In case this is undesired, use the FillArrayNoDelete method instead.</description>
 		///			</item>
 		///			<item>
 		///				<description>In case the data contains null references, the corresponding cells will be cleared.</description>
@@ -409,7 +409,7 @@ namespace Skyline.DataMiner.Scripting
 		/// Sets the content of the table to the provided content.
 		/// </summary>
 		/// <param name="columns">The <b>columns</b> of the table.</param>
-		/// <param name="timeInfo">Time stamp.</param>
+		/// <param name="timeInfo">Timestamp.</param>
 		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
 		/// <returns></returns>
 		/// <remarks>
@@ -418,7 +418,7 @@ namespace Skyline.DataMiner.Scripting
 		///				<description>This overload is supported from DataMiner 10.4.2 onwards (RN 38153).</description>
 		///			</item>
 		///			<item>
-		///				<description>In case the table did contain rows with other primary keys than the ones provided in the method call, these rows will be removed. In case this is undesired, use the FillArrayNoDelete method instead.</description>
+		///				<description>In case the table contained rows with other primary keys than the ones provided in the method call, these rows will be removed. In case this is undesired, use the FillArrayNoDelete method instead.</description>
 		///			</item>
 		///			<item>
 		///				<description>In case the data contains null references, the corresponding cells will be cleared.</description>
@@ -439,7 +439,7 @@ namespace Skyline.DataMiner.Scripting
 		///				<description>This overload is supported from DataMiner 10.4.2 onwards (RN 38153).</description>
 		///			</item>
 		///			<item>
-		///				<description>In case the table did contain rows with other primary keys than the ones provided in the method call, these rows will be removed. In case this is undesired, use the FillArrayNoDelete method instead.</description>
+		///				<description>In case the table contained rows with other primary keys than the ones provided in the method call, these rows will be removed. In case this is undesired, use the FillArrayNoDelete method instead.</description>
 		///			</item>
 		///			<item>
 		///				<description>In case the data contains null references, the corresponding cells will be cleared.</description>
@@ -452,12 +452,12 @@ namespace Skyline.DataMiner.Scripting
 		/// Sets the content of the table to the provided content.
 		/// </summary>
 		/// <param name="rows">The rows of the table.</param>
-		/// <param name="timeInfo">Time stamp.</param>
+		/// <param name="timeInfo">Timestamp.</param>
 		/// <returns></returns>
 		/// <remarks>
 		///		<list type="bullet">
 		///			<item>
-		///				<description>In case the table did contain rows with other primary keys than the ones provided in the method call, these rows will be removed. In case this is undesired, use the FillArrayNoDelete method instead.</description>
+		///				<description>In case the table contained rows with other primary keys than the ones provided in the method call, these rows will be removed. In case this is undesired, use the FillArrayNoDelete method instead.</description>
 		///			</item>
 		///			<item>
 		///				<description>In case the data contains null references, the corresponding cells will be cleared.</description>
@@ -470,7 +470,7 @@ namespace Skyline.DataMiner.Scripting
 		/// Sets the content of the table to the provided content.
 		/// </summary>
 		/// <param name="rows">The rows of the table.</param>
-		/// <param name="timeInfo">Time stamp.</param>
+		/// <param name="timeInfo">Timestamp.</param>
 		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
 		/// <returns></returns>
 		/// <remarks>
@@ -479,7 +479,7 @@ namespace Skyline.DataMiner.Scripting
 		///				<description>This overload is supported from DataMiner 10.4.2 onwards (RN 38153).</description>
 		///			</item>
 		///			<item>
-		///				<description>In case the table did contain rows with other primary keys than the ones provided in the method call, these rows will be removed. In case this is undesired, use the FillArrayNoDelete method instead.</description>
+		///				<description>In case the table contained rows with other primary keys than the ones provided in the method call, these rows will be removed. In case this is undesired, use the FillArrayNoDelete method instead.</description>
 		///			</item>
 		///			<item>
 		///				<description>In case the data contains null references, the corresponding cells will be cleared.</description>
@@ -500,7 +500,7 @@ namespace Skyline.DataMiner.Scripting
 		///				<description>This overload is supported from DataMiner 10.4.2 onwards (RN 38153).</description>
 		///			</item>
 		///			<item>
-		///				<description>In case the table did contain rows with other primary keys than the ones provided in the method call, these rows will be removed. In case this is undesired, use the FillArrayNoDelete method instead.</description>
+		///				<description>In case the table contained rows with other primary keys than the ones provided in the method call, these rows will be removed. In case this is undesired, use the FillArrayNoDelete method instead.</description>
 		///			</item>
 		///			<item>
 		///				<description>In case the data contains null references, the corresponding cells will be cleared.</description>
@@ -513,7 +513,7 @@ namespace Skyline.DataMiner.Scripting
 		/// Adds the provided content to the table.
 		/// </summary>
 		/// <param name="columns">The <b>columns</b> of the table.</param>
-		/// <param name="timeInfo">Time stamp.</param>
+		/// <param name="timeInfo">Timestamp.</param>
 		/// <returns></returns>
 		/// <remarks>
 		///		<list type="bullet">
@@ -528,7 +528,7 @@ namespace Skyline.DataMiner.Scripting
 		/// Adds the provided content to the table.
 		/// </summary>
 		/// <param name="columns">The <b>columns</b> of the table.</param>
-		/// <param name="timeInfo">Time stamp.</param>
+		/// <param name="timeInfo">Timestamp.</param>
 		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
 		/// <returns></returns>
 		/// <remarks>
@@ -565,7 +565,7 @@ namespace Skyline.DataMiner.Scripting
 		/// Adds the provided content to the table.
 		/// </summary>
 		/// <param name="columns">The <b>columns</b> of the table.</param>
-		/// <param name="timeInfo">Time stamp.</param>
+		/// <param name="timeInfo">Timestamp.</param>
 		/// <returns></returns>
 		/// <remarks>
 		///		<list type="bullet">
@@ -583,7 +583,7 @@ namespace Skyline.DataMiner.Scripting
 		/// Adds the provided content to the table.
 		/// </summary>
 		/// <param name="columns">The <b>columns</b> of the table.</param>
-		/// <param name="timeInfo">Time stamp.</param>
+		/// <param name="timeInfo">Timestamp.</param>
 		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
 		/// <returns></returns>
 		/// <remarks>
@@ -620,7 +620,7 @@ namespace Skyline.DataMiner.Scripting
 		/// Adds the provided content to the table.
 		/// </summary>
 		/// <param name="rows">The rows of the table.</param>
-		/// <param name="timeInfo">Time stamp.</param>
+		/// <param name="timeInfo">Timestamp.</param>
 		/// <returns></returns>
 		/// <remarks>
 		///		<list type="bullet">
@@ -635,7 +635,7 @@ namespace Skyline.DataMiner.Scripting
 		/// Adds the provided content to the table.
 		/// </summary>
 		/// <param name="rows">The rows of the table.</param>
-		/// <param name="timeInfo">Time stamp.</param>
+		/// <param name="timeInfo">Timestamp.</param>
 		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
 		/// <returns></returns>
 		/// <remarks>
@@ -672,7 +672,7 @@ namespace Skyline.DataMiner.Scripting
 		/// Adds the provided content to the table.
 		/// </summary>
 		/// <param name="rows">The rows of the table.</param>
-		/// <param name="timeInfo">Time stamp.</param>
+		/// <param name="timeInfo">Timestamp.</param>
 		/// <returns></returns>
 		/// <remarks>
 		///		<list type="bullet">
@@ -687,7 +687,7 @@ namespace Skyline.DataMiner.Scripting
 		/// Adds the provided content to the table.
 		/// </summary>
 		/// <param name="rows">The rows of the table.</param>
-		/// <param name="timeInfo">Time stamp.</param>
+		/// <param name="timeInfo">Timestamp.</param>
 		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
 		/// <returns></returns>
 		/// <remarks>
@@ -780,8 +780,8 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="columnPid">The ID of the column parameter.</param>
 		/// <param name="Keys">The primary keys of the rows for which the column has to be updated.</param>
 		/// <param name="Values">The values to set.</param>
-		/// <param name="timeInfo">Time stamp.</param>
-		/// <exception cref="ArgumentException">The length of 'Keys' is not equal to the length of 'Values'.</exception>
+		/// <param name="timeInfo">Timestamp.</param>
+		/// <exception cref="ArgumentException">The length of "Keys" is not equal to the length of "Values".</exception>
 		/// <returns></returns>
 		public object SetColumn(int columnPid, string[] Keys, object[] Values, DateTime? timeInfo = null) { return null; }
 
@@ -791,10 +791,10 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="columnPid">The ID of the column parameter.</param>
 		/// <param name="keys">The primary keys of the rows for which the column has to be updated.</param>
 		/// <param name="values">The values to set.</param>
-		/// <param name="timeInfo">Time stamp.</param>
+		/// <param name="timeInfo">Timestamp.</param>
 		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
 		/// <returns></returns>
-		/// <exception cref="ArgumentException">The length of 'keys' is not equal to the length of 'values'.</exception>
+		/// <exception cref="ArgumentException">The length of "keys" is not equal to the length of "values".</exception>
 		/// <remarks>
 		///		<list type="bullet">
 		///			<item>
@@ -812,7 +812,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="values">The values to set.</param>
 		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
 		/// <returns></returns>
-		/// <exception cref="ArgumentException">The length of 'keys' is not equal to the length of 'values'.</exception>
+		/// <exception cref="ArgumentException">The length of "keys" is not equal to the length of "values".</exception>
 		/// <remarks>
 		///		<list type="bullet">
 		///			<item>
@@ -836,7 +836,7 @@ namespace Skyline.DataMiner.Scripting
 		/// </summary>
 		/// <param name="row">The 0-based index of the row.</param>
 		/// <param name="data">The row data. A null reference as cell value will preserve the value of the cell.</param>
-		/// <param name="timeInfo">Time stamp.</param>
+		/// <param name="timeInfo">Timestamp.</param>
 		/// <returns></returns>
 		/// <exception cref="ArgumentOutOfRangeException">The index is smaller than 0 or larger than the number of rows in the table.</exception>
 		/// <remarks>
@@ -870,7 +870,7 @@ namespace Skyline.DataMiner.Scripting
 		/// </summary>
 		/// <param name="row">The 0-based index of the row.</param>
 		/// <param name="data">The row data. A null reference as cell value will preserve the value of the cell.</param>
-		/// <param name="timeInfo">Time stamp.</param>
+		/// <param name="timeInfo">Timestamp.</param>
 		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
 		/// <returns></returns>
 		/// <exception cref="ArgumentOutOfRangeException">The index is smaller than 0 or larger than the number of rows in the table.</exception>
@@ -897,9 +897,9 @@ namespace Skyline.DataMiner.Scripting
 		/// </summary>
 		/// <param name="row">The row to set. A null reference as cell value will preserve the value of the cell.</param>
 		/// <param name="createRow">Indicates whether a row must be created if the table does not contain a row with the specified primary key.</param>
-		/// <param name="timeInfo">Time stamp.</param>
+		/// <param name="timeInfo">Timestamp.</param>
 		/// <returns></returns>
-		/// <exception cref="ArgumentException">When the row doesn't exists and the create row option is set to false.</exception>
+		/// <exception cref="ArgumentException">When the row does not exist and the create row option is set to false.</exception>
 		/// <remarks>
 		///		<list type="bullet">
 		///			<item>
@@ -916,7 +916,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="createRow">Indicates whether a row must be created if the table does not contain a row with the specified primary key.</param>
 		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
 		/// <returns></returns>
-		/// <exception cref="ArgumentException">When the row doesn't exists and the create row option is set to false.</exception>
+		/// <exception cref="ArgumentException">When the row does not exist and the create row option is set to false.</exception>
 		/// <remarks>
 		///		<list type="bullet">
 		///			<item>
@@ -931,10 +931,10 @@ namespace Skyline.DataMiner.Scripting
 		/// </summary>
 		/// <param name="row">The row to set. A null reference as cell value will preserve the value of the cell.</param>
 		/// <param name="createRow">Indicates whether a row must be created if the table does not contain a row with the specified primary key.</param>
-		/// <param name="timeInfo">Time stamp.</param>
+		/// <param name="timeInfo">Timestamp.</param>
 		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
 		/// <returns></returns>
-		/// <exception cref="ArgumentException">When the row doesn't exists and the create row option is set to false.</exception>
+		/// <exception cref="ArgumentException">When the row does not exist and the create row option is set to false.</exception>
 		/// <remarks>
 		///		<list type="bullet">
 		///			<item>
@@ -960,7 +960,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="row">Primary key of the row.</param>
 		/// <param name="data">The row data. A null reference as cell value will preserve the value of the cell.</param>
 		/// <param name="createRow">Indicates whether a row must be created if the table does not contain a row with the specified primary key.</param>
-		/// <param name="timeInfo">Time stamp.</param>
+		/// <param name="timeInfo">Timestamp.</param>
 		/// <returns></returns>
 		/// <exception cref="ArgumentException">When the row does not exist and the create row option is set to false.</exception>
 		/// <remarks>
@@ -996,7 +996,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="row">Primary key of the row.</param>
 		/// <param name="data">The row data. A null reference as cell value will preserve the value of the cell.</param>
 		/// <param name="createRow">Indicates whether a row must be created if the table does not contain a row with the specified primary key.</param>
-		/// <param name="timeInfo">Time stamp.</param>
+		/// <param name="timeInfo">Timestamp.</param>
 		/// <param name="useClearAndLeave">Indicates to consider the values corresponding with protocol.Clear and protocol.Leave as cell actions instead of an actual cell value.</param>
 		/// <returns></returns>
 		/// <exception cref="ArgumentException">When the row does not exist and the create row option is set to false.</exception>
