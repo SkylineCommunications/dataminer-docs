@@ -4,9 +4,9 @@ uid: BP_Implementing_IAS_in_Regression_Tests
 
 # Best practices: Implementing interactive Automation scripts in regression tests
 
-Integrating interactive Automation scripts (IASs) into regression testing often presents challenges due to the inability to perform sets from the regression test framework on the UI.
+Integrating interactive Automation scripts (IASs) into regression testing can be challenging because the regression test framework may not support executing sets on the UI.
 
-Although there are other ways of testing this, these lack integration with the QA portal. Implementing these alternatives often requires a significant amount of time for both implementation and adapting to changes. To address these issues, implementing a well-considered design methodology early in the process is crucial.
+While there are alternative testing methods, these lack integration with the QA portal. Adopting these alternatives often demands considerable time for both implementation and adjustment to changes. To address these issues, it is essential to employ a well-considered design methodology early in the process.
 
 This guide focuses on best practices (recommendations) for integrating interactive Automation scripts into regression tests, emphasizing a design approach that ensures flexibility, reusability, and seamless integration.
 
