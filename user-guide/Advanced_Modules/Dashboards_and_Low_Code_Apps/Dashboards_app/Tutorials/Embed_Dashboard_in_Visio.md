@@ -54,7 +54,7 @@ The tutorial consists of the following steps:
 
       This component will show the name of the selected element.
 
-   1. Add another *State* visualization, configure it to show one or more parameters of interest based on the *Parameters* > *From: Protocol* data section, and use the yellow filter icon to add the dropdown component you made earlier as a filter.
+   1. Add another *State* visualization, configure it to show one or more parameters of interest based on the *Parameters* > *From: Protocol* data section, and use the yellow filter icon to add *Feeds* > *Dropdown* > *Elements* as a filter.
 
       This component will show the name and value of the parameters you have added for the selected element.
 
