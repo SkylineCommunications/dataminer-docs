@@ -23,7 +23,7 @@ When implementing interactive Automation scripts that may be eligible to be test
 
 ## Use JSON parameters for user decisions
 
-Introduce a script input parameter that accepts a JSON structure containing the decisions a user will need to make during the interaction. This JSON can include various parameters like user inputs, options, or configurations required to execute the script.
+Introduce a script input parameter that accepts a JSON structure containing the decisions a user would make during the interaction. This JSON can include various parameters like user inputs, options, or configurations required to execute the script.
 
 By encapsulating these decisions in JSON format, the script gains flexibility and can easily adapt to different scenarios without requiring code modifications.
 
@@ -31,7 +31,7 @@ By encapsulating these decisions in JSON format, the script gains flexibility an
 
 Below, you will find three startup input parameters required to trigger the script.
 
-This input parameter contains the Interactive Input JSON, representing the decisions a user normally makes during the interaction:
+The 4th input parameter contains the Interactive Input JSON, representing the decisions a user normally makes during the interaction:
 
 ![Interactive Input Json](~/develop/images/InteractiveInputJson.png)
 
