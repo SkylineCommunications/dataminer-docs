@@ -147,7 +147,6 @@ If determining the source connection of the messages is important, you can adjus
         <Description>Instance 1</Description>
         <Content>
             <Command>1</Command>
-            <Response>1</Response>
         </Content>
     </Pair>
     <Pair id="2">
