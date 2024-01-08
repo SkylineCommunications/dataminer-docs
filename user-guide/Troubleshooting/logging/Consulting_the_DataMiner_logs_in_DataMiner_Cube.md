@@ -20,7 +20,7 @@ The page consists of four tabs:
 
 > [!NOTE]
 >
-> - You can adjust the maximum total size of the log files on a DMA. See [Changing the maximum size of DataMiner log files](xref:Changing_the_maximum_size_of_DataMiner_log_files).
+> - You can adjust the maximum total size of the log files in a DMS. See [Changing the maximum size of DataMiner log files](xref:Changing_the_maximum_size_of_DataMiner_log_files).
 > - The number of log entries that are kept and the general log level are determined in the Cube computer settings. For more information, see [Computer settings](xref:Computer_settings).
 
 > [!TIP]
