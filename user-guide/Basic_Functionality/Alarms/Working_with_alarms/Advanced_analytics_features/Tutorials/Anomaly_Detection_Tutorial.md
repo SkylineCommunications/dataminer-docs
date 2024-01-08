@@ -355,7 +355,7 @@ Remember that you can always duplicate the element to try a second time, if you 
 >   - Feedback (optionally): We value your feedback! Please share any thoughts or suggestions regarding this tutorial or the anomaly detection feature.
 > - Attachment:
 >   - A picture of the trend graph with the correct anomalies.
->   - A picture of the *Anomaly Alarm Settings* pop-up in the alarm template that you used to generate the requested alarms.
+>   - A picture of the *Anomaly Alarm Settings* pop-up window in the alarm template editor, showing the settings you used to generate the requested alarms.
 >
 > Skyline will review your submission. Upon successful validation, you will be awarded the appropriate DevOps Points as a token of your accomplishment.
 
