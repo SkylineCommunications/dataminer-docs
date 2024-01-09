@@ -530,6 +530,8 @@ items:
                 topicUid: Get_parameter_relations
               - name: Get parameters for element where
                 topicUid: Get_parameters_for_element_where
+              - name: Get profile instances
+                topicUid: Get_profile_instances
               - name: Get resources
                 topicUid: Get_resources
               - name: Get services
