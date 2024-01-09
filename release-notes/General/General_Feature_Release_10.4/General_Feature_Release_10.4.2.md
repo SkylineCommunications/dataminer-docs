@@ -440,6 +440,15 @@ SLLogCollector will now also collect the backup logs of the *StorageModule* DxM 
 
 ### Fixes
 
+#### Failover: Problems when using hostnames instead of virtual IP addresses [ID_32951] [ID_35380]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+Up to now, a number of issues could occur when setting up a Failover system using hostnames instead of virtual IP addresses.
+
+> [!NOTE]
+> When you set up a Failover system using hostnames, we recommend to keep this a standalone system and to not add it to a DataMiner System.
+
 #### Problems with SLDataMiner [ID_37409]
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
@@ -617,6 +626,12 @@ Up to now, when SLAnalytics lost its connection to SLNet at a particular moment 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
 
 After a DataMiner restart, in some cases, correlation alarms would have an incorrect severity.
+
+#### BPA test 'Check Cluster SLNet Connections' could incorrectly report connection problems when it found a Failover system with a shared hostname [ID_38328]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 [CU0] -->
+
+Up to now, the BPA test *Check Cluster SLNet Connections* BPA could incorrectly report connection problems in a DataMiner System when it found a Failover setup with a shared hostname.
 
 #### SLReset: Problem when cleaning a Cassandra database [ID_38332]
 
