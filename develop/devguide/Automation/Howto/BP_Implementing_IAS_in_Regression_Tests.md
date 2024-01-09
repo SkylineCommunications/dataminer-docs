@@ -29,9 +29,7 @@ By encapsulating these decisions in JSON format, the script gains flexibility an
 
 **Example**:
 
-Below, you will find three startup input parameters required to trigger the script.
-
-The 4th input parameter contains the Interactive Input JSON, representing the decisions a user normally makes during the interaction:
+In this image, you can see that three input parameters are required to trigger the script and that the fourth input parameter contains the Interactive Input JSON, representing the decisions a user normally makes during the interaction:
 
 ![Interactive Input Json](~/develop/images/InteractiveInputJson.png)
 
