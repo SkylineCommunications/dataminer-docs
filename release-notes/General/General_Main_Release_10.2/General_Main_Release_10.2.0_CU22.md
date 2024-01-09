@@ -392,6 +392,12 @@ DataMiner Cube would leak memory
 
 When the locale of the client machine was set to Turkish, visual overviews could manifest unexpected behavior due to names of shape data items being transformed incorrectly. These transformations will now be done culture independently.
 
+#### DataMiner Cube: Problem after logging out and in repeatedly [ID_38171]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
+
+When you logged out and in repeatedly, an exception could be thrown, causing Cube to become unresponsive.
+
 #### DataMiner Cube would incorrect show 'Could not connect to the DataMiner Agent' instead of 'This Dataminer Agent is not running' [ID_38212]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
