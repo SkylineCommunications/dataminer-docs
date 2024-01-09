@@ -26,4 +26,8 @@ uid: Web_apps_Feature_Release_10.4.3
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Dashboards app & Low-Code Apps - GQI: Problem when multiple column manipulations had been configured on the same column [ID_38338]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+In some cases, a query would throw an error when multiple column manipulations had been configured on the same column.
