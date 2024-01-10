@@ -96,6 +96,15 @@ When you sort on a joined column, the Sort operator will be forwarded in the fol
 
 When calculating alarm likelihood (i.e. focus score), up to now, the alarm focus feature used a combination of element ID, parameter ID and display key (if applicable) to identify previous occurrences of the same alarm. From now on, previous alarm occurrences will be identified using a combination of element ID, parameter ID and primary key.
 
+#### DataMiner Object Models: Required list fields can no longer be set to an empty list [ID_38238]
+
+<!-- MR 10.5.0 - FR 10.4.3 -->
+
+From now on, when the value of a required list field is set to an empty list, one of the following errors will be thrown:
+
+- `DomInstanceHasMissingRequiredFieldsForCurrentStatus` (when using the DOM status system)
+- `DomInstanceDoesNotContainAllRequiredFieldsForSectionDefinition` (when not using the DOM status system)
+
 ### Fixes
 
 #### Databases: Problem when starting a migration from MySQL to Cassandra [ID_37589]

@@ -1136,10 +1136,10 @@ When an alarm had been cleared or removed, in some cases, the automatic incident
 
 When, while automatic incident tracking was running, you manually created an incident (i.e. an alarm group) containing non-active alarms, an empty alarm group would be created.
 
-#### Correlation: Alarm buckets would not get cleaned up when alarms were cleared before the end of the fixed time frame [ID_38292]
+#### Correlation: Alarm buckets would not get cleaned up when alarms were cleared before the end of the time frame specified in the 'Collect events for ... after first event, then evaluate conditions and execute actions' setting [ID_38292]
 
 <!-- MR 10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
 
-Up to now, when correlation alarms were cleared before the end of the fixed time frame, the alarm buckets would not get cleaned up after the actions had been executed.
+Up to now, when alarms were cleared before the end of the time frame specified in the *Collect events for ... after first event, then evaluate conditions and execute actions* correlation rule setting, the alarm buckets would not get cleaned up.
 
-From now on, when using a fixed time frame, all alarm buckets will be properly cleaned up after the actions have been executed, unless there are actions that need to be executed either when the base alarms are updated or when alarms are cleared.
+From now on, when a correlation rule is configured to use the *Collect events for ... after first event, then evaluate conditions and execute actions* trigger mechanism, all alarm buckets will be properly cleaned up, unless there are actions that need to be executed either when the base alarms are updated or when alarms are cleared.

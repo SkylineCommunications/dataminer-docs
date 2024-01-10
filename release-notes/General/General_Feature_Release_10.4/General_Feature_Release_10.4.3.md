@@ -34,12 +34,21 @@ uid: General_Feature_Release_10.4.3
 
 When calculating alarm likelihood (i.e. focus score), up to now, the alarm focus feature used a combination of element ID, parameter ID and display key (if applicable) to identify previous occurrences of the same alarm. From now on, previous alarm occurrences will be identified using a combination of element ID, parameter ID and primary key.
 
+#### DataMiner Object Models: Required list fields can no longer be set to an empty list [ID_38238]
+
+<!-- MR 10.5.0 - FR 10.4.3 -->
+
+From now on, when the value of a required list field is set to an empty list, one of the following errors will be thrown:
+
+- `DomInstanceHasMissingRequiredFieldsForCurrentStatus` (when using the DOM status system)
+- `DomInstanceDoesNotContainAllRequiredFieldsForSectionDefinition` (when not using the DOM status system)
+
 ### Fixes
 
-#### Correlation: Alarm buckets would not get cleaned up when alarms were cleared before the end of the fixed time frame [ID_38292]
+#### Correlation: Alarm buckets would not get cleaned up when alarms were cleared before the end of the time frame specified in the 'Collect events for ... after first event, then evaluate conditions and execute actions' setting [ID_38292]
 
 <!-- MR 10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
 
-Up to now, when correlation alarms were cleared before the end of the fixed time frame, the alarm buckets would not get cleaned up after the actions had been executed.
+Up to now, when alarms were cleared before the end of the time frame specified in the *Collect events for ... after first event, then evaluate conditions and execute actions* correlation rule setting, the alarm buckets would not get cleaned up.
 
-From now on, when using a fixed time frame, all alarm buckets will be properly cleaned up after the actions have been executed, unless there are actions that need to be executed either when the base alarms are updated or when alarms are cleared.
+From now on, when a correlation rule is configured to use the *Collect events for ... after first event, then evaluate conditions and execute actions* trigger mechanism, all alarm buckets will be properly cleaned up, unless there are actions that need to be executed either when the base alarms are updated or when alarms are cleared.
