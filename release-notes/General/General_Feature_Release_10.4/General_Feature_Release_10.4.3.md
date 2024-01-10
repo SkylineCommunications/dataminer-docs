@@ -28,7 +28,11 @@ uid: General_Feature_Release_10.4.3
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### SLAnalytics - Alarm focus: Alarm occurrences will now be identified using a combination of element ID, parameter ID and primary key  [ID_38184]
+
+<!-- MR 10.5.0 - FR 10.4.3 -->
+
+When calculating alarm likelihood (i.e. focus score), up to now, the alarm focus feature used a combination of element ID, parameter ID and display key (if applicable) to identify previous occurrences of the same alarm. From now on, previous alarm occurrences will be identified using a combination of element ID, parameter ID and primary key.
 
 ### Fixes
 
