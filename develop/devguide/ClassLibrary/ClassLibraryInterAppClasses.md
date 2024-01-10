@@ -227,7 +227,7 @@ public override Message CreateReturnMessage()
 
 ### Creating a simple executor
 
-As described above, in [Creating an executor](#creating-an-executor), the executor will define how it should parse an incoming message and handle it, however, if you do not want or need to have such granular control over the individual steps and wish to have a more simplified executor, you can then use the `SimpleMessageExecutor<T>` class to construct your message executor.
+As described above under [Creating an executor](#creating-an-executor), the executor will define how it should parse an incoming message and handle it. However, if you do not want or need to have such granular control over the individual steps and wish to have a more simplified executor, you can use the `SimpleMessageExecutor<T>` class to construct your message executor.
 
 You create it by making a new class that inherits from the `SimpleMessageExecutor<T>`, where T is a class from your messages defined in the API.
 
@@ -252,7 +252,7 @@ return simpleMessageExecutor.TryExecute(dataSource, dataDestination, out optiona
 
 Some methods, like `DataSets` and `DataGets` of the standard message executor, have an object argument. This can be a custom class with data, a database object, `SLProtocol`, `Engine`, etc.
 
-The same is possible with the `TryExecute` method, where you will have a `dataSource` object that corresponds with the one you would encounter in the `DataGets` of the standard message executor and `dataDestination` that corresponds with the one of the `DataSets` method.
+The same is possible with the `TryExecute` method, where you will have a `dataSource` object that corresponds with the one you would encounter in the `DataGets` of the standard message executor and a `dataDestination` that corresponds with the one of the `DataSets` method.
 
 ```csharp
 public override bool TryExecute(object dataSource, object dataDestination, out Message optionalReturnMessage)
@@ -277,7 +277,7 @@ public override bool TryExecute(object dataSource, object dataDestination, out M
 > The return message, if provided, must always have the same GUID as the received message that triggered the return in this case.
 
 > [!NOTE]
-> A return message does not necessarily need to be something to send to an external destination. A message could also be part of an internal API used to move data between classes, methods or QActions within your own protocol. This can also be returned.
+> A return message does not necessarily need to be something to send to an external destination. A message could also be part of an internal API used to move data between classes, methods, or QActions within your own protocol. This can also be returned.
 
 ### Parsing a received call
 
