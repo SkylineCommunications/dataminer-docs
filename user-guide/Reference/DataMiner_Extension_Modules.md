@@ -20,7 +20,7 @@ For ease of installation, DxMs may be packaged together in a pack, such as the [
 
 The APIGateway module is the endpoint for the gRPC communication with a DataMiner Agent.
 
-From DataMiner 10.4.2/10.5.0 onwards<!--RN 37734 + 36575-->, DataMiner modules can register with APIGateway. All modules registered with APIGateway are displayed under `/APIGateway/api/version`, showing the following properties:
+From DataMiner 10.4.2/10.5.0 onwards<!--RN 37734 + 36575-->, DataMiner modules can register with APIGateway. All modules registered with APIGateway are displayed under `https://[Your DMA]/APIGateway/api/version`, showing the following properties:
 
 - Name
 - Version
