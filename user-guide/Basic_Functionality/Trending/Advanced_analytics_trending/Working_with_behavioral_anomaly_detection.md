@@ -70,6 +70,8 @@ Please note the following regarding these icons:
 
 - The selection of a particular icon is based on the trend data behavior and the change points that have occurred within a configurable time interval. By default, this time interval is set to 3600 seconds. Prior to DataMiner 10.0.9/10.1.0, this is specified in the *arrowWindowLength* parameter in the file *C:\\Skyline DataMiner\\Files\\SLAnalytics.config*. From DataMiner 10.0.9/10.1.0 onwards, the time interval can be configured via *System Center* > *System settings* > *analytics config*.
 
+- The calculation of state icons requires the storage of average trend data. To limit memory usage, from DataMiner 10.4.2/10.5.0 onwards<!--RN 38041-->, the number of trended parameters for which state icons are calculated is limited to at most 250,000 trended parameters per DMA.
+
 ## Change points in trend graphs
 
 On a trend graph, a change point is indicated by a bar below the graph. The length of the bar indicates the approximate time frame in which the change started, the height of the bar indicates the importance of the change, and the color of the bar indicates the severity. From DataMiner 10.4.1/10.5.0 onwards<!-- RN 37827 -->, the color is typically light gray, unless the change point was severe enough to trigger an event. Then, in case alarm monitoring is activated for change points, the color reflects the severity of the triggered alarm. In case alarm monitoring is not activated, the color is dark gray.
