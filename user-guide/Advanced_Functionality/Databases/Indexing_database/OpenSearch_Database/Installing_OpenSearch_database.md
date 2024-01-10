@@ -238,9 +238,9 @@ plugins.security.system_indices.indices: [".plugins-ml-model", ".plugins-ml-task
 
 ##### Change the admin password and remove other users
 
-Generate a new hash for the admin user as detailed under [Configure a user](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/debian/#configure-a-user) in the OpenSearch documentation. You will need to remove all the users except *admin* and replace its hash with the one generated from the new password:
+The default password of the *admin* user should be changed and all the users except *admin* should be removed. To do this:
 
-1. Generate a hash for the new password of the *admin* user:
+1. Choose a strong password for the *admin* user and generate the corresponding hash: 
 
     ```bash
     cd /usr/share/opensearch/plugins/opensearch-security/tools
@@ -277,6 +277,11 @@ Generate a new hash for the admin user as detailed under [Configure a user](http
       description: "Demo admin user"
 
     ```
+
+More information about the steps above may be found at the OpenSearch documentation: [Configure a user](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/debian/#configure-a-user).
+
+ > [!NOTE]
+ > In order the changes above in the *internal_users.yml* file to be applied, you will need to restart the service and run the *securityadmin.sh* script as described next.
 
 ##### Restart OpenSearch
 
