@@ -828,6 +828,12 @@ When the locale of the client machine was set to Turkish, visual overviews could
 
 When you logged out and in repeatedly, an exception could be thrown, causing Cube to become unresponsive.
 
+#### DataMiner Cube: No longer allowed to create properties with a name that consists of whitespace characters only [ID_38209]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
+
+Up to now, DataMiner Cube would incorrectly allow you to create properties of which the name consisted of whitespace characters only. From now on, this is no longer allowed.
+
 #### DataMiner Cube would incorrect show 'Could not connect to the DataMiner Agent' instead of 'This Dataminer Agent is not running' [ID_38212]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->

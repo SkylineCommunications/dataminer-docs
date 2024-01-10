@@ -3,7 +3,7 @@ uid: Cube_Feature_Release_10.4.3
 ---
 
 # DataMiner Cube Feature Release 10.4.3 – Preview
-1
+
 > [!IMPORTANT]
 > We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
 
@@ -26,4 +26,8 @@ uid: Cube_Feature_Release_10.4.3
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### DataMiner Cube: No longer allowed to create properties with a name that consists of whitespace characters only [ID_38209]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
+
+Up to now, DataMiner Cube would incorrectly allow you to create properties of which the name consisted of whitespace characters only. From now on, this is no longer allowed.
