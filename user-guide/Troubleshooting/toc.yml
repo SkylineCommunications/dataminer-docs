@@ -205,8 +205,10 @@ items:
     topicUid: Known_issues
     items:
       - name: Current issues
-        topicUid: KI_Problem_after_removing_DMA_from_cluster
+        topicUid: KI_missing_NATS_services
         items:
+          - name: NATS services missing after reboot
+            topicUid: KI_missing_NATS_services
           - name: Problem after removing DMA from cluster
             topicUid: KI_Problem_after_removing_DMA_from_cluster
           - name: Max Payload exceptions occur when using MessageBroker with chunking
