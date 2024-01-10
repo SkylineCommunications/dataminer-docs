@@ -16,4 +16,10 @@ uid: General_Main_Release_10.3.0_CU12
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Correlation: Alarm buckets would not get cleaned up when alarms were cleared before the end of the fixed time frame [ID_38292]
+
+<!-- MR 10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
+
+Up to now, when correlation alarms were cleared before the end of the fixed time frame, the alarm buckets would not get cleaned up after the actions had been executed.
+
+From now on, when using a fixed time frame, all alarm buckets will be properly cleaned up after the actions have been executed, unless there are actions that need to be executed either when the base alarms are updated or when alarms are cleared.
