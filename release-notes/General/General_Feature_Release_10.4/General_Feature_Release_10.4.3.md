@@ -22,7 +22,24 @@ uid: General_Feature_Release_10.4.3
 
 ## New features
 
-*No new features have been added yet.*
+#### DataMiner Maps: ForeignKeyRelationsSourceInfo tag now supports an elementVar attribute [ID_38274]
+
+<!-- MR 10.5.0 - FR 10.4.3 -->
+
+In a `<ForeignKeyRelationsSourceInfo>` tag, it is now possible to specify an *elementVar* attribute.
+
+```xml
+<ForeignKeyRelationsSourceInfo elementVar="myElement">
+...
+</ForeignKeyRelationsSourceInfo>
+```
+
+This will allow you to pass an element in the map's URL. See the URL examples below (notice the “d” in front of the parameter name!):
+
+```txt
+maps.aspx?config=MyConfigFile&dmyElement=7/46840
+maps.aspx?config=MyConfigFile&dmyElement=VesselData
+```
 
 ## Changes
 
