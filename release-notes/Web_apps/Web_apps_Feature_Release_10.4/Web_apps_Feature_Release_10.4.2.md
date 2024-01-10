@@ -70,7 +70,10 @@ Up to now, when an empty list was saved in a DOM instance, the default filter us
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
 
-All GQI components (*State*, *Pie chart*, *Bar chart*, *Line chart*, *Table*, *Grid*, *Scheduler*, *Maps* and *Node Edge*) will now behave in the same way when loading.
+All GQI components (*State*, *Pie chart*, *Bar chart*, *Line chart*, *Table*, *Grid*, *Scheduler*,*Node Edge* and *Maps*) will now behave in the same way when loading.
+
+> [!NOTE]
+> The *Maps* component is currently still in soft launch.
 
 #### Dashboards app & Low-Code Apps - Query filter component: Number and date filters will no longer list discrete values unless they are meant to filter columns containing discrete values [ID_38114] [ID_38149]
 
@@ -135,6 +138,9 @@ While configuring a *Grid*, *Timeline* or *Maps* component, it would incorrectly
 
 From now on, as long as the default template has not been created yet, a loading indicator will be displayed and it will not be possible to open the template editor.
 
+> [!NOTE]
+> The *Maps* component is currently still in soft launch.
+
 #### Dashboards app & Low-Code Apps: Color theme changes would not be applied immediately [ID_38082]
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
@@ -179,20 +185,6 @@ For example, when a feed was used in a script action parameter, the last feed va
 
 In a low-code app, the subheader would overlap the contents of a page. From now on, it will be displayed above the page.
 
-#### Dashboards app & Low-Code Apps - Maps component: Problem when removing a query and adding it again [ID_38148]
-
-<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
-
-When you removed a query from a Maps component and then added it again, the component would show the following error:
-
-`Parameter '_destroy$' cannot be null`
-
-#### Dashboards app & Low-Code Apps - Maps component: Newly created markers would not be visualized [ID_38163]
-
-<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
-
-When you added new markers to the Maps component, in some cases, an incorrect template would be applied, causing the newly created markers to not be visualized.
-
 #### Low-Code Apps: Problem when creating a DOM instance containing soft-deleted field descriptors [ID_38164]
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
@@ -234,12 +226,6 @@ In some cases, the visualization picker of a component would incorrectly contain
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
 
 In all DataMiner web apps, a few minor popup window issues have been fixed.
-
-#### Dashboards app & Low-Code Apps - Maps component: 'Delete component' popup window would appear when deleting a character while renaming a layer [ID_38290]
-
-<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
-
-When, while renaming a layer of a Maps component, you deleted a character using the DELETE button, the *Delete component* popup window would incorrectly appear.
 
 #### Dashboards app: Problem when refreshing a dashboard that contained a Parameter table component [ID_38291]
 
