@@ -35,7 +35,7 @@ You can just manually remove the "bad" main protocol which will remove the corre
 
 > [!NOTE]
 > The above actions only work if the incorrect protocol did NOT create new DVEs, but only worked with DVEs previously created.
-> If you have a 'mixed' setup where some DVEs are running version A and some are running the previous version B then it will not be possible to just upload a new protocol that resets the version to B. The DVEs running version A will stick.
+> If you have a 'mixed' setup where some DVEs are running version A and some are running the previous version B, then it will not be possible to just upload a new protocol that resets the version to B. The DVEs running version A will stick.
 
 ## Note
 
