@@ -352,7 +352,7 @@ To build trust between DataMiner and OpenSearch, so that DataMiner can connect t
     </DataBase>
      ```
 
-   >[!IMPORTANT]
+   > [!IMPORTANT]
    > The user and password provided should be defined in the `\etc\opensearch\opensearch-security\internal_users.yml` file.
 
 1. Restart the DataMiner Agent.
