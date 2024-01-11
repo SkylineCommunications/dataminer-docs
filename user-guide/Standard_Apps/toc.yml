@@ -300,6 +300,29 @@ items:
             topicUid: Remote_PHY_Monitoring_Installation
           - name: Remote PHY Monitoring components
             topicUid: Remote_PHY_Monitoring_Components
+      - name: DataMiner Planned Maintenance Tool
+        topicUid: DataMiner_Planned_Maintenance_Tool_Overview
+        items:
+          - name: Installing DataMiner Planned Maintenance Tool
+            topicUid: DataMiner_Planned_Maintenance_Tool_Installation
+          - name: Using DataMiner Planned Maintenance Tool
+            topicUid: DataMiner_Planned_Maintenance_Tool_Usage
+            items:
+              - name: Application Access
+                topicUid: DataMiner_Planned_Maintenance_Tool_Access
+              - name: Resource Configuration
+                topicUid: DataMiner_Planned_Maintenance_Tool_ResourceConfig
+              - name: Application Operations
+                topicUid: DataMiner_Planned_Maintenance_Tool_ApplicationOperations
+                items:
+                  - name: Create Event
+                    topicUid: DataMiner_Planned_Maintenance_Tool_ApplicationOperations_Create
+                  - name: Edit Event
+                    topicUid: DataMiner_Planned_Maintenance_Tool_ApplicationOperations_Edit
+                  - name: Delete Event
+                    topicUid: DataMiner_Planned_Maintenance_Tool_ApplicationOperations_Delete
+              - name: Planned Maintenance Records
+                topicUid: DataMiner_Planned_Maintenance_Tool_Records
   - name: Service & Resource Management Framework
     topicUid: About_SRM
     items:
