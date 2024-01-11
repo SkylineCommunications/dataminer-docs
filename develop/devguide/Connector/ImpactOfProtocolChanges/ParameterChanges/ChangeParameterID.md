@@ -18,4 +18,4 @@ Parameter cannot be reused in future versions.
 
 ## Workarounds
 
-None.
+There is no workaround.

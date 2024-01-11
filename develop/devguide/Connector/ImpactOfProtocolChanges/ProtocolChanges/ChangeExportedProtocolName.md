@@ -17,9 +17,9 @@ DIS MCC
 
 ## Impact
 
-When upgrading to a new version with the change exported protocol name, previous virtual protocol (and elements) cannot be removed and linking between main and DVE elements is broken.
+When upgrading to a new version with the change exported protocol name, previous virtual protocols (and elements) cannot be removed and linking between main and DVE elements is broken.
 
-The old virtual element are still linked to the old version and name.
+The old virtual elements are still linked to the old version and name.
 
 This should only be allowed in case direct problem of duplicate protocol name would arise.
 
@@ -35,8 +35,7 @@ You can just manually remove the "bad" main protocol which will remove the corre
 
 > [!NOTE]
 > The above actions only work if the incorrect protocol did NOT create new DVEs, but only worked with DVEs previously created.
-> If you have a 'mixed' setup where some DVEs are running version A and some are running the previous version B.
-> Then it will not be possible to just upload a new protocol that resets the version to B. The DVEs running version A will stick.
+> If you have a 'mixed' setup where some DVEs are running version A and some are running the previous version B, then it will not be possible to just upload a new protocol that resets the version to B. The DVEs running version A will stick.
 
 ## Note
 

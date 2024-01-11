@@ -22,3 +22,7 @@ Existing trend data is no longer accessible.
 | 2.15.2  | DisplayColumnChangeToNamingFormat | DisplayColumn attribute with column idx '{columnIdx}' on table '{tableId}' was changed into NamingFormat: '{namingFormatValue}'. |
 
 A request to replace the *displayColumn* by naming to make the driver 'Cassandra Compliant' is usually approved.
+
+## Workarounds
+
+There is no workaround.
