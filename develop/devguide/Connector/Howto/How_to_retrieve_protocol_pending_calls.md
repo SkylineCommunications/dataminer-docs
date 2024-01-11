@@ -28,6 +28,7 @@ Pending calls indicate the currently running logic of the driver linked to the e
 >
 > - When the logging levels of the element are set to Level 2, some additional information will be available.
 > - If you use the *Protocol Pendingcalls* option for an element that is stuck, you will not get any diagnostics info, because this feature will try to add a lock on the element and that will fail, since it is stuck. If you use the *Protocol Pendingcalls[no lock]* option instead, you will get some diagnostics info.
+> - In case of element issues while taking a [Log Collector package](#log-collector-packages), the tool will request the pending calls as well. This will be found as a subfolder within the logging folder.
 
 For more information on how to use SLNetClientTest tool, see [SLNetClientTest tool](xref:SLNetClientTest_tool).
 
