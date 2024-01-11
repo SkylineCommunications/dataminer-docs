@@ -10,7 +10,7 @@ This action copies the value of the source parameter to the destination paramete
 
 > [!NOTE]
 > The existing value of the destination parameter will be overwritten.
-> Also note that a parameter change event will only be raised if the value actually changes. So copying value 'A' to a parameter that already contains value 'A' will not cause a parameter change event to be raised. As opposed to a QAction SetParameter call which will always cause a parameter event change to be raised.
+> Also note that when executing a copy action on a read parameter, a parameter change event will only be raised if the value actually changes. So copying value 'A' to a read parameter that already contains value 'A' will not cause a parameter change event to be raised. As opposed to QAction SetParameter calls which will always cause a parameter event change to be raised.
 
 ## Attributes
 
