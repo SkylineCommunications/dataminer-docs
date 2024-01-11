@@ -225,6 +225,60 @@ public override Message CreateReturnMessage()
 > [!NOTE]
 > A return message does not necessarily need to be something to send to an external destination. A message could also be part of an internal API used to move data between classes, methods or QActions within your own protocol. This can also be returned.
 
+### Creating a simple executor
+
+As described above under [Creating an executor](#creating-an-executor), the executor will define how it should parse an incoming message and handle it. However, if you do not want or need to have such granular control over the individual steps and wish to have a more simplified executor, you can use the `SimpleMessageExecutor<T>` class to construct your message executor.
+
+You create it by making a new class that inherits from the `SimpleMessageExecutor<T>`, where T is a class from your messages defined in the API.
+
+> [!NOTE]
+> The API with classes of type SimpleMessageExecutor must be inside a precompile QAction.
+
+```csharp
+public class DeleteLineupExecutor : SimpleMessageExecutor<DeleteLineup>
+```
+
+The Visual Studio IDE will then assist you in correctly implementing your simple executor.
+
+![alt text](../../images/InterAppSimple_VS1.png "Executor implementation in Visual Studio")
+
+The simple executor has a single method (`TryExecute`) that will by default be called when a message is executed
+
+Default execute code (happens in background):
+
+```csharp
+return simpleMessageExecutor.TryExecute(dataSource, dataDestination, out optionalReturnMessage);
+```
+
+Some methods, like `DataSets` and `DataGets` of the standard message executor, have an object argument. This can be a custom class with data, a database object, `SLProtocol`, `Engine`, etc.
+
+The same is possible with the `TryExecute` method, where you will have a `dataSource` object that corresponds with the one you would encounter in the `DataGets` of the standard message executor and a `dataDestination` that corresponds with the one of the `DataSets` method.
+
+```csharp
+public override bool TryExecute(object dataSource, object dataDestination, out Message optionalReturnMessage)
+{
+    SLProtocol protocolSource = (SLProtocol)dataSource;
+    bool allowed = GetPermission(protocolSource);
+    if(!allowed)
+    {
+        optionalReturnMessage = null;
+        return false;
+    }
+
+    ...
+
+    optionalReturnMessage = new DeleteLineupResponse();
+
+    return true;
+}
+```
+
+> [!IMPORTANT]
+> The return message, if provided, must always have the same GUID as the received message that triggered the return in this case.
+
+> [!NOTE]
+> A return message does not necessarily need to be something to send to an external destination. A message could also be part of an internal API used to move data between classes, methods, or QActions within your own protocol. This can also be returned.
+
 ### Parsing a received call
 
 You can create a QAction that triggers on parameter clp_interApp_receive. This QAction will handle any incoming call. The code here will be easy as it uses a combination of the factory and command design patterns.
