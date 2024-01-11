@@ -227,8 +227,6 @@ items:
             topicUid: KI_Local_user_unable_to_access_DMA_after_first_reboot_after_installation
           - name: Various SLElement issues
             topicUid: KI_SLElement_various_issues
-          - name: Multiple issues when Failover based on hostnames is used
-            topicUid: KI_Failover_with_hostnames
           - name: NATS not starting if DMS name contains special characters
             topicUid: KI_NATS_not_starting_special_chars
           - name: Upgrade fails because of VerifyClusterPort.dll prerequisite
@@ -240,8 +238,10 @@ items:
           - name: Setting a protocol to production takes a long time
             topicUid: KI_Setting_a_protocol_to_production_takes_a_long_time
       - name: Resolved issues
-        topicUid: KI_elements_not_loading_in_DMS_with_multiple_ES
+        topicUid: KI_Failover_with_hostnames
         items:
+          - name: Multiple issues when Failover based on hostnames is used
+            topicUid: KI_Failover_with_hostnames
           - name: Elements not loading after upgrade of DMS with multiple Elasticsearch clusters
             topicUid: KI_elements_not_loading_in_DMS_with_multiple_ES
           - name: Various issues when using MessageBroker with chunking
