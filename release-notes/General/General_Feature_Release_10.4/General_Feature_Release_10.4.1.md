@@ -339,6 +339,12 @@ public virtual void UpdateAllCapacitiesAndCapabilitiesByReference(Func<FilterEle
 
 ### Fixes
 
+#### Problem when using MessageBroker with chunking [ID_37532]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+On high-load systems, MessageBroker threads could leak when using chunking.
+
 #### Databases: Problem when starting a migration from MySQL to Cassandra [ID_37589]
 
 <!-- MR 10.5.0 - FR 10.4.1 -->

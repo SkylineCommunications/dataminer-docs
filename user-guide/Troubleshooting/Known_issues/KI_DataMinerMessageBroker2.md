@@ -16,7 +16,7 @@ DataMiner 10.3.8/10.3.0 [CU5] introduces a change to the way DataMiner MessageBr
 
 ## Fix
 
-Install DataMiner 10.3.12 or 10.4.0.<!--RN 37532-->
+Install DataMiner 10.4.0 or 10.4.1.<!--RN 37532-->
 
 ## Description
 
