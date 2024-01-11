@@ -846,6 +846,12 @@ Up to now, when a *Join* operator of type "Right join" was applied, both the ent
 
 A number of enhancements have been made to the anomaly check algorithm.
 
+#### SLAnalytics - Alarm focus: Alarm occurrences will now be identified using a combination of element ID, parameter ID and primary key  [ID_38184]
+
+<!-- MR 10.4.0 - FR 10.4.3 -->
+
+When calculating alarm likelihood (i.e. focus score), up to now, the alarm focus feature used a combination of element ID, parameter ID and display key (if applicable) to identify previous occurrences of the same alarm. From now on, previous alarm occurrences will be identified using a combination of element ID, parameter ID and primary key.
+
 #### SLLogCollector will now also collect the backup logs of the StorageModule DxM [ID_38228]
 
 <!-- MR 10.4.0 - FR 10.4.2 -->
