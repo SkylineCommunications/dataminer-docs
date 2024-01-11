@@ -24,7 +24,7 @@ uid: General_Feature_Release_10.4.3
 
 #### DataMiner Maps: ForeignKeyRelationsSourceInfo tag now supports an elementVar attribute [ID_38274]
 
-<!-- MR 10.5.0 - FR 10.4.3 -->
+<!-- MR 10.4.0 - FR 10.4.3 -->
 
 In a `<ForeignKeyRelationsSourceInfo>` tag, it is now possible to specify an *elementVar* attribute.
 

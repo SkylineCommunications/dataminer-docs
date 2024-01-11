@@ -262,22 +262,3 @@ The `ExecuteScriptOnDomInstanceActionSettings` object has been made available as
 > - When `ScriptSettings` are filled in in the DomDefinition, these will take precedence.
 > - When, in the DomDefinition, the `ScriptSettings` object is null, the `ScriptSettings` of the `ModuleSettings` will be used instead.
 > - In order for the `ModuleSettings` objects to be used, the objects in the `ModuleSettingsOverrides` of the `DomDefinition` have to be *null*. Just making them empty is not sufficient.
-
-#### DataMiner Maps: ForeignKeyRelationsSourceInfo tag now supports an elementVar attribute [ID_38274]
-
-<!-- MR 10.5.0 - FR 10.4.3 -->
-
-In a `<ForeignKeyRelationsSourceInfo>` tag, it is now possible to specify an *elementVar* attribute.
-
-```xml
-<ForeignKeyRelationsSourceInfo elementVar="myElement">
-...
-</ForeignKeyRelationsSourceInfo>
-```
-
-This will allow you to pass an element in the map's URL. See the URL examples below (notice the “d” in front of the parameter name!):
-
-```txt
-maps.aspx?config=MyConfigFile&dmyElement=7/46840
-maps.aspx?config=MyConfigFile&dmyElement=VesselData
-```
