@@ -51,7 +51,7 @@ To create an Automation script solution:
 
 1. Use "DataMinerAPIs" as the name for your solution, so you can reuse this solution for any future API scripts.
 
-1. Choose a location to save the Automation script solution and click *Next*.
+1. Choose a location to save the Automation script solution, and click *Next*.
 
    ![Visual Studio configure your project](~/user-guide/images/UDAPIS_Tutorials_HelloWorld_DIS_SolutionSettings_2019.jpg)
 
@@ -93,11 +93,11 @@ namespace HelloWorldAPI_1
 
 When the API script is complete, it needs to be published to the DataMiner System. You can do so using the built-in publish feature of DIS. Make sure that DIS can connect to the DataMiner System you want to upload your script to. You will need to [edit the DIS settings](xref:DIS_settings#dma) so the DMA is selectable.
 
-1. In the *Solution Explorer*, double-click *HelloWorldAPI.xml* .
+1. In the *Solution Explorer*, double-click *HelloWorldAPI.xml*.
 
    ![Automation script XML](~/user-guide/images/UDAPIS_Tutorials_HelloWorld_Open_Script_XML.jpg)
 
-1. At the top of the code window, click the arrow next to the *Publish* button and select the DataMiner System you want to upload the script to.
+1. At the top of the code window, click the arrow next to the *Publish* button, and select the DataMiner System you want to upload the script to.
 
    ![Publish to DMA](~/user-guide/images/UDAPIS_Tutorials_DIS_Publish.jpg)
 
