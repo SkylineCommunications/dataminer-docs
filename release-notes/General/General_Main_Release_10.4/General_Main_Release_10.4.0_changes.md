@@ -1036,7 +1036,7 @@ In cases where SLDataGateway retrieved an entire table and then applied a filter
 
 #### Problem when using MessageBroker with chunking [ID_37532]
 
-<!-- MR 10.4.0 - FR 10.3.12 -->
+<!-- MR 10.4.0 - FR 10.4.1 -->
 
 On high-load systems, MessageBroker threads could leak when using chunking.
 
