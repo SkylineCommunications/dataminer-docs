@@ -240,48 +240,48 @@ plugins.security.system_indices.indices: [".plugins-ml-model", ".plugins-ml-task
 
 The default password of the *admin* user should be changed and all the users except *admin* should be removed. To do this:
 
-1. Choose a strong password for the *admin* user and generate the corresponding hash: 
+1. Choose a strong password for the *admin* user and generate the corresponding hash:
 
-    ```bash
-    cd /usr/share/opensearch/plugins/opensearch-security/tools
-    
-    OPENSEARCH_JAVA_HOME=/usr/share/opensearch/jdk ./hash.sh
-    ```
+   ```bash
+   cd /usr/share/opensearch/plugins/opensearch-security/tools
+   
+   OPENSEARCH_JAVA_HOME=/usr/share/opensearch/jdk ./hash.sh
+   ```
 
 1. Edit the *internal_users.yml* file, removing all the users except *admin* and replacing the old hash by the one generated:
 
-    ```bash
-     sudo vi /etc/opensearch/opensearch-security/internal_users.yml
-    ```
+   ```bash
+    sudo vi /etc/opensearch/opensearch-security/internal_users.yml
+   ```
 
-    Example:
+   Example:
 
-    ```yml
-        ---
-    # This is the internal user database
-    # The hash value is a bcrypt hash and can be generated with plugin/tools/hash.sh
-    
-    _meta:
-      type: "internalusers"
-      config_version: 2
-    
-    # Define your internal users here
-    
-    ## Demo users
-    
-    admin:
-      hash: "$2y$12$EeAQpNRgrIccz2iUK7Fsqektv.qIbWCGnTs1NQYYyA9pgL8zdBxTy"
-      reserved: true
-      backend_roles:
-      - "admin"
-      description: "Demo admin user"
+   ```yml
+       ---
+   # This is the internal user database
+   # The hash value is a bcrypt hash and can be generated with plugin/tools/hash.sh
+   
+   _meta:
+     type: "internalusers"
+     config_version: 2
+   
+   # Define your internal users here
+   
+   ## Demo users
+   
+   admin:
+     hash: "$2y$12$EeAQpNRgrIccz2iUK7Fsqektv.qIbWCGnTs1NQYYyA9pgL8zdBxTy"
+     reserved: true
+     backend_roles:
+     - "admin"
+     description: "Demo admin user"
+   ```
 
-    ```
+> [!TIP]
+> You can find more information about the steps above in the OpenSearch documentation: [Configure a user](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/debian/#configure-a-user).
 
-More information about the steps above may be found at the OpenSearch documentation: [Configure a user](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/debian/#configure-a-user).
-
- > [!NOTE]
- > In order the changes above in the *internal_users.yml* file to be applied, you will need to restart the service and run the *securityadmin.sh* script as described next.
+> [!NOTE]
+> To make sure the changes in the *internal_users.yml* file are applied, you will need to restart the service and run the *securityadmin.sh* script as described below.
 
 ##### Restart OpenSearch
 
