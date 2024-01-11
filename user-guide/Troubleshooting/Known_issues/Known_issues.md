@@ -95,7 +95,7 @@ uid: Known_issues
 | [Various SLElement issues](xref:KI_SLElement_various_issues) | See [detailed page](xref:KI_SLElement_various_issues). | November 25, 2022 |
 | [SLLog issue when large alarm tree is closed](xref:KI_SLLog_issue_when_large_alarm_tree_is_closed) | DataMiner 10.2.0 [CU8] and [CU9]<br>DataMiner 10.2.11 and 10.2.12 | November 16, 2022 |
 | [Element data lost after migrating elements in Cassandra Cluster setup](xref:KI_element_data_loss_after_migration_in_CC_setup) | DataMiner 10.1.0 up to 10.2.0 [CU11]<br>DataMiner 10.0.11 up to 10.3.1 | November 15, 2022 |
-| [Multiple issues when Failover based on hostnames is used](xref:KI_Failover_with_hostnames) | From DataMiner 10.2.0/10.1.8 <br>onwards | November 15, 2022 |
+| [Multiple issues when Failover based on hostnames is used](xref:KI_Failover_with_hostnames) | DataMiner 10.2.0/10.1.8 up to 10.3.0 [CU10]/10.4.1 | November 15, 2022 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | November 8, 2022 |
 | [SLDataGateway memory leak during Cassandra Cluster migration](xref:KI_SLDataGateway_leak_during_CC_migration) | DataMiner 10.1.0 prior to CU22<br>DataMiner 10.2.0 prior to CU10<br>DataMiner 10.1.2 to 10.2.12 | November 3, 2022 |
 | [Excessive SLElement CPU usage during Cassandra Cluster migration](xref:KI_SLElement_CPU_high_during_CC_migration) | DataMiner 10.1.0/10.1.2 up to 10.2.0 [CU9]/10.3.0 | October 28, 2022 |
@@ -132,7 +132,7 @@ uid: Known_issues
 | [SLAutomation memory leak when Engine.AddScriptOutput is used](xref:KI_SLAutomation_memory_leak_AddScriptOutput) | DataMiner 10.1.0 and 10.2.0 (up to [CU10])<br>From DataMiner 10.0.2 up to 10.3.1 | December 8, 2022 |
 | [Various SLElement issues](xref:KI_SLElement_various_issues) | See [detailed page](xref:KI_SLElement_various_issues). | November 25, 2022 |
 | [Element data lost after migrating elements in Cassandra Cluster setup](xref:KI_element_data_loss_after_migration_in_CC_setup) | DataMiner 10.1.0 up to 10.2.0 [CU11]<br>DataMiner 10.0.11 up to 10.3.1 | November 15, 2022 |
-| [Multiple issues when Failover based on hostnames is used](xref:KI_Failover_with_hostnames) | From DataMiner 10.2.0/10.1.8 <br>onwards | November 15, 2022 |
+| [Multiple issues when Failover based on hostnames is used](xref:KI_Failover_with_hostnames) | DataMiner 10.2.0/10.1.8 up to 10.3.0 [CU10]/10.4.1 | November 15, 2022 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | November 8, 2022 |
 | [SLDataGateway memory leak during Cassandra Cluster migration](xref:KI_SLDataGateway_leak_during_CC_migration) | DataMiner 10.1.0 prior to CU22<br>DataMiner 10.2.0 prior to CU10<br>DataMiner 10.1.2 to 10.2.12 | November 3, 2022 |
 | [Excessive SLElement CPU usage during Cassandra Cluster migration](xref:KI_SLElement_CPU_high_during_CC_migration) | DataMiner 10.1.0/10.1.2 up to 10.2.0 [CU9]/10.3.0. | October 28, 2022 |
