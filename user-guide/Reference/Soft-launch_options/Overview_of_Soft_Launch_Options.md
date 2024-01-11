@@ -95,6 +95,15 @@ Makes it possible to [connect the DataMiner System to dataminer.services](xref:C
 - **Minimum version**: 10.1.2
 - **Release version**: 10.1.9/10.2.0 ([RN 30513](xref:General_Feature_Release_10.1.9#connecting-a-dataminer-system-to-the-cloud-id_30513))
 
+### Copilot
+
+Enables the DataMiner Copilot, a sidebar in DataMiner Cube that provides additional information to the user. For example, when a user selects an alarm in the Alarm Console, the DataMiner Copilot will provide suggestions on how to resolve the alarm.
+
+- **Minimum version**: 10.4.2
+
+> [!NOTE]
+> This feature requires a [DataMiner System connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
+
 ### CorrectedDisplayKeyOnNaming
 
   Takes exception values into account for display key generation.
