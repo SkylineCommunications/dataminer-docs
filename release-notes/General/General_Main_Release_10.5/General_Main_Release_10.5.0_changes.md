@@ -90,12 +90,6 @@ When you sort on a joined column, the Sort operator will be forwarded in the fol
 - In case of a left join, but only if all sorts are descending
 - In case of a right join
 
-#### SLAnalytics - Alarm focus: Alarm occurrences will now be identified using a combination of element ID, parameter ID and primary key  [ID_38184]
-
-<!-- MR 10.5.0 - FR 10.4.3 -->
-
-When calculating alarm likelihood (i.e. focus score), up to now, the alarm focus feature used a combination of element ID, parameter ID and display key (if applicable) to identify previous occurrences of the same alarm. From now on, previous alarm occurrences will be identified using a combination of element ID, parameter ID and primary key.
-
 #### DataMiner Object Models: Required list fields can no longer be set to an empty list [ID_38238]
 
 <!-- MR 10.5.0 - FR 10.4.3 -->
