@@ -4,13 +4,13 @@ uid: Protocol.Params.Param.Display.Units
 
 # Units element
 
-Specifies a unit for a parameter value displayed on the user interface: in a report, on the alarm display, etc.
+Specifies a unit for a parameter value displayed in the user interface (e.g. in a report, in the Alarm Console, etc.).
 
 ## Type
 
-The units in the validation list are suggestions to facilitate consistent naming and casing of the units. If you need a different unit you can just use it.
+Contains a unit of measurement.
 
-For example, a string like “Batteries” can be used to show the number of batteries attached to a backup power supply.
+In the table below, you can find a list of the suggested units to use. These are the units of measurement recognized by the validator in DIS. However, you can also use units that are not mentioned in this list if necessary. For example, a string like "Batteries" can be used to show the number of batteries attached to a backup power supply.
 
 |Value|Description|
 |--- |--- |
