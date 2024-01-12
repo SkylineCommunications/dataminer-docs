@@ -333,12 +333,6 @@ When the Cassandra Cluster Migrator tool (*SLCCMigrator.exe*) was migrating tabl
 
 In cases where SLDataGateway retrieved an entire table and then applied a filter afterwards, any row limits defined for the query in question would incorrectly be disregarded.
 
-#### Problem when using MessageBroker with chunking [ID_37532]
-
-<!-- MR 10.4.0 - FR 10.3.12 -->
-
-On high-load systems, MessageBroker threads could leak when using chunking.
-
 #### Storage as a Service: Paged data retrieval operations would be cut off prematurely [ID_37533]
 
 <!-- MR 10.4.0 - FR 10.3.12 -->

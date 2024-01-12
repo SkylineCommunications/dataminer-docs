@@ -590,6 +590,14 @@ Elasticsearch is only supported up to version 6.8, which is no longer supported 
 
 Because of a number of enhancements, overall performance has increased when loading partial tables in DataMiner Cube.
 
+#### System Center: Database setting "CloudStorage" renamed to "STaaS" [ID_38325]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
+
+In the *Database* section of *System Center*, up to now, when a DataMiner Agent was configured to use Storage as a Service (STaaS), the *Database* setting was set to "CloudStorage". This "CloudStorage" value has now been renamed to "STaaS".
+
+Also, when *Database* is set to "STaaS", the *Configuration* and *Maintenance* sections will no longer be visible in both the *General* and *Offload* tabs, and the *Cassandra preparation/migration* button will be hidden.
+
 ### Fixes
 
 #### Profiles app: A profile instance would incorrectly list parameters that had been removed from the profile definition [ID_34679] [ID_34771]

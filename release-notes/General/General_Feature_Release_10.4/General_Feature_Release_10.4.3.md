@@ -60,6 +60,12 @@ From now on, when the value of a required list field is set to an empty list, on
 - `DomInstanceHasMissingRequiredFieldsForCurrentStatus` (when using the DOM status system)
 - `DomInstanceDoesNotContainAllRequiredFieldsForSectionDefinition` (when not using the DOM status system)
 
+#### Security enhancements [ID_38263]
+
+<!-- 38263: MR 10.5.0 - FR 10.4.3 -->
+
+A number of security enhancements have been made.
+
 ### Fixes
 
 #### Correlation: Alarm buckets would not get cleaned up when alarms were cleared before the end of the time frame specified in the 'Collect events for ... after first event, then evaluate conditions and execute actions' setting [ID_38292]
