@@ -390,25 +390,30 @@ This will result in Agent 2 receiving different information about the same clust
 
 ## Check if port is already in use
 
-### Port 4222, 6222, 8222
+### Port 4222, 6222, and 8222
 
-NATS uses port 4222, 6222 and 8222. If another program is already bound to one of these ports, you will notice the following behavior:
+NATS uses port 4222, 6222, and 8222. If another program is already bound to one of these ports, you will notice the following behavior:
 
 - DataMiner fails to start
 - NATS is stopped
 - The log file at *C:\Skyline DataMiner\NATS\nats-streaming-server\nats-server.log* can contain the following:
+
   `Error listening on port: 0.0.0.0:4222, "listen tcp 0.0.0.0:4222: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted."`
 
-The port may already be bound by one of the DataMiner processes
+In this case, the port may already be bound by one of the DataMiner processes. To fix this:
 
 1. Run the following command in a command prompt window: `netstat -aon | findstr 4222`.
-2. If you identify a process using any of the ports found in the logging, open Windows Task Manager to find the process corresponding with the PID found with above command.
-3. Kill the process or stop the service hosting that process.
-4. Start the NATS service
-5. Restart the killed process or service hosting that process.
 
-This is a bug in the [nats client library](https://github.com/nats-io/nats.net) and a [pull request](https://github.com/nats-io/nats.net/pull/850) for a fix is already present on the repository.
-When this pull request is merged and a new client version is released, we can update our DataMiner processes so this port lock situation no longer occurs.
+1. If you identify a process using any of the ports found in the logging, open Windows Task Manager to find the process corresponding with the PID found with above command.
+
+1. Kill the process or stop the service hosting that process.
+
+1. Start the NATS service
+
+1. Restart the killed process or service hosting that process.
+
+> [!NOTE]
+> This is caused by a bug in the [nats client library](https://github.com/nats-io/nats.net). When the [pull request](https://github.com/nats-io/nats.net/pull/850) to fix this has been merged, the DataMiner processes will be updated so this port lock situation no longer occurs.
 
 ### Port 9090
 
