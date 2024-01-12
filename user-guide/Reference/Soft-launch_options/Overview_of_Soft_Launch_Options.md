@@ -116,6 +116,19 @@ This is a Cube-only feature that can only be activated with the argument `ENABLE
 - **Minimum version**: 9.6.7
 - **Estimated Release version**: To be determined
 
+### DataAPI
+
+Enable functionality of Data API and Scripted Connectors.
+
+This enables the Data Sources module to be displayed in Cube and the functionality of Data API and Data Sources to be enabled.
+
+- **Minimum version**: 10.4.2/10.4.0
+- **Estimated Release version**: To be determined
+
+> [!NOTE]
+> Also requires the latest version of DataAggregator DxM and DataAPI DxM to be installed.
+
+
 ### Diagnostics
 
 Enable functionality to retrieve diagnostics from several DataMiner core processes.
