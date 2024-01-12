@@ -214,7 +214,7 @@ items:
             topicUid: CI_Types1
           - name: Using your IS-04 registry to provision DataMiner with IDP
             topicUid: Using_your_IS04_registry_to_provision_DataMiner_with_IDP
-  - name: Monitoring Solutions
+  - name: Monitoring & Management Solutions
     topicUid: Monitoring_Solutions
     items:
       - name: DataMiner Huawei Manager dashboard
