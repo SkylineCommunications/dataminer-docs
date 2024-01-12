@@ -4,11 +4,13 @@ uid: Protocol.Params.Param.Display.Units
 
 # Units element
 
-Specifies a unit for a parameter value displayed on the user interface.
+Specifies a unit for a parameter value displayed on the user interface: in a report, on the alarm display, etc.
 
 ## Type
 
-Contains one of the following values:
+The units in the validation list are suggestions to facilitate consistent naming and casing of the units. If you need a different unit you can just use it.
+
+For example, a string like “Batteries” can be used to show the number of batteries attached to a backup power supply.
 
 |Value|Description|
 |--- |--- |
@@ -942,12 +944,6 @@ Contains one of the following values:
 ## Parent
 
 [Display](xref:Protocol.Params.Param.Display)
-
-## Remarks
-
-This can be a unit like “Vac”, “dBm”, etc., but it can also be a string like “Batteries” (for example for a parameter showing the number of batteries attached to a backup power supply).
-
-The specified unit will be used each time the value of the parameter is displayed: in a report, on the alarm display, etc.
 
 ## Examples
 
