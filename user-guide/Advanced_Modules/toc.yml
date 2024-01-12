@@ -1275,8 +1275,6 @@ items:
         items:
           - name: Troubleshooting User-Defined APIs
             topicUid: UD_APIs_Troubleshooting
-          - name: Bad and best practices
-            topicUid: UD_APIs_Bad_and_Best_Practice
       - name: Tutorials
         topicUid: UD_APIs_Tutorials
         items:

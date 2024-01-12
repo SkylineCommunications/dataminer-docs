@@ -3,6 +3,9 @@ uid: UD_APIs_Troubleshooting
 ---
 # Troubleshooting User-Defined APIs
 
+> [!TIP]
+> See also [Bad and best practices](xref:UD_APIs_Bad_and_Best_Practices)
+
 ## Logging
 
 In case you get an error while triggering an API, defining an API, or installing the endpoint, you may find more info in the logging. These are the main log files:

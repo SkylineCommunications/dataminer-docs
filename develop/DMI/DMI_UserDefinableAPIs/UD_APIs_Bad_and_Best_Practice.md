@@ -1,8 +1,8 @@
 ---
-uid: UD_APIs_Bad_and_Best_Practice
+uid: UD_APIs_Bad_and_Best_Practices
 ---
 
-# User-Defined APIs: Bad and best practices
+# Bad and best practices
 
 ### Bad practice
 
@@ -13,7 +13,7 @@ uid: UD_APIs_Bad_and_Best_Practice
 >
 > As a result, there is a risk that the ISS and/or the API manager may return a timeout on the API request even while the "run Automation scrip" task remains in the queue. This script is not cancelled or removed, but will eventually be executed, despite the original sender having already received a timeout.
 
-![bad practice](~/user-guide/images/UserDefinedAPI-Internal_flow1.png)
+![bad practice](~/develop/images/UserDefinedAPI-Internal_flow1.png)
 
 ### Best practice
 
@@ -24,4 +24,4 @@ uid: UD_APIs_Bad_and_Best_Practice
 >
 > **Note: Automation sets remain temporarily blocked while the main protocol thread is busy.**
 
-![best practice](~/user-guide/images/UserDefinedAPI-Internal_flow2.png)
+![best practice](~/develop/images/UserDefinedAPI-Internal_flow2.png)
