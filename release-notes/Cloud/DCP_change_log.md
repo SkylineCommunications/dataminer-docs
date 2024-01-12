@@ -6,6 +6,10 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 12 January 2024 - New Feature - Remote access for custom files/webpages [ID_38426]
+
+It is now possible to provide remote access via dataminer.services to files or webpages hosted in the folder `C:\Skyline DataMiner\Webpages\public\` of a DMA.
+
 #### 4 January 2024 - Chat Integration with Microsoft Teams now includes sending notification using Adaptive Cards [ID_38339]
 
 It is now possible to send notifications using Adaptive Cards to chats or channels with Chat Integration.
