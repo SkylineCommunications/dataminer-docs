@@ -440,7 +440,7 @@ SLLogCollector will now also collect the backup logs of the *StorageModule* DxM 
 
 #### DataMiner upgrade: Enhanced robustness of MSI package installations [ID_38376]
 
-<!-- MR 10.4.0 - FR 10.4.2 [CU0] -->
+<!-- MR 10.3.0 [CU12] - FR 10.4.2 [CU0] -->
 
 Up to now, during a DataMiner upgrade, in some cases, MSI packages would fail to install and throw one of the following errors:
 

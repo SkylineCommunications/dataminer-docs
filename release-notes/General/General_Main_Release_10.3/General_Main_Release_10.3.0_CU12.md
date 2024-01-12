@@ -12,7 +12,16 @@ uid: General_Main_Release_10.3.0_CU12
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### DataMiner upgrade: Enhanced robustness of MSI package installations [ID_38376]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.2 [CU0] -->
+
+Up to now, during a DataMiner upgrade, in some cases, MSI packages would fail to install and throw one of the following errors:
+
+- `The Installer has insufficient privileges to access this directory: ...`
+- `Service ... could not be installed. Verify that you have sufficient privileges to install system services.`
+
+From now on, when one of the above-mentioned errors is thrown, it will no longer be necessary to restart the entire upgrade procedure. Instead, a retry will be attempted during the running upgrade.
 
 ### Fixes
 

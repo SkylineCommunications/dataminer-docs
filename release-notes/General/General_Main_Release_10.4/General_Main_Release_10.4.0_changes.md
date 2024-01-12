@@ -858,17 +858,6 @@ When calculating alarm likelihood (i.e. focus score), up to now, the alarm focus
 
 SLLogCollector will now also collect the backup logs of the *StorageModule* DxM located in the `C:\ProgramData\Skyline Communications\DataMiner StorageModule\Logs\Backup` folder.
 
-#### DataMiner upgrade: Enhanced robustness of MSI package installations [ID_38376]
-
-<!-- MR 10.4.0 - FR 10.4.2 [CU0] -->
-
-Up to now, during a DataMiner upgrade, in some cases, MSI packages would fail to install and throw one of the following errors:
-
-- `The Installer has insufficient privileges to access this directory: ...`
-- `Service ... could not be installed. Verify that you have sufficient privileges to install system services.`
-
-From now on, when one of the above-mentioned errors is thrown, it will no longer be necessary to restart the entire upgrade procedure. Instead, a retry will be attempted during the running upgrade.
-
 ### Fixes
 
 #### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID_34981]
