@@ -32,8 +32,14 @@ Also, when *Database* is set to "STaaS", the *Configuration* and *Maintenance* s
 
 ### Fixes
 
-#### DataMiner Cube: No longer allowed to create properties with a name that consists of whitespace characters only [ID_38209]
+#### No longer allowed to create properties with a name that consists of whitespace characters only [ID_38209]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
 
 Up to now, DataMiner Cube would incorrectly allow you to create properties of which the name consisted of whitespace characters only. From now on, this is no longer allowed.
+
+#### Problem when opening a service card of which the default page was set to 'Reports' [ID_38380]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
+
+When you opened a service card of which the default page was set to *Reports*, DataMiner Cube could become unresponsive.

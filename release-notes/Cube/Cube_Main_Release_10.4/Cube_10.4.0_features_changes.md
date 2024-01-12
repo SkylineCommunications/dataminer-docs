@@ -879,3 +879,9 @@ When, in the Alarm Console, alarms were grouped by time, root time, creation tim
 In System Center, you can go to *System settings > Logging* to change the log file size.
 
 Up to now, the description of this setting mentioned that the setting applied to the DataMiner Agent to which you were connected. It will now mention that the setting applies to the entire DataMiner System.
+
+#### Problem when opening a service card of which the default page was set to 'Reports' [ID_38380]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
+
+When you opened a service card of which the default page was set to *Reports*, DataMiner Cube could become unresponsive.
