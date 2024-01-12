@@ -454,4 +454,4 @@ Up to now, the description of this setting mentioned that the setting applied to
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
 
-When you opened a service card of which the default page was set to *Reports*, DataMiner Cube could become unresponsive.
+When you opened a service card of which the default page was set to *Reports*, an error could occur, causing DataMiner Cube to become unresponsive.
