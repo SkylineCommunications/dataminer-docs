@@ -12,6 +12,14 @@ uid: General_Main_Release_10.3.0_CU12
 
 ### Enhancements
 
+#### DataMiner installer: New option to indicate that you want to perform a full installation of a new DMA [ID_37719]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+Up to now, when you ran the DataMiner installer to install a new DataMiner Agent using a DataMiner upgrade package, some modules would incorrectly not get installed as they were configured to only be installed when upgrading an existing DataMiner Agent.
+
+From now on, it will be possible to indicate that you want to perform an initial installation (i.e. a full installation of a new DataMiner Agent). If you do so, all installation steps will be performed, including the upgrade actions.
+
 #### DataMiner upgrade: Enhanced robustness of MSI package installations [ID_38376]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.2 [CU0] -->
