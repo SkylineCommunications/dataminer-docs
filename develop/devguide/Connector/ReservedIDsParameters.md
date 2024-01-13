@@ -57,6 +57,12 @@ Only to be used for communication with DataMiner modules. This range contains pa
 ## [1 000 000, 9 999 999]
 Must only be used in case all parameters in the range [1, 63 999] are already in use.
 
+In general, this range can be used in a protocol for parameters. However, the following ranges are reserved for specific functionallity:
+
+|Functionallity|Restricted range|Owner|Description|
+|--- |--- |--- |--- |
+|Flow Engineering|[9 990 000 - 9 999 999]|MediaOps|Parameters in this range are used by Flow Engineering (FLE) to track the as-is path of a flow. See [Support FLE in connectors](https://github.com/SkylineCommunications/SLC-C-Example_FlowEngineering/blob/main/README.md).|
+
 > [!NOTE]
 > Minimum DataMiner version: 9.0.4 (RN 13161)
 
