@@ -1,8 +1,8 @@
 ---
-uid: Migration_from_Elasticsearch_to_Opensearch
+uid: Migration_from_Elasticsearch_to_OpenSearch
 ---
 
-# Migration from Elasticsearch to Opensearch
+# Migration from Elasticsearch to OpenSearch
 
 This guide describes the steps to migrate from Elasticsearch 6.8.22 to OpenSearch 2.11.1
 
