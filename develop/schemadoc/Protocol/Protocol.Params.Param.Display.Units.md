@@ -12,6 +12,8 @@ Contains a unit of measurement.
 
 In the table below, you can find a list of the suggested units to use. These are the units of measurement recognized by the validator in DIS. However, you can also use units that are not mentioned in this list if necessary. For example, a string like "Batteries" can be used to show the number of batteries attached to a backup power supply.
 
+In case you have a suggestion for a unit to be added to the list below, send an email to <DIS@skyline.be>.
+
 |Value|Description|
 |--- |--- |
 |%|percent|
