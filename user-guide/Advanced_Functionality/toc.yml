@@ -375,6 +375,8 @@ items:
                 topicUid: Resources_migration_to_elastic
               - name: Migrating SRM profiles to the indexing database
                 topicUid: Profile_migration_to_elastic
+              - name: Migration from Elasticsearch to OpenSearch
+                topicUid: Migration_from_Elasticsearch_to_OpenSearch
           - name: Common database settings
             topicUid: Specifying_TTL_overrides
             items:
