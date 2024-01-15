@@ -18,6 +18,10 @@ The ArtifactDeployer DxM will now periodically send a health check to the cloud 
 
 The Orchestrator DxM will now periodically send a health check to the cloud to indicate that the DxM is running using correct identifiers.
 
+#### 16 January 2024 - Fix - CoreGateway 2.14.3 - Several fixes for DxM status reporting [ID_38442]
+
+The CoreGateway DxM will now periodically send a health check to the cloud to indicate that the DxM is running using correct identifiers.
+
 #### 16 January 2024 - Fix - CloudGateway 2.13.2 - Several fixes for DxM status reporting [ID_38450]
 
 The CloudGateway DxM will now periodically send a health check to the cloud to indicate that the DxM is running using correct identifiers.
