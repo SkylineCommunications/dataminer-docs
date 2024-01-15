@@ -8,7 +8,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 #### 12 January 2024 - New Feature - Remote access for custom files/webpages [ID_38426]
 
-It is now possible to provide remote access via dataminer.services to files or webpages hosted in the folder `C:\Skyline DataMiner\Webpages\public\` of a DMA.
+It is now possible to provide remote access via dataminer.services to files or webpages. To do so, add them in the folder `C:\Skyline DataMiner\Webpages\public\` on your DMA. To access such files, users can use the remote access URL followed by `/public/` (e.g. the file *image.png* via `https://ziine-skyline.on.dataminer.services/public/image.png`).
 
 #### 4 January 2024 - Chat Integration with Microsoft Teams now includes sending notification using Adaptive Cards [ID_38339]
 
