@@ -12,8 +12,8 @@ With this feature, users can:
 
 - Use the remote access URL to [access the DMS via DataMiner Cube](xref:Accessing_DMS_remotely_with_Cube).
 
-- Access files or webpages on the DMA that have been made available for public access.<!-- RN 38426 -->
+- Access files or webpages on the DMA that have been made available for remote access.<!-- RN 38426 -->
 
   To access such files, use the remote access URL followed by `/public/` (e.g. the file *image.png* via `https://ziine-skyline.on.dataminer.services/public/image.png`).
 
-  To make files or webpages available for public access, add them in the folder `C:\Skyline DataMiner\Webpages\public\` on the DMA.
+  To make files or webpages available for remote access, add them in the folder `C:\Skyline DataMiner\Webpages\public\` on the DMA.
