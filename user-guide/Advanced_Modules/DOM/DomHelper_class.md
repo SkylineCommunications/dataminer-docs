@@ -27,7 +27,7 @@ var domDefinition = new DomDefinition("DomDefinitionName");
 helper.DomDefinitions.Create(domDefinition);
 ```
 
-By default, an exception will be thrown if a call fails. However, you can disable this and check if something went wrong yourself by requesting the `TraceData` object of the last call. This object contains all errors and warnings. For example:
+By default, a `CrudFailedException` will be thrown if a call fails. However, you can disable this and check if something went wrong yourself by requesting the `TraceData` object of the last call. This object contains all errors and warnings. For example:
 
 ```csharp
 // Disable the exceptions
@@ -51,6 +51,37 @@ if (!traceData.HasSucceeded())
     // You can also just log the complete TraceData object,
     // this will clearly show the errors, reasons and extra info
     engine.GenerateInformation(traceData.ToString());
+}
+```
+
+### Reading DOM data
+
+When reading DOM data using the `Read(FilterElement<T>)` methods, you can opt to do a single read or retrieve the results in pages. When there is a chance that a lot of records can be returned, using paging is highly recommend. This ensures that a response is not too large, as this negatively impact performance. This also allows you to possibly make a decision in the code to abort the action without having to retrieve all records.
+
+**Read all without paging:**
+
+```csharp
+var fieldDescriptorId = new FieldDescriptorID(Guid.Parse("87fd760d-13cd-41f4-85b6-405beb0f777c"));
+var filter = DomInstanceExposers.FieldValues.DomInstanceField(fieldDescriptorId).Equal("MyValue");
+
+var allInstances = helper.DomInstances.Read(filter);
+```
+
+**Read all with paging:**
+
+```csharp
+var pagingHelper = helper.DomInstances.PreparePaging(filter);
+var allInstances = pagingHelper.GetAll();
+```
+
+**Read page by page:**
+
+```csharp
+var pagingHelper = helper.DomInstances.PreparePaging(filter); // Prepare with default page size of 500
+while (pagingHelper.MoveToNextPage())
+{
+    var currentPage = pagingHelper.GetCurrentPage();
+    // Handle current page of data...
 }
 ```
 

@@ -735,7 +735,7 @@ items:
             topicUid: DomBehaviorDefinition
       - name: DOM managers
         topicUid: DOM_managers
-      - name: DomHelper class
+      - name: DOM helper class
         topicUid: DomHelper_class
       - name: DOM events
         topicUid: DOM_events
@@ -770,6 +770,8 @@ items:
             topicUid: DOM_StorageSettings
       - name: DOM data storage
         topicUid: DOM_data_storage
+      - name: Best practices
+        topicUid: DOM_best_practices
       - name: DOM examples
         topicUid: DOM_Invoice_app_example
         items:
