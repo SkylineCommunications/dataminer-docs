@@ -204,9 +204,9 @@ For a Failover DMA within a cluster that does not use the Cassandra cluster feat
 
    1. Close the SLNetClientTest tool.
 
-## DMA in a DMS using a Cassandra cluster
+## DMA in a DMS using a Cassandra cluster locally
 
-If your DataMiner System uses the Cassandra cluster feature for its general database (i.e. one Cassandra cluster for the entire DMS), follow the procedure below to change the IP of one of the DMAs in the DMS:
+If your DataMiner System uses the Cassandra cluster feature for its general database (i.e. one Cassandra cluster for the entire DMS), but Cassandra is hosted on the same machine as DataMiner (which is not recommended), follow the procedure below to change the IP of one of the DMAs in the DMS:
 
 1. Stop the DMA of which you want to change the IP.
 

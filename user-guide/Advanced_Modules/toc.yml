@@ -295,6 +295,8 @@ items:
             items:
               - name: Displaying a custom empty component message
                 topicUid: Tutorial_Dashboards_Displaying_a_custom_empty_component_message
+              - name: Embedding a connector dashboard in Visual Overview
+                topicUid: Tutorial_Embed_Connector_Dashboard_in_Visio
       - name: Low-Code Apps
         topicUid: Application_framework
         items:
@@ -354,6 +356,8 @@ items:
                 topicUid: Tutorial_Apps_Style_A_Table
               - name: Using the maps component in a low-code app
                 topicUid: TutorialMaps
+              - name: Getting started with the grid component
+                topicUid: Tutorial_Apps_Grid
       - name: Configuring components
         topicUid: Configuring_components
         items:
@@ -526,6 +530,8 @@ items:
                 topicUid: Get_parameter_relations
               - name: Get parameters for element where
                 topicUid: Get_parameters_for_element_where
+              - name: Get profile instances
+                topicUid: Get_profile_instances
               - name: Get resources
                 topicUid: Get_resources
               - name: Get services
@@ -781,6 +787,8 @@ items:
             topicUid: DOM_status_system_example
           - name: Altering values of a DomInstance - examples
             topicUid: DOM_Altering_values_of_a_DomInstance
+          - name: Processing multiple DomInstances - examples
+            topicUid: DOM_BulkProcessing_Example
       - name: DOM DevOps tools
         topicUid: DOM_DevOps_tools
         items:
@@ -1269,8 +1277,6 @@ items:
         items:
           - name: Troubleshooting User-Defined APIs
             topicUid: UD_APIs_Troubleshooting
-          - name: Bad and best practices
-            topicUid: UD_APIs_Bad_and_Best_Practice
       - name: Tutorials
         topicUid: UD_APIs_Tutorials
         items:

@@ -7,7 +7,7 @@ uid: Troubleshooting_Services
 > [!NOTE]
 >
 > - This page is currently still being developed. The content is not yet optimized and may not yet be fully accurate.
-> - If you need more information on how to execute any of the steps below, feel free to reach out to [support.data-insights@skyline.be](mailto:support.data-insights@skyline.be).
+> - If you need more information on how to execute any of the steps below, feel free to reach out to [support.data-core@skyline.be](mailto:support.data-core@skyline.be).
 > - You can leave feedback using the [*issues* feature](xref:contributing#reporting-an-issue), or [propose a change](xref:contributing).
 
 <div class="mermaid">
@@ -28,7 +28,7 @@ DifferentHost([Check the service folder.\nCheck the RemoteService folder.])
 SameHost{{"Compare the service impact \n(alarm property) \nvs\nthe service state \n(surveyor/card)."}}
 DMAsDisconnected{{Are the DMAs disconnected?}}
 SyncCheck{{Run Sync Check tool.\nClick node to see how.\nInvestigate why the \nDMAs are disconnected.}}
-NotFixed{{"If your issue is not fixed,\ncontact support.data-insights@skyline.be.\nInclude all gathered information \nand steps taken."}}
+NotFixed{{"If your issue is not fixed,\ncontact support.data-core@skyline.be.\nInclude all gathered information \nand steps taken."}}
 ImpactOrStateIssue{{Service impact \nor \nstate issue?}}
 StateIssue{{Check SLElement service states in\nClient Test Tool => Diagnostics => DMA.\nCheck __service_'serviceName'.txt logging.}}
 ImpactIssue{{Are there duplicate \ndisplay keys\nfrom partially \nincluded elements?}}

@@ -116,6 +116,16 @@ This is a Cube-only feature that can only be activated with the argument `ENABLE
 - **Minimum version**: 9.6.7
 - **Estimated Release version**: To be determined
 
+### DataAPI
+
+Enables Data API functionality and scripted connectors. This displays the Data Sources module in DataMiner Cube.
+
+- **Minimum version**: 10.4.2/10.4.0
+- **Estimated Release version**: To be determined
+
+> [!NOTE]
+> The latest version of the DataAggregator DxM and DataAPI DxM also have to be installed for this feature to work.
+
 ### Diagnostics
 
 Enable functionality to retrieve diagnostics from several DataMiner core processes.
@@ -315,7 +325,7 @@ Enables the export to PDF button within the Dashboards app itself. Creating PDFs
 Enables a new Maps component in the Dashboards app and the Low-Code Apps.
 
 - **Minimum version**: 10.3.2
-- **Estimated release version**: 10.4.2
+- **Estimated release version**: 10.4.4
 
 ### ReportsAndDashboardsGuides
 

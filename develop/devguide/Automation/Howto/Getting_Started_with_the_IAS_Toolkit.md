@@ -205,7 +205,7 @@ You can now publish the script to your DMA, using either of the following ways:
 - Use a CI/CD workflow to publish the script to your DataMiner System.
 
   > [!TIP]
-  > For instructions on setting up a CI/CD workflow, see [CI/CD using GitHub](xref:CICD_on_GitHub) or [CI/CD using GitLab](xref:Deploying_Automation_scripts_from_a_GitLab_repository).
+  > For instructions on setting up a CI/CD workflow, see [CI/CD using GitHub](xref:CICD_on_GitHub) or [CI/CD using GitLab](xref:CICD_GitLab_Examples).
 
 If everything goes well, you will see your script in the Automation module in DataMiner Cube.
 

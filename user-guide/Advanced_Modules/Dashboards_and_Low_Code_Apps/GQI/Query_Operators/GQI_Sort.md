@@ -49,3 +49,13 @@ or
 
 > [!NOTE]
 > When you upgrade to DataMiner version 10.3.5/10.3.4 or higher, the behavior of existing queries (using e.g. *Sort by B* followed by *Sort by A*) will not be altered. Their syntax will automatically be adapted when they are migrated to the most recent GQI version.
+
+## Sorting on a joined column
+
+From DataMiner 10.4.2/10.5.0 onwards<!--RN 38150-->, when you add a sort operator (*Sort by* or *Then sort by*) after adding a [*Join*](xref:GQI_Join) operator, the sort operator is automatically forwarded to the correct query in the *Join* operator. When you sort on a joined column, the sort operator is forwarded in the following situations:
+
+- In case of an *Inner* type of join
+
+- In case of a *Left* type of join, but only if all sorts are descending
+
+- In case of a *Right* type of join

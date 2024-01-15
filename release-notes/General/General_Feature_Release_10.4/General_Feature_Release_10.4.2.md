@@ -22,6 +22,18 @@ uid: General_Feature_Release_10.4.2
 
 ## New features
 
+#### API Gateway: DataMiner modules can now register with API Gateway [ID_36575] [ID_37734]
+
+<!-- MR 10.5.0 - FR 10.4.2 -->
+
+DataMiner modules can now register with API Gateway. These modules can be either "regular modules" (e.g. SLNet) or "proxy modules" (e.g. a DxM that wishes to expose an API).
+
+All modules registered with API Gateway will be displayed under `/APIGateway/api/version`, showing the following properties:
+
+- Name
+- Version
+- Endpoint on which they can be accessed via API Gateway (proxy modules only)
+
 #### Service & Resource Management - ResourceManagerHelper & ServiceManagerHelper: New Count methods [ID_37885] [ID_38096]
 
 <!-- MR 10.5.0 - FR 10.4.2 -->
@@ -150,6 +162,77 @@ The `ExecuteScriptOnDomInstanceActionSettings` object has been made available as
 > - When, in the DomDefinition, the `ScriptSettings` object is null, the `ScriptSettings` of the `ModuleSettings` will be used instead.
 > - In order for the `ModuleSettings` objects to be used, the objects in the `ModuleSettingsOverrides` of the `DomDefinition` have to be *null*. Just making them empty is not sufficient.
 
+#### FillArray now supports protocol.Leave and protocol.Clear [ID_38153]
+
+<!-- MR 10.5.0 - FR 10.4.2 -->
+
+Up to now, the SLProtocol `FillArray` methods did not any support `protocol.Clear` and `protocol.Leave`. An optional `useClearAndLeave` boolean argument has now been added to indicate that `protocol.Clear` and `protocol.Leave` should be treated as cell actions instead of cell values. When this argument is not provided, `useAndClear` will be considered false and `protocol.Clear` and `protocol.Leave` will be treated as cell values.
+
+The following methods have been added to the `SLProtocol` and `SLProtocolExt` interfaces:
+
+```csharp
+protocol.FillArray(int tableId, object[] columns, DateTime? timeInfo, bool useClearAndLeave)
+protocol.FillArray(int tableId, object[] columns, bool useClearAndLeave)
+protocol.FillArray(int tableId, List<object[]> columns, DateTime? timeInfo, bool useClearAndLeave)
+protocol.FillArray(int tableId, List<object[]> columns, bool useClearAndLeave)
+protocol.FillArray(int tableId, List<object[]> rows, SaveOption option, DateTime? timeInfo, bool useClearAndLeave)
+protocol.FillArray(int tableId, List<object[]> rows, SaveOption option, bool useClearAndLeave)
+protocol.FillArrayNoDelete(int tableId, object[] columns, DateTime? timeInfo, bool useClearAndLeave)
+protocol.FillArrayNoDelete(int tableId, object[] columns, bool useClearAndLeave)
+protocol.FillArrayNoDelete(int tableId, List<object[]> columns, DateTime? timeInfo, bool useClearAndLeave)
+protocol.FillArrayNoDelete(int tableId, List<object[]> columns, bool useClearAndLeave)
+protocol.FillArrayWithColumn(int tableId, int columnPid, object[] keys, object[] values, DateTime? timeInfo, bool useClearAndLeave)
+protocol.FillArrayWithColumn(int tableId, int columnPid, object[] keys, object[] values, bool useClearAndLeave)
+```
+
+The `QActionHelper` class has also been adapted.
+
+- `protocol.Clear` and `protocol.Leave` are now supported when calling the `FillArray` methods on the `QActionTable` class objects of `SLProtocolExt`. The following methods have been added:
+
+  ```csharp
+  protocol.QActionTable.FillArray(object[] columns, DateTime? timeInfo, bool useClearAndLeave)
+  protocol.QActionTable.FillArray(object[] columns, bool useClearAndLeave)
+  protocol.QActionTable.FillArray(List<object> columns, DateTime? timeInfo, bool useClearAndLeave)
+  protocol.QActionTable.FillArray(List<object> columns, bool useClearAndLeave)
+  protocol.QActionTable.FillArray(QActionTableRow[] rows, DateTime? timeInfo, bool useClearAndLeave)
+  protocol.QActionTable.FillArray(QActionTableRow[] rows, bool useClearAndLeave)
+  protocol.QActionTable.FillArray(List<QActionTableRow> rows, DateTime? timeInfo, bool useClearAndLeave)
+  protocol.QActionTable.FillArray(List<QActionTableRow> rows, bool useClearAndLeave)
+  protocol.QActionTable.FillArrayNoDelete(object[] columns, DateTime? timeInfo, bool useClearAndLeave)
+  protocol.QActionTable.FillArrayNoDelete(object[] columns, bool useClearAndLeave)
+  protocol.QActionTable.FillArrayNoDelete(List<object> columns, DateTime? timeInfo, bool useClearAndLeave)
+  protocol.QActionTable.FillArrayNoDelete(List<object> columns, bool useClearAndLeave)
+  protocol.QActionTable.FillArrayNoDelete(QActionTableRow[] rows, DateTime? timeInfo, bool useClearAndLeave)
+  protocol.QActionTable.FillArrayNoDelete(QActionTableRow[] rows, bool useClearAndLeave)
+  protocol.QActionTable.FillArrayNoDelete(List<QActionTableRow> rows, DateTime? timeInfo, bool useClearAndLeave)
+  protocol.QActionTable.FillArrayNoDelete(List<QActionTableRow> rows, bool useClearAndLeave)
+  protocol.QActionTable.SetColumn(int columnPid, string[] keys, object[] values, DateTime? timeInfo, bool useClearAndLeave)
+  protocol.QActionTable.SetColumn(int columnPid, string[] keys, object[] values, bool useClearAndLeave)
+  ```
+
+- `protocol.Clear` and `protocol.Leave` are now supported when calling the `SetRow` method on the `QActionTable` class objects of `SLProtocolExt`. The following methods have been provided:
+
+  ```csharp
+  protocol.QActionTable.AddRow(string row, DateTime? timeInfo)
+  protocol.QActionTable.AddRow(object[] row, DateTime? timeInfo)
+  protocol.QActionTable.AddRow(QActionTableRow row, DateTime? timeInfo)
+  protocol.QActionTable.AddRowReturnKey(DateTime? timeInfo)
+  protocol.QActionTable.AddRowReturnKey(object[] row, DateTime? timeInfo)
+  protocol.QActionTable.AddRowReturnKey(QActionTableRow row, DateTime timeInfo)
+  protocol.QActionTable.SetRow(QActionTableRow row, bool createRow, DateTime? timeInfo, bool useClearAndLeave)
+  protocol.QActionTable.SetRow(QActionTableRow row, bool createRow, DateTime? timeInfo)
+  protocol.QActionTable.SetRow(QActionTableRow row, bool createRow, bool useClearAndLeave)
+  protocol.QActionTable.SetRow(int row, object[] data, DateTime? timeInfo, bool useClearAndLeave)
+  protocol.QActionTable.SetRow(int row, object[] data, DateTime? timeInfo)
+  protocol.QActionTable.SetRow(int row, object[] data, bool useClearAndLeave)
+  protocol.QActionTable.SetRow(string row, object[] data, bool createRow, DateTime? timeInfo, bool useClearAndLeave)
+  protocol.QActionTable.SetRow(string row, object[] data, bool createRow, DateTime? timeInfo)
+  protocol.QActionTable.SetRow(string row, object[] data, bool createRow, bool useClearAndLeave)
+  ```
+
+  > [!NOTE]
+  > The `AddRow` and `SetRow` methods can now also perform history sets.
+
 #### SSH: Support for hmac-sha2-512-etm and hmac-sha2-256-etm [ID_38213]
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
@@ -169,9 +252,10 @@ From now on, it will propose the following algorithms to the server in the follo
 
 ### Enhancements
 
-#### Security enhancements [ID_37349] [ID_38040] [ID_38052]
+#### Security enhancements [ID_37349] [ID_37637] [ID_38040] [ID_38052]
 
 <!-- 37349: MR 10.5.0 - FR 10.4.2 -->
+<!-- 37637 (part of 37734): MR 10.5.0 - FR 10.4.2 -->
 <!-- 38040: MR 10.3.0 [CU11] - FR 10.4.2 -->
 <!-- 38052: MR 10.5.0 - FR 10.4.2 -->
 
@@ -302,7 +386,7 @@ For example, from now on, when you sort by A and, later on in the GQI query, sor
 
 <!-- MR 10.5.0 - FR 10.4.2 -->
 
-Up to now, SLAnalytics would always keep one hour of average trend data for all trended parameters on the system in order to determine which trend icon to display in the absence of change points. From now on, it will only keep one hour of trend data for 250,000 trended parameters at the most, reducing memory usage to a maximum of 330 MB.
+Up to now, SLAnalytics would always keep average trend data for all trended parameters on the system for a configurable time frame in order to determine which trend icon to display in the absence of change points. From now on, it will only keep trend data and calculate state icons for 250,000 trended parameters at the most, reducing memory usage.
 
 #### NATS: All nodes will now be considered primary nodes [ID_38089]
 
@@ -336,6 +420,12 @@ When you sort on a joined column, the Sort operator will be forwarded in the fol
 - In case of a left join, but only if all sorts are descending
 - In case of a right join
 
+#### Enhanced performance when deleting redundancy groups [ID_38173]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+Because of a number of enhancements, overall performance has increased when deleting a redundancy group.
+
 #### SLAnalytics - Behavioral anomaly detection: Enhanced anomaly check algorithm [ID_38176]
 
 <!-- MR 10.4.0 - FR 10.4.2 -->
@@ -348,7 +438,27 @@ A number of enhancements have been made to the anomaly check algorithm.
 
 SLLogCollector will now also collect the backup logs of the *StorageModule* DxM located in the `C:\ProgramData\Skyline Communications\DataMiner StorageModule\Logs\Backup` folder.
 
+#### DataMiner upgrade: Enhanced robustness of MSI package installations [ID_38376]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.2 [CU0] -->
+
+Up to now, during a DataMiner upgrade, in some cases, MSI packages would fail to install and throw one of the following errors:
+
+- `The Installer has insufficient privileges to access this directory: ...`
+- `Service ... could not be installed. Verify that you have sufficient privileges to install system services.`
+
+From now on, when one of the above-mentioned errors is thrown, it will no longer be necessary to restart the entire upgrade procedure. Instead, a retry will be attempted during the running upgrade.
+
 ### Fixes
+
+#### Failover: Problems when using hostnames instead of virtual IP addresses [ID_32951] [ID_35380]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+Up to now, a number of issues could occur when setting up a Failover system using hostnames instead of virtual IP addresses.
+
+> [!NOTE]
+> When you set up a Failover system using hostnames, we recommend to keep this a standalone system and to not add it to a DataMiner System.
 
 #### Problems with SLDataMiner [ID_37409]
 
@@ -496,8 +606,46 @@ When you ran the BPA test 'Check Cluster SLNet Connections', this failed with th
 
 From now on, this test will be run daily on every Agent in a DataMiner System.
 
+#### SLAnalytics - Automatic incident tracking: Problem after clearing or removing an alarm [ID_38239]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+When an alarm had been cleared or removed, in some cases, the automatic incident tracking feature could incorrectly assume that no more alarms were associated with the parameter in question. As a result, alarms could get grouped incorrectly or error messages similar to the following one could start to appear:
+
+`Parameter key [PARAMETER_KEY] was not in parameterKeyConverter, while it should have been.`
+
+#### SLAnalytics - Automatic incident tracking: Empty alarm group would be created when manually creating an incident with non-active alarms [ID_38248]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+When, while automatic incident tracking was running, you manually created an incident (i.e. an alarm group) containing non-active alarms, an empty alarm group would be created.
+
+#### Service & Resource Management: Incorrect trace data would be returned after performing a create, update or delete action using the ServiceManagerHelper [ID_38262]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+When you retrieved the trace data after performing a create, update or delete action using the ServiceManagerHelper, in some cases, an error could be returned although the action that was performed had succeeded.
+
 #### SLAnalytics could stop working when it lost its connection to SLNet during start-up [ID_38268]
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
 
 Up to now, when SLAnalytics lost its connection to SLNet at a particular moment during start-up, it would stop working because it was not able to reach the database. From now on, when SLAnalytics loses its connection to SLNet at that particular moment during start-up, it will continue working and will try to connect to the database again as soon as its connection to SLNet has been re-established.
+
+#### Correlation alarms with incorrect severity after a DataMiner restart [ID_38286]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+After a DataMiner restart, in some cases, correlation alarms would have an incorrect severity.
+
+#### BPA test 'Check Cluster SLNet Connections' could incorrectly report connection problems when it found a Failover system with a shared hostname [ID_38328]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 [CU0] -->
+
+Up to now, the BPA test *Check Cluster SLNet Connections* BPA could incorrectly report connection problems in a DataMiner System when it found a Failover setup with a shared hostname.
+
+#### SLReset: Problem when cleaning a Cassandra database [ID_38332]
+
+<!-- MR 10.5.0 - FR 10.4.2 -->
+
+When cleaning (i.e. resetting) a Cassandra database, in some cases, a `TypeInitializationException` could be thrown.

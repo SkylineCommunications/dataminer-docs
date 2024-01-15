@@ -70,7 +70,10 @@ Up to now, when an empty list was saved in a DOM instance, the default filter us
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
 
-All GQI components (*State*, *Pie chart*, *Bar chart*, *Line chart*, *Table*, *Grid*, *Scheduler*, *Maps* and *Node Edge*) will now behave in the same way when loading.
+All GQI components (*State*, *Pie chart*, *Bar chart*, *Line chart*, *Table*, *Grid*, *Scheduler*,*Node Edge* and *Maps*) will now behave in the same way when loading.
+
+> [!NOTE]
+> The *Maps* component is currently still in soft launch.
 
 #### Dashboards app & Low-Code Apps - Query filter component: Number and date filters will no longer list discrete values unless they are meant to filter columns containing discrete values [ID_38114] [ID_38149]
 
@@ -135,6 +138,9 @@ While configuring a *Grid*, *Timeline* or *Maps* component, it would incorrectly
 
 From now on, as long as the default template has not been created yet, a loading indicator will be displayed and it will not be possible to open the template editor.
 
+> [!NOTE]
+> The *Maps* component is currently still in soft launch.
+
 #### Dashboards app & Low-Code Apps: Color theme changes would not be applied immediately [ID_38082]
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
@@ -179,20 +185,6 @@ For example, when a feed was used in a script action parameter, the last feed va
 
 In a low-code app, the subheader would overlap the contents of a page. From now on, it will be displayed above the page.
 
-#### Dashboards app & Low-Code Apps - Maps component: Problem when removing a query and adding it again [ID_38148]
-
-<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
-
-When you removed a query from a Maps component and then added it again, the component would show the following error:
-
-`Parameter '_destroy$' cannot be null`
-
-#### Dashboards app & Low-Code Apps - Maps component: Newly created markers would not be visualized [ID_38163]
-
-<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
-
-When you added new markers to the Maps component, in some cases, an incorrect template would be applied, causing the newly created markers to not be visualized.
-
 #### Low-Code Apps: Problem when creating a DOM instance containing soft-deleted field descriptors [ID_38164]
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
@@ -211,16 +203,11 @@ A Line & area chart with multiple aggregation parameters would not render those 
 
 When an error occurred in the table component after a user had sorted the data on a column, the *Restore initial view* button would incorrectly get disabled. As a result, it would not be possible to make the error disappear and undo the sort operation.
 
-#### Low-Code Apps: An 'error 404' page would appear instead of an 'error 403' page [ID_38253]
+#### Low-Code Apps - Visual Overview: Problem when opening a popup window from within another popup window [ID_38265]
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
 
-When you tried to open a low-code app to which you had not been granted access, in some rare cases, an "error 404" page would appear instead of an "error 403" page.
-
-From now on
-
-- an "error 403" page will appear when you are not allowed to open the app in question, and
-- an "error 404" page will appear when the app in question cannot be found.
+When, in a visual overview inside a low-code app, you opened a popup window from within another popup window, it would not be opened correctly.
 
 #### Dashboards app & Low-Code Apps: Chart components no longer showed any data after switching to another visualization and back [ID_38269]
 
@@ -240,12 +227,6 @@ In some cases, the visualization picker of a component would incorrectly contain
 
 In all DataMiner web apps, a few minor popup window issues have been fixed.
 
-#### Dashboards app & Low-Code Apps - Maps component: 'Delete component' popup window would appear when deleting a character while renaming a layer [ID_38290]
-
-<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
-
-When, while renaming a layer of a Maps component, you deleted a character using the DELETE button, the *Delete component* popup window would incorrectly appear.
-
 #### Dashboards app: Problem when refreshing a dashboard that contained a Parameter table component [ID_38291]
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
@@ -259,3 +240,17 @@ When you refreshed a dashboard that contained a *Parameter table* component, the
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
 
 When you saved a template with conditional cases that contained "<=" operators, those operators would incorrectly be changed to "=" operators.
+
+#### Dashboards app - 'Column & bar chart' and 'Pie & donut chart' components: Problem when deleting the query of which the data is being displayed [ID_38314]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+When you add multiple queries to a *Column & bar chart* or *Pie & donut chart* component, only the data retrieved by the first one added will be displayed. Up to now, when you deleted the query of which the data was displayed, the component would malfunction until the page was reloaded.
+
+From now on, when you delete the query of which the data is being displayed, the component will automatically switch to the second query added and display the data retrieved by that one.
+
+#### Dashboards app: Unnecessary component properties would be saved in a dashboard configuration [ID_38315]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+In some cases, unnecessary component properties would be saved in a dashboard configuration.

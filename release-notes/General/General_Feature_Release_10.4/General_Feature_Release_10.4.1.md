@@ -300,7 +300,7 @@ From now on, the flatline detection algorithm will take into account the decimal
 
 #### Parameter ID range 10,000,000 to 10,999,999 now reserved [ID_37837]
 
-<!-- MR 10.5.0 - FR 10.4.1 -->
+<!-- MR 10.4.0 - FR 10.4.1 -->
 
 Parameters IDs in the range of 10,000,000 to 10,999,999 are now reserved for DataMiner parameters. These will be used for DataMiner features in the future.
 
@@ -338,6 +338,12 @@ public virtual void UpdateAllCapacitiesAndCapabilitiesByReference(Func<FilterEle
 ```
 
 ### Fixes
+
+#### Problem when using MessageBroker with chunking [ID_37532]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+On high-load systems, MessageBroker threads could leak when using chunking.
 
 #### Databases: Problem when starting a migration from MySQL to Cassandra [ID_37589]
 

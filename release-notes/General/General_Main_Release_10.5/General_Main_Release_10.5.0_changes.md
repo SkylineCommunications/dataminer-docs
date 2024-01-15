@@ -11,10 +11,12 @@ uid: General_Main_Release_10.5.0_changes
 
 ### Enhancements
 
-#### Security enhancements [ID_37349] [ID_38052]
+#### Security enhancements [ID_37349] [ID_37637] [ID_38052] [ID_38263]
 
 <!-- 37349: MR 10.5.0 - FR 10.4.2 -->
+<!-- 37637 (part of 37734): MR 10.5.0 - FR 10.4.2 -->
 <!-- 38052: MR 10.5.0 - FR 10.4.2 -->
+<!-- 38263: MR 10.5.0 - FR 10.4.3 -->
 
 A number of security enhancements have been made.
 
@@ -51,12 +53,6 @@ From now on, a rectangular region will have a dark color when the change point i
 - a suggestion event (if alarm monitoring was not activated for that type of change point), or
 - an alarm event (if alarm monitoring was activated for that type of change point).
 
-#### Parameter ID range 10,000,000 to 10,999,999 now reserved [ID_37837]
-
-<!-- MR 10.5.0 - FR 10.4.1 -->
-
-Parameters IDs in the range of 10,000,000 to 10,999,999 are now reserved for DataMiner parameters. These will be used for DataMiner features in the future.
-
 #### SLAnalytics: Enhanced error logging when retrieving trend data [ID_37931]
 
 <!-- MR 10.5.0 - FR 10.4.1 -->
@@ -81,7 +77,7 @@ It is now possible to read DOM objects and ModuleSettings in parallel. This will
 
 <!-- MR 10.5.0 - FR 10.4.2 -->
 
-Up to now, SLAnalytics would always keep one hour of average trend data for all trended parameters on the system in order to determine which trend icon to display in the absence of change points. From now on, it will only keep one hour of trend data for 250,000 trended parameters at the most, reducing memory usage to a maximum of 330 MB.
+Up to now, SLAnalytics would always keep average trend data for all trended parameters on the system for a configurable time frame in order to determine which trend icon to display in the absence of change points. From now on, it will only keep trend data and calculate state icons for 250,000 trended parameters at the most, reducing memory usage.
 
 #### GQI: Sort operator will now be forwarded to the correct query of a Join operator [ID_38150]
 
@@ -94,6 +90,15 @@ When you sort on a joined column, the Sort operator will be forwarded in the fol
 - In case of an inner join
 - In case of a left join, but only if all sorts are descending
 - In case of a right join
+
+#### DataMiner Object Models: Required list fields can no longer be set to an empty list [ID_38238]
+
+<!-- MR 10.5.0 - FR 10.4.3 -->
+
+From now on, when the value of a required list field is set to an empty list, one of the following errors will be thrown:
+
+- `DomInstanceHasMissingRequiredFieldsForCurrentStatus` (when using the DOM status system)
+- `DomInstanceDoesNotContainAllRequiredFieldsForSectionDefinition` (when not using the DOM status system)
 
 ### Fixes
 
@@ -108,3 +113,9 @@ When you started a migrating from a MySQL database to a Cassandra database, an e
 <!-- MR 10.5.0 - FR 10.4.2 -->
 
 Resources would not always be released correctly, causing some resources to be used for longer than strictly necessary.
+
+#### SLReset: Problem when cleaning a Cassandra database [ID_38332]
+
+<!-- MR 10.5.0 - FR 10.4.2 -->
+
+When cleaning (i.e. resetting) a Cassandra database, in some cases, a `TypeInitializationException` could be thrown.

@@ -41,11 +41,76 @@ Add a shape data field of type **Link** to the shape, and configure one of the f
 > - Adding "#" in front of the URL ensures that the video is displayed in an embedded browser. If you do not add this, the shape is rendered as it is drawn in Visio and clicking it opens your default browser and navigates to the link.
 > - If you play a video in a shape using VLC, by default the VLC toolbar is shown. To hide the toolbar, adding "toolbar=false" or "showtoolbar=false" to the value of the **Link** shape data. For example: `#http://<DMAIP>/VideoThumbnails/Video.htm?type=Generic VLC&source=http://<DMAIP>/myvideo.mpeg&showtoolbar=false`
 
+## Configuring the video thumbnail to display an image
+
+The following image formats are supported: .png, .jpg, .bmp, and .emf.
+
+> [!TIP]
+> See also: [Linking a shape to a video thumbnail](xref:Linking_a_shape_to_a_video_thumbnail)
+
+### In DataMiner Cube
+
+1. Right-click the Visio drawing, and click *Edit Mode*.
+
+1. Select the shape. If necessary, select the *Make All Shapes Selectable* option, and select the shape from the *Selected Shape* selection box.
+
+1. In *Link Shape To*, select “Link”.
+
+1. In the *Basic* tab:
+
+   1. Set *Link Type* to “Video”.
+
+   1. Set *Video Type* to “Generic Images”.
+
+   1. In *Image Source*, enter the URL of the image (e.g. `http://IpAddress/Folder/Picture.png`).
+
+      > [!NOTE]
+      >
+      > - Both HTTP and HTTPS are supported.
+      > - If you want the shape to display an image on a DataMiner Agent, see [Displaying images located on a DataMiner Agent](#displaying-images-located-on-a-dataminer-agent).
+
+   1. In *Refresh rate*, specify how frequently you want the image to be refreshed (in milliseconds).
+
+1. Click Save.
+
+### In Visio
+
+1. Right-click the Visio drawing, and click *Edit In Visio*.
+
+1. Add a shape data field of type **Link** to the shape, and set its value to e.g.:
+
+   ```txt
+   #http://DmaIpAddress/VideoThumbnails/Video.htm?type=Generic Images&source=http://IpAddress/Folder/Picture.png&refresh=5000
+   ```
+
+   > [!NOTE]
+   >
+   > - Both HTTP and HTTPS are supported.
+   > - If you want the shape to display an image on a DataMiner Agent, see [Displaying images located on a DataMiner Agent](#displaying-images-located-on-a-dataminer-agent).
+
+1. Save the Visio file.
+
+> [!NOTE]
+> By default, a thumbnail of type *Generic Images* always uses the DMA as a proxy. However, from DataMiner 9.0.0 CU22/9.5.8 onwards, you can add an extra URL parameter, "proxy", in order to override this behavior.
+> For example: `http://<DMA IP>/VideoThumbnails/video.htm?type=Generic%20Images&source=<IMG URL>&proxy=false`
+
+### Displaying images located on a DataMiner Agent
+
+If you want a shape to display an image located on a DMA, then do the following:
+
+1. Place the image in the DMA's *C:\\Skyline DataMiner\\Webpages* folder (or one of its subfolders e.g. *C:\\Skyline DataMiner\\Webpages\\MyImages\\*).
+
+1. In the shape, specify the URL of the image (e.g. `http://DmaIpAddress/MyImages/Picture.png`).
+
+> [!NOTE]
+> If you get an "Invalid path" error, open the file *C:\\Skyline DataMiner\\Webpages\\VideoThumbnails\\Web.config* (or *C:\\Skyline DataMiner\\Webpages\\VideoThumbnails\\Proxy\\Web.config* in DataMiner versions prior to 9.0), and check whether the image folder (e.g. */MyImages/*) has been added to the *ExtraAllowedPaths* key.
+> See also [Allowed paths in case of connection via DataMiner proxy](xref:Linking_a_shape_to_a_video_thumbnail#allowed-paths-in-case-of-connection-via-dataminer-proxy).
+
 ## Video server parameters
 
 The parameters you are allowed to pass inside the URL depend on the type of the video server.
 
-All supported video server types and their associated parameters are defined in the file *C:\Skyline DataMiner\videoservers.xml*.
+All supported video server types and their associated parameters are defined in the file *C:\\Skyline DataMiner\\videoservers.xml*.
 
 Depending on the DataMiner version, additional configuration is possible in the URL:
 
@@ -68,7 +133,8 @@ Depending on the DataMiner version, additional configuration is possible in the 
   ```
 
   > [!NOTE]
-    > - Always make sure that the parameters of the URL are URL-encoded, as illustrated in the examples above.
+  >
+  > - Always make sure that the parameters of the URL are URL-encoded, as illustrated in the examples above.
   > - Use the *EscapeDataString* placeholder when you add parameters, properties or other DataMiner data sources in the URL (see [\[EscapeDataString:x\]](xref:Placeholders_for_variables_in_shape_data_values#escapedatastringx)). For example: `https://<DMAIP>/VideoThumbnails/Video.htm?type=Generic%20VLC&source=[EscapeDataString:[param:*,10014]]`
   > - When the authentication token expires, the URL has to be updated with the new token.
   > - URLs that request video thumbnails should use HTTPS instead of HTTP. That way, you can prevent the authentication token from being stolen.
@@ -79,7 +145,7 @@ Depending on the DataMiner version, additional configuration is possible in the 
   #https://dma.local/VideoThumbnails/Video.htm?type=VLC&source=https://videoserver/video.mp4&volume=50
   ```
 
-- From DataMiner 10.2.0 \[CU1]/10.2.4 onwards, you can specify that the video should play continuously in a **loop**, by adding `loop=true` to the URL. By default, this is considered to be false.
+- From DataMiner 10.2.0 [CU1]/10.2.4 onwards, you can specify that the video should play continuously in a **loop**, by adding `loop=true` to the URL. By default, this is considered to be false.
 
   ```txt
   #https://dma.local/VideoThumbnails/Video.htm?type=HTML5&source=https://videoserver/video.mp4&loop=true

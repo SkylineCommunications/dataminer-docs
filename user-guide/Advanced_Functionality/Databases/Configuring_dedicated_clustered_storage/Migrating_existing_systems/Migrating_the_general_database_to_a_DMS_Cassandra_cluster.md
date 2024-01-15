@@ -11,7 +11,7 @@ The migration can be done while the DMAs are active; however, a **DataMiner rest
 The Cassandra Cluster Migrator tool (called *SLCCMigrator.exe*) is available on every DMA running DataMiner version 10.2.0/10.2.2 or higher. You can find it in the folder `C:\Skyline DataMiner\Tools\`. However, we highly recommend that you upgrade to DataMiner 10.2.0 [CU8]/10.2.11 or higher to use the tool, as this version includes an improved version of the tool that will prevent possible issues.
 
 > [!NOTE]
-> From DataMiner 10.3.7/10.3.0 [CU4] onwards, the Cassandra Cluster Migrator tool is able to establish TLS connections towards the databases. To enable this functionality, configure TLS encryption on your [OpenSearch database](xref:Installing_OpenSearch_database#tls-configuration) or [Elasticsearch database](xref:Security_Elasticsearch#client-server-tls-encryption) and your [Cassandra database](xref:Security_Cassandra_TLS), and enable the *Cassandra TLS* and *Elastic TLS* options when configuring the [Cassandra and OpenSearch/Elasticsearch settings](#running-the-migration) in the migration tool.<!-- RN 34852 --> For OpenSearch, configuring TLS is highly recommended.
+> From DataMiner 10.3.7/10.3.0 [CU4] onwards, the Cassandra Cluster Migrator tool is able to establish TLS connections towards the databases. To enable this functionality, configure TLS encryption on your [OpenSearch database](xref:Installing_OpenSearch_database#tls-and-user-configuration) or [Elasticsearch database](xref:Security_Elasticsearch#client-server-tls-encryption) and your [Cassandra database](xref:Security_Cassandra_TLS), and enable the *Cassandra TLS* and *Elastic TLS* options when configuring the [Cassandra and OpenSearch/Elasticsearch settings](#running-the-migration) in the migration tool.<!-- RN 34852 --> For OpenSearch, configuring TLS is highly recommended.
 
 ## Prerequisites
 
@@ -45,6 +45,9 @@ During the migration, each DMA will go through the following stages:
 | Migrating | The DMA is busy migrating data. Progress can be tracked using the migrator tool. |
 | Finished migrating | The DMA has finished migrating and is ready for migration finalization, i.e. ready to switch to the Cassandra and OpenSearch/Elasticsearch cluster configuration. |
 | Finalized | The DMA has been restarted and switched to the Cassandra and OpenSearch/Elasticsearch cluster configuration. |
+
+> [!NOTE]
+> Once the migration is started, all new data will be sent to both the new and the old database. Writing to both databases will continue until the migration has been finalized. Even in case of a long-running migration, there will not be any gaps in the history data between the start and the end of the migration process.
 
 ## Running the migration
 
@@ -243,4 +246,4 @@ Any errors that occur during a migration process will be displayed in a pop-up w
 
   1. Enter `https://[IP address]:9200/` in the browser's address bar, replacing "[IP address]" with your IP address of the nodes.
 
-  If this fails, check if TLS was configured correctly and if the root certificate was correctly installed on the DataMiner server. See [TLS configuration for the OpenSearch database](xref:Installing_OpenSearch_database#tls-configuration) or [TLS configuration for the Elasticsearch database](xref:Security_Elasticsearch#client-server-tls-encryption).
+  If this fails, check if TLS was configured correctly and if the root certificate was correctly installed on the DataMiner server. See [TLS configuration for the OpenSearch database](xref:Installing_OpenSearch_database#tls-and-user-configuration) or [TLS configuration for the Elasticsearch database](xref:Security_Elasticsearch#client-server-tls-encryption).

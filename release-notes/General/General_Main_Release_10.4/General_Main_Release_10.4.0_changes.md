@@ -787,6 +787,12 @@ Also, the newly added *UninstallApiDeployment* upgrade action will remove everyt
 
 - Remove the *APIDeployment* soft-launch flag from *SoftLaunchOptions.xml*.
 
+#### Parameter ID range 10,000,000 to 10,999,999 now reserved [ID_37837]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+Parameters IDs in the range of 10,000,000 to 10,999,999 are now reserved for DataMiner parameters. These will be used for DataMiner features in the future.
+
 #### GQI: Ad hoc data sources and custom operators now support row metadata [ID_37879]
 
 <!-- MR 10.4.0 - FR 10.4.1 -->
@@ -839,6 +845,12 @@ Up to now, when a *Join* operator of type "Right join" was applied, both the ent
 <!-- MR 10.4.0 - FR 10.4.2 -->
 
 A number of enhancements have been made to the anomaly check algorithm.
+
+#### SLAnalytics - Alarm focus: Alarm occurrences will now be identified using a combination of element ID, parameter ID and primary key  [ID_38184]
+
+<!-- MR 10.4.0 - FR 10.4.3 -->
+
+When calculating alarm likelihood (i.e. focus score), up to now, the alarm focus feature used a combination of element ID, parameter ID and display key (if applicable) to identify previous occurrences of the same alarm. From now on, previous alarm occurrences will be identified using a combination of element ID, parameter ID and primary key.
 
 #### SLLogCollector will now also collect the backup logs of the StorageModule DxM [ID_38228]
 
@@ -1024,7 +1036,7 @@ In cases where SLDataGateway retrieved an entire table and then applied a filter
 
 #### Problem when using MessageBroker with chunking [ID_37532]
 
-<!-- MR 10.4.0 - FR 10.3.12 -->
+<!-- MR 10.4.0 - FR 10.4.1 -->
 
 On high-load systems, MessageBroker threads could leak when using chunking.
 
@@ -1115,3 +1127,25 @@ When a DataMiner Agent had the APIGateway service running but not the SLNet proc
 - No exception would be thrown when a client application sent a message via one of the gRPC connections that was still open. Instead, an empty response was returned. As a result, client applications would not notice that there was a problem.
 
 - When an attempt was made to establish a new gRPC connection, an `Invalid username or password` would be returned instead of a `DataMinerNotRunningException`.
+
+#### SLAnalytics - Automatic incident tracking: Problem after clearing or removing an alarm [ID_38239]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+When an alarm had been cleared or removed, in some cases, the automatic incident tracking feature could incorrectly assume that no more alarms were associated with the parameter in question. As a result, alarms could get grouped incorrectly or error messages similar to the following one could start to appear:
+
+`Parameter key [PARAMETER_KEY] was not in parameterKeyConverter, while it should have been.`
+
+#### SLAnalytics - Automatic incident tracking: Empty alarm group would be created when manually creating an incident with non-active alarms [ID_38248]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+When, while automatic incident tracking was running, you manually created an incident (i.e. an alarm group) containing non-active alarms, an empty alarm group would be created.
+
+#### Correlation: Alarm buckets would not get cleaned up when alarms were cleared before the end of the time frame specified in the 'Collect events for ... after first event, then evaluate conditions and execute actions' setting [ID_38292]
+
+<!-- MR 10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
+
+Up to now, when alarms were cleared before the end of the time frame specified in the *Collect events for ... after first event, then evaluate conditions and execute actions* correlation rule setting, the alarm buckets would not get cleaned up.
+
+From now on, when a correlation rule is configured to use the *Collect events for ... after first event, then evaluate conditions and execute actions* trigger mechanism, all alarm buckets will be properly cleaned up, unless there are actions that need to be executed either when the base alarms are updated or when alarms are cleared.

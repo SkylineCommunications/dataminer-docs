@@ -26,4 +26,4 @@ The following actions are then possible to configure the component:
 
 - [Deleting a component](xref:Delete_Component)
 
-In addition, depending on the visualization, additional configuration options may be available. For more information, refer to the relevant section in [Available visualizations](xref:Available_visualizations).
+In addition, depending on the visualization, additional configuration options may be available. For more information, refer to the relevant section in [Available visualizations](xref:Available_visualizations), or click the component or hover the mouse pointer over the component and click the ![information](~/user-guide/images/Information_Icon.png) icon (available from DataMiner 10.3.0 [CU11]/10.4.2 onwards<!--RN 38224-->).

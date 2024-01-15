@@ -78,6 +78,12 @@ From now on, there will no longer be any primary and secondary NAS configuration
 
 Also, when the NATS configuration is reset, the DMS IP addresses will now be collected via the online Failover agent.
 
+#### Enhanced performance when deleting redundancy groups [ID_38173]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+Because of a number of enhancements, overall performance has increased when deleting a redundancy group.
+
 #### New BPA test 'Check Cluster SLNet Connections' [ID_38201] [ID_38208]
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
@@ -105,6 +111,15 @@ From now on, it will propose the following algorithms to the server in the follo
 1. hmac-md5
 
 ### Fixes
+
+#### Failover: Problems when using hostnames instead of virtual IP addresses [ID_32951] [ID_35380]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+Up to now, a number of issues could occur when setting up a Failover system using hostnames instead of virtual IP addresses.
+
+> [!NOTE]
+> When you set up a Failover system using hostnames, we recommend to keep this a standalone system and to not add it to a DataMiner System.
 
 #### Problems with SLDataMiner [ID_37409]
 
@@ -214,8 +229,26 @@ In some cases, SLAnalytics could partially get stuck when the trend icon calcula
 
 After a Failover switch, in some cases, DVE elements or virtual function elements would not be loaded correctly. Also, new DVE elements would incorrectly not appear in the Surveyor when they were created while their parent element was hosted on the Failover setup that had switched.
 
+#### Service & Resource Management: Incorrect trace data would be returned after performing a create, update or delete action using the ServiceManagerHelper [ID_38262]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+When you retrieved the trace data after performing a create, update or delete action using the ServiceManagerHelper, in some cases, an error could be returned although the action that was performed had succeeded.
+
 #### SLAnalytics could stop working when it lost its connection to SLNet during start-up [ID_38268]
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
 
 Up to now, when SLAnalytics lost its connection to SLNet at a particular moment during start-up, it would stop working because it was not able to reach the database. From now on, when SLAnalytics loses its connection to SLNet at that particular moment during start-up, it will continue working and will try to connect to the database again as soon as its connection to SLNet has been re-established.
+
+#### Correlation alarms with incorrect severity after a DataMiner restart [ID_38286]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
+
+After a DataMiner restart, in some cases, correlation alarms would have an incorrect severity.
+
+#### BPA test 'Check Cluster SLNet Connections' could incorrectly report connection problems when it found a Failover system with a shared hostname [ID_38328]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 [CU0] -->
+
+Up to now, the BPA test *Check Cluster SLNet Connections* BPA could incorrectly report connection problems in a DataMiner System when it found a Failover setup with a shared hostname.

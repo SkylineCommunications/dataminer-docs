@@ -230,7 +230,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="protocol">Instance that implements <see cref="SLProtocol"/>.</param>
 		/// <param name="tableId">The ID of the table parameter.</param>
 		/// <param name="columns">The columns of the table.</param>
-		/// <param name="timeInfo">Time stamp</param>
+		/// <param name="timeInfo">Timestamp</param>
 		/// <returns></returns>
 		/// <remarks>
 		/// <list type="bullet">
@@ -263,7 +263,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="protocol">Instance that implements <see cref="SLProtocol"/>.</param>
 		/// <param name="tableId">The ID of the table parameter.</param>
 		/// <param name="columns">The columns of the table.</param>
-		/// <param name="timeInfo">Time stamp</param>
+		/// <param name="timeInfo">Timestamp</param>
 		/// <returns></returns>
 		/// <remarks>
 		/// <list type="bullet">
@@ -299,7 +299,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="protocol">Instance that implements <see cref="SLProtocol"/>.</param>
 		/// <param name="tableId">The ID of the table parameter.</param>
 		/// <param name="rows">The rows of the table.</param>
-		/// <param name="option">SaveOption.Full = unspecified primary keys are removed, SaveOption .Partial = rows with unspecified primary keys are preserved.</param>
+		/// <param name="option">SaveOption.Full = unspecified primary keys are removed, SaveOption.Partial = rows with unspecified primary keys are preserved.</param>
 		/// <returns></returns>
 		/// <remarks>
 		///		<list type="bullet">
@@ -332,8 +332,8 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="protocol">Instance that implements <see cref="SLProtocol"/>.</param>
 		/// <param name="tableId">The ID of the table parameter.</param>
 		/// <param name="rows">The rows of the table.</param>
-		/// <param name="option">SaveOption.Full = unspecified primary keys are removed, SaveOption .Partial = rows with unspecified primary keys are preserved.</param>
-		/// <param name="timeInfo">Time stamp</param>
+		/// <param name="option">SaveOption.Full = unspecified primary keys are removed, SaveOption.Partial = rows with unspecified primary keys are preserved.</param>
+		/// <param name="timeInfo">Timestamp</param>
 		/// <returns></returns>
 		/// <remarks>
 		///		<list type="bullet">
@@ -401,7 +401,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="protocol">Instance that implements <see cref="SLProtocol"/>.</param>
 		/// <param name="tableId">The ID of the table parameter.</param>
 		/// <param name="columns">The columns of the table.</param>
-		/// <param name="timeInfo">Time stamp</param>
+		/// <param name="timeInfo">Timestamp</param>
 		/// <returns></returns>
 		/// <remarks>
 		///		<list type="bullet">
@@ -466,7 +466,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="protocol">Instance that implements <see cref="SLProtocol"/>.</param>
 		/// <param name="tableId">The ID of the table parameter.</param>
 		/// <param name="columns">The columns of the table.</param>
-		/// <param name="timeInfo">Time stamp</param>
+		/// <param name="timeInfo">Timestamp</param>
 		/// <returns></returns>
 		/// <remarks>
 		///		<list type="bullet">
@@ -501,8 +501,8 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="columnPid">The ID of the column parameter.</param>
 		/// <param name="keys">The primary keys of the rows for which the column has to be updated.</param>
 		/// <param name="values">The values to set.</param>
-		/// <param name="timeInfo">Time stamp</param>
-		/// <exception cref="ArgumentException">The length of 'keys' is not equal to the length of 'values' and the length of the values array does not equal 1.</exception>
+		/// <param name="timeInfo">Timestamp</param>
+		/// <exception cref="ArgumentException">The length of "keys" is not equal to the length of "values", and the length of the values array does not equal 1.</exception>
 		/// <returns></returns>
 		/// <remarks>
 		///		<list type="bullet">
@@ -526,7 +526,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="columnPid">The ID of the column parameter.</param>
 		/// <param name="keys">The primary keys of the rows for which the column has to be updated.</param>
 		/// <param name="values">The values to set.</param>
-		/// <exception cref="ArgumentException">The length of 'primaryKeys' is not equal to the length of 'values' and the length of the values array does not equal 1.</exception>
+		/// <exception cref="ArgumentException">The length of "primaryKeys" is not equal to the length of "values", and the length of the values array does not equal 1.</exception>
 		/// <returns></returns>
 		/// <remarks>
 		///		<list type="bullet">

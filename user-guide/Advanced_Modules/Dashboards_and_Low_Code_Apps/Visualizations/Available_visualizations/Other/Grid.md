@@ -72,3 +72,15 @@ To configure the component:
 
        > [!NOTE]
        > This option is only visible when another grid component in the dashboard or low-code app is configured with a custom template.
+
+## Navigating through the grid component
+
+In read mode, you can manipulate the grid component to navigate through the columns and rows:
+
+- If the number of items exceeds the size of the component, a scrollbar appears when you hover over the component, allowing you to navigate through the items.
+
+- From DataMiner 10.3.0 [CU11]/10.4.2 onwards<!--RN 38191-->, when you are using on a mobile device:
+
+  - You can move the grid left or right and up or down by sliding one finger across the component.
+
+  - You can select grid items by tapping them.
