@@ -162,6 +162,10 @@ When you install GitHub Desktop, you will also need to add the correct repositor
 
    1. Select *Create a fork*.
 
+   1. Make sure the option *Copy the main branch only* is not selected.
+
+      ![Copy the main branch only option](~/images/Copy_Main_Branch_Only.png)
+
    1. Click *Fork this repository*.
 
       ![Install GitHub 4](~/images/InstallGitHub4.png)
@@ -732,6 +736,23 @@ For example:
 
 > [!NOTE]
 > To upload images, use GitHub Desktop. See [Making a larger contribution](#making-a-larger-contribution).
+
+### Video
+
+To embed a video, use the following syntax:
+
+```md
+> [!Video https://youtube.com/embed/hPi9kv8WKGU]
+```
+
+If you use the above-mentioned syntax, the video will always take the full page width. If you want the video to appear in a smaller box, then embed an `<iframe>` element like the one below:
+
+```html
+<iframe width="560" height="315" src="https://youtube.com/embed/hPi9kv8WKGU" style="border:none;"></iframe>
+```
+
+> [!IMPORTANT]
+> If the video you want to embed is a Youtube video, then make sure the URL starts with `https://youtube.com/embed/`. Links like `https://youtu.be/hPi9kv8WKGU` will not work.
 
 ### Alerts
 

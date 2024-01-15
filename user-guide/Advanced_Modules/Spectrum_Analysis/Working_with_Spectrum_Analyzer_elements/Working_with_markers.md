@@ -22,7 +22,7 @@ The following sections provide more information on working with markers in Cube:
 
 ## Adding a marker
 
-1. In the info pane, to the left of the real-time display on the spectrum analyzer card, click the *Add marker* button.
+1. In the info pane, to the right of the real-time display on the spectrum analyzer card, click the *Add marker* button.
 
     The marker is automatically added at the center frequency, and takes the color of the trace. If you move the marker to a different trace, the color will be adapted accordingly.
 
@@ -49,11 +49,16 @@ The following sections provide more information on working with markers in Cube:
 
 6. Click *OK* to save your changes and close the pop-up window.
 
+> [!NOTE]
+> From DataMiner 10.2.0 [CU21]/10.3.0 [CU9]/10.3.12 onwards<!--RN 37705-->, if you have entered a different frequency for the marker, you can set the marker back at the center frequency by clicking the ![center frequency](~/user-guide/images/Center_Frequency.png) button to the right of the marker.
+
 ## Moving a marker
 
 To move a marker in Cube, you can:
 
 - Click the pencil icon next to the marker in the info pane, and enter a new marker frequency.
+
+- Click the ![center frequency](~/user-guide/images/Center_Frequency.png) button next to the marker in the info pane to move the marker to the center frequency (available from DataMiner 10.2.0 [CU21]/10.3.0 [CU9]/10.3.12 onwards<!--RN 37705-->).
 
 - Drag the marker to a different position on the real-time display.
 

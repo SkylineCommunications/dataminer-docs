@@ -1,9 +1,18 @@
 items:
-  - name: Deploying a DataMiner System
-    topicUid: Deploying_a_DataMiner_System
+  - name: Creating a DataMiner System
+    topicUid: Creating_a_DataMiner_System
     items:
-    - name: Deploying a DataMiner System in the cloud (DaaS)
-      topicUid: Deploying_a_DMS_in_the_cloud
+    - name: Creating a DataMiner System in the cloud (DaaS)
+      topicUid: Creating_a_DMS_in_the_cloud
+      items:
+        - name: Creating a new DMS on dataminer.services
+          topicUid: Creating_a_DMS_on_dataminer_services
+        - name: Accessing a newly created DMS for the first time
+          topicUid: Accessing_a_new_DMS
+        - name: Removing a DaaS system
+          topicUid: Removing_a_DaaS_system
+        - name: Frequently asked questions
+          topicUid: Creating_a_DaaS_system_FAQ
     - name: Installing a self-hosted DataMiner Agent
       topicUid: Installing_a_DataMiner_Agent
       items:

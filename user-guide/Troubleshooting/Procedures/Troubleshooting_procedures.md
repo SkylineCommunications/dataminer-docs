@@ -12,10 +12,15 @@ uid: Troubleshooting_procedures
 
 - [Investigating NATS issues](xref:Investigating_NATS_Issues)
 
+- [Investigating OpenSearch issues](xref:Investigating_OpenSearch_Issues)
+
+- [Investigating web issues](xref:Investigating_Web_Issues)
+
 - [Keeping a DMA from running out of disk space](xref:Keeping_a_DMA_from_running_out_of_disk_space)
 
 - ['Sharing dashboard' window does not disappear](xref:Sharing_dashboard_window_does_not_disappear)
 
-- [Troubleshooting SAML issues](xref:Troubleshooting_SAML_Issues)
-
 - [Manually removing old alarms from an Elasticsearch cluster](xref:Manually_removing_old_alarms_from_ES)
+
+> [!TIP]
+> See also: [Troubleshooting SAML issues](xref:Troubleshooting_SAML_Issues)

@@ -105,6 +105,31 @@ To configure TLS encryption for client-server communication:
    bin\elasticsearch-keystore add xpack.security.http.ssl.truststore.secure_password
    ```
 
+   For example, if you use Ubuntu, you can do so as follows:
+
+   1. Navigate to the bin folder using the following command:
+
+      ```bash
+      cd /usr/share/elasticsearch/bin
+      ```
+
+   1. Set the password for the keystore using the following command:
+
+      ```bash
+      sudo ./elasticsearch-keystore add xpack.security.http.ssl.keystore.secure_password
+      ```
+
+   1. Set the password for the truststore using the following command:
+
+      ```bash
+      sudo ./elasticsearch-keystore add xpack.security.http.ssl.truststore.secure_password
+      ```
+
+   > [!NOTE]
+   >
+   > - Depending on the flavor of operating system (Windows, Ubuntu, or another OS), the procedure can be different. Note that we generally recommend Ubuntu.
+   > - If the password needs to be updated, after you have run generate-tls-certificates again and acquired a new password for the keystore and truststore, you need to execute the commands above to set the keystore and truststore passwords in `/usr/share/elasticsearch/bin` again. These will overwrite the previous password.
+
 1. Start the *elasticsearch-service-x64* service and verify that you can connect with a browser to <https://FQDN:9200>.
 
 1. Stop the DataMiner Agent.
@@ -119,9 +144,9 @@ To configure TLS encryption for client-server communication:
 > [!TIP]
 > To troubleshoot problems after enabling TLS encryption, consult the *SLSearch.txt* log file.
 
-### Troubleshooting: executing the generate-certificates.sh script
+### Troubleshooting
 
-#### Syntax error
+#### Syntax error when executing the generate-certificates.sh script
 
 **Situation**: You have cloned the "Generate-TLS-Certificates" GitHub repository on a Windows machine, and have transferred the *generate-certificates.sh* file to a Linux machine using SCP. You have executed the following command:
 

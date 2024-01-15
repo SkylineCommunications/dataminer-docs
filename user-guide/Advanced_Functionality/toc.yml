@@ -51,6 +51,8 @@ items:
             topicUid: Restoring_the_DMA_configuration_only
           - name: Restoring the database only
             topicUid: Restoring_the_database_only
+          - name: Maintaining the dataminer.services connection when restoring a DMA
+            topicUid: Maintaining_cloud_connection_when_restoring
           - name: Starting a restored DataMiner Agent in a cluster
             topicUid: Starting_a_restored_DataMiner_Agent_in_a_cluster
       - name: Upgrading a DataMiner Agent
@@ -157,6 +159,8 @@ items:
             topicUid: BPA_Cassandra_DB_Size
           - name: Check Antivirus DLLs
             topicUid: BPA_Check_Antivirus_DLLs
+          - name: Check Cluster SLNet Connections
+            topicUid: BPA_Check_Cluster_SLNet_Connections
           - name: Database Security
             topicUid: BPA_Database_Security
           - name: Firewall Configuration
@@ -239,7 +243,7 @@ items:
         items:
           - name: Dedicated clustered storage
             topicUid: Dedicated_clustered_storage
-          - name: Separate Cassandra setup with Elasticsearch
+          - name: Separate Cassandra setup with indexing
             topicUid: Separate_Cassandra_setup_with_Elasticsearch
           - name: Separate Cassandra setup without indexing
             topicUid: Separate_Cassandra_setup_without_Elasticsearch
@@ -276,6 +280,8 @@ items:
                             topicUid: Azure_Managed_Instance_for_Apache_Cassandra
                       - name: Maintaining a Cassandra cluster
                         topicUid: Maintain_Cassandra_Cluster
+                      - name: Backing up and restoring a Cassandra cluster using Medusa
+                        topicUid: Backup_Restore_Cassandra_Cluster_Medusa
                   - name: Amazon Keyspaces Service
                     topicUid: Amazon_Keyspaces_Service
                     items:
@@ -302,8 +308,6 @@ items:
                         topicUid: Configuring_Cassandra_Backups
                       - name: Moving the Cassandra database to a different disk drive
                         topicUid: Moving_the_Cassandra_database_to_a_different_disk_drive
-                  - name: Configuring an indexing database
-                    topicUid: SPD_Configuring_indexing_database
               - name: MySQL database
                 topicUid: MySQL_database
                 items:
@@ -323,6 +327,8 @@ items:
                     topicUid: Installing_OpenSearch_database
                   - name: Configuring multiple OpenSearch clusters
                     topicUid: Configuring_multiple_OpenSearch_clusters
+                  - name: Configuring a multiple data center OpenSearch cluster
+                    topicUid: Configuring_multiple_datacenter_OpenSearch_cluster
                   - name: Configuring OpenSearch backups
                     topicUid: Configuring_OpenSearch_Backups
               - name: Amazon OpenSearch Service
@@ -330,38 +336,28 @@ items:
               - name: Elasticsearch
                 topicUid: Elasticsearch_database
                 items:
-                  - name: Setting up Elasticsearch for a dedicated clustered storage setup
+                  - name: Installing Elasticsearch on a separate Linux machine
                     topicUid: Installing_Elasticsearch_on_separate_Linux_machine
+                  - name: Installing Elasticsearch on a DMA via DataMiner (storage per DMA only)
+                    topicUid: Installing_Elasticsearch_via_DataMiner
+                  - name: Configuring an Elasticsearch database on a separate machine
+                    topicUid: Configuring_Elasticsearch_Database
                     items:
-                      - name: Installing Elasticsearch on a separate Linux machine
-                        topicUid: Installing_Elasticsearch_on_separate_Linux_machine
-                      - name: Configuring the Elasticsearch database (Linux)
-                        topicUid: Configuring_Elasticsearch_Database
-                        items:
-                          - name: Configuring the master nodes
-                            topicUid: Configuring_master_Elasticsearch_nodes
-                          - name: Adding an Elasticsearch cluster node
-                            topicUid: Configuring_Elasticsearch_node_add
-                          - name: Configuring multiple Elasticsearch clusters
-                            topicUid: Configuring_multiple_Elasticsearch_clusters
-                            items:
-                              - name: Taking a snapshot of one Elasticsearch cluster and restoring it to another
-                                topicUid: Taking_snapshot_Elasticsearch_cluster_and_restoring_to_different_cluster
-                              - name: Verifying Elasticsearch synchronization
-                                topicUid: Verifying_Elasticsearch_Synchronization
-                  - name: Setting up Elasticsearch in a setup with storage per DMA
-                    topicUid: Configuring_indexing_database_per_DMS
+                      - name: Configuring the master nodes
+                        topicUid: Configuring_master_Elasticsearch_nodes
+                      - name: Adding an Elasticsearch cluster node
+                        topicUid: Configuring_Elasticsearch_node_add
+                      - name: Configuring a multiple data center Elasticsearch cluster
+                        topicUid: Configuring_multiple_datacenter_Elasticsearch_cluster
+                      - name: Removing an Elasticsearch cluster node
+                        topicUid: Configuring_Elasticsearch_node_remove
+                  - name: Configuring multiple Elasticsearch clusters
+                    topicUid: Configuring_multiple_Elasticsearch_clusters
                     items:
-                      - name: Installing Elasticsearch on a DMA via DataMiner
-                        topicUid: Installing_Elasticsearch_via_DataMiner
-                      - name: Migrating SRM resources to the indexing database
-                        topicUid: Resources_migration_to_elastic
-                      - name: Configuring the Elasticsearch database (Windows)
-                        topicUid: Configuring_Elasticsearch_database_Windows
-                      - name: Uninstalling Elasticsearch from a DMA
-                        topicUid: Uninstalling_Elasticsearch_from_a_DMA
-                  - name: Manually connecting a DMA to an Elasticsearch cluster
-                    topicUid: Manually_Connecting_DMA_to_Elasticsearch_Cluster
+                      - name: Taking a snapshot of one Elasticsearch cluster and restoring it to another
+                        topicUid: Taking_snapshot_Elasticsearch_cluster_and_restoring_to_different_cluster
+                      - name: Verifying Elasticsearch synchronization
+                        topicUid: Verifying_Elasticsearch_Synchronization
                   - name: Configuring Elasticsearch backups
                     topicUid: Configuring_Elasticsearch_backups
                     items:
@@ -369,10 +365,16 @@ items:
                         topicUid: Configuring_Elasticsearch_backups_Windows_Linux
                       - name: Restoring backups using the Standalone Elastic Backup Tool
                         topicUid: Configuring_Elasticsearch_backups_Windows
-                  - name: Removing an Elasticsearch cluster node
-                    topicUid: Configuring_Elasticsearch_node_remove
+                  - name: Uninstalling Elasticsearch from a DMA (storage per DMA only)
+                    topicUid: Uninstalling_Elasticsearch_from_a_DMA
+              - name: Manually connecting a DMA to an indexing database
+                topicUid: Manually_Connecting_DMA_to_Elasticsearch_Cluster
               - name: Configuring indexing settings in DataMiner Cube
                 topicUid: Configuring_DataMiner_Indexing
+              - name: Migrating SRM resources to the indexing database
+                topicUid: Resources_migration_to_elastic
+              - name: Migrating SRM profiles to the indexing database
+                topicUid: Profile_migration_to_elastic
           - name: Common database settings
             topicUid: Specifying_TTL_overrides
             items:
@@ -406,8 +408,17 @@ items:
           - name: Querying a Cassandra database compared to MySQL
             topicUid: Querying_Cassandra_vs_MySQL
   - name: Security
-    topicUid: About_DMS_Security
+    topicUid: About_security
     items:
+      - name: About security
+        topicUid: About_security
+        items:
+          - name: Key principles and best practices
+            topicUid: Security_key_principles
+          - name: Automation in the context of security
+            topicUid: Security_and_automation
+          - name: Must-have requirements
+            topicUid: Security_must_haves
       - name: About DataMiner security
         topicUid: About_DMS_Security
         items:
@@ -513,18 +524,31 @@ items:
                 topicUid: HTTP_Headers
               - name: Disabling legacy protocols
                 topicUid: Disabling_legacy_protocols
+          - name: Configuring SAML settings
+            topicUid: Configuring_external_authentication_via_an_identity_provider_using_SAML
+            items:
+            - name: Configuring SAML with Microsoft Entra ID
+              topicUid: SAML_using_Entra_ID
+            - name: Configuring SAML with Azure B2C
+              topicUid: SAML_using_Azure_B2C
+            - name: Configuring SAML with Okta
+              topicUid: SAML_using_Okta
+            - name: Additional configuration for systems connected to dataminer.services
+              topicUid: SAML_config_to_connect_to_cloud
+            - name: Troubleshooting SAML issues
+              topicUid: Troubleshooting_SAML_Issues
           - name: Configuring LDAP settings
             topicUid: Configuring_LDAP_settings
           - name: Configuring Atlassian Crowd settings
             topicUid: Configuring_Atlassian_Crowd_settings
           - name: Configuring RADIUS settings
             topicUid: Configuring_RADIUS_settings
-          - name: Configuring external authentication via an identity provider using SAML
-            topicUid: Configuring_external_authentication_via_an_identity_provider_using_SAML
           - name: Setting up Azure Active Directory Domain Services
             topicUid: Setting_up_Azure_Active_Directory_Domain_Services
           - name: Enabling TLS encryption
             topicUid: Enabling_TLS_encryption
+          - name: Skipping certificate validation when consuming gRPC services
+            topicUid: Skipping_certificate_validation_when_consuming_gRPC_services
   - name: SNMP managers
     topicUid: About_SNMP_managers
     items:

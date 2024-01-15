@@ -295,7 +295,8 @@ server_name: MyServerName
 ```  
 
 > [!NOTE]
-> - From DataMiner 10.1.0 \[CU12]/10.2.3 onwards, STAN is no longer used by the core processes because of performance issues. The streaming configuration can therefore be simplified as follows:
+>
+> - From DataMiner 10.1.0 [CU12]/10.2.3 onwards, STAN is no longer used by the core processes because of performance issues. The streaming configuration can therefore be simplified as follows:
 >
 > ```txt
 > streaming: {
@@ -306,9 +307,9 @@ server_name: MyServerName
 
 ### nas.config
 
-There should only be one primary NAS in each DMS, with the configuration detailed below. Every other NAS should be configured as a secondary, except in a cluster of exactly 2 Agents.
+Starting from DataMiner 10.3.0 [CU11]/10.4.0/10.4.2<!-- RN 38089 -->, DataMiner configures every node as a primary NAS. This prevents startup issues in case the primary NAS is not fully started up (yet) or its hosting port is blocked. DataMiner synchronizes all credential files, so each NAS will use the same set of credentials.
 
-In a cluster of exactly 2 Agents, both NATS configs will point to the same NAS in their resolver setting. The other NAS will be running, but neither NATS will connect to it.
+Prior to DataMiner 10.3.0 [CU11]/10.4.0/10.4.2, DataMiner configures a single primary NAS in each DMS, with the configuration detailed below. Every other NAS is configured as a secondary, except in a cluster of exactly 2 Agents. In a cluster of exactly 2 Agents, both NATS configs will point to the same NAS in their resolver setting. The other NAS will be running, but neither NATS will connect to it.
 
 > [!NOTE]
 > From DataMiner 10.3.11/10.3.0 [CU8] onwards<!--RN 37401-->, when DataMiner makes changes to *nas.config*, the old version of that file is saved in the *C:\Skyline DataMiner\Recycle Bin* folder.
@@ -331,6 +332,8 @@ store: {
 ```
 
 #### Secondary NAS
+
+Only applicable up to DataMiner 10.3.0 [CU11]/10.4.0/10.4.2<!-- RN 38089 -->.
 
 ```txt
 http: {
@@ -513,6 +516,7 @@ The NATS clustering configuration is managed by the *NATSCustodian* class in SLN
 
 > [!NOTE]
 > When configuration is mentioned in this section, the actual NATS/NAS configuration is meant:
+>
 > - NAS configuration file: `C:\Skyline DataMiner\NATS\nats-account-server\nas.config`
 > - NATS configuration file: `C:\Skyline DataMiner\NATS\nats-streaming-server\nats-server.config`
 
@@ -532,7 +536,7 @@ First, the algorithm will collect all the reachable primary IPs in the cluster (
 
   1. The filestore and raft logging are cleaned up (`..\NATS\nats-streaming-server\fileStore` and `..\NATS\nats-streaming-server\raftLog`). This is done to remove any references and cached data from the previous cluster configuration.
 
-  1. The **alphabetically** first IP or hostname is selected to become the primary NAS; all the other nodes are configured as a secondary NAS and will reference the primary NAS.
+  1. From DataMiner 10.3.0 [CU11]/10.4.0/10.4.2 onwards<!-- RN 38089 -->, all nodes are configured as a primary NAS. This prevents corner cases where the primary NAS is not started (yet) or its host has the necessary port blocked. DataMiner syncs all credential files in the cluster, so each NAS will use the same set of credentials. In older DataMiner versions, the **alphabetically** first IP or hostname is selected to become the primary NAS; all the other nodes are configured as a secondary NAS and will reference the primary NAS.
 
   1. The cluster ID is set using the DMS cluster name, transformed to Base64 string. This transformation is done to prevent special symbols in the cluster ID.
 

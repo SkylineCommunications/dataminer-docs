@@ -4,6 +4,9 @@ uid: Configuring_dashboard_components1
 
 # Configuring dashboard components
 
+> [!IMPORTANT]
+> This information is applicable to the DMS Dashboards module, which is being retired as of DataMiner version 10.4.x. See [DataMiner functionality evolution and retirement](xref:Software_support_life_cycles#dataminer-functionality-evolution-and-retirement). For more information on the Dashboards web app available from DataMiner 9.6.9 onwards, see [Dashboards app](xref:newR_D).
+
 To configure the components of a dashboard, you must first access the dashboard editor. This can be done in two ways:
 
 - After creating or editing a dashboard, click *Save & Start Configuring Components*, or

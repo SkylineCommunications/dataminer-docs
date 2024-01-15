@@ -10,11 +10,11 @@ uid: Troubleshooting_SLHelper_exe
 
 These are the main functions of *SLHelper.exe*:
 
-- Rendering Visual Overview pages for the Monitoring and Dashboards apps.
+- Rendering Visual Overview pages for the Monitoring and Dashboards apps (see [Investigating web issues](xref:Investigating_Web_Issues)).
 
-- Converting documents to PDF in the Reports, Dashboards and Jobs apps.
+- Converting documents to PDF in the Reports, Dashboards and Jobs apps (see [Investigating web issues](xref:Investigating_Web_Issues)).
 
-- Executing queries for Dashboards via the Generic Query Interface (GQI).
+- Executing queries for Dashboards via the Generic Query Interface (GQI) (see [Investigating web issues](xref:Investigating_Web_Issues)).
 
 - Running Best Practice Analyzer (BPA) tests.
 
@@ -34,7 +34,7 @@ SLHelper is often updated in new DataMiner builds. Before you report an issue to
 
 ### Logging
 
-The process does not have a dedicated log file. Depending on your use case, you can check the following log files:
+The process does not have a dedicated log file. However, since SLHelper is started by SLNet, logging can be found in *SLHelperWrapper.txt*. Depending on your use case, you can check the following additional log files:
 
 - *SLUIProvider.txt*: Check this log file to check for Visual Overview issues. Search for "Log:" and "visio" for relevant information.
 
@@ -44,20 +44,10 @@ The process does not have a dedicated log file. Depending on your use case, you 
 
 - *SLHelperCrash.txt*: Check this log file for information on crashes.
 
-- For the GQI, there is no dedicated log file, but you can find error information in API responses using the Developer Console of a browser.
+For the GQI, there is no dedicated log file, but you can find error information in API responses using the Developer Console of a browser (see [Investigating web issues](xref:Investigating_Web_Issues)).
 
 > [!NOTE]
 > To enable logging of information required for an investigation, make sure you set the log level to "Log Everything (5) ". For more information, see [DataMiner logging](xref:DataMiner_logging).
-
-### Known limitations of Visual Overview in web apps
-
-Certain behavior should be expected when Visual Overview is used in web apps:
-
-- Visual Overview pages are rendered as images with clickable regions in them. Because of this, some features like embedding and some session variable controls are not fully supported.
-
-- To render a Visual Overview page, SLHelper loads a virtual instance of DataMiner Cube in its memory. Initial loading of a page can take a long time because SLHelper needs to start Cube, connect to a DMA, and then generate an image.
-
-- SLHelper may use a significant amount of memory to display Visual Overview pages, especially when multiple users are connected. When Visual Overview pages are not viewed by any user, the virtual DataMiner Cube instance is terminated after a timeout of 5 minutes and the memory is released.
 
 ## SLHelper troubleshooting flowchart
 
@@ -142,26 +132,3 @@ class VisioFix,GqiServerIssue,PdfOptimize classSolution;
 class VisioKnown,VisioLogs,GqiDevConsole,GqiSave,PdfLogs,BpaLogs classActionClickable;
 class LinkRootCause,LinkProcessList,PdfReportsIssue classExternalRef;
 </div>
-
-## Notes on troubleshooting
-
-### Using the Developer Console in a browser
-
-Press F12 to open the Developer Tools console in your browser. Select the Network tab. All information in the DataMiner web apps (e.g. Monitoring, Dashboards and Jobs) is retrieved from DataMiner via POST messages to DataMiner API.
-
-For example, an API call GetVisioForElement is used to display a Visual Overview page.
-
-Any errors will be returned with HTTP Status 500.
-
-### Recording a GQI session
-
-GQI recording is a debugging feature that allows you to save GQI communication and replay it in a lab environment. GQI recording is disabled by default.
-To create a recording:
-
-1. Create the folder  `C:\Skyline DataMiner\logging\genif`.
-
-1. Perform the operation that needs to be recorded.
-
-1. Save the files written to `C:\Skyline DataMiner\logging\genif`.
-
-1. Delete the folder to disable recording.

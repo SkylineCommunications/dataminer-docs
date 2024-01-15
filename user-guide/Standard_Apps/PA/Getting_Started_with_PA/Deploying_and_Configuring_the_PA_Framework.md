@@ -33,7 +33,7 @@ To install the SRM framework:
 
 1. Download the latest SRM package from [DataMiner Dojo](https://community.dataminer.services/downloads/).
 
-1. Double-click the SRM package, and install the package in the same manner as a DataMiner upgrade.
+1. In DataMiner Cube, go to *Apps* > *System Center* > *Agents* > *Manage*, and install the package in the same manner as a [DataMiner upgrade](xref:Upgrading_a_DataMiner_Agent_in_System_Center).
 
    > [!TIP]
    > See also: [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent)
@@ -55,7 +55,7 @@ To install the PA framework:
 
 1. Contact Skyline Communications to receive the latest PA package.
 
-1. Double-click the PA package, and install the package in the same manner as a DataMiner upgrade.
+1. In DataMiner Cube, go to *Apps* > *System Center* > *Agents* > *Manage*, and install the package in the same manner as a [DataMiner upgrade](xref:Upgrading_a_DataMiner_Agent_in_System_Center).
 
    > [!NOTE]
    > DataMiner will restart during the installation of the package.

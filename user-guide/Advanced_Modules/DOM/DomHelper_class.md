@@ -19,6 +19,9 @@ var helper = new DomHelper(engine.SendSLNetMessages, "a_module_id");
 
 You can then call the *Create*, *Read*, *Update*, or *Delete* methods on the CRUD helper components of the helper.
 
+> [!NOTE]
+> When multiple `DomInstances` need processing, from DataMiner 10.4.2/10.5.0 onwards<!-- RN 37891 -->, [calls are available](#multiple-instances) to do so for [up to 100 DomInstances](#maximum-number-of-instances) in one go.
+
 For example:
 
 ```csharp
@@ -53,6 +56,46 @@ if (!traceData.HasSucceeded())
     engine.GenerateInformation(traceData.ToString());
 }
 ```
+
+### Multiple instances
+
+When multiple `DomInstances` need to get created, updated, or deleted, we recommend calling the *CreateOrUpdate* or *Delete* methods on a `DomInstance` CRUD helper component with a list of those `DomInstances`. This feature is available from DataMiner 10.4.2/10.5.0 onwards<!-- RN 37891 -->.
+
+For example, to create or update multiple `DomInstances`:
+
+```csharp
+// Create or update a list of DomInstances
+var createResult = helper.DomInstances.CreateOrUpdate(domInstances);
+```
+
+*CreateOrUpdate* will consider the provided `DomInstances` that already exist as updates. The other `DomInstances` will be created. Providing a mix of both is supported.
+
+> [!TIP]
+> For more information and best practices for using these calls, see [Processing multiple DomInstances — examples](xref:DOM_BulkProcessing_Example).
+
+> [!IMPORTANT]
+> When designing the object model, consider if a high number of `DomInstances` might need to be processed quickly or need to be provisioned. If this is the case, we recommend avoiding related actions such as [launching script actions](xref:ExecuteScriptOnDomInstanceActionSettings) and [history tracking](xref:DOM_history).
+>
+> The number of `DomInstances` that can be passed to these methods [is limited to 100](#maximum-number-of-instances). Since those related actions might outlive these CRUD calls, keep in mind that repeating these operations in succession can still impact the stability of the system.
+
+#### Call result
+
+When the operation fails for one of the `DomInstances`, the result of those calls will contain the necessary information.
+
+- When `CreateOrUpdate` is called, the result will contain a list of `DomInstances` that were successfully created or updated. The trace data is available per `DomInstance` ID.
+- When `Delete` is called with a list of `DomInstances`, the result will contain a list of `DomInstance` IDs that were successfully deleted. The trace data is also available per `DomInstance` ID.
+
+If an issue occurs when an item gets created, updated, or deleted (e.g. validation), no exception will be thrown (even when `ThrowExceptionsOnErrorData` is *true*). The result of the call can be used to check for which `DomInstances` the call succeeded or failed. In addition, the trace data of that call is available and will contain the trace data for all processed `DomInstances`.
+
+In case the entire operation fails (e.g. when the storage layer fails while storing the data) a `CrudFailedException` is thrown. If, in that case, `ThrowExceptionsOnErrorData` was set to false, these calls will return `null` and the `TraceData` of the last call should be checked to get more details about the issue. For information on how to implement this flow, refer to the [Unexpected issue example](xref:DOM_BulkProcessing_Example#unexpected-issue).
+
+#### Maximum number of instances
+
+Since these calls might trigger related actions (such as [launching script actions](xref:ExecuteScriptOnDomInstanceActionSettings)), this could cause a high load on the system when a lot of instances are involved. A limit of 100 `DomInstances` is set, to make sure those bulk operations are implemented with scalability in mind. When a higher number of instances need processing, these actions will need to be performed in batches.
+
+You can also find this maximum number of instances for the `CreateOrUpdate` or `Delete` calls in the `MaxAmountBulkOperation` property on a `DomInstance` CRUD helper component.
+
+If more items get passed, `CreateOrUpdate` or `Delete` calls will fail with a `DomInstanceCrudMaxAmountExceededArgumentException`, and the message of the exception will state how many items were passed.
 
 ## Special methods
 
@@ -89,7 +132,7 @@ There are two ways to stitch DOM instances:
 From DataMiner 10.1.3/10.2.0 onwards, it is possible to save attachments with the `DomHelper`. These are linked to a `DomInstanceId`. You can use the `Attachments` helper on the `DomInstance` CRUD component.
 
 ```csharp
-var domHelper new DomHelper(engine.SendSLNetMessages, PermissionTestModuleId);
+var domHelper = new DomHelper(engine.SendSLNetMessages, PermissionTestModuleId);
 var fileBytes = File.ReadAllBytes("C:\MyDocuments\ImportantDocument.txt");
 
 // Adding an attachment

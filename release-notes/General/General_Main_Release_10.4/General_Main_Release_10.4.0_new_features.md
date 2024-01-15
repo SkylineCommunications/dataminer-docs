@@ -463,18 +463,19 @@ Once the creation is finished, you will see your newly created cluster on the *A
 
 1. Restart DataMiner.
 
-#### DataMiner installation/upgrade: Automatic installation of DataMiner Extension Modules [ID_36085] [ID_36513] [ID_36514] [ID_36799] [ID_37137]
+#### DataMiner installation/upgrade: Automatic installation of DataMiner Extension Modules [ID_36085] [ID_36513] [ID_36514] [ID_36799] [ID_37137] [ID_37895]
 
 <!-- MR 10.4.0 - FR 10.3.7 -->
 <!-- RNs 36799/37137: MR 10.4.0 - FR 10.3.9 -->
+<!-- RNs 37895: MR 10.4.0 - FR 10.3.12 -->
 
 When you install or upgrade a DataMiner Agent, the following DataMiner Extension Modules (DxMs) will now automatically be installed (if not present yet):
 
-- DataMiner ArtifactDeployer (version 1.5.0)
+- DataMiner ArtifactDeployer (version 1.5.2)
 - DataMiner CoreGateway (version 2.12.0)
-- DataMiner FieldControl (version 2.9.0)
-- DataMiner Orchestrator (version 1.4.0)
-- DataMiner SupportAssistant (version 1.5.0)
+- DataMiner FieldControl (version 2.9.1)
+- DataMiner Orchestrator (version 1.4.1)
+- DataMiner SupportAssistant (version 1.5.3)
 
 The BPA test *Firewall Configuration* has been altered to also check if TCP port 5100 is properly configured in the firewall. This port is required for communication with the cloud via the endpoint hosted in DataMiner CloudGateway.
 
@@ -563,7 +564,7 @@ Customized anomaly monitoring will enable you to do the following:
 - Set absolute or relative thresholds on the jump sizes of the change points of type *Level Shift* or *Outlier*.
 - Enable or disable monitoring for each of the two possible directions of a behavioral change for level shifts, trend changes, variance changes and outliers. This will allow you, for example, to configure different alarm monitoring behaviors for downward level shifts and upward level shifts.
 
-For more information on how to configure anomaly monitoring in DataMiner Cube, see [DataMiner Cube - Alarm templates: Configuration of behavioral anomaly alarms [ID_37148] [ID_37171]](xref:Cube_Feature_Release_10.3.12#alarm-templates-configuration-of-behavioral-anomaly-alarms-id_37148-id_37171).
+For more information on how to configure anomaly monitoring in DataMiner Cube, see [Alarm templates: Configuration of behavioral anomaly alarms [ID_37148] [ID_37171] [ID_37670]](xref:Cube_Feature_Release_10.3.12#alarm-templates-configuration-of-behavioral-anomaly-alarms-id_37148-id_37171-id_37670).
 
 Summary of server-side changes:
 
@@ -609,6 +610,14 @@ As a result, proactive detection will now predict when a parameter will cross on
 - A (by default) critical alarm limit of type normal specified in the alarm template.
 - A (by default) critical alarm limit of type "absolute" or "relative" specified in the alarm template if either a fixed baseline value is set or a dynamically updated baseline value is configured in the alarm template to detect a continuos degradation.
 - A data range indirectly derived from the protocol info. Currently this is limited to the values 0 and 100 for percentage data for which no historical values were encountered outside the [0,100] interval.
+
+#### DataMiner upgrade: Additional prerequisite will now check whether profiles and resources are stored in an indexing database [ID_37763]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+Starting from DataMiner version 10.4.0, XML storage for profiles and resources is no longer supported. When you upgrade DataMiner to version 10.4.0, the `VerifyElasticStorageType` prerequisite will verify whether the system has successfully switched to an indexing database. If profiles and/or resources are still stored in XML files, this prerequisite will cause the upgrade to fail.
+
+See also: [Upgrade fails because of VerifyElasticStorageType.dll prerequisite](xref:KI_Upgrade_fails_VerifyElasticStorageType_prerequisite)
 
 ### Protocols
 
@@ -733,6 +742,30 @@ To (re)initialize Resource Manager:
 1. At the bottom of the window, click *Reinitialize ResourceManager*.
 
    Resource Manager will be (re)initialized on the DataMiner Agent you are connected to.
+
+#### Service & Resource Management: Storage type for ProfileManager and ResourceManager will now always be Elasticsearch/OpenSearch [ID_37877]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+From now on, the storage type for ProfileManager and ResourceManager will always be Elasticsearch/OpenSearch. XML storage is no longer supported.
+
+When you retrieve the storage type, it will now always return Elasticsearch/OpenSearch, even if the ProfileManager or ResourceManager configuration states that the storage type is XML. If no ProfileManager configuration can be found, a default configuration will now be created with storage type set to Elasticsearch/OpenSearch.
+
+If you would try to send a `SetResourceManagerConfigMessage` to change the storage type to XML, the response message will state that the attempt failed and will contain the following error message:
+
+`Ignoring the config change, Xml is no longer supported as ResourceStorageType.`
+
+If you would try to set the ProfileManager configuration to Elasticsearch/OpenSearch via the configuration manager, this will fail. The ProfileManager log file should then contain the following trace data:
+
+```txt
+TraceData: (amount = 1)
+   - ErrorData: (amount = 1)
+      - ProfileManagerErrorData: ErrorReason: InvalidConfigurationFile,
+                                 Message: Xml is no longer supported as ProfileManagerStorageType,
+```
+
+> [!NOTE]
+> The *SLNetClientTest* tool will no longer allow you to switch the storage type from XML to Elasticsearch/OpenSearch or vice versa, nor will it allow you to create a ProfileManager configuration anymore.
 
 ### Tools
 

@@ -169,9 +169,9 @@ Within the dashboard URL, the following data objects can be specified:
 
 - *epm-selections*: Available from DataMiner 10.2.0 [CU1] and 10.2.4 onwards (replaces "cpes")<!-- RN 32594 -->. To specify an EPM filter. Requires the DMA ID, element ID, field PID and primary key value, separated by forward slashes. Unlike the deprecated "cpes", "epm-selections" allows forward slashes in the primary key value.
 
-- *strings*: Supported from DataMiner 10.3.5/10.4.0 onwards<!--  RN 35902 -->. A text string, which will serve as the default value for a Text input component.
+- *strings*: Supported from DataMiner 10.3.5/10.4.0 onwards<!--  RN 35902 -->. A text string, which will serve as the default value for a **text input** component. Note that prior to DataMiner 10.4.1<!-- RN 37752 -->, you can only specify a default value for all text input components in the dashboard, while in recent DataMiner versions you can specify a feed per component.
 
-- *numbers*: Supported from DataMiner 10.3.5/10.4.0 onwards<!--  RN 35911 -->. Numbers, which will serve as the default value for a Numeric input component.
+- *numbers*: Supported from DataMiner 10.3.5/10.4.0 onwards<!--  RN 35911 -->. Numbers, which will serve as the default value for a **numeric input** component. Note that prior to DataMiner 10.4.1<!-- RN 37752 -->, you can only specify a default value for all numeric input components in the dashboard, while in recent DataMiner versions you can specify a feed per component.
 
 - *object manager definitions*: Supported from DataMiner 10.3.6/10.4.0 onwards<!-- RN 36124 -->. Requires the [DOM definition ID](xref:DomDefinition).
 

@@ -111,12 +111,6 @@ Also, log entries indicating an exception thrown during baseline calculations wi
 
 From now on, when you zoom in or out, the data of the previous zoom level will stay visible until the data of the current zoom level has been loaded.
 
-#### Maps: Zoom range can now be set by means of a slider [ID_35381]
-
-<!-- MR 10.4.0 - FR 10.3.3 -->
-
-The zoom range of a map can now be set by means of a slider.
-
 #### SLAnalytics - Automatic incident tracking: Enhanced performance when fetching relation information [ID_35414] [ID_35508]
 
 <!-- 35414:  MR 10.4.0 - FR 10.3.3 -->
@@ -513,11 +507,83 @@ When, in the SLNetClientTest tool, you select the new *Debug SAML* checkbox befo
 > [!CAUTION]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
+#### DataMiner Object Models: Enhanced checks when removing field descriptors from a section definition [ID_37395]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+Up to now, when a field descriptor was removed from a section definition that was being used by any DOM instances, the update of the section would fail and a `SectionDefinitionError` with reason `SectionDefinitionInUseByDomInstances` would be added to the trace data.
+
+To allow certain field descriptors to be removed, this behavior has now been changed. From now on, the update of a section will only fail if the removed field descriptors are still being used.
+
+A `SectionDefinitionError` with reason `SectionDefinitionFieldsInUse` will be added to the trace data in the following cases:
+
+- If any of the removed field descriptors is being used in the DOM manager settings of the DOM module (either in the name definition or in one of the field aliases). When a field descriptor is detected in those settings, `UsedInDomManagerSettings` will be set to true in the `SectionDefinitionError`.
+
+- If any of the removed field descriptors is being used in the name definition defined on a DOM definition. The IDs of those DOM definitions will be specified in `DomDefinitionIds` of the `SectionDefinitionError`.
+
+- If any of the removed field descriptors is being used in any of the status section definition links on a DOM behavior definition. The IDs of the DOM behavior definitions will be specified in `DomBehaviorDefinitionIds` of the `SectionDefinitionError`.
+
+- If any of the removed field descriptors is assigned a value in any DOM instance. The IDs of the DOM instances (limited to 100) will be specified in `DomInstanceIds` of the `SectionDefinitionError`. If a large number of field descriptors were removed, only the first 100 field descriptors that match will be taken into account.
+
+Also, the `SectionDefinitionError` will have `SectionDefinitionID` set to the ID of the SectionDefinition that could not be updated. `FieldDescriptorIds` will contain the IDs of the FieldDescriptors that were found to be in use.
+
+Other changes to a section definition that fail when the section is being used by any DOM instance will still fail with reason `SectionDefinitionInUseByDomInstances`. Up to now, all DOM instance IDs would be included in the error data. From now on, only the first 100 IDs will be included.
+
+> [!NOTE]
+> Currently, on systems using STaaS, the validation of DOM instances might not detect if a field descriptor is in use when there are more then 100 DOM instances. In that case, the removal of the field descriptor in question will be allowed.
+
 #### SLAnalytics - Trend predictions: Flatline periods will no longer be included in the prediction model training data [ID_37432]
 
 <!-- MR 10.4.0 - FR 10.3.12 -->
 
 When a parameter has anomalous flatline periods in its trend data history that are breaking the normal trend data patterns, from now on, those flatline periods will no longer be included into the training data of the prediction model. As a result, a more accurate prediction can be expected on this kind of behavior.
+
+#### Configuration of database offload functionality moved from DBConfiguration.xml to DB.xml [ID_37446]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+Up to now, the database offload functionality described below had to be configured in the *DBConfiguration.xml* file. From now on, it has to be configured in the *DB.xml* file instead.
+
+- **Configuring a size limit for file offloads**
+
+  When the main database is offline, file offloads are used to store write/delete operations. You can configure a limit for the file size of these offloads. When the limit is reached, new data will be dropped.
+
+  Example:
+
+  ```xml
+  <DataBases>
+    ...
+    <FileOffloadConfiguration>
+      <MaxSizeMB>20</MaxSizeMB>
+    </FileOffloadConfiguration>
+  </DataBases>
+  ```
+
+- **Configuring multiple OpenSearch or Elasticsearch clusters**
+
+  It is possible to have data offloaded to multiple OpenSearch or Elasticsearch clusters, i.e. one main cluster and several replicated clusters.
+
+  Example:
+
+  ```xml
+  <DataBases>
+    <!-- Reads will be handled by the ElasticCluster with the lowest priorityOrder -->
+    <DataBase active="true" search="true" ID="0" priorityOrder="0" type="ElasticSearch">
+      <DBServer>localhost</DBServer>
+      <UID />
+      <PWD>root</PWD>
+      <DB>dms</DB>
+      <FileOffloadIdentifier>cluster1</FileOffloadIdentifier>
+    </DataBase>
+    <DataBase active="true" search="true" ID="0" priorityOrder="1" type="ElasticSearch">
+      <DBServer>10.11.1.44,10.11.2.44,10.11.3.44</DBServer>
+      <UID />
+      <PWD>root</PWD>
+      <DB>dms</DB>
+      <FileOffloadIdentifier>cluster2</FileOffloadIdentifier>
+    </DataBase>
+  </DataBases>
+  ```
 
 #### SLAnalytics: Not all occurrences of multivariate patterns containing subpatterns hosted on different DMAs would be detected [ID_37451]
 
@@ -531,11 +597,44 @@ Up to now, when you had created a multivariate pattern containing subpatterns ho
 
 Up to now, a DataMiner using STaaS communicated with the database via TCP/IP ports 443, 5671 and 5672. From now on, it will communicate with the database via port 443 only.
 
+#### DataMiner Object Models: Generic enum field descriptors now allow you to select multiple values [ID_37482]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+A generic enum field descriptor now allows you to select multiple values.
+
+For a *GenericEnumFieldDescriptor* to allow multiple values, its field type should be set as follows:
+
+- For integer values: `FieldType = typeof(List<GenericEnum<int>>)`
+- For string values: `FieldType = typeof(List<GenericEnum<string>>)`
+
+Values need to be set as follows:
+
+- Integer values:
+
+  ```csharp
+  new ListValueWrapper<int>(new List<int>(){0, 1});
+  ```
+
+- String values:
+
+  ```csharp
+  new ListValueWrapper<string>(new List<string>(){ "Value 0", "Value 1" });
+  ```
+
 #### Storage as a Service: Enhanced performance of DOM and SRM queries [ID_37495]
 
 <!-- MR 10.4.0 - FR 10.3.12 -->
 
 Because of a number of enhancements, overall performance of DOM and SRM queries has increased.
+
+#### GQI: Enhanced error handling when an error occurs while executing a query before it is joined with another query [ID_37521]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+Up to now, when an error occurred during the execution of a GQI query that, later on, was joined with another query, the exception message would always read `One or more errors occurred`.
+
+From now on, an exception that occurs when executing a query before it is joined with another query will be re-thrown afterwards. This will make sure the exception reveals the actual reason why the query failed.
 
 #### SLAnalytics - Automatic incident tracking: Enhanced error handling [ID_37530]
 
@@ -548,6 +647,23 @@ Up to now, when the table index of an alarm update had a casing that was not ide
 `Alarm X/X was in state but neither in loose alarms, in an automatic group or in a manual group`
 
 Because of a number of enhancements made to the automatic incident tracking feature, SLAnalytics will no longer throw errors like the ones above.
+
+#### DataMiner Object Models: GQI sort operations will now be executed by the database [ID_37541]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+Previously, when you added a sort node to a GQI query against the DOM data source, all DOM instances matching any filter node needed to be retrieved before the sorting could occur. Sorting a data set with a large amount of DOM instances was practically impossible.
+
+From now on, the sort nodes (e.g. By X, Then By Y, etc.) will be forwarded to the database. This will considerably increase overall performance when sorting DOM instances, especially when the data set includes a large amount of items.
+
+> [!NOTE]
+>
+> - Fields that have multiple values (i.e. list fields) cannot be sorted.
+> - All string sorting occurs in a non-natural way.
+> - TimeSpan fields are evaluated as strings. As a result, similar to strings, they will also be ordered in a non-natural way.
+> - Multiple sorts are supported using the `Sort by, Then sort by, etc.` node concatenation. If a new *Sort by* node is added to the query, the previous will be ignored.
+> - When sorting by DOM status or by an enum field, the sorting is will occur on the underlying value stored in the DOM instance and not on the display value.
+> - When the DOM GQI query is combined in a join operation, any sort node added after the join node will not be forwarded to the database. This will also be the case when the sorting uses the header of the table and the DOM query is part of a join.
 
 #### Storage as a Service: Enhanced error handling [ID_37554]
 
@@ -580,6 +696,161 @@ Up to now, when managers under the control of the ManagerStore framework in SLNe
 <!-- MR 10.4.0 - FR 10.3.12 -->
 
 Because of a number of enhancements, overall performance has increased, especially when restarting elements or performing certain DOM and SRM operations.
+
+#### DataMiner Objects Models: Fields used in multiple sections will no longer be returned for GQI queries [ID_37644]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+Up to now, a GQI query starting from a DOM node would return columns that contained multiple values due to being linked to SectionDefinitions that allowed multiple sections in one DOM instance. However, when displayed in a table, those columns would only show the first value found in the DOM instance. Also, when you sorted the data by one of those columns, in some cases, the order would seem random as the database would pick either the lowest or highest value available for a field when sorting.
+
+From now on, when GQI detects that having multiple sections is allowed for a particular SectionDefinition, all fields part of that SectionDefinition will no longer be returned as columns.
+
+> [!IMPORTANT]
+> This change will break any existing query that references columns containing multiple values due to being linked to SectionDefinitions that allowed multiple sections in one DOM instance.
+
+#### Service & Resource Management: ProfileManager cache [ID_37735]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+When profile data is stored in an Elasticsearch/OpenSearch database, all ProfileDefinitions and ProfileParameters in the ProfileManager will now be cached on each of the DMAs in the DataMiner System. During the midnight synchronization, all these caches will be reloaded to ensure that they all remain in sync.
+
+Also, additional logging has been added to indicate when a cache was refilled and how many objects were added, updated, removed or ignored. Each log entry will also include the IDs of the first ten of these objects.
+
+#### Storage as a Service: Enhanced performance when migrating data from Cassandra to the cloud [ID_37740]
+
+<!-- MR 10.4.0 - FR 10.3.12 [CU0] -->
+
+Because of a number of enhancements, overall performance has increased when migrating data from a Cassandra database to the cloud.
+
+#### User-Defined APIs: Maximum size of HTTP request body has been reduced to 29MB [ID_37753]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+The maximum size of the HTTP request body has been reduced from 30 MB to 29 MB.
+
+Also, additional logging will be added to the *SLUserDefinableApiManager.txt* log file when subscribing on NATS fails and when sending a reply on an incoming NATS request fails.
+
+#### Legacy Reports, Dashboards and Annotations modules are now end-of-life and will be disabled by default [ID_37786]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+As from DataMiner versions 10.1.10/10.2.0, the *LegacyReportsAndDashboards* and/or *LegacyAnnotations* soft-launch options allowed you to enable or disable the legacy *Reports*, *Dashboards* and *Annotations* modules. By default, they were enabled.
+
+Now, the above-mentioned soft-launch options will be disabled by default, causing the legacy *Reports*, *Dashboards* and *Annotations* modules to be hidden. If you want to continue using these modules, which are now considered end-of-life, you will have to explicitly enable the soft-launch options.
+
+#### SLAnalytics - Behavioral anomaly detection: Changes made to the anomaly configuration in an alarm template of a main DVE element will immediately be applied to all open anomaly alarm events [ID_37788]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+When you change the anomaly configuration in an alarm template assigned to a main DVE element, from now on, the changes will immediately be applied to all open anomaly alarm events. The severity of the open alarm events will be changed to the new severity defined in the updated anomaly configuration.
+
+#### GQI: Enhanced performance when executing inner of left join queries in which sorting is applied to the left query [ID_37803]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+Because of a number of enhancements, overall performance has increased when executing inner or left join queries in which sorting is applied to the left query.
+
+#### GQI: Enhanced performance when executing sorted queries [ID_37806]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+Forwarding sort operators to the backend is now supported for a wider range of query configurations. This will considerably increase overall performance of numerous sorted queries.
+
+#### SLNet will no longer allow DataMiner Agents to connect when they share the same DataMiner GUID [ID_37819]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+When two DataMiner Agents try to connect via SLNet, from now on, this will no longer be allowed if the two agents share the same DataMiner GUID (except when they are both part of the same Failover setup).
+
+#### DataMiner upgrade: New 'UninstallAPIDeployment' upgrade action and 'VerifyNoObsoleteApiDeployed' prerequisite [ID_37825]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+When you upgrade DataMiner from a version older than 10.4.0 to a version from 10.4.0 onwards, the newly added *VerifyNoObsoleteApiDeployed* prerequisite will check whether the *APIDeployment* soft-launch flag is active and whether APIs are deployed. If so, the prerequisite will fail and return a link to the following page:
+
+- [Upgrade fails because of VerifyNoObsoleteApiDeployed.dll prerequisite](xref:KI_Upgrade_fails_VerifyNoObsoleteApiDeployed_prerequisite)
+
+Also, the newly added *UninstallApiDeployment* upgrade action will remove everything related to the deprecated [API Deployment](xref:Overview_of_Soft_Launch_Options#apideployment) feature:
+
+- Stop and delete the *SLAPIEndpoint* service.
+
+- Remove the following files (if present):
+
+  - *C:\Skyline DataMiner\SLAPIEndpoint*
+  - *C:\Skyline DataMiner\DeployerTokens*
+  - *C:\Skyline DataMiner\ForceDeployerTokensFileStorage.txt*
+  - *C:\Skyline DataMiner\Resources\SLAPIEndpoint.zip*
+
+- If present, remove the rewrite rules for API Deployment.
+
+- Remove the API Deployment configuration file from *C:\Skyline DataMiner\Configurations\JSON*.
+
+- Remove the *APIDeployment* soft-launch flag from *SoftLaunchOptions.xml*.
+
+#### Parameter ID range 10,000,000 to 10,999,999 now reserved [ID_37837]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+Parameters IDs in the range of 10,000,000 to 10,999,999 are now reserved for DataMiner parameters. These will be used for DataMiner features in the future.
+
+#### GQI: Ad hoc data sources and custom operators now support row metadata [ID_37879]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+Ad hoc data sources and custom operators now support row metadata.
+
+- In case of an ad hoc data source, any metadata can be attached to a row.
+- In case of a custom operator, row metadata can be read from existing rows, and row metadata can be modified.
+
+#### DataMiner upgrade: New prerequisite will check whether the DMA still contains legacy reports or legacy dashboards [ID_37922]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+When you upgrade DataMiner from a version older than 10.4.0 to a version from 10.4.0 onwards, the newly added prerequisite will check whether the DataMiner Agent still contains legacy reports or legacy dashboards. If so, the prerequisite will fail.
+
+See also: [Upgrade fails because of VerifyNoLegacyReportsDashboards.dll prerequisite](xref:KI_Upgrade_fails_VerifyNoLegacyReportsDashboards_prerequisite)
+
+#### Service & Resource Management: Enhanced performance when updating/applying profile instances [ID_37976]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+Overall performance has increased when updating/applying profile instances by providing a way to pass cached profile instances instead of first having to retrieve them from the database. To achieve this, the `ResourceUsageDefinition` now has a new overload method:
+
+```csharp
+public virtual void UpdateAllCapacitiesAndCapabilitiesByReference(Func<FilterElement<ProfileInstance>, List<ProfileInstance>> retriever, Dictionary<Guid, ProfileInstance> profileInstanceCache, IEnumerable<QuarantinedResourceUsageDefinition> correspondingQuarantines = null);
+```
+
+#### GQI - 'Get parameter table by ID' data source: Enhanced sorting [ID_38039]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+When multiple, separate sort operators were optimized by the GQI data source *Get parameter table by ID*, up to now, they would be incorrectly combined into a single multi-level sort operation. From now on, only the last sort operator will be used, consistent with the behavior in case the sort operators are not optimized.
+
+For example, from now on, when you sort by A and, later on in the GQI query, sort again by B, the query will now only be sorted by B.
+
+#### SLAnalytics - Behavioral anomaly detection: Reduction of memory used for flatline detection [ID_38118]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+The amount of memory used for flatline detection has been reduced.
+
+#### GQI: Right query will be fetched lazily in case of a right join [ID_38134]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+Up to now, when a *Join* operator of type "Right join" was applied, both the entire left query and the entire right query would be fetched. From now on, the right query will be fetched lazily.
+
+#### SLAnalytics - Behavioral anomaly detection: Enhanced anomaly check algorithm [ID_38176]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+A number of enhancements have been made to the anomaly check algorithm.
+
+#### SLLogCollector will now also collect the backup logs of the StorageModule DxM [ID_38228]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+SLLogCollector will now also collect the backup logs of the *StorageModule* DxM located in the `C:\ProgramData\Skyline Communications\DataMiner StorageModule\Logs\Backup` folder.
 
 ### Fixes
 
@@ -757,6 +1028,12 @@ On systems using a database other than Cassandra, up to now, an `ExistsCustomDat
 
 In cases where SLDataGateway retrieved an entire table and then applied a filter afterwards, any row limits defined for the query in question would incorrectly be disregarded.
 
+#### Problem when using MessageBroker with chunking [ID_37532]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+On high-load systems, MessageBroker threads could leak when using chunking.
+
 #### Storage as a Service: Paged data retrieval operations would be cut off prematurely [ID_37533]
 
 <!-- MR 10.4.0 - FR 10.3.12 -->
@@ -768,3 +1045,101 @@ When reading data from the database page by page, in some cases, the operation w
 <!-- MR 10.4.0 - FR 10.3.12 -->
 
 In some cases, a newly created element could get assigned the same DmaId/ElementId key as another, already existing element on another DataMiner Agent in the cluster. From now on, this will be prevented as long as the DataMiner Agents in questions can communicate with each other.
+
+#### PropertyConfiguration.xml: New properties could incorrectly be assigned an existing property ID [ID_37596]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+When, in a client application (e.g. DataMiner Cube) you created a new custom property, in some cases, that new property would incorrectly be assigned an ID that had already been assigned to another, existing property.
+
+#### Storage as a Service: Every agent in the DMS would send the average trend data to the cloud during a migration [ID_37717]
+
+<!-- MR 10.4.0 - FR 10.3.12 -->
+
+When data was being migrated from a Cassandra Cluster database to a STaaS database, every DataMiner Agent in the DMS would incorrectly send the average trend data to the cloud. From now on, only one of the agents will send this data.
+
+#### DELT package created on DataMiner v10.3.8 or newer could no longer be imported on DataMiner v10.3.7 or older [ID_37731]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+When you exported elements via a DELT package on a DMA running DataMiner version 10.3.8 or newer, it would no longer be possible to import that DELT package on a DMA running DataMiner version 10.3.7 or older.
+
+#### SLAnalytics: Problem with table parameter indices containing special characters [ID_37860]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+Up to now, SLAnalytics would not correctly handle special characters in the table parameter indices. These characters will now be handled correctly. If parameters with indices containing special characters are trended, they will now also receive a trend prediction in the trend graph, and their behavioral change points will now be displayed.
+
+Also, special characters in parameter indices will no longer cause errors to be logged.
+
+#### Incorrect 'Clearing cache ...' entries in SLEventCache.txt [ID_37874]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+Incorrect entries would be added to the *SLEventCache.txt* log file on DataMiner startup and when new objects (e.g. elements) had been created.
+
+Example of an incorrect log entry:
+
+`Clearing cache: predicate<entries with old hosting agent id> for type XXXXXX`
+
+#### Storage as a Service: Problem when starting a database migration [ID_38059]
+
+<!-- MR 10.4.0 - FR 10.4.1 [CU0] -->
+
+When you tried to start a migration of an on-premises database to a DataMiner Storage as a Service platform, the connection towards the cloud could not get established.
+
+#### DataMiner Storage Module: Thread leak [ID_38095]
+
+<!-- MR 10.4.0 - FR 10.4.1 [CU0] -->
+
+In some cases, the DataMiner Storage Module could leak threads.
+
+#### Behavioral anomaly detection: Unlabelled changes would cause the trend icon to not be updated [ID_38105]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+When small, unlabelled changes were detected in a trend graph of a parameter of which the value was clearly increasing, decreasing or remaining stable, up to now, the trend icon would incorrectly not be updated to indicate this increasing, decreasing or stable trend. From now on, when a small, unlabelled change occurs in a trend graph that clearly increases, decreases or remains stable, the trend icon will be updated to indicate this.
+
+#### Storage as a Service: Database write operations would not get processed [ID_38112]
+
+<!-- MR 10.4.0 - FR 10.4.1 [CU0] -->
+
+In some rare cases, a database write operation could incorrectly remain stuck in an internal queue and would never get processed.
+
+#### Problem when loading data of elements hosted on another DMA while a correlation rule action was running [ID_38121]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+When, while an extensive correlation rule action was running, you opened an element card of an element hosted on a DataMiner Agent other than the one you were connected to, loading the data of that element could get delayed until the correlation rule action had finished.
+
+#### Problems with gRPC connections when SLNet was not running [ID_38177]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+When a DataMiner Agent had the APIGateway service running but not the SLNet process (e.g. a DataMiner Agent that had been fully stopped), the following issues would occur:
+
+- No exception would be thrown when a client application sent a message via one of the gRPC connections that was still open. Instead, an empty response was returned. As a result, client applications would not notice that there was a problem.
+
+- When an attempt was made to establish a new gRPC connection, an `Invalid username or password` would be returned instead of a `DataMinerNotRunningException`.
+
+#### SLAnalytics - Automatic incident tracking: Problem after clearing or removing an alarm [ID_38239]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+When an alarm had been cleared or removed, in some cases, the automatic incident tracking feature could incorrectly assume that no more alarms were associated with the parameter in question. As a result, alarms could get grouped incorrectly or error messages similar to the following one could start to appear:
+
+`Parameter key [PARAMETER_KEY] was not in parameterKeyConverter, while it should have been.`
+
+#### SLAnalytics - Automatic incident tracking: Empty alarm group would be created when manually creating an incident with non-active alarms [ID_38248]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+When, while automatic incident tracking was running, you manually created an incident (i.e. an alarm group) containing non-active alarms, an empty alarm group would be created.
+
+#### Correlation: Alarm buckets would not get cleaned up when alarms were cleared before the end of the time frame specified in the 'Collect events for ... after first event, then evaluate conditions and execute actions' setting [ID_38292]
+
+<!-- MR 10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
+
+Up to now, when alarms were cleared before the end of the time frame specified in the *Collect events for ... after first event, then evaluate conditions and execute actions* correlation rule setting, the alarm buckets would not get cleaned up.
+
+From now on, when a correlation rule is configured to use the *Collect events for ... after first event, then evaluate conditions and execute actions* trigger mechanism, all alarm buckets will be properly cleaned up, unless there are actions that need to be executed either when the base alarms are updated or when alarms are cleared.

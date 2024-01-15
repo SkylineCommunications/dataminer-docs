@@ -43,7 +43,7 @@ A DataMiner System makes extensive use of TCP/IP communication. Below, you find 
 
 ## Graphical representation of IP communication within a DMS
 
-The diagrams below show how communication within a DMS could be set up. The blue lines indicate the communication towards the databases (in this case an Elasticsearch and Cassandra cluster of three nodes each).
+The diagrams below show how communication within a DMS could be set up. The blue lines indicate the communication towards the databases (in this case an OpenSearch and Cassandra cluster of three nodes each).
 
 Using gRPC (recommended from DataMiner 10.3.6/10.3.0 [CU3] onwards):
 
@@ -61,3 +61,6 @@ Using .NET Remoting:
 >
 > - [Configuring DMA communication settings in SLNet.exe.config](xref:Configuration_of_DataMiner_processes#configuring-the-ports-for-net-remoting-andor-xml-web-services)
 > - [Configuring client communication settings](xref:DMA_configuration_related_to_client_applications#configuring-client-communication-settings)
+
+> [!TIP]
+> To verify if your DataMiner cluster is working correctly, you can run the [Check Cluster SLNet Connections BPA test](xref:BPA_Check_Cluster_SLNet_Connections).

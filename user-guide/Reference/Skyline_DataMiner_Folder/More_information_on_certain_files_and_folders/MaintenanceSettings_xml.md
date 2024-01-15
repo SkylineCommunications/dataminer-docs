@@ -129,13 +129,18 @@ In this tag, you can add the following attributes to control how timeout alarms 
 
 ### AlarmSettings.AlarmsPerParameter
 
-In the *AlarmsPerParameter* tag, you can specify the maximum number of alarms that are allowed in an alarm tree. Default: 20 alarms.
+The value of the *AlarmsPerParameter* tag determines the maximum number of alarms that can be included in an alarm tree. If there are more alarms in an alarm tree, by default a notice will be displayed in the Alarm Console.
 
-This tag can have the following attributes:
+> [!NOTE]
+>
+> - SLNet limits the alarm trees in the cache and in history queries based on this tag. If no value is specified in this tag, SLNet uses a default of 20. In addition, because in old DataMiner versions the default was 100, if the value in this tag is 100, SLNet will read it as 20 instead.
+> - SLDataMiner is responsible for generating notices if there are too many alarms in an alarm tree. If no value is specified in this tag, SLDataMiner uses a default of 100.
 
-- The *client* attribute, which determines how many alarms in an alarm tree are saved in the Cube cache. It determines the number of alarms shown in Cube when you view the alarm tree in a new tab, when you reconnect to Cube or when you restart the element.
+This tag can also have the following attributes:
 
-- The *recurring* attribute, which can have the following values:
+- **client**: Determines how many alarms in an alarm tree are saved in the Cube cache. This determines how many alarms are shown in Cube when you view the alarm tree in a new tab, when you reconnect to Cube, or when you restart the element.
+
+- **recurring**:
 
   | Value | Description |
   |--|--|
@@ -146,11 +151,8 @@ This tag can have the following attributes:
 For example:
 
 ```xml
-<AlarmsPerParameter recurring="TRUE" client="20">60</AlarmsPerParameter>
+<AlarmsPerParameter recurring="TRUE" client="30">60</AlarmsPerParameter>
 ```
-
-> [!NOTE]
-> In older DataMiner versions, the default value of this tag was 100. To keep this old default value from being used in case *MaintenanceSettings.xml* was created with this value, now if 100 is filled in, DataMiner will automatically use the new default of 20.
 
 ### AlarmSettings.Blinking
 

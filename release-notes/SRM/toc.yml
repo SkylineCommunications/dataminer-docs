@@ -1,12 +1,23 @@
 items:
   - name: Main release track
-    topicUid: SRM_10.3.0.1
+    topicUid: SRM_10.3.0.3
     items:
+      - name: SRM 10.3.0.3
+        topicUid: SRM_10.3.0.3
+      - name: SRM 10.3.0.2
+        topicUid: SRM_10.3.0.2
       - name: SRM 10.3.0.1
         topicUid: SRM_10.3.0.1
   - name: Feature release track
-    topicUid: SRM_1.2.33
+    topicUid: SRM_1.2.34
     items:
+      - name: SRM 1.2.34
+        topicUid: SRM_1.2.34
+        items:
+          - name: New features and changes
+            topicUid: SRM_1.2.34
+          - name: Addendum CU1
+            topicUid: SRM_1.2.34_CU1
       - name: SRM 1.2.33
         topicUid: SRM_1.2.33
       - name: SRM 1.2.32

@@ -114,13 +114,6 @@ items:
         topicUid: Copy_Element_Data
       - name: DataMiner Comparison tool
         topicUid: DataMinerComparisonTool
-      - name: DataMiner Ping Monitoring tool
-        topicUid: PingMonitoring
-        items:
-          - name: Installing the Ping Monitoring tool
-            topicUid: Installing_Ping_Monitoring
-          - name: Working with the Ping Monitoring tool
-            topicUid: Working_with_Ping_Monitoring
       - name: DataMiner Size tool
         topicUid: DataMinerSizeTool
       - name: DataMiner Taskbar Utility
@@ -424,14 +417,10 @@ items:
   - name: Obtaining a DataMiner license
     topicUid: DataminerLicenses
     items:
-      - name: License for DMA to be installed by Skyline
-        topicUid: License_for_DMA_to_be_installed_by_Skyline
-      - name: Full license for DMA to be installed by user
-        topicUid: Full_license_for_DMA_to_be_installed_by_user
-      - name: Online demo license for DMA to be installed by user
-        topicUid: Online_demo_license_for_DMA_to_be_installed_by_user
-      - name: Offline demo license for DMA to be installed by user
-        topicUid: Offline_demo_license_for_DMA_to_be_installed_by_user
+      - name: Permanent license
+        topicUid: Permanent_license
+      - name: Time-based license
+        topicUid: Time-based_license
   - name: Software support life cycles
     topicUid: Software_support_life_cycles
   - name: Soft-launch options
@@ -462,8 +451,10 @@ items:
         topicUid: automation_benchmarks
       - name: Behavioral anomaly detection benchmarks
         topicUid: behavioral_anomaly_detection_benchmarks
-      - name: Cassandra write performance benchmarks
+      - name: Cassandra (single node) write performance benchmarks
         topicUid: cassandra_write_performance_benchmarks
+      - name: Cassandra (cluster) write performance benchmarks
+        topicUid: cassandra_cluster_write_performance_benchmarks
       - name: Change history metrics
         topicUid: change_history_benchmarks
       - name: Dashboards benchmarks

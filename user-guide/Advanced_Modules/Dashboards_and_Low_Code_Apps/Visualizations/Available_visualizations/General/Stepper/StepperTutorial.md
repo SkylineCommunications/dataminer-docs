@@ -24,7 +24,7 @@ Before you can begin to create the app, you will need to add some data to your s
 The package will create an "Incident" [DOM definition](xref:DomDefinition) and some [DOM instances](xref:DomInstance) using it.
 
 > [!TIP]
-> Deploying a package is very similar to deploying a DataMiner connector. See [Deploying a DataMiner connector to your system](xref:Deploying_A_DataMiner_Connector_to_your_system).
+> For information on how to deploy a package, see [Deploying a Catalog item](xref:Deploying_a_catalog_item).
 
 ## Step 2: Create the components
 
@@ -44,7 +44,7 @@ The end result of this step should look like this:
 
 ## Step 3: Add the data
 
-Add data to components by [applying a data feed](xref:Configuring_dashboard_components#applying-a-data-feed).
+Add data to components by [applying a data feed](xref:Apply_Data_Feed).
 
 Each of the components on the page has to receive some data:
 

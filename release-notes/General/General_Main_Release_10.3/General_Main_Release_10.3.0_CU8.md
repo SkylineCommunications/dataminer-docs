@@ -7,6 +7,9 @@ uid: General_Main_Release_10.3.0_CU8
 > [!NOTE]
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
 
+> [!IMPORTANT]
+> As of DataMiner version 10.3.0[CU8]/10.3.11, Amazon Keyspaces Service, Azure Managed Instance for Apache Cassandra Service and Amazon OpenSearch Service will no longer be supported. We recommend moving to [Storage as a Service](xref:STaaS). Note that using a self-hosted OpenSearch database remains supported.
+
 > [!TIP]
 > For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 

@@ -5,7 +5,7 @@ uid: Configuring_master_Elasticsearch_nodes
 # Configuring the master nodes
 
 > [!NOTE]
-> Elasticsearch is **only supported up to version 6.8**. We therefore recommend using [Storage as a Service](xref:STaaS) instead, or if you do want to continue using self-hosted storage, using [dedicated clustered storage](xref:Dedicated_clustered_storage) with OpenSearch or the Amazon OpenSearch Service on AWS.
+> Elasticsearch is **only supported up to version 6.8**, which is no longer supported by Elastic. We therefore recommend using [Storage as a Service](xref:STaaS) instead, or if you do want to continue using self-hosted storage, using [OpenSearch](xref:OpenSearch_database).
 
 > [!IMPORTANT]
 > A correct master node configuration is extremely important since master nodes logically determine which nodes are part of the cluster. This page is therefore a must-read before you set up any Elasticsearch clusters.
@@ -77,3 +77,6 @@ However, by setting `discovery.zen.minimum_master_nodes` to 2 in the *elasticsea
 ### More than 3 nodes
 
 In general, when you have more than 3 nodes, you can configure the cluster in the same way as a 3-node cluster and set the `node.master` property of any additional node to false. There is no real need to increase the number of nodes eligible to become master, except in certain special cases. In these special cases, as a rule of thumb, you can define an N amount of potential master nodes and set `discovery.zen.minimum_master_nodes` to (N + 1)/2.
+
+> [!NOTE]
+> If the nodes are spread over different data centers, zones, racks, and so on, we recommend setting up [Allocation Awareness](xref:Configuring_multiple_datacenter_Elasticsearch_cluster) in the Elasticsearch cluster.

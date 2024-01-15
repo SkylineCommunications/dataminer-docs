@@ -65,6 +65,7 @@ If the repository is private, the name should look like this (using "-" as separ
   - UDAPI (User-Defined APIs)
   - DOC (Documentation)
   - DISMACRO (DIS Macro)
+  - CHATOPS (ChatOps extension)
 
   > [!NOTE]
   > If you think an item type should be added, please contact us so we can add it before you create the repository.
@@ -103,6 +104,7 @@ Here is a list of topics you should use (this list is to be extended):
 - dataminer-user-defined-api
 - dataminer-doc
 - dataminer-dis-macro
+- dataminer-chatops
 
 If you have code for a specific project/customer, you should add a topic with the customer's name as well, e.g. `Skyline-Communications`. Always use a hyphen ("-") as a separator.
 
@@ -144,4 +146,4 @@ For Automation, see [DataMiner CI/CD Automation](https://github.com/SkylineCommu
 
 An action [Skyline-DataMiner-Deploy-Action](https://github.com/SkylineCommunications/Skyline-DataMiner-Deploy-Action) is publicly available on GitHub to deploy from a GitHub repository.
 
-Refer to [Deploying Automation scripts from a GitHub repository](xref:Deploying_Automation_scripts_from_a_GitHub_repository) for more information.
+Refer to [Marketplace deployment action](xref:Marketplace_deployment_action) for more information.

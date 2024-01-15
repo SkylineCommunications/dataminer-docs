@@ -52,7 +52,19 @@ Below is an overview of all other important properties:
 
 There are also special types of `FieldDescriptors` that are purpose-made to store a special value. These include:
 
-- **AutoIncrementFieldDescriptor**: Defines a field that will automatically get an incrementing value when saved. When marked as soft-deleted, these fields will no longer be incremented. The value will remain the last value before the descriptor was marked as soft-deleted.
+- **AutoIncrementFieldDescriptor**: Defines a field that will automatically get an incremented value assigned. When a `DomInstance` does not have a value for this field yet, it will get assigned the next time the instance is updated.
+
+  - The `IDFormat` property is used to define a string format for the number value. In this string, "{0}" gets replaced by that number value. If the `IDFormat` property is empty, its value will not be formatted.
+
+    Some examples, assuming the next value is 10:
+
+    | Description | Format | Result |
+    |---|---|---|
+    | Add a prefix and postfix | Pre-{0}-Post | Pre-10-Post |
+    | Prefix with "REF-" and [format](https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-numeric-format-strings) the value | REF-{0:000000} | REF-000010 |
+    | When no format is set, the value is stored | | 10 |
+
+  - When the field is marked as soft-deleted, no values will get assigned when a `DomInstance` gets saved.
 
 - **GenericEnumFieldDescriptor**: Defines a field that has a list of possible pre-determined values.
 
@@ -72,18 +84,25 @@ There are also special types of `FieldDescriptors` that are purpose-made to stor
 
 - **GroupFieldDescriptor**: Available from DataMiner 10.3.3/10.4.0 onwards. Can be used to define that a field should contain the name of a DataMiner user group.
 
-- **UserFieldDescriptor**: Available from DataMiner 10.3.3/10.4.0 onwards. Can be used to define that a field should contain the name of a DataMiner user. There is a *GroupNames* property that can be used to define which groups the user can be a part of. 
+- **UserFieldDescriptor**: Available from DataMiner 10.3.3/10.4.0 onwards. Can be used to define that a field should contain the name of a DataMiner user. There is a *GroupNames* property that can be used to define which groups the user can be a part of.
+
+> [!IMPORTANT]
+> The ID of a `FieldDescriptor` should be unique within a DOM module.
+>
+> Currently, the uniqueness of the ID does not get enforced when a `SectionDefinition` is added or updated.
+>
+> Using `FieldDescriptors` that have the same ID in multiple `SectionDefinitions` might result in inconsistent behavior. When a `FieldDescriptor` with the same ID is used in a name definition, the name of the `DomInstance` might differ depending on the first section available in the `DomInstance` that has a value assigned for the `FieldDescriptor` with that ID. During the validation of changes to the `FieldDescriptor`, this might result in DataMiner incorrectly detecting that a `FieldDescriptor` is no longer in use, which may cause the removal of a descriptor that is actually still in use.
 
 > [!NOTE]
-> From DataMiner 10.2.3/10.3.0 onwards, the following `FieldDescriptors` can have **multiple values**:
+> Depending on the DataMiner version, the following `FieldDescriptors` can have **multiple values**:
 >
-> - DomInstanceFieldDescriptor
-> - ElementFieldDescriptor
-> - ResourceFieldDescriptor
-> - ReservationFieldDescriptor
-> - ServiceDefinitionFieldDescriptor
->
-> From DataMiner 10.2.5/10.3.0 onwards, this also applies for the *DomInstanceValueFieldDescriptor*.
+> - DomInstanceFieldDescriptor (from DataMiner 10.2.3/10.3.0 onwards)
+> - DomInstanceValueFieldDescriptor (from DataMiner 10.2.5/10.3.0 onwards)<!-- RN 32904 -->
+> - ElementFieldDescriptor (from DataMiner 10.2.3/10.3.0 onwards)
+> - GenericEnumFieldDescriptor (from DataMiner 10.4.0/10.4.1 onwards)<!-- RN 37482 -->
+> - ResourceFieldDescriptor (from DataMiner 10.2.3/10.3.0 onwards)
+> - ReservationFieldDescriptor (from DataMiner 10.2.3/10.3.0 onwards)
+> - ServiceDefinitionFieldDescriptor (from DataMiner 10.2.3/10.3.0 onwards)
 >
 > These `FieldDescriptors` therefore also support a list of the type that was already supported before.
 >
@@ -133,7 +152,14 @@ The table below lists the properties of the `CustomSectionDefinition` object. (T
 
 - When you **update** a `SectionDefinition`:
 
-  - You cannot remove `FieldDescriptors` from a `SectionDefinition` when a `DomInstance` already uses that definition.
+  - Prior to DataMiner 10.3.12/10.4.0, you cannot remove `FieldDescriptors` from a `SectionDefinition` when a `DomInstance` already uses that definition.
+
+    From DataMiner 10.3.12/10.4.0 onwards<!-- RN 37395 -->, removing `FieldDescriptors` is not possible in the following cases only:
+
+    - When they have a value set on a section, for that `SectionDefinition`, on a `DomInstance`.
+    - When they are still used on the `DomManagerSettings` of the DOM manager. Either in the `DomInstanceNameDefinition`, or in one of the `FieldAliases`.
+    - When they are still used in a `DomInstanceNameDefinition` set on a `DomDefinition`.
+    - When they are still used in a `DomStatusSectionDefinitionLink` for that `SectionDefinition` on a `DomBehaviorDefinition`.
 
   - During an update, the properties of the previous and updated version of the `FieldDescriptor` are checked. The behavior of this check depends on the type of `FieldDescriptor`, but by default, the following properties can be changed freely:
 

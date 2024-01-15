@@ -28,7 +28,7 @@ uid: Creating_a_completely_new_dashboard
 
 1. Optionally, fine-tune the dashboard layout. See [Configuring the dashboard layout](xref:Configuring_the_dashboard_layout).
 
-1. Configure the necessary components. See [Configuring dashboard components](xref:Configuring_dashboard_components).
+1. Configure the necessary components. See [Configuring components](xref:Configuring_components).
 
 1. When the dashboard is ready, in the top-right corner of the screen, click the “x” icon.
 

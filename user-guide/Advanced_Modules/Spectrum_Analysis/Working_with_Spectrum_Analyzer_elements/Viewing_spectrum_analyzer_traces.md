@@ -78,11 +78,11 @@ It is possible to manually freeze and unfreeze the trace. To do so:
 > [!NOTE]
 > When the display is in frozen mode, *Frozen* is displayed in the middle of the graph area.
 
-## Panning the trace horizontally and vertically
+## Zooming and panning
 
-From DataMiner 10.3.11/10.4.0 onwards, it is possible to pan the trace horizontally and vertically<!--RN 37461 + RN 37284-->.
+**Panning** the trace is supported from DataMiner 10.3.11/10.4.0 onwards:<!--RN 37461 + RN 37284-->
 
-- To pan horizontally, click the trace and drag your mouse.
+- To pan **horizontally**, click the trace and drag your mouse.
 
   The following will happen:
 
@@ -94,10 +94,10 @@ From DataMiner 10.3.11/10.4.0 onwards, it is possible to pan the trace horizonta
 
   When you release the mouse button, the info pane to the right of the display section will automatically update with start, stop, and center frequencies that align with the new data. A new trace based on the updated center frequency will replace the gray area.
 
-  > [!IMPORTANT]
+  > [!NOTE]
   > Horizontal panning is only available when the spectrum protocol includes the *Start frequency*, *Stop frequency*, and *Center frequency* parameters.
 
-- To pan vertically, click the trace and drag your mouse while keeping Ctrl pressed.
+- To pan **vertically**, click the trace and drag your mouse while keeping Ctrl pressed.
 
   The following will happen:
 
@@ -109,8 +109,20 @@ From DataMiner 10.3.11/10.4.0 onwards, it is possible to pan the trace horizonta
 
   When you release the mouse button and Ctrl, the info pane to the right of the display section will automatically update with a reference level and amplitude scale that align with the new data. A new trace based on the updated reference level will now replace the gray area.
 
-  > [!IMPORTANT]
+  > [!NOTE]
   > Vertical panning is only available when the spectrum protocol includes the *Reference level* parameter.
+
+**Zooming** is supported from DataMiner 10.2.0 [CU22]/10.3.0 [CU10]/10.4.1 onwards:<!-- RN 37668 -->
+
+- To zoom **horizontally**, scroll up and down. This has the same effect as altering the frequency span.
+
+  > [!NOTE]
+  > Zooming horizontally is only possible if the spectrum protocol includes the *Start frequency*, *Stop frequency*, and *Frequency span* parameters.
+
+- To zoom **vertically**, scroll up and down while pressing the CTRL key. This has the same effect as altering the amplitude scale.
+
+  > [!NOTE]
+  > Zooming vertically is only possible if the spectrum protocol includes the *Amplitude scale* parameter.
 
 ## Displaying the minimum and maximum hold of the trace
 

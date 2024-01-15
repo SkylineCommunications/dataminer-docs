@@ -397,6 +397,12 @@ DataminerCube.exe host=MyDMA2 service=MyService"|"MyOtherService
 > [!NOTE]
 > In order to open an SLA element, use the *element=* option.
 
+### UseInitialArgumentsAfterDisconnect=true
+
+This argument will make sure that all other specified arguments will be applied again when Cube has to reconnect for some reason.
+
+Available from DataMiner 10.2.0 [CU22], 10.3.0 [CU10], and 10.4.1 onwards.<!-- RN 37888 -->
+
 ### view=
 
 Use this option to specify the view to be opened in a card right after startup. You can specify the view by:

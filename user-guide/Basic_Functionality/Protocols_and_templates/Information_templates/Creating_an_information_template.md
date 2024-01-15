@@ -48,7 +48,9 @@ To create an information template:
    - **Hide parameter:** Allows you to hide this parameter in the Cube UI. Available from DataMiner 9.5.6/9.6.0 onwards.
 
      > [!NOTE]
-     > While hiding page buttons via an information template is possible from DataMiner 9.5.6/9.6.0 onwards, hiding regular button or toggle button parameters is only possible from DataMiner 10.0.13/10.1.0 onwards.
+     >
+     > - While hiding page buttons via an information template is possible from DataMiner 9.5.6/9.6.0 onwards, hiding regular button or toggle button parameters is only possible from DataMiner 10.0.13/10.1.0 onwards.
+     > - Primary and display key column parameters cannot be hidden.
 
    - **Alarm description**: Extra information for the operator describing the problem in case an alarm is generated.
 
