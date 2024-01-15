@@ -17,7 +17,7 @@ The following table gives an overview of the available parameter IDs that can be
 |[[80 000, 99 999]](#80-000-99-999)|DataMiner/Protocol|9.0.4 (RN 13161)|Yes*|
 |[[100 000, 999 999]](#100-000-999-999)|DataMiner|9.0.4 (RN 13161)|No|
 |[[1 000 000, 9 989 999]](#1-000-000-9-989-999)|Protocol|9.0.4 (RN 13161)|Yes*|
-|[[9 990 000 - 9 999 999]](#9-990-000---9-999-999)|DataMiner/Protocol|N/A|No|
+|[[9 990 000 - 9 999 999]](#9-990-000---9-999-999)|DataMiner/Protocol|9.0.4 (RN 13161)|No|
 |[[10 000 000, 10 999 999]](#10-000-000-10-999-999)|DataMiner (Data API)|10.4.0/10.4.1 (RN 37837)|Yes*|
 
 \* See below for more restrictions that might be applicable.
