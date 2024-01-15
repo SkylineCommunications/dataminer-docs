@@ -14,6 +14,6 @@ With this feature, users can:
 
 - Access files or webpages on the DMA that have been made available for public access.<!-- RN 38426 -->
 
-  To access such files, use the remote access URL followed by `/public/` (e.g. `https://ziine-skyline.on.dataminer.services/public/`).
+  To access such files, use the remote access URL followed by `/public/` (e.g. the file *image.png* via `https://ziine-skyline.on.dataminer.services/public/image.png`).
 
   To make files or webpages available for public access, add them in the folder `C:\Skyline DataMiner\Webpages\public\` on the DMA.
