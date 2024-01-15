@@ -30,5 +30,4 @@ uid: user-defined_API_benchmarks
 | 4 | Max request rate | DMS | 120 requests per second, with a request duration of 350 ms | Script that receives 100 bytes and immediately returns it | Starting from 50 requests per second, the average response time increases. The maximum is reached around 120 requests per second, at a request duration of 350 ms. |
 
 > [!NOTE]
->
 > Keep in mind that when the API script executes heavy actions that put a load on the system, the expected throughput and latency of the API triggers may be much lower. Also, consider the existing load on the DMS, which could already impact the API call time.
