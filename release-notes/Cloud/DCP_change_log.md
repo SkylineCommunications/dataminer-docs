@@ -30,7 +30,7 @@ The FieldControl DxM will now periodically send a health check to the cloud to i
 
 It is now possible to provide remote access via dataminer.services to files or webpages. To do so, add them in the folder `C:\Skyline DataMiner\Webpages\public\` on your DMA. To access such files, users can use the remote access URL followed by `/public/` (e.g. the file *image.png* via `https://ziine-skyline.on.dataminer.services/public/image.png`).
 
-#### 4 January 2024 - Chat Integration with Microsoft Teams now includes sending notification using Adaptive Cards [ID_38339]
+#### 4 January 2024 - New Feature - Chat Integration with Microsoft Teams now includes sending notification using Adaptive Cards [ID_38339]
 
 It is now possible to send notifications using Adaptive Cards to chats or channels with Chat Integration.
 
