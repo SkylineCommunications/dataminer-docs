@@ -45,3 +45,14 @@ In some cases, a query would throw an error when multiple column manipulations h
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
 
 When configuring a *Generic map* component, it would incorrectly no longer be possible to select a map configuration file.
+
+#### Dashboards app - GQI: Problem when fetching a GQI result [ID_38420]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+When a GQI result was being fetched, in some cases, the following error could be thrown:
+
+```txt
+Error: Uncaught (in promise): TypeError: Cannot read properties of undefined (reading 'then')
+TypeError: Cannot read properties of undefined (reading 'then')
+```
