@@ -301,6 +301,9 @@ Now anytime a `leaf` changes, it will send out a notification with the new value
 > [!NOTE]
 > There might be some limitations on the data source in terms of granularity. For example, a switch could send out changes on the counters only once every 5 seconds while they would change multiple times in that time frame.
 
+> [!TIP]
+> Data sources may have limits on the number of maximum subscriptions per connection. Therefor it is recommended to bundle the different YANG paths you are interested in as much as you can into the same subscription. Because one subscription is tied to how frequent updates are sent out, that would typically mean to bundle all *SAMPLE* subscriptions per interval and all *ON_CHANGE* subscriptions.
+
 ### Accessing a specific instance
 
 If you need to access a specific instance in a `container`, you can use [ ] to specify the instance. For example: `interfaces/interface[name='Ethernet1']/state`
