@@ -299,10 +299,9 @@ client.Subscribe(subscriptionName, new[] { "interfaces/interface/state" }, Handl
 Now anytime a `leaf` changes, it will send out a notification with the new value.
 
 > [!NOTE]
-> There might be some limitations on the data source in terms of granularity. For example, a switch could send out changes on the counters only once every 5 seconds while they would change multiple times in that time frame.
-
-> [!TIP]
-> Data sources may have limits on the number of maximum subscriptions per connection. Therefor it is recommended to bundle the different YANG paths you are interested in as much as you can into the same subscription. Because one subscription is tied to how frequent updates are sent out, that would typically mean to bundle all *SAMPLE* subscriptions per interval and all *ON_CHANGE* subscriptions.
+>
+> - There might be some limitations on the data source in terms of granularity. For example, a switch could send out changes on the counters only once every 5 seconds while they would change multiple times in that time frame.
+> - Data sources may have limits as to the number of maximum subscriptions per connection. It is therefore recommended that you bundle the different YANG paths you are interested in into the same subscription as much as possible. Because one subscription is tied to how frequently updates are sent out, this typically means bundling all *SAMPLE* subscriptions per interval and all *ON_CHANGE* subscriptions.
 
 ### Accessing a specific instance
 
