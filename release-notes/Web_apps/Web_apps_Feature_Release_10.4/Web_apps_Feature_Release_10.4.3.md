@@ -49,6 +49,12 @@ In a web form, values in a `DomInstanceValueFieldDescriptor` or `DomInstanceFiel
 
 ### Fixes
 
+#### Dashboards app: Problem when an error occurred while creating a dashboard [ID_38310]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+Up to now, when an error occurred while creating a new dashboard, the items already created before the error occurred (e.g. the folder) would incorrectly not get cleaned up.
+
 #### Dashboards app & Low-Code Apps - GQI: Queries would be fetched twice [ID_38335]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
