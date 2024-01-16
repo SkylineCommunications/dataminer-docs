@@ -38,5 +38,3 @@ The ***Resource Subscribers* table** allows the PLM solution to reference both t
    - Enter the parameter ID (PID) for the parameter that correlates to the resource being created.
 
 1. Select *OK*.
-
-<!-- ![Planned Maintenance App Resource Configuration](~/user-guide/images/DataMiner_Planned_Maintenance_Resource_Configuration.png) -->
