@@ -81,11 +81,29 @@ In some cases, a query would throw an error when multiple column manipulations h
 
 When, in the template editor, you pressed ESCAPE while the event editor window was open, both the event editor window and the template editor window would incorrectly be closed.
 
+#### Dashboards app & Low-Code Apps - Template editor: Problems with enum columns [ID_38369]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+A number of enum column issues have been fixed in the template editor.
+
+#### Dashboards app & Low-Code Apps - Line & area chart component: Trend data would not always be loaded in the same order [ID_38385]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+Up to now, a *Line & area chart* component would not always load the data in the same order.
+
 #### Dashboards app & Low-Code Apps - Generic map component: No longer possible to select a map configuration file [ID_38394]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
 
 When configuring a *Generic map* component, it would incorrectly no longer be possible to select a map configuration file.
+
+#### Dashboards app - Table component: Sorting would not always be applied [ID_38413]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+When you sorted a table component by a particular column and then refreshed the dashboard, in some cases, the column would be marked as sorted although no sorting was applied.
 
 #### Dashboards app - GQI: Problem when fetching a GQI result [ID_38420]
 
