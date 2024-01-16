@@ -22,7 +22,30 @@ uid: Web_apps_Feature_Release_10.4.3
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### DataMiner Object Models: Enhanced performance of DomInstanceFieldDescriptor and DomInstanceValueFieldDescriptor in web forms [ID_37546]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+The overall performance of `DomInstanceFieldDescriptor` and `DomInstanceValueFieldDescriptor` has increased.
+
+Up to now, all options were loaded in the field on the web form. This had a negative impact on performance, especially on large setups. From now on, the fields will only load the first 100 instances and show a warning that not all fields have been loaded.
+
+When a `DomInstanceValueFieldDescriptor` refers to a FieldDescriptor that is part of a SectionDefinition that allows multiple sections, the web form field will only show the first value it finds. If a DomInstance does not contain a value for that FieldDescriptor, only the DomInstance name will be shown.
+
+The display value of the `DomInstanceValueFieldDescriptor` will now be one of the following:
+
+- `<DomInstanceName>: <FieldValue>` (for instances that have a FieldValue)
+- `<DomInstanceName>: <FieldValue1>, <FieldValue2>, ...` (for instances that have a FieldValue list)
+- `<DomInstanceName>` (for instances that have no FieldValue)
+- The ID of the DomInstance (if there is no DomInstanceName)
+
+In a web form, values in a `DomInstanceValueFieldDescriptor` or `DomInstanceFieldDescriptor` selection box will now be alphabetically sorted based on DomInstance name.
+
+> [!NOTE]
+>
+> - A `DomInstanceValueFieldDescriptor` cannot refer to a `StaticTextFieldDescriptor`, a `DomInstanceFieldDescriptor` or another `DomInstanceValueFieldDescriptor`.
+> - A `DomInstanceValueFieldDescriptor` that refers to another `DomInstance(Value)FieldDescriptor` will only display the name (or the ID if there is no name) of the DomInstance to avoid performance degradation when fetching instances.
+> - DisplayValue is limited to 70 characters to avoid performance degradation.
 
 ### Fixes
 
