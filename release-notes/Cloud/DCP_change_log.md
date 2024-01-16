@@ -6,27 +6,27 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
-#### 16 January 2024 - Fix - FieldControl 2.10.3 - Several fixes for DxM status reporting [ID_38451]
+#### 16 January 2024 - Enhancement - FieldControl 2.10.3 - Improved DxM status reporting [ID_38451]
 
 The FieldControl DxM will now periodically send a health check to the cloud to indicate that the DxM is running using correct identifiers.
 
-#### 16 January 2024 - Fix - CloudGateway 2.13.2 - Several fixes for DxM status reporting [ID_38450]
+#### 16 January 2024 - Enhancement - CloudGateway 2.13.2 - Improved DxM status reporting [ID_38450]
 
 The CloudGateway DxM will now periodically send a health check to the cloud to indicate that the DxM is running using correct identifiers.
 
-#### 16 January 2024 - Fix - Orchestrator 1.5.3 - Several fixes for DxM status reporting [ID_38449]
+#### 16 January 2024 - Enhancement - Orchestrator 1.5.3 - Improved DxM status reporting [ID_38449]
 
 The Orchestrator DxM will now periodically send a health check to the cloud to indicate that the DxM is running using correct identifiers.
 
-#### 16 January 2024 - Fix - SupportAssistant 1.6.4 - Several fixes for DxM status reporting [ID_38448]
+#### 16 January 2024 - Enhancement - SupportAssistant 1.6.4 - Improved DxM status reporting [ID_38448]
 
 The SupportAssistant DxM will now periodically send a health check to the cloud to indicate that the DxM is running using correct identifiers.
 
-#### 16 January 2024 - Fix - ArtifactDeployer 1.6.4 - Several fixes for DxM status reporting [ID_38447]
+#### 16 January 2024 - Enhancement - ArtifactDeployer 1.6.4 - Improved DxM status reporting [ID_38447]
 
 The ArtifactDeployer DxM will now periodically send a health check to the cloud to indicate that the DxM is running using correct identifiers.
 
-#### 16 January 2024 - Fix - CoreGateway 2.14.3 - Several fixes for DxM status reporting [ID_38442]
+#### 16 January 2024 - Enhancement - CoreGateway 2.14.3 - Improved DxM status reporting [ID_38442]
 
 The CoreGateway DxM will now periodically send a health check to the cloud to indicate that the DxM is running using correct identifiers.
 
