@@ -115,3 +115,11 @@ When a GQI result was being fetched, in some cases, the following error could be
 Error: Uncaught (in promise): TypeError: Cannot read properties of undefined (reading 'then')
 TypeError: Cannot read properties of undefined (reading 'then')
 ```
+
+#### Dashboards app: Problems with tables when generating PDF reports [ID_38428]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+When a PDF report was generated, the custom height of a table cell template would not be applied. As a result, certain tables in the PDF file would not be identical to their counterpart on the dashboard.
+
+Also, selected table rows would not be visible in a PDF file when the table had a dark background.
