@@ -45,14 +45,6 @@ maps.aspx?config=MyConfigFile&dmyElement=VesselData
 
 ### Enhancements
 
-#### DataMiner installer: New option to indicate that you want to perform a full installation of a new DMA [ID_37719]
-
-<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
-
-Up to now, when you ran the DataMiner installer to install a new DataMiner Agent using a DataMiner upgrade package, some modules would incorrectly not get installed as they were configured to only be installed when upgrading an existing DataMiner Agent.
-
-From now on, it will be possible to indicate that you want to perform an initial installation (i.e. a full installation of a new DataMiner Agent). If you do so, all installation steps will be performed, including the upgrade actions.
-
 #### SLAnalytics - Alarm focus: Alarm occurrences will now be identified using a combination of element ID, parameter ID and primary key  [ID_38184]
 
 <!-- MR 10.4.0 - FR 10.4.3 -->
@@ -75,6 +67,14 @@ From now on, when the value of a required list field is set to an empty list, on
 A number of security enhancements have been made.
 
 ### Fixes
+
+#### DataMiner installer: Some modules would not get installed while performing a full installation of a new DMA [ID_37719]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+Up to now, when you ran the DataMiner installer to install a new DataMiner Agent using a DataMiner upgrade package, some modules would incorrectly not get installed as they were configured to only be installed when upgrading an existing DataMiner Agent.
+
+From now on, when you run the DataMiner installer to install a new DataMiner Agent using a DataMiner upgrade package, all installation steps will be performed, including the upgrade actions.
 
 #### Correlation: Alarm buckets would not get cleaned up when alarms were cleared before the end of the time frame specified in the 'Collect events for ... after first event, then evaluate conditions and execute actions' setting [ID_38292]
 

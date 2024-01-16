@@ -119,7 +119,7 @@ From now on, it will propose the following algorithms to the server in the follo
 Up to now, a number of issues could occur when setting up a Failover system using hostnames instead of virtual IP addresses.
 
 > [!NOTE]
-> When you set up a Failover system using hostnames, we recommend to keep this a standalone system and to not add it to a DataMiner System.
+> When you set up a Failover system using hostnames, we recommend keeping this a standalone system and to not add it to a DataMiner System.
 
 #### Problems with SLDataMiner [ID_37409]
 
