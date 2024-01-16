@@ -51,6 +51,14 @@ maps.aspx?config=MyConfigFile&dmyElement=VesselData
 
 When calculating alarm likelihood (i.e. focus score), up to now, the alarm focus feature used a combination of element ID, parameter ID and display key (if applicable) to identify previous occurrences of the same alarm. From now on, previous alarm occurrences will be identified using a combination of element ID, parameter ID and primary key.
 
+#### SLNetClientTest tool: Message builder now allows creating an instance of an abstract type or interface [ID_38236]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+The message builder in the SLNetClientTest tool allows you to build SLNet messages from scratch, filling out values for the properties in `DMSMessage` objects.
+
+Up to now, if these properties were for an abstract type or interface, it was not possible to fill out a value. From now on, it will be possible to select a concrete type, create an instance, and edit the properties of that object.
+
 #### DataMiner Object Models: Required list fields can no longer be set to an empty list [ID_38238]
 
 <!-- MR 10.5.0 - FR 10.4.3 -->

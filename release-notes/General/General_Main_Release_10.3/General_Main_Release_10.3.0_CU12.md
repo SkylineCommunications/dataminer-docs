@@ -12,6 +12,14 @@ uid: General_Main_Release_10.3.0_CU12
 
 ### Enhancements
 
+#### SLNetClientTest tool: Message builder now allows creating an instance of an abstract type or interface [ID_38236]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+The message builder in the SLNetClientTest tool allows you to build SLNet messages from scratch, filling out values for the properties in `DMSMessage` objects.
+
+Up to now, if these properties were for an abstract type or interface, it was not possible to fill out a value. From now on, it will be possible to select a concrete type, create an instance, and edit the properties of that object.
+
 #### DataMiner upgrade: Enhanced robustness of MSI package installations [ID_38376]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.2 [CU0] -->
