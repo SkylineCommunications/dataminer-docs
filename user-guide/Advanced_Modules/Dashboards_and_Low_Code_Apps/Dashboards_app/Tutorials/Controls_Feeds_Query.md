@@ -9,7 +9,7 @@ In this tutorial, you will discover how to harness controls and feeds that are u
 Expected duration: 10 minutes
 
 > [!NOTE]
-> The content and screenshots for this tutorial have been created in DataMiner 10.4.1.
+> The content and screenshots for this tutorial have been created with the DataMiner 10.4.1 web apps.
 
 ## Prerequisites
 
