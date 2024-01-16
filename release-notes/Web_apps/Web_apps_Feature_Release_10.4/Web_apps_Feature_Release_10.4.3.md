@@ -123,3 +123,9 @@ TypeError: Cannot read properties of undefined (reading 'then')
 When a PDF report was generated, the custom height of a table cell template would not be applied. As a result, certain tables in the PDF file would not be identical to their counterpart on the dashboard.
 
 Also, selected table rows would not be visible in a PDF file when the table had a dark background.
+
+#### Dashboards app: PDF report showed a 'There are no open sessions' error while the dashboard did not [ID_38446]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+When a PDF report had been generated, in some cases, that report showed a `There are no open sessions` error while the dashboard did not.
