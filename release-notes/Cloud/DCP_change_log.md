@@ -6,6 +6,18 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 16 January 2024 - Fix - FieldControl 2.10.3 - Several fixes for DxM status reporting [ID_38451]
+
+The FieldControl DxM will now periodically send a health check to the cloud to indicate that the DxM is running using correct identifiers.
+
+#### 16 January 2024 - Fix - CloudGateway 2.13.2 - Several fixes for DxM status reporting [ID_38450]
+
+The CloudGateway DxM will now periodically send a health check to the cloud to indicate that the DxM is running using correct identifiers.
+
+#### 16 January 2024 - Fix - Orchestrator 1.5.3 - Several fixes for DxM status reporting [ID_38449]
+
+The Orchestrator DxM will now periodically send a health check to the cloud to indicate that the DxM is running using correct identifiers.
+
 #### 16 January 2024 - Fix - SupportAssistant 1.6.4 - Several fixes for DxM status reporting [ID_38448]
 
 The SupportAssistant DxM will now periodically send a health check to the cloud to indicate that the DxM is running using correct identifiers.
@@ -14,21 +26,9 @@ The SupportAssistant DxM will now periodically send a health check to the cloud 
 
 The ArtifactDeployer DxM will now periodically send a health check to the cloud to indicate that the DxM is running using correct identifiers.
 
-#### 16 January 2024 - Fix - Orchestrator 1.5.3 - Several fixes for DxM status reporting [ID_38449]
-
-The Orchestrator DxM will now periodically send a health check to the cloud to indicate that the DxM is running using correct identifiers.
-
 #### 16 January 2024 - Fix - CoreGateway 2.14.3 - Several fixes for DxM status reporting [ID_38442]
 
 The CoreGateway DxM will now periodically send a health check to the cloud to indicate that the DxM is running using correct identifiers.
-
-#### 16 January 2024 - Fix - CloudGateway 2.13.2 - Several fixes for DxM status reporting [ID_38450]
-
-The CloudGateway DxM will now periodically send a health check to the cloud to indicate that the DxM is running using correct identifiers.
-
-#### 16 January 2024 - Fix - FieldControl 2.10.3 - Several fixes for DxM status reporting [ID_38451]
-
-The FieldControl DxM will now periodically send a health check to the cloud to indicate that the DxM is running using correct identifiers.
 
 #### 12 January 2024 - New Feature - Remote access for custom files/webpages [ID_38426]
 
