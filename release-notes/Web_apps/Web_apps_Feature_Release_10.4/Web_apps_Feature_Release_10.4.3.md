@@ -69,6 +69,12 @@ As the component was still in a loading state, users would only notice that it t
 
 In some cases, a query would throw an error when multiple column manipulations had been configured on the same column.
 
+#### Low-Code Apps: Template editor would close when you pressed ESCAPE in the event editor [ID_38353]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+When, in the template editor, you pressed ESCAPE while the event editor window was open, both the event editor window and the template editor window would incorrectly be closed.
+
 #### Dashboards app & Low-Code Apps - Generic map component: No longer possible to select a map configuration file [ID_38394]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
