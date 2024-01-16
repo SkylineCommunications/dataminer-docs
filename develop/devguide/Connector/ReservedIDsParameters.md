@@ -23,6 +23,7 @@ The following table gives an overview of the available parameter IDs that can be
 \* See below for more restrictions that might be applicable.
 
 ## [1, 63 999]
+
 In general, the range [1, 63 999] can be used in a protocol for parameters. However, for some specific types of protocols, additional restrictions apply:
 
 |Protocol type|Restricted range|Owner|Description|
@@ -33,29 +34,35 @@ In general, the range [1, 63 999] can be used in a protocol for parameters. Howe
 |Spectrum Analyzer|[50 000, 60 000]|DataMiner|This range is used by the SLSpectrum process to create dynamic parameters for spectrum monitoring results.|
 
 ## [64 000, 64 299]
+
 Only to be used for communication with DataMiner modules. This range contains parameters that can be implemented in protocols to communicate with DataMiner (e.g. enhanced service drivers, spectrum analyzer drivers, ticketing drivers, etc.). A registry of assigned parameters is maintained. Only these specific parameter IDs can be implemented in the protocol.
 
 ## [64 300, 69 999]
+
 > [!IMPORTANT]
 > This parameter range cannot be used for user-defined parameters.
 
 ## [70 000, 79 999]
+
 Only to be used in mediation/base protocols.
 
 > [!NOTE]
 > Minimum DataMiner version: 7.5.6
 
 ## [80 000, 99 999]
+
 Only to be used for communication with DataMiner modules. This range contains parameters that can be implemented in protocols to communicate with DataMiner (e.g. enhanced service drivers, spectrum analyzer drivers, ticketing drivers, etc.). A registry of assigned parameters is maintained. Only these specific parameter IDs can be implemented in the protocol.
 
 > [!NOTE]
 > Minimum DataMiner version: 9.0.4 (RN 13161)
 
 ## [100 000, 999 999]
+
 > [!IMPORTANT]
 > This parameter range cannot be used for user-defined parameters.
 
 ## [1 000 000, 9 989 999]
+
 Must only be used in case all parameters in the range [1, 63 999] are already in use.
 
 > [!NOTE]
@@ -68,7 +75,5 @@ Parameters in this range are reserved for Flow Engineering (FLE) to track the as
 See [Support FLE in connectors](https://github.com/SkylineCommunications/SLC-C-Example_FlowEngineering/blob/main/README.md) for more information.
 
 ## [10 000 000, 10 999 999]
-Only to be used by Data API to generate parameters.
 
-> [!NOTE]
-> Minimum DataMiner version: 10.4.0/10.4.1 (RN 37837)
+Only to be used by Data API (introduced in DataMiner 10.4.0/10.4.1<!-- RN 37837 -->) to generate parameters.
