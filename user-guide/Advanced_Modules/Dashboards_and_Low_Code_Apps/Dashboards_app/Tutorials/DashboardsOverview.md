@@ -10,3 +10,4 @@ With the DataMiner Dashboards module, you can create custom dashboards that inte
 
 - [Displaying a custom message](xref:Tutorial_Dashboards_Displaying_a_custom_empty_component_message)
 - [Embedding a connector dashboard in Visual Overview](xref:Tutorial_Embed_Connector_Dashboard_in_Visio)
+- [Leveraging controls and feeds to create a dynamic GQI query](xref:Tutorial_Dashboards_Controls_And_Feeds_Query)
