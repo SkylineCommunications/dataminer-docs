@@ -6,13 +6,13 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
-#### 16 January 2024 - Fix - CoreGateway 2.14.3 - Issue where a timeout error occurred when deploying a protocol from Catalog [ID_38464]
+#### 16 January 2024 - Fix - CoreGateway 2.14.3 - Timeout error when deploying protocol from Catalog [ID_38464]
 
-In some rare cases, a timeout error could occur when deploying a protocol from the Catalog. This issue has been resolved.
+In some rare cases, a timeout error could occur when a protocol was deployed from the Catalog. This issue has been resolved.
 
-#### 16 January 2024 - Fix - CoreGateway 2.13.4 - Issue where a timeout error occurred when deployen a protocol from Catalog [ID_38464]
+#### 16 January 2024 - Fix - CoreGateway 2.13.4 - Timeout error when deploying protocol from Catalog [ID_38464]
 
-In some rare cases, a timeout error could occur when deploying a protocol from the Catalog. This issue has been resolved.
+In some rare cases, a timeout error could occur when a protocol was deployed from the Catalog. This issue has been resolved.
 
 #### 16 January 2024 - Enhancement - FieldControl 2.10.3 - Improved DxM status reporting [ID_38451]
 
