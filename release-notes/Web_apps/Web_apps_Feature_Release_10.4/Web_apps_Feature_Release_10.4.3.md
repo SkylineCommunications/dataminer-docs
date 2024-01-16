@@ -47,6 +47,12 @@ In a web form, values in a `DomInstanceValueFieldDescriptor` or `DomInstanceFiel
 > - A `DomInstanceValueFieldDescriptor` that refers to another `DomInstance(Value)FieldDescriptor` will only display the name (or the ID if there is no name) of the DomInstance to avoid performance degradation when fetching instances.
 > - DisplayValue is limited to 70 characters to avoid performance degradation.
 
+#### Dashboards app & Low-Code Apps - Template editor: All overrides now have a reset button [ID_38368]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+Up to now, when working with the template editor, only text overrides could be reset. From now on, all overrides have a dedicate reset button.
+
 ### Fixes
 
 #### Dashboards app: Problem when an error occurred while creating a dashboard [ID_38310]
