@@ -293,13 +293,6 @@ items:
             topicUid: Installing_Ping_Monitoring
           - name: Working with the Ping Monitoring tool
             topicUid: Working_with_Ping_Monitoring
-      - name: Remote PHY Monitoring
-        topicUid: Remote_PHY_Monitoring
-        items:
-          - name: Installing Remote PHY Monitoring
-            topicUid: Remote_PHY_Monitoring_Installation
-          - name: Remote PHY Monitoring components
-            topicUid: Remote_PHY_Monitoring_Components
       - name: DataMiner Planned Maintenance (PLM) tool
         topicUid: DataMiner_PLM_Tool_Overview
         items:
@@ -323,6 +316,13 @@ items:
                     topicUid: Deleting_maintenance_event
               - name: Planned Maintenance Records
                 topicUid: PLM_Records
+      - name: Remote PHY Monitoring
+        topicUid: Remote_PHY_Monitoring
+        items:
+          - name: Installing Remote PHY Monitoring
+            topicUid: Remote_PHY_Monitoring_Installation
+          - name: Remote PHY Monitoring components
+            topicUid: Remote_PHY_Monitoring_Components
   - name: Service & Resource Management Framework
     topicUid: About_SRM
     items:

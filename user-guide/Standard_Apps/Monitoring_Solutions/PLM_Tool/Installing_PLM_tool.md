@@ -2,7 +2,7 @@
 uid: Installing_PLM_tool
 ---
 
-# Installing the DataMiner Planned Maintenance tool
+# Installing the PLM tool
 
 ## Solution Deployment
 
