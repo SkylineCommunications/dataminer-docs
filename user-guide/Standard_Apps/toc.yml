@@ -300,29 +300,29 @@ items:
             topicUid: Remote_PHY_Monitoring_Installation
           - name: Remote PHY Monitoring components
             topicUid: Remote_PHY_Monitoring_Components
-      - name: DataMiner Planned Maintenance Tool
-        topicUid: DataMiner_Planned_Maintenance_Tool_Overview
+      - name: DataMiner Planned Maintenance (PLM) tool
+        topicUid: DataMiner_PLM_Tool_Overview
         items:
-          - name: Installing DataMiner Planned Maintenance Tool
-            topicUid: DataMiner_Planned_Maintenance_Tool_Installation
-          - name: Using DataMiner Planned Maintenance Tool
-            topicUid: DataMiner_Planned_Maintenance_Tool_Usage
+          - name: Installing the PLM tool
+            topicUid: Installing_PLM_tool
+          - name: Using the PLM tool
+            topicUid: Accessing_PLM_tool
             items:
-              - name: Application Access
-                topicUid: DataMiner_Planned_Maintenance_Tool_Access
-              - name: Resource Configuration
-                topicUid: DataMiner_Planned_Maintenance_Tool_ResourceConfig
-              - name: Application Operations
-                topicUid: DataMiner_Planned_Maintenance_Tool_ApplicationOperations
+              - name: Accessing the PLM tool
+                topicUid: Accessing_PLM_tool
+              - name: Configuring resources
+                topicUid: PLM_tool_configuring_resources
+              - name: Configuring maintenance events
+                topicUid: Adding_maintenance_event
                 items:
-                  - name: Create Event
-                    topicUid: DataMiner_Planned_Maintenance_Tool_ApplicationOperations_Create
-                  - name: Edit Event
-                    topicUid: DataMiner_Planned_Maintenance_Tool_ApplicationOperations_Edit
-                  - name: Delete Event
-                    topicUid: DataMiner_Planned_Maintenance_Tool_ApplicationOperations_Delete
+                  - name: Adding a maintenance event
+                    topicUid: Adding_maintenance_event
+                  - name: Editing a maintenance event
+                    topicUid: Editing_maintenance_event
+                  - name: Deleting a maintenance event
+                    topicUid: Deleting_maintenance_event
               - name: Planned Maintenance Records
-                topicUid: DataMiner_Planned_Maintenance_Tool_Records
+                topicUid: PLM_Records
   - name: Service & Resource Management Framework
     topicUid: About_SRM
     items:

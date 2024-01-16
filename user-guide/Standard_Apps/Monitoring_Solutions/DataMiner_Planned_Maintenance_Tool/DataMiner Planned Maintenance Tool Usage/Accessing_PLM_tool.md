@@ -1,16 +1,16 @@
 ---
-uid: DataMiner_Planned_Maintenance_Tool_Access
+uid: Accessing_PLM_tool
 ---
 
-# Application Access
+# Accessing the PLM tool
 
-To access the PLM App, please follow these steps:
+To access the PLM app, follow these steps:
 
-- Click on the "+" icon located in the left panel of the DataMiner cube. This will expand the options available.
+- Click the "+" icon located in the left panel of the DataMiner cube. This will expand the options available.
 
 - Under WEB APPS, locate and click on PLM. This will pin the PLM app to the panel for easy access.
 
-    ![Planned Maintenance App Access](~/user-guide/images/DataMiner_Planned_Maintenance_Access.png)
+<!--    ![Planned Maintenance App Access](~/user-guide/images/DataMiner_Planned_Maintenance_Access.png) -->
 
 - Once the PLM app is pinned to the panel, simply click on it to open the web app.
 

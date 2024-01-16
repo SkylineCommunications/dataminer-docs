@@ -1,20 +1,20 @@
 ---
-uid: DataMiner_Planned_Maintenance_Tool_ApplicationOperations_Create
+uid: Adding_maintenance_event
 ---
 
-# Add Event
+# Adding a maintenance event
 
 To create a PLM item, please follow these steps:
 
 1. In the PLM Instances Page, locate and click on the "+ Add" icon located in the top panel. This will open a pop-up window for creating a new PLM item.
 
-    ![Planned Maintenance App ADD](~/user-guide/images/DataMiner_Planned_Maintenance_ADD.png)
+<!--    ![Planned Maintenance App ADD](~/user-guide/images/DataMiner_Planned_Maintenance_ADD.png) -->
 
 1. In the pop-up window, enter the following information:
 
     - **Title**: Provide a descriptive title for the PLM item.
 
-    - **Resource Type**: Select one of the available resource types that was previously configured. See: [Resource Configuration](xref:DataMiner_Planned_Maintenance_Tool_ResourceConfig)
+    - **Resource Type**: Select one of the available resource types that was previously configured. See: [Configuring resources](xref:PLM_tool_configuring_resources)
 
     - **Resource**: Specify the name of the resource to assign the PLM item to.
 
@@ -38,7 +38,7 @@ To create a PLM item, please follow these steps:
         
         - **End**: Enter the end date of the recurrence.
 
-    ![Planned Maintenance App CREATE](~/user-guide/images/DataMiner_Planned_Maintenance_CREATE.png)
+<!--    ![Planned Maintenance App CREATE](~/user-guide/images/DataMiner_Planned_Maintenance_CREATE.png) -->
 
 1. Once you have entered all the required information, click the "OK" button. A new row will be added to the PLM table, indicating the successful creation of the PLM item.
 

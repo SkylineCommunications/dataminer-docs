@@ -1,8 +1,8 @@
 ---
-uid: DataMiner_Planned_Maintenance_Tool_ResourceConfig
+uid: PLM_tool_configuring_resources
 ---
 
-# Resource Configuration
+# Configuring resources
 
 The Planned Maintenance Tool contains two configuration tables that are necessary to validate if the entered resource is a valid entity during the creation operation. The configuration tables for resource validation in the PLM solution must be set up before starting to create PLM activities.
 
@@ -24,4 +24,4 @@ The Planned Maintenance Tool contains two configuration tables that are necessar
 
     - Enter the parameter ID (PID) for the parameter that correlates to the resource being created.
 
-![Planned Maintenance App Resource Configuration](~/user-guide/images/DataMiner_Planned_Maintenance_Resource_Configuration.png)
+<!-- ![Planned Maintenance App Resource Configuration](~/user-guide/images/DataMiner_Planned_Maintenance_Resource_Configuration.png) -->
