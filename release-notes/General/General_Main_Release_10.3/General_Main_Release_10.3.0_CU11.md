@@ -129,6 +129,12 @@ SLDataMiner would leak memory when retrieving the baseline values of an element 
 
 Apart from the above-mentioned fixes, memory management and overall error logging have also been improved.
 
+#### Failover: Shared hostname would incorrectly always refer to the same agent when using gRPC [ID_37558]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 [CU0] -->
+
+On a Failover system with a shared hostname using gRPC connections, the shared hostname would incorrectly always refer to the same agent, whether it was online or offline. From now on, the shared hostname will always refer to the online agent.
+
 #### SLDataGateway: Problem with casing when retrieving data from Elasticsearch/OpenSearch [ID_37835]
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
