@@ -836,6 +836,14 @@ When the locale of the client machine was set to Turkish, visual overviews could
 
 When you logged out and in repeatedly, an exception could be thrown, causing Cube to become unresponsive.
 
+#### DataMiner Cube - User menu: Problem when logging out immediately after logging in [ID_38178]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
+
+When you logged out of Cube immediately after logging in, in some cases, a blank home screen would appear instead of the login screen.
+
+From now on, the *Sign out* button will only be enabled once the login screen has been loaded.
+
 #### DataMiner Cube: No longer allowed to create properties with a name that consists of whitespace characters only [ID_38209]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
