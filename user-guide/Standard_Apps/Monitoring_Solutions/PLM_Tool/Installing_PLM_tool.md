@@ -4,54 +4,66 @@ uid: Installing_PLM_tool
 
 # Installing the PLM tool
 
-## Solution Deployment
+## Prerequisites
 
-1. Make sure the following **prerequisites** are met:
+- DataMiner version 10.3.6 or higher.
 
-   - DataMiner System uses DataMiner 10.3.6 or higher and is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
+- DataMiner web apps version 10.3.6 or higher.
 
-   - DataMiner web apps are upgraded to DataMiner 10.3.6 or higher.
+  > [!TIP]
+  > See also: [Upgrading the DataMiner web apps](xref:Upgrading_Downgrading_Webapps)
 
-   - DataMiner system is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
+- A DataMiner System [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
-     > [!TIP]
-     > See also: [Upgrading the DataMiner web apps](xref:Upgrading_Downgrading_Webapps)
+## Deploying the PLM tool
 
-1. Deploy the *EPM PLM* package:
+1. Look up the [EPM PLM package](https://catalog.dataminer.services/details/package/5064) in the DataMiner Catalog.
 
-   - Go to <https://catalog.dataminer.services/details/package/5064>.
+1. Click the *Deploy* button.
 
-   - Click the *Deploy* button.
+1. Select the target DataMiner System and confirm the deployment. The package will be pushed to the DataMiner System.
 
-   - Select the target DataMiner System and confirm the deployment.
+   Once the package is installed, a new PLM element is automatically created, if your DataMiner System did not contain a PLM element already.
 
-      - The package will be pushed to the DataMiner System and installed.
+   The *EPM PLM* low-code app is accessible at `http(s)://[DMA name]/root`.
 
-      - After the package installs, you will find that a new PLM element was automatically created in the case the DataMiner system did not already have a PLM element. 
-
-## Element Configuration
-
-1. Configure the *EPM PLM* element:
-
-    - Open DataMiner Cube and locate the *EPM PLM* element that has been created under the *EPM PLM* View.
-
-      - You are able to rename the element and view as well as change their location within the surveyor.
-
-    -	Open the PLM element and navigate to the Configuration data page. 
-
-      - Configure the following following settings to the desired preferences:
-      
-        1. **PLM Status**: Enable/Disable PLM Polling. Enabling PLM Status allows for PLM activies statuses to be updated periodically depending on the interval set on the PLM timer. 
-
-        1. **PLM Timer**: The interval for how often PLM activies receive status updates on the PLM Overview table.
-
-        3. **PLM Overview Options - Auto Delete**: Enable/Disable PLM activities to auto delete from the PLM Overview table.
-
-        4. **PLM Overview Options - Auto Delete Delay**: The amount of time completed or expired PLM activities will remain in the PLM Overview table. All activities older than the set delay will be removed from the table.
-
-        5. **PLM Records Options - Auto Delete**: Enable/Disable PLM records to auto delete from the Records table.
-
-        6. **PLM Records Options - Auto Delete Delay**: The amount of time records wil remain in the PLM Records table. All records older than the set delay will be removed from the table. 
+   ![EPL PLM app](~/user-guide/images/EPM_PLM_app.png)
 
 > [!NOTE]
-> If you want to **update** an existing installation of the DataMiner Planned Maintenance Tool, you can do so by going to the [*EPM PLM* package](https://catalog.dataminer.services/details/package/5064) in the Catalog and deploying it again. A new element will not be automatically created due to an existing PLM element being present in the system.
+> To update the Planned Maintenance tool, redeploy the [*EPM PLM* package](https://catalog.dataminer.services/details/package/5064). While the tool will be updated, no new PLM element will be created, as one should already exist on your DMS.
+
+## Configuring the EPM PLM element
+
+1. In Cube, locate the *EPM PLM* element under the *EPM PLM* view.
+
+   ![PLM_Element](~/user-guide/images/PLM_Element.png)
+
+   > [!NOTE]
+   > Optionally, you can rename the element and view, and change their location in the surveyor.
+
+1. Click the *EPM PLM* element and navigate to *Data > Configuration*.
+
+1. Adjust the following settings based on your preferences:
+
+   - *PLM Polling Configuration > PLM Status*: Enables or disables PLM polling. Enabling this option allows the periodical updating of PLM activity statuses, according to the configured time span.
+
+   - *PLM Polling Configuration > PLM Timer*: Allows you to set the interval at which PLM activities receive status updates in the overview (*Data > General*).
+
+     > [!NOTE]
+     > The maximum configurable interval is 30 days.
+
+   - *PLM Polling Configuration > PLM Processing Status*: Allows you to manually trigger a status update for all PLM activities.
+
+   - *PLM Overview Options > Auto Delete*: Enables or disables the automatic deletion of PLM activities. Enabling this option allows completed or expired PLM activities to be deleted automatically from the overview (*Data > PLM*).
+
+   - *PLM Overview Options > Auto Delete Delay*: Allows you to configure the amount of time completed or expired PLM activities remain in the overview (*Data > PLM*) before they are automatically removed.
+
+     > [!NOTE]
+     > The maximum configurable delay is 365 days.
+
+   - *PLM Records Options > Auto Delete*: Enables or disables the automatic deletion of PLM records. Enabling this option allows PLM records to be automatically deleted from the overview (*Data > PLM Records*).
+
+   - *PLM Records Options > Auto Delete Delay*: Allows you to configure the amount of time PLM records remain in the overview (*Data > PLM Records*) before they are automatically removed.
+
+     > [!NOTE]
+     > The maximum configurable delay is 365 days.

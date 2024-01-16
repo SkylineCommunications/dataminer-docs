@@ -4,24 +4,39 @@ uid: PLM_tool_configuring_resources
 
 # Configuring resources
 
-The Planned Maintenance Tool contains two configuration tables that are necessary to validate if the entered resource is a valid entity during the creation operation. The configuration tables for resource validation in the PLM solution must be set up before starting to create PLM activities.
+In the Planned Maintenance tool's *Configuration* tab, you find two essential configuration tables. These tables are crucial for validating the entered resource's status as a valid entity during the creation process. Set up these resource validation configuration tables before creating maintenance events.
 
-- **Resource Types Table**: Delimits the supported resources.
+The ***Resource Types* table** delimits the supported resources.
 
-    - Click “Add Type” to configure a new PLM resource type.
+![Configuring resources](~/user-guide/images/Configuring_resources.png)
 
-    - The name entered can be anything, but should be descriptive for intuituve use in the subscriber table.
+1. Click *Add Type* to configure a new PLM resource type.
 
-- **Resource Subscribers Table**: Allows the PLM Solution to reference both table and standalone parameters for the specified protocol.
+1. Choose a name for the resource type. We recommend choosing a descriptive name that ensures intuitive use of the app.
 
-    - Click “Add Resource Subscriber” to configure a new PLM resource subscriber.
+1. Select *OK*.
 
-    - Choose the type of resource to be used. The list of available types is defined in the Resource Types table on the same page.
+> [!NOTE]
+>
+> - To edit one of the resource types, click the pencil icon next to the type name.
+> - To delete one of the resource types, click the *Delete* button in the *Delete Button* column of the resource type.
 
-    - Enter a Valid Protocol name. This needs to match the Protocol’s name exactly as seen from Cube. This field is case sensitive.
+The ***Resource Subscribers* table** allows the PLM solution to reference both table and standalone parameters for the specified protocol.
 
-    - Enter a valid Protocol version that is in use. This needs to match the Protocol’s version exactly as seen from Cube.
+![Configuring resources 2](~/user-guide/images/Configuring_resources2.png)
 
-    - Enter the parameter ID (PID) for the parameter that correlates to the resource being created.
+1. Click *Add Resource Subscriber* to configure a new PLM resource subscriber.
+
+1. In the pop-up window, specify the following information:
+
+   - Select the type of resource you want to use. The list of of available resource types consists of the ones listed in the *Resource Types* table.
+
+   - Enter a valid protocol name. Ensure that this name matches the case-sensitive protocol name in Cube exactly.
+
+   - Enter a valid protocol version that is in use. Ensure this version matches the protocol version in Cube exactly.
+
+   - Enter the parameter ID (PID) for the parameter that correlates to the resource being created.
+
+1. Select *OK*.
 
 <!-- ![Planned Maintenance App Resource Configuration](~/user-guide/images/DataMiner_Planned_Maintenance_Resource_Configuration.png) -->

@@ -299,10 +299,10 @@ items:
           - name: Installing the PLM tool
             topicUid: Installing_PLM_tool
           - name: Using the PLM tool
-            topicUid: Accessing_PLM_tool
+            topicUid: The_PLM_user_interface
             items:
-              - name: Accessing the PLM tool
-                topicUid: Accessing_PLM_tool
+              - name: The PLM tool user interface
+                topicUid: The_PLM_user_interface
               - name: Configuring resources
                 topicUid: PLM_tool_configuring_resources
               - name: Configuring maintenance events

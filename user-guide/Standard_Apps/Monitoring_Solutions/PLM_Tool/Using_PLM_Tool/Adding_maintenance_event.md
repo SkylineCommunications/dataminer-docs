@@ -4,51 +4,52 @@ uid: Adding_maintenance_event
 
 # Adding a maintenance event
 
-To create a PLM item, please follow these steps:
+To create a maintenance event (also known as a PLM item), follow these steps:
 
-1. In the PLM Instances Page, locate and click on the "+ Add" icon located in the top panel. This will open a pop-up window for creating a new PLM item.
+1. Go to the *PLM Instances* tab and click *+ Add* in the top-left corner.
 
-<!--    ![Planned Maintenance App ADD](~/user-guide/images/DataMiner_Planned_Maintenance_ADD.png) -->
+1. In the *Planned Maintenance* pop-up window, provide the necessary information.
 
-1. In the pop-up window, enter the following information:
+   ![Adding maintenance event](~/user-guide/images/Adding_Maintenance_Event.png)
 
-    - **Title**: Provide a descriptive title for the PLM item.
+   - **Title**: Choose a name for the maintenance event. We recommend choosing a descriptive title to ensure intuitive use of the app.
 
-    - **Resource Type**: Select one of the available resource types that was previously configured. See: [Configuring resources](xref:PLM_tool_configuring_resources)
+   - **Resource Type**: Select the type of resource from the options previously configured in the *Configuration* tab. See [Configuring resources](xref:PLM_tool_configuring_resources).
 
-    - **Resource**: Specify the name of the resource to assign the PLM item to.
+   - **Resource**: Specify the name of the resource to assign the PLM item to.
 
-    - **Start Time**: Enter the start time of the maintenance window.
+   - **Start Time**: Enter the start time of the maintenance window.
 
-    - **End Time**: Enter the end time of the maintenance window.
+   - **End Time**: Enter the end time of the maintenance window.
 
-    - **Recurrence**: Select the recurrence pattern: Once, Daily, Weekly, or Monthly.
+   - **Recurrence**: Choose the recurrence pattern that suits your needs:
 
-        - If you select Once, enter the date of the one-time PLM activity.
+     - *Once*: Provide the date for the one-time PLM activity.
 
-        - If you select Daily, specify the interval: Every __ day(s).
+     - *Daily*: Define the interval (*Every XX day(s)* or *Every Weekday*).
 
-        - If you select Weekly, specify the interval: Every __ week(s). Also select 
-        the days of the week.
-        - If you select Monthly, specify the interval: Every __ month(s). Also specify which day of the month: Day __.
+     - *Weekly*: Define the interval (*Every XX week(s)*). Select specific days of the week.
 
-    - **Range of Recurrence**: Specify the range of dates in which the recurrence should apply.
+     - *Monthly*: Define the interval (*Every XX month(s)*). Specify the day of the month.
 
-        - **Start**: Enter the start date of the recurrence.
-        
-        - **End**: Enter the end date of the recurrence.
+   - **Range of Recurrence**: Specify the start and end dates for the recurrence.
 
-<!--    ![Planned Maintenance App CREATE](~/user-guide/images/DataMiner_Planned_Maintenance_CREATE.png) -->
+     - **Start**: Enter the start date of the recurrence.
 
-1. Once you have entered all the required information, click the "OK" button. A new row will be added to the PLM table, indicating the successful creation of the PLM item.
+     - **End**: Enter the end date of the recurrence.
 
-    > [!NOTE]
-    > A PLM entry can have 5 different statuses:
+     ![Range of Recurrence](~/user-guide/images/Range_of_Recurrence.png)
 
-    | **Status**    | Description                                                                                            |
-    | ------------- | ------------------------------------------------------------------------------------------------------ |
-    | Scheduled | One-time activities that were created but haven’t happened yet                                         |
-    | Completed | One-time PLM activities that were completed                                                            |
-    | Active    | Recurrent PLM activities that are currently happening and the range of recurrence hasn’t expired yet.  |
-    | Inactive  | Recurrent PLM activities that are not currently active and the range of recurrence hasn’t expired yet. |
-    | Expired   | Recurrent PLM activities that current date is out of the range of recurrence.                          |
+1. To save your changes, click *OK*. A new row will be added to the PLM table, indicating the successful creation of the PLM item.
+
+   > [!NOTE]
+   > A PLM item can have 5 different statuses:
+   >
+   >
+   > | Status | Description |
+   > |--|--|
+   > | Scheduled | One-time activities that were created but have not occurred yet |
+   > | Completed | One-time PLM activities that have been completed |
+   > | Active    | Recurrent PLM activities currently in progress within the specified range of recurrence |
+   > | Inactive  | Recurrent PLM activities not currently active within the specified range of recurrence |
+   > | Expired   | Recurrent PLM activities with a current date outside the range of recurrence. |
