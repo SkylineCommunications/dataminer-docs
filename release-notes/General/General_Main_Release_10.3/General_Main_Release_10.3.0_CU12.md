@@ -54,3 +54,9 @@ In some cases, DataMiner clients using a gRPC connection would not detect a disc
 Up to now, when alarms were cleared before the end of the time frame specified in the *Collect events for ... after first event, then evaluate conditions and execute actions* correlation rule setting, the alarm buckets would not get cleaned up.
 
 From now on, when a correlation rule is configured to use the *Collect events for ... after first event, then evaluate conditions and execute actions* trigger mechanism, all alarm buckets will be properly cleaned up, unless there are actions that need to be executed either when the base alarms are updated or when alarms are cleared.
+
+#### Failover: NATS would incorrectly be reconfigured when both agents were offline [ID_38349]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+When both agents in a Failover setup were offline, in some cases, they would incorrectly reconfigure the NATS settings.
