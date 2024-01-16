@@ -4,27 +4,28 @@ uid: Tutorial_Dashboards_Controls_And_Feeds_Query
 
 # Leveraging controls and feeds to create a dynamic GQI query
 
-In this tutorial, you will discover how to harness controls and feeds which are used in a GQI query. An update to the user input will lead to an updated GQI result. This is especially when using visualizations that do not support any filtering.
+In this tutorial, you will discover how to harness controls and feeds that are used in a GQI query. An update to the user input will lead to an updated GQI result. This is especially useful for visualizations that do not support any filtering.
 
 Expected duration: 10 minutes
 
 > [!NOTE]
-> The content and screenshots for this tutorial have been created in DataMiner web 10.4.1.
+> The content and screenshots for this tutorial have been created in DataMiner 10.4.1.
 
 ## Prerequisites
 
 - A DataMiner System that is connected to dataminer.services.
 
-- DataMiner web 10.3.5 or higher.
+- Version 10.3.5 or higher of the DataMiner web apps.
 
 ## Overview
 
 - [Step 1: Install the dummy data sources package](#step-1-install-the-dummy-data-sources-package)
 - [Step 2: Create a dashboard and add a text input](#step-2-create-a-dashboard-and-add-a-text-input)
 - [Step 3: Add a query and visualize it](#step-3-add-a-query-and-visualize-it)
+- [Step 4: Replace the static filter value with a feed](#step-4-replace-the-static-filter-value-with-a-feed)
 
 > [!TIP]
-> See also: [Kata #13: Controls and feeds in a Low-Code App](https://community.dataminer.services/courses/kata-13/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> See also: [Kata #13: Controls and feeds in a low-code app](https://community.dataminer.services/courses/kata-13/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 ## Step 1: Install the dummy data sources package
 
@@ -38,7 +39,7 @@ Expected duration: 10 minutes
 
 1. [Create a new dashboard](xref:Creating_a_completely_new_dashboard).
 
-1. Add a [Text input](xref:DashboardTextInputFeed) so the user can enter a search term.
+1. Add a [Text input](xref:DashboardTextInputFeed) component so the user can enter a search term:
 
    1. In edit mode, drag and drop the *Text input* visualization from the pane on the left on to the main dashboard area.
 
@@ -58,13 +59,15 @@ Your text input should look like this:
 
 1. Add a GQI operator of type "Filter":
 
-   1. Select the "VLAN Name" as the filter on which we want to filter.
+   1. Select the "VLAN Name" as the column to filter on.
 
    1. Select the "contains" filter method.
 
    1. Fill in the "VLAN 1" as the value for the filter.
 
-1. Visualize the result in a [Table](xref:DashboardTable). Your result should look like this:
+1. Visualize the result in a [Table](xref:DashboardTable) component.
+
+   The result should look like this:
 
    ![Statically filtered query](~/user-guide/images/Dashboards_Tutorial_Controls_Feeds_Query_Static.jpg)
 
@@ -72,25 +75,37 @@ Your text input should look like this:
 
 1. Edit the GQI query again and open the filter operator.
 
-1. Next to the statically defined value you can find a "Link to feed" icon. This icon is used everywhere a user can link a value to a feed. Click the icon to open the "Link to feed" popup.
+1. In the *Value* box, click the "Link to feed" icon.
+
+   This icon is used everywhere a user can link a value to a feed.
 
    ![Link to feed icon](~/user-guide/images/Dashboards_Tutorial_Controls_Feeds_Query_Link.jpg)
 
-1. The popup will ask for a specific feed, type and property.
+   Clicking the icon opens the *Link to feed* dialog, which will ask for a specific feed, type, and property.
 
-   1. Select "Text input 1" for the feed. You'll notice that the type and property are automatically filled in if only one possible value is available.
+1. Specify the necessary info in the dialog:
 
-   1. Additionally you can specify what the behavior should be when the feed is empty. In our case, what should happen when the user did not fill in any value in the text input. Select "Everything" to make sure that all data is retrieved when no value is available in the text input.
+   1. Select "Text input 1" for the feed.
 
-   ![Link to feed configuration](~/user-guide/images/Dashboards_Tutorial_Controls_Feeds_Query_Popup.jpg)
+      You will notice that the type and property are automatically filled in if only one possible value is available.
 
-   > [!TIP]
-   > If you want the text input to behave as a search engine, you can select "Nothing" instead. This will not retrieve any data up until the user fills in a value in the text input.
+   1. To determine what the behavior should be when the feed is empty, at the bottom of the dialog, select *everything*.
 
-1. Stop editing the dashboard and fill in the value "VLAN 2" in the text input. The table will apply filtering upon pressing return or when clicking outside the textbox.
+      This determines what will happen when the user does not fill in any value in the text input. Selecting *everything* ensures that all data is retrieved in this case.
 
-   > [!TIP]
-   > You can configure when a the text input sends out the feed value in the *Settings* tab of the text input.
+      ![Link to feed configuration](~/user-guide/images/Dashboards_Tutorial_Controls_Feeds_Query_Popup.jpg)
+
+      > [!TIP]
+      > If you want the text input to behave like a search engine, you can select *nothing* instead. This will not retrieve any data until the user fills in a value in the text input.
+
+1. Leave the dashboard edit mode using the button in the top-right corner.
+
+1. In the text input of the dashboard, fill in the value "VLAN 2".
+
+   As soon as you press Enter or click outside the textbox, the filter will be applied in the table.
+
+   > [!NOTE]
+   > This is the default behavior for the text input. You can customize this in the *Settings* tab of the text input, so that this for instance happens as soon as the value changes, or only if Enter is pressed.
 
 ## Learning paths
 
