@@ -2,7 +2,7 @@
 uid: Monitoring_Solutions
 ---
 
-# Monitoring Solutions
+# Monitoring & Management Solutions
 
 <div class="row"> 
   <div class="column">

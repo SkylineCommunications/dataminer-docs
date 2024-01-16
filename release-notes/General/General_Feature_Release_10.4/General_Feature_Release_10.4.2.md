@@ -438,6 +438,17 @@ A number of enhancements have been made to the anomaly check algorithm.
 
 SLLogCollector will now also collect the backup logs of the *StorageModule* DxM located in the `C:\ProgramData\Skyline Communications\DataMiner StorageModule\Logs\Backup` folder.
 
+#### DataMiner upgrade: Enhanced robustness of MSI package installations [ID_38376]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.2 [CU0] -->
+
+Up to now, during a DataMiner upgrade, in some cases, MSI packages would fail to install and throw one of the following errors:
+
+- `The Installer has insufficient privileges to access this directory: ...`
+- `Service ... could not be installed. Verify that you have sufficient privileges to install system services.`
+
+From now on, when one of the above-mentioned errors is thrown, it will no longer be necessary to restart the entire upgrade procedure. Instead, a retry will be attempted during the running upgrade.
+
 ### Fixes
 
 #### Failover: Problems when using hostnames instead of virtual IP addresses [ID_32951] [ID_35380]
@@ -446,9 +457,6 @@ SLLogCollector will now also collect the backup logs of the *StorageModule* DxM 
 
 Up to now, a number of issues could occur when setting up a Failover system using hostnames instead of virtual IP addresses.
 
-> [!NOTE]
-> When you set up a Failover system using hostnames, we recommend to keep this a standalone system and to not add it to a DataMiner System.
-
 #### Problems with SLDataMiner [ID_37409]
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
@@ -456,6 +464,12 @@ Up to now, a number of issues could occur when setting up a Failover system usin
 SLDataMiner would leak memory when retrieving the baseline values of an element while the relative baseline value was being updated. Also, an error could occur in SLDataMiner after a service had been created, updated or deleted.
 
 Apart from the above-mentioned fixes, memory management and overall error logging have also been improved.
+
+#### Failover: Shared hostname would incorrectly always refer to the same agent when using gRPC [ID_37558]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 [CU0] -->
+
+On a Failover system with a shared hostname using gRPC connections, the shared hostname would incorrectly always refer to the same agent, whether it was online or offline. From now on, the shared hostname will always refer to the online agent.
 
 #### PropertyConfiguration.xml: New properties could incorrectly be assigned an existing property ID [ID_37596]
 

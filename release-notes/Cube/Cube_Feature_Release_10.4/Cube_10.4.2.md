@@ -225,3 +225,11 @@ When, in the Alarm Console, alarms were grouped by time, root time, creation tim
 In System Center, you can go to *System settings > Logging* to change the log file size.
 
 Up to now, the description of this setting mentioned that the setting applied to the DataMiner Agent to which you were connected. It will now mention that the setting applies to the entire DataMiner System.
+
+#### System Center: No longer possible to add additional databases when DMA was using STaaS [ID_38399]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU11] - FR 10.4.2 [CU0] -->
+
+In *System Center*, the *Other* tab of the *Database* section allows you to configure additional databases.
+
+Up to now, when Cube was connected to a DataMiner Agent configured to use STaaS, an error could occur when you tried to add an additional database.

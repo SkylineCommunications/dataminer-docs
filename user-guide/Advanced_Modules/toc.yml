@@ -297,6 +297,8 @@ items:
                 topicUid: Tutorial_Dashboards_Displaying_a_custom_empty_component_message
               - name: Embedding a connector dashboard in Visual Overview
                 topicUid: Tutorial_Embed_Connector_Dashboard_in_Visio
+              - name: Leveraging controls and feeds to create a dynamic GQI query
+                topicUid: Tutorial_Dashboards_Controls_And_Feeds_Query
       - name: Low-Code Apps
         topicUid: Application_framework
         items:
@@ -1275,8 +1277,6 @@ items:
         items:
           - name: Troubleshooting User-Defined APIs
             topicUid: UD_APIs_Troubleshooting
-          - name: Bad and best practices
-            topicUid: UD_APIs_Bad_and_Best_Practice
       - name: Tutorials
         topicUid: UD_APIs_Tutorials
         items:

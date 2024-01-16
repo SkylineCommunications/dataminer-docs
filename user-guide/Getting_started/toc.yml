@@ -9,6 +9,8 @@ items:
           topicUid: Creating_a_DMS_on_dataminer_services
         - name: Accessing a newly created DMS for the first time
           topicUid: Accessing_a_new_DMS
+        - name: Connecting to data sources
+          topicUid: DaaS_connecting_to_data_sources
         - name: Removing a DaaS system
           topicUid: Removing_a_DaaS_system
         - name: Frequently asked questions

@@ -12,7 +12,7 @@ With the DataMiner User-Defined APIs module, you can create custom APIs to inter
 - [DataMiner Cube](https://community.dataminer.services/dataminer-cube-installer/)
 - [User-Defined APIs user permissions](xref:DataMiner_user_permissions#modules--user-defined-apis)
 - [Automation user permissions](xref:DataMiner_user_permissions#modules--automation)
-- [Visual Studio 2022 with DataMiner Integration Studio 2.42+](xref:Installing_and_configuring_the_software)
+- [Visual Studio 2019 or later with DataMiner Integration Studio 2.42+](xref:Installing_and_configuring_the_software)
 - [Postman](https://www.postman.com/downloads/)
 
 ## Tutorials

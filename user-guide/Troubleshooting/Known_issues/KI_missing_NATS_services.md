@@ -10,7 +10,7 @@ Any  version of DataMiner
 
 ## Cause
 
-The cause of this issue is currently being investigated.
+No clear root cause has been established yet.
 
 ## Workaround
 

@@ -118,9 +118,6 @@ From now on, it will propose the following algorithms to the server in the follo
 
 Up to now, a number of issues could occur when setting up a Failover system using hostnames instead of virtual IP addresses.
 
-> [!NOTE]
-> When you set up a Failover system using hostnames, we recommend to keep this a standalone system and to not add it to a DataMiner System.
-
 #### Problems with SLDataMiner [ID_37409]
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
@@ -128,6 +125,12 @@ Up to now, a number of issues could occur when setting up a Failover system usin
 SLDataMiner would leak memory when retrieving the baseline values of an element while the relative baseline value was being updated. Also, an error could occur in SLDataMiner after a service had been created, updated or deleted.
 
 Apart from the above-mentioned fixes, memory management and overall error logging have also been improved.
+
+#### Failover: Shared hostname would incorrectly always refer to the same agent when using gRPC [ID_37558]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 [CU0] -->
+
+On a Failover system with a shared hostname using gRPC connections, the shared hostname would incorrectly always refer to the same agent, whether it was online or offline. From now on, the shared hostname will always refer to the online agent.
 
 #### SLDataGateway: Problem with casing when retrieving data from Elasticsearch/OpenSearch [ID_37835]
 

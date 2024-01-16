@@ -1,3 +1,4 @@
+items:
 - name: DataMiner Development Guide
   topicUid: DevelopmentGuide
   items:
@@ -5424,7 +5425,7 @@
         - name: Viewing test results
           topicUid: Viewing_test_results
     - name: Third-party Tools
-      uid: ThirdPartyTools
+      topicUid: ThirdPartyTools
       items:
       - name: DataStax DevCenter
         topicUid: DataStax_DevCenter
@@ -5529,7 +5530,7 @@
         topicUid: Visual_Studio_Code
       - name: Wireshark
         topicUid: Wireshark
-- name: DataMiner Device-Specific Integrations
+- name: DataMiner device-specific integrations
   topicUid: DSI
   items:
     - name: Spectrum analyzer
@@ -5565,6 +5566,14 @@
           topicUid: DSI_OpenConfig_Introduction
         - name: Middleware package
           topicUid: DSI_OpenConfig_Middleware
+- name: DataMiner module integrations
+  topicUid: DataMinerModuleIntegrations
+  items:
+    - name: User-definable APIs
+      topicUid: DMI_UserDefinableAPIs
+      items:
+        - name: Bad and best practices
+          topicUid: UD_APIs_Bad_and_Best_Practices
 - name: Third-party integrations
   topicUid: ThirdPartyIntegrations
   items:

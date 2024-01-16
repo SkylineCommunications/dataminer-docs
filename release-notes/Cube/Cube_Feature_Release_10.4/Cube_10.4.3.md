@@ -22,12 +22,44 @@ uid: Cube_Feature_Release_10.4.3
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### System Center: Database setting "CloudStorage" renamed to "STaaS" [ID_38325]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
+
+In the *Database* section of *System Center*, up to now, when a DataMiner Agent was configured to use Storage as a Service (STaaS), the *Database* setting was set to "CloudStorage". This "CloudStorage" value has now been renamed to "STaaS".
+
+Also, when *Database* is set to "STaaS", the *Configuration* and *Maintenance* sections will no longer be visible in both the *General* and *Offload* tabs, and the *Cassandra preparation/migration* button will be hidden.
 
 ### Fixes
 
-#### DataMiner Cube: No longer allowed to create properties with a name that consists of whitespace characters only [ID_38209]
+#### User menu: Problem when logging out immediately after logging in [ID_38178]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
+
+When you logged out of Cube immediately after logging in, in some cases, a blank home screen would appear instead of the login screen.
+
+From now on, the *Sign out* button will only be enabled once the login screen has been loaded.
+
+#### No longer allowed to create properties with a name that consists of whitespace characters only [ID_38209]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
 
 Up to now, DataMiner Cube would incorrectly allow you to create properties of which the name consisted of whitespace characters only. From now on, this is no longer allowed.
+
+#### Problem when opening a service card [ID_38354]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
+
+When you opened a service card, in some rare cases, an `InvalidOperationException` could be thrown.
+
+#### Problem when opening a service card of which the default page was set to 'Reports' [ID_38380]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
+
+When you opened a service card of which the default page was set to *Reports*, an error could occur, causing DataMiner Cube to become unresponsive.
+
+#### Alarm Console: Reports view button would not be shown [ID_38398]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
+
+On undocked alarm cards or alarm consoles that were embedded in e.g. elements cards, in some cases, the reports view button would incorrectly not be shown.

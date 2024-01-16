@@ -6,7 +6,39 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
-#### 4 January 2024 - Chat Integration with Microsoft Teams now includes sending notification using Adaptive Cards [ID_38339]
+#### 16 January 2024 - Fix - CoreGateway 2.13.4/2.14.3 - Timeout error when deploying protocol from Catalog [ID_38464]
+
+In some rare cases, a timeout error could occur when a protocol was deployed from the Catalog. This issue has been resolved.
+
+#### 16 January 2024 - Enhancement - FieldControl 2.10.3 - Improved DxM status reporting [ID_38451]
+
+The FieldControl DxM will now periodically send a health check to the cloud to indicate that the DxM is running using correct identifiers.
+
+#### 16 January 2024 - Enhancement - CloudGateway 2.13.2 - Improved DxM status reporting [ID_38450]
+
+The CloudGateway DxM will now periodically send a health check to the cloud to indicate that the DxM is running using correct identifiers.
+
+#### 16 January 2024 - Enhancement - Orchestrator 1.5.3 - Improved DxM status reporting [ID_38449]
+
+The Orchestrator DxM will now periodically send a health check to the cloud to indicate that the DxM is running using correct identifiers.
+
+#### 16 January 2024 - Enhancement - SupportAssistant 1.6.4 - Improved DxM status reporting [ID_38448]
+
+The SupportAssistant DxM will now periodically send a health check to the cloud to indicate that the DxM is running using correct identifiers.
+
+#### 16 January 2024 - Enhancement - ArtifactDeployer 1.6.4 - Improved DxM status reporting [ID_38447]
+
+The ArtifactDeployer DxM will now periodically send a health check to the cloud to indicate that the DxM is running using correct identifiers.
+
+#### 16 January 2024 - Enhancement - CoreGateway 2.14.3 - Improved DxM status reporting [ID_38442]
+
+The CoreGateway DxM will now periodically send a health check to the cloud to indicate that the DxM is running using correct identifiers.
+
+#### 12 January 2024 - New Feature - Remote access for custom files/webpages [ID_38426]
+
+It is now possible to provide remote access via dataminer.services to files or webpages. To do so, add them in the folder `C:\Skyline DataMiner\Webpages\public\` on your DMA. To access such files, users can use the remote access URL followed by `/public/` (e.g. the file *image.png* via `https://ziine-skyline.on.dataminer.services/public/image.png`).
+
+#### 4 January 2024 - New Feature - Chat Integration with Microsoft Teams now includes sending notification using Adaptive Cards [ID_38339]
 
 It is now possible to send notifications using Adaptive Cards to chats or channels with Chat Integration.
 
@@ -24,23 +56,23 @@ From now onwards, additional data like soft-launch options, installed solutions,
 
 The SupportAssistant DxM will now periodically send a health check to the cloud to indicate that the DxM is running.
 
-####  20 December 2023 - New Feature - ArtifactDeployer 1.6.0 - DxM status reporter added [ID_38172]
+#### 20 December 2023 - New Feature - ArtifactDeployer 1.6.0 - DxM status reporter added [ID_38172]
 
 The ArtifactDeployer DxM will now periodically send a health check to the cloud to indicate that the DxM is running.
 
-####  20 December 2023 - New Feature - Orchestrator 1.5.0 - DxM status reporter added [ID_38170]
+#### 20 December 2023 - New Feature - Orchestrator 1.5.0 - DxM status reporter added [ID_38170]
 
 The Orchestrator DxM will now periodically send a health check to the cloud to indicate that the DxM is running.
 
-####  20 December 2023 - New Feature - CoreGateway 2.14.0 - DxM status reporter added [ID_38200]
+#### 20 December 2023 - New Feature - CoreGateway 2.14.0 - DxM status reporter added [ID_38200]
 
 The CoreGateway DxM will now periodically send a health check to the cloud to indicate that the DxM is running.
 
-####  20 December 2023 - New Feature - CloudGateway 2.13.0 - DxM status reporter added [ID_38022]
+#### 20 December 2023 - New Feature - CloudGateway 2.13.0 - DxM status reporter added [ID_38022]
 
 The CloudGateway DxM will now periodically send a health check to the cloud to indicate that the DxM is running.
 
-####  20 December 2023 - New Feature - FieldControl 2.10.0 - DxM status reporter added [ID_38116]
+#### 20 December 2023 - New Feature - FieldControl 2.10.0 - DxM status reporter added [ID_38116]
 
 The FieldControl DxM will now periodically send a health check to the cloud to indicate that the DxM is running.
 

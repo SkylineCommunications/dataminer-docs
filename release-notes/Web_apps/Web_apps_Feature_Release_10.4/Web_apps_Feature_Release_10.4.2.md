@@ -254,3 +254,9 @@ From now on, when you delete the query of which the data is being displayed, the
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
 
 In some cases, unnecessary component properties would be saved in a dashboard configuration.
+
+#### Web apps: Problem with bottom tab control in mobile versions [ID_38422]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 [CU0] -->
+
+In the mobile versions of the web apps, the bottom tab control would incorrectly not display the contents of the selected tab.
