@@ -76,6 +76,12 @@ Up to now, when you ran the DataMiner installer to install a new DataMiner Agent
 
 From now on, when you run the DataMiner installer to install a new DataMiner Agent using a DataMiner upgrade package, all installation steps will be performed, including the upgrade actions.
 
+#### DataMiner clients using a gRPC connection would not always detect a disconnect [ID_38215]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+In some cases, DataMiner clients using a gRPC connection would not detect a disconnect.
+
 #### Correlation: Alarm buckets would not get cleaned up when alarms were cleared before the end of the time frame specified in the 'Collect events for ... after first event, then evaluate conditions and execute actions' setting [ID_38292]
 
 <!-- MR 10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
