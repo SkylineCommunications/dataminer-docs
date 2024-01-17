@@ -103,3 +103,11 @@ From now on, when a correlation rule is configured to use the *Collect events fo
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
 
 When both agents in a Failover setup were offline, in some cases, they would incorrectly reconfigure the NATS settings.
+
+#### Automation: Script object cleanup routine could cause an error to occur [ID_38370]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+When a script is executed in SLAutomation, a record is added to a *Running Scripts* list. If that script is executed synchronously, that record will be deleted once the script ends. However, if the script is executed asynchronously, the record will be deleted by a separate cleanup routine. This cleanup routine is triggered when another script has been executed or when you retrieve a list of all running scripts. When the cleanup routine is run, all records of the finished scripts are cleaned up.
+
+In some rare cases, the above-mentioned cleanup routine was started too early, causing an error to occur in SLAutomation.

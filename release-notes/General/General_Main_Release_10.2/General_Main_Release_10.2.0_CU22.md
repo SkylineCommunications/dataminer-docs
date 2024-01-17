@@ -438,6 +438,12 @@ When, in the Correlation app, you opened the connectivity editor and loaded the 
 
 When the *LegacyReportsAndDashboards* soft-launch option was disabled, DataMiner Cube will incorrectly still show the *Add to dashboard...* menu option when you right-clicked a parameter, an element or a service.
 
+#### DataMiner Cube was not able to reconnect to the server after a disconnect using gRPC [ID_38261]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
+
+Up to now, when using a gRPC connection, Cube was not able to verify whether the server endpoint was available. As a result, it would fail to reconnect to the server when the connection had been lost and would display a `Waiting for the connection to become available...` message indefinitely.
+
 #### DataMiner Cube - Visual overview: Problem when VdxPage data item and View data item of a shape were set by the same SetVar shape [ID_38321]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
