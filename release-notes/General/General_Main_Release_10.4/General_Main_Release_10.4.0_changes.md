@@ -1143,6 +1143,12 @@ When an alarm had been cleared or removed, in some cases, the automatic incident
 
 When, while automatic incident tracking was running, you manually created an incident (i.e. an alarm group) containing non-active alarms, an empty alarm group would be created.
 
+#### DataMiner Cube was not able to reconnect to the server after a disconnect using gRPC [ID_38260]
+
+<!-- MR 10.4.0 - FR 10.4.3 -->
+
+Up to now, when using a gRPC connection, Cube was not able to verify whether the server endpoint was available. As a result, it would fail to reconnect to the server when the connection had been lost and would display a `Waiting for the connection to become available...` message indefinitely.
+
 #### Correlation: Alarm buckets would not get cleaned up when alarms were cleared before the end of the time frame specified in the 'Collect events for ... after first event, then evaluate conditions and execute actions' setting [ID_38292]
 
 <!-- MR 10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
