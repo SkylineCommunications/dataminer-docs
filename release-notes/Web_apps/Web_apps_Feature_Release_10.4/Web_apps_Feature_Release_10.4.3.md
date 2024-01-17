@@ -137,3 +137,11 @@ Also, selected table rows would not be visible in a PDF file when the table had 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
 
 When a PDF report had been generated, in some cases, that report showed a `There are no open sessions` error while the dashboard did not.
+
+#### Dashboards app & Low-Code Apps - Grid component: Loader bar would incorrectly appear behind any selected items [ID_38466]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+When you had selected an item at the top of a grid component, the loader bar would incorrectly appear behind the selected item.
+
+From now on, when the loader bar appears while an item is selected, it will always appear in front of the selected item.
