@@ -82,6 +82,14 @@ When SLProtocol identifies duplicate keys, it will no longer flood the error log
 
 From now on, if you want to have log entries related to duplicate keys, increase the error log level to 1.
 
+#### SLProtocol will now always fetch element data page by page except on systems with a MySQL database [ID_38388]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+From now on, SLProtocol will always fetch element data page by page, except on systems with a MySQL database.
+
+On systems with a MySQL database, SLProtocol will continue to fetch element data by parameter ID.
+
 ### Fixes
 
 #### DataMiner installer: Some modules would not get installed while performing a full installation of a new DMA [ID_37719]
