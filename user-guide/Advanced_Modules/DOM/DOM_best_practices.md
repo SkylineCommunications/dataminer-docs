@@ -4,25 +4,33 @@ uid: DOM_best_practices
 
 # DOM best practices
 
-This document outlines best practices for both DOM model design and the performance implications of these design decisions. It is strongly recommended to consider these guidelines when designing a DOM model.
+When you design a DOM model, you should always keep the best practices in mind that you can find below, and take into account the performance implications of your design decisions.
 
-In short, the following is important:
+These are the main things to keep in mind:
 
-- **Group DomDefinitions:** Consolidate related `DomDefinitions` within the same module to optimize database performance and minimize resource usage.
+- **Group DomDefinitions**: Consolidate related `DomDefinitions` within the same module to optimize database performance and minimize resource usage.
 
-- **Disable Instance History:** Turn off unnecessary instance history tracking to conserve resources, especially beneficial for DOM managers with frequent create or update actions.
+- **Disable instance history**: Turn off unnecessary instance history tracking to conserve resources. This is especially beneficial for DOM managers with frequent create or update actions.
 
-- **Compact DomInstances:** Prioritize essential data, avoid duplication, and limit unnecessary fields to keep `DomInstances` small and efficient.
+- **Use compact DomInstances**: Prioritize essential data, avoid duplication, and limit unnecessary fields to keep `DomInstances` small and efficient.
 
-- **Optimize CRUD Calls:** Use bulk operations for create, update, or delete actions, and avoid multiple updates to the same `DomInstance` in the same script to reduce overhead.
+- **Optimize CRUD calls**: Use bulk operations for create, update, or delete actions, and avoid multiple updates to the same `DomInstance` in the same script to reduce overhead.
 
-- **Efficient Scripting:** Design scripts for fast and efficient execution, particularly focusing on CRUD scripts, to minimize execution time and potential script queues.
+- **Efficient scripting**: Design scripts for fast and efficient execution, particularly focusing on CRUD scripts, to minimize execution time and potential script queues.
+
+You can find more details below.
 
 ## Module and settings
 
 ### Group DomDefinitions that belong to the same solution within the same DOM module
 
-It is recommended to limit the number of DOM modules on a DataMiner system. Each DOM module has its separate indexes in the Elasticsearch or OpenSearch database. These require a certain amount of system resources, which adds up over time. It is thus recommended to define all `DomDefinitions` and store all `DomInstances` within the same DOM module instead of creating a DOM module for each separate DOM model. However, if a certain model is completely stand-alone and is reused by other solutions, it can still be advisable to keep them separate. It is recommended to keep the number of DOM modules on one system well below 50. This number is, however, dependent on the number of DB nodes and their resource allocation. If STaaS is used, the performance aspect is less relevant due to the different way the DOM data is stored.
+We recommend limiting the number of DOM modules in a DataMiner System.
+
+Each DOM module has its separate indexes in the Elasticsearch or OpenSearch database. These require a certain amount of system resources, which adds up over time.
+
+We therefore recommend defining all `DomDefinitions` and storing all `DomInstances` within the same DOM module instead of creating a DOM module for each separate DOM model. However, if a certain model is completely standalone and is reused by other solutions, it can still be advisable to keep them separate.
+
+We recommend keeping the number of DOM modules on one system well **below 50**. However, this number depends on the number of database nodes and their resource allocation. If STaaS is used, the performance aspect is less relevant because of the different way the DOM data is stored.
 
 **Not recommended:**
 
@@ -44,31 +52,37 @@ It is recommended to limit the number of DOM modules on a DataMiner system. Each
 
 ### Disable DomInstance history when not required
 
-By default, any change made to a `DomInstance` is tracked in [history records](xref:DOM_history). These records are asynchronously saved by default, which should limit the performance impact when saving or updating a `DomInstance`. However, saving these history records puts additional load on both DataMiner and the database. If history is not required, it is recommended to [disable](xref:DOM_history#disabling-the-history-or-changing-the-storage-behavior) it to save CPU cycles, memory, and storage. For DOM managers experiencing frequent create or update actions (> 1 per second on average), the performance benefit of disabling this history could be considerable.
+By default, any change made to a `DomInstance` is tracked in [history records](xref:DOM_history). These records are saved asynchronously by default, which should limit the performance impact when saving or updating a `DomInstance`.
+
+However, saving these history records puts an additional load on both DataMiner and the database. If history records are not required, you should therefore [disable the history](xref:DOM_history#disabling-the-history-or-changing-the-storage-behavior) in order to save CPU cycles, memory, and storage.
+
+Especially for DOM managers with frequent create or update actions (> 1 per second on average), the performance benefit of disabling this history can be considerable.
 
 ## DOM model
 
 ### Try to keep the DomInstance objects small
 
-When interacting with a `DomInstance`, all data for this instance needs to be retrieved and/or sent to the server. Therefore, less data results in faster actions. It is advisable to think critically and limit the size of `DomInstances`, following these recommendations:
+When you interact with a `DomInstance`, all data for this instance needs to be retrieved from or sent to the server. Therefore, less data results in faster actions.
 
-#### Only include data that is actually required
+As such, you should think critically and limit the size of `DomInstances`, following these recommendations:
 
-When designing a DOM model, there is a tendency to include any possible piece of information relevant to the represented entity. It is advised to include only the needed data to ensure that `DomInstances` are kept small and space-efficient. Updating the DOM model with an extra field later on is much easier than removing one, which was not needed in hindsight.
+- **Only include data that is actually required**
 
-#### Avoid data duplication
+  When designing a DOM model, people often want to include any possible piece of information relevant to the represented entity. However, you should include only the needed data to ensure that `DomInstances` are kept small and space-efficient. Updating the DOM model with an extra field later on is much easier than removing a field that turned out to be unnecessary.
 
-Always strive to store certain data only once and link to it where needed. This not only benefits the size of `DomInstances` but also makes updating this data more straightforward, as it only needs to be done in one location.
+- **Avoid data duplication**
 
-#### Avoid storing JSON in a string field
+  Always strive to store certain data only once and link to it where needed. This not only benefits the size of `DomInstances` but also makes updating this data more straightforward, as it only needs to be done in one location.
 
-While it may be tempting to model JSON and store it in a string field, this is considered bad practice. It hinders data checks, makes the model hard to understand, and introduces a higher risk of storing irrelevant data, leading to performance issues. It is recommended to use multiple sections or other `DomInstances` when possible.
+- **Avoid storing JSON in a string field**
 
-#### Limit the amount of sections/fields
+  While it may be tempting to model JSON and store it in a string field, this is considered bad practice. It hinders data checks, makes the model hard to understand, and introduces a higher risk of storing irrelevant data, leading to performance issues. Instead, use multiple sections or other `DomInstances` where possible.
 
-Allowing multiple sections for a `SectionDefinition` theoretically enables the addition of an unlimited number of sections to the `DomInstance`. However, every section increases the `DomInstance`'s size, impacting performance, especially when each section contains numerous fields. For such `SectionDefinitions`, it is crucial to ensure that only the most important values are stored.
+- **Limit the amount of sections/fields**
 
-### Store rarely used (meta) data in separate DomInstances
+  Allowing multiple sections for a `SectionDefinition` theoretically enables the addition of an unlimited number of sections to the `DomInstance`. However, every section increases the `DomInstance`'s size, impacting performance, especially when each section contains numerous fields. For such `SectionDefinitions`, it is crucial to ensure that only the most important values are stored.
+
+### Store rarely used (meta)data in separate DomInstances
 
 In most solutions, there are objects that need to be retrieved quite often to display them in a table or on a timeline.  It is recommended to keep these often-retrieved `DomInstances` as small as possible and include only the required data. If values are only needed when a specific object is known (e.g., selected in a low-code app table), create a separate metadata object that stores these additional values. A link can then be made to retrieve these values only when needed. However, be cautious, as this introduces another read call, so ensure that these values are needed less often than the main object values. If these additional values will always be joined to the main object, the performance benefit may be negated or even have the opposite effect.
 
