@@ -8,16 +8,11 @@ uid: Installing_PLM_tool
 
 - DataMiner version 10.3.6 or higher.
 
-- DataMiner web apps version 10.3.6 or higher.
-
-  > [!TIP]
-  > See also: [Upgrading the DataMiner web apps](xref:Upgrading_Downgrading_Webapps)
-
 - A DataMiner System [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
 ## Deploying the PLM tool
 
-1. Look up the [EPM PLM package](https://catalog.dataminer.services/details/package/5064) in the DataMiner Catalog.
+1. Look up the [*EPM PLM* package](https://catalog.dataminer.services/details/package/5064) in the DataMiner Catalog.
 
 1. Click the *Deploy* button.
 
@@ -45,7 +40,7 @@ uid: Installing_PLM_tool
 
 1. Adjust the following settings based on your preferences:
 
-   - *PLM Polling Configuration > PLM Status*: Enables or disables PLM polling. Enabling this option allows the periodical updating of PLM activity statuses, according to the configured time span.
+   - *PLM Polling Configuration > PLM Status*: Enables or disables PLM polling. Enabling this option allows the periodical updating of PLM activity statuses according to the configured time span.
 
    - *PLM Polling Configuration > PLM Timer*: Allows you to set the interval at which PLM activities receive status updates in the overview (*Data > General*).
 

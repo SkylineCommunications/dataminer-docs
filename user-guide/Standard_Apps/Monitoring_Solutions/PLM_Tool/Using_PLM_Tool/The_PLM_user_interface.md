@@ -12,6 +12,10 @@ To access the PLM low-code app:
 
 1. Sign in using your DataMiner credentials.
 
+1. Select the *EPM PLM* app.
+
+   ![EPM PLM app](~/user-guide/images/EPM_PLM_app.png)
+
 ## The PLM tool sidebar
 
 The sidebar on the left of the PLM tool contains buttons that can be used to expand different panes:

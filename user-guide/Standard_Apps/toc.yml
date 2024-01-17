@@ -252,7 +252,7 @@ items:
                     topicUid: Editing_maintenance_event
                   - name: Deleting a maintenance event
                     topicUid: Deleting_maintenance_event
-              - name: Planned Maintenance Records
+              - name: Planned Maintenance records
                 topicUid: PLM_Records
       - name: Remote PHY Monitoring
         topicUid: Remote_PHY_Monitoring

@@ -4,6 +4,9 @@ uid: Adding_maintenance_event
 
 # Adding a maintenance event
 
+> [!IMPORTANT]
+> Make sure you have set up the two resource validation configuration tables before creating any maintenance events. For more information, see [Configuring resources](xref:PLM_tool_configuring_resources).
+
 To create a maintenance event (also known as a PLM item), follow these steps:
 
 1. Go to the *PLM Instances* tab and click *+ Add* in the top-left corner.
