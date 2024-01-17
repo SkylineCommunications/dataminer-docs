@@ -83,6 +83,16 @@ To ensure data resilience for potential recovery scenarios, protecting against u
 
 - **Data restoration and support**: In the event a rollback is necessary, our support team will assist you. To submit a rollback request, contact the support team by sending an email to <staas@dataminer.services>. They will guide you through the necessary steps to ensure a successful data restoration.
 
+## Data security and availability
+
+With STaaS, the data for a specific DMS is isolated in a logical partition. You can only ever access the logical partition dedicated to your own DMS, and all partitions are strictly isolated from each other.
+
+To access your data, you use a connection authenticated with a [Service Principal](https://learn.microsoft.com/en-us/entra/identity-platform/app-objects-and-service-principals?tabs=browser#service-principal-object). With this connection, you can only access the logical partition dedicated to a specific DMS, which means that all data of a DMS is strictly isolated.
+
+The data is encrypted both at rest and in transit.
+
+If [ZRS](#data-location-and-redundancy) is used, STaaS has an expected availability of 99.9%. With [GRS](#data-location-and-redundancy), it has an expected availability of 99.95%. For more information, please contact <sales@skyline.be>.
+
 ## Limitations
 
 To **migrate existing data** to STaaS, the following limitations apply:
