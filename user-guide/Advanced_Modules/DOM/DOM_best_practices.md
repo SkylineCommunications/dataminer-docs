@@ -22,7 +22,7 @@ In short, the following is important:
 
 ### Group DomDefinitions that belong to the same solution within the same DOM module
 
-It is recommended to limit the number of DOM modules on a DataMiner system. Each DOM module has its separate indexes in the Elasticsearch or OpenSearch database. These require a certain amount of heap memory and add to the number of active 'shards' in the database. It is thus recommended to define all `DomDefinitions` and store all `DomInstances` within the same DOM module instead of creating a DOM module for each separate DOM model. However, if a certain model is completely stand-alone and is reused by other solutions, it can still be advisable to keep them separate. It is recommended to keep the number of DOM modules on one system well below 50. This number is, however, dependent on the number of DB nodes and their resource allocation. If STaaS is used, the performance aspect is less relevant due to the different way the DOM data is stored.
+It is recommended to limit the number of DOM modules on a DataMiner system. Each DOM module has its separate indexes in the Elasticsearch or OpenSearch database. These require a certain amount of system resources, which adds up over time. It is thus recommended to define all `DomDefinitions` and store all `DomInstances` within the same DOM module instead of creating a DOM module for each separate DOM model. However, if a certain model is completely stand-alone and is reused by other solutions, it can still be advisable to keep them separate. It is recommended to keep the number of DOM modules on one system well below 50. This number is, however, dependent on the number of DB nodes and their resource allocation. If STaaS is used, the performance aspect is less relevant due to the different way the DOM data is stored.
 
 **Not recommended:**
 
@@ -70,7 +70,7 @@ Allowing multiple sections for a `SectionDefinition` theoretically enables the a
 
 ### Store rarely used (meta) data in separate DomInstances
 
-In most solutions, there are objects that need to be retrieved quite often to display them in a table or on a timeline.  It is recommended to keep these often-retrieved `DomInstances` as small as possible and include only the required data. If values are only needed when a specific object is known (e.g., selected in an LCA table), create a separate metadata object that stores these additional values. A link can then be made to retrieve these values only when needed. However, be cautious, as this introduces another read call, so ensure that these values are needed less often than the main object values. If these additional values will always be joined to the main object, the performance benefit may be negated or even have the opposite effect.
+In most solutions, there are objects that need to be retrieved quite often to display them in a table or on a timeline.  It is recommended to keep these often-retrieved `DomInstances` as small as possible and include only the required data. If values are only needed when a specific object is known (e.g., selected in a low-code app table), create a separate metadata object that stores these additional values. A link can then be made to retrieve these values only when needed. However, be cautious, as this introduces another read call, so ensure that these values are needed less often than the main object values. If these additional values will always be joined to the main object, the performance benefit may be negated or even have the opposite effect.
 
 **Not recommended:**
 
@@ -143,11 +143,11 @@ On the `DomBehaviorDefinition`, you have very fine control over what fields shou
 
 ### Try to limit the amount of CRUD calls
 
-Every call to DataMiner and the database has a certain overhead. By reducing the number of calls, this overhead is limited. The following measures could be implemented:
+Every call to DataMiner (e.g. `DomInstance` create call) and the database has a certain overhead. By reducing the number of calls, this overhead is limited. The following measures could be implemented:
 
 #### Use bulk create, update, or delete whenever possible
 
-When multiple `DomInstances` need to be created or updated simultaneously, it is advisable to pass them to DataMiner using the bulk `CreateOrUpdate` method instead of looping over the list and passing them one by one. This can improve performance up to 10 times. Note that a maximum of 100 `DomInstances` can be passed at once.
+When multiple `DomInstances` need to be created or updated simultaneously, it is advisable to pass them to DataMiner using the [bulk `CreateOrUpdate` method](xref:DomHelper_class#multiple-instances) instead of looping over the list and passing them one by one. This can improve performance up to 10 times. Note that a maximum of 100 `DomInstances` can be passed at once.
 
 #### Avoid doing multiple updates to the same DomInstance in the same script/code
 
@@ -171,7 +171,7 @@ Do however make sure that not too many `DomInstances` are read at once. It is re
 
 ### Avoid using DOM CRUD scripts for DomDefinitions that see many instance creates or updates
 
-On the `ModuleSettings` and `DomDefinition`, it is possible to [define a script](xref:ExecuteScriptOnDomInstanceActionSettings) that will be executed when a `DomInstance` is created, updated, or deleted. This can be useful, for example, when a change to one of these objects needs to be synced to an external system. However, keep in mind that this script is triggered for every create or update, which may include changes to values not relevant for this script. When you have `DomDefinitions` where a lot of `DomInstances` are created or updated, this may cause performance issues, especially if these scripts contain inefficient and long-running actions.
+On the `ModuleSettings` and `DomDefinition`, it is possible to [define a script](xref:ExecuteScriptOnDomInstanceActionSettings) that will be executed when a `DomInstance` is created, updated, or deleted. This can be useful, for example, when a change to one of these objects needs to be sent to an external system. However, keep in mind that this script is triggered for every create or update, which may include changes to values not relevant for this script. When you have `DomDefinitions` where a lot of `DomInstances` are created or updated, this may cause performance issues, especially if these scripts contain inefficient and long-running actions.
 
 ### Ensure DOM scripts (CRUD or actions) run fast and efficiently
 
@@ -187,7 +187,7 @@ As mentioned in the previous recommendation, it is advised to keep CRUD scripts 
 
 With the current behavior of joining data using a [GQI query](xref:Generic_Query_Interface), all data of the right-hand-side data source will be retrieved. If this is configured to use a `DomDefinition` containing a lot of instances, it will lead to performance and scaling issues. It is currently recommended to implement an [ad hoc data source](xref:Configuring_an_ad_hoc_data_source_in_a_query). This allows you to more efficiently retrieve the DOM data by only retrieving the `DomInstances` that are needed. Within this ad-hoc data source, a potential caching layer can also be implemented.
 
-Note that this recommendation is only important when the DOM data could contain a large number of records. If the expected maximum number of `DomInstances` is limited (<100), it is expected that the default join functionality should function in a performant manner.
+Note that this recommendation is only important when the DOM data could contain a large number of records. If the expected maximum number of `DomInstances` is limited to a maximum about 100, it is expected that the default join functionality should function in a performant manner.
 
 ### Limit the use of FieldDescriptors with external references that will be shown in a DOM form
 
@@ -197,4 +197,4 @@ There are `FieldDescriptors` like the `DomInstanceFieldDescriptor` or `Reservati
 
 ### Perform performance and scale testing
 
-Even after applying all the recommended performance tips, it is still recommended to perform performance and scale testing using the designed DOM model. Try to estimate the expected load in production (e.g., 50 `DomInstances` updated every minute) and write a script that simulates these actions. It is always a good idea to design the solution around this testability by providing ways to hook into a certain workflow. An example of this could be a QAction or script that contains all logic to create a certain `DomInstance`, allowing you to trigger that specific part of the solution with dummy data to execute the performance testing. Make sure the dummy data is representative of the final system (ideally larger) in both size and amount.
+Even after applying all the recommended performance tips, it is still recommended to perform performance and scale testing using the designed DOM model. Try to estimate the expected load in production (e.g., 50 `DomInstances` updated every minute) and write a script that simulates these actions. It is considered best practice to design the solution around this testability by providing ways to hook into a certain workflow. An example of this could be a QAction or script that contains all logic to create a certain `DomInstance`, allowing you to trigger that specific part of the solution with dummy data to execute the performance testing. Make sure the dummy data is representative of the final system (ideally larger) in both size and amount.

@@ -59,7 +59,7 @@ if (!traceData.HasSucceeded())
 
 ### Reading DOM data
 
-When reading DOM data using the `Read(FilterElement<T>)` methods, you can opt to do a single read or retrieve the results in pages. When there is a chance that a lot of records can be returned, using paging is highly recommend. This ensures that a response is not too large, as this negatively impact performance. This also allows you to possibly make a decision in the code to abort the action without having to retrieve all records.
+When reading DOM data using the `Read(FilterElement<T>)` methods, you can opt to do a single read or retrieve the results in pages. When there is a chance that a lot of records can be returned, using paging is highly recommend. This ensures that a response is not too large, as this negatively impacts performance. This also allows you to possibly make a decision in the code to abort the action without having to retrieve all records.
 
 **Read all without paging:**
 
