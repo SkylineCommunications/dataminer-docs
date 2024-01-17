@@ -2,7 +2,7 @@
 uid: Creating_a_DaaS_system_FAQ
 ---
 
-# Frequently asked questions
+# Frequently asked questions related to DaaS
 
 ### What are DataMiner credits?
 
@@ -40,3 +40,7 @@ You can delete your DaaS system at any time before its expiration. See [Removing
 ### How can I create a new DaaS system?
 
 Follow the instructions under [Creating a new DMS on dataminer.services](xref:Creating_a_DMS_on_dataminer_services).
+
+### What is the expected availability of a DaaS system?
+
+A DaaS system has a target availability of 99.5%. For more information, please contact <sales@skyline.be>.
