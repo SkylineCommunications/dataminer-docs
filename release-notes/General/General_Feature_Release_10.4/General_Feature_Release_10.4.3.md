@@ -74,6 +74,14 @@ From now on, when the value of a required list field is set to an empty list, on
 
 A number of security enhancements have been made.
 
+#### SLProtocol will no longer log messages related to duplicate keys at the default log levels [ID_38392]
+
+<!-- MR 10.4.0 - FR 10.4.3 -->
+
+When SLProtocol identifies duplicate keys, it will no longer flood the error log with messages related to duplicate keys (e.g. `Duplicate key in table 1000, key = 123`) at the default log levels.
+
+From now on, if you want to have log entries related to duplicate keys, increase the error log level to 1.
+
 ### Fixes
 
 #### DataMiner installer: Some modules would not get installed while performing a full installation of a new DMA [ID_37719]

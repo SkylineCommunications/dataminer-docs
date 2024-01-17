@@ -859,6 +859,14 @@ When calculating alarm likelihood (i.e. focus score), up to now, the alarm focus
 
 SLLogCollector will now also collect the backup logs of the *StorageModule* DxM located in the `C:\ProgramData\Skyline Communications\DataMiner StorageModule\Logs\Backup` folder.
 
+#### SLProtocol will no longer log messages related to duplicate keys at the default log levels [ID_38392]
+
+<!-- MR 10.4.0 - FR 10.4.3 -->
+
+When SLProtocol identifies duplicate keys, it will no longer flood the error log with messages related to duplicate keys (e.g. `Duplicate key in table 1000, key = 123`) at the default log levels.
+
+From now on, if you want to have log entries related to duplicate keys, increase the error log level to 1.
+
 ### Fixes
 
 #### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID_34981]
