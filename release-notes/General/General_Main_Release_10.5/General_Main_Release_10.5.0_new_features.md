@@ -15,18 +15,6 @@ uid: General_Main_Release_10.5.0_new_features
 
 ### Core functionality
 
-#### API Gateway: DataMiner modules can now register with API Gateway [ID_36575] [ID_37734]
-
-<!-- MR 10.5.0 - FR 10.4.2 -->
-
-DataMiner modules can now register with API Gateway. These modules can be either "regular modules" (e.g. SLNet) or "proxy modules" (e.g. a DxM that wishes to expose an API).
-
-All modules registered with API Gateway will be displayed under `/APIGateway/api/version`, showing the following properties:
-
-- Name
-- Version
-- Endpoint on which they can be accessed via API Gateway (proxy modules only)
-
 #### BrokerGateway DxM will now be installed automatically during a DataMiner upgrade [ID_37714]
 
 <!-- MR 10.5.0 - FR 10.4.1 -->

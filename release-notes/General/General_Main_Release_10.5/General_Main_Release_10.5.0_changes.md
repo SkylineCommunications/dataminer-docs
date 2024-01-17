@@ -11,10 +11,9 @@ uid: General_Main_Release_10.5.0_changes
 
 ### Enhancements
 
-#### Security enhancements [ID_37349] [ID_37637] [ID_38052] [ID_38263]
+#### Security enhancements [ID_37349] [ID_38052] [ID_38263]
 
 <!-- 37349: MR 10.5.0 - FR 10.4.2 -->
-<!-- 37637 (part of 37734): MR 10.5.0 - FR 10.4.2 -->
 <!-- 38052: MR 10.5.0 - FR 10.4.2 -->
 <!-- 38263: MR 10.5.0 - FR 10.4.3 -->
 

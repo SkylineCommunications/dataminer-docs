@@ -519,6 +519,18 @@ In the log files, you will be able to find out which caches are enabled and when
 
 When the caches are enabled, it is no longer possible to get paged results when retrieving DomDefinitions, DomBehaviorDefinitions or SectionDefinitions. Instead, the complete list of objects matching the given query will be returned, even if that list is larger than the configured page size.
 
+#### API Gateway: DataMiner modules can now register with API Gateway [ID_36575] [ID_37734]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+DataMiner modules can now register with API Gateway. These modules can be either "regular modules" (e.g. SLNet) or "proxy modules" (e.g. a DxM that wishes to expose an API).
+
+All modules registered with API Gateway will be displayed under `/APIGateway/api/version`, showing the following properties:
+
+- Name
+- Version
+- Endpoint on which they can be accessed via API Gateway (proxy modules only)
+
 #### DataMiner Object Models: Soft-deletable objects [ID_36721] [ID_37121]
 
 <!-- RN 36721: MR 10.4.0 - FR 10.3.9 -->
