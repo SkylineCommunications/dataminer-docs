@@ -137,7 +137,7 @@ With `SectionDefinitions`, it is possible to reuse them inside a DOM manager. If
 
 ### Try to limit the amount of statuses and fields allowed per state
 
-On the `DomBehaviorDefinition`, you have very fine control over what fields should be filled in every state. However, this can result in a large configuration when many fields and statuses are used. To reduce the size of the `DomBehaviorDefinition`, it is recommended to limit the number of fields used in a status system. As mentioned in an earlier recommendation, it could be beneficial to split off data not tied to a specific state into a separate `DomInstance`.
+On the `DomBehaviorDefinition`, you have very fine control over what fields should be filled in every state. However, this can result in a large configuration when many fields and statuses are used. To reduce the size of the `DomBehaviorDefinition`, it is recommended to limit the number of fields used in a status system. As mentioned in an earlier recommendation, it could be beneficial to split off data not tied to a specific state into a separate `DomDefinition`.
 
 ## DOM CRUD and scripting
 
@@ -187,7 +187,7 @@ As mentioned in the previous recommendation, it is advised to keep CRUD scripts 
 
 With the current behavior of joining data using a [GQI query](xref:Generic_Query_Interface), all data of the right-hand-side data source will be retrieved. If this is configured to use a `DomDefinition` containing a lot of instances, it will lead to performance and scaling issues. It is currently recommended to implement an [ad hoc data source](xref:Configuring_an_ad_hoc_data_source_in_a_query). This allows you to more efficiently retrieve the DOM data by only retrieving the `DomInstances` that are needed. Within this ad-hoc data source, a potential caching layer can also be implemented.
 
-Note that this recommendation is only important when the DOM data could contain a large number of records. If the expected maximum number of `DomInstances` is limited to a maximum about 100, it is expected that the default join functionality should function in a performant manner.
+Note that this recommendation is only important when the DOM data could contain a large number of records. If the expected maximum number of `DomInstances` is limited to about 100, it is expected that the default join functionality should function in a performant manner.
 
 ### Limit the use of FieldDescriptors with external references that will be shown in a DOM form
 
