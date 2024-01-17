@@ -34,7 +34,7 @@ IDms dms = slProtocol.GetDms();
 
 The GetDms method (see SLProtocolExtensions.GetDms method ) is an extension method on the SLProtocol interface that returns an object that implements the IDms interface.
 
-To start using the DMS class library from an automationscript, use the [GetDms](xref:Skyline.DataMiner.Core.DataMinerSystem.Automation.EngineExtensions.GetDms(Skyline.DataMiner.Scripting.Engine)) extension method:
+To start using the DMS class library from an Automation script, use the [GetDms](xref:Skyline.DataMiner.Core.DataMinerSystem.Automation.EngineExtensions.GetDms) extension method:
 
 ```xml
 IDms dms = engine.GetDms();
