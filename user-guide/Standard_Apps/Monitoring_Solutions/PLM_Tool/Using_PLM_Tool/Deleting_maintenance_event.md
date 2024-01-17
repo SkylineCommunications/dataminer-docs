@@ -12,4 +12,4 @@ To permanently delete a PLM item from the system, follow these steps:
 
 1. In the pop-up window, review the information and confirm that you want to delete this item by clicking *OK*.
 
-   The PLM item has been deleted from the PLM overview.
+   The PLM item will now be deleted from the PLM overview.

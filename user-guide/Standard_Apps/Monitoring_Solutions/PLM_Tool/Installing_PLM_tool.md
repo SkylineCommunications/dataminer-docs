@@ -18,14 +18,14 @@ uid: Installing_PLM_tool
 
 1. Select the target DataMiner System and confirm the deployment. The package will be pushed to the DataMiner System.
 
-   Once the package is installed, a new PLM element is automatically created, if your DataMiner System did not contain a PLM element already.
+   If your DataMiner System does not contain a PLM element yet, a new PLM element is automatically created when the package is installed.
 
-   The *EPM PLM* low-code app is accessible at `http(s)://[DMA name]/root`.
+   Once the package has been installed, you can access the *EPM PLM* low-code app at `http(s)://[DMA name]/root`.
 
    ![EPL PLM app](~/user-guide/images/EPM_PLM_app.png)
 
 > [!NOTE]
-> To update the Planned Maintenance tool, redeploy the [*EPM PLM* package](https://catalog.dataminer.services/details/package/5064). While the tool will be updated, no new PLM element will be created, as one should already exist on your DMS.
+> To update the Planned Maintenance tool, redeploy the [*EPM PLM* package](https://catalog.dataminer.services/details/package/5064). The tool will be updated, but no new PLM element will be created, as one should already exist in your DMS.
 
 ## Configuring the EPM PLM element
 
