@@ -464,6 +464,14 @@ In System Center, you can go to *System settings > Logging* to change the log fi
 
 Up to now, the description of this setting mentioned that the setting applied to the DataMiner Agent to which you were connected. It will now mention that the setting applies to the entire DataMiner System.
 
+#### DataMiner Cube - Correlation: Apply button would not be enabled when a correlation rule had been modified [ID_38351]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
+
+When changes had been made to a correlation rule, in some cases, the Apply button would incorrectly not be enabled.
+
+Also, the *Limit the base alarms* option will now be properly validated.
+
 #### DataMiner Cube: Problem when opening a service card [ID_38354]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
@@ -481,3 +489,9 @@ When you opened a service card of which the default page was set to *Reports*, a
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
 
 On undocked alarm cards or alarm consoles that were embedded in e.g. elements cards, in some cases, the reports view button would incorrectly not be shown.
+
+#### DataMiner Cube - Visual Overview: Parsing problem when using a custom separator inside a [param:] placeholder [ID_38405]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
+
+When a custom separator was used inside a [param:] placeholder referring to a table parameter value, the retrieved value would not be parsed correctly.

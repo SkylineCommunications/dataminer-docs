@@ -52,6 +52,14 @@ Up to now, DataMiner Cube would incorrectly allow you to create properties of wh
 
 Up to now, when using a gRPC connection, Cube was not able to verify whether the server endpoint was available. As a result, it would fail to reconnect to the server when the connection had been lost and would display a `Waiting for the connection to become available...` message indefinitely.
 
+#### Correlation: Apply button would not be enabled when a correlation rule had been modified [ID_38351]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
+
+When changes had been made to a correlation rule, in some cases, the Apply button would incorrectly not be enabled.
+
+Also, the *Limit the base alarms* option will now be properly validated.
+
 #### Problem when opening a service card [ID_38354]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
@@ -69,3 +77,9 @@ When you opened a service card of which the default page was set to *Reports*, a
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
 
 On undocked alarm cards or alarm consoles that were embedded in e.g. elements cards, in some cases, the reports view button would incorrectly not be shown.
+
+#### DataMiner Cube - Visual Overview: Parsing problem when using a custom separator inside a [param:] placeholder [ID_38405]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
+
+When a custom separator was used inside a [param:] placeholder referring to a table parameter value, the retrieved value would not be parsed correctly.
