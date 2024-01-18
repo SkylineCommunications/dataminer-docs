@@ -91,7 +91,7 @@ To access your data, you use a connection authenticated with a [Service Principa
 
 The data is encrypted both at rest and in transit.
 
-If [ZRS](#data-location-and-redundancy) is used, STaaS has an expected availability of 99.9%. With [GRS](#data-location-and-redundancy), it has an expected availability of 99.95%. For more information, please contact <sales@skyline.be>.
+If [ZRS](#data-location-and-redundancy) is used, STaaS has an expected availability of 99.90%. With [GRS](#data-location-and-redundancy), it has an expected availability of 99.95%. For more information, please contact <sales@skyline.be>.
 
 ## Limitations
 
