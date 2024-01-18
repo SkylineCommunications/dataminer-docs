@@ -52,6 +52,14 @@ Up to now, DataMiner Cube would incorrectly allow you to create properties of wh
 
 Up to now, when using a gRPC connection, Cube was not able to verify whether the server endpoint was available. As a result, it would fail to reconnect to the server when the connection had been lost and would display a `Waiting for the connection to become available...` message indefinitely.
 
+#### Correlation: Apply button would not be enabled when a correlation rule had been modified [ID_38351]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
+
+When changes had been made to a correlation rule, in some cases, the Apply button would incorrectly not be enabled.
+
+Also, the *Limit the base alarms* option will now be properly validated.
+
 #### Problem when opening a service card [ID_38354]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->

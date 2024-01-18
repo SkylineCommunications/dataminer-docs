@@ -894,6 +894,14 @@ In System Center, you can go to *System settings > Logging* to change the log fi
 
 Up to now, the description of this setting mentioned that the setting applied to the DataMiner Agent to which you were connected. It will now mention that the setting applies to the entire DataMiner System.
 
+#### Correlation: Apply button would not be enabled when a correlation rule had been modified [ID_38351]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
+
+When changes had been made to a correlation rule, in some cases, the Apply button would incorrectly not be enabled.
+
+Also, the *Limit the base alarms* option will now be properly validated.
+
 #### Problem when opening a service card [ID_38354]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
