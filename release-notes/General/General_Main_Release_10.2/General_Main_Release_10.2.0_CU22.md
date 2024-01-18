@@ -495,3 +495,9 @@ On undocked alarm cards or alarm consoles that were embedded in e.g. elements ca
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
 
 When a custom separator was used inside a [param:] placeholder referring to a table parameter value, the retrieved value would not be parsed correctly.
+
+#### DataMiner Cube - Automation: Problem when selecting 'User interaction' in the 'Add action' box [ID_38406]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
+
+When, while creating or editing an Automation script, you opened the *Add action* selection box and selected "User interaction", in some cases, an exception could be thrown.
