@@ -98,3 +98,5 @@ Example:
 - By September 9th, you have earned 5000 DevOps Points and are promoted to the enabler level.
 
 - Upon reaching your third anniversary on April 12, 2026, you have earned a total of 7500 DevOps Points and have reached the enabler level.
+
+  ![DevOpsPointsLifeCycle3](~/dataminer-overview/images/DevOps_Life_Cycle3.svg)
