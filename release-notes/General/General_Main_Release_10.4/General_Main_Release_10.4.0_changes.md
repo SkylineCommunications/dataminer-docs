@@ -1137,6 +1137,12 @@ When a DataMiner Agent had the APIGateway service running but not the SLNet proc
 
 - When an attempt was made to establish a new gRPC connection, an `Invalid username or password` would be returned instead of a `DataMinerNotRunningException`.
 
+#### Web apps: Visual overview linked to a view would not get any updates when the user did not have full administrative rights [ID_38180]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
+
+When a web app user without full administrative rights viewed a visual overview linked to a view, the app would incorrectly not receive any updates for that visual overview.
+
 #### SLAnalytics - Automatic incident tracking: Problem after clearing or removing an alarm [ID_38239]
 
 <!-- MR 10.4.0 - FR 10.4.2 -->

@@ -61,6 +61,14 @@ Up to now, when working with the template editor, only text overrides could be r
 
 Up to now, when an error occurred while creating a new dashboard, the items already created before the error occurred (e.g. the folder) would incorrectly not get cleaned up.
 
+#### Dashboards app & Low-Code Apps: List of visualizations would not contain data-related visualizations [ID_38319]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+When you wanted to change the visualization of a component, up to now, the list of visualizations to choose from would only contain component-related visualizations. Data-related visualizations would not be shown.
+
+From now on, when you want to change the visualization of a component, the list of visualizations will contain data-related visualizations only.
+
 #### Dashboards app & Low-Code Apps - GQI: Queries would be fetched twice [ID_38335]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->

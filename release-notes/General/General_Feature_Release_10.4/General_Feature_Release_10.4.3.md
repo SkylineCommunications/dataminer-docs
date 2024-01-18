@@ -100,6 +100,12 @@ Up to now, when you ran the DataMiner installer to install a new DataMiner Agent
 
 From now on, when you run the DataMiner installer to install a new DataMiner Agent using a DataMiner upgrade package, all installation steps will be performed, including the upgrade actions.
 
+#### Web apps: Visual overview linked to a view would not get any updates when the user did not have full administrative rights [ID_38180]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
+
+When a web app user without full administrative rights viewed a visual overview linked to a view, the app would incorrectly not receive any updates for that visual overview.
+
 #### DataMiner clients using a gRPC connection would not always detect a disconnect [ID_38215]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->

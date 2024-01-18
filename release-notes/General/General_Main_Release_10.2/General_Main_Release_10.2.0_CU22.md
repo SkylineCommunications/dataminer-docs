@@ -423,6 +423,12 @@ When you logged out of Cube immediately after logging in, in some cases, a blank
 
 From now on, the *Sign out* button will only be enabled once the login screen has been loaded.
 
+#### Web apps: Visual overview linked to a view would not get any updates when the user did not have full administrative rights [ID_38180]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
+
+When a web app user without full administrative rights viewed a visual overview linked to a view, the app would incorrectly not receive any updates for that visual overview.
+
 #### DataMiner Cube: No longer allowed to create properties with a name that consists of whitespace characters only [ID_38209]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
