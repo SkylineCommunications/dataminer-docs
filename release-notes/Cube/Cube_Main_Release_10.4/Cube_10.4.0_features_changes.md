@@ -598,6 +598,15 @@ In the *Database* section of *System Center*, up to now, when a DataMiner Agent 
 
 Also, when *Database* is set to "STaaS", the *Configuration* and *Maintenance* sections will no longer be visible in both the *General* and *Offload* tabs, and the *Cassandra preparation/migration* button will be hidden.
 
+#### Property names identical to names of existing properties except for leading or trailing whitespace characters will no longer be allowed [ID_38424]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
+
+When creating a new property, from now on, it will no longer be allowed to use a name that is identical to the name of an existing property except for a number of leading and/or trailing whitespace characters. For example, the name "myproperty " (with a trailing whitespace character) will no longer be accepted when there is a property named "myproperty" (without whitespace characters).
+
+> [!NOTE]
+> Property names will now be trimmed before being saved.
+
 ### Fixes
 
 #### Profiles app: A profile instance would incorrectly list parameters that had been removed from the profile definition [ID_34679] [ID_34771]
