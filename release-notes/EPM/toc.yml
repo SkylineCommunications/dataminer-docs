@@ -72,7 +72,7 @@ items:
   - name: VSAT
     topicUid: EPM_1.0.8_VSAT
     items:
-      - name: EPM 1.0.8 VSAT - preview
+      - name: EPM 1.0.8 VSAT
         topicUid: EPM_1.0.8_VSAT
       - name: EPM 1.0.7 VSAT
         topicUid: EPM_1.0.7_VSAT
