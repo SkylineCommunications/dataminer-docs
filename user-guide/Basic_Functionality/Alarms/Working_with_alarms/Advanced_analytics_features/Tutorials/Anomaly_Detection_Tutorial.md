@@ -43,7 +43,7 @@ The tutorial consists of the following steps:
 
 1. Deploy the catalog item to your DataMiner Agent by clicking the *Deploy* button.
 
-   This will create several DataMiner elements on your system under the view *DataMiner Catelog* > *Augmented Operations* > *Anomaly Detection Tutorial* that will be used throughout the rest of the tutorial.
+   This will create several DataMiner elements in your system that will be used throughout the rest of the tutorial. The elements will be located in the view *DataMiner Catalog* > *Augmented Operations* > *Anomaly Detection Tutorial*.
 
 ## Step 2: Discover anomaly detection in trend graphs
 
