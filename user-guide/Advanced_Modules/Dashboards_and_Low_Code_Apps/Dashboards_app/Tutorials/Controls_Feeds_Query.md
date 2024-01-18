@@ -25,7 +25,7 @@ Expected duration: 10 minutes
 - [Step 4: Replace the static filter value with a feed](#step-4-replace-the-static-filter-value-with-a-feed)
 
 > [!TIP]
-> See also: [Kata #13: Controls and feeds in a low-code app](https://community.dataminer.services/courses/kata-13/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> See also: [Kata #13: Controls and feeds in a low-code app](https://community.dataminer.services/courses/kata-13/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)<br>Note that this kata also showcases the data input of the text input component, which is not included in the tutorial below. This is a feature that is available from 10.3.0 [CU10]/10.4.1 onwards.
 
 ## Step 1: Install the dummy data sources package
 
