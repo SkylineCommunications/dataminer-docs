@@ -66,11 +66,11 @@ For a self-hosted DataMiner System, follow the steps below to set up STaaS.
 
 ## Adding a DMA to a DMS running STaaS
 
-Follow these steps below to connect DMA to an existing DMS running STaaS:
+Follow these steps below to connect a DMA to an existing DMS running STaaS:
 
 1. **Ensure the DMA is Online and Empty**: The DMA needs to be online and empty before you start the process.
 
-1. **Disconnect from Cloud**: The DMA cannot be cloud-connected during this process. Ensure that it is disconnected from any cloud services.
+1. **Disconnect from Cloud**: The DMA cannot be cloud-connected during this process. Ensure that it is disconnected from any cloud services by following this procedure: [Permanently disconnecting from dataminer.services](https://docs.dataminer.services/user-guide/Cloud_Platform/AboutCloudPlatform/Disconnecting_from_dataminer.services.html#permanently-disconnecting-from-dataminerservices)
 
 1. **Start the Agent without the STaaS Flag**: Start the DMA, but make sure the active flag is set to **false** in the *DB.xml* file. It should look like this:
 
