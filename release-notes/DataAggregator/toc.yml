@@ -1,4 +1,6 @@
 items:
+  - name: Data Aggregator 2.1.1
+    topicUid: DataAggregator_2.1.1
   - name: Data Aggregator 2.0.0
     topicUid: DataAggregator_2.0.0
   - name: Data Aggregator 1.0.0
