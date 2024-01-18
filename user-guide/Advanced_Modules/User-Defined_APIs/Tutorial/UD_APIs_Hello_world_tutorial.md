@@ -27,7 +27,7 @@ To create an Automation script solution:
 
 1. In Visual Studio, select *Create a new project*.
 
-1. Search for *DataMiner User-Defined APIs Automation Script Solution (Skyline Communications)* in the template search box and click *Next*.
+1. Search for *DataMiner User-Defined APIs Solution (Skyline Communications)* in the template search box and click *Next*.
 
    ![DataMiner Automation Script Solution in Visual Studio](~/user-guide/images/UDAPIS_Tutorials_HelloWorld_DataMiner_DIS_Solution.jpg)
 
