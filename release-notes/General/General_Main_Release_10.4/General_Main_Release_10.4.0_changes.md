@@ -853,6 +853,17 @@ A number of enhancements have been made to the anomaly check algorithm.
 
 When calculating alarm likelihood (i.e. focus score), up to now, the alarm focus feature used a combination of element ID, parameter ID and display key (if applicable) to identify previous occurrences of the same alarm. From now on, previous alarm occurrences will be identified using a combination of element ID, parameter ID and primary key.
 
+#### NATS: All processes will now use the DataMinerMessageBroker.API NuGet package [ID_38193]
+
+<!-- MR 10.4.0 [CU0] - FR 10.4.3 -->
+
+All processes that were still using the deprecated *SLMessageBroker.dll* or *CSLCloudBridge.dll* files will now be using the *DataMinerMessageBroker.API* or *DataMinerMessageBroker.API.Native* NuGet package instead.
+
+| Processing using ... | will now instead use ...          |
+|----------------------|-----------------------------------|
+| SLMessageBroker.dll  | DataMinerMessageBroker.API        |
+| CSLCloudBridge.dll   | DataMinerMessageBroker.API.Native |
+
 #### SLLogCollector will now also collect the backup logs of the StorageModule DxM [ID_38228]
 
 <!-- MR 10.4.0 - FR 10.4.2 -->

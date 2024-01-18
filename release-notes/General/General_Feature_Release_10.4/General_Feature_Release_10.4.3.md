@@ -51,6 +51,17 @@ maps.aspx?config=MyConfigFile&dmyElement=VesselData
 
 When calculating alarm likelihood (i.e. focus score), up to now, the alarm focus feature used a combination of element ID, parameter ID and display key (if applicable) to identify previous occurrences of the same alarm. From now on, previous alarm occurrences will be identified using a combination of element ID, parameter ID and primary key.
 
+#### NATS: All processes will now use the DataMinerMessageBroker.API NuGet package [ID_38193]
+
+<!-- MR 10.4.0 [CU0] - FR 10.4.3 -->
+
+All processes that were still using the deprecated *SLMessageBroker.dll* or *CSLCloudBridge.dll* files will now be using the *DataMinerMessageBroker.API* or *DataMinerMessageBroker.API.Native* NuGet package instead.
+
+| Processing using ... | will now instead use ...          |
+|----------------------|-----------------------------------|
+| SLMessageBroker.dll  | DataMinerMessageBroker.API        |
+| CSLCloudBridge.dll   | DataMinerMessageBroker.API.Native |
+
 #### SLNetClientTest tool: Message builder now allows creating an instance of an abstract type or interface [ID_38236]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
