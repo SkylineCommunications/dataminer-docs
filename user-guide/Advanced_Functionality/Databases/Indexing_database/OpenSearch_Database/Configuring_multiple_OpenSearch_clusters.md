@@ -85,7 +85,7 @@ To configure this setup, proceed as follows:
 
    - **Password**: The password that will be used to connect to OpenSearch. This is the equivalent of the *PWD* tag in the *DB.xml* file (see [Specifying custom credentials for OpenSearch or Elasticsearch](xref:DB_xml#specifying-custom-credentials-for-opensearch-or-elasticsearch)).
 
-   - **Prefix**: The prefix for the OpenSearch indexes. This is the equivalent of the *DB* tag in the *DB.xml* file. The specified value should match across all the OpenSearch configurations in the *DBConfiguration.xml*. (see [Specifying a custom prefix for the indexes](xref:DB_xml#specifying-a-custom-prefix-for-the-indexes)).
+   - **Prefix**: The prefix for the OpenSearch indexes. This is the equivalent of the *DB* tag in the *DB.xml* file. The specified value must be the same for each OpenSearch cluster defined in *DBConfiguration.xml*. (see [Specifying a custom prefix for the indexes](xref:DB_xml#specifying-a-custom-prefix-for-the-indexes)).
 
    - **FileOffloadIdentifier**: The string used to identify this connection. Each connection should have a different identifier, which will be used for file offloads.
 
