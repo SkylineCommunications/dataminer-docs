@@ -20,7 +20,6 @@ uid: General_Feature_Release_10.4.2
 
 - [DataMiner Object Models: Creating, updating and deleting multiple DOM instances in one call [ID_37891]](#dataminer-object-models-creating-updating-and-deleting-multiple-dom-instances-in-one-call-id_37891)
 - [Configuration of database offload functionality moved from DBConfiguration.xml to DB.xml [ID_37446]](#configuration-of-database-offload-functionality-moved-from-dbconfigurationxml-to-dbxml-id_37446)
-- [Service & Resource Management: Migrating profiles and resources from XML to Elasticsearch/OpenSearch is no longer supported [ID_37979]](#service--resource-management-migrating-profiles-and-resources-from-xml-to-elasticsearchopensearch-is-no-longer-supported-id_37979)
 
 ## New features
 
