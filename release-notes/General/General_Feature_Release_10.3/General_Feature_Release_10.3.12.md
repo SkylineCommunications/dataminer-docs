@@ -252,6 +252,8 @@ Because of a number of enhancements, overall performance has increased when migr
 
 #### DxMs upgraded [ID_37895]
 
+<!-- MR 10.4.0 - FR 10.3.12 [CU0] -->
+
 The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
 
 - DataMiner ArtifactDeployer: version 1.5.2
