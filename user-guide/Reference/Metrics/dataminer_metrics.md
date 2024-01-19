@@ -69,6 +69,7 @@ All specifications are provided based on the assumption that DMAs are running on
 - [Service benchmarks](xref:service_benchmarks)
 - [Service profile benchmarks](xref:service_profile_benchmarks)
 - [Service & Resource Management benchmarks](xref:service_resource_management_benchmarks)
+- [Trending benchmarks](xref:trend_benchmarks)
 - [User-Defined APIs benchmarks](xref:user-defined_API_benchmarks)
 - [View benchmarks](xref:view_benchmarks)
 - [Visual Overview benchmarks](xref:visual_overview_benchmarks)
