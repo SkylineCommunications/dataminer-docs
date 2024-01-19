@@ -81,12 +81,14 @@ The file `C:\Skyline DataMiner\MaintenanceSettings.xml` must be configured to se
 ```xml
 <Watchdog>
     <EMail active="true"> 
-        <Destination>reports@skyline.be</Destination>
+        <Destination></Destination>
         <CCDestination></CCDestination> 
         <BCCDestination></BCCDestination> 
     </EMail>
 </Watchdog>
 ```
+
+If the `Destination` field is empty, the default destination `dataminer.minidump@skyline.be` will be used. 
 
 In the `CCDestination` field, you can optionally specify an address where a copy of the report should be sent.
 
