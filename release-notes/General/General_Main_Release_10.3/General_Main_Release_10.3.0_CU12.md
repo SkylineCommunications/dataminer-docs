@@ -39,6 +39,12 @@ From now on, SLProtocol will always fetch element data page by page, except on s
 
 On systems with a MySQL database, SLProtocol will continue to fetch element data by parameter ID.
 
+#### DataMiner upgrade: SLAnalytics upgrade actions now support Cassandra connections with TLS [ID_38393]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+DataMiner upgrade actions related to SLAnalytics features now also support Cassandra connections with TLS.
+
 ### Fixes
 
 #### DataMiner installer: Some modules would not get installed while performing a full installation of a new DMA [ID_37719]
