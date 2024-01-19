@@ -153,3 +153,11 @@ When a PDF report had been generated, in some cases, that report showed a `There
 When you had selected an item at the top of a grid component, the loader bar would incorrectly appear behind the selected item.
 
 From now on, when the loader bar appears while an item is selected, it will always appear in front of the selected item.
+
+#### Monitoring app: Incorrect alignment of element parameters [ID_38482]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+In the Monitoring app, parameter values displayed on element pages would not be aligned correctly.
+
+Also, values of analog range parameters would be displayed twice.
