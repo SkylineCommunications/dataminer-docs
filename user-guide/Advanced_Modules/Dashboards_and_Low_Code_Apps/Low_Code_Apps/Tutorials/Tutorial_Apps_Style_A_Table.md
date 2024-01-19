@@ -10,6 +10,7 @@ Expected duration: 30 minutes.
 
 > [!TIP]
 > See also: [Using the Template Editor](xref:Template_Editor)
+> See also: [Kata #14: Transform your tables with templates](https://community.dataminer.services/courses/kata-14/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 > [!NOTE]
 > This tutorial uses DataMiner version 10.4.1.
