@@ -20,11 +20,6 @@ items:
         items:
           - name: DataMiner web apps Main Release 10.4.0 - Preview
             topicUid: Web_apps_Main_Release_10.4.0
-            items:
-              - name: Highlights & other new features
-                topicUid: Web_apps_Main_Release_10.4.0_new_features
-              - name: Changes
-                topicUid: Web_apps_Main_Release_10.4.0_changes
       - name: Feature Release
         topicUid: Web_apps_Feature_Release_10.4.1
         items:

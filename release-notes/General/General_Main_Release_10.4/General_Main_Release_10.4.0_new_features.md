@@ -750,7 +750,7 @@ Please note the following:
 - The following extension methods have been added to easily compose the filters: *HasRangePoint*, *DiscreteCapability*, *StringCapability* and *MaxCapacityValue*.
 
 > [!TIP]
-> See also: [Visual Overview: Session variable YAxisResources now supports filters to pass exposers](xref:Cube_Main_Release_10.4.0_other_features_changes#visual-overview-session-variable-yaxisresources-now-supports-filters-id_34857)
+> See also: [Visual Overview: Session variable YAxisResources now supports filters to pass exposers [ID_34857]](xref:Cube_Feature_Release_10.3.1#visual-overview-session-variable-yaxisresources-now-supports-filters-to-pass-exposers-id_34857)
 
 #### Reinitializing ResourceManager [ID_36811]
 
