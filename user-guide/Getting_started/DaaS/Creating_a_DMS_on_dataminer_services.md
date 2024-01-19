@@ -5,7 +5,7 @@ uid: Creating_a_DMS_on_dataminer_services
 # Creating a new DMS on dataminer.services
 
 > [!IMPORTANT]
-> You must be a member of an [organization](xref:Pricing_Usage_based_service#organization) to create a new DaaS instance and have sufficient DataMiner Credits.
+> You must be a member of an [organization](xref:Pricing_Usage_based_service#organization) to create a new DaaS instance and have sufficient DataMiner credits.
 
 1. Log on to [dataminer.services](https://dataminer.services).
 
