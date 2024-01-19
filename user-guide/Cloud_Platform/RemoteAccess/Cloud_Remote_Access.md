@@ -20,4 +20,4 @@ With this feature, users can:
   
   > [!NOTE]
   > Files in the folder `C:\Skyline DataMiner\Webpages\public\` will be hosted without authentication on the internal network of that DMA.
-  > Remote access will enforce authentication with dataminer.services anyhow and ensure only members of the DMS can access it.
+  > Remote access will enforce that only authentication members of the DMS can access it via dataminer.services.
