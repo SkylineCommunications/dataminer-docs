@@ -477,6 +477,8 @@ items:
         topicUid: history_set_benchmarks
       - name: Mobile gateway benchmarks
         topicUid: mobile_gateway_benchmarks
+      - name: Migration benchmarks
+        topicUid: migration_benchmarks
       - name: Parameter set benchmarks
         topicUid: parameter_set_benchmarks
       - name: Pattern matching benchmarks
