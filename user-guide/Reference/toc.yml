@@ -475,6 +475,8 @@ items:
         topicUid: failover_benchmarks
       - name: History set benchmarks
         topicUid: history_set_benchmarks
+      - name: Migration benchmarks
+        topicUid: migration_benchmarks
       - name: Mobile gateway benchmarks
         topicUid: mobile_gateway_benchmarks
       - name: Parameter set benchmarks
