@@ -5,7 +5,8 @@ uid: Protocol.Params.Param.Interprete.Exceptions.Exception.Display-state
 # state attribute
 
 Displays the parameter displayed in gray when set to "disabled".
-Default state is "enabled".
+
+The default state is "enabled".
 
 ## Content Type
 
