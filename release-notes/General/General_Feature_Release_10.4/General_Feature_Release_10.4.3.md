@@ -94,13 +94,15 @@ A number of security enhancements have been made.
 
 From now, NATS nodes will advertise their physical IP address instead of their virtual IP address.
 
-#### SLProtocol will no longer log messages related to duplicate keys at the default log levels [ID_38392]
+#### SLAnalytics - Behavioral anomaly detection: Enhanced accuracy [ID_38383]
 
 <!-- MR 10.4.0 - FR 10.4.3 -->
 
-When SLProtocol identifies duplicate keys, it will no longer flood the error log with messages related to duplicate keys (e.g. `Duplicate key in table 1000, key = 123`) at the default log levels.
+The accuracy of the behavioral change points and anomalies detected by the behavioral anomaly detection feature has been improved.
 
-From now on, if you want to have log entries related to duplicate keys, increase the error log level to 1.
+From now on, a behavioral change will only be taken into account when the change is larger than the data precision used to display the data in DataMiner Cube.
+
+As a result, anomalies that report a trend change "from 0%/day to 0%/day", a level shift from "0.1 to 0.1", etc. will no longer be taken into account.
 
 #### SLProtocol will now always fetch element data page by page except on systems with a MySQL database [ID_38388]
 
@@ -109,6 +111,14 @@ From now on, if you want to have log entries related to duplicate keys, increase
 From now on, SLProtocol will always fetch element data page by page, except on systems with a MySQL database.
 
 On systems with a MySQL database, SLProtocol will continue to fetch element data by parameter ID.
+
+#### SLProtocol will no longer log messages related to duplicate keys at the default log levels [ID_38392]
+
+<!-- MR 10.4.0 - FR 10.4.3 -->
+
+When SLProtocol identifies duplicate keys, it will no longer flood the error log with messages related to duplicate keys (e.g. `Duplicate key in table 1000, key = 123`) at the default log levels.
+
+From now on, if you want to have log entries related to duplicate keys, increase the error log level to 1.
 
 #### DataMiner upgrade: SLAnalytics upgrade actions now support Cassandra connections with TLS [ID_38393]
 

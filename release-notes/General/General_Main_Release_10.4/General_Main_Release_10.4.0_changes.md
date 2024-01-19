@@ -879,6 +879,16 @@ SLLogCollector will now also collect the backup logs of the *StorageModule* DxM 
 
 From now, NATS nodes will advertise their physical IP address instead of their virtual IP address.
 
+#### SLAnalytics - Behavioral anomaly detection: Enhanced accuracy [ID_38383]
+
+<!-- MR 10.4.0 - FR 10.4.3 -->
+
+The accuracy of the behavioral change points and anomalies detected by the behavioral anomaly detection feature has been improved.
+
+From now on, a behavioral change will only be taken into account when the change is larger than the data precision used to display the data in DataMiner Cube.
+
+As a result, anomalies that report a trend change "from 0%/day to 0%/day", a level shift from "0.1 to 0.1", etc. will no longer be taken into account.
+
 #### SLProtocol will no longer log messages related to duplicate keys at the default log levels [ID_38392]
 
 <!-- MR 10.4.0 - FR 10.4.3 -->
