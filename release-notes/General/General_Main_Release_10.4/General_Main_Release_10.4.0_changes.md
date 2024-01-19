@@ -897,6 +897,14 @@ When SLProtocol identifies duplicate keys, it will no longer flood the error log
 
 From now on, if you want to have log entries related to duplicate keys, increase the error log level to 1.
 
+#### SLAnalytics - Behavioral anomaly detection: Enhanced accuracy [ID_38400]
+
+<!-- MR 10.4.0 - FR 10.4.3 -->
+
+Change point detection accuracy has been improved for parameters that have a discreet trend data behavior.
+
+For parameters of which the trend data behavior is mostly stable, with only infrequent sudden value changes, only behavioral changes that are larger than those infrequent sudden value changes will be taken into account.
+
 ### Fixes
 
 #### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID_34981]

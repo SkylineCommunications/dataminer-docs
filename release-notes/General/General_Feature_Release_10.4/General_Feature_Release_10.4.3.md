@@ -126,6 +126,14 @@ From now on, if you want to have log entries related to duplicate keys, increase
 
 DataMiner upgrade actions related to SLAnalytics features now also support Cassandra connections with TLS.
 
+#### SLAnalytics - Behavioral anomaly detection: Enhanced accuracy [ID_38400]
+
+<!-- MR 10.4.0 - FR 10.4.3 -->
+
+Change point detection accuracy has been improved for parameters that have a discreet trend data behavior.
+
+For parameters of which the trend data behavior is mostly stable, with only infrequent sudden value changes, only behavioral changes that are larger than those infrequent sudden value changes will be taken into account.
+
 #### GQI: Enhanced performance when executing 'Get parameters from elements' queries for parameter tables [ID_38460]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
