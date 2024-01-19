@@ -443,6 +443,8 @@ items:
     items:
       - name: Alarm benchmarks
         topicUid: alarm_benchmarks
+      - name: Alarm benchmarks (Cassandra Cluster)
+        topicUid: alarm_benchmarks_cassandra_cluster
       - name: Alarm focus benchmarks
         topicUid: alarm_focus_benchmarks
       - name: Automatic incident tracking benchmarks

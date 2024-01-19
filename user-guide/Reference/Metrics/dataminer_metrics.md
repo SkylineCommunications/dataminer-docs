@@ -45,6 +45,7 @@ All specifications are provided based on the assumption that DMAs are running on
 ## Benchmarks
 
 - [Alarm benchmarks](xref:alarm_benchmarks)
+- [Alarm benchmarks (Cassandra Cluster)](xref:alarm_benchmarks_cassandra_cluster)
 - [Alarm focus benchmarks](xref:alarm_focus_benchmarks)
 - [Automatic incident tracking benchmarks](xref:automatic_incident_tracking_benchmarks)
 - [Automation benchmarks](xref:automation_benchmarks)
