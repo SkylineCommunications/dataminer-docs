@@ -855,7 +855,7 @@ When calculating alarm likelihood (i.e. focus score), up to now, the alarm focus
 
 #### NATS: All processes will now use the DataMinerMessageBroker.API NuGet package [ID_38193]
 
-<!-- MR 10.4.0 [CU0] - FR 10.4.3 -->
+<!-- MR 10.4.0 - FR 10.4.3 -->
 
 All processes that were still using the deprecated *SLMessageBroker.dll* or *CSLCloudBridge.dll* files will now be using the *DataMinerMessageBroker.API* or *DataMinerMessageBroker.API.Native* NuGet package instead.
 
