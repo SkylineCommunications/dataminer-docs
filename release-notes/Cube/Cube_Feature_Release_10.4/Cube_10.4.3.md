@@ -30,6 +30,21 @@ In the *Database* section of *System Center*, up to now, when a DataMiner Agent 
 
 Also, when *Database* is set to "STaaS", the *Configuration* and *Maintenance* sections will no longer be visible in both the *General* and *Offload* tabs, and the *Cassandra preparation/migration* button will be hidden.
 
+#### Enhanced operator support when constructing filters for numeric columns of partial tables [ID_38367]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
+
+From now on, the following operators are supported in filters for numeric columns of partial tables:
+
+```txt
+<
+<=
+>
+>=
+==
+!=
+```
+
 #### Property names identical to names of existing properties except for leading or trailing whitespace characters will no longer be allowed [ID_38424]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
