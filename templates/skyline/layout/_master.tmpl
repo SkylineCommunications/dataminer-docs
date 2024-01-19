@@ -112,6 +112,15 @@
           {{!body}}
         </article>
 
+
+
+        {{^_disableNextArticle}}
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        {{/_disableNextArticle}}
+        
+      </div>
+
+      <div class="affix">
         {{^_disableContribution}}
         <div class="contribution d-print-none">
           {{#sourceurl}}
@@ -122,14 +131,6 @@
           {{/docurl}}{{/sourceurl}}
         </div>
         {{/_disableContribution}}
-
-        {{^_disableNextArticle}}
-        <div class="next-article d-print-none border-top" id="nextArticle"></div>
-        {{/_disableNextArticle}}
-        
-      </div>
-
-      <div class="affix">
         <nav id="affix"></nav>
       </div>
     </main>
