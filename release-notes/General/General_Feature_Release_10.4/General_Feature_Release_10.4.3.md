@@ -88,6 +88,12 @@ From now on, when the value of a required list field is set to an empty list, on
 
 A number of security enhancements have been made.
 
+#### Failover: NATS nodes will now advertise their physical IP address instead of their virtual IP address [ID_38340]
+
+<!-- MR 10.4.0 - FR 10.4.3 -->
+
+From now, NATS nodes will advertise their physical IP address instead of their virtual IP address.
+
 #### SLProtocol will no longer log messages related to duplicate keys at the default log levels [ID_38392]
 
 <!-- MR 10.4.0 - FR 10.4.3 -->
@@ -109,6 +115,14 @@ On systems with a MySQL database, SLProtocol will continue to fetch element data
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
 
 DataMiner upgrade actions related to SLAnalytics features now also support Cassandra connections with TLS.
+
+#### GQI: Enhanced performance when executing 'Get parameters from elements' queries for parameter tables [ID_38460]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+When a *Get parameters from elements* query is executed for a parameter table, from now on, the table sessions that are used to resolve those tables in parallel will be closed asynchronously.
+
+As a result, overall performance of clients like the Dashboards app or a low-code app will significantly increase when executing this type of queries.
 
 #### DxMs upgraded [ID_38499]
 

@@ -45,6 +45,14 @@ On systems with a MySQL database, SLProtocol will continue to fetch element data
 
 DataMiner upgrade actions related to SLAnalytics features now also support Cassandra connections with TLS.
 
+#### GQI: Enhanced performance when executing 'Get parameters from elements' queries for parameter tables [ID_38460]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+When a *Get parameters from elements* query is executed for a parameter table, from now on, the table sessions that are used to resolve those tables in parallel will be closed asynchronously.
+
+As a result, overall performance of clients like the Dashboards app or a low-code app will significantly increase when executing this type of queries.
+
 ### Fixes
 
 #### DataMiner installer: Some modules would not get installed while performing a full installation of a new DMA [ID_37719]

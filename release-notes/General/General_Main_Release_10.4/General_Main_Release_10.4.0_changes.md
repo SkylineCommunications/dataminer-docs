@@ -873,6 +873,12 @@ All processes that were still using the deprecated *SLMessageBroker.dll* or *CSL
 
 SLLogCollector will now also collect the backup logs of the *StorageModule* DxM located in the `C:\ProgramData\Skyline Communications\DataMiner StorageModule\Logs\Backup` folder.
 
+#### Failover: NATS nodes will now advertise their physical IP address instead of their virtual IP address [ID_38340]
+
+<!-- MR 10.4.0 - FR 10.4.3 -->
+
+From now, NATS nodes will advertise their physical IP address instead of their virtual IP address.
+
 #### SLProtocol will no longer log messages related to duplicate keys at the default log levels [ID_38392]
 
 <!-- MR 10.4.0 - FR 10.4.3 -->
