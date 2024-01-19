@@ -2,21 +2,13 @@
 uid: Cube_Feature_Release_10.4.2
 ---
 
-# DataMiner Cube Feature Release 10.4.2 – Preview
-1
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+# DataMiner Cube Feature Release 10.4.2
+
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to DataMiner Cube, see [General Feature Release 10.4.2](xref:General_Feature_Release_10.4.2).
-
-## Highlights
-
-*No highlights have been selected yet.*
-
-## New features
-
-*No new features have been added yet.*
 
 ## Changes
 

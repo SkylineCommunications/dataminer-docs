@@ -2,17 +2,18 @@
 uid: Web_apps_Feature_Release_10.4.2
 ---
 
-# DataMiner web apps Feature Release 10.4.2 – Preview
+# DataMiner web apps Feature Release 10.4.2
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to the web applications, see [General Feature Release 10.4.2](xref:General_Feature_Release_10.4.2).
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [Dashboards app & Low-Code Apps: All visualizations now have an Info button to access their help page [ID_38224]](#dashboards-app--low-code-apps-all-visualizations-now-have-an-info-button-to-access-their-help-page-id_38224)
+- [Low-Code Apps: Separate 'Delete draft' and 'Delete app' buttons [ID_37878]](#low-code-apps-separate-delete-draft-and-delete-app-buttons-id_37878)
 
 ## New features
 
