@@ -19,5 +19,4 @@ With this feature, users can:
   To make files or webpages available for remote access, add them in the folder `C:\Skyline DataMiner\Webpages\public\` on the DMA.
   
   > [!NOTE]
-  > Files in the folder `C:\Skyline DataMiner\Webpages\public\` will be hosted without authentication on the internal network of that DMA.
-  > Remote access will enforce that only authenticated members of the DMS can access it via dataminer.services.
+  > Files in the folder `C:\Skyline DataMiner\Webpages\public\` will be hosted without authentication on the internal network of a DMA. However, only authenticated members of the DMS will be able to access them via remote access.
