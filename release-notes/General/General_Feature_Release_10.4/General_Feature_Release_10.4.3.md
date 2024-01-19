@@ -45,11 +45,14 @@ maps.aspx?config=MyConfigFile&dmyElement=VesselData
 
 ### Enhancements
 
-#### SLAnalytics - Alarm focus: Alarm occurrences will now be identified using a combination of element ID, parameter ID and primary key  [ID_38184]
+#### SLAnalytics - Alarm focus: Alarm occurrences will now be identified using a combination of element ID, parameter ID and primary key  [ID_38184] [ID_38251]
 
 <!-- MR 10.4.0 - FR 10.4.3 -->
 
 When calculating alarm likelihood (i.e. focus score), up to now, the alarm focus feature used a combination of element ID, parameter ID and display key (if applicable) to identify previous occurrences of the same alarm. From now on, previous alarm occurrences will be identified using a combination of element ID, parameter ID and primary key.
+
+> [!NOTE]
+> When you upgrade to version 10.4.0/10.4.3, the Cassandra table *analytics_alarmfocus* will automatically be removed.
 
 #### NATS: All processes will now use the DataMinerMessageBroker.API NuGet package [ID_38193]
 
