@@ -4,7 +4,7 @@ uid: I-DOCSIS_Create_CCAP_CM_pair
 
 # Creating a new CCAP/CM pair
 
-To create CCAP/CM pairs, you can either start from scratch, or start from a CSV file.
+To create CCAP/CM pairs, you can either create a single element, or create bulk from a CSV file.
 
 ## Creating a new CCAP/CM pair from scratch
 
@@ -12,34 +12,43 @@ To create CCAP/CM pairs, you can either start from scratch, or start from a CSV 
 
 1. In the pane on the left, select the script *EPM_I_DOCSIS_AddNewCcapCmPair*.
 
-1. In the lower right corner, click *Execute*.
+1. In the lower right corner, click *Execute*, This will open a window
 
-   This will open a wizard with several steps.
+1. Click *Create single* button.
+
 
 1. In the **General** step:
 
-   1. Define the element name.
+   1. Define the element name. Mandatory field.
 
       > [!NOTE]
       > The name of the collector element will consist of the defined element name with the suffix "_COLLECTOR".
 
-   1. Select one of the back-end DMAs for the CCAP.
+   1. Select one of the Host for the CCAP.
 
-   1. Select one of the back-end DMAs for the collector.
+   1. Select one of the Host for the collector.
 
 1. In the **CCAP Details** step:
 
-   1. Select the desired CCAP protocol.
+   1. Select the desired CCAP protocol. 
 
    1. Select the desired protocol version. We recommend the production version.
 
-   1. Enter the IP address.
+   1. Enter the IP address. Mandatory field.
 
-   1. Enter the community string that will be used to poll the device (SNMP).
+   1. Enter the get community string that will be used to poll the device (SNMP) for the CCAP.
+
+   1. Enter the set community string that will be used to set information in the device (SNMP) for the CCAP.
+
+   1. Enter the get community string for the Collector.
+
+   1. Enter the set community string  for the Collector.
+
+   1. Enter the User for this device.
+
+   1. Enter the Password for this device.
 
 1. In the **View Details** step, select the location where the CCAP/CM pair will be added in the EPM view structure.
-
-1. In the **Interface Setting** step, define the username and password of an account that can access the **front-end DMA**.
 
 1. Click *Create*.
 
@@ -53,9 +62,10 @@ The elements will be created with the following specifications:
   - **IP address**: The defined IP address.
   - **Alarm template**: The default alarm template.
   - **Trend template**: The default trend template.
-  - **Get community string**: The defined community string.
-  - **Entity export directory**: `\\FE DMA Name\DataMiner EPM\DOCSIS`.
-  - **Entity import directory**: `\\FE DMA Name\DataMiner EPM\DOCSIS`.
+  - **Get community string CCAP**: The defined get community string for the CCAP.
+  - **Set community string CCAP**: The defined set community string for the CCAP.  
+  - **Entity export directory**: It will be the same as it is set in the Backend of the host.
+  - **Entity import directory**: It will be the same as it is set in the Backend of the host.
   - **Entity import directory type**: Remote.
   - **System username**: The system username.
   - **System password**: The system password.
@@ -68,8 +78,9 @@ The elements will be created with the following specifications:
   - **IP address**: 127.0.0.1.
   - **Alarm template**: public.
   - **Trend template**: private.
-  - **Get community string**: The defined community string.
-  - **Entity import directory**: `\\FE DMA Name\DataMiner EPM\DOCSIS`.
+  - **Get community string Collector**: The defined get community string for the Collector.
+  - **Set community string Collector**: The defined set community string for the Collector.  
+  - **Entity import directory**: It will be the same as it is set in the Backend of the host.
   - **Entity import directory type**: Remote.
   - **System username**: The system username.
   - **System password**: The system password.
@@ -85,25 +96,30 @@ The elements will be created with the following specifications:
 
 1. In the pane on the left, select the script *EPM_I_DOCSIS_AddNewCcapCmPair*.
 
-1. In the lower right corner, click *Execute*.
+1. In the lower right corner, click *Execute*, This will open a window
 
-   This will open a wizard with several steps.
+1. Click *Create bulk* button.
 
-1. Below the **Run automation** script text, enter the path of the CSV file.
+1. Below the **Create Bulk** script text, enter the path of the CSV file.
 
    > [!NOTE]
-   > The CSV file has to have the following structure: ElementName, Be_DMA, Collector_DMA, Protocol, IpAddress, CommunityString, Network, Market, Hub, SystemUser, SystemPass.
+   > The path has to be present in the host were the DMA is located.
+   > The CSV file has to have the following structure: ElementName, Ccap_DMA, Collector_DMA, Protocol,	IpAddress, GetCommunityString,	SetCommunityString,GetCommunityStringColl, SetCommunityStringColl, Network, Market,	Hub, SystemUser, SystemPass.
 
-1. Click *Run automation*.
+1. Click *Create Bulk* button.
 
 The elements will be created with the specifications in the CSV file of each row.
 
 Here is an example of the CSV file with the mandatory headers and the content of each row.
 
-| ElementName | Be_DMA               | Collector_DMA        | Protocol                  | IpAddress    | CommunityString | Network | Market          | Hub           | SystemUser | SystemPass |
-|-------------|----------------------|----------------------|---------------------------|--------------|-----------------|---------|-----------------|---------------|------------|------------|
-| filename1   | EPM-BE-PUE-LAB-DMA03 | EPM-BE-PUE-LAB-DMA03 | CISCO CMTS CCAP Platform  | 127.0.0.100  | AnyText          | BAJIO   | AGUASCALIENTES | CTC-AGS       | us1        | Pass1      |
-| filename2   | EPM-BE-CLN-LAB-DMA04 | EPM-BE-PUE-LAB-DMA03 | Arris E6000 CCAP Platform | 127.0.0.101  | AnyText          | BAJIO   | AGUASCALIENTES | CTC-AGS       | us2        | Pass2      |
+| ElementName | Ccap_DMA    | Collector_DMA | Protocol                  | IpAddress    | GetCommunityString | SetCommunityString | GetCommunityStringColl | SetCommunityStringColl | Network         | Market          | Hub            | SystemUser | SystemPass |
+|-------------|-------------|----------------|---------------------------|--------------|---------------------|---------------------|------------------------|------------------------|-----------------|------------------|-----------------|-------------|------------|
+| filename1   | SLC-H62-G05 | SLC-H62-G05    | CISCO CBR-8 CCAP Platform | 127.0.0.100  | getPublic           | setprivate          | collectorget           | collectorset           | GLOBAL NETWORK  | EAST MARKET 01   | EAST HUB 01     | US1         | 123        |
+| filename2   | SLC-H62-G05 | SLC-H62-G05    | CISCO CBR-8 CCAP Platform | 127.0.0.101  | getprivate          | setPublic           | collectorget           | collectorset           | GLOBAL NETWORK  | EAST MARKET 01   | EAST HUB 01     | US2         | 123        |
+
 
 > [!NOTE]
 > These are the only values accepted for the **Protocol** column: CISCO CMTS CCAP Platform, Arris E6000 CCAP Platform, Casa Systems CCAP Platform, CISCO CBR-8 CCAP Platform, Huawei 5688-5800 CCAP Platform.
+
+> [!NOTE]
+> Click the *Cancel* button in any window to close the Automation script at anytime.
