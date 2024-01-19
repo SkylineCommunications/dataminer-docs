@@ -10,6 +10,10 @@ uid: Cube_Feature_Release_10.4.2
 > [!TIP]
 > For release notes for this release that are not related to DataMiner Cube, see [General Feature Release 10.4.2](xref:General_Feature_Release_10.4.2).
 
+## Highlights
+
+- [System Center: 'Install Indexing Engine' button removed [ID_38145]](#system-center-install-indexing-engine-button-removed-id_38145)
+
 ## Changes
 
 ### Enhancements

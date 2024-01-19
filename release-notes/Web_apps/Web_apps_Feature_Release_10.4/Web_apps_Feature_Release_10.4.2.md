@@ -14,6 +14,7 @@ uid: Web_apps_Feature_Release_10.4.2
 
 - [Dashboards app & Low-Code Apps: All visualizations now have an Info button to access their help page [ID_38224]](#dashboards-app--low-code-apps-all-visualizations-now-have-an-info-button-to-access-their-help-page-id_38224)
 - [Low-Code Apps: Separate 'Delete draft' and 'Delete app' buttons [ID_37878]](#low-code-apps-separate-delete-draft-and-delete-app-buttons-id_37878)
+- [Dashboards app & Low-Code Apps - GQI: New 'Get profile instances' data source [ID_38138]](#dashboards-app--low-code-apps---gqi-new-get-profile-instances-data-source-id_38138)
 
 ## New features
 
@@ -87,7 +88,7 @@ When you enabled the filter assistance in a query filter component, up to now, a
 > - Filters for columns containing string values will continue to list discrete values, even when the columns do not contain discrete values.
 > - From now on, a filter list only show checkboxes when it lists boolean values, string values or discrete values.
 
-#### Dashboards app - GQI: New 'Get profile instances' data source [ID_38138]
+#### Dashboards app & Low-Code Apps - GQI: New 'Get profile instances' data source [ID_38138]
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
 
