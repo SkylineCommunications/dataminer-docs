@@ -32,7 +32,7 @@ To configure this setup, proceed as follows:
 
    - *PWD*: The password to connect to OpenSearch.
 
-   - *DB*: The prefix for the OpenSearch indexes. The specified value should match across all the OpenSearch configurations in the *DBConfiguration.xml*
+   - *DB*: The prefix for the OpenSearch indexes. The specified value must be the same for each OpenSearch cluster defined in *DB.xml*.
 
    - *FileOffloadIdentifier*: String used to identify this connection. Each connection should have a different identifier, which will be used for file offloads.
 
