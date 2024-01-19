@@ -99,6 +99,20 @@ From now on, when the value of a required list field is set to an empty list, on
 - `DomInstanceHasMissingRequiredFieldsForCurrentStatus` (when using the DOM status system)
 - `DomInstanceDoesNotContainAllRequiredFieldsForSectionDefinition` (when not using the DOM status system)
 
+#### DxMs upgraded [ID_38499]
+
+<!-- MR 10.5.0 - FR 10.4.3 -->
+
+The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
+
+- DataMiner ArtifactDeployer: version 1.6.4.14010
+- DataMiner CoreGateway: version 2.13.4.14181
+- DataMiner FieldControl: version 2.10.3.14011
+- DataMiner Orchestrator: version 1.5.3.14012
+- DataMiner SupportAssistant: version 1.6.4.14013
+
+For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
+
 ### Fixes
 
 #### Databases: Problem when starting a migration from MySQL to Cassandra [ID_37589]
