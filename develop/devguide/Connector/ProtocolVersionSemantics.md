@@ -14,16 +14,18 @@ A protocol version number consists of 4 numbers separated by periods. Each of th
 
 A.B.C.D
 
-- A = Branch
-- B = System version
-- C = Major change
-- D = Minor change
+- A = [Branch](#branch)
+- B = [System version](#system-version)
+- C = [Major change](#major-change)
+- D = [Minor change](#minor-change)
 
 For example: 1.0.0.1
 
 The combination of the first 3 numbers identifies the protocol version range.
 
 It is possible that different version ranges are maintained in parallel but we should always try to keep this to a minimum.
+
+![Protocol version semantics](~/develop/images/Connector_Version_Semantic.png)
 
 ### Branch
 
