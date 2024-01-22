@@ -57,22 +57,15 @@ using System.Linq;
 using System.Text;
 using Skyline.DataMiner.Net.Apps.DataMinerObjectModel.General;
 
-namespace RT_DOMMANAGER.RT_DOMMANAGER_FullSetup.Dependencies.CrudScript
+namespace Example
 {
     public class Script
     {
         [AutomationEntryPoint(AutomationEntryPointType.Types.OnDomInstanceCrudWithFullMeta)]
         public void OnDomInstanceCrudWithFullMeta(IEngine engine, DomInstanceCrudMeta crudMeta)
         {
-            if (crudMeta.CrudType != CrudType.Update)
-            {
-                engine.GenerateInformation($"CRUD script triggered by the '{crudMeta.CrudType}' action on DomInstance with name '{crudMeta.CurrentVersion.Name}'");
-                return;
-            }
-    
-            // Output all changed fields
             var sb = new StringBuilder();
-            sb.AppendLine($"CRUD script triggered by the 'Update' action on DomInstance with name '{crudMeta.CurrentVersion.Name}'. Changes:");
+            sb.AppendLine($"CRUD script triggered by the '{crudMeta.CrudType}' action on DomInstance with name '{crudMeta.CurrentVersion.Name}'. Changes:");
         
             var differences = crudMeta.GetDifferences().FieldValues;
         
