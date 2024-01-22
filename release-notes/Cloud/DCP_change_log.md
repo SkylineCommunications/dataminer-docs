@@ -6,6 +6,10 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 22 January 2024 - Enhancement - ArtifactDeployer 1.6.5 - Added DMA ID in deployment events [ID_38447]
+
+In combination with CoreGateway 2.14.0 or higher, the ArtifactDeployer will be able to include the DMA ID in the deployment events that are shown on the Deployments page of a DMS in the [Admin app](https://admin.dataminer.services). In case of a failure, particularly in a cluster, this points you directly to the server where you need to take a look at the logs for further investigation.
+
 #### 16 January 2024 - Fix - CoreGateway 2.13.4/2.14.3 - Timeout error when deploying protocol from Catalog [ID_38464]
 
 In some rare cases, a timeout error could occur when a protocol was deployed from the Catalog. This issue has been resolved.
