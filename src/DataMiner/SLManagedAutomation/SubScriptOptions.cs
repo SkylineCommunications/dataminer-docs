@@ -65,7 +65,7 @@ namespace Skyline.DataMiner.Automation
 		public bool WaitWhenLocked { get; set; }
 
 		/// <summary>
-		/// Gets or sets a value indicating whether the script will return more detailed error information instead of throwing an exception. These can be retrieved with method <see cref="SubScriptOptions.GetErrorMessages"/>. This is supported from DataMiner 10.3.0/10.2.7 onwards.
+		/// Gets or sets a value indicating whether the script will return more detailed error information instead of throwing an exception. These can be retrieved with method <see cref="SubScriptOptions.GetErrorMessages"/>. This is supported from DataMiner 10.3.0/10.2.7 onwards (RN 33306).
 		/// </summary>
 		/// <value><c>true</c> if the script will return more detailed error info instead of throwing an exception; otherwise, <c>false</c>.</value>
 		/// <example>
