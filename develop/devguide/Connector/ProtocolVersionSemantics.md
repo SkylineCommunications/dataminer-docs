@@ -14,10 +14,10 @@ A protocol version number consists of 4 numbers separated by periods. Each of th
 
 A.B.C.D
 
-- A = [Branch](### Branch)
-- B = [System version](### System version)
-- C = [Major change](### Major change)
-- D = [Minor change](### Minor change)
+- A = [Branch](#branch)
+- B = [System version](#system-version)
+- C = [Major change](#major-change)
+- D = [Minor change](#minor-change)
 
 For example: 1.0.0.1
 
