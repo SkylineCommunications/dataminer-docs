@@ -28,4 +28,15 @@ No fix is available yet.
 
 After upgrading a DataMiner System with a Failover pair to DataMiner 10.3.0 [CU9]/10.3.12 or higher, the Failover Agents remain offline.
 
-The *SLFailover.txt* logging (*C:\Skyline DataMiner\SLFailover.txt*) contains a mention that all heartbeat paths have failed.
+In *SLFailover.txt*, there are errors mentioning that all heartbeat paths have failed. For example:
+
+```txt
+2023/12/22 14:49:56.886|SLNet.exe|UpdateFailoverSwitchStatus|CRU|0|67|Failover Status => Offline
+2023/12/22 14:49:56.886|SLNet.exe|UpdateFailoverSwitchStatus|CRU|0|67|Failover Status => Preparing to go online
+2023/12/22 14:49:56.887|SLNet.exe|ForceOtherAgentsToOffline|INF|0|67|Notifying buddy agent to go offline (dma-srv-01-m (172.18.206.131) wants to go online) ...
+2023/12/22 14:49:56.887|SLNet.exe|ForceOtherAgentsToOffline|INF|0|67|Trying to notify other agent to go offline via one of 172.18.206.132 (agent appears to be missing)
+2023/12/22 14:54:56.834|SLNet.exe|ForceOtherAgentsToOffline|INF|0|67|Failed setting state for '172.18.206.132' to Offline: 172.18.206.132 ignored request: All heartbeat paths are failing. Preventing ping-pong.
+```
+
+> [!NOTE]
+> The Failover pair is affected only if this error appears for both the main and the backup servers.
