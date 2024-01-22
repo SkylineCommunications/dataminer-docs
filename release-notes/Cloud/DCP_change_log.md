@@ -38,6 +38,10 @@ The ArtifactDeployer DxM will now periodically send a health check to the cloud 
 
 The CoreGateway DxM will now periodically send a health check to the cloud to indicate that the DxM is running using correct identifiers.
 
+#### 16 January 2024 - Enhancement - ArtifactDeployer 1.6.3 - Added Node ID in deployment events [ID_38421]
+
+The ArtifactDeployer will include the Node ID in the deployment events that are shown on the Deployments page of a DMS in the [Admin app](https://admin.dataminer.services). In case of a failure, particularly in a cluster, this points you directly to the server where you need to take a look at the logs for further investigation.
+
 #### 12 January 2024 - New Feature - Remote access for custom files/webpages [ID_38426]
 
 It is now possible to provide remote access via dataminer.services to files or webpages. To do so, add them in the folder `C:\Skyline DataMiner\Webpages\public\` on your DMA. To access such files, users can use the remote access URL followed by `/public/` (e.g. the file *image.png* via `https://ziine-skyline.on.dataminer.services/public/image.png`).
