@@ -25,7 +25,7 @@ The combination of the first 3 numbers identifies the protocol version range.
 
 It is possible that different version ranges are maintained in parallel but we should always try to keep this to a minimum.
 
-![Protocol version semantics](~/images/Connector_Version_Semantic.png)
+![Protocol version semantics](~/develop/images/Connector_Version_Semantic.png)
 
 ### Branch
 
