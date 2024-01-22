@@ -7,6 +7,7 @@ uid: Known_issues
 
 | Issue | DataMiner version | Date added |
 |--|--|--|
+| [Failover Agents remain offline after upgrade](xref:KI_Failover_Agents_offline_after_upgrade) | From DataMiner 10.3.0 [CU9]/10.3.12 onwards | January 22, 2024 |
 | [NATS services missing after reboot](xref:KI_missing_NATS_services) | Any version | January 10, 2024 |
 | [Problem after removing DMA from cluster](xref:KI_Problem_after_removing_DMA_from_cluster) | Any DataMiner version with clustered storage <br>and/or indexing | December 15, 2023 |
 | [Upgrade fails because of VerifyNoLegacyReportsDashboards.dll prerequisite](xref:KI_Upgrade_fails_VerifyNoLegacyReportsDashboards_prerequisite) | From DataMiner 10.4.0 onwards | November 23, 2023 |
@@ -17,6 +18,7 @@ uid: Known_issues
 
 | Issue | DataMiner version | Date added |
 |--|--|--|
+| [Failover Agents remain offline after upgrade](xref:KI_Failover_Agents_offline_after_upgrade) | From DataMiner 10.3.0 [CU9]/10.3.12 onwards | January 22, 2024 |
 | [NATS services missing after reboot](xref:KI_missing_NATS_services) | Any version | January 10, 2024 |
 | [Problem after removing DMA from cluster](xref:KI_Problem_after_removing_DMA_from_cluster) | Any DataMiner version with clustered storage <br>and/or indexing | December 15, 2023 |
 | [Cube freezes on 'Connected!' loading screen when no alarm tabs are displayed](xref:KI_Cube_connection_issue_alarm_tabs) | DataMiner 10.3.9 and 10.3.10 <br>Any versions from DataMiner 10.2.0 onwards using automatic client updates| October 16, 2023 |
