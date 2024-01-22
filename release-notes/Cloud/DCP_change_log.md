@@ -6,9 +6,9 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
-#### 22 January 2024 - Enhancement - ArtifactDeployer 1.6.5 - Added DMA ID in deployment events [ID_38485]
+#### 22 January 2024 - Enhancement - ArtifactDeployer 1.6.5 - Added DMA ID to deployment events [ID_38485]
 
-In combination with CoreGateway 2.14.0 or higher, the ArtifactDeployer will be able to include the DMA ID in the deployment events that are shown on the Deployments page of a DMS in the [Admin app](https://admin.dataminer.services). In case of a failure, particularly in a cluster, this points you directly to the server where you need to take a look at the logs for further investigation.
+In combination with CoreGateway 2.14.0 or higher, the ArtifactDeployer will be able to include the DMA ID in deployment events, visible on the *Deployments* page of a DMS in the [Admin app](https://admin.dataminer.services). In case of a failure, particularly in a cluster, this ID provides a direct link to the server whose logs you need examine for further investigation.
 
 #### 16 January 2024 - Fix - CoreGateway 2.13.4/2.14.3 - Timeout error when deploying protocol from Catalog [ID_38464]
 
@@ -38,9 +38,9 @@ The ArtifactDeployer DxM will now periodically send a health check to the cloud 
 
 The CoreGateway DxM will now periodically send a health check to the cloud to indicate that the DxM is running using correct identifiers.
 
-#### 16 January 2024 - Enhancement - ArtifactDeployer 1.6.3 - Added Node ID in deployment events [ID_38421]
+#### 16 January 2024 - Enhancement - ArtifactDeployer 1.6.3 - Added node ID to deployment events [ID_38421]
 
-The ArtifactDeployer will include the Node ID in the deployment events that are shown on the Deployments page of a DMS in the [Admin app](https://admin.dataminer.services). In case of a failure, particularly in a cluster, this points you directly to the server where you need to take a look at the logs for further investigation.
+The ArtifactDeployer will include the node ID in deployment events, visible on the *Deployments* page of a DMS in the [Admin app](https://admin.dataminer.services). In case of a failure, particularly in a cluster, this ID provides a direct link to the server whose logs you need examine for further investigation.
 
 #### 12 January 2024 - New Feature - Remote access for custom files/webpages [ID_38426]
 
