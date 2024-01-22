@@ -205,8 +205,10 @@ items:
     topicUid: Known_issues
     items:
       - name: Current issues
-        topicUid: KI_missing_NATS_services
+        topicUid: KI_Failover_Agents_offline_after_upgrade
         items:
+          - name: Failover Agents remain offline after upgrade
+            topicUid: KI_Failover_Agents_offline_after_upgrade
           - name: NATS services missing after reboot
             topicUid: KI_missing_NATS_services
           - name: Problem after removing DMA from cluster
