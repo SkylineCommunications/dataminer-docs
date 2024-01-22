@@ -133,6 +133,7 @@ On DataMiner versions installed using the **10.0 installer** (or older), the Dat
 
   > [!NOTE]
   > This rule and the one above for TCP 7000 only apply when the DataMiner System uses a Cassandra database locally.
+  > If Cassandra is configured to TLS, port 7001 and 9142 are used instead. For detailed information on securing Cassandra, refer to [securing self hosted storage](#secure-self-hosted-dataminer-storage).
 
 - TCP 9200: Elasticsearch (client-server communication)
 
