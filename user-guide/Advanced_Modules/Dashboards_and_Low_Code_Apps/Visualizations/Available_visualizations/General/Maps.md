@@ -30,7 +30,7 @@ For markers, the process of applying the dimensions works as follows:
 
 This process is similar for the configuration of lines, but instead of one latitude and longitude value, two pairs of coordinates need to be configured, one for the starting point and one for the end point of the line.
 
-## Layer settings
+## Configuring layer settings
 
 On the *Component > Layout* tab, you can configure the following settings under *Layer settings*:
 
@@ -40,10 +40,13 @@ On the *Component > Layout* tab, you can configure the following settings under 
 
 - **Identifier**/**Latitude**/**Longitude**: For each dimension, a dropdown box is shown where the column used for that dimension can be changed. You can only select valid options for each dimension. For markers, you need to select string-valued columns for the ID and numeric-valued columns for the latitude and longitude. For lines, you need to select a latitude and longitude for both the source and the destination.
 
-- **Template**: Only available when the query is configured as a set of markers. Allows you to change the appearance of the markers. When you click Edit, an editor window opens where you can make changes to the template.
+- **Template**: Only available when the query is configured as a set of markers. Allows you to change the appearance of the markers. When you click *Edit*, an editor window opens where you can make changes to the template.
 
   > [!NOTE]
   > The center of the marker template is determined by the latitude and longitude values for that marker.
+
+  > [!TIP]
+  > For more information on how to use the Template Editor to customize the appearance of the markers, see [Using the Template Editor](xref:Template_Editor).
 
 - **Style**: When the query is configured as a set of lines, you can use these settings to change the appearance of the lines. You can change the color, direction visualization, type, and width of the lines.
 
@@ -53,7 +56,7 @@ On the *Component > Layout* tab, you can configure the following settings under 
 
   - *Weight*: Similar to the weight setting on layer level, this setting determines which markers or lines are pushed to the foreground when two markers or lines from the same layer overlap with each other.
 
-## Map settings
+## Configuring map settings
 
 On the *Component > Layout* tab, you can configure the following settings under *Map settings*:
 
@@ -73,6 +76,13 @@ On the *Component > Layout* tab, you can configure the following settings under 
 - *Default Map Type* > *Map type*: Allows you to select the type of the map. The available types depend on the map provider. At present, only Google Maps is supported, with the following map types: *roadmap*, *satellite*, *hybrid*, and *terrain*.
 
 - *Default Map Type* > *Show map type control*: Makes the map type setting visible in the component itself.
+
+In addition, in the *Settings* tab for this component, you can further customize the map behavior:
+
+- *Update data*: If you want the data in the map to be refreshed automatically (provided this is supported by the data source), set this setting to *On*.
+
+  > [!NOTE]
+  > This is currently only applicable for the markers on the map. Real-time updates are not yet supported for lines.
 
 ## Adding actions
 

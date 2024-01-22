@@ -20,8 +20,6 @@ Currently, the pipeline consists of the following stages:
 
 - [Sync DataMiner feature release DLLs](#sync-dataminer-feature-release-dlls)
 
-- [Sync DIS version](#sync-dis-version)
-
 - [Build on latest feature release](#build-on-latest-feature-release)
 
 - [Convert solution to XML](#convert-solution-to-xml)
@@ -87,10 +85,6 @@ For solutions that consist of SDK-style projects:
 ## Sync DataMiner feature release DLLs
 
 This stage ensures that the next build stage will build against the latest feature release of DataMiner. It will verify on DCP whether a new feature release has been released and, if it has, Jenkins will make sure to use that feature release to build against from that point onwards.
-
-## Sync DIS version
-
-This stage ensures that the pipeline uses the latest version of DIS. It verifies whether a new version has been released, and if that is the case, the new version is obtained.
 
 ## Build on latest feature release
 

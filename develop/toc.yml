@@ -1,3 +1,4 @@
+items:
 - name: DataMiner Development Guide
   topicUid: DevelopmentGuide
   items:
@@ -144,6 +145,15 @@
           topicUid: LogicConditions
         - name: Examples
           topicUid: LogicExamples
+        - name: Use cases
+          topicUid: LogicUseCase1
+          items:
+          - name: Internal flow - concept
+            topicUid: LogicUseCase1
+          - name: Internal flow - element startup
+            topicUid: LogicUseCase2
+          - name: Internal flow - QActions
+            topicUid: LogicUseCase3
       - name: Inner workings
         topicUid: InnerWorkings
         items:
@@ -379,6 +389,8 @@
           topicUid: ConnectionsHttpParsingJson
         - name: Examples
           topicUid: ConnectionsHttpExamples
+        - name: Use case
+          topicUid: ConnectionsHttpUseCase
       - name: WebSockets
         topicUid: ConnectionsWebSockets
         items:
@@ -671,11 +683,14 @@
     - name: UIBlockType overview
       topicUid:  UIBlockTypesOverview
     - name: How-tos
+      topicUid: How_to_make_your_automation_scripts_debug_ready
       items:
       - name: How to make your Automation scripts debug ready
         topicUid: How_to_make_your_automation_scripts_debug_ready
       - name: Getting started with the IAS Toolkit
         topicUid: Getting_Started_with_the_IAS_Toolkit
+      - name: Implementing interactive Automation scripts in regression tests (best practices)
+        topicUid: BP_Implementing_IAS_in_Regression_Tests
   - name: Class Library
     topicUid: ClassLibraryIntroduction
     items:
@@ -5105,15 +5120,22 @@
   items:
   - name: Platform-independent CI/CD
     topicUid: Platform_independent_CICD
+  - name: CI/CD using command line
+    topicUid: CICD_Command_Line_Examples
+    items:
+    - name: Command line examples
+      topicUid: CICD_Command_Line_Examples
   - name: CI/CD using GitHub
     topicUid: CICD_on_GitHub
     items:
+    - name: GitHub example workflows
+      topicUid: CICD_GitHub_Examples
     - name: GitHub starter workflows
       topicUid: github_starter_workflows
     - name: GitHub validation requirements
       topicUid: github_validation_requirements
-    - name: Deploying from GitHub
-      topicUid: Deploying_Automation_scripts_from_a_GitHub_repository
+    - name: Marketplace deployment action
+      topicUid: Marketplace_deployment_action
     - name: GitHub reusable workflows
       topicUid: github_reusable_workflows
       items:
@@ -5124,10 +5146,27 @@
       - name: Reusable workflow SRM function
         topicUid: github_reusable_workflows_srm_function_master_workflow
   - name: CI/CD using GitLab
-    topicUid: Deploying_Automation_scripts_from_a_GitLab_repository
+    topicUid: CICD_GitLab_Examples
     items:
-    - name: Deploying from GitLab
-      topicUid: Deploying_Automation_scripts_from_a_GitLab_repository
+    - name: GitLab examples
+      topicUid: CICD_GitLab_Examples
+    - name: Docker deployment action
+      topicUid: Docker_deployment_action
+  - name: CI/CD using Jenkins
+    topicUid: CICD_Jenkins_Examples
+    items:
+    - name: Jenkins examples
+      topicUid: CICD_Jenkins_Examples
+  - name: CI/CD using Azure DevOps
+    topicUid: CICD_Azure_DevOps_Examples
+    items:
+    - name: Azure DevOps examples
+      topicUid: CICD_Azure_DevOps_Examples
+  - name: CI/CD using Concourse
+    topicUid: CICD_Concourse_Examples
+    items:
+    - name: Concourse examples
+      topicUid: CICD_Concourse_Examples
   - name: CI/CD at Skyline Communications
     topicUid: CICD_at_Skyline
     items:
@@ -5194,8 +5233,6 @@
           topicUid: Automation_scripts_as_a_Visual_Studio_solution
         - name: Pipeline stages for Automation scripts
           topicUid: Pipeline_stages_for_Automation_scripts
-        - name: Deploying Automation scripts from a repository
-          topicUid: Deploying_Automation_scripts_from_a_repository
       - name: Visual overview development with CI/CD pipeline
         topicUid: Pipeline_stages_for_visual_overviews
         items:
@@ -5388,7 +5425,7 @@
         - name: Viewing test results
           topicUid: Viewing_test_results
     - name: Third-party Tools
-      uid: ThirdPartyTools
+      topicUid: ThirdPartyTools
       items:
       - name: DataStax DevCenter
         topicUid: DataStax_DevCenter
@@ -5493,7 +5530,7 @@
         topicUid: Visual_Studio_Code
       - name: Wireshark
         topicUid: Wireshark
-- name: DataMiner Device-Specific Integrations
+- name: DataMiner device-specific integrations
   topicUid: DSI
   items:
     - name: Spectrum analyzer
@@ -5529,6 +5566,14 @@
           topicUid: DSI_OpenConfig_Introduction
         - name: Middleware package
           topicUid: DSI_OpenConfig_Middleware
+- name: DataMiner module integrations
+  topicUid: DataMinerModuleIntegrations
+  items:
+    - name: User-definable APIs
+      topicUid: DMI_UserDefinableAPIs
+      items:
+        - name: Bad and best practices
+          topicUid: UD_APIs_Bad_and_Best_Practices
 - name: Third-party integrations
   topicUid: ThirdPartyIntegrations
   items:

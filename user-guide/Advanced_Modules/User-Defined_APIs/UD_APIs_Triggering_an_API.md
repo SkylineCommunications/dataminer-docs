@@ -20,7 +20,7 @@ To test sending a request, you can use a tool like Postman.
 To send a request to *UserDefinableApiEndpoint*, use a URL in the format `http(s)://{hostname}/api/custom/{route}`. (See [Route](xref:UD_APIs_Define_New_API#route).)
 
 > [!NOTE]
-> If your DataMiner System is connected to dataminer.services, you can also call your user-defined API through dataminer.services. To do so, replace the `{hostname}` part of the URL with the remote access URL of your system (see [Remote access](xref:Cloud_Remote_Access)).
+> If your DataMiner System is connected to dataminer.services and the [Remote Access setting](xref:Controlling_remote_access) is enabled, you can also call your user-defined API through dataminer.services. To do so, replace the `{hostname}` part of the URL with the remote access URL of your system (see [Remote access](xref:Cloud_Remote_Access)).
 
 Examples:
 
@@ -136,6 +136,7 @@ The *errorCode* field of an error contains an error code that can be used by the
 | InvalidAutomationActionResult | 13 | 500 | The result returned by the Automation script was null or invalid. |
 | FailedToGetScriptInfo | 15 | 500 | Could not get the script info required to execute the script. |
 | MissingScriptParameters | 16 | 400 | There are missing script parameters in the request body. The "error" JSON object will contain the missing script parameters as a `missingScriptParameters` array. |
+| ResponseBodyTooLarge | 17 | 500 | The response body returned by the API exceeds the limit of 29 MB. |
 | NatsRequestFailed | 1001 | 500 | Failed to send the NATS request to the DataMiner Agent. |
 | UnknownStatusCode | 1002 | 500 | The response code returned by the Automation script was invalid. |
 | InvalidContentType | 1003 | 415 | The [Content-Type](#content-type) HTTP header is not supported. |
@@ -144,7 +145,7 @@ The *errorCode* field of an error contains an error code that can be used by the
 | MessageBrokerNotInitialized | 1006 | 503 | The message broker and session used to connect to NATS have not been initialized yet. |
 | FailedToReadBody | 1007 | 500 | An exception was thrown while reading the request body. |
 | AuthenticationHeaderInvalid | 1008 | 401 | The HTTP [authentication](#authentication) header is not valid. Make sure the token is passed as a `Bearer` token. |
-| BodyTooLarge | 1009 | 413 | The body size is limited to 30 MB. This error will be thrown if the size is larger than that. |
+| BodyTooLarge | 1009 | 413 | The body size is limited to 29 MB. This error will be thrown if the size is larger than that. |
 | AuthenticationFailed | 1010 | 401 | The passed secret is empty, is invalid, is disabled, cannot be found, or is not allowed for this API definition. |
 | QueryStringTooLarge | 1011 | 414 | The query string size is limited to 2 KB. This error will be thrown if the size is larger than that. |
 

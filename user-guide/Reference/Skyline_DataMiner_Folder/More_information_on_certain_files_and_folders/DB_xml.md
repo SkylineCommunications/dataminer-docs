@@ -517,6 +517,9 @@ The *\<Database>* tag for an indexing database has the following attributes:
 > - DataMiner 10.3.0 [CU0] up to 10.3.0 [CU8] and from DataMiner 10.3.3 up to 10.3.11, OpenSearch and Amazon OpenSearch Services can be used.
 > - From DataMiner 10.2.0/10.1.3 onwards, a *DBConfiguration.xml* file can be configured, which overrides the settings in this section of *DB.xml*. See [Configuring multiple OpenSearch clusters](xref:Configuring_multiple_OpenSearch_clusters) or [Configuring multiple Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters).
 
+> [!TIP]
+> See also: [Manually connecting a DMA to an indexing database](xref:Manually_Connecting_DMA_to_Elasticsearch_Cluster)
+
 ### Defining a custom port for an indexing database
 
 From DataMiner 10.0.7 onwards, you can define a custom port for an indexing database. By default, port 9200 is used.

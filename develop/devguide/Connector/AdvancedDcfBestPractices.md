@@ -58,7 +58,7 @@ The **Skyline Generic Provisioning** connector allows provisioning of DCF extern
 
 For DataMiner Systems using DataMiner IDP, IDP can be used to provision DCF connectivity for the elements in the managed inventory.
 
-A custom script “Connectivity Discovery” per CI type can be run for an element. Like with any custom script, it integrates with the connector and the element (the digital twin of the equipment).
+A custom script “Connectivity Discovery” per CI type can be run for an element (see [Implementing the Connectivity Discovery script](xref:ConnectivityDiscoveryScript)). Like with any custom script, it integrates with the connector and the element (the digital twin of the equipment).
 
 In that way, existing protocols (e.g. LLDP, CDP, ARP, etc.) that expose information about a device's neighbors can be leveraged to discover and provision connectivity.
 

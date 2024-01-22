@@ -305,9 +305,100 @@ The following improvements have been implemented to average trending:
 
 However, note that this results in a number of breaking changes:
 
-- Some special status trend points will no longer be used. For more detailed information, see [Special status trend points](https://community.dataminer.services/documentation/average-trending-calculation/#special-status-trend-points).
-- In some specific cases, intervals between two average trend points are no longer guaranteed to be constant. For more information, see [Granularity of averaged trend data](https://community.dataminer.services/documentation/average-trending-calculation/#granularity-of-averaged-trend-data).
-- The exception values of continuous (non-discrete) parameters are now averaged in a discrete manner. For more information, see [Protocol-defined exception values](https://community.dataminer.services/documentation/average-trending-calculation/#protocol-defined-exception-values).
+- Some special status trend points will no longer be used. For more detailed information, see [Special status trend points](#special-status-trend-points).
+
+- In some specific cases, intervals between two average trend points are no longer guaranteed to be constant. For more information, see [Granularity of averaged trend data](#granularity-of-averaged-trend-data).
+
+- The exception values of continuous (non-discrete) parameters are now averaged in a discrete manner. For more information, see [Protocol-defined exception values](#protocol-defined-exception-values).
+
+##### Special status trend points
+
+The table below contains all the possible special status trend points.
+
+The last column indicates the changes that have been made to these status points since the release of the improved average trending feature. This applies to both the general and offload database.
+
+| Value | Description | State |
+|--|--|--|
+| 120 | In case of average trending: The table entry contains average/max/min values calculated based on the parameter values measured during the last day. | OK |
+| 60 | In case of average trending: The table entry contains average/max/min values calculated based on parameter values measured during the last 60 minutes. | OK |
+| 5 | In case of average trending: The table entry contains average/max/min values calculated based on parameter values measured during the last 5 minutes. | OK |
+| 0 | In case of real-time trending: The table entry contains normal real-time trend data without additional information. | OK |
+| -1 | Element is starting up. | OK |
+| -2 | Element is being paused. | OK |
+| -3 | Element is being activated. | OK |
+| -4 | Element is going into a timeout state. | OK |
+| -5 | Element is coming out of a timeout state. | OK |
+| -6 | Element is being stopped. | OK |
+| -7 | A state and a display value (e.g. “No signal”) was received (separated by a semicolon). | OK |
+| -8 | A normal value was received following a “-7”. | OK |
+| -9 | Trending was started for the specified parameter. | UNKNOWN |
+| -10 | Trending was stopped for the specified parameter. | OK |
+| -11 | The parameter value was cleared. | OK |
+| -12 | The parameter again received a value following a “-11”. | REMOVED |
+| -13 | The parameter value is the first value received for the parameter in question since the element was started. | REMOVED |
+| -14 | The parameter value is the first value received for the parameter in question since the element was started. However, that value is an exception value. | REMOVED |
+| -15 | A new row has been added to the dynamic table in question. | UNKNOWN |
+| -16 | A row has been deleted from the dynamic table in question. | UNKNOWN |
+| -17 | Monitoring has been activated. | UNKNOWN |
+| -18 | Monitoring has been deactivated. | UNKNOWN |
+
+##### Granularity of averaged trend data
+
+There are currently three types of average trend data:
+
+- Short average trend data (typically one point every 5 minutes)
+- Medium average trend data (typically one point every 1 hour)
+- Long average trend data (typically one point every 1 day)
+
+With the improved average trending, enabling short average trend data does not guarantee that all average points will be written at exact 5-minute intervals. This is because some conditions can cause the average trend point to be written prematurely:
+
+- The element was (re)started. The start time of the average point will be the exact time the element was started.
+- The element was stopped. The end time of the average point will be the exact time the element was stopped.
+- The trended parameter was cleared. The end time of the average point will be the exact time the parameter was cleared. Once a new parameter change is received, the next average point will have this timestamp as the start time.
+
+Before the changes introduced with this release note, the intervals between two average trend points are practically always constant.
+
+This means that now, in cases where trend exports are generated and a fixed interval is expected, e.g. when exporting the 5-minute average trending points, this could be an issue. However, to handle such cases where fixed intervals are required, a [legacy trend data exporter tool](xref:Legacy_Trend_Data_Exporter) is available.
+
+##### Protocol-defined exception values
+
+Let’s start from the example of a protocol with the following exception values:
+
+```xml
+<Exception id="1" value="-1">
+<Exception id="2" value="-2">
+<Exception id="3" value="-3">
+```
+
+- When will exception values not affect the average value?
+
+  Consider the following sequence of parameter changes:
+
+  | Timestamp | Value |
+  |--|--|
+  | 00:00:00 | 10 |
+  | 00:01:00 | -1 |
+  | 00:02:00 | 11 |
+  | 00:03:00 | -2 |
+  | 00:04:00 | 12 |
+
+  If the given parameter changes are averaged over 5 minutes (00:00:00 – 00:05:00), the resulting average value is 11. Exception values are ignored here, since they were mixed with regular non-exception parameter values. Values 10, 11 and 12 were all active for exactly 60 seconds. Therefore, the average is calculated as follows:
+
+  `(60 * 10 + 60 * 11 + 60 * 12) / 180 = 11`
+
+- When will exception values affect the average value?
+
+  Consider the following sequence of parameter changes:
+
+  | Timestamp | Value |
+  |--|--|
+  | 00:00:00 | -1 |
+  | 00:03:00 | -2 |
+  | 00:04:00 | -3 |
+
+  If the given parameter changes are averaged over 5 minutes (00:00:00 – 00:05:00), the resulting average value is –1. Because only exception values were encountered during the given time window, the value that was active for the longest amount of time is selected as the average.
+
+  Note that exception values are always interpreted as discrete values.
 
 #### SLAnalytics - Automatic incident tracking: Grouping on generic alarm, element, service and view properties \[ID_28820\]
 

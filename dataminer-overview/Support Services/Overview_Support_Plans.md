@@ -58,4 +58,4 @@ Support plans may include free [Professional Service Credits](https://community.
 
 | Pay-per-use credits | Subscription plan | Perpetual-Use Licenses |
 |:-:|:-:|:-:|
-| 50 for every 1000 credits |  100 < MUA < 200: 100 <br> 200 < MUA < 400: 200 <br> MUA >= 400: 600 | Only available with Evolve plan <br> Varies with the support's yearly net amount |
+| 50 for every 1000 credits |  100 < MUA < 200: 100 <br> 200 < MUA < 400: 200 <br> MUA >= 400: 600 | 200 <br> Only available with Evolve plan |

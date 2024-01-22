@@ -4,13 +4,13 @@ uid: Installing_Elasticsearch_via_DataMiner
 
 # Installing Elasticsearch on a DMA via DataMiner
 
-If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STaaS) setup but instead want to use a self-hosted storage setup with a Cassandra database per DMA, you can install Elasticsearch via DataMiner as detailed below.
+> [!IMPORTANT]
+> From DataMiner 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0]/10.4.2 onwards, it is no longer possible to install Elasticsearch in the manner described below. We recommend switching to [Storage as a Service (STaaS)](xref:STaaS) or, if you want to continue using self-hosted storage, using [OpenSearch](xref:OpenSearch_database) instead. DataMiner only supports Elasticsearch up to version 6.8, which is no longer supported by Elastic.
+
+If you have a setup with [storage per DMA](xref:Configuring_storage_per_DMA) instead of the recommended [Storage as a Service (STaaS)](xref:STaaS) setup, prior to DataMiner 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0]/10.4.2, you can install Elasticsearch via DataMiner as detailed below in order to get access to more DataMiner features.
 
 > [!NOTE]
-> Elasticsearch is only supported up to version 6.8. As a consequence, if you do want to use self-hosted storage instead of [STaaS](xref:STaaS), we recommend using [dedicated clustered storage](xref:Dedicated_clustered_storage) with OpenSearch.
-
-> [!IMPORTANT]
-> This procedure is intended for a setup using a Cassandra database per DMA. For a [dedicated clustered storage](xref:Dedicated_clustered_storage) setup with Elasticsearch, see [Installing Elasticsearch on a separate Linux machine](xref:Installing_Elasticsearch_on_separate_Linux_machine).
+> This procedure is intended for a setup using a **Cassandra database per DMA**. For a [dedicated clustered storage](xref:Dedicated_clustered_storage) setup with Elasticsearch, see [Installing Elasticsearch on a separate Linux machine](xref:Installing_Elasticsearch_on_separate_Linux_machine).
 
 1. In DataMiner Cube, go to *System Center \> Search & Indexing* and click *Install Indexing Engine*.
 

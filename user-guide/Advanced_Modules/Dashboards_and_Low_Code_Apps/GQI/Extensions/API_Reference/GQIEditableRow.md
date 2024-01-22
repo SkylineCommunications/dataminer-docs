@@ -96,6 +96,8 @@ The value, of type `object`, of the cell matching the provided column.
 
 Gets the value for the cell of the specified column.
 
+Available from DataMiner 10.3.4/10.4.0 onwards.<!-- RN 35734 -->
+
 #### Parameters
 
 - [GQIColumn](xref:GQI_GQIColumn) `column`: The column for which the value should be retrieved.
@@ -109,6 +111,8 @@ Gets the value for the cell of the specified column.
 
 Gets the value for the cell of the specified column.
 
+Available from DataMiner 10.3.4/10.4.0 onwards.<!-- RN 35734 -->
+
 #### Parameters
 
 - [GQIColumn\<T\>](xref:GQI_GQIColumn) `column`: The column for which the value should be retrieved.
@@ -121,6 +125,8 @@ Gets the value for the cell of the specified column.
 ### bool TryGetValue\<T\>(string columnName, out T value)
 
 Gets the value for the cell of the specified column name.
+
+Available from DataMiner 10.3.4/10.4.0 onwards.<!-- RN 35734 -->
 
 #### Parameters
 

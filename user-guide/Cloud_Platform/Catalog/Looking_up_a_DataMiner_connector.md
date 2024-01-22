@@ -1,32 +1,17 @@
 ---
-uid: Looking_up_a_DataMiner_connector
+uid: Looking_up_an_item_in_the_catalog
 ---
 
-# Looking up a DataMiner connector
+# Looking up an item in the Catalog
 
 When you open up the Catalog module, a search box is displayed.
 
-1. In the search box, enter (part of) the name of the connector (also known as “protocol” or “driver”) you are looking for.
+1. In the search box, enter (part of) the name of the item you are looking for (e.g. a connector, a package, etc.).
 
     As you type, the list will be narrowed down.
 
-2. As soon as you notice the name of the connector you are looking for, click it.
+1. As soon as you notice the name of the item you are looking for, click it.
 
-    You will now see all available information about this particular connector:
+   This will open a page where you can see information about the item and the different versions of the item.
 
-    - Name
-
-    - Publisher
-
-    - Current number of installations
-
-    - Type of protocol (serial, SNMP, etc.)
-
-    - Current version
-
-        > [!NOTE]
-        > To see the entire version history of the connector, click *Version history* above the version number.
-
-    - Detailed information on how to use this connector
-
-    - ...
+   You can also [deploy the item to your DataMiner System](xref:Deploying_a_catalog_item) from here.

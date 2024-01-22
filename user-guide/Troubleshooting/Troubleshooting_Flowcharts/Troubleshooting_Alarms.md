@@ -7,7 +7,7 @@ uid: Troubleshooting_Alarms
 > [!NOTE]
 >
 > - This page is currently still being developed. The content is not yet optimized and may not yet be fully accurate.
-> - If you need more information on how to execute any of the steps below, feel free to reach out to [support.data-insights@skyline.be](mailto:support.data-insights@skyline.be).
+> - If you need more information on how to execute any of the steps below, feel free to reach out to [support.data-core@skyline.be](mailto:support.data-core@skyline.be).
 > - You can leave feedback using the [*issues* feature](xref:contributing#reporting-an-issue), or [propose a change](xref:contributing).
 
 ## Alarms
@@ -72,7 +72,7 @@ RetrievalIssueChecks{{"Do you get valid AlarmEventMessages?"}}
 ClientSide{{"Check Cube Logging for exceptions.\nLook for AlarmEventMessage in stacktrace."}}
 ServerSide{{"Check SLDBConnection / SLNet / Database logging.\nCheck if database can be reached."}}
 AlarmTTL{{"Check the Time to Live of your Alarm.\nIn MySQL & Cassandra: table 'Alarm'.\nIn Cassandra Cluster & Elastic: table 'Alarms'."}}
-NotFixed{{"If your issue is not fixed,\ncontact support.data-insights@skyline.be.\nInclude all gathered information and steps taken."}}
+NotFixed{{"If your issue is not fixed,\ncontact support.data-core@skyline.be.\nInclude all gathered information and steps taken."}}
 %% Connect blocks %%
 RetrievalIssue --- FollowCTT
 FollowCTT --- RetrievalIssueChecks
@@ -111,7 +111,7 @@ CanSimulate{{"Managed to simulate?"}}
 ReduceFeatures{{"Reduce the number of features used to\nnarrow down the issue.\n(e.g. Hysteresis, conditional monitoring...)\nClick the node to go to a relevant docs page."}}
 VerifyConfiguration{{"Verify if you have a clear issue,\nincorrect configuration or undefined behavior."}}
 NotFixedCOPS{{"Contact techsupport@skyline.be.\nInclude all gathered information and steps taken."}}
-ExtraInfoNotFixed{{"1. Check if the behavior is the same on a\nstandalone parameter, column parameter, matrix parameter...\n2. Check the element logging.\n3. Contact support.data-insights@skyline.be.\nInclude all gathered information and steps taken."}}
+ExtraInfoNotFixed{{"1. Check if the behavior is the same on a\nstandalone parameter, column parameter, matrix parameter...\n2. Check the element logging.\n3. Contact support.data-core@skyline.be.\nInclude all gathered information and steps taken."}}
 %% Connect blocks %%
 CreationIssue --- AlarmTemplate
 AlarmTemplate --- ProtocolDebug

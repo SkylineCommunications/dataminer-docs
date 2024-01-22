@@ -2,17 +2,21 @@
 uid: Web_apps_Feature_Release_10.4.1
 ---
 
-# DataMiner web apps Feature Release 10.4.1 – Preview
+# DataMiner web apps Feature Release 10.4.1
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to the web applications, see [General Feature Release 10.4.1](xref:General_Feature_Release_10.4.1).
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [Dashboards app & Low-Code Apps: New Grid and Timeline components [ID_33276] [ID_33287] [ID_34761] [ID_34948] [ID_37269] [ID_37699] [ID_37812]](#dashboards-app--low-code-apps-new-grid-and-timeline-components-id_33276-id_33287-id_34761-id_34948-id_37269-id_37699-id_37812)
+- [Dashboards app & Low-Code Apps - Table component: Customizing the appearance of a column [ID_37522]](#dashboards-app--low-code-apps---table-component-customizing-the-appearance-of-a-column-id_37522)
+- [Low-Code Apps: Duplicating low-code apps [ID_37698] [ID_37724]](#low-code-apps-duplicating-low-code-apps-id_37698-id_37724)
+- [Dashboards app & Low-Code Apps: Duplicating GQI queries [ID_37739]](#dashboards-app--low-code-apps-duplicating-gqi-queries-id_37739)
+- [Dashboards app & Low-Code Apps: Configuring custom operators [ID_37840]](#dashboards-app--low-code-apps-configuring-custom-operators-id_37840)
 
 ## New features
 
@@ -94,10 +98,12 @@ To change the appearance of a column using presets, in the *Column appearance* s
 
 There are now two ways to duplicate a low-code app:
 
-- **On the Root page of a DataMiner Agent:**
+- **On the landing page of a DataMiner Agent:**
 
   1. Hover over the application that you want to duplicate. An ellipsis ("...") button will appear.
+
   1. Click the ellipsis ("...") button to open the context menu.
+
   1. Select *Duplicate*.
 
   The most recently published app version will now be duplicated. If the app has not yet been published, its draft version will be duplicated instead.
@@ -106,24 +112,21 @@ There are now two ways to duplicate a low-code app:
 
 - **On the Application page:**
 
-  1. In the top-right corner, right-click the user icon.
-  1. In the user menu, select *Duplicate*.
+  1. Open the app version you want to duplicate:
 
-  If the edit page is open, the current draft version will be copied and the newly created app will automatically be opened in a new browser tab.
+     - To duplicate the most recently published version of the app, open the app.
 
-  To duplicate the most recently published version of the app:
+     - To duplicate the current draft version of an app, open the app and go to edit mode.
 
-  1. Open the published version.
-  1. Right-click the user icon.
-  1. In the user menu, select *Duplicate*.
-  
-  To duplicate a different version of the app:
+     - To duplicate a different version:
 
-  1. Right-click the user icon.
-  1. In the user menu, select *Versions*.
-  1. Select the desired version.
-  1. Right-click the user icon.
-  1. In the user menu, select *Duplicate*.
+       1. In the top-right corner, click the user icon and select *Versions*.
+
+       1. Select the desired version.
+
+  1. In the top-right corner, click the user icon, and select *Duplicate* in the user menu.
+
+     The current draft version will be copied and the newly created app will automatically be opened in a new browser tab.
 
   > [!NOTE]
   > You are only allowed to duplicate an older version of an app if you have permission to edit the app in question.

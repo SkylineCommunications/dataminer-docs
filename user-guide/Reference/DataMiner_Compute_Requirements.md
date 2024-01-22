@@ -1,5 +1,6 @@
 ---
 uid: DataMiner_Compute_Requirements
+keywords: system requirements
 ---
 
 # DataMiner Compute Requirements

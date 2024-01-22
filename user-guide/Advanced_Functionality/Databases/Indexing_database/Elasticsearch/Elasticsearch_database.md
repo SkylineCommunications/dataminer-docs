@@ -4,13 +4,11 @@ uid: Elasticsearch_database
 
 # Elasticsearch
 
-If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STaaS) setup but instead choose self-hosted storage, you need an indexing database in order to have access to all DataMiner features.
+If you choose self-hosted storage instead of the recommended [Storage as a Service (STaaS)](xref:STaaS) setup, you need an indexing database in order to have access to all DataMiner features. While [OpenSearch](xref:OpenSearch_database) is the recommended indexing database, this is not supported prior to DataMiner 10.3.0/10.3.3. In earlier DataMiner versions, Elasticsearch is used, but as Elasticsearch is only supported up to version 6.8, which is no longer supported by Elastic, this is **not recommended**.
 
-If you use a **dedicated clustered storage** setup, it is best to use [OpenSearch](xref:OpenSearch_database) or the [Amazon OpenSearch Service](xref:Amazon_OpenSearch_Service), but you can also use an [Elasticsearch database on a Linux machine](xref:Installing_Elasticsearch_on_separate_Linux_machine). However, Elasticsearch is only supported up to version 6.8. and is therefore not recommended. OpenSearch and the Amazon OpenSearch Service are supported from DataMiner 10.3.0/10.3.3 onwards.
+In a **dedicated clustered storage** setup, once you have configured a Cassandra-compatible database service, you need to set up the indexing database cluster to complete your setup. If you use Elasticsearch, we recommend installing [Elasticsearch database on a Linux machine](xref:Installing_Elasticsearch_on_separate_Linux_machine).
 
-While this is not recommended, you can also still use a setup with **storage per DMA**, where you can [deploy an Elasticsearch database](xref:Configuring_indexing_database_per_DMS) to gain access to DataMiner features such as SRM, User-Defined APIs, and DOM.
-
-In this section of the documentation, you will also find instructions on how to [manually connect a DMA to an existing Elasticsearch cluster](xref:Manually_Connecting_DMA_to_Elasticsearch_Cluster) in the *DB.xml* file, [configure Elasticsearch backups](xref:Configuring_Elasticsearch_backups), and [remove an Elasticsearch cluster node](xref:Configuring_Elasticsearch_node_remove).
+In a setup with **storage per DMA**, setting up an indexing database is not mandatory, but it is highly recommended, as otherwise you will not have access to several DataMiner features.
 
 > [!NOTE]
 >
@@ -18,7 +16,4 @@ In this section of the documentation, you will also find instructions on how to 
 > - For information on how to query an Elasticsearch database, see [Querying an Elasticsearch database](xref:Querying_an_Elasticsearch_database).
 
 > [!TIP]
-> See also:
->
-> - [Securing the Elasticsearch database](xref:Security_Elasticsearch)
-> - [Expert Hub – Elasticsearch](https://community.dataminer.services/expert-hub-elastic/) on DataMiner Dojo
+> See also: [Securing the Elasticsearch database](xref:Security_Elasticsearch)

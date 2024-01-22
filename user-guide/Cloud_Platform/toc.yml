@@ -59,10 +59,10 @@ items:
     items:
       - name: About the Catalog module
         topicUid: About_the_Catalog_module
-      - name: Looking up a DataMiner connector
-        topicUid: Looking_up_a_DataMiner_connector
-      - name: Deploying a DataMiner connector to your system
-        topicUid: Deploying_A_DataMiner_Connector_to_your_system
+      - name: Looking up an item in the Catalog
+        topicUid: Looking_up_an_item_in_the_catalog
+      - name: Deploying a Catalog item
+        topicUid: Deploying_a_catalog_item
   - name: DataMiner Sharing
     topicUid: Sharing
     items:
@@ -72,6 +72,13 @@ items:
         topicUid: Managing_your_shares
   - name: Remote access
     topicUid: Cloud_Remote_Access
+    items:
+      - name: Finding the remote access URL
+        topicUid: Cloud_Remote_Access_URL
+      - name: Accessing DataMiner web apps remotely
+        topicUid: Accessing_web_apps_remotely
+      - name: Accessing your DMS remotely with DataMiner Cube
+        topicUid: Accessing_DMS_remotely_with_Cube
   - name: DataMiner Community
     topicUid: Community
     items:

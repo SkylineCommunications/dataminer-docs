@@ -1,4 +1,6 @@
 items:
+  - name: MbgNMS 1.2.3
+    topicUid: MbgNMS_1.2.3
   - name: MbgNMS 1.2.2
     topicUid: MbgNMS_1.2.2
   - name: MbgNMS 1.2.1

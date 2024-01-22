@@ -295,6 +295,10 @@ items:
             items:
               - name: Displaying a custom empty component message
                 topicUid: Tutorial_Dashboards_Displaying_a_custom_empty_component_message
+              - name: Embedding a connector dashboard in Visual Overview
+                topicUid: Tutorial_Embed_Connector_Dashboard_in_Visio
+              - name: Leveraging controls and feeds to create a dynamic GQI query
+                topicUid: Tutorial_Dashboards_Controls_And_Feeds_Query
       - name: Low-Code Apps
         topicUid: Application_framework
         items:
@@ -354,6 +358,8 @@ items:
                 topicUid: Tutorial_Apps_Style_A_Table
               - name: Using the maps component in a low-code app
                 topicUid: TutorialMaps
+              - name: Getting started with the grid component
+                topicUid: Tutorial_Apps_Grid
       - name: Configuring components
         topicUid: Configuring_components
         items:
@@ -449,10 +455,12 @@ items:
                 topicUid: DashboardServiceDefinition
               - name: Spectrum Analyzer
                 topicUid: DashboardSpectrumAnalyzer
-              - name: Trend statistics
-                topicUid: DashboardTrendStatistics
               - name: Visual Overview
                 topicUid: DashboardVisualOverview
+              - name: Timeline
+                topicUid: DashboardTimeline
+              - name: Trend statistics
+                topicUid: DashboardTrendStatistics
           - name: Feeds
             topicUid: Feeds
             items:
@@ -524,6 +532,8 @@ items:
                 topicUid: Get_parameter_relations
               - name: Get parameters for element where
                 topicUid: Get_parameters_for_element_where
+              - name: Get profile instances
+                topicUid: Get_profile_instances
               - name: Get resources
                 topicUid: Get_resources
               - name: Get services
@@ -713,6 +723,8 @@ items:
         topicUid: Data_Aggregator_settings
       - name: Configuring GQI queries
         topicUid: Data_Aggregator_queries
+      - name: Troubleshooting
+        topicUid: Data_Aggregator_troubleshooting
   - name: DataMiner Object Models (DOM)
     topicUid: DOM
     items:
@@ -731,7 +743,7 @@ items:
             topicUid: DomBehaviorDefinition
       - name: DOM managers
         topicUid: DOM_managers
-      - name: DomHelper class
+      - name: DOM helper class
         topicUid: DomHelper_class
       - name: DOM events
         topicUid: DOM_events
@@ -766,6 +778,8 @@ items:
             topicUid: DOM_StorageSettings
       - name: DOM data storage
         topicUid: DOM_data_storage
+      - name: Best practices
+        topicUid: DOM_best_practices
       - name: DOM examples
         topicUid: DOM_Invoice_app_example
         items:
@@ -775,6 +789,8 @@ items:
             topicUid: DOM_status_system_example
           - name: Altering values of a DomInstance - examples
             topicUid: DOM_Altering_values_of_a_DomInstance
+          - name: Processing multiple DomInstances - examples
+            topicUid: DOM_BulkProcessing_Example
       - name: DOM DevOps tools
         topicUid: DOM_DevOps_tools
         items:
@@ -807,10 +823,14 @@ items:
               - name: Naming a DOM instance
                 topicUid: DOM_editor_naming_instance
       - name: Tutorials
-        topicUid: DOM_Remove_Enum_Entry
+        topicUid: DOM_Create_Basic_Setup
         items:
+          - name: Creating a basic DOM setup
+            topicUid: DOM_Create_Basic_Setup
           - name: Removing an enum entry from a GenericEnumFieldDescriptor
             topicUid: DOM_Remove_Enum_Entry
+          - name: Removing a field descriptor from a definition
+            topicUid: DOM_Remove_FieldDescriptor_Definition
   - name: Experience and Performance Management
     topicUid: EPM
     items:
@@ -1259,8 +1279,6 @@ items:
         items:
           - name: Troubleshooting User-Defined APIs
             topicUid: UD_APIs_Troubleshooting
-          - name: Bad and best practices
-            topicUid: UD_APIs_Bad_and_Best_Practice
       - name: Tutorials
         topicUid: UD_APIs_Tutorials
         items:

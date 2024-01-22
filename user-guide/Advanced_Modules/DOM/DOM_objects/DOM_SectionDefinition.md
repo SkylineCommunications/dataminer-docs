@@ -52,7 +52,19 @@ Below is an overview of all other important properties:
 
 There are also special types of `FieldDescriptors` that are purpose-made to store a special value. These include:
 
-- **AutoIncrementFieldDescriptor**: Defines a field that will automatically get an incrementing value when saved. When marked as soft-deleted, these fields will no longer be incremented. The value will remain the last value before the descriptor was marked as soft-deleted.
+- **AutoIncrementFieldDescriptor**: Defines a field that will automatically get an incremented value assigned. When a `DomInstance` does not have a value for this field yet, it will get assigned the next time the instance is updated.
+
+  - The `IDFormat` property is used to define a string format for the number value. In this string, "{0}" gets replaced by that number value. If the `IDFormat` property is empty, its value will not be formatted.
+
+    Some examples, assuming the next value is 10:
+
+    | Description | Format | Result |
+    |---|---|---|
+    | Add a prefix and postfix | Pre-{0}-Post | Pre-10-Post |
+    | Prefix with "REF-" and [format](https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-numeric-format-strings) the value | REF-{0:000000} | REF-000010 |
+    | When no format is set, the value is stored | | 10 |
+
+  - When the field is marked as soft-deleted, no values will get assigned when a `DomInstance` gets saved.
 
 - **GenericEnumFieldDescriptor**: Defines a field that has a list of possible pre-determined values.
 

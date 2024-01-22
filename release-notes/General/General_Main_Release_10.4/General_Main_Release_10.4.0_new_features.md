@@ -519,6 +519,18 @@ In the log files, you will be able to find out which caches are enabled and when
 
 When the caches are enabled, it is no longer possible to get paged results when retrieving DomDefinitions, DomBehaviorDefinitions or SectionDefinitions. Instead, the complete list of objects matching the given query will be returned, even if that list is larger than the configured page size.
 
+#### API Gateway: DataMiner modules can now register with API Gateway [ID_36575] [ID_37734]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+DataMiner modules can now register with API Gateway. These modules can be either "regular modules" (e.g. SLNet) or "proxy modules" (e.g. a DxM that wishes to expose an API).
+
+All modules registered with API Gateway will be displayed under `/APIGateway/api/version`, showing the following properties:
+
+- Name
+- Version
+- Endpoint on which they can be accessed via API Gateway (proxy modules only)
+
 #### DataMiner Object Models: Soft-deletable objects [ID_36721] [ID_37121]
 
 <!-- RN 36721: MR 10.4.0 - FR 10.3.9 -->
@@ -664,6 +676,25 @@ Marker images can now also be generated dynamically in layers with `sourceType` 
 
 To generate a marker image dynamically, you can use placeholders in the `url` attribute of the *\<MarkerImage\>* tag.
 
+#### DataMiner Maps: ForeignKeyRelationsSourceInfo tag now supports an elementVar attribute [ID_38274]
+
+<!-- MR 10.4.0 - FR 10.4.3 -->
+
+In a `<ForeignKeyRelationsSourceInfo>` tag, it is now possible to specify an *elementVar* attribute.
+
+```xml
+<ForeignKeyRelationsSourceInfo elementVar="myElement">
+...
+</ForeignKeyRelationsSourceInfo>
+```
+
+This will allow you to pass an element in the map's URL. See the URL examples below (notice the “d” in front of the parameter name!):
+
+```txt
+maps.aspx?config=MyConfigFile&dmyElement=7/46840
+maps.aspx?config=MyConfigFile&dmyElement=VesselData
+```
+
 ### Service & Resource Management
 
 #### Service & Resource Management: Exposers for resource capacities and capabilities [ID_34841]
@@ -719,7 +750,7 @@ Please note the following:
 - The following extension methods have been added to easily compose the filters: *HasRangePoint*, *DiscreteCapability*, *StringCapability* and *MaxCapacityValue*.
 
 > [!TIP]
-> See also: [Visual Overview: Session variable YAxisResources now supports filters to pass exposers](xref:Cube_Main_Release_10.4.0_other_features_changes#visual-overview-session-variable-yaxisresources-now-supports-filters-id_34857)
+> See also: [Visual Overview: Session variable YAxisResources now supports filters to pass exposers [ID_34857]](xref:Cube_Feature_Release_10.3.1#visual-overview-session-variable-yaxisresources-now-supports-filters-to-pass-exposers-id_34857)
 
 #### Reinitializing ResourceManager [ID_36811]
 

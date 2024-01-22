@@ -7,7 +7,7 @@ uid: Configuring_Elasticsearch_backups_Windows_Linux
 > [!IMPORTANT]
 >
 > - This configuration requires advanced knowledge of Elasticsearch. If you have any doubts, ask Skyline for assistance. However, note that this is not covered by the standard [DataMiner Support Services](xref:Overview_Support_DMS_M_and_S).
-> - Elasticsearch is **only supported up to version 6.8**. We therefore recommend using [Storage as a Service](xref:STaaS) instead, or if you do want to continue using self-hosted storage, using [dedicated clustered storage](xref:Dedicated_clustered_storage) with OpenSearch.
+> - Elasticsearch is **only supported up to version 6.8**, which is no longer supported by Elastic. We therefore recommend using [Storage as a Service](xref:STaaS) instead, or if you do want to continue using self-hosted storage, using [OpenSearch](xref:OpenSearch_database).
 
 This procedure to configure an Elasticsearch backup focuses on setting up and using an Elasticsearch snapshot to back up and restore Elasticsearch data. It makes use of a source Elasticsearch cluster and a target Elasticsearch cluster and can be used for two purposes:
 

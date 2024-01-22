@@ -45,7 +45,7 @@ DataMiner as a Service will allow you to spin up your DataMiner System in the cl
 
   DaaS will enable you to seamlessly monitor your entire infrastructure regardless of whether it is located on premises or off premises.
 
-  ![Pillars_NMS](~/dataminer-overview/images/Hosting_DaaS_overview.png)
+  ![DaaS](~/user-guide/images/DaaS.svg)
 
 ## Azure Cosmos DB
 

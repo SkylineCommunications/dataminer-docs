@@ -32,6 +32,13 @@ When finished, you should only have *Unused Tokens* left in your tree view. This
 
 ![No more Obsolete APIs in System Center in Cube on a 10.3.9 DataMiner](~/user-guide/images/UDAPIS_Migration_2.jpg)
 
+> [!NOTE]
+> It can occur that APIs are still considered deployed using API Deployment, but they are not shown in DataMiner Cube because the configuration was incorrectly loaded on the server. In this case, the prerequisite check will fail, but you will not see any deployed APIs in DataMiner Cube.
+>
+> To work around this issue, on every DataMiner Agent for which the prerequisite check fails, remove the *APIDeployment* soft-launch option from the [SoftLaunchOptions.xml](xref:Overview_of_Soft_Launch_Options) file.
+>
+> Keep in mind that when you **upgrade** to DataMiner 10.4.0 or higher, any **APIs you deployed using API Deployment will be removed**.
+
 ## Issue description
 
 Upgrading to 10.4.0 or newer will remove *API Deployment* and all configuration/data related to it. If you still have APIs deployed with this feature, they would be removed by the upgrade. This prerequisite check prevents this by forcing you to remove the deployments.

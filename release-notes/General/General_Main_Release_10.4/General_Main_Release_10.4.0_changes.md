@@ -118,7 +118,7 @@ From now on, when you zoom in or out, the data of the previous zoom level will s
 
 Because of a number of enhancements, overall performance has increased when fetching relation information for the automatic incident tracking feature.
 
-#### Security enhancements [ID_35434] [ID_35997] [ID_36319] [ID_36624] [ID_36928] [ID_37345] [ID_37540]
+#### Security enhancements [ID_35434] [ID_35997] [ID_36319] [ID_36624] [ID_36928] [ID_37345] [ID_37540] [ID_37637]
 
 <!-- 35434: MR 10.4.0 - FR 10.3.4 -->
 <!-- 35997: MR 10.4.0 - FR 10.3.5 -->
@@ -126,6 +126,7 @@ Because of a number of enhancements, overall performance has increased when fetc
 <!-- 36624: MR 10.4.0 - FR 10.3.8 -->
 <!-- 37345: MR 10.4.0 - FR 10.3.11 -->
 <!-- 37540: MR 10.4.0 - FR 10.3.12 -->
+<!-- 37637 (part of 37734): MR 10.4.0 - FR 10.4.2 -->
 
 A number of security enhancements have been made.
 
@@ -542,12 +543,48 @@ When a parameter has anomalous flatline periods in its trend data history that a
 
 <!-- MR 10.4.0 - FR 10.4.2 -->
 
-All database offload functionality that had to be configured in the *DBConfiguration.xml* file now has to be configured in the *DB.xml* file instead.
+Up to now, the database offload functionality described below had to be configured in the *DBConfiguration.xml* file. From now on, it has to be configured in the *DB.xml* file instead.
 
-For more information, see:
+- **Configuring a size limit for file offloads**
 
-- [Configuring a size limit for file offloads](xref:DB_xml#configuring-a-size-limit-for-file-offloads)
-- [Configuring multiple OpenSearch or Elasticsearch clusters](xref:DB_xml#configuring-multiple-opensearch-or-elasticsearch-clusters)
+  When the main database is offline, file offloads are used to store write/delete operations. You can configure a limit for the file size of these offloads. When the limit is reached, new data will be dropped.
+
+  Example:
+
+  ```xml
+  <DataBases>
+    ...
+    <FileOffloadConfiguration>
+      <MaxSizeMB>20</MaxSizeMB>
+    </FileOffloadConfiguration>
+  </DataBases>
+  ```
+
+- **Configuring multiple OpenSearch or Elasticsearch clusters**
+
+  It is possible to have data offloaded to multiple OpenSearch or Elasticsearch clusters, i.e. one main cluster and several replicated clusters.
+
+  Example:
+
+  ```xml
+  <DataBases>
+    <!-- Reads will be handled by the ElasticCluster with the lowest priorityOrder -->
+    <DataBase active="true" search="true" ID="0" priorityOrder="0" type="ElasticSearch">
+      <DBServer>localhost</DBServer>
+      <UID />
+      <PWD>root</PWD>
+      <DB>dms</DB>
+      <FileOffloadIdentifier>cluster1</FileOffloadIdentifier>
+    </DataBase>
+    <DataBase active="true" search="true" ID="0" priorityOrder="1" type="ElasticSearch">
+      <DBServer>10.11.1.44,10.11.2.44,10.11.3.44</DBServer>
+      <UID />
+      <PWD>root</PWD>
+      <DB>dms</DB>
+      <FileOffloadIdentifier>cluster2</FileOffloadIdentifier>
+    </DataBase>
+  </DataBases>
+  ```
 
 #### SLAnalytics: Not all occurrences of multivariate patterns containing subpatterns hosted on different DMAs would be detected [ID_37451]
 
@@ -751,6 +788,12 @@ Also, the newly added *UninstallApiDeployment* upgrade action will remove everyt
 
 - Remove the *APIDeployment* soft-launch flag from *SoftLaunchOptions.xml*.
 
+#### Parameter ID range 10,000,000 to 10,999,999 now reserved [ID_37837]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+Parameters IDs in the range of 10,000,000 to 10,999,999 are now reserved for DataMiner parameters. These will be used for DataMiner features in the future.
+
 #### GQI: Ad hoc data sources and custom operators now support row metadata [ID_37879]
 
 <!-- MR 10.4.0 - FR 10.4.1 -->
@@ -777,6 +820,90 @@ Overall performance has increased when updating/applying profile instances by pr
 ```csharp
 public virtual void UpdateAllCapacitiesAndCapabilitiesByReference(Func<FilterElement<ProfileInstance>, List<ProfileInstance>> retriever, Dictionary<Guid, ProfileInstance> profileInstanceCache, IEnumerable<QuarantinedResourceUsageDefinition> correspondingQuarantines = null);
 ```
+
+#### GQI - 'Get parameter table by ID' data source: Enhanced sorting [ID_38039]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+When multiple, separate sort operators were optimized by the GQI data source *Get parameter table by ID*, up to now, they would be incorrectly combined into a single multi-level sort operation. From now on, only the last sort operator will be used, consistent with the behavior in case the sort operators are not optimized.
+
+For example, from now on, when you sort by A and, later on in the GQI query, sort again by B, the query will now only be sorted by B.
+
+#### SLAnalytics - Behavioral anomaly detection: Reduction of memory used for flatline detection [ID_38118]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+The amount of memory used for flatline detection has been reduced.
+
+#### GQI: Right query will be fetched lazily in case of a right join [ID_38134]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+Up to now, when a *Join* operator of type "Right join" was applied, both the entire left query and the entire right query would be fetched. From now on, the right query will be fetched lazily.
+
+#### SLAnalytics - Behavioral anomaly detection: Enhanced anomaly check algorithm [ID_38176]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+A number of enhancements have been made to the anomaly check algorithm.
+
+#### SLAnalytics - Alarm focus: Alarm occurrences will now be identified using a combination of element ID, parameter ID and primary key  [ID_38184] [ID_38251]
+
+<!-- MR 10.4.0 - FR 10.4.3 -->
+
+When calculating alarm likelihood (i.e. focus score), up to now, the alarm focus feature used a combination of element ID, parameter ID and display key (if applicable) to identify previous occurrences of the same alarm. From now on, previous alarm occurrences will be identified using a combination of element ID, parameter ID and primary key.
+
+> [!NOTE]
+> When you upgrade to version 10.4.0/10.4.3, the Cassandra table *analytics_alarmfocus* will automatically be removed.
+
+#### NATS: All processes will now use the DataMinerMessageBroker.API NuGet package [ID_38193]
+
+<!-- MR 10.4.0 - FR 10.4.3 -->
+
+All processes that were still using the deprecated *SLMessageBroker.dll* or *CSLCloudBridge.dll* files will now be using the *DataMinerMessageBroker.API* or *DataMinerMessageBroker.API.Native* NuGet package instead.
+
+| Processing using ... | will now instead use ...          |
+|----------------------|-----------------------------------|
+| SLMessageBroker.dll  | DataMinerMessageBroker.API        |
+| CSLCloudBridge.dll   | DataMinerMessageBroker.API.Native |
+
+#### SLLogCollector will now also collect the backup logs of the StorageModule DxM [ID_38228]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+SLLogCollector will now also collect the backup logs of the *StorageModule* DxM located in the `C:\ProgramData\Skyline Communications\DataMiner StorageModule\Logs\Backup` folder.
+
+#### Failover: NATS nodes will now advertise their physical IP address instead of their virtual IP address [ID_38340]
+
+<!-- MR 10.4.0 - FR 10.4.3 -->
+
+From now, NATS nodes will advertise their physical IP address instead of their virtual IP address.
+
+#### SLAnalytics - Behavioral anomaly detection: Enhanced accuracy [ID_38383]
+
+<!-- MR 10.4.0 - FR 10.4.3 -->
+
+The accuracy of the behavioral change points and anomalies detected by the behavioral anomaly detection feature has been improved.
+
+From now on, a behavioral change will only be taken into account when the change is larger than the data precision used to display the data in DataMiner Cube.
+
+As a result, anomalies that report a trend change "from 0%/day to 0%/day", a level shift from "0.1 to 0.1", etc. will no longer be taken into account.
+
+#### SLProtocol will no longer log messages related to duplicate keys at the default log levels [ID_38392]
+
+<!-- MR 10.4.0 - FR 10.4.3 -->
+
+When SLProtocol identifies duplicate keys, it will no longer flood the error log with messages related to duplicate keys (e.g. `Duplicate key in table 1000, key = 123`) at the default log levels.
+
+From now on, if you want to have log entries related to duplicate keys, increase the error log level to 1.
+
+#### SLAnalytics - Behavioral anomaly detection: Enhanced accuracy [ID_38400]
+
+<!-- MR 10.4.0 - FR 10.4.3 -->
+
+Change point detection accuracy has been improved for parameters that have a discreet trend data behavior.
+
+For parameters of which the trend data behavior is mostly stable, with only infrequent sudden value changes, only behavioral changes that are larger than those infrequent sudden value changes will be taken into account.
 
 ### Fixes
 
@@ -956,7 +1083,7 @@ In cases where SLDataGateway retrieved an entire table and then applied a filter
 
 #### Problem when using MessageBroker with chunking [ID_37532]
 
-<!-- MR 10.4.0 - FR 10.3.12 -->
+<!-- MR 10.4.0 - FR 10.4.1 -->
 
 On high-load systems, MessageBroker threads could leak when using chunking.
 
@@ -972,6 +1099,12 @@ When reading data from the database page by page, in some cases, the operation w
 
 In some cases, a newly created element could get assigned the same DmaId/ElementId key as another, already existing element on another DataMiner Agent in the cluster. From now on, this will be prevented as long as the DataMiner Agents in questions can communicate with each other.
 
+#### PropertyConfiguration.xml: New properties could incorrectly be assigned an existing property ID [ID_37596]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+When, in a client application (e.g. DataMiner Cube) you created a new custom property, in some cases, that new property would incorrectly be assigned an ID that had already been assigned to another, existing property.
+
 #### Storage as a Service: Every agent in the DMS would send the average trend data to the cloud during a migration [ID_37717]
 
 <!-- MR 10.4.0 - FR 10.3.12 -->
@@ -983,6 +1116,14 @@ When data was being migrated from a Cassandra Cluster database to a STaaS databa
 <!-- MR 10.4.0 - FR 10.4.1 -->
 
 When you exported elements via a DELT package on a DMA running DataMiner version 10.3.8 or newer, it would no longer be possible to import that DELT package on a DMA running DataMiner version 10.3.7 or older.
+
+#### SLAnalytics: Problem with table parameter indices containing special characters [ID_37860]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+Up to now, SLAnalytics would not correctly handle special characters in the table parameter indices. These characters will now be handled correctly. If parameters with indices containing special characters are trended, they will now also receive a trend prediction in the trend graph, and their behavioral change points will now be displayed.
+
+Also, special characters in parameter indices will no longer cause errors to be logged.
 
 #### Incorrect 'Clearing cache ...' entries in SLEventCache.txt [ID_37874]
 
@@ -998,4 +1139,72 @@ Example of an incorrect log entry:
 
 <!-- MR 10.4.0 - FR 10.4.1 [CU0] -->
 
-When you tried to start a migration of an on-premises database to a DataMiner Storage as a Service platform, in some cases, the connection towards the cloud could not get established.
+When you tried to start a migration of an on-premises database to a DataMiner Storage as a Service platform, the connection towards the cloud could not get established.
+
+#### DataMiner Storage Module: Thread leak [ID_38095]
+
+<!-- MR 10.4.0 - FR 10.4.1 [CU0] -->
+
+In some cases, the DataMiner Storage Module could leak threads.
+
+#### Behavioral anomaly detection: Unlabelled changes would cause the trend icon to not be updated [ID_38105]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+When small, unlabelled changes were detected in a trend graph of a parameter of which the value was clearly increasing, decreasing or remaining stable, up to now, the trend icon would incorrectly not be updated to indicate this increasing, decreasing or stable trend. From now on, when a small, unlabelled change occurs in a trend graph that clearly increases, decreases or remains stable, the trend icon will be updated to indicate this.
+
+#### Storage as a Service: Database write operations would not get processed [ID_38112]
+
+<!-- MR 10.4.0 - FR 10.4.1 [CU0] -->
+
+In some rare cases, a database write operation could incorrectly remain stuck in an internal queue and would never get processed.
+
+#### Problem when loading data of elements hosted on another DMA while a correlation rule action was running [ID_38121]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+When, while an extensive correlation rule action was running, you opened an element card of an element hosted on a DataMiner Agent other than the one you were connected to, loading the data of that element could get delayed until the correlation rule action had finished.
+
+#### Problems with gRPC connections when SLNet was not running [ID_38177]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+When a DataMiner Agent had the APIGateway service running but not the SLNet process (e.g. a DataMiner Agent that had been fully stopped), the following issues would occur:
+
+- No exception would be thrown when a client application sent a message via one of the gRPC connections that was still open. Instead, an empty response was returned. As a result, client applications would not notice that there was a problem.
+
+- When an attempt was made to establish a new gRPC connection, an `Invalid username or password` would be returned instead of a `DataMinerNotRunningException`.
+
+#### Web apps: Visual overview linked to a view would not get any updates when the user did not have full administrative rights [ID_38180]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
+
+When a web app user without full administrative rights viewed a visual overview linked to a view, the app would incorrectly not receive any updates for that visual overview.
+
+#### SLAnalytics - Automatic incident tracking: Problem after clearing or removing an alarm [ID_38239]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+When an alarm had been cleared or removed, in some cases, the automatic incident tracking feature could incorrectly assume that no more alarms were associated with the parameter in question. As a result, alarms could get grouped incorrectly or error messages similar to the following one could start to appear:
+
+`Parameter key [PARAMETER_KEY] was not in parameterKeyConverter, while it should have been.`
+
+#### SLAnalytics - Automatic incident tracking: Empty alarm group would be created when manually creating an incident with non-active alarms [ID_38248]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+When, while automatic incident tracking was running, you manually created an incident (i.e. an alarm group) containing non-active alarms, an empty alarm group would be created.
+
+#### DataMiner Cube was not able to reconnect to the server after a disconnect using gRPC [ID_38260]
+
+<!-- MR 10.4.0 - FR 10.4.3 -->
+
+Up to now, when using a gRPC connection, Cube was not able to verify whether the server endpoint was available. As a result, it would fail to reconnect to the server when the connection had been lost and would display a `Waiting for the connection to become available...` message indefinitely.
+
+#### Correlation: Alarm buckets would not get cleaned up when alarms were cleared before the end of the time frame specified in the 'Collect events for ... after first event, then evaluate conditions and execute actions' setting [ID_38292]
+
+<!-- MR 10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
+
+Up to now, when alarms were cleared before the end of the time frame specified in the *Collect events for ... after first event, then evaluate conditions and execute actions* correlation rule setting, the alarm buckets would not get cleaned up.
+
+From now on, when a correlation rule is configured to use the *Collect events for ... after first event, then evaluate conditions and execute actions* trigger mechanism, all alarm buckets will be properly cleaned up, unless there are actions that need to be executed either when the base alarms are updated or when alarms are cleared.

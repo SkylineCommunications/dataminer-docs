@@ -75,6 +75,12 @@ Enables the [BookingData](xref:Linking_a_shape_to_a_booking#making-the-booking-s
 - **Minimum version**: 10.2.7
 - **Release version**: 10.3.8/10.4.0 ([RN 36489](xref:Cube_Feature_Release_10.3.8#visual-overview-new-bookingdata-component-id_33215-id_36489))
 
+### BrokerGateway
+
+Disables specific NATS logic, in order to use the BrokerGateway DxM for the NATS configuration instead.
+
+- **Minimum version**: 10.4.1<!-- RN 37649 -->
+
 ### CassandraCluster
 
 Allows you to set up the [Cassandra cluster](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster) configuration in DataMiner Cube.
@@ -109,6 +115,16 @@ This is a Cube-only feature that can only be activated with the argument `ENABLE
 
 - **Minimum version**: 9.6.7
 - **Estimated Release version**: To be determined
+
+### DataAPI
+
+Enables Data API functionality and scripted connectors. This displays the Data Sources module in DataMiner Cube.
+
+- **Minimum version**: 10.4.2/10.4.0
+- **Estimated Release version**: To be determined
+
+> [!NOTE]
+> The latest version of the DataAggregator DxM and DataAPI DxM also have to be installed for this feature to work.
 
 ### Diagnostics
 
@@ -172,6 +188,7 @@ Provides access to additional data sources and operators for GQI in the Dashboar
 > - The "Sort" operator (available from DataMiner 10.2.11/10.3.0 onwards).
 > - The trend data patterns, trend data pattern events, and behavioral change events data sources (available from DataMiner 10.3.3/10.4.0 onwards).
 > - The object manager instances data source (available from DataMiner 10.3.6 onwards).<!-- RN 36124 -->
+> - The profile instances data source (available from DataMiner 10.3.0 CU11/10.4.2 onwards).<!-- RN 38138 -->
 
 - **Minimum version**: 10.0.13
 - **Minimum version for the custom operator**: 10.2.7
@@ -308,7 +325,7 @@ Enables the export to PDF button within the Dashboards app itself. Creating PDFs
 Enables a new Maps component in the Dashboards app and the Low-Code Apps.
 
 - **Minimum version**: 10.3.2
-- **Estimated release version**: 10.4.2
+- **Estimated release version**: 10.4.4
 
 ### ReportsAndDashboardsGuides
 
@@ -370,6 +387,9 @@ Configures the DataMiner System to use SNMP++ for the polling of all three SNMP 
 
 - **Minimum version**: 10.4.2
 - **Release version**: To be determined.
+
+> [!IMPORTANT]
+> This feature does not support polling of IPv6 addresses. In case IPv6 addresses are polled on your DMA, do not activate this feature.
 
 ### SrmOwnServices
 

@@ -3,27 +3,28 @@
     {
       "src": [
         {
-            "files": [
-                "src/**.csproj",
-                "assemblies/**.dll",
-                "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Core.DataMinerSystem.Automation.dll",
-                "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Core.DataMinerSystem.Common.dll",
-                "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Core.DataMinerSystem.Protocol.dll",
-                "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Core.Matrix.Protocol.dll",
-                "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Core.Scheduler.Automation.dll",
-                "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Core.InterAppCalls.Common.dll",
-                "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Utils.Interfaces.dll",
-                "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Utils.Rates.Common.dll",
-                "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Utils.Rates.Protocol.dll",
-                "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Utils.SafeConverters.dll",
-                "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Utils.SNMP.dll",
-                "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Utils.SNMP.Traps.Protocol.dll",
-                "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Utils.Table.ContextMenu.dll",
-                "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit.dll",
-                "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Core.AppPackageCreator.dll",
-                "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Core.AppPackageInstaller.dll",
-                "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Core.AppPackageInstaller.SRM.dll"
-            ],
+          "files": [
+            "src/**.csproj",
+            "assemblies/**.dll",
+            "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Core.DataMinerSystem.Automation.dll",
+            "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Core.DataMinerSystem.Common.dll",
+            "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Core.DataMinerSystem.Protocol.dll",
+            "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Core.Matrix.Protocol.dll",
+            "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Core.Scheduler.Automation.dll",
+            "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Core.InterAppCalls.Common.dll",
+            "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Utils.DOM.dll",
+            "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Utils.Interfaces.dll",
+            "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Utils.Rates.Common.dll",
+            "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Utils.Rates.Protocol.dll",
+            "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Utils.SafeConverters.dll",
+            "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Utils.SNMP.dll",
+            "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Utils.SNMP.Traps.Protocol.dll",
+            "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Utils.Table.ContextMenu.dll",
+            "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit.dll",
+            "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Core.AppPackageCreator.dll",
+            "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Core.AppPackageInstaller.dll",
+            "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Core.AppPackageInstaller.SRM.dll"
+          ],
           "exclude": [
             "**/obj/**",
             "_site/**"
@@ -84,7 +85,7 @@
     "dest": "_site",
     "globalMetadata": {
       "_appTitle": "DataMiner Docs",
-      "_appFooter": "© Skyline Communications 2023",
+      "_appFooter": "© Skyline Communications 2024",
       "_enableSearch": false,
       "_enableNewTab": true
     },

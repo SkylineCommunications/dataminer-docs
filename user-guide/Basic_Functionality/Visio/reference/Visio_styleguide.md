@@ -106,7 +106,7 @@ Microsoft Visio allows the use of so-called stencil files, which contain a colle
 
 Skyline provides the following DataMiner stencil files that will help you design Visio drawings according to the DataMiner house style:
 
-- [Icons](#icons) 
+- [Icons](#icons)
 - [Buttons](#buttons)
 - [KPI](#kpi)
 
@@ -130,7 +130,7 @@ See also [Skylicons](#skylicons)
 
 The Buttons stencil contains three types of buttons that can be placed on Data pages.
 
-- [Action buttons](#action-buttons) 
+- [Action buttons](#action-buttons)
 - [Toggle buttons](#toggle-buttons)
 - [Link buttons](#link-buttons)
 
@@ -186,7 +186,7 @@ If you want to replace an icon in a KPI, do the following:
 1. Go to *Home > Group* in the Visio ribbon, and click *Add to Group*.
 
 > [!NOTE]
-> - All shapes available in the KPI stencil refer to one element. This means that all parameters shown in the list have to belong to the same element. If you want to refer to a parameter belonging to another element, you can customize the shape.
+> All shapes available in the KPI stencil refer to one element. This means that all parameters shown in the list have to belong to the same element. If you want to refer to a parameter belonging to another element, you can customize the shape.
 
 ### Where to find the DataMiner stencils
 
@@ -202,11 +202,14 @@ If you want to download a zip package with the latest versions of the DataMiner 
 
 ## Skylicons
 
-All standard Skyline icons can be downloaded from the [Skylicons](https://skyline.be/skylicons/) website in PNG, XAML or SVG format.
+All standard Skyline icons can be downloaded from the [Skylicons](https://skyline.be/skylicons/) website in PNG or SVG format.
 
-By clicking **download visio stencil** in the header bar of the [Skylicons](https://skyline.be/skylicons/) website, you can download a package with the latest versions of the DataMiner stencils. One of those stencils contains the entire collection of Skyline icons.
+You can download a single icon, or you can download the full icon pack by clicking **click here to download the full pack** above the icon overview.
 
-> To request a new icon or to request an update of an existing icon, send an email to [team.marketing@skyline.be](mailto:team.marketing@skyline.be).
+> [!TIP]
+>
+> - To request the XAML version of an icon, send an email to [devops@skyline.be](mailto:devops@skyline.be).
+> - To request a new icon or to request an update of an existing icon, send an email to [team.marketing@skyline.be](mailto:team.marketing@skyline.be).
 
 ## More information
 

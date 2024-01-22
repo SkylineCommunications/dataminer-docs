@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.3.0_CU10
 ---
 
-# General Main Release 10.3.0 CU10 – Preview
+# General Main Release 10.3.0 CU10
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
@@ -25,17 +25,6 @@ Former log entry:
 New log entry:
 
 `Cannot create a custom data table for {typeof(T)} in Elastic when Elastic is not active.`
-
-#### New BPA test 'Check Cluster SLNet Connections' [ID_37110]
-
-<!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
-
-When run on a particular agent in a DataMiner System, this new BPA test will trigger a local test on each agent in the DMS that will
-
-- check the connections between the different DMAs and between the DMAs in Failover setups, and
-- report any communication problems.
-
-For more information, see [Check Cluster SLNet Connections](xref:BPA_Check_Cluster_SLNet_Connections).
 
 #### Security enhancements [ID_37641]
 

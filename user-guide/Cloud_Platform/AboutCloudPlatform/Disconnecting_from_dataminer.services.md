@@ -47,27 +47,38 @@ To **reconnect your system**, you will need to change the startup type for the D
 > - All data for the DMS that was saved on dataminer.services will be lost, including shares, settings, and users and permissions configured on dataminer.services.
 > - If your DMS consists of one or more fully self-hosted DataMiner Agents, these will continue to work, but you will no longer have access to dataminer.services features.
 > - If your DMS uses DataMiner **Storage as a Service** (STaaS), **all data will be permanently lost** and the system will become unusable.
+> - If you use **DataMiner as a Service** (DaaS), this will **delete your system**. See [Removing a DaaS system](xref:Removing_a_DaaS_system).
 
-To disconnect a DataMiner Agent from dataminer.services:
+To disconnect a DataMiner System from dataminer.services:
 
-1. [Connect to the DMA using the SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool).
+1. Delete the DMS on dataminer.services:
 
-   > [!CAUTION]
-   > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+   1. On the dataminer.services page, click the ellipsis ( "...") button in the top-right corner of the box representing the DataMiner System and select *Delete DMS*.
 
-1. Go to *Advanced* > *CcaGateway*.
+   1. Fill in the name of the system to confirm that this is the system you want to remove.
 
-   This will open the CcaGateway window.
+   1. Click *Delete*.
 
-   > [!TIP]
-   > For detailed information about this window, see [Debugging the dataminer.services connection](xref:SLNetClientTest_debugging_cloud_connection).
+1. Unregister the DMS using SLNetClientTest tool:
 
-1. Click *Unregister Dms*.
+   1. [Connect to the DMA using the SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool).
 
-   > [!WARNING]
-   > This action is **irreversible** and can have far-reaching consequences for your DataMiner System. Always consult with a Skyline DevOps Engineer before you use this option.
+      > [!CAUTION]
+      > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
-1. Contact Skyline Communications to remove the remaining information for your DMS from dataminer.services.
+   1. Go to *Advanced* > *CcaGateway*.
+
+      This will open the CcaGateway window.
+
+      > [!TIP]
+      > For detailed information about this window, see [Debugging the dataminer.services connection](xref:SLNetClientTest_debugging_cloud_connection).
+
+   1. Click *Unregister Dms*.
+
+      > [!WARNING]
+      > This action is **irreversible** and can have far-reaching consequences for your DataMiner System. Always consult with a Skyline DevOps Engineer before you use this option.
+
+   1. Contact Skyline Communications to remove the remaining information for your DMS from dataminer.services.
 
 > [!NOTE]
-> This procedure is not applicable for DataMiner as a Service (DaaS) systems. If you want to deactivate a DaaS system, contact Skyline Communications. However, note that this will cause that DataMiner System to be permanently removed.
+> Performing either of the two main steps above is already enough to disconnect the DMS. However, if you only delete the DMS on dataminer.services, the DMS will still try to reach dataminer.services, and if you only unregister the DMS, the information related to the DMS will still be displayed on dataminer.services.
