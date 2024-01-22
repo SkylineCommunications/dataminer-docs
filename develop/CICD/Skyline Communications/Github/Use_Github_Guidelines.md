@@ -56,7 +56,7 @@ If the repository is private, the name should look like this (using "-" as separ
   - AS (Automation Scripts)
   - PLS (Profile-Load Scripts)
   - PA (Process Automation)
-  - LSO (Life Service Orchestration)
+  - LSO (Life cycle Service Orchestration)
   - D (Dashboards)
   - CF (Companion Files)
   - T (Tests)
