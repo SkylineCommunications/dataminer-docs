@@ -789,6 +789,8 @@ items:
             topicUid: DOM_Altering_values_of_a_DomInstance
           - name: Processing multiple DomInstances - examples
             topicUid: DOM_BulkProcessing_Example
+          - name: Checking differences when updating a DomInstance
+            topicUid: DOM_GetDifferences
       - name: DOM DevOps tools
         topicUid: DOM_DevOps_tools
         items:
