@@ -4,7 +4,7 @@ uid: DOM_GetDifferences
 
 # Checking differences when updating a DomInstance
 
-From 10.4.3/10.5.0 onwards<!-- RN 38364 -->, it is possible to see the changes done to a DomInstance when updating that instance using the "GetDifferences" method on the [CrudMeta](xref:ExecuteScriptOnDomInstanceActionSettings#full-crud-meta-type) of that instance.
+From 10.4.3/10.5.0 onwards<!-- RN 38364 -->, it is possible to see the changes done to a DomInstance in a CRUD script using the `GetDifferences` method on the [CrudMeta](xref:ExecuteScriptOnDomInstanceActionSettings#full-crud-meta-type) object of that instance.
 
 ## GetDifferences structure & methods
 
@@ -26,22 +26,22 @@ On these FieldValueDifferences you can apply different methods:
 |OfFieldDescriptor(\<FieldDescriptorID\>) | FieldValueDifferences | Returns the differences on a certain FieldDescriptor|
 |OfSectionDefinition(\<SectionDefinitionID\>) | FieldValueDifferences | Returns the differences within a certain SectionDefinition|
 
-These methods can be chained to create the specific conditions to get your desired differences.
+These methods can be chained to create specific conditions to get your desired differences.
 
-For example to get all differences that where updates in a certain section:
+Example: getting all updated `FieldValues` of a certain `SectionDefinition`:
 
 ```csharp
 var differences = crudMeta.GetDifferences().OfSectionDefinition(SectionDefinitionId).OfType(CrudType.Update);
 ```
 
-These FieldValueDifferences contain a list of FieldValueDifference:
+This `FieldValueDifferences` object contains a list of `FieldValueDifference` objects:
 
 |Property        |Type        |Description |
 |----------------|------------|------------|
-|Type | CrudType | The CrudType of the changed FieldDescriptor (Create, Update & Delete) |
+|Type | CrudType | The CrudType of the changed FieldDescriptor (Create, Update or Delete) |
 |ValueBefore | IValueWrapper | The value of the FieldDescriptor before the change|
 |ValueAfter | IValueWrapper | The value of the FieldDescriptor after the change|
-|FieldDescriptorId | FieldDescriptorID | The ID the changed FieldDescriptor|
+|FieldDescriptorId | FieldDescriptorID | The ID of the changed FieldDescriptor|
 |SectionId | SectionID |The SectionId of the changed FieldDescriptor|
 |SectionDefinitionId | SectionDefinitionID | The SectionDefinitionId of the changed FieldDescriptor|
 
