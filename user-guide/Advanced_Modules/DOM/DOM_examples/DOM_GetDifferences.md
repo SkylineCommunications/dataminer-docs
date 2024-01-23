@@ -41,7 +41,7 @@ This `FieldValueDifferences` object contains a list of `FieldValueDifference` ob
 |Type | CrudType | The CrudType of the changed FieldDescriptor (Create, Update or Delete) |
 |ValueBefore | IValueWrapper | The value of the FieldDescriptor before the change|
 |ValueAfter | IValueWrapper | The value of the FieldDescriptor after the change|
-|FieldDescriptorId | FieldDescriptorID | The ID the changed FieldDescriptor|
+|FieldDescriptorId | FieldDescriptorID | The ID of the changed FieldDescriptor|
 |SectionId | SectionID |The SectionId of the changed FieldDescriptor|
 |SectionDefinitionId | SectionDefinitionID | The SectionDefinitionId of the changed FieldDescriptor|
 
