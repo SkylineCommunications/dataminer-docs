@@ -129,6 +129,12 @@ From now on, if you want to have log entries related to duplicate keys, increase
 
 DataMiner upgrade actions related to SLAnalytics features now also support Cassandra connections with TLS.
 
+#### User-Defined APIs: Maximum size of HTTP response body has been reduced to 29MB [ID_38397]
+
+<!-- MR 10.4.0 - FR 10.4.3 -->
+
+As of version 10.4.1, the maximum size of the HTTP request body is 29 MB. Now, also the maximum size of the HTTP response body has been reduced to 29 MB.
+
 #### SLAnalytics - Behavioral anomaly detection: Enhanced accuracy [ID_38400]
 
 <!-- MR 10.4.0 - FR 10.4.3 -->
