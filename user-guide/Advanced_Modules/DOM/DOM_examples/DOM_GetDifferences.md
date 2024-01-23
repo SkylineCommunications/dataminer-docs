@@ -26,7 +26,7 @@ On these FieldValueDifferences you can apply different methods:
 |OfFieldDescriptor(\<FieldDescriptorID\>) | FieldValueDifferences | Returns the differences on a certain FieldDescriptor|
 |OfSectionDefinition(\<SectionDefinitionID\>) | FieldValueDifferences | Returns the differences within a certain SectionDefinition|
 
-These methods can be chained to create the specific conditions to get your desired differences.
+These methods can be chained to create specific conditions to get your desired differences.
 
 For example to get all differences that where updates in a certain section:
 
