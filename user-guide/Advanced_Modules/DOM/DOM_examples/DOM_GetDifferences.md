@@ -4,7 +4,7 @@ uid: DOM_GetDifferences
 
 # Checking differences when updating a DomInstance
 
-From 10.4.3/10.5.0 onwards<!-- RN 38364 -->, it is possible to see the changes done to a DomInstance when updating that instance using the "GetDifferences" method on the [CrudMeta](xref:ExecuteScriptOnDomInstanceActionSettings#full-crud-meta-type) of that instance.
+From 10.4.3/10.5.0 onwards<!-- RN 38364 -->, it is possible to see the changes done to a DomInstance in a CRUD script using the `GetDifferences` method on the [CrudMeta](xref:ExecuteScriptOnDomInstanceActionSettings#full-crud-meta-type) object of that instance.
 
 ## GetDifferences structure & methods
 
