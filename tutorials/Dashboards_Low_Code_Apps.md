@@ -1,5 +1,6 @@
 ---
 uid: Dashboards_Low-Code_Apps_Tutorials
+keywords: low-code, low code, lowcode
 ---
 
 # Dashboards and Low-Code Apps tutorials
