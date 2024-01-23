@@ -3437,6 +3437,16 @@ items:
           items: 
           - name: Organization
             topicUid: Manifest.DeploymentOptions.OrganizationCatalogAccess.Organization
+      - name: MinimumRequiredVersions
+        topicUid: Manifest.MinimumRequiredVersions
+        items:
+        - name: MinimumRequiredVersion
+          topicUid: Manifest.MinimumRequiredVersions.MinimumRequiredVersion
+          items:
+          - name: '@key'
+            topicUid: Manifest.MinimumRequiredVersions.MinimumRequiredVersion-key
+          - name: '@value'
+            topicUid: Manifest.MinimumRequiredVersions.MinimumRequiredVersion-value
       - name: Name
         topicUid: Manifest.Name
       - name: Version
@@ -3529,6 +3539,12 @@ items:
     - name: SchemaTypes
       topicUid: Manifest-TypeAlarmTemplateName
       items:
+      - name: EnumLatestReleaseLatestBuild
+        topicUid: Manifest-EnumLatestReleaseLatestBuild
+      - name: EnumTrueFalse
+        topicUid: Manifest-EnumTrueFalse
+      - name: EnumMinimumRequiredVersionKeys
+        topicUid: Manifest-EnumMinimumRequiredVersionKeys
       - name: TypeAlarmTemplateName
         topicUid: Manifest-TypeAlarmTemplateName
       - name: TypeEmptyString
