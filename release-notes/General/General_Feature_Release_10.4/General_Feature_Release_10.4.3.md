@@ -177,6 +177,17 @@ When a *Get parameters from elements* query is executed for a parameter table, f
 
 As a result, overall performance of clients like the Dashboards app or a low-code app will significantly increase when executing this type of queries.
 
+#### User-Defined APIs: Enhanced logging [ID_38491]
+
+<!-- MR 10.5.0 - FR 10.4.3 -->
+
+Up to now, when a user-defined API was triggered, log entries like the ones below would only be added to the *SLUserDefinableApiManager.txt* file when the log level was set to 5. From now on, when a user-defined API is triggered, these entries will be added to *SLUserDefinableApiManager.txt* when the log level is set to 0 (i.e. always).
+
+```txt
+2024/01/18 10:13:00.740|SLNet.exe|Handle|CRU|0|152|[1f9cd6c045] Started handling API trigger from NATS for route 'dma/id_2'.
+2024/01/18 10:13:01.268|SLNet.exe|Handle|CRU|0|152|[1f9cd6c045] Handling API trigger from NATS for route 'dma/id_2' SUCCEEDED after 526.46 ms. API script provided response code: 200. (Token ID: 78dd7916-6d01-4c17-9010-530c28338120)
+```
+
 #### DxMs upgraded [ID_38499]
 
 <!-- MR 10.5.0 - FR 10.4.3 -->
