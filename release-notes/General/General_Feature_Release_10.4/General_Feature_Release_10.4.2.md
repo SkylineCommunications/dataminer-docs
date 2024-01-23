@@ -656,6 +656,6 @@ When cleaning (i.e. resetting) a Cassandra database, in some cases, a `TypeIniti
 
 #### Failover: NATS would incorrectly be reconfigured when both agents were offline [ID_38349]
 
-<!-- MR 10.3.0 [CU12] - FR 10.4.2 [CU0] -->
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 [CU0] -->
 
 When both agents in a Failover setup were offline, in some cases, they would incorrectly reconfigure the NATS settings.
