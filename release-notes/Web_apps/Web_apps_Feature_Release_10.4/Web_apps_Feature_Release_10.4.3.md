@@ -53,6 +53,12 @@ In a web form, values in a `DomInstanceValueFieldDescriptor` or `DomInstanceFiel
 
 Up to now, when working with the template editor, only text overrides could be reset. From now on, all overrides have a dedicate reset button.
 
+#### DataMiner web apps updated to Angular 17 [ID_38468]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+The DataMiner mobile apps that use Angular (e.g. Low-Code Apps, Dashboards, Monitoring, Ticketing, Jobs, Automation, etc.) now all use Angular 17.
+
 ### Fixes
 
 #### Dashboards app: Problem when an error occurred while creating a dashboard [ID_38310]
