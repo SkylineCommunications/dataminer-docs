@@ -185,3 +185,9 @@ Also, values of analog range parameters would be displayed twice.
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
 
 The *Show context menu* action, which should only be available in the template editor, would incorrectly also be available in button components, page events, header actions, etc.
+
+#### Dashboards app: Problem when trying to cancel the deletion of a query [ID_38540]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+When you tried to cancel the deletion of a query used in a component, an error could be thrown.
