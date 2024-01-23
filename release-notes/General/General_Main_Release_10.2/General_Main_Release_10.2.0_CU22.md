@@ -537,3 +537,13 @@ When a custom separator was used inside a [param:] placeholder referring to a ta
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
 
 When, while creating or editing an Automation script, you opened the *Add action* selection box and selected "User interaction", in some cases, an exception could be thrown.
+
+#### DataMiner Cube - Protocols & templates: Problem when creating alarm templates or trend templates due to casing issue [ID_38456]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
+
+In DataMiner Cube, you can create a new alarm template or trend template from within an element card by clicking the hamburger menu and selecting *Protocols & Templates > Assign alarm template > \<New alarm template\>* or *Protocols & Templates > Assign trend template > \<New trend template\>*.
+
+Up to now, when the protocol name or protocol version of the element had a casing that was different from that of the protocol itself, in some cases, the protocol would incorrectly not be found.
+
+From now on, protocol comparisons will be performed case-insensitively.
