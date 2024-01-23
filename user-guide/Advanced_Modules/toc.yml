@@ -656,7 +656,8 @@ items:
                   - name: RowMetadataBase
                     topicUid: GQI_RowMetadataBase
                   - name: TimeRangeMetadata
-                    topicUid: GQI_TimeRangeMetadata
+              - name: Best practices
+                topicUid: GQI_Extensions_Best_Practices
           - name: Query updates
             topicUid: Query_updates
           - name: Importing a query
