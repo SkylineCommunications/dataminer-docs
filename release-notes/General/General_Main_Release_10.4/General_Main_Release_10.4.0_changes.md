@@ -1212,3 +1212,9 @@ Up to now, when using a gRPC connection, Cube was not able to verify whether the
 Up to now, when alarms were cleared before the end of the time frame specified in the *Collect events for ... after first event, then evaluate conditions and execute actions* correlation rule setting, the alarm buckets would not get cleaned up.
 
 From now on, when a correlation rule is configured to use the *Collect events for ... after first event, then evaluate conditions and execute actions* trigger mechanism, all alarm buckets will be properly cleaned up, unless there are actions that need to be executed either when the base alarms are updated or when alarms are cleared.
+
+#### DataMiner Cube was not able to reconnect to the server after a disconnect [ID_38481]
+
+<!-- MR 10.4.0 - FR 10.4.3 -->
+
+In some cases, DataMiner Cube would not be able to reconnect to the server after having been disconnected.

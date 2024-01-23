@@ -238,3 +238,9 @@ When both agents in a Failover setup were offline, in some cases, they would inc
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
 
 In some rare cases, a cleanup routine within SLAutomation could prematurely clean up data of scripts that had not yet finished, causing an error to occur.
+
+#### DataMiner Cube was not able to reconnect to the server after a disconnect [ID_38481]
+
+<!-- MR 10.4.0 - FR 10.4.3 -->
+
+In some cases, DataMiner Cube would not be able to reconnect to the server after having been disconnected.
