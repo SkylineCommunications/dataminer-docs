@@ -893,13 +893,16 @@ From now on, a behavioral change will only be taken into account when the change
 
 As a result, anomalies that report a trend change "from 0%/day to 0%/day", a level shift from "0.1 to 0.1", etc. will no longer be taken into account.
 
-#### SLProtocol will no longer log messages related to duplicate keys at the default log levels [ID_38392]
+#### SLProtocol will no longer log messages related to duplicate keys at the default log levels [ID_38392] [ID_38517]
 
 <!-- MR 10.4.0 - FR 10.4.3 -->
 
 When SLProtocol identifies duplicate keys, it will no longer flood the error log with messages related to duplicate keys (e.g. `Duplicate key in table 1000, key = 123`) at the default log levels.
 
 From now on, if you want to have log entries related to duplicate keys, increase the error log level to 1.
+
+> [!NOTE]
+> When polling via SNMP, duplicate keys will only be logged when error log level is set to 1. When using FillArray in a QAction, duplicate keys will always be logged regardless of error log level.
 
 #### SLAnalytics - Behavioral anomaly detection: Enhanced accuracy [ID_38400]
 

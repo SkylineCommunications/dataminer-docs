@@ -135,13 +135,16 @@ From now on, SLProtocol will always fetch element data page by page, except on s
 
 On systems with a MySQL database, SLProtocol will continue to fetch element data by parameter ID.
 
-#### SLProtocol will no longer log messages related to duplicate keys at the default log levels [ID_38392]
+#### SLProtocol will no longer log messages related to duplicate keys at the default log levels [ID_38392] [ID_38517]
 
 <!-- MR 10.4.0 - FR 10.4.3 -->
 
 When SLProtocol identifies duplicate keys, it will no longer flood the error log with messages related to duplicate keys (e.g. `Duplicate key in table 1000, key = 123`) at the default log levels.
 
 From now on, if you want to have log entries related to duplicate keys, increase the error log level to 1.
+
+> [!NOTE]
+> When polling via SNMP, duplicate keys will only be logged when error log level is set to 1. When using FillArray in a QAction, duplicate keys will always be logged regardless of error log level.
 
 #### DataMiner upgrade: SLAnalytics upgrade actions now support Cassandra connections with TLS [ID_38393]
 
