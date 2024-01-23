@@ -78,5 +78,5 @@ public class Script
 ```
 
 >[!TIP]
-> From 10.4.3/10.5.0 onwards<!-- RN 38364 -->, it is possible to see the changes done when updating a DomInstance using the ["GetDifferences"](xref:DOM_GetDifferences#getdifferences-structure--methods) method on the CrudMeta of that instance.
+> From 10.4.3/10.5.0 onwards<!-- RN 38364 -->, it is possible to see the changes done on a DomInstance using the [GetDifferences](xref:DOM_GetDifferences#getdifferences-structure--methods) method on the DomInstanceCrudMeta object.
 > Checkout the example [Checking differences when updating a DomInstance](xref:DOM_GetDifferences) to see how the method can be used and how it is structured.
