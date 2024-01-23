@@ -60,6 +60,12 @@ When creating a new property, from now on, it will no longer be allowed to use a
 > [!NOTE]
 > Property names will now be trimmed before being saved.
 
+#### Service templates: Enhanced performance when reapplying a service template [ID_38463]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
+
+Because of a number of enhancements, overall performance has increased when reapplying a service template.
+
 ### Fixes
 
 #### User menu: Problem when logging out immediately after logging in [ID_38178]
