@@ -65,6 +65,9 @@ All processes that were still using the deprecated *SLMessageBroker.dll* or *CSL
 | SLMessageBroker.dll  | DataMinerMessageBroker.API        |
 | CSLCloudBridge.dll   | DataMinerMessageBroker.API.Native |
 
+> [!IMPORTANT]
+> This is a breaking change. It will cause the *VerifyNatsIsRunning* prerequisite to fail when you downgrade to an earlier DataMiner version, because this prerequisite will expect the old *SLMessageBroker* DLL instead of the *DataMinerMessageBroker* API. To be able to downgrade, you will need to open the upgrade package you want to downgrade to (like a zip archive) and remove *VerifyNatsIsRunning.dll* from the `\Update.zip\Prerequisites\` folder.
+
 #### SLNetClientTest tool: Message builder now allows creating an instance of an abstract type or interface [ID_38236]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->

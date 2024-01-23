@@ -867,6 +867,9 @@ All processes that were still using the deprecated *SLMessageBroker.dll* or *CSL
 | SLMessageBroker.dll  | DataMinerMessageBroker.API        |
 | CSLCloudBridge.dll   | DataMinerMessageBroker.API.Native |
 
+> [!IMPORTANT]
+> This is a breaking change. It will cause the *VerifyNatsIsRunning* prerequisite to fail when you downgrade to an earlier DataMiner version, because this prerequisite will expect the old *SLMessageBroker* DLL instead of the *DataMinerMessageBroker* API. To be able to downgrade, you will need to open the upgrade package you want to downgrade to (like a zip archive) and remove *VerifyNatsIsRunning.dll* from the `\Update.zip\Prerequisites\` folder.
+
 #### SLLogCollector will now also collect the backup logs of the StorageModule DxM [ID_38228]
 
 <!-- MR 10.4.0 - FR 10.4.2 -->
