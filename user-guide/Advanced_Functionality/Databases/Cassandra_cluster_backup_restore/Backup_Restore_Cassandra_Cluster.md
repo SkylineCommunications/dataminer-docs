@@ -81,6 +81,8 @@ See below for detailed instructions on how to enable SSH access.
 > [!IMPORTANT]
 > If the backup is initiated from one of the nodes in the cluster, the public key should also be appended to the *authorized_keys* file on this node.
 
+After the last step, you should be able to *ssh* from one of nodes to another node of the cluster, without entering the password, just its IP address.
+
 ## Configuring the NFS share
 
 To facilitate storage for backups, a shared folder is necessary, and all nodes in the cluster must be mounted to the same network path.
@@ -103,11 +105,12 @@ Execute the following steps on each node in the cluster:
 
 1. Install Medusa. For detailed instructions, see the [installation guide on GitHub](https://github.com/thelastpickle/cassandra-medusa/blob/master/docs/Installation.md).
 
-1. Create the */etc/medusa* directory if it does not exist yet, and create the */etc/medusa/medusa.ini* file. For more detailed information, go to [Configure Medusa on GitHub](https://github.com/thelastpickle/cassandra-medusa/blob/master/docs/Configuration.md).
-
-   1. Create the directory by running the following command: `$ sudo mkdir -p /etc/medusa/`
-   1. Create the file by running the following command: `$ sudo touch /etc/medusa/medusa.ini`
-   1. Ensure the following properties are configured:
+1. Create the */etc/medusa* directory if it does not exist yet:
+   1. `$ sudo mkdir -p /etc/medusa/`
+  
+1. Copy the example provided in [Configure Medusa on GitHub](https://github.com/thelastpickle/cassandra-medusa/blob/master/docs/Configuration.md) into a new file */etc/medusa/medusa.ini*.
+   
+1. Edit the file to ensure the following properties are configured:
 
       - Cassandra:
 
@@ -121,17 +124,17 @@ Execute the following steps on each node in the cluster:
 
           - *nodetool_username*
           - *nodetool_password*
+         
+        - User certificate (if TLS encryption is configured in Cassandra):
+          
+          - *certfile* (path to the rootCa certificate)
+          - *usercert* (path to user certificate)
 
       - Storage:
 
         - *storage_provider*
         - *bucket_name*
         - *base_path*
-
-      - SSH:
-
-        - *key_file*(path to the rsa private key)
-        - *port*
 
 ## Taking a backup using Medusa
 
@@ -148,6 +151,9 @@ Execute the following steps on each node in the cluster:
      `$ medusa backup-cluster --backup-name=<name of the backup> --mode=full`
 
 1. Verify that the backup is taken for every node in the cluster. The location of the backup is *base_path*/*bucket_name*.
+
+> [!IMPORTANT]
+> For the nodes the backup failed for some reason, you should take a full backup of a single node (connected locally to each of them).
 
 ## Restoring a backup using Medusa
 
