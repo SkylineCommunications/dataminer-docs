@@ -38,7 +38,7 @@ This `FieldValueDifferences` object contains a list of `FieldValueDifference` ob
 
 |Property        |Type        |Description |
 |----------------|------------|------------|
-|Type | CrudType | The CrudType of the changed FieldDescriptor (Create, Update & Delete) |
+|Type | CrudType | The CrudType of the changed FieldDescriptor (Create, Update or Delete) |
 |ValueBefore | IValueWrapper | The value of the FieldDescriptor before the change|
 |ValueAfter | IValueWrapper | The value of the FieldDescriptor after the change|
 |FieldDescriptorId | FieldDescriptorID | The ID the changed FieldDescriptor|
