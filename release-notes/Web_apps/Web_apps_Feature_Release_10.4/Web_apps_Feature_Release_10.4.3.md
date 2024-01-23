@@ -179,3 +179,9 @@ From now on, when the loader bar appears while an item is selected, it will alwa
 In the Monitoring app, parameter values displayed on element pages would not be aligned correctly.
 
 Also, values of analog range parameters would be displayed twice.
+
+#### Low-Code Apps: 'Show context menu' action would incorrectly also be available outside the template editor [ID_38526]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+The *Show context menu* action, which should only be available in the template editor, would incorrectly also be available in button components, page events, header actions, etc.
