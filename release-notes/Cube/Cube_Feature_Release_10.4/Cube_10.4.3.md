@@ -45,6 +45,12 @@ From now on, the following operators are supported in filters for numeric column
 !=
 ```
 
+#### Incident alarms and correlation alarms will now be processed separately [ID_38389]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
+
+In order to enhance overall performance, incident alarms and correlation alarms will now be processed separately.
+
 #### Property names identical to names of existing properties except for leading or trailing whitespace characters will no longer be allowed [ID_38424]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
