@@ -43,6 +43,26 @@ maps.aspx?config=MyConfigFile&dmyElement=VesselData
 
 ## Changes
 
+### Breaking changes
+
+#### Microsoft Entra ID: Enhanced user and group import [ID_38154]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+A number of improvements have been made with regard to importing users and user groups into Microsoft Entra ID (formerly known as Azure Active Directory):
+
+- Enhanced performance for tenants with large amounts of users and groups.
+- Support for users of which the name contains non-ASCII characters, users sharing the same given name and surname, and users of whom the given name and/or surname is not provisioned.
+- Group descriptions will now also be imported.
+
+These improvements include the following **breaking change**:
+
+User name format has changed from `{organization}\{givenName}.{surname}` to `{domain}\{username}` based on the `userPrincipalName`.
+
+This format is now consistent with automatic user provisioning via SAML authentication.
+
+For example, "ZIINE\Björn.Waldegård" with userPrincipalName <bjorn.waldegard@ziine.com> will now become "ziine.com\bjorn.waldegard".
+
 ### Enhancements
 
 #### SLAnalytics - Alarm focus: Alarm occurrences will now be identified using a combination of element ID, parameter ID and primary key  [ID_38184] [ID_38251]
