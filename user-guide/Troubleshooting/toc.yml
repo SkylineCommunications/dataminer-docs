@@ -205,8 +205,10 @@ items:
     topicUid: Known_issues
     items:
       - name: Current issues
-        topicUid: KI_Failover_Agents_offline_after_upgrade
+        topicUid: KI_Downgrade_fails_VerifyNatsIsRunning_prerequisite
         items:
+          - name: Downgrade fails because of VerifyNatsIsRunning.dll prerequisite
+            topicUid: KI_Downgrade_fails_VerifyNatsIsRunning_prerequisite
           - name: Failover Agents remain offline after upgrade
             topicUid: KI_Failover_Agents_offline_after_upgrade
           - name: NATS services missing after reboot
