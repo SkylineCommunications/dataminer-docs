@@ -22,7 +22,7 @@ When the Failover pair attempts to come online, both DataMiner Agents continuous
 
 ## Fix
 
-No fix is available yet.
+Install DataMiner 10.3.0 [CU11], 10.4.0, or 10.4.2<!--RN 38349-->.
 
 ## Description
 
