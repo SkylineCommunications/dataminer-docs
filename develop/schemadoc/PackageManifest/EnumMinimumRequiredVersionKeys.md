@@ -11,4 +11,4 @@ Items for which a minimum required version can be defined.
 |Item|Facet value|Description|
 |--- |--- |--- |
 |***string restriction***|||
-|Enumeration|DataMiner|DataMiner version|
+|&nbsp;&nbsp;Enumeration|DataMiner|DataMiner version|
