@@ -20,7 +20,7 @@ To configure this setup, proceed as follows:
 
    - *search* attribute: Always set this to "true".
 
-   - *ID* attribute: This should be a unique number, preferably starting at 0 and increasing by 1 for each additional cluster. The ID needs to be the same on any agent for each specific DB.
+   - *ID* attribute: This should be a unique number, preferably starting at 0 and increasing by 1 for each additional cluster. The ID for a specific database must be the same on any DataMiner Agent.
 
    - *priorityOrder* attribute: Indicates the priority of the different clusters. The lower the value, the greater the priority. The cluster with the lowest value is the main cluster, from which data will be read.
 
