@@ -111,7 +111,7 @@ From now on, when a correlation rule is configured to use the *Collect events fo
 
 #### Failover: NATS would incorrectly be reconfigured when both agents were offline [ID_38349]
 
-<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+<!-- MR 10.3.0 [CU12] - FR 10.4.2 [CU0] -->
 
 When both agents in a Failover setup were offline, in some cases, they would incorrectly reconfigure the NATS settings.
 
