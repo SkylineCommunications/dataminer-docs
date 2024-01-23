@@ -3424,11 +3424,11 @@ items:
                   topicUid: Manifest.Content.Visios.Visio.Version.Selection.Specific
               - name: SetAsDefault
                 topicUid: Manifest.Content.Visios.Visio.Version.SetAsDefault
-      - name: DeleteFiles
-        topicUid: Manifest.DeleteFiles
-        items: 
-        - name: Delete
-          topicUid: Manifest.DeleteFiles.Delete
+      # - name: DeleteFiles
+      #   topicUid: Manifest.DeleteFiles
+      #   items: 
+      #   - name: Delete
+      #     topicUid: Manifest.DeleteFiles.Delete
       - name: DeploymentOptions
         topicUid: Manifest.DeploymentOptions
         items: 
