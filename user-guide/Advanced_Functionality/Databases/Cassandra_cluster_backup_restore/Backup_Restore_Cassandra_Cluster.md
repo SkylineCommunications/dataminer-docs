@@ -8,6 +8,8 @@ If you are running a Cassandra cluster on **Linux** for the DataMiner system sto
 
 Medusa serves as an Apache Cassandra backup system, offering a command-line interface for backing up or restoring either a single Cassandra node or an entire cluster. Its functionality extends to supporting various storage options, including **local storage** as detailed below.
 
+When executing a backup using Medusa, it checks the status of all nodes in the Cassandra cluster using the "nodetool status" command to ensure that they are all up and running. Medusa enforces the requirement for all nodes to be operational before initiating the backup to ensure data integrity and consistency in the backup.
+
 > [!NOTE]
 >
 > - We promote the use of Ubuntu LTS as the preferred Linux distribution. As such, the commands mentioned below will work on any Debian-based system, including Ubuntu.
