@@ -28,7 +28,7 @@ On these FieldValueDifferences you can apply different methods:
 
 These methods can be chained to create specific conditions to get your desired differences.
 
-For example to get all differences that where updates in a certain section:
+Example: getting all updated `FieldValues` of a certain `SectionDefinition`:
 
 ```csharp
 var differences = crudMeta.GetDifferences().OfSectionDefinition(SectionDefinitionId).OfType(CrudType.Update);
