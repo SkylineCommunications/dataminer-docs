@@ -12,9 +12,9 @@ The GetDifferences method returns an object DomInstanceDifferences. This contain
 
 - DomInstanceDifferences:
     - FieldValues : all changes (returned as FieldValueDifferences)
-        - Created : changes of the created type (returned as FieldValueDifferences)
-        - Updated : changes of the updated type (returned as FieldValueDifferences)
-        - Deleted : changes of the deleted type (returned as FieldValueDifferences)
+        - Created : changes where a new value was added (returned as FieldValueDifferences)
+        - Updated : changes where a value was updated (returned as FieldValueDifferences)
+        - Deleted : changes where a value was removed (returned as FieldValueDifferences)
 
 On these FieldValueDifferences you can apply different methods:
 
