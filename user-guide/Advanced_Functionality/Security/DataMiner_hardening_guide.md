@@ -133,6 +133,7 @@ On DataMiner versions installed using the **10.0 installer** (or older), the Dat
 
   > [!NOTE]
   > This rule and the one above for TCP 7000 only apply when the DataMiner System uses a Cassandra database locally.
+  > If Cassandra is configured to TLS, port 7001 and 9142 are used instead. For detailed information on securing Cassandra, refer to [securing self hosted storage](#secure-self-hosted-dataminer-storage).
 
 - TCP 9200: Elasticsearch (client-server communication)
 
@@ -159,7 +160,7 @@ If you use the **DataMiner 10.1 installer or a more recent installer**, the port
 
 - TCP port **9004** can always be closed from DataMiner 10.0.11 CU0 and 10.0.0 CU6 onwards.
 
-- TCP port **8222** can always be closed. This will be the default from 10.1.12 CU0 and 10.2.0 CU0 onwards.
+- TCP port **8222** can always be closed. The port is closed by default from 10.1.12 CU0 and 10.2.0 CU0 onwards.
 
 - The ports for NATS communication (**4222, 6222, and 9090**) can be closed when the DMA is not part of a cluster.
 
