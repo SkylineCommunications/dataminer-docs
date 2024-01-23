@@ -34,7 +34,7 @@ For example to get all differences that where updates in a certain section:
 var differences = crudMeta.GetDifferences().OfSectionDefinition(SectionDefinitionId).OfType(CrudType.Update);
 ```
 
-These FieldValueDifferences contain a list of FieldValueDifference:
+This `FieldValueDifferences` object contains a list of `FieldValueDifference` objects:
 
 |Property        |Type        |Description |
 |----------------|------------|------------|
