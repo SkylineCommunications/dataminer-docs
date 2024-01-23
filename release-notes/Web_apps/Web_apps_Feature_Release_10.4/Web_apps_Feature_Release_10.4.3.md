@@ -158,6 +158,12 @@ Also, selected table rows would not be visible in a PDF file when the table had 
 
 When a PDF report had been generated, in some cases, that report showed a `There are no open sessions` error while the dashboard did not.
 
+#### Low-Code Apps - Table component: Problem with component action 'Select an item' [ID_38462]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+In some cases, the table component action *Select an item* would not work.
+
 #### Dashboards app & Low-Code Apps - Grid component: Loader bar would incorrectly appear behind any selected items [ID_38466]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
