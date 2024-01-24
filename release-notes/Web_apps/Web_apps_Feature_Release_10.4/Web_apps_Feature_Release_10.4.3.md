@@ -190,7 +190,7 @@ The *Show context menu* action, which should only be available in the template e
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
 
-When a large number of dashboard files were updated or deleted, the cache of the web APIs could re-initialize itself. In some cases, this would lead to an error, causing operations like retrieving a list of dashboards or updating a dashboard to fail.
+When a large number of dashboard files were updated or deleted, the cache of the web APIs could re-initialize itself. In some cases, this would lead to the web APIs to become unresponsive, causing operations like retrieving a list of dashboards or updating a dashboard to fail.
 
 #### Dashboards app: Problem when trying to cancel the deletion of a query [ID_38540]
 
