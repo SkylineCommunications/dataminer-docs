@@ -250,3 +250,16 @@ The `ExecuteScriptOnDomInstanceActionSettings` object has been made available as
 > - When `ScriptSettings` are filled in in the DomDefinition, these will take precedence.
 > - When, in the DomDefinition, the `ScriptSettings` object is null, the `ScriptSettings` of the `ModuleSettings` will be used instead.
 > - In order for the `ModuleSettings` objects to be used, the objects in the `ModuleSettingsOverrides` of the `DomDefinition` have to be *null*. Just making them empty is not sufficient.
+
+### Tools
+
+#### SLNetClientTest tool: New SLProtocol health statistics [ID_37617]
+
+<!-- MR 10.5.0 - FR 10.4.3 -->
+
+When, in the *SLNetClientTest* tool, you open the *Diagnostics > DMA* menu, you can now find the following new commands:
+
+| Command | Function |
+|---------|----------|
+| Health Stats (SLProtocol) > Stats      | Show the overall SLProtocol memory used by all elements. |
+| Health Stats (SLProtocol) > Details... | Show all details of a specific element.          |
