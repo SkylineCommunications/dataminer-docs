@@ -180,6 +180,12 @@ In the Monitoring app, parameter values displayed on element pages would not be 
 
 Also, values of analog range parameters would be displayed twice.
 
+#### Dashboards app: Parameter data set filters would no longer be applied after adding a parameter to a dashboard [ID_38503]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+After you had added a parameter to a dashboard, the checkbox filters on the parameter data set would incorrectly no longer be applied.
+
 #### Low-Code Apps: 'Show context menu' action would incorrectly also be available outside the template editor [ID_38526]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
