@@ -116,6 +116,8 @@ items:
               topicUid: Recommended_Policies
             - name: Unlimited opportunity
               topicUid: Unlimited_Opportunity
+        - name: Glossary
+          topicUid: DevOps_Glossary
     - name: Training courses and certification
       topicUid: Overview_Training_intro
       items:
