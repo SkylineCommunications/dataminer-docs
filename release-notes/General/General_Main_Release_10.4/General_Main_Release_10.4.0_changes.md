@@ -920,6 +920,12 @@ For parameters of which the trend data behavior is mostly stable, with only infr
 
 The accuracy of proactive cap detection events (i.e. forecasted alarms) reporting data range violations has been improved.
 
+#### SLAnalytics - Behavioral anomaly detection: Enhanced detection of change points of type flatline [ID_38528]
+
+<!-- MR 10.4.0 - FR 10.4.3 -->
+
+Change point detection accuracy has been improved for change points of type flatline.
+
 ### Fixes
 
 #### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID_34981]

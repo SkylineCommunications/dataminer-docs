@@ -222,6 +222,12 @@ For detailed information about the changes included in those versions, refer to 
 
 The accuracy of proactive cap detection events (i.e. forecasted alarms) reporting data range violations has been improved.
 
+#### SLAnalytics - Behavioral anomaly detection: Enhanced detection of change points of type flatline [ID_38528]
+
+<!-- MR 10.4.0 - FR 10.4.3 -->
+
+Change point detection accuracy has been improved for change points of type flatline.
+
 ### Fixes
 
 #### DataMiner installer: Some modules would not get installed while performing a full installation of a new DMA [ID_37719]
