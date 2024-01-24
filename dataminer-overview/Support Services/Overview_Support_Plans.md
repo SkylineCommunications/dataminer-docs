@@ -54,12 +54,11 @@ Because its foundation is mutual commitment, the Evolve plan is not sold as a se
 
 ## Professional Service Credits
 
-Support plans may include free [Professional Service Credits](https://community.dataminer.services/professional-service-credits/) based on the commercial model and the number of licenses or usage.
-This is a yearly time budget to support and consult your team. 
+Support plans may include free [Professional Service Credits](https://community.dataminer.services/professional-service-credits/) based on the commercial model and the number of licenses or usage. This is a yearly time budget to support and consult your team. 
 
 | Pay-per-use credits | Subscription plan | Perpetual-Use Licenses |
 |:-:|:-:|:-:|
 | 50 for every 1000 credits |  100 < MUA < 200: 100 <br> 200 < MUA < 400: 200 <br> MUA >= 400: 600 | 200 <br> Only available with Evolve plan |
 
 > [!NOTE]
-> These Professional Services Credits must be used within the contracted year, will not be carried over to the next year. 
+> These Professional Service Credits must be used within the contracted year. They will not be carried over to the next year. 
