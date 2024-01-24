@@ -205,6 +205,12 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 
 For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
 
+#### SLAnalytics - Proactive cap detection: Enhanced accuracy [ID_38508]
+
+<!-- MR 10.4.0 - FR 10.4.3 -->
+
+The accuracy of proactive cap detection events (i.e. forecasted alarms) reporting data range violations has been improved.
+
 ### Fixes
 
 #### DataMiner installer: Some modules would not get installed while performing a full installation of a new DMA [ID_37719]

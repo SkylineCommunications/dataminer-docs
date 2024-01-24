@@ -914,6 +914,12 @@ Change point detection accuracy has been improved for parameters that have a dis
 
 For parameters of which the trend data behavior is mostly stable, with only infrequent sudden value changes, only behavioral changes that are larger than those infrequent sudden value changes will be taken into account.
 
+#### SLAnalytics - Proactive cap detection: Enhanced accuracy [ID_38508]
+
+<!-- MR 10.4.0 - FR 10.4.3 -->
+
+The accuracy of proactive cap detection events (i.e. forecasted alarms) reporting data range violations has been improved.
+
 ### Fixes
 
 #### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID_34981]
