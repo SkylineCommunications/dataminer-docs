@@ -122,7 +122,7 @@ From now on, when the value of a required list field is set to an empty list, on
 
 Up to now, if history storage was enabled, when DomInstances were created, updated or deleted, a HistoryChange operation would be executed for every DomInstance separately.
 
-From now on, for every batch of DomInstances that are processed, the history records will be saved in bulk.
+From now on, for every batch of DomInstances that are processed in bulk, the history records will also be processed in bulk.
 
 #### Security enhancements [ID_38263]
 
