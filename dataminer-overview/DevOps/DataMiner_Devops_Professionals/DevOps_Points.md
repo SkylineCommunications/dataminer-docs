@@ -74,34 +74,37 @@ In general, the more active you are in the DataMiner Dojo community and the more
 
 The life cycle of DevOps Points operates as follows:
 
-- **Expiration**: The DevOps Points you have collected expire after 12 months from your sign-up date for the program (referred to as your anniversary date). However, although your DevOps Points total will reset to zero, you will retain the DevOps Professional status you had on your anniversary date.
+- **Expiration**: The DevOps Points you have collected expire after 12 months from your sign-up date for the program (referred to as your anniversary date or renewal date). However, although your DevOps Points total will reset to zero, you will retain the DevOps Professional status you had on your anniversary date.
+
+  > [!IMPORTANT]
+  > DevOps Points are only used to determine your DevOps level. The Dojo Credits you have earned remain untouched and can be spent in the [Swag Shop](https://community.dataminer.services/swag-shop/) at any time.
 
 - **Renewal period**: After your anniversary date, a new 12-month period begins. During this period, you have the opportunity to gather enough points to reach a higher status level.
 
-- **Status maintenance**: If, by the end of the 12-month period, you have not accumulated sufficient points to retain your current status level, you will lose your status and be demoted to a lower level, if applicable (e.g. from enabler to advocate).
+- **Status maintenance**: If, by the end of the 12-month period, you have not accumulated sufficient points to retain your current status level, you will lose your status and be demoted to a lower level, if applicable (e.g. from Enabler to Advocate).
 
 Example:
 
-- You sign up for the DevOps Professional Program on April 12, 2023. This means you have until April 12, 2024, to reach the next status level (i.e. a 12-month period).
+- You sign up for the DevOps Professional Program on April 12, 2023. This means you have until April 12, 2024, to reach one of the three membership levels (i.e. a 12-month period).
 
-- By June 12th, you have earned 750 DevOps Points, qualifying you as an advocate.
+- By June 12th, 2023, you have earned 750 DevOps Points, qualifying you as an Advocate. Note that you are immediately awarded this new DevOps status upon reaching the required number of points.
 
-- By November 24th, you have earned 5000 DevOps Points, qualifying you as an enabler.
+- By November 24th, 2023, you have earned 5000 DevOps Points, qualifying you as an Enabler. Again, you are immediately awarded this new status.
 
-- Upon reaching your first anniversary on April 12, 2024, you have earned a total of 7600 DevOps Points. Your DevOps Points are reset to zero, but you retain your enabler level. To maintain this status, you will need to accumulate 5000 DevOps Points again before April 12, 2025.
+- Upon reaching your first anniversary on April 12, 2024, you have earned a total of 7600 DevOps Points. Your annual DevOps Points are reset to zero, but you retain your Enabler level, at least until the next renewal comes around. To maintain this status by then, you will need to accumulate at minimum 5000 DevOps Points again before April 12, 2025.
 
   ![DevOpsPointsLifeCycle](~/dataminer-overview/images/DevOps_Life_Cycle1.svg)
 
-- By August 13th, you have earned 750 DevOps Points, ensuring your advocate status at the end of the 12-month period. However, despite reaching the advocate status again, you still remain an enabler, as the 12-month period has not elapsed yet.
+- By August 13th, 2024, you have earned 750 DevOps Points, already ensuring your Advocate status at the end of the 12-month period, on April 12, 2025. Of course, while you have reached the Advocate status again, you still remain an Enabler, as this was the level you obtained during your previous membership year.
 
-- Upon reaching your second anniversary on April 12, 2025, you have earned a total of 4300 DevOps Points. You did not accumulate the required 5000 Points to retain the enabler level within a 12-month period. Consequently, you are now demoted to the advocate level. To retain this level, you will need to collect 750 DevOps Points before April 12, 2026.
+- Upon reaching your second anniversary on April 12, 2025, you have earned a total of 4300 DevOps Points. You did not accumulate the required 5000 Points to retain the Enabler level within a 12-month period. Consequently, you are now demoted to the Advocate level. To retain this level, you will need to collect 750 DevOps Points before April 12, 2026.
 
   ![DevOpsPointsLifeCycle2](~/dataminer-overview/images/DevOps_Life_Cycle2.svg)
 
-- By June 5th, you have earned 750 DevOps Points, ensuring your advocate status at the end of the 12-month period.
+- By June 5th, 2026, you have earned 750 DevOps Points, ensuring your Advocate status for the next renewal.
 
-- By September 9th, you have earned 5000 DevOps Points and are promoted to the enabler level.
+- By September 9th, 2026, you have earned 5000 DevOps Points and are instantly promoted to the Enabler level.
 
-- Upon reaching your third anniversary on April 12, 2026, you have earned a total of 7500 DevOps Points and have reached the enabler level.
+- Upon reaching your third anniversary on April 12, 2026, you have earned a total of 7500 DevOps Points and will therefore retain the Enabler level at least until the next renewal on April 12, 2027.
 
   ![DevOpsPointsLifeCycle3](~/dataminer-overview/images/DevOps_Life_Cycle3.svg)
