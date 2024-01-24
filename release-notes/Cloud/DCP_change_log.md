@@ -8,7 +8,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 #### 23 January 2024 - Fix - Unknown error when remote accessing web apps [ID_38549]
 
-While remote accessing web apps via dataminer.services (eg. the Monitoring app) the following message could appear `An unkown error occurred (status: 200).` and the app would stop working until the page was refreshed. This issue has been resolved.
+While remote accessing web apps via dataminer.services (e.g. the Monitoring app), the following message could appear: `An unknown error occurred (status: 200).` The app would also stop working until the page was refreshed. This issue has been resolved.
 
 #### 22 January 2024 - Enhancement - ArtifactDeployer 1.6.5 - Added DMA ID to deployment events [ID_38485]
 
