@@ -6,6 +6,10 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 23 January 2024 - Fix - Unknown error when remote accessing web apps [ID_38549]
+
+While remote accessing web apps via dataminer.services (eg. the Monitoring app) the following message could appear `An unkown error occurred (status: 200).` and the app would stop working until the page was refreshed. This issue has been resolved.
+
 #### 22 January 2024 - Enhancement - ArtifactDeployer 1.6.5 - Added DMA ID to deployment events [ID_38485]
 
 In combination with CoreGateway 2.14.0 or higher, the ArtifactDeployer will be able to include the DMA ID in deployment events, visible on the *Deployments* page of a DMS in the [Admin app](https://admin.dataminer.services). In case of a failure, particularly in a cluster, this ID provides a direct link to the server whose logs you need to examine for further investigation.
