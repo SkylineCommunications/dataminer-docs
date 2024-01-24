@@ -247,6 +247,12 @@ From now on, when a correlation rule is configured to use the *Collect events fo
 
 In some rare cases, a cleanup routine within SLAutomation could prematurely clean up data of scripts that had not yet finished, causing an error to occur.
 
+#### DataMiner upgrade: Problem with AnalyticsParameterInfoRecordAddChangeRate upgrade action on systems with a Cassandra Cluster database [ID_38443]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+During a DataMiner upgrade, the *AnalyticsParameterInfoRecordAddChangeRate* upgrade action executes an *Alter Table* command on every DataMiner Agent in the cluster. Up to now, when you upgraded a DataMiner System with a Cassandra Cluster database, that *Alter Table* command would incorrectly only get executed on the first DMA that called it. On each subsequent DMA that called the command, errors would get thrown and added to the *upgrade.log* file.
+
 #### DataMiner Cube was not able to reconnect to the server after a disconnect [ID_38481]
 
 <!-- MR 10.4.0 - FR 10.4.3 -->
