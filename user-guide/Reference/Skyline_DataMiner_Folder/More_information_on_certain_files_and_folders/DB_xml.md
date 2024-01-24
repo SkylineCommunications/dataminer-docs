@@ -553,7 +553,7 @@ To do so:
 
 1. Open the file *DB.xml* (in the folder *C:\\Skyline DataMiner\\*).
 
-1. In the *DB* element for the indexing database, specify the custom prefix. Keep in mind that only regular alphanumeric characters are supported for the prefix, not symbols.
+1. In the *DB* element for the indexing database, specify the custom prefix. Keep in mind that only regular alphanumeric characters are supported for the prefix, not symbols. The specified value must be the same for each OpenSearch cluster defined in *DB.xml*.
 
 1. Save the file and restart the DMA.
 

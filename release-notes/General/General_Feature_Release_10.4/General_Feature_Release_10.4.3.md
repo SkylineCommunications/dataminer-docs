@@ -43,6 +43,26 @@ maps.aspx?config=MyConfigFile&dmyElement=VesselData
 
 ## Changes
 
+### Breaking changes
+
+#### Microsoft Entra ID: Enhanced user and group import [ID_38154]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+A number of improvements have been made with regard to importing users and user groups into Microsoft Entra ID (formerly known as Azure Active Directory):
+
+- Enhanced performance for tenants with large amounts of users and groups.
+- Support for users of which the name contains non-ASCII characters, users sharing the same given name and surname, and users of whom the given name and/or surname is not provisioned.
+- Group descriptions will now also be imported.
+
+These improvements include the following **breaking change**:
+
+User name format has changed from `{organization}\{givenName}.{surname}` to `{domain}\{username}` based on the `userPrincipalName`.
+
+This format is now consistent with automatic user provisioning via SAML authentication.
+
+For example, "ZIINE\Björn.Waldegård" with userPrincipalName <bjorn.waldegard@ziine.com> will now become "ziine.com\bjorn.waldegard".
+
 ### Enhancements
 
 #### SLAnalytics - Alarm focus: Alarm occurrences will now be identified using a combination of element ID, parameter ID and primary key  [ID_38184] [ID_38251]
@@ -64,6 +84,9 @@ All processes that were still using the deprecated *SLMessageBroker.dll* or *CSL
 |----------------------|-----------------------------------|
 | SLMessageBroker.dll  | DataMinerMessageBroker.API        |
 | CSLCloudBridge.dll   | DataMinerMessageBroker.API.Native |
+
+> [!IMPORTANT]
+> This is a breaking change. It will cause the *VerifyNatsIsRunning* prerequisite to fail when you downgrade to an earlier DataMiner version, because this prerequisite will expect the old *SLMessageBroker* DLL instead of the *DataMinerMessageBroker* API. To be able to downgrade, you will need to open the upgrade package you want to downgrade to (like a zip archive) and remove *VerifyNatsIsRunning.dll* from the `\Update.zip\Prerequisites\` folder.
 
 #### SLNetClientTest tool: Message builder now allows creating an instance of an abstract type or interface [ID_38236]
 
@@ -112,7 +135,7 @@ From now on, SLProtocol will always fetch element data page by page, except on s
 
 On systems with a MySQL database, SLProtocol will continue to fetch element data by parameter ID.
 
-#### SLProtocol will no longer log messages related to duplicate keys at the default log levels [ID_38392]
+#### SLProtocol will no longer log messages related to duplicate keys at the default log levels [ID_38392] [ID_38517]
 
 <!-- MR 10.4.0 - FR 10.4.3 -->
 
@@ -120,11 +143,20 @@ When SLProtocol identifies duplicate keys, it will no longer flood the error log
 
 From now on, if you want to have log entries related to duplicate keys, increase the error log level to 1.
 
+> [!NOTE]
+> When polling via SNMP, duplicate keys will only be logged when error log level is set to 1. When using FillArray in a QAction, duplicate keys will always be logged regardless of error log level.
+
 #### DataMiner upgrade: SLAnalytics upgrade actions now support Cassandra connections with TLS [ID_38393]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
 
 DataMiner upgrade actions related to SLAnalytics features now also support Cassandra connections with TLS.
+
+#### User-Defined APIs: Maximum size of HTTP response body has been reduced to 29MB [ID_38397]
+
+<!-- MR 10.4.0 - FR 10.4.3 -->
+
+As of version 10.4.1, the maximum size of the HTTP request body is 29 MB. Now, also the maximum size of the HTTP response body has been reduced to 29 MB.
 
 #### SLAnalytics - Behavioral anomaly detection: Enhanced accuracy [ID_38400]
 
@@ -134,6 +166,12 @@ Change point detection accuracy has been improved for parameters that have a dis
 
 For parameters of which the trend data behavior is mostly stable, with only infrequent sudden value changes, only behavioral changes that are larger than those infrequent sudden value changes will be taken into account.
 
+#### SLAnalytics: Trend data pattern records will no longer be deleted from the database [ID_38407]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+From now on, trend data pattern records will no longer be deleted from the Elasticsearch/OpenSearch database.
+
 #### GQI: Enhanced performance when executing 'Get parameters from elements' queries for parameter tables [ID_38460]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
@@ -141,6 +179,17 @@ For parameters of which the trend data behavior is mostly stable, with only infr
 When a *Get parameters from elements* query is executed for a parameter table, from now on, the table sessions that are used to resolve those tables in parallel will be closed asynchronously.
 
 As a result, overall performance of clients like the Dashboards app or a low-code app will significantly increase when executing this type of queries.
+
+#### User-Defined APIs: Enhanced logging [ID_38491]
+
+<!-- MR 10.5.0 - FR 10.4.3 -->
+
+Up to now, when a user-defined API was triggered, log entries like the ones below would only be added to the *SLUserDefinableApiManager.txt* file when the log level was set to 5. From now on, when a user-defined API is triggered, these entries will be added to *SLUserDefinableApiManager.txt* when the log level is set to 0 (i.e. always).
+
+```txt
+2024/01/18 10:13:00.740|SLNet.exe|Handle|CRU|0|152|[1f9cd6c045] Started handling API trigger from NATS for route 'dma/id_2'.
+2024/01/18 10:13:01.268|SLNet.exe|Handle|CRU|0|152|[1f9cd6c045] Handling API trigger from NATS for route 'dma/id_2' SUCCEEDED after 526.46 ms. API script provided response code: 200. (Token ID: 78dd7916-6d01-4c17-9010-530c28338120)
+```
 
 #### DxMs upgraded [ID_38499]
 
@@ -192,14 +241,14 @@ Up to now, when alarms were cleared before the end of the time frame specified i
 
 From now on, when a correlation rule is configured to use the *Collect events for ... after first event, then evaluate conditions and execute actions* trigger mechanism, all alarm buckets will be properly cleaned up, unless there are actions that need to be executed either when the base alarms are updated or when alarms are cleared.
 
-#### Failover: NATS would incorrectly be reconfigured when both agents were offline [ID_38349]
-
-<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
-
-When both agents in a Failover setup were offline, in some cases, they would incorrectly reconfigure the NATS settings.
-
 #### Automation: Script data cleanup routine could cause an error to occur [ID_38370]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
 
 In some rare cases, a cleanup routine within SLAutomation could prematurely clean up data of scripts that had not yet finished, causing an error to occur.
+
+#### DataMiner Cube was not able to reconnect to the server after a disconnect [ID_38481]
+
+<!-- MR 10.4.0 - FR 10.4.3 -->
+
+In some cases, DataMiner Cube would not be able to reconnect to the server after having been disconnected.

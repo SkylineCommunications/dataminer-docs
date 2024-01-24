@@ -47,11 +47,23 @@ In a web form, values in a `DomInstanceValueFieldDescriptor` or `DomInstanceFiel
 > - A `DomInstanceValueFieldDescriptor` that refers to another `DomInstance(Value)FieldDescriptor` will only display the name (or the ID if there is no name) of the DomInstance to avoid performance degradation when fetching instances.
 > - DisplayValue is limited to 70 characters to avoid performance degradation.
 
+#### Dashboards app & Low-Code Apps: Redesigned popup windows [ID_38278]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+In the Dashboards app and the low-code apps, the popup windows have been redesigned.
+
 #### Dashboards app & Low-Code Apps - Template editor: All overrides now have a reset button [ID_38368]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
 
 Up to now, when working with the template editor, only text overrides could be reset. From now on, all overrides have a dedicate reset button.
+
+#### DataMiner web apps updated to Angular 17 [ID_38468]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+The DataMiner mobile apps that use Angular (e.g. Low-Code Apps, Dashboards, Monitoring, Ticketing, Jobs, Automation, etc.) now all use Angular 17.
 
 ### Fixes
 
@@ -146,6 +158,12 @@ Also, selected table rows would not be visible in a PDF file when the table had 
 
 When a PDF report had been generated, in some cases, that report showed a `There are no open sessions` error while the dashboard did not.
 
+#### Low-Code Apps - Table component: Problem with component action 'Select an item' [ID_38462]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+In some cases, the table component action *Select an item* would not work.
+
 #### Dashboards app & Low-Code Apps - Grid component: Loader bar would incorrectly appear behind any selected items [ID_38466]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
@@ -161,3 +179,15 @@ From now on, when the loader bar appears while an item is selected, it will alwa
 In the Monitoring app, parameter values displayed on element pages would not be aligned correctly.
 
 Also, values of analog range parameters would be displayed twice.
+
+#### Low-Code Apps: 'Show context menu' action would incorrectly also be available outside the template editor [ID_38526]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+The *Show context menu* action, which should only be available in the template editor, would incorrectly also be available in button components, page events, header actions, etc.
+
+#### Dashboards app: Problem when trying to cancel the deletion of a query [ID_38540]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+When you tried to cancel the deletion of a query used in a component, an error could be thrown.

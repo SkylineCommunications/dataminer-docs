@@ -255,3 +255,9 @@ After a DataMiner restart, in some cases, correlation alarms would have an incor
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 [CU0] -->
 
 Up to now, the BPA test *Check Cluster SLNet Connections* BPA could incorrectly report connection problems in a DataMiner System when it found a Failover setup with a shared hostname.
+
+#### Failover: NATS would incorrectly be reconfigured when both agents were offline [ID_38349]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 [CU0] -->
+
+When both agents in a Failover setup were offline, in some cases, they would incorrectly reconfigure the NATS settings.

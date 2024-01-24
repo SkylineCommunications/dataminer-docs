@@ -653,3 +653,9 @@ Up to now, the BPA test *Check Cluster SLNet Connections* BPA could incorrectly 
 <!-- MR 10.5.0 - FR 10.4.2 -->
 
 When cleaning (i.e. resetting) a Cassandra database, in some cases, a `TypeInitializationException` could be thrown.
+
+#### Failover: NATS would incorrectly be reconfigured when both agents were offline [ID_38349]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 [CU0] -->
+
+When both agents in a Failover setup were offline, in some cases, they would incorrectly reconfigure the NATS settings.

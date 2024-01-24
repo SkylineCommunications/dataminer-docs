@@ -10,6 +10,26 @@ uid: General_Main_Release_10.3.0_CU12
 > [!TIP]
 > For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
+### Breaking changes
+
+#### Microsoft Entra ID: Enhanced user and group import [ID_38154]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+A number of improvements have been made with regard to importing users and user groups into Microsoft Entra ID (formerly known as Azure Active Directory):
+
+- Enhanced performance for tenants with large amounts of users and groups.
+- Support for users of which the name contains non-ASCII characters, users sharing the same given name and surname, and users of whom the given name and/or surname is not provisioned.
+- Group descriptions will now also be imported.
+
+These improvements include the following **breaking change**:
+
+User name format has changed from `{organization}\{givenName}.{surname}` to `{domain}\{username}` based on the `userPrincipalName`.
+
+This format is now consistent with automatic user provisioning via SAML authentication.
+
+For example, "ZIINE\Björn.Waldegård" with userPrincipalName <bjorn.waldegard@ziine.com> will now become "ziine.com\bjorn.waldegard".
+
 ### Enhancements
 
 #### SLNetClientTest tool: Message builder now allows creating an instance of an abstract type or interface [ID_38236]
@@ -44,6 +64,12 @@ On systems with a MySQL database, SLProtocol will continue to fetch element data
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
 
 DataMiner upgrade actions related to SLAnalytics features now also support Cassandra connections with TLS.
+
+#### SLAnalytics: Trend data pattern records will no longer be deleted from the database [ID_38407]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+From now on, trend data pattern records will no longer be deleted from the Elasticsearch/OpenSearch database.
 
 #### GQI: Enhanced performance when executing 'Get parameters from elements' queries for parameter tables [ID_38460]
 
@@ -82,12 +108,6 @@ In some cases, DataMiner clients using a gRPC connection would not detect a disc
 Up to now, when alarms were cleared before the end of the time frame specified in the *Collect events for ... after first event, then evaluate conditions and execute actions* correlation rule setting, the alarm buckets would not get cleaned up.
 
 From now on, when a correlation rule is configured to use the *Collect events for ... after first event, then evaluate conditions and execute actions* trigger mechanism, all alarm buckets will be properly cleaned up, unless there are actions that need to be executed either when the base alarms are updated or when alarms are cleared.
-
-#### Failover: NATS would incorrectly be reconfigured when both agents were offline [ID_38349]
-
-<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
-
-When both agents in a Failover setup were offline, in some cases, they would incorrectly reconfigure the NATS settings.
 
 #### Automation: Script data cleanup routine could cause an error to occur [ID_38370]
 

@@ -45,6 +45,12 @@ From now on, the following operators are supported in filters for numeric column
 !=
 ```
 
+#### Incident alarms and correlation alarms will now be processed separately [ID_38389]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
+
+In order to enhance overall performance, incident alarms and correlation alarms will now be processed separately.
+
 #### Property names identical to names of existing properties except for leading or trailing whitespace characters will no longer be allowed [ID_38424]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
@@ -53,6 +59,12 @@ When creating a new property, from now on, it will no longer be allowed to use a
 
 > [!NOTE]
 > Property names will now be trimmed before being saved.
+
+#### Service templates: Enhanced performance when reapplying a service template [ID_38463]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
+
+Because of a number of enhancements, overall performance has increased when reapplying a service template.
 
 ### Fixes
 
@@ -113,3 +125,13 @@ When a custom separator was used inside a [param:] placeholder referring to a ta
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
 
 When, while creating or editing an Automation script, you opened the *Add action* selection box and selected "User interaction", in some cases, an exception could be thrown.
+
+#### Protocols & templates: Problem when creating alarm templates or trend templates due to casing issue [ID_38456]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
+
+In DataMiner Cube, you can create a new alarm template or trend template from within an element card by clicking the hamburger menu and selecting *Protocols & Templates > Assign alarm template > \<New alarm template\>* or *Protocols & Templates > Assign trend template > \<New trend template\>*.
+
+Up to now, when the protocol name or protocol version of the element had a casing that was different from that of the protocol itself, in some cases, the protocol would incorrectly not be found.
+
+From now on, protocol comparisons will be performed case-insensitively.

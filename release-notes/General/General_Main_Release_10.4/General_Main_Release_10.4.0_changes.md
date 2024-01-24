@@ -723,11 +723,12 @@ Also, additional logging has been added to indicate when a cache was refilled an
 
 Because of a number of enhancements, overall performance has increased when migrating data from a Cassandra database to the cloud.
 
-#### User-Defined APIs: Maximum size of HTTP request body has been reduced to 29MB [ID_37753]
+#### User-Defined APIs: Maximum size of HTTP request body and HTTP response body has been reduced to 29MB [ID_37753] [ID_38397]
 
-<!-- MR 10.4.0 - FR 10.4.1 -->
+<!-- RN 37753: MR 10.4.0 - FR 10.4.1 -->
+<!-- RN 38397: MR 10.4.0 - FR 10.4.3 -->
 
-The maximum size of the HTTP request body has been reduced from 30 MB to 29 MB.
+The maximum size of both the HTTP request body and the HTTP response body has been reduced 29 MB.
 
 Also, additional logging will be added to the *SLUserDefinableApiManager.txt* log file when subscribing on NATS fails and when sending a reply on an incoming NATS request fails.
 
@@ -867,6 +868,9 @@ All processes that were still using the deprecated *SLMessageBroker.dll* or *CSL
 | SLMessageBroker.dll  | DataMinerMessageBroker.API        |
 | CSLCloudBridge.dll   | DataMinerMessageBroker.API.Native |
 
+> [!IMPORTANT]
+> This is a breaking change. It will cause the *VerifyNatsIsRunning* prerequisite to fail when you downgrade to an earlier DataMiner version, because this prerequisite will expect the old *SLMessageBroker* DLL instead of the *DataMinerMessageBroker* API. To be able to downgrade, you will need to open the upgrade package you want to downgrade to (like a zip archive) and remove *VerifyNatsIsRunning.dll* from the `\Update.zip\Prerequisites\` folder.
+
 #### SLLogCollector will now also collect the backup logs of the StorageModule DxM [ID_38228]
 
 <!-- MR 10.4.0 - FR 10.4.2 -->
@@ -889,13 +893,16 @@ From now on, a behavioral change will only be taken into account when the change
 
 As a result, anomalies that report a trend change "from 0%/day to 0%/day", a level shift from "0.1 to 0.1", etc. will no longer be taken into account.
 
-#### SLProtocol will no longer log messages related to duplicate keys at the default log levels [ID_38392]
+#### SLProtocol will no longer log messages related to duplicate keys at the default log levels [ID_38392] [ID_38517]
 
 <!-- MR 10.4.0 - FR 10.4.3 -->
 
 When SLProtocol identifies duplicate keys, it will no longer flood the error log with messages related to duplicate keys (e.g. `Duplicate key in table 1000, key = 123`) at the default log levels.
 
 From now on, if you want to have log entries related to duplicate keys, increase the error log level to 1.
+
+> [!NOTE]
+> When polling via SNMP, duplicate keys will only be logged when error log level is set to 1. When using FillArray in a QAction, duplicate keys will always be logged regardless of error log level.
 
 #### SLAnalytics - Behavioral anomaly detection: Enhanced accuracy [ID_38400]
 
@@ -1208,3 +1215,9 @@ Up to now, when using a gRPC connection, Cube was not able to verify whether the
 Up to now, when alarms were cleared before the end of the time frame specified in the *Collect events for ... after first event, then evaluate conditions and execute actions* correlation rule setting, the alarm buckets would not get cleaned up.
 
 From now on, when a correlation rule is configured to use the *Collect events for ... after first event, then evaluate conditions and execute actions* trigger mechanism, all alarm buckets will be properly cleaned up, unless there are actions that need to be executed either when the base alarms are updated or when alarms are cleared.
+
+#### DataMiner Cube was not able to reconnect to the server after a disconnect [ID_38481]
+
+<!-- MR 10.4.0 - FR 10.4.3 -->
+
+In some cases, DataMiner Cube would not be able to reconnect to the server after having been disconnected.

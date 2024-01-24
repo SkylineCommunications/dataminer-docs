@@ -209,8 +209,6 @@ items:
         items:
           - name: Downgrade fails because of VerifyNatsIsRunning.dll prerequisite
             topicUid: KI_Downgrade_fails_VerifyNatsIsRunning_prerequisite
-          - name: Failover Agents remain offline after upgrade
-            topicUid: KI_Failover_Agents_offline_after_upgrade
           - name: NATS services missing after reboot
             topicUid: KI_missing_NATS_services
           - name: Problem after removing DMA from cluster
@@ -242,8 +240,10 @@ items:
           - name: Setting a protocol to production takes a long time
             topicUid: KI_Setting_a_protocol_to_production_takes_a_long_time
       - name: Resolved issues
-        topicUid: KI_Failover_with_hostnames
+        topicUid: KI_Failover_Agents_offline_after_upgrade
         items:
+          - name: Failover Agents remain offline after upgrade
+            topicUid: KI_Failover_Agents_offline_after_upgrade
           - name: Multiple issues when Failover based on hostnames is used
             topicUid: KI_Failover_with_hostnames
           - name: Elements not loading after upgrade of DMS with multiple Elasticsearch clusters
