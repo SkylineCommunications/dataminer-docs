@@ -116,6 +116,14 @@ From now on, when the value of a required list field is set to an empty list, on
 - `DomInstanceHasMissingRequiredFieldsForCurrentStatus` (when using the DOM status system)
 - `DomInstanceDoesNotContainAllRequiredFieldsForSectionDefinition` (when not using the DOM status system)
 
+#### DataMiner Object Models: HistoryChanges will now be processed in bulk [ID_38241]
+
+<!-- MR 10.5.0 - FR 10.4.3 -->
+
+Up to now, if history storage was enabled, when DomInstances were created, updated or deleted, a HistoryChange operation would be executed for every DomInstance separately.
+
+From now on, for every batch of DomInstances that are processed, the history records will be saved in bulk.
+
 #### Security enhancements [ID_38263]
 
 <!-- 38263: MR 10.5.0 - FR 10.4.3 -->
