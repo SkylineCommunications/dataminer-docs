@@ -9,6 +9,22 @@ uid: General_Main_Release_10.4.0_changes
 
 ## Changes
 
+### Breaking changes
+
+#### NATS: All processes will now use the DataMinerMessageBroker.API NuGet package [ID_38193]
+
+<!-- MR 10.4.0 - FR 10.4.3 -->
+
+All processes that were still using the deprecated *SLMessageBroker.dll* or *CSLCloudBridge.dll* files will now be using the *DataMinerMessageBroker.API* or *DataMinerMessageBroker.API.Native* NuGet package instead.
+
+| Processing using ... | will now instead use ...          |
+|----------------------|-----------------------------------|
+| SLMessageBroker.dll  | DataMinerMessageBroker.API        |
+| CSLCloudBridge.dll   | DataMinerMessageBroker.API.Native |
+
+> [!IMPORTANT]
+> This is a breaking change. It will cause the *VerifyNatsIsRunning* prerequisite to fail when you downgrade to an earlier DataMiner version, because this prerequisite will expect the old *SLMessageBroker* DLL instead of the *DataMinerMessageBroker* API. To be able to downgrade, you will need to open the upgrade package you want to downgrade to (like a zip archive) and remove *VerifyNatsIsRunning.dll* from the `\Update.zip\Prerequisites\` folder.
+
 ### Enhancements
 
 #### SLXML no longer used to read out element data [ID_33515] [ID_33616] [ID_33625] [ID_33659]
@@ -856,20 +872,6 @@ When calculating alarm likelihood (i.e. focus score), up to now, the alarm focus
 
 > [!NOTE]
 > When you upgrade to version 10.4.0/10.4.3, the Cassandra table *analytics_alarmfocus* will automatically be removed.
-
-#### NATS: All processes will now use the DataMinerMessageBroker.API NuGet package [ID_38193]
-
-<!-- MR 10.4.0 - FR 10.4.3 -->
-
-All processes that were still using the deprecated *SLMessageBroker.dll* or *CSLCloudBridge.dll* files will now be using the *DataMinerMessageBroker.API* or *DataMinerMessageBroker.API.Native* NuGet package instead.
-
-| Processing using ... | will now instead use ...          |
-|----------------------|-----------------------------------|
-| SLMessageBroker.dll  | DataMinerMessageBroker.API        |
-| CSLCloudBridge.dll   | DataMinerMessageBroker.API.Native |
-
-> [!IMPORTANT]
-> This is a breaking change. It will cause the *VerifyNatsIsRunning* prerequisite to fail when you downgrade to an earlier DataMiner version, because this prerequisite will expect the old *SLMessageBroker* DLL instead of the *DataMinerMessageBroker* API. To be able to downgrade, you will need to open the upgrade package you want to downgrade to (like a zip archive) and remove *VerifyNatsIsRunning.dll* from the `\Update.zip\Prerequisites\` folder.
 
 #### SLLogCollector will now also collect the backup logs of the StorageModule DxM [ID_38228]
 

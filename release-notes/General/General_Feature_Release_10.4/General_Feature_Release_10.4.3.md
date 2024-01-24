@@ -63,17 +63,6 @@ This format is now consistent with automatic user provisioning via SAML authenti
 
 For example, "ZIINE\Björn.Waldegård" with userPrincipalName <bjorn.waldegard@ziine.com> will now become "ziine.com\bjorn.waldegard".
 
-### Enhancements
-
-#### SLAnalytics - Alarm focus: Alarm occurrences will now be identified using a combination of element ID, parameter ID and primary key  [ID_38184] [ID_38251]
-
-<!-- MR 10.4.0 - FR 10.4.3 -->
-
-When calculating alarm likelihood (i.e. focus score), up to now, the alarm focus feature used a combination of element ID, parameter ID and display key (if applicable) to identify previous occurrences of the same alarm. From now on, previous alarm occurrences will be identified using a combination of element ID, parameter ID and primary key.
-
-> [!NOTE]
-> When you upgrade to version 10.4.0/10.4.3, the Cassandra table *analytics_alarmfocus* will automatically be removed.
-
 #### NATS: All processes will now use the DataMinerMessageBroker.API NuGet package [ID_38193]
 
 <!-- MR 10.4.0 - FR 10.4.3 -->
@@ -87,6 +76,17 @@ All processes that were still using the deprecated *SLMessageBroker.dll* or *CSL
 
 > [!IMPORTANT]
 > This is a breaking change. It will cause the *VerifyNatsIsRunning* prerequisite to fail when you downgrade to an earlier DataMiner version, because this prerequisite will expect the old *SLMessageBroker* DLL instead of the *DataMinerMessageBroker* API. To be able to downgrade, you will need to open the upgrade package you want to downgrade to (like a zip archive) and remove *VerifyNatsIsRunning.dll* from the `\Update.zip\Prerequisites\` folder.
+
+### Enhancements
+
+#### SLAnalytics - Alarm focus: Alarm occurrences will now be identified using a combination of element ID, parameter ID and primary key  [ID_38184] [ID_38251]
+
+<!-- MR 10.4.0 - FR 10.4.3 -->
+
+When calculating alarm likelihood (i.e. focus score), up to now, the alarm focus feature used a combination of element ID, parameter ID and display key (if applicable) to identify previous occurrences of the same alarm. From now on, previous alarm occurrences will be identified using a combination of element ID, parameter ID and primary key.
+
+> [!NOTE]
+> When you upgrade to version 10.4.0/10.4.3, the Cassandra table *analytics_alarmfocus* will automatically be removed.
 
 #### SLNetClientTest tool: Message builder now allows creating an instance of an abstract type or interface [ID_38236]
 
