@@ -7,6 +7,7 @@ uid: Known_issues
 
 | Issue | DataMiner version | Date added |
 |--|--|--|
+| [NATS configuration not updated after adding DMA to DMS](xref:KI_NATS_config_not_updated_after_adding_DMA) | All DataMiner versions | January 24, 2024 |
 | [Downgrade fails because of VerifyNatsIsRunning.dll prerequisite](xref:KI_Downgrade_fails_VerifyNatsIsRunning_prerequisite) | From DataMiner 10.4.0/10.4.3 onwards | January 23, 2024 |
 | [Failover Agents remain offline after upgrade](xref:KI_Failover_Agents_offline_after_upgrade) | From DataMiner 10.3.0 [CU9]/10.3.12 to 10.3.0 [CU11]/10.4.0/10.4.2 | January 22, 2024 |
 | [NATS services missing after reboot](xref:KI_missing_NATS_services) | Any version | January 10, 2024 |
@@ -19,6 +20,7 @@ uid: Known_issues
 
 | Issue | DataMiner version | Date added |
 |--|--|--|
+| [NATS configuration not updated after adding DMA to DMS](xref:KI_NATS_config_not_updated_after_adding_DMA) | All DataMiner versions | January 24, 2024 |
 | [Failover Agents remain offline after upgrade](xref:KI_Failover_Agents_offline_after_upgrade) | From DataMiner 10.3.0 [CU9]/10.3.12 to 10.3.0 [CU11]/10.4.0/10.4.2 | January 22, 2024 |
 | [NATS services missing after reboot](xref:KI_missing_NATS_services) | Any version | January 10, 2024 |
 | [Problem after removing DMA from cluster](xref:KI_Problem_after_removing_DMA_from_cluster) | Any DataMiner version with clustered storage <br>and/or indexing | December 15, 2023 |
@@ -67,6 +69,7 @@ uid: Known_issues
 
 | Issue | DataMiner version | Date added |
 |--|--|--|
+| [NATS configuration not updated after adding DMA to DMS](xref:KI_NATS_config_not_updated_after_adding_DMA) | All DataMiner versions | January 24, 2024 |
 | [NATS services missing after reboot](xref:KI_missing_NATS_services) | Any version | January 10, 2024 |
 | [Problem after removing DMA from cluster](xref:KI_Problem_after_removing_DMA_from_cluster) | Any DataMiner version with clustered storage <br>and/or indexing | December 15, 2023 |
 | [Cube freezes on 'Connected!' loading screen when no alarm tabs are displayed](xref:KI_Cube_connection_issue_alarm_tabs) | Any versions from DataMiner 10.2.0 onwards using automatic client updates| October 16, 2023 |
@@ -118,6 +121,7 @@ uid: Known_issues
 
 | Issue | DataMiner version | Date added |
 |--|--|--|
+| [NATS configuration not updated after adding DMA to DMS](xref:KI_NATS_config_not_updated_after_adding_DMA) | All DataMiner versions | January 24, 2024 |
 | [NATS services missing after reboot](xref:KI_missing_NATS_services) | Any version | January 10, 2024 |
 | [Problem after removing DMA from cluster](xref:KI_Problem_after_removing_DMA_from_cluster) | Any DataMiner version with clustered storage <br>and/or indexing | December 15, 2023 |
 | [Offload to MySQL offload database fails](xref:KI_offload_database_incorrect_integer_value) | Any version | October 4, 2023 |

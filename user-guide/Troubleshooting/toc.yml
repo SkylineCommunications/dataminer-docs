@@ -207,6 +207,8 @@ items:
       - name: Current issues
         topicUid: KI_Downgrade_fails_VerifyNatsIsRunning_prerequisite
         items:
+          - name: NATS configuration not updated after adding DMA to DMS
+            topicUid: KI_NATS_config_not_updated_after_adding_DMA
           - name: Downgrade fails because of VerifyNatsIsRunning.dll prerequisite
             topicUid: KI_Downgrade_fails_VerifyNatsIsRunning_prerequisite
           - name: NATS services missing after reboot
