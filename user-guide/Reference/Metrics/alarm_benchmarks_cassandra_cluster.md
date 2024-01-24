@@ -24,7 +24,7 @@ Client:
 
 ## Benchmarks
 
-| \# | Specification | Scope | Metric (Cassandra) | Metric (CassandraCluster) | Remarks | Configuration |
+| \# | Specification | Scope | Metric (Cassandra) | Metric (Cassandra Cluster) | Remarks | Configuration |
 | -- | ------------- | ----- | ------------------ | ------------------------- | ------- | ------------- |
 | 1  | Retrieve all current alarms (21,823) | DMS | 17.23 s | 19.78 s | Includes the loading from the remote database and the processing in Cube. | DMA only contains the elements, services, DVE elements and views needed for this test. No other data on it. Also, no other tests are running. |
 | 2 | Retrieve current alarms on a specific service (20,000) | DMS | 17.24 s | 24.83 s | Includes the loading from the remote database and the processing in Cube. | DMA only contains the elements, services, DVE elements and views needed for this test. No other data on it. Also, no other tests are running. |
