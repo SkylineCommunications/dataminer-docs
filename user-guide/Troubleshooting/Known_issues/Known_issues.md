@@ -7,6 +7,7 @@ uid: Known_issues
 
 | Issue | DataMiner version | Date added |
 |--|--|--|
+| [Downgrade fails because of VerifyNatsIsRunning.dll prerequisite](xref:KI_Downgrade_fails_VerifyNatsIsRunning_prerequisite) | From DataMiner 10.4.0/10.4.3 onwards | January 23, 2024 |
 | [Failover Agents remain offline after upgrade](xref:KI_Failover_Agents_offline_after_upgrade) | From DataMiner 10.3.0 [CU9]/10.3.12 to 10.3.0 [CU11]/10.4.0/10.4.2 | January 22, 2024 |
 | [NATS services missing after reboot](xref:KI_missing_NATS_services) | Any version | January 10, 2024 |
 | [Problem after removing DMA from cluster](xref:KI_Problem_after_removing_DMA_from_cluster) | Any DataMiner version with clustered storage <br>and/or indexing | December 15, 2023 |

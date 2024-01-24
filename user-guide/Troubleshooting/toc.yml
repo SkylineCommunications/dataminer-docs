@@ -205,8 +205,10 @@ items:
     topicUid: Known_issues
     items:
       - name: Current issues
-        topicUid: KI_missing_NATS_services
+        topicUid: KI_Downgrade_fails_VerifyNatsIsRunning_prerequisite
         items:
+          - name: Downgrade fails because of VerifyNatsIsRunning.dll prerequisite
+            topicUid: KI_Downgrade_fails_VerifyNatsIsRunning_prerequisite
           - name: NATS services missing after reboot
             topicUid: KI_missing_NATS_services
           - name: Problem after removing DMA from cluster
