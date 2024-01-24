@@ -135,3 +135,9 @@ In DataMiner Cube, you can create a new alarm template or trend template from wi
 Up to now, when the protocol name or protocol version of the element had a casing that was different from that of the protocol itself, in some cases, the protocol would incorrectly not be found.
 
 From now on, protocol comparisons will be performed case-insensitively.
+
+#### Settings: Description of 'Filter the alarms before they enter Cube' setting did not fit the screen [ID_38493]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
+
+In the *Settings* windows, the description of the *Filter the alarms before they enter Cube* setting did not fit the screen. The text would be wrapped incorrectly.
