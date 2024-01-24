@@ -229,3 +229,9 @@ Up to now, the description of this setting mentioned that the setting applied to
 In *System Center*, the *Other* tab of the *Database* section allows you to configure additional databases.
 
 Up to now, when Cube was connected to a DataMiner Agent configured to use STaaS, an error could occur when you tried to add an additional database.
+
+#### Visual Overview: Problem with subscription filter on 'Children' shape [ID_38537]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 [CU0] -->
+
+When a subscription filter was configured on a *Children* shape, it would not get parsed correctly, causing the filter to malfunction.
