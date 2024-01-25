@@ -304,3 +304,11 @@ In some cases, DataMiner Cube would not be able to reconnect to the server after
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
 
 When a client application was connected to a DataMiner Agent via a gRPC connection, in some cases, the alarm filters it received from the DataMiner Agent would not be properly serialized.
+
+#### SLAnalytics - Behavioral anomaly detection: Certain parameter value changes would incorrectly not get processed [ID_38545]
+
+<!-- MR 10.5.0 - FR 10.4.3 -->
+
+When SLAnalytics was handling large amounts of traffic, in some cases, certain parameter value changes would incorrectly not get processed.
+
+Also, a large number of low-severity change points were generated without a label. Those have now been reduced.
