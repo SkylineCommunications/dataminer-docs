@@ -8,7 +8,7 @@ uid: DevOps_Glossary
 |--|--|
 | Advocate | The entry level in the DataMiner DevOps Professional Program. This level can be achieved by being a well-performing community member and reaching the required 750 DevOps Points. |
 | Agile mindset | Agile methodologies drive value creation in an industry characterized by rapid advancements, complex technology stacks, and potential disruptions. See [Agile webspace](https://community.dataminer.services/agile-webspace/). |
-| Catalyst | The highest level in the DataMiner DevOps Professional Program. This level can be achieved by being an advanced DevOps Professional and reaching the required 25,000 DevOps Points. |
+| Catalyst | The highest level in the DataMiner DevOps Professional Program. This level can be achieved by being an advanced DevOps Professional and reaching the required 15,000 DevOps Points. |
 | Composable architecture | A way of fitting transformational technology into a technology stack for your business so that you can leverage its full current and future potential in a secure, easy, and scalable manner. |
 | Continuous learning program | A highly recommended initiative for DataMiner DevOps Professionals within a business, designed to evolve existing skill sets and acquire new ones. These skill sets can both relate to DataMiner and to other associated skills. |
 | DataMiner Business Partner | A company that creates business value and market presence with DataMiner. As a DataMiner Business Partner, you are eligible to earn DevOps Points from engaging in business activities. You can transfer these points and use them to pay for personal or professional benefits. See [Benefits for DataMiner business and technology partners](xref:Benefits_Business_and_Tech_Partners). |
