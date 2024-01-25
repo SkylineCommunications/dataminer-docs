@@ -16,7 +16,25 @@ uid: Web_apps_Feature_Release_10.4.3
 
 ## New features
 
-*No new features have been added yet.*
+#### Low-Code Apps: 'Show a notification' action [ID_38548]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+When editing a low-code app, it is now possible to configure *Show a notification* actions. These will allow you to show a notification in the bottom-right corner of the app.
+
+When configuring a *Show a notification* action, the following properties should be specified:
+
+- **Title** (mandatory): The title of the notification.
+- **Message** (optional): The text of the notification.
+- **Duration** (optional): The amount of seconds the notification will be displayed.
+
+  When you do not specify a duration, the notification will stay visible until the user closes it manually.
+
+> [!NOTE]
+>
+> - The maximum number of open notifications is 100. When a new notification appears when 100 notifications are open, the oldest one will automatically be removed.
+> - Only the first 80 characters of a title will be displayed.
+> - Only the first 400 characters of a message will be displayed.
 
 ## Changes
 
