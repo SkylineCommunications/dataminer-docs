@@ -599,7 +599,7 @@ items:
                       - name: Optimizing your custom operator
                         topicUid: Custom_Operator_Tutorial
               - name: API reference
-                topicUid: GQI_GQIArgument
+                topicUid: GQI_GenIfRowMetadata
                 items:
                   - name: GenIfRowMetadata
                     topicUid: GQI_GenIfRowMetadata
@@ -656,6 +656,7 @@ items:
                   - name: RowMetadataBase
                     topicUid: GQI_RowMetadataBase
                   - name: TimeRangeMetadata
+                    topicUid: GQI_GQIArgument
               - name: Best practices
                 topicUid: GQI_Extensions_Best_Practices
           - name: Query updates
