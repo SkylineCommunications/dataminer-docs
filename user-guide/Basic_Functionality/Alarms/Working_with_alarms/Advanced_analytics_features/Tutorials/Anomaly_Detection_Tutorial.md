@@ -43,9 +43,11 @@ The tutorial consists of the following steps:
 
 1. Deploy the catalog item to your DataMiner Agent by clicking the *Deploy* button.
 
+   This will create several DataMiner elements in your system that will be used throughout the rest of the tutorial. The elements will be located in the view *DataMiner Catalog* > *Augmented Operations* > *Anomaly Detection Tutorial*.
+
 ## Step 2: Discover anomaly detection in trend graphs
 
-1. In DataMiner Cube, select the element *Audio bit rate* in the Surveyor.
+1. In DataMiner Cube, select the element *Anomaly Detection Tutorial - Audio bit rate* in the Surveyor.
 
    This element simulates a parameter monitoring the bit rate of an audio channel on an encoder.
 
@@ -78,7 +80,7 @@ The tutorial consists of the following steps:
 
 ## Step 3: Discover anomaly detection in the Alarm Console
 
-1. In DataMiner Cube, select the element *Encryption Key Requests* in the Surveyor.
+1. In DataMiner Cube, select the element *Anomaly Detection Tutorial - Encryption Key Requests* in the Surveyor.
 
    This element simulates a parameter monitoring the number of encryption key requests received per minute by a CAS server.
   
@@ -96,7 +98,7 @@ The tutorial consists of the following steps:
 
    ![Anomaly tab in the Alarm Console](~/user-guide/images/Encryption_Key_Requests_Lightbulb.gif)
 
-1. Double-click one of the listed anomalies for the element *Encryption Key Requests* to view the trend graph of the parameter.
+1. Double-click one of the listed anomalies for the element *Anomaly Detection Tutorial - Encryption Key Requests* to view the trend graph of the parameter.
 
    The trend graph will show that the number of requests per minute remained relatively stable for a long time but suddenly increased spectacularly a few hours ago, indicating that unexpected activity may be going on in the network.
 
@@ -111,12 +113,12 @@ The tutorial consists of the following steps:
 
 As anomalies might flag potential problems in your operation, it can be useful to show alarms for these events.
 
-1. Create an alarm template for the example element *Encryption Key Requests 2*:
+1. Create an alarm template for the example element *Anomaly Detection Tutorial - Encryption Key Requests 2*:
 
-   1. Right-click the element *Encryption Key Requests 2* in the Surveyor, and select *Protocols & Templates* > *Assign alarm templates* > *New alarm template*.
+   1. Right-click the element *Anomaly Detection Tutorial - Encryption Key Requests 2* in the Surveyor, and select *Protocols & Templates* > *Assign alarm templates* > *New alarm template*.
 
       > [!NOTE]
-      > This element is a copy of *Encryption Key Requests*, which generates the same data.
+      > This element is a copy of *Anomaly Detection Tutorial - Encryption Key Requests*, which generates the same data.
 
    1. Specify a name for the alarm template, e.g. *Monitoring of anomalies*, and click *OK*.
 
@@ -144,7 +146,7 @@ As anomalies might flag potential problems in your operation, it can be useful t
 
 1. Simulate the data so that anomalies are detected:
 
-   1. In DataMiner Cube, select the element *Encryption Key Requests 2* in the Surveyor.
+   1. In DataMiner Cube, select the element *Anomaly Detection Tutorial - Encryption Key Requests 2* in the Surveyor.
 
    1. Click the *Generate Data* button to generate data for the parameter *Encryption Key Requests*.
 
@@ -168,7 +170,7 @@ In some cases, it can be useful to only generate alarms for certain types of ano
 
 1. Create an alarm template:
 
-   1. Right-click the element *Audio bit rate (CBR-VBR)* in the Surveyor, and select *Protocols & Templates* > *Assign alarm templates* > *New alarm template*.
+   1. Right-click the element *Anomaly Detection Tutorial - Audio bit rate (CBR-VBR)* in the Surveyor, and select *Protocols & Templates* > *Assign alarm templates* > *New alarm template*.
 
    1. Specify a name for the alarm template, e.g. *Variance change monitoring*, and click *OK*.
 
@@ -188,7 +190,7 @@ In some cases, it can be useful to only generate alarms for certain types of ano
 
 1. Simulate the data so that anomalies are detected:
 
-   1. Select the element *Audio bit rate (CBR-VBR)* in the Surveyor.
+   1. Select the element *Anomaly Detection Tutorial - Audio bit rate (CBR-VBR)* in the Surveyor.
 
    1. Click the *Generate Data* button to generate data for the parameter *Audio Bit Rate Channel 1*.
 
@@ -198,7 +200,7 @@ In some cases, it can be useful to only generate alarms for certain types of ano
 
    A *variance increase* alarm will show up in this tab.
 
-   ![Variance increase on "Audio bit rate (CBR-VBR)" in the Active alarms tab](~/user-guide/images/Audio_Bit_Rate_CBR_Alarm_Console_Variance_Increase.png)
+   ![Variance increase on "Anomaly Detection Tutorial - Audio bit rate (CBR-VBR)" in the Active alarms tab](~/user-guide/images/Audio_Bit_Rate_CBR_Alarm_Console_Variance_Increase.png)
 
 1. Double-click the alarm.
 
@@ -213,11 +215,11 @@ In some cases, it can be useful to only generate alarms for certain types of ano
 
 In the previous steps, DataMiner determined autonomously whether certain behavior was considered anomalous or not. However, sometimes it can be handy to add some more configuration to give DataMiner more input. In this example, you will configure specific thresholds for alarm monitoring of *level shift* anomalies.
 
-1. Check the current behavior with the example element *Cable Modems Out of Service*:
+1. Check the current behavior with the example element *Anomaly Detection Tutorial - Cable Modems Out of Service*:
 
    1. Select the element in the Surveyor.
 
-   1. Click the *Generate Data* button to generate data for the parameter *Cable Modems Out of Service*.
+   1. Click the *Generate Data* button to generate data for the parameter *Anomaly Detection Tutorial - Cable Modems Out of Service*.
 
    1. Wait until the *Data Generated?* parameter displays *Yes*.
 
@@ -227,12 +229,12 @@ In the previous steps, DataMiner determined autonomously whether certain behavio
 
       As you can see, the data tends to follow a wave pattern with a low number of cable modems out of service during the day, and a high number at night. This is caused by a significant number of people turning off their cable modem at night, making the CMTS unable to connect to it. Moreover, in the last two days, you can see four periods where more modems were out of service than expected: the data suddenly jumps up with around 70 units before dropping again a few hours later. Unfortunately, DataMiner only detects the first and the third period as anomalous, as seen by the dark grey blocks in the trend graph. This is because DataMiner assumes too quickly that the observed behavior is not anomalous since it has seen it before.
 
-1. Configure level shift anomaly alarm detection for the element *Cable Modems Out of Service 2*, so that alarms are generated during all four periods of anomalous behavior:
+1. Configure level shift anomaly alarm detection for the element *Anomaly Detection Tutorial - Cable Modems Out of Service 2*, so that alarms are generated during all four periods of anomalous behavior:
 
-   1. Right-click the element *Cable Modems Out of Service 2* in the Surveyor, and select *Protocols & Templates* > *Assign alarm templates* > *New alarm template*.
+   1. Right-click the element *Anomaly Detection Tutorial - Cable Modems Out of Service 2* in the Surveyor, and select *Protocols & Templates* > *Assign alarm templates* > *New alarm template*.
 
       > [!NOTE]
-      > This element is a copy of *Cable Modems Out of Service*, which generates the same data.
+      > This element is a copy of *Anomaly Detection Tutorial - Cable Modems Out of Service*, which generates the same data.
 
    1. Specify a name for the alarm template, e.g. *Monitoring of absolute thresholds*, and click *OK*.
 
@@ -254,7 +256,7 @@ In the previous steps, DataMiner determined autonomously whether certain behavio
 
    1. Click *OK* to save the alarm template.
 
-1. Generate data for the element *Cable Modems Out of Service 2*:
+1. Generate data for the element *Anomaly Detection Tutorial - Cable Modems Out of Service 2*:
 
    1. Select the element in the Surveyor.
 
@@ -272,9 +274,9 @@ In the previous steps, DataMiner determined autonomously whether certain behavio
 
       ![Details of the third level shift, a jump from 301 to 386 units](~/user-guide/images/CMOOS_Trend_Graph_Details_Third_Level_Shift.png)
 
-1. Configure *Cable Modems Out of Service 3* with relative alarm thresholds for more refined monitoring:
+1. Configure *Anomaly Detection Tutorial - Cable Modems Out of Service 3* with relative alarm thresholds for more refined monitoring:
 
-   1. Right-click the element *Cable Modems Out of Service 3* in the Surveyor, and select *Protocols & Templates* > *Assign alarm templates* >  *New alarm template*.
+   1. Right-click the element *Anomaly Detection Tutorial - Cable Modems Out of Service 3* in the Surveyor, and select *Protocols & Templates* > *Assign alarm templates* >  *New alarm template*.
 
    1. Specify a name for the alarm template, e.g. *Monitoring of relative thresholds*, and click *OK*.
 
@@ -296,7 +298,7 @@ In the previous steps, DataMiner determined autonomously whether certain behavio
 
    1. Click *OK* to save the alarm template.
 
-1. Generate data for the element *Cable Modems Out of Service 3*:
+1. Generate data for the element *Anomaly Detection Tutorial - Cable Modems Out of Service 3*:
 
    1. Select the element in the Surveyor.
 
@@ -317,7 +319,7 @@ In the previous steps, DataMiner determined autonomously whether certain behavio
 
 In this final step, you will apply everything you have learned earlier in a practical exercise:
 
-- Use the element *Signal Strength*. This element contains a parameter representing the strength of a signal received by a satellite dish.
+- Use the element *Anomaly Detection Tutorial - Signal Strength*. This element contains a parameter representing the strength of a signal received by a satellite dish.
 
 - Configure an alarm template for this element so that alarms are generated when something goes wrong. You will need to make sure that not too many alarms get created.
 
