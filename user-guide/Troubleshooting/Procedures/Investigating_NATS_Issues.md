@@ -400,7 +400,7 @@ NATS uses port 4222, 6222, and 8222. If another program is already bound to one 
 
   `Error listening on port: 0.0.0.0:4222, "listen tcp 0.0.0.0:4222: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted."`
 
-In this case, the port may already be bound by one of the DataMiner processes. To fix this:
+In this case, the port may already be bound by one of the DataMiner processes. This will usually only happen with port 4222. To fix this:
 
 1. Run the following command in a command prompt window: `netstat -aon | findstr 4222`.
 
