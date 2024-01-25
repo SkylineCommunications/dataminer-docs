@@ -59,12 +59,10 @@ Including a request header (e.g. "Accept", "Content-Type", "Content-Length", etc
 By using either Data or Parameters, you can send data along with the HTTP request. See Protocol.HTTP.Session.Connection.Request.Data and Protocol.HTTP.Session.Connection.Request.Parameters.
 
 > [!IMPORTANT]
-> DataMiner does not perform any encoding on the provided data. Therefore, if you are, for example, building a URL for a GET request with a query string or the body of a POST request with content type "application/x-www-form-urlencoded",
-you must ensure that the data is using [percent-encoding](https://datatracker.ietf.org/doc/html/rfc3986#section-2.1) (also known as URL encoding) to avoid misinterpretation of the provided data. Otherwise, the provided data might be misinterpreted by the server in case the data contains characters from the [reserved character set](https://datatracker.ietf.org/doc/html/rfc3986#section-2.2) (e.g. '&amp;').
+> DataMiner does not perform any encoding on the provided data. Therefore, if you are, for example, building a URL for a GET request with a query string or the body of a POST request with content type "application/x-www-form-urlencoded", you must ensure that the data is using [percent-encoding](https://datatracker.ietf.org/doc/html/rfc3986#section-2.1) (also known as URL encoding) to avoid misinterpretation of the provided data. Otherwise, the provided data might be misinterpreted by the server in case the data contains characters from the [reserved character set](https://datatracker.ietf.org/doc/html/rfc3986#section-2.2) (e.g. '&amp;').
 
 > [!NOTE]
->
-> - Either Parameters or Data should be used, not both. If both are used together, only the content of Parameters will be included in the request.
+> Either Parameters or Data should be used, not both. If both are used together, only the content of Parameters will be included in the request.
 
 The content specified in Data will either be appended unaltered to the URL (in case of GET request) or put in the body (POST request).
 
