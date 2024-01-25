@@ -203,3 +203,9 @@ When a large number of dashboard files were updated or deleted, the cache of the
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
 
 When you tried to cancel the deletion of a query used in a component, an error could be thrown.
+
+#### Dashboards app - Table component: Problem with CSV exports including text fields that contained double quotes [ID_38550]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+When you exported table data with text fields that contained double quotes (") to a CSV file, and then tried to import that file into e.g. Microsoft Excel, the data in the file would not get imported correctly.
