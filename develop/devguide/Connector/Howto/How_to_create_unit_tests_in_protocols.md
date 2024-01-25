@@ -42,18 +42,18 @@ The class PathRewriterTests has been annotated with a TestClass attribute. This 
 
 These attributes are defined by the MSTest framework (in the namespace Microsoft.VisualStudio.TestTools.UnitTesting). Other useful attributes are:
 
-- AssemblyInitializeAttribute and AssemblyCleanupAttribute: These identify the method that contains code to be executed before or after all tests in the assembly have run, respectively.
-- ClassInitializeAttribute and ClassCleanupAttribute: These identify the method that contains code to be executed before or after all tests in this test class have run, respectively.
-- TestInitializeAttribute and TestCleanupAttribute: These identify the method that contains code that must be executed before or after each test in this test class, respectively.
-- IgnoreAttribute: Used to indicate that a specific test should not run. 
-- DescriptionAttribute: Used to provide a description for the test.
-- TestCategoryAttribute: Specifies a category for the unit test.
-- TimeoutAttribute: Provides a timeout for the test.
-- DataTestMethodAttribute: Used to specify a data-driven test where data can be specified inline.
-- DataRowAttribute: Defines inline data for a test method.
-- ExpectedExceptionAttribute: Specifies the type of exception this test is expected to throw.
+- **AssemblyInitializeAttribute** and **AssemblyCleanupAttribute**: These identify the method that contains code to be executed before or after all tests in the assembly have run, respectively.
+- **ClassInitializeAttribute** and **ClassCleanupAttribute**: These identify the method that contains code to be executed before or after all tests in this test class have run, respectively.
+- **TestInitializeAttribute** and **TestCleanupAttribute**: These identify the method that contains code that must be executed before or after each test in this test class, respectively.
+- **IgnoreAttribute**: Used to indicate that a specific test should not run.
+- **DescriptionAttribute**: Used to provide a description for the test.
+- **TestCategoryAttribute**: Specifies a category for the unit test.
+- **TimeoutAttribute**: Provides a timeout for the test.
+- **DataTestMethodAttribute**: Used to specify a data-driven test where data can be specified inline.
+- **DataRowAttribute**: Defines inline data for a test method.
+- **ExpectedExceptionAttribute**: Specifies the type of exception this test is expected to throw.
 
-For more information about these attributes and a complete overview of all attributes that can be used, refer to <https://docs.microsoft.com/en-us/dotnet/api/microsoft.visualstudio.testtools.unittesting?view=mstest-net-1.3.2>.
+For more information about these attributes and a complete overview of all attributes that can be used, see [Microsoft.VisualStudio.TestTools.UnitTesting Namespace](https://docs.microsoft.com/en-us/dotnet/api/microsoft.visualstudio.testtools.unittesting?view=mstest-net-1.3.2).
 
 Visual Studio also provides a Test Explorer, which gives an overview of all your tests in the solution. To open the Test Explorer in Visual Studio, in the menu bar go to Test > Windows > Test Explorer.
 
@@ -61,19 +61,19 @@ Visual Studio also provides a Test Explorer, which gives an overview of all your
 
 From the Test Explorer, you can easily run a specific test, run all tests, create a playlist of tests, etc.
 
-For more information about the Test Explorer, refer to:
+For more information on the Test Explorer, see:
 
-- <https://docs.microsoft.com/en-us/visualstudio/test/run-unit-tests-with-test-explorer?view=vs-2019>
-- <https://docs.microsoft.com/en-us/visualstudio/test/debug-unit-tests-with-test-explorer?view=vs-2019>
-- <https://docs.microsoft.com/en-us/visualstudio/test/test-explorer-faq?view=vs-2019>
+- [Run unit tests with Test Explorer](https://docs.microsoft.com/en-us/visualstudio/test/run-unit-tests-with-test-explorer?view=vs-2019)
+- [Debug and analyze unit tests with Test Explorer](https://docs.microsoft.com/en-us/visualstudio/test/debug-unit-tests-with-test-explorer?view=vs-2019)
+- [Visual Studio Test Explorer FAQ](https://docs.microsoft.com/en-us/visualstudio/test/test-explorer-faq?view=vs-2019)
 
 At this point, Visual Studio has created the test class and method, but it is up to you to implement the test method.
 
-To implement a test method, typically the triple A (AAA) pattern is used. This means that the method body consists of three separate parts:
+To implement a test method, typically the **triple A (AAA) pattern** is used. This means that the method body consists of three separate parts:
 
-- Arrange: The setup of everything you need to perform the tests.
-- Act: Performing the action that you want to test.
-- Assert: Verifying whether the result is what you expected.
+- **Arrange**: The setup of everything you need to perform the tests.
+- **Act**: Performing the action that you want to test.
+- **Assert**: Verifying whether the result is what you expected.
 
 In the current example, the Arrange step consists of creating an instance of the class, the Act step is invoking the Rewrite method on that instance, and the Assert step is verifying whether the actual output matches the expected output.
 
@@ -92,7 +92,7 @@ public void Rewrite_PathWithItemsToAbbreviate_ReturnsAbbreviatedPath()
 }
 ```
 
-The Assert class defines multiple methods such as AreEqual, IsFalse, IsTrue, etc. that can be used to make assertions. For more information about the Assert class, refer to <https://docs.microsoft.com/en-us/dotnet/api/microsoft.visualstudio.testtools.unittesting.assert?view=mstest-net-1.3.2>.
+The Assert class defines multiple methods such as AreEqual, IsFalse, IsTrue, etc. that can be used to make assertions. For more information on the Assert class, see [Assert Class](https://docs.microsoft.com/en-us/dotnet/api/microsoft.visualstudio.testtools.unittesting.assert?view=mstest-net-1.3.2).
 
 Now you are ready to execute the test. This can be done in the Test Explorer, by e.g. clicking Run All. After a successful execution, everything should be green.
 
@@ -148,10 +148,10 @@ var myClass = new MyClass();
 
 ### Useful links
 
-For more information, refer to:
+For more information, see:
 
-- Testing tools in Visual Studio: <https://docs.microsoft.com/en-us/visualstudio/test/?view=vs-2019>
-- Unit testing best practices: <https://docs.microsoft.com/en-us/dotnet/core/testing/unit-testing-best-practices>
+- [Testing tools in Visual Studio](https://docs.microsoft.com/en-us/visualstudio/test/?view=vs-2019>)
+- [Unit testing best practices with .NET Core and .NET Standard](https://docs.microsoft.com/en-us/dotnet/core/testing/unit-testing-best-practices)
 
 ## Using isolation frameworks
 
@@ -204,7 +204,7 @@ Suppose you now want to create a unit test for this method. When calling the Rew
 
 One option is to create your own class that implements the SLProtocol interface. However, an easier alternative is to make use of an isolation framework.
 
-For this, you can for example use the Moq library. To start using the Moq library, select your test project in the Solution Explorer, right-click it, and then select Manage NuGet Packages. Click Browse and type Moq. Select the package and click the Install button.
+For this, you can for example use the [Moq library](https://github.com/moq/moq4). To start using the Moq library, select your test project in the Solution Explorer, right-click it, and then select Manage NuGet Packages. Click Browse and type Moq. Select the package and click the Install button.
 
 ![unittesting7.png](~/develop/images/unittesting7.png)
 
@@ -249,7 +249,7 @@ public void AbbreviatePath_PathContainingGeneric_CallsLogMethod()
 }
 ```
 
-By calling the Verify method on the slProtocolMock object, you can verify whether the Log method has been called. In this case, the values that were provided when the Log method was invoked are not important (hence the use of It.IsAny<T>). However, it is possible to also verify the values if this is needed. The following example verifies the message:
+By calling the Verify method on the slProtocolMock object, you can verify whether the Log method has been called. In this case, the values that were provided when the Log method was invoked are not important (hence the use of `It.IsAny<T>`). However, it is possible to also verify the values if this is needed. The following example verifies the message:
 
 ```csharp
 [TestMethod()]
@@ -276,13 +276,13 @@ Note that you may have noticed something unusual in this example: In the Rewrite
 
 This is because currently the Log(string, LogType,  LogLevel) method is defined as an extension method. Even though this extension method extends the SLProtocol interface, it is not part of the interface. However, this method just calls the Log(int, int, string) method internally (which is defined as part of the SLProtocol interface). Therefore, we can verify whether the Log(string, LogType, LogLevel) method was called by checking whether the Log(int, int, string) method was called.
 
-Currently, several extension methods on the SLProtocol interface are defined. Refer to NotifyProtocol class and ProtocolExtenders class for more information about these methods.
+Currently, several extension methods on the SLProtocol interface are defined. For more information about these methods, see [NotifyProtocol class](xref:Skyline.DataMiner.Scripting.NotifyProtocol) and [ProtocolExtenders class](xref:Skyline.DataMiner.Scripting.ProtocolExtenders).
 
 ### Useful links
 
-For more information about the Moq framework, refer to:
+For more information on the Moq framework, see:
 
-- Quickstart: <https://github.com/Moq/moq4/wiki/Quickstart>
+- [Quickstart](https://github.com/Moq/moq4/wiki/Quickstart)
 
 ## Writing testable code
 
@@ -424,7 +424,7 @@ ICollection<string> returned = …
 CollectionAssert.AreEquivalent(expected, returned.ToList());
 ```
 
-The example makes use of the AreEquivalent method, which checks whether two collections contain the same elements. In case order is important, AreEqual can be used. For more information about the CollectionAssert class, refer to <https://docs.microsoft.com/en-us/dotnet/api/microsoft.visualstudio.testtools.unittesting.collectionassert?view=mstest-net-1.3.2>.
+The example makes use of the AreEquivalent method, which checks whether two collections contain the same elements. In case order is important, AreEqual can be used. For more information on the CollectionAssert class, see [CollectionAssert Class](https://docs.microsoft.com/en-us/dotnet/api/microsoft.visualstudio.testtools.unittesting.collectionassert?view=mstest-net-1.3.2).
 
 Now suppose the returned collection contains “A”, “B” and “D”. When running the unit test, you will get the following result in test explorer:
 
@@ -528,7 +528,7 @@ Now the message gives more information about what went wrong.
 
 ### Useful links
 
-- Introduction to FluentAssertions: <https://fluentassertions.com/introduction>
+- [Introduction to FluentAssertions](https://fluentassertions.com/introduction)
 
 ## Using files in unit tests
 
@@ -633,4 +633,4 @@ Note the second parameter that was added to the attribute. It creates a director
 
 ### Useful links
 
-- How to: Deploy Files for Tests
+- [How to: Deploy Files for Tests](https://learn.microsoft.com/en-us/previous-versions/ms182475(v=vs.140))
