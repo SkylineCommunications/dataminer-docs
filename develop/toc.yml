@@ -3538,8 +3538,8 @@ items:
         topicUid: Manifest-EnumLatestReleaseLatestBuild
       - name: EnumTrueFalse
         topicUid: Manifest-EnumTrueFalse
-      - name: EnumMinimumRequiredVersionKeys
-        topicUid: Manifest-EnumMinimumRequiredVersionKeys
+      - name: TypeMinimumRequiredVersionKeys
+        topicUid: Manifest-TypeMinimumRequiredVersionKeys
       - name: TypeAlarmTemplateName
         topicUid: Manifest-TypeAlarmTemplateName
       - name: TypeEmptyString
