@@ -134,3 +134,9 @@ From now on, an exception will no longer be thrown when empty data is passed to 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
 
 During a DataMiner upgrade, the *AnalyticsParameterInfoRecordAddChangeRate* upgrade action executes an *Alter Table* command on every DataMiner Agent in the cluster. Up to now, when you upgraded a DataMiner System with a Cassandra Cluster database, that *Alter Table* command would incorrectly only get executed on the first DMA that called it. On each subsequent DMA that called the command, errors would get thrown and added to the *upgrade.log* file.
+
+#### Alarm filters would not be properly serialized when using a gRPC connection [ID_38507]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+When a client application was connected to a DataMiner Agent via a gRPC connection, in some cases, the alarm filters it received from the DataMiner Agent would not be properly serialized.

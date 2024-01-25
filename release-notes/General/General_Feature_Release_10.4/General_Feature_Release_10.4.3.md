@@ -298,3 +298,9 @@ During a DataMiner upgrade, the *AnalyticsParameterInfoRecordAddChangeRate* upgr
 <!-- MR 10.4.0 - FR 10.4.3 -->
 
 In some cases, DataMiner Cube would not be able to reconnect to the server after having been disconnected.
+
+#### Alarm filters would not be properly serialized when using a gRPC connection [ID_38507]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+When a client application was connected to a DataMiner Agent via a gRPC connection, in some cases, the alarm filters it received from the DataMiner Agent would not be properly serialized.
