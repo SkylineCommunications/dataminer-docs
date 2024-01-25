@@ -1,8 +1,8 @@
 ---
-uid: Manifest-EnumMinimumRequiredVersionKeys
+uid: Manifest-TypeMinimumRequiredVersionKeys
 ---
 
-# EnumMinimumRequiredVersionKeys simple type
+# TypeMinimumRequiredVersionKeys simple type
 
 Items for which a minimum required version can be defined.
 

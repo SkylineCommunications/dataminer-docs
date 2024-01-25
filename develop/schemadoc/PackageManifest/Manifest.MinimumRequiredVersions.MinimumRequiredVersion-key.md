@@ -8,7 +8,7 @@ Specifies for what the minimum required version is.
 
 ## Content Type
 
-[EnumMinimumRequiredVersionKeys](xref:Manifest-EnumMinimumRequiredVersionKeys)
+[TypeMinimumRequiredVersionKeys](xref:Manifest-TypeMinimumRequiredVersionKeys)
 
 ## Parent
 
