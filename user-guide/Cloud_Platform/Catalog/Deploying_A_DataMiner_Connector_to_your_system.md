@@ -21,7 +21,9 @@ To deploy an item from the DataMiner Catalog (e.g. a connector or package) to yo
    > [!NOTE]
    >
    > - The *Deploy* button is only available if your organization has a license for the displayed item. If it is unavailable, to be able to deploy the item, contact <licensing@skyline.be>.
-   > - All dataminer.services users in your organization have the rights to deploy items to your DataMiner Systems, regardless of the [permissions](xref:DataMiner_user_permissions) that have been configured for them in DataMiner. Note that this will be adjusted in the near future.
+   > - Deploying items to your DataMiner Systems can only be done by dataminer.services users of which the linked DataMiner user has following [permissions](xref:DataMiner_user_permissions):
+   >    - Modules > System configuration > Agents > Install App packages.
+   >    - Modules > Automation > Execute.
 
 1. Click the *Deploy* button.
 
