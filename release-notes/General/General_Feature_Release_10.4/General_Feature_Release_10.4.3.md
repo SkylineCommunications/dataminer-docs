@@ -283,7 +283,7 @@ In some rare cases, a cleanup routine within SLAutomation could prematurely clea
 
 <!-- MR 10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
 
-When running an interactive Automation script that was launched from a web app, in some cases, an exception could be thrown when empty data was passed to the UI parser.
+When running an interactive Automation script that was launched from Cube or a web app, in some cases, an exception could be thrown when empty data was passed to the UI parser.
 
 From now on, an exception will no longer be thrown when empty data is passed to the UI parser.
 
