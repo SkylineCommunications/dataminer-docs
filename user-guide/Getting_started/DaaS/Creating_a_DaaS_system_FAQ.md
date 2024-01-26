@@ -17,7 +17,8 @@ The DataMiner credit balance of an organization is displayed in the [Admin app](
 
 ### How can I acquire more DataMiner credits?
 
-Contact [your Account Manager](https://community.dataminer.services/get-in-touch/sales-team/).
+You can order DataMiner credits through the Azure Marketplace. See [Order DataMiner Credits]
+Contact [your Account Manager](https://community.dataminer.services/get-in-touch/sales-team/) for more information.
 
 ### When does a DaaS system expire?
 
