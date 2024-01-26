@@ -5,7 +5,7 @@ uid: Order_DataMiner_credits
 # Order DataMiner credits
 
 1. Go to the [Azure Marketplace](https://azuremarketplace.microsoft.com/) and Search for DataMiner.
-    ![Azure Marketplace DataMiner credits offer](user-guide\images\Azure_Marketplace_Offer.png)
+    ![Azure Marketplace DataMiner credits offer](~/user-guide/images/Azure_Marketplace_Offer.png)
 
 1. Click on *Get It Now* and continue to Azure portal.
 
@@ -15,7 +15,7 @@ uid: Order_DataMiner_credits
 1. Once redirected to the Azure portal click on Subscribe. This will start the process of creating a SaaS subscription resource to be deployed in a resource group.
 
 1. Using your new SaaS subscription click on *Configure account now*. This will redirect you to our marketplace landing page.
-    ![Configure account now](user-guide\images\Azure_Portal_Configure.png)
+    ![Configure account now](~/user-guide/images/Azure_Portal_Configure.png)
 
 1. After confirming all you details click on *Purchase credits*. This will activate your subscription and may take a couple minutes.
 
@@ -24,7 +24,7 @@ uid: Order_DataMiner_credits
     1. Log in using your dataminer.services account.
     1. Select the organization you want to transfer DataMiner credits to.
     1. Go to the webpage URL and copy the last part of the URL after the final slash.
-   ![How to retrieve organization ID](user-guide\images\Retrieve_Organization_ID.gif)
+   ![How to retrieve organization ID](~/user-guide/images/Retrieve_Organization_ID.gif)
 
 1. Use the slider to indicate how many credits you wish to purchase for the organization.
 
