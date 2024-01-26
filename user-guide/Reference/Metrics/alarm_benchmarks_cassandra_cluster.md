@@ -13,7 +13,7 @@ Server:
 - Intel Core i7-6770HQ CPU @ 2.60GHz
 - 32 GB RAM
 - Cassandra (clustered - 3 nodes)
-- ElasticSearch (clustered - 3 nodes)
+- Elasticsearch (clustered - 3 nodes)
 - Windows 10 Pro
 
 Client:
@@ -43,6 +43,5 @@ Client:
 | 14 | Retrieve all alarms of last 356 days on a specific element | DMA | 35.93 s | 73.06 s | Test retrieves all element alarms of the last year (200,000). | DMA only contains the elements, services, DVE elements and views needed for this test. No other data on it. Also, no other tests are running. |
 | 15 | Add the Severity Duration column on a busy system | DMS | 3.47 s | 3.52 s | Tested on a system with a large number of incoming alarms. | |
 
-## Comments
-
-CassandraCluster stores the alarms in an Elasticsearch/Opensearch database, which is not optimized for time based queries, hence time based history alarm queries are returned a bit slower here.
+> [!NOTE]
+> In a Cassandra Cluster setup, the alarms are stored in an OpenSearch or Elasticsearch database, which is not optimized for time-based queries. This is why time-based history alarm queries are returned a bit slower in this setup.
