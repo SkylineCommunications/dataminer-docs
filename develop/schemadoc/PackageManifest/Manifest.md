@@ -10,7 +10,7 @@ Manifest file of a package.
 
 |Name|Occurrences|Description|
 |--- |--- |--- |
-|***Sequence***|||
+|***All***|||
 |&nbsp;&nbsp;[Name](xref:Manifest.Name)||Specifies the name of the package.|
 |&nbsp;&nbsp;[Version](xref:Manifest.Version)||Specifies the version of the package.|
 |&nbsp;&nbsp;[Content](xref:Manifest.Content)||Specifies the content of the package.|
