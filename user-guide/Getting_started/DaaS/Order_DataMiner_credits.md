@@ -4,7 +4,7 @@ uid: Order_DataMiner_credits
 
 # Order DataMiner credits
 
-1. Go to the [Azure Marketplace](https://azuremarketplace.microsoft.com/) and Search for DataMiner.
+1. Go to the [Azure Marketplace](https://azuremarketplace.microsoft.com/) and search for DataMiner.
     ![Azure Marketplace DataMiner credits offer](~/user-guide/images/Azure_Marketplace_Offer.png)
 
 1. Click on *Get It Now* and continue to Azure portal.
