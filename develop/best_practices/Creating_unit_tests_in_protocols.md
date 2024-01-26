@@ -1,8 +1,8 @@
 ---
-uid: How_to_create_unit_tests_in_protocols
+uid: Creating_unit_tests_in_protocols
 ---
 
-# How to create unit tests in protocols
+# Creating unit tests in protocols
 
 Below, you can find out how to create unit tests in Visual Studio in a solution-based protocol and how to use isolation frameworks, write testable code, use FluentAssertions, and use files in unit tests.
 
