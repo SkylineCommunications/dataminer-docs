@@ -4,7 +4,7 @@ uid: Manifest.MinimumRequiredVersions.MinimumRequiredVersion-key
 
 # key attribute
 
-Specifies for what the minimum required version is.
+Specifies what the minimum required version is for.
 
 ## Content Type
 
