@@ -166,6 +166,6 @@ In some cases, an error could occur in the SLDMS process when the SLDMKey object
 
 #### Problem with SLDataMiner when an enhanced service was not able to find some of its child services [ID_38583]
 
-<!-- MR 10.5.0 - FR 10.4.3 -->
+<!-- MR 10.5.0 - FR 10.4.2 [CU0] -->
 
 At DataMiner startup, SLDataMiner could throw an access violation exception when an enhanced service was not able to find some of its child services.

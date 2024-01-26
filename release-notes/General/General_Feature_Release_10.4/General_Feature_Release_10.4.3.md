@@ -324,9 +324,3 @@ When a client application was connected to a DataMiner Agent via a gRPC connecti
 When SLAnalytics was handling large amounts of traffic, in some cases, certain parameter value changes would incorrectly not get processed.
 
 Also, a large number of low-severity change points were generated without a label. Those have now been reduced.
-
-#### Problem with SLDataMiner when an enhanced service was not able to find some of its child services [ID_38583]
-
-<!-- MR 10.5.0 - FR 10.4.3 -->
-
-At DataMiner startup, SLDataMiner could throw an access violation exception when an enhanced service was not able to find some of its child services.
