@@ -42,6 +42,14 @@ This is the perfect way to get started, allowing anyone to use the platform and 
 
 - **DataMiner as a Service**: Community Edition systems [deployed as a service](xref:Creating_a_DMS_in_the_cloud) are free for the first 7 days, with a subscription after that.
 
+Limitations of DataMiner Community Edition:
+
+- Only for standalone systems (without option to expand)
+- Community support only
+- Limited to 20 managed objects and 2000 script runs. Number of connectors is unlimited.
+
+Once the above-mentioned limits have been reached, users have the option to transition to a standard Subscription or Pay-per-Use model.
+
 > [!TIP]
 > See also:
 >
