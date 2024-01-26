@@ -307,7 +307,7 @@ When a client application was connected to a DataMiner Agent via a gRPC connecti
 
 #### SLAnalytics - Behavioral anomaly detection: Certain parameter value changes would incorrectly not get processed [ID_38545]
 
-<!-- MR 10.5.0 - FR 10.4.3 -->
+<!-- MR 10.4.0 - FR 10.4.3 -->
 
 When SLAnalytics was handling large amounts of traffic, in some cases, certain parameter value changes would incorrectly not get processed.
 

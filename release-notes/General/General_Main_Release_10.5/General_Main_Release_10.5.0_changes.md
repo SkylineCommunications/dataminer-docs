@@ -151,11 +151,3 @@ Resources would not always be released correctly, causing some resources to be u
 <!-- MR 10.5.0 - FR 10.4.2 -->
 
 When cleaning (i.e. resetting) a Cassandra database, in some cases, a `TypeInitializationException` could be thrown.
-
-#### SLAnalytics - Behavioral anomaly detection: Certain parameter value changes would incorrectly not get processed [ID_38545]
-
-<!-- MR 10.5.0 - FR 10.4.3 -->
-
-When SLAnalytics was handling large amounts of traffic, in some cases, certain parameter value changes would incorrectly not get processed.
-
-Also, a large number of low-severity change points were generated without a label. Those have now been reduced.

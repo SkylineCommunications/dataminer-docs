@@ -1243,3 +1243,11 @@ From now on, an exception will no longer be thrown when empty data is passed to 
 <!-- MR 10.4.0 - FR 10.4.3 -->
 
 In some cases, DataMiner Cube would not be able to reconnect to the server after having been disconnected.
+
+#### SLAnalytics - Behavioral anomaly detection: Certain parameter value changes would incorrectly not get processed [ID_38545]
+
+<!-- MR 10.4.0 - FR 10.4.3 -->
+
+When SLAnalytics was handling large amounts of traffic, in some cases, certain parameter value changes would incorrectly not get processed.
+
+Also, a large number of low-severity change points were generated without a label. Those have now been reduced.
