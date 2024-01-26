@@ -200,6 +200,12 @@ When a *Get parameters from elements* query is executed for a parameter table, f
 
 As a result, overall performance of clients like the Dashboards app or a low-code app will significantly increase when executing this type of queries.
 
+#### SLAnalytics: Enhanced memory usage [ID_38471]
+
+<!-- MR 10.5.0 - FR 10.4.2 -->
+
+Because of a number of enhancements with regard to memory usage, overall performance of SLAnalytics has increased.
+
 #### User-Defined APIs: Enhanced logging [ID_38491]
 
 <!-- MR 10.5.0 - FR 10.4.3 -->
