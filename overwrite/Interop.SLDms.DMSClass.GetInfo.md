@@ -1,5 +1,5 @@
 ---
-uid: Interop.SLDms.DMSClass.Interop.SLDms.DMSClass.Notify(System.Int32,System.Int32,System.Object,System.Object,System.Object@)
+uid: Interop.SLDms.DMSClass.GetInfo*
 remarks: *content
 ---
 
