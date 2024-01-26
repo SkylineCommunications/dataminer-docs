@@ -21,7 +21,7 @@ Contact [your Account Manager](https://community.dataminer.services/get-in-touch
 
 ### When does a DaaS system expire?
 
-A DataMiner Express DaaS system will be scheduled to expire as soon as the organization does not have sufficient DataMiner credits to extend its lifetime.
+A DataMiner Community Edition DaaS system will be scheduled to expire as soon as the organization does not have sufficient DataMiner credits to extend its lifetime.
 
 > [!NOTE]
 > When an organization has multiple DaaS systems, they will be extended in chronological order. When your organization does not have enough credits left to extend one of your DaaS systems, that DaaS system will be scheduled to expire. However, at this point, you may still have a number of DataMiner credits left that will be considered reserved for your other DaaS systems.
