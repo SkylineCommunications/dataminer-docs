@@ -83,3 +83,7 @@ Because of inconsistencies in the versions of the used NuGet packages, it could 
 #### Generic Kafka Consumer: Required DLLs not deployed during connector installation [ID_38474]
 
 Up to now, when the Generic Kafka Consumer connector was installed, some DLLs were missing, which meant manual work was required to get the Kafka stream to work as intended.
+
+#### Verizon iDirect Evolution Platform Collector: Polling failure during alarm flood [ID_38579]
+
+If many alarms happened at the same time, it could occur that the Verizon iDirect Evolution Platform Collector connector failed to poll properly. This was caused by ​RTE prevention logic and cancellation token logic, which has now been removed to prevent this issue.
