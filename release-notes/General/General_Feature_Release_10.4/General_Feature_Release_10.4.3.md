@@ -124,9 +124,10 @@ Up to now, if history storage was enabled, when DomInstances were created, updat
 
 From now on, for every batch of DomInstances that are processed in bulk, the history records will also be processed in bulk.
 
-#### Security enhancements [ID_38263]
+#### Security enhancements [ID_38263] [ID_38386]
 
 <!-- 38263: MR 10.5.0 - FR 10.4.3 -->
+<!-- 38386: MR 10.3.0 [CU12] - FR 10.4.3 -->
 
 A number of security enhancements have been made.
 
@@ -278,6 +279,14 @@ From now on, when a correlation rule is configured to use the *Collect events fo
 
 In some rare cases, a cleanup routine within SLAutomation could prematurely clean up data of scripts that had not yet finished, causing an error to occur.
 
+#### Automation: Problem when empty data is passed to the UI parser when running an interactive Automation script [ID_38408]
+
+<!-- MR 10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
+
+When running an interactive Automation script that was launched from Cube or a web app, in some cases, an exception could be thrown when empty data was passed to the UI parser.
+
+From now on, an exception will no longer be thrown when empty data is passed to the UI parser.
+
 #### DataMiner upgrade: Problem with AnalyticsParameterInfoRecordAddChangeRate upgrade action on systems with a Cassandra Cluster database [ID_38443]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
@@ -289,3 +298,17 @@ During a DataMiner upgrade, the *AnalyticsParameterInfoRecordAddChangeRate* upgr
 <!-- MR 10.4.0 - FR 10.4.3 -->
 
 In some cases, DataMiner Cube would not be able to reconnect to the server after having been disconnected.
+
+#### Alarm filters would not be properly serialized when using a gRPC connection [ID_38507]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+When a client application was connected to a DataMiner Agent via a gRPC connection, in some cases, the alarm filters it received from the DataMiner Agent would not be properly serialized.
+
+#### SLAnalytics - Behavioral anomaly detection: Certain parameter value changes would incorrectly not get processed [ID_38545]
+
+<!-- MR 10.4.0 - FR 10.4.3 -->
+
+When SLAnalytics was handling large amounts of traffic, in some cases, certain parameter value changes would incorrectly not get processed.
+
+Also, a large number of low-severity change points were generated without a label. Those have now been reduced.

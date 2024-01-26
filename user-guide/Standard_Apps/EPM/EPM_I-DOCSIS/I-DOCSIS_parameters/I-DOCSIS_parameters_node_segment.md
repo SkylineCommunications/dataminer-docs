@@ -98,7 +98,7 @@ This page contains an overview of the Node Segment parameters available in the I
 
   This table is an example of how cable modems affected by group delay or reflection issues can be identified by referencing their respective status values. It provides a clear overview of the performance status for each cable modem in the service group.
 
-- **Reflection Distance**: The average reflection distance for all associated CMs.
+- **Reflection Distance**: The average value of all associated CMs' average reflection distance.
 
 - **Average Latency**: The average latency for all CMs associated with the given level.
 

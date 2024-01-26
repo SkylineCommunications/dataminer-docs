@@ -11,5 +11,5 @@ Latest release/latest build enumeration.
 |Item|Facet value|Description|
 |--- |--- |--- |
 |***string restriction***|||
-|&nbsp;&nbsp;Enumeration|latestRelease|Latest Release|
-|&nbsp;&nbsp;Enumeration|latestBuild|Latest Build|
+|&nbsp;&nbsp;Enumeration|latestRelease|Latest release|
+|&nbsp;&nbsp;Enumeration|latestBuild|Latest build|

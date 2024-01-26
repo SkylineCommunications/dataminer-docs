@@ -1230,8 +1230,24 @@ Up to now, when alarms were cleared before the end of the time frame specified i
 
 From now on, when a correlation rule is configured to use the *Collect events for ... after first event, then evaluate conditions and execute actions* trigger mechanism, all alarm buckets will be properly cleaned up, unless there are actions that need to be executed either when the base alarms are updated or when alarms are cleared.
 
+#### Automation: Problem when empty data is passed to the UI parser when running an interactive Automation script [ID_38408]
+
+<!-- MR 10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
+
+When running an interactive Automation script that was launched from Cube or a web app, in some cases, an exception could be thrown when empty data was passed to the UI parser.
+
+From now on, an exception will no longer be thrown when empty data is passed to the UI parser.
+
 #### DataMiner Cube was not able to reconnect to the server after a disconnect [ID_38481]
 
 <!-- MR 10.4.0 - FR 10.4.3 -->
 
 In some cases, DataMiner Cube would not be able to reconnect to the server after having been disconnected.
+
+#### SLAnalytics - Behavioral anomaly detection: Certain parameter value changes would incorrectly not get processed [ID_38545]
+
+<!-- MR 10.4.0 - FR 10.4.3 -->
+
+When SLAnalytics was handling large amounts of traffic, in some cases, certain parameter value changes would incorrectly not get processed.
+
+Also, a large number of low-severity change points were generated without a label. Those have now been reduced.

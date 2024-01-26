@@ -183,8 +183,6 @@ items:
   - name: Troubleshooting procedures
     topicUid: Troubleshooting_procedures
     items:
-      - name: Cassandra does not start up after a server restart
-        topicUid: Cassandra_not_starting_up_after_server_restart
       - name: Collecting DataMiner Cube memory dumps
         topicUid: Collecting_DataMiner_Cube_memory_dumps
       - name: Collecting data to report an issue to Technical Support
@@ -201,6 +199,10 @@ items:
         topicUid: Sharing_dashboard_window_does_not_disappear
       - name: Manually removing old alarms from an Elasticsearch cluster
         topicUid: Manually_removing_old_alarms_from_ES
+      - name: Cassandra does not start up after a server restart
+        topicUid: Cassandra_not_starting_up_after_server_restart
+      - name: Elasticsearch/OpenSearch does not start up after upgrade or disk cleanup
+        topicUid: Elastic_not_starting_after_upgrade_cleanup
   - name: Known issues
     topicUid: Known_issues
     items:

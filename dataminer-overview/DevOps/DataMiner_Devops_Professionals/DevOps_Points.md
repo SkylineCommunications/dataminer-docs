@@ -13,7 +13,7 @@ There are three levels available for DataMiner DevOps Professionals, with *Advoc
 | **ADVOCATE** | **ENABLER** | **CATALYST** |
 |--|--|--|
 | ***a well-performing community member*** | ***a trusted DevOps Professional*** | ***an advanced DevOps Professional*** |
-| 750 points per year | 5,000 points per year | 25,000 points per year |
+| 750 points per year | 5,000 points per year | 15,000 points per year |
 
 > [!IMPORTANT]
 > Your DevOps Points expire once a period of 12 months has passed since you first signed up. For more information, see [DevOps Points life cycle](#devops-points-life-cycle).

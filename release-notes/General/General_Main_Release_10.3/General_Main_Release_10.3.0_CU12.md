@@ -51,6 +51,12 @@ Up to now, during a DataMiner upgrade, in some cases, MSI packages would fail to
 
 From now on, when one of the above-mentioned errors is thrown, it will no longer be necessary to restart the entire upgrade procedure. Instead, a retry will be attempted during the running upgrade.
 
+#### Security enhancements [ID_38386]
+
+<!-- 38386: MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+A number of security enhancements have been made.
+
 #### SLProtocol will now always fetch element data page by page except on systems with a MySQL database [ID_38388]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
@@ -115,8 +121,22 @@ From now on, when a correlation rule is configured to use the *Collect events fo
 
 In some rare cases, a cleanup routine within SLAutomation could prematurely clean up data of scripts that had not yet finished, causing an error to occur.
 
+#### Automation: Problem when empty data is passed to the UI parser when running an interactive Automation script [ID_38408]
+
+<!-- MR 10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
+
+When running an interactive Automation script that was launched from Cube or a web app, in some cases, an exception could be thrown when empty data was passed to the UI parser.
+
+From now on, an exception will no longer be thrown when empty data is passed to the UI parser.
+
 #### DataMiner upgrade: Problem with AnalyticsParameterInfoRecordAddChangeRate upgrade action on systems with a Cassandra Cluster database [ID_38443]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
 
 During a DataMiner upgrade, the *AnalyticsParameterInfoRecordAddChangeRate* upgrade action executes an *Alter Table* command on every DataMiner Agent in the cluster. Up to now, when you upgraded a DataMiner System with a Cassandra Cluster database, that *Alter Table* command would incorrectly only get executed on the first DMA that called it. On each subsequent DMA that called the command, errors would get thrown and added to the *upgrade.log* file.
+
+#### Alarm filters would not be properly serialized when using a gRPC connection [ID_38507]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+When a client application was connected to a DataMiner Agent via a gRPC connection, in some cases, the alarm filters it received from the DataMiner Agent would not be properly serialized.

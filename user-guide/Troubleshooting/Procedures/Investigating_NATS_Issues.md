@@ -390,7 +390,34 @@ This will result in Agent 2 receiving different information about the same clust
 
 ## Check if port is already in use
 
-NATS uses port 9090 by default. If another program is already using this port, you will notice the following behavior:
+### Port 4222, 6222, and 8222
+
+NATS uses port 4222, 6222, and 8222. If another program is already bound to one of these ports, you will notice the following behavior:
+
+- DataMiner fails to start
+- NATS is stopped
+- The log file at *C:\Skyline DataMiner\NATS\nats-streaming-server\nats-server.log* can contain the following:
+
+  `Error listening on port: 0.0.0.0:4222, "listen tcp 0.0.0.0:4222: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted."`
+
+In this case, the port may already be bound by one of the DataMiner processes. This will usually only happen with port 4222. To fix this:
+
+1. Run the following command in a command prompt window: `netstat -aon | findstr 4222`.
+
+1. If you identify a process using any of the ports found in the logging, open Windows Task Manager to find the process corresponding with the PID found with above command.
+
+1. Kill the process or stop the service hosting that process.
+
+1. Start the NATS service
+
+1. Restart the killed process or service hosting that process.
+
+> [!NOTE]
+> This is caused by a bug in the [nats client library](https://github.com/nats-io/nats.net). When the [pull request](https://github.com/nats-io/nats.net/pull/850) to fix this has been merged, the DataMiner processes will be updated so this port lock situation no longer occurs.
+
+### Port 9090
+
+Nats Account Server (NAS) uses port 9090 by default. If another program is already using this port, you will notice the following behavior:
 
 - DataMiner fails to start.
 
@@ -417,7 +444,7 @@ Check whether Keysight Agilent IO Libraries or a different third-party software 
 
 1. If you identify a process using port 9090, open Windows Task Manager to find the process PID, e.g. *kdi-controller.exe*.
 
-### Manually configuring a custom port for NATS
+#### Manually configuring a custom port for NAS
 
 To resolve this issue, manually configure a custom port for NATS that is not yet in use, e.g. port 9091.
 
