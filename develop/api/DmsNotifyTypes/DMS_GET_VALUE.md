@@ -4,6 +4,10 @@ uid: DMS_GET_VALUE
 
 # DMS_GET_VALUE (87)
 
+> [!WARNING]
+>
+> - The use of DMS Notify types is deprecated. Use types from [Class library](xref:ClassLibraryIntroduction) instead.
+
 Retrieves details about a parameter (including the value).
 
 ```csharp

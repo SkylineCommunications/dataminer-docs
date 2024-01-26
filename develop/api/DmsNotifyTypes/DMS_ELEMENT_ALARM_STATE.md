@@ -4,6 +4,10 @@ uid: DMS_ELEMENT_ALARM_STATE
 
 # DMS_ELEMENT_ALARM_STATE (83)
 
+> [!WARNING]
+>
+> - The use of DMS Notify types is deprecated. Use types from [Class library](xref:ClassLibraryIntroduction) instead.
+
 Gets the alarm state of an element.
 
 ```csharp

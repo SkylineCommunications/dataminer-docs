@@ -4,6 +4,10 @@ uid: DMS_SET_PARAMETER
 
 # DMS_SET_PARAMETER (28)
 
+> [!WARNING]
+>
+> - The use of DMS Notify types is deprecated. Use types from [Class library](xref:ClassLibraryIntroduction) instead.
+
 Sets the value of a specified parameter.
 
 ```csharp

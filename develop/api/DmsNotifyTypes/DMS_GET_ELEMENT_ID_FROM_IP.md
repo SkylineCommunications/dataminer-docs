@@ -4,6 +4,10 @@ uid: DMS_GET_ELEMENT_ID_FROM_IP
 
 # DMS_GET_ELEMENT_ID_FROM_IP (76)
 
+> [!WARNING]
+>
+> - The use of DMS Notify types is deprecated. Use types from [Class library](xref:ClassLibraryIntroduction) instead.
+
 Gets the global element ID of (the) element(s) configured with the provided IP and bus address.
 
 ```csharp

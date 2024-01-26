@@ -4,6 +4,10 @@ uid: DMS_DIAG
 
 # DMS_DIAG (85)
 
+> [!WARNING]
+>
+> - The use of DMS Notify types is deprecated. Use types from [Class library](xref:ClassLibraryIntroduction) instead.
+
 Obtains additional information from a DMA or a DMS.
 
 ```csharp
