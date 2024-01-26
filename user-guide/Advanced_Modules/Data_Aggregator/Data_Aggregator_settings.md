@@ -114,6 +114,51 @@ For example:
 
 The GQI queries themselves should be configured in separate JSON files. See [Configuring GQI queries for Data Aggregator](xref:Data_Aggregator_queries).
 
+### Queries in Data Aggregator 3.0.0 and higher
+
+1. Go to the folder at `C:\Program Files\Skyline Communications\DataMiner DataAggregator\Data Sources.`
+1. Make a GUID for the GQI. You can use an online tool like [guidgenerator.com](https://guidgenerator.com/).
+1. Change the name of the JSON file that has the GQI, to have the new GUID. For example, rename it to *c93178b7-537e-47ab-9786-f052694b6380.json*.
+1. Place the file into the *Scripted Connectors* subfolder.
+1. Inside the *Helper.json* file, add the QGI queries to the *DataSources* array and supply the following fields
+   1. **Id**: The GUID for the GQI.
+   1. **Name**: a human readable description for the query. This can be *null*.
+   1. **Type**: GQI queries require value *0*.
+   1. **LastUpdated** : Put *null*.
+   1. **Arguments** : Put an empty object *{}*.
+
+```json
+{ 
+    "DataSources": [
+    {
+      "Id": "c93178b7-537e-47ab-9786-f052694b6380", // The GUID of the GQI
+      "Name": "Query 1", //A human readable description for the query. This can be null.
+      "Type": 0, // GQI queries require value 0.
+      "LastUpdated": null, // Put null. check with JSE
+      "Arguments": {} // Reserved, supply an empty object. 
+    },
+    {
+      "Id": "a86aa3ec-3607-4a34-89a0-3289d069d019",
+      "Name": null,
+      "Type": 0,
+      "LastUpdated": null, 
+      "Arguments": {}
+    }
+    ]
+}
+
+
+```
+
+After changing *Helper.json*, restart the DataMiner DataAggregator service (e.g. using Windows Task Manager).
+
+The QueryExecutorOptions such as PageSize and TimeoutSeconds are now configured as part of the Jobs.
+
+> [!NOTE]
+> The `PageSize` parameter within a query can in some cases have a big influence on execution times and overall job performance. When the page size is lower, more round trips are needed, but there is less chance that a timeout will occur when large rows are processed. When the page size is higher, the round trip duration is minimized, but there is more chance that a timeout will occur when large data volumes are requested.
+
+### Queries in Data Aggregator prior to 3.0.0
+
 In *appsettings.custom.json*, you should then add the files using the **QueryID** and **QueryFile** fields under *QueryReaderOptions.Queries*.
 
 For example:
@@ -151,6 +196,43 @@ Each job can execute an array of queries, each linked to a DataMiner System, so 
 The results of each query are added into one table, so that each job results in one table.
 
 Multiple jobs can be configured, each with their own optional [cron trigger](#cron-trigger). You can also overwrite the global export options for a specific job and overwrite the global *QueryExecutorOptions* for a specific query.
+
+### Jobs in Data Aggregator 3.0.0 and higher
+
+ Inside the *Helper.json* file, configure a job as follows:
+
+```json
+ "Jobs": [
+    {
+      "ID": 915590921, // unique number for the job
+      "Name": "Every day at 3am", // human readable description for the job
+      "CronTriggers": [
+        "0 3 * * * ?" // cron expression
+      ],
+      "DataSources": [ 
+        {
+          "ID": "ac9f12e3-6e0a-43f8-9d6d-65bf52d75b38", //GUID of the GQI Query
+          "Config": {
+            "ClusterID": "localhost", // ID of the DMS the Data Aggregator needs to connect to, as configured in the BrokerOptions.clusters
+             "QueryExecutorOptions": {
+              "PageSize": 1,
+              "TimeoutSeconds": 60
+            }
+            "RunParams": [] // reserved, supply an empty array. 
+          }
+        }
+      ],
+      "CSVExporterOptions": null,
+      "WebSocketExporterOptions": null
+    }
+ ]
+
+
+```
+
+After changing *Helper.json*, restart the DataMiner DataAggregator service (e.g. using Windows Task Manager).
+
+### Jobs in Data Aggregator prior to 3.0.0
 
 In *appsettings.custom.json*, you can for example configure this as follows:
 
