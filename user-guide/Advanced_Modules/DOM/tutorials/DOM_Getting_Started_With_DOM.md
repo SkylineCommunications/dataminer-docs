@@ -5,12 +5,14 @@ uid: DOM_Getting_Started_With_DOM
 
 This tutorial shows how you can create a simple DOM model using the DOM Editor and then use it in a low-code app.
 
+Expected duration: 20 minutes
+
 > [!TIP]
 > See also: [Kata #15: Getting started with DataMiner Object Models](https://community.dataminer.services/courses/kata-15/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 ## Prerequisites
 
-- A DataMiner System using DataMiner 10.3.10 or higher, which is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
+- A DataMiner System using DataMiner 10.3.10 or higher, which is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud). Tutorial was created on version 10.4.1.
 - An [indexing database](xref:Indexing_Database) or [Storage as a Service](xref:STaaS).
 
 > [!NOTE]
