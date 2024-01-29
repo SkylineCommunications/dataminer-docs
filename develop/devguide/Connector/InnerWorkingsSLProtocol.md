@@ -320,3 +320,5 @@ The second action will be executed as soon as the group from action 1 (i.e. grou
 If we change the type of group 1 to "poll action" (or "poll"), the group will be added to the group execution queue of the main protocol execution thread, but the remaining flow will stay the same.
 
 The impact of this flow is that the QAction can run before group 2 is executed due to other items being present on the execution queue.
+
+Another interesting use case can be found [here](xref:ebugging_connectors_RTE_caused_by_non-poll_group_in_timer)
