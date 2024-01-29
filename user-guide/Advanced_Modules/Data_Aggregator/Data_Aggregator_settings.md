@@ -120,12 +120,9 @@ The GQI queries themselves should be configured in separate JSON files. See [Con
 1. Make a GUID for the GQI. You can use an online tool like [guidgenerator.com](https://guidgenerator.com/).
 1. Change the name of the JSON file that has the GQI, to have the new GUID. For example, rename it to *c93178b7-537e-47ab-9786-f052694b6380.json*.
 1. Place the file into the *Scripted Connectors* subfolder.
-1. Inside the *Helper.json* file, add the QGI queries to the *DataSources* array and supply the following fields
-   1. **Id**: The GUID for the GQI.
-   1. **Name**: a human readable description for the query. This can be *null*.
-   1. **Type**: GQI queries require value *0*.
-   1. **LastUpdated** : Put *null*.
-   1. **Arguments** : Put an empty object *{}*.
+1. Inside the *Helper.json* file, configure the QGI query to the *DataSources* array.
+
+The configration in explained in the following example.
 
 ```json
 { 
@@ -134,7 +131,7 @@ The GQI queries themselves should be configured in separate JSON files. See [Con
       "Id": "c93178b7-537e-47ab-9786-f052694b6380", // The GUID of the GQI
       "Name": "Query 1", //A human readable description for the query. This can be null.
       "Type": 0, // GQI queries require value 0.
-      "LastUpdated": null, // Put null. check with JSE
+      "LastUpdated": null, // Put null. 
       "Arguments": {} // Reserved, supply an empty object. 
     },
     {
@@ -151,11 +148,6 @@ The GQI queries themselves should be configured in separate JSON files. See [Con
 ```
 
 After changing *Helper.json*, restart the DataMiner DataAggregator service (e.g. using Windows Task Manager).
-
-The QueryExecutorOptions such as PageSize and TimeoutSeconds are now configured as part of the Jobs.
-
-> [!NOTE]
-> The `PageSize` parameter within a query can in some cases have a big influence on execution times and overall job performance. When the page size is lower, more round trips are needed, but there is less chance that a timeout will occur when large rows are processed. When the page size is higher, the round trip duration is minimized, but there is more chance that a timeout will occur when large data volumes are requested.
 
 ### Queries in Data Aggregator prior to 3.0.0
 
@@ -207,7 +199,7 @@ Multiple jobs can be configured, each with their own optional [cron trigger](#cr
       "ID": 915590921, // unique number for the job
       "Name": "Every day at 3am", // human readable description for the job
       "CronTriggers": [
-        "0 3 * * * ?" // cron expression
+        "0 0 3 1/1 * ? *" // cron expression Quartz.NET
       ],
       "DataSources": [ 
         {
