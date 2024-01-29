@@ -825,7 +825,7 @@ items:
               - name: Naming a DOM instance
                 topicUid: DOM_editor_naming_instance
       - name: Tutorials
-        topicUid: DOM_Create_Basic_Setup
+        topicUid: DOM_Getting_Started_With_DOM
         items:
           - name: Getting started with DOM
             topicUid: DOM_Getting_Started_With_DOM

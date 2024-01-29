@@ -5,167 +5,254 @@ uid: DOM_Getting_Started_With_DOM
 
 This tutorial shows how you can create a simple DOM model using the DOM Editor and then use it in a low-code app.
 
-Expected duration: 20 minutes
+> [!TIP]
+> See also: [Kata #15: Getting started with DataMiner Object Models](https://community.dataminer.services/courses/kata-15/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+
+## Prerequisites
+
+- A DataMiner System using DataMiner 10.3.10 or higher, which is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
+- An [indexing database](xref:Indexing_Database) or [Storage as a Service](xref:STaaS).
+
+> [!NOTE]
+> If you use a [DaaS system](xref:Creating_a_DMS_in_the_cloud), these prerequisites are automatically met.
 
 ## Overview
 
 - [Getting started with DOM](#getting-started-with-dom)
-  - [Overview](#overview)
   - [Prerequisites](#prerequisites)
-  - [Step 1: Creating a DOM Definition](#step-1-creating-a-dom-definition)
-  - [Step 2: Use a DOM definition within a low-code app](#step-2-use-a-dom-definition-within-a-low-code-app)
-  - [Related documentation](#related-documentation)
+  - [Overview](#overview)
+  - [Step 1: Deploy the DOM Editor script](#step-1-deploy-the-dom-editor-script)
+  - [Step 2: Create a DOM definition](#step-2-create-a-dom-definition)
+  - [Step 3: Use the DOM definition in a low-code app](#step-3-use-the-dom-definition-in-a-low-code-app)
 
-> [!TIP]
-> See also: [Kata #15: Getting started with DataMiner Object Models](https://community.dataminer.services/courses/kata-15/)
-on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+## Step 1: Deploy the DOM Editor script
 
-## Prerequisites
+1. Go to <https://catalog.dataminer.services/details/automation-script/3195>.
 
-- A cloud connected DataMiner system (version 10.3.10 or higher) or DAAS. Demo was created on version 10.4.1.
-- Having deployed the [DOM Editor script](https://catalog.dataminer.services/details/automation-script/3195) from the catalog.  
+1. Click the *Deploy* button to deploy the DOM Editor script to your DMA.
 
-## Step 1: Creating a DOM Definition
+## Step 2: Create a DOM definition
 
-Open up DataMiner Cube and go to Apps > Automation. Next search for a script called **DOM Editor**. Launch this script, you should now see a screen as follows:
+Now that you have deployed the DOM Editor to your DMA, you can use it to create a DOM definition:
 
-![Dom Editor](~/user-guide/images/DOM_Getting_Started_with_DOM_DOMEditor.png)
+1. [Open DataMiner Cube](xref:Opening_the_desktop_app) and go to *Apps* > *Automation*.
 
-1. Click the *New...* button to create a new DOM Module
-2. In the field *Module Id* enter *eventmanagement*, this is the name of the module that we want to create. 
+1. In the Automation module, search for a script called **DOM Editor** and select it.
 
-    ![Dom Editor New Module](~/user-guide/images/DOM_Getting_Started_with_DOM_DOMModule.png)
+1. Click the *Execute* button in the lower right corner to launch this script.
 
-3. Click *Create*. This should result a new module in the list of available DOM Modules:
+   You should now see the following window:
 
-    ![Dom Editor Module created](~/user-guide/images/DOM_Getting_Started_with_DOM_DOMModuleCreated.png)
+   ![Dom Editor](~/user-guide/images/DOM_Getting_Started_with_DOM_DOMEditor.png)
 
-4. Click *Edit...* next to the module name to open up the details of that module:
+1. Click *New* to create a new DOM module.
 
-5. Click *Definitions...* to go to the definitions overview which exist within this module:
+1. In the *Module ID* box, enter `eventmanagement`.
 
-    ![Dom Editor Module details](~/user-guide/images/DOM_Getting_Started_with_DOM_DOMEditor_ModuleDetails.png)
+   This is the name of the module that you are creating.
 
-6. Click *New...* to create a new DOM Definition
+   ![Dom Editor New Module](~/user-guide/images/DOM_Getting_Started_with_DOM_DOMModule.png)
 
-    ![Dom Editor Dom Definitions](~/user-guide/images/DOM_Getting_Started_with_DOM_DOMEditor_Definition.png)
+1. Click *Create*.
 
-7. In the field *Name* enter *Event*, 
+   This should result a new module in the list of available DOM modules:
 
-    ![Dom Editor New Dom Definition](~/user-guide/images/DOM_Getting_Started_with_DOM_DOMEditor_NewDefinition.png)
+   ![Dom Editor Module created](~/user-guide/images/DOM_Getting_Started_with_DOM_DOMModuleCreated.png)
 
-8. Confirm with *OK*. Then click *Back* to back to the main menu and select *Section Definitions...*. 
+1. Next to the module name, click *Edit*  to open the details of the module.
+
+1. Click *Definitions* to go to the definitions overview for this module.
+
+   ![Dom Editor Module details](~/user-guide/images/DOM_Getting_Started_with_DOM_DOMEditor_ModuleDetails.png)
+
+1. Click *New* to create a new DOM definition.
+
+   ![Dom Editor Dom Definitions](~/user-guide/images/DOM_Getting_Started_with_DOM_DOMEditor_Definition.png)
+
+1. In the *Name* box, enter `Event`.
+
+   ![Dom Editor New Dom Definition](~/user-guide/images/DOM_Getting_Started_with_DOM_DOMEditor_NewDefinition.png)
+
+1. Confirm with *OK*, then click *Back* to go back to the main menu.
+
+1. In the main menu, select *Section Definitions*.
 
    ![Dom Editor Section Definitions](~/user-guide/images/DOM_Getting_Started_with_DOM_SectionDefinitions.png)
 
-9.  Here we can create the section definitions which will group a bunch of field to be used in the Event Dom definition. Click *New...* to create a new Section Definition.
+1. Click *New* to create a new section definition.
 
-    ![Dom Editor New Section Definition](~/user-guide/images/DOM_Getting_Started_with_DOM_SectionDefinitions_New.png)
+   ![Dom Editor New Section Definition](~/user-guide/images/DOM_Getting_Started_with_DOM_SectionDefinitions_New.png)
 
-10. Create a new Section Definition called **Event Info**.
+   This section definition will allow you to group several fields to be used in your "Event" DOM definition.
 
-    ![Dom Editor Event Info Section](~/user-guide/images/DOM_Getting_Started_with_DOM_SectionDefinitions_EventInfo.png)
+1. In the *Name* box, enter `Event Info`.
 
-11. Next we can add the fields we want to have defined in this section. To do this click on the button called *Field Descriptors...*. Next you can add new fields by clicking the *+* button:
+   ![Dom Editor Event Info Section](~/user-guide/images/DOM_Getting_Started_with_DOM_SectionDefinitions_EventInfo.png)
 
-    ![Dom Editor Event Info Section](~/user-guide/images/DOM_Getting_Started_with_DOM_FieldDescriptor_New.png)
+1. Click the *Field Descriptors* button to add fields for the section:
 
-12. Create a new field of Type **String** with name **Event Name**
+   1. Click the *+* button to start adding a field to the section:
 
-    ![Dom Editor Event Name Field](~/user-guide/images/DOM_Getting_Started_with_DOM_FieldDescriptor_EventName.png)
+      ![Dom Editor Event Info Section](~/user-guide/images/DOM_Getting_Started_with_DOM_FieldDescriptor_New.png)
 
-13. Next to the *Event Name* field also add the following fields to the section:
+   1. Configure the new field with the name `Event Name`.
 
-    |Name|Type|
-    |--- |--- |
-    |Start|DateTime|
-    |End|DateTime|
-    |Notes|String|
+   1. In the *Type* box, select the type *String*.
 
-14. Click on the *Apply* button when done to confirm and next click the *Back* button until you are back at the main Dom module menu. From here open up the *Definitions* again.
+      ![Dom Editor Event Name Field](~/user-guide/images/DOM_Getting_Started_with_DOM_FieldDescriptor_EventName.png)
 
-    ![Dom Editor Module details 2](~/user-guide/images/DOM_Getting_Started_with_DOM_DOMEditor_ModuleDetails.png)
+   1. Repeat these steps to also add the following fields to the section:
 
-15. Next click the *Edit...* button next to the Event definition:
+      |Name|Type|
+      |--- |----|
+      |Start|DateTime|
+      |End|DateTime|
+      |Notes|String|
 
-    ![Dom Editor Event Info Section](~/user-guide/images/DOM_Getting_Started_with_DOM_EditEventDefinition.png)
+   1. When all fields have been added, click *Apply*.
 
-16. Open up *Section Definition Links*.
+1. Click the *Back* button until you are back at the main DOM module menu.
 
-    ![Dom Editor Event Info Section](~/user-guide/images/DOM_Getting_Started_with_DOM_SectionDefinitionLinks.png)
+1. Click *Definitions*.
 
-17. Click the + button to add a section. This should automatically add the **Event Info** section to the definition.
+   ![Dom Editor Module details 2](~/user-guide/images/DOM_Getting_Started_with_DOM_DOMEditor_ModuleDetails.png)
 
-    ![Dom Editor Event Info Section](~/user-guide/images/DOM_Getting_Started_with_DOM_SectionDefinitionsLinksAdded.png)
+1. Next to the *Event* definition you have created, click *Edit*:
 
-18. Click the *Back* and next *Apply* to confirm.
+   ![Dom Editor Event Info Section](~/user-guide/images/DOM_Getting_Started_with_DOM_EditEventDefinition.png)
 
-19. Close the Dom Editor.
+1. Click *Section Definition Links*.
 
-## Step 2: Use a DOM definition within a low-code app
+   ![Dom Editor Event Info Section](~/user-guide/images/DOM_Getting_Started_with_DOM_SectionDefinitionLinks.png)
 
-Next we will start using the newly created Dom definition **Event** in a low-code app. You can use an existing app that you have already created or create a new one from scratch. More info on how to do that can be found in the following tutorial: - [Creating and publishing an app](xref:Tutorial_Apps_Creating_And_Publishing)
+1. Click the + button to add a section.
 
-1. Create a new page in the app and edit it. On the right-hand side under the *Data* tab, find a section called **Object Manager Definitions**. This is where we can find all modules and definitions created in the system. Expand its contents. Here you should see the module **eventmanagement**. Expand this and under it you should find the DOM Definition we created called **Event**
+   This should automatically add the *Event Info* section to the definition.
+
+   ![Dom Editor Event Info Section](~/user-guide/images/DOM_Getting_Started_with_DOM_SectionDefinitionsLinksAdded.png)
+
+1. Click *Back* and then *Apply* to confirm.
+
+1. Close the DOM Editor.
+
+   Your DOM definition is now ready.
+
+## Step 3: Use the DOM definition in a low-code app
+
+1. Either create a new low-code app or use an existing app where you will be able to add the DOM definition.
+
+   > [!TIP]
+   > For info on how to make a low-code app, refer to the tutorial [Creating and publishing an app](xref:Tutorial_Apps_Creating_And_Publishing)
+
+1. Add a new page in the app and edit it.
+
+   > [!TIP]
+   > For info on how to add and configure pages in a low-code app, refer to the tutorial [Managing the pages in an app](xref:Tutorial_Apps_Managing_Pages).
+
+1. In the *Data* tab on the right, look for the *Object Manager Definitions* section and make sure it is expanded.
+
+   This section lists the DOM modules and definitions created in the system, including the module *eventmanagement*, which you created earlier, and below this your DOM definition *Event*.
 
    ![Object Manager Definitions](~/user-guide/images/DOM_Getting_Started_with_DOM_LCA_ObjectManagerDefinitions.png)
 
-2. Drag and drop the **Event** DOM Definition on to the page. Click on the icon next to *Pick a visualization*
+1. Drag and drop the *Event* DOM definition to the page to add a component using this data.
+
+1. In the component, click the icon next to *Pick a visualization*.
 
    ![DOM Pick a visualization](~/user-guide/images/DOM_Getting_Started_with_DOM_PickVisualization.png)
 
-3. Select **Form** as the visualization for the component.
+1. Select *Form* as the visualization for the component.
 
-   ![DOM Form visualiation](~/user-guide/images/DOM_Getting_Started_with_DOM_LCA_FormVisualization.png)
+   ![DOM Form visualization](~/user-guide/images/DOM_Getting_Started_with_DOM_LCA_FormVisualization.png)
 
-4. As a result you should see a form representing the fields you added to the Event DOM Definition. This is where a user of the app can start entering data.
+   As a result, the app will show a form representing the fields you added to the *Event* DOM definition. This is where a user of the app can start entering data.
 
-   ![DOM Form visualiation 2](~/user-guide/images/DOM_Getting_Started_with_DOM_LCA_FormVisualization2.png)
+   ![DOM Form visualization 2](~/user-guide/images/DOM_Getting_Started_with_DOM_LCA_FormVisualization2.png)
 
-5. Next add a *Save* button to be able to save the form, enable the *Header Bar* by enabling the toggle next to it (in the left-hand column). Next click the "+" icon in the header bar and type in the "Save" name. You can also add an icon to the menu item by selecting it under the Icon sub-menu in the left-hand column.
+1. Add a *Save* button so users will be able to save the form:
 
-   ![DOM LCA Save Button](~/user-guide/images/DOM_Getting_Started_with_DOM_LCA_SaveButton.png)
+   1. In the pane on the left, enable the toggle button next to *Header bar* to display the header bar for the page.
 
-6. In order to define what should happen when we click this *Save* button, click on the icon under Events next to "On click".
+   1. Click the "+" icon in the header bar.
 
-   ![DOM LCA Events](~/user-guide/images/DOM_Getting_Started_with_DOM_LCA_Events.png)
+   1. Enter the label `Save` for the button.
 
-7. This will open up a dialog where you can indicate what actions should be triggered when the button is clicked. In the first drop-down select *Execute component action*, under *I want to* select *Save Current Changes* and select the Form 1 (This is refering to the form we just created by drag an dropping the DOM definition in the app)
+      ![DOM LCA Save Button](~/user-guide/images/DOM_Getting_Started_with_DOM_LCA_SaveButton.png)
 
-   ![DOM LCA Save On Click Event](~/user-guide/images/DOM_Getting_Started_with_DOM_SaveEvent.png)
+   1. Optionally, add an icon to the button by selecting it under *Icon* in the pane on the left.
 
-8. Now you can already publish the app to have a look at what created so far. To do this click the publish icon on the top right of the app.
+   1. Under *Events* in the pane on the left, click the icon next to *On click*.
+
+      ![DOM LCA Events](~/user-guide/images/DOM_Getting_Started_with_DOM_LCA_Events.png)
+
+      This will open a dialog where you can define what should happen when the button is clicked.
+
+   1. In the dialog, select *Execute component action* in the first box, *Save Current Changes* in the second box, and *Form 1* in the third box.
+
+      "Form 1" refers to the form component you have just created by dragging and dropping the DOM definition on the page.
+
+      ![DOM LCA Save On Click Event](~/user-guide/images/DOM_Getting_Started_with_DOM_SaveEvent.png)
+
+   1. Click *OK* to finish adding the action.
+
+1. Click the publish icon in the top right corner of the app.
+
+   You have now published a first version of the app, so you can take a look at what you have created so far.
 
    ![DOM LCA Publish app](~/user-guide/images/DOM_Getting_Started_with_LCA_PublishApp.png)
 
-9. Now you can try out filling the form and saving it. However you will not yet be able to see the created event records. For this we need to add a table listing all event records in the app. To do this we need to create a GQI query in the app. So go back to edit mode and open up the query section. Create a new query, by clicking the + icon. Enter **Events** as the name of the query. As a start of the query select *Get object manager instances* from the drop-down. Next select the module *eventmanagement*. Next select the definition *Event*. From the drop-down choose the **Select** option in order to pick which fields of the event we want to list in the app. Select *Event Name*, *Start*, *End* and *Notes* field.
+1. In your low-code app, fill out the form and save it.
+
+   At this point, you cannot see the created event records yet. For this, you need to add a table listing all event records in the app. This table will use a GQI query.
+
+1. Go back to edit mode and create the query:
+
+   1. Expand the *Queries* section in the data pane.
+
+   1. Click the + icon to create a new query.
+
+   1. Enter `Events` as the name of the query.
+
+   1. In the *Select data source* box, select *Get object manager instances*.
+
+   1. Select the module *eventmanagement*, and the definition *Event*.
+
+   1. In the *Select operator* box, select *Select*.
+
+      This will allow you to pick which fields of the event you want to list in the app.
+
+   1. Select the *Event Name*, *Start*, *End*, and *Notes* fields.
 
    ![DOM LCA Get Dom Instances](~/user-guide/images/DOM_Getting_Started_with_DOM_GetDomInstances.png)
 
-10. Now drag and drop the newly created *Events* query on to the page next to the form and choose **Table** as the visualization.
+1. Drag and drop the newly created *Events* query on to the page next to the form to add a component using this data.
+
+1. In the component, select *Table* as the visualization.
 
    ![DOM LCA Events Table Visualization](~/user-guide/images/DOM_Getting_Started_with_DOM_LCA_EventsTableVisualization.png)
 
-11. Now publish the app again and you should see the event record you created before showing up in the table.
+1. Click the publish icon in the top right corner of the app to publish the app again.
+
+   The app should now show a table containing the event record you created earlier.
 
    ![DOM LCA Events Table](~/user-guide/images/DOM_Getting_Started_with_LCA_EventsTable.png)
 
-12. If you start added more records throught the form, you will not immediately see the records showing up in the table. You will need to refresh the page manually first.
+   At this point, if you add more records through the form, you will not immediately see the records showing up in the table. You will need to refresh the page manually first. To make the even records show up immediately as soon as they have been entered, another event has to be added to the page.
 
-13. If we want the event records to show up immediately after we enter them in the form, without the need for refreshing the page, we need to add an event after the Save action. For this go back to the events of the Save button, click the **Upon completion button**:
+1. Go back to edit mode and add an event to the page to refresh after the *Save* action:
 
-   ![DOM LCA DON Form Upon Completion](~/user-guide/images/DOM_Getting_Started_with_DOM_FormUponCompletion.png)
+   1. In the pane on the left, under *Header bar* > *Events*, click the icon next to *On click*.
 
-14. Add a **Fetch the data** event for the Events table we have added.
+      This will open the dialog with the save action you configured earlier.
 
-   ![DOM LCA Save On Click Event](~/user-guide/images/DOM_Getting_Started_with_DOM_LCA_TableFetchTheData.png)
+   1. Click *Upon completion*.
 
-15. Now publish the app again and try out creating new events again. You should see them appear in the table each time you hit the **Save** button.
+      ![DOM LCA DON Form Upon Completion](~/user-guide/images/DOM_Getting_Started_with_DOM_FormUponCompletion.png)
 
-16. That's it, congratulations 🥳! You managed to create you DOM definition and use it in an app.
+   1. select *Execute component action* in the first box, *Fetch the data* in the second box, and *Table 2* in the third box.
 
-## Related documentation
+      ![DOM LCA Save On Click Event](~/user-guide/images/DOM_Getting_Started_with_DOM_LCA_TableFetchTheData.png)
 
-To learn more about DOM you can have a look at the following tutorials:
+1. Publish the app again and try out creating new events again.
 
-- [DOM Tutorials](xref:DOM_tutorials)
+You should now have a fully functioning app where users can add records that will show up in the table as soon as they click the *Save* button.

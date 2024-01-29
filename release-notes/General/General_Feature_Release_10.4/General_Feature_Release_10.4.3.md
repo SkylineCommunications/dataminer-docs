@@ -202,7 +202,7 @@ As a result, overall performance of clients like the Dashboards app or a low-cod
 
 #### SLAnalytics: Enhanced memory usage [ID_38471]
 
-<!-- MR 10.5.0 - FR 10.4.2 -->
+<!-- MR 10.4.0 - FR 10.4.2 -->
 
 Because of a number of enhancements with regard to memory usage, overall performance of SLAnalytics has increased.
 
@@ -301,7 +301,7 @@ During a DataMiner upgrade, the *AnalyticsParameterInfoRecordAddChangeRate* upgr
 
 #### Problem with SLDMS [ID_38469]
 
-<!-- MR 10.5.0 - FR 10.4.3 -->
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
 
 In some cases, an error could occur in the SLDMS process when the SLDMKey object was accesses from multiple threads.
 
@@ -324,9 +324,3 @@ When a client application was connected to a DataMiner Agent via a gRPC connecti
 When SLAnalytics was handling large amounts of traffic, in some cases, certain parameter value changes would incorrectly not get processed.
 
 Also, a large number of low-severity change points were generated without a label. Those have now been reduced.
-
-#### Problem with SLDataMiner when an enhanced service was not able to find some of its child services [ID_38583]
-
-<!-- MR 10.5.0 - FR 10.4.3 -->
-
-At DataMiner startup, SLDataMiner could throw an access violation exception when an enhanced service was not able to find some of its child services.
