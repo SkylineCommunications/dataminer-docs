@@ -5,8 +5,7 @@ uid: DMS_GET_ELEMENTS_USING_PROTOCOL
 # DMS_GET_ELEMENTS_USING_PROTOCOL (102)
 
 > [!WARNING]
->
-> - The use of DMS Notify types is deprecated. Use types from [Class library](xref:ClassLibraryIntroduction) instead.
+> The use of DMS Notify types is deprecated. Use types from [Class library](xref:ClassLibraryIntroduction) instead.
 
 Gets elements using the specified protocol.
 

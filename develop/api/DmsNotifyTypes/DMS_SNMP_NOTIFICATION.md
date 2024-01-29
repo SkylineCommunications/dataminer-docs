@@ -5,8 +5,7 @@ uid: DMS_SNMP_NOTIFICATION
 # DMS_SNMP_NOTIFICATION (73)
 
 > [!WARNING]
->
-> - The use of DMS Notify types is deprecated. Use types from [Class library](xref:ClassLibraryIntroduction) instead.
+> The use of DMS Notify types is deprecated. Use types from [Class library](xref:ClassLibraryIntroduction) instead.
 
 Sends an SNMP trap or inform message.
 
