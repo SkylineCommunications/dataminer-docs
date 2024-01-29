@@ -7,14 +7,15 @@ uid: Order_DataMiner_credits
 1. Go to the [Azure Marketplace](https://azuremarketplace.microsoft.com/) and search for DataMiner.
     ![Azure Marketplace DataMiner credits offer](~/user-guide/images/Azure_Marketplace_Offer.png)
 
-1. Click on *Get It Now* and continue to Azure portal.
+1. Click on *Get It Now* to be redirected to the Azure portal.
 
 > [!WARNING]
-> Make sure you have selected the plan DataMiner credits.
+> Make sure you have selected the plan *DataMiner credits*.
 
-1. Once redirected to the Azure portal click on *Subscribe*. This will start the process of creating a SaaS subscription resource to be deployed in a resource group.
+1. Once redirected to the Azure portal click on *Subscribe*. This will start the process of creating a SaaS subscription resource to be deployed in a resource group. You will need to provide a resource name for the SaaS resource and assign the resource to a resource group of your choosing (or make a new resource group). Finally click on *Review + subscribe*.
+    ![Azure portal SaaS resource](~/user-guid/images/Azure-SaaS-Resource.png)
 
-1. Using your new SaaS subscription click on *Configure account now*. This will redirect you to our marketplace landing page.
+1. Using your new SaaS subscription click on *Configure account now*. This will redirect you to the DataMiner marketplace landing page.
     ![Configure account now](~/user-guide/images/Azure_Portal_Configure.png)
 
 1. After confirming all you details click on *Purchase credits*. This will activate your subscription and may take a couple of minutes.
