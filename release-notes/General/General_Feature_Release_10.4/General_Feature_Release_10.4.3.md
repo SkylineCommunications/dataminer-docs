@@ -301,7 +301,7 @@ During a DataMiner upgrade, the *AnalyticsParameterInfoRecordAddChangeRate* upgr
 
 #### Problem with SLDMS [ID_38469]
 
-<!-- MR 10.5.0 - FR 10.4.3 -->
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
 
 In some cases, an error could occur in the SLDMS process when the SLDMKey object was accesses from multiple threads.
 

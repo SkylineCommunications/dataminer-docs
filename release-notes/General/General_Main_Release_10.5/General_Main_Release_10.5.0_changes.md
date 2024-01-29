@@ -157,9 +157,3 @@ Resources would not always be released correctly, causing some resources to be u
 <!-- MR 10.5.0 - FR 10.4.2 -->
 
 When cleaning (i.e. resetting) a Cassandra database, in some cases, a `TypeInitializationException` could be thrown.
-
-#### Problem with SLDMS [ID_38469]
-
-<!-- MR 10.5.0 - FR 10.4.3 -->
-
-In some cases, an error could occur in the SLDMS process when the SLDMKey object was accesses from multiple threads.
