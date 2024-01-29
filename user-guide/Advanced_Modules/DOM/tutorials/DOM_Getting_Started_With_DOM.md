@@ -5,6 +5,8 @@ uid: DOM_Getting_Started_With_DOM
 
 This tutorial shows how you can create a simple DOM model using the DOM Editor and then use it in a low-code app.
 
+Expected duration: 20 minutes
+
 ## Overview
 
 - [Getting started with DOM](#getting-started-with-dom)
@@ -20,7 +22,7 @@ on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 ## Prerequisites
 
-- A cloud connected DataMiner system (version 10.3.10 or higher) or DAAS.
+- A cloud connected DataMiner system (version 10.3.10 or higher) or DAAS. Demo was created on version 10.4.1.
 - Having deployed the [DOM Editor script](https://catalog.dataminer.services/details/automation-script/3195) from the catalog.  
 
 ## Step 1: Creating a DOM Definition
