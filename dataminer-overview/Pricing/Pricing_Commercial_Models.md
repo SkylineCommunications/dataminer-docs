@@ -48,7 +48,7 @@ Limitations of DataMiner Community Edition:
 - Community support only
 - Limited to 20 managed objects and 2000 script runs. Number of connectors is unlimited.
 
-Once the above-mentioned limits have been reached, users have the option to transition to a standard Subscription or Pay-per-Use model.
+Once the above-mentioned limits have been reached, users have the option to transition to a standard subscription or Pay-per-Use model.
 
 > [!TIP]
 > See also:

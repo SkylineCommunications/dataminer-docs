@@ -79,11 +79,11 @@ For more information, see [Connecting to data sources using a DaaS system](xref:
 
 ### Are additional costs due in order to connect to Azure?
 
-All costs related to Azure VPN Gateway are included in your DaaS subscription. When using other options, your providers may charge additional fees. In that case, note that Skyline will not act as a broker.
+All costs related to Azure VPN Gateway are included in your DaaS subscription. When other options are used, your providers may charge additional fees. In that case, note that Skyline will not act as a broker.
 
 Additional query costs may be due when using e.g. Azure ExpressRoute or Amazon CloudWatch to retrieve data from other cloud providers. The costs for retrieving data from Amazon Web Services are usually negligible.
 
-### How are user accounts being managed? Where are the passwords stored?
+### How are user accounts managed? Where are the passwords stored?
 
 User management on DaaS systems is similar to that on on-premises system. Although local accounts are available by default, user accounts are typically integrated by an identity provider.
 
