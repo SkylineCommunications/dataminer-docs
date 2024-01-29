@@ -20,11 +20,16 @@ uid: Order_DataMiner_credits
 1. After confirming all you details click on *Purchase credits*. This will activate your subscription and may take a couple of minutes.
 
 1. Once your subscription is activated, fill in your Organization ID
-    1. To find your organization ID, go to [dataminer.services](https://dataminer.services).
-    1. Log in using your dataminer.services account.
-    1. Select the organization you want to purchase DataMiner credits for.
-    1. Go to the webpage URL and copy the last part of the URL after the final slash.
-   ![How to retrieve organization ID](~/user-guide/images/Retrieve_Organization_ID.gif)
+   > [!NOTE]
+    > You can find your organization ID on [dataminer.services](
+    https://dataminer.services):
+    >
+    > 1. [Log in using your dataminer.services account](xref:
+    Logging_on_to_the_DataMiner_Cloud_Platform
+    ).
+    > 1. Select the organization you want to transfer DataMiner credits to.
+    > 1. Go to the webpage URL and copy the last part of the URL after the final slash.
+       ![How to retrieve organization ID](~/user-guide/images/Retrieve_Organization_ID.gif)
 
 1. Use the slider to indicate how many credits you wish to purchase for the organization.
 
