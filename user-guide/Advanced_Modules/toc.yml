@@ -827,6 +827,8 @@ items:
       - name: Tutorials
         topicUid: DOM_Create_Basic_Setup
         items:
+          - name: Getting started with DOM
+            topicUid: DOM_Getting_Started_With_DOM
           - name: Creating a basic DOM setup
             topicUid: DOM_Create_Basic_Setup
           - name: Removing an enum entry from a GenericEnumFieldDescriptor
