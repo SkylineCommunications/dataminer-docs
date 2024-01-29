@@ -914,6 +914,12 @@ Change point detection accuracy has been improved for parameters that have a dis
 
 For parameters of which the trend data behavior is mostly stable, with only infrequent sudden value changes, only behavioral changes that are larger than those infrequent sudden value changes will be taken into account.
 
+#### SLAnalytics: Enhanced memory usage [ID_38471]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+Because of a number of enhancements with regard to memory usage, overall performance of SLAnalytics has increased.
+
 #### SLAnalytics - Proactive cap detection: Enhanced accuracy [ID_38508]
 
 <!-- MR 10.4.0 - FR 10.4.3 -->

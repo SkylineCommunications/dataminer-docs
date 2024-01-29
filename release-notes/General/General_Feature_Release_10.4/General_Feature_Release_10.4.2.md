@@ -659,3 +659,9 @@ When cleaning (i.e. resetting) a Cassandra database, in some cases, a `TypeIniti
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 [CU0] -->
 
 When both agents in a Failover setup were offline, in some cases, they would incorrectly reconfigure the NATS settings.
+
+#### Problem with SLDataMiner when an enhanced service was not able to find some of its child services [ID_38583]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 [CU0] -->
+
+At DataMiner startup, SLDataMiner could throw an access violation exception when an enhanced service was not able to find some of its child services.
