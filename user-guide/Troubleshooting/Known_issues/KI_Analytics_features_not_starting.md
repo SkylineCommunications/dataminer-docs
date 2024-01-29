@@ -10,7 +10,10 @@ From DataMiner 10.2.0 [CU13]/10.3.0 [CU2]/10.3.5 onwards.
 
 ## Cause
 
-During the startup of DataMiner, there is a connection drop between SLAnalytics and SLNet, which leads to a failed database read before the connection can be recovered.
+During the startup of DataMiner, there may be a connection drop between SLAnalytics and SLNet, which can lead to a failed database read before the connection is recovered.
+
+> [!NOTE]
+> This issue is isolated to DataMiner Analytics features and does not affect any other functionalities.
 
 ## Workaround
 
@@ -21,6 +24,8 @@ Restart the *SLAnalytics* service (e.g. via the Task Manager) after DataMiner ha
 No fix is available yet.
 
 ## Description
+
+After starting DataMiner, one or multiple DataMiner Analytics features fail to start:
 
 - The following notification is displayed in the Alarm Console: `Failed to start X Analytics feature(s). Check the Analytics logging (SLAnalytics.txt) for more information.`
 
