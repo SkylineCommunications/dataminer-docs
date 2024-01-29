@@ -22,10 +22,12 @@ No fix is available yet.
 
 ## Description
 
-*SLAnalytics.txt* shows errors similar to the example below:
+- The following notification is displayed in the Alarm Console: `Failed to start X Analytics feature(s). Check the Analytics logging (SLAnalytics.txt) for more information.`
 
-```txt
-2024/01/25 15:42:26.097|SLAnalytics|ManagedDataSource.cpp(50): datastores::sources::ManagedDataSource<WaveletLevelRecordID,WaveletLevelRecord>::readFromRepository)|ERR|0|Exception while reading from repository Error: 
-Read from DataSetRepository<WaveletLevelRecord> failed after 5 retries with error:
+- *SLAnalytics.txt* shows errors similar to the example below:
+
+  ```txt
+  2024/01/25 15:42:26.097|SLAnalytics|ManagedDataSource.cpp(50): datastores::sources::ManagedDataSource<WaveletLevelRecordID,WaveletLevelRecord>::readFromRepository)|ERR|0|Exception while reading from repository Error: 
+  Read from DataSetRepository<WaveletLevelRecord> failed after 5 retries with error:
     (Code: 0x80131500) Skyline.DataMiner.Net.Exceptions.DataMinerOfflineException: Connection SLNet down.
-```
+  ```
