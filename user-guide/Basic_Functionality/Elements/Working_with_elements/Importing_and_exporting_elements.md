@@ -124,3 +124,32 @@ When altering an exported CSV file in a third-party application like Microsoft E
 - Import operations are asynchronous. The DataMiner client will send the imported file to the DMA to which it is connected. That DMA will then process the file when appropriate. To check the progress of an import operation, consult the list of information events.
 
 - After an import operation, an element will only be restarted if relevant information related to that element has been changed.
+
+## ProtocolType mapping
+
+The `ProtocolType` column in the CSV file contains a numeric value that corresponds to the communication type that is defined in the protocol XML.
+When there are multiple connections defined in the protocol, the values are separated by a comma.
+
+This is the mapping:
+
+| Protocol Type | Description                        |
+|---------------|------------------------------------|
+| 0             | Undefined                          |
+| 1             | SNMP                               |
+| 2             | Serial                             |
+| 3             | Smart-serial                       |
+| 4             | Virtual                            |
+| 5             | GPIB                               |
+| 6             | OPC                                |
+| 7             | SLA                                |
+| 8             | SNMPv2                             |
+| 9             | SNMPv3                             |
+| 10            | HTTP                               |
+| 11            | Service                            |
+| 12            | Serial-single                      |
+| 13            | Smart-serial-single                |
+| 14            | Smart-serial-raw                   |
+| 15            | Smart-serial-raw-single            |
+| 16            | Websocket                          |
+| 17            | Virtual-function                   |
+| 18            | Auto-generated (grabber)           |
