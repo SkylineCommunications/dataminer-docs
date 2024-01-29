@@ -1186,12 +1186,6 @@ When small, unlabelled changes were detected in a trend graph of a parameter of 
 
 In some rare cases, a database write operation could incorrectly remain stuck in an internal queue and would never get processed.
 
-#### Problem when loading data of elements hosted on another DMA while a correlation rule action was running [ID_38121]
-
-<!-- MR 10.4.0 - FR 10.4.2 -->
-
-When, while an extensive correlation rule action was running, you opened an element card of an element hosted on a DataMiner Agent other than the one you were connected to, loading the data of that element could get delayed until the correlation rule action had finished.
-
 #### Problems with gRPC connections when SLNet was not running [ID_38177]
 
 <!-- MR 10.4.0 - FR 10.4.2 -->
