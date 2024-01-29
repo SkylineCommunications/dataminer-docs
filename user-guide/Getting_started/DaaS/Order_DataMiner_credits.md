@@ -19,16 +19,8 @@ To create and maintain a DaaS instance, your [organization](xref:Pricing_Usage_b
 1. Once redirected to the Azure portal click on *Subscribe*. This will start the process of creating a SaaS subscription resource to be deployed in a resource group. You will need to provide a resource name for the SaaS resource and assign the resource to a resource group of your choosing (or make a new resource group). Finally click on *Review + subscribe*.
     ![Azure portal SaaS resource](~/user-guide/images/Azure-SaaS-Resource.png)
 
-1. Using your new SaaS subscription click on *Configure account now*. This will redirect you to the DataMiner marketplace landing page.
+1. Click on *Configure account now*. This will redirect you to the DataMiner marketplace landing page.
     ![Configure account now](~/user-guide/images/Azure_Portal_Configure.png)
-
-   This will start the process of creating a SaaS subscription resource to be deployed in a resource group.
-
-1. Using your new SaaS subscription, click *Configure account now*.
-
-   This will redirect you to our marketplace landing page.
-
-   ![Configure account now](~/user-guide/images/Azure_Portal_Configure.png)
 
 1. After confirming all you details, click *Purchase credits*.
 
