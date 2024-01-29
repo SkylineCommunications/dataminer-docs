@@ -14,7 +14,7 @@ During the startup of DataMiner, there is a connection drop between SLAnalytics 
 
 ## Workaround
 
-Restart the *SLAnalytics* service after DataMiner has successfully started up (e.g. via the Task Manager).
+Restart the *SLAnalytics* service (e.g. via the Task Manager) after DataMiner has successfully started up.
 
 ## Fix
 
