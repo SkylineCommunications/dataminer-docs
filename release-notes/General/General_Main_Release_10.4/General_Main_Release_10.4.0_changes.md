@@ -916,7 +916,7 @@ For parameters of which the trend data behavior is mostly stable, with only infr
 
 #### SLAnalytics: Enhanced memory usage [ID_38471]
 
-<!-- MR 10.4.0 - FR 10.4.2 -->
+<!-- MR 10.4.0 - FR 10.4.3 -->
 
 Because of a number of enhancements with regard to memory usage, overall performance of SLAnalytics has increased.
 

@@ -147,8 +147,20 @@ During a DataMiner upgrade, the *AnalyticsParameterInfoRecordAddChangeRate* upgr
 
 In some cases, an error could occur in the SLDMS process when the SLDMKey object was accesses from multiple threads.
 
+#### Fatal error reported in Windows Event Viewer each time the APIGateway was stopped [ID_38504]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+Each time the APIGateway service was stopped, a fatal error would incorrectly be reported in the Windows Event Viewer.
+
 #### Alarm filters would not be properly serialized when using a gRPC connection [ID_38507]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
 
 When a client application was connected to a DataMiner Agent via a gRPC connection, in some cases, the alarm filters it received from the DataMiner Agent would not be properly serialized.
+
+#### SLAnalytics features would not start up correctly after a database connection problem [ID_38600]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+Up to now, when writing to the database or reading from the database failed, a retry was attempted after 5 seconds. In some cases, especially when the SLNet connection was lost during startup, that retry would also fail, causing certain SLAnalytics features to not start up correctly. From now on, when writing to the database or reading from the database fails, SLAnalytics will wait longer than 5 seconds before attempting a retry.
