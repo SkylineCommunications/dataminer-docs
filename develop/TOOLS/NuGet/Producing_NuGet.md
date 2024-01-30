@@ -61,7 +61,7 @@ If possible, try to target .NET Standard 2.0, as this will give the most flexibi
 If you have a dependency on .NET Framework (e.g. Skyline.DataMiner.Dev.*), you will need to target .NET Framework as well.
 
 > [!IMPORTANT]
-> Prior to DataMiner 10.1.11 (RN 30755), when a .NET Standard 2.0 NuGet is used in a QAction or EXE, you need to manually add a reference to .NET Standard.
+> Prior to DataMiner 10.1.11 (RN 30755), when a .NET Standard 2.0 NuGet is used in a QAction or EXE, you need to manually add a reference to .NET Standard to the project file of the project consuming the package.
 >
 > ```xml
 > <ItemGroup>
