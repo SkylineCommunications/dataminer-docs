@@ -6,9 +6,11 @@ uid: Preparing_to_upgrade_a_DataMiner_Agent
 
 This section of the documentation contains detailed information on how to best prepare to upgrade a DataMiner Agent. To ensure a successful upgrade of your DMA, we strongly recommend that you read through the content of this page.
 
-## Check for known issues
+## Check for known issues and breaking changes
 
-From time to time, there is an issues detected that might impact your DataMiner System. We recommend that you first read through [Known issues](xref:Known_issues) and identify if your environment might be affected.
+From time to time, issues are detected that might impact a DataMiner System if a particular DataMiner version is installed. Before you upgrade, we therefore recommend that you first check the [Known issues page](xref:Known_issues) to identify if your system might be affected by such an issue.
+
+Make sure you also check the [Breaking changes page](xref:Breaking_changes) to see if any breaking changes will affect your system when you upgrade.
 
 ## Uploading upgrade packages before an upgrade
 
