@@ -6,6 +6,10 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 30 January 2024 - Enhancement - SupportAssistant 1.6.5 - Improved DxM status reporting [ID_38608]
+
+The SupportAssistant DxM will now offload information about the used version of the log collector.
+
 #### 23 January 2024 - Fix - Unknown error when remote accessing web apps [ID_38549]
 
 While remote accessing web apps via dataminer.services (e.g. the Monitoring app), the following message could appear: `An unknown error occurred (status: 200).` The app would also stop working until the page was refreshed. This issue has been resolved.
