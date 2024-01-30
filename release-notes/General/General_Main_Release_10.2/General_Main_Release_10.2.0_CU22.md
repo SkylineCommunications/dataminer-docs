@@ -268,6 +268,25 @@ When creating a new property, from now on, it will no longer be allowed to use a
 
 Because of a number of enhancements, overall performance has increased when reapplying a service template.
 
+#### CubeConnection entry will now be added to the SLClient.txt log file each time a Cube client has fully connected to a DMA [ID_38574]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
+
+Each time a Cube client has fully connected to a DataMiner Agent, a *CubeConnection* entry will now be added to the *SLClient.txt* log file of the DataMiner Agent in question.
+
+This entry will contain the following information:
+
+- The DataMiner Cube version
+- The name of the client computer that is running DataMiner Cube
+- The creation time of the connection (in ISO 8601 format)
+- The ID of the connection
+- The type of the current connection: "Auto", "Remoting", "WebServices" or "Grpc"
+- The type of the last disconnect: "AbnormalClose", "Logout", "NoActivity", "Close", "FailedConnection", "NewConnection" or "Refresh"
+- The reason of the last disconnect (depending on the type of the last disconnect)
+- The hostname of the non-resolved connection URL
+- The connected hostname
+- The raw text of the client connection (includes connection property data such as *AmountCallsIn*, *AmountCallsOut*, *AmountInitiatedConnectionChecks*, *AmountCallsInProgress*, *AmountCallsWaiting*, etc.)
+
 ### Fixes
 
 #### DataMiner Cube: Problem when adding up [Start Time:] placeholders [ID_37661]
