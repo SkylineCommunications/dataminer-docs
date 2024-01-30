@@ -4,16 +4,17 @@ uid: Data_API
 
 # Data API
 
-The Data API provides an HTTP API that accepts requests with a JSON formatted body. When necessary, the Data API creates an element to store the values from the JSON formatted body.
+The Data API furnishes an HTTP API capable of processing requests with a JSON-formatted body. When necessary, the Data API creates an element to store the values derived from the JSON-formatted body.
 
 The HTTP request should include the following HTTP header fields:
 
-- The **identifier** is stored as the General Parameter *Data API Identifier* and must be unique in the DMS cluster. The identifier serves as the initial name of the element. It's important to note that the element can be renamed later at any time, as the Data API uses the *Data API Identifier*.
-- The **type** is the name of the auto-generated connector.
+- The **identifier**, stored as the General Parameter *Data API Identifier*, must be unique within the DMS cluster. The identifier serves as the initial name of the element, which can be renamed later at any time as the Data API uses the *Data API Identifier*.
 
-The HTTP body is a JSON formatted structure with key-value pairs. This action prompts the creation of a corresponding element in DataMiner, where the specified values for *Server Name* and *CPU Utilization* are stored in parameters with the same names.
+- The **type** denotes the name of the auto-generated connector.
 
-The values can be either strings or doubles, and they are trended by default.
+The HTTP body comprises a JSON-formatted structure with key-value pairs, triggering the creation of a corresponding element in DataMiner. This process captures the specified values for *Server Name* and *CPU Utilization*, stored in parameters with the same names.
+
+These values can be either strings or doubles, and they are trended by default.
 
 ```json
 {

@@ -4,13 +4,13 @@ uid: Data_Sources
 
 # Data Sources
 
-The Data Sources module offers a powerful solution offering flexible access to data from any source imaginable, across hardware, software and cloud services. Scripted Connectors allow you to swiftly and effortlessly integrate new products and data sources into your operations.
+The *Data Sources* module offers a powerful solution for accessing data from diverse sources, across hardware, software, and cloud services. [Scripted connectors](xref:Scripted_Connectors) allow you to swiftly integrate new products and data sources into your operations with ease.
 
-Scripted Connectors are hosted on DataMiner and execute every minute. These connectors can be written using Python or PowerShell. The scripts, in turn, transmit JSON data through a local HTTP call to the Data API. Subsequently, this action initiates the generation of an element through an automatically created connector.
+Scripted Connectors, hosted on DataMiner, execute every minute and can be written in Python or PowerShell. These scripts transmit JSON data through a local HTTP call to the [Data API](xref:Data_API), triggering the generation of an element through an automatically created connector.
 
 ![Architectural Overview of Scripted Connectors & Data API](/user-guide/images/Data_API_Schematic.png)
 
-This excerpt is an example of the JSON data that triggers a corresponding element to be generated in DataMiner, storing the specified values for the *Server Name* and *CPU Utilization*.
+This is an example JSON data snippet, storing the specified values for the server name and CPU utilization. This data, in turn, triggers a corresponding element to be generated in DataMiner.
 
 ```json
 {
@@ -19,6 +19,7 @@ This excerpt is an example of the JSON data that triggers a corresponding elemen
 }
 ```
 
-Subsequent updates trigger the automatic updating of these values. It's worth noting that our system supports not only individual JSON objects but also JSON arrays and nested arrays.
+Subsequent updates trigger the automatic updating of these values.
 
-For more detailed information about the capabilities and possibilities, take a dive into [About Data API & Scripted Connectors](xref:Data_Sources)
+> [!NOTE]
+> Individual JSON objects, JSON arrays, and nested arrays are supported.
