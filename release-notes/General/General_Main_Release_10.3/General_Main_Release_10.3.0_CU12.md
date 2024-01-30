@@ -95,6 +95,12 @@ Up to now, when you ran the DataMiner installer to install a new DataMiner Agent
 
 From now on, when you run the DataMiner installer to install a new DataMiner Agent using a DataMiner upgrade package, all installation steps will be performed, including the upgrade actions.
 
+#### Problem when loading data of elements hosted on another DMA while a Correlation rule action was running [ID_38121]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.2 -->
+
+When, while an extensive Correlation rule action was running, you opened an element card of an element hosted on a DataMiner Agent other than the one you were connected to, loading the data of that element could get delayed until the Correlation rule action had finished.
+
 #### Web apps: Visual overview linked to a view would not get any updates when the user did not have full administrative rights [ID_38180]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
@@ -135,8 +141,26 @@ From now on, an exception will no longer be thrown when empty data is passed to 
 
 During a DataMiner upgrade, the *AnalyticsParameterInfoRecordAddChangeRate* upgrade action executes an *Alter Table* command on every DataMiner Agent in the cluster. Up to now, when you upgraded a DataMiner System with a Cassandra Cluster database, that *Alter Table* command would incorrectly only get executed on the first DMA that called it. On each subsequent DMA that called the command, errors would get thrown and added to the *upgrade.log* file.
 
+#### Problem with SLDMS [ID_38469]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+In some cases, an error could occur in the SLDMS process when the SLDMKey object was accesses from multiple threads.
+
+#### Fatal error reported in Windows Event Viewer each time the APIGateway was stopped [ID_38504]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+Each time the APIGateway service was stopped, a fatal error would incorrectly be reported in the Windows Event Viewer.
+
 #### Alarm filters would not be properly serialized when using a gRPC connection [ID_38507]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
 
 When a client application was connected to a DataMiner Agent via a gRPC connection, in some cases, the alarm filters it received from the DataMiner Agent would not be properly serialized.
+
+#### SLAnalytics features would not start up correctly after a database connection problem [ID_38600]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+Up to now, when writing to the database or reading from the database failed, a retry was attempted after 5 seconds. In some cases, especially when the SLNet connection was lost during startup, that retry would also fail, causing certain SLAnalytics features to not start up correctly. From now on, when writing to the database or reading from the database fails, SLAnalytics will wait longer than 5 seconds before attempting a retry.

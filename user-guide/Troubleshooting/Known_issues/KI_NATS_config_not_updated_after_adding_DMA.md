@@ -20,7 +20,7 @@ Restart the DataMiner Agent you have added to the DMS. This will force a refresh
 
 ## Fix
 
-No fix is available yet.
+No fix is available yet.<!-- RN 38620 -->
 
 ## Description
 

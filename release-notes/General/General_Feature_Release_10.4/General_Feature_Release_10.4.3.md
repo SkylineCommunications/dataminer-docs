@@ -137,6 +137,12 @@ A number of security enhancements have been made.
 
 From now, NATS nodes will advertise their physical IP address instead of their virtual IP address.
 
+#### SLAnalytics: Cassandra tables 'analytics_parameterinfo_v1' and 'analytics_wavestream' will be dropped when downgrading [ID_38336]
+
+<!-- MR 10.5.0 - FR 10.4.3 -->
+
+When downgrading a DataMiner System using a Cassandra database, from now on, the Cassandra tables *analytics_parameterinfo_v1* and *analytics_wavestream* will be dropped. Contrary to the old versions, the new versions no longer contain display keys.
+
 #### SLAnalytics - Behavioral anomaly detection: Enhanced accuracy [ID_38383]
 
 <!-- MR 10.4.0 - FR 10.4.3 -->
@@ -202,7 +208,7 @@ As a result, overall performance of clients like the Dashboards app or a low-cod
 
 #### SLAnalytics: Enhanced memory usage [ID_38471]
 
-<!-- MR 10.5.0 - FR 10.4.2 -->
+<!-- MR 10.4.0 - FR 10.4.3 -->
 
 Because of a number of enhancements with regard to memory usage, overall performance of SLAnalytics has increased.
 
@@ -217,14 +223,14 @@ Up to now, when a user-defined API was triggered, log entries like the ones belo
 2024/01/18 10:13:01.268|SLNet.exe|Handle|CRU|0|152|[1f9cd6c045] Handling API trigger from NATS for route 'dma/id_2' SUCCEEDED after 526.46 ms. API script provided response code: 200. (Token ID: 78dd7916-6d01-4c17-9010-530c28338120)
 ```
 
-#### DxMs upgraded [ID_38499]
+#### DxMs upgraded [ID_38499] [ID_38596]
 
 <!-- MR 10.5.0 - FR 10.4.3 -->
 
 The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
 
 - DataMiner ArtifactDeployer: version 1.6.4.14010
-- DataMiner CoreGateway: version 2.13.4.14181
+- DataMiner CoreGateway: version 2.14.3
 - DataMiner FieldControl: version 2.10.3.14011
 - DataMiner Orchestrator: version 1.5.3.14012
 - DataMiner SupportAssistant: version 1.6.4.14013
@@ -301,7 +307,7 @@ During a DataMiner upgrade, the *AnalyticsParameterInfoRecordAddChangeRate* upgr
 
 #### Problem with SLDMS [ID_38469]
 
-<!-- MR 10.5.0 - FR 10.4.3 -->
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
 
 In some cases, an error could occur in the SLDMS process when the SLDMKey object was accesses from multiple threads.
 
@@ -310,6 +316,12 @@ In some cases, an error could occur in the SLDMS process when the SLDMKey object
 <!-- MR 10.4.0 - FR 10.4.3 -->
 
 In some cases, DataMiner Cube would not be able to reconnect to the server after having been disconnected.
+
+#### Fatal error reported in Windows Event Viewer each time the APIGateway was stopped [ID_38504]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+Each time the APIGateway service was stopped, a fatal error would incorrectly be reported in the Windows Event Viewer.
 
 #### Alarm filters would not be properly serialized when using a gRPC connection [ID_38507]
 
@@ -325,8 +337,8 @@ When SLAnalytics was handling large amounts of traffic, in some cases, certain p
 
 Also, a large number of low-severity change points were generated without a label. Those have now been reduced.
 
-#### Problem with SLDataMiner when an enhanced service was not able to find some of its child services [ID_38583]
+#### SLAnalytics features would not start up correctly after a database connection problem [ID_38600]
 
-<!-- MR 10.5.0 - FR 10.4.3 -->
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
 
-At DataMiner startup, SLDataMiner could throw an access violation exception when an enhanced service was not able to find some of its child services.
+Up to now, when writing to the database or reading from the database failed, a retry was attempted after 5 seconds. In some cases, especially when the SLNet connection was lost during startup, that retry would also fail, causing certain SLAnalytics features to not start up correctly. From now on, when writing to the database or reading from the database fails, SLAnalytics will wait longer than 5 seconds before attempting a retry.

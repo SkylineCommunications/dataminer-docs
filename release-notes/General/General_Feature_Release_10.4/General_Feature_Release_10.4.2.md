@@ -580,11 +580,11 @@ In some cases, SLAnalytics could partially get stuck when the trend icon calcula
 
 When small, unlabelled changes were detected in a trend graph of a parameter of which the value was clearly increasing, decreasing or remaining stable, up to now, the trend icon would incorrectly not be updated to indicate this increasing, decreasing or stable trend. From now on, when a small, unlabelled change occurs in a trend graph that clearly increases, decreases or remains stable, the trend icon will be updated to indicate this.
 
-#### Problem when loading data of elements hosted on another DMA while a correlation rule action was running [ID_38121]
+#### Problem when loading data of elements hosted on another DMA while a Correlation rule action was running [ID_38121]
 
-<!-- MR 10.4.0 - FR 10.4.2 -->
+<!-- MR 10.3.0 [CU12] - FR 10.4.2 -->
 
-When, while an extensive correlation rule action was running, you opened an element card of an element hosted on a DataMiner Agent other than the one you were connected to, loading the data of that element could get delayed until the correlation rule action had finished.
+When, while an extensive Correlation rule action was running, you opened an element card of an element hosted on a DataMiner Agent other than the one you were connected to, loading the data of that element could get delayed until the Correlation rule action had finished.
 
 #### Failover: Problem with DVE elements and virtual function elements after a Failover switch [ID_38167]
 
@@ -659,3 +659,9 @@ When cleaning (i.e. resetting) a Cassandra database, in some cases, a `TypeIniti
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 [CU0] -->
 
 When both agents in a Failover setup were offline, in some cases, they would incorrectly reconfigure the NATS settings.
+
+#### Problem with SLDataMiner when an enhanced service was not able to find some of its child services [ID_38583]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 [CU0] -->
+
+At DataMiner startup, SLDataMiner could throw an access violation exception when an enhanced service was not able to find some of its child services.

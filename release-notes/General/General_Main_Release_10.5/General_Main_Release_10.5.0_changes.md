@@ -107,11 +107,11 @@ Up to now, if history storage was enabled, when DomInstances were created, updat
 
 From now on, for every batch of DomInstances that are processed in bulk, the history records will also be processed in bulk.
 
-#### SLAnalytics: Enhanced memory usage [ID_38471]
+#### SLAnalytics: Cassandra tables 'analytics_parameterinfo_v1' and 'analytics_wavestream' will be dropped when downgrading [ID_38336]
 
-<!-- MR 10.5.0 - FR 10.4.2 -->
+<!-- MR 10.5.0 - FR 10.4.3 -->
 
-Because of a number of enhancements with regard to memory usage, overall performance of SLAnalytics has increased.
+When downgrading a DataMiner System using a Cassandra database, from now on, the Cassandra tables *analytics_parameterinfo_v1* and *analytics_wavestream* will be dropped. Contrary to the old versions, the new versions no longer contain display keys.
 
 #### User-Defined APIs: Enhanced logging [ID_38491]
 
@@ -124,14 +124,14 @@ Up to now, when a user-defined API was triggered, log entries like the ones belo
 2024/01/18 10:13:01.268|SLNet.exe|Handle|CRU|0|152|[1f9cd6c045] Handling API trigger from NATS for route 'dma/id_2' SUCCEEDED after 526.46 ms. API script provided response code: 200. (Token ID: 78dd7916-6d01-4c17-9010-530c28338120)
 ```
 
-#### DxMs upgraded [ID_38499]
+#### DxMs upgraded [ID_38499] [ID_38596]
 
 <!-- MR 10.5.0 - FR 10.4.3 -->
 
 The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
 
 - DataMiner ArtifactDeployer: version 1.6.4.14010
-- DataMiner CoreGateway: version 2.13.4.14181
+- DataMiner CoreGateway: version 2.14.3
 - DataMiner FieldControl: version 2.10.3.14011
 - DataMiner Orchestrator: version 1.5.3.14012
 - DataMiner SupportAssistant: version 1.6.4.14013
@@ -157,15 +157,3 @@ Resources would not always be released correctly, causing some resources to be u
 <!-- MR 10.5.0 - FR 10.4.2 -->
 
 When cleaning (i.e. resetting) a Cassandra database, in some cases, a `TypeInitializationException` could be thrown.
-
-#### Problem with SLDMS [ID_38469]
-
-<!-- MR 10.5.0 - FR 10.4.3 -->
-
-In some cases, an error could occur in the SLDMS process when the SLDMKey object was accesses from multiple threads.
-
-#### Problem with SLDataMiner when an enhanced service was not able to find some of its child services [ID_38583]
-
-<!-- MR 10.5.0 - FR 10.4.3 -->
-
-At DataMiner startup, SLDataMiner could throw an access violation exception when an enhanced service was not able to find some of its child services.

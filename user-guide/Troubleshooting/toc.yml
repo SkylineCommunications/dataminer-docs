@@ -207,8 +207,10 @@ items:
     topicUid: Known_issues
     items:
       - name: Current issues
-        topicUid: KI_Downgrade_fails_VerifyNatsIsRunning_prerequisite
+        topicUid:  KI_Analytics_features_not_starting
         items:
+          - name: One or multiple Analytics features fail to start
+            topicUid:  KI_Analytics_features_not_starting
           - name: NATS configuration not updated after adding DMA to DMS
             topicUid: KI_NATS_config_not_updated_after_adding_DMA
           - name: Downgrade fails because of VerifyNatsIsRunning.dll prerequisite
