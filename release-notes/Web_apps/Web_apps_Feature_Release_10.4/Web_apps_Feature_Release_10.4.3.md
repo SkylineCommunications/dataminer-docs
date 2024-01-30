@@ -40,6 +40,17 @@ When configuring a *Show a notification* action, the following properties should
 
 ### Enhancements
 
+#### Dashboards app & Low-Code Apps: Timeline component now supports real-time GQI query updates [ID_37372]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+The Timeline component now supports real-time GQI query updates.
+
+If you want the Timeline component to automatically refresh the data when changes to that data are detected, enable the *Update data* option. By default, this option is disabled.
+
+> [!NOTE]
+> This feature will only work for queries using a data source that supports real-time updates.
+
 #### DataMiner Object Models: Enhanced performance of DomInstanceFieldDescriptor and DomInstanceValueFieldDescriptor in web forms [ID_37546]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
