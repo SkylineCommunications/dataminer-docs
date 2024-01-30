@@ -152,4 +152,4 @@ This is the mapping:
 | 15            | Smart-serial-raw-single            |
 | 16            | Websocket                          |
 | 17            | Virtual-function                   |
-| 18            | Auto-generated (grabber)           |
+| 18            | Auto-generated                     |
