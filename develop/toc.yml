@@ -5581,8 +5581,3 @@ items:
         topicUid: Configure_DataMiner_using_Ansible
       - name: Grafana
         topicUid: Grafana_plugin
-  - name: Best practices
-    topicUid: Best_practices
-    items:
-      - name: Creating unit tests in protocols
-        topicUid: Creating_unit_tests_in_protocols
