@@ -268,3 +268,5 @@ Now that you have deployed the DOM Editor to your DMA, you can use it to create 
 1. Publish the app again and try out creating new events again.
 
 You should now have a fully functioning app where users can add records that will show up in the table as soon as they click the *Save* button.
+
+![DOM LCA Final Result](~/user-guide/images/DOM_Getting_Started_with_DOM_LCA_FinalResult.png)
