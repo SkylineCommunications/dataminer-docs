@@ -107,11 +107,11 @@ Up to now, if history storage was enabled, when DomInstances were created, updat
 
 From now on, for every batch of DomInstances that are processed in bulk, the history records will also be processed in bulk.
 
-#### SLAnalytics: Cassandra tables that only contain empty display strings will be dropped when downgrading [ID_38336]
+#### SLAnalytics: Cassandra tables 'analytics_parameterinfo_v1' and 'analytics_wavestream' will be dropped when downgrading [ID_38336]
 
 <!-- MR 10.5.0 - FR 10.4.3 -->
 
-When downgrading a DataMiner System using a Cassandra database, from now on, SLAnalytics tables that only contain empty display strings will be dropped.
+When downgrading a DataMiner System using a Cassandra database, from now on, the Cassandra tables *analytics_parameterinfo_v1* and *analytics_wavestream* will be dropped. Contrary to the old versions, the new versions no longer contain display keys.
 
 #### User-Defined APIs: Enhanced logging [ID_38491]
 
