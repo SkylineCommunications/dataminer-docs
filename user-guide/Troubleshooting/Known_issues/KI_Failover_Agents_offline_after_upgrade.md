@@ -16,7 +16,7 @@ When the Failover pair attempts to come online, both DataMiner Agents continuous
 
 ## Workaround
 
-- Stop one of the Failover Agents.
+- Stop and restart one of the Failover Agents.
 
 - Send your [*Log Collector* packages](xref:SLLogCollector) to [support.data-core](mailto:support.data-core@skyline.be), including SLNet memory dumps for both machines.
 
