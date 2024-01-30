@@ -11,18 +11,26 @@ To create and maintain a DaaS instance, your [organization](xref:Pricing_Usage_b
 
 1. Go to the [Azure Marketplace](https://azuremarketplace.microsoft.com/) and search for DataMiner.
 
-1. Click on *Get It Now* to be redirected to the Azure portal.
+1. Click *Get It Now* to be redirected to the Azure portal.
 
-> [!WARNING]
-> Make sure you have selected the plan *DataMiner credits*.
+   > [!IMPORTANT]
+   > Make sure you have selected the plan *DataMiner credits*.
 
-1. Once redirected to the Azure portal click on *Subscribe*. This will start the process of creating a SaaS subscription resource to be deployed in a resource group. You will need to provide a resource name for the SaaS resource and assign the resource to a resource group of your choosing (or make a new resource group). Finally click on *Review + subscribe*.
-    ![Azure portal SaaS resource](~/user-guide/images/Azure-SaaS-Resource.png)
+1. Once you have been redirected to the Azure portal, click *Subscribe*.
 
-1. Click on *Configure account now*. This will redirect you to the DataMiner marketplace landing page.
-    ![Configure account now](~/user-guide/images/Azure_Portal_Configure.png)
+   This will start the process of creating a SaaS subscription resource to be deployed in a resource group. You will need to provide a resource name for the SaaS resource and assign the resource to a resource group of your choosing (or make a new resource group). Finally click on *Review + subscribe*.
 
-1. After confirming all you details, click *Purchase credits*.
+   ![Azure portal SaaS resource](~/user-guide/images/Azure-SaaS-Resource.png)
+
+1. Click *Configure account now*.
+
+   This will redirect you to the DataMiner marketplace landing page.
+
+   ![Configure account now](~/user-guide/images/Azure_Portal_Configure.png)
+
+1. Check whether the correct personal details are displayed, and adjust them if necessary.
+
+1. When all your personal details are correct, click *Purchase credits*.
 
    This will activate your subscription and may take a couple of minutes.
 
