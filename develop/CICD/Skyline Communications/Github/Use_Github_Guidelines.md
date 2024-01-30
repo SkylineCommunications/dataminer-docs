@@ -49,23 +49,24 @@ If the repository is private, the name should look like this (using "-" as separ
 
 - The following **item types** are currently supported (this list is to be extended):
 
-  - C (Connectors)
-  - V (Visio files)
-  - S (Solutions)
-  - F (Functions)
   - AS (Automation Scripts)
-  - PLS (Profile-Load Scripts)
-  - PA (Process Automation)
-  - LSO (Life cycle Service Orchestration)
-  - D (Dashboards)
+  - C (Connectors)
   - CF (Companion Files)
-  - T (Tests)
+  - CHATOPS (ChatOps extension)
+  - D (Dashboards)
+  - DISMACRO (DIS Macro)
+  - DOC (Documentation)
+  - F (Functions)
   - GQIDS (GQI data source)
   - GQIO (GQI operator)
+  - LSO (Life cycle Service Orchestration)
+  - PA (Process Automation)
+  - PLS (Profile-Load Scripts)
+  - S (Solutions)
+  - SC (Scripted Connector)
+  - T (Tests)
   - UDAPI (User-Defined APIs)
-  - DOC (Documentation)
-  - DISMACRO (DIS Macro)
-  - CHATOPS (ChatOps extension)
+  - V (Visio files)
 
   > [!NOTE]
   > If you think an item type should be added, please contact us so we can add it before you create the repository.
