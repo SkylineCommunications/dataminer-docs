@@ -107,6 +107,12 @@ Up to now, if history storage was enabled, when DomInstances were created, updat
 
 From now on, for every batch of DomInstances that are processed in bulk, the history records will also be processed in bulk.
 
+#### SLAnalytics: Cassandra tables that only contain empty display strings will be dropped when downgrading [ID_38336]
+
+<!-- MR 10.5.0 - FR 10.4.3 -->
+
+When downgrading a DataMiner System using a Cassandra database, from now on, SLAnalytics tables that only contain empty display strings will be dropped.
+
 #### User-Defined APIs: Enhanced logging [ID_38491]
 
 <!-- MR 10.5.0 - FR 10.4.3 -->
