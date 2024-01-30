@@ -6,6 +6,14 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 30 January 2024 - Enhancement - SupportAssistant 1.6.5 - Improved DxM status reporting [ID_38608]
+
+The SupportAssistant DxM will now offload information about the used version of the log collector.
+
+#### 30 January 2024 - Enhancement - CloudGateway 2.13.4 - Improved DxM status reporting [ID_38543]
+
+The CloudGateway DxM will now offload more information to help Skyline provide support. This includes proxy, DMZ, and network configuration information, as well as information on whether dataminer.services can be reached.
+
 #### 23 January 2024 - Fix - Unknown error when remote accessing web apps [ID_38549]
 
 While remote accessing web apps via dataminer.services (e.g. the Monitoring app), the following message could appear: `An unknown error occurred (status: 200).` The app would also stop working until the page was refreshed. This issue has been resolved.
@@ -88,15 +96,15 @@ The CloudGateway DxM will now periodically send a health check to the cloud to i
 
 The FieldControl DxM will now periodically send a health check to the cloud to indicate that the DxM is running.
 
-#### 20 December 2023 - Enhancement - Email notifications for expiring and expired DataMiner Express DaaS systems [ID_38235]
+#### 20 December 2023 - Enhancement - Email notifications for expiring and expired DataMiner Community Edition DaaS systems [ID_38235]
 
-From now onwards, when a DataMiner Express DaaS system is about to expire, an email notification will be sent to both the owners of the organization and the owners of the DMS, so that they can take action if they want to prevent deletion. Another email notication will be sent when the DataMiner Express DaaS system has been deleted.
+From now onwards, when a DataMiner Community Edition DaaS system is about to expire, an email notification will be sent to both the owners of the organization and the owners of the DMS, so that they can take action if they want to prevent deletion. Another email notification will be sent when the DataMiner Community Edition DaaS system has been deleted.
 
 A notification will also be sent when an organization owns multiple DaaS systems and it will not be possible to extend one or more of these systems because the organization will not have enough DataMiner credits, as predicted based on the current usage.
 
-#### 13 December 2023 - New Feature - Email notifications for expiring and expired DataMiner Express DaaS systems [ID_38183]
+#### 13 December 2023 - New Feature - Email notifications for expiring and expired DataMiner Community Edition DaaS systems [ID_38183]
 
-From now onwards, when a DataMiner Express DaaS system is about to expire, an email notification will be sent to the owners of the organization and the person who deployed the DaaS system, so that they can take action if they want to prevent deletion. Another email notication will be sent when the DataMiner Express DaaS system has been deleted.
+From now onwards, when a DataMiner Community Edition DaaS system is about to expire, an email notification will be sent to the owners of the organization and the person who deployed the DaaS system, so that they can take action if they want to prevent deletion. Another email notification will be sent when the DataMiner Community Edition DaaS system has been deleted.
 
 #### 6 December 2023 - New Feature - Remote Access setting is now checked for user-defined API access [ID_38102]
 
@@ -111,7 +119,7 @@ Our [Pay-per-Use](xref:Pricing_Commercial_Models#pay-per-use) model is used for 
 > [!TIP]
 > See also:
 >
-> - [DataMiner Express](xref:Pricing_Commercial_Models#dataminer-express)
+> - [DataMiner Community Edition](xref:Pricing_Commercial_Models#dataminer-community-edition)
 > - [Creating a DaaS system](xref:Creating_a_DMS_in_the_cloud)
 
 When you create a DaaS system, your dataminer.services account will automatically be linked to your DataMiner account, so you can easily access DataMiner web apps such as the Monitoring app via remote access.
