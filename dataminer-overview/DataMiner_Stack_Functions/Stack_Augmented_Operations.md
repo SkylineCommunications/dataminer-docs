@@ -10,14 +10,11 @@ uid: Stack_Augmented_Operations
 
 **Make the shift from reactive to proactive management.**
 
-DataMiner Augmented Operations continuously and autonomously learn from your data, making DataMiner increasingly intelligent. 
+DataMiner Augmented Operations continuously and autonomously learn from your data, making DataMiner increasingly intelligent.
 
-The technology captures, correlates, and analyzes all data sources in real time using state-of-the-art big data and artificial intelligence (AI) technology. 
-It learns the relationships between metrics and generates alarms when anomalies are detected, improving performance and reducing system downtime. 
+The technology captures, correlates, and analyzes all data sources in real time using state-of-the-art big data and artificial intelligence (AI) technology. It learns the relationships between metrics and generates alarms when anomalies are detected, improving performance and reducing system downtime.
 
-Additionaly, DataMiner Augmented Operations reduce setup and configuration time, increase management efficiency, and provide unprecedented insights into the most complex operations in an intuitive and easy manner. 
-
-Combined with the unique end-to-end value proposition of DataMiner, DataMiner Augmented Operations are indispensable for managing tomorrow’s operational ecosystems proactively. 
+Additionally, DataMiner Augmented Operations reduce setup and configuration time, increase management efficiency, and provide unprecedented insights into the most complex operations in an intuitive and easy manner. Combined with the unique end-to-end value proposition of DataMiner, DataMiner Augmented Operations are indispensable for managing tomorrow’s operational ecosystems proactively.
 
 > [!TIP]
 > For more information:
@@ -42,11 +39,11 @@ The AI-powered forecasting functionality automatically learns the behavior and e
 > - Video: [Behold DataMiner AI Trend Forecasting](https://community.dataminer.services/video/behold-dataminer-ai-trend-forecasting/) ![Video](~/user-guide/images/video_Duo.png)
 > - User Guide: [Advanced analytics in trend graphs](xref:Advanced_analytics_trending)
 
-## Proactive Alarming
+## Proactive Alarms
 
 **Proactively detect critical highs and lows before they occur.**
 
-The proactive cap detection solution uses the Trend Prediction functionality to provide an automated risk analysis for metrics to hit important key values. By continuously monitoring and modeling the trend of the metrics, proactive cap detection will give the user an early warning if it predicts problems on a metric in the future. This enables a proactive way of tackling emerging issues and prevents issues from affecting services.
+The proactive cap detection solution uses the Trend Prediction functionality to provide an automated risk analysis for metrics that are likely to hit important key values. By continuously monitoring and modeling the trend of the metrics, proactive cap detection will give the user an early warning if it predicts problems for a metric in the future. This enables a proactive way of tackling emerging issues and prevents issues from affecting services.
 
 > [!TIP]
 > For more information:
@@ -77,8 +74,7 @@ Based on AI pattern matching algorithms, instances of tagged patterns are automa
 
 **Automatic detection of changes in metric behavior.**
 
-DataMiner’s change point detection solution automatically identifies both abrupt and subtle behavioral changes in the trend data of individual performance metrics in (semi) real time. Detection of a change in level, trend, or variance can be applied for early fault detection, as a user can be warned about previously unseen or rare behavior. 
-Knowledge of change points also proves useful in improving the modeling and prediction of the metric behavior, and in the automatic detection of relationships between metrics or DataMiner objects.
+DataMiner’s change point detection solution automatically identifies both abrupt and subtle behavioral changes in the trend data of individual performance metrics in (semi) real time. Detection of a change in level, trend, or variance can be applied for early fault detection, as a user can be warned about previously unseen or rare behavior. Knowledge of change points also proves useful in improving the modeling and prediction of the metric behavior, and in the automatic detection of relationships between metrics or DataMiner objects.
 
 > [!TIP]
 > For more information:
@@ -89,7 +85,7 @@ Knowledge of change points also proves useful in improving the modeling and pred
 
 ## Anomaly Detection
 
-**Proactive alarming on unusual metric behavior.**
+**Proactive alarms for unusual metric behavior.**
 
 An anomaly significance scoring mechanism augments the change point detection solution and identifies the changes in metric behavior that are truly exceptional or unexpected, taking historical metric behavior into account.
 
@@ -100,7 +96,6 @@ An anomaly significance scoring mechanism augments the change point detection so
 > - User Guide: [Advanced analytics in the Alarm Console](xref:Advanced_analytics_features_in_the_Alarm_Console)
 > - User Guide: [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection)
 > - See also: [Kata #12: Automatically detect anomalies with DataMiner](https://community.dataminer.services/courses/kata-12/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
-
 
 ## Incident Identification
 
@@ -137,12 +132,11 @@ Get insights based on learned relations between the numerous integrated metrics.
 > - Blog post about [The power of insights](https://community.dataminer.services/dataminer-10-3-gives-you-the-power-of-insights/)
 > - User Guide: [Adding related parameters to a trend graph](xref:Adding_related_parameters_to_a_trend_graph) and  [Adding time-scoped related parameters to a trend graph](xref:Adding_time_scoped_related_parameters_to_a_trend_graph)
 
- 
-## Visual Cues for operators
+## Visual cues for operators
 
 **DataMiner Augmented Operations as an assistant.**
 
-Gain valuable insights with ease. Tagged patterns and anomalies provide context to a trend graph. Trend indicators allow for a quick inspection of recent metric trends. Suggestions are given on related metrics or relevant data behavior. Short-cuts are available to get an incident view on the alarms or to inspect detected tagged data patterns or behavioral anomalies.
+Gain valuable insights with ease. Tagged patterns and anomalies provide context to a trend graph. Trend indicators allow for a quick inspection of recent metric trends. Suggestions are given on related metrics or relevant data behavior. Shortcuts are available to get an incident view on the alarms or to inspect detected tagged data patterns or behavioral anomalies.
 
 > [!TIP]
 > For more information:
