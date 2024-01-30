@@ -147,6 +147,12 @@ During a DataMiner upgrade, the *AnalyticsParameterInfoRecordAddChangeRate* upgr
 
 In some cases, an error could occur in the SLDMS process when the SLDMKey object was accesses from multiple threads.
 
+#### Fatal error reported in Windows Event Viewer each time the APIGateway was stopped [ID_38504]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+Each time the APIGateway service was stopped, a fatal error would incorrectly be reported in the Windows Event Viewer.
+
 #### Alarm filters would not be properly serialized when using a gRPC connection [ID_38507]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
