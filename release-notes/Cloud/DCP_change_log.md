@@ -8,8 +8,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 #### 30 January 2024 - Enhancement - CloudGateway 2.13.4 - Improved DxM status reporting [ID_38543]
 
-The CloudGateway DxM will now offload more information to help Skyline provide support, such as proxy, DMZ and network configuration and if dataminer.services is reachable.
-
+The CloudGateway DxM will now offload more information to help Skyline provide support. This includes proxy, DMZ, and network configuration information, as well as information on whether dataminer.services can be reached.
 
 #### 23 January 2024 - Fix - Unknown error when remote accessing web apps [ID_38549]
 
