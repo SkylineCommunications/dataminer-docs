@@ -80,7 +80,7 @@ public class Script
 From 10.4.3/10.5.0 onwards<!-- RN 38364 -->, it is possible to calculate the changes done to a DomInstance in a CRUD script using the `GetDifferences` method on the `DomInstanceCrudMeta` object.
 Checkout the explanation and examples below to see how the method can be used and how it is structured.
 
-The GetDifferences method returns an object `DomInstanceDifferences`. This contains the differences of the DomInstance:
+The `GetDifferences` method returns an object `DomInstanceDifferences`. This contains the differences of the `DomInstance`:
 
 - DomInstanceDifferences:
     - FieldValues : all changes
