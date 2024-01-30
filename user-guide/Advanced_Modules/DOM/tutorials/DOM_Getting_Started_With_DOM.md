@@ -5,6 +5,8 @@ uid: DOM_Getting_Started_With_DOM
 
 This tutorial shows how you can create a simple DOM model using the DOM Editor and then use it in a low-code app.
 
+The content and screenshots for this tutorial were created in DataMiner version 10.4.1.
+
 Expected duration: 20 minutes
 
 > [!TIP]
@@ -12,7 +14,7 @@ Expected duration: 20 minutes
 
 ## Prerequisites
 
-- A DataMiner System using DataMiner 10.3.10 or higher, which is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud). Tutorial was created on version 10.4.1.
+- A DataMiner System using DataMiner 10.3.10 or higher, which is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 - An [indexing database](xref:Indexing_Database) or [Storage as a Service](xref:STaaS).
 
 > [!NOTE]
@@ -41,7 +43,9 @@ Now that you have deployed the DOM Editor to your DMA, you can use it to create 
 
 1. In the Automation module, search for a script called **DOM Editor** and select it.
 
-1. Click the *Execute* button in the lower right corner to launch this script.
+   ![Dom Editor script](~/user-guide/images/DOM_Getting_Started_script.png)
+
+1. Click the *Execute* button in the lower right corner to launch this script, and then click *Execute now*.
 
    You should now see the following window:
 
@@ -91,7 +95,7 @@ Now that you have deployed the DOM Editor to your DMA, you can use it to create 
 
    ![Dom Editor Event Info Section](~/user-guide/images/DOM_Getting_Started_with_DOM_SectionDefinitions_EventInfo.png)
 
-1. Click the *Field Descriptors* button to add fields for the section:
+1. Click the *Field Descriptors* button to add fields to the section:
 
    1. Click the *+* button to start adding a field to the section:
 
@@ -103,6 +107,8 @@ Now that you have deployed the DOM Editor to your DMA, you can use it to create 
 
       ![Dom Editor Event Name Field](~/user-guide/images/DOM_Getting_Started_with_DOM_FieldDescriptor_EventName.png)
 
+   1. Click *Back*.
+
    1. Repeat these steps to also add the following fields to the section:
 
       |Name|Type|
@@ -111,7 +117,7 @@ Now that you have deployed the DOM Editor to your DMA, you can use it to create 
       |End|DateTime|
       |Notes|String|
 
-   1. When all fields have been added, click *Apply*.
+   1. When all fields have been added, click *Back*, and then *Apply* and *OK*.
 
 1. Click the *Back* button until you are back at the main DOM module menu.
 
@@ -146,7 +152,7 @@ Now that you have deployed the DOM Editor to your DMA, you can use it to create 
    > [!TIP]
    > For info on how to make a low-code app, refer to the tutorial [Creating and publishing an app](xref:Tutorial_Apps_Creating_And_Publishing)
 
-1. Add a new page in the app and edit it.
+1. Add a new page to the app and edit it.
 
    > [!TIP]
    > For info on how to add and configure pages in a low-code app, refer to the tutorial [Managing the pages in an app](xref:Tutorial_Apps_Managing_Pages).
@@ -183,6 +189,8 @@ Now that you have deployed the DOM Editor to your DMA, you can use it to create 
 
    1. Optionally, add an icon to the button by selecting it under *Icon* in the pane on the left.
 
+      You can use the filter box at the top of the list of icons to quickly find a specific icon.
+
    1. Under *Events* in the pane on the left, click the icon next to *On click*.
 
       ![DOM LCA Events](~/user-guide/images/DOM_Getting_Started_with_DOM_LCA_Events.png)
@@ -207,7 +215,7 @@ Now that you have deployed the DOM Editor to your DMA, you can use it to create 
 
    At this point, you cannot see the created event records yet. For this, you need to add a table listing all event records in the app. This table will use a GQI query.
 
-1. Go back to edit mode and create the query:
+1. Go back to edit mode, start editing the page again, and create a query:
 
    1. Expand the *Queries* section in the data pane.
 
@@ -254,6 +262,8 @@ Now that you have deployed the DOM Editor to your DMA, you can use it to create 
    1. select *Execute component action* in the first box, *Fetch the data* in the second box, and *Table 2* in the third box.
 
       ![DOM LCA Save On Click Event](~/user-guide/images/DOM_Getting_Started_with_DOM_LCA_TableFetchTheData.png)
+
+   1. Click *OK*.
 
 1. Publish the app again and try out creating new events again.
 
