@@ -88,15 +88,15 @@ The CloudGateway DxM will now periodically send a health check to the cloud to i
 
 The FieldControl DxM will now periodically send a health check to the cloud to indicate that the DxM is running.
 
-#### 20 December 2023 - Enhancement - Email notifications for expiring and expired DataMiner Express DaaS systems [ID_38235]
+#### 20 December 2023 - Enhancement - Email notifications for expiring and expired DataMiner Community Edition DaaS systems [ID_38235]
 
-From now onwards, when a DataMiner Express DaaS system is about to expire, an email notification will be sent to both the owners of the organization and the owners of the DMS, so that they can take action if they want to prevent deletion. Another email notication will be sent when the DataMiner Express DaaS system has been deleted.
+From now onwards, when a DataMiner Community Edition DaaS system is about to expire, an email notification will be sent to both the owners of the organization and the owners of the DMS, so that they can take action if they want to prevent deletion. Another email notification will be sent when the DataMiner Community Edition DaaS system has been deleted.
 
 A notification will also be sent when an organization owns multiple DaaS systems and it will not be possible to extend one or more of these systems because the organization will not have enough DataMiner credits, as predicted based on the current usage.
 
-#### 13 December 2023 - New Feature - Email notifications for expiring and expired DataMiner Express DaaS systems [ID_38183]
+#### 13 December 2023 - New Feature - Email notifications for expiring and expired DataMiner Community Edition DaaS systems [ID_38183]
 
-From now onwards, when a DataMiner Express DaaS system is about to expire, an email notification will be sent to the owners of the organization and the person who deployed the DaaS system, so that they can take action if they want to prevent deletion. Another email notication will be sent when the DataMiner Express DaaS system has been deleted.
+From now onwards, when a DataMiner Community Edition DaaS system is about to expire, an email notification will be sent to the owners of the organization and the person who deployed the DaaS system, so that they can take action if they want to prevent deletion. Another email notification will be sent when the DataMiner Community Edition DaaS system has been deleted.
 
 #### 6 December 2023 - New Feature - Remote Access setting is now checked for user-defined API access [ID_38102]
 
@@ -111,7 +111,7 @@ Our [Pay-per-Use](xref:Pricing_Commercial_Models#pay-per-use) model is used for 
 > [!TIP]
 > See also:
 >
-> - [DataMiner Express](xref:Pricing_Commercial_Models#dataminer-express)
+> - [DataMiner Community Edition](xref:Pricing_Commercial_Models#dataminer-community-edition)
 > - [Creating a DaaS system](xref:Creating_a_DMS_in_the_cloud)
 
 When you create a DaaS system, your dataminer.services account will automatically be linked to your DataMiner account, so you can easily access DataMiner web apps such as the Monitoring app via remote access.
