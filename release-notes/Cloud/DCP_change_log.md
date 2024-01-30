@@ -8,7 +8,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 #### 30 January 2024 - Enhancement - CoreGateway 2.14.4 - Improved DxM status reporting [ID_38590]
 
-The CoreGateway DxM will now offload more information about the satus and configuration of the DMA.
+The CoreGateway DxM will now offload more information about the status and configuration of the DMA.
 
 #### 30 January 2024 - Enhancement - SupportAssistant 1.6.5 - Improved DxM status reporting [ID_38608]
 
