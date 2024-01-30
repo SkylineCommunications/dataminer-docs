@@ -1,20 +1,18 @@
 ---
-uid: Data_Sources_install_setup
+uid: Data_Sources_Setup
 ---
 
-# Installation and Setup
+# Getting started with the Data Sources module
 
-## Installation
-
-### Prerequisites
+## Prerequisites
 
 To use the Scripted Connectors, ensure that you're running either DataMiner main release 10.4 or DataMiner feature release 10.4.2 (or later).
 
-### Activate soft-launch option
+## Activate soft-launch option
 
 Activate the soft-launch [DataAPI](xref:Overview_of_Soft_Launch_Options#dataapi) by following the procedures in [Activating Soft Launch Options](xref:Activating_Soft_Launch_Options). This requires a DataMiner restart.
 
-### Installing necessary DxMs
+## Installing necessary DxMs
 
 The Data API & Data Aggregator DxM need to be deployed on the same DMA.
 
@@ -26,9 +24,7 @@ The Data API & Data Aggregator DxM need to be deployed on the same DMA.
    1. Next to *Data API*, click Deploy to install this DxM.
    1. Next to *DataMiner DataAggregator*, click Deploy to install this DxM. When the *DataMiner DataAggregator* has already been installed, Upgrade the DataMiner DataAggregator to version xxx or higher.
 
-## Setup
-
-### Installing extra Python packages
+## Installing extra Python packages
 
 The DataAggregator installer installs Python 3.12.0 in the `C:\Program Files\Skyline Communications\DataMiner DataAggregator\python` folder.
 The `Scripts` folder contains `pip.exe`, which can be used install Python packages. When installing a package, the package will get added to the `Lib\site-packages` folder.

@@ -1,20 +1,8 @@
 ---
-uid: DataAPI_about
+uid: Data_API
 ---
 
-# About Data API & Scripted Connectors
-
-## Scripted Connectors
-
-Scripted Connectors are executed by the Data Aggregator DxM and operate independently from DataMiner. To use Scripted Connectors, Data Aggregator must be installed on the same server as DataMiner. Consequently, the scripts are stored on the same machine as DataMiner. It's worth mentioning that the execution of Scripted Connectors is carried out separately from any other DataMiner processes.
-
-Once added, Scripted Connectors run every minute.
-
-These connectors can be written in PowerShell and Python. Data Aggregator comes with Python 3.12.0. If a Scripted Connector requires additional Python packages, you can [install extra Python packages](xref:Data_Sources_install_setup).
-
-The scripts then send JSON data through a local HTTP call to the Data API.
-
-## Data API
+# Data API
 
 The Data API provides an HTTP API that accepts requests with a JSON formatted body. When necessary, the Data API creates an element to store the values from the JSON formatted body.
 
@@ -34,7 +22,7 @@ The values can be either strings or doubles, and they are trended by default.
 }
 ```
 
-### Auto-generated connectors
+## Auto-generated connectors
 
 The Data API creates auto-generated connectors and provisions elements with them. These connectors are read-only and can be identified by a blue DataMiner icon in the [Protocol and templates](xref:protocols) app.
 
@@ -44,7 +32,7 @@ However, if there is already an auto-generated connector for the specified *type
 
 You you can manage alarm templates, trend templates, information templates and Visio files for auto-generated connectors via the [Protocol and templates](xref:protocols) app. Elements created by the Data API come with an initial trend template in which all parameters have trending enabled.
 
-### Support for tables
+## Support for tables
 
 The Data API translates JSON arrays from the HTTP body into to a table in the corresponding element.
 
@@ -129,23 +117,3 @@ The information from the *VLANs* array will be distributed into two tables: *VLA
 Elements generated using the Data API follow a predetermined layout.
 
 Every individual parameter is placed on the first page named *Parameters*, while each table is positioned on a separate dedicated page.
-
-## Limitations
-
-When working with the Data API and Scripted Connectors, it's essential to be aware of specific limitations:
-
-- Scripted Connectors
-  - Operate on a fixed frequency of one minute.
-  - Lack support for arguments.
-  - Are locally stored on the server.
-  - Are not synchronized in a DMS cluster.
-  - Cannot be employed to manage data sources.
-- Data API
-  - Does not handle requests with payloads exceeding 1MB.
-  - Does not accept requests from external systems.
-  - Expects a field Id in JSON Arrays, serving as the primary key in the element's table.
-- Parameters in auto-generated connectors
-  - Lack units, and this configuration cannot be adjusted.
-  - Are automatically assigned to pages in the element layout, and this allocation cannot be modified.
-
-Certain limitations are expected to be lifted in future versions.

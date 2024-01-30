@@ -114,42 +114,47 @@ For example:
 
 The GQI queries themselves should be configured in separate JSON files. See [Configuring GQI queries for Data Aggregator](xref:Data_Aggregator_queries).
 
-### Queries in Data Aggregator 3.0.0 and higher
+### [From Data Aggregator 3.0.0 onwards](#tab/tabid-1)
 
-1. Go to the folder at `C:\Program Files\Skyline Communications\DataMiner DataAggregator\Data Sources.`
-1. Make a GUID for the GQI. You can use an online tool like [guidgenerator.com](https://guidgenerator.com/).
-1. Change the name of the JSON file that has the GQI, to have the new GUID. For example, rename it to *c93178b7-537e-47ab-9786-f052694b6380.json*.
-1. Place the file into the *Scripted Connectors* subfolder.
-1. Inside the *Helper.json* file, configure the QGI query to the *DataSources* array.
+1. Go to `C:\Program Files\Skyline Communications\DataMiner DataAggregator\Data Sources.`
 
-The configration in explained in the following example.
+1. Create a GUID for the GQI query.
 
-```json
-{ 
-    "DataSources": [
-    {
-      "Id": "c93178b7-537e-47ab-9786-f052694b6380", // The GUID of the GQI
-      "Name": "Query 1", //A human readable description for the query. This can be null.
-      "Type": 0, // GQI queries require value 0.
-      "LastUpdated": null, // Put null. 
-      "Arguments": {} // Reserved, supply an empty object. 
-    },
-    {
-      "Id": "a86aa3ec-3607-4a34-89a0-3289d069d019",
-      "Name": null,
-      "Type": 0,
-      "LastUpdated": null, 
-      "Arguments": {}
-    }
-    ]
-}
+   > [!NOTE]
+   > You can use online tools like the [Online GUID Generator](https://guidgenerator.com/) to generate a GUID.
 
+1. Rename the JSON file containing the GQI query to match the new GUID, e.g. *c93178b7-537e-47ab-9786-f052694b6380.json*.
 
-```
+1. Move the file to the *Scripted Connectors* subfolder.
 
-After changing *Helper.json*, restart the DataMiner DataAggregator service (e.g. using Windows Task Manager).
+1. Inside the *Helper.json* file, modify the *DataSources* array to include the GQI query with the new GUID.
 
-### Queries in Data Aggregator prior to 3.0.0
+   For example:
+
+   ```json
+   { 
+       "DataSources": [
+       {
+         "Id": "c93178b7-537e-47ab-9786-f052694b6380", // The GUID of the GQI query.
+         "Name": "Query 1", //A human-readable description for the query. This can be null.
+         "Type": 0, // GQI queries require value 0.
+         "LastUpdated": null, // Put null. 
+         "Arguments": {} // Reserved, supply an empty object. 
+       },
+       {
+         "Id": "a86aa3ec-3607-4a34-89a0-3289d069d019",
+         "Name": null,
+         "Type": 0,
+         "LastUpdated": null, 
+         "Arguments": {}
+       }
+       ]
+   }
+   ```
+
+After modifying *Helper.json*, restart the DataMiner DataAggregator service (e.g. using Windows Task Manager).
+
+### [Prior to Data Aggregator 3.0.0](#tab/tabid-2)
 
 In *appsettings.custom.json*, you should then add the files using the **QueryID** and **QueryFile** fields under *QueryReaderOptions.Queries*.
 
@@ -179,6 +184,8 @@ For example:
 > [!NOTE]
 > The `PageSize` parameter within a query can in some cases have a big influence on execution times and overall job performance. When the page size is lower, more round trips are needed, but there is less chance that a timeout will occur when large rows are processed. When the page size is higher, the round trip duration is minimized, but there is more chance that a timeout will occur when large data volumes are requested.
 
+***
+
 ## Jobs
 
 The configured GQI queries can be used in one or more DataMiner jobs.
@@ -189,17 +196,17 @@ The results of each query are added into one table, so that each job results in 
 
 Multiple jobs can be configured, each with their own optional [cron trigger](#cron-trigger). You can also overwrite the global export options for a specific job and overwrite the global *QueryExecutorOptions* for a specific query.
 
-### Jobs in Data Aggregator 3.0.0 and higher
+### [From Data Aggregator 3.0.0 onwards](#tab/tabid-3)
 
- Inside the *Helper.json* file, configure a job as follows:
+Inside the *Helper.json* file, you can configure this as follows:
 
 ```json
  "Jobs": [
     {
-      "ID": 915590921, // unique number for the job
-      "Name": "Every day at 3am", // human readable description for the job
+      "ID": 915590921, // Unique number for the job
+      "Name": "Every day at 3am", // Human-readable description for the job
       "CronTriggers": [
-        "0 0 3 1/1 * ? *" // cron expression Quartz.NET
+        "0 0 3 1/1 * ? *" // Cron expression Quartz.NET
       ],
       "DataSources": [ 
         {
@@ -210,7 +217,7 @@ Multiple jobs can be configured, each with their own optional [cron trigger](#cr
               "PageSize": 1,
               "TimeoutSeconds": 60
             }
-            "RunParams": [] // reserved, supply an empty array. 
+            "RunParams": [] // Reserved, supply an empty array. 
           }
         }
       ],
@@ -218,13 +225,11 @@ Multiple jobs can be configured, each with their own optional [cron trigger](#cr
       "WebSocketExporterOptions": null
     }
  ]
-
-
 ```
 
-After changing *Helper.json*, restart the DataMiner DataAggregator service (e.g. using Windows Task Manager).
+After modifying *Helper.json*, restart the DataMiner DataAggregator service (e.g. using Windows Task Manager).
 
-### Jobs in Data Aggregator prior to 3.0.0
+### [Prior to Data Aggregator 3.0.0](#tab/tabid-4)
 
 In *appsettings.custom.json*, you can for example configure this as follows:
 
@@ -266,6 +271,8 @@ In *appsettings.custom.json*, you can for example configure this as follows:
   }
 }
 ```
+
+***
 
 ### Cron trigger
 
