@@ -6,6 +6,11 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 30 January 2024 - Enhancement - CloudGateway 2.13.4 - Improved DxM status reporting [ID_38543]
+
+The CloudGateway DxM will now offload more information to help Skyline provide support, such as proxy and DMZ setup as well network setup info.
+
+
 #### 23 January 2024 - Fix - Unknown error when remote accessing web apps [ID_38549]
 
 While remote accessing web apps via dataminer.services (e.g. the Monitoring app), the following message could appear: `An unknown error occurred (status: 200).` The app would also stop working until the page was refreshed. This issue has been resolved.
