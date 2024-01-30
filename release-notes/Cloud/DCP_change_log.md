@@ -6,6 +6,14 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 30 January 2024 - Enhancement - Orchestrator 1.5.4 - Improved DxM status reporting [ID_38553]
+
+The Orchestrator DxM will now offload more information about the cloud endpoint.
+
+#### 30 January 2024 - Enhancement - CoreGateway 2.14.4 - Improved DxM status reporting [ID_38590]
+
+The CoreGateway DxM will now offload more information about the status and configuration of the DMA.
+
 #### 30 January 2024 - Enhancement - SupportAssistant 1.6.5 - Improved DxM status reporting [ID_38608]
 
 The SupportAssistant DxM will now offload information about the used version of the log collector.
