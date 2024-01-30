@@ -330,3 +330,9 @@ When a client application was connected to a DataMiner Agent via a gRPC connecti
 When SLAnalytics was handling large amounts of traffic, in some cases, certain parameter value changes would incorrectly not get processed.
 
 Also, a large number of low-severity change points were generated without a label. Those have now been reduced.
+
+#### SLAnalytics features would not start up correctly after a database connection problem [ID_38600]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+Up to now, when writing to the database or reading from the database failed, a retry was attempted after 5 seconds. In some cases, especially when the SLNet connection was lost during startup, that retry would also fail, causing certain SLAnalytics features to not start up correctly. From now on, when writing to the database or reading from the database fails, SLAnalytics will wait longer than 5 seconds before attempting a retry.
