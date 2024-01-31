@@ -5,7 +5,7 @@ uid: DMS_GET_ELEMENTS_USING_PROTOCOL
 # DMS_GET_ELEMENTS_USING_PROTOCOL (102)
 
 > [!WARNING]
-> The use of DMS Notify types is deprecated. Use types from [Class library](xref:ClassLibraryIntroduction) instead.
+> The use of DMS Notify types has been deprecated. Use types from the [Class Library](xref:ClassLibraryIntroduction) instead.
 
 Gets elements using the specified protocol.
 
@@ -42,9 +42,11 @@ if (result != null)
 - protocolDetails (string[] or string):
 
   In case protocolDetails is of type string[]:
+
   - protocolDetails[0]: Name of the protocol.
   - protocolDetails[1]: Version of the protocol.
   
   In case protocolDetails is of type string[]:
+
   - activeOnly (boolean): Set to true in case you only want to retrieve active elements. Otherwise set to false (or provide null for this argument).
   - result (object): Overview of all elements that use this protocol version as a string array containing the global element IDs (DMA ID/Element ID).

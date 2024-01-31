@@ -5,7 +5,7 @@ uid: DMS_DIAG
 # DMS_DIAG (85)
 
 > [!WARNING]
-> The use of DMS Notify types is deprecated. Use types from [Class library](xref:ClassLibraryIntroduction) instead.
+> The use of DMS Notify types has been deprecated. Use types from the [Class Library](xref:ClassLibraryIntroduction) instead.
 
 Obtains additional information from a DMA or a DMS.
 
@@ -20,7 +20,7 @@ DMS dms = new DMS();
 dms.Notify(type /*DMS_DIAG*/ , subType, command, null, out result);
 ```
 
-## Parameters:
+## Parameters
 
 - type (int): Specifies the notify type. To perform a DMS_DIAG call, set this to 85.
 - subType (int): Specifies the sub type. Not applicable for DMS_DIAG calls. Set this to 0.
