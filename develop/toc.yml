@@ -5346,7 +5346,7 @@ items:
             topicUid: DisTutorials_MibBrowser
           - name: DIS Validator and GitHub DevOps
             topicUid: DisTutorials_DevOpsGitHubValidator
-          - name: Validator Contributions
+          - name: Contributing to Validator code
             topicUid: DisTutorials_ValidatorContributions
         - name: Troubleshooting
           topicUid: Troubleshooting
