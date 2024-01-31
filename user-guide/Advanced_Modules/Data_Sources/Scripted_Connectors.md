@@ -4,6 +4,9 @@ uid: Scripted_Connectors
 
 # Scripted connectors
 
+> [!IMPORTANT]
+> At present, scripted connectors are only available in preview, if the [DataAPI](xref:Overview_of_Soft_Launch_Options#dataapi) soft-launch option is enabled. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
+
 Scripted connectors are executed by the *DataAggregator* DxM, operating independently from DataMiner. To use scripted connectors, Data Aggregator must be installed on the same server as DataMiner.
 
 > [!TIP]

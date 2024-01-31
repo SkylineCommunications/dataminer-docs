@@ -4,6 +4,9 @@ uid: Data_Sources
 
 # Data Sources
 
+> [!IMPORTANT]
+> At present, this feature is only available in preview, if the [DataAPI](xref:Overview_of_Soft_Launch_Options#dataapi) soft-launch option is enabled. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
+
 The *Data Sources* module offers a powerful solution for accessing data from diverse sources, across hardware, software, and cloud services. [Scripted connectors](xref:Scripted_Connectors) allow you to swiftly integrate new products and data sources into your operations with ease.
 
 Scripted connectors, hosted on DataMiner, are executed every minute and can be written in Python or PowerShell. These scripts transmit JSON data through a local HTTP call to the [Data API](xref:Data_API), triggering the creation of an element through an automatically generated connector.
