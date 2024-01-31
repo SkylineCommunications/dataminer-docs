@@ -8,7 +8,7 @@ The Data API furnishes an HTTP API capable of processing requests with a JSON-fo
 
 The HTTP request should include the following HTTP header fields:
 
-- The **identifier**, stored as the General Parameter *Data API Identifier*, must be unique within the DMS cluster. The identifier serves as the initial name of the element, which can be renamed later at any time as the Data API uses the *Data API Identifier*.
+- The **identifier**, stored as the General Parameter "Data API Identifier", must be unique within the DMS cluster. The identifier serves as the initial name of the element, which can be renamed later at any time as the Data API uses the *Data API Identifier*.
 
 - The **type** denotes the name of the auto-generated connector.
 
@@ -25,17 +25,15 @@ These values can be either strings or doubles, and they are trended by default.
 
 ## Auto-generated connectors
 
-The Data API creates auto-generated connectors and provisions elements with them. These connectors are read-only and can be identified by a blue DataMiner icon in the [Protocol and templates](xref:protocols) app.
+The Data API creates auto-generated connectors and provisions elements with them. These connectors are read-only and can be identified by a blue DataMiner icon in the [Protocols & Templates](xref:protocols) module.
 
-If there is no auto-generated connector for the specified *type* yet, the Data API generates a new auto-generated connector.
+If no auto-generated connector for the specified type exists yet, the Data API generates a new one. However, if an auto-generated connector already exists for the specified type, the Data API updates it when the JSON-formatted body contains keys for which no parameters exist in the connector.
 
-However, if there is already an auto-generated connector for the specified *type*, the Data API updates the existing auto-generated connector when the JSON formatted body contains keys for which no parameters exist yet in the auto-generated connector.
-
-You you can manage alarm templates, trend templates, information templates and Visio files for auto-generated connectors via the [Protocol and templates](xref:protocols) app. Elements created by the Data API come with an initial trend template in which all parameters have trending enabled.
+You you can manage alarm templates, trend templates, information templates, and Visio files for auto-generated connectors through the [Protocols & Templates](xref:protocols) module. Elements created by the Data API include an initial trend template where all parameters have trending enabled.
 
 ## Support for tables
 
-The Data API translates JSON arrays from the HTTP body into to a table in the corresponding element.
+The Data API translates JSON arrays from the HTTP body into a table in the corresponding element.
 
 ```json
 {
@@ -62,9 +60,13 @@ The Data API translates JSON arrays from the HTTP body into to a table in the co
 }
 ```
 
-The above JSON array is translated into a table *People* with the columns ID, Name, Age and Height. The field *Id* always serves as the primary key for the table.
+This JSON array is transformed into a table called "People" with columns *ID*, *Name*, *Age*, and *Height*. The field *Id* always serves as the primary key for the table.
 
-The Data API also supports nested arrays by transforming them into multiple tables connected through a foreign key. Here's an example of a JSON structure that will be changed into three individual parameters and two tables, with the tables linked through a foreign key.
+The Data API also supports nested arrays, transforming them into multiple tables connected through a foreign key.
+
+For example:
+
+This JSON structure will be changed into three individual parameters and two tables, with the tables linked through a foreign key.
 
 ```json
 {
@@ -108,13 +110,14 @@ The Data API also supports nested arrays by transforming them into multiple tabl
 
 ```
 
-The information from the *VLANs* array will be distributed into two tables: *VLANs* and *Connected Devices*.
+The information from the *VLANS* array is distributed into two tables: *VLANS* and *Connected Devices*.
 
-- The **VLANs** table includes the columns *Id [IDX]*, *Type* and  *Description*.
-- The **Connected Devices** table has the columns *Id [IDX]*, *Description*, and *VLAN_Foreign Key*. The creation of the *VLANs_Foreign Key* is handled by the Data API, using the linked table's name and storing the foreign key to the *VLANs* table.
+- The **VLANS** table includes the columns *Id [IDX]*, *Type*, and  *Description*.
+
+- The **Connected Devices** table includes the columns *Id [IDX]*, *Description*, and *VLAN_Foreign Key*. The Data API handles the creation of the *VLANs_Foreign Key*, using the linked table's name and storing the foreign key to the *VLANS* table.
 
 ## Element layout
 
-Elements generated using the Data API follow a predetermined layout.
+Elements generated using the Data API adhere to a predetermined layout.
 
-Every individual parameter is placed on the first page named *Parameters*, while each table is positioned on a separate dedicated page.
+Individual parameters are placed on the first page named "Parameters", while each table is positioned on a separate dedicated page.

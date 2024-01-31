@@ -4,7 +4,12 @@ uid: Scripted_Connectors
 
 # Scripted connectors
 
-Scripted connectors are executed by the Data Aggregator DxM, operating independently from DataMiner. To use scripted connectors, Data Aggregator must be installed on the same server as DataMiner. Consequently, the scripts are stored on the same machine as DataMiner. The execution of scripted connectors is carried out separately from any other DataMiner processes.
+Scripted connectors are executed by the *DataAggregator* DxM, operating independently from DataMiner. To use scripted connectors, the Data Aggregator must be installed on the same server as DataMiner.
+
+> [!TIP]
+> See [Installing the necessary DxMs](xref:Data_Sources_Setup#installing-the-necessary-dxms).
+
+Consequently, the scripts are stored on the same machine as DataMiner. The execution of scripted connectors is carried out separately from any other DataMiner processes.
 
 Once added, scripted connectors operate at regular intervals, running every minute.
 
