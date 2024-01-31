@@ -321,4 +321,5 @@ If we change the type of group 1 to "poll action" (or "poll"), the group will be
 
 The impact of this flow is that the QAction can run before group 2 is executed due to other items being present on the execution queue.
 
-Another interesting use case can be found [here](xref:ebugging_connectors_RTE_caused_by_non-poll_group_in_timer)
+> [!TIP]
+> For an interesting use case related to this, refer to [Debugging connectors: RTE caused by non-poll group in timer](xref:Debugging_connectors_RTE_caused_by_non-poll_group_in_timer).
