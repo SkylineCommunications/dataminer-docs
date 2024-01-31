@@ -56,9 +56,7 @@ maps.aspx?config=MyConfigFile&dmyElement=VesselData
 
 <!-- MR 10.5.0 - FR 10.4.2 -->
 
-The new *GetDifferences* method allows you to see the changes made to a DOM instance.
-
-It will compare the saved previousVersion of the instance with the currentVersion of the instance, and return the field descriptor values that have been changed.
+The `DomInstanceCrudMeta` input object of a DOM CRUD script has a new `GetDifferences` method that allows you to see the changes made to a DOM instance. It will compare the previousVersion and the currentVersion of the instance in question, and return the list of differences found.
 
 ## Changes
 
