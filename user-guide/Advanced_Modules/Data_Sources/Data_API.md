@@ -29,7 +29,7 @@ The Data API creates auto-generated connectors and provisions elements with them
 
 If no auto-generated connector for the specified type exists yet, the Data API generates a new one. However, if an auto-generated connector already exists for the specified type, the Data API updates it when the JSON-formatted body contains keys for which no parameters exist in the connector.
 
-You you can manage alarm templates, trend templates, information templates, and Visio files for auto-generated connectors through the [Protocols & Templates](xref:protocols) module. Elements created by the Data API include an initial trend template where all parameters have trending enabled.
+You can manage alarm templates, trend templates, information templates, and Visio files for auto-generated connectors through the [Protocols & Templates](xref:protocols) module. Elements created by the Data API include an initial trend template where all parameters have trending enabled.
 
 ## Support for tables
 
@@ -64,9 +64,7 @@ This JSON array is transformed into a table called "People" with columns *ID*, *
 
 The Data API also supports nested arrays, transforming them into multiple tables connected through a foreign key.
 
-For example:
-
-This JSON structure will be changed into three individual parameters and two tables, with the tables linked through a foreign key.
+For example, the JSON structure below will be changed into three individual parameters and two tables, with the tables linked through a foreign key:
 
 ```json
 {
@@ -110,7 +108,7 @@ This JSON structure will be changed into three individual parameters and two tab
 
 ```
 
-The information from the *VLANS* array is distributed into two tables: *VLANS* and *Connected Devices*.
+The information from the *VLANS* array in this example is distributed into two tables: *VLANS* and *Connected Devices*.
 
 - The **VLANS** table includes the columns *Id [IDX]*, *Type*, and  *Description*.
 
