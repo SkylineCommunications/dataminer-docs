@@ -12,7 +12,7 @@ items:
         topicUid: DIS_Tutorials
       - name: DataMiner Object Manager (DOM) tutorials
         topicUid: DOM_tutorials
-      - name: Monitoring & Management Solutions tutorials
-        topicUid: Mon_and_Man_Sol_Tutorials
+      - name: Standard Apps & Solutions tutorials
+        topicUid: Standard_Apps_Solutions
       - name: User-defined APIs tutorials
         topicUid: User-defined_APIs_Tutorials

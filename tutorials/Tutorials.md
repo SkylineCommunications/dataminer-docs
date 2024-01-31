@@ -21,8 +21,14 @@ uid: Tutorials
     <a href="/tutorials/DIS_Tutorials.html" title="DIS tutorials" target="_self"><img src="~/tutorials/images/Tutorials_DIS.svg" style="width:100%"></a>
   </div>
   <div class="column">
+    <a href="/tutorials/Standard_Apps_Solutions_Tutorials.html" title="Standard Apps & Solutions tutorials" target="_self"><img src="~/tutorials/images/Tutorials_Standard_Apps_Solutions.svg" style="width:100%"></a>
+  </div>
+  <div class="column">
     <a href="/tutorials/DOM_tutorials.html" title="DOM tutorials" target="_self"><img src="~/tutorials/images/Tutorials_DOM.svg" style="width:100%"></a>
   </div>
+</div>
+
+<div class="row"> 
   <div class="column">
     <a href="/tutorials/User-defined_APIs_Tutorials.html" title="User-defined APIs tutorials" target="_self"><img src="~/tutorials/images/Tutorials_User-Defined_APIs.svg" style="width:100%"></a>
   </div>  

@@ -1,8 +1,8 @@
 ---
-uid: Mon_and_Man_Sol_Tutorials
+uid: Standard_Apps_Solutions
 ---
 
-# Monitoring & Management Solutions Tutorials
+# Standard Apps & Solutions Tutorials
 
 | Name | Description |
 |--|--|
