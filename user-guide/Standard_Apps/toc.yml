@@ -254,6 +254,11 @@ items:
                     topicUid: Deleting_maintenance_event
               - name: Planned Maintenance records
                 topicUid: PLM_Records
+          - name: Tutorials
+            topicUid: Tutorial_Creating_PLM_activity
+            items:
+              - name: Creating a PLM activity
+                topicUid: Tutorial_Creating_PLM_activity
       - name: Remote PHY Monitoring
         topicUid: Remote_PHY_Monitoring
         items:
