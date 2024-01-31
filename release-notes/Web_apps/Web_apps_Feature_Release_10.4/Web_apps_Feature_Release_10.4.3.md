@@ -250,3 +250,9 @@ When you exported table data with text fields that contained double quotes (") t
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
 
 *Form* and *Stepper* components using DOM instances would incorrectly show a `This instance no longer exists` error each time another DOM instance was deleted in the same module.
+
+#### Dashboards app & Low-Code Apps: Not possible to navigate within the Timeline component when a 'Nothing to show' message was being displayed [ID_38625]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+Up to now, it would not be possible to navigate within the Timeline component when a `Nothing to show` message was being displayed.
