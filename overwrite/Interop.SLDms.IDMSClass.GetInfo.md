@@ -1,5 +1,5 @@
 ---
-uid: Interop.SLDms.DMSClass.GetInfo(System.Int32,System.Int32,System.Object@)
+uid: Interop.SLDms.IDMS.GetInfo(System.Int32,System.Int32,System.Object@)
 remarks: *content
 ---
 
