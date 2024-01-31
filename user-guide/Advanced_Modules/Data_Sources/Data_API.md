@@ -4,6 +4,9 @@ uid: Data_API
 
 # Data API
 
+> [!IMPORTANT]
+> At present, this feature is only available in preview, if the [DataAPI](xref:Overview_of_Soft_Launch_Options#dataapi) soft-launch option is enabled. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
+
 The Data API furnishes an HTTP API capable of processing requests with a JSON-formatted body. When necessary, the Data API creates an element to store the values derived from the JSON-formatted body.
 
 The HTTP request should include the following HTTP header fields:
