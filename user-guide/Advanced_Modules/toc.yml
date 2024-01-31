@@ -727,6 +727,17 @@ items:
         topicUid: Data_Aggregator_queries
       - name: Troubleshooting
         topicUid: Data_Aggregator_troubleshooting
+  - name: Data Sources
+    topicUid: Data_Sources
+    items:
+      - name: Scripted connectors
+        topicUid: Scripted_Connectors
+      - name: Data API
+        topicUid: Data_API
+      - name: Getting started with the Data Sources module
+        topicUid: Data_Sources_Setup
+      - name: Limitations
+        topicUid: Data_Sources_Limitations
   - name: DataMiner Object Models (DOM)
     topicUid: DOM
     items:
