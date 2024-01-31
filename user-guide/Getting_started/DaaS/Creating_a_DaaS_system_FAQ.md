@@ -21,7 +21,7 @@ Contact [your Account Manager](https://community.dataminer.services/get-in-touch
 
 ### When does a DaaS system expire?
 
-A DataMiner Express DaaS system will be scheduled to expire as soon as the organization does not have sufficient DataMiner credits to extend its lifetime.
+A DataMiner Community Edition DaaS system will be scheduled to expire as soon as the organization does not have sufficient DataMiner credits to extend its lifetime.
 
 > [!NOTE]
 > When an organization has multiple DaaS systems, they will be extended in chronological order. When your organization does not have enough credits left to extend one of your DaaS systems, that DaaS system will be scheduled to expire. However, at this point, you may still have a number of DataMiner credits left that will be considered reserved for your other DaaS systems.
@@ -43,4 +43,48 @@ Follow the instructions under [Creating a new DMS on dataminer.services](xref:Cr
 
 ### What is the expected availability of a DaaS system?
 
-A DaaS system has a target availability of 99.5%. For more information, please contact <sales@skyline.be>.
+By default, a DaaS system has a target availability of 99.5%. This can be adjusted as part of a Master Service Agreement (MSA).
+
+For more information, please contact <sales@skyline.be>.
+
+### What data redundancy policy does a DaaS system have?
+
+By default, a DaaS system has zone-redundant storage (ZRS). Geo-redundant storage (GRS) is optional at an additional subscription cost.
+
+See also [Data location and redundancy](xref:STaaS#data-location-and-redundancy)
+
+### What system redundancy policy does a DaaS system have?
+
+As of Q4 of 2024, a DaaS system will be able to use Swarming.
+
+See also [Swarming](xref:Swarming)
+
+### What backup policy does a DaaS system have?
+
+For more information, see [Data resilience and backups](xref:STaaS#data-resilience-and-backups)
+
+### Is it possible to make a local backup of all data?
+
+You can set up your own offload or "central" database in your DaaS system at no additional subscription cost. That database will contain an offline copy of all (or some of) the data in the general DMA databases.
+
+See also [Offload database](xref:Offload_database)
+
+### Is it possible to copy data from Azure and store it locally?
+
+You can use the DataMiner API to copy data from Azure at no additional subscription cost.
+
+### How can a DaaS system connect to on-premises and cloud resources?
+
+For more information, see [Connecting to data sources using a DaaS system](xref:DaaS_connecting_to_data_sources)
+
+### Are additional costs due in order to connect to Azure?
+
+All costs related to Azure VPN Gateway are included in your DaaS subscription. When other options are used, your providers may charge additional fees. In that case, note that Skyline will not act as a broker.
+
+Additional query costs may be due when using e.g. Azure ExpressRoute or Amazon CloudWatch to retrieve data from other cloud providers. The costs for retrieving data from Amazon Web Services are usually negligible.
+
+### How are user accounts managed? Where are the passwords stored?
+
+User management on DaaS systems is similar to that on on-premises system. Although local accounts are available by default, user accounts are typically integrated by an identity provider.
+
+See also [User management](xref:User_management)

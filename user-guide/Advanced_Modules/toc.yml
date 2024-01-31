@@ -599,7 +599,7 @@ items:
                       - name: Optimizing your custom operator
                         topicUid: Custom_Operator_Tutorial
               - name: API reference
-                topicUid: GQI_GQIArgument
+                topicUid: GQI_GenIfRowMetadata
                 items:
                   - name: GenIfRowMetadata
                     topicUid: GQI_GenIfRowMetadata
@@ -656,6 +656,7 @@ items:
                   - name: RowMetadataBase
                     topicUid: GQI_RowMetadataBase
                   - name: TimeRangeMetadata
+                    topicUid: GQI_GQIArgument
               - name: Best practices
                 topicUid: GQI_Extensions_Best_Practices
           - name: Query updates
@@ -824,8 +825,10 @@ items:
               - name: Naming a DOM instance
                 topicUid: DOM_editor_naming_instance
       - name: Tutorials
-        topicUid: DOM_Create_Basic_Setup
+        topicUid: DOM_Getting_Started_With_DOM
         items:
+          - name: Getting started with DOM
+            topicUid: DOM_Getting_Started_With_DOM
           - name: Creating a basic DOM setup
             topicUid: DOM_Create_Basic_Setup
           - name: Removing an enum entry from a GenericEnumFieldDescriptor

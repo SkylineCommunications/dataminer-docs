@@ -13,13 +13,13 @@ Create a parameter that has the “dynamic ip” option defined.
 
 ```xml
 <Param id="400" trending="false" save="true">
-   <Name>Dynamic polling IP</Name>
+   <Name>DynamicPollingIP</Name>
   ...
    <Type options="dynamic ip 1">read</Type>
    <Interprete>
       <RawType>other</RawType>
-      <LengthType>next param</LengthType>
       <Type>string</Type>
+      <LengthType>next param</LengthType>
    </Interprete>
   ...
 </Param>

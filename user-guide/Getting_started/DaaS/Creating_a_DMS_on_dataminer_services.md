@@ -43,5 +43,5 @@ uid: Creating_a_DMS_on_dataminer_services
 
 > [!NOTE]
 >
-> - It is possible to create a DaaS system as a staging system. Our Pay-per-Use model is used for this. For detailed information, see [DataMiner Express](xref:Pricing_Commercial_Models#dataminer-express).
+> - It is possible to create a DaaS system as a staging system. Our Pay-per-Use model is used for this. For detailed information, see [DataMiner Community Edition](xref:Pricing_Commercial_Models##dataminer-community-edition).
 > - When you create a DaaS system, your dataminer.services account will automatically be linked to your DataMiner account, so you can easily access DataMiner web apps such as the Monitoring app via remote access.
