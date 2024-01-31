@@ -33,6 +33,5 @@
         "Visio",
         "WEBP",
         "WebSocket"
-    ],
-    "dotnet.defaultSolution": "disable"
+    ]
 }
