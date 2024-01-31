@@ -52,6 +52,14 @@ maps.aspx?config=MyConfigFile&dmyElement=7/46840
 maps.aspx?config=MyConfigFile&dmyElement=VesselData
 ```
 
+#### DataMiner Object Models: New 'GetDifferences' method to compare two DOM instances [ID_38364]
+
+<!-- MR 10.5.0 - FR 10.4.2 -->
+
+The new *GetDifferences* method allows you to see the changes made to a DOM instance.
+
+It will compare the saved previousVersion of the instance with the currentVersion of the instance, and return the field descriptor values that have been changed.
+
 ## Changes
 
 ### Breaking changes
