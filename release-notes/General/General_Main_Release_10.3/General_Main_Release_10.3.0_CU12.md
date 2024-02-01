@@ -93,6 +93,14 @@ When a *Get parameters from elements* query is executed for a parameter table, f
 
 As a result, overall performance of clients like the Dashboards app or a low-code app will significantly increase when executing this type of queries.
 
+#### SLAnalytics: Notification alarm 'Failed to start Analytics feature(s)...' will now be cleared automatically [ID_38621]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+The following notification alarm, generated when an SLAnalytics feature failed to start up, will now be automatically cleared when that same feature starts up correctly.
+
+`Failed to start x Analytics feature(s). Check the Analytics logging (SLAnalytics.txt) for more information.`
+
 ### Fixes
 
 #### DataMiner installer: Some modules would not get installed while performing a full installation of a new DMA [ID_37719]
