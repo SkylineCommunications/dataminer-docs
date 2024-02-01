@@ -23,7 +23,7 @@
     <PackageReference Include="Skyline.DataMiner.Utils.Rates.Protocol" Version="1.0.0.4" />
     <PackageReference Include="Skyline.DataMiner.Utils.SafeConverters" Version="1.0.0.1" />
     <PackageReference Include="Skyline.DataMiner.Utils.SNMP" Version="1.0.0.2" />
-    <PackageReference Include="Skyline.DataMiner.Utils.SNMP.Traps.Protocol" Version="1.0.0.1" />
+    <PackageReference Include="Skyline.DataMiner.Utils.SNMP.Traps.Protocol" Version="1.0.0.2" />
     <PackageReference Include="Skyline.DataMiner.Utils.Table.ContextMenu" Version="1.0.0.1" />
   </ItemGroup>
 
