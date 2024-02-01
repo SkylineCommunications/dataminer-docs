@@ -112,6 +112,8 @@ items:
         topicUid: Connection_Check
       - name: Copy Element Data
         topicUid: Copy_Element_Data
+      - name: Data Aggregator Migrator
+        topicUid: Data_Aggregator_Migrator
       - name: DataMiner Comparison tool
         topicUid: DataMinerComparisonTool
       - name: DataMiner Size tool
