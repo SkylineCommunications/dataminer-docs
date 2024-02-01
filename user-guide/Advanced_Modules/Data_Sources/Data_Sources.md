@@ -18,7 +18,7 @@ This is an example JSON data snippet, storing the specified values for the serve
 ```json
 {
   "Server Name": "WebServer001",
-  "CP Utilization": 78.5
+  "CPU Utilization": 78.5
 }
 ```
 
