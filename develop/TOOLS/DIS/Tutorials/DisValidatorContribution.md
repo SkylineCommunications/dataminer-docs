@@ -25,19 +25,19 @@ Expected duration: 15 minutes.
 
 ## Prerequisites
 
-- [SDK 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
+- [Microsoft .NET 6.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
 
-- [Visual Studio](https://visualstudio.microsoft.com/downloads/)
+- [Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/)
 
 - [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
 - [GitHub account](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account)
 
 > [!NOTE]
-> This tutorial requires [.NET 6.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0).
+> This tutorial requires [Microsoft .NET 6.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0).
 
 > [!WARNING]
-> After installing .NET 6.0 SDK and updating Visual Studio, you may need to reboot your PC.
+> After installing .NET 6.0 SDK and updating Visual Studio, you may need to reboot your computer.
 
 ## Step 1: Fork the repository
 
@@ -52,11 +52,11 @@ Expected duration: 15 minutes.
 On the page of your GitHub fork (e.g. `https://github.com/YourGitHubHandle/Skyline.DataMiner.CICD.ValidatorsExercise`), click the *Code* button and select *Open in Visual Studio*.
 
 > [!NOTE]
-> In some cases, the *Open in Visual Studio* option may not be available. In that case, you will need to use *GitHub Desktop* instead to make the clone. Make sure you have [GitHub Desktop](https://desktop.github.com/) installed, and when you click the *Code* button on your fork page, select the option *Open with GitHub Desktop* instead.
+> In some cases, the *Open in Visual Studio* option may not be available. In that case, you will need to use *GitHub Desktop* instead to make the clone. Make sure you have [GitHub Desktop](https://desktop.github.com/) installed. Then click the *Code* button on your fork page and select the option *Open with GitHub Desktop* instead.
 
 ## Step 3: Run the 'Validator Management Tool'
 
-1. In the *Solution Explorer*, right-click the *Validator Management Tool*, and select *Set as Startup Project*
+1. In the *Solution Explorer*, right-click the *Validator Management Tool*, and select *Set as Startup Project*.
 
    This will turn *Validator Management Tool* bold, and *Validator Management Tool* will appear at the top next to the *Play* button.
 
@@ -78,9 +78,9 @@ On the page of your GitHub fork (e.g. `https://github.com/YourGitHubHandle/Skyli
 
    - **Category:** Choose the top-level category for the check.
 
-     Use `Param` for this exercise.
+     Use `Param`.
 
-   - **Namespace:** Define the 'path' for the tag/attribute. If it is a new namespace, use the *Add new Namespace...* button.
+   - **Namespace:** Define the "path" of the tag/attribute. If it is a new namespace, use the *Add new Namespace...* button.
 
      In this exercise, we want to check the correctness of the *Display* tag. So we should add a new namespace for *Protocol.Params.Param.Display.Decimals*.
 
@@ -92,17 +92,17 @@ On the page of your GitHub fork (e.g. `https://github.com/YourGitHubHandle/Skyli
 
      Select the newly created `CheckDecimalsTag`.
 
-   - **Error Message Name:** Name the error message. It will become a method during code generation.
+   - **Error Message Name:** Enter the name of the error message. A method with that same name will be created during code generation.
 
      Use `InvalidTagForDateTime`.
 
    - **Description:** Provide a description with placeholders.
 
-     Open the selection box, a select the `Missing tag '{0}' with expected value '{1}' for {2} '{3}'.` template.
+     Open the selection box and select the `Missing tag '{0}' with expected value '{1}' for {2} '{3}'.` template.
 
    - **Description Parameters:** List the placeholders from the description.
 
-     For this exercise, we can add some fixed data already:
+     For this exercise, we can already add some fixed data:
 
      - tagName: Display/Decimals
      - expectedValue: 8
@@ -110,7 +110,7 @@ On the page of your GitHub fork (e.g. `https://github.com/YourGitHubHandle/Skyli
 
      We can also rename "itemId" to "paramId" to make our code more readable later on.
 
-   - **Source:** Indicate whether the source is Validator (Validate) or MajorChangeChecker (Compare).
+   - **Source:** Indicate whether the source is "Validator" (Validate) or "MajorChangeChecker" (Compare).
 
      Use `Validator`.
 
@@ -140,7 +140,7 @@ On the page of your GitHub fork (e.g. `https://github.com/YourGitHubHandle/Skyli
 
    - **Has Code Fix:** Indicate if an automatic fix is possible.
 
-     Though an automatic fix is possible, we will deal with automatic fixes in a different tutorial. Use `Uncheck`.
+     Though an automatic fix is possible, we will deal with automatic fixes in a different tutorial. Do not select the checkbox.
 
    - **How To Fix:** Optionally describe the steps to fix the issue.
 
@@ -295,9 +295,9 @@ On the page of your GitHub fork (e.g. `https://github.com/YourGitHubHandle/Skyli
 
 ## Step 7: Verify your code
 
- 1. Run your new tests. Check if all are green.
+1. Run your new tests. Check if all are green.
 
- 1. Run the entire test battery to check for any regression. This can take several minutes.
+1. Run the entire test battery to check for any regression. This can take several minutes.
 
 ## Step 8: Create a pull request
 
