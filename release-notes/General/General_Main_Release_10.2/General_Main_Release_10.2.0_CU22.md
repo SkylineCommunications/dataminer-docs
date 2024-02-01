@@ -593,3 +593,9 @@ In the *Settings* windows, the description of the *Filter the alarms before they
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
 
 When a redundancy group included a primary or backup element that had been imported by means of a DELT package, in some cases, another element would incorrectly be displayed instead of the imported element.
+
+#### DataMiner Cube: Sidebar would not contain any buttons [ID_38652]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
+
+In some rare cases, the DataMiner Cube sidebar would not contain any buttons.
