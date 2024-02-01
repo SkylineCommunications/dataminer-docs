@@ -57,7 +57,7 @@ Indicates that the content of the column will be managed in the protocol.
 
 If you specify this option, the SLElement process will automatically fill this column with the display keys of the rows.
 
-The display key is composed either via displayColumn or via the naming option. If neither is defined, the index will be used. Note that trending/alarming on this column is not possible.
+The display key is composed either via NamingFormat or via the naming option (or displayColumn). If neither is defined, the index will be used. Note that trending/alarming on this column is not possible.
 
 > [!NOTE]
 >
