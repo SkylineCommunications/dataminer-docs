@@ -6,28 +6,21 @@ uid: DisTutorials_ValidatorContributions
 
 ## About
 
-In this tutorial, you will explore collaborative software development and DevOps with a focus on adding new checks to the Validator as used within DIS (DataMiner Integration Studio) and CI/CD. You will learn how to navigate the Validator source code, add a new check and create a Pull Request. With a hands-on exercise using a fake Validator source code, you will get to utilize GitHub to create a fork, a clone, and a pull request with your changes so that you are ready to perform the real thing!
+In this tutorial, you will explore collaborative software development and DevOps with a focus on adding new checks to the DIS (DataMiner Integration Studio) Validator and on CI/CD. You will learn how to navigate the Validator source code, add a new check, and create a pull request. With a hands-on exercise using fake Validator source code, you will get to utilize GitHub to create a fork, a clone, and a pull request with your changes so that you will be ready to contribute to the actual Validator.
 
-In the below exercise, the only difference between the exercise and the real thing is in Step 2, your fork:
+The only difference between the tutorial and actual contributions lies in the fork used in step 2:
 
-- For the exercise you will fork [https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.ValidatorsExercise](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.ValidatorsExercise)
+- In the tutorial, you will fork [https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.ValidatorsExercise](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.ValidatorsExercise)
 
 - For real validator contributions, you will fork [https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Validators](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Validators)
 
 The missing test:
-When adding the option "datetime" to the Measurement.Type tag, check if the "Display" tag has the tag <Decimals>8</Decimals>
+When adding the option "datetime" to the Measurement.Type tag, check if the "Display" tag has the tag `<Decimals>8</Decimals>`.
 
 Expected duration: 15 minutes.
 
-> [!TIP]
-> See also: [Kata #X: Validator Contribution](https://community.dataminer.services/courses/kata-X) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
-
-> [!NOTE]
-> This tutorial requires .NET 6.0 SDK. You can install the SDK [here](https://dotnet.microsoft.com/en-us/download/dotnet/6.0).
->
-
-> [!WARNING]
-> After installing .NET 6.0 SDK and updating Visual Studio you may require a PC reboot.
+<!-- > [!TIP]
+> See also: [Kata #X: Validator Contribution](https://community.dataminer.services/courses/kata-X) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png) -->
 
 ## Prerequisites
 
@@ -38,6 +31,12 @@ Expected duration: 15 minutes.
 - [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
 - [GitHub Account](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account)
+
+> [!NOTE]
+> This tutorial requires .NET 6.0 SDK. You can install the SDK [here](https://dotnet.microsoft.com/en-us/download/dotnet/6.0).
+
+> [!WARNING]
+> After installing .NET 6.0 SDK and updating Visual Studio, you may need to reboot your PC.
 
 ## Step 1: Fork the repository
 
@@ -70,9 +69,9 @@ On the page of your GitHub fork (e.g. `https://github.com/YourGitHubHandle/Skyli
 
 1. In the new window, follow these steps:
 
-![ValidatorManagementWindowCreateNewTest](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.ValidatorsExercise/assets/71829634/dcaa8bbd-6d51-43d7-8dbe-e91b3de05c73)
+   ![ValidatorManagementWindowCreateNewTest](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.ValidatorsExercise/assets/71829634/dcaa8bbd-6d51-43d7-8dbe-e91b3de05c73)
 
-   - **Category:** Choose the top-level category for the check. 
+   - **Category:** Choose the top-level category for the check.
 
      Use `Param` for this exercise.
 
@@ -110,10 +109,10 @@ On the page of your GitHub fork (e.g. `https://github.com/YourGitHubHandle/Skyli
      Use `Validator` for this exercise.
 
    - **Severity:** Specify the severity level. To choose the right severity, you can follow the following guide:
-       
+
        - Critical: This type of error will have a critical impact on the system or will fully prevent the driver from working. It may also draw your attention to something that needs to be fixed for administrative reasons.
 
-       - Major: This type of error will prevent part of the driver from workingas expected. Example: A specific driver feature will not work.
+       - Major: This type of error will prevent part of the driver from working as expected. Example: A specific driver feature will not work.
 
        - Minor: This type of error will not prevent the driver from working, but will have some impact. It may draw your attention to something that was not implemented according to the best practice guidelines. Example: Bad performance, Not user-friendly, etc.
 
@@ -122,7 +121,7 @@ On the page of your GitHub fork (e.g. `https://github.com/YourGitHubHandle/Skyli
         Use `Major` for this exercise.
 
    - **Certainty:** Specify the certainty level.
-      
+
       - Certain: An error has been detected and needs to be fixed.
 
       - Uncertain: A possible error has been detected and needs to be fixed once verified.
@@ -140,25 +139,29 @@ On the page of your GitHub fork (e.g. `https://github.com/YourGitHubHandle/Skyli
    - **How To Fix:** Optionally describe the steps to fix the issue.
 
      We can write
+
      ```md
      Add the Protocol.Params.Param.Display.Decimals tag with value 8`. for this exercise.
      ```
+
    - **Example Code:** Optionally provide correct syntax.
 
      For this exercise we can write:
 
-```xml
-   <Display>
-    <RTDisplay>true</RTDisplay>
-    <Decimals>8</Decimals>
-   </Display>
-   <Measurement>
-    <Type options="datetime">number</Type>
-   </Measurement>
-```
+   ```xml
+      <Display>
+         <RTDisplay>true</RTDisplay>
+         <Decimals>8</Decimals>
+      </Display>
+      <Measurement>
+         <Type options="datetime">number</Type>
+      </Measurement>
+   ```
+
    - **Details:** Extra information about the error. This is important as it will be visible in the UI of DIS.
 
 For this exercise we can write:
+
 ```md
 By default, only 6 decimals are saved in memory. Parameters holding datetime needs at least 8 decimals to be accurate.
 Otherwise you can see rounding issues when retrieving the parameter from an external source like an Automation Script.
@@ -182,66 +185,72 @@ Otherwise you can see rounding issues when retrieving the parameter from an exte
 
     1. Open the Valid.xml file and create XML representing the expected correct XML:
 
-```xml
-<Protocol xmlns="http://www.skyline.be/validatorProtocolUnitTest">
-	<Params>
-		<Param id="10">
-			<Display>
-				<RTDisplay>true</RTDisplay>
-				<Decimals>8</Decimals>
-			</Display>
-			<Measurement>
-				<Type options="datetime">number</Type>
-			</Measurement>
-		</Param>
-	</Params>
-</Protocol>
-```
+   ```xml
+   <Protocol xmlns="http://www.skyline.be/validatorProtocolUnitTest">
+      <Params>
+         <Param id="10">
+            <Display>
+               <RTDisplay>true</RTDisplay>
+               <Decimals>8</Decimals>
+            </Display>
+            <Measurement>
+               <Type options="datetime">number</Type>
+            </Measurement>
+         </Param>
+      </Params>
+   </Protocol>
+   ```
 
-1. Open the InvalidTagForDateTime.xml and create an example of an incorrect situation: 
+1. Open the InvalidTagForDateTime.xml and create an example of an incorrect situation:
 
-```xml
-<Protocol xmlns="http://www.skyline.be/validatorProtocolUnitTest">
-	<Params>
-		<Param id="10">
-			<Display>
-				<RTDisplay>true</RTDisplay>
-			</Display>
-			<Measurement>
-				<Type options="datetime">number</Type>
-			</Measurement>
-		</Param>
-	</Params>
-</Protocol>
-```
-    
+   ```xml
+   <Protocol xmlns="http://www.skyline.be/validatorProtocolUnitTest">
+      <Params>
+         <Param id="10">
+            <Display>
+               <RTDisplay>true</RTDisplay>
+            </Display>
+            <Measurement>
+               <Type options="datetime">number</Type>
+            </Measurement>
+         </Param>
+      </Params>
+   </Protocol>
+   ```
+
 1. Open CheckDecimalTag.cs from the *ProtocolTests\Protocol\Params\Param\Display\Decimals\CheckDecimalTag* and remove the [Ignore] attributes on everything.
-   
+
     ![ValidatorShowGeneratedCodeChangeTests](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.ValidatorsExercise/assets/71829634/1cacc3ac-8a13-4b37-b710-7cae5882cf07)
 
 1. Uncomment the Line: `Error.InvalidTagForDateTime(...` and change this to what we expect to get:
-        You can F12 on the static method to see the expected description format again. `Missing tag '{0}' with expected value '{1}' for {2} '{3}'.`
-```cs
-  Error.InvalidTagForDateTime(null, null, null, "paramId"),
-```
+
+   You can F12 on the static method to see the expected description format again. `Missing tag '{0}' with expected value '{1}' for {2} '{3}'.`
+
+   ```cs
+     Error.InvalidTagForDateTime(null, null, null, "paramId"),
+   ```
+
 1. Try executing all these tests by right clicking on the first line of file and selecting Run Tests.
-        You should see 3 failing tests at this point.
+
+   You should see 3 failing tests at this point.
 
 ## Step 6: Write your logic
 
 1. If you look at the Git Changes window, you can easily see what was added by the code generation.
 
 1. Open CheckDecimalTag.cs from inside the *Tests\Protocol\Params\Display\Decimals*
-![ValidatorShowGeneratedCodeChangeLogic](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.ValidatorsExercise/assets/71829634/e0b6a630-e769-471b-a312-6da72e57a6f8)
 
-1. Make sure to check [the documentation](https://docs.dataminer.services/develop/schemadoc/Protocol/Protocol.Params.Param.Measurement.Type-options.html#options-for-measurement-type-number) of the tag, to see what possible syntaxes exist. 
+   ![ValidatorShowGeneratedCodeChangeLogic](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.ValidatorsExercise/assets/71829634/e0b6a630-e769-471b-a312-6da72e57a6f8)
+
+1. Make sure to check [the documentation](https://docs.dataminer.services/develop/schemadoc/Protocol/Protocol.Params.Param.Measurement.Type-options.html#options-for-measurement-type-number) of the tag, to see what possible syntaxes exist.
 
 1. Uncomment this attribute //[Test(CheckId.CheckDecimalTag, Category.Param)]
-   
+
 1. Comment out ICodeFix and ICompare. We will only use IValidate.
-    
+
 1. Most of your validation will need to loop over several items to validate. In our case we need every parameter: *context.EachParamWithValidId*.
-      You can use the following code:
+
+   You can use the following code:
 
 ```cs
         public List<IValidationResult> Validate(ValidatorContext context)
