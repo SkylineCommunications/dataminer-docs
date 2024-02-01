@@ -74,7 +74,7 @@ On the page of your GitHub fork (e.g. `https://github.com/YourGitHubHandle/Skyli
 
 1. In the new window, do the following:
 
-   ![ValidatorManagementWindowCreateNewTest](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.ValidatorsExercise/assets/71829634/dcaa8bbd-6d51-43d7-8dbe-e91b3de05c73)
+   ![ValidatorManagementWindowCreateNewTest](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.ValidatorsExercise/assets/71829634/fccc10e2-9231-47cc-85a8-94ba1c1ece87)
 
    - **Category:** Choose the top-level category for the check.
 
@@ -147,7 +147,7 @@ On the page of your GitHub fork (e.g. `https://github.com/YourGitHubHandle/Skyli
      We can write the following:
 
      ```md
-     Add a Protocol.Params.Param.Display.Decimals tag with value 8`.
+     Add a Protocol/Params/Param/Display/Decimals tag with value 8.
      ```
 
    - **Example Code:** Optionally provide the correct syntax.
@@ -157,7 +157,7 @@ On the page of your GitHub fork (e.g. `https://github.com/YourGitHubHandle/Skyli
      ```xml
      <Display>
         <RTDisplay>true</RTDisplay>
-           <Decimals>8</Decimals>
+        <Decimals>8</Decimals>
      </Display>
      <Measurement>
         <Type options="datetime">number</Type>
