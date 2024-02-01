@@ -5,7 +5,7 @@ uid: DMS_SET_PARAMETER
 # DMS_SET_PARAMETER (28)
 
 > [!WARNING]
-> The use of DMS Notify types has been deprecated. Use types from the[Class Library](xref:ClassLibraryIntroduction) instead.
+> The use of DMS Notify types has been deprecated. Use types from the [Class Library](xref:ClassLibraryIntroduction) instead.
 
 Sets the value of a specified parameter.
 
