@@ -83,6 +83,8 @@ From now on, trend data pattern records will no longer be deleted from the Elast
 
 Because of a number of enhancements, overall performance has increased when updating cell-based subscriptions in SLNet.
 
+These subscriptions mostly originate from visual overviews.
+
 #### GQI: Enhanced performance when executing 'Get parameters from elements' queries for parameter tables [ID_38460]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
