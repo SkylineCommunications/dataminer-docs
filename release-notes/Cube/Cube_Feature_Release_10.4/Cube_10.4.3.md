@@ -16,7 +16,14 @@ uid: Cube_Feature_Release_10.4.3
 
 ## New features
 
-*No new features have been added yet.*
+#### Logging: Viewing the logging of enhanced services [ID_38623]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
+
+In Cube, you can now view the logging of an enhanced service by doing one of the following:
+
+- Open the card of an enhanced service, open its hamburger menu, and choose *View > Log*.
+- In the Surveyor, right-click an enhanced service, and choose *View > Log*.
 
 ## Changes
 
