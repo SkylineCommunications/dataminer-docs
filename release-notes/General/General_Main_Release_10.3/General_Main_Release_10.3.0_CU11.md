@@ -64,9 +64,10 @@ Up to now, after a restart of the SLAnalytics process, it could occur that a num
 
 From now on, all proactive suggestion events will be cleared when proactive cap detection is started, and trend alarm records will no longer be stored in the Cassandra database.
 
-#### Security enhancements [ID_38040]
+#### Security enhancements [ID_38040] [ID_38656]
 
 <!-- 38040: MR 10.3.0 [CU11] - FR 10.4.2 -->
+<!-- 38656: MR 10.3.0 [CU11] - FR 10.4.2 [CU0] -->
 
 A number of security enhancements have been made.
 

@@ -207,6 +207,17 @@ When you had selected an item at the top of a grid component, the loader bar wou
 
 From now on, when the loader bar appears while an item is selected, it will always appear in front of the selected item.
 
+#### Low-Code Apps: Action editor issues [ID_38470]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+The following action editor issues have now been fixed:
+
+- The description would not update when switching from an open page action to a navigate action.
+- An error could occur when an incomplete action was executed.
+- An action would only be validated when the mouse pointer was moved.
+- The *Open an app* action could no longer be configured.
+
 #### Monitoring app: Incorrect alignment of element parameters [ID_38482]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
