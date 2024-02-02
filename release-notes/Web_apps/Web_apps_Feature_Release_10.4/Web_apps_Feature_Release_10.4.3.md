@@ -290,3 +290,9 @@ Up to now, it would not be possible to navigate within the Timeline component wh
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
 
 When, in edit mode, you opened the *Layout* tab of a *Numeric input* component, a component update would incorrect be triggered.
+
+#### Dashboards app & Low-Code Apps: Timeline component would not show the selection boxes to alter its dimensions [ID_38653]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+In some cases, a *Timeline* component would incorrectly not show the selection boxes to alter its dimensions.
