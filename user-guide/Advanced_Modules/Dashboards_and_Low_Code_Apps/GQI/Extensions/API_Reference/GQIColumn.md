@@ -11,16 +11,15 @@ uid: GQI_GQIColumn
 
 Provides the base class for a column in GQI.
 
+> [!NOTE]
+> This is an abstract base class. To create a new column, use one of the [derived types](xref:GQI_GQIColumnT#derived-types) provided by the framework.
+
+> [!TIP]
+> Prefer using the generic [GQIColumn\<T\>](xref:GQI_GQIColumnT) equivalent whenever possible. It provides better type safety when getting or setting cell values.
+
 ## Derived types
 
-The *GQIColumn* object is an abstract class, with the following derived types:
-
-- `GQIBooleanColumn`
-- `GQIDateTimeColumn`
-- `GQIDoubleColumn`
-- `GQIIntColumn`
-- `GQIStringColumn`
-- `GQITimeSpanColumn` (from DataMiner 10.3.9/10.4.0 onwards<!-- RN 36717 -->)
+- [GQIColumn\<T\>](xref:GQI_GQIColumnT)
 
 ## Properties
 
