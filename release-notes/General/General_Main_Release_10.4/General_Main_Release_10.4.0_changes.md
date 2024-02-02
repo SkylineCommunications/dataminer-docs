@@ -927,11 +927,11 @@ Because of a number of enhancements with regard to memory usage, overall perform
 
 The accuracy of proactive cap detection events (i.e. forecasted alarms) reporting data range violations has been improved.
 
-#### Service & Resource Management: Enhanced performance of the SRM volume license check [ID_38521]
+#### Service & Resource Management: Enhanced performance when adding or updating bookings [ID_38521]
 
 <!-- MR 10.4.0 - FR 10.4.3 -->
 
-Because of a number of enhancements, overall performance of the SRM volume license check has increased, especially on systems with a large number of locked contributing bookings.
+Because of a number of enhancements, overall performance has increased when adding or updating bookings, especially on systems with a large number of bookings.
 
 #### SLAnalytics - Behavioral anomaly detection: Enhanced detection of change points of type flatline [ID_38528]
 
