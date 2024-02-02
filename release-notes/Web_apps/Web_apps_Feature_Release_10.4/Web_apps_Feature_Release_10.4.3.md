@@ -284,3 +284,9 @@ In some cases, the query builder would not save an updated query. This issue cou
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
 
 Up to now, it would not be possible to navigate within the Timeline component when a `Nothing to show` message was being displayed.
+
+#### Dashboards app & Low-Code Apps - Numeric input component: Component update would be triggered when opening the Layout tab [ID_38642]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+When, in edit mode, you opened the *Layout* tab of a *Numeric input* component, a component update would incorrect be triggered.
