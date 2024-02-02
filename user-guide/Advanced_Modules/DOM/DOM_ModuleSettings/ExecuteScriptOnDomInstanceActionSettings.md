@@ -77,19 +77,20 @@ public class Script
 }
 ```
 
+### Calculating changes done to a DOM instance in a CRUD script
+
 From 10.4.3/10.5.0 onwards<!-- RN 38364 -->, it is possible to calculate the changes done to a `DomInstance` in a CRUD script using the `GetDifferences` method on the `DomInstanceCrudMeta` object.
-Checkout the explanation and examples below to see how the method can be used and how it is structured.
 
 The `GetDifferences` method returns an object `DomInstanceDifferences`. This contains the differences of the `DomInstance`:
 
 - DomInstanceDifferences:
-    - FieldValues : all changes
-        - Created : changes where a new value was added
-        - Updated : changes where a value was updated
-        - Deleted : changes where a value was removed
-
+  - FieldValues: All changes.
+    - Created: Changes where a new value was added.
+    - Updated: Changes where a value was updated.
+    - Deleted: Changes where a value was removed.
 
 Examples:
+
 ```csharp
 var allDifferences = crudMeta.FieldValues; // All value differences (created, updated & deleted values)
 var createdDifferences = crudMeta.FieldValues.Created; // Only created values
@@ -98,18 +99,20 @@ var deletedDifferences = crudMeta.FieldValues.Deleted; // Only deleted values
 ```
 
 These all return a `FieldValueDifferences` object.
+
 On these `FieldValueDifferences`, you can apply different methods to further filter the results:
 
-|Method        |Type        |Description |
-|----------------|------------|------------|
-|OfType(\<CrudType\>) | FieldValueDifferences | Returns the differences with a certain `CrudType` (Create, Update or Delete).|
-|OfFieldDescriptor(\<FieldDescriptorID\>) | FieldValueDifferences | Returns the differences on a certain `FieldDescriptor`.|
-|OfSectionDefinition(\<SectionDefinitionID\>) | FieldValueDifferences | Returns the differences within a certain `SectionDefinition`.|
-|Get() | List\<FieldValueDifference\> | Returns the differences as a list of `FieldValueDifference` objects, considering the filter methods.|
+| Method                                       | Type                         | Description                                                                                          |
+|----------------------------------------------|------------------------------|------------------------------------------------------------------------------------------------------|
+| OfType(\<CrudType\>)                         | FieldValueDifferences        | Returns the differences with a certain `CrudType` (Create, Update or Delete).                        |
+| OfFieldDescriptor(\<FieldDescriptorID\>)     | FieldValueDifferences        | Returns the differences on a certain `FieldDescriptor`.                                              |
+| OfSectionDefinition(\<SectionDefinitionID\>) | FieldValueDifferences        | Returns the differences within a certain `SectionDefinition`.                                        |
+| Get()                                        | List\<FieldValueDifference\> | Returns the differences as a list of `FieldValueDifference` objects, considering the filter methods. |
 
 These methods can be chained to create specific conditions to get your desired differences. In most situations the `Get()` method should be applied in the end, to get a list of `FieldValueDifference` and use the containing properties.
 
-Examples: 
+Examples:
+
 ```csharp
 // Getting all created values of a certain SectionDefinition:
 var differences = crudMeta.GetDifferences().FieldValues.OfType(CrudType.Create).OfSectionDefinition(SectionDefinitionId).Get();
@@ -124,18 +127,18 @@ var differences = crudMeta.GetDifferences().FieldValues.Updated.OfFieldDescripto
 var differences = crudMeta.GetDifferences().FieldValues.OfFieldDescriptor(FieldDescriptorId).OfType(CrudType.Delete).Get();
 ```
 
-This `FieldValueDifferences` object contains a list of `FieldValueDifference` objects, these objects have some properties:
+This `FieldValueDifferences` object contains a list of `FieldValueDifference` objects. These objects have some properties:
 
-|Property        |Type        |Description |
-|----------------|------------|------------|
-|Type | CrudType | The `CrudType` of the changed `FieldValue` (Create, Update or Delete).|
-|ValueBefore | IValueWrapper | The value of the `FieldValue` before the change.|
-|ValueAfter | IValueWrapper | The value of the `FieldValue` after the change.|
-|FieldDescriptorId | FieldDescriptorID | The `FieldDescriptor` ID of the changed `FieldValue`.|
-|SectionId | SectionID |The ID of the `Section` where this changed `FieldValue` is part of.|
-|SectionDefinitionId | SectionDefinitionID | The `SectionDefinitionID` of the changed `FieldValue`.|
+| Property            | Type                | Description                                                            |
+|---------------------|---------------------|------------------------------------------------------------------------|
+| Type                | CrudType            | The `CrudType` of the changed `FieldValue` (Create, Update or Delete). |
+| ValueBefore         | IValueWrapper       | The value of the `FieldValue` before the change.                       |
+| ValueAfter          | IValueWrapper       | The value of the `FieldValue` after the change.                        |
+| FieldDescriptorId   | FieldDescriptorID   | The `FieldDescriptor` ID of the changed `FieldValue`.                  |
+| SectionId           | SectionID           | The ID of the `Section` that this changed `FieldValue` is part of.     |
+| SectionDefinitionId | SectionDefinitionID | The `SectionDefinitionID` of the changed `FieldValue`.                 |
 
-This example script generates an information event stating the differences whenever a `DomInstance` is created, updated or deleted.
+This example script generates an information event stating the differences whenever a `DomInstance` is created, updated, or deleted:
 
 ```csharp
 using Skyline.DataMiner.Automation;
