@@ -207,8 +207,10 @@ items:
     topicUid: Known_issues
     items:
       - name: Current issues
-        topicUid:  KI_Analytics_features_not_starting
+        topicUid: KI_port_exhaustion_because_of_NATS_reconnect_attempts
         items:
+          - name: Port exhaustion because of NATS reconnection attempts
+            topicUid: KI_port_exhaustion_because_of_NATS_reconnect_attempts
           - name: One or multiple Analytics features fail to start
             topicUid:  KI_Analytics_features_not_starting
           - name: NATS configuration not updated after adding DMA to DMS
