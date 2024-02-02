@@ -364,3 +364,9 @@ Also, a large number of low-severity change points were generated without a labe
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
 
 Up to now, when writing to the database or reading from the database failed, a retry was attempted after 5 seconds. In some cases, especially when the SLNet connection was lost during startup, that retry would also fail, causing certain SLAnalytics features to not start up correctly. From now on, when writing to the database or reading from the database fails, SLAnalytics will wait longer than 5 seconds before attempting a retry.
+
+#### Protocols: IDisposable QActions would incorrectly not be disposed [ID_38605]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+Up to now, when a QAction that did not implement `IDisposable` had been executed, the `Dispose` method of subsequent QActions that did implement `IDisposable` would incorrectly not be executed.
