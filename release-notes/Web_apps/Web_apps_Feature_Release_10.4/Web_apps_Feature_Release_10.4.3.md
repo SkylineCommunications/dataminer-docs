@@ -277,7 +277,7 @@ When a component had multiple queries assigned, in some cases, updates would not
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
 
-In some cases, the query builder would not save an updated query. This issue could especially occur when one query started from another query.
+In some cases, the query builder would not save an updated query. This issue could especially occur when you had updated a query on which another query was based.
 
 #### Dashboards app & Low-Code Apps: Not possible to navigate within the Timeline component when a 'Nothing to show' message was being displayed [ID_38625]
 
