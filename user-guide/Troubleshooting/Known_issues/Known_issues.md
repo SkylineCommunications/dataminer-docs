@@ -5,7 +5,7 @@ uid: Known_issues
 
 ## 10.4.x
 
-| Issue | Affected version | Resolved in | Date added |
+| Issue | Affected versions | Resolved in | Date added |
 |--|--|--|--|
 | [One or multiple Analytics features fail to start](xref:KI_Analytics_features_not_starting) | From DataMiner 10.2.0 [CU13]/10.3.0 [CU2]/10.3.5 onwards | | January 29, 2024. |
 | [NATS configuration not updated after adding DMA to DMS](xref:KI_NATS_config_not_updated_after_adding_DMA) | All DataMiner versions | | January 24, 2024 |
@@ -19,7 +19,7 @@ uid: Known_issues
 
 ## 10.3.x
 
-| Issue | Affected version | Resolved in | Date added |
+| Issue | Affected versions | Resolved in | Date added |
 |--|--|--|--|
 | [One or multiple Analytics features fail to start](xref:KI_Analytics_features_not_starting) | From DataMiner 10.2.0 [CU13]/10.3.0 [CU2]/10.3.5 onwards | | January 29, 2024. |
 | [NATS configuration not updated after adding DMA to DMS](xref:KI_NATS_config_not_updated_after_adding_DMA) | All DataMiner versions | | January 24, 2024 |
@@ -69,7 +69,7 @@ uid: Known_issues
 
 ## 10.2.x
 
-| Issue | Affected version | Resolved in | Date added |
+| Issue | Affected versions | Resolved in | Date added |
 |--|--|--|--|
 | [One or multiple Analytics features fail to start](xref:KI_Analytics_features_not_starting) | From DataMiner 10.2.0 [CU13]/10.3.0 [CU2]/10.3.5 onwards | | January 29, 2024. |
 | [NATS configuration not updated after adding DMA to DMS](xref:KI_NATS_config_not_updated_after_adding_DMA) | All DataMiner versions | | January 24, 2024 |
@@ -122,7 +122,7 @@ uid: Known_issues
 
 ## Other
 
-| Issue | Affected version | Resolved in | Date added |
+| Issue | Affected versions | Resolved in | Date added |
 |--|--|--|--|
 | [NATS configuration not updated after adding DMA to DMS](xref:KI_NATS_config_not_updated_after_adding_DMA) | All DataMiner versions | | January 24, 2024 |
 | [NATS services missing after reboot](xref:KI_missing_NATS_services) | Any version | | January 10, 2024 |
