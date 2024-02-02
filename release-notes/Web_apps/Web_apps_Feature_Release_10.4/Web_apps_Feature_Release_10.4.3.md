@@ -273,6 +273,12 @@ When a component had multiple queries assigned, in some cases, updates would not
 
 *Form* and *Stepper* components using DOM instances would incorrectly show a `This instance no longer exists` error each time another DOM instance was deleted in the same module.
 
+#### Dashboards app & Low-Code Apps - Query builder: Updated query would not be saved [ID_38622]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+In some cases, the query builder would not save an updated query. This issue could especially occur when one query started from another query.
+
 #### Dashboards app & Low-Code Apps: Not possible to navigate within the Timeline component when a 'Nothing to show' message was being displayed [ID_38625]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
