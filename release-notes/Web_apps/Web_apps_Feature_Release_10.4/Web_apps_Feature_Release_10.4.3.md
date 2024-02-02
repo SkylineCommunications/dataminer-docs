@@ -88,6 +88,12 @@ In the Dashboards app and the low-code apps, the popup windows have been redesig
 
 Up to now, when working with the template editor, only text overrides could be reset. From now on, all overrides have a dedicate reset button.
 
+#### Monitoring app: Zooming and panning in visual overviews [ID_38395]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+From now on, the Monitoring app allows you to zoom and pan in visual overviews.
+
 #### DataMiner web apps updated to Angular 17 [ID_38468]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
