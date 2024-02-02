@@ -24,6 +24,7 @@ Specifies the page visibility configuration.
 - If the default page is hidden, the first non-hidden page will be selected.
 - If all pages are hidden, a message will appear to inform the user that there are no available data pages.
 - When the DATA tree item is selected in a card’s navigation pane when no pages are visible, as soon as a page becomes visible, it will automatically be selected.
+- Changing the visibility of separator pages is not supported.
 
 ## Examples
 
