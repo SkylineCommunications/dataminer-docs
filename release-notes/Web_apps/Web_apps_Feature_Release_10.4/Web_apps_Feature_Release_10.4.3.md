@@ -214,9 +214,8 @@ From now on, when the loader bar appears while an item is selected, it will alwa
 The following action editor issues have now been fixed:
 
 - The description would not update when switching from an open page action to a navigate action.
-- An error could occur when an incomplete action was executed.
-- An action would only be validated when the mouse pointer was moved.
 - The *Open an app* action could no longer be configured.
+- The *Open context menu* action would only be validated when the mouse pointer was moved, and an error would occur when that same action was executed without having been configured correctly.
 
 #### Monitoring app: Incorrect alignment of element parameters [ID_38482]
 
