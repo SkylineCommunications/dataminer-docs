@@ -366,6 +366,14 @@ When SLAnalytics was handling large amounts of traffic, in some cases, certain p
 
 Also, a large number of low-severity change points were generated without a label. Those have now been reduced.
 
+#### SLAnalytics - Pattern matching: A match of one subpattern would incorrectly be considered a match of the entire multivariate pattern [ID_38587]
+
+<!-- MR 10.5.0 - FR 10.4.3 -->
+
+When the streaming method was being used, a match detected for one subpattern of a multivariate pattern would incorrectly be considered a match of that entire multivariate pattern.
+
+Although the suggestion events were generated correctly, the pattern matches would not be indicated correctly on the trend graphs.
+
 #### SLAnalytics features would not start up correctly after a database connection problem [ID_38600]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
