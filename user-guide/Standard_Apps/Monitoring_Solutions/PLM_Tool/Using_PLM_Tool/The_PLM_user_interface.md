@@ -24,4 +24,4 @@ The sidebar on the left of the PLM tool contains buttons that can be used to exp
 
 - ![PLM records](~/user-guide/images/PLM_Records.png) : Clicking the *PLM Records* button displays a list of all historical maintenance records in the DataMiner System. See [PLM records](xref:PLM_Records).
 
-- ![PLM configuration](~/user-guide/images/PLM_Configuration.png) : Clicking the *Configuration* button displays a list of all resource subscribers and a list of all resource types. On this tab, you can also add new resource subscribers and types. See [Configuring resources](xref:PLM_tool_configuring_resources).
+- ![PLM configuration](~/user-guide/images/PLM_Configuration.png) : Clicking the *Configuration* button displays a list of all resource subscribers and a list of all resource types. On this page, you can also add new resource subscribers and types. See [Configuring resources](xref:PLM_tool_configuring_resources).
