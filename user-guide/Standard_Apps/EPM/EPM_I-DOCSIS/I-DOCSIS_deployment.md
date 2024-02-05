@@ -6,24 +6,25 @@ uid: I-DOCSIS_deployment
 
 To deploy the I-DOCSIS branch of the EPM Solution:
 
-1. Make sure the **latest DataMiner feature release** version is installed.
+1. Make sure the latest DataMiner feature release version is installed. 
 
-1. Place the **EPM package** somewhere on the server (in a different folder than C:\Skyline DataMiner) and unzip it.
+2. Download the latest EPM package to the DMA server (in a different folder than C:\Skyline DataMiner) and install the package. This will install the package on all DMAs so it only needs to be executed on a single DMA. 
+If DMA is connected to Dataminer Services, may deploy package directly from the Catalog.
+   - If DMA is connected to Dataminer Services, may deploy package directly from the Catalog.
 
-1. In DataMiner Cube, go to the Protocols & Templates module and **upload the necessary connectors** (called "protocols" in Cube) from the EPM package. See [Uploading a Protocol.xml file](xref:Adding_a_protocol_or_protocol_version_to_your_DataMiner_System#uploading-a-protocolxml-file).
+That is all that is needed for upgrading a configured EPM Solution. If this is an initial deployment, please perform the following steps.
 
-   > [!NOTE]
-   > Depending on the technology you are using, some connectors may not be needed (e.g. Cisco vs. Casa CCAP).
+> [!Prerequisite]
+>1. If using multiple DMA's, a remote file location that is accessible by all servers is needed.
+>2. Hosting the FrontEnd element on it's own DMA with no collectors is highly recommended.
+>3. To enable the Topology app, the CPEIntegration soft launch option is needed.
+  
 
-1. Set the latest version of the installed connectors to the **Production version**. See [Promoting a protocol version to production version](xref:Promoting_a_protocol_version_to_production_version).
-
-1. If the EPM package contains any **alarm and/or trend templates**, upload these. See [Uploading an alarm template](xref:Uploading_an_alarm_template) and [Uploading a trend template](xref:Adding_and_deleting_trend_templates#uploading-a-trend-template).
-
-1. If this is the initial deployment of the EPM Solution, **create the necessary views**. See [Creating a view](xref:Managing_views#creating-a-view).
+3.  **create the necessary views**. See [Creating a view](xref:Managing_views#creating-a-view).
 
    - The solution expects the following view structure:
 
-     > - Service Provider (single view at root level)
+     > - Root level
      >   - Network (one or more views below the Service Provider level)
      >     - Market (as many views as are needed below the Network level)
      >       - Hub (as many views as are needed below the Market level)
@@ -43,31 +44,25 @@ To deploy the I-DOCSIS branch of the EPM Solution:
      >     - EPM BE
      >     - EPM FE
 
-1. If this is the initial deployment of the EPM Solution, **create the necessary elements** using the uploaded connectors. See [Adding elements](xref:Adding_elements).
-
-   The following elements should be created:
-
-   - **Collector elements, CMTS/CCAP collector elements, and CM collector elements**, as necessary. The solution expects these to be created within the hub-level views. For an overview of the supported collectors, see [Supported technologies for I-DOCSIS](xref:I-DOCSIS_supported_technologies).
-
-     > [!NOTE]
-     >
-     > - Large deployments could greatly benefit from the use of DataMiner IDP. See [DataMiner IDP app](xref:SolIDP).
-     > - The DataMiner element names must match the CCAP names as defined in SNMP. This is required to properly link the topology visuals to the elements. To rename a CCAP Platform element, first change the user-defined CCAP name in SNMP to the new name, then rename the element in Surveyor to match the new name.
-
-   - **Back-end EPM elements**, in the *System* > *DataMiner EPM* > *EPM BE* view.
-   - A **front-end EPM element**, in the *System* > *DataMiner EPM* > *EPM FE* view.
-   - **System elements**, as necessary in the *System* view. You can name these elements as you see fit. If you add any MS/LX Platform elements, add these in a *DMS* subview of the *System* view.
-
-1. In the Automation module in DataMiner Cube, **import the Automation scripts** from the EPM package. See [Importing and exporting Automation scripts](xref:Managing_Automation_scripts#importing-and-exporting-automation-scripts).
-
-1. If the EPM package contains any **dashboards**, add these to the DMS. To do so, copy the dashboards to the folder `C:\Skyline DataMiner\Dashboards` on the target DMA.
-
-1. If the EPM package contains Visio drawings (in the *Visuals* folder), **add the Visio drawings** to the DMS. To do so:
-
-   - For a Visio drawing linked to a specific connector (e.g. EPM Platform), see [Assigning a custom Visio file to a protocol](xref:Managing_Visio_files_linked_to_protocols#assigning-a-custom-visio-file-to-a-protocol).
-   - For a Visio drawings linked to a view, upload the drawing to the view. See [Set as active Visio file](xref:Editing_a_visual_overview_in_DataMiner_Cube#set-as-active-visio-file).
-
-1. **Add the Correlation rules** from the EPM package to the DMS. To do so, copy the Correlation rules to the folder `C:\Skyline DataMiner\Correlation` of the target DMA and **restart** the DMA.
-
+4. Create the FrontEnd Element in the System > DataMiner EPM > EPM FE view. Select Default Alarm and Trend templates if would like a starting off point for monitored KPI’s.
+   
+5. Create one BackEnd element per DMA in the System > DataMiner EPM > EPM BE view. Select Default Alarm and Trend templates if would like a starting off point for monitored KPI’s.
    > [!NOTE]
-   > As these Correlation rules require specific connectors and Automation scripts to function properly, make sure these have all been loaded properly before you add the Correlation rules. If you are deploying the EPM Solution for the first time, the necessary elements need to be created first before the Correlation rules can be deployed. We also recommend that you review the Correlation rules both when you initially deploy them and during each upgrade.
+   > It is recommended that no Collector or BackEnd elements are on the same DMA as the FrontEnd.
+
+6. Assign Visual Visio to EPM Elements. 
+	- Go to Apps > Protocols & Templates
+	- Select Skyline EPM Platform
+	- Under Visio Files, right click on Custom and select ‘Set as active Visio file’
+	- Do the same for the Skyline EPM Platform DOCSIS driver
+
+7. Configure the FrontEnd element.
+	- Add the FrontEnd's DMA ID/Element ID to the FrontEnd Registration table.
+   - Add all of the DMA ID/Element ID's of the created BackEnds to the BackEnd Registration table. 
+   - Configure the directory settings. It is recommended to have the FrontEnd import and export from a local directory. If using a remote directory, also provide username and password credentials of user who has access to the remote directory.
+
+8. Configure the BackEnd elements.
+	- Add the current BackEnd's DMA ID/Element ID to it's BackEnd Registration table. 
+   - Update the directory settings. The Import directory will be the FrontEnd's export directory/DOCSIS. If using a remote directory, also provide username and password credentials of user who has access to the remote directory. Updating the Directory settings can be done using the Multiple Set option in Dataminer if configuring multiple BackEnd elements.
+  
+9. To configure CMTS elements, use the provided EPM_I_DOCSIS_AddNewCcapCmPair. See [Creating CCAP/CM Pair](https://docs.dataminer.services/user-guide/Standard_Apps/EPM/EPM_I-DOCSIS/I-DOCSIS_Create_CCAP_CM_pair.html).
