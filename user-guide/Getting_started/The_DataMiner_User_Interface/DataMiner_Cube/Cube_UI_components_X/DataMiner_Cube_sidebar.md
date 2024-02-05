@@ -4,7 +4,9 @@ uid: DataMiner_Cube_sidebar
 
 # DataMiner Cube sidebar
 
-From DataMiner 10.0.0/10.0.2 onwards, on the left-hand side of the Cube UI, a sidebar is displayed. This sidebar contains the following buttons:
+On the left-hand side of the Cube UI, a sidebar is displayed. This sidebar contains the following buttons:
+
+<!-- TODO: Add images of the different buttons -->
 
 - *Surveyor*: Opens the Surveyor pane. See [Surveyor pane](#surveyor-pane).
 
@@ -93,7 +95,7 @@ The icons that precede an item name in the tree show what kind of item it is and
 
 #### Special icon settings
 
-In the DataMiner settings, there are several options to show more alarm information next to an icon than just the current state.
+In the DataMiner settings, there are several options to show more alarm information next to an icon than just the current state. These icon settings are only available if the [Use modern icons](xref:User_settings#icons-settings) setting is **not** enabled.
 
 The following options are available:
 
@@ -113,9 +115,6 @@ The following options are available:
 >
 > - [Icons settings](xref:User_settings#icons-settings)
 > - [Surveyor – Using latched and special icons](https://community.dataminer.services/video/surveyor-using-latched-and-special-icons/) ![Video](~/user-guide/images/video_Duo.png)
-
-> [!NOTE]
-> These icon settings are only available if the *Use modern icons* setting is **not** enabled.
 
 ### Surveyor right-click menu
 

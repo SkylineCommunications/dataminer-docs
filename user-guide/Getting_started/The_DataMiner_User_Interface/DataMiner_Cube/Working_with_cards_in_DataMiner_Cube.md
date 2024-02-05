@@ -171,11 +171,7 @@ However, you can also open items in a new card next to any cards that are alread
 
 To change the card layout on the fly, drag the edge of a card to adjust its size.
 
-To select a preconfigured Cube card layout:
-
-- From DataMiner 10.0.0/10.0.2 onwards: Click the user icon in the top-right corner of the Cube UI and select *Change layout*. This will open a side panel where you can select a card layout.
-
-- Using a DataMiner version prior to DataMiner 10.0.0/10.0.2: Click the card layout icon to the right of the user name and DMS time in the Cube header bar, and select the card layout you want.
+To select a preconfigured Cube card layout, click the user icon in the top-right corner of the Cube UI and select *Change layout*. This will open a side panel where you can select a card layout.
 
 The following layout options are available:
 

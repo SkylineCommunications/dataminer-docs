@@ -4,7 +4,9 @@ uid: DataMiner_Cube_header_bar
 
 # DataMiner Cube header bar
 
-From DataMiner 10.0.0/10.0.2 onwards, you can find the following items in the header bar of DataMiner Cube:
+In the header bar of DataMiner Cube, you can find the following items:
+
+<!-- TODO: add image showing these items so we can refer to them with numbers -->
 
 - **Cube side indicators**: Four blue squares, each representing one of the four Cube sides. The largest square marks the Cube side that is currently displayed. These indicators may be hidden, depending on the user settings. (See “Quick menu icon” below.)
 

@@ -10,24 +10,17 @@ Many settings in DataMiner can be adapted according to the preferences of the us
 
 The user settings can be accessed in different ways:
 
-- From DataMiner 10.0.0/10.0.2 onwards:
+- Click the apps button in the sidebar and select *Settings* at the bottom of the apps panel.
 
-  - Click the apps button in the sidebar and select *Settings* at the bottom of the apps panel.
+- Click the user icon in the header bar and select *Settings* in the menu.
 
-  - Click the user icon in the header bar and select *Settings* in the menu.
-
-- Prior to DataMiner 10.0.0/10.0.2:
-
-  - In the navigation pane, click the apps button and select *Settings*.
-
-  - Click the current user in the header bar, and click *Settings*.
-
-The settings window consists of two tabs. The tab with the user settings is opened by default. It consists of different pages that you can navigate between using the table of contents on the left.
+The settings window consists of two tabs. The tab with the [user settings](#overview-of-the-user-settings) is opened by default. It consists of different pages that you can navigate between using the table of contents on the left. The other tab contains the [computer settings](xref:Computer_settings).
 
 > [!NOTE]
 >
-> - For more information on the computer settings, see [Computer settings](xref:Computer_settings).
-> - Depending on the configuration of your user account, it is possible that some settings are not shown.
+> - If a setting is not set to its default value, it will be displayed in bold. You can quickly reset to the default value by clicking the *Reset to [setting]* field underneath the setting.
+> - If a setting requires that you enter a value in a box, and the value you entered is incorrect, the edge of the box will be displayed in red and the change to the setting will not be applied.
+> - User accounts can be configured to only have access to specific settings. For more information, see [Configuring a set of user group settings](xref:Configuring_a_set_of_user_group_settings).
 
 ## Overview of the user settings
 
@@ -128,7 +121,7 @@ On the *Alarm Console* page, several settings are available:
 
   - *On each alarm update with increases severity*: A read alarm will only become unread again if its severity is increased by an update.
 
-- **Keep track of the full history of a correlated alarm**: Available from DataMiner 9.6.1 onwards. If this option is selected, the entire alarm tree will be shown for a correlated alarm in the Alarm Console. Otherwise, only the most recent alarm will be displayed, and its sources will be displayed underneath. By default, this option is selected.
+- **Keep track of the full history of a correlated alarm**: If this option is selected, the entire alarm tree will be shown for a correlated alarm in the Alarm Console. Otherwise, only the most recent alarm will be displayed, and its sources will be displayed underneath. By default, this option is selected.
 
 - **Configure Alarm Console**: With this setting you can configure the tabs in the Alarm Console for the different sides of the Cube.
 
@@ -237,18 +230,18 @@ On the *Cube* page, the following settings are available:
 
 - **Mouse word highlighting in Alarm Console**: This setting determines which key should be pressed in order to highlight words by moving the mouse over them, with the purpose of adding them to a filter.
 
-- **Use compact alarm banner**: Available from DataMiner 10.0.0/10.0.2 onwards. If the alarms are configured to be shown in a banner (in the Alarm Console settings), this setting determines whether a full banner is displayed in the header, or only a banner containing the number of alarms and the highest severity.
+- **Use compact alarm banner**: If the alarms are configured to be shown in a banner (in the Alarm Console settings), this setting determines whether a full banner is displayed in the header, or only a banner containing the number of alarms and the highest severity.
 
   > [!TIP]
   > See also: [Alarm Console settings](xref:AlarmConsoleSettings)
 
-- **Show the news section**: Available from DataMiner 9.5.14 onwards. Determines whether the optional news section is displayed on the DataMiner Pulse welcome page in Cube.
+- **Show the news section**: Determines whether the optional news section is displayed on the DataMiner Pulse welcome page in Cube.
 
 - **Show the DataMiner TV section**: Obsolete. Determines whether the optional DataMiner TV section is displayed on the DataMiner Pulse welcome page in Cube. Available from DataMiner 9.5.14 up to DataMiner 10.1.0 [CU22]/10.2.0 [CU10]/10.3.1.
 
-- **Display the workspace buttons in the header**: Available from DataMiner 10.0.0/10.0.2 onwards. Determines whether the four squares indicating the Cube workspaces are displayed in the header. This setting can also be enabled or disabled via the header quick menu.
+- **Display the workspace buttons in the header**: Determines whether the four squares indicating the Cube workspaces are displayed in the header. This setting can also be enabled or disabled via the header quick menu.
 
-- **Display the server time in the header**: Available from DataMiner 10.0.0/10.0.2 onwards. Determines whether server time is displayed in the header. This setting can also be enabled or disabled via the header quick menu.
+- **Display the server time in the header**: Determines whether server time is displayed in the header. This setting can also be enabled or disabled via the header quick menu.
 
 - **Display the search box in the header**: Available from DataMiner 10.3.5/10.4.0 onwards. Determines whether the search box is displayed in the header. This setting can also be enabled or disabled via the header quick menu.
 
@@ -305,13 +298,11 @@ On the *Data Display* page, several settings are available, some of which are on
 
 - **Maximum number of items kept in the table parameter filter history**: To determine the number of items kept in the filter history of filter boxes for table parameters, enter a value in the box for this setting.
 
-- **Table export column separator**: Obsolete. No longer available from DataMiner 10.0.0/10.0.2 onwards. Use the regional setting *CSV separator* instead. See [Regional settings](#regional-settings).
-
 ### Icons settings
 
 These settings allow you to specify which alarm levels and icons are shown next to the icons of views, services and elements in the DataMiner Cube user interface.
 
-- **Use modern icons**: Available from DataMiner 10.0.0/10.0.2 onwards. When this option is selected, the redesigned DataMiner 10 icons are used instead of the legacy icons. However, in this case icons cannot display latch levels, aggregation levels, or split view alarm levels.
+- **Use modern icons**: When this option is selected, the redesigned DataMiner 10 icons are used instead of the legacy icons. However, in this case icons cannot display latch levels, aggregation levels, or split view alarm levels.
 
 - **View alarm level**: In the drop-down list next to this setting, choose either *Consolidated* to show the alarm level of all child items, or *Split* to show the alarm level of the first-level child items on the left and the alarm level of the child items on the deeper levels on the right. Not supported if *Use modern icons* is selected.
 
@@ -339,7 +330,7 @@ On the *Regional* page, the following settings are available:
 
 - **Regional date and time format**: Select a culture in the drop-down list to customize the format of dates and times in DataMiner Cube to that culture.
 
-- **CSV separator**: Select which separator should be used in CSV exports from Cube. This setting replaces the legacy *Table export column separator* setting. Available from DataMiner 10.0.0/10.0.2 onwards.
+- **CSV separator**: Select which separator should be used in CSV exports from Cube.
 
   > [!NOTE]
   > - When you copy data to the Windows clipboard, that data will always be delimited by TAB characters, regardless of this setting.
@@ -349,7 +340,7 @@ On the *Regional* page, the following settings are available:
 
 On the *Sidebar page,* or prior to DataMiner 10.2.0/10.1.3, the *Surveyor* page, the following settings are available:
 
-- **Sidebar docking position**: Available from DataMiner 10.0.0/10.0.2 onwards. Select *Right* or *Left* to determine at which side of the screen the Cube sidebar will be displayed. By default, it is displayed on the left. Prior to DataMiner 10.0.0/10.0.2, the similar setting *Surveyor docking position* is available instead.
+- **Sidebar docking position**: Select *Right* or *Left* to determine at which side of the screen the Cube sidebar will be displayed. By default, it is displayed on the left. Prior to DataMiner 10.0.0/10.0.2, the similar setting *Surveyor docking position* is available instead.
 
 - **Allow to expand/collapse service nodes**: Select this setting to enable users to expand services in the Surveyor to see the child items of the services.
 
@@ -376,39 +367,39 @@ On the *Sidebar page,* or prior to DataMiner 10.2.0/10.1.3, the *Surveyor* page,
 
 - **Show most detailed data**: If you select this option, the most detailed data available will be shown, rather than average data. In order to ensure optimal performance in case a large amount of trend data must be displayed, this option is by default not selected.
 
-- **Show percentile**: Obsolete from DataMiner 10.3.0/10.2.4 onwards. Available from DataMiner 10.0.12 onwards. Select this option to show a percentile line on trend graphs by default.
+- **Show percentile**: Select this option to show a percentile line on trend graphs by default. Obsolete from DataMiner 10.3.0/10.2.4 onwards.
 
-- **Percentile to calculate**: Available from DataMiner 10.0.12 onwards, if *Show percentile* is selected. From DataMiner 10.3.0/10.2.4 onwards, select the checkbox in front of this setting to show a percentile line. You can then configure which percentile is displayed. By default, this is set to *95*.
+- **Percentile to calculate**: Prior to DataMiner 10.3.0/10.2.4, you first need to select *Show percentile* to see this setting. In more recent DataMiner versions, you can instead select *Percentile to calculate* directly to show a percentile line on trend graphs. You can then configure which percentile is displayed. By default, this is set to *95*.
 
 - **Trend prediction range**: Select either *Manual*, if you want to manually change the trend prediction range, or *Auto*, if you want DataMiner to select the range depending on the zoom level.
 
 - **Left mouse button action on graph**: Select the action executed by dragging the left mouse button on a trend graph:
 
-  - *Zoom*: Selects a section of the graph to zoom in on. Available from DataMiner 10.0.7 onwards.
+  - *Zoom*: Selects a section of the graph to zoom in on.
 
-  - *Select*: Selects a part of the graph in order to [assign tags to it](xref:Defining_a_pattern). Prior to DataMiner 10.0.7, this is the default action, and it behaves like the *Zoom* action described above.
+  - *Select*: Selects a part of the graph in order to [assign tags to it](xref:Defining_a_pattern).
 
-  - *Pan*: Moves the graph horizontally. Default action from DataMiner 10.0.7 onwards.
+  - *Pan*: Moves the graph horizontally. This is the default action.
 
   - *None*
 
 - **Right mouse button action on graph**: Select the action executed by dragging the right mouse button on a trend graph:
 
-  - *Zoom*: Selects a section of the graph to zoom in on. Default action from DataMiner 10.0.7 up to DataMiner 10.2.0 [CU22]/10.3.0 [CU10]/10.4.1. Available from DataMiner 10.0.7 onwards.
+  - *Zoom*: Selects a section of the graph to zoom in on. Default action prior to DataMiner 10.2.0 [CU22]/10.3.0 [CU10]/10.4.1.
 
-  - *Select*: Selects a part of the graph in order to [assign tags to it](xref:Defining_a_pattern). Default action from DataMiner 10.2.0 [CU22]/10.3.0 [CU10]/10.4.1 onwards. Prior to DataMiner 10.0.7, this action instead behaves like the *Zoom* action described above.
+  - *Select*: Selects a part of the graph in order to [assign tags to it](xref:Defining_a_pattern). Default action from DataMiner 10.2.0 [CU22]/10.3.0 [CU10]/10.4.1 onwards.
 
   - *Pan*: Moves the graph horizontally.
 
   - *None*
 
-- **Hotkey for mouse button action on graph**: Available from DataMiner 10.0.7 onwards. Allows you to specify which key can be used in order to apply an action on a trend graph by pressing this key and dragging with the left mouse button at the same time. The default hotkey is *Ctrl*. Other options are *Alt* and *Shift*.
+- **Hotkey for mouse button action on graph**: Allows you to specify which key can be used in order to apply an action on a trend graph by pressing this key and dragging with the left mouse button at the same time. The default hotkey is *Ctrl*. Other options are *Alt* and *Shift*.
 
-- **Hotkey + left mouse button action on graph**: Available from DataMiner 10.0.7 onwards. Select the action executed by pressing the hotkey configured in the setting above and dragging the left mouse button on a trend graph:
+- **Hotkey + left mouse button action on graph**: Select the action executed by pressing the hotkey configured in the setting above and dragging the left mouse button on a trend graph:
 
   - *Zoom*: Selects a section of the graph to zoom in on. Default action from DataMiner 10.2.0 [CU22]/10.3.0 [CU10]/10.4.1 onwards.
 
-  - *Select*: Selects a part of the graph in order to [assign tags to it](xref:Defining_a_pattern). Default action from DataMiner 10.0.7 up to DataMiner 10.2.0 [CU22]/10.3.0 [CU10]/10.4.1.
+  - *Select*: Selects a part of the graph in order to [assign tags to it](xref:Defining_a_pattern). Default action prior to DataMiner 10.2.0 [CU22]/10.3.0 [CU10]/10.4.1.
 
   - *Pan*: Moves the graph horizontally.
 
@@ -426,7 +417,7 @@ On the *Sidebar page,* or prior to DataMiner 10.2.0/10.1.3, the *Surveyor* page,
 
 - **Visualize trend predictions**: When this option is disabled, predicted trend data based on trend data analysis will no longer be displayed.
 
-- **Visualize change points**: Available from DataMiner 10.0.0/10.0.2 onwards. When this option is disabled, change points detected based on trend data analysis will no longer be displayed.
+- **Visualize change points**: When this option is disabled, change points detected based on trend data analysis will no longer be displayed.
 
 - **Update interval**: Available from DataMiner 10.3.0/10.2.4 onwards. Allows you to specify a custom refresh rate for trend graphs (ranging from 5 seconds to 5 minutes). By default, this is set to 2 minutes.
 
@@ -447,14 +438,6 @@ On the *Visual Overview* page, the following settings are available:
 
 ### Advanced settings
 
-On the *Advanced* page, the following settings are available:
-
-- **Group profile**: Select a group in the drop-down list to override all user settings with the settings of this group. This setting is no longer available from DataMiner 9.0.0 CU8 onwards.
+On the *Advanced* page, the following setting is available:
 
 - **DataMiner Cube User [username] reset**: Click the button *Factory defaults* to reset all settings back to default.
-
-> [!NOTE]
->
-> - If a setting other than the default has been applied, it will be displayed in bold. You can quickly reset to the default setting by clicking the *Reset to [setting]* field underneath the setting.
-> - If a setting requires that you enter a value in a box, and the value you entered is incorrect, the edge of the box will be displayed in red and the change to the setting will not be applied.
-> - It is possible to limit the changes a user can apply to the settings. For more information, see [Configuring a set of user group settings](xref:Configuring_a_set_of_user_group_settings).

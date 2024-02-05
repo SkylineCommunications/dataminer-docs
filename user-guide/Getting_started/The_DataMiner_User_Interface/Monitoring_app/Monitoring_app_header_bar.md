@@ -9,6 +9,8 @@ uid: Monitoring_app_header_bar
 
 The Monitoring app header bar contains the following items, from left to right:
 
+<!-- TODO: add screenshot header bar with numbered items, so we can change the text on this page to refer to the numbers -->
+
 - Apps button: The button in the top-left corner provides quick access to other DataMiner web apps.
 
 - *Monitoring* button: Click this button to return to the main page of the app at any time.
@@ -17,13 +19,13 @@ The Monitoring app header bar contains the following items, from left to right:
 
 - User button: A button with the initials or picture of the current user is displayed in the top-right corner. Click this button to open a menu that provides access to the following options:
 
-    - *Settings*: Allows you to configure the default page that is displayed when you open an element or a view card.
+  - *Settings*: Allows you to configure the default page that is displayed when you open an element or a view card.
 
-        > [!NOTE]
-        > Setting the Visual page as the default page can cause reduced performance.
+    > [!NOTE]
+    > Setting the Visual page as the default page can cause reduced performance.
 
-    - *About*: Displays information about the app.
+  - *About*: Displays information about the app.
 
-    - *Help*: Opens the DataMiner Help.
+  - *Help*: Opens the DataMiner Help.
 
-    - *Sign out*: Logs you out of the app and returns you to the logon screen.
+  - *Sign out*: Logs you out of the app and returns you to the logon screen.
