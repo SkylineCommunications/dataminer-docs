@@ -26,6 +26,6 @@ If you've made protocol changes but don't see them reflected in your GQI query r
 
 To resolve this:
 1. Launch your system's Task Manager utility.
-2. Look through the list of processes for the *Skyline DataMiner Helper* process. This process is responsible for managing GQI.
-3. Select the *Skyline DataMiner Helper* process and choose to end it. 
-4. After terminating the process, refresh your dashboard or application. This will prompt GQI to fetch the latest protocol changes and display accurate query results.
+1. Look through the list of processes for the *Skyline DataMiner Helper* process. This process is responsible for managing GQI.
+1. Select the *Skyline DataMiner Helper* process and choose to end it. 
+1. After terminating the process, refresh your dashboard or application. This will prompt GQI to fetch the latest protocol changes and display accurate query results.
