@@ -9,8 +9,10 @@ This tutorial demonstrates how you can create your first grid visualization.
 Expected duration: 5 minutes.
 
 > [!TIP]
-> See also: [Using the Template Editor](xref:Template_Editor)
-> See also: [Kata #16: Introducing grid components](https://community.dataminer.services/courses/kata-16/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> See also:
+>
+> - [Using the Template Editor](xref:Template_Editor)
+> - [Kata #16: Introducing grid components](https://community.dataminer.services/courses/kata-16/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 > [!NOTE]
 > This tutorial uses DataMiner version 10.4.1.
