@@ -43,7 +43,7 @@ When you click an item in the tree, it opens in a card:
 
 > [!NOTE]
 >
-> - For the right-click menu options in the Surveyor, see [Surveyor right-click menu](xref:Main_Cube_UI_components_prior_to_DataMiner_10#surveyor-right-click-menu).
+> - For the right-click menu options in the Surveyor, see [Surveyor right-click menu](#surveyor-right-click-menu).
 > - You can drag an element, service, view, or SLA from a card or from the Surveyor to another application, such as Microsoft Word or Outlook, to copy information about that DataMiner item to the application in question.
 
 ### Icons
@@ -51,7 +51,7 @@ When you click an item in the tree, it opens in a card:
 The icons that precede an item name in the tree show what kind of item it is and what state and alarm state it is in.
 
 > [!NOTE]
-> Depending on the user settings, the legacy icons may be displayed instead of the icons described below. For more information on the legacy icons, see [Icons](xref:Main_Cube_UI_components_prior_to_DataMiner_10#icons).
+> Depending on the user settings, the legacy icons may be displayed instead of the icons described below. These look similar to the icons displayed below but allow some [additional icon settings](#special-icon-settings).
 
 - There are specific icons for different types of items:
 
@@ -90,6 +90,32 @@ The icons that precede an item name in the tree show what kind of item it is and
   | White X on red background | Indicates that an element is in error state. |
   | Upwards arrow | Displayed next to a service child in case the capped severity of the service child is lower than the actual severity. The icon has the color of the severity that will bubble up to the parent service. |
   | Circle containing a horizontal line, for example: ![Unavailable element icon](~/user-guide/images/element_unavailable.png) | Indicates that the DMA hosting the item is currently unavailable. Though the information on the item is still available in the cache, it is not possible to execute any actions on the item. This icon is used from DataMiner 10.0.12 onwards. In this DataMiner version, it is only used for elements, and other items are not displayed when the DMA hosting them is unavailable. From DataMiner 10.0.13 onwards, it is also used for services and redundancy groups. |
+
+#### Special icon settings
+
+In the DataMiner settings, there are several options to show more alarm information next to an icon than just the current state.
+
+The following options are available:
+
+- **Split view alarm level**: Shows the alarm color of child views in a second rectangle separated from the alarm color of the elements directly in the view.
+
+- **View/element/service latch level**: Shows the latched alarm color in a smaller rectangle. This is the color of the previous highest alarm severity level of the item.
+
+    > [!NOTE]
+    > When this setting is activated, you can reset the latch level of items in the Surveyor. To do so, right-click the item and select *Reset latch level*.
+
+- **Timeout state overrules element alarm level**: Though normally a timeout state is shown separately from the last known element alarm level, you can also have the timeout override the alarm level.
+
+- **View aggregation level**: Indicates aggregated alarms on views with a triangle next to the colored bar indicating the view alarm state.
+
+> [!TIP]
+> See also:
+>
+> - [Icons settings](xref:User_settings#icons-settings)
+> - [Surveyor – Using latched and special icons](https://community.dataminer.services/video/surveyor-using-latched-and-special-icons/) ![Video](~/user-guide/images/video_Duo.png)
+
+> [!NOTE]
+> These icon settings are only available if the *Use modern icons* setting is **not** enabled.
 
 ### Surveyor right-click menu
 

@@ -1,88 +1,4 @@
 items:
-  - name: Alarms
-    topicUid: About_alarms
-    items:
-      - name: About alarms
-        topicUid: About_alarms
-        items:
-          - name: Alarm types
-            topicUid: Alarm_types
-          - name: Alarm hysteresis
-            topicUid: Alarm_hysteresis
-          - name: Alarm linking
-            topicUid: Alarm_linking
-          - name: Alarm filters
-            topicUid: Alarm_filters
-      - name: Alarm cards
-        topicUid: Alarm_cards
-      - name: Working with the Alarm Console
-        topicUid: Working_with_the_Alarm_Console
-        items:
-          - name: Manipulating the Alarm Console
-            topicUid: Manipulating_the_Alarm_Console
-          - name: Changing the layout of the Alarm Console
-            topicUid: ChangingTheAlarmConsoleLayout
-          - name: Using the collapsible side panel of the Alarm Console
-            topicUid: UsingTheCollapsibleSidePanel
-          - name: Working with the Alarm Console history slider
-            topicUid: WorkingWithTheAlarmConsoleHistorySlider
-          - name: Applying alarm filters in the Alarm Console
-            topicUid: ApplyingAlarmFiltersInTheAlarmConsole
-          - name: Using the RCA slider
-            topicUid: UsingTheRCASlider
-          - name: Configuring a custom alert sound for an alarm tab
-            topicUid: ConfiguringACustomAlertSoundForAnAlarmTab
-          - name: Working with the Alarm Console light bulb feature
-            topicUid: Light_Bulb_Feature
-          - name: Alarm Console columns
-            topicUid: AlarmConsoleColumns
-          - name: Alarm Console settings
-            topicUid: AlarmConsoleSettings
-          - name: Alarm Console right-click menu
-            topicUid: AlarmConsoleRightClickMenu
-      - name: Changing ownership of alarms
-        topicUid: Changing_ownership_of_alarms
-      - name: Masking and unmasking alarms
-        topicUid: Masking_and_unmasking_alarms
-      - name: Adding comments to an alarm
-        topicUid: Adding_comments_to_an_alarm
-      - name: Changing the read status of an alarm
-        topicUid: Changing_the_read_status_of_an_alarm
-      - name: Changing custom alarm properties
-        topicUid: Changing_custom_alarm_properties
-      - name: Clearing alarms
-        topicUid: Clearing_alarms
-      - name: Advanced analytics features in the Alarm Console
-        topicUid: Advanced_analytics_features_in_the_Alarm_Console
-        items:
-          - name: Behavioral anomaly detection
-            topicUid: Behavioral_anomaly_detection
-          - name: Proactive cap detection
-            topicUid: Proactive_cap_detection
-          - name: Automatic incident tracking
-            topicUid: Automatic_incident_tracking
-          - name: Monitoring of trend patterns
-            topicUid: Monitoring_of_trend_patterns
-          - name: Tutorials
-            topicUid: Anomaly_Tutorial
-            items:
-            - name: Detecting anomalies with DataMiner
-              topicUid: Anomaly_Tutorial
-      - name: Advanced alarm functionality
-        topicUid: Advanced_alarm_functionality
-        items:
-          - name: Changing the default alarm colors
-            topicUid: Changing_the_default_alarm_colors
-          - name: Enforcing motivation of alarm actions
-            topicUid: Enforcing_motivation_of_alarm_actions
-          - name: Making alarms without owner blink
-            topicUid: Making_alarms_without_owner_blink
-          - name: Displaying alarm statistics in the Surveyor
-            topicUid: Displaying_alarm_statistics_in_the_Surveyor
-          - name: Adding a custom command to the Alarm Console shortcut menu
-            topicUid: Adding_a_custom_command_to_the_Alarm_Console_shortcut_menu
-          - name: Alarm storm protection
-            topicUid: Alarm_storm_protection
   - name: Elements
     topicUid: About_elements
     items:
@@ -202,27 +118,6 @@ items:
             topicUid: Using_the_Lite_mode_shortcut_menu
       - name: Parameter dependencies
         topicUid: Parameter_dependencies
-  - name: Redundancy groups
-    topicUid: RedundancyGroups
-    items:
-      - name: About redundancy groups
-        topicUid: About_redundancy_groups
-      - name: Checking the current state of a redundancy group
-        topicUid: Checking_the_current_state_of_a_redundancy_group
-      - name: Creating a redundancy group
-        topicUid: Creating_a_redundancy_group
-      - name: Creating a redundancy group template
-        topicUid: Creating_a_redundancy_group_template
-      - name: Assigning elements to a redundancy group template
-        topicUid: Assigning_elements_to_a_redundancy_group_template
-      - name: Setting the priority of a primary or backup element
-        topicUid: Setting_the_priority_of_a_primary_or_backup_element
-      - name: Changing the redundancy mode
-        topicUid: Changing_the_redundancy_mode
-      - name: Manually switching between primary and backup elements
-        topicUid: Manually_switching_between_primary_and_backup_elements
-      - name: Setting a primary or backup element in maintenance
-        topicUid: Setting_a_primary_or_backup_element_in_maintenance
   - name: Services
     topicUid: About_services
     items:
@@ -281,6 +176,249 @@ items:
         topicUid: View_cards
       - name: Managing views
         topicUid: Managing_views
+  - name: Alarms
+    topicUid: About_alarms
+    items:
+      - name: About alarms
+        topicUid: About_alarms
+        items:
+          - name: Alarm types
+            topicUid: Alarm_types
+          - name: Alarm hysteresis
+            topicUid: Alarm_hysteresis
+          - name: Alarm linking
+            topicUid: Alarm_linking
+          - name: Alarm filters
+            topicUid: Alarm_filters
+      - name: Alarm cards
+        topicUid: Alarm_cards
+      - name: Working with the Alarm Console
+        topicUid: Working_with_the_Alarm_Console
+        items:
+          - name: Manipulating the Alarm Console
+            topicUid: Manipulating_the_Alarm_Console
+          - name: Changing the layout of the Alarm Console
+            topicUid: ChangingTheAlarmConsoleLayout
+          - name: Using the collapsible side panel of the Alarm Console
+            topicUid: UsingTheCollapsibleSidePanel
+          - name: Working with the Alarm Console history slider
+            topicUid: WorkingWithTheAlarmConsoleHistorySlider
+          - name: Applying alarm filters in the Alarm Console
+            topicUid: ApplyingAlarmFiltersInTheAlarmConsole
+          - name: Using the RCA slider
+            topicUid: UsingTheRCASlider
+          - name: Configuring a custom alert sound for an alarm tab
+            topicUid: ConfiguringACustomAlertSoundForAnAlarmTab
+          - name: Working with the Alarm Console light bulb feature
+            topicUid: Light_Bulb_Feature
+          - name: Alarm Console columns
+            topicUid: AlarmConsoleColumns
+          - name: Alarm Console settings
+            topicUid: AlarmConsoleSettings
+          - name: Alarm Console right-click menu
+            topicUid: AlarmConsoleRightClickMenu
+      - name: Changing ownership of alarms
+        topicUid: Changing_ownership_of_alarms
+      - name: Masking and unmasking alarms
+        topicUid: Masking_and_unmasking_alarms
+      - name: Adding comments to an alarm
+        topicUid: Adding_comments_to_an_alarm
+      - name: Changing the read status of an alarm
+        topicUid: Changing_the_read_status_of_an_alarm
+      - name: Changing custom alarm properties
+        topicUid: Changing_custom_alarm_properties
+      - name: Clearing alarms
+        topicUid: Clearing_alarms
+      - name: Advanced analytics features in the Alarm Console
+        topicUid: Advanced_analytics_features_in_the_Alarm_Console
+        items:
+          - name: Behavioral anomaly detection
+            topicUid: Behavioral_anomaly_detection
+          - name: Proactive cap detection
+            topicUid: Proactive_cap_detection
+          - name: Automatic incident tracking
+            topicUid: Automatic_incident_tracking
+          - name: Monitoring of trend patterns
+            topicUid: Monitoring_of_trend_patterns
+          - name: Tutorials
+            topicUid: Anomaly_Tutorial
+            items:
+            - name: Detecting anomalies with DataMiner
+              topicUid: Anomaly_Tutorial
+      - name: Advanced alarm functionality
+        topicUid: Advanced_alarm_functionality
+        items:
+          - name: Changing the default alarm colors
+            topicUid: Changing_the_default_alarm_colors
+          - name: Enforcing motivation of alarm actions
+            topicUid: Enforcing_motivation_of_alarm_actions
+          - name: Making alarms without owner blink
+            topicUid: Making_alarms_without_owner_blink
+          - name: Displaying alarm statistics in the Surveyor
+            topicUid: Displaying_alarm_statistics_in_the_Surveyor
+          - name: Adding a custom command to the Alarm Console shortcut menu
+            topicUid: Adding_a_custom_command_to_the_Alarm_Console_shortcut_menu
+          - name: Alarm storm protection
+            topicUid: Alarm_storm_protection
+  - name: Trending
+    topicUid: trending
+    items:
+      - name: Trending techniques
+        topicUid: Trending_techniques
+      - name: Displaying trend graphs
+        topicUid: Displaying_trend_graphs
+        items:
+          - name: Accessing trend information from a card
+            topicUid: Accessing_trend_information_from_a_card
+          - name: Accessing trend information from the Trending module
+            topicUid: Accessing_trend_information_from_the_Trending_module
+      - name: Working with trend graphs
+        topicUid: Manipulating_trend_graphs
+        items:
+          - name: Panning across a trend graph
+            topicUid: Panning_across_a_trend_graph
+          - name: Zooming in/out on a trend graph
+            topicUid: Zooming_in_out_on_a_trend_graph
+          - name: Exporting a trend graph
+            topicUid: Exporting_a_trend_graph
+          - name: Using the right-click menu
+            topicUid: Using_the_right-click_menu
+          - name: Displaying alarm template colors in trend graphs
+            topicUid: Displaying_alarm_template_colors_in_trend_graphs
+      - name: Advanced analytics features in trend graphs
+        topicUid: Advanced_analytics_trending
+        items:
+          - name: Working with trend predictions
+            topicUid: Working_with_trend_predictions
+          - name: Working with behavioral anomaly detection
+            topicUid: Working_with_behavioral_anomaly_detection
+          - name: Working with pattern matching
+            topicUid: Working_with_pattern_matching
+            items:
+              - name: Defining a pattern
+                topicUid: Defining_a_pattern
+              - name: Editing a pattern definition
+                topicUid: Editing_a_pattern_definition
+              - name: Deleting a pattern definition
+                topicUid: Deleting_a_pattern_definition
+              - name: Managing pattern definitions
+                topicUid: Managing_pattern_definitions
+          - name: Working with relation learning
+            topicUid: Working_with_relation_learning
+            items:
+              - name: Adding related parameters to a trend graph
+                topicUid: Adding_related_parameters_to_a_trend_graph
+              - name: Adding time-scoped related parameters to a trend graph
+                topicUid: Adding_time_scoped_related_parameters_to_a_trend_graph
+      - name: Working with histograms
+        topicUid: Viewing_trend_information_in_a_histogram
+        items:
+          - name: Viewing trend information in a histogram by drilling down on a parameter
+            topicUid: Viewing_trend_information_in_a_histogram_by_drilling_down_on_a_parameter
+          - name: Viewing trend information in a histogram on a view card
+            topicUid: Viewing_trend_information_in_a_histogram_on_a_view_card
+      - name: Working with trend groups
+        topicUid: Working_with_trend_groups
+        items:
+          - name: Working with the trend groups pane
+            topicUid: Working_with_the_trend_groups_pane
+          - name: Working with the parameter pane
+            topicUid: Working_with_the_parameter_pane
+      - name: Setting the default sliding window size for real-time trending
+        topicUid: Setting_the_default_sliding_window_size_for_real-time_trending
+  - name: Protocols and templates
+    topicUid: protocols
+    items:
+      - name: Protocols
+        topicUid: Protocols1
+        items:
+          - name: Adding a protocol or protocol version to your DataMiner System
+            topicUid: Adding_a_protocol_or_protocol_version_to_your_DataMiner_System
+          - name: Deleting a protocol or protocol version from your DataMiner System
+            topicUid: Deleting_a_protocol_or_protocol_version_from_your_DataMiner_System
+          - name: Promoting a protocol version to production version
+            topicUid: Promoting_a_protocol_version_to_production_version
+          - name: Managing Visio files linked to protocols
+            topicUid: Managing_Visio_files_linked_to_protocols
+          - name: Viewing protocol help
+            topicUid: Viewing_protocol_help
+          - name: Working with the elements tab
+            topicUid: Working_with_the_elements_tab
+          - name: Advanced protocol functionality
+            topicUid: Advanced_protocol_functionality
+      - name: Information templates
+        topicUid: Information_templates
+        items:
+          - name: Creating an information template
+            topicUid: Creating_an_information_template
+          - name: Uploading an information template file
+            topicUid: Uploading_an_information_template_file
+          - name: Activating an information template
+            topicUid: Activating_an_information_template
+          - name: Editing an information template
+            topicUid: Editing_an_information_template
+          - name: Duplicating an information template
+            topicUid: Duplicating_an_information_template
+          - name: Deleting an information template
+            topicUid: Deleting_an_information_template
+          - name: Editing the information template for one parameter
+            topicUid: Editing_the_information_template_for_one_parameter
+      - name: Alarm templates
+        topicUid: About_alarm_templates
+        items:
+          - name: About alarm templates
+            topicUid: About_alarm_templates
+          - name: Managing alarm templates
+            topicUid: Creating_an_alarm_template
+            items:
+              - name: Creating an alarm template
+                topicUid: Creating_an_alarm_template
+              - name: Uploading an alarm template
+                topicUid: Uploading_an_alarm_template
+              - name: Assigning an alarm template
+                topicUid: Assigning_an_alarm_template
+              - name: Deleting an alarm template
+                topicUid: Deleting_an_alarm_template
+          - name: Configuring alarm templates
+            topicUid: About_the_alarm_template_editor
+            items:
+              - name: About the alarm template editor
+                topicUid: About_the_alarm_template_editor
+              - name: Configuring normal alarm thresholds
+                topicUid: Configuring_normal_alarm_thresholds
+              - name: Configuring dynamic alarm thresholds
+                topicUid: Configuring_dynamic_alarm_thresholds
+              - name: Configuring hysteresis in an alarm template
+                topicUid: Configuring_alarm_hysteresis
+              - name: Configuring an alarm template to generate information messages
+                topicUid: Configuring_alarm_template_information_message
+              - name: Using conditions in an alarm template
+                topicUid: Using_conditions_in_an_alarm_template
+              - name: Configuring anomaly detection alarms for specific parameters
+                topicUid: Configuring_anomaly_detection_alarms
+              - name: Setting the autoclear options for alarms in an alarm template
+                topicUid: Setting_the_autoclear_option_in_alarm_template
+              - name: Scheduling an alarm template
+                topicUid: Scheduling_an_alarm_template
+          - name: Changing the alarm range for one parameter
+            topicUid: Changing_the_alarm_range_for_one_parameter
+          - name: Guidelines for assigning alarm severity levels
+            topicUid: Guidelines_for_assigning_alarm_severity_levels
+          - name: Alarm template groups
+            topicUid: Alarm_template_groups
+          - name: Exporting alarm template parameter data
+            topicUid: Exporting_alarm_template_parameter_data
+      - name: Trend templates
+        topicUid: About_trend_templates
+        items:
+          - name: About trend templates
+            topicUid: About_trend_templates
+          - name: Adding and deleting trend templates
+            topicUid: Adding_and_deleting_trend_templates
+          - name: Configuring trend templates
+            topicUid: Configuring_trend_templates
+          - name: Assigning trend templates
+            topicUid: Assigning_trend_templates
   - name: Visio drawings
     topicUid: visio
     items:
@@ -582,165 +720,27 @@ items:
             topicUid: Dynamic_table_filter_syntax
           - name: Visio style guide
             topicUid: Visio_style_guide
-  - name: Trending
-    topicUid: trending
+  - name: Redundancy groups
+    topicUid: RedundancyGroups
     items:
-      - name: Trending techniques
-        topicUid: Trending_techniques
-      - name: Displaying trend graphs
-        topicUid: Displaying_trend_graphs
-        items:
-          - name: Accessing trend information from a card
-            topicUid: Accessing_trend_information_from_a_card
-          - name: Accessing trend information from the Trending module
-            topicUid: Accessing_trend_information_from_the_Trending_module
-      - name: Working with trend graphs
-        topicUid: Manipulating_trend_graphs
-        items:
-          - name: Panning across a trend graph
-            topicUid: Panning_across_a_trend_graph
-          - name: Zooming in/out on a trend graph
-            topicUid: Zooming_in_out_on_a_trend_graph
-          - name: Exporting a trend graph
-            topicUid: Exporting_a_trend_graph
-          - name: Using the right-click menu
-            topicUid: Using_the_right-click_menu
-          - name: Displaying alarm template colors in trend graphs
-            topicUid: Displaying_alarm_template_colors_in_trend_graphs
-      - name: Advanced analytics features in trend graphs
-        topicUid: Advanced_analytics_trending
-        items:
-          - name: Working with trend predictions
-            topicUid: Working_with_trend_predictions
-          - name: Working with behavioral anomaly detection
-            topicUid: Working_with_behavioral_anomaly_detection
-          - name: Working with pattern matching
-            topicUid: Working_with_pattern_matching
-            items:
-              - name: Defining a pattern
-                topicUid: Defining_a_pattern
-              - name: Editing a pattern definition
-                topicUid: Editing_a_pattern_definition
-              - name: Deleting a pattern definition
-                topicUid: Deleting_a_pattern_definition
-              - name: Managing pattern definitions
-                topicUid: Managing_pattern_definitions
-          - name: Working with relation learning
-            topicUid: Working_with_relation_learning
-            items:
-              - name: Adding related parameters to a trend graph
-                topicUid: Adding_related_parameters_to_a_trend_graph
-              - name: Adding time-scoped related parameters to a trend graph
-                topicUid: Adding_time_scoped_related_parameters_to_a_trend_graph
-      - name: Working with histograms
-        topicUid: Viewing_trend_information_in_a_histogram
-        items:
-          - name: Viewing trend information in a histogram by drilling down on a parameter
-            topicUid: Viewing_trend_information_in_a_histogram_by_drilling_down_on_a_parameter
-          - name: Viewing trend information in a histogram on a view card
-            topicUid: Viewing_trend_information_in_a_histogram_on_a_view_card
-      - name: Working with trend groups
-        topicUid: Working_with_trend_groups
-        items:
-          - name: Working with the trend groups pane
-            topicUid: Working_with_the_trend_groups_pane
-          - name: Working with the parameter pane
-            topicUid: Working_with_the_parameter_pane
-      - name: Setting the default sliding window size for real-time trending
-        topicUid: Setting_the_default_sliding_window_size_for_real-time_trending
-  - name: Protocols and templates
-    topicUid: protocols
-    items:
-      - name: Protocols
-        topicUid: Protocols1
-        items:
-          - name: Adding a protocol or protocol version to your DataMiner System
-            topicUid: Adding_a_protocol_or_protocol_version_to_your_DataMiner_System
-          - name: Deleting a protocol or protocol version from your DataMiner System
-            topicUid: Deleting_a_protocol_or_protocol_version_from_your_DataMiner_System
-          - name: Promoting a protocol version to production version
-            topicUid: Promoting_a_protocol_version_to_production_version
-          - name: Managing Visio files linked to protocols
-            topicUid: Managing_Visio_files_linked_to_protocols
-          - name: Viewing protocol help
-            topicUid: Viewing_protocol_help
-          - name: Working with the elements tab
-            topicUid: Working_with_the_elements_tab
-          - name: Advanced protocol functionality
-            topicUid: Advanced_protocol_functionality
-      - name: Information templates
-        topicUid: Information_templates
-        items:
-          - name: Creating an information template
-            topicUid: Creating_an_information_template
-          - name: Uploading an information template file
-            topicUid: Uploading_an_information_template_file
-          - name: Activating an information template
-            topicUid: Activating_an_information_template
-          - name: Editing an information template
-            topicUid: Editing_an_information_template
-          - name: Duplicating an information template
-            topicUid: Duplicating_an_information_template
-          - name: Deleting an information template
-            topicUid: Deleting_an_information_template
-          - name: Editing the information template for one parameter
-            topicUid: Editing_the_information_template_for_one_parameter
-      - name: Alarm templates
-        topicUid: About_alarm_templates
-        items:
-          - name: About alarm templates
-            topicUid: About_alarm_templates
-          - name: Managing alarm templates
-            topicUid: Creating_an_alarm_template
-            items:
-              - name: Creating an alarm template
-                topicUid: Creating_an_alarm_template
-              - name: Uploading an alarm template
-                topicUid: Uploading_an_alarm_template
-              - name: Assigning an alarm template
-                topicUid: Assigning_an_alarm_template
-              - name: Deleting an alarm template
-                topicUid: Deleting_an_alarm_template
-          - name: Configuring alarm templates
-            topicUid: About_the_alarm_template_editor
-            items:
-              - name: About the alarm template editor
-                topicUid: About_the_alarm_template_editor
-              - name: Configuring normal alarm thresholds
-                topicUid: Configuring_normal_alarm_thresholds
-              - name: Configuring dynamic alarm thresholds
-                topicUid: Configuring_dynamic_alarm_thresholds
-              - name: Configuring hysteresis in an alarm template
-                topicUid: Configuring_alarm_hysteresis
-              - name: Configuring an alarm template to generate information messages
-                topicUid: Configuring_alarm_template_information_message
-              - name: Using conditions in an alarm template
-                topicUid: Using_conditions_in_an_alarm_template
-              - name: Configuring anomaly detection alarms for specific parameters
-                topicUid: Configuring_anomaly_detection_alarms
-              - name: Setting the autoclear options for alarms in an alarm template
-                topicUid: Setting_the_autoclear_option_in_alarm_template
-              - name: Scheduling an alarm template
-                topicUid: Scheduling_an_alarm_template
-          - name: Changing the alarm range for one parameter
-            topicUid: Changing_the_alarm_range_for_one_parameter
-          - name: Guidelines for assigning alarm severity levels
-            topicUid: Guidelines_for_assigning_alarm_severity_levels
-          - name: Alarm template groups
-            topicUid: Alarm_template_groups
-          - name: Exporting alarm template parameter data
-            topicUid: Exporting_alarm_template_parameter_data
-      - name: Trend templates
-        topicUid: About_trend_templates
-        items:
-          - name: About trend templates
-            topicUid: About_trend_templates
-          - name: Adding and deleting trend templates
-            topicUid: Adding_and_deleting_trend_templates
-          - name: Configuring trend templates
-            topicUid: Configuring_trend_templates
-          - name: Assigning trend templates
-            topicUid: Assigning_trend_templates
+      - name: About redundancy groups
+        topicUid: About_redundancy_groups
+      - name: Checking the current state of a redundancy group
+        topicUid: Checking_the_current_state_of_a_redundancy_group
+      - name: Creating a redundancy group
+        topicUid: Creating_a_redundancy_group
+      - name: Creating a redundancy group template
+        topicUid: Creating_a_redundancy_group_template
+      - name: Assigning elements to a redundancy group template
+        topicUid: Assigning_elements_to_a_redundancy_group_template
+      - name: Setting the priority of a primary or backup element
+        topicUid: Setting_the_priority_of_a_primary_or_backup_element
+      - name: Changing the redundancy mode
+        topicUid: Changing_the_redundancy_mode
+      - name: Manually switching between primary and backup elements
+        topicUid: Manually_switching_between_primary_and_backup_elements
+      - name: Setting a primary or backup element in maintenance
+        topicUid: Setting_a_primary_or_backup_element_in_maintenance
   - name: Documents
     topicUid: About_the_Documents_module
     items:
@@ -752,10 +752,3 @@ items:
         topicUid: Managing_the_document_folders
       - name: Adding documents, hyperlinks, or email addresses
         topicUid: Adding_documents_hyperlinks_or_email_addresses
-  - name: Chat collaboration
-    topicUid: chat
-    items:
-      - name: Chat collaboration from DataMiner 10.0.0/10.0.2 onwards
-        topicUid: Chat_collaboration_from_DataMiner_10_0_0_10_0_2_onwards
-      - name: Chat collaboration prior to DataMiner 10.0.0/10.0.2
-        topicUid: Chat_collaboration_prior_to_DataMiner_10_0_0_10_0_2

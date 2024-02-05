@@ -2,7 +2,9 @@
 uid: Part1GettingStarted
 ---
 
-## Getting started with DataMiner
+# Getting started with DataMiner
+
+<!-- TODO: update icons to new structure -->
 
 <div class="row"> 
   <div class="column">
@@ -12,14 +14,11 @@ uid: Part1GettingStarted
     <a href="/user-guide/Getting_started/BasicConcepts/BasicConcepts.html" title="Basic Concepts" target="_self"><img src="~/user-guide/images/Docs_BasicConcepts.svg" style="width:100%"></a>
   </div>
   <div class="column">
-    <a href="/user-guide/Getting_started/DataMiner_System_Layout/DataMiner_System_Layout.html" title="System Layout" target="_self"><img src="~/user-guide/images/Docs_SystemLayout.svg" style="width:100%"></a>
-  </div>  
+    <a href="/user-guide/Getting_started/Accessing_DataMiner/Accessing_DataMiner.html" title="Accessing DataMiner" target="_self"><img src="~/user-guide/images/Docs_AccessingDataMiner.svg" style="width:100%"></a>
+  </div>
 </div>
 
 <div class="row"> 
-  <div class="column">
-    <a href="/user-guide/Getting_started/Accessing_DataMiner/Accessing_DataMiner.html" title="Accessing DataMiner" target="_self"><img src="~/user-guide/images/Docs_AccessingDataMiner.svg" style="width:100%"></a>
-  </div>
   <div class="column">
     <a href="/user-guide/Getting_started/The_DataMiner_User_Interface/The_DataMiner_User_Interface.html" title="DataMiner user interface" target="_self"><img src="~/user-guide/images/Docs_DataMinerUI.svg" style="width:100%"></a>
   </div>

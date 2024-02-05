@@ -73,6 +73,8 @@ items:
       - name: Alerter
         topicUid: Alerter
         items:
+          - name: Accessing Alerter
+            topicUid: Accessing_Alerter
           - name: Working with the Alerter alarm list
             topicUid: Working_with_the_Alerter_alarm_list
           - name: Communicating with other DataMiner users via Alerter
@@ -121,6 +123,8 @@ items:
       - name: DataMiner Taskbar Utility
         topicUid: DataMiner_Taskbar_Utility
         items:
+          - name: Accessing the DataMiner Taskbar Utility
+            topicUid: Accessing_the_DataMiner_Taskbar_Utility
           - name: Taskbar Utility shortcut menu
             topicUid: Taskbar_Utility_shortcut_menu
           - name: Taskbar Utility command line options

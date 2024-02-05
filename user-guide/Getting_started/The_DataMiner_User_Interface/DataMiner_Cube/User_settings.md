@@ -326,7 +326,7 @@ These settings allow you to specify which alarm levels and icons are shown next 
 - **Service latch level**: In the drop-down list next to this setting, choose either *Show* to show the latch level for services, or *Hide* to hide it. Not supported if *Use modern icons* is selected.
 
 > [!TIP]
-> See also: [Special icon settings](xref:Main_Cube_UI_components_prior_to_DataMiner_10#special-icon-settings)
+> See also: [Special icon settings](xref:DataMiner_Cube_sidebar#special-icon-settings)
 
 ### Regional settings
 

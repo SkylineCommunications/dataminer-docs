@@ -1,10 +1,15 @@
 ---
-uid: Chat_collaboration_from_DataMiner_10_0_0_10_0_2_onwards
+uid: chat
 ---
 
-# Chat collaboration from DataMiner 10.0.0/10.0.2 onwards
+# Chat collaboration
 
-### Starting a chat session with a DataMiner user
+In DataMiner Cube, it is possible to exchange chat messages with other users of your DataMiner System.
+
+> [!NOTE]
+> All chat messages exchanged by DataMiner users are logged as information events. This means that they can be used to trigger e.g. Correlation rules.
+
+## Starting a chat session with a DataMiner user
 
 1. Click the user icon in the top-right corner of the Cube UI.
 
@@ -18,7 +23,7 @@ uid: Chat_collaboration_from_DataMiner_10_0_0_10_0_2_onwards
 
 1. In the box at the bottom of the panel, enter the chat message and press Enter or click *Send*.
 
-### Responding to a chat message sent by another user
+## Responding to a chat message sent by another user
 
 If a DataMiner user sends you a chat message while the chat collaboration panel is not open, the user icon in the top-right corner of the Cube UI will blink to signal this.
 

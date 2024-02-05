@@ -57,13 +57,13 @@ This section lists tips and tricks on how to use DataMiner Cube, including the t
 
 ## About the Surveyor
 
-- Did you know that you can drag views, elements, services and SLAs directly from DataMiner Cube onto emails or open documents? You can do this from the Surveyor, but also from a view card data page or from a Visual Overview. See [Surveyor](xref:Main_Cube_UI_components_prior_to_DataMiner_10#surveyor).
+- Did you know that you can drag views, elements, services and SLAs directly from DataMiner Cube onto emails or open documents? You can do this from the Surveyor, but also from a view card data page or from a Visual Overview. See [Surveyor](xref:DataMiner_Cube_sidebar#surveyor-pane).
 
-- Would you like the Surveyor to display more information in the blink of an eye? Check out the Icons settings, by clicking the user button in the header and selecting *Settings* > *Icons*. See [Special icon settings](xref:Main_Cube_UI_components_prior_to_DataMiner_10#special-icon-settings).
+- Would you like the Surveyor to display more information in the blink of an eye? Check out the Icons settings, by clicking the user button in the header and selecting *Settings* > *Icons*. See [Special icon settings](xref:DataMiner_Cube_sidebar#special-icon-settings).
 
 - The Surveyor can be enriched with statistics, such as the number of alarms in a view. See [Displaying alarm statistics in the Surveyor](xref:Displaying_alarm_statistics_in_the_Surveyor).
 
-- Would you like to have certain elements, views, services or apps easily available? Pin them in the recent activity list (also available in the Monitoring app). [Recent items](xref:Main_Cube_UI_components_prior_to_DataMiner_10#recent-items).
+- Would you like to have certain elements, views, services or apps easily available? Pin them in the recent activity list (also available in the Monitoring app). See [Activity pane](xref:DataMiner_Cube_sidebar#activity-pane).
 
 - Do you want to copy several elements from one view to another? Select them on the source view card and drag them to the target view in the Surveyor in drag-and-drop editing mode.
 

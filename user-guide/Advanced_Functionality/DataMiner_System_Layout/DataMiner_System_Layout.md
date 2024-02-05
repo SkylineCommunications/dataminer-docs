@@ -26,7 +26,7 @@ DataMiner client applications only need to connect to one DMA in the DMS, and th
 In other words, a DataMiner client can access the DataMiner System by connecting to any DMA, and it will get a consolidated view of the entire managed operation and all its managed objects across all DMAs in the DMS.
 
 > [!TIP]
-> See also: [Accessing DataMiner](xref:DataminerApplications)
+> See also: [Client apps](xref:Client_apps)
 
 ## DataMiner database
 

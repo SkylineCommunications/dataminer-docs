@@ -1,4 +1,6 @@
 items:
+  - name: DataMiner System layout
+    topicUid: GeneralLayout
   - name: DataMiner Agents
     topicUid: DataminerAgents
     items:

@@ -1,8 +1,8 @@
 ---
-uid: Opening_the_browser_app
+uid: Using_the_browser_app
 ---
 
-# Opening the browser application
+# Using the browser application
 
 While this is no longer recommended, it is possible to use DataMiner Cube as a browser app. In the past, Internet Explorer was used for this, but now you can use Microsoft Edge in IE compatibility mode (see [Configuring Microsoft Edge to run DataMiner Cube](xref:Configuring_Microsoft_edge_to_run_Cube)) or Chrome with the [IE Tab extension](https://chrome.google.com/webstore/detail/ie-tab/hehijbfgiekmjfkfjpbkbammjbdenadd).
 
@@ -18,6 +18,7 @@ https://[DMA]/dataminercube
 > - In the above-mentioned address, replace “\[DMA\]” by the IP address or the hostname of the DataMiner Agent you want to connect to.
 > - If DataMiner Cube has been set as the default client, it is not necessary to add “*/dataminercube*” in the URL.
 > - DataMiner Cube will automatically disconnect when the DMA to which you are connected goes offline.
+> - It is possible to connect to Cube using specific [URL arguments](xref:Options_for_opening_DataMiner_Cube).
 > - It is good practice to encode URLs according to the W3C guidelines. For more information, see <http://www.w3schools.com/tags/ref_urlencode.asp>.
 
 > [!CAUTION]
