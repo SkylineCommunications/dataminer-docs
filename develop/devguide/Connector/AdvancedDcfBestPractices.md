@@ -41,7 +41,7 @@ You can minimize or avoid this impact but will lose the functionality of seeing 
 
 ### Internal
 
-Use the DCF Helper, which contains methods for you to create connections safely using SLNet. Make sure these connections are only updated or created as necessary. Additional updates will increase the load on the SLProtocol and SLNet processes.
+Use the [DCF Helper](xref:AdvancedDcfHelper), which contains methods for you to create connections safely using SLNet. Make sure these connections are only updated or created as necessary. Additional updates will increase the load on the SLProtocol and SLNet processes.
 
 ### External
 

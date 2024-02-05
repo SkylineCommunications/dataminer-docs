@@ -52,6 +52,12 @@ maps.aspx?config=MyConfigFile&dmyElement=7/46840
 maps.aspx?config=MyConfigFile&dmyElement=VesselData
 ```
 
+#### DataMiner Object Models: New 'GetDifferences' method to compare two DOM instances [ID_38364]
+
+<!-- MR 10.5.0 - FR 10.4.2 -->
+
+The `DomInstanceCrudMeta` input object of a DOM CRUD script has a new `GetDifferences` method that allows you to see the changes made to a DOM instance. It will compare the previousVersion and the currentVersion of the instance in question, and return the list of differences found.
+
 ## Changes
 
 ### Breaking changes
@@ -124,10 +130,11 @@ Up to now, if history storage was enabled, when DomInstances were created, updat
 
 From now on, for every batch of DomInstances that are processed in bulk, the history records will also be processed in bulk.
 
-#### Security enhancements [ID_38263] [ID_38386]
+#### Security enhancements [ID_38263] [ID_38386] [ID_38514]
 
 <!-- 38263: MR 10.5.0 - FR 10.4.3 -->
 <!-- 38386: MR 10.3.0 [CU12] - FR 10.4.3 -->
+<!-- 38514: MR 10.4.0 - FR 10.4.3 -->
 
 A number of security enhancements have been made.
 
@@ -198,6 +205,14 @@ For parameters of which the trend data behavior is mostly stable, with only infr
 
 From now on, trend data pattern records will no longer be deleted from the Elasticsearch/OpenSearch database.
 
+#### Enhanced performance when updating cell-based subscriptions in SLNet [ID_38445]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+Because of a number of enhancements, overall performance has increased when updating cell-based subscriptions in SLNet.
+
+These subscriptions mostly originate from visual overviews.
+
 #### GQI: Enhanced performance when executing 'Get parameters from elements' queries for parameter tables [ID_38460]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
@@ -243,11 +258,25 @@ For detailed information about the changes included in those versions, refer to 
 
 The accuracy of proactive cap detection events (i.e. forecasted alarms) reporting data range violations has been improved.
 
+#### Service & Resource Management: Enhanced performance when adding or updating bookings [ID_38521]
+
+<!-- MR 10.4.0 - FR 10.4.3 -->
+
+Because of a number of enhancements, overall performance has increased when adding or updating bookings, especially on systems with a large number of bookings.
+
 #### SLAnalytics - Behavioral anomaly detection: Enhanced detection of change points of type flatline [ID_38528]
 
 <!-- MR 10.4.0 - FR 10.4.3 -->
 
 Change point detection accuracy has been improved for change points of type flatline.
+
+#### SLAnalytics: Notification alarm 'Failed to start Analytics feature(s)...' will now be cleared automatically [ID_38621]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+The following notification alarm, generated when an SLAnalytics feature failed to start up, will now be automatically cleared when that same feature starts up correctly.
+
+`Failed to start x Analytics feature(s). Check the Analytics logging (SLAnalytics.txt) for more information.`
 
 ### Fixes
 
@@ -337,8 +366,22 @@ When SLAnalytics was handling large amounts of traffic, in some cases, certain p
 
 Also, a large number of low-severity change points were generated without a label. Those have now been reduced.
 
+#### SLAnalytics - Pattern matching: A match of one subpattern would incorrectly be considered a match of the entire multivariate pattern [ID_38587]
+
+<!-- MR 10.4.0 [CU1] - FR 10.4.3 -->
+
+When the streaming method was being used, a match detected for one subpattern of a multivariate pattern would incorrectly be considered a match of that entire multivariate pattern.
+
+Although the suggestion events were generated correctly, the pattern matches would not be indicated correctly on the trend graphs.
+
 #### SLAnalytics features would not start up correctly after a database connection problem [ID_38600]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
 
 Up to now, when writing to the database or reading from the database failed, a retry was attempted after 5 seconds. In some cases, especially when the SLNet connection was lost during startup, that retry would also fail, causing certain SLAnalytics features to not start up correctly. From now on, when writing to the database or reading from the database fails, SLAnalytics will wait longer than 5 seconds before attempting a retry.
+
+#### Protocols: IDisposable QActions would incorrectly not be disposed [ID_38605]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+When DataMiner was processing all QActions in order to call the `Dispose` method on the QActions that implement `IDisposable`, it would incorrectly no longer call the `Dispose` method on QActions that implement `IDisposable` after processing a QAction that did not implement `IDisposable`.

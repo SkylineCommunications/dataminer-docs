@@ -53,10 +53,6 @@ For the inter-DMA communication, like for the communication with DataMiner Cube,
 
 To enable gRPC for the communication between DataMiner Agents in a cluster, add [redirects in DMS.xml](xref:DMS_xml#redirects-subtag).
 
-#### NATS
-
-From version 10.1.0/10.1.1 onwards, DataMiner relies on NATS for some inter-process communication. By default, this NATS traffic is not yet encrypted. For more information, refer to the [official NATS documentation on enabling TLS encryption](https://docs.nats.io/running-a-nats-service/configuration/securing_nats/tls).
-
 ## DataMiner Webpages hardening
 
 ### HTTPS

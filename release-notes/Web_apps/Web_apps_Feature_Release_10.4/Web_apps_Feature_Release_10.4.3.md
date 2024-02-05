@@ -88,6 +88,12 @@ In the Dashboards app and the low-code apps, the popup windows have been redesig
 
 Up to now, when working with the template editor, only text overrides could be reset. From now on, all overrides have a dedicate reset button.
 
+#### Monitoring app: Zooming and panning in visual overviews [ID_38395]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+From now on, the Monitoring app allows you to zoom and pan in visual overviews.
+
 #### DataMiner web apps updated to Angular 17 [ID_38468]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
@@ -207,6 +213,16 @@ When you had selected an item at the top of a grid component, the loader bar wou
 
 From now on, when the loader bar appears while an item is selected, it will always appear in front of the selected item.
 
+#### Low-Code Apps: Action editor issues [ID_38470]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+The following action editor issues have now been fixed:
+
+- The description would not update when switching from an open page action to a navigate action.
+- The *Open an app* action could no longer be configured.
+- The *Open context menu* action would only be validated when the mouse pointer was moved, and an error would occur when that same action was executed without having been configured correctly.
+
 #### Monitoring app: Incorrect alignment of element parameters [ID_38482]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
@@ -245,8 +261,44 @@ When you tried to cancel the deletion of a query used in a component, an error c
 
 When you exported table data with text fields that contained double quotes (") to a CSV file, and then tried to import that file into e.g. Microsoft Excel, the data in the file would not get imported correctly.
 
+#### Dashboards app & Low-Code Apps - GQI: Components with multiple queries would not get updated correctly [ID_38571]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+When a component had multiple queries assigned, in some cases, updates would not get processed correctly. For example, some rows would incorrectly be added twice.
+
 #### Dashboards app & Low-Code Apps: Form and Stepper components using DOM instances would show an error each time another instance was deleted in the same module [ID_38602]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
 
 *Form* and *Stepper* components using DOM instances would incorrectly show a `This instance no longer exists` error each time another DOM instance was deleted in the same module.
+
+#### Dashboards app & Low-Code Apps - Query builder: Updated query would not be saved [ID_38622]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+In some cases, the query builder would not save an updated query. This issue could especially occur when you had updated a query on which another query was based.
+
+#### Dashboards app & Low-Code Apps: Not possible to navigate within the Timeline component when a 'Nothing to show' message was being displayed [ID_38625]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+Up to now, it would not be possible to navigate within the Timeline component when a `Nothing to show` message was being displayed.
+
+#### Dashboards app & Low-Code Apps - Numeric input component: Component update would be triggered when opening the Layout tab [ID_38642]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+When, in edit mode, you opened the *Layout* tab of a *Numeric input* component, a component update would incorrect be triggered.
+
+#### Dashboards app & Low-Code Apps: Timeline component would not show the selection boxes to alter its dimensions [ID_38653]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+In some cases, a *Timeline* component would incorrectly not show the selection boxes to alter its dimensions.
+
+#### Dashboards app & Low-Code Apps: Table component would not allow to copy data in an insecure environment [ID_38660]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+When a dashboard or low-code app was used in an insecure environment (e.g. when using HTTP instead of HTTPS), a table component would not allow you to open the context menu used to copy data.

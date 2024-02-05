@@ -287,6 +287,15 @@ This entry will contain the following information:
 - The connected hostname
 - The raw text of the client connection (includes connection property data such as *AmountCallsIn*, *AmountCallsOut*, *AmountInitiatedConnectionChecks*, *AmountCallsInProgress*, *AmountCallsWaiting*, etc.)
 
+#### DataMiner Cube - Logging: Viewing the logging of enhanced services [ID_38623]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
+
+In Cube, you can now view the logging of an enhanced service by doing one of the following:
+
+- Open the card of an enhanced service, open its hamburger menu, and choose *View > Log*.
+- In the Surveyor, right-click an enhanced service, and choose *View > Log*.
+
 ### Fixes
 
 #### DataMiner Cube: Problem when adding up [Start Time:] placeholders [ID_37661]
@@ -584,3 +593,15 @@ In the *Settings* windows, the description of the *Filter the alarms before they
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
 
 When a redundancy group included a primary or backup element that had been imported by means of a DELT package, in some cases, another element would incorrectly be displayed instead of the imported element.
+
+#### DataMiner Cube - Correlation: Not possible to enable or disable any of the options for the 'Set parameter' action [ID_38616]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
+
+When editing a correlation rule in which a *Set Parameter* action had previously been configured, up to now, enabling or disabling any of the options for that action (e.g. *Execute on base alarm updates*) would incorrectly not enable the *Apply* button. As a result, it would not be possible to save the correlation rule after enabling or disabling some of those options.
+
+#### DataMiner Cube: Sidebar would not contain any buttons [ID_38652]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
+
+In some rare cases, the DataMiner Cube sidebar would not contain any buttons.

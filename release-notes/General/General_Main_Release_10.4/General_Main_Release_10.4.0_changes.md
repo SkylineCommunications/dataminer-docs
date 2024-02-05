@@ -134,7 +134,7 @@ From now on, when you zoom in or out, the data of the previous zoom level will s
 
 Because of a number of enhancements, overall performance has increased when fetching relation information for the automatic incident tracking feature.
 
-#### Security enhancements [ID_35434] [ID_35997] [ID_36319] [ID_36624] [ID_36928] [ID_37345] [ID_37540] [ID_37637]
+#### Security enhancements [ID_35434] [ID_35997] [ID_36319] [ID_36624] [ID_36928] [ID_37345] [ID_37540] [ID_37637] [ID_38514]
 
 <!-- 35434: MR 10.4.0 - FR 10.3.4 -->
 <!-- 35997: MR 10.4.0 - FR 10.3.5 -->
@@ -143,6 +143,7 @@ Because of a number of enhancements, overall performance has increased when fetc
 <!-- 37345: MR 10.4.0 - FR 10.3.11 -->
 <!-- 37540: MR 10.4.0 - FR 10.3.12 -->
 <!-- 37637 (part of 37734): MR 10.4.0 - FR 10.4.2 -->
+<!-- 38514: MR 10.4.0 - FR 10.4.3 -->
 
 A number of security enhancements have been made.
 
@@ -925,6 +926,12 @@ Because of a number of enhancements with regard to memory usage, overall perform
 <!-- MR 10.4.0 - FR 10.4.3 -->
 
 The accuracy of proactive cap detection events (i.e. forecasted alarms) reporting data range violations has been improved.
+
+#### Service & Resource Management: Enhanced performance when adding or updating bookings [ID_38521]
+
+<!-- MR 10.4.0 - FR 10.4.3 -->
+
+Because of a number of enhancements, overall performance has increased when adding or updating bookings, especially on systems with a large number of bookings.
 
 #### SLAnalytics - Behavioral anomaly detection: Enhanced detection of change points of type flatline [ID_38528]
 

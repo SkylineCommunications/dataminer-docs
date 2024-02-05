@@ -77,6 +77,14 @@ DataMiner upgrade actions related to SLAnalytics features now also support Cassa
 
 From now on, trend data pattern records will no longer be deleted from the Elasticsearch/OpenSearch database.
 
+#### Enhanced performance when updating cell-based subscriptions in SLNet [ID_38445]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+Because of a number of enhancements, overall performance has increased when updating cell-based subscriptions in SLNet.
+
+These subscriptions mostly originate from visual overviews.
+
 #### GQI: Enhanced performance when executing 'Get parameters from elements' queries for parameter tables [ID_38460]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
@@ -84,6 +92,14 @@ From now on, trend data pattern records will no longer be deleted from the Elast
 When a *Get parameters from elements* query is executed for a parameter table, from now on, the table sessions that are used to resolve those tables in parallel will be closed asynchronously.
 
 As a result, overall performance of clients like the Dashboards app or a low-code app will significantly increase when executing this type of queries.
+
+#### SLAnalytics: Notification alarm 'Failed to start Analytics feature(s)...' will now be cleared automatically [ID_38621]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+The following notification alarm, generated when an SLAnalytics feature failed to start up, will now be automatically cleared when that same feature starts up correctly.
+
+`Failed to start x Analytics feature(s). Check the Analytics logging (SLAnalytics.txt) for more information.`
 
 ### Fixes
 
@@ -164,3 +180,9 @@ When a client application was connected to a DataMiner Agent via a gRPC connecti
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
 
 Up to now, when writing to the database or reading from the database failed, a retry was attempted after 5 seconds. In some cases, especially when the SLNet connection was lost during startup, that retry would also fail, causing certain SLAnalytics features to not start up correctly. From now on, when writing to the database or reading from the database fails, SLAnalytics will wait longer than 5 seconds before attempting a retry.
+
+#### Protocols: IDisposable QActions would incorrectly not be disposed [ID_38605]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+When DataMiner was processing all QActions in order to call the `Dispose` method on the QActions that implement `IDisposable`, it would incorrectly no longer call the `Dispose` method on QActions that implement `IDisposable` after processing a QAction that did not implement `IDisposable`.

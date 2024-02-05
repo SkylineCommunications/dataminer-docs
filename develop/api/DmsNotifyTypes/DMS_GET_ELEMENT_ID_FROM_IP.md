@@ -4,6 +4,9 @@ uid: DMS_GET_ELEMENT_ID_FROM_IP
 
 # DMS_GET_ELEMENT_ID_FROM_IP (76)
 
+> [!WARNING]
+> The use of DMS Notify types has been deprecated. Use types from the [Class Library](xref:ClassLibraryIntroduction) instead.
+
 Gets the global element ID of (the) element(s) configured with the provided IP and bus address.
 
 ```csharp
@@ -26,8 +29,10 @@ string globalElementID = (string)result;
 - type (int): Specifies the notify type. To perform a DMS_GET_ELEMENT_ID_FROM_IP call, set this to 76.
 - subType (int): Specifies the sub type. Not applicable for DMS_GET_ELEMENT_ID_FROM_IP calls. Set this to 0.
 - ipBus (string[]):
+
   - ip: IP address
   - bus: bus address
+
 - result (object): global element ID(s) (DMA ID/element ID) as string.
 
 ## Remarks
