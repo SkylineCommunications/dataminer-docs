@@ -194,7 +194,7 @@ In the *view* tab of the ribbon, you can do the following:
 
 - To change the size of the settings pane, drag the edge of the pane. Click the blue bar to the right of the pane to collapse or expand it entirely.
 
-- To change the units used in the real-time display, next to *Amplitude units* or *frequency units*, select a different unit in the drop-down list. From DataMiner 9.5.4 onwards, *Sweeptime units* can also be customized.
+- To change the units used in the real-time display, next to *Amplitude units* or *frequency units*, select a different unit in the drop-down list. *Sweeptime units* can also be customized.
 
   The change of units will be applied everywhere on the spectrum analyzer card, including on the real-time display.
 

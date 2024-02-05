@@ -124,7 +124,7 @@ Below are the basic steps you can follow to configure a spectrum monitor. Depend
    1. Repeat from b. for each parameter you want to add.
 
    > [!NOTE]
-   > From DataMiner 9.5.12 onwards, it is possible to import and export parameters using the buttons at the top of this section:
+   > It is possible to import and export parameters using the buttons at the top of this section:
    >
    > - Import/export files should be comma-separated CSV or TXT files.
    > - To add new parameters with an import, use the parameter ID “-1”.
