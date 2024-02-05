@@ -26,11 +26,11 @@ Its main purpose is for use within large projects where inter-element or inter-a
 
 ### DataMiner requirements
 
-- The InterApp classes require DataMiner 9.6.3 or higher to function correctly.
+- The InterApp classes require DataMiner 10.0.10 or higher to function correctly.
 
 ### Automation script requirements
 
-- DataMiner version 9.6.13.0-8706 or higher is required.
+- DataMiner version 10.0.10 or higher is required.
 
 ### Protocol requirements
 
