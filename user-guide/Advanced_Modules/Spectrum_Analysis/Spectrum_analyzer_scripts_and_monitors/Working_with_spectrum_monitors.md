@@ -6,16 +6,6 @@ uid: Working_with_spectrum_monitors
 
 A spectrum monitor works as a schedule to run a spectrum script, optionally with any combination of measurement points and/or presets. It can be used to make the spectrum device sweep the input signal at regular intervals to measure particular variables.
 
-The following topics provide more information on working with spectrum monitor:
-
-- [Managing spectrum monitors](#managing-spectrum-monitors)
-
-- [Configuring spectrum monitors](#configuring-spectrum-monitors)
-
-- [Watching spectrum buffers](#watching-spectrum-buffers)
-
-- [Taking priority over a spectrum monitor](#taking-priority-over-a-spectrum-monitor)
-
 > [!NOTE]
 > Only one spectrum monitor script can be executed on the same element at the same time. If a script is set to run while another script is being executed, DataMiner will wait until the script can obtain exclusive element access.
 
@@ -99,7 +89,7 @@ Below are the basic steps you can follow to configure a spectrum monitor. Depend
    > [!NOTE]
    >
    > - To remove a service created by a spectrum monitor, you must either disable the *Create Service* option or remove the monitor itself. Unlike a normal service, it cannot be deleted in the Surveyor.
-   > - Spectrum monitors for which a service has been created are indicated with a special icon in the Surveyor, instead of the regular service icon: ![](~/user-guide/images/spectrum_monitor.png)
+   > - Spectrum monitors for which a service has been created are indicated with a special icon in the Surveyor, instead of the regular service icon: ![icon](~/user-guide/images/spectrum_monitor.png)
 
 1. In the *script* section, select the script that is to be executed by the monitor.
 
@@ -186,7 +176,7 @@ To do so:
 
 1. In the ribbon of the spectrum analyzer card, go to the *monitors* tab.
 
-1. Click ![](~/user-guide/images/prio_over_monitors_32.png) *Take Priority Over Monitors*.
+1. Click ![priority over monitors](~/user-guide/images/prio_over_monitors_32.png) *Take Priority Over Monitors*.
 
 1. In the message box, click *OK*.
 
