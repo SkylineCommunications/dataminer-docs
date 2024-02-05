@@ -368,7 +368,7 @@ Also, a large number of low-severity change points were generated without a labe
 
 #### SLAnalytics - Pattern matching: A match of one subpattern would incorrectly be considered a match of the entire multivariate pattern [ID_38587]
 
-<!-- MR 10.5.0 - FR 10.4.3 -->
+<!-- MR 10.4.0 [CU1] - FR 10.4.3 -->
 
 When the streaming method was being used, a match detected for one subpattern of a multivariate pattern would incorrectly be considered a match of that entire multivariate pattern.
 

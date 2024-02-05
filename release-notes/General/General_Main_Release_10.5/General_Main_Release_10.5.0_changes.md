@@ -157,11 +157,3 @@ Resources would not always be released correctly, causing some resources to be u
 <!-- MR 10.5.0 - FR 10.4.2 -->
 
 When cleaning (i.e. resetting) a Cassandra database, in some cases, a `TypeInitializationException` could be thrown.
-
-#### SLAnalytics - Pattern matching: A match of one subpattern would incorrectly be considered a match of the entire multivariate pattern [ID_38587]
-
-<!-- MR 10.5.0 - FR 10.4.3 -->
-
-When the streaming method was being used, a match detected for one subpattern of a multivariate pattern would incorrectly be considered a match of that entire multivariate pattern.
-
-Although the suggestion events were generated correctly, the pattern matches would not be indicated correctly on the trend graphs.
