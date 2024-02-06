@@ -39,3 +39,9 @@ When you clicked the *Delete* button in order to delete a panel, that button wou
 When a query contained a regex node, up to now, the value of that node would incorrectly be transformed to `^(VALUE|VALUE2|VALUE3)$`.
 
 This will no longer be the case. The value of a regex node will now have the format `VALUE1|VALUE2|VALUE3|...`.
+
+#### Low-Code Apps: Problem when opening the icon picker [ID_38666]
+
+<!-- MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+When you opened the icon picker in e.g. *Configure Context menu*, up to now, the icons would not entirely fill the box, causing a white bar to appear on the right-hand size. From now on, the rows will again contain 10 icons instead of 9.
