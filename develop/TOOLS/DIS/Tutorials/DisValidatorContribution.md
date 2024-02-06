@@ -6,7 +6,7 @@ uid: DisTutorials_ValidatorContributions
 
 ## About
 
-In this tutorial, you will explore collaborative software development and DevOps with a focus on adding new checks to the DIS (DataMiner Integration Studio) Validator and on CI/CD. You will learn how to navigate the Validator source code, add a new check, and create a pull request. With a hands-on exercise using fake Validator source code, you will get to utilize GitHub to create a fork, a clone, and a pull request with your changes so that you will be ready to contribute to the actual Validator.
+In this tutorial, you will explore collaborative software development and DevOps with a focus on adding new checks to the validator (which is also incorporated in DataMiner Integration Studio (DIS)) and on CI/CD. You will learn how to navigate the validator source code, add a new check, and create a pull request. With a hands-on exercise using fake Validator source code, you will get to utilize GitHub to create a fork, a clone, and a pull request with your changes so that you will be ready to contribute to the actual Validator.
 
 The only difference between the tutorial and actual contributions lies in the fork used in step 2:
 
@@ -74,7 +74,7 @@ On the page of your GitHub fork (e.g. `https://github.com/YourGitHubHandle/Skyli
 
 1. In the new window, do the following:
 
-   ![ValidatorManagementWindowCreateNewTest](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.ValidatorsExercise/assets/71829634/dcaa8bbd-6d51-43d7-8dbe-e91b3de05c73)
+   ![ValidatorManagementWindowCreateNewTest](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.ValidatorsExercise/assets/71829634/fccc10e2-9231-47cc-85a8-94ba1c1ece87)
 
    - **Category:** Choose the top-level category for the check.
 
@@ -147,7 +147,7 @@ On the page of your GitHub fork (e.g. `https://github.com/YourGitHubHandle/Skyli
      We can write the following:
 
      ```md
-     Add a Protocol.Params.Param.Display.Decimals tag with value 8`.
+     Add a Protocol/Params/Param/Display/Decimals tag with value 8.
      ```
 
    - **Example Code:** Optionally provide the correct syntax.
@@ -157,7 +157,7 @@ On the page of your GitHub fork (e.g. `https://github.com/YourGitHubHandle/Skyli
      ```xml
      <Display>
         <RTDisplay>true</RTDisplay>
-           <Decimals>8</Decimals>
+        <Decimals>8</Decimals>
      </Display>
      <Measurement>
         <Type options="datetime">number</Type>
@@ -257,7 +257,7 @@ On the page of your GitHub fork (e.g. `https://github.com/YourGitHubHandle/Skyli
    //[Test(CheckId.CheckDecimalTag, Category.Param)]
    ```
 
-1. Comment `ICodeFix` and `ICompare`. We will only use `IValidate`.
+1. Comment out `ICodeFix` and `ICompare`. We will only use `IValidate`.
 
 1. Most of your validation will need to loop over several items to validate. In this case, we need every parameter: *context.EachParamWithValidId*.
 
@@ -295,7 +295,7 @@ On the page of your GitHub fork (e.g. `https://github.com/YourGitHubHandle/Skyli
 
 ## Step 7: Verify your code
 
-1. Run your new tests. Check if all are green.
+1. Run your new tests. Check whether all tests pass.
 
 1. Run the entire test battery to check for any regression. This can take several minutes.
 
@@ -312,4 +312,4 @@ This will inform the owners that you suggested additions and changes. Those can 
 For this exercise, this will trigger an automatic pipeline that closes your pull request and forwards the results to Skyline.
 
 > [!NOTE]
-> Skyline will review your submission. Upon successful validation, you will be awarded the appropriate DevOps points as a token of your accomplishment.
+> Skyline will review your submission. Upon successful review, you will be awarded the appropriate DevOps points as a token of your accomplishment.
