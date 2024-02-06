@@ -8,7 +8,7 @@ A workspace is a Cube screen layout, which can be saved. Saving a workspace can 
 
 To manage workspaces, click the Workspace button at the bottom of the Cube sidebar.
 
-<!-- TODO: Add gif of workspace button getting clicked and pane with different workspaces opening -->
+![Workspace](~/user-guide/images/Workspace.gif)
 
 > [!NOTE]
 >

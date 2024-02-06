@@ -10,4 +10,4 @@ The Alarm Console is highly customizable: You can for instance configure which t
 
 For more information on how to use the Alarm Console, see [Working with the Alarm Console](xref:Working_with_the_Alarm_Console).
 
-<!-- TODO: Add screenshot of Alarm Console -->
+![Alarm Console](~/user-guide/images/Alarm_Console_UI.png)<br/>*Alarm Console in DataMiner 10.4.1*
