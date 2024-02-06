@@ -138,7 +138,7 @@ If issues occur when you trigger a user-defined API, follow the steps below to r
 
    To see which range is **installed**, go to the "Installed apps" configuration window in Windows and search for the "DataMiner UserDefinableApiEndpoint" app.
 
-   If the installed version range is lower than the supported range, use the installer in the `C:\Skyline DataMiner\Tools\ModuleInstallers` folder to upgrade the DxM. If the installed version range is higher, first uninstall the process and then re-install it using the installer in that folder.
+   If the installed version range is lower than the supported range, use the installer in the `C:\Skyline DataMiner\Tools\ModuleInstallers` folder to upgrade the DxM. If the installed version range is higher, first uninstall the DataMiner UserDefinableApiEndpoint app via the "Installed apps" window and then re-install it using the installer in that folder.
 
    Examples:
 
