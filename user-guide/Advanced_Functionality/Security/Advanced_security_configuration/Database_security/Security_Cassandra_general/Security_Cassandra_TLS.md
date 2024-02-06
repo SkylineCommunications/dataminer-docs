@@ -55,7 +55,6 @@ To generate the certificates, you will need two tools: *openssl* and the *Java k
    >
    > We also recommend using only ASCII characters in your Cassandra cluster name. The Cassandra documentation is lacking on this front, but we noticed Cassandra failing to start when the *cluster_name* contained certain special/non-ASCII characters.
 
-
 1. Generate the root CA certificate by executing the following command:
 
    ```txt
@@ -196,9 +195,6 @@ To enable inter-node TLS encryption:
 1. Go to *Advanced* and select *This cluster requires SSL*.
 
 1. Point it towards your *rootCa.jks* truststore file and use the password you used to generate it.
-
-> [!NOTE]
-> Currently, we only support TLS version 1.0 for the client-server encryption. If connecting to Cassandra over TLS fails, make sure to check that this version is not disabled on operating system level.
 
 ## Connecting with DataMiner
 

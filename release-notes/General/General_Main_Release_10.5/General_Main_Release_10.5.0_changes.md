@@ -11,11 +11,11 @@ uid: General_Main_Release_10.5.0_changes
 
 ### Enhancements
 
-#### Security enhancements [ID_37349] [ID_37637] [ID_38052]
+#### Security enhancements [ID_37349] [ID_38052] [ID_38263]
 
 <!-- 37349: MR 10.5.0 - FR 10.4.2 -->
-<!-- 37637 (part of 37734): MR 10.5.0 - FR 10.4.2 -->
 <!-- 38052: MR 10.5.0 - FR 10.4.2 -->
+<!-- 38263: MR 10.5.0 - FR 10.4.3 -->
 
 A number of security enhancements have been made.
 
@@ -90,12 +90,6 @@ When you sort on a joined column, the Sort operator will be forwarded in the fol
 - In case of a left join, but only if all sorts are descending
 - In case of a right join
 
-#### SLAnalytics - Alarm focus: Alarm occurrences will now be identified using a combination of element ID, parameter ID and primary key  [ID_38184]
-
-<!-- MR 10.5.0 - FR 10.4.3 -->
-
-When calculating alarm likelihood (i.e. focus score), up to now, the alarm focus feature used a combination of element ID, parameter ID and display key (if applicable) to identify previous occurrences of the same alarm. From now on, previous alarm occurrences will be identified using a combination of element ID, parameter ID and primary key.
-
 #### DataMiner Object Models: Required list fields can no longer be set to an empty list [ID_38238]
 
 <!-- MR 10.5.0 - FR 10.4.3 -->
@@ -104,6 +98,45 @@ From now on, when the value of a required list field is set to an empty list, on
 
 - `DomInstanceHasMissingRequiredFieldsForCurrentStatus` (when using the DOM status system)
 - `DomInstanceDoesNotContainAllRequiredFieldsForSectionDefinition` (when not using the DOM status system)
+
+#### DataMiner Object Models: HistoryChanges will now be processed in bulk [ID_38241]
+
+<!-- MR 10.5.0 - FR 10.4.3 -->
+
+Up to now, if history storage was enabled, when DomInstances were created, updated or deleted, a HistoryChange operation would be executed for every DomInstance separately.
+
+From now on, for every batch of DomInstances that are processed in bulk, the history records will also be processed in bulk.
+
+#### SLAnalytics: Cassandra tables 'analytics_parameterinfo_v1' and 'analytics_wavestream' will be dropped when downgrading [ID_38336]
+
+<!-- MR 10.5.0 - FR 10.4.3 -->
+
+When downgrading a DataMiner System using a Cassandra database, from now on, the Cassandra tables *analytics_parameterinfo_v1* and *analytics_wavestream* will be dropped. Contrary to the old versions, the new versions no longer contain display keys.
+
+#### User-Defined APIs: Enhanced logging [ID_38491]
+
+<!-- MR 10.5.0 - FR 10.4.3 -->
+
+Up to now, when a user-defined API was triggered, log entries like the ones below would only be added to the *SLUserDefinableApiManager.txt* file when the log level was set to 5. From now on, when a user-defined API is triggered, these entries will be added to *SLUserDefinableApiManager.txt* when the log level is set to 0 (i.e. always).
+
+```txt
+2024/01/18 10:13:00.740|SLNet.exe|Handle|CRU|0|152|[1f9cd6c045] Started handling API trigger from NATS for route 'dma/id_2'.
+2024/01/18 10:13:01.268|SLNet.exe|Handle|CRU|0|152|[1f9cd6c045] Handling API trigger from NATS for route 'dma/id_2' SUCCEEDED after 526.46 ms. API script provided response code: 200. (Token ID: 78dd7916-6d01-4c17-9010-530c28338120)
+```
+
+#### DxMs upgraded [ID_38499] [ID_38596]
+
+<!-- MR 10.5.0 - FR 10.4.3 -->
+
+The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
+
+- DataMiner ArtifactDeployer: version 1.6.4.14010
+- DataMiner CoreGateway: version 2.14.3
+- DataMiner FieldControl: version 2.10.3.14011
+- DataMiner Orchestrator: version 1.5.3.14012
+- DataMiner SupportAssistant: version 1.6.4.14013
+
+For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
 
 ### Fixes
 

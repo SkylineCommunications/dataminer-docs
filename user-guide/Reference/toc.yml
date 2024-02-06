@@ -112,6 +112,8 @@ items:
         topicUid: Connection_Check
       - name: Copy Element Data
         topicUid: Copy_Element_Data
+      - name: Data Aggregator Migrator
+        topicUid: Data_Aggregator_Migrator
       - name: DataMiner Comparison tool
         topicUid: DataMinerComparisonTool
       - name: DataMiner Size tool
@@ -443,6 +445,8 @@ items:
     items:
       - name: Alarm benchmarks
         topicUid: alarm_benchmarks
+      - name: Alarm benchmarks (Cassandra Cluster)
+        topicUid: alarm_benchmarks_cassandra_cluster
       - name: Alarm focus benchmarks
         topicUid: alarm_focus_benchmarks
       - name: Automatic incident tracking benchmarks
@@ -451,8 +455,6 @@ items:
         topicUid: automation_benchmarks
       - name: Behavioral anomaly detection benchmarks
         topicUid: behavioral_anomaly_detection_benchmarks
-      - name: Cassandra (single node) write performance benchmarks
-        topicUid: cassandra_write_performance_benchmarks
       - name: Cassandra (cluster) write performance benchmarks
         topicUid: cassandra_cluster_write_performance_benchmarks
       - name: Change history metrics
@@ -473,6 +475,8 @@ items:
         topicUid: failover_benchmarks
       - name: History set benchmarks
         topicUid: history_set_benchmarks
+      - name: Migration benchmarks
+        topicUid: migration_benchmarks
       - name: Mobile gateway benchmarks
         topicUid: mobile_gateway_benchmarks
       - name: Parameter set benchmarks
@@ -489,6 +493,8 @@ items:
         topicUid: service_profile_benchmarks
       - name: Service & Resource Management benchmarks
         topicUid: service_resource_management_benchmarks
+      - name: Trending benchmarks
+        topicUid: trend_benchmarks
       - name: User-Defined APIs benchmarks
         topicUid: user-defined_API_benchmarks
       - name: View benchmarks

@@ -22,8 +22,6 @@ Currently, the pipeline for protocol development consists of the following stage
 
 - [Sync DataMiner feature release DLLs](#sync-dataminer-feature-release-dlls)
 
-- [Sync DIS version](#sync-dis-version)
-
 - [Build QuickActions on latest feature release](#build-quickactions-on-latest-feature-release)
 
 - [Convert solution to XML](#convert-solution-to-xml)
@@ -147,21 +145,17 @@ This stage verifies whether a MaximumSupportedVersion was defined in the protoco
 
 For solutions that consist of legacy-style projects:
 
-    - Checks whether projects use the obsolete packages.config package management format.
-    - Checks whether projects have any vulnerable, deprecated, or outdated NuGet packages.
+- Checks whether projects use the obsolete packages.config package management format.
+- Checks whether projects have any vulnerable, deprecated, or outdated NuGet packages.
 
 For solutions that consist of SDK-style projects:
 
-    - Does **not** check whether projects use the obsolete packages.config package management format, as packageReference is the only supported package management format for this type of project.
-    - Checks whether projects have any vulnerable, deprecated, or outdated NuGet packages.
+- Does **not** check whether projects use the obsolete packages.config package management format, as packageReference is the only supported package management format for this type of project.
+- Checks whether projects have any vulnerable, deprecated, or outdated NuGet packages.
 
 ## Sync DataMiner feature release DLLs
 
 This stage ensures that the next build stage will build against the latest feature release of DataMiner. It will verify on DCP whether a new feature release has been released and, if so, Jenkins will make sure to use that feature release to build against from that point onwards.
-
-## Sync DIS version
-
-This stage ensures that the pipeline uses the latest version of DIS. It verifies whether a new version has been released, and if that is the case, the new version is obtained.
 
 ## Build QuickActions on latest feature release
 

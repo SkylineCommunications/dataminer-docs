@@ -21,11 +21,13 @@ This tutorial shows you how to create your first user-defined API. You will crea
 
 While you could develop the Automation script in Cube, creating an Automation script solution in Visual Studio will give you the advantage of having access to all the features of Visual Studio and [DIS](xref:DIS). If you also use a version control system like Git, this will also enable versioning and make collaboration possible.
 
+## [Visual Studio 2022](#tab/tabid-1)
+
 To create an Automation script solution:
 
 1. In Visual Studio, select *Create a new project*.
 
-1. Search for *DataMiner Automation Script Solution (Skyline Communications)* in the template search box and click *Next*.
+1. Search for *DataMiner User-Defined APIs Solution (Skyline Communications)* in the template search box and click *Next*.
 
    ![DataMiner Automation Script Solution in Visual Studio](~/user-guide/images/UDAPIS_Tutorials_HelloWorld_DataMiner_DIS_Solution.jpg)
 
@@ -39,14 +41,67 @@ To create an Automation script solution:
 
    ![Visual Studio create Automation script](~/user-guide/images/UDAPIS_Tutorials_HelloWorld_DIS_ScriptSettings.jpg)
 
+## [Visual Studio 2019](#tab/tabid-2)
+
+To create an Automation script solution:
+
+1. In Visual Studio, select *File > New > DataMiner Automation Script Solution*
+
+   ![DataMiner Automation Script Solution in Visual Studio 2019](~/user-guide/images/UDAPIS_Tutorials_HelloWorld_DataMiner_DIS_Solution_2019.jpg)
+
+1. Use "DataMinerAPIs" as the name for your solution, so you can reuse this solution for any future API scripts.
+
+1. Choose a location to save the Automation script solution, and click *Next*.
+
+   ![Visual Studio configure your project](~/user-guide/images/UDAPIS_Tutorials_HelloWorld_DIS_SolutionSettings_2019.jpg)
+
+***
+
 ## Step 2: Create the Automation script
 
 The logic of your API is in an Automation script. This processes input arguments, executes logic, and returns a response. In this example, no input is processed, and no logic is executed. The API will only return "Hello world!" to the user.
 
-1. [Prepare the project](#prepare-the-project)
-1. [Prepare the script](#prepare-the-script)
-1. [Write the API logic](#write-the-api-logic)
-1. [Publish the script](#publish-the-script)
+## [Visual Studio 2022](#tab/tabid-1)
+
+### Write the API logic
+
+The goal of this tutorial is to have "Hello world!" returned when the API script is triggered. To configure this, you need to replace the default "Succeeded" string provided by the snippet with the "Hello world!" string. The resulting and final state of the script should look like this:
+
+```csharp
+namespace HelloWorldAPI_1
+{
+    using Skyline.DataMiner.Automation;
+    using Skyline.DataMiner.Net.Apps.UserDefinableApis;
+    using Skyline.DataMiner.Net.Apps.UserDefinableApis.Actions;
+
+    public class Script
+    {
+        [AutomationEntryPoint(AutomationEntryPointType.Types.OnApiTrigger)]
+        public ApiTriggerOutput OnApiTrigger(IEngine engine, ApiTriggerInput requestData)
+        {
+            return new ApiTriggerOutput
+            {
+                ResponseBody = "Hello world!",
+                ResponseCode = (int)StatusCode.Ok,
+            };
+        }
+    }
+}
+```
+
+### Publish the script
+
+When the API script is complete, it needs to be published to the DataMiner System. You can do so using the built-in publish feature of DIS. Make sure that DIS can connect to the DataMiner System you want to upload your script to. You will need to [edit the DIS settings](xref:DIS_settings#dma) so the DMA is selectable.
+
+1. In the *Solution Explorer*, double-click *HelloWorldAPI.xml*.
+
+   ![Automation script XML](~/user-guide/images/UDAPIS_Tutorials_HelloWorld_Open_Script_XML.jpg)
+
+1. At the top of the code window, click the arrow next to the *Publish* button, and select the DataMiner System you want to upload the script to.
+
+   ![Publish to DMA](~/user-guide/images/UDAPIS_Tutorials_DIS_Publish.jpg)
+
+## [Visual Studio 2019](#tab/tabid-2)
 
 ### Prepare the project
 
@@ -151,6 +206,8 @@ When the API script is complete, it needs to be published to the DataMiner Syste
 1. At the top of the code window, click the arrow next to the *Publish* button and select the DataMiner System you want to upload the script to.
 
    ![Publish to DMA](~/user-guide/images/UDAPIS_Tutorials_DIS_Publish.jpg)
+
+***
 
 ## Step 3: Create an API token
 

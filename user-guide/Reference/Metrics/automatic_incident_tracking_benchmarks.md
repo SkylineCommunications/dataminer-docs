@@ -8,7 +8,7 @@ uid: automatic_incident_tracking_benchmarks
 
 - Intel Xeon E5-2620 v4
 - 2 sockets
-- 16GB RAM
+- 16 GB RAM
 - Cassandra (for alarm focus and the creation of alarms)
 - Windows Server 2012 R2
 

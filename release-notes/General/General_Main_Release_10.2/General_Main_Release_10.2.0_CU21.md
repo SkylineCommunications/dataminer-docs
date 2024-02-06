@@ -259,3 +259,17 @@ When you started a profile migration to an Elasticsearch/OpenSearch database whi
 
 > [!NOTE]
 > When, in the SLNetClientTest tool, you go to *Advanced > Migration*, all migrations in an error status will now have a red background.
+
+#### DataMiner Cube - System Center: No longer possible to add additional databases when DMA was using STaaS [ID_38399]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU11] - FR 10.4.2 [CU0] -->
+
+In *System Center*, the *Other* tab of the *Database* section allows you to configure additional databases.
+
+Up to now, when Cube was connected to a DataMiner Agent configured to use STaaS, an error could occur when you tried to add an additional database.
+
+#### Visual Overview: Problem with subscription filter on 'Children' shape [ID_38537]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 [CU0] -->
+
+When a subscription filter was configured on a *Children* shape, it would not get parsed correctly, causing the filter to malfunction.

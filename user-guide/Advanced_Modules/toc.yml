@@ -297,6 +297,8 @@ items:
                 topicUid: Tutorial_Dashboards_Displaying_a_custom_empty_component_message
               - name: Embedding a connector dashboard in Visual Overview
                 topicUid: Tutorial_Embed_Connector_Dashboard_in_Visio
+              - name: Leveraging controls and feeds to create a dynamic GQI query
+                topicUid: Tutorial_Dashboards_Controls_And_Feeds_Query
       - name: Low-Code Apps
         topicUid: Application_framework
         items:
@@ -530,6 +532,8 @@ items:
                 topicUid: Get_parameter_relations
               - name: Get parameters for element where
                 topicUid: Get_parameters_for_element_where
+              - name: Get profile instances
+                topicUid: Get_profile_instances
               - name: Get resources
                 topicUid: Get_resources
               - name: Get services
@@ -595,7 +599,7 @@ items:
                       - name: Optimizing your custom operator
                         topicUid: Custom_Operator_Tutorial
               - name: API reference
-                topicUid: GQI_GQIArgument
+                topicUid: GQI_GenIfRowMetadata
                 items:
                   - name: GenIfRowMetadata
                     topicUid: GQI_GenIfRowMetadata
@@ -652,7 +656,9 @@ items:
                   - name: RowMetadataBase
                     topicUid: GQI_RowMetadataBase
                   - name: TimeRangeMetadata
-                    topicUid: GQI_TimeRangeMetadata
+                    topicUid: GQI_GQIArgument
+              - name: Best practices
+                topicUid: GQI_Extensions_Best_Practices
           - name: Query updates
             topicUid: Query_updates
           - name: Importing a query
@@ -721,6 +727,17 @@ items:
         topicUid: Data_Aggregator_queries
       - name: Troubleshooting
         topicUid: Data_Aggregator_troubleshooting
+  - name: Data Sources
+    topicUid: Data_Sources
+    items:
+      - name: Scripted connectors
+        topicUid: Scripted_Connectors
+      - name: Data API
+        topicUid: Data_API
+      - name: Getting started with the Data Sources module
+        topicUid: Data_Sources_Setup
+      - name: Limitations
+        topicUid: Data_Sources_Limitations
   - name: DataMiner Object Models (DOM)
     topicUid: DOM
     items:
@@ -739,7 +756,7 @@ items:
             topicUid: DomBehaviorDefinition
       - name: DOM managers
         topicUid: DOM_managers
-      - name: DomHelper class
+      - name: DOM helper class
         topicUid: DomHelper_class
       - name: DOM events
         topicUid: DOM_events
@@ -774,6 +791,8 @@ items:
             topicUid: DOM_StorageSettings
       - name: DOM data storage
         topicUid: DOM_data_storage
+      - name: Best practices
+        topicUid: DOM_best_practices
       - name: DOM examples
         topicUid: DOM_Invoice_app_example
         items:
@@ -817,8 +836,10 @@ items:
               - name: Naming a DOM instance
                 topicUid: DOM_editor_naming_instance
       - name: Tutorials
-        topicUid: DOM_Create_Basic_Setup
+        topicUid: DOM_Getting_Started_With_DOM
         items:
+          - name: Getting started with DOM
+            topicUid: DOM_Getting_Started_With_DOM
           - name: Creating a basic DOM setup
             topicUid: DOM_Create_Basic_Setup
           - name: Removing an enum entry from a GenericEnumFieldDescriptor
@@ -1169,7 +1190,7 @@ items:
           - name: Installing the Keysight/Agilent IO Libraries
             topicUid: Installing_the_Keysight_Agilent_IO_Libraries
       - name: Working with spectrum analyzer elements
-        topicUid: Working_with_spectrum_analyzer_elements
+        topicUid: Spectrum_analyzer_cards
         items:
           - name: Spectrum analyzer cards
             topicUid: Spectrum_analyzer_cards
@@ -1199,7 +1220,7 @@ items:
           - name: Spectrum Analyzer script actions
             topicUid: Spectrum_Analyzer_script_actions
       - name: Advanced Spectrum Analysis functions
-        topicUid: Advanced_Spectrum_Analysis_functions
+        topicUid: Specifying_an_amplitude_correction
         items:
           - name: Specifying an amplitude correction
             topicUid: Specifying_an_amplitude_correction
@@ -1273,8 +1294,6 @@ items:
         items:
           - name: Troubleshooting User-Defined APIs
             topicUid: UD_APIs_Troubleshooting
-          - name: Bad and best practices
-            topicUid: UD_APIs_Bad_and_Best_Practice
       - name: Tutorials
         topicUid: UD_APIs_Tutorials
         items:

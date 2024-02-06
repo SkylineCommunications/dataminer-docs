@@ -37,7 +37,7 @@ Note that because of the nature of software projects, time forecasts on an activ
 
 The Value Delivery Plan outlines the delivery strategy, how the work that needs to be done is prioritized in order to maximize value. As the ultimate purpose is to deliver maximum value in line with the specified goals, objectives and requirements, and within the agreed time frame and budget, value needs to be clearly defined, and activity planning needs to be aligned with this. 
 
-Typically, the plan starts with the objectives that provide maximum value with the goal of having a Minimum Viable Product, allowing people to use and experiment with the product early on. Alternatively, it may start with deliverables with higher levels of uncertainty, to confirm they can be achieved before venturing into the larger project.
+At the very least, the Value Delivery Plan should include a *Minimum Viable Product* (MVP) definition that sets the mission for the first **30 or 90 days**, depending on the complexity. This definition should clearly define the scope of the first working product. The MVP may start with the objectives that provide maximum value or, alternatively, it may start with deliverables with higher levels of uncertainty, to confirm that they can be achieved before venturing into the larger project. Even if in an earlier or rudimentary state, this first delivery allows the user to experiment with the product early on, helping the team stay focused and ensuring that the product is delivered on time and within budget.
 
 ### Projected Workload
 

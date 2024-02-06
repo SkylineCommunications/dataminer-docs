@@ -2,21 +2,17 @@
 uid: Cube_Feature_Release_10.4.2
 ---
 
-# DataMiner Cube Feature Release 10.4.2 – Preview
-1
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+# DataMiner Cube Feature Release 10.4.2
+
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to DataMiner Cube, see [General Feature Release 10.4.2](xref:General_Feature_Release_10.4.2).
 
 ## Highlights
 
-*No highlights have been selected yet.*
-
-## New features
-
-*No new features have been added yet.*
+- [System Center: 'Install Indexing Engine' button removed [ID_38145]](#system-center-install-indexing-engine-button-removed-id_38145)
 
 ## Changes
 
@@ -225,3 +221,17 @@ When, in the Alarm Console, alarms were grouped by time, root time, creation tim
 In System Center, you can go to *System settings > Logging* to change the log file size.
 
 Up to now, the description of this setting mentioned that the setting applied to the DataMiner Agent to which you were connected. It will now mention that the setting applies to the entire DataMiner System.
+
+#### System Center: No longer possible to add additional databases when DMA was using STaaS [ID_38399]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU11] - FR 10.4.2 [CU0] -->
+
+In *System Center*, the *Other* tab of the *Database* section allows you to configure additional databases.
+
+Up to now, when Cube was connected to a DataMiner Agent configured to use STaaS, an error could occur when you tried to add an additional database.
+
+#### Visual Overview: Problem with subscription filter on 'Children' shape [ID_38537]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 [CU0] -->
+
+When a subscription filter was configured on a *Children* shape, it would not get parsed correctly, causing the filter to malfunction.

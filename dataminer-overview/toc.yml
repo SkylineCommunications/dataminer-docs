@@ -29,12 +29,12 @@ items:
     - name: DataMiner hosting and high availability
       topicUid: Overview_hosting
       items:
-        - name: Self-hosted DataMiner nodes and storage nodes
-          topicUid: DM_and_storage_selfhosted
-        - name: Self-hosted DataMiner nodes with Storage as a Service
-          topicUid: DM_selfhosted_and_StaaS
         - name: DataMiner as a Service
           topicUid: DaaS_hosting
+        - name: Self-hosted DataMiner nodes with Storage as a Service
+          topicUid: DM_selfhosted_and_StaaS
+        - name: Self-hosted DataMiner nodes and storage nodes
+          topicUid: DM_and_storage_selfhosted
     - name: dataminer.services
       topicUid: Overview_DCP
       items:
@@ -116,6 +116,8 @@ items:
               topicUid: Recommended_Policies
             - name: Unlimited opportunity
               topicUid: Unlimited_Opportunity
+        - name: Glossary
+          topicUid: DevOps_Glossary
     - name: Training courses and certification
       topicUid: Overview_Training_intro
       items:

@@ -16,6 +16,7 @@ This section provides information on the following tools:
 - [Change Element States Offline](xref:Change_Element_States_Offline)
 - [Connection Check](xref:Connection_Check)
 - [Copy Element Data](xref:Copy_Element_Data)
+- [Data Aggregator Migrator](xref:Data_Aggregator_Migrator)
 - [DataMiner Comparison tool](xref:DataMinerComparisonTool)
 - [DataMiner Huawei Manager dashboard](xref:Huawei_Manager_Dashboard)
 - [DataMiner Ping Monitoring tool](xref:PingMonitoring)

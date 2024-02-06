@@ -6,7 +6,67 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
-#### 4 January 2024 - Chat Integration with Microsoft Teams now includes sending notification using Adaptive Cards [ID_38339]
+#### 30 January 2024 - Enhancement - Orchestrator 1.5.4 - Improved DxM status reporting [ID_38553]
+
+The Orchestrator DxM will now offload more information about the cloud endpoint.
+
+#### 30 January 2024 - Enhancement - CoreGateway 2.14.4 - Improved DxM status reporting [ID_38590]
+
+The CoreGateway DxM will now offload more information about the status and configuration of the DMA.
+
+#### 30 January 2024 - Enhancement - SupportAssistant 1.6.5 - Improved DxM status reporting [ID_38608]
+
+The SupportAssistant DxM will now offload information about the used version of the log collector.
+
+#### 30 January 2024 - Enhancement - CloudGateway 2.13.4 - Improved DxM status reporting [ID_38543]
+
+The CloudGateway DxM will now offload more information to help Skyline provide support. This includes proxy, DMZ, and network configuration information, as well as information on whether dataminer.services can be reached.
+
+#### 23 January 2024 - Fix - Unknown error when remote accessing web apps [ID_38549]
+
+While remote accessing web apps via dataminer.services (e.g. the Monitoring app), the following message could appear: `An unknown error occurred (status: 200).` The app would also stop working until the page was refreshed. This issue has been resolved.
+
+#### 22 January 2024 - Enhancement - ArtifactDeployer 1.6.5 - Added DMA ID to deployment events [ID_38485]
+
+In combination with CoreGateway 2.14.0 or higher, the ArtifactDeployer will be able to include the DMA ID in deployment events, visible on the *Deployments* page of a DMS in the [Admin app](https://admin.dataminer.services). In case of a failure, particularly in a cluster, this ID provides a direct link to the server whose logs you need to examine for further investigation.
+
+#### 16 January 2024 - Fix - CoreGateway 2.13.4/2.14.3 - Timeout error when deploying protocol from Catalog [ID_38464]
+
+In some rare cases, a timeout error could occur when a protocol was deployed from the Catalog. This issue has been resolved.
+
+#### 16 January 2024 - Enhancement - FieldControl 2.10.3 - Improved DxM status reporting [ID_38451]
+
+The FieldControl DxM will now periodically send a health check to the cloud to indicate that the DxM is running using correct identifiers.
+
+#### 16 January 2024 - Enhancement - CloudGateway 2.13.2 - Improved DxM status reporting [ID_38450]
+
+The CloudGateway DxM will now periodically send a health check to the cloud to indicate that the DxM is running using correct identifiers.
+
+#### 16 January 2024 - Enhancement - Orchestrator 1.5.3 - Improved DxM status reporting [ID_38449]
+
+The Orchestrator DxM will now periodically send a health check to the cloud to indicate that the DxM is running using correct identifiers.
+
+#### 16 January 2024 - Enhancement - SupportAssistant 1.6.4 - Improved DxM status reporting [ID_38448]
+
+The SupportAssistant DxM will now periodically send a health check to the cloud to indicate that the DxM is running using correct identifiers.
+
+#### 16 January 2024 - Enhancement - ArtifactDeployer 1.6.4 - Improved DxM status reporting [ID_38447]
+
+The ArtifactDeployer DxM will now periodically send a health check to the cloud to indicate that the DxM is running using correct identifiers.
+
+#### 16 January 2024 - Enhancement - CoreGateway 2.14.3 - Improved DxM status reporting [ID_38442]
+
+The CoreGateway DxM will now periodically send a health check to the cloud to indicate that the DxM is running using correct identifiers.
+
+#### 16 January 2024 - Enhancement - ArtifactDeployer 1.6.3 - Added node ID to deployment events [ID_38421]
+
+The ArtifactDeployer will include the node ID in deployment events, visible on the *Deployments* page of a DMS in the [Admin app](https://admin.dataminer.services). In case of a failure, particularly in a cluster, this ID provides a direct link to the server whose logs you need to examine for further investigation.
+
+#### 12 January 2024 - New Feature - Remote access for custom files/webpages [ID_38426]
+
+It is now possible to provide remote access via dataminer.services to files or webpages. To do so, add them in the folder `C:\Skyline DataMiner\Webpages\public\` on your DMA. To access such files, users can use the remote access URL followed by `/public/` (e.g. the file *image.png* via `https://ziine-skyline.on.dataminer.services/public/image.png`).
+
+#### 4 January 2024 - New Feature - Chat Integration with Microsoft Teams now includes sending notification using Adaptive Cards [ID_38339]
 
 It is now possible to send notifications using Adaptive Cards to chats or channels with Chat Integration.
 
@@ -24,35 +84,35 @@ From now onwards, additional data like soft-launch options, installed solutions,
 
 The SupportAssistant DxM will now periodically send a health check to the cloud to indicate that the DxM is running.
 
-####  20 December 2023 - New Feature - ArtifactDeployer 1.6.0 - DxM status reporter added [ID_38172]
+#### 20 December 2023 - New Feature - ArtifactDeployer 1.6.0 - DxM status reporter added [ID_38172]
 
 The ArtifactDeployer DxM will now periodically send a health check to the cloud to indicate that the DxM is running.
 
-####  20 December 2023 - New Feature - Orchestrator 1.5.0 - DxM status reporter added [ID_38170]
+#### 20 December 2023 - New Feature - Orchestrator 1.5.0 - DxM status reporter added [ID_38170]
 
 The Orchestrator DxM will now periodically send a health check to the cloud to indicate that the DxM is running.
 
-####  20 December 2023 - New Feature - CoreGateway 2.14.0 - DxM status reporter added [ID_38200]
+#### 20 December 2023 - New Feature - CoreGateway 2.14.0 - DxM status reporter added [ID_38200]
 
 The CoreGateway DxM will now periodically send a health check to the cloud to indicate that the DxM is running.
 
-####  20 December 2023 - New Feature - CloudGateway 2.13.0 - DxM status reporter added [ID_38022]
+#### 20 December 2023 - New Feature - CloudGateway 2.13.0 - DxM status reporter added [ID_38022]
 
 The CloudGateway DxM will now periodically send a health check to the cloud to indicate that the DxM is running.
 
-####  20 December 2023 - New Feature - FieldControl 2.10.0 - DxM status reporter added [ID_38116]
+#### 20 December 2023 - New Feature - FieldControl 2.10.0 - DxM status reporter added [ID_38116]
 
 The FieldControl DxM will now periodically send a health check to the cloud to indicate that the DxM is running.
 
-#### 20 December 2023 - Enhancement - Email notifications for expiring and expired DataMiner Express DaaS systems [ID_38235]
+#### 20 December 2023 - Enhancement - Email notifications for expiring and expired DataMiner Community Edition DaaS systems [ID_38235]
 
-From now onwards, when a DataMiner Express DaaS system is about to expire, an email notification will be sent to both the owners of the organization and the owners of the DMS, so that they can take action if they want to prevent deletion. Another email notication will be sent when the DataMiner Express DaaS system has been deleted.
+From now onwards, when a DataMiner Community Edition DaaS system is about to expire, an email notification will be sent to both the owners of the organization and the owners of the DMS, so that they can take action if they want to prevent deletion. Another email notification will be sent when the DataMiner Community Edition DaaS system has been deleted.
 
 A notification will also be sent when an organization owns multiple DaaS systems and it will not be possible to extend one or more of these systems because the organization will not have enough DataMiner credits, as predicted based on the current usage.
 
-#### 13 December 2023 - New Feature - Email notifications for expiring and expired DataMiner Express DaaS systems [ID_38183]
+#### 13 December 2023 - New Feature - Email notifications for expiring and expired DataMiner Community Edition DaaS systems [ID_38183]
 
-From now onwards, when a DataMiner Express DaaS system is about to expire, an email notification will be sent to the owners of the organization and the person who deployed the DaaS system, so that they can take action if they want to prevent deletion. Another email notication will be sent when the DataMiner Express DaaS system has been deleted.
+From now onwards, when a DataMiner Community Edition DaaS system is about to expire, an email notification will be sent to the owners of the organization and the person who deployed the DaaS system, so that they can take action if they want to prevent deletion. Another email notification will be sent when the DataMiner Community Edition DaaS system has been deleted.
 
 #### 6 December 2023 - New Feature - Remote Access setting is now checked for user-defined API access [ID_38102]
 
@@ -67,7 +127,7 @@ Our [Pay-per-Use](xref:Pricing_Commercial_Models#pay-per-use) model is used for 
 > [!TIP]
 > See also:
 >
-> - [DataMiner Express](xref:Pricing_Commercial_Models#dataminer-express)
+> - [DataMiner Community Edition](xref:Pricing_Commercial_Models#dataminer-community-edition)
 > - [Creating a DaaS system](xref:Creating_a_DMS_in_the_cloud)
 
 When you create a DaaS system, your dataminer.services account will automatically be linked to your DataMiner account, so you can easily access DataMiner web apps such as the Monitoring app via remote access.

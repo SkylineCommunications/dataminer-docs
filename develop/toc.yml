@@ -1,3 +1,4 @@
+items:
 - name: DataMiner Development Guide
   topicUid: DevelopmentGuide
   items:
@@ -3423,11 +3424,6 @@
                   topicUid: Manifest.Content.Visios.Visio.Version.Selection.Specific
               - name: SetAsDefault
                 topicUid: Manifest.Content.Visios.Visio.Version.SetAsDefault
-      - name: DeleteFiles
-        topicUid: Manifest.DeleteFiles
-        items: 
-        - name: Delete
-          topicUid: Manifest.DeleteFiles.Delete
       - name: DeploymentOptions
         topicUid: Manifest.DeploymentOptions
         items: 
@@ -3436,6 +3432,16 @@
           items: 
           - name: Organization
             topicUid: Manifest.DeploymentOptions.OrganizationCatalogAccess.Organization
+      - name: MinimumRequiredVersions
+        topicUid: Manifest.MinimumRequiredVersions
+        items:
+        - name: MinimumRequiredVersion
+          topicUid: Manifest.MinimumRequiredVersions.MinimumRequiredVersion
+          items:
+          - name: '@key'
+            topicUid: Manifest.MinimumRequiredVersions.MinimumRequiredVersion-key
+          - name: '@value'
+            topicUid: Manifest.MinimumRequiredVersions.MinimumRequiredVersion-value
       - name: Name
         topicUid: Manifest.Name
       - name: Version
@@ -3528,6 +3534,12 @@
     - name: SchemaTypes
       topicUid: Manifest-TypeAlarmTemplateName
       items:
+      - name: EnumLatestReleaseLatestBuild
+        topicUid: Manifest-EnumLatestReleaseLatestBuild
+      - name: EnumTrueFalse
+        topicUid: Manifest-EnumTrueFalse
+      - name: TypeMinimumRequiredVersionKeys
+        topicUid: Manifest-TypeMinimumRequiredVersionKeys
       - name: TypeAlarmTemplateName
         topicUid: Manifest-TypeAlarmTemplateName
       - name: TypeEmptyString
@@ -5424,7 +5436,7 @@
         - name: Viewing test results
           topicUid: Viewing_test_results
     - name: Third-party Tools
-      uid: ThirdPartyTools
+      topicUid: ThirdPartyTools
       items:
       - name: DataStax DevCenter
         topicUid: DataStax_DevCenter
@@ -5529,7 +5541,7 @@
         topicUid: Visual_Studio_Code
       - name: Wireshark
         topicUid: Wireshark
-- name: DataMiner Device-Specific Integrations
+- name: DataMiner device-specific integrations
   topicUid: DSI
   items:
     - name: Spectrum analyzer
@@ -5565,6 +5577,14 @@
           topicUid: DSI_OpenConfig_Introduction
         - name: Middleware package
           topicUid: DSI_OpenConfig_Middleware
+- name: DataMiner module integrations
+  topicUid: DataMinerModuleIntegrations
+  items:
+    - name: User-definable APIs
+      topicUid: DMI_UserDefinableAPIs
+      items:
+        - name: Bad and best practices
+          topicUid: UD_APIs_Bad_and_Best_Practices
 - name: Third-party integrations
   topicUid: ThirdPartyIntegrations
   items:

@@ -10,7 +10,7 @@ uid: service_resource_management_benchmarks
 
 - Intel Xeon Silver 4210
 - 8 cores (16TH) VM
-- 32GB RAM
+- 32 GB RAM
 - SSD (NVMe)
 - Windows Server 2019 Standard
 
@@ -18,7 +18,7 @@ uid: service_resource_management_benchmarks
 
 - Intel Xeon E5-2620 v3
 - 2 sockets
-- 32GB RAM
+- 32 GB RAM
 - HDD
 - Elasticsearch
 - Windows Server 2012 R2 Standard
@@ -27,7 +27,7 @@ uid: service_resource_management_benchmarks
 
 - Intel Xeon Silver 4210
 - 10 CPU VM
-- 32GB RAM
+- 32 GB RAM
 - HDD
 - Elasticsearch
 - Windows Server 2019 Standard
@@ -36,7 +36,7 @@ uid: service_resource_management_benchmarks
 
 - Intel Core i7-9700 CPU \@3.20 GHz
 - 8 cores
-- 32GB RAM
+- 32 GB RAM
 - SSD
 - Cassandra
 - Windows 10 Enterprise

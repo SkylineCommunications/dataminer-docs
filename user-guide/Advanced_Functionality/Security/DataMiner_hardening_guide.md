@@ -1,5 +1,6 @@
 ---
 uid: DataMiner_hardening_guide
+keywords: hardening, hardening guide, security
 ---
 
 # DataMiner hardening guide
@@ -16,7 +17,7 @@ To obtain the most recent version of DataMiner and related software, go to the [
 
 ## Use BPA tests
 
-The next step to start hardening DataMiner is to make use of the available BPA tests. These scan your DataMiner System for all sorts of issues and will help you resolve any detected issues.
+A good start for hardening your DataMiner is to make use of the available BPA tests. These scan your DataMiner System for all sorts of issues and will help you resolve any detected issues.
 
 For information on how to run these tests, refer to [Running BPA tests](xref:Running_BPA_tests).
 
@@ -30,29 +31,35 @@ All three of these are available by default from DataMiner 10.2.12/10.3.0 onward
 
 After you have run these BPA tests, they will provide an overview of the detected issues and point you to the right documentation to resolve them.
 
-## Secure client-server communication
+## DataMiner Agent hardening
 
-### Web apps
+### Secure Cube-server communication
 
-#### HTTPS
+By default, Cube currently uses .NET Remoting to communicate with DataMiner. From DataMiner 10.1.7 onwards, this communication is encrypted using the Rijndael algorithm using a 256-bit key, which is negotiated over a 1024-bit RSA encrypted communication channel. However, .NET Remoting is a legacy technology and is widely considered insecure. For this reason, DataMiner 10.3.2/10.3.0 introduces the possibility to use gRPC instead as a secure alternative.
 
-By default, DataMiner uses HTTP to serve the web applications. HTTP is unencrypted and vulnerable to man-in-the-middle attacks, so we highly recommend [setting up HTTPS instead](xref:Setting_up_HTTPS_on_a_DMA).
+> [!IMPORTANT]
+> The gRPC connection feature is still a beta feature in DataMiner 10.3.2/10.3.0 CU0, which means you may still encounter issues and the connection might still be less stable than with .NET Remoting.
 
-In addition, we also recommend that you configure your operating system to **block deprecated SSL/TLS versions**. HTTPS uses SSL/TLS for encrypting communication, but the older versions of this protocol are no longer considered secure. At present, all major browsers support the latest TLS version (TLS 1.3), but TLS 1.2 is also still regarded as secure.
+To enable gRPC for the client-server connection, edit the *ConnectionSettings.txt* file on each DataMiner Agent. For detailed information, refer to [ConnectionSettings.txt](xref:ConnectionSettings_txt).
 
-| Protocol | Published | Status |
-|--|--|--|
-| SSL 1.0 | Unpublished | N/A |
-| SSL 2.0 | 1995 | Deprecated since 2011 |
-| SSL 3.0 | 1996 | Deprecated since 2015 |
-| TLS 1.0 | 1999 | Deprecated since 2020 |
-| TLS 1.1 | 2006 | Deprecated since 2020 |
-| TLS 1.2 | 2008 | Supported |
-| TLS 1.3 | 2018 | Supported (most secure) |
+### Secure server-server communication
 
-For more information about disabling legacy SSL/TLS versions, refer to [TLS, DTLS, and SSL protocol version settings](https://learn.microsoft.com/en-us/windows-server/security/tls/tls-registry-settings?tabs=diffie-hellman#tls-dtls-and-ssl-protocol-version-settings) in the Microsoft documentation. We have also made tools and scripts available for this [on GitHub](https://github.com/SkylineCommunications/windows-hardening), or you can use third-party tools such as [IIS Crypto](https://www.nartac.com/Products/IISCrypto).
+#### gRPC
 
-#### HTTP headers
+For the inter-DMA communication, like for the communication with DataMiner Cube, you can also use gRPC instead of .NET Remoting from DataMiner 10.3.2/10.3.0 onwards.
+
+> [!IMPORTANT]
+> The gRPC connection feature is still a beta feature in DataMiner 10.3.2/10.3.0 CU0, which means you may still encounter issues and the connection might still be less stable than with .NET Remoting.
+
+To enable gRPC for the communication between DataMiner Agents in a cluster, add [redirects in DMS.xml](xref:DMS_xml#redirects-subtag).
+
+## DataMiner Webpages hardening
+
+### HTTPS
+
+By default, DataMiner uses HTTP to serve the web applications. HTTP is unencrypted and vulnerable to man-in-the-middle attacks, so we highly recommend [setting up HTTPS](xref:Setting_up_HTTPS_on_a_DMA) instead.
+
+### HTTP headers
 
 When configuring HTTPS in IIS on your DataMiner Agent, we also recommend setting the following HTTP headers:
 
@@ -62,7 +69,7 @@ When configuring HTTPS in IIS on your DataMiner Agent, we also recommend setting
 
 - [X-Content-Type-Options](https://docs.oracle.com/en/industries/health-sciences/argus-safety/8.2.1/asmsc/configuring-x-content-type-options-iis.html#GUID-954EE526-1220-4DD7-A946-0FEAA1A39679): We recommend setting this to *NOSNIFF*.
 
-There are some other HTTP headers that can improve security; however, their value depends on your specific DataMiner setup (e.g. resources used in Dashboards/Low-Code Apps):
+There are some other HTTP headers that can improve security. However, their value depends on your specific DataMiner setup (e.g. resources used in Dashboards/Low-Code Apps):
 
 - [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP)
 
@@ -70,31 +77,7 @@ There are some other HTTP headers that can improve security; however, their valu
 
 - [Permissions-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy)
 
-### DataMiner Cube
-
-By default, Cube currently uses .NET Remoting to communicate with DataMiner. From DataMiner 10.1.7 onwards, this communication is encrypted using the Rijndael algorithm using a 256-bit key, which is negotiated over a 1024-bit RSA encrypted communication channel. However, .NET Remoting is a legacy technology and is widely considered insecure. For this reason, DataMiner 10.3.2/10.3.0 introduces the possibility to use gRPC instead as a secure alternative.
-
-> [!IMPORTANT]
-> The gRPC connection feature is still a beta feature in DataMiner 10.3.2/10.3.0 CU0, which means you may still encounter issues and the connection might still be less stable than with .NET Remoting.
-
-To enable gRPC for the client-server connection, edit the *ConnectionSettings.txt* file on each DataMiner Agent. For detailed information, refer to [ConnectionSettings.txt](xref:ConnectionSettings_txt).
-
-## Secure server-server communication
-
-### gRPC
-
-Like for the communication with DataMiner Cube, for the inter-DMA communication, you can also use gRPC instead of .NET Remoting from DataMiner 10.3.2/10.3.0 onwards.
-
-> [!IMPORTANT]
-> The gRPC connection feature is still a beta feature in DataMiner 10.3.2/10.3.0 CU0, which means you may still encounter issues and the connection might still be less stable than with .NET Remoting.
-
-To enable gRPC for the communication between DataMiner Agents in a cluster, add [redirects in DMS.xml](xref:DMS_xml#redirects-subtag).
-
-### NATS
-
-From version 10.1.0/10.1.1 onwards, DataMiner relies on NATS for some inter-process communication. By default, this NATS traffic is not yet encrypted. For more information, refer to the [official NATS documentation on enabling TLS encryption](https://docs.nats.io/running-a-nats-service/configuration/securing_nats/tls).
-
-## Disable legacy components
+### Disable legacy components
 
 DataMiner has some components that are considered legacy. They are still around to support existing setups that depend on them, but if you have a new setup or you want to secure your existing setup, we recommend disabling them. Currently we recommend disabling the *Annotations* component and the legacy *Reports and Dashboards* component. You can do so by adding the following code in the `C:\Skyline DataMiner\SoftLaunchOptions.xml` file:
 
@@ -108,9 +91,27 @@ DataMiner has some components that are considered legacy. They are still around 
 To make the changes take effect, you then need to run the *ConfigureIIS.bat* script as Administrator located in the `C:\Skyline DataMiner\Tools` folder.
 
 > [!NOTE]
-> The legacy Annotations and Reports and Dashboards modules are disabled by default as from DataMiner versions 10.4.0/10.4.1.
+> The legacy *Annotations* and *Reports and Dashboards* modules are disabled by default as from DataMiner versions 10.4.0/10.4.1.
 
-## Configure the firewall
+## Operating system hardening
+
+### TLS versions
+
+In addition to enabling HTTPS, we also recommend that you configure your operating system to **block deprecated SSL/TLS versions**. HTTPS uses SSL/TLS for encrypting communication, but the older versions of this protocol are no longer considered secure. At present, all major browsers support the latest TLS version (TLS 1.3), but TLS 1.2 is also still regarded as secure.
+
+| Protocol | Published | Status |
+|--|--|--|
+| SSL 1.0 | Unpublished | N/A |
+| SSL 2.0 | 1995 | Deprecated since 2011 |
+| SSL 3.0 | 1996 | Deprecated since 2015 |
+| TLS 1.0 | 1999 | Deprecated since 2020 |
+| TLS 1.1 | 2006 | Deprecated since 2020 |
+| TLS 1.2 | 2008 | Supported |
+| TLS 1.3 | 2018 | Supported (most secure) |
+
+For more information about disabling legacy SSL/TLS versions, refer to [TLS, DTLS, and SSL protocol version settings](https://learn.microsoft.com/en-us/windows-server/security/tls/tls-registry-settings?tabs=diffie-hellman#tls-dtls-and-ssl-protocol-version-settings) in the Microsoft documentation. We have also made tools and scripts available for this [on GitHub](https://github.com/SkylineCommunications/windows-hardening), or you can use third-party tools such as [IIS Crypto](https://www.nartac.com/Products/IISCrypto).
+
+### Configure the firewall
 
 On DataMiner versions installed using the **10.0 installer** (or older), the DataMiner installation opens the following (inbound) ports and rules in the Windows firewall:
 
@@ -128,6 +129,7 @@ On DataMiner versions installed using the **10.0 installer** (or older), the Dat
 
   > [!NOTE]
   > This rule and the one above for TCP 7000 only apply when the DataMiner System uses a Cassandra database locally.
+  > If Cassandra is configured to use TLS, port 7001 and 9142 are used instead. For detailed information on securing Cassandra, refer to [securing self hosted storage](#secure-self-hosted-dataminer-storage).
 
 - TCP 9200: Elasticsearch (client-server communication)
 
@@ -150,11 +152,11 @@ If you use the **DataMiner 10.1 installer or a more recent installer**, the port
 
 - TCP port **23** can be closed if the DataMiner Telnet feature is disabled. For more information, see [DataMiner.Telnet](xref:DataMiner_xml#dataminertelnet).
 
-- TCP port **80** can be closed if IIS is configured to require HTTPS connections. We highly recommended enabling HTTPS on your DataMiner System. Note that TCP port 443 needs to be open for HTTPS connections. For more information, see [Setting up https on a DMA](xref:Setting_up_HTTPS_on_a_DMA).
+- TCP port **80** can be closed if IIS is configured to require HTTPS connections and if IIS is not configured to redirect HTTP to HTTPS. We highly recommended enabling HTTPS on your DataMiner System. Note that TCP port 443 needs to be open for HTTPS connections. For more information, see [Setting up https on a DMA](xref:Setting_up_HTTPS_on_a_DMA).
 
 - TCP port **9004** can always be closed from DataMiner 10.0.11 CU0 and 10.0.0 CU6 onwards.
 
-- TCP port **8222** can always be closed. This will be the default from 10.1.12 CU0 and 10.2.0 CU0 onwards.
+- TCP port **8222** can always be closed. The port is closed by default from 10.1.12 CU0 and 10.2.0 CU0 onwards.
 
 - The ports for NATS communication (**4222, 6222, and 9090**) can be closed when the DMA is not part of a cluster.
 
@@ -169,6 +171,10 @@ The **Remote Administration** rule must be enabled when the DataMiner server is 
 
 > [!TIP]
 > See also: [Configuring the IP network ports](xref:Configuring_the_IP_network_ports)
+
+### Disable the local Administrator account
+
+DataMiner has one built-in user, named "Administrator". This user is the local administrator on the Windows server hosting DataMiner and intended for recovery and initial configuration purposes. Once Operator users have been created, we recommend disabling the local Administrator user on the DataMiner server.
 
 ## Secure self-hosted DataMiner storage
 

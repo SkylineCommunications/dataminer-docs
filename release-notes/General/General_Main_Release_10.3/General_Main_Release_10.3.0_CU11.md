@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.3.0_CU11
 ---
 
-# General Main Release 10.3.0 CU11 – Preview
+# General Main Release 10.3.0 CU11
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
@@ -64,9 +64,10 @@ Up to now, after a restart of the SLAnalytics process, it could occur that a num
 
 From now on, all proactive suggestion events will be cleared when proactive cap detection is started, and trend alarm records will no longer be stored in the Cassandra database.
 
-#### Security enhancements [ID_38040]
+#### Security enhancements [ID_38040] [ID_38656]
 
 <!-- 38040: MR 10.3.0 [CU11] - FR 10.4.2 -->
+<!-- 38656: MR 10.3.0 [CU11] - FR 10.4.2 [CU0] -->
 
 A number of security enhancements have been made.
 
@@ -118,9 +119,6 @@ From now on, it will propose the following algorithms to the server in the follo
 
 Up to now, a number of issues could occur when setting up a Failover system using hostnames instead of virtual IP addresses.
 
-> [!NOTE]
-> When you set up a Failover system using hostnames, we recommend to keep this a standalone system and to not add it to a DataMiner System.
-
 #### Problems with SLDataMiner [ID_37409]
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
@@ -128,6 +126,12 @@ Up to now, a number of issues could occur when setting up a Failover system usin
 SLDataMiner would leak memory when retrieving the baseline values of an element while the relative baseline value was being updated. Also, an error could occur in SLDataMiner after a service had been created, updated or deleted.
 
 Apart from the above-mentioned fixes, memory management and overall error logging have also been improved.
+
+#### Failover: Shared hostname would incorrectly always refer to the same agent when using gRPC [ID_37558]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 [CU0] -->
+
+On a Failover system with a shared hostname using gRPC connections, the shared hostname would incorrectly always refer to the same agent, whether it was online or offline. From now on, the shared hostname will always refer to the online agent.
 
 #### SLDataGateway: Problem with casing when retrieving data from Elasticsearch/OpenSearch [ID_37835]
 
@@ -252,3 +256,15 @@ After a DataMiner restart, in some cases, correlation alarms would have an incor
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 [CU0] -->
 
 Up to now, the BPA test *Check Cluster SLNet Connections* BPA could incorrectly report connection problems in a DataMiner System when it found a Failover setup with a shared hostname.
+
+#### Failover: NATS would incorrectly be reconfigured when both agents were offline [ID_38349]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 [CU0] -->
+
+When both agents in a Failover setup were offline, in some cases, they would incorrectly reconfigure the NATS settings.
+
+#### Problem with SLDataMiner when an enhanced service was not able to find some of its child services [ID_38583]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 [CU0] -->
+
+At DataMiner startup, SLDataMiner could throw an access violation exception when an enhanced service was not able to find some of its child services.

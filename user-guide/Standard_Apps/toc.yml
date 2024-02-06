@@ -214,6 +214,53 @@ items:
             topicUid: CI_Types1
           - name: Using your IS-04 registry to provision DataMiner with IDP
             topicUid: Using_your_IS04_registry_to_provision_DataMiner_with_IDP
+  - name: Monitoring & Management Solutions
+    topicUid: Monitoring_Solutions
+    items:
+      - name: DataMiner Huawei Manager dashboard
+        topicUid: Huawei_Manager_Dashboard
+        items:
+          - name: Installing the Huawei Manager dashboard
+            topicUid: Installing_Huawei_Manager_Dashboard
+          - name: Working with the Huawei Manager dashboard
+            topicUid: Working_with_Huawei_Manager_dashboard
+      - name: DataMiner Ping Monitoring
+        topicUid: PingMonitoring
+        items:
+          - name: Installing the Ping Monitoring tool
+            topicUid: Installing_Ping_Monitoring
+          - name: Working with the Ping Monitoring tool
+            topicUid: Working_with_Ping_Monitoring
+      - name: DataMiner Planned Maintenance (PLM) tool
+        topicUid: DataMiner_PLM_Tool_Overview
+        items:
+          - name: Installing the PLM tool
+            topicUid: Installing_PLM_tool
+          - name: Using the PLM tool
+            topicUid: The_PLM_user_interface
+            items:
+              - name: The PLM tool user interface
+                topicUid: The_PLM_user_interface
+              - name: Configuring resources
+                topicUid: PLM_tool_configuring_resources
+              - name: Configuring maintenance events
+                topicUid: Adding_maintenance_event
+                items:
+                  - name: Adding a maintenance event
+                    topicUid: Adding_maintenance_event
+                  - name: Editing a maintenance event
+                    topicUid: Editing_maintenance_event
+                  - name: Deleting a maintenance event
+                    topicUid: Deleting_maintenance_event
+              - name: Planned Maintenance records
+                topicUid: PLM_Records
+      - name: Remote PHY Monitoring
+        topicUid: Remote_PHY_Monitoring
+        items:
+          - name: Installing Remote PHY Monitoring
+            topicUid: Remote_PHY_Monitoring_Installation
+          - name: Remote PHY Monitoring components
+            topicUid: Remote_PHY_Monitoring_Components
   - name: Process Automation framework
     topicUid: PA_index
     items:
@@ -276,30 +323,6 @@ items:
             topicUid: Types_of_PTP_devices
           - name: Overview of the DataMiner PTP app UI
             topicUid: Overview_of_the_DataMiner_PTP_app_UI
-  - name: Monitoring Solutions
-    topicUid: Monitoring_Solutions
-    items:
-      - name: DataMiner Huawei Manager dashboard
-        topicUid: Huawei_Manager_Dashboard
-        items:
-          - name: Installing the Huawei Manager dashboard
-            topicUid: Installing_Huawei_Manager_Dashboard
-          - name: Working with the Huawei Manager dashboard
-            topicUid: Working_with_Huawei_Manager_dashboard
-      - name: DataMiner Ping Monitoring
-        topicUid: PingMonitoring
-        items:
-          - name: Installing the Ping Monitoring tool
-            topicUid: Installing_Ping_Monitoring
-          - name: Working with the Ping Monitoring tool
-            topicUid: Working_with_Ping_Monitoring
-      - name: Remote PHY Monitoring
-        topicUid: Remote_PHY_Monitoring
-        items:
-          - name: Installing Remote PHY Monitoring
-            topicUid: Remote_PHY_Monitoring_Installation
-          - name: Remote PHY Monitoring components
-            topicUid: Remote_PHY_Monitoring_Components
   - name: Service & Resource Management Framework
     topicUid: About_SRM
     items:
