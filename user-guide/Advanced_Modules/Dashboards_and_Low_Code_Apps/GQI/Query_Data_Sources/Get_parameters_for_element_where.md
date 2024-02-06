@@ -8,5 +8,5 @@ The *Get parameters for element where* data source retrieves the selected parame
 
 From DataMiner 10.2.0/10.1.5 onwards, if a protocol and version have been specified, you can retrieve parameters from an existing feed in the dashboard. Prior to DataMiner 10.3.5/10.4.0<!--  RN 35837 -->, you can do so using the *Use feed* checkbox. In more recent DataMiner versions, you can instead click the link icon to the right of the relevant selection box.
 
-> [!NOTE]
-> If you encounter problems with protocol changes not appearing in the query results, please refer to the following troubleshooting steps: [What should I do if I don't see my protocol changes applied in a GQI query result?](xref:Dashboards_and_Low_Code_Apps_FAQ#what-should-i-do-if-i-dont-see-my-protocol-changes-applied-in-a-gqi-query-result)
+> [!TIP]
+> If you encounter problems with protocol changes not appearing in the query results, please refer to the following troubleshooting steps: [What should I do if I do not see my protocol changes applied in a GQI query result?](xref:Dashboards_and_Low_Code_Apps_FAQ#what-should-i-do-if-i-do-not-see-my-protocol-changes-applied-in-a-gqi-query-result)

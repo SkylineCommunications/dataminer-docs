@@ -20,12 +20,20 @@ To resolve these:
 
 - Use a modern browser that supports WebSockets. The DataMiner web apps do not support Internet Explorer.
 
-## What should I do if I don't see my protocol changes applied in a GQI query result?
+## What should I do if I do not see my protocol changes applied in a GQI query result?
 
-If you've made protocol changes but don't see them reflected in your GQI query results, it's likely due to GQI caching certain protocols for faster performance.
+If you have made protocol changes, but you do not see them reflected in your GQI query results, this is likely caused by GQI caching certain protocols for faster performance.
 
 To resolve this:
+
 1. Launch your system's Task Manager utility.
-1. Look through the list of processes for the *Skyline DataMiner Helper* process. This process is responsible for managing GQI.
-1. Select the *Skyline DataMiner Helper* process and choose to end it. 
-1. After terminating the process, refresh your dashboard or application. This will prompt GQI to fetch the latest protocol changes and display accurate query results.
+
+1. Look through the list of processes for the *Skyline DataMiner Helper* process.
+
+   This process is responsible for managing GQI.
+
+1. Select the *Skyline DataMiner Helper* process and select to end it.
+
+1. After terminating the process, refresh your dashboard or application.
+
+   This will prompt GQI to fetch the latest protocol changes and display accurate query results.
