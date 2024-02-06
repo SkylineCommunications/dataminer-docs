@@ -27,3 +27,9 @@ When you upgrade a DataMiner System, a new prerequisite will now block the upgra
 When the streaming method was being used, a match detected for one subpattern of a multivariate pattern would incorrectly be considered a match of that entire multivariate pattern.
 
 Although the suggestion events were generated correctly, the pattern matches would not be indicated correctly on the trend graphs.
+
+#### SLAnalytics - Automatic incident tracking: Problem when updating alarm groups [ID_38629]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+Each time the focus score of an alarm is updated, incident tracking has to update its alarm groups. In some cases, incident tracking would incorrectly update its groups twice, causing the groups to be set to an undefined state.

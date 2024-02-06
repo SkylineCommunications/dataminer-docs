@@ -42,4 +42,8 @@ The validation of the name of a booking is now case-insensitive. This means that
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### SLAnalytics - Automatic incident tracking: Problem when updating alarm groups [ID_38629]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+Each time the focus score of an alarm is updated, incident tracking has to update its alarm groups. In some cases, incident tracking would incorrectly update its groups twice, causing the groups to be set to an undefined state.
