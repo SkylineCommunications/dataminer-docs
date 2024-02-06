@@ -45,3 +45,9 @@ This will no longer be the case. The value of a regex node will now have the for
 <!-- MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.4 -->
 
 When you opened the icon picker in e.g. *Configure Context menu*, up to now, the icons would not entirely fill the box, causing a white bar to appear on the right-hand size. From now on, the rows will again contain 10 icons instead of 9.
+
+#### Low-Code Apps: Selection boxes in the header bar would appear behind the component that had the focus [ID_38677]
+
+<!-- MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+When a panel component had the focus, selection boxes in the header bar would incorrectly appear behind the component that had the focus.
