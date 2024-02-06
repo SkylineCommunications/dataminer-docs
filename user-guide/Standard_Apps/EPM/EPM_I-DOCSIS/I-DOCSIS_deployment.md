@@ -6,21 +6,25 @@ uid: I-DOCSIS_deployment
 
 To deploy the I-DOCSIS branch of the EPM Solution:
 
-1. Make sure the latest DataMiner feature release version is installed. 
+1. Make sure the latest DataMiner feature release version is installed.
 
-2. Download the latest EPM package to the DMA server (in a different folder than C:\Skyline DataMiner) and install the package. This will install the package on all DMAs so it only needs to be executed on a single DMA. 
-If DMA is connected to Dataminer Services, may deploy package directly from the Catalog.
-   - If DMA is connected to Dataminer Services, may deploy package directly from the Catalog.
+1. Deploy the EPM package:
 
-That is all that is needed for upgrading a configured EPM Solution. If this is an initial deployment, please perform the following steps.
+   - If the DMA is connected to dataminer.services, you can [deploy the package](xref:Deploying_a_catalog_item) directly from the Catalog
+   - Otherwise, place the latest EPM package on the DMA server (in a different folder than C:\Skyline DataMiner) and install the package.
 
-> [!Prerequisite]
->1. If using multiple DMA's, a remote file location that is accessible by all servers is needed.
->2. Hosting the FrontEnd element on it's own DMA with no collectors is highly recommended.
->3. To enable the Topology app, the CPEIntegration soft launch option is needed.
-  
+   This will install the package on all DMAs, so you only need to do this on one DMA in a cluster.
 
-3.  **create the necessary views**. See [Creating a view](xref:Managing_views#creating-a-view).
+   > [!NOTE]
+   > If you are **upgrading** an existing EPM setup, no further steps are needed. However, if you are deploying this solution for the first time, follow the steps below as well.
+
+1. Make sure the following prerequisites are met:
+
+   - If the DataMiner System is a cluster of multiple DMAs, there must be a remote file location that is accessible by all servers.
+   - There should be a separate DMA to host the front-end element, which does not host any collectors. This is not mandatory, but it is highly recommended.
+   - If you want to be able to use the Topology app, the [*CPEIntegration* soft-launch option](xref:Overview_of_Soft_Launch_Options#cpeintegration) must be enabled.
+
+1. Create the necessary views. See [Creating a view](xref:Managing_views#creating-a-view).
 
    - The solution expects the following view structure:
 
@@ -44,25 +48,49 @@ That is all that is needed for upgrading a configured EPM Solution. If this is a
      >     - EPM BE
      >     - EPM FE
 
-4. Create the FrontEnd Element in the System > DataMiner EPM > EPM FE view. Select Default Alarm and Trend templates if would like a starting off point for monitored KPI’s.
-   
-5. Create one BackEnd element per DMA in the System > DataMiner EPM > EPM BE view. Select Default Alarm and Trend templates if would like a starting off point for monitored KPI’s.
+1. Create the front-end element in the view *System* > *DataMiner EPM* > *EPM FE*.
+
+   Optionally, select the default alarm and trend templates during element creation to have a starting point for monitored KPIs.
+
+1. Create one back-end element per DMA in the view *System* > *DataMiner EPM* > *EPM BE*.
+
+   Optionally, select the default alarm and trend templates during element creation to have a starting point for monitored KPIs.
+
    > [!NOTE]
-   > It is recommended that no Collector or BackEnd elements are on the same DMA as the FrontEnd.
+   > We recommend that you avoid placing collector or back-end elements on the same DMA as the front-end element.
 
-6. Assign Visual Visio to EPM Elements. 
-	- Go to Apps > Protocols & Templates
-	- Select Skyline EPM Platform
-	- Under Visio Files, right click on Custom and select ‘Set as active Visio file’
-	- Do the same for the Skyline EPM Platform DOCSIS driver
+1. Assign the necessary Visio drawings to the EPM elements:
 
-7. Configure the FrontEnd element.
-	- Add the FrontEnd's DMA ID/Element ID to the FrontEnd Registration table.
-   - Add all of the DMA ID/Element ID's of the created BackEnds to the BackEnd Registration table. 
-   - Configure the directory settings. It is recommended to have the FrontEnd import and export from a local directory. If using a remote directory, also provide username and password credentials of user who has access to the remote directory.
+   1. Go to *Apps* > *Protocols & Templates*.
 
-8. Configure the BackEnd elements.
-	- Add the current BackEnd's DMA ID/Element ID to it's BackEnd Registration table. 
-   - Update the directory settings. The Import directory will be the FrontEnd's export directory/DOCSIS. If using a remote directory, also provide username and password credentials of user who has access to the remote directory. Updating the Directory settings can be done using the Multiple Set option in Dataminer if configuring multiple BackEnd elements.
-  
-9. To configure CMTS elements, use the provided EPM_I_DOCSIS_AddNewCcapCmPair. See [Creating CCAP/CM Pair](https://docs.dataminer.services/user-guide/Standard_Apps/EPM/EPM_I-DOCSIS/I-DOCSIS_Create_CCAP_CM_pair.html).
+   1. Select *Skyline EPM Platform*.
+
+   1. Under *Visio Files*, right click *Custom* and select *Set as active Visio file*.
+
+   1. Select *Skyline EPM Platform DOCSIS* and repeat the previous step.
+
+1. Configure the front-end element:
+
+   1. Add the DMA ID/Element ID of the front-end element to the *FrontEnd Registration* table.
+
+   1. Add all of the DMA ID/Element ID combinations of the created back-end elements to the *BackEnd Registration* table.
+
+   1. Configure the directory settings:
+
+      - We recommend having the front end import and export from a local directory.
+
+      - If you use a remote directory instead, also provide username and password credentials of a user with access to the remote directory.
+
+1. Configure the back-end elements:
+
+   1. Add the DMA ID/Element ID of the current back-end element to its *BackEnd Registration* table.
+
+   1. Configure the directory settings:
+
+      - The import directory will be the front end's export directory/DOCSIS.
+
+      - If you use a remote directory, also provide username and password credentials of user with access to the remote directory.
+
+      - To configure the directory settings for multiple back-end elements at the same time, you can use the [multiple set](xref:Updating_elements#setting-a-parameter-value-in-multiple-elements) feature.
+
+1. To configure CMTS elements, use the provided EPM_I_DOCSIS_AddNewCcapCmPair. See [Creating CCAP/CM Pair](https://docs.dataminer.services/user-guide/Standard_Apps/EPM/EPM_I-DOCSIS/I-DOCSIS_Create_CCAP_CM_pair.html).
