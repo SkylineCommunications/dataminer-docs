@@ -10,7 +10,7 @@ To deploy the I-DOCSIS branch of the EPM Solution:
 
 1. Deploy the EPM package:
 
-   - If the DMA is connected to dataminer.services, you can [deploy the package](xref:Deploying_a_catalog_item) directly from the Catalog
+   - If the DMA is connected to dataminer.services, you can [deploy the package](xref:Deploying_a_catalog_item) directly from the Catalog.
    - Otherwise, place the latest EPM package on the DMA server (in a different folder than C:\Skyline DataMiner) and install the package.
 
    This will install the package on all DMAs, so you only need to do this on one DMA in a cluster.
@@ -71,9 +71,9 @@ To deploy the I-DOCSIS branch of the EPM Solution:
 
 1. Configure the front-end element:
 
-   1. Add the DMA ID/Element ID of the front-end element to the *FrontEnd Registration* table.
+   1. Add the DMA ID/Element ID of the front-end element to the *Frontend Registration* table.
 
-   1. Add all of the DMA ID/Element ID combinations of the created back-end elements to the *BackEnd Registration* table.
+   1. Add all of the DMA ID/Element ID combinations of the created back-end elements to the *Backend Registration* table.
 
    1. Configure the directory settings:
 
@@ -83,7 +83,7 @@ To deploy the I-DOCSIS branch of the EPM Solution:
 
 1. Configure the back-end elements:
 
-   1. Add the DMA ID/Element ID of the current back-end element to its *BackEnd Registration* table.
+   1. Add the DMA ID/Element ID of each back-end element to the *Backend Registration* table of that element.
 
    1. Configure the directory settings:
 
@@ -93,4 +93,4 @@ To deploy the I-DOCSIS branch of the EPM Solution:
 
       - To configure the directory settings for multiple back-end elements at the same time, you can use the [multiple set](xref:Updating_elements#setting-a-parameter-value-in-multiple-elements) feature.
 
-1. To configure CMTS elements, use the provided EPM_I_DOCSIS_AddNewCcapCmPair. See [Creating CCAP/CM Pair](https://docs.dataminer.services/user-guide/Standard_Apps/EPM/EPM_I-DOCSIS/I-DOCSIS_Create_CCAP_CM_pair.html).
+1. Configure the CMTS elements using the script *EPM_I_DOCSIS_AddNewCcapCmPair*. See [Creating CCAP/CM Pair](https://docs.dataminer.services/user-guide/Standard_Apps/EPM/EPM_I-DOCSIS/I-DOCSIS_Create_CCAP_CM_pair.html).
