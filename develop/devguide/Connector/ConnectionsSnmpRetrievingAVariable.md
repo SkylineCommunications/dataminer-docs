@@ -45,7 +45,7 @@ The parameter with ID 1 represents the variable that needs to be retrieved. Note
 > [!NOTE]
 >
 > - For more information about the meaning of all tags and attributes, see [Protocol.Params.Param](xref:Protocol.Params.Param).
-> - An example protocol "SLC SDF SNMP - Stand Alone" is available in the [Protocol Development Guide Companion Files](https://community.dataminer.services/documentation/protocol-development-guide-companion-files/).
+> - An example protocol "Skyline Example SNMP Stand-Alone" is available in the [SkylineCommunications/SLC-C-Example_SNMP-Stand-Alone](https://github.com/SkylineCommunications/SLC-C-Example_SNMP-Stand-Alone) GitHub repository.
 
 Next, a group is defined which has the defined parameter as content.
 

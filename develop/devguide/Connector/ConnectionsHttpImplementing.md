@@ -11,7 +11,7 @@ Periodically requesting information from a device via HTTP can be done as follow
 The approach is very similar to serial communication: with HTTP, the content of the group will be a session, whereas with serial communication a pair is used.
 
 > [!NOTE]
-> An example protocol "SLC SDF HTTP" is available in the [Protocol Development Guide Companion Files](https://community.dataminer.services/documentation/protocol-development-guide-companion-files/).
+> An example protocol "Skyline Example HTTP" is available in the [SkylineCommunications/SLC-C-Example_HTTP](https://github.com/SkylineCommunications/SLC-C-Example_HTTP) GitHub repository.
 
 ## Session
 
