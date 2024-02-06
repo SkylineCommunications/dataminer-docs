@@ -80,8 +80,7 @@ The errors in this section can be generated when the UserDefinableApiEndpoint Dx
 
 - **Error code 1001 is returned while the NATS connection looks fine.**
 
-  When you receive the 1001 error when triggering a user-defined API, and the NATS connection of the UserDefinableApiEndpointApi DxM looks fine according the logging, make sure that the DxM version is compatible with the DMS version. It could happen that the DMA was upgraded temporarily to a higher version, which causes a newer incompatible version of the DxM to be still installed after the downgrade. See the "Make sure the version of the UserDefinableApiEndpoint DxM is compatible with the DMA" section in the [general checks](#general-checks) for more info.
-
+  When you receive the 1001 error when triggering a user-defined API, and the NATS connection of the UserDefinableApiEndpointApi DxM looks fine according to the logging, make sure that the DxM version is compatible with the DMS version. The DMA might have been temporarily upgraded to a higher version, causing a newer incompatible version of the DxM to still be installed after the downgrade. For more info, look for "Make sure the version of the UserDefinableApiEndpoint DxM is compatible with the DMA" in the [general checks](#general-checks) below.
 
 ### General checks
 
