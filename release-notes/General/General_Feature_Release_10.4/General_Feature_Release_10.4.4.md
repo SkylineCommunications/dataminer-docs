@@ -28,7 +28,11 @@ uid: General_Feature_Release_10.4.4
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### DataMiner upgrade: New prerequisite will check whether .NET 8.0 is installed [ID_37969]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+When you upgrade a DataMiner System, a new prerequisite will now block the upgrade when the server does not have Microsoft .NET 8.0 installed.
 
 ### Fixes
 
