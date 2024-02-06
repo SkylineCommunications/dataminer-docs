@@ -24,7 +24,7 @@ This method is invoked on an Ad Hoc data source when it is allowed to start publ
 In the [Ad Hoc data source lifecycle](xref:Ad_hoc_Life_cycle), it is called after [OnPrepareFetch](xref:GQI_IGQIOnPrepareFetch#onpreparefetchoutputargs-onpreparefetchonpreparefetchinputargs-args) and before any [GetNextPage](xref:GQI_IGQIDataSource#gqipage-getnextpagegetnextpageinputargs-args) calls.
 
 > [!NOTE]
-> This method will only be called if [updates are enabled](xref:Query_updates#enabling-updates) for the containing query and when that query [can handle](xref:Query_updates#enabling-updates#query-update-support) the updates. That way no resources are wasted.
+> This method will only be called if [updates are enabled](xref:Query_updates#enabling-updates) for the containing query and when that query [can handle](xref:Query_updates#query-update-support) the updates. That way no resources are wasted.
 
 #### Parameters
 
