@@ -51,3 +51,9 @@ When you opened the icon picker in e.g. *Configure Context menu*, up to now, the
 <!-- MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.4 -->
 
 When a panel component had the focus, selection boxes in the header bar would incorrectly appear behind the component that had the focus.
+
+#### Dashboards app: Dashboard duplicate would not inherit the settings of the original dashboard [ID_38679]
+
+<!-- MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+When you duplicated a dashboard, the newly created duplicate would incorrectly not inherit the dashboard settings of the original dashboard.
