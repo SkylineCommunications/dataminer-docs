@@ -51,7 +51,7 @@ For the inter-DMA communication, like for the communication with DataMiner Cube,
 > [!IMPORTANT]
 > The gRPC connection feature is still a beta feature in DataMiner 10.3.2/10.3.0 CU0, which means you may still encounter issues and the connection might still be less stable than with .NET Remoting.
 
-To enable gRPC for the communication between DataMiner Agents in a cluster, add [redirects in DMS.xml](xref:DMS_xml#redirects-subtag) or, from **10.3.6/10.3.0 [CU3] onwards** disable .NET Remoting completely in [MaintenanceSettings.xml](xref:Configuration_of_DataMiner_processes#disabling-net-remoting).
+To enable gRPC for the communication between DataMiner Agents in a cluster, add [redirects in DMS.xml](xref:DMS_xml#redirects-subtag) or, from **10.3.6/10.3.0 [CU3] onwards**, disable .NET Remoting completely in [MaintenanceSettings.xml](xref:Configuration_of_DataMiner_processes#disabling-net-remoting).
 
 ## DataMiner Webpages hardening
 
