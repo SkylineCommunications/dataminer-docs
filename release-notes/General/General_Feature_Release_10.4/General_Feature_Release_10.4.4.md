@@ -36,7 +36,7 @@ When you upgrade a DataMiner System, a new prerequisite will now block the upgra
 
 #### Service & Resource Management: Booking name validation now case-insensitive [ID_38556]
 
-<!-- MR 10.5.0 - FR 10.4.4 -->
+<!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
 
 The validation of the name of a booking is now case-insensitive. This means that when the SRM Framework checks if there are future bookings with the same name, the casing is now no longer taken into account.
 

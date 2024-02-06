@@ -18,6 +18,12 @@ uid: General_Main_Release_10.4.0_CU1
 
 When you upgrade a DataMiner System, a new prerequisite will now block the upgrade when the server does not have Microsoft .NET 8.0 installed.
 
+#### Service & Resource Management: Booking name validation now case-insensitive [ID_38556]
+
+<!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
+
+The validation of the name of a booking is now case-insensitive. This means that when the SRM Framework checks if there are future bookings with the same name, the casing is now no longer taken into account.
+
 ### Fixes
 
 #### SLAnalytics - Pattern matching: A match of one subpattern would incorrectly be considered a match of the entire multivariate pattern [ID_38587]

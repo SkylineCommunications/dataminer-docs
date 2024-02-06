@@ -138,12 +138,6 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 
 For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
 
-#### Service & Resource Management: Booking name validation now case-insensitive [ID_38556]
-
-<!-- MR 10.5.0 - FR 10.4.4 -->
-
-The validation of the name of a booking is now case-insensitive. This means that when the SRM Framework checks if there are future bookings with the same name, the casing is now no longer taken into account.
-
 ### Fixes
 
 #### Databases: Problem when starting a migration from MySQL to Cassandra [ID_37589]
