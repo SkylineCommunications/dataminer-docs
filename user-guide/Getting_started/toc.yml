@@ -33,7 +33,6 @@ items:
         - name: Frequently asked questions
           topicUid: Installing_a_DMA_FAQ
   - name: Interacting with DataMiner
-    topicUid: Client_apps
     items:
       - name: Client apps
         topicUid: Client_apps
@@ -42,7 +41,6 @@ items:
       - name: DataMiner modules
         topicUid: DataMiner_modules
       - name: Accessing DataMiner Cube
-        topicUid: Installing_configuring_the_DataMiner_Cube_software
         items:
           - name: Installing & configuring the DataMiner Cube software
             topicUid: Installing_configuring_the_DataMiner_Cube_software
@@ -60,7 +58,6 @@ items:
               - name: DataMiner Cube deployment methods
                 topicUid: DataMiner_Cube_deployment_methods
           - name: Connecting to a DataMiner Agent with Cube
-            topicUid: Using_the_desktop_app
             items:
               - name: Using the desktop application
                 topicUid: Using_the_desktop_app
@@ -80,7 +77,6 @@ items:
       - name: Accessing the Monitoring app
         topicUid: Accessing_the_Monitoring_app
   - name: Working with DataMiner Cube
-    topicUid: Cube_UI_components
     items:
       - name: DataMiner Cube UI components
         topicUid: Cube_UI_components
