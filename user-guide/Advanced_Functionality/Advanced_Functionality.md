@@ -4,8 +4,6 @@ uid: Part3AdvancedFunctionalities
 
 # Advanced DataMiner functionality for administrators
 
-<!-- TODO: replace system layout icon -->
-
 <div class="row"> 
   <div class="column">
     <a href="/user-guide/Getting_started/DataMiner_System_Layout/DataMiner_System_Layout.html" title="System Layout" target="_self"><img src="~/user-guide/images/Docs_SystemLayout.svg" style="width:100%"></a>

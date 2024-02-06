@@ -12,7 +12,7 @@ Several client apps are available that allow you to interact with a DataMiner Sy
 
   - Once you have installed Cube, you can [connect to your DataMiner System](xref:Using_the_desktop_app) or to any other DataMiner System you have access to.
 
-<!-- TODO: Add screenshot of Cube start window -->
+  ![Cube start window](~/user-guide/images/Cube_Start_Window.png)
 
 - **DataMiner Monitoring app**: This is the main web application to monitor a DataMiner System. While it has more limited functionality than DataMiner Cube, it is more easily accessible, as you can open it in any modern browser.
 

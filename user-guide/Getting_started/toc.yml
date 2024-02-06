@@ -47,8 +47,6 @@ items:
           - name: Installing & configuring the DataMiner Cube software
             topicUid: Installing_configuring_the_DataMiner_Cube_software
             items:
-              - name: Prerequisites
-                topicUid: Prerequisites_Cube
               - name: Installing the DataMiner Cube desktop application
                 topicUid: Installing_the_DataMiner_Cube_desktop_application
               - name: Cleaning up the DataMiner Cube desktop app cache
