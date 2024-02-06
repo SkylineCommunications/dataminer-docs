@@ -65,7 +65,7 @@ To deploy the I-DOCSIS branch of the EPM Solution:
 
    1. Select *Skyline EPM Platform*.
 
-   1. Under *Visio Files*, right click *Custom* and select *Set as active Visio file*.
+   1. Under *Visio Files*, right-click *Custom* and select *Set as active Visio file*.
 
    1. Select *Skyline EPM Platform DOCSIS* and repeat the previous step.
 
