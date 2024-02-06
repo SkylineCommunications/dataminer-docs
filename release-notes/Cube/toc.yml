@@ -29,6 +29,8 @@ items:
             topicUid: Cube_Feature_Release_10.4.2
           - name: DataMiner Cube Feature Release 10.4.3 - Preview
             topicUid: Cube_Feature_Release_10.4.3
+          - name: DataMiner Cube Feature Release 10.4.4 - Preview
+            topicUid: Cube_Feature_Release_10.4.4
   - name: v10.3
     topicUid: Cube_Main_Release_10.3.0
     items:

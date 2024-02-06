@@ -26,11 +26,11 @@ Its main purpose is for use within large projects where inter-element or inter-a
 
 ### DataMiner requirements
 
-- The InterApp classes require DataMiner 9.6.3 or higher to function correctly.
+- The InterApp classes require DataMiner 10.0.10 or higher to function correctly.
 
 ### Automation script requirements
 
-- DataMiner version 9.6.13.0-8706 or higher is required.
+- DataMiner version 10.0.10 or higher is required.
 
 ### Protocol requirements
 
@@ -469,7 +469,7 @@ To send a reply, make sure the message has the same GUID as the received message
 Message deleteReply = new DeleteLineupResult { Guid = Message.Guid, Success = true };
 ```
 
-Then you send the message to the ReturnAddress that was specified in the received message.
+Then you send the message to the `ReturnAddress` that was specified in the received message.
 
 ```csharp
 deleteReply.Send(
@@ -479,6 +479,18 @@ deleteReply.Send(
   receivedMessage.ReturnAddress.ParameterId,
   knownTypes);
 ```
+
+Alternatively, you can use the Reply method to simplify the number of input arguments needed to pass to the method, as it will use the `ReturnAddress` of the `receivedMessage` automatically.
+
+```csharp
+receivedMessage.Reply(
+  protocol.SLNet.RawConnection,
+  deleteReply,
+  knownTypes);
+```
+
+> [!IMPORTANT]
+> The InterApp call Reply method should only be used with version 1.0.0.3 or higher of the NuGet, as previous versions contain an issue.
 
 ## Tweaking the system
 

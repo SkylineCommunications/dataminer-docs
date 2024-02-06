@@ -1,3 +1,2 @@
-items:
-  - name: Home
-    href: index.md
+- name: Home
+  href: index.md
