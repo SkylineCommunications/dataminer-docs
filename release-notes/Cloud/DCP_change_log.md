@@ -6,6 +6,24 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 6 February 2024 - New Feature - Chat Integration with Microsoft Teams now includes sending buttons on notifications using Adaptive Cards [ID_38701]
+
+It is now possible to send buttons in notifications using Adaptive Cards to chats or channels with Chat Integration. 
+
+Available buttons:
+- Prompt to run a custom command (optionally with predefined input values)
+- Open URL
+- Get element
+- Get alarms of an elements
+- Get alarms of a view
+- Prompt to change the active DMS of the conversation
+
+In an Automation script, you can use [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) to easily interact with Microsoft Teams.
+
+To get started, you can find several example Automation scripts with more information on [GitHub](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples).
+
+After you have made sure that the [prerequisites](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples/README.md#usage) are in place, you can deploy [the Chat Integration examples](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples/README.md#getting-started) to your DataMiner System and immediately try out these examples.
+
 #### 30 January 2024 - Enhancement - Orchestrator 1.5.4 - Improved DxM status reporting [ID_38553]
 
 The Orchestrator DxM will now offload more information about the cloud endpoint.
