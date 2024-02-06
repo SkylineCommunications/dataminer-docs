@@ -84,7 +84,7 @@ Its main purpose is for use within large projects where inter-element or inter-a
 ## Getting started
 
 > [!NOTE]
-> An example protocol "Skyline Example InterAppCalls" is available in our [GitHub organization](https://github.com/SkylineCommunications/SLC-C-Example_InterAppCalls).
+> An example protocol "Skyline Example InterAppCalls" is available in the [SkylineCommunications/SLC-C-Example_InterAppCalls](https://github.com/SkylineCommunications/SLC-C-Example_InterAppCalls) GitHub repository.
 
 Begin by checking and applying everything to meet the DataMiner, DIS, protocol and optional Automation script requirements.
 

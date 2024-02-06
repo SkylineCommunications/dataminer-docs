@@ -44,7 +44,7 @@ The Modifications QAction provides an initial framework that now needs to be com
 
 Anything that needs to access the matrix or router tables should now go to this QAction. It contains a Matrix instance stored in SLScripting memory that will keep track of changes and makes sure all sets and gets are happening as efficiently as possible. This class comes from the class library and more information about this can be found in the section Class library - Matrix class .
 
-Detailed examples of how to use this on a real device can be found in our [GitHub organization](https://github.com/SkylineCommunications/SLC-C-Example_Matrix).
+Detailed examples of how to use this on a real device can be found in the [SkylineCommunications/SLC-C-Example_Matrix](https://github.com/SkylineCommunications/SLC-C-Example_Matrix) GitHub repository.
 
 - Matrix + tables: Skyline Example Matrix, range 1.0.0.X.
 - Only matrix: Skyline Example Matrix, range 1.0.1.X.
