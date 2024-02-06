@@ -480,7 +480,7 @@ deleteReply.Send(
   knownTypes);
 ```
 
-Alternatively, you can use the Reply method to simplify the number of input arguments needed to pass to the method as it will use the `ReturnAddress` of the `receivedMessage` automatically.
+Alternatively, you can use the Reply method to simplify the number of input arguments needed to pass to the method, as it will use the `ReturnAddress` of the `receivedMessage` automatically.
 
 ```csharp
 receivedMessage.Reply(
@@ -490,7 +490,7 @@ receivedMessage.Reply(
 ```
 
 > [!IMPORTANT]
-> The InterApp call Reply method should only be used with version 1.0.0.3 or higher of the NuGet as previous versions contain an issue.
+> The InterApp call Reply method should only be used with version 1.0.0.3 or higher of the NuGet, as previous versions contain an issue.
 
 ## Tweaking the system
 
