@@ -84,7 +84,7 @@ Its main purpose is for use within large projects where inter-element or inter-a
 ## Getting started
 
 > [!NOTE]
-> An example protocol "SLC SDF Inter App Calls" is available in the [Protocol Development Guide Companion Files](https://community.dataminer.services/documentation/protocol-development-guide-companion-files/).
+> An example protocol "Skyline Example InterAppCalls" is available in our [GitHub organization](https://github.com/SkylineCommunications/SLC-C-Example_InterAppCalls).
 
 Begin by checking and applying everything to meet the DataMiner, DIS, protocol and optional Automation script requirements.
 

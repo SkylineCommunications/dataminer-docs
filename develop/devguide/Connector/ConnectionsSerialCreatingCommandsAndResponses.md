@@ -365,7 +365,7 @@ From DataMiner 10.0.3 (RN 24442) onwards, it is possible for the field that spec
 ![alt text](../../images/RN24442.svg "Responses with dynamically defined length")
 
 > [!NOTE]
-> An example protocol "SLC SDF Serial Response Matching" is available in the [Protocol Development Guide Companion Files](https://community.dataminer.services/documentation/protocol-development-guide-companion-files/).
+> An example protocol "Skyline Example Serial Response Matching" is available in our [GitHub organization](https://github.com/SkylineCommunications/SLC-C-Example_Serial-Response-Matching).
 
 ## Cyclic Redundancy Check (CRC)
 
