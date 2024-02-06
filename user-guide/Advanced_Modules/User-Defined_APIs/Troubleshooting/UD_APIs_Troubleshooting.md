@@ -132,15 +132,19 @@ If issues occur when you trigger a user-defined API, follow the steps below to r
 
 1. Make sure the **version of the UserDefinableApiEndpoint DxM is compatible with the DMA**.
 
-  Sometimes, breaking chances need to be made for the communication between the DxM and the DMA. This will result in an increment of the major digit of the DxM version. DxM versions 2.X.X are not compatible with DataMiner versions that are made for the 3.X.X range of the DxM. You can see what range is supported by checking the DxM installer that was delivered with the currently installed DataMiner version. This installer can be found in the "C:\Skyline DataMiner\Tools\ModuleInstallers" folder. You can find the installed version when you open the "Installed apps" configuration window in Windows and search for the "DataMiner UserDefinableApiEndpoint" app.
+   Sometimes, breaking changes need to be made to the communication between the DxM and the DMA. This will result in an increment of the major digit of the DxM version. DxMs with a specific major range version are not compatible with DataMiner versions that are intended to communicate with a different major range version. For example, the 2.X.X range of a DxM is not compatible with DataMiner versions that are made for the 3.X.X range of the DxM.
 
-  If the installed version range is lower, use the installer in this folder to upgrade the DxM. If the installed version range is newer, first uninstall the process and re-install it using that installer.
+   To see which range is **supported** by a DataMiner version, check the DxM installer that was delivered with the currently installed DataMiner version. You can find this in the folder `C:\Skyline DataMiner\Tools\ModuleInstallers` on the DMA.
 
-  Examples:
+   To see which range is **installed**, go to the "Installed apps" configuration window in Windows and search for the "DataMiner UserDefinableApiEndpoint" app.
 
-  | Installed version | Folder version | Action |
-  |--|--|--|
-  | 3.2.0.14271 | 2.0.2.60564 | Uninstall the current version and reinstall it with the 2.0.2.60564 executable in the "ModuleInstallers" folder. |
-  | 2.0.2.60564 | 3.2.0.14271 | Upgrade the current version by running the 3.2.0.14271 executable in the "ModuleInstallers" folder. |
-  | 3.2.0.14271 | 3.1.0.13541 | This version should be compatible. Only try downgrading when no other troubleshooting steps resolve the issue. |
-  | 3.1.0.13541 | 3.2.0.14271 | This version should be compatible. It is however advised to upgrade to the newer version. |
+   If the installed version range is lower than the supported range, use the installer in the `C:\Skyline DataMiner\Tools\ModuleInstallers` folder to upgrade the DxM. If the installed version range is higher, first uninstall the process and then re-install it using the installer in that folder.
+
+   Examples:
+
+   | Installed version | Folder version | Action |
+   |--|--|--|
+   | 3.2.0.14271 | 2.0.2.60564 | Uninstall the current version and reinstall it with the 2.0.2.60564 executable in the "ModuleInstallers" folder. |
+   | 2.0.2.60564 | 3.2.0.14271 | Upgrade the current version by running the 3.2.0.14271 executable in the "ModuleInstallers" folder. |
+   | 3.2.0.14271 | 3.1.0.13541 | This version should be compatible. Only try downgrading when no other troubleshooting steps resolve the issue. |
+   | 3.1.0.13541 | 3.2.0.14271 | This version should be compatible. However, upgrading to the newer version is recommended. |
