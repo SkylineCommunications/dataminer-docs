@@ -81,7 +81,7 @@ See below for detailed instructions on how to enable SSH access.
 > [!IMPORTANT]
 > If the backup is initiated from one of the nodes in the cluster, the public key should also be appended to the *authorized_keys* file on this node.
 
-After the last step, you should be able to *ssh* from one of nodes to another node of the cluster, without entering the password, just its IP address.
+After the last step, you should be able to connect via SSH from one of the nodes to another node of the cluster, without entering the password. Just the IP address should be enough.
 
 ## Configuring the NFS share
 
@@ -106,10 +106,11 @@ Execute the following steps on each node in the cluster:
 1. Install Medusa. For detailed instructions, see the [installation guide on GitHub](https://github.com/thelastpickle/cassandra-medusa/blob/master/docs/Installation.md).
 
 1. Create the */etc/medusa* directory if it does not exist yet:
-   1. `$ sudo mkdir -p /etc/medusa/`
-  
-1. Copy the example provided in [Configure Medusa on GitHub](https://github.com/thelastpickle/cassandra-medusa/blob/master/docs/Configuration.md) into a new file */etc/medusa/medusa.ini*.
-   
+
+   `$ sudo mkdir -p /etc/medusa/`
+
+1. Copy the example provided in [*Configure Medusa* on GitHub](https://github.com/thelastpickle/cassandra-medusa/blob/master/docs/Configuration.md) into a new file */etc/medusa/medusa.ini*.
+
 1. Edit the file to ensure the following properties are configured:
 
       - Cassandra:
@@ -124,9 +125,9 @@ Execute the following steps on each node in the cluster:
 
           - *nodetool_username*
           - *nodetool_password*
-         
+
         - User certificate (if TLS encryption is configured in Cassandra):
-          
+
           - *certfile* (path to the rootCa certificate)
           - *usercert* (path to user certificate)
 
@@ -153,7 +154,7 @@ Execute the following steps on each node in the cluster:
 1. Verify that the backup is taken for every node in the cluster. The location of the backup is *base_path*/*bucket_name*.
 
 > [!IMPORTANT]
-> For the nodes the backup failed for some reason, you should take a full backup of a single node (connected locally to each of them).
+> If you take a backup of a cluster and this fails for some reason, take separate backups of the single nodes instead (by connecting locally to each of them).
 
 ## Restoring a backup using Medusa
 
