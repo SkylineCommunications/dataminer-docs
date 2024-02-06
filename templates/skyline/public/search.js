@@ -1,43 +1,28 @@
-$(function () {
-  const docFxSearchBox = $('#search');
-  let parent = docFxSearchBox.parent();
-
-  // remove the old search box
-  docFxSearchBox.remove();
-
-  // Add html for search button
-  parent.append('<div class="navbar-right"><button id="new-search-btn" class="btn navbar-btn search-button"><i class="glyphicon glyphicon-search"></i></button></div>');
-
+function initSearch() {
   createSearchResultsNewHtml();
   initEventHandlersCloseOpenSearch();
 
-  function createSearchResultsNewHtml() {
-    // default search must be deactivated
-    const html = $('<div class="container body-content"><div id="search-results-new"><div id="search-box"><button id="search-close-btn" class="btn btn-link">Close search</button></div><div id="search-result-items"></div></div></div>');
-    // add as between header and div with content to hide
-    html.insertBefore('.container.body-content.hide-when-search');
-
-    const searchBox = $('<input id="search-input" type="search" placeholder="Search..." autocomplete="off">');
-    $('#search-box').append(searchBox);
-
-    // init event handler
-    searchBox.keyup(delay(function (event) {
-      search($(this).val());
-    }, 250))
-
-  }
-
-  function delay(callback, ms) {
-    var timer = 0;
-    return function () {
-      var context = this, args = arguments;
-      clearTimeout(timer);
-      timer = setTimeout(function () {
-        callback.apply(context, args);
-      }, ms || 0);
+  function debounce(func, wait, immediate) {
+    var timeout;
+    return function() {
+        var context = this, args = arguments;
+        var later = function() {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        };
+        var callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context.target.value, args);
     };
-  }
+};
 
+  function createSearchResultsNewHtml()
+  {
+	var searchBox = document.getElementById("search-input")
+	searchBox.addEventListener("keyup", debounce(search, 250));
+  }
+  
   function getTitle(str) {
     const endsWith = "| DataMiner Docs"
 
@@ -49,8 +34,6 @@ $(function () {
       }
     }
     return str;
-
-
   }
 
   function getUrl(str) {
@@ -65,21 +48,24 @@ $(function () {
 
   function initEventHandlersCloseOpenSearch() {
 
-    $('#new-search-btn').click(function () {
+	var newSearchBox = document.getElementById("new-search-btn");
+
+	newSearchBox.addEventListener("click", (event) => {
       showSearch(true);
-      $('#search-input').focus();
+      document.getElementById('search-input').focus();
     });
 
     //attach a click handler to the close icon
-    $('#search-close-btn').click(function () {
+	var searchCloseButton = document.getElementById("search-close-btn");
+	searchCloseButton.addEventListener("click", (event) => {
       showSearch(false);
       clearResults();
       clearSearchInput();
     });
-
   }
 
-  function search(searchTerm) {
+  function search(e) {
+	  var searchTerm = e.target.value;
     if (searchTerm.length) {
       doGetHttpRequest(searchTerm);
     } else {
@@ -95,34 +81,34 @@ $(function () {
       searchTermEnhanced += "*";
     }
     var body= '{"search": \'' + searchTermEnhanced + '\',"searchMode": "all","queryType": "full","top": 200}';
-    $.ajax({
-      type: 'POST',
-      url: url,
-      contentType: 'application/json',
-      dataType: 'json',
-      data: body,
-      success: function (data) {
-        processSearchResults(data, searchTerm);
-      },
-      error: function(XMLHttpRequest, textStatus, errorThrown) {
-        clearResults();
-        addHtmlToResultElement('<p>Unsupported search query.</p>');
-      }
-    });
+	
+	let xhr = new XMLHttpRequest()
+xhr.onload = function () {
+    if(xhr.status === 200) {
+        processSearchResults(JSON.parse(xhr.responseText), searchTerm);
+    }
+}
+xhr.onerror = () => {
+  clearResults();
+  addHtmlToResultElement('<p>Unsupported search query.</p>');
+};
+xhr.open('POST', url, true)
+xhr.setRequestHeader('Content-type', 'application/json; charset=UTF-8')
+xhr.send(body);	
   }
 
   function clearResults() {
-    const resultElement = $("#search-result-items");
-    resultElement.empty();
+    document.getElementById("search-result-items").innerHTML = "";;
   }
 
   function clearSearchInput() {
-    $('#search-input').val('');
+	document.getElementById('search-input').value = '';
   }
 
   function addHtmlToResultElement(html) {
-    const resultElement = $("#search-result-items");
-    resultElement.append(html);
+    const resultElement = document.getElementById("search-result-items");
+    //resultElement.append(html);
+	resultElement.innerHTML += html;
   }
 
   function processSearchResults(data, searchTerm) {
@@ -141,7 +127,6 @@ $(function () {
           const htmlString = `<div class="result"><a href="${url}?q=${encodeURIComponent(searchTerm)}"><div class="url">${url}</div><div class="title">${title}</div></a></div>`;
           html.push(htmlString)
         }
-
       }
 
       addHtmlToResultElement(html.join(''))
@@ -149,13 +134,15 @@ $(function () {
   }
 
   function showSearch(showSearch) {
-    if (showSearch) {
-      $('.hide-when-search').hide();
-      $('#search-results-new').show();
+	var mainElement = document.getElementsByTagName("main");
+	var serachResults = document.getElementById('search-results-new');
+    if (showSearch)
+	{
+	  document.getElementById("main").style.display = "none";
+	  serachResults.style.display = "block";
     } else {
-      $('.hide-when-search').show();
-      $('#search-results-new').hide();
+	  document.getElementById("main").style = null;
+      serachResults.style.display = "none";
     }
   }
-
-});
+}
