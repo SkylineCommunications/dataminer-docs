@@ -14,7 +14,7 @@ The only difference between the tutorial and actual contributions lies in the fo
 
 - For real validator contributions, you will fork [https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Validators](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Validators)
 
-The missing test: When adding the option "datetime" to the *Measurement.Type* tag, check if the *Display* tag contains a `<Decimals>8</Decimals>` tag.
+Missing test: When adding the "datetime" option to the *Measurement.Type* tag, check if the *Display* tag contains a `<Decimals>8</Decimals>` tag.
 
 Expected duration: 15 minutes.
 
