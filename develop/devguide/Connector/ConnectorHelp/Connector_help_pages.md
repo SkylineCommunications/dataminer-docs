@@ -31,7 +31,7 @@ When you add a new page to the connector documentation, you will need to add it 
   ```
 
 > [!TIP]
-> The value you need to specify next to "topicUid:" is a UID that should be specified at the top of the markdown file. See [Adding a page](xref:contributing#adding-a-new-page).
+> The value you need to specify next to "topicUid:" is a UID that should be specified at the top of the markdown file. See [Adding a page](xref:CTB_Watch_out_for#adding-a-new-page).
 
 > [!NOTE]
 > If you do not configure the table of contents correctly, the automatic checks that run after you submit your pull request will fail. You can then click *Details* to find out what exactly went wrong.
@@ -44,7 +44,7 @@ When you write connector documentation, keep the instructions below in mind.
 
 ### Markdown syntax
 
-Use DocFX Flavored Markdown (DFM). See [Markdown syntax](xref:contributing#markdown-syntax).
+Use DocFX Flavored Markdown (DFM). See [Markdown syntax](xref:CTB_Markdown_Syntax).
 
 ### Title
 
