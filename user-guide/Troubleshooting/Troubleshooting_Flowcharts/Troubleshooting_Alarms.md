@@ -14,7 +14,7 @@ uid: Troubleshooting_Alarms
 
 ### Overview
 
-<div class="mermaid">
+```mermaid
 flowchart TD
 %% Define styles %%
 linkStyle default stroke:#cccccc
@@ -44,7 +44,7 @@ class AlarmConsole,Surveyor,Apps,Trending,CreationIssue,RetrievalIssue classExte
 %%class classActionClickable;
 class GetDELT classAction;
 class DataPresent classDecision;
-</div>
+```
 
 > [!NOTE]
 >
@@ -55,7 +55,7 @@ class DataPresent classDecision;
 
 ### Retrieval Issue
 
-<div class="mermaid">
+```mermaid
 flowchart TD
 %% Define styles %%
 linkStyle default stroke:#cccccc
@@ -89,11 +89,11 @@ class AlarmConsole,Surveyor,Apps,Trending classExternalRef;
 class FollowCTT,ClientSide,ServerSide,AlarmTTL classAction;
 class RetrievalIssueChecks classDecision;
 class NotFixed classSolution;
-</div>
+```
 
 ### Creation Issue
 
-<div class="mermaid">
+```mermaid
 flowchart TD
 %% Define styles %%
 linkStyle default stroke:#cccccc
@@ -131,4 +131,4 @@ class AlarmConsole,Surveyor,Apps,Trending,ProtocolDebug,ReduceFeatures classExte
 class AlarmTemplate classAction;
 class DataPresent,CanSimulate,VerifyConfiguration classDecision;
 class ExtraInfoNotFixed,NotFixedCOPS classSolution;
-</div>
+```

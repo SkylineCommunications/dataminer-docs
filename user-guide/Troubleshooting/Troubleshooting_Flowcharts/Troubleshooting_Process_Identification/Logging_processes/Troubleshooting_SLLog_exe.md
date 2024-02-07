@@ -16,7 +16,7 @@ uid: Troubleshooting_SLLog_exe
 
 ## SLLog troubleshooting flowchart
 
-<div class="mermaid">
+```mermaid
 flowchart TD
 %% Define blocks %%
 LinkRootCause([To root cause flowchart])
@@ -48,7 +48,7 @@ classDef classSolution fill:#58595b,stroke:#58595b,color:#ffffff,stroke-width:0p
 class Start,EndReportIssue classTerminal;
 class CheckIssueType classDecision;
 class LinkRootCause,LinkProcessList,Rte,Crash classExternalRef;
-</div>
+```
 
 ## How does SLLog work?
 
