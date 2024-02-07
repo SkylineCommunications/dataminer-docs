@@ -1,8 +1,8 @@
 ---
-uid: Remote_Connecting_Issues
+uid: Remote_Access_Issues
 ---
 
-# Remote Connecting Issues
+# Remote Access Issues
 Follow the guide below when you're encountering connections issues with dataminer.services features and your DataMiner System
 
 ## Check Status of DxMs
