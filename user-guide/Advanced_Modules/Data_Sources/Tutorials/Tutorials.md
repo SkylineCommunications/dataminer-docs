@@ -15,7 +15,7 @@ The tutorials in this section will show you how to get setup and get started cre
   (see: [Installation and Setup](xref:Data_Sources_Setup))
 - [DataMiner Cube](https://community.dataminer.services/dataminer-cube-installer/)
 - Data API DxM
-- [Data Aggregator DxM](xref:Data_Aggregator_DxM) (minimum version 3.0.0)
+- [Data Aggregator DxM](xref:Data_Aggregator_DxM) (minimum version 3.0.1)
 
 ## Tutorials
 
