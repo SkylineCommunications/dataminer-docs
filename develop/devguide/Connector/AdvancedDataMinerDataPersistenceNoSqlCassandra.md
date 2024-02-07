@@ -610,7 +610,7 @@ This table is defined as follows:
 
 The DataMiner Analytics features store and maintain model data and extracted insights data in the following tables:
 
-- [analytics_alarmfocus](#analytics_alarmfocus)
+- [ai_alarmfocus](#ai_alarmfocus) (or *analytics_alarmfocus* prior to DataMiner 10.4.0/10.4.3)
 - [analytics_arrowwindows](#analytics_arrowwindows)
 - [analytics_changepoints](#analytics_changepoints)
 - [ai_cpalarms](#ai_cpalarms) (or *analytics_changepointalarmentries* prior to DataMiner 10.3.0 [CU5]/10.3.8)
@@ -630,7 +630,7 @@ The table is defined as follows:
 |ei|int|Yes (Partitioning)|Element ID|
 |pi|int|Yes (Clustering)|Parameter ID|
 |i|text|Yes (Clustering)|Primary key for table parameter|
-|dn|text|No|Display key for table parameter|
+|dn|text|No|Display key for table parameter (removed in version 10.4/10.4.3)|
 |fd|test|No|Model|
 
 #### analytics_arrowwindows
