@@ -78,6 +78,10 @@ The errors in this section can be generated when the UserDefinableApiEndpoint Dx
 
   For safety reasons, user-defined APIs do not set CORS headers<!-- RN 36727 -->. It is not safe to use a user-defined API from a web client. See [Triggering an API](xref:UD_APIs_Triggering_an_API#cors).
 
+- **Error code 1001 is returned while the NATS connection looks fine.**
+
+  When you receive the 1001 error when triggering a user-defined API, and the NATS connection of the UserDefinableApiEndpointApi DxM looks fine according to the logging, make sure that the DxM version is compatible with the DMS version. The DMA might have been temporarily upgraded to a higher version, causing a newer incompatible version of the DxM to still be installed after the downgrade. For more info, look for "Make sure the version of the UserDefinableApiEndpoint DxM is compatible with the DMA" in the [general checks](#general-checks) below.
+
 ### General checks
 
 If issues occur when you trigger a user-defined API, follow the steps below to resolve them.
@@ -125,3 +129,22 @@ If issues occur when you trigger a user-defined API, follow the steps below to r
    - For the manager in SLNet, you can check the [SLUserDefinableApiManager.txt](#logging) log file and check for a log line with the exact same message. After that, you should also see a line stating that a subscription was made on a subject ending with "UserDefinableApiTriggerRequest".
 
    - If both log files are fine, communication should be possible between the DxM and the manager in SLNet. If you do not see the above-mentioned messages in the logging, something could be wrong with the NATS setup. For more information, see [investigating NATS issues](xref:Investigating_NATS_Issues).
+
+1. Make sure the **version of the UserDefinableApiEndpoint DxM is compatible with the DMA**.
+
+   Sometimes, breaking changes need to be made to the communication between the DxM and the DMA. This will result in an increment of the major digit of the DxM version. DxMs with a specific major range version are not compatible with DataMiner versions that are intended to communicate with a different major range version. For example, the 2.X.X range of a DxM is not compatible with DataMiner versions that are made for the 3.X.X range of the DxM.
+
+   To see which range is **supported** by a DataMiner version, check the DxM installer that was delivered with the currently installed DataMiner version. You can find this in the folder `C:\Skyline DataMiner\Tools\ModuleInstallers` on the DMA.
+
+   To see which range is **installed**, go to the "Installed apps" configuration window in Windows and search for the "DataMiner UserDefinableApiEndpoint" app.
+
+   If the installed version range is lower than the supported range, use the installer in the `C:\Skyline DataMiner\Tools\ModuleInstallers` folder to upgrade the DxM. If the installed version range is higher, first uninstall the DataMiner UserDefinableApiEndpoint app via the "Installed apps" window and then re-install it using the installer in that folder.
+
+   Examples:
+
+   | Installed version | Folder version | Action |
+   |--|--|--|
+   | 3.2.0.14271 | 2.0.2.60564 | Uninstall the current version and reinstall it with the 2.0.2.60564 executable in the "ModuleInstallers" folder. |
+   | 2.0.2.60564 | 3.2.0.14271 | Upgrade the current version by running the 3.2.0.14271 executable in the "ModuleInstallers" folder. |
+   | 3.2.0.14271 | 3.1.0.13541 | This version should be compatible. Only try downgrading when no other troubleshooting steps resolve the issue. |
+   | 3.1.0.13541 | 3.2.0.14271 | This version should be compatible. However, upgrading to the newer version is recommended. |
