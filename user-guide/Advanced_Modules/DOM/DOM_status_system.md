@@ -8,7 +8,7 @@ In a DOM manager, you can configure the status system for a [DomDefinition](xref
 
 This configuration is done using a [DomBehaviorDefinition](xref:DomBehaviorDefinition) object that the `DomDefinition` is linked to. This object contains properties to store the statuses, initial status, transitions, and links to the [SectionDefinitions](xref:DOM_SectionDefinition).
 
-<div class="mermaid">
+```mermaid
 classDiagram
    direction LR
    class DomBehaviorDefinition {
@@ -52,7 +52,7 @@ classDiagram
    DomBehaviorDefinition --> DomStatusTransition
    DomStatusSectionDefinitionLink --> DomStatusSectionDefinitionLinkId
    DomStatusSectionDefinitionLink --> DomStatusFieldDescriptorLink
-</div>
+```
 
 Using the status system is an alternative way of defining which data must be present in a `DomInstance`. That means that the `SectionDefinitionLinks` on the `DomDefinition` are not used in that case. Additionally, the following properties on the `FieldDescriptor` will be ignored:
 

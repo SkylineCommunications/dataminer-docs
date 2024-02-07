@@ -14,7 +14,7 @@ uid: Troubleshooting_Trending
 
 ### Overview
 
-<div class="mermaid">
+```mermaid
 flowchart TD
 %% Define styles %%
 linkStyle default stroke:#cccccc
@@ -53,11 +53,11 @@ class GetDELT,TrendDataInspector,QueryDatabase,FollowCTT,ReadIssueChecks,ClientE
 class DataPresent classDecision;
 class NotFixed classSolution;
 class ReadIssue,WriteIssue classExternalRef;
-</div>
+```
 
 ### Read Issue
 
-<div class="mermaid">
+```mermaid
 flowchart TD
 %% Define styles %%
 linkStyle default stroke:#cccccc
@@ -87,7 +87,7 @@ class AlarmConsole,Surveyor,Apps,Trending classExternalRef;
 class GetDELT,TrendDataInspector,QueryDatabase,FollowCTT,ReadIssueChecks,ClientExport,WriteIssueActionLogging,WriteIssueActionDBXML,WriteIssueActionTrendTemplate,WriteIssueActionParameter classAction;
 class DataPresent classDecision;
 class NotFixed classSolution;
-</div>
+```
 
 > [!NOTE]
 >
@@ -96,7 +96,7 @@ class NotFixed classSolution;
 
 ### Write Issue
 
-<div class="mermaid">
+```mermaid
 flowchart TD
 %% Define styles %%
 linkStyle default stroke:#cccccc
@@ -130,4 +130,4 @@ class AlarmConsole,Surveyor,Apps,Trending classExternalRef;
 class GetDELT,TrendDataInspector,QueryDatabase,FollowCTT,ReadIssueChecks,ClientExport,WriteIssueActionLogging,WriteIssueActionDBXML,WriteIssueActionTrendTemplate,WriteIssueActionParameter classAction;
 class DataPresent classDecision;
 class NotFixed classSolution;
-</div>
+```

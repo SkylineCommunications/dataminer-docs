@@ -12,7 +12,7 @@ This process is only aware of parameters that are being monitored and parameters
 
 ## SLElement troubleshooting flowchart
 
-<div class="mermaid">
+```mermaid
 flowchart TD
 %% Define styles %%
 linkStyle default stroke:#cccccc
@@ -69,7 +69,7 @@ class Start,LogCollectorSw,DumpAlarm,DumpDb,SendSw DarkBlue;
 class Watchdog,MemoryLeak,ThreadsDB,ThreadsAlarm,Offload,PendingCalls,Delt LightGray;
 class ElementRestarted,ElementStop,LeakStart,ElementActive,Threads,RTE,IssuesAfterCheck Blue;
 class StartPage,RunPending,CassandraTb LightBlue;
-</div>
+```
 
 > [!NOTE]
 >

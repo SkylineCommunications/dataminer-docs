@@ -16,7 +16,7 @@ From DataMiner 10.2.0 [CU20]/10.3.0 [CU8]/10.3.11 onwards<!--RN 37271-->, when N
 
 Prior to DataMiner 10.2.0 [CU20]/10.3.0 [CU8]/10.3.11, should NatsCustodian identify any inconsistency other than unreachable nodes, an automatic NATS reconfiguration is initiated.
 
-<div class="mermaid">
+```mermaid
 flowchart TD
     %% Define styles %%
     linkStyle default stroke:#cccccc
@@ -65,7 +65,7 @@ flowchart TD
     class Start,End classTerminal;
     class S1,S4,S4A,S4B,Q1 classDecision;
     class S2,S3,S5,S6,S7,S8,S9,S10,A1,A1S2 classExternalRef;
-</div>
+```
 
 ## NatsCustodian workflow up to DataMiner 10.2.0 [CU18], 10.3.0 [CU6], and 10.3.9
 
@@ -74,7 +74,7 @@ NatsCustodian operates by gathering the IP addresses of DataMiner Agents that ar
 > [!NOTE]
 > The functionality of this version of NatsCustodian is contingent upon the connection status of the DataMiner Agents within the cluster, which is maintained and verified by the SLNet process. See flowchart below for a more detailed explanation.
 
-<div class="mermaid">
+```mermaid
 flowchart TD
     %% Define styles %%
     linkStyle default stroke:#cccccc
@@ -119,7 +119,7 @@ flowchart TD
     class Start,End classTerminal;
     class S4A,S1,S4B,Q1 classDecision;
     class S2,S3,S5,S6,S7,S8,S9,A1A,S10 classExternalRef;
-</div>
+```
 
 ### Triggering NATS reconfiguration
 

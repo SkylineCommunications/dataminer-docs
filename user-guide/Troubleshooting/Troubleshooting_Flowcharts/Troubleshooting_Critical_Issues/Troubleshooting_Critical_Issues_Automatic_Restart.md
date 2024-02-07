@@ -6,7 +6,7 @@ uid: Troubleshooting_Critical_Issues_Automatic_Restart
 
 ## Automatic restart troubleshooting flowchart
 
-<div class="mermaid">
+```mermaid
 flowchart TD
 %% Define styles %%
 linkStyle default stroke:#cccccc
@@ -45,11 +45,11 @@ class Automaticrestart,DataNotUpdated,ErrorAlarmConsole,Automaticrestart,Machine
 class UserActions,OSissues,ProcessCrash,ProcessDisappearance LightGray
 class CrashdumpDetected,MinidumpDetected,CheckWatchdog Blue;
 class Home,SLLogCollector,Investigation LightBlue;
-</div>
+```
 
 ## Automatic restart
 
-<div class="mermaid">
+```mermaid
 flowchart TD
 %% Define styles %%
 %% Define styles %%
@@ -84,4 +84,4 @@ class Automaticrestart,DataNotUpdated,ErrorAlarmConsole,Automaticrestart,Machine
 class UserActions,OSissues,ProcessCrash,ProcessDisappearance LightGray
 class CrashdumpDetected,MinidumpDetected,CheckWatchdog Blue;
 class Home,SLLogCollector,Investigation LightBlue;
-</div>
+```
