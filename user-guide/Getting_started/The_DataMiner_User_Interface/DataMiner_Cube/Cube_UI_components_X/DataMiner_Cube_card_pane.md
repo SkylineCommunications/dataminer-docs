@@ -12,7 +12,7 @@ For more information, see [Working with cards in DataMiner Cube](xref:Working_wi
 
 At the top of each card, there can be several buttons:
 
-<!-- TODO: Add screenshot of full header bar -->
+![Header bar buttons](~/user-guide/images/Card_Header_Bar.png)<br/>*Card pane in DataMiner 10.4.1*
 
 | Button | Description |
 |--------|-------------|

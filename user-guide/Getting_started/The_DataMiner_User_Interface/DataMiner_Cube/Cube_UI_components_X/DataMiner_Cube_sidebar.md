@@ -6,25 +6,21 @@ uid: DataMiner_Cube_sidebar
 
 On the left-hand side of the Cube UI, a sidebar is displayed. This sidebar contains the following buttons:
 
-<!-- TODO: Add images of the different buttons -->
+| Icon | Name | Description |
+|--|--|--|
+| ![Surveyor](~/user-guide/images/Surveyor.png) | Surveyor | Opens the Surveyor pane. See [Surveyor pane](#surveyor-pane). |
+| ![Activity](~/user-guide/images/Activity.png) | Activity | Opens a pane listing recent items. See [Activity pane](#activity-pane). |
+| ![Apps](~/user-guide/images/Apps.png) | Apps | Opens a pane listing the different apps available in Cube. See [Apps pane](#apps-pane). |
+| ![Workspace](~/user-guide/images/Workspace.png) | Workspace | Opens a pane where you can select and manage different Cube workspaces. See [Working with workspaces](xref:Working_with_workspaces). |
+| ![Community](~/user-guide/images/Community.png) | Community | This button is displayed from DataMiner 10.0.0 \[CU12\]/10.1.0 \[CU1\]/10.1.4 onwards. Clicking the button opens a menu with different links to the [DataMiner Dojo user community](https://community.dataminer.services/), including the blog, the learning hub, a library of resources, a page where you can ask questions about anything related to DataMiner, and a page that allows you to suggest new features. |
 
-- *Surveyor*: Opens the Surveyor pane. See [Surveyor pane](#surveyor-pane).
+From DataMiner 10.1.11/10.2.0 onwards, you can pin additional buttons to the sidebar using the "..." or "+" button. This button opens a menu where you can select the buttons you want to pin.
 
-- *Activity*: Opens a pane listing recent items. See [Activity pane](#activity-pane).
-
-- *Apps*: Opens a pane listing the different apps available in Cube. See [Apps pane](#apps-pane).
-
-- *Workspaces*: Opens a pane where you can select and manage different Cube workspaces. See [Working with workspaces](xref:Working_with_workspaces).
-
-- *Community*: This button is displayed from DataMiner 10.0.0 \[CU12\]/10.1.0 \[CU1\]/10.1.4 onwards. Clicking the button opens a menu with different links to the [DataMiner Dojo user community](https://community.dataminer.services/), including the blog, the learning hub, a library of resources, a page where you can ask questions about anything related to DataMiner, and a page that allows you to suggest new features.
-
-From DataMiner 10.1.11/10.2.0 onwards, you can pin additional buttons to the sidebar using the “...” or “+” button. This button opens a menu where you can select the buttons you want to pin.
-
-- *Overview*: Displays the root view page listing all items below the root view.
-
-- *Search*: If an advanced search is done from the Cube header bar, an additional *Search* button is displayed, which displays the pane with the advanced search results. If this button is not pinned to the sidebar, it will no longer be displayed as soon as you click a different button. See [Searching in DataMiner Cube](xref:Searching_in_DataMiner_Cube).
-
-- A button representing any of the available modules, the “About” information, the Help, or the settings.
+| Icon | Name | Description |
+|:--:|:--:|--|
+| ![Overview](~/user-guide/images/Overview.png) | Overview | Displays the root view page listing all items below the root view. |
+| ![Search](~/user-guide/images/Search.png) | Search | If an advanced search is done from the Cube header bar, an additional *Search* button is displayed, which displays the pane with the advanced search results. If this button is not pinned to the sidebar, it will no longer be displayed as soon as you click a different button. See [Searching in DataMiner Cube](xref:Searching_in_DataMiner_Cube). |
+| ... | ... |  A button representing any of the available modules, the "About" information, the Help, or the settings. |
 
 To unpin a button again, right-click the button and select *Unpin*. This is not possible for the buttons that are displayed by default.
 

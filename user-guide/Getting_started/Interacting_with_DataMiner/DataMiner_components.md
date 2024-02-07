@@ -24,7 +24,7 @@ Elements have two main kinds of pages:
 
   DataMiner can store measurements of parameter values taken over a period of time, so that these can be shown in graphs to [visualize trends](xref:trending) in the data.
 
-<!-- TODO: Add gif of MS element card being opened in Cube, go from Visual Overview page to data page, and drill down to trending -->
+  ![Visualize trends](~/user-guide/images/Visualize_Trends.gif)<br/>*Element card in DataMiner 10.4.1*
 
 ## Services
 
@@ -32,13 +32,13 @@ Elements have two main kinds of pages:
 
 Like elements, services have visual overview pages and data pages. The data pages of a service represent the different service children, i.e. the elements or partial elements included in the service.
 
-<!-- TODO: add gif of service card being opened in Cube, expand a data node to show the service child -->
+![Services](~/user-guide/images/Services.gif)<br/>*Service card in DataMiner 10.2.8*
 
 ## Views
 
 [Views](xref:About_views) allow you to create structure in the overview of the various objects in your system. Views function as a kind of “folders”, which can for instance contain elements and subviews. By logically combining components in a view, you can ensure that users can quickly access all components that belong together in some way.
 
-<!-- TODO: add gif of view in the Surveyor being expanded, with subviews showing a logical structure in the system -->
+![Views](~/user-guide/images/Views.gif)<br/>*Element card in DataMiner 10.4.1*
 
 ## Alarms
 
@@ -46,6 +46,6 @@ An [alarm](xref:About_alarms) is a notification that a parameter value has cross
 
 Typically, alarms are not triggered for all parameters, but only for those parameters that are of interest for monitoring. To determine which parameters are monitored and which parameter values should trigger an alarm, [alarm templates](xref:About_alarm_templates) are configured.
 
-By default, alarms will bubble up throughout the DataMiner user interface. This means that if there is an alarm on a particular parameter, this will bubble up to the element containing that parameter, and from there to the view containing that element, and to the view containing that view, and so on. For example, if there is a critical alarm on the "Total Processor Load" parameter of the element "This server" within the view "HQ", a critical alarm will not only be shown for the parameter, but also for that element and that view.
+By default, alarms will bubble up throughout the DataMiner user interface. This means that if there is an alarm on a particular parameter, this will bubble up to the element containing that parameter, and from there to the view containing that element, and to the view containing that view, and so on. For example, if there is a critical alarm on the "Audio Output Level" parameter of the element "Skyline HQ" within the view "EUR", a critical alarm will not only be shown for the parameter, but also for that element and that view.
 
-<!-- TODO: gif showing bubble-up feature: show view in alarm, open up to show element, go to page with parameter. Adjust example above this to match the example in the gif -->
+![Alarms](~/user-guide/images/Alarms.gif)<br/>*Surveyor in DataMiner 10.4.1*
