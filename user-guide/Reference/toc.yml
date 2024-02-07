@@ -275,6 +275,8 @@ items:
                 topicUid: SLNetClientTest_Viewing_SLNet_calls_being_sent
               - name: Viewing the connection timeout states of an element
                 topicUid: SLNetClientTest_Viewing_the_connection_timeout_states_of_an_element
+              - name: Viewing the memory usage of elements, parameters, and tables
+                topicUid: SLNetClientTest_Viewing_memory_usage
           - name: SLNetClientTest tool advanced procedures
             topicUid: SLNetClientTest_tool_advanced_procedures
             items:
