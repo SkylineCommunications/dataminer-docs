@@ -13,13 +13,11 @@ uid: Stack_Data_Connectivity
 Easily manage signal routes.
 
 > [!TIP]
->
-> *More info coming soon. Stay tuned!*
+> For detailed information, see [DataMiner Router Control](xref:RouterControl).
 
 ## Connectivity Modeling
 
 Configure and visualize signal paths throughout your infrastructure.
 
 > [!TIP]
->
-> *More info coming soon. Stay tuned!*
+> For detailed information, see [DataMiner Connectivity Framework](xref:About_the_DataMiner_Connectivity_Framework).
