@@ -422,11 +422,11 @@ This stage performs a cleanup of the workspace and sends an email containing a r
 
 The report also contains an overall quality score, which is calculated using the following metrics:
 
-- Number of Critical Issues reported by the DIS Validator
+- Number of Critical Issues reported by the validator
 
-- Number of Major Issues reported by the DIS Validator
+- Number of Major Issues reported by the validator
 
-- Number of Minor Issues reported by the DIS Validator
+- Number of Minor Issues reported by the validator
 
 - Number of Blocker Issues reported by SonarQube
 
@@ -435,3 +435,19 @@ The report also contains an overall quality score, which is calculated using the
 - Number of Major Issue reported by SonarQube
 
 ![Overall quality score calculation](~/develop/images/PipelineEquation.png)
+
+$$ overallQualityScore = 100 - \left(40a + 20b + 10c + 15d + 10e + 5f\right) $$
+
+, where,
+
+$$ a = {validatorCriticalIssueCount \over { 1 + validatorCriticalIssueCount}} $$,
+
+$$ b = {validatorMajorIssueCount \over { 1 + validatorMajorIssueCount}} $$,
+
+$$ c = {validatorMinorIssueCount \over { 1 + validatorMinorIssueCount}} $$,
+
+$$ d = {sqBlockerIssueCount \over { 1 + sqBlockerIssueCount}} $$,
+
+$$ e = {sqCriticalIssueCount \over { 1 + sqCriticalIssueCount}} $$,
+
+$$ f = {sqMajorIssueCount \over { 1 + sqMajorIssueCount}} $$
