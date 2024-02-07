@@ -6,7 +6,7 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
-#### 6 February 2024 - New Feature - Chat Integration with Microsoft Teams now includes sending buttons on notifications using Adaptive Cards [ID_38701]
+#### 6 February 2024 - New feature - Chat Integration with Microsoft Teams now includes sending buttons on notifications using Adaptive Cards [ID_38701]
 
 It is now possible to send buttons in notifications using Adaptive Cards to chats or channels with Chat Integration. 
 
@@ -80,11 +80,11 @@ The CoreGateway DxM will now periodically send a health check to the cloud to in
 
 The ArtifactDeployer will include the node ID in deployment events, visible on the *Deployments* page of a DMS in the [Admin app](https://admin.dataminer.services). In case of a failure, particularly in a cluster, this ID provides a direct link to the server whose logs you need to examine for further investigation.
 
-#### 12 January 2024 - New Feature - Remote access for custom files/webpages [ID_38426]
+#### 12 January 2024 - New feature - Remote access for custom files/webpages [ID_38426]
 
 It is now possible to provide remote access via dataminer.services to files or webpages. To do so, add them in the folder `C:\Skyline DataMiner\Webpages\public\` on your DMA. To access such files, users can use the remote access URL followed by `/public/` (e.g. the file *image.png* via `https://ziine-skyline.on.dataminer.services/public/image.png`).
 
-#### 4 January 2024 - New Feature - Chat Integration with Microsoft Teams now includes sending notification using Adaptive Cards [ID_38339]
+#### 4 January 2024 - New feature - Chat Integration with Microsoft Teams now includes sending notification using Adaptive Cards [ID_38339]
 
 It is now possible to send notifications using Adaptive Cards to chats or channels with Chat Integration.
 
@@ -98,27 +98,27 @@ After you have made sure that the [prerequisites](https://github.com/SkylineComm
 
 From now onwards, additional data like soft-launch options, installed solutions, manager configurations, and BPA test results will also be offloaded for proactive monitoring via CDMR.
 
-#### 20 December 2023 - New Feature - SupportAssistant 1.6.0 - DxM status reporter added [ID_38174]
+#### 20 December 2023 - New feature - SupportAssistant 1.6.0 - DxM status reporter added [ID_38174]
 
 The SupportAssistant DxM will now periodically send a health check to the cloud to indicate that the DxM is running.
 
-#### 20 December 2023 - New Feature - ArtifactDeployer 1.6.0 - DxM status reporter added [ID_38172]
+#### 20 December 2023 - New feature - ArtifactDeployer 1.6.0 - DxM status reporter added [ID_38172]
 
 The ArtifactDeployer DxM will now periodically send a health check to the cloud to indicate that the DxM is running.
 
-#### 20 December 2023 - New Feature - Orchestrator 1.5.0 - DxM status reporter added [ID_38170]
+#### 20 December 2023 - New feature - Orchestrator 1.5.0 - DxM status reporter added [ID_38170]
 
 The Orchestrator DxM will now periodically send a health check to the cloud to indicate that the DxM is running.
 
-#### 20 December 2023 - New Feature - CoreGateway 2.14.0 - DxM status reporter added [ID_38200]
+#### 20 December 2023 - New feature - CoreGateway 2.14.0 - DxM status reporter added [ID_38200]
 
 The CoreGateway DxM will now periodically send a health check to the cloud to indicate that the DxM is running.
 
-#### 20 December 2023 - New Feature - CloudGateway 2.13.0 - DxM status reporter added [ID_38022]
+#### 20 December 2023 - New feature - CloudGateway 2.13.0 - DxM status reporter added [ID_38022]
 
 The CloudGateway DxM will now periodically send a health check to the cloud to indicate that the DxM is running.
 
-#### 20 December 2023 - New Feature - FieldControl 2.10.0 - DxM status reporter added [ID_38116]
+#### 20 December 2023 - New feature - FieldControl 2.10.0 - DxM status reporter added [ID_38116]
 
 The FieldControl DxM will now periodically send a health check to the cloud to indicate that the DxM is running.
 
@@ -128,15 +128,15 @@ From now onwards, when a DataMiner Community Edition DaaS system is about to exp
 
 A notification will also be sent when an organization owns multiple DaaS systems and it will not be possible to extend one or more of these systems because the organization will not have enough DataMiner credits, as predicted based on the current usage.
 
-#### 13 December 2023 - New Feature - Email notifications for expiring and expired DataMiner Community Edition DaaS systems [ID_38183]
+#### 13 December 2023 - New feature - Email notifications for expiring and expired DataMiner Community Edition DaaS systems [ID_38183]
 
 From now onwards, when a DataMiner Community Edition DaaS system is about to expire, an email notification will be sent to the owners of the organization and the person who deployed the DaaS system, so that they can take action if they want to prevent deletion. Another email notification will be sent when the DataMiner Community Edition DaaS system has been deleted.
 
-#### 6 December 2023 - New Feature - Remote Access setting is now checked for user-defined API access [ID_38102]
+#### 6 December 2023 - New feature - Remote Access setting is now checked for user-defined API access [ID_38102]
 
 Users will now only be able to access a user-defined API using the remote access URL if the Remote Access setting is enabled in the Admin app.
 
-#### 4 December 2023 - New Feature - DataMiner as a Service for staging systems [ID_38087]
+#### 4 December 2023 - New feature - DataMiner as a Service for staging systems [ID_38087]
 
 It is now possible to create a [DataMiner as a Service (DaaS)](xref:Creating_a_DMS_in_the_cloud) system on dataminer.services for staging systems.
 
@@ -152,7 +152,7 @@ When you create a DaaS system, your dataminer.services account will automaticall
 
 You can manually delete a DaaS system from dataminer.services, just like any other DMS; however, note that this is irreversible, and all data of the system will be lost.
 
-#### 21 November 2023 - New Feature - Remote access using DataMiner Cube [ID_37841]
+#### 21 November 2023 - New feature - Remote access using DataMiner Cube [ID_37841]
 
 It is now possible to connect to a DataMiner System via remote access using DataMiner Cube. If remote access is enabled for a DMS and you have been granted access to dataminer.services features, you can access the DMS remotely via Cube using the same URL as for remote access to the web pages, but without the protocol prefix `https://`. A button is also available on dataminer.services and in the Admin app that can be used to open Cube with the correct remote access filled in as the host.
 
@@ -781,7 +781,7 @@ When you click a deployment in the overview, more detailed information will be d
 
 The Orchestrator DxM has been updated to version 1.2.3. When the Orchestrator DxM was updated via the Admin app, it could occur that this was displayed as a failed deployment even though it actually succeeded. This will now be prevented.
 
-#### 3 June 2022 – New Feature – dataminer.services keys [ID_33606]
+#### 3 June 2022 – New feature – dataminer.services keys [ID_33606]
 
 You can now use dataminer.services keys. At present, these can be used with the [GitHub action to deploy Automation scripts](https://github.com/marketplace/actions/skyline-dataminer-deploy-action) to a DMS connected to dataminer.services. However, more functionality requiring a dataminer.services key is expected to be implemented in the future.
 
