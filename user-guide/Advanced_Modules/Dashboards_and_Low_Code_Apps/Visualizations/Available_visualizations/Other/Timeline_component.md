@@ -87,7 +87,10 @@ This component allows you to visualize and manage bookings, events, and other ti
      >
      > Note that modifying the time range displayed in the time range component will not update the time range displayed in the timeline component, unless it has been linked to that time range component in the *Default time range* settings.
 
-   - *Data retrieval > Update data*: Allows updates to be enabled or disabled. This setting will enable real-time updates for all queries executed by the selected component. Disabled by default.
+   - *Data retrieval > Update data*: Allows updates to be enabled or disabled. This setting will enable real-time updates for the queries executed by the selected component. Disabled by default.
+
+     > [!NOTE]
+     > If you enable this setting, real-time updates will only be applied for the data sources and operators listed on the [Query updates](xref:Query_updates) page. Prior to DataMiner 10.4.0/10.4.3<!-- RN 37372 -->, data will only be updated every 30 seconds, and this will only be applied for GQI queries using the [Get parameter table by ID](xref:Get_parameter_table_by_ID) data source.
 
    - *Highlight range > Use highlighting*: Determines whether a configured time range in the timeline component is highlighted. When this option is enabled, the section of the timeline that falls within the set time range receives a different background color determined by the [dashboard theme](xref:Configuring_the_dashboard_layout#customizing-the-dashboard-theme) or the [low-code app theme](xref:LowCodeApps_Layout#customizing-the-theme-for-a-low-code-app-page). Events that (partially) occur within this set time range are displayed with normal opacity, while those outside the time range are displayed with lowered opacity. Disabled by default<!--RN 33639-->.
 
