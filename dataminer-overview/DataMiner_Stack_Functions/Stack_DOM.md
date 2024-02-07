@@ -36,4 +36,4 @@ The **DataMiner Object Model (DOM)** enables the quick modeling and management o
 Planning, documenting, or scheduling any maintenance activity.
 
 > [!TIP]
-> For detailed information, see [The DataMiner Planned Maintenance (PLM) tool](DataMiner_PLM_Tool_Overview).
+> For detailed information, see [The DataMiner Planned Maintenance (PLM) tool](xref:DataMiner_PLM_Tool_Overview).

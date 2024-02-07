@@ -21,7 +21,7 @@ Integrate various ticketing systems (e.g. Jira, Remedy, etc.) in a reliable mann
 Application-specific network security for mobile application infrastructures.
 
 > [!TIP]
-> For detailed info, see [DataMiner Mobile Gateway](xref:Mobile_Gateway)
+> For detailed info, see [DataMiner Mobile Gateway](xref:MobileGateway)
 
 ## Notifications
 
