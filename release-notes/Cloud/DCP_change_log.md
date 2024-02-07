@@ -6,15 +6,16 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
-#### 6 February 2024 - New feature - Chat Integration with Microsoft Teams now includes sending buttons on notifications using Adaptive Cards [ID_38701]
+#### 6 February 2024 - New feature - Chat Integration with Microsoft Teams now includes sending buttons in notifications using Adaptive Cards [ID_38701]
 
-It is now possible to send buttons in notifications using Adaptive Cards to chats or channels with Chat Integration. 
+It is now possible to send buttons in notifications using Adaptive Cards to chats or channels with Chat Integration.
 
 Available buttons:
+
 - Prompt to run a custom command (optionally with predefined input values)
 - Open URL
 - Get element
-- Get alarms of an elements
+- Get alarms of an element
 - Get alarms of a view
 - Prompt to change the active DMS of the conversation
 
