@@ -43,6 +43,20 @@ From now on, the generation of anomaly suggestion events will be limited to 50 e
 > [!NOTE]
 > The generation of anomaly alarm events (i.e. on parameters that have anomaly monitoring configured in the alarm template) will remain unlimited.
 
+#### GQI: Clearer error message will now be thrown when an ad hoc data source or custom operator cannot be instantiated [ID_38686]
+
+<!-- MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+Up to now, when an ad hoc data source or custom operator could not be instantiated, the following exception would be thrown when an error occurred on object creation level (within the constructor):
+
+`Error: Could not create instance of datasource when trying to use an ad hoc datasource.`
+
+From now on, the following exception will be thrown instead:
+
+`Error trapped: Could not create instance of datasource 'datasource ID': <exception message>.`
+
+\* `<exception message>` being the message that was thrown within the constructor.
+
 ### Fixes
 
 #### Problem with file offload mechanism when main database is offline [ID_38542]

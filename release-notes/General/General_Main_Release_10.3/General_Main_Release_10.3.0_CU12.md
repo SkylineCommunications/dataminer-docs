@@ -107,6 +107,20 @@ The following notification alarm, generated when an SLAnalytics feature failed t
 
 `Failed to start x Analytics feature(s). Check the Analytics logging (SLAnalytics.txt) for more information.`
 
+#### GQI: Clearer error message will now be thrown when an ad hoc data source or custom operator cannot be instantiated [ID_38686]
+
+<!-- MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+Up to now, when an ad hoc data source or custom operator could not be instantiated, the following exception would be thrown when an error occurred on object creation level (within the constructor):
+
+`Error: Could not create instance of datasource when trying to use an ad hoc datasource.`
+
+From now on, the following exception will be thrown instead:
+
+`Error trapped: Could not create instance of datasource 'datasource ID': <exception message>.`
+
+\* `<exception message>` being the message that was thrown within the constructor.
+
 ### Fixes
 
 #### DataMiner installer: Some modules would not get installed while performing a full installation of a new DMA [ID_37719]
