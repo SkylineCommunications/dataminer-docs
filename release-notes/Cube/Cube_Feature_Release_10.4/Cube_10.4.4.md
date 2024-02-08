@@ -26,4 +26,8 @@ uid: Cube_Feature_Release_10.4.4
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### DataMiner Cube: Error could occur in SLHelper when generating visual overviews to be displayed in web apps [ID_32584]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU13]/10.4.0 [CU1] - FR 10.4.4 -->
+
+In some cases, an error could occur in SLHelper when it was generating visual overviews to be displayed in web apps.

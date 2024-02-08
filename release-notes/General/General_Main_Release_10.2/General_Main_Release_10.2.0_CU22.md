@@ -298,6 +298,12 @@ In Cube, you can now view the logging of an enhanced service by doing one of the
 
 ### Fixes
 
+#### DataMiner Cube: Error could occur in SLHelper when generating visual overviews to be displayed in web apps [ID_32584]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU13]/10.4.0 [CU1] - FR 10.4.4 -->
+
+In some cases, an error could occur in SLHelper when it was generating visual overviews to be displayed in web apps.
+
 #### DataMiner Cube: Problem when adding up [Start Time:] placeholders [ID_37661]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11] - FR 10.4.2 -->
