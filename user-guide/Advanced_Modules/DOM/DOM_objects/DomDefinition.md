@@ -39,7 +39,7 @@ At present, the following settings can be overridden:
 
 - DomInstanceNameDefinition
 - ExecuteScriptOnDomInstanceActionSettings (from 10.4.2/10.5.0 onwards<!-- RN 37963 -->)
-- DomInstanceHistorySettings (from 10.4.3/10.5.0 onwards<!-- RN38294 -->)
+- DomInstanceHistorySettings (from 10.4.4/10.5.0 onwards<!-- RN38294 -->)
 
 > [!NOTE]
 > In order for the `ModuleSettings` objects to be used, the objects in the `ModuleSettingsOverrides` of the `DomDefinition` have to be *null*. Just making them empty is not sufficient.
