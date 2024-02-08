@@ -4,7 +4,7 @@ uid: Managing_the_start_window
 
 # Managing the start window of the desktop app
 
-Below you can find more information on the different options available to manage the start window of the DataMiner Cube desktop app, available from DataMiner 10.0.9 onwards.
+Below you can find more information on the different options available to manage the start window of the DataMiner Cube desktop app.
 
 ## Selecting your Cube update track
 
