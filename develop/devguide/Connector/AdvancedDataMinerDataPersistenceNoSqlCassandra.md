@@ -610,14 +610,13 @@ This table is defined as follows:
 
 The DataMiner Analytics features store and maintain model data and extracted insights data in the following tables:
 
-- [ai_alarmfocus](#ai_alarmfocus) (or *analytics_alarmfocus* prior to DataMiner 10.4.0/10.4.3)
+- [ai_alarmfocus](#ai_alarmfocus) (or *analytics_alarmfocus* prior to DataMiner 10.4.0/10.4.3<!-- RN 38184 -->)
 - [analytics_arrowwindows](#analytics_arrowwindows)
 - [analytics_changepoints](#analytics_changepoints)
-- [ai_cpalarms](#ai_cpalarms) (or *analytics_changepointalarmentries* prior to DataMiner 10.4.0 [CU1]/10.4.4)
+- [ai_cpalarms](#ai_cpalarms) (or *analytics_changepointalarmentries* prior to DataMiner 10.4.0 [CU1]/10.4.4<!-- RN 38184 -->)
 - [analytics_parameterinfo_v1](#analytics_parameterinfo_v1)
 - [analytics_trendalarms](#analytics_trendalarms)
 - [analytics_wavestream](#analytics_wavestream)
-
 
 #### ai_alarmfocus
 
