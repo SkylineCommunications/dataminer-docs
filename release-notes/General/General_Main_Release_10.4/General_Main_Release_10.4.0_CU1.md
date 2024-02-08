@@ -18,6 +18,15 @@ uid: General_Main_Release_10.4.0_CU1
 
 The validation of the name of a booking is now case-insensitive. This means that when the SRM Framework checks if there are future bookings with the same name, the casing is now no longer taken into account.
 
+#### SLAnalytics - Behavioral anomaly detection: Suggestion event generation will now be limited [ID_38674]
+
+<!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
+
+From now on, the generation of anomaly suggestion events will be limited to 50 events per hour per type of anomaly (level shift, trend change, flatline or variance change).
+
+> [!NOTE]
+> The generation of anomaly alarm events (i.e. on parameters that have anomaly monitoring configured in the alarm template) will remain unlimited.
+
 ### Fixes
 
 #### Problem with file offload mechanism when main database is offline [ID_38542]
