@@ -42,11 +42,11 @@ The validation of the name of a booking is now case-insensitive. This means that
 
 ### Fixes
 
-#### Problem with database offload mechanism [ID_38542]
+#### Problem with file offload mechanism when main database is offline [ID_38542]
 
 <!-- MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.4 -->
 
-In some cases, the database offload mechanism could end up in an unrecoverable state due to a threading issue.
+When the main database is offline, file offloads are used to store write/delete operations. In some cases, this file offload mechanism could end up in an unrecoverable state due to a threading issue.
 
 #### SLAnalytics - Automatic incident tracking: Problem when updating alarm groups [ID_38629]
 
