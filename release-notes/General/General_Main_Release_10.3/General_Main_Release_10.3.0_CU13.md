@@ -12,11 +12,11 @@ uid: General_Main_Release_10.3.0_CU13
 
 ### Enhancements
 
-#### DataMiner upgrade: New prerequisite will check whether .NET 8.0 is installed [ID_37969]
+#### DataMiner upgrade: New prerequisite will check whether ASP.NET 8.0 Hosting Bundle is installed [ID_37969]
 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
-When you upgrade a DataMiner System, a new prerequisite will now block the upgrade when the server does not have Microsoft .NET 8.0 installed.
+When you upgrade a DataMiner System, a new prerequisite will now block the upgrade when the server does not have [Microsoft ASP.NET 8.0 Hosting Bundle](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-8.0.1-windows-hosting-bundle-installer) installed.
 
 ### Fixes
 
