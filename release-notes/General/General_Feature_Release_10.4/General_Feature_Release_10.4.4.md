@@ -42,6 +42,12 @@ The validation of the name of a booking is now case-insensitive. This means that
 
 When the main database is offline, file offloads are used to store write/delete operations. In some cases, this file offload mechanism could end up in an unrecoverable state due to a threading issue.
 
+#### Problem with SLProtocol when calculating the length of a serial response [ID_38591]
+
+<!-- MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+In some cases, SLProtocol could stop working due to an `Access violation reading location` error being thrown while calculating the length of a serial response.
+
 #### SLAnalytics - Automatic incident tracking: Problem when updating alarm groups [ID_38629]
 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->

@@ -187,6 +187,12 @@ When a client application was connected to a DataMiner Agent via a gRPC connecti
 
 When the main database is offline, file offloads are used to store write/delete operations. In some cases, this file offload mechanism could end up in an unrecoverable state due to a threading issue.
 
+#### Problem with SLProtocol when calculating the length of a serial response [ID_38591]
+
+<!-- MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+In some cases, SLProtocol could stop working due to an `Access violation reading location` error being thrown while calculating the length of a serial response.
+
 #### SLAnalytics features would not start up correctly after a database connection problem [ID_38600]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
