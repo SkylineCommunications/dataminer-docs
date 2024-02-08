@@ -35,7 +35,7 @@
       "disableDefaultFilter": false,
       "disableGitFeatures": false,
 	  "filter": "filterConfig.yml",
-	  "memberLayout": "samePage"
+	  "memberLayout": "separatePages"
     }
   ],
   "build": {
