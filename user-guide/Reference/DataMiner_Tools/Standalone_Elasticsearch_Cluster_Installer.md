@@ -14,6 +14,9 @@ The installer includes AdoptOpenJDK 8 as well as Kibana. It sets up an Elasticse
 
 You can download this tool from [DataMiner Dojo](https://community.dataminer.services/download/standalone-elasticsearch-cluster-installer/).
 
+  > [!NOTE]
+  > Run the installer as administrator
+
 ## Requirements
 
 - Microsoft Windows
@@ -44,6 +47,9 @@ In this file, you can then configure the settings detailed below.
 #### InstallerDependenciesDirectory
 
 This setting should be set to the path containing the installer dependencies. This is the folder that contains the following subfolders: *elasticsearch*, *java*, and *kibana*.
+
+  > [!NOTE]
+  > After decompressing the installer, the dependencies will be located in the folder `./elastic_installer_dependencies`.
 
 #### Networkhost & NetworkPublishHost
 
@@ -92,6 +98,9 @@ Optional. This setting (which corresponds with the Path.Repo Elasticsearch setti
    <ElasticTargetDirectory>C:\Program Files\Elasticsearch</ElasticTargetDirectory>
 </ElasticConfiguration>
 ```
+
+  > [!NOTE]
+  > The attribute *InstallerDependenciesDirectory* should be updated using the path where the dependencies are located. The default location is *./elastic_installer_dependencies*.
 
 ## Running the installer
 
