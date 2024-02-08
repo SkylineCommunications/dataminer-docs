@@ -3,7 +3,7 @@ uid: Cloud_Connection_Issues
 ---
 
 # Cloud Connection Issues
-This page provides solutions for issues that may arise from connectivity problems with cloud services.
+This page provides solutions for potential connectivity problems with cloud services.
 
 ## Remote Access Issues
 Follow the guide below when you are encountering connection issues with dataminer.services features and your DataMiner System.
