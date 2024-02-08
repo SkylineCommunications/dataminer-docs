@@ -26,6 +26,12 @@ The validation of the name of a booking is now case-insensitive. This means that
 
 ### Fixes
 
+#### Problem with database offload mechanism [ID_38542]
+
+<!-- MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+In some cases, the database offload mechanism could end up in an unrecoverable state due to a threading issue.
+
 #### SLAnalytics - Pattern matching: A match of one subpattern would incorrectly be considered a match of the entire multivariate pattern [ID_38587]
 
 <!-- MR 10.4.0 [CU1] - FR 10.4.3 -->

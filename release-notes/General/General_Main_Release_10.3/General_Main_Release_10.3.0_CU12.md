@@ -175,6 +175,12 @@ Each time the APIGateway service was stopped, a fatal error would incorrectly be
 
 When a client application was connected to a DataMiner Agent via a gRPC connection, in some cases, the alarm filters it received from the DataMiner Agent would not be properly serialized.
 
+#### Problem with database offload mechanism [ID_38542]
+
+<!-- MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+In some cases, the database offload mechanism could end up in an unrecoverable state due to a threading issue.
+
 #### SLAnalytics features would not start up correctly after a database connection problem [ID_38600]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
