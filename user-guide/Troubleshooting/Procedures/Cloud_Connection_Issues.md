@@ -21,10 +21,13 @@ Verify the status of the DMS and ensure that the system is operational, if not, 
 Verify in DataMiner Cube if the cloud session is still available and not expired, otherwise [renew the cloud connection](#renew-cloud-connection).
 
 ### Undetermined Problem
-When the previous solutions did not solve the problem, ensure that all [requirements](xref:Accessing_DMS_remotely_with_Cube) for remote access are fulfilled. Please contact [support](https://skyline.be/contact/tech-support) if none of the above solved the problem.
+When the previous solutions did not solve the problem, ensure that all [requirements](xref:Accessing_DMS_remotely_with_Cube) for remote access are fulfilled.
 
 ## Renew Cloud Connection
 If the cloud connection expires, a new token must be requested to renew it. To do this, access the DataMiner Cube and select *Cloud* under *System Center*. If the cloud connection is expired, a ```Renew Session``` button should be available. Manually renewing the connection can be necessary if the cloud could not renew its tokens automatically for too long (no internet access for extended periods for example, usually minimum 3 days). 
 
 >[!NOTE]
 >The ```Renew Session``` button is only available for users with the Owner role of the DMS.
+
+
+Please contact [support](https://skyline.be/contact/tech-support) if none of the above solved the problem.
