@@ -34,7 +34,10 @@ There are two possibilities to uninstall a DataMiner Agent:
 
    > [!NOTE]
    > Multiple programs are installed as part of the DataMiner Cloud Pack: *DataMiner APIGateway*, *DataMiner ArtifactDeployer*, *DataMiner CloudGateway*, etc. Uninstalling *DataMiner Cloud Pack* in the *Programs and Features* window will remove the cloud pack including all of its related components.
-   > In case there are DxMs installed on other systems that request data from the agent to be uninstalled, make sure to disable these requests (e.g. DataAggregator will still send requests to the uninstalled agent).
+
+1. In case other systems have [DxMs](xref:DataMinerExtensionModules) that request data from the Agent you are uninstalling (such as [Data Aggregator](xref:Data_Aggregator_DxM)), make sure to disable these requests.
+
+   This will ensure that those DxMs do not keep trying to send requests to the uninstalled Agent.
 
 ## Uninstalling a DMA using a manual procedure
 
@@ -120,4 +123,7 @@ There are two possibilities to uninstall a DataMiner Agent:
 
    > [!NOTE]
    > Multiple programs are installed as part of the DataMiner Cloud Pack: *DataMiner APIGateway*, *DataMiner ArtifactDeployer*, *DataMiner CloudGateway*, etc. Uninstalling *DataMiner Cloud Pack* in the *Programs and Features* window will remove the cloud pack including all of its related components.
-   > In case there are DxMs installed on other systems that request data from the agent to be uninstalled, make sure to disable these requests (e.g. DataAggregator will still send requests to the uninstalled agent).
+
+1. In case other systems have [DxMs](xref:DataMinerExtensionModules) that request data from the Agent you are uninstalling (such as [Data Aggregator](xref:Data_Aggregator_DxM)), make sure to disable these requests.
+
+   This will ensure that those DxMs do not keep trying to send requests to the uninstalled Agent.
