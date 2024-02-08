@@ -32,6 +32,12 @@ For example, "ZIINE\Björn.Waldegård" with userPrincipalName <bjorn.waldegard@z
 
 ### Enhancements
 
+#### DataMiner upgrade: New prerequisite will check whether ASP.NET 8.0 Hosting Bundle is installed [ID_37969]
+
+<!-- MR 10.3.0 [CU12] / 10.4.0 [CU0] - FR 10.4.3 [CU0] -->
+
+When you upgrade a DataMiner System, a new prerequisite will now block the upgrade when the server does not have [Microsoft ASP.NET 8.0 Hosting Bundle](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-8.0.1-windows-hosting-bundle-installer) installed.
+
 #### SLNetClientTest tool: Message builder now allows creating an instance of an abstract type or interface [ID_38236]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
