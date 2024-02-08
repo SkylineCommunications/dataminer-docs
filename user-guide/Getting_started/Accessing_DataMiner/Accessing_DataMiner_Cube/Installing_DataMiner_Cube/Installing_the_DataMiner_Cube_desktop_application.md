@@ -4,10 +4,10 @@ uid: Installing_the_DataMiner_Cube_desktop_application
 
 # Installing the DataMiner Cube desktop application
 
-## Standard installation
-
 > [!IMPORTANT]
 > Make sure the client machine meets the minimum requirements detailed in the [DataMiner Client Requirements](xref:DataMiner_Client_Requirements).
+
+## Standard installation
 
 1. Log on to [dataminer.services](xref:Logging_on_to_the_DataMiner_Cloud_Platform).
 

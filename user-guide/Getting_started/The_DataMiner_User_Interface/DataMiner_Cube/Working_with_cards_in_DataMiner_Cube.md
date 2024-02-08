@@ -16,14 +16,12 @@ On this page, you can find:
 
 - News items related to DataMiner. Depending on your user permissions, this may include information about protocol updates or DataMiner software updates.
 
-- Weather information. Only available up to DataMiner 9.6.0/9.6.4. Up to DataMiner 9.5.11, this is only displayed if a location can be established (e.g. via the *Location* service in Windows 10). From DataMiner 9.5.12 onwards, you can select a location yourself via the location icon next to the *Weather* title.
-
 - A link to the landing page for the DataMiner web apps on the right-hand side.
 
 > [!NOTE]
 >
 > - Depending on your user permissions, some of these items may not be displayed.
-> - From DataMiner 9.6.1 onwards, the Cube user settings allow you to customize which information is shown on this page. See [Cube settings](xref:User_settings#cube-settings).
+> - In the [Cube user settings](xref:User_settings#cube-settings), you can customize which information is shown on this page.
 
 ## Card types
 
@@ -77,7 +75,7 @@ The pane consists of a tree view with several fixed nodes:
   > - Optionally, a Data Display page selector can be displayed on an element card, in addition to or instead of the tree view in the navigation pane. See [Card settings](xref:User_settings#card-settings).
   > - If you open a subpage of a Data Display page by selecting it in the card navigation pane instead of by clicking a page button, the subpage is opened in the same card, and at the top, a button “Up to \[parent page name\]” is displayed, which allows you to quickly go to the parent page.
   > - Element protocols can be configured to hide one or more Data Display pages depending on a parameter value.
-  > - Prior to DataMiner 9.6.7, a view has a DATA node with pages listing the items within the view. From DataMiner 9.6.7 onwards, this node is called “BELOW THIS VIEW” instead.
+  > - Instead of a DATA node, a view has a “BELOW THIS VIEW” node with pages listing the items within the view.
 
 - **ALARMS**: Displays an overview of all alarms on the selected item.
 

@@ -17,6 +17,7 @@ https://[DMA]/dataminercube
 >
 > - In the above-mentioned address, replace “\[DMA\]” by the IP address or the hostname of the DataMiner Agent you want to connect to.
 > - If DataMiner Cube has been set as the default client, it is not necessary to add “*/dataminercube*” in the URL.
+> - Each time you connect to a DataMiner Agent, the software version will be checked. If you connect to a DMA with a higher DataMiner version than your current version of Cube, Cube will automatically be updated.
 > - DataMiner Cube will automatically disconnect when the DMA to which you are connected goes offline.
 > - It is possible to connect to Cube using specific [URL arguments](xref:Options_for_opening_DataMiner_Cube).
 > - It is good practice to encode URLs according to the W3C guidelines. For more information, see <http://www.w3schools.com/tags/ref_urlencode.asp>.
