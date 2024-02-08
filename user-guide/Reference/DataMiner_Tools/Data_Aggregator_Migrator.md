@@ -33,7 +33,7 @@ The Data Aggregator Migrator should be used after upgrading the Data Aggregator 
    - If one or more specific URLs are configured in the *appsettings.custom.json* file, execute this command to perform the one-time migration:
 
      ```powershell
-     .\"DataMiner DataAggregator.Migrator.exe"  -i "C:\Program Files\Skyline Communications\DataMiner DataAggregator\appsettings.custom.json" -o "https://10.10.15.32:22345,https://10.10.15.34:8080" 
+     .\"DataMiner DataAggregator.Migrator.exe"  -i "C:\Program Files\Skyline Communications\DataMiner DataAggregator\appsettings.custom.json" -o "https://10.10.15.32:22345/api/" 
      ```
 
 1. Verify the migration was successful:
