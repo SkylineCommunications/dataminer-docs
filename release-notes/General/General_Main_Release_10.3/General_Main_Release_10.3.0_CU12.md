@@ -121,6 +121,12 @@ From now on, the following exception will be thrown instead:
 
 \* `<exception message>` being the message that was thrown within the constructor.
 
+#### SLLogCollector will now also collect the logs of the CommunicationGateway DxM [ID_38716]
+
+<!-- MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+SLLogCollector will now also collect the logs of the *CommunicationGateway* DxM.
+
 ### Fixes
 
 #### DataMiner installer: Some modules would not get installed while performing a full installation of a new DMA [ID_37719]
