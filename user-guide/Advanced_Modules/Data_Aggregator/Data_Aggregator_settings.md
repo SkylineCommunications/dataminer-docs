@@ -216,7 +216,7 @@ Inside the *Helper.json* file, you can configure this as follows:
              "QueryExecutorOptions": {
               "PageSize": 1,
               "TimeoutSeconds": 60
-            }
+            },
             "RunParams": [] // Reserved, supply an empty array. 
           }
         }
