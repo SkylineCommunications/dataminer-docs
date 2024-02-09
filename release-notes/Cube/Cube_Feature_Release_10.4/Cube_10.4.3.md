@@ -94,8 +94,7 @@ This entry will contain the following information:
 
 #### DataMiner Cube - Visual Overview: Page loading times are now logged in SLClient.txt [ID_38636] [ID_38694]
 
-<!-- RN 38636: MR 10.2.0 [CU21]/10.3.0 [CU12]/10.4.0 [CU1] - FR 10.4.3 [CU0] -->
-<!-- RN 38694: MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 [CU0] -->
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 [CU0] -->
 
 The time it takes to load a visual overview will now be logged in the *SLClient.txt* log file.
 

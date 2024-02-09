@@ -296,12 +296,6 @@ In Cube, you can now view the logging of an enhanced service by doing one of the
 - Open the card of an enhanced service, open its hamburger menu, and choose *View > Log*.
 - In the Surveyor, right-click an enhanced service, and choose *View > Log*.
 
-#### DataMiner Cube - Visual Overview: SLClient.txt entries logging page loading times now also include the page name [ID_38694]
-
-<!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 [CU0] -->
-
-From now on, *SLClient.txt* entries logging page loading times will now also include the name of the page that was loaded.
-
 ### Fixes
 
 #### DataMiner Cube: Error could occur in SLHelper when generating visual overviews to be displayed in web apps [ID_32584]
