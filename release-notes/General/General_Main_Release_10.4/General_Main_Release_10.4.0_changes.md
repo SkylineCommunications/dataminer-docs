@@ -1269,4 +1269,4 @@ Also, a large number of low-severity change points were generated without a labe
 
 <!-- MR 10.3.0 [CU12] / 10.4.0 [CU0] - FR 10.4.3 [CU0] -->
 
-When a DataMiner Agent was added to a DataMiner System, in some rare cases, the SLNet cache of the new DataMiner Agent would not get updated, causing the Agent to not be aware it was now part of a DMS.
+When a DataMiner Agent was added to a DataMiner System, in some cases, the SLNet cache of the new DataMiner Agent would not get updated, causing the Agent to not be aware it was now part of a DMS.
