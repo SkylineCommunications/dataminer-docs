@@ -224,3 +224,9 @@ Up to now, when writing to the database or reading from the database failed, a r
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
 
 When DataMiner was processing all QActions in order to call the `Dispose` method on the QActions that implement `IDisposable`, it would incorrectly no longer call the `Dispose` method on QActions that implement `IDisposable` after processing a QAction that did not implement `IDisposable`.
+
+#### Problem when adding a DMA to a DMS [ID_38620]
+
+<!-- MR 10.3.0 [CU12] / 10.4.0 [CU0] - FR 10.4.3 [CU0] -->
+
+When a DataMiner Agent was added to a DataMiner System, in some rare cases, the SLNet cache of the new DataMiner Agent would not get updated, causing the Agent to not be aware it was now part of a DMS.
