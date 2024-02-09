@@ -64,7 +64,7 @@ If the repository is private, the name should look like this (using "-" as separ
   - PLS (Profile-Load Scripts)
   - S (Solutions)
   - SC (Scripted Connector)
-  - T (Tests)
+  - T (Tests and Regression Tests)
   - UDAPI (User-Defined APIs)
   - V (Visio files)
 
