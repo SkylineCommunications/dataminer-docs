@@ -35,7 +35,25 @@ This indicator will show the current status of the client's WebSocket connection
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Web apps: Executing Automation scripts will now only require you to have Execute permission [ID_38529]
+
+<!-- MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+Up to now, in order to execute an Automation script from a web app or a dashboard, users had to have both *Execute* and *UI available* permission. From now on, having been granted *Execute* permission will suffice to be able to execute Automation scripts from a web app or a dashboard.
+
+The following Web Services API methods will now also only require users to have *Execute* permission (instead of *Execute* and *UI available*):
+
+- ContinueAutomationScript
+- DetachAutomationScript
+- ExecuteAutomationScript
+- ExecuteAutomationScriptWithOutput
+
+Also, when an Automation script fails due to missing script input, users will now receive the following error message:
+
+`Not all required input was provided to execute the script`
+
+> [!NOTE]
+> Up to now, when an Automation script that had memory files configured was launched from a low-code app, you would incorrectly always be prompted to enter a value for those memory files. From now on, this will no longer be the case.
 
 ### Fixes
 
