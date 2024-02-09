@@ -116,7 +116,7 @@ The GQI queries themselves should be configured in separate JSON files. See [Con
 
 ### [From Data Aggregator 3.0.0 onwards](#tab/tabid-1)
 
-1. Go to `C:\Program Files\Skyline Communications\DataMiner DataAggregator\Data Sources.`
+1. Go to `C:\Program Files\Skyline Communications\DataMiner DataAggregator\Data Sources`.
 
 1. Create a GUID for the GQI query.
 
@@ -128,6 +128,9 @@ The GQI queries themselves should be configured in separate JSON files. See [Con
 1. Move the file to the *Scripted Connectors* subfolder.
 
 1. Inside the *Helper.json* file, modify the *DataSources* array to include the GQI query with the new GUID.
+
+   > [!NOTE]
+   > If the *Helper.json* file does not exist yet, you can create it here `C:\Program Files\Skyline Communications\DataMiner DataAggregator\Data Sources`.
 
    For example:
 
@@ -199,6 +202,9 @@ Multiple jobs can be configured, each with their own optional [cron trigger](#cr
 ### [From Data Aggregator 3.0.0 onwards](#tab/tabid-3)
 
 Inside the *Helper.json* file, you can configure this as follows:
+
+   > [!NOTE]
+   > If the *Helper.json* file does not exist yet, you can create it here `C:\Program Files\Skyline Communications\DataMiner DataAggregator\Data Sources`.
 
 ```json
  "Jobs": [
