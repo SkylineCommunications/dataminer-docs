@@ -600,6 +600,12 @@ In the *Settings* windows, the description of the *Filter the alarms before they
 
 When a redundancy group included a primary or backup element that had been imported by means of a DELT package, in some cases, another element would incorrectly be displayed instead of the imported element.
 
+#### DataMiner Cube could become unresponsive after you had logged in [ID_38607]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU13]/10.4.0 [CU1] - FR 10.4.4 -->
+
+In some cases, after you had logged in, DataMiner Cube could become unresponsive when the "Show the news section" setting was enabled.
+
 #### DataMiner Cube - Correlation: Not possible to enable or disable any of the options for the 'Set parameter' action [ID_38616]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
