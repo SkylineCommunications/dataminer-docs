@@ -11,8 +11,6 @@ items:
           topicUid: Accessing_a_new_DMS
         - name: Connecting to data sources
           topicUid: DaaS_connecting_to_data_sources
-        - name: Ordering DataMiner credits
-          topicUid: Order_DataMiner_credits
         - name: Removing a DaaS system
           topicUid: Removing_a_DaaS_system
         - name: Frequently asked questions
