@@ -49,7 +49,7 @@ If the repository is private, the name should look like this (using "-" as separ
 
 - The following **item types** are currently supported (this list is to be extended):
 
-  - AS (Automation Scripts)
+  - AS (Automation Scripts, note specific type of Automation scripts, such as GQI data source, User definable API, Regression Tests, etc, have their own syntax)
   - C (Connectors)
   - CF (Companion Files)
   - CHATOPS (ChatOps extension)
@@ -64,7 +64,7 @@ If the repository is private, the name should look like this (using "-" as separ
   - PLS (Profile-Load Scripts)
   - S (Solutions)
   - SC (Scripted Connector)
-  - T (Tests and regression tests)
+  - T (Tests: Regression Tests, Integration Tests, Performance Tests, etc)
   - UDAPI (User-Defined APIs)
   - V (Visio files)
 
