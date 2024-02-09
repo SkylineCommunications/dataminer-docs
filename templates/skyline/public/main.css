@@ -501,18 +501,6 @@ code {
   }
   .col-md-10{width:75%}
   .col-md-2{width:25%}
-  .sideaffix {
-    width: 18%;
-  }
-  .affix ul>li.active>a {
-    white-space: initial;
-  }
-  .affix ul>li>a {
-    width: 99%;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
 }
 
 @media (min-width: 1769px) {
@@ -530,18 +518,6 @@ code {
   }
   .col-md-10{width:75%}
   .col-md-2{width:25%}
-  .sideaffix {
-    width: 18%;
-  }
-  .affix ul>li.active>a {
-    white-space: initial;
-  }
-  .affix ul>li>a {
-    width: 99%;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
 }
 
 a.backtotoplink
