@@ -8,21 +8,17 @@ uid: supportassistant_change_log
 
 The SupportAssistant DxM will now offload information about the used version of the log collector.
 
-
 #### 16 January 2024 - Enhancement - SupportAssistant 1.6.4 - Improved DxM status reporting [ID_38448]
 
 The SupportAssistant DxM will now periodically send a health check to the cloud to indicate that the DxM is running using correct identifiers.
-
 
 #### 20 December 2023 - Enhancement - SupportAssistant 1.6.1 - Additional data offloaded for proactive monitoring [ID_38250]
 
 From now onwards, additional data like soft-launch options, installed solutions, manager configurations, and BPA test results will also be offloaded for proactive monitoring via CDMR.
 
-
 #### 20 December 2023 - New feature - SupportAssistant 1.6.0 - DxM status reporter added [ID_38174]
 
 The SupportAssistant DxM will now periodically send a health check to the cloud to indicate that the DxM is running.
-
 
 #### 17 November 2023 - Enhancement - SupportAssistant 1.5.3 - Potential memory leak [ID_37843]
 
@@ -38,11 +34,9 @@ When SupportAssistant 1.5.1 or earlier was used, it could occur that remote log 
 
 Make sure to also install DataMiner CloudGateway 2.12.3 to make use of this fix.
 
-
 #### 11 August 2023 - Enhancement - SupportAssistant 1.5.0 - Upgrade to .NET 6 [ID_37099]
 
 DataMiner SupportAssistant has been upgraded to .NET 6, so that it no longer depends on .NET 5. **Make sure .NET 6 is installed** before you upgrade to this version.
-
 
 #### 28 June 2023 - Enhancement - SupportAssistant 1.4.0 - Improved offloading of reports and notifications [ID_36726]
 
@@ -50,16 +44,13 @@ To improve the maintenance and support experience, offloading of reports and not
 
 Because of this, you will need to upgrade to SupportAssistant 1.4.0 in order to keep this feature available, as the previous implementation (available since SupportAssistant 1.3.1) is now obsolete.
 
-
 #### 15 May 2023 - Enhancement - SupportAssistant 1.3.3 - Connection improvements [ID_36419]
 
 A retry mechanism has been implemented to fetch the cloud endpoint. If after the retries, still no cloud endpoint can be received, the module will fall back to trying to access dataminer.services directly. If this is not possible, the module will log the failed actions.
 
-
 #### 3 May 2023 - Fix - SupportAssistant 1.3.2 - Fixed incorrect timeout for Remote Log Collection uploads [ID_36311]
 
 An issue has been resolved where Remote Log Collection could incorrectly time out after 100 seconds of uploading.
-
 
 #### 21 April 2023 - Enhancements - SupportAssistant 1.3.1 - General improvements and offloading of reports and notifications [ID_35482] [ID_35485] [ID_35492] [ID_35559] [ID_35756] [ID_36152] [ID_36201]
 
@@ -85,13 +76,17 @@ You can disable the offloading of reports and notifications by overriding the en
 > [!IMPORTANT]
 > If you disable offloading of reports and notifications via DataMiner SupportAssistant, Skyline will not be able to provide maintenance and support.
 
-
 #### 24 January 2023 - Fix - SupportAssistant 1.2.1 - Log Collector continuously triggered after failing to generate files [ID_35457]
 
 In some rare cases, if invalid arguments were passed to the Log Collector so that it could not generate files, it could occur that the Log Collector kept getting triggered by the SupportAssistant DxM. Now the SupportAssistant will stop after a specific number of attempts.
 
 This fix is included in Cloud Pack 2.8.5.
 
+#### 10 January 2023 - Enhancement - DataMiner SupportAssistant 1.2.0 - Various stability improvements [ID_35349]
+
+Various general stability improvements have been implemented. In addition, eventing has been added to dataminer.services, so that the Skyline Support Team can follow up on the status of remote log collection.
+
+This enhancement is included in Cloud Pack 2.8.4.
 
 #### 19 December 2022 - Fix - SupportAssistant 1.1.1 - Log collection triggered too often [ID_35158]
 

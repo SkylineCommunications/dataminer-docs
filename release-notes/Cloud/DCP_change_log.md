@@ -24,16 +24,13 @@ To get started, you can find several example Automation scripts with more inform
 
 After you have made sure that the [prerequisites](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples/README.md#usage) are in place, you can deploy [the Chat Integration examples](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples/README.md#getting-started) to your DataMiner System and immediately try out these examples.
 
-
 #### 23 January 2024 - Fix - Unknown error when remote accessing web apps [ID_38549]
 
 While remote accessing web apps via dataminer.services (e.g. the Monitoring app), the following message could appear: `An unknown error occurred (status: 200).` The app would also stop working until the page was refreshed. This issue has been resolved.
 
-
 #### 12 January 2024 - New feature - Remote access for custom files/webpages [ID_38426]
 
 It is now possible to provide remote access via dataminer.services to files or webpages. To do so, add them in the folder `C:\Skyline DataMiner\Webpages\public\` on your DMA. To access such files, users can use the remote access URL followed by `/public/` (e.g. the file *image.png* via `https://ziine-skyline.on.dataminer.services/public/image.png`).
-
 
 #### 4 January 2024 - New feature - Chat Integration with Microsoft Teams now includes sending notification using Adaptive Cards [ID_38339]
 
@@ -45,23 +42,19 @@ To get started, you can find several example Automation scripts with more inform
 
 After you have made sure that the [prerequisites](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples/README.md#usage) are in place, you can deploy [the Chat Integration examples](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples/README.md#getting-started) to your DataMiner System and immediately try out these examples.
 
-
 #### 20 December 2023 - Enhancement - Email notifications for expiring and expired DataMiner Community Edition DaaS systems [ID_38235]
 
 From now onwards, when a DataMiner Community Edition DaaS system is about to expire, an email notification will be sent to both the owners of the organization and the owners of the DMS, so that they can take action if they want to prevent deletion. Another email notification will be sent when the DataMiner Community Edition DaaS system has been deleted.
 
 A notification will also be sent when an organization owns multiple DaaS systems and it will not be possible to extend one or more of these systems because the organization will not have enough DataMiner credits, as predicted based on the current usage.
 
-
 #### 13 December 2023 - New feature - Email notifications for expiring and expired DataMiner Community Edition DaaS systems [ID_38183]
 
 From now onwards, when a DataMiner Community Edition DaaS system is about to expire, an email notification will be sent to the owners of the organization and the person who deployed the DaaS system, so that they can take action if they want to prevent deletion. Another email notification will be sent when the DataMiner Community Edition DaaS system has been deleted.
 
-
 #### 6 December 2023 - New feature - Remote Access setting is now checked for user-defined API access [ID_38102]
 
 Users will now only be able to access a user-defined API using the remote access URL if the Remote Access setting is enabled in the Admin app.
-
 
 #### 4 December 2023 - New feature - DataMiner as a Service for staging systems [ID_38087]
 
@@ -79,7 +72,6 @@ When you create a DaaS system, your dataminer.services account will automaticall
 
 You can manually delete a DaaS system from dataminer.services, just like any other DMS; however, note that this is irreversible, and all data of the system will be lost.
 
-
 #### 21 November 2023 - New feature - Remote access using DataMiner Cube [ID_37841]
 
 It is now possible to connect to a DataMiner System via remote access using DataMiner Cube. If remote access is enabled for a DMS and you have been granted access to dataminer.services features, you can access the DMS remotely v
@@ -88,7 +80,6 @@ ia Cube using the same URL as for remote access to the web pages, but without th
 > [!NOTE]
 > At present, there is still a limitation to this feature: if the DMS has SAML authentication configured, users will not be able to access the DMS remotely with Cube.
 
-
 #### 26 September 2023 - Fix - Remote Access automatic login now works with special characters in DataMiner account configuration [ID_37438]
 
 If your DataMiner account contained one or more special characters, for example in the full name field, and you used Remote Access (e.g. the Monitoring app via dataminer.services), it was not possible to log in. Now you can log in automatically with your linked DataMiner account.
@@ -96,22 +87,18 @@ If your DataMiner account contained one or more special characters, for example 
 > [!NOTE]
 > If you log in manually, you will still encounter this issue: This will not work when you have one or more special characters configured in your DataMiner account. To resolve this, [link your DataMiner account to your dataminer.services account](https://aka.dataminer.services/account-linking). The automatic login will allow you to use Remote Access without requiring any further actions.
 
-
 #### 20 September 2023 - Enhancement - Admin app - Nodes page responsiveness improved [ID_37403]
 
 Performance has improved when node and DxM information is retrieved on the *Nodes* page of a DataMiner System in the Admin app.
-
 
 #### 22 August 2023 - Enhancement - Admin app - Audit Record Export (CSV) [ID_37164]
 
 In the [Admin app](https://admin.dataminer.services), a new feature has been introduced on the *Audit* page, allowing users to export audit records in a CSV file. Clicking *Export* in the top-left corner will initiate the export
  process. A pop-up window will appear, where you can choose the separator to be used in the CSV file, as well as whether to include column titles at the top of the exported CSV file. Once the file has been generated, you will receive an email containing a link to download the CSV file. The download link included in the email will be valid for a period of 7 days.
 
-
 #### 3 July 2023 - Fix - Admin app - Organization user overview will display all DMSs of each user correctly [ID_36795]
 
 In the Admin app, when an organization user had more than one DMS, only the last DMS would be shown in the organization user overview and its details overlay. This issue has now been resolved.
-
 
 #### 16 June 2023 - Fix - Chat Integration with Microsoft Teams: Improved consistency for email inputs [ID_36643]
 
@@ -121,18 +108,15 @@ Previously, some features were using the email input as the actual email address
 
 This is now no longer the case. All email input for all Chat Integration features behaves the same as the email address set for the user in the tenant.
 
-
 #### 30 May 2023 - Enhancement - Catalog - Notification when deploying from the catalog [ID_36543]
 
 When you deploy something (e.g. a connector) from the catalog to a DMA, a notification will now indicate if the deployment has started properly. The notification also contains a link to the Admin page, where you can view the status of the deployment.
-
 
 #### 11 May 2023 - Enhancement - Easier sharing of deployment records [ID_36398]
 
 When you select a deployment record on the *Deployments* page of the Admin app, the URL of the app is now updated with a query parameter referencing the ID of the deployment. This allows you to share this URL with someone to immediately show them that deployment.
 
-
-#### 3 April 2023 - Chat Integration with Microsoft Teams now includes fetching teams and channels [ID_35983]
+#### 3 April 2023 - New Feature - Chat Integration with Microsoft Teams now includes fetching teams and channels [ID_35983]
 
 The following Chat Integration features have been added:
 
@@ -148,11 +132,9 @@ After you have made sure that the [prerequisites](https://github.com/SkylineComm
 > [!NOTE]
 > To enable these additional features, you **must grant Skyline admin consent to your Microsoft tenant with certain permissions, even if you have already granted admin consent before.** See [granting admin consent](xref:Granting_admin_consent). You can revoke these permissions at any time.
 
-
 #### 30 March 2023 - Fix - Sharing app: Confirmation pop-up window not visible [ID_36029]
 
 In the Sharing app, depending on the position of the scrollbar, it could occur that the confirmation pop-up window for the deletion of an incoming share was displayed outside the boundaries of the screen, so that it was not possible to confirm the deletion.
-
 
 #### 2 March 2023 - Integrate your DataMiner System with Microsoft Teams using DataMiner Automation [ID_35799]
 
@@ -177,11 +159,9 @@ After you have made sure the [prerequisites](https://github.com/SkylineCommunica
 > [!NOTE]
 > You must grant Skyline admin consent to your Microsoft tenant with certain permissions to enable these features. See [granting admin consent](xref:Granting_admin_consent). You can revoke these permissions at any time.
 
-
 #### 9 February 2023 - Fix - Remote access actions incorrectly blocked [ID_35594]
 
 In some cases, it could occur that requests were incorrectly blocked as unsafe when you used the remote access feature. For example, this could occur when you clicked the Home button in the top-left corner of a web app.
-
 
 #### 13 January 2023 - Enhancement - Auditing of protocol and script deployments [ID_35392]
 
@@ -189,25 +169,9 @@ The *Audit* page of the Admin app will now also contain records for protocol and
 
 Deploying protocols can be done via the [DataMiner Catalog](https://catalog.dataminer.services/), deploying scripts can be done with a GitHub or GitLab CI/CD pipeline, and deploying DxMs can be done with the Admin app.
 
-
-#### 10 January 2023 - Enhancement - DataMiner SupportAssistant 1.2.0 - Various stability improvements [ID_35349]
-
-Various general stability improvements have been implemented. In addition, eventing has been added to dataminer.services, so that the Skyline Support Team can follow up on the status of remote log collection.
-
-This enhancement is included in Cloud Pack 2.8.4.
-
-
 #### 10 January 2023 - Enhancement - Audit log whenever Skyline's Support team uses Remote Log Collection [ID_35165]
 
 Every time Skyline's Support Team uses the Remote Log Collection feature on a DataMiner Agent, an audit log will now be created on dataminer.services. You can view these logs on the *Audit* page of the [Admin app](https://admin.dataminer.services).
-
-
-#### 10 January 2023 - Fix - DataMiner CoreGateway 2.12.0 - Problem with CoreGateway after server restart [ID_34961]
-
-After a server restart, a startup race condition could cause issues in the CoreGateway, which could for example cause the DataMiner Teams bot to be unresponsive. The NATS Message Broker dependency has been updated to prevent this issue.
-
-This fix is included in Cloud Pack 2.8.4.
-
 
 #### 8 December 2022 - Enhancement - New endpoints for dataminer.services connection and sharing [ID_35127]
 
@@ -216,42 +180,23 @@ For connection and share management, new endpoints will now be used instead of t
 - Connecting a DMS to dataminer.services will use the endpoint `https://connection.dataminer.services/*`.
 - Creating and managing shares will use the endpoint `https://sharing.dataminer.services/*`.
 
-
 #### 8 December 2022 - Enhancement - MSAL 2.0 implementation [ID_35126]
 
 A new version of MSAL has been implemented. This will result in faster and more stable authentication, which will also be updated more frequently.
 
 In addition, when the Admin app is authenticating, it will now display a loading icon.
 
-
 #### 6 December 2022 - Enhancement - Improved audit events for dashboard shares [ID_35087]
 
 When shares are created, accessed, updated, or deleted, the audit events on the Audit page of the Admin app will now include the name of the shared dashboard and a link to the dashboard. To navigate to the dashboard, users will need to have access to the dashboard.
-
 
 #### 6 December 2022 - Enhancement - Audit events for DMS and organization user CUD actions [ID_35086]
 
 When DMS or organization users are created, updated, or deleted, audit events will now be added on the Audit page of the Admin app.
 
-
-#### 16 November 2022 - Enhancement - CloudGateway 2.9.6 - Proxy support for WebSocket connection testing [ID_34569]
-
-The connection tester now supports testing WebSocket connections through the configured proxy.
-
-This enhancement is included in Cloud Pack version 2.8.2.
-
-
-#### 16 November 2022 - Enhancement - Orchestrator 1.2.6 - DMA name and ID synced to dataminer.services [ID_34670]
-
-From now on, the DataMiner Orchestrator will sync the DMA name and ID to dataminer.services. This is for example used on the *Nodes* page of the Admin app so users can easily identify a DMA to update its DxMs.
-
-This enhancement is included in Cloud Pack version 2.8.2.
-
-
 #### 18 October 2022 - Enhancement - Notification in case deployment fails because account is not linked [ID_34699]
 
 When a deployment fails because the user does not have a linked account, they will now get a notification that will allow them to correct the situation and retry.
-
 
 #### 18 October 2022 - Enhancement - Admin app supports additional audit events [ID_34697]
 
@@ -262,7 +207,6 @@ The Admin app now also includes the following audit events on the *Audit* page:
 - A user deleted an existing share.
 
 Up to now, only accessing a share was logged in the audit events.
-
 
 #### 27 September 2022 - New feature - DataMiner Teams bot support for custom commands [ID_34518]
 
@@ -284,7 +228,6 @@ The following limitations also apply:
 
 For more detailed information, refer to [Adding commands for the Teams bot to a DMS](xref:DataMiner_Teams_bot#adding-custom-commands-for-the-teams-bot-to-a-dms)
 
-
 #### 19 September 2022 - Enhancement - Improvements on Audit page in Admin app [ID_34457]
 
 A number of improvements have been implemented on the *Audit* page in the Admin app:
@@ -295,57 +238,9 @@ A number of improvements have been implemented on the *Audit* page in the Admin 
 - The column order has been adjusted.
 - Automatic loading of audit records has been improved to prevent possible issues with different screen sizes.
 
-
-#### 15 September 2022 - Fix - CloudGateway 2.9.5 - Problem in CloudGateway process if MaintenanceSettings.xml contained an invalid HTTPS endpoint [ID_34341]
-
-If the HTTPS endpoint in the file *MaintenanceSettings.xml* was not configured correctly, a problem could occur in the CloudGateway process. This happened specifically when DataMiner upgrades caused the HTTPS URL to end with an encoded new line.
-
-With CloudGateway 2.9.5 (included in Cloud Pack version 2.8.2), all endpoints from configuration files will be trimmed to prevent this, so that CloudGateway will no longer get this problem at runtime. However, note that CloudGateway may still fail to start up if an endpoint in a configuration file is invalid.
-
-
-#### 15 September 2022 - Fix - CoreGateway 2.11.5 - Incorrect information event when connector was deployed via dataminer.services [ID_34325]
-
-When a connector was deployed via dataminer.services, the corresponding information event incorrectly mentioned that this was done with the SLNetClientTest tool.
-
-With CoreGateway 2.11.5 (included in Cloud Pack version 2.8.2), the information event will have the correct format `New Client Registered - <UserName> @ <ComputerName> with DataMiner Cloud Platform`.
-
-
-#### 9 September 2022 - Fix - FieldControl 2.8.1 - Teams bot not working [ID_34374]
-
-In some cases, it could occur that the DataMiner Teams bot stopped working correctly and responded to commands with an error message.
-
-With FieldControl 2.8.1 (included in Cloud Pack version 2.8.2), this issue will no longer occur.
-
-
 #### 1 September 2022 - Enhancement - Filter functionality for Audit log in Admin app [ID_34322]
 
 The Audit log in the Admin app now allows filtering on operation type, subject type, DataMiner System name, and time span. In addition, the loading of records has been optimized.
-
-
-#### 1 September 2022 - New feature - CloudGateway 2.9.4 - Connection tester tool [ID_34187] [ID_34289] [ID_34293] [ID_34297]
-
-The Cloud Gateway now comes with a new connection tester tool, *ConnectionTester.exe*. This tool can be used to validate the network setup and check if all features are available. It checks whether the network complies with the requirements for dataminer.services.
-
-You can find the new tool in the folder `Program files\Skyline Communications\Dataminer CloudGateway\` on a DMA that has the Cloud Gateway installed. Run the executable as administrator. The connection tester will connect to port 443 to check whether requirements are met, and it will show the results in a console window.
-
-This feature is included in Cloud Pack version 2.8.2.
-
-
-#### 1 September 2022 - Fix - CoreGateway 2.11.4 / CloudGateway 2.9.4 - Login screen shown when not necessary while viewing share or using remote access [ID_34275]
-
-When the DataMiner Cloud Pack was installed in a cluster with two or more DMAs, it could occur that users trying to view a shared dashboard or remotely access a DMS could be shown the login screen when this was not supposed to happen.
-
-With CoreGateway 2.11.4 and CloudGateway 2.9.4 (included in Cloud Pack version 2.8.2), this issue is resolved.
-
-The CoreGateway DxM must now be installed on the same DMA as CloudGateway to ensure that sharing and remote access will work correctly. For DMZ setups, the DMA that CloudGateway points to will need to have the CoreGateway DxM installed.
-
-
-#### 1 September 2022 - Fix - CoreGateway 2.11.4 - CoreGateway of offline DMA tried to respond to requests from dataminer.services [ID_33973]
-
-When a DMA was offline (e.g. stopped, upgrading, restarting, or offline in a Failover pair), it could occur that the DataMiner CoreGateway tried to respond to requests from dataminer.services, while this should not happen.      
-
-With CoreGateway 2.11.4 (included in Cloud Pack version 2.8.2), this will no longer occur.
-
 
 #### 18 August 2022 - New feature - Audit and license information added in Admin app [ID_34216]
 
@@ -353,76 +248,13 @@ In the Admin app, the license expiration date for an organization is now display
 
 In addition, a new *Audit* page is available in the app, which contains auditing logs for sharing dashboards and dataminer.services keys.
 
-
-#### 18 July 2022 - New feature - CloudFeed 1.0.6 / CloudGateway 2.7.0 / ArtifactDeployer 1.4.0 - Proxy support [ID_33955] [ID_33961] [ID_33972]
-
-Proxy support has been added for DataMiner CloudFeed, CloudGateway, and ArtifactDeployer. When you configure this, all outgoing traffic towards the public internet will pass through the proxy server.
-
-The proxy settings are configured in a single settings file that is reused for all DxMs. This *appsettings.proxy.json* file is located in the `C:\ProgramData\Skyline Communications\DxMs Shared\` folder on the DMA. It should have the following content:
-
-```json
-{
-   "ProxyOptions": {
-      "Enabled": true,
-      "Address": "<address of the proxy server>"
-   }
-}
-```
-
-When you have configured the file, you will need to restart the CloudFeed, CloudGateway, and ArtifactDeployer services for the changes to take effect.
-
-
-#### 18 July 2022 - New feature - CloudGateway 2.7.0 - DMZ support [ID_33903]
-
-You can now connect a DMS to dataminer.services using a DMZ. This way the DMS can be connected to dataminer.services without exposing the entire DMS network to the public internet.
-
-To create such a DMZ:
-
-1. Configure the firewall of the DMZ:
-
-    - Make sure it allows access to the endpoints mentioned in [Connecting your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
-    - Make sure the DMZ can communicate with the DMS through port 80, or through port 443 for a secure connection.
-    - Make sure the DMZ can communicate through NATS though port 4222.
-
-1. Install all DxMs that need internet access in the DMZ. At present, these are *CloudGateway*, *CloudFeed*, and *ArtifactDeployer*.
-
-1. Add the *Orchestrator* to the DMZ, so that you can upgrade it later through dataminer.services.
-
-1. On the DataMiner nodes, install the DxMs that need to connect with the DMA or do not require internet access. At present, these are *CoreGateway* and *FieldControl*.
-
-    > [!NOTE]
-    > For all DxMs, it is advised to have multiple instances running at the same time. This will create redundancy in case something goes wrong and allows for upgrades without any downtime.
-
-1. In the `C:\Program Files\Skyline Communications\DataMiner CloudGateway`folder, create an override *appsettings.custom.json* with the following contents:
-
-    ```json
-    {
-      "DmzOptions": {
-        "IsHttpsEnabled": <true/false>,
-        "Domain": <IIS>,
-        "DataMinerAgentName":  <name of the dataminer agent the DMZ is connected to>
-      }
-    }
-    ```
-
-    - *IsHttpsEnabled*: Indicates whether the communication between the DMZ and the DMA is encrypted. This can only be the case if the IIS is configured to support TLS.
-    - *Domain*: The domain name of your DataMiner System, configured through the IIS settings.
-    - *DataMinerAgentName*: The name of the DataMiner Agent you are connecting to. This should be the same DMA as the one used for the domain setting.
-
-1. On a DataMiner node, copy `C:\Skyline DataMiner\SLCloud.xml` and `C:\Skyline DataMiner\NATS\nsc\.nkeys\creds\DataMinerOperator\DataMinerAccount\DataMinerUser.creds`, and paste these in the `C:\Skyline DataMiner\` folder of the DMZ. Make sure that the credentials entry in *SLCloud.xml* points to the credentials file you copied over.
-
-1. Restart all DxMs in the DMZ so that they use the new settings.
-
-
 #### 17 June 2022 - Enhancement - Admin app opens to Overview page [ID_33772]
 
 When you open the Admin app, it will now immediately show the *Overview* page of the selected organization. Previously, it showed a page that only contained "Home".
 
-
 #### 17 June 2022 - Enhancement - Admin icon available for all users [ID_33770]
 
 The icon to access the Admin app is now available for all users on the `dataminer.services` home page. Previously, this was only available for admins and owners.
-
 
 #### 10 June 2022 10 - New feature - New 'Outgoing Shares' page in Admin app [ID_33723]
 
@@ -430,23 +262,15 @@ In the Admin app, a new *Outgoing Shares* page is now available for each DataMin
 
 When you click a shared item in the overview, more detailed information will be displayed, including the time when it was shared and when the share will expire.
 
-
 #### 10 June 2022 10 - Enhancement - Pages in Admin app sidebar not shown for users without required permissions [ID_33708]
 
 If you do not have the required permissions to use a specific page for a DMS in the Admin app, this page will no longer be shown when you select a DMS in the sidebar of the app.
-
 
 #### 10 June 2022 10 - New feature - New 'Deployments' page in Admin app [ID_33707] [ID_33709] [ID_33724]
 
 In the Admin app, a new *Deployments* page is now available for each DataMiner System connected to dataminer.services. This page provides information about all the deployments that have been done to the DataMiner System via the Nodes page, via the Catalog, or using a GitHub pipeline with our GitHub action. It details what has been deployed, when and by whom, and whether the deployment succeeded, is pending, or failed.
 
 When you click a deployment in the overview, more detailed information will be displayed, including version information and event information that can be used for debugging. For example, in case a pending deployment is queued because of other deployments, you will be able to see this in the event information.
-
-
-#### 7 June 2022 - Fix - Orchestrator v1.2.3 - Orchestrator DxM update incorrectly displayed as failed [ID_33685]
-
-The Orchestrator DxM has been updated to version 1.2.3. When the Orchestrator DxM was updated via the Admin app, it could occur that this was displayed as a failed deployment even though it actually succeeded. This will now be prevented.
-
 
 #### 3 June 2022 - New feature - dataminer.services keys [ID_33606]
 
@@ -456,21 +280,13 @@ In the Admin app, you can manage the dataminer.services keys on the *Keys* page 
 
 For each set of keys, the *...* button on the right opens a menu where you can regenerate the primary key, regenerate the secondary key, or revoke (i.e. delete) the key. With the *New Key* option at the top of the page, you can add more keys.
 
-
 #### 3 June 2022 - New feature - Admin app sidebar redesigned [ID_33599]
 
 The layout of the Admin app has been improved. The blue icon bar on the left has been removed and the sidebar has been redesigned into two sections: *Organization* and *DataMiner Systems*. In the *DataMiner Systems* section, you can expand and collapse each connected DMS to view the available pages for that DMS.
 
-
-#### 27 May 2022 - CoreGateway v2.8.0 & ArtifactDeployer v1.3.0 - Enhancements to support CI/CD deployment [ID_33533] [ID_33534]
-
-The CoreGateway DxM has been updated to version 2.8.0, and the ArtifactDeployer DxM has been updated to version 1.3.0. These new versions contain enhancements to support the CI/CD deployment feature.
-
-
 #### 19 May 2022 - Fix - Notification when removing user showed placeholder [ID_33383]
 
 When a user was removed in the Admin app, the displayed notification contained a placeholder instead of the relevant email address.
-
 
 #### 6 May 2022 - New feature - DataMiner Teams bot v1.2 [ID_33422]
 
@@ -478,11 +294,9 @@ A new version of the DataMiner Teams bot is now available. If you use the comman
 
 In addition, all links to documentation in the app have been adjusted to link to <https://docs.dataminer.services/>.
 
-
 #### 2 May 2022 - Fix - Not possible to delete share without users [ID_33366]
 
 If a share was not valid because all users had removed themselves from it, it could occur that it was not possible to delete that share. This issue has now been resolved.
-
 
 #### 14 Apr. 2022 - New feature - Managing nodes connected to dataminer.services [ID_33081] [ID_33127]
 
@@ -493,16 +307,13 @@ Note that DataMiner Cloud Pack version 2.5.0 or higher must be installed on the 
 > [!IMPORTANT]
 > If you are using an IP-based firewall, from now on you will need to add `20.31.240.20` to the allowed IP addresses to be able to connect to dataminer.services.
 
-
 #### 5 Apr. 2022 - New feature - Admin app no longer shown by default on home page [ID_33090]
 
 The Admin app will now only be shown on the dataminer.services home page for users who are the owner/admin of an organization and/or of a DataMiner System.
 
-
 #### 5 Apr. 2022 - New feature - Non-dataminer.services users now notified about needing to connect to dataminer.services [ID_33089]
 
 When a user of a DMS that is not yet connected to dataminer.services goes to <https://dataminer.services/>, they will now be informed that they are not yet connected, and a link will be provided to more information about dataminer.services.
-
 
 #### 28 Feb. 2022 - New feature - dataminer.services connection verification [ID_32741]
 
@@ -510,11 +321,9 @@ In the Admin app, on the *Organization > Manage* page, users can now click a but
 
 When the verification has been successful, this will be indicated on this same page.
 
-
 #### 23 Feb. 2022 - New feature - Removing a share [ID_32695]
 
 In the *Sharing* module, you can now remove a share. When you do so, you indicate that you no longer wish to have access to the shared item. The item will no longer be available to you, unless it is shared with you again.       
-
 
 #### 12 Jan. 2022 - New feature - Support for app package deployment [ID_32210]
 
