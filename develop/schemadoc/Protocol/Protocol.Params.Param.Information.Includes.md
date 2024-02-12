@@ -2,7 +2,7 @@
 uid: Protocol.Params.Param.Information.Includes
 ---
 
-# Includes element
+# Includes element [Obsolete]
 
 Contains one or more Protocol.Params.Param.Information.Include tags to indicate that you want additional information to be displayed in the tooltip.
 
