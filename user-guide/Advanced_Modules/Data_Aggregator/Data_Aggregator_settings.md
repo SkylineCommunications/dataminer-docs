@@ -116,7 +116,7 @@ The GQI queries themselves should be configured in separate JSON files. See [Con
 
 ### [From Data Aggregator 3.0.0 onwards](#tab/tabid-1)
 
-1. Go to `C:\Program Files\Skyline Communications\DataMiner DataAggregator\Data Sources.`
+1. Go to `C:\Program Files\Skyline Communications\DataMiner DataAggregator\Data Sources`.
 
 1. Create a GUID for the GQI query.
 
@@ -128,6 +128,9 @@ The GQI queries themselves should be configured in separate JSON files. See [Con
 1. Move the file to the *Scripted Connectors* subfolder.
 
 1. Inside the *Helper.json* file, modify the *DataSources* array to include the GQI query with the new GUID.
+
+   > [!NOTE]
+   > If the *Helper.json* file does not exist yet, create it in the folder `C:\Program Files\Skyline Communications\DataMiner DataAggregator\Data Sources`.
 
    For example:
 
@@ -228,6 +231,9 @@ Inside the *Helper.json* file, you can configure this as follows:
 ```
 
 After modifying *Helper.json*, restart the DataMiner DataAggregator service (e.g. using Windows Task Manager).
+
+> [!NOTE]
+> If the *Helper.json* file does not exist yet, create it in the folder `C:\Program Files\Skyline Communications\DataMiner DataAggregator\Data Sources`.
 
 ### [Prior to Data Aggregator 3.0.0](#tab/tabid-4)
 
