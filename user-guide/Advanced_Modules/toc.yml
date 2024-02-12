@@ -739,7 +739,6 @@ items:
       - name: Limitations
         topicUid: Data_Sources_Limitations
       - name: Tutorials
-        topicUid: Data_Sources_Tutorials
         items:
           - name: Creating a scripted connector 
             topicUid: Data_Sources_Tutorials_GettingStarted

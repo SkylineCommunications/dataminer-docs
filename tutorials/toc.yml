@@ -2,6 +2,8 @@ items:
   - name: DataMiner tutorials
     topicUid: Tutorials
     items:
+      - name: Data Sources tutorials
+        topicUid: Data_sources_tutorials
       - name: DataMiner Analytics tutorials
         topicUid: Analytics_Tutorials
       - name: ChatOps Custom Command tutorials
