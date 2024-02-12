@@ -633,6 +633,9 @@ The table is defined as follows:
 |dn|text|No|Display key for table parameter|
 |fd|test|No|Model|
 
+> [!NOTE]
+> When you upgrade to DataMiner version 10.4.0/10.4.3 or higher, the *analytics_alarmfocus* table is automatically removed<!--RN 38251-->.
+
 #### analytics_arrowwindows
 
 This table is used by the trend icons feature in DataMiner versions prior to DataMiner 10.2.4. See [Accessing trend information from a card](xref:Accessing_trend_information_from_a_card).
