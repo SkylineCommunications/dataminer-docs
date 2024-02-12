@@ -4,7 +4,7 @@ uid: Accessing_the_Sharing_module
 
 # Accessing the Sharing module
 
-1. Go to <https://dataminer.services/>, and sign in.
+1. Go to <https://dataminer.services>, and sign in.
 
 1. On the dataminer.services landing page, click *Sharing*.
 

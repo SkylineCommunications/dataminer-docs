@@ -8,7 +8,7 @@ As part of dataminer.services, the Catalog module allows Skyline customers and D
 
 To access the Catalog module:
 
-1. Go to <https://dataminer.services/>, and [sign in](xref:Logging_on_to_the_DataMiner_Cloud_Platform).
+1. Go to <https://dataminer.services>, and [sign in](xref:Logging_on_to_the_DataMiner_Cloud_Platform).
 
 1. On the dataminer.services landing page, click *Catalog*.
 

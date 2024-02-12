@@ -31,7 +31,7 @@ You can start the Cube session in different ways:
 
 - **With the button on dataminer.services**: On a device where the Cube desktop app is installed, open a browser and navigate to [dataminer.services](https://dataminer.services). Find your DMS in the list and click the *Open in desktop app* button. This will open Cube with the correct remote access URL filled in in the host field. Then click *Connect* to connect to your DMS.
 
-  ![Remote Cube in the home app](~/user-guide/images/RemoteCubeHomeApp.png)
+  ![Remote Cube in the home app](~/user-guide/images/CcaHomeApp.png)
 
   > [!NOTE]
   > If your DMS is not listed, check if the correct organization is selected in the top-right corner.
