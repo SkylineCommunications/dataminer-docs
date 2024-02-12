@@ -9,12 +9,12 @@ uid: Known_issues
 |--|--|--|--|
 | [Port exhaustion because of NATS reconnection attempts](xref:KI_port_exhaustion_because_of_NATS_reconnect_attempts) | Any DataMiner version | | February 2, 2024 |
 | [One or multiple Analytics features fail to start](xref:KI_Analytics_features_not_starting) | From DataMiner 10.2.0 [CU13]/10.3.0 [CU2]/10.3.5 onwards | | January 29, 2024. |
-| [NATS configuration not updated after adding DMA to DMS](xref:KI_NATS_config_not_updated_after_adding_DMA) | All DataMiner versions | | January 24, 2024 |
 | [NATS services missing after reboot](xref:KI_missing_NATS_services) | Any version | | January 10, 2024 |
 | [Problem after removing DMA from cluster](xref:KI_Problem_after_removing_DMA_from_cluster) | Any DataMiner version with clustered storage <br>and/or indexing | | December 15, 2023 |
-| [Upgrade fails because of VerifyNoLegacyReportsDashboards.dll prerequisite](xref:KI_Upgrade_fails_VerifyNoLegacyReportsDashboards_prerequisite) | From DataMiner 10.4.0 onwards | [Requires configuration](xref:KI_Upgrade_fails_VerifyNoLegacyReportsDashboards_prerequisite) | November 23, 2023 |
+| [NATS configuration not updated after adding DMA to DMS](xref:KI_NATS_config_not_updated_after_adding_DMA) | All DataMiner versions | DataMiner 10.3.0 [CU12]/10.4.0 [CU0]/10.4.3 | January 24, 2024 |
 | [Downgrade fails because of VerifyNatsIsRunning.dll prerequisite](xref:KI_Downgrade_fails_VerifyNatsIsRunning_prerequisite) | From DataMiner 10.4.0/10.4.3 onwards | [Requires configuration](xref:KI_Downgrade_fails_VerifyNatsIsRunning_prerequisite) | January 23, 2024 |
 | [Failover Agents remain offline after upgrade](xref:KI_Failover_Agents_offline_after_upgrade) | From DataMiner 10.3.0 [CU9]/10.3.12 onwards | DataMiner 10.3.0 [CU11]/10.4.0/10.4.2 | January 22, 2024 |
+| [Upgrade fails because of VerifyNoLegacyReportsDashboards.dll prerequisite](xref:KI_Upgrade_fails_VerifyNoLegacyReportsDashboards_prerequisite) | From DataMiner 10.4.0 onwards | [Requires configuration](xref:KI_Upgrade_fails_VerifyNoLegacyReportsDashboards_prerequisite) | November 23, 2023 |
 | [Upgrade fails because of VerifyElasticStorageTypePrerequisite.dll prerequisite](xref:KI_Upgrade_fails_VerifyElasticStorageType_prerequisite) | From DataMiner 10.4.0 onwards | [Requires configuration](xref:KI_Upgrade_fails_VerifyElasticStorageType_prerequisite) | November 13, 2023 |
 | [Upgrade fails because of VerifyNoObsoleteApiDeployed.dll prerequisite](xref:KI_Upgrade_fails_VerifyNoObsoleteApiDeployed_prerequisite) | From DataMiner 10.4.0 onwards | [Requires configuration](xref:KI_Upgrade_fails_VerifyNoObsoleteApiDeployed_prerequisite) | November 9, 2023 |
 
@@ -24,7 +24,6 @@ uid: Known_issues
 |--|--|--|--|
 | [Port exhaustion because of NATS reconnection attempts](xref:KI_port_exhaustion_because_of_NATS_reconnect_attempts) | Any DataMiner version | | February 2, 2024 |
 | [One or multiple Analytics features fail to start](xref:KI_Analytics_features_not_starting) | From DataMiner 10.2.0 [CU13]/10.3.0 [CU2]/10.3.5 onwards | | January 29, 2024. |
-| [NATS configuration not updated after adding DMA to DMS](xref:KI_NATS_config_not_updated_after_adding_DMA) | All DataMiner versions | | January 24, 2024 |
 | [NATS services missing after reboot](xref:KI_missing_NATS_services) | Any version | | January 10, 2024 |
 | [Problem after removing DMA from cluster](xref:KI_Problem_after_removing_DMA_from_cluster) | Any DataMiner version with clustered storage <br>and/or indexing | | December 15, 2023 |
 | [Max Payload exceptions occur when using MessageBroker with chunking](xref:KI_DataMinerMessageBroker_Chunking_MaxPayload)| From DataMiner 10.3.5 [CU0]/10.3.8 onwards | | September 26, 2023 |
@@ -33,6 +32,7 @@ uid: Known_issues
 | [Local user unable to access DMA after first reboot after installation](xref:KI_Local_user_unable_to_access_DMA_after_first_reboot_after_installation) | DataMiner 10.3.3 | | February 24, 2023 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | | November 8, 2022 |
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
+| [NATS configuration not updated after adding DMA to DMS](xref:KI_NATS_config_not_updated_after_adding_DMA) | All DataMiner versions | DataMiner 10.3.0 [CU12]/10.4.0 [CU0]/10.4.3 | January 24, 2024 |
 | [Failover Agents remain offline after upgrade](xref:KI_Failover_Agents_offline_after_upgrade) | From DataMiner 10.3.0 [CU9]/10.3.12 onwards | DataMiner 10.3.0 [CU11]/10.4.0/10.4.2 | January 22, 2024 |
 | [Cube freezes on 'Connected!' loading screen when no alarm tabs are displayed](xref:KI_Cube_connection_issue_alarm_tabs) | DataMiner 10.3.9 and 10.3.10 <br>Any versions from DataMiner 10.2.0 onwards using automatic client updates | DataMiner 10.2.0 [CU19]/10.3.0 [CU7]/10.3.11<br>Cube 10.3.11 | October 16, 2023 |
 | [Various issues when using MessageBroker with chunking](xref:KI_DataMinerMessageBroker2)| 10.3.0 Main Release from 10.3.0 [CU5] onwards <br>DataMiner 10.3.8 to 10.3.11 | DataMiner 10.4.0/10.4.1 | October 11, 2023 |
@@ -73,7 +73,6 @@ uid: Known_issues
 |--|--|--|--|
 | [Port exhaustion because of NATS reconnection attempts](xref:KI_port_exhaustion_because_of_NATS_reconnect_attempts) | Any DataMiner version | | February 2, 2024 |
 | [One or multiple Analytics features fail to start](xref:KI_Analytics_features_not_starting) | From DataMiner 10.2.0 [CU13]/10.3.0 [CU2]/10.3.5 onwards | | January 29, 2024. |
-| [NATS configuration not updated after adding DMA to DMS](xref:KI_NATS_config_not_updated_after_adding_DMA) | All DataMiner versions | | January 24, 2024 |
 | [NATS services missing after reboot](xref:KI_missing_NATS_services) | Any version | | January 10, 2024 |
 | [Problem after removing DMA from cluster](xref:KI_Problem_after_removing_DMA_from_cluster) | Any DataMiner version with clustered storage <br>and/or indexing | | December 15, 2023 |
 | [Various issues with a geo-redundant Cassandra setup with multiple data centers](xref:KI_Multiple_Datacenters) | Cassandra Cluster setups | | June 1, 2023 |
@@ -81,6 +80,7 @@ uid: Known_issues
 | [Elasticsearch not initialized when DataMiner starts up](xref:KI_Elasticsearch_not_initialized_on_DMA_startup) | Any version using Elasticsearch | | April 20, 2023 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | | November 8, 2022 |
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From DataMiner 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
+| [NATS configuration not updated after adding DMA to DMS](xref:KI_NATS_config_not_updated_after_adding_DMA) | All DataMiner versions | DataMiner 10.3.0 [CU12]/10.4.0 [CU0]/10.4.3 | January 24, 2024 |
 | [Cube freezes on 'Connected!' loading screen when no alarm tabs are displayed](xref:KI_Cube_connection_issue_alarm_tabs) | Any versions from DataMiner 10.2.0 onwards using automatic client updates | DataMiner 10.2.0 [CU19]/10.3.0 [CU7]/10.3.11<br>Cube 10.3.11 | October 16, 2023 |
 | [Offload to MySQL offload database fails](xref:KI_offload_database_incorrect_integer_value) | Any version | [Requires configuration](xref:KI_offload_database_incorrect_integer_value) | October 4, 2023 |
 | [Default NATS port is already in use](xref:KI_NATS_port_9090) | From DataMiner 10.1.0/10.1.1 onwards | [Requires configuration](xref:KI_NATS_port_9090) | August 3, 2023 |
@@ -126,7 +126,6 @@ uid: Known_issues
 | Issue | Affected versions | Resolved in | Date added |
 |--|--|--|--|
 | [Port exhaustion because of NATS reconnection attempts](xref:KI_port_exhaustion_because_of_NATS_reconnect_attempts) | Any DataMiner version | | February 2, 2024 |
-| [NATS configuration not updated after adding DMA to DMS](xref:KI_NATS_config_not_updated_after_adding_DMA) | All DataMiner versions | | January 24, 2024 |
 | [NATS services missing after reboot](xref:KI_missing_NATS_services) | Any version | | January 10, 2024 |
 | [Problem after removing DMA from cluster](xref:KI_Problem_after_removing_DMA_from_cluster) | Any DataMiner version with clustered storage <br>and/or indexing | | December 15, 2023 |
 | [Various issues with a geo-redundant Cassandra setup with multiple data centers](xref:KI_Multiple_Datacenters) | Cassandra Cluster setups | | June 1, 2023 |
@@ -135,6 +134,7 @@ uid: Known_issues
 | [Migration of Ticketing data from Cassandra to Elasticsearch fails](xref:KI_Migration_of_Ticketing_data_from_Cassandra_to_Elasticsearch_fails) | From DataMiner 10.1.0/10.0.13 onwards | | - |
 | [DataMiner Cube freeze on startup](xref:KI_DataMiner_Cube_freeze_on_startup) | N/A | | - |
 | [Setting a protocol to production takes a long time](xref:KI_Setting_a_protocol_to_production_takes_a_long_time) | N/A | | - |
+| [NATS configuration not updated after adding DMA to DMS](xref:KI_NATS_config_not_updated_after_adding_DMA) | All DataMiner versions | DataMiner 10.3.0 [CU12]/10.4.0 [CU0]/10.4.3 | January 24, 2024 |
 | [Offload to MySQL offload database fails](xref:KI_offload_database_incorrect_integer_value) | Any version | [Requires configuration](xref:KI_offload_database_incorrect_integer_value) | October 4, 2023 |
 | [Default NATS port is already in use](xref:KI_NATS_port_9090) | From DataMiner 10.1.0/10.1.1 onwards | [Requires configuration](xref:KI_NATS_port_9090) | August 3, 2023 |
 | [Cassandra disconnects after loss of a single node](xref:KI_Cassandra_disconnects_after_loss_of_a_single_node) | Cassandra Cluster setups | DataMiner 10.3.0 [CU7]/10.3.10 | June 1, 2023 |
