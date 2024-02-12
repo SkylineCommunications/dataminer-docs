@@ -6,6 +6,9 @@ uid: Data_Sources_Tutorials_GettingStarted
 
 This tutorial will teach you how to create your first scripted connector with Python.
 
+For the tutorial we will be using an example where we will connect to Amsterdam Internet Exchange (AMS) and collect traffic data from some of its available locations.
+It will allow us to have real and changing data to better understand how the Data Sources module works.
+
 The content and screenshots for this tutorial were created in DataMiner version 10.4.2.
 
 Expected duration: 15 minutes
@@ -44,13 +47,22 @@ Navigate to <https://admin.dataminer.services/> and deploy the latest version of
 
    ![Create New](~/user-guide/images/Data_Sources_Tutorials_GettingStarted_3.png)
 
+1. Configure the *Data source name* field with an identifiable name (e.g. AMS) and ensure the *Type* is set to **Python**.
+
+   ![Basic Settings](~/user-guide/images/Data_Sources_Tutorials_GettingStarted_3_1.png)
+
 1. Go to the [SLC-SC-Example_ScriptedConnectors GitHub repository](https://github.com/SkylineCommunications/SLC-SC-Example_ScriptedConnectors) and copy the Amsterdam Internet Exchange Python example.
 
    ![Copy Github](~/user-guide/images/Data_Sources_Tutorials_GettingStarted_4.png)
 
-1. In the Data Sources module, paste the example code in the code editor window and finish configuring the data source.
+1. In the Data Sources module, paste the example code in the code editor window and click the *Create* button.
 
    ![Final DataSource](~/user-guide/images/Data_Sources_Tutorials_GettingStarted_5.png)
+
+The scripted connector you just created will now be automatically configured to run every minute.
+It will collect traffic data and send it into DataMiner via Data API.
+
+Upon first execution it will also create an element with the name of `ams-ix.net`.
 
 ## Step 3: View your data source
 
