@@ -6,9 +6,9 @@ uid: KI_NATS_config_not_updated_after_adding_DMA
 
 ## Affected versions
 
-All DataMiner versions.
+All DataMiner versions prior to 10.3.0 [CU12]/10.4.0 [CU0]/10.4.3.
 
-From DataMiner 10.3.0 [CU11]/10.4.2 onwards, there is a higher chance that you might encounter this issue.
+In DataMiner 10.3.0 [CU11]/10.4.2, there is a higher chance that you might encounter this issue.
 
 ## Cause
 
@@ -20,7 +20,7 @@ Restart the DataMiner Agent you have added to the DMS. This will force a refresh
 
 ## Fix
 
-No fix is available yet.<!-- RN 38620 -->
+Install DataMiner 10.3.0 [CU12], 10.4.0 [CU0], or 10.4.3.<!-- RN 38620 -->
 
 ## Description
 
