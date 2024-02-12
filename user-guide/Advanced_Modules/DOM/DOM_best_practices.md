@@ -90,7 +90,7 @@ If values are only needed when a specific object is known (e.g. selected in a lo
 
 **Not recommended:**
 
-<div class="mermaid">
+```mermaid
 classDiagram
     direction RL
     `Incident Info` <-- `Incidents`
@@ -111,11 +111,11 @@ classDiagram
         Action
         Notes
     }
-</div>
+```
 
 **Recommended:**
 
-<div class="mermaid">
+```mermaid
 classDiagram
     direction RL
     `Incident Info` <-- `Incidents`
@@ -141,7 +141,7 @@ classDiagram
         Action
         Notes
     }
-</div>
+```
 
 ### Use the most efficient field descriptor
 

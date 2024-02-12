@@ -2,26 +2,26 @@
 uid: Part1GettingStarted
 ---
 
-## Getting started with DataMiner
+# Getting started with DataMiner
 
 <div class="row"> 
   <div class="column">
     <a href="/user-guide/Getting_started/Creating_a_DataMiner_System.html" title="Creating a DMS" target="_self"><img src="~/user-guide/images/Creating_DMS.svg" style="width:100%"></a>
   </div>
   <div class="column">
-    <a href="/user-guide/Getting_started/BasicConcepts/BasicConcepts.html" title="Basic Concepts" target="_self"><img src="~/user-guide/images/Docs_BasicConcepts.svg" style="width:100%"></a>
+    <a href="/user-guide/Getting_started/Interacting_with_DataMiner/Client_apps.html" title="Interacting with DataMiner" target="_self"><img src="~/user-guide/images/Interacting_with_DataMiner.svg" style="width:100%"></a>
   </div>
   <div class="column">
-    <a href="/user-guide/Getting_started/DataMiner_System_Layout/DataMiner_System_Layout.html" title="System Layout" target="_self"><img src="~/user-guide/images/Docs_SystemLayout.svg" style="width:100%"></a>
-  </div>  
+    <a href="/user-guide/Getting_started/The_DataMiner_User_Interface/DataMiner_Cube/Cube_UI_components.html" title="Working with DataMiner Cube" target="_self"><img src="~/user-guide/images/Working_with_DataMiner_Cube.svg" style="width:100%"></a>
+  </div>
 </div>
 
 <div class="row"> 
   <div class="column">
-    <a href="/user-guide/Getting_started/Accessing_DataMiner/Accessing_DataMiner.html" title="Accessing DataMiner" target="_self"><img src="~/user-guide/images/Docs_AccessingDataMiner.svg" style="width:100%"></a>
+    <a href="/user-guide/Getting_started/The_DataMiner_User_Interface/Monitoring_app/The_Monitoring_app_user_interface.html" title="Working with the Monitoring app" target="_self"><img src="~/user-guide/images/Working_with_Monitoring_app.svg" style="width:100%"></a>
   </div>
   <div class="column">
-    <a href="/user-guide/Getting_started/The_DataMiner_User_Interface/The_DataMiner_User_Interface.html" title="DataMiner user interface" target="_self"><img src="~/user-guide/images/Docs_DataMinerUI.svg" style="width:100%"></a>
+    <a href="/user-guide/Getting_started/Getting_started_community.html" title="DataMiner Community" target="_self"><img src="~/user-guide/images/DataMiner_Community.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/user-guide/Getting_started/ZiineDemoSystem/ZiineDemoSystem.html" title="Ziine" target="_self"><img src="~/user-guide/images/Docs_Ziine.svg" style="width:100%"></a>

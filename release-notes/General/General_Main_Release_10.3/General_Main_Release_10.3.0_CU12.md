@@ -32,6 +32,12 @@ For example, "ZIINE\Björn.Waldegård" with userPrincipalName <bjorn.waldegard@z
 
 ### Enhancements
 
+#### DataMiner upgrade: New prerequisite will check whether ASP.NET 8.0 Hosting Bundle is installed [ID_37969]
+
+<!-- MR 10.3.0 [CU12] / 10.4.0 [CU0] - FR 10.4.3 [CU0] -->
+
+When you upgrade a DataMiner System, a new prerequisite will now block the upgrade when the server does not have [Microsoft ASP.NET 8.0 Hosting Bundle](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-8.0.1-windows-hosting-bundle-installer) installed.
+
 #### SLNetClientTest tool: Message builder now allows creating an instance of an abstract type or interface [ID_38236]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
@@ -100,6 +106,26 @@ As a result, overall performance of clients like the Dashboards app or a low-cod
 The following notification alarm, generated when an SLAnalytics feature failed to start up, will now be automatically cleared when that same feature starts up correctly.
 
 `Failed to start x Analytics feature(s). Check the Analytics logging (SLAnalytics.txt) for more information.`
+
+#### GQI: Clearer error message will now be thrown when an ad hoc data source or custom operator cannot be instantiated [ID_38686]
+
+<!-- MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+Up to now, when an ad hoc data source or custom operator could not be instantiated, the following exception would be thrown when an error occurred on object creation level (within the constructor):
+
+`Error: Could not create instance of datasource when trying to use an ad hoc datasource.`
+
+From now on, the following exception will be thrown instead:
+
+`Error trapped: Could not create instance of datasource 'datasource ID': <exception message>.`
+
+\* `<exception message>` being the message that was thrown within the constructor.
+
+#### SLLogCollector will now also collect the logs of the CommunicationGateway DxM [ID_38716]
+
+<!-- MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+SLLogCollector will now also collect the logs of the *CommunicationGateway* DxM.
 
 ### Fixes
 
@@ -175,6 +201,18 @@ Each time the APIGateway service was stopped, a fatal error would incorrectly be
 
 When a client application was connected to a DataMiner Agent via a gRPC connection, in some cases, the alarm filters it received from the DataMiner Agent would not be properly serialized.
 
+#### Problem with file offload mechanism when main database is offline [ID_38542]
+
+<!-- MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+When the main database is offline, file offloads are used to store write/delete operations. In some cases, this file offload mechanism could end up in an unrecoverable state due to a threading issue.
+
+#### Problem with SLProtocol when calculating the length of a serial response [ID_38591]
+
+<!-- MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+In some cases, SLProtocol could stop working due to an `Access violation reading location` error being thrown while calculating the length of a serial response.
+
 #### SLAnalytics features would not start up correctly after a database connection problem [ID_38600]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
@@ -186,3 +224,9 @@ Up to now, when writing to the database or reading from the database failed, a r
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
 
 When DataMiner was processing all QActions in order to call the `Dispose` method on the QActions that implement `IDisposable`, it would incorrectly no longer call the `Dispose` method on QActions that implement `IDisposable` after processing a QAction that did not implement `IDisposable`.
+
+#### Problem when adding a DMA to a DMS [ID_38620]
+
+<!-- MR 10.3.0 [CU12] / 10.4.0 [CU0] - FR 10.4.3 [CU0] -->
+
+When a DataMiner Agent was added to a DataMiner System, in some cases, the SLNet cache of the new DataMiner Agent would not get updated, causing the Agent to not be aware it was now part of a DMS.

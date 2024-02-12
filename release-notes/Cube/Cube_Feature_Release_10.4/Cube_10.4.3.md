@@ -92,6 +92,18 @@ This entry will contain the following information:
 - The connected hostname
 - The raw text of the client connection (includes connection property data such as *AmountCallsIn*, *AmountCallsOut*, *AmountInitiatedConnectionChecks*, *AmountCallsInProgress*, *AmountCallsWaiting*, etc.)
 
+#### DataMiner Cube - Visual Overview: Page loading times are now logged in SLClient.txt [ID_38636] [ID_38694]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 [CU0] -->
+
+The time it takes to load a visual overview will now be logged in the *SLClient.txt* log file.
+
+The load time will be the time between page initialization and (a) the time at which the page is fully loaded or (b) the time at which the user closes the card.
+
+Page loads will time out after 2 minutes.
+
+Note that these *SLClient.txt* entries will also include the name of the page that was loaded.
+
 ### Fixes
 
 #### User menu: Problem when logging out immediately after logging in [ID_38178]

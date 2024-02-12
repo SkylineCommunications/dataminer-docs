@@ -51,7 +51,7 @@ For the GQI, there is no dedicated log file, but you can find error information 
 
 ## SLHelper troubleshooting flowchart
 
-<div class="mermaid">
+```mermaid
 flowchart TD
 %% Define blocks %%
 LinkRootCause([To root cause flowchart])
@@ -131,4 +131,4 @@ class VisioSave,PdfModule,PdfSave,PdfTimeouts classAction;
 class VisioFix,GqiServerIssue,PdfOptimize classSolution;
 class VisioKnown,VisioLogs,GqiDevConsole,GqiSave,PdfLogs,BpaLogs classActionClickable;
 class LinkRootCause,LinkProcessList,PdfReportsIssue classExternalRef;
-</div>
+```

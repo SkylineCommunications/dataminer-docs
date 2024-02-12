@@ -1,0 +1,31 @@
+items:
+- name: Contributing to the DataMiner docs
+  topicUid: contributing
+  items:
+    - name: Doing a quick edit to a page
+      topicUid: CTB_Quick_Edit
+    - name: Making a larger contribution
+      topicUid: CTB_Larger_Contribution
+      items:
+        - name: Getting started with your documentation tools
+          topicUid: CTB_Documentation_Tools
+        - name: Things to watch out for
+          topicUid: CTB_Watch_out_for
+        - name: Creating a pull request
+          topicUid: CTB_Creating_PR
+        - name: Collaborating with others on a draft branch
+          topicUid: CTB_Collaborating_Draft_Branch
+        - name: Working on an existing pull request
+          topicUid: CTB_Existing_PR
+        - name: Making a local test build
+          topicUid: CTB_Local_Test_Build
+    - name: Markdown syntax
+      topicUid: CTB_Markdown_Syntax
+    - name: Reviewing a contribution
+      topicUid: CTB_Reviewing_Contribution
+    - name: Tips for writing documentation
+      topicUid: CTB_Tips
+    - name: Reporting an issue
+      topicUid: CTB_Reporting_Issue
+    - name: Troubleshooting
+      topicUid: CTB_Troubleshooting

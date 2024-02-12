@@ -4,18 +4,14 @@ uid: Options_for_opening_DataMiner_Cube
 
 # Arguments for DataMiner Cube
 
-You can pass a number of arguments when starting DataMiner Cube, as detailed below.
+It is possible to [connect to a DMS using URL arguments](xref:Managing_the_start_window#connecting-to-a-dms-using-arguments). Below you can find an overview of the different arguments, as well as some examples of how you can use these.
 
-- In the desktop app, from DataMiner 10.0.9 onwards, you can do so as detailed under [Connecting to a DMS using URL arguments](xref:Managing_the_start_window#connecting-to-a-dms-using-arguments)).
-
-- In the legacy browser app, you can pass these arguments by adding them to the URL.
-
-- To combine different options, use a space as separator in the desktop app, or "&" in the browser app.
+To combine different options, use a **space as separator** in the desktop app.
 
 > [!NOTE]
 >
-> - Prior to DataMiner 10.0.9, these arguments can only be passed along in the desktop app if you installed the application using an .msi file.
-> - From DataMiner 10.1.3 onwards, if the Cube desktop app is installed, you can also use the cube:// protocol to connect to a specific host. For example:
+> - In the legacy **browser app**, you can pass these arguments by adding them to the URL. To combine different arguments in the browser app, use an "&".
+> - From DataMiner 10.1.3 onwards, if the Cube desktop app is installed, you can also use the **cube:// protocol** to connect to a specific host. For example:
 >
 >   - cube://mydma?element=MyElement
 >   - cube://10.11.12.13?view=12
@@ -36,18 +32,11 @@ DataMinerCube.exe host=MyDMA view="My special view" element=MyElement
 DataMinerCube.exe host=MyOtherDMA view=View2 element=365 app=help
 ```
 
-Examples for the desktop application (prior to DataMiner 10.0.9, using a command line):
-
-```txt
-DataMinerCube.exe host=MyDMA view="My special view" element=MyElement
-DataMinerCube.exe host=MyOtherDMA view=View2 element=365 app=help
-```
-
 ## Overview of the arguments
 
 ### Opening a card on a particular page
 
-From DataMiner 9.6.3 onwards, if you use the *=element*, *=service* or *=view* option to open an element, service or view card at startup, you can have this card opened on a particular page.
+If you use the *=element*, *=service* or *=view* option to open an element, service or view card at startup, you can have this card opened on a particular page.
 
 To do so, add the following:
 
@@ -180,7 +169,7 @@ Example:
 
 This option allows you to view functionality that can be useful for debugging, but which is otherwise hidden in the UI.
 
-For example, from DataMiner 9.6.0/9.5.3 onwards, the GUID of service definitions is only shown in the Services app if you use the *debug=true* argument.
+For example, the GUID of service definitions is only shown in the Services app if you use the *debug=true* argument.
 
 ### dte_filtername=filtervalue
 

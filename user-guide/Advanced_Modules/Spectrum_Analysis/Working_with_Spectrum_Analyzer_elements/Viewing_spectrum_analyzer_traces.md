@@ -101,7 +101,7 @@ It is possible to manually freeze and unfreeze the trace. To do so:
 
 - To pan **vertically**, click the trace and drag your mouse while keeping Ctrl pressed.
 
-  ![Pan vertically](~/user-guide/images/SA_Pan_Vertically.gif)*Spectrum analyzer trace in DataMiner 10.4.1*
+  ![Pan vertically](~/user-guide/images/SA_Pan_Vertically.gif)<br/>*Spectrum analyzer trace in DataMiner 10.4.1*
 
   The following will happen:
 

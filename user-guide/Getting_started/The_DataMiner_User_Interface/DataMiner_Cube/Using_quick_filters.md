@@ -8,6 +8,7 @@ You will often find filter boxes in DataMiner Cube that you can use to filter th
 
 > [!TIP]
 > See also:
+>
 > - [Using the Alarm Console quick filter box](xref:ApplyingAlarmFiltersInTheAlarmConsole#using-the-alarm-console-quick-filter-box)
 > - [Rui’s Rapid Recap – Quick filters](https://community.dataminer.services/video/ruis-rapid-recap-quick-filters/) on DataMiner Dojo
 
@@ -56,15 +57,14 @@ You will often find filter boxes in DataMiner Cube that you can use to filter th
 
   - In this case, it is not possible to filter on column parameters of type *discreet*, *button* or *togglebutton*.
 
-  - Using negative filters with “!” is supported for page tables from DataMiner 9.5.4 onwards.
-
 > [!NOTE]
+>
 > - When you use the Alarm Console quick filter to filter the alarms shown in an alarm tab, the total number of alarms will still be displayed in the alarm bar, with the filtered number of alarms added in parentheses.
 > - In the Alarm Console quick filter, to search for exact matches in alarm properties, square brackets can be used. For example, if there are two alarms, one with property "bbc1", the other with property "bbc", using the search term "bbc" will return both alarms. However, using the search term "\[bbc\]" will only return the latter.
 
 ## Using filters in drop-down lists
 
-From DataMiner 9.5.4 onwards, in several places in DataMiner Cube, drop-down lists feature a filter box that can be used to find an item in the list more quickly.
+In several places in DataMiner Cube, drop-down lists feature a filter box that can be used to find an item in the list more quickly.
 
 Such drop-down list controls can for example be found in the element, service, redundancy group template and service template editor, as well as in the Automation, Correlation, Aggregation, Element Connections, Trending and Scheduler apps.
 

@@ -84,7 +84,7 @@ Its main purpose is for use within large projects where inter-element or inter-a
 ## Getting started
 
 > [!NOTE]
-> An example protocol "SLC SDF Inter App Calls" is available in the [Protocol Development Guide Companion Files](https://community.dataminer.services/documentation/protocol-development-guide-companion-files/).
+> An example protocol "Skyline Example InterAppCalls" is available in the [SkylineCommunications/SLC-C-Example_InterAppCalls](https://github.com/SkylineCommunications/SLC-C-Example_InterAppCalls) GitHub repository.
 
 Begin by checking and applying everything to meet the DataMiner, DIS, protocol and optional Automation script requirements.
 
@@ -469,7 +469,7 @@ To send a reply, make sure the message has the same GUID as the received message
 Message deleteReply = new DeleteLineupResult { Guid = Message.Guid, Success = true };
 ```
 
-Then you send the message to the ReturnAddress that was specified in the received message.
+Then you send the message to the `ReturnAddress` that was specified in the received message.
 
 ```csharp
 deleteReply.Send(
@@ -479,6 +479,18 @@ deleteReply.Send(
   receivedMessage.ReturnAddress.ParameterId,
   knownTypes);
 ```
+
+Alternatively, you can use the Reply method to simplify the number of input arguments needed to pass to the method, as it will use the `ReturnAddress` of the `receivedMessage` automatically.
+
+```csharp
+receivedMessage.Reply(
+  protocol.SLNet.RawConnection,
+  deleteReply,
+  knownTypes);
+```
+
+> [!IMPORTANT]
+> The InterApp call Reply method should only be used with version 1.0.0.3 or higher of the NuGet, as previous versions contain an issue.
 
 ## Tweaking the system
 

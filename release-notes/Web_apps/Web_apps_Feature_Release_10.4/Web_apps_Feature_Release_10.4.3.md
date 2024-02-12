@@ -40,16 +40,13 @@ When configuring a *Show a notification* action, the following properties should
 
 ### Enhancements
 
-#### Dashboards app & Low-Code Apps: Timeline component now supports real-time GQI query updates [ID_37372]
+#### Dashboards app & Low-Code Apps: Improved support for real-time GQI query updates in the timeline component [ID_37372]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
 
-The Timeline component now supports real-time GQI query updates.
+The timeline component can now display real-time updates for all GQI data sources and operators that support this, i.e. the *Get table parameter table by ID* and *Get view* GQI data sources, and the *Select* GQI operator. Data for such queries will be updated as soon as changes to the data are detected. To display these real-time updates, the *Update data* option of the component must be selected.
 
-If you want the Timeline component to automatically refresh the data when changes to that data are detected, enable the *Update data* option. By default, this option is disabled.
-
-> [!NOTE]
-> This feature will only work for queries using a data source that supports real-time updates.
+Previously, if this option was selected, data was only updated for the *Get table parameter table by ID* GQI data source, and this every 30 seconds.
 
 #### DataMiner Object Models: Enhanced performance of DomInstanceFieldDescriptor and DomInstanceValueFieldDescriptor in web forms [ID_37546]
 
@@ -115,6 +112,12 @@ Up to now, when an error occurred while creating a new dashboard, the items alre
 When you wanted to change the visualization of a component, up to now, the list of visualizations to choose from would only contain component-related visualizations. Data-related visualizations would not be shown.
 
 From now on, when you want to change the visualization of a component, the list of visualizations will contain data-related visualizations only.
+
+#### Web apps - Visual overview: Popup window would not display a hidden page when the visual overview only contained one non-hidden page [ID_38331]
+
+<!-- MR 10.2.0 [CU21] / 10.3.0 [CU12] / 10.4.0 [CU0] - - FR 10.4.3 [CU0] -->
+
+When, in a visual overview with one non-hidden page displayed in a web app, you tried to open a popup window linked to a page marked as "hidden", the popup window would incorrectly display the non-hidden page instead of the hidden page.
 
 #### Dashboards app & Low-Code Apps - GQI: Queries would be fetched twice [ID_38335]
 

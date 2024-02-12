@@ -4,7 +4,7 @@ uid: Adding_elements
 
 # Adding elements
 
-1. [Open DataMiner Cube](xref:Opening_the_desktop_app).
+1. [Open DataMiner Cube](xref:Using_the_desktop_app).
 
 1. Right-click in the Surveyor, and select *New \> Element*.
 

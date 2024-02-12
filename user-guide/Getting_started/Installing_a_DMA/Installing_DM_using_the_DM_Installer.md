@@ -4,9 +4,6 @@ uid: Installing_DM_using_the_DM_installer
 
 # Installing DataMiner using the DataMiner Installer
 
-> [!TIP]
-> Not familiar with DataMiner? See [Basic concepts](xref:BasicConcepts).
-
 The DataMiner installer allows you to run a default DataMiner installation, which includes a Cassandra database on the C drive, or to run a custom installation.
 
 > [!NOTE]
