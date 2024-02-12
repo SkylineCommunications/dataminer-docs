@@ -374,6 +374,8 @@ items:
         topicUid: Standalone_Elasticsearch_Cluster_Installer
       - name: Sync Check
         topicUid: Sync_Check
+      - name: Verify .NET Version
+        topicUid: Verify_ASP_Net_Version
       - name: Verify Cluster Events Tool
         topicUid: Verify_Cluster_Events_Tool
       - name: VerifyClusterPorts.dmupgrade
