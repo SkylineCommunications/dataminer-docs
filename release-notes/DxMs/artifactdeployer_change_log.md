@@ -87,7 +87,7 @@ The proxy settings are configured in a single settings file that is reused for a
 
 When you have configured the file, you will need to restart the CloudFeed, CloudGateway, and ArtifactDeployer services for the changes to take effect.
 
-#### 27 May 2022 - ArtifactDeployer v1.3.0 - Enhancements to support CI/CD deployment [ID_33534]
+#### 27 May 2022 - ArtifactDeployer 1.3.0 - Enhancements to support CI/CD deployment [ID_33534]
 
 This version contains enhancements to support the CI/CD deployment feature.
 

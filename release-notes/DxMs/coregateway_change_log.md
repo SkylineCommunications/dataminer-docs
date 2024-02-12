@@ -87,6 +87,6 @@ When a DMA was offline (e.g. stopped, upgrading, restarting, or offline in a Fai
 
 With CoreGateway 2.11.4 (included in Cloud Pack version 2.8.2), this will no longer occur.
 
-#### 27 May 2022 - CoreGateway v2.8.0 - Enhancements to support CI/CD deployment [ID_33533]
+#### 27 May 2022 - CoreGateway 2.8.0 - Enhancements to support CI/CD deployment [ID_33533]
 
 This version contains enhancements to support the CI/CD deployment feature.

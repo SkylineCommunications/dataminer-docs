@@ -109,7 +109,9 @@ If proxy settings were configured in the *appsettings.proxy.json* file, previous
 
 This fix is included in Cloud Pack 2.8.4.
 
-#### 8 December 2022 - New feature - CloudGateway 2.10.0 / SupportAssistant 1.1.0 - Remote Log Collection [ID_34681] [ID_34875] [ID_34928] [ID_34934] [ID_34954] [ID_34992]
+#### 8 December 2022 - New feature - CloudGateway 2.10.0 - Remote Log Collection [ID_34681] [ID_34875] [ID_34928] [ID_34934] [ID_34954] [ID_34992]
+
+This feature also requires SupportAssistant 1.1.0 or higher.
 
 A new DataMiner Cloud Pack 2.8.2 has been released, which enables the [Remote Log Collection](xref:RemoteLogCollection) feature. The DataMiner Cloud Pack can be found on [DataMiner Dojo](https://community.dataminer.services/downloads/).
 
