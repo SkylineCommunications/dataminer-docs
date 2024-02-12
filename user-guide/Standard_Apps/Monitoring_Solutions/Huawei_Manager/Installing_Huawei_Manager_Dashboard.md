@@ -27,7 +27,7 @@ uid: Installing_Huawei_Manager_Dashboard
 
 1. Deploy the *Huawei Manager* package:
 
-   1. Go to <https://catalog.dataminer.services/catalog/5322>.
+   1. Go to <https://catalog.dataminer.services/details/package/5322>.
 
    1. Click the *Deploy* button.
 
