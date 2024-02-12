@@ -16,7 +16,7 @@ uid: Accessing_the_Admin_app
 
 1. Find your DMS in the list and click the *Admin* button. 
 
-![Remote Cube in the home app](~/user-guide/images/RemoteCubeHomeApp.png)
+![DMS in the home app](~/user-guide/images/CcaHomeApp.png)
 
 ## DataMiner Cube
 
