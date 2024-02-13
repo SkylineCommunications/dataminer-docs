@@ -9,6 +9,10 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 13 February 2024 - Fix - Catalog versions displayed in wrong order [ID_38762]
+
+The versions of a catalog record will now be sorted correctly.
+
 #### 6 February 2024 - New feature - Chat Integration with Microsoft Teams now includes sending buttons in notifications using Adaptive Cards [ID_38701]
 
 It is now possible to send buttons in notifications using Adaptive Cards to chats or channels with Chat Integration.
