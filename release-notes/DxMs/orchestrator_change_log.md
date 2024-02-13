@@ -16,6 +16,10 @@ The Orchestrator DxM will now periodically send a health check to the cloud to i
 
 The Orchestrator DxM will now periodically send a health check to the cloud to indicate that the DxM is running.
 
+#### 8 November 2023 - Enhancement - Orchestrator 1.4.1 [ID_37785]
+
+Several dependencies have been updated.
+
 #### 8 November 2023 - Enhancement - Orchestrator 1.4.1 - Improved logging [ID_37175]
 
 Logging for the Orchestrator DxM has been improved. In several cases, the log level has been adjusted to improve visibility of important logs.

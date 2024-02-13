@@ -24,7 +24,7 @@ The SupportAssistant DxM will now periodically send a health check to the cloud 
 
 When SupportAssistant 1.5.2 or older was installed, a memory and disk space leak could occur for systems that were not connected to dataminer.services or for systems with an invalid dataminer.services connection configuration or setup. This has now been resolved.
 
-#### 8 November 2023 - Enhancement - SupportAssistant 1.5.2 [ID_37785]
+#### 8 November 2023 - Enhancement - SupportAssistant 1.5.2 [ID_37797]
 
 Several dependencies have been updated.
 
