@@ -39,7 +39,7 @@ The tutorial consists of the following steps:
 
 ## Step 1: Install the example package from the catalog
 
-1. Go to <https://catalog.dataminer.services/catalog/5467>.
+1. Go to <https://catalog.dataminer.services/details/package/5467>.
 
 1. Deploy the catalog item to your DataMiner Agent by clicking the *Deploy* button.
 

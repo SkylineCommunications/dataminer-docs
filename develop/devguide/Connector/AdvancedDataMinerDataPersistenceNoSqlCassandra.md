@@ -610,15 +610,15 @@ This table is defined as follows:
 
 The DataMiner Analytics features store and maintain model data and extracted insights data in the following tables:
 
-- [analytics_alarmfocus](#analytics_alarmfocus)
+- [ai_alarmfocus](#ai_alarmfocus) (or *analytics_alarmfocus* prior to DataMiner 10.4.0/10.4.3<!-- RN 38184 -->)
 - [analytics_arrowwindows](#analytics_arrowwindows)
 - [analytics_changepoints](#analytics_changepoints)
-- [ai_cpalarms](#ai_cpalarms) (or *analytics_changepointalarmentries* prior to DataMiner 10.3.0 [CU5]/10.3.8)
-- [analytics_parameterinfo](#analytics_parameterinfo)
+- [ai_cpalarms](#ai_cpalarms) (or *analytics_changepointalarmentries* prior to DataMiner 10.3.0 [CU5]/10.3.8<!-- RN 36503 -->)
+- [analytics_parameterinfo_v1](#analytics_parameterinfo_v1)
 - [analytics_trendalarms](#analytics_trendalarms)
 - [analytics_wavestream](#analytics_wavestream)
 
-#### analytics_alarmfocus
+#### ai_alarmfocus
 
 This table stores one model for [alarm focus](xref:ApplyingAlarmFiltersInTheAlarmConsole#filtering-alarms-on-alarm-focus) for each monitored parameter or monitored table cell that has had an alarm in the past two weeks. The amount of data in the table should be more or less stable after two weeks.
 
@@ -630,7 +630,7 @@ The table is defined as follows:
 |ei|int|Yes (Partitioning)|Element ID|
 |pi|int|Yes (Clustering)|Parameter ID|
 |i|text|Yes (Clustering)|Primary key for table parameter|
-|dn|text|No|Display key for table parameter|
+|dn|text|No|Display key for table parameter (removed as of DataMiner 10.4.0/10.4.3<!-- RN 38184 -->)|
 |fd|test|No|Model|
 
 #### analytics_arrowwindows
@@ -673,7 +673,7 @@ The analytics_changepoints table is defined as follows:
 |id|int|Yes (Clustering)|Change point ID|
 |a|boolean|No|Anomalous|
 |as|int|No|Alarm severity ID|
-|dn|text|No|Display key for table parameter|
+|dn|text|No|Display key for table parameter (removed as of DataMiner 10.4.4/10.5.0<!-- RN 38484 -->)|
 |et|timestamp|No|End change point time range|
 |ev|double|No|Change point end value|
 |ht|int|No|Change point type ID|
@@ -699,12 +699,12 @@ This table is defined as follows:
 |a|big int|No|Alarm ID|
 |cr|int|No|State|
 |ct|timestamp|No|Creation time|
-|dn|text|No|Display key for table parameter|
+|dn|text|No|Display key for table parameter (removed as of DataMiner 10.4.4/10.5.0<!-- RN 38484 -->)|
 |hs|boolean|No|History set yes/no|
 |lu|timestamp|No|Change point timestamp|
 |r|big int|No|Root alarm ID|
 
-#### analytics_parameterinfo
+#### analytics_parameterinfo_v1
 
 This table contains data for each trended parameter that is tracked by one of the proactive advanced analytics features: trend icons, [behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection), [proactive cap detection](xref:Proactive_cap_detection) and [monitoring of trend patterns](xref:Monitoring_of_trend_patterns). This data is required for the real-time updating of the model information stored in the other analytics tables upon incoming new data values.
 
@@ -718,7 +718,7 @@ This table is defined as follows:
 |i|text|Yes (Clustering)|Primary key for table parameter|
 |cr|int|No|Change rate model|
 |ct|timestamp|No|Model timestamp|
-|dn|text|No|Display key for table parameter|
+|dn|text|No|Display key for table parameter (removed as of DataMiner 10.4.4/10.5.0<!-- RN 38484 -->)|
 |it|boolean|No|Missing data|
 |lt|timestamp|No|Timestamp of last processed parameter value|
 |lv|double|No|Last processed parameter value|
@@ -738,7 +738,7 @@ This table is defined as follows:
 |i|text|Yes (Clustering)|Primary key for table parameter|
 |cs|timestamp|No|Start of confidence interval|
 |ce|timestamp|No|End of confidence interval|
-|dn|text|No|Display key for table parameter|
+|dn|text|No|Display key for table parameter (removed as of 10.4.4/10.5.0<!-- RN 38484 -->)|
 |r|big int|No|Root alarm ID|
 |s|int|No|Severity ID|
 |t|timestamp|No|Timestamp|
@@ -759,7 +759,7 @@ This table is defined as follows:
 |l|int|Yes (Clustering)|Modeling level (value between 0 and 10)|
 |am|text|No|Behavioral anomaly detection model|
 |aw|list of double|No|Model data|
-|dn|text|No|Display key for table parameter|
+|dn|text|No|Display key for table parameter (removed as of 10.4.4/10.5.0<!-- RN 38484 -->)|
 |f|boolean|No|Model data|
 |m|text|No|Behavioral anomaly detection model|
 |s|text|No|Proactive cap detection model|

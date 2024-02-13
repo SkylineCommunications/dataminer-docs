@@ -138,24 +138,25 @@ The GQI queries themselves should be configured in separate JSON files. See [Con
    { 
        "DataSources": [
        {
-         "Id": "c93178b7-537e-47ab-9786-f052694b6380", // The GUID of the GQI query.
-         "Name": "Query 1", //A human-readable description for the query. This can be null.
-         "Type": 0, // GQI queries require value 0.
-         "LastUpdated": null, // Put null. 
-         "Arguments": {} // Reserved, supply an empty object. 
+         "Id": "a86aa3ec-3607-4a34-89a0-3289d069d019",
+         "Name": "Query 1",
+         "Type": 0,
+         "LastUpdated": "2024-02-11T23:50:31.0277984Z",
+         "Arguments": {}
        },
        {
-         "Id": "a86aa3ec-3607-4a34-89a0-3289d069d019",
-         "Name": null,
-         "Type": 0,
-         "LastUpdated": null, 
-         "Arguments": {}
+         "Id": "c93178b7-537e-47ab-9786-f052694b6380", // The GUID of the GQI query.
+         "Name": "My New Query", //A human-readable description for the query.
+         "Type": 0, // GQI queries require value 0.
        }
        ]
    }
    ```
+   
+   > [!IMPORTANT]
+   > Do **NOT** configure the `LastUpdated` or the `Arguments` fields as these are managed by DataMiner DataAggregator itself.
 
-After modifying *Helper.json*, restart the DataMiner DataAggregator service (e.g. using Windows Task Manager).
+1. After modifying *Helper.json*, restart the DataMiner DataAggregator service (e.g. using Windows Task Manager).
 
 ### [Prior to Data Aggregator 3.0.0](#tab/tabid-2)
 
