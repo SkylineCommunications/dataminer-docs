@@ -6,18 +6,27 @@ uid: Accessing_the_Admin_app
 
 ## Direct URL
 
+The simplest way to access the app is by browsing directly to the app URL:
+
 1. Go to <https://admin.dataminer.services>.
 
 1. Log in as detailed under [Logging on](xref:Logging_on_to_the_DataMiner_Cloud_Platform#logging-on).
 
-## dataminer.services
+## Via dataminer.services
+
+You can also go to the app via dataminer.services:
 
 1. Go to [dataminer.services](https://dataminer.services)
 
-1. Find your DMS in the list and click the *Admin* button. 
+1. Find the DMS in the list and click the *Admin* icon.
 
 ![DMS in the home app](~/user-guide/images/CcaHomeApp.png)
 
-## DataMiner Cube
+> [!NOTE]
+> If you cannot find your DMS in the list, make sure the correct organization is selected in the top-right corner.
 
-From DataMiner 10.2.9/10.3.0 onwards, you can navigate directly to the Admin app from DataMiner Cube by selecting *Cloud Admin* in the *Apps* pane.
+## Via DataMiner Cube
+
+From DataMiner 10.2.9/10.3.0 onwards, you can open the Admin app from DataMiner Cube:
+
+- In the Cube sidebar, go to *Apps* > *Cloud Admin*.
