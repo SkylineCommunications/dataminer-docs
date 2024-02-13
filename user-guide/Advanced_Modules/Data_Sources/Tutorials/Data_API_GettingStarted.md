@@ -6,12 +6,11 @@ uid: Data_Sources_Tutorials_GettingStarted
 
 This tutorial will teach you how to create your first scripted connector with Python.
 
-For the tutorial we will be using an example where we will connect to Amsterdam Internet Exchange (AMS) and collect traffic data from some of its available locations.
-It will allow us to have real and changing data to better understand how the Data Sources module works.
+Using example code, you will create a scripted connector that connects to the Amsterdam Internet Exchange (AMS) and collects traffic data from some of its available locations. This will give you real-life data illustrating how the Data Sources module works.
 
 The content and screenshots for this tutorial were created in DataMiner version 10.4.2.
 
-Expected duration: 15 minutes
+Expected duration: 15 minutes.
 
 ## Prerequisites
 
@@ -59,15 +58,14 @@ Navigate to <https://admin.dataminer.services/> and deploy the latest version of
 
    ![Final DataSource](~/user-guide/images/Data_Sources_Tutorials_GettingStarted_5.png)
 
-The scripted connector you just created will now be automatically configured to run every minute.
-It will collect traffic data and send it into DataMiner via Data API.
+The scripted connector you have just created will now be automatically configured to run every minute. It will collect traffic data and send it to DataMiner via the Data API.
 
-Upon first execution it will also create an element with the name of `ams-ix.net`.
+When the scripted connector is first executed, an element named `ams-ix.net` will automatically be created.
 
 ## Step 3: View your data source
 
-1. [Open DataMiner Cube](xref:Using_the_desktop_app) and locate your newly created element in the Surveyor.
+1. [Open DataMiner Cube](xref:Using_the_desktop_app) and locate the newly created element in the Surveyor.
 
-1. Verify that your newly created element is being populated with data.
+1. Verify that the element is being populated with data.
 
    ![New Element](~/user-guide/images/Data_Sources_Tutorials_GettingStarted_6.png)
