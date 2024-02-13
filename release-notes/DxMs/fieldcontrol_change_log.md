@@ -12,7 +12,7 @@ The FieldControl DxM will now periodically send a health check to the cloud to i
 
 The FieldControl DxM will now periodically send a health check to the cloud to indicate that the DxM is running.
 
-#### 8 November 2023 - Enhancement - FieldControl 2.9.1 [ID_37800] 
+#### 8 November 2023 - Enhancement - FieldControl 2.9.1 [ID_37800]
 
 Several dependencies have been updated.
 

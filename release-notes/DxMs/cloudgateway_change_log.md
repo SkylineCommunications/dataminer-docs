@@ -20,7 +20,7 @@ The CloudGateway DxM will now periodically send a health check to the cloud to i
 
 The CloudGateway DxM will now periodically send a health check to the cloud to indicate that the DxM is running.
 
-#### 8 November 2023 - Enhancement - CloudGateway 2.12.4 - Dependencies updated [ID_37798] 
+#### 8 November 2023 - Enhancement - CloudGateway 2.12.4 - Dependencies updated [ID_37798]
 
 Several dependencies have been updated.
 
@@ -63,7 +63,7 @@ In some rare cases, it could occur that when DataMiner CloudGateway encountered 
 
 #### 5 May 2023 - Fix - CloudGateway 2.10.10 - Null reference exception breaking the cloud connection [ID_36346]
 
-An issue was introduced in CloudGateway 2.10.8 that could cause the cloud connection to break. This issue has now been resolved. When the issue occurred, the CloudGateway log file periodically contained the following exception: 
+An issue was introduced in CloudGateway 2.10.8 that could cause the cloud connection to break. This issue has now been resolved. When the issue occurred, the CloudGateway log file periodically contained the following exception:
 
 ```txt
 Unable to connect to the TunnelService[SLCcaGatewayService.Services.TunnelService.TunnelConnection.Impl.TunnelConnection]
@@ -76,8 +76,7 @@ The ConnectionTester tool, which is included in the CloudGateway installation, h
 
 #### 26 April 2023 - Enhancement/fix -  CloudGateway 2.10.8 - General improvements [ID_36014] [ID_36259]
 
-Changes have been implemented in DataMiner CloudGateway to make the service ignore requests when it is unable to access dataminer.services. This way, another CloudGateway service that does have access can pick them up and handle
- them successfully. This is most commonly needed when the CloudGateway is installed on a firewalled or offline server by accident. Previously, this could lead to seemingly random errors, for example when creating or renewing your cloud connection in Cube, or when creating or managing shares from the Dashboards app.
+Changes have been implemented in DataMiner CloudGateway to make the service ignore requests when it is unable to access dataminer.services. This way, another CloudGateway service that does have access can pick them up and handle them successfully. This is most commonly needed when the CloudGateway is installed on a firewalled or offline server by accident. Previously, this could lead to seemingly random errors, for example when creating or renewing your cloud connection in Cube, or when creating or managing shares from the Dashboards app.
 
 An issue has also been resolved where CloudGateway did not sync the DMA online state with dataminer.services, causing features like sharing or remote access to stop working until the CloudGateway or DMA was restarted or the secure cloud connection was dropped and reestablished.
 
@@ -150,8 +149,7 @@ With CoreGateway 2.11.4 and CloudGateway 2.9.4 (included in Cloud Pack version 2
 
 The CoreGateway DxM must now be installed on the same DMA as CloudGateway to ensure that sharing and remote access will work correctly. For DMZ setups, the DMA that CloudGateway points to will need to have the CoreGateway DxM installed.
 
-
-#### 18 July 2022 - New feature - CloudGateway 2.7.0 - Proxy support [ID_33961] 
+#### 18 July 2022 - New feature - CloudGateway 2.7.0 - Proxy support [ID_33961]
 
 Proxy support has been added for DataMiner CloudGateway. When you configure this, all outgoing traffic towards the public internet will pass through the proxy server.
 

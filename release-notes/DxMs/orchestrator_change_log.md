@@ -48,7 +48,6 @@ This enhancement is included in Cloud Pack version 2.8.2.
 
 In some cases, it could occur that the DataMiner Orchestrator got stuck while it was installing a DxM, and it became unable to handle updates. This made it impossible to deploy any more DxMs via the Admin app.
 
-
 #### 7 June 2022 - Fix - Orchestrator 1.2.3 - Orchestrator DxM update incorrectly displayed as failed [ID_33685]
 
 The Orchestrator DxM has been updated to version 1.2.3. When the Orchestrator DxM was updated via the Admin app, it could occur that this was displayed as a failed deployment even though it actually succeeded. This will now be prevented.

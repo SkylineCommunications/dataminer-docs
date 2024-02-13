@@ -22,7 +22,7 @@ The ArtifactDeployer DxM will now periodically send a health check to the cloud 
 
 #### 8 November 2023 - Fix - ArtifactDeployer 1.5.2 - Issue where a timeout error was logged in ArtifactDeployer [ID_37784]
 
-When Orchestrator 1.4.0 and/or ArtifactDeployer 1.5.1 or older were used, in some specific cases, the ArtifactDeployer DxM logged a timeout exception when the Orchestrator DxM encountered an error. This has now been resolved.   
+When Orchestrator 1.4.0 and/or ArtifactDeployer 1.5.1 or older were used, in some specific cases, the ArtifactDeployer DxM logged a timeout exception when the Orchestrator DxM encountered an error. This has now been resolved.
 
 #### 8 November 2023 - Fix - ArtifactDeployer 1.5.2 - Deployment issues with ArtifactDeployer 1.5.1 in clusters [ID_37785]
 
@@ -69,7 +69,6 @@ Because of an issue in the proxy configuration of DataMiner ArtifactDeployer 1.4
 
 This enhancement is included in Cloud Pack version 2.8.2.
 
-
 #### 18 July 2022 - New feature - ArtifactDeployer 1.4.0 - Proxy support [ID_33972]
 
 Proxy support has been added for DataMiner ArtifactDeployer. When you configure this, all outgoing traffic towards the public internet will pass through the proxy server.
@@ -90,4 +89,3 @@ When you have configured the file, you will need to restart the CloudFeed, Cloud
 #### 27 May 2022 - ArtifactDeployer 1.3.0 - Enhancements to support CI/CD deployment [ID_33534]
 
 This version contains enhancements to support the CI/CD deployment feature.
-

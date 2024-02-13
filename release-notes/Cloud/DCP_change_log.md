@@ -78,8 +78,7 @@ You can manually delete a DaaS system from dataminer.services, just like any oth
 
 #### 21 November 2023 - New feature - Remote access using DataMiner Cube [ID_37841]
 
-It is now possible to connect to a DataMiner System via remote access using DataMiner Cube. If remote access is enabled for a DMS and you have been granted access to dataminer.services features, you can access the DMS remotely v
-ia Cube using the same URL as for remote access to the web pages, but without the protocol prefix `https://`. A button is also available on dataminer.services and in the Admin app that can be used to open Cube with the correct remote access filled in as the host.
+It is now possible to connect to a DataMiner System via remote access using DataMiner Cube. If remote access is enabled for a DMS and you have been granted access to dataminer.services features, you can access the DMS remotely via Cube using the same URL as for remote access to the web pages, but without the protocol prefix `https://`. A button is also available on dataminer.services and in the Admin app that can be used to open Cube with the correct remote access filled in as the host.
 
 > [!NOTE]
 > At present, there is still a limitation to this feature: if the DMS has SAML authentication configured, users will not be able to access the DMS remotely with Cube.
@@ -97,8 +96,7 @@ Performance has improved when node and DxM information is retrieved on the *Node
 
 #### 22 August 2023 - Enhancement - Admin app - Audit Record Export (CSV) [ID_37164]
 
-In the [Admin app](https://admin.dataminer.services), a new feature has been introduced on the *Audit* page, allowing users to export audit records in a CSV file. Clicking *Export* in the top-left corner will initiate the export
- process. A pop-up window will appear, where you can choose the separator to be used in the CSV file, as well as whether to include column titles at the top of the exported CSV file. Once the file has been generated, you will receive an email containing a link to download the CSV file. The download link included in the email will be valid for a period of 7 days.
+In the [Admin app](https://admin.dataminer.services), a new feature has been introduced on the *Audit* page, allowing users to export audit records in a CSV file. Clicking *Export* in the top-left corner will initiate the export process. A pop-up window will appear, where you can choose the separator to be used in the CSV file, as well as whether to include column titles at the top of the exported CSV file. Once the file has been generated, you will receive an email containing a link to download the CSV file. The download link included in the email will be valid for a period of 7 days.
 
 #### 3 July 2023 - Fix - Admin app - Organization user overview will display all DMSs of each user correctly [ID_36795]
 
@@ -327,9 +325,8 @@ When the verification has been successful, this will be indicated on this same p
 
 #### 23 Feb. 2022 - New feature - Removing a share [ID_32695]
 
-In the *Sharing* module, you can now remove a share. When you do so, you indicate that you no longer wish to have access to the shared item. The item will no longer be available to you, unless it is shared with you again.       
+In the *Sharing* module, you can now remove a share. When you do so, you indicate that you no longer wish to have access to the shared item. The item will no longer be available to you, unless it is shared with you again.
 
 #### 12 Jan. 2022 - New feature - Support for app package deployment [ID_32210]
 
 Support has been added for the deployment of app packages to a specific DMS connected to dataminer.services. However, note that the UI to deploy app packages is not yet available at this point.
-

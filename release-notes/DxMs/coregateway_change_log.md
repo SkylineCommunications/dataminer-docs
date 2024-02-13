@@ -52,7 +52,6 @@ When a user deployed a package on a DataMiner Agent using dataminer.services, an
 Exception encountered during installation: (Code: 0x800402EB) Skyline.DataMiner.Net.Exceptions.DataMinerSecurityException: No such remote connection (e839324188).
 ```
 
-
 #### 10 January 2023 - Fix - DataMiner CoreGateway 2.12.0 - Problem with CoreGateway after server restart [ID_34961]
 
 After a server restart, a startup race condition could cause issues in the CoreGateway, which could for example cause the DataMiner Teams bot to be unresponsive. The NATS Message Broker dependency has been updated to prevent this issue.
@@ -71,7 +70,6 @@ When a connector was deployed via dataminer.services, the corresponding informat
 
 With CoreGateway 2.11.5 (included in Cloud Pack version 2.8.2), the information event will have the correct format `New Client Registered - <UserName> @ <ComputerName> with DataMiner Cloud Platform`.
 
-
 #### 1 September 2022 - Fix - CoreGateway 2.11.4 - Login screen shown when not necessary while viewing share or using remote access [ID_34275]
 
 When the DataMiner Cloud Pack was installed in a cluster with two or more DMAs, it could occur that users trying to view a shared dashboard or remotely access a DMS could be shown the login screen when this was not supposed to happen.
@@ -80,10 +78,9 @@ With CoreGateway 2.11.4 and CloudGateway 2.9.4 (included in Cloud Pack version 2
 
 The CoreGateway DxM must now be installed on the same DMA as CloudGateway to ensure that sharing and remote access will work correctly. For DMZ setups, the DMA that CloudGateway points to will need to have the CoreGateway DxM installed.
 
-
 #### 1 September 2022 - Fix - CoreGateway 2.11.4 - CoreGateway of offline DMA tried to respond to requests from dataminer.services [ID_33973]
 
-When a DMA was offline (e.g. stopped, upgrading, restarting, or offline in a Failover pair), it could occur that the DataMiner CoreGateway tried to respond to requests from dataminer.services, while this should not happen.      
+When a DMA was offline (e.g. stopped, upgrading, restarting, or offline in a Failover pair), it could occur that the DataMiner CoreGateway tried to respond to requests from dataminer.services, while this should not happen.
 
 With CoreGateway 2.11.4 (included in Cloud Pack version 2.8.2), this will no longer occur.
 
