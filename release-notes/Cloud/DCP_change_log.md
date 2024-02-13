@@ -9,7 +9,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-#### 13 February 2024 - Fix - Catalog will show versions sorted in descending order [ID_38762]
+#### 13 February 2024 - Fix - Catalog versions displayed in wrong order [ID_38762]
 
 The version overview for a catalog record will show versions now sorted based on their version number instead of the order they were stored.
 
