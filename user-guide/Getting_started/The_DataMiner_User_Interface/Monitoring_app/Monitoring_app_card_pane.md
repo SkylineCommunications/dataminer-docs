@@ -31,18 +31,18 @@ The following card types are available:
 
 ## Zooming and panning
 
-From DataMiner 10.3.0 [CU12]/10.4.3 onwards<!--RN 38395-->, zooming and panning functionalities are available for visual overview pages. These pages feature Visio-based visual overviews of views and are available for view cards, service cards, and element cards.
+From DataMiner 10.3.0 [CU12]/10.4.3 onwards<!--RN 38395-->, zooming and panning functionalities are available for visual overview pages. These pages feature Visio-based visual overviews and are available for view cards, service cards, and element cards.
 
 - To zoom in, scroll up.
 
 - To zoom out, scroll down.
 
-- To move left or right across the visual overview, click the card and drag your mouse.
+- To move left or right across a visual overview, click the card and drag your mouse.
 
 If the app is used on a mobile device:
 
-- To zoom in, place your thumb and index finger tips together on the screen and move them apart.
+- To zoom in, place two fingers close together on the screen and move them apart.
 
-- To zoom out, use a pinching motion, starting with your fingers apart and bringing them together.
+- To zoom out, place two fingers stretched apart on the screen and bring them together.
 
-- To move left or right across the visual overview, slide one finger across the screen.
+- To move left or right across a visual overview, slide a finger across the screen.
