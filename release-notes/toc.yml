@@ -40,7 +40,6 @@ items:
             topicUid: PTP_1.1.3
             href: PTP/toc.yml
           - name: SRM release notes
-            topicUid: SRM_10.3.0.3
             href: SRM/toc.yml
       - name: Breaking changes
         topicUid: Breaking_changes
