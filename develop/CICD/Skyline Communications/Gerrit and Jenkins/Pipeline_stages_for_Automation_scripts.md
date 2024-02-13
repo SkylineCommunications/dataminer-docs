@@ -186,4 +186,12 @@ The report also contains an overall quality score, which is calculated using the
 
 - Number of Major Issue reported by SonarQube
 
-![Overall quality score calculation](~/develop/images/PipelineEquation2.png)
+$$ overallQualityScore = 100 - \left(60a + 30b + 10c\right) $$
+
+, where,
+
+$$ a = {sonarQubeBlockerIssueCount \over { 1 + sonarQubeBlockerIssueCount}} $$,
+
+$$ b = {sonarQubeCriticalIssueCount \over { 1 + sonarQubeCriticalIssueCount}} $$,
+
+$$ c = {sonarQubeMajorIssueCount \over { 1 + sonarQubeMajorIssueCount}} $$

@@ -434,8 +434,6 @@ The report also contains an overall quality score, which is calculated using the
 
 - Number of Major Issue reported by SonarQube
 
-![Overall quality score calculation](~/develop/images/PipelineEquation.png)
-
 $$ overallQualityScore = 100 - \left(40a + 20b + 10c + 15d + 10e + 5f\right) $$
 
 , where,
@@ -446,8 +444,8 @@ $$ b = {validatorMajorIssueCount \over { 1 + validatorMajorIssueCount}} $$,
 
 $$ c = {validatorMinorIssueCount \over { 1 + validatorMinorIssueCount}} $$,
 
-$$ d = {sqBlockerIssueCount \over { 1 + sqBlockerIssueCount}} $$,
+$$ d = {sonarQubeBlockerIssueCount \over { 1 + sonarQubeBlockerIssueCount}} $$,
 
-$$ e = {sqCriticalIssueCount \over { 1 + sqCriticalIssueCount}} $$,
+$$ e = {sonarQubeCriticalIssueCount \over { 1 + sonarQubeCriticalIssueCount}} $$,
 
-$$ f = {sqMajorIssueCount \over { 1 + sqMajorIssueCount}} $$
+$$ f = {sonarQubeMajorIssueCount \over { 1 + sonarQubeMajorIssueCount}} $$
