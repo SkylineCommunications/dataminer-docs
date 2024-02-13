@@ -38,13 +38,6 @@ Microsoft .NET Framework 4.6.2
 > [!NOTE]
 > When you connect to DataMiner using HTTPS, TLS 1.0 is required to install Cube. It is also possible to use TLS 1.1 or TLS 1.2, but in that case Microsoft .NET Framework 4.6.2 is required.
 
-### Microsoft ASP.NET
-
-From DataMiner 10.3.0 [CU12]/10.4.0/10.4.3 onwards<!--RN 37969-->, the [Microsoft ASP.NET 8.0 Hosting Bundle](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-8.0.1-windows-hosting-bundle-installer) is required to ensure access to all requisite security updates.
-
-> [!NOTE]
-> From DataMiner 10.3.0 [CU12]/10.4.0/10.4.3 onwards, the [*VerifyDotNetVersion* prerequisite](xref:Verify_ASP_Net_Version) is run during the upload phase of a DataMiner upgrade.
-
 ### Skyline certificates
 
 To install the Skyline certificates:
