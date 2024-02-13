@@ -31,7 +31,7 @@ The following card types are available:
 
 ## Zooming and panning
 
-From DataMiner 10.3.0 [CU12]/10.4.3 onwards<!--RN 38395-->, zooming and panning functionalities are available for visual overview pages. These pages feature Visio-based visual overview of views, available for view cards, service cards, and element cards.
+From DataMiner 10.3.0 [CU12]/10.4.3 onwards<!--RN 38395-->, zooming and panning functionalities are available for visual overview pages. These pages feature Visio-based visual overviews of views and are available for view cards, service cards, and element cards.
 
 - To zoom in, scroll up.
 
