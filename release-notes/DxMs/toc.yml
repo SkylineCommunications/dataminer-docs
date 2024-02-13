@@ -12,6 +12,8 @@ items:
     topicUid: artifactdeployer_change_log
   - name: Cloud Feed release notes
     topicUid: cloudfeed_change_log
+  - name: Cloud Gateway release notes
+    topicUid: cloudgateway_change_log
   - name: Core Gateway release notes
     topicUid: coregateway_change_log
   - name: Field Control release notes
