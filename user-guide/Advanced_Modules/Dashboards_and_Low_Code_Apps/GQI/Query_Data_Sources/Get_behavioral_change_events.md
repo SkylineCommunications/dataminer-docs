@@ -12,15 +12,15 @@ By default, the data contains the following columns:
 - **Anomalous**: whether the change point was marked as an anomaly.
 - **Change type**: the type of change point that was detected.
 - **Increase**: whether the detected change point represents an increase (e.g. a level shift up) or a decrease (e.g. a level shift down).
-- **Start time**: the time at which the change began.
-- **End time**: the time at which the change ended.
+- **Start time**: the detected start time of the change point.
+- **End time**: the detected end time of the change point.
 
 The following columns are also available after a *Select* operation:
 
 - **Element ID**: the ID of the element on which the change point was detected.
 - **Change Point ID**: the ID of the change point.
-- **Start value**: the parameter value at the start of the change point.
-- **End value**: the parameter value at the end of the change point.
+- **Start value**: the parameter value at the start of the change point for *level shifts* and *outliers*, the slope (resp. variance) at the start of the change point for *trend changes* (resp. *variance changes*).
+- **End value**: the parameter value at the end of the change point for *level shifts* and *outliers*, the slope (resp. variance) at the end of the change point for *trend changes* (resp. *variance changes*).
 - **Significance**: a number indicating how significant the change point is relative to the historically detected change points.
 - **Severity**: a number indicating the severity of the change point relative to the historical trend data.
 - **Creation time**: when the change point was first detected.
