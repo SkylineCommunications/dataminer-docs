@@ -49,24 +49,26 @@ If the repository is private, the name should look like this (using "-" as separ
 
 - The following **item types** are currently supported (this list is to be extended):
 
-  - AS (Automation Scripts, note specific type of Automation scripts, such as GQI data source, User definable API, Regression Tests, etc, have their own syntax)
-  - C (Connectors)
-  - CF (Companion Files)
-  - CHATOPS (ChatOps extension)
-  - D (Dashboards)
-  - DISMACRO (DIS Macro)
-  - DOC (Documentation)
-  - F (Functions)
-  - GQIDS (GQI data source)
-  - GQIO (GQI operator)
-  - LSO (Life cycle Service Orchestration)
-  - PA (Process Automation)
-  - PLS (Profile-Load Scripts)
-  - S (Solutions)
-  - SC (Scripted Connector)
-  - T (Tests: Regression Tests, Integration Tests, Performance Tests, etc)
-  - UDAPI (User-Defined APIs)
-  - V (Visio files)
+  | Syntax | Description |
+  |--|--|
+  | AS | Automation Scripts. Note that specific types of Automation scripts, such as GQI data sources, user-definable APIs, regression tests, etc., have their own syntax. |
+  | C | Connectors |
+  | CF | Companion Files |
+  | CHATOPS | ChatOps extension |
+  | D | Dashboards |
+  | DISMACRO |DIS Macro |
+  | DOC | Documentation |
+  | F | Functions |
+  | GQIDS | GQI data source |
+  | GQIO | GQI operator |
+  | LSO | Life cycle Service Orchestration |
+  | PA | Process Automation |
+  | PLS | Profile-Load Scripts |
+  | S | Solutions |
+  | SC | Scripted Connector |
+  | T | Tests: regression tests, integration tests, performance tests, etc. |
+  | UDAPI | User-Defined APIs |
+  | V | Visio files |
 
   > [!NOTE]
   > If you think an item type should be added, please contact us so we can add it before you create the repository.
