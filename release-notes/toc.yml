@@ -11,8 +11,7 @@ items:
         topicUid: DataMiner_Web_apps_RNs_index
         href: Web_apps/toc.yml
       - name: dataminer.services release notes
-        topicUid: dataminerservices_RNs_index
-        href: Cloud/toc.yml
+        topicUid: DCP_change_log
       - name: DxM release notes
         topicUid: DxM_RNs_index
         href: DxMs/toc.yml

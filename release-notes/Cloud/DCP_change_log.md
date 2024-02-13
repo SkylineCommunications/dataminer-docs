@@ -4,6 +4,10 @@ uid: DCP_change_log
 
 # dataminer.services change log
 
+The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
+
+> [!NOTE]
+> Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
 #### 6 February 2024 - New feature - Chat Integration with Microsoft Teams now includes sending buttons in notifications using Adaptive Cards [ID_38701]
 
