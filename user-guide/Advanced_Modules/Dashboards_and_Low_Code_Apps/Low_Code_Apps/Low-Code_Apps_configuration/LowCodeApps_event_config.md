@@ -140,6 +140,35 @@ To configure an event to show a context menu:
    > - If there are multiple menu items, you can change their order by clicking the ![*Drag-and-drop*](~/user-guide/images/drag-and-drop.png) button and dragging the item up or down in the list. Release the mouse button when you reach the position where you want to place the selected item.
    > - To delete a menu item, click the ![Trashcan](~/user-guide/images/Trashcan.png) button.
 
+## Showing a notification
+
+Available from DataMiner 10.3.0 [CU12]/10.4.3 onwards<!--RN 38548-->. To configure an event to show a notification in the lower right corner of a low-code app:
+
+1. Select *Show a notification*.
+
+1. Provide the necessary details for your notification:
+
+   - In the *Title* box, enter a custom title for the notification.
+
+     > [!NOTE]
+     > Only the first 80 characters of a title are displayed.
+
+   - Optionally, in the *Message* box, enter a custom message that is displayed when the event is triggered.
+
+     > [!NOTE]
+     > Only the first 400 characters of a message are displayed.
+
+   - To automatically dismiss the notification after it appears, enable the *Automatically clear notification* option. If this option is disabled, the notification stays visible until it is manually closed. Enabled by default.
+
+   - Optionally, in the *Duration* box, specify how long (in seconds) the notification remains visible. If you do not edit the duration, the notification is displayed for 5 seconds by default. This option is only available when the *Automatically clear notification* option is enabled.
+
+1. Select *Add action*.
+
+> [!NOTE]
+>
+> - A maximum of 100 notifications can be open simultaneously. If a new notification appears when 100 notifications are already open, the oldest one is automatically removed.
+> - In the Template Editor (available from DataMiner 10.4.1/10.5.0 onwards), you can enter a column name surrounded by curly brackets ("`{}`") to insert the corresponding cell value inside your title or message text.
+
 ## Configuring another action for the same event
 
 After you have configured an action, you can click *Upon completion* to configure another action that should occur as soon as the previous action is completed.
