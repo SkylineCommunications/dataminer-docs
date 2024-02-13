@@ -84,3 +84,18 @@ In the above syntax, replace REGEX with the regular expression. If it contains s
 |---------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
 | regex:part\[0-9\]                           | Search for rows containing “part” followed by a number from 0 to 9.                                                                       |
 | "rack name":regex:"part\[0-9\] part\[0-9\]" | Search for rows of which the column named “Rack Name” contains a value that matches the regular expression <br>“part\[0-9\] part\[0-9\]”. |
+
+## Using filters for numeric columns of partial tables
+
+From DataMiner 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0/10.4.3 onwards<!--RN 38367-->, the following operators are supported in filters for numeric columns of partial tables:
+
+```txt
+<
+<=
+>
+>=
+==
+!=
+```
+
+Prior to DataMiner 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0/10.4.3, when any of the listed operators above is used in a numeric column filter, it results in an exact match ("==").
