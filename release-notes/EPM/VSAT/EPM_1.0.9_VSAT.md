@@ -14,6 +14,10 @@ A new API endpoint, Windy API, is now included in the Skyline Universal Weather 
 
 ### Enhancements
 
+#### Skyline Universal Weather: New debug parameters to clear buffer [ID_38747]
+
+On the *Debug* page of the Skyline Universal Weather connector, a *Clear Buffer Timer* toggle button and *Clear All Buffer* button are now available. You can use these to clear the buffer when the maximum number of API requests has been reached and requests are accumulating in the buffer.
+
 ### Fixes
 
 #### Generic Trap Processor: Trap count incorrectly doubled [ID_38609]
