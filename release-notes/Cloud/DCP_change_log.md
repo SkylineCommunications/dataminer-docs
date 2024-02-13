@@ -11,7 +11,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 #### 13 February 2024 - Fix - Catalog versions displayed in wrong order [ID_38762]
 
-The version overview for a catalog record will show versions now sorted based on their version number instead of the order they were stored.
+The versions of a catalog will now be sorted correctly.
 
 #### 6 February 2024 - New feature - Chat Integration with Microsoft Teams now includes sending buttons in notifications using Adaptive Cards [ID_38701]
 
