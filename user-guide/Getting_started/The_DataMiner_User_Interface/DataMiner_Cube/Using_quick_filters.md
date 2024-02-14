@@ -41,6 +41,7 @@ You will often find filter boxes in DataMiner Cube that you can use to filter th
     > [!NOTE]
     > - Alarm severities are ordered as follows: Undefined, initial, Information, Notice, Normal, Masked, Warning, Minor, Major, Critical, Timeout, Error
     > - Strings use the .Net string order of the current culture.
+    > - From DataMiner 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0/10.4.3 onwards<!--RN 38367-->, the following operators are supported in filters for numeric columns of partial tables: `<`, `<=`, `>`, `>=`, `==`, and `!=`. Prior to DataMiner 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0/10.4.3, when any of these operators is used in a numeric column filter, it results in an exact match (`==`).
 
 - To filter on an exact combination of characters, put the characters between double quotation marks.
 
