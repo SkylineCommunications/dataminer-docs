@@ -145,7 +145,7 @@ Query results are supported as a data feed for this component from DataMiner 10.
 
 ## Export to CSV
 
-From DataMiner 9.6.13 onwards, it is possible to export the trend data to CSV. To do so, click the ... icon in the top-right corner of the component and select *Export to CSV*. The CSV file will then be generated in the background. To ensure that it is generated correctly, do not change the configuration of the component until the CSV export is completed.
+It is possible to export the trend data to CSV. To do so, click the ... icon in the top-right corner of the component and select *Export to CSV*. The CSV file will then be generated in the background. To ensure that it is generated correctly, do not change the configuration of the component until the CSV export is completed.
 
 > [!NOTE]
 >

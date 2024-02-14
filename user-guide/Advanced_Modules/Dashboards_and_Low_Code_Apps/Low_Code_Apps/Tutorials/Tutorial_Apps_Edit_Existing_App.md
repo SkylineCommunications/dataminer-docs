@@ -21,7 +21,7 @@ The DataMiner Low-Code Apps are available on the DataMiner landing page. To acce
 
 1. To start editing the app, click your user image or initials and select *Edit*.
 
-   ![Edit option](~/user-guide/images/EditApp.png)
+   ![Edit option](~/user-guide/images/EditApp.png)<br/>*DataMiner Low-Code Apps in DataMiner 10.3.12*
 
    This will open the application editor again, which was used before when creating the application. A new draft version of your app is made, to which you can make the necessary changes.
 
@@ -35,13 +35,13 @@ Occasionally, there may be a need to edit a previous version of an application. 
 
 1. Click your user image or initials and select *Versions*.
 
-   ![Versions option](~/user-guide/images/VersionsUser.png)
+   ![Versions option](~/user-guide/images/VersionsUser.png)<br/>*DataMiner Low-Code Apps in DataMiner 10.3.12*
 
    This brings up a list of previous versions.
 
 1. Open the version you want to edit by hovering over it in the list and then clicking the pencil icon.
 
-   ![Version history](~/user-guide/images/EditHistory.png)
+   ![Version history](~/user-guide/images/EditHistory.png)<br/>*DataMiner Low-Code Apps in DataMiner 10.3.12*
 
    This will open up the application editor. A new draft version of your app is made based on the version you selected, to which you can make changes in the same way as when you edit the latest version.
 

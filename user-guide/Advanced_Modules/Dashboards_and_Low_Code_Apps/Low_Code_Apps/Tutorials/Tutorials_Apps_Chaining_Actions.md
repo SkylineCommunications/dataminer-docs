@@ -87,7 +87,7 @@ Expected duration: 10 minutes
 
    The configuration should look like this:
 
-   ![Scan action](~/user-guide/images/ScanAction.png)
+   ![Scan action](~/user-guide/images/ScanAction.png)<br/>*DataMiner Low-Code Apps in DataMiner 10.3.12*
 
 ## Step 4: Chain an action
 
@@ -101,7 +101,7 @@ Expected duration: 10 minutes
 
    The complete configuration should look like this:
 
-   ![Consecutive action](~/user-guide/images/ConsecutiveAction.png)
+   ![Consecutive action](~/user-guide/images/ConsecutiveAction.png)<br/>*DataMiner Low-Code Apps in DataMiner 10.3.12*
 
 1. Close the action editor and publish the app.
 
