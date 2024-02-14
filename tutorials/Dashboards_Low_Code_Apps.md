@@ -28,6 +28,7 @@ keywords: low-code, low code, lowcode
 | [Styling a table component](xref:Tutorial_Apps_Style_A_Table) | Style a table component in a low-code app using GQI queries and the Template Editor. |
 | [Using the maps component in a low-code app](xref:TutorialMaps) | Add and configure a maps component in a low-code app to visualize cell towers, their connections, and their coverage. |
 | [Getting started with the grid component](xref:Tutorial_Apps_Grid) | Getting started with a grid component in a low-code app using GQI queries and the Template Editor. |
+| [Getting started with the node-edge component](xref:Tutorial_Apps_Node_Edge)| Build a basic network diagram using GQI queries and Node-Edge. |
 
 ### GQI tutorials
 
