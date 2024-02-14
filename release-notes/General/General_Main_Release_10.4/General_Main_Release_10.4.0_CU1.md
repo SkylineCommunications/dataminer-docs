@@ -87,6 +87,15 @@ Up to now, it could occur that the script *SRM_QuarantineHandling* retrieved a p
 
 When you had updated the anomaly configuration for a DVE element, SLAnalytics would not process the changes correctly, causing incorrect behavioral anomaly alarms to be generated.
 
+#### DataMiner upgrade: Some folders would not get cleaned up when performing an upgrade [ID_38672]
+
+<!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
+
+Up to now, the following folders would incorrectly not get cleaned up when performing a DataMiner upgrade:
+
+- `C:\Skyline DataMiner\Webpages\API\bin`
+- `C:\Skyline DataMiner\Webpages\Maps\bin`
+
 #### Errors would be thrown at DataMiner startup when production protocols had an information template assigned [ID_38683]
 
 <!-- MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.4 -->
