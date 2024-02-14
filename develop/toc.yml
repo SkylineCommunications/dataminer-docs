@@ -3,7 +3,6 @@ items:
   topicUid: DevelopmentGuide
   items:
   - name: Connectors
-    topicUid: Introduction
     items:
     - name: Introduction
       topicUid: Introduction
