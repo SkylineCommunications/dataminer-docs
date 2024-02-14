@@ -24,7 +24,7 @@ Before you connect your DMS to dataminer.services (unless you [connect with a DM
    > [!NOTE]
    >
    > - If your DataMiner System contains a Failover pair, and one of the Agents in the Failover pair is responsible for hosting the connection towards dataminer.services, install the DataMiner Cloud Pack on both Agents in the Failover pair.
-   > - Installing the Cloud Pack on more than one DMA has [several advantages](xref:FAQ_DCP#do-all-agents-in-a-dms-have-to-be-connected-to-dataminerservices). However, at this time we recommend running only 1 to 3 Cloud Gateway nodes in a cluster. Running more Cloud Gateway nodes than that in a cluster would only add an unnecessary extra load on dataminer.services.
+   > - Installing the Cloud Pack on more than one DMA has [several advantages](xref:FAQ_DCP#do-all-agents-in-a-dms-have-to-be-connected-to-dataminerservices). However, make sure that the Cloud Pack is only installed on DMAs that allow network traffic towards *.dataminer.services.
 
    > [!TIP]
    > For more information on the Cloud Pack contents, see [DataMiner Cloud Pack](xref:CloudPackages).
@@ -60,7 +60,7 @@ Before you connect your DMS to dataminer.services (unless you [connect with a DM
 
 1. Select the checkbox to agree to the terms of service and click *Connect*.
 
-1. On the System Center \> *Cloud* page, wait until the status under *Cloud info* changes to *Connected*. This can take up to half a minute.
+1. On the System Center > *Cloud* page, wait until you see either *Status: Connected* or *Registration status: Registered* (depending on your DataMiner version<!-- RN 38715 -->). This can take up to half a minute.
 
 1. To ensure that you can make optimal use of your dataminer.services connection, get your dataminer.services connection verified. See [Getting your organization verified](xref:CloudConnectionVerification).
 
