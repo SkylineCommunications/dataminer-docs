@@ -338,7 +338,7 @@ To add a condition:
    > [!NOTE]
    >
    > - Any visual changes made when configuring a conditional case will not show up in the preview.
-   > - From DataMiner 10.3.0 [CU12]/10.4.3 onwards<!--RN 38368-->, any visual changes made when configuring a conditional case can be reset by clicking the ![reset](~/user-guide/images/Reset_Button.png) button to the right of the option you want to reset. Prior to DataMiner 10.3.0 [CU12]/10.4.3, you can only reset visual changes made to *Text* layers.
+   > - From DataMiner 10.3.0 [CU12]/10.4.3 onwards<!--RN 38368-->, any visual changes made when configuring a conditional case can be reset by clicking the ![reset](~/user-guide/images/Reset_Button.png) button to the right of the option you want to reset. Prior to DataMiner 10.3.0 [CU12]/10.4.3, you can only reset custom text entered for a *Text* layer.
 
 1. Optionally, in a low-code app, you can configure actions that are executed when a user clicks the tool. Only available for *Icon*, *Rectangle*, and *Ellipse* layers<!--RN 34761-->.
 
