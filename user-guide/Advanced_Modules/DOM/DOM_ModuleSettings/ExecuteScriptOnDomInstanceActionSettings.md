@@ -76,3 +76,5 @@ public class Script
     }
 }
 ```
+
+From DataMiner 10.4.2/10.50 onwards<!--RN 38364-->, the `GetDifferences`entry point method is available, which allows you to see the changes made to a DOM instance by comparing the PreviousVersion and the CurrentVersion of the instance and returning a list of differences between them.
