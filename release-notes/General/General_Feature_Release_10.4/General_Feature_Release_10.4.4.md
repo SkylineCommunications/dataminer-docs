@@ -116,6 +116,12 @@ Up to now, the following folders would incorrectly not get cleaned up when perfo
 
 At DataMiner startup, in some cases, errors could incorrectly be thrown when at least one production protocol had an information template assigned.
 
+#### SLAnalytics: Problem when processing an element with an invalid alarm template [ID_38724]
+
+<!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
+
+In some cases, SLAnalytics could stop working while processing an element with an invalid alarm template.
+
 #### DataMiner Maps: KML layers would incorrectly always be displayed first in the legend [ID_38746]
 
 <!-- MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.4 -->
