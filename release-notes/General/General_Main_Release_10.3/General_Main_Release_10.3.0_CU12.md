@@ -242,3 +242,9 @@ When a DataMiner Agent was added to a DataMiner System, in some cases, the SLNet
 <!-- MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.4 -->
 
 Up to now, it could occur that the script *SRM_QuarantineHandling* retrieved a previous version of a booking instead of the latest, quarantined version, which could cause subsequent updates to corrupt the booking object. To prevent this, *SRM_QuarantineHandling* will now be called after a booking is saved.
+
+#### Errors would be thrown at DataMiner startup when production protocols had an information template assigned [ID_38683]
+
+<!-- MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+At DataMiner startup, in some cases, errors could incorrectly be thrown when at least one production protocol had an information template assigned.

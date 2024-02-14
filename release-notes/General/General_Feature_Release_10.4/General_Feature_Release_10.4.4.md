@@ -94,3 +94,9 @@ Up to now, it could occur that the script *SRM_QuarantineHandling* retrieved a p
 <!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
 
 When you had updated the anomaly configuration for a DVE element, SLAnalytics would not process the changes correctly, causing incorrect behavioral anomaly alarms to be generated.
+
+#### Errors would be thrown at DataMiner startup when production protocols had an information template assigned [ID_38683]
+
+<!-- MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+At DataMiner startup, in some cases, errors could incorrectly be thrown when at least one production protocol had an information template assigned.
