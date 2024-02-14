@@ -272,6 +272,12 @@ When you started a profile migration to an Elasticsearch/OpenSearch database whi
 > [!NOTE]
 > When, in the SLNetClientTest tool, you go to *Advanced > Migration*, all migrations in an error status will now have a red background.
 
+#### Web apps - Visual overview: Popup window would not display a hidden page when the visual overview only contained one non-hidden page [ID_38331]
+
+<!-- MR 10.2.0 [CU21] / 10.3.0 [CU12] / 10.4.0 [CU0] - - FR 10.4.3 [CU0] -->
+
+When, in a visual overview with one non-hidden page displayed in a web app, you tried to open a popup window linked to a page marked as "hidden", the popup window would incorrectly display the non-hidden page instead of the hidden page.
+
 #### DataMiner Cube - System Center: No longer possible to add additional databases when DMA was using STaaS [ID_38399]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU11] - FR 10.4.2 [CU0] -->

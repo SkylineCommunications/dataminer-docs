@@ -113,12 +113,6 @@ When you wanted to change the visualization of a component, up to now, the list 
 
 From now on, when you want to change the visualization of a component, the list of visualizations will contain data-related visualizations only.
 
-#### Web apps - Visual overview: Popup window would not display a hidden page when the visual overview only contained one non-hidden page [ID_38331]
-
-<!-- MR 10.2.0 [CU21] / 10.3.0 [CU12] / 10.4.0 [CU0] - - FR 10.4.3 [CU0] -->
-
-When, in a visual overview with one non-hidden page displayed in a web app, you tried to open a popup window linked to a page marked as "hidden", the popup window would incorrectly display the non-hidden page instead of the hidden page.
-
 #### Dashboards app & Low-Code Apps - GQI: Queries would be fetched twice [ID_38335]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->

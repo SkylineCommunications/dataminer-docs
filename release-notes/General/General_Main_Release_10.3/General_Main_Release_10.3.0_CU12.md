@@ -163,6 +163,12 @@ Up to now, when alarms were cleared before the end of the time frame specified i
 
 From now on, when a correlation rule is configured to use the *Collect events for ... after first event, then evaluate conditions and execute actions* trigger mechanism, all alarm buckets will be properly cleaned up, unless there are actions that need to be executed either when the base alarms are updated or when alarms are cleared.
 
+#### Web apps - Visual overview: Popup window would not display a hidden page when the visual overview only contained one non-hidden page [ID_38331]
+
+<!-- MR 10.2.0 [CU21] / 10.3.0 [CU12] / 10.4.0 [CU0] - - FR 10.4.3 [CU0] -->
+
+When, in a visual overview with one non-hidden page displayed in a web app, you tried to open a popup window linked to a page marked as "hidden", the popup window would incorrectly display the non-hidden page instead of the hidden page.
+
 #### Automation: Script data cleanup routine could cause an error to occur [ID_38370]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
