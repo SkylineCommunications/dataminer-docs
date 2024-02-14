@@ -14,6 +14,6 @@ Existing custom reports may no longer work.
 
 *DIS MCC*
 
-| Full ID | Error message | Description |
-|---------|---------------|-------------|
+| Full ID | Error message  | Description                                            |
+|---------|----------------|--------------------------------------------------------|
 | 2.26.1  | EnabledPartial | Partial Table option was enabled on table '{paramId}'. |

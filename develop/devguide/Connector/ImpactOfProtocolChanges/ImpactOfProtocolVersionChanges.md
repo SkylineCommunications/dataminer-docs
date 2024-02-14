@@ -4,7 +4,7 @@ uid: ImpactOfProtocolVersionChanges
 
 # Impact of protocol version changes
 
-Below, you can find an overview of all changes to a protocol that can cause impact when updating from a previous version. Some of the changes can be implemented using workarounds where impact can actually be avoided.
+Below, you can find an overview of all changes to a protocol that can cause impact when updating from a previous version. Some of the changes can be implemented using workarounds where the impact can actually be avoided.
 
 For more information on protocol version numbering, see [Protocol version semantics](xref:ProtocolVersionSemantics).
 
@@ -15,9 +15,9 @@ For more information on protocol version numbering, see [Protocol version semant
 
 A protocol version request needs to be made as soon as a change in a protocol will cause impact and no workaround can be implemented.
 
-To create such a request, go to the [Protocol Version Request](https://intranet.skyline.be/Lists/Protocol%20Version%20Request/Overview.aspx) page on intranet.
+As a Skyline developer, to create such a request, go to the [Protocol Version Request](https://intranet.skyline.be/Lists/Protocol%20Version%20Request/Overview.aspx) page on intranet.
 
-A team of System Developers is responsible to follow up on these requests and guide the developer to make the correct decision and assess if the impacting change can be implemented or if a workaround is possible.
+A team of System Developers is responsible for following up on these requests and guiding the developer to make the correct decision and assess if the impacting change can be implemented or if a workaround is possible.
 
 Depending on whether the request is valid or not, the request will either be approved or rejected.
 
@@ -25,9 +25,9 @@ It is important to assess if a major change will be needed as soon as possible t
 
 ## Impacting changes
 
-There are quite a lot of protocol changes that can cause impact.
+There are many protocol changes that can cause impact.
 
-Causing impact means that if you have an existing element using a previous version of this protocol, that you cannot upgrade to the new version because something in your system will (or might) break depending on what specific features of the protocol or DataMiner are being used.
+Causing impact means that if you have an existing element using a previous version of this protocol, you cannot upgrade to the new version because something in your system will (or might) break depending on what specific features of the protocol or DataMiner are being used.
 
 The impacted changes listed here are grouped based on the change that is implemented.
 
@@ -37,10 +37,10 @@ The impacted changes listed here are grouped based on the change that is impleme
 - [Change Unicode](xref:ChangeUnicode)
 - [Change connection(s)](xref:ChangeConnections)
 - [Change layout](xref:ChangeLayout)
-- [Change Exported Protocol Name (DVE)](xref:ChangeExportedProtocolName)
-- [Change Page Name](xref:ChangePageName)
-- [Change Minimum Required DMA Version](xref:ChangeMinimumRequiredDMAVersion)
-- [Change Protocol Name](xref:ChangeProtocolName)
+- [Change exported protocol name (DVE)](xref:ChangeExportedProtocolName)
+- [Change page name](xref:ChangePageName)
+- [Change minimum required DataMiner version](xref:ChangeMinimumRequiredDMAVersion)
+- [Change protocol name](xref:ChangeProtocolName)
 
 ### Parameter changes
 
@@ -55,46 +55,40 @@ The impacted changes listed here are grouped based on the change that is impleme
 
 ### Table parameter changes
 
-- [Change Primary Key](xref:ChangePrimaryKey)
-- [Change Display Key [PENDING]](xref:ChangeDisplayKey)
-- [Replace displayColumn by naming [PENDING]](xref:ReplaceDisplayColumnByNaming)
-- [Change to Partial Table [PENDING]](xref:ChangeToPartialTable)
-- [Change Logger Table [TBD]](xref:ChangeLoggerTable)
-- [Change Column Order (Idx) [TBD]](xref:ChangeColumnOrder)
-- [Change Displayed Column Order (Layout) [TBD]](xref:ChangeDisplayedColumnOrder)
+- [Change primary Key](xref:ChangePrimaryKey)
+- [Change display key](xref:ChangeDisplayKey)
+- [Replace displayColumn by naming](xref:ReplaceDisplayColumnByNaming)
+- [Change to partial table](xref:ChangeToPartialTable)
+- [Change logger table](xref:ChangeLoggerTable)
+- [Change column order](xref:ChangeColumnOrder)
+- [Change displayed column order](xref:ChangeDisplayedColumnOrder)
 
 ## Improving context awareness procedure
 
-A procedure has been introduced to improve context awareness and to allow certain major changes to improve the overall quality of our protocols even though they could cause impact.
+A procedure has been introduced to improve context awareness and to allow certain major changes to improve the overall quality of protocols even though they could cause impact.
 
 ### Context awareness
 
-Any user familiar with a product should easily find all necessary information when using our protocols.
+Any user familiar with a product should easily find all necessary information when using DataMiner protocols. This means that DataMiner protocols should not only perform great, but should also look the part and be straightforward to use.
 
-This means that our protocols should not only perform great, but should also look the part and should be straightforward to use.
+Especially for new developments, the focus should be on getting them spot on from the start, especially since any changes that might be needed in the future could cause impact for existing users. 
 
-Especially for new developments, we should focus on getting them spot on from the start as we can only make a first impression once, and any changes we might need in the future could cause impact for existing users.
-
-However, this should not stop us from improving our existing protocols.
+However, this should not stop you from improving existing protocols.
 
 ### Major changes
 
-In the past, we have always tried to block as many major changes as possible by providing workarounds or convincing the users to not make certain changes to avoid impact.
-
-So far, this worked out and we could always explain this to our existing users, but this also means any new user will also not get a perfect product.
-
-This is something we would like to change to be able to also improve the quality of our existing protocols.
+In the past, as many major changes as possible were blocked by providing workarounds or convincing the users to not make certain changes to avoid impact. While this worked, this meant new users might not get a perfect product. To improve the quality of DataMiner protocols, a different approach is therefore needed.
 
 ### Procedure
 
-Whenever you receive feedback from a user (i.e. a customer, a colleague from Sales or Product Marketing, etc.) that some improvements (changing parameter descriptions, change layout, etc.) could be done in a protocol, a major change can be requested to allow these changes.
+Whenever you receive feedback from a user that some improvements (changing parameter descriptions, change layout, etc.) could be done in a protocol, a major change can be requested to allow these changes.
 
-The requests should be created on the [Protocol Version Request](https://intranet.skyline.be/Lists/Protocol%20Version%20Request/Overview.aspx) intranet page (similar to any other protocol version request), but no specific task is needed (unless you already have a task in your customer project).
+As a Skyline developer, you should create such requests on the [Protocol Version Request](https://intranet.skyline.be/Lists/Protocol%20Version%20Request/Overview.aspx) intranet page (similar to any other protocol version request), but no specific task is needed (unless you already have a task in your project).
 
-The *Protocol Version Request* team will evaluate the requested changes and, when valid, will create a task in the [SLC-SE-Internal Protocol Reviews](https://collaboration.skyline.be/project/5938/list) project.
+The *Protocol Version Request* team will evaluate the requested changes and, when the request is valid, they will create a task in the [SLC-SE-Internal Protocol Reviews](https://collaboration.skyline.be/project/5938/list) project.
 
 > [!NOTE]
-> The *Protocol Version Request* team is in charge of creating these tasks and no tasks should be created in this project without the team knowing about it.
+> The *Protocol Version Request* team is in charge of creating these tasks, and no tasks should be created in this project without the team knowing about it.
 
 ### Tasks
 
@@ -102,7 +96,7 @@ Whenever you are working on a task for a protocol, please keep an eye on this pr
 
 No additional version request is needed anymore as these changes were already approved.
 
-This is also a call to all Driver Product Owners to keep an eye on this project and try to get these tasks picked up whenever changes are done in the protocols you are the owner for.
+This is also a call to all Product Owners to keep an eye on this project and try to get these tasks picked up whenever changes are done in the protocols of which they are the owner.
 
 ### Workaround
 

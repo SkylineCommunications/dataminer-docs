@@ -8,9 +8,10 @@ Removing a parameter is considered a major change.
 
 ## Impact
 
-The change may cause the need to reconfigure DMS Filter, DMS Automation Scripts, DMS Visio Files, DMS Reports, DMS WebAPI, etc.
+The change may cause the need to reconfigure filters, Automation scripts, Visio files, reports, web API configurations, etc.
 
-Note, the parameter ID may never be reused anymore in future versions.
+> [!NOTE]
+> The parameter ID can never be reused again in future versions.
 
 ## Workarounds
 

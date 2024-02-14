@@ -4,18 +4,18 @@ uid: ChangeUnicode
 
 # Change Unicode
 
-Changing a protocol to Unicode or removing Unicode from a protocol is considered a major change.
+Changing a protocol to Unicode or removing the Unicode option from a protocol is considered a major change.
 
 DIS MCC
 
-| Full ID | Error message | Description |
-|---------|---------------|-------------|
+| Full ID | Error message  | Description                             |
+|---------|----------------|-----------------------------------------|
 | 1.9.6   | AddedUnicode   | Unicode option on protocol was added.   |
 | 1.9.7   | RemovedUnicode | Unicode option on protocol was removed. |
 
 ## Impact
 
-Element Data and Trend database needs to be removed entirely.
+Element data and trending in the database need to be removed entirely.
 
 Changing a protocol using MySQL and Cassandra should be compatible. Values in *elementdata* are stored by default as Unicode and ASCII v and vu.
 
