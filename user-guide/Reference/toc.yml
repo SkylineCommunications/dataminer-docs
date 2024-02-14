@@ -73,6 +73,8 @@ items:
       - name: Alerter
         topicUid: Alerter
         items:
+          - name: Accessing Alerter
+            topicUid: Accessing_Alerter
           - name: Working with the Alerter alarm list
             topicUid: Working_with_the_Alerter_alarm_list
           - name: Communicating with other DataMiner users via Alerter
@@ -112,20 +114,17 @@ items:
         topicUid: Connection_Check
       - name: Copy Element Data
         topicUid: Copy_Element_Data
+      - name: Data Aggregator Migrator
+        topicUid: Data_Aggregator_Migrator
       - name: DataMiner Comparison tool
         topicUid: DataMinerComparisonTool
-      - name: DataMiner Ping Monitoring tool
-        topicUid: PingMonitoring
-        items:
-          - name: Installing the Ping Monitoring tool
-            topicUid: Installing_Ping_Monitoring
-          - name: Working with the Ping Monitoring tool
-            topicUid: Working_with_Ping_Monitoring
       - name: DataMiner Size tool
         topicUid: DataMinerSizeTool
       - name: DataMiner Taskbar Utility
         topicUid: DataMiner_Taskbar_Utility
         items:
+          - name: Accessing the DataMiner Taskbar Utility
+            topicUid: Accessing_the_DataMiner_Taskbar_Utility
           - name: Taskbar Utility shortcut menu
             topicUid: Taskbar_Utility_shortcut_menu
           - name: Taskbar Utility command line options
@@ -280,6 +279,8 @@ items:
                 topicUid: SLNetClientTest_Viewing_SLNet_calls_being_sent
               - name: Viewing the connection timeout states of an element
                 topicUid: SLNetClientTest_Viewing_the_connection_timeout_states_of_an_element
+              - name: Viewing the memory usage of elements, parameters, and tables
+                topicUid: SLNetClientTest_Viewing_memory_usage
           - name: SLNetClientTest tool advanced procedures
             topicUid: SLNetClientTest_tool_advanced_procedures
             items:
@@ -424,14 +425,10 @@ items:
   - name: Obtaining a DataMiner license
     topicUid: DataminerLicenses
     items:
-      - name: License for DMA to be installed by Skyline
-        topicUid: License_for_DMA_to_be_installed_by_Skyline
-      - name: Full license for DMA to be installed by user
-        topicUid: Full_license_for_DMA_to_be_installed_by_user
-      - name: Online demo license for DMA to be installed by user
-        topicUid: Online_demo_license_for_DMA_to_be_installed_by_user
-      - name: Offline demo license for DMA to be installed by user
-        topicUid: Offline_demo_license_for_DMA_to_be_installed_by_user
+      - name: Permanent license
+        topicUid: Permanent_license
+      - name: Time-based license
+        topicUid: Time-based_license
   - name: Software support life cycles
     topicUid: Software_support_life_cycles
   - name: Soft-launch options
@@ -454,6 +451,8 @@ items:
     items:
       - name: Alarm benchmarks
         topicUid: alarm_benchmarks
+      - name: Alarm benchmarks (Cassandra Cluster)
+        topicUid: alarm_benchmarks_cassandra_cluster
       - name: Alarm focus benchmarks
         topicUid: alarm_focus_benchmarks
       - name: Automatic incident tracking benchmarks
@@ -462,8 +461,8 @@ items:
         topicUid: automation_benchmarks
       - name: Behavioral anomaly detection benchmarks
         topicUid: behavioral_anomaly_detection_benchmarks
-      - name: Cassandra write performance benchmarks
-        topicUid: cassandra_write_performance_benchmarks
+      - name: Cassandra (cluster) write performance benchmarks
+        topicUid: cassandra_cluster_write_performance_benchmarks
       - name: Change history metrics
         topicUid: change_history_benchmarks
       - name: Dashboards benchmarks
@@ -482,6 +481,8 @@ items:
         topicUid: failover_benchmarks
       - name: History set benchmarks
         topicUid: history_set_benchmarks
+      - name: Migration benchmarks
+        topicUid: migration_benchmarks
       - name: Mobile gateway benchmarks
         topicUid: mobile_gateway_benchmarks
       - name: Parameter set benchmarks
@@ -498,6 +499,8 @@ items:
         topicUid: service_profile_benchmarks
       - name: Service & Resource Management benchmarks
         topicUid: service_resource_management_benchmarks
+      - name: Trending benchmarks
+        topicUid: trend_benchmarks
       - name: User-Defined APIs benchmarks
         topicUid: user-defined_API_benchmarks
       - name: View benchmarks

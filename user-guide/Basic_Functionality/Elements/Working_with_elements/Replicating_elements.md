@@ -12,6 +12,9 @@ While creating a new element or editing an existing element:
 
 1. Enter the IP address or hostname of the remote DMA hosting the element to be replicated.
 
+   > [!NOTE]
+   > If a DMA is connected to dataminer.services and [remote access](xref:Cloud_Remote_Access) is enabled, you can use the remote access URL.
+
 1. Enter the username and the password the local DMA can use to log on to the remote DMS in order to retrieve the parameter values from the remote element.
 
    > [!NOTE]
@@ -30,6 +33,7 @@ While creating a new element or editing an existing element:
 > - If the element uses the Production version of the protocol, and this version is different on the other DMA, only the statuses of the common parameters will be transferred.
 > - Security is defined on the remote DMS. Access to the remote element will therefore depend on the rights granted to the credentials you entered to log on to the remote DMS. In other words, you cannot replicate an element if you do not have access to the view containing that element.
 > - Replicating a [partial table](xref:Table_parameters#partial-tables) is not supported. Only the data of the first page will be present in the replicated element. The table rows that are present on the other pages will not be replicated.
+> - Replicating [spectrum](xref:SpectrumAnalysis) elements is not supported.
 > - While you configure element replication, the client machine running DataMiner Cube requires direct access to the remote DMA hosting the element to be replicated. Cube will make a direct connection to this DMA to retrieve the list of elements.
 
 > [!TIP]

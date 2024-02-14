@@ -37,6 +37,7 @@ Important announcements about the latest changes to DataMiner core functionality
 | Annotations | End of Life | From DataMiner version 10.3.x (Q4 2022) onwards, Annotations should no longer be used. | End of Life |
 | Legacy Reporter & Dashboards | End of Support | Module is being retired and replaced with the new DataMiner Dashboards app. | End of Life as of DataMiner version 10.4.x (Q4 2023) |
 |  Web Services API v0 | End of Life | From DataMiner version 10.1.5 onwards, version 0 of the DataMiner Web Services API is disabled. Users will be required to port any reliant applications to use Web Services API v1. | End of Life |
+| XML storage of SRM resources and profiles | End of Life | From DataMiner 10.4.0/10.4.1 onwards, SRM resources and profiles must be stored in the indexing database instead of in XML. | End of Life |
 
 Status overview:
 
@@ -51,10 +52,13 @@ Status overview:
 
 | Item | Current status | Detail | Future status |
 |---------|---------|---------|---------|
-| Support for MSSQL as local database | End of Life as of DataMiner 10.3 (Q4 2022) | Feature will no longer be supported. We recommend moving to Cassandra. | End of Life as of DataMiner version 10.3.x (Q4 2022) |
-| Support for MySQL as local database | End of Support as of DataMiner 10.3 (Q4 2022) | Existing features will work, but some new features will require Cassandra or Elasticsearch as necessary. | End of Life as of DataMiner version 10.4.x (Q4 2023) |
+| Support for MSSQL as local database | End of Life as of DataMiner 10.3 (Q4 2022) | Feature will no longer be supported. We recommend moving to Storage as a Service or Cassandra. | End of Life as of DataMiner version 10.3.x (Q4 2022) |
+| Support for MySQL as local database | End of Support as of DataMiner 10.3 (Q4 2022) | Existing features will work, but some new features will require Storage as a Service or Cassandra and OpenSearch/Elasticsearch. | End of Life as of DataMiner version 10.4.x (Q4 2023) |
+| Support for Cassandra database on Windows OS | End of Support as of Cassandra 4.x (Q3 2021) | Cassandra no longer supports Windows as its operating system from version 4.x onwards. Up to DataMiner 10.4.x, support is provided for Cassandra databases on Windows up to Cassandra version 3.11. We recommend moving to a Linux system, using [Ubuntu LTS](https://catalog.dataminer.services/details/package/5621). | |
+| Support for Amazon Keyspaces Service, Azure Managed Instance for Apache Cassandra Service, and Amazon OpenSearch Service | End of Support as of DataMiner 10.3.0 [CU8]/10.3.11 | Feature will no longer be supported. We recommend moving to Storage as a Service. Note that using a self-hosted OpenSearch database remains supported. |   |
 | Support for DataMiner Cube running in Internet Explorer/Edge in IE compatibility mode (XBAP) | End of Engineering | Existing features will work, but some new features will only be supported in the DataMiner Cube desktop app. | End of Life as of DataMiner version 10.3.x (Q4 2022) |
 | Support for Visual Studio 2015 | End of Life as of DIS 2.35 | DIS will no longer be compatible with this Visual Studio version. |   |
+| Support for Visual Studio 2017 | End of Life as of DIS 2.41 | DIS will no longer be compatible with this Visual Studio version. |   |
 
 Status overview:
 

@@ -14,7 +14,7 @@ uid: Stack_Data_Management
 
 DataMiner collects and analyzes log files from various data sources (devices, servers, applications, etc.) in a central location. This allows for more efficient troubleshooting and faster resolution of issues. The log files can be automatically monitored for errors, warnings, or other predefined events, and alerts can be generated to notify operators when such events occur.
 
-Using Elasticsearch indexing for log file management, this allows for efficient indexing, searching, and filtering of log files to quickly locate specific events.
+Using OpenSearch indexing for log file management, this allows for efficient indexing, searching, and filtering of log files to quickly locate specific events.
 
 ## Backup
 
@@ -34,13 +34,16 @@ Both full and partial backups can be scheduled to run automatically, and they ca
 
 ## Data storage
 
-By default, DataMiner uses a Cassandra and Elasticsearch database. Other data storage solutions can be added optionally.
+The recommended data storage setup for DataMiner is [Storage as a Service](xref:DM_selfhosted_and_StaaS). With this setup, Skyline Communications manages the storage for you, so you can save on infrastructure and IT maintenance costs. Alternatively, you can also choose to host the DataMiner storage databases yourself. In that case, a clustered Cassandra and OpenSearch setup is recommended.
+
+Other data storage solutions can be added optionally.
 
 > [!TIP]
 > For more information:
 >
-> - [Supported system data storage architectures](xref:Supported_system_data_storage_architectures) in the DataMiner User Guide
 > - [About databases](xref:Databases_about) in the DataMiner User Guide
+> - [Storage as a Service (STaaS)](xref:STaaS) in the DataMiner User Guide
+> - [Supported system data storage architectures](xref:Supported_system_data_storage_architectures) in the DataMiner User Guide
 
 ## Audit trailing
 

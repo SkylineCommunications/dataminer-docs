@@ -41,11 +41,76 @@ Add a shape data field of type **Link** to the shape, and configure one of the f
 > - Adding "#" in front of the URL ensures that the video is displayed in an embedded browser. If you do not add this, the shape is rendered as it is drawn in Visio and clicking it opens your default browser and navigates to the link.
 > - If you play a video in a shape using VLC, by default the VLC toolbar is shown. To hide the toolbar, adding "toolbar=false" or "showtoolbar=false" to the value of the **Link** shape data. For example: `#http://<DMAIP>/VideoThumbnails/Video.htm?type=Generic VLC&source=http://<DMAIP>/myvideo.mpeg&showtoolbar=false`
 
+## Configuring the video thumbnail to display an image
+
+The following image formats are supported: .png, .jpg, .bmp, and .emf.
+
+> [!TIP]
+> See also: [Linking a shape to a video thumbnail](xref:Linking_a_shape_to_a_video_thumbnail)
+
+### In DataMiner Cube
+
+1. Right-click the Visio drawing, and click *Edit Mode*.
+
+1. Select the shape. If necessary, select the *Make All Shapes Selectable* option, and select the shape from the *Selected Shape* selection box.
+
+1. In *Link Shape To*, select “Link”.
+
+1. In the *Basic* tab:
+
+   1. Set *Link Type* to “Video”.
+
+   1. Set *Video Type* to “Generic Images”.
+
+   1. In *Image Source*, enter the URL of the image (e.g. `http://IpAddress/Folder/Picture.png`).
+
+      > [!NOTE]
+      >
+      > - Both HTTP and HTTPS are supported.
+      > - If you want the shape to display an image on a DataMiner Agent, see [Displaying images located on a DataMiner Agent](#displaying-images-located-on-a-dataminer-agent).
+
+   1. In *Refresh rate*, specify how frequently you want the image to be refreshed (in milliseconds).
+
+1. Click Save.
+
+### In Visio
+
+1. Right-click the Visio drawing, and click *Edit In Visio*.
+
+1. Add a shape data field of type **Link** to the shape, and set its value to e.g.:
+
+   ```txt
+   #http://DmaIpAddress/VideoThumbnails/Video.htm?type=Generic Images&source=http://IpAddress/Folder/Picture.png&refresh=5000
+   ```
+
+   > [!NOTE]
+   >
+   > - Both HTTP and HTTPS are supported.
+   > - If you want the shape to display an image on a DataMiner Agent, see [Displaying images located on a DataMiner Agent](#displaying-images-located-on-a-dataminer-agent).
+
+1. Save the Visio file.
+
+> [!NOTE]
+> By default, a thumbnail of type *Generic Images* always uses the DMA as a proxy. However, from DataMiner 9.0.0 CU22/9.5.8 onwards, you can add an extra URL parameter, "proxy", in order to override this behavior.
+> For example: `http://<DMA IP>/VideoThumbnails/video.htm?type=Generic%20Images&source=<IMG URL>&proxy=false`
+
+### Displaying images located on a DataMiner Agent
+
+If you want a shape to display an image located on a DMA, then do the following:
+
+1. Place the image in the DMA's *C:\\Skyline DataMiner\\Webpages* folder (or one of its subfolders e.g. *C:\\Skyline DataMiner\\Webpages\\MyImages\\*).
+
+1. In the shape, specify the URL of the image (e.g. `http://DmaIpAddress/MyImages/Picture.png`).
+
+> [!NOTE]
+> If you get an "Invalid path" error, open the file *C:\\Skyline DataMiner\\Webpages\\VideoThumbnails\\Web.config* (or *C:\\Skyline DataMiner\\Webpages\\VideoThumbnails\\Proxy\\Web.config* in DataMiner versions prior to 9.0), and check whether the image folder (e.g. */MyImages/*) has been added to the *ExtraAllowedPaths* key.
+> See also [Allowed paths in case of connection via DataMiner proxy](xref:Linking_a_shape_to_a_video_thumbnail#allowed-paths-in-case-of-connection-via-dataminer-proxy).
+
 ## Video server parameters
 
 The parameters you are allowed to pass inside the URL depend on the type of the video server.
 
-All supported video server types and their associated parameters are defined in the file *C:\Skyline DataMiner\videoservers.xml*.
+All supported video server types and their associated parameters are defined in the file *C:\\Skyline DataMiner\\videoservers.xml*.
 
 Depending on the DataMiner version, additional configuration is possible in the URL:
 
@@ -68,7 +133,8 @@ Depending on the DataMiner version, additional configuration is possible in the 
   ```
 
   > [!NOTE]
-    > - Always make sure that the parameters of the URL are URL-encoded, as illustrated in the examples above.
+  >
+  > - Always make sure that the parameters of the URL are URL-encoded, as illustrated in the examples above.
   > - Use the *EscapeDataString* placeholder when you add parameters, properties or other DataMiner data sources in the URL (see [\[EscapeDataString:x\]](xref:Placeholders_for_variables_in_shape_data_values#escapedatastringx)). For example: `https://<DMAIP>/VideoThumbnails/Video.htm?type=Generic%20VLC&source=[EscapeDataString:[param:*,10014]]`
   > - When the authentication token expires, the URL has to be updated with the new token.
   > - URLs that request video thumbnails should use HTTPS instead of HTTP. That way, you can prevent the authentication token from being stolen.
@@ -79,7 +145,7 @@ Depending on the DataMiner version, additional configuration is possible in the 
   #https://dma.local/VideoThumbnails/Video.htm?type=VLC&source=https://videoserver/video.mp4&volume=50
   ```
 
-- From DataMiner 10.2.0 \[CU1]/10.2.4 onwards, you can specify that the video should play continuously in a **loop**, by adding `loop=true` to the URL. By default, this is considered to be false.
+- From DataMiner 10.2.0 [CU1]/10.2.4 onwards, you can specify that the video should play continuously in a **loop**, by adding `loop=true` to the URL. By default, this is considered to be false.
 
   ```txt
   #https://dma.local/VideoThumbnails/Video.htm?type=HTML5&source=https://videoserver/video.mp4&loop=true
@@ -164,3 +230,133 @@ To configure the thumbnail, add a shape data field of type **Link** to the shape
 > - For more information on HLS, see <https://github.com/video-dev/hls.js/>
 > - All HLS resources must be delivered with CORS headers that permit GET requests. For more information, see <https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS>.
 > - If you access a video thumbnail player that is using HTTPS, the media must also be served over HTTPS.
+
+### Video streaming with proxy
+
+Video streams are typically only accessible within the internal network, and this is usually for a good reason, for example because paid TV channels are involved that should not be publicly available. Another reason to use a proxy is to avoid CORS or CSP restrictions: if you run the proxy on the same origin as the web app playing the video, it will load the video from the same origin, which is not a cross-origin request.
+
+> [!CAUTION]
+> Setting up a proxy could create a weakness in the network security, giving users from the public network access to resources on the private network. Use this with extreme caution.
+
+#### Installing and running HLS Proxy
+
+To install and run [HLS Proxy](https://github.com/warren-bank/HLS-Proxy):
+
+1. Make sure you have [NodeJS](https://nodejs.org/) installed.
+
+1. Create a folder and open it in a command prompt or PowerShell, for example `C:\HLS-Proxy`.
+
+1. Run the following command: `npm install "@warren-bank/hls-proxy" --save`
+
+1. In case you have to use HTTPS (recommended), copy your certificate (.crt) and private key (.key) into the created folder.
+
+1. Run the following command: `npx hlsd --port 8080 --tls-cert yourcertificate.crt --tls-key private.key --tls-pass password.txt`. In case the video server uses an untrusted HTTPS certificate, also add `--req-insecure` to the command.
+
+The proxy should now be up and running.
+
+You can **open a stream** via the proxy by using the following URL (example in JavaScript):
+
+```JavaScript
+const proxy_url = 'https://proxy-server:8080';
+const video_url = 'https://example.com/video/master.m3u8';
+const file_extension = '.m3u8';
+
+const video_url_via_proxy = `${proxy_url}/${btoa(video_url)}${file_extension}`; // btoa = base64-encode
+const videothumbnails = `https://dma-server/videothumbnails/video.htm?type=HTML5-HLS&source=${encodeURIComponent(video_url_via_proxy)}`; // encodeURIComponent = url-encode
+```
+
+#### Using the HLS Proxy server behind a front-end web server
+
+Optionally, it is possible to run the HLS Proxy server behind a front-end web server with a [reverse proxy](xref:Dashboard_Gateway_installation#reverse-proxy). The `--host` parameter can be specified containing the public FQDN and port of the public-facing server. This way, no separate port needs to be made publicly accessible, and there is no need to configure the HTTPS certificate on the HLS proxy because the web server can take care of that.
+
+The HLS Proxy echoes any leading path (for example `/hls-proxy`) in the request into all proxied URLs in the modified HLS manifest.
+
+```JavaScript
+const proxy_url = 'https://dma-server/hls-proxy';
+const video_url = 'https://example.com/video/master.m3u8';
+const file_extension = '.m3u8';
+
+const video_url_via_proxy = `${proxy_url}/${btoa(video_url)}${file_extension}`; // btoa = base64-encode
+const videothumbnails = `https://dma-server/videothumbnails/video.htm?type=HTML5-HLS&source=${encodeURIComponent(video_url_via_proxy)}`; // encodeURIComponent = url-encode
+```
+
+#### Installing the HLS Proxy server as a Windows service
+
+Optionally, you can install the HLS Proxy server as a Windows service using [node-windows](https://github.com/coreybutler/node-windows).
+
+1. Install *node-windows*: `npm install node-windows --save`
+
+1. Create a `run.js` script that launches the proxy:
+
+   ```JavaScript
+   var spawn = require('node:child_process').spawn;
+
+   var child = spawn('npx', [
+       'hlsd',
+       '--host',
+       'dma.skyline.be:443',
+       '--port',
+       '8080'
+       //'--req-insecure',
+       //'--tls-cert',
+       //'yourcertificate.crt',
+       //'--tls-key',
+       //'private.key',
+       //'--tls-pass',
+       //'password.txt'
+   ], { shell: process.platform === 'win32' });
+   child.stdout.pipe(process.stdout);
+   ```
+
+1. Create a script `install-service.js` to create the Windows service:
+
+   ```JavaScript
+   var Service = require('node-windows').Service;
+
+   // Create a new service object
+   var svc = new Service({
+       name: 'HLS-Proxy',
+       description: 'HLS proxy server.',
+       script: require('path').join(__dirname, 'run.js'),
+       nodeOptions: [
+           '--max_old_space_size=4096'
+       ],
+       workingDirectory: __dirname
+   });
+
+   // Listen for the "install" event, which indicates the
+   // process is available as a service.
+   svc.on('install', function() {
+       svc.start();
+   });
+
+   svc.install();
+   ```
+
+1. Run `node install-service.js` (with administrator privileges).
+
+To remove this Windows service again:
+
+1. Create a script `uninstall-service.js`:
+
+   ```JavaScript
+   var Service = require('node-windows').Service;
+
+   // Create a new service object
+   var svc = new Service({
+       name: 'HLS-Proxy',
+       script: require('path').join(__dirname, 'run.js'),
+       workingDirectory: __dirname
+   });
+
+   // Listen for the "uninstall" event so we know when it's done.
+   svc.on('uninstall', function() {
+       console.log('Uninstall complete.');
+       console.log('The service exists: ', svc.exists);
+   });
+
+   // Uninstall the service.
+   svc.uninstall();
+   ```
+
+1. Run `node uninstall-service.js` (with administrator privileges).

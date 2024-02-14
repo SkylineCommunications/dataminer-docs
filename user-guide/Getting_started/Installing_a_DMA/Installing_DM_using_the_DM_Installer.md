@@ -4,10 +4,7 @@ uid: Installing_DM_using_the_DM_installer
 
 # Installing DataMiner using the DataMiner Installer
 
-> [!TIP]
-> Not familiar with DataMiner? See [Basic concepts](xref:BasicConcepts).
-
-The DataMiner installer allows you to run a default DataMiner installation, which includes a Cassandra database on the C drive, or to run a custom installation. A custom installation can for instance be used to install a MySQL database instead of a Cassandra database.
+The DataMiner installer allows you to run a default DataMiner installation, which includes a Cassandra database on the C drive, or to run a custom installation.
 
 > [!NOTE]
 > The DataMiner software can only be installed on the C: drive. It is currently not possible to select another drive for the installation of DataMiner.
@@ -108,15 +105,14 @@ At this point, the basic installation is complete. However, to be able to make f
      > [!NOTE]
      > By default, a DataMiner Agent uses a single Cassandra node that is hosted on the same physical or virtual server. However, different architectures are also possible. For more information, see [Supported system data storage architectures](xref:Supported_system_data_storage_architectures), or check with your Technical Account Manager.
 
-   - To install a MySQL database instead of a Cassandra database, select *MySQL Server*, and optionally [*MySQL Workbench*](xref:MySQL_Workbench).
+   - If you are using an older DataMiner installer, you can select to install *MySQL Server*, and optionally [*MySQL Workbench*](xref:MySQL_Workbench). However, as MySQL support is **End of Life** as of DataMiner version 10.4.X (Q4 2023), this option is **not recommended**.
 
      > [!NOTE]
-     > As MySQL support will go **End of Life** as of DataMiner version 10.3.X (Q4 2022), we recommend the **Cassandra database** for all new installations. MySQL is no longer included in the 10.2.0 DataMiner installer.
-     > If a MySQL database is used, certain DataMiner features (e.g. trend predictions, ticketing, jobs, service & resource manager) will **not be available**.
+     >
+     > - MySQL is no longer included in the 10.2.0 DataMiner installer.
+     > - If a MySQL database is used, certain DataMiner features (e.g. trend predictions, ticketing, jobs, service & resource manager) will **not be available**.
 
    - If you are using the DataMiner 10.0 installer, on systems intended for DataMiner Failover, install WinPcap by clicking *Install WinPcap*. The Setup Wizard of WinPcap will be launched. Follow the wizard, select *Automatically start the WinPcap driver at boot time*, and click *Next* when necessary.
-
-     On Windows Server 2012, click *Run without getting online help*. Follow the WinPcap setup. When an error occurs, click *OK*.
 
      > [!NOTE]
      > The DataMiner 10.2 installer no longer supports WinPCap. If you intend to configure a [Failover setup based on hostname](xref:Failover_configuration_in_Cube), this software will not be needed. However, if you intend to configure a [Failover setup based on virtual IP](xref:Failover_configuration_in_Cube), you will need to install [NPCap](https://nmap.org/npcap/) instead.

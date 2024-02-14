@@ -23,6 +23,13 @@ It displays the different possible data sources of queries as follows:
 
 ## Configuring the layout
 
+You can **resize the columns** of the table by dragging the edges of the column headers. From DataMiner 10.1.8/10.2.0 onwards, you can also change the order of the columns by dragging the column headers to a different position.
+
+> [!TIP]
+> From DataMiner 10.4.1/10.5.0 onwards<!--RN 37522-->, you can adjust the default column width by accessing the [Template Editor](xref:Template_Editor) through *Layout > Column appearance*.
+
+### Filtering & highlighting
+
 In the *Layout* tab for this component, the *Column filters* option is available, which allows you to highlight cells based on a condition. You can configure this option as follows:
 
 - If the column you want to use for highlighting contains values for which a specific range can be specified, select the column, indicate the range to be highlighted, select the range and then click the color icon on the right to specify a highlight color. Multiple ranges can be indicated for one column, each with a color of its own.
@@ -33,7 +40,35 @@ In the *Layout* tab for this component, the *Column filters* option is available
 
 - You can remove a column filter again by selecting *No color* instead of a specific color.
 
-You can **resize the columns** of the table by dragging the edges of the column headers. From DataMiner 10.2.0/10.1.8 onwards, you can also change the order of the columns by dragging the column headers to a different position.
+### Column appearance
+
+From DataMiner 10.4.1/10.5.0 onwards<!-- RN 37522 -->, in the *Layout* tab, the *Column appearance* option is available, which allows you to customize the appearance of a column.
+
+- To use one of the available presets to alter the column appearance, click the preview below the column name and select a preset option:
+
+  - **Left**: The text is displayed on the left side of the column cell. This is the default setting for columns containing values of type string.
+
+  - **Center**: The text is displayed in the center of the column cell.
+
+  - **Right**: The text is displayed on the right side of the column cell. This is the default setting for columns containing values of type double or datetime.
+
+  - **Hyperlink**: Only available for DataMiner Low-Code Apps. The text functions as a hyperlink, redirecting users to a new webpage in a separate tab.
+
+    > [!NOTE]
+    > If you select this preset option, a [*Navigate to a URL* action](xref:LowCodeApps_event_config#navigating-to-a-url) is automatically configured. The default URL is `https://[Your DMA]/{DMA root}`, which you can edit in the [Template Editor](xref:Template_Editor).
+
+  - **Icon**: An icon is displayed in the center of the column cell. By default, the info icon is used.
+
+  - **Background**: A background color is added to the column cell. By default, a blue color (#1F68BF) is used.
+
+- To freely customize the appearance of a column, click the ellipsis button ("...") next to the column name and select *Customize preset* to open the Template Editor.
+
+  > [!TIP]
+  > For more information on using the Template Editor, see [Template Editor](xref:Template_Editor).
+
+- If you open the Template Editor after selecting a preset option, the template may already contain certain configured layers.
+
+  For example, if you selected the *Hyperlink* preset, a rectangle layer with opacity 0%, including a *Navigate to a URL* action, will be configured. Additionally, the text color of the text layer will be set to blue (#1F68BF), and the text inside the text box will be enclosed by HTML `<u>` elements to define underlined text.
 
 ## Adding actions to a table
 
@@ -41,17 +76,34 @@ If you add a table component to a custom app using the [DataMiner Low-Code Apps]
 
 To configure actions:
 
-1. In the *Component* \> *Settings* pane, expand the *Actions* section.
+- From DataMiner 10.4.1/10.5.0 onwards<!--RN 37522-->:
 
-1. Click *Add action*.
+  - In the Template Editor, you can **configure actions for table columns**. Actions can be linked to the *On click* event of a shape in a column template, allowing you to define your own links or buttons inside a table.
 
-1. To specify how the action is triggered, at the top of the action configuration section, click the icon for text hyperlink, row double-click, or cell button.
+    > [!TIP]
+    > For more information, see [Changing template settings](xref:Template_Editor#changing-template-settings).
 
-1. In the *Label* box, specify a label for the action.
+  - You can also **configure actions that are executed when a row is double-clicked**:
 
-1. In the *Icon* box, select an icon for the action.
+    1. In the *Component > Settings* pane, expand the *Actions* section.
 
-1. In the *Action* box, select the action that should be executed. You can for instance use this to add an update action to the table, or to allow users to select an item or clear their selection. See [Configuring low-code app events](xref:LowCodeApps_event_config).
+    1. Click *On double-click*.
+
+    1. In the pop-up window, select the action that should be executed. See [Configuring low-code app events](xref:LowCodeApps_event_config).
+
+- Prior to DataMiner 10.4.1/10.5.0:
+
+  1. In the *Component* \> *Settings* pane, expand the *Actions* section.
+
+  1. Click *Add action*.
+
+  1. To specify how the action is triggered, at the top of the action configuration section, click the icon for text hyperlink, row double-click, or cell button.
+
+  1. In the *Label* box, specify a label for the action.
+
+  1. In the *Icon* box, select an icon for the action.
+
+  1. In the *Action* box, select the action that should be executed. You can for instance use this to add an update action to the table, or to allow users to select an item or clear their selection. See [Configuring low-code app events](xref:LowCodeApps_event_config).
 
 ## Configuring other component settings
 
@@ -68,7 +120,7 @@ In the *Settings* tab for this component, you can customize its behavior to suit
 
 ## Exporting the table
 
-From DataMiner 10.2.0/10.1.3 onwards, you can export the content of the table by clicking the ... button in the top-right corner of the component and selecting *Export to CSV*. What happens next depends on your DataMiner version:
+From DataMiner 10.1.3/10.2.0 onwards, you can export the content of the table by clicking the ... button in the top-right corner of the component and selecting *Export to CSV*. What happens next depends on your DataMiner version:
 
 - Prior to DataMiner 10.3.8/10.4.0, if nothing is selected in the table, the entire table will be exported; otherwise only the selected rows will be exported. The data will contain the display values, not the raw values. This means that units will be included for the parameter values and that discrete values will be replaced by their corresponding display values.
 

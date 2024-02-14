@@ -28,6 +28,7 @@ Pending calls indicate the currently running logic of the driver linked to the e
 >
 > - When the logging levels of the element are set to Level 2, some additional information will be available.
 > - If you use the *Protocol Pendingcalls* option for an element that is stuck, you will not get any diagnostics info, because this feature will try to add a lock on the element and that will fail, since it is stuck. If you use the *Protocol Pendingcalls[no lock]* option instead, you will get some diagnostics info.
+> - In case element issues are encountered while a [Log Collector package](xref:Collecting_data_to_report_an_issue_to_TechSupport) is generated, SLLogCollector will request the pending calls as well (from DataMiner 10.0.0 [CU22]/10.1.0 [CU18]/10.2.0 [CU6]/10.2.9 onwards<!-- RN 33932 -->). You can find these in a subfolder within the logging folder.
 
 For more information on how to use SLNetClientTest tool, see [SLNetClientTest tool](xref:SLNetClientTest_tool).
 

@@ -6,7 +6,7 @@ uid: KI_SLNet_Deadlock_EPM_Setups
 
 ## Affected versions
 
-From DataMiner 10.3.9 onwards.
+DataMiner 10.3.9 and 10.3.10
 
 ## Cause
 
@@ -14,7 +14,7 @@ DataMiner 10.3.9 introduced some security enhancements on the deserialization of
 
 ## Fix
 
-No fix is available yet.
+Install DataMiner 10.3.11/10.4.0<!--RN 37462-->.
 
 ## Description
 

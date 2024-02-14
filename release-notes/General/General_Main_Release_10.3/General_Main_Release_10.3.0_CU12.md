@@ -1,0 +1,244 @@
+---
+uid: General_Main_Release_10.3.0_CU12
+---
+
+# General Main Release 10.3.0 CU12 – Preview
+
+> [!IMPORTANT]
+> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+
+> [!TIP]
+> For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
+
+### Breaking changes
+
+#### Microsoft Entra ID: Enhanced user and group import [ID_38154]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+A number of improvements have been made with regard to importing users and user groups into Microsoft Entra ID (formerly known as Azure Active Directory):
+
+- Enhanced performance for tenants with large amounts of users and groups.
+- Support for users of which the name contains non-ASCII characters, users sharing the same given name and surname, and users of whom the given name and/or surname is not provisioned.
+- Group descriptions will now also be imported.
+
+These improvements include the following **breaking change**:
+
+User name format has changed from `{organization}\{givenName}.{surname}` to `{domain}\{username}` based on the `userPrincipalName`.
+
+This format is now consistent with automatic user provisioning via SAML authentication.
+
+For example, "ZIINE\Björn.Waldegård" with userPrincipalName <bjorn.waldegard@ziine.com> will now become "ziine.com\bjorn.waldegard".
+
+### Enhancements
+
+#### DataMiner upgrade: New prerequisite will check whether ASP.NET 8.0 Hosting Bundle is installed [ID_37969]
+
+<!-- MR 10.3.0 [CU12] / 10.4.0 [CU0] - FR 10.4.3 [CU0] -->
+
+When you upgrade a DataMiner System, a new prerequisite will now block the upgrade when the server does not have [Microsoft ASP.NET 8.0 Hosting Bundle](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-8.0.1-windows-hosting-bundle-installer) installed.
+
+#### SLNetClientTest tool: Message builder now allows creating an instance of an abstract type or interface [ID_38236]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+The message builder in the SLNetClientTest tool allows you to build SLNet messages from scratch, filling out values for the properties in `DMSMessage` objects.
+
+Up to now, if these properties were for an abstract type or interface, it was not possible to fill out a value. From now on, it will be possible to select a concrete type, create an instance, and edit the properties of that object.
+
+#### DataMiner upgrade: Enhanced robustness of MSI package installations [ID_38376]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.2 [CU0] -->
+
+Up to now, during a DataMiner upgrade, in some cases, MSI packages would fail to install and throw one of the following errors:
+
+- `The Installer has insufficient privileges to access this directory: ...`
+- `Service ... could not be installed. Verify that you have sufficient privileges to install system services.`
+
+From now on, when one of the above-mentioned errors is thrown, it will no longer be necessary to restart the entire upgrade procedure. Instead, a retry will be attempted during the running upgrade.
+
+#### Security enhancements [ID_38386]
+
+<!-- 38386: MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+A number of security enhancements have been made.
+
+#### SLProtocol will now always fetch element data page by page except on systems with a MySQL database [ID_38388]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+From now on, SLProtocol will always fetch element data page by page, except on systems with a MySQL database.
+
+On systems with a MySQL database, SLProtocol will continue to fetch element data by parameter ID.
+
+#### DataMiner upgrade: SLAnalytics upgrade actions now support Cassandra connections with TLS [ID_38393]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+DataMiner upgrade actions related to SLAnalytics features now also support Cassandra connections with TLS.
+
+#### SLAnalytics: Trend data pattern records will no longer be deleted from the database [ID_38407]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+From now on, trend data pattern records will no longer be deleted from the Elasticsearch/OpenSearch database.
+
+#### Enhanced performance when updating cell-based subscriptions in SLNet [ID_38445]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+Because of a number of enhancements, overall performance has increased when updating cell-based subscriptions in SLNet.
+
+These subscriptions mostly originate from visual overviews.
+
+#### GQI: Enhanced performance when executing 'Get parameters from elements' queries for parameter tables [ID_38460]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+When a *Get parameters from elements* query is executed for a parameter table, from now on, the table sessions that are used to resolve those tables in parallel will be closed asynchronously.
+
+As a result, overall performance of clients like the Dashboards app or a low-code app will significantly increase when executing this type of queries.
+
+#### SLAnalytics: Notification alarm 'Failed to start Analytics feature(s)...' will now be cleared automatically [ID_38621]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+The following notification alarm, generated when an SLAnalytics feature failed to start up, will now be automatically cleared when that same feature starts up correctly.
+
+`Failed to start x Analytics feature(s). Check the Analytics logging (SLAnalytics.txt) for more information.`
+
+#### GQI: Clearer error message will now be thrown when an ad hoc data source or custom operator cannot be instantiated [ID_38686]
+
+<!-- MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+Up to now, when an ad hoc data source or custom operator could not be instantiated, the following exception would be thrown when an error occurred on object creation level (within the constructor):
+
+`Error: Could not create instance of datasource when trying to use an ad hoc datasource.`
+
+From now on, the following exception will be thrown instead:
+
+`Error trapped: Could not create instance of datasource 'datasource ID': <exception message>.`
+
+\* `<exception message>` being the message that was thrown within the constructor.
+
+#### SLLogCollector will now also collect the logs of the CommunicationGateway DxM [ID_38716]
+
+<!-- MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+SLLogCollector will now also collect the logs of the *CommunicationGateway* DxM.
+
+### Fixes
+
+#### DataMiner installer: Some modules would not get installed while performing a full installation of a new DMA [ID_37719]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+Up to now, when you ran the DataMiner installer to install a new DataMiner Agent using a DataMiner upgrade package, some modules would incorrectly not get installed as they were configured to only be installed when upgrading an existing DataMiner Agent.
+
+From now on, when you run the DataMiner installer to install a new DataMiner Agent using a DataMiner upgrade package, all installation steps will be performed, including the upgrade actions.
+
+#### Problem when loading data of elements hosted on another DMA while a Correlation rule action was running [ID_38121]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.2 -->
+
+When, while an extensive Correlation rule action was running, you opened an element card of an element hosted on a DataMiner Agent other than the one you were connected to, loading the data of that element could get delayed until the Correlation rule action had finished.
+
+#### Web apps: Visual overview linked to a view would not get any updates when the user did not have full administrative rights [ID_38180]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
+
+When a web app user without full administrative rights viewed a visual overview linked to a view, the app would incorrectly not receive any updates for that visual overview.
+
+#### DataMiner clients using a gRPC connection would not always detect a disconnect [ID_38215]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+In some cases, DataMiner clients using a gRPC connection would not detect a disconnect.
+
+#### Correlation: Alarm buckets would not get cleaned up when alarms were cleared before the end of the time frame specified in the 'Collect events for ... after first event, then evaluate conditions and execute actions' setting [ID_38292]
+
+<!-- MR 10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
+
+Up to now, when alarms were cleared before the end of the time frame specified in the *Collect events for ... after first event, then evaluate conditions and execute actions* correlation rule setting, the alarm buckets would not get cleaned up.
+
+From now on, when a correlation rule is configured to use the *Collect events for ... after first event, then evaluate conditions and execute actions* trigger mechanism, all alarm buckets will be properly cleaned up, unless there are actions that need to be executed either when the base alarms are updated or when alarms are cleared.
+
+#### Web apps - Visual overview: Popup window would not display a hidden page when the visual overview only contained one non-hidden page [ID_38331]
+
+<!-- MR 10.2.0 [CU21] / 10.3.0 [CU12] / 10.4.0 [CU0] - - FR 10.4.3 [CU0] -->
+
+When, in a visual overview with one non-hidden page displayed in a web app, you tried to open a popup window linked to a page marked as "hidden", the popup window would incorrectly display the non-hidden page instead of the hidden page.
+
+#### Automation: Script data cleanup routine could cause an error to occur [ID_38370]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+In some rare cases, a cleanup routine within SLAutomation could prematurely clean up data of scripts that had not yet finished, causing an error to occur.
+
+#### Automation: Problem when empty data is passed to the UI parser when running an interactive Automation script [ID_38408]
+
+<!-- MR 10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
+
+When running an interactive Automation script that was launched from Cube or a web app, in some cases, an exception could be thrown when empty data was passed to the UI parser.
+
+From now on, an exception will no longer be thrown when empty data is passed to the UI parser.
+
+#### DataMiner upgrade: Problem with AnalyticsParameterInfoRecordAddChangeRate upgrade action on systems with a Cassandra Cluster database [ID_38443]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+During a DataMiner upgrade, the *AnalyticsParameterInfoRecordAddChangeRate* upgrade action executes an *Alter Table* command on every DataMiner Agent in the cluster. Up to now, when you upgraded a DataMiner System with a Cassandra Cluster database, that *Alter Table* command would incorrectly only get executed on the first DMA that called it. On each subsequent DMA that called the command, errors would get thrown and added to the *upgrade.log* file.
+
+#### Problem with SLDMS [ID_38469]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+In some cases, an error could occur in the SLDMS process when the SLDMKey object was accesses from multiple threads.
+
+#### Fatal error reported in Windows Event Viewer each time the APIGateway was stopped [ID_38504]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+Each time the APIGateway service was stopped, a fatal error would incorrectly be reported in the Windows Event Viewer.
+
+#### Alarm filters would not be properly serialized when using a gRPC connection [ID_38507]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+When a client application was connected to a DataMiner Agent via a gRPC connection, in some cases, the alarm filters it received from the DataMiner Agent would not be properly serialized.
+
+#### Problem with file offload mechanism when main database is offline [ID_38542]
+
+<!-- MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+When the main database is offline, file offloads are used to store write/delete operations. In some cases, this file offload mechanism could end up in an unrecoverable state due to a threading issue.
+
+#### Problem with SLProtocol when calculating the length of a serial response [ID_38591]
+
+<!-- MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+In some cases, SLProtocol could stop working due to an `Access violation reading location` error being thrown while calculating the length of a serial response.
+
+#### SLAnalytics features would not start up correctly after a database connection problem [ID_38600]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+Up to now, when writing to the database or reading from the database failed, a retry was attempted after 5 seconds. In some cases, especially when the SLNet connection was lost during startup, that retry would also fail, causing certain SLAnalytics features to not start up correctly. From now on, when writing to the database or reading from the database fails, SLAnalytics will wait longer than 5 seconds before attempting a retry.
+
+#### Protocols: IDisposable QActions would incorrectly not be disposed [ID_38605]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+When DataMiner was processing all QActions in order to call the `Dispose` method on the QActions that implement `IDisposable`, it would incorrectly no longer call the `Dispose` method on QActions that implement `IDisposable` after processing a QAction that did not implement `IDisposable`.
+
+#### Problem when adding a DMA to a DMS [ID_38620]
+
+<!-- MR 10.3.0 [CU12] / 10.4.0 [CU0] - FR 10.4.3 [CU0] -->
+
+When a DataMiner Agent was added to a DataMiner System, in some cases, the SLNet cache of the new DataMiner Agent would not get updated, causing the Agent to not be aware it was now part of a DMS.
+
+#### Service & Resource Management: Booking corrupted after SRM_QuarantineHandling retrieved incorrect version of the booking [ID_38646]
+
+<!-- MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+Up to now, it could occur that the script *SRM_QuarantineHandling* retrieved a previous version of a booking instead of the latest, quarantined version, which could cause subsequent updates to corrupt the booking object. To prevent this, *SRM_QuarantineHandling* will now be called after a booking is saved.

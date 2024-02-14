@@ -7,11 +7,11 @@ uid: deploying_srm
 1. Ensure that a DataMiner version is installed that is compatible with the SRM version you want to deploy. Check the SRM release notes to see which minimum DataMiner version is required. Contact Skyline Communications to check if any additional components need to be installed in your system.
 
    > [!NOTE]
-   > The SRM framework requires an [Elasticsearch database](xref:Elasticsearch_database).
+   > The SRM framework requires [STaaS](xref:STaaS) or a [self-hosted DataMiner storage setup](xref:Supported_system_data_storage_architectures) with Cassandra-compatible database and indexing database.
 
 1. Download the SRM package from [DataMiner Dojo](https://community.dataminer.services/downloads/).
 
-1. Double-click the SRM package, and install the package in the same manner as a DataMiner upgrade.
+1. In DataMiner Cube, go to *Apps* > *System Center* > *Agents* > *Manage*, and install the package in the same manner as a [DataMiner upgrade](xref:Upgrading_a_DataMiner_Agent_in_System_Center).
 
    > [!NOTE]
    > DataMiner will restart during the installation of the package.
@@ -54,3 +54,8 @@ uid: deploying_srm
    - Set *Services* > *App. Services View* to the name of the view you created to contain services (e.g. "3 - Services").
 
    - Set *History and Logs* > *Booking Logging Location* to a shared folder accessible from both the client machine and the DataMiner servers, so that users will be able to view the log files. See [Configuring SRM logging](xref:SRM_logging_config).
+
+> [!NOTE]
+>
+> - To upgrade your SRM installation later, first check the SRM release notes of the version you want to install and make sure you are running the correct DataMiner version. The compatible DataMiner version is mentioned at the top of the release notes page for each SRM version. Once have done this, install the SRM package to upgrade.
+> - To downgrade SRM to a previous version, install the earlier package.

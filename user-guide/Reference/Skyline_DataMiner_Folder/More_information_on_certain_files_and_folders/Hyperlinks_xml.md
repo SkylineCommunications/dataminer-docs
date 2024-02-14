@@ -180,7 +180,7 @@ From DataMiner 10.0.12 onwards, it is possible to use a filter that checks wheth
 ```
 
 > [!NOTE]
-> The KeyExists filter is not recommended for data retrieval from Cassandra or Elasticsearch, as the filter will only be applied after data is retrieved from these databases.
+> The KeyExists filter is not recommended for data retrieval from Cassandra or an indexing database, as the filter will only be applied after data is retrieved from these databases.
 
 #### combineParameters
 

@@ -10,13 +10,13 @@ To install and set up DataMiner IDP:
 
    - DataMiner version **10.1.0 CU10** or higher must be installed in your DMS. For older IDP versions (prior to IDP 1.1.20), the minimum supported version is DataMiner 10.0.0 CU9.
 
-   - If you want to use scheduled activities, your DMS must use an **Elasticsearch database**.
+   - If you want to use scheduled activities, your DMS must use [STaaS](xref:STaaS) or a [self-hosted DataMiner storage setup](xref:Supported_system_data_storage_architectures) with Cassandra-compatible database and indexing database.
 
    - If you want to use Process Automation, make sure **DataMiner SRM, Process Automation, and Token activity** are installed before you install the IDP package. If you want to be able to repeat processes with a timer, the **Repeat Gateway** also has to be installed.
 
 1. Download the DataMiner IDP package from [DataMiner Dojo](https://community.dataminer.services/downloads/).
 
-1. Double-click the IDP package, and install the package in the same manner as a DataMiner upgrade.
+1. In DataMiner Cube, go to *Apps* > *System Center* > *Agents* > *Manage*, and install the package in the same manner as a [DataMiner upgrade](xref:Upgrading_a_DataMiner_Agent_in_System_Center).
 
    > [!NOTE]
    > DataMiner will restart during the installation of the package.

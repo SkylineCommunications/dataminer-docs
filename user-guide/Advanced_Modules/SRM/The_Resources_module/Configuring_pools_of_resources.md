@@ -51,7 +51,7 @@ In order to define properties for all resources in a pool, and optionally limit 
    - Select *Value list*, and, for each possible value for the property, click the *Add value* button and specify the value.
 
    > [!NOTE]
-   > From DataMiner 10.3.7/10.3.0[CU4] onwards, you can save a resource property without specifying a value for that property. <!-- RN 36345 -->
+   > From DataMiner 10.3.7/10.3.0 [CU4] onwards, you can save a resource property without specifying a value for that property. <!-- RN 36345 -->
 
 ## Adding resources to a pool
 

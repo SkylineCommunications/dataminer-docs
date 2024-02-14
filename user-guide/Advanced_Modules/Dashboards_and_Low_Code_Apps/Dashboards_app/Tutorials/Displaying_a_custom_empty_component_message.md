@@ -30,7 +30,7 @@ The content and screenshots for this tutorial have been created in DataMiner 10.
 
 1. Drag and drop any of the above-mentioned components to the dashboard, for example a table.
 
-   ![Possible components](~/user-guide/images/PossibleComponents.png)
+![Possible components](~/user-guide/images/PossibleComponents.png)<br/>*DataMiner 10.3.11 with soft-launch options ReportsAndDashboardsScheduler and ReportsAndDashboardsDynamicVisuals enabled.*
 
 1. Add a query to the component.
 

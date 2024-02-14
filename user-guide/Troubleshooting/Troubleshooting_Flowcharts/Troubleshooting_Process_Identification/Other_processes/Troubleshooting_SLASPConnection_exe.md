@@ -18,7 +18,7 @@ However, note that any reports that were in the queue will no longer be generate
 
 ## Reporter troubleshooting flowchart
 
-<div class="mermaid">
+```mermaid
 flowchart TD
 %% -------------------------------------------------------------------------
 %% Define styles
@@ -90,7 +90,7 @@ class Start,End classTerminal;
 class ReportTimeout classSolution;
 class Process classInputOutput;
 class HOME,BACK classExternalRef;
-</div>
+```
 
 ## How to configure DCOM manually?
 

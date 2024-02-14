@@ -54,8 +54,6 @@ items:
         topicUid: The_terminal_server_has_exceeded_the_maximum_number_of_allowed_connections
       - name: Thread problem in x. y
         topicUid: Thread_problem_in_x
-      - name: Trust not granted
-        topicUid: Trust_not_granted
       - name: Unknown Error
         topicUid: Unknown_Error
   - name: Logging
@@ -185,74 +183,61 @@ items:
   - name: Troubleshooting procedures
     topicUid: Troubleshooting_procedures
     items:
-      - name: Cassandra does not start up after a server restart
-        topicUid: Cassandra_not_starting_up_after_server_restart
       - name: Collecting DataMiner Cube memory dumps
         topicUid: Collecting_DataMiner_Cube_memory_dumps
       - name: Collecting data to report an issue to Technical Support
         topicUid: Collecting_data_to_report_an_issue_to_TechSupport
+      - name: Investigating dataminer.services connection issues
+        topicUid: Cloud_Connection_Issues
       - name: Investigating NATS issues
         topicUid: Investigating_NATS_Issues
       - name: Investigating OpenSearch issues
         topicUid: Investigating_OpenSearch_Issues
+      - name: Investigating web issues
+        topicUid: Investigating_Web_Issues
       - name: Keeping a DMA from running out of disk space
         topicUid: Keeping_a_DMA_from_running_out_of_disk_space
       - name: Sharing dashboard window does not disappear
         topicUid: Sharing_dashboard_window_does_not_disappear
-      - name: Troubleshooting SAML issues
-        topicUid: Troubleshooting_SAML_Issues
       - name: Manually removing old alarms from an Elasticsearch cluster
         topicUid: Manually_removing_old_alarms_from_ES
+      - name: Cassandra does not start up after a server restart
+        topicUid: Cassandra_not_starting_up_after_server_restart
+      - name: Elasticsearch/OpenSearch does not start up after upgrade or disk cleanup
+        topicUid: Elastic_not_starting_after_upgrade_cleanup
   - name: Known issues
     topicUid: Known_issues
     items:
       - name: Current issues
-        topicUid: KI_elements_not_loading_in_DMS_with_multiple_ES
         items:
-          - name: Elements not loading after upgrade of DMS with multiple Elasticsearch clusters
-            topicUid: KI_elements_not_loading_in_DMS_with_multiple_ES
-          - name: SLNet deadlock in EPM setups
-            topicUid: KI_SLNet_Deadlock_EPM_Setups
+          - name: Port exhaustion because of NATS reconnection attempts
+            topicUid: KI_port_exhaustion_because_of_NATS_reconnect_attempts
+          - name: One or multiple Analytics features fail to start
+            topicUid:  KI_Analytics_features_not_starting
+          - name: NATS services missing after reboot
+            topicUid: KI_missing_NATS_services
+          - name: Problem after removing DMA from cluster
+            topicUid: KI_Problem_after_removing_DMA_from_cluster
           - name: Max Payload exceptions occur when using MessageBroker with chunking
             topicUid: KI_DataMinerMessageBroker_Chunking_MaxPayload
-          - name: Unable to connect to DMS when using .NET Remoting
-            topicUid: KI_Unable_to_Connect_Net_Remoting
           - name: Various issues with a geo-redundant Cassandra setup with multiple data centers
             topicUid: KI_Multiple_Datacenters
-          - name: Cassandra disconnects after loss of a single node
-            topicUid: KI_Cassandra_disconnects_after_loss_of_a_single_node
           - name: Corrupted low-code app after concurrent editing actions
             topicUid: KI_app_corruption_after_editing
-          - name: Cassandra cluster data not offloaded while database is unavailable
-            topicUid: KI_Cassandra_cluster_data_not_offloaded
           - name: Elasticsearch not initialized when DataMiner starts up
             topicUid: KI_Elasticsearch_not_initialized_on_DMA_startup
           - name: DataMiner keeps trying to restart when Elasticsearch is unavailable
             topicUid: KI_Restart_loop_when_Elasticsearch_unavailable
-          - name: SRM - Auto Select Resource not read for silent booking
-            topicUid: KI_SRM_Auto_Select_Resource_Not_Read
           - name: IP address in SAN field of TLS certificate ignored in Windows 2012 R2
             topicUid: KI_Win2012R2_ignores_IP_in_SAN_field
           - name: Local user unable to access DMA after first reboot after installation
             topicUid: KI_Local_user_unable_to_access_DMA_after_first_reboot_after_installation
-          - name: Contents of state_changes table not migrated after Cassandra Cluster migration
-            topicUid: KI_Contents_of_State_changes_Table_not_Migrated_after_Cassandra_Cluster_Migration
-          - name: Vertical text in Visual Overview not displayed correctly
-            topicUid: KI_Visual_Overview_Vertical_Text_no_longer_working
           - name: Various SLElement issues
             topicUid: KI_SLElement_various_issues
-          - name: Multiple issues when Failover based on hostnames is used
-            topicUid: KI_Failover_with_hostnames
           - name: NATS not starting if DMS name contains special characters
             topicUid: KI_NATS_not_starting_special_chars
-          - name: Excessive SLElement CPU usage during Cassandra Cluster migration
-            topicUid: KI_SLElement_CPU_high_during_CC_migration
-          - name: SLElement memory leak during Cassandra Cluster migration
-            topicUid: KI_SLElement_CPU_memory_leak_during_CC_migration
           - name: Upgrade fails because of VerifyClusterPort.dll prerequisite
             topicUid: KI_Upgrade_fails_VerifyClusterPorts_prerequisite
-          - name: Cassandra nodes not configured if current DMA IP is assigned as virtual IP
-            topicUid: KI_Cassandra_nodes_not_configured_if_current_DMA_IP_is_assigned_as_virtual_IP
           - name: DataMiner Cube freeze on startup
             topicUid: KI_DataMiner_Cube_freeze_on_startup
           - name: Migration of Ticketing data from Cassandra to Elasticsearch fails
@@ -260,8 +245,51 @@ items:
           - name: Setting a protocol to production takes a long time
             topicUid: KI_Setting_a_protocol_to_production_takes_a_long_time
       - name: Resolved issues
-        topicUid: KI_Cassandra_backups_not_working
         items:
+          - name: NATS configuration not updated after adding DMA to DMS
+            topicUid: KI_NATS_config_not_updated_after_adding_DMA
+          - name: Downgrade fails because of VerifyNatsIsRunning.dll prerequisite
+            topicUid: KI_Downgrade_fails_VerifyNatsIsRunning_prerequisite
+          - name: Failover Agents remain offline after upgrade
+            topicUid: KI_Failover_Agents_offline_after_upgrade
+          - name: Multiple issues when Failover based on hostnames is used
+            topicUid: KI_Failover_with_hostnames
+          - name: Elements not loading after upgrade of DMS with multiple Elasticsearch clusters
+            topicUid: KI_elements_not_loading_in_DMS_with_multiple_ES
+          - name: Various issues when using MessageBroker with chunking
+            topicUid: KI_DataMinerMessageBroker2
+          - name: Upgrade fails because of VerifyElasticStorageType.dll prerequisite
+            topicUid: KI_Upgrade_fails_VerifyElasticStorageType_prerequisite
+          - name: Upgrade fails because of VerifyNoLegacyReportsDashboards.dll prerequisite
+            topicUid: KI_Upgrade_fails_VerifyNoLegacyReportsDashboards_prerequisite
+          - name: Upgrade fails because of VerifyNoObsoleteApiDeployed.dll prerequisite
+            topicUid: KI_Upgrade_fails_VerifyNoObsoleteApiDeployed_prerequisite
+          - name: Cube freezes on 'Connected!' loading screen when no alarm tabs are displayed
+            topicUid: KI_Cube_connection_issue_alarm_tabs
+          - name: SLNet deadlock in EPM setups
+            topicUid: KI_SLNet_Deadlock_EPM_Setups
+          - name: Unable to connect to DMS when using .NET Remoting
+            topicUid: KI_Unable_to_Connect_Net_Remoting
+          - name: Various resolved issues with a geo-redundant Cassandra setup with multiple data centers
+            topicUid: KI_Multiple_Datacenters_resolved_issues
+          - name: Cassandra disconnects after loss of a single node
+            topicUid: KI_Cassandra_disconnects_after_loss_of_a_single_node
+          - name: Cassandra cluster data not offloaded while database is unavailable
+            topicUid: KI_Cassandra_cluster_data_not_offloaded
+          - name: SRM - Auto Select Resource not read for silent booking
+            topicUid: KI_SRM_Auto_Select_Resource_Not_Read
+          - name: Contents of state_changes table not migrated after Cassandra Cluster migration
+            topicUid: KI_Contents_of_State_changes_Table_not_Migrated_after_Cassandra_Cluster_Migration
+          - name: Vertical text in Visual Overview not displayed correctly
+            topicUid: KI_Visual_Overview_Vertical_Text_no_longer_working
+          - name: Excessive SLElement CPU usage during Cassandra Cluster migration
+            topicUid: KI_SLElement_CPU_high_during_CC_migration
+          - name: SLElement memory leak during Cassandra Cluster migration
+            topicUid: KI_SLElement_CPU_memory_leak_during_CC_migration
+          - name: Cassandra nodes not configured if current DMA IP is assigned as virtual IP
+            topicUid: KI_Cassandra_nodes_not_configured_if_current_DMA_IP_is_assigned_as_virtual_IP
+          - name: Offload to MySQL offload database fails
+            topicUid: KI_offload_database_incorrect_integer_value
           - name: Cassandra backups no longer working
             topicUid: KI_Cassandra_backups_not_working
           - name: RTEs caused by problem during automatic NATS reconfiguration
@@ -278,6 +306,8 @@ items:
             topicUid: KI_SRM_booking_events_issue
           - name: SLPort deadlock when element with serial connection is restarted
             topicUid: KI_SLPort_deadlock_after_restart_serial_connection
+          - name: Node 'X' is not supported by the current server version
+            topicUid: KI_Node_is_not_supported_by_the_current_server_version
           - name: Cassandra cluster node in unexpected state
             topicUid: KI_Cassandra_cluster_node_unexpected_state
           - name: Year 2038 problem for Cassandra
@@ -328,8 +358,6 @@ items:
             topicUid: KI_Incorrect_RTE_counts_in_SLWatchdog2txt_and_Alarm_Console
           - name: NATS error message after 10.1 installation
             topicUid: KI_NATS_error_message_after_10_1_installation
-          - name: Not possible to generate reports on Windows Server 2012 or earlier
-            topicUid: KI_Not_possible_to_generate_reports_on_Windows_Server_2012_or_earlier
           - name: Shapes in DataMiner stencils not found in Visio search
             topicUid: KI_Shapes_in_DataMiner_stencils_not_found_in_Visio_search
           - name: SLDataMiner addressChangeThread RTE after DMA startup

@@ -12,9 +12,11 @@ NatsCustodian acquires the IP addresses of DataMiner Agents in the DataMiner Sys
 
 The system incorporates several checks, including identification of new nodes, detection of deleted nodes, tracking of unreachable nodes, validation of configuration correctness, and ensuring the running status of the NATS process.
 
-Should NatsCustodian identify any inconsistency other than unreachable nodes, an automatic NATS reconfiguration is initiated.
+From DataMiner 10.2.0 [CU20]/10.3.0 [CU8]/10.3.11 onwards<!--RN 37271-->, when NatsCustodian detects that a NATS node has been added or deleted, that NATS is in an incorrect state, or that the NATS process is not running, an automatic NATS reconfiguration is initiated. Unreachable nodes do not generate any alarms or trigger a NATS reconfiguration. Instead, an entry is added to the *NATSCustodian.txt* log file for diagnostic purposes.
 
-<div class="mermaid">
+Prior to DataMiner 10.2.0 [CU20]/10.3.0 [CU8]/10.3.11, should NatsCustodian identify any inconsistency other than unreachable nodes, an automatic NATS reconfiguration is initiated.
+
+```mermaid
 flowchart TD
     %% Define styles %%
     linkStyle default stroke:#cccccc
@@ -63,7 +65,7 @@ flowchart TD
     class Start,End classTerminal;
     class S1,S4,S4A,S4B,Q1 classDecision;
     class S2,S3,S5,S6,S7,S8,S9,S10,A1,A1S2 classExternalRef;
-</div>
+```
 
 ## NatsCustodian workflow up to DataMiner 10.2.0 [CU18], 10.3.0 [CU6], and 10.3.9
 
@@ -72,7 +74,7 @@ NatsCustodian operates by gathering the IP addresses of DataMiner Agents that ar
 > [!NOTE]
 > The functionality of this version of NatsCustodian is contingent upon the connection status of the DataMiner Agents within the cluster, which is maintained and verified by the SLNet process. See flowchart below for a more detailed explanation.
 
-<div class="mermaid">
+```mermaid
 flowchart TD
     %% Define styles %%
     linkStyle default stroke:#cccccc
@@ -117,7 +119,7 @@ flowchart TD
     class Start,End classTerminal;
     class S4A,S1,S4B,Q1 classDecision;
     class S2,S3,S5,S6,S7,S8,S9,A1A,S10 classExternalRef;
-</div>
+```
 
 ### Triggering NATS reconfiguration
 

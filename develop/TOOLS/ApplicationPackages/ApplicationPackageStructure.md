@@ -67,10 +67,6 @@ This folder contains the following scripts and optional folders:
   - Installed applications are stored in the folder `C:\Skyline DataMiner\AppPackages\Installed`.
   - Is triggered automatically when SLTaskBarUtility is used via a *.dmupgrade* package.
   - Can be triggered manually via the SLNETClientTest tool.
-- **Config.xml**:
-  - Defines the configuration procedure linked to this application version (optional).
-  - Can only be triggered via the SLNETClientTest tool.
-  - Requires user interaction.
 - **Uninstall.xml**:
   - Defines the uninstall procedure linked to this application version (optional).
   - If an application is installed with **AllowMultipleInstalledVersions* set to false, the uninstall script of each previous installed version of the application will be executed.
@@ -78,7 +74,6 @@ This folder contains the following scripts and optional folders:
   - Can be triggered via the SLNETClientTest tool.
   - The user permission *Install app packages* is required in order to trigger uninstalling an application package.
 - **InstallDependencies**: A folder containing all DLL files used by the installation script.
-- **ConfigureDependencies**: A folder containing all DLL files used by the configuration script.
 - **UninstallDependencies**: A folder containing all DLL files used by the script to uninstall the application.
 
 ## AppInstallContent

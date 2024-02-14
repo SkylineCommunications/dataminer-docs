@@ -29,7 +29,7 @@ Proceed as follows to upgrade your DataMiner Agent(s) to the latest version:
    > [!NOTE]
    >
    > - From DataMiner 10.0.0 CU20, 10.1.0 CU9, and 10.1.12 onwards, if your system does not meet the prerequisites for a specific upgrade version, the upgrade package will not be accepted as a valid package.
-   > - From DataMiner 10.3.0/10.3.3 onwards, you can upgrade the DataMiner web apps separately from the core software, by means of a package available on the [DataMiner Software](https://community.dataminer.services/downloads/) page. However, note that when you install a full upgrade package, this will replace any previous web apps upgrade.
+   > - From DataMiner 10.3.0/10.3.3 onwards, you can [upgrade the DataMiner web apps](xref:Upgrading_Downgrading_Webapps) separately from the core software, by means of a package available on the [DataMiner Software](https://community.dataminer.services/downloads/) page. However, note that when you install a full upgrade package, this will replace any previous web apps upgrade.
 
 1. If you want to upgrade a different Agent than suggested next to *Agents to upgrade*, click *Change* and select the DataMiner Agents that have to be upgraded.
 

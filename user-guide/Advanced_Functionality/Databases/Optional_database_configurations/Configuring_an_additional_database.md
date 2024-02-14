@@ -4,7 +4,7 @@ uid: Configuring_an_additional_database
 
 # Configuring an additional database
 
-Aside from the general and offload database, you can also specify the settings for any other database found on a particular DMA.
+DMAs can use other optional databases aside from the offload database. You can specify the settings for these in System Center.
 
 ## Adding an additional database
 

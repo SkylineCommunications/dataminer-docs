@@ -282,7 +282,7 @@ In a QAction, you can use the SLProtocol.GetKeysForIndex method to retrieve the 
 
 See also:
 
-- SLProtocol.[GetKeysForIndex](xref:Skyline.DataMiner.Scripting.SLProtocol#Skyline_DataMiner_Scripting_SLProtocol_GetKeysForIndex_System_Int32_System_String_) method
+- SLProtocol.[GetKeysForIndex](xref:Skyline.DataMiner.Scripting.SLProtocol.GetKeysForIndex*) method
 - [NT_GET_KEYS_FOR_INDEX (196)](xref:NT_GET_KEYS_FOR_INDEX)
 - [NT_GET_KEYS_FOR_INDEX_CASED (411)](xref:NT_GET_KEYS_FOR_INDEX_CASED)
 

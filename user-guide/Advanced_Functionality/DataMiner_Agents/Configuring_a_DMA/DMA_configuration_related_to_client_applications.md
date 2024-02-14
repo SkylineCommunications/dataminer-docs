@@ -31,7 +31,7 @@ By default, clients connecting to a DataMiner Agent use .NET Remoting with event
 
 To customize how Cube connects to a DMA for a specific computer:
 
-1. In the Cube header bar, click the user icon or the username (in versions prior to DataMiner 10.0.0/10.0.2), and select *Settings*.
+1. In the Cube header bar, click the user icon, and select *Settings*.
 
 1. Go to the *computer* tab of the *Settings* window.
 
@@ -66,14 +66,14 @@ To customize how Cube connects to a DMA for a specific computer:
 
 > [!NOTE]
 >
-> - You can also configure this in the DataMiner Cube logon screen, before you actually log on. See [Overriding the default connection type](xref:Logging_on_to_DataMiner_Cube#overriding-the-default-connection-type).
+> - You can also configure this in the DataMiner Cube logon screen, before you actually log on. See [Overriding the default connection type](xref:Overriding_Cube_connection_type).
 > - The procedure above only applies to the one computer where it is done. If you want to change the default client communication settings for a DMA, you can do so in the file *ConnectionSettings.txt*. See [ConnectionSettings.txt](xref:ConnectionSettings_txt#connectionsettingstxt).
 
 ## Managing client versions
 
 From DataMiner 10.2.0 [CU3]/10.2.6 onwards, Cube can automatically update to a more recent version than the DataMiner version installed on the server. This way, users can use the latest Cube features as soon as these are released without having to wait for a server upgrade. However, in the Cube system settings, you can configure limitations on which client version should be used:
 
-1. In DataMiner Cube, go to System Center > *System settings* > *Manage client versions*.
+1. In DataMiner Cube, go to *System Center > System settings > Manage client versions*.
 
 1. Select which client versions should be used:
 

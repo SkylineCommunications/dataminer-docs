@@ -38,7 +38,7 @@ When an RTE occurs, an alarm is generated in the Alarm Console, the RTE is logge
 
 ## Run-time error flowchart
 
-<div class="mermaid">
+```mermaid
 flowchart TD
 %% Define styles %%
 linkStyle default stroke:#cccccc
@@ -89,4 +89,4 @@ class CHECKALARM,CHECKDUMP,CHECKLOGS,CHECKACTIVE,CHECKCRASHORDISP classDecision;
 class HOME,RTE,NORTE,CRASHORDISP classExtRef;
 class COLLECTLOGS,CHECKRTE classInfoAccClick
 class VERIFYRTE classInfoAccNoClick
-</div>
+```

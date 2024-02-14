@@ -8,7 +8,7 @@ Spectrum analyzers are usually connected to a DataMiner System via a GPIB gatewa
 
 However, in case a Spectrum Analyzer is equipped with a TCP/IP interface, it can also be directly connected to the acquisition LAN.
 
-![](~/user-guide/images/Spectrum_architecture.jpg)
+![spectrum architecture](~/user-guide/images/Spectrum_architecture.jpg)
 
 If a GPIB gateway is used, the Agilent I/O libraries need to be installed. See [Installing the Keysight/Agilent IO Libraries](xref:Installing_the_Keysight_Agilent_IO_Libraries#installing-the-keysightagilent-io-libraries).
 

@@ -4,7 +4,10 @@ uid: Adding_an_item_to_a_dashboard_from_outside_the_Dashboards_app
 
 # Adding an item to a dashboard from outside the Dashboards app
 
-From DataMiner 9.0 onwards, it is possible to add items to a dashboard directly from the Cube UI, for instance from the Surveyor or an element card.
+> [!IMPORTANT]
+> This information is applicable to the DMS Dashboards module, which is being retired as of DataMiner version 10.4.x. See [DataMiner functionality evolution and retirement](xref:Software_support_life_cycles#dataminer-functionality-evolution-and-retirement). For more information on the Dashboards web app available from DataMiner 9.6.9 onwards, see [Dashboards app](xref:newR_D).
+
+It is possible to add items to a dashboard directly from the Cube UI, for instance from the Surveyor or an element card.
 
 1. Select the *Add to dashboard* option in one of the following menus:
 

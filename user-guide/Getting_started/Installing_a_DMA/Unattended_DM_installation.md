@@ -7,7 +7,9 @@ uid: Unattended_DM_installation
 The unattended installation process can be used to install a standalone DMA, but also to install a cluster, set up Failover, or even add a DMA to an existing cluster.
 
 > [!NOTE]
-> The 10.2.0 installer currently does not support unattended installation of a cluster.
+>
+> - The 10.2.0 installer currently does not support unattended installation of a cluster.
+> - Unattended installation of a DataMiner System with OpenSearch database is currently not supported.
 
 To make sure the installation is executed correctly, a valid configuration file and license file must be included in the same folder as *Setup.exe*. See [Unattended installation configuration file](#unattended-installation-configuration-file).
 
@@ -31,7 +33,7 @@ Once the installation process has started, the installer will go through the fol
 
    - VC++ redistributables if required
    - .NET Framework if required
-   - Database software: MySQL or Cassandra, depending on the configuration
+   - Database software: Cassandra or MySQL (not recommended)
 
    > [!NOTE]
    >
@@ -149,7 +151,7 @@ The *DMA* tag has the following possible subtags:
 
 - **Database**
 
-  Indicates the database type to use (*Cassandra*, *CassandraCluster*, *MySQL* or *MSSQL*) using the *type* attribute. This tag must contain the following subtags, detailing the configuration for the *Db.xml* file: *DB*, *DBServer*, *DBDrive*, *ConnectString*, *UID* (user), *PWD* (password) and *Maintenance*. It is possible to leave some of these tags empty, in which case the default configuration will be applied. In addition, any other tags that can be configured in *Db.xml* can also be specified here, e.g. in the *Maintenance* tag.
+  Indicates the database type to use (*Cassandra*, *CassandraCluster*, or *MySQL*) using the *type* attribute. This tag must contain the following subtags, detailing the configuration for the *Db.xml* file: *DB*, *DBServer*, *DBDrive*, *ConnectString*, *UID* (user), *PWD* (password) and *Maintenance*. It is possible to leave some of these tags empty, in which case the default configuration will be applied. In addition, any other tags that can be configured in *Db.xml* can also be specified here, e.g. in the *Maintenance* tag.
 
   Note that for a non-Cassandra database, the drive specified in *DBDrive* must be C.
 

@@ -4,6 +4,9 @@ uid: Security_Cassandra_TLS
 
 # Encryption in Cassandra
 
+> [!TIP]
+> If you do not want the hassle of maintaining the DataMiner storage databases yourself, we recommend using [DataMiner Storage as a Service](xref:STaaS) instead.
+
 ## Client-Server Encryption
 
 By default, Cassandra communicates with clients over an insecure channel, which means attackers can set up Man-In-The-Middle (MITM) attacks to steal data or credentials that are sent over the wire. To mitigate this, encryption should be enabled. Cassandra provides this option through its **client_encryption_options**.
@@ -51,7 +54,6 @@ To generate the certificates, you will need two tools: *openssl* and the *Java k
    > The **OU** is only validated when **internode encryption** is turned on in the *server_encryption_options*. Make sure it matches the *cluster_name* **exactly** or Cassandra will fail to start. You can find the *cluster_name* in the *cassandra.yaml* config file.
    >
    > We also recommend using only ASCII characters in your Cassandra cluster name. The Cassandra documentation is lacking on this front, but we noticed Cassandra failing to start when the *cluster_name* contained certain special/non-ASCII characters.
-
 
 1. Generate the root CA certificate by executing the following command:
 
@@ -193,9 +195,6 @@ To enable inter-node TLS encryption:
 1. Go to *Advanced* and select *This cluster requires SSL*.
 
 1. Point it towards your *rootCa.jks* truststore file and use the password you used to generate it.
-
-> [!NOTE]
-> Currently, we only support TLS version 1.0 for the client-server encryption. If connecting to Cassandra over TLS fails, make sure to check that this version is not disabled on operating system level.
 
 ## Connecting with DataMiner
 

@@ -6,7 +6,7 @@ uid: ReservedIDsEnhancedService
 
 |Range Start  |Range End  |Contents  |
 |---------|---------|---------|
-|1     |1000         |Cannot be used by enhanced service drivers for any purpose besides below.         |
+|1     |999         |Cannot be used by enhanced service drivers for any purpose besides below.         |
 
 - Param 1 is used to forward the service name to the enhanced service element
 - Param 2 is used to forward service severity to the enhanced service element
