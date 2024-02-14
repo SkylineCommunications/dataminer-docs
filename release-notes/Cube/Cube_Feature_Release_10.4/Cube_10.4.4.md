@@ -37,3 +37,15 @@ In some cases, an error could occur in SLHelper when it was generating visual ov
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU13]/10.4.0 [CU1] - FR 10.4.4 -->
 
 In some cases, after you had logged in, DataMiner Cube could become unresponsive when the "Show the news section" setting was enabled.
+
+#### Spectrum analyzer cards could leak memory [ID_38725]
+
+<!-- MR 10.3.0 [CU13]/10.4.0 [CU1] - FR 10.4.4 -->
+
+In some cases, spectrum analyzer cards could leak memory.
+
+#### Memory leak when opening a trend graph that had pattern matching activated [ID_38728]
+
+<!-- MR 10.3.0 [CU13]/10.4.0 [CU1] - FR 10.4.4 -->
+
+In some cases, DataMiner Cube could leak memory when you opened a trend graph that had pattern matching activated.
