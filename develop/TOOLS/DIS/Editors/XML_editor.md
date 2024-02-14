@@ -108,7 +108,7 @@ When you publish a protocol or an Automation script, DIS will create either a *.
 >   - when the *Protocol.Type* tag contain an incorrect value,
 >   - when the *Protocol.Version* tag is empty, or
 >   - when the *Protocol.Name* tag is empty.
-> - When *As Development* is selected, a '_DIS' suffix will be added to the *Protocol.Version* tag before compiling and publishing.
+> - When *As Development* is selected, a `_DIS` suffix will be added to the *Protocol.Version* tag before compiling and publishing.
 
 ### Update
 
@@ -465,5 +465,4 @@ Next to *\<Param>30\</Param>*, for example, you can see *\<!-- System OR Table -
 
 > [!NOTE]
 > If you do not want virtual comments to appear, you can turn them off.
->
 > See [Interface](xref:DIS_settings#interface)
