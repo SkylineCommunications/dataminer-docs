@@ -11,7 +11,7 @@ uid: SRM_1.2.35
 
 #### Skyline Booking Monitoring: Failed states added [ID_38271]
 
-The following Failed states have been added to the Skyline Booking Monitoring connector: Failed Service Pre-Roll, Failed Service Active, Failed Service Post-Roll, and Failed Complete.
+The following Failed states have been added to the Skyline Booking Monitoring connector so that it is up to date with the Skyline Booking Manager connector: Failed Service Pre-Roll, Failed Service Active, Failed Service Post-Roll, and Failed Complete.
 
 #### BookingManager.AddResource now skips service definition checks when user provides service definition [ID_38346]
 
