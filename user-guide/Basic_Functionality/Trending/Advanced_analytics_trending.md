@@ -18,5 +18,7 @@ Other features depend on a connection to dataminer.services. These cannot be act
 
 For the related feature [Adding time-scoped related parameters to a trend graph](xref:Adding_time_scoped_related_parameters_to_a_trend_graph), no connection to dataminer.services is required, but if you are using self-hosted DataMiner storage, your system does need to have an [indexing database](xref:Indexing_Database) (OpenSearch, Amazon OpenSearch Service, or Elasticsearch).
 
+From DataMiner 10.3.0 [CU12]/10.4.3 onwards<!--RN 38407-->, trend data pattern records are saved indefinitely in the indexing database. Prior to DataMiner 10.3.0 [CU12]/10.4.3, trend data pattern records are saved for a duration of 10 years.
+
 > [!TIP]
 > For more artificial intelligence capabilities, see [Advanced analytics features in the Alarm Console](xref:Advanced_analytics_features_in_the_Alarm_Console).
