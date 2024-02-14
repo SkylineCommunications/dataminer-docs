@@ -9,6 +9,11 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 14 February 2024 - Enhancement - Systems with remote access disabled are now shown on dataminer.services [ID_38772]
+
+Systems with remote access disabled are now shown on dataminer.services, with the app buttons disabled where necessary.
+A link to the documentation is provided for more information about how to toggle this setting.
+
 #### 13 February 2024 - Fix - Catalog versions displayed in wrong order [ID_38762]
 
 The versions of a catalog record will now be sorted correctly.
