@@ -18,7 +18,9 @@ You can also go to the app via dataminer.services:
 
 1. Go to [dataminer.services](https://dataminer.services)
 
-1. Find the DMS in the list and click the *Admin* icon.
+1. If you want to open the Admin app to manage a specific DMS, find the DMS in the list and click the *Admin* icon.
+
+   If you are not interested in a specific DMS, click the Admin icon under *Apps*.
 
 ![DMS in the home app](~/user-guide/images/CcaHomeApp.png)
 

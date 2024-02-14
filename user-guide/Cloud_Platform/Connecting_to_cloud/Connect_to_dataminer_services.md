@@ -60,7 +60,7 @@ Before you connect your DMS to dataminer.services (unless you [connect with a DM
 
 1. Select the checkbox to agree to the terms of service and click *Connect*.
 
-1. On the System Center \> *Cloud* page, wait until the status under *Registration status* changes to *Registered*. This can take up to half a minute.
+1. On the System Center > *Cloud* page, wait until you see either *Status: Connected* or *Registration status: Registered* (depending on your DataMiner version<!-- RN 38715 -->). This can take up to half a minute.
 
 1. To ensure that you can make optimal use of your dataminer.services connection, get your dataminer.services connection verified. See [Getting your organization verified](xref:CloudConnectionVerification).
 
