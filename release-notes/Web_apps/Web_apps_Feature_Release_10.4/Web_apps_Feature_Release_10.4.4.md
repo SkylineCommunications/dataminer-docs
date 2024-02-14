@@ -55,6 +55,12 @@ Also, when an Automation script fails due to missing script input, users will no
 > [!NOTE]
 > Up to now, when an Automation script that had memory files configured was launched from a low-code app, you would incorrectly always be prompted to enter a value for those memory files. From now on, this will no longer be the case.
 
+#### Additional logging with regard to the persistent connection between Web API and SLNet [ID_38700]
+
+<!-- MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+The persistent connection between the Web API and SLNet is used to cache active alarms, views, etc. As it is difficult to investigate issues related to this connection, additional logging with regard to this connection will now be added to the web logging located in `C:\Skyline DataMiner\Logging\Web`.
+
 ### Fixes
 
 #### Dashboards app & Low-Code Apps: Problem when making a backup of all dashboards and low-code apps during a DataMiner upgrade [ID_38640]
