@@ -13,6 +13,10 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 The versions of a catalog record will now be sorted correctly.
 
+#### 9 February 2024 - Enhancement - DMS connection status now visible on dataminer.services [ID_38771]
+
+On the dataminer.services page, you can now see the status of the connection of a DMS to dataminer.services. The status is indicated as *OK*, *Warning*, *Error*, or *Unknown*. If the connection is not available, the app buttons will be disabled.
+
 #### 6 February 2024 - New feature - Chat Integration with Microsoft Teams now includes sending buttons in notifications using Adaptive Cards [ID_38701]
 
 It is now possible to send buttons in notifications using Adaptive Cards to chats or channels with Chat Integration.
