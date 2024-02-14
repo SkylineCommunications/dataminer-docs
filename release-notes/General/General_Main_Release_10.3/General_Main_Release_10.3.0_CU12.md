@@ -248,3 +248,9 @@ Up to now, it could occur that the script *SRM_QuarantineHandling* retrieved a p
 <!-- MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.4 -->
 
 At DataMiner startup, in some cases, errors could incorrectly be thrown when at least one production protocol had an information template assigned.
+
+#### DataMiner Maps: KML layers with names that included hyphens would incorrectly be displayed first in the legend [ID_38746]
+
+<!-- MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+When using either Google Maps or OpenStreetMap, KML layers with names that included hyphens would incorrectly always be displayed first in the layer legend. From now on, the legend will show the layers in the order in which they were specified in the map configuration file.
