@@ -19,7 +19,7 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
     If information similar to the following text is returned, DocFX was installed correctly:
 
     ```txt
-    2.67.3+f28165af43dde2ec072a79fa2479f475fcd947ad
+    2.75.1+6aa697f56975e85e82c5a6b81b71157c77302270
     ...
     ```
 
