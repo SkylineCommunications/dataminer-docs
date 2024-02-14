@@ -83,7 +83,7 @@ Use the workaround, but **do not** copy the description of the primary key colum
 
 ### Use case 4
 
-The naming tag exists, and the display key is composed by multiple columns. There is no column displaying the composed display key.
+The naming tag exists, and the display key is composed of multiple columns. There is no column displaying the composite display key.
 
 A new range is needed.
 
