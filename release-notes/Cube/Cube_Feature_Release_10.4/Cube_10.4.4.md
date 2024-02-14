@@ -49,3 +49,9 @@ In some cases, spectrum analyzer cards could leak memory.
 <!-- MR 10.3.0 [CU13]/10.4.0 [CU1] - FR 10.4.4 -->
 
 In some cases, DataMiner Cube could leak memory when you opened a trend graph that had pattern matching activated.
+
+#### Problem when closing a spectrum analyzer card while it was still loading [ID_38729]
+
+<!-- MR 10.3.0 [CU13]/10.4.0 [CU1] - FR 10.4.4 -->
+
+When you closed a spectrum analyzer card while it was still loading, in some cases, an unhandled exception could be thrown.
