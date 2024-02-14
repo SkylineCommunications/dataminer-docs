@@ -9,6 +9,10 @@ The content and screenshots of this tutorial were created in DataMiner version 1
 
 Expected duration: 20 minutes
 
+> [!TIP]
+> See also:
+> [Kata #17: Node Edge Component](https://community.dataminer.services/courses/kata-17/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+
 ## Prerequisites
 
 - A DataMiner system running at least version 10.2/10.1.5
