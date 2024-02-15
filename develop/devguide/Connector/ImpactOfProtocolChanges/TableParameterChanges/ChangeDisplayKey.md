@@ -27,16 +27,13 @@ This has the same impact as changing a parameter description. The following Data
 
 ### Display key column exists
 
-If a display key already exists, and you want to change its format, the following routine should be implemented to avoid impact by default:
+If a display key already exists, and you want to change its format:
 
-- R/W (standalone) discreet parameter to select the naming format
+- Use a read/write (standalone) discreet parameter to allow the user to select the naming format.
 
-- Default value should be the original format (no impact for existing users)
+- The default value should be the original format (no impact for existing users).
 
-- Ref. SLC SDF Naming Format Compatibility
-
-  - Version PE.0.0.1
-  - Located on SVN: <https://svn.skyline.be/svn/SystemDevelopmentFeature/SLC SDF Naming Format Compatibility/>
+- Refer to *SLC SDF Naming Format Compatibility* [on SVN](https://svn.skyline.be/svn/SystemDevelopmentFeature/Protocols/), version PE.0.0.1. (This link is only accessible for Skyline users.)
 
 > [!NOTE]
 > It is possible to implement a workflow to change the display key format on element creation (when the default display key is not the desired one). This will avoid a manual action after every element creation. You can implement this with a correlation rule and an Automation script.
@@ -49,11 +46,11 @@ If a display key already exists, and you want to change its format, the followin
 
 - Display the new display key column in the original position of the primary key column.
 
-- The rest of workaround stays the same (see SLC SDF Naming Format Compatibility):
+- The rest of workaround stays the same (see *SLC SDF Naming Format Compatibility* [on SVN](https://svn.skyline.be/svn/SystemDevelopmentFeature/Protocols/)):
 
-  - R/W (standalone) discreet parameter to select the naming format.
+  - Use a read/write (standalone) discreet parameter to allow the user to select the naming format.
 
-  - Default value should be the original format (no impact for existing users).
+  - The default value should be the original format (no impact for existing users).
 
 ## Common use cases
 

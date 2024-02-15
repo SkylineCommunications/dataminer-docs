@@ -60,7 +60,7 @@ items:
             items:
             - name: Change primary key
               topicUid: ChangePrimaryKey
-            - name: change display key
+            - name: Change display key
               topicUid: ChangeDisplayKey
             - name: Replace displayColumn by naming 
               topicUid: ReplaceDisplayColumnByNaming
