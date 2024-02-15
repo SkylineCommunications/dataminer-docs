@@ -9,6 +9,8 @@ items:
       items:
         - name: Getting started with your documentation tools
           topicUid: CTB_Documentation_Tools
+        - name: Adding a new page
+          topicUid: CTB_Adding_New_Page
         - name: Things to watch out for
           topicUid: CTB_Watch_out_for
         - name: Creating a pull request
