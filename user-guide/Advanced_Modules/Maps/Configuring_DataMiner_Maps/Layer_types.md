@@ -435,7 +435,7 @@ Example:
   ```
 
   ```txt
-  aps.aspx?config=MyConfigFile&dmyElement=7/46840
+  maps.aspx?config=MyConfigFile&dmyElement=7/46840
   maps.aspx?config=MyConfigFile&dmyElement=VesselData
   ```
 
