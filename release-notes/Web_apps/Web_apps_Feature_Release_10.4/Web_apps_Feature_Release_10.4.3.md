@@ -137,7 +137,13 @@ When, in the template editor, you pressed ESCAPE while the event editor window w
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
 
-A number of enum column issues have been fixed in the template editor.
+A number of enum column issues have been fixed in the Template Editor:
+
+1. Query rows now include both display values and values. This change optimizes performance, especially for rows visible across multiple tables.
+
+1. Template conditions for string columns now rely on display values instead of column values, enhancing consistency and usability. This change improves interactions, especially when interacting with text inputs for discrete columns.
+
+1. The QueryRowData in the URL now adopts a new format, encompassing display values.
 
 #### Dashboards app & Low-Code Apps - Line & area chart component: Trend data would not always be loaded in the same order [ID_38385]
 
