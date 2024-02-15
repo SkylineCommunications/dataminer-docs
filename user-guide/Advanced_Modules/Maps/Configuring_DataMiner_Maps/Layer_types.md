@@ -426,7 +426,7 @@ Example:
   > - Optionally, the `<LineOptions>` tag can be used in this tag. See [LineOptions](xref:LineOptions).
   > - From DataMiner 10.0.3 onwards, the *recursivefullfilter* option is supported for table filters. See [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax).
 
-- From DataMiner 10.4.0/10.4.3 onwards<!-- RN 38274 -->, you can use the *elementVar* attribute with value "myElement" in the `<ForeignKeyRelationsSourceInfo>` tag to refer to an element specified in the map URL using the syntax "DMAID/ElementID" or "NameOfElement". For example (notice the "d" in front of the parameter name in the URL):
+- From DataMiner 10.4.0/10.4.3 onwards<!-- RN 38274 -->, you can use the *elementVar* attribute in the `<ForeignKeyRelationsSourceInfo>` tag (e.g. with value "myElement") to refer to an element specified in the map URL using the syntax "DMAID/ElementID" or "NameOfElement". For example (notice the "d" in front of the parameter name in the URL):
 
   ```xml
   <ForeignKeyRelationsSourceInfo elementVar="myElement">
