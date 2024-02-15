@@ -38,25 +38,25 @@ On the dataminer.services page you can see the state of the connection between y
 
 Everything is okay and you can access your system and use all the features that the dataminer.services platform offers. This is indicated by the green colored icon icon and the green bar next to the DMS information.
 
-[INSERT IMAGE HERE]
+![Connection status ok](~/user-guide/images/DMS_status_overview_ok.png)
 
 #### DMS has a connection to dataminer.services but not online
 
 Your DMS has a connection to dataminer.services but the DMS itself is not running. This is indicated by the orange colored icon and the orange color next to the DMS information. When hovering over the cloud icon you will see the following tooltip: "Cloud connection valid, DMS not responding". You also get an indication of the last point in time where the system was detected as being online.
 
-[INSERT IMAGE HERE]
+![DMS offline](~/user-guide/images/DMS_status_overview_dms_offline.png)
 
 #### DMS has no connection to dataminer.services
 
 Your DMS has no connection to dataminer.services. This is indicated by the red colored icon which has a line through it and the red bar next to the DMS information. You also get an indication of the last point in time where the system was detected as being online.
 
-[INSERT IMAGE HERE]
+![No connection](~/user-guide/images/DMS_status_overview_no_connection.png)
 
 #### Something is wrong in the cloud
 
 We can't determine the status of the connection because of an error in dataminer.services. In this case you will get a warnining.
 
-[INSERT IMAGE HERE]
+![Problem in dataminer.services](~/user-guide/images/DMS_status_overview_cloud_error.png)
 
 > [!TIP]
 > For information about the security of dataminer.services, see [Cloud connectivity and security](xref:Cloud_connectivity_and_security).
