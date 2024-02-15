@@ -110,3 +110,9 @@ When a panel component had the focus, selection boxes in the header bar would in
 <!-- MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.4 -->
 
 When you duplicated a dashboard, the newly created duplicate would incorrectly not inherit the dashboard settings of the original dashboard.
+
+#### Dashboards app & Low-Code Apps - Maps component: Manually configured line dimensions could incorrectly be reset [ID_38753]
+
+<!-- MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+When, in a Maps component, you had manually configured line dimensions, in some cases, those manually configured line dimensions could incorrectly be reset.
