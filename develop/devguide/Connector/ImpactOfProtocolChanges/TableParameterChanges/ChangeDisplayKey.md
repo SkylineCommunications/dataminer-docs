@@ -15,6 +15,7 @@ Same impact as changing a parameter description. Can impact the following (when 
 - DMS Visio files
 - DMS Reports
 - DMS WebAPI
+- Dashboards
 
 *DIS MCC*
 
@@ -29,7 +30,7 @@ Same impact as changing a parameter description. Can impact the following (when 
 
 If a display key already exists and we want to change its format, the following routine should be implemented to avoid impact by default:
 
-- R/W (standalone) discreet parameter to select the naming format
+- Read/Write (standalone) discreet parameter allowing user to select the naming format
 - Default value should be the original format (no impact to existing customers)
 - Ref. SLC SDF Naming Format Compatibility
 
@@ -47,7 +48,7 @@ If a display key already exists and we want to change its format, the following 
 - Display the new display key column in the original position of the primary key column
 - Rest of workaround stays the same (see SLC SDF Naming Format Compatibility)
 
-  - R/W (standalone) discreet parameter to select the naming format
+  - Read/Write (standalone) discreet parameter allowing user to select the naming format
   - Default value should be the original format (no impact to existing customers)
 
 ## Common use cases
@@ -86,7 +87,7 @@ Instead a a new column should be created with a more generic name (like "Display
 
 ### Use case 4
 
-The naming tag exists, and the display key is composed by multiple columns. There is no column displaying the composed display key.
+The naming tag exists, and the display key consists of multiple columns. There is no column displaying the composite display key.
 
 A new range is needed.
 

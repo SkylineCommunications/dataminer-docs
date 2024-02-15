@@ -15,6 +15,7 @@ Changing the parameter description can impact the following (when used):
 - DMS Visio files
 - DMS Reports
 - DMS WebAPI
+- Dashboards
 
 Note that in the following cases, there is no actual impact and these type of changes can be done in the same range:
 

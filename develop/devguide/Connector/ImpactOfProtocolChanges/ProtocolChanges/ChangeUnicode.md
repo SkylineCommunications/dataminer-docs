@@ -17,7 +17,7 @@ DIS MCC
 
 Element Data and Trend database needs to be removed entirely.
 
-Changing a protocol using MySQL and Cassandra should be compatible. Values in *elementdata* are stored by default as Unicode and ASCII v and vu.
+For DMA versions prior to 10.4.x, changing a protocol using MySQL and Cassandra should be compatible (MySQL not supported as of 10.4.x). Values in *elementdata* are stored by default as Unicode and ASCII v and vu.
 
 To be verified as from which DMA version it will be considered no longer an impacting change. Until clarified, we will still consider it an impacting change. See [task 106112](https://collaboration.dataminer.services/task/106112)
 
