@@ -42,6 +42,8 @@ Prerequisites are small self-contained apps that run during the upload phase of 
 
 The following prerequisites are currently available:
 
+- [Verify .NET Version](xref:Verify_ASP_Net_Version): Verifies whether the Microsoft ASP.NET 8.0 Hosting Bundle is installed. From DataMiner 10.3.0 [CU12]/10.4.0/10.4.3 onwards<!--RN 37969-->, this prerequisite is available by default and runs automatically when you upgrade.
+
 - Verify Cluster Ports: Verifies whether the ports used by DataMiner can be reached in between DataMiner Agents. If this check fails, you will need to install the [VerifyClusterPorts.dmupgrade](xref:VerifyClusterPortsdmupgrade) package. From DataMiner 10.2.0 [CU2]/10.2.5 onwards, this prerequisite is available by default and runs automatically when you upgrade.
 
 - [Verify NATS is Running](xref:VerifyNatsIsRunning): Verifies whether the crucial NATS service used by DataMiner is running on all required DataMiner Agents. From DataMiner 10.2.0 [CU14]/10.2.7 onwards, this prerequisite is available by default and runs automatically when you upgrade.
