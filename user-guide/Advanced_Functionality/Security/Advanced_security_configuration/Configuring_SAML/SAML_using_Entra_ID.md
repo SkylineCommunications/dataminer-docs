@@ -198,8 +198,11 @@ Once authentication has been configured, you need to make sure users are provisi
 
 ### Configuring DataMiner to import users and groups from Microsoft Entra ID
 
-> [!NOTE]
+> [!IMPORTANT]
 > If you import over 1000 users or groups, it may take some time before the import is complete. Avoid importing over 10,000 users and groups, as this can result in a timeout.
+
+> [!NOTE]
+> Prior to DataMiner 10.3.0 [CU12]/10.4.3<!-- RN 38154 -->, the following are not supported: usernames with non-ASCII characters, multiple users with the same first name and surname, and users for which the first name and surname are not provisioned.
 
 #### [From DataMiner 10.1.11/10.2.0 onwards](#tab/tabid-1)
 
@@ -287,6 +290,9 @@ Once authentication has been configured, you need to make sure users are provisi
 1. When you have added the necessary users, configure their permissions. See [Configuring a user group](xref:Configuring_a_user_group).
 
    Users will now be able to log in to DataMiner with any of the Entra ID user accounts you have added, using either the domain and username (DOMAIN\\user) or the email address.
+
+   > [!NOTE]
+   > Prior to DataMiner 10.3.0 [CU12]/10.4.3<!-- RN 38154 -->, usernames of imported users have the format `{organization}\{givenName}.{surname}`. From DataMiner 10.3.0 [CU12]/10.4.3 onwards, they have the format `{domain}\{username}`. For example, the username "ZIINE\Björn.Waldegård" in older DataMiner versions becomes "ziine.com\bjorn.waldegard" from DataMiner 10.3.0 [CU12]/10.4.3 onwards.
 
 #### [Older DataMiner versions](#tab/tabid-2)
 
