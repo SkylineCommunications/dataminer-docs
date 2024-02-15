@@ -24,47 +24,6 @@ When you are working on your own fork, make sure you regularly **check in GitHub
 
    ![Link to forks](~/user-guide/images/Contributing_Update_Branch.png)
 
-## Adding a new page
-
-When you add a page to the documentation:
-
-- Make sure there is a UID at the top of your new file. Add this UID in a metadata section. For example:
-
-  ```md
-  ---
-  uid: contributing
-  ---
-  ```
-
-  > [!NOTE]
-  > Do not use spaces in a UID.
-
-- Add the new page to the relevant *toc.yml* file so that it is included in the table of contents. To do so, specify the name and UID as follows:
-
-  ```yml
-  - name: The name of the page as it should appear in the table of contents
-    topicUid: The file UID
-  ```
-
-  For example:
-
-  ```yml
-  - name: Basic concepts
-    topicUid: BasicConcepts
-  ```
-
-  To add the new page at a lower level in the table of contents, use the following syntax:
-
-  ```yml
-  - name: The name of the page at the level above the page you are adding
-    topicUid: The file UID
-    items:
-    - name: The name of the new page as it should appear in the table of contents
-    - topicUid: The file UID of the new page
-  ```
-
-- Check if there are any smaller content overviews that also need to be updated with a link. For example, if you add something in the user guide, usually there is a page at a higher level in the guide that gives an overview of all underlying pages. Add a link to your new page on that page.
-
 ## Adding cross-references
 
 To avoid adding duplicate information, use cross-references to refer to information that is already available in the documentation.
