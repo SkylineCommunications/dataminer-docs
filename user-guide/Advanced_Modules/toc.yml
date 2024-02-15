@@ -259,7 +259,6 @@ items:
           - name: Managing dashboard folders
             topicUid: Managing_dashboard_folders
           - name: Creating and configuring dashboards
-            topicUid: Creating_a_completely_new_dashboard
             items:
               - name: Creating a completely new dashboard
                 topicUid: Creating_a_completely_new_dashboard
@@ -280,7 +279,6 @@ items:
           - name: Sharing a dashboard
             topicUid: Sharing_a_dashboard
           - name: Generating a report based on a dashboard
-            topicUid: Generating_a_report_based_on_a_dashboard_Cube
             items:
               - name: From DataMiner Cube
                 topicUid: Generating_a_report_based_on_a_dashboard_Cube
@@ -309,7 +307,6 @@ items:
           - name: Editing a low-code application
             topicUid: Editing_custom_apps
           - name: Configuring low-code applications
-            topicUid: LowCodeApps_Layout
             items:
               - name: Configuring the low-code app layout
                 topicUid: LowCodeApps_Layout
@@ -377,7 +374,6 @@ items:
         topicUid: Available_visualizations
         items:
           - name: General
-            topicUid: DashboardButton
             items:
               - name: Button
                 topicUid: DashboardButton
@@ -408,7 +404,6 @@ items:
               - name: Group
                 topicUid: DashboardGroup
           - name: States and values
-            topicUid: DashboardState
             items:
               - name: State
                 topicUid: DashboardState
@@ -421,7 +416,6 @@ items:
               - name: State timeline
                 topicUid: DashboardStateTimeline
           - name: Tables
-            topicUid: DashboardParameterTable
             items:
               - name: Parameter table
                 topicUid: DashboardParameterTable
@@ -432,7 +426,6 @@ items:
               - name: Table
                 topicUid: DashboardTable
           - name: Charts
-            topicUid: ColumnAndBarChart
             items:
               - name: Column & Bar chart
                 topicUid: ColumnAndBarChart
@@ -443,7 +436,6 @@ items:
               - name: Bar chart (horizontal)
                 topicUid: BarChartHorizontal
           - name: Other
-            topicUid: DashboardGrid
             items:
               - name: Grid
                 topicUid: DashboardGrid
@@ -481,7 +473,6 @@ items:
               - name: Dropdown feed
                 topicUid: DashboardDropdownFeed
           - name: Basic controls
-            topicUid: DashboardDropdown
             items:
               - name: Dropdown
                 topicUid: DashboardDropdown
@@ -562,7 +553,6 @@ items:
               - name: Top X
                 topicUid: GQI_Top_X
           - name: Extensions
-            topicUid: Configuring_an_ad_hoc_data_source_in_a_query
             items:
               - name: Configuring an ad hoc data source
                 topicUid: Configuring_an_ad_hoc_data_source_in_a_query
@@ -574,7 +564,6 @@ items:
                   - name: Linking rows to DataMiner objects
                     topicUid: Ad_hoc_Metadata
                   - name: Tutorials
-                    topicUid: Ad_hoc_Tutorials
                     items:
                       - name: Forwarding dummy data to the GQI
                         topicUid: Ad_hoc_Tutorials
@@ -590,7 +579,6 @@ items:
                   - name: Modifying links to DataMiner objects
                     topicUid: CO_Metadata
                   - name: Tutorials
-                    topicUid: Creating_Minus_Operator
                     items:
                       - name: Creating a minus operator
                         topicUid: Creating_Minus_Operator
@@ -599,7 +587,6 @@ items:
                       - name: Optimizing your custom operator
                         topicUid: Custom_Operator_Tutorial
               - name: API reference
-                topicUid: GQI_GenIfRowMetadata
                 items:
                   - name: GenIfRowMetadata
                     topicUid: GQI_GenIfRowMetadata
@@ -798,7 +785,6 @@ items:
       - name: Best practices
         topicUid: DOM_best_practices
       - name: DOM examples
-        topicUid: DOM_Invoice_app_example
         items:
           - name: Invoice app example
             topicUid: DOM_Invoice_app_example
@@ -840,7 +826,6 @@ items:
               - name: Naming a DOM instance
                 topicUid: DOM_editor_naming_instance
       - name: Tutorials
-        topicUid: DOM_Getting_Started_With_DOM
         items:
           - name: Getting started with DOM
             topicUid: DOM_Getting_Started_With_DOM
@@ -1194,7 +1179,6 @@ items:
           - name: Installing the Keysight/Agilent IO Libraries
             topicUid: Installing_the_Keysight_Agilent_IO_Libraries
       - name: Working with spectrum analyzer elements
-        topicUid: Spectrum_analyzer_cards
         items:
           - name: Spectrum analyzer cards
             topicUid: Spectrum_analyzer_cards
@@ -1224,7 +1208,6 @@ items:
           - name: Spectrum Analyzer script actions
             topicUid: Spectrum_Analyzer_script_actions
       - name: Advanced Spectrum Analysis functions
-        topicUid: Specifying_an_amplitude_correction
         items:
           - name: Specifying an amplitude correction
             topicUid: Specifying_an_amplitude_correction
@@ -1274,7 +1257,6 @@ items:
       - name: Managing APIs and tokens in Cube
         topicUid: UD_APIs_Viewing_in_Cube
       - name: Defining an API
-        topicUid: UD_APIs_Define_New_API
         items:
           - name: Defining a new API
             topicUid: UD_APIs_Define_New_API
@@ -1294,7 +1276,6 @@ items:
       - name: DataMiner UserDefinableApiEndpoint DxM
         topicUid: UD_APIs_UserDefinableApiEndpoint
       - name: Troubleshooting
-        topicUid: UD_APIs_Troubleshooting
         items:
           - name: Troubleshooting User-Defined APIs
             topicUid: UD_APIs_Troubleshooting

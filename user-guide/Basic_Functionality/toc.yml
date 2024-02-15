@@ -1,6 +1,5 @@
 items:
   - name: Elements
-    topicUid: About_elements
     items:
       - name: About elements
         topicUid: About_elements
@@ -20,7 +19,6 @@ items:
           - name: Element properties
             topicUid: Element_properties
       - name: Working with elements in DataMiner
-        topicUid: Element_cards
         items:
           - name: Element cards
             topicUid: Element_cards
@@ -73,7 +71,6 @@ items:
     topicUid: parameters
     items:
       - name: Types of parameters
-        topicUid: Read_parameters_versus_write_parameters
         items:
           - name: Read parameters versus write parameters
             topicUid: Read_parameters_versus_write_parameters
@@ -119,7 +116,6 @@ items:
       - name: Parameter dependencies
         topicUid: Parameter_dependencies
   - name: Services
-    topicUid: About_services
     items:
       - name: About services and service templates
         topicUid: About_services
@@ -168,7 +164,6 @@ items:
           - name: Managing service templates
             topicUid: Managing_service_templates
   - name: Views
-    topicUid: About_views
     items:
       - name: About views
         topicUid: About_views
@@ -177,7 +172,6 @@ items:
       - name: Managing views
         topicUid: Managing_views
   - name: Alarms
-    topicUid: About_alarms
     items:
       - name: About alarms
         topicUid: About_alarms
@@ -241,7 +235,6 @@ items:
           - name: Monitoring of trend patterns
             topicUid: Monitoring_of_trend_patterns
           - name: Tutorials
-            topicUid: Anomaly_Tutorial
             items:
             - name: Detecting anomalies with DataMiner
               topicUid: Anomaly_Tutorial
@@ -364,12 +357,10 @@ items:
           - name: Editing the information template for one parameter
             topicUid: Editing_the_information_template_for_one_parameter
       - name: Alarm templates
-        topicUid: About_alarm_templates
         items:
           - name: About alarm templates
             topicUid: About_alarm_templates
           - name: Managing alarm templates
-            topicUid: Creating_an_alarm_template
             items:
               - name: Creating an alarm template
                 topicUid: Creating_an_alarm_template
@@ -380,7 +371,6 @@ items:
               - name: Deleting an alarm template
                 topicUid: Deleting_an_alarm_template
           - name: Configuring alarm templates
-            topicUid: About_the_alarm_template_editor
             items:
               - name: About the alarm template editor
                 topicUid: About_the_alarm_template_editor
@@ -409,7 +399,6 @@ items:
           - name: Exporting alarm template parameter data
             topicUid: Exporting_alarm_template_parameter_data
       - name: Trend templates
-        topicUid: About_trend_templates
         items:
           - name: About trend templates
             topicUid: About_trend_templates
@@ -423,7 +412,6 @@ items:
     topicUid: visio
     items:
       - name: Getting started
-        topicUid: Working_with_shape_data_in_Microsoft_Visio
         items:
           - name: Working with shape data in Microsoft Visio
             topicUid: Working_with_shape_data_in_Microsoft_Visio
@@ -708,7 +696,6 @@ items:
           - name: Configuring a page to execute a script automatically
             topicUid: Configuring_a_page_to_execute_a_script_automatically
       - name: Reference
-        topicUid: Overview_of_DataMiner_shape_data_fields
         items:
           - name: Overview of DataMiner shape data fields
             topicUid: Overview_of_DataMiner_shape_data_fields
@@ -742,7 +729,6 @@ items:
       - name: Setting a primary or backup element in maintenance
         topicUid: Setting_a_primary_or_backup_element_in_maintenance
   - name: Documents
-    topicUid: About_the_Documents_module
     items:
       - name: About the Documents module
         topicUid: About_the_Documents_module
