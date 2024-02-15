@@ -42,7 +42,7 @@ Everything is okay and you can access your system and use all the features that 
 
 #### DMS has a connection to dataminer.services but not online
 
-Your DMS has a connection to dataminer.services but the DMS itself is not running. This is indicated by the orange colored icon and the orange color next to the DMS information. When hovering over the cloud icon you will see the following tooltip: "Cloud connection valid, DMS not responding". You also get an indication of the last point in time where the system was detected as being online.
+Your DMS has a connection to dataminer.services but the DMS itself is not running. This is indicated by the orange colored icon and the orange color next to the DMS information. You also get an indication of the last point in time where the system was detected as being online.
 
 ![DMS offline](~/user-guide/images/DMS_status_overview_dms_offline.png)
 
