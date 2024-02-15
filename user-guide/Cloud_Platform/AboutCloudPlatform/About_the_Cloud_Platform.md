@@ -54,7 +54,7 @@ Your DMS has no connection to dataminer.services. This is indicated by the red c
 
 #### Something is wrong in the cloud
 
-We can't determine the status of the connection because of an error in dataminer.services. In this case you will get a warnining.
+We can't determine the status of the connection because of an error in dataminer.services. In this case you will get a warning.
 
 ![Problem in dataminer.services](~/user-guide/images/DMS_status_overview_cloud_error.png)
 
