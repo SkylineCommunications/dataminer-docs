@@ -263,6 +263,12 @@ Up to now, it could occur that the script *SRM_QuarantineHandling* retrieved a p
 
 At DataMiner startup, in some cases, errors could incorrectly be thrown when at least one production protocol had an information template assigned.
 
+#### Problem with SLDataMiner while sending a SetDocumentEofMessage with a negative file number [ID_38712]
+
+<!-- MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+In some cases, SLDataMiner could stop working while sending a `SetDocumentEofMessage` with a negative file number via SLNet.
+
 #### DataMiner Maps: KML layers would incorrectly always be displayed first in the legend [ID_38746]
 
 <!-- MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.4 -->

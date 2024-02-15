@@ -116,6 +116,12 @@ Up to now, the following folders would incorrectly not get cleaned up when perfo
 
 At DataMiner startup, in some cases, errors could incorrectly be thrown when at least one production protocol had an information template assigned.
 
+#### Problem with SLDataMiner while sending a SetDocumentEofMessage with a negative file number [ID_38712]
+
+<!-- MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+In some cases, SLDataMiner could stop working while sending a `SetDocumentEofMessage` with a negative file number via SLNet.
+
 #### SLAnalytics: Problem when processing an element with an invalid alarm template [ID_38724]
 
 <!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
