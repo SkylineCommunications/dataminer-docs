@@ -409,22 +409,35 @@ Example:
 </Layer>
 ```
 
-In the `<ForeignKeyRelationsSourceInfo>` element, the following additional filters can be specified to filter the possible connection lines: `<SourceTableFilters>`, `<DestinationTableFilters>`, and `<ParentFilter>`.
+- Within the `<ForeignKeyRelationsSourceInfo>` element, the following additional filters can be specified to filter the possible connection lines: `<SourceTableFilters>`, `<DestinationTableFilters>`, and `<ParentFilter>`.
 
-`<ParentFilter>` is specifically designed to enhance performance when filtering large tables based on another (parent) table. In the following example, the connection lines of the layer where the filter is defined are filtered based on the foreign key relation to the table in which column 1002 is equal to the value of the *SelectedRow* placeholder (received via the URL parameter "dSelectedRow"):
+  `<ParentFilter>` is specifically designed to enhance performance when filtering large tables based on another (parent) table. In the following example, the connection lines of the layer where the filter is defined are filtered based on the foreign key relation to the table in which column 1002 is equal to the value of the *SelectedRow* placeholder (received via the URL parameter "dSelectedRow"):
 
-```xml
-<ParentFilter>
-    <ParentColumnPID>1002</ParentColumnPID>
-    <ParentValue>[SelectedRow]</ParentValue>
-</ParentFilter>
-```
+  ```xml
+  <ParentFilter>
+      <ParentColumnPID>1002</ParentColumnPID>
+      <ParentValue>[SelectedRow]</ParentValue>
+  </ParentFilter>
+  ```
 
-> [!NOTE]
->
-> - To make sure correct results are returned, `<SourceTableID>` and `<DestinationTableID>` have to be in the correct order.
-> - Optionally, the `<LineOptions>` tag can be used in this tag. See [LineOptions](xref:LineOptions).
-> - From DataMiner 10.0.3 onwards, the *recursivefullfilter* option is supported for table filters. See [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax).
+  > [!NOTE]
+  >
+  > - To make sure correct results are returned, `<SourceTableID>` and `<DestinationTableID>` have to be in the correct order.
+  > - Optionally, the `<LineOptions>` tag can be used in this tag. See [LineOptions](xref:LineOptions).
+  > - From DataMiner 10.0.3 onwards, the *recursivefullfilter* option is supported for table filters. See [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax).
+
+- From DataMiner 10.4.0/10.4.3 onwards<!-- RN 38274 -->, you can use the *elementVar* attribute in the `<ForeignKeyRelationsSourceInfo>` tag (e.g. with value "myElement") to refer to an element specified in the map URL using the syntax "DMAID/ElementID" or "NameOfElement". For example (notice the "d" in front of the parameter name in the URL):
+
+  ```xml
+  <ForeignKeyRelationsSourceInfo elementVar="myElement">
+  ...
+  </ForeignKeyRelationsSourceInfo>
+  ```
+
+  ```txt
+  maps.aspx?config=MyConfigFile&dmyElement=7/46840
+  maps.aspx?config=MyConfigFile&dmyElement=VesselData
+  ```
 
 ## Layers of sourceType 'separator'
 
