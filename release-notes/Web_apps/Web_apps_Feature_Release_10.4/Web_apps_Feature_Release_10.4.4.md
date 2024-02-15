@@ -63,6 +63,12 @@ The persistent connection between the Web API and SLNet is used to cache active 
 
 ### Fixes
 
+#### Web apps: Visual overviews would incorrectly get updated while nothing had changed [ID_38362]
+
+<!-- MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+When viewing a visual overview on a web app, in some cases, the visual overview would incorrectly get updated while nothing had changed.
+
 #### Dashboards app & Low-Code Apps: Problem when making a backup of all dashboards and low-code apps during a DataMiner upgrade [ID_38640]
 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
