@@ -11,7 +11,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 #### 16 February 2024 - Enhancement - Improved error messages when remote accessing [ID_38802]
 
-From now onwards, when remote accesing your DataMiner System via dataminer.services doesn't work, there will be a more clear message what is (not) causing the issue and a link to a dedicated troubleshoot page will be provided.
+When you try to use remote access to a DataMiner System via dataminer.services, but this is not possible, from now on a clearer message will be shown on what is the likely cause of the issue, with a link to a dedicated troubleshooting page on docs.dataminer.services.
 
 #### 14 February 2024 - Enhancement - Systems with remote access disabled are now shown on dataminer.services [ID_38772]
 
