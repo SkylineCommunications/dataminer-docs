@@ -6,6 +6,9 @@ uid: SLNetClientTest_debugging_cloud_connection
 
 When there is a problem with the connection to dataminer.services, you can debug this using the *CcaGateway* window in the SLNetClientTest tool. This is both possible when the DataMiner Agent is online or offline (from DataMiner 10.3.8/10.4.0 onwards<!-- RN 36611 -->).
 
+> [!CAUTION]
+> The majority of these settings are only intended to be used by Skyline DevOps Engineers. Do not make any changes in this window unless you have been explicitly asked to do so by a Skyline DevOps Engineer. If you are looking to troubleshoot issues with the dataminer.services connection, refer to the page [Investigating dataminer.services connection issues](xref:Cloud_Connection_Issues).
+
 ## Accessing the CcaGateway window
 
 When the DataMiner Agent is **online**:
@@ -21,9 +24,6 @@ When the DataMiner Agent is **offline**:
 ## CcaGateway window UI
 
 Below you can find an overview of the different fields in the CcaGateway window and how these can be used.
-
-> [!CAUTION]
-> The majority of these fields are only intended to be used by Skyline DevOps Engineers. Do not make any changes in this window unless you have been explicitly asked to do so by a Skyline DevOps Engineer.
 
 ![CcaGateway window](~/user-guide/images/CcaGatewayWindow.png)<br>
 *CcaGateway window in DataMiner 10.3.8*
