@@ -15,7 +15,7 @@ For more information on protocol version numbering, see [Protocol version semant
 
 A protocol version request needs to be made as soon as a change in a protocol will cause impact and no workaround can be implemented.
 
-As a Skyline developer, to create such a request, go to the [Protocol Version Request](https://intranet.skyline.be/Lists/Protocol%20Version%20Request/Overview.aspx) page on intranet.
+As a Skyline developer, to create such a request, go to the [Protocol Version Request](https://teams.microsoft.com/l/message/19:ad852d24461147ab918738dc0d3384d8@thread.skype/1695297680965?tenantId=5f175691-8d1c-4932-b7c8-ce990839ac40&groupId=38eed67d-cb0d-47f7-a6ea-d7487cc35ce3&parentMessageId=1695297028950&teamName=Expert%20Hub%20-%20Scripts%20%26%20Connectors&channelName=02.%20ECS%20-%20Protocol%20Versions&createdTime=1695297680965) page on Teams.
 
 A team of System Developers is responsible for following up on these requests and guiding the developer to make the correct decision and assess if the impacting change can be implemented or if a workaround is possible.
 
@@ -83,7 +83,7 @@ In the past, as many major changes as possible were blocked by providing workaro
 
 Whenever you receive feedback from a user that some improvements (changing parameter descriptions, change layout, etc.) could be done in a protocol, a major change can be requested to allow these changes.
 
-As a Skyline developer, you should create such requests in the [ECS - Protocol Versions](https://teams.microsoft.com/l/message/19:ad852d24461147ab918738dc0d3384d8@thread.skype/1695297680965?tenantId=5f175691-8d1c-4932-b7c8-ce990839ac40&groupId=38eed67d-cb0d-47f7-a6ea-d7487cc35ce3&parentMessageId=1695297028950&teamName=Expert%20Hub%20-%20Scripts%20%26%20Connectors&channelName=02.%20ECS%20-%20Protocol%20Versions&createdTime=1695297680965) teams channel, but no specific task is needed (unless you already have a task in your project).
+As a Skyline developer, you should create such requests on the [Protocol Version Request](https://teams.microsoft.com/l/message/19:ad852d24461147ab918738dc0d3384d8@thread.skype/1695297680965?tenantId=5f175691-8d1c-4932-b7c8-ce990839ac40&groupId=38eed67d-cb0d-47f7-a6ea-d7487cc35ce3&parentMessageId=1695297028950&teamName=Expert%20Hub%20-%20Scripts%20%26%20Connectors&channelName=02.%20ECS%20-%20Protocol%20Versions&createdTime=1695297680965) page on Teams (similar to any other protocol version request), but no specific task is needed (unless you already have a task in your project).
 
 The *Protocol Version Request* team will evaluate the requested changes and, when the request is valid, they will create a task in the [SLC-SE-Internal Protocol Reviews](https://collaboration.skyline.be/project/5938/list) project.
 
@@ -97,7 +97,3 @@ Whenever you are working on a task for a protocol, please keep an eye on this pr
 No additional version request is needed anymore as these changes were already approved.
 
 This is also a call to all Product Owners to keep an eye on this project and try to get these tasks picked up whenever changes are done in the protocols of which they are the owner.
-
-### Workaround
-
-- [Change normalization](https://wiki.skyline.be/wiki/System_Development/Driver/Change_normalization)
