@@ -9,6 +9,10 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 16 February 2024 - Enhancement - Changed user role required to renew system tokens [ID_38722]
+
+Previously, users had to have the role of Owner of the DMS on dataminer.services to be able to [renew the session](xref:Cloud_Connection_Issues#check-the-cloud-session). From now on, this is also possible for users who have the Admin role.
+
 #### 16 February 2024 - Enhancement - Improved error messages when using remote access [ID_38802]
 
 When you try to use remote access to a DataMiner System via dataminer.services, but this is not possible, from now on a clearer message will be shown on what is the likely cause of the issue, with a link to a dedicated troubleshooting page on docs.dataminer.services.
