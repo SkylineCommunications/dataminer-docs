@@ -22,7 +22,13 @@ uid: Cube_Feature_Release_10.4.4
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### System Center: Enhanced 'Cloud' page [ID_38715]
+
+<!-- MR 10.3.0 [CU13]/10.4.0 [CU1] - FR 10.4.4 -->
+
+On the *Cloud* page of *System Center*, a link to <https://dataminer.services> has now been added. This will allow users to check the cloud connection status of their DataMiner System.
+
+Also, the instructions and the general information on that page have been made clearer.
 
 ### Fixes
 

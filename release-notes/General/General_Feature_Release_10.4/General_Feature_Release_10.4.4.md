@@ -63,6 +63,19 @@ From now on, the following exception will be thrown instead:
 
 SLLogCollector will now also collect the logs of the *CommunicationGateway* DxM.
 
+#### DxMs upgraded [ID_38743]
+
+<!-- MR 10.5.0 - FR 10.4.4 -->
+
+The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
+
+- DataMiner ArtifactDeployer: version 1.6.5.14829
+- DataMiner CoreGateway: version 2.14.4.15849
+- DataMiner Orchestrator: version 1.5.4.15828
+- DataMiner SupportAssistant: version 1.6.5.15809
+
+For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
+
 ### Fixes
 
 #### Problem with file offload mechanism when main database is offline [ID_38542]
