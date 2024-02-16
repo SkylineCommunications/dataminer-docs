@@ -41,7 +41,7 @@ This indicator will show the current status of the client's WebSocket connection
 
 When an interactive Automation script was launched from a web app, up to now, the windows and popups of the script would always have the default background and foreground colors (i.e. white background and black foreground).
 
-From now on, when an interactive Automation script is launched in any of the following ways, the windows and popups of that script will inherit the default background and foreground colors of the page, panel or dashboard from which the script was launched:
+From now on, when an interactive Automation script is launched in any of the following ways, the windows and popups of that script will inherit the foreground color and the default component background color of the page, panel or dashboard from which the script was launched:
 
 - When clicking a Button component in a low-code app.
 - When clicking a button in the page/panel header bar of a low-code app.
