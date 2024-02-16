@@ -30,6 +30,14 @@ On the *Cloud* page of *System Center*, a link to <https://dataminer.services> h
 
 Also, the instructions and the general information on that page have been made clearer.
 
+#### Visual Overview: Enhanced management of memory allocated to mobile visual overviews [ID_38727]
+
+<!-- MR 10.3.0 [CU13]/10.4.0 [CU1] - FR 10.4.4 -->
+
+Up to now, the memory used for all mobile visual overviews would remain allocated until the last user had been inactive for 5 minutes.From now on, the memory allocated to a specific mobile visual overview will be released as soon as the visual overview in question has been inactive for 5 minutes.
+
+Also, the Cube session hosting these mobile visual overviews will now automatically terminate after 8 hours of inactivity.
+
 ### Fixes
 
 #### Error could occur in SLHelper when generating visual overviews to be displayed in web apps [ID_32584]
