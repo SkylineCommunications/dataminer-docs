@@ -81,3 +81,9 @@ When you closed a spectrum analyzer card while it was still loading, in some cas
 <!-- MR 10.3.0 [CU13]/10.4.0 [CU1] - FR 10.4.4 -->
 
 When you closed an app (e.g. Automation, Correlation, etc.), in some cases, Cube could leak memory.
+
+#### Memory leak when opening trend graphs [ID_38799]
+
+<!-- MR 10.3.0 [CU13]/10.4.0 [CU1] - FR 10.4.4 -->
+
+When you opened a trend graph, in some cases, Cube could leak memory.
