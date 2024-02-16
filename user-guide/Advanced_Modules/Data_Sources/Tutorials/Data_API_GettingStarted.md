@@ -12,6 +12,9 @@ The content and screenshots for this tutorial were created in DataMiner version 
 
 Expected duration: 15 minutes.
 
+> [!TIP]
+> See also: [Kata #18: Creating a scripted connector](https://community.dataminer.services/courses/kata-18/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+
 ## Prerequisites
 
 - A DataMiner System using DataMiner 10.4.0/10.4.2 or higher that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
