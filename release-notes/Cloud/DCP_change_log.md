@@ -9,7 +9,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-#### 16 February 2024 - Enhancement - Improved error messages when remote accessing [ID_38802]
+#### 16 February 2024 - Enhancement - Improved error messages when using remote access [ID_38802]
 
 When you try to use remote access to a DataMiner System via dataminer.services, but this is not possible, from now on a clearer message will be shown on what is the likely cause of the issue, with a link to a dedicated troubleshooting page on docs.dataminer.services.
 
