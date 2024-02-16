@@ -55,7 +55,6 @@ items:
           - name: Statuses
             topicUid: Statuses
   - name: DataMiner Catalog
-    topicUid: About_the_Catalog_module
     items:
       - name: About the Catalog module
         topicUid: About_the_Catalog_module
@@ -119,14 +118,12 @@ items:
       - name: Chat integration
         topicUid: Microsoft_Teams_Chat_Integration
       - name: Tutorials
-        topicUid: ChatOps_Tutorials_Custom_Command_Hello_World
         items:
           - name: Hello World
             topicUid: ChatOps_Tutorials_Custom_Command_Hello_World
           - name: Chat notifications
             topicUid: ChatOps_Tutorials_Chat_Notification
   - name: Advanced configuration
-    topicUid: Custom_cloud_endpoint_configuration
     items:
       - name: Customizing the dataminer.services endpoint configuration
         topicUid: Custom_cloud_endpoint_configuration

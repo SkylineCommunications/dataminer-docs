@@ -777,7 +777,6 @@ items:
   topicUid: ApiDocumentation
   items:
   - name: Namespaces
-    topicUid: Skyline.DataMiner.Scripting
     items:
     - name: Skyline.DataMiner.Scripting
       topicUid: Skyline.DataMiner.Scripting
