@@ -11,7 +11,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 #### 16 February 2024 - Enhancement - Changed user role required to renew system tokens [ID_38722]
 
-Before the  user needed to be an Owner of the DMS on dataminer.services to be able to [renew the tokens](xref:SLNetClientTest_debugging_cloud_connection). From now on the user only needs the Admin role. Owners can still renew the tokens.
+Previously, users had to have the role of Owner of the DMS on dataminer.services to be able to [renew the session](xref:Cloud_Connection_Issues#check-the-cloud-session). From now on, this is also possible for users who have the Admin role.
 
 #### 16 February 2024 - Enhancement - Improved error messages when using remote access [ID_38802]
 
