@@ -67,7 +67,7 @@ Manually renewing the cloud identity can be necessary if dataminer.services coul
 1. If it is no longer valid, click the *Renew Session* button.
 
    > [!NOTE]
-   > This button is only available if the cloud identity has expired. It is also only available for users who have the [*Owner* role](xref:Changing_the_role_of_a_DCP_user) in the DMS.
+   > This button is only available if the cloud identity has expired. It is also only available for users who have the [*Owner* or *Admin* role](xref:Changing_the_role_of_a_DCP_user) in the DMS.
 
 ## Make sure requirements are met
 
