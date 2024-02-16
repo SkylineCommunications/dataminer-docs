@@ -1,9 +1,7 @@
 items:
   - name: v10.5
-    topicUid: Web_apps_Main_Release_10.5.0
     items:
       - name: Main Release
-        topicUid: Web_apps_Main_Release_10.5.0
         items:
           - name: DataMiner web apps Main Release 10.5.0 - Preview
             topicUid: Web_apps_Main_Release_10.5.0
@@ -13,17 +11,14 @@ items:
               - name: Changes
                 topicUid: Web_apps_Main_Release_10.5.0_changes
   - name: v10.4
-    topicUid: Web_apps_Main_Release_10.4.0
     items:
       - name: Main Release
-        topicUid: Web_apps_Main_Release_10.4.0
         items:
           - name: DataMiner web apps Main Release 10.4.0 - Preview
             topicUid: Web_apps_Main_Release_10.4.0
           - name: DataMiner web apps Main Release 10.4.0 CU1 - Preview
             topicUid: Web_apps_Main_Release_10.4.0_CU1  
       - name: Feature Release
-        topicUid: Web_apps_Feature_Release_10.4.1
         items:
           - name: DataMiner web apps Feature Release 10.4.1
             topicUid: Web_apps_Feature_Release_10.4.1
@@ -34,10 +29,8 @@ items:
           - name: DataMiner web apps Feature Release 10.4.4 - Preview
             topicUid: Web_apps_Feature_Release_10.4.4
   - name: v10.3
-    topicUid: Web_apps_Main_Release_10.3.0
     items:
       - name: Main Release
-        topicUid: Web_apps_Main_Release_10.3.0
         items:
           - name: DataMiner web apps Main Release 10.3.0
             topicUid: Web_apps_Main_Release_10.3.0
@@ -71,7 +64,6 @@ items:
           - name: DataMiner web apps Main Release 10.3.0 CU12 - Preview
             topicUid: Web_apps_Main_Release_10.3.0_CU12  
       - name: Feature Release
-        topicUid: Web_apps_Feature_Release_10.3.12
         items:
           - name: DataMiner web apps Feature Release 10.3.12
             topicUid: Web_apps_Feature_Release_10.3.12
@@ -80,7 +72,6 @@ items:
           - name: DataMiner web apps Feature Release 10.3.10
             topicUid: Web_apps_Feature_Release_10.3.10
           - name: DataMiner web apps Feature Release 10.3.9
-            topicUid: Web_apps_Feature_Release_10.3.9
             items:
               - name: New features and changes
                 topicUid: Web_apps_Feature_Release_10.3.9

@@ -16,7 +16,6 @@ items:
         topicUid: DxM_RNs_index
         href: DxMs/toc.yml
       - name: Other release notes
-        topicUid: Code_Libraries_Release_Notes
         items:
           - name: Code library release notes
             topicUid: Code_Libraries_Release_Notes

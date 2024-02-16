@@ -4,7 +4,6 @@ items:
   - name: DataMiner Client Requirements
     topicUid: DataMiner_Client_Requirements
   - name: Skyline DataMiner folder
-    topicUid: Overview_of_the_files_found_in_the_root_folder
     items:
       - name: Overview of the files found in the root folder
         topicUid: Overview_of_the_files_found_in_the_root_folder
@@ -383,7 +382,6 @@ items:
       - name: Verify NATS is Running
         topicUid: VerifyNatsIsRunning
   - name: Methods of Procedure
-    topicUid: MOP_Changing_the_default_password_for_Cassandra
     items:
       - name: Changing the default password for Cassandra
         topicUid: MOP_Changing_the_default_password_for_Cassandra
@@ -510,7 +508,6 @@ items:
       - name: Visual Overview benchmarks
         topicUid: visual_overview_benchmarks
   - name: Technical information
-    topicUid: Connecting_devices_using_RS_232_RS_422_RS_485
     items:
       - name: Connecting devices using RS-232/RS-422/RS-485
         topicUid: Connecting_devices_using_RS_232_RS_422_RS_485
@@ -526,7 +523,6 @@ items:
       - name: DataMiner client applications
         topicUid: DataMiner_client_applications
   - name: Glossary
-    topicUid: glossary_a_to_l
     items:
       - name: A to L
         topicUid: glossary_a_to_l
