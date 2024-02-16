@@ -134,6 +134,14 @@ When a panel component had the focus, selection boxes in the header bar would in
 
 When you duplicated a dashboard, the newly created duplicate would incorrectly not inherit the dashboard settings of the original dashboard.
 
+#### Dashboards app: Issues with input controls on mobile devices [ID_38723]
+
+<!-- MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+A number of input control issues on mobile devices have been fixed.
+
+For example, on devices with a touch screen, it was no longer possible to disable *View password* after enabling it. Also, you will now need to long press a label instead of tap it to see its tooltip.
+
 #### Dashboards app & Low-Code Apps - Maps component: Manually configured line dimensions could incorrectly be reset [ID_38753]
 
 <!-- MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.4 -->
