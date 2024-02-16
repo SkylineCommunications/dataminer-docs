@@ -299,7 +299,7 @@ items:
                 topicUid: Tutorial_Embed_Connector_Dashboard_in_Visio
               - name: Leveraging controls and feeds to create a dynamic GQI query
                 topicUid: Tutorial_Dashboards_Controls_And_Feeds_Query
-              - name: Getting started with the node-edge component
+              - name: Getting started with node edge graphs
                 topicUid: Tutorial_Apps_Node_Edge
       - name: Low-Code Apps
         topicUid: Application_framework
