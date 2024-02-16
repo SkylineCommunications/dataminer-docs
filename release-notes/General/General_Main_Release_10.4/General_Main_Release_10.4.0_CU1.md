@@ -12,6 +12,21 @@ uid: General_Main_Release_10.4.0_CU1
 
 ### Enhancements
 
+#### Automation: Late script control requests will now be ignored [ID_38409]
+
+<!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
+
+From now on, SLAutomation will ignore any script control request it receives for a script that is not running or not running anymore, and will add an entry in the SLAutomation.txt log file when it does so.
+
+Examples of new log entries:
+
+- DEBUG (5): `Handling script command 'Continue' (2) for script with ID 954.`
+- ERROR (-1): `Handling command 'Continue' (2) for script with ID 954 failed with error code 2147942487.`
+- ERROR (-1): `Handling command 'Continue' (2) for script with ID 954 failed because it is not interactive.`
+- INFO (-1): `Handling command 'Continue' (2) for script with ID 954 failed because it is not active.`
+
+In the latter case, no error would be returned up to now.
+
 #### Service & Resource Management: Booking name validation now case-insensitive [ID_38556]
 
 <!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
