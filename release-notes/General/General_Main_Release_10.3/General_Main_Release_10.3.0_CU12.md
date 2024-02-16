@@ -80,9 +80,10 @@ Up to now, during a DataMiner upgrade, in some cases, MSI packages would fail to
 
 From now on, when one of the above-mentioned errors is thrown, it will no longer be necessary to restart the entire upgrade procedure. Instead, a retry will be attempted during the running upgrade.
 
-#### Security enhancements [ID_38386]
+#### Security enhancements [ID_38386] [ID_38756]
 
-<!-- 38386: MR 10.3.0 [CU12] - FR 10.4.3 -->
+<!-- RN 38386: MR 10.3.0 [CU12] - FR 10.4.3 -->
+<!-- RN 38756: MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.4 -->
 
 A number of security enhancements have been made.
 

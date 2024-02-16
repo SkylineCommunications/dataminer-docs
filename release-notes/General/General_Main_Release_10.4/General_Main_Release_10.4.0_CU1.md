@@ -47,6 +47,12 @@ From now on, the following exception will be thrown instead:
 
 SLLogCollector will now also collect the logs of the *CommunicationGateway* DxM.
 
+#### Security enhancements [ID_38756]
+
+<!-- RN 38756: MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+A number of security enhancements have been made.
+
 ### Fixes
 
 #### Problem with file offload mechanism when main database is offline [ID_38542]
