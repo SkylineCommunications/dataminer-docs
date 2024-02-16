@@ -368,7 +368,7 @@ When the URL specified in a shape data item of type *Link* did not link to a Dat
 
 #### DataMiner Cube could leak memory leak when a card in tab layout was closed before it had fully been loaded [ID_37857] [ID_38021]
 
-<!-- RN 37857: MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
+<!-- RN 37857: MR 10.2.0 [CU22]/10.3.0 [CU10]/10.4.0 [CU1] - FR 10.4.1 -->
 <!-- RN 38021: MR 10.2.0 [CU22]/10.3.0 [CU11] - FR 10.4.2 -->
 
 When a card in tab layout was closed before it had fully been loaded, DataMiner Cube could leak memory due to list boxes not being cleared from memory.
