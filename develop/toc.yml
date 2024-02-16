@@ -14,6 +14,64 @@ items:
         items:
         - name: Protocol version semantics
           topicUid: ProtocolVersionSemantics
+        - name: Impact of protocol version changes
+          topicUid: ImpactOfProtocolVersionChanges
+          items:
+          - name: Protocol changes
+            topicUid: ChangeDCF
+            items:
+            - name: Change DCF
+              topicUid: ChangeDCF
+            - name: Change Unicode
+              topicUid: ChangeUnicode
+            - name: Change connection(s)
+              topicUid: ChangeConnections
+            - name: Change layout
+              topicUid: ChangeLayout
+            - name: Change exported protocol name (DVE)
+              topicUid: ChangeExportedProtocolName
+            - name: Change page name
+              topicUid: ChangePageName
+            - name: Change minimum required DataMiner version
+              topicUid: ChangeMinimumRequiredDMAVersion
+            - name: Change protocol name
+              topicUid: ChangeProtocolName
+          - name: Parameter changes
+            topicUid: ChangeParameterDescription
+            items:
+            - name: Change parameter description
+              topicUid: ChangeParameterDescription
+            - name: Change parameter ID
+              topicUid: ChangeParameterID
+            - name: Change parameter discreet and/or exception
+              topicUid: ChangeParameterDiscreetException
+            - name: Change parameter Interprete
+              topicUid: ChangeParameterInterprete
+            - name: Change parameter range
+              topicUid: ChangeParameterRange
+            - name: Change matrix parameter size
+              topicUid: ChangeMatrixParameterSize
+            - name: Change alarm monitoring and/or trending
+              topicUid: ChangeAlarmMonitoringTrending
+            - name: Remove parameter
+              topicUid: RemoveParameter
+          - name: Table parameter changes
+            topicUid: ChangePrimaryKey
+            items:
+            - name: Change primary key
+              topicUid: ChangePrimaryKey
+            - name: Change display key
+              topicUid: ChangeDisplayKey
+            - name: Replace displayColumn by naming 
+              topicUid: ReplaceDisplayColumnByNaming
+            - name: Change to partial table
+              topicUid: ChangeToPartialTable
+            - name: Change logger table
+              topicUid: ChangeLoggerTable
+            - name: Change column order
+              topicUid: ChangeColumnOrder
+            - name: Change displayed column order
+              topicUid: ChangeDisplayedColumnOrder
       - name: Logic
         topicUid: Logic
         items:
