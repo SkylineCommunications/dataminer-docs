@@ -14,6 +14,7 @@ Changing the parameter description can impact the following (when used):
 - Automation scripts
 - Visio files
 - Reports
+- Dashboards
 - Web API
 
 Note that in the following cases, there is no actual impact and these types of changes can be done in the same range:
