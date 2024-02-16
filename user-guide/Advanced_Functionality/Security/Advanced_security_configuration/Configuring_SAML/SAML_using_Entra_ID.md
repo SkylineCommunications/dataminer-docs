@@ -414,8 +414,10 @@ There are two ways to configure this setup: with or without group claims.
 
    ![Group claim configuration](~/user-guide/images/SAML_Group_claim_config.png)
 
-   > [!NOTE]
-   > The account name of the group will only be sent via SAML when the groups are synchronized (from an on-premises AD). Otherwise, the ID of the group will be sent instead.
+   > [!IMPORTANT]
+   > Double-check which settings you should use: only select *sAMAccountName* if Entra ID is synced with an on-premises Active Directory. If the groups only exist on Azure, set the *Source attribute* to *Cloud-only group display names*.
+   >
+   > This is because the account name of the group will only be sent via SAML when the groups are synchronized (from an on-premises AD). Otherwise, the ID of the group will be sent instead.
 
 1. In DataMiner Cube, add the groups corresponding with the groups you included in the group claim in Entra ID. See [Adding a user group](xref:Adding_a_user_group).
 
