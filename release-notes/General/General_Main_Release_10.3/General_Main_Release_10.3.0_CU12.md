@@ -30,6 +30,29 @@ This format is now consistent with automatic user provisioning via SAML authenti
 
 For example, "ZIINE\Björn.Waldegård" with userPrincipalName <bjorn.waldegard@ziine.com> will now become "ziine.com\bjorn.waldegard".
 
+> [!IMPORTANT]
+> If you are using SAML with Microsoft Entra ID and you [have imported single users from Entra ID](xref:SAML_using_Entra_ID#configuring-dataminer-to-import-users-and-groups-from-microsoft-entra-id) (indicated with a blue icon in the *Users/Groups* module in Cube), take the following steps when you upgrade:
+>
+> 1. Make sure a local admin user can be used on the server.
+>
+>    If no such user exists yet, create one.
+>
+> 1. Take a backup of the `C:\Skyline DataMiner\Users` folder and of the file `C:\Skyline DataMiner\Security.xml`.
+>
+> 1. Upgrade DataMiner.
+>
+> 1. Log in with the local admin user, and replace the imported users:
+>
+>    1. [Add the new users](xref:Adding_a_user).
+>
+>    1. [Place them in the same security group](xref:Changing_group_membership_of_a_user).
+>
+>    1. [Remove the old imported users](xref:Deleting_a_user).
+>
+>    1. If you want to restore the client settings for the users, copy the user files from the backup you created earlier and add them to the relevant folders under `C:\Skyline DataMiner\Users`.
+>
+> 1. If the users were able to use dataminer.services features, you will need to remove their old account in the Admin app and then add the new account. See [Controlling user access to dataminer.services features](xref:Giving_users_access_to_cloud_features).
+
 ### Enhancements
 
 #### DataMiner upgrade: New prerequisite will check whether ASP.NET 8.0 Hosting Bundle is installed [ID_37969]
