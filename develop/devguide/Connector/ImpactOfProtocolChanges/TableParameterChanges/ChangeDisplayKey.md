@@ -14,6 +14,7 @@ This has the same impact as changing a parameter description. The following Data
 - Automation scripts
 - Visio files
 - Reports
+- Dashboards
 - Web API
 
 *DIS MCC*
