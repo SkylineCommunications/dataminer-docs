@@ -44,6 +44,12 @@ In some cases, an error could occur in SLHelper when it was generating visual ov
 
 In some cases, after you had logged in, DataMiner Cube could become unresponsive when the "Show the news section" setting was enabled.
 
+#### Visual Overview: An embedded browser component would incorrectly be created when generating mobile visual overviews [ID_38721]
+
+<!-- MR 10.3.0 [CU13]/10.4.0 [CU1] - FR 10.4.4 -->
+
+When generating a mobile visual overview with *Link* shapes containing an inline link (i.e. a URL preceded by a # character), up to now, an embedded browser component would incorrectly be created. From now on, embedded browsers will no longer be created in this case.
+
 #### Spectrum analyzer cards could leak memory [ID_38725]
 
 <!-- MR 10.3.0 [CU13]/10.4.0 [CU1] - FR 10.4.4 -->
