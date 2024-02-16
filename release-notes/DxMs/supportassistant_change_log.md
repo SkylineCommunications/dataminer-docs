@@ -4,6 +4,10 @@ uid: supportassistant_change_log
 
 # Support Assistant change log
 
+#### 16 February 2024 - Enhancement - SupportAssistant 1.6.6 - Additional data offload for proactive monitoring [ID_38797]
+
+From now onwards the SLClient log file will be offloaded for proactive monitoring via CDMR.
+
 #### 30 January 2024 - Enhancement - SupportAssistant 1.6.5 - Improved DxM status reporting [ID_38608]
 
 The SupportAssistant DxM will now offload information about the used version of the log collector.
