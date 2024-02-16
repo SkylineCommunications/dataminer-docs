@@ -35,6 +35,29 @@ This indicator will show the current status of the client's WebSocket connection
 
 ### Enhancements
 
+#### Web apps - Interactive Automation scripts: Theme colors will now be passed to script windows and popups [ID_38472]
+
+<!-- MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+When an interactive Automation script was launched from a web app, up to now, the windows and popups of the script would always have the default background and foreground colors (i.e. white background and black foreground).
+
+From now on, when an interactive Automation script is launched in any of the following ways, the windows and popups of that script will inherit the default background and foreground colors of the page, panel or dashboard from which the script was launched:
+
+- When clicking a Button component in a low-code app.
+- When clicking a button in the page/panel header bar of a low-code app.
+- When clicking a DOM action button.
+- When clicking a cell or double-clicking a row in a Table component.
+- When clicking an entry in a Grid component.
+- When clicking an entry in a Timeline component.
+- When clicking a marker in a Maps component.
+- When clicking a node in a Service Definition component.
+- When clicking a region on a Visual Overview component.
+- When clicking an Automation script button on a dashboard.
+- When a page of a low-code app is loaded.
+
+> [!NOTE]
+> If an interactive Automation script is launched from a component that has a custom theme applied, the color settings of that custom theme will not be taken into account.
+
 #### Web apps: Executing Automation scripts will now only require you to have Execute permission [ID_38529]
 
 <!-- MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.4 -->
