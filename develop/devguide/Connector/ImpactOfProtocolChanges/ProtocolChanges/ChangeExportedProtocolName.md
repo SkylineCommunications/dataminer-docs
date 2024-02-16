@@ -33,7 +33,3 @@ You can manually remove the "bad" main protocol, which will remove the correspon
 
 > [!NOTE]
 > The above actions only work if the incorrect protocol has NOT created new DVEs but only worked with DVEs that were previously created. If you have a "mixed" setup where some DVEs are running version A, and some are running the previous version B, then it will not be possible to just upload a new protocol that resets the version to B. The DVEs running version A will still be stuck.
-
-## Note
-
-SW to use placeholder for Protocol Mother Name (users who adapt existing protocols to have multiple versions as production).
