@@ -26,7 +26,7 @@ Because of a number of enhancements, overall performance has increased when open
 
 #### Optimization of memory handling when closing cards [ID_37858]
 
-<!-- MR 10.2.0 [CU22]/10.3.0 [CU11] - FR 10.4.2 -->
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU1] - FR 10.4.2 -->
 
 Overall memory handling when closing cards has been optimized.
 
