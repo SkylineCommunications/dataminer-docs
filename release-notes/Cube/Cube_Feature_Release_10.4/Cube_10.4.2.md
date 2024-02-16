@@ -117,7 +117,7 @@ From now on, when you right-click inside a visual overview linked to a service, 
 
 #### DataMiner Cube could leak memory leak when a card in tab layout was closed before it had fully been loaded [ID_38021]
 
-<!-- MR 10.2.0 [CU22]/10.3.0 [CU11] - FR 10.4.2 -->
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU1] - FR 10.4.2 -->
 
 When a card in tab layout was closed before it had fully been loaded, DataMiner Cube could leak memory due to list boxes not being cleared from memory.
 
