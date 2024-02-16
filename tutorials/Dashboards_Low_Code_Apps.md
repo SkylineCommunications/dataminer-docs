@@ -12,6 +12,7 @@ keywords: low-code, low code, lowcode
 | [Displaying a custom empty component message](xref:Tutorial_Dashboards_Displaying_a_custom_empty_component_message) | Add a custom message when a query returns no results for any of the following components of a dashboard: table, grid, pie & donut chart, line & area chart, timeline, and node edge graph. |
 | [Embedding a connector dashboard in Visual Overview](xref:Tutorial_Embed_Connector_Dashboard_in_Visio) | Embed a dynamic dashboard for an element using a specific connector in Visual Overview. |
 | [Leveraging controls and feeds to create a dynamic GQI query](xref:Tutorial_Dashboards_Controls_And_Feeds_Query) | Discover how to harness controls and feeds that are used in a GQI query, so that an update to the user input will lead to an updated GQI result. |
+| [Getting started with node edge graphs](xref:Tutorial_Apps_Node_Edge)| Build a basic network diagram using GQI queries with a node edge graph component. |
 
 ### Low-Code Apps tutorials
 
