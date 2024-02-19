@@ -2,9 +2,11 @@
 uid: GettingStartedAsSysDev
 ---
 
-# Getting Started as a System Developer
+# Getting started as a System Developer
 
-When a System Developer starts in Skyline, they, amongst other onboarding procedures, follow the following training path during their first few weeks: [System Developers - Training](https://communicty.dataminer.services/download/system-developers-training/)
+When a System Developer starts at Skyline Communications, among other onboarding procedures, they follow this training path during their first few weeks:
+
+[System Developers - Training](https://community.dataminer.services/download/system-developers-training/)
 
 > [!NOTE]
-> Note such training path is provided as is for transparency reasons and because we believe it might be useful to our users. However, this is by no means an official training.
+> We have made this training path available for you both for transparency reasons and because this may be useful for other DataMiner users as well. However, this is by no means an official DataMiner training path.
