@@ -355,9 +355,11 @@ To trigger a NATS reset:
 
 1. Use SLNetClientTest tool to connect to any DMA in the cluster. For more information, see [SLNetClientTest tool](xref:SLNetClientTest_tool).
 
-1. In the *Build Message* tab, select the message *Skyline.DataMiner.Net.Apps.NATSCustodian.NATSCustodianResetNatsRequest*.
+1. In the *Build Message* tab (1), select the message *Skyline.DataMiner.Net.Apps.NATSCustodian.NATSCustodianResetNatsRequest* (2).
 
-1. Leave all fields set to the default values (*IsDistributed* = false) and click *Send Message*.
+1. Leave all fields set to the default values (*IsDistributed* = false) and click *Send Message* (3).
+
+![NATS reset](~/user-guide/images/NATS_reset.png)
 
 This will recalculate the NAS and NATS configs in the entire cluster, so any faulty configurations are cleaned up automatically.
 
