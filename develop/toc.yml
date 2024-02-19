@@ -773,6 +773,8 @@ items:
       topicUid: Scheduler_NuGet_Package
     - name: Examples
       topicUid:  ClassLibraryExamples
+  - name: Getting started as a System Developer
+    topicUid: GettingStartedAsSysDev
 - name: API documentation
   topicUid: ApiDocumentation
   items:
