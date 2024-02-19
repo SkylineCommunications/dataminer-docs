@@ -111,15 +111,52 @@ If you trigger an API via the SLNetClientTest tool, this will bypass the endpoin
 > [!WARNING]
 > Always be extremely careful when using the SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
-#### Support for real-time GQI row updates [ID_37060]
+#### Configuration of behavioral anomaly alarms [ID_36857] [ID_36976] [ID_37124] [ID_37246] [ID_37250] [ID_37334] [37434]
 
-<!-- MR 10.4.0 - FR 10.3.10 -->
+<!-- MR 10.4.0 - FR 10.3.12 -->
 
-Real-time row updates are now supported for GQI session results for specific data sources and operators. This means that, when this is supported in the client, real-time updates can be displayed for row additions, modification, or deletions.
+The DataMiner software now supports a more extensive configuration of behavioral anomaly alarms.
 
-At present, this is supported for the following GQI data sources:
+From now on, you will be able to choose between the following types of anomaly monitoring:
 
-- Parameter table (except partial and view tables)
-- Views
+- Smart anomaly monitoring (i.e. anomaly monitoring as it existed before)
+- Customized anomaly monitoring
 
-It is supported for the *Select* operator, but it can also be supported for other operators if they are combined with specific data sources, for instance for a filter on a parameter table.
+Customized anomaly monitoring will enable you to do the following:
+
+- Set absolute or relative thresholds on the jump sizes of the change points of type *Level Shift* or *Outlier*.
+- Enable or disable monitoring for each of the two possible directions of a behavioral change for level shifts, trend changes, variance changes and outliers. This will allow you, for example, to configure different alarm monitoring behaviors for downward level shifts and upward level shifts.
+
+For more information on how to configure anomaly monitoring in DataMiner Cube, see [Alarm templates: Configuration of behavioral anomaly alarms [ID_37148] [ID_37171] [ID_37670]](xref:Cube_Feature_Release_10.3.12#alarm-templates-configuration-of-behavioral-anomaly-alarms-id_37148-id_37171-id_37670).
+
+Summary of server-side changes:
+
+- The behavioral anomaly configuration can be requested by sending a *GetAlarmTemplateMessage*. The *GetAlarmTemplateResponseMessage* will then return the behavioral anomaly configuration in a new *AnomalyConfiguration* field.
+
+  If you enable behavioral anomaly monitoring, the *AnomalyConfiguration* field will contain information on which change point types are being monitored and how. If no behavioral anomaly monitoring has been configured, this field will remain empty.
+
+  The legacy anomaly monitoring fields *LevelShiftMonitor*, *TrendMonitor*, *VarianceMonitor* and *FlatlineMonitor* in the *GetAlarmTemplateResponseMessage* have been marked as obsolete. If, in existing alarm templates, at least one of those legacy fields was enabled, the *AnomalyConfiguration* field will be filled with values consistent with the old settings.  
+
+- The  anomaly configuration information for a parameter is no longer available in the *ParameterAlarmInfo* of each parameter. This means that the anomaly monitoring information can no longer be retrieved by means of a *GetElementProtocolMessage*.
+
+  The legacy anomaly monitoring fields *LevelShiftMonitor*, *TrendMonitor*, *VarianceMonitor* and *FlatlineMonitor* in the *ParameterAlarmInfo* have been marked as obsolete and will no longer be taken into account by SLAnalytics.
+
+- When upgrading to this DataMiner version, existing alarm template XML files will not be changed.
+
+  When you update an existing alarm template or creating a new one, a new `<AnomalyConfig>` element will be added into the body of the `<Alarm>` element if, and only if, behavioral anomaly monitoring is enabled and an extended anomaly configuration has been set via the *AnomalyConfiguration* field of the *GetAlarmTemplateResponse* or the template parameters.
+
+  The existing attributes of the `<Monitored>` element (i.e. *varianceMonitor*, *trendMonitor*, *levelShiftMonitor* and *flatLineMonitor*) have not been changed or removed to ensure compatibility of the new alarm template XML files with older DataMiner versions.
+
+- When you set up a customized behavioral anomaly monitoring containing relative or absolute thresholds, this setup will be lost when you downgrade to an older server version that does not support this extended anomaly configuration (i.e. DataMiner version 10.3.11 or older). A fallback to the legacy "smart anomaly monitoring" will happen for all the change point types that had some kind of anomaly monitoring enabled.
+
+- The internal SLAnalytics alarm template monitoring mechanism now also takes into account alarm template group information. As a result, SLAnalytics modules making use of this mechanism will get notified about changes to group entries and can react to these changes.
+
+- A behavioral change point of type "flatline" shown in the trend graph will now always receive the correct alarm color when an anomaly alarm was created for it. In other words, if a critical behavioral anomaly alarm was created for the behavioral change of type "flatline", the change point bar shown in the trend graph will receive the red color.
+
+#### DataMiner requirements: .NET 8.0 now required [ID_37969]
+
+<!-- MR 10.3.0 [CU12] / 10.4.0 [CU0] - FR 10.4.3 [CU0] -->
+
+To be able to upgrade to DataMiner 10.4.0, you will first need to install the [Microsoft ASP.NET 8.0 Hosting Bundle](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-8.0.1-windows-hosting-bundle-installer).
+
+If this requirement is not met, a new prerequisite check during the upgrade will notify you that you will first need to take care of this before you can install the upgrade.

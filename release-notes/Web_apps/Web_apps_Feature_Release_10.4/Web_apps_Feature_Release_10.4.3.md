@@ -10,7 +10,7 @@ uid: Web_apps_Feature_Release_10.4.3
 > [!TIP]
 > For release notes for this release that are not related to the web applications, see [General Feature Release 10.4.3](xref:General_Feature_Release_10.4.3).
 
-## New features
+## Highlights
 
 #### Low-Code Apps: 'Show a notification' action [ID_38548]
 
@@ -31,6 +31,14 @@ When configuring a *Show a notification* action, the following properties should
 > - The maximum number of open notifications is 100. When a new notification appears when 100 notifications are open, the oldest one will automatically be removed.
 > - Only the first 80 characters of a title will be displayed.
 > - Only the first 400 characters of a message will be displayed.
+
+## Features
+
+#### Dashboards app & Low-Code Apps - Template editor: All overrides now have a reset button [ID_38368]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+Up to now, in the template editor, only text overrides could be reset. Now all overrides have a dedicated reset button.
 
 ## Changes
 
@@ -69,29 +77,23 @@ In a web form, values in a `DomInstanceValueFieldDescriptor` or `DomInstanceFiel
 > - A `DomInstanceValueFieldDescriptor` that refers to another `DomInstance(Value)FieldDescriptor` will only display the name (or the ID if there is no name) of the DomInstance to avoid performance degradation when fetching instances.
 > - DisplayValue is limited to 70 characters to avoid performance degradation.
 
-#### Dashboards app & Low-Code Apps: Redesigned popup windows [ID_38278]
+#### Dashboards app & Low-Code Apps: Redesigned pop-up windows [ID_38278]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
 
-In the Dashboards app and the low-code apps, the popup windows have been redesigned.
-
-#### Dashboards app & Low-Code Apps - Template editor: All overrides now have a reset button [ID_38368]
-
-<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
-
-Up to now, when working with the template editor, only text overrides could be reset. From now on, all overrides have a dedicated reset button.
+In the Dashboards app and the low-code apps, the pop-up windows have been redesigned.
 
 #### Monitoring app: Zooming and panning in visual overviews [ID_38395]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
 
-From now on, the Monitoring app allows you to zoom and pan in visual overviews.
+In the Monitoring app, it is now possible to zoom and pan in visual overviews.
 
 #### DataMiner web apps updated to Angular 17 [ID_38468]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
 
-The DataMiner mobile apps that use Angular (e.g. Low-Code Apps, Dashboards, Monitoring, Ticketing, Jobs, Automation, etc.) now all use Angular 17.
+The DataMiner web apps that use Angular (e.g. Low-Code Apps, Dashboards, Monitoring, Ticketing, Jobs, Automation, etc.) now all use Angular 17.
 
 ### Fixes
 
