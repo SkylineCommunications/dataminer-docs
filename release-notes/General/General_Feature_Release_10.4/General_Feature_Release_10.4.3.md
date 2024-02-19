@@ -429,6 +429,6 @@ When a DataMiner Agent was added to a DataMiner System, in some cases, the SLNet
 
 #### Problem with SLDataMiner while sending a SetDocumentEofMessage with a negative file number [ID_38712]
 
-<!-- MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.3 [CU0] -->
+<!-- MR 10.3.0 [CU12] / 10.4.0 [CU0] - FR 10.4.3 [CU0] -->
 
 In some cases, SLDataMiner could stop working while sending a `SetDocumentEofMessage` with a negative file number via SLNet.
