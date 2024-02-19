@@ -6,7 +6,7 @@ uid: DataAggregator_change_log
 
 #### 13 February 2023 - Enhancement - DataAggregator 3.0.2 - Debug UI shows job names instead of job IDs [ID_38697]
 
-In the debug UI of Data Aggregator (accessible via `http(s)://<DMA hostname or IP>.<Data Aggregator port>/debug>`) the different tab pages will now show the job name instead of the job ID, so that it is easier to find a specific job.
+In the debug UI of Data Aggregator (accessible via `http://<hostname or IP>:<Data Aggregator port>/debug/`) the different tab pages will now show the job name instead of the job ID, so that it is easier to find a specific job.
 
 #### 9 June 2023 - Enhancement - DataAggregator 2.0.0 - Upgrade to .NET 6 [ID_36408]
 
