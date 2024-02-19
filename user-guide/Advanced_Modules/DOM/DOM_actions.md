@@ -20,7 +20,7 @@ This action can be used to execute a specified script. This has the following pr
 
 | Name | Type | Description |
 |--|--|--|
-| Id | string | The ID of the action. It must contain lowercase characters only (e.g. "trigger_ingest_action"). |
+| Id | string | The ID of the action, which contains lowercase characters only (e.g. "trigger_ingest_action"). |
 | Condition | IDomCondition | The condition that should be met before the action is allowed to be executed. |
 | Script | string | The name of the script that can be executed. |
 | Async | bool | Determines whether the script will be run synchronously or asynchronously. When this is set to true, no errors or info data from the script will be returned. |
