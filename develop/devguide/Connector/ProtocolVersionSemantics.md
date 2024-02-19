@@ -52,7 +52,7 @@ It is possible that different version ranges are maintained in parallel but we s
 
 ### Major change
 
-- A new major change version number is used when the change may have an impact on the DMS platform and an action by the user might be required when a driver is upgraded to this range. For more information on what is to be seen as a breaking change, see [Impact of protocol version changes](xref:ImpactOfProtocolVersionChanges).
+- A new major change version number is used when the change may have an impact on the DMS platform and an action by the user might be required when a protocol is upgraded to this range. For more information on what is to be considered a breaking change, see [Impact of protocol version changes](xref:ImpactOfProtocolVersionChanges).
 - Different major change ranges are not maintained in parallel, unless this is exceptionally agreed upon.
 - Range: [0...n]
 - Examples:

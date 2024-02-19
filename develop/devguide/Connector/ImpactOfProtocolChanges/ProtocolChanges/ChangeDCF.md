@@ -12,7 +12,7 @@ Changes to existing DCF interfaces and/or connections are typically considered a
 
 As such, adding DCF support to an existing protocol is **not** to be seen as a breaking change. However, note that depending on the use-case, adding DCF may or may not have a major impact on performance and resource consumptions and it's only in that aspect that adding DCF can sometimes be considered a breaking change. This is the case when, for example, linking creation of DCF interfaces on a very big and/or a very dynamic table.
 
-*DIS MCC (to be suppressed when impact is contained. For example, when linking DCF interfaces to a few standalone parameters or to a rather small and/or static table)*
+*DIS MCC (To be suppressed when impact is contained. For example, when DCF interfaces are linked to a few standalone parameters or to a rather small and/or static table.)*
 
 | Full ID | Error message | Description   |
 |---------|---------------|---------------|
@@ -54,7 +54,7 @@ Advised method:
 
 - Do not use a workaround to disable interfaces unless absolutely necessary.
 
-  - A software task was created to make it possible to disable DCF interfaces ([task 62899](https://collaboration.dataminer.services/task/62899)). Once this new feature is available, there will be no more reason to consider adding DCF as a breaking change since we will be able to fully disable it by default when desired.
+  - A software task was created to make it possible to disable DCF interfaces ([task 62899](https://collaboration.dataminer.services/task/62899)). Once this new feature is available, there will be no more reason to consider adding DCF to be a breaking change, as it will be possible to fully disable it by default when desired.
 
 ### DCF interface changes
 
