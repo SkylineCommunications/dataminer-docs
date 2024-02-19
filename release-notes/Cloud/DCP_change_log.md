@@ -56,7 +56,7 @@ To get started, you can find several example Automation scripts with more inform
 
 After you have made sure that the [prerequisites](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples/README.md#usage) are in place, you can deploy [the Chat Integration examples](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples/README.md#getting-started) to your DataMiner System and immediately try out these examples.
 
-#### 6 February 2024 - New feature - Custom commands executed with the DataMiner bot now support adding buttons to the output using Adaptive Cards [ID_38701]
+#### 6 February 2024 - New feature - Custom commands executed with the DataMiner bot now support adding buttons to the response using Adaptive Cards [ID_38701]
 
 It is now possible to send buttons in custom command responses using Adaptive Cards.
 
