@@ -10,7 +10,7 @@ Changes to existing DCF interfaces and/or connections are typically considered a
 
 ### Adding DCF support to an existing protocol
 
-As such, adding DCF support to an existing protocol is **not** to be seen as a breaking change. However, note that depending on the use-case, adding DCF may or may not have a major impact on performance and resource consumptions and it's only in that aspect that adding DCF can sometimes be considered a breaking change. This is the case when, for example, linking creation of DCF interfaces on a very big and/or a very dynamic table.
+Adding DCF support to an existing protocol is usually **not** considered to be a breaking change. However, note that depending on the use case, adding DCF may have a major impact on performance and resource consumption, which may cause it to be considered a breaking change after all. This is for example the case when creation of DCF interfaces is linked to a very big and/or a very dynamic table.
 
 *DIS MCC (To be suppressed when impact is contained. For example, when DCF interfaces are linked to a few standalone parameters or to a rather small and/or static table.)*
 
