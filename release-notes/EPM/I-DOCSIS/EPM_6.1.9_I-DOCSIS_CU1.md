@@ -6,6 +6,14 @@ uid: EPM_6.1.9_I-DOCSIS_CU1
 
 ## Enhancements
 
+#### #CM Ping OK renamed and CH Utilization updated to show filtered dashboard [ID_36751]
+
+​On the network layer, the *#CM Ping OK* KPI has been changed to *#CM Ping Unreachable*. On the service group layer, the CH Utilization has been updated so it shows the dashboard with preselected filters for the respective service group.
+
+#### Generic DOCSIS CM Collector: Interval adjusted for KPI calculation [ID_37356]
+
+To make sure the same data are shown at the same time, the logic that updates KPIs in the CM QAM Channels, Cable Modem Overview, and QAM Channels tables now uses the same interval parameter, i.e. the Threshold Execution Interval.
+
 #### DOCSIS version information streamlined [ID_38078]
 
 To streamline the way DOCSIS version information is displayed, a number of changes have been implemented:
@@ -30,6 +38,14 @@ The script *EPM_I_DOCSIS_AddNewCcapCmPair*, which is used to create a new CCAP/C
 - The script now supports the set and get community string for the collector and the CCAP, instead of only the set community string.
 
 ## Fixes
+
+#### Generic CM Collector: Empty rows in QAM Channels and Cable Modem Overview tables [ID_36626]
+
+Up to now, it could occur that the QAM Channels and Cable Modem Overview tables contained rows that were almost completely empty. To prevent this, the methods to calculate and obtain the status for the QAM channel KPIs have been modified to only consider active QAM channels.
+
+#### CM count on CCAP Core level not matching cumulative count across associated linecards [ID_37399]
+
+It could occur that the total count of CMs at the CCAP Core level did not match the cumulative count of CMs across the linecards associated with that CCAP. This was caused by the CMs being associated with linecards using a logical value (Service Group ID) instead of a physical one (MAC Domain). This has now been changed so that CMs are linked to a linecard using the MAC Domain of each CM.
 
 #### CISCO CBR-8 CCAP Platform: DS port not found for some QAM Channels [ID_38044]
 
