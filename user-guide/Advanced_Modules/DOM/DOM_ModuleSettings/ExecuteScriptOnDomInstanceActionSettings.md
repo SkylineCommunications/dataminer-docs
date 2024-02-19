@@ -109,7 +109,7 @@ On these `FieldValueDifferences`, you can apply different methods to further fil
 | OfSectionDefinition(\<SectionDefinitionID\>) | FieldValueDifferences        | Returns the differences within a certain `SectionDefinition`.                                        |
 | Get()                                        | List\<FieldValueDifference\> | Returns the differences as a list of `FieldValueDifference` objects, considering the filter methods. |
 
-These methods can be chained to create specific conditions to get your desired differences. In most situations the `Get()` method should be applied in the end, to get a list of `FieldValueDifference` and use the containing properties.
+These methods can be chained to create specific conditions to get your desired differences. In most situations, the `Get()` method should be applied at the end, to get a list of `FieldValueDifference` objects and use the properties it contains.
 
 Examples:
 
