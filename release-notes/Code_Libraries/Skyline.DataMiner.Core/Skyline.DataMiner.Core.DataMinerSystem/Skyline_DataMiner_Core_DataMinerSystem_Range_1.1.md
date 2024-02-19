@@ -11,9 +11,9 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.1
 
 #### Fix - Element deletion will be fully deleted
 
-When deleting an IDmsElement, it will now set a flag to properly delete an element like when done via Cube.
+When an IDmsElement is deleted, a flag will now be set to properly delete an element like when this is done via Cube.
 
-Without the flag it could happen that active alarms were not deleted.
+Without the flag, it could happen that active alarms were not deleted.
 
 ### 1.1.1.4
 
