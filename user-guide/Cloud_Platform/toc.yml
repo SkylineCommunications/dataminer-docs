@@ -4,6 +4,8 @@ items:
     items:
       - name: Logging on to dataminer.services
         topicUid: Logging_on_to_the_DataMiner_Cloud_Platform
+      - name: dataminer.services home page
+        topicUid: dataminer_services_home_page
       - name: Linking your DataMiner account to your dataminer.services account
         topicUid: Linking_your_DataMiner_and_DCP_account
       - name: Cloud data storage policies
