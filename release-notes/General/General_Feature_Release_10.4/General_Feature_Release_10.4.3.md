@@ -426,3 +426,9 @@ When DataMiner was processing all QActions in order to call the `Dispose` method
 <!-- MR 10.3.0 [CU12] / 10.4.0 [CU0] - FR 10.4.3 [CU0] -->
 
 When a DataMiner Agent was added to a DataMiner System, in some cases, the SLNet cache of the new DataMiner Agent would not get updated, causing the Agent to not be aware it was now part of a DMS.
+
+#### Problem with SLDataMiner while sending a SetDocumentEofMessage with a negative file number [ID_38712]
+
+<!-- MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.3 [CU0] -->
+
+In some cases, SLDataMiner could stop working while sending a `SetDocumentEofMessage` with a negative file number via SLNet.

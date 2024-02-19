@@ -291,7 +291,7 @@ At DataMiner startup, in some cases, errors could incorrectly be thrown when at 
 
 #### Problem with SLDataMiner while sending a SetDocumentEofMessage with a negative file number [ID_38712]
 
-<!-- MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.4 -->
+<!-- MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.3 [CU0] -->
 
 In some cases, SLDataMiner could stop working while sending a `SetDocumentEofMessage` with a negative file number via SLNet.
 
