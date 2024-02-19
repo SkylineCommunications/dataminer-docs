@@ -39,7 +39,7 @@ To create CCAP/CM pairs, you can either create a single CCAP/CM pair, or create 
 
    1. Enter the get community string that will be used by the CCAP to poll the device (SNMP).
 
-   1. Enter the set community string that will be used to set information in the device (SNMP) for the CCAP.
+   1. Enter the set community string that will be used by the CCAP to set information in the device (SNMP).
 
    1. Enter the get community string for the collector.
 
