@@ -46,4 +46,4 @@ To set the DMA name in Cube:
 1. Fill in the new name in the *Name* field and click *Apply*.
 
    > [!NOTE]
-   > Depending on whether [an alias is configured in DataMiner.xml](#configuring-an-alias-in-dataminerxml), a reboot may be required after this step. If no alias is not configured, changing the name via Cube will update the server name, which requires a reboot. You can trigger a reboot via the checkbox in the confirmation dialog.
+   > Depending on whether [an alias is configured in DataMiner.xml](#configuring-an-alias-in-dataminerxml), a reboot may be required after this step. If no alias is configured, changing the name via Cube will update the server name, which requires a reboot. You can trigger a reboot via the checkbox in the confirmation dialog.
