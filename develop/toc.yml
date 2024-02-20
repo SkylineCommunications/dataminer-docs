@@ -5304,7 +5304,6 @@ items:
   topicUid: TOOLS
   items:
     - name: DataMiner Integration Studio (DIS)
-      topicUid: DIS
       items:
         - name: Introduction
           topicUid: Overall_concept_of_the_DataMiner_Integration_Studio
