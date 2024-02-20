@@ -1,0 +1,273 @@
+---
+uid: CICD_Tutorial_Connector
+---
+
+# CI/CD Connector Tutorial
+
+In this exercise, we will demonstrate how to set up basic quality control and automatic deployment for a DataMiner Connector to a staging system through a CI/CD Pipeline. This can be achieved with or without the staging system being connected to dataminer.services. In this exercise, we will be using a DataMiner on an internet-accessible virtual machine.
+
+You can find a quick overview of specific CI/CD tooling offered by Skyline Communications in our [documentation](xref:Platform_independent_CICD).
+
+> [!NOTE]
+> This exercise can also be done (with limited syntax changes) using other CI/CD technology within your company: Jenkins, GitLab, Concourse, Azure DevOps, ...
+
+Expected Duration: 20 minutes
+
+## Prerequisites
+
+- An accessible (from your pipeline) Staging DataMiner Agent Deployment version 10.3.0/10.3.2 or higher
+
+- [Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/)
+
+- [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+
+- [GitHub account](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account)
+
+- [DataMiner Integration Studio](https://community.dataminer.services/exphub-dis/)
+
+> [!WARNING]
+> The Validator CI step used in this tutorial, provided by Skyline DataMiner, only works for SDK style projects targeting *.NET4.8*
+
+## Step 1: Create your Connector
+
+1. Open Visual Studio, and select *create a new project*
+
+1. Select *DataMiner Connector Solution* from the list of templates
+
+1. Specify a solution name. e.g., MyPipelineTest
+
+1. Fill in the following information:
+
+    1. Connector name: MyPipelineTest
+
+    1. Provider name: MyFakeCompany
+
+    1. Vendor name: MyFakeCompany
+
+    1. Vendor OID: 1.3.6.1.4.1.8813.2.*00*
+
+    1. Device OID: 0
+
+    1. Integration ID: DMS-DRV-*00*
+
+    1. Element type: kata
+
+    1. Type of the first connection: virtual
+
+    1. Author: MyName
+
+1. Press Create
+
+1. Add a visible Parameter
+
+    1. Type *<param* and press Tab twice. This will add a new default visible parameter.
+
+    1. Complete the snippet, filling in the name, description, etc.
+
+    1. Open the Display Editor using the bottom at the top of the file.
+
+        1. Drag the new parameter into the General page
+
+        1. Click *Apply Changes* at the top right.
+
+## Step 2: Create a GitHub Repository
+
+1. At the top of Visual Studio, select GIT and then Create Repository
+
+1. Create a new GitHub repository, choosing a name, your account, and yourself as the owner.
+
+1. Go to the newly created GitHub repository on www.github.com
+
+    1. A trick in Visual Studio 2022 is to use the GIT Menu and select GitHub/View Pull Requests. This opens the right repository.
+
+## Step 3: Create a Standard .NET GitHub Action
+
+1. On your GitHub page, navigate to the Actions tab and select the *Continuous integration/.NET starter workflow*.
+
+1. Add the ability to trigger the workflow manually by adding *workflow_dispatch:* to the *on:* keyword in yml. Like so:
+
+```yml
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+  workflow_dispatch:
+```
+
+1. Commit your changes
+
+1. Navigate to Actions and see the first run of your default .NET CI pipeline. This will perform:
+
+    1. Compilation
+
+    1. Unit Testing
+
+> [!NOTE]
+> This can also be created in other CI/CD technology of your choice.
+
+## Step 4: Extend the workflow with DataMiner Validator
+
+1. Navigate to Actions
+
+1. On the left, click on your *.NET* workflow
+
+1. On the top, click on *dotnet.yml*. On the new window, click on the pencil icon to edit the page.
+
+1. For clarity, change the job name *build:* into *CI:*
+
+1. Add 3 new steps under the current steps that:
+
+    1. Installs the Validators tool by adding a new job
+
+    1. Run the validator on your connector
+
+    1. Displays the results and optionally performs quality gating activities
+
+```yml
+    - name: InstallConnectorValidator
+      run: dotnet tool install -g Skyline.DataMiner.CICD.Tools.Validators
+
+    - name: RunConnectorValidator
+      TODO
+      run: dataminer-connector-validate ${{ github.workspace }} --name HelloFromGithubWindows --output ${{ github.workspace }} --type automation
+
+    - name: QualityGate
+      TODO 
+```
+
+1. Commit your changes
+
+1. Navigate to Actions and see the run of your enhanced pipeline. This will perform:
+
+    1. Compilation
+
+    1. Unit Testing
+
+    1. DataMiner Connector Validator
+
+## Step 4: Extend the workflow with CD, automatic deployment
+
+1. Navigate to Actions
+
+1. On the left, click on your *.NET* workflow
+
+1. On the top, click on *dotnet.yml*. On the new window, click on the pencil icon to edit the page.
+
+1. Add a new Job called CD running on a windows image with 2 new steps that:
+
+    1. Only runs if the CI Job completed
+
+    1. Retrieves the source code
+
+    1. Installs the Packager and Deployer tools
+
+    1. Run the packager to create a .dmprotocol
+
+    1. Deploys the .dmprotocol to an accessible agent directly
+
+> [!IMPORTANT]
+> Deployment with a local artifact requires running on a windows OS. For more details you can take a look at this [github issue](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Tools.DataMinerDeploy/issues/10)
+
+>[!IMPORTANT]
+> Deployment with a local artifact requires DataMiner 10.3.0/10.3.2 or higher
+
+```yml
+  CD:
+
+    runs-on: windows-latest
+    needs: CI
+    steps:
+    - uses: actions/checkout@v3
+  
+    - name: Install Package Creation
+      run: dotnet tool install -g Skyline.DataMiner.CICD.Tools.Packager
+    - name: Install DataMiner Deploy
+      run: dotnet tool install -g Skyline.DataMiner.CICD.Tools.DataMinerDeploy
+      
+    - name: Create Protocol Package
+      run: dataminer-package-create dmprotocol "${{ github.workspace }}" --name  "protocol" --output "${{ github.workspace }}\\_PackageResults"
+
+    - name: Direct Agent Deployment
+      run: dataminer-package-deploy from-artifact --path-to-artifact "${{ github.workspace }}\\_PackageResults\\protocol.dmprotocol" --dm-server-location "${{ secrets.SERVER_LOCATION }}" --dm-user "${{ secrets.DATAMINER_USER }}" --dm-password "${{ secrets.DATAMINER_PASSWORD }}"
+```
+
+1. Commit your changes
+
+1. Navigate to Actions and see the run of your enhanced pipeline. This will perform:
+
+    1. Compilation
+
+    1. Unit Testing
+
+    1. DataMiner Connector Validator
+
+    1. Package Creation
+
+    1. Direct Agent Deployment
+
+## Step 4: Add your GitHub secrets
+
+1. Navigate to Settings
+
+1. On the left, select *Secrets and variables*
+
+1. Under Actions, add a *New repository secret* for the following secrets:
+
+    1. SERVER_LOCATION
+
+    1. DATAMINER_USER
+
+    1. DATAMINER_PASSWORD
+
+## Step 5: Profit
+
+1. Navigate to Actions
+
+1. Select the *.NET* workflow on the left
+
+1. Click on *Run workflow*
+
+1. You should now see your CI and CD jobs complete successfully
+
+1. Taking a screenshot of this successful run and sending that to thunder@skyline.be or uploading it through the [DoJo tutorials page](https://community.dataminer.services/learning-courses-tutorials/) will grant you DevOps points.
+
+## Advanced Options: CI
+
+Skyline Communications organization uses more than these actions. For enhanced CI, You can take a look at our [reusable workflow](https://github.com/SkylineCommunications/_ReusableWorkflows/blob/main/.github/workflows/Connector%20Master%20SDK%20Workflow.yml):
+
+1. SonarCloud static analysis to our CI
+
+1. Ability to use our GitHub Organization private NuGet store
+
+1. Tagging is considered a release cycle, this overrides the dmprotocol version with the tag
+
+1. A regular commit and push is considered a build cycle, this adds a _Bx to the dmprotocol version. With x being the run-number of the pipeline.
+
+1. We upload the dmprotocol as a downloadable artifact in GitHub
+
+## Advanced Options: CD
+
+Skyline Communications organization provides Starter Workflows that run the reusable workflow for CI and then allows optional CD to be defined by the user. You can take a look at our [starter workflow](https://github.com/SkylineCommunications/.github/blob/main/workflow-templates/DataMiner-CICD-Connector.yml)
+
+1. We trigger our CI, reusable workflow as specified above
+
+1. Optionally a user can uncomment the code that deploys the .dmprotocol
+
+## Other CI/CD Technology
+
+You can find examples of running simple pipelines using our provided tooling within other CI/CD in our documentation:
+
+At the time of writing this tutorial we have examples on:
+
+1. [Azure Devops](xref:CICD_Azure_DevOps_Examples)
+
+1. [Concourse](xref:CICD_Concourse_Examples)
+
+1. [GitHub](xref:CICD_GitHub_Examples)
+
+1. [GitLab](xref:CICD_GitLab_Examples)
+
+1. [Jenkins](xref:CICD_Jenkins_Examples)
+
+You can even run our tooling through [Command line](xref:CICD_Command_Line_Examples) on both Windows or Ubuntu.

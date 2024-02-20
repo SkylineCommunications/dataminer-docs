@@ -2,6 +2,8 @@ items:
   - name: DataMiner tutorials
     topicUid: Tutorials
     items:
+      - name: CI/CD Tutorials
+        topicUid: CICD_Tutorials
       - name: DataMiner Analytics tutorials
         topicUid: Analytics_Tutorials
       - name: ChatOps Custom Command tutorials
