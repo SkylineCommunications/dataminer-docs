@@ -52,6 +52,12 @@ In some cases, an error could occur in SLHelper when it was generating visual ov
 
 In some cases, after you had logged in, DataMiner Cube could become unresponsive when the "Show the news section" setting was enabled.
 
+#### Data Display: Selection box configured to list all discreet values of a column parameter depending on the value from another parameter would incorrectly be empty [ID_38714]
+
+<!-- MR 10.3.0 [CU13]/10.4.0 [CU1] - FR 10.4.4 -->
+
+When, in Data Display, a selection box was configured to list all discreet values of a column parameter depending on the value from another parameter, in some cases, that selection box would incorrectly be empty.
+
 #### Visual Overview: An embedded browser component would incorrectly be created when generating mobile visual overviews [ID_38721]
 
 <!-- MR 10.3.0 [CU13]/10.4.0 [CU1] - FR 10.4.4 -->
