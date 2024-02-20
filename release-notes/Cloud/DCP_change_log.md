@@ -172,7 +172,7 @@ From now on when using live sharing, including the [Shares app](https://shares.d
 
 #### 9 November 2023 - Enhancement - Connecting to the dataminer.services with improved login system
 
-From now on when connecting your DMS to the cloud an improved login system will be used that should prevent login redirect loops that could be experienced before.
+From now on when connecting your DMS to dataminer.services an improved login system will be used that should prevent login redirect loops that could be experienced before.
 
 #### 26 September 2023 - Fix - Remote Access automatic login now works with special characters in DataMiner account configuration [ID_37438]
 
