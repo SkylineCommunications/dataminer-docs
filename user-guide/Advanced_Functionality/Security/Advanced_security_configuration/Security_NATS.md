@@ -11,41 +11,39 @@ By default, NATS does **not** implement TLS encryption, which means anyone can e
 > [!NOTE]
 > This only applicable if you have a DMS cluster or external DxMs. In case of a single agent setup, all communication occurs within the localhost, since there is only a singular NATS node.
 
-To enable authentication:
+To enable authentication, the following procedure 
 
-1. Update **nats-server.config** file in order to add the  
-
-1. Stop your NATS Service.
-
-1. Stop the NAS Service.
-
-1. Add the following lines to the *elasticsearch.yml* file (typically located in *C:\Program Files\Elasticsearch\config*):
-
-   `xpack.security.enabled: true`
-
-   `discovery.type: single-node`
-
-   > [!NOTE]
-   > For a multi-node cluster, "discovery.type" is not required.
-
-1. Start the *elasticsearch-service-x64* service.
-
-1. Execute the **elasticsearch-setup-passwords.bat** script (as superuser) with the *interactive* argument.
-
-   - On a **Windows** server, this is located in `C:\Program Files\Elasticsearch\bin\elasticsearch-setup-passwords.bat interactive`
-
-   - On a **Linux** server, this is located in `/usr/share/elasticsearch/bin/elasticsearch-setup-passwords interactive`
-
-1. When the script prompts you to do so, enter the new credentials for several users. Ideally these are random-generated, strong passwords.
-
-1. When the script is finished, add the credentials for the *elastic* user to the *db.xml* file. This file is located on every DataMiner Agent in *C:\Skyline DataMiner\db.xml*.
-
-   ```xml
-   <DataBase active="true" search="true" type="Elasticsearch">
-      <DBServer>[ELASTIC URL]</DBServer>
-      <UID>[YOUR ELASTIC USER]</UID>
-      <PWD>[YOUR STRONG PASSWORD]</PWD>
-   </DataBase>
+1. Request or generate a TLS certificate (the certificates should be in the PEM format). When generating self-signed certificates, we recommend that you **use our [scripts for generating TLS certificates](https://github.com/SkylineCommunications/generate-tls-certificates)**, available on GitHub. There is a version of the script for Linux and Windows machines. The script requires two tools: *openssl* and the *Java keytool*. Both of these can run on Linux and Windows.
+   
+1. Update the **nats-server.config** file, in order to add the TLS section within the cluster section as demonstrated below:
+    
    ```
+   cluster {
+     tls {
+       cert_file: "absolute\\path\\to\\certificate_file\\certificate.pem"
+       key_file:  "absolute\\path\\to\\private-key_file\\private-key.pem"
+       ca_file:   "absolute\\path\\to\\rootCA_file\\rootCA.pem"
+     }
+   }
+   ```
+> [!NOTE]
+> The `ca_file` property is only required when using self-signed certificates.
+   
+1. Stop your NATS service.
 
-1. Start your DataMiner Agent.
+1. Stop the NAS service.
+
+1. Start your NATS service, which should automatically start the NAS service.
+
+
+Confirm that the TLS encryption is enabled by accessing the **[NATS monitoring](http://localhost:8222/varz)** and vefying whether the `urls` property contains all the IP addresses of the NATS nodes configured with TLS. In addition, the `tls_required` and `tls_verify` properties should be set to **true**, as presented below:
+
+   ```json
+     "cluster": {
+       "urls": [
+         "[NATS_NODE_IP_ADDRESS]:6222",
+       ],
+       "tls_required": true,
+       "tls_verify": true
+     }
+  ```
