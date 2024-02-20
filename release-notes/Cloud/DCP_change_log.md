@@ -79,6 +79,10 @@ For more detailed information, refer to [Adding commands for the Teams bot to a 
 
 While remote accessing web apps via dataminer.services (e.g. the Monitoring app), the following message could appear: `An unknown error occurred (status: 200).` The app would also stop working until the page was refreshed. This issue has been resolved.
 
+#### 12 January 2024 - Fix - Given username was not applied when deploying a DaaS Express system
+
+When a custom username was given when deploying a new DaaS Express system the default username was still being used. This has now been resolved.
+
 #### 12 January 2024 - New feature - Remote access for custom files/webpages [ID_38426]
 
 It is now possible to provide remote access via dataminer.services to files or webpages. To do so, add them in the folder `C:\Skyline DataMiner\Webpages\public\` on your DMA. To access such files, users can use the remote access URL followed by `/public/` (e.g. the file *image.png* via `https://ziine-skyline.on.dataminer.services/public/image.png`).
@@ -123,9 +127,13 @@ When you create a DaaS system, your dataminer.services account will automaticall
 
 You can manually delete a DaaS system from dataminer.services, just like any other DMS; however, note that this is irreversible, and all data of the system will be lost.
 
+#### 24 November 2023 - Enhancement - Admin app improved login system
+
+From now on the [Admin app](https://admin.dataminer.services) has an improved login system that should prevent login redirect loops that could be experienced before.
+
 #### 24 November 2023 - New feature - Introducing the new Catalog user interface
 
-From now on [catalog.dataminer.services](https://catalog.dataminer.services) will have a completely new user interface.
+From now on [catalog.dataminer.services](https://catalog.dataminer.services) will have a completely renewed user interface.
 
 #### 21 November 2023 - New feature - Remote access using DataMiner Cube [ID_37841]
 
