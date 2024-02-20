@@ -162,3 +162,9 @@ When a panel had been opened as a popup, any new panel opened as a popup would i
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
 When, in a Maps component, you had manually configured line dimensions, in some cases, those manually configured line dimensions could incorrectly be reset.
+
+#### Dashboards app: Not possible to share a dashboard with feeds in query nodes [ID_38805]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+In some cases, it would not be possible to share a dashboard that contained queries with feeds in some of their nodes.
