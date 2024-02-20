@@ -5179,7 +5179,6 @@ items:
   - name: Platform-independent CI/CD
     topicUid: Platform_independent_CICD
   - name: Tutorials
-    topicUid: CICD_Tutorial_Connector
     items:
      - name: CI/CD Connector Tutorial
        topicUid: CICD_Tutorial_Connector
