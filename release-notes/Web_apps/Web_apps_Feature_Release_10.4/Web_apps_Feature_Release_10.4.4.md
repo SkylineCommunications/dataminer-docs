@@ -142,6 +142,12 @@ A number of input control issues on mobile devices have been fixed.
 
 For example, on devices with a touch screen, it was no longer possible to disable *View password* after enabling it. Also, you will now need to long press a label instead of tap it to see its tooltip.
 
+#### Low-Code Apps: Panel opened as a popup would incorrectly appear behind a panel that had previously been opened as a popup [ID_38736]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+When a panel had been opened as a popup, any new panel opened as a popup would incorrectly appear behind the open panel instead of in front of it.
+
 #### Dashboards app & Low-Code Apps - Maps component: Manually configured line dimensions could incorrectly be reset [ID_38753]
 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
