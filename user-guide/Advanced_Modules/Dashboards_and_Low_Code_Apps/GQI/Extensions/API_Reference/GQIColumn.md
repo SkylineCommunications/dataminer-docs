@@ -15,7 +15,7 @@ Provides the base class for a column in GQI.
 > This is an abstract base class. To create a new column, use one of the [derived types](xref:GQI_GQIColumnT#derived-types) provided by the framework.
 
 > [!TIP]
-> Prefer using the generic [GQIColumn\<T\>](xref:GQI_GQIColumnT) equivalent whenever possible. It provides better type safety when getting or setting cell values.
+> Use the generic [GQIColumn\<T\>](xref:GQI_GQIColumnT) equivalent whenever possible. It provides better type safety when getting or setting cell values.
 
 ## Derived types
 
