@@ -31,6 +31,15 @@ This indicator will show the current status of the client's WebSocket connection
 | Orange icon | Establishing WebSocket connection. Polling. |
 | Green success icon | WebSocket connection |
 
+#### Dashboards app & Low-Code Apps - Dropdown component: New 'Clear selection' setting [ID_38758]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+*Dropdown* components now have a *Clear selection* setting. When you enable the setting, a *Clear* button will be displayed inside the selection box, allowing users to clear the current selection.
+
+> [!NOTE]
+> When you disable the setting for a particular *Dropdown* component, clicking the dashboard's *Clear all* button will not affect that component. Its current selection will be left untouched.
+
 ## Changes
 
 ### Enhancements
