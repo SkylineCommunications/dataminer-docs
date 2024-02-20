@@ -18,6 +18,8 @@ items:
     - name: Installing a self-hosted DataMiner Agent
       topicUid: Installing_a_DataMiner_Agent
       items:
+        - name: Using a pre-installed DataMiner VHDX
+          topicUid: Using_a_pre_installed_DataMiner_VHDX
         - name: Installing DataMiner using the DataMiner Installer
           topicUid: Installing_DM_using_the_DM_installer
         - name: Unattended DataMiner installation

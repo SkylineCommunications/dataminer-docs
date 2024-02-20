@@ -366,6 +366,12 @@ items:
                 topicUid: Resources_migration_to_elastic
               - name: Migrating SRM profiles to the indexing database
                 topicUid: Profile_migration_to_elastic
+          - name: Local database on WSL
+            items:
+              - name: Local database on WSL
+                topicUid: Local_database_on_WSL
+              - name: Decommissioning WSL
+                topicUid: Decommissioning_WSL
           - name: Common database settings
             items:
               - name: Specifying TTL overrides
