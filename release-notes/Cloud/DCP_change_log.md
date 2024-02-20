@@ -31,7 +31,7 @@ DataMiner Systems are now shown on dataminer.services even if remote access is d
 
 #### 13 February 2024 - Fix - Catalog versions displayed in wrong order [ID_38762]
 
-The versions of a catalog record will now be sorted correctly.
+The versions of a catalog item will now be sorted correctly.
 
 #### 9 February 2024 - Enhancement - DMS connection status now visible on dataminer.services [ID_38771]
 
@@ -122,6 +122,10 @@ Our [Pay-per-Use](xref:Pricing_Commercial_Models#pay-per-use) model is used for 
 When you create a DaaS system, your dataminer.services account will automatically be linked to your DataMiner account, so you can easily access DataMiner web apps such as the Monitoring app via remote access.
 
 You can manually delete a DaaS system from dataminer.services, just like any other DMS; however, note that this is irreversible, and all data of the system will be lost.
+
+#### 24 November 2023 - New feature - Introducing the new Catalog user interface
+
+From now on [catalog.dataminer.services](https://catalog.dataminer.services) will have a completely new user interface.
 
 #### 21 November 2023 - New feature - Remote access using DataMiner Cube [ID_37841]
 
