@@ -158,9 +158,21 @@ It is now possible to connect to a DataMiner System via remote access using Data
 > [!NOTE]
 > At present, there is still a limitation to this feature: if the DMS has SAML authentication configured, users will not be able to access the DMS remotely with Cube.
 
+#### 10 November 2023 - Fix - Grant admin consent button unresponsive
+
+Since 9 November 2023 the grant admin consent button wouldn't work anymore. This issue has now been resolved.
+
 #### 10 November 2023 - Enhancement - Provide a custom username and password when deploying a DaaS Express system
 
 From now on you will be able to provide your own username and password for your admin account when deployen a DaaS Express system.
+
+#### 9 November 2023 - Enhancement - Sharing with improved login system
+
+From now on using dashboard sharing an improved login system will be used that should prevent login redirect loops that could be experienced before.
+
+#### 9 November 2023 - Enhancement - Connecting to the dataminer.services with improved login system
+
+From now on when connecting your DMS to the cloud an improved login system will be used that should prevent login redirect loops that could be experienced before.
 
 #### 26 September 2023 - Fix - Remote Access automatic login now works with special characters in DataMiner account configuration [ID_37438]
 
