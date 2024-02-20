@@ -131,6 +131,10 @@ You can manually delete a DaaS system from dataminer.services, just like any oth
 
 From now on it is possible to deploy more than one DaaS Express system simultaniously on [dataminer.services](https://dataminer.services).
 
+#### 24 November 2023 - Fix - Username validation when deploying a DaaS Express system
+
+The username validation has been improved to prevent the deployment from failing when the given username was not a valid.
+
 #### 24 November 2023 - Enhancement - Admin app improved login system
 
 From now on the [Admin app](https://admin.dataminer.services) has an improved login system that should prevent login redirect loops that could be experienced before.
