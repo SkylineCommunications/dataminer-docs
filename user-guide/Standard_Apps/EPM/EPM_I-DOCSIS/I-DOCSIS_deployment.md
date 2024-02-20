@@ -11,7 +11,7 @@ To deploy the I-DOCSIS branch of the EPM Solution:
 1. Deploy the EPM package:
 
    - If the DMA is connected to dataminer.services, you can [deploy the package](xref:Deploying_a_catalog_item) directly from the Catalog.
-   - Otherwise, place the application package on any DMA available in the cluster. No specific location is required, however avoid using the Skyline DataMiner folder (C:\Skyline DataMIner).
+   - Otherwise, place the application package on any DMA available in the cluster. No specific location is required, however avoid using the Skyline DataMiner folder (C:\Skyline DataMiner). More information about how to install application packages using the Taskbar Utility can be found in [Upgrading a DataMiner Agent using DataMiner Taskbar Utility](xref:https://docs.dataminer.services/user-guide/Advanced_Functionality/DataMiner_Agents/Upgrading_a_DMA/Upgrading_a_DataMiner_Agent_using_DataMiner_Taskbar_Utility.html)
 
    This will install the application package on all the DMAs in the cluster.
 
