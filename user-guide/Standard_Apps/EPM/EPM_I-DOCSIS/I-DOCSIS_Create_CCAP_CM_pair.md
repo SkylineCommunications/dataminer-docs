@@ -107,7 +107,7 @@ The elements will be created with the following specifications:
 
    > [!NOTE]
    >
-   > - The path has to be present in the host were the DMA is located.
+   > - The CSV file must be present on the server running the DMA.
    > - The CSV file has to have the following structure: ElementName, Ccap_DMA, Collector_DMA, Protocol, IpAddress, GetCommunityString, SetCommunityString,GetCommunityStringColl, SetCommunityStringColl, Network, Market, Hub, SystemUser, SystemPass.
 
 1. Click *Create Bulk*.
@@ -124,4 +124,4 @@ Here is an example of the CSV file with the mandatory headers and the content of
 > [!NOTE]
 >
 > - For the **Protocol** column, only the following values will be accepted: CISCO CMTS CCAP Platform, Arris E6000 CCAP Platform, Casa Systems CCAP Platform, CISCO CBR-8 CCAP Platform, Huawei 5688-5800 CCAP Platform.
-> - Click the *Cancel* button in any window to close the Automation script at anytime.
+> - Click the *Cancel* button in any window to close the Automation script at any time.
