@@ -316,7 +316,7 @@ This group consists of the following components:
 - [Visual overview element](#visual-overview-element-element)
 
 > [!NOTE]
-> From DataMiner 9.5.1 onwards, not only elements can be used in the feeds for these components, but also enhanced services, i.e. services that use a service protocol.
+> Not only elements can be used in the feeds for these components, but also enhanced services, i.e. services that use a service protocol.
 
 ### Alarm count element (element)
 

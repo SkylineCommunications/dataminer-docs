@@ -10,7 +10,7 @@ There are currently two ways to create application packages:
 - Using the application package builder API.
 
 > [!TIP]
-> [DataMiner Integration Studio](xref:DIS) supports creating application packages for Automation scripts solutions.
+> [DataMiner Integration Studio](xref:Overall_concept_of_the_DataMiner_Integration_Studio) supports creating application packages for Automation scripts solutions.
 
 ## Infrastructure as Code (IaC)
 

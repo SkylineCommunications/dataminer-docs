@@ -40,7 +40,7 @@ Page1|Page2|Page3
 You can also add one additional level of subtabs. In the following example, the shape will contain a tab control with two main tabs (showing Page1 and Page2), and the second main tab (showing Page2) will have three subtabs (showing SubA, SubB and SubC):
 
 ```txt
-Page1|Page2//SubA|Page2//SubB|Pag2//Sub3
+Page1|Page2//SubA|Page2//SubB|Page2//Sub3
 ```
 
 To fine-tune the way the tab control is displayed, a number of options can be used:
@@ -55,5 +55,5 @@ To fine-tune the way the tab control is displayed, a number of options can be us
 
   | Shape data field | Value                     |
   | ---------------- | ------------------------- |
-  | VdxPage          | First-Page\|\|Second-Page |
+  | VdxPage          | First-Page\|Second-Page |
   | Options          | TabControlStyle=2         |

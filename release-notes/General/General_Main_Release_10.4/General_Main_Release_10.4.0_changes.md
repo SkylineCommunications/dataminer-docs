@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.4.0_changes
 ---
 
-# General Main Release 10.4.0 – Changes (preview)
+# General Main Release 10.4.0 – Changes
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 ## Changes
 
@@ -134,7 +134,7 @@ From now on, when you zoom in or out, the data of the previous zoom level will s
 
 Because of a number of enhancements, overall performance has increased when fetching relation information for the automatic incident tracking feature.
 
-#### Security enhancements [ID_35434] [ID_35997] [ID_36319] [ID_36624] [ID_36928] [ID_37345] [ID_37540] [ID_37637]
+#### Security enhancements [ID_35434] [ID_35997] [ID_36319] [ID_36624] [ID_36928] [ID_37345] [ID_37540] [ID_37637] [ID_38514]
 
 <!-- 35434: MR 10.4.0 - FR 10.3.4 -->
 <!-- 35997: MR 10.4.0 - FR 10.3.5 -->
@@ -143,6 +143,7 @@ Because of a number of enhancements, overall performance has increased when fetc
 <!-- 37345: MR 10.4.0 - FR 10.3.11 -->
 <!-- 37540: MR 10.4.0 - FR 10.3.12 -->
 <!-- 37637 (part of 37734): MR 10.4.0 - FR 10.4.2 -->
+<!-- 38514: MR 10.4.0 - FR 10.4.3 -->
 
 A number of security enhancements have been made.
 
@@ -926,6 +927,12 @@ Because of a number of enhancements with regard to memory usage, overall perform
 
 The accuracy of proactive cap detection events (i.e. forecasted alarms) reporting data range violations has been improved.
 
+#### Service & Resource Management: Enhanced performance when adding or updating bookings [ID_38521]
+
+<!-- MR 10.4.0 - FR 10.4.3 -->
+
+Because of a number of enhancements, overall performance has increased when adding or updating bookings, especially on systems with a large number of bookings.
+
 #### SLAnalytics - Behavioral anomaly detection: Enhanced detection of change points of type flatline [ID_38528]
 
 <!-- MR 10.4.0 - FR 10.4.3 -->
@@ -1230,6 +1237,12 @@ Up to now, when alarms were cleared before the end of the time frame specified i
 
 From now on, when a correlation rule is configured to use the *Collect events for ... after first event, then evaluate conditions and execute actions* trigger mechanism, all alarm buckets will be properly cleaned up, unless there are actions that need to be executed either when the base alarms are updated or when alarms are cleared.
 
+#### Web apps - Visual overview: Popup window would not display a hidden page when the visual overview only contained one non-hidden page [ID_38331]
+
+<!-- MR 10.2.0 [CU21] / 10.3.0 [CU12] / 10.4.0 [CU0] - - FR 10.4.3 [CU0] -->
+
+When, in a visual overview with one non-hidden page displayed in a web app, you tried to open a popup window linked to a page marked as "hidden", the popup window would incorrectly display the non-hidden page instead of the hidden page.
+
 #### Automation: Problem when empty data is passed to the UI parser when running an interactive Automation script [ID_38408]
 
 <!-- MR 10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
@@ -1251,3 +1264,15 @@ In some cases, DataMiner Cube would not be able to reconnect to the server after
 When SLAnalytics was handling large amounts of traffic, in some cases, certain parameter value changes would incorrectly not get processed.
 
 Also, a large number of low-severity change points were generated without a label. Those have now been reduced.
+
+#### Problem when adding a DMA to a DMS [ID_38620]
+
+<!-- MR 10.3.0 [CU12] / 10.4.0 [CU0] - FR 10.4.3 [CU0] -->
+
+When a DataMiner Agent was added to a DataMiner System, in some cases, the SLNet cache of the new DataMiner Agent would not get updated, causing the Agent to not be aware it was now part of a DMS.
+
+#### Problem with SLDataMiner while sending a SetDocumentEofMessage with a negative file number [ID_38712]
+
+<!-- MR 10.3.0 [CU12] / 10.4.0 [CU0] - FR 10.4.3 [CU0] -->
+
+In some cases, SLDataMiner could stop working while sending a `SetDocumentEofMessage` with a negative file number via SLNet.

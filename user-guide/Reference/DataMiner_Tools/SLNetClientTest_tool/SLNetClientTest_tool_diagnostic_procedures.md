@@ -35,3 +35,4 @@ The procedures below can be used to retrieve data from a DataMiner System. Howev
 - [Verifying sync rules](xref:SLNetClientTest_verifying_sync_rules)
 - [Viewing SLNet calls being sent](xref:SLNetClientTest_Viewing_SLNet_calls_being_sent)
 - [Viewing the connection timeout states of an element](xref:SLNetClientTest_Viewing_the_connection_timeout_states_of_an_element)
+- [Viewing the memory usage of elements, parameters, and tables](xref:SLNetClientTest_Viewing_memory_usage)

@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.4.0_new_features
 ---
 
-# General Main Release 10.4.0 – Other new features - Preview
+# General Main Release 10.4.0 – Other new features
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 ### Core functionality
 
@@ -391,78 +391,6 @@ From now on, `PaToken` objects can be created, updated and deleted in bulk using
 
   The result will contain a list of tokens that were successfully deleted. The trace data is available per token ID. If an issue occurs when an item gets deleted, no exception will be thrown (even when `ThrowExceptionsOnErrorData` is true). The trace data of the last call is available and will contain the data for all items.
 
-#### Support for Azure Managed Instance for Apache Cassandra [ID_35830]
-
-<!-- MR 10.4.0 - FR 10.3.5 -->
-
-It is possible to use an Azure Managed Instance for Apache Cassandra as an alternative to a Cassandra cluster hosted on premises.
-
-You will first need to [create your Azure Managed Instance for Apache Cassandra](#creating-your-azure-managed-instance-for-apache-cassandra), and then [connect your DataMiner System to the created instance](#connecting-your-dataminer-system-to-the-azure-managed-instance).
-
-> [!TIP]
-> For detailed information on Azure Managed Instance for Apache Cassandra, refer to the [Microsoft documentation](https://learn.microsoft.com/en-us/azure/managed-instance-apache-cassandra/).
-
-##### Creating your Azure Managed Instance for Apache Cassandra
-
-1. Go to [Azure Portal](https://portal.azure.com) and log in.
-
-1. Search for *Azure Managed Instance for Apache Cassandra*.
-
-1. At the top of the window, click *Create*.
-
-1. On the *Basics* page, specify the required information.
-
-   To have low latency, you should select a region near your own or the region where your Azure VMs are running. The password that you configure is for the *Cassandra* user in the system.
-
-1. Click *Next: Data center* and configure the kind of servers you want to use for your Cassandra cluster.
-
-   The *Sku Size* defines which VM will be used (the more resources, the more expensive). You can then also select the number of disks and nodes that you want. The minimum number of nodes is 3.
-
-1. If you want to configure a client certificate, click *Advanced* at the top.
-
-   If you do not need to do this, you can add some tags to the setup so you can easily find it again, or go to the next step.
-
-1. Go to the *Review + Create* page.
-
-   Here, Azure will do some checks to see if everything has been configured correctly.
-
-1. If everything is valid, click *Create*. Otherwise, adjust your configuration until Azure indicates that it is valid, and then click *Create*.
-
-A pop-up window on the Azure website will now indicate that your cluster is being created. This can take a while.
-
-Once the creation is finished, you will see your newly created cluster on the *Azure Managed Instance for Apache Cassandra* page.
-
-##### Connecting your DataMiner System to the Azure Managed Instance
-
-1. Retrieve the necessary information from the Azure portal:
-
-   1. Go to [Azure Portal](https://portal.azure.com) and log in.
-
-   1. Go to *Azure Managed Instance for Apache Cassandra*.
-
-   1. Select the cluster you want to connect your DataMiner System to.
-
-   1. In the *Settings* menu, select *Data Center*.
-
-   1. Click the arrow to open the data center, and copy the IP addresses DataMiner will need to connect to.
-
-   > [!NOTE]
-   > We recommend configuring all of the nodes in DataMiner. If a node should go down, DataMiner can then still connect to the other nodes.
-
-1. Using the copied IP addresses, configure the [Cassandra cluster database in System Center](xref:Configuring_the_database_settings_in_Cube).
-
-1. Stop DataMiner.
-
-1. Open the [DB.xml](xref:DB_xml) configuration file.
-
-1. Set the *TLSEnabled* tag to true in the file and save your changes:
-
-   ```xml
-   <TLSEnabled>True</TLSEnabled>
-   ```
-
-1. Restart DataMiner.
-
 #### DataMiner installation/upgrade: Automatic installation of DataMiner Extension Modules [ID_36085] [ID_36513] [ID_36514] [ID_36799] [ID_37137] [ID_37895]
 
 <!-- MR 10.4.0 - FR 10.3.7 -->
@@ -560,48 +488,6 @@ Soft-deleting a *GenericEnumEntry* object will have the following consequences:
 - It will not be possible to update the value of an instance to the soft-deleted *GenericEnumEntry*.
 - It is allowed to have instances of which the value is set to the soft-deleted *GenericEnumEntry*.
 
-#### Configuration of behavioral anomaly alarms [ID_36857] [ID_36976] [ID_37124] [ID_37246] [ID_37250] [ID_37334] [37434]
-
-<!-- MR 10.4.0 - FR 10.3.12 -->
-
-The DataMiner software now supports a more extensive configuration of behavioral anomaly alarms.
-
-From now on, you will be able to choose between the following types of anomaly monitoring:
-
-- Smart anomaly monitoring (i.e. anomaly monitoring as it existed before)
-- Customized anomaly monitoring
-
-Customized anomaly monitoring will enable you to do the following:
-
-- Set absolute or relative thresholds on the jump sizes of the change points of type *Level Shift* or *Outlier*.
-- Enable or disable monitoring for each of the two possible directions of a behavioral change for level shifts, trend changes, variance changes and outliers. This will allow you, for example, to configure different alarm monitoring behaviors for downward level shifts and upward level shifts.
-
-For more information on how to configure anomaly monitoring in DataMiner Cube, see [Alarm templates: Configuration of behavioral anomaly alarms [ID_37148] [ID_37171] [ID_37670]](xref:Cube_Feature_Release_10.3.12#alarm-templates-configuration-of-behavioral-anomaly-alarms-id_37148-id_37171-id_37670).
-
-Summary of server-side changes:
-
-- The behavioral anomaly configuration can be requested by sending a *GetAlarmTemplateMessage*. The *GetAlarmTemplateResponseMessage* will then return the behavioral anomaly configuration in a new *AnomalyConfiguration* field.
-
-  If you enable behavioral anomaly monitoring, the *AnomalyConfiguration* field will contain information on which change point types are being monitored and how. If no behavioral anomaly monitoring has been configured, this field will remain empty.
-
-  The legacy anomaly monitoring fields *LevelShiftMonitor*, *TrendMonitor*, *VarianceMonitor* and *FlatlineMonitor* in the *GetAlarmTemplateResponseMessage* have been marked as obsolete. If, in existing alarm templates, at least one of those legacy fields was enabled, the *AnomalyConfiguration* field will be filled with values consistent with the old settings.  
-
-- The  anomaly configuration information for a parameter is no longer available in the *ParameterAlarmInfo* of each parameter. This means that the anomaly monitoring information can no longer be retrieved by means of a *GetElementProtocolMessage*.
-
-  The legacy anomaly monitoring fields *LevelShiftMonitor*, *TrendMonitor*, *VarianceMonitor* and *FlatlineMonitor* in the *ParameterAlarmInfo* have been marked as obsolete and will no longer be taken into account by SLAnalytics.
-
-- When upgrading to this DataMiner version, existing alarm template XML files will not be changed.
-
-  When you update an existing alarm template or creating a new one, a new `<AnomalyConfig>` element will be added into the body of the `<Alarm>` element if, and only if, behavioral anomaly monitoring is enabled and an extended anomaly configuration has been set via the *AnomalyConfiguration* field of the *GetAlarmTemplateResponse* or the template parameters.
-
-  The existing attributes of the `<Monitored>` element (i.e. *varianceMonitor*, *trendMonitor*, *levelShiftMonitor* and *flatLineMonitor*) have not been changed or removed to ensure compatibility of the new alarm template XML files with older DataMiner versions.
-
-- When you set up a customized behavioral anomaly monitoring containing relative or absolute thresholds, this setup will be lost when you downgrade to an older server version that does not support this extended anomaly configuration (i.e. DataMiner version 10.3.11 or older). A fallback to the legacy "smart anomaly monitoring" will happen for all the change point types that had some kind of anomaly monitoring enabled.
-
-- The internal SLAnalytics alarm template monitoring mechanism now also takes into account alarm template group information. As a result, SLAnalytics modules making use of this mechanism will get notified about changes to group entries and can react to these changes.
-
-- A behavioral change point of type "flatline" shown in the trend graph will now always receive the correct alarm color when an anomaly alarm was created for it. In other words, if a critical behavioral anomaly alarm was created for the behavioral change of type "flatline", the change point bar shown in the trend graph will receive the red color.
-
 #### DataMiner Object Models: 'Full CRUD meta' scripts [ID_37004]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
@@ -609,6 +495,19 @@ Summary of server-side changes:
 Apart from **ID only** scripts, which use the `OnDomInstanceCrud` entry point method and give you access to the CRUD type and the ID of the `DomInstance` in the script, it is now also possible to configure **Full CRUD meta** scripts. These use the `OnDomInstanceCrudWithFullMeta` entry point method and give you access to the CRUD type and the full `DomInstance` object(s).
 
 For more detailed information, see [ExecuteScriptOnDomInstanceActionSettings](xref:ExecuteScriptOnDomInstanceActionSettings).
+
+#### Support for real-time GQI row updates [ID_37060]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+Real-time row updates are now supported for GQI session results for specific data sources and operators. This means that, when this is supported in the client, real-time updates can be displayed for row additions, modification, or deletions.
+
+At present, this is supported for the following GQI data sources:
+
+- Parameter table (except partial and view tables)
+- Views
+
+It is supported for the *Select* operator, but it can also be supported for other operators if they are combined with specific data sources, for instance for a filter on a parameter table.
 
 #### Proactive cap detection extended to absolute and relative alarm types [ID_37373]
 
@@ -668,7 +567,7 @@ To enable dynamic polling for a smart-serial connection, add a parameter that co
 
 ### Maps
 
-#### Marker images can now also be generated dynamically in layers with sourceType set to objects [ID_36246]
+#### DataMiner Maps: Marker images can now also be generated dynamically in layers with sourceType set to objects [ID_36246]
 
 <!-- MR 10.4.0 - FR 10.3.7 -->
 
@@ -752,7 +651,7 @@ Please note the following:
 > [!TIP]
 > See also: [Visual Overview: Session variable YAxisResources now supports filters to pass exposers [ID_34857]](xref:Cube_Feature_Release_10.3.1#visual-overview-session-variable-yaxisresources-now-supports-filters-to-pass-exposers-id_34857)
 
-#### Reinitializing ResourceManager [ID_36811]
+#### Service & Resource Management: Reinitializing Resource Manager [ID_36811]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 

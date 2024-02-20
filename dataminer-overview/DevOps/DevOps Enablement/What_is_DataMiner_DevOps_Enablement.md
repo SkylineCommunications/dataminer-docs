@@ -63,7 +63,7 @@ Typical initiatives initiated and leveraged throughout the DataMiner DevOps Enab
 
 - **Development & lab Systems**: DataMiner DevOps Professionals are provided with development and lab DataMiner Systems facilitating the development of DataMiner Solutions and enabling them to set up the proper automated testing and validation ecosystems to support continuous integration and development (terms & conditions apply).
 
-- **DataMiner Integration Studio**: [DataMiner Integration Studio (DIS)](xref:DIS) is the DataMiner Integrated Development Environment (IDE), facilitating the design of all types of solutions and extensions for the DataMiner System.
+- **DataMiner Integration Studio**: [DataMiner Integration Studio (DIS)](xref:Overall_concept_of_the_DataMiner_Integration_Studio) is the DataMiner Integrated Development Environment (IDE), facilitating the design of all types of solutions and extensions for the DataMiner System.
 
   DIS is designed as a plugin for MS Visual Studio and comes fully integrated with industry-standard code repositories and the DataMiner CI/CD Services to support collaborative, iterative development (terms & conditions apply).
 

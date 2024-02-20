@@ -11,7 +11,7 @@ This component can be used to display a trend graph.
 > - From DataMiner 10.0.11 onwards, if this type of component is added, the time span displayed by the component is available as a feed in the data pane, so that this can be applied to other components.
 > - From DataMiner 10.2.0 [CU10]/10.3.1 onwards, this component also supports line graphs for string parameters.
 
-## Configuration
+## Configuring the component
 
 To configure the component:
 
@@ -141,11 +141,11 @@ Query results are supported as a data feed for this component from DataMiner 10.
    > [!NOTE]
    > Data points are connected by a line in the order they appear in the query result. If you want to create a trend line, make sure the query results are sorted on the desired axis column.
 
-1. Fine-tune the component layout and settings like for a regular line and area chart. See [Configuration](#configuration).
+1. Fine-tune the component layout and settings like for a regular line and area chart. See [Configuration](#configuring-the-component).
 
 ## Export to CSV
 
-From DataMiner 9.6.13 onwards, it is possible to export the trend data to CSV. To do so, click the ... icon in the top-right corner of the component and select *Export to CSV*. The CSV file will then be generated in the background. To ensure that it is generated correctly, do not change the configuration of the component until the CSV export is completed.
+It is possible to export the trend data to CSV. To do so, click the ... icon in the top-right corner of the component and select *Export to CSV*. The CSV file will then be generated in the background. To ensure that it is generated correctly, do not change the configuration of the component until the CSV export is completed.
 
 > [!NOTE]
 >

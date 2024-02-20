@@ -12,4 +12,4 @@ Use this action to have a script create a log message that will be saved in the 
 
 > [!NOTE]
 > - In Cube, any log information regarding Automation can be found under DataMiner logging. For more information, see [DataMiner logging](xref:DataMiner_logging).
-> - It is also possible to add this action within a C# block in a script. For more information, see [Log](xref:Skyline.DataMiner.Automation.Engine#Skyline_DataMiner_Automation_Engine_Log_System_String_).
+> - It is also possible to add this action within a C# block in a script. For more information, see [Log](xref:Skyline.DataMiner.Automation.Engine.Log(System.String)).

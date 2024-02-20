@@ -4,25 +4,23 @@ uid: DataMiner_Cube_sidebar
 
 # DataMiner Cube sidebar
 
-From DataMiner 10.0.0/10.0.2 onwards, on the left-hand side of the Cube UI, a sidebar is displayed. This sidebar contains the following buttons:
+On the left-hand side of the Cube UI, a sidebar is displayed. This sidebar contains the following buttons:
 
-- *Surveyor*: Opens the Surveyor pane. See [Surveyor pane](#surveyor-pane).
+| Icon | Name | Description |
+|--|--|--|
+| ![Surveyor](~/user-guide/images/Surveyor.png) | Surveyor | Opens the Surveyor pane. See [Surveyor pane](#surveyor-pane). |
+| ![Activity](~/user-guide/images/Activity.png) | Activity | Opens a pane listing recent items. See [Activity pane](#activity-pane). |
+| ![Apps](~/user-guide/images/Apps.png) | Apps | Opens a pane listing the different apps available in Cube. See [Apps pane](#apps-pane). |
+| ![Workspace](~/user-guide/images/Workspace.png) | Workspace | Opens a pane where you can select and manage different Cube workspaces. See [Working with workspaces](xref:Working_with_workspaces). |
+| ![Community](~/user-guide/images/Community.png) | Community | This button is displayed from DataMiner 10.0.0 \[CU12\]/10.1.0 \[CU1\]/10.1.4 onwards. Clicking the button opens a menu with different links to the [DataMiner Dojo user community](https://community.dataminer.services/), including the blog, the learning hub, a library of resources, a page where you can ask questions about anything related to DataMiner, and a page that allows you to suggest new features. |
 
-- *Activity*: Opens a pane listing recent items. See [Activity pane](#activity-pane).
+From DataMiner 10.1.11/10.2.0 onwards, you can pin additional buttons to the sidebar using the "..." or "+" button. This button opens a menu where you can select the buttons you want to pin.
 
-- *Apps*: Opens a pane listing the different apps available in Cube. See [Apps pane](#apps-pane).
-
-- *Workspaces*: Opens a pane where you can select and manage different Cube workspaces. See [Working with workspaces](xref:Working_with_workspaces).
-
-- *Community*: This button is displayed from DataMiner 10.0.0 \[CU12\]/10.1.0 \[CU1\]/10.1.4 onwards. Clicking the button opens a menu with different links to the [DataMiner Dojo user community](https://community.dataminer.services/), including the blog, the learning hub, a library of resources, a page where you can ask questions about anything related to DataMiner, and a page that allows you to suggest new features.
-
-From DataMiner 10.1.11/10.2.0 onwards, you can pin additional buttons to the sidebar using the “...” or “+” button. This button opens a menu where you can select the buttons you want to pin.
-
-- *Overview*: Displays the root view page listing all items below the root view.
-
-- *Search*: If an advanced search is done from the Cube header bar, an additional *Search* button is displayed, which displays the pane with the advanced search results. If this button is not pinned to the sidebar, it will no longer be displayed as soon as you click a different button. See [Searching in DataMiner Cube](xref:Searching_in_DataMiner_Cube).
-
-- A button representing any of the available modules, the “About” information, the Help, or the settings.
+| Icon | Name | Description |
+|:--:|:--:|--|
+| ![Overview](~/user-guide/images/Overview.png) | Overview | Displays the root view page listing all items below the root view. |
+| ![Search](~/user-guide/images/Search.png) | Search | If an advanced search is done from the Cube header bar, an additional *Search* button is displayed, which displays the pane with the advanced search results. If this button is not pinned to the sidebar, it will no longer be displayed as soon as you click a different button. See [Searching in DataMiner Cube](xref:Searching_in_DataMiner_Cube). |
+| ... | ... |  A button representing any of the available modules, the "About" information, the Help, or the settings. |
 
 To unpin a button again, right-click the button and select *Unpin*. This is not possible for the buttons that are displayed by default.
 
@@ -43,7 +41,7 @@ When you click an item in the tree, it opens in a card:
 
 > [!NOTE]
 >
-> - For the right-click menu options in the Surveyor, see [Surveyor right-click menu](xref:Main_Cube_UI_components_prior_to_DataMiner_10#surveyor-right-click-menu).
+> - For the right-click menu options in the Surveyor, see [Surveyor right-click menu](#surveyor-right-click-menu).
 > - You can drag an element, service, view, or SLA from a card or from the Surveyor to another application, such as Microsoft Word or Outlook, to copy information about that DataMiner item to the application in question.
 
 ### Icons
@@ -51,7 +49,7 @@ When you click an item in the tree, it opens in a card:
 The icons that precede an item name in the tree show what kind of item it is and what state and alarm state it is in.
 
 > [!NOTE]
-> Depending on the user settings, the legacy icons may be displayed instead of the icons described below. For more information on the legacy icons, see [Icons](xref:Main_Cube_UI_components_prior_to_DataMiner_10#icons).
+> Depending on the user settings, the legacy icons may be displayed instead of the icons described below. These look similar to the icons displayed below but allow some [additional icon settings](#special-icon-settings).
 
 - There are specific icons for different types of items:
 
@@ -90,6 +88,29 @@ The icons that precede an item name in the tree show what kind of item it is and
   | White X on red background | Indicates that an element is in error state. |
   | Upwards arrow | Displayed next to a service child in case the capped severity of the service child is lower than the actual severity. The icon has the color of the severity that will bubble up to the parent service. |
   | Circle containing a horizontal line, for example: ![Unavailable element icon](~/user-guide/images/element_unavailable.png) | Indicates that the DMA hosting the item is currently unavailable. Though the information on the item is still available in the cache, it is not possible to execute any actions on the item. This icon is used from DataMiner 10.0.12 onwards. In this DataMiner version, it is only used for elements, and other items are not displayed when the DMA hosting them is unavailable. From DataMiner 10.0.13 onwards, it is also used for services and redundancy groups. |
+
+#### Special icon settings
+
+In the DataMiner settings, there are several options to show more alarm information next to an icon than just the current state. These icon settings are only available if the [Use modern icons](xref:User_settings#icons-settings) setting is **not** enabled.
+
+The following options are available:
+
+- **Split view alarm level**: Shows the alarm color of child views in a second rectangle separated from the alarm color of the elements directly in the view.
+
+- **View/element/service latch level**: Shows the latched alarm color in a smaller rectangle. This is the color of the previous highest alarm severity level of the item.
+
+    > [!NOTE]
+    > When this setting is activated, you can reset the latch level of items in the Surveyor. To do so, right-click the item and select *Reset latch level*.
+
+- **Timeout state overrules element alarm level**: Though normally a timeout state is shown separately from the last known element alarm level, you can also have the timeout override the alarm level.
+
+- **View aggregation level**: Indicates aggregated alarms on views with a triangle next to the colored bar indicating the view alarm state.
+
+> [!TIP]
+> See also:
+>
+> - [Icons settings](xref:User_settings#icons-settings)
+> - [Surveyor – Using latched and special icons](https://community.dataminer.services/video/surveyor-using-latched-and-special-icons/) ![Video](~/user-guide/images/video_Duo.png)
 
 ### Surveyor right-click menu
 

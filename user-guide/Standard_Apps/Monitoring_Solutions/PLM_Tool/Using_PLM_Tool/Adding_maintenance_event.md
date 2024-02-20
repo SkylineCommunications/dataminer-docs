@@ -9,7 +9,7 @@ uid: Adding_maintenance_event
 
 To create a maintenance event (also known as a PLM item), follow these steps:
 
-1. Go to the *PLM Instances* tab and click *+ Add* in the top-left corner.
+1. Go to the *PLM Instances* page and click *+ Add* in the top-left corner.
 
 1. In the *Planned Maintenance* pop-up window, provide the necessary information.
 
@@ -17,7 +17,7 @@ To create a maintenance event (also known as a PLM item), follow these steps:
 
    - **Title**: Choose a name for the maintenance event. We recommend choosing a descriptive title to ensure intuitive use of the app.
 
-   - **Resource Type**: Select the type of resource from the options previously configured in the *Configuration* tab. See [Configuring resources](xref:PLM_tool_configuring_resources).
+   - **Resource Type**: Select the type of resource from the options previously configured on the *Configuration* page. See [Configuring resources](xref:PLM_tool_configuring_resources).
 
    - **Resource**: Specify the name of the resource to assign the PLM item to.
 

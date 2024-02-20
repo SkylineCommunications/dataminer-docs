@@ -8,4 +8,4 @@ uid: Deleting_a_dashboard
 
 1. Right-click the dashboard or click the ... button in the top-right corner of the panel, and select *Delete*.
 
-1. In the confirmation box, click *OK*.
+1. In the confirmation box, click *Delete* or *OK*, depending on your DataMiner version<!--RN 38278-->.

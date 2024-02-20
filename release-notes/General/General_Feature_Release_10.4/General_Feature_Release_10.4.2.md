@@ -253,12 +253,13 @@ From now on, it will propose the following algorithms to the server in the follo
 
 ### Enhancements
 
-#### Security enhancements [ID_37349] [ID_37637] [ID_38040] [ID_38052]
+#### Security enhancements [ID_37349] [ID_37637] [ID_38040] [ID_38052] [ID_38656]
 
 <!-- 37349: MR 10.5.0 - FR 10.4.2 -->
 <!-- 37637 (part of 37734): MR 10.4.0 - FR 10.4.2 -->
 <!-- 38040: MR 10.3.0 [CU11] - FR 10.4.2 -->
 <!-- 38052: MR 10.5.0 - FR 10.4.2 -->
+<!-- 38656: MR 10.3.0 [CU11] - FR 10.4.2 [CU0] -->
 
 A number of security enhancements have been made.
 

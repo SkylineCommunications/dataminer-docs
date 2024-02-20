@@ -10,7 +10,7 @@ SLDMS is responsible for automatic synchronization of files. It also performs ca
 
 ## SLDMS troubleshooting flowchart
 
-<div class="mermaid">
+```mermaid
 flowchart TD
 %% Define styles %%
 linkStyle default stroke:#cccccc
@@ -47,11 +47,11 @@ class CrashdumpDetected,Minidump,D1,Ch1 Blue;
 class StartPage,LogCollector,OI LightBlue;
 class Rte,Leak,Crash,Y1,Ch,Nt1,Nt2 LightGray;
 class Nt Gray;
-</div>
+```
 
 ### Option 1: RTE and memory leak
 
-<div class="mermaid">
+```mermaid
 flowchart TD
 %% Define styles %%
 linkStyle default stroke:#cccccc
@@ -101,11 +101,11 @@ class CrashdumpDetected,Minidump,D1,Ch1 Blue;
 class StartPage,LogCollector,OI LightBlue;
 class Crash,Y1,Ch,Nt1,Nt2 LightGray;
 class Nt,Leak Gray;
-</div>
+```
 
 ### Option 2: Process crash
 
-<div class="mermaid">
+```mermaid
 flowchart TD
 %% Define styles %%
 linkStyle default stroke:#cccccc
@@ -135,7 +135,7 @@ class CrashdumpDetected,Minidump,D1,Ch1 Blue;
 class StartPage,LogCollector,OI LightBlue;
 class Rte,Leak,Y1,Ch,Nt1,Nt2 LightGray;
 class Nt Gray;
-</div>
+```
 
 ## Major changes to SLDMS
 
