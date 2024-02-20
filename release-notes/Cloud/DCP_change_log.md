@@ -131,9 +131,9 @@ You can manually delete a DaaS system from dataminer.services, just like any oth
 
 From now on it is possible to deploy more than one DaaS Express system simultaniously on [dataminer.services](https://dataminer.services).
 
-#### 24 November 2023 - Fix - Username validation when deploying a DaaS Express system
+#### 24 November 2023 - Fix - Improved username validation when deploying a DaaS Express system
 
-The username validation has been improved to prevent the deployment from failing when the given username was not a valid.
+The username validation has been improved to prevent the deployment from failing when the given username was not a valid. This issue was introduced on 10 November 2023.
 
 #### 24 November 2023 - Enhancement - Admin app improved login system
 
@@ -157,6 +157,10 @@ It is now possible to connect to a DataMiner System via remote access using Data
 
 > [!NOTE]
 > At present, there is still a limitation to this feature: if the DMS has SAML authentication configured, users will not be able to access the DMS remotely with Cube.
+
+#### 10 November 2023 - Enhancement - Provide a custom username and password when deploying a DaaS Express system
+
+From now on you will be able to provide your own username and password for your admin account when deployen a DaaS Express system.
 
 #### 26 September 2023 - Fix - Remote Access automatic login now works with special characters in DataMiner account configuration [ID_37438]
 
