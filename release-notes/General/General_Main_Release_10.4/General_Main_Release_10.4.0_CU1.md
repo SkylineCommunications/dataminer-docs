@@ -44,7 +44,7 @@ From now on, the generation of anomaly suggestion events will be limited to 50 e
 
 #### GQI: Clearer error message will now be thrown when an ad hoc data source or custom operator cannot be instantiated [ID_38686]
 
-<!-- MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.4 -->
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
 Up to now, when an ad hoc data source or custom operator could not be instantiated, the following exception would be thrown when an error occurred on object creation level (within the constructor):
 
@@ -58,13 +58,13 @@ From now on, the following exception will be thrown instead:
 
 #### SLLogCollector will now also collect the logs of the CommunicationGateway DxM [ID_38716]
 
-<!-- MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.4 -->
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
 SLLogCollector will now also collect the logs of the *CommunicationGateway* DxM.
 
 #### Security enhancements [ID_38756]
 
-<!-- RN 38756: MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.4 -->
+<!-- RN 38756: MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
 A number of security enhancements have been made.
 
@@ -72,13 +72,13 @@ A number of security enhancements have been made.
 
 #### Problem with file offload mechanism when main database is offline [ID_38542]
 
-<!-- MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.4 -->
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
 When the main database is offline, file offloads are used to store write/delete operations. In some cases, this file offload mechanism could end up in an unrecoverable state due to a threading issue.
 
 #### Hostname of SNMP element would not get resolved after the element had gone into timeout [ID_38547]
 
-<!-- MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.4 -->
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
 When an element with an SNMP connection that was configured with a hostname instead of an IP address went into timeout, and during the timeout the hostname could not be resolved, the element would remain in timeout and would no longer try to resolve the hostname until it was restarted.
 
@@ -94,13 +94,13 @@ Although the suggestion events were generated correctly, the pattern matches wou
 
 #### Problem with SLProtocol when calculating the length of a serial response [ID_38591]
 
-<!-- MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.4 -->
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
 In some cases, SLProtocol could stop working due to an `Access violation reading location` error being thrown while calculating the length of a serial response.
 
 #### GQI: Problem when sorting DOM instances when the column by which you sorted contained null values [ID_38592]
 
-<!-- MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.4 -->
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
 When DOM instances were sorted, in some cases, an error could be thrown when the column by which you sorted contained null values.
 
@@ -112,7 +112,7 @@ Each time the focus score of an alarm is updated, incident tracking has to updat
 
 #### Service & Resource Management: Booking corrupted after SRM_QuarantineHandling retrieved incorrect version of the booking [ID_38646]
 
-<!-- MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.4 -->
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
 Up to now, it could occur that the script *SRM_QuarantineHandling* retrieved a previous version of a booking instead of the latest, quarantined version, which could cause subsequent updates to corrupt the booking object. To prevent this, *SRM_QuarantineHandling* will now be called after a booking is saved.
 
@@ -133,7 +133,7 @@ Up to now, the following folders would incorrectly not get cleaned up when perfo
 
 #### Errors would be thrown at DataMiner startup when production protocols had an information template assigned [ID_38683]
 
-<!-- MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.4 -->
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
 At DataMiner startup, in some cases, errors could incorrectly be thrown when at least one production protocol had an information template assigned.
 
@@ -145,7 +145,7 @@ In some cases, SLAnalytics could stop working while processing an element with a
 
 #### DataMiner Maps: KML layers would incorrectly always be displayed first in the legend [ID_38746]
 
-<!-- MR 10.3.0 [CU12] / 10.4.0 [CU1] - FR 10.4.4 -->
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
 When using either Google Maps or OpenStreetMap, KML layers would incorrectly always be displayed first in the layer legend, regardless of the order in which they were specified in the map configuration file.
 
