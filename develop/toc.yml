@@ -685,6 +685,8 @@ items:
   - name: Automation scripts
     topicUid: AutomationDevGuideIndex
     items:
+    - name: Getting started with Automation script development
+      topicUid: GettingStartedWithAutomationScriptDevelopment
     - name: Actions
       topicUid:  AutomationActions
       items:
