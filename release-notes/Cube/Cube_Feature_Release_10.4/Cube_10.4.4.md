@@ -76,6 +76,14 @@ In some cases, DataMiner Cube could leak memory when you opened a trend graph th
 
 When you closed a spectrum analyzer card while it was still loading, in some cases, an unhandled exception could be thrown.
 
+#### Trending: Proactive alarm tooltip would immediately disappear [ID_38749]
+
+<!-- MR 10.3.0 [CU13]/10.4.0 [CU1] - FR 10.4.4 -->
+
+When the trend prediction shown in a trend graph exceeds a particular alarm threshold, this is indicated with a triangle-shaped marker.
+
+Up to now, when you hovered the mouse pointer over that marker, the tooltip would immediately disappear. From now on, the tooltip will remain visible until you move the mouse pointer away from the marker.
+
 #### Memory leak when closing apps [ID_38792]
 
 <!-- MR 10.3.0 [CU13]/10.4.0 [CU1] - FR 10.4.4 -->
