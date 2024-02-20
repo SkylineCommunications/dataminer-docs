@@ -95,7 +95,7 @@ The persistent connection between the Web API and SLNet is used to cache active 
 
 ### Fixes
 
-#### Web apps: Visual overviews would incorrectly get updated while nothing had changed [ID_38362]
+#### Web apps: Visual overviews would incorrectly get updated while nothing had changed [ID_38362] [ID_38800]
 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
