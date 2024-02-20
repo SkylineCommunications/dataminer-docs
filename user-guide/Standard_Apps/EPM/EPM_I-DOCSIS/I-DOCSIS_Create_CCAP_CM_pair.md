@@ -36,6 +36,18 @@ To create CCAP/CM pairs, you can either create a single CCAP/CM pair, or create 
 
    1. Select the desired CCAP protocol.
 
+      At present, the following protocols are supported:
+
+      - CISCO CMTS CCAP Platform
+
+      - Arris E6000 CCAP Platform
+
+      - Casa Systems CCAP Platform
+
+      - CISCO CBR-8 CCAP Platform
+
+      - Huawei 5688-5800 CCAP Platform
+
    1. Select the desired protocol version. We recommend the production version.
 
    1. Enter the IP address (mandatory field).
@@ -126,5 +138,10 @@ Here is an example of the CSV file with the mandatory headers and the content of
 
 > [!NOTE]
 >
-> - For the **Protocol** column, only the following values will be accepted: CISCO CMTS CCAP Platform, Arris E6000 CCAP Platform, Casa Systems CCAP Platform, CISCO CBR-8 CCAP Platform, Huawei 5688-5800 CCAP Platform.
+> - For the **Protocol** column, only the following values are currently accepted:
+>   - CISCO CMTS CCAP Platform
+>   - Arris E6000 CCAP Platform
+>   - Casa Systems CCAP Platform
+>   - CISCO CBR-8 CCAP Platform
+>   - Huawei 5688-5800 CCAP Platform
 > - Click the *Cancel* button in any window to close the Automation script at any time.
