@@ -6,6 +6,8 @@ uid: Data_Sources_Setup
 
 ## Prerequisites
 
+- A DataMiner Agent that has been [configured to use HTTPS connections](xref:Setting_up_HTTPS_on_a_DMA).
+
 - DataMiner version 10.4.0/10.4.2 or higher.
 
 - Depending on your DataMiner version, you may need to enable the [*DataAPI* soft-launch option](xref:Overview_of_Soft_Launch_Options#dataapi).
