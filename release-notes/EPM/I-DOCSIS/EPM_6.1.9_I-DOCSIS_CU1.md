@@ -6,9 +6,9 @@ uid: EPM_6.1.9_I-DOCSIS_CU1
 
 ## Enhancements
 
-#### #CM Ping OK renamed and CH Utilization updated to show filtered dashboard [ID_36751]
+#### Network layer KPIs adjusted and CH Utilization updated to show filtered dashboard [ID_36751]
 
-​On the network layer, the *#CM Ping OK* KPI has been changed to *#CM Ping Unreachable*. On the service group layer, the CH Utilization has been updated so it shows the dashboard with preselected filters for the respective service group.
+​On the network layer, the *#CM Ping OK* KPI is now no longer displayed, as it does not provide meaningful information. Instead, the KPI *#CM Ping Unreachable* is now displayed. On the service group layer, the CH Utilization has been updated so it shows the dashboard with preselected filters for the respective service group.
 
 #### Generic DOCSIS CM Collector: Interval adjusted for KPI calculation [ID_37356]
 
