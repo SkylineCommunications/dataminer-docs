@@ -93,6 +93,12 @@ Also, when an Automation script fails due to missing script input, users will no
 
 The persistent connection between the Web API and SLNet is used to cache active alarms, views, etc. As it is difficult to investigate issues related to this connection, additional logging with regard to this connection will now be added to the web logging located in `C:\Skyline DataMiner\Logging\Web`.
 
+#### Web apps: Angular and other dependencies have been upgraded [ID_38731]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+In all web apps (e.g. Low-Code Apps, Dashboards, Monitoring, etc.), Angular and other dependencies have been upgraded.
+
 ### Fixes
 
 #### Web apps: Visual overviews would incorrectly get updated while nothing had changed [ID_38362] [ID_38800]
