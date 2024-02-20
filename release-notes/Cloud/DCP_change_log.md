@@ -143,6 +143,14 @@ From now on the [Admin app](https://admin.dataminer.services) has an improved lo
 
 From now on [catalog.dataminer.services](https://catalog.dataminer.services) will have a completely renewed user interface.
 
+#### 22 November 2023 - Enhancement - Warning to link account before doing a DxM or Catalog deployment
+
+From now on the [Admin app](https://admin.dataminer.services) and [Catalog](https://catalog.dataminer.services) will prevent users from doing a deployment if they don't have a linked DataMiner account for the particular DataMiner System because the deployment would fail anyhow. A warning to link your accounts will be displayed instead.
+
+#### 22 November 2023 - Enhancement - dataminer.services homepage improved login system
+
+From now on [dataminer.services](https://dataminer.services) has an improved login system that should prevent login redirect loops that could be experienced before.
+
 #### 21 November 2023 - New feature - Remote access using DataMiner Cube [ID_37841]
 
 It is now possible to connect to a DataMiner System via remote access using DataMiner Cube. If remote access is enabled for a DMS and you have been granted access to dataminer.services features, you can access the DMS remotely via Cube using the same URL as for remote access to the web pages, but without the protocol prefix `https://`. A button is also available on dataminer.services and in the Admin app that can be used to open Cube with the correct remote access filled in as the host.
