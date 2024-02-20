@@ -598,6 +598,8 @@ items:
                     topicUid: GQI_GQICell
                   - name: GQIColumn
                     topicUid: GQI_GQIColumn
+                  - name: GQIColumn<T>
+                    topicUid: GQI_GQIColumnT
                   - name: GQIDMS
                     topicUid: GQI_GQIDMS
                   - name: GQIEditableHeader
@@ -636,6 +638,10 @@ items:
                     topicUid: GQI_IGQIQueryNode
                   - name: IGQIRowOperator
                     topicUid: GQI_IGQIRowOperator
+                  - name: IGQIUpdateable
+                    topicUid: GQI_IGQIUpdateable
+                  - name: IGQIUpdater
+                    topicUid: GQI_IGQIUpdater
                   - name: ObjectRefMetadata
                     topicUid: GQI_ObjectRefMetadata
                   - name: OnArgumentsProcessedInputArgs
@@ -645,7 +651,7 @@ items:
                   - name: RowMetadataBase
                     topicUid: GQI_RowMetadataBase
                   - name: TimeRangeMetadata
-                    topicUid: GQI_GQIArgument
+                    topicUid: GQI_TimeRangeMetadata
               - name: Best practices
                 topicUid: GQI_Extensions_Best_Practices
           - name: Query updates
