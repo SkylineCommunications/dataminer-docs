@@ -25,6 +25,9 @@ To create CCAP/CM pairs, you can either create a single CCAP/CM pair, or create 
       > [!NOTE]
       > The name of the collector element will consist of the defined element name with the suffix "_COLLECTOR".
 
+      > [!IMPORTANT]
+      > Make sure the element name does not contain any [forbidden characters](xref:Forbidden_characters).
+
    1. Select the host for the CCAP.
 
    1. Select the host for the collector.
