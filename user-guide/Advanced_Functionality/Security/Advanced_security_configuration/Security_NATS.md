@@ -6,7 +6,7 @@ uid: Security_NATS
 
 ## Enable TLS in cluster
 
-By default, NATS does **not** implement TLS encryption, which means anyone can eavesdrop the communication passing over the wire. We therefore **highly recommend that you enable TLS encryption** on your NATS cluster.
+By default, NATS does **not** employ TLS encryption, leaving communication susceptible to eavesdropping. Consequently, we **strongly recommend enabling TLS encryption** for enhanced security within your NATS cluster.
 
 > [!NOTE]
 > This applies solely to instances involving a DMS cluster or external DxMs. In the scenario of a single-agent setup, all communication is confined to the localhost, given the presence of only one NATS node.
