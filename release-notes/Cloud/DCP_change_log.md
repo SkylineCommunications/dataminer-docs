@@ -127,6 +127,10 @@ When you create a DaaS system, your dataminer.services account will automaticall
 
 You can manually delete a DaaS system from dataminer.services, just like any other DMS; however, note that this is irreversible, and all data of the system will be lost.
 
+#### 28 November 2023 - Enhancement - Deploying multiple DaaS Express systems simultaniously
+
+From now on it is possible to deploy more than one DaaS Express system simultaniously on [dataminer.services](https://dataminer.services).
+
 #### 24 November 2023 - Enhancement - Admin app improved login system
 
 From now on the [Admin app](https://admin.dataminer.services) has an improved login system that should prevent login redirect loops that could be experienced before.
