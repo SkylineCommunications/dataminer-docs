@@ -168,7 +168,7 @@ From now on you will be able to provide your own username and password for your 
 
 #### 9 November 2023 - Enhancement - Sharing with improved login system
 
-From now on using dashboard sharing an improved login system will be used that should prevent login redirect loops that could be experienced before.
+From now on when using live sharing, including the [Shares app](https://shares.dataminer.services), an improved login system will be used that should prevent login redirect loops that could be experienced before.
 
 #### 9 November 2023 - Enhancement - Connecting to the dataminer.services with improved login system
 
