@@ -168,3 +168,9 @@ When, in a Maps component, you had manually configured line dimensions, in some 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
 In some cases, it would not be possible to share a dashboard that contained queries with feeds in some of their nodes.
+
+#### Dashboards app & Low-Code Apps: Web component would display scroll bars when all content fitted inside [ID_38821]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+Up to now, a Web component would incorrectly display scroll bars when all content fitted inside.
