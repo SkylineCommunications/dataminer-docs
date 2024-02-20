@@ -4,18 +4,18 @@ uid: CICD_Tutorial_Connector
 
 # CI/CD Connector Tutorial
 
-In this exercise, we will demonstrate how to set up basic quality control and automatic deployment for a DataMiner Connector to a staging system through a CI/CD Pipeline. This can be achieved with or without the staging system being connected to dataminer.services. In this exercise, we will be using a DataMiner on an internet-accessible virtual machine.
+In this tutorial, you will learn how to set up basic quality control and automatic deployment of a DataMiner connector to a staging system through a CI/CD pipeline. This can be done with or without the staging system being connected to dataminer.services. This tutorial uses a DataMiner Agent on an internet-accessible virtual machine.
 
 You can find a quick overview of specific CI/CD tooling offered by Skyline Communications in our [documentation](xref:Platform_independent_CICD).
 
 > [!NOTE]
-> This exercise can also be done (with limited syntax changes) using other CI/CD technology within your company: Jenkins, GitLab, Concourse, Azure DevOps, ...
+> You can also apply the instructions in this tutorial (with limited syntax changes) to use other CI/CD technology, such as Jenkins, GitLab, Concourse, Azure DevOps, etc.
 
-Expected Duration: 20 minutes
+Expected duration: 20 minutes.
 
 ## Prerequisites
 
-- An accessible (from your pipeline) Staging DataMiner Agent Deployment version 10.3.0/10.3.2 or higher
+- A staging DataMiner Agent that is accessible from your pipeline and that uses DataMiner version 10.3.0/10.3.2 or higher
 
 - [Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/)
 
@@ -25,24 +25,24 @@ Expected Duration: 20 minutes
 
 - [DataMiner Integration Studio](https://community.dataminer.services/exphub-dis/)
 
-> [!WARNING]
-> The Validator CI step used in this tutorial, provided by Skyline DataMiner, only works for SDK style projects targeting *.NET4.8*
+> [!IMPORTANT]
+> The Validator CI step used in this tutorial, provided by Skyline DataMiner, only works for SDK-style projects targeting **.NET 4.8**.
 
-## Step 1: Create your Connector
+## Step 1: Create your connector
 
-1. Open Visual Studio, and select *create a new project*
+1. Open Visual Studio, and select *create a new project*.
 
-1. Select *DataMiner Connector Solution* from the list of templates
+1. Select *DataMiner Connector Solution* from the list of templates.
 
-1. Specify a solution name. e.g., MyPipelineTest
+1. Specify a solution name, e.g. *MyPipelineTest*.
 
 1. Fill in the following information:
 
-    1. Connector name: MyPipelineTest
+    1. Connector name: *MyPipelineTest*
 
-    1. Provider name: MyFakeCompany
+    1. Provider name: *MyFakeCompany*
 
-    1. Vendor name: MyFakeCompany
+    1. Vendor name: *MyFakeCompany*
 
     1. Vendor OID: 1.3.6.1.4.1.8813.2.*00*
 
@@ -50,15 +50,15 @@ Expected Duration: 20 minutes
 
     1. Integration ID: DMS-DRV-*00*
 
-    1. Element type: kata
+    1. Element type: *kata*
 
-    1. Type of the first connection: virtual
+    1. Type of the first connection: *virtual*
 
-    1. Author: MyName
+    1. Author: *MyName*
 
-1. Press Create
+1. Click *Create*.
 
-1. Add a visible Parameter
+1. Add a visible parameter.
 
     1. Type *<param* and press Tab twice. This will add a new default visible parameter.
 
@@ -70,9 +70,9 @@ Expected Duration: 20 minutes
 
         1. Click *Apply Changes* at the top right.
 
-## Step 2: Create a GitHub Repository
+## Step 2: Create a GitHub repository
 
-1. At the top of Visual Studio, select GIT and then Create Repository
+1. At the top of Visual Studio, select *GIT* and then *Create Repository*.
 
 1. Create a new GitHub repository, choosing a name, your account, and yourself as the owner.
 
@@ -80,9 +80,9 @@ Expected Duration: 20 minutes
 
     1. A trick in Visual Studio 2022 is to use the GIT Menu and select GitHub/View Pull Requests. This opens the right repository.
 
-## Step 3: Create a Standard .NET GitHub Action
+## Step 3: Create a standard .NET GitHub Action
 
-1. On your GitHub page, navigate to the Actions tab and select the *Continuous integration/.NET starter workflow*.
+1. On your GitHub page, navigate to the *Actions* tab and select the *Continuous integration/.NET starter workflow*.
 
 1. Add the ability to trigger the workflow manually by adding *workflow_dispatch:* to the *on:* keyword in yml. Like so:
 
@@ -97,18 +97,18 @@ on:
 
 1. Commit your changes
 
-1. Navigate to Actions and see the first run of your default .NET CI pipeline. This will perform:
+1. Navigate to *Actions* and see the first run of your default .NET CI pipeline. This will perform:
 
     1. Compilation
 
-    1. Unit Testing
+    1. Unit testing
 
 > [!NOTE]
 > This can also be created in other CI/CD technology of your choice.
 
 ## Step 4: Extend the workflow with DataMiner Validator
 
-1. Navigate to Actions
+1. Navigate to *Actions*.
 
 1. On the left, click on your *.NET* workflow
 
