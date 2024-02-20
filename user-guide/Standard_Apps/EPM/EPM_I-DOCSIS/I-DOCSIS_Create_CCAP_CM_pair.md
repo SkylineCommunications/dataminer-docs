@@ -50,15 +50,21 @@ To create CCAP/CM pairs, you can either create a single CCAP/CM pair, or create 
 
    1. Select the desired protocol version. We recommend the production version.
 
-   1. Enter the IP address (mandatory field).
+   1. Enter the IP address that will be used to monitor the CCAP element (mandatory field).
 
-   1. Enter the get community string that will be used by the CCAP to poll the device (SNMP).
+   1. Enter the get community string that will be used by the CCAP to poll the device.
 
-   1. Enter the set community string that will be used by the CCAP to set information in the device (SNMP).
+   1. Enter the set community string that will be used by the CCAP to set information in the device.
+
+      > [!NOTE]
+      > The solution currently does not support SNMP sets from any CCAP connector/CM collector yet. This field has been added as a placeholder for upcoming SNMP set support.
 
    1. Enter the get community string for the collector.
 
    1. Enter the set community string  for the collector.
+
+      > [!NOTE]
+      The solution currently supports only one single community string for all the CMs monitored by the CM collector. Therefore, this community string will be used to poll all CMs monitored by the CM collector. The list of CMs polled by this CM collector comes from the associated CCAP (the CCAP pair).
 
    1. Enter the user for this device.
 
