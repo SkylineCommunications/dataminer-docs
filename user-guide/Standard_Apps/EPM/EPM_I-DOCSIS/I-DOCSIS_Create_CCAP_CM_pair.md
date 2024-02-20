@@ -137,10 +137,10 @@ The elements will be created with the specifications in the CSV file of each row
 
 Here is an example of the CSV file with the mandatory headers and the content of each row.
 
-| ElementName | Ccap_DMA    | Collector_DMA | Protocol                  | IpAddress    | GetCommunityString | SetCommunityString | GetCommunityStringColl | SetCommunityStringColl | Network         | Market          | Hub            | SystemUser | SystemPass |
-|-------------|-------------|----------------|---------------------------|--------------|---------------------|---------------------|------------------------|------------------------|-----------------|------------------|-----------------|-------------|------------|
-| filename1   | SLC-H62-G05 | SLC-H62-G05    | CISCO CBR-8 CCAP Platform | 127.0.0.100  | getPublic           | setprivate          | collectorget           | collectorset           | GLOBAL NETWORK  | EAST MARKET 01   | EAST HUB 01     | US1         | 123        |
-| filename2   | SLC-H62-G05 | SLC-H62-G05    | CISCO CBR-8 CCAP Platform | 127.0.0.101  | getprivate          | setPublic           | collectorget           | collectorset           | GLOBAL NETWORK  | EAST MARKET 01   | EAST HUB 01     | US2         | 123        |
+| ElementName | Ccap_DMA | Collector_DMA | Protocol | IpAddress | GetCommunityString | SetCommunityString | GetCommunityStringColl | SetCommunityStringColl | Network | Market | Hub | SystemUser | SystemPass |
+|--|--|--|--|--|--|--|--|--|--|--|--|--|--|
+| filename1 | EPM-DMA03 | EPM-DMA03 | CISCO CBR-8 CCAP Platform | 10.11.12.11 | getPublic | setprivate | collectorget | collectorset | GLOBAL NETWORK | EAST MARKET 01 | EAST HUB 01 | US1 | 123 |
+| filename2 | EPM-DMA04 | EPM-DMA04 | CISCO CBR-8 CCAP Platform | 10.11.12.12 | getprivate | setPublic | collectorget | collectorset | GLOBAL NETWORK | EAST MARKET 01 | EAST HUB 01 | US2 | 123 |
 
 > [!NOTE]
 >
