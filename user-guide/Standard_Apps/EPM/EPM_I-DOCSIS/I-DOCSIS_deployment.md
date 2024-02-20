@@ -11,16 +11,16 @@ To deploy the I-DOCSIS branch of the EPM Solution:
 1. Deploy the EPM package:
 
    - If the DMA is connected to dataminer.services, you can [deploy the package](xref:Deploying_a_catalog_item) directly from the Catalog.
-   - Otherwise, place the latest EPM package on the DMA server (in a different folder than C:\Skyline DataMiner) and install the package.
+   - Otherwise, place the application package on any DMA available in the cluster. No specific location is required, however avoid using the Skyline DataMiner folder (C:\Skyline DataMIner).
 
-   This will install the package on all DMAs, so you only need to do this on one DMA in a cluster.
+   This will install the application package on all the DMAs in the cluster.
 
    > [!NOTE]
    > If you are **upgrading** an existing EPM setup, no further steps are needed. However, if you are deploying this solution for the first time, follow the steps below as well.
 
 1. Make sure the following prerequisites are met:
 
-   - If the DataMiner System is a cluster of multiple DMAs, there must be a remote file location that is accessible by all servers.
+   - If the cluster (DMS) contains more that one DMA, it is mandatory to have a shared folder that can be accessible by all DMAs available in the cluster.
    - There should be a separate DMA to host the front-end element, which does not host any collectors. This is not mandatory, but it is highly recommended.
    - If you want to be able to use the Topology app, the [*CPEIntegration* soft-launch option](xref:Overview_of_Soft_Launch_Options#cpeintegration) must be enabled.
 
@@ -43,7 +43,7 @@ To deploy the I-DOCSIS branch of the EPM Solution:
 
    - In addition, within the Service Provider view, add the following set of views, structured as shown below:
 
-     > - System
+     > - Z-SYSTEM
      >   - DataMiner EPM
      >     - EPM BE
      >     - EPM FE
@@ -71,9 +71,9 @@ To deploy the I-DOCSIS branch of the EPM Solution:
 
 1. Configure the front-end element:
 
-   1. Add the DMA ID/Element ID of the front-end element to the *Frontend Registration* table.
+   1. Add the DMA ID/Element ID of the front-end element to the *Frontend Registration* table. This can be found in the Element in the Configuration Topology Chain under the Frontend page.
 
-   1. Add all of the DMA ID/Element ID combinations of the created back-end elements to the *Backend Registration* table.
+   1. Add all of the DMA ID/Element ID combinations of the created back-end elements to the *Backend Registration* table. This can be found in the Element in the Configuration Topology Chain under the Backends page.
 
    1. Configure the directory settings:
 
@@ -83,7 +83,7 @@ To deploy the I-DOCSIS branch of the EPM Solution:
 
 1. Configure the back-end elements:
 
-   1. Add the DMA ID/Element ID of each back-end element to the *Backend Registration* table of that element.
+   1. Add the DMA ID/Element ID of each back-end element to the *Backend Registration* table of that element. This can be found in the Element in the Configuration Topology Chain under the Backends page.
 
    1. Configure the directory settings:
 
