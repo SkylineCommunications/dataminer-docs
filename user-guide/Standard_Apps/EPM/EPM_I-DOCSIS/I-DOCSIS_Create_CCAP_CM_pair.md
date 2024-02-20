@@ -32,6 +32,9 @@ To create CCAP/CM pairs, you can either create a single CCAP/CM pair, or create 
 
    1. Select the host for the collector.
 
+      > [!NOTE]
+      > Starting from [EPM I-DOCSIS 6.1.9](xref:EPM_6.1.9_I-DOCSIS#epm_i_docsis_addnewccapcmpair-script-updated-to-allow-installation-of-ccap-and-cm-collector-on-different-dmas-id_37192), it is possible to create the CM collector in a CCAP pair on a different DMA than the CCAP. However, creating the pair on the same DMA is recommended. Creating them on different DMAs should only be done in case of network restrictions.
+
 1. In the **CCAP Details** step:
 
    1. Select the desired CCAP protocol.
