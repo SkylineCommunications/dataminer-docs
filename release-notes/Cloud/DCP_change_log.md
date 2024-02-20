@@ -9,6 +9,14 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 19 February 2024 - Enhancement - Custom commands executed with the DataMiner bot can request the dataminer.services user email [ID_38826]
+
+It is now possible to know the executor of a custom command executed with the DataMiner bot in Microsoft Teams.
+
+To add a command to your DMS, create an Automation script in the folder "bot" in the DMS. For examples of such scripts, refer to [Custom Command Examples](https://github.com/SkylineCommunications/ChatOps-Extensions/tree/main/CustomCommandExamples) on GitHub.
+
+For more detailed information, refer to [Adding commands for the Teams bot to a DMS](xref:DataMiner_Teams_bot#adding-custom-commands-for-the-teams-bot-to-a-dms)
+
 #### 16 February 2024 - Enhancement - Changed user role required to renew system tokens [ID_38722]
 
 Previously, users had to have the role of Owner of the DMS on dataminer.services to be able to [renew the session](xref:Cloud_Connection_Issues#check-the-cloud-session). From now on, this is also possible for users who have the Admin role.
@@ -47,6 +55,25 @@ In an Automation script, you can use [the DcpChatIntegrationHelper NuGet](https:
 To get started, you can find several example Automation scripts with more information on [GitHub](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples).
 
 After you have made sure that the [prerequisites](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples/README.md#usage) are in place, you can deploy [the Chat Integration examples](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples/README.md#getting-started) to your DataMiner System and immediately try out these examples.
+
+#### 6 February 2024 - New feature - Custom commands executed with the DataMiner bot now support adding buttons to the response using Adaptive Cards [ID_38701]
+
+It is now possible to send buttons in custom command responses using Adaptive Cards.
+
+Available buttons:
+
+- Prompt to run a custom command (optionally with predefined input values)
+- Open URL
+- Get element
+- Get alarms of an element
+- Get alarms of a view
+- Prompt to change the active DMS of the conversation
+
+In an Automation script, you can use [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) to easily interact with Microsoft Teams.
+
+To add a command to your DMS, create an Automation script in the folder "bot" in the DMS. For examples of such scripts, refer to [Custom Command Examples](https://github.com/SkylineCommunications/ChatOps-Extensions/tree/main/CustomCommandExamples) on GitHub.
+
+For more detailed information, refer to [Adding commands for the Teams bot to a DMS](xref:DataMiner_Teams_bot#adding-custom-commands-for-the-teams-bot-to-a-dms)
 
 #### 23 January 2024 - Fix - Unknown error when remote accessing web apps [ID_38549]
 
