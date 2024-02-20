@@ -4,9 +4,15 @@ uid: DataAggregator_change_log
 
 # Data Aggregator change log
 
-#### 13 February 2023 - Enhancement - DataAggregator 3.0.2 - Debug UI shows job names instead of job IDs [ID_38697]
+#### 13 February 2024 - Enhancement - DataAggregator 3.0.2 - Debug UI shows job names instead of job IDs [ID_38697]
 
 In the debug UI of Data Aggregator (accessible via `http://<hostname or IP>:<Data Aggregator port>/debug/`) the different tab pages will now show the job name instead of the job ID, so that it is easier to find a specific job.
+
+#### 17 January 2024 - Enhancement - Logging now mentions the DMA handling a GQI query [ID_37511]
+
+To make it easier to find out which DMA handled a GQI request, the DataAggregator logging will now include the DMA that handled such a request.
+
+The CoreGateway DxM has also been modified to include this information when it creates a new GQI session.
 
 #### 9 June 2023 - Enhancement - DataAggregator 2.0.0 - Upgrade to .NET 6 [ID_36408]
 
