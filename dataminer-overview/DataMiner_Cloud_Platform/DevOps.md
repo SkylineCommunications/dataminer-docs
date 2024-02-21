@@ -68,16 +68,17 @@ The **DataMiner Integration Studio (DIS)**, an Integrated Development Environmen
 
 Moreover, the IDE's integration with online code repository services like GitHub empowers everyone to become a true DevOps engineer. This integration enables developers and customers to collaborate and share their expertise, resulting in a more efficient and enjoyable development process.
 
-With the range of powerful features available in DIS, DataMiner DevOps Professionals can build third-party product integrations, across hardware, software, and cloud boundaries, and accommodating any imaginable type of interface or protocol. With DIS, users can effortlessly build connectors to ingest data into the DataMiner platform, implement robust controls, and enrich the standardized DataMiner Digital Twin, which forms the foundation of the DataMiner platform and fuels their entire organization.
+With the range of powerful features available in DIS, DataMiner DevOps Professionals can build third-party product integrations across hardware, software, and cloud boundaries, and accommodating any imaginable type of interface or protocol. With DIS, users can effortlessly build connectors to ingest data into the DataMiner platform, implement robust controls, and enrich the standardized DataMiner Digital Twin, which forms the foundation of the DataMiner platform and fuels their entire organization.
 
 Key benefits of DataMiner Integration Studio (DIS):
-- Empowers users to create high-value plug-in components for the DataMiner platform
-- Enables seamless extension and customization of the DataMiner platform to meet specific needs
-- Supports connectors for data ingestion into the DataMiner platform, as well as unified control
-- Simplifies the creation and deployment of user-definable APIs, ChatOps extensions, and much more
-- Streamlines automation, orchestration, and process automation activities
-- Drives data-driven decision-making and operational optimization
-- Fosters innovation in product and service offerings
+
+- Empowers users to create high-value plug-in components for the DataMiner platform.
+- Enables seamless extension and customization of the DataMiner platform to meet specific needs.
+- Supports connectors for data ingestion into the DataMiner platform, as well as unified control.
+- Simplifies the creation and deployment of user-definable APIs, ChatOps extensions, and much more.
+- Streamlines automation, orchestration, and process automation activities.
+- Drives data-driven decision-making and operational optimization.
+- Fosters innovation in product and service offerings.
 
 > [!TIP]
 > See also:
