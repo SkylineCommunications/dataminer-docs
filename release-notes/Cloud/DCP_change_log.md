@@ -164,7 +164,7 @@ The grant admin consent linking button wouldn't work anymore. This issue has now
 
 #### 10 November 2023 - Enhancement - Provide a custom username and password when deploying a DaaS Express system
 
-From now on you will be able to provide your own username and password for your admin account when deployen a DaaS Express system.
+From now on you will be able to provide your own username and password for your admin account when deploying a DaaS system.
 
 #### 9 November 2023 - Enhancement - Sharing with improved login system
 
