@@ -453,8 +453,6 @@ items:
             topicUid: SRM_migrating_resources
           - name: Migrating service definitions
             topicUid: SRM_migrating_service_definitions
-          - name: Migrating a complete Booking Manager configuration
-            topicUid: SRM_migrating_booking_manager_full_configuration
       - name: Interacting with SRM using code
         topicUid: Interacting_with_SRM_using_code
         items:
