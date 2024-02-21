@@ -11,11 +11,11 @@ By default, NATS does **not** employ TLS encryption, leaving communication susce
 > [!NOTE]
 > This applies solely to instances involving a DMS cluster or external DxMs. If you have a single-Agent setup, all communication is confined to the local host, as there is only one NATS node.
 
-To enable authentication, please apply the following procedure to all the NATS nodes in the cluster:
+Before proceeding with the configuration of each node in the cluster, you should request or generate TLS certificates (in PEM format).
 
-1. Request or generate a TLS certificate (in PEM format).
+To generate self-signed certificates, we recommend that you **use our [scripts for generating TLS certificates](https://github.com/SkylineCommunications/generate-tls-certificates)**, available on GitHub. There is a version of the script for Linux and for Windows machines. The script requires two tools: *openssl* and the *Java keytool*. Both of these can run on Linux and Windows.
 
-   To generate self-signed certificates, we recommend that you **use our [scripts for generating TLS certificates](https://github.com/SkylineCommunications/generate-tls-certificates)**, available on GitHub. There is a version of the script for Linux and for Windows machines. The script requires two tools: *openssl* and the *Java keytool*. Both of these can run on Linux and Windows.
+**To enable TLS encryption, please apply the following procedure to all the NATS nodes in the cluster:**
 
 1. Update the **nats-server.config** file to incorporate the TLS section within the cluster segment.
 
@@ -34,11 +34,11 @@ To enable authentication, please apply the following procedure to all the NATS n
    > [!NOTE]
    > The `ca_file` property is only required when self-signed certificates are used.
 
-1. Stop your NATS service.
+1. Stop your NATS service, by navigating to the Services tab within your Task Manager.
 
-1. Stop your NAS service.
+1. Stop your NAS service, through the same Services tab in your Task Manager.
 
-1. Start your NATS service, which should automatically start the NAS service.
+1. Start your NATS service, which should automatically trigger the start of the NAS service. Access the Services tab within your Task Manager for seamless execution.
 
 1. Verify whether TLS encryption is enabled:
 
