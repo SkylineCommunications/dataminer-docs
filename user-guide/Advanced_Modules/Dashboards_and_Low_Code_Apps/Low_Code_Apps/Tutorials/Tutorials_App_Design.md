@@ -68,7 +68,6 @@ Expected duration: 30 minutes.
 ## Step 3: Adding page icons
 
 The pages still have very generic icons per page, which make the pages hard to distinguish. Make sure you have good icons assigned to a page. To do this edit the page again and assign a icon in the **icon** menu next to the page.
-
     ![Page icons](~/user-guide/images/tutorial_app_design_page_icons.png)
 
 ## Step 4: Setting up themes
@@ -81,7 +80,7 @@ In order to have a good looking app you need to start from a good looking theme.
 
 1. In the dashboards app , click top right on the User icon and open the **Settings**. This should show a list of available themes.
 
-1. Create a new theme here and give it a usefull name.
+1. Create a new theme here and give it a useful name.
 
 1. Set the following properties on the theme:
    1. Set the background color of the theme to: rgb(243,243,245)
@@ -119,7 +118,6 @@ In order to have a good looking app you need to start from a good looking theme.
    1. For the Default component:
       1. Under Title
          1. set **font size** to *14px*
-         1. set alignment to *Center*
       1. Under Color
          1. set **background color** to rgb(248,248,249)
    1. Save the theme
@@ -132,7 +130,7 @@ In order to have a good looking app you need to start from a good looking theme.
 
 1. Components like titles, buttons, images should never have a background color. Select each of these components separately, go to Layout and select the Style **Transparent**
 
-1. Publish the app and now you should an app which is already a little more appealing.
+1. Publish the app and now you should see an app which is already a little more appealing.
 
     ![Theme applied](~/user-guide/images/tutorial_app_design_theme_applied.png)
 
@@ -142,6 +140,7 @@ In order to have a good looking app you need to start from a good looking theme.
 
 1. Next start rearrange and resize the components on the page, taking the following guidelines into account:
    1. Ensure identical spacing left and right on the page.
+   1. Use the available space, don't leave too much white space.
    1. Align components both vertically and horizontally, make them same height.
    1. Adjust width of components. If components are positioned on the same row and are equally important, make their width identical (e.g. chart and grid component are each 30% of the width).
    1. This is an example on how you could rearrange them to have a good looking result:
@@ -154,7 +153,7 @@ Titles can be styled as just text boxes, but these are often very bland. To make
 
 1. Select the Contacts title and go to **Setting** in the right-hand column.
 
-1. Past the following in the **HTML** field:
+1. Paste the following in the **HTML** field:
 
 ```html
 <div style="height:100%;display:flex;flex-direction:column;justify-content:center;margin:0;"><H1 style="color: rgb(0,9,54); font-family:'Segoe UI Light','Segoe UI Web Light','Segoe UI Web Regular','Segoe UI','Segoe UI Symbol',HelveticaNeue-Light,'Helvetica Neue',Arial,sans-serif;margin:0;font-weight:100;font-size:24px">
@@ -200,12 +199,12 @@ Here you can <b style="color: rgb(0,9,54)">create</b> a new contact.</p></div>
 
 1. In the *On click* events add the following actions
    1. Execute component action / I want to 'Form, Save current Changes' / Which form: 'Form 1'
-   1. Click the Upon completion button and add the following action: Close a panel / Panel : This panel(Contact Form)
-   1. Click the Upcon completion button and add the following action: Execute component action / I want to 'Table, Fetch the data' / Which table?: 'Table 6'
+   1. Click the *Upon completion* button and add the following action: Close a panel / Panel : This panel(Contact Form)
+   1. Click the *Upon completion* button and add the following action: Execute component action / I want to 'Table, Fetch the data' / Which table?: 'Table 6'
 
 1. On the top right of the panel, rename the '+Add' action 'Close', choose an X icon and as action add "Close a panel" / this panel
 
-1. The result for the panel in edit mode should look something like this:
+1. The result for the panel (in edit mode) should look something like this:
 
     ![Panel edit mode](~/user-guide/images/tutorial_app_design_panel_edit.png)
 
@@ -215,7 +214,7 @@ Here you can <b style="color: rgb(0,9,54)">create</b> a new contact.</p></div>
 
 ## Step 9: Fixing the grid
 
-Try to not use too many colors in an app. The grid in our sample is too colorfull as every cell has a very bright color. Let's change this.
+Try to not use too many colors in an app. The grid in our sample is too colorful, as every cell has a very bright color. Let's change this.
 
 1. Edit the page again and click on the grid component
 
@@ -241,13 +240,17 @@ Last but not least is improving the look and feel of our contact table at the bo
 
 1. We can also improve the look and feel of each column by editing the template for that column. To do that, select the table, go to **Layout** and under **Column Appearance** select the **Full Name** column
 
-1. click the '...' icon on the top right and select **Customize preset**
+1. Click the '...' icon on the top right and select **Customize preset**
 
 1. Click on the gray background (not the checkered background) to see the **Dimensions** settings of the full canvas. Enter **46** as the height, you can leave 128 as the width. This will make our table rows a bit taller.
 
 1. Click on the {Full name} text, under **Dimensions** set the Left padding to 35px, all the rest can stay at 5px
 
-1. In the text field replace the {Full name} with the following HTML : <span style="font-weight:500">{Full name}</span > , the result will be that the font is bold
+1. To make our font in the first column bold: in the text field replace the {Full name} with the following HTML:
+
+```html
+    <span style="font-weight:500">{Full name}</span>
+```
 
 1. Under **Tools** on the left, click on Icon to select it
 
@@ -261,12 +264,11 @@ Last but not least is improving the look and feel of our contact table at the bo
 
 1. Save the template and publish
 
-1. The first column in the table should now look as follows:
+1.  The first column in the table should now look as follows:
 
     ![table name column](~/user-guide/images/tutorial_app_design_table_name_column.png)
 
-1. Do the same thing for the columns e-mail and phone and choose appropriate icons
+1.  Do the same thing for the columns e-mail and phone and choose appropriate icons
 
-If you have reach the end of this tutorial: Congratulations! Your end result should hopefully look something like this:
-
+If you have reached the end of this tutorial: Congratulations! Your end result should hopefully look something like this:
     ![End result](~/user-guide/images/tutorial_app_design_end_result.png)
