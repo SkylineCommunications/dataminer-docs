@@ -141,7 +141,7 @@ From now on the [Admin app](https://admin.dataminer.services) has an improved lo
 
 #### 24 November 2023 - New feature - Introducing the new Catalog user interface
 
-From now on [catalog.dataminer.services](https://catalog.dataminer.services) will have a completely renewed user interface.
+This update includes a new UI for [catalog.dataminer.services](https://catalog.dataminer.services).
 
 #### 22 November 2023 - Enhancement - Warning to link account before doing a DxM or Catalog deployment
 
