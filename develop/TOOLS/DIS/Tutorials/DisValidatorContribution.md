@@ -14,7 +14,7 @@ The only difference between the tutorial and actual contributions lies in the fo
 
 - For real Validator contributions, you will fork [https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Validators](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Validators)
 
-Missing test: When adding the "datetime" option to the *Measurement.Type* tag, check if the *Display* tag contains a `<Decimals>8</Decimals>` tag.
+This is the missing Validator check you will be adding in this tutorial: When the "datetime" option is added to the *Measurement.Type* tag, the *Display* tag must contain a `<Decimals>8</Decimals>` tag.
 
 Expected duration: 15 minutes.
 
@@ -43,7 +43,7 @@ Expected duration: 15 minutes.
 
 1. Go to [https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.ValidatorsExercise](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.ValidatorsExercise)
 
-1. In the top right corner, click *Fork*.
+1. In the top-right corner, click *Fork*.
 
 1. Follow the wizard to create a fork of the repository under your own account.
 
@@ -52,7 +52,7 @@ Expected duration: 15 minutes.
 On the page of your GitHub fork (e.g. `https://github.com/YourGitHubHandle/Skyline.DataMiner.CICD.ValidatorsExercise`), click the *Code* button and select *Open in Visual Studio*.
 
 > [!NOTE]
-> In some cases, the *Open in Visual Studio* option may not be available. In that case, you will need to use *GitHub Desktop* instead to make the clone. Make sure you have [GitHub Desktop](https://desktop.github.com/) installed. Then click the *Code* button on your fork page and select the option *Open with GitHub Desktop* instead.
+> In some cases, the *Open in Visual Studio* option may not be available. In that case, you will need to use GitHub Desktop instead to make the clone. Make sure you have [GitHub Desktop](https://desktop.github.com/) installed. Then click the *Code* button on your fork page and select the option *Open with GitHub Desktop* instead.
 
 ## Step 3: Run the 'Validator Management Tool'
 
@@ -68,7 +68,7 @@ On the page of your GitHub fork (e.g. `https://github.com/YourGitHubHandle/Skyli
 
 ## Step 4: Add a new check
 
-1. In the *Validator Management Tool*, click the *Add Check...* button.
+1. In the *Validator Management Tool*, click the *Add Check* button.
 
    A new window will open.
 
@@ -80,7 +80,7 @@ On the page of your GitHub fork (e.g. `https://github.com/YourGitHubHandle/Skyli
 
      Use `Param`.
 
-   - **Namespace:** Define the "path" of the tag/attribute. If it is a new namespace, use the *Add new Namespace...* button.
+   - **Namespace:** Define the "path" of the tag/attribute. If it is a new namespace, use the *Add new Namespace* button.
 
      In this exercise, the correctness of the *Display* tag is checked. A new namespace for *Protocol.Params.Param.Display.Decimals* should be added.
 
@@ -116,11 +116,11 @@ On the page of your GitHub fork (e.g. `https://github.com/YourGitHubHandle/Skyli
 
    - **Severity:** Specify the severity level. To choose the correct severity, you can follow the following guide:
 
-     - Critical: This type of error will have a critical impact on the system or will fully prevent the driver from working. It may also draw your attention to something that needs to be fixed for administrative reasons.
+     - Critical: This type of error will have a critical impact on the system or will fully prevent the connector from working. It may also draw your attention to something that needs to be fixed for administrative reasons.
 
-     - Major: This type of error will prevent part of the driver from working as expected. Example: A specific driver feature will not work.
+     - Major: This type of error will prevent part of the connector from working as expected. Example: A specific connector feature will not work.
 
-     - Minor: This type of error will not prevent the driver from working, but will have some impact. It may draw your attention to something that was not implemented according to the best practice guidelines. Example: Bad performance, Not user-friendly, etc.
+     - Minor: This type of error will not prevent the connector from working, but will have some impact. It may draw your attention to something that was not implemented according to the best practice guidelines. Example: Bad performance, Not user-friendly, etc.
 
      - Warning: This type of error reveals something that will not have any impact. Example: Unused XML elements or attributes.
 
@@ -188,7 +188,7 @@ On the page of your GitHub fork (e.g. `https://github.com/YourGitHubHandle/Skyli
 
    ![ShowGeneratedCode](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.ValidatorsExercise/assets/71829634/3f9b3c5d-eea4-4fa3-bf4d-83fb086054df)
 
-   Now, the tests can be written. This will ensure you can develop until no tests are failing.
+   Now, the tests can be written. This will ensure that you can develop until no tests are failing.
 
 1. Open the *Valid.xml* file, and create XML code that represents the expected correct XML code:
 
@@ -239,7 +239,7 @@ On the page of your GitHub fork (e.g. `https://github.com/YourGitHubHandle/Skyli
 
 1. Right-click the first line of the file, and select *Run Tests*.
 
-   At this point, you should see 3 failing tests.
+   At this point, you should see three failing tests.
 
 ## Step 6: Write your logic
 
