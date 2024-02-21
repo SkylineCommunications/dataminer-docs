@@ -125,5 +125,5 @@ In DataMiner Cube, only your ellipse will now be colored with the alarm state of
 - [Linking a shape to an element, a service or a redundancy group](xref:Linking_a_shape_to_an_element_a_service_or_a_redundancy_group)
 - [Linking a shape to an element parameter](xref:Linking_a_shape_to_an_element_parameter)
 - [Grouping shapes](xref:Grouping_shapes)
-- [NoAlarmColorFill](xref:Overview_of_page_and_shape_options#NoAlarmColorFill)
+- [NoAlarmColorFill](xref:Overview_of_page_and_shape_options#noalarmcolorfill)
 - [Disabling the default hyperlink behavior of a linked shape](xref:Disabling_the_default_hyperlink_behavior_of_a_linked_shape)
