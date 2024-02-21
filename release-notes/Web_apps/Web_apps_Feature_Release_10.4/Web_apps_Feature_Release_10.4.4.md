@@ -194,6 +194,12 @@ When, in a Maps component, you had manually configured line dimensions, in some 
 
 In some cases, it would not be possible to share a dashboard that contained queries with feeds in some of their nodes.
 
+#### Web apps: All clients that had a mobile visual overview open would receive updates when the visual overview was resized on one of them [ID_38812]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+When a mobile visual overview opened on multiple clients was resized on one of those clients, all clients that had this visual overview open would start to receive continuous updates although nothing had been changed.
+
 #### Dashboards app & Low-Code Apps: Web component would display scroll bars when all content fitted inside [ID_38821]
 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
