@@ -81,7 +81,7 @@ While remote accessing web apps via dataminer.services (e.g. the Monitoring app)
 
 #### 12 January 2024 - Fix - The given username was not applied when deploying a DaaS Express system
 
-When a custom username was given when deploying a new DaaS Express system the default username was still being used. This has now been resolved.
+When a custom username was given when deploying a new DaaS system the default username (Administrator) was still being used. The user will now be created with the custom username.
 
 #### 12 January 2024 - New feature - Remote access for custom files/webpages [ID_38426]
 
