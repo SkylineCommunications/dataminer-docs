@@ -4,6 +4,63 @@ uid: Installing_DataMiner_IDP
 
 # Installing DataMiner IDP
 
+IDP can be found on the [Catalog](https://catalog.dataminer.services/details/package/XXXX).
+
+> [!NOTE]
+> The minimum supported DataMiner version is **10.2.0 CU0**.
+
+> [!WARNING]
+> In case your DataMiner has a version lower than **10.4.0** or **10.4.3**, first install the [**IDP Migration**](https://community.dataminer.services/download/idp-migration/) package. See also: [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent)
+
+Upon installation of the package, IDP will be installed with the default settings. In case you want to customize the setup, you can simply run the wizard again via the *Automation* module or via the IDP app.
+
+1. Launch the *IDP_SetupWizard* script:
+
+    1. Via *Automation* module:
+
+        1. In DataMiner Cube, go to *Apps* > *Automation*.
+
+        1. Select the script *IDP_SetupWizard* and click *Execute*.
+
+    1. Via the IDP app:
+
+        1. In DataMiner Cube, go to the *DataMiner IDP* element.
+
+        1. Go the *Admin* > *Settings*.
+
+        1. Click the button next to *Setup Wizard*.
+
+1. On the first page, click the button *Execute Now*.
+
+1. On the welcome page, click *Next*.
+
+1. On the view selection page, specify which views should be used by DataMiner IDP:
+
+   1. For each of the sections, either select *Create a new view* or select *Use existing view* and select the view in the drop-down list.
+
+   1. In case you use an existing view that is not yet under the TOP view, select the option *Move existing views under TOP* view.
+
+   1. Click *Confirm*.
+
+1. On the confirmation page, click *Confirm*.
+
+1. On the *IDP Extra Configurations* page:
+
+   - Optionally customize the HTTP binding address, with the corresponding HTTP mode and port.
+   - Optionally specify the path and credentials for the configuration archive.
+   - Optionally specify the credentials for file transfers.
+
+    > [!NOTE]
+    > Aside from the HTTP binding address, mode and port, you can also configure these settings in the IDP app after the initial setup, via *Admin* > *Configuration* > *Network Shares*.
+
+1. Click *Next* until you reach the last page of the wizard.
+
+1. On the last page of the wizard, click *Confirm*.
+
+1. When the configuration of the IDP module has finished, which may take some time, click *Finish*, and on the next page, click *Close*.
+
+## Installing DataMiner IDP (&lt; 1.5.0)
+
 To install and set up DataMiner IDP:
 
 1. Make sure the necessary prerequisites are available:

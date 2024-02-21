@@ -13,3 +13,6 @@ The table below this lists the managed elements of which the CI Type has *Softwa
 - *Update*: Opens a wizard to perform a software update on the selected elements.
 
 - *Check compliancy*: Checks if the selected elements use the expected software version.
+
+> [!NOTE]
+> From IDP 1.5.0 onwards, the graph at the top has been replaced by a summary of the status.
