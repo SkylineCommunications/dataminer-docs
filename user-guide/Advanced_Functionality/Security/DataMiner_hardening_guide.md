@@ -58,7 +58,7 @@ To enable gRPC for the communication between DataMiner Agents in a cluster, add 
 By default, NATS does not employ TLS encryption, leaving communication susceptible to eavesdropping. Consequently, we strongly recommend [enabling TLS encryption for enhanced security within your NATS cluster](xref:Security_NATS).
 
 > [!IMPORTANT]
-> NATS communication is used from DataMiner 10.1.0 CU0 onwards.
+> NATS communication is used from DataMiner 10.1.1/10.1.0 CU0 onwards.
 
 ## DataMiner Webpages hardening
 
