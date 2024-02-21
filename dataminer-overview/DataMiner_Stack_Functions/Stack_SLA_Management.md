@@ -61,11 +61,11 @@ DataMiner monitors service compliance and quality at any point in the infrastruc
 > - Demo Video: [DataMiner Services explained](https://community.dataminer.services/video/dataminer-services-explained/)
 > - Advanced Video: [DataMiner Service templates](https://community.dataminer.services/video/service-templates/)
 > - Video: [Service-aware Confidence Monitoring](https://www.youtube.com/watch?v=f0Z581xPrI4&ab_channel=DataMinerbySkylineCommunications)
-> - User Guide: [Services and service templates](xref:services)
+> - User Guide: [Services and service templates](xref:About_services)
 
 ## Element Management
 
-Manage network elements on the network element-management layer.
+Manage network elements on the network element management layer.
 
 > [!TIP]
 > For detailed information, see [Elements](xref:About_elements).
