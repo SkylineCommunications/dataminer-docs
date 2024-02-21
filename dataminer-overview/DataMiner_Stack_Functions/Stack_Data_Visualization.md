@@ -173,6 +173,23 @@ DataMiner Dashboards offers a wide range of visualizations that can make use of 
 > - [Analyzing performance of a Kubernetes Cluster with the DataMiner Dashboard module](https://www.youtube.com/watch?v=eST-XhA4P7I&ab_channel=DataMinerbySkylineCommunications) ![Video](~/user-guide/images/video_Duo.png)
 > - [DataMiner Dashboards training course](https://community.dataminer.services/courses/dashboard/)
 
+A nice example of a dashboard that covers many use cases, is our **node-edge component**, visualizing any type of "nodes" (objects) and their "edges" (connections between them). This component is an addition to the catalog of out-of-the box data visualizations included in the DataMiner Dashboards module. It can be used in all sorts of applications that visualize objects and the relationships between them.
+
+In many applications, there is a need to visualize certain objects and their interconnections. Think for example of network devices and their physical connectivity, a Kubernetes cluster showing the logical connections between its nodes, pods and containers, or even visualizing video flows between media nodes in an IP network. To tackle these use cases, DataMiner offers a generic HTML Dashboard component that visualizes any type of "nodes" (objects) and their "edges" (connections between them). The component is designed in such a way that all types of DataMiner objects can be visualized as either nodes or edges: be it elements, rows in a table parameter, services, views, etc.
+
+However, the node-edge component is much more than just a visualization on a dashboard, it actually serves as a true analytics tool. To enable all kinds of analytical use cases, the node-edge component allows to attach parameters and properties of DataMiner elements as KPIs to nodes and edges, that can for example be shown in a tooltip on a node or edge. On top of that, the node-edge component allows the user to dynamically filter out, highlight or color nodes and connections based on their KPIs. This can be used to quickly identify problems among a large set of nodes and see how these problems might affect other nodes. A visualization like this allows an operator to quickly visually correlate a lot of data, which can help to faster analyze incidents.
+
+The data input for the node-edge component can be configured via our Generic Query Language, an SQL-like language which allows to query DataMiner objects, like elements, parameters, DataMiner services, DCF connections etc.
+
+> [!TIP]
+>
+> For more information:
+>
+> - [Node edge component now generally available](https://community.dataminer.services/node-edge-component-now-generally-available/)
+> - [Kata #17: Node-Edge Component](https://community.dataminer.services/video/kata-17-node-edge-component/) ![Video](~/user-guide/images/video_Duo.png)
+> - Course about [Node edge graph](https://community.dataminer.services/courses/dashboard/lessons/node-edge-graph/) ![Video](~/user-guide/images/video_Duo.png) 
+> - [Dashboards use cases](https://community.dataminer.services/use-cases/?_sfm_modules=dashboards)
+
 ## Button Panel (i.e. Control Panel)
 
 **Software button panels.**
