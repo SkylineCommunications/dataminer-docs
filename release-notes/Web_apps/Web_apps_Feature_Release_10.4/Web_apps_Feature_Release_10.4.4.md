@@ -205,3 +205,9 @@ When a mobile visual overview opened on multiple clients was resized on one of t
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
 Up to now, a Web component would incorrectly display scroll bars when all content fitted inside.
+
+#### Dashboards app & Low-Code Apps: GQI updates would not be shown in the UI when using polling [ID_38832]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+Up to now, when a client was using polling, GQI updates would not be shown in the UI due to incorrect event processing.
