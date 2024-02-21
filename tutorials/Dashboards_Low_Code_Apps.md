@@ -29,7 +29,7 @@ keywords: low-code, low code, lowcode
 | [Styling a table component](xref:Tutorial_Apps_Style_A_Table) | Style a table component in a low-code app using GQI queries and the Template Editor. |
 | [Using the maps component in a low-code app](xref:TutorialMaps) | Add and configure a maps component in a low-code app to visualize cell towers, their connections, and their coverage. |
 | [Getting started with the grid component](xref:Tutorial_Apps_Grid) | Getting started with a grid component in a low-code app using GQI queries and the Template Editor. |
-| [Best practices in low-code app design](xref:Tutorials_App_Design) | Tips & Tricks to improve the overall look and feel of your low-code app |
+| [Best practices in low-code app design](xref:Tutorial_App_Design) | Tips & Tricks to improve the overall look and feel of your low-code app |
 
 ### GQI tutorials
 
