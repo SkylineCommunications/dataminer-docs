@@ -2,12 +2,12 @@ items:
   - name: DataMiner tutorials
     topicUid: Tutorials
     items:
-      - name: CI/CD Tutorials
-        topicUid: CICD_Tutorials
       - name: DataMiner Analytics tutorials
         topicUid: Analytics_Tutorials
       - name: ChatOps Custom Command tutorials
         topicUid: ChatOps_Tutorials
+      - name: CI/CD Tutorials
+        topicUid: CICD_Tutorials
       - name: Dashboards and Low-Code Apps tutorials
         topicUid: Dashboards_Low-Code_Apps_Tutorials
       - name: Data Sources tutorials
