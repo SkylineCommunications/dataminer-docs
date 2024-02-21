@@ -265,7 +265,6 @@ items:
           - name: Installing the Smart Trap Processor
             topicUid: Installing_Smart_Trap_Processor
           - name: Using the Smart Trap Processor
-            topicUid: The_SmartTrapProcessor_user_interface
             items:
               - name: The Smart Trap Processor user interface
                 topicUid: The_SmartTrapProcessor_user_interface

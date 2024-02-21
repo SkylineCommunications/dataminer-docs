@@ -12,8 +12,7 @@ With this tool, you can specify which traps to capture, filter, transform, and d
 
 This solution empowers users to configure and monitor their processed trap events directly from the connector interface or from a low-code app:
 
-
 ![Smart Trap Processor Homepage](~/user-guide/images/TrapProcessor_Overview.png)
 
 > [!NOTE]
-> SNMPv1 and SNMPv2 is supported. SNMPv3 is not currently supported. 
+> SNMPv1 and SNMPv2 is supported. SNMPv3 is not currently supported.

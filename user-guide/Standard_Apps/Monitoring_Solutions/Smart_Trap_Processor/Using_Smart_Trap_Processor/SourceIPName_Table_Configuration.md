@@ -11,6 +11,8 @@ The Source IP Names defined in this table dictate the value displayed on the *So
 
 ![Trap Processor Source IP Name Table](~/user-guide/images/TrapProcessor_SourceIPNameTable.png)
 
-- *IP Address*: IP Address that will be used to match with the received traps. This needs to match at least one of the IP addreses defined in the standalone “Trap IP Sources” parameter.
+- *IP Address*: IP Address that will be used to match with the received traps. This needs to match at least one of the IP addresses defined in the standalone “Trap IP Sources” parameter.
+
 - *Source IP Name*: The value/format entered will be used to determine what is displayed on on the Source IP Name parameter for each row on the Processed Messages table.
-- *Delete*: When pressed, the rule will be deleted. 
+
+- *Delete*: When pressed, the rule will be deleted.

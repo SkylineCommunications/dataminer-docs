@@ -6,7 +6,7 @@ uid: Installing_Smart_Trap_Processor
 
 ## Prerequisites
 
-- DataMiner Webapps 10.4.1 or higher.
+- DataMiner web apps 10.4.1 or higher.
 
 - A DataMiner System [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
