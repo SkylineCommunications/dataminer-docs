@@ -359,6 +359,8 @@ items:
                 topicUid: TutorialMaps
               - name: Getting started with the grid component
                 topicUid: Tutorial_Apps_Grid
+              - name: Best practices in low-code app design
+                topicUid: Tutorial_App_Design
       - name: Configuring components
         topicUid: Configuring_components
         items:
