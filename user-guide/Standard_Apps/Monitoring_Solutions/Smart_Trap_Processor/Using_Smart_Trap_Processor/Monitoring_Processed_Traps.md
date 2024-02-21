@@ -4,60 +4,57 @@ uid: Monitoring_Processed_Traps
 
 # Monitoring Processed Traps
 
-Once at least one trap processor element has been configured to process traps from a valid source which is actively generating events, the processed events and heartbeats can be monitored by navigating to the *Processed Traps* page.
+Once at least one trap processor element has been configured to process traps from a valid source that is actively generating events, you can monitor the processed events and heartbeats on the *Processed Traps* page.
 
 ![Smart Trap Processor Homepage](~/user-guide/images/TrapProcessor_Overview.png)
 
-The following information is provided for each trap processor element and its corresponding processed traps:
+- At the top, you can find the total number of trap processors available for monitoring.
 
-- Total number of available trap processors available for monitoring.
+- Each available trap processor element is displayed in a grid view. You can select an element in the grid to filter the data below the grid so that only information for that processor element is shown.
 
-- Each available trap processor element will be displayed in a grid view and is selectable. Selecting a processor will filter the data below the grid to information that only applies to that processor element. Information provided in each element block includes element name, state, current alarm status, trap IP sources, Max age of events, Keep Alive setting, protocol name, and protocol version.
+- Each element block in the grid shows the element name, state, current alarm status, trap IP sources, maximum age of events, *Keep Alive* setting, protocol name, and protocol version.
 
-Based on element selection:
+- When an element is selected, the following information is shown above the *Processed Messages* table:
 
-- Number of Active events on the Processed Messages table.
+  - The number of active events in the *Processed Messages* table.
 
-- Number of Cleared events on the Processed Messages table.
+  - The number of cleared events in the *Processed Messages* table.
 
-- Number of Events matching various alarm severities (Critical, Major, Minor, Warning)
+  - The number of events matching various alarm severities: Critical, Major, Minor, Warning.
 
-- Processed Messages Table:
+- When an element is selected, you will find the following information in the *Processed Messages* table:
 
-  - *Alarm Description*: values corresponding to the Alarm Set and Alarm Clear parameters on the Rules table.
+  - **Alarm Description**: Values corresponding to the *Alarm Set* and *Alarm Clear* parameters in the [Rules table](xref:Processor_configuration#rules-table-configuration).
 
-  - *Event State*: The event state will report as Active or Cleared depending if the last processed trap for the row matched the Set or Clear OID defined on the Rules table
+  - **Event State**: This can be *Active* or *Cleared*, depending on whether the last processed trap for the row matched the Set or Clear OID defined in the [Rules table](xref:Processor_configuration#rules-table-configuration).
 
-  - *Timestamp*: Timestamp corresponding to when the last event was processed for a row.
+  - **Timestamp**: The time when the last event was processed for a row.
 
-  - *Trap Count*: Total number of traps that have been processed for a row.
+  - **Trap Count**: The total number of traps that have been processed for a row.
 
-  - *Source IP*: the IP address for which the trap events originated
+  - **Source IP**: The IP address from which the trap events originated.
 
-  - *Source IP Name*: The name specified for the IP source on the Source IP Names table.
+  - **Source IP Name**: The name specified for the IP source in the [Source IP Name table](xref:Processor_configuration#source-ip-name-table-configuration).
 
-  - *Source Name*: The name specified for the event source on the Source Names table.
+  - **Source Name**: The name specified for the event source in the [Source Name table](xref:Processor_configuration#source-name-table-configuration).
 
-  - *Unique Entry*: The Unique entry value specified on the Rules table.
+  - **Unique Entry**: The unique entry value specified in the [Rules table](xref:Processor_configuration#rules-table-configuration).
 
   > [!NOTE]
-  > Events are sorted first by Active events to the top, then second by descending timestamp.
+  > Active events are shown at the top of the table. Aside from this, the events are sorted by descending timestamp.
 
-- Heartbeat Traps Table:
+- When an element is selected, you will find the following information in the *Heartbeat Traps* table:
 
-  - *Unique Entry*: The Unique entry value specified on the Rules table.
+  - **Unique Entry**: The unique entry value specified in the [Rules table](xref:Processor_configuration#rules-table-configuration).
 
-  - *Source IP*: the IP address for which the trap events originated
+  - **Source IP**: The IP address from which the trap events originated.
 
-  - *Source IP Name*: The name specified for the IP source on the Source IP Names table.
+  - **Source IP Name**: The name specified for the IP source in the [Source IP Name table](xref:Processor_configuration#source-ip-name-table-configuration).
 
-  - *Heartbeat Status*: The heartbeat status will report as FAIL or OK depending if the time since last heartbeat exceeds the expected interval as set on the Rules table.
+  - **Heartbeat Status**: Can be *FAIL* or *OK*, depending on whether the time since the last heartbeat exceeds the expected interval set in the [Rules table](xref:Processor_configuration#rules-table-configuration).
 
-  - *Time Since Last Heartbeat*: The time since last heartbeat is calculated by comparing current time against the timestamp for the last processed heartbeat trap for a row.
+  - **Time Since Last Heartbeat**: The time since the last heartbeat, calculated by comparing the current time with the timestamp for the last processed heartbeat trap for a row.
 
-  - *Heartbeat Interval*: The expected interval of heartbeats from a source as defined on the Rules table.
+  - **Heartbeat Interval**: The expected interval of heartbeats from a source as defined in the [Rules table](xref:Processor_configuration#rules-table-configuration).
 
-  - *Trap Count*: Total number of traps that have been processed for a row.
-
-> [!NOTE]
-> Default alarm and trend templates are provided upon installation of the Smart Trap Processor Tool. The default templates enable alarming and trending on the Event State and Heartbeat Status parameters. If more complex alarming thresholds are required beyond the defaults, refer to [About the alarm template editor](https://docs.dataminer.services/user-guide/Basic_Functionality/Protocols_and_templates/Alarm_templates/Configuring_alarm_templates/About_the_alarm_template_editor.html).
+  - **Trap Count**: The total number of traps that have been processed for a row.

@@ -18,14 +18,13 @@ uid: Installing_Smart_Trap_Processor
 
 1. Select the target DataMiner System and confirm the deployment. The package will be pushed to the DataMiner System.
 
-   If your DataMiner System does not contain a Trap Processor element yet, a new Trap Processor element is automatically created when the package is installed.
+   If this is the first time you install the tool, a new view and element named "Smart Trap Processor" automatically be created when the package is installed. Optionally, you can rename the element and view, and you can change their location in the Surveyor.
 
    Once the package has been installed, you can access the *Smart Trap Processor* low-code app at `http(s)://[DMA name]/root`.
 
    ![Smart Trap Processor app](~/user-guide/images/TrapProcessor_Access.png)
 
 > [!NOTE]
-> To update the Smart Trap Processor tool, redeploy the [*Smart Trap Processor* package](https://catalog.dataminer.services/details/package/5755). The tool will be updated, but no new Trap Processor element will be created, as one should already exist in your DMS.
-
-> [!NOTE]
-> Upon initial installation, a new view and element will be created and named “Smart Trap Processor”. Optionally, you can rename the element and view, and change their location in the surveyor.
+>
+> - To **update** the Smart Trap Processor tool, redeploy the [*Smart Trap Processor* package](https://catalog.dataminer.services/details/package/5755). The tool will be updated, but no new Trap Processor element will be created, as one should already exist in your DMS.
+> - When you install the tool, default alarm and trend templates are applied to enable alarm monitoring and trending on the *Event State* and *Heartbeat Status* parameters. You can customize these templates, for example if more complex alarm thresholds are required beyond the defaults. See [About the alarm template editor](xref:About_the_alarm_template_editor).

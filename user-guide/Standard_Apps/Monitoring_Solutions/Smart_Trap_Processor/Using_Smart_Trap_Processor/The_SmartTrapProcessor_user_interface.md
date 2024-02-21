@@ -18,8 +18,9 @@ To access the Trap Processor low-code app:
 
 ## The Smart Trap Processor tool sidebar
 
-The sidebar on the left of the Trap Processor tool contains buttons that can be used to expand different panes:
+The sidebar on the left of the Trap Processor tool contains buttons that can be used to expand different pages:
 
-- ![Processed Traps](~/user-guide/images/TrapProcessor_ProcessedTrapsIcon.png) : Clicking the *Processed Traps* button displays a list of available trap processor elements created in the DataMiner System. Upon element selection, information pertaining to the traps processed on the selected element is displayed. See [Monitoring Processed Traps](xref:Monitoring_Processed_Traps).
-
-- ![Processor Configuration](~/user-guide/images/TrapProcessor_ProcessorConfigIcon.png) : Clicking the *Processor Configuration* button allows for complete configuration of trap processing logic for the selected element. See [Configuring resources](xref:Processor_configuration).
+| Button | Description |
+|--|--|
+| ![Processed Traps](~/user-guide/images/TrapProcessor_ProcessedTrapsIcon.png) | Processed Traps page. Displays a list of available trap processor elements created in the DataMiner System. Select an element on this page to view information about the traps processed on that element. See [Monitoring processed traps](xref:Monitoring_Processed_Traps). |
+| ![Processor Configuration](~/user-guide/images/TrapProcessor_ProcessorConfigIcon.png) | Processor Configuration page. Allows you to configure the trap processing logic for the selected element. See [Configuring processing rules](xref:Processor_configuration). |
