@@ -40,6 +40,17 @@ This indicator will show the current status of the client's WebSocket connection
 > [!NOTE]
 > When you disable the setting for a particular *Dropdown* component, clicking the dashboard's *Clear all* button will not affect that component. Its current selection will be left untouched.
 
+#### Dashboards app & Low-Code Apps - Dropdown, List & Tree components: New 'Select first item by default' setting [ID_38775]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+*Dropdown*, *List* and *Tree* components now have a new *Select first item by default* setting under *Initial selection*. When you enable the setting, the first value shown in the component will automatically be selected.
+
+> [!NOTE]
+>
+> - When you add a new *Dropdown*, *List* or *Tree* component, this setting will be enabled by default.
+> - If, in case of an existing *Dropdown*, *List* or *Tree* component, an existing selection setting is enabled under *Initial selection*, that existing setting will remain unchanged, and the new *Select first item by default* setting will not be enabled. However, if none of the existing settings under *Initial selection* are enabled, the new *Select first item by default* setting will automatically be enabled.
+
 ## Changes
 
 ### Enhancements
@@ -148,6 +159,14 @@ When a panel component had the focus, selection boxes in the header bar would in
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
 When you duplicated a dashboard, the newly created duplicate would incorrectly not inherit the dashboard settings of the original dashboard.
+
+#### Dashboards app & Low-Code Apps: Selection in query filter of a column with discrete numeric values would be cleared when the data was fetched again [ID_38685]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+Up to now, in some cases, the selection made in the query filter of a column with discrete numeric values would incorrectly be cleared each time the data was fetched again.
+
+Also, up to now, when a column had both a discrete filter and another filter applied, that other filter would incorrectly be dropped the moment you selected a discrete value.
 
 #### Dashboards app: Issues with input controls on mobile devices [ID_38723]
 
