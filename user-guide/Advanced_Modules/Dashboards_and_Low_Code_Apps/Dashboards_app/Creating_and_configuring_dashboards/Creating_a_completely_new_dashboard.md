@@ -22,13 +22,13 @@ uid: Creating_a_completely_new_dashboard
    > - Once the dashboard has been created, you can further refine which users have which level of access in the dashboard options. See [Changing dashboard settings](xref:Changing_dashboard_settings).
    > - The built-in Administrator account always has full access to all dashboards.
 
-1. Click *OK*.
+1. Click *Create* or *OK*, depending on your DataMiner version<!--RN 38278-->.
 
 1. Optionally, fine-tune the dashboard settings. See [Changing dashboard settings](xref:Changing_dashboard_settings).
 
 1. Optionally, fine-tune the dashboard layout. See [Configuring the dashboard layout](xref:Configuring_the_dashboard_layout).
 
-1. Configure the necessary components. See [Configuring dashboard components](xref:Configuring_dashboard_components).
+1. Configure the necessary components. See [Configuring components](xref:Configuring_components).
 
 1. When the dashboard is ready, in the top-right corner of the screen, click the “x” icon.
 

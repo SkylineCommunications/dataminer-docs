@@ -1,10 +1,10 @@
 ---
-uid: Deploying_A_DataMiner_Connector_to_your_system
+uid: Deploying_a_catalog_item
 ---
 
-# Deploying a DataMiner connector to your system
+# Deploying a Catalog item to your system
 
-To deploy a connector to your DataMiner System from the Catalog module:
+To deploy an item from the DataMiner Catalog (e.g. a connector or package) to your DataMiner System:
 
 1. Make sure the following requirements are met:
 
@@ -12,16 +12,24 @@ To deploy a connector to your DataMiner System from the Catalog module:
    - Your organization has been verified. This is necessary for dataminer.services to be able to check for which connectors your organization has acquired a license. See [Getting your organization verified](xref:CloudConnectionVerification).
    - Your dataminer.services account is linked to a DataMiner user account. See [Linking your DataMiner account to your dataminer.services account](xref:Linking_your_DataMiner_and_DCP_account).
 
-1. Look up the connector in the catalog. See [Looking up a DataMiner connector](xref:Looking_up_a_DataMiner_connector).
+1. Look up the item in the Catalog. See [Looking up an item in the Catalog](xref:Looking_up_an_item_in_the_catalog).
 
-1. Click the *Deploy* button.
+1. If you cannot see the *Deploy* button yet, go to the *Versions* tab and expand the version you want to deploy.
+
+   If you do see a *Deploy* button immediately, but you want to deploy a specific version, also go to the *Versions* tab and expand the version you want to deploy.
 
    > [!NOTE]
    >
-   > - The *Deploy* button is only available if your organization has a license for the displayed connector. Otherwise, it is grayed out and displays the text "No License". In that case, to be able to deploy the connector, contact <licensing@skyline.be>.
-   > - To deploy a specific version of a connector, click the version history of the connector, and then click the *Deploy* button next to the relevant version.
+   > - The *Deploy* button is only available if your organization has a license for the displayed item. If it is unavailable, to be able to deploy the item, contact <licensing@skyline.be>.
+   > - To be able to deploy an item to your DataMiner System, the DataMiner user profile linked to your dataminer.services user profile has to have the following permissions:
+   >   - [Modules > System configuration > Agents > Install App packages](xref:DataMiner_user_permissions#modules--system-configuration--agents--install-app-packages).
+   >   - [Modules > Automation > Execute](xref:DataMiner_user_permissions#modules--automation--execute).
 
-1. Select the target DataMiner System and confirm the deployment. The connector will then be pushed to the DataMiner System.
+1. Click the *Deploy* button.
+
+1. Select the target DataMiner System and click *Deploy*.
+
+   The item will be pushed to the DataMiner System. In the Admin app, you can check the status of the deployment. See [Viewing information on deployments](xref:Viewing_info_on_deployments).
 
 > [!NOTE]
-> Deploying a connector from the catalog will never change the production version for that connector in the DataMiner System.
+> Deploying a connector from the Catalog will never change the production version for that connector in the DataMiner System.

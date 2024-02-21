@@ -18,5 +18,4 @@ The general DataMiner release notes contain all new features, enhancements, and 
 > - For detailed information on how to upgrade your DataMiner System, see [Upgrading your DataMiner system](xref:Upgrading_a_DataMiner_Agent).
 
 > [!NOTE]
-> To get access to certain DataMiner features, such as suggestion events or the reports view in the Alarm Console, a Cassandra general database is required. This means that DataMiner Agents using a MySQL or Microsoft SQL Server general database need to migrate to Cassandra if you want to make use of these features.
-> For more information on the requirements for the migration and on how to migrate to Cassandra, see [Migrating the general database to Cassandra](xref:Migrating_the_general_database_to_Cassandra).
+> To get access to all the latest DataMiner features, a DataMiner System needs to use [Storage as a Service](xref:STaaS) (recommended) or a [self-hosted data storage setup](xref:Supported_system_data_storage_architectures) with Cassandra-compatible database and indexing database.

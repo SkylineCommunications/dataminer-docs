@@ -1,0 +1,15 @@
+items:
+  - name: Communication Gateway 2.0.2
+    topicUid: CommunicationGateway_2.0.2
+  - name: Communication Gateway 2.0.1
+    topicUid: CommunicationGateway_2.0.1
+  - name: Communication Gateway 1.2.2
+    topicUid: CommunicationGateway_1.2.2
+  - name: Communication Gateway 1.2.1
+    topicUid: CommunicationGateway_1.2.1
+  - name: Communication Gateway 1.2.0
+    topicUid: CommunicationGateway_1.2.0
+  - name: Communication Gateway 1.1.0
+    topicUid: CommunicationGateway_1.1.0
+  - name: Communication Gateway 1.0.0
+    topicUid: CommunicationGateway_1.0.0

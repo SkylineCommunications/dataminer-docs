@@ -26,13 +26,21 @@ Both packages have a dependency on the [Skyline.DataMiner.Core.DataMinerSystem.C
 > [!NOTE]
 > Using this class library, you can retrieve parameter values, tables, etc. from elements. However, it is important to note that this should only be used for obtaining values from other elements. To perform operations on the local element, it is advised to use the [SLProtocol](xref:Skyline.DataMiner.Scripting.SLProtocol) API as this is much more efficient (This is because the operation is then performed in the SLProtocol process immediately).
 
-For example, to start using the DMS class library from a QAction, use the [GetDms](xref:Skyline.DataMiner.Core.DataMinerSystem.Protocol.SlProtocolExtensions.GetDms(Skyline.DataMiner.Scripting.SLProtocol)) extension method:
+For example, to start using the DMS class library **from a QAction**, use the [GetDms](xref:Skyline.DataMiner.Core.DataMinerSystem.Protocol.SlProtocolExtensions.GetDms(Skyline.DataMiner.Scripting.SLProtocol)) extension method:
 
 ```xml
 IDms dms = slProtocol.GetDms();
 ```
 
-The GetDms method (see SLProtocolExtensions.GetDms method ) is an extension method on the SLProtocol interface that returns an object that implements the IDms interface.
+The GetDms method (see [SLProtocolExtensions.GetDms](xref:Skyline.DataMiner.Core.DataMinerSystem.Protocol.SlProtocolExtensions.GetDms(Skyline.DataMiner.Scripting.SLProtocol)) method) is an extension method on the SLProtocol interface that returns an object that implements the IDms interface.
+
+To start using the DMS class library **from an Automation script**, use the [GetDms](xref:Skyline.DataMiner.Core.DataMinerSystem.Automation.EngineExtensions.GetDms(Skyline.DataMiner.Automation.Engine)) extension method:
+
+```xml
+IDms dms = engine.GetDms();
+```
+
+The GetDms method (see [Engine.GetDms](xref:Skyline.DataMiner.Core.DataMinerSystem.Automation.EngineExtensions.GetDms(Skyline.DataMiner.Automation.Engine)) method) is an extension method on the Engine interface that returns an object that implements the IDms interface.
 
 Refer to [Examples](xref:ClassLibraryExamples) for some example use cases.
 

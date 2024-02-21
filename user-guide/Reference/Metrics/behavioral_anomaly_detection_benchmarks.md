@@ -8,7 +8,7 @@ uid: behavioral_anomaly_detection_benchmarks
 
 - Intel Core i7-8700
 - 6 cores
-- 16GB RAM
+- 16 GB RAM
 - SSD
 - Windows 10
 
@@ -16,4 +16,4 @@ uid: behavioral_anomaly_detection_benchmarks
 
 | \# | Specification | Scope | Metric | Remarks | Configuration |
 | -- | ------------- | ----- | ------ | ------- | ------------- |
-| 1 | Maximum number of parameters per DMA on which Behavioral Anomaly Detection is active | DMA | 100,000 parameters | Hard limit of 100,000 parameters to avoid using more than 2GB of RAM on the DMA | Clean DMA, no other data |
+| 1 | Maximum number of parameters per DMA on which Behavioral Anomaly Detection is active | DMA | 100,000 parameters | Hard limit of 100,000 parameters to avoid using more than 2 GB of RAM on the DMA. | Clean DMA, no other data. |

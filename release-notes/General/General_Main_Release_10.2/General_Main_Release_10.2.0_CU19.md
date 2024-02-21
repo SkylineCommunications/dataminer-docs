@@ -137,6 +137,12 @@ When, while in edit mode, you deleted multiple components at once, the *Data use
 
 If no preset was available for a particular spectrum element, it could occur that the *Preset* tab for the spectrum element kept loading indefinitely.
 
+#### Dashboards app & Low-Code Apps: Line & area chart component could get stuck in a loading state [ID_37044]
+
+<!-- MR 10.2.0 [CU19] - FR TBD -->
+
+In some cases, a line & area chart component could get stuck in a loading state without showing any possible error messages.
+
 #### Dashboards app/Low-Code Apps: Visual glitch when closing component menu [ID_37058]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->

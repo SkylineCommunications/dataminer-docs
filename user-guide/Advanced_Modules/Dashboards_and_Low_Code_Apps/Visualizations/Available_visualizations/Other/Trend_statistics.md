@@ -4,7 +4,7 @@ uid: DashboardTrendStatistics
 
 # Trend statistics
 
-This component displays the minimum, average and maximum value of one or more trended parameters. Available from DataMiner 9.6.13 onwards;
+This component displays the minimum, average and maximum value of one or more trended parameters. Available from DataMiner 9.6.13 onwards.
 
 To configure the component:
 
@@ -25,7 +25,7 @@ To configure the component:
 
 1. Optionally, fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
 
-   - The default options available for all components. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
+   - The default options available for all components. See [Customizing the component layout](xref:Customize_Component_Layout).
 
    - *Layout*: In case trend statistics are displayed for multiple parameters, this setting determines whether the blocks of statistics are displayed next to each other or below each other. However, note that when the statistics are viewed on a small screen, they will always be displayed below each other.
 

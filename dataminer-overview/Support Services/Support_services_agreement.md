@@ -39,7 +39,7 @@ Skyline offers two levels of Support Services: Continuity and Evolve. An overvie
 
 ## Supported products
 
-Skyline provides Support Services for its Software only, which consists of its core software, connectors, and cloud components. Skyline does not provide Support Services for third-party components, except for maintenance on database content for supported databases. An overview of supported databases can be found on [docs.dataminer.services](xref:Software_support_life_cycles#third-party-software-support-life-cycle).
+Skyline provides Support Services for its Software only, which consists of its core software, connectors, and cloud components. Skyline does not provide Support Services for third-party components, except for maintenance on database content for supported databases. An overview of supported system data storage architectures can be found on [docs.dataminer.services](xref:Supported_system_data_storage_architectures).
 
 ## Supported versions
 
@@ -59,7 +59,7 @@ Upgrades shall be released at Skyline's discretion and based on the technology i
 
 Installation of Updates and Upgrades on the User's system by Skyline is not included in the Support Services.
 
-Installation and configuration of hardware and databases (Cassandra, Elasticsearch, etc.) in the User's system by Skyline is not included in the Support Services.
+Installation and configuration of hardware and databases (Cassandra, OpenSearch, etc.) in the User's system by Skyline is not included in the Support Services.
 
 ## Support for software issues
 
@@ -81,7 +81,7 @@ To be able to assist the User in an efficient manner, when generating a ticket o
 
 ## Proactive support
 
-Skyline assumes that the Software is always connected to dataminer.services and that the Customer DataMiner Reporting tool ("**CDMR**") is permanently enabled. This allows the User and Skyline to proactively react to occurrences before they may become critical.
+Skyline assumes that the Software is always connected to dataminer.services and that the necessary [prerequisites](xref:RemoteLogCollection#requirements) are met for remote log collection using the Customer DataMiner Reporting tool ("**CDMR**"). This allows the User and Skyline to proactively react to occurrences before they may become critical.
 
 ## Exclusions
 
@@ -182,13 +182,7 @@ The following time frame shall apply for Issues reported during Out of Business 
 
 This Evolve plan section shall only be applicable for Users that comply with the requirements of the Evolve plan. These requirements shall be tested for compliance at regular intervals. In case of non-compliance by the User, Skyline reserves the right to limit the User's Support Services to the provisions of the Continuity plan.
 
-#### Requirements
-
-To be eligible for the Evolve Support Services plan, the User is at all times required to have in their organization:
-
-- a minimum of two active DevOps Professionals, level Enabler, or one DevOps Professional, level Catalyst
-
-- access to [dataminer.services](xref:Overview_DCP)
+For the minimum requirements to enable the Evolve plan, refer to [Minimum requirements](xref:Overview_Support_Plans#minimum-requirements).
 
 Do not hesitate to [contact your sales representative](https://community.dataminer.services/get-in-touch/sales-team/).
 

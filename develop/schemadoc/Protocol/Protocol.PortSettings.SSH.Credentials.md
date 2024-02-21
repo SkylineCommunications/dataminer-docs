@@ -4,7 +4,7 @@ uid: Protocol.PortSettings.SSH.Credentials
 
 # Credentials element
 
-Specifies the SSH credentials.
+Specifies the username and password for password-based authentication.
 
 ## Parent
 
@@ -12,11 +12,11 @@ Specifies the SSH credentials.
 
 ## Children
 
-|Name|Occurrences|Description|
-|--- |--- |--- |
-|***All***|||
-|&nbsp;&nbsp;[Username](xref:Protocol.PortSettings.SSH.Credentials.Username)||Specifies the user name.|
-|&nbsp;&nbsp;[Password](xref:Protocol.PortSettings.SSH.Credentials.Password)||Specifies the password.|
+| Name                                                                        | Occurrences | Description                                                |
+|-----------------------------------------------------------------------------|-------------|------------------------------------------------------------|
+| ***All***                                                                   |             |                                                            |
+| &nbsp;&nbsp;[Username](xref:Protocol.PortSettings.SSH.Credentials.Username) |             | Specifies the ID of the parameter that holds the username. |
+| &nbsp;&nbsp;[Password](xref:Protocol.PortSettings.SSH.Credentials.Password) |             | Specifies the ID of the parameter that holds the password. |
 
 ## Examples
 

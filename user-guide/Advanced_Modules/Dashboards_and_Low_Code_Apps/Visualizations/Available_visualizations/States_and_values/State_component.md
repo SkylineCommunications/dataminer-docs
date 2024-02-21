@@ -11,7 +11,7 @@ This component displays the state, name and, if applicable, the value of a DataM
 
 To configure the component:
 
-1. Apply a data feed. See [Applying a data feed](xref:Configuring_dashboard_components#applying-a-data-feed).
+1. Apply a data feed. See [Applying a data feed](xref:Apply_Data_Feed).
 
    - In case a parameter data feed included a parameter based on a protocol, a filter feed can be used to filter on a specific element.
 
@@ -36,7 +36,7 @@ To configure the component:
 
 1. Fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
 
-   - The default options available for all components. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
+   - The default options available for all components. See [Customizing the component layout](xref:Customize_Component_Layout).
 
    - In case the component displays more than one item, in the *Advanced* > *Layout* section, you can adjust the way the different items are displayed:
 

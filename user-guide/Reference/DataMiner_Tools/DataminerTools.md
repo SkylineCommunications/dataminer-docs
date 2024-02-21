@@ -16,7 +16,10 @@ This section provides information on the following tools:
 - [Change Element States Offline](xref:Change_Element_States_Offline)
 - [Connection Check](xref:Connection_Check)
 - [Copy Element Data](xref:Copy_Element_Data)
+- [Data Aggregator Migrator](xref:Data_Aggregator_Migrator)
 - [DataMiner Comparison tool](xref:DataMinerComparisonTool)
+- [DataMiner Huawei Manager dashboard](xref:Huawei_Manager_Dashboard)
+- [DataMiner Ping Monitoring tool](xref:PingMonitoring)
 - [DataMiner Size tool](xref:DataMinerSizeTool)
 - [DataMiner Taskbar Utility](xref:DataMiner_Taskbar_Utility)
 - [Dump Spectrum Preset Content](xref:Dump_Spectrum_Preset_Content)
@@ -46,4 +49,4 @@ This section provides information on the following tools:
 > For more information on other DataMiner tools or third-party tools, see:
 >
 > - [DataMiner Development Tools](xref:TOOLS)
-> - [DataMiner maintenance tools](xref:DMS_maintenance_tools)
+> - [DataMiner maintenance tools](xref:Cleaning_up_unused_files_on_a_DMA)

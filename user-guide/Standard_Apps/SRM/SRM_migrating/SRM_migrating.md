@@ -15,4 +15,4 @@ It is possible to migrate components of an SRM configuration from one DMA to ano
 If you migrate several components, it is important that you import them in the order detailed above: first the virtual function definitions, then the profile instances, etc.
 
 > [!TIP]
-> If you are looking for information on how to migrate SRM resources and resource pools from the *Resources.xml* file to Elasticsearch, see [Migrating SRM resources to Elasticsearch](xref:Resources_migration_to_elastic).
+> If you are looking for information on how to migrate SRM resources and resource pools from the *Resources.xml* file to the indexing database, see [Migrating SRM resources to the indexing database](xref:Resources_migration_to_elastic).

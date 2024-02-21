@@ -4,7 +4,7 @@ uid: UIComponentsTableRelations
 
 # Relations
 
-A foreign key needs to be described in a relation. In the following example, the relation path can be read as "table 4000 has a foreign key to table 3000, table 3000 to table 2000."
+A foreign key needs to be described in the path attribute of the Relations.Relation tag. In the following example, the relation path can be read as "table 4000 has a foreign key to table 3000, table 3000 to table 2000."
 
 ```xml
 <Relation path="2000;3000;4000" />
@@ -25,13 +25,14 @@ However, when the relations are defined in the opposite order as shown below, th
 <Relation path="2800;2900;2300" />
 <Relation path="2800;2300" />
 ```
+
 If the EPM element is passing a key as FK to 2900, then the first relation is also used and somehow it also uses this to display a direct link between 2800 and 2300, so an extra arrow is placed on top.
 
 To summarize: when a table can be skipped in the topology, first specify the shortest relation, and then the longer relation(s).
 
-![alt text](../../images/Table_relations_ordering.svg "Defining relations")
+![Defining relations](../../images/Table_relations_ordering.svg "Defining relations")
 
 > [!NOTE]
 >
 > - It is advised to use "numeric text" content for the keys when you want to link tables with each other. Strings may cause problems.
-> - An example protocol "SLC SDF Relations" is available in the Protocol Development Guide Companion Files.
+> - An example protocol "SLC SDF Relations" is available in the [Protocol Development Guide Companion Files](https://community.dataminer.services/documentation/protocol-development-guide-companion-files/).

@@ -6,7 +6,7 @@ uid: Overview_Collaboration
 
 *Collaborate within the entire service supply chain.*
 
-![dataminer.services.categories](~/dataminer-overview/images/DMS_Collaboration.png)
+![dataminer.services.categories](~/dataminer-overview/images/DMS_Collaboration.jpg)
 
 ## Dashboard Share
 
@@ -31,7 +31,7 @@ uid: Overview_Collaboration
 >
 > - [New cloud services that enable faster support are on the way!](https://community.dataminer.services/new-cloud-services-that-enable-faster-support-are-on-the-way/)
 > - [Introducing your DataMiner co-pilot](https://community.dataminer.services/introducing-your-dataminer-co-pilot/)
-> - [CCA Support Services](xref:CCA_Support_Services)
+> - [Proactive Support](xref:Proactive_Support)
 > - [Remote Access User Guide](xref:Cloud_Remote_Access)
 
 ## ChatOps

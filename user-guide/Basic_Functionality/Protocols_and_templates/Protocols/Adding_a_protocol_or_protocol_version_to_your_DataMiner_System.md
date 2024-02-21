@@ -1,5 +1,6 @@
 ---
 uid: Adding_a_protocol_or_protocol_version_to_your_DataMiner_System
+keywords: adding a driver, adding a connector
 ---
 
 # Adding a protocol or protocol version to your DataMiner System
@@ -20,7 +21,7 @@ You can upload:
 
 ## Deploying a protocol from the catalog
 
-See [Deploying a DataMiner connector to your system](xref:Deploying_A_DataMiner_Connector_to_your_system).
+See [Deploying a Catalog item](xref:Deploying_a_catalog_item).
 
 ## Adding a protocol or protocol version in DataMiner Cube
 

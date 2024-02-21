@@ -14,7 +14,7 @@ DataMiner Cube supports representing data in a hierarchical way by means of a tr
 
 > [!NOTE]
 >
-> - An example protocol "SLC SDF Treecontrol" is available in the Protocol Development Guide Companion Files.
+> - An example protocol "SLC SDF Treecontrol" is available in the [Protocol Development Guide Companion Files](https://community.dataminer.services/documentation/protocol-development-guide-companion-files/).
 > - For a tree control to function correctly, make sure the primary/foreign keys do not contain reserved characters used in the dynamic table filter syntax, as mentioned in Primary keys and Foreign keys.
 
 ## See also
@@ -23,7 +23,7 @@ DataMiner Protocol Markup Language:
 
 - [Protocol.TreeControls](xref:Protocol.TreeControls)
 - [Protocol.Params.Param.Measurement.Discreets.Discreet@iconRef](xref:Protocol.Params.Param.Measurement.Discreets.Discreet-iconRef)
-- [Protocol.Relations.Relation](xref:Protocol.Relations.Relation: Protocol.Relations.Relation)
+- [Protocol.Relations.Relation](xref:Protocol.Relations.Relation)
 
 Coding guidelines
 

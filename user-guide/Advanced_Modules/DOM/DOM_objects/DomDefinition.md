@@ -20,7 +20,7 @@ The table below lists the properties of the `DomDefinition` object. It also indi
 | SectionDefinitionLinks  | List\<[SectionDefinitionLink](#sectiondefinitionlink)> | Yes        | Contains the required/allowed `SectionDefinitions`.                                                                                                          |
 | VisualStructure         | DomDefinitionVisualStructure                           | No         | Contains settings related to the client UI. Most of these do not apply for DOM. This property should be ignored since it will be removed in the near future. |
 | DomBehaviorDefinitionId | DomBehaviorDefinitionId                                | Yes        | ID of the `DomBehaviorDefinition` that this `DomDefinition` is linked to. See [DomBehaviorDefinition](xref:DomBehaviorDefinition).                           |
-| ModuleSettingsOverrides | [ModuleSettingsOverrides](#modulesettingsoverrides)    | No         | Used to override some `ModuleSettings`. See [DomInstanceNameDefinition](xref:DomInstanceNameDefinition).                                                     |
+| ModuleSettingsOverrides | [ModuleSettingsOverrides](#modulesettingsoverrides)    | No         | Used to override some `ModuleSettings`. See [DomInstanceNameDefinition](xref:DomInstanceNameDefinition) and [ExecuteScriptOnDomInstanceActionSettings](xref:ExecuteScriptOnDomInstanceActionSettings).                                                     |
 
 ### SectionDefinitionLink
 
@@ -35,9 +35,13 @@ It also has the *IsSoftDeleted* boolean. See [soft-deletable objects](xref:DOM_o
 
 The object contains settings that override the settings defined in the `ModuleSettings`. See [ModuleSettings](xref:DOM_ModuleSettings) for details about the specific settings.
 
-At present, the following setting can be overridden:
+At present, the following settings can be overridden:
 
 - DomInstanceNameDefinition
+- ExecuteScriptOnDomInstanceActionSettings (from 10.4.2/10.5.0 onwards<!-- RN 37963 -->)
+
+> [!NOTE]
+> In order for the `ModuleSettings` objects to be used, the objects in the `ModuleSettingsOverrides` of the `DomDefinition` have to be *null*. Just making them empty is not sufficient.
 
 ## Requirements
 

@@ -4,6 +4,9 @@ uid: MOP_Changing_the_password_for_Elasticsearch
 
 # Changing the password for Elasticsearch
 
+> [!IMPORTANT]
+> Elasticsearch is **only supported up to version 6.8**, which is no longer supported by Elastic. We therefore recommend using [Storage as a Service](xref:STaaS) instead, or if you do want to continue using self-hosted storage, using [OpenSearch](xref:OpenSearch_database).
+
 The procedure below details how you can change the password for an Elasticsearch database used by a specific DataMiner Agent.
 
 ## Requirements

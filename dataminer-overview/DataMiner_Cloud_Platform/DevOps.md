@@ -6,7 +6,7 @@ uid: Overview_DevOps
 
 *Empowering every single user to unleash their imagination and use all the functions available.*
 
-![dataminer.services.categories](~/dataminer-overview/images/DMS_DevOps.png)
+![dataminer.services.categories](~/dataminer-overview/images/DMS_DevOps.jpg)
 
 ## Community
 
@@ -73,4 +73,4 @@ Moreover, the IDE's integration with online code repository services like GitHub
 >
 > - [DIS Expert Hub](https://community.dataminer.services/exphub-dis/)
 > - [Video: CI/CD using DIS, the Cloud Platform and GitHub actions](https://community.dataminer.services/video/ci-cd-using-dis-the-cloud-platform-and-github-actions/) ![Video](~/user-guide/images/video_Duo.png)
-> - [DIS User Guide](xref:DIS)
+> - [DIS User Guide](xref:Overall_concept_of_the_DataMiner_Integration_Studio)

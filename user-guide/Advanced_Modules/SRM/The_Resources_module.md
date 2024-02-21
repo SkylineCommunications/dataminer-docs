@@ -17,4 +17,4 @@ The following topics contain more information on the *Resources* module:
 - [Configuring pools of resources](xref:Configuring_pools_of_resources)
 
 > [!NOTE]
-> From DataMiner 10.0.0 onwards, this module requires an Elasticsearch database. See [Elasticsearch database](xref:Elasticsearch_database).
+> This module requires [STaaS](xref:STaaS) or a [self-hosted DataMiner storage setup](xref:Supported_system_data_storage_architectures) with Cassandra-compatible database and indexing database.

@@ -18,5 +18,8 @@ uid: Restoring_a_DMA_using_the_DataMiner_Taskbar_Utility
 
 1. When the restoration is complete, click *Finished*.
 
+> [!IMPORTANT]
+> If a DMA is connected to dataminer.services and you restore it on a new (virtual) server, additional configuration is needed. See [Maintaining the dataminer.services connection when restoring a DMA](xref:Maintaining_cloud_connection_when_restoring).
+
 > [!TIP]
 > See also: [DataMiner Taskbar Utility](xref:DataMiner_Taskbar_Utility)

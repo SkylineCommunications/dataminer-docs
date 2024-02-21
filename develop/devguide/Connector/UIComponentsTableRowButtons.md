@@ -12,13 +12,13 @@ Example:
 
 ```xml
 <Measurement>
-   <Type>button</Type>
-   <Discreets>
-      <Discreet>
-         <Display>{linkedItemName}</Display>
-         <Value type="open">{pid:530}</Value>
-      </Discreet>
-   </Discreets>
+  <Type>button</Type>
+  <Discreets>
+    <Discreet>
+      <Display>{linkedItemName}</Display>
+      <Value type="open">{pid:530}</Value>
+    </Discreet>
+  </Discreets>
 </Measurement>
 ```
 

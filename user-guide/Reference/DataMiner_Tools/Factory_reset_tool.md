@@ -108,3 +108,6 @@ This tool can be run with the following arguments:
 - `–timeout <ms>`: Timeout (milliseconds). If execution takes longer than the specified timeout, the program is killed.
 
   Default: int.MaxValue (~2 billion)
+
+> [!NOTE]
+> When *SLDataGateway.Tools.Database.exe* is run from the factory reset tool, it runs with the arguments `-k -d -f`.

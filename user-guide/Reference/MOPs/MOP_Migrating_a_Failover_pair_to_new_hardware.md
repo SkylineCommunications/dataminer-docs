@@ -22,7 +22,7 @@ Access to the DMAs with administrator rights. This requires a connection dedicat
 #### Steps
 
 1. Connect to the servers that will host the new DMAs using the designated VPN or host PC.
-1. Check if the basic system requirements for a new DataMiner installation are met. For more information, see [DataMiner system requirements](https://community.dataminer.services/documentation/dataminer-system-requirements/).
+1. Check if the basic system requirements for a new DataMiner installation are met. For more information, see [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements).
 
 ### Set up the new pair of DMAs
 

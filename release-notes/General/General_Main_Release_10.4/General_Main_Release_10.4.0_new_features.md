@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.4.0_new_features
 ---
 
-# General Main Release 10.4.0 – Other new features - Preview
+# General Main Release 10.4.0 – Other new features
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 ### Core functionality
 
@@ -391,90 +391,19 @@ From now on, `PaToken` objects can be created, updated and deleted in bulk using
 
   The result will contain a list of tokens that were successfully deleted. The trace data is available per token ID. If an issue occurs when an item gets deleted, no exception will be thrown (even when `ThrowExceptionsOnErrorData` is true). The trace data of the last call is available and will contain the data for all items.
 
-#### Support for Azure Managed Instance for Apache Cassandra [ID_35830]
-
-<!-- MR 10.4.0 - FR 10.3.5 -->
-
-It is possible to use an Azure Managed Instance for Apache Cassandra as an alternative to a Cassandra cluster hosted on premises.
-
-You will first need to [create your Azure Managed Instance for Apache Cassandra](#creating-your-azure-managed-instance-for-apache-cassandra), and then [connect your DataMiner System to the created instance](#connecting-your-dataminer-system-to-the-azure-managed-instance).
-
-> [!TIP]
-> For detailed information on Azure Managed Instance for Apache Cassandra, refer to the [Microsoft documentation](https://learn.microsoft.com/en-us/azure/managed-instance-apache-cassandra/).
-
-##### Creating your Azure Managed Instance for Apache Cassandra
-
-1. Go to [Azure Portal](https://portal.azure.com) and log in.
-
-1. Search for *Azure Managed Instance for Apache Cassandra*.
-
-1. At the top of the window, click *Create*.
-
-1. On the *Basics* page, specify the required information.
-
-   To have low latency, you should select a region near your own or the region where your Azure VMs are running. The password that you configure is for the *Cassandra* user in the system.
-
-1. Click *Next: Data center* and configure the kind of servers you want to use for your Cassandra cluster.
-
-   The *Sku Size* defines which VM will be used (the more resources, the more expensive). You can then also select the number of disks and nodes that you want. The minimum number of nodes is 3.
-
-1. If you want to configure a client certificate, click *Advanced* at the top.
-
-   If you do not need to do this, you can add some tags to the setup so you can easily find it again, or go to the next step.
-
-1. Go to the *Review + Create* page.
-
-   Here, Azure will do some checks to see if everything has been configured correctly.
-
-1. If everything is valid, click *Create*. Otherwise, adjust your configuration until Azure indicates that it is valid, and then click *Create*.
-
-A pop-up window on the Azure website will now indicate that your cluster is being created. This can take a while.
-
-Once the creation is finished, you will see your newly created cluster on the *Azure Managed Instance for Apache Cassandra* page.
-
-##### Connecting your DataMiner System to the Azure Managed Instance
-
-1. Retrieve the necessary information from the Azure portal:
-
-   1. Go to [Azure Portal](https://portal.azure.com) and log in.
-
-   1. Go to *Azure Managed Instance for Apache Cassandra*.
-
-   1. Select the cluster you want to connect your DataMiner System to.
-
-   1. In the *Settings* menu, select *Data Center*.
-
-   1. Click the arrow to open the data center, and copy the IP addresses DataMiner will need to connect to.
-
-   > [!NOTE]
-   > We recommend configuring all of the nodes in DataMiner. If a node should go down, DataMiner can then still connect to the other nodes.
-
-1. Using the copied IP addresses, configure the [Cassandra cluster database in System Center](xref:Configuring_the_database_settings_in_Cube).
-
-1. Stop DataMiner.
-
-1. Open the [DB.xml](xref:DB_xml) configuration file.
-
-1. Set the *TLSEnabled* tag to true in the file and save your changes:
-
-   ```xml
-   <TLSEnabled>True</TLSEnabled>
-   ```
-
-1. Restart DataMiner.
-
-#### DataMiner installation/upgrade: Automatic installation of DataMiner Extension Modules [ID_36085] [ID_36513] [ID_36514] [ID_36799] [ID_37137]
+#### DataMiner installation/upgrade: Automatic installation of DataMiner Extension Modules [ID_36085] [ID_36513] [ID_36514] [ID_36799] [ID_37137] [ID_37895]
 
 <!-- MR 10.4.0 - FR 10.3.7 -->
 <!-- RNs 36799/37137: MR 10.4.0 - FR 10.3.9 -->
+<!-- RNs 37895: MR 10.4.0 - FR 10.3.12 -->
 
 When you install or upgrade a DataMiner Agent, the following DataMiner Extension Modules (DxMs) will now automatically be installed (if not present yet):
 
-- DataMiner ArtifactDeployer (version 1.5.0)
+- DataMiner ArtifactDeployer (version 1.5.2)
 - DataMiner CoreGateway (version 2.12.0)
-- DataMiner FieldControl (version 2.9.0)
-- DataMiner Orchestrator (version 1.4.0)
-- DataMiner SupportAssistant (version 1.5.0)
+- DataMiner FieldControl (version 2.9.1)
+- DataMiner Orchestrator (version 1.4.1)
+- DataMiner SupportAssistant (version 1.5.3)
 
 The BPA test *Firewall Configuration* has been altered to also check if TCP port 5100 is properly configured in the firewall. This port is required for communication with the cloud via the endpoint hosted in DataMiner CloudGateway.
 
@@ -518,6 +447,18 @@ In the log files, you will be able to find out which caches are enabled and when
 
 When the caches are enabled, it is no longer possible to get paged results when retrieving DomDefinitions, DomBehaviorDefinitions or SectionDefinitions. Instead, the complete list of objects matching the given query will be returned, even if that list is larger than the configured page size.
 
+#### API Gateway: DataMiner modules can now register with API Gateway [ID_36575] [ID_37734]
+
+<!-- MR 10.4.0 - FR 10.4.2 -->
+
+DataMiner modules can now register with API Gateway. These modules can be either "regular modules" (e.g. SLNet) or "proxy modules" (e.g. a DxM that wishes to expose an API).
+
+All modules registered with API Gateway will be displayed under `/APIGateway/api/version`, showing the following properties:
+
+- Name
+- Version
+- Endpoint on which they can be accessed via API Gateway (proxy modules only)
+
 #### DataMiner Object Models: Soft-deletable objects [ID_36721] [ID_37121]
 
 <!-- RN 36721: MR 10.4.0 - FR 10.3.9 -->
@@ -555,6 +496,40 @@ Apart from **ID only** scripts, which use the `OnDomInstanceCrud` entry point me
 
 For more detailed information, see [ExecuteScriptOnDomInstanceActionSettings](xref:ExecuteScriptOnDomInstanceActionSettings).
 
+#### Support for real-time GQI row updates [ID_37060]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+Real-time row updates are now supported for GQI session results for specific data sources and operators. This means that, when this is supported in the client, real-time updates can be displayed for row additions, modification, or deletions.
+
+At present, this is supported for the following GQI data sources:
+
+- Parameter table (except partial and view tables)
+- Views
+
+It is supported for the *Select* operator, but it can also be supported for other operators if they are combined with specific data sources, for instance for a filter on a parameter table.
+
+#### Proactive cap detection extended to absolute and relative alarm types [ID_37373]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+The proactive cap detection feature has been extended to dynamic alarm thresholds.
+
+As a result, proactive detection will now predict when a parameter will cross one of the following bounds:
+
+- A high and/or low data range value specified in the protocol.
+- A (by default) critical alarm limit of type normal specified in the alarm template.
+- A (by default) critical alarm limit of type "absolute" or "relative" specified in the alarm template if either a fixed baseline value is set or a dynamically updated baseline value is configured in the alarm template to detect a continuos degradation.
+- A data range indirectly derived from the protocol info. Currently this is limited to the values 0 and 100 for percentage data for which no historical values were encountered outside the [0,100] interval.
+
+#### DataMiner upgrade: Additional prerequisite will now check whether profiles and resources are stored in an indexing database [ID_37763]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+Starting from DataMiner version 10.4.0, XML storage for profiles and resources is no longer supported. When you upgrade DataMiner to version 10.4.0, the `VerifyElasticStorageType` prerequisite will verify whether the system has successfully switched to an indexing database. If profiles and/or resources are still stored in XML files, this prerequisite will cause the upgrade to fail.
+
+See also: [Upgrade fails because of VerifyElasticStorageType.dll prerequisite](xref:KI_Upgrade_fails_VerifyElasticStorageType_prerequisite)
+
 ### Protocols
 
 #### 'ExportRule' elements can now have a 'whereAttribute' attribute [ID_36622]
@@ -575,15 +550,49 @@ In this next example, all *Column* elements of parameters that have a `level` at
 <ExportRule table="*" tag="Protocol/Params/Param/Display/Positions/Position/Column" value="2" whereTag="Protocol/Params/Param" whereAttribute="level" whereValue="5"/>
 ```
 
+#### Smart-serial communication now supports dynamic polling [ID_37404]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+Smart-serial connection will now support dynamic polling, i.e. the ability to change the IP address and IP port while the element is active.
+
+To enable dynamic polling for a smart-serial connection, add a parameter that contains the following:
+
+`<Type options="dynamic ip">read</Type>`
+
+> [!IMPORTANT]
+>
+> - Dynamic polling is only supported when the connection acts as a client. When you create the element, do not assign an IP address like "127.0.0.1", "any", etc. to it. If you do, the element will act as a server, and there is no way to make the element act as a client without stopping it. Also, trying to assign a value like "127.0.0.1" to the dynamic IP parameter at runtime will cause an error to occur.
+> - We strongly advise you to always set the connection type to "smart-serial single" so the connection is assigned a dedicated socket in SLPort. If two or more smart-serial elements hosted on the same DMA are assigned the same IP address and port via the element wizard, they will share the same connection in SLPort. This means that, if one of these elements changes the IP address dynamically, the other ones will also start using the new IP address.
+
 ### Maps
 
-#### Marker images can now also be generated dynamically in layers with sourceType set to objects [ID_36246]
+#### DataMiner Maps: Marker images can now also be generated dynamically in layers with sourceType set to objects [ID_36246]
 
 <!-- MR 10.4.0 - FR 10.3.7 -->
 
 Marker images can now also be generated dynamically in layers with `sourceType` set to "objects".
 
 To generate a marker image dynamically, you can use placeholders in the `url` attribute of the *\<MarkerImage\>* tag.
+
+#### DataMiner Maps: ForeignKeyRelationsSourceInfo tag now supports an elementVar attribute [ID_38274]
+
+<!-- MR 10.4.0 - FR 10.4.3 -->
+
+In a `<ForeignKeyRelationsSourceInfo>` tag, it is now possible to specify an *elementVar* attribute.
+
+```xml
+<ForeignKeyRelationsSourceInfo elementVar="myElement">
+...
+</ForeignKeyRelationsSourceInfo>
+```
+
+This will allow you to pass an element in the map's URL. See the URL examples below (notice the “d” in front of the parameter name!):
+
+```txt
+maps.aspx?config=MyConfigFile&dmyElement=7/46840
+maps.aspx?config=MyConfigFile&dmyElement=VesselData
+```
 
 ### Service & Resource Management
 
@@ -640,9 +649,9 @@ Please note the following:
 - The following extension methods have been added to easily compose the filters: *HasRangePoint*, *DiscreteCapability*, *StringCapability* and *MaxCapacityValue*.
 
 > [!TIP]
-> See also: [Visual Overview: Session variable YAxisResources now supports filters to pass exposers](xref:Cube_Main_Release_10.4.0_other_features_changes#visual-overview-session-variable-yaxisresources-now-supports-filters-id_34857)
+> See also: [Visual Overview: Session variable YAxisResources now supports filters to pass exposers [ID_34857]](xref:Cube_Feature_Release_10.3.1#visual-overview-session-variable-yaxisresources-now-supports-filters-to-pass-exposers-id_34857)
 
-#### Reinitializing ResourceManager [ID_36811]
+#### Service & Resource Management: Reinitializing Resource Manager [ID_36811]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
@@ -663,6 +672,30 @@ To (re)initialize Resource Manager:
 1. At the bottom of the window, click *Reinitialize ResourceManager*.
 
    Resource Manager will be (re)initialized on the DataMiner Agent you are connected to.
+
+#### Service & Resource Management: Storage type for ProfileManager and ResourceManager will now always be Elasticsearch/OpenSearch [ID_37877]
+
+<!-- MR 10.4.0 - FR 10.4.1 -->
+
+From now on, the storage type for ProfileManager and ResourceManager will always be Elasticsearch/OpenSearch. XML storage is no longer supported.
+
+When you retrieve the storage type, it will now always return Elasticsearch/OpenSearch, even if the ProfileManager or ResourceManager configuration states that the storage type is XML. If no ProfileManager configuration can be found, a default configuration will now be created with storage type set to Elasticsearch/OpenSearch.
+
+If you would try to send a `SetResourceManagerConfigMessage` to change the storage type to XML, the response message will state that the attempt failed and will contain the following error message:
+
+`Ignoring the config change, Xml is no longer supported as ResourceStorageType.`
+
+If you would try to set the ProfileManager configuration to Elasticsearch/OpenSearch via the configuration manager, this will fail. The ProfileManager log file should then contain the following trace data:
+
+```txt
+TraceData: (amount = 1)
+   - ErrorData: (amount = 1)
+      - ProfileManagerErrorData: ErrorReason: InvalidConfigurationFile,
+                                 Message: Xml is no longer supported as ProfileManagerStorageType,
+```
+
+> [!NOTE]
+> The *SLNetClientTest* tool will no longer allow you to switch the storage type from XML to Elasticsearch/OpenSearch or vice versa, nor will it allow you to create a ProfileManager configuration anymore.
 
 ### Tools
 

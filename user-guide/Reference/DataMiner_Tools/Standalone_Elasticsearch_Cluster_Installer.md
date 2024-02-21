@@ -3,6 +3,9 @@ uid: Standalone_Elasticsearch_Cluster_Installer
 ---
 # Standalone Elasticsearch Cluster Installer
 
+> [!NOTE]
+> Elasticsearch is **only supported up to version 6.8**, which is no longer supported by Elastic. We therefore recommend using [Storage as a Service](xref:STaaS) instead, or if you do want to continue using self-hosted storage, using [OpenSearch](xref:OpenSearch_database).
+
 ## About this tool
 
 The Standalone Elasticsearch Cluster Installer can be used to install Elasticsearch 6.8.23 on Windows. This version of Elasticsearch has been tested for use with DataMiner.
@@ -10,6 +13,9 @@ The Standalone Elasticsearch Cluster Installer can be used to install Elasticsea
 The installer includes AdoptOpenJDK 8 as well as Kibana. It sets up an Elasticsearch service and creates a firewall rule named Elasticsearch to allow TCP traffic on ports 9200 and 9300.
 
 You can download this tool from [DataMiner Dojo](https://community.dataminer.services/download/standalone-elasticsearch-cluster-installer/).
+
+> [!NOTE]
+> You will need to run this tool as administrator.
 
 ## Requirements
 
@@ -41,6 +47,9 @@ In this file, you can then configure the settings detailed below.
 #### InstallerDependenciesDirectory
 
 This setting should be set to the path containing the installer dependencies. This is the folder that contains the following subfolders: *elasticsearch*, *java*, and *kibana*.
+
+> [!NOTE]
+> When the installer has been decompressed, the dependencies will be located in the folder `./elastic_installer_dependencies`.
 
 #### Networkhost & NetworkPublishHost
 
@@ -90,9 +99,12 @@ Optional. This setting (which corresponds with the Path.Repo Elasticsearch setti
 </ElasticConfiguration>
 ```
 
+> [!NOTE]
+> The *InstallerDependenciesDirectory* element should be updated using the path where the dependencies are located. The default location is *./elastic_installer_dependencies*.
+
 ## Running the installer
 
-You can run the installer as follows:
+Run the following command as administrator to run the installer:
 
 `./SLDataGateway.Installers.Elastic.Runner.exe run-stand-alone -c "<path to configuration file>"`
 

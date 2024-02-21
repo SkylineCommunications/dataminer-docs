@@ -4,7 +4,10 @@ uid: Creating_a_dashboard_based_on_an_example
 
 # Creating a dashboard based on an example
 
-Instead of creating a dashboard from scratch, you can instead first import an example dashboard and then edit this dashboard. To do so:
+Instead of creating a dashboard from scratch, you can instead first import an example dashboard and then edit this dashboard.
+
+> [!NOTE]
+> Importing example dashboards is only possible if such dashboards have been placed in the folder *C:\\Skyline DataMiner\\ImportDashboards* on the server.
 
 1. On the homepage of the app, click *Start with an example dashboard*.
 
@@ -32,11 +35,9 @@ Instead of creating a dashboard from scratch, you can instead first import an ex
 
 1. Optionally, fine-tune the dashboard layout. See [Configuring the dashboard layout](xref:Configuring_the_dashboard_layout).
 
-1. Configure the necessary components. See [Configuring dashboard components](xref:Configuring_dashboard_components).
+1. Configure the necessary components. See [Configuring components](xref:Configuring_components).
 
 1. When the dashboard is ready, in the top-right corner of the screen, click the “x” icon.
 
 > [!NOTE]
-> - The following characters are not allowed in the name of a dashboard or dashboard folder: / \\ : ; \* ? \< \> \| °<br>If you do specify a backslash (“\\”) in a folder name, this will not become part of the folder name. Instead a subfolder will be created, with the characters after the backslash as its name.
-> - The example dashboards can be found in the folder *C:\\Skyline DataMiner\\ImportDashboards* on the server. Any dashboard that is placed in this folder will become available for import.
->
+> The following characters are not allowed in the name of a dashboard or dashboard folder: / \\ : ; \* ? \< \> \| °<br>If you do specify a backslash (“\\”) in a folder name, this will not become part of the folder name. Instead a subfolder will be created, with the characters after the backslash as its name.

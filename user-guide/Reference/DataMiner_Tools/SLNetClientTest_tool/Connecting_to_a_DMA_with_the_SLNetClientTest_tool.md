@@ -21,7 +21,7 @@ Before you can use any of the SLNetClientTest tool functions, you must first con
    | .NET Remoting (legacy) | Connects to the local machine or a remote machine using .NET Remoting. When you choose this option, you can specify a custom port (default: `8004`). |
    | IPC (only local)       | Connects to the local machine using IPC. |
 
-1. In the *Authentication* section, specify one of the following options if necessary, and then click *Connect*:
+1. In the *Authentication* section, specify the necessary options, and then click *Connect*:
 
    - Single sign-on
 
@@ -33,6 +33,11 @@ Before you can use any of the SLNetClientTest tool functions, you must first con
    - Explicit credentials (with *Force Authenticate Local User* option)
 
    - Ticket
+
+   - Debug SAML (Available from DataMiner 10.3.11/10.4.0 onwards<!--RN 37370-->)
+
+     > [!NOTE]
+     > When you select this option before connecting to a DMA that uses external authentication via SAML, two pop-up windows will appear, displaying the SAML requests and SAML responses respectively.
 
 ## [Prior to DataMiner 10.3.1/10.4.0](#tab/tabid-2)
 

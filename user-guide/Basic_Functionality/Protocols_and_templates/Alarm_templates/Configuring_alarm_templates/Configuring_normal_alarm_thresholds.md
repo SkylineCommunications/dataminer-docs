@@ -81,7 +81,7 @@ By default, each column of a [dynamic table](xref:Table_parameters#dynamic-table
    > [!NOTE]
    > You can use the wildcard characters \* and ? in this filter mask. For more information on wildcards, see [Searching with wildcard characters](xref:Searching_in_DataMiner_Cube#searching-with-wildcard-characters).
 
-1. When you hover the mouse over a parameter, several buttons appear that allow additional options:
+1. When you hover the mouse pointer over a parameter, several buttons appear that allow additional options:
 
    - Duplicate column parameters using the *+* button to define different alarm thresholds with different filters, so that different rows in the dynamic table will have different alarm thresholds.
 

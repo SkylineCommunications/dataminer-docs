@@ -8,7 +8,7 @@ The foundation of DataMiner is based on four strategic pillars that each have a 
 
 1. **The ability to process any volume and any kind of data originating from any source element, regardless of the type of managed product, equipment supplier, or API technology**
 
-   This is the foundation of a multi-vendor system. Skyline Communications has a roadmap to continuously invest in the integration of new APIs. Proof of this is the current library of 7000 off-the-shelf product integrations, which is growing on a weekly basis.
+   This is the foundation of a multi-vendor system. Skyline Communications has a roadmap to continuously invest in the integration of new APIs. Proof of this is the current library of 8000 off-the-shelf product integrations, which is growing on a weekly basis.
 
    Not only does DataMiner integrate with APIs of traditional hardware products, the platform also seamlessly interfaces with any software system deployed in a private data center or deployed as network and media functions (NFV/MFV) in the public cloud (multi-cloud).
 

@@ -6,7 +6,7 @@ uid: Working_with_pattern_matching
 
 ## Univariate patterns
 
-From DataMiner 10.0.7 onwards, on systems using a Cassandra and Elasticsearch database, DataMiner Analytics can automatically recognize recurring patterns in trend data. For this purpose, you first need to [define the patterns](xref:Defining_a_pattern) DataMiner Analytics needs to track. This pattern definition is also known as a "tag".
+From DataMiner 10.0.7 onwards, on systems using [Storage as a Service](xref:STaaS) or a [self-hosted Cassandra-compatible database and indexing database](xref:Supported_system_data_storage_architectures), DataMiner Analytics can automatically recognize recurring patterns in trend data. For this purpose, you first need to [define the patterns](xref:Defining_a_pattern) DataMiner Analytics needs to track. This pattern definition is also known as a "tag".
 
 If you are viewing a trend graph for a single parameter, and it contains patterns matching existing tags, these will be highlighted in orange when you hover the mouse pointer over the button representing a tag, or if the option *Expand tags* is selected in the right-click menu. The matches can be highlighted in bright orange or in a lighter orange. The meaning of these colors depends on the DataMiner version:
 
@@ -43,3 +43,8 @@ As with single-parameter patterns (i.e. [univariate patterns](#univariate-patter
 If you are viewing a trend graph where one or more of the parameters involved in the multivariate pattern are loaded and multivariate patterns have been detected, these patterns will be highlighted in orange when you hover the mouse pointer over the button representing a pattern, or if the option *Expand tags* is selected in the right-click menu.
 
 The ![multivariate](~/user-guide/images/multivariate_icon.png) icon indicates that the pattern combines trend information from different parameters. By clicking this icon, you can load all trend graphs of the parameters that are part of the pattern. <!-- RN 36628 -->
+
+> [!NOTE]
+>
+> - From DataMiner 10.2.0 [CU21]/10.3.0 [CU9]/10.3.12 onwards<!--RN 36661-->, trend patterns of all parameters are loaded onto the trend graph. Prior to DataMiner 10.2.0 [CU21]/10.3.0 [CU9]/10.3.12, only the trend pattern of the first parameter is loaded onto the trend graph.
+> - From DataMiner 10.3.12/10.4.0 onwards<!--RN 37451-->, DataMiner Analytics can also detect multivariate patterns containing subpatterns hosted on different DMAs.

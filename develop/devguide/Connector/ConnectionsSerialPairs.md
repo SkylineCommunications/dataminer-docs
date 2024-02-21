@@ -25,7 +25,7 @@ This pair can then be added to a group which in turn is added to a timer. In the
 > [!NOTE]
 >
 > - The number of pairs in a group should be limited to 10.
-> - An example protocol "SLC SDF Serial - Pairs" is available in the Protocol Development Guide Companion Files.
+> - An example protocol "SLC SDF Serial - Pairs" is available in the [Protocol Development Guide Companion Files](https://community.dataminer.services/documentation/protocol-development-guide-companion-files/).
 
 ## Clearing responses
 

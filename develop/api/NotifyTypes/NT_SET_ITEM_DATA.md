@@ -11,22 +11,22 @@ Sets the values stored for the specified parameters in the ElementData.xml file.
 Setting a **single value**:
 
 ```csharp
-string parameterName =  "ExampleParameter";
-string value = "Data";
+string paramName = "ExampleParameter";
+string paramValue = "Data";
 
-protocol.NotifyProtocol(89, parameterName, value);
+protocol.NotifyProtocol(89, paramName, paramValue);
 ```
 
-- parameterName (string): The name of the parameter.
-- values (string[]): The value to set.
+- paramName (string): The name of the parameter.
+- paramValue (string): The value to set.
 
 Setting **multiple values**:
 
 ```csharp
-string[] parameterNames =  new string[]{"ExampleParameter"};
-string[] values = new string[] { "Data" };
+string[] paramNames =  new string[] { "ExampleParameter" };
+string[] paramValues = new string[] { "Data" };
 
-object result = protocol.NotifyProtocol(89, parameterNames, values);
+object result = protocol.NotifyProtocol(89, paramNames, paramValues);
 
 if (result != null)
 {
@@ -38,8 +38,8 @@ else
 }
 ```
 
-- parameterNames (string[]): The names of the parameters.
-- values (string[]): The values to set.
+- paramNames (string[]): The names of the parameters.
+- paramValues (string[]): The values to set.
 
 ## Return Value
 
@@ -47,4 +47,5 @@ else
 
 ## Remarks
 
-- The SLProtocol interface defines two wrapper methods for this call: "SetParameterItemData" and "SetParametersItemData". See SLProtocol.SetParameterItemData method and SLProtocol.SetParametersItemData method.
+- The [SLProtocol](xref:Skyline.DataMiner.Scripting.SLProtocol) interface defines two wrapper methods for this call: [SetParameterItemData](xref:Skyline.DataMiner.Scripting.SLProtocol.SetParameterItemData(System.String,System.Object)) and [SetParametersItemData](xref:Skyline.DataMiner.Scripting.SLProtocol.SetParametersItemData(System.String[],System.Object[])).
+- This Notify type is deprecated since DataMiner 10.3.4.

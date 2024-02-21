@@ -54,9 +54,9 @@ Example:
     <Type options="connection=0">header</Type>
     <Interprete>
         <RawType>other</RawType>
+        <Type>string</Type>
         <LengthType>fixed</LengthType>
         <Length>3</Length>
-        <Type>string</Type>
         <Value>0x000x000x00</Value>
     </Interprete>
 </Param>
@@ -80,13 +80,13 @@ In the example below, the IP address/port combination specified in parameter 400
 
 ```xml
 <Param id="400" trending="false" save="true">
-    <Name>Dynamic polling IP</Name>
+    <Name>DynamicPollingIP</Name>
     ...
     <Type options="dynamic ip 1">read</Type>
     <Interprete>
         <RawType>other</RawType>
-        <LengthType>next param</LengthType>
         <Type>string</Type>
+        <LengthType>next param</LengthType>
     </Interprete>
     ...
 </Param>
@@ -96,9 +96,12 @@ Parameter syntax: IP:PORT
 
 If, in the parameter, you specify the value “10.12.0.63:4000”, all communication will go via port 4000 of address 10.12.0.63.
 
-If you do not specify a port, then the last port set will be used. If no port has been set yet, the port configured in the Element wizard will be used.
+If you do not specify a port, then the last port set will be used. If no port has been set yet, the port configured during element creation will be used.
 
 Only applicable for parameters of type read.
+
+> [!NOTE]
+> For smart-serial connections, [dynamic polling](xref:ConnectionsSmartSerialDynamicPolling) is supported from DataMiner 10.3.11/10.4.0 onwards<!--RN 37404-->.
 
 ### dynamic snmp get
 
@@ -130,20 +133,21 @@ When, later on, the value of parameter 2 changes to “1.3.6.”, that same grou
 
 In the communication stream, you will notice the following entry:
 
-```
+```txt
 Dynamic group for parameter 1 [triggered by 1.3.6.]
 ```
 
 *Feature introduced in DataMiner 7.5.2.0 (RN 4734).*
 
 > [!NOTE]
+>
 > - Only applicable for parameters of type read.
 > - This option is rendered obsolete by the dedicated dynamicSnmpGet attribute.
 
 ### headerTrailerLink
 
 This option is only applicable for smart-serial connections. It defines a link between a header and a trailer
-parameter (See [Data forwarding from SLPort to SLProtocol](xref:ConnectionsSmartSerialDataForwarding).
+parameter (see [Data forwarding from SLPort to SLProtocol](xref:ConnectionsSmartSerialDataForwarding)).
 
 With this option, it is also possible to only specify a trailer (i.e. where no corresponding header has the same value specified for the headerTrailerLink option).
 
@@ -157,6 +161,13 @@ Example:
 ```
 
 *Feature introduced in DataMiner 8.0.3 (RN 6115).*
+
+> [!IMPORTANT]
+> Headers and trailers are by default applicable to all connections. We strongly recommend always using the headerTrailerLink option in combination with a specified connection. This will make sure those headers and trailers only apply to the specified defined smart-serial connection, because otherwise this can quickly cause unintended bugs and behavior.
+>
+> ```xml
+> <Type options="headerTrailerLink=1;connection=0>header</Type>"
+> ```
 
 ### linkAlarmValue=TRUE
 
@@ -194,22 +205,32 @@ For more information, refer to [Multi-threaded timers SNMP](xref:AdvancedMultiTh
 
 ### ssh pwd
 
-This option specifies that this parameter holds the password used for setting up SSH communication based on user credentials. When using this option, there should also be another parameter that uses the "ssh username" option. The SSH connection is established by DataMiner itself, if the parameters are filled in correctly.
+> [!CAUTION]
+> Using this option is not recommended. It only supports connectors with a single SSH connection using the fixed port 22. Instead, link this parameter via the [Password](xref:Protocol.PortSettings.SSH.Credentials.Password) element.
+
+This option specifies that this parameter holds the password for setting up SSH communication based on user credentials. When this option is used, there should also be another parameter that uses the "ssh username" option. The SSH connection is established by DataMiner itself, if the parameters are filled in correctly.
 
 Only applicable for parameters of type read.
 
+> [!IMPORTANT]
+> Use the [password](xref:Protocol.Params.Param.Measurement.Type-options#options-for-measurement-type-string) option when this parameter is displayed. Using this option ensures greater security.
+
 ### ssh username
 
-This option specifies that this parameter holds the username used for setting up SSH communication based on user credentials. When using this option, there should also be another parameter that uses the "ssh pwd" option. The SSH connection is established by DataMiner itself, if the parameters are filled in correctly.
+> [!CAUTION]
+> Using this option is not recommended. It only supports connectors with a single SSH connection using the fixed port 22. Instead, link this via the [Username](xref:Protocol.PortSettings.SSH.Credentials.Username) element.
+
+This option specifies that this parameter holds the username for setting up SSH communication based on user credentials. When this option is used, there should also be another parameter that uses the "ssh pwd" option. The SSH connection is established by DataMiner itself, if the parameters are filled in correctly.
 
 Only applicable for parameters of type read.
 
 ### ssh options
 
-This option specifies that this parameter holds the required data for setting up SSH communication based on an identity file. This is an alternative way to set up an SSH connection (instead of user credentials). The content of the "ssh options" parameter is as follows:
+> [!CAUTION]
+> Using this option is not recommended. It only supports connectors with a single SSH connection using the fixed port 22. Instead, link this via the [Identity](xref:Protocol.PortSettings.SSH.Identity) element.
 
-```none
-Key=path to the identity file;pass=passphrase
-```
+This option specifies that this parameter holds the path to the private key for setting up SSH communication based on public key authentication. This is an alternative way to set up an SSH connection (instead of user credentials).
+
+The content of the "ssh options" parameter is as follows: ```key=C:\Users\User\.ssh\my_key_rsa;pass=passphrase```
 
 Only applicable for parameters of type read.

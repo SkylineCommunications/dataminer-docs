@@ -4,13 +4,14 @@ uid: Connecting_your_DataMiner_System_to_the_cloud
 
 # Connecting your DataMiner System to dataminer.services
 
-You can [connect a DataMiner Agent to dataminer.services](xref:Connect_to_dataminer_services) (i.e. connect to the cloud) by installing a DataMiner Cloud Gateway on that DMA. DataMiner will communicate using HTTPS via the Gateway. By default, this requires the use of the standard HTTPS port 443. The connection passes through the Windows firewall to reach the endpoint, which also uses port 443.
+> [!TIP]
+> See also: [Kata #9: How to make your DataMiner Agent cloud connected](https://community.dataminer.services/courses/kata-9/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+
+You can [connect a DataMiner Agent to dataminer.services](xref:Connect_to_dataminer_services) (i.e. connect to the cloud) by installing a DataMiner Cloud Gateway on that DMA using the [DataMiner Cloud Pack](https://community.dataminer.services/dataminer-cloud-pack/). DataMiner will communicate using HTTPS via the Gateway. By default, this requires the use of the standard HTTPS port 443. The connection passes through the Windows firewall to reach the endpoint, which also uses port 443.
 
 ![Cloud Gateway](~/user-guide/images/Cloud_Gateway.png)
 
 Optionally, you can connect multiple DataMiner Agents to dataminer.services. This has [several advantages](xref:FAQ_DCP#do-all-agents-in-a-dms-have-to-be-connected-to-dataminerservices).
-
-However, at this time we recommend running only 1 to 3 Cloud Gateway nodes in a cluster. Running more Cloud Gateway nodes than that in a cluster would only add an unnecessary extra load on dataminer.services.
 
 ![Multiple_Gateways](~/user-guide/images/Multiple_DMAs_Connected.png)
 

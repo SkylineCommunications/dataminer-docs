@@ -14,7 +14,7 @@ Systems are unable to keep track of which IP and hostname is linked to which DMA
 
 ## Fix
 
-No fix is available yet. We recommend using Failover based on IP instead for now. <!-- RN 32951 -->
+Install DataMiner 10.3.0 [CU11]/10.4.2<!-- RN 32951 -->.
 
 ## Issue description
 

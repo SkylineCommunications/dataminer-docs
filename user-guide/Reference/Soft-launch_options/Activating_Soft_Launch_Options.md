@@ -23,3 +23,6 @@ After you have modified this configuration file, you must **restart your DataMin
 For some **Cube-only** features, it is not necessary to configure a tag in *SoftLaunchOptions.xml*. For these features, it is sufficient to access DataMiner Cube using a specific **argument**. In the Cube desktop app, you can specify this argument in the start window by clicking the “…” button in the tile representing the DMS you want to connect to, and then specifying the argument in the *Advanced* section. For more information, see [Arguments for DataMiner Cube](xref:Options_for_opening_DataMiner_Cube).
 
 For some features, a different configuration may be required. For more information, see [Overview of soft-launch options](xref:Overview_of_Soft_Launch_Options).
+
+> [!NOTE]
+> If you want to change which soft-launch options are enabled for a [DaaS system](xref:Creating_a_DMS_in_the_cloud), contact <daas@dataminer.services>. When you create a DaaS staging system, most soft-launch options will be enabled by default.

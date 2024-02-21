@@ -1,5 +1,6 @@
 ---
 uid: Changing_the_IP_of_a_DMA
+keywords: hardware migration
 ---
 
 # Changing the IP of a DMA
@@ -25,6 +26,14 @@ For a standalone DMA, i.e. a DMA that is not combined with other DMAs in a clust
    1. Replace any references to the old IP address with the new IP address, and save the file.
 
    1. Restart the cassandra service.
+
+1. If the server hosts an OpenSearch database:
+
+   1. Open the opensearch.yml file (typically located in the folder *C:\\Program Files\\opensearch\\config\\*).
+
+   1. Replace any references to the old IP address with the new IP address, and save the file.
+
+   1. Restart the Java.exe service located under the *Details* tab in the Task Manager.
 
 1. If the server hosts an Elasticsearch database:
 
@@ -60,6 +69,9 @@ For a standalone DMA, i.e. a DMA that is not combined with other DMAs in a clust
 
 1. Restart DataMiner.
 
+> [!NOTE]
+> If the DataMiner System uses a remote database, the database configuration changes detailed above are not needed. In such a case, the IPs are not affected, because the remote server remains the same in the .yml file and in DB.xml. However, you must make sure that all the necessary ports are open and accessible. See [Configuring the IP network ports](xref:Configuring_the_IP_network_ports).
+
 ## Single DMA in a DMS
 
 For a single DMA within a cluster that does not use the Cassandra cluster feature (i.e. one Cassandra cluster for the entire DMS):
@@ -83,6 +95,14 @@ For a single DMA within a cluster that does not use the Cassandra cluster featur
    1. Replace any references to the old IP address with the new IP address, and save the file.
 
    1. Restart the cassandra service.
+
+1. If the server hosts an OpenSearch database:
+
+   1. Open the opensearch.yml file (typically located in the folder *C:\\Program Files\\opensearch\\config\\*).
+
+   1. Replace any references to the old IP address with the new IP address, and save the file.
+
+   1. Restart the Java.exe service located under the *Details* tab in the Task Manager.
 
 1. If the server hosts an Elasticsearch database:
 
@@ -137,6 +157,9 @@ For a single DMA within a cluster that does not use the Cassandra cluster featur
 
    1. Close the SLNetClientTest tool.
 
+> [!NOTE]
+> If the DataMiner System uses a remote database, the database configuration changes detailed above are not needed. In such a case, the IPs are not affected, because the remote server remains the same in the .yml file and in DB.xml. However, you must make sure that all the necessary ports are open and accessible. See [Configuring the IP network ports](xref:Configuring_the_IP_network_ports).
+
 ## Failover DMA in a DMS
 
 For a Failover DMA within a cluster that does not use the Cassandra cluster feature (i.e. one Cassandra cluster for the entire DMS):
@@ -167,6 +190,14 @@ For a Failover DMA within a cluster that does not use the Cassandra cluster feat
 
    > [!NOTE]
    > If the IP of both DMAs in the Failover pair is changed, replace both IP addresses in both cassandra.yaml files.
+
+1. If the server hosts an OpenSearch database, do the following **on both DMAs**:
+
+   1. Open the opensearch.yml file (typically located in the folder *C:\\Program Files\\opensearch\\config\\*).
+
+   1. Replace any references to the old IP address with the new IP address, and save the file.
+
+   1. Restart the Java.exe service located under the *Details* tab in the Task Manager.
 
 1. If the DMAs hosts an Elasticsearch database, do the following **on both DMAs**:
 
@@ -203,13 +234,16 @@ For a Failover DMA within a cluster that does not use the Cassandra cluster feat
 
    1. Close the SLNetClientTest tool.
 
-## DMA in a DMS using a Cassandra cluster
+> [!NOTE]
+> If the DataMiner System uses a remote database, the database configuration changes detailed above are not needed. In such a case, the IPs are not affected, because the remote server remains the same in the .yml file and in DB.xml. However, you must make sure that all the necessary ports are open and accessible. See [Configuring the IP network ports](xref:Configuring_the_IP_network_ports).
 
-If your DataMiner System uses the Cassandra cluster feature for its general database (i.e. one Cassandra cluster for the entire DMS), follow the procedure below to change the IP of one of the DMAs in the DMS:
+## DMA in a DMS using a Cassandra cluster locally
+
+If your DataMiner System uses the Cassandra cluster feature for its general database (i.e. one Cassandra cluster for the entire DMS), but Cassandra is hosted on the same machine as DataMiner (which is not recommended), follow the procedure below to change the IP of one of the DMAs in the DMS:
 
 1. Stop the DMA of which you want to change the IP.
 
-1. Stop the Cassandra and Elasticsearch services on the DMA server.
+1. Stop the Cassandra and OpenSearch/Elasticsearch services on the DMA server.
 
 1. Change the IP address of the DMA server in Windows.
 
@@ -233,25 +267,42 @@ If your DataMiner System uses the Cassandra cluster feature for its general data
 
 1. Locate the *cassandra.yaml* files on the other DMAs in the DMS, as described above, and replace any occurrences of the old IP address in the seeds list in these files with the new IP address.
 
-1. Locate the file *Elasticsearch.yml* on the DMA of which you have changed the IP. By default, it is located in the folder *C:\\Program Files\\Elasticsearch\\conf*.
+1. If OpenSearch is used as the indexing database:
 
-1. Open *Elasticsearch.yml* in a text editor (as Administrator) and replace the IP address in the following lines with the IP of the server:
+   1. Locate the file *opensearch.yml* on the DMA of which you have changed the IP. By default, it is located in the folder *C:\\Program Files\\opensearch\\conf*.
 
-   ```txt
-   discovery.zen.ping.unicast.hosts: ["new IP (, IP Cassandra node 2, IP Cassandra node 3, ...)"]
-   network.publish_host: new IP
-   ```
+   1. Open *opensearch.yml* in a text editor (as Administrator) and replace the IP address in the following lines with the IP of the server:
 
-1. Restart the Elasticsearch service.
+      ```txt
+      discovery.zen.ping.unicast.hosts: ["new IP (, IP Cassandra node 2, IP Cassandra node 3, ...)"]
+      network.publish_host: new IP
+      ```
 
-1. Locate the *Elasticsearch.yml* files on the other DMAs in the DMS, as described above, and replace any occurrences of the old IP address in the *discovery.zen.ping.unicast.hosts* field of these files with the new IP address.
+   1. Restart the Java.exe service located under the *Details* tab in the Task Manager.
 
-1. Open the file *DB.xml* from the Skyline DataMiner folder of the DMA with the new IP, and replace the old IP in the DB tags for the Cassandra and Elasticsearch databases with the new IP address.
+   1. Locate the *opensearch.yml* files on the other DMAs in the DMS, as described above, and replace any occurrences of the old IP address in the *discovery.zen.ping.unicast.hosts* field of these files with the new IP address.
+
+1. If Elasticsearch is used as the indexing database:
+
+   1. Locate the file *Elasticsearch.yml* on the DMA of which you have changed the IP. By default, it is located in the folder *C:\\Program Files\\Elasticsearch\\conf*.
+
+   1. Open *Elasticsearch.yml* in a text editor (as Administrator) and replace the IP address in the following lines with the IP of the server:
+
+      ```txt
+      discovery.zen.ping.unicast.hosts: ["new IP (, IP Cassandra node 2, IP Cassandra node 3, ...)"]
+      network.publish_host: new IP
+      ```
+
+   1. Restart the Elasticsearch service.
+
+   1. Locate the *Elasticsearch.yml* files on the other DMAs in the DMS, as described above, and replace any occurrences of the old IP address in the *discovery.zen.ping.unicast.hosts* field of these files with the new IP address.
+
+1. Open the file *DB.xml* from the Skyline DataMiner folder of the DMA with the new IP, and replace the old IP in the DB tags for the Cassandra and OpenSearch/Elasticsearch databases with the new IP address.
 
    > [!TIP]
    > See also: [DB.xml](xref:DB_xml#dbxml)
 
-1. Open the file DB.xml for all other DMAs in the DMS, and replace the old IP address with the new IP address for both Cassandra and Elasticsearch.
+1. Open the file *DB.xml* for all other DMAs in the DMS, and replace the old IP address with the new IP address for both Cassandra and OpenSearch/Elasticsearch.
 
 1. If your DataMiner Agent is connected to dataminer.services, restart all [DataMiner Extension Modules](xref:DataMinerExtensionModules).
 

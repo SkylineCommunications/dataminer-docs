@@ -8,6 +8,9 @@ The Cassandra Cluster Validator can be used for monitoring and trending of param
 
 > You can download the tool from [DataMiner Dojo](https://community.dataminer.services/download/cassandraclustervalidator/).
 
+> [!TIP]
+> If you do not want the hassle of maintaining the DataMiner storage databases yourself, we recommend using [DataMiner Storage as a Service](xref:STaaS) instead.
+
 ## Installation
 
 You can use the Cassandra Cluster Validator by installing it on a DMA.

@@ -12,16 +12,6 @@ This will open the *Edit script* window, which has two panes:
 
 - Right pane: used to edit scripts selected in pane on the left.
 
-The following topics provide more information on spectrum scripts:
-
-- [Managing scripts](#managing-scripts)
-
-- [Editing scripts](#editing-scripts)
-
-- [Using global constants](#using-global-constants)
-
-- [Executing scripts without running a monitor](#executing-scripts-without-running-a-monitor)
-
 ## Managing scripts
 
 In the left pane of the *Edit script* window, the following actions are possible:
@@ -44,23 +34,23 @@ To edit a script, in the *Edit script* window, select the script in the pane on 
 
 - Click *Add* to specify further script actions. A wide range of possibilities is available. However, note that some actions will only become available if other actions have been entered in the script first.
 
-    Usually, the following actions are used early in the script:
+  Usually, the following actions are used early in the script:
 
-    - **Set measurement point**: Determines at what points measurements are to be taken.
+  - **Set measurement point**: Determines at what points measurements are to be taken.
 
-        > [!NOTE]
-        > Alternatively, measurement points can also be defined in the monitor. In that case, a generic script is used describing what is to be measured, rather than where. This script can then potentially be used more than once, if the monitor has several measurement points. Generally, measurement points are determined in the script if specific measurements need to be performed on a limited number of measurement points. By contrast, if a limited number of measurements need to be performed on a large number of measurement points, the measurement points are usually determined in the monitor.
+    > [!NOTE]
+    > Alternatively, measurement points can also be defined in the monitor. In that case, a generic script is used describing what is to be measured, rather than where. This script can then potentially be used more than once, if the monitor has several measurement points. Generally, measurement points are determined in the script if specific measurements need to be performed on a limited number of measurement points. By contrast, if a limited number of measurements need to be performed on a large number of measurement points, the measurement points are usually determined in the monitor.
 
-    - **Get trace**: Performs a trace measurement with the presets defined earlier in the script.
+  - **Get trace**: Performs a trace measurement with the presets defined earlier in the script.
 
-    - For more information on script actions, refer to [Spectrum Analyzer script actions](xref:Spectrum_Analyzer_script_actions).
+  - For more information on script actions, refer to [Spectrum Analyzer script actions](xref:Spectrum_Analyzer_script_actions).
 
 - Change the position of a script action, by moving the mouse pointer over the action in question, and clicking the up/down arrows that appear to the right of it.
 
 - Delete a script action, by moving the mouse pointer over the action in question, and clicking the *x* that appears to the right of it.
 
-    > [!NOTE]
-    > When the measurements in a script are executed, this results in new parameters. For instance, a new parameter C/N can be created by executing a script that measures a trace, takes the difference between the noise level and the carrier level and assigns that value to C/N. The new parameters can then be used for trending and alarming. for more information, see [Working with spectrum monitors](xref:Working_with_spectrum_monitors).
+  > [!NOTE]
+  > When the measurements in a script are executed, this results in new parameters. For instance, a new parameter C/N can be created by executing a script that measures a trace, takes the difference between the noise level and the carrier level and assigns that value to C/N. The new parameters can then be used for trending and alarming. for more information, see [Working with spectrum monitors](xref:Working_with_spectrum_monitors).
 
 ## Using global constants
 
@@ -84,23 +74,23 @@ To do so:
 
 1. In the *monitors* tab of the ribbon, select *Execute Script*.
 
-2. In the *Execute Script* window, select a script and measurement point, and if necessary also a preset.
+1. In the *Execute Script* window, select a script and measurement point, and if necessary also a preset.
 
-3. To only show results for parameters that are monitored, select *Only return results on the script's variables on which monitored parameters have been configured*. If this option is not selected, all variables in the script will be shown.
+1. To only show results for parameters that are monitored, select *Only return results on the script's variables on which monitored parameters have been configured*. If this option is not selected, all variables in the script will be shown.
 
-4. Click *Execute* to start running the script.
+1. Click *Execute* to start running the script.
 
-    The window then shows the *script results*, with the values of the variables.     You can then:
+   The window then shows the *script results*, with the values of the variables.     You can then:
 
-    - Click *Copy to Clipboard* to copy the results to the clipboard in order to paste them into, for instance, a report or an email.
+   - Click *Copy to Clipboard* to copy the results to the clipboard in order to paste them into, for instance, a report or an email.
 
-    - Click *Export to CSV* to export the results to a CSV file.
+   - Click *Export to CSV* to export the results to a CSV file.
 
-    - Click the back button in the top left corner to select a different script and/or measurement point.
+   - Click the back button in the top left corner to select a different script and/or measurement point.
 
-    - Click *Close* to close the window.
+   - Click *Close* to close the window.
 
-    > [!NOTE]
-    > - When you manually run a spectrum script, a message in the middle of the real-time display will indicate that “view script mode” is activated, and mention when the selected trace has a result.
-    > - While you are manually executing a script or viewing the script results, you will not be able to use certain functionalities for real-time trace viewing, such as trace recording and measurement point selection.
-    >
+   > [!NOTE]
+   >
+   > - When you manually run a spectrum script, a message in the middle of the real-time display will indicate that “view script mode” is activated, and mention when the selected trace has a result.
+   > - While you are manually executing a script or viewing the script results, you will not be able to use certain functionalities for real-time trace viewing, such as trace recording and measurement point selection.

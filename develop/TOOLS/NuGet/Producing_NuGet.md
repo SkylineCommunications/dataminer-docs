@@ -61,7 +61,7 @@ If possible, try to target .NET Standard 2.0, as this will give the most flexibi
 If you have a dependency on .NET Framework (e.g. Skyline.DataMiner.Dev.*), you will need to target .NET Framework as well.
 
 > [!IMPORTANT]
-> Prior to DataMiner 10.1.11 (RN 30755), when a .NET Standard 2.0 NuGet is used in a QAction or EXE, you need to manually add a reference to .NET Standard.
+> Prior to DataMiner 10.1.11 (RN 30755), when a .NET Standard 2.0 NuGet is used in a QAction or EXE, you need to manually add a reference to .NET Standard to the project file of the project consuming the package.
 >
 > ```xml
 > <ItemGroup>
@@ -129,6 +129,11 @@ If you have a dependency on .NET Framework (e.g. Skyline.DataMiner.Dev.*), you w
 - *Skyline.DataMiner.DataSources.XXX*
 
   - Holds the packages that can communicate with external data sources. This also includes packages like OpenConfig.Gnmi that rely on the CommunicationGateway DxM.
+ 
+- *Skyline.DataMiner.ProjectAPI.XXX*
+
+  - Holds project-specific packages. There is no real use for these packages outside of the project scope.
+  - For example: Skyline.DataMiner.ProjectAPI.[CustomerName].[ProjectName].XXX
 
 ## Versioning conventions
 

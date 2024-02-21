@@ -6,6 +6,8 @@ uid: DashboardWeb
 
 This component displays a webpage or a block of static HTML. It can also be used to display a [video thumbnail](#configuring-a-video-thumbnail).
 
+## Configuring the component
+
 - To configure the component as a webpage:
 
   1. In the *Component* > *Settings* tab, set *Type* to *Webpage*.
@@ -18,7 +20,7 @@ This component displays a webpage or a block of static HTML. It can also be used
 
   1. In the *HTML* box below this, add the HTML code.
 
-In the *Component* > *Layout* tab, only the default options are available for this component. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
+In the *Component* > *Layout* tab, only the default options are available for this component. See [Customizing the component layout](xref:Customize_Component_Layout).
 
 > [!NOTE]
 > This component does not allow the use of scripts, buttons or other input controls.

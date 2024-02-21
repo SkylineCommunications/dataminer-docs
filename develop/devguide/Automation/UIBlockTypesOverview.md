@@ -44,7 +44,7 @@ var results = engine.ShowUI(uiBuilder);
 
 ## Getting input
 
-Some of these UI blocks use the [DestVar](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIBlockDefinition_DestVar) property to read out input. To get the input of that property, use *GetString()*.
+Some of these UI blocks use the [DestVar](xref:Skyline.DataMiner.Automation.UIBlockDefinition.DestVar) property to read out input. To get the input of that property, use *GetString()*.
 
 ```C#
 var input = results.GetString("destVarName")
@@ -79,7 +79,7 @@ if (results.WasButtonPressed("ButtonVar"))
 
 Allows you to define a calendar control.
 
-To have a certain initial value in the calendar, use the [InitialValue](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIBlockDefinition_InitialValue) property. In the *Calendar* UIBlockType, the value is expected to be a string in the "(dd/MM/yyyy HH:mm:ss)" format.
+To have a certain initial value in the calendar, use the [InitialValue](xref:Skyline.DataMiner.Automation.UIBlockDefinition.InitialValue) property. In the *Calendar* UIBlockType, the value is expected to be a string in the "(dd/MM/yyyy HH:mm:ss)" format.
 
 Example:
 
@@ -113,13 +113,13 @@ uiBuilder.AppendBlock(blockItem);
 ```
 
 > [!NOTE]
-> To check if the user selected the checkbox, use [GetChecked](xref:Skyline.DataMiner.Automation.UIResults#Skyline_DataMiner_Automation_UIResults_GetChecked_System_String_).
+> To check if the user selected the checkbox, use [GetChecked](xref:Skyline.DataMiner.Automation.UIResults.GetChecked(System.String)).
 
 ## CheckBoxList
 
 Allows you to define a list of checkboxes.
 
-It is possible to differentiate between the raw value and display value for the options. The display value is the text the UI will show for the option, and the raw value is the value used to set checkboxes as selected by default using [InitialValue](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIBlockDefinition_InitialValue).
+It is possible to differentiate between the raw value and display value for the options. The display value is the text the UI will show for the option, and the raw value is the value used to set checkboxes as selected by default using [InitialValue](xref:Skyline.DataMiner.Automation.UIBlockDefinition.InitialValue).
 
 Example:
 
@@ -139,7 +139,7 @@ uiBuilder.AppendBlock(checkBoxList);
 ```
 
 > [!NOTE]
-> To read out which boxes are selected, use [GetChecked](xref:Skyline.DataMiner.Automation.UIResults#Skyline_DataMiner_Automation_UIResults_GetChecked_System_String_) with the *DestVar* of the *CheckBoxList* and the raw value of the option
+> To read out which boxes are selected, use [GetChecked](xref:Skyline.DataMiner.Automation.UIResults.GetChecked(System.String)) with the *DestVar* of the *CheckBoxList* and the raw value of the option
 >
 > ```csharp
 > var results = engine.ShowUI(uiBuilder);
@@ -268,7 +268,14 @@ When you have selected a file, the actual upload will only start after you click
 All files uploaded by users will by default be placed in the *C:\\Skyline DataMiner\\TempDocuments* folder, which is automatically cleared at every DataMiner startup.
 
 > [!TIP]
-> See also: [GetUploadedFilePath](xref:Skyline.DataMiner.Automation.UIResults#Skyline_DataMiner_Automation_UIResults_GetUploadedFilePath_System_String_)
+> See also: [GetUploadedFilePath](xref:Skyline.DataMiner.Automation.UIResults.GetUploadedFilePath(System.String))
+
+> [!NOTE]
+> Unlike other UI block types, *FileSelector* does not allow setting an [InitialValue](xref:Skyline.DataMiner.Automation.UIBlockDefinition.InitialValue). However, from DataMiner 10.3.12/10.4.0 onwards<!-- RN 37260 -->, during an interactive Automation script session, it is possible to keep the files that were already uploaded after the UI was shown.
+>
+> When an interactive Automation script is executed **in a web app**, the UI block needs to keep the same [Row](xref:Skyline.DataMiner.Automation.UIBlockDefinition.Row), [Column](xref:Skyline.DataMiner.Automation.UIBlockDefinition.Column), and [DestVar](xref:Skyline.DataMiner.Automation.UIBlockDefinition.DestVar) within the session. If a block of a different type or [DestVar](xref:Skyline.DataMiner.Automation.UIBlockDefinition.DestVar) is at same location or that location has no blocks when the UI is shown again, the information about the uploaded files is lost.
+>
+> When an interactive Automation script is executed **in Cube**, the UI block needs to keep the same [DestVar](xref:Skyline.DataMiner.Automation.UIBlockDefinition.DestVar) within the session. If there is no file selector block with the same [DestVar](xref:Skyline.DataMiner.Automation.UIBlockDefinition.DestVar) when the UI is shown again, the information about the uploaded files is lost.
 
 ## Numeric
 
@@ -335,13 +342,13 @@ uiBuilder.AppendBlock(numericBlock);
 ```
 
 > [!NOTE]
-> From DataMiner 9.5.5 onwards, you can specify the WantsOnChange property to have a small delay before a change is triggered by the numeric box itself, in order to avoid updates being sent as soon as a single character is changed in the numeric box. See [WantsOnChange](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIBlockDefinition_WantsOnChange).
+> From DataMiner 9.5.5 onwards, you can specify the WantsOnChange property to have a small delay before a change is triggered by the numeric box itself, in order to avoid updates being sent as soon as a single character is changed in the numeric box. See [WantsOnChange](xref:Skyline.DataMiner.Automation.UIBlockDefinition.WantsOnChange).
 
 ## Parameter
 
 Allows you to define a text item displaying the value of a parameter.
 
-In the [Extra](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIBlockDefinition_Extra) property, enter the information to find the parameter.
+In the [Extra](xref:Skyline.DataMiner.Automation.UIBlockDefinition.Extra) property, enter the information to find the parameter.
 
 Example:
 
@@ -376,13 +383,13 @@ UIBlockDefinition blockItem = new UIBlockDefinition
 uiBuilder.AppendBlock(blockItem);
 ```
 
-Optionally, you can set the *HasPeekIcon* property to display an icon that, when clicked, will allow you to display the value inside the password box. See [HasPeekIcon](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIBlockDefinition_HasPeekIcon).
+Optionally, you can set the *HasPeekIcon* property to display an icon that, when clicked, will allow you to display the value inside the password box. See [HasPeekIcon](xref:Skyline.DataMiner.Automation.UIBlockDefinition.HasPeekIcon).
 
 ## RadioButtonList
 
 Allows you to define a radio button list. Available from DataMiner 9.6.6 onwards.
 
-It is possible to differentiate between the raw value and display value for the options. The display value is the text the UI will show for the option, and the raw value is the value used to have a radio button selected by default using [InitialValue](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIBlockDefinition_InitialValue).
+It is possible to differentiate between the raw value and display value for the options. The display value is the text the UI will show for the option, and the raw value is the value used to have a radio button selected by default using [InitialValue](xref:Skyline.DataMiner.Automation.UIBlockDefinition.InitialValue).
 
 Example:
 
@@ -412,7 +419,7 @@ uiBuilder.AppendBlock(blockItem);
 
 > [!NOTE]
 >
-> - To read out which option is selected, use [GetChecked](xref:Skyline.DataMiner.Automation.UIResults#Skyline_DataMiner_Automation_UIResults_GetChecked_System_String_) with the *DestVar* of the *RadioButtonList* and the raw value of the option.
+> - To read out which option is selected, use [GetChecked](xref:Skyline.DataMiner.Automation.UIResults.GetChecked(System.String)) with the *DestVar* of the *RadioButtonList* and the raw value of the option.
 >
 >   ```csharp
 >   var results = engine.ShowUI(uiBuilder);
@@ -458,13 +465,13 @@ uiBuilder.AppendBlock(blockItem);
 ```
 
 > [!NOTE]
-> From DataMiner 9.5.3 onwards, this control can be used with a “WantsOnChange” property, which prevents updates being sent after a single character is changed in a text box. See [WantsOnChange](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIBlockDefinition_WantsOnChange).
+> From DataMiner 9.5.3 onwards, this control can be used with a "WantsOnChange" property, which prevents updates being sent after a single character is changed in a text box. See [WantsOnChange](xref:Skyline.DataMiner.Automation.UIBlockDefinition.WantsOnChange).
 
 ## Time
 
 Allows you to define an item displaying a time value.
 
-In the [ConfigOptions](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIBlockDefinition_ConfigOptions), you can define the minimum and maximum time range.
+In the [ConfigOptions](xref:Skyline.DataMiner.Automation.UIBlockDefinition.ConfigOptions), you can define the minimum and maximum time range.
 
 In this example, a time span block is created with a minimum of 1 hour and a maximum of 2 days:
 
@@ -502,7 +509,7 @@ Allows you to define a tree view. Available from DataMiner 10.0.10 onwards.
 
 To define a tree view control, create a *UIBlockDefinition* of type *TreeView* and add each item of the tree view as a *TreeViewItem* to the *TreeViewItems* property. It is not required to fill in the *InitialValue* or *Value* of the *UIBlockDefinition*, as that value is determined based on the *TreeViewItem* collection.
 
-Optionally, you can enable the *WantsOnChange* option for the tree view control, in which case it will send an update each time the selected state of a *TreeViewItem* changes. See [WantsOnChange](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIBlockDefinition_WantsOnChange).
+Optionally, you can enable the *WantsOnChange* option for the tree view control, in which case it will send an update each time the selected state of a *TreeViewItem* changes. See [WantsOnChange](xref:Skyline.DataMiner.Automation.UIBlockDefinition.WantsOnChange).
 
 To retrieve the results:
 

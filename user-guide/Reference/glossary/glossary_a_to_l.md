@@ -122,7 +122,7 @@ uid: glossary_a_to_l
 | Data Display | Legacy term referring to the data pages of cards in DataMiner Cube. |
 | DataMiner Agent | A piece of hardware running the DataMiner software. Abbreviated as DMA. |
 | DataMiner Analytics | Artificial intelligence technology built into DataMiner, which among others provides trend predictions.<br>See [Working with trend predictions](xref:Working_with_trend_predictions). |
-| DataMiner Catalog | Central repository for components that can facilitate and accelerate the use of DataMiner, including the complete connector database.<br>See [DataMiner Catalog](xref:Catalog#dataminer-catalog). |
+| DataMiner Catalog | Central repository for components that can facilitate and accelerate the use of DataMiner, including the complete connector database.<br>See [DataMiner Catalog](xref:About_the_Catalog_module). |
 | DataMiner Certification Program | Program that allows you to test your DataMiner knowledge and skills and prove your expertise with our official certificates. |
 | DataMiner Client | An entity communicating with a DataMiner Agent. The term is mostly used to denote a client application that allows users to interact with the DataMiner Agent. |
 | DataMiner Cloud Platform | Online platform with information related to the DataMiner software and DataMiner projects. Includes software downloads, release notes, etc. Abbreviated as DCP. See [dataminer.services](xref:AboutCloudPlatform). |
@@ -180,7 +180,7 @@ uid: glossary_a_to_l
 | Eb/No | Energy per Bit (Eb) to Noise Density (No) ratio. Measure of signal-to-noise ratio for a digital communication system. |
 | Edge QAM | Headend or hub device that receives packets of digital video or data. It repacketizes the video or data into an MPEG transport stream and digitally modulates the digital transport stream onto a downstream RF carrier using quadrature amplitude modulation (QAM). |
 | EIGRP | Enhanced Interior Gateway Routing Protocol. Advanced routing protocol used to automate routing decisions and configuration in a network. |
-| Elasticsearch | Open-source search and analytics engine, used as the DataMiner Indexing database.<br>See [Elasticsearch database](xref:Elasticsearch_database). |
+| Elasticsearch | Open-source search and analytics engine, which can be used as the DataMiner Indexing database.<br>See [Elasticsearch database](xref:Elasticsearch_database). |
 | Element | A DataMiner object that usually represents a device monitored by the DataMiner System.<br>See [Elements](xref:About_elements). |
 | Element Connections | DataMiner module used to configure virtual elements. Not to be confused with connections in the context of the DataMiner Connectivity Framework.<br>See [Configuring virtual elements with the Element Connections module](xref:Virtual_elements#configuring-virtual-elements-with-the-element-connections-module). |
 | Element Display | Deprecated client application that was used in conjunction with System Display to view element-specific data. |
@@ -218,7 +218,7 @@ uid: glossary_a_to_l
 | Term | Description |
 |------|-------------|
 | G.fast | DSL (Digital Subscriber Line) protocol standard for local loops shorter than 500 m, with performance targets between 150 Mbit/s and 1 Gbit/s. |
-| General database | Dedicated database for a DataMiner Agent, which contains among others alarm and trend information. By default, a Cassandra database is used. A MySQL database is also supported. MSSQL is only supported prior to DataMiner 10.3.0.. |
+| General database | Dedicated database for a DataMiner Agent, which contains among others alarm and trend information. If you do not use [Storage as a Service](xref:STaaS) but host the DataMiner storage databases yourself, typically this will be a Cassandra cluster. |
 | Global constant | Fixed variable used in spectrum scripts.<br>See [Using global constants](xref:Working_with_spectrum_scripts#using-global-constants). |
 | GOTS | Government Off-The-Shelf. Term used for off-the shelf products that are created and owned by a government agency. |
 | GPIB | General Purpose Interface Bus. IEEE-488 interface used to connect sensors and programmable instruments to a computer or to other instruments. |
@@ -256,8 +256,8 @@ uid: glossary_a_to_l
 | IDP | Infrastructure Discovery Provisioning. DataMiner Standard Application that allows you to automatically discover, provision and manage the devices in your network.<br>See [DataMiner IDP app](xref:SolIDP). |
 | IETF | Internet Engineering Task Force. Organization developing and promoting open internet standards. |
 | Import package | Package based on an export from DataMiner, which can contain, elements, services, views, properties, protocols, Automation scripts, etc.<br>See [Exporting and importing packages on a DMA](xref:Exporting_and_importing_packages_on_a_DMA). |
-| Indexing Engine | Dedicated indexing database, by default Elasticsearch, used to index information from the DataMiner System to allow rapid information retrieval. Required for certain DataMiner features, e.g. for DataMiner Job Manager.<br>See [Configuring an indexing database](xref:Indexing_Database). |
-| Inform message | An SNMP notification sent by an SNMP agent to an SNMP manager informing the latter that an alarm event occurred on a particular element. Unlike for an SNMP trap, for an inform message the SNMP manager needs to acknowledge receipt.<br>See [SNMP managers](xref:SNMP). |
+| Indexing Engine | Dedicated indexing database used to index information from the DataMiner System to allow rapid information retrieval. Required for certain DataMiner features, e.g. GQI. See [About databases](xref:Databases_about) |
+| Inform message | An SNMP notification sent by an SNMP agent to an SNMP manager informing the latter that an alarm event occurred on a particular element. Unlike for an SNMP trap, for an inform message the SNMP manager needs to acknowledge receipt.<br>See [SNMP managers](xref:About_SNMP_managers). |
 | Information event | A message in the Alarm Console intended to inform DataMiner users without raising an alarm.<br>See [Information event](xref:Alarm_types#information-events). |
 | Information template | A template that is used to override specific parameter data defined in a protocol without making any changes to the protocol itself.<br>See [Information templates](xref:Information_templates). |
 | Input attenuation | Adjusting of the signal strength at the input of a spectrum analyzer to improve measuring accuracy.<br>See [Changing the spectrum analyzer settings](xref:Changing_the_spectrum_analyzer_settings). |
@@ -291,7 +291,7 @@ uid: glossary_a_to_l
 | Term | Description |
 |------|-------------|
 | LAN | Local Area Network. Network connecting devices within a limited area. |
-| Latch level | The previous highest alarm severity level of a DataMiner object.<br>See [Special icon settings](xref:Main_Cube_UI_components_prior_to_DataMiner_10#special-icon-settings). |
+| Latch level | The previous highest alarm severity level of a DataMiner object.<br>See [Special icon settings](xref:DataMiner_Cube_sidebar#special-icon-settings). |
 | LDAP | Lightweight Directory Access Protocol. Cross-platform protocol used for directory services authentication. |
 | Level shift | Change in the behavior of a trend, detected by DataMiner Analytics, where the value shifts upwards or downwards and then stays at that level.<br>See [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection) |
 | LINQ | Language Integrated Query.<br>See [Language Integrated Query](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/) |

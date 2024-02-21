@@ -4,6 +4,9 @@ uid: Creating_a_new_dashboard
 
 # Creating a new dashboard
 
+> [!IMPORTANT]
+> This information is applicable to the DMS Dashboards module, which is being retired as of DataMiner version 10.4.x. See [DataMiner functionality evolution and retirement](xref:Software_support_life_cycles#dataminer-functionality-evolution-and-retirement). For more information on the Dashboards web app available from DataMiner 9.6.9 onwards, see [Dashboards app](xref:newR_D).
+
 To create a new dashboard in the *Dashboards* app:
 
 1. Click the *New Dashboard* button. A new dashboard will be added to the list.

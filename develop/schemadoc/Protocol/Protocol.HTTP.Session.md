@@ -23,7 +23,7 @@ Represents a particular HTTP session.
 |[proxyPassword](xref:Protocol.HTTP.Session-proxyPassword)|string||If, in the proxyServer attribute, you specified a proxy server that requires authentication, then use this attribute to specify the password.|
 |[proxyServer](xref:Protocol.HTTP.Session-proxyServer)|string||Use this attribute to specify the proxy server through which the connection has to be set up.|
 |[proxyUser](xref:Protocol.HTTP.Session-proxyUser)|string||If, in the proxyServer attribute, you specified a proxy server that requires authentication, then use this attribute to specify the user name.|
-|[timeout](xref:Protocol.HTTP.Session-timeout)|unsignedInt||Specifies that DataMiner must use this timeout value instead of the default one (or the one specified in the Session tag) when executing this connection of this session.|
+|[timeout](xref:Protocol.HTTP.Session-timeout)|unsignedInt||Specifies that DataMiner must use this timeout value instead of the default one when executing a connection of this session.|
 |[userName](xref:Protocol.HTTP.Session-userName)|string||If you set loginMethod to “credentials”, then use this attribute to specify the user name.|
 
 ## Children

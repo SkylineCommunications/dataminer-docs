@@ -12,7 +12,7 @@ To activate CDMR on all DMAs in a cluster in one go, two scripts are available. 
 > For more information on CDMR, see [Customer DataMiner Reporting (CDMR)](xref:CDMR).
 
 > [!NOTE]
-> When you connect a DataMiner Agent to dataminer.services, the connection to CDMR (Customer DataMiner Reporting) is automatically enabled. See [Connecting your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
+> If your DMS is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud) and the necessary [prerequisites](xref:RemoteLogCollection#requirements) are met for remote log collection, CDMR is automatically activated.
 
 ## About these scripts
 
