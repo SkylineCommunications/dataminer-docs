@@ -38,6 +38,14 @@ Up to now, the memory used for all mobile visual overviews would remain allocate
 
 Also, the Cube session hosting these mobile visual overviews will now automatically terminate after 8 hours of inactivity.
 
+#### CubeConnection entry added to SLClient.txt will now include the DMA server version [ID_38796]
+
+<!-- MR 10.3.0 [CU13]/10.4.0 [CU1] - FR 10.4.4 -->
+
+Each time a Cube client has fully connected to a DataMiner Agent, a *CubeConnection* entry is added to the *SLClient.txt* log file of the DataMiner Agent in question.
+
+From now on, this *CubeConnection* entry will also include the DataMiner Agent server version.
+
 ### Fixes
 
 #### Error could occur in SLHelper when generating visual overviews to be displayed in web apps [ID_32584]
