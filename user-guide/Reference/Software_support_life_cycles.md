@@ -32,8 +32,10 @@ Important announcements about the latest changes to DataMiner core functionality
 
 | Item | <div style="width: 150px;">Current status</div> | Detail | Future status |
 |---------|---------|---------|---------|
-| Jobs app | End of Engineering | Module is being retired. | End of Life to be confirmed |
-| Ticketing app | End of Engineering | Module is being retired. | End of Life to be confirmed |
+| Asset Manager | End of Engineering | Module is being retired. | End of Life to be confirmed |
+| Legacy Correlation Engine | End of Engineering | Module is being retired. Note that this only applies to the legacy System Display Correlation engine | End of Life as of DataMiner version 10.5.x (Q4 2024) |
+| Jobs app | End of Engineering | Module is being retired. | End of Life as of DataMiner version 10.5.x (Q4 2024) |
+| Ticketing app | End of Engineering | Skyline is researching a replacement for this module. | End of Life to be confirmed |
 | Annotations | End of Life | From DataMiner version 10.3.x (Q4 2022) onwards, Annotations should no longer be used. | End of Life |
 | Legacy Reporter & Dashboards | End of Support | Module is being retired and replaced with the new DataMiner Dashboards app. | End of Life as of DataMiner version 10.4.x (Q4 2023) |
 |  Web Services API v0 | End of Life | From DataMiner version 10.1.5 onwards, version 0 of the DataMiner Web Services API is disabled. Users will be required to port any reliant applications to use Web Services API v1. | End of Life |
