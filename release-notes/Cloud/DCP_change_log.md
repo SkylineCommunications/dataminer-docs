@@ -160,7 +160,7 @@ It is now possible to connect to a DataMiner System via remote access using Data
 
 #### 10 November 2023 - Fix - Grant admin consent linking button unresponsive
 
-The grant admin consent linking button wouldn't work anymore. This issue has now been resolved.
+Users were no longer able to grant admin consent for the Teams Chat Integration because the button was no longer functional. This issue has now been resolved.
 
 #### 10 November 2023 - Enhancement - Provide a custom username and password when deploying a DaaS Express system
 
