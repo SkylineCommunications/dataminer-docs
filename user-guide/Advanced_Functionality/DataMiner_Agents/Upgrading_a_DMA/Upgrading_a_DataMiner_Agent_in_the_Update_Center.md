@@ -67,4 +67,4 @@ To do so:
 
 1. Click *Upgrade* to start the upgrade or update procedure.
 
-    Alternatively, you can also click *Upload only*, if you wish to only upload the package for now and execute the upgrade or update later.
+    Alternatively, you can also click *Upload only*, if you wish to only upload the package for now and execute the upgrade or update later. Be aware that uploading a package with prerequisites will run those prerequisites.
