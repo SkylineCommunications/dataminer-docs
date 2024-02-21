@@ -706,8 +706,8 @@ a.backtotoplink:hover
 
 /* Create equal columns that sits next to each other */
 .column {
-  flex: 16.66%;
-  max-width: 16.66%;
+  flex: 25%;
+  max-width: 25%;
   padding: 0px 10px;
 }
 
