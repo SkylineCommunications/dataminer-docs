@@ -79,7 +79,7 @@ For more detailed information, refer to [Adding commands for the Teams bot to a 
 
 While remote accessing web apps via dataminer.services (e.g. the Monitoring app), the following message could appear: `An unknown error occurred (status: 200).` The app would also stop working until the page was refreshed. This issue has been resolved.
 
-#### 12 January 2024 - Fix - The given username was not applied when deploying a DaaS Express system
+#### 12 January 2024 - Fix - The given username was not applied when deploying a DaaS system
 
 When a custom username was given when deploying a new DaaS system the default username (Administrator) was still being used. The user will now be created with the custom username.
 
@@ -127,11 +127,11 @@ When you create a DaaS system, your dataminer.services account will automaticall
 
 You can manually delete a DaaS system from dataminer.services, just like any other DMS; however, note that this is irreversible, and all data of the system will be lost.
 
-#### 28 November 2023 - Enhancement - Deploying multiple DaaS Express systems simultaniously
+#### 28 November 2023 - Enhancement - Deploying multiple DaaS systems simultaniously
 
-From now on it is possible to create more than one DaaS Express system simultaneously on [dataminer.services](https://dataminer.services).
+From now on it is possible to create more than one DaaS system simultaneously on [dataminer.services](https://dataminer.services).
 
-#### 24 November 2023 - Fix - Improved username validation when deploying a DaaS Express system
+#### 24 November 2023 - Fix - Improved username validation when deploying a DaaS system
 
 The username validation has been improved to prevent the deployment from failing when the given username was not a valid. This issue was introduced on 10 November 2023.
 
@@ -162,7 +162,7 @@ It is now possible to connect to a DataMiner System via remote access using Data
 
 Users were no longer able to grant admin consent for the Teams Chat Integration because the button was no longer functional. This issue has now been resolved.
 
-#### 10 November 2023 - Enhancement - Provide a custom username and password when deploying a DaaS Express system
+#### 10 November 2023 - Enhancement - Provide a custom username and password when deploying a DaaS system
 
 From now on you will be able to provide your own username and password for your admin account when deploying a DaaS system.
 
