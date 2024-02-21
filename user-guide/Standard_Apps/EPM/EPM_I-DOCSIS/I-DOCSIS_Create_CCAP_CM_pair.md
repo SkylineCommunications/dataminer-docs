@@ -101,9 +101,9 @@ The elements will be created with the following specifications:
 
   - **Entity import directory type**: Remote.
 
-  - **System username**: The system username.
+  - **System username**: The username to access the shared folder.
 
-  - **System password**: The system password.
+  - **System password**: The password to access the shared folder.
 
 - **Collector:**
 
