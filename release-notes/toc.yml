@@ -12,21 +12,10 @@ items:
         href: Web_apps/toc.yml
       - name: dataminer.services release notes
         topicUid: DCP_change_log
-        href: Cloud/toc.yml
       - name: DxM release notes
         topicUid: DxM_RNs_index
-        items:
-          - name: Data Aggregator release notes
-            topicUid: DataAggregator_2.0.0
-            href: DataAggregator/toc.yml
-          - name: Communication Gateway release notes
-            topicUid: CommunicationGateway_2.0.2
-            href: CommunicationGateway/toc.yml
-          - name: Model Host release notes
-            topicUid: ModelHost_1.1.0
-            href: ModelHost/toc.yml
+        href: DxMs/toc.yml
       - name: Other release notes
-        topicUid: Code_Libraries_Release_Notes
         items:
           - name: Code library release notes
             topicUid: Code_Libraries_Release_Notes
@@ -50,7 +39,6 @@ items:
             topicUid: PTP_1.1.3
             href: PTP/toc.yml
           - name: SRM release notes
-            topicUid: SRM_10.3.0.3
             href: SRM/toc.yml
       - name: Breaking changes
         topicUid: Breaking_changes

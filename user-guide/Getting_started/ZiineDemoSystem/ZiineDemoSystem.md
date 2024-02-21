@@ -24,14 +24,14 @@ To connect to the Ziine Demo System:
 
 1. Open the DataMiner Cube desktop application.
 
-1. Connect to the DataMiner System "the [Ziine Demo System](xref:ZiineDemoSystem)" as described under [Opening the desktop application](xref:Opening_the_desktop_app).
+1. Connect to the DataMiner System "the [Ziine Demo System](xref:ZiineDemoSystem)" as described under [Opening the desktop application](xref:Using_the_desktop_app).
 
    > [!NOTE]
    > The Ziine hostname is `https://ziine.skyline.be/`.
 
 ## Having problems connecting?
 
-1. Check the connection settings and make sure *Connection Type* is set to *Auto*. See [Overriding the default connection type](xref:Logging_on_to_DataMiner_Cube#overriding-the-default-connection-type).
+1. Check the connection settings and make sure *Connection Type* is set to *Auto*. See [Overriding the default connection type](xref:Overriding_Cube_connection_type).
 
    *Connection Type* must be set to *Auto* because all public Agents at Skyline have a unique port for their .NET Remoting connection instead of the default port *8004*.
 

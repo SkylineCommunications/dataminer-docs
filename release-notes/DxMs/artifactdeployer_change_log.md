@@ -1,0 +1,91 @@
+---
+uid: artifactdeployer_change_log
+---
+
+# ArtifactDeployer change log
+
+#### 22 January 2024 - Enhancement - ArtifactDeployer 1.6.5 - Added DMA ID to deployment events [ID_38485]
+
+In combination with CoreGateway 2.14.0 or higher, the ArtifactDeployer will be able to include the DMA ID in deployment events, visible on the *Deployments* page of a DMS in the [Admin app](https://admin.dataminer.services). In case of a failure, particularly in a cluster, this ID provides a direct link to the server whose logs you need to examine for further investigation.
+
+#### 16 January 2024 - Enhancement - ArtifactDeployer 1.6.4 - Improved DxM status reporting [ID_38447]
+
+The ArtifactDeployer DxM will now periodically send a health check to the cloud to indicate that the DxM is running using correct identifiers.
+
+#### 16 January 2024 - Enhancement - ArtifactDeployer 1.6.3 - Added node ID to deployment events [ID_38421]
+
+The ArtifactDeployer will include the node ID in deployment events, visible on the *Deployments* page of a DMS in the [Admin app](https://admin.dataminer.services). In case of a failure, particularly in a cluster, this ID provides a direct link to the server whose logs you need to examine for further investigation.
+
+#### 20 December 2023 - New feature - ArtifactDeployer 1.6.0 - DxM status reporter added [ID_38172]
+
+The ArtifactDeployer DxM will now periodically send a health check to the cloud to indicate that the DxM is running.
+
+#### 8 November 2023 - Fix - ArtifactDeployer 1.5.2 - Issue where a timeout error was logged in ArtifactDeployer [ID_37784]
+
+When Orchestrator 1.4.0 and/or ArtifactDeployer 1.5.1 or older were used, in some specific cases, the ArtifactDeployer DxM logged a timeout exception when the Orchestrator DxM encountered an error. This has now been resolved.
+
+#### 8 November 2023 - Fix - ArtifactDeployer 1.5.2 - Deployment issues with ArtifactDeployer 1.5.1 in clusters [ID_37785]
+
+When ArtifactDeployer 1.5.1 was used in a cluster, it could occur that deployments were displayed as pending or failed, and there were many events in the details overlay on admin.dataminer.services, while in fact the deployment had succeeded. This has now been resolved.
+
+#### 2 November 2023 - Fix - ArtifactDeployer 1.5.1 - Issue when hosting server of DataMiner CloudGateway had more than one NIC [ID_37762]
+
+When ArtifactDeployer 1.5.1 or earlier was used, it could occur that deployments failed when the CloudGateway module was installed on a server with more than one network interface (NIC). This has now been resolved.
+
+Make sure to also install DataMiner CloudGateway 2.12.3 to make use of this fix.
+
+#### 11 August 2023 - Enhancement - ArtifactDeployer 1.5.0 - Upgrade to .NET 6 [ID_37103]
+
+DataMiner ArtifactDeployer has been upgraded to .NET 6, so that it no longer depends on .NET 5. **Make sure .NET 6 is installed** before you upgrade to this version.
+
+#### 15 May 2023 - Enhancement - ArtifactDeployer 1.4.6 - Connection improvements [ID_36403]
+
+A retry mechanism has been implemented to fetch the cloud endpoint. If after the retries, still no cloud endpoint can be received, the module will fall back to trying to access dataminer.services directly. If this is not possible, the module will log the failed actions.
+
+#### 26 April 2023 - Enhancement - ArtifactDeployer 1.4.5 - ArtifactDeployer no longer requires direct internet access [ID_36284]
+
+By using the cloud endpoint available since DataMiner CloudGateway 2.10.0 (included in the Cloud Pack 2.8.2), the DataMiner ArtifactDeployer can be installed on servers without internet access. As such, internet access is now no longer required for this DxM.
+
+> [!NOTE]
+> For this feature to work, traffic must be allowed via port 5100 on the internal network, and DataMiner CloudGateway 2.10.0 or higher must be installed.
+
+#### 19 April 2023 - Enhancements - ArtifactDeployer 1.4.4 - General improvements [ID_36058]
+
+Changes have been implemented in DataMiner ArtifactDeployer to improve its general stability.
+
+#### 3 April 2023 - Enhancement - ArtifactDeployer 1.4.3 - Dependencies updated [ID_35990]
+
+Several dependencies have been updated. This includes security-related improvements.
+
+#### 16 December 2022 - Fix - ArtifactDeployer 1.4.2 - Problem with long-running deployments [ID_35174]
+
+If a large package was deployed from the catalog, which took a relatively long time to deploy, it could occur that this did not work correctly.
+
+This fix is included in Cloud Pack 2.8.3.
+
+#### 28 November 2022 - Fix - ArtifactDeployer 1.4.1 - Proxy issue in DataMiner ArtifactDeployer 1.4.0 [ID_35013]
+
+Because of an issue in the proxy configuration of DataMiner ArtifactDeployer 1.4.0, artifacts could not be deployed. This has been resolved in DataMiner ArtifactDeployer 1.4.1.
+
+This enhancement is included in Cloud Pack version 2.8.2.
+
+#### 18 July 2022 - New feature - ArtifactDeployer 1.4.0 - Proxy support [ID_33972]
+
+Proxy support has been added for DataMiner ArtifactDeployer. When you configure this, all outgoing traffic towards the public internet will pass through the proxy server.
+
+The proxy settings are configured in a single settings file that is reused for all DxMs. This *appsettings.proxy.json* file is located in the `C:\ProgramData\Skyline Communications\DxMs Shared\` folder on the DMA. It should have the following content:
+
+```json
+{
+   "ProxyOptions": {
+      "Enabled": true,
+      "Address": "<address of the proxy server>"
+   }
+}
+```
+
+When you have configured the file, you will need to restart the CloudFeed, CloudGateway, and ArtifactDeployer services for the changes to take effect.
+
+#### 27 May 2022 - ArtifactDeployer 1.3.0 - Enhancements to support CI/CD deployment [ID_33534]
+
+This version contains enhancements to support the CI/CD deployment feature.

@@ -15,18 +15,6 @@ uid: General_Main_Release_10.5.0_new_features
 
 ### Core functionality
 
-#### API Gateway: DataMiner modules can now register with API Gateway [ID_36575] [ID_37734]
-
-<!-- MR 10.5.0 - FR 10.4.2 -->
-
-DataMiner modules can now register with API Gateway. These modules can be either "regular modules" (e.g. SLNet) or "proxy modules" (e.g. a DxM that wishes to expose an API).
-
-All modules registered with API Gateway will be displayed under `/APIGateway/api/version`, showing the following properties:
-
-- Name
-- Version
-- Endpoint on which they can be accessed via API Gateway (proxy modules only)
-
 #### BrokerGateway DxM will now be installed automatically during a DataMiner upgrade [ID_37714]
 
 <!-- MR 10.5.0 - FR 10.4.1 -->
@@ -262,3 +250,22 @@ The `ExecuteScriptOnDomInstanceActionSettings` object has been made available as
 > - When `ScriptSettings` are filled in in the DomDefinition, these will take precedence.
 > - When, in the DomDefinition, the `ScriptSettings` object is null, the `ScriptSettings` of the `ModuleSettings` will be used instead.
 > - In order for the `ModuleSettings` objects to be used, the objects in the `ModuleSettingsOverrides` of the `DomDefinition` have to be *null*. Just making them empty is not sufficient.
+
+#### DataMiner Object Models: New 'GetDifferences' method to compare two DOM instances [ID_38364]
+
+<!-- MR 10.5.0 - FR 10.4.2 -->
+
+The `DomInstanceCrudMeta` input object of a DOM CRUD script has a new `GetDifferences` method that allows you to see the changes made to a DOM instance. It will compare the previousVersion and the currentVersion of the instance in question, and return the list of differences found.
+
+### Tools
+
+#### SLNetClientTest tool: New SLProtocol health statistics [ID_37617]
+
+<!-- MR 10.5.0 - FR 10.4.3 -->
+
+When, in the *SLNetClientTest* tool, you open the *Diagnostics > DMA* menu, you can now find the following new commands:
+
+| Command | Function |
+|---------|----------|
+| Health Stats (SLProtocol) > Stats      | Show the overall SLProtocol memory used by all elements. |
+| Health Stats (SLProtocol) > Details... | Show all details of a specific element. |

@@ -237,14 +237,12 @@ items:
           - name: Installing the PLM tool
             topicUid: Installing_PLM_tool
           - name: Using the PLM tool
-            topicUid: The_PLM_user_interface
             items:
               - name: The PLM tool user interface
                 topicUid: The_PLM_user_interface
               - name: Configuring resources
                 topicUid: PLM_tool_configuring_resources
               - name: Configuring maintenance events
-                topicUid: Adding_maintenance_event
                 items:
                   - name: Adding a maintenance event
                     topicUid: Adding_maintenance_event
@@ -347,7 +345,6 @@ items:
           - name: Overview of the DataMiner PTP app UI
             topicUid: Overview_of_the_DataMiner_PTP_app_UI
   - name: Service & Resource Management Framework
-    topicUid: About_SRM
     items:
       - name: About SRM
         topicUid: About_SRM
@@ -411,7 +408,6 @@ items:
           - name: Additional configuration for Resource Orchestration
             topicUid: config_resource_orchestration
       - name: Booking Manager app
-        topicUid: Booking_Manager_user_interface
         items:
           - name: Booking Manager user interface
             topicUid: Booking_Manager_user_interface
@@ -425,7 +421,6 @@ items:
           - name: SRM properties for use with the Booking Manager app
             topicUid: SRM_properties_Booking_Manager
       - name: Advanced configuration
-        topicUid: SRM_logging_config
         items:
           - name: Configuring SRM logging
             topicUid: SRM_logging_config
@@ -443,7 +438,6 @@ items:
           - name: Configuring SRM alarm monitoring
             topicUid: SRM_alarm_monitoring
           - name: Advanced configuration for Service Orchestration
-            topicUid: Service_Orchestration_bookings_advanced
             items:
               - name: Bookings configuration
                 topicUid: Service_Orchestration_bookings_advanced
@@ -517,7 +511,6 @@ items:
               - name: Applying a profile to an unmapped resource
                 topicUid: SRM_apply_profile_to_unmatched_resource
           - name: Launching default wizards from custom scripts
-            topicUid: SRM_launching_booking_wizard
             items:
               - name: Launching the standard Booking Wizard from a custom script
                 topicUid: SRM_launching_booking_wizard

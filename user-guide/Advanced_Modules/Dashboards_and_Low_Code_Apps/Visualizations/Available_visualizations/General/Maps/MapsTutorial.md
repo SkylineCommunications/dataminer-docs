@@ -30,7 +30,7 @@ The content and screenshots for this tutorial have been created in DataMiner ver
 
 ## Step 1: Set up the data
 
-1. Go to <https://catalog.dataminer.services/catalog/5506>.
+1. Go to <https://catalog.dataminer.services/details/package/5506>.
 
 1. Click the *Deploy* button to deploy the *Maps tutorial* package on your DMA.
 

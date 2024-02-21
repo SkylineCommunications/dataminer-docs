@@ -7,7 +7,7 @@ uid: Troubleshooting_SLNet_Startup
 > [!NOTE]
 > This page is currently still being developed. The content is not yet optimized and may not yet be fully accurate.
 
-<div class="mermaid">
+```mermaid
 flowchart TD
 %% -------------------------------------------------------------------------
 %% SLNet flowchart - startup issue branch
@@ -94,4 +94,4 @@ class MODULES,IsRunning,IsConnected,IsGenericIssueFound,IsRTEorCrash,IsSLNetPres
 class START,END,TECHSUPPORT classTerminal;
 class HOME,BACK classExternalRef;
 class OpenCube,EventsAndLogs,RegisterDlls,RestartAgent,RestartMachine,ManualStart,SysAdmin classActionNonClickable;
-</div>
+```

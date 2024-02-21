@@ -14,16 +14,18 @@ A protocol version number consists of 4 numbers separated by periods. Each of th
 
 A.B.C.D
 
-- A = Branch
-- B = System version
-- C = Major change
-- D = Minor change
+- A = [Branch](#branch)
+- B = [System version](#system-version)
+- C = [Major change](#major-change)
+- D = [Minor change](#minor-change)
 
 For example: 1.0.0.1
 
 The combination of the first 3 numbers identifies the protocol version range.
 
 It is possible that different version ranges are maintained in parallel but we should always try to keep this to a minimum.
+
+![Protocol version semantics](~/develop/images/Connector_Version_Semantic.png)
 
 ### Branch
 
@@ -50,11 +52,7 @@ It is possible that different version ranges are maintained in parallel but we s
 
 ### Major change
 
-- A new major change version number is used when the change may have an impact on the DMS platform and an action by the user might be required when a driver is upgraded to this range. For example:
-
-  - Another connection is added, and the user needs to configure an IP address on existing elements.
-  - Parameter descriptions have been changed, so that any Visio drawings and Automation scripts referencing these descriptions may need to be updated.
-
+- A new major change version number is used when the change may have an impact on the DMS platform and an action by the user might be required when a protocol is upgraded to this range. For more information on what is to be considered a breaking change, see [Impact of protocol version changes](xref:ImpactOfProtocolVersionChanges).
 - Different major change ranges are not maintained in parallel, unless this is exceptionally agreed upon.
 - Range: [0...n]
 - Examples:

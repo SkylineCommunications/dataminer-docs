@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.4.2
 ---
 
-# General Feature Release 10.4.2 – Preview
+# General Feature Release 10.4.2
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!IMPORTANT]
 > When downgrading from DataMiner Feature Release version 10.3.8 (or higher) to DataMiner Feature Release version 10.3.4, 10.3.5, 10.3.6 or 10.3.7, an extra manual step has to be performed. For more information, see [Downgrading a DMS](xref:MOP_Downgrading_a_DMS).
@@ -18,13 +18,14 @@ uid: General_Feature_Release_10.4.2
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [DataMiner Object Models: Creating, updating and deleting multiple DOM instances in one call [ID_37891]](#dataminer-object-models-creating-updating-and-deleting-multiple-dom-instances-in-one-call-id_37891)
+- [Configuration of database offload functionality moved from DBConfiguration.xml to DB.xml [ID_37446]](#configuration-of-database-offload-functionality-moved-from-dbconfigurationxml-to-dbxml-id_37446)
 
 ## New features
 
 #### API Gateway: DataMiner modules can now register with API Gateway [ID_36575] [ID_37734]
 
-<!-- MR 10.5.0 - FR 10.4.2 -->
+<!-- MR 10.4.0 - FR 10.4.2 -->
 
 DataMiner modules can now register with API Gateway. These modules can be either "regular modules" (e.g. SLNet) or "proxy modules" (e.g. a DxM that wishes to expose an API).
 
@@ -252,12 +253,13 @@ From now on, it will propose the following algorithms to the server in the follo
 
 ### Enhancements
 
-#### Security enhancements [ID_37349] [ID_37637] [ID_38040] [ID_38052]
+#### Security enhancements [ID_37349] [ID_37637] [ID_38040] [ID_38052] [ID_38656]
 
 <!-- 37349: MR 10.5.0 - FR 10.4.2 -->
-<!-- 37637 (part of 37734): MR 10.5.0 - FR 10.4.2 -->
+<!-- 37637 (part of 37734): MR 10.4.0 - FR 10.4.2 -->
 <!-- 38040: MR 10.3.0 [CU11] - FR 10.4.2 -->
 <!-- 38052: MR 10.5.0 - FR 10.4.2 -->
+<!-- 38656: MR 10.3.0 [CU11] - FR 10.4.2 [CU0] -->
 
 A number of security enhancements have been made.
 
@@ -579,11 +581,11 @@ In some cases, SLAnalytics could partially get stuck when the trend icon calcula
 
 When small, unlabelled changes were detected in a trend graph of a parameter of which the value was clearly increasing, decreasing or remaining stable, up to now, the trend icon would incorrectly not be updated to indicate this increasing, decreasing or stable trend. From now on, when a small, unlabelled change occurs in a trend graph that clearly increases, decreases or remains stable, the trend icon will be updated to indicate this.
 
-#### Problem when loading data of elements hosted on another DMA while a correlation rule action was running [ID_38121]
+#### Problem when loading data of elements hosted on another DMA while a Correlation rule action was running [ID_38121]
 
-<!-- MR 10.4.0 - FR 10.4.2 -->
+<!-- MR 10.3.0 [CU12] - FR 10.4.2 -->
 
-When, while an extensive correlation rule action was running, you opened an element card of an element hosted on a DataMiner Agent other than the one you were connected to, loading the data of that element could get delayed until the correlation rule action had finished.
+When, while an extensive Correlation rule action was running, you opened an element card of an element hosted on a DataMiner Agent other than the one you were connected to, loading the data of that element could get delayed until the Correlation rule action had finished.
 
 #### Failover: Problem with DVE elements and virtual function elements after a Failover switch [ID_38167]
 
@@ -652,3 +654,15 @@ Up to now, the BPA test *Check Cluster SLNet Connections* BPA could incorrectly 
 <!-- MR 10.5.0 - FR 10.4.2 -->
 
 When cleaning (i.e. resetting) a Cassandra database, in some cases, a `TypeInitializationException` could be thrown.
+
+#### Failover: NATS would incorrectly be reconfigured when both agents were offline [ID_38349]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 [CU0] -->
+
+When both agents in a Failover setup were offline, in some cases, they would incorrectly reconfigure the NATS settings.
+
+#### Problem with SLDataMiner when an enhanced service was not able to find some of its child services [ID_38583]
+
+<!-- MR 10.3.0 [CU11] - FR 10.4.2 [CU0] -->
+
+At DataMiner startup, SLDataMiner could throw an access violation exception when an enhanced service was not able to find some of its child services.

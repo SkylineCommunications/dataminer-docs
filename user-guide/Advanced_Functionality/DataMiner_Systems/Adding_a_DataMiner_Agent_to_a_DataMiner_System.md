@@ -8,6 +8,8 @@ More information on adding DataMiner Agents is included in the following section
 
 - [Adding a regular DataMiner Agent](xref:Adding_a_regular_DataMiner_Agent)
 
+- [Adding a DataMiner Agent to a DMS running STaaS](xref:Adding_a_DMA_to_a_DMS_running_STaaS)
+
 - [Adding a DataMiner Probe](xref:Adding_a_DataMiner_Probe)
 
 > [!NOTE]

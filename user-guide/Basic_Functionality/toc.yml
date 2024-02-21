@@ -1,6 +1,177 @@
 items:
+  - name: Elements
+    items:
+      - name: About elements
+        topicUid: About_elements
+        items:
+          - name: Element states
+            topicUid: Element_states
+          - name: Hidden elements
+            topicUid: Hidden_elements
+          - name: Virtual elements
+            topicUid: Virtual_elements
+          - name: Dynamic virtual elements
+            topicUid: Dynamic_virtual_elements
+          - name: Replicated elements
+            topicUid: Replicated_elements
+          - name: Simulated elements
+            topicUid: Simulated_elements
+          - name: Element properties
+            topicUid: Element_properties
+      - name: Working with elements in DataMiner
+        items:
+          - name: Element cards
+            topicUid: Element_cards
+          - name: Adding elements
+            topicUid: Adding_elements
+            items:
+              - name: SNMPv1/v2 connections
+                topicUid: SNMPv1v2_Connection
+              - name: SNMPv3 connections
+                topicUid: SNMPv3_Connection
+              - name: HTTP(s) connections
+                topicUid: HTTPS_Connection
+              - name: Serial connections
+                topicUid: Serial_Connection
+              - name: Smart-serial connections
+                topicUid: Smart_Serial_Connection
+              - name: TCP/IP or UDP/IP connections
+                topicUid: TCPIP_UDPIP_Connection
+              - name: GPIB connections
+                topicUid: GPIB_Connection
+              - name: WebSocket connections
+                topicUid: WebSocket_Connection
+          - name: Deleting elements
+            topicUid: Deleting_elements
+          - name: Duplicating elements
+            topicUid: Duplicating_elements
+          - name: Replicating elements
+            topicUid: Replicating_elements
+          - name: Updating elements
+            topicUid: Updating_elements
+          - name: Changing the state of an element
+            topicUid: Changing_the_state_of_an_element
+          - name: Masking or unmasking an element
+            topicUid: Masking_or_unmasking_an_element
+          - name: Locking and unlocking elements
+            topicUid: Locking_and_unlocking_elements
+          - name: Managing element properties
+            topicUid: Managing_element_properties
+          - name: Changing the polling speed of an element
+            topicUid: Changing_the_polling_speed_of_an_element
+          - name: Checking the connection state of an element
+            topicUid: Checking_the_connection_state_of_an_element
+          - name: Creating a simulated element
+            topicUid: Creating_a_simulated_element
+          - name: Importing and exporting elements
+            topicUid: Importing_and_exporting_elements
+      - name: Locating devices in your system to add to your DMS
+        topicUid: Locating_devices_in_your_system_to_add_to_your_DMS
+  - name: Parameters
+    topicUid: parameters
+    items:
+      - name: Types of parameters
+        items:
+          - name: Read parameters versus write parameters
+            topicUid: Read_parameters_versus_write_parameters
+          - name: Discrete, analog and hybrid parameters
+            topicUid: Discrete_analog_and_hybrid_parameters
+          - name: Monitored parameters versus non-monitored parameters
+            topicUid: Monitored_parameters_versus_non-monitored_parameters
+          - name: Table parameters
+            topicUid: Table_parameters
+          - name: Matrix parameters
+            topicUid: Matrix_parameters
+          - name: General parameters
+            topicUid: General_parameters
+      - name: Changing the way parameters are displayed
+        topicUid: Changing_the_way_parameters_are_displayed
+        items:
+          - name: Changing the display settings for analog parameters
+            topicUid: Changing_the_display_settings_for_analog_parameters
+          - name: Changing parameter names for a particular element
+            topicUid: Changing_parameter_names_for_a_particular_element
+          - name: Changing the way table parameters are loaded
+            topicUid: Changing_the_way_table_parameters_are_loaded
+      - name: Updating the value of a write parameter
+        topicUid: Updating_the_value_of_a_write_parameter
+        items:
+          - name: Updating discrete parameters
+            topicUid: Updating_discrete_parameters
+          - name: Updating analog parameters
+            topicUid: Updating_analog_parameters
+          - name: Updating hybrid parameters
+            topicUid: Updating_hybrid_parameters
+          - name: Updating dynamic table parameters
+            topicUid: Updating_dynamic_table_parameters
+      - name: Configuring matrix parameters
+        topicUid: Configuring_matrix_parameters
+      - name: Working with Lite parameters
+        topicUid: Working_with_Lite_parameters
+        items:
+          - name: Changing the parameter layout in Lite mode
+            topicUid: Changing_the_parameter_layout_in_Lite_mode
+          - name: Using the Lite mode shortcut menu
+            topicUid: Using_the_Lite_mode_shortcut_menu
+      - name: Parameter dependencies
+        topicUid: Parameter_dependencies
+  - name: Services
+    items:
+      - name: About services and service templates
+        topicUid: About_services
+      - name: Service cards
+        topicUid: Service_cards
+        items:
+          - name: Service card header and footer
+            topicUid: Service_card_header_and_footer
+          - name: Service card pages
+            topicUid: Service_card_pages
+      - name: Adding a service
+        topicUid: Adding_a_service
+        items:
+          - name: Conditionally including an element in a service
+            topicUid: Conditionally_including_an_element_in_a_service
+      - name: Service properties
+        topicUid: Service_properties
+      - name: Service templates
+        topicUid: Service_templates
+        items:
+          - name: Creating a service template
+            topicUid: Creating_a_service_template
+            items:
+              - name: Specifying general characteristics of a service template
+                topicUid: ST_specifying_general_characteristics
+              - name: Specifying the input data for a service template
+                topicUid: ST_specifying_input_data
+              - name: Using groups of service template child elements
+                topicUid: ST_using_groups_of_child_elements
+              - name: Creating child elements in service templates
+                topicUid: ST_creating_child_elements
+              - name: Determining the characteristics of generated services
+                topicUid: ST_Determining_characteristics_generated_service
+              - name: Specifying root cause information in a service template
+                topicUid: ST_Specifying_root_cause_info
+              - name: Specifying an SLA in a service template
+                topicUid: ST_specifying_an_sla
+              - name: Specifying the destination view of a service template
+                topicUid: ST_specifying_the_destination_view
+              - name: Specifying the order to select data in a service template
+                topicUid: ST_specifying_the_order_to_select_data
+              - name: Example of creating a service template
+                topicUid: ST_example_ST_creation
+          - name: Applying service templates
+            topicUid: Applying_service_templates
+          - name: Managing service templates
+            topicUid: Managing_service_templates
+  - name: Views
+    items:
+      - name: About views
+        topicUid: About_views
+      - name: View cards
+        topicUid: View_cards
+      - name: Managing views
+        topicUid: Managing_views
   - name: Alarms
-    topicUid: About_alarms
     items:
       - name: About alarms
         topicUid: About_alarms
@@ -64,7 +235,6 @@ items:
           - name: Monitoring of trend patterns
             topicUid: Monitoring_of_trend_patterns
           - name: Tutorials
-            topicUid: Anomaly_Tutorial
             items:
             - name: Detecting anomalies with DataMiner
               topicUid: Anomaly_Tutorial
@@ -83,209 +253,165 @@ items:
             topicUid: Adding_a_custom_command_to_the_Alarm_Console_shortcut_menu
           - name: Alarm storm protection
             topicUid: Alarm_storm_protection
-  - name: Elements
-    topicUid: About_elements
+  - name: Trending
+    topicUid: trending
     items:
-      - name: About elements
-        topicUid: About_elements
+      - name: Trending techniques
+        topicUid: Trending_techniques
+      - name: Displaying trend graphs
+        topicUid: Displaying_trend_graphs
         items:
-          - name: Element states
-            topicUid: Element_states
-          - name: Hidden elements
-            topicUid: Hidden_elements
-          - name: Virtual elements
-            topicUid: Virtual_elements
-          - name: Dynamic virtual elements
-            topicUid: Dynamic_virtual_elements
-          - name: Replicated elements
-            topicUid: Replicated_elements
-          - name: Simulated elements
-            topicUid: Simulated_elements
-          - name: Element properties
-            topicUid: Element_properties
-      - name: Working with elements in DataMiner
-        topicUid: Element_cards
+          - name: Accessing trend information from a card
+            topicUid: Accessing_trend_information_from_a_card
+          - name: Accessing trend information from the Trending module
+            topicUid: Accessing_trend_information_from_the_Trending_module
+      - name: Working with trend graphs
+        topicUid: Manipulating_trend_graphs
         items:
-          - name: Element cards
-            topicUid: Element_cards
-          - name: Adding elements
-            topicUid: Adding_elements
+          - name: Panning across a trend graph
+            topicUid: Panning_across_a_trend_graph
+          - name: Zooming in/out on a trend graph
+            topicUid: Zooming_in_out_on_a_trend_graph
+          - name: Exporting a trend graph
+            topicUid: Exporting_a_trend_graph
+          - name: Using the right-click menu
+            topicUid: Using_the_right-click_menu
+          - name: Displaying alarm template colors in trend graphs
+            topicUid: Displaying_alarm_template_colors_in_trend_graphs
+      - name: Advanced analytics features in trend graphs
+        topicUid: Advanced_analytics_trending
+        items:
+          - name: Working with trend predictions
+            topicUid: Working_with_trend_predictions
+          - name: Working with behavioral anomaly detection
+            topicUid: Working_with_behavioral_anomaly_detection
+          - name: Working with pattern matching
+            topicUid: Working_with_pattern_matching
             items:
-              - name: SNMPv1/v2 connections
-                topicUid: SNMPv1v2_Connection
-              - name: SNMPv3 connections
-                topicUid: SNMPv3_Connection
-              - name: HTTP(s) connections
-                topicUid: HTTPS_Connection
-              - name: Serial connections
-                topicUid: Serial_Connection
-              - name: Smart-serial connections
-                topicUid: Smart_Serial_Connection
-              - name: TCP/IP or UDP/IP connections
-                topicUid: TCPIP_UDPIP_Connection
-              - name: GPIB connections
-                topicUid: GPIB_Connection
-              - name: WebSocket connections
-                topicUid: WebSocket_Connection
-          - name: Deleting elements
-            topicUid: Deleting_elements
-          - name: Duplicating elements
-            topicUid: Duplicating_elements
-          - name: Replicating elements
-            topicUid: Replicating_elements
-          - name: Updating elements
-            topicUid: Updating_elements
-          - name: Changing the state of an element
-            topicUid: Changing_the_state_of_an_element
-          - name: Masking or unmasking an element
-            topicUid: Masking_or_unmasking_an_element
-          - name: Locking and unlocking elements
-            topicUid: Locking_and_unlocking_elements
-          - name: Managing element properties
-            topicUid: Managing_element_properties
-          - name: Changing the polling speed of an element
-            topicUid: Changing_the_polling_speed_of_an_element
-          - name: Checking the connection state of an element
-            topicUid: Checking_the_connection_state_of_an_element
-          - name: Creating a simulated element
-            topicUid: Creating_a_simulated_element
-          - name: Importing and exporting elements
-            topicUid: Importing_and_exporting_elements
-      - name: Locating devices in your system to add to your DMS
-        topicUid: Locating_devices_in_your_system_to_add_to_your_DMS
-  - name: Parameters
-    topicUid: parameters
-    items:
-      - name: Types of parameters
-        topicUid: Read_parameters_versus_write_parameters
-        items:
-          - name: Read parameters versus write parameters
-            topicUid: Read_parameters_versus_write_parameters
-          - name: Discrete, analog and hybrid parameters
-            topicUid: Discrete_analog_and_hybrid_parameters
-          - name: Monitored parameters versus non-monitored parameters
-            topicUid: Monitored_parameters_versus_non-monitored_parameters
-          - name: Table parameters
-            topicUid: Table_parameters
-          - name: Matrix parameters
-            topicUid: Matrix_parameters
-          - name: General parameters
-            topicUid: General_parameters
-      - name: Changing the way parameters are displayed
-        topicUid: Changing_the_way_parameters_are_displayed
-        items:
-          - name: Changing the display settings for analog parameters
-            topicUid: Changing_the_display_settings_for_analog_parameters
-          - name: Changing parameter names for a particular element
-            topicUid: Changing_parameter_names_for_a_particular_element
-          - name: Changing the way table parameters are loaded
-            topicUid: Changing_the_way_table_parameters_are_loaded
-      - name: Updating the value of a write parameter
-        topicUid: Updating_the_value_of_a_write_parameter
-        items:
-          - name: Updating discrete parameters
-            topicUid: Updating_discrete_parameters
-          - name: Updating analog parameters
-            topicUid: Updating_analog_parameters
-          - name: Updating hybrid parameters
-            topicUid: Updating_hybrid_parameters
-          - name: Updating dynamic table parameters
-            topicUid: Updating_dynamic_table_parameters
-      - name: Configuring matrix parameters
-        topicUid: Configuring_matrix_parameters
-      - name: Working with Lite parameters
-        topicUid: Working_with_Lite_parameters
-        items:
-          - name: Changing the parameter layout in Lite mode
-            topicUid: Changing_the_parameter_layout_in_Lite_mode
-          - name: Using the Lite mode shortcut menu
-            topicUid: Using_the_Lite_mode_shortcut_menu
-      - name: Parameter dependencies
-        topicUid: Parameter_dependencies
-  - name: Redundancy groups
-    topicUid: RedundancyGroups
-    items:
-      - name: About redundancy groups
-        topicUid: About_redundancy_groups
-      - name: Checking the current state of a redundancy group
-        topicUid: Checking_the_current_state_of_a_redundancy_group
-      - name: Creating a redundancy group
-        topicUid: Creating_a_redundancy_group
-      - name: Creating a redundancy group template
-        topicUid: Creating_a_redundancy_group_template
-      - name: Assigning elements to a redundancy group template
-        topicUid: Assigning_elements_to_a_redundancy_group_template
-      - name: Setting the priority of a primary or backup element
-        topicUid: Setting_the_priority_of_a_primary_or_backup_element
-      - name: Changing the redundancy mode
-        topicUid: Changing_the_redundancy_mode
-      - name: Manually switching between primary and backup elements
-        topicUid: Manually_switching_between_primary_and_backup_elements
-      - name: Setting a primary or backup element in maintenance
-        topicUid: Setting_a_primary_or_backup_element_in_maintenance
-  - name: Services
-    topicUid: About_services
-    items:
-      - name: About services and service templates
-        topicUid: About_services
-      - name: Service cards
-        topicUid: Service_cards
-        items:
-          - name: Service card header and footer
-            topicUid: Service_card_header_and_footer
-          - name: Service card pages
-            topicUid: Service_card_pages
-      - name: Adding a service
-        topicUid: Adding_a_service
-        items:
-          - name: Conditionally including an element in a service
-            topicUid: Conditionally_including_an_element_in_a_service
-      - name: Service properties
-        topicUid: Service_properties
-      - name: Service templates
-        topicUid: Service_templates
-        items:
-          - name: Creating a service template
-            topicUid: Creating_a_service_template
+              - name: Defining a pattern
+                topicUid: Defining_a_pattern
+              - name: Editing a pattern definition
+                topicUid: Editing_a_pattern_definition
+              - name: Deleting a pattern definition
+                topicUid: Deleting_a_pattern_definition
+              - name: Managing pattern definitions
+                topicUid: Managing_pattern_definitions
+          - name: Working with relation learning
+            topicUid: Working_with_relation_learning
             items:
-              - name: Specifying general characteristics of a service template
-                topicUid: ST_specifying_general_characteristics
-              - name: Specifying the input data for a service template
-                topicUid: ST_specifying_input_data
-              - name: Using groups of service template child elements
-                topicUid: ST_using_groups_of_child_elements
-              - name: Creating child elements in service templates
-                topicUid: ST_creating_child_elements
-              - name: Determining the characteristics of generated services
-                topicUid: ST_Determining_characteristics_generated_service
-              - name: Specifying root cause information in a service template
-                topicUid: ST_Specifying_root_cause_info
-              - name: Specifying an SLA in a service template
-                topicUid: ST_specifying_an_sla
-              - name: Specifying the destination view of a service template
-                topicUid: ST_specifying_the_destination_view
-              - name: Specifying the order to select data in a service template
-                topicUid: ST_specifying_the_order_to_select_data
-              - name: Example of creating a service template
-                topicUid: ST_example_ST_creation
-          - name: Applying service templates
-            topicUid: Applying_service_templates
-          - name: Managing service templates
-            topicUid: Managing_service_templates
-  - name: Views
-    topicUid: About_views
+              - name: Adding related parameters to a trend graph
+                topicUid: Adding_related_parameters_to_a_trend_graph
+              - name: Adding time-scoped related parameters to a trend graph
+                topicUid: Adding_time_scoped_related_parameters_to_a_trend_graph
+      - name: Working with histograms
+        topicUid: Viewing_trend_information_in_a_histogram
+        items:
+          - name: Viewing trend information in a histogram by drilling down on a parameter
+            topicUid: Viewing_trend_information_in_a_histogram_by_drilling_down_on_a_parameter
+          - name: Viewing trend information in a histogram on a view card
+            topicUid: Viewing_trend_information_in_a_histogram_on_a_view_card
+      - name: Working with trend groups
+        topicUid: Working_with_trend_groups
+        items:
+          - name: Working with the trend groups pane
+            topicUid: Working_with_the_trend_groups_pane
+          - name: Working with the parameter pane
+            topicUid: Working_with_the_parameter_pane
+      - name: Setting the default sliding window size for real-time trending
+        topicUid: Setting_the_default_sliding_window_size_for_real-time_trending
+  - name: Protocols and templates
+    topicUid: protocols
     items:
-      - name: About views
-        topicUid: About_views
-      - name: View cards
-        topicUid: View_cards
-      - name: Managing views
-        topicUid: Managing_views
+      - name: Protocols
+        topicUid: Protocols1
+        items:
+          - name: Adding a protocol or protocol version to your DataMiner System
+            topicUid: Adding_a_protocol_or_protocol_version_to_your_DataMiner_System
+          - name: Deleting a protocol or protocol version from your DataMiner System
+            topicUid: Deleting_a_protocol_or_protocol_version_from_your_DataMiner_System
+          - name: Promoting a protocol version to production version
+            topicUid: Promoting_a_protocol_version_to_production_version
+          - name: Managing Visio files linked to protocols
+            topicUid: Managing_Visio_files_linked_to_protocols
+          - name: Viewing protocol help
+            topicUid: Viewing_protocol_help
+          - name: Working with the elements tab
+            topicUid: Working_with_the_elements_tab
+          - name: Advanced protocol functionality
+            topicUid: Advanced_protocol_functionality
+      - name: Information templates
+        topicUid: Information_templates
+        items:
+          - name: Creating an information template
+            topicUid: Creating_an_information_template
+          - name: Uploading an information template file
+            topicUid: Uploading_an_information_template_file
+          - name: Activating an information template
+            topicUid: Activating_an_information_template
+          - name: Editing an information template
+            topicUid: Editing_an_information_template
+          - name: Duplicating an information template
+            topicUid: Duplicating_an_information_template
+          - name: Deleting an information template
+            topicUid: Deleting_an_information_template
+          - name: Editing the information template for one parameter
+            topicUid: Editing_the_information_template_for_one_parameter
+      - name: Alarm templates
+        items:
+          - name: About alarm templates
+            topicUid: About_alarm_templates
+          - name: Managing alarm templates
+            items:
+              - name: Creating an alarm template
+                topicUid: Creating_an_alarm_template
+              - name: Uploading an alarm template
+                topicUid: Uploading_an_alarm_template
+              - name: Assigning an alarm template
+                topicUid: Assigning_an_alarm_template
+              - name: Deleting an alarm template
+                topicUid: Deleting_an_alarm_template
+          - name: Configuring alarm templates
+            items:
+              - name: About the alarm template editor
+                topicUid: About_the_alarm_template_editor
+              - name: Configuring normal alarm thresholds
+                topicUid: Configuring_normal_alarm_thresholds
+              - name: Configuring dynamic alarm thresholds
+                topicUid: Configuring_dynamic_alarm_thresholds
+              - name: Configuring hysteresis in an alarm template
+                topicUid: Configuring_alarm_hysteresis
+              - name: Configuring an alarm template to generate information messages
+                topicUid: Configuring_alarm_template_information_message
+              - name: Using conditions in an alarm template
+                topicUid: Using_conditions_in_an_alarm_template
+              - name: Configuring anomaly detection alarms for specific parameters
+                topicUid: Configuring_anomaly_detection_alarms
+              - name: Setting the autoclear options for alarms in an alarm template
+                topicUid: Setting_the_autoclear_option_in_alarm_template
+              - name: Scheduling an alarm template
+                topicUid: Scheduling_an_alarm_template
+          - name: Changing the alarm range for one parameter
+            topicUid: Changing_the_alarm_range_for_one_parameter
+          - name: Guidelines for assigning alarm severity levels
+            topicUid: Guidelines_for_assigning_alarm_severity_levels
+          - name: Alarm template groups
+            topicUid: Alarm_template_groups
+          - name: Exporting alarm template parameter data
+            topicUid: Exporting_alarm_template_parameter_data
+      - name: Trend templates
+        items:
+          - name: About trend templates
+            topicUid: About_trend_templates
+          - name: Adding and deleting trend templates
+            topicUid: Adding_and_deleting_trend_templates
+          - name: Configuring trend templates
+            topicUid: Configuring_trend_templates
+          - name: Assigning trend templates
+            topicUid: Assigning_trend_templates
   - name: Visio drawings
     topicUid: visio
     items:
       - name: Getting started
-        topicUid: Working_with_shape_data_in_Microsoft_Visio
         items:
           - name: Working with shape data in Microsoft Visio
             topicUid: Working_with_shape_data_in_Microsoft_Visio
@@ -570,7 +696,6 @@ items:
           - name: Configuring a page to execute a script automatically
             topicUid: Configuring_a_page_to_execute_a_script_automatically
       - name: Reference
-        topicUid: Overview_of_DataMiner_shape_data_fields
         items:
           - name: Overview of DataMiner shape data fields
             topicUid: Overview_of_DataMiner_shape_data_fields
@@ -582,167 +707,28 @@ items:
             topicUid: Dynamic_table_filter_syntax
           - name: Visio style guide
             topicUid: Visio_style_guide
-  - name: Trending
-    topicUid: trending
+  - name: Redundancy groups
+    topicUid: RedundancyGroups
     items:
-      - name: Trending techniques
-        topicUid: Trending_techniques
-      - name: Displaying trend graphs
-        topicUid: Displaying_trend_graphs
-        items:
-          - name: Accessing trend information from a card
-            topicUid: Accessing_trend_information_from_a_card
-          - name: Accessing trend information from the Trending module
-            topicUid: Accessing_trend_information_from_the_Trending_module
-      - name: Working with trend graphs
-        topicUid: Manipulating_trend_graphs
-        items:
-          - name: Panning across a trend graph
-            topicUid: Panning_across_a_trend_graph
-          - name: Zooming in/out on a trend graph
-            topicUid: Zooming_in_out_on_a_trend_graph
-          - name: Exporting a trend graph
-            topicUid: Exporting_a_trend_graph
-          - name: Using the right-click menu
-            topicUid: Using_the_right-click_menu
-          - name: Displaying alarm template colors in trend graphs
-            topicUid: Displaying_alarm_template_colors_in_trend_graphs
-      - name: Advanced analytics features in trend graphs
-        topicUid: Advanced_analytics_trending
-        items:
-          - name: Working with trend predictions
-            topicUid: Working_with_trend_predictions
-          - name: Working with behavioral anomaly detection
-            topicUid: Working_with_behavioral_anomaly_detection
-          - name: Working with pattern matching
-            topicUid: Working_with_pattern_matching
-            items:
-              - name: Defining a pattern
-                topicUid: Defining_a_pattern
-              - name: Editing a pattern definition
-                topicUid: Editing_a_pattern_definition
-              - name: Deleting a pattern definition
-                topicUid: Deleting_a_pattern_definition
-              - name: Managing pattern definitions
-                topicUid: Managing_pattern_definitions
-          - name: Working with relation learning
-            topicUid: Working_with_relation_learning
-            items:
-              - name: Adding related parameters to a trend graph
-                topicUid: Adding_related_parameters_to_a_trend_graph
-              - name: Adding time-scoped related parameters to a trend graph
-                topicUid: Adding_time_scoped_related_parameters_to_a_trend_graph
-      - name: Working with histograms
-        topicUid: Viewing_trend_information_in_a_histogram
-        items:
-          - name: Viewing trend information in a histogram by drilling down on a parameter
-            topicUid: Viewing_trend_information_in_a_histogram_by_drilling_down_on_a_parameter
-          - name: Viewing trend information in a histogram on a view card
-            topicUid: Viewing_trend_information_in_a_histogram_on_a_view_card
-      - name: Working with trend groups
-        topicUid: Working_with_trend_groups
-        items:
-          - name: Working with the trend groups pane
-            topicUid: Working_with_the_trend_groups_pane
-          - name: Working with the parameter pane
-            topicUid: Working_with_the_parameter_pane
-      - name: Setting the default sliding window size for real-time trending
-        topicUid: Setting_the_default_sliding_window_size_for_real-time_trending
-  - name: Protocols and templates
-    topicUid: protocols
-    items:
-      - name: Protocols
-        topicUid: Protocols1
-        items:
-          - name: Adding a protocol or protocol version to your DataMiner System
-            topicUid: Adding_a_protocol_or_protocol_version_to_your_DataMiner_System
-          - name: Deleting a protocol or protocol version from your DataMiner System
-            topicUid: Deleting_a_protocol_or_protocol_version_from_your_DataMiner_System
-          - name: Promoting a protocol version to production version
-            topicUid: Promoting_a_protocol_version_to_production_version
-          - name: Managing Visio files linked to protocols
-            topicUid: Managing_Visio_files_linked_to_protocols
-          - name: Viewing protocol help
-            topicUid: Viewing_protocol_help
-          - name: Working with the elements tab
-            topicUid: Working_with_the_elements_tab
-          - name: Advanced protocol functionality
-            topicUid: Advanced_protocol_functionality
-      - name: Information templates
-        topicUid: Information_templates
-        items:
-          - name: Creating an information template
-            topicUid: Creating_an_information_template
-          - name: Uploading an information template file
-            topicUid: Uploading_an_information_template_file
-          - name: Activating an information template
-            topicUid: Activating_an_information_template
-          - name: Editing an information template
-            topicUid: Editing_an_information_template
-          - name: Duplicating an information template
-            topicUid: Duplicating_an_information_template
-          - name: Deleting an information template
-            topicUid: Deleting_an_information_template
-          - name: Editing the information template for one parameter
-            topicUid: Editing_the_information_template_for_one_parameter
-      - name: Alarm templates
-        topicUid: About_alarm_templates
-        items:
-          - name: About alarm templates
-            topicUid: About_alarm_templates
-          - name: Managing alarm templates
-            topicUid: Creating_an_alarm_template
-            items:
-              - name: Creating an alarm template
-                topicUid: Creating_an_alarm_template
-              - name: Uploading an alarm template
-                topicUid: Uploading_an_alarm_template
-              - name: Assigning an alarm template
-                topicUid: Assigning_an_alarm_template
-              - name: Deleting an alarm template
-                topicUid: Deleting_an_alarm_template
-          - name: Configuring alarm templates
-            topicUid: About_the_alarm_template_editor
-            items:
-              - name: About the alarm template editor
-                topicUid: About_the_alarm_template_editor
-              - name: Configuring normal alarm thresholds
-                topicUid: Configuring_normal_alarm_thresholds
-              - name: Configuring dynamic alarm thresholds
-                topicUid: Configuring_dynamic_alarm_thresholds
-              - name: Configuring hysteresis in an alarm template
-                topicUid: Configuring_alarm_hysteresis
-              - name: Configuring an alarm template to generate information messages
-                topicUid: Configuring_alarm_template_information_message
-              - name: Using conditions in an alarm template
-                topicUid: Using_conditions_in_an_alarm_template
-              - name: Configuring anomaly detection alarms for specific parameters
-                topicUid: Configuring_anomaly_detection_alarms
-              - name: Setting the autoclear options for alarms in an alarm template
-                topicUid: Setting_the_autoclear_option_in_alarm_template
-              - name: Scheduling an alarm template
-                topicUid: Scheduling_an_alarm_template
-          - name: Changing the alarm range for one parameter
-            topicUid: Changing_the_alarm_range_for_one_parameter
-          - name: Guidelines for assigning alarm severity levels
-            topicUid: Guidelines_for_assigning_alarm_severity_levels
-          - name: Alarm template groups
-            topicUid: Alarm_template_groups
-          - name: Exporting alarm template parameter data
-            topicUid: Exporting_alarm_template_parameter_data
-      - name: Trend templates
-        topicUid: About_trend_templates
-        items:
-          - name: About trend templates
-            topicUid: About_trend_templates
-          - name: Adding and deleting trend templates
-            topicUid: Adding_and_deleting_trend_templates
-          - name: Configuring trend templates
-            topicUid: Configuring_trend_templates
-          - name: Assigning trend templates
-            topicUid: Assigning_trend_templates
+      - name: About redundancy groups
+        topicUid: About_redundancy_groups
+      - name: Checking the current state of a redundancy group
+        topicUid: Checking_the_current_state_of_a_redundancy_group
+      - name: Creating a redundancy group
+        topicUid: Creating_a_redundancy_group
+      - name: Creating a redundancy group template
+        topicUid: Creating_a_redundancy_group_template
+      - name: Assigning elements to a redundancy group template
+        topicUid: Assigning_elements_to_a_redundancy_group_template
+      - name: Setting the priority of a primary or backup element
+        topicUid: Setting_the_priority_of_a_primary_or_backup_element
+      - name: Changing the redundancy mode
+        topicUid: Changing_the_redundancy_mode
+      - name: Manually switching between primary and backup elements
+        topicUid: Manually_switching_between_primary_and_backup_elements
+      - name: Setting a primary or backup element in maintenance
+        topicUid: Setting_a_primary_or_backup_element_in_maintenance
   - name: Documents
-    topicUid: About_the_Documents_module
     items:
       - name: About the Documents module
         topicUid: About_the_Documents_module
@@ -752,10 +738,3 @@ items:
         topicUid: Managing_the_document_folders
       - name: Adding documents, hyperlinks, or email addresses
         topicUid: Adding_documents_hyperlinks_or_email_addresses
-  - name: Chat collaboration
-    topicUid: chat
-    items:
-      - name: Chat collaboration from DataMiner 10.0.0/10.0.2 onwards
-        topicUid: Chat_collaboration_from_DataMiner_10_0_0_10_0_2_onwards
-      - name: Chat collaboration prior to DataMiner 10.0.0/10.0.2
-        topicUid: Chat_collaboration_prior_to_DataMiner_10_0_0_10_0_2

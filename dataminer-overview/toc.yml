@@ -29,12 +29,12 @@ items:
     - name: DataMiner hosting and high availability
       topicUid: Overview_hosting
       items:
-        - name: Self-hosted DataMiner nodes and storage nodes
-          topicUid: DM_and_storage_selfhosted
-        - name: Self-hosted DataMiner nodes with Storage as a Service
-          topicUid: DM_selfhosted_and_StaaS
         - name: DataMiner as a Service
           topicUid: DaaS_hosting
+        - name: Self-hosted DataMiner nodes with Storage as a Service
+          topicUid: DM_selfhosted_and_StaaS
+        - name: Self-hosted DataMiner nodes and storage nodes
+          topicUid: DM_and_storage_selfhosted
     - name: dataminer.services
       topicUid: Overview_DCP
       items:
@@ -101,6 +101,21 @@ items:
               topicUid: What_is_DataMiner_DevOps_Enablement
             - name: The DataMiner DevOps Professional Program
               topicUid: DevOps_Enablement_and_the_DevOps_Professional_program
+            - name: DevOps Enablement Playbook
+              topicUid: DevOps_Enablement_Playbook
+              items:
+                - name: Tooling and infrastructure
+                  topicUid: Tooling_Infrastructure
+                - name: Onboarding
+                  topicUid: DEP_Onboarding
+                - name: Learning resources
+                  topicUid: Learning_Resources
+                - name: Certification
+                  topicUid: DEP_Certification
+                - name: Levelling up your DevOps status
+                  topicUid: Levelling_up_DevOps_status
+                - name: Reporting progress to the stakeholders
+                  topicUid: Reporting_Progress_to_Stakeholders
         - name: DataMiner DevOps Creative Collective
           topicUid: DataMiner_DevOps_Creative_Collective
           items:
@@ -116,6 +131,8 @@ items:
               topicUid: Recommended_Policies
             - name: Unlimited opportunity
               topicUid: Unlimited_Opportunity
+        - name: Glossary
+          topicUid: DevOps_Glossary
     - name: Training courses and certification
       topicUid: Overview_Training_intro
       items:
@@ -180,12 +197,10 @@ items:
       topicUid: Part52ProfessionalServices
       items:
         - name: DataMiner Solution Deployment Methodology
-          topicUid: DeploymentMethodology
           items:
             - name: About Digital Transformation
               topicUid: DeploymentMethodology
             - name: Managing technology deployments
-              topicUid: Managing_technology_deployments
               items:
                 - name: Methodology is key to success
                   topicUid: Managing_technology_deployments

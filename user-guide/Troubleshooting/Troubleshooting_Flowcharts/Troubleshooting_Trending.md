@@ -8,13 +8,13 @@ uid: Troubleshooting_Trending
 >
 > - This page is currently still being developed. The content is not yet optimized and may not yet be fully accurate.
 > - If you need more information on how to execute any of the steps below, feel free to reach out to [support.data-core@skyline.be](mailto:support.data-core@skyline.be).
-> - You can leave feedback using the [*issues* feature](xref:contributing#reporting-an-issue), or [propose a change](xref:contributing).
+> - You can leave feedback using the [*issues* feature](xref:CTB_Reporting_Issue), or [propose a change](xref:contributing).
 
 ## Trending
 
 ### Overview
 
-<div class="mermaid">
+```mermaid
 flowchart TD
 %% Define styles %%
 linkStyle default stroke:#cccccc
@@ -53,11 +53,11 @@ class GetDELT,TrendDataInspector,QueryDatabase,FollowCTT,ReadIssueChecks,ClientE
 class DataPresent classDecision;
 class NotFixed classSolution;
 class ReadIssue,WriteIssue classExternalRef;
-</div>
+```
 
 ### Read Issue
 
-<div class="mermaid">
+```mermaid
 flowchart TD
 %% Define styles %%
 linkStyle default stroke:#cccccc
@@ -87,7 +87,7 @@ class AlarmConsole,Surveyor,Apps,Trending classExternalRef;
 class GetDELT,TrendDataInspector,QueryDatabase,FollowCTT,ReadIssueChecks,ClientExport,WriteIssueActionLogging,WriteIssueActionDBXML,WriteIssueActionTrendTemplate,WriteIssueActionParameter classAction;
 class DataPresent classDecision;
 class NotFixed classSolution;
-</div>
+```
 
 > [!NOTE]
 >
@@ -96,7 +96,7 @@ class NotFixed classSolution;
 
 ### Write Issue
 
-<div class="mermaid">
+```mermaid
 flowchart TD
 %% Define styles %%
 linkStyle default stroke:#cccccc
@@ -130,4 +130,4 @@ class AlarmConsole,Surveyor,Apps,Trending classExternalRef;
 class GetDELT,TrendDataInspector,QueryDatabase,FollowCTT,ReadIssueChecks,ClientExport,WriteIssueActionLogging,WriteIssueActionDBXML,WriteIssueActionTrendTemplate,WriteIssueActionParameter classAction;
 class DataPresent classDecision;
 class NotFixed classSolution;
-</div>
+```

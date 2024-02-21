@@ -53,7 +53,7 @@ Another way to define a display key using naming is by using the NamingFormat ta
     <ColumnOption idx="2" pid="2003" type="retrieved" options=";save" />
     <ColumnOption idx="3" pid="2004" type="retrieved" options=";save" />
     ...
-    <ColumnOption idx="71" pid="2899" type="displaykey" options="" />
+    <ColumnOption idx="71" pid="1999" type="displaykey" options="" />
   </ArrayOptions>
 </Param>
 ```
@@ -74,6 +74,10 @@ Naming can be used to define a display key for a table. The example below define
   <ArrayOptions index="0" options=";naming=/1002,2004,3002" >
     <ColumnOption idx="0" pid="3001" type="retrieved" options="" />
     <ColumnOption idx="1" pid="3002" type="retrieved" options="" />
+    <ColumnOption idx="2" pid="3003" type="retrieved" options=";foreignKey=1000" />
+    <ColumnOption idx="3" pid="3004" type="retrieved" options=";foreignKey=2000" />
+    ...
+    <ColumnOption idx="71" pid="2999" type="displaykey" options="" />
   </ArrayOptions>
 </Param>
 ```

@@ -151,7 +151,7 @@ The `ApiTriggerOutput` object has the following properties:
 | Property | Type | Description |
 |--|--|--|
 | ResponseCode | int | The HTTP status code. See [ResponseCode](#responsecode). |
-| ResponseBody | string | Contains the response body as a string. |
+| ResponseBody | string | Contains the response body as a string. The size of this response body is limited to 29 MB. |
 
 > [!NOTE]
 > A valid output instance always has to be returned.

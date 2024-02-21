@@ -4,6 +4,9 @@ uid: DMS_GET_ELEMENT_STATE
 
 # DMS_GET_ELEMENT_STATE (91)
 
+> [!WARNING]
+> The use of DMS Notify types has been deprecated. Use types from the [Class Library](xref:ClassLibraryIntroduction) instead.
+
 Gets the element state.
 
 ```csharp
@@ -28,6 +31,7 @@ string elementState = (string)result;
 - dmaID (int): DataMiner Agent ID
 - elementID (int): Element ID
 - result (object): Element state as string. Possible values are:
+
   - active
   - stop
   - inactive

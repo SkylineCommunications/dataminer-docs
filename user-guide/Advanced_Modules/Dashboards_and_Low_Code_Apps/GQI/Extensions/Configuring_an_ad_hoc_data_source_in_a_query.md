@@ -42,3 +42,6 @@ Depending on how the script is configured, there can be additional configuration
 
 > [!NOTE]
 > From DataMiner 10.2.5/10.3.0 onwards, you can link the arguments of an ad hoc data source to an existing feed in the Dashboards app. Depending on the linked feed, more information may need to be specified. For example, if you link to an existing query feed with a table listing elements, in the *Type* box, you will then need to select whether you want to use a specific data type (e.g. elements) or query rows. Then you will need to select the property you want to use. In most cases, you can select the property in a dropdown list, except if *Type* is set to *Query rows* or *Script output*, in which case you will have to specify the value yourself. For query rows, when you start typing the value, DataMiner will propose any matching values it can find.
+
+> [!TIP]
+> See also: [Best practices for developing GQI extensions](xref:GQI_Extensions_Best_Practices).

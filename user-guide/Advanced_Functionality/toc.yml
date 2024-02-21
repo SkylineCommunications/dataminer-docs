@@ -1,9 +1,10 @@
 items:
+  - name: DataMiner System layout
+    topicUid: GeneralLayout
   - name: DataMiner Agents
     topicUid: DataminerAgents
     items:
       - name: Configuring a DataMiner Agent
-        topicUid: Changing_the_DMA_ID
         items:
           - name: Changing the DataMiner ID of a DMA
             topicUid: Changing_the_DMA_ID
@@ -101,7 +102,6 @@ items:
           - name: Importing elements, services, etc. from a .dmimport file
             topicUid: Importing_elements_services_etc_from_a_dmimport_file
   - name: DataMiner Systems
-    topicUid: About_DataMiner_Systems
     items:
       - name: About DataMiner Systems
         topicUid: About_DataMiner_Systems
@@ -119,7 +119,6 @@ items:
       - name: Viewing information on the DMAs in a DMS
         topicUid: Viewing_information_on_the_DMAs_in_a_DMS
       - name: Setting up a new DataMiner System
-        topicUid: Before_you_begin_to_set_up_a_new_DMS
         items:
           - name: Before you begin to set up a new DMS
             topicUid: Before_you_begin_to_set_up_a_new_DMS
@@ -130,12 +129,13 @@ items:
         items:
           - name: Adding a regular DataMiner Agent
             topicUid: Adding_a_regular_DataMiner_Agent
+          - name: Adding a DataMiner Agent to a DMS running STaaS
+            topicUid: Adding_a_DMA_to_a_DMS_running_STaaS
           - name: Adding a DataMiner Probe
             topicUid: Adding_a_DataMiner_Probe
       - name: Removing a DataMiner Agent from a DataMiner System
         topicUid: Removing_a_DataMiner_Agent_from_a_DataMiner_System
       - name: Starting or stopping DataMiner Agents in your DataMiner System
-        topicUid: Starting_or_stopping_a_DMA_in_DataMiner_Cube
         items:
           - name: Starting or stopping a DMA in DataMiner Cube
             topicUid: Starting_or_stopping_a_DMA_in_DataMiner_Cube
@@ -146,7 +146,6 @@ items:
       - name: Sharing DataMiner data with third parties
         topicUid: Sharing_DataMiner_data_with_third_parties
       - name: DataMiner maintenance tools
-        topicUid: Cleaning_up_unused_files_on_a_DMA
         items:
           - name: Cleaning up unused files on a DMA
             topicUid: Cleaning_up_unused_files_on_a_DMA
@@ -191,7 +190,6 @@ items:
       - name: About DMA Failover
         topicUid: About_DMA_Failover
       - name: Viewing Failover information
-        topicUid: Viewing_the_Failover_setup
         items:
           - name: Viewing the Failover setup
             topicUid: Viewing_the_Failover_setup
@@ -215,7 +213,6 @@ items:
       - name: Ending a Failover configuration
         topicUid: Ending_a_Failover_configuration
       - name: Frequently asked questions about DMA Failover
-        topicUid: Failover_FAQ_what_if_DMA_stopped
         items:
           - name: What if one of the DMAs is stopped?
             topicUid: Failover_FAQ_what_if_DMA_stopped
@@ -234,7 +231,6 @@ items:
           - name: What if one of the Agents cannot be started or restarted?
             topicUid: Failover_FAQ_cannot_start
   - name: Databases
-    topicUid: Databases_about
     items:
       - name: About databases
         topicUid: Databases_about
@@ -252,19 +248,16 @@ items:
       - name: Storage as a Service (STaaS)
         topicUid: STaaS
       - name: Database configuration
-        topicUid: Configuring_dedicated_clustered_storage
         items:
           - name: Configuring dedicated clustered storage
             topicUid: Configuring_dedicated_clustered_storage
             items:
               - name: Cassandra-compatible database service
-                topicUid: Cassandra_database
                 items:
                   - name: Cassandra Cluster
                     topicUid: Cassandra_database
                     items:
                       - name: Deploying a Cassandra database
-                        topicUid: Installing_Cassandra
                         items:
                           - name: Installing Cassandra on a Linux machine
                             topicUid: Installing_Cassandra
@@ -295,14 +288,12 @@ items:
             topicUid: Configuring_storage_per_DMA
             items:
               - name: Cassandra per DMA
-                topicUid: Migrating_the_general_database_to_Cassandra
                 items:
                   - name: Migrating a legacy setup to Cassandra
                     topicUid: Migrating_the_general_database_to_Cassandra
                   - name: Configuring the Cassandra database per DMA settings
                     topicUid: Configuring_Cassandra_per_DMA_in_Cube
                   - name: Maintaining a Cassandra database on DMA
-                    topicUid: Configuring_Cassandra_Backups
                     items:
                       - name: Configuring Cassandra backups
                         topicUid: Configuring_Cassandra_Backups
@@ -376,12 +367,10 @@ items:
               - name: Migrating SRM profiles to the indexing database
                 topicUid: Profile_migration_to_elastic
           - name: Common database settings
-            topicUid: Specifying_TTL_overrides
             items:
               - name: Specifying TTL overrides
                 topicUid: Specifying_TTL_overrides
           - name: Optional database configuration
-            topicUid: Offload_database
             items:
               - name: Offload database
                 topicUid: Offload_database
@@ -397,7 +386,6 @@ items:
               - name: Configuring an additional database
                 topicUid: Configuring_an_additional_database
       - name: Database queries
-        topicUid: Examples_of_database_queries
         items:
           - name: Examples of database queries
             topicUid: Examples_of_database_queries
@@ -408,7 +396,6 @@ items:
           - name: Querying a Cassandra database compared to MySQL
             topicUid: Querying_Cassandra_vs_MySQL
   - name: Security
-    topicUid: About_security
     items:
       - name: About security
         topicUid: About_security
@@ -439,7 +426,6 @@ items:
       - name: DataMiner user permissions
         topicUid: DataMiner_user_permissions
       - name: Basic security configuration
-        topicUid: Managing_users
         items:
           - name: Managing users
             topicUid: Managing_users
@@ -491,13 +477,10 @@ items:
           - name: Frequently asked questions about user group settings
             topicUid: Frequently_asked_questions_about_user_group_settings
       - name: Advanced security configuration
-        topicUid: Cassandra_authentication
         items:
           - name: Securing self-hosted DataMiner storage
-            topicUid: Cassandra_authentication
             items:
               - name: Securing the Cassandra general database
-                topicUid: Cassandra_authentication
                 items:
                   - name: Cassandra authentication
                     topicUid: Cassandra_authentication
@@ -518,7 +501,6 @@ items:
               - name: Securing the Elasticsearch database
                 topicUid: Security_Elasticsearch
           - name: Securing the web server
-            topicUid: HTTP_Headers
             items:
               - name: HTTP headers
                 topicUid: HTTP_Headers
@@ -550,7 +532,6 @@ items:
           - name: Skipping certificate validation when consuming gRPC services
             topicUid: Skipping_certificate_validation_when_consuming_gRPC_services
   - name: SNMP managers
-    topicUid: About_SNMP_managers
     items:
       - name: About SNMP managers
         topicUid: About_SNMP_managers
@@ -560,7 +541,6 @@ items:
           - name: Interaction between SNMP manager and SNMP agent
             topicUid: Interaction_between_SNMP_manager_and_SNMP_agent
       - name: Configuring SNMP managers
-        topicUid: Configuring_an_SNMP_manager_in_DataMiner_Cube
         items:
           - name: Configuring an SNMP manager in DataMiner Cube
             topicUid: Configuring_an_SNMP_manager_in_DataMiner_Cube
@@ -581,21 +561,18 @@ items:
       - name: Resending alarms to an SNMP manager
         topicUid: Resending_alarms_to_an_SNMP_manager
       - name: DataMiner SNMP notification definition
-        topicUid: Default_DataMiner_notification
         items:
           - name: Default DataMiner notification
             topicUid: Default_DataMiner_notification
           - name: Custom DataMiner notification
             topicUid: Custom_DataMiner_notification
   - name: DataMiner Connectivity Framework
-    topicUid: About_the_DataMiner_Connectivity_Framework
     items:
       - name: About the DataMiner Connectivity Framework
         topicUid: About_the_DataMiner_Connectivity_Framework
       - name: Viewing element connections
         topicUid: Viewing_element_connections
       - name: Configuring element connectivity in Cube
-        topicUid: Editing_element_connections_in_the_Properties_window
         items:
           - name: Editing element connections in the Properties window
             topicUid: Editing_element_connections_in_the_Properties_window
@@ -611,7 +588,6 @@ items:
           - name: Automatically generating service RCA chains based on connectivity
             topicUid: Automatically_generating_service_RCA_chains_based_on_connectivity
   - name: TCP-IP sockets
-    topicUid: About_TCP-IP_sockets
     items:
       - name: About TCP-IP sockets
         topicUid: About_TCP-IP_sockets

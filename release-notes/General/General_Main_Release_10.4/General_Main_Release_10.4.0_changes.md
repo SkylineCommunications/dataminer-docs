@@ -2,12 +2,28 @@
 uid: General_Main_Release_10.4.0_changes
 ---
 
-# General Main Release 10.4.0 – Changes (preview)
+# General Main Release 10.4.0 – Changes
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 ## Changes
+
+### Breaking changes
+
+#### NATS: All processes will now use the DataMinerMessageBroker.API NuGet package [ID_38193]
+
+<!-- MR 10.4.0 - FR 10.4.3 -->
+
+All processes that were still using the deprecated *SLMessageBroker.dll* or *CSLCloudBridge.dll* files will now be using the *DataMinerMessageBroker.API* or *DataMinerMessageBroker.API.Native* NuGet package instead.
+
+| Processing using ... | will now instead use ...          |
+|----------------------|-----------------------------------|
+| SLMessageBroker.dll  | DataMinerMessageBroker.API        |
+| CSLCloudBridge.dll   | DataMinerMessageBroker.API.Native |
+
+> [!IMPORTANT]
+> This is a breaking change. It will cause the *VerifyNatsIsRunning* prerequisite to fail when you downgrade to an earlier DataMiner version, because this prerequisite will expect the old *SLMessageBroker* DLL instead of the *DataMinerMessageBroker* API. To be able to downgrade, you will need to open the upgrade package you want to downgrade to (like a zip archive) and remove *VerifyNatsIsRunning.dll* from the `\Update.zip\Prerequisites\` folder.
 
 ### Enhancements
 
@@ -118,7 +134,7 @@ From now on, when you zoom in or out, the data of the previous zoom level will s
 
 Because of a number of enhancements, overall performance has increased when fetching relation information for the automatic incident tracking feature.
 
-#### Security enhancements [ID_35434] [ID_35997] [ID_36319] [ID_36624] [ID_36928] [ID_37345] [ID_37540]
+#### Security enhancements [ID_35434] [ID_35997] [ID_36319] [ID_36624] [ID_36928] [ID_37345] [ID_37540] [ID_37637] [ID_38514]
 
 <!-- 35434: MR 10.4.0 - FR 10.3.4 -->
 <!-- 35997: MR 10.4.0 - FR 10.3.5 -->
@@ -126,6 +142,8 @@ Because of a number of enhancements, overall performance has increased when fetc
 <!-- 36624: MR 10.4.0 - FR 10.3.8 -->
 <!-- 37345: MR 10.4.0 - FR 10.3.11 -->
 <!-- 37540: MR 10.4.0 - FR 10.3.12 -->
+<!-- 37637 (part of 37734): MR 10.4.0 - FR 10.4.2 -->
+<!-- 38514: MR 10.4.0 - FR 10.4.3 -->
 
 A number of security enhancements have been made.
 
@@ -722,11 +740,12 @@ Also, additional logging has been added to indicate when a cache was refilled an
 
 Because of a number of enhancements, overall performance has increased when migrating data from a Cassandra database to the cloud.
 
-#### User-Defined APIs: Maximum size of HTTP request body has been reduced to 29MB [ID_37753]
+#### User-Defined APIs: Maximum size of HTTP request body and HTTP response body has been reduced to 29MB [ID_37753] [ID_38397]
 
-<!-- MR 10.4.0 - FR 10.4.1 -->
+<!-- RN 37753: MR 10.4.0 - FR 10.4.1 -->
+<!-- RN 38397: MR 10.4.0 - FR 10.4.3 -->
 
-The maximum size of the HTTP request body has been reduced from 30 MB to 29 MB.
+The maximum size of both the HTTP request body and the HTTP response body has been reduced 29 MB.
 
 Also, additional logging will be added to the *SLUserDefinableApiManager.txt* log file when subscribing on NATS fails and when sending a reply on an incoming NATS request fails.
 
@@ -846,17 +865,79 @@ Up to now, when a *Join* operator of type "Right join" was applied, both the ent
 
 A number of enhancements have been made to the anomaly check algorithm.
 
-#### SLAnalytics - Alarm focus: Alarm occurrences will now be identified using a combination of element ID, parameter ID and primary key  [ID_38184]
+#### SLAnalytics - Alarm focus: Alarm occurrences will now be identified using a combination of element ID, parameter ID and primary key  [ID_38184] [ID_38251]
 
 <!-- MR 10.4.0 - FR 10.4.3 -->
 
 When calculating alarm likelihood (i.e. focus score), up to now, the alarm focus feature used a combination of element ID, parameter ID and display key (if applicable) to identify previous occurrences of the same alarm. From now on, previous alarm occurrences will be identified using a combination of element ID, parameter ID and primary key.
+
+> [!NOTE]
+> When you upgrade to version 10.4.0/10.4.3, the Cassandra table *analytics_alarmfocus* will automatically be removed.
 
 #### SLLogCollector will now also collect the backup logs of the StorageModule DxM [ID_38228]
 
 <!-- MR 10.4.0 - FR 10.4.2 -->
 
 SLLogCollector will now also collect the backup logs of the *StorageModule* DxM located in the `C:\ProgramData\Skyline Communications\DataMiner StorageModule\Logs\Backup` folder.
+
+#### Failover: NATS nodes will now advertise their physical IP address instead of their virtual IP address [ID_38340]
+
+<!-- MR 10.4.0 - FR 10.4.3 -->
+
+From now, NATS nodes will advertise their physical IP address instead of their virtual IP address.
+
+#### SLAnalytics - Behavioral anomaly detection: Enhanced accuracy [ID_38383]
+
+<!-- MR 10.4.0 - FR 10.4.3 -->
+
+The accuracy of the behavioral change points and anomalies detected by the behavioral anomaly detection feature has been improved.
+
+From now on, a behavioral change will only be taken into account when the change is larger than the data precision used to display the data in DataMiner Cube.
+
+As a result, anomalies that report a trend change "from 0%/day to 0%/day", a level shift from "0.1 to 0.1", etc. will no longer be taken into account.
+
+#### SLProtocol will no longer log messages related to duplicate keys at the default log levels [ID_38392] [ID_38517]
+
+<!-- MR 10.4.0 - FR 10.4.3 -->
+
+When SLProtocol identifies duplicate keys, it will no longer flood the error log with messages related to duplicate keys (e.g. `Duplicate key in table 1000, key = 123`) at the default log levels.
+
+From now on, if you want to have log entries related to duplicate keys, increase the error log level to 1.
+
+> [!NOTE]
+> When polling via SNMP, duplicate keys will only be logged when error log level is set to 1. When using FillArray in a QAction, duplicate keys will always be logged regardless of error log level.
+
+#### SLAnalytics - Behavioral anomaly detection: Enhanced accuracy [ID_38400]
+
+<!-- MR 10.4.0 - FR 10.4.3 -->
+
+Change point detection accuracy has been improved for parameters that have a discreet trend data behavior.
+
+For parameters of which the trend data behavior is mostly stable, with only infrequent sudden value changes, only behavioral changes that are larger than those infrequent sudden value changes will be taken into account.
+
+#### SLAnalytics: Enhanced memory usage [ID_38471]
+
+<!-- MR 10.4.0 - FR 10.4.3 -->
+
+Because of a number of enhancements with regard to memory usage, overall performance of SLAnalytics has increased.
+
+#### SLAnalytics - Proactive cap detection: Enhanced accuracy [ID_38508]
+
+<!-- MR 10.4.0 - FR 10.4.3 -->
+
+The accuracy of proactive cap detection events (i.e. forecasted alarms) reporting data range violations has been improved.
+
+#### Service & Resource Management: Enhanced performance when adding or updating bookings [ID_38521]
+
+<!-- MR 10.4.0 - FR 10.4.3 -->
+
+Because of a number of enhancements, overall performance has increased when adding or updating bookings, especially on systems with a large number of bookings.
+
+#### SLAnalytics - Behavioral anomaly detection: Enhanced detection of change points of type flatline [ID_38528]
+
+<!-- MR 10.4.0 - FR 10.4.3 -->
+
+Change point detection accuracy has been improved for change points of type flatline.
 
 ### Fixes
 
@@ -1112,12 +1193,6 @@ When small, unlabelled changes were detected in a trend graph of a parameter of 
 
 In some rare cases, a database write operation could incorrectly remain stuck in an internal queue and would never get processed.
 
-#### Problem when loading data of elements hosted on another DMA while a correlation rule action was running [ID_38121]
-
-<!-- MR 10.4.0 - FR 10.4.2 -->
-
-When, while an extensive correlation rule action was running, you opened an element card of an element hosted on a DataMiner Agent other than the one you were connected to, loading the data of that element could get delayed until the correlation rule action had finished.
-
 #### Problems with gRPC connections when SLNet was not running [ID_38177]
 
 <!-- MR 10.4.0 - FR 10.4.2 -->
@@ -1127,6 +1202,12 @@ When a DataMiner Agent had the APIGateway service running but not the SLNet proc
 - No exception would be thrown when a client application sent a message via one of the gRPC connections that was still open. Instead, an empty response was returned. As a result, client applications would not notice that there was a problem.
 
 - When an attempt was made to establish a new gRPC connection, an `Invalid username or password` would be returned instead of a `DataMinerNotRunningException`.
+
+#### Web apps: Visual overview linked to a view would not get any updates when the user did not have full administrative rights [ID_38180]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
+
+When a web app user without full administrative rights viewed a visual overview linked to a view, the app would incorrectly not receive any updates for that visual overview.
 
 #### SLAnalytics - Automatic incident tracking: Problem after clearing or removing an alarm [ID_38239]
 
@@ -1142,6 +1223,12 @@ When an alarm had been cleared or removed, in some cases, the automatic incident
 
 When, while automatic incident tracking was running, you manually created an incident (i.e. an alarm group) containing non-active alarms, an empty alarm group would be created.
 
+#### DataMiner Cube was not able to reconnect to the server after a disconnect using gRPC [ID_38260]
+
+<!-- MR 10.4.0 - FR 10.4.3 -->
+
+Up to now, when using a gRPC connection, Cube was not able to verify whether the server endpoint was available. As a result, it would fail to reconnect to the server when the connection had been lost and would display a `Waiting for the connection to become available...` message indefinitely.
+
 #### Correlation: Alarm buckets would not get cleaned up when alarms were cleared before the end of the time frame specified in the 'Collect events for ... after first event, then evaluate conditions and execute actions' setting [ID_38292]
 
 <!-- MR 10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
@@ -1149,3 +1236,43 @@ When, while automatic incident tracking was running, you manually created an inc
 Up to now, when alarms were cleared before the end of the time frame specified in the *Collect events for ... after first event, then evaluate conditions and execute actions* correlation rule setting, the alarm buckets would not get cleaned up.
 
 From now on, when a correlation rule is configured to use the *Collect events for ... after first event, then evaluate conditions and execute actions* trigger mechanism, all alarm buckets will be properly cleaned up, unless there are actions that need to be executed either when the base alarms are updated or when alarms are cleared.
+
+#### Web apps - Visual overview: Popup window would not display a hidden page when the visual overview only contained one non-hidden page [ID_38331]
+
+<!-- MR 10.2.0 [CU21] / 10.3.0 [CU12] / 10.4.0 [CU0] - - FR 10.4.3 [CU0] -->
+
+When, in a visual overview with one non-hidden page displayed in a web app, you tried to open a popup window linked to a page marked as "hidden", the popup window would incorrectly display the non-hidden page instead of the hidden page.
+
+#### Automation: Problem when empty data is passed to the UI parser when running an interactive Automation script [ID_38408]
+
+<!-- MR 10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
+
+When running an interactive Automation script that was launched from Cube or a web app, in some cases, an exception could be thrown when empty data was passed to the UI parser.
+
+From now on, an exception will no longer be thrown when empty data is passed to the UI parser.
+
+#### DataMiner Cube was not able to reconnect to the server after a disconnect [ID_38481]
+
+<!-- MR 10.4.0 - FR 10.4.3 -->
+
+In some cases, DataMiner Cube would not be able to reconnect to the server after having been disconnected.
+
+#### SLAnalytics - Behavioral anomaly detection: Certain parameter value changes would incorrectly not get processed [ID_38545]
+
+<!-- MR 10.4.0 - FR 10.4.3 -->
+
+When SLAnalytics was handling large amounts of traffic, in some cases, certain parameter value changes would incorrectly not get processed.
+
+Also, a large number of low-severity change points were generated without a label. Those have now been reduced.
+
+#### Problem when adding a DMA to a DMS [ID_38620]
+
+<!-- MR 10.3.0 [CU12] / 10.4.0 [CU0] - FR 10.4.3 [CU0] -->
+
+When a DataMiner Agent was added to a DataMiner System, in some cases, the SLNet cache of the new DataMiner Agent would not get updated, causing the Agent to not be aware it was now part of a DMS.
+
+#### Problem with SLDataMiner while sending a SetDocumentEofMessage with a negative file number [ID_38712]
+
+<!-- MR 10.3.0 [CU12] / 10.4.0 [CU0] - FR 10.4.3 [CU0] -->
+
+In some cases, SLDataMiner could stop working while sending a `SetDocumentEofMessage` with a negative file number via SLNet.

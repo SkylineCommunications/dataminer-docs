@@ -4,12 +4,14 @@ uid: Benefits_Business_and_Tech_Partners
 
 # Benefits for DataMiner business and technology partners
 
-By creating DataMiner business value and market presence, you earn DevOps Points. Not only do these points determine your [DevOps Professional level](xref:DevOps_Points), they also allow you to enjoy the plentiful benefits attached to the DevOps Professional Program.
+By creating DataMiner business value and market presence, you earn DevOps Points.
+
+Not only do these points determine your [DevOps Professional level](xref:DevOps_Points), they also allow you to enjoy the plentiful benefits attached to the DevOps Professional Program.
 
 > [!NOTE]
 > We are continuously working on further evolving this key program, so new benefits or ways of collecting DevOps Points can be expected.
 
-As a DataMiner Business Partner or DataMiner Technology Partner, by default you are eligible to all [general DevOps Points](xref:Benefits_DevOps_Professionals_Program).
+As a DataMiner Business Partner or DataMiner Technology Partner, by default you are eligible to all [general DevOps Points](xref:DevOps_Points).
 
 In addition to these general DevOps Points, as a partner you also gain DevOps Points from engaging in business activities. You can transfer the points you have earned to DOJO points and use them to pay for personal or professional benefits (i.e. swap them for professional service credits or DataMiner credits ([DataMiner Swag Shop](https://community.dataminer.services/swag-shop/))).
 

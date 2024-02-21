@@ -51,11 +51,7 @@ For the inter-DMA communication, like for the communication with DataMiner Cube,
 > [!IMPORTANT]
 > The gRPC connection feature is still a beta feature in DataMiner 10.3.2/10.3.0 CU0, which means you may still encounter issues and the connection might still be less stable than with .NET Remoting.
 
-To enable gRPC for the communication between DataMiner Agents in a cluster, add [redirects in DMS.xml](xref:DMS_xml#redirects-subtag).
-
-#### NATS
-
-From version 10.1.0/10.1.1 onwards, DataMiner relies on NATS for some inter-process communication. By default, this NATS traffic is not yet encrypted. For more information, refer to the [official NATS documentation on enabling TLS encryption](https://docs.nats.io/running-a-nats-service/configuration/securing_nats/tls).
+To enable gRPC for the communication between DataMiner Agents in a cluster, add [redirects in DMS.xml](xref:DMS_xml#redirects-subtag) or, from **10.3.6/10.3.0 [CU3] onwards**, disable .NET Remoting completely in [MaintenanceSettings.xml](xref:Configuration_of_DataMiner_processes#disabling-net-remoting).
 
 ## DataMiner Webpages hardening
 
@@ -133,6 +129,7 @@ On DataMiner versions installed using the **10.0 installer** (or older), the Dat
 
   > [!NOTE]
   > This rule and the one above for TCP 7000 only apply when the DataMiner System uses a Cassandra database locally.
+  > If Cassandra is configured to use TLS, port 7001 and 9142 are used instead. For detailed information on securing Cassandra, refer to [securing self hosted storage](#secure-self-hosted-dataminer-storage).
 
 - TCP 9200: Elasticsearch (client-server communication)
 
@@ -159,7 +156,7 @@ If you use the **DataMiner 10.1 installer or a more recent installer**, the port
 
 - TCP port **9004** can always be closed from DataMiner 10.0.11 CU0 and 10.0.0 CU6 onwards.
 
-- TCP port **8222** can always be closed. This will be the default from 10.1.12 CU0 and 10.2.0 CU0 onwards.
+- TCP port **8222** can always be closed. The port is closed by default from 10.1.12 CU0 and 10.2.0 CU0 onwards.
 
 - The ports for NATS communication (**4222, 6222, and 9090**) can be closed when the DMA is not part of a cluster.
 

@@ -2,7 +2,6 @@ items:
   - name: IDP 1.2.1
     topicUid: IDP_1.2.1
   - name: IDP 1.2.0
-    topicUid: IDP_1.2.0
     items:
       - name: New features and changes
         topicUid: IDP_1.2.0
@@ -13,7 +12,6 @@ items:
   - name: IDP 1.1.20
     topicUid: IDP_1.1.20
   - name: IDP 1.1.19
-    topicUid: IDP_1.1.19
     items:
       - name: New features and changes
         topicUid: IDP_1.1.19
@@ -28,21 +26,18 @@ items:
   - name: IDP 1.1.15
     topicUid: IDP_1.1.15
   - name: IDP 1.1.14
-    topicUid: IDP_1.1.14
     items:
       - name: New features and changes
         topicUid: IDP_1.1.14
       - name: Addendum CU1
         topicUid: IDP_1.1.14_CU1
   - name: IDP 1.1.13
-    topicUid: IDP_1.1.13
     items:
       - name: New features and changes
         topicUid: IDP_1.1.13
       - name: Addendum CU1
         topicUid: IDP_1.1.13_CU1
   - name: IDP 1.1.12
-    topicUid: IDP_1.1.12
     items:
       - name: New features and changes
         topicUid: IDP_1.1.12
@@ -51,7 +46,6 @@ items:
   - name: IDP 1.1.11
     topicUid: IDP_1.1.11
   - name: IDP 1.1.10
-    topicUid: IDP_1.1.10
     items:
       - name: New features and changes
         topicUid: IDP_1.1.10
@@ -66,14 +60,12 @@ items:
   - name: IDP 1.1.7
     topicUid: IDP_1.1.7
   - name: IDP 1.1.6
-    topicUid: IDP_1.1.6
     items:
       - name: New features and changes
         topicUid: IDP_1.1.6
       - name: Addendum CU1
         topicUid: IDP_1.1.6_CU1
   - name: IDP 1.1.5
-    topicUid: IDP_1.1.5
     items:
       - name: New features and changes
         topicUid: IDP_1.1.5

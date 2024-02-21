@@ -8,7 +8,7 @@ uid: user-defined_API_benchmarks
 
 - Intel Core Xeon E5-2620 v4
 - 8 cores (16 threads)
-- 32GB RAM
+- 32 GB RAM
 - HDD (RAID)
 - Windows 10
 
@@ -16,7 +16,7 @@ uid: user-defined_API_benchmarks
 
 - Intel Core i7-12700
 - 12 cores (20 threads)
-- 32GB RAM
+- 32 GB RAM
 - SSD (NVMe)
 - Windows 11
 

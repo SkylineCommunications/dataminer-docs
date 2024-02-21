@@ -15,6 +15,9 @@ The installer includes AdoptOpenJDK 8 as well as DevCenter. It sets up a Cassand
 
 > You can download this tool from [DataMiner Dojo](https://community.dataminer.services/download/standalone-cassandra-cluster-installer/).
 
+> [!NOTE]
+> You will need to run this tool as administrator.
+
 ## Requirements
 
 - Microsoft Windows

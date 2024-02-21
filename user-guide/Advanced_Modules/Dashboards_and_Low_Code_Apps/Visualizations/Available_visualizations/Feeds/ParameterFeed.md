@@ -11,7 +11,7 @@ This dashboard feed allows the user to select multiple parameters from a predefi
 > - From DataMiner 10.2.4, 10.1.0 [CU13] and 10.2.0 [CU1] onwards, if the component is loaded with an initial selection, the selected items are always displayed at the top. Prior to these DataMiner versions, the *Selected only* toggle button can be used to show or hide items that are not selected.
 > - From DataMiner 10.3.4/10.4.0 onwards, when an EPM feed is used to feed EPM identifiers to a parameter feed, it will also list the parameters of the enhanced elements that are linked to the EPM objects. EPM identifiers are System Type and Name data provided by an EPM feed (indicated as *EPM identifiers* in the data pane). <!-- RN 35562 -->
 
-To configure this component:
+## Configuring the component
 
 1. Apply the necessary data feeds. See [Applying a data feed](xref:Apply_Data_Feed).
 

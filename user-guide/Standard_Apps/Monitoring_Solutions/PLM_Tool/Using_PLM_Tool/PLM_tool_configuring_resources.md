@@ -4,7 +4,7 @@ uid: PLM_tool_configuring_resources
 
 # Configuring resources
 
-In the Planned Maintenance tool's *Configuration* tab, you find two essential configuration tables. These tables are crucial for validating the entered resource's status as a valid entity during the creation process. Set up these resource validation configuration tables before creating maintenance events.
+On the Planned Maintenance tool's *Configuration* page, you find two essential configuration tables. These tables are crucial for validating the entered resource's status as a valid entity during the creation process. Set up these resource validation configuration tables before creating maintenance events.
 
 The ***Resource Types* table** delimits the supported resources.
 

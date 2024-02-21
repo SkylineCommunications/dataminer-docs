@@ -25,7 +25,7 @@ Each DataMiner System requires its own system data storage. This data storage se
 
 - Instead of a dedicated clustered storage setup, it is also possible to use **storage per DMA** (with [Cassandra](xref:Migrating_the_general_database_to_Cassandra) or [MySQL](xref:MySQL_database)), though this is not recommended. If you are still using a legacy setup with MySQL, we highly recommend migrating to Cassandra, as MySQL is no longer supported as of DataMiner 10.3. If you are using a setup with Cassandra, we also highly recommend adding an [indexing database](xref:Indexing_Database) to make sure you have access to features such as DOM and SRM.
 
-In addition to the system databases, you can also configure an [offload database](xref:Offload_database), for example to produce reports without interfering with the live DataMiner System. [Additional databases](xref:Configuring_an_additional_database) can also be configured, for example for DataMiner Inventory & Asset Management.
+If you host the DataMiner storage yourself, you can also configure an additional [offload database](xref:Offload_database), for example to produce reports without interfering with the live DataMiner System. [Additional databases](xref:Configuring_an_additional_database) can also be configured, for example for DataMiner Inventory & Asset Management.
 
 > [!TIP]
 > See also:

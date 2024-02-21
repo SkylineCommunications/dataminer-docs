@@ -20,7 +20,7 @@ To configure this setup, proceed as follows:
 
    - *search* attribute: Always set this to "true".
 
-   - *ID* attribute: This should be a unique number, preferably starting at 0 and increasing by 1 for each additional cluster.
+   - *ID* attribute: This should be a unique number, preferably starting at 0 and increasing by 1 for each additional cluster. The ID for a specific database must be the same on any DataMiner Agent.
 
    - *priorityOrder* attribute: Indicates the priority of the different clusters. The lower the value, the greater the priority. The cluster with the lowest value is the main cluster, from which data will be read.
 
@@ -32,7 +32,7 @@ To configure this setup, proceed as follows:
 
    - *PWD*: The password to connect to OpenSearch.
 
-   - *DB*: The prefix for the OpenSearch indexes.
+   - *DB*: The prefix for the OpenSearch indexes. The specified value must be the same for each OpenSearch cluster defined in *DB.xml*.
 
    - *FileOffloadIdentifier*: String used to identify this connection. Each connection should have a different identifier, which will be used for file offloads.
 
@@ -85,7 +85,7 @@ To configure this setup, proceed as follows:
 
    - **Password**: The password that will be used to connect to OpenSearch. This is the equivalent of the *PWD* tag in the *DB.xml* file (see [Specifying custom credentials for OpenSearch or Elasticsearch](xref:DB_xml#specifying-custom-credentials-for-opensearch-or-elasticsearch)).
 
-   - **Prefix**: The prefix for the OpenSearch indexes. This is the equivalent of the *DB* tag in the *DB.xml* file (see [Specifying a custom prefix for the indexes](xref:DB_xml#specifying-a-custom-prefix-for-the-indexes)).
+   - **Prefix**: The prefix for the OpenSearch indexes. This is the equivalent of the *DB* tag in the *DB.xml* file. The specified value must be the same for each OpenSearch cluster defined in *DBConfiguration.xml*. (see [Specifying a custom prefix for the indexes](xref:DB_xml#specifying-a-custom-prefix-for-the-indexes)).
 
    - **FileOffloadIdentifier**: The string used to identify this connection. Each connection should have a different identifier, which will be used for file offloads.
 

@@ -7,6 +7,14 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.0
 > [!NOTE]
 > Range 1.0.x.x is supported as from **DataMiner 10.1.0**. This is a continuation from the now obsolete [Class Library](xref:ClassLibrary_Range_1.2).
 
+### 1.0.1.5
+
+#### Fix - Element deletion will be fully deleted
+
+When an IDmsElement is deleted, a flag will now be set to properly delete an element like when this is done via Cube.
+
+Without the flag, it could happen that active alarms were not deleted.
+
 ### 1.0.1.4
 
 #### Fix - 1-minute timeout on Start and Stop Monitors increased to 10 minutes
