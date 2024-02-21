@@ -710,8 +710,18 @@ a.backtotoplink:hover
   max-width: 25%;
   padding: 0px 10px;
 }
+.columnhome {
+  flex: 16.66%;
+  max-width: 16.66%;
+  padding: 0px 10px;
+}
 
 .column img {
+  margin-top: 2px;
+  vertical-align: middle;
+  width: 100%;
+}
+.columnhome img {
   margin-top: 2px;
   vertical-align: middle;
   width: 100%;
@@ -720,8 +730,14 @@ a.backtotoplink:hover
 .column img:hover{
   background-color: #e7e7e7;
 }
+.columnhome img:hover{
+  background-color: #e7e7e7;
+}
 
 .column img:active{
+  background-color: #d1d1d1;
+}
+.columnhome img:active{
   background-color: #d1d1d1;
 }
 
@@ -732,11 +748,21 @@ a.backtotoplink:hover
     flex: 50%;
     max-width: 50%;
   }
+  .columnhome {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
 }
 
 /* Responsive layout - makes the 2 columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
   .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+  .columnhome {
     -ms-flex: 100%;
     flex: 100%;
     max-width: 100%;
