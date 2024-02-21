@@ -640,6 +640,11 @@ items:
             topicUid: Linking_a_shape_to_a_booking
           - name: Linking a shape to a resource
             topicUid: Linking_a_shape_to_a_resource
+      - name: Tutorials
+        topicUid: Tutorials_Visio
+        items:
+          - name: Getting started with basic shapes
+            topicUid: Getting_started_with_basic_shapes
       - name: Miscellaneous
         topicUid: Miscellaneous
         items:
