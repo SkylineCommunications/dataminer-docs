@@ -54,10 +54,11 @@ For the inter-DMA communication, like for the communication with DataMiner Cube,
 To enable gRPC for the communication between DataMiner Agents in a cluster, add [redirects in DMS.xml](xref:DMS_xml#redirects-subtag) or, from **10.3.6/10.3.0 [CU3] onwards**, disable .NET Remoting completely in [MaintenanceSettings.xml](xref:Configuration_of_DataMiner_processes#disabling-net-remoting).
 
 #### NATS
+
 By default, NATS does not employ TLS encryption, leaving communication susceptible to eavesdropping. Consequently, we strongly recommend [enabling TLS encryption for enhanced security within your NATS cluster](xref:Security_NATS).
 
 > [!IMPORTANT]
-> The NATS communication feature was initially introduced in DataMiner version 10.1.0 CU0 and has been consistently present in every subsequent release.
+> NATS communication is used from DataMiner 10.1.0 CU0 onwards.
 
 ## DataMiner Webpages hardening
 
