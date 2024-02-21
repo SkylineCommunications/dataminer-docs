@@ -27,6 +27,12 @@ Examples of new log entries:
 
 In the latter case, no error would be returned up to now.
 
+#### GQI: All GQI queries opened by the same user will now share one and the same connection [ID_38452]
+
+<!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
+
+Up to now, each GQI query would open a dedicated SLNet connection. From now on, all GQI queries launched by the same user will share one and the same connection.
+
 #### Service & Resource Management: Booking name validation now case-insensitive [ID_38556]
 
 <!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
