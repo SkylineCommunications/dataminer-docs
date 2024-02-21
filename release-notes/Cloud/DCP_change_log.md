@@ -129,7 +129,7 @@ You can manually delete a DaaS system from dataminer.services, just like any oth
 
 #### 28 November 2023 - Enhancement - Deploying multiple DaaS Express systems simultaniously
 
-From now on it is possible to deploy more than one DaaS Express system simultaniously on [dataminer.services](https://dataminer.services).
+From now on it is possible to create more than one DaaS Express system simultaneously on [dataminer.services](https://dataminer.services).
 
 #### 24 November 2023 - Fix - Improved username validation when deploying a DaaS Express system
 
