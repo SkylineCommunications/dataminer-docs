@@ -6,7 +6,7 @@ uid: The_SmartTrapProcessor_user_interface
 
 ## Accessing the Smart Trap Processor tool
 
-To access the Trap Processor low-code app:
+To access the Smart Trap Processor low-code app:
 
 1. Go to `http(s)://[DMA name]/root`.
 
@@ -18,7 +18,7 @@ To access the Trap Processor low-code app:
 
 ## The Smart Trap Processor tool sidebar
 
-The sidebar on the left of the Trap Processor tool contains buttons that can be used to expand different pages:
+The sidebar on the left of the Smart Trap Processor tool contains buttons that can be used to go to different pages:
 
 | Button | Description |
 |--|--|

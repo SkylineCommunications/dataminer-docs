@@ -4,7 +4,7 @@ uid: Monitoring_Processed_Traps
 
 # Monitoring Processed Traps
 
-Once at least one trap processor element has been configured to process traps from a valid source that is actively generating events, you can monitor the processed events and heartbeats on the *Processed Traps* page.
+Once at least one trap processor element has been configured to process traps from a valid source that is actively generating events, you can monitor the processed events and heartbeats on the *Processed Traps* page of the Smart Trap Processor tool.
 
 ![Smart Trap Processor Homepage](~/user-guide/images/TrapProcessor_Overview.png)
 
@@ -14,15 +14,15 @@ Once at least one trap processor element has been configured to process traps fr
 
 - Each element block in the grid shows the element name, state, current alarm status, trap IP sources, maximum age of events, *Keep Alive* setting, protocol name, and protocol version.
 
-- When an element is selected, the following information is shown above the *Processed Messages* table:
+- When an element is selected, the following information is shown above the *Processed Traps* table:
 
-  - The number of active events in the *Processed Messages* table.
+  - The number of active events in the *Processed Traps* table.
 
-  - The number of cleared events in the *Processed Messages* table.
+  - The number of cleared events in the *Processed Traps* table.
 
   - The number of events matching various alarm severities: Critical, Major, Minor, Warning.
 
-- When an element is selected, you will find the following information in the *Processed Messages* table:
+- When an element is selected, you will find the following information in the *Processed Traps* table:
 
   - **Alarm Description**: Values corresponding to the *Alarm Set* and *Alarm Clear* parameters in the [Rules table](xref:Processor_configuration#rules-table-configuration).
 

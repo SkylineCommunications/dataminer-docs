@@ -18,7 +18,7 @@ uid: Installing_Smart_Trap_Processor
 
 1. Select the target DataMiner System and confirm the deployment. The package will be pushed to the DataMiner System.
 
-   If this is the first time you install the tool, a new view and element named "Smart Trap Processor" automatically be created when the package is installed. Optionally, you can rename the element and view, and you can change their location in the Surveyor.
+   If this is the first time you install the tool, a new view and element named "Smart Trap Processor" will automatically be created when the package is installed. Optionally, you can rename the element and view, and you can change their location in the Surveyor.
 
    Once the package has been installed, you can access the *Smart Trap Processor* low-code app at `http(s)://[DMA name]/root`.
 

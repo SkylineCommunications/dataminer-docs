@@ -4,7 +4,7 @@ uid: Processor_configuration
 
 # Configuring processing rules
 
-To configure a processor element, you can either use DataMiner Cube or the Smart Trap Processor tool (on the *Processor Configuration* page). The configuration described below is the same regardless of which interface is used.
+To configure a processor element, you can either use DataMiner Cube or the Smart Trap Processor tool (on the *Processor Configuration* page). The configuration described below is the same regardless of which interface is used. The only difference is that the *Processed Traps* table in the tool is called the *Processed Messages* table in the processor element in Cube.
 
 ## Trap IP Sources configuration
 
@@ -16,17 +16,19 @@ This could for example be the IP address of an SNMP manager that aggregates trap
 
 ![Smart Trap Processor IP Sources](~/user-guide/images/TrapProcessor_IPSources.png)
 
-When a Trap source IP has been entered, proceed to the rest of the processing configuration in the [Rules table](#rules-table-configuration), [Source Name table](#source-name-table-configuration), [Source IP Name table](#source-ip-name-table-configuration), and [Auto-Clear section](#auto-clear-configuration).
+You can also specify multiple IP addresses, using a comma as separator.
+
+When a trap source IP has been configured, proceed to the rest of the processing configuration in the [Rules Table](#rules-table-configuration), [Source Name Table](#source-name-table-configuration), [Source IP Name Table](#source-ip-name-table-configuration), and [Auto Clear Configuration section](#auto-clear-configuration).
 
 ## Rules Table configuration
 
-The rules defined in the Rules Table determine which traps from the source are processed to be displayed and monitored in the *Processed Messages* table and *Heartbeat Traps* table.
+The rules defined in the Rules Table determine which traps from the source are processed to be displayed and monitored in the *Processed Traps* table and *Heartbeat Traps* table.
 
 ![Trap Processor Rules Table](~/user-guide/images/TrapProcessor_RulesTable.png)
 
 - **Rule Status**: If a row should be considered when processing a trap, set this to *Enabled*; otherwise, set it to *Disabled*.
 
-- **Rule Type**: Set this to *Regular* for traps that should be displayed in the *Processed Messages* table, or to *Heartbeat* for traps that should be displayed in the *Heartbeat Traps* table.
+- **Rule Type**: Set this to *Regular* for traps that should be displayed in the *Processed Traps* table, or to *Heartbeat* for traps that should be displayed in the *Heartbeat Traps* table.
 
 - **Heartbeat Interval**: The expected interval of time between heartbeats that has been configured in the trap manager or device outside of DataMiner. The tool uses the interval you specify here to calculate the heartbeat status by comparing the interval to the time since the last heartbeat.
 
@@ -36,25 +38,9 @@ The rules defined in the Rules Table determine which traps from the source are p
 
 - **Raw OID Clear**: The OID of a trap representing the cleared state of a trap event.
 
-- **Unique Entry**: Enter a value to define a unique entry for each row in the *Processed Messages* table, for example `$4/$9/$2`.
+- **Unique Entry**: Enter a value to define a unique entry for each row in the *Processed Traps* table, for example `$4/$9/$2`.
 
-  This value must be something that always matches the raised and cleared traps for a particular type of event. This way, the raised/cleared events can be correlated via a matching unique entry, resulting in a single row in the *Processed Messages* table. The event state can then be tracked and monitored depending on whether the last processed trap was a raised or cleared condition.
-
-  You can use the following **placeholders** in this value:
-
-  - Binding n: `$n`
-
-  - Severity: `$SEV`
-
-  - Source IP: `$IP`
-
-  - Source IP name: `$IPN`
-
-  - Source name: `$SN`
-
-- **Alarm Set**: Enter a value to define the format and content used for the alarm parameter in the *Processed Messages* table, for example `$1`.
-
-  If the last received trap corresponds to a raised state, the value defined here will be displayed in the *Processed Messages* table.
+  This value must be something that always matches the raised and cleared traps for a particular type of event. This way, the raised/cleared events can be correlated via a matching unique entry, resulting in a single row in the *Processed Traps* table. The event state can then be tracked and monitored depending on whether the last processed trap was a raised or cleared condition.
 
   You can use the following **placeholders** in this value:
 
@@ -68,9 +54,25 @@ The rules defined in the Rules Table determine which traps from the source are p
 
   - Source name: `$SN`
 
-- **Alarm Clear**: Enter a value to define the format and content used for the alarm parameter in the *Processed Messages* table, for example `$1`.
+- **Alarm Set**: Enter a value to define the format and content used for the alarm parameter in the *Processed Traps* table, for example `$1`.
 
-  If the last received trap corresponds to a cleared state, the value defined here will be displayed in the *Processed Messages* table.
+  If the last received trap corresponds to a raised state, the value defined here will be displayed in the *Processed Traps* table.
+
+  You can use the following **placeholders** in this value:
+
+  - Binding n: `$n`
+
+  - Severity: `$SEV`
+
+  - Source IP: `$IP`
+
+  - Source IP name: `$IPN`
+
+  - Source name: `$SN`
+
+- **Alarm Clear**: Enter a value to define the format and content used for the alarm parameter in the *Processed Traps* table, for example `$1`.
+
+  If the last received trap corresponds to a cleared state, the value defined here will be displayed in the *Processed Traps* table.
 
   You can use the following **placeholders** in this value:
 
@@ -104,9 +106,9 @@ The rules defined in the Rules Table determine which traps from the source are p
 
 ## Source Name Table configuration
 
-In this table, you can optionally define the names that should be used for the *Source Name* parameter in the *Processed Messages* table.
+In this table, you can optionally define the names that should be used for the *Source Name* parameter in the *Processed Traps* table.
 
-You can use this to give each event row in the *Processed Messages* table a description of the related device or system. For example, if the traps processed in a particular row correspond to a temperature alarm in rack #1 of the data center, the source name defined could be "Temp Sensor – Rack #1".
+You can use this to give each event row in the *Processed Traps* table a description of the related device or system. For example, if the traps processed in a particular row correspond to a temperature alarm in rack #1 of the data center, the source name defined could be "Temp Sensor – Rack #1".
 
 The source name definition can also utilize binding placeholders rather than a hard-coded string, so that the displayed source name is dynamic based on the processed trap. In most cases, this should be set to something that will always match both the raised and cleared event states.
 
@@ -119,7 +121,7 @@ The source name definition can also utilize binding placeholders rather than a h
 
 - **IP Address**: The IP address from which the traps must originate. This needs to match at least one of the IP addresses defined in the [*Trap IP Sources* parameter](#trap-ip-sources-configuration).
 
-- **Source Name**: Enter the value that should be displayed as the *Source Name* in the *Processed Messages* table.
+- **Source Name**: Enter the value that should be displayed as the *Source Name* in the *Processed Traps* table.
 
   You can enter a hard-coded string, or you can use the following placeholder:
 
@@ -135,7 +137,7 @@ The source name definition can also utilize binding placeholders rather than a h
 
 ## Source IP Name Table Configuration
 
-In this table, you can optionally define the values that should be used for the *Source IP Name* parameter in the *Processed Messages* table.
+In this table, you can optionally define the values that should be used for the *Source IP Name* parameter in the *Processed Traps* table.
 
 The value you specify should describe the device or system corresponding to the IP address set in the *Trap IP Sources* parameter. For example, If the source IP corresponds to a Compass brand trap management system, you could enter the source IP name "Compass Manager".
 
@@ -146,13 +148,13 @@ The value you specify should describe the device or system corresponding to the 
 
 - **IP Address**: The IP address from which the traps must originate. This needs to match at least one of the IP addresses defined in the [*Trap IP Sources* parameter](#trap-ip-sources-configuration).
 
-- **Source IP Name**: Enter the value that should be displayed as the *Source IP Name* in the *Processed Messages* table.
+- **Source IP Name**: Enter the value that should be displayed as the *Source IP Name* in the *Processed Traps* table.
 
 - **Delete**: Click this button to delete the rule.
 
 ## Auto-Clear Configuration
 
-In the auto-clear section, you can configure parameters that will determine the maximum number of rows and the maximum time traps will remain in the *Processed Messages* table.
+In the auto-clear section, you can configure parameters that will determine the maximum number of rows and the maximum time that traps will remain in the *Processed Traps* table.
 
 ![Auto Clear Settings](~/user-guide/images/TrapProcessor_AutoClear.png)
 
@@ -162,6 +164,6 @@ In the auto-clear section, you can configure parameters that will determine the 
 
 - **Keep Active**: If you enable this option, rows that have the event state “Active” will never be removed from the event table regardless of how old the active trap is.
 
-- **Max Processed Messages**: The maximum number of entries to keep in the *Processed Messages* table.
+- **Max Processed Messages**: The maximum number of entries to keep in the *Processed Traps* table.
 
 - **Max Received Traps**: The maximum number of entries to keep in the *Received Traps* table.
