@@ -14,7 +14,7 @@ Expected duration: 30 minutes.
 > - [Kata #19: Transform Low-Code Apps into visual delights](https://community.dataminer.services/courses/kata-19/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 > [!NOTE]
-> This tutorial uses DataMiner version 10.4.1.
+> This tutorial uses DataMiner version 10.4.2.
 
 ## Prerequisites
 
@@ -47,34 +47,37 @@ Expected duration: 30 minutes.
 
 1. If everything installed correctly, you should find an app there called **Best Practices in Low-Code App Design**. Open it and you should see the following home page:
 
-    [Initial app](~/user-guide/images/tutorial_app_design_intial_app.png)
+    ![Initial app](~/user-guide/images/tutorial_app_design_intial_app.png)
 
 1. As the intial package does not contain any contacts yet, add some sample contacts to the application by clicking the **Add contact** button, filling in the form and clicking the big **+ Add** button at the bottom of the form.
 
 ## Step 2: Choose a good app color and icon
 
-1. The main color of the app results in low contrast between the text in the left hand menu and the background color. Also the pages have no distinguishing icon. These are the first things that needs fixing.
+1. The main color of the app results in low contrast between the text in the left hand menu and the background color. Also the pages have no identifiable icon. These are the first things that needs fixing.
 
     ![Low contrast](~/user-guide/images/tutorial_app_design_low_contrast.png)
 
 1. In the top left corner click on the waffle icon to open the page where you can change the icon and the color of the low-code app
 
-1. Pick a general color for the app, make sure that there is enough contrast between the color and text color. As an example here we are using the hex color **#503e6f**. Also pick an icon for the app, in this case we picked an icon representing people by searching on "contact" in the icon list.
+1. Pick a general color for the app, make sure that there is enough contrast between the color and text color. As an example here we are using the hex color **#503e6f**. If you are in doubt if the contrast is good enough, you can use online tools like [Contrast Checker](https://webaim.org/resources/contrastchecker/)
 
-1. Use preview mode of the app to verify that the contrast is better between background and text.
+1. Also pick an icon for the app, in this case we picked an icon representing people by searching on "contact" in the icon list.
 
-    ![Better contrast](~/user-guide/images/tutorial_app_design_better_contrast.png)
+1. Use preview mode of the app to verify that the contrast between background and text has improved.
+
+   ![Better contrast](~/user-guide/images/tutorial_app_design_better_contrast.png)
 
 ## Step 3: Adding page icons
 
 The pages still have very generic icons per page, which make the pages hard to distinguish. Make sure you have good icons assigned to a page. To do this edit the page again and assign a icon in the **icon** menu next to the page.
-    ![Page icons](~/user-guide/images/tutorial_app_design_page_icons.png)
+
+   ![Page icons](~/user-guide/images/tutorial_app_design_page_icons.png)
 
 ## Step 4: Setting up themes
 
 In order to have a good looking app you need to start from a good looking theme. A theme determines how the pages and components are styled by default. By applying a good theme your app will already look much better with limited effort.
 
-1. In order to create / edit / delete themes we need to go to the dashboards application.
+1. In order to create / edit / delete themes we need to go to the dashboards application. When not in edit mode, click on the top left waffle icon to open up the side panel. Click on **Dashboards** to open up the Dashboards application.    
 
     ![Switch to dashboards](~/user-guide/images/tutorial_app_design_switch_to_dashboards.gif)
 
@@ -83,44 +86,44 @@ In order to have a good looking app you need to start from a good looking theme.
 1. Create a new theme here and give it a useful name.
 
 1. Set the following properties on the theme:
-   1. Set the background color of the theme to: rgb(243,243,245)
-   1. Edit the **Default** component theme
-      1. Under Title
-         1. set **font size** to *16px*
-         1. set alignment to *Center*
-      1. Under Color
-         1. set **background color** to rgb(253,253,253)
-         1. set **font** color to rgb(0,7,54)
-         1. Under Color palette define:
-            1. Color 1:  rgb(139,115,255)
-            1. Color 2:  rgb(66,204,126)
-            1. Color 3:  rgb(255,72,66)
-            1. Color 4:  rgb(255,194,8)
-            1. Color 5:  rgb(255,152,97)
-      1. Under Spacing
-         1. set **Vertical Margin** to 8px
-         1. set **Horizontal Margin** to 8px
-         1. set **Vertical Padding** to 10px
-         1. set **Horizontal Padding** to 10px
-      1. Under Border
-         1. set **Roundness** to 5px
-         1. set **Style** to Line
-         1. enable all sides
-         1. set **Thickness** to 1px
-         1. set **Color** to rgb(233,234,237)
-   1. Duplicate the Default component theme and call it **Transparent**
-      1. Set the opacity of the background color to 0%
-      1. Set the opacity of the border color to 0%
-   1. Save the theme
+   - Set the **background color** of the theme to: rgb(243,243,245)
+   - Edit the **Default** component theme
+      - Under Title
+         - set **font size** to *16px*
+         - set **alignment** to *Center*
+      - Under Color
+         - set **background color** to rgb(253,253,253)
+         - set **font** color to rgb(0,7,54)
+         - Under Color palette define:
+            - Color 1:  rgb(139,115,255)
+            - Color 2:  rgb(66,204,126)
+            - Color 3:  rgb(255,72,66)
+            - Color 4:  rgb(255,194,8)
+            - Color 5:  rgb(255,152,97)
+      - Under Spacing
+         - set **Vertical Margin** to 8px
+         - set **Horizontal Margin** to 8px
+         - set **Vertical Padding** to 10px
+         - set **Horizontal Padding** to 10px
+      - Under Border
+         - set **Roundness** to 5px
+         - set **Style** to Line
+         - enable all sides
+         - set **Thickness** to 1px
+         - set **Color** to rgb(233,234,237)
+   - Duplicate the **Default** component theme and call it **Transparent**
+      - Set the opacity of the background color to 0%
+      - Set the opacity of the border color to 0%
+   - Save the theme
 
 1. Dupiclate the theme we just created and add **- Panel** to the name. This is the theme we are going to use for our panels in the app.
-   1. Set the **background color** for the panel to rgb(253,253,253)
-   1. For the Default component:
-      1. Under Title
-         1. set **font size** to *14px*
-      1. Under Color
-         1. set **background color** to rgb(248,248,249)
-   1. Save the theme
+   - Set the **background color** for the panel to rgb(253,253,253)
+   - For the Default component:
+      - Under Title
+         - set **font size** to *14px*
+      - Under Color
+         - set **background color** to rgb(248,248,249)
+   - Save the theme
 
 ## Step 5: Apply a theme
 
@@ -130,7 +133,10 @@ In order to have a good looking app you need to start from a good looking theme.
 
 1. Components like titles, buttons, images should never have a background color. Select each of these components separately, go to Layout and select the Style **Transparent**
 
-1. Publish the app and now you should see an app which is already a little more appealing.
+  >> [!IMPORTANT]
+  >> Components like titles, buttons, images should never have a background color!
+
+1. Publish the app and now you should see an app which is already a little more appealing. Note for example that the pie chart has now clearly distguishible colors in contrast to the default themes.
 
     ![Theme applied](~/user-guide/images/tutorial_app_design_theme_applied.png)
 
@@ -142,7 +148,7 @@ In order to have a good looking app you need to start from a good looking theme.
    1. Ensure identical spacing left and right on the page.
    1. Use the available space, don't leave too much white space.
    1. Align components both vertically and horizontally, make them same height.
-   1. Adjust width of components. If components are positioned on the same row and are equally important, make their width identical (e.g. chart and grid component are each 30% of the width).
+   1. Adjust width of components. If components are positioned on the same row and are equally important, make their width identical (e.g. chart and grid component are each 1/3rd of the width).
    1. This is an example on how you could rearrange them to have a good looking result:
 
     ![Rearranged components](~/user-guide/images/tutorial_app_design_rearranged_components.png)
@@ -151,7 +157,7 @@ In order to have a good looking app you need to start from a good looking theme.
 
 Titles can be styled as just text boxes, but these are often very bland. To make them a little more interesting use a web component and add some HTML to it. In the app we already use a web component for it but the HTML is pretty basic. 
 
-1. Select the Contacts title and go to **Setting** in the right-hand column.
+1. Select the Contacts title and go to **Settings** in the right-hand column.
 
 1. Paste the following in the **HTML** field:
 
@@ -164,9 +170,9 @@ An overview of your contacts
 </div>
 ```
 
-1. The result should look like this:
+The result should look like this:
 
-    ![Rearranged components](~/user-guide/images/tutorial_app_design_fancy_title.png)
+![Rearranged components](~/user-guide/images/tutorial_app_design_fancy_title.png)
 
 ## Step 8: Fancy forms
 
@@ -234,9 +240,12 @@ Try to not use too many colors in an app. The grid in our sample is too colorful
 
 Last but not least is improving the look and feel of our contact table at the bottom of the page.
 
-1. Never show guids in a table! Reduce the number of colums in the table by adding column filter and selecting just the columns that you need from the Contacts query and dropping them onto the filter icon on the table:
+1. Reduce the number of colums in the table by adding column filter and selecting just the columns that you need from the Contacts query and dropping them onto the filter icon on the table:
 
     ![Table columns](~/user-guide/images/tutorial_app_design_table_columns.gif)
+
+  >> [!IMPORTANT]
+  >> Never show guids in a table!
 
 1. We can also improve the look and feel of each column by editing the template for that column. To do that, select the table, go to **Layout** and under **Column Appearance** select the **Full Name** column
 
@@ -246,7 +255,7 @@ Last but not least is improving the look and feel of our contact table at the bo
 
 1. Click on the {Full name} text, under **Dimensions** set the Left padding to 35px, all the rest can stay at 5px
 
-1. To make our font in the first column bold: in the text field replace the {Full name} with the following HTML:
+1. To make the font in the first column bold: in the text field replace the {Full name} with the following HTML:
 
 ```html
     <span style="font-weight:500">{Full name}</span>
