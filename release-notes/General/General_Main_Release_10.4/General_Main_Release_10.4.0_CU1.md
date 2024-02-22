@@ -180,6 +180,12 @@ At DataMiner startup, in some cases, errors could incorrectly be thrown when at 
 
 In some cases, SLAnalytics could stop working while processing an element with an invalid alarm template.
 
+#### Paused element set back to the active state would no longer receive any alarm updates [ID_38744]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+When a paused element was set back to the "started" state, it would no longer receive any alarm updates until it was restarted.
+
 #### DataMiner Maps: KML layers would incorrectly always be displayed first in the legend [ID_38746]
 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
