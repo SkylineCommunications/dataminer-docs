@@ -15,7 +15,7 @@ It is now possible to know the executor of a custom command executed with the Da
 
 To add a command to your DMS, create an Automation script in the folder "bot" in the DMS. For examples of such scripts, refer to [Custom Command Examples](https://github.com/SkylineCommunications/ChatOps-Extensions/tree/main/CustomCommandExamples) on GitHub.
 
-For more detailed information, refer to [Adding commands for the Teams bot to a DMS](xref:DataMiner_Teams_bot#adding-custom-commands-for-the-teams-bot-to-a-dms)
+For more detailed information, refer to [Adding commands for the Teams bot to a DMS](xref:DataMiner_Teams_bot#adding-custom-commands-for-the-teams-bot-to-a-dms).
 
 #### 16 February 2024 - Enhancement - Changed user role required to renew system tokens [ID_38722]
 
@@ -73,7 +73,7 @@ In an Automation script, you can use [the DcpChatIntegrationHelper NuGet](https:
 
 To add a command to your DMS, create an Automation script in the folder "bot" in the DMS. For examples of such scripts, refer to [Custom Command Examples](https://github.com/SkylineCommunications/ChatOps-Extensions/tree/main/CustomCommandExamples) on GitHub.
 
-For more detailed information, refer to [Adding commands for the Teams bot to a DMS](xref:DataMiner_Teams_bot#adding-custom-commands-for-the-teams-bot-to-a-dms)
+For more detailed information, refer to [Adding commands for the Teams bot to a DMS](xref:DataMiner_Teams_bot#adding-custom-commands-for-the-teams-bot-to-a-dms).
 
 #### 23 January 2024 - Fix - Unknown error when remote accessing web apps [ID_38549]
 
@@ -319,7 +319,7 @@ The following limitations also apply:
 - Commands that run longer than 30 seconds are currently not supported.
 - Issues with the adaptive card output will not result in proper error feedback.
 
-For more detailed information, refer to [Adding commands for the Teams bot to a DMS](xref:DataMiner_Teams_bot#adding-custom-commands-for-the-teams-bot-to-a-dms)
+For more detailed information, refer to [Adding commands for the Teams bot to a DMS](xref:DataMiner_Teams_bot#adding-custom-commands-for-the-teams-bot-to-a-dms).
 
 #### 19 September 2022 - Enhancement - Improvements on Audit page in Admin app [ID_34457]
 
