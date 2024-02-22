@@ -192,6 +192,12 @@ The DaaS startup routine has now been improved to prevent issues like the one de
 
 Up to now, it could occur that the script *SRM_QuarantineHandling* retrieved a previous version of a booking instead of the latest, quarantined version, which could cause subsequent updates to corrupt the booking object. To prevent this, *SRM_QuarantineHandling* will now be called after a booking is saved.
 
+#### STaaS: Problem when going into file offload mode [ID_38648]
+
+<!-- MR 10.5.0 - FR 10.4.4 -->
+
+When the system went into file offload mode, in some cases, a serialization issue could occur, causing the file offload mode to get stuck.
+
 #### SLAnalytics - Behavioral anomaly detection: Problem when updating the anomaly configuration for a DVE element [ID_38661]
 
 <!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
