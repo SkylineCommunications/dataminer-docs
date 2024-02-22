@@ -28,6 +28,15 @@ uid: General_Feature_Release_10.4.4
 
 ### Enhancements
 
+#### Circular correlation rules will now be blocked [ID_38301]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+A correlation rule will now be blocked when it was triggered due to a correlated alarm that depends on an alarm created by the rule in question.
+
+> [!NOTE]
+> ​This feature only works when the correlation rule and all alarms in question reside on the same DataMiner Agent.
+
 #### Automation: Late script control requests will now be ignored [ID_38409]
 
 <!-- MR 10.4.0 [CU1] - FR 10.4.4 -->

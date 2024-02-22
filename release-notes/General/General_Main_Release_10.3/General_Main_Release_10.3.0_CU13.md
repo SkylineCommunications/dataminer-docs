@@ -12,6 +12,15 @@ uid: General_Main_Release_10.3.0_CU13
 
 ### Enhancements
 
+#### Circular correlation rules will now be blocked [ID_38301]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+A correlation rule will now be blocked when it was triggered due to a correlated alarm that depends on an alarm created by the rule in question.
+
+> [!NOTE]
+> ​This feature only works when the correlation rule and all alarms in question reside on the same DataMiner Agent.
+
 #### GQI: Clearer error message will now be thrown when an ad hoc data source or custom operator cannot be instantiated [ID_38686]
 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
