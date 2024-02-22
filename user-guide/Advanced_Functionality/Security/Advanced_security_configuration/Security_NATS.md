@@ -11,51 +11,53 @@ By default, NATS does **not** employ TLS encryption, leaving communication susce
 > [!NOTE]
 > This applies solely to instances involving a DMS cluster or external DxMs. If you have a single-Agent setup, all communication is confined to the local host, as there is only one NATS node.
 
-Before proceeding with the configuration of each node in the cluster, you should request or generate TLS certificates (in PEM format).
+1. Request or generate TLS certificates (in PEM format).
 
-To generate self-signed certificates, we recommend that you **use our [scripts for generating TLS certificates](https://github.com/SkylineCommunications/generate-tls-certificates)**, available on GitHub. There is a version of the script for Linux and for Windows machines. The script requires two tools: *openssl* and the *Java keytool*. Both of these can run on Linux and Windows.
+   To generate self-signed certificates, we recommend that you **use our [scripts for generating TLS certificates](https://github.com/SkylineCommunications/generate-tls-certificates)**, available on GitHub. There is a version of the script for Linux and for Windows machines. The script requires two tools: *openssl* and the *Java keytool*. Both of these can run on Linux and Windows.
 
-**To enable TLS encryption, please apply the following procedure to all the NATS nodes in the cluster:**
+1. Follow the steps below **for each of the NATS nodes** in the cluster to enable TLS encryption:
 
-1. Update the **nats-server.config** file to incorporate the TLS section within the cluster segment.
+   1. Update the **nats-server.config** file to incorporate the TLS section within the cluster segment.
 
-   This adjustment is necessary to accommodate the specified location of the PEM files. For example:
+      This adjustment is necessary to accommodate the specified location of the PEM files. For example:
 
-   ```
-   cluster {
-     tls {
-       cert_file: "absolute\\path\\to\\certificate_file\\certificate.pem"
-       key_file:  "absolute\\path\\to\\private-key_file\\private-key.pem"
-       ca_file:   "absolute\\path\\to\\rootCA_file\\rootCA.pem"
-     }
-   }
-   ```
+      ```
+      cluster {
+        tls {
+          cert_file: "absolute\\path\\to\\certificate_file\\certificate.pem"
+          key_file:  "absolute\\path\\to\\private-key_file\\private-key.pem"
+          ca_file:   "absolute\\path\\to\\rootCA_file\\rootCA.pem"
+        }
+      }
+      ```
 
-   > [!NOTE]
-   > The `ca_file` property is only required when self-signed certificates are used.
+      > [!NOTE]
+      > The `ca_file` property is only required when self-signed certificates are used.
 
-1. Stop your NATS service, by navigating to the Services tab within your Task Manager.
+   1. In the *Services* tab in the Windows Task Manager, stop the NATS service.
 
-1. Stop your NAS service, through the same Services tab in your Task Manager.
+   1. In the *Services* tab in the Windows Task Manager, stop the NAS services.
 
-1. Start your NATS service, which should automatically trigger the start of the NAS service. Access the Services tab within your Task Manager for seamless execution.
+   1. In the *Services* tab in the Windows Task Manager, start the NATS service.
 
-1. Verify whether TLS encryption is enabled:
+      This should automatically trigger the start of the NAS service as well.
 
-   1. Go to `http://localhost:8222/varz` in a browser.
+   1. Verify whether TLS encryption is enabled:
 
-   1. Check whether the `urls` property encompasses all the IP addresses of the NATS nodes configured with TLS.
+      1. Go to `http://localhost:8222/varz` in a browser.
 
-   1. Check whether the `tls_required` and `tls_verify` properties are appropriately configured to **true**.
+      1. Check whether the `urls` property encompasses all the IP addresses of the NATS nodes configured with TLS.
 
-   For example:
+      1. Check whether the `tls_required` and `tls_verify` properties are appropriately configured to **true**.
 
-   ```json
-     "cluster": {
-       "urls": [
-         "[NATS_NODE_IP_ADDRESS]:6222",
-       ],
-       "tls_required": true,
-       "tls_verify": true
-     }
-   ```
+      For example:
+
+      ```json
+        "cluster": {
+          "urls": [
+            "[NATS_NODE_IP_ADDRESS]:6222",
+          ],
+          "tls_required": true,
+          "tls_verify": true
+        }
+      ```
