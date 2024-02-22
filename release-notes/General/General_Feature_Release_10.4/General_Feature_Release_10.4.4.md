@@ -64,6 +64,12 @@ Up to now, each GQI query would open a dedicated SLNet connection. From now on, 
 
 The validation of the name of a booking is now case-insensitive. This means that when the SRM Framework checks if there are future bookings with the same name, the casing is now no longer taken into account.
 
+#### GQI: Ad hoc data source now supports real-time updates [ID_38643]
+
+<!-- MR 10.5.0 - FR 10.4.4 -->
+
+The ad hoc data source now supports real-time updates.
+
 #### SLAnalytics - Behavioral anomaly detection: Suggestion event generation will now be limited [ID_38674]
 
 <!-- MR 10.4.0 [CU1] - FR 10.4.4 -->

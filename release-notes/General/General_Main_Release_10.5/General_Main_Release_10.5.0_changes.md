@@ -139,6 +139,12 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 
 For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
 
+#### GQI: Ad hoc data source now supports real-time updates [ID_38643]
+
+<!-- MR 10.5.0 - FR 10.4.4 -->
+
+The ad hoc data source now supports real-time updates.
+
 ### Fixes
 
 #### Databases: Problem when starting a migration from MySQL to Cassandra [ID_37589]
