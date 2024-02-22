@@ -125,10 +125,10 @@ on:
     1. Displays the results and optionally performs quality gating activities
 
 ```yml
-    - name: InstallConnectorValidator
+    - name: Install Connector Validator
       run: dotnet tool install -g Skyline.DataMiner.CICD.Tools.Validator
 
-    - name: RunConnectorValidator
+    - name: Run Connector Validator
       run: dataminer-validator validate-protocol-solution --solution-path "${{ github.workspace }}" --output-directory "${{ github.workspace }}" --output-file-name "validateResults" 
 
     - name: Archive Results
@@ -159,7 +159,7 @@ Using GitHub Workflows with an Ubuntu runner. I have a json file in the workspac
 
 1. Commit your changes
 
-1. Navigate to Actions and see the run of your enhanced pipeline. This will perform:
+1. Navigate to *Actions* and see the run of your enhanced pipeline. This will perform:
 
     1. Compilation
 
@@ -175,9 +175,9 @@ Using GitHub Workflows with an Ubuntu runner. I have a json file in the workspac
 
 1. On the top, click on *dotnet.yml*. On the new window, click on the pencil icon to edit the page.
 
-1. Add a new Job called CD running on a windows image with 2 new steps that:
+1. Add a new job called CD running on a windows image with 2 new steps that:
 
-    1. Only runs if the CI Job completed
+    1. Only runs if the CI job completed
 
     1. Retrieves the source code
 
@@ -215,7 +215,7 @@ Using GitHub Workflows with an Ubuntu runner. I have a json file in the workspac
 
 1. Commit your changes
 
-1. Navigate to Actions and see the run of your enhanced pipeline. This will perform:
+1. Navigate to *Actions* and see the run of your enhanced pipeline. This will perform:
 
     1. Compilation
 
@@ -229,11 +229,11 @@ Using GitHub Workflows with an Ubuntu runner. I have a json file in the workspac
 
 ## Step 4: Add your GitHub secrets
 
-1. Navigate to Settings
+1. Navigate to *Settings*
 
 1. On the left, select *Secrets and variables*
 
-1. Under Actions, add a *New repository secret* for the following secrets:
+1. Under *Actions*, add a *New repository secret* for the following secrets:
 
     1. SERVER_LOCATION
 
@@ -243,7 +243,7 @@ Using GitHub Workflows with an Ubuntu runner. I have a json file in the workspac
 
 ## Step 5: Profit
 
-1. Navigate to Actions
+1. Navigate to *Actions*
 
 1. Select the *.NET* workflow on the left
 
@@ -251,15 +251,15 @@ Using GitHub Workflows with an Ubuntu runner. I have a json file in the workspac
 
 1. You should now see your CI and CD jobs complete successfully
 
-1. Taking a screenshot of this successful run and sending that to thunder@skyline.be or uploading it through the [DoJo tutorials page](https://community.dataminer.services/learning-courses-tutorials/) will grant you DevOps points.
+1. Taking a screenshot of this successful run and sending that to thunder@skyline.be or uploading it through the [Dojo tutorials page](https://community.dataminer.services/learning-courses-tutorials/) will grant you DevOps points.
 
 ## Advanced Options: CI
 
-Skyline Communications organization uses more than these actions. For enhanced CI, You can take a look at our [reusable workflow](https://github.com/SkylineCommunications/_ReusableWorkflows/blob/main/.github/workflows/Connector%20Master%20SDK%20Workflow.yml):
+Skyline Communications organization uses more than these actions. For enhanced CI, you can take a look at our [reusable workflow](https://github.com/SkylineCommunications/_ReusableWorkflows/blob/main/.github/workflows/Connector%20Master%20SDK%20Workflow.yml):
 
 1. SonarCloud static analysis to our CI
 
-1. Ability to use our GitHub Organization private NuGet store
+1. Ability to use our GitHub Organization private NuGet store (when added as external collaborator to the package source repository)
 
 1. Tagging is considered a release cycle, this overrides the dmprotocol version with the tag
 
