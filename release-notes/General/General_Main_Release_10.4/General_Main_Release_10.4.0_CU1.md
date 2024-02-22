@@ -83,6 +83,14 @@ SLLogCollector will now also collect the logs of the *CommunicationGateway* DxM.
 
 A number of security enhancements have been made.
 
+#### SLProtocol will no longer forward all parameter changes to SLElement [ID_38785]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+Up to now, SLProtocol would forward all parameter changes to SLElement, even when this was not strictly necessary. From now on, SLProtocol will only forward parameter changes to SLElement when the latter requires them.
+
+Also, when an SNMP parameter used a wildcard as OID, up to now, SLProtocol would forward the value of that wildcard to SLElement, which would then pass it on to the SLSNMPManager process. From now on, SLProtocol will forward those wildcard values directly to SLSNMPManager.
+
 #### At installation the StorageModule service will now be configured to restart itself after each failure [ID_38843]
 
 <!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
