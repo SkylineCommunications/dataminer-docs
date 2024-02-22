@@ -6,7 +6,7 @@ uid: artifactdeployer_change_log
 
 #### 22 February 2024 - Enhancement - ArtifactDeployer 1.6.6 - Improved deployment robustness [ID_38852]
 
-Improved robustness for Catalog and DxM deployments by adding and improving retry mechanisms.
+Robustness for Catalog and DxM deployments has been improved by adding and improving retry mechanisms.
 
 > [!TIP]
 > To make use of all the enhancements, also install Orchestrator 1.5.5.
