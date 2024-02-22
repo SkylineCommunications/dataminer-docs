@@ -74,6 +74,12 @@ SLLogCollector will now also collect the logs of the *CommunicationGateway* DxM.
 
 A number of security enhancements have been made.
 
+#### At installation the StorageModule service will now be configured to restart itself after each failure [ID_38843]
+
+<!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
+
+At installation, the StorageModule service will now be configured to restart itself after each failure.
+
 ### Fixes
 
 #### Problem with file offload mechanism when main database is offline [ID_38542]
