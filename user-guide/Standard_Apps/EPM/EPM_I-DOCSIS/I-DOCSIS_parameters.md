@@ -2,7 +2,10 @@
 uid: I-DOCSIS_parameters
 ---
 
-# Aggregated parameters in I-DOCSIS
+
+# Available parameters in I-DOCSIS
+
+## Aggregated parameters in I-DOCSIS
 
 This section lists the aggregated parameters for each topology level in the I-DOCSIS branch of the EPM Solution.
 
@@ -30,10 +33,9 @@ This section lists the aggregated parameters for each topology level in the I-DO
 | Percentage DS Utilization|||||||X||X|X|X||
 | Percentage US Utilization||||||||X|X|X||X|
 
+## Unique parameters in I-DOCSIS
 
-# Unique parameters in I-DOCSIS
-
-This section lists unique aggregated and calculated parameters for each topology level in the I-DOCSIS branch of the EPM Solution.
+Below, you can find the pages listing unique aggregated and calculated parameters for each topology level in the I-DOCSIS branch of the EPM Solution.
 
 - [Node Segment](xref:I-DOCSIS_parameters_node_segment)
 
@@ -53,53 +55,52 @@ This section lists unique aggregated and calculated parameters for each topology
 
 - [Thresholds](xref:I-DOCSIS_parameters_thresholds)
 
+## Aggregated parameter descriptions
 
-# Aggregated parameter descriptions
+- **Number Market**: Calculated. The total number of associated markets. Calculated via aggregation.
 
-- **Number Market**: Calculated. The total number of associated Markets. Calculated via aggregation.
+- **Number Hub**: Calculated. The total number of associated hubs. Calculated via aggregation.
 
-- **Number Hub**: Calculated. The total number of associated Hubs. Calculated via aggregation.
+- **Number CCAP Core**: Calculated. The total number of associated CCAP cores. Calculated via aggregation.
 
-- **Number CCAP Core**: Calculated. The total number of associated CCAP Cores. Calculated via aggregation.
-
-- **Number Service Group**: Calculated. The total number of associated Service Groups. Calculated via aggregation.
+- **Number Service Group**: Calculated. The total number of associated service groups. Calculated via aggregation.
 
 - **Number CM**: Calculated. The total number of associated CMs. Calculated via aggregation.
 
-- **Number CM Offline**: Calculated. The total number of associated CMs that do not have Operational status.
+- **Number CM Offline**: Calculated. The total number of associated CMs that do not have an operational status.
 
   Calculated by aggregating the number of CMs reported as offline by the CCAP (OID: 1.3.6.1.4.1.4491.2.1.20.1.3.1.6) (1 Other = Offline, 8 Operational = Online, any other value = Initializing).
 
-- **Percentage CM Offline**: Calculated. The percentage of assicated offline CMs, from the CCAP perspective.
+- **Percentage CM Offline**: Calculated. The percentage of associated offline CMs, from the CCAP perspective.
 
   Calculated based on the CMs reported as offline by the CCAP (OID: 1.3.6.1.4.1.4491.2.1.20.1.3.1.6) (1 Other = Offline, 8 Operational = Online, any other value = Initializing).
 
-- **Number CM DOCSIS 2.0**: Calculated. The total number of assocaited cable modems that report their DOCSIS version as a version within the 2.0 range.
+- **Number CM DOCSIS 2.0**: Calculated. The total number of associated cable modems that report their DOCSIS version as a version within the 2.0 range.
 
-- **Number CM DOCSIS 3.0**: Calculated. The total number of assocaited cable modems that report their DOCSIS version as a version within the 3.0 range.
+- **Number CM DOCSIS 3.0**: Calculated. The total number of associated cable modems that report their DOCSIS version as a version within the 3.0 range.
 
-- **Number CM DOCSIS 3.1**: Calculated. The total number of assocaited cable modems that report their DOCSIS version as a version within the 3.1 range.
+- **Number CM DOCSIS 3.1**: Calculated. The total number of associated cable modems that report their DOCSIS version as a version within the 3.1 range.
 
-- **Number CM DOCSIS 1.x**: Calculated. The total number of assocaited cable modems that report their DOCSIS version as a version within the 1.x range.
+- **Number CM DOCSIS 1.x**: Calculated. The total number of associated cable modems that report their DOCSIS version as a version within the 1.x range.
 
-- **Number CM DOCSIS Other**: Calculated. The total number of assocaited cable modems that are unable to report their DOCSIS version or is outside of the known range.
+- **Number CM DOCSIS Other**: Calculated. The total number of associated cable modems that are unable to report their DOCSIS version or for which the DOCSIS version is outside of the known range.
 
-- **Number CM Ping Unreachable**: Calculated. The number of associated CMs that are reporting the ping status "Unreachable".
+- **Number CM Ping Unreachable**: Calculated. The number of associated CMs that report the ping status "Unreachable".
 
-- **Percentage CM Ping Unreachable**: Calculated. The percentage of associated CMs that are reporting the ping status "Unreachable".
+- **Percentage CM Ping Unreachable**: Calculated. The percentage of associated CMs that report the ping status "Unreachable".
 
 - **Percentage Utilization**: Calculated. The average utilization of all associated DS channels.
 
-- **Average Latency**: Calculated. The average latency for all associated CMs. Only reachable CMs via ping count towards this KPI.
+- **Average Latency**: Calculated. The average latency for all associated CMs. Only CMs that can be reached via ping count towards this KPI.
 
-- **Average Jitter**: Calculated. The average jitter for all associated CMs. Only reachable CMs via ping count towards this KPI.
+- **Average Jitter**: Calculated. The average jitter for all associated CMs. Only CMs that can be reached via ping count towards this KPI.
 
-- **Average Packet Loss Rate**: Calculated. The average packet loss rate for all associated CMs. Only reachable CMs via ping count towards this KPI.
+- **Average Packet Loss Rate**: Calculated. The average packet loss rate for all associated CMs. Only CMs that can be reached via ping count towards this KPI.
 
-- **Number QAM DS Channels**: Calculated. The total number of associated Downstream channels. Calculated via aggregation.
+- **Number QAM DS Channels**: Calculated. The total number of associated downstream channels. Calculated via aggregation.
 
-- **Number QAM US Channels**: Calculated. The total number of associated Upstream channels. Calculated via aggregation.
+- **Number QAM US Channels**: Calculated. The total number of associated upstream channels. Calculated via aggregation.
 
-- **Percentage DS Utilization**: Calculated. The average channel utilization of associated Downstream channels. Calculated via aggregation.
+- **Percentage DS Utilization**: Calculated. The average channel utilization of associated downstream channels. Calculated via aggregation.
 
-- **Percentage US Utilization**: Calculated. The average channel utilization of associated Upstream channels. Calculated via aggregation.
+- **Percentage US Utilization**: Calculated. The average channel utilization of associated upstream channels. Calculated via aggregation.
