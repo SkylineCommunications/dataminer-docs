@@ -170,3 +170,9 @@ Resources would not always be released correctly, causing some resources to be u
 <!-- MR 10.5.0 - FR 10.4.2 -->
 
 When cleaning (i.e. resetting) a Cassandra database, in some cases, a `TypeInitializationException` could be thrown.
+
+#### Problem when a redundancy group was set to an undefined state [ID_38401]
+
+<!-- MR 10.5.0 - FR 10.4.4 -->
+
+When a redundancy group was set to an undefined state, a large number of empty connectivity contexts would be inserted into the *Connectivity* section of the *redundancy.xml* file. As a result, the correct connectivity contexts would be overwritten, causing the redundancy group to be stuck in the undefined state.
