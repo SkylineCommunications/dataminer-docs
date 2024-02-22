@@ -137,11 +137,11 @@ When DOM instances were sorted, in some cases, an error could be thrown when the
 
 Each time the focus score of an alarm is updated, incident tracking has to update its alarm groups. In some cases, incident tracking would incorrectly update its groups twice, causing the groups to be set to an undefined state.
 
-#### DaaS: The StorageModule would incorrectly start up before the NATS service had started up [ID_38644]
+#### DaaS: The StorageModule service would incorrectly start up before the NATS service had started up [ID_38644]
 
 <!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
 
-When starting a DaaS system (DataMiner as a Service), in some cases, the StorageModule would start up before the NATS service had started up. As a result, the StorageModule would fail to connect to NATS and would shut down.
+When starting a DaaS system (DataMiner as a Service), in some cases, the StorageModule service would start up before the NATS service had started up. As a result, StorageModule would fail to connect to NATS and would shut down.
 
 The DaaS startup routine has now been improved to prevent issues like the one described above.
 
