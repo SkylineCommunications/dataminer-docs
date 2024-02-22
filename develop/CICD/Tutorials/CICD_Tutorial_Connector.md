@@ -126,14 +126,35 @@ on:
 
 ```yml
     - name: InstallConnectorValidator
-      run: dotnet tool install -g Skyline.DataMiner.CICD.Tools.Validators
+      run: dotnet tool install -g Skyline.DataMiner.CICD.Tools.Validator
 
     - name: RunConnectorValidator
-      TODO
-      run: dataminer-connector-validate ${{ github.workspace }} --name HelloFromGithubWindows --output ${{ github.workspace }} --type automation
+      run: dataminer-validator validate-protocol-solution --solution-path "${{ github.workspace }}" --output-directory "${{ github.workspace }}" --output-file-name "validateResults" 
 
-    - name: QualityGate
-      TODO 
+    - name: Archive Results
+      if: success()
+      uses: actions/upload-artifact@v2
+      with:
+        name: validateResults
+        path: ${{ github.workspace }}/validateResults.json
+        
+    - name: Quality Gate
+      run: |
+        json=$(cat "${{ github.workspace }}/validateResults.json")
+        critical=$(echo "$json" | jq -r '.CriticalIssueCount')
+        major=$(echo "$json" | jq -r '.MajorIssueCount')
+    
+        if [ "$critical" != "0" ] || [ "$major" != "0" ]; then
+          echo "Error: CriticalIssueCount or MajorIssueCount is not 0"
+          exit 1
+        fi
+```
+
+> [!NOTE]
+> Tip: For generic parts of a pipeline, like parsing json and making the quality gate. You can easily use one of the online learning models with the following prompt:
+
+```
+Using GitHub Workflows with an Ubuntu runner. I have a json file in the workspace with the path ${{ github.workspace }}/validateResults.json. I want two steps. 1 step where we upload that artifact. and a second step that retrieves the CriticalIssueCount and the  MajorIssueCount and throws an error if one of them is higher than 0. I want you to return to me, only the two steps. The name of step 2 should be Quality Gate.
 ```
 
 1. Commit your changes
