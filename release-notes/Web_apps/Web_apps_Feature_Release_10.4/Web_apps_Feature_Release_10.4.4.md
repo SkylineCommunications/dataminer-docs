@@ -118,6 +118,12 @@ In all web apps (e.g. Low-Code Apps, Dashboards, Monitoring, etc.), Angular and 
 
 When viewing a visual overview on a web app, in some cases, the visual overview would incorrectly get updated while nothing had changed.
 
+#### Dashboards app & Low-Code Apps - Interactive Automation scripts: UTC values in datetime components would not be converted correctly [ID_38634]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+When, in a dashboard or a low-code app, you launched an interactive Automation script with datetime components containing values in UTC format, in some cases, those date/time values in UTC would not correctly be converted to the client's local time.
+
 #### Dashboards app & Low-Code Apps: Problem when making a backup of all dashboards and low-code apps during a DataMiner upgrade [ID_38640]
 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
