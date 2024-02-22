@@ -150,16 +150,16 @@ The unified platform provides **highly enriched fault messages**, **out of the b
 
 **Visual representation of any data.**
 
-DataMiner Dashboards enables operators to efficiently leverage the extensive, valuable real-time and historical operational information available in the DataMiner platform.
+DataMiner Dashboards enable operators to efficiently leverage the extensive, valuable real-time and historical operational information available in the DataMiner platform.
 
 With the Dashboards app, you can **create, manage, and view** dashboards that display a **wealth of information** about the managed system.
 
-Moreover, dashboards adhere to DevOps principles and can easily evolve over time at run-time. They can even be **shared with just about anybody outside of the company** through [dataminer.services](xref:Overview_DCP). Our built-in security functionality allows you control over the data you share, enabling you to determine which data is shared, with whom, and for how long.
+Moreover, dashboards adhere to DevOps principles and can easily evolve over time at runtime. They can even be **shared with just about anybody outside of the company** through [dataminer.services](xref:Overview_DCP). Our built-in security functionality allows you control over the data you share, enabling you to determine which data is shared, with whom, and for how long.
 
 > [!TIP]
 > See [Dashboard Share](xref:Overview_Collaboration#dashboard-share) for more information.
 
-DataMiner Dashboards offers a wide range of visualizations that can make use of various data feeds, including GQI-based query feeds. This “Queries” data item allows you to [construct queries](xref:Creating_GQI_query) to access the wealth of data available in your DataMiner System. See also: [Your next step towards a data-driven operation: the brand-new DataMiner Generic Query Interface (GQI)](https://community.dataminer.services/your-next-step-towards-a-data-driven-operation-the-brand-new-dataminer-generic-query-interface-gqi)
+The DataMiner Dashboards app offers a wide range of visualizations that can make use of various data feeds, including **GQI-based query feeds**. This "Queries" data item allows you to [construct queries](xref:Creating_GQI_query) to access the wealth of data available in your DataMiner System. See also: [Your next step towards a data-driven operation: the brand-new DataMiner Generic Query Interface (GQI)](https://community.dataminer.services/your-next-step-towards-a-data-driven-operation-the-brand-new-dataminer-generic-query-interface-gqi)
 
 > [!TIP]
 > For more information:
@@ -167,28 +167,28 @@ DataMiner Dashboards offers a wide range of visualizations that can make use of 
 > - Example use case: [Dashboard Components Showcase](https://community.dataminer.services/use-case/dashboard-components-showcase/)
 > - Example use case: [Monitor a Group of Servers via GQI](https://community.dataminer.services/use-case/monitor-a-group-of-servers-via-gqi/)
 > - User Guide: [DataMiner Dashboards](xref:newR_D)
+> - [DataMiner Dashboards training course](https://community.dataminer.services/courses/dashboard/)
 > - [Videos on the Dashboards app](https://community.dataminer.services/videos?_sf_s=dashboard) ![Video](~/user-guide/images/video_Duo.png)
 > - [GQI-related videos](https://community.dataminer.services/videos?_sf_s=GQI) ![Video](~/user-guide/images/video_Duo.png)
 > - [Analyzing a network of switches with the DataMiner Dashboards module](https://www.youtube.com/watch?v=e0tqNFMqgwo&ab_channel=DataMinerbySkylineCommunications) ![Video](~/user-guide/images/video_Duo.png)
 > - [Analyzing performance of a Kubernetes Cluster with the DataMiner Dashboard module](https://www.youtube.com/watch?v=eST-XhA4P7I&ab_channel=DataMinerbySkylineCommunications) ![Video](~/user-guide/images/video_Duo.png)
-> - [DataMiner Dashboards training course](https://community.dataminer.services/courses/dashboard/)
 
-A nice example of a dashboard that covers many use cases, is our **node-edge component**, visualizing any type of "nodes" (objects) and their "edges" (connections between them). This component is an addition to the catalog of out-of-the box data visualizations included in the DataMiner Dashboards module. It can be used in all sorts of applications that visualize objects and the relationships between them.
+A nice example of a dashboard component that covers many use cases is the **node edge component**, which can visualize any types of "nodes" (objects) and their "edges" (connections between them). This component is an addition to the catalog of out-of-the box data visualizations included in the DataMiner Dashboards app. It can be used in all sorts of applications that visualize objects and the relationships between them.
 
-In many applications, there is a need to visualize certain objects and their interconnections. Think for example of network devices and their physical connectivity, a Kubernetes cluster showing the logical connections between its nodes, pods and containers, or even visualizing video flows between media nodes in an IP network. To tackle these use cases, DataMiner offers a generic HTML Dashboard component that visualizes any type of "nodes" (objects) and their "edges" (connections between them). The component is designed in such a way that all types of DataMiner objects can be visualized as either nodes or edges: be it elements, rows in a table parameter, services, views, etc.
+In many applications, there is a need to visualize certain objects and their interconnections. Think for example of network devices and their physical connectivity, a Kubernetes cluster showing the logical connections between its nodes, pods, and containers, or even video flows between media nodes in an IP network. This is all possible with the node edge dashboard component, as this a generic HTML dashboard component can visualize any types of nodes and edges. The component is designed in such a way that all types of DataMiner objects can be visualized as either nodes or edges, be it elements, rows in a table parameter, services, views, etc.
 
-However, the node-edge component is much more than just a visualization on a dashboard, it actually serves as a true analytics tool. To enable all kinds of analytical use cases, the node-edge component allows to attach parameters and properties of DataMiner elements as KPIs to nodes and edges, that can for example be shown in a tooltip on a node or edge. On top of that, the node-edge component allows the user to dynamically filter out, highlight or color nodes and connections based on their KPIs. This can be used to quickly identify problems among a large set of nodes and see how these problems might affect other nodes. A visualization like this allows an operator to quickly visually correlate a lot of data, which can help to faster analyze incidents.
+However, the node edge component is much more than just a visualization in a dashboard. It actually serves as a true analytics tool. To enable all kinds of analytical use cases, the component allows you to attach parameters and properties of DataMiner elements as KPIs to nodes and edges, which can for example be shown in a tooltip on a node or edge. On top of that, you can dynamically filter out, highlight, or color nodes and connections based on their KPIs. This can be used to quickly identify problems among a large set of nodes and see how these problems might affect other nodes. A visualization like this allows an operator to quickly visually correlate a lot of data, which can help to faster analyze incidents.
 
-The data input for the node-edge component can be configured via our Generic Query Language, an SQL-like language which allows to query DataMiner objects, like elements, parameters, DataMiner services, DCF connections etc.
+The data input for the node edge component can be configured via our Generic Query Language, an SQL-like language that can be used to query DataMiner objects, like elements, parameters, services, DCF connections etc.
 
 > [!TIP]
 >
 > For more information:
 >
 > - [Node edge component now generally available](https://community.dataminer.services/node-edge-component-now-generally-available/)
-> - [Kata #17: Node-Edge Component](https://community.dataminer.services/video/kata-17-node-edge-component/) ![Video](~/user-guide/images/video_Duo.png)
-> - Course about [Node edge graph](https://community.dataminer.services/courses/dashboard/lessons/node-edge-graph/) ![Video](~/user-guide/images/video_Duo.png) 
 > - [Dashboards use cases](https://community.dataminer.services/use-cases/?_sfm_modules=dashboards)
+> - [Kata #17: Node Edge Component](https://community.dataminer.services/video/kata-17-node-edge-component/) ![Video](~/user-guide/images/video_Duo.png)
+> - Course about [node edge graphs](https://community.dataminer.services/courses/dashboard/lessons/node-edge-graph/) ![Video](~/user-guide/images/video_Duo.png) 
 
 ## Button Panel (i.e. Control Panel)
 
