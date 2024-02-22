@@ -70,6 +70,12 @@ The validation of the name of a booking is now case-insensitive. This means that
 
 The ad hoc data source now supports real-time updates.
 
+#### GQI now filters DOM string fields case-insensitively [ID_38645]
+
+<!-- MR 10.5.0 - FR 10.4.4 -->
+
+Up to now, GQI would filter DOM string fields case-sensitively. From now on, it will filter those fields case-insensitively.
+
 #### SLAnalytics - Behavioral anomaly detection: Suggestion event generation will now be limited [ID_38674]
 
 <!-- MR 10.4.0 [CU1] - FR 10.4.4 -->

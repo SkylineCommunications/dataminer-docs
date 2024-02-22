@@ -145,6 +145,12 @@ For detailed information about the changes included in those versions, refer to 
 
 The ad hoc data source now supports real-time updates.
 
+#### GQI now filters DOM string fields case-insensitively [ID_38645]
+
+<!-- MR 10.5.0 - FR 10.4.4 -->
+
+Up to now, GQI would filter DOM string fields case-sensitively. From now on, it will filter those fields case-insensitively.
+
 ### Fixes
 
 #### Databases: Problem when starting a migration from MySQL to Cassandra [ID_37589]
