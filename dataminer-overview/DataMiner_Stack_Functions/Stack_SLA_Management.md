@@ -16,7 +16,7 @@ DataMiner SLA Management allows its stakeholders to manage the SLA for both inco
 
 The design of this powerful module in DataMiner provides a variety of strategic capabilities, including the ability to have different impact ratios for different types of issues (e.g. audio versus video problems on a video service). Another unique feature is the possibility to run new SLA definitions against existing historical data, enabling managers to make well-founded decisions when specifying and committing to service SLAs, or to adapt easily to changing business requirements.
 
-**Features of DataMiner SLA Manager:**
+**DataMiner SLA Manager features:**
 
 - Integrated into the Visual Overview topological graphical user interface, with support for display of real-time SLA readings, and enabling data retrieval from any data source.
 - Designed on top of the awarded DataMiner dynamic service technology, which tracks the usage of resources for specific services at runtime. This enables DataMiner SLA Management to take into account the status of any redundancy architecture while calculating SLA compliance, for example.
@@ -42,8 +42,8 @@ The design of this powerful module in DataMiner provides a variety of strategic 
 > For more information:
 >
 > - [Keeping an eye on SLA data with DataMiner](https://www.youtube.com/watch?v=u-fxWo3DGYo&ab_channel=DataMinerbySkylineCommunications)
-> - [Learn to Configure your SLAs](https://www.youtube.com/watch?v=c_9tAupBP_4&ab_channel=DataMinerbySkylineCommunications)
-> - [DataMiner Business Intelligence user guide](xref:sla)
+> - [Learn to Configure Your SLAs](https://www.youtube.com/watch?v=c_9tAupBP_4&ab_channel=DataMinerbySkylineCommunications)
+> - [DataMiner Business Intelligence User Guide](xref:sla)
 
 ## Service Monitoring
 
@@ -58,9 +58,9 @@ DataMiner monitors service compliance and quality at any point in the infrastruc
 > [!TIP]
 > For more information:
 >
-> - Demo Video: [DataMiner Services explained](https://community.dataminer.services/video/dataminer-services-explained/)
-> - Advanced Video: [DataMiner Service templates](https://community.dataminer.services/video/service-templates/)
-> - Video: [Service-aware Confidence Monitoring](https://www.youtube.com/watch?v=f0Z581xPrI4&ab_channel=DataMinerbySkylineCommunications)
+> - Demo video: [DataMiner Services Explained](https://community.dataminer.services/video/dataminer-services-explained/)
+> - Advanced video: [DataMiner service templates](https://community.dataminer.services/video/service-templates/)
+> - Video: [Service-Aware Confidence Monitoring](https://www.youtube.com/watch?v=f0Z581xPrI4&ab_channel=DataMinerbySkylineCommunications)
 > - User Guide: [Services and service templates](xref:About_services)
 
 ## Element Management
