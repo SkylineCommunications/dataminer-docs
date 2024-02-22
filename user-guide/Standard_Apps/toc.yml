@@ -259,6 +259,19 @@ items:
             topicUid: Remote_PHY_Monitoring_Installation
           - name: Remote PHY Monitoring components
             topicUid: Remote_PHY_Monitoring_Components
+      - name: Smart Trap Processor
+        topicUid: Smart_Trap_Processor_Overview
+        items:
+          - name: Installing the Smart Trap Processor
+            topicUid: Installing_Smart_Trap_Processor
+          - name: Using the Smart Trap Processor
+            items:
+              - name: The Smart Trap Processor user interface
+                topicUid: The_SmartTrapProcessor_user_interface
+              - name: Configuring processing rules
+                topicUid: Processor_configuration
+              - name: Monitoring processed traps
+                topicUid: Monitoring_Processed_Traps
   - name: Process Automation framework
     topicUid: PA_index
     items:
