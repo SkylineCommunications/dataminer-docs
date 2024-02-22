@@ -240,4 +240,5 @@ These apps run on HTML5, making them **accessible from anywhere**, including mob
 > - [Version Control for Low-Code Apps](https://community.dataminer.services/video/make-the-most-out-of-version-control-for-low-code-apps/) ![Video](~/user-guide/images/video_Duo.png)
 > - Example use case : [Switch configuration with DataMiner Low-Code Apps](https://community.dataminer.services/use-case/switch-configuration-with-dataminer-low-code-apps/)
 > - Workflow use case : [DataMiner Low-Code Apps & Telestream Vantage – Media Asset Workflow Automation](https://community.dataminer.services/use-case/media-asset-workflow-automation-with-telestream-vantage/)
+> - See also [Kata #13: Control and feeds in a Low-Code App](https://community.dataminer.services/video/kata-13-control-and-feeds-in-a-low-code-app/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 > - User Guide: [DataMiner Low-Code Apps](xref:Application_framework)
