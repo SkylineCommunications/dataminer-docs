@@ -13,6 +13,30 @@ uid: EPM_6.1.9_I-DOCSIS
 - QAM US Channels: US QAM Ch Bitrate
 - QAM DS Channels: DS QAM Ch Bitrate
 
+#### DOCSIS topology KPIs reorganized [ID_37169]
+
+The KPIs on the *DOCSIS Network*, *DOCSIS market*, *DOCSIS Hub*, *CCAP Core*, *DS Linecard*, *US Linecard*, *DS Port*, *US Port*, *Node Segment*, *Service Group [Fiber Node]*, *DS Service Group*, *US Service Group*, and *CM* pages have been reorganized to improve the information displayed on these pages:
+
+- The KPIs are now grouped in boxes.
+
+- Irrelevant KPIs are no longer displayed:
+
+  - On all levels: *Entity ID*, *Entity Name*, *Number Ping OK*, and *Percentage Ping OK*.
+
+  - On CCAP Core level: *System Name*.
+
+  - On US/DS Linecard and US/DS Port level: *Number CM Online* and *Percentage CM Online*.
+
+  - On Service Group level: *System ID*, *System Name*, and *Fiber Node Name*.
+
+  - On CM level: *Percentage US/DS QAM Utilization* and *US/DS Average SNR*.
+
+- KPIs have been added:
+
+  - On all levels: *Number DOCSIS 1.x* and *Number DOCSIS Unknown*
+
+  - On Service Group and CM level: *US Service Group Name*, *Number US OFDMA Channels*, and *Percentage US OFDMA Utilization* in the US OFDMA section, and *DS Service Group Name*, *Number DS OFDMA Channels*, and *Percentage DS OFDMA Utilization* in the DS OFDM section.
+
 #### New OFDM/OFDMA information available [ID_37202]
 
 In the CISCO CBR-8 CCAP Platform connector, a new *OFDM/OFDMA* page has been added containing parameters related to OFDM/OFDMA channels from the device. Currently this information is only available at node segment level. These channels are also linked to the associated node segments and service groups. When you view either of those entities in the topology, new KPIs are displayed with the total number of OFDM and OFDMA channels and the average utilization. There is also a link to a dashboard displaying all channels associated with the entity.
