@@ -2,164 +2,259 @@
 uid: Tutorial_App_Design
 ---
 
-# Best practices in low-code app design
+# Creating a visually appealing and user-friendly low-code app
 
-This tutorial delves into the practical techniques to create intuitive, visually appealing and user-friendly low-code apps.
+This tutorial delves into the practical techniques to create intuitive, visually appealing, and user-friendly low-code apps, highlighting best practices in low-code app design.
 
 Expected duration: 30 minutes.
 
 > [!TIP]
-> See also:
->
-> - [Kata #19: Transform Low-Code Apps into visual delights](https://community.dataminer.services/courses/kata-19/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> See also: [Kata #19: Transform Low-Code Apps into visual delights](https://community.dataminer.services/courses/kata-19/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 > [!NOTE]
-> This tutorial uses DataMiner version 10.4.2.
+> This tutorial uses DataMiner version 10.4.3.
 
 ## Prerequisites
 
 - DataMiner 10.4.2 or higher.
 
-- Deploy the package called *KataDesign* directly to your DataMiner System via the [Catalog](https://catalog.dataminer.services/details/package/5883).
+- Deploy the *KataDesign* package from the [Catalog](https://catalog.dataminer.services/details/package/5883).
 
   > [!TIP]
   > For information on how to deploy a package, see [Deploying a Catalog item](xref:Deploying_a_catalog_item).
 
 ## Overview
 
-- [Best practices in low-code app design](#best-practices-in-low-code-app-design)
-  - [Prerequisites](#prerequisites)
-  - [Overview](#overview)
-  - [Step 1: Open the low-code app to start from](#step-1-open-the-low-code-app-to-start-from)
-  - [Step 2: Choose a good app color and icon](#step-2-choose-a-good-app-color-and-icon)
-  - [Step 3: Adding page icons](#step-3-adding-page-icons)
-  - [Step 4: Setting up themes](#step-4-setting-up-themes)
-  - [Step 5: Apply a theme](#step-5-apply-a-theme)
-  - [Step 6: Improve page layout](#step-6-improve-page-layout)
-  - [Step 7: Enhance titles](#step-7-enhance-titles)
-  - [Step 8: Fancy forms](#step-8-fancy-forms)
-  - [Step 9: Fixing the grid](#step-9-fixing-the-grid)
-  - [Step 10: Enhancing the table look](#step-10-enhancing-the-table-look)
+- [Step 1: Access the low-code app](#step-1-access-the-low-code-app)
 
-## Step 1: Open the low-code app to start from
+- [Step 2: Customize the app color and icon](#step-2-customize-the-app-color-and-icon)
 
-1. Once you have the app installed through the [Catalog](https://catalog.dataminer.services/details/package/5883) go to the apps homepage at /root/
+- [Step 3: Add page icons](#step-3-add-page-icons)
 
-1. If everything installed correctly, you should find an app there called **Best Practices in Low-Code App Design**. Open it and you should see the following home page:
+- [Step 4: Configure a new theme](#step-4-configure-a-new-theme)
 
-    ![Initial app](~/user-guide/images/tutorial_app_design_intial_app.png)
+- [Step 5: Apply the new theme](#step-5-apply-the-new-theme)
 
-1. As the intial package does not contain any contacts yet, add some sample contacts to the application by clicking the **Add contact** button, filling in the form and clicking the big **+ Add** button at the bottom of the form.
+- [Step 6: Improve the page layout](#step-6-improve-the-page-layout)
 
-## Step 2: Choose a good app color and icon
+- [Step 7: Enhance the titles](#step-7-enhance-the-titles)
 
-1. The main color of the app results in low contrast between the text in the left hand menu and the background color. Also the pages have no identifiable icon. These are the first things that needs fixing.
+- [Step 8: Enhance the contact forms](#step-8-enhance-the-contact-forms)
 
-    ![Low contrast](~/user-guide/images/tutorial_app_design_low_contrast.png)
+- [Step 9: Fixing the grid](#step-9-fixing-the-grid)
 
-1. In the top left corner click on the waffle icon to open the page where you can change the icon and the color of the low-code app
+- [Step 10: Enhancing the table look](#step-10-enhancing-the-table-look)
 
-1. Pick a general color for the app, make sure that there is enough contrast between the color and text color. As an example here we are using the hex color **#503e6f**. If you are in doubt if the contrast is good enough, you can use online tools like [Contrast Checker](https://webaim.org/resources/contrastchecker/)
+## Step 1: Access the low-code app
 
-1. Also pick an icon for the app, in this case we picked an icon representing people by searching on "contact" in the icon list.
+1. After installing the app via the [Catalog](https://catalog.dataminer.services/details/package/5883), go to `http(s)://[DMA name]/root`.
 
-1. Use preview mode of the app to verify that the contrast between background and text has improved.
+1. Sign in using your DataMiner credentials.
+
+1. Select the *Best Practices in Low-Code App Design* app.
+
+   You now see the homepage of the application. Since the initial package does not contain any contacts, no contacts are listed on this page yet.
+
+   ![Initial app](~/user-guide/images/tutorial_app_design_intial_app.png)
+
+1. To add sample contacts to the application, click the *Add contact* button.
+
+1. In the pop-up window, provide the name, address, email address, phone number, country, and company of the contact, along with any additional notes about the contact.
+
+1. Click the *+ Add* button at the bottom of the form.
+
+## Step 2: Customize the app color and icon
+
+The app's primary color results in low contrast between the text and the background color in the sidebar (visible when fully expanded). Additionally, the app does not have a customized, identifiable icon. These are the first things you will look into.
+
+![Low contrast](~/user-guide/images/tutorial_app_design_low_contrast.png)
+
+1. Click your user icon in the top-right corner of the app and select *Edit*.
+
+1. Click the clipboard icon in the top-left corner to open the app's theme editor. Here you can change your app's icon and color.
+
+   ![Clipboard icon](~/user-guide/images/Change_app_Style.png)
+
+1. Enter the following hex value in the *Hex* field in the lower left corner: #503e6f.
+
+   Optionally, choose your color of choice, but make sure there is enough contrast between the background color and the text color (#000000 or #ffffff, depending on the background color).
+
+   > [!TIP]
+   > If you are uncertain about the contrast, use the online [*Contrast Checker*](https://webaim.org/resources/contrastchecker/) tool.
+
+1. Next, enter *contact* in the filter box and select the *Contact* icon.
+
+   ![Contact icon](~/user-guide/images/Contact_icon.png)
+
+   Optionally, select your icon of choice.
+
+1. Click the new icon in the top-left corner to exit the theme editor.
 
    ![Better contrast](~/user-guide/images/tutorial_app_design_better_contrast.png)
 
-## Step 3: Adding page icons
+## Step 3: Add page icons
 
-The pages still have very generic icons per page, which make the pages hard to distinguish. Make sure you have good icons assigned to a page. To do this edit the page again and assign a icon in the **icon** menu next to the page.
+The different pages currently still have generic icons, which makes them hard to distinguish.
+
+1. Make sure the page is selected in the leftmost pane of the app editor.
+
+1. In the *icon* section in the top-left corner of the app, select an icon for the page.
+
+1. Select your icon of choice.
+
+1. Repeat these steps for the second page.
+
+   In this example, the *contact* icon was chosen for the *Contacts* page and the *eDiscovery* icon for the *Organizations* page.
 
    ![Page icons](~/user-guide/images/tutorial_app_design_page_icons.png)
 
-## Step 4: Setting up themes
+## Step 4: Configure a new theme
 
-In order to have a good looking app you need to start from a good looking theme. A theme determines how the pages and components are styled by default. By applying a good theme your app will already look much better with limited effort.
+To ensure an aesthetically pleasing app, start with an appealing theme, which determines default styling for pages and components. Applying a good theme can make your app look a lot better with limited effort.
 
-1. In order to create / edit / delete themes we need to go to the dashboards application. When not in edit mode, click on the top left waffle icon to open up the side panel. Click on **Dashboards** to open up the Dashboards application.    
+1. Click your user icon in the top-right corner, and select *View published app* to temporarily leave edit mode.
 
-    ![Switch to dashboards](~/user-guide/images/tutorial_app_design_switch_to_dashboards.gif)
+1. Click the ![Waffle](~/user-guide/images/Waffle_icon.png) icon in the top-left corner, and select *Dashboards*.
 
-1. In the dashboards app , click top right on the User icon and open the **Settings**. This should show a list of available themes.
+   ![Switch to Dashboards](~/user-guide/images/tutorial_app_design_switch_to_dashboards.gif)
 
-1. Create a new theme here and give it a useful name.
+1. Click your user icon in the top-right corner, and select *Settings*.
 
-1. Set the following properties on the theme:
-   - Set the **background color** of the theme to: rgb(243,243,245)
-   - Edit the **Default** component theme
-      - Under Title
-         - set **font size** to *16px*
-         - set **alignment** to *Center*
-      - Under Color
-         - set **background color** to rgb(253,253,253)
-         - set **font** color to rgb(0,7,54)
-         - Under Color palette define:
-            - Color 1:  rgb(139,115,255)
-            - Color 2:  rgb(66,204,126)
-            - Color 3:  rgb(255,72,66)
-            - Color 4:  rgb(255,194,8)
-            - Color 5:  rgb(255,152,97)
-      - Under Spacing
-         - set **Vertical Margin** to 8px
-         - set **Horizontal Margin** to 8px
-         - set **Vertical Padding** to 10px
-         - set **Horizontal Padding** to 10px
-      - Under Border
-         - set **Roundness** to 5px
-         - set **Style** to Line
-         - enable all sides
-         - set **Thickness** to 1px
-         - set **Color** to rgb(233,234,237)
-   - Duplicate the **Default** component theme and call it **Transparent**
-      - Set the opacity of the background color to 0%
-      - Set the opacity of the border color to 0%
-   - Save the theme
+1. Click *+ New theme*.
 
-1. Dupiclate the theme we just created and add **- Panel** to the name. This is the theme we are going to use for our panels in the app.
-   - Set the **background color** for the panel to rgb(253,253,253)
-   - For the Default component:
-      - Under Title
-         - set **font size** to *14px*
-      - Under Color
-         - set **background color** to rgb(248,248,249)
-   - Save the theme
+1. In the *New theme* pop-up window, enter a theme name.
 
-## Step 5: Apply a theme
+1. Configure the following properties for the theme:
 
-1. To apply the Theme to the app we are working on, go back to the app and edit it.
+   - *Background color*: rgb(243,243,245)
 
-1. Edit the Contacts page and go to **Layout** in the right-hand column. Select the theme that you just created in the previous step.
+   - *Title > Font size*: 16px
 
-1. Components like titles, buttons, images should never have a background color. Select each of these components separately, go to Layout and select the Style **Transparent**
+   - *Title > Alignment*: Center
 
-  >> [!IMPORTANT]
-  >> Components like titles, buttons, images should never have a background color!
+   - *Color > Background color*: rgb(253,253,253)
 
-1. Publish the app and now you should see an app which is already a little more appealing. Note for example that the pie chart has now clearly distguishible colors in contrast to the default themes.
+   - *Color > Font color*: rgb(0,7,54)
 
-    ![Theme applied](~/user-guide/images/tutorial_app_design_theme_applied.png)
+   - *Color > Color palette*:
 
-## Step 6: Improve page layout
+     - *Color 1*: rgb(139,115,255)
 
-1. In order to have the page resize to different screens sizes and avoid scroll bars, set the page to **Fit to view**. This can be done by editing the page, go to **Settings** and under **PAGE/PANEL CONFIGURATION** enable the checkbox **Fit to view**
+     - *Color 2*: rgb(66,204,126)
 
-1. Next start rearrange and resize the components on the page, taking the following guidelines into account:
-   1. Ensure identical spacing left and right on the page.
-   1. Use the available space, don't leave too much white space.
-   1. Align components both vertically and horizontally, make them same height.
-   1. Adjust width of components. If components are positioned on the same row and are equally important, make their width identical (e.g. chart and grid component are each 1/3rd of the width).
-   1. This is an example on how you could rearrange them to have a good looking result:
+     - *Color 3*: rgb(255,72,66)
 
-    ![Rearranged components](~/user-guide/images/tutorial_app_design_rearranged_components.png)
+     - *Color 4*: rgb(255,194,8)
 
-## Step 7: Enhance titles
+     - *Color 5*: rgb(255,152,97)
 
-Titles can be styled as just text boxes, but these are often very bland. To make them a little more interesting use a web component and add some HTML to it. In the app we already use a web component for it but the HTML is pretty basic. 
+   - *Spacing > Vertical Margin*: 8px
 
-1. Select the Contacts title and go to **Settings** in the right-hand column.
+   - *Spacing > Horizontal Margin*: 8px
 
-1. Paste the following in the **HTML** field:
+   - *Spacing > Vertical Padding*: 10px
+
+   - *Spacing > Horizontal Padding*: 10px
+
+   - *Border > Roundness*: 5px
+
+   - *Border > Style*: Line
+
+   - *Border > Sides*: Top, Right, Bottom, Left
+
+   - *Border > Thickness*: 1px
+
+   - *Border > Color*: rgb(233,234,237)
+
+1. Click the *Duplicate* button next to the default component theme and change the component theme name from "Default (1)" to "Transparent".
+
+1. Edit the following component style properties:
+
+   - Set the opacity of the background color to 0%.
+
+     ![Zero opacity](~/user-guide/images/Zero_Opacity.gif)
+
+   - Set the opacity of the border color to 0%
+
+1. Click *Create* in the lower right corner to save the theme.
+
+1. In the list of themes, click the *Duplicate* button next to your new theme to create a copy of the theme.
+
+1. Click the pencil icon next to it, and change the name of your theme so that it ends in "- Panel", e.g. "Tutorial theme - Panel".
+
+   This is the theme you will use for the app panels.
+
+1. Set the background color to rgb(253,253,253).
+
+1. Edit the following component style properties:
+
+   - *Title > Font size*: 14px
+
+   - *Color > Background color*: rgb(248,248,249)
+
+1. Click *Save* in the lower right corner.
+
+## Step 5: Apply the new theme
+
+Now that you have created a theme, you have to apply to your low-code app.
+
+1. Click the ![Waffle](~/user-guide/images/Waffle_icon_Dashboards.png) icon in the top-left corner, and select the *Best Practices in Low-Code App Design* application.
+
+1. Click your user icon in the top-right corner, and select *Edit*.
+
+1. Make sure the *Contacts* page is selected in the leftmost pane of the app editor, and click the pencil icon.
+
+1. Make sure no components are selected, and navigate to the *Layout* tab in the pane to the right.
+
+1. Click the box indicating the currently used theme.
+
+   A list of available themes will be displayed below the box.
+
+1. Select the theme you just created in the previous step.
+
+1. Make sure components displaying **titles, buttons, and images do not have a background color**:
+
+   1. Select the component, and navigate to *Layout > Styles* in the configuration pane to the right.
+
+   1. Click the box indicating the currently used them, and select *Transparent*.
+
+1. Click the ![Publish](~/user-guide/images/AppPublishIcon.png) icon in the header bar.
+
+   As you can see, the app already looks better. For example, note the clearly distinguishable colors in the pie chart compared to the default themes.
+
+   ![Theme applied](~/user-guide/images/tutorial_app_design_theme_applied.png)
+
+## Step 6: Improve the page layout
+
+To ensure the page adapts to different screen sizes and avoids scroll bars, set it to *Fit to view*:
+
+1. Click your user icon in the top-right corner, and click *Edit*.
+
+1. Click the pencil icon, and navigate to *Settings > Page/Panel configuration* in the configuration pane to the right.
+
+1. Enable the *Fit to view* setting.
+
+Rearrange and resize components on the page, following these guidelines:
+
+- Maintain equal spacing on both sides of the page.
+
+- Use available space effectively, minimizing excessive white space.
+
+- Align components both vertically and horizontally, ensuring consistent height.
+
+- Adjust component widths; if multiple components share a row and are equally important, keep their widths identical (e.g. a chart and grid component each occupy 1/3rd of the width).
+
+Here is an example of a rearrangement for a visually appealing result:
+
+![Rearranged components](~/user-guide/images/tutorial_app_design_rearranged_components.png)
+
+## Step 7: Enhance the titles
+
+Titles can be more than simple text boxes. To make them a little more interesting, use a web component and incorporate HTML. In the app, a web component is already used to display the title. However, the HTML is rather basic.
+
+1. Select the web component that displays the *Contacts* title, and go to the *Settings* tab in the pane to the right.
+
+1. Paste the following HTML in the *HTML* field:
 
 ```html
 <div style="height:100%;display:flex;flex-direction:column;justify-content:center;margin:0;"><H1 style="color: rgb(0,9,54); font-family:'Segoe UI Light','Segoe UI Web Light','Segoe UI Web Regular','Segoe UI','Segoe UI Symbol',HelveticaNeue-Light,'Helvetica Neue',Arial,sans-serif;margin:0;font-weight:100;font-size:24px">
@@ -174,23 +269,29 @@ The result should look like this:
 
 ![Rearranged components](~/user-guide/images/tutorial_app_design_fancy_title.png)
 
-## Step 8: Fancy forms
+## Step 8: Enhance the contact forms
 
-The form that is used to create new contacts also has room for improvement.
+You may have noticed earlier, but the form used for creating new contacts also has room for improvement.
 
-1. Edit the app and open the panel called **Contact Form**
+### Change the form layout
 
-1. Go to **Layout** in the right-hand column and select the **- Panel** theme.
+1. In the *panels* section, select the pencil icon next to *Contact Form*.
 
-1. Go to **Settings** and enable **Fit to view** to make the form take the full panel height.
+1. Go to the *Layout* tab in the pane to the right, and click the box indicating the currently used theme.
 
-1. Remove the **+ Add** button at the bottom of the panel
+1. Select the theme you created earlier, which ended in "- Panel".
 
-1. Adjust the height of the form, extend it to the bottom. Adjust the width of the form to take most of the available space
+1. In the *Settings* tab, enable the *Fit to view* setting to take on the full panel height.
 
-1. Add a **Web** component on top of the form to add a title.
+1. Hover your mouse pointer over the *+Add* button component and select the trash icon.
 
-1. In the **HTML** field on the **Settings** of the web component paste the following:
+1. Extend the height of the form to the bottom and adjust the width to occupy most of the available space.
+
+### Add a new title
+
+1. Add a web component above the form.
+
+1. Go to the *Settings* tab in the pane to the right, and paste the following HTML in the *HTML* field:
 
 ```html
 <div style="height:100%;display:flex;flex-direction:row;justify-content:space-between;align-items:center;margin:0;margin:0 4%;"><H1 style="color: rgb(0,9,54); font-family:'Segoe UI Light','Segoe UI Web Light','Segoe UI Web Regular','Segoe UI','Segoe UI Symbol',HelveticaNeue-Light,'Helvetica Neue',Arial,sans-serif;margin:0;font-weight:100;font-size:20px">
@@ -199,24 +300,65 @@ The form that is used to create new contacts also has room for improvement.
 Here you can <b style="color: rgb(0,9,54)">create</b> a new contact.</p></div>
 ```
 
-1. Add a Save action to the header bar, by clicking the + icon on the top left, enter 'Save' as the label.
+### Add a functional save button to the header bar
 
-1. Choose an icon for it (search for save)
+1. Click the "+" button in the top-right corner and label it "Save".
 
-1. In the *On click* events add the following actions
-   1. Execute component action / I want to 'Form, Save current Changes' / Which form: 'Form 1'
-   1. Click the *Upon completion* button and add the following action: Close a panel / Panel : This panel(Contact Form)
-   1. Click the *Upon completion* button and add the following action: Execute component action / I want to 'Table, Fetch the data' / Which table?: 'Table 6'
+1. In the *header bar* section, select *Icon* and type "Save" in the filter box.
 
-1. On the top right of the panel, rename the '+Add' action 'Close', choose an X icon and as action add "Close a panel" / this panel
+1. Select the *Save* icon.
 
-1. The result for the panel (in edit mode) should look something like this:
+   ![Save icon](~/user-guide/images/Save_icon.png)
 
-    ![Panel edit mode](~/user-guide/images/tutorial_app_design_panel_edit.png)
+1. Configure an on-click action:
 
-1. Once you publish the app and click the **Add contact** button, the panel should look similar to this:
+   1. Select *Events*, and click the *Configure actions* button next to *On click*.
 
-    ![Panel published](~/user-guide/images/tutorial_app_design_panel_published.png)
+   1. From the dropdown list, select *Execute component action*.
+
+   1. Specify the following details:
+
+      - *I want to*: Form, Save current Changes
+
+      - *Which form?*: Form 1
+
+   1. Select *Upon completion* and add a *Close a panel* action.
+
+   1. In the *Panel* box, select "This panel(Contact Form)".
+
+   1. Select *Upon completion* and add a second *Execute component action*.
+
+   1. Specify the following details:
+
+      - *I want to*: Table, Fetch the data
+
+      - *Which table?*: Table 6
+
+1. Click *Ok* in the lower right corner of the pop-up window.
+
+### Configure a functional close button
+
+1. Click *+ Add* in the top-right corner, and rename it "Close" in the *header bar* section.
+
+1. In the *Icon* section, enter "Close" in the filter box, and select the "X" icon.
+
+1. Configure an on-click action:
+
+   1. Select *Events*, and click the *Configure actions* button next to *On click*.
+
+   1. From the dropdown list, select *Close a panel*.
+
+   1. In the *Panel* box, select "This panel(Contact Form)".
+
+1. Click *Ok* in the lower-right corner of the pop-up window.
+
+In edit mode, the panel should resemble this:
+
+![Panel edit mode](~/user-guide/images/tutorial_app_design_panel_edit.png)
+
+Once you publish the app and click the *Add contact* button, the panel should look similar to this:
+
+![Panel published](~/user-guide/images/tutorial_app_design_panel_published.png)
 
 ## Step 9: Fixing the grid
 

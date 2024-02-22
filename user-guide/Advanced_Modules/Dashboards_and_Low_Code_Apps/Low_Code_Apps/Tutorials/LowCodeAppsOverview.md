@@ -41,4 +41,4 @@ With the DataMiner Low-Code Apps module, you can create custom applications that
 
 - [Getting started with the grid component](xref:Tutorial_Apps_Grid)
 
-- [Best practices in low-code app design](xref:Tutorial_App_Design)
+- [Creating a visually appealing and user-friendly low-code app](xref:Tutorial_App_Design)
