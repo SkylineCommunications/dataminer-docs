@@ -77,11 +77,11 @@ For more detailed information, refer to [Adding commands for the Teams bot to a 
 
 #### 23 January 2024 - Fix - Unknown error when remote accessing web apps [ID_38549]
 
-While remote accessing web apps via dataminer.services (e.g. the Monitoring app), the following message could appear: `An unknown error occurred (status: 200).` The app would also stop working until the page was refreshed. This issue has been resolved.
+While remote access was used to go to the web apps via dataminer.services (e.g. the Monitoring app), the following message could appear: `An unknown error occurred (status: 200).` The app would also stop working until the page was refreshed. This issue has been resolved.
 
 #### 12 January 2024 - Fix - The given username was not applied when deploying a DaaS system
 
-When a custom username was given when deploying a new DaaS system the default username (Administrator) was still being used. The user will now be created with the custom username.
+When a custom username was given when deploying a new DaaS system, the default username (Administrator) was still used. The user will now be created with the custom username.
 
 #### 12 January 2024 - New feature - Remote access for custom files/webpages [ID_38426]
 
@@ -127,29 +127,29 @@ When you create a DaaS system, your dataminer.services account will automaticall
 
 You can manually delete a DaaS system from dataminer.services, just like any other DMS; however, note that this is irreversible, and all data of the system will be lost.
 
-#### 28 November 2023 - Enhancement - Deploying multiple DaaS systems simultaniously
+#### 28 November 2023 - Enhancement - Deploying multiple DaaS systems simultaneously
 
-From now on it is possible to create more than one DaaS system simultaneously on [dataminer.services](https://dataminer.services).
+It is now possible to create more than one DaaS system simultaneously on [dataminer.services](https://dataminer.services).
 
 #### 24 November 2023 - Fix - Improved username validation when deploying a DaaS system
 
-The username validation has been improved to prevent the deployment from failing when the given username was not a valid. This issue was introduced on 10 November 2023.
+The username validation has been improved to prevent the deployment from failing when the given username is not a valid. This fixes an issue introduced on 10 November 2023.
 
-#### 24 November 2023 - Enhancement - Admin app improved login system
+#### 24 November 2023 - Enhancement - Improved login system for Admin app
 
-From now on the [Admin app](https://admin.dataminer.services) has an improved login system that should prevent login redirect loops that could be experienced before.
+The [Admin app](https://admin.dataminer.services) now has an improved login system. This should prevent login redirect loops that could be experienced before.
 
 #### 24 November 2023 - New feature - Introducing the new Catalog user interface
 
-This update includes a new UI for [catalog.dataminer.services](https://catalog.dataminer.services).
+A new user interface has been introduced for [catalog.dataminer.services](https://catalog.dataminer.services).
 
 #### 22 November 2023 - Enhancement - Warning to link account before doing a DxM or Catalog deployment
 
-From now on the [Admin app](https://admin.dataminer.services) and [Catalog](https://catalog.dataminer.services) will prevent users from doing a deployment if they don't have a linked DataMiner account for the particular DataMiner System because the deployment would fail anyhow. A warning to link your accounts will be displayed instead.
+From now on, the [Admin app](https://admin.dataminer.services) and [Catalog](https://catalog.dataminer.services) will prevent users from doing a deployment if they do not have a linked DataMiner account for the relevant DataMiner System, because in such a case the deployment is not possible. A warning to link the accounts will be displayed instead.
 
-#### 22 November 2023 - Enhancement - dataminer.services homepage improved login system
+#### 22 November 2023 - Enhancement - Improved login system for dataminer.services home page
 
-From now on [dataminer.services](https://dataminer.services) has an improved login system that should prevent login redirect loops that could be experienced before.
+The [dataminer.services](https://dataminer.services) home page now has an improved login system. This should prevent login redirect loops that could be experienced before.
 
 #### 21 November 2023 - New feature - Remote access using DataMiner Cube [ID_37841]
 
@@ -164,15 +164,15 @@ Users were no longer able to grant admin consent for the Teams Chat Integration 
 
 #### 10 November 2023 - Enhancement - Provide a custom username and password when deploying a DaaS system
 
-From now on you will be able to provide your own username and password for your admin account when deploying a DaaS system.
+From now on, you will be able to provide your own username and password for your admin account when deploying a DaaS system.
 
-#### 9 November 2023 - Enhancement - Sharing with improved login system
+#### 9 November 2023 - Enhancement - Improved login system for sharing
 
-From now on when using live sharing, including the [Shares app](https://shares.dataminer.services), an improved login system will be used that should prevent login redirect loops that could be experienced before.
+The live sharing feature, including the [Shares app](https://shares.dataminer.services), now has an improved login system. This should prevent login redirect loops that could be experienced before.
 
-#### 9 November 2023 - Enhancement - Connecting to the dataminer.services with improved login system
+#### 9 November 2023 - Enhancement - Improved login system for connection to the dataminer.services
 
-From now on when connecting your DMS to dataminer.services an improved login system will be used that should prevent login redirect loops that could be experienced before.
+When a DMS is connected to dataminer.services, an improved login system will now be used. This should prevent login redirect loops that could be experienced before.
 
 #### 26 September 2023 - Fix - Remote Access automatic login now works with special characters in DataMiner account configuration [ID_37438]
 
