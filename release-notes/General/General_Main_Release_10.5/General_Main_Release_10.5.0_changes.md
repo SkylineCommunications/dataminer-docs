@@ -182,3 +182,9 @@ When a redundancy group was set to an undefined state, a large number of empty c
 <!-- MR 10.5.0 - FR 10.4.4 -->
 
 When the system went into file offload mode, in some cases, a serialization issue could occur, causing the file offload mode to get stuck.
+
+#### Automation: Problem when sending an email to a user or group [ID_38844]
+
+<!-- MR 10.5.0 - FR 10.4.4 -->
+
+When an Automation script sent an email to a user or a user group using an *Email* action, in some cases, an error could be thrown.

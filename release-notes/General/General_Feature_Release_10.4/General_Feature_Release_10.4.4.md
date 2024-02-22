@@ -238,3 +238,9 @@ When a paused element was set back to the "started" state, it would no longer re
 When using either Google Maps or OpenStreetMap, KML layers would incorrectly always be displayed first in the layer legend, regardless of the order in which they were specified in the map configuration file.
 
 From now on, the legend will always show the layers in the order in which they were specified in the map configuration file.
+
+#### Automation: Problem when sending an email to a user or group [ID_38844]
+
+<!-- MR 10.5.0 - FR 10.4.4 -->
+
+When an Automation script sent an email to a user or a user group using an *Email* action, in some cases, an error could be thrown.
