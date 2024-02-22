@@ -8,8 +8,8 @@ Microsoft Visio drawings can be enriched with DataMiner functionality using spec
 
 Shape data (known as “custom properties” prior to Microsoft Visio 2007) are sets of user-defined fields that hold data. They can be added to pages, shapes, and even groups of shapes.
 
-  > [!TIP]
-  > Do you prefer working hands-on? Try our tutorial on [Getting started with basic shapes](xref:Getting_started_with_basic_shapes)
+> [!TIP]
+> Do you prefer a hands-on approach? Try our tutorial on [Getting started with basic shapes](xref:Getting_started_with_basic_shapes).
 
 ## Opening the Shape Data pane
 
