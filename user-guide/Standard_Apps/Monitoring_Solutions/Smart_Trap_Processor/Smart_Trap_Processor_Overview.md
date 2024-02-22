@@ -4,6 +4,9 @@ uid: Smart_Trap_Processor_Overview
 
 # The Smart Trap Processor Tool
 
+> [!TIP]
+> See also: [Smart Trap Processor - Use case](https://community.dataminer.services/use-case/smart-trap-processor/).
+
 The Smart Trap Processor tool facilitates the configuration of rules for collecting, processing, and monitoring SNMP-based events from various sources.
 
 Through a unified interface, you can [configure processing rules](xref:Processor_configuration) and [monitor processed traps](xref:Monitoring_Processed_Traps) for any of the processor elements available in the DataMiner System.
