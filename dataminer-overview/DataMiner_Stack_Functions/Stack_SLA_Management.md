@@ -8,7 +8,9 @@ uid: Stack_SLA_Management
 
 ![stack.functions.categories](~/dataminer-overview/images/stack_SLA_management.png)
 
-Automate, track, and measure the digital processes that a key relationship depends on.
+## SLA Management
+
+***Automate, track, and measure the digital processes that a key relationship depends on.***
 
 DataMiner SLA Management is a cutting-edge DataMiner technology that provides operators with a business perspective on their operations. In addition to the typical device and service information, DataMiner SLA Management factors in the historical performance weighed against the defined objectives, providing valuable business impact information.
 
