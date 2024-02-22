@@ -9,7 +9,7 @@ uid: artifactdeployer_change_log
 Improved robustness for deployments by adding and improving retry mechanisms.
 
 > [!TIP]
-> To make use of all the enhancements, also update to Orchestrator 1.5.5.
+> To make use of all the enhancements, also install Orchestrator 1.5.5.
 
 #### 22 January 2024 - Enhancement - ArtifactDeployer 1.6.5 - Added DMA ID to deployment events [ID_38485]
 
