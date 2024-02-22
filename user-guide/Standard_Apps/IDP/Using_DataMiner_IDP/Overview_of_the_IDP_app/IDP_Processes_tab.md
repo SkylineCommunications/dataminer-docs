@@ -11,7 +11,7 @@ uid: IDP_Processes_tab
 > - Prior to IDP 1.1.11, this tab was called *Workflows*. The *Activities* subtab was called *Automation* prior to IDP 1.1.16.
 
 > [!WARNING]
-> As from IDP 1.5.0 onwards, the necessary Automation Scripts, Functions, etc... will not be part of the IDP package anymore.
+> As from IDP 1.5.0 onwards, the necessary Automation Scripts, Functions, etc... are not part of the IDP package.
 
 If IDP is used together with DataMiner Process Automation, this tab displays an overview of scheduled processes.
 
