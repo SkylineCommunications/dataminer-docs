@@ -313,9 +313,13 @@ General Parameters (DataMiner Element Control Protocol):
 |65157|[Interface delete/add]||
 |65158|[DVE index to delete]||
 |65159|[Interface Index to Delete]||
+|66147|DVE State|Write DVE State column Generic DVE table|
+|66148|[DVE function GUID]|Write DVE function GUID column Generic DVE table|
+|66149|DVE Link to Resource Manager|Write DVE Link to Resource Manager column Generic DVE table|
 |66154|[DVE index to delete]||
 |66155|[DVE delete/add]||
 |66156|[Interface Index to Delete]||
+|66160|DVE Name|Write DVE Name column Generic DVE table|
 |66163|[New Generic DVE Link]||
 |66164|[New Generic DVE Link]||
 |66165|[Generic DVE Link delete/add]||
