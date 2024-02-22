@@ -711,8 +711,8 @@ a.backtotoplink:hover
   padding: 0px 10px;
 }
 .columnhome {
-  flex: 16.66%;
-  max-width: 16.66%;
+  flex: 20%;
+  max-width: 20%;
   padding: 0px 10px;
 }
 
