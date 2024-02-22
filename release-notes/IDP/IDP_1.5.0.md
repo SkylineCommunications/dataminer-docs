@@ -5,7 +5,7 @@ uid: IDP_1.5.0
 # IDP 1.5.0
 
 > [!NOTE]
-> This IDP version requires that DataMiner 10.2.0 [CU0] or higher is installed.
+> This IDP version requires that DataMiner 10.2.0 [CU0] or higher is installed. Note that if you use DataMiner [10.4.0](xref:General_Main_Release_10.4.0_changes#dataminersolutionsdll-now-included-in-core-dataminer-software-id_38530)/[10.4.3](xref:General_Feature_Release_10.4.3#dataminersolutionsdll-now-included-in-core-dataminer-software-id_38530) or higher, installing DataMiner IDP will no longer require a DataMiner restart.
 
 ## New features
 
@@ -94,10 +94,6 @@ When you click the *Provision* button, this will now open a wizard instead of im
 #### Generic Rack Layout Manage: New option to disable subscriptions [ID_38480]
 
 In the Generic Rack Layout Manager element, you can now disable subscriptions with a new toggle button, in order to reduce the load on SLNet. When you disable subscriptions, changes to the element properties will not update the Rack Layout Manager.
-
-#### DataMinerSolutions.dll now included in core DataMiner software [ID_38530]
-
-To make sure that installing IDP will no longer require a DataMiner restart, *DataMinerSolutions.dll* will be included in the core DataMiner software from DataMiner 10.4.0/10.4.3 onwards.
 
 #### Legacy dashboards replaced by new dashboards or removed [ID_38595]
 
