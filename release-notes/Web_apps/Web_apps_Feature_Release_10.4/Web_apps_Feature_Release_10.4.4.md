@@ -217,3 +217,9 @@ Up to now, a Web component would incorrectly display scroll bars when all conten
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
 Up to now, when a client was using polling, GQI updates would not be shown in the UI due to incorrect event processing.
+
+#### Dashboards app & Low-Code Apps: Components needed to be selected first before they could be deleted [ID_38859]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+Up to now, before you were able to delete a component by clicking the delete button at the bottom of the component, you first had to select that component. This meant that, for example, you had to click the delete button twice. From now on, clicking the delete button will automatically select the component.
