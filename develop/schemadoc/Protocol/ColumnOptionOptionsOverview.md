@@ -609,12 +609,12 @@ From DataMiner 9.6.5 (RN 21401) onwards, this option is also supported for EPM (
 
 ## xpos
 
-This option indicates that this column contains the coordinate along the X-axis for dynamic positioning of shapes in Visio.
+This option indicates that this column contains the coordinate along the X-axis for dynamic positioning of shapes in Visual Overview.
 
-Refer to [Shape positioning based on coordinates stored in dynamic tables](xref:Positioning_shapes_dynamically1#shape-positioning-based-on-coordinates-stored-in-dynamic-tables) for more information about this option to positioning shapes dynamically.
+For more information about this option to positioning shapes dynamically, see [Shape positioning based on coordinates stored in dynamic tables](xref:Positioning_shapes_dynamically1#shape-positioning-based-on-coordinates-stored-in-dynamic-tables).
 
 ## ypos
 
-This option indicates that this column contains the coordinate along the Y-axis for dynamic positioning of shapes in Visio.
+This option indicates that this column contains the coordinate along the Y-axis for dynamic positioning of shapes in Visual Overview.
 
-Refer to [Shape positioning based on coordinates stored in dynamic tables](xref:Positioning_shapes_dynamically1#shape-positioning-based-on-coordinates-stored-in-dynamic-tables) for more information about this option to positioning shapes dynamically.
+For more information about this option to positioning shapes dynamically, see [Shape positioning based on coordinates stored in dynamic tables](xref:Positioning_shapes_dynamically1#shape-positioning-based-on-coordinates-stored-in-dynamic-tables).
