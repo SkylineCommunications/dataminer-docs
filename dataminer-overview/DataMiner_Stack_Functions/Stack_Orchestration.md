@@ -92,7 +92,7 @@ Once created, they can be triggered in a variety of ways, ranging from manual op
 
 By fully automating operating and business procedures/workflows, operational expenses can be drastically reduced. Automation scripts can be used in a lot of applications such as intelligent back-up and service-healing routines, guided troubleshooting for operators, automatic configuration, provisioning of services and many more.
 
-And combined with DataMiner's integrated [Scheduler](xref:Stack_Orchestration#Scheduler), automation scripts can be linked to scheduled tasks.
+And combined with DataMiner's integrated [Scheduler](xref:Stack_Orchestration#scheduler), automation scripts can be linked to scheduled tasks.
 
 > [!TIP]
 > For more information:
