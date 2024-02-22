@@ -7,7 +7,7 @@ uid: Troubleshooting_SLNet_Disconnects
 > [!NOTE]
 > This page is currently still being developed. The content is not yet optimized and may not yet be fully accurate.
 
-<div class="mermaid">
+```mermaid
 flowchart TD
 %% -------------------------------------------------------------------------
 %% SLNet flowchart - disconnects branch
@@ -129,7 +129,7 @@ class LackResources,DebugCallback,CheckCPUAndMem,FixMobileGatewaySettings,StartA
 class AreResourcesOk,WhatSymtoms,IsAgentRunning,HasMobileGateway,MoblieGatewayActivated,IsIssueFixed_1,IsIssueFixed_3,IsIssueFixed_2,NotInSameDomain,CheckSLDMS,CallbackVerified,ResourcesCheck classDecision;
 class Start,Ending_1,Ending_2,Ending_3,ContactTechsupport,ContactTechsupport_2,ContactTechsupport_3 classTerminal;
 class Home,Back classExternalRef;
-</div>
+```
 
 ## CPU and memory resources
 

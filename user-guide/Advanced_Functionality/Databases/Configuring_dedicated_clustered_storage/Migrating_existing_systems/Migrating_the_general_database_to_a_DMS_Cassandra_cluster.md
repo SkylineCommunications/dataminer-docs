@@ -11,7 +11,7 @@ The migration can be done while the DMAs are active; however, a **DataMiner rest
 The Cassandra Cluster Migrator tool (called *SLCCMigrator.exe*) is available on every DMA running DataMiner version 10.2.0/10.2.2 or higher. You can find it in the folder `C:\Skyline DataMiner\Tools\`. However, we highly recommend that you upgrade to DataMiner 10.2.0 [CU8]/10.2.11 or higher to use the tool, as this version includes an improved version of the tool that will prevent possible issues.
 
 > [!NOTE]
-> From DataMiner 10.3.7/10.3.0 [CU4] onwards, the Cassandra Cluster Migrator tool is able to establish TLS connections towards the databases. To enable this functionality, configure TLS encryption on your [OpenSearch database](xref:Installing_OpenSearch_database#tls-configuration) or [Elasticsearch database](xref:Security_Elasticsearch#client-server-tls-encryption) and your [Cassandra database](xref:Security_Cassandra_TLS), and enable the *Cassandra TLS* and *Elastic TLS* options when configuring the [Cassandra and OpenSearch/Elasticsearch settings](#running-the-migration) in the migration tool.<!-- RN 34852 --> For OpenSearch, configuring TLS is highly recommended.
+> From DataMiner 10.3.7/10.3.0 [CU4] onwards, the Cassandra Cluster Migrator tool is able to establish TLS connections towards the databases. To enable this functionality, configure TLS encryption on your [OpenSearch database](xref:Installing_OpenSearch_database#tls-and-user-configuration) or [Elasticsearch database](xref:Security_Elasticsearch#client-server-tls-encryption) and your [Cassandra database](xref:Security_Cassandra_TLS), and enable the *Cassandra TLS* and *Elastic TLS* options when configuring the [Cassandra and OpenSearch/Elasticsearch settings](#running-the-migration) in the migration tool.<!-- RN 34852 --> For OpenSearch, configuring TLS is highly recommended.
 
 ## Prerequisites
 
@@ -45,6 +45,9 @@ During the migration, each DMA will go through the following stages:
 | Migrating | The DMA is busy migrating data. Progress can be tracked using the migrator tool. |
 | Finished migrating | The DMA has finished migrating and is ready for migration finalization, i.e. ready to switch to the Cassandra and OpenSearch/Elasticsearch cluster configuration. |
 | Finalized | The DMA has been restarted and switched to the Cassandra and OpenSearch/Elasticsearch cluster configuration. |
+
+> [!NOTE]
+> Once the migration is started, all new data will be sent to both the new and the old database. Writing to both databases will continue until the migration has been finalized. Even in case of a long-running migration, there will not be any gaps in the history data between the start and the end of the migration process.
 
 ## Running the migration
 
@@ -102,6 +105,9 @@ If your system does not use an indexing database yet or if it already uses a Ope
 > - When you migrate a DataMiner Failover setup, only the data of the active DMA will be migrated. Once the migration has finished, both DMAs will be restarted.
 
 ### [Running a migration with bespoke Elasticsearch data](#tab/tabid-2)
+
+> [!NOTE]
+> To migrate to a DMS with Cassandra cluster and OpenSearch cluster, it is not possible to use this procedure. An alternative procedure will become available for this in the future.
 
 In case your DataMiner System contains bespoke Elasticsearch data or SRM data, use the procedure below.
 
@@ -216,17 +222,28 @@ Any errors that occur during a migration process will be displayed in a pop-up w
 
 - To check the migration server logging, go to `C:\Skyline DataMiner\Logging` and open *SLDBConnection.txt*.
 
-If you encounter **issues when you start a migration** (e.g. “No connection with DataMiner”), check the following NATS message broker log files:
+- If you encounter **issues when you start a migration** (e.g. “No connection with DataMiner”), check the following NATS message broker log files:
 
-- `C:/Skyline DataMiner/Logging/SLMessageBroker.txt`
-- `C:/Skyline DataMiner/Logging/SLMessageBroker.Crash.txt`
+  - `C:/Skyline DataMiner/Logging/SLMessageBroker.txt`
+  - `C:/Skyline DataMiner/Logging/SLMessageBroker.Crash.txt`
 
-If you encounter an **issue initializing all the Agents**, check whether the logging of the *SLCCMigrator.exe* tool contains a line mentioning "*No responders are available for the request.*". Alternatively, you can also identify this issue by going to `http://<ip>:8222/varz` and checking if the "cluster" tag mentions all the IPs in the cluster. To resolve this issue:
+- If you encounter an **issue initializing all the Agents**, check whether the logging of the *SLCCMigrator.exe* tool contains a line mentioning "*No responders are available for the request.*". Alternatively, you can also identify this issue by going to `http://<ip>:8222/varz` and checking if the "cluster" tag mentions all the IPs in the cluster. To resolve this issue:
 
-1. Make sure all Agents are online.
-1. Open the [SLNetClientTest tool](xref:SLNetClientTest_tool), and connect to the Agent that is not initialized.
-1. In the *Build Message* tab, send a *NatsCustodianResetNatsRequest* (leaving the *IsDistributed* property set to false).
-1. Initialize the Agents again and continue with the migration procedure, as detailed above.
+  1. Make sure all Agents are online.
 
-> [!CAUTION]
-> Always be very careful when you use the SLNetClientTest tool, as it allows actions that can have far-reaching consequences for a DataMiner System. Always ask for support in case you need to use this tool and something is not clear.
+  1. Open the [SLNetClientTest tool](xref:SLNetClientTest_tool), and connect to the Agent that is not initialized.
+
+  1. In the *Build Message* tab, send a *NatsCustodianResetNatsRequest* (leaving the *IsDistributed* property set to false).
+
+  1. Initialize the Agents again and continue with the migration procedure, as detailed above.
+
+  > [!CAUTION]
+  > Always be very careful when you use the SLNetClientTest tool, as it allows actions that can have far-reaching consequences for a DataMiner System. Always ask for support in case you need to use this tool and something is not clear.
+
+- If **TLS** is enabled on the Elasticsearch or OpenSearch nodes and **some Agents do not initialize**, you can check the connection to the Elasticsearch/OpenSearch nodes as follows:
+
+  1. Open a browser on the DataMiner servers that you want to migrate from
+
+  1. Enter `https://[IP address]:9200/` in the browser's address bar, replacing "[IP address]" with your IP address of the nodes.
+
+  If this fails, check if TLS was configured correctly and if the root certificate was correctly installed on the DataMiner server. See [TLS configuration for the OpenSearch database](xref:Installing_OpenSearch_database#tls-and-user-configuration) or [TLS configuration for the Elasticsearch database](xref:Security_Elasticsearch#client-server-tls-encryption).

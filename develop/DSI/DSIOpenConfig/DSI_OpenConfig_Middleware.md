@@ -11,7 +11,7 @@ The purpose of the OpenConfig middleware is to make it possible to **easily cons
 
 In order to use the OpenConfig middleware, you will need to have the following setup:
 
-- A DataMiner Agent that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud) and runs DataMiner 10.3.3 or higher.
+- A DataMiner Agent that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud) and runs DataMiner 10.3.0/10.3.3 or higher.
 
 - The [CommunicationGateway DxM](xref:DataMinerExtensionModules#communicationgateway) is installed on at least one of the DataMiner Agents in the cluster.
 
@@ -299,7 +299,9 @@ client.Subscribe(subscriptionName, new[] { "interfaces/interface/state" }, Handl
 Now anytime a `leaf` changes, it will send out a notification with the new value.
 
 > [!NOTE]
-> There might be some limitations on the data source in terms of granularity. For example, a switch could send out changes on the counters only once every 5 seconds while they would change multiple times in that time frame.
+>
+> - There might be some limitations on the data source in terms of granularity. For example, a switch could send out changes on the counters only once every 5 seconds while they would change multiple times in that time frame.
+> - Data sources may have limits as to the number of maximum subscriptions per connection. It is therefore recommended that you bundle the different YANG paths you are interested in into the same subscription as much as possible. Because one subscription is tied to how frequently updates are sent out, this typically means bundling all *SAMPLE* subscriptions per interval and all *ON_CHANGE* subscriptions.
 
 ### Accessing a specific instance
 
@@ -356,7 +358,7 @@ IDataMapper dataMapper = new DataMinerConnectorDataMapper(
 ```
 
 > [!IMPORTANT]
-> When configuring the path for a column, always specify the YANG module name as well. Notifications of type `JSON` do not contain it but notifications of type `JSON_IETF` do. The DataMapper is capable of handling both, but for that reason the YANG module name needs to be known.
+> If you use **OpenConfig middleware version range 1.x.x**, when configuring the path for a column, always specify the YANG module name as well. Notifications of type `JSON` do not contain it, but notifications of type `JSON_IETF` do. The DataMapper is capable of handling both, but for that reason the YANG module name needs to be known. If you use **OpenConfig middleware version 2.0.0** or higher, you no longer need to add the YANG module name to the column path. However, we still strongly recommended adding the YANG module name as a prefix to have a unique identifier when a value needs to be mapped with a column.
 
 You need to create a [DataMinerConnectorDataGrid](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid) and pass it the root YANG path of the `container` that will be stored. Then it is a matter of mapping the column parameters to the YANG paths of the `leaf` items.
 

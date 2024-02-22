@@ -60,7 +60,7 @@ To troubleshoot SLWatchdog issues, start from the Memory leak flowchart below.
 
 ### Memory leak flowchart
 
-<div class="mermaid">
+```mermaid
 flowchart TD
 %% Define blocks %%
     Home([Start page])
@@ -110,11 +110,11 @@ class ReportsGrowing,ValidateXml,togglingRTE,CheckSlXml classAction;
 %%class classSolution;
 class ConfirmLeak,CommonIssues classActionClickable;
 class Home,SLLogCollector,Investigation,RteLink,XmlFlowchart classExternalRef;
-</div>
+```
 
 ### Common issues flowchart
 
-<div class="mermaid">
+```mermaid
 flowchart TD
 %% Define blocks %%
     CommonIssues[SLWatchDog common issues]
@@ -173,7 +173,7 @@ class UpgradeStuck,WatchdogStarted classDecision;
 class CrashRestart,CrashdumpIssues,CheckBitness,dmaVersion,LogIssues,FailedMinidumps,CheckSystemCache classAction;
 class InstructionsBitness,ResolveMismatch classActionClickable;
 class WrongDates,VerifyRestart,Home,SLLogCollector,Investigation,RunLogCollector classExternalRef;
-</div>
+```
 
 ### Is Watchdog running as a 64-bit process?
 

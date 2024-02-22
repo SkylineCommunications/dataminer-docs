@@ -15,7 +15,7 @@ The CheckVIPs thread, which is responsible for checking whether a DMA holds the 
 
 ## Fix
 
-Install DataMiner 10.2.0 [CU16], 10.3.0 [CU4], or 10.3.7
+Install DataMiner 10.2.0 [CU16], 10.3.0 [CU4], or 10.3.7.
 
 ## Issue description
 

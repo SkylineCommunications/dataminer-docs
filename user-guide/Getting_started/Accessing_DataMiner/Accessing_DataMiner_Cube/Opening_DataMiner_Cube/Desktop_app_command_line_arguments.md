@@ -1,5 +1,6 @@
 ---
 uid: Desktop_app_command_line_arguments
+keywords: launcher
 ---
 
 # Desktop application command-line arguments
@@ -16,8 +17,6 @@ Several command line arguments can be specified when starting the application. F
 ### /Alias=Xyz
 
 Displays a custom alias ("Xyz") instead of the cluster name in the Cube header. Must be combined with the `/Host=hostname` argument. The alias will be used as long as the client is connected with the specified host.
-
-Available from DataMiner 10.0.13 onwards.
 
 ### /Autorun
 
@@ -58,8 +57,6 @@ Available from DataMiner 10.1.0/10.0.13 onwards.
 ### /InstallOptions
 
 Can be combined with `/Install` or `/Install /Silent` to modify the installation options.
-
-Available from DataMiner 10.0.13 onwards.
 
 Supported options:
 

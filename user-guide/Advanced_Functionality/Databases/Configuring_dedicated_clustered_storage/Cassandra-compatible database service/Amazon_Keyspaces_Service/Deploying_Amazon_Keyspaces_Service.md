@@ -4,6 +4,9 @@ uid: Deploying_Amazon_Keyspaces_Service
 
 # Deploying the Amazon Keyspaces Service
 
+> [!IMPORTANT]
+> This setup is deprecated. We recommend using [Storage as a Service (STaaS)](xref:STaaS) instead. If you want to use self-hosted storage, install a [Cassandra Cluster](xref:Cassandra_database) database.
+
 ## Installing the Starfield certificate
 
 For Amazon Keyspaces, the Starfield certificate must be present on the local Windows machine DataMiner is running on. To install the certificate, you will need to add it to the *Trusted Root Certification Authorities* section of the Windows certificate store:

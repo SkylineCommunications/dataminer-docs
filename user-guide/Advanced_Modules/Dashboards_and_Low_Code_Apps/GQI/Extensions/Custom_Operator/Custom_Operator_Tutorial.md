@@ -48,10 +48,7 @@ The result will look like this:
 
 - DataMiner version 10.2.7/10.3.0 or higher.
 
-- Depending on your DataMiner version, you may need to enable the [*GenericInterface* soft-launch option](xref:Overview_of_Soft_Launch_Options#genericinterface).
-
-  > [!NOTE]
-  > To check whether this soft-launch option is required in your DataMiner version, see [Overview of soft-launch options](xref:Overview_of_Soft_Launch_Options).
+- If you are using a DataMiner version prior to DataMiner 10.3.0 [CU10]/10.4.1, make sure the [*GenericInterface* soft-launch option](xref:Overview_of_Soft_Launch_Options#genericinterface) is enabled.
 
   > [!TIP]
   > See [Activating soft-launch options](xref:Activating_Soft_Launch_Options).
@@ -344,4 +341,4 @@ If a filter attempts to use an affected column, it will only run after the colum
 Filtering by the original *Name* column will now yield no results.
 
 > [!NOTE]
-> The `IGQIColumn` interface is used for the affected columns array, combining both new columns (`GQIColumn`) and existing columns (`GQIEditableColumn`).
+> The [IGQIColumn](xref:GQI_IGQIColumn) interface is used for the affected columns array, combining both new columns ([GQIColumn](xref:GQI_GQIColumn)) and existing columns (`GQIEditableColumn`).

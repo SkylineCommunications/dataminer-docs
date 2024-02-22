@@ -8,7 +8,7 @@ When you are configuring an app in the Low-Code Apps module, you can configure t
 
 To configure a header bar:
 
-1. Click the *headerbar* toggle button.
+1. Click the *header bar* toggle button.
 
 1. Click the "+" icon on the left or right side of the page header bar, depending on where you want to add a button to the header bar.
 
@@ -30,4 +30,7 @@ To configure a header bar:
 > To delete a button, click the garbage can icon next to that button in the page configuration pane, and then click the check mark icon to confirm.
 
 > [!TIP]
-> See also: [Using button components and header bars in Low-Code Apps](https://community.dataminer.services/video/using-button-components-and-header-bars-in-dataminer-apps/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> See also:
+>
+> - [Tutorials — Using a header bar](xref:Tutorial_Apps_Headerbar)
+> - [Using button components and header bars in Low-Code Apps](https://community.dataminer.services/video/using-button-components-and-header-bars-in-dataminer-apps/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)

@@ -15,6 +15,8 @@ This will open a menu containing the settings explained below.
 
 Select this option to remove alarms from the console automatically as soon as their severity returns to normal. To ensure alarms stay in the console until cleared by the user, clear the selection.
 
+From DataMiner 10.2.0 [CU22]/10.3.0 [CU11]/10.4.2 onwards<!--RN 38034-->, this option is enabled by default for all alarm tabs listing active alarms and suggestion events, except for alarm tabs listing historical alarms or information events. Prior to DataMiner 10.2.0 [CU22]/10.3.0 [CU11]/10.4.2, this option is only enabled by default for alarms tabs listing active alarms.
+
 > [!TIP]
 > See also: [Clearing alarms](xref:Clearing_alarms)
 

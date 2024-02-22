@@ -300,6 +300,8 @@ DataMiner will propose the following ciphers to the server in the following orde
 
 DataMiner will propose the following hash-based message authentication algorithms (HMAC) to the server in the following order:
 
+1. HMAC-SHA2-512-etm\@openssh.com (from DataMiner 10.3.0 [CU11]/10.4.2 onwards<!--RN 38213-->)
+1. HMAC-SHA2-256-etm\@openssh.com (from DataMiner 10.3.0 [CU11]/10.4.2 onwards<!--RN 38213-->)
 1. HMAC-SHA2-512 (from DataMiner 10.2.5/10.3.0 onwards)
 1. HMAC-SHA2-256
 1. HMAC-SHA1
@@ -339,6 +341,7 @@ DataMiner will propose the following hash-based message authentication algorithm
 1. HMAC-MD5
 1. HMAC-SHA1
 1. HMAC-SHA2-256 (Introduced in DataMiner 9.5.2 - RN 14877)
+
 
 #### Host key types
 

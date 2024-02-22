@@ -22,8 +22,6 @@ Currently, the pipeline for protocol development consists of the following stage
 
 - [Sync DataMiner feature release DLLs](#sync-dataminer-feature-release-dlls)
 
-- [Sync DIS version](#sync-dis-version)
-
 - [Build QuickActions on latest feature release](#build-quickactions-on-latest-feature-release)
 
 - [Convert solution to XML](#convert-solution-to-xml)
@@ -147,21 +145,17 @@ This stage verifies whether a MaximumSupportedVersion was defined in the protoco
 
 For solutions that consist of legacy-style projects:
 
-    - Checks whether projects use the obsolete packages.config package management format.
-    - Checks whether projects have any vulnerable, deprecated, or outdated NuGet packages.
+- Checks whether projects use the obsolete packages.config package management format.
+- Checks whether projects have any vulnerable, deprecated, or outdated NuGet packages.
 
 For solutions that consist of SDK-style projects:
 
-    - Does **not** check whether projects use the obsolete packages.config package management format, as packageReference is the only supported package management format for this type of project.
-    - Checks whether projects have any vulnerable, deprecated, or outdated NuGet packages.
+- Does **not** check whether projects use the obsolete packages.config package management format, as packageReference is the only supported package management format for this type of project.
+- Checks whether projects have any vulnerable, deprecated, or outdated NuGet packages.
 
 ## Sync DataMiner feature release DLLs
 
 This stage ensures that the next build stage will build against the latest feature release of DataMiner. It will verify on DCP whether a new feature release has been released and, if so, Jenkins will make sure to use that feature release to build against from that point onwards.
-
-## Sync DIS version
-
-This stage ensures that the pipeline uses the latest version of DIS. It verifies whether a new version has been released, and if that is the case, the new version is obtained.
 
 ## Build QuickActions on latest feature release
 
@@ -173,7 +167,7 @@ This stage converts the protocol Visual Studio solution back to a protocol XML f
 
 ## Create protocol package
 
-This stage creates a .dmprotocol package including the protocol XML, assemblies, Visio and Help files.
+This stage creates a .dmprotocol package including the protocol XML, assemblies, and Visio files.
 
 ## Scan test projects
 
@@ -428,11 +422,11 @@ This stage performs a cleanup of the workspace and sends an email containing a r
 
 The report also contains an overall quality score, which is calculated using the following metrics:
 
-- Number of Critical Issues reported by the DIS Validator
+- Number of Critical Issues reported by the validator
 
-- Number of Major Issues reported by the DIS Validator
+- Number of Major Issues reported by the validator
 
-- Number of Minor Issues reported by the DIS Validator
+- Number of Minor Issues reported by the validator
 
 - Number of Blocker Issues reported by SonarQube
 
@@ -440,4 +434,18 @@ The report also contains an overall quality score, which is calculated using the
 
 - Number of Major Issue reported by SonarQube
 
-![Overall quality score calculation](~/develop/images/PipelineEquation.png)
+$$ overallQualityScore = 100 - \left(40a + 20b + 10c + 15d + 10e + 5f\right) $$
+
+, where,
+
+$$ a = {validatorCriticalIssueCount \over { 1 + validatorCriticalIssueCount}} $$,
+
+$$ b = {validatorMajorIssueCount \over { 1 + validatorMajorIssueCount}} $$,
+
+$$ c = {validatorMinorIssueCount \over { 1 + validatorMinorIssueCount}} $$,
+
+$$ d = {sonarQubeBlockerIssueCount \over { 1 + sonarQubeBlockerIssueCount}} $$,
+
+$$ e = {sonarQubeCriticalIssueCount \over { 1 + sonarQubeCriticalIssueCount}} $$,
+
+$$ f = {sonarQubeMajorIssueCount \over { 1 + sonarQubeMajorIssueCount}} $$

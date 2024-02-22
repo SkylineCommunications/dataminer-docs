@@ -47,9 +47,9 @@ These are the main steps of the setup:
 
 1. Set up a cluster as detailed under [Creating a cluster](https://opensearch.org/docs/latest/tuning-your-cluster/cluster/). Take the sections below into account when you do so.
 
-#### OpenSearch.yml configuration
+#### opensearch.yml configuration
 
-- For every node in your cluster, configure the *OpenSearch.yml* file as illustrated in the example below (the example uses three nodes):
+- For every node in your cluster, configure the *opensearch.yml* file as illustrated in the example below (the example uses three nodes):
 
   ```yml
   # Use a descriptive name for your cluster:
@@ -109,33 +109,27 @@ These are the main steps of the setup:
   > [!NOTE]
   > As shown above, the `indices.query.bool.max_clause_count` setting should be set to "2147483647" (i.e. the maximum integer value).
 
-- If you want a node to be only a **data node**, add the following configuration in *OpenSearch.yml*:
+- If you want a node to be only a **data node**, add the following configuration in *opensearch.yml*:
 
   ```yml
   node.roles: [ data, ingest ]
   ```
 
-- If you want a node to be only the **cluster manager node** (a.k.a. the master node), add the following configuration in *OpenSearch.yml*:
+- If you want a node to be only the **cluster manager node** (a.k.a. the master node), add the following configuration in *opensearch.yml*:
 
   ```yml
   node.roles: [ cluster_manager ]
   ```
 
-- If you want a data node to take the role of cluster manager in case the current cluster manager node goes down, add the following configuration in *OpenSearch.yml*:
+- If you want a data node to take the role of cluster manager in case the current cluster manager node goes down, add the following configuration in *opensearch.yml*:
 
   ```yml
   node.roles: [ cluster_manager, data, ingest ]
   ```
 
-#### User configuration
+#### TLS and user configuration
 
-Generate a new hash for the admin user as detailed under [Configure a user](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/debian/#configure-a-user) in the OpenSearch documentation.
-
-You will need to remove all demo users except the *admin* user and replace the hash for the admin user with the generated hash.
-
-#### TLS configuration
-
-We highly recommend that you configure TLS in order to have a layer of security between your nodes and your DataMiner client. To do so:
+You should configure TLS in order to have a layer of security between your nodes and your DataMiner client. In addition, the default password of the *admin* user should be changed, and all the other users should be removed.
 
 1. [Remove the demo certificates](#remove-the-demo-certificates) that came with the default installation.
 
@@ -143,11 +137,13 @@ We highly recommend that you configure TLS in order to have a layer of security 
 
 1. [Update the trusted root certificates with rootCA.crt](#update-the-trusted-root-certificates-with-rootcacrt).
 
-1. [Install the rootCA.crt on the DataMiner server](#install-the-rootcacrt-on-the-dataminer-server).
+1. [Set up TLS in the opensearch.yml file](#set-up-tls-in-the-opensearchyml-file).
 
-1. [Set up TLS in the OpenSearch.yml file](#set-up-tls-in-the-opensearchyml-file).
+1. [Change the *admin* password and remove other users](#change-the-admin-password-and-remove-other-users).
 
 1. [Restart OpenSearch](#restart-opensearch).
+
+1. [Install the rootCA.crt on the DataMiner server](#install-the-rootcacrt-on-the-dataminer-server).
 
 ##### Remove the demo certificates
 
@@ -165,7 +161,7 @@ sudo rm -f *pem
 
 ##### Generate p12 keystore and truststore p12 files
 
-To configure TLS, instead of using .pem files, we recommend generating p12 keystore and truststore .p12 files. You will then need to reference these in the *OpenSearch.yml* file:
+To configure TLS, instead of using .pem files, we recommend generating p12 keystore and truststore .p12 files. You will then need to reference these in the *opensearch.yml* file:
 
 1. Generate the certificates using the [Generate-TLS-Certificates](https://github.com/SkylineCommunications/generate-tls-certificates) script on GitHub.
 
@@ -175,9 +171,9 @@ To configure TLS, instead of using .pem files, we recommend generating p12 keyst
 
 1. Place the correct .p12 file in the `\etc\opensearch\cert\` folder on each corresponding node (making sure the .p12 name matches the node name).
 
-1. Update the OpenSearch.yml file so that *keystore_filepath* and *truststore_filepath* refer to the location of the .p12 files. (For an example, see [Set up TLS in the OpenSearch.yml file](#set-up-tls-in-the-opensearchyml-file).)
+1. Update the opensearch.yml file so that *keystore_filepath* and *truststore_filepath* refer to the location of the .p12 files. (For an example, see [Set up TLS in the opensearch.yml file](#set-up-tls-in-the-opensearchyml-file).)
 
-1. Add the password to the keystore and truststore password fields in *OpenSearch.yml*. (For an example, see [Set up TLS in the OpenSearch.yml file](#set-up-tls-in-the-opensearchyml-file).)
+1. Add the password to the keystore and truststore password fields in *opensearch.yml*. (For an example, see [Set up TLS in the opensearch.yml file](#set-up-tls-in-the-opensearchyml-file).)
 
 ##### Update the trusted root certificates with rootCA.crt
 
@@ -199,40 +195,9 @@ To configure TLS, instead of using .pem files, we recommend generating p12 keyst
    openssl verify rootCA.crt
    ```
 
-##### Install the rootCA.crt on the DataMiner server
+##### Set up TLS in the opensearch.yml file
 
-To build trust between DataMiner and OpenSearch, so that DataMiner can connect to the OpenSearch database, install the rootCA.crt on the DataMiner server:
-
-1. Stop the DataMiner Agent.
-
-1. Double-click the *rootCA.crt* file on the DataMiner server.
-
-1. Use *Local Machine* as *Store Location* when adding the certificate, and place the certificate in *Trusted Root Certification Authorities*.
-
-1. Once the certificate has been imported, add the full HTTPS URL (including the port) in the *DataBase.DBServer* tag of the *DB.xml* file. Using the IP of the node with the *cluster_manager* role is preferable.
-
-   For example:
-
-     ```xml
-    <DataBase active="True" type="Elasticsearch" search="true">
-    <DBServer>https://166.206.186.146:9200</DBServer>
-    <UID>UserNameToConnectToOpenSearch</UID>
-    <PWD>PasswordOfTheUserNameToConnectToOpenSearch</PWD>
-    <ConnectString></ConnectString>
-    <IntegratedSecurity>False</IntegratedSecurity>
-    </DataBase>
-     ```
-
-   >[!IMPORTANT]
-   > The user and password provided should be defined in the `\etc\opensearch\opensearch-security\internal_users.yml` file.
-
-1. Restart the DataMiner Agent.
-
-1. Check in the *SLSearch.txt*, *SLDataGateway.txt*, and *SLDBConnection.txt* log files (in the folder `C:\Skyline DataMiner\Logging`) whether any errors have occurred.
-
-##### Set up TLS in the OpenSearch.yml file
-
-Configure the *OpenSearch.yml* file as illustrated in the example below.
+Configure the *opensearch.yml* file as illustrated in the example below.
 
 ```yml
 plugins.security.disabled: false
@@ -259,6 +224,10 @@ plugins.security.nodes_dn:
   - 'CN=FQDNOpenSearchNode1,OU=NameOfYourCluster,O=OpenSearch,C=BE'
   - 'CN=FQDNOpenSearchNode2,OU=NameOfYourCluster,O=OpenSearch,C=BE'
   - 'CN=FQDNOpenSearchNode3,OU=NameOfYourCluster,O=OpenSearch,C=BE'
+
+plugins.security.authcz.admin_dn:
+  - 'CN=FQDNOpenSearchNode1,OU=NameOfYourCluster,O=OpenSearch,C=BE'
+
 plugins.security.audit.type: internal_opensearch
 plugins.security.enable_snapshot_restore_privilege: true
 plugins.security.check_snapshot_restore_write_privileges: true
@@ -267,21 +236,77 @@ plugins.security.system_indices.enabled: true
 plugins.security.system_indices.indices: [".plugins-ml-model", ".plugins-ml-task", ".opendistro-alerting-config", ".opendistro-alerting-alert*", ".opendistro-anomaly-results*", ".opendistro-anomaly-detector*", ".opendistro-anomaly-checkpoints", ".opendistro-anomaly-detection-state", ".opendistro-reports-*", ".opensearch-notifications-*", ".opensearch-notebooks", ".opensearch-observability", ".opendistro-asynchronous-search-response*", ".replication-metadata-store",".opendistro-anomaly-detection-state", ".opendistro-reports-*", ".opensearch-notifications-*", ".opensearch-notebooks", ".opensearch-observability", ".opendistro-asynchronous-search-response*", ".replication-metadata-store"]
 ```
 
+##### Change the admin password and remove other users
+
+The default password of the *admin* user should be changed and all the users except *admin* should be removed. To do this:
+
+1. Choose a strong password for the *admin* user and generate the corresponding hash:
+
+   ```bash
+   cd /usr/share/opensearch/plugins/opensearch-security/tools
+   
+   OPENSEARCH_JAVA_HOME=/usr/share/opensearch/jdk ./hash.sh
+   ```
+
+1. Edit the *internal_users.yml* file, removing all the users except *admin* and replacing the old hash by the one generated:
+
+   ```bash
+    sudo vi /etc/opensearch/opensearch-security/internal_users.yml
+   ```
+
+   Example:
+
+   ```yml
+       ---
+   # This is the internal user database
+   # The hash value is a bcrypt hash and can be generated with plugin/tools/hash.sh
+   
+   _meta:
+     type: "internalusers"
+     config_version: 2
+   
+   # Define your internal users here
+   
+   ## Demo users
+   
+   admin:
+     hash: "$2y$12$EeAQpNRgrIccz2iUK7Fsqektv.qIbWCGnTs1NQYYyA9pgL8zdBxTy"
+     reserved: true
+     backend_roles:
+     - "admin"
+     description: "Demo admin user"
+   ```
+
+> [!TIP]
+> You can find more information about the steps above in the OpenSearch documentation: [Configure a user](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/debian/#configure-a-user).
+
+> [!NOTE]
+> To make sure the changes in the *internal_users.yml* file are applied, you will need to restart the service and run the *securityadmin.sh* script as described below.
+
 ##### Restart OpenSearch
 
-1. When you have finished the TLS configuration and [set a different hash for the admin user](#user-configuration), restart OpenSearch. You can use the following command for this:
+1. When you have completed the steps above, restart OpenSearch and apply the user settings using the following commands, making sure to replace the placeholders `<IPOfYourNode1>`, `<FQDNOfYourNode-node-keystore.p12>`, and `<GeneratedPasswordByGithubScript>` with the appropriate data:
 
    ```bash
    sudo systemctl restart opensearch
    ```
 
-1. Check via the command line if data is returned:
+   ```bash
+   cd /usr/share/opensearch/plugins/opensearch-security/tools
 
-   ```curl
-   curl https://166.206.186.146:9200 -u admin:yournewpassword --ssl-no-revoke
+   OPENSEARCH_JAVA_HOME=/usr/share/opensearch/jdk ./securityadmin.sh -h <IPOfYourNode> -cd /etc/opensearch/opensearch-security -icl -nhnv --diagnose -ts /etc/opensearch/cert/<FQDNOfYourNode-node-keystore.p12> -tspass <GeneratedPasswordByGithubScript> -ks /etc/opensearch/cert/<FQDNOfYourNode-node-keystore.p12>  -kspass <GeneratedPasswordByGithubScript>
    ```
 
-   This should return the following:
+   > [!NOTE]
+   > The command above only needs to be executed on one of the nodes.
+
+1. Check via the command line if data is returned (make sure to replace the placeholder data with the correct data):
+
+   ```curl
+   curl https://<IPOfYourNode>:9200 -u admin:yournewpassword --ssl-no-revoke
+   ```
+
+   This should return something similar to this:
 
    ```text
    {
@@ -302,6 +327,37 @@ plugins.security.system_indices.indices: [".plugins-ml-model", ".plugins-ml-task
      "tagline" : "The OpenSearch Project: https://opensearch.org/"
    }
    ```
+
+##### Install the rootCA.crt on the DataMiner server
+
+To build trust between DataMiner and OpenSearch, so that DataMiner can connect to the OpenSearch database, install the rootCA.crt on the DataMiner server:
+
+1. Stop the DataMiner Agent.
+
+1. Double-click the *rootCA.crt* file on the DataMiner server.
+
+1. Use *Local Machine* as *Store Location* when adding the certificate, and place the certificate in *Trusted Root Certification Authorities*.
+
+1. Once the certificate has been imported, add the full HTTPS URL (including the port) in the *DataBase.DBServer* tag of the *DB.xml* file. Using the IP of the node with the *cluster_manager* role is preferable.
+
+   For example:
+
+     ```xml
+    <DataBase active="True" type="Elasticsearch" search="true">
+    <DBServer>https://166.206.186.146:9200</DBServer>
+    <UID>UserNameToConnectToOpenSearch</UID>
+    <PWD>PasswordOfTheUserNameToConnectToOpenSearch</PWD>
+    <ConnectString></ConnectString>
+    <IntegratedSecurity>False</IntegratedSecurity>
+    </DataBase>
+     ```
+
+   > [!IMPORTANT]
+   > The user and password provided should be defined in the `\etc\opensearch\opensearch-security\internal_users.yml` file.
+
+1. Restart the DataMiner Agent.
+
+1. Check in the *SLSearch.txt*, *SLDataGateway.txt*, and *SLDBConnection.txt* log files (in the folder `C:\Skyline DataMiner\Logging`) whether any errors have occurred.
 
 #### Setting up OpenSearch Dashboards
 
@@ -353,7 +409,8 @@ opensearch.password: pwd
 
 ## Connecting your DMS to an OpenSearch cluster
 
-To configure the connection to an OpenSearch database, configure the settings as detailed under [Cassandra database](xref:Configuring_the_database_settings_in_Cube#cassandra-database).
+To configure the connection to an OpenSearch database:
 
-> [!IMPORTANT]
-> An OpenSearch database requires a separate Cassandra cluster or Amazon Keyspaces.
+- If you are using a dedicated clustered storage setup, configure the settings as detailed under [Cassandra database](xref:Configuring_the_database_settings_in_Cube#cassandra-database).
+
+- If you are using a setup with storage per DMA, [manually connect your DMS to the OpenSearch database](xref:Manually_Connecting_DMA_to_Elasticsearch_Cluster)

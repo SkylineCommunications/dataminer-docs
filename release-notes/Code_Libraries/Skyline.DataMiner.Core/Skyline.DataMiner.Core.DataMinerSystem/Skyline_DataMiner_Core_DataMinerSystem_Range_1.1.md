@@ -7,6 +7,49 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.1
 > [!NOTE]
 > Range 1.1.x.x is supported as from **DataMiner 10.1.11**. It makes use of a change introduced in DataMiner 10.1.11 that makes it possible to obtain table cell data using the primary key. In earlier DataMiner versions, the display key was needed to obtain this data.
 
+### 1.1.1.5
+
+#### Fix - Element deletion will be fully deleted
+
+When an IDmsElement is deleted, a flag will now be set to properly delete an element like when this is done via Cube.
+
+Without the flag, it could happen that active alarms were not deleted.
+
+### 1.1.1.4
+
+#### Fix - 1-minute timeout on Start and Stop Monitors increased to 10 minutes
+
+When starting or stopping a Monitor, in some cases, creating or clearing the underlying subscription could time out after 1 minute on heavily loaded DataMiner Systems.
+
+The timeout has now been increased to 10 minutes. Also, the exception logging has been improved to make it more clear to the user that this was an SLNet problem.
+
+### 1.1.1.3
+
+#### New feature - Partial table support for QueryData method in DmsTable class
+
+The *QueryData* method in the DMSTable class can be used to retrieve very specific table data using column filters. Those filters have been changed into interfaces.
+
+*QueryData* now also supports retrieving and filtering data from partial tables.
+
+#### Fix - Partial table support for table monitors
+
+Up to now, monitors on partial tables only worked for the first page.
+
+This has been changed so that you can now monitor value changes on all pages of a partial table.
+
+> [!NOTE]
+> Monitoring on value changes of a partial table requires a lot of extra computing power in the background, so there is a drop in scalability and performance when monitoring partial tables. It should be OK to monitor a few of them, but benchmarking shows that setting up 20 monitors for a partial table will limit the ability to handle "burst" events (value changes every 100 ms) to around 300 events before more than 5 seconds are needed to handle an event (this compared to 1400 events before the same occurs on non-partial tables).
+
+#### New feature - Migrated GetParameters and SetParameters from the Community Utility Library
+
+When you retrieve the local element from IDms, you can now perform a special *GetParameters* call that retrieves multiple parameters and converts them into their given types. This can be done for both standalone parameters and column parameters.
+
+When you retrieve the local element from IDms, you can now also perform a special *SetParameters* call that allows you to group together *SetParameterRequest* objects or provide a dictionary of parameter IDs and values to perform a single call.
+
+#### New feature - Automation script execution enhanced with async execution and additional run flags
+
+You can now trigger the execution of an Automation script asynchronously. In addition, you can provide several different run options similar to the options you get when triggering a script manually (e.g. LockElements, CheckSets, WaitWhenLocked, etc.).
+
 ### 1.1.1.2
 
 #### Fix - Monitors could stop working for long duration user actions
@@ -21,9 +64,13 @@ This has been fixed by adding additional low-level locking. Benchmark tests show
 
 A breaking change was introduced in the ICommunication interface. This will only affect users that directly access and use RemotingCommunication.
 
-#### New feature - .NET DataFlow applied to Monitors
+#### Breaking Change - Initial data on monitors no longer received
 
-Scalability and performance of the Monitors has been improved through the use of .NET DataFlow technology and parallel processing in the background. This version moves the largest bottleneck away from the software and places it mostly with the user hardware. Also, where before you would have affected other elements by using Monitors, this is now much more isolated between elements.
+A breaking change was introduced: Starting a monitor will now not always return the initial data as an event. This is no longer possible with the way the monitors add subscription filters in the background. We recommend using other IDms calls to retrieve initial data if this is required.
+
+#### New feature - .NET DataFlow applied to monitors
+
+Scalability and performance of the monitors has been improved through the use of .NET DataFlow technology and parallel processing in the background. This version moves the largest bottleneck away from the software and places it mostly with the user hardware. Also, where before you would have affected other elements by using monitors, this is now much more isolated between elements.
 
 The latest benchmark tests, at the time of release, demonstrate that the system's capacity to handle large workloads has increased by a factor ranging from 4 to 150 times depending on the hardware.
 
@@ -83,7 +130,7 @@ Element creation through this library produced corrupt elements since DataMiner 
 
 #### New feature - Migration from Class Library
 
-IDms classes and functionality have been extracted alongside Class Library Monitors into a public available NuGet library. This was extracted from Class Library range 1.3.0.X
+IDms classes and functionality have been extracted alongside Class Library monitors into a public available NuGet library. This was extracted from Class Library range 1.3.0.X
 
 #### Overloads added for specifying primary/display key [ID_35048]
 

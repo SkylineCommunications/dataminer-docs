@@ -4,7 +4,7 @@ uid: Troubleshooting_SLDMS_Frequent_Issues
 
 # SLDMS - frequent issues
 
-<div class="mermaid">
+```mermaid
 flowchart TD
 %% Define styles %%
 linkStyle default stroke:#cccccc
@@ -33,11 +33,11 @@ click CI "#option-3-connectivity-issues"
 class START DarkBlue;
 class FNS,TSI,CI,SSP LightBlue;
 
-</div>
+```
 
 ## Option 1: file not syncing
 
-<div class="mermaid">
+```mermaid
 flowchart TD
 %% Define styles %%
 linkStyle default stroke:#cccccc
@@ -73,14 +73,14 @@ class Y4,CI7,CI2 LightGray;
 class Y3,Y2,CI9,CI5 DarkGray;
 class R,SSP,CI8 LightBlue;
 class CI,TSI Gray;
-</div>
+```
 
 > [!TIP]
 > For more information on syncing files, see [Overview of the files found in the root folder](xref:Overview_of_the_files_found_in_the_root_folder).
 
 ## Option 2: time server issues
 
-<div class="mermaid">
+```mermaid
 flowchart TD
 %% Define styles %%
 linkStyle default stroke:#cccccc
@@ -111,11 +111,11 @@ class Y4,CI7,CI2 LightGray;
 class Y3,Y2,CI9,CI5 DarkGray;
 class R,SSP,CI8 LightBlue;
 class CI Gray;
-</div>
+```
 
 ## Option 3: connectivity issues
 
-<div class="mermaid">
+```mermaid
 flowchart TD
 %% Define styles %%
 linkStyle default stroke:#cccccc
@@ -155,7 +155,7 @@ class Check,C,TSI1,Y1,CI4,CI6,CI1 Blue;
 class Y4,CI7,CI2 LightGray;
 class Y3,Y2,CI9,CI5 DarkGray;
 class R,SSP,CI8 LightBlue;
-</div>
+```
 
 ## Connectivity issues
 

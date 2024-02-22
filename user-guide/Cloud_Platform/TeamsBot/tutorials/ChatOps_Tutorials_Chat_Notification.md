@@ -8,6 +8,9 @@ This tutorial shows you how you can use our Chat Integration examples to send no
 
 Estimated duration: 15 minutes.
 
+> [!TIP]
+> See also: [Kata #6: Custom ChatOps operator](https://community.dataminer.services/courses/kata-6/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+
 ## Prerequisites
 
 - [A DataMiner System connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud)
@@ -22,7 +25,7 @@ Estimated duration: 15 minutes.
 
 ## Step 1: Deploy the ChatIntegration Examples package from the Catalog
 
-1. Browse to <https://catalog.dataminer.services/catalog/3129>.
+1. Browse to <https://catalog.dataminer.services/details/package/5860>.
 
    ![ChatIntegration Examples page in Catalog](~/user-guide/images/chatops_notification_01_001.png)
 

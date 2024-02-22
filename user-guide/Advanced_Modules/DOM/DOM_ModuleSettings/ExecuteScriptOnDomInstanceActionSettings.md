@@ -4,6 +4,9 @@ uid: ExecuteScriptOnDomInstanceActionSettings
 
 # ExecuteScriptOnDomInstanceActionSettings
 
+>[!NOTE]
+> From 10.4.2/10.5.0 onwards<!-- RN 37963 -->, it is possible to override this setting in a `DomDefinition` with the [ModuleSettingsOverrides](xref:DomDefinition#modulesettingsoverrides) property.
+
 This settings object contains the names of the scripts that should be executed after a [DomInstance](xref:DomInstance) is created, updated, or deleted. If no name is filled in, no script will be executed. From DataMiner version 10.3.10/10.4.0 onwards, it is also possible to define which type of script (entry point) should be executed. In earlier DataMiner versions, only the "ID only" type is supported.
 
 |Property |Type   |Description |
@@ -70,6 +73,115 @@ public class Script
     public void OnDomInstanceCrudWithFullMeta(IEngine engine, DomInstanceCrudMeta crudMeta)
     {
         engine.GenerateInformation($"Script triggered for {crudMeta.CrudType} action on DomInstance with name: {crudMeta.CurrentVersion.Name}");
+    }
+}
+```
+
+### Calculating changes done to a DOM instance in a CRUD script
+
+From 10.4.3/10.5.0 onwards<!-- RN 38364 -->, it is possible to calculate the changes done to a `DomInstance` in a CRUD script using the `GetDifferences` method on the `DomInstanceCrudMeta` object.
+
+The `GetDifferences` method returns an object `DomInstanceDifferences`. This contains the differences of the `DomInstance`:
+
+- DomInstanceDifferences:
+  - FieldValues: All changes.
+    - Created: Changes where a new value was added.
+    - Updated: Changes where a value was updated.
+    - Deleted: Changes where a value was removed.
+
+Examples:
+
+```csharp
+var allDifferences = crudMeta.FieldValues; // All value differences (created, updated & deleted values)
+var createdDifferences = crudMeta.FieldValues.Created; // Only created values
+var updatedDifferences = crudMeta.FieldValues.Updated; // Only updated values
+var deletedDifferences = crudMeta.FieldValues.Deleted; // Only deleted values
+```
+
+These all return a `FieldValueDifferences` object.
+
+On these `FieldValueDifferences`, you can apply different methods to further filter the results:
+
+| Method                                       | Type                         | Description                                                                                          |
+|----------------------------------------------|------------------------------|------------------------------------------------------------------------------------------------------|
+| OfType(\<CrudType\>)                         | FieldValueDifferences        | Returns the differences with a certain `CrudType` (Create, Update or Delete).                        |
+| OfFieldDescriptor(\<FieldDescriptorID\>)     | FieldValueDifferences        | Returns the differences on a certain `FieldDescriptor`.                                              |
+| OfSectionDefinition(\<SectionDefinitionID\>) | FieldValueDifferences        | Returns the differences within a certain `SectionDefinition`.                                        |
+| Get()                                        | List\<FieldValueDifference\> | Returns the differences as a list of `FieldValueDifference` objects, considering the filter methods. |
+
+These methods can be chained to create specific conditions to get your desired differences. In most situations, the `Get()` method should be applied at the end, to get a list of `FieldValueDifference` objects and use the properties it contains.
+
+Examples:
+
+```csharp
+// Getting all created values of a certain SectionDefinition:
+var differences = crudMeta.GetDifferences().FieldValues.OfType(CrudType.Create).OfSectionDefinition(SectionDefinitionId).Get();
+
+// Getting all updated values of a certain SectionDefinition:
+var differences = crudMeta.GetDifferences().FieldValues.OfSectionDefinition(SectionDefinitionId).OfType(CrudType.Update).Get();
+
+// Getting all updated values on a certain FieldDescriptor:
+var differences = crudMeta.GetDifferences().FieldValues.Updated.OfFieldDescriptor(FieldDescriptorId).Get();
+
+// Getting all deleted values on a certain FieldDescriptor:
+var differences = crudMeta.GetDifferences().FieldValues.OfFieldDescriptor(FieldDescriptorId).OfType(CrudType.Delete).Get();
+```
+
+This `FieldValueDifferences` object contains a list of `FieldValueDifference` objects. These objects have some properties:
+
+| Property            | Type                | Description                                                            |
+|---------------------|---------------------|------------------------------------------------------------------------|
+| Type                | CrudType            | The `CrudType` of the changed `FieldValue` (Create, Update or Delete). |
+| ValueBefore         | IValueWrapper       | The value of the `FieldValue` before the change.                       |
+| ValueAfter          | IValueWrapper       | The value of the `FieldValue` after the change.                        |
+| FieldDescriptorId   | FieldDescriptorID   | The `FieldDescriptor` ID of the changed `FieldValue`.                  |
+| SectionId           | SectionID           | The ID of the `Section` that this changed `FieldValue` is part of.     |
+| SectionDefinitionId | SectionDefinitionID | The `SectionDefinitionID` of the changed `FieldValue`.                 |
+
+This example script generates an information event stating the differences whenever a `DomInstance` is created, updated, or deleted:
+
+```csharp
+using Skyline.DataMiner.Automation;
+using Skyline.DataMiner.Net.Apps.DataMinerObjectModel;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Skyline.DataMiner.Net.Apps.DataMinerObjectModel.General;
+
+namespace Example
+{
+    public class Script
+    {
+        [AutomationEntryPoint(AutomationEntryPointType.Types.OnDomInstanceCrudWithFullMeta)]
+        public void OnDomInstanceCrudWithFullMeta(IEngine engine, DomInstanceCrudMeta crudMeta)
+        {
+            var sb = new StringBuilder();
+            sb.AppendLine($"CRUD script triggered by the '{crudMeta.CrudType}' action on DomInstance with name '{crudMeta.CurrentVersion.Name}'. Changes:");
+        
+            var differences = crudMeta.GetDifferences().FieldValues.Get();
+        
+            foreach (var difference in differences)
+            {
+                var crudType = "";
+                switch (difference.Type)
+                {
+                    case CrudType.Create:
+                        crudType = "CREATED";
+                        break;
+                    case CrudType.Update:
+                        crudType = "UPDATED";
+                        break;
+                    case CrudType.Delete:
+                        crudType = "DELETED";
+                        break;
+                }
+        
+                sb.AppendLine($"{crudType}: ID: '{difference.FieldDescriptorId.Id}', Change: '{difference.ValueBefore}' -> '{difference.ValueAfter}'");
+            }
+
+            engine.GenerateInformation(sb.ToString());
+        }
     }
 }
 ```

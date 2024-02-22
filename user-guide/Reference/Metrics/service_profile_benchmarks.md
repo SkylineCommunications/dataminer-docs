@@ -10,7 +10,7 @@ uid: service_profile_benchmarks
 
 - Intel Xeon Silver 4210
 - 8 cores (16TH) VM
-- 32GB RAM
+- 32 GB RAM
 - SSD (NVMe)
 - Windows Server 2019 Standard
 
@@ -18,7 +18,7 @@ uid: service_profile_benchmarks
 
 - Intel Core i7-8700 CPU \@3.20 GHz
 - 6 cores
-- 32GB RAM
+- 32 GB RAM
 - SSD
 - Cassandra & Elasticsearch
 - Windows 10 Pro

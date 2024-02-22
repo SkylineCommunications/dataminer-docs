@@ -8,7 +8,7 @@ In a DOM manager, you can configure the status system for a [DomDefinition](xref
 
 This configuration is done using a [DomBehaviorDefinition](xref:DomBehaviorDefinition) object that the `DomDefinition` is linked to. This object contains properties to store the statuses, initial status, transitions, and links to the [SectionDefinitions](xref:DOM_SectionDefinition).
 
-<div class="mermaid">
+```mermaid
 classDiagram
    direction LR
    class DomBehaviorDefinition {
@@ -52,7 +52,7 @@ classDiagram
    DomBehaviorDefinition --> DomStatusTransition
    DomStatusSectionDefinitionLink --> DomStatusSectionDefinitionLinkId
    DomStatusSectionDefinitionLink --> DomStatusFieldDescriptorLink
-</div>
+```
 
 Using the status system is an alternative way of defining which data must be present in a `DomInstance`. That means that the `SectionDefinitionLinks` on the `DomDefinition` are not used in that case. Additionally, the following properties on the `FieldDescriptor` will be ignored:
 
@@ -175,7 +175,7 @@ When something goes wrong while transitioning, a *DomStatusTransitionError* will
 | StatusTransitionIncompatibleWithCurrentStatus | The current status of the `DomInstance` does not match the "from" status defined by the transition. *StatusTransitionId* contains the ID of the transition that could not be completed. |
 | DomInstanceContainsUnknownFieldsForNextStatus | There is at least one `FieldValue` defined in the `DomInstance` for which no link could be found in the `DomBehaviorDefinition` for the next status. *AssociatedFields* contains the `SectionDefinitionID` and `FieldDescriptorID` combinations of the unknown fields. |
 | DomInstanceHasInvalidFieldsForNextStatus | The `DomInstance` contains fields that are required but are not valid according to at least one validator. If there are multiple values for the same `SectionDefinition` and `FieldDescriptor`, only one entry will be included. *AssociatedFields* contains the `SectionDefinitionID` and `FieldDescriptorID` combinations of the invalid fields |
-| DomInstanceHasMissingRequiredFieldsForNextStatus | The `DomInstance` does not contain all fields that are required for the next status. *AssociatedFields* contains the `SectionDefinitionID` and `FieldDescriptorID` combinations of the missing fields |
+| DomInstanceHasMissingRequiredFieldsForNextStatus | The `DomInstance` does not contain all fields that are required for the next status. *AssociatedFields* contains the `SectionDefinitionID` and `FieldDescriptorID` combinations of the missing fields. [Empty list values](xref:DOM_SectionDefinition#multiple-values) are equivalent to not providing a `FieldValue`.|
 | CrudFailedExceptionOccurred | When the `DomInstance` was saved, a `CrudFailedException` occurred. *InnerTraceData* contains the `TraceData` contained in the exception. |
 | DomInstanceContainsInvalidAmountOfSectionsForNextStatus | The `DomInstance` contains too many `Sections` for one or more `SectionDefinitions` according to the configuration of the next status. *SectionDefinitionIds* contains the `SectionDefinitionID(s)` for which too many `Sections` are present. |
 

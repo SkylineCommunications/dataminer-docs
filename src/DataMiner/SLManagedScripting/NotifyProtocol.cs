@@ -99,7 +99,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="protocol">Instance that implements <see cref="SLProtocol"/>.</param>
 		/// <param name="tableId">The ID of the table parameter.</param>
 		/// <returns>The number of rows left. In case the ClearAllKeys method has been invoked specifying an empty table, -1 is returned.</returns>
-		/// <remarks>This method first retrieves all primary keys from the table using a NotifyProtocol type 168 [NT_GET_INDEXES](xref:NT_GET_INDEXES) call. If there is at least one primary key present, the method performs a NofityProtoocl type 156 call [NT_DELETE_ROW](xref:NT_DELETE_ROW), removing all rows.</remarks>
+		/// <remarks>This method first retrieves all primary keys from the table using a NotifyProtocol type 168 call [NT_GET_INDEXES](xref:NT_GET_INDEXES). If there is at least one primary key present, the method performs a NofityProtocol type 156 call [NT_DELETE_ROW](xref:NT_DELETE_ROW), removing all rows.</remarks>
 		[Obsolete("Use protocol.ClearAllKeys instead", false)]
 		public static object ClearAllKeys(SLProtocol protocol, int tableId)
 		{
@@ -114,7 +114,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="rows">The primary keys of the rows to remove.</param>
 		/// <returns>The number of remaining rows in the table.</returns>
 		/// <remarks>
-		/// This method acts as a wrapper for a NotifyProtocol type 156 call [NT_DELETE_ROW](xref:NT_DELETE_ROW) call.
+		/// This method acts as a wrapper for a NotifyProtocol type 156 call [NT_DELETE_ROW](xref:NT_DELETE_ROW).
 		/// </remarks>
 		public static int DeleteRow(SLProtocol protocol, int tableId, string[] rows)
 		{
@@ -129,7 +129,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="row">The index of the row.</param>
 		/// <returns>The number of remaining rows in the table.</returns>
 		/// <remarks>
-		/// This method acts as a wrapper for a NotifyProtocol type 156 call [NT_DELETE_ROW](xref:NT_DELETE_ROW) call.
+		/// This method acts as a wrapper for a NotifyProtocol type 156 call [NT_DELETE_ROW](xref:NT_DELETE_ROW).
 		/// </remarks>
 		public static int DeleteRow(SLProtocol protocol, int tableId, int row)
 		{
@@ -144,7 +144,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="rowKey">The primary key of the row to remove.</param>
 		/// <returns>The number of remaining rows in the table.</returns>
 		/// <remarks>
-		/// This method acts as a wrapper for a NotifyProtocol type 156 call [NT_DELETE_ROW](xref:NT_DELETE_ROW) call.
+		/// This method acts as a wrapper for a NotifyProtocol type 156 call [NT_DELETE_ROW](xref:NT_DELETE_ROW).
 		/// </remarks>
 		public static int DeleteRow(SLProtocol protocol, int tableId, string rowKey)
 		{
@@ -173,7 +173,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <remarks>
 		/// <list type="bullet">
 		/// <item>
-		/// <description>This method acts as a wrapper for a NotifyProtocol type 193 call NT_FILL_ARRAY.</description>
+		/// <description>This method acts as a wrapper for a NotifyProtocol type 193 call <see href="xref:NT_FILL_ARRAY">NT_FILL_ARRAY</see>.</description>
 		/// </item>
 		/// <item>
 		/// <description>In case the data contains null references, the corresponding cells will be cleared.</description>
@@ -205,7 +205,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <description>This overload is currently not supported.</description>
 		/// </item>
 		/// <item>
-		/// <description>This method acts as a wrapper for a NotifyProtocol type 193 call NT_FILL_ARRAY.</description>
+		/// <description>This method acts as a wrapper for a NotifyProtocol type 193 call <see href="xref:NT_FILL_ARRAY">NT_FILL_ARRAY</see>.</description>
 		/// </item>
 		/// <item>
 		/// <description>In case the data contains null references, the corresponding cells will be cleared.</description>
@@ -230,12 +230,12 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="protocol">Instance that implements <see cref="SLProtocol"/>.</param>
 		/// <param name="tableId">The ID of the table parameter.</param>
 		/// <param name="columns">The columns of the table.</param>
-		/// <param name="timeInfo">Time stamp</param>
+		/// <param name="timeInfo">Timestamp</param>
 		/// <returns></returns>
 		/// <remarks>
 		/// <list type="bullet">
 		/// <item>
-		/// <description>This method acts as a wrapper for a NotifyProtocol type 193 call NT_FILL_ARRAY.</description>
+		/// <description>This method acts as a wrapper for a NotifyProtocol type 193 call <see href="xref:NT_FILL_ARRAY">NT_FILL_ARRAY</see>.</description>
 		/// </item>
 		/// <item>
 		/// <description>In case the data contains null references, the corresponding cells will be cleared.</description>
@@ -263,7 +263,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="protocol">Instance that implements <see cref="SLProtocol"/>.</param>
 		/// <param name="tableId">The ID of the table parameter.</param>
 		/// <param name="columns">The columns of the table.</param>
-		/// <param name="timeInfo">Time stamp</param>
+		/// <param name="timeInfo">Timestamp</param>
 		/// <returns></returns>
 		/// <remarks>
 		/// <list type="bullet">
@@ -271,7 +271,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <description>This overload is currently not supported.</description>
 		/// </item>
 		/// <item>
-		/// <description>This method acts as a wrapper for a NotifyProtocol type 193 call NT_FILL_ARRAY.</description>
+		/// <description>This method acts as a wrapper for a NotifyProtocol type 193 call <see href="xref:NT_FILL_ARRAY">NT_FILL_ARRAY</see>.</description>
 		/// </item>
 		/// <item>
 		/// <description>In case the data contains null references, the corresponding cells will be cleared.</description>
@@ -299,12 +299,12 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="protocol">Instance that implements <see cref="SLProtocol"/>.</param>
 		/// <param name="tableId">The ID of the table parameter.</param>
 		/// <param name="rows">The rows of the table.</param>
-		/// <param name="option">SaveOption.Full = unspecified primary keys are removed, SaveOption .Partial = rows with unspecified primary keys are preserved.</param>
+		/// <param name="option">SaveOption.Full = unspecified primary keys are removed, SaveOption.Partial = rows with unspecified primary keys are preserved.</param>
 		/// <returns></returns>
 		/// <remarks>
 		///		<list type="bullet">
 		///			<item>
-		///				<description>This method acts as a wrapper for a NotifyProtocol type 193 call NT_FILL_ARRAY.</description>
+		///				<description>This method acts as a wrapper for a NotifyProtocol type 193 call <see href="xref:NT_FILL_ARRAY">NT_FILL_ARRAY</see>.</description>
 		///			</item>
 		///			<item>
 		///				<description>The FillArray method cannot be used together with the <c>autoincrement</c> column type.</description>
@@ -332,13 +332,13 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="protocol">Instance that implements <see cref="SLProtocol"/>.</param>
 		/// <param name="tableId">The ID of the table parameter.</param>
 		/// <param name="rows">The rows of the table.</param>
-		/// <param name="option">SaveOption.Full = unspecified primary keys are removed, SaveOption .Partial = rows with unspecified primary keys are preserved.</param>
-		/// <param name="timeInfo">Time stamp</param>
+		/// <param name="option">SaveOption.Full = unspecified primary keys are removed, SaveOption.Partial = rows with unspecified primary keys are preserved.</param>
+		/// <param name="timeInfo">Timestamp</param>
 		/// <returns></returns>
 		/// <remarks>
 		///		<list type="bullet">
 		///			<item>
-		///				<description>This method acts as a wrapper for a NotifyProtocol type 193 call NT_FILL_ARRAY.</description>
+		///				<description>This method acts as a wrapper for a NotifyProtocol type 193 call <see href="xref:NT_FILL_ARRAY">NT_FILL_ARRAY</see>.</description>
 		///			</item>
 		///			<item>
 		///				<description>The FillArray method cannot be used together with the <c>autoincrement</c> column type.</description>
@@ -376,7 +376,7 @@ namespace Skyline.DataMiner.Scripting
 		///				<description>This overload is currently not supported.</description>
 		///			</item>
 		///			<item>
-		///				<description>This method acts as a wrapper for a NotifyProtocol type 194 call ("NT_FILL_ARRAY_NO_DELETE").</description>
+		///				<description>This method acts as a wrapper for a NotifyProtocol type 194 call <see href="xref:NT_FILL_ARRAY_NO_DELETE">NT_FILL_ARRAY_NO_DELETE</see>.</description>
 		///			</item>
 		///			<item>
 		///				<description>In case the column data contains null references, the corresponding cells will be cleared.</description>
@@ -401,7 +401,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="protocol">Instance that implements <see cref="SLProtocol"/>.</param>
 		/// <param name="tableId">The ID of the table parameter.</param>
 		/// <param name="columns">The columns of the table.</param>
-		/// <param name="timeInfo">Time stamp</param>
+		/// <param name="timeInfo">Timestamp</param>
 		/// <returns></returns>
 		/// <remarks>
 		///		<list type="bullet">
@@ -409,7 +409,7 @@ namespace Skyline.DataMiner.Scripting
 		///				<description>This overload is currently not supported.</description>
 		///			</item>
 		///			<item>
-		///				<description>This method acts as a wrapper for a NotifyProtocol type 194 call ("NT_FILL_ARRAY_NO_DELETE").</description>
+		///				<description>This method acts as a wrapper for a NotifyProtocol type 194 call <see href="xref:NT_FILL_ARRAY_NO_DELETE">NT_FILL_ARRAY_NO_DELETE</see>.</description>
 		///			</item>
 		///			<item>
 		///				<description>In case the column data contains null references, the corresponding cells will be cleared.</description>
@@ -441,7 +441,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <remarks>
 		///		<list type="bullet">
 		///			<item>
-		///				<description>This method acts as a wrapper for a NotifyProtocol type 194 call ("NT_FILL_ARRAY_NO_DELETE").</description>
+		///				<description>This method acts as a wrapper for a NotifyProtocol type 194 call <see href="xref:NT_FILL_ARRAY_NO_DELETE">NT_FILL_ARRAY_NO_DELETE</see>.</description>
 		///			</item>
 		///			<item>
 		///				<description>In case the column data contains null references, the corresponding cells will be cleared.</description>
@@ -466,12 +466,12 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="protocol">Instance that implements <see cref="SLProtocol"/>.</param>
 		/// <param name="tableId">The ID of the table parameter.</param>
 		/// <param name="columns">The columns of the table.</param>
-		/// <param name="timeInfo">Time stamp</param>
+		/// <param name="timeInfo">Timestamp</param>
 		/// <returns></returns>
 		/// <remarks>
 		///		<list type="bullet">
 		///			<item>
-		///				<description>This method acts as a wrapper for a NotifyProtocol type 194 call ("NT_FILL_ARRAY_NO_DELETE").</description>
+		///				<description>This method acts as a wrapper for a NotifyProtocol type 194 call <see href="xref:NT_FILL_ARRAY_NO_DELETE">NT_FILL_ARRAY_NO_DELETE</see>.</description>
 		///			</item>
 		///			<item>
 		///				<description>In case the column data contains null references, the corresponding cells will be cleared.</description>
@@ -501,12 +501,12 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="columnPid">The ID of the column parameter.</param>
 		/// <param name="keys">The primary keys of the rows for which the column has to be updated.</param>
 		/// <param name="values">The values to set.</param>
-		/// <param name="timeInfo">Time stamp</param>
-		/// <exception cref="ArgumentException">The length of 'keys' is not equal to the length of 'values' and the length of the values array does not equal 1.</exception>
+		/// <param name="timeInfo">Timestamp</param>
+		/// <exception cref="ArgumentException">The length of "keys" is not equal to the length of "values", and the length of the values array does not equal 1.</exception>
 		/// <returns></returns>
 		/// <remarks>
 		///		<list type="bullet">
-		///			<item><description>This method acts as a wrapper for a NotifyProtocol type 220 call ("NT_FILL_ARRAY_WITH_COLUMN").</description></item>
+		///			<item><description>This method acts as a wrapper for a NotifyProtocol type 220 call <see href="xref:NT_FILL_ARRAY_WITH_COLUMN">NT_FILL_ARRAY_WITH_COLUMN</see>.</description></item>
 		///			<item><description>In case the values array only contains one value, this value will be used for all specified primary keys.</description></item>
 		///			<item>
 		///				<description>From DataMiner 10.2.9 onwards (RN 33849), if the DateTime.Kind property of <paramref name="timeInfo"/> is unspecified, the timestamp will be handled as local time.</description>
@@ -526,11 +526,11 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="columnPid">The ID of the column parameter.</param>
 		/// <param name="keys">The primary keys of the rows for which the column has to be updated.</param>
 		/// <param name="values">The values to set.</param>
-		/// <exception cref="ArgumentException">The length of 'primaryKeys' is not equal to the length of 'values' and the length of the values array does not equal 1.</exception>
+		/// <exception cref="ArgumentException">The length of "primaryKeys" is not equal to the length of "values", and the length of the values array does not equal 1.</exception>
 		/// <returns></returns>
 		/// <remarks>
 		///		<list type="bullet">
-		///			<item><description>This method acts as a wrapper for a NotifyProtocol type 220 call ("NT_FILL_ARRAY_WITH_COLUMN").</description></item>
+		///			<item><description>This method acts as a wrapper for a NotifyProtocol type 220 call <see href="xref:NT_FILL_ARRAY_WITH_COLUMN">NT_FILL_ARRAY_WITH_COLUMN</see>.</description></item>
 		///			<item><description>In case the values array only contains one value, this value will be used for all specified primary keys.</description></item>
 		///		</list>
 		/// </remarks>
@@ -547,7 +547,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="key">The primary key of the row.</param>
 		/// <returns>The position of the row in the table.</returns>
 		/// <remarks>
-		/// <para>This method acts as a wrapper for a NotifyProtocol type 163 call ("NT_GET_KEY_POSITION").</para>
+		/// This method acts as a wrapper for a NotifyProtocol type 163 call [NT_GET_KEY_POSITION](xref:NT_GET_KEY_POSITION).
 		/// </remarks>
 		[Obsolete("Use protocol.GetKeyPosition instead", false)]
 		public static int GetKeyPosition(SLProtocol protocol, int tableId, string key)
@@ -563,8 +563,9 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="type">Specify KeyType.DisplayKey to retrieve the display keys.</param>
 		/// <returns>The primary keys or display keys of the rows present in the table.</returns>
 		/// <remarks>
-		/// <para>Avoid using the GetKeys method to retrieve the primary keys (NotifyProtocol.KeyType.Index) for DataMiner versions prior to DataMiner 9.0. Up to DataMiner 9.0, the implementation to retrieve the primary keys is based on the SLElement process (a NotifyProtocol type 168 call "NT_GET_INDEXES" is executed, which retrieves both the primary keys and the display keys.).</para>
-		///<para>From DataMiner version 9.0 onwards, the implementation of the GetKeys method has been updated, so that retrieving the primary keys no longer involves the SLElement process. (This now results in a NotifyProtocol type 397 call "NT_GET_KEYS_SLPROTOCOL"). However, note that obtaining the display keys(NotifyProtocol.KeyType.DisplayKey) is still based on SLElement(a NotifyProtocol type 168 call "NT_GET_INDEXES" call).</para>
+		/// Avoid using the GetKeys method to retrieve the primary keys (NotifyProtocol.KeyType.Index) for DataMiner versions prior to DataMiner 9.0. Up to DataMiner 9.0, the implementation to retrieve the primary keys is based on the SLElement process (a NotifyProtocol type 168 call [NT_GET_INDEXES](xref:NT_GET_INDEXES) is executed, which retrieves both the primary keys and the display keys.).
+		/// 
+		/// From DataMiner version 9.0 onwards, the implementation of the GetKeys method has been updated, so that retrieving the primary keys no longer involves the SLElement process. (This now results in a NotifyProtocol type 397 call [NT_GET_KEYS_SLPROTOCOL](xref:NT_GET_KEYS_SLPROTOCOL)). However, note that obtaining the display keys(NotifyProtocol.KeyType.DisplayKey) is still based on SLElement(a NotifyProtocol type 168 call [NT_GET_INDEXES](xref:NT_GET_INDEXES)).
 		/// </remarks>
 		[Obsolete("Use protocol.GetKeys instead", false)]
 		public static string[] GetKeys(SLProtocol protocol, int tableId, KeyType type = KeyType.Index)
@@ -579,8 +580,9 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="tableId">The ID of the table parameter</param>
 		/// <returns>The primary keys of the rows present in the table.</returns>
 		/// <remarks>
-		/// <para>Avoid using the GetKeys method to retrieve the primary keys (NotifyProtocol.KeyType.Index) for DataMiner versions prior to DataMiner 9.0. Up to DataMiner 9.0, the implementation to retrieve the primary keys is based on the SLElement process (a NotifyProtocol type 168 call "NT_GET_INDEXES" is executed, which retrieves both the primary keys and the display keys.).</para>
-		///<para>From DataMiner version 9.0 onwards, the implementation of the GetKeys method has been updated, so that retrieving the primary keys no longer involves the SLElement process. (This now results in a NotifyProtocol type 397 call "NT_GET_KEYS_SLPROTOCOL"). However, note that obtaining the display keys(NotifyProtocol.KeyType.DisplayKey) is still based on SLElement(a NotifyProtocol type 168 call "NT_GET_INDEXES" call).</para>
+		/// Avoid using the GetKeys method to retrieve the primary keys (NotifyProtocol.KeyType.Index) for DataMiner versions prior to DataMiner 9.0. Up to DataMiner 9.0, the implementation to retrieve the primary keys is based on the SLElement process (a NotifyProtocol type 168 call [NT_GET_INDEXES](xref:NT_GET_INDEXES) is executed, which retrieves both the primary keys and the display keys.).
+		/// 
+		/// From DataMiner version 9.0 onwards, the implementation of the GetKeys method has been updated, so that retrieving the primary keys no longer involves the SLElement process. (This now results in a NotifyProtocol type 397 call [NT_GET_KEYS_SLPROTOCOL](xref:NT_GET_KEYS_SLPROTOCOL)). However, note that obtaining the display keys(NotifyProtocol.KeyType.DisplayKey) is still based on SLElement(a NotifyProtocol type 168 call [NT_GET_INDEXES](xref:NT_GET_INDEXES)).
 		/// </remarks>
 		[Obsolete("Use protocol.GetKeys instead", false)]
 		public static string[] GetKeys(SLProtocol protocol, int tableId)
@@ -601,10 +603,10 @@ namespace Skyline.DataMiner.Scripting
 		///				<description>In order for this method to work, the column must either be a foreign key column or it must have the option ‘indexColumn’.</description>
 		///			</item>
 		///			<item>
-		///				<description>This method acts as a wrapper for a NotifyProtocol type 196 call (“NT_GET_KEYS_FOR_INDEX”).</description>
+		///				<description>This method acts as a wrapper for a NotifyProtocol type 196 call <see href="xref:NT_GET_KEYS_FOR_INDEX">NT_GET_KEYS_FOR_INDEX</see>.</description>
 		///			</item>
 		///			<item>
-		///				<description>From DataMiner 9.0.0 [CU14] (Main Release) and DataMiner 9.0.5 [CU1] (Feature Release) (RN 15333) onwards, this call does no longer perform a case sensitive lookup. In case a case-sensitive lookup is required, use the NT_GET_KEYS_FOR_INDEX_CASED notify type (411).</description>
+		///				<description>From DataMiner 9.0.0 [CU14] (Main Release) and DataMiner 9.0.5 [CU1] (Feature Release) (RN 15333) onwards, this call does no longer perform a case sensitive lookup. In case a case-sensitive lookup is required, use the <see href="xref:NT_GET_KEYS_FOR_INDEX_CASED">NT_GET_KEYS_FOR_INDEX_CASED</see> notify type (411).</description>
 		///			</item>
 		///		</list>
 		/// </remarks>
@@ -621,7 +623,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="tableId">The ID of the table.</param>
 		/// <returns>The number of rows in the table. If the table was not found, a value of -1 is returned.</returns>
 		/// <remarks>
-		/// <para>This is a wrapper method for a NotifyProtocol type 195 call ("NT_ARRAY_ROW_COUNT").</para>
+		/// This is a wrapper method for a NotifyProtocol type 195 call [NT_ARRAY_ROW_COUNT](xref:NT_ARRAY_ROW_COUNT).
 		/// </remarks>
 		[Obsolete("Use protocol.RowCount instead", false)]
 		public static int RowCount(SLProtocol protocol, int tableId)
@@ -638,7 +640,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <remarks>
 		///		<list type="bullet">
 		///		<item>
-		///			<description>This method acts as a wrapper for a NotifyProtocol type 177 call ("NT_SET_BINARY_DATA").</description>
+		///			<description>This method acts as a wrapper for a NotifyProtocol type 177 call <see href="xref:NT_SET_BINARY_DATA">NT_SET_BINARY_DATA</see>.</description>
 		///		</item>
 		///			<item>
 		///				<description>Setting a parameter value using this method does not trigger a change event.</description>

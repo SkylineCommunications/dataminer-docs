@@ -27,3 +27,6 @@ In the *Settings* tab, you can also configure the following optional settings:
 - *Minimum*: The minimum value for the numeric input.
 
 - *Maximum*: The maximum value for the numeric input.
+
+> [!NOTE]
+> From DataMiner 10.3.0 [CU10]/10.4.1 onwards<!-- RN 37736 -->, you can drag a data feed to the component to link it to that feed, or [specify a feed in the URL](xref:Specifying_data_input_in_a_dashboard_URL). This way, the component will be filled in based on the feed, but users will still be able to modify the value.

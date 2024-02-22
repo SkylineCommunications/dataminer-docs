@@ -15,7 +15,7 @@ From DataMiner version 9.0 onwards, this process calculates the average trending
 
 - Transfer of data to the SLAnalytics process.
 
-<div class="mermaid">
+```mermaid
 flowchart TD
 %% -------------------------------------------------------------------------
 %% Cassandra flowchart - Nodetool Status
@@ -59,11 +59,11 @@ click Action_SLDataGatewayCrash "#option-4-sldatagateway-crash"
 %% -------------------------------------------------------------------------
 %% Apply styles to blocks
 %% -------------------------------------------------------------------------
-</div>
+```
 
 ### Option 1: high memory consumption
 
-<div class="mermaid">
+```mermaid
 flowchart TD
 %% -------------------------------------------------------------------------
 %% Cassandra flowchart - Nodetool Status
@@ -101,11 +101,11 @@ Action_AlarmTemplates(["Check for Alarm templates<br> with smart baselines <br>(
 %% -------------------------------------------------------------------------
 click HOME "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
 %% -------------------------------------------------------------------------
-</div>
+```
 
 ### Option 2: DataMiner not starting up
 
-<div class="mermaid">
+```mermaid
 flowchart TD
 %% -------------------------------------------------------------------------
 %% Cassandra flowchart - Nodetool Status
@@ -138,11 +138,11 @@ click HOME "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Roo
 %% -------------------------------------------------------------------------
 %% Apply styles to blocks
 %% -------------------------------------------------------------------------
-</div>
+```
 
 ### Option 3: DataMiner crash
 
-<div class="mermaid">
+```mermaid
 flowchart TD
 %% -------------------------------------------------------------------------
 %% Cassandra flowchart - Nodetool Status
@@ -179,11 +179,11 @@ Decision_CrashSLDataGatewayLeakRestart{{DataMiner <br>restart needed?}}:::classE
 %% -------------------------------------------------------------------------
 %% Apply styles to blocks
 %% -------------------------------------------------------------------------
-</div>
+```
 
 ### Option 4: SLDataGateway crash
 
-<div class="mermaid">
+```mermaid
 flowchart TD
 %% -------------------------------------------------------------------------
 %% Cassandra flowchart - Nodetool Status
@@ -217,4 +217,4 @@ click HOME "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Roo
 %% -------------------------------------------------------------------------
 %% Apply styles to blocks
 %% -------------------------------------------------------------------------
-</div>
+```

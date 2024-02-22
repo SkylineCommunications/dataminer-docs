@@ -338,7 +338,7 @@ Permission to delete workspaces.
 ### General \> Annotations
 
 > [!NOTE]
-> From DataMiner 10.1.12 onwards, annotations can be disabled using the soft-launch option *LegacyAnnotations*. See [Soft-launch options](xref:SoftLaunchOptions).
+> The Annotations module is by default disabled from DataMiner 10.4.0/10.4.1 onwards.<!-- RN 37786 --> If you want to keep using this module, you need to enable it with the [*LegacyAnnotations* soft-launch option](xref:Overview_of_Soft_Launch_Options#legacyannotations). Prior to this, starting from DataMiner 10.2.0/10.1.12, Annotations can optionally be disabled with this soft-launch option.
 
 #### General \> Annotations \> View
 
@@ -418,7 +418,7 @@ Available from DataMiner 10.2.0/10.1.10 onwards. Permission to send emails via t
 These user permissions are used for the API deployment feature. This is a deprecated [soft launch feature](xref:SoftLaunchOptions).
 
 >[!NOTE]
-> This feature has been marked obsolete from DataMiner version 10.3.6 onwards. It has been replaced by the [User-Defined APIs](xref:UD_APIs) feature and will be removed in the future.
+> This feature is obsolete from DataMiner version 10.3.6 onwards and is no longer available from DataMiner 10.4.0 onwards. It has been replaced by the [User-Defined APIs](xref:UD_APIs) feature.
 
 #### Modules \> API \> Deploy script API
 

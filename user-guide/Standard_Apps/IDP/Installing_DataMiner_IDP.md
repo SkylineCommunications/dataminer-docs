@@ -16,7 +16,7 @@ To install and set up DataMiner IDP:
 
 1. Download the DataMiner IDP package from [DataMiner Dojo](https://community.dataminer.services/downloads/).
 
-1. Double-click the IDP package, and install the package in the same manner as a DataMiner upgrade.
+1. In DataMiner Cube, go to *Apps* > *System Center* > *Agents* > *Manage*, and install the package in the same manner as a [DataMiner upgrade](xref:Upgrading_a_DataMiner_Agent_in_System_Center).
 
    > [!NOTE]
    > DataMiner will restart during the installation of the package.

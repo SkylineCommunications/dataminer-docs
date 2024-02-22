@@ -49,22 +49,26 @@ If the repository is private, the name should look like this (using "-" as separ
 
 - The following **item types** are currently supported (this list is to be extended):
 
-  - C (Connectors)
-  - V (Visio files)
-  - S (Solutions)
-  - F (Functions)
-  - AS (Automation Scripts)
-  - PLS (Profile-Load Scripts)
-  - PA (Process Automation)
-  - LSO (Life Service Orchestration)
-  - D (Dashboards)
-  - CF (Companion Files)
-  - T (Tests)
-  - GQIDS (GQI data source)
-  - GQIO (GQI operator)
-  - UDAPI (User-Defined APIs)
-  - DOC (Documentation)
-  - DISMACRO (DIS Macro)
+  | Syntax | Description |
+  |--|--|
+  | AS | Automation Scripts. Note that specific types of Automation scripts, such as GQI data sources, user-definable APIs, regression tests, etc., have their own syntax. |
+  | C | Connectors |
+  | CF | Companion Files |
+  | CHATOPS | ChatOps extension |
+  | D | Dashboards |
+  | DISMACRO |DIS Macro |
+  | DOC | Documentation |
+  | F | Functions |
+  | GQIDS | GQI data source |
+  | GQIO | GQI operator |
+  | LSO | Life cycle Service Orchestration |
+  | PA | Process Automation |
+  | PLS | Profile-Load Scripts |
+  | S | Solutions |
+  | SC | Scripted Connector |
+  | T | Tests: regression tests, integration tests, performance tests, etc. |
+  | UDAPI | User-Defined APIs |
+  | V | Visio files |
 
   > [!NOTE]
   > If you think an item type should be added, please contact us so we can add it before you create the repository.
@@ -103,6 +107,8 @@ Here is a list of topics you should use (this list is to be extended):
 - dataminer-user-defined-api
 - dataminer-doc
 - dataminer-dis-macro
+- dataminer-chatops
+- dataminer-nuget
 
 If you have code for a specific project/customer, you should add a topic with the customer's name as well, e.g. `Skyline-Communications`. Always use a hyphen ("-") as a separator.
 
@@ -144,4 +150,4 @@ For Automation, see [DataMiner CI/CD Automation](https://github.com/SkylineCommu
 
 An action [Skyline-DataMiner-Deploy-Action](https://github.com/SkylineCommunications/Skyline-DataMiner-Deploy-Action) is publicly available on GitHub to deploy from a GitHub repository.
 
-Refer to [Deploying Automation scripts from a GitHub repository](xref:Deploying_Automation_scripts_from_a_GitHub_repository) for more information.
+Refer to [Marketplace deployment action](xref:Marketplace_deployment_action) for more information.

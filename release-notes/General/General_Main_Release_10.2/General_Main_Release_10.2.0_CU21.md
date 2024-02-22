@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.2.0_CU21
 ---
 
-# General Main Release 10.2.0 CU21 – Preview
+# General Main Release 10.2.0 CU21
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
@@ -128,6 +128,18 @@ In the *View* tab of a spectrum card, up to now, each marker listed in the *Mark
 
 Also, the three buttons will now show a tooltip when you hover over them.
 
+#### DataMiner Cube - Visual Overview: Page loading times are now logged in SLClient.txt [ID_38636] [ID_38694]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 [CU0] -->
+
+The time it takes to load a visual overview will now be logged in the *SLClient.txt* log file.
+
+The load time will be the time between page initialization and (a) the time at which the page is fully loaded or (b) the time at which the user closes the card.
+
+Page loads will time out after 2 minutes.
+
+Note that these *SLClient.txt* entries will also include the name of the page that was loaded.
+
 ### Fixes
 
 #### Problem when restarting DataMiner [ID_37112]
@@ -227,8 +239,55 @@ In the footer of the Alarm Console, the button to cancel the current text-to-spe
 
 When, in the Alarm Console, an alarm was duplicated, in some cases, its focus score would not be updated correctly.
 
+#### DataMiner Cube - Relation learning: Problem when checking ModelHost DxM license [ID_37653]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 [CU0] -->
+
+In some cases, DataMiner Cube could become unresponsive when checking the ModelHost DxM license.
+
 #### DataMiner Cube: Problem when parsing anomaly alarms [ID_37680]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
 
 When you opened DataMiner Cube or when you opened a new alarm tab, an error could occur when parsing anomaly alarms.
+
+#### Protocol VDX files imported via a DELT package would not be displayed until a DataMiner restart [ID_37781]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 [CU0] -->
+
+When you imported a DELT package that contained protocol VDX files linked to elements in the package, in some rare cases, those VDX files would incorrectly not be displayed until after a DataMiner restart.
+
+#### SLNetClientTest tool would not indicate that a profile migration to Elasticsearch/OpenSearch had failed due to a profile object with an invalid name [ID_37808]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 [CU0] -->
+
+When, in the SLNetClientTest tool, you went to *Advanced > Migration*, the migration overview would not indicate that a migration of profiles towards Elasticsearch/OpenSearch had failed due to a profile object with a name longer than 32,766 characters.
+
+#### Profile migrations to Elasticsearch/OpenSearch will now fail when the profiles.xml file is corrupt [ID_37818]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 [CU0] -->
+
+When you started a profile migration to an Elasticsearch/OpenSearch database while the *profiles.xml* file was corrupt, up to now, a new empty *profiles.xml* file would be created and the migration would continue. From now on, no new *profiles.xml* file will be created anymore and the migration will go into an error status.
+
+> [!NOTE]
+> When, in the SLNetClientTest tool, you go to *Advanced > Migration*, all migrations in an error status will now have a red background.
+
+#### Web apps - Visual overview: Popup window would not display a hidden page when the visual overview only contained one non-hidden page [ID_38331]
+
+<!-- MR 10.2.0 [CU21] / 10.3.0 [CU12] / 10.4.0 [CU0] - - FR 10.4.3 [CU0] -->
+
+When, in a visual overview with one non-hidden page displayed in a web app, you tried to open a popup window linked to a page marked as "hidden", the popup window would incorrectly display the non-hidden page instead of the hidden page.
+
+#### DataMiner Cube - System Center: No longer possible to add additional databases when DMA was using STaaS [ID_38399]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU11] - FR 10.4.2 [CU0] -->
+
+In *System Center*, the *Other* tab of the *Database* section allows you to configure additional databases.
+
+Up to now, when Cube was connected to a DataMiner Agent configured to use STaaS, an error could occur when you tried to add an additional database.
+
+#### Visual Overview: Problem with subscription filter on 'Children' shape [ID_38537]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 [CU0] -->
+
+When a subscription filter was configured on a *Children* shape, it would not get parsed correctly, causing the filter to malfunction.

@@ -36,7 +36,7 @@ For a daily report, an additional archive `<timestamp>_All_Reports.zip` is gener
 
 ## Activating CDMR
 
-If your DMS is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud) and all DataMiner Agents are running [SupportAssistant](xref:DataMinerExtensionModules#supportassistant) 1.4.0 or higher, CDMR is automatically activated.
+If your DMS is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud) and the necessary [prerequisites](xref:RemoteLogCollection#requirements) are met for remote log collection, CDMR is automatically activated.
 
 Otherwise, to activate CDMR, you must configure SMTP so that emails can be sent and configure *MaintenanceSettings.xml* so that emails are sent to the correct address. Once the configuration is complete, Skyline Communications must also be notified.
 
@@ -81,12 +81,14 @@ The file `C:\Skyline DataMiner\MaintenanceSettings.xml` must be configured to se
 ```xml
 <Watchdog>
     <EMail active="true"> 
-        <Destination>reports@skyline.be</Destination>
+        <Destination></Destination>
         <CCDestination></CCDestination> 
         <BCCDestination></BCCDestination> 
     </EMail>
 </Watchdog>
 ```
+
+If the `Destination` field is empty, the default destination `dataminer.minidump@skyline.be` will be used. 
 
 In the `CCDestination` field, you can optionally specify an address where a copy of the report should be sent.
 

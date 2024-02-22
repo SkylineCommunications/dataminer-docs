@@ -26,6 +26,9 @@ A StartMonitor method requires:
 
 - The primary key of the row, in case of table manipulation (optional).
 
+    > [!IMPORTANT]
+    > From Skyline.DataMiner.Core.DataMinerSystem version 1.1.1.1 onwards, initial data will not always be returned when a monitor is started. If you need initial data, we recommended retrieving the data using other library calls.
+
 A StopMonitor method requires:
 
 - The SLProtocol object, which it uses to identify your local element and filter this on the MonitorSource.

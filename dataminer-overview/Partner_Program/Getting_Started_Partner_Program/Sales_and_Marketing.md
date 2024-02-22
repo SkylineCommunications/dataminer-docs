@@ -80,7 +80,7 @@ Here are some pointers to maximize your visibility.
 
   As a DataMiner Partner, you invest in this, and Skyline will support you. This could include, for example, online webinars or LinkedIn Live sessions on a variety of topics, ranging from general topics to specific use cases, product or solution updates.
 
-  For this purpose, you can find a [variety of resources](https://community.dataminer.services/documentation/) on the DataMiner Dojo Community. You can take advantage of Skyline’s content and online events, or organize your own events where Skyline can join you.
+  For this purpose, you can find a variety of resources on the [DataMiner Dojo Community](https://community.dataminer.services) platform. You can take advantage of Skyline’s content and online events, or organize your own events where Skyline can join you.
 
 - **Brand Materials**: A variety of standard off-the-shelf brand materials are available for you to leverage the DataMiner brand ([corporate materials](https://skyline.be/corporate-images), [skylicons](https://skyline.be/skylicons/), etc.).
 
