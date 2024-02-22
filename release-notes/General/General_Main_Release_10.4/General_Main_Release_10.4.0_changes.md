@@ -939,6 +939,12 @@ Because of a number of enhancements, overall performance has increased when addi
 
 Change point detection accuracy has been improved for change points of type flatline.
 
+#### DataMinerSolutions.dll now included in core DataMiner software [ID_38530]
+
+<!-- MR 10.4.0 - FR 10.4.3 / originally included in IDP 1.5.0 -->
+
+To make sure that installing IDP will no longer require a DataMiner restart, *DataMinerSolutions.dll* will now be included in the core DataMiner software.
+
 ### Fixes
 
 #### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID_34981]
