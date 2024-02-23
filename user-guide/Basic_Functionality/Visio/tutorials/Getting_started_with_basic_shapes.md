@@ -104,21 +104,24 @@ In DataMiner Cube, you should see two colored shapes, one of which displays the 
 
 1. Right-click the shape group and select *Data* > *Define Shape Data*.
 
-1. Click the *New* button to add shape data with label `Enabled` and value `false`.
+1. Click the *New* button to add shape data with label `Enabled` and value `false`. Setting enabled to false makes it so the shape can no longer be clicked and doesn't show a hover effect.
 
 1. Right-click the shape group and select *Group* > *Open Group*.
 
 1. Right-click the ellipse shape and select *Data* > *Define Shape Data*.
 
-1. Click the *New* button to add shape data with label `Enabled` and value `true`.
+1. Click the *New* button to add shape data with label `Enabled` and value `true`. Overriding the enabled state from earlier in this child shape will enable just the ellipse, rather than the whole group.
 
 1. Right-click the rectangle shape and select *Data* > *Define Shape Data*.
 
 1. Click the *New* button to add shape data with label `Options` and value `NoAlarmColorFill`.
 
-1. Make sure you have no shapes selected, click the "..." in the top-right corner of the Advanced Editing panel and select *Add pretty hover*.
+1. Make sure you have no shapes selected, click the "..." in the top-right corner of the Advanced Editing panel and select *Add pretty hover*. This hover effect will ensure that when you hover over the ellipse, the highlighted area will move along with the ellipse itself, instead of highlighting its bounding rectangle.
 
    ![Add pretty hover](~/user-guide/images/AddPrettyHover.gif)
+
+   > [!NOTE]
+   > If you followed this tutorial, the advanced editing panel should be available in your Microsoft Visio application. The panel is created when launching Microsoft Visio from DataMiner Cube (by creating a new blank Visio file or doing an edit of an existing one).
 
 1. Save your Visio file.
 
