@@ -22,4 +22,4 @@ For example, if you specify the following shape data, the shape will have the co
 
 > [!NOTE]
 > - The displayed alarm level will always follow the alarm level of the full data display page, it will not account for service context.
-> - This will create a subscription on all parameters so should not be used excessively.
+> - This will create a subscription on all parameters of the page, so only limited use is advised.
