@@ -193,6 +193,6 @@ When an Automation script sent an email to a user or a user group using an *Emai
 
 <!-- MR 10.5.0 - FR 10.4.4 -->
 
-In some cases, when a request to the cloud returned the following error, the Azure SDK would incorrectly not perform any retries:
+When a request to the cloud failed, in some cases, the Azure SDK would not be able to perform any retries and would throw the following exception:
 
 `System.ArgumentOutOfRangeException: 'minValue' cannot be greater than maxValue.`
