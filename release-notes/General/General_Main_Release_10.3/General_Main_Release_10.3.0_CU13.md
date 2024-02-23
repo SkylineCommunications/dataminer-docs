@@ -57,6 +57,12 @@ Also, when an SNMP parameter used a wildcard as OID, up to now, SLProtocol would
 
 ### Fixes
 
+#### Problem when a redundancy group was set to an undefined state [ID_38401]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+When a redundancy group was set to an undefined state, a large number of empty connectivity contexts would be inserted into the *Connectivity* section of the *redundancy.xml* file. As a result, the correct connectivity contexts would be overwritten, causing the redundancy group to be stuck in the undefined state.
+
 #### Problem with file offload mechanism when main database is offline [ID_38542]
 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
