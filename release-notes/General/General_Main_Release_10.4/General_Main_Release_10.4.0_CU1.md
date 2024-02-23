@@ -139,6 +139,14 @@ In some cases, SLProtocol could stop working due to an `Access violation reading
 
 When DOM instances were sorted, in some cases, an error could be thrown when the column by which you sorted contained null values.
 
+#### Problem when a DataMiner Cube client tried to connect using gRPC [ID_38606]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+When a DataMiner Cube client tried to connect to a DataMiner Agent using gRPC, in some rare cases, a disconnect could occur with the following error:
+
+`Some messages have probably gone lost. Waiting for X while X+20 already entered.`
+
 #### SLAnalytics - Automatic incident tracking: Problem when updating alarm groups [ID_38629]
 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
@@ -199,3 +207,9 @@ When a paused element was set back to the "started" state, it would no longer re
 When using either Google Maps or OpenStreetMap, KML layers would incorrectly always be displayed first in the layer legend, regardless of the order in which they were specified in the map configuration file.
 
 From now on, the legend will always show the layers in the order in which they were specified in the map configuration file.
+
+#### Failover: Memory leak when invoking PowerShell scripts [ID_38763]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+On Failover systems using a shared hostname, SLNet regularly executes PowerShell scripts. However, invoking those scripts would cause a memory leak. To prevent this, each PowerShell script will now be run in a separate process, which will be terminated at the end of the script.
