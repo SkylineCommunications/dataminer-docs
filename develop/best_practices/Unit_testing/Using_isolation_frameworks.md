@@ -6,7 +6,7 @@ uid: Using_isolation_frameworks
 
 The `SLProtocol` interface is heavily used in protocols as it acts as the interface between *SLScripting* (the process executing QActions) and *SLProtocol* (the process executing the protocol logic).
 
-Therefore, it is very likely you will end up in a situation where you want to test a method that has a dependency on the `SLProtocol` interface. This article explains how to fake `SLProtocol` so you can easily create unit tests that have a dependency on this interface.
+Therefore, it is very likely you will end up in a situation where you want to test a method that has a dependency on the `SLProtocol` interface. Below, you can learn how to fake `SLProtocol` so you can easily create unit tests that have a dependency on this interface.
 
 ## Faking SLProtocol using MOQ
 
@@ -47,7 +47,7 @@ public string Rewrite(SLProtocol protocol, string path)
 }
 ```
 
-This method is very similar to the method shown in the previous section. However, note that the method now has an additional parameter of type *SLProtocol*.
+This method is very similar to the method shown in [Creating unit tests using the MSTestv2 framework in Visual Studio](xref:Unit_tests_MSTestv2_framework). However, note that the method now has an additional parameter of type *SLProtocol*.
 
 Suppose you now want to create a unit test for this method. When calling the `Rewrite` method in the *Act* step of your test method, you should pass along something that implements *SLProtocol*.
 

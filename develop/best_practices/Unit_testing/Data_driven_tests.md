@@ -6,11 +6,11 @@ uid: Data_driven_tests
 
 Data-driven testing is about providing a unit test with data that is then used during the execution of the unit test. This is particularly useful in situations where you want to run a unit test with different input data to verify that the business logic the unit test was written for covers all possible scenarios.
 
-In this blog post, I will discuss the possibilities MSTest V2 provides related to data-driven testing.
+Below, we discuss the possibilities MSTest V2 provides related to data-driven testing.
 
 ## DataRow attribute
 
-The DataRow attribute allows you to define inline data for a test method. Consider the following example where a unit test verifies whether the multiplication operation of a calculator is behaving as expected:
+The *DataRow* attribute allows you to define inline data for a test method. Consider the following example where a unit test verifies whether the multiplication operation of a calculator is behaving as expected:
 
 ```csharp
 [TestClass]
@@ -34,16 +34,18 @@ public class CalculatorTests
 }
 ```
 
-In the example above, the MultiplyTest method has been annotated with multiple DataRow attributes. Each [DataRow attribute](https://learn.microsoft.com/en-us/dotnet/api/microsoft.visualstudio.testtools.unittesting.datarowattribute?view=visualstudiosdk-2022&viewFallbackFrom=mstest-net-1.3.2) will result in the execution of the unit test.
+In the example above, the `MultiplyTest` method has been annotated with multiple *DataRow* attributes. Each [DataRow attribute](https://learn.microsoft.com/en-us/dotnet/api/microsoft.visualstudio.testtools.unittesting.datarowattribute?view=visualstudiosdk-2022&viewFallbackFrom=mstest-net-1.3.2) will result in the execution of the unit test.
+
+![datadriven1.png](~/develop/images/datadriven1.png)
 
 ## DynamicData attribute
 
-The DataRow attribute has some drawbacks:
+The *DataRow* attribute has some drawbacks:
 
-- When you have multiple unit tests where you would like to use the same input data, the tests need to be annotated with all the DataRow attributes.
+- When you have multiple unit tests where you would like to use the same input data, the tests need to be annotated with all the *DataRow* attributes.
 - Attribute arguments must be a constant expression, typeof expression, or an array creation expression of an attribute parameter type.
 
-The DynamicData attribute can be used to alleviate these problems. It works as follows:
+The *DynamicData* attribute can be used to alleviate these problems. It works as follows:
 
 In your test class, create a property or a method that has the test data.
 
@@ -64,7 +66,7 @@ private static IEnumerable<object[]> TestData
 }
 ```
 
-Then annotate your test method with the DynamicData attribute, which refers to the property or method that provides the test data.
+Then annotate your test method with the *DynamicData* attribute, which refers to the property or method that provides the test data.
 
 ```csharp
 [TestMethod]
@@ -80,23 +82,23 @@ public void MultiplyTest(int multiplicand, int multiplier, int product)
 }
 ```
 
-If the test data is provided via a method, the attribute must specify that the data source type is of type Method (the default is Property):
+If the test data is provided via a method, the attribute must specify that the data source type is of type *Method* (the default is *Property*):
 
 ```csharp
 [DynamicData("TestData", DynamicDataSourceType.Method)]
 ```
 
-It is also possible to refer to a method or property that is defined in another class (e.g. the class UnitTestData in the example below):
+It is also possible to refer to a method or property that is defined in another class (e.g. the class `UnitTestData` in the example below):
 
 ```csharp
 [DynamicData("TestData", typeOf(UnitTestData))]
 ```
 
-For more information about the DynamicData attribute, refer to [DynamicDataAttribute class](https://learn.microsoft.com/en-us/dotnet/api/microsoft.visualstudio.testtools.unittesting.dynamicdataattribute?view=visualstudiosdk-2022&viewFallbackFrom=mstest-net-1.3.2).
+For more information about the *DynamicData* attribute, see [DynamicDataAttribute class](https://learn.microsoft.com/en-us/dotnet/api/microsoft.visualstudio.testtools.unittesting.dynamicdataattribute?view=visualstudiosdk-2022&viewFallbackFrom=mstest-net-1.3.2).
 
 ## DataSource attribute
 
-In scenarios where your test data resides in an external data source, you can use the DataSource attribute. Different data sources are supported, such as an XML file, CSV, a database, or an Excel sheet.
+In scenarios where your test data resides in an external data source, you can use the *DataSource* attribute. Different data sources are supported, such as an XML file, CSV, a database, or an Excel sheet.
 
 The following example illustrates the use of this attribute with an XML file:
 
@@ -118,9 +120,9 @@ public void MultiplyTest()
 }
 ```
 
-The DataSource attribute specifies all info needed to use the data source. For more details about how to use this attribute, refer to [DataSourceAttribute class](https://learn.microsoft.com/en-us/dotnet/api/microsoft.visualstudio.testtools.unittesting.datasourceattribute?view=visualstudiosdk-2022&viewFallbackFrom=mstest-net-1.3.2).
+The *DataSource* attribute specifies all info needed to use the data source. For more details about how to use this attribute, see [DataSourceAttribute class](https://learn.microsoft.com/en-us/dotnet/api/microsoft.visualstudio.testtools.unittesting.datasourceattribute?view=visualstudiosdk-2022&viewFallbackFrom=mstest-net-1.3.2).
 
-The content of the XML file is then as follows: (Note that the DataSource attribute specifies “Row” as this is the name used for each entry in the XML file)
+The content of the XML file is then as follows (note that the *DataSource* attribute specifies "Row" as this is the name used for each entry in the XML file):
 
 ```xml
 <testsuite>
@@ -152,7 +154,7 @@ The content of the XML file is then as follows: (Note that the DataSource attrib
 </testsuite>
 ```
 
-Note also that the test method implementation also references a TestContext property. This is a property you need to provide as a member of your test class. The unit test framework will then create a TestContext object and set this property with the created value.
+Also note that the test method implementation also references a *TestContext* property. This is a property you need to provide as a member of your test class. The unit test framework will then create a *TestContext* object and set this property with the created value.
 
 ```csharp
 [TestClass]
@@ -168,15 +170,17 @@ public class CalculatorTests
 }
 ```
 
-For more information about the TestContext class, refer to [TestContext class](https://learn.microsoft.com/en-us/dotnet/api/microsoft.visualstudio.testtools.unittesting.testcontext?view=visualstudiosdk-2022&viewFallbackFrom=mstest-net-1.3.2).
+For more information about the *TestContext* class, see [TestContext class](https://learn.microsoft.com/en-us/dotnet/api/microsoft.visualstudio.testtools.unittesting.testcontext?view=visualstudiosdk-2022&viewFallbackFrom=mstest-net-1.3.2).
 
 Each entry in the data source will result in the execution of the unit test:
 
+![datadriven2.png](~/develop/images/datadriven2.png)
+
 ## ITestDataSource interface
 
-Instead of using the “DataSource attribute” approach, you can also choose to define a class that implements the [ITestDataSource interface](https://learn.microsoft.com/en-us/dotnet/api/microsoft.visualstudio.testtools.unittesting.itestdatasource?view=visualstudiosdk-2022&viewFallbackFrom=mstest-net-1.3.2) and extends the Attribute class.
+Instead of using the "DataSource attribute" approach, you can also choose to define a class that implements the [ITestDataSource interface](https://learn.microsoft.com/en-us/dotnet/api/microsoft.visualstudio.testtools.unittesting.itestdatasource?view=visualstudiosdk-2022&viewFallbackFrom=mstest-net-1.3.2) and extends the `Attribute` class.
 
-This ITestDataSource interface has only two methods: GetData and GetDisplayName:
+This `ITestDataSource` interface has only two methods: `GetData` and `GetDisplayName`:
 
 ```csharp
 public class MyDataSourceAttribute : Attribute, ITestDataSource
@@ -217,6 +221,8 @@ public void MultiplyTest(int multiplicand, int multiplier, int product)
 ```
 
 Again, this results in multiple executions of the unit test, each time with different data.
+
+![datadriven3.png](~/develop/images/datadriven3.png)
 
 ## Useful links
 

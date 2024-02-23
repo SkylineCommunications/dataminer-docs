@@ -4,7 +4,7 @@ uid: FluentAssertions
 
 # FluentAssertions
 
-As mentioned earlier, the third step in a unit test is the Assert step. The section below provides some more info on assertions.
+Below, you can find more information on assertions.
 
 ## Performing assertions on collections
 
