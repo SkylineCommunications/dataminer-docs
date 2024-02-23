@@ -73,7 +73,7 @@ Whereas the sections above provide more information on how to create and use XML
 - Summaries should be kept small. Additional information can be provided in the `<remarks>` tag.
 - XML documentation comments must be valid XML. For example, use XML entities to avoid XML parsing issues when providing code examples:
 
-![](~/develop/images/XML_entities.png)
+  ![](~/develop/images/XML_entities.png)
 
 ### Constructors
 
