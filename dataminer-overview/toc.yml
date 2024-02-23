@@ -101,6 +101,21 @@ items:
               topicUid: What_is_DataMiner_DevOps_Enablement
             - name: The DataMiner DevOps Professional Program
               topicUid: DevOps_Enablement_and_the_DevOps_Professional_program
+            - name: DevOps Enablement Playbook
+              topicUid: DevOps_Enablement_Playbook
+              items:
+                - name: Tooling and infrastructure
+                  topicUid: Tooling_Infrastructure
+                - name: Onboarding
+                  topicUid: DEP_Onboarding
+                - name: Learning resources
+                  topicUid: Learning_Resources
+                - name: Certification
+                  topicUid: DEP_Certification
+                - name: Levelling up your DevOps status
+                  topicUid: Levelling_up_DevOps_status
+                - name: Reporting progress to the stakeholders
+                  topicUid: Reporting_Progress_to_Stakeholders
         - name: DataMiner DevOps Creative Collective
           topicUid: DataMiner_DevOps_Creative_Collective
           items:
@@ -182,12 +197,10 @@ items:
       topicUid: Part52ProfessionalServices
       items:
         - name: DataMiner Solution Deployment Methodology
-          topicUid: DeploymentMethodology
           items:
             - name: About Digital Transformation
               topicUid: DeploymentMethodology
             - name: Managing technology deployments
-              topicUid: Managing_technology_deployments
               items:
                 - name: Methodology is key to success
                   topicUid: Managing_technology_deployments

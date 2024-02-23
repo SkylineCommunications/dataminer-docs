@@ -54,6 +54,8 @@
           "develop/toc.yml",
 		      "develop/**/toc.yml",
 		      "develop/api/types/*.yml",
+          "contributing/**.md",
+          "contributing/**/toc.yml",
           "toc.yml",
           "*.md"          
         ]
@@ -63,8 +65,9 @@
       "baseUrl": "https://docs.dataminer.services/",
       "changefreq": "hourly"
     },
- 	"xrefService": [ "https://learn.microsoft.com/api/xref/query?uid={uid}" ],
-	"xref" : [ "xref/newtonsoft.yml" ],
+	"xref" : [
+		"https://github.com/dotnet/docfx/raw/main/.xrefmap.json",
+		"xref/newtonsoft.yml" ],
   "resource": [
       {
         "files": [
@@ -74,6 +77,7 @@
           "release-notes/images/**",
           "develop/images/**",
           "tutorials/images/**",
+          "contributing/images/**",
           "develop/schemadoc/Protocol/images/**",
           "develop/schemadoc/Automation/images/**",
           "staticwebapp.config.json",
@@ -87,13 +91,15 @@
       "_appTitle": "DataMiner Docs",
       "_appFooter": "© Skyline Communications 2024",
       "_enableSearch": false,
-      "_enableNewTab": true
+      "_enableNewTab": true,
+	  "_googleAnalyticsTagId": "GTM-WD3NQGN"
     },
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
     "template": [
       "default",
-      "templates/skyfx"
+	  "modern",
+      "templates/skyline"
     ],
     "markdownEngineName": "markdig",
     "noLangKeyword": false,

@@ -4,7 +4,9 @@ uid: GQI_Sort
 
 # (Then) Sort (by)
 
-To sort data based on a specific column, three query operators are available, depending on your DataMiner version and objective:
+To sort data based on a specific column, three query operators are available, depending on your DataMiner version and objective.
+
+## Sort operators
 
 - ***Sort by***:
 

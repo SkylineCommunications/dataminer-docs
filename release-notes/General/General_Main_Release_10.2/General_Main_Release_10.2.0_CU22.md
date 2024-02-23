@@ -118,7 +118,7 @@ This means that suggestion events will automatically disappear from the tab appr
 
 #### DataMiner Cube: Optimization of memory handling when closing cards [ID_37858]
 
-<!-- MR 10.2.0 [CU22]/10.3.0 [CU11] - FR 10.4.2 -->
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU1] - FR 10.4.2 -->
 
 Overall memory handling when closing cards has been optimized.
 
@@ -287,7 +287,22 @@ This entry will contain the following information:
 - The connected hostname
 - The raw text of the client connection (includes connection property data such as *AmountCallsIn*, *AmountCallsOut*, *AmountInitiatedConnectionChecks*, *AmountCallsInProgress*, *AmountCallsWaiting*, etc.)
 
+#### DataMiner Cube - Logging: Viewing the logging of enhanced services [ID_38623]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
+
+In Cube, you can now view the logging of an enhanced service by doing one of the following:
+
+- Open the card of an enhanced service, open its hamburger menu, and choose *View > Log*.
+- In the Surveyor, right-click an enhanced service, and choose *View > Log*.
+
 ### Fixes
+
+#### DataMiner Cube: Error could occur in SLHelper when generating visual overviews to be displayed in web apps [ID_32584]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU13]/10.4.0 [CU1] - FR 10.4.4 -->
+
+In some cases, an error could occur in SLHelper when it was generating visual overviews to be displayed in web apps.
 
 #### DataMiner Cube: Problem when adding up [Start Time:] placeholders [ID_37661]
 
@@ -353,8 +368,8 @@ When the URL specified in a shape data item of type *Link* did not link to a Dat
 
 #### DataMiner Cube could leak memory leak when a card in tab layout was closed before it had fully been loaded [ID_37857] [ID_38021]
 
-<!-- RN 37857: MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
-<!-- RN 38021: MR 10.2.0 [CU22]/10.3.0 [CU11] - FR 10.4.2 -->
+<!-- RN 37857: MR 10.2.0 [CU22]/10.3.0 [CU10]/10.4.0 [CU1] - FR 10.4.1 -->
+<!-- RN 38021: MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU1] - FR 10.4.2 -->
 
 When a card in tab layout was closed before it had fully been loaded, DataMiner Cube could leak memory due to list boxes not being cleared from memory.
 
@@ -584,3 +599,21 @@ In the *Settings* windows, the description of the *Filter the alarms before they
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
 
 When a redundancy group included a primary or backup element that had been imported by means of a DELT package, in some cases, another element would incorrectly be displayed instead of the imported element.
+
+#### DataMiner Cube could become unresponsive after you had logged in [ID_38607]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU13]/10.4.0 [CU1] - FR 10.4.4 -->
+
+In some cases, after you had logged in, DataMiner Cube could become unresponsive when the "Show the news section" setting was enabled.
+
+#### DataMiner Cube - Correlation: Not possible to enable or disable any of the options for the 'Set parameter' action [ID_38616]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
+
+When editing a correlation rule in which a *Set Parameter* action had previously been configured, up to now, enabling or disabling any of the options for that action (e.g. *Execute on base alarm updates*) would incorrectly not enable the *Apply* button. As a result, it would not be possible to save the correlation rule after enabling or disabling some of those options.
+
+#### DataMiner Cube: Sidebar would not contain any buttons [ID_38652]
+
+<!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
+
+In some rare cases, the DataMiner Cube sidebar would not contain any buttons.

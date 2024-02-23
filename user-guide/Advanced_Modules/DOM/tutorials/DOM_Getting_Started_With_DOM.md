@@ -22,12 +22,9 @@ Expected duration: 20 minutes
 
 ## Overview
 
-- [Getting started with DOM](#getting-started-with-dom)
-  - [Prerequisites](#prerequisites)
-  - [Overview](#overview)
-  - [Step 1: Deploy the DOM Editor script](#step-1-deploy-the-dom-editor-script)
-  - [Step 2: Create a DOM definition](#step-2-create-a-dom-definition)
-  - [Step 3: Use the DOM definition in a low-code app](#step-3-use-the-dom-definition-in-a-low-code-app)
+- [Step 1: Deploy the DOM Editor script](#step-1-deploy-the-dom-editor-script)
+- [Step 2: Create a DOM definition](#step-2-create-a-dom-definition)
+- [Step 3: Use the DOM definition in a low-code app](#step-3-use-the-dom-definition-in-a-low-code-app)
 
 ## Step 1: Deploy the DOM Editor script
 
@@ -39,7 +36,7 @@ Expected duration: 20 minutes
 
 Now that you have deployed the DOM Editor to your DMA, you can use it to create a DOM definition:
 
-1. [Open DataMiner Cube](xref:Opening_the_desktop_app) and go to *Apps* > *Automation*.
+1. [Open DataMiner Cube](xref:Using_the_desktop_app) and go to *Apps* > *Automation*.
 
 1. In the Automation module, search for a script called **DOM Editor** and select it.
 

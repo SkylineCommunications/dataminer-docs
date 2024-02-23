@@ -6,9 +6,7 @@ uid: Searching_in_DataMiner_Cube
 
 ## Using the Cube Search box
 
-### From DataMiner 10.0.0/10.0.2 onwards
-
-From DataMiner 10.0.0/10.0.2 onwards, to search for an item in the DataMiner System, you can use the search box in the middle of the Cube header bar.
+To search for an item in the DataMiner System, you can use the search box in the middle of the Cube header bar.
 
 As soon as you click the search box, a list of suggestions is shown below. Initially, this list shows recent items (with any pinned items at the top), but it is updated with search results as soon as you type anything in the box.
 
@@ -53,39 +51,6 @@ Please note the following
 - For more information on which search terms you can enter to find specific DataMiner items, see [Searching for specific DataMiner items](#searching-for-specific-dataminer-items).
 
 - Hidden elements are not included in the search results.
-
-### Prior to DataMiner 10.0.0/10.0.2
-
-To search for an item in the DataMiner System using a DataMiner version prior to DataMiner 10.0.0/10.0.2, enter a search term in the Search box at the top of the Cube navigation pane. With every character you type, any available results will appear in the navigation pane.
-
-- Up to DataMiner 9.5.10, a search must always contain a term of at least 3 characters. From DataMiner 9.5.11 onwards, a search that includes only search terms of less than three characters can yield results, in case there are exact matches with the specified terms.
-
-- In a DataMiner search, you can use any alphanumeric characters as well as the following characters:
-
-    ```txt
-    _ - ( ) [ ] { } # & .
-    ```
-
-    > [!NOTE]
-    > If you enter “\*” or “?”, these will be interpreted as wildcard characters. See [Searching with wildcard characters](#searching-with-wildcard-characters).
-
-- For more information on which search terms you can enter to find specific DataMiner items, see [Searching for specific DataMiner items](#searching-for-specific-dataminer-items).
-
-- To find items more quickly, you can use special options or keywords. See [Special search options](#special-search-options).
-
-- First a client-side search will be done, then a server-side search. The results of the client-side search are displayed immediately. When more results return from the server, a button will be added in the top corner of the results pane, listing the number of results found. Click this button to view these additional results as well.
-
-    > [!NOTE]
-    > In the Cube system settings, it is possible to disable the client-side search. To do so, go to *System Center* > *Search & Indexing*. (If your DMS still uses a legacy MySQL database, go to *System Center* > *System Settings* > *Search*.) Clear the checkbox next to *Enable search indexing on the client* and click the *Apply* button. The setting will take effect as soon as you log off in Cube and then log on again. Note that this is a system-wide setting, so it will be applied for all users.
-
-- Browse through the results either by scrolling, or using the *UP* and *DOWN* keys. When you select an item in the list, basic information about the item is displayed at the bottom of the navigation pane.
-
-    > [!NOTE]
-    > If you browse through the results using the *UP* and *DOWN* keys, the cursor stays in the Search box. This allows you to quickly refine or change the text to be searched without using your mouse.
-
-- Select an item and press *ENTER*, or click an item to open it in a card. Click with the middle mouse button to open the item in a new card, next to any existing cards.
-
-- To clear the Search box and erase the list of search results, click the X on the right.
 
 ## Search type filter
 
@@ -220,52 +185,52 @@ For advanced searches, a number of special search options are available:
 
 - To do a negative search, i.e. to look for items that do not match a particular search term, put an exclamation mark in front of the search term.
 
-    E.g. *!redundancy*
+  E.g. *!redundancy*
 
 - To look for an exact phrase of several words, surround the phrase by double quotes.
 
-    E.g. *“MS Server”*
+  E.g. *“MS Server”*
 
 - The following special keywords can be used in conjunction with a search term, separated from the term with a space.
 
-    | If you enter:  | the search results will contain:                                                        |
-    |------------------|-----------------------------------------------------------------------------------------|
-    | trend            | elements that have been assigned trend templates as well as trended parameters          |
-    | trending         | “                                                                                       |
-    | trended          | “                                                                                       |
-    | monitored        | only elements and parameters that are being monitored                                   |
-    | alarm            | “                                                                                       |
-    | inalarm          | only elements and parameters of which the state is not equal to “normal” or “undefined” |
-    | online           | only users who are currently logged in                                                  |
-    | dma              | only DataMiner Agents                                                                   |
-    | element          | only elements                                                                           |
-    | elements         | “                                                                                       |
-    | view             | only views                                                                              |
-    | views            | “                                                                                       |
-    | service          | only services                                                                           |
-    | services         | “                                                                                       |
-    | servicetemplate  | only service templates, listed in the search results under “Services”                   |
-    | servicetemplates | “                                                                                       |
-    | settings         | Cube user settings                                                                      |
-    | SLA              | SLA elements                                                                            |
-    | parameter        | only parameters                                                                         |
-    | parameters       | “                                                                                       |
-    | redundancy       | only redundancy groups                                                                  |
-    | user             | only users                                                                              |
-    | users            | “                                                                                       |
-    | usergroup        | only user groups                                                                        |
-    | usergroups       | “                                                                                       |
-    | protocol         | only protocols                                                                          |
-    | protocols        | “                                                                                       |
-    | document         | only documents                                                                          |
-    | documents        | “                                                                                       |
-    | critical         | only elements, services and parameters with the specified alarm severity.               |
-    | major            | “                                                                                       |
-    | minor            | “                                                                                       |
-    | warning          | “                                                                                       |
-    | timeout          | “                                                                                       |
-    | normal           | “                                                                                       |
-    | masked           | “                                                                                       |
+  | If you enter:  | the search results will contain:                                                        |
+  |------------------|-----------------------------------------------------------------------------------------|
+  | trend            | elements that have been assigned trend templates as well as trended parameters          |
+  | trending         | “                                                                                       |
+  | trended          | “                                                                                       |
+  | monitored        | only elements and parameters that are being monitored                                   |
+  | alarm            | “                                                                                       |
+  | inalarm          | only elements and parameters of which the state is not equal to “normal” or “undefined” |
+  | online           | only users who are currently logged in                                                  |
+  | dma              | only DataMiner Agents                                                                   |
+  | element          | only elements                                                                           |
+  | elements         | “                                                                                       |
+  | view             | only views                                                                              |
+  | views            | “                                                                                       |
+  | service          | only services                                                                           |
+  | services         | “                                                                                       |
+  | servicetemplate  | only service templates, listed in the search results under “Services”                   |
+  | servicetemplates | “                                                                                       |
+  | settings         | Cube user settings                                                                      |
+  | SLA              | SLA elements                                                                            |
+  | parameter        | only parameters                                                                         |
+  | parameters       | “                                                                                       |
+  | redundancy       | only redundancy groups                                                                  |
+  | user             | only users                                                                              |
+  | users            | “                                                                                       |
+  | usergroup        | only user groups                                                                        |
+  | usergroups       | “                                                                                       |
+  | protocol         | only protocols                                                                          |
+  | protocols        | “                                                                                       |
+  | document         | only documents                                                                          |
+  | documents        | “                                                                                       |
+  | critical         | only elements, services and parameters with the specified alarm severity.               |
+  | major            | “                                                                                       |
+  | minor            | “                                                                                       |
+  | warning          | “                                                                                       |
+  | timeout          | “                                                                                       |
+  | normal           | “                                                                                       |
+  | masked           | “                                                                                       |
 
 ## Searching with wildcard characters
 

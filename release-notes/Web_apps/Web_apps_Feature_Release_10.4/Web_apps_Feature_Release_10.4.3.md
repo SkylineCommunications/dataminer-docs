@@ -2,19 +2,15 @@
 uid: Web_apps_Feature_Release_10.4.3
 ---
 
-# DataMiner web apps Feature Release 10.4.3 – Preview
+# DataMiner web apps Feature Release 10.4.3
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to the web applications, see [General Feature Release 10.4.3](xref:General_Feature_Release_10.4.3).
 
 ## Highlights
-
-*No highlights have been selected yet.*
-
-## New features
 
 #### Low-Code Apps: 'Show a notification' action [ID_38548]
 
@@ -36,20 +32,25 @@ When configuring a *Show a notification* action, the following properties should
 > - Only the first 80 characters of a title will be displayed.
 > - Only the first 400 characters of a message will be displayed.
 
+## Features
+
+#### Dashboards app & Low-Code Apps - Template editor: All overrides now have a reset button [ID_38368]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+Up to now, in the template editor, only text overrides could be reset. Now all overrides have a dedicated reset button.
+
 ## Changes
 
 ### Enhancements
 
-#### Dashboards app & Low-Code Apps: Timeline component now supports real-time GQI query updates [ID_37372]
+#### Dashboards app & Low-Code Apps: Improved support for real-time GQI query updates in the timeline component [ID_37372]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
 
-The Timeline component now supports real-time GQI query updates.
+The timeline component can now display real-time updates for all GQI data sources and operators that support this, i.e. the *Get table parameter table by ID* and *Get view* GQI data sources, and the *Select* GQI operator. Data for such queries will be updated as soon as changes to the data are detected. To display these real-time updates, the *Update data* option of the component must be selected.
 
-If you want the Timeline component to automatically refresh the data when changes to that data are detected, enable the *Update data* option. By default, this option is disabled.
-
-> [!NOTE]
-> This feature will only work for queries using a data source that supports real-time updates.
+Previously, if this option was selected, data was only updated for the *Get table parameter table by ID* GQI data source, and this every 30 seconds.
 
 #### DataMiner Object Models: Enhanced performance of DomInstanceFieldDescriptor and DomInstanceValueFieldDescriptor in web forms [ID_37546]
 
@@ -76,23 +77,23 @@ In a web form, values in a `DomInstanceValueFieldDescriptor` or `DomInstanceFiel
 > - A `DomInstanceValueFieldDescriptor` that refers to another `DomInstance(Value)FieldDescriptor` will only display the name (or the ID if there is no name) of the DomInstance to avoid performance degradation when fetching instances.
 > - DisplayValue is limited to 70 characters to avoid performance degradation.
 
-#### Dashboards app & Low-Code Apps: Redesigned popup windows [ID_38278]
+#### Dashboards app & Low-Code Apps: Redesigned pop-up windows [ID_38278]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
 
-In the Dashboards app and the low-code apps, the popup windows have been redesigned.
+In the Dashboards app and the low-code apps, the pop-up windows have been redesigned.
 
-#### Dashboards app & Low-Code Apps - Template editor: All overrides now have a reset button [ID_38368]
+#### Monitoring app: Zooming and panning in visual overviews [ID_38395]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
 
-Up to now, when working with the template editor, only text overrides could be reset. From now on, all overrides have a dedicate reset button.
+In the Monitoring app, it is now possible to zoom and pan in visual overviews.
 
 #### DataMiner web apps updated to Angular 17 [ID_38468]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
 
-The DataMiner mobile apps that use Angular (e.g. Low-Code Apps, Dashboards, Monitoring, Ticketing, Jobs, Automation, etc.) now all use Angular 17.
+The DataMiner web apps that use Angular (e.g. Low-Code Apps, Dashboards, Monitoring, Ticketing, Jobs, Automation, etc.) now all use Angular 17.
 
 ### Fixes
 
@@ -134,7 +135,13 @@ When, in the template editor, you pressed ESCAPE while the event editor window w
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
 
-A number of enum column issues have been fixed in the template editor.
+A number of enum column issues have been fixed in the Template Editor:
+
+- Feeding a query row to a component now includes both display values and raw values. This change helps avoid confusion when selecting a row visible across multiple tables.
+
+- Template conditions for string columns now rely on the display values instead of the raw values, enhancing consistency and usability. This change improves interactions, especially when interacting with text inputs for discrete columns.
+
+- The QueryRowData in the URL now adopts a new format, encompassing display values.
 
 #### Dashboards app & Low-Code Apps - Line & area chart component: Trend data would not always be loaded in the same order [ID_38385]
 
@@ -207,6 +214,16 @@ When you had selected an item at the top of a grid component, the loader bar wou
 
 From now on, when the loader bar appears while an item is selected, it will always appear in front of the selected item.
 
+#### Low-Code Apps: Action editor issues [ID_38470]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+The following action editor issues have now been fixed:
+
+- The description would not update when switching from an open page action to a navigate action.
+- The *Open an app* action could no longer be configured.
+- The *Open context menu* action would only be validated when the mouse pointer was moved, and an error would occur when that same action was executed without having been configured correctly.
+
 #### Monitoring app: Incorrect alignment of element parameters [ID_38482]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
@@ -245,8 +262,44 @@ When you tried to cancel the deletion of a query used in a component, an error c
 
 When you exported table data with text fields that contained double quotes (") to a CSV file, and then tried to import that file into e.g. Microsoft Excel, the data in the file would not get imported correctly.
 
+#### Dashboards app & Low-Code Apps - GQI: Components with multiple queries would not get updated correctly [ID_38571]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+When a component had multiple queries assigned, in some cases, updates would not get processed correctly. For example, some rows would incorrectly be added twice.
+
 #### Dashboards app & Low-Code Apps: Form and Stepper components using DOM instances would show an error each time another instance was deleted in the same module [ID_38602]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
 
 *Form* and *Stepper* components using DOM instances would incorrectly show a `This instance no longer exists` error each time another DOM instance was deleted in the same module.
+
+#### Dashboards app & Low-Code Apps - Query builder: Updated query would not be saved [ID_38622]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+In some cases, the query builder would not save an updated query. This issue could especially occur when you had updated a query on which another query was based.
+
+#### Dashboards app & Low-Code Apps: Not possible to navigate within the Timeline component when a 'Nothing to show' message was being displayed [ID_38625]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+Up to now, it would not be possible to navigate within the Timeline component when a `Nothing to show` message was being displayed.
+
+#### Dashboards app & Low-Code Apps - Numeric input component: Component update would be triggered when opening the Layout tab [ID_38642]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+When, in edit mode, you opened the *Layout* tab of a *Numeric input* component, a component update would incorrect be triggered.
+
+#### Dashboards app & Low-Code Apps: Timeline component would not show the selection boxes to alter its dimensions [ID_38653]
+
+<!-- MR 10.3.0 [CU13] - FR 10.4.3 -->
+
+In some cases, a *Timeline* component would incorrectly not show the selection boxes to alter its dimensions.
+
+#### Dashboards app & Low-Code Apps: Table component would not allow to copy data in an insecure environment [ID_38660]
+
+<!-- MR 10.3.0 [CU13] - FR 10.4.3 -->
+
+When a dashboard or low-code app was used in an insecure environment (e.g. when using HTTP instead of HTTPS), a table component would not allow you to open the context menu used to copy data.

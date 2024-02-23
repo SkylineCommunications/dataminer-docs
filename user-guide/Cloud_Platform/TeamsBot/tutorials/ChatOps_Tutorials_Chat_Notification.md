@@ -25,7 +25,7 @@ Estimated duration: 15 minutes.
 
 ## Step 1: Deploy the ChatIntegration Examples package from the Catalog
 
-1. Browse to <https://catalog.dataminer.services/catalog/3129>.
+1. Browse to <https://catalog.dataminer.services/details/package/5860>.
 
    ![ChatIntegration Examples page in Catalog](~/user-guide/images/chatops_notification_01_001.png)
 

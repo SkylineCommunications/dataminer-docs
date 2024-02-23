@@ -251,6 +251,12 @@ The `ExecuteScriptOnDomInstanceActionSettings` object has been made available as
 > - When, in the DomDefinition, the `ScriptSettings` object is null, the `ScriptSettings` of the `ModuleSettings` will be used instead.
 > - In order for the `ModuleSettings` objects to be used, the objects in the `ModuleSettingsOverrides` of the `DomDefinition` have to be *null*. Just making them empty is not sufficient.
 
+#### DataMiner Object Models: New 'GetDifferences' method to compare two DOM instances [ID_38364]
+
+<!-- MR 10.5.0 - FR 10.4.2 -->
+
+The `DomInstanceCrudMeta` input object of a DOM CRUD script has a new `GetDifferences` method that allows you to see the changes made to a DOM instance. It will compare the previousVersion and the currentVersion of the instance in question, and return the list of differences found.
+
 ### Tools
 
 #### SLNetClientTest tool: New SLProtocol health statistics [ID_37617]
@@ -262,4 +268,4 @@ When, in the *SLNetClientTest* tool, you open the *Diagnostics > DMA* menu, you 
 | Command | Function |
 |---------|----------|
 | Health Stats (SLProtocol) > Stats      | Show the overall SLProtocol memory used by all elements. |
-| Health Stats (SLProtocol) > Details... | Show all details of a specific element.          |
+| Health Stats (SLProtocol) > Details... | Show all details of a specific element. |

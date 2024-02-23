@@ -8,6 +8,8 @@ uid: Troubleshooting_procedures
 
 - [Collecting data to report an issue to Technical Support](xref:Collecting_data_to_report_an_issue_to_TechSupport)
 
+- [Investigating dataminer.services connection issues](xref:Cloud_Connection_Issues)
+
 - [Investigating NATS issues](xref:Investigating_NATS_Issues)
 
 - [Investigating OpenSearch issues](xref:Investigating_OpenSearch_Issues)

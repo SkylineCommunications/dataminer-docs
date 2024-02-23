@@ -8,6 +8,8 @@ With the settings pane on the right side of the card, you can change the setting
 
 In the *Settings* pane, in the tab *Manual* > *Settings*, you can modify the settings like any other parameter in Cube. Just enter or select the new value, and click the green tick mark. If you want to modify several settings at the same time, you can also specify the new values and then click *Apply all* below the list of settings.
 
+![Manual settings](~/user-guide/images/SA_Manual_Settings.png)*Spectrum analyzer settings in DataMiner 10.4.1*
+
 In most spectrum elements, the following settings are available, though this depends on the protocol:
 
 - **Reference level**: The amplitude reference level. Different units can be selected for the value you enter, e.g. dBm, dBmV, mV.

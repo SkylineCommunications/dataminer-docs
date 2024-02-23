@@ -10,7 +10,7 @@ Adjusts parameter settings at runtime.
 uint agentId = 400;
 uint elementId = 200;
 uint[] elementDetails = new uint[] { agentId, elementId };
-string[] update1 = new string[]{ "1", "Main Device A", "10"};
+string[] update1 = new string[] { "1", "Main Device A", "10"};
 string[] update2 = new string[] { "1", "Backup Device A", "14" };
 object[] updates = new object[] { update1, update2 };
 

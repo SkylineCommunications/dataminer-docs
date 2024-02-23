@@ -12,7 +12,7 @@ You can find the SLXML log file in the folder *C:\Skyline DataMiner\Logging*.
 
 ## SLXML troubleshooting flowchart
 
-<div class="mermaid">
+```mermaid
 flowchart TD
 %% Define styles %%
 linkStyle default stroke:#cccccc
@@ -51,11 +51,11 @@ class CrashdumpDetected,D1,Ch1,Minidump,Ch3 Blue;
 class StartPage,LogCollector LightBlue;
 class Crash,Ch,Y1,ProcessCrashed LightGray;
 class Leak Gray;
-</div>
+```
 
 ## Are the conditions above met?
 
-<div class="mermaid">
+```mermaid
 flowchart TD
 %% Define styles %%
 linkStyle default stroke:#cccccc
@@ -87,11 +87,11 @@ class CrashdumpDetected,D1,Ch1,Minidump,Ch3 Blue;
 class StartPage,LogCollector LightBlue;
 class Crash,Ch,Y1,ProcessCrashed LightGray;
 class Leak Gray;
-</div>
+```
 
 ## Crash dump found at issue time?
 
-<div class="mermaid">
+```mermaid
 flowchart TD
 %% Define styles %%
 linkStyle default stroke:#cccccc
@@ -127,7 +127,7 @@ class CrashdumpDetected,D1,Ch1,Minidump,Ch3 Blue;
 class StartPage,LogCollector LightBlue;
 class Crash,Ch,Y1,ProcessCrashed LightGray;
 class Leak Gray;
-</div>
+```
 
 ## Memory leak
 

@@ -9,7 +9,7 @@ uid: Troubleshooting_Critical_Issues_Resources
 
 ## Insufficient resources troubleshooting flowchart
 
-<div class="mermaid">
+```mermaid
 flowchart TD
 %% Define styles %%
 linkStyle default stroke:#cccccc
@@ -48,11 +48,11 @@ class Automaticrestart,DataNotUpdated,ErrorAlarmConsole,Automaticrestart,Machine
 class UserActions,OSissues,ProcessCrash,ProcessDisappearance LightGray
 class CrashdumpDetected,MinidumpDetected,CheckWatchdog Blue;
 class Home,SLLogCollector,Investigation LightBlue;
-</div>
+```
 
 ### Insufficient resources
 
-<div class="mermaid">
+```mermaid
 flowchart TD
 %% Define styles %%
 linkStyle default stroke:#cccccc
@@ -92,4 +92,4 @@ class Prunsrv,Proc,FreeSpace,RAMup LightGray;
 class Automaticrestart,DataNotUpdated,ErrorAlarmConsole,MachineoutofResources LightBlue;
 class HDSpace,RAM,Process,Cassandra,DMProc Blue;
 class Home,SLLogCollector,Investigation LightBlue;
-</div>
+```

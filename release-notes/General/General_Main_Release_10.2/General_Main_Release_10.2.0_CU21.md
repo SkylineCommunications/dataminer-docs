@@ -128,6 +128,18 @@ In the *View* tab of a spectrum card, up to now, each marker listed in the *Mark
 
 Also, the three buttons will now show a tooltip when you hover over them.
 
+#### DataMiner Cube - Visual Overview: Page loading times are now logged in SLClient.txt [ID_38636] [ID_38694]
+
+<!-- MR 10.2.0 [CU21]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 [CU0] -->
+
+The time it takes to load a visual overview will now be logged in the *SLClient.txt* log file.
+
+The load time will be the time between page initialization and (a) the time at which the page is fully loaded or (b) the time at which the user closes the card.
+
+Page loads will time out after 2 minutes.
+
+Note that these *SLClient.txt* entries will also include the name of the page that was loaded.
+
 ### Fixes
 
 #### Problem when restarting DataMiner [ID_37112]
@@ -259,6 +271,12 @@ When you started a profile migration to an Elasticsearch/OpenSearch database whi
 
 > [!NOTE]
 > When, in the SLNetClientTest tool, you go to *Advanced > Migration*, all migrations in an error status will now have a red background.
+
+#### Web apps - Visual overview: Popup window would not display a hidden page when the visual overview only contained one non-hidden page [ID_38331]
+
+<!-- MR 10.2.0 [CU21] / 10.3.0 [CU12] / 10.4.0 [CU0] - - FR 10.4.3 [CU0] -->
+
+When, in a visual overview with one non-hidden page displayed in a web app, you tried to open a popup window linked to a page marked as "hidden", the popup window would incorrectly display the non-hidden page instead of the hidden page.
 
 #### DataMiner Cube - System Center: No longer possible to add additional databases when DMA was using STaaS [ID_38399]
 
