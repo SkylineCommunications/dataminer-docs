@@ -24,6 +24,8 @@ In general, the more active you are in the DataMiner Dojo community and the more
 
 - **Enrolling in and completing online training courses**: The DataMiner Community offers a broad selection of [free online training](https://community.dataminer.services/learning/courses/). Enrolling in and completing any of those courses will again generate points (between 10 to 50 points). Note that the community also offers a variety of free self-tests to evaluate your knowledge. The successful completion of those [quizzes](https://community.dataminer.services/learning/quizzes/) will also result in points.
 
+- **Participating in open or private on-site training sessions**: Attend DataMiner's on-site training sessions, typically spanning 2 to 5 days. Skyline regularly hosts [open training sessions](xref:Overview_Training_dedicated#open-training-sessions), welcoming individuals from different organizations. Private [on-site training sessions](xref:Overview_Training_dedicated#on-site-training-sessions) are held at your own facilities. Each day of in-person training attended earns you **250 points**.
+
 - **Formal certification**: Optionally, you can go for the paid [formal certification](xref:Overview_Training_certification) of some of your DataMiner skills. Upon obtaining your certification, you will be rewarded with extra points (500 to 1000 points).
 
 - **Contributing to the DataMiner documentation**: DataMiner Devops Professionals work with a community mindset, and sharing knowledge and information is all about empowering each other. Therefore, you are rewarded if you participate in and [contribute to the documentation](xref:contributing) of the DataMiner platform.

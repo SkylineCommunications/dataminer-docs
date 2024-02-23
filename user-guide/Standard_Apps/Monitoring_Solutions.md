@@ -20,4 +20,7 @@ uid: Monitoring_Solutions
   <div class="column">
     <a href="/user-guide/Standard_Apps/Monitoring_Solutions/Vecima_Remote_PHY_Monitor/Remote_PHY_Monitoring.html" title="Remote PHY Monitoring" target="_self"><img src="~/user-guide/images/Remote_PHY_Monitoring.svg" style="width:100%"></a>
   </div>  
+  <div class="column">
+    <a href="/user-guide/Standard_Apps/Monitoring_Solutions/Smart_Trap_Processor/Smart_Trap_Processor_Overview.html" title="Smart Trap Processor" target="_self"><img src="~/user-guide/images/Smart_Trap_Processor.svg" style="width:100%"></a>
+  </div>  
 </div>

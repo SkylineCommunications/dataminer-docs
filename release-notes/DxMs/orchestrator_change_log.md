@@ -4,6 +4,13 @@ uid: orchestrator_change_log
 
 # Orchestrator change log
 
+#### 22 February 2024 - Enhancement - Orchestrator 1.5.5 - Improved DxM deployment robustness [ID_38853] [ID_38862] [ID_38875]
+
+Robustness for DxM deployments has been improved by adding and improving retry mechanisms, improving the management of processes, and giving the service more time to shut down gracefully.
+
+> [!TIP]
+> To make use of all the enhancements, also install ArtifactDeployer 1.6.6.
+
 #### 30 January 2024 - Enhancement - Orchestrator 1.5.4 - Improved DxM status reporting [ID_38553]
 
 The Orchestrator DxM will now offload more information about the cloud endpoint.

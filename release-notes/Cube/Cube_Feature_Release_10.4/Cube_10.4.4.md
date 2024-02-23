@@ -38,6 +38,14 @@ Up to now, the memory used for all mobile visual overviews would remain allocate
 
 Also, the Cube session hosting these mobile visual overviews will now automatically terminate after 8 hours of inactivity.
 
+#### CubeConnection entry added to SLClient.txt will now include the DMA server version [ID_38796]
+
+<!-- MR 10.3.0 [CU13]/10.4.0 [CU1] - FR 10.4.4 -->
+
+Each time a Cube client has fully connected to a DataMiner Agent, a *CubeConnection* entry is added to the *SLClient.txt* log file of the DataMiner Agent in question.
+
+From now on, this *CubeConnection* entry will also include the DataMiner Agent server version.
+
 ### Fixes
 
 #### Error could occur in SLHelper when generating visual overviews to be displayed in web apps [ID_32584]
@@ -52,11 +60,13 @@ In some cases, an error could occur in SLHelper when it was generating visual ov
 
 In some cases, after you had logged in, DataMiner Cube could become unresponsive when the "Show the news section" setting was enabled.
 
-#### Data Display: Selection box configured to list all discreet values of a column parameter depending on the value from another parameter would incorrectly be empty [ID_38714]
+#### Problems with selection boxes in Automation and Data Display [ID_38714]
 
 <!-- MR 10.3.0 [CU13]/10.4.0 [CU1] - FR 10.4.4 -->
 
-When, in Data Display, a selection box was configured to list all discreet values of a column parameter depending on the value from another parameter, in some cases, that selection box would incorrectly be empty.
+In Automation, up to now, when no element context was provided, parameter value selection boxes populated with values from another parameter (i.e. so-called dependency values) would incorrectly be empty. From now on, when no element context is provided, selection boxes populated with values from another parameter will now be populated with discrete values configured in the protocol. Moreover, if no values can be found for a particular selection box, it will become editable, allowing you to enter values manually.
+
+Also, when you opened a parameter value selection box populated with values from another parameter in Data Display after having configured the same parameter by means of a set action in Automation, the parameter value selection box in Data Display could incorrectly be empty.
 
 #### Visual Overview: An embedded browser component would incorrectly be created when generating mobile visual overviews [ID_38721]
 

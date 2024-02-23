@@ -40,6 +40,17 @@ This indicator will show the current status of the client's WebSocket connection
 > [!NOTE]
 > When you disable the setting for a particular *Dropdown* component, clicking the dashboard's *Clear all* button will not affect that component. Its current selection will be left untouched.
 
+#### Dashboards app & Low-Code Apps - Dropdown, List & Tree components: New 'Select first item by default' setting [ID_38775]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+*Dropdown*, *List* and *Tree* components now have a new *Select first item by default* setting under *Initial selection*. When you enable the setting, the first value shown in the component will automatically be selected.
+
+> [!NOTE]
+>
+> - When you add a new *Dropdown*, *List* or *Tree* component, this setting will be enabled by default.
+> - If, in case of an existing *Dropdown*, *List* or *Tree* component, an existing selection setting is enabled under *Initial selection*, that existing setting will remain unchanged, and the new *Select first item by default* setting will not be enabled. However, if none of the existing settings under *Initial selection* are enabled, the new *Select first item by default* setting will automatically be enabled.
+
 ## Changes
 
 ### Enhancements
@@ -107,6 +118,12 @@ In all web apps (e.g. Low-Code Apps, Dashboards, Monitoring, etc.), Angular and 
 
 When viewing a visual overview on a web app, in some cases, the visual overview would incorrectly get updated while nothing had changed.
 
+#### Dashboards app & Low-Code Apps - Interactive Automation scripts: UTC values in datetime components would not be converted correctly [ID_38634]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+When, in a dashboard or a low-code app, you launched an interactive Automation script with datetime components containing values in UTC format, in some cases, those date/time values in UTC would not correctly be converted to the client's local time.
+
 #### Dashboards app & Low-Code Apps: Problem when making a backup of all dashboards and low-code apps during a DataMiner upgrade [ID_38640]
 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
@@ -149,6 +166,14 @@ When a panel component had the focus, selection boxes in the header bar would in
 
 When you duplicated a dashboard, the newly created duplicate would incorrectly not inherit the dashboard settings of the original dashboard.
 
+#### Dashboards app & Low-Code Apps: Selection in query filter of a column with discrete numeric values would be cleared when the data was fetched again [ID_38685]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+Up to now, in some cases, the selection made in the query filter of a column with discrete numeric values would incorrectly be cleared each time the data was fetched again.
+
+Also, up to now, when a column had both a discrete filter and another filter applied, that other filter would incorrectly be dropped the moment you selected a discrete value.
+
 #### Dashboards app: Issues with input controls on mobile devices [ID_38723]
 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
@@ -175,8 +200,26 @@ When, in a Maps component, you had manually configured line dimensions, in some 
 
 In some cases, it would not be possible to share a dashboard that contained queries with feeds in some of their nodes.
 
+#### Web apps: All clients that had a mobile visual overview open would receive updates when the visual overview was resized on one of them [ID_38812]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+When a mobile visual overview opened on multiple clients was resized on one of those clients, all clients that had this visual overview open would start to receive continuous updates although nothing had been changed.
+
 #### Dashboards app & Low-Code Apps: Web component would display scroll bars when all content fitted inside [ID_38821]
 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
 Up to now, a Web component would incorrectly display scroll bars when all content fitted inside.
+
+#### Dashboards app & Low-Code Apps: GQI updates would not be shown in the UI when using polling [ID_38832]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+Up to now, when a client was using polling, GQI updates would not be shown in the UI due to incorrect event processing.
+
+#### Dashboards app & Low-Code Apps: Components needed to be selected first before they could be deleted [ID_38859]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+Up to now, before you were able to delete a component by clicking the delete button at the bottom of the component, you first had to select that component. This meant that, for example, you had to click the delete button twice. From now on, clicking the delete button will automatically select the component.

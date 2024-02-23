@@ -701,18 +701,28 @@ a.backtotoplink:hover
 .row {
   display: flex;
   flex-wrap: wrap;
-  padding: 0 4px;
+  padding: 10px 4px;
 }
 
-/* Create four equal columns that sits next to each other */
+/* Create equal columns that sits next to each other */
 .column {
   flex: 25%;
   max-width: 25%;
-  padding: 0 11px;
+  padding: 0px 10px;
+}
+.columnhome {
+  flex: 20%;
+  max-width: 20%;
+  padding: 0px 10px;
 }
 
 .column img {
-  margin-top: 8px;
+  margin-top: 2px;
+  vertical-align: middle;
+  width: 100%;
+}
+.columnhome img {
+  margin-top: 2px;
   vertical-align: middle;
   width: 100%;
 }
@@ -720,23 +730,39 @@ a.backtotoplink:hover
 .column img:hover{
   background-color: #e7e7e7;
 }
+.columnhome img:hover{
+  background-color: #e7e7e7;
+}
 
 .column img:active{
   background-color: #d1d1d1;
 }
+.columnhome img:active{
+  background-color: #d1d1d1;
+}
 
-/* Responsive layout - makes a two column-layout instead of four columns */
+/* Responsive layout - makes a 2-column layout */
 @media screen and (max-width: 800px) {
   .column {
     -ms-flex: 50%;
     flex: 50%;
     max-width: 50%;
   }
+  .columnhome {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
 }
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+/* Responsive layout - makes the 2 columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
   .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+  .columnhome {
     -ms-flex: 100%;
     flex: 100%;
     max-width: 100%;
