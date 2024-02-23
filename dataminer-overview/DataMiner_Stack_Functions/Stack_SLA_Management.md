@@ -68,4 +68,8 @@ DataMiner monitors service compliance and quality at any point in the infrastruc
 Manage network elements on the network element management layer.
 
 > [!TIP]
-> For detailed information, see [Elements](xref:About_elements).
+> For more information:
+>
+> - User Guide: [Elements](xref:About_elements).
+> - Video about [creating and removing elements](https://www.youtube.com/watch?v=vS5AU4r611A&ab_channel=DataMinerbySkylineCommunications) ![Video](~/user-guide/images/video_Duo.png)
+> - Video about [understanding element's states and icons](https://www.youtube.com/watch?v=V9Qn3VoKOCs&ab_channel=DataMinerbySkylineCommunications) ![Video](~/user-guide/images/video_Duo.png)
