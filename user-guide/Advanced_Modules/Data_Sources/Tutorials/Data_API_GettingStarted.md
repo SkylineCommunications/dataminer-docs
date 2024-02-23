@@ -43,7 +43,7 @@ Navigate to <https://admin.dataminer.services/> and deploy the latest version of
 
 ## Step 2: Create a scripted connector
 
-1. To open the Data Sources module, navigate to `https://<dmaip>/data-sources/`.
+1. Open the Data Sources module in Cube (via apps > Data Sources) or use any modern browser to navigate to `https://<dmaip>/data-sources/. 
 
 1. Click *Create Data Source*.
 
