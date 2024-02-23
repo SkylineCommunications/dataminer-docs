@@ -41,9 +41,9 @@ Expected duration: 30 minutes.
 
 - [Step 8: Enhance the contact forms](#step-8-enhance-the-contact-forms)
 
-- [Step 9: Fixing the grid](#step-9-fixing-the-grid)
+- [Step 9: Enhance the appearance of the grid component](#step-9-enhance-the-appearance-of-the-grid-component)
 
-- [Step 10: Enhancing the table look](#step-10-enhancing-the-table-look)
+- [Step 10: Enhance the appearance of the table component](#step-10-enhance-the-appearance-of-the-table-component)
 
 ## Step 1: Access the low-code app
 
@@ -360,66 +360,112 @@ Once you publish the app and click the *Add contact* button, the panel should lo
 
 ![Panel published](~/user-guide/images/tutorial_app_design_panel_published.png)
 
-## Step 9: Fixing the grid
+## Step 9: Enhance the appearance of the grid component
 
-Try to not use too many colors in an app. The grid in our sample is too colorful, as every cell has a very bright color. Let's change this.
+Avoid using too many colors in one app. Currently, the grid component in our sample app is too colorful, with every cell having a very bright color. Let's change this.
 
-1. Edit the page again and click on the grid component
+1. In edit mode, select the grid component and navigate to *Layout > Item templates* in the configuration pane to the right.
 
-1. Open the **Layout** menu on the right and scroll to the bottom
+1. Click *Edit* to access the Template Editor.
 
-1. Click **Edit** on the Item template, this should open the template editor for the grid.
+1. Select the *Rectangle* layer in the side pane to the left.
 
-1. Select the background layer on the left, and change the background color to #D3D3DB, save the template
+1. In the *Setting* pane to the right, change the color of the rectangle to #D3D3DB.
 
-    ![Grid color](~/user-guide/images/tutorial_app_design_gridcolor.gif)
+1. Select *Save* in the lower right corner of the Template Editor.
 
-1. Next on the Layout tab under **Grid template**, click the checkbox above the columns and next to the rows. This will now auto size the columns and rows of the grid component.
+   ![Grid color](~/user-guide/images/tutorial_app_design_gridcolor.gif)
 
-    ![Grid auto size](~/user-guide/images/tutorial_app_design_grid_autosize.png)
+1. Navigate to *Layout > Advanced* and click the two ![Scaled to fit (scaling)](~/user-guide/images/Scaling.png) icons to auto-size the rows and columns.
 
-## Step 10: Enhancing the table look
+   This will now auto size the columns and rows of the grid component.
 
-Last but not least is improving the look and feel of our contact table at the bottom of the page.
+   ![Grid auto size](~/user-guide/images/tutorial_app_design_grid_autosize.png)
 
-1. Reduce the number of colums in the table by adding column filter and selecting just the columns that you need from the Contacts query and dropping them onto the filter icon on the table:
+## Step 10: Enhance the appearance of the table component
 
-    ![Table columns](~/user-guide/images/tutorial_app_design_table_columns.gif)
+Last but not least, you will improve the appearance of the table component displaying the different contacts at the bottom of the page.
 
-  >> [!IMPORTANT]
-  >> Never show guids in a table!
+### Reduce the number of columns
 
-1. We can also improve the look and feel of each column by editing the template for that column. To do that, select the table, go to **Layout** and under **Column Appearance** select the **Full Name** column
+Reduce the number of columns displayed in the table component by adding a filter:
 
-1. Click the '...' icon on the top right and select **Customize preset**
+1. Navigate to *Data > All available data > Queries* in the pane to the right, and select *Contacts*.
 
-1. Click on the gray background (not the checkered background) to see the **Dimensions** settings of the full canvas. Enter **46** as the height, you can leave 128 as the width. This will make our table rows a bit taller.
+1. Click and drag the different necessary columns onto the yellow filter icon in the table component.
 
-1. Click on the {Full name} text, under **Dimensions** set the Left padding to 35px, all the rest can stay at 5px
+![Table columns](~/user-guide/images/tutorial_app_design_table_columns.gif)
 
-1. To make the font in the first column bold: in the text field replace the {Full name} with the following HTML:
+> [!IMPORTANT]
+> Never show guides in a table!
 
-```html
-    <span style="font-weight:500">{Full name}</span>
-```
+### Edit the table template
 
-1. Under **Tools** on the left, click on Icon to select it
+You can improve the appearance of each column by editing the template for that column:
 
-1. Draw an icon on the left side of the {Full name} text
+1. Select the table component, and go to *Layout > Column appearance* in the pane to the right.
 
-1. Select an icon which looks like a person (under the properties section on the right)
+1. Select *Full name* from the *Select a column* dropdown list.
 
-1. Set the size of the icon to width: 16 px and height: 16 px
+1. Click the ellipsis button ("...") in the top-right corner and select *Customize preset*.
 
-1. Set the top padding to 15px and the left padding to 13px
+1. To modify the template settings, make sure no layers are selected by clicking the gray background.
 
-1. Save the template and publish
+   In the *Settings* pane to the right, you now see the *Dimensions* settings for the entire template.
 
-1.  The first column in the table should now look as follows:
+1. Change the height of the template to 46 to make your table rows taller.
 
-    ![table name column](~/user-guide/images/tutorial_app_design_table_name_column.png)
+1. Select the *Text* layer in the side pane to the left, and specify the following properties in the *Settings* pane:
 
-1.  Do the same thing for the columns e-mail and phone and choose appropriate icons
+   - *Border radius*: 5px
 
-If you have reached the end of this tutorial: Congratulations! Your end result should hopefully look something like this:
-    ![End result](~/user-guide/images/tutorial_app_design_end_result.png)
+   - *Horizontal padding*: 35px
+
+   - *Vertical padding*: 5px
+
+   > [!TIP]
+   > For more information about the different *Text* layer properties, see [Specifying layer properties](xref:Template_Editor#specifying-layer-properties).
+
+1. Make the font bold by entering the following HTML in the text box:
+
+   ```html
+       <span style="font-weight:500">{Full name}</span>
+   ```
+
+1. In the pane to the right, switch to the *Tools* tab, and click *Icon*.
+
+1. Add an icon to the left of the {Full name} text.
+
+   > [!TIP]
+   > For more information on adding an icon, see [Adding new layers](xref:Template_Editor#adding-new-layers).
+
+1. In the *Properties* section of the *Settings* pane, click *Icon* and choose a fitting new icon, e.g. an icon depicting a person.
+
+   ![Person icon](~/user-guide/images/Person_Icon.png)
+
+1. In the *Dimensions* section of the *Settings* pane, specify the following properties:
+
+   - *Width*: 16px
+
+   - *Height*: 16px
+
+   - *Top*: 15px
+
+   - *Left*: 13px
+
+   > [!TIP]
+   > For an overview of the different layer dimensions, see [Specifying layer dimensions](xref:Template_Editor#specifying-layer-dimensions).
+
+1. Click *Save* in the lower right corner.
+
+1. In the header bar of the low code app, click the ![Publish](~/user-guide/images/AppPublishIcon.png) button to publish the app.
+
+   The *Full name* column should now appear like this:
+
+   ![table name column](~/user-guide/images/tutorial_app_design_table_name_column.png)
+
+1. Repeat these steps for the *E-mail* and *Phone* columns, using different, appropriate icons.
+
+   Once you are finished, your final result should resemble this:
+
+   ![End result](~/user-guide/images/tutorial_app_design_end_result.png)
