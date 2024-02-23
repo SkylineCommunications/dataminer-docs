@@ -139,6 +139,24 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 
 For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
 
+#### GQI: Ad hoc data source now supports real-time updates [ID_38643]
+
+<!-- MR 10.5.0 - FR 10.4.4 -->
+
+The ad hoc data source now supports real-time updates.
+
+#### GQI now filters DOM string fields case-insensitively [ID_38645]
+
+<!-- MR 10.5.0 - FR 10.4.4 -->
+
+Up to now, GQI would filter DOM string fields case-sensitively. From now on, it will filter those fields case-insensitively.
+
+#### SLAnalytics: Enhanced management of DataMinerObjectDeleteMessages [ID_38734]
+
+<!-- MR 10.5.0 - FR 10.4.4 -->
+
+Because of a number of enhancements, overall memory usage has been reduced, especially with regard to the management of DataMinerObjectDeleteMessages.
+
 ### Fixes
 
 #### Databases: Problem when starting a migration from MySQL to Cassandra [ID_37589]
@@ -158,3 +176,15 @@ Resources would not always be released correctly, causing some resources to be u
 <!-- MR 10.5.0 - FR 10.4.2 -->
 
 When cleaning (i.e. resetting) a Cassandra database, in some cases, a `TypeInitializationException` could be thrown.
+
+#### STaaS: Problem when going into file offload mode [ID_38648]
+
+<!-- MR 10.5.0 - FR 10.4.4 -->
+
+When the system went into file offload mode, in some cases, a serialization issue could occur, causing the file offload mode to get stuck.
+
+#### Automation: Problem when sending an email to a user or group [ID_38844]
+
+<!-- MR 10.5.0 - FR 10.4.4 -->
+
+When an Automation script sent an email to a user or a user group using an *Email* action, in some cases, an error could be thrown.

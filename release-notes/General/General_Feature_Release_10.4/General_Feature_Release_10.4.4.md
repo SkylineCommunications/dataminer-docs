@@ -28,6 +28,15 @@ uid: General_Feature_Release_10.4.4
 
 ### Enhancements
 
+#### Circular correlation rules will now be blocked [ID_38301]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+A correlation rule will now be blocked when it was triggered due to a correlated alarm that depends on an alarm created by the rule in question.
+
+> [!NOTE]
+> ​This feature only works when the correlation rule and all alarms in question reside on the same DataMiner Agent.
+
 #### Automation: Late script control requests will now be ignored [ID_38409]
 
 <!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
@@ -43,11 +52,29 @@ Examples of new log entries:
 
 In the latter case, no error would be returned up to now.
 
+#### GQI: All GQI queries opened by the same user will now share one and the same connection [ID_38452]
+
+<!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
+
+Up to now, each GQI query would open a dedicated SLNet connection. From now on, all GQI queries launched by the same user will share one and the same connection.
+
 #### Service & Resource Management: Booking name validation now case-insensitive [ID_38556]
 
 <!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
 
 The validation of the name of a booking is now case-insensitive. This means that when the SRM Framework checks if there are future bookings with the same name, the casing is now no longer taken into account.
+
+#### GQI: Ad hoc data source now supports real-time updates [ID_38643]
+
+<!-- MR 10.5.0 - FR 10.4.4 -->
+
+The ad hoc data source now supports real-time updates.
+
+#### GQI now filters DOM string fields case-insensitively [ID_38645]
+
+<!-- MR 10.5.0 - FR 10.4.4 -->
+
+Up to now, GQI would filter DOM string fields case-sensitively. From now on, it will filter those fields case-insensitively.
 
 #### SLAnalytics - Behavioral anomaly detection: Suggestion event generation will now be limited [ID_38674]
 
@@ -78,6 +105,12 @@ From now on, the following exception will be thrown instead:
 
 SLLogCollector will now also collect the logs of the *CommunicationGateway* DxM.
 
+#### SLAnalytics: Enhanced management of DataMinerObjectDeleteMessages [ID_38734]
+
+<!-- MR 10.5.0 - FR 10.4.4 -->
+
+Because of a number of enhancements, overall memory usage has been reduced, especially with regard to the management of DataMinerObjectDeleteMessages.
+
 #### DxMs upgraded [ID_38743]
 
 <!-- MR 10.5.0 - FR 10.4.4 -->
@@ -91,13 +124,48 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 
 For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
 
-#### Security enhancements [ID_38756]
+#### Security enhancements [ID_38756] [ID_38650]
 
 <!-- RN 38756: MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+<!-- RN 38650: MR 10.4.0 [CU1] - FR 10.4.4 -->
 
 A number of security enhancements have been made.
 
+#### SLAnalytics - Trend predictions: Enhanced accuracy of the trend prediction mechanism [ID_38767]
+
+<!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
+
+Because of a number of enhancements, overall accuracy of the trend prediction mechanism has been improved.
+
+#### SLProtocol will no longer forward all changes to standalone parameters to SLElement [ID_38785]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+Up to now, SLProtocol would forward all changes to standalone parameters to SLElement, even when this was not strictly necessary. From now on, SLProtocol will only forward changes to standalone parameters to SLElement when the latter requires them.
+
+Also, when an SNMP parameter used a wildcard as OID, up to now, SLProtocol would forward the value of that wildcard to SLElement, which would then pass it on to the SLSNMPManager process. From now on, SLProtocol will forward those wildcard values directly to SLSNMPManager.
+
+#### Service & Resource Management: Past bookings will no longer be queried when creating a new booking or calculating available resources [ID_38798]
+
+<!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
+
+When creating or updating a booking, up to now, overlapping past bookings would be queried. This was necessary to validate the usage of contributing bookings that had already ended. In order to avoid the retrieval of those past bookings, the behavior of contributing bookings has now been altered.
+
+From now on, it will no longer be possible to reuse a contributing booking that has already ended in a new booking. However, updating an existing main booking that uses a contributing booking will still be possible.
+
+#### At installation the StorageModule service will now be configured to restart itself after each failure [ID_38843]
+
+<!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
+
+At installation, the StorageModule service will now be configured to restart itself after each failure.
+
 ### Fixes
+
+#### Problem when a redundancy group was set to an undefined state [ID_38401]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+When a redundancy group was set to an undefined state, a large number of empty connectivity contexts would be inserted into the *Connectivity* section of the *redundancy.xml* file. As a result, the correct connectivity contexts would be overwritten, causing the redundancy group to be stuck in the undefined state.
 
 #### Problem with file offload mechanism when main database is offline [ID_38542]
 
@@ -125,17 +193,39 @@ In some cases, SLProtocol could stop working due to an `Access violation reading
 
 When DOM instances were sorted, in some cases, an error could be thrown when the column by which you sorted contained null values.
 
+#### Problem when a DataMiner Cube client tried to connect using gRPC [ID_38606]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+When a DataMiner Cube client tried to connect to a DataMiner Agent using gRPC, in some rare cases, a disconnect could occur with the following error:
+
+`Some messages have probably gone lost. Waiting for X while X+20 already entered.`
+
 #### SLAnalytics - Automatic incident tracking: Problem when updating alarm groups [ID_38629]
 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
 Each time the focus score of an alarm is updated, incident tracking has to update its alarm groups. In some cases, incident tracking would incorrectly update its groups twice, causing the groups to be set to an undefined state.
 
+#### DaaS: The StorageModule service would incorrectly start up before the NATS service had started up [ID_38644]
+
+<!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
+
+When starting a DaaS system (DataMiner as a Service), in some cases, the StorageModule service would start up before the NATS service had started up. As a result, StorageModule would fail to connect to NATS and would shut down.
+
+The DaaS startup routine has now been improved to prevent issues like the one described above.
+
 #### Service & Resource Management: Booking corrupted after SRM_QuarantineHandling retrieved incorrect version of the booking [ID_38646]
 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
 Up to now, it could occur that the script *SRM_QuarantineHandling* retrieved a previous version of a booking instead of the latest, quarantined version, which could cause subsequent updates to corrupt the booking object. To prevent this, *SRM_QuarantineHandling* will now be called after a booking is saved.
+
+#### STaaS: Problem when going into file offload mode [ID_38648]
+
+<!-- MR 10.5.0 - FR 10.4.4 -->
+
+When the system went into file offload mode, in some cases, a serialization issue could occur, causing the file offload mode to get stuck.
 
 #### SLAnalytics - Behavioral anomaly detection: Problem when updating the anomaly configuration for a DVE element [ID_38661]
 
@@ -164,6 +254,12 @@ At DataMiner startup, in some cases, errors could incorrectly be thrown when at 
 
 In some cases, SLAnalytics could stop working while processing an element with an invalid alarm template.
 
+#### Paused element set back to the active state would no longer receive any alarm updates [ID_38744]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+When a paused element was set back to the "started" state, it would no longer receive any alarm updates until it was restarted.
+
 #### DataMiner Maps: KML layers would incorrectly always be displayed first in the legend [ID_38746]
 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
@@ -171,3 +267,15 @@ In some cases, SLAnalytics could stop working while processing an element with a
 When using either Google Maps or OpenStreetMap, KML layers would incorrectly always be displayed first in the layer legend, regardless of the order in which they were specified in the map configuration file.
 
 From now on, the legend will always show the layers in the order in which they were specified in the map configuration file.
+
+#### Failover: Memory leak when invoking PowerShell scripts [ID_38763]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+On Failover systems using a shared hostname, SLNet regularly executes PowerShell scripts. However, invoking those scripts would cause a memory leak. To prevent this, each PowerShell script will now be run in a separate process, which will be terminated at the end of the script.
+
+#### Automation: Problem when sending an email to a user or group [ID_38844]
+
+<!-- MR 10.5.0 - FR 10.4.4 -->
+
+When an Automation script sent an email to a user or a user group using an *Email* action, in some cases, an error could be thrown.

@@ -13,8 +13,7 @@ uid: Stack_DOM
 Automate complex business processes.
 
 > [!TIP]
->
-> *More info coming soon. Stay tuned!*
+> For detailed information, see [Process Automation framework](xref:PA_index).
 
 ## Object Modeling
 
@@ -37,5 +36,4 @@ The **DataMiner Object Model (DOM)** enables the quick modeling and management o
 Planning, documenting, or scheduling any maintenance activity.
 
 > [!TIP]
->
-> *More info coming soon. Stay tuned!*
+> For detailed information, see [The DataMiner Planned Maintenance (PLM) tool](xref:DataMiner_PLM_Tool_Overview).

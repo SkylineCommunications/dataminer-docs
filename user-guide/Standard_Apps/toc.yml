@@ -104,26 +104,6 @@ items:
           - name: Available parameters in I-DOCSIS
             topicUid: I-DOCSIS_parameters
             items:
-              - name: Network
-                topicUid: I-DOCSIS_parameters_network
-              - name: Market
-                topicUid: I-DOCSIS_parameters_market
-              - name: Hub
-                topicUid: I-DOCSIS_parameters_hub
-              - name: CCAP Core (CMTS)
-                topicUid: I-DOCSIS_parameters_ccap_core
-              - name: Linecard
-                topicUid: I-DOCSIS_parameters_linecard
-              - name: DS Port
-                topicUid: I-DOCSIS_parameters_ds_port
-              - name: US Port
-                topicUid: I-DOCSIS_parameters_us_port
-              - name: DS Service Group
-                topicUid: I-DOCSIS_parameters_ds_service_group
-              - name: US Service Group
-                topicUid: I-DOCSIS_parameters_us_service_group
-              - name: Service Group (Fiber Node)
-                topicUid: I-DOCSIS_parameters_service_group_fiber_node
               - name: Node Segment
                 topicUid: I-DOCSIS_parameters_node_segment
               - name: CM DS QAM CH
@@ -259,6 +239,19 @@ items:
             topicUid: Remote_PHY_Monitoring_Installation
           - name: Remote PHY Monitoring components
             topicUid: Remote_PHY_Monitoring_Components
+      - name: Smart Trap Processor
+        topicUid: Smart_Trap_Processor_Overview
+        items:
+          - name: Installing the Smart Trap Processor
+            topicUid: Installing_Smart_Trap_Processor
+          - name: Using the Smart Trap Processor
+            items:
+              - name: The Smart Trap Processor user interface
+                topicUid: The_SmartTrapProcessor_user_interface
+              - name: Configuring processing rules
+                topicUid: Processor_configuration
+              - name: Monitoring processed traps
+                topicUid: Monitoring_Processed_Traps
   - name: Process Automation framework
     topicUid: PA_index
     items:
