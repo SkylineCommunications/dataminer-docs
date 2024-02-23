@@ -26,6 +26,8 @@ In general, the more active you are in the DataMiner Dojo community and the more
 
 - **Participating in open or private on-site training sessions**: Attend DataMiner's on-site training sessions, typically spanning 2 to 5 days. Skyline regularly hosts [open training sessions](xref:Overview_Training_dedicated#open-training-sessions), welcoming individuals from different organizations. Private [on-site training sessions](xref:Overview_Training_dedicated#on-site-training-sessions) are held at your own facilities. Each day of in-person training attended earns you **250 points**.
 
+- **Actively participating in kata sessions**: By participating in a kata session and submitting the exercise related to that kata topic, you will generate 75 points. If you submit the exercises within a week after the release of the kata session, you will gain another 75 points. You can find the complete kata collection on [DataMiner Dojo](https://community.dataminer.services/learning-courses-tutorials/).
+
 - **Formal certification**: Optionally, you can go for the paid [formal certification](xref:Overview_Training_certification) of some of your DataMiner skills. Upon obtaining your certification, you will be rewarded with extra points (500 to 1000 points).
 
 - **Contributing to the DataMiner documentation**: DataMiner Devops Professionals work with a community mindset, and sharing knowledge and information is all about empowering each other. Therefore, you are rewarded if you participate in and [contribute to the documentation](xref:contributing) of the DataMiner platform.
