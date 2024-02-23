@@ -63,16 +63,20 @@ By default, NATS does **not** employ TLS encryption, leaving communication susce
       ```
       
 ## Enabling DataMiner to NATS node TLS commmunication
+> [!IMPORTANT]
+> TLS encryption over NATS is exclusively accessible starting from DataMiner 10.4.3 CU0 onwards when employing CA-Signed Certificates (Certificate Authority-Signed Certificates). It's crucial to be aware that the utilization of Self-Signed Certificates may result in DataMiner startup failures. 
+
+
+1. Install the certificate in the Windows Trusted Root Certification Authorities Certificate Store.
 
 > [!IMPORTANT]
 > Administrator privileges are required to perform this action.
-1. Install the certificate in the Windows Trusted Root Certification Authorities Certificate Store.
-   
-   2. Double-click on the certificate file. This action will open the Certificate dialog.
-   2. Click on the "Install Certificate..." button.
-   2. Choose to store the certificate in the "Local Machine", which requires administrative privileges.
-   2. Select "Place all certificates in the following store."
-   2. Click "Browse" and choose "Trusted Root Certification Authorities."
+
+1. Double-click on the certificate file. This action will open the Certificate dialog.
+1. Click on the "Install Certificate..." button.
+1. Choose to store the certificate in the "Local Machine", which requires administrative privileges.
+1. Select "Place all certificates in the following store."
+1. Click "Browse" and choose "Trusted Root Certification Authorities."
 
  
 1. Update the **nats-server.config** file to incorporate the TLS section.
