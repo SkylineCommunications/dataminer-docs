@@ -234,7 +234,7 @@ On the page of your GitHub fork (e.g. `https://github.com/YourGitHubHandle/Skyli
    You can press F12 on the static method to see the expected description format: `Missing tag '{0}' with expected value '{1}' for {2} '{3}'.`
 
    ```csharp
-   Error.InvalidTagForDateTime(null, null, null, "paramId"),
+   Error.InvalidTagForDateTime(null, null, null, "10"),
    ```
 
 1. Right-click the first line of the file, and select *Run Tests*.
@@ -270,7 +270,12 @@ On the page of your GitHub fork (e.g. `https://github.com/YourGitHubHandle/Skyli
    
       foreach (var param in context.EachParamWithValidId())
       {
-         // Early Return pattern. Only check number types.
+         var displayTag = param.Display;
+         
+         // Early return pattern. Only check when there is a Display tag.
+         if (displayTag == null) continue;
+
+         // Only check number types.
          if (!param.IsNumber()) continue;
     
          // Only check if there are options.
@@ -285,7 +290,8 @@ On the page of your GitHub fork (e.g. `https://github.com/YourGitHubHandle/Skyli
          var decimalsTag = param.Display?.Decimals;
          if (foundDateTime && decimalsTag?.Value != 8)
          {
-            results.Add(Error.InvalidTagForDateTime(this, param, decimalsTag, param.Id.RawValue));
+            var positionNode = decimalsTag ?? (IReadable)displayTag;
+            results.Add(Error.InvalidTagForDateTime(this, param, positionNode, param.Id.RawValue));
          }
       }
     
