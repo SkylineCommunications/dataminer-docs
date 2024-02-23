@@ -131,6 +131,12 @@ For detailed information about the changes included in those versions, refer to 
 
 A number of security enhancements have been made.
 
+#### SLAnalytics - Trend predictions: Enhanced accuracy of the trend prediction mechanism [ID_38767]
+
+<!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
+
+Because of a number of enhancements, overall accuracy of the trend prediction mechanism has been improved.
+
 #### SLProtocol will no longer forward all changes to standalone parameters to SLElement [ID_38785]
 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
