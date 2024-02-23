@@ -60,6 +60,14 @@ In some cases, an error could occur in SLHelper when it was generating visual ov
 
 In some cases, after you had logged in, DataMiner Cube could become unresponsive when the "Show the news section" setting was enabled.
 
+#### Visual Overview: Problem when linking a shape to a Data Display page of an element [ID_38665]
+
+<!-- MR 10.3.0 [CU13]/10.4.0 [CU1] - FR 10.4.4 -->
+
+When, in a visual overview of a service, a shape was linked to a Data Display page of an element within that service (using a *DataDisplayPage* data field), the alarm state color of the shape would not be updated correctly.
+
+The alarm state color of the shape would be initialized correctly, but when the state of the element changed, the alarm state color of the shape would incorrectly reflect the alarm state color of the element instead of that of the element's Data Display page to which the shape was linked.
+
 #### Problems with selection boxes in Automation and Data Display [ID_38714]
 
 <!-- MR 10.3.0 [CU13]/10.4.0 [CU1] - FR 10.4.4 -->
