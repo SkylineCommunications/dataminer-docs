@@ -25,9 +25,6 @@ Expected duration: 20 minutes.
 
 - [DataMiner Integration Studio](https://community.dataminer.services/exphub-dis/)
 
-> [!IMPORTANT]
-> The Validator CI step used in this tutorial, provided by Skyline DataMiner, only works for SDK-style projects targeting **.NET 4.8**.
-
 ## Step 1: Create your connector
 
 1. Open Visual Studio, and select *create a new project*.
@@ -133,7 +130,7 @@ on:
 
     - name: Archive Results
       if: success()
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: validateResults
         path: ${{ github.workspace }}/validateResults.json
@@ -169,7 +166,7 @@ Using GitHub Workflows with an Ubuntu runner. I have a json file in the workspac
 
 ## Step 4: Extend the workflow with CD, automatic deployment
 
-1. Navigate to Actions
+1. Navigate to *Actions*
 
 1. On the left, click on your *.NET* workflow
 
@@ -199,7 +196,7 @@ Using GitHub Workflows with an Ubuntu runner. I have a json file in the workspac
     runs-on: windows-latest
     needs: CI
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
   
     - name: Install Package Creation
       run: dotnet tool install -g Skyline.DataMiner.CICD.Tools.Packager
