@@ -70,11 +70,11 @@ By default, NATS does **not** employ TLS encryption, leaving communication susce
 
 1. Install the certificate in the Windows Trusted Root Certification Authorities Certificate Store, which **requires administrator privileges**.
 
-   2. Double-click on the certificate file. This action will open the Certificate dialog.
-   2. Click on the "Install Certificate..." button.
-   2. Choose to store the certificate in the "Local Machine", which requires administrative privileges.
-   2. Select "Place all certificates in the following store."
-   2. Click "Browse" and choose "Trusted Root Certification Authorities."
+   1. Double-click on the certificate file. This action will open the Certificate dialog.
+   1. Click on the "Install Certificate..." button.
+   1. Choose to store the certificate in the "Local Machine", which requires administrative privileges.
+   1. Select "Place all certificates in the following store."
+   1. Click "Browse" and choose "Trusted Root Certification Authorities."
  
 1. Update the **nats-server.config** file to incorporate the TLS section.
 
