@@ -98,6 +98,14 @@ Up to now, SLProtocol would forward all changes to standalone parameters to SLEl
 
 Also, when an SNMP parameter used a wildcard as OID, up to now, SLProtocol would forward the value of that wildcard to SLElement, which would then pass it on to the SLSNMPManager process. From now on, SLProtocol will forward those wildcard values directly to SLSNMPManager.
 
+#### Service & Resource Management: Past bookings will no longer be queried when creating a new booking or calculating available resources [ID_38798]
+
+<!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
+
+When creating or updating a booking, up to now, overlapping past bookings would be queried. This was necessary to validate the usage of contributing bookings that had already ended. In order to avoid the retrieval of those past bookings, the behavior of contributing bookings has now been altered.
+
+From now on, it will no longer be possible to reuse a contributing booking that has already ended in a new booking. However, updating an existing main booking that uses a contributing booking will still be possible.
+
 #### At installation the StorageModule service will now be configured to restart itself after each failure [ID_38843]
 
 <!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
