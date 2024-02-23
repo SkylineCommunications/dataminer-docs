@@ -22,6 +22,9 @@ To send a request to *UserDefinableApiEndpoint*, use a URL in the format `http(s
 > [!NOTE]
 > If your DataMiner System is connected to dataminer.services and the [Remote Access setting](xref:Controlling_remote_access) is enabled, you can also call your user-defined API through dataminer.services. To do so, replace the `{hostname}` part of the URL with the remote access URL of your system (see [Remote access](xref:Cloud_Remote_Access)).
 
+> [!WARNING]
+> Always use HTTPS when calling the User-Defined API through dataminer.services. If you would use the HTTP protocol the call might fail since the HTTP method will be set to GET by default and the request body will be cleared.
+
 Examples:
 
 ```
