@@ -188,3 +188,11 @@ When the system went into file offload mode, in some cases, a serialization issu
 <!-- MR 10.5.0 - FR 10.4.4 -->
 
 When an Automation script sent an email to a user or a user group using an *Email* action, in some cases, an error could be thrown.
+
+#### STaaS: Failing request would not be retried [ID_38874]
+
+<!-- MR 10.5.0 - FR 10.4.4 -->
+
+In some cases, when a request to the cloud returned the following error, the Azure SDK would incorrectly not perform any retries:
+
+`System.ArgumentOutOfRangeException: 'minValue' cannot be greater than maxValue.`
