@@ -105,6 +105,12 @@ From now on, the following exception will be thrown instead:
 
 SLLogCollector will now also collect the logs of the *CommunicationGateway* DxM.
 
+#### SLAnalytics: Enhanced management of DataMinerObjectDeleteMessages [ID_38734]
+
+<!-- MR 10.5.0 - FR 10.4.4 -->
+
+Because of a number of enhancements, overall memory usage has been reduced, especially with regard to the management of DataMinerObjectDeleteMessages.
+
 #### DxMs upgraded [ID_38743]
 
 <!-- MR 10.5.0 - FR 10.4.4 -->

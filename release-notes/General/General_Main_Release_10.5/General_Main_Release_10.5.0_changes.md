@@ -151,6 +151,12 @@ The ad hoc data source now supports real-time updates.
 
 Up to now, GQI would filter DOM string fields case-sensitively. From now on, it will filter those fields case-insensitively.
 
+#### SLAnalytics: Enhanced management of DataMinerObjectDeleteMessages [ID_38734]
+
+<!-- MR 10.5.0 - FR 10.4.4 -->
+
+Because of a number of enhancements, overall memory usage has been reduced, especially with regard to the management of DataMinerObjectDeleteMessages.
+
 ### Fixes
 
 #### Databases: Problem when starting a migration from MySQL to Cassandra [ID_37589]
