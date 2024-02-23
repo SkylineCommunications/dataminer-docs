@@ -9,7 +9,7 @@ This tutorial delves into the practical techniques to create intuitive, visually
 Expected duration: 30 minutes.
 
 > [!TIP]
-> See also: [Kata #19: Transform Low-Code Apps into visual delights](https://community.dataminer.services/courses/kata-19/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> See also: [Kata #19: Transform low-code apps into visual delights](https://community.dataminer.services/courses/kata-19/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 > [!NOTE]
 > This tutorial uses DataMiner version 10.4.3.
@@ -65,9 +65,11 @@ Expected duration: 30 minutes.
 
 ## Step 2: Customize the app color and icon
 
-The app's primary color results in low contrast between the text and the background color in the sidebar (visible when fully expanded). Additionally, the app does not have a customized, identifiable icon. These are the first things you will look into.
+The app's primary color results in low contrast between the text and the background color in the sidebar (visible when fully expanded).
 
 ![Low contrast](~/user-guide/images/tutorial_app_design_low_contrast.png)
+
+Additionally, the app does not have a customized, identifiable icon. These are the first two aspects you will look into.
 
 1. Click your user icon in the top-right corner of the app and select *Edit*.
 
@@ -98,9 +100,7 @@ The different pages currently still have generic icons, which makes them hard to
 
 1. Make sure the page is selected in the leftmost pane of the app editor.
 
-1. In the *icon* section in the top-left corner of the app, select an icon for the page.
-
-1. Select your icon of choice.
+1. In the *icon* section in the top-left corner of the app, select your icon of choice.
 
 1. Repeat these steps for the second page.
 
@@ -196,7 +196,7 @@ To ensure an aesthetically pleasing app, start with an appealing theme, which de
 
 ## Step 5: Apply the new theme
 
-Now that you have created a theme, you have to apply to your low-code app.
+Now that you have created a theme, you can apply it to your low-code app.
 
 1. Click the ![Waffle](~/user-guide/images/Waffle_icon_Dashboards.png) icon in the top-left corner, and select the *Best Practices in Low-Code App Design* application.
 
@@ -216,15 +216,17 @@ Now that you have created a theme, you have to apply to your low-code app.
 
    1. Select the component, and navigate to *Layout > Styles* in the configuration pane to the right.
 
-   1. Click the box indicating the currently used them, and select *Transparent*.
+   1. Click the box indicating the currently used theme, and select *Transparent*.
 
 1. Click the ![Publish](~/user-guide/images/AppPublishIcon.png) icon in the header bar.
 
-   As you can see, the app already looks better. For example, note the clearly distinguishable colors in the pie chart compared to the default themes.
+   As you can see, the app already looks better. For example, note the clearly distinguishable colors in the pie chart compared to the default theme.
 
    ![Theme applied](~/user-guide/images/tutorial_app_design_theme_applied.png)
 
 ## Step 6: Improve the page layout
+
+### Set the page to 'fit to view'
 
 To ensure the page adapts to different screen sizes and avoids scroll bars, set it to *Fit to view*:
 
@@ -233,6 +235,8 @@ To ensure the page adapts to different screen sizes and avoids scroll bars, set 
 1. Click the pencil icon, and navigate to *Settings > Page/Panel configuration* in the configuration pane to the right.
 
 1. Enable the *Fit to view* setting.
+
+### Rearrange and resize the components
 
 Rearrange and resize components on the page, following these guidelines:
 
@@ -250,7 +254,7 @@ Here is an example of a rearrangement for a visually appealing result:
 
 ## Step 7: Enhance the titles
 
-Titles can be more than simple text boxes. To make them a little more interesting, use a web component and incorporate HTML. In the app, a web component is already used to display the title. However, the HTML is rather basic.
+Titles can be more than simple text boxes. To make them a little more interesting, use a [web component](xref:DashboardWeb) and incorporate HTML. In the app, a web component is already used to display the title. However, the HTML is rather basic.
 
 1. Select the web component that displays the *Contacts* title, and go to the *Settings* tab in the pane to the right.
 
@@ -275,7 +279,7 @@ You may have noticed earlier, but the form used for creating new contacts also h
 
 ### Change the form layout
 
-1. In the *panels* section, select the pencil icon next to *Contact Form*.
+1. In the *panels* section to the left, select the pencil icon next to *Contact Form*.
 
 1. Go to the *Layout* tab in the pane to the right, and click the box indicating the currently used theme.
 
@@ -285,11 +289,14 @@ You may have noticed earlier, but the form used for creating new contacts also h
 
 1. Hover your mouse pointer over the *+Add* button component and select the trash icon.
 
-1. Extend the height of the form to the bottom and adjust the width to occupy most of the available space.
+1. Extend the height of the form all the way to the bottom, and adjust the width to occupy most of the available space.
 
 ### Add a new title
 
 1. Add a web component above the form.
+
+   > [!TIP]
+   > See also: [Configuring components](xref:Configuring_components)
 
 1. Go to the *Settings* tab in the pane to the right, and paste the following HTML in the *HTML* field:
 
@@ -304,7 +311,7 @@ Here you can <b style="color: rgb(0,9,54)">create</b> a new contact.</p></div>
 
 1. Click the "+" button in the top-right corner and label it "Save".
 
-1. In the *header bar* section, select *Icon* and type "Save" in the filter box.
+1. In the *header bar* section, select *Icon* and enter "Save" in the filter box.
 
 1. Select the *Save* icon.
 
@@ -322,11 +329,11 @@ Here you can <b style="color: rgb(0,9,54)">create</b> a new contact.</p></div>
 
       - *Which form?*: Form 1
 
-   1. Select *Upon completion* and add a *Close a panel* action.
+   1. Select *Upon completion*, and add a *Close a panel* action.
 
    1. In the *Panel* box, select "This panel(Contact Form)".
 
-   1. Select *Upon completion* and add a second *Execute component action*.
+   1. Select *Upon completion*, and add a second *Execute component action*.
 
    1. Specify the following details:
 
@@ -362,7 +369,7 @@ Once you publish the app and click the *Add contact* button, the panel should lo
 
 ## Step 9: Enhance the appearance of the grid component
 
-Avoid using too many colors in one app. Currently, the grid component in our sample app is too colorful, with every cell having a very bright color. Let's change this.
+Avoid using too many colors in one app. Currently, the grid component in our sample app is too colorful.
 
 1. In edit mode, select the grid component and navigate to *Layout > Item templates* in the configuration pane to the right.
 
@@ -378,13 +385,11 @@ Avoid using too many colors in one app. Currently, the grid component in our sam
 
 1. Navigate to *Layout > Advanced* and click the two ![Scaled to fit (scaling)](~/user-guide/images/Scaling.png) icons to auto-size the rows and columns.
 
-   This will now auto size the columns and rows of the grid component.
-
    ![Grid auto size](~/user-guide/images/tutorial_app_design_grid_autosize.png)
 
 ## Step 10: Enhance the appearance of the table component
 
-Last but not least, you will improve the appearance of the table component displaying the different contacts at the bottom of the page.
+Last but not least, you will improve the appearance of the table component displaying the different contacts.
 
 ### Reduce the number of columns
 
@@ -401,7 +406,7 @@ Reduce the number of columns displayed in the table component by adding a filter
 
 ### Edit the table template
 
-You can improve the appearance of each column by editing the template for that column:
+You can improve the appearance of each column by editing the template applied to that column:
 
 1. Select the table component, and go to *Layout > Column appearance* in the pane to the right.
 
@@ -432,12 +437,12 @@ You can improve the appearance of each column by editing the template for that c
        <span style="font-weight:500">{Full name}</span>
    ```
 
-1. In the pane to the right, switch to the *Tools* tab, and click *Icon*.
+1. In the side pane to the left, switch to the *Tools* tab, and click *Icon*.
 
-1. Add an icon to the left of the {Full name} text.
+1. Add an icon to the left of the `{Full name}` text.
 
    > [!TIP]
-   > For more information on adding an icon, see [Adding new layers](xref:Template_Editor#adding-new-layers).
+   > For more information about adding an icon, see [Adding new layers](xref:Template_Editor#adding-new-layers).
 
 1. In the *Properties* section of the *Settings* pane, click *Icon* and choose a fitting new icon, e.g. an icon depicting a person.
 
@@ -464,7 +469,7 @@ You can improve the appearance of each column by editing the template for that c
 
    ![table name column](~/user-guide/images/tutorial_app_design_table_name_column.png)
 
-1. Repeat these steps for the *E-mail* and *Phone* columns, using different, appropriate icons.
+1. Repeat these steps for the *E-mail* and *Phone* columns, using different appropriate icons.
 
    Once you are finished, your final result should resemble this:
 
