@@ -278,13 +278,8 @@ On the page of your GitHub fork (e.g. `https://github.com/YourGitHubHandle/Skyli
          // Only check number types.
          if (!param.IsNumber()) continue;
     
-         // Only check if there are options.
-         var allOptions = param.Measurement?.Type?.Options?.Value?.Split(';');
-         if (allOptions == null) continue;
-    
-         // Is there an option involving date or datetime?
-         List<string> possibleLowerCaseDateSyntax = new List<string>() { "date", "datetime", "datetime:minute" };
-         bool foundDateTime = Array.Exists(allOptions, option => possibleLowerCaseDateSyntax.Contains(option.ToLower()));
+         // Only check if date or datetime parameter
+         if (!param.IsDateTime()) continue;
     
          // Verify valid decimals.
          var decimalsTag = param.Display?.Decimals;
