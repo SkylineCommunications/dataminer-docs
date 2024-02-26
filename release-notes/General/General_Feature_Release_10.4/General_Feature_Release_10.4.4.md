@@ -279,3 +279,11 @@ On Failover systems using a shared hostname, SLNet regularly executes PowerShell
 <!-- MR 10.5.0 - FR 10.4.4 -->
 
 When an Automation script sent an email to a user or a user group using an *Email* action, in some cases, an error could be thrown.
+
+#### STaaS: Failing request would not be retried [ID_38874]
+
+<!-- MR 10.5.0 - FR 10.4.4 -->
+
+When a request to the cloud failed, in some cases, the Azure SDK would not be able to perform any retries and would throw the following exception:
+
+`System.ArgumentOutOfRangeException: 'minValue' cannot be greater than maxValue.`
