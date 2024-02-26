@@ -210,6 +210,8 @@ items:
     items:
       - name: Current issues
         items:
+          - name: IDP Discovery no longer working after upgrade
+            topicUid: KI_IDP_Discovery_not_working
           - name: Port exhaustion because of NATS reconnection attempts
             topicUid: KI_port_exhaustion_because_of_NATS_reconnect_attempts
           - name: One or multiple Analytics features fail to start
