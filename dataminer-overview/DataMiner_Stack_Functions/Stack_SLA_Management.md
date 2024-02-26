@@ -70,6 +70,6 @@ Manage network elements on the network element management layer.
 > [!TIP]
 > For more information:
 >
-> - User Guide: [Elements](xref:About_elements).
-> - Video about [creating and removing elements](https://www.youtube.com/watch?v=vS5AU4r611A&ab_channel=DataMinerbySkylineCommunications) ![Video](~/user-guide/images/video_Duo.png)
-> - Video about [understanding element's states and icons](https://www.youtube.com/watch?v=V9Qn3VoKOCs&ab_channel=DataMinerbySkylineCommunications) ![Video](~/user-guide/images/video_Duo.png)
+> - [Elements](xref:About_elements)
+> - [Create and remove an element in DataMiner](https://www.youtube.com/watch?v=vS5AU4r611A&ab_channel=DataMinerbySkylineCommunications) ![Video](~/user-guide/images/video_Duo.png)
+> - [Understanding Element's States and Icons](https://www.youtube.com/watch?v=V9Qn3VoKOCs&ab_channel=DataMinerbySkylineCommunications) ![Video](~/user-guide/images/video_Duo.png)
