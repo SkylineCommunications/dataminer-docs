@@ -85,5 +85,5 @@ Key benefits of DataMiner Integration Studio (DIS):
 >
 > - [DIS Expert Hub](https://community.dataminer.services/exphub-dis/)
 > - [Video: CI/CD using DIS, the Cloud Platform and GitHub actions](https://community.dataminer.services/video/ci-cd-using-dis-the-cloud-platform-and-github-actions/) ![Video](~/user-guide/images/video_Duo.png)
-> - See also: [Kata #1: DIS Validator](https://community.dataminer.services/video/kata1/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> - [Kata #1: DIS Validator](https://community.dataminer.services/video/kata1/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 > - [DIS User Guide](xref:Overall_concept_of_the_DataMiner_Integration_Studio)
