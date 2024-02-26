@@ -243,4 +243,5 @@ These apps run on HTML5, making them **accessible from anywhere**, including mob
 > - Kata session: [Kata #3: Build your first low-code app](https://community.dataminer.services/video/kata-3-build-your-first-low-code-app/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 > - Kata session: [Kata #7: Pages, panels and headers in a low-code app](https://community.dataminer.services/video/kata-7-pages-panels-and-headers-in-a-low-code-app/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 > - Kata session: [Kata #8: Actions and events in a low-code app](https://community.dataminer.services/video/kata-8-actions-and-events-in-a-low-code-app/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> - Kata session: [Kata #13: Control and feeds in a Low-Code App](https://community.dataminer.services/video/kata-13-control-and-feeds-in-a-low-code-app/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 > - User Guide: [DataMiner Low-Code Apps](xref:Application_framework)
