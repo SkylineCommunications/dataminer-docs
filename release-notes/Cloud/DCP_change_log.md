@@ -11,7 +11,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 #### 21 February 2024 - Fix - Improved catalog search performance [ID_38865]
 
-Searching for a catalog will return a result faster.
+The [Catalog](https://catalog.dataminer.services) search has been enhanced to yield results faster.
 
 #### 19 February 2024 - Enhancement - Custom commands executed with the DataMiner bot can request the dataminer.services user email [ID_38826]
 
