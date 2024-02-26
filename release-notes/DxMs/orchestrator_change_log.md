@@ -6,7 +6,7 @@ uid: orchestrator_change_log
 
 #### 26 February 2024 - Fix - Orchestrator 1.5.6 - Improved DxM deployment robustness [ID_38895]
 
-When a server's system language was set to another language than english, for example in german, the Orchestrator could not be installed and the installer would keep running indefinitely. This issue has now been fixed.
+The installation of the Orchestrator on servers with the system language set to a language other than English, such as German, would result in the installer running indefinitely. This issue has been resolved.
 
 #### 22 February 2024 - Enhancement - Orchestrator 1.5.5 - Improved DxM deployment robustness [ID_38853] [ID_38862] [ID_38875]
 
