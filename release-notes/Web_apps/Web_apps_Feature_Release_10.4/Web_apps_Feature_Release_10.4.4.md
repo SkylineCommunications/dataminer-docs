@@ -223,3 +223,9 @@ Up to now, when a client was using polling, GQI updates would not be shown in th
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
 Up to now, before you were able to delete a component by clicking the delete button at the bottom of the component, you first had to select that component. This meant that, for example, you had to click the delete button twice. From now on, clicking the delete button will automatically select the component.
+
+#### Dashboards app - Table component: Not possible to sort or filter Table component data in shared dashboards [ID_38876]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+When you had shared a dashboard containing table components, it would not be possible to filter or sort the data in those table components.
