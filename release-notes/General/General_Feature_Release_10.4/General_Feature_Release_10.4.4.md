@@ -105,6 +105,12 @@ From now on, the following exception will be thrown instead:
 
 SLLogCollector will now also collect the logs of the *CommunicationGateway* DxM.
 
+#### SLAnalytics: Enhanced management of DataMinerObjectDeleteMessages [ID_38734]
+
+<!-- MR 10.5.0 - FR 10.4.4 -->
+
+Because of a number of enhancements, overall memory usage has been reduced, especially with regard to the management of DataMinerObjectDeleteMessages.
+
 #### DxMs upgraded [ID_38743]
 
 <!-- MR 10.5.0 - FR 10.4.4 -->
@@ -118,11 +124,18 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 
 For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
 
-#### Security enhancements [ID_38756]
+#### Security enhancements [ID_38756] [ID_38650]
 
 <!-- RN 38756: MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+<!-- RN 38650: MR 10.4.0 [CU1] - FR 10.4.4 -->
 
 A number of security enhancements have been made.
+
+#### SLAnalytics - Trend predictions: Enhanced accuracy of the trend prediction mechanism [ID_38767]
+
+<!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
+
+Because of a number of enhancements, overall accuracy of the trend prediction mechanism has been improved.
 
 #### SLProtocol will no longer forward all changes to standalone parameters to SLElement [ID_38785]
 
@@ -131,6 +144,14 @@ A number of security enhancements have been made.
 Up to now, SLProtocol would forward all changes to standalone parameters to SLElement, even when this was not strictly necessary. From now on, SLProtocol will only forward changes to standalone parameters to SLElement when the latter requires them.
 
 Also, when an SNMP parameter used a wildcard as OID, up to now, SLProtocol would forward the value of that wildcard to SLElement, which would then pass it on to the SLSNMPManager process. From now on, SLProtocol will forward those wildcard values directly to SLSNMPManager.
+
+#### Service & Resource Management: Past bookings will no longer be queried when creating a new booking or calculating available resources [ID_38798]
+
+<!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
+
+When creating or updating a booking, up to now, overlapping past bookings would be queried. This was necessary to validate the usage of contributing bookings that had already ended. In order to avoid the retrieval of those past bookings, the behavior of contributing bookings has now been altered.
+
+From now on, it will no longer be possible to reuse a contributing booking that has already ended in a new booking. However, updating an existing main booking that uses a contributing booking will still be possible.
 
 #### At installation the StorageModule service will now be configured to restart itself after each failure [ID_38843]
 
@@ -142,7 +163,7 @@ At installation, the StorageModule service will now be configured to restart its
 
 #### Problem when a redundancy group was set to an undefined state [ID_38401]
 
-<!-- MR 10.5.0 - FR 10.4.4 -->
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
 When a redundancy group was set to an undefined state, a large number of empty connectivity contexts would be inserted into the *Connectivity* section of the *redundancy.xml* file. As a result, the correct connectivity contexts would be overwritten, causing the redundancy group to be stuck in the undefined state.
 
@@ -171,6 +192,14 @@ In some cases, SLProtocol could stop working due to an `Access violation reading
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
 When DOM instances were sorted, in some cases, an error could be thrown when the column by which you sorted contained null values.
+
+#### Problem when a DataMiner Cube client tried to connect using gRPC [ID_38606]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+When a DataMiner Cube client tried to connect to a DataMiner Agent using gRPC, in some rare cases, a disconnect could occur with the following error:
+
+`Some messages have probably gone lost. Waiting for X while X+20 already entered.`
 
 #### SLAnalytics - Automatic incident tracking: Problem when updating alarm groups [ID_38629]
 
@@ -239,8 +268,22 @@ When using either Google Maps or OpenStreetMap, KML layers would incorrectly alw
 
 From now on, the legend will always show the layers in the order in which they were specified in the map configuration file.
 
+#### Failover: Memory leak when invoking PowerShell scripts [ID_38763]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+On Failover systems using a shared hostname, SLNet regularly executes PowerShell scripts. However, invoking those scripts would cause a memory leak. To prevent this, each PowerShell script will now be run in a separate process, which will be terminated at the end of the script.
+
 #### Automation: Problem when sending an email to a user or group [ID_38844]
 
 <!-- MR 10.5.0 - FR 10.4.4 -->
 
 When an Automation script sent an email to a user or a user group using an *Email* action, in some cases, an error could be thrown.
+
+#### STaaS: Failing request would not be retried [ID_38874]
+
+<!-- MR 10.5.0 - FR 10.4.4 -->
+
+When a request to the cloud failed, in some cases, the Azure SDK would not be able to perform any retries and would throw the following exception:
+
+`System.ArgumentOutOfRangeException: 'minValue' cannot be greater than maxValue.`

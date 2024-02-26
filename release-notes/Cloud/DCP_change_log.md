@@ -9,6 +9,10 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 21 February 2024 - Fix - Improved catalog search performance [ID_38865]
+
+The [Catalog](https://catalog.dataminer.services) search has been enhanced to yield results faster.
+
 #### 19 February 2024 - Enhancement - Custom commands executed with the DataMiner bot can request the dataminer.services user email [ID_38826]
 
 It is now possible to know the executor of a custom command executed with the DataMiner bot in Microsoft Teams.

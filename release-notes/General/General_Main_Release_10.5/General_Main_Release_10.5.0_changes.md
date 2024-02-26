@@ -151,6 +151,12 @@ The ad hoc data source now supports real-time updates.
 
 Up to now, GQI would filter DOM string fields case-sensitively. From now on, it will filter those fields case-insensitively.
 
+#### SLAnalytics: Enhanced management of DataMinerObjectDeleteMessages [ID_38734]
+
+<!-- MR 10.5.0 - FR 10.4.4 -->
+
+Because of a number of enhancements, overall memory usage has been reduced, especially with regard to the management of DataMinerObjectDeleteMessages.
+
 ### Fixes
 
 #### Databases: Problem when starting a migration from MySQL to Cassandra [ID_37589]
@@ -171,12 +177,6 @@ Resources would not always be released correctly, causing some resources to be u
 
 When cleaning (i.e. resetting) a Cassandra database, in some cases, a `TypeInitializationException` could be thrown.
 
-#### Problem when a redundancy group was set to an undefined state [ID_38401]
-
-<!-- MR 10.5.0 - FR 10.4.4 -->
-
-When a redundancy group was set to an undefined state, a large number of empty connectivity contexts would be inserted into the *Connectivity* section of the *redundancy.xml* file. As a result, the correct connectivity contexts would be overwritten, causing the redundancy group to be stuck in the undefined state.
-
 #### STaaS: Problem when going into file offload mode [ID_38648]
 
 <!-- MR 10.5.0 - FR 10.4.4 -->
@@ -188,3 +188,11 @@ When the system went into file offload mode, in some cases, a serialization issu
 <!-- MR 10.5.0 - FR 10.4.4 -->
 
 When an Automation script sent an email to a user or a user group using an *Email* action, in some cases, an error could be thrown.
+
+#### STaaS: Failing request would not be retried [ID_38874]
+
+<!-- MR 10.5.0 - FR 10.4.4 -->
+
+When a request to the cloud failed, in some cases, the Azure SDK would not be able to perform any retries and would throw the following exception:
+
+`System.ArgumentOutOfRangeException: 'minValue' cannot be greater than maxValue.`
