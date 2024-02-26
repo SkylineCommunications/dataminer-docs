@@ -15,7 +15,7 @@ Expected duration: 20 minutes.
 
 ## Prerequisites
 
-- Runtime .NET SDK 6.0 and 8.0. [Download](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
+- Runtime .NET SDK 8.0. [Download](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
 
 - A staging DataMiner Agent that is accessible from your pipeline and that uses DataMiner version 10.3.0/10.3.2 or higher
 
