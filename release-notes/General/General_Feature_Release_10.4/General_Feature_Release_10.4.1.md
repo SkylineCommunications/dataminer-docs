@@ -62,7 +62,7 @@ bool ContainsKey(string key);
 
 Starting from DataMiner version 10.4.0, XML storage for profiles and resources is no longer supported. When you upgrade DataMiner to version 10.4.0, the `VerifyElasticStorageType` prerequisite will verify whether the system has successfully switched to an indexing database. If profiles and/or resources are still stored in XML files, this prerequisite will cause the upgrade to fail.
 
-See also: [Upgrade fails because of VerifyElasticStorageType.dll prerequisite](xref:KI_Upgrade_fails_VerifyElasticStorageType_prerequisite)
+See also: [Verify Elastic Storage Type](xref:Verify_Elastic_Storage_Type)
 
 #### Service & Resource Management: Storage type for ProfileManager and ResourceManager will now always be Elasticsearch/OpenSearch [ID_37877]
 
@@ -260,7 +260,7 @@ From now on, the buffer will have a dynamic size. This allow larger responses to
 
 When you upgrade DataMiner from a version older than 10.4.0 to a version from 10.4.0 onwards, the newly added *VerifyNoObsoleteApiDeployed* prerequisite will check whether the *APIDeployment* soft-launch flag is active and whether APIs are deployed. If so, the prerequisite will fail and return a link to the following page:
 
-- [Upgrade fails because of VerifyNoObsoleteApiDeployed.dll prerequisite](xref:KI_Upgrade_fails_VerifyNoObsoleteApiDeployed_prerequisite)
+- [Verify No Obsolete API Deployed](xref:Verify_No_Obsolete_API_Deployed)
 
 Also, the newly added *UninstallApiDeployment* upgrade action will remove everything related to the deprecated [API Deployment](xref:Overview_of_Soft_Launch_Options#apideployment) feature:
 
@@ -319,7 +319,7 @@ Ad hoc data sources and custom operators now support row metadata.
 
 When you upgrade DataMiner from a version older than 10.4.0 to a version from 10.4.0 onwards, the newly added prerequisite will check whether the DataMiner Agent still contains legacy reports or legacy dashboards. If so, the prerequisite will fail.
 
-See also: [Upgrade fails because of VerifyNoLegacyReportsDashboards.dll prerequisite](xref:KI_Upgrade_fails_VerifyNoLegacyReportsDashboards_prerequisite)
+See also: [Verify No Legacy Reports Dashboards](xref:Verify_No_Legacy_Reports_Dashboards)
 
 #### SLAnalytics: Enhanced error logging when retrieving trend data [ID_37931]
 
