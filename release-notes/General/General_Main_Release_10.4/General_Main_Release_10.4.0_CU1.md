@@ -42,6 +42,15 @@ In the latter case, no error would be returned up to now.
 
 Up to now, each GQI query would open a dedicated SLNet connection. From now on, all GQI queries launched by the same user will share one and the same connection.
 
+#### Enhanced performance when applying a table filter subscription containing wildcards and when applying a partial table cell subscription [ID_38555]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+Because of a number of enhancements, overall performance has increased
+
+- when applying an initial table filter subscription containing wildcards that needs to be handled by the SLElement process, and
+- when applying a subscription of a partial table cell.
+
 #### Service & Resource Management: Booking name validation now case-insensitive [ID_38556]
 
 <!-- MR 10.4.0 [CU1] - FR 10.4.4 -->

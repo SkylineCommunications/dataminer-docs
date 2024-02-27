@@ -21,6 +21,15 @@ A correlation rule will now be blocked when it was triggered due to a correlated
 > [!NOTE]
 > ​This feature only works when the correlation rule and all alarms in question reside on the same DataMiner Agent.
 
+#### Enhanced performance when applying a table filter subscription containing wildcards and when applying a partial table cell subscription [ID_38555]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+Because of a number of enhancements, overall performance has increased
+
+- when applying an initial table filter subscription containing wildcards that needs to be handled by the SLElement process, and
+- when applying a subscription of a partial table cell.
+
 #### GQI: Clearer error message will now be thrown when an ad hoc data source or custom operator cannot be instantiated [ID_38686]
 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
