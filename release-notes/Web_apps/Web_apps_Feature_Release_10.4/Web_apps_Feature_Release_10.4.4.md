@@ -258,6 +258,12 @@ Up to now, a Web component would incorrectly display scroll bars when all conten
 
 Up to now, when a client was using polling, GQI updates would not be shown in the UI due to incorrect event processing.
 
+#### Dashboards app & Low-Code Apps - Dropdown component: Feed would be empty after selecting a query, clearing the selection and selecting the same query again [ID_38845]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+When, in a *Dropdown* component, you selected a query, cleared the selection, and then selected the same query again, the feed would incorrectly be empty.
+
 #### Dashboards app & Low-Code Apps: Components needed to be selected first before they could be deleted [ID_38859]
 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
