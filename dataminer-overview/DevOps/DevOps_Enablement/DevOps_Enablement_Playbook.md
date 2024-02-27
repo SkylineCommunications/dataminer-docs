@@ -10,6 +10,8 @@ The transitions we face today are fundamentally different from those we have enc
 
 However, the focus is not solely on technology. As new generations of enabling technologies emerge, reshaping our business landscape, your strategic goal should be to cultivate an agile operation capable of swiftly adapting to change and unexpected challenges. DataMiner offers a technology-agnostic, cloud-enabled DevOps platform to monitor and orchestrate your business and technology automation workflows. The success of Digital Transformation relies heavily on the efficient utilization of this transformative technology to enhance your operations.
 
+![DevOps Enablement timeline](~/user-guide/images/DevOpsEnablement-Timeline.svg)
+
 In this context, the role of the internal DevOps team is more important than ever in leveraging DataMiner to meet each organization’s unique needs. No one understands the intricacies of your operation better than the DevOps team responsible for its daily execution. Investing in training for your engineering team is a winning strategy, ensuring rapid results and generates significant value. With their deep understanding of the challenges, the local team can immediately put the acquired DataMiner tools to good use.
 
 > [!TIP]
