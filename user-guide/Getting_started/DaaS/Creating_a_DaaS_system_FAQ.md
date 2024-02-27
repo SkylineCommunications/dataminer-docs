@@ -53,23 +53,23 @@ For more information, please contact <sales@skyline.be>.
 
 By default, a DaaS system has zone-redundant storage (ZRS). Geo-redundant storage (GRS) is optional at an additional subscription cost.
 
-See also [Data location and redundancy](xref:STaaS#data-location-and-redundancy)
+See also [Data location and redundancy](xref:STaaS#data-location-and-redundancy).
 
 ### What system redundancy policy does a DaaS system have?
 
 As of Q4 of 2024, a DaaS system will be able to use Swarming.
 
-See also [Swarming](xref:Swarming)
+See also [Swarming](xref:Swarming).
 
 ### What backup policy does a DaaS system have?
 
-For more information, see [Data resilience and backups](xref:STaaS#data-resilience-and-backups)
+For more information, see [Data resilience and backups](xref:STaaS#data-resilience-and-backups).
 
 ### Is it possible to make a local backup of all data?
 
 You can set up your own offload or "central" database in your DaaS system at no additional subscription cost. That database will contain an offline copy of all (or some of) the data in the general DMA databases.
 
-See also [Offload database](xref:Offload_database)
+See also [Offload database](xref:Offload_database).
 
 ### Is it possible to copy data from Azure and store it locally?
 
@@ -89,4 +89,4 @@ Additional query costs may be due when using e.g. Azure ExpressRoute or Amazon C
 
 User management on DaaS systems is similar to that on on-premises system. Although local accounts are available by default, user accounts are typically integrated by an identity provider.
 
-See also [User management](xref:User_management)
+See also [User management](xref:User_management).
