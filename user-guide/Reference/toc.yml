@@ -379,8 +379,14 @@ items:
         topicUid: Verify_Cluster_Events_Tool
       - name: VerifyClusterPorts.dmupgrade
         topicUid: VerifyClusterPortsdmupgrade
+      - name: Verify Elastic Storage Type
+        topicUid: Verify_Elastic_Storage_Type
       - name: Verify NATS is Running
         topicUid: VerifyNatsIsRunning
+      - name: Verify No Legacy Reports Dashboards
+        topicUid: Verify_No_Legacy_Reports_Dashboards
+      - name: Verify No Obsolete API Deployed
+        topicUid: Verify_No_Obsolete_API_Deployed
   - name: Methods of Procedure
     items:
       - name: Changing the default password for Cassandra
