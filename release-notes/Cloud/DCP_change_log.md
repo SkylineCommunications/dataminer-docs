@@ -9,6 +9,14 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### TBD - Enhancement - Connection status information on dataminer.services now refreshes automatically [ID_38933]
+
+The connection status information is now updated every minute on dataminer.services.
+
+#### TBD - Enhancement - Improved support for DataMiner as a Service systems on dataminer.services [ID_38932] 	
+
+​The dataminer.services page now has an improved UI when a DataMiner as a Service (DaaS) system is deploying with an estimated time left. When a DaaS system is unreachable, an email is provided to contact support. It is also possible to remove the system whilst it is still deploying.
+
 #### 21 February 2024 - Fix - Improved catalog search performance [ID_38865]
 
 The [Catalog](https://catalog.dataminer.services) search has been enhanced to yield results faster.
