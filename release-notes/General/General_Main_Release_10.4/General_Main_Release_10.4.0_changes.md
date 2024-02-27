@@ -787,7 +787,7 @@ When two DataMiner Agents try to connect via SLNet, from now on, this will no lo
 
 When you upgrade DataMiner from a version older than 10.4.0 to a version from 10.4.0 onwards, the newly added *VerifyNoObsoleteApiDeployed* prerequisite will check whether the *APIDeployment* soft-launch flag is active and whether APIs are deployed. If so, the prerequisite will fail and return a link to the following page:
 
-- [Upgrade fails because of VerifyNoObsoleteApiDeployed.dll prerequisite](xref:KI_Upgrade_fails_VerifyNoObsoleteApiDeployed_prerequisite)
+- [Verify No Obsolete API Deployed](xref:Verify_No_Obsolete_API_Deployed)
 
 Also, the newly added *UninstallApiDeployment* upgrade action will remove everything related to the deprecated [API Deployment](xref:Overview_of_Soft_Launch_Options#apideployment) feature:
 
@@ -827,7 +827,7 @@ Ad hoc data sources and custom operators now support row metadata.
 
 When you upgrade DataMiner from a version older than 10.4.0 to a version from 10.4.0 onwards, the newly added prerequisite will check whether the DataMiner Agent still contains legacy reports or legacy dashboards. If so, the prerequisite will fail.
 
-See also: [Upgrade fails because of VerifyNoLegacyReportsDashboards.dll prerequisite](xref:KI_Upgrade_fails_VerifyNoLegacyReportsDashboards_prerequisite)
+See also: [Verify No Legacy Reports Dashboards](xref:Verify_No_Legacy_Reports_Dashboards)
 
 #### Service & Resource Management: Enhanced performance when updating/applying profile instances [ID_37976]
 

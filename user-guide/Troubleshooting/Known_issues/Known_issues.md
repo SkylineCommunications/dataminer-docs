@@ -15,9 +15,6 @@ uid: Known_issues
 | [NATS configuration not updated after adding DMA to DMS](xref:KI_NATS_config_not_updated_after_adding_DMA) | All DataMiner versions | DataMiner 10.3.0 [CU12]/10.4.0 [CU0]/10.4.3 | January 24, 2024 |
 | [Downgrade fails because of VerifyNatsIsRunning.dll prerequisite](xref:KI_Downgrade_fails_VerifyNatsIsRunning_prerequisite) | From DataMiner 10.4.0/10.4.3 onwards | [Requires configuration](xref:KI_Downgrade_fails_VerifyNatsIsRunning_prerequisite) | January 23, 2024 |
 | [Failover Agents remain offline after upgrade](xref:KI_Failover_Agents_offline_after_upgrade) | From DataMiner 10.3.0 [CU9]/10.3.12 onwards | DataMiner 10.3.0 [CU11]/10.4.0/10.4.2 | January 22, 2024 |
-| [Upgrade fails because of VerifyNoLegacyReportsDashboards.dll prerequisite](xref:KI_Upgrade_fails_VerifyNoLegacyReportsDashboards_prerequisite) | From DataMiner 10.4.0 onwards | [Requires configuration](xref:KI_Upgrade_fails_VerifyNoLegacyReportsDashboards_prerequisite) | November 23, 2023 |
-| [Upgrade fails because of VerifyElasticStorageTypePrerequisite.dll prerequisite](xref:KI_Upgrade_fails_VerifyElasticStorageType_prerequisite) | From DataMiner 10.4.0 onwards | [Requires configuration](xref:KI_Upgrade_fails_VerifyElasticStorageType_prerequisite) | November 13, 2023 |
-| [Upgrade fails because of VerifyNoObsoleteApiDeployed.dll prerequisite](xref:KI_Upgrade_fails_VerifyNoObsoleteApiDeployed_prerequisite) | From DataMiner 10.4.0 onwards | [Requires configuration](xref:KI_Upgrade_fails_VerifyNoObsoleteApiDeployed_prerequisite) | November 9, 2023 |
 
 ## 10.3.x
 

@@ -11,4 +11,25 @@ From DataMiner 10.4.0 onwards, XML storage for profiles and resources is no long
 > [!TIP]
 > See also: [DataMiner functionality evolution and retirement](xref:Software_support_life_cycles#dataminer-functionality-evolution-and-retirement)
 
-If the *VerifyNoLegacyReportsDashboards* check fails, refer to [Upgrade fails because of VerifyElasticStorageType.dll prerequisite](xref:KI_Upgrade_fails_VerifyElasticStorageType_prerequisite).
+The *VerifyNoLegacyReportsDashboards* check will be **successful** if:
+
+- Both the Profile Manager and Resource Manager configurations indicate that the indexing database is configured.
+
+- The configuration file is either missing or indicates the use of XML storage, but the XML storage file is absent or contains no objects.
+
+  The XML storage files for Resource Manager and Profile Manager are located in the folders `C:\Skyline Dataminer\ResourceManager\Resources.xml` and `C:\Skyline Dataminer\ProfileManager\Profiles.xml`, respectively. After the upgrade, both managers will automatically start using the indexing database for storage.
+
+The *VerifyNoLegacyReportsDashboards* check will **fail** if:
+
+- The configuration file indicates the use of XML storage, but the XML storage file cannot be verified (because it is in use by another process or it is corrupt).
+
+- The configuration file indicates the use of XML storage, and the XML storage file contains objects.
+
+> [!NOTE]
+> More detailed information about the result of the prerequisite can be found in `Skyline DataMiner\Upgrades\Packages\<upgrade-package-name>\PreRequisite-Result-VerifyElasticStorageType.dll.json` after the upgrade.
+
+## Fixing a failing prerequisite check
+
+To fix a failing prerequisite check, you need to migrate the profiles and/or resources data to an indexing database and update the configuration. See [migrating profiles data](xref:Profile_migration_to_elastic) and [migrating resource data](xref:Resources_migration_to_elastic).
+
+In case the system does not have an indexing database configured, no migration will be possible. In this case, the Profile Manager and Resource Manager features are no longer usable. The data files `C:\Skyline Dataminer\ResourceManager\Resources.xml` and `C:\Skyline Dataminer\ProfileManager\Profiles.xml` will need to be removed while the system is offline in order to upgrade the system. After the upgrade, the Resource Manager and Profile Manager will no longer initialize.
