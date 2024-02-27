@@ -40,6 +40,14 @@ Performance has improved when you navigate to EPM cards through the Topology app
 
 The Generic DOCSIS CM Collector connector can now parse numeric values regardless of whether a comma or period is used as decimal separator.
 
+#### Generic DOCSIS CM Collector: Improved calculation method for FEC values [ID_38196]
+
+The calculation method for Forward Error Correction (FEC) values in the Generic CM Collector was enhanced. Previously, FEC values were calculated using averages of channel instances, leading to potential discrepancies, particularly in scenarios where Uncorrectable Packet Ratio (UER) was high while the Corrected Packet Ratio (CER) showed as zero. Now, instead of relying on averages, the system aggregates all counters to accurately determine the weight for the selected QAM channel.
+
+#### Huawei 5688-5800 CCAP Platform connector now aligns CCAP name with element name [ID_38197]
+
+​The Huawei 5688-5800 CCAP Platform connector previously used a custom system name for its EPM CCAP name, which could cause mapping issues when retrieving element data. Now, the connector uses the element name as the CCAP name, resolving problems in Visio when looking up element-specific data.
+
 ### Fixes
 
 #### Cisco CBR-8 CCAP Platform: Timeouts caused by use PartialSNMP option [ID_36609]
