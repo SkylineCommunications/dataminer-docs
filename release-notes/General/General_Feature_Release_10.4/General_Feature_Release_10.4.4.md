@@ -120,16 +120,16 @@ SLLogCollector will now also collect the logs of the *CommunicationGateway* DxM.
 
 Because of a number of enhancements, overall memory usage has been reduced, especially with regard to the management of DataMinerObjectDeleteMessages.
 
-#### DxMs upgraded [ID_38743]
+#### DxMs upgraded [ID_38743] [ID_38900]
 
-<!-- MR 10.5.0 - FR 10.4.4 -->
+<!-- RN 38743/38900: MR 10.5.0 - FR 10.4.4 -->
 
 The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
 
-- DataMiner ArtifactDeployer: version 1.6.5.14829
+- DataMiner ArtifactDeployer: version 1.6.6
 - DataMiner CoreGateway: version 2.14.4.15849
-- DataMiner Orchestrator: version 1.5.4.15828
-- DataMiner SupportAssistant: version 1.6.5.15809
+- DataMiner Orchestrator: version 1.5.6
+- DataMiner SupportAssistant: version 1.6.6
 
 For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
 
