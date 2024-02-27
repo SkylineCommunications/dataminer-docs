@@ -70,7 +70,7 @@ The following tools are the most useful:
 
 - [Skyline.DataMiner.CICD.Tools.Validator](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.Validator)
 
-  This tool allows validating a DataMiner protocol solution. This is the same validator as is included in [DataMiner Integration Studio (DIS)](xref:Overall_concept_of_the_DataMiner_Integration_Studio).
+  This tool allows the validation of a DataMiner protocol solution. This is the same validator as is included in [DataMiner Integration Studio (DIS)](xref:Overall_concept_of_the_DataMiner_Integration_Studio).
 
   > [!NOTE]
   > This tool requires that the projects of the protocol solution are SDK-style projects.
