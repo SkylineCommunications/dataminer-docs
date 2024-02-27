@@ -191,7 +191,7 @@ As a result, anomalies that report a trend change "from 0%/day to 0%/day", a lev
 
 #### SLProtocol will now always fetch element data page by page except on systems with a MySQL database [ID_38388]
 
-<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+<!-- MR 10.3.0 [CU12]/10.4.0 - FR 10.4.3 -->
 
 From now on, SLProtocol will always fetch element data page by page, except on systems with a MySQL database.
 
@@ -423,7 +423,7 @@ Up to now, when writing to the database or reading from the database failed, a r
 
 #### Protocols: IDisposable QActions would incorrectly not be disposed [ID_38605]
 
-<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+<!-- MR 10.3.0 [CU12]/10.4.0 - FR 10.4.3 -->
 
 When DataMiner was processing all QActions in order to call the `Dispose` method on the QActions that implement `IDisposable`, it would incorrectly no longer call the `Dispose` method on QActions that implement `IDisposable` after processing a QAction that did not implement `IDisposable`.
 

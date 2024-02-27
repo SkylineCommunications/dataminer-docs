@@ -896,6 +896,15 @@ From now on, a behavioral change will only be taken into account when the change
 
 As a result, anomalies that report a trend change "from 0%/day to 0%/day", a level shift from "0.1 to 0.1", etc. will no longer be taken into account.
 
+#### SLProtocol will now always fetch element data page by page except on systems with a MySQL database [ID_38388]
+
+<!-- MR 10.3.0 [CU12]/10.4.0 - FR 10.4.3 -->
+
+From now on, SLProtocol will always fetch element data page by page, except on systems with a MySQL database.
+
+On systems with a MySQL database, SLProtocol will continue to fetch element data by parameter ID.
+
+
 #### SLProtocol will no longer log messages related to duplicate keys at the default log levels [ID_38392] [ID_38517]
 
 <!-- MR 10.4.0 - FR 10.4.3 -->
@@ -1276,6 +1285,12 @@ In some cases, DataMiner Cube would not be able to reconnect to the server after
 When SLAnalytics was handling large amounts of traffic, in some cases, certain parameter value changes would incorrectly not get processed.
 
 Also, a large number of low-severity change points were generated without a label. Those have now been reduced.
+
+#### Protocols: IDisposable QActions would incorrectly not be disposed [ID_38605]
+
+<!-- MR 10.3.0 [CU12]/10.4.0 - FR 10.4.3 -->
+
+When DataMiner was processing all QActions in order to call the `Dispose` method on the QActions that implement `IDisposable`, it would incorrectly no longer call the `Dispose` method on QActions that implement `IDisposable` after processing a QAction that did not implement `IDisposable`.
 
 #### Problem when adding a DMA to a DMS [ID_38620]
 
