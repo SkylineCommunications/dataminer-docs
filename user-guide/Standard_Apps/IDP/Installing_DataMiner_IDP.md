@@ -7,7 +7,7 @@ uid: Installing_DataMiner_IDP
 IDP can be found on the [Catalog](https://catalog.dataminer.services/details/package/XXXX).
 
 > [!NOTE]
-> The minimum supported DataMiner version is **10.2.0 CU0**.
+> The minimum supported DataMiner version is **10.3.0 CU0**.
 
 > [!WARNING]
 > In case your DataMiner has a version lower than **10.4.0** or **10.4.3**, first install the [**IDP Migration**](https://community.dataminer.services/download/idp-migration/) package. See also: [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent)
