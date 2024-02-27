@@ -120,7 +120,7 @@ The *Dropdown*, *List* and *Tree* components will now behave as follows when lin
 
   In case of a *DropDown* component, for example, the feed can then (still) be used to dynamically populate a table, showing the result of the selected query from the dropdown.
 
-- When linked to one query, they will now list the resulting rows from that query instead of the query itself. The feed will then behave as a table. Making a selection will then
+- When linked to one query, they will now list the resulting rows from that query instead of the query itself. Making a selection will then
 
   - feed the selected row(s), and
   - feed any data that is linked to the selected row(s) as metadata (e.g. parameters, elements, indices).
