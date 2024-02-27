@@ -149,3 +149,11 @@ On Failover systems using a shared hostname, SLNet regularly executes PowerShell
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
 When an Automation script sent an email to a user or a user group using an *Email* action, in some cases, an error could be thrown.
+
+#### Problem with SLProtocol when it took longer than 15 minutes to execute a poll group [ID_38858]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+When an element used SNMP or HTTP communication, a notification would only be sent to SLWatchdog when a poll group finished executing. As a result, when it took longer than 15 minutes to execute a poll group, an SLProtocol run-time error alarm would be generated and subsequently cleared when the poll group finished.
+
+In order to avoid such run-time error alarms from being generated, a check will now be performed when a response is received, and an additional notification will be sent to SLWatchdog when the first notification to SLWatchdog was sent more than one minute ago.
