@@ -238,6 +238,14 @@ In some cases, it would not be possible to share a dashboard that contained quer
 
 When a mobile visual overview opened on multiple clients was resized on one of those clients, all clients that had this visual overview open would start to receive continuous updates although nothing had been changed.
 
+#### GQI sessions would not be closed when a client using polling had disconnected [ID_38816]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+Up to now, when a client using polling instead of WebSockets had disconnected, the GQI sessions would not get closed correctly.
+
+From now on, when a user closes a tab or a page containing a GQI query, the corresponding GQI session will be closed within 5 minutes.
+
 #### Dashboards app & Low-Code Apps: Web component would display scroll bars when all content fitted inside [ID_38821]
 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
