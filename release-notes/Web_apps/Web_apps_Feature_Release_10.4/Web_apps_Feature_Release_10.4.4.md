@@ -110,6 +110,38 @@ The persistent connection between the Web API and SLNet is used to cache active 
 
 In all web apps (e.g. Low-Code Apps, Dashboards, Monitoring, etc.), Angular and other dependencies have been upgraded.
 
+#### Dashboards app & Low-Code Apps: Dropdown, List & Tree components now support queries as data source [ID_38811]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+The *Dropdown*, *List* and *Tree* components will now behave as follows when linked to one or more queries:
+
+- When linked to multiple queries, they will continue to list the queries as data.
+
+  In case of a *DropDown* component, for example, the feed can then (still) be used to dynamically populate a table, showing the result of the selected query from the dropdown.
+
+- When linked to one query, they will now list the resulting rows from that query instead of the query itself. The feed will then behave as a table. Making a selection will then
+
+  - feed the selected row(s), and
+  - feed any data that is linked to the selected row(s) as metadata (e.g. parameters, elements, indices).
+
+Two new settings have also been added:
+
+- **Layout > Advanced > Display column**: Setting that allows you to specify the column that needs to be used to represent the row in the UI.
+
+  > [!NOTE]
+  > This setting is only visible when one query is linked and is used as data.
+
+- **Settings > Data retrieval > Update data**: When this setting is enabled, the values will be updated in real time (when the data supports this).
+
+  > [!NOTE]
+  > This setting is only visible when one query is linked and is used as data, or when the index data set is linked as data.
+
+The visualizations can now also be linked to a *Trigger* component and support two actions in low-code apps:
+
+- Fetch the data
+- Select an item (limited to DOM instances)
+
 ### Fixes
 
 #### Web apps: Visual overviews would incorrectly get updated while nothing had changed [ID_38362] [ID_38800]
