@@ -119,3 +119,15 @@ When you closed an app (e.g. Automation, Correlation, etc.), in some cases, Cube
 <!-- MR 10.3.0 [CU13]/10.4.0 [CU1] - FR 10.4.4 -->
 
 When you opened a trend graph, in some cases, Cube could leak memory.
+
+#### Memory leak when opening advanced search in sidebar [ID_38901]
+
+<!-- MR 10.3.0 [CU13]/10.4.0 [CU1] - FR 10.4.4 -->
+
+When you opened the advanced search in the sidebar, in some cases, Cube could leak memory.
+
+#### Memory leak when opening an embedded browser component [ID_38919]
+
+<!-- MR 10.3.0 [CU13]/10.4.0 [CU1] - FR 10.4.4 -->
+
+When you opened an embedded browser component, in some cases, Cube could leak memory.
