@@ -52,6 +52,10 @@ The calculation method for Forward Error Correction (FEC) values in the Generic 
 
 DOCSIS 3.1 polling support is available, displaying all instances of OFDM/OFDMA channels from both the CCAP and CM perspectives. At both Node Segment and Service Group levels, you can now view all associated 3.1 channels and corresponding KPIs using the *OFDM channels* dashboard and *OFDMA channels* dashboard. You can also view all instances of CM 3.1 channels using the *CM OFDM channels* dashboard and *CM OFDMA channels* dashboard.
 
+#### Skyline EPM Platform: Maps now use relational filtering [ID_38199]
+
+Maps now employ relational filtering to identify all available map entities. This ensures a precise alignment with the data presented on the EPM card, enhancing data reliability.
+
 #### Improved OOS reporting: Define thresholds per channel [ID_38425]
 
 Improvements have been made to *Out of Spec (OOS)* reporting by allowing different thresholds for the Rx Power Status, SNR Status, and Post-FEC Status parameters for the US QAM and DS QAM channel modulations. Previously, one threshold was used globally across all channels. Now, thresholds vary depending on the modulation of the associated cable modem (CM) channel. Parameters that used to have fixed thresholds have been replaced with a new table containing the different modulations along with their corresponding thresholds.
@@ -72,9 +76,17 @@ Because the *PartialSNMP* option was used together with the MultipleGetBulk meth
 
 It could occur that aggregation actions to get the value of the DOCSIS 1.x counter parameter were not executed correctly. This could cause the actual number of cable modems that reported their DOCSIS version as a version within the 1.x range to deviate from the displayed count.
 
+#### Percentage Utilization value above 100% [ID_38410]
+
+It could occur that values above 100% were shown for the utilization percentage in *DOCSIS US Ports* tables.
+
 #### Minimum threshold incorrectly set higher than maximum threshold [ID_38534]
 
 When adjusting values in the threshold table, it could occur that the minimum threshold was set higher than the maximum. To prevent this, a validation action was added, which automatically runs to check if the minimum threshold is lower than the maximum whenever a threshold value is adjusted.
+
+#### Customer configurations showed duplicate entries [ID_38558]
+
+With only service instances available, duplicate entries could occur in specific customer configurations. To prevent this, new sets of channels have been introduced, linked to the physical representation of interfaces within the CMTSs. With this enhancement, when viewing the channels associated with a node segment, only the physical channels will be displayed, accompanied by their respective KPIs calculated at that level.
 
 #### Percentage Ping Unreachable indicated value of 0% [ID_38768]
 
