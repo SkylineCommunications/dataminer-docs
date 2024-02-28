@@ -90,7 +90,7 @@ It could occur that aggregation actions to get the value of the DOCSIS 1.x count
 
 #### Percentage Utilization value above 100% [ID_38410]
 
-It could occur that values above 100% were shown for the utilization percentage in *DOCSIS US Ports* tables.
+It could occur that values above 100% were shown for the utilization percentage in *DOCSIS US Ports* tables. This problem has been resolved to ensure that utilization percentage values now consistently range between 0% and 100%.
 
 #### Minimum threshold incorrectly set higher than maximum threshold [ID_38534]
 
@@ -98,7 +98,7 @@ When adjusting values in the threshold table, it could occur that the minimum th
 
 #### Customer configurations showed duplicate entries [ID_38558]
 
-With only service instances available, duplicate entries could occur in specific customer configurations. To prevent this, new sets of channels have been introduced, linked to the physical representation of interfaces within the CMTSs. With this enhancement, when viewing the channels associated with a node segment, only the physical channels will be displayed, accompanied by their respective KPIs calculated at that level.
+With only Fiber Node channel instances available, duplicate entries could occur in specific customer configurations. To prevent this, new sets of channels have been introduced, linked to the physical representation of interfaces within the CMTSs. With this enhancement, when viewing the channels associated with a node segment, only the physical channels will be displayed, accompanied by their respective KPIs calculated at that level.
 
 #### Percentage Ping Unreachable indicated value of 0% [ID_38768]
 
