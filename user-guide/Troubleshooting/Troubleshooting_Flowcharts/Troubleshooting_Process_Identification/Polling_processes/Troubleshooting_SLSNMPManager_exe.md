@@ -12,7 +12,7 @@ SLSNMPManager controls all communication from and to devices using the SNMP prot
 
 ## SLSNMPManager troubleshooting flowchart
 
-<div class="mermaid">
+```mermaid
 %%{init: { 'theme': 'base', 'themeVariables': { 'edgeLabelBackground':'#fff', 'fontFamily' : 'Segoe UI'}}}%%
 flowchart TD
 Title["SLSNMPManager"]:::Start
@@ -44,7 +44,7 @@ classDef Solution fill:#58595B,stroke:#000070,stroke-width:0px, color:#FFFFFF
 classDef InfoAccClick fill:#999999,stroke:#000070,stroke-width:0px, color:#FFFFFF;
 classDef InfoAccNoClick fill:#DDDDDD,stroke:#000070,stroke-width:0px, color:#1E5179;
 classDef External fill:#9DDAF5,stroke:#000070,stroke-width:0px, color:#1E5179;
-</div>
+```
 
 > [!NOTE]
 >

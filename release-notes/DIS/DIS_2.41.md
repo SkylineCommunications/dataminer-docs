@@ -100,7 +100,7 @@ The following changes have been made to the Microsoft Visual Studio UI:
   - *Release Notes* (pointing to the release notes of the installed DIS version on <https://docs.dataminer.services/>)
   - *Getting Started* (pointing to [Installing and configuring the software](xref:Installing_and_configuring_the_software))
 
-  Also, the *More Information* link will now point to [DataMiner Integration Studio](xref:DIS).
+  Also, the *More Information* link will now point to [DataMiner Integration Studio](xref:Overall_concept_of_the_DataMiner_Integration_Studio).
 
 ### Fixes
 

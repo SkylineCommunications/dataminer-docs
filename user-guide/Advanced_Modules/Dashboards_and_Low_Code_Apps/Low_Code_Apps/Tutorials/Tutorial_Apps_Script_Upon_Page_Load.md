@@ -65,7 +65,7 @@ Expected duration: 10 minutes
 
    1. Click *Ok*.
 
-   ![Launch a script action](~/user-guide/images/LaunchAScriptAction.png)
+   ![Launch a script action](~/user-guide/images/LaunchAScriptAction.png)<br/>*DataMiner Low-Code Apps in DataMiner 10.3.12*
 
 1. Publish the app.
 

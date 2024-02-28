@@ -15,7 +15,7 @@ Minimum requirements are displayed in gray, default requirements in light blue, 
 > [!TIP]
 >
 > - To estimate how many nodes your DMS will need and what the specifications of these nodes should be, you can use the [DataMiner Node Calculator](https://community.dataminer.services/calculator/)
-> - For other information on requirements (e.g. client requirements), see [DataMiner System Requirements](https://community.dataminer.services/documentation/dataminer-system-requirements/).
+> - For all information on client requirements, see [DataMiner Client Requirements](xref:DataMiner_Client_Requirements).
 
 > [!NOTE]
 > While this is not recommended, you can run DataMiner, Cassandra, and OpenSearch on a single server. In that case, the hardware requirements in the diagram below need to be added up. For example, for RAM, you would need a minimum of 96 GB (32 GB for DataMiner, 32 GB for Cassandra, and 32 GB for OpenSearch).
@@ -73,6 +73,7 @@ In the table below, you can find which .NET (Framework) versions are required fo
 
 | DataMiner version       | Required .NET (Framework) versions        |
 |-------------------------|-------------------------------------------|
+| DataMiner 10.3.0 [CU12]/10.4.0/10.4.3 and higher<!--RN 37969--> | Microsoft .NET Framework 4.8 and .NET 8.0 |
 | DataMiner 10.3.9/10.4.0 and higher | Microsoft .NET Framework 4.8 and .NET 6.0 |
 | DataMiner 10.3.3 to 10.3.8<br>DataMiner 10.3.0 main release versions from 10.3.0 [CU3] onwards | Microsoft .NET Framework 4.8, .NET 5.0, and .NET 6.0 |
 | DataMiner 10.1.12 to 10.3.2/10.3.0 [CU2] | Microsoft .NET Framework 4.8 and .NET 5.0 |

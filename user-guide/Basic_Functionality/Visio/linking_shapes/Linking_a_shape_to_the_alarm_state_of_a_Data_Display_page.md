@@ -19,3 +19,8 @@ For example, if you specify the following shape data, the shape will have the co
 | ---------------- | ------ |
 | Element          | IRD 01 |
 | DataDisplayPage  | Audio  |
+
+> [!NOTE]
+>
+> - The displayed alarm level corresponds to the alarm level of the full Data Display page and does not consider service context.
+> - We recommend using the shape data field of type *DataDisplayPage* judiciously, as it creates a subscription on all parameters of the page.

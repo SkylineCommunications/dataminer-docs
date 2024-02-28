@@ -1,5 +1,6 @@
 ---
 uid: docs_dataminer_services
+_layout: landing
 ---
 
 # docs.dataminer.services
@@ -14,25 +15,25 @@ Can't find what you need here? Go to our [DataMiner Community website](https://c
 > Want to contribute? Go to [Contributing to the DataMiner docs](xref:contributing) for more info.
 
 <div class="row">
-  <div class="column">
+  <div class="columnhome">
     <a href="/dataminer-overview/Overview_index.html" title="DataMiner Overview" target="_self"><img src="images/Docs_DataminerOverview.svg" style="width:100%"></a>
   </div>
-  <div class="column">
+  <div class="columnhome">
     <a href="/user-guide/Getting_started/Getting_Started.html" title="User Guide" target="_self"><img src="images/Docs_UserGuide.svg" style="width:100%"></a>
   </div>  
-  <div class="column">
+  <div class="columnhome">
     <a href="/develop/index.html" title="Developer Documentation" target="_self"><img src="images/Docs_DeveloperDocumentation.svg" style="width:100%"></a>
   </div>
 </div>
 
 <div class="row">
-  <div class="column">
+  <div class="columnhome">
     <a href="/release-notes/DataMiner_General_RNs_index.html" title="DataMiner Release Notes" target="_self"><img src="images/Docs_DataminerReleaseNotes.svg" style="width:100%"></a>
   </div>
-  <div class="column">
+  <div class="columnhome">
     <a href="/tutorials/Tutorials.html" title="DataMiner Tutorials" target="_self"><img src="images/Docs_DataMinerTutorials.svg" style="width:100%"></a>
   </div>
-  <div class="column">
+  <div class="columnhome">
     <a href="https://docs.dataminer.services/connector/index.html" title="Connector Documentation" target="_self"><img src="images/Docs_ConnectorDocumentation.svg" style="width:100%"></a>
   </div>
 </div>

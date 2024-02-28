@@ -36,7 +36,7 @@ In the *SLNetClientTest* tool, the following new DOM-related features have been 
 
 #### Support for Azure Managed Instance for Apache Cassandra [ID_35830]
 
-<!-- MR 10.4.0 - FR 10.3.5 -->
+<!-- MR 10.4.0 (not included because deprecated) - FR 10.3.5 -->
 
 It is possible to use an Azure Managed Instance for Apache Cassandra as an alternative to a Cassandra cluster hosted on premises.
 

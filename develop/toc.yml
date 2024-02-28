@@ -3,7 +3,6 @@ items:
   topicUid: DevelopmentGuide
   items:
   - name: Connectors
-    topicUid: Introduction
     items:
     - name: Introduction
       topicUid: Introduction
@@ -15,6 +14,64 @@ items:
         items:
         - name: Protocol version semantics
           topicUid: ProtocolVersionSemantics
+        - name: Impact of protocol version changes
+          topicUid: ImpactOfProtocolVersionChanges
+          items:
+          - name: Protocol changes
+            topicUid: ChangeDCF
+            items:
+            - name: Change DCF
+              topicUid: ChangeDCF
+            - name: Change Unicode
+              topicUid: ChangeUnicode
+            - name: Change connection(s)
+              topicUid: ChangeConnections
+            - name: Change layout
+              topicUid: ChangeLayout
+            - name: Change exported protocol name (DVE)
+              topicUid: ChangeExportedProtocolName
+            - name: Change page name
+              topicUid: ChangePageName
+            - name: Change minimum required DataMiner version
+              topicUid: ChangeMinimumRequiredDMAVersion
+            - name: Change protocol name
+              topicUid: ChangeProtocolName
+          - name: Parameter changes
+            topicUid: ChangeParameterDescription
+            items:
+            - name: Change parameter description
+              topicUid: ChangeParameterDescription
+            - name: Change parameter ID
+              topicUid: ChangeParameterID
+            - name: Change parameter discreet and/or exception
+              topicUid: ChangeParameterDiscreetException
+            - name: Change parameter Interprete
+              topicUid: ChangeParameterInterprete
+            - name: Change parameter range
+              topicUid: ChangeParameterRange
+            - name: Change matrix parameter size
+              topicUid: ChangeMatrixParameterSize
+            - name: Change alarm monitoring and/or trending
+              topicUid: ChangeAlarmMonitoringTrending
+            - name: Remove parameter
+              topicUid: RemoveParameter
+          - name: Table parameter changes
+            topicUid: ChangePrimaryKey
+            items:
+            - name: Change primary key
+              topicUid: ChangePrimaryKey
+            - name: Change display key
+              topicUid: ChangeDisplayKey
+            - name: Replace displayColumn by naming 
+              topicUid: ReplaceDisplayColumnByNaming
+            - name: Change to partial table
+              topicUid: ChangeToPartialTable
+            - name: Change logger table
+              topicUid: ChangeLoggerTable
+            - name: Change column order
+              topicUid: ChangeColumnOrder
+            - name: Change displayed column order
+              topicUid: ChangeDisplayedColumnOrder
       - name: Logic
         topicUid: Logic
         items:
@@ -146,7 +203,6 @@ items:
         - name: Examples
           topicUid: LogicExamples
         - name: Use cases
-          topicUid: LogicUseCase1
           items:
           - name: Internal flow - concept
             topicUid: LogicUseCase1
@@ -247,7 +303,6 @@ items:
       - name: Custom table context menu
         topicUid: UIComponentsCustomTableContextMenu
       - name: Matrix
-        topicUid: UIComponentsMatrix
         items:
           - name: Standard matrix
             topicUid: UIComponentsMatrix
@@ -565,7 +620,6 @@ items:
     - name: Questions & Answers
       topicUid: QuestionsAndAnswers
     - name: How-tos
-      topicUid: How_to_aggregate_alarm_severities
       items:
       - name: How to aggregate alarm severities
         topicUid: How_to_aggregate_alarm_severities
@@ -594,7 +648,6 @@ items:
       - name: How to use the element log in connector integrations
         topicUid: How_to_use_the_element_log_in_connector_integrations
     - name: Troubleshooting
-      topicUid: Investigating_a_protocol_thread_RTE
       items:
       - name: Investigating a protocol thread RTE
         topicUid: Investigating_a_protocol_thread_RTE
@@ -614,7 +667,6 @@ items:
         - name: Identifying the source of an exception
           topicUid: Identifying_the_source_of_an_exception
       - name: Use cases
-        topicUid: Debugging_connectors_Element_connections
         items:
         - name: Debugging connectors - element connections
           topicUid: Debugging_connectors_Element_connections
@@ -633,6 +685,8 @@ items:
   - name: Automation scripts
     topicUid: AutomationDevGuideIndex
     items:
+    - name: Getting started with Automation script development
+      topicUid: GettingStartedWithAutomationScriptDevelopment
     - name: Actions
       topicUid:  AutomationActions
       items:
@@ -683,7 +737,6 @@ items:
     - name: UIBlockType overview
       topicUid:  UIBlockTypesOverview
     - name: How-tos
-      topicUid: How_to_make_your_automation_scripts_debug_ready
       items:
       - name: How to make your Automation scripts debug ready
         topicUid: How_to_make_your_automation_scripts_debug_ready
@@ -692,7 +745,6 @@ items:
       - name: Implementing interactive Automation scripts in regression tests (best practices)
         topicUid: BP_Implementing_IAS_in_Regression_Tests
   - name: Class Library
-    topicUid: ClassLibraryIntroduction
     items:
     - name: Class library introduction
       topicUid: ClassLibraryIntroduction
@@ -723,11 +775,12 @@ items:
       topicUid: Scheduler_NuGet_Package
     - name: Examples
       topicUid:  ClassLibraryExamples
+  - name: Getting started as a System Developer
+    topicUid: GettingStartedAsSysDev
 - name: API documentation
   topicUid: ApiDocumentation
   items:
   - name: Namespaces
-    topicUid: Skyline.DataMiner.Scripting
     items:
     - name: Skyline.DataMiner.Scripting
       topicUid: Skyline.DataMiner.Scripting
@@ -748,7 +801,6 @@ items:
     - name: Tamir.SharpSsh
       topicUid: Tamir.SharpSsh
   - name: Notify types
-    topicUid: NTNotifyTypesOverview
     items:
     - name: NT notify types
       topicUid: NTNotifyTypesOverview
@@ -1011,14 +1063,12 @@ items:
       - name: DMS_GET_ELEMENTS_USING_PROTOCOL
         topicUid: DMS_GET_ELEMENTS_USING_PROTOCOL
   - name: Error codes
-    topicUid: DataMinerErrorCodes
     items:
     - name: DataMiner error codes
       topicUid: DataMinerErrorCodes
     - name: Error codes table
       topicUid: ErrorCodeTable
     - name: Extension modules error codes
-      topicUid: CommunicationGateway_ErrorCodes
       items:
       - name: CommunicationGateway error codes
         topicUid: CommunicationGateway_ErrorCodes
@@ -3558,7 +3608,6 @@ items:
     topicUid: WS_v1
     items:
       - name: Using the Web Services (v1)
-        topicUid: Using_the_Web_Services_v1
         items:
           - name: Using the Web Services (v1)
             topicUid: Using_the_Web_Services_v1
@@ -5132,7 +5181,6 @@ items:
   - name: Platform-independent CI/CD
     topicUid: Platform_independent_CICD
   - name: CI/CD using command line
-    topicUid: CICD_Command_Line_Examples
     items:
     - name: Command line examples
       topicUid: CICD_Command_Line_Examples
@@ -5157,24 +5205,20 @@ items:
       - name: Reusable workflow SRM function
         topicUid: github_reusable_workflows_srm_function_master_workflow
   - name: CI/CD using GitLab
-    topicUid: CICD_GitLab_Examples
     items:
     - name: GitLab examples
       topicUid: CICD_GitLab_Examples
     - name: Docker deployment action
       topicUid: Docker_deployment_action
   - name: CI/CD using Jenkins
-    topicUid: CICD_Jenkins_Examples
     items:
     - name: Jenkins examples
       topicUid: CICD_Jenkins_Examples
   - name: CI/CD using Azure DevOps
-    topicUid: CICD_Azure_DevOps_Examples
     items:
     - name: Azure DevOps examples
       topicUid: CICD_Azure_DevOps_Examples
   - name: CI/CD using Concourse
-    topicUid: CICD_Concourse_Examples
     items:
     - name: Concourse examples
       topicUid: CICD_Concourse_Examples
@@ -5184,19 +5228,16 @@ items:
     - name: Publishing artifacts to the DataMiner Catalog
       topicUid: publish_to_catalog
     - name: CI/CD Skyline Communications GitHub
-      topicUid: migration_from_gerrit_to_github
       items:
         - name: Migration From Gerrit to GitHub
           topicUid: migration_from_gerrit_to_github
         - name: GitHub Guidelines
           topicUid: Using_GitHub_for_CICD
     - name: CI/CD Skyline Communications Gerrit and Jenkins
-      topicUid: High-level_overview
       items:
       - name: High-level overview
         topicUid: High-level_overview
       - name: Components
-        topicUid: TOOSLCSERepositoryManager
         items:
         - name: SLC SE Repository Manager
           topicUid: TOOSLCSERepositoryManager
@@ -5226,41 +5267,34 @@ items:
         - name: SonarQube
           topicUid: SonarQube
       - name: Protocol development with CI/CD Pipeline
-        topicUid: Git_protocol_repositories
         items:
         - name: Git protocol repositories
           topicUid: Git_protocol_repositories
         - name: Pipeline stages for protocols
           topicUid: Pipeline_stages_for_protocols
       - name: Function development with CI/CD pipeline
-        topicUid: Pipeline_stages_for_functions
         items:
         - name: Pipeline stages for functions
           topicUid: Pipeline_stages_for_functions
       - name: Automation script development with CI/CD pipeline
-        topicUid: Automation_scripts_as_a_Visual_Studio_solution
         items:
         - name: Automation scripts as a Visual Studio solution
           topicUid: Automation_scripts_as_a_Visual_Studio_solution
         - name: Pipeline stages for Automation scripts
           topicUid: Pipeline_stages_for_Automation_scripts
       - name: Visual overview development with CI/CD pipeline
-        topicUid: Pipeline_stages_for_visual_overviews
         items:
         - name: Pipeline stages for visual overviews
           topicUid: Pipeline_stages_for_visual_overviews
       - name: Dashboard Development with CI/CD pipeline
-        topicUid: Pipeline_stages_for_dashboards
         items:
         - name: Pipeline stages for dashboards
           topicUid: Pipeline_stages_for_dashboards
       - name: Custom solution development with CI/CD pipeline
-        topicUid: Pipeline_stages_for_custom_solutions
         items:
         - name: Pipeline stages for custom solutions
           topicUid: Pipeline_stages_for_custom_solutions
       - name: Install package development with CICD pipeline
-        topicUid: Creating_a_repository_for_an_install_package
         items:
         - name: Creating a repository for an install package
           topicUid: Creating_a_repository_for_an_install_package
@@ -5272,7 +5306,6 @@ items:
   topicUid: TOOLS
   items:
     - name: DataMiner Integration Studio (DIS)
-      topicUid: DIS
       items:
         - name: Introduction
           topicUid: Overall_concept_of_the_DataMiner_Integration_Studio
@@ -5351,12 +5384,13 @@ items:
             - name: Debugging an Automation script
               topicUid: Debugging_an_Automation_script
         - name: Tutorials
-          topicUid: DisTutorials_MibBrowser
           items:
           - name: Exploring the DIS MIB browser
             topicUid: DisTutorials_MibBrowser
           - name: DIS Validator and GitHub DevOps
             topicUid: DisTutorials_DevOpsGitHubValidator
+          - name: Contributing to Validator code
+            topicUid: DisTutorials_ValidatorContributions
         - name: Troubleshooting
           topicUid: Troubleshooting
           items:
@@ -5592,3 +5626,8 @@ items:
       topicUid: Configure_DataMiner_using_Ansible
     - name: Grafana
       topicUid: Grafana_plugin
+- name: Best practices
+  topicUid: Best_practices
+  items:
+    - name: Unit testing
+      topicUid: Unit_testing

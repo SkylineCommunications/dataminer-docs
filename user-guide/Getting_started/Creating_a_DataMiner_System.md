@@ -13,6 +13,3 @@ To create a DataMiner System (DMS), there are different possibilities:
   - You can make use of [Storage as a Service (STaaS)](xref:STaaS). You connect your DataMiner System to a scalable, easy-to-use, cloud-native storage platform hosted by Skyline.
 
   - You can host the storage nodes yourself. This means you will need to take care of [configuring and maintaining the databases](xref:Configuring_dedicated_clustered_storage).
-
-> [!TIP]
-> Not familiar with DataMiner? See [Basic concepts](xref:BasicConcepts).

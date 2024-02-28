@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.3.0_CU12
 ---
 
-# General Main Release 10.3.0 CU12 – Preview
+# General Main Release 10.3.0 CU12
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
@@ -30,7 +30,38 @@ This format is now consistent with automatic user provisioning via SAML authenti
 
 For example, "ZIINE\Björn.Waldegård" with userPrincipalName <bjorn.waldegard@ziine.com> will now become "ziine.com\bjorn.waldegard".
 
+> [!IMPORTANT]
+> If you are using SAML with Microsoft Entra ID and you [have imported single users from Entra ID](xref:SAML_using_Entra_ID#configuring-dataminer-to-import-users-and-groups-from-microsoft-entra-id) (indicated with a blue icon in the *Users/Groups* module in Cube), take the following steps when you upgrade:
+>
+> 1. Make sure a local admin user can be used on the server.
+>
+>    If no such user exists yet, create one.
+>
+> 1. Take a backup of the `C:\Skyline DataMiner\Users` folder and of the file `C:\Skyline DataMiner\Security.xml`.
+>
+> 1. Upgrade DataMiner.
+>
+> 1. Log in with the local admin user, and replace the imported users:
+>
+>    1. [Add the new users](xref:Adding_a_user).
+>
+>    1. [Place them in the same security group](xref:Changing_group_membership_of_a_user).
+>
+>    1. [Remove the old imported users](xref:Deleting_a_user).
+>
+>    1. If you want to restore the client settings for the users, copy the user files from the backup you created earlier and add them to the relevant folders under `C:\Skyline DataMiner\Users`.
+>
+> 1. If the users were able to use dataminer.services features, you will need to remove their old account in the Admin app and then add the new account. See [Controlling user access to dataminer.services features](xref:Giving_users_access_to_cloud_features).
+
 ### Enhancements
+
+#### DataMiner requirements: .NET 8.0 now required [ID_37969]
+
+<!-- MR 10.3.0 [CU12] / 10.4.0 [CU0] - FR 10.4.3 [CU0] -->
+
+To be able to upgrade to DataMiner 10.3.0 [CU12], you will first need to install the [Microsoft ASP.NET 8.0 Hosting Bundle](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-8.0.1-windows-hosting-bundle-installer).
+
+If this requirement is not met, a new prerequisite check during the upgrade will notify you that you will first need to take care of this before you can run the upgrade.
 
 #### SLNetClientTest tool: Message builder now allows creating an instance of an abstract type or interface [ID_38236]
 
@@ -53,13 +84,13 @@ From now on, when one of the above-mentioned errors is thrown, it will no longer
 
 #### Security enhancements [ID_38386]
 
-<!-- 38386: MR 10.3.0 [CU12] - FR 10.4.3 -->
+<!-- RN 38386: MR 10.3.0 [CU12] - FR 10.4.3 -->
 
 A number of security enhancements have been made.
 
 #### SLProtocol will now always fetch element data page by page except on systems with a MySQL database [ID_38388]
 
-<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+<!-- MR 10.3.0 [CU12]/10.4.0 - FR 10.4.3 -->
 
 From now on, SLProtocol will always fetch element data page by page, except on systems with a MySQL database.
 
@@ -77,6 +108,14 @@ DataMiner upgrade actions related to SLAnalytics features now also support Cassa
 
 From now on, trend data pattern records will no longer be deleted from the Elasticsearch/OpenSearch database.
 
+#### Enhanced performance when updating cell-based subscriptions in SLNet [ID_38445]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+Because of a number of enhancements, overall performance has increased when updating cell-based subscriptions in SLNet.
+
+These subscriptions mostly originate from visual overviews.
+
 #### GQI: Enhanced performance when executing 'Get parameters from elements' queries for parameter tables [ID_38460]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
@@ -84,6 +123,14 @@ From now on, trend data pattern records will no longer be deleted from the Elast
 When a *Get parameters from elements* query is executed for a parameter table, from now on, the table sessions that are used to resolve those tables in parallel will be closed asynchronously.
 
 As a result, overall performance of clients like the Dashboards app or a low-code app will significantly increase when executing this type of queries.
+
+#### SLAnalytics: Notification alarm 'Failed to start Analytics feature(s)...' will now be cleared automatically [ID_38621]
+
+<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+
+The following notification alarm, generated when an SLAnalytics feature failed to start up, will now be automatically cleared when that same feature starts up correctly.
+
+`Failed to start x Analytics feature(s). Check the Analytics logging (SLAnalytics.txt) for more information.`
 
 ### Fixes
 
@@ -120,6 +167,12 @@ In some cases, DataMiner clients using a gRPC connection would not detect a disc
 Up to now, when alarms were cleared before the end of the time frame specified in the *Collect events for ... after first event, then evaluate conditions and execute actions* correlation rule setting, the alarm buckets would not get cleaned up.
 
 From now on, when a correlation rule is configured to use the *Collect events for ... after first event, then evaluate conditions and execute actions* trigger mechanism, all alarm buckets will be properly cleaned up, unless there are actions that need to be executed either when the base alarms are updated or when alarms are cleared.
+
+#### Web apps - Visual overview: Popup window would not display a hidden page when the visual overview only contained one non-hidden page [ID_38331]
+
+<!-- MR 10.2.0 [CU21] / 10.3.0 [CU12] / 10.4.0 [CU0] - - FR 10.4.3 [CU0] -->
+
+When, in a visual overview with one non-hidden page displayed in a web app, you tried to open a popup window linked to a page marked as "hidden", the popup window would incorrectly display the non-hidden page instead of the hidden page.
 
 #### Automation: Script data cleanup routine could cause an error to occur [ID_38370]
 
@@ -164,3 +217,21 @@ When a client application was connected to a DataMiner Agent via a gRPC connecti
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
 
 Up to now, when writing to the database or reading from the database failed, a retry was attempted after 5 seconds. In some cases, especially when the SLNet connection was lost during startup, that retry would also fail, causing certain SLAnalytics features to not start up correctly. From now on, when writing to the database or reading from the database fails, SLAnalytics will wait longer than 5 seconds before attempting a retry.
+
+#### Protocols: IDisposable QActions would incorrectly not be disposed [ID_38605]
+
+<!-- MR 10.3.0 [CU12]/10.4.0 - FR 10.4.3 -->
+
+When DataMiner was processing all QActions in order to call the `Dispose` method on the QActions that implement `IDisposable`, it would incorrectly no longer call the `Dispose` method on QActions that implement `IDisposable` after processing a QAction that did not implement `IDisposable`.
+
+#### Problem when adding a DMA to a DMS [ID_38620]
+
+<!-- MR 10.3.0 [CU12] / 10.4.0 [CU0] - FR 10.4.3 [CU0] -->
+
+When a DataMiner Agent was added to a DataMiner System, in some cases, the SLNet cache of the new DataMiner Agent would not get updated, causing the Agent to not be aware it was now part of a DMS.
+
+#### Problem with SLDataMiner while sending a SetDocumentEofMessage with a negative file number [ID_38712]
+
+<!-- MR 10.3.0 [CU12] / 10.4.0 [CU0] - FR 10.4.3 [CU0] -->
+
+In some cases, SLDataMiner could stop working while sending a `SetDocumentEofMessage` with a negative file number via SLNet.

@@ -9,7 +9,7 @@ From DataMiner 10.0.13 onwards, a special type of data feed is available, using 
 > [!TIP]
 > See also: [Building Queries with DataMiner Generic Query Interface (GQI)](https://community.dataminer.services/video/building-queries-with-dataminer-generic-query-interface-gqi/) ![Video](~/user-guide/images/video_Duo.png)
 
-You can create a query as follows:
+## Creating a query
 
 1. In edit mode, select the dashboard component for which you want to use a query as a data input. At present, this is supported for Bar chart, Pie chart, State, and Table components.
 

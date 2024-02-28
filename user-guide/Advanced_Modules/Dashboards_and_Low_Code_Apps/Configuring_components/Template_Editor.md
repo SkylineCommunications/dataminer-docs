@@ -14,7 +14,7 @@ The Template Editor is currently supported for the following components:
 - [Grid](xref:DashboardGrid)
 - [Timeline](xref:DashboardTimeline)
 - [Table](xref:DashboardTable)
-- [Maps](xref:DashboardMaps) (requires the [*ReportsAndDashboardsGQIMaps* soft-launch option](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsgqimaps) prior to DataMiner 10.4.2)
+- [Maps](xref:DashboardMaps) (Depending on your DataMiner version, you may require the [*ReportsAndDashboardsGQIMaps* soft-launch option](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsgqimaps).)
 
 ## Accessing the Template Editor
 
@@ -336,7 +336,9 @@ To add a condition:
    > For a full overview of all HTML color names, see [HTML Color Names](https://www.w3schools.com/tags/ref_colornames.asp).
 
    > [!NOTE]
-   > Any visual changes made when configuring a conditional case will not show up in the preview.
+   >
+   > - Any visual changes made when configuring a conditional case will not show up in the preview.
+   > - From DataMiner 10.3.0 [CU12]/10.4.3 onwards<!--RN 38368-->, you can reset visual changes made when configuring a conditional case by clicking the ![reset](~/user-guide/images/Reset_Button.png) button to the right of the option you want to reset. Prior to DataMiner 10.3.0 [CU12]/10.4.3, you can only reset custom text entered for a *Text* layer.
 
 1. Optionally, in a low-code app, you can configure actions that are executed when a user clicks the tool. Only available for *Icon*, *Rectangle*, and *Ellipse* layers<!--RN 34761-->.
 
