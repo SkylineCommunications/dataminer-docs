@@ -60,6 +60,10 @@ Maps now employ relational filtering to identify all available map entities. Thi
 
 Improvements have been made to *Out of Spec (OOS)* reporting by allowing different thresholds for the Rx Power Status, SNR Status, and Post-FEC Status parameters for the US QAM and DS QAM channel modulations. Previously, one threshold was used globally across all channels. Now, thresholds vary depending on the modulation of the associated cable modem (CM) channel. Parameters that used to have fixed thresholds have been replaced with a new table containing the different modulations along with their corresponding thresholds.
 
+#### Separate procedures for adding a single CCAP/CM pair and creating elements in bulk [ID_38518]
+
+In DataMiner Cube, the *epm_i_docsis_addnewccapcmpair* pop-up window now includes the *Create Bulk* and *Create Single* options, to either create a single CCAP/CM pair, or create elements in bulk from a CSV file. Additionally, the *Create Single* procedure now includes a step for entering both the get community string and set community string for the collector.
+
 #### Conditional coloring added to dashboard tables [ID_38565]
 
 Conditional coloring has now been implemented across all *CM Overview* and *CM Offline Overview* dashboards. A green color indicates an *OK* parameter status, while a red color indicates an *Out of Spec (OOS)* parameter status.
