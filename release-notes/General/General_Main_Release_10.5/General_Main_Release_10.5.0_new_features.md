@@ -31,6 +31,27 @@ The *SLNetTypes* and *SLGlobal* implementations have been updated to support a n
 
 Also, a number of client messages have been adapted to support passing this new *AlarmTreeID/SLAlarmTreeKey* object, and a number of existing properties have been marked as obsolete.
 
+#### GQI: Full logging [ID_38870]
+
+<!-- MR 10.5.0 - FR 10.4.4 -->
+
+Full GQI logging will now be available in the `C:\Skyline DataMiner\Logging\GQI` folder.
+
+The log level can be configured in the `<appSettings>` element of the `C:\Skyline DataMiner\Files\SLHelper.exe.config` file.
+
+By default, this file will contain the following GQI log settings:
+
+```xml
+<add key="serilog:minimum-level" value="Information" />
+```
+
+In case of issues that need investigating, you can temporarily lower the minimum log level to "Debug".
+
+> [!NOTE]
+>
+> - The *SLHelper.exe.config* file is overwritten with the default configuration during full DataMiner upgrades or downgrades.
+> - A GQI error log will be added in the `C:\Skyline DataMiner\Logging\GQI` folder for every GQI request that fails.
+
 ### Protocols
 
 #### FillArray now supports protocol.Leave and protocol.Clear [ID_38153]
