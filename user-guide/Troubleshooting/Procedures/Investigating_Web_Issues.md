@@ -41,6 +41,8 @@ Is something not working as expected? Then do the following:
 
   Investigate the events in Windows Event Viewer (included in a [Log Collector](xref:Collecting_data_to_report_an_issue_to_TechSupport#log-collector-packages) package).
 
+- The web API has [separate logging](xref:Dashboards_and_Low_Code_Apps_Logging#WebAPI-logging) that can give more information about certain errors that occur.
+
 ## IIS web server (w3wp)
 
 ### Error page
