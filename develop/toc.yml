@@ -5631,3 +5631,5 @@ items:
   items:
     - name: Unit testing
       topicUid: Unit_testing
+    - name: XML documentation comments
+      topicUid: Xml_Documentation_Comments
