@@ -60,11 +60,23 @@ Maps now employ relational filtering to identify all available map entities. Thi
 
 Improvements have been made to *Out of Spec (OOS)* reporting by allowing different thresholds for the Rx Power Status, SNR Status, and Post-FEC Status parameters for the US QAM and DS QAM channel modulations. Previously, one threshold was used globally across all channels. Now, thresholds vary depending on the modulation of the associated cable modem (CM) channel. Parameters that used to have fixed thresholds have been replaced with a new table containing the different modulations along with their corresponding thresholds.
 
+#### Conditional coloring added to dashboard tables [ID_38565]
+
+Conditional coloring has now been implemented across all *CM Overview* and *CM Offline Overview* dashboards. A green color indicates an *OK* parameter status, while a red color indicates an *Out of Spec (OOS)* parameter status.
+
 #### Skyline EPM Platform: Creating multiple threshold tables for CCAP and CM collectors streamlined [ID_38741]
 
 To streamline the process of creating multiple threshold tables for CCAP and CM collectors, the possibility to create multiple sets directly from the Upstream and Downstream tables within the platform has been added.
 
 For this purpose, a new script has also been added, which copies the table from the front end and applies it across active CCAP and CM collectors: *EPM_I_DOCSIS_SetThresholdsTableToCollectors*.
+
+#### Cisco CBR-8 CCAP Platform: New OID for fiber node to channel mapping [ID_38765]
+
+A new OID has been introduced for mapping fiber nodes to channels. This enhancement results in a more accurate and efficient representation of all available channels in the system.
+
+#### Cisco CBR-8 CCAP Platform: Improved Physical Channel instances allocation [ID_38766]
+
+The allocation of Physical Channel instances has been improved to accurately represent all node segments and calculate the KPIs.
 
 ### Fixes
 
