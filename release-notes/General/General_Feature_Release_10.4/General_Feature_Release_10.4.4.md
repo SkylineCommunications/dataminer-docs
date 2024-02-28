@@ -317,6 +317,14 @@ When a request to the cloud failed, in some cases, the Azure SDK would not be ab
 
 `System.ArgumentOutOfRangeException: 'minValue' cannot be greater than maxValue.`
 
+#### Mediation protocols: Problem when the value of the 'baseFor' attribute is identical to that of the '\<ElementType\>' tag [ID_38878]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+When a mediation protocol had a `baseFor` attribute with a value identical to that of its `<ElementType>` tag, this could lead to issues in SLNet.
+
+From now on, it will no longer be possible to upload a protocol of which the value of the `baseFor` attribute is identical to that of the `<ElementType>` tag.
+
 #### Problem with SLLog when stopping or restarting DataMiner [ID_38902]
 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
