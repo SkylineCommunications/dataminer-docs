@@ -24,7 +24,7 @@ uid: General_Feature_Release_10.4.4
 
 #### GQI: Full logging [ID_38870]
 
-<!-- MR 10.5.0 - FR 10.4.4 -->
+<!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
 
 Full GQI logging will now be available in the `C:\Skyline DataMiner\Logging\GQI` folder.
 
