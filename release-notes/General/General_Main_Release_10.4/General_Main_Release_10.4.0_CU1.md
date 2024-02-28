@@ -121,6 +121,12 @@ From now on, it will no longer be possible to reuse a contributing booking that 
 
 At installation, the StorageModule service will now be configured to restart itself after each failure.
 
+#### At installation the APIGateway service will now be configured to restart itself after each failure [ID_38855]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+At installation, the APIGateway service will now be configured to restart itself after each failure.
+
 ### Fixes
 
 #### Problem when a redundancy group was set to an undefined state [ID_38401]
