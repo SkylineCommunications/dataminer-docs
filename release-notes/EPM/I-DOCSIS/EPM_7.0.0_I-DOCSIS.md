@@ -52,6 +52,16 @@ The calculation method for Forward Error Correction (FEC) values in the Generic 
 
 DOCSIS 3.1 polling support is available, displaying all instances of OFDM/OFDMA channels from both the CCAP and CM perspectives. At both Node Segment and Service Group levels, you can now view all associated 3.1 channels and corresponding KPIs using the *OFDM channels* dashboard and *OFDMA channels* dashboard. You can also view all instances of CM 3.1 channels using the *CM OFDM channels* dashboard and *CM OFDMA channels* dashboard.
 
+#### Improved OOS reporting: Define thresholds per channel [ID_38425]
+
+Improvements have been made to *Out of Spec (OOS)* reporting by allowing different thresholds for the Rx Power Status, SNR Status, and Post-FEC Status parameters for the US QAM and DS QAM channel modulations. Previously, one threshold was used globally across all channels. Now, thresholds vary depending on the modulation of the associated cable modem (CM) channel. Parameters that used to have fixed thresholds have been replaced with a new table containing the different modulations along with their corresponding thresholds.
+
+#### Skyline EPM Platform: Creating multiple threshold tables for CCAP and CM collectors streamlined [ID_38741]
+
+To streamline the process of creating multiple threshold tables for CCAP and CM collectors, the possibility to create multiple sets directly from the Upstream and Downstream tables within the platform has been added.
+
+For this purpose, a new script has also been added, which copies the table from the front end and applies it across active CCAP and CM collectors: *EPM_I_DOCSIS_SetThresholdsTableToCollectors*.
+
 ### Fixes
 
 #### Cisco CBR-8 CCAP Platform: Timeouts caused by use PartialSNMP option [ID_36609]
@@ -61,3 +71,11 @@ Because the *PartialSNMP* option was used together with the MultipleGetBulk meth
 #### Generic DOCSIS CM Collector: Incorrect displayed count for Number CM DOCSIS 1.x parameter [ID_37768]
 
 It could occur that aggregation actions to get the value of the DOCSIS 1.x counter parameter were not executed correctly. This could cause the actual number of cable modems that reported their DOCSIS version as a version within the 1.x range to deviate from the displayed count.
+
+#### Minimum threshold incorrectly set higher than maximum threshold [ID_38534]
+
+When adjusting values in the threshold table, it could occur that the minimum threshold was set higher than the maximum. To prevent this, a validation action was added, which automatically runs to check if the minimum threshold is lower than the maximum whenever a threshold value is adjusted.
+
+#### Percentage Ping Unreachable indicated value of 0% [ID_38768]
+
+On the DS Line Card level, the *Percentage Ping Unreachable* parameter incorrectly indicated a value of 0.00%. The percentage calculation has now been adjusted to prevent this.
