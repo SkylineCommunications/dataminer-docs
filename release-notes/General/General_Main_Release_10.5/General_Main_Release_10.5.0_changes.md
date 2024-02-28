@@ -157,6 +157,12 @@ Up to now, GQI would filter DOM string fields case-sensitively. From now on, it 
 
 Because of a number of enhancements, overall memory usage has been reduced, especially with regard to the management of DataMinerObjectDeleteMessages.
 
+#### SLLogCollector will now run the 'tasklist /fo TABLE' command [ID_38842]
+
+<!-- MR 10.5.0 - FR 10.4.4 -->
+
+SLLogCollector will now by default run the `tasklist /fo TABLE` command, and save the output in the `Logs\Windows` folder of the generated package.
+
 ### Fixes
 
 #### Databases: Problem when starting a migration from MySQL to Cassandra [ID_37589]

@@ -265,3 +265,9 @@ In order to avoid such run-time error alarms from being generated, a check will 
 When a request to the cloud failed, in some cases, the Azure SDK would not be able to perform any retries and would throw the following exception:
 
 `System.ArgumentOutOfRangeException: 'minValue' cannot be greater than maxValue.`
+
+#### Problem with SLLog when stopping or restarting DataMiner [ID_38902]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+When DataMiner was stopped or restarted, in some cases, the SLLog process could stop working.

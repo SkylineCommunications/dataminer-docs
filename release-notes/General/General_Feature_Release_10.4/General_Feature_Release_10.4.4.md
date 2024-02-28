@@ -162,6 +162,12 @@ When creating or updating a booking, up to now, overlapping past bookings would 
 
 From now on, it will no longer be possible to reuse a contributing booking that has already ended in a new booking. However, updating an existing main booking that uses a contributing booking will still be possible.
 
+#### SLLogCollector will now run the 'tasklist /fo TABLE' command [ID_38842]
+
+<!-- MR 10.5.0 - FR 10.4.4 -->
+
+SLLogCollector will now by default run the `tasklist /fo TABLE` command, and save the output in the `Logs\Windows` folder of the generated package.
+
 #### At installation the StorageModule service will now be configured to restart itself after each failure [ID_38843]
 
 <!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
@@ -310,3 +316,9 @@ In order to avoid such run-time error alarms from being generated, a check will 
 When a request to the cloud failed, in some cases, the Azure SDK would not be able to perform any retries and would throw the following exception:
 
 `System.ArgumentOutOfRangeException: 'minValue' cannot be greater than maxValue.`
+
+#### Problem with SLLog when stopping or restarting DataMiner [ID_38902]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+When DataMiner was stopped or restarted, in some cases, the SLLog process could stop working.
