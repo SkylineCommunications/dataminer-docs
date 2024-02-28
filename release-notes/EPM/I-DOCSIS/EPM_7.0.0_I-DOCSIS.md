@@ -48,6 +48,10 @@ The calculation method for Forward Error Correction (FEC) values in the Generic 
 
 ​The Huawei 5688-5800 CCAP Platform connector previously used a custom system name for its EPM CCAP name, which could cause mapping issues when retrieving element data. Now, the connector uses the element name as the CCAP name, resolving problems in Visio when looking up element-specific data.
 
+#### Skyline EPM Platform: DOCSIS 3.1 OFDM/OFDMA integration [ID_38198]
+
+DOCSIS 3.1 polling support is available, displaying all instances of OFDM/OFDMA channels from both the CCAP and CM perspectives. At both Node Segment and Service Group levels, you can now view all associated 3.1 channels and corresponding KPIs using the *OFDM channels* dashboard and *OFDMA channels* dashboard. You can also view all instances of CM 3.1 channels using the *CM OFDM channels* dashboard and *CM OFDMA channels* dashboard.
+
 ### Fixes
 
 #### Cisco CBR-8 CCAP Platform: Timeouts caused by use PartialSNMP option [ID_36609]
