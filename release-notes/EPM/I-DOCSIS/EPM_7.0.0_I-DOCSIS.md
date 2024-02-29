@@ -24,13 +24,9 @@ When you view all channels associated with a cable modem, now only the active ch
 
 Alignment errors on the Visual pages for Port, Distribution, and FAT (Forwarding Access Terminal) pages have been corrected. These Visual pages now include parent shapes, making it possible to identify the hub and the Optical Line Terminal (OLT) associated with each entity.
 
-#### Visual enhancements to CCAP overview pages [ID_37636]
-
-Visual enhancements have been made to the KPIs listed on the CCAP overview pages to prevent overlap between KPI labels and values.
-
 #### Visual enhancements to EPM entity tables [ID_37776]
 
-The EPM entity tables in the *Below this view* section have been adjusted to match the column format of the *Data* section of that same entity.
+The column order for the EPM entity tables in the *Below this view* section has been adjusted to align with the column format of the *Data* section for that same entity.
 
 #### Improved performance when navigating to EPM cards through Topology app [ID_38194]
 
@@ -88,9 +84,13 @@ The allocation of Physical Channel instances has been improved to accurately rep
 
 Because the *PartialSNMP* option was used together with the MultipleGetBulk method for a device with a packet limit, timeouts could occur in Cisco CBR-8 CCAP Platform elements. This option has now been removed to prevent this.
 
+#### Visual enhancements to CCAP overview pages [ID_37636]
+
+KPI value boxes have been expanded on the CCAP overview pages to prevent overlap between KPI labels and values.
+
 #### Generic DOCSIS CM Collector: Incorrect displayed count for Number CM DOCSIS 1.x parameter [ID_37768]
 
-It could occur that aggregation actions to get the value of the DOCSIS 1.x counter parameter were not executed correctly. This could cause the actual number of cable modems that reported their DOCSIS version as a version within the 1.x range to deviate from the displayed count.
+It could occur that aggregation actions to retrieve the value of the DOCSIS 1.x counter parameter were not executed correctly. This could cause the actual count of cable modems reporting a DOCSIS version within the 1.x range to deviate from the displayed count. To prevent this, the parameter ID on the action has been adjusted to accurately reflect the parameter required for fetching the correct count.
 
 #### Percentage Utilization value above 100% [ID_38410]
 
