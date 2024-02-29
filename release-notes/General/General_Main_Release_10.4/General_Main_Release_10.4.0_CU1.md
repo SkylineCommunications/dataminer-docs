@@ -100,7 +100,7 @@ SLLogCollector will now also collect the logs of the *CommunicationGateway* DxM.
 #### Security enhancements [ID_38756] [ID_38650]
 
 <!-- RN 38756: MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
-<!-- RN 38650: MR 10.4.0 [CU1] - FR 10.4.4 -->
+<!-- RN 38650: MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
 A number of security enhancements have been made.
 
