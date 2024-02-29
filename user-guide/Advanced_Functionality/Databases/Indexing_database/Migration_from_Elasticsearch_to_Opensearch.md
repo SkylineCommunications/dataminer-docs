@@ -1,34 +1,35 @@
 ---
-uid: Migration_from_Elasticsearch_to_OpenSearch
+uid: Migrating_from_Elasticsearch_to_OpenSearch
 ---
 
-# Migration from Elasticsearch to OpenSearch
+# Migrating from Elasticsearch to OpenSearch
 
-This guide describes the steps to migrate from Elasticsearch 6.8.22 to OpenSearch 2.11.1
+Follow the below-mentioned instructions to migrate data from Elasticsearch 6.8.22 to OpenSearch 2.11.1.
 
-1. Take a snapshot in the Elasticsearch 6.8.22 cluster.
+1. [Take a snapshot of the Elasticsearch 6.8.22 cluster](#take-a-snapshot-of-the-elasticsearch-6822-cluster).
 
-2. Copy the snapshot to a Elasticsearch 7.10.0 cluster and restore it there.
+1. [Copy the snapshot to an Elasticsearch 7.10.0 cluster and restore it](#restore-the-snapshot-on-an-elasticsearch-7100-cluster).
 
-3. Run the Reindexing tool on the restored data and take a snapshot.
+1. [Run the re-indexing tool and take a snapshot](#run-the-re-indexing-tool-and-take-a-snapshot).
 
-4. Copy the reindexed snapshot to a OpenSearch 2.11.1 cluster and restore it there.
+1. [Copy the reindexed snapshot to an OpenSearch 2.11.1 cluster and restore it](#restore-the-re-indexed-snapshot-to-a-opensearch-2111-cluster).
 
-Reference [Taking a snapshot of one Elasticsearch cluster and restoring it to another](xref:Taking_snapshot_Elasticsearch_cluster_and_restoring_to_different_cluster)
+> [!TIP]
+> See also [Taking a snapshot of one Elasticsearch cluster and restoring it to another](xref:Taking_snapshot_Elasticsearch_cluster_and_restoring_to_different_cluster)
 
-## Take Snapshot on Elasticsearch 6.8.22
+## Take a snapshot of the Elasticsearch 6.8.22 cluster
 
-### Sample Steps to take snapshot on Kibana
+Using Kibana, you can take a snapshot in the following way:
 
-1. Check the "path.repo" configuration on elasticsearch.yml.
+1. Check the *path.repo* configuration in *elasticsearch.yml*.
 
-2. Check existing repositories.
+1. Check the existing repositories by sending the following request.
 
    ```txt
    GET /_snapshot/_all
    ```
 
-3. Create repository
+1. Create the repository by sending the following request.
 
    ```txt
     PUT /_snapshot/<repo_name>
@@ -44,10 +45,10 @@ Reference [Taking a snapshot of one Elasticsearch cluster and restoring it to an
     }
    ```
 
-    - **shared_repo_path**: The path of the shared folder for storing the snapshots.
-    - **repo_name**: A repository name of your choice.
+   - **repo_name**: A repository name of your choice.
+   - **shared_repo_path**: The path to the shared folder where the snapshots will be stored.
 
-4. Take snapshot
+1. Take the snapshot by sending the following request.
 
    ```txt
    PUT /_snapshot/<repo_name>/<snapshot_name>
@@ -56,27 +57,27 @@ Reference [Taking a snapshot of one Elasticsearch cluster and restoring it to an
     }
    ```
 
-    - **snapshot_name**: A snapshot name of your choice.
+   - **snapshot_name**: A snapshot name of your choice.
 
-5. Check Snapshot
+1. Check the snapshot by sending the following request.
 
    ```txt
     GET /_snapshot/<repo_name>/<snapshot_name>/_status
    ```
 
-## Restore Snapshot on Elasticsearch 7.10.0
+## Restore the snapshot on an Elasticsearch 7.10.0 cluster
 
-### Sample Steps to restore snapshot on Kibana
+Using Kibana, you can restore the snapshot in the following way:
 
-1. Check the "path.repo" configuration on elasticsearch.yml.
+1. Check the *path.repo* configuration in *elasticsearch.yml*.
 
-2. Check existing repositories.
+1. Check the existing repositories by sending the following request.
 
    ```txt
    GET /_snapshot/_all
    ```
 
-3. Create repository
+1. Create the repository by sending the following request.
 
    ```txt
     PUT /_snapshot/<repo_name>
@@ -92,27 +93,27 @@ Reference [Taking a snapshot of one Elasticsearch cluster and restoring it to an
     }
    ```
 
-4. Restore snapshot.
+1. Restore the snapshot by sending the following request.
 
    ```txt
     POST /_snapshot/<repo_name>/<snapshot_name>/_restore 
    ```
 
-5. Check Snapshot
+1. Check the snapshot by sending the following request.
 
    ```txt
     GET /_snapshot/<repo_name>/<snapshot_name>/_status
    ```
 
-6. Check cluster health
+1. Check the cluster health by sending the following request.
 
    ```txt
     GET /_cluster/health
    ```
 
-    - Wait for green status of cluster health.
+   - Wait until the cluster health status turns green.
 
-## Run Reindexing Tool
+## Run the re-indexing tool and take a snapshot
 
 1. On the terminal go to the tool location:
 
@@ -120,7 +121,7 @@ Reference [Taking a snapshot of one Elasticsearch cluster and restoring it to an
     cd <ReIndexElasticSearchIndexes.exe location>
    ```
 
-2. Execute the tool whith the following arguments:
+1. Execute the tool with the following arguments:
 
    - **Node or N** Name of the node to be used for re-indexing, in format: http(s)://127.0.0.1:9200 or http(s)://fqdn:9200 (required)
    - **User or U** UserName to be provided in case you hardened your ElasticSearch,  [Securing the Elasticsearch database](https://docs.dataminer.services/user-guide/Advanced_Functionality/Security/Advanced_security_configuration/Database_security/Security_Elasticsearch.html)
@@ -128,7 +129,7 @@ Reference [Taking a snapshot of one Elasticsearch cluster and restoring it to an
    - **DBPrefix or D** DB Prefix in case you use a custom db-prefix instead of the default dms- prefix. In case no prefix is provided, will default to dms-
    - **TLSEnabled or T** Indicate if TLS is enabled for your ElasticSearch, can be true or false, will default to false
 
-3. Take snapshot of the reindexed data
+1. Take snapshot of the reindexed data
 
    ```txt
    PUT /_snapshot/<repo_name>/<snapshot_name_reindexed>
@@ -137,23 +138,23 @@ Reference [Taking a snapshot of one Elasticsearch cluster and restoring it to an
     }
    ```
 
-4. Check Snapshot
+1. Check Snapshot
 
    ```txt
     GET /_snapshot/<repo_name>/<snapshot_name>/_status
    ```
 
-## Restore reindexed snapshot in OpenSearch
+## Restore the re-indexed snapshot to a OpenSearch 2.11.1 cluster
 
 1. Check the "path.repo" configuration on opensearch.yml.
 
-2. Check existing repositories.
+1. Check existing repositories.
 
    ```txt
    GET /_snapshot/_all
    ```
 
-3. Create repository
+1. Create repository
 
    ```txt
     PUT /_snapshot/<repo_name>
@@ -169,19 +170,19 @@ Reference [Taking a snapshot of one Elasticsearch cluster and restoring it to an
     }
    ```
 
-4. Restore snapshot.
+1. Restore snapshot.
 
    ```txt
     POST /_snapshot/<repo_name>/<snapshot_name_reindexed>/_restore 
    ```
 
-5. Check Snapshot
+1. Check Snapshot
 
    ```txt
     GET /_snapshot/<repo_name>/<snapshot_name>/_status
    ```
 
-6. Check cluster health
+1. Check cluster health
 
    ```txt
     GET /_cluster/health
