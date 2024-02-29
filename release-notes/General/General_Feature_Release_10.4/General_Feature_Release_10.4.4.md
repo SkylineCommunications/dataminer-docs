@@ -22,6 +22,20 @@ uid: General_Feature_Release_10.4.4
 
 ## New features
 
+#### DataMiner Object Models: DomInstanceHistorySettings are now also available on DomDefinition level [ID_38294]
+
+<!-- MR 10.5.0 - FR 10.4.4 -->
+
+`DomInstanceHistorySettings` are now also available on DomDefinition level.
+
+The behavior is similar to that of the options in the `ModuleSettingsOverrides` property of a DomDefinition:
+
+- When `HistorySettings` are available in the DomDefinition, these will take precedence.
+- When the `HistorySettings` object in the DomDefinition is null, the `HistorySettings` of the `ModuleSettings` will be used.
+
+> [!IMPORTANT]
+> In order for the `HistorySettings` of the `ModuleSettings` to be used, the `HistorySettings` object in the DomDefinition has to be *null*. Just making the values empty is not sufficient.
+
 #### GQI: Full logging [ID_38870]
 
 <!-- MR 10.4.0 [CU1] - FR 10.4.4 -->

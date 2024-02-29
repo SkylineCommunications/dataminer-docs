@@ -251,6 +251,20 @@ The `ExecuteScriptOnDomInstanceActionSettings` object has been made available as
 > - When, in the DomDefinition, the `ScriptSettings` object is null, the `ScriptSettings` of the `ModuleSettings` will be used instead.
 > - In order for the `ModuleSettings` objects to be used, the objects in the `ModuleSettingsOverrides` of the `DomDefinition` have to be *null*. Just making them empty is not sufficient.
 
+#### DataMiner Object Models: DomInstanceHistorySettings are now also available on DomDefinition level [ID_38294]
+
+<!-- MR 10.5.0 - FR 10.4.4 -->
+
+`DomInstanceHistorySettings` are now also available on DomDefinition level.
+
+The behavior is similar to that of the options in the `ModuleSettingsOverrides` property of a DomDefinition:
+
+- When `HistorySettings` are available in the DomDefinition, these will take precedence.
+- When the `HistorySettings` object in the DomDefinition is null, the `HistorySettings` of the `ModuleSettings` will be used.
+
+> [!IMPORTANT]
+> In order for the `HistorySettings` of the `ModuleSettings` to be used, the `HistorySettings` object in the DomDefinition has to be *null*. Just making the values empty is not sufficient.
+
 #### DataMiner Object Models: New 'GetDifferences' method to compare two DOM instances [ID_38364]
 
 <!-- MR 10.5.0 - FR 10.4.2 -->
