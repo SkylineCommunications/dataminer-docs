@@ -204,6 +204,12 @@ At installation, the StorageModule service will now be configured to restart its
 
 At installation, the APIGateway service will now be configured to restart itself after each failure.
 
+#### SLAnalytics - Behavioral anomaly detection: Enhanced performance when monitoring more than 100,000 parameters [ID_38922]
+
+<!-- MR 10.5.0 - FR 10.4.4 -->
+
+Because of a number of enhancements, overall performance of the SLAnalytics process has increased, especially when more than 100,000 parameters are being monitored for behavioral anomaly detection.
+
 ### Fixes
 
 #### Problem when a redundancy group was set to an undefined state [ID_38401]
