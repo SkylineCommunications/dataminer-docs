@@ -92,6 +92,17 @@ Because of a number of enhancements, overall performance has increased
 
 The validation of the name of a booking is now case-insensitive. This means that when the SRM Framework checks if there are future bookings with the same name, the casing is now no longer taken into account.
 
+#### DataMiner Object Models: GenericEnum values will now be converted to the display value prior to being used in a DOM instance name concatenation [ID_38586]
+
+<!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
+
+The `DomInstanceNameDefinition` class contains a simple list of `IDomInstanceConcatenationItems`. With this, you can add concatenation items of two types in a specific order to define your name: `StaticValueConcatenationItem` or `FieldValueConcatenationItem`.
+
+In the case of the latter, if a `FieldValue` contains data for a `GenericEnumFieldDescriptor` (which can be either string values or integer values), these values will now be converted to the display value.
+
+> [!NOTE]
+> Currently, using `GenericEnum` fields containing multiple values are not supported for name concatenation.
+
 #### GQI: Ad hoc data source now supports real-time updates [ID_38643]
 
 <!-- MR 10.5.0 - FR 10.4.4 -->
