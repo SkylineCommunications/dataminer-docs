@@ -126,6 +126,14 @@ When you closed an app (e.g. Automation, Correlation, etc.), in some cases, Cube
 
 When you opened a trend graph, in some cases, Cube could leak memory.
 
+#### Alarm Console: 'Search for alarms' would list alarms with timestamps according to the local time zone of the client computer [ID_38899]
+
+<!-- MR 10.5.0 - FR 10.4.4 -->
+
+Up to now, when you opened a new alarm tab, and did a search using the *Search for alarms* box, the alarms matching the search criterion would incorrectly show timestamps according to the local time zone of the client computer.
+
+From now on, when you use the *Search of alarms* box, the alarms matching the search criterion will show timestamps according to the server time, i.e. the local time zone of the DataMiner Agent to which the Cube client is connected.
+
 #### Memory leak when opening advanced search in sidebar [ID_38901]
 
 <!-- MR 10.3.0 [CU13]/10.4.0 [CU1] - FR 10.4.4 -->
