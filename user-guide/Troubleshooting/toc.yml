@@ -210,6 +210,8 @@ items:
     items:
       - name: Current issues
         items:
+          - name: Timetrace data is no longer written during Cassandra Cluster migration
+            topicUid: KI_Timetrace_Data_no_longer_written_during_Cassandra_Cluster_Migration
           - name: IDP Discovery no longer working after upgrade
             topicUid: KI_IDP_Discovery_not_working
           - name: Port exhaustion because of NATS reconnection attempts
