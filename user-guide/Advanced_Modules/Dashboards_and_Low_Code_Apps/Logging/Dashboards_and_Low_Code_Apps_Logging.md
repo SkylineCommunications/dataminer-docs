@@ -31,7 +31,7 @@ Both types of logging can be configured through a shared configuration file name
 | EnableDebugLogging | Boolean | false | Enables or disables the logging of debug information. |
 | EnableAllowedOperationLogging | Boolean | false | Enables or disables the logging of WAF information. |
 | EnableClientMetricLogging | Boolean | true | Enables or disables the logging of client metrics. |
-| MaxFileSize | Number | 52428800 (50MB) | Maximum size of a single log file. |
+| MaxFileSize | Number | 3145728 (3MB) | Maximum size of a single log file. |
 | FilesToKeep | Number | 14 | Number of files to keep for each type of log. |
 | RollingInterval | String | Day | Time period included in each log file. |
 | AsyncBufferSize | Number | 10000 | Size of the buffer of the worker writing the log file to disk. |
