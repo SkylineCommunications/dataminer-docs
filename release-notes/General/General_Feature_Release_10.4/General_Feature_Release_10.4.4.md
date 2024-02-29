@@ -338,6 +338,17 @@ When a mediation protocol had a `baseFor` attribute with a value identical to th
 
 From now on, it will no longer be possible to upload a protocol of which the value of the `baseFor` attribute is identical to that of the `<ElementType>` tag.
 
+#### STaaS: Problem when generating a DataMiner backup with the database backup option enabled [ID_38896]
+
+<!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
+
+Up to now, on STaaS systems, a notice would be generated when a DataMiner backup was executed with the database backup option enabled.
+
+From now on, when a DataMiner backup is executed with the database backup option enabled, on a STaaS system, no database backup will be performed.
+
+> [!NOTE]
+> On STaaS systems, database backups are taken automatically. If you want a STaaS backup to be restored, contact [Skyline support](mailto:techsupport@skyline.be).
+
 #### Problem with SLLog when stopping or restarting DataMiner [ID_38902]
 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
