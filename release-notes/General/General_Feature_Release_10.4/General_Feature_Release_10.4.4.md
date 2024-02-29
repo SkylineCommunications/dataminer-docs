@@ -380,6 +380,14 @@ From now on, when a DataMiner backup is executed with the database backup option
 > [!NOTE]
 > On STaaS systems, database backups are taken automatically. If you want a STaaS backup to be restored, contact [Skyline support](mailto:techsupport@skyline.be).
 
+#### StorageModule: Only final retry will be logged as error when a data storage request fails [ID_38897]
+
+<!-- MR 10.5.0 - FR 10.4.4 -->
+
+When a StorageModule client requests data to be stored, in some cases, a subscription exception can be thrown. Those data storage requests are retried automatically. However, up to now, each retry would be logged as error.
+
+From now on, only the final retry will be logged as error. All prior retries will only be logged when the log level is set to "debug".
+
 #### Problem with SLLog when stopping or restarting DataMiner [ID_38902]
 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
