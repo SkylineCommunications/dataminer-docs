@@ -100,6 +100,12 @@ In some cases, DataMiner Cube could leak memory when you opened a trend graph th
 
 When you closed a spectrum analyzer card while it was still loading, in some cases, an unhandled exception could be thrown.
 
+#### Visual Oveview: DCF connections would not show any properties when the MultipleLinesMode option was used [ID_38748]
+
+<!-- MR 10.3.0 [CU13]/10.4.0 [CU1] - FR 10.4.4 -->
+
+When the *MultipleLinesMode* option was used, DCF connections would incorrectly not show any properties.
+
 #### Trending: Proactive alarm tooltip would immediately disappear [ID_38749]
 
 <!-- MR 10.3.0 [CU13]/10.4.0 [CU1] - FR 10.4.4 -->
