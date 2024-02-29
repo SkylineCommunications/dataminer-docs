@@ -18,6 +18,6 @@ No fix is available yet.
 
 ## Description
 
-During a Cassandra Cluster migration, new generated alarms no longer include timetrace data storage, essential for historical alarm queries. As a result, attempts to query alarm history during the migration process through Cube or other interfaces connected to SLDataGateway return no results. This issue persists until the migration is completed.
+During a Cassandra Cluster migration, timetrace data storage for newly generated alarms is suspended, impacting the ability to query historical alarm data via Cube or other interfaces connected to SLDataGateway. Attempts to retrieve alarm history during the migration period yield no results. Alarms requested during the migration period are absent from the query results, whereas alarms predating the migration are unaffected because of existing timetrace data.
 
 If a user tries to halt the migration, the timetrace data that was never written will not be automatically restored, and the historical alarm queries covering the migration period will be incomplete.
