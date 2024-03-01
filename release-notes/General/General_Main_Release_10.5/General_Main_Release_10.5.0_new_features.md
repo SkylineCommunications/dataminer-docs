@@ -45,6 +45,7 @@ All user feedback will be stored in a new table named *ai_anomalyfeedback*, whic
 >
 > - Until further notice, this feature will require the *AnomalyFeedback* soft-launch option to be enabled.
 > - This feature will only work if the DataMiner System includes an Elasticsearch/OpenSearch database.
+> - Currently, this feature is not yet supported by any of the DataMiner client apps.
 
 ### Protocols
 
