@@ -126,6 +126,12 @@ When you closed an app (e.g. Automation, Correlation, etc.), in some cases, Cube
 
 When you opened a trend graph, in some cases, Cube could leak memory.
 
+#### Memory leak when opening the Settings window [ID_38810]
+
+<!-- MR 10.3.0 [CU13]/10.4.0 [CU1] - FR 10.4.4 -->
+
+When you opened the Settings window, in some cases, Cube could leak memory.
+
 #### Alarm Console: 'Search for alarms' would list alarms with timestamps according to the local time zone of the client computer [ID_38899]
 
 <!-- MR 10.5.0 - FR 10.4.4 -->
@@ -145,3 +151,9 @@ When you opened the advanced search in the sidebar, in some cases, Cube could le
 <!-- MR 10.3.0 [CU13]/10.4.0 [CU1] - FR 10.4.4 -->
 
 When you opened an embedded browser component, in some cases, Cube could leak memory.
+
+#### Memory leak when opening an EPM card using the topology selector [ID_38963]
+
+<!-- MR 10.3.0 [CU13]/10.4.0 [CU1] - FR 10.4.4 -->
+
+When you opened an EPM card using the topology selector, in some cases, Cube could leak memory.
