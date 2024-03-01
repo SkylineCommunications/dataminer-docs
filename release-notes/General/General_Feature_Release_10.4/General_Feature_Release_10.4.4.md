@@ -220,7 +220,7 @@ At installation, the APIGateway service will now be configured to restart itself
 
 #### SLAnalytics - Behavioral anomaly detection: Enhanced performance when monitoring more than 100,000 parameters [ID_38922]
 
-<!-- MR 10.5.0 - FR 10.4.4 -->
+<!-- MR 10.3.0 [CU13] - FR 10.4.4 -->
 
 Because of a number of enhancements, overall performance of the SLAnalytics process has increased, especially when more than 100,000 parameters are being monitored for behavioral anomaly detection.
 
