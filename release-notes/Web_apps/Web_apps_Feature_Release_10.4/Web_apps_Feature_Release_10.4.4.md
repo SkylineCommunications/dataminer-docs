@@ -142,6 +142,14 @@ The visualizations can now also be linked to a *Trigger* component and support t
 - Fetch the data
 - Select an item (limited to DOM instances)
 
+#### Monitoring app: Trend charts have now been fully aligned with those in DataMiner Cube [ID_38926]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+In the Monitoring app, the trend charts have now been fully aligned with those in DataMiner Cube.
+
+For example, the *Trend points* option will now by default be set to "Average (changes only)" instead of "Average (fixed interval)".
+
 #### WebAPI: Maximum log file size reduced to 3 MB [ID_38958]
 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
