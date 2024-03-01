@@ -159,6 +159,12 @@ In case of issues that need investigating, you can temporarily lower the minimum
 > - The *SLHelper.exe.config* file is overwritten with the default configuration during full DataMiner upgrades or downgrades.
 > - A GQI error log will be added in the `C:\Skyline DataMiner\Logging\GQI` folder for every GQI request that fails.
 
+#### SLAnalytics - Behavioral anomaly detection: Enhanced generation of suggestion events when detecting variance changes [ID_38941]
+
+<!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
+
+A number of enhancements have been made to the mechanism that automatically generates a suggestion event when a variance change is detected.
+
 ### Fixes
 
 #### SLLogCollector: Minor issues [ID_38011]
@@ -328,3 +334,9 @@ From now on, when a DataMiner backup is executed with the database backup option
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
 When DataMiner was stopped or restarted, in some cases, the SLLog process could stop working.
+
+#### SLAnalytics will no longer automatically restore a lost session with SLDataGateway [ID_38984]
+
+<!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
+
+Since DataMiner version 10.3.0 [CU9]/10.3.12, SLAnalytics would automatically restore a lost session with SLDataGateway. From now on, it will no longer do so.
