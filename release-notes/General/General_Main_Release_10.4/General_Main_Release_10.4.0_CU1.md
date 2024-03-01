@@ -161,6 +161,12 @@ In case of issues that need investigating, you can temporarily lower the minimum
 
 ### Fixes
 
+#### SLLogCollector: Minor issues [ID_38011]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+A number of minor issues were fixed with regard to the SLLogCollector tool.
+
 #### Problem when a redundancy group was set to an undefined state [ID_38401]
 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
