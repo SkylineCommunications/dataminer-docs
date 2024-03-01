@@ -22,6 +22,31 @@ uid: General_Feature_Release_10.4.4
 
 ## New features
 
+#### Elasticsearch re-indexing tool [ID_37994]
+
+<!-- MR 10.5.0 - FR 10.4.4 -->
+
+Migrating data from from Elasticsearch 6.8.22 to OpenSearch 2.11.1 involves the following steps:
+
+1. Taking a snapshot of the Elasticsearch 6.8.22 cluster.
+1. Copying the snapshot to an Elasticsearch 7.10.0 cluster, and restoring it.
+1. Re-indexing the data and taking another snapshot.
+1. Copying the snapshot with the re-indexed data to an OpenSearch 2.11.1 cluster, and restoring it
+
+To perform step 3, a command-line re-indexing tool has been developed: *ReIndexElasticSearchIndexes.exe*.
+
+This tool accepts the following arguments:
+
+| Argument | Description |
+|----------|-------------|
+| -Node or -N | The name of the node to be used for re-indexing (mandatory).<br>Format: `http(s)://127.0.0.1:9200` or `http(s)://fqdn:9200` |
+| -User or -U | The user name, to be provided in case Elasticsearch was hardened.<br>See [Securing the Elasticsearch database](xref:Security_Elasticsearch) |
+| -Password or -P | The user password |
+| -DBPrefix or -D | The database prefix, to be provided in case a custom database prefix is used instead of the default `dms-` prefix.<br>If you do not provide a prefix, the default `dms-` will be used. |
+| -TLSEnabled or -T | Whether or not TLS is enabled for this ElasticSearch database.<br>Values: true or false. Default: false |
+
+If you do not specify a user name and user password, the tool will assume a default ElasticSearch database installation.
+
 #### DataMiner Object Models: DomInstanceHistorySettings are now also available on DomDefinition level [ID_38294]
 
 <!-- MR 10.5.0 - FR 10.4.4 -->
