@@ -8,9 +8,10 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
-#### 1 March 2024 - Enhancement - Ordering DataMiner credits through Azure marketplace [ID 38909]
 
-You can now order DataMiner credits through the Azure marketplace. For a walkthrough on how to order DataMiner credits, refer to [How to order DataMiner credits](https://github.com/SkylineCommunications/dataminer-docs/blob/main/user-guide/Getting_started/DaaS/Order_DataMiner_credits.md)
+#### 1 March 2024 - Enhancement - Ordering DataMiner credits through Azure Marketplace [ID 38909]
+
+You can now order DataMiner credits via the Azure Marketplace. For more information on how to order credits, refer to [Ordering DataMiner credits](xref:Order_DataMiner_credits).
 
 #### 21 February 2024 - Fix - Improved catalog search performance [ID_38865]
 
