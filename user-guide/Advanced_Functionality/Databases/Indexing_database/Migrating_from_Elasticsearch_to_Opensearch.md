@@ -12,7 +12,7 @@ Follow the below-mentioned instructions to migrate data from Elasticsearch 6.8.2
 
 1. [Run the re-indexing tool and take a snapshot](#run-the-re-indexing-tool-and-take-a-snapshot).
 
-1. [Copy the reindexed snapshot to an OpenSearch 2.11.1 cluster and restore it](#restore-the-re-indexed-snapshot-to-a-opensearch-2111-cluster).
+1. [Copy the snapshot with the re-indexed data to an OpenSearch 2.11.1 cluster and restore it](#restore-the-snapshot-with-the-re-indexed-data-to-a-opensearch-2111-cluster).
 
 > [!TIP]
 > See also [Taking a snapshot of one Elasticsearch cluster and restoring it to another](xref:Taking_snapshot_Elasticsearch_cluster_and_restoring_to_different_cluster)
@@ -129,11 +129,11 @@ Using Kibana, you can restore the snapshot in the following way:
 
    | Argument | Description |
    |----------|-------------|
-   | Node or N | The name of the node to be used for re-indexing (mandatory).<br>Format: `http(s)://127.0.0.1:9200` or `http(s)://fqdn:9200` |
-   | User or U | The user name, to be provided in case Elasticsearch was hardened.<br>See [Securing the Elasticsearch database](xref:Security_Elasticsearch) |
-   | Password or P | The user password |
-   | DBPrefix or D | The database prefix, to be provided in case a custom database prefix is used instead of the default `dms-` prefix.<br>If you do not provide a prefix, the default `dms-` will be used. |
-   | TLSEnabled or T | Whether or not TLS is enabled for this ElasticSearch database.<br>Values: true or false. Default: false |
+   | -Node or -N | The name of the node to be used for re-indexing (mandatory).<br>Format: `http(s)://127.0.0.1:9200` or `http(s)://fqdn:9200` |
+   | -User or -U | The user name, to be provided in case Elasticsearch was hardened.<br>See [Securing the Elasticsearch database](xref:Security_Elasticsearch) |
+   | -Password or -P | The user password |
+   | -DBPrefix or -D | The database prefix, to be provided in case a custom database prefix is used instead of the default `dms-` prefix.<br>If you do not provide a prefix, the default `dms-` will be used. |
+   | -TLSEnabled or -T | Whether or not TLS is enabled for this ElasticSearch database.<br>Values: true or false. Default: false |
 
 1. Take a snapshot of the re-indexed data by sending the following request.
 
@@ -150,7 +150,7 @@ Using Kibana, you can restore the snapshot in the following way:
     GET /_snapshot/<repo_name>/<snapshot_name>/_status
    ```
 
-## Restore the re-indexed snapshot to a OpenSearch 2.11.1 cluster
+## Restore the snapshot with the re-indexed data to a OpenSearch 2.11.1 cluster
 
 1. Check the *path.repo* configuration in *opensearch.yml*.
 
