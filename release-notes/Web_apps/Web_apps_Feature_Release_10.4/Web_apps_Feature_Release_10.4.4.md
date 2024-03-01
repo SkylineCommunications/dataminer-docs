@@ -294,3 +294,9 @@ Up to now, before you were able to delete a component by clicking the delete but
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
 When you had shared a dashboard containing table components, it would not be possible to filter or sort the data in those table components.
+
+#### Dashboards app: Problem when trying to share a dashboard that did not retrieve any data [ID_38965]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+When you tried to share a dashboard that did not retrieve any data, in some cases, a *NullReference* exception could be thrown.
