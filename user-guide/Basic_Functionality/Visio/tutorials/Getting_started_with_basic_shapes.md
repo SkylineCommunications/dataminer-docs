@@ -1,6 +1,7 @@
 ---
 uid: Getting_started_with_basic_shapes
 ---
+
 # Getting started with basic shapes
 
 This tutorial explains how to start from a blank Visio file and edit basic element info in an efficient way through shape grouping.
@@ -13,7 +14,8 @@ Expected duration: 15 minutes
 
   > [!TIP]
   > A [new DataMiner as a Service](xref:Creating_a_DMS_on_dataminer_services) system comes with a Microsoft Platform element out of the box, so it automatically meets this requirement.
-- [Microsoft Visio Software](https://www.microsoft.com/microsoft-365/visio/flowchart-software)
+
+- [Microsoft Visio](https://www.microsoft.com/microsoft-365/visio/flowchart-software)
 
 ## Overview
 
@@ -27,22 +29,23 @@ Expected duration: 15 minutes
 1. Open DataMiner Cube and connect to your system.
 
    > [!TIP]
-   > If you have created a new DaaS System for this tutorial, see [Accessing a newly created DMS for the first time](xref:Accessing_a_new_DMS) for detailed info.
+   > If you created a new DaaS system for this tutorial, refer to [Accessing a newly created DMS for the first time](xref:Accessing_a_new_DMS) for more information.
+
 1. Open your Microsoft Platform element on the Visual page.
 
 1. Right-click the Visual page and select *Set as active \<element name> element Visio file* > *New blank*.
 
-1. In the dialog box asking whether you want to assign a new drawing, click *Yes*.
+1. In the *New Visio file* pop-up window, click *Yes*.
 
 At this point, your Microsoft Visio application should start up automatically, and you can start modifying your new Visio file.
 
 ## Step 2: Set up an element alarm color LED shape
 
-1. Remove all shapes from your Visio page by pressing CTRL+A and then Delete.
+1. Press CTRL+A followed by the delete button to remove all shapes from your Visio page.
 
-1. In the ribbon at the top, go to the *Tools* section of the *Home* tab, and select the ellipse.
+1. Navigate to the *Home* tab of the ribbon and select the downward arrow next to the rectangle in the *Tools* section.
 
-1. Draw a circle on your page by clicking and dragging the mouse on it while this tool is selected.
+1. Select *Ellipse* from the dropdown list, and draw a circle on your page by clicking and dragging the mouse on it.
 
    ![Add ellipse to Visio page](~/user-guide/images/AddEllipseToVisioPage.gif)
 
@@ -102,36 +105,43 @@ In DataMiner Cube, you should see two colored shapes, one of which displays the 
 
 1. Right-click the shape group and select *Data* > *Define Shape Data*.
 
-1. Click the *New* button to add shape data with label `Enabled` and value `false`. Setting enabled to false makes it so the shape can no longer be clicked and doesn't show a hover effect.
+1. Click the *New* button to add shape data with label `Enabled` and value `false`, preventing the shape from being clicked and disabling the hover effect.
 
 1. Right-click the shape group and select *Group* > *Open Group*.
 
 1. Right-click the ellipse shape and select *Data* > *Define Shape Data*.
 
-1. Click the *New* button to add shape data with label `Enabled` and value `true`. Overriding the enabled state from earlier in this child shape will enable just the ellipse, rather than the whole group.
+1. Click the *New* button to add shape data with label `Enabled` and value `true`. This will override the earlier configured `Enabled` state for this child shape, enabling only the ellipse rather than the whole group.
 
 1. Right-click the rectangle shape and select *Data* > *Define Shape Data*.
 
 1. Click the *New* button to add shape data with label `Options` and value `NoAlarmColorFill`.
 
-1. Make sure you have no shapes selected, click the "..." in the top-right corner of the Advanced Editing panel and select *Add pretty hover*. This hover effect will ensure that when you hover over the ellipse, the highlighted area will move along with the ellipse itself, instead of highlighting its bounding rectangle.
+1. Make sure you have no shapes selected, click the "..." in the top-right corner of the *Advanced Editing* panel and select *Add pretty hover*.
+
+   > [!NOTE]
+   > If you followed this tutorial, you should see the *Advanced Editing* in your Microsoft Visio application. The panel is created when you launch Microsoft Visio from DataMiner Cube by either creating a new blank Visio file or editing an existing one.
+
+   This hover effect ensures that when you hover the mouse pointer over the ellipse, the highlighted area moves with the ellipse, not its outer rectangle.
 
    ![Add pretty hover](~/user-guide/images/AddPrettyHover.gif)
 
-   > [!NOTE]
-   > If you followed this tutorial, the advanced editing panel should be available in your Microsoft Visio application. The panel is created when launching Microsoft Visio from DataMiner Cube (by creating a new blank Visio file or doing an edit of an existing one).
-
 1. Save your Visio file.
 
-In DataMiner Cube, only your ellipse will now be colored with the alarm state of the element, and only that shape will be clickable. The pretty hover will ensure that the highlighted area upon hover of the ellipse follows the ellipse rather than its bounding rectangle.
+In DataMiner Cube, only your ellipse will now be colored with the alarm state of the element, and only that shape will be clickable. The *pretty hover* option will ensure that the highlighted area of the ellipse moves with he ellipse, not its outer rectangle.
 
 ![End result](~/user-guide/images/Endresult.webp)
 
 ## Related documentation
 
 - [Working with shape data in Microsoft Visio](xref:Working_with_shape_data_in_Microsoft_Visio)
+
 - [Linking a shape to an element, a service or a redundancy group](xref:Linking_a_shape_to_an_element_a_service_or_a_redundancy_group)
+
 - [Linking a shape to an element parameter](xref:Linking_a_shape_to_an_element_parameter)
+
 - [Grouping shapes](xref:Grouping_shapes)
+
 - [NoAlarmColorFill](xref:Overview_of_page_and_shape_options#noalarmcolorfill)
+
 - [Disabling the default hyperlink behavior of a linked shape](xref:Disabling_the_default_hyperlink_behavior_of_a_linked_shape)
