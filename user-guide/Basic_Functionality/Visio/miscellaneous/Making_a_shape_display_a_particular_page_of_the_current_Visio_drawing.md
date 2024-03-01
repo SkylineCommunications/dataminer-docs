@@ -16,6 +16,7 @@ That page can be displayed:
 > [!NOTE]
 >
 > - You can only make a shape display pages other than the page actually containing the shape. This restriction is necessary to avoid loops of inline pages.
+> - If a shape displays content from another Visio page, it will inevitably lead to the loading of multiple pages. This could potentially affect loading times and overall user experience. It is advisable to assess the performance during the construction of such elements to ensure a seamless user experience.
 > - For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[inline visio > BUTTONS]* page.
 
 ## Basic shape data field configuration
