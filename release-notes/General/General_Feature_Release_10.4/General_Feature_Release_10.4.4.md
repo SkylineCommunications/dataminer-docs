@@ -196,10 +196,11 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 
 For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
 
-#### Security enhancements [ID_38756] [ID_38650]
+#### Security enhancements [ID_38756] [ID_38650] [ID_38951]
 
 <!-- RN 38756: MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 <!-- RN 38650: MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+<!-- RN 38951: MR 10.5.0 - FR 10.4.4 -->
 
 A number of security enhancements have been made.
 
