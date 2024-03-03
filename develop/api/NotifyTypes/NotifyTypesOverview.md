@@ -8,6 +8,9 @@ uid: NTNotifyTypesOverview
 > The table below gives an overview of all the defined NT Notify types. This is part of the internal communication between DataMiner processes. Notify types for which no additional documentation is provided should therefore not be used.
 > These types are shared between the SLDataMiner and SLProtocol processes, but many of them are only supported by one of the two processes. Their documentation should mention if they are to be used with a [NotifyProtocol](xref:Skyline.DataMiner.Scripting.SLProtocol.NotifyProtocol(System.Int32,System.Object,System.Object)), a [NotifyDataMiner](xref:Skyline.DataMiner.Scripting.SLProtocol.NotifyDataMiner(System.Int32,System.Object,System.Object))([Queued](xref:Skyline.DataMiner.Scripting.SLProtocol.NotifyDataMinerQueued(System.Int32,System.Object,System.Object))), or both.
 
+> [!NOTE]
+> NotifyType enum is located in [Skyline.DataMiner.Net.Messages](xref:Skyline.DataMiner.Net.Messages) namespace. 
+
 |ID|Name|Description|
 |--- |--- |--- |
 |0|NT_UNDEF||
