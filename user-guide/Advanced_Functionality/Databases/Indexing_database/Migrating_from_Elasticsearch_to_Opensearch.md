@@ -4,7 +4,9 @@ uid: Migrating_from_Elasticsearch_to_OpenSearch
 
 # Migrating from Elasticsearch to OpenSearch
 
-Follow the below-mentioned instructions to migrate data from Elasticsearch 6.8.22 to OpenSearch 2.11.1.
+From DataMiner 10.4.4/10.5.0 onwards<!-- RN 37994 -->, a tool is available that allows you to migrate from Elasticsearch 6.8.22 to OpenSearch 2.11.1.
+
+To use this tool, follow the instructions below:
 
 1. [Take a snapshot of the Elasticsearch 6.8.22 cluster](#take-a-snapshot-of-the-elasticsearch-6822-cluster).
 
@@ -15,7 +17,7 @@ Follow the below-mentioned instructions to migrate data from Elasticsearch 6.8.2
 1. [Copy the snapshot with the re-indexed data to an OpenSearch 2.11.1 cluster and restore it](#restore-the-snapshot-with-the-re-indexed-data-to-a-opensearch-2111-cluster).
 
 > [!TIP]
-> See also [Taking a snapshot of one Elasticsearch cluster and restoring it to another](xref:Taking_snapshot_Elasticsearch_cluster_and_restoring_to_different_cluster)
+> See also: [Taking a snapshot of one Elasticsearch cluster and restoring it to another](xref:Taking_snapshot_Elasticsearch_cluster_and_restoring_to_different_cluster)
 
 ## Take a snapshot of the Elasticsearch 6.8.22 cluster
 
