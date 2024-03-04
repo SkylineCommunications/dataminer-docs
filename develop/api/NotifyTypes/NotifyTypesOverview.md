@@ -9,7 +9,7 @@ uid: NTNotifyTypesOverview
 > These types are shared between the SLDataMiner and SLProtocol processes, but many of them are only supported by one of the two processes. Their documentation should mention if they are to be used with a [NotifyProtocol](xref:Skyline.DataMiner.Scripting.SLProtocol.NotifyProtocol(System.Int32,System.Object,System.Object)), a [NotifyDataMiner](xref:Skyline.DataMiner.Scripting.SLProtocol.NotifyDataMiner(System.Int32,System.Object,System.Object))([Queued](xref:Skyline.DataMiner.Scripting.SLProtocol.NotifyDataMinerQueued(System.Int32,System.Object,System.Object))), or both.
 
 > [!NOTE]
-> NotifyType enum is located in [Skyline.DataMiner.Net.Messages](xref:Skyline.DataMiner.Net.Messages) namespace. 
+> The NotifyType enum is located in the [Skyline.DataMiner.Net.Messages](xref:Skyline.DataMiner.Net.Messages) namespace. 
 
 |ID|Name|Description|
 |--- |--- |--- |
