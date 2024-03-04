@@ -5,7 +5,7 @@ uid: IDP_1.5.0
 # IDP 1.5.0
 
 > [!NOTE]
-> This IDP version requires that DataMiner 10.2.0 [CU0] or higher is installed. Note that if you use DataMiner [10.4.0](xref:General_Main_Release_10.4.0_changes#dataminersolutionsdll-now-included-in-core-dataminer-software-id_38530)/[10.4.3](xref:General_Feature_Release_10.4.3#dataminersolutionsdll-now-included-in-core-dataminer-software-id_38530) or higher, installing DataMiner IDP will no longer require a DataMiner restart.
+> This IDP version requires that DataMiner 10.3.0 [CU0] or higher is installed. Note that if you use DataMiner [10.4.0](xref:General_Main_Release_10.4.0_changes#dataminersolutionsdll-now-included-in-core-dataminer-software-id_38530)/[10.4.3](xref:General_Feature_Release_10.4.3#dataminersolutionsdll-now-included-in-core-dataminer-software-id_38530) or higher, installing DataMiner IDP will no longer require a DataMiner restart.
 
 ## New features
 
@@ -109,4 +109,4 @@ To prevent the occurrence of many log entries similar to the example below in th
 
 #### Increased minimum DataMiner version [ID_38868]
 
-The minimum DataMiner version for the IDP app has now been increased to DataMiner 10.2.0 [CU0].
+The minimum DataMiner version for the IDP app has now been increased to DataMiner 10.3.0 [CU0].
