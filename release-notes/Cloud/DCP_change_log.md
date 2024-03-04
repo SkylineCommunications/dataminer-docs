@@ -9,13 +9,17 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 21 February 2024 - Fix - Improved catalog search performance [ID_38865]
+
+The [Catalog](https://catalog.dataminer.services) search has been enhanced to yield results faster.
+
 #### 19 February 2024 - Enhancement - Custom commands executed with the DataMiner bot can request the dataminer.services user email [ID_38826]
 
 It is now possible to know the executor of a custom command executed with the DataMiner bot in Microsoft Teams.
 
 To add a command to your DMS, create an Automation script in the folder "bot" in the DMS. For examples of such scripts, refer to [Custom Command Examples](https://github.com/SkylineCommunications/ChatOps-Extensions/tree/main/CustomCommandExamples) on GitHub.
 
-For more detailed information, refer to [Adding commands for the Teams bot to a DMS](xref:DataMiner_Teams_bot#adding-custom-commands-for-the-teams-bot-to-a-dms)
+For more detailed information, refer to [Adding commands for the Teams bot to a DMS](xref:DataMiner_Teams_bot#adding-custom-commands-for-the-teams-bot-to-a-dms).
 
 #### 16 February 2024 - Enhancement - Changed user role required to renew system tokens [ID_38722]
 
@@ -31,7 +35,7 @@ DataMiner Systems are now shown on dataminer.services even if remote access is d
 
 #### 13 February 2024 - Fix - Catalog versions displayed in wrong order [ID_38762]
 
-The versions of a catalog record will now be sorted correctly.
+The versions of a catalog item will now be sorted correctly.
 
 #### 9 February 2024 - Enhancement - DMS connection status now visible on dataminer.services [ID_38771]
 
@@ -73,11 +77,15 @@ In an Automation script, you can use [the DcpChatIntegrationHelper NuGet](https:
 
 To add a command to your DMS, create an Automation script in the folder "bot" in the DMS. For examples of such scripts, refer to [Custom Command Examples](https://github.com/SkylineCommunications/ChatOps-Extensions/tree/main/CustomCommandExamples) on GitHub.
 
-For more detailed information, refer to [Adding commands for the Teams bot to a DMS](xref:DataMiner_Teams_bot#adding-custom-commands-for-the-teams-bot-to-a-dms)
+For more detailed information, refer to [Adding commands for the Teams bot to a DMS](xref:DataMiner_Teams_bot#adding-custom-commands-for-the-teams-bot-to-a-dms).
 
 #### 23 January 2024 - Fix - Unknown error when remote accessing web apps [ID_38549]
 
-While remote accessing web apps via dataminer.services (e.g. the Monitoring app), the following message could appear: `An unknown error occurred (status: 200).` The app would also stop working until the page was refreshed. This issue has been resolved.
+While remote access was used to go to the web apps via dataminer.services (e.g. the Monitoring app), the following message could appear: `An unknown error occurred (status: 200).` The app would also stop working until the page was refreshed. This issue has been resolved.
+
+#### 12 January 2024 - Fix - The given username was not applied when deploying a DaaS system
+
+When a custom username was given when deploying a new DaaS system, the default username (Administrator) was still used. The user will now be created with the custom username.
 
 #### 12 January 2024 - New feature - Remote access for custom files/webpages [ID_38426]
 
@@ -123,12 +131,52 @@ When you create a DaaS system, your dataminer.services account will automaticall
 
 You can manually delete a DaaS system from dataminer.services, just like any other DMS; however, note that this is irreversible, and all data of the system will be lost.
 
+#### 28 November 2023 - Enhancement - Deploying multiple DaaS systems simultaneously
+
+It is now possible to create more than one DaaS system simultaneously on [dataminer.services](https://dataminer.services).
+
+#### 24 November 2023 - Fix - Improved username validation when deploying a DaaS system
+
+The username validation has been improved to prevent the deployment from failing when the given username is not a valid. This fixes an issue introduced on 10 November 2023.
+
+#### 24 November 2023 - Enhancement - Improved login system for Admin app
+
+The [Admin app](https://admin.dataminer.services) now has an improved login system. This should prevent login redirect loops that could be experienced before.
+
+#### 24 November 2023 - New feature - Introducing the new Catalog user interface
+
+A new user interface has been introduced for [catalog.dataminer.services](https://catalog.dataminer.services).
+
+#### 22 November 2023 - Enhancement - Warning to link account before doing a DxM or Catalog deployment
+
+From now on, the [Admin app](https://admin.dataminer.services) and [Catalog](https://catalog.dataminer.services) will prevent users from doing a deployment if they do not have a linked DataMiner account for the relevant DataMiner System, because in such a case the deployment is not possible. A warning to link the accounts will be displayed instead.
+
+#### 22 November 2023 - Enhancement - Improved login system for dataminer.services home page
+
+The [dataminer.services](https://dataminer.services) home page now has an improved login system. This should prevent login redirect loops that could be experienced before.
+
 #### 21 November 2023 - New feature - Remote access using DataMiner Cube [ID_37841]
 
 It is now possible to connect to a DataMiner System via remote access using DataMiner Cube. If remote access is enabled for a DMS and you have been granted access to dataminer.services features, you can access the DMS remotely via Cube using the same URL as for remote access to the web pages, but without the protocol prefix `https://`. A button is also available on dataminer.services and in the Admin app that can be used to open Cube with the correct remote access filled in as the host.
 
 > [!NOTE]
 > At present, there is still a limitation to this feature: if the DMS has SAML authentication configured, users will not be able to access the DMS remotely with Cube.
+
+#### 10 November 2023 - Fix - Grant admin consent linking button unresponsive
+
+Users were no longer able to grant admin consent for the Teams Chat Integration because the button was no longer functional. This issue has now been resolved.
+
+#### 10 November 2023 - Enhancement - Provide a custom username and password when deploying a DaaS system
+
+From now on, you will be able to provide your own username and password for your admin account when deploying a DaaS system.
+
+#### 9 November 2023 - Enhancement - Improved login system for sharing
+
+The live sharing feature, including the [Shares app](https://shares.dataminer.services), now has an improved login system. This should prevent login redirect loops that could be experienced before.
+
+#### 9 November 2023 - Enhancement - Improved login system for connection to the dataminer.services
+
+When a DMS is connected to dataminer.services, an improved login system will now be used. This should prevent login redirect loops that could be experienced before.
 
 #### 26 September 2023 - Fix - Remote Access automatic login now works with special characters in DataMiner account configuration [ID_37438]
 
@@ -275,7 +323,7 @@ The following limitations also apply:
 - Commands that run longer than 30 seconds are currently not supported.
 - Issues with the adaptive card output will not result in proper error feedback.
 
-For more detailed information, refer to [Adding commands for the Teams bot to a DMS](xref:DataMiner_Teams_bot#adding-custom-commands-for-the-teams-bot-to-a-dms)
+For more detailed information, refer to [Adding commands for the Teams bot to a DMS](xref:DataMiner_Teams_bot#adding-custom-commands-for-the-teams-bot-to-a-dms).
 
 #### 19 September 2022 - Enhancement - Improvements on Audit page in Admin app [ID_34457]
 

@@ -130,17 +130,17 @@ These parameters are displayed for the Cable Modem level in the I-DOCSIS dashboa
 
 - **US QAM Ch Reflection Distance**: Calculated. Only available for DOCSIS 3.x. The reflection distance of the associated US channel.
 
-- **US QAM Ch NMTER Alarm Status**: Calculated. Only available for DOCSIS 3.x. The NMTER alarm status. Possible values: *OOS* and *OK*.
+- **US QAM Ch NMTER Alarm Status**: Calculated. Only available for DOCSIS 3.x. The NMTER alarm status. Possible values: *Out of Spec (OOS)* and *OK*.
 
-  This alarm is based on the NMTER value being above or below the NMTER threshold. If the value is above the threshold, the alarm value is *OOS*, otherwise it is *OK*.
+  This alarm is based on the NMTER value being above or below the NMTER threshold. If the value is above the threshold, the alarm value is *Out of Spec (OOS)*, otherwise it is *OK*.
 
-- **US QAM Ch PreMTTER Alarm Status**: Calculated. Only available for DOCSIS 3.x. The PreMTTER alarm status. Possible values: *OOS* and *OK*.
+- **US QAM Ch PreMTTER Alarm Status**: Calculated. Only available for DOCSIS 3.x. The PreMTTER alarm status. Possible values: *Out of Spec (OOS)* and *OK*.
 
-  This alarm is based on the PreMTTER value being above or below the PreMTTER threshold. If the value is above the threshold, the alarm value is *OOS*, otherwise it is *OK*.
+  This alarm is based on the PreMTTER value being above or below the PreMTTER threshold. If the value is above the threshold, the alarm value is *Out of Spec (OOS)*, otherwise it is *OK*.
 
-- **US QAM Ch PostMTTER Alarm Status**: Calculated. Only available for DOCSIS 3.x. The PostMTTER alarm status. Possible values: *OOS* and *OK*.
+- **US QAM Ch PostMTTER Alarm Status**: Calculated. Only available for DOCSIS 3.x. The PostMTTER alarm status. Possible values: *Out of Spec (OOS)* and *OK*.
 
-  This alarm is based on the PostMTTER value being above or below the PostMTTER threshold. If the value is above the threshold, the alarm value is *OOS*, otherwise it is *OK*.
+  This alarm is based on the PostMTTER value being above or below the PostMTTER threshold. If the value is above the threshold, the alarm value is *Out of Spec (OOS)*, otherwise it is *OK*.
 
 - **Reflection Power Ratio**: Direct value.
 

@@ -528,7 +528,7 @@ As a result, proactive detection will now predict when a parameter will cross on
 
 Starting from DataMiner version 10.4.0, XML storage for profiles and resources is no longer supported. When you upgrade DataMiner to version 10.4.0, the `VerifyElasticStorageType` prerequisite will verify whether the system has successfully switched to an indexing database. If profiles and/or resources are still stored in XML files, this prerequisite will cause the upgrade to fail.
 
-See also: [Upgrade fails because of VerifyElasticStorageType.dll prerequisite](xref:KI_Upgrade_fails_VerifyElasticStorageType_prerequisite)
+See also: [Verify Elastic Storage Type](xref:Verify_Elastic_Storage_Type)
 
 ### Protocols
 

@@ -14,3 +14,4 @@ uid: DevelopIndex
 - <xref:DSI>
 - [DataMiner module integrations](xref:DataMinerModuleIntegrations)
 - <xref:ThirdPartyIntegrations>
+- [Best practices](xref:Best_practices)

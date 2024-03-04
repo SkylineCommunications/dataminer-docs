@@ -4,12 +4,11 @@ uid: Platform_independent_CICD
 
 # Platform-independent CI/CD
 
-As several technology stacks are used all over the world to handle source control and CI/CD (Github, Gitlab, Git, Azure, etc.), it is vital to provide tooling and libraries that can run on any of these.
+As several technology stacks are used all over the world to handle source control and CI/CD (GitHub, GitLab, Git, Azure, etc.), it is vital to provide tooling and libraries that can run on any of these.
 
 At Skyline Communication we tackle this in two ways:
 
 - [.NET Tools](https://learn.microsoft.com/en-us/dotnet/core/tools/global-tools)
-
 - Public re-usable [NuGet](https://www.nuget.org/) libraries
 
 ## .NET Tools
@@ -69,7 +68,14 @@ The following tools are the most useful:
 
   This allows you to change the version of a NuGet package used in your SDK-style project to a specific version (or the highest one).
 
-For the complete list, use NuGet and search for [Skyline CICD.Tools](https://www.nuget.org/packages?q=Skyline+CICD.Tools&prerel=true&sortby=relevance).
+- [Skyline.DataMiner.CICD.Tools.Validator](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.Validator)
+
+  This tool allows the validation of a DataMiner protocol solution. This is the same validator as is included in [DataMiner Integration Studio (DIS)](xref:Overall_concept_of_the_DataMiner_Integration_Studio).
+
+  > [!NOTE]
+  > This tool requires that the projects of the protocol solution are SDK-style projects.
+
+For the complete list, use NuGet and search for [Skyline.DataMiner.CICD.Tools](https://www.nuget.org/packages?q=Skyline.DataMiner.CICD.Tools&prerel=true&sortby=relevance).
 
 ## NuGet libraries
 
@@ -77,50 +83,49 @@ We also provide code libraries that can be used for development of custom progra
 
 The following libraries are the most useful:
 
-- [Skyline.DataMiner.CICD.FileSystem](https://www.nuget.org/packages/Skyline.DataMiner.CICD.FileSystem#readme-body-tab)
+- [Skyline.DataMiner.CICD.FileSystem](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.FileSystem)
+
+  - [Skyline.DataMiner.CICD.FileSystem](https://www.nuget.org/packages/Skyline.DataMiner.CICD.FileSystem#readme-body-tab)
 
   We recommend using this instead of System.IO for all tool/stage development in C#. This supports *long paths* in Windows and also allows you to manipulate Windows-style paths while on a Linux system and the other way around. It also handles some authentication issues you may encounter with System.IO when running on GitHub.
 
-- Skyline.DataMiner.CICD.Parsers
+- [Skyline.DataMiner.CICD.Parsers](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Parsers)
 
   - [Skyline.DataMiner.CICD.Parsers.Automation](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Parsers.Automation#readme-body-tab)
-
   - [Skyline.DataMiner.CICD.Parsers.Common](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Parsers.Common#readme-body-tab)
-
   - [Skyline.DataMiner.CICD.Parsers.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Parsers.Protocol#readme-body-tab)
 
   These libraries are meant to assist with parsing XML files or Visual Studio solutions of connectors (protocols) or Automation scripts. They provide logic that allows traversal and lookups within the XML itself.
 
-- Skyline.DataMiner.CICD.Assemblers
+- [Skyline.DataMiner.CICD.Assemblers](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Assemblers)
 
   - [Skyline.DataMiner.CICD.Assemblers.Automation](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Assemblers.Automation#readme-body-tab)
-
   - [Skyline.DataMiner.CICD.Assemblers.Common](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Assemblers.Common#readme-body-tab)
-
   - [Skyline.DataMiner.CICD.Assemblers.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Assemblers.Protocol#readme-body-tab)
 
   These libraries are meant to assist with converting a DIS Visual Studio solution of a connector or Automation script into its XML files and required assemblies.
 
-- Skyline.DataMiner.CICD.DMApp/DMProtocol
+- [Skyline.DataMiner.CICD.DMApp/DMProtocol](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Packages)
 
   - [Skyline.DataMiner.CICD.DMApp.Automation](https://www.nuget.org/packages/Skyline.DataMiner.CICD.DMApp.Automation)
-
   - [Skyline.DataMiner.CICD.DMApp.Common](https://www.nuget.org/packages/Skyline.DataMiner.CICD.DMApp.Common)
-
   - [Skyline.DataMiner.CICD.DMApp.Dashboard](https://www.nuget.org/packages/Skyline.DataMiner.CICD.DMApp.Dashboard)
-
   - [Skyline.DataMiner.CICD.DMApp.Visio](https://www.nuget.org/packages/Skyline.DataMiner.CICD.DMApp.Visio)
-
   - [Skyline.DataMiner.CICD.DMProtocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.DMProtocol)
 
   These libraries are meant to create an application (.dmapp) or protocol (.dmprotocol) package from a DIS Visual Studio solution.
 
-- Skyline.DataMiner.CICD.Models
+- [Skyline.DataMiner.CICD.Models](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Models)
 
   - [Skyline.DataMiner.CICD.Models.Common](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Models.Common#readme-body-tab)
-
   - [Skyline.DataMiner.CICD.Models.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Models.Protocol#readme-body-tab)
 
   Represents the protocol.xml as an object-oriented model to be used in code.
 
-For the complete list, use NuGet and search for [Skyline CICD](https://www.nuget.org/packages?q=Skyline+CICD.&prerel=true&sortby=relevance).
+- [Skyline.DataMiner.CICD.Validators](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Validators)
+
+  - [Skyline.DataMiner.CICD.Validators.Common](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Validators.Common)
+  - [Skyline.DataMiner.CICD.Validators.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Validators.Protocol)
+  - [Skyline.DataMiner.CICD.Validators.Protocol.Features](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Validators.Protocol.Features)
+
+For the complete list, use NuGet and search for [Skyline.DataMiner.CICD](https://www.nuget.org/packages?q=Skyline.DataMiner.CICD.&prerel=true&sortby=relevance).

@@ -31,6 +31,22 @@ The *SLNetTypes* and *SLGlobal* implementations have been updated to support a n
 
 Also, a number of client messages have been adapted to support passing this new *AlarmTreeID/SLAlarmTreeKey* object, and a number of existing properties have been marked as obsolete.
 
+#### SLAnalytics - Behavioral anomaly detection: Server-side changes to allow user feedback [ID_38980]
+
+<!-- MR 10.5.0 - FR 10.4.4 -->
+
+A number of server-side changes have been made to allow users to provide positive or negative feedback on anomaly suggestion events and alarms.
+
+This feedback will be taken into account by the behavior anomaly detection algorithm in order to enhance anomaly event generation, which up to now was based solely on the change point history of the parameter in question.
+
+All user feedback will be stored in a new table named *ai_anomalyfeedback*, which will be added to every Elasticsearch/OpenSearch database.
+
+> [!NOTE]
+>
+> - Until further notice, this feature will require the *AnomalyFeedback* soft-launch option to be enabled.
+> - This feature will only work if the DataMiner System includes an Elasticsearch/OpenSearch database.
+> - Currently, this feature is not yet supported by any of the DataMiner client apps.
+
 ### Protocols
 
 #### FillArray now supports protocol.Leave and protocol.Clear [ID_38153]
@@ -251,6 +267,20 @@ The `ExecuteScriptOnDomInstanceActionSettings` object has been made available as
 > - When, in the DomDefinition, the `ScriptSettings` object is null, the `ScriptSettings` of the `ModuleSettings` will be used instead.
 > - In order for the `ModuleSettings` objects to be used, the objects in the `ModuleSettingsOverrides` of the `DomDefinition` have to be *null*. Just making them empty is not sufficient.
 
+#### DataMiner Object Models: DomInstanceHistorySettings are now also available on DomDefinition level [ID_38294]
+
+<!-- MR 10.5.0 - FR 10.4.4 -->
+
+`DomInstanceHistorySettings` are now also available on DomDefinition level.
+
+The behavior is similar to that of the options in the `ModuleSettingsOverrides` property of a DomDefinition:
+
+- When `HistorySettings` are available in the DomDefinition, these will take precedence.
+- When the `HistorySettings` object in the DomDefinition is null, the `HistorySettings` of the `ModuleSettings` will be used.
+
+> [!IMPORTANT]
+> In order for the `HistorySettings` of the `ModuleSettings` to be used, the `HistorySettings` object in the DomDefinition has to be *null*. Just making the values empty is not sufficient.
+
 #### DataMiner Object Models: New 'GetDifferences' method to compare two DOM instances [ID_38364]
 
 <!-- MR 10.5.0 - FR 10.4.2 -->
@@ -269,3 +299,28 @@ When, in the *SLNetClientTest* tool, you open the *Diagnostics > DMA* menu, you 
 |---------|----------|
 | Health Stats (SLProtocol) > Stats      | Show the overall SLProtocol memory used by all elements. |
 | Health Stats (SLProtocol) > Details... | Show all details of a specific element. |
+
+#### Elasticsearch re-indexing tool [ID_37994]
+
+<!-- MR 10.5.0 - FR 10.4.4 -->
+
+Migrating data from from Elasticsearch 6.8.22 to OpenSearch 2.11.1 involves the following steps:
+
+1. Taking a snapshot of the Elasticsearch 6.8.22 cluster.
+1. Copying the snapshot to an Elasticsearch 7.10.0 cluster, and restoring it.
+1. Re-indexing the data and taking another snapshot.
+1. Copying the snapshot with the re-indexed data to an OpenSearch 2.11.1 cluster, and restoring it
+
+To perform step 3, a command-line re-indexing tool has been developed: *ReIndexElasticSearchIndexes.exe*.
+
+This tool accepts the following arguments:
+
+| Argument | Description |
+|----------|-------------|
+| -Node or -N | The name of the node to be used for re-indexing (mandatory).<br>Format: `http(s)://127.0.0.1:9200` or `http(s)://fqdn:9200` |
+| -User or -U | The user name, to be provided in case Elasticsearch was hardened.<br>See [Securing the Elasticsearch database](xref:Security_Elasticsearch) |
+| -Password or -P | The user password |
+| -DBPrefix or -D | The database prefix, to be provided in case a custom database prefix is used instead of the default `dms-` prefix.<br>If you do not provide a prefix, the default `dms-` will be used. |
+| -TLSEnabled or -T | Whether or not TLS is enabled for this ElasticSearch database.<br>Values: true or false. Default: false |
+
+If you do not specify a user name and user password, the tool will assume a default ElasticSearch database installation.
