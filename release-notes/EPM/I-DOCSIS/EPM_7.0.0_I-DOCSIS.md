@@ -6,6 +6,16 @@ uid: EPM_7.0.0_I-DOCSIS
 
 ## New features
 
+#### Separate procedures for adding a single CCAP/CM pair and creating elements in bulk [ID_38518]
+
+In DataMiner Cube, the interactive Automation script *epm_i_docsis_addnewccapcmpair* now includes the *Create Bulk* and *Create Single* options, to either create a single CCAP/CM pair, or create elements in bulk from a CSV file. Additionally, the *Create Single* procedure now includes a step for entering both the get community string and set community string for the collector.
+
+#### Skyline EPM Platform: Creating multiple threshold tables for CCAP and CM collectors streamlined [ID_38741]
+
+To streamline the process of creating multiple threshold tables for CCAP and CM collectors, the possibility to create multiple sets directly from the Upstream and Downstream tables within the platform has been added.
+
+For this purpose, a new script has also been added, which copies the table from the front-end *Thresholds Settings* page and applies it across active CCAP and CM collectors: *EPM_I_DOCSIS_SetThresholdsTableToCollectors*. These pages can be accessed via the *Configuration* page or *Threshold Settings* page.
+
 ## Changes
 
 ### Enhancements
@@ -23,6 +33,9 @@ When you view all channels associated with a cable modem, now only the active ch
 #### Visual pages now include parent shapes for enhanced network topology [ID_37592]
 
 Alignment errors on the Visual pages for Port, Distribution, and FAT (Forwarding Access Terminal) pages have been corrected. These Visual pages now include parent shapes, making it possible to identify the hub and the Optical Line Terminal (OLT) associated with each entity.
+
+> [!NOTE]
+> This change is related to the EPM GPON Solution because of shared components across solutions.
 
 #### Visual enhancements to EPM entity tables [ID_37776]
 
@@ -56,19 +69,9 @@ Maps now employ relational filtering to identify all available map entities. Thi
 
 Improvements have been made to *Out of Spec (OOS)* reporting by allowing different thresholds for the Rx Power Status, SNR Status, and Post-FEC Status parameters for the US QAM and DS QAM channel modulations. Previously, one threshold was used globally across all channels. Now, thresholds vary depending on the modulation of the associated cable modem (CM) channel. Parameters that used to have fixed thresholds have been replaced with a new table containing the different modulations along with their corresponding thresholds.
 
-#### Separate procedures for adding a single CCAP/CM pair and creating elements in bulk [ID_38518]
-
-In DataMiner Cube, the interactive Automation script *epm_i_docsis_addnewccapcmpair* now includes the *Create Bulk* and *Create Single* options, to either create a single CCAP/CM pair, or create elements in bulk from a CSV file. Additionally, the *Create Single* procedure now includes a step for entering both the get community string and set community string for the collector.
-
 #### Conditional coloring added to dashboard tables [ID_38565]
 
 Conditional coloring has now been implemented across all *CM Overview* and *CM Offline Overview* dashboards. A green color indicates an *OK* parameter status, while a red color indicates an *Out of Spec (OOS)* parameter status.
-
-#### Skyline EPM Platform: Creating multiple threshold tables for CCAP and CM collectors streamlined [ID_38741]
-
-To streamline the process of creating multiple threshold tables for CCAP and CM collectors, the possibility to create multiple sets directly from the Upstream and Downstream tables within the platform has been added.
-
-For this purpose, a new script has also been added, which copies the table from the front-end *Thresholds Settings* page and applies it across active CCAP and CM collectors: *EPM_I_DOCSIS_SetThresholdsTableToCollectors*. These pages can be accessed via the *Configuration* page or *Threshold Settings* page.
 
 #### Cisco CBR-8 CCAP Platform: New OID for fiber node to channel mapping [ID_38765]
 
