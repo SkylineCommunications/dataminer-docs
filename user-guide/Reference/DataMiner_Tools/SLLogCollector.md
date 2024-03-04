@@ -34,11 +34,7 @@ To use the SLLogCollector tool:
      > [!NOTE]
      > When you select the option to collect memory dumps and one or more run-time errors are present, processes affected by these run-time errors are automatically selected.
 
-   - Use the radio buttons to select what should be done with the collected information:
-
-     - If an internet connection is available on the DMA, the collected information can be uploaded to Skyline. In that case, by default an email is sent to <techsupport@skyline.be>, but you can specify a different address. Note that this option is no longer available from DataMiner 10.0.0 CU20, 10.1.0 CU9 and 10.1.11 onwards.
-
-     - Alternatively, you can select to save the information in a folder on the desktop or in a custom folder.
+   - Use the radio buttons to select the location where the log package will be saved. By default, logs are saved to `%USERPROFILE%\Desktop\SL_LogCollector`.
 
 1. When the configuration is complete, click *Start*.
 
