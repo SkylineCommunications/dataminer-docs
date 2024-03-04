@@ -45,15 +45,15 @@ The Scheduling Engine is the beating heart of DataMiner. It executes scheduled a
 
 DataMiner Scheduler provides a wealth of features and capabilities, including but not limited to:
 
-- Wizard for easy creation of schedules
+- Wizard for easy creation of schedules.
 - Execution at a single specific point in time.
-- Execution of an event at repetitive user-defined points in time (e.g. daily, weekly, etc.) or multiple times with a user-defined time interval at repetitive time intervals (e.g. 10 times each 5 minutes every day).
+- Execution of an event at repeated user-defined points in time (e.g. daily, weekly, etc.) or multiple times with a user-defined time interval at repeated time intervals (e.g. 10 times each 5 minutes every day).
 - Run only at specific times of the week (e.g. only on specific days, not in the weekend, etc.) or month (e.g. not in a specific month, not on specific days of the month, etc.).
 - Definition of a start and stop time, or scheduling for indefinite time.
 - Execution of special tasks when executed for the last time (e.g. send a notification e-mail, run a special wrap-up script, etc.).
 - Enabling and disabling schedules, without losing the configuration.
 - Real-time overview of the pending schedules.
-- Calendar overview of past and on-going scripts, as well as overview of scripts that will run on specific days in the future, etc.
+- Calendar overview of past and ongoing scripts, as well as overview of scripts that will run on specific days in the future, etc.
 - Overview of last execution and next scheduled execution of each task, and the result of the last execution (failed or succeeded).
 - Ability to duplicate existing schedules, allowing easy configuration of multiple similar schedules.
 
@@ -88,11 +88,11 @@ The DataMiner Job Manager can be used to create and manage jobs, which are then 
 
 The Automation Engine performs all automation tasks in the ecosystem. Its pronounced open architecture enables operators to easily create scripts and to customize script behavior to their specific environment whenever needed. Within the user interface, you can build intricate, nested scripts that can then be scheduled for one-off or repeated execution. They can also be linked to objects shown in Microsoft Visio drawings, so that operators can trigger them with a click of a button.
 
-Once created, they can be triggered in a variety of ways, ranging from manual operator initiation to event/change based or scheduled execution, and fully support user interaction. So even if tasks are automated, the operator always remains in control.
+Once created, scripts can be triggered in a variety of ways, ranging from manual operator initiation to event-based, change-based, or scheduled execution. The scripts fully support user interaction, so even if tasks are automated, the operator always remains in control.
 
-By fully automating operating and business procedures/workflows, operational expenses can be drastically reduced. Automation scripts can be used in a lot of applications such as intelligent back-up and service-healing routines, guided troubleshooting for operators, automatic configuration, provisioning of services and many more.
+By fully automating operating and business procedures or workflows, operational expenses can be drastically reduced. Automation scripts can be used in a lot of applications such as intelligent backup and service-healing routines, guided troubleshooting for operators, automatic configuration, provisioning of services, and many more.
 
-And combined with DataMiner's integrated [Scheduler](xref:Stack_Orchestration#scheduler), automation scripts can be linked to scheduled tasks.
+Combined with DataMiner's integrated [Scheduler](xref:Stack_Orchestration#scheduler),you can also link Automation scripts to scheduled tasks.
 
 > [!TIP]
 > For more information:
