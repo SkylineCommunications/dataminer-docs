@@ -68,7 +68,7 @@ Conditional coloring has now been implemented across all *CM Overview* and *CM O
 
 To streamline the process of creating multiple threshold tables for CCAP and CM collectors, the possibility to create multiple sets directly from the Upstream and Downstream tables within the platform has been added.
 
-For this purpose, a new script has also been added, which copies the table from the front end and applies it across active CCAP and CM collectors: *EPM_I_DOCSIS_SetThresholdsTableToCollectors*.
+For this purpose, a new script has also been added, which copies the table from the front-end *Thresholds Settings* page and applies it across active CCAP and CM collectors: *EPM_I_DOCSIS_SetThresholdsTableToCollectors*. These pages can be accessed via the *Configuration* page or *Threshold Settings* page.
 
 #### Cisco CBR-8 CCAP Platform: New OID for fiber node to channel mapping [ID_38765]
 
