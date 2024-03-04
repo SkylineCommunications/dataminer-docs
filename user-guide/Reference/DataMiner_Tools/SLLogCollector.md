@@ -34,7 +34,7 @@ To use the SLLogCollector tool:
      > [!NOTE]
      > When you select the option to collect memory dumps and one or more run-time errors are present, processes affected by these run-time errors are automatically selected.
 
-   - Use the radio buttons to select the location where the log package will be saved. By default, logs are saved to `%USERPROFILE%\Desktop\SL_LogCollector`
+   - Use the radio buttons to select the location where the log package will be saved. By default, logs are saved to `%USERPROFILE%\Desktop\SL_LogCollector`.
 
 1. When the configuration is complete, click *Start*.
 
