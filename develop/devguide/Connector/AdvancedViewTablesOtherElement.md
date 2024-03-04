@@ -19,8 +19,8 @@ To implement a direct view table, create a custom table that contains a column h
 
    ```xml
    <ArrayOptions index="0" options=";volatile;view=1000;directView=2802;onlyFilteredDirectView">
-   <ColumnOption idx="0" pid="1601" type="custom" value="" options=";view=1001" />
-   <ColumnOption idx="1" pid="1631" type="custom" value="" options=";view=1031" />
+   <ColumnOption idx="0" pid="1601" type="custom" options=";view=1001" />
+   <ColumnOption idx="1" pid="1631" type="custom" options=";view=1031" />
    ```
 
    This example looks at the DMA ID/element IDs specified in the column with parameter ID 2802 and then builds a view from table 1000 of the source elements and displays columns of the source element with parameter ID 1001 and 1031.
@@ -33,11 +33,11 @@ To implement a direct view table, create a custom table that contains a column h
 
      ```xml
      <ArrayOptions index="0" options=";volatile;view=1200">
-        <ColumnOption idx="0" pid="24101" type="custom" value="" options=";view=1201"/>
-        <ColumnOption idx="1" pid="24102" type="custom" value="" options=";view=:2802:1000:1"/>
-        <ColumnOption idx="2" pid="24103" type="custom" value="" options=";view=:2802:1000:31"/>
-        <ColumnOption idx="3" pid="24104" type="custom" value="" options=";view=1204:2004"/>
-        <ColumnOption idx="4" pid="24105" type="custom" value="" options=";view=1204:2202"/>
+        <ColumnOption idx="0" pid="24101" type="custom" options=";view=1201"/>
+        <ColumnOption idx="1" pid="24102" type="custom" options=";view=:2802:1000:1"/>
+        <ColumnOption idx="2" pid="24103" type="custom" options=";view=:2802:1000:31"/>
+        <ColumnOption idx="3" pid="24104" type="custom" options=";view=1204:2004"/>
+        <ColumnOption idx="4" pid="24105" type="custom" options=";view=1204:2202"/>
      ```
 
      In example 1 above, there is a table (ID 1200) in the aggregator element that contains primary keys (parameter ID 1201) and a foreign key (parameter ID 1204) to a parent table (ID 2000) (which contains a column with parameter ID 2004). Table 2000 in turn contains a foreign key to table 2200 (which contains a column with parameter ID 2202).
@@ -56,11 +56,11 @@ To implement a direct view table, create a custom table that contains a column h
 
      ```xml
      <ArrayOptions index="0" options=";volatile;view=1200">
-       <ColumnOption idx="0" pid="24101" type="custom" value="" options=";view=1201"/>
-       <ColumnOption idx="1" pid="24102" type="custom" value="" options=";view=:2802:1000:1"/>
-       <ColumnOption idx="2" pid="24103" type="custom" value="" options=";view=:2802:1000:31"/>
-       <ColumnOption idx="3" pid="24104" type="custom" value="" options=";view=1204:2004"/>
-       <ColumnOption idx="4" pid="24105" type="custom" value="" options=";view=1204:2202"/>
+       <ColumnOption idx="0" pid="24101" type="custom" options=";view=1201"/>
+       <ColumnOption idx="1" pid="24102" type="custom" options=";view=:2802:1000:1"/>
+       <ColumnOption idx="2" pid="24103" type="custom" options=";view=:2802:1000:31"/>
+       <ColumnOption idx="3" pid="24104" type="custom" options=";view=1204:2004"/>
+       <ColumnOption idx="4" pid="24105" type="custom" options=";view=1204:2202"/>
      ```
 
      In example 2 above, there is a foreign key relation between one of the upper tables that 1204 is referring to and the table that contains the column with parameter ID 2802.
