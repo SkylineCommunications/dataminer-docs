@@ -121,31 +121,31 @@ These parameters are displayed for the Cable Modem level in the I-DOCSIS dashboa
 
   This is based on the existence of at least one associated upstream QAM channel reporting valid US Rx Power values, which are put through the Upstream Channel Minimum/Maximum Rx Power Level thresholds logic. Users will be able to set the thresholds that will be used to determine the US Rx Power Status.
 
-  Possible values: *OK* if all US channels report US Rx Power within thresholds, and *OOS* if at least one US channel reports US Rx Power outside thresholds.
+  Possible values: *OK* if all US channels report US Rx Power within thresholds, and *Out of Spec (OOS)* if at least one US channel reports US Rx Power outside thresholds.
 
 - **US QAM Tx Power Status**: Calculated. The CM US Tx Power Status based on operational thresholds.
 
   This is based on the existence of at least one associated upstream QAM channel reporting valid US Tx Power values, which are put through the Upstream Channel Minimum/Maximum Tx Power Level thresholds logic. Users will be able to set the thresholds that will be used to determine the US Tx Power Status.
 
-  Possible values: *OK* if all US channels report US Tx Power within thresholds, and *OOS* if at least one US channel reports US Tx Power outside thresholds.
+  Possible values: *OK* if all US channels report US Tx Power within thresholds, and *Out of Spec (OOS)* if at least one US channel reports US Tx Power outside thresholds.
 
 - **US QAM SNR Status**: Calculated. The CM US SNR Status based on operational thresholds.
 
   This is based on the existence of at least one associated upstream QAM channel reporting valid SNR values, which are put through the Upstream Channel Minimum SNR threshold logic. Users will be able to set the threshold that will be used to determine the SNR Status.
 
-  Possible values: *OK* if all US channels report US SNR at or above the threshold, and *OOS* if at least one US channel reports US SNR below the threshold.
+  Possible values: *OK* if all US channels report US SNR at or above the threshold, and *Out of Spec (OOS)* if at least one US channel reports US SNR below the threshold.
 
 - **US QAM Post-FEC Status**: Calculated. The US Post-FEC Status based on operational thresholds.
 
   This is based on the existence of at least one associated upstream QAM channel reporting valid Uncorrectable Ratio values, which are put through the Upstream Channel Post-FEC Maximum Uncorrectable Error Ratio threshold logic. Users will be able to set the threshold that will be used to determine the US Post-FEC Status.
 
-  Possible values: *OK* if all US channels report an Uncorrectable Ratio below or at the threshold, and *OOS* if at least one US channel reports an Uncorrectable Ratio above the threshold.
+  Possible values: *OK* if all US channels report an Uncorrectable Ratio below or at the threshold, and *Out of Spec (OOS)* if at least one US channel reports an Uncorrectable Ratio above the threshold.
 
 - **US Time Offset Status**: Calculated. The CM US Time Offset Status based on operational thresholds.
 
   This is based on the existence of at least one associated upstream QAM channel reporting valid US Time Offset values, which are put through the Upstream Maximum Timing Offset threshold logic. Users will be able to set the threshold that will be used to determine the US Time Offset Status.
 
-  Possible values: *OK* if all US channels report a US Time Offset at or below the threshold, and *OOS* if at least one US channel reports a US Time Offset above the threshold.
+  Possible values: *OK* if all US channels report a US Time Offset at or below the threshold, and *Out of Spec (OOS)* if at least one US channel reports a US Time Offset above the threshold.
 
 ## DS QAM
 
@@ -153,35 +153,35 @@ These parameters are displayed for the Cable Modem level in the I-DOCSIS dashboa
 
   This is based on the existence of at least one associated downstream QAM channel reporting valid DS Rx Power values, which are put through the Downstream Channel Minimum/Maximum Rx Power Level thresholds logic. Users will be able to set the thresholds that will be used to determine the DS Rx Power Status.
 
-  Possible values: *OK* if all DS channels report DS Rx Power within thresholds, and *OOS* if at least one DS channel reports DS Rx Power outside thresholds.
+  Possible values: *OK* if all DS channels report DS Rx Power within thresholds, and *Out of Spec (OOS)* if at least one DS channel reports DS Rx Power outside thresholds.
 
 - **DS QAM SNR Status**: Calculated. The CM DS SNR Status based on operational thresholds.
 
   This is based on the existence of at least one associated downstream QAM channel reporting valid SNR values, which are put through the Downstream Channel Minimum SNR threshold logic. Users will be able to set the threshold that will be used to determine the SNR Status.
 
-  Possible values: *OK* if all DS channels report DS SNR at or above the threshold, and *OOS* if at least one DS channel reports DS SNR below the threshold.
+  Possible values: *OK* if all DS channels report DS SNR at or above the threshold, and *Out of Spec (OOS)* if at least one DS channel reports DS SNR below the threshold.
 
 - **DS QAM Post-FEC Status**: Calculated. The DS Post-FEC Status based on operational thresholds.
 
   This is based on the existence of at least one associated downstream QAM channel reporting valid Uncorrectable Ratio values, which are put through the Downstream Channel Post-FEC Maximum Uncorrectable Error Ratio threshold logic. Users will be able to set the threshold that will be used to determine the DS Post-FEC Status.
 
-  Possible values: *OK* if all DS channels report an Uncorrectable Ratio below or at the threshold, and *OOS* if at least one DS channel reports an Uncorrectable Ratio above the threshold.
+  Possible values: *OK* if all DS channels report an Uncorrectable Ratio below or at the threshold, and *Out of Spec (OOS)* if at least one DS channel reports an Uncorrectable Ratio above the threshold.
 
 ## D3.0 PNM
 
 - **Group Delay Status**: Calculated. The group delay status of the cable modem according to the PreMTTER values reported by the associated US channels.
 
-  Possible values: *OK* if all associated US channels are operating within acceptable PreMTTER thresholds, and *OOS* (Out of Spec) if at least one US channel is operating outside acceptable PreMTTER thresholds.
+  Possible values: *OK* if all associated US channels are operating within acceptable PreMTTER thresholds, and *Out of Spec (OOS)* if at least one US channel is operating outside acceptable PreMTTER thresholds.
 
 - **Reflection Status**: Calculated. The reflection status of the cable modem according to the PostMTTER values reported by the associated US channels.
 
-  Possible values: *OK* if all associated US channels are operating within acceptable PostMTTER thresholds, and *OOS* (Out of Spec) if at least one US channel is operating outside acceptable PostMTTER thresholds.
+  Possible values: *OK* if all associated US channels are operating within acceptable PostMTTER thresholds, and *Out of Spec (OOS)* if at least one US channel is operating outside acceptable PostMTTER thresholds.
 
 - **Average Reflection Distance**: Calculated. The average reflection distance of the associated US channels.
 
 - **Group Delay or Reflection Status**: Calculated. The presence of group delay or reflection, based on the reported group delay or reflection status values of the cable modem.
 
-  Possible values: *OK* if all associated group delay and reflection status reports are OK, and *OOS* (Out of Spec) if group delay or reflection status is reporting OOS.
+  Possible values: *OK* if all associated group delay and reflection status reports are OK, and *Out of Spec (OOS)* if group delay or reflection status is reporting OOS.
 
 ## Ping Stats
 

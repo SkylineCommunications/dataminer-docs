@@ -8,8 +8,23 @@ uid: Git_protocol_repositories
 
 Each protocol is stored in a dedicated Git repository on Gerrit. Different branches exist for each version range branch (e.g. 1.0.0.X, 1.0.1.X, 2.0.0.X, etc.) and each released version will result in a tag in the Git repository. Consider the following image representing the branches and tags for an example protocol Git repository:
 
-![](~/develop/images/GitRepositoryExample.png)<br>
-*Example of range branches and tags for a protocol Git repository*
+```mermaid
+%%{init: { 'logLevel': 'debug', 'theme': 'base', 'gitGraph': {'showBranches': true, 'showCommitLabel':true,'mainBranchName': '1.0.0.X'}} }%%
+      gitGraph TB:
+        commit tag:"1.0.0.1"
+        commit tag:"1.0.0.2"
+        commit tag:"1.0.0.3"
+        commit tag:"1.0.0.4"
+        commit tag:"1.0.0.5"
+        commit tag:"1.0.0.6"
+        commit tag:"1.0.0.7"
+        branch 2.0.0.X
+        commit tag:"2.0.0.1"
+        commit tag:"2.0.0.2"
+        commit tag:"2.0.0.3"
+        checkout 1.0.0.X
+        commit tag:"1.0.0.8"
+```
 
 This protocol has two range branches: 1.0.0.X and 2.0.0.X. The 1.0.0.X branch has tags for versions 1.0.0.1 up to and including 1.0.0.8. In the image, you can also see that a new branch has been created for the 2.0.0.X range and that version 2.0.0.1 has been created based on version 1.0.0.7.
 

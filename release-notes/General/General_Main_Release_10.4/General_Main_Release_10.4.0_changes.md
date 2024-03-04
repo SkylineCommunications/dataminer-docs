@@ -787,7 +787,7 @@ When two DataMiner Agents try to connect via SLNet, from now on, this will no lo
 
 When you upgrade DataMiner from a version older than 10.4.0 to a version from 10.4.0 onwards, the newly added *VerifyNoObsoleteApiDeployed* prerequisite will check whether the *APIDeployment* soft-launch flag is active and whether APIs are deployed. If so, the prerequisite will fail and return a link to the following page:
 
-- [Upgrade fails because of VerifyNoObsoleteApiDeployed.dll prerequisite](xref:KI_Upgrade_fails_VerifyNoObsoleteApiDeployed_prerequisite)
+- [Verify No Obsolete API Deployed](xref:Verify_No_Obsolete_API_Deployed)
 
 Also, the newly added *UninstallApiDeployment* upgrade action will remove everything related to the deprecated [API Deployment](xref:Overview_of_Soft_Launch_Options#apideployment) feature:
 
@@ -827,7 +827,7 @@ Ad hoc data sources and custom operators now support row metadata.
 
 When you upgrade DataMiner from a version older than 10.4.0 to a version from 10.4.0 onwards, the newly added prerequisite will check whether the DataMiner Agent still contains legacy reports or legacy dashboards. If so, the prerequisite will fail.
 
-See also: [Upgrade fails because of VerifyNoLegacyReportsDashboards.dll prerequisite](xref:KI_Upgrade_fails_VerifyNoLegacyReportsDashboards_prerequisite)
+See also: [Verify No Legacy Reports Dashboards](xref:Verify_No_Legacy_Reports_Dashboards)
 
 #### Service & Resource Management: Enhanced performance when updating/applying profile instances [ID_37976]
 
@@ -896,6 +896,15 @@ From now on, a behavioral change will only be taken into account when the change
 
 As a result, anomalies that report a trend change "from 0%/day to 0%/day", a level shift from "0.1 to 0.1", etc. will no longer be taken into account.
 
+#### SLProtocol will now always fetch element data page by page except on systems with a MySQL database [ID_38388]
+
+<!-- MR 10.3.0 [CU12]/10.4.0 - FR 10.4.3 -->
+
+From now on, SLProtocol will always fetch element data page by page, except on systems with a MySQL database.
+
+On systems with a MySQL database, SLProtocol will continue to fetch element data by parameter ID.
+
+
 #### SLProtocol will no longer log messages related to duplicate keys at the default log levels [ID_38392] [ID_38517]
 
 <!-- MR 10.4.0 - FR 10.4.3 -->
@@ -938,6 +947,12 @@ Because of a number of enhancements, overall performance has increased when addi
 <!-- MR 10.4.0 - FR 10.4.3 -->
 
 Change point detection accuracy has been improved for change points of type flatline.
+
+#### DataMinerSolutions.dll now included in core DataMiner software [ID_38530]
+
+<!-- MR 10.4.0 - FR 10.4.3 / originally included in IDP 1.5.0 -->
+
+To make sure that installing IDP will no longer require a DataMiner restart, *DataMinerSolutions.dll* will now be included in the core DataMiner software.
 
 ### Fixes
 
@@ -1060,6 +1075,12 @@ In some rare cases, an error could be thrown when an element was renamed.
 #### Deprecated DMS_GET_INFO call could return unexpected DVE child data [ID_36964]
 
 The deprecated DMS_GET_INFO call would return unexpected data when it returned data of elements that contained remotely hosted DVE child elements.
+
+#### Problem when the NATS library called the error handling event [ID_37028]
+
+<!-- MR 10.4.0 - FR 10.3.9 [CU0] -->
+
+When the NATS library called the error handling event, in some cases, it would pass a `nullptr` for the subscription parameter. As a result, an exception would be thrown, potentially causing the hosting process to stop working.
 
 #### SLAnalytics: Problem when creating or editing a multivariate pattern [ID_37212]
 
@@ -1264,6 +1285,12 @@ In some cases, DataMiner Cube would not be able to reconnect to the server after
 When SLAnalytics was handling large amounts of traffic, in some cases, certain parameter value changes would incorrectly not get processed.
 
 Also, a large number of low-severity change points were generated without a label. Those have now been reduced.
+
+#### Protocols: IDisposable QActions would incorrectly not be disposed [ID_38605]
+
+<!-- MR 10.3.0 [CU12]/10.4.0 - FR 10.4.3 -->
+
+When DataMiner was processing all QActions in order to call the `Dispose` method on the QActions that implement `IDisposable`, it would incorrectly no longer call the `Dispose` method on QActions that implement `IDisposable` after processing a QAction that did not implement `IDisposable`.
 
 #### Problem when adding a DMA to a DMS [ID_38620]
 

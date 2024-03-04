@@ -685,6 +685,8 @@ items:
   - name: Automation scripts
     topicUid: AutomationDevGuideIndex
     items:
+    - name: Getting started with Automation script development
+      topicUid: GettingStartedWithAutomationScriptDevelopment
     - name: Actions
       topicUid:  AutomationActions
       items:
@@ -5304,7 +5306,6 @@ items:
   topicUid: TOOLS
   items:
     - name: DataMiner Integration Studio (DIS)
-      topicUid: DIS
       items:
         - name: Introduction
           topicUid: Overall_concept_of_the_DataMiner_Integration_Studio
@@ -5625,3 +5626,10 @@ items:
       topicUid: Configure_DataMiner_using_Ansible
     - name: Grafana
       topicUid: Grafana_plugin
+- name: Best practices
+  topicUid: Best_practices
+  items:
+    - name: Unit testing
+      topicUid: Unit_testing
+    - name: XML documentation comments
+      topicUid: Xml_Documentation_Comments

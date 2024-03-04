@@ -27,6 +27,8 @@ The available interfaces are:
 
 - [IGQIOnPrepareFetch](xref:GQI_IGQIOnPrepareFetch)
 
+- [IGQIUpdateable](xref:GQI_IGQIUpdateable) (available from DataMiner 10.4.4/10.5.0 onwards<!-- RN 38643 -->)
+
 ## Objects in the ad hoc data script
 
 To build the ad hoc data source, you can use the following objects:

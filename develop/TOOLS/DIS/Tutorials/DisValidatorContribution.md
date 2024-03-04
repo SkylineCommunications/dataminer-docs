@@ -6,15 +6,15 @@ uid: DisTutorials_ValidatorContributions
 
 ## About
 
-In this tutorial, you will explore collaborative software development and DevOps with a focus on adding new checks to the validator (which is also incorporated in DataMiner Integration Studio (DIS)) and on CI/CD. You will learn how to navigate the validator source code, add a new check, and create a pull request. With a hands-on exercise using fake Validator source code, you will get to utilize GitHub to create a fork, a clone, and a pull request with your changes so that you will be ready to contribute to the actual Validator.
+In this tutorial, you will explore collaborative software development and DevOps with a focus on adding new checks to the Validator (which is also incorporated in DataMiner Integration Studio (DIS)) and on CI/CD. You will learn how to navigate the Validator source code, add a new check, and create a pull request. With a hands-on exercise using fake Validator source code, you will get to utilize GitHub to create a fork, a clone, and a pull request with your changes so that you will be ready to contribute to the actual Validator.
 
 The only difference between the tutorial and actual contributions lies in the fork used in step 2:
 
 - In the tutorial, you will fork [https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.ValidatorsExercise](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.ValidatorsExercise)
 
-- For real validator contributions, you will fork [https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Validators](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Validators)
+- For real Validator contributions, you will fork [https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Validators](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Validators)
 
-Missing test: When adding the "datetime" option to the *Measurement.Type* tag, check if the *Display* tag contains a `<Decimals>8</Decimals>` tag.
+This is the missing Validator check you will be adding in this tutorial: When the "datetime" option is added to the *Measurement.Type* tag, the *Display* tag must contain a `<Decimals>8</Decimals>` tag.
 
 Expected duration: 15 minutes.
 
@@ -43,7 +43,7 @@ Expected duration: 15 minutes.
 
 1. Go to [https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.ValidatorsExercise](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.ValidatorsExercise)
 
-1. In the top right corner, click *Fork*.
+1. In the top-right corner, click *Fork*.
 
 1. Follow the wizard to create a fork of the repository under your own account.
 
@@ -52,7 +52,7 @@ Expected duration: 15 minutes.
 On the page of your GitHub fork (e.g. `https://github.com/YourGitHubHandle/Skyline.DataMiner.CICD.ValidatorsExercise`), click the *Code* button and select *Open in Visual Studio*.
 
 > [!NOTE]
-> In some cases, the *Open in Visual Studio* option may not be available. In that case, you will need to use *GitHub Desktop* instead to make the clone. Make sure you have [GitHub Desktop](https://desktop.github.com/) installed. Then click the *Code* button on your fork page and select the option *Open with GitHub Desktop* instead.
+> In some cases, the *Open in Visual Studio* option may not be available. In that case, you will need to use GitHub Desktop instead to make the clone. Make sure you have [GitHub Desktop](https://desktop.github.com/) installed. Then click the *Code* button on your fork page and select the option *Open with GitHub Desktop* instead.
 
 ## Step 3: Run the 'Validator Management Tool'
 
@@ -68,7 +68,7 @@ On the page of your GitHub fork (e.g. `https://github.com/YourGitHubHandle/Skyli
 
 ## Step 4: Add a new check
 
-1. In the *Validator Management Tool*, click the *Add Check...* button.
+1. In the *Validator Management Tool*, click the *Add Check* button.
 
    A new window will open.
 
@@ -80,15 +80,15 @@ On the page of your GitHub fork (e.g. `https://github.com/YourGitHubHandle/Skyli
 
      Use `Param`.
 
-   - **Namespace:** Define the "path" of the tag/attribute. If it is a new namespace, use the *Add new Namespace...* button.
+   - **Namespace:** Define the "path" of the tag/attribute. If it is a new namespace, use the *Add new Namespace* button.
 
-     In this exercise, we want to check the correctness of the *Display* tag. So we should add a new namespace for *Protocol.Params.Param.Display.Decimals*.
+     In this exercise, the correctness of the *Display* tag is checked. A new namespace for *Protocol.Params.Param.Display.Decimals* should be added.
 
      Select the newly created `Protocol.Params.Param.Display.Decimals` namespace.
 
    - **Check Name:** Specify the name of the class to be generated.
 
-     In this exercise, we want to check the validity of the content of this tag. We should add a new check named *CheckDecimalsTag*.
+     In this exercise, the validity of the content of this tag is checked. A new check named *CheckDecimalsTag* should be added.
 
      Select the newly created `CheckDecimalsTag`.
 
@@ -102,13 +102,13 @@ On the page of your GitHub fork (e.g. `https://github.com/YourGitHubHandle/Skyli
 
    - **Description Parameters:** List the placeholders from the description.
 
-     For this exercise, we can already add some fixed data:
+     For this exercise, you can already add some fixed data:
 
      - tagName: Display/Decimals
      - expectedValue: 8
      - itemKind: Param
 
-     We can also rename "itemId" to "paramId" to make our code more readable later on.
+     Also rename "itemId" to "paramId" to make the code more readable later on.
 
    - **Source:** Indicate whether the source is "Validator" (Validate) or "MajorChangeChecker" (Compare).
 
@@ -116,11 +116,11 @@ On the page of your GitHub fork (e.g. `https://github.com/YourGitHubHandle/Skyli
 
    - **Severity:** Specify the severity level. To choose the correct severity, you can follow the following guide:
 
-     - Critical: This type of error will have a critical impact on the system or will fully prevent the driver from working. It may also draw your attention to something that needs to be fixed for administrative reasons.
+     - Critical: This type of error will have a critical impact on the system or will fully prevent the connector from working. It may also draw your attention to something that needs to be fixed for administrative reasons.
 
-     - Major: This type of error will prevent part of the driver from working as expected. Example: A specific driver feature will not work.
+     - Major: This type of error will prevent part of the connector from working as expected. Example: A specific connector feature will not work.
 
-     - Minor: This type of error will not prevent the driver from working, but will have some impact. It may draw your attention to something that was not implemented according to the best practice guidelines. Example: Bad performance, Not user-friendly, etc.
+     - Minor: This type of error will not prevent the connector from working, but will have some impact. It may draw your attention to something that was not implemented according to the best practice guidelines. Example: Bad performance, Not user-friendly, etc.
 
      - Warning: This type of error reveals something that will not have any impact. Example: Unused XML elements or attributes.
 
@@ -140,11 +140,11 @@ On the page of your GitHub fork (e.g. `https://github.com/YourGitHubHandle/Skyli
 
    - **Has Code Fix:** Indicate if an automatic fix is possible.
 
-     Though an automatic fix is possible, we will deal with automatic fixes in a different tutorial. Do not select the checkbox.
+     Though an automatic fix is possible, automatic fixes are dealt with in a different tutorial. Do not select the checkbox.
 
    - **How To Fix:** Optionally describe the steps to fix the issue.
 
-     We can write the following:
+     You can write the following:
 
      ```md
      Add a Protocol/Params/Param/Display/Decimals tag with value 8.
@@ -152,7 +152,7 @@ On the page of your GitHub fork (e.g. `https://github.com/YourGitHubHandle/Skyli
 
    - **Example Code:** Optionally provide the correct syntax.
 
-     We can write the following:
+     You can write the following:
 
      ```xml
      <Display>
@@ -166,7 +166,7 @@ On the page of your GitHub fork (e.g. `https://github.com/YourGitHubHandle/Skyli
 
    - **Details:** Extra information about the error. This is important as it will be visible in the DIS UI.
 
-     We can write the following:
+     You can write the following:
 
      ```md
      By default, only 6 decimals are saved in memory. Parameters holding datetime values need at least 8 decimals to be accurate.
@@ -188,7 +188,7 @@ On the page of your GitHub fork (e.g. `https://github.com/YourGitHubHandle/Skyli
 
    ![ShowGeneratedCode](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.ValidatorsExercise/assets/71829634/3f9b3c5d-eea4-4fa3-bf4d-83fb086054df)
 
-   We will now write our tests. This will ensure we can develop until no tests are failing.
+   Now, the tests can be written. This will ensure that you can develop until no tests are failing.
 
 1. Open the *Valid.xml* file, and create XML code that represents the expected correct XML code:
 
@@ -229,17 +229,17 @@ On the page of your GitHub fork (e.g. `https://github.com/YourGitHubHandle/Skyli
 
    ![ValidatorShowGeneratedCodeChangeTests](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.ValidatorsExercise/assets/71829634/1cacc3ac-8a13-4b37-b710-7cae5882cf07)
 
-1. Uncomment the `Error.InvalidTagForDateTime(...` line, and change it to what we expect to get.
+1. Uncomment the `Error.InvalidTagForDateTime(...` line, and change it to what is expected.
 
    You can press F12 on the static method to see the expected description format: `Missing tag '{0}' with expected value '{1}' for {2} '{3}'.`
 
    ```csharp
-   Error.InvalidTagForDateTime(null, null, null, "paramId"),
+   Error.InvalidTagForDateTime(null, null, null, "10"),
    ```
 
 1. Right-click the first line of the file, and select *Run Tests*.
 
-   At this point, you should see 3 failing tests.
+   At this point, you should see three failing tests.
 
 ## Step 6: Write your logic
 
@@ -257,9 +257,9 @@ On the page of your GitHub fork (e.g. `https://github.com/YourGitHubHandle/Skyli
    //[Test(CheckId.CheckDecimalTag, Category.Param)]
    ```
 
-1. Comment out `ICodeFix` and `ICompare`. We will only use `IValidate`.
+1. Comment out `ICodeFix` and `ICompare`. Only `IValidate` will be used.
 
-1. Most of your validation will need to loop over several items to validate. In this case, we need every parameter: *context.EachParamWithValidId*.
+1. Most of your validation will need to loop over several items to validate. In this case, every parameter is needed: *context.EachParamWithValidId*.
 
    You can use the following code:
 
@@ -270,22 +270,23 @@ On the page of your GitHub fork (e.g. `https://github.com/YourGitHubHandle/Skyli
    
       foreach (var param in context.EachParamWithValidId())
       {
-         // Early Return pattern. Only check number types.
+         var displayTag = param.Display;
+         
+         // Early return pattern. Only check when there is a Display tag.
+         if (displayTag == null) continue;
+
+         // Only check number types.
          if (!param.IsNumber()) continue;
     
-         // Only check if there are options.
-         var allOptions = param.Measurement?.Type?.Options?.Value?.Split(';');
-         if (allOptions == null) continue;
-    
-         // Is there an option involving date or datetime?
-         List<string> possibleLowerCaseDateSyntax = new List<string>() { "date", "datetime", "datetime:minute" };
-         bool foundDateTime = Array.Exists(allOptions, option => possibleLowerCaseDateSyntax.Contains(option.ToLower()));
+         // Only check if date or datetime parameter
+         if (!param.IsDateTime()) continue;
     
          // Verify valid decimals.
          var decimalsTag = param.Display?.Decimals;
          if (foundDateTime && decimalsTag?.Value != 8)
          {
-            results.Add(Error.InvalidTagForDateTime(this, param, decimalsTag, param.Id.RawValue));
+            var positionNode = decimalsTag ?? (IReadable)displayTag;
+            results.Add(Error.InvalidTagForDateTime(this, param, positionNode, param.Id.RawValue));
          }
       }
     

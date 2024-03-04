@@ -33,6 +33,8 @@ items:
     items:
       - name: EPM 7.0.0 I-DOCSIS
         topicUid: EPM_7.0.0_I-DOCSIS
+      - name: EPM 6.1.10 I-DOCSIS - preview
+        topicUid: EPM_6.1.10_I-DOCSIS
       - name: EPM 6.1.9 I-DOCSIS
         items:
           - name: New features and changes
@@ -73,6 +75,8 @@ items:
         topicUid: EPM_5.0.0_I-DOCSIS
   - name: VSAT
     items:
+      - name: EPM 1.0.9 VSAT - preview
+        topicUid: EPM_1.0.9_VSAT
       - name: EPM 1.0.8 VSAT
         topicUid: EPM_1.0.8_VSAT
       - name: EPM 1.0.7 VSAT

@@ -4,6 +4,17 @@ uid: artifactdeployer_change_log
 
 # ArtifactDeployer change log
 
+#### 4 March 2024 - Enhancement - ArtifactDeployer 1.6.7 - Improved installer robustness [ID_38940]
+
+The ArtifactDeployer installer has been updated to mitigate a Windows DLL redirection vulnerability and to improve its robustness.
+
+#### 22 February 2024 - Enhancement - ArtifactDeployer 1.6.6 - Improved deployment robustness [ID_38852]
+
+Robustness for Catalog and DxM deployments has been improved by adding and improving retry mechanisms.
+
+> [!TIP]
+> To make use of all the enhancements, also install Orchestrator 1.5.5.
+
 #### 22 January 2024 - Enhancement - ArtifactDeployer 1.6.5 - Added DMA ID to deployment events [ID_38485]
 
 In combination with CoreGateway 2.14.0 or higher, the ArtifactDeployer will be able to include the DMA ID in deployment events, visible on the *Deployments* page of a DMS in the [Admin app](https://admin.dataminer.services). In case of a failure, particularly in a cluster, this ID provides a direct link to the server whose logs you need to examine for further investigation.

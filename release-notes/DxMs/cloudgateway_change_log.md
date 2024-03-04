@@ -4,6 +4,10 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
+#### 4 March 2024 - Enhancement - CloudGateway 2.13.6 - Improved installer robustness [ID_38907] [ID_38936]
+
+The CloudGateway installer has been updated to mitigate a Windows DLL redirection vulnerability and to improve its robustness.
+
 #### 12 February 2024 - Fix - CloudGateway 2.13.5 - Stability degradation since CloudGateway 2.13.4 [ID_38730]
 
 Since CloudGateway 2.13.4, a problem could occur in the CloudGateway service that temporarily made it stop responding. The service was able to recover from this problem automatically. This issue has been resolved.
