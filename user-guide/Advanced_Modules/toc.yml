@@ -656,6 +656,8 @@ items:
                     topicUid: GQI_TimeRangeMetadata
               - name: Best practices
                 topicUid: GQI_Extensions_Best_Practices
+          - name: Logging
+            topicUid: GQI_Logging
           - name: Query updates
             topicUid: Query_updates
           - name: Importing a query
