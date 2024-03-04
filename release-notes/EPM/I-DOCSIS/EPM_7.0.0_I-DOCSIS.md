@@ -86,7 +86,7 @@ The allocation of Physical Channel instances has been improved to accurately rep
 Several changes have been made to the existing *EPM_I_DOCSIS_AddNewCcapCmPair* script, used to create a CCAP/CM pair from the EPM UI:
 
 - The script will check for existing custom properties. If they are absent, they will be automatically created.
-- The script will restart the element once the properties/parameters have been set.
+- The script will restart both elements (CCAP and Collector) once the properties/parameters have been set.
 - When creating the element, issues with the port 161 could occur, preventing the pulling of information. This issue has now been resolved.
 
 ### Fixes
