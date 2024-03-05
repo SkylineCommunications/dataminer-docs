@@ -28,6 +28,12 @@ uid: General_Feature_Release_10.4.5
 
 ### Enhancements
 
+#### Enhanced performance when starting up a DataMiner Agent with a large number of virtual elements [ID_38780]
+
+<!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
+
+Because of a number of enhancements, overall performance has increased when starting up a DataMiner Agent with a large number of virtual elements.
+
 #### Security enhancements [ID_38904]
 
 <!-- RN 38904: MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
