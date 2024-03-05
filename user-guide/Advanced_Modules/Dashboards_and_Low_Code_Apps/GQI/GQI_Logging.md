@@ -6,7 +6,7 @@ uid: GQI_Logging
 
 Logging for GQI is available from DataMiner 10.4.0/10.4.4 onwards.<!-- RN 38870 -->
 
-Errors and warnings are logged to log files in the *C:\Skyline DataMiner\Logging\GQI* folder.
+Errors and warnings are logged to log files in the folder *C:\Skyline DataMiner\Logging\GQI*.
 
 If this folder does not exist, it will be created automatically with the first log.
 
