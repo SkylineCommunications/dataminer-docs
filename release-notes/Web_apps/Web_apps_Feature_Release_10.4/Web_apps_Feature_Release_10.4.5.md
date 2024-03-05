@@ -22,7 +22,11 @@ uid: Web_apps_Feature_Release_10.4.5
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Dashboards app & Low-Code Apps - Query filter component: Enhanced button coloring [ID_38754]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+Up to now, the buttons in the *Query filter* component would be barely visible when the color of the app was similar to the background color of the theme. From now on, the buttons in the *Query filter* component will always have the text color of the theme.
 
 ### Fixes
 
