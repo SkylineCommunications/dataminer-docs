@@ -42,7 +42,7 @@ This tab allows you to start a device discovery and manage the discovered elemen
 
   > [!NOTE]
   >
-  > - It is only possible to complete a discovery action for a specific CI Type if the *Discovery* activity setting is enabled on the tab *Admin* > *Activities*.
+  > - It is only possible to complete a discovery action for a specific CI Type if the *Discovery* activity setting is enabled on the tab *Admin* > *Activities* (or *Processes* > *Automation* in older IDP versions).
   > - When a discovery has been initiated, the *Provisioning Status* column in the table will display the status *Provisioning Started*. As long as this status is displayed, you will not be able to start another provisioning activity for the same device.
 
 - **Most recent discoveries**: Displays information on the 6 most recent discovery operations.

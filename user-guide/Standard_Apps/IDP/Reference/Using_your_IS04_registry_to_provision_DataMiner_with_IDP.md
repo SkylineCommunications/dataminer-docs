@@ -6,8 +6,8 @@ uid: Using_your_IS04_registry_to_provision_DataMiner_with_IDP
 
 Below, you can find how you can configure DataMiner IDP to use an NMOS IS-04 registry, so that the registered IS-04 nodes are provisioned in the DMS.
 
-> [!WARNING]
-> As from IDP 1.5.0 onwards, the IS-04 scripts are not part of the IDP package.
+> [!IMPORTANT]
+> From IDP 1.5.0 onwards, the IS-04 scripts are not included in the IDP package.
 
 ## Installation
 

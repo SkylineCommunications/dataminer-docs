@@ -10,8 +10,8 @@ uid: IDP_Processes_tab
 > - If you are using an older IDP version (prior to IDP 1.1.20), this tab consists of two subtabs: *Schedules*, with the functionality described above, and *Activities*, which the functionality of the later *Admin* > *Activities* > *Overview* page. See [Overview](xref:Admin_activities#overview).
 > - Prior to IDP 1.1.11, this tab was called *Workflows*. The *Activities* subtab was called *Automation* prior to IDP 1.1.16.
 
-> [!WARNING]
-> As from IDP 1.5.0 onwards, the necessary Automation Scripts, Functions, etc... are not part of the IDP package.
+> [!IMPORTANT]
+> From IDP 1.5.0 onwards, the Automation scripts, functions, etc. used in this tab are no longer included in the IDP package.
 
 If IDP is used together with DataMiner Process Automation, this tab displays an overview of scheduled processes.
 
