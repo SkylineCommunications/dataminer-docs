@@ -24,6 +24,8 @@ The DataMiner installer allows you to run a default DataMiner installation, whic
 
 1. Make sure that no anti-virus software will interfere with the DataMiner installer and with the DataMiner software once it is installed. See [Regarding antivirus software](xref:Regarding_antivirus_software).
 
+1. Make sure you have a Windows account with administrator rights. If you intend to use a DataMiner installer older than version 10.2, this must be the server's local Administrator account. For later installers, any account with administrator rights will suffice.
+
 1. Download the DataMiner installer from [DataMiner Dojo](https://community.dataminer.services/download/dataminer-installer-v10-2).
 
 > [!NOTE]
@@ -33,7 +35,7 @@ The DataMiner installer allows you to run a default DataMiner installation, whic
 
 1. Make sure you are logged into Windows with the correct user account:
 
-   - If you are using the DataMiner 10.2 installer or newer, use an account with administrator rights. During the installation, the user account will automatically be added to a local DataMiner user group named *Administrator (installer)*. 
+   - If you are using the DataMiner 10.2 installer or newer, use an account with administrator rights. During the installation, the user account will automatically be added to a local DataMiner user group named *Administrator (installer)*.
    - If you are using a DataMiner installer older than version 10.2, use the server's local Administrator account. Do not use a regular user account with administrative rights.
 
 1. Double-click the setup executable.
@@ -78,7 +80,7 @@ At this point, the basic installation is complete. However, to be able to make f
 - Either deploy [Storage as a Service](xref:STaaS) to make use of cloud-native storage hosted by Skyline or, if you wish to host the DataMiner storage yourself, [configure the databases](xref:Configuring_dedicated_clustered_storage).
 
 > [!IMPORTANT]
-> During the DataMiner installation, you are automatically added to the Administrator group by the installation wizard, giving you all Administrator rights. To grant others access to your DMA, log in to Cube using the same username and password as during the installation process, and configure user permissions as described in [Basic security configuration](xref:Managing_users).
+> During the DataMiner installation, you are automatically added to the Administrator group by the installation wizard, giving you all Administrator rights in DataMiner. To grant others access to the newly installed DMA, log in to Cube using the same Windows account as was used to install DataMiner, and configure user permissions as described in [Basic security configuration](xref:Managing_users).
 
 > [!NOTE]
 >
