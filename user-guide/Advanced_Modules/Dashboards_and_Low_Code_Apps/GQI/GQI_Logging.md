@@ -39,4 +39,4 @@ To change the minimum log level, change the configuration in the *appSettings* s
 ```
 
 > [!NOTE]
-> Any changes to the configuration file are reset after an upgrade or downgrade.
+> Any changes to the configuration file are reset after a full DataMiner upgrade or downgrade.
