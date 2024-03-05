@@ -158,11 +158,11 @@ Because of a number of enhancements, overall memory usage has been reduced, espe
 
 SLLogCollector will now by default run the `tasklist /fo TABLE` command, and save the output in the `Logs\Windows` folder of the generated package.
 
-#### Visual Overview: Connections between SLHelper and mobile Visual Overview sessions will no longer be destroyed after 2 minutes of inactivity [ID_38985]
+#### Visual Overview: Connections between SLHelper and mobile Visual Overview sessions will now time out after 5 minutes of inactivity [ID_38985]
 
 <!-- MR 10.5.0 - FR 10.4.5 -->
 
-Up to now, when SLHelper did not send any updates to a mobile Visual Overview client session for 2 minutes, the connection would be destroyed. From now on, every 3 minutes, SLHelper will send an update to each of its mobile Visual Overview sessions in order to keep those connections alive.
+Up to now, when SLHelper did not send any updates to a mobile Visual Overview client session for 2 minutes, the connection would be destroyed. This connection timeout has now been changed from 2 minutes to 5 minutes.
 
 ### Fixes
 
