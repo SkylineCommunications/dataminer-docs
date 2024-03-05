@@ -35,3 +35,9 @@ Up to now, the buttons in the *Query filter* component would be barely visible w
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
 When a *Dropdown* component with a filter applied lost the focus, the moment it had the focus again, the filter would no longer be applied.
+
+#### Dashboards app: Problem with Dropdown components on shared dashboards [ID_38953]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+When, on a shared dashboard, a *Dropdown* component had a time range or service definition filter applied, it would not be possible to use that component.
