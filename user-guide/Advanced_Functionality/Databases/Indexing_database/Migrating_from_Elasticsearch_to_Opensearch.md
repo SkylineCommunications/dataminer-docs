@@ -154,7 +154,7 @@ Using Kibana, you can restore the snapshot in the following way:
 
 ## Restore the snapshot with the re-indexed data to a OpenSearch 2.11.1 cluster
 
-1. Check the *path.repo* configuration in *opensearch.yml*.
+1. Check the *path.repo* configuration in *opensearch.yml*, it should be pointing to a shared filesystem location to which each node has access.
 
 1. Check the existing repositories by sending the following request.
 
