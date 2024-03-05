@@ -2,11 +2,12 @@
 uid: GQI_Logging
 ---
 
-# GQI Logging
+# GQI logging
 
 Logging for GQI is available from DataMiner 10.4.0/10.4.4 onwards.<!-- RN 38870 -->
 
 Errors and warnings are logged to log files in the *C:\Skyline DataMiner\Logging\GQI* folder.
+
 If this folder does not exist, it will be created automatically with the first log.
 
 > [!NOTE]
@@ -14,11 +15,7 @@ If this folder does not exist, it will be created automatically with the first l
 
 ## Minimum log level
 
-> [!TIP]
-> You can lower the minimum log level to **Debug** to log more details that can be useful for technical support to investigate potential issues.
-
-GQI uses *Serilog* to write the log files.
-This logging framework defines 6 log levels:
+GQI uses *Serilog* to write the log files. This logging framework defines six log levels:
 
 1. Verbose
 1. Debug
@@ -27,9 +24,11 @@ This logging framework defines 6 log levels:
 1. Error
 1. Fatal
 
-The [minimum log level](https://github.com/serilog/serilog/wiki/Configuration-Basics#minimum-level) can be changed such that only logs for that level an up will be logged. By default the minimum log level is **Information**.
+The [minimum log level](https://github.com/serilog/serilog/wiki/Configuration-Basics#minimum-level) determines from which log level onwards logs are included in the log file. By default, the minimum log level is **Information**, so only logs of level Information, Warning, Error, and Fatal are included.
 
-For GQI, this can be configured in the *appSettings* section in *C:\Skyline DataMiner\Files\SLHelper.exe.config*.
+You can change the minimum log level to include less or more information in the log file. For example, to investigate potential issues, it can be useful to lower the minimum log level to *Debug*.
+
+To change the minimum log level, change the configuration in the *appSettings* section in *C:\Skyline DataMiner\Files\SLHelper.exe.config*. For example:
 
 ```xml
 <appSettings>
@@ -40,4 +39,4 @@ For GQI, this can be configured in the *appSettings* section in *C:\Skyline Data
 ```
 
 > [!NOTE]
-> Any changes to the configuration file will be reset after an upgrade or downgrade.
+> Any changes to the configuration file are reset after an upgrade or downgrade.
