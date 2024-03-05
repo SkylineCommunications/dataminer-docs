@@ -68,16 +68,16 @@ Consumption above the contracted Monthly Utilization Allowance (MUA) is possible
 
 | Service      | Definition | Metering Unit |
 |-----------|------------|------------------|
-| *Managed Object* | Endpoints directly or indirectly interfaced by DataMiner. Directly interfaced endpoints include data sources, devices, and platforms that expose an interface that allows direct interaction with those endpoints. Indirectly interfaced endpoints include those reported through a mediating data source, for example message brokers (like Apache Kafka or RabbitMQ), databases, or Element and Network Management Systems. | Maximum number of active or paused managed objects in a month |
-| *Connector Services* | Use of Skyline-developed connectors (also known as DataMiner protocols or interface drivers) made available through the [catalog](https://catalog.dataminer.services/). <br>Connectors developed by the user or other third party are not counted. | Sum of used connectors delivered by Skyline |
-| *Script Runs* | Every time Automation scripts are [triggered](xref:Running_Automation_scripts). Among others, this includes Life cycle Service Orchestration (LSO) scripts, Profile-Load Scripts (PLS), Process Automation activities, DOM instance state transitions, and user-defined API calls. | Sum of script runs |
-| *Cloud Data Consumption* | Traffic consumed as part of [dataminer.services](xref:Overview_Collaboration). | Sum of total GB of traffic |
-| *Storage as a Service (STaaS)* | Charged based solely on data-ingress (i.e. data going into the cloud).  No charges apply to data-egress (i.e. consumption of data from the cloud). <br> This includes Zone Redundant Storage (ZRS) in one of the available [Regions](xref:data-location-and-redundancy), as well as automatic backup each 24H with a sliding window of 30 days. Other regions as well as Geo-Redundant-Storage (GRS) are available at additional charges.| Sum of Ingress Units |
+| *Managed Object* | Endpoints directly or indirectly interfaced by DataMiner. Directly interfaced endpoints include data sources, devices, and platforms that expose an interface that allows direct interaction with those endpoints. Indirectly interfaced endpoints include those reported through a mediating data source, for example message brokers (like Apache Kafka or RabbitMQ), databases, or Element and Network Management Systems. | Maximum number of active or paused managed objects in a month. |
+| *Connector Services* | Use of Skyline-developed connectors (also known as DataMiner protocols or interface drivers) made available through the [catalog](https://catalog.dataminer.services/).<br>Connectors developed by the user or other third party are not counted. | Sum of used connectors delivered by Skyline. |
+| *Script Runs* | Every time Automation scripts are [triggered](xref:Running_Automation_scripts). Among others, this includes Life cycle Service Orchestration (LSO) scripts, Profile-Load Scripts (PLS), Process Automation activities, DOM instance state transitions, and user-defined API calls. | Sum of script runs. |
+| *Cloud Data Consumption* | Traffic consumed as part of [dataminer.services](xref:Overview_Collaboration). | Sum of total GB of traffic. |
+| *Storage as a Service (STaaS)* | Charged based solely on data ingress (i.e. data going into the cloud).  No charges apply for data egress (i.e. consumption of data from the cloud).<br>This includes Zone-Redundant Storage (ZRS) in one of the available [regions](xref:STaaS#data-location-and-redundancy), as well as automatic backup every 24 hours with a sliding window of 30 days. Other regions as well as Geo-Redundant Storage (GRS) are available at additional charge.| Sum of ingress units. |
 
 > [!TIP]
-> While STaaS charges can vary depending on the specifics of each DataMiner deployment and set-up (e.g. specific types of Managed Objects, personal preferences and system configurations, etc.), the above translates to an average charge of 0.0175 credits per Managed Object per month, considering a typical usage scenario of 90 alarm updates, 120 information events, 400.000 stored data points and 90.000 element data updates per Managed Object on average per month.
+> While STaaS charges can vary depending on the specifics of each DataMiner deployment and setup (e.g. specific types of Managed Objects, personal preferences and system configurations, etc.), the above translates to an average charge of 0.0175 credits per Managed Object per month, considering a typical usage scenario of 90 alarm updates, 120 information events, 400,000 stored data points and 90,000 element data updates per Managed Object on average per month.
 
->[!Important]
+> [!IMPORTANT]
 > The calculation of Service Usage may result in fractional amounts. However, for billing purposes, we round up to the nearest whole number of credits.
 
 ### Metering Period
@@ -88,7 +88,7 @@ Metering works in monthly cycles, starting on the first day of each month. MUA i
 
 MUA: 200 credits<br>Start Date: October 20, 2022<br>Renewal Date: October 19, 2023
 
-- MUA available for the period October 20, 2022 to October 31, 2022 = 200 credits x  12 days / 31 days = 78 credits 
+- MUA available for the period October 20, 2022 to October 31, 2022 = 200 credits x  12 days / 31 days = 78 credits
 - MUA available for the period October 1, 2023 to October 19, 2023 =  200 credits x 19 days / 31 days = 123 credits
 
 ### Cancellation
