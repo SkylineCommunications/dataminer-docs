@@ -21,3 +21,5 @@ items:
     topicUid: orchestrator_change_log
   - name: Support Assistant release notes
     topicUid: supportassistant_change_log
+  - name: Data API release notes (Soft Launch)
+    topicUid: DataAPI_change_log
