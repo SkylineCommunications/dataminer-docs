@@ -2,7 +2,7 @@
 uid: Remote_PHY_Monitoring_Components
 ---
 
-# Remote PHY Monitoring components
+# Remote PHY Monitoring Components
 
 ## System connectors
 
@@ -15,8 +15,6 @@ At the moment only one system connector is supported and required:
 The Remote PHY Monitoring Solution uses the following Automation script:
 
 - **CreateVecimaRpmElement**: This Automation script is responsible for creating a Vecima RPM element on the first deployment or when there is no Vecima RPM element in the system.
-
-## Low-code apps
 
 The Remote PHY Monitoring Solution includes the following low-code apps:
 

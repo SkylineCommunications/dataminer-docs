@@ -237,8 +237,10 @@ items:
         items:
           - name: Installing Remote PHY Monitoring
             topicUid: Remote_PHY_Monitoring_Installation
-          - name: Remote PHY Monitoring components
+          - name: Remote PHY Monitoring Components
             topicUid: Remote_PHY_Monitoring_Components
+          - name: Access Restriction
+            topicUid: Remote_PHY_Monitoring_Access_Restriction
       - name: Smart Trap Processor
         topicUid: Smart_Trap_Processor_Overview
         items:
