@@ -151,3 +151,30 @@ For Automation, see [DataMiner CI/CD Automation](https://github.com/SkylineCommu
 An action [Skyline-DataMiner-Deploy-Action](https://github.com/SkylineCommunications/Skyline-DataMiner-Deploy-Action) is publicly available on GitHub to deploy from a GitHub repository.
 
 Refer to [Marketplace deployment action](xref:Marketplace_deployment_action) for more information.
+
+## Dependabot - Access Private GitHub NuGet Registry
+
+If your repository is using NuGet packages that are stored on our internal GitHub NuGet Registry, then Dependabot won't see those automatically.
+
+Below is an example of a Dependabot configuration file that will daily check if there are any NuGet package to update. The 'PRIVATE_NUGET_USERNAME' and 'PRIVATE_NUGET_PASSWORD' secrets are only available for Dependabot.
+
+```yml
+version: 2
+registries:
+  public:
+    type: nuget-feed
+    url: https://api.nuget.org/v3/index.json
+  slc-github:
+    type: nuget-feed
+    url: https://nuget.pkg.github.com/SkylineCommunications/index.json
+    username: ${{ secrets.PRIVATE_NUGET_USERNAME }}
+    password: ${{ secrets.PRIVATE_NUGET_PASSWORD }}
+updates:
+  - package-ecosystem: "nuget" # See documentation for possible values
+    directory: "/" # Location of package manifests
+    registries: "*"
+    schedule:
+      interval: "daily"
+```
+
+More information regarding the configuration file can be found [here](https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file).
