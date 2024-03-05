@@ -26,4 +26,8 @@ uid: Web_apps_Feature_Release_10.4.5
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Dashboards app & Low-Code Apps - Dropdown component: Filter would no longer be applied after losing the focus [ID_38834]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+When a *Dropdown* component with a filter applied lost the focus, the moment it had the focus again, the filter would no longer be applied.
