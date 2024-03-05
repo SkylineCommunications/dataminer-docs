@@ -9,6 +9,10 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### TBD - Enhancement - Admin - Audit Organization Keys [ID_39023]
+
+It is now possible for admin users to see the permissions of organization keys on the audit detail page.
+
 #### 21 February 2024 - Fix - Improved catalog search performance [ID_38865]
 
 The [Catalog](https://catalog.dataminer.services) search has been enhanced to yield results faster.
