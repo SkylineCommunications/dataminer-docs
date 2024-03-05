@@ -64,7 +64,7 @@ This fix is included in Cloud Pack 2.8.4.
 
 #### 10 January 2023 - Enhancement - CoreGateway 2.12.0 - Support for new Data Aggregator DxM [ID_34903] [ID_35168] [ID_35217] [ID_35252]
 
-To support the new [Data Aggregator DxM](xref:DataAggregator_1.0.0), CoreGateway has been adjusted to be able to handle requests from Data Aggregator.
+To support the new [Data Aggregator DxM](xref:DataAggregator_change_log), CoreGateway has been adjusted to be able to handle requests from Data Aggregator.
 
 This enhancement is included in Cloud Pack 2.8.4.
 
