@@ -1,4 +1,13 @@
 items:
+  - name: Data Aggregator 3.0.3
+    topicUid: DataAggregator_3.0.3
+  - name: Data Aggregator 3.0.2
+    topicUid: DataAggregator_3.0.2
+  - name: Data Aggregator 3.0.1
+    topicUid: DataAggregator_3.0.1
+  - name: Data Aggregator 3.0.0
+    topicUid: DataAggregator_3.0.0
+#    Missing 2.1.0 and 2.1.1
   - name: Data Aggregator 2.0.0
     topicUid: DataAggregator_2.0.0
   - name: Data Aggregator 1.0.0
