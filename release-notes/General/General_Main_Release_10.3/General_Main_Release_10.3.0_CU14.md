@@ -12,7 +12,11 @@ uid: General_Main_Release_10.3.0_CU14
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Security enhancements [ID_38904]
+
+<!-- RN 38904: MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+A number of security enhancements have been made.
 
 ### Fixes
 
