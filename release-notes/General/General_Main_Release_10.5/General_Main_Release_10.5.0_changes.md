@@ -197,3 +197,9 @@ When the system went into file offload mode, in some cases, a serialization issu
 When a StorageModule client requests data to be stored, in some cases, a subscription exception can be thrown. Those data storage requests are retried automatically. However, up to now, each retry would be logged as error.
 
 From now on, only the final retry will be logged as error. All prior retries will only be logged when the log level is set to "debug".
+
+#### Problem while checking whether the DataMiner System was licensed to use the ModelHost DxM [ID_39001]
+
+<!-- MR 10.5.0 - FR 10.4.5 -->
+
+A *ModelHostException* could be thrown while checking whether the DataMiner System was licensed to use the ModelHost DxM.

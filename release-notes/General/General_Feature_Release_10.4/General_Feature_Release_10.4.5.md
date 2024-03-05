@@ -48,4 +48,8 @@ Up to now, when SLHelper did not send any updates to a mobile Visual Overview cl
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Problem while checking whether the DataMiner System was licensed to use the ModelHost DxM [ID_39001]
+
+<!-- MR 10.5.0 - FR 10.4.5 -->
+
+A *ModelHostException* could be thrown while checking whether the DataMiner System was licensed to use the ModelHost DxM.
