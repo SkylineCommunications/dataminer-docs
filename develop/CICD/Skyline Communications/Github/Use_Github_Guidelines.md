@@ -172,7 +172,7 @@ registries:
 updates:
   - package-ecosystem: "nuget" # See documentation for possible values
     directory: "/" # Location of package manifests
-    registries: "*"
+    registries: "*" # Which registries to use, * for all of them
     schedule:
       interval: "daily"
 ```
