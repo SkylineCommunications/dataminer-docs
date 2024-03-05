@@ -1,8 +1,8 @@
 ---
-uid: Remote_PHY_Monitoring_Components
+uid: Remote_PHY_Monitoring_components
 ---
 
-# Remote PHY Monitoring Components
+# Remote PHY Monitoring components
 
 ## System connectors
 

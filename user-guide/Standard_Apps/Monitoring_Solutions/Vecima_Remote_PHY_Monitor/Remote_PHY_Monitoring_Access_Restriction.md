@@ -25,7 +25,7 @@ To change the level attribute restriction:
 1. Go to Apps > Protocols & Templates 
 1. Open the Production version of the drivers related to the package.
 	> [!TIP]
-	> Check:[Remote PHY Monitorings system connectors](xref:Remote_PHY_Monitoring_Components#Systemconnectors)
+	> Check: [Remote PHY Monitoring system connectors](xref:Remote_PHY_Monitoring_components#Systemconnectors)
 1. Search for **level="5"**.
 1. Change the level to the requested one.
 
