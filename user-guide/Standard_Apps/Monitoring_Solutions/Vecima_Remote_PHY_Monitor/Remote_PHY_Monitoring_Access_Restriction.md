@@ -25,7 +25,7 @@ To change the level attribute restriction:
 1. Go to Apps > Protocols & Templates 
 1. Open the Production version of the drivers related to the package.
 	> [!TIP]
-	> Check: [Remote PHY Monitoring system connectors](xref:Remote_PHY_Monitoring_components#Systemconnectors)
+	> Check: [Remote PHY Monitoring system connectors](xref:Remote_PHY_Monitoring_components)
 1. Search for **level="5"**.
 1. Change the level to the requested one.
 
@@ -34,4 +34,4 @@ To change the level attribute restriction:
 
 ## Configure security for R-PHY Monitoring 
 
-To configure which users or group of users can access the low code app please check [Configuring security for a low-code app](xref:LowCodeApps_security_config)
+To configure which users or group of users can access the low code app please check [Configuring security for a low-code app](xref:LowCodeApps_security_config).
