@@ -40,6 +40,12 @@ Because of a number of enhancements, overall performance has increased when star
 
 A number of security enhancements have been made.
 
+#### Visual Overview: Connections between SLHelper and mobile Visual Overview sessions will no longer be destroyed after 2 minutes of inactivity [ID_38985]
+
+<!-- MR 10.5.0 - FR 10.4.5 -->
+
+Up to now, when SLHelper did not send any updates to a mobile Visual Overview client session for 2 minutes, the connection would be destroyed. From now on, every 3 minutes, SLHelper will send an update to each of its mobile Visual Overview sessions in order to keep those connections alive.
+
 ### Fixes
 
 *No fixes have been added yet.*
