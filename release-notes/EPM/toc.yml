@@ -33,7 +33,7 @@ items:
     items:
       - name: EPM 7.0.0 I-DOCSIS
         topicUid: EPM_7.0.0_I-DOCSIS
-      - name: EPM 6.1.10 I-DOCSIS - preview
+      - name: EPM 6.1.10 I-DOCSIS
         topicUid: EPM_6.1.10_I-DOCSIS
       - name: EPM 6.1.9 I-DOCSIS
         items:
