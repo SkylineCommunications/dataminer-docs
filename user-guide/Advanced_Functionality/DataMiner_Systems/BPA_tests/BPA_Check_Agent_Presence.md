@@ -7,6 +7,8 @@ uid: BPA_Check_Agent_Presence
 NATS serves as an inter-Dataminer message broker this means that every agent should be able to reach every other agent over NATS.
 
 This BPA will scan the NATS info as seen by this agent to verify if it finds a route to every agent it is aware of and performs a NATS client connection test to each agent.
+Depending on configuration, the NATS info is gathered from SLNet (via SLCloud.xml) or via BrokerGateway.
+An extra check is performed for cluster consistency if DataMiner is using BrokerGateway.
 
 This BPA test is available on demand. You can [run it in System Center](xref:Running_BPA_tests) (on the *Agents > BPA* tab). From DataMiner 10.3.12 onwards, it is available by default.
 
@@ -23,16 +25,16 @@ This BPA test is available on demand. You can [run it in System Center](xref:Run
 
 * "No issues Detected*
 
-Every agent's IP was found as a route in the NATS server and the NATs client connection to every agent succeeded
+Every agent's IP was found as a route in the NATS server and the NATs client connection to every agent succeeded. There are no inconsistencies found when using BrokerGateway.
 
 ### Error
 
-* "Possible issues with NATS nodes or NATS client communication between DataMiners in the cluster. See Details."
+* Possible issues with NATS nodes or NATS client communication between DataMiners in the cluster. See Details.
 
 
 ### Warning
 
-Possible issues with NATS nodes or NATS client communication between DataMiners in the cluster. See Details."
+Possible issues with NATS nodes or NATS client communication between DataMiners in the cluster. See Details.
 
 ### Not Executed
 
