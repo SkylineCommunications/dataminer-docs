@@ -23,7 +23,7 @@ To use this tool, follow the instructions below:
 
 Using Kibana, you can take a snapshot in the following way:
 
-1. Check the *path.repo* configuration in *elasticsearch.yml*.
+1. Check the *path.repo* configuration in *elasticsearch.yml*, it should be pointing to a shared filesystem location to which each node has access.
 
 1. Check the existing repositories by sending the following request.
 
@@ -117,14 +117,14 @@ Using Kibana, you can restore the snapshot in the following way:
     GET /_cluster/health
    ```
 
-   - Wait until the cluster health status turns green.
+   - Check the cluster health to ensure that the status turns green after the restore.
 
 ## Run the re-indexing tool and take a snapshot
 
 1. Open a terminal, and go to the folder containing the tool:
 
    ```txt
-    cd <ReIndexElasticSearchIndexes.exe location>
+    cd C:\Skyline DataMiner\Tools\ReIndexElasticSearchIndexes
    ```
 
 1. Run the tool with the following arguments:
@@ -195,3 +195,5 @@ Using Kibana, you can restore the snapshot in the following way:
    ```txt
     GET /_cluster/health
    ```
+
+   - Check the cluster health to ensure that the status turns green after the restore.
