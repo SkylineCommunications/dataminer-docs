@@ -30,6 +30,12 @@ From now on, a newly opened suggestion events tab will include *Service impact*,
 
 Also, from now on, when you right-click a column header and select *Add/Remove column > Set default columns* in a suggestion events tab, the default columns will be restored correctly. Up to now, selecting the *Set default columns* menu option would incorrectly restore the default columns of an active alarms tab instead.
 
+#### Alarm Console: Enhanced performance when loading a large number of active alarms [ID_38808]
+
+<!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
+
+Because of a number of enhancements, overall performance has increased when loading a large number of active alarms.
+
 ### Fixes
 
 *No fixes have been added yet.*
