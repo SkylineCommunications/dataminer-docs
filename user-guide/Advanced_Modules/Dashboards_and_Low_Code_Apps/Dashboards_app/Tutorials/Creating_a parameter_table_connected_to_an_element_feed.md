@@ -6,7 +6,7 @@ uid: Creating_a_parameter_table_connected_to_an_element_feed
 
 In this tutorial, you will learn how to craft a GQI query to display parameters from a specific protocol table. You will also learn how to link the query to an element feed to control which element's data populates in the table's results.
 
-Expected duration: 10min
+Expected duration: 10 min.
 
 > [!NOTE]
 > The content and screenshots for this tutorial have been created with the DataMiner Web Apps version 10.3.6.
