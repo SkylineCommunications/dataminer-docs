@@ -9,9 +9,9 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-#### TBD - Enhancement - Catalog - Filter public, private and all [ID_39026]
+#### TBD - Enhancement - Catalog - Filter on public and/or private items [ID_39026]
 
-It is now possible to filter catalog items on public, private or both types.
+On the *Browse* page of the Catalog, you can now filter catalog items so you see only public items, only private items, or both public and private items.
 
 #### 29 February 2024 - New feature - Admin - Added organization keys [ID_38944]
 
