@@ -9,6 +9,27 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### TBD - Admin - DataMiner System overview overhaul [TBD]
+
+The Dataminer system overview page got an UI overhaul to be more inline with our upcoming new design.
+Users will now be able to see new cards when a certain node is having an issue with one of the following:
+
+- Cloud connection
+- DMS Offline
+- Port
+- Not reachable by other nodes
+
+If everything is fine, no cards will be displayed.
+
+#### TBD - Admin - Organization overview overhaul [ID_38960]
+
+The Organization overview page got an UI overhaul to be more inline with our upcoming new design.
+
+Users will now be able to see all the DataMiner systems in a table on the organization overview.
+This new table will include the name, url, network setup and status of the DataMiner system.
+
+The network setup column will show if 1 or more nodes within the system are having potential issues.
+
 #### 21 February 2024 - Fix - Improved catalog search performance [ID_38865]
 
 The [Catalog](https://catalog.dataminer.services) search has been enhanced to yield results faster.
