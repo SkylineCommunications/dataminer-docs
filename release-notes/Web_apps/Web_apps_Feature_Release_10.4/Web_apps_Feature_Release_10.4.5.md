@@ -28,6 +28,14 @@ uid: Web_apps_Feature_Release_10.4.5
 
 Up to now, the buttons in the *Query filter* component would be barely visible when the color of the app was similar to the background color of the theme. From now on, the buttons in the *Query filter* component will always have the text color of the theme.
 
+#### Web apps: Enhanced performance when running methods at startup [ID_38999]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+When a web app is opened, three methods are run: *GetDataMinerProviderInfo*, *GetDataMinerProviderTheme* and *GetDataMinerClusterName*.
+
+Because of a number of enhancements, overall performance has increased when running those methods.
+
 ### Fixes
 
 #### Dashboards app & Low-Code Apps - Dropdown component: Filter would no longer be applied after losing the focus [ID_38834]
