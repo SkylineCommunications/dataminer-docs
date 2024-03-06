@@ -30,13 +30,16 @@ The *Asset overview* page consists of the following main components:
 
 ### Overview of all assets
 
-When you access the Asset Management application, an overview of all your assets is displayed by default in a table component on the *Asset overview* page. This table offers a comprehensive overview of all assets, alongside a [query filter component](#the-filter-pane) that helps you locate specific items based on their properties.
+When you access the Asset Management application, you are presented with a table component displaying an overview of all your assets on the *Asset overview* page. This table offers comprehensive insight into your assets and features a [query filter component](#the-filter-pane) that helps you locate specific items based on their properties.
 
-Assets are defined based on various parameters such as categories, status indicators, buildings, floors, rooms, aisles, racks, and slots, which can be added via the [header bar](#the-header-bar). The header bar also provides access to dedicated overview panels for these parameters, allowing you to edit and delete them.
+Assets are defined based on various parameters such as categories, status indicators, buildings, floors, rooms, aisles, racks, and slots. These can be added through the [header bar](#the-header-bar), which also provides access to dedicated overview panels for further management.
 
-By clicking the ellipsis button ("...") in the second column of the table component, a context menu will open that allows you to **edit or delete any of the existing assets**, as well as **access the asset's [detail report page](#asset-detail-reports)**.
+Within the table, clicking the ellipsis button ("...") in the second column opens a context menu that allows you to **edit or delete any of the existing assets**, as well as **access an asset's [detail report page](#asset-detail-reports)**.
 
 ![Context menu](~/user-guide/images/Context_Menu_Assets.png)<br/>*Table component in DataMiner 10.4.3*
+
+> [!IMPORTANT]
+> To gain access to an asset's detail report page, you first need to [modify the asset URLs](xref:Installing_Asset_Management#modifying-the-asset-urls) to use your personal system.
 
 ### The header bar
 
@@ -56,7 +59,7 @@ The header bar is only available in the *Asset overview* tab. In this header bar
 
 > [!NOTE]
 >
-> - You cannot delete any categories, status indicators, buildings, floors, rooms, aisles, racks, and slots that are referred to in any of the assets. If you try to do so, you will be provided with a list of the assets in which the object is referred to.
+> - You cannot delete any categories, status indicators, buildings, floors, rooms, aisles, racks, and slots that are referred to in any of the assets. Attempting to delete such objects will prompt a list of the associated assets.
 > - When you want to include detailed information, such as accounting specifics and precise locations, the following format must be used for implementing the asset number: `CHASSISNUMBER.CARDNUMBER`. This format is crucial for utilizing the parent-child relationship on the detail report page.
 
 ### The filter pane
@@ -81,9 +84,11 @@ The *QR code* page provides an overview of active asset URLs, which can be used 
 > [!IMPORTANT]
 > To gain access to an asset's detail report page, you first need to [modify the asset URLs](xref:Installing_Asset_Management#modifying-the-asset-urls) to use your personal system.
 
-![QR Code](~/user-guide/images/Asset_Management_QR_Code.png)<br/>*DataMiner Low-Code Apps in DataMiner 10.4.3*
+![QR Code](~/user-guide/images/Asset_Management_QR_Code.png)<br/>*DataMiner Low-Code Apps in DataMiner 10.3.12*
 
-These URLs can be used to **generate QR codes** that will redirect you to the asset's detail report page when you scan them, gaining access to detailed information. To do so:
+These URLs can be used to **generate QR codes** that will redirect you to the asset's detail report page when you scan them, gaining access to detailed information.
+
+To do so:
 
 1. Click the ellipsis button ("...") in the top-right corner of the table component, and select *Export to CSV*.
 
@@ -106,57 +111,65 @@ These URLs can be used to **generate QR codes** that will redirect you to the as
 
 ## The 'Complete assets overview' page
 
-The *Complete assets overview* page allows you to ingest data in bulk, eliminating the need to enter each asset individually.
+The *Complete assets overview* page allows you to **ingest data in bulk**, eliminating the need to enter each asset individually.
 
 > [!IMPORTANT]
 > You can only use this functionality if you have Administrator rights.
 
 1. Click the *Import new assets from Excel* button.
 
-1. In the *Ingest instances* pop-up window, select *Choose file* and select the Excel file you wish to ingest.
+   > [!NOTE]
+   > Clicking this button may result in an error similar to this:
+   >
+   > ```txt
+   > Automation script "Automation script" failed.
+   > Encountered errors while executing script: Could not start script: no statements to be executed
+   > ```
+   >
+   > If this is the case, follow the procedure mentioned under [Configuring the *import new assets* button](xref:Installing_Asset_Management#configuring-the-import-new-assets-button).
+
+1. In the *Ingest instances* pop-up window, select *Choose file* and upload the Excel file containing the asset data.
 
 1. Click *Upload*.
 
-   A green checkmark will appear next to the file name.
+   Upon successful upload, a green checkmark will appear next to the file name.
 
-1. Click *Import*.
+1. Click *Import* to ingest the data.
 
 ## The 'Alarm history' page
 
-The *Alarm history overview* tab offers a comprehensive overview of all asset alarms monitored in your DataMiner System. You can easily filter alarms based on specific elements with the filter tool at the top of the page.
+The *Alarm history* page provides a comprehensive overview of all asset alarms monitored within your DataMiner System. You can easily filter alarms based on specific elements using the filter tool located in the top-right corner of the alarm table component.
 
-![Alarm history page](~/user-guide/images/Asset_Management_Alarm_History_Page.png)
+![Alarm history page](~/user-guide/images/Asset_Management_Alarm_History_Page.png)<br/>*DataMiner Low-Code Apps in DataMiner 10.3.12*
 
 ## Asset detail reports
 
 You can access an asset detail report via the [*Asset overview* table](#overview-of-all-assets) or via an asset's [QR code link](#the-qr-code-page).
 
 > [!IMPORTANT]
-> Before you can access the asset detail reports via the QR code links, you first need to [modify these URLs to use your personal DataMiner System](xref:Installing_Asset_Management#modifying-the-asset-urls).
+> To gain access to an asset's detail report page, you first need to [modify the asset URLs](xref:Installing_Asset_Management#modifying-the-asset-urls) to use your personal system.
 
 On every asset detail report page, you can find the following information:
 
 - General information
 
-  ![General information](~/user-guide/images/General_Information.png)
+  ![General information](~/user-guide/images/General_Information.png)<br/>*Table component in DataMiner 10.3.12*
 
 - Accounting information
 
-  ![Accounting information](~/user-guide/images/Accounting_Information.png)
+  ![Accounting information](~/user-guide/images/Accounting_Information.png)<br/>*Table component in DataMiner 10.3.12*
 
 - Location information
 
-  ![Location information](~/user-guide/images/Location_Information.png)
+  ![Location information](~/user-guide/images/Location_Information.png)<br/>*Node edge graph component in DataMiner 10.3.12*
 
 - Linked cards if applicable
 
-  ![Linked cards](~/user-guide/images/Linked_Cards.png)
+  ![Linked cards](~/user-guide/images/Linked_Cards.png)<br/>*Table component in DataMiner 10.3.12*
+
+  > [!NOTE]
+  > Adhere to the prescribed asset number format `CHASSISNUMBER.CARDNUMBER` for the sake of clarity.
 
 If the asset is monitored in DataMiner, you can access its monitoring card by clicking the *Open monitoring card* button at the top of the page.
 
 ![Open monitoring card](~/user-guide/images/Open_Monitoring_Card.png)
-
-> [!NOTE]
->
-> - The parent-child relationship, such as a chassis with linked cards, is visually presented for easy understanding.
-> - It is essential to adhere to the prescribed asset number format `CHASSISNUMBER.CARDNUMBER` for the sake of clarity.
