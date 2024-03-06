@@ -2,7 +2,7 @@
 uid: Tutorials
 ---
 
-## DataMiner Tutorials
+# DataMiner Tutorials
 
 <div class="row"> 
   <div class="column">
