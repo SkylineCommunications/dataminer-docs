@@ -1,5 +1,5 @@
 ---
-uid: Creating_a parameter_table_connected_to_an_element_feed
+uid: Creating_a_parameter_table_connected_to_an_element_feed
 ---
 
 # Creating a parameter table connected to an element feed
