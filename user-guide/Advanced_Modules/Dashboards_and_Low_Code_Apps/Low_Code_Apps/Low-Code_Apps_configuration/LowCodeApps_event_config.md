@@ -29,7 +29,7 @@ To configure an event to launch a script:
 1. Optionally, click the *Show settings* button to configure [script execution options](xref:Script_execution_options).
 
 > [!NOTE]
-> Feeds can often contain multiple values and therefore the value(s) will be wrapped in a JSON array. To be consistent, this will also be the case when only a single value is fed.
+> Feeds can often contain multiple values, and therefore the values will be wrapped in a JSON array. To be consistent, this will also be the case when only a single value is fed.
 
 ## Navigating to a URL
 
