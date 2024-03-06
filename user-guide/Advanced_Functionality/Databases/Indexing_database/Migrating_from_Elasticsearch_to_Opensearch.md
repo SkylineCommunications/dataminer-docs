@@ -81,7 +81,9 @@ Using Kibana, you can take a snapshot in the following way:
 
 Using Kibana, you can restore the snapshot in the following way:
 
-1. Check the *path.repo* configuration in *elasticsearch.yml*, it should be pointing to a shared filesystem location to which each node has access.
+1. Check the *path.repo* configuration in *elasticsearch.yml*.
+
+   This configuration should point to a shared file system location to which each node has access.
 
 1. Check the existing repositories by sending the following request:
 
