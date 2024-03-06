@@ -272,6 +272,12 @@ Because of a number of enhancements, overall performance of the SLAnalytics proc
 
 A number of enhancements have been made to the mechanism that automatically generates a suggestion event when a variance change is detected.
 
+#### Visual Overview: Connections between SLHelper and mobile Visual Overview sessions will now time out after 5 minutes of inactivity [ID_38985]
+
+<!-- MR 10.4.0 [CU2] - FR 10.4.4 [CU0] -->
+
+Up to now, when SLHelper did not send any updates to a mobile Visual Overview client session for 2 minutes, the connection would be destroyed. This connection timeout has now been changed from 2 minutes to 5 minutes.
+
 ### Fixes
 
 #### SLLogCollector: Minor issues [ID_38011]
