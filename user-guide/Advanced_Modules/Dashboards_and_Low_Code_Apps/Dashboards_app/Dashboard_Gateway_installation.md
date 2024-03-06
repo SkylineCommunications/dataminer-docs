@@ -17,7 +17,7 @@ There are two main reasons to consider a Dashboard Gateway setup:
   Allowing multiple users to connect to the web applications increases the overall load on the DataMiner Agents. When a Dashboard Gateway is used, the direct load of the web applications and the HTTP requests shifts to a separate web server, leaving more resources available on the DataMiner Agents. Also, if more performance is needed, multiple Dashboard Gateway web servers can be used in combination with a load balancer.
 
 > [!IMPORTANT]
-> When using a load balancer or (reverse) proxy, it's crucial to set the websocket timeout to a value above 60 seconds. The DataMiner web apps will keep the websocket connection open by sending a heartbeat message at least every 60 seconds.
+> If a load balancer or (reverse) proxy is used, it is crucial that the WebSocket timeout is set to a value above 60 seconds. The DataMiner web apps will keep the WebSocket connection open by sending a heartbeat message at least every 60 seconds.
 
 ## Requirements
 
