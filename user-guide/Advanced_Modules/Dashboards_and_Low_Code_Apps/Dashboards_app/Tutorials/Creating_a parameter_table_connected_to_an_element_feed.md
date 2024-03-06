@@ -28,64 +28,74 @@ Expected duration: 10min
 
 1. Create a new dashboard.
 
-1. Add a Dropdown component so that the user can select applicable elements to filter the GQI results.
+1. Add a *Dropdown* component so that the user can select applicable elements to filter the GQI results.
 
-   - In edit mode, drag and drop the Text input visualization from the pane on the left on to the main dashboard area.
+   - In edit mode, drag a *Text input* component from the pane on the left onto the main dashboard area.
 
-1. Add a Table component so that the user display results from a GQI query.
+1. Add a *Table* component so that the user can view the results from a GQI query.
 
-   - In edit mode, drag and drop the Text input visualization from the pane on the left on to the main dashboard area.
+   - In edit mode, drag a *Text input* component from the pane on the left onto the main dashboard area.
 
 ## Step 2: Configure the 'Dropdown' component to list all elements of a specific protocol
 
-1. Configure the Dropdown with a data source of “Elements”
+1. Configure the *Dropdown* component with an "Elements" data source.
 
-   1. In edit mode, drag the top “Elements” data header from the right pane to the data input of the dropdown component.
+   1. In edit mode, drag the "Elements" data header from the right pane onto the data input of the *Dropdown* component.
 
-   1. In edit mode, drag the desired protocol from the right pane to the filter input of the dropdown component.
+      ![](~/user-guide/images/Tutorial_Dropdown_Elements.png)
 
-1. The dropdown should then list available elements present on the system that match the specified protocol.
+   1. In edit mode, drag the desired protocol from the right pane onto the filter input of the *Dropdown* component.
+
+      ![](~/user-guide/images/Tutorial_Dropdown_Protocol.png)
+
+The *Dropdown* component should now list all available elements that match the specified protocol.
 
 ## Step 3: Configure a GQI query to display parameters from a specific protocol table and link it to the dropdown feed
 
-1. In edit mode, create a new query on the right pane under the “QUERIES” section.
+1. In edit mode, create a new query in the right pane under the *QUERIES* section.
 
    1. Give the query a descriptive name.
 
-   1. Select data source: “get parameters for elements where”
+   1. Select the *Get parameters for elements where* data source.
 
-      1. Select a protocol
+      1. Select a protocol.
 
          > [!NOTE]
-         > This should be the same protocol that was used when filtering the Dropdown component.
+         > This should be the same protocol that was used to filter the *Dropdown* component.
 
-      1. Select a protocol version
+      1. Select a protocol version.
 
-      1. Select the table name from the specified protocol that holds the data that you wish to display in the “Table” component
+      1. Select the name of the table that holds the data that you wish to display in the *Table* component.
 
-   1. Optional: Use a subsequent “Select” operator to control which parameters from the specified protocol table to display in the GQI table.
+   1. Optional: Use a subsequent *Select* operator to control which parameters from the specified protocol table to display in the GQI table.
 
       > [!NOTE]
-      > it is important that “Element ID” remain selected to allow linking to the dropdown component”
+      > It is important that *Element ID* remains selected to allow linking to the *Dropdown* component.
 
-   1. Use a “Filter” operator to filter the query results to the selected element in the drop down feed
+   1. Use a *Filter* operator to filter the query results according to the element selected in the dropdown feed.
 
-      1. Select the “Filter” operator
-      1. Choose “Element ID” as the specified column to filter
-      1. Choose “regex” as the filter method
-      1. In the Value box, click the "Link to feed" icon.
-      1. Clicking the icon opens the Link to feed dialog, which will ask for a specific feed, type, and property.
-      1. In the “Feed” field, choose the dropdown component.
-      1. In the “Property” filed, choose Element ID.
-      1. Click Apply
+      1. Select the *Filter* operator.
+      1. Choose "Element ID" as the column to filter on.
+      1. Choose "regex" as the filter method.
+      1. In the *Value* box, click the *Link to feed* icon.
+      1. Clicking the icon opens the *Link to feed* dialog, which will ask for a specific feed, type and property.
+      1. In the *Feed* field, select the *Dropdown* component.
+      1. In the *Property* field, select "Element ID".
+      1. Click *Apply*.
 
-   1. Optional: Use a subsequent “Select” operator to remove Element ID from being displayed on the Table component.
-   1. Below is an example of a competed query for this tutorial:
-   1. Stop editing the query with the pen icon and then drag the query from the right pane to the Table component to specify the query as data input to the table.
+   1. Optional: Use a subsequent *Select* operator to remove "Element ID" from being displayed on the *Table* component.
+
+      Below, you can see an example of query used in this tutorial:
+
+      ![](~/user-guide/images/Tutorial_completed_query.png)
+
+   1. Stop editing the query by clicking the pen icon, and drag the query from the right pane to the *Table* component to indicate that the query will serve as data input for the table.
+
+      ![](~/user-guide/images/Tutorial_query_as_table_input.png)
 
 1. Exit edit mode.
 
-1. The Table should now be displaying the parameters specified during the query creation and their values should change depending on the element selected in the dropdown feed.
+The *Table* component should now display the parameters specified during query creation, and their values should change depending on the element selected in the dropdown feed.
 
 ## Related documentation
 
