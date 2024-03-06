@@ -36,6 +36,16 @@ Also, from now on, when you right-click a column header and select *Add/Remove c
 
 Because of a number of enhancements, overall performance has increased when loading a large number of active alarms.
 
+#### System Center - Agents: Tooltip of 'Upgrade only' button will now mention the prerequisites will be run [ID_38864]
+
+<!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
+
+When, in the *Upgrade* window, you hover over the *Upload only* button, the following tooltip will now appear:
+
+`Uploading a package with prerequisites will run those prerequisites on each Agent of the cluster.`
+
+The same message will also be shown on the confirmation box that will appear after you click the *Upload only* button.
+
 ### Fixes
 
 *No fixes have been added yet.*
