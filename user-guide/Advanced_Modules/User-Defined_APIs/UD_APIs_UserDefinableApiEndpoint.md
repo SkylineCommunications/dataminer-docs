@@ -26,7 +26,7 @@ Below you can find a list of all the UserDefinableApiEndpoint DxM versions and t
 - **Compatible with DataMiner version**: The DataMiner version range which this DxM version is compatible with. Do note that an older DxM version may not have the new features that were added in later versions. However, the core API functionality should function fine.
 - **Installed with DataMiner version**: The DataMiner version where the installer for this DxM version was first available. This can be used to know what the best matching DxM version is for a DataMiner agent.
 
-| DxM Version | Required .NET version | Compatible with DataMiner version | Installed with DataMiner version |
+| DxM Version | Required .NET version | Compatible with DataMiner versions | Installed with DataMiner version |
 | - | - | - |
 | 1.0.2 | .NET 5 | 10.3.6 -> 10.3.7  | 10.3.5 (Preview) |
 | 1.1.0 | .NET 5 | 10.3.6 -> 10.3.7  | 10.3.6 |
