@@ -89,4 +89,4 @@ Expected duration: 10min
 
 ## Related documentation
 
-- [Feeds](Using_dashboard_feeds)
+- [Feeds](xref:Using_dashboard_feeds)
