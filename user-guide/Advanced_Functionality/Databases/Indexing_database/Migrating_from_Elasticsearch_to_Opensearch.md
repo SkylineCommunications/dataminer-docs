@@ -23,9 +23,11 @@ To use this tool, follow the instructions below:
 
 Using Kibana, you can take a snapshot in the following way:
 
-1. Check the *path.repo* configuration in *elasticsearch.yml*, it should be pointing to a shared filesystem location to which each node has access.
+1. Check the *path.repo* configuration in *elasticsearch.yml*.
 
-1. Check the existing repositories by sending the following request.
+   This configuration should point to a shared file system location to which each node has access.
+
+1. Check the existing repositories by sending the following request:
 
    ```txt
    GET /_snapshot/_all
@@ -33,7 +35,7 @@ Using Kibana, you can take a snapshot in the following way:
 
    - This request will return all registered snapshots in the cluster. In case the desired repository already exists the next step can be skipped.
 
-1. Create the repository by sending the following request.
+1. Create the repository by sending the following request:
 
    ```txt
     PUT /_snapshot/<repo_name>
@@ -54,7 +56,7 @@ Using Kibana, you can take a snapshot in the following way:
    - **repo_name**: A repository name of your choice.
    - **shared_repo_path**: The path to the shared folder where the snapshots will be stored.
 
-1. Take the snapshot by sending the following request.
+1. Take the snapshot by sending the following request:
 
    ```txt
    PUT /_snapshot/<repo_name>/<snapshot_name>
@@ -67,7 +69,7 @@ Using Kibana, you can take a snapshot in the following way:
 
    - **snapshot_name**: A snapshot name of your choice.
 
-1. Check the snapshot by sending the following request.
+1. Check the snapshot by sending the following request:
 
    ```txt
     GET /_snapshot/<repo_name>/<snapshot_name>/_status
@@ -81,7 +83,7 @@ Using Kibana, you can restore the snapshot in the following way:
 
 1. Check the *path.repo* configuration in *elasticsearch.yml*, it should be pointing to a shared filesystem location to which each node has access.
 
-1. Check the existing repositories by sending the following request.
+1. Check the existing repositories by sending the following request:
 
    ```txt
    GET /_snapshot/_all
@@ -89,7 +91,7 @@ Using Kibana, you can restore the snapshot in the following way:
 
    - This request will return all registered snapshots in the cluster. In case the desired repository already exists the next step can be skipped.
 
-1. Create the repository by sending the following request.
+1. Create the repository by sending the following request:
 
    ```txt
     PUT /_snapshot/<repo_name>
@@ -105,29 +107,29 @@ Using Kibana, you can restore the snapshot in the following way:
     }
    ```
 
-1. Restore the snapshot by sending the following request.
+1. Restore the snapshot by sending the following request:
 
    ```txt
     POST /_snapshot/<repo_name>/<snapshot_name>/_restore 
    ```
 
-1. Check the snapshot by sending the following request.
+1. Check the snapshot by sending the following request:
 
    ```txt
     GET /_snapshot/<repo_name>/<snapshot_name>/_status
    ```
 
-1. Check the cluster health by sending the following request.
+1. Check the cluster health by sending the following request:
 
    ```txt
     GET /_cluster/health
    ```
 
-   - Check the cluster health to ensure that the status turns green after the restore.
+   The status of the cluster should turn green after the restore.
 
 ## Run the re-indexing tool and take a snapshot
 
-1. Open a terminal, and go to the folder containing the tool:
+1. Open a terminal, and go to the folder containing the tool. By default, this is the folder `C:\Skyline DataMiner\Tools\ReIndexElasticSearchIndexes`:
 
    ```txt
     cd C:\Skyline DataMiner\Tools\ReIndexElasticSearchIndexes
@@ -143,7 +145,7 @@ Using Kibana, you can restore the snapshot in the following way:
    | -DBPrefix or -D | The database prefix, to be provided in case a custom database prefix is used instead of the default `dms-` prefix.<br>If you do not provide a prefix, the default `dms-` will be used. |
    | -TLSEnabled or -T | Whether or not TLS is enabled for this ElasticSearch database.<br>Values: true or false. Default: false |
 
-1. Take a snapshot of the re-indexed data by sending the following request.
+1. Take a snapshot of the re-indexed data by sending the following request:
 
    ```txt
    PUT /_snapshot/<repo_name>/<snapshot_name_reindexed>
@@ -152,19 +154,21 @@ Using Kibana, you can restore the snapshot in the following way:
     }
    ```
 
-1. Check the snapshot by sending the following request.
+1. Check the snapshot by sending the following request:
 
    ```txt
     GET /_snapshot/<repo_name>/<snapshot_name>/_status
    ```
 
-   - This request will return information about the status of the specified snapshot, the state should be "SUCCESS".
+   This request will return information about the status of the specified snapshot. The status should be "SUCCESS".
 
 ## Restore the snapshot with the re-indexed data to a OpenSearch 2.11.1 cluster
 
-1. Check the *path.repo* configuration in *opensearch.yml*, it should be pointing to a shared filesystem location to which each node has access.
+1. Check the *path.repo* configuration in *opensearch.yml*.
 
-1. Check the existing repositories by sending the following request.
+   This configuration should point to a shared file system location to which each node has access.
+
+1. Check the existing repositories by sending the following request:
 
    ```txt
    GET /_snapshot/_all
@@ -172,7 +176,7 @@ Using Kibana, you can restore the snapshot in the following way:
 
    - This request will return all registered snapshots in the cluster. In case the desired repository already exists the next step can be skipped.
 
-1. Create the repository by sending the following request.
+1. Create the repository by sending the following request:
 
    ```txt
     PUT /_snapshot/<repo_name>
@@ -188,22 +192,22 @@ Using Kibana, you can restore the snapshot in the following way:
     }
    ```
 
-1. Restore the snapshot by sending the following request.
+1. Restore the snapshot by sending the following request:
 
    ```txt
     POST /_snapshot/<repo_name>/<snapshot_name_reindexed>/_restore 
    ```
 
-1. Check the snapshot by sending the following request.
+1. Check the snapshot by sending the following request:
 
    ```txt
     GET /_snapshot/<repo_name>/<snapshot_name>/_status
    ```
 
-1. Check the cluster health by sending the following request.
+1. Check the cluster health by sending the following request:
 
    ```txt
     GET /_cluster/health
    ```
 
-   - Check the cluster health to ensure that the status turns green after the restore.
+   The status of the cluster should turn green after the restore.
