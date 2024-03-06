@@ -16,6 +16,8 @@ The Remote PHY Monitoring Solution uses the following Automation script:
 
 - **CreateVecimaRpmElement**: This Automation script is responsible for creating a Vecima RPM element on the first deployment or when there is no Vecima RPM element in the system.
 
+## Low-code apps
+
 The Remote PHY Monitoring Solution includes the following low-code apps:
 
 - **R-PHY Monitoring:** This low-code app allows you to easily monitor all Remote PHY nodes in the system.
