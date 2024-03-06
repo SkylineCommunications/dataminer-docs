@@ -12,7 +12,7 @@ To implement DVE functionality, the following steps must be performed:
 
     Just like regular protocols, the automatically generated DVE protocol(s) can be found in the C:\Skyline DataMiner\Protocols\[DVE Protocol Name]\ folder.
 
-1. The table(s) that will generate DVEs must contain a column that uses the "element" option. This column will then automatically be filled in by DataMiner with the global element ID ("DMA/element ID") of the corresponding DVEs.
+1. The table(s) that will generate DVEs must contain a column that uses the "[element](xref:ColumnOptionOptionsOverview#element)" option. This column will then automatically be filled in by DataMiner with the global element ID ("DMA/element ID") of the corresponding DVEs.
 
 1. Every DVE table will result in the generation of a corresponding DVE protocol. The content of this DVE protocol is defined by exporting parameters of the parent protocol. For example, in case a parameter defined in the main protocol should also be included in the DVE protocol, set the export attribute value to "true" (see export). In case multiple DVE tables are defined, set the export attribute to the table ID(s) where the parameter should be included.
 

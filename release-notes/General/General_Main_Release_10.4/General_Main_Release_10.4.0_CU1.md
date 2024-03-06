@@ -4,8 +4,8 @@ uid: General_Main_Release_10.4.0_CU1
 
 # General Main Release 10.4.0 CU1 - Preview
 
-> [!NOTE]
-> For known issues with this version, refer to [Known issues](xref:Known_issues).
+> [!IMPORTANT]
+> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
 
 > [!TIP]
 > For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
@@ -100,7 +100,7 @@ SLLogCollector will now also collect the logs of the *CommunicationGateway* DxM.
 #### Security enhancements [ID_38756] [ID_38650]
 
 <!-- RN 38756: MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
-<!-- RN 38650: MR 10.4.0 [CU1] - FR 10.4.4 -->
+<!-- RN 38650: MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
 A number of security enhancements have been made.
 
@@ -159,7 +159,19 @@ In case of issues that need investigating, you can temporarily lower the minimum
 > - The *SLHelper.exe.config* file is overwritten with the default configuration during full DataMiner upgrades or downgrades.
 > - A GQI error log will be added in the `C:\Skyline DataMiner\Logging\GQI` folder for every GQI request that fails.
 
+#### SLAnalytics - Behavioral anomaly detection: Enhanced generation of suggestion events when detecting variance changes [ID_38941]
+
+<!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
+
+A number of enhancements have been made to the mechanism that automatically generates a suggestion event when a variance change is detected.
+
 ### Fixes
+
+#### SLLogCollector: Minor issues [ID_38011]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+A number of minor issues were fixed with regard to the SLLogCollector tool.
 
 #### Problem when a redundancy group was set to an undefined state [ID_38401]
 
@@ -322,3 +334,9 @@ From now on, when a DataMiner backup is executed with the database backup option
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
 When DataMiner was stopped or restarted, in some cases, the SLLog process could stop working.
+
+#### SLAnalytics will no longer automatically restore a lost session with SLDataGateway [ID_38984]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+Since DataMiner version 10.3.0 [CU9]/10.3.12, SLAnalytics would automatically restore a lost session with SLDataGateway. From now on, it will no longer do so.

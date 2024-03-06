@@ -50,9 +50,10 @@ From now on, the following exception will be thrown instead:
 
 SLLogCollector will now also collect the logs of the *CommunicationGateway* DxM.
 
-#### Security enhancements [ID_38756]
+#### Security enhancements [ID_38756] [ID_38650]
 
 <!-- RN 38756: MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+<!-- RN 38650: MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
 A number of security enhancements have been made.
 
@@ -70,7 +71,19 @@ Also, when an SNMP parameter used a wildcard as OID, up to now, SLProtocol would
 
 At installation, the APIGateway service will now be configured to restart itself after each failure.
 
+#### SLAnalytics - Behavioral anomaly detection: Enhanced performance when monitoring more than 100,000 parameters [ID_38922]
+
+<!-- MR 10.3.0 [CU13] - FR 10.4.4 -->
+
+Because of a number of enhancements, overall performance of the SLAnalytics process has increased, especially when more than 100,000 parameters are being monitored for behavioral anomaly detection.
+
 ### Fixes
+
+#### SLLogCollector: Minor issues [ID_38011]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+A number of minor issues were fixed with regard to the SLLogCollector tool.
 
 #### Problem when a redundancy group was set to an undefined state [ID_38401]
 
@@ -177,3 +190,9 @@ From now on, it will no longer be possible to upload a protocol of which the val
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
 When DataMiner was stopped or restarted, in some cases, the SLLog process could stop working.
+
+#### SLAnalytics will no longer automatically restore a lost session with SLDataGateway [ID_38984]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+Since DataMiner version 10.3.0 [CU9]/10.3.12, SLAnalytics would automatically restore a lost session with SLDataGateway. From now on, it will no longer do so.

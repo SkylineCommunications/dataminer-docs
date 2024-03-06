@@ -8,7 +8,7 @@ This tab consists of several subtabs, as detailed below.
 
 ## Summary
 
-This tab provides an overview of the elements of which the CI Type has *Take Backup* and/or *Configuration Update* enabled (via *Processes* > *Automation*). The overview includes the CI Type, element name and IP address for each element, as well as the update progress of the last backup that was copied to the configuration archive, and the date and time when the last configuration change was detected.
+This tab provides an overview of the elements of which the CI Type has *Take Backup* and/or *Configuration Update* enabled (via *Admin* > *Activities*, or *Processes* > *Automation* in older IDP versions). The overview includes the CI Type, element name and IP address for each element, as well as the update progress of the last backup that was copied to the configuration archive, and the date and time when the last configuration change was detected.
 
 Above the overview, the following buttons are available:
 

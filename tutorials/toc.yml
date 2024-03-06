@@ -16,3 +16,5 @@ items:
         topicUid: DOM_tutorials
       - name: User-defined APIs tutorials
         topicUid: User-defined_APIs_Tutorials
+      - name: Visual Overview tutorials
+        topicUid: Visio_Tutorials

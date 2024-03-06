@@ -4,6 +4,10 @@ uid: artifactdeployer_change_log
 
 # ArtifactDeployer change log
 
+#### 4 March 2024 - Enhancement - ArtifactDeployer 1.6.7 - Improved installer robustness [ID_38940]
+
+The ArtifactDeployer installer has been updated to mitigate a Windows DLL redirection vulnerability and to improve its robustness.
+
 #### 22 February 2024 - Enhancement - ArtifactDeployer 1.6.6 - Improved deployment robustness [ID_38852]
 
 Robustness for Catalog and DxM deployments has been improved by adding and improving retry mechanisms.
