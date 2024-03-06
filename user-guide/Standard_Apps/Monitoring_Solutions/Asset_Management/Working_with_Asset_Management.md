@@ -60,7 +60,7 @@ The header bar is only available in the *Asset overview* tab. In this header bar
 > [!NOTE]
 >
 > - You cannot delete any categories, status indicators, buildings, floors, rooms, aisles, racks, and slots that are referred to in any of the assets. Attempting to delete such objects will prompt a list of the associated assets.
-> - Adhere to the following format when implementing the asset number: `CHASSISNUMBER.CARDNUMBER`. This ensures that on [asset detail report pages](#asset-detail-reports), the *Linked cards if applicable* table can display associated cards linked to a chassis, if applicable. If you do not use this format, the table will not be populated with data.
+> - Adhere to the following format when implementing the asset number: `CHASSISNUMBER.CARDNUMBER`. This ensures that on [asset detail report pages](#asset-detail-reports), the *Linked cards if applicable* table can display the parent-child relationship between a chassis and its associated cards, if applicable. If you do not use this format, the table will not be populated with data.
 
 ### The filter pane
 
@@ -168,7 +168,7 @@ On every asset detail report page, you can find the following information:
   ![Linked cards](~/user-guide/images/Linked_Cards.png)<br/>*Table component in DataMiner 10.3.12*
 
   > [!NOTE]
-  > To ensure this table displays associated cards linked to a chassis, if applicable, adhere to the following format when implementing the asset number: `CHASSISNUMBER.CARDNUMBER`.
+  > To ensure this table displays the parent-child relationship between a chassis and its associated cards, if applicable, adhere to the following format when implementing the asset number: `CHASSISNUMBER.CARDNUMBER`.
 
 If the asset is monitored in DataMiner, you can access its monitoring card by clicking the *Open monitoring card* button at the top of the page.
 
