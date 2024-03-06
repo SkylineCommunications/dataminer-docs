@@ -9,6 +9,10 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### TBD - Enhancement - Catalog - Filter public, private and all [ID_39026]
+
+It is now possible to filter catalog items on public, private or both types.
+
 #### 29 February 2024 - New feature - Admin - Added organization keys [ID_38944]
 
 In the Admin app, you can now create DCP keys on organization level.
