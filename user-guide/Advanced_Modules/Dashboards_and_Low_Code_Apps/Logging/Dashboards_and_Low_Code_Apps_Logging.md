@@ -1,3 +1,7 @@
+---
+uid: Dashboards_and_Low_Code_Apps_Logging
+---
+
 # Logging
 
 The logging for Dashboards and Low Code Apps is located in `C:\Skyline DataMiner\Logging\Web`. There are two distinct types of logging, each serving specific purposes:
@@ -26,20 +30,20 @@ Client metric logging is employed to record different performance and issue indi
 Both types of logging can be configured through a shared configuration file named `log.conf`, located in the root folder of the web logs. This file comprises various customizable settings:
 
 ```md
-| Setting Name | Setting Type | Default Value | Description |
-|--------------|--------------|---------------|-------------|
-| EnableDebugLogging | Boolean | false | Enables or disables the logging of debug information. |
-| EnableAllowedOperationLogging | Boolean | false | Enables or disables the logging of WAF information. |
-| EnableClientMetricLogging | Boolean | true | Enables or disables the logging of client metrics. |
-| MaxFileSize | Number | 52428800 (50MB) | Maximum size of a single log file. |
-| FilesToKeep | Number | 14 | Number of files to keep for each type of log. |
-| RollingInterval | String | Day | Time period included in each log file. |
-| AsyncBufferSize | Number | 10000 | Size of the buffer of the worker writing the log file to disk. |
-| BlockWhenAsyncBufferIsFull| Boolean | false | If true, the logger will wait until there is room in the buffer; otherwise, log entries will be dropped when the buffer is full. |
-| HealthCheckInterval | Number | 2500 | Number of log entries before a health check of the logger is performed. |
-| FlushToDiskInterval | Timespan | 00:00:01 | Timespan between the log being written to memory and the result being flushed to disk. |
-| Filename | String | web.log | Filename of the WebAPI log files. |
-| ClientMetricFilename | String | web.clientmetric.log | Filename of the client metric log files. |
+| Setting Name                  | Setting Type | Default Value        | Description                                                                                                                      |
+| ----------------------------- | ------------ | -------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| EnableDebugLogging            | Boolean      | false                | Enables or disables the logging of debug information.                                                                            |
+| EnableAllowedOperationLogging | Boolean      | false                | Enables or disables the logging of WAF information.                                                                              |
+| EnableClientMetricLogging     | Boolean      | true                 | Enables or disables the logging of client metrics.                                                                               |
+| MaxFileSize                   | Number       | 52428800 (50MB)      | Maximum size of a single log file.                                                                                               |
+| FilesToKeep                   | Number       | 14                   | Number of files to keep for each type of log.                                                                                    |
+| RollingInterval               | String       | Day                  | Time period included in each log file.                                                                                           |
+| AsyncBufferSize               | Number       | 10000                | Size of the buffer of the worker writing the log file to disk.                                                                   |
+| BlockWhenAsyncBufferIsFull    | Boolean      | false                | If true, the logger will wait until there is room in the buffer; otherwise, log entries will be dropped when the buffer is full. |
+| HealthCheckInterval           | Number       | 2500                 | Number of log entries before a health check of the logger is performed.                                                          |
+| FlushToDiskInterval           | Timespan     | 00:00:01             | Timespan between the log being written to memory and the result being flushed to disk.                                           |
+| Filename                      | String       | web.log              | Filename of the WebAPI log files.                                                                                                |
+| ClientMetricFilename          | String       | web.clientmetric.log | Filename of the client metric log files.                                                                                         |
 ```
 
 > [!NOTE]
