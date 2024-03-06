@@ -198,6 +198,17 @@ When a StorageModule client requests data to be stored, in some cases, a subscri
 
 From now on, only the final retry will be logged as error. All prior retries will only be logged when the log level is set to "debug".
 
+#### GQI: Problem when loading extensions [ID_38998]
+
+<!-- MR 10.5.0 - FR 10.4.5 -->
+
+When GQI extensions (i.e. ad hoc data sources or custom operators) were being loaded, in some cases, an exception could be thrown when inspecting the assembly of an extension that prevented subsequent extensions from being loaded.
+
+This type of exceptions will be now be properly caught and logged as warnings so that other extensions will no longer be prevented from being loaded.
+
+> [!TIP]
+> See also: [GQI: Full logging [ID_38870]](xref:General_Main_Release_10.4.0_CU1#gqi-full-logging-id_38870)
+
 #### Problem while checking whether the DataMiner System was licensed to use the ModelHost DxM [ID_39001]
 
 <!-- MR 10.5.0 - FR 10.4.5 -->
