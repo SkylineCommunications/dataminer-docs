@@ -152,11 +152,11 @@ An action [Skyline-DataMiner-Deploy-Action](https://github.com/SkylineCommunicat
 
 Refer to [Marketplace deployment action](xref:Marketplace_deployment_action) for more information.
 
-## Dependabot - Access Private GitHub NuGet Registry
+## Ensuring Dependabot can access the private GitHub NuGet registry
 
-If your repository is using NuGet packages that are stored on our internal GitHub NuGet Registry, then Dependabot won't see those automatically.
+If a repository uses NuGet packages that are stored in Skyline's internal GitHub NuGet registry, Dependabot will not see those automatically.
 
-Below is an example of a Dependabot configuration file that will daily check if there are any NuGet package to update. The 'PRIVATE_NUGET_USERNAME' and 'PRIVATE_NUGET_PASSWORD' secrets are only available for Dependabot.
+Below is an example of a Dependabot configuration file that will check every day if there are any NuGet packages to update. The "PRIVATE_NUGET_USERNAME" and "PRIVATE_NUGET_PASSWORD" secrets are only available to Dependabot.
 
 ```yml
 version: 2
@@ -177,4 +177,5 @@ updates:
       interval: "daily"
 ```
 
-More information regarding the configuration file can be found [here](https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file).
+> [!TIP]
+> For more information about the configuration file, see [Configuration options for the dependabot.yml file](https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file).
