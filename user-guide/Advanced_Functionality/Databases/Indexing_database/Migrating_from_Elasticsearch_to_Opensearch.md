@@ -31,6 +31,8 @@ Using Kibana, you can take a snapshot in the following way:
    GET /_snapshot/_all
    ```
 
+   - This request will return all registered snapshots in the cluster. In case the desired repository already exists the next step can be skipped.
+
 1. Create the repository by sending the following request.
 
    ```txt
@@ -71,17 +73,21 @@ Using Kibana, you can take a snapshot in the following way:
     GET /_snapshot/<repo_name>/<snapshot_name>/_status
    ```
 
+   - This request returns status information for a specific snapshot within a given repository. The state should be SUCCESS and all shards should be successful.
+
 ## Restore the snapshot on an Elasticsearch 7.10.0 cluster
 
 Using Kibana, you can restore the snapshot in the following way:
 
-1. Check the *path.repo* configuration in *elasticsearch.yml*.
+1. Check the *path.repo* configuration in *elasticsearch.yml*, it should be pointing to a shared filesystem location to which each node has access.
 
 1. Check the existing repositories by sending the following request.
 
    ```txt
    GET /_snapshot/_all
    ```
+
+   - This request will return all registered snapshots in the cluster. In case the desired repository already exists the next step can be skipped.
 
 1. Create the repository by sending the following request.
 
@@ -163,6 +169,8 @@ Using Kibana, you can restore the snapshot in the following way:
    ```txt
    GET /_snapshot/_all
    ```
+
+   - This request will return all registered snapshots in the cluster. In case the desired repository already exists the next step can be skipped.
 
 1. Create the repository by sending the following request.
 
