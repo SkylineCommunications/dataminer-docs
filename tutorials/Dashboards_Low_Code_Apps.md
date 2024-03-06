@@ -40,3 +40,4 @@ keywords: low-code, low code, lowcode
 | [Optimizing your custom operator](xref:Custom_Operator_Tutorial) | Optimize your custom operator while keeping an eye out for common pitfalls. |
 | [Forwarding dummy data to the GQI](xref:Ad_hoc_Tutorials) | Go through an example script that forwards dummy data to the GQI. |
 | [Building a GQI data source that fetches satellites](xref:Ad_hoc_Tutorials_Satellites) | Go through an example script that forwards satellites data to the GQI. |
+| [Creating a parameter table connected to an element feed](xref:Creating_a parameter_table_connected_to_an_element_feed) | Create a parameter table connected to an element feed. |
