@@ -69,19 +69,6 @@ items:
             topicUid: Upgrading_a_DataMiner_Agent_using_DataMiner_Taskbar_Utility
           - name: Upgrading a DataMiner Agent in System Center
             topicUid: Upgrading_a_DataMiner_Agent_in_System_Center
-          - name: Upgrade paths
-            topicUid: Upgrade_Paths
-            items:
-              - name: DataMiner 9.6.0/9.6.x to 10.2.0/10.2.x
-                topicUid: Upgrade_path_960-96x_to_1020-102x
-              - name: DataMiner 9.6.x to 10.3.0/10.3.x
-                topicUid: Upgrade_path_960-96x_to_1030-103x
-              - name: DataMiner 10.0.0/10.0.x to 10.2.0/10.2.x
-                topicUid: Upgrade_path_1000-100x_to_1020-102x
-              - name: DataMiner 10.0.0/10.0.x to 10.3.0/10.3.x
-                topicUid: Upgrade_path_1000-100x_to_1030-103x
-              - name: DataMiner 10.1.0/10.1.x to 10.2.0/10.2.x
-                topicUid: Upgrade_path_1010-101x_to_1020-102x
           - name: Upgrading the DataMiner web apps
             topicUid: Upgrading_Downgrading_Webapps
           - name: Checking the upgrade history of a DataMiner Agent
