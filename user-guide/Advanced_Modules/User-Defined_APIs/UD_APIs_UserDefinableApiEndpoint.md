@@ -18,6 +18,26 @@ If for some reason this extension module is uninstalled, the User-Defined APIs f
 > [!IMPORTANT]
 > Downgrading DataMiner will not automatically downgrade the *UserDefinableApiEndpoint* DxM. This means that a **downgrade could result in incompatibility** between DataMiner and the extension module. To downgrade the *UserDefinableApiEndpoint* DxM, first uninstall the installed version, and then install the lower version. Do not just run the installer of the lower version without uninstalling first, as this may corrupt your installation.
 
+### Versions
+
+Below you can find a list of all the UserDefinableApiEndpoint DxM versions and their requirements.
+
+- **Required .NET version**: The .NET version that is required to run the DxM.
+- **Compatible with DataMiner version**: The DataMiner version range which this DxM version is compatible with. Do note that an older DxM version may not have the new features that were added in later versions. However, the core API functionality should function fine.
+- **Installed with DataMiner version**: The DataMiner version where the installer for this DxM version was first available. This can be used to know what the best matching DxM version is for a DataMiner agent.
+
+| DxM Version | Required .NET version | Compatible with DataMiner version | Installed with DataMiner version |
+| - | - | - |
+| 1.0.2 | .NET 5 | 10.3.6 -> 10.3.7  | 10.3.5 (Preview) |
+| 1.1.0 | .NET 5 | 10.3.6 -> 10.3.7  | 10.3.6 |
+| 1.1.1 | .NET 6 | 10.3.6 -> 10.3.7  | 10.3.7 |
+| 2.0.0 | .NET 6 | 10.3.8 -> 10.3.12 | 10.3.8 |
+| 2.0.2 | .NET 6 | 10.3.8 -> 10.3.12 | 10.3.9 |
+| 3.1.0 | .NET 6 | 10.4.0+           | 10.4.1 |
+| 3.2.0 | .NET 6 | 10.4.0+           | 10.4.3 / 10.4.0 |
+
+*Versions that are not listed have never been released in official DataMiner upgrade packages.*
+
 ## Consulting logging for the DxM
 
 For logging of **core functionality errors** of the extension module, consult the logging in the following location:
