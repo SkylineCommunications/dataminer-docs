@@ -11,7 +11,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 #### 29 February 2024 - New feature - Admin - Added organization keys [ID_38944]
 
-It is now possible for a user to create DCP keys on organization level.
+In the Admin app, you can now create DCP keys on organization level.
 
 #### 21 February 2024 - Fix - Improved catalog search performance [ID_38865]
 
