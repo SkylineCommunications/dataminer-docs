@@ -2,7 +2,7 @@
 uid: CICD_Tutorial_Connector
 ---
 
-# CI/CD Connector Tutorial
+# Setting up a GitHub workflow for connectors
 
 In this tutorial, you will learn how to set up basic quality control and automatic deployment of a DataMiner connector to a staging system through a CI/CD pipeline. This can be done with or without the staging system being connected to dataminer.services. This tutorial uses a DataMiner Agent on an internet-accessible virtual machine.
 
@@ -15,7 +15,7 @@ Expected duration: 20 minutes.
 
 ## Prerequisites
 
-- Runtime .NET SDK 8.0. [Download](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
+- Runtime .NET SDK 8.0. ([download](https://dotnet.microsoft.com/en-us/download/dotnet/8.0))
 
 - A staging DataMiner Agent that is accessible from your pipeline and that uses DataMiner version 10.3.0/10.3.2 or higher
 
@@ -26,6 +26,16 @@ Expected duration: 20 minutes.
 - [GitHub account](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account)
 
 - [DataMiner Integration Studio](https://community.dataminer.services/exphub-dis/)
+
+## Overview
+
+- [Step 1: Create your connector](#step-1-create-your-connector)
+- [Step 2: Create a GitHub repository](#step-2-create-a-github-repository)
+- [Step 3: Create a standard .NET GitHub Action](#step-3-create-a-standard-net-github-action)
+- [Step 4: Extend the workflow with DataMiner Validator](#step-4-extend-the-workflow-with-dataminer-validator)
+- [Step 5: Extend the workflow with CD, automatic deployment](#step-5-extend-the-workflow-with-cd-automatic-deployment)
+- [Step 6: Add your GitHub secrets](#step-6-add-your-github-secrets)
+- [Step 7: Enjoy the results](#step-7-enjoy-the-results)
 
 ## Step 1: Create your connector
 
@@ -59,15 +69,17 @@ Expected duration: 20 minutes.
 
 1. Add a visible parameter.
 
-    1. Type *<param* and press Tab twice. This will add a new default visible parameter.
+    1. Type *<param* and press Tab twice.
+
+       This will add a new default visible parameter.
 
     1. Complete the snippet, filling in the name, description, etc.
 
-    1. Open the Display Editor using the bottom at the top of the file.
+    1. Open the Display Editor using the button at the top of the file.
 
-        1. Drag the new parameter into the General page
+        1. Drag the new parameter to the *General* page.
 
-        1. Click *Apply Changes* at the top right.
+        1. Click *Apply Changes* in the top-right corner.
 
 ## Step 2: Create a GitHub repository
 
@@ -75,28 +87,31 @@ Expected duration: 20 minutes.
 
 1. Create a new GitHub repository, choosing a name, your account, and yourself as the owner.
 
-1. Go to the newly created GitHub repository on www.github.com
+1. Go to the newly created GitHub repository on <www.github.com>.
 
-    1. A trick in Visual Studio 2022 is to use the GIT Menu and select GitHub/View Pull Requests. This opens the right repository.
+   > [!TIP]
+   > A trick in Visual Studio 2022 is to use the GIT Menu and select GitHub/View Pull Requests. This opens the right repository.
 
 ## Step 3: Create a standard .NET GitHub Action
 
 1. On your GitHub page, navigate to the *Actions* tab and select the *Continuous integration/.NET starter workflow*.
 
-1. Add the ability to trigger the workflow manually by adding *workflow_dispatch:* to the *on:* keyword in yml. Like so:
+1. Add the ability to trigger the workflow manually by adding *workflow_dispatch:* to the *on:* keyword in yml:
 
-```yml
-on:
-  push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
-  workflow_dispatch:
-```
+   ```yml
+   on:
+     push:
+       branches: [ "master" ]
+     pull_request:
+       branches: [ "master" ]
+     workflow_dispatch:
+   ```
 
-1. Commit your changes
+1. Commit your changes.
 
-1. Navigate to *Actions* and see the first run of your default .NET CI pipeline. This will perform:
+1. Navigate to *Actions* and see the first run of your default .NET CI pipeline.
+
+   This will perform:
 
     1. Compilation
 
@@ -109,56 +124,60 @@ on:
 
 1. Navigate to *Actions*.
 
-1. On the left, click on your *.NET* workflow
+1. On the left, click your *.NET* workflow
 
-1. On the top, click on *dotnet.yml*. On the new window, click on the pencil icon to edit the page.
+1. At the top, click *dotnet.yml*.
 
-1. For clarity, change the job name *build:* into *CI:*
+1. In the new window, click the pencil icon to edit the page.
 
-1. Add 3 new steps under the current steps that:
+1. For clarity, change the job name *build:* to *CI:*
 
-    1. Installs the Validators tool by adding a new job
+1. Add new steps under the current steps:
 
-    1. Run the validator on your connector
+    1. Install the Validators tool by adding a new job.
 
-    1. Displays the results and optionally performs quality gating activities
+    1. Run the validator on your connector.
 
-```yml
-    - name: Install Connector Validator
-      run: dotnet tool install -g Skyline.DataMiner.CICD.Tools.Validator
+    1. Display the results and optionally perform quality gating activities.
 
-    - name: Run Connector Validator
-      run: dataminer-validator validate-protocol-solution --solution-path "${{ github.workspace }}" --output-directory "${{ github.workspace }}" --output-file-name "validateResults" 
+   ```yml
+       - name: Install Connector Validator
+         run: dotnet tool install -g Skyline.DataMiner.CICD.Tools.Validator
 
-    - name: Archive Results
-      if: success()
-      uses: actions/upload-artifact@v4
-      with:
-        name: validateResults
-        path: ${{ github.workspace }}/validateResults.json
-        
-    - name: Quality Gate
-      run: |
-        json=$(cat "${{ github.workspace }}/validateResults.json")
-        critical=$(echo "$json" | jq -r '.CriticalIssueCount')
-        major=$(echo "$json" | jq -r '.MajorIssueCount')
-    
-        if [ "$critical" != "0" ] || [ "$major" != "0" ]; then
-          echo "Error: CriticalIssueCount or MajorIssueCount is not 0"
-          exit 1
-        fi
-```
+       - name: Run Connector Validator
+         run: dataminer-validator validate-protocol-solution --solution-path "${{ github.workspace }}" --output-directory "${{ github.workspace }}" --output-file-name "validateResults" 
 
-> [!NOTE]
-> Tip: For generic parts of a pipeline, like parsing json and making the quality gate. You can easily use one of the online learning models with the following prompt:
+       - name: Archive Results
+         if: success()
+         uses: actions/upload-artifact@v4
+         with:
+           name: validateResults
+           path: ${{ github.workspace }}/validateResults.json
 
-```
-Using GitHub Workflows with an Ubuntu runner. I have a json file in the workspace with the path ${{ github.workspace }}/validateResults.json. I want two steps. 1 step where we upload that artifact. and a second step that retrieves the CriticalIssueCount and the  MajorIssueCount and throws an error if one of them is higher than 0. I want you to return to me, only the two steps. The name of step 2 should be Quality Gate.
-```
+       - name: Quality Gate
+         run: |
+           json=$(cat "${{ github.workspace }}/validateResults.json")
+           critical=$(echo "$json" | jq -r '.CriticalIssueCount')
+           major=$(echo "$json" | jq -r '.MajorIssueCount')
 
-1. Commit your changes
+           if [ "$critical" != "0" ] || [ "$major" != "0" ]; then
+              echo "Error: CriticalIssueCount or MajorIssueCount is not 0"
+             exit 1
+           fi
+   ```
 
-1. Navigate to *Actions* and see the run of your enhanced pipeline. This will perform:
+   > [!TIP]
+   > For generic parts of a pipeline, like parsing JSON and making the quality gate, using an online LLM-based AI tool can help you save some time. You can for example use a prompt like this:
+   >
+   > ```
+   > Using GitHub Workflows with an Ubuntu runner. I have a JSON file in the workspace with the path ${{ github.workspace }}/validateResults.json. I want two steps. 1 step where we upload that artifact, and a second step that retrieves the CriticalIssueCount and the  MajorIssueCount and throws an error if one of them is higher than 0. I want you to return to me only the two steps. The name of step 2 should be Quality Gate.
+   > ```
+
+1. Commit your changes.
+
+1. Navigate to *Actions* and check the run of your enhanced pipeline.
+
+   This will perform:
 
     1. Compilation
 
@@ -166,71 +185,74 @@ Using GitHub Workflows with an Ubuntu runner. I have a json file in the workspac
 
     1. DataMiner Connector Validator
 
-## Step 4: Extend the workflow with CD, automatic deployment
+## Step 5: Extend the workflow with CD, automatic deployment
 
 1. Navigate to *Actions*
 
-1. On the left, click on your *.NET* workflow
+1. On the left, click your *.NET* workflow.
 
-1. On the top, click on *dotnet.yml*. On the new window, click on the pencil icon to edit the page.
+1. At the top, click *dotnet.yml*.
 
-1. Add a new job called CD running on a windows image with 2 new steps that:
+1. In the new window, click the pencil icon to edit the page.
 
-    1. Only runs if the CI job completed
+1. Add a new job called *CD* running on a Windows image with new steps:
 
-    1. Retrieves the source code
+    1. Only run when the CI job is completed.
 
-    1. Installs the Packager and Deployer tools
+    1. Retrieve the source code.
 
-    1. Run the packager to create a .dmprotocol
+    1. Install the Packager and Deployer tools.
 
-    1. Deploys the .dmprotocol to an accessible agent directly
+    1. Run the packager to create a .dmprotocol.
 
-> [!IMPORTANT]
-> Deployment with a local artifact requires running on a windows OS. For more details you can take a look at this [github issue](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Tools.DataMinerDeploy/issues/10)
+    1. Deploy the .dmprotocol to an accessible Agent directly.
 
->[!IMPORTANT]
-> Deployment with a local artifact requires DataMiner 10.3.0/10.3.2 or higher
+   > [!IMPORTANT]
+   >
+   > - Deployment with a local artifact requires running on a Windows OS. For more details, you can take a look at this [GitHub issue](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Tools.DataMinerDeploy/issues/10)
+   > - Deployment with a local artifact requires DataMiner 10.3.0/10.3.2 or higher.
 
-```yml
-  CD:
+   ```yml
+     CD:
 
-    runs-on: windows-latest
-    needs: CI
-    steps:
-    - uses: actions/checkout@v4
+       runs-on: windows-latest
+       needs: CI
+       steps:
+       - uses: actions/checkout@v4
   
-    - name: Install Package Creation
-      run: dotnet tool install -g Skyline.DataMiner.CICD.Tools.Packager
-    - name: Install DataMiner Deploy
-      run: dotnet tool install -g Skyline.DataMiner.CICD.Tools.DataMinerDeploy
+       - name: Install Package Creation
+         run: dotnet tool install -g Skyline.DataMiner.CICD.Tools.Packager
+       - name: Install DataMiner Deploy
+         run: dotnet tool install -g Skyline.DataMiner.CICD.Tools.DataMinerDeploy
       
-    - name: Create Protocol Package
-      run: dataminer-package-create dmprotocol "${{ github.workspace }}" --name  "protocol" --output "${{ github.workspace }}\\_PackageResults"
+       - name: Create Protocol Package
+         run: dataminer-package-create dmprotocol "${{ github.workspace }}" --name  "protocol" --output "${{ github.workspace }}\\_PackageResults"
 
-    - name: Direct Agent Deployment
-      run: dataminer-package-deploy from-artifact --path-to-artifact "${{ github.workspace }}\\_PackageResults\\protocol.dmprotocol" --dm-server-location "${{ secrets.SERVER_LOCATION }}" --dm-user "${{ secrets.DATAMINER_USER }}" --dm-password "${{ secrets.DATAMINER_PASSWORD }}"
-```
+       - name: Direct Agent Deployment
+         run: dataminer-package-deploy from-artifact --path-to-artifact "${{ github.workspace }}\\_PackageResults\\protocol.dmprotocol" --dm-server-location "${{ secrets.SERVER_LOCATION }}" --dm-user "${{ secrets.DATAMINER_USER }}" --dm-password "${{ secrets.DATAMINER_PASSWORD }}"
+   ```
 
-1. Commit your changes
+1. Commit your changes.
 
-1. Navigate to *Actions* and see the run of your enhanced pipeline. This will perform:
+1. Navigate to *Actions* and check the run of your enhanced pipeline.
+
+   This will perform:
 
     1. Compilation
 
-    1. Unit Testing
+    1. Unit testing
 
-    1. DataMiner Connector Validator
+    1. DataMiner connector validation
 
-    1. Package Creation
+    1. Package creation
 
-    1. Direct Agent Deployment
+    1. Direct Agent deployment
 
-## Step 4: Add your GitHub secrets
+## Step 6: Add your GitHub secrets
 
-1. Navigate to *Settings*
+1. Navigate to *Settings*.
 
-1. On the left, select *Secrets and variables*
+1. On the left, select *Secrets and variables*.
 
 1. Under *Actions*, add a *New repository secret* for the following secrets:
 
@@ -240,17 +262,18 @@ Using GitHub Workflows with an Ubuntu runner. I have a json file in the workspac
 
     1. DATAMINER_PASSWORD
 
-## Step 5: Profit
+## Step 7: Enjoy the results
 
-1. Navigate to *Actions*
+1. Navigate to *Actions*.
 
-1. Select the *.NET* workflow on the left
+1. Select the *.NET* workflow on the left.
 
-1. Click on *Run workflow*
+1. Click *Run workflow*.
 
-1. You should now see your CI and CD jobs complete successfully
+You should now see your CI and CD jobs complete successfully.
 
-1. Taking a screenshot of this successful run and sending that to thunder@skyline.be or uploading it through the [Dojo tutorials page](https://community.dataminer.services/learning-courses-tutorials/) will grant you DevOps points.
+> [!NOTE]
+> Taking a screenshot of this successful run and sending that to <thunder@skyline.be> or uploading it through the [Dojo tutorials page](https://community.dataminer.services/learning-courses-tutorials/) will grant you DevOps points.
 
 ## Advanced Options: CI
 
@@ -273,21 +296,3 @@ Skyline Communications organization provides Starter Workflows that run the reus
 1. We trigger our CI, reusable workflow as specified above
 
 1. Optionally a user can uncomment the code that deploys the .dmprotocol
-
-## Other CI/CD Technology
-
-You can find examples of running simple pipelines using our provided tooling within other CI/CD in our documentation:
-
-At the time of writing this tutorial we have examples on:
-
-1. [Azure Devops](xref:CICD_Azure_DevOps_Examples)
-
-1. [Concourse](xref:CICD_Concourse_Examples)
-
-1. [GitHub](xref:CICD_GitHub_Examples)
-
-1. [GitLab](xref:CICD_GitLab_Examples)
-
-1. [Jenkins](xref:CICD_Jenkins_Examples)
-
-You can even run our tooling through [Command line](xref:CICD_Command_Line_Examples) on both Windows or Ubuntu.

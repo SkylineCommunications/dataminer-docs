@@ -5182,7 +5182,7 @@ items:
     topicUid: Platform_independent_CICD
   - name: Tutorials
     items:
-     - name: CI/CD Connector Tutorial
+     - name: Setting up a GitHub workflow for connectors
        topicUid: CICD_Tutorial_Connector
   - name: CI/CD using command line
     items:
