@@ -8,7 +8,7 @@ The logging for Dashboards and Low Code Apps is located in `C:\Skyline DataMiner
 
 - WebAPI logging
 
-- Client metric logging
+- Client metric logging (available from DataMiner 10.3.0 [CU14]/10.4.0 [CU2]/10.4.5 onwards)
 
 ## WebAPI logging
 
