@@ -39,14 +39,6 @@ Shape-level option.
 
 Used with an alarm timeline component in order to display custom text when no timelines are displayed. See [Embedding an alarm timeline component](xref:Embedding_an_alarm_timeline_component).
 
-## Alarmtimelines\|AllowEmptyDynamicValues
-
-Shape-level option.
-
-Used with an alarm timeline component in order to display the component even when some timeline bands have no data.
-
-See [Embedding an alarm timeline component](xref:Embedding_an_alarm_timeline_component).
-
 ## AllowCentralConnectivity
 
 Shape-level option.
@@ -70,6 +62,12 @@ Shape-level option.
 Used to allow dynamic shape behavior of parameter control shapes from DataMiner 9.0.0 CU5 onwards.
 
 See [Allowing dynamic shape behavior](xref:Turning_a_shape_into_a_parameter_control#allowing-dynamic-shape-behavior).
+
+## AllowEmptyDynamicValues
+
+Shape-level option.
+
+Can be used as an option on any shape to show it even when some dynamic values have not yet resolved.
 
 ## AllowInheritance=False
 
