@@ -9,7 +9,7 @@ By default, NATS does **not** employ TLS encryption, leaving communication susce
 ## Enabling NATS inter-node TLS communication
 
 > [!NOTE]
-> This applies solely to instances involving a DMS cluster or external DxMs. If you have a single-Agent setup, all communication is confined to the localhost, as there is only one NATS node.
+> This applies solely to instances involving a DMS cluster or external DxMs. If you have a single-Agent setup, all communication is confined to the local host, as there is only one NATS node.
 
 1. Request or generate TLS certificates (in PEM format).
 
@@ -62,20 +62,28 @@ By default, NATS does **not** employ TLS encryption, leaving communication susce
         }
       ```
 
+## Enabling DataMiner-to-NATS node TLS communication
 
-
-## Enabling DataMiner to NATS node TLS commmunication
 > [!IMPORTANT]
-> TLS encryption between DataMiner and NATS nodes is exclusively accessible starting from DataMiner 10.4.3 CU0 onwards when employing CA-Signed Certificates (Certificate Authority-Signed Certificates). It's crucial to be aware that the utilization of Self-Signed Certificates may result in DataMiner startup failures.       
+> TLS encryption for communication between DataMiner and NATS nodes is supported from DataMiner 10.4.3 [CU0]/10.5.0 onwards<!-- RN 38302 -->, with CA-signed certificates (Certificate Authority-Signed Certificates). Avoid using self-signed certificates for this, as this may result in DataMiner startup failures.
 
 1. Install the certificate in the Windows Trusted Root Certification Authorities Certificate Store, which **requires administrator privileges**.
 
-   1. Double-click on the certificate file. This action will open the Certificate dialog.
-   1. Click on the "Install Certificate..." button.
-   1. Choose to store the certificate in the "Local Machine", which requires administrative privileges.
-   1. Select "Place all certificates in the following store."
-   1. Click "Browse" and choose "Trusted Root Certification Authorities."
- 
+   1. Double-click the certificate file.
+
+      This will open the *Certificate* dialog.
+
+   1. Click *Install Certificate*.
+
+   1. Select to store the certificate on the "Local Machine"
+
+      > [!NOTE]
+      > This requires administrative privileges.
+
+   1. Select *Place all certificates in the following store*.
+
+   1. Click *Browse* and select *Trusted Root Certification Authorities*.
+
 1. Update the **nats-server.config** file to incorporate the TLS section.
 
    This adjustment is necessary to accommodate the specified location of the PEM files. For example:
@@ -95,7 +103,7 @@ By default, NATS does **not** employ TLS encryption, leaving communication susce
 
    This should automatically trigger the start of the NAS service as well.
 
-1. Verify whether TLS encryption is enabled for DataMiner to NATS cluster :
+1. Verify whether TLS encryption is enabled for DataMiner-to-NATS communication:
 
    1. Go to `http://localhost:8222/connz` in a browser.
 
@@ -129,4 +137,3 @@ By default, NATS does **not** employ TLS encryption, leaving communication susce
             "tls_cipher_suite": "TLS_AES_128_GCM_SHA256"
         }]
    ```
-
