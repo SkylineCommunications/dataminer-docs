@@ -44,6 +44,12 @@ Up to now, the buttons in the *Query filter* component would be barely visible w
 
 Because of a number of enhancements, overall performance has increased when starting up a DataMiner web app.
 
+#### Landing page - Other apps: No longer possible to right-click apps on mobile devices [ID_39036]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+When you open the landing page of a DataMiner Agent (e.g. `https://myDMA/root/`) on a mobile device, it will no longer be possible to open the context menu of apps listed in the *Other apps* section.
+
 ### Fixes
 
 #### Dashboards app & Low-Code Apps - Dropdown component: Filter would no longer be applied after losing the focus [ID_38834]
