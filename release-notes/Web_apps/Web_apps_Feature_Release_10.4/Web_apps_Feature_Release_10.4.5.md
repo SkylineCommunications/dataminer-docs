@@ -20,6 +20,16 @@ uid: Web_apps_Feature_Release_10.4.5
 
 ## Changes
 
+### Breaking changes
+
+#### Low-Code Apps: Parameters of a script action linked to an empty feed will now be filled with an empty array [ID_39027]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+Up to now, when a script parameter of a *Launch a script* action was linked to a feed, that parameters would be set to null when the feed was empty.
+
+From now on, linking a script parameter to an empty feed will fill it with an empty array instead. The dialog to manually enter a parameter will no longer be shown when the action is launched. This change can break existing implementations when it is not handled by the script.
+
 ### Enhancements
 
 #### Dashboards app & Low-Code Apps - Query filter component: Enhanced button coloring [ID_38754]
