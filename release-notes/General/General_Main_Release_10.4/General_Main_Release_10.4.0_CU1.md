@@ -341,6 +341,14 @@ From now on, when a DataMiner backup is executed with the database backup option
 
 When DataMiner was stopped or restarted, in some cases, the SLLog process could stop working.
 
+#### Visual Overview: SLHelper would not clean up the UIProvider for an inactive user group when users from another user group were still active [ID_38979]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 [CU0] -->
+
+Up to now, SLHelper would incorrectly not clean up the server-side UIProvider for a particular user group after 8 hours of inactivity when users from another user group were still active.
+
+From now on, SLHelper will no longer take into account activity from other user groups when it decides to clean up the UIProvider for a particular user group after 8 hours of inactivity.
+
 #### SLAnalytics will no longer automatically restore a lost session with SLDataGateway [ID_38984]
 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
