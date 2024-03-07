@@ -67,4 +67,4 @@ To do so:
 
 1. Click *Upgrade* to start the upgrade or update procedure.
 
-    Alternatively, you can also click *Upload only*, if you wish to only upload the package for now and execute the upgrade or update later.
+    Alternatively, you can also click *Upload only*, if you wish to only upload the package for now and execute the upgrade or update later. However, note that if a package contains [prerequisites](xref:Preparing_to_upgrade_a_DataMiner_Agent#prerequisites), these will also run when you upload the package.

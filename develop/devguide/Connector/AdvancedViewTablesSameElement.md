@@ -23,20 +23,20 @@ The following example illustrates the definition of a view table that refers to 
 
 ```xml
 <!-- This is a ViewTable with the lst, 2nd, 3rd, 4th columns from table 200 and 4th and 5th columns from table 100. The Foreign Key from table 200 to table 100 is on column 203. -->
-<Param id="500" trending="false">
-  <Name>View_tableData_Table Service</Name>
-  <Description>View_Table Service By Index</Description>
+<Param id="500">
+  <Name>View_Services</Name>
+  <Description>View_Services</Description>
   <Type>array</Type>
   <ArrayOptions index="0" options=";volatile;view=200">
-     <ColumnOption idx="0" pid="501" type="custom" options=";view=201" /><!-- Service By Index ID -->
-     <ColumnOption idx="1" pid="502" type="custom" options=";view=202" /><!-- Service By Index Name -->
-     <ColumnOption idx="2" pid="503" type="custom" options=";view=204" /><!-- Service By Index Category -->
-     <ColumnOption idx="3" pid="504" type="custom" options=";view=205" /><!-- Service By Index Status -->
-     <ColumnOption idx="4" pid="505" type="custom" options=";view=203:104" /><!-- Str By Index Transport Protocol -->
-     <ColumnOption idx="5" pid="506" type="custom" options=";view=203:105" /><!-- Str By Index Stream Type -->
+     <ColumnOption idx="0" pid="501" type="custom" options=";view=201" /><!-- ID -->
+     <ColumnOption idx="1" pid="502" type="custom" options=";view=202" /><!-- Name -->
+     <ColumnOption idx="2" pid="503" type="custom" options=";view=204" /><!-- Category -->
+     <ColumnOption idx="3" pid="504" type="custom" options=";view=205" /><!-- Status -->
+     <ColumnOption idx="4" pid="505" type="custom" options=";view=203:104" /><!-- Stream Transport Protocol -->
+     <ColumnOption idx="5" pid="506" type="custom" options=";view=203:105" /><!-- Stream Type -->
   </ArrayOptions>
   <Information>
-     <Subtext>The list of services</Subtext>
+     <Subtext>The list of services.</Subtext>
   </Information>
 </Param>
 ```
@@ -44,23 +44,23 @@ The following example illustrates the definition of a view table that refers to 
 Below is an example of a base table. Note that as the view table will show data from another table (table 100), the base table needs to include a column that holds foreign keys to this table (column parameter 203 in this example).
 
 ```xml
-<Param id="200" trending="false">
-  <Name>tableData_Table Service</Name>
-  <Description>Table Service By Index</Description>
+<Param id="200">
+  <Name>Services</Name>
+  <Description>Services</Description>
   <Type>array</Type>
   <ArrayOptions index="0" options=";volatile">
-     <ColumnOption idx="0" pid="201" type="retrieved" options="" /><!-- Service By Index Id -->
-     <ColumnOption idx="1" pid="202" type="retrieved" options="" /><!-- Service By Index Name -->
-     <ColumnOption idx="2" pid="203" type="retrieved" options=";foreignKey=100" /><!-- Service By Index Stream Id -->
-     <ColumnOption idx="3" pid="204" type="retrieved" options="" /><!-- Service By Index Category -->
-     <ColumnOption idx="4" pid="205" type="retrieved" options="" /><!-- Service By Index Status -->
-     <ColumnOption idx="5" pid="206" type="retrieved" options="" /><!-- Service By Index Has CA -->
-     <ColumnOption idx="6" pid="207" type="retrieved" options="" /><!-- Service By Index Bandwidth -->
-     <ColumnOption idx="7" pid="208" type="retrieved" options="" /><!-- Service By Index Min Bandwidth -->
-     <ColumnOption idx="8" pid="209" type="retrieved" options="" /><!-- Service By Index Max Bandwidth -->
+     <ColumnOption idx="0" pid="201" type="retrieved" /><!-- ID -->
+     <ColumnOption idx="1" pid="202" type="retrieved" /><!-- Name -->
+     <ColumnOption idx="2" pid="203" type="retrieved" options=";foreignKey=100" /><!-- Stream ID -->
+     <ColumnOption idx="3" pid="204" type="retrieved" /><!-- Category -->
+     <ColumnOption idx="4" pid="205" type="retrieved" /><!-- Status -->
+     <ColumnOption idx="5" pid="206" type="retrieved" /><!-- Has CA -->
+     <ColumnOption idx="6" pid="207" type="retrieved" /><!-- Bandwidth -->
+     <ColumnOption idx="7" pid="208" type="retrieved" /><!-- Min Bandwidth -->
+     <ColumnOption idx="8" pid="209" type="retrieved" /><!-- Max Bandwidth -->
   </ArrayOptions>
   <Information>
-     <Subtext>Table Service By Index</Subtext>
+     <Subtext>The list of service.</Subtext>
   </Information>
   ...
 </Param>
@@ -72,9 +72,9 @@ For example, the column parameter with ID 201 of the base table will be included
 
 
 ```xml
-<Param id="201" trending="false" duplicateAs="501">
-  <Name>tableData_Service_index_Id</Name>
-  <Description>Service Id</Description>
+<Param id="201" duplicateAs="501">
+  <Name>ServiceId</Name>
+  <Description>Service ID</Description>
   <Information>
      <Subtext>The ID of the service.</Subtext>
   </Information>
@@ -96,8 +96,8 @@ For example, the column parameter with ID 201 of the base table will be included
 Note that a parameter can be duplicated multiple times using a comma as separator in the duplicateAs attribute:
 
 ```xml
-<Param id="202" trending="false" duplicateAs="502,605">
-  <Name>tableData_Service_index_Name</Name>
+<Param id="202" duplicateAs="502,605">
+  <Name>ServiceName</Name>
   <Description>Service Name</Description>
   <Information>
      <Subtext>The name of the service.</Subtext>
@@ -123,7 +123,7 @@ In case the write parameter should also be present for the view table, you only 
 
 ```xml
 <Param id="212" setter="true" duplicateAs="512">
-  <Name>tableData_Service_index_Name</Name>
+  <Name>ServiceName</Name>
   <Description>Service Name</Description>
   <Type>write</Type>
   <Interprete>
@@ -143,8 +143,8 @@ In case the write parameter should also be present for the view table, you only 
 Why does this work with a randomly chosen unique parameter ID? Consider the following example:
 
 ```xml
-<Param id="3190" trending="false" duplicateAs="4190">
-   <Name>Stream Active Channel</Name>
+<Param id="3190" duplicateAs="4190">
+   <Name>StreamActiveChannel</Name>
    <Description>Stream Active Channel</Description>
   <Type>write</Type>
 ```
@@ -156,13 +156,13 @@ So in case there are two view tables and there should only be a write parameter 
 For example:
 
 ```xml
-<Param id="3127" trending="false" duplicateAs="4127,5127">
-   <Name>Stream Active Channel</Name>
+<Param id="3127" duplicateAs="4127,5127">
+   <Name>StreamActiveChannel</Name>
    <Description>Stream Active Channel</Description>
    <Type>read</Type>
   ...
-<Param id="3190" trending="false" duplicateAs="4190">
-   <Name>Stream Active Channel</Name>
+<Param id="3190" duplicateAs="4190">
+   <Name>StreamActiveChannel</Name>
    <Description>Stream Active Channel</Description>
    <Type>write</Type>
   ...

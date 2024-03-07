@@ -359,6 +359,8 @@ items:
                 topicUid: TutorialMaps
               - name: Getting started with the grid component
                 topicUid: Tutorial_Apps_Grid
+              - name: Creating a visually appealing and user-friendly low-code app
+                topicUid: Tutorial_App_Design
       - name: Configuring components
         topicUid: Configuring_components
         items:
@@ -598,6 +600,8 @@ items:
                     topicUid: GQI_GQICell
                   - name: GQIColumn
                     topicUid: GQI_GQIColumn
+                  - name: GQIColumn<T>
+                    topicUid: GQI_GQIColumnT
                   - name: GQIDMS
                     topicUid: GQI_GQIDMS
                   - name: GQIEditableHeader
@@ -636,6 +640,10 @@ items:
                     topicUid: GQI_IGQIQueryNode
                   - name: IGQIRowOperator
                     topicUid: GQI_IGQIRowOperator
+                  - name: IGQIUpdateable
+                    topicUid: GQI_IGQIUpdateable
+                  - name: IGQIUpdater
+                    topicUid: GQI_IGQIUpdater
                   - name: ObjectRefMetadata
                     topicUid: GQI_ObjectRefMetadata
                   - name: OnArgumentsProcessedInputArgs
@@ -645,13 +653,17 @@ items:
                   - name: RowMetadataBase
                     topicUid: GQI_RowMetadataBase
                   - name: TimeRangeMetadata
-                    topicUid: GQI_GQIArgument
+                    topicUid: GQI_TimeRangeMetadata
               - name: Best practices
                 topicUid: GQI_Extensions_Best_Practices
+          - name: Logging
+            topicUid: GQI_Logging
           - name: Query updates
             topicUid: Query_updates
           - name: Importing a query
             topicUid: Importing_a_query
+      - name: Logging
+        topicUid: Dashboards_and_Low_Code_Apps_Logging
       - name: Frequently asked questions
         topicUid: Dashboards_and_Low_Code_Apps_FAQ
   - name: DMS Dashboards (legacy)

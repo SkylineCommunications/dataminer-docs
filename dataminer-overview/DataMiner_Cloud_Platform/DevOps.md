@@ -64,13 +64,26 @@ This process includes using **Git for push and pull requests** and utilizing a C
 
 ## DataMiner Integration Studio (DIS)
 
-The **DataMiner Integration Studio (DIS)**, an Integrated Development Environment (IDE) in the form of a **plugin for Microsoft Visual Studio**, streamlines the process of **building, designing, validating, and deploying** connectors, Automation scripts, virtual functions, and more. Its **user-friendly features** make the task of developing and testing DataMiner interface connectors effortless, leading to an optimized operation.
+The **DataMiner Integration Studio (DIS)**, an Integrated Development Environment (IDE) in the form of a **plugin for Microsoft Visual Studio**, and **free of charge to all users**, streamlines the process of **building, designing, validating, and deploying** connectors, Automation scripts, virtual functions, and more. Its **user-friendly features** make the task of developing and testing DataMiner interface connectors effortless, leading to an optimized operation.
 
 Moreover, the IDE's integration with online code repository services like GitHub empowers everyone to become a true DevOps engineer. This integration enables developers and customers to collaborate and share their expertise, resulting in a more efficient and enjoyable development process.
+
+With the range of powerful features available in DIS, DataMiner DevOps Professionals can build third-party product integrations across hardware, software, and cloud boundaries, and accommodating any imaginable type of interface or protocol. With DIS, users can effortlessly build connectors to ingest data into the DataMiner platform, implement robust controls, and enrich the standardized DataMiner Digital Twin, which forms the foundation of the DataMiner platform and fuels their entire organization.
+
+Key benefits of DataMiner Integration Studio (DIS):
+
+- Empowers users to create high-value plug-in components for the DataMiner platform.
+- Enables seamless extension and customization of the DataMiner platform to meet specific needs.
+- Supports connectors for data ingestion into the DataMiner platform, as well as unified control.
+- Simplifies the creation and deployment of user-definable APIs, ChatOps extensions, and much more.
+- Streamlines automation, orchestration, and process automation activities.
+- Drives data-driven decision-making and operational optimization.
+- Fosters innovation in product and service offerings.
 
 > [!TIP]
 > See also:
 >
 > - [DIS Expert Hub](https://community.dataminer.services/exphub-dis/)
 > - [Video: CI/CD using DIS, the Cloud Platform and GitHub actions](https://community.dataminer.services/video/ci-cd-using-dis-the-cloud-platform-and-github-actions/) ![Video](~/user-guide/images/video_Duo.png)
-> - [DIS User Guide](xref:DIS)
+> - [Kata #1: DIS Validator](https://community.dataminer.services/video/kata1/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> - [DIS User Guide](xref:Overall_concept_of_the_DataMiner_Integration_Studio)

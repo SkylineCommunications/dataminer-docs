@@ -36,35 +36,35 @@ This page contains an overview of the Node Segment parameters available in the I
 
 - **Number US QAM Ch.**: Calculated. The number of US (upstream) QAM channels associated with the node segment. This is the same number of channels as associated with the corresponding US port.
 
-- **Number CM US QAM Ch. Rx Power OOS**: Calculated. The number of cable modems associated with the node segment reporting a US Rx Power Status equal to "OOS".
+- **Number CM US QAM Ch. Rx Power OOS**: Calculated. The number of cable modems associated with the node segment reporting a US Rx Power Status equal to "Out of Spec (OOS)".
 
-- **Percentage CM US QAM Ch. Rx Power OOS**: Calculated. The percentage of cable modems associated with the node segment reporting a US Rx Power Status equal to "OOS".
+- **Percentage CM US QAM Ch. Rx Power OOS**: Calculated. The percentage of cable modems associated with the node segment reporting a US Rx Power Status equal to "Out of Spec (OOS)".
 
-- **Number CM US QAM Ch. Rx SNR OOS**: Calculated. The number of cable modems associated with the node segment reporting a US SNR Status equal to "OOS".
+- **Number CM US QAM Ch. Rx SNR OOS**: Calculated. The number of cable modems associated with the node segment reporting a US SNR Status equal to "Out of Spec (OOS)".
 
-- **Percentage CM US QAM Ch. Rx SNR OOS**: Calculated. The percentage of cable modems associated with the node segment reporting a US SNR Status equal to "OOS".
+- **Percentage CM US QAM Ch. Rx SNR OOS**: Calculated. The percentage of cable modems associated with the node segment reporting a US SNR Status equal to "Out of Spec (OOS)".
 
-- **Number CM US QAM Ch. Rx Post-FEC OOS**: Calculated. The number of cable modems associated with the node segment reporting a US Post-FEC Status equal to "OOS".
+- **Number CM US QAM Ch. Rx Post-FEC OOS**: Calculated. The number of cable modems associated with the node segment reporting a US Post-FEC Status equal to "Out of Spec (OOS)".
 
-- **Percentage CM US QAM Ch. Rx Post-FEC OOS**: Calculated. The percentage of cable modems associated with the node segment reporting a US Post-FEC Status equal to "OOS".
+- **Percentage CM US QAM Ch. Rx Post-FEC OOS**: Calculated. The percentage of cable modems associated with the node segment reporting a US Post-FEC Status equal to "Out of Spec (OOS)".
 
-- **Number CM US QAM Ch. Time Offset OOS**: Calculated. The number of cable modems associated with the node segment reporting a US Time Offset Status equal to "OOS".
+- **Number CM US QAM Ch. Time Offset OOS**: Calculated. The number of cable modems associated with the node segment reporting a US Time Offset Status equal to "Out of Spec (OOS)".
 
-- **Percentage CM US QAM Ch. Time Offset OOS**: Calculated. The percentage of cable modems associated with the node segment reporting a US Time Offset Status equal to "OOS".
+- **Percentage CM US QAM Ch. Time Offset OOS**: Calculated. The percentage of cable modems associated with the node segment reporting a US Time Offset Status equal to "Out of Spec (OOS)".
 
 - **Number DS QAM Ch.**: Calculated. The number of DS (downstream) QAM channels associated with the node segment. This is the same number of channels as associated with the corresponding DS port.
 
-- **Number CM DS QAM Ch. Rx Power OOS**: Calculated. The number of cable modems associated with the node segment reporting a DS Rx Power Status equal to "OOS".
+- **Number CM DS QAM Ch. Rx Power OOS**: Calculated. The number of cable modems associated with the node segment reporting a DS Rx Power Status equal to "Out of Spec (OOS)".
 
-- **Percentage CM DS QAM Ch. Rx Power OOS**: Calculated. The percentage of cable modems associated with the node segment reporting a DS Rx Power Status equal to "OOS".
+- **Percentage CM DS QAM Ch. Rx Power OOS**: Calculated. The percentage of cable modems associated with the node segment reporting a DS Rx Power Status equal to "Out of Spec (OOS)".
 
-- **Number CM DS QAM Ch. Rx SNR OOS**: Calculated. The number of cable modems associated with the node segment reporting a DS SNR Status equal to "OOS".
+- **Number CM DS QAM Ch. Rx SNR OOS**: Calculated. The number of cable modems associated with the node segment reporting a DS SNR Status equal to "Out of Spec (OOS)".
 
-- **Percentage CM DS QAM Ch. Rx SNR OOS**: Calculated. The percentage of cable modems associated with the node segment reporting a DS SNR Status equal to "OOS".
+- **Percentage CM DS QAM Ch. Rx SNR OOS**: Calculated. The percentage of cable modems associated with the node segment reporting a DS SNR Status equal to "Out of Spec (OOS)".
 
-- **Number CM DS QAM Ch. Rx Post-FEC OOS**: Calculated. The number of cable modems associated with the node segment reporting a DS Post-FEC Status equal to "OOS".
+- **Number CM DS QAM Ch. Rx Post-FEC OOS**: Calculated. The number of cable modems associated with the node segment reporting a DS Post-FEC Status equal to "Out of Spec (OOS)".
 
-- **Percentage CM DS QAM Ch. Rx Post-FEC OOS**: Calculated. The percentage of cable modems associated with the node segment reporting a DS Post-FEC Status equal to "OOS".
+- **Percentage CM DS QAM Ch. Rx Post-FEC OOS**: Calculated. The percentage of cable modems associated with the node segment reporting a DS Post-FEC Status equal to "Out of Spec (OOS)".
 
 - **Number CM Group Delay OOS**: Calculated. The number of cable modems associated with the given service group that are affected by group delay.
 
@@ -74,9 +74,9 @@ This page contains an overview of the Node Segment parameters available in the I
 
 - **Percentage CM Reflection OOS**: Calculated. The percentage of cable modems associated with the given service group that are affected by reflection.
 
-- **Number CM Group Delay or Reflection OOS**: Calculated. The number of cable modems associated with the given service group that are affected by Pre-MTTER being out of spec (OOS) or Post-MTTER being out of spec (OOS).
+- **Number CM Group Delay or Reflection OOS**: Calculated. The number of cable modems associated with the given service group that are affected by Pre-MTTER being Out of Spec(OOS) or Post-MTTER being Out of Spec (OOS).
 
-- **Percentage CM Group Delay or Reflection OOS**: Calculated. The percentage of cable modems associated with the given service group that are affected by Pre-MTTER being out of spec (OOS) or Post-MTTER being out of spec (OOS).
+- **Percentage CM Group Delay or Reflection OOS**: Calculated. The percentage of cable modems associated with the given service group that are affected by Pre-MTTER being Out of Spec (OOS) or Post-MTTER being Out of Spec (OOS).
 
   > [!NOTE]
   > Note that prior to EPM I-DOCSIS 6.1.7<!-- RN 36344 -->, **Percentage CM Group Delay OOS** and **Percentage CM Reflection OOS** parameters were affected by NMTTER being out of spec. This was because the parameter **Percentage CM Group Delay or Reflection OOS** did not have a relation with **Percentage CM Group Delay OOS** and **Percentage CM Reflection OOS**.

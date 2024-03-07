@@ -294,12 +294,12 @@ When, in edit mode, you opened the *Layout* tab of a *Numeric input* component, 
 
 #### Dashboards app & Low-Code Apps: Timeline component would not show the selection boxes to alter its dimensions [ID_38653]
 
-<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+<!-- MR 10.3.0 [CU13] - FR 10.4.3 -->
 
 In some cases, a *Timeline* component would incorrectly not show the selection boxes to alter its dimensions.
 
 #### Dashboards app & Low-Code Apps: Table component would not allow to copy data in an insecure environment [ID_38660]
 
-<!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
+<!-- MR 10.3.0 [CU13] - FR 10.4.3 -->
 
 When a dashboard or low-code app was used in an insecure environment (e.g. when using HTTP instead of HTTPS), a table component would not allow you to open the context menu used to copy data.

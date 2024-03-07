@@ -47,7 +47,7 @@ Enables behavioral anomaly detection and suggestion events. See [Behavioral anom
 
 > [!NOTE]
 > Deprecated from DataMiner 10.3.6 onwards. No longer supported from DataMiner 10.4.0/10.4.1 onwards.<!-- RN 37765 -->
-> This feature is replaced by the [UserDefinableAPI](#userdefinableapi) feature. When upgrading to 10.4.0 or newer, a prerequisite will block the upgrade if you still have deprecated APIs deployed. For more information, see [Upgrade fails because of VerifyNoObsoleteApiDeployed.dll prerequisite](xref:KI_Upgrade_fails_VerifyNoObsoleteApiDeployed_prerequisite).
+> This feature is replaced by the [UserDefinableAPI](#userdefinableapi) feature. When upgrading to 10.4.0 or newer, a prerequisite will block the upgrade if you still have deprecated APIs deployed. For more information, see [Verify No Obsolete API Deployed](xref:Verify_No_Obsolete_API_Deployed).
 
 > [!CAUTION]
 > APIDeployment is not supported on systems using [Storage as a Service (STaaS)](xref:STaaS).
@@ -325,7 +325,7 @@ Enables the export to PDF button within the Dashboards app itself. Creating PDFs
 Enables a new Maps component in the Dashboards app and the Low-Code Apps.
 
 - **Minimum version**: 10.3.2
-- **Estimated release version**: 10.4.4
+- **Estimated release version**: 10.4.7
 
 ### ReportsAndDashboardsGuides
 

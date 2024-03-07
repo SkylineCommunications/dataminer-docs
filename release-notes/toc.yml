@@ -27,7 +27,7 @@ items:
             topicUid: EPM_6.1.6_D-DOCSIS
             href: EPM/toc.yml
           - name: IDP release notes
-            topicUid: IDP_1.2.1
+            topicUid: IDP_1.5.0
             href: IDP/toc.yml
           - name: MbgNMS release notes
             topicUid: MbgNMS_1.2.3
