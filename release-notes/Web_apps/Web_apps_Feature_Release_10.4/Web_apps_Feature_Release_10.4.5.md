@@ -16,7 +16,16 @@ uid: Web_apps_Feature_Release_10.4.5
 
 ## New features
 
-*No new features have been added yet.*
+#### Dashboards app & Low-Code Apps: Client metric logging [ID_39000]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+In the `C:\Skyline DataMiner\Logging\Web` folder, apart from Web API logging, you can now also find client metric logging.
+
+Client metric logging is employed to record different performance and issue indicators of clients connecting to Dashboards and Low-Code Apps. These logs encompass everything from unexpected errors to the load time of a dashboard or low-code app page. This logging data is stored in the `Client` subfolder of the web logs.
+
+> [!TIP]
+> For more information, see [Dashboards and Low-Code Apps logging](xref:Dashboards_and_Low_Code_Apps_Logging).
 
 ## Changes
 
