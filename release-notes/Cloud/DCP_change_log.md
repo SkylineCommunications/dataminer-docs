@@ -15,7 +15,7 @@ The connection status information is now updated every minute on dataminer.servi
 
 #### 7 March 2024 - Enhancement - Improved support for DataMiner as a Service systems on dataminer.services [ID_38932]
 
-​The dataminer.services page now has an improved UI when a DataMiner as a Service (DaaS) system is deploying with an estimated time left. When a DaaS system is unreachable, an email is provided to contact support. It is also possible to remove the system whilst it is still deploying.
+​The dataminer.services page now has an improved UI when a DataMiner as a Service (DaaS) system is being deployed, with an estimated time left. When a DaaS system is unreachable, an email address is provided to contact support. It is also possible to remove the system while it is still being deployed.
 
 #### 29 February 2024 - Enhancement - Admin app UI adjusted [ID_38908]
 
