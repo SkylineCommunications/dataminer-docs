@@ -27,7 +27,7 @@ Every available release is announced with comprehensive release notes, containin
 DataMiner is based on a non-exclusive upgrade model, meaning that users can skip any of the available updates and then only install the most recent upgrade, which automatically brings along all previous upgrades.
 
 > [!NOTE]
-> In case you skip multiple major releases, follow the instructions detailed under [Upgrading across major versions](xref:Preparing_to_upgrade_a_DataMiner_Agent#upgrading-across-major-versions).
+> In case you skip multiple major releases, follow the instructions for [upgrading across major versions](xref:Preparing_to_upgrade_a_DataMiner_Agent#best-practices-when-upgrading-across-major-versions).
 
 > [!TIP]
 > For more detailed information on the DataMiner release cycles, see [DataMiner Main Release vs. Feature Release](xref:DataMiner_MR_vs_FR).
