@@ -27,6 +27,15 @@ This service now allows you to enable kernel response buffering, which should im
    { "HostingOptions": { "EnableKernelResponseBuffering": true } }
    ```
 
+#### New SLTimeToLive.txt log file containing all changes made to the TTL settings [ID_38851]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+In the `C:\Skyline DataMiner\Logging\SLTimeToLive` folder, you can now find a new *SLTimeToLive.txt* log file, listing all changes made to the TTL settings in Cube's *System Center > System settings > Time to live* page.
+
+> [!NOTE]
+> The contents of this folder will not be deleted during either a DataMiner restart or a DataMiner upgrade. However, in the *SLTimeToLive.txt* file, the oldest entries will be removed when the maximum log file size is exceeded.
+
 #### Security enhancements [ID_38904]
 
 <!-- RN 38904: MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->

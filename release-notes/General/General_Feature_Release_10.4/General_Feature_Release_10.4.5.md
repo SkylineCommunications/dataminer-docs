@@ -24,7 +24,7 @@ uid: General_Feature_Release_10.4.5
 
 #### New SLTimeToLive.txt log file containing all changes made to the TTL settings [ID_38851]
 
-<!-- MR 10.5.0 - FR 10.4.5 -->
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
 In the `C:\Skyline DataMiner\Logging\SLTimeToLive` folder, you can now find a new *SLTimeToLive.txt* log file, listing all changes made to the TTL settings in Cube's *System Center > System settings > Time to live* page.
 
