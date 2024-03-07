@@ -20,4 +20,7 @@ When both of the above have been installed, you can [configure the database sett
 > For more information on this architecture and on other possible data storage architectures, see [Supported data storage architectures](xref:Supported_system_data_storage_architectures).
 
 > [!NOTE]
+> If you deployed DataMiner by using the [pre-installed DataMiner Virtual Hard Disk](xref:Using_a_pre_installed_DataMiner_VHDX), both [Cassandra Cluster and OpenSearch run locally on the Virtual Machine on Windows Subsystem for Linux (WSL)](xref:Local_database_on_WSL). Consider [decommissioning WSL](xref:Decommissioning_WSL) so it no longer consumes any resources.
+
+> [!NOTE]
 > .dmimport packages created on a DMS using clustered storage do not contain any database data, and it is not possible to import database data from .dmimport packages into such a DMS.
