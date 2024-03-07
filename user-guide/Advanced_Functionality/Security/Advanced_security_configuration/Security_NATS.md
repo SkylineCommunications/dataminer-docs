@@ -65,7 +65,7 @@ By default, NATS does **not** employ TLS encryption, leaving communication susce
 ## Enabling DataMiner-to-NATS node TLS communication
 
 > [!IMPORTANT]
-> TLS encryption for communication between DataMiner and NATS nodes is supported from DataMiner 10.4.3 [CU0]/10.5.0 onwards<!-- RN 38302 -->, with CA-signed certificates (Certificate Authority-Signed Certificates). Avoid using self-signed certificates for this, as this may result in DataMiner startup failures.
+> TLS encryption for communication between software and NATS nodes is available starting from version 10.4.3 [CU0]/10.5.0 onwards<!-- RN 38302 --> and it supports CA-signed certificates (Certificate Authority-Signed Certificates). If you are using software version 10.4.3, please note that only CA-signed certificates are supported, and attempting to use self-signed certificates may result in startup failures. The resolution for this issue should be fixed from version 10.4.4 onwards.
 
 1. Install the certificate in the Windows Trusted Root Certification Authorities Certificate Store, which **requires administrator privileges**.
 
