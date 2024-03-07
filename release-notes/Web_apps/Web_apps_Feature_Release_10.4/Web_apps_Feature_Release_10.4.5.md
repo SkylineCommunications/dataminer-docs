@@ -57,3 +57,9 @@ When a *Dropdown* component with a filter applied lost the focus, the moment it 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
 When, on a shared dashboard, a *Dropdown* component had a time range or service definition filter applied, it would not be possible to use that component.
+
+#### Web apps: Context menu would not close when scrolling on a mobile device [ID_38992]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+When, on a mobile device, you scrolled while a context menu was open, that context menu would incorrectly not close.
