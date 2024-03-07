@@ -50,9 +50,10 @@ From now on, the following exception will be thrown instead:
 
 SLLogCollector will now also collect the logs of the *CommunicationGateway* DxM.
 
-#### Security enhancements [ID_38756]
+#### Security enhancements [ID_38756] [ID_38650]
 
 <!-- RN 38756: MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+<!-- RN 38650: MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
 A number of security enhancements have been made.
 
@@ -64,7 +65,31 @@ Up to now, SLProtocol would forward all changes to standalone parameters to SLEl
 
 Also, when an SNMP parameter used a wildcard as OID, up to now, SLProtocol would forward the value of that wildcard to SLElement, which would then pass it on to the SLSNMPManager process. From now on, SLProtocol will forward those wildcard values directly to SLSNMPManager.
 
+#### At installation the APIGateway service will now be configured to restart itself after each failure [ID_38855]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+At installation, the APIGateway service will now be configured to restart itself after each failure.
+
+#### SLAnalytics - Behavioral anomaly detection: Enhanced performance when monitoring more than 100,000 parameters [ID_38922]
+
+<!-- MR 10.3.0 [CU13] - FR 10.4.4 -->
+
+Because of a number of enhancements, overall performance of the SLAnalytics process has increased, especially when more than 100,000 parameters are being monitored for behavioral anomaly detection.
+
+#### Visual Overview: Connections between SLHelper and mobile Visual Overview sessions will now time out after 5 minutes of inactivity [ID_38985]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 [CU0] -->
+
+Up to now, when SLHelper did not send any updates to a mobile Visual Overview client session for 2 minutes, the connection would be destroyed. This connection timeout has now been changed from 2 minutes to 5 minutes.
+
 ### Fixes
+
+#### SLLogCollector: Minor issues [ID_38011]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+A number of minor issues were fixed with regard to the SLLogCollector tool.
 
 #### Problem when a redundancy group was set to an undefined state [ID_38401]
 
@@ -149,3 +174,39 @@ On Failover systems using a shared hostname, SLNet regularly executes PowerShell
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
 When an Automation script sent an email to a user or a user group using an *Email* action, in some cases, an error could be thrown.
+
+#### Problem with SLProtocol when it took longer than 15 minutes to execute a poll group [ID_38858]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+When an element used SNMP or HTTP communication, a notification would only be sent to SLWatchdog when a poll group finished executing. As a result, when it took longer than 15 minutes to execute a poll group, an SLProtocol run-time error alarm would be generated and subsequently cleared when the poll group finished.
+
+In order to avoid such run-time error alarms from being generated, a check will now be performed when a response is received, and an additional notification will be sent to SLWatchdog when the first notification to SLWatchdog was sent more than one minute ago.
+
+#### Mediation protocols: Problem when the value of the 'baseFor' attribute is identical to that of the '\<ElementType\>' tag [ID_38878]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+When a mediation protocol had a `baseFor` attribute with a value identical to that of its `<ElementType>` tag, this could lead to issues in SLNet.
+
+From now on, it will no longer be possible to upload a protocol of which the value of the `baseFor` attribute is identical to that of the `<ElementType>` tag.
+
+#### Problem with SLLog when stopping or restarting DataMiner [ID_38902]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+When DataMiner was stopped or restarted, in some cases, the SLLog process could stop working.
+
+#### Visual Overview: SLHelper would not clean up the UIProvider for an inactive user group when users from another user group were still active [ID_38979]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 [CU0] -->
+
+Up to now, SLHelper would incorrectly not clean up the server-side UIProvider for a particular user group after 8 hours of inactivity when users from another user group were still active.
+
+From now on, SLHelper will no longer take into account activity from other user groups when it decides to clean up the UIProvider for a particular user group after 8 hours of inactivity.
+
+#### SLAnalytics will no longer automatically restore a lost session with SLDataGateway [ID_38984]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+Since DataMiner version 10.3.0 [CU9]/10.3.12, SLAnalytics would automatically restore a lost session with SLDataGateway. From now on, it will no longer do so.

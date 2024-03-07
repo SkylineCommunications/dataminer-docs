@@ -197,6 +197,13 @@ items:
   - name: Monitoring & Management Solutions
     topicUid: Monitoring_Solutions
     items:
+      - name: DataMiner Asset Management application
+        topicUid: Asset_Management
+        items:
+          - name: Installing the Asset Management app
+            topicUid: Installing_Asset_Management
+          - name: Working with the Asset Management app
+            topicUid: Working_with_Asset_Management
       - name: DataMiner Huawei Manager dashboard
         topicUid: Huawei_Manager_Dashboard
         items:
@@ -238,7 +245,9 @@ items:
           - name: Installing Remote PHY Monitoring
             topicUid: Remote_PHY_Monitoring_Installation
           - name: Remote PHY Monitoring components
-            topicUid: Remote_PHY_Monitoring_Components
+            topicUid: Remote_PHY_Monitoring_components
+          - name: Restricting access to Remote PHY Monitoring
+            topicUid: Remote_PHY_Monitoring_Access_Restriction
       - name: Smart Trap Processor
         topicUid: Smart_Trap_Processor_Overview
         items:

@@ -9,7 +9,7 @@ uid: I-DOCSIS_parameters
 
 This section lists the aggregated parameters for each topology level in the I-DOCSIS branch of the EPM Solution.
 
-| KPI's | Network | Market | Hub | CCAP Core | DS Linecard | US Linecard | DS Port | US Port | Node Segment | Service Group [Fiber Node] | DS Service Group | US Service Group |
+| KPIs | Network | Market | Hub | CCAP Core | DS Linecard | US Linecard | DS Port | US Port | Node Segment | Service Group [Fiber Node] | DS Service Group | US Service Group |
 | :---: | :-----: | :----: | :---: | :-----: | :---------: | :---------: | :-----: | :-----: | :----------: | :------------------------: | :--------------: | :--------------: |
 | Number Market|X||||||||||||
 | Number Hub|X|X|||||||||||

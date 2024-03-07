@@ -4,6 +4,10 @@ uid: supportassistant_change_log
 
 # Support Assistant change log
 
+#### 4 March 2024 - Enhancement - SupportAssistant 1.6.7 - Improved installer robustness [ID_38945]
+
+The SupportAssistant installer has been updated to mitigate a Windows DLL redirection vulnerability and to improve its robustness.
+
 #### 16 February 2024 - Enhancement - SupportAssistant 1.6.6 - Additional data offload for proactive monitoring [ID_38797]
 
 From now on, the SLClient log file will be offloaded for proactive monitoring via CDMR.

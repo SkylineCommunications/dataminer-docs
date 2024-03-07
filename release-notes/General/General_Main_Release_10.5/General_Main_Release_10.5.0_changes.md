@@ -11,11 +11,12 @@ uid: General_Main_Release_10.5.0_changes
 
 ### Enhancements
 
-#### Security enhancements [ID_37349] [ID_38052] [ID_38263]
+#### Security enhancements [ID_37349] [ID_38052] [ID_38263] [ID_38951]
 
 <!-- 37349: MR 10.5.0 - FR 10.4.2 -->
 <!-- 38052: MR 10.5.0 - FR 10.4.2 -->
 <!-- 38263: MR 10.5.0 - FR 10.4.3 -->
+<!-- 38951: MR 10.5.0 - FR 10.4.4 -->
 
 A number of security enhancements have been made.
 
@@ -145,17 +146,17 @@ For detailed information about the changes included in those versions, refer to 
 
 The ad hoc data source now supports real-time updates.
 
-#### GQI now filters DOM string fields case-insensitively [ID_38645]
-
-<!-- MR 10.5.0 - FR 10.4.4 -->
-
-Up to now, GQI would filter DOM string fields case-sensitively. From now on, it will filter those fields case-insensitively.
-
 #### SLAnalytics: Enhanced management of DataMinerObjectDeleteMessages [ID_38734]
 
 <!-- MR 10.5.0 - FR 10.4.4 -->
 
 Because of a number of enhancements, overall memory usage has been reduced, especially with regard to the management of DataMinerObjectDeleteMessages.
+
+#### SLLogCollector will now run the 'tasklist /fo TABLE' command [ID_38842]
+
+<!-- MR 10.5.0 - FR 10.4.4 -->
+
+SLLogCollector will now by default run the `tasklist /fo TABLE` command, and save the output in the `Logs\Windows` folder of the generated package.
 
 ### Fixes
 
@@ -182,3 +183,28 @@ When cleaning (i.e. resetting) a Cassandra database, in some cases, a `TypeIniti
 <!-- MR 10.5.0 - FR 10.4.4 -->
 
 When the system went into file offload mode, in some cases, a serialization issue could occur, causing the file offload mode to get stuck.
+
+#### StorageModule: Only final retry will be logged as error when a data storage request fails [ID_38897]
+
+<!-- MR 10.5.0 - FR 10.4.4 -->
+
+When a StorageModule client requests data to be stored, in some cases, a subscription exception can be thrown. Those data storage requests are retried automatically. However, up to now, each retry would be logged as error.
+
+From now on, only the final retry will be logged as error. All prior retries will only be logged when the log level is set to "debug".
+
+#### GQI: Problem when loading extensions [ID_38998]
+
+<!-- MR 10.5.0 - FR 10.4.5 -->
+
+When GQI extensions (i.e. ad hoc data sources or custom operators) were being loaded, in some cases, an exception could be thrown when inspecting the assembly of an extension that prevented subsequent extensions from being loaded.
+
+This type of exceptions will be now be properly caught and logged as warnings so that other extensions will no longer be prevented from being loaded.
+
+> [!TIP]
+> See also: [GQI: Full logging [ID_38870]](xref:General_Main_Release_10.4.0_CU1#gqi-full-logging-id_38870)
+
+#### Problem while checking whether the DataMiner System was licensed to use the ModelHost DxM [ID_39001]
+
+<!-- MR 10.5.0 - FR 10.4.5 -->
+
+A *ModelHostException* could be thrown while checking whether the DataMiner System was licensed to use the ModelHost DxM.

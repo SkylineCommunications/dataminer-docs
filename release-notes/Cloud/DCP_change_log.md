@@ -13,9 +13,17 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 The connection status information is now updated every minute on dataminer.services.
 
-#### 7 March 2024 - Enhancement - Improved support for DataMiner as a Service systems on dataminer.services [ID_38932] 	
+#### 7 March 2024 - Enhancement - Improved support for DataMiner as a Service systems on dataminer.services [ID_38932]
 
 ​The dataminer.services page now has an improved UI when a DataMiner as a Service (DaaS) system is deploying with an estimated time left. When a DaaS system is unreachable, an email is provided to contact support. It is also possible to remove the system whilst it is still deploying.
+
+#### 29 February 2024 - Enhancement - Admin app UI adjusted [ID_38908]
+
+The header bar and sidebar of the [Admin app](https://admin.dataminer.services) now use a light theme.
+
+#### 29 February 2024 - New feature - Admin - Added organization keys [ID_38944]
+
+In the Admin app, you can now create DCP keys on organization level.
 
 #### 21 February 2024 - Fix - Improved catalog search performance [ID_38865]
 

@@ -4,8 +4,8 @@ uid: General_Main_Release_10.4.0_CU1
 
 # General Main Release 10.4.0 CU1 - Preview
 
-> [!NOTE]
-> For known issues with this version, refer to [Known issues](xref:Known_issues).
+> [!IMPORTANT]
+> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
 
 > [!TIP]
 > For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
@@ -57,6 +57,17 @@ Because of a number of enhancements, overall performance has increased
 
 The validation of the name of a booking is now case-insensitive. This means that when the SRM Framework checks if there are future bookings with the same name, the casing is now no longer taken into account.
 
+#### DataMiner Object Models: GenericEnum values will now be converted to the display value prior to being used in a DOM instance name concatenation [ID_38586]
+
+<!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
+
+The `DomInstanceNameDefinition` class contains a simple list of `IDomInstanceConcatenationItems`. With this, you can add concatenation items of two types in a specific order to define your name: `StaticValueConcatenationItem` or `FieldValueConcatenationItem`.
+
+In the case of the latter, if a `FieldValue` contains data for a `GenericEnumFieldDescriptor` (which can be either string values or integer values), these values will now be converted to the display value.
+
+> [!NOTE]
+> Currently, using `GenericEnum` fields containing multiple values are not supported for name concatenation.
+
 #### SLAnalytics - Behavioral anomaly detection: Suggestion event generation will now be limited [ID_38674]
 
 <!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
@@ -89,7 +100,7 @@ SLLogCollector will now also collect the logs of the *CommunicationGateway* DxM.
 #### Security enhancements [ID_38756] [ID_38650]
 
 <!-- RN 38756: MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
-<!-- RN 38650: MR 10.4.0 [CU1] - FR 10.4.4 -->
+<!-- RN 38650: MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
 A number of security enhancements have been made.
 
@@ -121,7 +132,52 @@ From now on, it will no longer be possible to reuse a contributing booking that 
 
 At installation, the StorageModule service will now be configured to restart itself after each failure.
 
+#### At installation the APIGateway service will now be configured to restart itself after each failure [ID_38855]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+At installation, the APIGateway service will now be configured to restart itself after each failure.
+
+#### GQI: Full logging [ID_38870]
+
+<!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
+
+Full GQI logging will now be available in the `C:\Skyline DataMiner\Logging\GQI` folder.
+
+The log level can be configured in the `<appSettings>` element of the `C:\Skyline DataMiner\Files\SLHelper.exe.config` file.
+
+By default, this file will contain the following GQI log settings:
+
+```xml
+<add key="serilog:minimum-level" value="Information" />
+```
+
+In case of issues that need investigating, you can temporarily lower the minimum log level to "Debug".
+
+> [!NOTE]
+>
+> - The *SLHelper.exe.config* file is overwritten with the default configuration during full DataMiner upgrades or downgrades.
+> - A GQI error log will be added in the `C:\Skyline DataMiner\Logging\GQI` folder for every GQI request that fails.
+
+#### SLAnalytics - Behavioral anomaly detection: Enhanced generation of suggestion events when detecting variance changes [ID_38941]
+
+<!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
+
+A number of enhancements have been made to the mechanism that automatically generates a suggestion event when a variance change is detected.
+
+#### Visual Overview: Connections between SLHelper and mobile Visual Overview sessions will now time out after 5 minutes of inactivity [ID_38985]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 [CU0] -->
+
+Up to now, when SLHelper did not send any updates to a mobile Visual Overview client session for 2 minutes, the connection would be destroyed. This connection timeout has now been changed from 2 minutes to 5 minutes.
+
 ### Fixes
+
+#### SLLogCollector: Minor issues [ID_38011]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+A number of minor issues were fixed with regard to the SLLogCollector tool.
 
 #### Problem when a redundancy group was set to an undefined state [ID_38401]
 
@@ -244,6 +300,14 @@ On Failover systems using a shared hostname, SLNet regularly executes PowerShell
 
 When an Automation script sent an email to a user or a user group using an *Email* action, in some cases, an error could be thrown.
 
+#### Problem with SLProtocol when it took longer than 15 minutes to execute a poll group [ID_38858]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+When an element used SNMP or HTTP communication, a notification would only be sent to SLWatchdog when a poll group finished executing. As a result, when it took longer than 15 minutes to execute a poll group, an SLProtocol run-time error alarm would be generated and subsequently cleared when the poll group finished.
+
+In order to avoid such run-time error alarms from being generated, a check will now be performed when a response is received, and an additional notification will be sent to SLWatchdog when the first notification to SLWatchdog was sent more than one minute ago.
+
 #### STaaS: Failing request would not be retried [ID_38874]
 
 <!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
@@ -251,3 +315,42 @@ When an Automation script sent an email to a user or a user group using an *Emai
 When a request to the cloud failed, in some cases, the Azure SDK would not be able to perform any retries and would throw the following exception:
 
 `System.ArgumentOutOfRangeException: 'minValue' cannot be greater than maxValue.`
+
+#### Mediation protocols: Problem when the value of the 'baseFor' attribute is identical to that of the '\<ElementType\>' tag [ID_38878]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+When a mediation protocol had a `baseFor` attribute with a value identical to that of its `<ElementType>` tag, this could lead to issues in SLNet.
+
+From now on, it will no longer be possible to upload a protocol of which the value of the `baseFor` attribute is identical to that of the `<ElementType>` tag.
+
+#### STaaS: Problem when generating a DataMiner backup with the database backup option enabled [ID_38896]
+
+<!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
+
+Up to now, on STaaS systems, a notice would be generated when a DataMiner backup was executed with the database backup option enabled.
+
+From now on, when a DataMiner backup is executed with the database backup option enabled, on a STaaS system, no database backup will be performed.
+
+> [!NOTE]
+> On STaaS systems, database backups are taken automatically. If you want a STaaS backup to be restored, contact [Skyline support](mailto:techsupport@skyline.be).
+
+#### Problem with SLLog when stopping or restarting DataMiner [ID_38902]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+When DataMiner was stopped or restarted, in some cases, the SLLog process could stop working.
+
+#### Visual Overview: SLHelper would not clean up the UIProvider for an inactive user group when users from another user group were still active [ID_38979]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 [CU0] -->
+
+Up to now, SLHelper would incorrectly not clean up the server-side UIProvider for a particular user group after 8 hours of inactivity when users from another user group were still active.
+
+From now on, SLHelper will no longer take into account activity from other user groups when it decides to clean up the UIProvider for a particular user group after 8 hours of inactivity.
+
+#### SLAnalytics will no longer automatically restore a lost session with SLDataGateway [ID_38984]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+Since DataMiner version 10.3.0 [CU9]/10.3.12, SLAnalytics would automatically restore a lost session with SLDataGateway. From now on, it will no longer do so.

@@ -22,7 +22,81 @@ uid: General_Feature_Release_10.4.4
 
 ## New features
 
-*No features have been added yet.*
+#### Elasticsearch re-indexing tool [ID_37994]
+
+<!-- MR 10.5.0 - FR 10.4.4 -->
+
+Migrating data from from Elasticsearch 6.8.22 to OpenSearch 2.11.1 involves the following steps:
+
+1. Taking a snapshot of the Elasticsearch 6.8.22 cluster.
+1. Copying the snapshot to an Elasticsearch 7.10.0 cluster, and restoring it.
+1. Re-indexing the data and taking another snapshot.
+1. Copying the snapshot with the re-indexed data to an OpenSearch 2.11.1 cluster, and restoring it
+
+To perform step 3, a command-line re-indexing tool has been developed: *ReIndexElasticSearchIndexes.exe*.
+
+This tool accepts the following arguments:
+
+| Argument | Description |
+|----------|-------------|
+| -Node or -N | The name of the node to be used for re-indexing (mandatory).<br>Format: `http(s)://127.0.0.1:9200` or `http(s)://fqdn:9200` |
+| -User or -U | The user name, to be provided in case Elasticsearch was hardened.<br>See [Securing the Elasticsearch database](xref:Security_Elasticsearch) |
+| -Password or -P | The user password |
+| -DBPrefix or -D | The database prefix, to be provided in case a custom database prefix is used instead of the default `dms-` prefix.<br>If you do not provide a prefix, the default `dms-` will be used. |
+| -TLSEnabled or -T | Whether or not TLS is enabled for this ElasticSearch database.<br>Values: true or false. Default: false |
+
+If you do not specify a user name and user password, the tool will assume a default ElasticSearch database installation.
+
+#### DataMiner Object Models: DomInstanceHistorySettings are now also available on DomDefinition level [ID_38294]
+
+<!-- MR 10.5.0 - FR 10.4.4 -->
+
+`DomInstanceHistorySettings` are now also available on DomDefinition level.
+
+The behavior is similar to that of the options in the `ModuleSettingsOverrides` property of a DomDefinition:
+
+- When `HistorySettings` are available in the DomDefinition, these will take precedence.
+- When the `HistorySettings` object in the DomDefinition is null, the `HistorySettings` of the `ModuleSettings` will be used.
+
+> [!IMPORTANT]
+> In order for the `HistorySettings` of the `ModuleSettings` to be used, the `HistorySettings` object in the DomDefinition has to be *null*. Just making the values empty is not sufficient.
+
+#### GQI: Full logging [ID_38870]
+
+<!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
+
+Full GQI logging will now be available in the `C:\Skyline DataMiner\Logging\GQI` folder.
+
+The log level can be configured in the `<appSettings>` element of the `C:\Skyline DataMiner\Files\SLHelper.exe.config` file.
+
+By default, this file will contain the following GQI log settings:
+
+```xml
+<add key="serilog:minimum-level" value="Information" />
+```
+
+In case of issues that need investigating, you can temporarily lower the minimum log level to "Debug".
+
+> [!NOTE]
+>
+> - The *SLHelper.exe.config* file is overwritten with the default configuration during full DataMiner upgrades or downgrades.
+> - A GQI error log will be added in the `C:\Skyline DataMiner\Logging\GQI` folder for every GQI request that fails.
+
+#### SLAnalytics - Behavioral anomaly detection: Server-side changes to allow user feedback [ID_38980]
+
+<!-- MR 10.5.0 - FR 10.4.4 -->
+
+A number of server-side changes have been made to allow users to provide positive or negative feedback on anomaly suggestion events and alarms.
+
+This feedback will be taken into account by the behavior anomaly detection algorithm in order to enhance anomaly event generation, which up to now was based solely on the change point history of the parameter in question.
+
+All user feedback will be stored in a new table named *ai_anomalyfeedback*, which will be added to every Elasticsearch/OpenSearch database.
+
+> [!NOTE]
+>
+> - Until further notice, this feature will require the *AnomalyFeedback* soft-launch option to be enabled.
+> - This feature will only work if the DataMiner System includes an Elasticsearch/OpenSearch database.
+> - Currently, this feature is not yet supported by any of the DataMiner client apps.
 
 ## Changes
 
@@ -73,17 +147,22 @@ Because of a number of enhancements, overall performance has increased
 
 The validation of the name of a booking is now case-insensitive. This means that when the SRM Framework checks if there are future bookings with the same name, the casing is now no longer taken into account.
 
+#### DataMiner Object Models: GenericEnum values will now be converted to the display value prior to being used in a DOM instance name concatenation [ID_38586]
+
+<!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
+
+The `DomInstanceNameDefinition` class contains a simple list of `IDomInstanceConcatenationItems`. With this, you can add concatenation items of two types in a specific order to define your name: `StaticValueConcatenationItem` or `FieldValueConcatenationItem`.
+
+In the case of the latter, if a `FieldValue` contains data for a `GenericEnumFieldDescriptor` (which can be either string values or integer values), these values will now be converted to the display value.
+
+> [!NOTE]
+> Currently, using `GenericEnum` fields containing multiple values are not supported for name concatenation.
+
 #### GQI: Ad hoc data source now supports real-time updates [ID_38643]
 
 <!-- MR 10.5.0 - FR 10.4.4 -->
 
 The ad hoc data source now supports real-time updates.
-
-#### GQI now filters DOM string fields case-insensitively [ID_38645]
-
-<!-- MR 10.5.0 - FR 10.4.4 -->
-
-Up to now, GQI would filter DOM string fields case-sensitively. From now on, it will filter those fields case-insensitively.
 
 #### SLAnalytics - Behavioral anomaly detection: Suggestion event generation will now be limited [ID_38674]
 
@@ -133,10 +212,11 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 
 For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
 
-#### Security enhancements [ID_38756] [ID_38650]
+#### Security enhancements [ID_38756] [ID_38650] [ID_38951]
 
 <!-- RN 38756: MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
-<!-- RN 38650: MR 10.4.0 [CU1] - FR 10.4.4 -->
+<!-- RN 38650: MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+<!-- RN 38951: MR 10.5.0 - FR 10.4.4 -->
 
 A number of security enhancements have been made.
 
@@ -162,13 +242,49 @@ When creating or updating a booking, up to now, overlapping past bookings would 
 
 From now on, it will no longer be possible to reuse a contributing booking that has already ended in a new booking. However, updating an existing main booking that uses a contributing booking will still be possible.
 
+#### SLLogCollector will now run the 'tasklist /fo TABLE' command [ID_38842]
+
+<!-- MR 10.5.0 - FR 10.4.4 -->
+
+SLLogCollector will now by default run the `tasklist /fo TABLE` command, and save the output in the `Logs\Windows` folder of the generated package.
+
 #### At installation the StorageModule service will now be configured to restart itself after each failure [ID_38843]
 
 <!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
 
 At installation, the StorageModule service will now be configured to restart itself after each failure.
 
+#### At installation the APIGateway service will now be configured to restart itself after each failure [ID_38855]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+At installation, the APIGateway service will now be configured to restart itself after each failure.
+
+#### SLAnalytics - Behavioral anomaly detection: Enhanced performance when monitoring more than 100,000 parameters [ID_38922]
+
+<!-- MR 10.3.0 [CU13] - FR 10.4.4 -->
+
+Because of a number of enhancements, overall performance of the SLAnalytics process has increased, especially when more than 100,000 parameters are being monitored for behavioral anomaly detection.
+
+#### SLAnalytics - Behavioral anomaly detection: Enhanced generation of suggestion events when detecting variance changes [ID_38941]
+
+<!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
+
+A number of enhancements have been made to the mechanism that automatically generates a suggestion event when a variance change is detected.
+
+#### Visual Overview: Connections between SLHelper and mobile Visual Overview sessions will now time out after 5 minutes of inactivity [ID_38985]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 [CU0] -->
+
+Up to now, when SLHelper did not send any updates to a mobile Visual Overview client session for 2 minutes, the connection would be destroyed. This connection timeout has now been changed from 2 minutes to 5 minutes.
+
 ### Fixes
+
+#### SLLogCollector: Minor issues [ID_38011]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+A number of minor issues were fixed with regard to the SLLogCollector tool.
 
 #### Problem when a redundancy group was set to an undefined state [ID_38401]
 
@@ -289,6 +405,14 @@ On Failover systems using a shared hostname, SLNet regularly executes PowerShell
 
 When an Automation script sent an email to a user or a user group using an *Email* action, in some cases, an error could be thrown.
 
+#### Problem with SLProtocol when it took longer than 15 minutes to execute a poll group [ID_38858]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+When an element used SNMP or HTTP communication, a notification would only be sent to SLWatchdog when a poll group finished executing. As a result, when it took longer than 15 minutes to execute a poll group, an SLProtocol run-time error alarm would be generated and subsequently cleared when the poll group finished.
+
+In order to avoid such run-time error alarms from being generated, a check will now be performed when a response is received, and an additional notification will be sent to SLWatchdog when the first notification to SLWatchdog was sent more than one minute ago.
+
 #### STaaS: Failing request would not be retried [ID_38874]
 
 <!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
@@ -296,3 +420,50 @@ When an Automation script sent an email to a user or a user group using an *Emai
 When a request to the cloud failed, in some cases, the Azure SDK would not be able to perform any retries and would throw the following exception:
 
 `System.ArgumentOutOfRangeException: 'minValue' cannot be greater than maxValue.`
+
+#### Mediation protocols: Problem when the value of the 'baseFor' attribute is identical to that of the '\<ElementType\>' tag [ID_38878]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+When a mediation protocol had a `baseFor` attribute with a value identical to that of its `<ElementType>` tag, this could lead to issues in SLNet.
+
+From now on, it will no longer be possible to upload a protocol of which the value of the `baseFor` attribute is identical to that of the `<ElementType>` tag.
+
+#### STaaS: Problem when generating a DataMiner backup with the database backup option enabled [ID_38896]
+
+<!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
+
+Up to now, on STaaS systems, a notice would be generated when a DataMiner backup was executed with the database backup option enabled.
+
+From now on, when a DataMiner backup is executed with the database backup option enabled, on a STaaS system, no database backup will be performed.
+
+> [!NOTE]
+> On STaaS systems, database backups are taken automatically. If you want a STaaS backup to be restored, contact [Skyline support](mailto:techsupport@skyline.be).
+
+#### StorageModule: Only final retry will be logged as error when a data storage request fails [ID_38897]
+
+<!-- MR 10.5.0 - FR 10.4.4 -->
+
+When a StorageModule client requests data to be stored, in some cases, a subscription exception can be thrown. Those data storage requests are retried automatically. However, up to now, each retry would be logged as error.
+
+From now on, only the final retry will be logged as error. All prior retries will only be logged when the log level is set to "debug".
+
+#### Problem with SLLog when stopping or restarting DataMiner [ID_38902]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+When DataMiner was stopped or restarted, in some cases, the SLLog process could stop working.
+
+#### Visual Overview: SLHelper would not clean up the UIProvider for an inactive user group when users from another user group were still active [ID_38979]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 [CU0] -->
+
+Up to now, SLHelper would incorrectly not clean up the server-side UIProvider for a particular user group after 8 hours of inactivity when users from another user group were still active.
+
+From now on, SLHelper will no longer take into account activity from other user groups when it decides to clean up the UIProvider for a particular user group after 8 hours of inactivity.
+
+#### SLAnalytics will no longer automatically restore a lost session with SLDataGateway [ID_38984]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+Since DataMiner version 10.3.0 [CU9]/10.3.12, SLAnalytics would automatically restore a lost session with SLDataGateway. From now on, it will no longer do so.

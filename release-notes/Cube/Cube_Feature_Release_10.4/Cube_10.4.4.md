@@ -100,6 +100,12 @@ In some cases, DataMiner Cube could leak memory when you opened a trend graph th
 
 When you closed a spectrum analyzer card while it was still loading, in some cases, an unhandled exception could be thrown.
 
+#### Visual Oveview: DCF connections would not show any properties when the MultipleLinesMode option was used [ID_38748]
+
+<!-- MR 10.3.0 [CU13]/10.4.0 [CU1] - FR 10.4.4 -->
+
+When the *MultipleLinesMode* option was used, DCF connections would incorrectly not show any properties.
+
 #### Trending: Proactive alarm tooltip would immediately disappear [ID_38749]
 
 <!-- MR 10.3.0 [CU13]/10.4.0 [CU1] - FR 10.4.4 -->
@@ -119,3 +125,49 @@ When you closed an app (e.g. Automation, Correlation, etc.), in some cases, Cube
 <!-- MR 10.3.0 [CU13]/10.4.0 [CU1] - FR 10.4.4 -->
 
 When you opened a trend graph, in some cases, Cube could leak memory.
+
+#### Memory leak when opening the Settings window [ID_38810]
+
+<!-- MR 10.3.0 [CU13]/10.4.0 [CU1] - FR 10.4.4 -->
+
+When you opened the Settings window, in some cases, Cube could leak memory.
+
+#### Alarm Console: 'Search for alarms' would list alarms with timestamps according to the local time zone of the client computer [ID_38899]
+
+<!-- MR 10.5.0 - FR 10.4.4 -->
+
+Up to now, when you opened a new alarm tab, and did a search using the *Search for alarms* box, the alarms matching the search criterion would incorrectly show timestamps according to the local time zone of the client computer.
+
+From now on, when you use the *Search of alarms* box, the alarms matching the search criterion will show timestamps according to the server time, i.e. the local time zone of the DataMiner Agent to which the Cube client is connected.
+
+#### Memory leak when opening advanced search in sidebar [ID_38901]
+
+<!-- MR 10.3.0 [CU13]/10.4.0 [CU1] - FR 10.4.4 -->
+
+When you opened the advanced search in the sidebar, in some cases, Cube could leak memory.
+
+#### Broadcast message popup containing more than one message would not display the first message [ID_38903]
+
+<!-- MR 10.3.0 [CU13]/10.4.0 [CU1] - FR 10.4.4 -->
+
+When Cube displayed a broadcast message popup containing more than one message, the first message would incorrectly not be shown.
+
+#### Memory leak when opening an embedded browser component [ID_38919]
+
+<!-- MR 10.3.0 [CU13]/10.4.0 [CU1] - FR 10.4.4 -->
+
+When you opened an embedded browser component, in some cases, Cube could leak memory.
+
+#### Memory leak when opening an EPM card using the topology selector [ID_38963]
+
+<!-- MR 10.3.0 [CU13]/10.4.0 [CU1] - FR 10.4.4 -->
+
+When you opened an EPM card using the topology selector, in some cases, Cube could leak memory.
+
+#### Alarm Console: Name of history tab was incorrect on February 29 [ID_38968]
+
+<!-- MR 10.3.0 [CU13]/10.4.0 [CU1] - FR 10.4.4 -->
+
+When you added a history tab on February 29, the name of the tab would be incorrect.
+
+For example, when on February 29 you added a history tab listing all alarms generated during the last year, the name of the tab would incorrectly be "Last 366 days" rather than "Year to date".
