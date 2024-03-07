@@ -11,7 +11,7 @@ uid: EPM_7.0.1_I-DOCSIS
 
 #### Channel Utilization added for US/DS Service Group [ID_38849]
 
-The ​Upstream and Downstream Service Group entities now display the Channel Utilization average of the associated channels in the data section.
+When you open the ​Upstream or Downstream Service Group entities in the Topology app, the Channel Utilization average of the associated channels is now displayed in the data section.
 
 ## Changes
 
