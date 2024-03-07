@@ -11,24 +11,15 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 #### TBD - Admin - DataMiner System overview overhaul [TBD]
 
-The Dataminer system overview page got an UI overhaul to be more inline with our upcoming new design.
-Users will now be able to see new cards when a certain node is having an issue with one of the following:
+The user interface of the DataMiner System overview page has been adjusted to be more in line with our upcoming new design.
 
-- Cloud connection
-- DMS Offline
-- Port
-- Not reachable by other nodes
-
-If everything is fine, no cards will be displayed.
+Users will now be able to see new cards when a certain node has an issue involving the cloud connection or port, if the DMS is offline, or if the node cannot be reached by other nodes. If everything is fine, no cards will be displayed.
 
 #### TBD - Admin - Organization overview overhaul [ID_38960]
 
-The Organization overview page got an UI overhaul to be more inline with our upcoming new design.
+The user interface of the Organization overview page has been adjusted to be more in line with our upcoming new design.
 
-Users will now be able to see all the DataMiner systems in a table on the organization overview.
-This new table will include the name, url, network setup and status of the DataMiner system.
-
-The network setup column will show if 1 or more nodes within the system are having potential issues.
+It will now include an overview of all DataMiner Systems in a table, which will include the name, URL, network setup, and status of each DataMiner System. The network setup column will show if one or more nodes within the system are having potential issues.
 
 #### 21 February 2024 - Fix - Improved catalog search performance [ID_38865]
 
