@@ -68,7 +68,7 @@ The table component now displays the updated URLs.
 
 ### Configuring the 'import new assets' button
 
-Before the *Import new assets from Excel* button on the [*Complete assets overview* page](xref:Working_with_Asset_Management#the-complete-assets-overview-page) button is functional, you need to configure an on-click action.
+Before the *Import new assets from Excel* button on the [*Complete assets overview* page](xref:Working_with_Asset_Management#the-complete-assets-overview-page) is functional, you need to configure an on-click action.
 
 1. Click the hamburger button in the top-left corner to fully expand the sidebar.
 
