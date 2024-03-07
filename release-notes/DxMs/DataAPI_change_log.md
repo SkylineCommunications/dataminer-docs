@@ -5,8 +5,8 @@ uid: DataAPI_change_log
 # Data API change log
 
 > [!IMPORTANT]
-> At present, Data API is in soft launch and as such this feature is only available in preview if the [DataAPI](xref:Overview_of_Soft_Launch_Options#dataapi) soft-launch option is enabled.
-> For more information, see [Soft-launch options](xref:SoftLaunchOptions).
+> At present, Data API is in soft launch and as such this feature is only available in preview.
+> For more information, see [Getting started with the Data Sources module](xref:Data_Sources_Setup).
 
 #### 05 March 2024 - New Feature - DataAPI 1.1.1 - Add Configuration endpoint [ID_39016]
 
@@ -35,9 +35,10 @@ DataMiner icon has been added to the DxM and will now appear as Application icon
 
 A new Data API module is now available as a DxM (DataMiner Extension Module).
 
-It can be used to create auto generated connectors and send data to DataMiner.
+It provides an HTTP API with the purpose of ingesting data into DataMiner. 
+Within the HTTP body of the request a JSON-formatted structure with key-value pairs can be provided.
 
-Data API will, according to the provided JSON data, dynamically generate connectors with the corresponding standalone parameters, table, and columns.
+Data API will then, according to the provided JSON data, dynamically generate connectors with the corresponding standalone parameters, table, and columns.
 
 ##### Client Libraries [ID_36542]
 
@@ -50,7 +51,7 @@ Data API will now register itself with API Gateway allowing for an overview of a
 
 ##### Decimals calculation for numeric parameters [ID_37337]
 
-Data API will calculate an appropriate amount of decimals to use with numeric parameters based on the precision of the value provided upon creation of the parameter.
+Data API will calculate an appropriate number of decimals to use with numeric parameters based on the precision of the value provided upon creation of the parameter.
 
 ##### Auto-generated connector parameters [ID_37648] [ID_37837]
 
