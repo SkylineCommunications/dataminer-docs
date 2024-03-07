@@ -9,6 +9,10 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 29 February 2024 - Enhancement - Admin app UI adjusted [ID_38908]
+
+The header bar and sidebar of the [Admin app](https://admin.dataminer.services) now use a light theme.
+
 #### 29 February 2024 - New feature - Admin - Added organization keys [ID_38944]
 
 In the Admin app, you can now create DCP keys on organization level.
