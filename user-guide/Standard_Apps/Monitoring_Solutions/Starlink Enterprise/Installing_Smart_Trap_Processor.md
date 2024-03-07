@@ -22,7 +22,7 @@ uid: Installing_Starlink_Enterprise
 
    Once the package has been installed, you can access the *Starlink Enterprise* low-code app at `http(s)://[DMA name]/root`.
 
-   ![Starlink Enterprise app](~/user-guide/images/StarlinkEnterprise_Access.png) [TODO add image!!!]
+   ![Starlink Enterprise app](~/user-guide/images/StarlinkEnterprise_Access.png) [TODO add image!!]
 
 > [!NOTE]
 >
