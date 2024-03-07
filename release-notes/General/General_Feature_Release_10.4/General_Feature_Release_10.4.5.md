@@ -22,7 +22,14 @@ uid: General_Feature_Release_10.4.5
 
 ## New features
 
-*No new features have been added yet.*
+#### New SLTimeToLive.txt log file containing all changes made to the TTL settings [ID_38851]
+
+<!-- MR 10.5.0 - FR 10.4.5 -->
+
+In the `C:\Skyline DataMiner\Logging\SLTimeToLive` folder, you can now find a new *SLTimeToLive.txt* log file, listing all changes made to the TTL settings in Cube's *System Center > System settings > Time to live* page.
+
+> [!NOTE]
+> The contents of this folder will not be deleted during either a DataMiner restart or a DataMiner upgrade. However, in the *SLTimeToLive.txt* file, the oldest entries will be removed when the maximum log file size is exceeded.
 
 ## Changes
 
