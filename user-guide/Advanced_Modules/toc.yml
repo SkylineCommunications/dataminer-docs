@@ -662,6 +662,8 @@ items:
             topicUid: Query_updates
           - name: Importing a query
             topicUid: Importing_a_query
+      - name: Logging
+        topicUid: Dashboards_and_Low_Code_Apps_Logging
       - name: Frequently asked questions
         topicUid: Dashboards_and_Low_Code_Apps_FAQ
   - name: DMS Dashboards (legacy)
