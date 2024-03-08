@@ -664,6 +664,9 @@ items:
             topicUid: Importing_a_query
       - name: Logging
         topicUid: Dashboards_and_Low_Code_Apps_Logging
+        items: 
+          - name: Client metrics logging
+          - topicUid: Dashboards_and_Low_Code_Apps_Client_Metric_Logging
       - name: Frequently asked questions
         topicUid: Dashboards_and_Low_Code_Apps_FAQ
   - name: DMS Dashboards (legacy)
