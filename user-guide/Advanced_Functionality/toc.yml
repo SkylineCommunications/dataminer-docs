@@ -527,7 +527,9 @@ items:
             topicUid: Configuring_RADIUS_settings
           - name: Setting up Azure Active Directory Domain Services
             topicUid: Setting_up_Azure_Active_Directory_Domain_Services
-          - name: Enabling TLS encryption
+          - name: Securing NATS
+            topicUid: Security_NATS
+          - name: Enabling TLS encryption for serial communication
             topicUid: Enabling_TLS_encryption
           - name: Skipping certificate validation when consuming gRPC services
             topicUid: Skipping_certificate_validation_when_consuming_gRPC_services
