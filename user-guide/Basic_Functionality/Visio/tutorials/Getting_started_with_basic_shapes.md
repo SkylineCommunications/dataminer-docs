@@ -14,6 +14,7 @@ Expected duration: 15 minutes
 
   > [!TIP]
   > A [new DataMiner as a Service](xref:Creating_a_DMS_on_dataminer_services) system comes with a Microsoft Platform element out of the box, so it automatically meets this requirement.
+  > See also: [Kata #21: Visual Overview design basics](https://community.dataminer.services/courses/kata-21/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 - [Microsoft Visio](https://www.microsoft.com/microsoft-365/visio/flowchart-software)
 
