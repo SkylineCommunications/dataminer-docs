@@ -55,3 +55,9 @@ The same message will also be shown on the confirmation box that will appear aft
 In some cases, resource profiles generated within the Service & Resource Management solution would have their Min and Max capability values set to *NaN*. In the *Resources* app of Cube, a false positive result would then be returned when checking whether the capability of a resource had been changed.
 
 From now on, when the *Resources* app of Cube detects that the Min and Max capability values of a resource profile are set to *NaN*, it will no longer mark the resource in question as modified.
+
+#### Services app: Memory leak when closing the app [ID_38787]
+
+<!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
+
+When, in DataMiner Cube, you closed the Services app, in some cases, Cube could leak memory.
