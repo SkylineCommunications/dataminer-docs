@@ -13,11 +13,11 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 The connection status information is now updated every minute on dataminer.services.
 
-#### 7 March 2024 - Enhancement - Improved support for DataMiner as a Service systems on dataminer.services [ID_38932, ID_39009]
+#### 7 March 2024 - Enhancement - Improved support for DataMiner as a Service systems on dataminer.services [ID_38932] [ID_39009]
 
 ​The dataminer.services page now has an improved UI when a DataMiner as a Service (DaaS) system is being deployed, with an estimated time left. When a DaaS system is unreachable, an email address is provided to contact support. It is also possible to remove the system while it is still being deployed.
 
-A bug has been fixed where some characters were invalid for the password field in the deployment form.
+In addition, a problem has been resolved that caused some characters to be invalid in the password field in the deployment form.
 
 #### 29 February 2024 - Enhancement - Admin app UI adjusted [ID_38908]
 
