@@ -33,7 +33,23 @@ Using Kibana, you can take a snapshot in the following way:
    GET /_snapshot/_all
    ```
 
-   - This request will return all registered snapshots in the cluster. In case the desired repository already exists the next step can be skipped.
+   - This will return a response containing information about all the repositories configured in Elasticsearch. In case the desired repository already exists the next step can be skipped.
+   - Example response when a repository already exists.
+
+    ```json
+    {
+      "test_tepo_1" : {
+        "type" : "fs",
+        "settings" : {
+          "location" : "/usr/share/elasticsearch/repo",
+          "maxRestoreBytesPerSec" : "40mb",
+          "readonly" : "false",
+          "compress" : "true",
+          "maxSnapshotBytesPerSec" : "40mb"
+        }
+      }
+    }
+    ```
 
 1. Create the repository by sending the following request:
 
@@ -91,7 +107,23 @@ Using Kibana, you can restore the snapshot in the following way:
    GET /_snapshot/_all
    ```
 
-   - This request will return all registered snapshots in the cluster. In case the desired repository already exists the next step can be skipped.
+   - This will return a response containing information about all the repositories configured in Elasticsearch. In case the desired repository already exists the next step can be skipped.
+   - Example response when a repository already exists.
+
+    ```json
+    {
+      "test_tepo_1" : {
+        "type" : "fs",
+        "settings" : {
+          "location" : "/usr/share/elasticsearch/repo",
+          "maxRestoreBytesPerSec" : "40mb",
+          "readonly" : "false",
+          "compress" : "true",
+          "maxSnapshotBytesPerSec" : "40mb"
+        }
+      }
+    }
+    ```
 
 1. Create the repository by sending the following request:
 
@@ -176,7 +208,23 @@ Using Kibana, you can restore the snapshot in the following way:
    GET /_snapshot/_all
    ```
 
-   - This request will return all registered snapshots in the cluster. In case the desired repository already exists the next step can be skipped.
+   - This will return a response containing information about all the repositories configured in Elasticsearch. In case the desired repository already exists the next step can be skipped.
+   - Example response when a repository already exists.
+
+    ```json
+    {
+      "test_tepo_1" : {
+        "type" : "fs",
+        "settings" : {
+          "location" : "/usr/share/elasticsearch/repo",
+          "maxRestoreBytesPerSec" : "40mb",
+          "readonly" : "false",
+          "compress" : "true",
+          "maxSnapshotBytesPerSec" : "40mb"
+        }
+      }
+    }
+    ```
 
 1. Create the repository by sending the following request:
 
