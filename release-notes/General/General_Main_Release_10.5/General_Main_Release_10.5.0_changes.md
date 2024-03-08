@@ -158,6 +158,12 @@ Because of a number of enhancements, overall memory usage has been reduced, espe
 
 SLLogCollector will now by default run the `tasklist /fo TABLE` command, and save the output in the `Logs\Windows` folder of the generated package.
 
+#### Grouping of GQI event messages [ID_38913]
+
+<!-- MR 10.5.0 - FR 10.4.5 -->
+
+From now on, GQI event messages sent by the same GQI session within a time frame of 100 ms will be grouped into one single message.
+
 ### Fixes
 
 #### Databases: Problem when starting a migration from MySQL to Cassandra [ID_37589]

@@ -68,6 +68,12 @@ Because of a number of enhancements, overall performance has increased when star
 
 A number of security enhancements have been made.
 
+#### Grouping of GQI event messages [ID_38913]
+
+<!-- MR 10.5.0 - FR 10.4.5 -->
+
+From now on, GQI event messages sent by the same GQI session within a time frame of 100 ms will be grouped into one single message.
+
 ### Fixes
 
 #### Problem with user accounts [ID_38182]

@@ -16,6 +16,19 @@ uid: Web_apps_Feature_Release_10.4.5
 
 ## New features
 
+#### Dashboards app & Low-Code Apps - Node edge graph component: New features & enhanced performance [ID_38974]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+<!-- For fixes in RN 38974, see Fixes section below -->
+
+A number of new features have been added to the *Node edge graph* component:
+
+- In low-code apps, a new node edge graph action can now be used: *Clear the data*. When executed, this action will clear the feed status of the node edge graph in question.
+- Similar to other GQI components, a node edge graph is now able to recover selections (coming from the URL or when navigating between pages in low-code apps).
+- You can now force edge labels to become fully visible by pressing *CTRL+SPACE*.
+
+Also, because of a number of enhancements, overall node edge graph performance has increased.
+
 #### Dashboards app & Low-Code Apps: Client metric logging [ID_39000]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
@@ -47,6 +60,12 @@ From now on, linking a script parameter to an empty feed will fill it with an em
 
 Up to now, the buttons in the *Query filter* component would be barely visible when the color of the app was similar to the background color of the theme. From now on, the buttons in the *Query filter* component will always have the text color of the theme.
 
+#### Dashboards app & Low-Code Apps: Grouping of GQI event messages [ID_38959]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+From now on, GQI event messages sent by the same GQI session within a time frame of 100 ms will be grouped into one single message.
+
 #### Web apps: Enhanced performance when starting up [ID_38999]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
@@ -72,6 +91,17 @@ When a *Dropdown* component with a filter applied lost the focus, the moment it 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
 When, on a shared dashboard, a *Dropdown* component had a time range or service definition filter applied, it would not be possible to use that component.
+
+#### Dashboards app & Low-Code Apps - Node edge graph component: Issues fixed [ID_38974]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+<!-- For new features & enhancements in RN 38974, see New features section above -->
+
+A number of issues related to Node edge graph component have been solved:
+
+- When a node edge graph was linked to the query filter, in some cases, the filter would not be applied correctly for nodes/edges that were not visible in the view. Panning towards those nodes/edges would then show them as hidden/visible while they should be visible/hidden.
+- Up to now, a node edge graph would incorrectly reset its viewport when the query or filter had changed.
+- In some cases, the edge coloring/highlighting would incorrectly not be applied for parameters with very small numeric values.
 
 #### Web apps: Context menu would not close when scrolling on a mobile device [ID_38992]
 
