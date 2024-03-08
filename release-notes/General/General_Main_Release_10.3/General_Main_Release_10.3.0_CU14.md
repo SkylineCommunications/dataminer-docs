@@ -36,8 +36,9 @@ In the `C:\Skyline DataMiner\Logging\SLTimeToLive` folder, you can now find a ne
 > [!NOTE]
 > The contents of this folder will not be deleted during either a DataMiner restart or a DataMiner upgrade. However, in the *SLTimeToLive.txt* file, the oldest entries will be removed when the maximum log file size is exceeded.
 
-#### Security enhancements [ID_38904]
+#### Security enhancements [ID_37345] [ID_38904]
 
+<!-- RN 37345: MR 10.3.0 [CU14] - FR 10.3.11 -->
 <!-- RN 38904: MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
 A number of security enhancements have been made.
