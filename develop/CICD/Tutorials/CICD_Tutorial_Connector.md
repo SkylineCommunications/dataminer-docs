@@ -19,7 +19,7 @@ Expected duration: 20 minutes.
 
 - A staging DataMiner Agent that is accessible from your pipeline and that uses DataMiner version 10.3.0/10.3.2 or higher
 
-- [Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/)
+- [Microsoft Visual Studio 2022](https://visualstudio.microsoft.com/downloads/)
 
 - [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
