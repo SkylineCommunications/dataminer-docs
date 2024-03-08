@@ -50,6 +50,14 @@ A number of security enhancements have been made.
 
 ### Fixes
 
+#### Problem with user accounts [ID_38182]
+
+<!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
+
+In some cases, user accounts could become corrupted.
+
+Also, in some cases, SLDataMiner could stop working when an alarm template or trend template was uploaded, removed, assigned or unassigned.
+
 #### Automatic incident tracking: Incomplete or empty alarm groups after DataMiner startup [ID_38441]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
