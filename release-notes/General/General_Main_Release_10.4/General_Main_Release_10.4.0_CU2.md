@@ -12,6 +12,12 @@ uid: General_Main_Release_10.4.0_CU2
 
 ### Enhancements
 
+#### Service & Resource Management: Enhanced performance of volume license check [ID_38705]
+
+<!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
+
+Because of a number of enhancements, overall performance has increased when performing volume license checks.
+
 #### APIGateway now runs on .NET 8 and allows you to enable kernel response buffering [ID_38710]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
