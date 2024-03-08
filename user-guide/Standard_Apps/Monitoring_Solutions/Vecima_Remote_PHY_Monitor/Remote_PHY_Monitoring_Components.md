@@ -1,5 +1,5 @@
 ---
-uid: Remote_PHY_Monitoring_Components
+uid: Remote_PHY_Monitoring_components
 ---
 
 # Remote PHY Monitoring components

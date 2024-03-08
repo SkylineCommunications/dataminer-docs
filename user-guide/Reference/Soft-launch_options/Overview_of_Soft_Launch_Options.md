@@ -325,7 +325,7 @@ Enables the export to PDF button within the Dashboards app itself. Creating PDFs
 Enables a new Maps component in the Dashboards app and the Low-Code Apps.
 
 - **Minimum version**: 10.3.2
-- **Estimated release version**: 10.4.4
+- **Estimated release version**: 10.4.7
 
 ### ReportsAndDashboardsGuides
 

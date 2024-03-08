@@ -82,6 +82,22 @@ In case of issues that need investigating, you can temporarily lower the minimum
 > - The *SLHelper.exe.config* file is overwritten with the default configuration during full DataMiner upgrades or downgrades.
 > - A GQI error log will be added in the `C:\Skyline DataMiner\Logging\GQI` folder for every GQI request that fails.
 
+#### SLAnalytics - Behavioral anomaly detection: Server-side changes to allow user feedback [ID_38980]
+
+<!-- MR 10.5.0 - FR 10.4.4 -->
+
+A number of server-side changes have been made to allow users to provide positive or negative feedback on anomaly suggestion events and alarms.
+
+This feedback will be taken into account by the behavior anomaly detection algorithm in order to enhance anomaly event generation, which up to now was based solely on the change point history of the parameter in question.
+
+All user feedback will be stored in a new table named *ai_anomalyfeedback*, which will be added to every Elasticsearch/OpenSearch database.
+
+> [!NOTE]
+>
+> - Until further notice, this feature will require the *AnomalyFeedback* soft-launch option to be enabled.
+> - This feature will only work if the DataMiner System includes an Elasticsearch/OpenSearch database.
+> - Currently, this feature is not yet supported by any of the DataMiner client apps.
+
 ## Changes
 
 ### Enhancements
@@ -249,6 +265,18 @@ At installation, the APIGateway service will now be configured to restart itself
 <!-- MR 10.3.0 [CU13] - FR 10.4.4 -->
 
 Because of a number of enhancements, overall performance of the SLAnalytics process has increased, especially when more than 100,000 parameters are being monitored for behavioral anomaly detection.
+
+#### SLAnalytics - Behavioral anomaly detection: Enhanced generation of suggestion events when detecting variance changes [ID_38941]
+
+<!-- MR 10.4.0 [CU1] - FR 10.4.4 -->
+
+A number of enhancements have been made to the mechanism that automatically generates a suggestion event when a variance change is detected.
+
+#### Visual Overview: Connections between SLHelper and mobile Visual Overview sessions will now time out after 5 minutes of inactivity [ID_38985]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 [CU0] -->
+
+Up to now, when SLHelper did not send any updates to a mobile Visual Overview client session for 2 minutes, the connection would be destroyed. This connection timeout has now been changed from 2 minutes to 5 minutes.
 
 ### Fixes
 
@@ -425,3 +453,17 @@ From now on, only the final retry will be logged as error. All prior retries wil
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
 When DataMiner was stopped or restarted, in some cases, the SLLog process could stop working.
+
+#### Visual Overview: SLHelper would not clean up the UIProvider for an inactive user group when users from another user group were still active [ID_38979]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 [CU0] -->
+
+Up to now, SLHelper would incorrectly not clean up the server-side UIProvider for a particular user group after 8 hours of inactivity when users from another user group were still active.
+
+From now on, SLHelper will no longer take into account activity from other user groups when it decides to clean up the UIProvider for a particular user group after 8 hours of inactivity.
+
+#### SLAnalytics will no longer automatically restore a lost session with SLDataGateway [ID_38984]
+
+<!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
+
+Since DataMiner version 10.3.0 [CU9]/10.3.12, SLAnalytics would automatically restore a lost session with SLDataGateway. From now on, it will no longer do so.

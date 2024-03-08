@@ -14,7 +14,7 @@ uid: Creating_a_DMS_on_dataminer_services
    >
    > See also: [Kata #11: Create a DMS on dataminer.services](https://community.dataminer.services/courses/kata-11/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
-1. Under *DataMiner Systems*, click *Add a new DataMiner System*.
+1. Next to *DataMiner Systems*, click *Add a DataMiner System*.
 
    ![Add a new DataMiner System button](~/user-guide/images/daas_create_001.png)
 
@@ -33,9 +33,6 @@ uid: Creating_a_DMS_on_dataminer_services
    > Only lowercase alphanumerical characters (a-z and 0-9) are allowed in the URL, and it cannot consist of numbers only.
 
 1. Enter a username and password for your DataMiner account.
-
-   > [!IMPORTANT]
-   > Do not use an ampersand ("&") in your password. This is currently not supported.
 
 1. Select the box next to *I agree to the terms of service*.
 

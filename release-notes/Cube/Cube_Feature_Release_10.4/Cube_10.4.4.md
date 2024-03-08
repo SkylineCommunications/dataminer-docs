@@ -146,6 +146,12 @@ From now on, when you use the *Search of alarms* box, the alarms matching the se
 
 When you opened the advanced search in the sidebar, in some cases, Cube could leak memory.
 
+#### Broadcast message popup containing more than one message would not display the first message [ID_38903]
+
+<!-- MR 10.3.0 [CU13]/10.4.0 [CU1] - FR 10.4.4 -->
+
+When Cube displayed a broadcast message popup containing more than one message, the first message would incorrectly not be shown.
+
 #### Memory leak when opening an embedded browser component [ID_38919]
 
 <!-- MR 10.3.0 [CU13]/10.4.0 [CU1] - FR 10.4.4 -->
@@ -157,3 +163,11 @@ When you opened an embedded browser component, in some cases, Cube could leak me
 <!-- MR 10.3.0 [CU13]/10.4.0 [CU1] - FR 10.4.4 -->
 
 When you opened an EPM card using the topology selector, in some cases, Cube could leak memory.
+
+#### Alarm Console: Name of history tab was incorrect on February 29 [ID_38968]
+
+<!-- MR 10.3.0 [CU13]/10.4.0 [CU1] - FR 10.4.4 -->
+
+When you added a history tab on February 29, the name of the tab would be incorrect.
+
+For example, when on February 29 you added a history tab listing all alarms generated during the last year, the name of the tab would incorrectly be "Last 366 days" rather than "Year to date".

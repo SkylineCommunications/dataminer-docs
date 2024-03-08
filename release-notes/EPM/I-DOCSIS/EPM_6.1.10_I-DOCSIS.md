@@ -2,10 +2,7 @@
 uid: EPM_6.1.10_I-DOCSIS
 ---
 
-# EPM 6.1.10 I-DOCSIS - preview
-
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+# EPM 6.1.10 I-DOCSIS
 
 ## New features
 

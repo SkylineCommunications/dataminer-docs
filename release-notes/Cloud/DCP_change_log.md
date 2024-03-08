@@ -9,9 +9,27 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 7 March 2024 - Enhancement - Connection status information on dataminer.services now refreshes automatically [ID_38933]
+
+The connection status information is now updated every minute on dataminer.services.
+
+#### 7 March 2024 - Enhancement - Improved support for DataMiner as a Service systems on dataminer.services [ID_38932] [ID_39009]
+
+​The dataminer.services page now has an improved UI when a DataMiner as a Service (DaaS) system is being deployed, with an estimated time left. When a DaaS system is unreachable, an email address is provided to contact support. It is also possible to remove the system while it is still being deployed.
+
+In addition, a problem has been resolved that caused some characters to be invalid in the password field in the deployment form.
+
 #### 6 March 2024 - Enhancement - Ordering DataMiner credits through Azure Marketplace [ID 38909]
 
 You can now order DataMiner credits via the Azure Marketplace. For more information on how to order credits, refer to [Ordering DataMiner credits](xref:Order_DataMiner_credits).
+
+#### 29 February 2024 - Enhancement - Admin app UI adjusted [ID_38908]
+
+The header bar and sidebar of the [Admin app](https://admin.dataminer.services) now use a light theme.
+
+#### 29 February 2024 - New feature - Admin - Added organization keys [ID_38944]
+
+In the Admin app, you can now create DCP keys on organization level.
 
 #### 21 February 2024 - Fix - Improved catalog search performance [ID_38865]
 

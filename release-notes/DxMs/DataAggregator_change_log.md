@@ -1,12 +1,24 @@
 ---
-uid: DataAggregator_1.0.0
+uid: DataAggregator_change_log
 ---
 
-# Data Aggregator 1.0.0
+# Data Aggregator change log
 
-## New features
+#### 13 February 2024 - Enhancement - DataAggregator 3.0.2 - Debug UI shows job names instead of job IDs [ID_38697]
 
-#### New Data Aggregator module [ID_34725] [ID_34825] [ID_34914] [ID_34986] [ID_35047] [ID_35072] [ID_35450] [ID_35495]
+In the debug UI of Data Aggregator (accessible via `http://<hostname or IP>:<Data Aggregator port>/debug/`) the different tab pages will now show the job name instead of the job ID, so that it is easier to find a specific job.
+
+#### 17 January 2024 - Enhancement - Logging now mentions the DMA handling a GQI query [ID_37511]
+
+To make it easier to find out which DMA handled a GQI request, the DataAggregator logging will now include the DMA that handled such a request.
+
+The CoreGateway DxM has also been modified to include this information when it creates a new GQI session.
+
+#### 9 June 2023 - Enhancement - DataAggregator 2.0.0 - Upgrade to .NET 6 [ID_36408]
+
+Data Aggregator has now been upgraded to use .NET 6 instead of .NET 5. This means .NET 6 Runtime now has to be installed in order to run Data Aggregator.
+
+#### 3 February 2023 - New feature - DataAggregator 1.0.0 - New Data Aggregator module [ID_34725] [ID_34825] [ID_34914] [ID_34986] [ID_35047] [ID_35072] [ID_35450] [ID_35495]
 
 A new Data Aggregator module is now available as a DxM (DataMiner Extension Module). It can be used to schedule GQI queries to run periodically at fixed times, dates, or intervals. It can connect to multiple DataMiner Systems and combine the results of the GQI queries executed per DMS into one result. This result can then be exported to a CSV file or made available over a WebSocket connection.
 

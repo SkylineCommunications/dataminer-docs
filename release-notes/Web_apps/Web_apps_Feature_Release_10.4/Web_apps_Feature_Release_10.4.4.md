@@ -263,7 +263,7 @@ When a mobile visual overview opened on multiple clients was resized on one of t
 
 Up to now, when a client using polling instead of WebSockets had disconnected, the GQI sessions would not get closed correctly.
 
-From now on, when a user closes a tab or a page containing a GQI query, the corresponding GQI session will be closed within 5 minutes.
+From now on, when a user closes a tab or a page containing a GQI query, the corresponding GQI session will be closed within maximum 5 minutes.
 
 #### Dashboards app & Low-Code Apps: Web component would display scroll bars when all content fitted inside [ID_38821]
 
