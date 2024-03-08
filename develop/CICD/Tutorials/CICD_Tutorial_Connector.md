@@ -41,11 +41,11 @@ Expected duration: 20 minutes.
 
 1. Open Visual Studio, and select *Create a new project*.
 
-1. Select *DataMiner Connector Solution* from the list of templates.
+1. Select *DataMiner Connector Solution* from the list of templates, and click *Next*.
 
-1. Specify a solution name, e.g. *MyPipelineTest*.
+1. Enter a solution name, e.g. *MyPipelineTest*, and click *Next*.
 
-1. Fill in the following information:
+1. Enter the following information:
 
    1. Connector name: *MyPipelineTest*
 
@@ -67,34 +67,38 @@ Expected duration: 20 minutes.
 
 1. Click *Create*.
 
-1. Add a visible parameter.
+1. In the *protocol.xml* file, go to the `<Params>` section, and add a visible parameter.
 
    1. Type *<param* and press Tab twice.
 
       This will add a new default visible parameter.
 
-   1. Complete the snippet, filling in the name, description, etc.
+   1. Complete the snippet, filling in the ID, the name, the description, etc.
 
-   1. Open the Display Editor using the button at the top of the file.
+   1. At the top of the *protocol.xml* file, click the *Validate* button. You may need to click *Sign in* before the protocol.xml file is validated.
 
-      1. Drag the new parameter to the *General* page.
+   1. Open the Display Editor by clicking the *Display Editor* button at the top of the *protocol.xml* file.
 
-      1. Click *Apply Changes* in the top-right corner.
+      1. Drag the new parameter from the *Parameters* pane on the right onto the *General* page in the Pages pane on the left.
+
+      1. In the top-right corner of the Display Editor, click *Apply Changes*.
 
 ## Step 2: Create a GitHub repository
 
 1. In the menu bar of Visual Studio, select *GIT > Create GIT Repository...*.
 
-1. Create a new GitHub repository, choosing a name, your account, and yourself as the owner.
+1. Create a new GitHub repository.
 
-1. Go to the newly created GitHub repository on <www.github.com>.
+   Choose a name, specify your GitHub account, and mark yourself as the owner. When you have finished entering all information, click *Create and Push*.
+
+1. Go to the newly created GitHub repository on <https://github.com/>.
 
    > [!TIP]
-   > A trick in Visual Studio 2022 is to use the GIT menu and select GitHub/View Pull Requests. This opens the right repository.
+   > A trick in Visual Studio 2022 is to open the *GIT* menu and select *GitHub/View Pull Requests*. This will open the correct repository.
 
 ## Step 3: Create a standard .NET GitHub Action
 
-1. On your GitHub page, navigate to the *Actions* tab and select the *Continuous integration/.NET starter workflow*.
+1. On your GitHub page, go to the *Actions* tab, and select the *Continuous integration/.NET starter* workflow.
 
 1. Add the ability to trigger the workflow manually by adding *workflow_dispatch:* to the *on:* keyword in yml:
 
@@ -109,12 +113,11 @@ Expected duration: 20 minutes.
 
 1. Commit your changes.
 
-1. Navigate to *Actions* and see the first run of your default .NET CI pipeline.
+1. Go to the *Actions* tab, and see the first run of your default .NET CI pipeline.
 
-   This will perform:
+   The following will be performed:
 
    1. Compilation
-
    1. Unit testing
 
 > [!NOTE]
@@ -122,9 +125,9 @@ Expected duration: 20 minutes.
 
 ## Step 4: Extend the workflow with DataMiner Validator
 
-1. Navigate to *Actions*.
+1. Go to the *Actions* tab.
 
-1. On the left, click your *.NET* workflow
+1. On the left, click your *.NET* workflow.
 
 1. At the top, click *dotnet.yml*.
 
@@ -167,7 +170,7 @@ Expected duration: 20 minutes.
       ```
 
    > [!TIP]
-   > For generic parts of a pipeline, like parsing JSON and making the quality gate, using an online LLM-based AI tool can help you save some time. You can for example use a prompt like this:
+   > For generic parts of a pipeline, like parsing JSON and making the quality gate, using an online LLM-based AI tool can help you save some time. For example, you can use a prompt like this:
    >
    > ```txt
    > Using GitHub Workflows with an Ubuntu runner. I have a JSON file in the workspace with the path ${{ github.workspace }}/validateResults.json. I want two steps. 1 step where we upload that artifact, and a second step that retrieves the CriticalIssueCount and the MajorIssueCount and throws an error if one of them is higher than 0. I want you to return to me only the two steps. The name of step 2 should be Quality Gate.
@@ -175,19 +178,17 @@ Expected duration: 20 minutes.
 
 1. Commit your changes.
 
-1. Navigate to *Actions* and check the run of your enhanced pipeline.
+1. Go to the *Actions* tab, and check the run of your enhanced pipeline.
 
-   This will perform:
+   The following will be performed:
 
    1. Compilation
-
    1. Unit Testing
-
    1. DataMiner Connector Validator
 
 ## Step 5: Extend the workflow with CD, automatic deployment
 
-1. Navigate to *Actions*
+1. Go to the *Actions* tab.
 
 1. On the left, click your *.NET* workflow.
 
@@ -203,13 +204,13 @@ Expected duration: 20 minutes.
 
    1. Install the Packager and Deployer tools.
 
-   1. Run the packager to create a .dmprotocol.
+   1. Run the packager to create a *.dmprotocol* package.
 
-   1. Deploy the .dmprotocol to an accessible Agent directly.
+   1. Deploy the *.dmprotocol* package directly to an accessible DataMiner Agent.
 
    > [!IMPORTANT]
    >
-   > - Deployment with a local artifact requires running on a Windows OS. For more details, you can take a look at this [GitHub issue](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Tools.DataMinerDeploy/issues/10).
+   > - Deployment with a local artifact requires running on a Windows OS. For more details, see this [GitHub issue](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Tools.DataMinerDeploy/issues/10).
    > - Deployment with a local artifact requires DataMiner 10.3.0/10.3.2 or higher.
 
    ```yml
@@ -232,65 +233,59 @@ Expected duration: 20 minutes.
 
 1. Commit your changes.
 
-1. Navigate to *Actions* and check the run of your enhanced pipeline.
+1. Go to the *Actions* tab, and check the run of your enhanced pipeline.
 
-   This will perform:
+   The following will be performed:
 
    1. Compilation
-
    1. Unit testing
-
    1. DataMiner connector validation
-
    1. Package creation
-
    1. Direct Agent deployment
 
 ## Step 6: Add your GitHub secrets
 
-1. Navigate to *Settings*.
+1. Go to the *Settings* tab.
 
-1. On the left, select *Secrets and variables*.
+1. On the left, click *Secrets and variables*, and then click *Actions*.
 
-1. Under *Actions*, add a *New repository secret* for the following secrets:
+1. Add the following secrets (by clicking *New repository secret*, entering the name of the secret, and clicking *Add secret*):
 
    1. SERVER_LOCATION
-
    1. DATAMINER_USER
-
    1. DATAMINER_PASSWORD
 
 ## Step 7: Enjoy the results
 
-1. Navigate to *Actions*.
+1. Go to the *Actions* tab.
 
-1. Select the *.NET* workflow on the left.
+1. On the left, select the *.NET* workflow.
 
 1. Click *Run workflow*.
 
 You should now see your CI and CD jobs complete successfully.
 
 > [!NOTE]
-> Taking a screenshot of this successful run and sending that to <thunder@skyline.be> or uploading it through the [Dojo tutorials page](https://community.dataminer.services/learning-courses-tutorials/) will grant you DevOps points.
+> To be granted DevOps points, take a screenshot of this successful run and either send it to <thunder@skyline.be> or upload it via the [Dojo tutorials page](https://community.dataminer.services/learning-courses-tutorials/).
 
-## Advanced Options: CI
+## Advanced options: CI
 
-Skyline Communications organization uses more than these actions. For enhanced CI, you can take a look at our [reusable workflow](https://github.com/SkylineCommunications/_ReusableWorkflows/blob/main/.github/workflows/Connector%20Master%20SDK%20Workflow.yml):
+The *Skyline Communications* organization uses more than these actions. For enhanced CI, you can take a look at our [reusable workflow](https://github.com/SkylineCommunications/_ReusableWorkflows/blob/main/.github/workflows/Connector%20Master%20SDK%20Workflow.yml):
 
 1. SonarCloud static analysis to our CI.
 
 1. Ability to use our GitHub Organization private NuGet store (when added as external collaborator to the package source repository).
 
-1. Tagging is considered a release cycle, this overrides the dmprotocol version with the tag.
+1. Tagging is considered a release cycle. This overrides the dmprotocol version with the tag.
 
-1. A regular commit and push is considered a build cycle, this adds a _Bx to the dmprotocol version. With x being the run-number of the pipeline.
+1. A regular commit and push is considered a build cycle. This adds a *_Bx* suffix to the dmprotocol version (*x* being the run number of the pipeline).
 
 1. We upload the dmprotocol as a downloadable artifact in GitHub.
 
-## Advanced Options: CD
+## Advanced options: CD
 
-Skyline Communications organization provides Starter Workflows that run the reusable workflow for CI and then allows optional CD to be defined by the user. You can take a look at our [starter workflow](https://github.com/SkylineCommunications/.github/blob/main/workflow-templates/DataMiner-CICD-Connector.yml).
+The *Skyline Communications* organization provides Starter Workflows that run the reusable workflow for CI, and then allows optional CD to be defined by the user. You can take a look at our [starter workflow](https://github.com/SkylineCommunications/.github/blob/main/workflow-templates/DataMiner-CICD-Connector.yml).
 
 1. We trigger our CI, reusable workflow as specified above.
 
-1. Optionally a user can uncomment the code that deploys the .dmprotocol.
+1. Optionally, a user can uncomment the code that deploys the .dmprotocol package.
