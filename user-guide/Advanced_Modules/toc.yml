@@ -747,6 +747,29 @@ items:
         items:
           - name: SectionDefinition object
             topicUid: DOM_SectionDefinition
+            items:
+              - name: AutoIncrementFieldDescriptor
+                topicUid: DOM_AutoIncrementFieldDescriptor
+              - name: GenericEnumFieldDescriptor
+                topicUid: DOM_GenericEnumFieldDescriptor
+              - name: ReservationFieldDescriptor
+                topicUid: DOM_ReservationFieldDescriptor
+              - name: ResourceFieldDescriptor
+                topicUid: DOM_ResourceFieldDescriptor              
+              - name: ServiceDefinitionFieldDescriptor
+                topicUid: DOM_ServiceDefinitionFieldDescriptor
+              - name: StaticTextFieldDescriptor
+                topicUid: DOM_StaticTextFieldDescriptor
+              - name: DomInstanceFieldDescriptor
+                topicUid: DOM_DomInstanceFieldDescriptor
+              - name: ElementFieldDescriptor
+                topicUid: DOM_ElementFieldDescriptor
+              - name: DomInstanceValueFieldDescriptor
+                topicUid: DOM_DomInstanceValueFieldDescriptor
+              - name: GroupFieldDescriptor
+                topicUid: DOM_GroupFieldDescriptor
+              - name: UserFieldDescriptor
+                topicUid: DOM_UserFieldDescriptor
           - name: DomDefinition object
             topicUid: DomDefinition
           - name: DomInstance object

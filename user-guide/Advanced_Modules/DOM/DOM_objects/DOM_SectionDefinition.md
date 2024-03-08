@@ -52,7 +52,7 @@ Below is an overview of all other important properties:
 
 There are also special types of `FieldDescriptors` that are purpose-made to store a special value. These include:
 
-- **AutoIncrementFieldDescriptor**: Defines a field that will automatically get an incremented value assigned. When a `DomInstance` does not have a value for this field yet, it will get assigned the next time the instance is updated.
+- [**AutoIncrementFieldDescriptor**](xref:DOM_AutoIncrementFieldDescriptor): Defines a field that will automatically get an incremented value assigned. When a `DomInstance` does not have a value for this field yet, it will get assigned the next time the instance is updated.
 
   - The `IDFormat` property is used to define a string format for the number value. In this string, "{0}" gets replaced by that number value. If the `IDFormat` property is empty, its value will not be formatted.
 
@@ -66,25 +66,25 @@ There are also special types of `FieldDescriptors` that are purpose-made to stor
 
   - When the field is marked as soft-deleted, no values will get assigned when a `DomInstance` gets saved.
 
-- **GenericEnumFieldDescriptor**: Defines a field that has a list of possible pre-determined values.
+- [**GenericEnumFieldDescriptor**](xref:DOM_GenericEnumFieldDescriptor): Defines a field that has a list of possible pre-determined values.
 
-- **ReservationFieldDescriptor**: Defines a field that has the ID of an SRM `(Service)ReservationInstance`.
+- [**ReservationFieldDescriptor**](xref:DOM_ReservationFieldDescriptor): Defines a field that has the ID of an SRM `(Service)ReservationInstance`.
 
-- **ResourceFieldDescriptor**: Defines a field that has the ID of an SRM resource. The descriptor has a *ResourcePoolIds* property that can be used to define from which resource pools the user can select a resource.
+- [**ResourceFieldDescriptor**](xref:DOM_ResourceFieldDescriptor): Defines a field that has the ID of an SRM resource. The descriptor has a *ResourcePoolIds* property that can be used to define from which resource pools the user can select a resource.
 
-- **ServiceDefinitionFieldDescriptor**: Defines a field that has the ID of an SRM service definition. It contains a *ServiceDefinitionFilter* property that has a *FilterElement* that can be used to determine which service definitions will be presented to the user.
+- [**ServiceDefinitionFieldDescriptor**](xref:DOM_ServiceDefinitionFieldDescriptor): Defines a field that has the ID of an SRM service definition. It contains a *ServiceDefinitionFilter* property that has a *FilterElement* that can be used to determine which service definitions will be presented to the user.
 
-- **StaticTextFieldDescriptor**: Defines a field that should always have the same static value, defined by the *StaticText* property.
+- [**StaticTextFieldDescriptor**](xref:DOM_StaticTextFieldDescriptor): Defines a field that should always have the same static value, defined by the *StaticText* property.
 
-- **DomInstanceFieldDescriptor**: Available from DataMiner 10.1.10/10.2.0 onwards. Can be used to define that a field should contain the ID of a `DomInstance`. This `DomInstance` can exist in a different DOM manager. This is why the descriptor has a *ModuleId* property that defines where the instances can be found. There is also a *DomDefinitionIds* list property that can be used to define whether DOM instances should be linked to the defined definitions. Both properties are intended for UIs, and their validity and existence is not checked server-side. The `FieldValues` are of type "Guid".
+- [**DomInstanceFieldDescriptor**](xref:DOM_DomInstanceFieldDescriptor): Available from DataMiner 10.1.10/10.2.0 onwards. Can be used to define that a field should contain the ID of a `DomInstance`. This `DomInstance` can exist in a different DOM manager. This is why the descriptor has a *ModuleId* property that defines where the instances can be found. There is also a *DomDefinitionIds* list property that can be used to define whether DOM instances should be linked to the defined definitions. Both properties are intended for UIs, and their validity and existence is not checked server-side. The `FieldValues` are of type "Guid".
 
-- **ElementFieldDescriptor**: Available from DataMiner 10.1.10/10.2.0 onwards. Can be used to define that a field should contain the ID of an element. The ID must be saved as a string according to the common `[DMA ID]/[ELEMENT ID]` format (e.g. "868/65874"). There is a *ViewIds* list property that can be used to define whether the elements should be in any of these views. The `FieldValues` are of type "string".
+- [**ElementFieldDescriptor**](xref:DOM_ElementFieldDescriptor): Available from DataMiner 10.1.10/10.2.0 onwards. Can be used to define that a field should contain the ID of an element. The ID must be saved as a string according to the common `[DMA ID]/[ELEMENT ID]` format (e.g. "868/65874"). There is a *ViewIds* list property that can be used to define whether the elements should be in any of these views. The `FieldValues` are of type "string".
 
-- **DomInstanceValueFieldDescriptor**: Available from DataMiner 10.2.3/10.3.0 onwards. Can be used to define that a field should contain the ID of a `DomInstance`. However, compared to the `DomInstanceFieldDescriptor`, this one also references a specific value of that `DomInstance`. The configuration is the same as the other descriptor, but it adds the *FieldDescriptorId* property that references a specific `FieldValue`.
+- [**DomInstanceValueFieldDescriptor**](xref:DOM_DomInstanceValueFieldDescriptor): Available from DataMiner 10.2.3/10.3.0 onwards. Can be used to define that a field should contain the ID of a `DomInstance`. However, compared to the `DomInstanceFieldDescriptor`, this one also references a specific value of that `DomInstance`. The configuration is the same as the other descriptor, but it adds the *FieldDescriptorId* property that references a specific `FieldValue`.
 
-- **GroupFieldDescriptor**: Available from DataMiner 10.3.3/10.4.0 onwards. Can be used to define that a field should contain the name of a DataMiner user group.
+- [**GroupFieldDescriptor**](xref:DOM_GroupFieldDescriptor): Available from DataMiner 10.3.3/10.4.0 onwards. Can be used to define that a field should contain the name of a DataMiner user group.
 
-- **UserFieldDescriptor**: Available from DataMiner 10.3.3/10.4.0 onwards. Can be used to define that a field should contain the name of a DataMiner user. There is a *GroupNames* property that can be used to define which groups the user can be a part of.
+- [**UserFieldDescriptor**](xref:DOM_UserFieldDescriptor): Available from DataMiner 10.3.3/10.4.0 onwards. Can be used to define that a field should contain the name of a DataMiner user. There is a *GroupNames* property that can be used to define which groups the user can be a part of.
 
 > [!IMPORTANT]
 > The ID of a `FieldDescriptor` should be unique within a DOM module.
