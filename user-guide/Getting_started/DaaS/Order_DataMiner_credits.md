@@ -43,7 +43,7 @@ To create and maintain a DaaS instance, your [organization](xref:Pricing_Usage_b
 
    ![Configure account now](~/user-guide/images/Azure_Portal_Configure.png)
 
-1. Click *Purchase credits*.
+1. Click *Activate Subscription*.
 
    This will activate your subscription and may take a couple of minutes.
 
