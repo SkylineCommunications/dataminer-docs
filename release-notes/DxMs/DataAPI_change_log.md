@@ -18,9 +18,9 @@ A new endpoint has been added to the DataAPI DxM that currently allows the confi
 
 Data API has now been upgraded to use .NET 8 instead of .NET 6. This means .NET 8 Runtime now has to be installed in order to run Data API.
 
-#### 05 March 2024 - Enhancement - DataAPI 1.0.2 - Upgrade WiX Installer to version 4.0.4 [ID_38981]
+#### 05 March 2024 - Enhancement - DataAPI 1.0.2 - Improved installer robustness [ID_38981]
 
-Data API Installer has now been upgraded to use WiX version 4.0.4.
+The Data API installer has been updated to mitigate a Windows DLL redirection vulnerability and to improve its robustness.
 
 #### 02 March 2024 - Fix - DataAPI 1.0.1 - DataMiner icon added to application [ID_38839]
 
