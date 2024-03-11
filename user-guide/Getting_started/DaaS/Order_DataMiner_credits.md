@@ -13,7 +13,7 @@ To create and maintain a DaaS instance, your [organization](xref:Pricing_Usage_b
 
 1. Click *Get It Now*.
 
-   ![Azure Marketplace Offer](~/user-guid/images/Azure_Marketplace_Dataminer.png)
+   ![Azure Marketplace Offer](~/user-guide/images/Azure_Marketplace_Dataminer.png)
 
 1. In the pop up, click on continue to be redirected to the Azure portal.
 
@@ -46,7 +46,8 @@ To create and maintain a DaaS instance, your [organization](xref:Pricing_Usage_b
 1. Click *Purchase credits*.
 
    This will activate your subscription and may take a couple of minutes.
-   ![Confirm Subscription](~/user-guid/images/Marketplace_Confirm_Subscription.png)
+
+   ![Confirm Subscription](~/user-guide/images/Marketplace_Confirm_Subscription.png)
 
 1. Once your subscription has been activated, fill in your Organization ID.
 
