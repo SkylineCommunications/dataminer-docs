@@ -4,9 +4,6 @@ uid: Failover_AWS
 
 # DataMiner Failover on Amazon Web Services
 
-> [!IMPORTANT]
-> This setup is deprecated. We recommend using [Storage as a Service (STaaS)](xref:STaaS) instead. If you want to use self-hosted storage, install a [Cassandra Cluster](xref:Cassandra_database) database.
-
 When you set up a [DataMiner Failover](xref:failover) configuration, you need to assign virtual IP addresses to the corporate and acquisition networks of the active DMA. Switching from the active to the passive DMA requires that those virtual IP addresses are reassigned. This is done seamlessly by DataMiner.
 
 If you use Amazon Web Services (AWS) for your system database, you need to assign secondary private IPv4 addresses to the network interfaces of your EC2 instances. You also need to transfer those addresses between your instances whenever a switch in DataMiner occurs.
