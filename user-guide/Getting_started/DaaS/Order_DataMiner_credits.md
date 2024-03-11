@@ -11,9 +11,13 @@ To create and maintain a DaaS instance, your [organization](xref:Pricing_Usage_b
 
 1. Go to the [Azure Marketplace](https://azuremarketplace.microsoft.com/) and search for DataMiner.
 
-1. Click *Get It Now* to be redirected to the Azure portal.
+1. Click *Get It Now*.
 
-1. In the *Plan* box, select *DataMiner credits*.
+   ![Azure Marketplace Offer](~/user-guid/images/Azure_Marketplace_Dataminer.png)
+
+1. In the pop up, click on continue to be redirected to the Azure portal.
+
+   ![Azure Marketplace continue](~/user-guide/images/Azure_Marketplace_Continue.png)
 
 1. Click *Subscribe*.
 
@@ -29,17 +33,20 @@ To create and maintain a DaaS instance, your [organization](xref:Pricing_Usage_b
 
       ![Azure portal SaaS resource](~/user-guide/images/Azure_Portal_Basics.png)
 
+1. Click *Subscribe*.
+
+   ![Azure Portal SaaS resource subscribe](~/user-guide/images/Azure_Portal_Subscribe.png)
+
 1. Click *Configure account now*.
 
    This will redirect you to the DataMiner marketplace landing page.
 
    ![Configure account now](~/user-guide/images/Azure_Portal_Configure.png)
 
-1. Check whether the correct personal details are displayed, and adjust them if necessary.
-
-1. When all your personal details are correct, click *Purchase credits*.
+1. Click *Purchase credits*.
 
    This will activate your subscription and may take a couple of minutes.
+   ![Confirm Subscription](~/user-guid/images/Marketplace_Confirm_Subscription.png)
 
 1. Once your subscription has been activated, fill in your Organization ID.
 
@@ -54,4 +61,8 @@ To create and maintain a DaaS instance, your [organization](xref:Pricing_Usage_b
 
 1. Use the slider to indicate how many credits you wish to purchase for the organization.
 
-1. Click *Purchase credits* to confirm your purchase.
+   ![Marketplace credits slider](~/user-guide/images/Marketplace_Credits_Slider.png)
+
+1. Click *Purchase credits* and click *Confirm* to confirm your purchase.
+
+   ![Marketplace credits confirm purchase](~/user-guide/images/Marketplace_Credits_Confirm.png)
