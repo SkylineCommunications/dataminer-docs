@@ -19,7 +19,7 @@ The connection status information is now updated every minute on dataminer.servi
 
 In addition, a problem has been resolved that caused some characters to be invalid in the password field in the deployment form.
 
-#### 6 March 2024 - Enhancement - Ordering DataMiner credits through Azure Marketplace [ID_38909]
+#### 11 March 2024 - Enhancement - Ordering DataMiner credits through Azure Marketplace [ID_38909]
 
 You can now order DataMiner credits via the Azure Marketplace. For more information on how to order credits, refer to [Ordering DataMiner credits](xref:Order_DataMiner_credits).
 
