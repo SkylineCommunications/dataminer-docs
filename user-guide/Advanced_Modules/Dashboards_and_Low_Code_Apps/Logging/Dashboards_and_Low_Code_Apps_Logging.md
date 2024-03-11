@@ -23,7 +23,7 @@ This category of logging records various events occurring within the Web API. De
 
 ## Client metric logging
 
-[Client metric logging](xref:Dashboards_and_Low_Code_Apps_Client_Metric_Logging) is employed to record different performance and issue indicators of clients connecting to Dashboards and Low-Code Apps. These logs encompass everything from unexpected errors to the load time of a dashboard or low-code app page. This logging data is stored in the `client` subfolder of the web logs.
+Client metric logging is employed to record different performance and issue indicators of clients connecting to Dashboards and Low-Code Apps. These logs encompass everything from unexpected errors to the load time of a dashboard or low-code app page. This logging data is stored in the `client` subfolder of the web logs.
 
 > [!NOTE]
 > This type of logging is available from DataMiner 10.3.0 [CU14]/10.4.0 [CU2]/10.4.5 onwards.<!-- RN 39000 -->
