@@ -8,13 +8,15 @@ This tutorial explains how to start from a blank Visio file and edit basic eleme
 
 Expected duration: 15 minutes
 
+> [!TIP]
+> See also: [Kata #21: Visual Overview design basics](https://community.dataminer.services/courses/kata-21/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+
 ## Prerequisites
 
 - A DataMiner System that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud) that has a Microsoft Platform element.
 
   > [!TIP]
   > A [new DataMiner as a Service](xref:Creating_a_DMS_on_dataminer_services) system comes with a Microsoft Platform element out of the box, so it automatically meets this requirement.
-  > See also: [Kata #21: Visual Overview design basics](https://community.dataminer.services/courses/kata-21/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 - [Microsoft Visio](https://www.microsoft.com/microsoft-365/visio/flowchart-software)
 
