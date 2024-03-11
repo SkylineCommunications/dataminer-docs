@@ -120,7 +120,7 @@ This is a Cube-only feature that can only be activated with the argument `ENABLE
 
 Enables Data API functionality and scripted connectors. This displays the Data Sources module in DataMiner Cube.
 
-- **Minimum version**: 10.4.2/10.4.0<!-- RN 38307/38234 -->
+- **Minimum version**: 10.4.2/10.4.0<!-- RN 36588/38307/38234 -->
 - **Estimated Release version**: To be determined
 
 > [!NOTE]
