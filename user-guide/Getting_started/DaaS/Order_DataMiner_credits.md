@@ -15,7 +15,7 @@ To create and maintain a DaaS instance, your [organization](xref:Pricing_Usage_b
 
    ![Azure Marketplace Offer](~/user-guide/images/Azure_Marketplace_Dataminer.png)
 
-1. In the pop up, click on continue to be redirected to the Azure portal.
+1. In the dialog, select the checkbox and click *Continue* to be redirected to the Azure portal.
 
    ![Azure Marketplace continue](~/user-guide/images/Azure_Marketplace_Continue.png)
 
@@ -33,7 +33,7 @@ To create and maintain a DaaS instance, your [organization](xref:Pricing_Usage_b
 
       ![Azure portal SaaS resource](~/user-guide/images/Azure_Portal_Basics.png)
 
-1. Click *Subscribe*.
+1. At the bottom of the window, click *Subscribe*.
 
    ![Azure Portal SaaS resource subscribe](~/user-guide/images/Azure_Portal_Subscribe.png)
 
