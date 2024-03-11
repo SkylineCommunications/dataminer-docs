@@ -37,7 +37,7 @@ Both types of logging can be configured through a shared configuration file name
 | EnableDebugLogging            | Boolean      | false                | Enables or disables the logging of debug information.                                                                            |
 | EnableAllowedOperationLogging | Boolean      | false                | Enables or disables the logging of WAF information.                                                                              |
 | EnableClientMetricLogging     | Boolean      | true                 | Enables or disables the client metric logging (available from DataMiner 10.3.0 [CU14]/10.4.0 [CU2]/10.4.5 onwards).              |
-| MaxFileSize                   | Number       | 3145728 (3MB)      | The maximum size of a single log file.                                                                                           |
+| MaxFileSize                   | Number       | 3145728 (3 MB)       | The maximum size of a single log file.                                                                                           |
 | FilesToKeep                   | Number       | 14                   | The number of files to keep for each type of log.                                                                                |
 | RollingInterval               | String       | Day                  | The time period included in each log file.                                                                                       |
 | AsyncBufferSize               | Number       | 10000                | The size of the buffer of the worker writing the log file to disk.                                                               |
@@ -48,6 +48,6 @@ Both types of logging can be configured through a shared configuration file name
 | ClientMetricFilename          | String       | web.clientmetric.log | The file name of the client metric log files.                                                                                    |
 
 > [!NOTE]
-> Before DataMiner 10.1.12/10.2.0, the config file is named `SLWAF.conf`.
 >
-> Before DataMiner 10.3.0[CU13]/10.4.0[CU1]/10.4.4, the default value for the *MaxFileSize* setting was 52428800 (50MB). <!-- RN 38958 -->
+> - Before DataMiner 10.1.12/10.2.0, the config file is named `SLWAF.conf`.
+> - Before DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4, the default value for the *MaxFileSize* setting is 52428800 (50 MB). <!-- RN 38958 -->
