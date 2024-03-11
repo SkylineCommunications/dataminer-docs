@@ -35,6 +35,12 @@ New default values have been added for the upstream and downstream SNR threshold
 
 When a Skyline EPM Platform element is first initialized, it will now set default values for the Upstream QAM Channel Threshold and Downstream QAM Channel Threshold. In case the element already has values in the tables, you can add the default values with a button. This button is located on the Thresholds Settings page next to the *Execute* button.
 
+#### New time picker for QAM DS and US Channels dashboards [ID_39074]
+
+In the *Node Segment* and *Service Groups* folders in the Dashboards app, a new feature is available on the *QAM DS Channels* and *QAM US Channels* pages, which allows you to select specific start and end times for the information shown.
+
+To use this feature, click the timestamp at the top of the dashboard. This will open a window where you can select the desired start and end times. When you do so, the trend graph will automatically update to display the information for the selected time period. To close the pop-up window, click outside of the window.
+
 ## Changes
 
 #### EPM_I_DOCSIS_SetThresholdsTableToCollectors script ID updated [ID_39040]
@@ -42,6 +48,10 @@ When a Skyline EPM Platform element is first initialized, it will now set defaul
 The ID of the *EPM_I_DOCSIS_SetThresholdsTableToCollectors* script has been updated to prevent possible conflicts with other script IDs.
 
 ### Enhancements
+
+#### Generic DOCSIS CM Collector performance improvement [ID_39069]
+
+Several improvements have been implemented in the Generic DOCSIS CM Collector connector to increase performance.
 
 ### Fixes
 
