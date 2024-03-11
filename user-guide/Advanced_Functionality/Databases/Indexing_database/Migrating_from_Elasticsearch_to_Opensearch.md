@@ -1,5 +1,6 @@
 ---
 uid: Migrating_from_Elasticsearch_to_OpenSearch
+keywords: re-indexer
 ---
 
 # Migrating from Elasticsearch to OpenSearch
@@ -14,7 +15,7 @@ To use this tool, follow the instructions below:
 
 1. [Run the re-indexing tool and take a snapshot](#run-the-re-indexing-tool-and-take-a-snapshot).
 
-1. [Copy the snapshot with the re-indexed data to an OpenSearch 2.11.1 cluster and restore it](#restore-the-snapshot-with-the-re-indexed-data-to-a-opensearch-2111-cluster).
+1. [Copy the snapshot with the re-indexed data to an OpenSearch 2.11.1 cluster and restore it](#restore-the-snapshot-with-the-re-indexed-data-to-an-opensearch-2111-cluster).
 
 > [!TIP]
 > See also: [Taking a snapshot of one Elasticsearch cluster and restoring it to another](xref:Taking_snapshot_Elasticsearch_cluster_and_restoring_to_different_cluster)
@@ -33,28 +34,28 @@ Using Kibana, you can take a snapshot in the following way:
    GET /_snapshot/_all
    ```
 
-   - This will return a response containing information about all the repositories configured in Elasticsearch. In case the desired repository already exists the next step can be skipped.
-   - Example response when a repository already exists.
+   - This will return a response containing information about all the repositories configured in Elasticsearch. In case the desired repository already exists, you can skip the next step.
+   - Example response when a repository already exists:
 
-    ```json
-    {
-      "test_tepo_1" : {
-        "type" : "fs",
-        "settings" : {
-          "location" : "/usr/share/elasticsearch/repo",
-          "maxRestoreBytesPerSec" : "40mb",
-          "readonly" : "false",
-          "compress" : "true",
-          "maxSnapshotBytesPerSec" : "40mb"
-        }
-      }
-    }
-    ```
+     ```json
+     {
+       "test_tepo_1" : {
+         "type" : "fs",
+         "settings" : {
+           "location" : "/usr/share/elasticsearch/repo",
+           "maxRestoreBytesPerSec" : "40mb",
+           "readonly" : "false",
+           "compress" : "true",
+           "maxSnapshotBytesPerSec" : "40mb"
+         }
+       }
+     }
+     ```
 
 1. Create the repository by sending the following request:
 
    ```txt
-    PUT /_snapshot/<repo_name>
+   PUT /_snapshot/<repo_name>
     {
         "type": "fs",
         "settings": {
@@ -88,10 +89,10 @@ Using Kibana, you can take a snapshot in the following way:
 1. Check the snapshot by sending the following request:
 
    ```txt
-    GET /_snapshot/<repo_name>/<snapshot_name>/_status
+   GET /_snapshot/<repo_name>/<snapshot_name>/_status
    ```
 
-   - This request returns status information for a specific snapshot within a given repository. The state should be SUCCESS and all shards should be successful.
+   This request returns status information for a specific snapshot within a given repository. The state should be SUCCESS and all shards should be successful.
 
 ## Restore the snapshot on an Elasticsearch 7.10.0 cluster
 
@@ -107,28 +108,28 @@ Using Kibana, you can restore the snapshot in the following way:
    GET /_snapshot/_all
    ```
 
-   - This will return a response containing information about all the repositories configured in Elasticsearch. In case the desired repository already exists the next step can be skipped.
-   - Example response when a repository already exists.
+   - This will return a response containing information about all the repositories configured in Elasticsearch. In case the desired repository already exists, you can skip the next step.
+   - Example response when a repository already exists:
 
-    ```json
-    {
-      "test_tepo_1" : {
-        "type" : "fs",
-        "settings" : {
-          "location" : "/usr/share/elasticsearch/repo",
-          "maxRestoreBytesPerSec" : "40mb",
-          "readonly" : "false",
-          "compress" : "true",
-          "maxSnapshotBytesPerSec" : "40mb"
-        }
-      }
-    }
-    ```
+     ```json
+     {
+       "test_tepo_1" : {
+         "type" : "fs",
+         "settings" : {
+           "location" : "/usr/share/elasticsearch/repo",
+           "maxRestoreBytesPerSec" : "40mb",
+           "readonly" : "false",
+           "compress" : "true",
+           "maxSnapshotBytesPerSec" : "40mb"
+         }
+       }
+     }
+     ```
 
 1. Create the repository by sending the following request:
 
    ```txt
-    PUT /_snapshot/<repo_name>
+   PUT /_snapshot/<repo_name>
     {
         "type": "fs",
         "settings": {
@@ -144,19 +145,21 @@ Using Kibana, you can restore the snapshot in the following way:
 1. Restore the snapshot by sending the following request:
 
    ```txt
-    POST /_snapshot/<repo_name>/<snapshot_name>/_restore 
+   POST /_snapshot/<repo_name>/<snapshot_name>/_restore 
    ```
 
 1. Check the snapshot by sending the following request:
 
    ```txt
-    GET /_snapshot/<repo_name>/<snapshot_name>/_status
+   GET /_snapshot/<repo_name>/<snapshot_name>/_status
    ```
+
+   This request will return information about the status of the specified snapshot. The status should be "SUCCESS".
 
 1. Check the cluster health by sending the following request:
 
    ```txt
-    GET /_cluster/health
+   GET /_cluster/health
    ```
 
    The status of the cluster should turn green after the restore.
@@ -166,7 +169,7 @@ Using Kibana, you can restore the snapshot in the following way:
 1. Open a terminal, and go to the folder containing the tool. By default, this is the folder `C:\Skyline DataMiner\Tools\ReIndexElasticSearchIndexes`:
 
    ```txt
-    cd C:\Skyline DataMiner\Tools\ReIndexElasticSearchIndexes
+   cd C:\Skyline DataMiner\Tools\ReIndexElasticSearchIndexes
    ```
 
 1. Run the tool with the following arguments:
@@ -191,12 +194,12 @@ Using Kibana, you can restore the snapshot in the following way:
 1. Check the snapshot by sending the following request:
 
    ```txt
-    GET /_snapshot/<repo_name>/<snapshot_name>/_status
+   GET /_snapshot/<repo_name>/<snapshot_name>/_status
    ```
 
    This request will return information about the status of the specified snapshot. The status should be "SUCCESS".
 
-## Restore the snapshot with the re-indexed data to a OpenSearch 2.11.1 cluster
+## Restore the snapshot with the re-indexed data to an OpenSearch 2.11.1 cluster
 
 1. Check the *path.repo* configuration in *opensearch.yml*.
 
@@ -208,28 +211,28 @@ Using Kibana, you can restore the snapshot in the following way:
    GET /_snapshot/_all
    ```
 
-   - This will return a response containing information about all the repositories configured in Elasticsearch. In case the desired repository already exists the next step can be skipped.
-   - Example response when a repository already exists.
+   - This will return a response containing information about all the repositories configured in Elasticsearch. In case the desired repository already exists, you can skip the next step.
+   - Example response when a repository already exists:
 
-    ```json
-    {
-      "test_tepo_1" : {
-        "type" : "fs",
-        "settings" : {
-          "location" : "/usr/share/elasticsearch/repo",
-          "maxRestoreBytesPerSec" : "40mb",
-          "readonly" : "false",
-          "compress" : "true",
-          "maxSnapshotBytesPerSec" : "40mb"
-        }
-      }
-    }
-    ```
+     ```json
+     {
+       "test_tepo_1" : {
+         "type" : "fs",
+         "settings" : {
+           "location" : "/usr/share/elasticsearch/repo",
+           "maxRestoreBytesPerSec" : "40mb",
+           "readonly" : "false",
+           "compress" : "true",
+           "maxSnapshotBytesPerSec" : "40mb"
+         }
+       }
+     }
+     ```
 
 1. Create the repository by sending the following request:
 
    ```txt
-    PUT /_snapshot/<repo_name>
+   PUT /_snapshot/<repo_name>
     {
         "type": "fs",
         "settings": {
@@ -245,19 +248,21 @@ Using Kibana, you can restore the snapshot in the following way:
 1. Restore the snapshot by sending the following request:
 
    ```txt
-    POST /_snapshot/<repo_name>/<snapshot_name_reindexed>/_restore 
+   POST /_snapshot/<repo_name>/<snapshot_name_reindexed>/_restore 
    ```
 
 1. Check the snapshot by sending the following request:
 
    ```txt
-    GET /_snapshot/<repo_name>/<snapshot_name>/_status
+   GET /_snapshot/<repo_name>/<snapshot_name>/_status
    ```
+
+   This request will return information about the status of the specified snapshot. The status should be "SUCCESS".
 
 1. Check the cluster health by sending the following request:
 
    ```txt
-    GET /_cluster/health
+   GET /_cluster/health
    ```
 
    The status of the cluster should turn green after the restore.
