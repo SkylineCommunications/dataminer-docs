@@ -9,6 +9,10 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### TBD - Enhancement - Admin - Buttons overhaul [ID_39008]
+
+The buttons of the Admin app have been adjusted to be more in line with our upcoming new design.
+
 #### 7 March 2024 - Enhancement - Connection status information on dataminer.services now refreshes automatically [ID_38933]
 
 The connection status information is now updated every minute on dataminer.services.
