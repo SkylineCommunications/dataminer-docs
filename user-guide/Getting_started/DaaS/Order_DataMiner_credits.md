@@ -27,7 +27,7 @@ To create and maintain a DaaS instance, your [organization](xref:Pricing_Usage_b
 
    1. Click *Review + subscribe*.
 
-      ![Azure portal SaaS resource](~/user-guide/images/Azure-SaaS-Resource.png)
+      ![Azure portal SaaS resource](~/user-guide/images/Azure_Portal_Basics.png)
 
 1. Click *Configure account now*.
 
