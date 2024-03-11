@@ -97,6 +97,10 @@ The user interface of the Organization overview page has been adjusted to be mor
 
 It will now include an overview of all DataMiner Systems in a table, which will include the name, URL, and status of each DataMiner System.
 
+#### TBD - Enhancement - Admin - Buttons overhaul [ID_39008]
+
+The buttons of the Admin app have been adjusted to be more in line with our upcoming new design.
+
 #### 11 March 2024 - Enhancement - Ordering DataMiner credits through Azure Marketplace [ID_38909]
 
 You can now order DataMiner credits via the Azure Marketplace. For more information on how to order credits, refer to [Ordering DataMiner credits](xref:Order_DataMiner_credits).
