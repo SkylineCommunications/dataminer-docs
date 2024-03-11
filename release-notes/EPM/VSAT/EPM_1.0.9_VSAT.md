@@ -18,6 +18,10 @@ A new API endpoint, Windy API, is now included in the Skyline Universal Weather 
 
 On the *Debug* page of the Skyline Universal Weather connector, a *Clear Buffer Timer* toggle button and *Clear All Buffer* button are now available. You can use these to clear the buffer when the maximum number of API requests has been reached and requests are accumulating in the buffer.
 
+#### Topology now reflects relation between linecards and hub return [ID_39062] [ID_39063]
+
+To support an upcoming feature, the topology file of the Verizon VSAT Platform Manager has been updated to reflect the relation between linecards and hub return, if available. Files that are exported by the Verizon iDirect Evolution Platform Collector to build the topology file will now also reflect this relation.
+
 ### Fixes
 
 #### Generic Trap Processor: Trap count incorrectly doubled [ID_38609]
