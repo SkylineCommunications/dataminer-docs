@@ -54,18 +54,6 @@ There are also special types of `FieldDescriptors` that are purpose-made to stor
 
 - [**AutoIncrementFieldDescriptor**](xref:DOM_AutoIncrementFieldDescriptor): Defines a field that will automatically get an incremented value assigned. When a `DomInstance` does not have a value for this field yet, it will get assigned the next time the instance is updated.
 
-  - The `IDFormat` property is used to define a string format for the number value. In this string, "{0}" gets replaced by that number value. If the `IDFormat` property is empty, its value will not be formatted.
-
-    Some examples, assuming the next value is 10:
-
-    | Description | Format | Result |
-    |---|---|---|
-    | Add a prefix and postfix | Pre-{0}-Post | Pre-10-Post |
-    | Prefix with "REF-" and [format](https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-numeric-format-strings) the value | REF-{0:000000} | REF-000010 |
-    | When no format is set, the value is stored | | 10 |
-
-  - When the field is marked as soft-deleted, no values will get assigned when a `DomInstance` gets saved.
-
 - [**GenericEnumFieldDescriptor**](xref:DOM_GenericEnumFieldDescriptor): Defines a field that has a list of possible pre-determined values.
 
 - [**ReservationFieldDescriptor**](xref:DOM_ReservationFieldDescriptor): Defines a field that has the ID of an SRM `(Service)ReservationInstance`.
@@ -76,11 +64,11 @@ There are also special types of `FieldDescriptors` that are purpose-made to stor
 
 - [**StaticTextFieldDescriptor**](xref:DOM_StaticTextFieldDescriptor): Defines a field that should always have the same static value, defined by the *StaticText* property.
 
-- [**DomInstanceFieldDescriptor**](xref:DOM_DomInstanceFieldDescriptor): Available from DataMiner 10.1.10/10.2.0 onwards. Can be used to define that a field should contain the ID of a `DomInstance`. This `DomInstance` can exist in a different DOM manager. This is why the descriptor has a *ModuleId* property that defines where the instances can be found. There is also a *DomDefinitionIds* list property that can be used to define whether DOM instances should be linked to the defined definitions. Both properties are intended for UIs, and their validity and existence is not checked server-side. The `FieldValues` are of type "Guid".
+- [**DomInstanceFieldDescriptor**](xref:DOM_DomInstanceFieldDescriptor): Available from DataMiner 10.1.10/10.2.0 onwards. Can be used to define that a field should contain the ID of a `DomInstance`.
 
-- [**ElementFieldDescriptor**](xref:DOM_ElementFieldDescriptor): Available from DataMiner 10.1.10/10.2.0 onwards. Can be used to define that a field should contain the ID of an element. The ID must be saved as a string according to the common `[DMA ID]/[ELEMENT ID]` format (e.g. "868/65874"). There is a *ViewIds* list property that can be used to define whether the elements should be in any of these views. The `FieldValues` are of type "string".
+- [**ElementFieldDescriptor**](xref:DOM_ElementFieldDescriptor): Available from DataMiner 10.1.10/10.2.0 onwards. Can be used to define that a field should contain the ID of an element.
 
-- [**DomInstanceValueFieldDescriptor**](xref:DOM_DomInstanceValueFieldDescriptor): Available from DataMiner 10.2.3/10.3.0 onwards. Can be used to define that a field should contain the ID of a `DomInstance`. However, compared to the `DomInstanceFieldDescriptor`, this one also references a specific value of that `DomInstance`. The configuration is the same as the other descriptor, but it adds the *FieldDescriptorId* property that references a specific `FieldValue`.
+- [**DomInstanceValueFieldDescriptor**](xref:DOM_DomInstanceValueFieldDescriptor): Available from DataMiner 10.2.3/10.3.0 onwards. Can be used to define that a field should contain the ID of a `DomInstance`. However, compared to the `DomInstanceFieldDescriptor`, this one also references a specific value of that `DomInstance`.
 
 - [**GroupFieldDescriptor**](xref:DOM_GroupFieldDescriptor): Available from DataMiner 10.3.3/10.4.0 onwards. Can be used to define that a field should contain the name of a DataMiner user group.
 

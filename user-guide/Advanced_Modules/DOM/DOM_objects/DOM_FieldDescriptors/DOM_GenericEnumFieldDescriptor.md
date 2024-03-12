@@ -16,7 +16,11 @@ uid: DOM_GenericEnumFieldDescriptor
 
 Defines a field that has a list of possible pre-determined values.
 
-The `GenericEnumFieldDescriptor` is defined by the `GenericEnum` and its entries. The `GenericEnum` can be of the int or string type. This type decides what underlying value the display values has. The selected `GenericEnumEntry` is saved as their value.
+The `GenericEnumFieldDescriptor` is defined by the `GenericEnum` and its entries. The `GenericEnum` can be of the int or string type. This type decides what underlying value the display values has. The value of the selected `GenericEnumEntry` is saved.
+
+It is also possible to soft-delete `GenericEnumEntries`, see [Removing an enum entry from a GenericEnumFieldDescriptor](xref:DOM_Remove_Enum_Entry).
+
+To enable multiple values, set the `FieldType` to `List<GenericEnum<int>>`.
 
 ```csharp
 var genericEnum = new GenericEnum<int>();
@@ -33,4 +37,23 @@ var descriptor = new GenericEnumFieldDescriptor
 };
 ```
 
-To enable multiple values, set the `FieldType` to `List<GenericEnum<int>>`.
+Assigning a `FieldValue` to the `FieldDescriptor` of a new `DomInstance`:
+
+```csharp
+var instance = new DomInstance 
+{        
+    ID = new DomInstanceId(Guid.NewGuid()),
+    DomDefinitionId = domDefinitionId
+};
+
+instance.AddOrUpdateFieldValue(sectionDefinition, descriptor, 2); // 2 is the value of the entry with displayValue "Option2"
+
+// example for int with multiple values enabled
+instance.AddOrUpdateFieldValue(sectionDefinition, descriptor, new ListValueWrapper<int>(1,2));
+
+// string example
+instance.AddOrUpdateFieldValue(sectionDefinition, descriptor, "Value1");
+
+// example for string with multiple values enabled 
+instance.AddOrUpdateFieldValue(sectionDefinition, descriptor, new ListValueWrapper<string>("Value1", "Value2"));
+```

@@ -11,7 +11,7 @@ uid: DOM_UserFieldDescriptor
 |--------------------|-----------|-----------------|
 | User | string | string |
 
-Available from DataMiner 10.3.3/10.4.0 onwards. Can be used to define that a field should contain the name of a DataMiner user. There is a *GroupNames* property that can be used to define which groups the user can be a part of.
+Available from DataMiner 10.3.3/10.4.0 onwards. Can be used to define that a field should contain the name of a DataMiner user. There is a `GroupNames` property that can be used to define which groups the user can be a part of. The selected user is saved as a string.
 
 ```csharp
 var descriptor = new UserFieldDescriptor
@@ -20,4 +20,16 @@ var descriptor = new UserFieldDescriptor
     Name = "UserFieldDescriptor",
     FieldType = typeof(string),
 };
+```
+
+Assigning a `FieldValue` to the `FieldDescriptor` of a new `DomInstance`:
+
+```csharp
+var instance = new DomInstance 
+{        
+    ID = new DomInstanceId(Guid.NewGuid()),
+    DomDefinitionId = domDefinitionId
+};
+
+instance.AddOrUpdateFieldValue(sectionDefinition, descriptor, nameOfUser); // type should be string
 ```
