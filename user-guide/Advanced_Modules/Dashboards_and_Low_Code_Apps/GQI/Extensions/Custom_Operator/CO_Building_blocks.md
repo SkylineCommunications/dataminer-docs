@@ -10,30 +10,18 @@ The [*IGQIRowOperator*](xref:GQI_IGQIDataSource) and [*IGQIColumnOperator*](xref
 
 All other interfaces add additional functionality.
 
-## Interfaces in the ad hoc data script
+## Interfaces in a custom operator
 
 The available interfaces are:
 
-- [IGQIColumnOperator](xref:GQI_IGQIColumnOperator)
+- [IGQIColumnOperator](xref:GQI_IGQIColumnOperator): Makes it possible to manipulate the columns.
 
-- [IGQIRowOperator](xref:GQI_IGQIRowOperator)
+- [IGQIRowOperator](xref:GQI_IGQIRowOperator): Makes it possible to manipulate the rows.
 
-- [IGQIInputArguments](xref:GQI_IGQIInputArguments)
+- [IGQIInputArguments](xref:GQI_IGQIInputArguments): Retrieve input from the user through input arguments.
 
-- [IGQIOnDestroy](xref:GQI_IGQIOnDestroy)
+- [IGQIOnDestroy](xref:GQI_IGQIOnDestroy): Can be implemented to clean up resources after it has been used. (available from DataMiner 10.4.5/10.5.0 onwards<!-- RN 38959 -->)
 
-- [IGQIOnInit](xref:GQI_IGQIOnInit)
+- [IGQIOnInit](xref:GQI_IGQIOnInit): Can be implemented to get notified when the custom operator is created. (available from DataMiner 10.4.5/10.5.0 onwards<!-- RN 38959 -->)
 
-- [IGQIOptimizableOperator](xref:GQI_IGQIOptimizableOperator)
-
-## Objects in the ad hoc data script
-
-To build the custom operator, you can use the following objects:
-
-- [GQIArgument](xref:GQI_GQIArgument)
-
-- [GQIDMS](xref:GQI_GQIDMS)
-
-- [GQIEditableHeader](xref:GQI_GQIEditableHeader)
-
-- [GQIEditableRow](xref:GQI_GQIEditableRow)
+- [IGQIOptimizableOperator](xref:GQI_IGQIOptimizableOperator): Used to optimize your custom operator based on other operators in a query.
