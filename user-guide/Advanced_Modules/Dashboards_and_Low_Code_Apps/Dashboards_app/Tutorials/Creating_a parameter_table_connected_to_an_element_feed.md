@@ -40,11 +40,11 @@ Expected duration: 10 min.
 
 1. From the data pane, drag the *Elements* data header onto the data input of the dropdown component.
 
-   ![](~/user-guide/images/Tutorial_Dropdown_Elements.png)
+   ![Dragging the Elements data header onto the data input of the component](~/user-guide/images/Tutorial_Dropdown_Elements.png)
 
 1. From the data pane, drag the desired protocol onto the filter input of the dropdown component.
 
-   ![](~/user-guide/images/Tutorial_Dropdown_Protocol.png)
+   ![Dragging a protocol onto the filter input of the component](~/user-guide/images/Tutorial_Dropdown_Protocol.png)
 
 The dropdown component will now list all available elements that match the protocol you selected.
 
@@ -52,7 +52,7 @@ The dropdown component will now list all available elements that match the proto
 
 1. In the data pane, open the *QUERIES* section and click the "+" icon.
 
-   ![Add a query](~/user-guide/images/Tutorial_Add_Query.png)
+   ![Adding a query](~/user-guide/images/Tutorial_Add_Query.png)
 
 1. Enter a descriptive query name, e.g. *Disk Information Table*.
 
@@ -69,7 +69,11 @@ The dropdown component will now list all available elements that match the proto
 
 1. Select the protocol table that contains the data that you want to display in the table component.
 
+   ![Selecting the protocol table](~/user-guide/images/Tutorial_ProtocolTable.png)
+
 1. Optionally, add a *Select* operator to control which parameters from the specified protocol table to display in the GQI table.
+
+   ![Adding a Select operator](~/user-guide/images/Tutorial_SelectOperator.png)
 
    > [!NOTE]
    > It is important that *Element ID* column remains selected to allow linking to the dropdown component.
@@ -82,7 +86,7 @@ The dropdown component will now list all available elements that match the proto
 
    1. Set *Filter method* to "regex".
 
-   1. In the *Value* box, click the *Link to feed* icon or open the *Link to feed* dialog.
+   1. On the right side of the *Value* box, click the *Link to feed* icon to open the *Link to feed* dialog.
 
       1. Open the *Feed* box, and select the dropdown component.
 
@@ -90,21 +94,25 @@ The dropdown component will now list all available elements that match the proto
 
       1. Click *Apply*.
 
+   ![Adding a Filter operator](~/user-guide/images/Tutorial_FilterOperator.png)
+
 1. Optionally, if you do not want the element ID to be displayed in the table, add another *Select* operator where "Element ID" is no longer selected.
 
-   Below, you can see an example of the query you made following the instructions above:
-
-   ![](~/user-guide/images/Tutorial_completed_query.png)
+   ![Omitting the element ID](~/user-guide/images/Tutorial_OmittingElementID.png)
 
 1. Scroll up until you see the header of the query you are editing, and click the pen icon to save the query.
 
+   ![Saving the query](~/user-guide/images/Tutorial_SavingTheQuery.png)
+
 1. Drag the query from the data pane onto the table component.
 
-   ![](~/user-guide/images/Tutorial_query_as_table_input.png)
+   ![Dragging the query onto the table component](~/user-guide/images/Tutorial_query_as_table_input.png)
 
 1. Click *Stop editing* to exit the edit mode.
 
 The table component should now display the parameters specified during query creation, and their values should change depending on the element selected in the dropdown feed.
+
+![Result](~/user-guide/images/Tutorial_Result.png)
 
 ## Related documentation
 
