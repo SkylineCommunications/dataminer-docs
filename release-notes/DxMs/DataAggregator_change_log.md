@@ -14,7 +14,8 @@ In the debug UI of Data Aggregator (accessible via `http://<hostname or IP>:<Dat
 
 #### 07 February 2024 - Enhancement - DataAggregator 3.0.1 - Include bs4 Python library with DataAggregator installer [ID_38654]
 
-The installer has been extended to include the bs4 pip package (and its dependencies) by default in the DataAggregator installer.
+Beautiful Soup is a commonly used library that makes it easy to scrape information from web pages and as such it has been made part of the installer.
+The DataAggregator installer now includes the bs4 pip package and its dependencies.
 
 #### 07 February 2024 - Enhancement - DataAggregator 3.0.1 - Improve DataAggregator Migrator [ID_38682]
 
@@ -48,8 +49,10 @@ Data Aggregator will now register itself with API Gateway allowing for an overvi
 
 ##### Extend Data Aggregator to have a CRUD API for Data Sources [ID_37309]
 
-Data Aggregator API has been extended from the ability control the Jobs flow (start, stop and check status) to a full CRUD.
-This has been done for both Jobs and Data Sources, allowing for configuration with less manual steps.
+The API exposed by Data Aggregator would only allow the ability to start, stop, and check the status of existing jobs.
+
+An enhancement has been made to give better control over creating, updating, and deleting data sources and jobs.
+With this change the available operations now allow users to fully manage their data sources and jobs without having to configure them in the appsettings file manually.
 
 ##### Allow Data Aggregator to run Python and PowerShell scripts [ID_37272]
 
