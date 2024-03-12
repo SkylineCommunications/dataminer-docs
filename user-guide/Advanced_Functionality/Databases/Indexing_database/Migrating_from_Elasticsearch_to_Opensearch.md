@@ -5,7 +5,7 @@ keywords: re-indexer
 
 # Migrating from Elasticsearch to OpenSearch
 
-From DataMiner 10.4.4/10.5.0 onwards<!-- RN 37994 -->, a tool is available that allows you to migrate from Elasticsearch 6.8.22 to OpenSearch 2.11.1.
+From DataMiner 10.4.0 [CU2]/10.4.4 onwards<!-- RN 37994 -->, a tool is available that allows you to migrate from Elasticsearch 6.8.22 to OpenSearch 2.11.1.
 
 To use this tool, follow the instructions below:
 
