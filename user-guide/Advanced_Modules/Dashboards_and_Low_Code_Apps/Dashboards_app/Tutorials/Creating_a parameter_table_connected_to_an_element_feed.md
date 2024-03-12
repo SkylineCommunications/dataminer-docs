@@ -76,7 +76,7 @@ The *Dropdown* component should now list all available elements that match the s
    > [!NOTE]
    > It is important that *Element ID* remains selected to allow linking to the *Dropdown* component.
 
-1. Optional: Use a *Filter* operator to filter the query results using the element that will be selected in the dropdown feed.
+1. Use a *Filter* operator to filter the query results using the element that will be selected in the dropdown feed.
 
    1. Select the *Filter* operator.
    1. Set *Column* to "Element ID".
