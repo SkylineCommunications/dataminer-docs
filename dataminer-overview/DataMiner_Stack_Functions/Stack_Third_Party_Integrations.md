@@ -14,7 +14,7 @@ Integrate various ticketing systems (e.g. Jira, Remedy, etc.) in a reliable mann
 
 > [!TIP]
 >
-> *More info coming soon. Stay tuned!*
+> Ticketing Gateway is retired, this can now be fully implemented using [Low-code/No-code Apps](xref:Stack_Data_Visualization#no-code-apps)
 
 ## Mobile Gateway
 
