@@ -29,11 +29,11 @@ Every Agent's IP was found as a route in the NATS server, and the NATS client co
 
 ### Error
 
-- Possible issues with NATS nodes or NATS client communication between DataMiner agents in the cluster. See Details.
+- Possible issues with NATS nodes or NATS client communication between DataMiner Agents in the cluster. See Details.
 
 ### Warning
 
-- Possible issues with NATS nodes or NATS client communication between DataMiner agents in the cluster. See Details.
+- Possible issues with NATS nodes or NATS client communication between DataMiner Agents in the cluster. See Details.
 
 ### Not Executed
 
