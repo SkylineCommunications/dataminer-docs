@@ -23,7 +23,7 @@ Improvements have been made to the [migrator tool](xref:Data_Aggregator_Migrator
 This includes:
 
 - Extra information added to the Help command (*-h* or *--help*).
-- Change how the [DataAPI soft launch](xref:Overview_of_Soft_Launch_Options#dataapi) verification is applied in order to facilitate the migration process for users yet using it.
+- Change of how the [DataAPI soft-launch](xref:Overview_of_Soft_Launch_Options#dataapi) verification is applied in order to facilitate the migration process for users already using it.
 
 #### 31 January 2024 - New Feature - DataAggregator 3.0.0 - Support for Data Sources and integration with DataAPI [ID_38234] [ID_38307] [ID_38404] [ID_38496] [ID_38560]
 
