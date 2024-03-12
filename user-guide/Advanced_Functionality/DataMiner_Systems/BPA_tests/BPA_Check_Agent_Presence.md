@@ -8,7 +8,7 @@ NATS serves as an inter-DMA message broker. This means that every DataMiner Agen
 
 This BPA test will scan the NATS info as seen by this Agent. It will verify if it finds a route to every Agent it is aware of, and it will perform a NATS client connection test to each Agent.
 
-Depending on the configuration of the system, the NATS info is gathered from SLNet (via SLCloud.xml) or via BrokerGateway. An extra check is performed for cluster consistency if DataMiner uses BrokerGateway.
+Depending on the configuration of the system, the NATS info is gathered from SLNet (via SLCloud.xml) or via BrokerGateway. An extra check is performed for cluster consistency if DataMiner uses BrokerGateway. Note that BrokerGateway may only be available in preview, depending on your DataMiner version (see [soft-launch options](xref:Overview_of_Soft_Launch_Options#brokergateway)).
 
 This BPA test is available on demand. You can [run it in System Center](xref:Running_BPA_tests) (on the *Agents > BPA* tab). From DataMiner 10.3.12 onwards, it is available by default.
 
