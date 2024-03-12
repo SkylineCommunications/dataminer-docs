@@ -21,3 +21,15 @@ var descriptor = new GroupFieldDescriptor
     FieldType = typeof(string)
 };
 ```
+
+Assigning a `FieldValue` to the `FieldDescriptor` of a new `DomInstance`:
+
+```csharp
+var instance = new DomInstance 
+{        
+    ID = new DomInstanceId(Guid.NewGuid()),
+    DomDefinitionId = domDefinitionId
+};
+
+instance.AddOrUpdateFieldValue(sectionDefinition, descriptor, nameOfGroup); // type should be string
+```
