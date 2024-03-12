@@ -66,6 +66,12 @@ Up to now, the buttons in the *Query filter* component would be barely visible w
 
 From now on, GQI event messages sent by the same GQI session within a time frame of 100 ms will be grouped into one single message.
 
+#### Dashboards app & Low-Code Apps: Template editor will now inherit the background color of the component [ID_38996]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+From now on, the template editor will inherit the background color of the component. This will enhance overall visibility regardless of the chosen theme.
+
 #### Web apps: Enhanced performance when starting up [ID_38999]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
