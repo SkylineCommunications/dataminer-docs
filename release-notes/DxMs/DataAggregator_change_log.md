@@ -4,9 +4,9 @@ uid: DataAggregator_change_log
 
 # Data Aggregator change log
 
-#### 01 March 2024 - Enhancement - DataAggregator 3.0.3 -  Upgrade installer to WiX 4.0.4 [ID_38981]
+#### 01 March 2024 - Enhancement - DataAggregator 3.0.3 -  Improved installer robustness [ID_38981]
 
-Data Aggregator Installer has now been upgraded to use WiX version 4.0.4.
+The DataAggregator installer has been updated to mitigate a Windows DLL redirection vulnerability and to improve its robustness.
 
 #### 13 February 2024 - Enhancement - DataAggregator 3.0.2 - Debug UI shows job names instead of job IDs [ID_38697]
 
@@ -21,26 +21,26 @@ The installer has been extended to include the bs4 pip package (and its dependen
 Improvements have been made to the [migrator tool](xref:Data_Aggregator_Migrator) to better allow converting GQI queries from the [previous syntax to the new one](xref:Data_Aggregator_settings#gqi-queries).
 
 This includes:
-- Extra information added to the Help command (_-h_ or _--help_)
+
+- Extra information added to the Help command (*-h* or *--help*).
 - Change how the [DataAPI soft launch](xref:Overview_of_Soft_Launch_Options#dataapi) verification is applied in order to facilitate the migration process for users yet using it.
 
-#### 31 January 2024 - New Feature - DataAggregator 3.0.0 - Support for Data Sources and integration with DataAPI [ID_38307] [ID_38404] [ID_38234] [ID_38496] [ID_38560]
+#### 31 January 2024 - New Feature - DataAggregator 3.0.0 - Support for Data Sources and integration with DataAPI [ID_38234] [ID_38307] [ID_38404] [ID_38496] [ID_38560]
 
-Data Aggregator has been extended with support for [Data Sources](xref:Data_Sources) and Scripted connectors.
+Data Aggregator has been extended with support for the [Data Sources](xref:Data_Sources) module and scripted connectors.
 This module offers an easy solution to access data from diverse sources and swiftly integrate new products with DataMiner.
 
-This feature is behind the [DataAPI soft launch](xref:Overview_of_Soft_Launch_Options#dataapi) option and will display an alphabetically sorted list of your Data Sources.
+This feature requires the [DataAPI soft-launch](xref:Overview_of_Soft_Launch_Options#dataapi) option and will display an alphabetically sorted list of your data sources.
 
 ###### Include Python environment with Data Aggregator installer [ID_38064]
 
-Python environment and libraries come with Data Aggregator's installer so no need to configure that after installation.
-Making it possible to start using the feature out of the box.
+The Data Aggregator installer now includes the Python environment, so that this no longer needs to be configured after installation, and the feature can be used out of the box.
 
-In addition, several Python libraries come pre-installed but more can be installed following [these steps](xref:Data_Sources_Setup#installing-extra-python-packages).
+In addition, several Python libraries are included in the installation. To install more, see [Installing extra Python packages](xref:Data_Sources_Setup#installing-extra-python-packages).
 
 ##### Enforce authentication when accessing Data Aggregator DxM web interface via reverse proxy [ID_38275]
 
-To ensure better security, access to Data Aggregator's web interface now requires the user to authenticate itself.
+To improve security, users now need to authenticate themselves to have access to Data Aggregator's web interface.
 
 ##### API Gateway module registration [ID_38570]
 
