@@ -8,6 +8,9 @@ This tutorial explains how to start from a blank Visio file and edit basic eleme
 
 Expected duration: 15 minutes
 
+> [!TIP]
+> See also: [Kata #21: Visual Overview design basics](https://community.dataminer.services/courses/kata-21/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+
 ## Prerequisites
 
 - A DataMiner System that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud) that has a Microsoft Platform element.

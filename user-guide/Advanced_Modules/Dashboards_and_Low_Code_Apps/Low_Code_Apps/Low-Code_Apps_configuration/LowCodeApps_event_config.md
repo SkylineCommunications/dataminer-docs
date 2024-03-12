@@ -31,6 +31,9 @@ To configure an event to launch a script:
 > [!NOTE]
 > Feeds can often contain multiple values, and therefore the values will be wrapped in a JSON array. To be consistent, this will also be the case when only a single value is fed.
 
+> [!IMPORTANT]
+> From DataMiner 10.3.0 [CU14]/10.4.0 [CU2]/10.4.5 onwards<!-- RN 39027 -->, linking a script parameter to an empty feed will fill it with an empty array. The dialog to manually enter a parameter will no longer be shown when the action is launched. This change can break existing implementations when it is not handled by the script.
+
 ## Navigating to a URL
 
 To configure an event to navigate to a URL:

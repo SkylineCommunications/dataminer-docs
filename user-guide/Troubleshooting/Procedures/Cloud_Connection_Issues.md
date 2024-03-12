@@ -60,7 +60,7 @@ For each DMA that should be connected, verify whether the DMA is operational and
 
 Manually renewing the cloud identity can be necessary if dataminer.services could not renew its tokens automatically for too long. This can for example happen if no internet access was available for an extended period (usually minimum 3 days).
 
-1. In DataMiner Cube, go to *System Center* > *Cloud*
+1. In DataMiner Cube, go to *System Center* > *Cloud*.
 
 1. Check whether *Cloud identity* or *Cloud Session* is indicated as valid (the UI description depends on your DataMiner version<!-- RN 38715 -->).
 

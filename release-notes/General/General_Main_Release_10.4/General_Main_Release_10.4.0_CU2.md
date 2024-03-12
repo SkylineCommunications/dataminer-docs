@@ -12,11 +12,66 @@ uid: General_Main_Release_10.4.0_CU2
 
 ### Enhancements
 
+#### Elasticsearch re-indexing tool [ID_37994]
+
+<!-- MR 10.4.0 [CU2] - FR 10.4.4 -->
+
+Migrating data from from Elasticsearch 6.8.22 to OpenSearch 2.11.1 involves the following steps:
+
+1. Taking a snapshot of the Elasticsearch 6.8.22 cluster.
+1. Copying the snapshot to an Elasticsearch 7.10.0 cluster, and restoring it.
+1. Re-indexing the data and taking another snapshot.
+1. Copying the snapshot with the re-indexed data to an OpenSearch 2.11.1 cluster, and restoring it
+
+To perform step 3, a command-line re-indexing tool has been developed: *ReIndexElasticSearchIndexes.exe*.
+
+This tool accepts the following arguments:
+
+| Argument | Description |
+|----------|-------------|
+| -Node or -N | The name of the node to be used for re-indexing (mandatory).<br>Format: `http(s)://127.0.0.1:9200` or `http(s)://fqdn:9200` |
+| -User or -U | The user name, to be provided in case Elasticsearch was hardened.<br>See [Securing the Elasticsearch database](xref:Security_Elasticsearch) |
+| -Password or -P | The user password |
+| -DBPrefix or -D | The database prefix, to be provided in case a custom database prefix is used instead of the default `dms-` prefix.<br>If you do not provide a prefix, the default `dms-` will be used. |
+| -TLSEnabled or -T | Whether or not TLS is enabled for this ElasticSearch database.<br>Values: true or false. Default: false |
+
+If you do not specify a user name and user password, the tool will assume a default ElasticSearch database installation.
+
+#### Service & Resource Management: Enhanced performance of volume license check [ID_38705]
+
+<!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
+
+Because of a number of enhancements, overall performance has increased when performing volume license checks.
+
+#### APIGateway now runs on .NET 8 and allows you to enable kernel response buffering [ID_38710]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+APIGateway has been upgraded. It now runs on Microsoft .NET 8.
+
+This service now allows you to enable kernel response buffering, which should improve throughput and responsiveness over high-latency connections. This setting is disabled by default. To enable it, do the following:
+
+1. In the `C:\Program Files\Skyline Communications\DataMiner APIGateway\` folder of the DataMiner Agent, create a JSON file named *appsettings.custom.json*.
+1. Open this JSON file, and add the following content:
+
+   ```json
+   { "HostingOptions": { "EnableKernelResponseBuffering": true } }
+   ```
+
 #### Enhanced performance when starting up a DataMiner Agent with a large number of virtual elements [ID_38780]
 
 <!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
 
 Because of a number of enhancements, overall performance has increased when starting up a DataMiner Agent with a large number of virtual elements.
+
+#### New SLTimeToLive.txt log file containing all changes made to the TTL settings [ID_38851]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+In the `C:\Skyline DataMiner\Logging\SLTimeToLive` folder, you can now find a new *SLTimeToLive.txt* log file, listing all changes made to the TTL settings in Cube's *System Center > System settings > Time to live* page.
+
+> [!NOTE]
+> The contents of this folder will not be deleted during either a DataMiner restart or a DataMiner upgrade. However, in the *SLTimeToLive.txt* file, the oldest entries will be removed when the maximum log file size is exceeded.
 
 #### Security enhancements [ID_38904]
 
@@ -26,4 +81,16 @@ A number of security enhancements have been made.
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Problem with user accounts [ID_38182]
+
+<!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
+
+In some cases, user accounts could become corrupted.
+
+Also, in some cases, SLDataMiner could stop working when an alarm template or trend template was uploaded, removed, assigned or unassigned.
+
+#### Automatic incident tracking: Incomplete or empty alarm groups after DataMiner startup [ID_38441]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+After a DataMiner startup, in some cases, certain alarm groups would either be incomplete or empty due to missing remote base alarms.
