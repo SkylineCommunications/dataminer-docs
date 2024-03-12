@@ -13,6 +13,7 @@ keywords: low-code, low code, lowcode
 | [Embedding a connector dashboard in Visual Overview](xref:Tutorial_Embed_Connector_Dashboard_in_Visio) | Embed a dynamic dashboard for an element using a specific connector in Visual Overview. |
 | [Leveraging controls and feeds to create a dynamic GQI query](xref:Tutorial_Dashboards_Controls_And_Feeds_Query) | Discover how to harness controls and feeds that are used in a GQI query, so that an update to the user input will lead to an updated GQI result. |
 | [Getting started with node edge graphs](xref:Tutorial_Apps_Node_Edge)| Build a basic network diagram using GQI queries with a node edge graph component. |
+| [Creating a parameter table connected to an element feed](xref:Creating_a_parameter_table_connected_to_an_element_feed) | Create a parameter table connected to an element feed. |
 
 ### Low-Code Apps tutorials
 

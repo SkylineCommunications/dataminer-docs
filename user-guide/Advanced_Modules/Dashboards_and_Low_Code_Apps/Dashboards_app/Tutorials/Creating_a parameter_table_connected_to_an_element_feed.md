@@ -4,59 +4,57 @@ uid: Creating_a_parameter_table_connected_to_an_element_feed
 
 # Creating a parameter table connected to an element feed
 
-In this tutorial, you will learn how to craft a GQI query to display parameters from a specific protocol table. You will also learn how to link the query to an element feed to control which element's data populates in the table's results.
+In this tutorial, you will learn how to craft a GQI query to display parameters from a specific protocol table in a dashboard. You will also learn how to link the query to an element feed to control which element's data is shown in the table.
 
 Expected duration: 10 min.
 
 > [!NOTE]
-> The content and screenshots for this tutorial have been created with the DataMiner Web Apps version 10.3.6.
+> The content and screenshots for this tutorial have been created with the DataMiner Web Apps version 10.4.3.
 
 ## Prerequisites
 
 - DataMiner Web Apps version 10.3.5 or higher
 
+> [!NOTE]
+> The parameters queried in the example originate from elements using the Microsoft Platform protocol. However, this process will work for elements utilizing any protocol that features table-based parameters.
+
 ## Overview
 
-- [Step 1: Create a dashboard and add a *Dropdown* component and a *Table* component](#step-1-create-a-dashboard-and-add-a-dropdown-component-and-a-table-component)
-- [Step 2: Configure the *Dropdown* component to list all elements of a specific protocol](#step-2-configure-the-dropdown-component-to-list-all-elements-of-a-specific-protocol)
+- [Step 1: Create a dashboard and add a dropdown and table component](#step-1-create-a-dashboard-and-add-a-dropdown-and-table-component)
+- [Step 2: Configure the dropdown component to list all elements of a specific protocol](#step-2-configure-the-dropdown-component-to-list-all-elements-of-a-specific-protocol)
 - [Step 3: Configure a GQI query to display parameters from a specific protocol table and link it to the dropdown feed](#step-3-configure-a-gqi-query-to-display-parameters-from-a-specific-protocol-table-and-link-it-to-the-dropdown-feed)
 
-> [!NOTE]
-> The parameters being queried in the example are originating from elements using the Microsoft Platform protocol. However, this process will work for elements utilizing any protocol that features table-based parameters.
+## Step 1: Create a dashboard and add a dropdown and table component
 
-## Step 1: Create a dashboard and add a 'Dropdown' component and a 'Table' component
+1. [Create a new dashboard](xref:Creating_a_completely_new_dashboard).
 
-1. Create a new dashboard.
+1. Drag and drop the dropdown visualization from the pane on the left to the dashboard.
 
-1. Add a *Dropdown* component.
+   This will add a dropdown component, where users will be able to select an element in order to filter the GQI results.
 
-   This component will allow users to select an element in order to filter the GQI results.
+1. Drag and drop the table visualization from the pane on the left to the dashboard.
 
-1. Add a *Table* component.
+   This will add a table component, where the output of the GQI query will be shown.
 
-   This component will allow users to view the output of the GQI query.
+## Step 2: Configure the dropdown component to list all elements of a specific protocol
 
-## Step 2: Configure the 'Dropdown' component to list all elements of a specific protocol
+1. From the data pane, drag the *Elements* data header onto the data input of the dropdown component.
 
-1. Configure the *Dropdown* component with an "Elements" data source.
+   ![](~/user-guide/images/Tutorial_Dropdown_Elements.png)
 
-   1. Go to the right pane, and drag the "Elements" data header onto the data input of the *Dropdown* component.
+1. From the data pane, drag the desired protocol onto the filter input of the dropdown component.
 
-      ![](~/user-guide/images/Tutorial_Dropdown_Elements.png)
+   ![](~/user-guide/images/Tutorial_Dropdown_Protocol.png)
 
-   1. Go to the right pane, and drag the desired protocol from the right pane onto the filter input of the *Dropdown* component.
-
-      ![](~/user-guide/images/Tutorial_Dropdown_Protocol.png)
-
-The *Dropdown* component should now list all available elements that match the specified protocol.
+The dropdown component will now list all available elements that match the protocol you selected.
 
 ## Step 3: Configure a GQI query to display parameters from a specific protocol table and link it to the dropdown feed
 
-1. Go to the right pane, and open the *QUERIES* section.
+1. In the data pane, open the *QUERIES* section and click the "+" icon.
 
-1. Click the plus icon.
+   ![Add a query](~/user-guide/images/Tutorial_Add_Query.png)
 
-1. Enter a descriptive query name.
+1. Enter a descriptive query name, e.g. *Disk Information Table*.
 
 1. Select the *Get parameters for elements where* data source.
 
@@ -65,29 +63,34 @@ The *Dropdown* component should now list all available elements that match the s
 1. Select a protocol.
 
    > [!NOTE]
-   > This should be the same protocol as the one you used to filter the *Dropdown* component in Step 2.
+   > This should be the same protocol as the one you used to filter the dropdown component in step 2.
 
 1. Select a protocol version.
 
-1. Select the protocol table that holds the data that you wish to display in the *Table* component.
+1. Select the protocol table that contains the data that you want to display in the table component.
 
-1. Optional: Use a subsequent *Select* operator to control which parameters from the specified protocol table to display in the GQI table.
+1. Optionally, add a *Select* operator to control which parameters from the specified protocol table to display in the GQI table.
 
    > [!NOTE]
-   > It is important that *Element ID* remains selected to allow linking to the *Dropdown* component.
+   > It is important that *Element ID* column remains selected to allow linking to the dropdown component.
 
-1. Use a *Filter* operator to filter the query results using the element that will be selected in the dropdown feed.
+1. Add a *Filter* operator to filter the query results using the element that will be selected in the dropdown feed.
 
    1. Select the *Filter* operator.
+
    1. Set *Column* to "Element ID".
+
    1. Set *Filter method* to "regex".
+
    1. In the *Value* box, click the *Link to feed* icon or open the *Link to feed* dialog.
 
-      1. Open the *Feed* box, and select the *Dropdown* component.
+      1. Open the *Feed* box, and select the dropdown component.
+
       1. Open the *Property* box, and select "Element ID".
+
       1. Click *Apply*.
 
-1. Optional: Use a subsequent *Select* operator to remove "Element ID" from being displayed on the *Table* component.
+1. Optionally, if you do not want the element ID to be displayed in the table, add another *Select* operator where "Element ID" is no longer selected.
 
    Below, you can see an example of the query you made following the instructions above:
 
@@ -95,13 +98,13 @@ The *Dropdown* component should now list all available elements that match the s
 
 1. Scroll up until you see the header of the query you are editing, and click the pen icon to save the query.
 
-1. Drag the query from the right pane onto the *Table* component.
+1. Drag the query from the data pane onto the table component.
 
    ![](~/user-guide/images/Tutorial_query_as_table_input.png)
 
 1. Click *Stop editing* to exit the edit mode.
 
-The *Table* component should now display the parameters specified during query creation, and their values should change depending on the element selected in the dropdown feed.
+The table component should now display the parameters specified during query creation, and their values should change depending on the element selected in the dropdown feed.
 
 ## Related documentation
 
