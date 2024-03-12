@@ -14,8 +14,7 @@ In the debug UI of Data Aggregator (accessible via `http://<hostname or IP>:<Dat
 
 #### 07 February 2024 - Enhancement - DataAggregator 3.0.1 - Include bs4 Python library with DataAggregator installer [ID_38654]
 
-Beautiful Soup is a commonly used library that makes it easy to scrape information from web pages and as such it has been made part of the installer.
-The DataAggregator installer now includes the bs4 pip package and its dependencies.
+Beautiful Soup is a commonly used library that makes it easy to scrape information from web pages and as such it has been made part of the installer. The DataAggregator installer now includes the bs4 pip package and its dependencies.
 
 #### 07 February 2024 - Enhancement - DataAggregator 3.0.1 - Improve DataAggregator Migrator [ID_38682]
 
@@ -28,8 +27,7 @@ This includes:
 
 #### 31 January 2024 - New Feature - DataAggregator 3.0.0 - Support for Data Sources and integration with DataAPI [ID_38234] [ID_38307] [ID_38404] [ID_38496] [ID_38560]
 
-Data Aggregator has been extended with support for the [Data Sources](xref:Data_Sources) module and scripted connectors.
-This module offers an easy solution to access data from diverse sources and swiftly integrate new products with DataMiner.
+Data Aggregator has been extended with support for the [Data Sources](xref:Data_Sources) module and scripted connectors. This module offers an easy solution to access data from diverse sources and swiftly integrate new products with DataMiner.
 
 This feature requires the [DataAPI soft-launch](xref:Overview_of_Soft_Launch_Options#dataapi) option and will display an alphabetically sorted list of your data sources.
 
@@ -45,14 +43,13 @@ To improve security, users now need to authenticate themselves to have access to
 
 ##### API Gateway module registration [ID_38570]
 
-Data Aggregator will now register itself with API Gateway allowing for an overview of all node instances.
+Data Aggregator will now register itself with API Gateway, allowing for an overview of all node instances.
 
 ##### Extend Data Aggregator to have a CRUD API for Data Sources [ID_37309]
 
-The API exposed by Data Aggregator would only allow the ability to start, stop, and check the status of existing jobs.
+Up to now, the API exposed by Data Aggregator only allowed the ability to start, stop, and check the status of existing jobs.
 
-An enhancement has been made to give better control over creating, updating, and deleting data sources and jobs.
-With this change the available operations now allow users to fully manage their data sources and jobs without having to configure them in the appsettings file manually.
+An enhancement has been made to give better control over creating, updating, and deleting data sources and jobs. With this change, the available operations now allow users to fully manage their data sources and jobs without having to configure them in the *appsettings.custom.json* file manually.
 
 ##### Allow Data Aggregator to run Python and PowerShell scripts [ID_37272]
 
