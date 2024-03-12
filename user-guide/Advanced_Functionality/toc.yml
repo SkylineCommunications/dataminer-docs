@@ -156,6 +156,8 @@ items:
         items:
           - name: Cassandra DB Size
             topicUid: BPA_Cassandra_DB_Size
+          - name: Check Agent Presence Test In NATS
+            topicUid: BPA_Check_Agent_Presence
           - name: Check Antivirus DLLs
             topicUid: BPA_Check_Antivirus_DLLs
           - name: Check Cluster SLNet Connections
