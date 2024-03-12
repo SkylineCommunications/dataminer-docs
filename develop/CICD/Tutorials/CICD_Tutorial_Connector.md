@@ -281,15 +281,19 @@ You should now see your CI and CD jobs complete successfully.
 
 The *Skyline Communications* organization uses more than these actions. For enhanced CI, you can take a look at our [reusable workflow](https://github.com/SkylineCommunications/_ReusableWorkflows/blob/main/.github/workflows/Connector%20Master%20SDK%20Workflow.yml):
 
-1. SonarCloud static analysis to our CI.
+Some of the more interesting actions you can find in our reusable workflows are:
 
-1. Ability to use our GitHub Organization private NuGet store (when added as external collaborator to the package source repository).
+- SonarCloud static analysis to our CI.
 
-1. Tagging is considered a release cycle. This overrides the dmprotocol version with the tag.
+- Ability to use our GitHub Organization private NuGet store (when added as external collaborator to the package source repository).
 
-1. A regular commit and push is considered a build cycle. This adds a *_Bx* suffix to the dmprotocol version (*x* being the run number of the pipeline).
+- A development and release cycle workflow: 
+   
+   - Tagging is considered a release cycle. This overrides the dmprotocol version with the tag.
+   
+   - A regular commit and push is considered a build cycle. This adds a *_Bx* suffix to the dmprotocol version (*x* being the run number of the pipeline).
 
-1. The dmprotocol is uploaded as a downloadable artifact in GitHub.
+- Uploaded of a dmprotocol as a downloadable artifact in GitHub.
 
 ### Advanced options: CD
 
