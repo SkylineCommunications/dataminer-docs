@@ -14,7 +14,7 @@ This BPA test is available on demand. You can [run it in System Center](xref:Run
 
 ## Metadata
 
-- Name: Check Agent Presence In Nats
+- Name: Check Agent Presence In NATS
 - Description: Polls the NATS routes, checks if every Agent is represented, and performs a NATS client connection test
 - Author: Skyline Communications
 - Default Schedule: Every day
