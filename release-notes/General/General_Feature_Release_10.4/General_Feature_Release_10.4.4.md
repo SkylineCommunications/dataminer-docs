@@ -24,7 +24,7 @@ uid: General_Feature_Release_10.4.4
 
 #### Elasticsearch re-indexing tool [ID_37994]
 
-<!-- MR 10.5.0 - FR 10.4.4 -->
+<!-- MR 10.4.0 [CU2] - FR 10.4.4 -->
 
 Migrating data from from Elasticsearch 6.8.22 to OpenSearch 2.11.1 involves the following steps:
 
