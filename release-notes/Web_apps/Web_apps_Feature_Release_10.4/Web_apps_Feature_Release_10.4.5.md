@@ -84,6 +84,12 @@ Because of a number of enhancements, overall performance has increased when star
 
 When you open the landing page of a DataMiner Agent (e.g. `https://myDMA/root/`) on a mobile device, it will no longer be possible to open the context menu of apps listed in the *Other apps* section.
 
+#### Legacy Reporter: Clearer message in case of an 'out of memory' error [ID_39089]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+When an "out of memory" error was thrown in the legacy Reporter, up to now, an "Unspecified error: 12" message would be displayed. From now on, when an "out of memory" error is thrown, a clearer, more informative message will be displayed instead.
+
 ### Fixes
 
 #### Dashboards app & Low-Code Apps - Dropdown component: Filter would no longer be applied after losing the focus [ID_38834]
