@@ -118,6 +118,7 @@ Expected duration: 20 minutes.
    The following will be performed:
 
    1. Compilation
+
    1. Unit testing
 
 > [!NOTE]
@@ -238,9 +239,13 @@ Expected duration: 20 minutes.
    The following will be performed:
 
    1. Compilation
+
    1. Unit testing
+
    1. DataMiner connector validation
+
    1. Package creation
+
    1. Direct Agent deployment
 
 ## Step 6: Add your GitHub secrets
@@ -252,7 +257,9 @@ Expected duration: 20 minutes.
 1. Add the following secrets (by clicking *New repository secret*, entering the name of the secret, and clicking *Add secret*):
 
    1. SERVER_LOCATION
+
    1. DATAMINER_USER
+
    1. DATAMINER_PASSWORD
 
 ## Step 7: Enjoy the results
@@ -268,7 +275,9 @@ You should now see your CI and CD jobs complete successfully.
 > [!NOTE]
 > To be granted DevOps points, take a screenshot of this successful run and either send it to <thunder@skyline.be> or upload it via the [Dojo tutorials page](https://community.dataminer.services/learning-courses-tutorials/).
 
-## Advanced options: CI
+## What to do next
+
+### Advanced options: CI
 
 The *Skyline Communications* organization uses more than these actions. For enhanced CI, you can take a look at our [reusable workflow](https://github.com/SkylineCommunications/_ReusableWorkflows/blob/main/.github/workflows/Connector%20Master%20SDK%20Workflow.yml):
 
@@ -280,12 +289,12 @@ The *Skyline Communications* organization uses more than these actions. For enha
 
 1. A regular commit and push is considered a build cycle. This adds a *_Bx* suffix to the dmprotocol version (*x* being the run number of the pipeline).
 
-1. We upload the dmprotocol as a downloadable artifact in GitHub.
+1. The dmprotocol is uploaded as a downloadable artifact in GitHub.
 
-## Advanced options: CD
+### Advanced options: CD
 
-The *Skyline Communications* organization provides Starter Workflows that run the reusable workflow for CI, and then allows optional CD to be defined by the user. You can take a look at our [starter workflow](https://github.com/SkylineCommunications/.github/blob/main/workflow-templates/DataMiner-CICD-Connector.yml).
+The *Skyline Communications* organization provides starter workflows that run the reusable workflow for CI and then allow optional CD to be defined by the user. You can take a look at our [starter workflow](https://github.com/SkylineCommunications/.github/blob/main/workflow-templates/DataMiner-CICD-Connector.yml):
 
-1. We trigger our CI, reusable workflow as specified above.
+- The CI reusable workflow is triggered as specified above.
 
-1. Optionally, a user can uncomment the code that deploys the .dmprotocol package.
+- Optionally, you can uncomment the code that deploys the .dmprotocol package.
