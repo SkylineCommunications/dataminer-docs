@@ -13,7 +13,7 @@ This component allows you to visualize and manage bookings, events, and other ti
 
 ## Configuring the component
 
-1. Apply a data feed. See [Applying a data feed](xref:Apply_Data_Feed).
+1. Apply a data feed. See [Applying a data feed](xref:Apply_Data_Feed). The timeline component should always be configured with *Queries* data input.
 
 1. Optionally, hover the mouse pointer over the component and click the ![filter](~/user-guide/images/DashboardsX_filter.png) icon. In the data pane on the right, any data feeds that cannot be added will become unavailable. Data feeds that are compatible will be marked with the following icon: ![available filters](~/user-guide/images/Available_Filters.png)
 
