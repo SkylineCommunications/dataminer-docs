@@ -210,6 +210,8 @@ items:
     items:
       - name: Current issues
         items:
+          - name: SLDataMiner crashes because of subgroup query failure
+            topicUid: KI_SLDataMiner_crashes_because_of_subgroup_query_failure
           - name: Timetrace data is no longer written during Cassandra Cluster migration
             topicUid: KI_Timetrace_Data_no_longer_written_during_Cassandra_Cluster_Migration
           - name: IDP Discovery no longer working after upgrade
