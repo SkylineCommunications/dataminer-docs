@@ -22,6 +22,6 @@ The available interfaces are:
 
 - [IGQIOnDestroy](xref:GQI_IGQIOnDestroy): Can be implemented to clean up resources after it has been used. (available from DataMiner 10.4.5/10.5.0 onwards<!-- RN 38959 -->)
 
-- [IGQIOnInit](xref:GQI_IGQIOnInit): Can be implemented to get notified when the custom operator is created. (available from DataMiner 10.4.5/10.5.0 onwards<!-- RN 38959 -->)
+- [IGQIOnInit](xref:GQI_IGQIOnInit): Provides a way to initialize the data source with access to dependencies like the DMS. (available from DataMiner 10.4.5/10.5.0 onwards<!-- RN 38959 -->)
 
 - [IGQIOptimizableOperator](xref:GQI_IGQIOptimizableOperator): Used to optimize your custom operator based on other operators in a query.

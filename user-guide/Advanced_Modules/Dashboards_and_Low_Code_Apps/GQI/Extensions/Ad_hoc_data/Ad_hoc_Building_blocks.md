@@ -23,7 +23,7 @@ The available interfaces are:
 
 - [IGQIOnDestroy](xref:GQI_IGQIOnDestroy): Can be implemented to clean up resources after it has been used.
 
-- [IGQIOnInit](xref:GQI_IGQIOnInit): Can be implemented to get notified when the custom operator is created.
+- [IGQIOnInit](xref:GQI_IGQIOnInit): Provides a way to initialize the data source with access to dependencies like the DMS.
 
 - [IGQIOnPrepareFetch](xref:GQI_IGQIOnPrepareFetch): Used to implement optimizations when data is retrieved.
 
