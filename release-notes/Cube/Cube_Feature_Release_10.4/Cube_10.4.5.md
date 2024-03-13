@@ -46,6 +46,12 @@ When, in the *Upgrade* window, you hover over the *Upload only* button, the foll
 
 The same message will also be shown on the confirmation box that will appear after you click the *Upload only* button.
 
+#### Sidebar: Users will now be logged in automatically when opening an app from the Apps pane [ID_39057]
+
+<!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
+
+Up to now, when you opened a web application by clicking an icon in the *Apps* pane of Cube's sidebar, you had to log in to that app when you had not yet logged in to another app that was open in the browser. From now on, you will be logged in automatically.
+
 ### Fixes
 
 #### Resources app: Resource would incorrectly be marked as modified when capability values were set to NaN [ID_38699]
