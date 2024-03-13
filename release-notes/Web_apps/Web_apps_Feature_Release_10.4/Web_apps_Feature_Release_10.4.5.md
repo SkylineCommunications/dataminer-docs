@@ -54,6 +54,14 @@ From now on, linking a script parameter to an empty feed will fill it with an em
 
 ### Enhancements
 
+#### DataMiner Object Models: Enhanced behavior of DOMInstanceFieldDescriptor and DomInstanceValueFieldDescriptor fields on DOM forms when not all possible values have been retrieved yet [ID_38719]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+A number of enhancements have been made with regard to the way in which `DOMInstanceFieldDescriptor` and `DomInstanceValueFieldDescriptor` fields are displayed on DOM forms when not all possible values have been retrieved yet.
+
+Up to now, as long as not all values of a dropdown box had been retrieved, its label and its border would be highlighted in orange as a warning. From now on, this will only occur when the dropbox box in question has the focus.
+
 #### Dashboards app & Low-Code Apps - Query filter component: Enhanced button coloring [ID_38754]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
@@ -91,6 +99,12 @@ When you open the landing page of a DataMiner Agent (e.g. `https://myDMA/root/`)
 When an "out of memory" error was thrown in the legacy Reporter, up to now, an "Unspecified error: 12" message would be displayed. From now on, when an "out of memory" error is thrown, a clearer, more informative message will be displayed instead.
 
 ### Fixes
+
+#### Mobile Visual Overview: Problem when trying to open a popup linked to a single-page visual overview of another object [ID_38793]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+When, in a visual overview opened on a mobile device, you tried to open a popup linked to a single-page visual overview of another object, the popup would incorrectly refuse to open.
 
 #### Dashboards app & Low-Code Apps - Dropdown component: Filter would no longer be applied after losing the focus [ID_38834]
 
