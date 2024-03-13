@@ -11,6 +11,7 @@ To deploy the I-DOCSIS branch of the EPM Solution:
 1. Deploy the EPM package:
 
    - If the DMA is connected to dataminer.services, you can [deploy the package](xref:Deploying_a_catalog_item) directly from the Catalog.
+
    - Otherwise, place the application package on any DMA available in the cluster. No specific location is required; however, avoid using the Skyline DataMiner folder (C:\Skyline DataMiner). More information about how to install application packages using the Taskbar Utility can be found under [Upgrading a DataMiner Agent using DataMiner Taskbar Utility](xref:Upgrading_a_DataMiner_Agent_using_DataMiner_Taskbar_Utility).
 
    This will install the application package on all the DMAs in the cluster.
@@ -21,7 +22,9 @@ To deploy the I-DOCSIS branch of the EPM Solution:
 1. Make sure the following prerequisites are met:
 
    - If the cluster (DMS) contains more that one DMA, it is mandatory to have a shared folder that is accessible by all DMAs available in the cluster.
+
    - There should be a separate DMA to host the front-end element, which does not host any collectors. This is not mandatory, but it is highly recommended.
+
    - If you want to be able to use the Topology app, the [*CPEIntegration* soft-launch option](xref:Overview_of_Soft_Launch_Options#cpeintegration) must be enabled.
 
 1. Create the necessary views. See [Creating a view](xref:Managing_views#creating-a-view).
@@ -71,7 +74,7 @@ To deploy the I-DOCSIS branch of the EPM Solution:
 
 1. Configure the front-end element:
 
-   1. Add the DMA ID/Element ID of the front-end element to the *Frontend Registration* table. This can be found in the Element in the Configuration Topology Chain under the Frontend page.
+   1. Add the DMA ID/Element ID of the front-end element to the *Frontend Registration* table. This can be found on the Frontend page in the Configuration Topology, accessible through the Topology app or in the element.
 
    1. Add all of the DMA ID/Element ID combinations of the created back-end elements to the *Backend Registration* table. This can be found in the Element in the Configuration Topology Chain under the Backends page.
 
