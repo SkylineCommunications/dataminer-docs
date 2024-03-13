@@ -13,7 +13,7 @@ keywords: dis inject issue, dis inject slscripting
 
   DIS will run the code, so you only need to make sure the configuration is set to *Debug*.
 
-- Multiple SLScripting processes: Starting from [DIS 2.44](xref:DIS_2.44#dis-inject-attaching-the-visual-studio-debugger-to-multiple-slscripting-processes-id_37042), DIS will attach to all SLScripting processes.
+- In case multiple SLScripting processes are used, make sure you use [DIS 2.44](xref:DIS_2.44#dis-inject-attaching-the-visual-studio-debugger-to-multiple-slscripting-processes-id_37042) or higher, as DIS will then attach to all SLScripting processes.
 
 ## Could not find SLScripting process, is DataMiner running?
 

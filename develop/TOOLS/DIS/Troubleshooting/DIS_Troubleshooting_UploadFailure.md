@@ -7,7 +7,7 @@ keywords: dis publish issue
 
 ## Problem
 
-Publishing a connector or script fails with possible message from DataMiner.
+Publishing a connector or script fails, possibly with a message from DataMiner.
 
 ## Possible solutions
 

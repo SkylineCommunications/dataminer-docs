@@ -19,7 +19,7 @@ keywords: dis publish issue, dis compile issue, dis copy to clipboard issue
 
 - No access to internet (when using NuGet packages).
 
-- Syntax that is not covered yet.
+- Syntax that is not supported yet.
 
 ## Possible solutions
 
