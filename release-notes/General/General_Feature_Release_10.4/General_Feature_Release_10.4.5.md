@@ -98,6 +98,12 @@ Also, in some cases, SLDataMiner could stop working when an alarm template or tr
 
 After a DataMiner startup, in some cases, certain alarm groups would either be incomplete or empty due to missing remote base alarms.
 
+#### Not possible to delete a service created via an SRM booking when it had been assigned a name that was already being used [ID_38914]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+When a service created via an SRM booking got into an error state because it had been assigned a name that was already being used by another object, it would not be possible to delete it as it would be considered invalid.
+
 #### GQI: Problem when loading extensions [ID_38998]
 
 <!-- MR 10.5.0 - FR 10.4.5 -->

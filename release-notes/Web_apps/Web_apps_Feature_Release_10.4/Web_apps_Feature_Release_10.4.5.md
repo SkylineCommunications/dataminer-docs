@@ -54,7 +54,7 @@ From now on, linking a script parameter to an empty feed will fill it with an em
 
 ### Enhancements
 
-#### DataMiner Object Models: Enhanced behavior of DOMInstanceFieldDescriptor and DomInstanceValueFieldDescriptor fields on DOM forms when not all possible values have been retrieved yet [ID_38719]
+#### Web apps - DataMiner Object Models: Enhanced behavior of DOMInstanceFieldDescriptor and DomInstanceValueFieldDescriptor fields on DOM forms when not all possible values have been retrieved yet [ID_38719]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
