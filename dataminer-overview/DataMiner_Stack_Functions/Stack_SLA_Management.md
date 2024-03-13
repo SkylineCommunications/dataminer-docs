@@ -2,7 +2,7 @@
 uid: Stack_SLA_Management
 ---
 
-# SLA Management
+# Service Management
 
 ***Reduce operational expenses and ensure that business stakes are always taken into account.***
 

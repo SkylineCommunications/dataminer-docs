@@ -65,7 +65,7 @@ items:
           topicUid: Stack_Data_Connectivity
         - name: Data Aggregation
           topicUid: Stack_Data_Aggregation
-        - name: SLA Management
+        - name: Service Management
           topicUid: Stack_SLA_Management
         - name: Third-Party Integrations
           topicUid: Stack_Third_Party_Integrations
