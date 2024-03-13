@@ -71,12 +71,12 @@ The dropdown component will now list all available elements that match the proto
 
    ![Selecting the protocol table](~/user-guide/images/Tutorial_ProtocolTable.png)
 
-1. Optionally, add a *Select* operator to control which parameters from the specified protocol table to display in the GQI table.
+1. Optionally, add a *Select* operator to control which parameters from the specified protocol table are displayed in the GQI table.
 
    ![Adding a Select operator](~/user-guide/images/Tutorial_SelectOperator.png)
 
    > [!NOTE]
-   > It is important that *Element ID* column remains selected to allow linking to the dropdown component.
+   > At this point, it is important that *Element ID* column remains selected to allow linking to the dropdown component.
 
 1. Add a *Filter* operator to filter the query results using the element that will be selected in the dropdown feed.
 
@@ -100,7 +100,7 @@ The dropdown component will now list all available elements that match the proto
 
    ![Omitting the element ID](~/user-guide/images/Tutorial_OmittingElementID.png)
 
-1. Scroll up until you see the header of the query you are editing, and click the pen icon to save the query.
+1. Scroll up until you see the header of the query you are editing, and click the pencil icon to save the query.
 
    ![Saving the query](~/user-guide/images/Tutorial_SavingTheQuery.png)
 
