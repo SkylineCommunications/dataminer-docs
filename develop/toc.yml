@@ -5180,6 +5180,10 @@ items:
   items:
   - name: Platform-independent CI/CD
     topicUid: Platform_independent_CICD
+  - name: Tutorials
+    items:
+     - name: Setting up a GitHub workflow for connectors
+       topicUid: CICD_Tutorial_Connector
   - name: CI/CD using command line
     items:
     - name: Command line examples
