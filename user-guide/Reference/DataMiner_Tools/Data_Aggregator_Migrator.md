@@ -11,6 +11,9 @@ The Data Aggregator Migrator should be used after upgrading the Data Aggregator 
 > [!TIP]
 > See also: [Data Aggregator](xref:Data_Aggregator_DxM)
 
+> [!NOTE]
+> This tool should be used after upgrading the DataAggregator DxM from 2.x.x to 3.x.x or higher.
+
 ## Using the Data Aggregator Migrator
 
 1. Install the Data Aggregator Migrator on a DMA.
