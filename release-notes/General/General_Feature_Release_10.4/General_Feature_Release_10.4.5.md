@@ -31,6 +31,17 @@ In the `C:\Skyline DataMiner\Logging\SLTimeToLive` folder, you can now find a ne
 > [!NOTE]
 > The contents of this folder will not be deleted during either a DataMiner restart or a DataMiner upgrade. However, in the *SLTimeToLive.txt* file, the oldest entries will be removed when the maximum log file size is exceeded.
 
+#### GQI: The IGQIOnInit and IGQIOnDestroy interfaces can now also be used in custom operators [ID_39088]
+
+<!-- MR 10.5.0 - FR 10.4.5 -->
+
+From now on, the `IGQIOnInit` and `IGQIOnDestroy` interfaces can also be used in custom operators.
+
+For more information on these interfaces, see:
+
+- [IGQIOnInit interface](xref:GQI_IGQIOnInit)
+- [IGQIOnDestroy interface](xref:GQI_IGQIOnDestroy)
+
 ## Changes
 
 ### Enhancements
@@ -97,6 +108,12 @@ Also, in some cases, SLDataMiner could stop working when an alarm template or tr
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
 After a DataMiner startup, in some cases, certain alarm groups would either be incomplete or empty due to missing remote base alarms.
+
+#### Problem when migrating SLAnalytics data, DOM data or SRM data to STaaS [ID_38884]
+
+<!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
+
+When being migrated to STaaS, SLAnalytics data, DOM data or SRM data would incorrectly not be replicated. This could cause data created during the migration to be missing after the migration.
 
 #### Not possible to delete a service created via an SRM booking when it had been assigned a name that was already being used [ID_38914]
 

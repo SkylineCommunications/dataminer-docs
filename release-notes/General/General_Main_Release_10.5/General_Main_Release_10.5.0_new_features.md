@@ -47,6 +47,17 @@ All user feedback will be stored in a new table named *ai_anomalyfeedback*, whic
 > - This feature will only work if the DataMiner System includes an Elasticsearch/OpenSearch database.
 > - Currently, this feature is not yet supported by any of the DataMiner client apps.
 
+#### GQI: The IGQIOnInit and IGQIOnDestroy interfaces can now also be used in custom operators [ID_39088]
+
+<!-- MR 10.5.0 - FR 10.4.5 -->
+
+From now on, the `IGQIOnInit` and `IGQIOnDestroy` interfaces can also be used in custom operators.
+
+For more information on these interfaces, see:
+
+- [IGQIOnInit interface](xref:GQI_IGQIOnInit)
+- [IGQIOnDestroy interface](xref:GQI_IGQIOnDestroy)
+
 ### Protocols
 
 #### FillArray now supports protocol.Leave and protocol.Clear [ID_38153]

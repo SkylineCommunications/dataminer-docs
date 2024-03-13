@@ -103,6 +103,12 @@ Also, in some cases, SLDataMiner could stop working when an alarm template or tr
 
 After a DataMiner startup, in some cases, certain alarm groups would either be incomplete or empty due to missing remote base alarms.
 
+#### Problem when migrating SLAnalytics data, DOM data or SRM data to STaaS [ID_38884]
+
+<!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
+
+When being migrated to STaaS, SLAnalytics data, DOM data or SRM data would incorrectly not be replicated. This could cause data created during the migration to be missing after the migration.
+
 #### Not possible to delete a service created via an SRM booking when it had been assigned a name that was already being used [ID_38914]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
