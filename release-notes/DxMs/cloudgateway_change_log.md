@@ -4,11 +4,11 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
-#### 4 March 2024 - Fix - CloudGateway 2.13.7 - Issues with dataminer.services features when DMA alias contained spaces [ID_39106]
+#### 13 March 2024 - Fix - CloudGateway 2.13.7 - Issues with dataminer.services features when DMA alias contained spaces [ID_39106]
 
 Since CloudGateway 2.11.0 (and CoreGateway 2.13.0), dataminer.services features like Remote Access and Catalog deployments wouldn't work if the [DMA alias defined in DataMiner.xml](xref:Changing_the_name_of_a_DMA#configuring-an-alias-in-dataminerxml) contained one or more spaces. This issue has been resolved.
 
-#### 4 March 2024 - Enhancement - CloudGateway 2.13.7 - Dependencies updated [ID_39045]
+#### 13 March 2024 - Enhancement - CloudGateway 2.13.7 - Dependencies updated [ID_39045]
 
 Several dependencies have been updated.
 
