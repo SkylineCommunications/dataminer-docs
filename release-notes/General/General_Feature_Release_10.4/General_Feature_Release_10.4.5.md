@@ -120,9 +120,3 @@ This type of exceptions will be now be properly caught and logged as warnings so
 <!-- MR 10.5.0 - FR 10.4.5 -->
 
 A *ModelHostException* could be thrown while checking whether the DataMiner System was licensed to use the ModelHost DxM.
-
-#### Problem with SLDataMiner when retrieving users from a user group due to LDAP setting ReferralConfigured='false' [ID_39058]
-
-<!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
-
-When, in *DataMiner.xml*, the `<LDAP>` element contained the `ReferralConfigured="false"` attribute, SLDataMiner would stop working when it tried to retrieve the users from a particular user group that contained subgroups.
