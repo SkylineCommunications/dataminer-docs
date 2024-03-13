@@ -3,27 +3,30 @@ uid: DIS_Troubleshooting_CompilationFailure
 keywords: dis publish issue, dis compile issue, dis copy to clipboard issue
 ---
 
-# Publishing, Save Compiled As, Copy Protocol To Clipboard (Issue during creating of package)
+# Package creation problems
 
 ## Problem
 
-Publishing a connector or script fails with an exception in DIS.
-Saving compiled connector or script fails with an exception in DIS.
-Copy Protocol to Clipboard fails with an exception in DIS.
+- Publishing a connector or script fails with an exception in DIS.
+
+- Saving a compiled connector or script fails with an exception in DIS.
+
+- *Copy Protocol to Clipboard* fails with an exception in DIS.
 
 ## Possible causes
 
 - Invalid configuration.
+
 - No access to internet (when using NuGet packages).
-- Syntax that wasn't covered yet.
+
+- Syntax that is not covered yet.
 
 ## Possible solutions
 
 Check if the configuration is correct:
 
-- Proper XML
-- Using PackageReference (2nd note of [Consuming NuGet packages](xref:Consuming_NuGet))
+- Make sure proper XML is used.
 
-In most scenario's it is probably an unexpected scenario with the solution and the parsing within DIS.
+- Use the PackageReference package management format (see [Consuming NuGet packages](xref:Consuming_NuGet)).
 
-When reporting the issue make sure to include a copy of the solution and the output logging of Visual Studio. For more info, see [Retrieve Information](xref:DIS_Troubleshooting_RetrieveInformation).
+If this does not solve the problem, it likely involves an unexpected scenario with the solution and the parsing within DIS. Report the issue to the DIS team, making sure to include a copy of the solution and the output logging of Visual Studio. For more info, see [Retrieving information in case a problem occurs](xref:DIS_Troubleshooting_RetrieveInformation).

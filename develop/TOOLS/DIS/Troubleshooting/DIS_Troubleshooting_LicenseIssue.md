@@ -1,27 +1,30 @@
 ---
 uid: DIS_Troubleshooting_LicenseIssue
-keywords: dis license, not licensed
+keywords: dis license, account not licensed
 ---
 
-# Account not licensed
+# Licensing problem
 
 ## Problem
 
-Even though DIS has become free, sometimes the license check fails.
+Even though DIS is freely available, it can occur that the license check fails.
 
 ## Possible solutions
 
-1. Can you reach [SkylineAPI](https://api.skyline.be/Help)?
-    - If not, check the certification and make sure it is allowed in your network.
-1. Can you login to SkylineAPI?
-    - If not, check if you are using the right credentials
+1. Check if you can reach [SkylineAPI](https://api.skyline.be/Help).
 
-In most scenario's the above will be enough. If the issue still persists, below are some other rare scenario's:
+   If not, check the certification and make sure it is allowed in your network.
 
-1. Check if your pc is still in sync with the time server
-    - Maybe disable and enable again the synchronization. Windows is known to lie sometimes.
+1. Check if you can you log in to SkylineAPI.
 
-If nothing helps, please make sure to include the following information when reporting the issue:
+   If not, check if you are using the right credentials.
 
-1. Account that you use in DIS
-1. 'DIS' [Output logging](xref:DIS_Troubleshooting_RetrieveInformation#visual-studio-output-logging)
+1. If the issue persists, check if your PC is still in sync with the time server.
+
+   Try disabling the synchronization and enabling it again, because the information shown by Windows is not always correct.
+
+If the issue still persists after you have tried the solutions above, report the issue to Skyline, making sure to include the following information:
+
+- The account that you use in DIS.
+
+- The DIS [output logging](xref:DIS_Troubleshooting_RetrieveInformation#visual-studio-output-logging).

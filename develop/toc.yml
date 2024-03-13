@@ -5394,15 +5394,15 @@ items:
         - name: Troubleshooting
           topicUid: DIS_Troubleshooting
           items:
-            - name: Retrieve information
+            - name: Retrieving information in case a problem occurs
               topicUid: DIS_Troubleshooting_RetrieveInformation
-            - name: Account not licensed
+            - name: Licensing problem
               topicUid: DIS_Troubleshooting_LicenseIssue
-            - name: DIS Inject - Common scenario's
+            - name: DIS Inject problems
               topicUid: DIS_Troubleshooting_DisInject
-            - name: Publishing, Save Compiled As, Copy Protocol To Clipboard (Issue during creating of package)
+            - name: Package creation problems
               topicUid: DIS_Troubleshooting_CompilationFailure
-            - name: Publishing (Issue during upload of package to DataMiner)
+            - name: Publishing problems
               topicUid: DIS_Troubleshooting_UploadFailure
         - name: DIS reference
           topicUid: DIS_reference

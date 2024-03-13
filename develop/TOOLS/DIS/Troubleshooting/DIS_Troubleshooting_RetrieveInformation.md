@@ -3,38 +3,47 @@ uid: DIS_Troubleshooting_RetrieveInformation
 keywords: dis logging
 ---
 
-# Retrieve Information
+# Retrieving information in case a problem occurs
 
-When you have an issue with DIS, generally it's a good idea to gather as much information needed so that the DIS team can efficiently debug and figure out what is going wrong.
+When you encounter an issue with DIS, you should gather as much information as needed so that the DIS team can efficiently debug and figure out what is going wrong.
 
-## Basic Information
+To investigate the issue, they will need [basic information](#basic-information), [Visual Studio output logging](#visual-studio-output-logging), and the relevant [Visual Studio solution](#visual-studio-solution).
 
-- DIS version: *Extensions* > *DIS* > *Settings...* > *[Info](xref:DIS_settings#info)*
+## Basic information
+
+- DIS version: *Extensions* > *DIS* > *Settings* > *[Info](xref:DIS_settings#info)*
+
 - Visual Studio version: *Help* > *About Microsoft Visual Studio*
 
-Situational information:
+- DataMiner version: Only useful when you have trouble interacting with DataMiner (publishing, DIS Inject, etc.). In DataMiner Cube, you can find this by clicking the user icon and selecting *About*.
 
-- DataMiner version: Only useful when you have trouble with interacting with DataMiner (publishing, DIS Inject, ...)
+## Visual Studio output logging
 
-## Visual Studio Output Logging
+1. In Visual Studio, go to the *View* menu.
 
-In Visual Studio go to the *View* menu, in there you'll find the *Output* item. This will open the [Output window of Visual Studio](https://learn.microsoft.com/en-us/visualstudio/ide/reference/output-window).
-In the dropdown you can see several output panes (e.g.: 'Build', 'Build Order', 'DIS', 'Tests', ...). Some of these come from Visual Studio, the others from extensions you have installed.
+1. Select the *Output* item.
 
-DIS has also several of them:
+   This will open the [Output window of Visual Studio](https://learn.microsoft.com/en-us/visualstudio/ide/reference/output-window).
 
-- *DIS*
-- *DIS - Validator*
-- *DIS - Plugins*
-- ...
+1. In the dropdown box, select the relevant DIS items and copy the logging.
 
-This list can always expand in the future, but the format stays the same: *DIS - {topic}*. Not all of them are visible at first as they only appear when there is any logging for them.
+   You can select several output panes in the dropdown box (e.g. *Build*, *Build Order*, *DIS*, *Tests*, etc.). Some of these come from Visual Studio, the others from extensions you have installed. Not all of these may be shown, as they only appear when there is any logging for them. Several items can be selected for DIS:
+
+   - *DIS*
+
+   - *DIS - Validator*
+
+   - *DIS - Plugins*
+
+   - ...
+
+   This list may expand in the future, but the format stays the same: *DIS - {topic}*.
 
 > [!IMPORTANT]
-> Make sure to copy paste the contents of those output panes as if e.g. exceptions occur, the stack trace can be quite long and with a screenshot this is not visible then.
-> The easiest way is to copy paste them in a text file and mention in the filename the name of the output pane. This way we know where the issue occurred which helps us point in the right direction.
+> Make sure to copy/paste the complete contents of the output panes, because if e.g. exceptions occur, the stack trace can be quite long, and with a screenshot not everything will be visible. We recommend copying the content to a text file with the same name as the output pane. This way, it will be clear for the DIS team where the issue occurred, which will help point their investigation in the right direction.
 
 ## Visual Studio Solution
 
-When for example an issue occurs whilst publishing or running the validator, generally it's something within the solution that is causing issues.
-Having access to the solution, makes debugging the problem a lot easier.
+When for example an issue occurs while publishing or running the validator, generally something within the solution is causing the issue.
+
+Make sure to include the solution in the information you provide to the DIS team, as this will make debugging the problem a lot easier.
