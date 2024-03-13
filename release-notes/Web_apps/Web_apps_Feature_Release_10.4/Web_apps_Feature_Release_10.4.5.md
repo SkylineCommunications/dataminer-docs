@@ -29,6 +29,31 @@ A number of new features have been added to the *Node edge graph* component:
 
 Also, because of a number of enhancements, overall node edge graph performance has increased.
 
+#### Dashboards app & Low-Code Apps: Web component and Text component can now be linked to a feed [ID_38993]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+Both a *Web* component and a *Text* component can now be linked to a feed.
+
+In case of a *Web* component:
+
+- When *Type* is set to "Custom HTML", the feed syntax can be inserted in the HTML code.
+- When *Type* is set to "Webpage", the feed syntax can be inserted in the URL.
+
+In case of a *Text* component, the feed syntax can be inserted in the text.
+
+> [!TIP]
+> For more information on feeds, see [Feeds](xref:Using_dashboard_feeds).
+
+> [!NOTE]
+>
+> - When linking a feed to either a *Web* component or a *Text* component in a dashboard, *Source name* needs to be omitted.
+> - Limitations:
+>  
+>   - When you set a *Web* component to "Custom HTML", the *HTML* box is limited to 100,000 characters. HTML syntax highlighting will be disabled from 15,000 characters onwards.
+>   - When you set a *Web* component to "Webpage", the *URL* box is limited to 2,000 characters.
+>   - The *Text* box of a *Text* component is limited to 200,000 characters.
+
 #### Dashboards app & Low-Code Apps: Client metric logging [ID_39000]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
