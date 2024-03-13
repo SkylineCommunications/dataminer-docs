@@ -39,15 +39,15 @@ To create and maintain a DaaS instance, your [organization](xref:Pricing_Usage_b
 
 1. Click *Configure account now*.
 
-   This will redirect you to the DataMiner marketplace landing page.
-
    ![Configure account now](~/user-guide/images/Azure_Portal_Configure.png)
+
+   This will redirect you to the DataMiner marketplace landing page.
 
 1. Click *Activate Subscription*.
 
-   This will activate your subscription and may take a couple of minutes.
-
    ![Confirm Subscription](~/user-guide/images/Marketplace_Confirm_Subscription.png)
+
+   This will activate your subscription and may take a couple of minutes.
 
 1. Once your subscription has been activated, fill in your Organization ID.
 
