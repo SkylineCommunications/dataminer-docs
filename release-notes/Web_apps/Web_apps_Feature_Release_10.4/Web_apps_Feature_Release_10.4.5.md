@@ -117,6 +117,14 @@ Because of a number of enhancements, overall performance has increased when star
 
 When you open the landing page of a DataMiner Agent (e.g. `https://myDMA/root/`) on a mobile device, it will no longer be possible to open the context menu of apps listed in the *Other apps* section.
 
+#### Web apps - Authentication: Enhanced multi-domain support [ID_39061]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+Multi-domain support has been enhanced.
+
+Up to now, on systems with multiple domain controllers, in some cases, users would not be able to log in to a web app with the user name that was known to the system. From now on, if their user name is known to the system, it will be listed at the bottom of the *Sign in* box.
+
 #### Legacy Reporter: Clearer message in case of an 'out of memory' error [ID_39089]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
