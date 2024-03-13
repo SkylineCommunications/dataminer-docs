@@ -9,6 +9,10 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 11 March 2024 - Enhancement - Ordering DataMiner credits through Azure Marketplace [ID_38909]
+
+You can now order DataMiner credits via the Azure Marketplace. For more information on how to order credits, refer to [Ordering DataMiner credits](xref:Order_DataMiner_credits).
+
 #### 7 March 2024 - Enhancement - Connection status information on dataminer.services now refreshes automatically [ID_38933]
 
 The connection status information is now updated every minute on dataminer.services.
