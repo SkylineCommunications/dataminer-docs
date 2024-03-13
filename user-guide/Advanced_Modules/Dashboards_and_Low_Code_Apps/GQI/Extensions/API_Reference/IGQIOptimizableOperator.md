@@ -5,14 +5,14 @@ uid: GQI_IGQIOptimizableOperator
 # IGQIOptimizableOperator interface
 
 > [!TIP]
-> Learn how to implement optimizations for your custom operator and avoid common pitfalls in [this tutorial](xref:Custom_Operator_Tutorial).
+> Learn how to implement optimizations for your custom operator and avoid common pitfalls with the tutorial [Optimizing your custom operator](xref:Custom_Operator_Tutorial).
 
 ## Definition
 
 - Namespace: `Skyline.DataMiner.Analytics.GenericInterface`
 - Assembly: `SLAnalyticsTypes.dll`
 
-The *IGQIOptimizableOperator* interface is used to optimize your custom operator based on other operators in a query.
+The *IGQIOptimizableOperator* interface is used to optimize a custom operator based on other operators in a query.
 
 Some common use cases include:
 
