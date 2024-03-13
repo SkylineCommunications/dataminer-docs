@@ -159,3 +159,11 @@ A number of issues related to Node edge graph component have been solved:
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
 When, on a mobile device, you scrolled while a context menu was open, that context menu would incorrectly not close.
+
+#### Dashboards app & Low-Code Apps - Timeline component & Time range component: Problem when the default range was set to '... so far' [ID_39056]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+When you had set the default range of a *Timeline* component or a *Time range* component to "This week so far", "This month so far" or "This year so far", in some cases, the default range would incorrectly revert to "Today so far" when the configuration of the component was saved.
+
+Also, in some cases, a *Timeline* component or a *Time range* component would not get visually updated when the default range was set to a different value.
