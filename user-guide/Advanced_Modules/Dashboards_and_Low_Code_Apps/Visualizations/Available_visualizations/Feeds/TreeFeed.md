@@ -4,7 +4,7 @@ uid: DashboardTreeFeed
 
 # Tree feed
 
-This dashboard feed allows the user to select one or more items in a tree view. The selectable items can be based on any data feed.
+This feed component allows the user to select one or more items in a tree view. The selectable items can be based on any data feed.
 
 To configure the component:
 
