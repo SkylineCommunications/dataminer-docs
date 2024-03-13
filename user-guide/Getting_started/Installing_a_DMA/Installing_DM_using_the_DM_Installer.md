@@ -9,6 +9,9 @@ The DataMiner installer allows you to run a default DataMiner installation, whic
 > [!NOTE]
 > The DataMiner software can only be installed on the C: drive. It is currently not possible to select another drive for the installation of DataMiner.
 
+> [!IMPORTANT]
+> We recommend against using duplicates of existing VMs to install a new DataMiner machine. Using cloned VMs may have as a consequence that certain configurations from the previous DataMiner linger and cause conflicts on the system.  
+
 ## Before you run the installer
 
 1. Make sure the necessary .NET and .NET Framework versions are installed. See [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements).
