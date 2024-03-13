@@ -4,6 +4,10 @@ uid: artifactdeployer_change_log
 
 # ArtifactDeployer change log
 
+#### 13 March 2024 - Enhancement - ArtifactDeployer 1.6.8 - Dependencies updated [ID_39046]
+
+Several dependencies have been updated.
+
 #### 4 March 2024 - Enhancement - ArtifactDeployer 1.6.7 - Improved installer robustness [ID_38940]
 
 The ArtifactDeployer installer has been updated to mitigate a Windows DLL redirection vulnerability and to improve its robustness.

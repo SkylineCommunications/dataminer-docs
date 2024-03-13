@@ -4,6 +4,10 @@ uid: fieldcontrol_change_log
 
 # Field Control change log
 
+#### 13 March 2024 - Enhancement - FieldControl 2.10.5 - Dependencies updated [ID_39049]
+
+Several dependencies have been updated.
+
 #### 4 March 2024 - Enhancement - FieldControl 2.10.4 - Improved installer robustness [ID_38946]
 
 The FieldControl installer has been updated to mitigate a Windows DLL redirection vulnerability and to improve its robustness.
