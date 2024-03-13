@@ -46,6 +46,20 @@ When, in the *Upgrade* window, you hover over the *Upload only* button, the foll
 
 The same message will also be shown on the confirmation box that will appear after you click the *Upload only* button.
 
+#### Visual Overview: Preventing placeholders from being resolved until the variable is set to a value [ID_38910]
+
+<!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
+
+In Visual Overview, a variable placeholder will resolve to an empty value when the variable in question is not initialized.
+
+From now on, you can add the "WaitForValue" option to a `[var]`, `[cardvar]` or `[pagevar]` placeholder. This will prevent the placeholder (and the shape data field in which it is used) from being resolved until the variable is set to a value.
+
+Example: `[var:testvar,WaitForValue]`
+
+> [!NOTE]
+> If the variable name contains commas, by default, the text before the first valid option will be considered the name of the variable. For example, in the placeholder `[var:my,var,WaitForValue,NotValidOption]`, "my,var" will be considered the name of the variable.
+> This default behavior can be overruled by using a `[sep]` placeholder. For example, in the placeholder `[cardvar:[sep:,$]test,var$WaitForValue]`, "test,var" will be considered the name of the variable.
+
 #### Sidebar: Users will now be logged in automatically when opening an app from the Apps pane [ID_39057]
 
 <!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
