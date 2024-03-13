@@ -4,6 +4,14 @@ uid: coregateway_change_log
 
 # Core Gateway change log
 
+#### 13 March 2024 - Fix - CoreGateway 2.14.6 - Issues with dataminer.services features when DMA alias contained spaces [ID_39107]
+
+Since CoreGateway 2.13.0 (and CloudGateway 2.11.0), dataminer.services features like Remote Access and Catalog deployments did not work correctly if the [DMA alias defined in DataMiner.xml](xref:Changing_the_name_of_a_DMA#configuring-an-alias-in-dataminerxml) contained one or more spaces. This issue has been resolved.
+
+#### 13 March 2024 - Enhancement - CoreGateway 2.14.6 - Dependencies updated [ID_39055]
+
+Several dependencies have been updated.
+
 #### 4 March 2024 - Enhancement - CoreGateway 2.14.5 - Improved installer robustness [ID_38948]
 
 The CoreGateway installer has been updated to mitigate a Windows DLL redirection vulnerability and to improve its robustness.
