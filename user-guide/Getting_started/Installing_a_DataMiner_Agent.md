@@ -9,7 +9,7 @@ If you want to take care of hosting your DataMiner System yourself, you can manu
 > [!IMPORTANT]
 >
 > - The server onto which you plan to install the DataMiner Agent software has to comply with the DataMiner system requirements. See [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements).
-> - We recommend against using duplicates of existing VMs to install a new DataMiner machine. Using cloned VMs may have as a consequence that certain configurations from the previous DataMiner linger and cause conflicts on the system.
+> - Avoid using duplicates of existing VMs to install a new DataMiner machine. Using cloned VMs can cause certain configurations from the previous DataMiner machine to linger and cause conflicts in the system.
 
 To manually install a DataMiner Agent, you will need to [use the DataMiner Installer](xref:Installing_DM_using_the_DM_installer). Afterwards, you will need to [upgrade to the latest feature or main release version](xref:Upgrading_a_DataMiner_Agent), [connect your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud), and either deploy [Storage as a Service](xref:STaaS) to make use of cloud-native storage hosted by Skyline or, if you wish to host the DataMiner storage yourself, [configure the databases](xref:Configuring_dedicated_clustered_storage).
 
