@@ -7,6 +7,10 @@ keywords: dis inject issue, dis inject slscripting
 
 ## Breakpoints are not hitting
 
+### Problem
+
+After clicking *Attach* in the *DIS Inject* window and running the code, the breakpoints are not hitting.
+
 ### Possible solutions
 
 - Projects need to be built in [Debug mode](https://learn.microsoft.com/en-us/visualstudio/debugger/what-is-debugging?view=vs-2022#debug-mode-vs-running-your-app).
