@@ -13,7 +13,7 @@ This component allows you to visualize data as a grid.
 
 ## Configuring the component
 
-1. Apply a data feed. See [Applying a data feed](xref:Apply_Data_Feed).
+1. Apply a data feed. See [Applying a data feed](xref:Apply_Data_Feed). The grid component should always be configured with *Queries* data input.
 
 1. Optionally, hover the mouse pointer over the component, click the filter icon, and then add a filter feed from the *Feeds > URL > Query columns* section of the data pane. You can repeat this several times in order to filter on several query columns<!--RN 34761-->.
 
