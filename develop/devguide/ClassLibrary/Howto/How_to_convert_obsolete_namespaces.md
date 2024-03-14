@@ -13,8 +13,3 @@ Sometimes, certain namespaces become outdated and are replaced with newer ones. 
 | SLC.Lib.Protocol                           | Skyline.DataMiner.Core.DataMinerSystem.Protocol   | Install [the new NuGet package](https://www.nuget.org/packages/Skyline.DataMiner.Core.DataMinerSystem.Protocol/) and remove the obsolete package. |  |
 | Skyline.DataMiner.Library.Common           | Skyline.DataMiner.Core.DataMinerSystem.Common      | Install [the new NuGet package](https://www.nuget.org/packages/Skyline.DataMiner.Core.DataMinerSystem.Common/) and remove QAction 63000. |  |
 | Skyline.DataMiner.Library.Protocol         | Skyline.DataMiner.Core.DataMinerSystem.Protocol   | Install [the new NuGet package](https://www.nuget.org/packages/Skyline.DataMiner.Core.DataMinerSystem.Protocol/) and remove QAction 63000. |  |
-
-## Instructions
-
-- Add rows to the table for each obsolete namespace and its conversion action.
-- Use the "Notes" column to document any additional information or comments.
