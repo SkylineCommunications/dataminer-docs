@@ -184,12 +184,6 @@ Resources would not always be released correctly, causing some resources to be u
 
 When cleaning (i.e. resetting) a Cassandra database, in some cases, a `TypeInitializationException` could be thrown.
 
-#### STaaS: Problem when going into file offload mode [ID_38648]
-
-<!-- MR 10.5.0 - FR 10.4.4 -->
-
-When the system went into file offload mode, in some cases, a serialization issue could occur, causing the file offload mode to get stuck.
-
 #### StorageModule: Only final retry will be logged as error when a data storage request fails [ID_38897]
 
 <!-- MR 10.5.0 - FR 10.4.4 -->

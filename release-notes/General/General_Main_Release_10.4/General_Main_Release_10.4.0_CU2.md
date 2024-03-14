@@ -103,6 +103,12 @@ Also, in some cases, SLDataMiner could stop working when an alarm template or tr
 
 After a DataMiner startup, in some cases, certain alarm groups would either be incomplete or empty due to missing remote base alarms.
 
+#### STaaS: Problem when going into file offload mode [ID_38648]
+
+<!-- MR 10.4.0 [CU2] - FR 10.4.4 -->
+
+When the system went into file offload mode, in some cases, a serialization issue could occur, causing the file offload mode to get stuck.
+
 #### Problem when migrating SLAnalytics data, DOM data or SRM data to STaaS [ID_38884]
 
 <!-- MR 10.4.0 [CU2] - FR 10.4.5 -->

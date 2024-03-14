@@ -348,7 +348,7 @@ Up to now, it could occur that the script *SRM_QuarantineHandling* retrieved a p
 
 #### STaaS: Problem when going into file offload mode [ID_38648]
 
-<!-- MR 10.5.0 - FR 10.4.4 -->
+<!-- MR 10.4.0 [CU2] - FR 10.4.4 -->
 
 When the system went into file offload mode, in some cases, a serialization issue could occur, causing the file offload mode to get stuck.
 
