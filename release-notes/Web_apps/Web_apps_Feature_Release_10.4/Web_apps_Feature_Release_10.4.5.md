@@ -189,3 +189,11 @@ Also, in some cases, a *Timeline* component or a *Time range* component would no
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
 When, in the *DATA* pane, you opened the *PARAMETERS* section, set the *From* box to "Protocol", and opened the *Protocol* box, the protocol versions of mediation protocols would incorrectly not be the production versions that were actually used.
+
+#### Web apps: Disconnection message would not disappear after the WebSocket connection had been restored [ID_39095]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+When a web app loses its WebSocket connection, a `Connection has been interrupted` message is displayed in the app's subheader. In some cases, that message would incorrectly not disappear once the WebSocket connection was restored.
+
+From now on, a message will also be displayed in the app's subheader when not all messages received when the app was disconnected could be recovered. That same message will ask the user to refresh the app.
