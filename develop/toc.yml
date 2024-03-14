@@ -773,7 +773,7 @@ items:
         topicUid: ClassLibraryMonitorsStoppingAStoppedMonitor
     - name: Scheduler
       topicUid: Scheduler_NuGet_Package
-    - name: Obsolete namespaces and how to convert them
+    - name: Obsolete namespaces
       topicUid: Obsolete_namespaces
     - name: Examples
       topicUid:  ClassLibraryExamples
