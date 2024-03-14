@@ -775,6 +775,10 @@ items:
       topicUid: Scheduler_NuGet_Package
     - name: Examples
       topicUid:  ClassLibraryExamples
+    - name: How-tos
+      items:
+      - name: How to convert obsolete namespaces
+        topicUid: How_to_convert_obsolete_namespaces
   - name: Getting started as a System Developer
     topicUid: GettingStartedAsSysDev
 - name: API documentation
