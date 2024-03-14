@@ -47,6 +47,17 @@ All user feedback will be stored in a new table named *ai_anomalyfeedback*, whic
 > - This feature will only work if the DataMiner System includes an Elasticsearch/OpenSearch database.
 > - Currently, this feature is not yet supported by any of the DataMiner client apps.
 
+#### STaaS: SLDataGateway will now periodically check the health of the storage service [ID_39068]
+
+<!-- MR 10.5.0 - FR 10.4.5 -->
+
+When Storage as a Service (STaaS) is used, SLDataGateway will now periodically check the health of that storage service. If the current status cannot be determined or if the current status is "red", SLDataGateway will switch to file offload mode.
+
+> [!NOTE]
+>
+> - When the current status is "yellow", SLDataGateway will not switch to file offload mode.
+> - Whenever the health of the storage service changes, an alarm mentioning the current health status is generated.
+
 #### GQI: The IGQIOnInit and IGQIOnDestroy interfaces can now also be used in custom operators [ID_39088]
 
 <!-- MR 10.5.0 - FR 10.4.5 -->
