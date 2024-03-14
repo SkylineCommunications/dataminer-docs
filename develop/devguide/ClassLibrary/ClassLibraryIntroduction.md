@@ -15,7 +15,7 @@ The namespace consists of three sub-namespaces:
 > [!IMPORTANT]
 >
 > - If you encounter abbreviations like *SLC*, *Lib*, or *CLib*, make sure to update the NuGet packages to the latest version, as these are considered obsolete.
-> - QAction 63000 Auto-generated Class Library is obsolete and should be replaced by the latest NuGet packages. See [Obsolete namespaces and how to convert them](xref:Obsolete_namespaces).
+> - QAction 63000 Auto-generated Class Library is obsolete and should be replaced by the latest NuGet packages. See [Obsolete namespaces](xref:Obsolete_namespaces).
 
 To use the class library in a protocol, install the following NuGet package: [Skyline.DataMiner.Core.DataMinerSystem.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Core.DataMinerSystem.Protocol).
 
