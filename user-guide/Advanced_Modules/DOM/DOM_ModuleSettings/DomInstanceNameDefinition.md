@@ -29,8 +29,11 @@ These are the available types:
   | DateTime | "1997-04-10T14:40:14.0000000Z" (ISO8601) |
   | TimeSpan | "13:28:18.9187335" |
   | bool | "True" |
-  | GenericEnumEntry | "SomeDisplayValue" (the display value will be used) |
+  | GenericEnumEntry | "string or int for GenericEnumEntry" |
   | List\<T> | "SomeValue;SomeValue" (Values separated with semicolons ";") |
+
+  > [!NOTE]
+  > Prior to DataMiner 10.4.0 [CU1]/10.4.4, the raw value of a GenericEnumEntry is used instead of the display value.<!-- RN 38586 -->
 
 ## Example
 
