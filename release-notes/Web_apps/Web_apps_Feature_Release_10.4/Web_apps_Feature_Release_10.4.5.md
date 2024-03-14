@@ -175,3 +175,9 @@ When, on a mobile device, you scrolled while a context menu was open, that conte
 When you had set the default range of a *Timeline* component or a *Time range* component to "This week so far", "This month so far" or "This year so far", in some cases, the default range would incorrectly revert to "Today so far" when the configuration of the component was saved.
 
 Also, in some cases, a *Timeline* component or a *Time range* component would not get visually updated when the default range was set to a different value.
+
+#### Dashboards app & Low-Code Apps: Protocol versions of mediation protocols would incorrectly not be production versions [ID_39094]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+When, in the *DATA* pane, you opened the *PARAMETERS* section, set the *From* box to "Protocol", and opened the *Protocol* box, the protocol versions of mediation protocols would incorrectly not be the production versions that were actually used.
