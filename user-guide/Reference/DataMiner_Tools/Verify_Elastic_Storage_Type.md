@@ -11,7 +11,7 @@ From DataMiner 10.4.0 onwards, XML storage for profiles and resources is no long
 > [!TIP]
 > See also: [DataMiner functionality evolution and retirement](xref:Software_support_life_cycles#dataminer-functionality-evolution-and-retirement)
 
-The *VerifyNoLegacyReportsDashboards* check will be **successful** if:
+The *VerifyElasticStorageType* check will be **successful** if:
 
 - Both the Profile Manager and Resource Manager configurations indicate that the indexing database is configured.
 
@@ -19,7 +19,7 @@ The *VerifyNoLegacyReportsDashboards* check will be **successful** if:
 
   The XML storage files for Resource Manager and Profile Manager are located in the folders `C:\Skyline Dataminer\ResourceManager\Resources.xml` and `C:\Skyline Dataminer\ProfileManager\Profiles.xml`, respectively. After the upgrade, both managers will automatically start using the indexing database for storage.
 
-The *VerifyNoLegacyReportsDashboards* check will **fail** if:
+The *VerifyElasticStorageType* check will **fail** if:
 
 - The configuration file indicates the use of XML storage, but the XML storage file cannot be verified (because it is in use by another process or it is corrupt).
 
