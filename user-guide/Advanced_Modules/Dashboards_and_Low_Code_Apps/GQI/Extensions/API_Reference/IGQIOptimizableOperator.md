@@ -73,7 +73,7 @@ public IGQIOperatorNode Optimize(IGQIOperatorNode currentNode, IGQICoreOperator 
 
 ##### Unconditionally forward
 
-To forward any operator, i.e. to give it more priority than your own custom operator, you can call the `Forward(IGQICoreOperator)` on the current `IGQIOperatorNode`.
+To forward any operator, i.e. to give it more priority than another custom operator, you can call `Forward(IGQICoreOperator)` on the current `IGQIOperatorNode`.
 
 ```csharp
 public IGQIOperatorNode Optimize(IGQIOperatorNode currentNode, IGQICoreOperator nextOperator)
