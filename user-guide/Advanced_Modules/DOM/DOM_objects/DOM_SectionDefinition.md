@@ -135,7 +135,7 @@ domInstance.AddOrUpdateListFieldValue(sectionDefinition, fieldDescriptor, values
 > [!NOTE]
 >
 > - From DataMiner 10.4.2/10.5.0 onwards, it is no longer possible to pass empty lists as value for a `FieldDescriptor` that allows multiple values if that field is required. A `FieldDescriptor` that is not required will still allow empty lists as value, but note that it is best practice to not pass values for `FieldDescriptors` if the value is empty or an empty list.
-> - Fields with multiple values, like fields used in multiple sections, will not be available in GQI queries.
+> - Fields with multiple values are not available in GQI queries.
 
 ## CustomSectionDefinition properties
 
