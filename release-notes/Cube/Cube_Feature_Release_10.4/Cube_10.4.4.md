@@ -171,3 +171,9 @@ When you opened an EPM card using the topology selector, in some cases, Cube cou
 When you added a history tab on February 29, the name of the tab would be incorrect.
 
 For example, when on February 29 you added a history tab listing all alarms generated during the last year, the name of the tab would incorrectly be "Last 366 days" rather than "Year to date".
+
+#### Visual Overview: Memory leak when shapes are turned into tab controls that display pages of a Visio drawing [ID_39103]
+
+<!-- MR 10.3.0 [CU13]/10.4.0 [CU1] - FR 10.4.4 [CU0] -->
+
+In some cases, DataMiner Cube could leak memory when viewing a visual overview in which shapes were turned into tab controls that display pages of a Visio drawing.
