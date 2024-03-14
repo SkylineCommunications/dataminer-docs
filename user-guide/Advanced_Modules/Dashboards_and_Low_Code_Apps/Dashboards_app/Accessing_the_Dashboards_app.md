@@ -11,6 +11,8 @@ http://[DMA]/dashboard
 https://[DMA]/dashboard
 ```
 
+From DataMiner 10.2.9/10.3.0 onwards, you can also access the Dashboards app from the apps pane in DataMiner Cube.<!-- RN 33944 -->
+
 > [!NOTE]
 > We recommend that you use Google Chrome to access the Dashboards app. Microsoft Edge, Mozilla Firefox, and Safari are also supported.
 

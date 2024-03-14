@@ -166,14 +166,18 @@ The following actions are possible with this list:
 
 The apps button displays a list of DataMiner applications.
 
-Depending on the configuration of your DataMiner System, the list can contain up to four sections:
+Depending on the configuration and version of your DataMiner System and on the available user permissions, the list can contain the following sections:
 
-- **Applications**: Plug-in applications, e.g. IDP, PTP, etc.
+- **Modules**: DataMiner modules such as [Automation](xref:automation), [Documents](xref:About_the_Documents_module), and [Trending](xref:Accessing_trend_information_from_the_Trending_module).
 
-- **Modules**: The different DataMiner modules, such as Trending, System Center, and add-on modules like Automation and Correlation.
+- **Applications**: Plug-in applications, e.g. [IDP](xref:SolIDP), [PTP](xref:SolPTP), etc.
+
+- **Web Apps**: The [Monitoring app](xref:The_Monitoring_app_user_interface), [Dashboards app](xref:newR_D), and any available [low-code apps](xref:Dashboards_and_Low_Code_Apps).<!-- RN 33944 -->
 
 - **General**: The Help, Settings, and About.
 
 - **WFM**: Custom DataMiner WorkFlow Manager components.
 
-Click any app in the list to open it. If you wish to open the app in a new card, click the app while pressing the *Ctrl* key.
+- Any custom sections [configured in the DataMiner Low-Code Apps module](xref:LowCodeApps_organizing_landing_page), listing low-code apps.<!-- RN 33944 -->
+
+Click any item in the list to open it. If you wish to open the item in a new card, click the item while pressing the *Ctrl* key.
