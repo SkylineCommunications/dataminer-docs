@@ -123,7 +123,7 @@ When you open the landing page of a DataMiner Agent (e.g. `https://myDMA/root/`)
 
 Multi-domain support has been enhanced.
 
-Up to now, on systems with multiple domain controllers, in some cases, users would not be able to log in to a web app with the user name that was known to the system. From now on, if their user name is known to the system, it will be listed at the bottom of the *Sign in* box.
+Up to now, on systems with multiple domain controllers, in some cases, users would not be able to log in to a web app with the user name that was known to the system, listed at the bottom of the *Sign in* box. The latter was linked to another domain than the one linked to the user name with which they were logged in.
 
 #### Legacy Reporter: Clearer message in case of an 'out of memory' error [ID_39089]
 
