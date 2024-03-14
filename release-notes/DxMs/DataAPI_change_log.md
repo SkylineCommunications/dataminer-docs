@@ -7,18 +7,18 @@ uid: DataAPI_change_log
 > [!IMPORTANT]
 > At present, the Data API feature is only available in preview, if the soft-launch option *DataAPI* is enabled. For more information, see [Getting started with the Data Sources module](xref:Data_Sources_Setup).
 
-#### 05 March 2024 - New Feature - DataAPI 1.1.1 - Add Configuration endpoint [ID_39016]
+#### ?? March 2024 - New Feature - DataAPI 1.1.1 - Add Configuration endpoint [ID_39016]
 
 A new endpoint has been added to the DataAPI DxM that currently allows the configuration of units and decimals.
 
 > [!NOTE]
 > The configuration endpoint expects that the items to be configured (parameters, tables) have been created via the data endpoint first.
 
-#### 05 March 2024 - Enhancement - DataAPI 1.1.0 - Upgrade to .NET 8 [ID_39022]
+#### 14 March 2024 - Enhancement - DataAPI 1.1.0 - Upgrade to .NET 8 [ID_39022]
 
 Data API has now been upgraded to use .NET 8 instead of .NET 6. This means .NET 8 Runtime now has to be installed in order to run Data API.
 
-#### 05 March 2024 - Enhancement - DataAPI 1.0.2 - Improved installer robustness [ID_38981]
+#### 14 March 2024 - Enhancement - DataAPI 1.0.2 - Improved installer robustness [ID_38981]
 
 The Data API installer has been updated to mitigate a Windows DLL redirection vulnerability and to improve its robustness.
 
