@@ -9,6 +9,8 @@ From DataMiner 10.4.0 [CU2]/10.4.4 onwards<!-- RN 37994 -->, a tool is available
 
 To use this tool, follow the instructions below:
 
+1. Stop all agents in the DMS
+   
 1. [Take a snapshot of the Elasticsearch 6.8.22 cluster](#take-a-snapshot-of-the-elasticsearch-6822-cluster).
 
 1. [Copy the snapshot to an Elasticsearch 7.10.0 cluster and restore it](#restore-the-snapshot-on-an-elasticsearch-7100-cluster).
@@ -16,6 +18,13 @@ To use this tool, follow the instructions below:
 1. [Run the re-indexing tool and take a snapshot](#run-the-re-indexing-tool-and-take-a-snapshot).
 
 1. [Copy the snapshot with the re-indexed data to an OpenSearch 2.11.1 cluster and restore it](#restore-the-snapshot-with-the-re-indexed-data-to-an-opensearch-2111-cluster).
+
+1. [Reconfigure the DB xml on every agent](#reconfigure-the-DB-xml-on-every-agent)
+
+1. Restart all DataMiner agents in the DMS
+
+> [!WARNING]
+> To prevent data loss all agents of the DMS must be stopped during this procedure and can not be started up again until the migration has been completed.
 
 > [!TIP]
 > See also: [Taking a snapshot of one Elasticsearch cluster and restoring it to another](xref:Taking_snapshot_Elasticsearch_cluster_and_restoring_to_different_cluster)
@@ -266,3 +275,14 @@ Using Kibana, you can restore the snapshot in the following way:
    ```
 
    The status of the cluster should turn green after the restore.
+
+## Reconfigure the DB xml on every agent
+In case the OpenSearch nodes have been installed on a different machine than the Elastic nodes you are migrating from, you will need to do the following on every agent of your DMS:
+
+1. Navigate to the C:\Skyline DataMiner folder and open the DB.xml.
+
+1. Locate the IP addresses or hostnames previously used by Elastic.
+
+1. Replace these with the IP addresses of the OpenSearch nodes.
+
+1. Save the DB.xml file and exit.
