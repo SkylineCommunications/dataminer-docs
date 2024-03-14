@@ -10,6 +10,9 @@ To do so:
 
 1. On the DMA, go to the app folder: `C:\Skyline DataMiner\applications\[APP_ID]`
 
+   > [!NOTE]
+   > To find our which app ID corresponds with which low-code app, check the URLs displayed in the browser when you open the apps via the DataMiner landing page.
+
 1. Open the file *App.info.json*.
 
 1. Add the section names to the *Sections* array and save the file.
