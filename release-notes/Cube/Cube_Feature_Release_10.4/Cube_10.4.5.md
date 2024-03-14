@@ -81,3 +81,9 @@ From now on, when the *Resources* app of Cube detects that the Min and Max capab
 <!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
 
 When, in DataMiner Cube, you closed the Services app, in some cases, Cube could leak memory.
+
+#### Visual Overview: Memory leak when shapes are turned into tab controls that display pages of a Visio drawing [ID_39103]
+
+<!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
+
+In some cases, DataMiner Cube could leak memory when viewing a visual overview in which shapes were turned into tab controls that display pages of a Visio drawing.
