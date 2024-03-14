@@ -134,7 +134,7 @@ When you opened the Settings window, in some cases, Cube could leak memory.
 
 #### Alarm Console: 'Search for alarms' would list alarms with timestamps according to the local time zone of the client computer [ID_38899]
 
-<!-- MR 10.5.0 - FR 10.4.4 -->
+<!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.4 -->
 
 Up to now, when you opened a new alarm tab, and did a search using the *Search for alarms* box, the alarms matching the search criterion would incorrectly show timestamps according to the local time zone of the client computer.
 
