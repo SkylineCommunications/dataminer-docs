@@ -34,6 +34,6 @@ This **collection of functions** , which you can pick and choose according to yo
 
 - The [**Data Aggregation**](xref:Stack_Data_Aggregation) category offers functions to merge complex data streams into actionable insights.
 
-- The [**SLA Management**](xref:Stack_SLA_Management) category offers functions to reduce operational expenses and ensure that business stakes are always taken into account.
+- The [**Service Management**](xref:Stack_SLA_Management) category offers functions to reduce operational expenses and ensure that business stakes are always taken into account.
 
 - The [**Third-Party Integrations**](xref:Stack_Third_Party_Integrations) category allows you to work more efficiently by using the tools you already know and love.
