@@ -5,7 +5,7 @@ uid: GQI_IGQIOptimizableOperator
 # IGQIOptimizableOperator interface
 
 > [!TIP]
-> Learn how to implement optimizations for your custom operator and avoid common pitfalls with the tutorial [Optimizing your custom operator](xref:Custom_Operator_Tutorial).
+> Learn how to implement optimizations for a custom operator and avoid common pitfalls with this tutorial: [Optimizing your custom operator](xref:Custom_Operator_Tutorial).
 
 ## Definition
 
@@ -58,7 +58,7 @@ public IGQIOperatorNode Optimize(IGQIOperatorNode currentNode, IGQICoreOperator 
 
 ##### Combine operations
 
-To combine functionality from a subsequent operator, you can modify your custom operator logic and then return the current node.
+To combine functionality from a subsequent operator, you can modify the custom operator logic and then return the current node.
 
 ```csharp
 public IGQIOperatorNode Optimize(IGQIOperatorNode currentNode, IGQICoreOperator nextOperator)
@@ -84,10 +84,9 @@ public IGQIOperatorNode Optimize(IGQIOperatorNode currentNode, IGQICoreOperator 
 
 ##### Conditionally forward filters
 
-You will rarely be able to unconditionally forward filter operators. You only want to forward them when they do not depend on anything your custom operator does.
+You will rarely be able to unconditionally forward filter operators. You should only forward them when they do not depend on anything the custom operator does.
 
-To achieve this, you can use the `OptimizeForFilter(IGQIFilterOperator, params IGQIColumn[])` helper method on a query node.
-Given a filter operator and an array of columns that are affected by your custom operator, it will try to forward the filter or append it otherwise.
+To achieve this, you can use the `OptimizeForFilter(IGQIFilterOperator, params IGQIColumn[])` helper method on a query node. Given a filter operator and an array of columns that are affected by the custom operator, it will try to forward the filter or append it otherwise.
 
 ```csharp
 public IGQIOperatorNode Optimize(IGQIOperatorNode currentNode, IGQICoreOperator nextOperator)
@@ -107,10 +106,8 @@ public IGQIOperatorNode Optimize(IGQIOperatorNode currentNode, IGQICoreOperator 
 }
 ```
 
-> [!WARNING]
-> Make sure to include **all** affected columns.
-> If you forget any, the optimized query may produce incorrect results.
-> Affected columns should always include:
+> [!CAUTION]
+> Make sure to include **all** affected columns. If you forget any, the optimized query may produce incorrect results. Affected columns should always include:
 >
-> - Any new columns that will be added by your custom operator
-> - Any columns that may have their values changed by your custom operator
+> - Any new columns that will be added by the custom operator.
+> - Any columns that may have their values changed by the custom operator.

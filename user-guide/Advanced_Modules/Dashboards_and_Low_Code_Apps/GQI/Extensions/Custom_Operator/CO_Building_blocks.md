@@ -18,10 +18,10 @@ The available interfaces are:
 
 - [IGQIRowOperator](xref:GQI_IGQIRowOperator): Makes it possible to manipulate the rows.
 
-- [IGQIInputArguments](xref:GQI_IGQIInputArguments): Retrieve input from the user through input arguments.
+- [IGQIInputArguments](xref:GQI_IGQIInputArguments): Retrieves input from the user through input arguments.
 
-- [IGQIOnDestroy](xref:GQI_IGQIOnDestroy): Can be implemented to clean up resources after it has been used. (available from DataMiner 10.4.5/10.5.0 onwards<!-- RN 38959 -->)
+- [IGQIOnDestroy](xref:GQI_IGQIOnDestroy): Can be implemented to clean up resources after it has been used (available from DataMiner 10.4.5/10.5.0 onwards<!-- RN 38959 -->).
 
-- [IGQIOnInit](xref:GQI_IGQIOnInit): Provides a way to initialize the custom operator with access to dependencies like the DMS. (available from DataMiner 10.4.5/10.5.0 onwards<!-- RN 38959 -->)
+- [IGQIOnInit](xref:GQI_IGQIOnInit): Provides a way to initialize the custom operator with access to dependencies like the DMS (available from DataMiner 10.4.5/10.5.0 onwards<!-- RN 38959 -->).
 
-- [IGQIOptimizableOperator](xref:GQI_IGQIOptimizableOperator): Used to optimize your custom operator based on other operators in a query.
+- [IGQIOptimizableOperator](xref:GQI_IGQIOptimizableOperator): Used in order to optimize the custom operator based on other operators in a query.
