@@ -139,6 +139,14 @@ When an "out of memory" error was thrown in the legacy Reporter, up to now, an "
 
 When, in a visual overview opened on a mobile device, you tried to open a popup linked to a single-page visual overview of another object, the popup would incorrectly refuse to open.
 
+#### Dashboards app & Low-Code Apps - Stepper component: Problem when two states were able to transition to each other [ID_38820]
+
+<!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
+
+When a *Stepper* component has to display states of a DOM definition for which no DOM history records are being saved, it relies on the states and transitions within the DOM behavior definition to build the steps.
+
+Up to now, when two states were able to transition to each other, an infinite loop would occur, causing the browser to become unresponsive.
+
 #### Dashboards app & Low-Code Apps - Dropdown component: Filter would no longer be applied after losing the focus [ID_38834]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
