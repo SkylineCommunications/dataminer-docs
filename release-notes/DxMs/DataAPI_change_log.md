@@ -7,12 +7,11 @@ uid: DataAPI_change_log
 > [!IMPORTANT]
 > At present, the Data API feature is only available in preview, if the soft-launch option *DataAPI* is enabled. For more information, see [Getting started with the Data Sources module](xref:Data_Sources_Setup).
 
-#### ?? March 2024 - New Feature - DataAPI 1.1.1 - Add Configuration endpoint [ID_39016]
+#### 15 March 2024 - New Feature - DataAPI 1.1.1 - Use Cloud Node ID and report DxM status [ID_39051]
 
-A new endpoint has been added to the DataAPI DxM that currently allows the configuration of units and decimals.
+Use Cloud Node ID to uniquely identify each DxM instance on a cluster and report back DxM health stats for remote monitoring of cloud-connected systems.
 
-> [!NOTE]
-> The configuration endpoint expects that the items to be configured (parameters, tables) have been created via the data endpoint first.
+The Node ID is now also used as an identifier when registering with APIGateway.
 
 #### 14 March 2024 - Enhancement - DataAPI 1.1.0 - Upgrade to .NET 8 [ID_39022]
 
