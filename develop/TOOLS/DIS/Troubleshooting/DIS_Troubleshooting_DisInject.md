@@ -5,11 +5,11 @@ keywords: dis inject issue, dis inject slscripting
 
 # DIS Inject problems
 
-## Breakpoints are not hitting
+## Breakpoints are not hit
 
 ### Problem
 
-After clicking *Attach* in the *DIS Inject* window and running the code, the breakpoints are not hitting.
+After clicking *Attach* in the *DIS Inject* window and running the code, the breakpoints are not hit.
 
 ### Possible solutions
 
