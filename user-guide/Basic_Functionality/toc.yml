@@ -412,17 +412,18 @@ items:
     topicUid: visio
     items:
       - name: Getting started
+        topicUid: Getting_started_with_visual_overview
         items:
           - name: Working with shape data in Microsoft Visio
             topicUid: Working_with_shape_data_in_Microsoft_Visio
           - name: Editing a visual overview in DataMiner Cube
             topicUid: Editing_a_visual_overview_in_DataMiner_Cube
-          - name: Cleaning up unused Visio files
-            topicUid: Cleaning_up_unused_Visio_files
           - name: DataMiner Visio templates
             topicUid: DataMiner_Visio_templates
           - name: Visual overview page priority
             topicUid: Visual_overview_page_priority
+          - name: Cleaning up unused Visio files
+            topicUid: Cleaning_up_unused_Visio_files
       - name: Linking shapes to DataMiner items
         topicUid: Linking_shapes_to_DataMiner_items
         items:
