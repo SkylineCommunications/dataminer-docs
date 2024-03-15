@@ -166,7 +166,7 @@ The following actions are possible with this list:
 
 The apps button displays a list of DataMiner applications.
 
-Depending on the configuration and version of your DataMiner System and on the available user permissions, the list can contain the following sections:
+Depending on the configuration and version of your DataMiner System, as well as on which user permissions you have been assigned, the list can contain the following sections:
 
 - **Modules**: DataMiner modules such as [Automation](xref:automation), [Documents](xref:About_the_Documents_module), and [Trending](xref:Accessing_trend_information_from_the_Trending_module).
 
