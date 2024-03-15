@@ -7,11 +7,11 @@ uid: DataAPI_change_log
 > [!IMPORTANT]
 > At present, the Data API feature is only available in preview, if the soft-launch option *DataAPI* is enabled. For more information, see [Getting started with the Data Sources module](xref:Data_Sources_Setup).
 
-#### 15 March 2024 - New Feature - DataAPI 1.1.1 - Use Cloud Node ID and report DxM status [ID_39051]
+#### 15 March 2024 - New feature - DataAPI 1.1.1 - Cloud Node ID used to identify DxM instance and report DxM status [ID_39051]
 
-Use Cloud Node ID to uniquely identify each DxM instance on a cluster and report back DxM health stats for remote monitoring of cloud-connected systems.
+The Cloud Node ID is now used to uniquely identify each DxM instance in a cluster and report back DxM health stats for remote monitoring of systems connected to dataminer.services.
 
-The Node ID is now also used as an identifier when registering with APIGateway.
+In addition, the Node ID is now also used as an identifier when registering with APIGateway.
 
 #### 14 March 2024 - Enhancement - DataAPI 1.1.0 - Upgrade to .NET 8 [ID_39022]
 
@@ -25,7 +25,7 @@ The Data API installer has been updated to mitigate a Windows DLL redirection vu
 
 A DataMiner icon has been added to the DxM, which will now be used as the application icon in Task Manager.
 
-#### 31 January 2024 - New Feature - DataAPI 1.0.0 - New DataAPI module [ID_36542] [ID_36588] [ID_36575] [ID_37055] [ID_37337] [ID_37648] [ID_37796] [ID_37817] [ID_37837] [ID_37898] [ID_38088] [ID_38159] [ID_38570]
+#### 31 January 2024 - New feature - DataAPI 1.0.0 - New DataAPI module [ID_36542] [ID_36588] [ID_36575] [ID_37055] [ID_37337] [ID_37648] [ID_37796] [ID_37817] [ID_37837] [ID_37898] [ID_38088] [ID_38159] [ID_38570]
 
 A new Data API module is now available as a DxM (DataMiner Extension Module).
 
