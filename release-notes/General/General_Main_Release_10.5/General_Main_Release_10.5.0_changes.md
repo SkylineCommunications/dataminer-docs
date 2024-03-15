@@ -164,12 +164,6 @@ SLLogCollector will now by default run the `tasklist /fo TABLE` command, and sav
 
 From now on, GQI event messages sent by the same GQI session within a time frame of 100 ms will be grouped into one single message.
 
-#### SLAnalytics - Behavioral anomaly detection: Enhancements [ID_39024]
-
-<!-- MR 10.5.0 - FR 10.4.5 -->
-
-A number of enhancements have been made with regard to the behavioral anomaly detection feature.
-
 ### Fixes
 
 #### Storage as a Service: Resources would not always be released correctly [ID_38058]
@@ -208,3 +202,9 @@ This type of exceptions will be now be properly caught and logged as warnings so
 <!-- MR 10.5.0 - FR 10.4.5 -->
 
 A *ModelHostException* could be thrown while checking whether the DataMiner System was licensed to use the ModelHost DxM.
+
+#### STaaS: Database queries could time out [ID_39081]
+
+<!-- MR 10.5.0 - FR 10.4.5 -->
+
+When a database query was performed against a STaaS database, in some cases, the query could timeout, leading to no results being returned.

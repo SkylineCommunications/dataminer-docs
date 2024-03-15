@@ -87,6 +87,12 @@ In the `C:\Skyline DataMiner\Logging\SLTimeToLive` folder, you can now find a ne
 
 A number of security enhancements have been made.
 
+#### SLAnalytics - Behavioral anomaly detection: Enhancements [ID_39024]
+
+<!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
+
+A number of enhancements have been made with regard to the behavioral anomaly detection feature.
+
 ### Fixes
 
 #### Databases: Problem when starting a migration from MySQL to Cassandra [ID_37589]
