@@ -4,15 +4,12 @@ uid: Data_Aggregator_Migrator
 
 # Data Aggregator Migrator
 
-The Data Aggregator Migrator should be used after upgrading the Data Aggregator module from version 2.x.x to 3.0.0 or higher. This **one-time migration process** is only necessary if the prior installation included [configured GQI queries](xref:Data_Aggregator_queries).
+The Data Aggregator Migrator should be used **after** upgrading the Data Aggregator DxM from version **2.x.x to 3.x.x** or higher. This **one-time migration process** is only necessary if the prior installation included [configured GQI queries](xref:Data_Aggregator_queries).
 
 > You can download the tool from [DataMiner Dojo](https://community.dataminer.services/download/data-aggregator-migrator/).
 
 > [!TIP]
 > See also: [Data Aggregator](xref:Data_Aggregator_DxM)
-
-> [!NOTE]
-> This tool should be used after upgrading the DataAggregator DxM from 2.x.x to 3.x.x or higher.
 
 ## Using the Data Aggregator Migrator
 
