@@ -19,7 +19,7 @@ Before you report the issue or spend time trying to debug, please check the foll
 
 - Are all [prerequisites](xref:Prerequisites) met?
 
-When you have checked all this, and the issue persists, your next step is [gather and check the necessary information](xref:DIS_Troubleshooting_RetrieveInformation).
+When you have checked all this, and the issue persists, your next step is to [gather and check the necessary information](xref:DIS_Troubleshooting_RetrieveInformation).
 
 ## Feeling adventurous?
 
