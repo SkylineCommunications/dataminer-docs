@@ -4,6 +4,12 @@ uid: DataAggregator_change_log
 
 # Data Aggregator change log
 
+#### 15 March 2024 - New Feature - DataAPI 3.0.4 - Use Cloud Node ID and report DxM status [ID_39086]
+
+Use Cloud Node ID to uniquely identify each DxM instance on a cluster and report back DxM health stats for remote monitoring of cloud-connected systems.
+
+The Node ID is now also used as an identifier when registering with APIGateway.
+
 #### 01 March 2024 - Enhancement - DataAggregator 3.0.3 -  Improved installer robustness [ID_38981]
 
 The DataAggregator installer has been updated to mitigate a Windows DLL redirection vulnerability and to improve its robustness.
