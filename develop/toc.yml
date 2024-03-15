@@ -5635,5 +5635,20 @@ items:
   items:
     - name: Unit testing
       topicUid: Unit_testing
+      items:
+      - name: Creating unit tests using the MSTestv2 framework in Visual Studio
+        topicUid: Unit_tests_MSTestv2_framework
+      - name: Using isolation frameworks
+        topicUid: Using_isolation_frameworks
+      - name: Writing testable code
+        topicUid: Writing_testable_code
+      - name: FluentAssertions
+        topicUid: FluentAssertions
+      - name: Data-driven tests
+        topicUid: Data_driven_tests
+      - name: Test life cycle attributes
+        topicUid: Test_life_cycle_attributes
+      - name: Using files in unit tests
+        topicUid: Using_files_in_unit_tests
     - name: XML documentation comments
       topicUid: Xml_Documentation_Comments
