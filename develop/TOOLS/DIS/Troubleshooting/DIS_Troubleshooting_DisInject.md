@@ -37,7 +37,7 @@ Microsoft Visual Studio is not allowed to attach to the DataMiner SLScripting pr
 
 Run Microsoft Visual Studio as an administrator.
 
-#### To change the privilege level of VSLauncher.exe
+#### Changing the privilege level of VSLauncher.exe
 
 1. Exit Microsoft Visual Studio.
 
@@ -51,7 +51,7 @@ Run Microsoft Visual Studio as an administrator.
 
 1. Click *OK*.
 
-#### To associate XML files with VSLauncher.exe
+#### Associating XML files with VSLauncher.exe
 
 1. Right-click an XML file and select *Open With \> Choose Default Program*.
 
