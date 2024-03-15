@@ -23,7 +23,7 @@ When you have checked all this, and the issue persists, your next step is [gathe
 
 ## Feeling adventurous?
 
-A big portion of our code has been extracted and put into [NuGet packages](xref:Platform_independent_CICD#nuget-libraries). Based on the stacktrace of the exception or the topic, you could have a look at the NuGet libraries to see if you can spot the problem. You can then create an issue or pull request on GitHub to help out with the code. You even get some DevOps points as a treat when contributing via pull request!
+A big portion of our code has been extracted and put into [NuGet packages](xref:Platform_independent_CICD#nuget-libraries). Based on the stacktrace of the exception or the topic, you could have a look at the NuGet libraries to see if you can spot the problem. You can then create an issue or pull request on GitHub to help out with the code.
 
 ## Common problems
 
