@@ -164,6 +164,12 @@ SLLogCollector will now by default run the `tasklist /fo TABLE` command, and sav
 
 From now on, GQI event messages sent by the same GQI session within a time frame of 100 ms will be grouped into one single message.
 
+#### SLAnalytics - Behavioral anomaly detection: Enhancements [ID_39024]
+
+<!-- MR 10.5.0 - FR 10.4.5 -->
+
+A number of enhancements have been made with regard to the behavioral anomaly detection feature.
+
 ### Fixes
 
 #### Storage as a Service: Resources would not always be released correctly [ID_38058]
