@@ -31,17 +31,6 @@ The *SLNetTypes* and *SLGlobal* implementations have been updated to support a n
 
 Also, a number of client messages have been adapted to support passing this new *AlarmTreeID/SLAlarmTreeKey* object, and a number of existing properties have been marked as obsolete.
 
-#### STaaS: SLDataGateway will now periodically check the health of the storage service [ID_39068]
-
-<!-- MR 10.5.0 - FR 10.4.5 -->
-
-When Storage as a Service (STaaS) is used, SLDataGateway will now periodically check the health of that storage service. If the current status cannot be determined or if the current status is "red", SLDataGateway will switch to file offload mode.
-
-> [!NOTE]
->
-> - When the current status is "yellow", SLDataGateway will not switch to file offload mode.
-> - Whenever the health of the storage service changes, an alarm mentioning the current health status is generated.
-
 #### GQI: The IGQIOnInit and IGQIOnDestroy interfaces can now also be used in custom operators [ID_39088]
 
 <!-- MR 10.5.0 - FR 10.4.5 -->

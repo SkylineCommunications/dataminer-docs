@@ -108,6 +108,17 @@ A number of security enhancements have been made.
 
 A number of enhancements have been made with regard to the behavioral anomaly detection feature.
 
+#### STaaS: SLDataGateway will now periodically check the health of the storage service [ID_39068]
+
+<!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
+
+When Storage as a Service (STaaS) is used, SLDataGateway will now periodically check the health of that storage service. If the current status cannot be determined or if the current status is "red", SLDataGateway will switch to file offload mode.
+
+> [!NOTE]
+>
+> - When the current status is "yellow", SLDataGateway will not switch to file offload mode.
+> - Whenever the health of the storage service changes, an alarm mentioning the current health status is generated.
+
 ### Fixes
 
 #### Databases: Problem when starting a migration from MySQL to Cassandra [ID_37589]
