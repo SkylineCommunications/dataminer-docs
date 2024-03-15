@@ -180,4 +180,4 @@ Depending on the configuration and version of your DataMiner System and on the a
 
 - Any custom sections [configured in the DataMiner Low-Code Apps module](xref:LowCodeApps_organizing_landing_page), listing low-code apps.<!-- RN 33944 -->
 
-Click any item in the list to open it. If you wish to open the item in a new card, click the item while pressing the *Ctrl* key.
+Click any item in the list to open it. If you wish to open the item in a new card, click the item while pressing the *Ctrl* key. However, note that the web apps will always open in a browser tab instead of in DataMiner Cube.
