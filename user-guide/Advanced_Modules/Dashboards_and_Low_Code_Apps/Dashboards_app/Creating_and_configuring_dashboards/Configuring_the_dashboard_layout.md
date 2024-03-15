@@ -98,6 +98,9 @@ It is possible to customize the theme for one dashboard by overriding the applie
 
 1. Select the theme you wish to use.
 
+> [!NOTE]
+> From DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4 onwards<!--RN 38472-->, the selected theme is also applied to interactive Automation script windows launched when clicking an [Automation script button](xref:DashboardButton) or a node in a [service definition component](xref:DashboardServiceDefinition). [Custom themes](#creating-a-new-dashboard-theme) do not carry over to interactive Automation script windows, resulting in a default white background color and black text color. Prior to DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4, the theme does not get applied to interactive Automation script windows, resulting in a default white background color and black text color.
+
 ## Configuring the default component layout
 
 The default component layout is considered part of the default theme. It can be configured via the dashboards settings. See [Customizing the dashboard theme](#customizing-the-dashboard-theme).

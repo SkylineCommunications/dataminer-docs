@@ -38,6 +38,21 @@ To create a new theme, see [Creating a new theme for a low-code app page](#creat
 
 1. Select the theme you wish to use.
 
+> [!NOTE]
+> From DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4 onwards<!--RN 38472-->, the selected theme is also applied to any interactive Automation script windows launched when clicking:
+>
+> - a [button component](xref:DashboardButton)
+> - an entry in a [grid](xref:DashboardGrid) or [timeline component](xref:DashboardTimeline)
+> - a marker in a [maps component](xref:DashboardMaps)
+> - a cell or double-clicking a row in a [table component](xref:DashboardTable)
+> - a node in a [service definition component](xref:DashboardServiceDefinition)
+> - a region on a [Visual Overview component](xref:DashboardVisualOverview)
+> - a [button](xref:LowCodeApps_header_config) in the header bar of a low-code app page or panel
+> - a [DOM action](xref:DOM_actions#interactive-script) button
+> - a page of a low-code app is loaded
+>
+> [Custom themes](#creating-a-new-theme-for-a-low-code-app-page) do not carry over to interactive Automation script windows, resulting in a default white background color and black text color. Prior to DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4, the theme does not get applied to interactive Automation script windows, resulting in a default white background color and black text color.
+
 ### Creating a new theme for a low-code app page
 
 1. Make sure the low-code app page is in edit mode and no components are selected. See [Editing a low-code application](xref:Editing_custom_apps).
