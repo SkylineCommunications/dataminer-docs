@@ -14,6 +14,16 @@ The main page of the Dashboards app consists of a header bar, a sidebar, and a d
 
   - Search box: The box in the middle of the header bar allows you to search the app. As soon as you activate the box, a list of suggestions is displayed below it. The list gets updated with new suggestions as you type. Select a suggestion in the list to open the corresponding dashboard or dashboard folder.
 
+  - WebSocket connection status: Available from DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4 onwards<!--RN 38676-->. This indicator shows the current status of your WebSocket connection. The available statuses include:
+
+    - ![Successful connection](~/user-guide/images/WebSocket_Success.png) : A stable connection with instant updates.
+
+    - ![Offline](~/user-guide/images/WebSocket_No_Connection.png) : An offline connection.
+
+    - ![No real-time connection](~/user-guide/images/WebSocket_No_Real-Time_Connection.png) : No real-time connection could be established. Updates will happen more slowly than usual.
+
+    - ![Establishing connection](~/user-guide/images/WebSocket_Establishing_Connection.gif) : Re-establishing a WebSocket connection. Updates will happen more slowly than usual.
+
   - User button: A button with the initials or an image of the current user is displayed in the top-right corner. Click this button to open a menu that provides access to the following options:
 
     - *Settings*: Allows you to manage any available [dashboard theme](xref:Configuring_the_dashboard_layout) and configure whether specific actions are pinned to the dashboard header bar.
