@@ -55,6 +55,14 @@ For more information on these interfaces, see:
 
 ## Changes
 
+### Breaking changes
+
+#### DOM string fields will now be filtered case-insensitively [ID_38950]
+
+<!-- MR 10.5.0 - FR 10.4.5 -->
+
+Up to now, DOM string fields would be filtered case-sensitively. From now on, those fields will by default be filtered case-insensitively.
+
 ### Enhancements
 
 #### Service & Resource Management: Enhanced performance of volume license check [ID_38705]
