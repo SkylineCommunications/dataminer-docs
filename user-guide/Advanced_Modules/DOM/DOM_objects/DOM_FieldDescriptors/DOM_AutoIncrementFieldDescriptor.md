@@ -6,12 +6,13 @@ uid: DOM_AutoIncrementFieldDescriptor
 
 - **FieldValue type**: string
 - **Multiple values supported**: :heavy_multiplication_x:
+- **Available since**: DataMiner 10.1.2/10.2.0
 
 | Type of Descriptor | FieldType | FieldValue type |
 |--------------------|-----------|-----------------|
-| AutoIncrement | string | string |
+| References a single `AutoIncrement` | string | string |
 
-Defines a field that will automatically get an incremented value assigned. When a DomInstance does not have a value for this field yet, it will get assigned the next time the instance is updated.
+Defines a field that will automatically get an incremented value assigned. When a `DomInstance` does not have a value for this field yet, it will get assigned the next time the instance is updated.
 
 The `IDFormat` property is used to define a string format for the number value. In this string, "{0}" gets replaced by that number value. If the `IDFormat` property is empty, its value will not be formatted.
 
@@ -29,7 +30,7 @@ Some examples, assuming the next value is 10:
 var incrementHelper = new IncrementManagerHelper(_engine.SendSLNetMessages);
 var incrementer = incrementHelper.AutoIncrementers.Create(new AutoIncrementer());
 
-return new AutoIncrementFieldDescriptor()
+var descriptor = new AutoIncrementFieldDescriptor()
 {
     ID = new FieldDescriptorID(Guid.NewGuid()),
     Name = "AutoIncrementFieldDescriptor",

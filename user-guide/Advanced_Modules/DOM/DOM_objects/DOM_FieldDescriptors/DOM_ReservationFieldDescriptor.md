@@ -4,17 +4,16 @@ uid: DOM_ReservationFieldDescriptor
 
 # ReservationFieldDescriptor
 
-- **FieldValue type**: `Guid` of an SRM `ReservationInstance`
+- **FieldValue type**: `Guid`
 - **Multiple values optional**: :heavy_check_mark:
+- **Available since**: DataMiner 10.1.2/10.2.0
 
 | Type of Descriptor | FieldType | FieldValue type |
 |--------------------|-----------|-----------------|
-| Reservation | Guid | Guid |
-| Reservation with multiple values enabled| List\<Guid\> | Guid (ListValueWrapper) |
+| References a single `Reservation` | Guid | Guid |
+| References one or more `Reservations` | List\<Guid\> | Guid (ListValueWrapper) |
 
-Defines a field that has the `Guid` of an SRM `(Service)ReservationInstance`.
-
-The `ReservationFieldDescriptor` lists all ReservationInstances, the `Guid` of the selected `ReservationInstance` is saved.
+Defines a field that has the `Guid` of an SRM `(Service)ReservationInstance`. The `ReservationFieldDescriptor` lists all ReservationInstances.
 
 To enable multiple values, set the FieldType to `List<Guid>`.
 
@@ -36,8 +35,13 @@ var instance = new DomInstance
     DomDefinitionId = domDefinitionId
 };
 
-instance.AddOrUpdateFieldValue(sectionDefinition, descriptor, GuidOfReservationInstance); // type should be Guid
+var reservationId = Guid.Parse("8000971e-982a-2151-10a2-1803aa100359");
 
-// example with multiple values enabled 
-instance.AddOrUpdateFieldValue(sectionDefinition, descriptor, new ListValueWrapper<Guid>(Guid1, Guid2));
+instance.AddOrUpdateFieldValue(sectionDefinition, descriptor, reservationId);
+
+var firstReservationId = Guid.Parse("755a424e-783f-466d-981e-8359fd0ca426");
+var secondReservationId = Guid.Parse("16da2b5d-6b43-4267-96ba-4abd5c16ee2b");
+
+// Example with multiple values enabled 
+instance.AddOrUpdateFieldValue(sectionDefinition, descriptor, new ListValueWrapper<Guid>(firstReservationId, secondReservationId));
 ```

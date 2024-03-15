@@ -6,12 +6,13 @@ uid: DOM_UserFieldDescriptor
 
 - **FieldValue type**: string
 - **Multiple values supported**: :heavy_multiplication_x:
+- **Available since**: DataMiner 10.3.3/10.4.0
 
 | Type of Descriptor | FieldType | FieldValue type |
 |--------------------|-----------|-----------------|
-| User | string | string |
+| References a single `User` | string | string |
 
-Available from DataMiner 10.3.3/10.4.0 onwards. Can be used to define that a field should contain the name of a DataMiner user. There is a `GroupNames` property that can be used to define which groups the user can be a part of. The selected user is saved as a string.
+Can be used to define that a field should contain the name of a DataMiner user. There is a `GroupNames` property that can be used to define which groups the user can be a part of.
 
 ```csharp
 var descriptor = new UserFieldDescriptor
@@ -31,5 +32,7 @@ var instance = new DomInstance
     DomDefinitionId = domDefinitionId
 };
 
-instance.AddOrUpdateFieldValue(sectionDefinition, descriptor, nameOfUser); // type should be string
+var nameOfUser = "User1";
+
+instance.AddOrUpdateFieldValue(sectionDefinition, descriptor, nameOfUser);
 ```

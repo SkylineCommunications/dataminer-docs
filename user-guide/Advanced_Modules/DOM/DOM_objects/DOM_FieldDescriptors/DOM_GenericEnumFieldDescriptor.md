@@ -6,17 +6,18 @@ uid: DOM_GenericEnumFieldDescriptor
 
 - **FieldValue type**: int / string
 - **Multiple values optional**: :heavy_check_mark:
+- **Available since**: DataMiner 10.1.2/10.2.0
 
 | Type of Descriptor | FieldType | FieldValue type |
 |--------------------|-----------|-----------------|
-| Int Enum | GenericEnum\<int\> | int |
-| Int Enum with multiple values enabled| List<GenericEnum\<int\>> | int (ListValueWrapper) |
-| String Enum | GenericEnum\<string\> | string |
-| String Enum with multiple values enabled | List<GenericEnum\<string\>> | string (ListValueWrapper) |
+| References a single int enum entry | GenericEnum\<int\> | int |
+| References one or more int enum entries | List<GenericEnum\<int\>> | int (ListValueWrapper) |
+| References a single string enum entry | GenericEnum\<string\> | string |
+| References one or more string enum entries | List<GenericEnum\<string\>> | string (ListValueWrapper) |
 
 Defines a field that has a list of possible pre-determined values.
 
-The `GenericEnumFieldDescriptor` is defined by the `GenericEnum` and its entries. The `GenericEnum` can be of the int or string type. This type decides what underlying value the display values has. The value of the selected `GenericEnumEntry` is saved.
+The `GenericEnumFieldDescriptor` is defined by the `GenericEnum` and its entries. The `GenericEnum` can be of the int or string type. This type decides what underlying value the display values has.
 
 It is also possible to soft-delete `GenericEnumEntries`, see [Removing an enum entry from a GenericEnumFieldDescriptor](xref:DOM_Remove_Enum_Entry).
 
@@ -48,12 +49,12 @@ var instance = new DomInstance
 
 instance.AddOrUpdateFieldValue(sectionDefinition, descriptor, 2); // 2 is the value of the entry with displayValue "Option2"
 
-// example for int with multiple values enabled
+// Example for int with multiple values enabled
 instance.AddOrUpdateFieldValue(sectionDefinition, descriptor, new ListValueWrapper<int>(1,2));
 
-// string example
+// Example for string
 instance.AddOrUpdateFieldValue(sectionDefinition, descriptor, "Value1");
 
-// example for string with multiple values enabled 
+// Example for string with multiple values enabled 
 instance.AddOrUpdateFieldValue(sectionDefinition, descriptor, new ListValueWrapper<string>("Value1", "Value2"));
 ```

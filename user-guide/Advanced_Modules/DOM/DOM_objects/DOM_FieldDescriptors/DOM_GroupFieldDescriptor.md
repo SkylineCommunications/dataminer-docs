@@ -6,12 +6,13 @@ uid: DOM_GroupFieldDescriptor
 
 - **FieldValue type**: string
 - **Multiple values supported**: :heavy_multiplication_x:
+- **Available since**: DataMiner 10.3.3/10.4.0
 
 | Type of Descriptor | FieldType | FieldValue type |
 |--------------------|-----------|-----------------|
-| Group | string | string |
+| References a single `Group` | string | string |
 
-Available from DataMiner 10.3.3/10.4.0 onwards. Can be used to define that a field should contain the name of a DataMiner user group. The selected group is saved as a string.
+Can be used to define that a field should contain the name of a DataMiner user group.
 
 ```csharp
 var descriptor = new GroupFieldDescriptor
@@ -31,5 +32,7 @@ var instance = new DomInstance
     DomDefinitionId = domDefinitionId
 };
 
-instance.AddOrUpdateFieldValue(sectionDefinition, descriptor, nameOfGroup); // type should be string
+var nameOfGroup = "Administrators";
+
+instance.AddOrUpdateFieldValue(sectionDefinition, descriptor, nameOfGroup);
 ```
