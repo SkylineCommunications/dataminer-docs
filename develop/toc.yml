@@ -5396,14 +5396,18 @@ items:
           - name: Contributing to Validator code
             topicUid: DisTutorials_ValidatorContributions
         - name: Troubleshooting
-          topicUid: Troubleshooting
+          topicUid: DIS_Troubleshooting
           items:
-            - name: Repairing an incorrectly installed DIS package on Visual Studio 2010
-              topicUid: Repairing_an_incorrectly_installed_DIS_package_on_Visual_Studio_2010
-            - name: Could not find SLScripting process, is DataMiner running?
-              topicUid: Could_not_find_SLScripting_process_is_DataMiner_running
-            - name: Clicking the Publish button causes an error
-              topicUid: Clicking_the_Publish_button_causes_an_error
+            - name: Retrieving information in case a problem occurs
+              topicUid: DIS_Troubleshooting_RetrieveInformation
+            - name: Licensing problem
+              topicUid: DIS_Troubleshooting_LicenseIssue
+            - name: DIS Inject problems
+              topicUid: DIS_Troubleshooting_DisInject
+            - name: Package creation problems
+              topicUid: DIS_Troubleshooting_CompilationFailure
+            - name: Publishing problems
+              topicUid: DIS_Troubleshooting_UploadFailure
         - name: DIS reference
           topicUid: DIS_reference
           items:
