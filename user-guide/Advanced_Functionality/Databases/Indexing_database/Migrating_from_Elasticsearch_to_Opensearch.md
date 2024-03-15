@@ -9,6 +9,8 @@ From DataMiner 10.4.0 [CU2]/10.4.4 onwards<!-- RN 37994 -->, a tool is available
 
 To use this tool, follow the instructions below:
 
+1. Stop all Agents in the DMS.
+
 1. [Take a snapshot of the Elasticsearch 6.8.22 cluster](#take-a-snapshot-of-the-elasticsearch-6822-cluster).
 
 1. [Copy the snapshot to an Elasticsearch 7.10.0 cluster and restore it](#restore-the-snapshot-on-an-elasticsearch-7100-cluster).
@@ -16,6 +18,13 @@ To use this tool, follow the instructions below:
 1. [Run the re-indexing tool and take a snapshot](#run-the-re-indexing-tool-and-take-a-snapshot).
 
 1. [Copy the snapshot with the re-indexed data to an OpenSearch 2.11.1 cluster and restore it](#restore-the-snapshot-with-the-re-indexed-data-to-an-opensearch-2111-cluster).
+
+1. [Reconfigure DB.xml on every Agent](#reconfigure-dbxml-on-every-agent).
+
+1. Restart all DataMiner Agents in the DMS.
+
+> [!CAUTION]
+> To prevent data loss, all Agents of the DMS must be stopped during this procedure. They must not be started up again until the migration is completed.
 
 > [!TIP]
 > See also: [Taking a snapshot of one Elasticsearch cluster and restoring it to another](xref:Taking_snapshot_Elasticsearch_cluster_and_restoring_to_different_cluster)
@@ -266,3 +275,20 @@ Using Kibana, you can restore the snapshot in the following way:
    ```
 
    The status of the cluster should turn green after the restore.
+
+## Reconfigure DB.xml on every Agent
+
+In case the OpenSearch nodes have been installed on a different machine than the Elasticsearch nodes you are migrating from, do the following **on every Agent** in your DMS:
+
+1. Navigate to the folder `C:\Skyline DataMiner` and open *DB.xml*.
+
+1. Locate the IP addresses or hostnames previously used by Elasticsearch.
+
+   > [!TIP]
+   > For information on where these are located in *DB.xml*, see [Indexing database settings](xref:DB_xml#indexing-database-settings).
+
+1. Replace these with the IP addresses of the OpenSearch nodes.
+
+1. Save the *DB.xml* file and exit.
+
+When all *DB.xml* files have been reconfigured, you can restart all DataMiner Agents to finish the procedure.
